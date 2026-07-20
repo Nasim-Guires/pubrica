@@ -1,0 +1,168 @@
+"use client"
+
+import React, { useState } from 'react';
+
+// ==========================================
+// TYPE DEFINITIONS
+// ==========================================
+interface AccordionItem {
+  id: string;
+  title: string;
+  content?: string; // Add description content if you want to expand them
+}
+
+interface HighlightCardItem {
+  title: string;
+  borderColorClass: string; // e.g., 'border-l-amber-400' or 'border-l-indigo-500'
+  content: string;
+}
+
+// ==========================================
+// MAIN COMBINED COMPONENT
+// ==========================================
+export const ResearchServicesSections: React.FC = () => {
+  // Accordion Items from the screenshot
+  const servicesList: AccordionItem[] = [
+    { id: '1', title: 'Evidence Synthesis & Review Services' },
+    { id: '2', title: 'Research Design & Protocol Development' },
+    { id: '3', title: 'Data Collection & Management' },
+    { id: '4', title: 'Data Analysis & Statistical Modelling' },
+    { id: '5', title: 'Clinical Trial Biostatistics & Programming' },
+    { id: '6', title: 'Sample Size & Power Calculations' },
+    { id: '7', title: 'Interim & Final Statistical Analysis' },
+    { id: '8', title: 'Manuscript Development & Publication Support' },
+  ];
+
+  // Highlights Cards Data
+  const highlightCards: HighlightCardItem[] = [
+    {
+      title: 'The Anatomy of a Paper',
+      borderColorClass: 'border-l-[#f1c40f]', // Warm yellow/amber tone
+      content: 'At Pubrica, we follow the Introduction, Methods, Results, and Discussion (IMRAD) structure [released by the International Committee of Medical Journal Editors – ICMJE] of scientific papers, which was widely accepted (by over 500 biomedical journals) for retrospective/descriptive & experimental studies.',
+    },
+    {
+      title: 'Consolidated Standards',
+      borderColorClass: 'border-l-[#6c5ce7]', // Purple tone
+      content: 'Depending on your study type, the Pubrica medical writer will determine appropriate reporting guidelines based on the EQUATOR Network Checklist. CONSORT statement guidelines for Randomized controlled Clinical trials, STROBE for reporting of observational studies (Cohort, case-control, or cross-sectional studies), or PRISMA statement for systematic review, and STARD for diagnostic studies.',
+    },
+    {
+      title: 'Ethical Issues',
+      borderColorClass: 'border-l-[#00b894]', // Teal green tone
+      content: 'Clinical reviews are based on a comprehensive assessment of a wide range of sources of evidence-based medicine. MEDLINE/PubMed wide range of libraries, Medical/EMBASE, Scopus, Thomson Reuters Web of Science, the Cochrane Collaboration Database, the Centre for Research Support, TRIP Database, DARE, CINAHL, Google Scholar. We follow COPE guidelines on all aspects of publication ethics.',
+    },
+  ];
+
+  // State tracker for active accordion step
+  const [openIndex, setOpenIndex] = useState<string | null>('1');
+
+  return (
+    <div className="w-full bg-[#f4f9fc] py-16 px-6 md:px-12 lg:px-24 font-sans selection:bg-blue-100 space-y-20">
+      
+      {/* SECTION 1: OUR SERVICES ACCORDION LAYOUT */}
+      <section className="max-w-7xl mx-auto">
+        <header className="mb-10">
+          <h2 className="text-[#083c4c] text-2xl md:text-3xl font-bold tracking-tight mb-4">
+            Our Services
+          </h2>
+          <p className="text-gray-700 text-[15px] max-w-5xl leading-relaxed">
+            We understand that impactful research requires precision, methodical integrity, and compliance with global science standards. At Pubrica, our cross-disciplinary teams manage the entire research cycle, from idea conception to data analysis and final publication, producing credible, reproducible, and publication-ready outputs for academia, healthcare, industry, and government.
+          </p>
+        </header>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Left Column: Overlapping Circle / Image Composition */}
+          <div className="lg:col-span-5 flex justify-center items-center relative min-h-[380px]">
+            {/* Soft Gray/Blue background shape circle */}
+            <div className="absolute w-[280px] h-[280px] bg-[#e6eff4] rounded-full left-10 top-8 z-0" />
+            
+            {/* Top Left Image: Handing envelope */}
+            <div className="absolute left-0 top-0 z-20 w-[220px] h-[160px] shadow-md rounded-xl overflow-hidden bg-white border-4 border-white transform -rotate-1">
+              <img 
+                src="/images/handover-envelope.jpg" 
+                alt="Handing over document envelope" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Bottom Right Image: Financial charts / Calculator */}
+            <div className="absolute right-4 bottom-0 z-10 w-[220px] h-[220px] shadow-lg rounded-xl overflow-hidden bg-white border-4 border-white transform rotate-2">
+              <img 
+                src="/images/data-analysis.jpg" 
+                alt="Analyzing scientific charts and calculator" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Right Column: Dynamic Bordered Menu List */}
+          <div className="lg:col-span-7">
+            <div className="border-t border-gray-300">
+              {servicesList.map((service) => {
+                const isOpen = openIndex === service.id;
+                return (
+                  <div key={service.id} className="border-b border-gray-300">
+                    <button
+                      onClick={() => setOpenIndex(isOpen ? null : service.id)}
+                      className={`w-full text-left py-4 px-3 flex items-center justify-between transition-colors duration-150 group ${
+                        isOpen ? 'bg-blue-50/60' : 'hover:bg-gray-50'
+                      }`}
+                    >
+                      <span className="text-[#083c4c] font-semibold text-base md:text-[17px] flex items-center gap-3">
+                        <span className="text-gray-400 font-normal text-sm">
+                          {isOpen ? '−' : '+'}
+                        </span>
+                        {service.title}
+                      </span>
+                    </button>
+                    {/* Collapsible Content wrapper */}
+                    {isOpen && service.content && (
+                      <div className="px-8 pb-4 text-sm text-gray-600 animate-fadeIn">
+                        {service.content}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* SECTION 2: MEDICAL WRITING HIGHLIGHT CARDS */}
+      <section className="max-w-7xl mx-auto border-t border-gray-200 pt-16">
+        <header className="text-center mb-12">
+          <h2 className="text-[#083c4c] text-xl md:text-2xl font-bold tracking-tight mb-2">
+            Pubrica Medical Writers Follow Best Practices for Research and Publication
+          </h2>
+          <h3 className="text-[#083c4c] text-lg font-bold">
+            Our Medical Writing &amp; Editing Highlights
+          </h3>
+        </header>
+
+        {/* 3-Column Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {highlightCards.map((card, idx) => (
+            <div 
+              key={idx} 
+              className={`bg-white rounded-lg shadow-sm border border-gray-100 border-l-[6px] ${card.borderColorClass} p-6 flex flex-col justify-between hover:shadow-md transition-shadow duration-200`}
+            >
+              <div>
+                <h4 className="text-[#083c4c] text-lg font-bold mb-4">
+                  {card.title}
+                </h4>
+                <p className="text-gray-600 text-sm leading-relaxed text-justify">
+                  {card.content}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+    </div>
+  );
+};
+
+export default ResearchServicesSections;

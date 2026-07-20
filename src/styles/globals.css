@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #f0f7fc;
+  --color-primary-100: #e1eff8;
+  --color-primary-200: #bce0f2;
+  --color-primary-300: #82c6ea;
+  --color-primary-400: #42a7dc;
+  --color-primary-500: #1b8dca;
+  --color-primary-600: #0f71aa;
+  --color-primary-700: #0e5b8a;
+  --color-primary-800: #002b49; /* Original Pubrica Deep Navy Brand Color */
+  --color-primary-900: #0a273a;
+  --color-primary-950: #061927;
+
+  --color-secondary-50: #f2fbf9;
+  --color-secondary-100: #e2f7f3;
+  --color-secondary-200: #c5edd9;
+  --color-secondary-500: #0d9488; /* Teal Accent */
+  --color-secondary-600: #0f766e;
+  --color-secondary-700: #115e59;
+
+  --color-accent-50: #fffaf0;
+  --color-accent-100: #fef0d2;
+  --color-accent-500: #f0803c; /* Pubrica Orange Accent */
+  --color-accent-600: #d9631a;
+  --color-accent-700: #b44b10;
+
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-display: 'Outfit', var(--font-sans);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  scroll-behavior: smooth;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom Micro-animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+/* Grid background accent */
+.grid-bg {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.grid-bg-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}

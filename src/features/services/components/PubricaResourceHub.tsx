@@ -1,0 +1,428 @@
+"use client"
+
+
+import React, { useState } from "react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Plus,
+  Minus,
+  BookOpen,
+  ArrowRight,
+  Download,
+  Quote,
+} from "lucide-react";
+
+export default function PubricaResourceHub() {
+  // --- TESTIMONIALS DATA ---
+  const testimonials = [
+    {
+      id: 1,
+      quote:
+        "I was overwhelmed with reviewer comments, but Pubrica's scientific experts helped draft precise, evidence-backed responses that led to final acceptance.",
+      author: "DR. R. PATEL",
+      role: "Postdoctoral Fellow, Pharmacology",
+      journalName: "CLINICAL PROBLEM-SOLVING",
+      journalSub: "The New England Journal of Medicine",
+    },
+    {
+      id: 2,
+      quote:
+        "From the login to uploading a file and entering metadata, Pubrica handled the submission process seamlessly. Their support was timely and accurate.",
+      author: "DR. M. THOMAS",
+      role: "Research Scientist, Public Health",
+      journalName: "CLINICAL PRACTICE",
+      journalSub: "The New England Journal of Medicine",
+    },
+  ];
+
+  const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0);
+
+  // --- FAQ DATA ---
+  const initialFaqs = [
+    {
+      id: 1,
+      question:
+        "How can I increase the chances of getting my research paper published in a high-impact journal?",
+      answer:
+        "Improve your chances of getting published by selecting an appropriate journal, complying with authors' requirements, having robust methodologies, offering clear results, and revising your paper through thorough editing.",
+      isOpen: true,
+    },
+    {
+      id: 2,
+      question: "Why do research papers get rejected by journals?",
+      answer:
+        "Common rejection reasons include a mismatch with the journal's scope, flawed methodology, weak discussion, plagiarism, poor language quality, or failure to properly follow the submission guidelines.",
+      isOpen: false,
+    },
+    {
+      id: 3,
+      question:
+        "How can I avoid submitting my manuscript to predatory journals?",
+      answer:
+        "Check if the journal is indexed in reputable databases like Scopus or Web of Science, verify its editorial board, look up its publisher on Beall's List, and ensure they adhere to COPE guidelines.",
+      isOpen: false,
+    },
+    {
+      id: 5,
+      question:
+        "How can research teams improve publication success across multiple projects?",
+      answer:
+        "Researchers can increase their publication success rate by standardizing the publication process, conducting robust research design, fostering effective collaboration, delivering quality writing, and planning for journal targeting early in the research process.",
+      isOpen: true,
+    },
+    {
+      id: 6,
+      question:
+        "What are the benefits of using professional publication support services?",
+      answer:
+        "Professional support bridges gap boundaries in language editing, guarantees formatting compliance with journal rules, optimizes statistical layouts, and assists in drafting responses to demanding peer reviews.",
+      isOpen: false,
+    },
+    {
+      id: 7,
+      question:
+        "What are the key factors journals consider before accepting papers?",
+      answer:
+        "Journals look closely at novelty, scientific rigor, logical structures, clear societal or technical impact, ethical clearance, and the overall clarity of the presentation.",
+      isOpen: false,
+    },
+  ];
+
+  const [faqs, setFaqs] = useState(initialFaqs);
+
+  const toggleFaq = (id:number) => {
+    setFaqs(
+      faqs.map((faq) =>
+        faq.id === id ? { ...faq, isOpen: !faq.isOpen } : faq,
+      ),
+    );
+  };
+
+  // --- INSIGHTS DATA ---
+  const categories = ["Article", "How to Article", "News"];
+  const [selectedCategory, setSelectedCategory] = useState("Article");
+
+  const insights = [
+    {
+      title: "Examples of Search Terms from Published Studies",
+      category: "Article",
+      snippet:
+        "In brief A search word (or search query) has a simple definition. A search term is a single word or phrase used to retrieve relevant information.",
+      image:
+        "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+    },
+    {
+      title: "How to Combine Search Terms for Research paper publication?",
+      category: "Article",
+      snippet:
+        "In brief Quick searches with only one search term sometimes provide many irrelevant results. Combining terms improves accuracy.",
+      image:
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+    },
+    {
+      title: "How to Develop a search strategy for a systematic review",
+      category: "Article",
+      snippet:
+        "In brief A search strategy is a structured set of keywords used to search databases efficiently during systematic reviews.",
+      image:
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
+    },
+    {
+      title: "Structuring Your Abstract for High Impact",
+      category: "How to Article",
+      snippet:
+        "Learn the structures that top-tier scientific journals look for to increase your indexing acceptance rates.",
+      image:
+        "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+    },
+    {
+      title: "New AI Integrity Guidelines from COPE",
+      category: "News",
+      snippet:
+        "An analytical look at how major publishers are planning to verify raw research integrity checks in late 2026.",
+      image:
+        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80",
+    },
+  ];
+
+  const filteredInsights = insights.filter(
+    (item) => item.category === selectedCategory,
+  );
+
+  return (
+    <div className="bg-slate-50 text-[#1e293b] font-sans antialiased">
+      {/* ================= SECTION 1: SAMPLE WORK BANNER ================= */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto bg-[#effcf4] border border-emerald-100 rounded-2xl p-6 sm:p-10 shadow-sm">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            {/* Left Cover Book Graphic */}
+            <div className="md:col-span-4 flex justify-center">
+              <div className="relative group max-w-[240px] shadow-2xl transition-all duration-300 hover:scale-[1.02]">
+                <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-r from-black/20 to-transparent z-10" />
+                <div className="bg-[#1a3a3a] text-white p-5 rounded-r-md aspect-[3/4] flex flex-col justify-between relative overflow-hidden border-y border-r border-slate-700">
+                  <div className="text-[10px] uppercase tracking-widest text-[#10b981] font-semibold border-b border-[#10b981]/20 pb-1.5">
+                    Pubrica Academic Press
+                  </div>
+                  <div className="space-y-2 z-20 my-4">
+                    <h4 className="text-sm font-bold leading-snug">
+                      The Role of the Corresponding Author in Research
+                      Publication
+                    </h4>
+                    <div className="h-0.5 w-10 bg-[#10b981]" />
+                  </div>
+                  <div className="text-[9px] text-emerald-400 font-mono z-20">
+                    Volume 5 • Issue 12
+                  </div>
+                  {/* Styled Background Element to look like an open book outline */}
+                  <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-xl" />
+                </div>
+              </div>
+            </div>
+
+            {/* Right Download Information */}
+            <div className="md:col-span-8 space-y-6">
+              <div>
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0d4f60]">
+                  Publication Support Sample Work
+                </h3>
+                <button className="mt-3 px-8 py-2.5 bg-black hover:bg-slate-900 active:scale-95 text-white font-bold text-xs tracking-wider uppercase rounded-full transition-all">
+                  Discover More
+                </button>
+              </div>
+
+              <div className="border-t border-emerald-200/60 pt-5">
+                <h3 className="text-xl sm:text-2xl font-extrabold text-[#0d4f60] mb-2">
+                  Download the full Report Now
+                </h3>
+                <p className="text-slate-600 text-sm max-w-xl leading-relaxed">
+                  Explore our{" "}
+                  <span className="text-sky-600 font-semibold underline cursor-pointer hover:text-sky-700">
+                    Publication Support
+                  </span>{" "}
+                  Services sample work tailored to your manuscript's scope,
+                  indexing requirements, and impact factor goals.
+                </p>
+                <button className="mt-4 px-8 py-2.5 bg-black hover:bg-slate-900 active:scale-95 text-white font-bold text-xs tracking-wider uppercase rounded-full inline-flex items-center gap-2 transition-all">
+                  <Download className="w-3.5 h-3.5" />
+                  Discover More
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Footer Quality Statement */}
+          <p className="mt-8 pt-6 border-t border-emerald-200/60 text-xs sm:text-sm text-slate-600 leading-relaxed text-center sm:text-left">
+            Pubrica meets crest standards and protocols of journal publishing
+            ethics in every single phase of services and processes. Pubrica
+            adheres to authorship guidelines drafted by the International
+            Council of Medical Journal Editors (ICMJE), and the scope for
+            services will be routinely updated as per the Committee on
+            Publication Ethics (COPE) and International Society of Medical
+            Publication Professionals guidelines (ISMPP).
+          </p>
+        </div>
+      </section>
+
+      {/* ================= SECTION 2: TESTIMONIALS & FAQ ================= */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white border-y border-slate-100">
+        <div className="max-w-6xl mx-auto space-y-16">
+          {/* TESTIMONIALS SUBSECTION */}
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d4f60] mb-8 text-center sm:text-left">
+              Testimonials
+            </h2>
+
+            {/* Horizontal slider container */}
+            <div className="relative">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {testimonials.map((test, index) => (
+                  <div
+                    key={test.id}
+                    className="bg-[#0f443b] text-white rounded-xl p-6 sm:p-8 flex flex-col justify-between shadow-lg relative overflow-hidden transition-all duration-300 hover:shadow-xl"
+                  >
+                    <Quote className="absolute top-4 right-4 w-12 h-12 text-[#115e51] opacity-50" />
+
+                    <div className="space-y-4 z-10">
+                      <p className="text-slate-200 text-sm sm:text-base leading-relaxed italic">
+                        "{test.quote}"
+                      </p>
+
+                      <div className="border-t border-[#115e51] pt-4">
+                        <h4 className="font-bold tracking-wide text-[#10b981]">
+                          {test.author}
+                        </h4>
+                        <p className="text-xs text-slate-300">{test.role}</p>
+                      </div>
+                    </div>
+
+                    <div className="mt-6 flex items-center gap-3 bg-black/20 p-3 rounded-lg z-10">
+                      <div className="w-8 h-8 rounded bg-white/10 flex items-center justify-center font-bold text-xs shrink-0 text-emerald-400">
+                        NEJM
+                      </div>
+                      <div>
+                        <p className="text-xs font-bold text-emerald-400 tracking-wider uppercase">
+                          {test.journalName}
+                        </p>
+                        <p className="text-[10px] text-slate-400">
+                          {test.journalSub}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Slider Dots */}
+              <div className="flex justify-center gap-2 mt-6">
+                <span className="w-2.5 h-2.5 rounded bg-slate-300 cursor-pointer" />
+                <span className="w-2.5 h-2.5 rounded bg-emerald-600 cursor-pointer" />
+              </div>
+            </div>
+          </div>
+
+          {/* FAQ SUBSECTION */}
+          <div className="pt-8 border-t border-slate-100">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d4f60] mb-8 text-center sm:text-left">
+              Frequently Asked Questions – Publication Support Services
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+              {/* Column 1 */}
+              <div className="space-y-4">
+                {faqs
+                  .filter((f) => f.id <= 4)
+                  .map((faq) => (
+                    <div
+                      key={faq.id}
+                      className="border border-slate-200 rounded-lg overflow-hidden bg-slate-50/50"
+                    >
+                      <button
+                        onClick={() => toggleFaq(faq.id)}
+                        className="w-full flex items-center justify-between p-4 text-left font-bold text-sm sm:text-base text-[#0d4f60] hover:bg-slate-100/50 transition-colors"
+                      >
+                        <span>
+                          {faq.id}. {faq.question}
+                        </span>
+                        {faq.isOpen ? (
+                          <Minus className="w-4 h-4 shrink-0 ml-2" />
+                        ) : (
+                          <Plus className="w-4 h-4 shrink-0 ml-2" />
+                        )}
+                      </button>
+                      {faq.isOpen && (
+                        <div className="px-4 pb-4 pt-1 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                          {faq.answer}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+              </div>
+
+              {/* Column 2 */}
+              <div className="space-y-4">
+                {faqs
+                  .filter((f) => f.id > 4)
+                  .map((faq) => (
+                    <div
+                      key={faq.id}
+                      className="border border-slate-200 rounded-lg overflow-hidden bg-slate-50/50"
+                    >
+                      <button
+                        onClick={() => toggleFaq(faq.id)}
+                        className="w-full flex items-center justify-between p-4 text-left font-bold text-sm sm:text-base text-[#0d4f60] hover:bg-slate-100/50 transition-colors"
+                      >
+                        <span>
+                          {faq.id}. {faq.question}
+                        </span>
+                        {faq.isOpen ? (
+                          <Minus className="w-4 h-4 shrink-0 ml-2" />
+                        ) : (
+                          <Plus className="w-4 h-4 shrink-0 ml-2" />
+                        )}
+                      </button>
+                      {faq.isOpen && (
+                        <div className="px-4 pb-4 pt-1 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                          {faq.answer}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= SECTION 3: INSIGHTS SECTION ================= */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50">
+        <div className="max-w-6xl mx-auto space-y-8">
+          <div>
+            <h2 className="text-3xl font-extrabold text-[#0d4f60] mb-2 text-center sm:text-left">
+              Insights
+            </h2>
+            <div className="h-1 w-12 bg-emerald-500 rounded mx-auto sm:mx-0" />
+          </div>
+
+          {/* Interactive Navigation Filter Tab Bar */}
+          <div className="bg-[#0e4b4d] rounded-full p-1.5 max-w-lg mx-auto sm:mx-0 flex items-center justify-between shadow-inner">
+            {categories.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setSelectedCategory(tab)}
+                className={`flex-1 text-center py-2 px-4 rounded-full text-xs sm:text-sm font-bold tracking-wide transition-all duration-300 ${
+                  selectedCategory === tab
+                    ? "bg-[#10b981] text-white shadow-md scale-105"
+                    : "text-slate-300 hover:text-white"
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+
+          {/* Cards Dynamic Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {filteredInsights.map((card, i) => (
+              <div
+                key={i}
+                className="bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
+              >
+                <div>
+                  {/* Card Cover Image */}
+                  <div className="relative aspect-video w-full overflow-hidden">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-2 left-2 bg-[#0e4b4d] text-white text-[10px] font-bold px-2.5 py-1 rounded-full">
+                      {card.category}
+                    </div>
+                  </div>
+
+                  {/* Text Details Area */}
+                  <div className="p-5 space-y-3">
+                    <h3 className="font-extrabold text-slate-800 group-hover:text-sky-600 transition-colors text-base sm:text-lg leading-snug">
+                      {card.title}
+                    </h3>
+                    <p className="text-slate-500 text-xs sm:text-sm leading-relaxed line-clamp-3">
+                      {card.snippet}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Bottom link element */}
+                <div className="p-5 pt-0 flex justify-end">
+                  <span className="p-1.5 rounded-full bg-slate-100 group-hover:bg-sky-50 group-hover:text-sky-600 text-slate-400 transition-colors">
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

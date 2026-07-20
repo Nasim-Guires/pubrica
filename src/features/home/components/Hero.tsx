@@ -1,0 +1,194 @@
+"use client";
+
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Users, Headphones, Lightbulb } from "lucide-react";
+import Container from "@/components/common/Container";
+
+export default function HomeHeroWithAbout() {
+  return (
+    <>
+      {/* --- HERO SECTION --- */}
+      <section className="relative bg-[#073632] text-white pt-12 pb-[100px] lg:pt-16 overflow-hidden select-none">
+        {/* Background patterns */}
+        <div className="absolute inset-0 grid-bg-dark opacity-20 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary-500/10 rounded-full blur-3xl pointer-events-none" />
+
+        <Container className="relative z-10 max-w-7xl mx-auto flex flex-col items-center px-4">
+          {/* Headline */}
+          <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight leading-[1.25] text-white text-center max-w-4xl font-display drop-shadow-md">
+            Achieving Impactful Results with Pubrica’s Research and Publication
+            Support
+          </h1>
+
+          {/* Paragraph */}
+          <p className="text-sm sm:text-base lg:text-[17px] text-gray-200/90 text-center leading-relaxed font-sans mt-6 max-w-4xl font-medium tracking-wide">
+            Attain scholarly heights with our merit research services. We
+            provide a complete list of research services that include research
+            data analysis, publication support, manuscript editing, medical
+            communication and original research articles.
+          </p>
+
+          {/* Pill Button CTAs */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 w-full sm:w-auto">
+            <Link href="/services/editing" className="w-full sm:w-auto">
+              <button className="w-full sm:w-auto bg-[#042522]/60 hover:bg-[#042522]/90 border border-emerald-950/50 text-white font-semibold px-8 py-3.5 rounded-full text-[15px] tracking-wide transition-all shadow-inner focus:outline-none cursor-pointer">
+                Editing & Translation
+              </button>
+            </Link>
+            <Link href="/services/publication" className="w-full sm:w-auto">
+              <button className="w-full sm:w-auto bg-white hover:bg-gray-50 text-[#073632] font-bold px-8 py-3.5 rounded-full text-[15px] tracking-wide transition-all shadow-md focus:outline-none cursor-pointer">
+                Publication Support
+              </button>
+            </Link>
+          </div>
+
+          {/* 
+            Feature 3D Flipping Cards Grid:
+            mb-[-100px] pushes exactly 40% of this 250px container out of the hero box bounds.
+          */}
+          <div className="w-full max-w-6xl mx-auto mt-16 z-20 mb-[-100px]">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+              {/* Card 1: Solutions Card - UPDATED to match Card 2 and 3 style */}
+              <div className="group h-[250px] [perspective:1000px]">
+                <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                  {/* Front Side */}
+                  <div className="absolute inset-0 bg-[#fcfbf9] rounded-xl p-8 shadow-xl border border-gray-100 flex flex-col items-center justify-center text-center text-gray-800 [backface-visibility:hidden]">
+                    <div className="h-14 w-14 rounded-full bg-white shadow-md flex items-center justify-center mb-4 border border-gray-100">
+                      <Lightbulb className="h-6 w-6 text-gray-700 stroke-[1.8]" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 tracking-tight leading-snug">
+                      Smart Solutions for Your Research Needs
+                    </h3>
+                    <p className="text-sm text-gray-600 font-sans mt-2 leading-relaxed">
+                      Harness cutting-edge research and publications tools and
+                      expertise for optimal results.
+                    </p>
+                  </div>
+                  {/* Back Side */}
+                  <div className="absolute inset-0 bg-[#073632] rounded-xl p-8 shadow-xl border border-emerald-900/50 flex flex-col items-center justify-center text-center text-white [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                    <p className="text-[15px] font-medium leading-relaxed tracking-wide text-gray-100">
+                      We provide innovative solutions tailored to meet your
+                      research goals.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2: Experience Team Card */}
+              <div className="group h-[250px] [perspective:1000px]">
+                <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                  {/* Front Side */}
+                  <div className="absolute inset-0 bg-[#fcfbf9] rounded-xl p-8 shadow-xl border border-gray-100 flex flex-col items-center justify-center text-center text-gray-800 [backface-visibility:hidden]">
+                    <div className="h-14 w-14 rounded-full bg-white shadow-md flex items-center justify-center mb-4 border border-gray-100">
+                      <Users className="h-6 w-6 text-gray-700 stroke-[1.8]" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 tracking-tight leading-snug">
+                      Experience Team
+                    </h3>
+                    <p className="text-sm text-gray-600 font-sans mt-2 leading-relaxed">
+                      Our experienced team ensures top-notch quality and support
+                      for your projects.
+                    </p>
+                  </div>
+                  {/* Back Side */}
+                  <div className="absolute inset-0 bg-[#073632] rounded-xl p-8 shadow-xl border border-emerald-900/50 flex flex-col items-center justify-center text-center text-white [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                    <p className="text-[15px] font-medium leading-relaxed tracking-wide text-gray-100">
+                      Benefit from the expertise of seasoned SME’s dedicated to
+                      your success.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3: Support Card */}
+              <div className="group h-[250px] [perspective:1000px]">
+                <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                  {/* Front Side */}
+                  <div className="absolute inset-0 bg-[#fcfbf9] rounded-xl p-8 shadow-xl border border-gray-100 flex flex-col items-center justify-center text-center text-gray-800 [backface-visibility:hidden]">
+                    <div className="h-14 w-14 rounded-full bg-white shadow-md flex items-center justify-center mb-4 border border-gray-100">
+                      <Headphones className="h-6 w-6 text-gray-700 stroke-[1.8]" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 tracking-tight leading-snug">
+                      24/7 Customer Support
+                    </h3>
+                    <p className="text-sm text-gray-600 font-sans mt-2 leading-relaxed">
+                      Got questions or need help? Reach out anytime for prompt
+                      assistance.
+                    </p>
+                  </div>
+                  {/* Back Side */}
+                  <div className="absolute inset-0 bg-[#073632] rounded-xl p-8 shadow-xl border border-emerald-900/50 flex flex-col items-center justify-center text-center text-white [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                    <p className="text-[15px] font-medium leading-relaxed tracking-wide text-gray-100">
+                      Our team is available around the clock to support your
+                      needs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* --- ABOUT US SECTION --- */}
+      <section className="bg-white pt-32 pb-20 lg:pt-40 lg:pb-28">
+        <Container className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left Column: Overlapping Lab Images Layout */}
+            <div className="lg:col-span-5 relative flex justify-center items-center h-[380px] sm:h-[450px]">
+              {/* Back Main Image */}
+              <div className="absolute left-0 top-0 w-[70%] h-[80%] rounded-2xl overflow-hidden shadow-md">
+                <Image
+                  src="/images/image-2.png" // Replace with your standard path
+                  alt="Researchers with Microscope"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              {/* Front Foreground Image */}
+              <div className="absolute right-0 bottom-0 w-[65%] h-[65%] rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-10">
+                <Image
+                  src="/images/image-1.png"
+                  alt="Pubrica Logo"
+                  width={180}
+                  height={52}
+                  className="object-contain w-full"
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* Right Column: Text Content matching image layout */}
+            <div className="lg:col-span-7 flex flex-col items-start">
+              <span className="text-sky-600 font-bold text-sm tracking-wider uppercase mb-3 font-sans">
+                About Us
+              </span>
+
+              <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-slate-900 tracking-tight leading-[1.3] font-display max-w-2xl">
+                With 20+ years of groundbreaking contributions, we assist
+                researchers in attaining research success with effectiveness and
+                efficiency. We demonstrate proficiency in various fields and
+                subfields of medical science with an extensive track record.
+              </h2>
+
+              <p className="text-gray-600 text-sm sm:text-base font-sans mt-5 leading-relaxed tracking-wide max-w-3xl">
+                Pubrica is your reliable companion that helps you achieve new
+                heights in research. Here, we transform your original ideas into
+                straightforward reports that are supported by empirical
+                evidence.
+              </p>
+              <p className="text-gray-600 text-sm sm:text-base font-sans mt-5 leading-relaxed tracking-wide max-w-3xl">
+                Our versatile team of researchers and editors works in
+                coordination with clinical experts to cross-verify methodologies
+                to ensure accurate findings. Using our strong statistical
+                capabilities, we derive remarkable outcomes each time.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+    </>
+  );
+}
