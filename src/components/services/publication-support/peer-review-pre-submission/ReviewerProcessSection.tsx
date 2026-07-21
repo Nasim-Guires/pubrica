@@ -1,0 +1,222 @@
+'use client';
+
+import React from 'react';
+import Image from 'next/image';
+
+// 1. Who We Serve Cards Data
+const whoWeServeData = [
+  { title: 'PhD Scholars', image: '/images/phd-scholars.jpg' },
+  { title: 'Early-Career Researchers', image: '/images/early-career-researchers.jpg' },
+  { title: 'Academic Faculty and Professors', image: '/images/academic-faculty.jpg' },
+  { title: 'Independent Researchers', image: '/images/independent-researchers.jpg' },
+  { title: 'Medical Device manufacturers', image: '/images/medical-device-manufacturers.jpg' },
+  { title: 'Pharmaceutical Companies', image: '/images/pharma-companies.jpg' },
+  { title: 'Life Science & Biotechnology Companies', image: '/images/life-science-companies.jpg' },
+];
+
+// 2. Process Steps Data
+const processSteps = [
+  {
+    number: '1',
+    title: 'UPLOAD YOUR MANUSCRIPT',
+    description:
+      'The process begins by submitting your manuscript and any specific guidelines for the journal or instructions from your institution. This helps us align our review with your publication objectives.',
+    icon: '/images/icons/upload-manuscript.svg',
+    position: 'bottom', // Card rendered below horizontal timeline bar
+  },
+  {
+    number: '2',
+    title: 'TECHNICAL REVIEW',
+    description:
+      "Pubrica's peer review pre-submission service raises the impact and compliance of your research with industry publication expectations.",
+    icon: '/images/icons/technical-review.svg',
+    position: 'top', // Card rendered above horizontal timeline bar
+  },
+  {
+    number: '3',
+    title: 'EXPERT SCIENTIFIC FEEDBACK',
+    description:
+      "Following a comprehensive technical review, Pubrica's editors highlight gaps and provide feedback on the most important elements, ensuring ethical compliance.",
+    icon: '/images/icons/scientific-feedback.svg',
+    position: 'bottom', // Card rendered below horizontal timeline bar
+  },
+  {
+    number: '4',
+    title: 'MULTIPLE ROUNDS OF REVIEW',
+    description:
+      'Following your revisions, Pubrica provides one complimentary re-review by a subject matter expert to ensure that the revision reflects the original recommendations and the journal\'s expectations.',
+    icon: '/images/icons/multiple-reviews.svg',
+    position: 'top', // Card rendered above horizontal timeline bar
+  },
+];
+
+export default function ReviewerProcessSection() {
+  return (
+    <div className="w-full font-sans text-gray-800 bg-white">
+      {/* ========================================== */}
+      {/* SECTION 1: WHO WE SERVE                   */}
+      {/* ========================================== */}
+      <section className="max-w-6xl mx-auto px-4 py-12">
+        <div className="mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-3">
+            Who We Serve
+          </h2>
+          <p className="text-sm sm:text-base text-gray-600 leading-relaxed max-w-4xl">
+            Our peer review pre-submission service provides important feedback to improve the scientific quality, clarity, and publication readiness of your manuscript. Designed for researchers, clinicians, and academics, the service provides multiple levels of support based on journal expectations and reviewer criteria.
+          </p>
+        </div>
+
+        {/* First Row (4 Cards) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
+          {whoWeServeData.slice(0, 4).map((item, idx) => (
+            <div
+              key={idx}
+              className="group relative h-48 rounded-md overflow-hidden shadow-md cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+            >
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent group-hover:bg-black/90 transition-colors duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <h3 className="text-white font-bold text-sm sm:text-base leading-snug">
+                  {item.title}
+                </h3>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Second Row (3 Centered Cards) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
+          {whoWeServeData.slice(4).map((item, idx) => (
+            <div
+              key={idx}
+              className="group relative h-48 rounded-md overflow-hidden shadow-md cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+            >
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                sizes="(max-width: 640px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent group-hover:bg-black/90 transition-colors duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <h3 className="text-white font-bold text-sm sm:text-base leading-snug">
+                  {item.title}
+                </h3>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ========================================== */}
+      {/* SECTION 2: OUR REVIEWER COMMENTS PROCESS  */}
+      {/* ========================================== */}
+      <section className="bg-[#eeefef] py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#0c3547] mb-14">
+            Our Reviewer Comments Process
+          </h2>
+
+          {/* Process Grid with Alternating Staggered Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
+            {processSteps.map((step, idx) => {
+              const isTop = step.position === 'top';
+
+              return (
+                <div key={idx} className="flex flex-col items-center w-full">
+                  {/* UPPER LEVEL: Circle badge for odd steps OR Card for even steps */}
+                  {!isTop ? (
+                    <div className="flex flex-col items-center mb-3">
+                      <div className="w-10 h-10 rounded-full bg-[#0082a6] text-white flex items-center justify-center font-bold text-lg shadow-sm">
+                        {step.number}
+                      </div>
+                      <div className="w-0.5 h-6 bg-red-300 my-1" />
+                    </div>
+                  ) : (
+                    <ProcessCard step={step} />
+                  )}
+
+                  {/* MIDDLE LEVEL: Horizontal Connecting Teal Bar */}
+                  <div className="w-full h-3 bg-[#0082a6] my-2 rounded-full hidden lg:block" />
+
+                  {/* LOWER LEVEL: Card for odd steps OR Circle badge for even steps */}
+                  {!isTop ? (
+                    <ProcessCard step={step} />
+                  ) : (
+                    <div className="flex flex-col items-center mt-3">
+                      <div className="w-0.5 h-6 bg-red-300 my-1" />
+                      <div className="w-10 h-10 rounded-full bg-[#0082a6] text-white flex items-center justify-center font-bold text-lg shadow-sm">
+                        {step.number}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================== */}
+      {/* SECTION 3: SATISFACTION BANNER             */}
+      {/* ========================================== */}
+      <section className="w-full bg-[#032d20] text-white py-8 px-4">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
+          {/* Badge Image */}
+          <div className="w-24 h-24 relative shrink-0">
+            <Image
+              src="/images/satisfaction-badge.png"
+              alt="100% Satisfaction Guarantee"
+              fill
+              className="object-contain"
+            />
+          </div>
+
+          {/* Banner Copy */}
+          <div className="space-y-1">
+            <h2 className="text-xl sm:text-2xl font-bold text-white">
+              Speed up your Journey to Publication with Pubrica
+            </h2>
+            <p className="text-xs sm:text-sm text-teal-100/90 leading-relaxed max-w-2xl">
+              Accelerate your path to publication with Pubrica&apos;s expert guidance and streamlined processes. Gain the advantage of efficient manuscript handling and editorial support today.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+// Reusable Process Card with Black Hover State
+function ProcessCard({ step }: { step: (typeof processSteps)[0] }) {
+  return (
+    <div className="group w-full bg-white rounded-md p-6 border border-gray-200 shadow-sm flex flex-col items-center text-center transition-all duration-300 hover:bg-[#505050] hover:text-white hover:shadow-2xl hover:-translate-y-1 cursor-pointer">
+      {/* Icon with white invert on hover */}
+      <div className="w-12 h-12 relative mb-4 transition-all group-hover:brightness-0 group-hover:invert">
+        <Image
+          src={step.icon}
+          alt={step.title}
+          fill
+          className="object-contain"
+        />
+      </div>
+
+      {/* Card Title */}
+      <h3 className="font-bold text-xs sm:text-sm tracking-wider text-gray-900 group-hover:text-white mb-3 uppercase">
+        {step.title}
+      </h3>
+
+      {/* Card Description */}
+      <p className="text-xs text-gray-600 group-hover:text-gray-200 leading-relaxed">
+        {step.description}
+      </p>
+    </div>
+  );
+}

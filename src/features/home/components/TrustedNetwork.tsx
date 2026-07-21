@@ -6,14 +6,14 @@ export default function TrustedNetwork() {
     {
       title: '40+ Journals & Publishers',
       logos: [
-        { src: '/images/logos/iet.png', alt: 'IET' },
-        { src: '/images/logos/airlangga.png', alt: 'Universitas Airlangga' },
-        { src: '/images/logos/future-medicine.png', alt: 'Future Medicine' },
-        { src: '/images/logos/korea-uni.png', alt: 'Korea University' },
-        { src: '/images/logos/skku.png', alt: 'Sungkyunkwan University' },
-        { src: '/images/logos/nagoya.png', alt: 'Nagoya University' },
-        { src: '/images/logos/kfupm.png', alt: 'KFUPM' },
-        { src: '/images/logos/yonsei.png', alt: 'Yonsei University' },
+        { src: '/images/WhoWeWorkFor/image-1.webp', alt: 'IET' },
+        { src: '/images/WhoWeWorkFor/image-1.webp', alt: 'Universitas Airlangga' },
+        { src: '/images/WhoWeWorkFor/image-1.webp', alt: 'Future Medicine' },
+        { src: '/images/WhoWeWorkFor/image-1.webp', alt: 'Korea University' },
+        { src: '/images/WhoWeWorkFor/image-1.webp', alt: 'Sungkyunkwan University' },
+        { src: '/images/WhoWeWorkFor/image-1.webp', alt: 'Nagoya University' },
+        { src: '/images/WhoWeWorkFor/image-1.webp', alt: 'KFUPM' },
+        { src: '/images/WhoWeWorkFor/image-1.webp', alt: 'Yonsei University' },
       ],
     },
     {

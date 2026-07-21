@@ -3,7 +3,14 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, ChevronDown, Mail, Phone, Search } from "lucide-react";
+import {
+  Menu,
+  ChevronDown,
+  ChevronRight,
+  Mail,
+  Phone,
+  Search,
+} from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 import MobileMenu from "./MobileMenu";
 import { cn } from "@/lib/helpers";
@@ -172,19 +179,53 @@ export default function Navbar() {
                         <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-64 rounded-lg bg-white p-2 shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-[100]">
                           <div className="grid gap-1">
                             {link.dropdown.map((sublink) => {
-                              const isSubActive = pathname === sublink.href;
+                              const isSubActive =
+                                pathname === sublink.href ||
+                                pathname.startsWith(sublink.href + "/");
+
                               return (
-                                <Link
+                                <div
                                   key={sublink.href}
-                                  href={sublink.href}
-                                  className={cn(
-                                    "block w-full text-left rounded-md px-4 py-2.5 text-sm text-gray-600 hover:text-[#073632] hover:bg-gray-50 transition-all font-medium",
-                                    isSubActive &&
-                                      "bg-emerald-50/50 text-[#073632] font-semibold",
-                                  )}
+                                  className="relative group/sub"
                                 >
-                                  {sublink.label}
-                                </Link>
+                                  <Link
+                                    href={sublink.href}
+                                    className={cn(
+                                      "flex items-center justify-between rounded-md px-4 py-2.5 text-sm text-gray-600 hover:text-[#073632] hover:bg-gray-50 transition-all font-medium",
+                                      isSubActive &&
+                                        "bg-emerald-50/50 text-[#073632] font-semibold",
+                                    )}
+                                  >
+                                    <span>{sublink.label}</span>
+
+                                    {sublink.children && (
+                                      <ChevronRight className="h-4 w-4" />
+                                    )}
+                                  </Link>
+
+                                  {sublink.children && (
+                                    <div className="absolute left-full top-0 ml-1 w-64 rounded-lg border border-gray-100 bg-white p-2 shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200 z-[200]">
+                                      {sublink.children.map((child) => {
+                                        const isChildActive =
+                                          pathname === child.href;
+
+                                        return (
+                                          <Link
+                                            key={child.href}
+                                            href={child.href}
+                                            className={cn(
+                                              "block rounded-md px-4 py-2.5 text-sm text-gray-600 hover:text-[#073632] hover:bg-gray-50",
+                                              isChildActive &&
+                                                "bg-emerald-50/50 text-[#073632] font-semibold",
+                                            )}
+                                          >
+                                            {child.label}
+                                          </Link>
+                                        );
+                                      })}
+                                    </div>
+                                  )}
+                                </div>
                               );
                             })}
                           </div>

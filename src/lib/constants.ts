@@ -368,48 +368,189 @@ export const GENERAL_FAQS = [
   },
 ];
 
+// export const NAV_LINKS = [
+//   { href: "/", label: "Home" },
+//   {
+//     href: "/services",
+//     label: "Services",
+//     dropdown: [
+//       { href: "/services/publication-support", label: "Publication Support" },
+//       {
+//         href: "/services/editing-and-translation",
+//         label: "Editing & Translation",
+//       },
+//       { href: "/services/research-services", label: "Research & Services" },
+//       {
+//         href: "/services/physician-writing-services",
+//         label: "Physician Writing & Services",
+//       },
+//       {
+//         href: "/services/data-analytics-machine-learning",
+//         label: "Statistical Analyses",
+//       },
+//       { href: "/services/medical-data-collection", label: "Data Collection" },
+//       { href: "/services/ai-ml-support", label: "AI and ML Services" },
+//       { href: "/services/medical-writing", label: "Medical Writing" },
+//       { href: "/services/research-impact", label: "Research Impact" },
+//       {
+//         href: "/services/scientific-communication",
+//         label: "Medical & Scientific Communication",
+//       },
+//       {
+//         href: "/services/educational-content-development",
+//         label: "Educational Content",
+//       },
+//        {
+//         href: "/services/academic-editorial-services",
+//         label: "Academic Editorial Service",
+//       },
+//     ],
+//   },
+//   { href: "/Industries", label: "industries" },
+//   { href: "/subjects", label: "Subjects" },
+//   { href: "/about", label: "About Us" },
+//   { href: "/academy", label: "Academy" },
+//   { href: "/insights", label: "Insights" },
+//   { href: "/contact", label: "Contact" },
+// ];
 export const NAV_LINKS = [
-  { href: "/", label: "Home" },
+  {
+    href: "/",
+    label: "Home",
+  },
+
   {
     href: "/services",
     label: "Services",
     dropdown: [
-      { href: "/services/publication-support", label: "Publication Support" },
+      {
+        href: "/services/publication-support",
+        label: "Publication Support",
+        children: [
+          {
+            href: "/services/publication-support/journal-selection",
+            label: "Journal Selection",
+          },
+          {
+            href: "/services/publication-support/pre-submission-peer-review",
+            label: "Pre-Submission Peer Review",
+          },
+          {
+            href: "/services/publication-support/journal-submission",
+            label: "Journal Submission",
+          },
+          {
+            href: "/services/publication-support/responding-to-reviewers",
+            label: "Response To Reviewers",
+          },
+          {
+            href: "/services/publication-support/poster-creation",
+            label: "Poster Creation & Design",
+          },
+          {
+            href: "/services/publication-support/formatting-service",
+            label: "Formatting Service",
+          },
+        ],
+      },
+
       {
         href: "/services/editing-and-translation",
         label: "Editing & Translation",
+        children: [
+          {
+            href: "/services/editing-and-translation/english-editing",
+            label: "English Editing",
+          },
+          {
+            href: "/services/editing-and-translation/proofreading",
+            label: "Proofreading",
+          },
+        ],
       },
-      { href: "/services/research-services", label: "Research & Services" },
+
+      {
+        href: "/services/research-services",
+        label: "Research Services",
+      },
+
       {
         href: "/services/physician-writing-services",
-        label: "Physician Writing & Services",
+        label: "Physician Writing",
       },
+
       {
         href: "/services/data-analytics-machine-learning",
         label: "Statistical Analyses",
       },
-      { href: "/services/medical-data-collection", label: "Data Collection" },
-      { href: "/services/ai-ml-support", label: "AI and ML Services" },
-      { href: "/services/medical-writing", label: "Medical Writing" },
-      { href: "/services/research-impact", label: "Research Impact" },
+
+      {
+        href: "/services/medical-data-collection",
+        label: "Data Collection",
+      },
+
+      {
+        href: "/services/ai-ml-support",
+        label: "AI and ML Services",
+      },
+
+      {
+        href: "/services/medical-writing",
+        label: "Medical Writing",
+      },
+
+      {
+        href: "/services/research-impact",
+        label: "Research Impact",
+      },
+
       {
         href: "/services/scientific-communication",
         label: "Medical & Scientific Communication",
       },
+
       {
         href: "/services/educational-content-development",
         label: "Educational Content",
       },
+
+      {
+        href: "/services/academic-editorial-services",
+        label: "Academic Editorial Services",
+      },
     ],
   },
-  { href: "/Industries", label: "industries" },
-  { href: "/subjects", label: "Subjects" },
-  { href: "/about", label: "About Us" },
-  { href: "/academy", label: "Academy" },
-  { href: "/insights", label: "Insights" },
-  { href: "/contact", label: "Contact" },
-];
 
+  {
+    href: "/industries",
+    label: "Industries",
+  },
+
+  {
+    href: "/subjects",
+    label: "Subjects",
+  },
+
+  {
+    href: "/about",
+    label: "About Us",
+  },
+
+  {
+    href: "/academy",
+    label: "Academy",
+  },
+
+  {
+    href: "/insights",
+    label: "Insights",
+  },
+
+  {
+    href: "/contact",
+    label: "Contact",
+  },
+];
 export const FOOTER_LINKS = {
   services: [
     { href: "/services/medical-writing", label: "Medical Writing" },

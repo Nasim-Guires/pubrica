@@ -21,7 +21,7 @@ const Page = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   type CardId = "proofreading" | "manuscript";
 
-  const [openCards, setOpenCards] = useState({
+  const [openCards, setOpenCards] = useState<Record<string, boolean>>({
     proofreading: true,
     manuscript: true,
   });
@@ -33,7 +33,7 @@ const Page = () => {
     currentSlide === 0
       ? [testimonialsData[0], testimonialsData[1]]
       : [testimonialsData[1], testimonialsData[2]];
-  const toggleCard = (id: CardId) => {
+  const toggleCard = (id: string) => {
     setOpenCards((prev) => ({
       ...prev,
       [id]: !prev[id],

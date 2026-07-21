@@ -88,71 +88,71 @@ const leftFaqs: FaqItem[] = [
   },
 ];
 
-const rightFaqs: FaqItem[] = [
-  {
-    id: 7,
-    question: '7. What if I am not satisfied with the work? Do you offer revisions or refunds?',
-    answer: (
-      <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
-        <p>We provide a satisfaction guarantee based on:</p>
-        <ol className="list-decimal pl-5 space-y-1">
-          <li>On-time delivery</li>
-          <li>Plagiarism-free, original work (typically &lt;5–10%)</li>
-          <li>With all details consistent with the scope and brief</li>
-          <li>Domain-expert assignment</li>
-        </ol>
-        <p>
-          If any of these cannot be fulfilled, we revise or rework the content based on our revision policy. Refunds might be considered only when critical and agreed-upon service guarantees are unfulfilled, subject to the terms.
-        </p>
-      </div>
-    ),
-  },
-  {
-    id: 8,
-    question: '8. What guarantees do you provide?',
-    answer: (
-      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-        We guarantee 100% confidentiality, scientific accuracy, adherence to global regulatory guidelines (ICH-GCP, MDR/IVDR), and thorough plagiarism and quality verification.
-      </p>
-    ),
-  },
-  {
-    id: 9,
-    question: '9. Do you outsource writing or handle it in-house?',
-    answer: (
-      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-        All projects are handled by our trained, in-house team of qualified scientific and regulatory medical writers and subject matter experts to guarantee data security and quality control.
-      </p>
-    ),
-  },
-  {
-    id: 10,
-    question: '10. Do you follow ICH and GCP guidelines?',
-    answer: (
-      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-        Yes, our team strictly adheres to ICH-GCP standards as well as CONSORT, PRISMA, and STROBE reporting frameworks across all relevant regulatory and clinical documents.
-      </p>
-    ),
-  },
-  {
-    id: 11,
-    question: '11. Are you familiar with MDR CER templates?',
-    answer: (
-      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-        Yes, our regulatory writers are experienced in drafting Clinical Evaluation Reports (CER) aligned with EU MDR Annex XIV and MEDDEV 2.7/1 rev 4 requirements.
-      </p>
-    ),
-  },
-  {
-    id: 12,
-    question: '12. Do you sign NDAs?',
-    answer: (
-      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-        Yes, we sign strict Non-Disclosure Agreements (NDAs) prior to receiving any proprietary data or client information to ensure absolute confidentiality.
-      </p>
-    ),
-  },
-];
+// const rightFaqs: FaqItem[] = [
+//   {
+//     id: 7,
+//     question: '7. What if I am not satisfied with the work? Do you offer revisions or refunds?',
+//     answer: (
+//       <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+//         <p>We provide a satisfaction guarantee based on:</p>
+//         <ol className="list-decimal pl-5 space-y-1">
+//           <li>On-time delivery</li>
+//           <li>Plagiarism-free, original work (typically &lt;5–10%)</li>
+//           <li>With all details consistent with the scope and brief</li>
+//           <li>Domain-expert assignment</li>
+//         </ol>
+//         <p>
+//           If any of these cannot be fulfilled, we revise or rework the content based on our revision policy. Refunds might be considered only when critical and agreed-upon service guarantees are unfulfilled, subject to the terms.
+//         </p>
+//       </div>
+//     ),
+//   },
+//   {
+//     id: 8,
+//     question: '8. What guarantees do you provide?',
+//     answer: (
+//       <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+//         We guarantee 100% confidentiality, scientific accuracy, adherence to global regulatory guidelines (ICH-GCP, MDR/IVDR), and thorough plagiarism and quality verification.
+//       </p>
+//     ),
+//   },
+//   {
+//     id: 9,
+//     question: '9. Do you outsource writing or handle it in-house?',
+//     answer: (
+//       <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+//         All projects are handled by our trained, in-house team of qualified scientific and regulatory medical writers and subject matter experts to guarantee data security and quality control.
+//       </p>
+//     ),
+//   },
+//   {
+//     id: 10,
+//     question: '10. Do you follow ICH and GCP guidelines?',
+//     answer: (
+//       <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+//         Yes, our team strictly adheres to ICH-GCP standards as well as CONSORT, PRISMA, and STROBE reporting frameworks across all relevant regulatory and clinical documents.
+//       </p>
+//     ),
+//   },
+//   {
+//     id: 11,
+//     question: '11. Are you familiar with MDR CER templates?',
+//     answer: (
+//       <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+//         Yes, our regulatory writers are experienced in drafting Clinical Evaluation Reports (CER) aligned with EU MDR Annex XIV and MEDDEV 2.7/1 rev 4 requirements.
+//       </p>
+//     ),
+//   },
+//   {
+//     id: 12,
+//     question: '12. Do you sign NDAs?',
+//     answer: (
+//       <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+//         Yes, we sign strict Non-Disclosure Agreements (NDAs) prior to receiving any proprietary data or client information to ensure absolute confidentiality.
+//       </p>
+//     ),
+//   },
+// ];
 
 export default function FaqSection(): React.ReactElement {
   // Open items 1 and 7 by default as shown in the screenshot
@@ -189,7 +189,7 @@ export default function FaqSection(): React.ReactElement {
           </div>
 
           {/* Right Column Accordion */}
-          <div className="space-y-3">
+          {/* <div className="space-y-3">
             {rightFaqs.map((faq) => (
               <AccordionCard
                 key={faq.id}
@@ -198,7 +198,7 @@ export default function FaqSection(): React.ReactElement {
                 onToggle={() => toggleItem(faq.id)}
               />
             ))}
-          </div>
+          </div> */}
 
         </div>
 

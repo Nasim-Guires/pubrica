@@ -484,8 +484,11 @@ export const testimonialsData = [
     name: "DR. MARIA SCHNEIDER",
     role: "Academic Researcher, Germany",
     flag: "🇩🇪", // Or use an SVG/image if preferred
+    flagSrc: "https://images.unsplash.com/photo-1527866512907-a35a62a7f6be?auto=format&fit=crop&q=80&w=40",
     image:
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=200", // Replace with Asian Journal of Psychiatry thumb
+    bgAccent: "bg-[#0b1f3a]",
+    journalTitle: "Asian Journal of Psychiatry",
   },
   {
     quote:
@@ -493,8 +496,11 @@ export const testimonialsData = [
     name: "DR. HIROSHI TANAKA",
     role: "Clinical Practitioner, Japan",
     flag: "🇯🇵",
+    flagSrc: "https://images.unsplash.com/photo-1528164344705-47542687990d?auto=format&fit=crop&q=80&w=40",
     image:
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=200", // Replace with JAMA Oncology thumb
+    bgAccent: "bg-[#1d4ed8]",
+    journalTitle: "JAMA Oncology",
   },
   {
     quote:
@@ -502,7 +508,10 @@ export const testimonialsData = [
     name: "ANANYA RAO",
     role: "PhD Scholar, India",
     flag: "🇮🇳",
+    flagSrc: "https://images.unsplash.com/photo-1532375810709-75b1da00537c?auto=format&fit=crop&q=80&w=40",
     image:
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=200", // Replace with BJCP thumb
+    bgAccent: "bg-[#047857]",
+    journalTitle: "British Journal of Clinical Pharmacology",
   },
 ];

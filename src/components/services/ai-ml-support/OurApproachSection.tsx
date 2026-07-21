@@ -61,9 +61,9 @@ const approachItems = [
 ];
 
 export default function OurApproachSection() {
-  const [openId, setOpenId] = useState("advisory");
+  const [openId, setOpenId] = useState<string | null>("advisory");
 
-  const toggleItem = (id) => {
+  const toggleItem = (id: string) => {
     setOpenId(openId === id ? null : id);
   };
 

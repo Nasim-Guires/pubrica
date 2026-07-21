@@ -1,27 +1,33 @@
-import { insightsData } from "@/lib/services/editing-and-translation";
-import InsightCard from "./InsightCard";
+import React from "react";
 
-export default function InsightsSection() {
+interface InsightCardProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+}
+
+export default function InsightCard({
+  title,
+  description,
+  imageUrl,
+}: InsightCardProps) {
   return (
-    <section className="bg-white py-12 px-6 max-w-7xl mx-auto font-sans">
-      <div className="max-w-7xl mx-auto">
-        {/* Heading */}
-        <h2 className="text-2xl font-bold text-[#0A4D4A] mb-8 tracking-tight">
-          Insights
-        </h2>
-
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {insightsData.map((card) => (
-            <InsightCard
-              key={card.id}
-              title={card.title}
-              description={card.description}
-              imageUrl={card.imageUrl}
-            />
-          ))}
-        </div>
+    <div className="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col">
+      <div className="relative h-48 w-full">
+        <img
+          src={imageUrl}
+          alt={title}
+          className="w-full h-full object-cover"
+        />
       </div>
-    </section>
+      <div className="p-5 flex flex-col flex-1">
+        <h3 className="text-base font-bold text-slate-800 mb-2 leading-snug">
+          {title}
+        </h3>
+        <p className="text-xs text-slate-600 leading-relaxed flex-1">
+          {description}
+        </p>
+      </div>
+    </div>
   );
 }

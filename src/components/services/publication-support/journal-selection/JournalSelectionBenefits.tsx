@@ -1,0 +1,172 @@
+"use client";
+
+import React from "react";
+
+export default function JournalSelectionBenefits() {
+  return (
+    <div className="w-full font-sans">
+      {/* ---------------------------------------------------- */}
+      {/* SECTION 1: SATISFACTION GUARANTEE BANNER             */}
+      {/* ---------------------------------------------------- */}
+      <section className="bg-[#052b1e] text-white py-12 px-6 sm:px-12 lg:px-16">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12">
+          {/* Badge Graphic */}
+          <div className="shrink-0">
+            <div className="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 p-1 flex items-center justify-center shadow-lg">
+              <div className="w-full h-full rounded-full border-4 border-dashed border-white/80 flex flex-col items-center justify-center text-center p-2 bg-gradient-to-tr from-cyan-500 to-sky-300">
+                <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-slate-800">
+                  Satisfaction
+                </span>
+                <span className="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-none my-0.5">
+                  100%
+                </span>
+                <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-slate-800">
+                  Guarantee
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Text Content */}
+          <div className="space-y-4 max-w-3xl">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight">
+              Speed up your Journey to Journal Selection with Pubrica
+            </h2>
+
+            <p className="text-slate-200 text-xs sm:text-sm leading-relaxed">
+              Improve your publication journey with Pubrica’s{" "}
+              <a href="#" className="text-cyan-300 hover:underline">
+                journal selection
+              </a>{" "}
+              support service. We will speed up the acceptance of your
+              manuscript with customized support and expertise related to
+              journal requirements.
+            </p>
+
+            {/* Bullet List */}
+            <ul className="space-y-2 pt-1 text-xs sm:text-sm">
+              <li className="flex items-center gap-2 font-semibold text-slate-100">
+                <span className="h-1.5 w-1.5 rounded-full bg-red-500 inline-block shrink-0" />
+                GDPR & Data Privacy
+              </li>
+              <li className="flex items-center gap-2 font-semibold text-slate-100">
+                <span className="h-1.5 w-1.5 rounded-full bg-red-500 inline-block shrink-0" />
+                No Predatory Journals Guarantee
+              </li>
+              <li className="flex items-center gap-2 font-semibold text-slate-100">
+                <span className="h-1.5 w-1.5 rounded-full bg-red-500 inline-block shrink-0" />
+                Ethical Journal Practices
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------------------------------------------------- */}
+      {/* SECTION 2: BENEFITS OF OUR JOURNAL SELECTION PROCESS */}
+      {/* ---------------------------------------------------- */}
+      <section className="bg-white py-14 px-6 sm:px-12 lg:px-16 text-slate-800">
+        <div className="max-w-6xl mx-auto space-y-8">
+          {/* Section Heading */}
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] text-left">
+            Benefits of Our Journal Selection Process
+          </h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* Left Content (Detailed Points) */}
+            <div className="lg:col-span-7 space-y-5 text-xs sm:text-sm leading-relaxed text-slate-700">
+              <div className="flex items-start gap-3">
+                <span className="h-2 w-2 rounded-full bg-red-500 mt-1.5 shrink-0" />
+                <p>
+                  <strong className="text-slate-900">
+                    Bring decades of knowledge from experience.
+                  </strong>{" "}
+                  Tap into Pubrica’s 20+ years of{" "}
+                  <a href="#" className="text-cyan-600 hover:underline">
+                    academic publishing experience
+                  </a>
+                  . Our experienced team has helped over 800,000 researchers
+                  publish in high-impact-factor journals. In addition, with
+                  experience from more than 800,000 publications, our{" "}
+                  <a href="#" className="text-cyan-600 hover:underline">
+                    journal selection service
+                  </a>{" "}
+                  makes the process easier and increases the likelihood of your
+                  paper being published.
+                </p>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="h-2 w-2 rounded-full bg-red-500 mt-1.5 shrink-0" />
+                <p>
+                  <strong className="text-slate-900">
+                    Journal selection by publication experts:
+                  </strong>{" "}
+                  At Pubrica, we appreciate the struggles of selecting
+                  peer-reviewed journals amongst the predatory ones. Our{" "}
+                  <a href="#" className="text-cyan-600 hover:underline">
+                    journal selection
+                  </a>{" "}
+                  service guarantees you in credible, peer-reviewed journals.
+                  You can count on our experts’ knowledge in your subject area
+                  to provide you with a detailed evaluation and fully considered
+                  recommendations.
+                </p>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="h-2 w-2 rounded-full bg-red-500 mt-1.5 shrink-0" />
+                <p>
+                  <strong className="text-slate-900">
+                    Choosing Pubrica’s professional{" "}
+                    <a href="#" className="text-cyan-600 hover:underline">
+                      journal selection service
+                    </a>
+                  </strong>{" "}
+                  will decrease scope-based rejections from your target
+                  journals. We will also help you identify other reasons for
+                  rejection, such as research design not meeting requirements,
+                  or lack of literature review detail, and we provide custom
+                  publication packages designed to support you in publishing
+                  faster.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Graphic Showcase */}
+            <div className="lg:col-span-5 flex flex-col items-center justify-center">
+              {/* Ribbon Graphic */}
+              <div className="bg-[#1d6b9e] text-white px-6 py-2 rounded-full font-bold text-xs sm:text-sm shadow-md flex items-center gap-2 mb-6">
+                <span className="text-base">👍</span>
+                <span>
+                  1,600+ journals officially recommend our editing services
+                </span>
+              </div>
+
+              {/* Journal Covers Preview */}
+              <div className="relative flex items-center justify-center gap-2 sm:gap-4 py-4">
+                <div className="w-24 sm:w-28 h-36 bg-gradient-to-b from-red-800 to-red-950 rounded shadow-md transform -rotate-6 transition-transform hover:rotate-0">
+                  <div className="p-2 text-white font-serif text-[10px] font-bold">
+                    blood
+                  </div>
+                </div>
+
+                <div className="w-24 sm:w-28 h-36 bg-gradient-to-b from-sky-700 to-blue-950 rounded shadow-lg z-10">
+                  <div className="p-2 text-white font-serif text-[10px] font-bold">
+                    jbc
+                  </div>
+                </div>
+
+                <div className="w-24 sm:w-28 h-36 bg-gradient-to-b from-rose-900 to-rose-950 rounded shadow-md transform rotate-6 transition-transform hover:rotate-0">
+                  <div className="p-2 text-white font-serif text-[10px] font-bold">
+                    JNT
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

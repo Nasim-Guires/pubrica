@@ -163,9 +163,9 @@ const industryCards = [
 ];
 
 export default function IndustriesEmpoweredSection() {
-  const [openId, setOpenId] = useState("fintech");
+  const [openId, setOpenId] = useState<string | null>("fintech");
 
-  const toggleAccordion = (id) => {
+  const toggleAccordion = (id: string) => {
     setOpenId(openId === id ? null : id);
   };
 
