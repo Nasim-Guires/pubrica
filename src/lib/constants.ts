@@ -392,6 +392,14 @@ export const NAV_LINKS = [
       { href: "/services/ai-ml-support", label: "AI and ML Services" },
       { href: "/services/medical-writing", label: "Medical Writing" },
       { href: "/services/research-impact", label: "Research Impact" },
+      {
+        href: "/services/scientific-communication",
+        label: "Medical & Scientific Communication",
+      },
+      {
+        href: "/services/educational-content-development",
+        label: "Educational Content",
+      },
     ],
   },
   { href: "/Industries", label: "industries" },
