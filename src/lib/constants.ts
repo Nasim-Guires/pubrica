@@ -444,12 +444,16 @@ export const NAV_LINKS = [
             label: "Response To Reviewers",
           },
           {
-            href: "/services/publication-support/poster-creation",
+            href: "/services/publication-support/poster-preparation",
             label: "Poster Creation & Design",
           },
           {
-            href: "/services/publication-support/formatting-service",
+            href: "/services/publication-support/journal-manuscript-formatting-services",
             label: "Formatting Service",
+          },
+          {
+            href: "/services/publication-support/art-work-preparation",
+            label: "Artwork Editing Service",
           },
         ],
       },

@@ -58,6 +58,17 @@ const Page = () => {
   const rightColumnFaqs = faqData.filter((item) => item.id > 5);
   return (
     <div className="font-sans text-slate-800 bg-white selection:bg-teal-500 selection:text-white">
+      <section className="w-full bg-[#0b2b30] text-white py-12 px-4 sm:px-6 md:px-8">
+      <div className="max-w-4xl mx-auto border border-white/70 rounded-sm p-6 sm:p-8 md:p-10 text-center">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
+          Editing and Translation Services
+        </h1>
+        <p className="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed max-w-3xl mx-auto font-light">
+          Pubrica offers comprehensive academic editing and professional translation services,
+          ensuring clarity, precision, and compliance with international publishing standards.
+        </p>
+      </div>
+    </section>
       {/* SECTION 1: HERO / PRECISION SERVICES */}
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-10">
         {/* Heading */}

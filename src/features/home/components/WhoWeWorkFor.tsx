@@ -1,31 +1,33 @@
-import React from 'react';
-import { Landmark, Home, PenTool, User } from 'lucide-react';
-import Container from '@/components/common/Container';
+import React from "react";
+import { Landmark, Home, PenTool, User } from "lucide-react";
+import Container from "@/components/common/Container";
 
 export default function WhoWeWorkFor() {
   const sectors = [
     {
-      title: 'Author Services',
-      description: 'We offer customized support for independent researchers & authors.',
-      image: '/images/WhoWeWorkFor/image-1.webp', // Replace with your image paths
+      title: "Author Services",
+      description: "Complete support for writing, editing, and support",
+      image: "/images/WhoWeWorkFor/image-1.webp", // Replace with your image paths
       icon: Landmark,
     },
     {
-      title: 'University Support',
-      description: 'We offer customized support for universities & research institutions.',
-      image: '/images/WhoWeWorkFor/image-2.webp',
+      title: "University Support",
+      description:
+        "We offer customized support for universities & research institutions.",
+      image: "/images/WhoWeWorkFor/image-2.webp",
       icon: Home,
     },
     {
-      title: 'Lab Assistance',
-      description: 'Expert structural data formatting and validation for active laboratories.',
-      image: '/images/WhoWeWorkFor/image-3.webp',
+      title: "Lab Assistance",
+      description: "Expert assistance for laboratory experiments and research.",
+      image: "/images/WhoWeWorkFor/image-3.webp",
       icon: PenTool,
     },
     {
-      title: 'Journal & Publications',
-      description: 'Comprehensive compliance checking against target journal indexing.',
-      image: '/images/WhoWeWorkFor/image-4.webp',
+      title: "Journal & Publications",
+      description:
+        "Professional support for your research article publication needs.",
+      image: "/images/WhoWeWorkFor/image-4.webp",
       icon: User,
     },
   ];
@@ -43,10 +45,15 @@ export default function WhoWeWorkFor() {
               <div className="hidden md:block w-full h-[2px] bg-emerald-950/80 mt-2 max-w-xl" />
             </div>
             <p className="text-sm text-gray-600 leading-relaxed font-sans mt-4 max-w-4xl">
-              In the field of medical science and its subfields, including public health and pharmaceuticals, we assist various sectors through a wide range of specialized services. We support researchers, medical institutions, private-sector organizations, stakeholders, and educators, ensuring credible and standardised outcomes.
+              In the field of medical science and its subfields, including
+              public health and pharmaceuticals, we assist various sectors
+              through a wide range of specialized services. We support
+              researchers, medical institutions, private-sector organizations,
+              stakeholders, and educators, ensuring credible and standardised
+              outcomes.
             </p>
           </div>
-          
+
           <div className="flex-shrink-0 self-start md:self-end">
             <button className="bg-emerald-950 text-white font-medium text-sm px-6 py-2.5 rounded-full hover:bg-emerald-900 shadow-md transition-all duration-300">
               Read more
@@ -71,7 +78,7 @@ export default function WhoWeWorkFor() {
                     alt={sec.title}
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-                  
+
                   {/* Overlapping Floating Badge */}
                   <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-10">
                     <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-emerald-950 shadow-md transition-transform duration-300 group-hover:scale-105">
@@ -85,7 +92,7 @@ export default function WhoWeWorkFor() {
                   <h3 className="font-bold text-gray-900 text-sm tracking-wide text-center font-display transition-colors duration-300">
                     {sec.title}
                   </h3>
-                  
+
                   {/* Revealable Description Text Block */}
                   <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-in-out group-hover:grid-rows-[1fr] group-hover:opacity-100 group-hover:mt-3">
                     <div className="overflow-hidden">
