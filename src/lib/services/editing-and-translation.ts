@@ -13,22 +13,31 @@ interface InsightCard {
 export const insightsData: InsightCard[] = [
   {
     id: 1,
-    title: "How to Structure Case Reports and Review Articles for Medical Journals",
-    description: "Medical journals expect a structure for case reports and review articles, with clear objectives...",
-    imageUrl: "https://images.unsplash.com/photo-1584515933487-78021ea4a8d5?auto=format&fit=crop&q=80&w=500" // Doctor with clipboard
+    title:
+      "How to Structure Case Reports and Review Articles for Medical Journals",
+    description:
+      "Medical journals expect a structure for case reports and review articles, with clear objectives...",
+    imageUrl:
+      "https://images.unsplash.com/photo-1584515933487-78021ea4a8d5?auto=format&fit=crop&q=80&w=500", // Doctor with clipboard
   },
   {
     id: 2,
-    title: "How Should Physicians Choose the Right Journal for Submitting a Case...",
-    description: "Publishing a case report involves more than clinical knowledge; it also demands strategic journal ...",
-    imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=500" // Physician studying document
+    title:
+      "How Should Physicians Choose the Right Journal for Submitting a Case...",
+    description:
+      "Publishing a case report involves more than clinical knowledge; it also demands strategic journal ...",
+    imageUrl:
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=500", // Physician studying document
   },
   {
     id: 3,
-    title: "How Physicians Can Write Clear and Impactful Patient Education Materials",
-    description: "Effective patient education materials (PEMs) are crucial for promoting health literacy, enhancing...",
-    imageUrl: "https://images.unsplash.com/photo-1530026405186-ed1ea0ac7a63?auto=format&fit=crop&q=80&w=500" // Healthcare consultation
-  }
+    title:
+      "How Physicians Can Write Clear and Impactful Patient Education Materials",
+    description:
+      "Effective patient education materials (PEMs) are crucial for promoting health literacy, enhancing...",
+    imageUrl:
+      "https://images.unsplash.com/photo-1530026405186-ed1ea0ac7a63?auto=format&fit=crop&q=80&w=500", // Healthcare consultation
+  },
 ];
 
 export const faqData: FAQItem[] = [
@@ -44,28 +53,28 @@ export const faqData: FAQItem[] = [
     question:
       "2. What is the difference between academic translation and language editing?",
     answer:
-      "Academic translation focuses on converting text from one language to another while preserving scientific meaning. Language editing refines existing text in the target language to improve grammar, flow, phrasing, and style.",
+      "Academic translation is the translation of content from one language to another with utmost accuracy, whereas language editing is the improvement of grammar, content, writing style, and readability of already written content.",
   },
   {
     id: 3,
     question:
       "3. Can a translated research manuscript be edited for journal publication?",
     answer:
-      "Yes. In fact, it is highly recommended. Post-translation editing ensures that the converted manuscript reads naturally to native speakers and meets the strict stylistic standards of international publishers.",
+      "Yes, translated manuscripts may be edited professionally with regard to language accuracy, clarity, terminology, formatting, etc., for the purpose of publication in a journal.",
   },
   {
     id: 4,
     question:
       "4. Why is professional editing important after translating a research paper?",
     answer:
-      "Literal translations often miss disciplinary nuances or construct awkward phrasing. Professional editing refines tone, repairs academic clarity, and aligns formatting directly with publisher specifications.",
+      "Professional editing ensures that translated papers are not only accurate, contextually appropriate, grammatically polished, and terminologically precise but also perfectly aligned with journal requirements before they are submitted for publication.",
   },
   {
     id: 5,
     question:
       "5. Where to find reliable academic translation and editing services?",
     answer:
-      "Look for established networks like Pubrica that pair your manuscript with native-English subject-matter experts holding specialized postgraduate degrees in your precise scientific field.",
+      "Trustworthy academic translation and editing services can be accessed through university writing centers, professional language service firms, research support firms, and individual freelance academic editors.",
   },
   {
     id: 6,
@@ -79,21 +88,21 @@ export const faqData: FAQItem[] = [
     question:
       "7. Do journals accept manuscripts translated from other languages?",
     answer:
-      "Absolutely, provided the final translation is indistinguishable from articles natively written in English. Quality language tuning removes the barrier of background translation artifacts completely.",
+      "Yes, they accept translated manuscripts as long as they are original, ethical, well-translated, well-edited, and completely compliant with the submission guidelines of the journal.",
   },
   {
     id: 8,
     question:
       "8. What are the common language issues in translated research papers?",
     answer:
-      "Common pitfalls include direct literal phrasing errors, inconsistent use of technical terms, passive voice overuse, grammatical mismatching, and structurally misaligned reference citations.",
+      "Grammatical errors, unnatural wording, terminology, literal translation, unclear sentence structure, poor readability, and contextual errors are some of the common problems that may occur.",
   },
   {
     id: 9,
     question:
       "9. How can non-native English researchers prepare manuscripts for international journals?",
     answer:
-      "Focus deeply on data integrity during draft stages, read widely in your target journal category to absorb domain-specific prose rhythms, and leverage expert collaborative editing pairs prior to formal peer reviews.",
+      "Non-native authors may improve their manuscripts by engaging professional language services, proofreading, following the submission guidelines, using clear language, avoiding ambiguity, and ensuring the manuscript is of good quality before submission.",
   },
 ];
 
@@ -173,35 +182,35 @@ export const editingTypesList = [
     title: "Substantive Editing",
     icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
     description:
-      "Evaluates the overall structure, logical flow, and content organization, improving how your core arguments and findings are presented clearly to your target audience.",
+      "A deep editing process involving extensive revisions, including rewriting, reordering, and suggestions for additional content. It ensures the manuscript meets journal expectations and significantly enhances readability.",
   },
   {
     id: "line",
     title: "Line Editing",
     icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
     description:
-      "Focuses line-by-line on creative use of language, phrasing, tone consistency, and smooth transitions to maximize readability and overall text rhythm.",
+      "Concentrates on sentence- and paragraph-level clarity, enhancing tone, readability, and logical flow. It involves eliminating jargon, refining word choice, and smoothing language usage without a complete rewrite.",
   },
   {
     id: "copyediting",
     title: "Copyediting",
     icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
     description:
-      "Ensures rule-based consistency in mechanics, including accurate grammar, technical spelling, style manual rules, syntax clarity, and punctuation standards.",
+      "Ensures correctness, consistency, and accuracy in grammar, vocabulary, punctuation, and syntax. Copyediting also involves checking for style guide compliance (APA, AMA, Chicago, Vancouver, etc.) and maintaining uniform terminology.",
   },
   {
     id: "content",
     title: "Content Editing",
     icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
     description:
-      "Deep dive analysis of complete factual precision, source consistency, depth of topic development, and alignment with academic writing standards.",
+      "Examines the accuracy, consistency, and relevance of content, ensuring the document fulfills its purpose. May include fact-checking, refining arguments, and restructuring for better readability and impact.",
   },
   {
     id: "technical",
     title: "Technical Editing",
     icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
     description:
-      "Refines specific field jargon, mathematical equations, domain nomenclature, data presentation layouts, and highly specialized technical methodologies.",
+      "Reviews documents for technical accuracy, completeness, and adherence to industry or scientific standards. Ensures terminology, data, and references meet field-specific requirements.",
   },
   {
     id: "manuscript",
@@ -215,42 +224,42 @@ export const editingTypesList = [
     title: "Structural Editing",
     icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
     description:
-      "Reorganizes full manuscript chapter modules, paragraphs, and sections to create a strong, logically sound structural narrative architecture.",
+      "Assesses and reshapes the document structure, ensuring that ideas are logically organized and presented in a coherent way. May involve reordering chapters, sections, or arguments for maximum impact.",
   },
   {
     id: "formatting",
     title: "Formatting & Style Editing",
     icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
     description:
-      "Conforms citation styles, reference matching matrices, margin definitions, blockquotes, and layouts exactly to APA, Harvard, Chicago, or target journal rules.",
+      "Ensures journal-specific formatting (references, tables, figures, word limits) and style guide compliance (APA, AMA, Vancouver, MLA, Chicago).",
   },
   {
     id: "reviewer",
     title: "Reviewer Response Editing",
     icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
     description:
-      "Polishes formal response letters and revised sections following peer review comments, preserving an objective, scholarly, and persuasive tone.",
+      "Helps authors refine and polish responses to peer reviewer comments. Improves clarity, professionalism, and alignment with journal requirements.",
   },
   {
     id: "plagiarism",
     title: "Plagiarism Check & Ethical Editing",
     icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
     description:
-      "Reviews similarity metrics, rephrases flags to maintain original contextual intent, and checks formatting compliance with standard academic ethics.",
+      "Provides plagiarism screening and ensures manuscripts meet ethical publishing standards by improving originality, paraphrasing, and citation accuracy.",
   },
   {
     id: "developmental",
     title: "Developmental Editing",
     icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
     description:
-      "Partners from the early drafting phase to build the manuscript concept, refining themes, outlines, and structural planning before writing finalize.",
+      "Focuses on the structure and content of a document, helping authors develop their manuscript from initial concept to complete draft. This type of editing addresses big-picture aspects such as organization, coherence, research argument strength, and overall narrative flow.",
   },
   {
     id: "language",
     title: "Language Polishing (ESL Support)",
     icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
     description:
-      "Elevates international researcher manuscripts by converting non-native phrasing styles into natural, publishable English with zero loss of technical context.",
+      "Specialized service for non-native English authors, improving clarity, grammar, and flow while retaining author intent.",
   },
 ];
 
@@ -400,48 +409,44 @@ export const mainServicesData = [
   {
     title: "Manuscript Editing",
     description:
-      "Comprehensive editing to enhance the layout, clarity, flow, and structural integrity of your research work.",
-    subtext: "Ready for tier-one international journal submissions.",
+      "Enhance your academic and scientific manuscripts with Pubrica’s professional Editing Service, clear, concise, and submission-ready.Ideal for ESL authors aiming for clarity, precision, and global recognition.",
+    subtext: "",
   },
   {
     title: "Book Editing",
     description:
-      "Professional structural and line editing tailored explicitly for academic volumes and text books.",
-    subtext: "Polished from cover to cover by specialized native publishers.",
+      "Perfect your academic or professional book manuscript with Pubrica’s Book Editing Service, tailored to achieve excellence and readability.Designed for authors who want engaging, error-free, and publisher-ready books.",
+    subtext: "",
   },
   {
     title: "Post Editing",
     description:
-      "Refining machine-translated drafts to eliminate unnatural phrasing and formatting issues.",
-    subtext: "Ensuring perfect flow while retaining absolute context.",
+      "Refine and polish machine-translated documents with Pubrica’s Post-Editing Service, ensuring fluency, accuracy, and natural readability.Preferred by institutions and corporates for flawless, human-quality translations.",
+    subtext: "",
   },
   {
     title: "Thesis Editing",
     description:
-      "Detailed dissertation correction aligning layout with strict academic university guidelines.",
-    subtext:
-      "Helping postgraduate scholars pass defense requirements with flying colors.",
+      "Optimize your thesis or dissertation with Pubrica’s Thesis Editing Service, tailored for academic excellence and global recognition.Perfect for graduate and doctoral students aiming for top academic standards.",
+    subtext: "",
   },
   {
     title: "Translation with Editing",
     description:
-      "Flawless semantic conversions paired with subject matter linguistic review.",
-    subtext:
-      "Bridging communication divides effortlessly across multiple global research fields.",
+      "Achieve accurate, culturally adapted translations with Pubrica’s Translation + Editing Services, where precision meets publication quality.Ensuring your research is understood, accepted, and impactful across languages.",
+    subtext: "",
   },
   {
     title: "Grant & Business Document Editing",
     description:
-      "Polishing funding proposals to elevate message persuasion, formatting, and structural delivery.",
-    subtext:
-      "Maximizing evaluation success rates with targeted phrasing treatments.",
+      "Specialized services for grant proposals, business reports, and corporate communications, ensuring clarity and persuasiveness.",
+    subtext: "",
   },
   {
     title: "Resume/CV & Application Editing",
     description:
-      "Optimizing profile submissions to spotlight clear academic milestones and functional skillsets.",
-    subtext:
-      "Tailored to cross-border institutional review committee frameworks.",
+      "Tailoring and polishing CVs, resumes, and application letters to make a strong professional impression.",
+    subtext: "",
   },
 ];
 
@@ -484,7 +489,8 @@ export const testimonialsData = [
     name: "DR. MARIA SCHNEIDER",
     role: "Academic Researcher, Germany",
     flag: "🇩🇪", // Or use an SVG/image if preferred
-    flagSrc: "https://images.unsplash.com/photo-1527866512907-a35a62a7f6be?auto=format&fit=crop&q=80&w=40",
+    flagSrc:
+      "https://images.unsplash.com/photo-1527866512907-a35a62a7f6be?auto=format&fit=crop&q=80&w=40",
     image:
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=200", // Replace with Asian Journal of Psychiatry thumb
     bgAccent: "bg-[#0b1f3a]",
@@ -496,7 +502,8 @@ export const testimonialsData = [
     name: "DR. HIROSHI TANAKA",
     role: "Clinical Practitioner, Japan",
     flag: "🇯🇵",
-    flagSrc: "https://images.unsplash.com/photo-1528164344705-47542687990d?auto=format&fit=crop&q=80&w=40",
+    flagSrc:
+      "https://images.unsplash.com/photo-1528164344705-47542687990d?auto=format&fit=crop&q=80&w=40",
     image:
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=200", // Replace with JAMA Oncology thumb
     bgAccent: "bg-[#1d4ed8]",
@@ -508,7 +515,8 @@ export const testimonialsData = [
     name: "ANANYA RAO",
     role: "PhD Scholar, India",
     flag: "🇮🇳",
-    flagSrc: "https://images.unsplash.com/photo-1532375810709-75b1da00537c?auto=format&fit=crop&q=80&w=40",
+    flagSrc:
+      "https://images.unsplash.com/photo-1532375810709-75b1da00537c?auto=format&fit=crop&q=80&w=40",
     image:
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=200", // Replace with BJCP thumb
     bgAccent: "bg-[#047857]",

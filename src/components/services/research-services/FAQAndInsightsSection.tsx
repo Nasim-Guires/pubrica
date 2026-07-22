@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 
@@ -35,28 +35,28 @@ export const FAQAndInsightsSection: React.FC = () => {
       question:
         "2. What role do research services play in academic and corporate studies?",
       answer:
-        "Research services provide methodical support, specialized technical capabilities, data management expertise, and editorial oversight to accelerate development and ensure high quality standards.",
+        "The research services assist in improving study design, analysis, literature review, manuscript preparation, editing, formatting, and ensuring compliance, thereby improving the quality, efficiency, and overall outcome of research.",
     },
     {
       id: 3,
       question:
         "3. What are the ethical standards followed in professional research?",
       answer:
-        "Professional research strictly maintains compliance with institutional review boards (IRBs), data anonymity protocols, explicit participant consent conditions, and absolute transparency regarding conflicts of interest.",
+        "Professional research is guided by ethical principles such as obtaining consent, confidentiality, integrity of data, avoiding plagiarism, authorship, ethical approval, transparency, and reporting of results.",
     },
     {
       id: 4,
       question:
         "4. How do research services assist with data interpretation and insights?",
       answer:
-        "By deploying statistical tools, thematic framework coding systems, and analytical packages to turn raw metrics or qualitative inputs into meaningful, structured research conclusions.",
+        "Research services can help by using the right statistical analysis techniques, accurately interpreting the results, identifying patterns, creating visualizations, and explaining the information to facilitate meaningful conclusions.",
     },
     {
       id: 5,
       question:
         "5. What tools and methodologies are commonly used in advanced research?",
       answer:
-        "Advanced research standardizes workflows through quantitative tools like SPSS/R, open-source model optimization platforms, thematic qualitative engines, and rigorous control testing parameters.",
+        "Advanced research techniques involve the use of statistical software, qualitative analysis software, systematic review methodologies, experimental designs, surveys, regression analysis, data visualization tools, and evidence-based methodologies.",
     },
   ];
 

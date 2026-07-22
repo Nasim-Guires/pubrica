@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 
 interface ServiceItem {
@@ -6,13 +6,13 @@ interface ServiceItem {
   description: string;
 }
 
-interface AccordionSection {
-  title: string;
-  subtitle?: string;
-  items: ServiceItem[];
+interface PhysicianServicesListProps {
+  imageUrl?: string;
 }
 
-export const PhysicianServicesList: React.FC = () => {
+export const PhysicianServicesList: React.FC<PhysicianServicesListProps> = ({
+  imageUrl = "/images/physician-services.jpg", // Replace with your actual image path
+}) => {
   // Managing visibility states for each accordion group block separately
   const [caseReportOpen, setCaseReportOpen] = useState<boolean>(true);
   const [litReviewOpen, setLitReviewOpen] = useState<boolean>(true);
@@ -174,27 +174,51 @@ export const PhysicianServicesList: React.FC = () => {
     <section className="w-full bg-white py-12 px-6 md:px-12 lg:px-24 font-sans text-left">
       <div className="max-w-7xl mx-auto">
         {/* Main Content Title Header */}
-        <h2 className="text-[#083c4c] text-xl md:text-2xl lg:text-[26px] font-extrabold leading-tight tracking-tight mb-4">
+        <h2 className="text-[#083c4c] text-xl md:text-2xl lg:text-[26px] font-extrabold leading-tight tracking-tight mb-6">
           Physician Writing Support Services Offered by Pubrica
         </h2>
 
-        {/* Introduction Paragraph Content */}
-        <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed mb-8 max-w-6xl">
-          Pubrica provides a comprehensive suite of physician writing support
-          services designed to assist healthcare professionals throughout their
-          research and publication journey. Our offerings are tailored to meet
-          the specific needs of physicians and medical researchers, ensuring
-          high-quality, efficient, and effective support. Here's an overview of
-          the services we provide:
-        </p>
+        {/* Top Header & Image Split Block */}
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12 mb-8">
+          {/* Left Text Intro */}
+          <div className="flex-1">
+            <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed text-justify">
+              Pubrica provides a comprehensive suite of physician writing
+              support services designed to assist healthcare professionals
+              throughout their research and publication journey. Our offerings
+              are tailored to meet the specific needs of physicians and medical
+              researchers, ensuring high-quality, efficient, and effective
+              support. Here's an overview of the services we provide:
+            </p>
+          </div>
+
+          {/* Right Image Feature Container */}
+          {imageUrl && (
+            <div className="w-full lg:w-[380px] shrink-0">
+              <div className="bg-[#113a35] rounded-xl p-1 relative shadow-md">
+                <div className="w-full h-[200px] md:h-[220px] bg-white rounded-lg overflow-hidden border border-gray-100">
+                  <img
+                    src={imageUrl}
+                    alt="Physician writing and research support services"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      (e.target as HTMLElement).style.display = "none";
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
 
         {/* Accordions Stack Block wrapper */}
         <div className="space-y-4 mb-8">
           {/* 1. Case Report Preparation Accordion Container */}
           <div className="w-full border border-gray-200 overflow-hidden rounded shadow-sm">
             <button
+              type="button"
               onClick={() => setCaseReportOpen(!caseReportOpen)}
-              className="w-full bg-[#113a35] text-white flex items-center justify-between px-5 py-3.5 transition-colors duration-150 select-none text-left"
+              className="w-full bg-[#113a35] text-white flex items-center justify-between px-5 py-3.5 transition-colors duration-150 select-none text-left cursor-pointer"
             >
               <span className="text-sm md:text-[15px] font-bold tracking-wide flex items-center gap-3">
                 <span className="font-mono text-base">
@@ -217,8 +241,9 @@ export const PhysicianServicesList: React.FC = () => {
           {/* 2. Clinical Literature Review Accordion Container */}
           <div className="w-full border border-gray-200 overflow-hidden rounded shadow-sm">
             <button
+              type="button"
               onClick={() => setLitReviewOpen(!litReviewOpen)}
-              className="w-full bg-[#113a35] text-white flex items-center justify-between px-5 py-3.5 transition-colors duration-150 select-none text-left"
+              className="w-full bg-[#113a35] text-white flex items-center justify-between px-5 py-3.5 transition-colors duration-150 select-none text-left cursor-pointer"
             >
               <span className="text-sm md:text-[15px] font-bold tracking-wide flex items-center gap-3">
                 <span className="font-mono text-base">

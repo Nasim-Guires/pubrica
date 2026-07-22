@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 
 interface TestimonialData {
@@ -57,28 +57,28 @@ export const PhysicianWritingExtensions: React.FC = () => {
       question:
         "2. How can healthcare organizations outsource medical writing services?",
       answer:
-        "Healthcare organizations can establish clear service level agreements (SLAs) with specialized providers like Pubrica to handle bulk clinical documentation, regulatory paperwork, and promotional medical insights securely.",
+        "Outsourcing by healthcare organizations involves choosing experienced medical writing companies, defining the scope of the project, ensuring compliance with regulations, confidentiality agreements, and timelines and quality checks.",
     },
     {
       id: 3,
       question:
         "3. What medical writing services are available for pharma and clinical research projects?",
       answer:
-        "Services span clinical study reports (CSRs), investigator brochures, protocol drafting, pharmacovigilance reports, and highly customized scientific manuscripts for peer-reviewed journal submission.",
+        "Medical writing services involve clinical study reports, clinical study protocols, regulatory documents, manuscript writing, systematic review writing, safety reports, abstracts, posters, grant writing, and publication services for pharmaceutical companies and clinical research.",
     },
     {
       id: 4,
       question:
         "4. How do physicians publish research papers in high-impact medical journals?",
       answer:
-        "By ensuring robust clinical methodology, addressing strong research gaps, strictly matching target journal aims, and eliminating editorial errors through professional physician-led proofreading and formatting cycles.",
+        "To get published in high-impact journals, physicians conduct robust studies, adhere to reporting guidelines (CONSORT and STROBE), write clearly, choose appropriate journals, ensure ethical compliance, and be responsive to peer review.",
     },
     {
       id: 5,
       question:
         "5. How to improve the quality of clinical manuscripts before journal submission?",
       answer:
-        "Focus on deep linguistic clarity, verify statistical data representations, structural coherence under IMRAD, rigorous plagiarism checking, and ensuring absolute compliance to formatting and ethical guidelines.",
+        "To improve clinical manuscripts, one can improve methodologies, ensure accurate data analysis, adhere to reporting guidelines, improve clarity, check references, ensure correct journal formatting, and edit and proofread manuscripts.",
     },
   ];
 
