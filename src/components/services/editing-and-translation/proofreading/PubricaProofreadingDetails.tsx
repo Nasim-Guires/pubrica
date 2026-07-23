@@ -1,0 +1,398 @@
+"use client";
+
+import React, { useState } from "react";
+import {
+  Minus,
+  Plus,
+  ArrowRightCircle,
+  FileCheck2,
+  ExternalLink,
+  Clock,
+  ShieldCheck,
+} from "lucide-react";
+
+// ==========================================
+// 1. REASONS ACCORDION DATA
+// ==========================================
+const reasonsList = [
+  "20+ years of experience in professional proofreading services",
+  "Trusted globally for scientific proofreading and research paper proofreading",
+  "High accuracy in medical proofreading services",
+  "Fast turnaround for online proofreading services",
+  "Secure and confidential manuscript proofreading services for researchers",
+];
+
+// ==========================================
+// 2. PACKAGES DATA
+// ==========================================
+interface PackageItem {
+  id: string;
+  badgeLetter: string;
+  title: string;
+  rateText: string;
+  bgColor: string;
+  borderColor: string;
+  idealFor: string;
+  includes: string[];
+  addons: string[];
+  turnaroundTime: string;
+}
+
+const packagesData: PackageItem[] = [
+  {
+    id: "basic",
+    badgeLetter: "B",
+    title: "Basic Package",
+    rateText: "At A Rate Of 0.08 Per Word With A Minimum Of 1000 Words",
+    bgColor: "bg-[#dce5e7]",
+    borderColor: "border-[#b8c9cc]",
+    idealFor: "Draft documents, assignments, general content",
+    includes: [
+      "Grammar, spelling, punctuation corrections",
+      "Basic formatting consistency",
+    ],
+    addons: [
+      "Grammar, spelling, punctuation corrections",
+      "Basic formatting consistency",
+    ],
+    turnaroundTime: "2–4 business days",
+  },
+  {
+    id: "standard",
+    badgeLetter: "S",
+    title: "Standard Package",
+    rateText: "At A Rate Of 0.12 Per Word, With A Minimum Of 1000 Words",
+    bgColor: "bg-[#e3d5ea]",
+    borderColor: "border-[#cfb7db]",
+    idealFor: "Academic papers, reports, manuscripts",
+    includes: [
+      "All Basic Package features",
+      "Style and consistency improvements",
+      "Minor clarity enhancements",
+    ],
+    addons: ["Reference formatting", "Word count reduction"],
+    turnaroundTime: "3–5 business days",
+  },
+  {
+    id: "premium",
+    badgeLetter: "P",
+    title: "Premium Package",
+    rateText: "At A Rate Of 0.16 Per Word, With A Minimum Of 1000 Words",
+    bgColor: "bg-[#e5d5b7]",
+    borderColor: "border-[#d4bd94]",
+    idealFor: "Journal submissions, high-impact documents",
+    includes: [
+      "All Standard Package features",
+      "Journal formatting compliance",
+      "Multiple quality checks",
+    ],
+    addons: ["Multiple revision rounds", "Submission support"],
+    turnaroundTime: "3–5 business days",
+  },
+];
+
+// ==========================================
+// 3. MAIN COMPONENT
+// ==========================================
+export default function PubricaProofreadingDetails() {
+  const [reasonsOpen, setReasonsOpen] = useState(true);
+
+  return (
+    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-12 space-y-16">
+      {/* ======================================= */}
+      {/* SECTION 1: REASONS WHY AUTHORS CHOOSE   */}
+      {/* ======================================= */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="bg-[#0a3233] text-white rounded-xs shadow-md overflow-hidden border border-[#062425]">
+          {/* Accordion Header */}
+          <button
+            type="button"
+            onClick={() => setReasonsOpen(!reasonsOpen)}
+            className="w-full flex items-center justify-start p-4 text-left font-bold text-sm sm:text-base hover:bg-[#0d3f40] transition-colors"
+          >
+            <span className="mr-3 text-lg font-mono">
+              {reasonsOpen ? "−" : "+"}
+            </span>
+            <span>
+              Reasons Why Authors Choose Pubrica's Proofreading Services
+            </span>
+          </button>
+
+          {/* Collapsible Content */}
+          {reasonsOpen && (
+            <div className="p-6 bg-white text-slate-700 border-t border-slate-200">
+              <ul className="space-y-2 text-sm sm:text-base font-medium">
+                {reasonsList.map((reason, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <span className="inline-block w-1.5 h-1.5 bg-slate-800 rounded-full mt-2 mr-3 shrink-0" />
+                    <span>{reason}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* ======================================= */}
+      {/* SECTION 2: SAMPLE WORK SHOWCASE         */}
+      {/* ======================================= */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 space-y-6">
+        <div className="text-center space-y-2">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#003B46]">
+            Proofreading Services Sample Work
+          </h2>
+          <p className="text-slate-600 text-sm max-w-3xl mx-auto leading-relaxed">
+            Explore our proofreading samples that demonstrate error correction,
+            formatting consistency, and high-quality output for academic and
+            professional documents.
+          </p>
+        </div>
+
+        {/* Sample Paper Container */}
+        <div className="bg-slate-100 rounded-md border border-slate-300 shadow-lg overflow-hidden">
+          {/* Card Top Header */}
+          <div className="bg-slate-200 p-4 sm:px-6 flex items-center justify-between border-b border-slate-300">
+            <h3 className="text-lg sm:text-xl font-bold text-[#003B46]">
+              A sample of our Proofreading services
+            </h3>
+            <button
+              type="button"
+              className="bg-[#b80000] hover:bg-[#9e0000] text-white font-bold px-5 py-2 rounded-md text-xs sm:text-sm transition-colors shadow-2xs"
+            >
+              View More
+            </button>
+          </div>
+
+          {/* Sample Document Body Area */}
+          <div className="bg-white p-6 sm:p-10 relative text-slate-800 font-serif leading-relaxed text-xs sm:text-sm md:text-base border-b border-slate-200 min-h-[380px]">
+            {/* Watermark Logo Placeholder */}
+            <div className="absolute right-6 top-6 opacity-90 hidden sm:block">
+              <div className="bg-[#003B46] text-white px-3 py-1 font-sans font-bold text-lg tracking-wider rounded-xs">
+                PUBRICA
+              </div>
+              <p className="text-[10px] font-sans text-right text-slate-500">
+                Knowledge Works
+              </p>
+            </div>
+
+            {/* Document Paragraph 1 with highlights */}
+            <p className="mb-6 max-w-3xl">
+              Since the <span className="font-bold text-purple-700">ABR</span>{" "}
+              emergence of{" "}
+              <span className="text-purple-700 underline font-semibold">
+                Auditory Brainstem Response (ABR)
+              </span>
+              , non-level-dependent stimuli such as click, tone burst, and
+              upward chirp have been used to elicit ABRS until the development
+              of{" "}
+              <span className="line-through text-pink-600">
+                level-dependent stimulus, namely,
+              </span>{" "}
+              the{" "}
+              <span className="text-purple-700 font-semibold underline">
+                Level-specific CE-Chirp (LS CE-Chirp)
+              </span>{" "}
+              (1-3). LS CE-Chirp is the latest{" "}
+              <span className="line-through text-pink-600">innovated</span>
+              <span className="text-purple-700 font-semibold">
+                innovative
+              </span>{" "}
+              stimulus{" "}
+              <span className="line-through text-pink-600">that has</span>
+              <span className="text-purple-700 font-semibold">with</span> at
+              least two{" "}
+              <span className="line-through text-pink-600">supremacy</span>
+              <span className="text-purple-700 font-semibold">
+                advantages
+              </span>{" "}
+              compared to other stimuli,{" "}
+              <span className="line-through text-pink-600">which are:</span> i){" "}
+              <span className="line-through text-pink-600">able to</span>
+              <span className="text-purple-700 font-semibold">it can</span>{" "}
+              compensate for the broader excitation at a high-intensity level in
+              chirp and ii){" "}
+              <span className="line-through text-pink-600">overcome</span>
+              <span className="text-purple-700 font-semibold">
+                it overcomes
+              </span>{" "}
+              the “travelling wave delay” issue in{" "}
+              <span className="text-purple-700 underline">the</span> click
+              stimulus.
+            </p>
+
+            {/* Document Paragraph 2 with highlights */}
+            <p className="max-w-3xl">
+              The “broad excitation at the high-intensity level and changes in
+              the cochlear neural delay at the low-intensity level” refers to a
+              situation in which, at a high stimulus level, the excitation of{" "}
+              <span className="line-through text-pink-600">cochlea</span>
+              <span className="text-purple-700 font-semibold">
+                cochlear
+              </span>{" "}
+              regions broadens but{" "}
+              <span className="line-through text-pink-600">narrowed</span>
+              <span className="text-purple-700 font-semibold">narrows</span> at
+              a low stimulus level (4). The theory underlying the development of{" "}
+              <span className="line-through text-pink-600">this</span> LS
+              CE-Chirp is the delay in stimulus presentation and compensation
+              concept. Therefore, following the specified delay model-
+              <span className="line-through text-pink-600">suggested</span> a
+              shorter stimulus presentation at a high-intensity level{" "}
+              <span className="line-through text-pink-600">than at</span>
+              <span className="text-purple-700 font-semibold">
+                is suggested compared
+              </span>{" "}
+              to the mid and low-intensity levels (2).{" "}
+              <span className="text-purple-700 font-semibold">Hence,</span>
+              <span className="line-through text-pink-600">This allows</span> LS
+              CE-Chirp <span className="line-through text-pink-600">can</span>
+              <span className="text-purple-700 font-semibold">
+                to
+              </span> reduce{" "}
+              <span className="text-purple-700 underline">the</span> neural
+              firing desynchronisation and compensate for the{" "}
+              <span className="text-purple-700 font-semibold">
+                broader arousal's
+              </span>{" "}
+              negative effect{" "}
+              <span className="text-purple-700 underline">
+                of broader arousal
+              </span>{" "}
+              in chirp{" "}
+              <span className="text-purple-700 underline">stimuli</span> (2,
+              5-6).
+            </p>
+
+            {/* Sample Annotation Callout Badges */}
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-3 font-sans text-xs">
+              <div className="bg-slate-200 border-l-4 border-slate-500 p-2 text-slate-700">
+                <strong>Annotation:</strong> Full form is mentioned at first
+                appearance.
+              </div>
+              <div className="bg-slate-200 border-l-4 border-slate-500 p-2 text-slate-700">
+                <strong>Annotation:</strong> Grammar & word usage correction
+                done.
+              </div>
+              <div className="bg-slate-200 border-l-4 border-slate-500 p-2 text-slate-700">
+                <strong>Annotation:</strong> Correct punctuation & journal
+                formatting aligned.
+              </div>
+            </div>
+          </div>
+
+          {/* Card Footer Copyright */}
+          <div className="bg-white p-3 text-center text-[11px] text-slate-500">
+            Copyright © 2026 pubrica. No part of this document may be published
+            without permission of the author
+          </div>
+        </div>
+      </section>
+
+      {/* ======================================= */}
+      {/* SECTION 3: OUR PACKAGES                */}
+      {/* ======================================= */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#003B46] text-center">
+          Proofreading Services – Our Packages
+        </h2>
+
+        {/* 3 Package Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {packagesData.map((pkg) => (
+            <div
+              key={pkg.id}
+              className={`${pkg.bgColor} border ${pkg.borderColor} rounded-xs p-6 shadow-xs flex flex-col justify-between space-y-6`}
+            >
+              <div className="space-y-5">
+                {/* Package Header */}
+                <div className="flex items-start space-x-3">
+                  {/* Badge Letter Icon */}
+                  <div className="w-12 h-12 rounded-full bg-white/70 border border-slate-300 flex items-center justify-center font-bold text-xl text-slate-700 shrink-0 shadow-2xs">
+                    {pkg.badgeLetter}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-extrabold text-slate-900 leading-tight">
+                      {pkg.title}
+                    </h3>
+                    <p className="text-xs text-slate-700 mt-1">
+                      {pkg.rateText}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Ideal For */}
+                <div className="space-y-1">
+                  <div className="flex items-center text-xs font-bold text-slate-900">
+                    <ArrowRightCircle className="w-4 h-4 mr-1.5 shrink-0 text-slate-900" />
+                    <span>Ideal For:</span>
+                  </div>
+                  <p className="text-xs text-slate-700 pl-5.5">
+                    {pkg.idealFor}
+                  </p>
+                </div>
+
+                {/* Includes */}
+                <div className="space-y-1.5">
+                  <div className="flex items-center text-xs font-bold text-slate-900">
+                    <ArrowRightCircle className="w-4 h-4 mr-1.5 shrink-0 text-slate-900" />
+                    <span>Includes:</span>
+                  </div>
+                  <ul className="text-xs text-slate-700 pl-5.5 space-y-1">
+                    {pkg.includes.map((inc, i) => (
+                      <li key={i}>• {inc}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Add-ons */}
+                <div className="space-y-1.5">
+                  <div className="flex items-center text-xs font-bold text-slate-900">
+                    <ArrowRightCircle className="w-4 h-4 mr-1.5 shrink-0 text-slate-900" />
+                    <span>Add-ons:</span>
+                  </div>
+                  <ul className="text-xs text-slate-700 pl-5.5 space-y-1">
+                    {pkg.addons.map((add, i) => (
+                      <li key={i}>• {add}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Turnaround Time */}
+              <div className="pt-4 border-t border-slate-400/30 flex items-center text-xs font-bold text-slate-900">
+                <ArrowRightCircle className="w-4 h-4 mr-1.5 shrink-0 text-slate-900" />
+                <span>Turnaround Time:</span>
+                <span className="font-medium text-slate-800 ml-1">
+                  {pkg.turnaroundTime}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Additional Add-ons Notice Box */}
+        <div className="bg-slate-200/80 border border-slate-300 p-4 rounded-xs text-xs text-slate-700 space-y-1">
+          <p>
+            <strong className="text-slate-900">• Fastest Delivery:</strong>{" "}
+            Additional 20% of the total project cost
+          </p>
+          <p>
+            <strong className="text-slate-900">• Plagiarism Report:</strong>{" "}
+            $100 extra
+          </p>
+        </div>
+
+        {/* Full-width Free Quote Banner CTA Button */}
+        <div className="pt-2">
+          <button
+            type="button"
+            className="w-full bg-[#b80000] hover:bg-[#9e0000] text-white font-bold text-lg py-3.5 rounded-md transition-colors shadow-md text-center"
+          >
+            Get a Free Quote
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+}
