@@ -424,6 +424,10 @@ export const NAV_LINKS = [
     label: "Services",
     dropdown: [
       {
+        href: "/services/research-services/product-development/",
+        label: "Discovery & Intelligence Service",
+      },
+      {
         href: "/services/publication-support",
         label: "Publication Support",
         children: [
@@ -455,6 +459,14 @@ export const NAV_LINKS = [
             href: "/services/publication-support/art-work-preparation",
             label: "Artwork Editing Service",
           },
+          {
+            href: "/services/publication-support/plagiarism-services",
+            label: "Plagiarism services",
+          },
+          {
+            href: "/services/publication-support/video-abstract",
+            label: "Video Abstract",
+          },
         ],
       },
 
@@ -463,8 +475,28 @@ export const NAV_LINKS = [
         label: "Editing & Translation",
         children: [
           {
-            href: "/services/editing-and-translation/english-editing",
-            label: "English Editing",
+            href: "/services/editing-and-translation/scientific-editing",
+            label: "Scientific Editing",
+          },
+          {
+            href: "/services/editing-and-translation/manuscript-editing",
+            label: "Manuscript Editing",
+          },
+          {
+            href: "/services/editing-and-translation/book-editing",
+            label: "Book Editing",
+          },
+          {
+            href: "/services/editing-and-translation/post-editing",
+            label: "Post Editing",
+          },
+          {
+            href: "/services/editing-and-translation/thesis-editing",
+            label: "Thesis Editing",
+          },
+          {
+            href: "/services/editing-and-translation/translation-with-editing",
+            label: "Translation with Editing",
           },
           {
             href: "/services/editing-and-translation/proofreading",
