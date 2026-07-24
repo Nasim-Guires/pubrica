@@ -508,6 +508,36 @@ export const NAV_LINKS = [
       {
         href: "/services/research-services",
         label: "Research Services",
+        children: [
+          {
+            href: "/services/research-services/systematic-review",
+            label: "Systematic Review",
+          },
+          {
+            href: "/services/research-services/meta-analysis",
+            label: "Meta Analysis",
+          },
+          {
+            href: "/services/physician-writing-services/original-research-article",
+            label: "Original Research Article",
+          },
+          {
+            href: "/services/research-services/literature-review-and-gap",
+            label: "Literature Review",
+          },
+          {
+            href: "/services/research-services/grant-writing",
+            label: "Grant writing services",
+          },
+          {
+            href: "/services/research-services/biostatistics-and-statistical-programming-service",
+            label: " Biostatistical Programming",
+          },
+          {
+            href: "/services/research-services/experimental-design",
+            label: "Experimental Design",
+          },
+        ],
       },
 
       {
