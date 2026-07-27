@@ -539,10 +539,51 @@ export const NAV_LINKS = [
           },
         ],
       },
-
       {
         href: "/services/physician-writing-services",
         label: "Physician Writing",
+        children: [
+          {
+            href: "/services/physician-writing-services/case-report-writing",
+            label: "Case Report Writing",
+          },
+          {
+            href: "/services/physician-writing-services/patient-education-content",
+            label: "Patient Education Materials",
+          },
+          {
+            href: "/services/physician-writing-services/literature-search-and-citation",
+            label: "Literature Search & Citation",
+          },
+          {
+            href: "/services/physician-writing-services/physician-manuscript",
+            label: "Physician Manuscript",
+          },
+          {
+            href: "/services/physician-writing-services/physician-training",
+            label: "Physician Training",
+          },
+          {
+            href: "/services/physician-writing-services/clinical-literature-review",
+            label: "Clinical Literature Review",
+          },
+          {
+            href: "/services/physician-writing-services/customized-writing",
+            label: "Customized Writing",
+          },
+          {
+            href: "/services/physician-writing-services/original-research-article",
+            label: "Original Research Article",
+          },
+          {
+            href: "/services/physician-writing-services/research-proposal",
+            label: "Research Proposal",
+          },
+          // {
+          //   href: "/services/physician-writing-services/patient-education-content",
+          //   label: "Patient Education Content",
+          // },
+        ],
       },
 
       {
