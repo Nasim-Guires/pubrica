@@ -97,8 +97,13 @@ const trainingProcessSteps = [
     }
 ];
 
+interface ComplianceItem {
+    id: string;
+    category: string;
+    items: string[];
+}
 // Compliance & Guidelines Accordion Data
-const complianceData = [
+const complianceData: ComplianceItem[] = [
     {
         id: "clinical",
         category: "Clinical & Scientific Guidelines We Follow",
@@ -138,12 +143,11 @@ const complianceData = [
 
 export default function PhysicianTrainingWorkflowSection() {
     // Accordion state initialized to null so all accordions start CLOSED by default
-    const [openCompliance, setOpenCompliance] = useState(null);
+  const [openCompliance, setOpenCompliance] = useState<string | null>(null);
 
-    const toggleCompliance = (id) => {
-        setOpenCompliance(openCompliance === id ? null : id);
-    };
-
+const toggleCompliance = (id: string) => {
+    setOpenCompliance(openCompliance === id ? null : id);
+};
     return (
         <div className="w-full bg-white text-slate-800">
 

@@ -67,12 +67,11 @@ const trustReasons = [
 ];
 
 export default function PhysicianManuscriptWorkflowSection() {
-    const [openAccordion, setOpenAccordion] = useState(null);
+const [openAccordion, setOpenAccordion] = useState<string | null>(null);
 
-    const toggleAccordion = (id) => {
-        setOpenAccordion(openAccordion === id ? null : id);
-    };
-
+const toggleAccordion = (id: string) => {
+  setOpenAccordion(openAccordion === id ? null : id);
+};
     return (
         <div className="w-full bg-white text-slate-800">
             {/* 1. How Our Physician Manuscript Service Works */}
@@ -259,7 +258,7 @@ export default function PhysicianManuscriptWorkflowSection() {
                 </div>
             </section>
 
-        
+
         </div>
     );
 }
