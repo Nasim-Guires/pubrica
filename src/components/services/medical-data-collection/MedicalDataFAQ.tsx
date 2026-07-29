@@ -46,11 +46,11 @@ const faqData = [
 ];
 
 export default function MedicalDataFAQ() {
-  const [openId, setOpenId] = useState(1); // Default first item open
+  const [openId, setOpenId] = useState<number | null>(1);
 
-  const toggleAccordion = (id) => {
-    setOpenId(openId === id ? null : id);
-  };
+const toggleAccordion = (id: number) => {
+  setOpenId(openId === id ? null : id);
+};
 
   return (
     <section className="w-full bg-white py-12 px-4 sm:px-6 lg:px-12 font-sans text-slate-800">
