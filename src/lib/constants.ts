@@ -629,7 +629,7 @@ export const NAV_LINKS = [
   },
 
   {
-    href: "/industries",
+    href: "/Industries",
     label: "Industries",
   },
 
