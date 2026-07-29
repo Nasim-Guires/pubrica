@@ -1,0 +1,34 @@
+import CommonTestimonial from '@/components/common/CommonTestimonials'
+import CommonWhoWeServe from '@/components/common/CommonWhoWeServe'
+import CommonFAQ from '@/components/common/FAQ'
+import PhysicianResearchProposalProcessWorkflow from '@/components/services/physician-writing-services/research-proposal/PhysicianResearchProposalProcessWorkflow'
+import PhysicianResearchProposalService from '@/components/services/physician-writing-services/research-proposal/PhysicianResearchProposalService'
+import ResearchProposalWritingPackages from '@/components/services/physician-writing-services/research-proposal/ResearchProposalWritingPackages'
+import { researchProposalFaqs, researchProposalTestimonials, researchProposalWhoWeServe } from '@/lib/services/data/research-proposal/researchProposalTestimonials'
+import React from 'react'
+
+const page = () => {
+    return (
+        <>
+            <PhysicianResearchProposalService />
+            <CommonWhoWeServe
+                title="Who We Serve"
+                description="At Pubrica, our reearch proposal writing services are designed to support a diverse range of academic and scientific stakeholders."
+                data={researchProposalWhoWeServe}
+            />
+            <PhysicianResearchProposalProcessWorkflow />
+            <ResearchProposalWritingPackages />
+            <CommonTestimonial
+                title="Testimonials"
+                description="At Pubrica, researchers trust our expertise and compliance-driven approach to craft impactful, approval-ready research proposals. Here's what they say about our service:"
+                testimonials={researchProposalTestimonials}
+            />
+            <CommonFAQ
+                title="Frequently Asked Questions – Research Protocol & Proposal Writing Service"
+                faqs={researchProposalFaqs}
+            />
+        </>
+    )
+}
+
+export default page
