@@ -5,10 +5,10 @@ export interface Service {
   iconName: string;
   overviewHeading: string;
   category:
-    | "medical-writing"
-    | "editing"
-    | "research-support"
-    | "publication-support";
+  | "medical-writing"
+  | "editing"
+  | "research-support"
+  | "publication-support";
   heroDescription: string;
   overview: string;
   benefits: string[];
@@ -583,12 +583,30 @@ export const NAV_LINKS = [
           //   href: "/services/physician-writing-services/patient-education-content",
           //   label: "Patient Education Content",
           // },
+          // {
+          //   href: "/services/physician-writing-services/patient-education-content",
+          //   label: "Patient Education Content",
+          // },
         ],
       },
 
       {
         href: "/services/data-analytics-machine-learning",
         label: "Statistical Analyses",
+        children: [
+          {
+            href: "/services/research-services/biostatistics-and-statistical-programming-service",
+            label: " Biostatistics",
+          },
+          {
+            href: "/services/research-services/meta-analysis/",
+            label: "Meta-analyses",
+          },
+          {
+            href: "/services/bioinformatics",
+            label: "Bioinformatics",
+          },
+        ]
       },
 
       {
@@ -599,6 +617,32 @@ export const NAV_LINKS = [
       {
         href: "/services/ai-ml-support",
         label: "AI and ML Services",
+        children: [
+          {
+            href: "/services/data-analytics-machine-learning/health-economics-outcome-research",
+            label: "Health Economics",
+          },
+          {
+            href: "/services/data-analytics-machine-learning/patient-journey-insights-machine-learning/",
+            label: "Patient journey & Insights -ML",
+          },
+          {
+            href: "/services/data-analytics-machine-learning/customer-segmentation",
+            label: "Segmentation",
+          },
+          {
+            href: "/services/data-analytics-machine-learning/predictive-analysis",
+            label: "Predictive Analysis",
+          },
+          {
+            href: "/services/data-analytics-machine-learning/algorithm-development",
+            label: "Algorithm Development",
+          },
+          {
+            href: "/services/data-analytics-machine-learning/interpretation-and-visualisation",
+            label: "Interpretation & Visualisation",
+          },
+        ]
       },
 
       {
