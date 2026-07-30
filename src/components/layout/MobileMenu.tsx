@@ -15,14 +15,19 @@ interface MobileMenuProps {
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const pathname = usePathname();
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [openDropdowns, setOpenDropdowns] = useState<Record<string, boolean>>({});
 
-  // Close mobile menu when pathname changes
+  const toggleDropdown = (key: string) => {
+    setOpenDropdowns((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
+  };
+
   useEffect(() => {
     onClose();
   }, [pathname]);
 
-  // Lock body scroll when menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -66,40 +71,98 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         {/* Links Navigation */}
         <div className="flex-grow py-4">
           <div className="grid gap-3">
-            {NAV_LINKS.map((link) => {
-              if (link.dropdown) {
+            {NAV_LINKS.map((link: any) => {
+              const mainSubItems = link.dropdown || link.items || link.children || link.submenu;
+              const hasMainSub = Array.isArray(mainSubItems) && mainSubItems.length > 0;
+
+              if (hasMainSub) {
+                const isParentOpen = !!openDropdowns[link.label];
+
                 return (
                   <div key={link.label} className="grid">
+                    {/* LEVEL 0 MAIN HEADER (e.g., Services) */}
                     <button
-                      onClick={() => setServicesOpen(!servicesOpen)}
+                      onClick={() => toggleDropdown(link.label)}
                       className={cn(
                         'flex items-center justify-between text-left py-2 text-base font-medium text-gray-800 hover:text-primary-800 focus:outline-none cursor-pointer',
-                        (pathname.startsWith('/services') || servicesOpen) && 'text-primary-800'
+                        isParentOpen && 'text-primary-800 font-semibold'
                       )}
                     >
                       <span>{link.label}</span>
-                      {servicesOpen ? (
+                      {isParentOpen ? (
                         <ChevronUp className="h-5 w-5" />
                       ) : (
                         <ChevronDown className="h-5 w-5" />
                       )}
                     </button>
 
-                    {servicesOpen && (
-                      <div className="grid gap-1 pl-4 mt-2 border-l-2 border-primary-50 py-1">
-                        {link.dropdown.map((sublink) => (
-                          <Link
-                            key={sublink.href}
-                            href={sublink.href}
-                            className={cn(
-                              'py-2 text-sm text-gray-600 hover:text-primary-800 transition-colors',
-                              pathname === sublink.href && 'text-primary-800 font-semibold'
-                            )}
-                            onClick={onClose}
-                          >
-                            {sublink.label}
-                          </Link>
-                        ))}
+                    {/* LEVEL 1 SUBMENU CONTAINER */}
+                    {isParentOpen && (
+                      <div className="grid gap-1 pl-4 mt-1 border-l-2 border-primary-100 py-1">
+                        {mainSubItems.map((sublink: any) => {
+                          const level2Items = sublink.dropdown || sublink.items || sublink.children || sublink.submenu;
+                          const hasLevel2 = Array.isArray(level2Items) && level2Items.length > 0;
+                          const subKey = sublink.label || sublink.href;
+                          const isSubOpen = !!openDropdowns[subKey];
+
+                          if (hasLevel2) {
+                            return (
+                              <div key={subKey} className="grid">
+                                {/* LEVEL 1 ITEM WITH SUBMENU (e.g., Editing & Translation) */}
+                                <button
+                                  onClick={() => toggleDropdown(subKey)}
+                                  className={cn(
+                                    'flex items-center justify-between text-left py-2 text-sm font-medium text-gray-700 hover:text-primary-800 focus:outline-none cursor-pointer',
+                                    isSubOpen && 'text-primary-800 font-semibold'
+                                  )}
+                                >
+                                  <span>{sublink.label}</span>
+                                  {isSubOpen ? (
+                                    <ChevronUp className="h-4 w-4" />
+                                  ) : (
+                                    <ChevronDown className="h-4 w-4" />
+                                  )}
+                                </button>
+
+                                {/* LEVEL 2 SUBMENU (e.g., Scientific Editing, Manuscript Editing) */}
+                                {isSubOpen && (
+                                  <div className="grid gap-1 pl-3 border-l-2 border-gray-200 my-1 ml-1">
+                                    {level2Items.map((nestedLink: any) => (
+                                      <Link
+                                        key={nestedLink.href || nestedLink.label}
+                                        href={nestedLink.href || '#'}
+                                        className={cn(
+                                          'py-1.5 text-xs text-gray-600 hover:text-primary-800 transition-colors',
+                                          pathname === nestedLink.href &&
+                                            'text-primary-800 font-bold'
+                                        )}
+                                        onClick={onClose}
+                                      >
+                                        {nestedLink.label}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          }
+
+                          // LEVEL 1 DIRECT LINK
+                          return (
+                            <Link
+                              key={sublink.href || sublink.label}
+                              href={sublink.href || '#'}
+                              className={cn(
+                                'py-2 text-sm text-gray-600 hover:text-primary-800 transition-colors',
+                                pathname === sublink.href &&
+                                  'text-primary-800 font-semibold'
+                              )}
+                              onClick={onClose}
+                            >
+                              {sublink.label}
+                            </Link>
+                          );
+                        })}
                       </div>
                     )}
                   </div>
@@ -114,7 +177,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   href={link.href}
                   className={cn(
                     'py-2 text-base font-medium text-gray-800 hover:text-primary-800 transition-colors',
-                    isActive && 'text-primary-800 font-bold border-l-4 border-primary-800 pl-2'
+                    isActive &&
+                      'text-primary-800 font-bold border-l-4 border-primary-800 pl-2'
                   )}
                   onClick={onClose}
                 >

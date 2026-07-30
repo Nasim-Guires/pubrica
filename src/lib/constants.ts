@@ -631,7 +631,7 @@ export const NAV_LINKS = [
             label: "Segmentation",
           },
           {
-            href: "/services/data-analytics-machine-learning/predictive-analysis",
+            href: "/services/data-analytics-machine-learning/predictive-analytics",
             label: "Predictive Analysis",
           },
           {
