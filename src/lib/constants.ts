@@ -635,11 +635,11 @@ export const NAV_LINKS = [
             label: "Predictive Analysis",
           },
           {
-            href: "/services/data-analytics-machine-learning/algorithm-development",
+            href: "/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation",
             label: "Algorithm Development",
           },
           {
-            href: "/services/data-analytics-machine-learning/interpretation-and-visualisation",
+            href: "/services/data-analytics-machine-learning/interpretation-reporting-and-visualisation",
             label: "Interpretation & Visualisation",
           },
         ]
@@ -648,6 +648,20 @@ export const NAV_LINKS = [
       {
         href: "/services/medical-writing",
         label: "Medical Writing",
+        children: [
+          {
+            href: "/services/research-services/scientific-writing",
+            label: " Scientific Writing",
+          },
+          {
+            href: "/services/medical-writing/regulatory-writing",
+            label: "  Regulatory Writing",
+          },
+          {
+            href: "/services/medical-writing/editorial-quality-support-service",
+            label: " Editorial Quality Support Services",
+          },
+        ]
       },
 
       {

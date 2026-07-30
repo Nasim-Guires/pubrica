@@ -13,7 +13,76 @@ interface FAQProps {
 }
 
 export default function CommonFAQ({ title, faqs }: FAQProps) {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const useTwoColumns = faqs.length > 6;
+
+  const mid = Math.ceil(faqs.length / 2);
+  const leftFaqs = faqs.slice(0, mid);
+  const rightFaqs = faqs.slice(mid);
+
+  const renderFAQ = (faq: FAQItem, originalIndex: number, isLast: boolean) => {
+    const isOpen = openIndex === originalIndex;
+
+    return (
+      <div
+        key={originalIndex}
+        style={{
+          borderBottom: !isLast ? "1px solid #ddd" : "none",
+        }}
+      >
+        <button
+          onClick={() => setOpenIndex(isOpen ? null : originalIndex)}
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            padding: "18px 20px",
+            border: "none",
+            background: "#fff",
+            cursor: "pointer",
+            textAlign: "left",
+          }}
+        >
+          <span
+            style={{
+              fontSize: "20px",
+              fontWeight: 600,
+              color: "#0b3a57",
+              paddingRight: "20px",
+            }}
+          >
+            {faq.question}
+          </span>
+
+          <span
+            style={{
+              fontSize: "28px",
+              fontWeight: 700,
+              color: "#0b3a57",
+              flexShrink: 0,
+            }}
+          >
+            {isOpen ? "−" : "+"}
+          </span>
+        </button>
+
+        {isOpen && (
+          <div
+            style={{
+              padding: "0 20px 20px",
+              fontSize: "17px",
+              lineHeight: "28px",
+              color: "#333",
+            }}
+          >
+            {faq.answer}
+          </div>
+        )}
+      </div>
+    );
+  };
 
   return (
     <section
@@ -35,73 +104,49 @@ export default function CommonFAQ({ title, faqs }: FAQProps) {
         {title}
       </h2>
 
-      <div
-        style={{
-          border: "1px solid #ddd",
-        }}
-      >
-        {faqs.map((faq, index) => {
-          const isOpen = openIndex === index;
+      {useTwoColumns ? (
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit,minmax(450px,1fr))",
+            gap: "18px",
+          }}
+        >
+          <div
+            style={{
+              border: "1px solid #ddd",
+            }}
+          >
+            {leftFaqs.map((faq, i) =>
+              renderFAQ(faq, i, i === leftFaqs.length - 1)
+            )}
+          </div>
 
-          return (
-            <div
-              key={index}
-              style={{
-                borderBottom:
-                  index !== faqs.length - 1 ? "1px solid #ddd" : "none",
-              }}
-            >
-              <button
-                onClick={() => setOpenIndex(isOpen ? -1 : index)}
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  padding: "18px 20px",
-                  border: "none",
-                  background: "#fff",
-                  cursor: "pointer",
-                  textAlign: "left",
-                }}
-              >
-                <span
-                  style={{
-                    fontSize: "20px",
-                    fontWeight: 600,
-                    color: "#0b3a57",
-                  }}
-                >
-                  {faq.question}
-                </span>
-
-                <span
-                  style={{
-                    fontSize: "28px",
-                    fontWeight: 700,
-                    color: "#0b3a57",
-                  }}
-                >
-                  {isOpen ? "−" : "+"}
-                </span>
-              </button>
-
-              {isOpen && (
-                <div
-                  style={{
-                    padding: "0 20px 20px",
-                    fontSize: "17px",
-                    lineHeight: "28px",
-                    color: "#333",
-                  }}
-                >
-                  {faq.answer}
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
+          <div
+            style={{
+              border: "1px solid #ddd",
+            }}
+          >
+            {rightFaqs.map((faq, i) =>
+              renderFAQ(
+                faq,
+                i + mid,
+                i === rightFaqs.length - 1
+              )
+            )}
+          </div>
+        </div>
+      ) : (
+        <div
+          style={{
+            border: "1px solid #ddd",
+          }}
+        >
+          {faqs.map((faq, i) =>
+            renderFAQ(faq, i, i === faqs.length - 1)
+          )}
+        </div>
+      )}
     </section>
   );
 }
