@@ -745,6 +745,10 @@ export const NAV_LINKS = [
           },
         ]
       },
+       {
+        href: "/services/education-editorial-service",
+        label: "Educational Editorial Service",
+      },
 
     ],
   },
