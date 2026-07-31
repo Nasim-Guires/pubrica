@@ -1,0 +1,284 @@
+'use client';
+
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+// --- Data Objects ---
+interface DesignOption {
+  id: string;
+  badge: string;
+  title: string;
+  description: string;
+  points: string[];
+  includedPackage: string[];
+  price: string;
+  bgColor: string;
+  borderColor: string;
+  buttonBg: string;
+}
+
+const designOptionsData: DesignOption[] = [
+  {
+    id: '2d-abstract',
+    badge: '⭐',
+    title: '2D Graphical Abstract',
+    description:
+      'A concise, visual summary of the key findings of your manuscript using high-quality, two-dimensional graphics suitable for journal submission and popular among researchers.',
+    points: [
+      'Ideal for a wide array of journals and highly favoured by researchers.',
+      'Clear and comprehensible, facilitating swift understanding of your research essence by readers.',
+      'Suitable for illustrating relationships, processes, or data that lend themselves well to flat graphical representation.',
+      'Retain full copyright of the completed graphic, allowing unrestricted usage and sharing without the need for additional permissions.',
+      'Optimized for editorial submission platforms such as Elsevier, Wiley, Springer.',
+      'Suitable for bioRxiv, medRxiv, and other preprint repositories.',
+    ],
+    includedPackage: [
+      '2D graphical abstract file',
+      'Accompanying letter from our research communication expert for further explanation',
+    ],
+    price: '$150',
+    bgColor: 'bg-emerald-50/40',
+    borderColor: 'border-emerald-200',
+    buttonBg: 'bg-blue-600 hover:bg-blue-700',
+  },
+  {
+    id: '3d-abstract',
+    badge: '💎',
+    title: '3D Graphical Abstract',
+    description:
+      'One-of-a-kind custom 3D graphics ensure the most realistic and accurate representation of your research paper, creating visual impact in conferences and on social media too.',
+    points: [
+      'Ideal for showcasing intricate anatomical and molecular structures, as well as spatial relationships.',
+      'Retain ownership of both individual vector elements and the final 3D image.',
+    ],
+    includedPackage: [
+      '3D graphical abstract file',
+      'Accompanying letter from our research communication expert',
+      'Comprehensive step-by-step development materials, including rough sketches and initial drafts',
+    ],
+    price: '$250',
+    bgColor: 'bg-indigo-50/40',
+    borderColor: 'border-indigo-200',
+    buttonBg: 'bg-blue-600 hover:bg-blue-700',
+  },
+];
+
+const publishersData = [
+  {
+    name: 'Wiley',
+    logoUrl: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=300',
+  },
+  {
+    name: 'Sage Publishing',
+    logoUrl: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=300',
+  },
+  {
+    name: 'BMJ',
+    logoUrl: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=300',
+  },
+  {
+    name: 'Elsevier',
+    logoUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=300',
+  },
+  {
+    name: 'Hindawi',
+    logoUrl: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=300',
+  },
+];
+
+const whyChoosePoints = [
+  'Proficient in scientific illustration with specialized expertise.',
+  'Customized graphical abstracts to the requirements of your selected journal.',
+  'Formats are available in JPG, PDF, PNG, and TIFF.',
+  'Ensured customer satisfaction with our guarantee.',
+  'Studies show that research papers featuring graphical abstracts get 3x more downloads and 8x more social media shares, driving higher citation rates and better academic recognition.',
+  'With 8,000 research papers published every day, graphical abstracts help you stand out and make your research understandable to a global interdisciplinary audience.',
+];
+
+export default function GraphicalAbstractDesignOptions() {
+  return (
+    <section className="w-full bg-white text-slate-800 font-sans py-12 px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      {/* 1. Choose Design Options Section */}
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#0a231c] mb-10">
+          Choose From One of Our Graphical Abstract Design Options
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          {designOptionsData.map((option) => (
+            <div
+              key={option.id}
+              className={`p-6 sm:p-8 rounded-xl border ${option.borderColor} ${option.bgColor} flex flex-col justify-between shadow-sm`}
+            >
+              <div className="space-y-4">
+                <div className="flex items-center gap-2">
+                  <span className="text-xl">{option.badge}</span>
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#0a231c]">
+                    {option.title}
+                  </h3>
+                </div>
+
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  {option.description}
+                </p>
+
+                <ul className="space-y-2 pt-2">
+                  {option.points.map((point, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-600">
+                      <span className="text-slate-400 mt-1">•</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="pt-4 border-t border-slate-200/60">
+                  <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wide mb-2">
+                    Included in your package:
+                  </h4>
+                  <ul className="space-y-1.5">
+                    {option.includedPackage.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-600">
+                        <span className="text-slate-400 mt-0.5">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-4 space-y-4">
+                <div className="text-2xl font-bold text-[#0a231c]">
+                  {option.price}
+                </div>
+                <button
+                  type="button"
+                  className={`w-32 py-2.5 px-4 text-sm font-semibold text-white rounded-md transition-colors ${option.buttonBg}`}
+                >
+                  Place Order
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 2. Top Publishers Banner */}
+      <div className="max-w-6xl mx-auto text-center space-y-8">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#0a231c]">
+          We Have Developed A Graphical Abstract For These Top Publishers
+        </h2>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          {publishersData.map((pub, idx) => (
+            <div
+              key={idx}
+              className="p-4 border border-slate-200 rounded-lg bg-white flex flex-col items-center justify-center space-y-2 shadow-sm hover:shadow-md transition-shadow"
+            >
+              {/* Image Section Container */}
+              <div className="relative w-full h-16 bg-slate-50 rounded flex items-center justify-center overflow-hidden">
+                <Image
+                  src={pub.logoUrl}
+                  alt={`${pub.name} Logo`}
+                  fill
+                  sizes="150px"
+                  className="object-cover"
+                />
+              </div>
+              <span className="text-xs font-semibold text-slate-700">{pub.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 3. Why Choose Our Services */}
+      <div className="max-w-6xl mx-auto space-y-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#0a231c]">
+          Why Choose Our Graphical Abstract Services
+        </h2>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-7">
+            <ul className="space-y-3">
+              {whyChoosePoints.map((point, idx) => (
+                <li key={idx} className="flex items-start gap-2 text-sm text-slate-600 leading-relaxed">
+                  <span className="text-slate-400 mt-1">•</span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Graphic Illustration Image Section */}
+          <div className="lg:col-span-5 flex justify-center">
+            <div className="relative w-full max-w-md h-72 bg-indigo-50/50 border border-indigo-100 rounded-lg overflow-hidden shadow-sm flex items-center justify-center">
+              <Image
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+                alt="Graphical abstract impact illustration"
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 4. Sample Work & Download Report CTA */}
+      <div className="max-w-6xl mx-auto bg-emerald-50/50 border border-emerald-100 rounded-xl p-6 sm:p-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          {/* Sample Work Desktop Image Section Container */}
+          <div className="lg:col-span-5 flex justify-center">
+            <div className="relative w-full max-w-sm h-64 bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm">
+              <Image
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
+                alt="Designer working on graphical abstract samples"
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Action Callouts */}
+          <div className="lg:col-span-7 space-y-6">
+            <div className="space-y-2">
+              <h3 className="text-lg font-bold text-[#0a231c]">
+                Graphical Abstract Service Sample Work
+              </h3>
+              <button
+                type="button"
+                className="px-6 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-colors"
+              >
+                Discover More
+              </button>
+            </div>
+
+            <div className="space-y-2 pt-4 border-t border-emerald-200/60">
+              <h3 className="text-lg font-bold text-[#0a231c]">
+                Download the full Report Now
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Explore our{' '}
+                <Link href="#" className="text-sky-600 hover:underline">
+                  graphical abstract samples
+                </Link>
+                , professionally designed to align with your target journal's formatting guidelines, scientific accuracy standards, and visual impact expectations.
+              </p>
+              <button
+                type="button"
+                className="mt-2 px-6 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-colors"
+              >
+                Discover More
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+  );
+}

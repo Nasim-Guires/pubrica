@@ -667,11 +667,47 @@ export const NAV_LINKS = [
       {
         href: "/services/research-impact",
         label: "Research Impact",
+        children: [
+          {
+            href: "/services/publication-support/video-abstract",
+            label: " Video Abstract",
+          },
+          {
+            href: "/services/research-impact/graphical-abstract",
+            label: " Graphical Abstract",
+          },
+          {
+            href: "/services/publication-support/poster-preparation",
+            label: " Poster Presentation",
+          },
+          {
+            href: "/services/research-impact/scientific-news-report",
+            label: " Scientific News Report",
+          },
+          {
+            href: "/services/research-impact/simplified-abstract-services",
+            label: " Simplified Abstract",
+          },
+        ]
       },
 
       {
         href: "/services/scientific-communication",
         label: "Medical & Scientific Communication",
+        children: [
+          {
+            href: "/services/continuing-medical-education-cme-content-development",
+            label: "CME",
+          },
+          {
+            href: "/services/data-analytics-machine-learning/thought-leadership-content-editorial-design",
+            label: "Leadership Content",
+          },
+          {
+            href: "/services/marketing-communication-content-development-service",
+            label: "Marketing Communication",
+          },
+        ]
       },
 
       {
