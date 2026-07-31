@@ -718,7 +718,34 @@ export const NAV_LINKS = [
       {
         href: "/services/academic-editorial-services",
         label: "Academic Editorial Services",
+        children: [
+          {
+            href: "/services/academic-editorial-services/copy-editing-services",
+            label: " Copy Editing Service",
+          },
+          {
+            href: "/services/academic-editorial-services/visual-and-accessibility-editing-services",
+            label: " Visual & Accessibility Editing",
+          },
+          {
+            href: "/services/academic-editorial-services/forensic-and-quality-audit-service",
+            label: " Forensic & Quality Audit",
+          },
+          {
+            href: "/services/academic-editorial-services/revisioning-and-localisation-service",
+            label: "Revisioning and Localisation",
+          },
+          {
+            href: "/services/academic-editorial-services/permission-and-metadata-services",
+            label: "Permission and Metadata",
+          },
+          {
+            href: "/services/academic-editorial-services/development-editing-service",
+            label: "Development Editing Services",
+          },
+        ]
       },
+
     ],
   },
 
