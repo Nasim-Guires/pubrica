@@ -21,7 +21,7 @@ const INDUSTRIES = [
     description:
       "We offer a wide range of research services for medical device companies...",
     icon: Activity,
-    href: "/industries/medical-device",
+    href: "/Industries/medical-device",
   },
   {
     title: "Pharmaceutical",

@@ -745,9 +745,31 @@ export const NAV_LINKS = [
           },
         ]
       },
-       {
+      {
         href: "/services/education-editorial-service",
         label: "Educational Editorial Service",
+        children: [
+          {
+            href: "/services/education-editorial-service/accessibility-compliance",
+            label: " Accessibility Compliance",
+          },
+          {
+            href: "/services/education-editorial-service/learning-design-and-pedagogy",
+            label: " Learning Design and Pedagogy",
+          },
+          {
+            href: "/services/education-editorial-service/ai-and-data-preparation-services",
+            label: " AI and Data Preparation",
+          },
+          {
+            href: "/services/education-editorial-service/digital-production-qa-services",
+            label: " Digital Production QA Services",
+          },
+          {
+            href: "/services/education-editorial-service/assessment-and-exam-review-services",
+            label: " Assessment and Exam Review",
+          },
+        ]
       },
 
     ],

@@ -1,15 +1,24 @@
 "use client";
 
+import React from "react";
+import Image from "next/image";
+
+// --- Define Icons (using placeholders, in production import from your assets) ---
+const iconBasic = "/icons/basic-package.svg"; // Placeholder URL
+const iconStandard = "/icons/standard-package.svg"; // Placeholder URL
+const iconPremium = "/icons/premium-package.svg"; // Placeholder URL
+
 interface PackageItem {
   icon: string;
   title: string;
   subtitle: string;
-  description: string;
   idealFor: string;
   includes: string[];
-  turnaround: string;
+  turnaround?: string;
   backgroundColor?: string;
+  headerTextColor?: string;
   borderColor?: string;
+  bodyTextColor?: string;
 }
 
 interface PackagesProps {
@@ -22,210 +31,126 @@ interface PackagesProps {
 }
 
 export default function CommonPackages({
-  title,
-  subtitle,
-  description,
+  title = "Digital Production QA – Our Packages",
+  subtitle = "",
+  description = "At Publica, our Digital Production QA packages are designed to meet varying production volumes and complexity levels.",
   packages,
   buttonText = "Get a Free Quote",
   onButtonClick,
 }: PackagesProps) {
   return (
-    <section
-      style={{
-        maxWidth: "1200px",
-        margin: "60px auto",
-        padding: "0 20px",
-        fontFamily: "Arial, sans-serif",
-      }}
-    >
-      {/* Heading */}
-      <h2
-        style={{
-          fontSize: "42px",
-          fontWeight: 700,
-          color: "#0b3a57",
-          marginBottom: "10px",
-        }}
-      >
-        {title}
-      </h2>
+    <section className="py-16 px-4 md:px-8 bg-white w-full text-left font-sans">
+      {/* Header Container */}
+      <div className="max-w-7xl mx-auto mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#0b3a57] mb-3">
+          {title}
+        </h2>
+        {subtitle && (
+          <h3 className="text-xl md:text-2xl font-semibold text-[#1b1b1b] mb-4">
+            {subtitle}
+          </h3>
+        )}
+        <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-5xl">
+          {description}
+        </p>
+      </div>
 
-      <h3
-        style={{
-          fontSize: "26px",
-          fontWeight: 600,
-          marginBottom: "20px",
-          color: "#1b1b1b",
-        }}
-      >
-        {subtitle}
-      </h3>
-
-      <p
-        style={{
-          fontSize: "18px",
-          lineHeight: "32px",
-          color: "#444",
-          maxWidth: "1000px",
-          marginBottom: "40px",
-        }}
-      >
-        {description}
-      </p>
-
-      {/* Cards */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
-          gap: "20px",
-        }}
-      >
+      {/* Packages Grid: Matches the reference design layout exactly */}
+      <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto items-stretch">
         {packages.map((pkg, index) => (
           <div
             key={index}
+            className="flex flex-col border-[3px] rounded-none shadow-sm overflow-hidden bg-white"
             style={{
-              background: pkg.backgroundColor || "#f5f5f5",
-              border: `5px solid ${pkg.borderColor || "#ddd"}`,
-              padding: "18px",
-              display: "flex",
-              flexDirection: "column",
+              borderColor: pkg.borderColor || "#d1d5db",
             }}
           >
-            {/* Header */}
+            {/* Package Header Banner (Colored Top Box) - EXTREMELY THIN as per image */}
             <div
+              className="p-3 flex items-center gap-3 border-b border-gray-200 h-[65px]"
               style={{
-                background: "#fff",
-                padding: "14px",
-                display: "flex",
-                alignItems: "center",
-                gap: "15px",
-                marginBottom: "25px",
+                backgroundColor: pkg.backgroundColor || "#f3f4f6",
               }}
             >
-              <img
-                src={pkg.icon}
-                alt={pkg.title}
-                style={{
-                  width: "55px",
-                  height: "55px",
-                  objectFit: "contain",
-                }}
-              />
-
-              <div>
-                <h3
-                  style={{
-                    margin: 0,
-                    fontSize: "30px",
-                    color: "#0b3a57",
-                  }}
+              <div className="w-10 h-10 relative flex-shrink-0 flex items-center justify-center bg-white rounded-full p-1 shadow-sm border border-gray-100">
+                <Image
+                  src={pkg.icon}
+                  alt={pkg.title}
+                  width={28}
+                  height={28}
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex-grow">
+                <h4
+                  className="font-bold text-base leading-tight"
+                  style={{ color: pkg.headerTextColor || "#0b3a57" }}
                 >
                   {pkg.title}
-                </h3>
-
+                </h4>
                 <p
-                  style={{
-                    margin: "5px 0 0",
-                    fontSize: "17px",
-                    color: "#444",
-                  }}
+                  className="text-xs font-medium mt-0.5"
+                  style={{ color: pkg.headerTextColor || "#0b3a57" }}
                 >
                   {pkg.subtitle}
                 </p>
               </div>
             </div>
 
-            {/* Description */}
-            <p
-              style={{
-                fontSize: "17px",
-                lineHeight: "30px",
-                marginBottom: "25px",
-              }}
+            {/* Package Body Content */}
+            <div
+              className="p-6 flex flex-col flex-grow bg-white"
+              style={{ color: pkg.bodyTextColor || "#4b5563" }}
             >
-              {pkg.description}
-            </p>
+              {/* Ideal For */}
+              <div className="mb-5">
+                <p className="text-sm font-bold mb-1 flex items-center gap-1.5">
+                  <span className="text-teal-700">➜</span> Ideal For:
+                </p>
+                <p className="text-sm pl-6 leading-relaxed">
+                  {pkg.idealFor}
+                </p>
+              </div>
 
-            {/* Ideal For */}
-            <p
-              style={{
-                fontSize: "17px",
-                lineHeight: "30px",
-              }}
-            >
-              <strong>➜ Ideal For:</strong> {pkg.idealFor}
-            </p>
+              {/* What's Included */}
+              <div className="mb-6 flex-grow">
+                <p className="text-sm font-bold mb-2 flex items-center gap-1.5">
+                  <span className="text-teal-700">➜</span> What&apos;s Included:
+                </p>
+                <ul className="pl-6 space-y-2 list-disc marker:text-gray-400">
+                  {pkg.includes.map((item, i) => (
+                    <li key={i} className="text-sm leading-relaxed">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-            {/* Includes */}
-            <div style={{ marginTop: "20px" }}>
-              <h4
-                style={{
-                  fontSize: "20px",
-                  marginBottom: "15px",
-                }}
-              >
-                ➜ Includes:
-              </h4>
-
-              <ul
-                style={{
-                  paddingLeft: "22px",
-                  margin: 0,
-                }}
-              >
-                {pkg.includes.map((item, i) => (
-                  <li
-                    key={i}
-                    style={{
-                      fontSize: "17px",
-                      lineHeight: "32px",
-                      marginBottom: "8px",
-                    }}
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              {/* Turnaround (if provided) */}
+              {pkg.turnaround && (
+                <div className="pt-4 border-t border-gray-100 mt-auto">
+                  <p className="text-sm font-semibold flex items-center gap-1.5">
+                    <span className="text-teal-700">➜</span> Turnaround:{" "}
+                    <span className="font-normal">{pkg.turnaround}</span>
+                  </p>
+                </div>
+              )}
             </div>
-
-            {/* Turnaround */}
-            <p
-              style={{
-                marginTop: "25px",
-                fontSize: "17px",
-                fontWeight: 600,
-              }}
-            >
-              ➜ Turnaround: {pkg.turnaround}
-            </p>
           </div>
         ))}
       </div>
 
-      {/* Button */}
-      <div
-        style={{
-          textAlign: "center",
-          marginTop: "45px",
-        }}
-      >
-        <button
-          onClick={onButtonClick}
-          style={{
-            background: "#c70000",
-            color: "#fff",
-            border: "none",
-            padding: "15px 40px",
-            fontSize: "18px",
-            borderRadius: "30px",
-            cursor: "pointer",
-            fontWeight: 600,
-          }}
-        >
-          {buttonText}
-        </button>
-      </div>
+      {/* Button Container */}
+      {onButtonClick && (
+        <div className="text-center mt-12">
+          <button
+            onClick={onButtonClick}
+            className="bg-[#c70000] hover:bg-[#a50000] text-white font-semibold py-3 px-8 rounded-full text-base transition-colors shadow-md cursor-pointer"
+          >
+            {buttonText}
+          </button>
+        </div>
+      )}
     </section>
   );
 }
