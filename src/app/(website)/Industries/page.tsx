@@ -28,56 +28,56 @@ const INDUSTRIES = [
     description:
       "We offer a wide range of research services for the pharmaceutical industry...",
     icon: Pill,
-    href: "/industries/pharmaceutical",
+    href: "/Industries/pharmaceutical",
   },
   {
     title: "Generics",
     description:
       "We offer a wide range of research services for the generics pharmaceutical...",
     icon: Dna,
-    href: "/industries/generics",
+    href: "/Industries/generics",
   },
   {
     title: "Biosimilar",
     description:
       "We offer a wide range of research services for a biosimilar Research...",
     icon: Syringe,
-    href: "/industries/biosimilar",
+    href: "/Industries/biosimilar",
   },
   {
     title: "Biotechnology",
     description:
       "We offer a wide range of research services for biotechnology...",
     icon: Component,
-    href: "/industries/biotechnology",
+    href: "/Industries/biotechnology",
   },
   {
     title: "Cosmetics",
     description:
       "We offer a wide range of research services for the cosmetic industry...",
     icon: Sparkles,
-    href: "/industries/cosmetics",
+    href: "/Industries/cosmetics",
   },
   {
     title: "Foods and Nutraceuticals",
     description:
       "We offer a wide range of research services for nutraceutical ingredients...",
     icon: FlameKindling,
-    href: "/industries/foods-nutraceuticals",
+    href: "/Industries/foods-nutraceuticals",
   },
   {
     title: "Cosmeceutical",
     description:
       "We offer a wide range of research services for cosmeceutical industry...",
     icon: Droplet,
-    href: "/industries/cosmeceutical",
+    href: "/Industries/cosmeceutical-research",
   },
   {
     title: "Nutraceutical",
     description:
       "We offer a wide range of research services for nutraceutical industry...",
     icon: Leaf,
-    href: "/industries/nutraceutical",
+    href: "/Industries/nutraceutical-research",
   },
 ];
 
