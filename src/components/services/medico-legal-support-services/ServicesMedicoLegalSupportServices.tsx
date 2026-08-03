@@ -6,11 +6,11 @@ import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function ServicesMedicoLegalSupportServices() {
   // State to handle accordion toggles (null means none are open by default)
-  const [openAccordion, setOpenAccordion] = useState(null);
+  const [openAccordion, setOpenAccordion] = useState<number | null>(null);
 
-  const toggleAccordion = (index) => {
-    setOpenAccordion(openAccordion === index ? null : index);
-  };
+const toggleAccordion = (index: number) => {
+  setOpenAccordion(openAccordion === index ? null : index);
+};
 
   const accordionItems = [
     {

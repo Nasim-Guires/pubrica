@@ -89,6 +89,7 @@ const MedicalDeviceIndustryPage: NextPage = () => {
 
             <div className="pt-6">
               <GetFreeQuoteButton/>
+            </div>
           </div>
         </section>
 
