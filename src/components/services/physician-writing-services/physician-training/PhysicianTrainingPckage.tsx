@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface PackageCardProps {
     badge: string;
@@ -173,9 +174,7 @@ export default function PhysicianTrainingPackage() {
 
             {/* Fixed Sticky CTA Bar */}
            <div className="flex justify-center py-4">
-  <button className="rounded-full bg-[#BA0000] px-8 py-3 text-white font-semibold hover:bg-[#980000]">
-    Get a Free Quote
-  </button>
+  <GetFreeQuoteButton/>
 </div>
         </div>
     );

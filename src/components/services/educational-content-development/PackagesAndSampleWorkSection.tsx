@@ -13,6 +13,7 @@ import {
   Heart,
   Skull,
 } from "lucide-react";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // ==========================================
 // DATA STRUCTURES
@@ -191,9 +192,7 @@ export default function PackagesAndSampleWorkSection() {
 
           {/* CTA Button */}
           <div className="pt-8">
-            <button className="w-full sm:w-auto px-12 py-3 bg-[#b30000] hover:bg-[#8e0000] text-white font-bold text-sm uppercase tracking-wider rounded-md transition-all duration-200 shadow-md hover:shadow-lg">
-              Get a Free quote
-            </button>
+            <GetFreeQuoteButton/>
           </div>
         </section>
 

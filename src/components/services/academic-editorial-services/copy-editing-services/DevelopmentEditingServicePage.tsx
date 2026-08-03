@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import React from 'react';
 
 export const metadata = {
@@ -98,9 +99,7 @@ export default function DevelopmentEditingServicePage() {
           </ul>
 
           <div className="pt-6">
-            <button className="bg-[#b91c1c] hover:bg-[#991b1b] text-white font-medium text-xs px-6 py-3 rounded transition-colors uppercase tracking-wider shadow-sm">
-              Get a Free Quote
-            </button>
+           <GetFreeQuoteButton/>
           </div>
         </div>
       </section>

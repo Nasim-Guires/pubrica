@@ -1,5 +1,6 @@
 "use client";
 
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import {
   heroBulletPoints,
   mainServicesList,
@@ -154,9 +155,7 @@ const Page = () => {
 
           {/* Buttons */}
           <div className="mt-10 flex gap-5">
-            <button className="rounded-full bg-[#BA0000] px-8 py-3 text-white font-semibold hover:bg-[#980000]">
-              Get a Free Quote
-            </button>
+            <GetFreeQuoteButton/>
 
             <button className="rounded-full bg-[#BA0000] px-8 py-3 text-white font-semibold hover:bg-[#980000]">
               View Brochure

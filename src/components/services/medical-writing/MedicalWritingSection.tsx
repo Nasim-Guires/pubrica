@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
 
 export default function MedicalWritingSection(): React.ReactElement {
@@ -113,12 +114,7 @@ export default function MedicalWritingSection(): React.ReactElement {
 
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center gap-4 pt-4">
-            <button
-              type="button"
-              className="bg-[#b30000] hover:bg-[#8e0000] text-white text-xs sm:text-sm font-bold py-2.5 px-6 rounded-full transition-colors duration-200 shadow-sm cursor-pointer"
-            >
-              Get a Free Quote
-            </button>
+           <GetFreeQuoteButton/>
             <button
               type="button"
               className="bg-[#b30000] hover:bg-[#8e0000] text-white text-xs sm:text-sm font-bold py-2.5 px-6 rounded-full transition-colors duration-200 shadow-sm cursor-pointer"

@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -84,9 +85,7 @@ const AccessibilityCompliancePage: NextPage = () => {
                                 </p>
                             </div>
                             <div className="mt-10">
-                                <Link href="/get-a-quote" className="inline-block bg-[#b32821] text-white font-semibold py-3 px-8 rounded-md hover:bg-[#9a221c] transition duration-300 shadow-md">
-                                    Get a Free Quote
-                                </Link>
+                               <GetFreeQuoteButton/>
                             </div>
                         </div>
 

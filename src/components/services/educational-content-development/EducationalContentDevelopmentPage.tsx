@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function EducationalContentDevelopmentPage() {
   return (
@@ -132,12 +133,7 @@ export default function EducationalContentDevelopmentPage() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
-              <Link
-                href="/quote"
-                className="bg-[#b30000] hover:bg-[#8d0000] text-white text-xs sm:text-sm font-bold px-6 py-2.5 rounded-full transition-colors shadow-sm"
-              >
-                Get a Free Quote
-              </Link>
+              <GetFreeQuoteButton/>
               <Link
                 href="/brochure"
                 className="bg-[#b30000] hover:bg-[#8d0000] text-white text-xs sm:text-sm font-bold px-6 py-2.5 rounded-full transition-colors shadow-sm"

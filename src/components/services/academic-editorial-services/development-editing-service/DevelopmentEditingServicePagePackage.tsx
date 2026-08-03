@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 export default function DevelopmentEditingServicePagePackage() {
   return (
@@ -316,9 +317,7 @@ export default function DevelopmentEditingServicePagePackage() {
               </div>
               <div>
                 <p className="text-xs font-semibold text-gray-700 border-t pt-3 mb-4">Turnaround: 7–10 business days</p>
-                <button className="w-full bg-red-700 text-white py-2 rounded text-xs font-bold hover:bg-red-800 transition">
-                  Get a Free quote
-                </button>
+                <GetFreeQuoteButton/>
               </div>
             </div>
 
@@ -340,9 +339,7 @@ export default function DevelopmentEditingServicePagePackage() {
               </div>
               <div>
                 <p className="text-xs font-semibold text-gray-700 border-t pt-3 mb-4">Turnaround: 10–14 business days</p>
-                <button className="w-full bg-red-700 text-white py-2 rounded text-xs font-bold hover:bg-red-800 transition">
-                  Get a Free quote
-                </button>
+               <GetFreeQuoteButton/>
               </div>
             </div>
 
@@ -365,9 +362,7 @@ export default function DevelopmentEditingServicePagePackage() {
               </div>
               <div>
                 <p className="text-xs font-semibold text-gray-700 border-t pt-3 mb-4">Turnaround: 14–21 business days</p>
-                <button className="w-full bg-red-700 text-white py-2 rounded text-xs font-bold hover:bg-red-800 transition">
-                  Get a Free quote
-                </button>
+              <GetFreeQuoteButton/>
               </div>
             </div>
 

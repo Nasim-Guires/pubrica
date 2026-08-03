@@ -1,5 +1,6 @@
 'use client';
 
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import React from 'react';
 
 export const metadata = {
@@ -97,9 +98,7 @@ export default function PermissionAndMetadataServices() {
                 </div>
 
                 <div>
-                    <button className="bg-[#cc0000] hover:bg-[#b00000] text-white text-xs font-bold px-8 py-3 rounded shadow-md transition-colors uppercase tracking-wider">
-                        Get a Free Quote
-                    </button>
+                    <GetFreeQuoteButton/>
                 </div>
             </section>
 

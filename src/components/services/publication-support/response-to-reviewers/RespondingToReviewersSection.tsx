@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 const complianceStandards = [
   {
@@ -124,12 +125,7 @@ export default function RespondingToReviewersSection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-wrap items-center gap-4 mt-8">
-          <a
-            href="#quote"
-            className="bg-[#b80000] hover:bg-black text-white font-bold text-xs py-3 px-6 rounded-full transition-colors shadow-sm"
-          >
-            Get a Free Quote
-          </a>
+          <GetFreeQuoteButton/>
           <a
             href="#brochure"
             className="bg-[#b80000] hover:bg-black text-white font-bold text-xs py-3 px-6 rounded-full transition-colors shadow-sm"

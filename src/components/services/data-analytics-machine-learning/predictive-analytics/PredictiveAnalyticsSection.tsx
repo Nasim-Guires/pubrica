@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 interface ReasonItem {
     id: string;
@@ -124,9 +125,7 @@ export default function PredictiveAnalyticsSection() {
 
                         {/* CTA Button */}
                         <div className="pt-4">
-                            <button className="bg-red-700 hover:bg-red-800 text-white text-xs md:text-sm font-semibold px-6 py-2.5 rounded-full transition-colors shadow-sm">
-                                Get a Free Quote
-                            </button>
+                          <GetFreeQuoteButton/>
                         </div>
                     </div>
 

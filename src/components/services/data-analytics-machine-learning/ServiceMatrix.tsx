@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
 
 interface MatrixCardProps {
@@ -168,9 +169,7 @@ export const ServiceMatrix: React.FC = () => {
 
         {/* --- Added The Full Width Long Red Button --- */}
         <div className="w-full pt-2">
-          <button className="w-full bg-[#c00] hover:bg-red-800 text-white font-bold text-xs sm:text-sm tracking-wide py-3 px-6 rounded-md shadow-md transition-colors uppercase duration-200">
-            Get a free quote
-          </button>
+          <GetFreeQuoteButton/>
         </div>
       </section>
     </div>

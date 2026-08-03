@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -93,7 +93,7 @@ export default function Navbar() {
                   const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
 
                   if (link.dropdown) {
-                    const selectedSubItem = link.dropdown.find((item) => item.label === activeSubcategory) || link.dropdown[8]; // Defaulting to AI & ML Services index if available
+                    const selectedSubItem = link.dropdown.find((item) => item.label === activeSubcategory) || link.dropdown[0];
 
                     return (
                       <div key={link.label} className="relative group px-2.5 py-2">
@@ -108,13 +108,15 @@ export default function Navbar() {
                           <ChevronDown className="h-4 w-4 text-gray-400 transition-transform duration-200 group-hover:rotate-180" />
                         </Link>
 
-                        {/* Mega Menu Container matching reference image layout */}
+                        {/* Mega Menu Container */}
                         <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[750px] rounded-md bg-white shadow-2xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-[100] flex">
                           
                           {/* Left Column: Vertical Sub-links list */}
                           <div className="w-[340px] py-2 border-r border-gray-200 max-h-[460px] overflow-y-auto">
                             {link.dropdown.map((sublink) => {
                               const isSubSelected = activeSubcategory === sublink.label;
+                              const hasChildren = Boolean(sublink.children && sublink.children.length > 0);
+
                               return (
                                 <div
                                   key={sublink.href}
@@ -128,7 +130,10 @@ export default function Navbar() {
                                 >
                                   <Link href={sublink.href} className="w-full flex items-center justify-between">
                                     <span>{sublink.label}</span>
-                                    <ChevronRight className="h-3.5 w-3.5 text-gray-400" />
+                                    {/* Chevron icon renders ONLY when sublink has children */}
+                                    {hasChildren && (
+                                      <ChevronRight className="h-3.5 w-3.5 text-gray-400" />
+                                    )}
                                   </Link>
                                 </div>
                               );
@@ -139,12 +144,12 @@ export default function Navbar() {
                           <div className="flex-1 p-6 bg-white flex flex-col justify-between">
                             <div>
                               <h3 className="text-sm font-bold text-gray-900 mb-4">
-                                {selectedSubItem?.label || "AI & ML Solutions"}
+                                {selectedSubItem?.label}
                               </h3>
 
-                              {/* Hardcoded or dynamic bullet list matching the AI & ML layout style from image */}
+                              {/* Dynamically render children if available, otherwise show default features */}
                               <div className="space-y-2.5">
-                                {selectedSubItem?.children ? (
+                                {selectedSubItem?.children && selectedSubItem.children.length > 0 ? (
                                   selectedSubItem.children.map((child) => (
                                     <Link
                                       key={child.href}
@@ -156,31 +161,24 @@ export default function Navbar() {
                                     </Link>
                                   ))
                                 ) : (
-                                  <>
-                                    <Link href="#" className="flex items-center gap-2 text-xs text-[#0066cc] hover:underline font-medium">
-                                      <CheckCircle2 className="h-3.5 w-3.5 text-[#0066cc]" /> Health Economics
-                                    </Link>
-                                    <Link href="#" className="flex items-center gap-2 text-xs text-[#0066cc] hover:underline font-medium">
-                                      <CheckCircle2 className="h-3.5 w-3.5 text-[#0066cc]" /> Patient journey & Insights -ML
-                                    </Link>
-                                    <Link href="#" className="flex items-center gap-2 text-xs text-[#0066cc] hover:underline font-medium">
-                                      <CheckCircle2 className="h-3.5 w-3.5 text-[#0066cc]" /> Segmentation
-                                    </Link>
-                                    <Link href="#" className="flex items-center gap-2 text-xs text-[#0066cc] hover:underline font-medium">
-                                      <CheckCircle2 className="h-3.5 w-3.5 text-[#0066cc]" /> Predictive Analysis
-                                    </Link>
-                                    <Link href="#" className="flex items-center gap-2 text-xs text-[#0066cc] hover:underline font-medium">
-                                      <CheckCircle2 className="h-3.5 w-3.5 text-[#0066cc]" /> Algorithm Development
-                                    </Link>
-                                    <Link href="#" className="flex items-center gap-2 text-xs text-[#0066cc] hover:underline font-medium">
-                                      <CheckCircle2 className="h-3.5 w-3.5 text-[#0066cc]" /> Interpretation & Visualisation
-                                    </Link>
-                                  </>
+                                  <div className="py-4 text-gray-500 text-xs leading-relaxed space-y-2">
+                                    <p>
+                                      Discover professional support and custom solutions for <strong className="text-gray-800">{selectedSubItem?.label}</strong> designed to meet precise academic and industrial specifications.
+                                    </p>
+                                    <ul className="space-y-1.5 pt-2">
+                                      <li className="flex items-center gap-2">
+                                        <CheckCircle2 className="h-3.5 w-3.5 text-[#0066cc]" /> End-to-end dedicated analyst supervision
+                                      </li>
+                                      <li className="flex items-center gap-2">
+                                        <CheckCircle2 className="h-3.5 w-3.5 text-[#0066cc]" /> Strict adherence to global compliance standards
+                                      </li>
+                                    </ul>
+                                  </div>
                                 )}
                               </div>
                             </div>
 
-                            {/* Sample Work Box matching second reference screenshot */}
+                            {/* Sample Work Box Footer */}
                             <div className="mt-8 pt-4 border-t border-gray-100 flex items-center justify-between bg-white">
                               <div className="border border-gray-200 rounded p-1 bg-white shadow-sm w-[180px]">
                                 <div className="bg-[#073632] text-white text-[10px] font-bold px-2 py-1 mb-1 text-center">
@@ -188,14 +186,16 @@ export default function Navbar() {
                                 </div>
                                 <div className="h-16 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
                                   <div className="w-full h-full bg-gradient-to-r from-purple-900 via-teal-800 to-orange-600 opacity-80 flex items-end p-1">
-                                    <div className="w-full bg-black/40 h-3 text-[8px] text-white flex items-center justify-center">Charts & Graphs</div>
+                                    <div className="w-full bg-black/40 h-3 text-[8px] text-white flex items-center justify-center">Overview & Data</div>
                                   </div>
                                 </div>
-                                <span className="text-[9px] text-gray-500 font-semibold block text-center mt-1">{selectedSubItem?.label || "AI and ML Services"}</span>
+                                <span className="text-[9px] text-gray-500 font-semibold block text-center mt-1 truncate px-1">
+                                  {selectedSubItem?.label}
+                                </span>
                               </div>
 
                               <Link
-                                href="/contact"
+                                href={selectedSubItem?.href || "/contact"}
                                 className="bg-[#073632] text-white text-xs font-bold px-4 py-2 rounded hover:bg-[#052623] transition-colors self-end"
                               >
                                 Request Sample

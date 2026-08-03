@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
 
 // Key phrases dynamically styled as light blue links in the text
@@ -129,9 +130,7 @@ export default function ServiceOverview() {
 
         {/* Action CTAs */}
         <div className="flex flex-wrap gap-3 mt-8 mb-16">
-          <button className="bg-[#b30000] hover:bg-[#900000] text-white px-6 py-2.5 rounded-full font-semibold transition-colors cursor-pointer">
-            Get a Free Quote
-          </button>
+          <GetFreeQuoteButton/>
           <button className="bg-[#b30000] hover:bg-[#900000] text-white px-6 py-2.5 rounded-full font-semibold transition-colors cursor-pointer">
             View Brochure
           </button>

@@ -10,6 +10,7 @@ import {
   Zap,
   Globe,
 } from "lucide-react";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function PublicationServices() {
   const complianceFrameworks = [
@@ -297,10 +298,7 @@ export default function PublicationServices() {
 
         {/* ================= GLOBAL CALL TO ACTION ================= */}
         <div className="text-center">
-          <button className="inline-flex items-center gap-2 bg-[#b30000] text-white hover:bg-[#900000] active:scale-98 transition px-12 py-4 rounded-full font-bold text-lg shadow-xl tracking-wider uppercase">
-            Get a Free Quote
-            <ArrowRight className="w-5 h-5" />
-          </button>
+         <GetFreeQuoteButton/>
           <p className="text-xs text-slate-400 mt-3">
             No obligation. Confidentiality agreements (NDAs) signed instantly
             prior to file uploads.

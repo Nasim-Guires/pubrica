@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 /* ==========================================================================
    DATA OBJECTS FOR ACCORDION CARDS
@@ -259,12 +260,7 @@ export default function BioinformaticsServiceContent() {
                         </ul>
 
                         <div className="pt-4">
-                            <Link
-                                href="#contact"
-                                className="inline-block bg-[#b91c1c] hover:bg-red-800 text-white font-medium px-6 py-2.5 rounded-full shadow transition-colors duration-200 text-sm"
-                            >
-                                Get a Free Quote
-                            </Link>
+                        <GetFreeQuoteButton/>
                         </div>
                     </div>
 

@@ -21,6 +21,7 @@ import {
   FiPlus,
   FiMinus,
 } from "react-icons/fi";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // ==========================================
 // 1. DATA DEFINITIONS
@@ -652,12 +653,7 @@ export default function ScientificPackageDetails() {
 
         {/* Free Quote Button */}
         <div className="w-full flex justify-center">
-          <Link
-            href="/get-quote"
-            className="w-full sm:w-auto min-w-[320px] text-center bg-[#b91c1c] hover:bg-[#991b1b] text-white font-bold py-3.5 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-sm sm:text-base tracking-wide"
-          >
-            Get a Free Quote
-          </Link>
+        <GetFreeQuoteButton/>
         </div>
       </section>
 

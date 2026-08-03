@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // Accordion Data based on the screenshots
 const accordionData = [
@@ -238,12 +239,7 @@ export default function JournalSubmissionPage() {
 
         {/* Action Buttons */}
         <div className="flex flex-wrap gap-4">
-          <a
-            href="#quote"
-            className="bg-[#b80000] hover:bg-black text-white text-xs sm:text-sm font-bold px-6 py-2.5 rounded-full shadow transition-colors duration-300"
-          >
-            Get a Free Quote
-          </a>
+          <GetFreeQuoteButton />
           <a
             href="#brochure"
             className="bg-[#b80000] hover:bg-black text-white text-xs sm:text-sm font-bold px-6 py-2.5 rounded-full shadow transition-colors duration-300"

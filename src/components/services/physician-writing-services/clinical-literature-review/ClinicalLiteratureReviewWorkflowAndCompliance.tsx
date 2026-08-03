@@ -10,6 +10,7 @@ import {
   Database,
   FileSpreadsheet,
 } from "lucide-react";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface StepItem {
   number: number;
@@ -168,9 +169,7 @@ export default function ClinicalLiteratureReviewWorkflowAndCompliance() {
               </div>
             </div>
 
-            <button className="bg-[#b80000] hover:bg-red-700 text-white text-xs font-bold px-6 py-2.5 rounded-full transition whitespace-nowrap shadow">
-              Get a Free Quote
-            </button>
+           <GetFreeQuoteButton/>
           </div>
         </section>
 

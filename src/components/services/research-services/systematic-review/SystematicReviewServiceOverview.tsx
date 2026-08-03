@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
 
 const SystematicReviewServiceOverview = () => {
@@ -151,21 +152,7 @@ const SystematicReviewServiceOverview = () => {
             decision-making, policy formulation, and future research priorities.
           </p>
 
-          <a
-            href="#get-quote"
-            style={{
-              display: "inline-block",
-              backgroundColor: "#b91c1c",
-              color: "#ffffff",
-              padding: "12px 28px",
-              borderRadius: "24px",
-              fontWeight: "bold",
-              textDecoration: "none",
-              fontSize: "0.95rem",
-            }}
-          >
-            Get a Free Quote
-          </a>
+        <GetFreeQuoteButton/>
         </div>
 
         {/* Right Image Column with Custom Backing Effect */}

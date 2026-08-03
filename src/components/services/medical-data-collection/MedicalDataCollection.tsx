@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
 
 export const MedicalDataCollection: React.FC = () => {
@@ -49,9 +50,7 @@ export const MedicalDataCollection: React.FC = () => {
 
             {/* CTA Option Buttons (Row 1) */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
-              <button className="bg-[#b30000] hover:bg-red-800 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-sm transition-colors duration-150">
-                Get a Free Quote
-              </button>
+              <GetFreeQuoteButton/>
               <button className="bg-[#b30000] hover:bg-red-800 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-sm transition-colors duration-150">
                 View Brochure
               </button>

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // Types
 interface ComplianceItem {
@@ -393,12 +394,7 @@ export default function ComplianceAndPackagesSection() {
 
         {/* Floating CTA Button */}
         <div className="pt-6 flex justify-center">
-          <a
-            href="#get-a-quote"
-            className="bg-[#b30000] hover:bg-[#8e0000] text-white font-bold text-sm sm:text-base px-10 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-lg hover:scale-105"
-          >
-            Get a Free Quote
-          </a>
+         <GetFreeQuoteButton/>
         </div>
       </section>
     </div>

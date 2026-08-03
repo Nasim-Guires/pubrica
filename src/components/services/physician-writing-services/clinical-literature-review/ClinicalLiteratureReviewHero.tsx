@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface ServiceItem {
     id: string;
@@ -208,9 +209,7 @@ export default function ClinicalLiteratureReviewHero() {
                             </p>
 
                             <div className="pt-4">
-                                <button className="bg-[#b80000] hover:bg-red-800 text-white text-xs font-semibold px-6 py-2.5 rounded-full transition shadow">
-                                    Get a Free Quote
-                                </button>
+                              <GetFreeQuoteButton/>
                             </div>
                         </div>
 

@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -87,10 +88,7 @@ const MedicalDeviceIndustryPage: NextPage = () => {
             </ul>
 
             <div className="pt-6">
-              <Link href="#" className="inline-block bg-[#c5221f] text-white font-bold text-sm py-3 px-8 rounded-full hover:bg-[#a51a17] transition-colors shadow">
-                Get a Free Quote
-              </Link>
-            </div>
+              <GetFreeQuoteButton/>
           </div>
         </section>
 

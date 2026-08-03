@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface PackageCardProps {
   title: string;
@@ -234,12 +235,7 @@ export default function PosterServicePackagesSection() {
 
         {/* Red CTA Button */}
         <div className="mb-10 text-center">
-          <Link
-            href="/quote"
-            className="inline-block w-full bg-[#cc0000] hover:bg-[#a80000] text-white font-bold py-3.5 px-8 rounded-md transition-colors text-sm md:text-base shadow-sm"
-          >
-            Get a free Quote
-          </Link>
+         <GetFreeQuoteButton/>
         </div>
 
         {/* Accordions Section */}

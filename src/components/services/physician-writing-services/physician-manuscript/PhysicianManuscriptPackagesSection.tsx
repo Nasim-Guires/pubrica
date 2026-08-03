@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 // Compliance Standards Data
 const complianceStandards = [
@@ -280,12 +281,7 @@ export default function PhysicianManuscriptPackagesSection() {
 
                     {/* Bottom Fixed Sticky CTA */}
                     <div className="mt-10 text-center">
-                        <Link
-                            href="/contact"
-                            className="inline-block w-full max-w-md bg-[#b31217] hover:bg-[#8e0e12] text-white font-semibold py-3 px-8 rounded-md transition-colors text-sm uppercase tracking-wide shadow-md"
-                        >
-                            Get a Free Quote
-                        </Link>
+                       <GetFreeQuoteButton/>
                     </div>
                 </div>
             </section>

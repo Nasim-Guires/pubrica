@@ -1,5 +1,6 @@
 "use client";
 
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
 
 interface PackagePlan {
@@ -190,12 +191,7 @@ export default function LiteratureReviewPackagesSection() {
 
         {/* Global CTA Button */}
         <div className="pt-6 flex justify-center">
-          <a
-            href="#get-a-quote"
-            className="w-full sm:w-auto text-center bg-[#b30000] hover:bg-[#8e0000] text-white font-bold text-sm px-12 py-3.5 rounded-full transition-colors duration-200 shadow-md"
-          >
-            Get a Free Quote
-          </a>
+         <GetFreeQuoteButton/>
         </div>
       </div>
     </section>

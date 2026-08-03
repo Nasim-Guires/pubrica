@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // Data for "How Do Healthcare Data Collection Services Work?" Accordion
 const processSteps = [
@@ -276,12 +277,7 @@ export default function PubricaProcessAndCompliance() {
             regulatory standards with confidence.
           </p>
           <div className="pt-2">
-            <a
-              href="#quote"
-              className="inline-block bg-[#b80d0d] hover:bg-[#960a0a] text-white font-semibold text-xs sm:text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-md"
-            >
-              Get a Free Quote
-            </a>
+          <GetFreeQuoteButton/>
           </div>
         </div>
       </section>

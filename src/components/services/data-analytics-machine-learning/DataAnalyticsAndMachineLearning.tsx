@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import React from 'react';
 
 export const DataAnalyticsAndMachineLearning: React.FC = () => {
@@ -57,9 +58,7 @@ export const DataAnalyticsAndMachineLearning: React.FC = () => {
                 With proven expertise in AI, data analytics, and healthcare research, we deliver compliant, reliable, and impactful results that support informed decision-making.
               </p>
               <div>
-                <button className="bg-[#a80000] text-white text-xs sm:text-sm font-bold tracking-wider px-8 py-3 rounded hover:bg-[#880000] transition-colors shadow-sm uppercase">
-                  Get a Free Quote
-                </button>
+              <GetFreeQuoteButton/>
               </div>
             </div>
           </div>

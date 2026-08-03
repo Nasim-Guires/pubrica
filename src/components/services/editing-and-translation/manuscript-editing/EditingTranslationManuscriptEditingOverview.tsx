@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export const EditingTranslationManuscriptEditingOverview: React.FC = () => {
   return (
@@ -137,12 +138,7 @@ export const EditingTranslationManuscriptEditingOverview: React.FC = () => {
 
             {/* Call to Action Buttons */}
             <div className="flex flex-wrap gap-4 pt-6">
-              <Link
-                href="/quote"
-                className="bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-200 text-sm sm:text-base shadow-sm"
-              >
-                Get a Free Quote
-              </Link>
+             <GetFreeQuoteButton/>
               <Link
                 href="/brochure"
                 className="bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-200 text-sm sm:text-base shadow-sm"

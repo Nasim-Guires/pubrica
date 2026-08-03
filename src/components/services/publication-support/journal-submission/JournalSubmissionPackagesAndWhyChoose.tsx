@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // 1. Support Packages Data
 const packagesData = [
@@ -169,12 +170,7 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
 
         {/* Action CTA Button */}
         <div className="text-center">
-          <a
-            href="#quote"
-            className="inline-block w-full sm:w-auto bg-[#b80000] hover:bg-black text-white font-bold text-xs sm:text-sm py-3 px-16 rounded-md transition-colors shadow-md"
-          >
-            Get a Free Quote
-          </a>
+         <GetFreeQuoteButton/>
         </div>
       </section>
 

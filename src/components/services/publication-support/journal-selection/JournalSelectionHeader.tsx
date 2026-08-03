@@ -1,5 +1,6 @@
 'use client';
 
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import React from 'react';
 
 export default function JournalSelectionHeader() {
@@ -126,9 +127,7 @@ export default function JournalSelectionHeader() {
 
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center gap-4 pt-4">
-          <button className="px-6 py-2.5 bg-[#a80000] hover:bg-[#830000] text-white font-bold text-xs sm:text-sm rounded-md transition-colors shadow-sm">
-            Get a Free Quote
-          </button>
+         <GetFreeQuoteButton/>
           <button className="px-6 py-2.5 bg-[#a80000] hover:bg-[#830000] text-white font-bold text-xs sm:text-sm rounded-md transition-colors shadow-sm">
             View Brochure
           </button>

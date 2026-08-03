@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface AccordionItem {
   id: string;
@@ -266,12 +267,7 @@ export default function PatientEducationContentFormatsAccordionSection() {
 
             {/* CTA Button */}
             <div>
-              <Link
-                href="/contact"
-                className="inline-block bg-[#b91c1c] hover:bg-[#991b1b] text-white font-semibold px-6 py-3 rounded-full transition-colors shadow-md text-sm sm:text-base"
-              >
-                Get a Free Quote
-              </Link>
+             <GetFreeQuoteButton/>
             </div>
           </div>
 

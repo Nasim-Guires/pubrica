@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function PackagesAndPricing() {
   return (
@@ -318,12 +319,7 @@ export default function PackagesAndPricing() {
 
         {/* Global Quote CTA Button */}
         <div className="mt-8 text-center">
-          <button
-            type="button"
-            className="w-full max-w-2xl bg-[#b91c1c] hover:bg-[#991b1b] text-white text-sm font-semibold py-3 rounded-md shadow-xs transition-colors cursor-pointer"
-          >
-            Get a free Quote
-          </button>
+          <GetFreeQuoteButton/>
         </div>
       </section>
 

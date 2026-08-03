@@ -1,5 +1,6 @@
 "use client";
 
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
 
 const packagesData = [
@@ -204,12 +205,7 @@ export default function AiMlPackagesSection() {
 
         {/* Global CTA Button */}
         <div className="flex justify-center mt-8">
-          <button
-            type="button"
-            className="w-full sm:w-auto min-w-[320px] bg-[#a80000] hover:bg-[#850000] text-white font-bold text-sm sm:text-base py-3 px-8 rounded-md transition-colors duration-200 text-center shadow-md"
-          >
-            Get a Free quote
-          </button>
+         <GetFreeQuoteButton/>
         </div>
       </div>
     </section>

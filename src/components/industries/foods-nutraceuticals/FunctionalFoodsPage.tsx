@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import Image from 'next/image';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 interface SegmentItem {
   title: string;
@@ -143,9 +144,7 @@ export default function FunctionalFoodsPage({
               {introParagraph3}
             </p>
             <div className="pt-2">
-              <button className="bg-[#c8102e] hover:bg-[#a50d25] text-white font-semibold px-6 py-3 rounded-full text-sm transition-colors shadow-sm">
-                Get a Free Quote
-              </button>
+              <GetFreeQuoteButton/>
             </div>
           </div>
 

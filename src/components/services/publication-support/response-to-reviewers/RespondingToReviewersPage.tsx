@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // 1. Data Structure for Interactive Cards
 interface AudienceItem {
@@ -234,12 +235,7 @@ export default function RespondingToReviewersPage() {
         </p>
 
         <div className="mt-6">
-          <Link
-            href="/quote"
-            className="inline-block bg-[#b80000] hover:bg-[#900000] text-white font-semibold px-6 py-2.5 rounded-full shadow-md transition-colors"
-          >
-            Get a Free Quote
-          </Link>
+         <GetFreeQuoteButton/>
         </div>
       </section>
 

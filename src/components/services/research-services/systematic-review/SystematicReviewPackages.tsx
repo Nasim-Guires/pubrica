@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface PackageData {
   id: string;
@@ -491,21 +492,7 @@ export default function SystematicReviewPackages() {
 
       {/* SECTION 4: CTA Button */}
       <div style={{ textAlign: "center", marginBottom: "50px" }}>
-        <button
-          style={{
-            backgroundColor: "#b91c1c",
-            color: "#ffffff",
-            padding: "12px 36px",
-            borderRadius: "50px",
-            fontWeight: "700",
-            fontSize: "0.95rem",
-            border: "none",
-            cursor: "pointer",
-            boxShadow: "0 2px 4px rgba(0,0,0,0.15)",
-          }}
-        >
-          Get a Free Quote
-        </button>
+        <GetFreeQuoteButton/>
       </div>
 
       {/* SECTION 5: Add-on Services */}

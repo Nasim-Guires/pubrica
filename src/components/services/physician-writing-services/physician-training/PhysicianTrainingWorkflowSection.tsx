@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Plus, Minus } from 'lucide-react';
 import WhoWeServeSection from './WhoWeServeSection';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 // Who We Serve Data with Unsplash Image URLs
 const whoWeServeData = [
@@ -211,12 +212,7 @@ const toggleCompliance = (id: string) => {
                             </p>
                         </div>
                     </div>
-                    <Link
-                        href="/contact"
-                        className="bg-[#b31217] hover:bg-[#8e0e12] text-white font-semibold px-6 py-2.5 rounded-md transition-colors text-sm shrink-0"
-                    >
-                        Get a Free Quote
-                    </Link>
+                   <GetFreeQuoteButton/>
                 </div>
             </section>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
 
 const packages = [
@@ -193,12 +194,7 @@ export default function MedicalDataPackages() {
 
           {/* CTA Button */}
           <div className="mt-8">
-            <button
-              type="button"
-              className="bg-[#b80e0e] hover:bg-[#960b0b] text-white text-sm font-semibold px-7 py-3 rounded-full transition-colors duration-200 shadow-sm"
-            >
-              Get a Free Quote
-            </button>
+          <GetFreeQuoteButton/>
           </div>
         </div>
       </div>

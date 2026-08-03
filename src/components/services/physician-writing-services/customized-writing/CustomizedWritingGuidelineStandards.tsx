@@ -8,6 +8,7 @@ import {
   UserGroupIcon,
   PaperAirplaneIcon,
 } from "@heroicons/react/24/outline";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // --- Next.js SEO Metadata ---
 export const metadata: Metadata = {
@@ -383,12 +384,7 @@ export default function CustomizedWritingGuidelineStandards() {
               standards for submission, compliance, and professional credibility.
             </p>
 
-            <a
-              href="#get-quote"
-              className="inline-block bg-[#cc0000] hover:bg-[#a00000] text-white font-semibold text-xs py-3 px-8 rounded-full transition-colors duration-200 shadow-md"
-            >
-              Get a Free Quote
-            </a>
+            <GetFreeQuoteButton/>
           </div>
         </div>
       </section>

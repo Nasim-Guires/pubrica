@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 export default function PhysicianResearchProposalProcessWorkflow() {
     const [activeTab, setActiveTab] = useState<'ethical' | 'reporting'>('reporting');
@@ -260,12 +261,7 @@ export default function PhysicianResearchProposalProcessWorkflow() {
                                 </p>
                             </div>
                         </div>
-                        <a
-                            href="#quote"
-                            className="bg-[#c5281c] hover:bg-[#a31f15] text-white text-xs font-bold py-2.5 px-6 rounded-full transition-colors whitespace-nowrap shadow-md"
-                        >
-                            Get a Free Quote
-                        </a>
+                       <GetFreeQuoteButton/>
                     </div>
                 </section>
 

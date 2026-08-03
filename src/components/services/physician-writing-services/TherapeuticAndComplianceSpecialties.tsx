@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
 
 interface Specialty {
@@ -273,9 +274,7 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
               impactful scientific publications.
             </p>
             <div className="pt-2">
-              <button className="bg-[#a80000] text-white text-xs md:text-sm font-bold tracking-wide px-7 py-3 rounded-md hover:bg-[#880000] transition-colors shadow-md">
-                Get a Free Quote
-              </button>
+              <GetFreeQuoteButton/>
             </div>
           </div>
         </div>

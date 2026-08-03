@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Container from "@/components/common/Container";
+import GetFreeQuoteButton from "../common/GetFreeQuoteButton";
 
 export default function Footer() {
   const serviceLinks = [
@@ -49,12 +50,7 @@ export default function Footer() {
           </div>
 
           {/* Action Button */}
-          <a
-            href="#quote"
-            className="bg-white text-gray-900 text-xs sm:text-sm font-bold tracking-tight px-6 py-3.5 rounded shadow hover:bg-gray-50 transition-all duration-300 whitespace-nowrap"
-          >
-            Get a Free Quote
-          </a>
+         <GetFreeQuoteButton/>
         </div>
 
         {/* 2. MIDDLE PORTION: Main Footer Directory Directory Grid */}

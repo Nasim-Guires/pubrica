@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function ScientificMedicalCommunication() {
   // SEO JSON-LD Structured Data
@@ -121,12 +122,7 @@ export default function ScientificMedicalCommunication() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
-              <Link
-                href="/get-a-quote"
-                className="bg-[#c00000] hover:bg-[#a00000] text-white font-bold text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
-              >
-                Get a Free Quote
-              </Link>
+             <GetFreeQuoteButton/>
               <Link
                 href="/brochure"
                 className="bg-[#c00000] hover:bg-[#a00000] text-white font-bold text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"

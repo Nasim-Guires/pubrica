@@ -17,6 +17,7 @@ import {
   UserCheck,
   Image as ImageIcon
 } from 'lucide-react';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 const manuscriptTypes = [
   {
@@ -139,12 +140,7 @@ export default function PhysicianManuscriptsPage() {
             </p>
             
             <div className="pt-4">
-              <Link 
-                href="/contact" 
-                className="inline-block bg-[#b31217] hover:bg-[#8e0e12] text-white font-semibold px-6 py-2.5 rounded-md transition-colors text-sm"
-              >
-                Get a Free Quote
-              </Link>
+             <GetFreeQuoteButton/>
             </div>
           </div>
 

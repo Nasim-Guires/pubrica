@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -124,12 +125,7 @@ export default function PeerReviewPreSubmissionClient() {
 
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-4 pt-4">
-            <Link
-              href="/get-quote"
-              className="px-6 py-3 bg-[#b30000] hover:bg-[#8e0000] text-white font-semibold rounded-full text-sm transition-colors duration-200 shadow-md"
-            >
-              Get a Free Quote
-            </Link>
+           <GetFreeQuoteButton/>
             <Link
               href="/brochure"
               className="px-6 py-3 bg-[#b30000] hover:bg-[#8e0000] text-white font-semibold rounded-full text-sm transition-colors duration-200 shadow-md"

@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
 
 // ================= TYPES OF RESPONSES DATA =================
@@ -479,9 +480,7 @@ export default function PublicationSupportPage() {
 
         {/* Global CTA Button */}
         <div className="mt-12 text-center">
-          <button className="bg-[#bd0808] hover:bg-red-800 text-white text-sm font-bold px-8 py-3 rounded-full shadow-md transition-all hover:scale-105">
-            Get a Free Quote
-          </button>
+          <GetFreeQuoteButton/>
         </div>
       </section>
     </div>

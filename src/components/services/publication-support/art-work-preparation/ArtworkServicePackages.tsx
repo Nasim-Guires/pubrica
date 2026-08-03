@@ -1,5 +1,6 @@
 "use client";
 
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
 
 interface PackageCardProps {
@@ -230,12 +231,7 @@ export default function ArtworkServicePackages() {
 
         {/* Primary Red Banner CTA */}
         <div className="mb-12">
-          <a
-            href="#quote"
-            className="block w-full bg-[#b80000] hover:bg-[#960000] text-white font-bold text-center py-3.5 rounded-sm transition-colors shadow-sm text-sm md:text-base"
-          >
-            Get a Free Quote
-          </a>
+         <GetFreeQuoteButton/>
         </div>
 
         {/* Delivery and Pricing Section */}

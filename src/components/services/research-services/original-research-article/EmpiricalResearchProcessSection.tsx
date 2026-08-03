@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Link from "next/link";
 
 interface ProcessStep {
@@ -251,12 +252,7 @@ export default function EmpiricalResearchProcessSection() {
 
           {/* CTA Button */}
           <div className="flex-shrink-0">
-            <Link
-              href="/get-quote"
-              className="inline-block bg-red-700 hover:bg-red-800 text-white font-bold px-8 py-3.5 rounded-full transition-colors duration-200 shadow-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-emerald-950"
-            >
-              Get a Free Quote
-            </Link>
+            <GetFreeQuoteButton/>
           </div>
         </div>
       </div>

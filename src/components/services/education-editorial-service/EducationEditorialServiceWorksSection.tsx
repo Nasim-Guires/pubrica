@@ -1,6 +1,7 @@
 'use client';
 
 import { EditorialWorkflowSection } from '@/components/common/EditorialWorkflowSection';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import { workflowData, workflowSectionData } from '@/lib/education-editorial-service/education-editorial-service';
 import React, { useState } from 'react';
 
@@ -97,9 +98,7 @@ export default function EducationEditorialServicePage() {
                         </p>
 
                         <div className="pt-4">
-                            <button className="bg-[#cc0000] hover:bg-[#b00000] text-white text-xs font-bold px-8 py-3 rounded shadow-md transition-colors uppercase tracking-wider">
-                                Get a Free Quote
-                            </button>
+                          <GetFreeQuoteButton/>
                         </div>
                     </div>
 

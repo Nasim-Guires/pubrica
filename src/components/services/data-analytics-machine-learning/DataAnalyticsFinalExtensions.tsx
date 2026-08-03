@@ -1,4 +1,5 @@
 // Change your import line to look exactly like this:
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import { Sequence, Step } from "@/components/common/Sequence";
 import React from "react";
 // import { , Step } from "./component_library"; // Assuming layout library pathways
@@ -145,9 +146,7 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
             cutting-edge technological solutions.
           </p>
           <div className="pt-2">
-            <button className="bg-[#a80000] text-white text-xs sm:text-sm font-bold tracking-wider px-8 py-3 rounded hover:bg-[#880000] transition-colors uppercase shadow-md">
-              Get a Free Quote
-            </button>
+          <GetFreeQuoteButton/>
           </div>
         </div>
       </section>

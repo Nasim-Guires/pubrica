@@ -2,6 +2,7 @@
 
 import React from "react";
 import { ArrowRightCircle } from "lucide-react";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 const featureTags = [
   "Consistency",
@@ -107,12 +108,7 @@ export default function ProofreadingHeroSection() {
 
             {/* CTA Button */}
             <div className="pt-2">
-              <button
-                type="button"
-                className="bg-[#b81d1d] hover:bg-[#961515] text-white font-bold py-3 px-7 rounded-full text-sm shadow-md transition-colors"
-              >
-                Get a Free Quote
-              </button>
+              <GetFreeQuoteButton/>
             </div>
           </div>
 

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 /* ==========================================================================
    DATA OBJECT STRUCTURE FOR TOOLS USED CARDS
@@ -169,12 +170,7 @@ export default function TherapeuticAreasAndTools() {
           <p className="text-slate-200 text-sm sm:text-base max-w-3xl mx-auto mb-6 leading-relaxed">
             Receive tailored support in genomic, proteomic, and clinical data analysis, helping you achieve precision, reliability, and faster translation of discoveries into practice.
           </p>
-          <Link
-            href="#contact"
-            className="inline-block bg-[#b91c1c] hover:bg-red-800 text-white font-medium px-6 py-2.5 rounded-full shadow transition-colors text-sm"
-          >
-            Get a Free Quote
-          </Link>
+         <GetFreeQuoteButton/>
         </div>
 
         {/* ------------------------------------------------------------------

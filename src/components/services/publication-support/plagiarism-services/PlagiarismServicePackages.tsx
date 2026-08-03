@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface PackageFeature {
   text: string;
@@ -310,12 +311,7 @@ export default function PlagiarismServicePackages() {
 
         {/* CTA Bar below packages */}
         <div className="mt-8">
-          <Link
-            href="#get-quote"
-            className="block w-full bg-[#b30000] hover:bg-[#8d0000] text-white font-bold text-center py-3 rounded-md transition-colors text-sm shadow"
-          >
-            Get a Free Quote
-          </Link>
+        <GetFreeQuoteButton/>
         </div>
       </section>
 

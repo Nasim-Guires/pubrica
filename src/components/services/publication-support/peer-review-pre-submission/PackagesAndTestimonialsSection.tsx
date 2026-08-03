@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // 1. Package Cards Data
 const packagesData = [
@@ -204,12 +205,7 @@ export default function PackagesAndTestimonialsSection() {
 
         {/* Full-width "Get a Free Quote" Button */}
         <div className="w-full text-center">
-          <a
-            href="#quote"
-            className="inline-block w-full max-w-4xl bg-[#b80000] hover:bg-black text-white font-bold text-base py-3.5 rounded-md shadow-md transition-colors duration-300"
-          >
-            Get a Free Quote
-          </a>
+          <GetFreeQuoteButton/>
         </div>
       </section>
 

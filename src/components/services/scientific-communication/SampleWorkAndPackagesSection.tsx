@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // ==========================================
 // TYPES & DATA STRUCTURES
@@ -229,12 +230,7 @@ export default function SampleWorkAndPackagesSection() {
 
           {/* CTA Button */}
           <div className="text-center mb-14">
-            <Link
-              href="/get-quote"
-              className="inline-block bg-[#a30000] hover:bg-[#800000] text-white font-bold text-sm md:text-base py-3 px-10 rounded-md transition-colors duration-200 shadow-md"
-            >
-              Get a Free quote
-            </Link>
+           <GetFreeQuoteButton/>
           </div>
 
           {/* ==========================================

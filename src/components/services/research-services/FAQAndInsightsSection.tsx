@@ -1,5 +1,6 @@
 "use client";
 
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React, { useState } from "react";
 
 interface FAQItem {
@@ -93,9 +94,7 @@ export const FAQAndInsightsSection: React.FC = () => {
 
         {/* Top Call to Action Red Button */}
         <div className="mb-8">
-          <button className="bg-[#a80000] text-white text-xs md:text-sm font-bold tracking-wide px-8 py-3 rounded-full hover:bg-[#880000] transition-colors shadow-sm">
-            Get a Free Quote
-          </button>
+         <GetFreeQuoteButton/>
         </div>
 
         {/* FAQ Header Block */}

@@ -1,5 +1,6 @@
 "use client";
 
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
 
 export default function TranslationEditingHero() {
@@ -70,12 +71,7 @@ export default function TranslationEditingHero() {
 
             {/* CTA Button */}
             <div className="pt-4">
-              <button
-                type="button"
-                className="bg-[#B70000] hover:bg-[#960000] text-white font-bold text-sm px-7 py-3 rounded-full transition-colors shadow-sm"
-              >
-                Get a Free Quote
-              </button>
+             <GetFreeQuoteButton/>
             </div>
           </div>
 

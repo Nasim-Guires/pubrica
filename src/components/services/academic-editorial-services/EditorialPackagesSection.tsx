@@ -2,6 +2,7 @@
 
 import React from "react";
 import { ArrowRightCircle } from "lucide-react";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // ==========================================
 // TYPES & DATA
@@ -191,9 +192,7 @@ export default function EditorialPackagesSection() {
 
           {/* Bottom Call To Action Button */}
           <div className="flex justify-center pt-8">
-            <button className="w-full sm:w-2/3 lg:w-1/2 py-3 bg-[#a80000] hover:bg-[#830000] text-white font-bold text-sm sm:text-base rounded-md transition-colors shadow-lg">
-              Get a Free quote
-            </button>
+            <GetFreeQuoteButton/>
           </div>
         </div>
       </div>

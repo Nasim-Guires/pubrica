@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Metadata } from 'next';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 export const metadata: Metadata = {
   title: 'Pharmaceutical Industry Solutions & Compliance Services | Pubrica',
@@ -38,12 +39,7 @@ export default function PharmaceuticalIndustryPage() {
             <p className="text-sm md:text-base text-gray-600 mb-6 leading-relaxed">
               To help meet these challenges, Pubrica provides a range of services to the pharmaceutical industry, across research and discovery, marketing materials, and regulatory compliance. These services aim to be able to help in all facets of pharmaceutical drug development from discovery to market and clinician adoption. This comprehensive approach supports the scientific rigor of pharmaceutical development and enhances the marketability of solutions that can have a significant impact on global health. Our pharmacologists, researchers, and marketing experts collaborate to support every stage of pharmaceutical development.
             </p>
-            <a
-              href="#quote"
-              className="inline-block bg-red-700 hover:bg-red-800 text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors shadow-sm"
-            >
-              Get a Free Quote
-            </a>
+           <GetFreeQuoteButton/>
           </div>
 
           {/* Image Section Placeholder */}

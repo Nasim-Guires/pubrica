@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Script from 'next/script';
@@ -80,9 +81,7 @@ export default function CustomerSegmentationPage() {
               </li>
             </ul>
 
-            <button className="bg-red-700 hover:bg-red-800 text-white font-medium py-2 px-6 rounded-md transition-colors">
-              Get a Free Quote
-            </button>
+            <GetFreeQuoteButton/>
           </div>
 
           {/* Section Image using Next.js Image Tag */}

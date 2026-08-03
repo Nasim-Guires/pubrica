@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
 
 const MetaAnalysisPackagesSection = () => {
@@ -251,20 +252,7 @@ const MetaAnalysisPackagesSection = () => {
           marginTop: "30px",
         }}
       >
-        <button
-          style={{
-            background: "#C70000",
-            color: "#fff",
-            border: "none",
-            padding: "15px 42px",
-            borderRadius: "999px",
-            fontSize: "16px",
-            fontWeight: 600,
-            cursor: "pointer",
-          }}
-        >
-          Get a Free Quote
-        </button>
+     <GetFreeQuoteButton/>
       </div>
     </section>
   );

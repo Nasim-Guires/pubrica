@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 export default function WhoWeServeAndProcessLiterature() {
     /* ------------------- DATA ARRAYS ------------------- */
@@ -346,12 +347,7 @@ export default function WhoWeServeAndProcessLiterature() {
                     </div>
 
                     <div className="w-full md:w-auto">
-                        <Link
-                            href="#contact"
-                            className="inline-block bg-[#b91c1c] hover:bg-[#991b1b] text-white font-medium px-6 py-2.5 rounded-full transition-colors text-sm shadow-md whitespace-nowrap"
-                        >
-                            Get a Free Quote
-                        </Link>
+                        <GetFreeQuoteButton/>
                     </div>
                 </div>
             </section>

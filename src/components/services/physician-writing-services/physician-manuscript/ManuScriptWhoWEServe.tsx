@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 // Process Steps Data
 const processSteps = [
@@ -131,12 +132,7 @@ const toggleAccordion = (id: string) => {
                             </p>
                         </div>
                     </div>
-                    <Link
-                        href="/contact"
-                        className="bg-[#b31217] hover:bg-[#8e0e12] text-white font-semibold px-6 py-2.5 rounded-md transition-colors text-sm shrink-0"
-                    >
-                        Get a Free Quote
-                    </Link>
+                    <GetFreeQuoteButton/>
                 </div>
             </section>
 

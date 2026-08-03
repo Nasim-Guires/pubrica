@@ -10,6 +10,7 @@ import {
   FiBarChart2,
   FiShield,
 } from "react-icons/fi";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // --- Types ---
 interface StatItem {
@@ -206,12 +207,7 @@ export default function ScientificEditingPage() {
             </ul>
 
             <div className="pt-4">
-              <Link
-                href="/get-a-quote"
-                className="inline-block bg-[#bc0000] hover:bg-[#990000] text-white font-bold text-xs md:text-sm px-8 py-3 rounded-full transition-colors duration-300 shadow-md"
-              >
-                Get a Free Quote
-              </Link>
+             <GetFreeQuoteButton/>
             </div>
           </div>
 

@@ -14,6 +14,7 @@ import {
   Scan,
   CheckCircle2,
 } from "lucide-react";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // ==========================================
 // DATA: WHO WE SERVE
@@ -205,23 +206,20 @@ export default function CaseReportWorkflowAndDisciplines() {
 
               {/* Step Card (Turns Black on Hover) */}
               <div
-                className={`w-full h-full p-5 flex flex-col rounded-sm border cursor-pointer transition-all duration-300 shadow-sm ${
-                  step.isDark
+                className={`w-full h-full p-5 flex flex-col rounded-sm border cursor-pointer transition-all duration-300 shadow-sm ${step.isDark
                     ? "bg-white text-slate-800 border-slate-200"
                     : "bg-white text-slate-800 border-slate-200"
-                } hover:bg-black hover:text-white hover:border-black hover:shadow-xl`}
+                  } hover:bg-black hover:text-white hover:border-black hover:shadow-xl`}
               >
                 <h4
-                  className={`font-bold text-xs sm:text-sm uppercase mb-3 leading-snug tracking-tight transition-colors duration-300 ${
-                    step.isDark ? "text-[#0e3b38]" : "text-[#0e3b38]"
-                  } group-hover:text-white`}
+                  className={`font-bold text-xs sm:text-sm uppercase mb-3 leading-snug tracking-tight transition-colors duration-300 ${step.isDark ? "text-[#0e3b38]" : "text-[#0e3b38]"
+                    } group-hover:text-white`}
                 >
                   {step.title}
                 </h4>
                 <p
-                  className={`text-xs leading-relaxed transition-colors duration-300 ${
-                    step.isDark ? "text-[#0e3b38]" : "text-slate-600"
-                  } group-hover:text-slate-200`}
+                  className={`text-xs leading-relaxed transition-colors duration-300 ${step.isDark ? "text-[#0e3b38]" : "text-slate-600"
+                    } group-hover:text-slate-200`}
                 >
                   {step.description}
                 </p>
@@ -271,9 +269,7 @@ export default function CaseReportWorkflowAndDisciplines() {
               easy acceptance.
             </p>
             <div>
-              <button className="bg-[#b30000] hover:bg-[#8e0000] text-white font-semibold text-sm px-6 py-2.5 rounded-md transition-colors shadow-sm">
-                Get a Free Quote
-              </button>
+              <GetFreeQuoteButton />
             </div>
           </div>
         </div>

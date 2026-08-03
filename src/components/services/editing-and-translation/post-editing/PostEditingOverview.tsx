@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export const PostEditingOverview: React.FC = () => {
   const bulletPoints = [
@@ -134,12 +135,7 @@ export const PostEditingOverview: React.FC = () => {
           </p>
 
           <div>
-            <Link
-              href="/contact-us"
-              className="inline-block bg-[#bd0000] hover:bg-[#a00000] text-white font-semibold text-xs sm:text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
-            >
-              Get a Free Quote
-            </Link>
+           <GetFreeQuoteButton/>
           </div>
         </div>
       </section>

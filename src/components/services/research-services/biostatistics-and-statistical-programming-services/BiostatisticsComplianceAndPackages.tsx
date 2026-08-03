@@ -13,6 +13,7 @@ import {
   ArrowRightCircle,
   LucideIcon,
 } from "lucide-react";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface ComplianceCard {
   id: string;
@@ -397,12 +398,7 @@ export default function BiostatisticsComplianceAndPackages() {
 
         {/* Global CTA Button */}
         <div className="pt-10 flex justify-center">
-          <a
-            href="#get-a-quote"
-            className="bg-[#b30000] hover:bg-[#8e0000] text-white font-bold text-sm px-10 py-3.5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg hover:scale-105"
-          >
-            Get a Free Quote
-          </a>
+          <GetFreeQuoteButton/>
         </div>
       </section>
     </div>

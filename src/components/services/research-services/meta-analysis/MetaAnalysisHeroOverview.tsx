@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function MetaAnalysisHeroOverview() {
   return (
@@ -252,28 +253,7 @@ export default function MetaAnalysisHeroOverview() {
 
               {/* Call to Action Button */}
               <div>
-                <button
-                  style={{
-                    backgroundColor: "#b91c1c",
-                    color: "#ffffff",
-                    border: "none",
-                    borderRadius: "20px",
-                    padding: "12px 28px",
-                    fontSize: "0.9rem",
-                    fontWeight: "700",
-                    cursor: "pointer",
-                    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-                    transition: "background-color 0.2s ease",
-                  }}
-                  onMouseOver={(e) =>
-                    (e.currentTarget.style.backgroundColor = "#991b1b")
-                  }
-                  onMouseOut={(e) =>
-                    (e.currentTarget.style.backgroundColor = "#b91c1c")
-                  }
-                >
-                  Get a Free Quote
-                </button>
+               <GetFreeQuoteButton/>
               </div>
             </div>
 

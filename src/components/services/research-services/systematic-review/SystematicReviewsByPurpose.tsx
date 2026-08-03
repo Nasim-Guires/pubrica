@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface ReviewPurposeItem {
   id: string;
@@ -404,28 +405,7 @@ export default function SystematicReviewsByPurpose() {
             intricate journal submission processes, shielding you from rejection
             and ensuring a faster path to getting your work published.
           </p>
-          <a
-            href="/contact-us"
-            style={{
-              display: "inline-block",
-              backgroundColor: "#c5110a", // Vibrant red button
-              color: "#ffffff",
-              padding: "12px 36px",
-              borderRadius: "24px",
-              fontWeight: "700",
-              fontSize: "1rem",
-              textDecoration: "none",
-              transition: "background-color 0.2s ease",
-            }}
-            onMouseOver={(e) =>
-              (e.currentTarget.style.backgroundColor = "#990d08")
-            }
-            onMouseOut={(e) =>
-              (e.currentTarget.style.backgroundColor = "#c5110a")
-            }
-          >
-            Get a Free Quote
-          </a>
+          <GetFreeQuoteButton/>
         </div>
       </section>
     </>

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // --- Data Types ---
 interface Step {
@@ -139,12 +140,7 @@ export default function PlagiarismSectionGroup() {
               </ul>
 
               <div className="pt-4">
-                <Link
-                  href="#get-a-quote"
-                  className="inline-block bg-[#b30000] hover:bg-[#8d0000] text-white font-medium px-6 py-2.5 rounded-full transition-colors text-sm shadow-sm"
-                >
-                  Get a Free Quote
-                </Link>
+                <GetFreeQuoteButton/>
               </div>
             </div>
 

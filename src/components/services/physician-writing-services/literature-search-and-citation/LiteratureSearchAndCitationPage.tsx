@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 export const metadata = {
   title: 'Literature Search and Citation Service | Build Evidence with Precision',
@@ -89,12 +90,7 @@ export default function LiteratureSearchAndCitationPage() {
             </p>
 
             <div className="pt-4">
-              <Link
-                href="#contact"
-                className="inline-block bg-[#b91c1c] hover:bg-[#991b1b] text-white font-medium px-6 py-2.5 rounded-full transition-colors duration-200 text-sm"
-              >
-                Get a Free Quote
-              </Link>
+              <GetFreeQuoteButton/>
             </div>
           </div>
 

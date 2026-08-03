@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
 
 interface AudienceCard {
@@ -84,9 +85,7 @@ export const PhysicianWhoWeServe: React.FC = () => {
 
           {/* Action Button Trigger */}
           <div className="pt-2">
-            <button className="bg-[#a80000] text-white text-xs md:text-sm font-bold tracking-wide px-8 py-3.5 rounded-full hover:bg-[#880000] transition-colors shadow-md">
-              Get a Free Quote
-            </button>
+            <GetFreeQuoteButton />
           </div>
         </div>
       </section>

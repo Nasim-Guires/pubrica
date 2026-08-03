@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 interface ServiceItem {
   title: string;
@@ -116,9 +117,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
             <p className="text-gray-700 mb-6 leading-relaxed text-sm md:text-base">
               Generics account for 90 percent of prescriptions dispensed in the U.S., but only 13.1 percent of the total drug costs. The thousands of generics available today are rigorously tested by the FDA and must demonstrate that they are the same medicine with the same active ingredients, strength, and dosage as their brand-name counterparts.
             </p>
-            <button className="bg-[#b91c1c] hover:bg-[#991b1b] text-white font-semibold py-3 px-8 rounded-full transition-colors">
-              Get a Free Quote
-            </button>
+           <GetFreeQuoteButton/>
           </div>
           <div className="relative w-full h-[350px] flex justify-center items-center">
             <div className="relative w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] rounded-full overflow-hidden shadow-xl">

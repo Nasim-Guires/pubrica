@@ -424,7 +424,7 @@ export const NAV_LINKS = [
     label: "Services",
     dropdown: [
       {
-        href: "/services/research-services/product-development/",
+        href: "/services/research-services/product-development",
         label: "Discovery & Intelligence Service",
       },
       {
@@ -711,6 +711,11 @@ export const NAV_LINKS = [
       },
 
       {
+        href: "/services/medico-legal-support-services",
+        label: "Medico Legal Services",
+      },
+
+      {
         href: "/services/educational-content-development",
         label: "Educational Content",
       },
@@ -788,6 +793,12 @@ export const NAV_LINKS = [
   {
     href: "/about",
     label: "About Us",
+    dropdown: [
+      {
+        href: "/quality",
+        label: "Our Quality",
+      },
+    ]
   },
 
   {

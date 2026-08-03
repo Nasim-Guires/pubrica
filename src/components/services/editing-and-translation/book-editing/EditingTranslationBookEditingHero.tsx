@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export const EditingTranslationBookEditingHero: React.FC = () => {
   return (
@@ -144,12 +145,7 @@ export const EditingTranslationBookEditingHero: React.FC = () => {
           </p>
 
           <div>
-            <Link
-              href="/contact"
-              className="inline-block bg-[#b90000] hover:bg-[#960000] text-white text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-full transition-colors shadow-sm"
-            >
-              Get a Free Quote
-            </Link>
+           <GetFreeQuoteButton/>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 'use client';
 
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -181,9 +182,7 @@ const LearningDesignPedagogyComprehensiveSection: NextPage = () => {
           </ul>
 
           <div className="pt-4 text-left">
-            <Link href="#" className="inline-block bg-[#c5221f] text-white font-bold py-3 px-8 rounded-lg hover:bg-[#a51a17] transition-colors shadow">
-              Get a Free Quote
-            </Link>
+          <GetFreeQuoteButton/>
           </div>
         </section>
 

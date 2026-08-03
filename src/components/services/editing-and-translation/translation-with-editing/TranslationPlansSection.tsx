@@ -2,6 +2,7 @@
 
 import React from "react";
 import { ArrowRightCircle } from "lucide-react";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface PlanCard {
   id: string;
@@ -151,12 +152,7 @@ export default function TranslationPlansSection() {
 
         {/* CTA Button */}
         <div className="pt-6 text-center">
-          <button
-            type="button"
-            className="w-full sm:w-auto min-w-[320px] bg-[#a80000] hover:bg-[#850000] text-white font-bold py-3.5 px-8 rounded-md text-base shadow-md transition-colors duration-200"
-          >
-            Get a Free quote
-          </button>
+         <GetFreeQuoteButton/>
         </div>
       </div>
     </section>

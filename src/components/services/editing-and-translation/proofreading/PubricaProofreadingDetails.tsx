@@ -10,6 +10,7 @@ import {
   Clock,
   ShieldCheck,
 } from "lucide-react";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // ==========================================
 // 1. REASONS ACCORDION DATA
@@ -385,12 +386,7 @@ export default function PubricaProofreadingDetails() {
 
         {/* Full-width Free Quote Banner CTA Button */}
         <div className="pt-2">
-          <button
-            type="button"
-            className="w-full bg-[#b80000] hover:bg-[#9e0000] text-white font-bold text-lg py-3.5 rounded-md transition-colors shadow-md text-center"
-          >
-            Get a Free Quote
-          </button>
+          <GetFreeQuoteButton/>
         </div>
       </section>
     </div>

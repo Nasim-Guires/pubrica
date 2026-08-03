@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { heroBulletPoints } from "@/lib/services/editing-and-translation";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function Hero() {
   return (
@@ -76,9 +77,7 @@ export default function Hero() {
 
         {/* Buttons */}
         <div className="mt-10 flex gap-5">
-          <button className="rounded-full bg-[#BA0000] px-8 py-3 text-white font-semibold hover:bg-[#980000]">
-            Get a Free Quote
-          </button>
+         <GetFreeQuoteButton/>
 
           <button className="rounded-full bg-[#BA0000] px-8 py-3 text-white font-semibold hover:bg-[#980000]">
             View Brochure

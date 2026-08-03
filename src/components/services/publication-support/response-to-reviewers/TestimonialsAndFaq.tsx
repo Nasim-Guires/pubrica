@@ -1,4 +1,5 @@
 "use client"
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React, { useState } from "react";
 
 // ================= DATA TYPES =================
@@ -110,9 +111,7 @@ export default function TestimonialsAndFaq() {
       <section className="pt-10 pb-12 px-4 max-w-6xl mx-auto">
         {/* Top Button */}
         <div className="text-center mb-6">
-          <button className="bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 font-semibold text-xs px-6 py-2 rounded-full shadow-sm transition-colors">
-            Get a Free Quote
-          </button>
+         <GetFreeQuoteButton/>
         </div>
 
         {/* Heading & Intro */}

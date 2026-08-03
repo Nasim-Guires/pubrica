@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 // Exportable SEO Metadata for Next.js App Router (page.tsx)
 export const metadata: Metadata = {
@@ -145,12 +146,7 @@ export default function PosterPreparationPage() {
 
         {/* Action Buttons */}
         <div className="flex flex-wrap gap-4 items-center pt-2">
-          <Link
-            href="/contact-us"
-            className="bg-[#b31217] hover:bg-[#8f0d11] text-white font-medium py-2.5 px-6 rounded-full transition-colors inline-block"
-          >
-            Get a Free Quote
-          </Link>
+          <GetFreeQuoteButton/>
           <Link
             href="/brochure"
             className="bg-[#b31217] hover:bg-[#8f0d11] text-white font-medium py-2.5 px-6 rounded-full transition-colors inline-block"

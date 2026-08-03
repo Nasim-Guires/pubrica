@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface PackageTier {
   tierName: string;
@@ -203,12 +204,7 @@ export default function ResearchPackagesSection() {
 
         {/* Bottom CTA Button */}
         <div className="flex justify-center pt-4">
-          <Link
-            href="/get-quote"
-            className="inline-block bg-red-700 hover:bg-red-800 text-white font-bold px-10 py-3.5 rounded-full transition-colors duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
-          >
-            Get a Free Quote
-          </Link>
+          <GetFreeQuoteButton/>
         </div>
       </div>
     </section>

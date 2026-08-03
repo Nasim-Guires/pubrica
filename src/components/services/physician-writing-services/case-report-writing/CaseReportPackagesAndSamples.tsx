@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightCircle } from "lucide-react";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // ==========================================
 // DATA: PACKAGES
@@ -249,9 +250,7 @@ export default function CaseReportPackagesAndSamples() {
 
           {/* Bottom CTA Button */}
           <div className="text-center pt-6">
-            <button className="bg-[#b30000] hover:bg-[#8e0000] text-white font-bold text-sm px-8 py-3 rounded-full transition-colors shadow-md">
-              Get a Free Quote
-            </button>
+           <GetFreeQuoteButton/>
           </div>
         </section>
 

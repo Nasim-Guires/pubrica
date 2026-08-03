@@ -1,5 +1,6 @@
 "use client";
 
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
 
 interface DiseaseCard {
@@ -90,12 +91,7 @@ export default function DiseaseBasedAndComplianceSection() {
             and boost publication success.
           </p>
           <div>
-            <a
-              href="#get-a-quote"
-              className="inline-block bg-red-700 hover:bg-red-800 text-white font-semibold text-sm px-8 py-3 rounded-full transition-colors duration-200 shadow-md"
-            >
-              Get a Free Quote
-            </a>
+          <GetFreeQuoteButton/>
           </div>
         </div>
       </section>

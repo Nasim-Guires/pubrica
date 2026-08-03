@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export const ThesisEditingHeroAndOverview: React.FC = () => {
   const keyPoints = [
@@ -84,12 +85,7 @@ export const ThesisEditingHeroAndOverview: React.FC = () => {
 
             {/* Call to Action Button */}
             <div className="pt-4">
-              <a
-                href="#get-quote"
-                className="inline-block bg-[#b80000] hover:bg-[#960000] text-white font-bold px-8 py-3 rounded-full text-xs sm:text-sm shadow-md transition-colors"
-              >
-                Get a Free Quote
-              </a>
+              <GetFreeQuoteButton/>
             </div>
           </div>
 

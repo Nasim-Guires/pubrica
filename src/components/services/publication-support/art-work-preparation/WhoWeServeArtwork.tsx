@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface AccordionItem {
   id: string;
@@ -111,12 +112,7 @@ export default function WhoWeServeArtwork() {
               />
             </div>
 
-            <a
-              href="#get-quote"
-              className="inline-block rounded-full bg-[#bd0a0a] px-8 py-2.5 text-sm font-medium text-white transition-all hover:bg-[#960808]"
-            >
-              Get a Free Quote
-            </a>
+            <GetFreeQuoteButton/>
           </div>
 
           {/* Right Side: Accordion List */}

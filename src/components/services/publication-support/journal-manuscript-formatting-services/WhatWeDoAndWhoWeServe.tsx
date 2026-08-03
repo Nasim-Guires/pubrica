@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 interface AudienceItem {
   id: number;
@@ -163,12 +164,7 @@ export default function WhatWeDoAndWhoWeServe() {
 
               {/* Call to Action Button */}
               <div className="pt-2">
-                <button
-                  type="button"
-                  className="bg-[#b91c1c] hover:bg-[#991b1b] text-white text-xs md:text-sm font-semibold px-6 py-2.5 rounded-full shadow-xs transition-colors cursor-pointer"
-                >
-                  Get a Free Quote
-                </button>
+                <GetFreeQuoteButton/>
               </div>
             </div>
 

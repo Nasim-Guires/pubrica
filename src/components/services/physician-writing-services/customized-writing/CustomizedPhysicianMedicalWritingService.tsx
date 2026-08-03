@@ -16,6 +16,7 @@ import {
   MessageSquare,
   Sparkles,
 } from "lucide-react";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface OfferCard {
   id: number;
@@ -184,9 +185,7 @@ export default function CustomizedPhysicianMedicalWritingService() {
 
             {/* CTA Button */}
             <div className="pt-2">
-              <button className="bg-[#b80000] hover:bg-red-700 text-white font-bold text-xs px-6 py-2.5 rounded-full transition shadow">
-                Get a Free Quote
-              </button>
+              <GetFreeQuoteButton/>
             </div>
           </div>
 

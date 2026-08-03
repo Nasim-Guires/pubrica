@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface AudienceCard {
   id: string;
@@ -287,12 +288,7 @@ export default function WhoWeServeAndServiceDetailsSection() {
             of the funding bodies.
           </p>
           <div>
-            <a
-              href="#get-a-quote"
-              className="inline-block bg-[#b30000] hover:bg-[#8e0000] text-white font-bold text-xs sm:text-sm px-8 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-lg hover:scale-105"
-            >
-              Get a Free Quote
-            </a>
+          <GetFreeQuoteButton/>
           </div>
         </div>
       </section>

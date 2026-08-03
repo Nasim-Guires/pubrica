@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function PatientEducationContentOverviewSection() {
   return (
@@ -118,12 +119,7 @@ export default function PatientEducationContentOverviewSection() {
             </div>
 
             <div className="pt-4">
-              <Link
-                href="/contact"
-                className="inline-block bg-[#b91c1c] hover:bg-[#991b1b] text-white font-semibold px-6 py-3 rounded-full transition-colors shadow-md text-sm sm:text-base"
-              >
-                Get a Free Quote
-              </Link>
+              <GetFreeQuoteButton/>
             </div>
           </div>
 

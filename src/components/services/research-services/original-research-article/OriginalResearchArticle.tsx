@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -107,12 +108,7 @@ export default function OriginalResearchArticle() {
 
             {/* CTA Button */}
             <div className="pt-4">
-              <Link
-                href="/get-quote"
-                className="inline-block bg-red-700 hover:bg-red-800 text-white font-semibold px-7 py-3 rounded-full transition-colors duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2"
-              >
-                Get a Free Quote
-              </Link>
+             <GetFreeQuoteButton/>
             </div>
           </article>
 

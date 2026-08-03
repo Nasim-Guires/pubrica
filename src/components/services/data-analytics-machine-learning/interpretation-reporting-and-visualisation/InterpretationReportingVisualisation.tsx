@@ -1,5 +1,6 @@
 "use client";
 
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React, { useState } from "react";
 
 export default function InterpretationReportingVisualisation() {
@@ -92,12 +93,7 @@ export default function InterpretationReportingVisualisation() {
                         </p>
 
                         <div className="pt-4">
-                            <button
-                                type="button"
-                                className="bg-[#b31b1b] hover:bg-[#8e1515] text-white font-semibold text-xs md:text-sm py-3 px-8 rounded-full transition-colors shadow-sm"
-                            >
-                                Get a Free Quote
-                            </button>
+                           <GetFreeQuoteButton/>
                         </div>
                     </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 interface ServiceItem {
   title: string;
@@ -159,9 +160,7 @@ export default function BiosimilarIndustryPage({
               ))}
             </ul>
 
-            <button className="bg-[#b91c1c] hover:bg-[#991b1b] text-white font-semibold py-3 px-8 rounded-full transition-colors">
-              Get a Free Quote
-            </button>
+           <GetFreeQuoteButton/>
           </div>
 
           <div className="relative w-full h-[450px] flex justify-center items-center">

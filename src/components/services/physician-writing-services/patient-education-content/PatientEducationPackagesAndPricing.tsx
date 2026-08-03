@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function PatientEducationPackagesAndPricing() {
   const packages = [
@@ -122,12 +123,7 @@ export default function PatientEducationPackagesAndPricing() {
 
           {/* Right Button */}
           <div className="shrink-0">
-            <Link
-              href="/contact"
-              className="inline-block bg-[#b91c1c] hover:bg-[#991b1b] text-white font-semibold px-6 py-3 rounded-full shadow-md transition-colors text-sm sm:text-base"
-            >
-              Get a Free Quote
-            </Link>
+            <GetFreeQuoteButton/>
           </div>
         </div>
       </section>
@@ -389,12 +385,7 @@ export default function PatientEducationPackagesAndPricing() {
 
           {/* Bottom Get a Free Quote Button */}
           <div className="flex justify-center pt-6">
-            <Link
-              href="/contact"
-              className="inline-block bg-[#b91c1c] hover:bg-[#991b1b] text-white font-semibold px-8 py-3.5 rounded-full shadow-md transition-colors text-base"
-            >
-              Get a Free Quote
-            </Link>
+            <GetFreeQuoteButton/>
           </div>
         </div>
       </section>

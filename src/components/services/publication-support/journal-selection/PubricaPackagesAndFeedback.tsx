@@ -1,5 +1,6 @@
 "use client";
 
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
 
 export default function PubricaPackagesAndFeedback() {
@@ -237,9 +238,7 @@ export default function PubricaPackagesAndFeedback() {
 
         {/* Call To Action Button */}
         <div className="mt-10 text-center">
-          <button className="bg-[#b80000] hover:bg-[#8f0000] text-white font-bold text-sm sm:text-base py-3.5 px-12 rounded-lg shadow-md transition-colors duration-200">
-            Get a Free Quote
-          </button>
+          <GetFreeQuoteButton/>
         </div>
       </section>
 

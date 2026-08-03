@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function AiMlHeroSection() {
   return (
@@ -63,12 +64,7 @@ export default function AiMlHeroSection() {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
-              <button
-                type="button"
-                className="bg-[#b80e0e] hover:bg-[#960b0b] text-white text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
-              >
-                Get a Free Quote
-              </button>
+              <GetFreeQuoteButton />
               <button
                 type="button"
                 className="bg-[#b80e0e] hover:bg-[#960b0b] text-white text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"

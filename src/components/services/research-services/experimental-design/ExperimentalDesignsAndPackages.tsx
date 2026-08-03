@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function ExperimentalDesignsAndPackages() {
   // State for opening/closing main cards (empty array = both closed by default)
@@ -861,12 +862,7 @@ export default function ExperimentalDesignsAndPackages() {
 
         {/* Floating Red CTA Bar across the bottom */}
         <div className="mt-8 flex justify-center">
-          <Link
-            href="/get-a-quote"
-            className="w-full max-w-4xl bg-[#b30000] hover:bg-[#8e0000] text-white font-bold text-sm sm:text-base py-3.5 rounded-full text-center shadow-lg transition-all duration-200"
-          >
-            Get a Free quote
-          </Link>
+         <GetFreeQuoteButton/>
         </div>
       </section>
     </div>

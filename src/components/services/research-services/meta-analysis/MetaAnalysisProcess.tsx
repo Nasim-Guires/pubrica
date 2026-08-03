@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface Step {
   number: number;
@@ -68,12 +69,7 @@ export default function MetaAnalysisProcess() {
             intricate journal submission processes, shielding you from rejection
             and ensuring a faster path to getting your work published.
           </p>
-          <Link
-            href="/contact-us"
-            className="inline-block bg-[#cc0000] hover:bg-[#aa0000] text-white font-semibold text-sm md:text-base py-3 px-8 rounded-full transition-colors duration-300 shadow-md"
-          >
-            Get a Free Quote
-          </Link>
+         <GetFreeQuoteButton/>
         </div>
       </div>
 

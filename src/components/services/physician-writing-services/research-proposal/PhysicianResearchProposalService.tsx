@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Head from 'next/head';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 export default function PhysicianResearchProposalService() {
     const [isAccordionOpen, setIsAccordionOpen] = useState(false);
@@ -116,12 +117,7 @@ export default function PhysicianResearchProposalService() {
 
                             {/* Call To Action Button */}
                             <div className="pt-4">
-                                <a
-                                    href="#get-quote"
-                                    className="inline-block bg-[#b91c1c] hover:bg-[#991b1b] text-white text-sm font-bold py-2.5 px-6 rounded-full transition-colors shadow-sm"
-                                >
-                                    Get a Free Quote
-                                </a>
+                                <GetFreeQuoteButton/>
                             </div>
                         </article>
 

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface ManuscriptType {
   id: string;
@@ -483,12 +484,7 @@ export const EditingTranslationManuscriptEditingTypesAndPackages: React.FC =
 
             {/* Call-to-Action Action Button */}
             <div className="mt-8">
-              <Link
-                href="/contact-us"
-                className="inline-block w-full max-w-xl py-3.5 px-8 bg-[#b80000] hover:bg-[#940000] text-white font-bold text-base rounded transition-colors shadow-md text-center"
-              >
-                Get a Free Quote
-              </Link>
+            <GetFreeQuoteButton/>
             </div>
           </section>
         </div>
