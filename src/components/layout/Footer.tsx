@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Container from "@/components/common/Container";
-import GetFreeQuoteButton from "../common/GetFreeQuoteButton";
 
 export default function Footer() {
   const serviceLinks = [
