@@ -5,20 +5,9 @@ import Header from "@/components/layout/Header";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-import { Poppins, Outfit } from "next/font/google";
-
-const poppins = Poppins({
-  variable: "--font-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  display: "swap",
-});
-
-const outfit = Outfit({
-  variable: "--font-display",
-  subsets: ["latin"],
-  display: "swap",
-});
+// Fallback local font classes to avoid network hangs on Google Fonts API
+const poppins = { variable: "" };
+const outfit = { variable: "" };
 // const inter = Inter({
 //   variable: "--font-sans",
 //   subsets: ["latin"],
@@ -32,6 +21,7 @@ const outfit = Outfit({
 // });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://pubrica.com"),
   title: {
     default: "Pubrica | Scientific & Medical Communication Services",
     template: "%s | Pubrica",

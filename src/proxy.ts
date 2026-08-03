@@ -7,5 +7,7 @@ export function proxy(request: NextRequest) {
 
 // Limit middleware to run only on website pages and exclude api/static paths
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+  ],
 };

@@ -27,6 +27,7 @@ export function constructMetadata({
   const canonicalUrl = `${SITE_URL}${slug.startsWith('/') ? slug : `/${slug}`}`;
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: pageTitle,
     description: pageDesc,
     alternates: {

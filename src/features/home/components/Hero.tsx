@@ -141,7 +141,7 @@ export default function HomeHeroWithAbout() {
               {/* Back Main Image */}
               <div className="absolute left-0 top-0 w-[70%] h-[80%] rounded-2xl overflow-hidden shadow-md">
                 <Image
-                  src="/images/image-2.png" // Replace with your standard path
+                  src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=100&q=80"// Replace with your standard path
                   alt="Researchers with Microscope"
                   fill
                   className="object-cover"
