@@ -1,6 +1,8 @@
 "use client"
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { 
   Users, 
   ShieldCheck, 
@@ -37,8 +39,18 @@ const CONSULTING_SERVICES = [
   "Coding And Algorithm Development"
 ];
 
+const NAV_ITEMS = [
+  { label: "Our Editors", href: "/about/our-editors/" },
+  { label: "Editor Profile", href: "/scientific-editor-profile" },
+  { label: "Editor Speak", href: "/editor-speak" },
+  { label: "Subject Area", href: "/subject-matter-experts/" },
+  { label: "Therapeutic Expertise", href: "/therapeutic-expertise/" },
+  { label: "Global Partners and Membership", href: "/strategic-partnerships-memberships/" },
+];
+
 export default function AboutPage() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
+  const pathname = usePathname();
 
   const toggleAccordion = (index: number) => {
     setOpenAccordion(openAccordion === index ? null : index);
@@ -114,7 +126,7 @@ export default function AboutPage() {
         </section>
 
         {/* ========================================================================= */}
-        {/* SECTION 2: WHY CHOOSE PUBRICA MATRICES (DEEP EMERALD BLOCK)                */}
+        {/* SECTION 2: WHY CHOOSE PUBRICA MATRICES (DEEP EMERALD BLOCK)               */}
         {/* ========================================================================= */}
         <section className="bg-[#11231f] py-16 text-white font-sans" aria-label="Key Capabilities">
           <Container className="max-w-7xl px-4">
@@ -123,17 +135,24 @@ export default function AboutPage() {
               {/* Left Column Navigation List Container Box */}
               <div className="lg:col-span-4 bg-white rounded-xs p-2 text-[#11231f] shadow-xl">
                 <nav className="divide-y divide-gray-100 text-xs font-bold font-sans tracking-wide uppercase">
-                  {[
-                    "Our Editors", "Editor Profile", "Editor Speak", 
-                    "Subject Area", "Therapeutic Expertise", "Global Partners and Membership"
-                  ].map((item, idx) => (
-                    <div key={idx} className="flex items-center justify-between p-4 bg-white hover:bg-gray-50 cursor-pointer transition-colors group">
-                      <div className="flex items-center gap-3">
-                        <ChevronRight className="h-4 w-4 text-white bg-black rounded-full p-0.5" />
-                        <span>{item} &gt;&gt;</span>
-                      </div>
-                    </div>
-                  ))}
+                  {NAV_ITEMS.map((item, idx) => {
+                    const isActive = pathname === item.href;
+
+                    return (
+                      <Link
+                        key={idx}
+                        href={item.href}
+                        className={`flex items-center justify-between p-4 transition-colors group ${
+                          isActive ? "bg-gray-100 text-[#1b8c6e]" : "bg-white hover:bg-gray-50"
+                        }`}
+                      >
+                        <div className="flex items-center gap-3">
+                          <ChevronRight className="h-4 w-4 text-white bg-black rounded-full p-0.5 group-hover:scale-110 transition-transform" />
+                          <span>{item.label} &gt;&gt;</span>
+                        </div>
+                      </Link>
+                    );
+                  })}
                 </nav>
               </div>
 
