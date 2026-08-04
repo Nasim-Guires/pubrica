@@ -791,7 +791,7 @@ export const NAV_LINKS = [
   },
 
   {
-    href: "/about",
+    href: "/about-us",
     label: "About Us",
     dropdown: [
       {

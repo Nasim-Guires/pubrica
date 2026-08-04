@@ -1,0 +1,337 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import {
+    Cpu,
+    Database,
+    Network,
+    Binary,
+    Share2,
+    Workflow,
+    Sparkles,
+    Calculator,
+    Layers,
+    Search,
+    FileText,
+    HelpCircle,
+    PenTool,
+    Image as ImageIcon,
+    BookOpen,
+    Layout,
+    BarChart2,
+    ChevronUp,
+    ChevronDown,
+} from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "Algorithm Research & Publication | Subject Matter Experts | Pubrica",
+    description:
+        "Specialized expertise in algorithm research, development, and publication support for scientists and researchers.",
+};
+
+export default function AlgorithmSMEPage() {
+    // 1. Core Areas Data (Expanded text to showcase full scrolling)
+    const coreAreas = [
+        {
+            title: "Algorithm Design & Analysis",
+            highlight: "Algorithm Design &",
+            desc: "We create efficient algorithms (computational procedures) to solve complicated computer-based problems through the development and evaluation phases.",
+            icon: Cpu,
+        },
+        {
+            title: "Data Structure & Optimisation",
+            highlight: "Data Structure &",
+            desc: "For algorithms to work efficiently, we must create efficient methods for retrieving and storing information/data.",
+            icon: Database,
+        },
+        {
+            title: "Computational Complexity",
+            highlight: "Computational",
+            desc: "To determine how efficient algorithms will work, we analyse both time and space complexity.",
+            icon: Binary,
+        },
+        {
+            title: "Machine Learning Algorithms",
+            highlight: "Machine Learning",
+            desc: "For developing predictive models and/or intelligent agents, we develop and implement machine learning algorithms.",
+            icon: Sparkles,
+        },
+        {
+            title: "Network Graph Algorithms",
+            highlight: "Network Graph",
+            desc: "Algorithms that can solve network-related problems (i.e., routing, connectivity and shortest-path routing-related problems) using graphs.",
+            icon: Share2,
+        },
+        {
+            title: "Parallel & Distributed Algorithms",
+            highlight: "Parallel & Distributed",
+            desc: "Algorithms designed specifically to run on parallel and/or distributed high-performance computing systems.",
+            icon: Workflow,
+        },
+        {
+            title: "Heuristic and Metaheuristic Algorithms",
+            highlight: "Heuristic and Metaheuristic",
+            desc: "For when no definitive solution can be found to a complicated optimisation problem, we use heuristic/approximate methods to provide the best possible solutions.",
+            icon: Layers,
+        },
+        {
+            title: "Numerical Algorithm",
+            highlight: "Numerical",
+            desc: "We develop algorithms and methods for resolving mathematical issues such as equations, simulations, and optimizations of numerical problems.",
+            icon: Calculator,
+        },
+        {
+            title: "Big Data Algorithms",
+            highlight: "Big Data",
+            desc: "We create efficient algorithms for processing and analysing large volumes of data sets.",
+            icon: Network,
+        },
+    ];
+
+    // 2. Expertise Cards Data
+    const expertiseCards = [
+        {
+            title: "Research Services",
+            desc: "Expert guidance on project planning, execution, and data analysis.",
+            icon: Search,
+            imageUrl:
+                "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800",
+        },
+        {
+            title: "Editing & Proofreading",
+            desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
+            icon: FileText,
+            imageUrl:
+                "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=800",
+        },
+        {
+            title: "Publication Support",
+            desc: "Complete support for publishing in high-impact journals, translating concepts into incisive reports",
+            icon: HelpCircle,
+            imageUrl:
+                "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800",
+        },
+        {
+            title: "Scientific Writing",
+            desc: "Crafting clear, precise, and publication-ready research manuscripts.",
+            icon: PenTool,
+            imageUrl:
+                "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
+        },
+        {
+            title: "Artwork Editing",
+            desc: "Professional visuals for your figures, tables, and graphical abstracts.",
+            icon: ImageIcon,
+            imageUrl:
+                "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=800",
+        },
+        {
+            title: "Journal Formatting",
+            desc: "Tailored manuscript formatting to meet specific journal guidelines.",
+            icon: Layout,
+            imageUrl:
+                "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
+        },
+        {
+            title: "Graphical Abstract",
+            desc: "Engaging summaries of your research in a single, informative graphic.",
+            icon: BarChart2,
+            imageUrl:
+                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+        },
+        {
+            title: "Literature Review and Gap Analysis",
+            desc: "Identifying research gaps and providing comprehensive literature reviews.",
+            icon: BookOpen,
+            imageUrl:
+                "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80&w=800",
+        },
+    ];
+
+    return (
+        <div className="min-h-screen bg-[#fcfcfc] text-gray-800 font-sans">
+            {/* Custom inline styles for cross-browser thin scrollbars */}
+            <style>{`
+        .card-scrollbar::-webkit-scrollbar {
+          width: 3px;
+        }
+        .card-scrollbar::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        .card-scrollbar::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        .card-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #1e2e2b;
+        }
+      `}</style>
+
+            {/* HERO BANNER SECTION */}
+            <header className="w-full bg-[#1e2e2b] text-white py-12 px-4 text-center">
+                <div className="max-w-4xl mx-auto border border-gray-500/50 py-8 px-6 bg-[#1a2825]/40 backdrop-blur-sm rounded-sm">
+                    <h1 className="text-3xl md:text-4xl font-bold tracking-wide mb-3">
+                        Algorithm
+                    </h1>
+                    <p className="text-xs md:text-sm text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                        The discipline of Algorithm combines certain theoretical aspects of
+                        Chemistry, Biology and Physics to allow for the ability to have
+                        greater control over how molecules behave in various types of
+                        technology.
+                    </p>
+                </div>
+            </header>
+
+            {/* MAIN CONTAINER */}
+            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+                {/* INTRO SECTION */}
+                <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div className="lg:col-span-7 space-y-4">
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#1e2e2b] leading-tight">
+                            Transforming Complex Problems into Efficient Solutions with
+                            Advanced Algorithm
+                        </h2>
+
+                        <div className="space-y-3 text-xs md:text-sm text-gray-600 leading-relaxed">
+                            <p>
+                                The algorithms area of research is undergoing rapid change,
+                                owing to the rise in demand for efficient computing,
+                                data-oriented business decision-making, and scalable software
+                                systems.
+                            </p>
+                            <p>
+                                Each of our services will contribute to the improved quality,
+                                accuracy and impact of research-based products throughout the
+                                full breadth of algorithms research.
+                            </p>
+                        </div>
+
+                        <div className="pt-2">
+                            <Link
+                                href="#quote"
+                                className="inline-block bg-[#b81c1c] hover:bg-[#a01818] text-white text-xs font-semibold px-6 py-2.5 rounded-full shadow-sm transition-colors duration-150"
+                            >
+                                Get a Free Quote
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className="lg:col-span-5 flex justify-center">
+                        <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white">
+                            <Image
+                                src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800"
+                                alt="Algorithm Research Visualization"
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                {/* CORE AREAS SECTION WITH ACTIVE INTERNAL SCROLLING */}
+                <section className="space-y-8">
+                    <div className="text-center space-y-2">
+                        <h2 className="text-2xl font-bold text-[#1e2e2b]">
+                            Our Core Areas Of Algorithm
+                        </h2>
+                        <p className="text-xs md:text-sm text-gray-600 max-w-3xl mx-auto">
+                            Our company's focus is to utilise our knowledge to drive
+                            innovation in three fundamental categories of algorithms:
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {coreAreas.map((item, index) => {
+                            const Icon = item.icon;
+                            return (
+                                <div
+                                    key={index}
+                                    className="bg-white border border-gray-200/90 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all flex justify-between gap-3 h-48 relative"
+                                >
+                                    {/* Left Column: Title & Independently Scrollable Box */}
+                                    <div className="flex-1 flex flex-col min-w-0">
+                                        <h3 className="text-xs font-bold text-gray-900 leading-snug shrink-0 mb-2">
+                                            <span className="text-[#b81c1c]">{item.highlight} </span>
+                                            {item.title.replace(item.highlight, "").trim()}
+                                        </h3>
+
+                                        {/* Scrollable text container */}
+                                        <div className="flex-1 overflow-y-auto card-scrollbar pr-2 text-[11px] text-gray-500 leading-relaxed max-h-28">
+                                            <p>{item.desc}</p>
+                                        </div>
+                                    </div>
+
+                                    {/* Right Column: Icon & Vertical Arrow / Bar Visual Indicator */}
+                                    <div className="flex flex-col items-center justify-between flex-shrink-0 w-8 border-l border-gray-100 pl-2 pointer-events-none">
+                                        <Icon className="w-5 h-5 text-gray-700 shrink-0" />
+
+                                        <div className="flex flex-col items-center justify-between h-24 my-1">
+                                            <ChevronUp className="w-3 h-3 text-gray-400" />
+                                            <div className="w-1 flex-1 my-1 bg-gray-200 rounded-full relative overflow-hidden">
+                                                <div className="absolute top-0 w-full h-1/2 bg-gray-800 rounded-full" />
+                                            </div>
+                                            <ChevronDown className="w-3 h-3 text-gray-400" />
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </section>
+
+                {/* EXPERTISE GRID WITH HOVER OVERLAY */}
+                <section className="space-y-8">
+                    <div className="space-y-2">
+                        <h2 className="text-2xl font-bold text-[#1e2e2b]">
+                            Our Expertise in Algorithm Research and Publication
+                        </h2>
+                        <p className="text-xs md:text-sm text-gray-600">
+                            At Pubrica, we offer specialised expertise in algorithm research
+                            and publication, supporting scientists, researchers, and industry
+                            professionals in advancing their work. Our services include:
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {expertiseCards.map((card, idx) => {
+                            const CardIcon = card.icon;
+                            return (
+                                <div
+                                    key={idx}
+                                    className="group relative bg-white border border-gray-300 rounded-none overflow-hidden shadow-sm h-64 cursor-pointer"
+                                >
+                                    {/* Background Image */}
+                                    <div className="relative h-40 w-full bg-gray-100">
+                                        <Image
+                                            src={card.imageUrl}
+                                            alt={card.title}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+
+                                    {/* Center Circle Icon */}
+                                    <div className="absolute top-[8.5rem] left-1/2 -translate-x-1/2 z-20 bg-white p-2.5 rounded-full border border-gray-200 shadow-sm transition-transform duration-300 group-hover:scale-105">
+                                        <CardIcon className="w-5 h-5 text-[#12433e]" />
+                                    </div>
+
+                                    {/* Sliding White Panel Overlay */}
+                                    <div className="absolute inset-x-0 bottom-0 top-36 z-10 bg-white pt-7 pb-3 px-3 flex flex-col items-center justify-start text-center transition-all duration-300 ease-in-out group-hover:top-0 group-hover:pt-20 group-hover:justify-center">
+                                        <h3 className="text-xs font-bold text-gray-900 group-hover:text-white group-hover:bg-[#12433e] group-hover:px-4 group-hover:py-1.5 group-hover:rounded-sm transition-all duration-300">
+                                            {card.title}
+                                        </h3>
+                                        <p className="text-[11px] text-gray-500 mt-2 leading-tight opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]">
+                                            {card.desc}
+                                        </p>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </section>
+            </main>
+        </div>
+    );
+}

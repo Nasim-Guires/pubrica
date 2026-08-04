@@ -1,13 +1,19 @@
-
 "use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
 
-export interface NavLinkItem {
+export interface NavSubItem {
   id: string;
   label: string;
   href: string;
+}
+
+export interface NavLinkItem {
+  id: string;
+  label: string;
+  href?: string;
+  subItems?: NavSubItem[];
 }
 
 export interface SocietyLogo {
@@ -16,16 +22,59 @@ export interface SocietyLogo {
 }
 
 export default function OurEditorsPage() {
-  const [activeSidebar, setActiveSidebar] = useState("experts");
+  const [activeSidebar, setActiveSidebar] = useState("our-editors");
+  // Manage open accordions (MEET THE EXPERTS & SUBJECT AREA open by default)
+  const [openAccordions, setOpenAccordions] = useState<string[]>([
+    "experts",
+    "subject",
+  ]);
 
   const sidebarLinks: NavLinkItem[] = [
-    { id: "experts", label: "MEET THE EXPERTS", href: "/about-us/our-editors" },
-    { id: "subject", label: "SUBJECT AREA", href: "/about-us/subject-area" },
-    { id: "therapeutic", label: "THERAPEUTIC EXPERTISE", href: "/about-us/therapeutic-expertise" },
-    { id: "membership", label: "GLOBAL PARTNERS AND MEMBERSHIP", href: "/about-us/global-partners" },
-    { id: "contact", label: "CONTACT US", href: "/contact" },
-    { id: "careers", label: "CAREERS", href: "/careers" },
+    {
+      id: "experts",
+      label: "MEET THE EXPERTS",
+      subItems: [
+        { id: "our-editors", label: "OUR EDITORS", href: "/about-us/our-editors" },
+        { id: "editor-profile", label: "EDITOR PROFILE", href: "/scientific-editor-profile" },
+        { id: "editor-speak", label: "EDITOR SPEAK", href: "/editor-speak" },
+      ],
+    },
+    {
+      id: "subject",
+      label: "SUBJECT AREA",
+      subItems: [
+        { id: "medicine", label: "MEDICINE", href: "/about-us/medicine" },
+        { id: "life-science", label: "LIFE SCIENCE", href: "/about-us/life-sciences" },
+        { id: "physical-sciences", label: "PHYSICAL SCIENCES AND ENGINEERING", href: "/about-us/physical-sciences-engineering" },
+      ],
+    },
+    {
+      id: "therapeutic",
+      label: "THERAPEUTIC EXPERTISE",
+      href: "/therapeutic-expertise",
+    },
+    {
+      id: "membership",
+      label: "GLOBAL PARTNERS AND MEMBERSHIP",
+      href: "/strategic-partnerships-memberships",
+    },
+    {
+      id: "contact",
+      label: "CONTACT US",
+      href: "/contact",
+    },
+    {
+      id: "careers",
+      label: "CAREERS",
+      href: "/careers",
+    },
   ];
+
+  const toggleAccordion = (id: string) => {
+    setOpenAccordions((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
+  };
 
   // Publisher Logos
   const publisherLogos: SocietyLogo[] = [
@@ -79,21 +128,65 @@ export default function OurEditorsPage() {
                 </h2>
               </div>
 
-              <nav className="space-y-1.5 pt-2">
+              <nav className="space-y-1 pt-2">
                 {sidebarLinks.map((item) => {
-                  const isActive = activeSidebar === item.id;
+                  const hasSubItems = item.subItems && item.subItems.length > 0;
+                  const isOpen = openAccordions.includes(item.id);
+
+                  if (hasSubItems) {
+                    return (
+                      <div key={item.id} className="space-y-1">
+                        {/* Parent Accordion Button */}
+                        <button
+                          type="button"
+                          onClick={() => toggleAccordion(item.id)}
+                          className="w-full flex items-center gap-2.5 text-xs font-bold p-2 rounded transition-colors text-left text-slate-800 hover:bg-slate-50"
+                        >
+                          <span
+                            className={`w-5 h-5 flex items-center justify-center text-xs font-bold text-white transition-colors ${
+                              isOpen ? "bg-amber-500" : "bg-slate-500"
+                            }`}
+                          >
+                            {isOpen ? "−" : "+"}
+                          </span>
+                          <span className="leading-tight">{item.label}</span>
+                        </button>
+
+                        {/* Nested Sub-items */}
+                        {isOpen && (
+                          <div className="pl-8 space-y-1.5 py-1">
+                            {item.subItems?.map((sub) => {
+                              const isSubActive = activeSidebar === sub.id;
+                              return (
+                                <Link
+                                  key={sub.id}
+                                  href={sub.href}
+                                  onClick={() => setActiveSidebar(sub.id)}
+                                  className={`block text-[11px] font-bold leading-snug transition-colors ${
+                                    isSubActive
+                                      ? "text-blue-600 underline font-extrabold"
+                                      : "text-blue-600 hover:underline"
+                                  }`}
+                                >
+                                  • {sub.label}
+                                </Link>
+                              );
+                            })}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  }
+
+                  {/* Standard Direct Nav Links */}
                   return (
                     <Link
                       key={item.id}
-                      href={item.href}
+                      href={item.href || "#"}
                       onClick={() => setActiveSidebar(item.id)}
-                      className={`flex items-center gap-2 text-xs font-bold p-2.5 rounded-lg transition-colors group ${
-                        isActive
-                          ? "bg-emerald-50 text-emerald-900 border-l-4 border-[#1b8c6e]"
-                          : "text-slate-700 hover:text-emerald-800 hover:bg-emerald-50/70"
-                      }`}
+                      className="flex items-center gap-2.5 text-xs font-bold p-2 rounded transition-colors text-slate-800 hover:bg-slate-50"
                     >
-                      <span className="w-5 h-5 bg-slate-200 group-hover:bg-emerald-700 group-hover:text-white text-slate-600 rounded flex items-center justify-center text-[10px] font-bold transition-colors">
+                      <span className="w-5 h-5 bg-slate-500 text-white flex items-center justify-center text-xs font-bold">
                         +
                       </span>
                       <span className="leading-tight">{item.label}</span>
