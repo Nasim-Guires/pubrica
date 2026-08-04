@@ -786,7 +786,7 @@ export const NAV_LINKS = [
   },
 
   {
-    href: "/subjects",
+    href: "/subject-matter-experts",
     label: "Subjects",
   },
 
