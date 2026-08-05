@@ -27,11 +27,11 @@ export default function SubjectMatterExpertsPage() {
       { title: "Big Data & Hadoop", slug: "big-data-hadoop" },
       { title: "Biomolecular engineering", slug: "biomolecular-engineering" },
       { title: "Biomedical Engineering", slug: "biomedical-engineering" },
-      { title: "Biomaterials", slug: "biomaterials" },
+      { title: "Biomaterials", slug: "material-science" },
       { title: "Biophysics", slug: "biophysics" },
       { title: "Biomedical Imaging", slug: "biomedical-imaging" },
       { title: "Biochemistry", slug: "biochemistry" },
-      { title: "Bioengineering", slug: "bioengineering" },
+      { title: "Bioengineering", slug: "" },
       { title: "Biopolymers", slug: "biopolymers" },
       { title: "Biocatalysts", slug: "biocatalysts" },
       { title: "Biocomputing", slug: "biocomputing" },
@@ -148,19 +148,22 @@ export default function SubjectMatterExpertsPage() {
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {columns.map((column, index) => (
-              <div key={index} className="space-y-3">
+            {columns.map((column, columnIndex) => (
+              <div key={columnIndex} className="space-y-3">
                 {column.map((subject) => (
                   <Link
-                    key={subject.slug}
-                    href={`/subject-matter-experts/${subject.slug}`}
+                    key={subject.title}
+                    href={
+                      subject.title === "Bioengineering"
+                        ? "/subject-matter-experts/biomedical-engineering"
+                        : `/subject-matter-experts/${subject.slug}`
+                    }
                     className="group flex items-center gap-2 text-sm text-gray-700 hover:text-[#1a4a42] transition-colors duration-150 py-1"
                   >
                     <ArrowRightCircle
                       size={16}
                       className="text-[#1a4a42] flex-shrink-0 group-hover:translate-x-0.5 transition-transform"
                     />
-
                     <span className="group-hover:underline underline-offset-2">
                       {subject.title}
                     </span>

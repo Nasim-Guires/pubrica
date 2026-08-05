@@ -7,14 +7,17 @@ export default function BiomedicalEngineeringHeroComponent() {
   return (
     <div className="font-sans text-gray-800 bg-white py-12 px-4 space-y-12">
       <div className="max-w-5xl mx-auto space-y-12">
-        
+
         {/* Top Dark Banner */}
-        <div className="bg-[#0d3630] rounded-lg p-8 md:p-10 text-center text-white space-y-3 shadow-md">
+        <div className="w-full bg-[#0d3630] rounded-lg px-8 py-10 text-center text-white shadow-md">
           <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight">
             Biomedical Engineering
           </h1>
-          <p className="text-xs md:text-sm text-gray-200 max-w-2xl mx-auto leading-relaxed">
-            Comprehensive research, publication, and editing support for biomedical engineers, clinicians, and researchers, advancing innovations that integrate engineering precision with healthcare solutions.
+
+          <p className="mt-3 text-sm text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            Comprehensive research, publication, and editing support for biomedical engineers,
+            clinicians, and researchers, advancing innovations that integrate engineering
+            precision with healthcare solutions.
           </p>
         </div>
 
@@ -27,7 +30,7 @@ export default function BiomedicalEngineeringHeroComponent() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
+
             {/* Text Content */}
             <div className="lg:col-span-7 space-y-4 text-xs md:text-sm text-gray-600 leading-relaxed">
               <p>
