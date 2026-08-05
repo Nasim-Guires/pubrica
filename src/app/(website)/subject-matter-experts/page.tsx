@@ -39,7 +39,7 @@ export default function SubjectMatterExpertsPage() {
     ],
 
     [
-      { title: "Biostatistical programming", slug: "biostatistical-programming" },
+      { title: "Biostatistical programming", slug: "internet-of-things" },
       { title: "Cloud Computing", slug: "cloud-computing" },
       { title: "Cosmeceuticals", slug: "cosmeceuticals" },
       { title: "Ceramic engineering", slug: "ceramic-engineering" },
