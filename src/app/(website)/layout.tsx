@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import Header from "@/components/layout/Header";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Fallback local font classes to avoid network hangs on Google Fonts API
 const poppins = { variable: "" };
@@ -42,7 +43,9 @@ export default function RootLayout({
       >
         <Header />
         <Navbar />
-        <main className="flex-grow flex flex-col">{children}</main>
+        <main className="flex-grow flex flex-col">{children}
+           <SpeedInsights />
+        </main>
         <Footer />
       </body>
     </html>
