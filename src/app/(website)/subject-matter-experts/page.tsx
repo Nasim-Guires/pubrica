@@ -66,7 +66,7 @@ export default function SubjectMatterExpertsPage() {
       { title: "Gynecology", slug: "gynecology" },
       { title: "Glycobiology", slug: "glycobiology" },
       { title: "Genomics", slug: "genomics" },
-      { title: "Internet of Things (IoT)", slug: "internet-of-things-iot" },
+      { title: "Internet of Things (IoT)", slug: "internet-of-things" },
       { title: "Life Sciences", slug: "life-sciences" },
       { title: "Machine Learning", slug: "machine-learning" },
       { title: "Medical Animation", slug: "medical-animation" },
