@@ -1,3 +1,5 @@
+import { Testimonial } from "@/components/common/WhatClientsSays";
+
 export const peptideTestimonials: Testimonial[] = [
   {
     id: "peptide-1",
