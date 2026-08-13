@@ -572,7 +572,7 @@ export const NAV_LINKS = [
             label: "Physician Training",
           },
           {
-            href: "/services/physician-writing-services/clinical-literature-review",
+            href: "/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine",
             label: "Clinical Literature Review",
           },
           {
