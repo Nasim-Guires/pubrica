@@ -544,8 +544,8 @@ export const NAV_LINKS = [
         label: "Physician Writing",
         children: [
           {
-            href: "/services/physician-writing-services/case-report-writing",
-            label: "Case Report Writing",
+            href: "/services/physician-writing-services/case-report",
+            label: "Case Report",
           },
           {
             href: "/services/physician-writing-services/patient-education-content",

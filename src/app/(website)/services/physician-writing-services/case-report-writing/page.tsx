@@ -1,35 +1,27 @@
-import CommonTestimonial from "@/components/common/CommonTestimonials";
-import CommonFAQ from "@/components/common/FAQ";
-import CaseReportDetails from "@/components/services/physician-writing-services/case-report-writing/CaseReportDetails";
-import CaseReportPackagesAndSamples from "@/components/services/physician-writing-services/case-report-writing/CaseReportPackagesAndSamples";
-import CaseReportServicesAndCompliance from "@/components/services/physician-writing-services/case-report-writing/CaseReportServicesAndCompliance";
-import CaseReportWorkflowAndDisciplines from "@/components/services/physician-writing-services/case-report-writing/CaseReportWorkflowAndDisciplines";
-import CaseReportWritingService from "@/components/services/physician-writing-services/case-report-writing/CaseReportWritingService";
-import {
-  caseReportFaqs,
-  caseReportWritingTestimonials,
-} from "@/lib/services/data/research-services/caseReportWritingTestimonials";
-import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
-
-import React from "react";
+import { EditorialWorkflowSection } from '@/components/common/EditorialWorkflowSection'
+import CommonFAQ from '@/components/common/FAQ'
+import CaseReportSectionsPage from '@/components/services/physician-writing-services/case-report-writing/CaseReportSectionsPage'
+import CaseReportWritingPage from '@/components/services/physician-writing-services/case-report-writing/CaseReportWritingPage'
+import { caseReportFAQData, editorialWorkflowData } from '@/lib/services/case-report-writing'
+import React from 'react'
 
 const page = () => {
-  return (
-    <>
-      <CaseReportWritingService />
-      <CaseReportDetails />
-      <CaseReportWorkflowAndDisciplines />
-      <CaseReportServicesAndCompliance />
-      <CaseReportPackagesAndSamples />
-      <CommonTestimonial
-        title="Testimonials"
-        description="Learn how Pubrica's case report writing service has enabled clinicians to publish rare and novel clinical observations in leading journals with structured, CARE-compliant manuscripts. Here is what our clients say:"
-        testimonials={caseReportWritingTestimonials}
-      />
-      <CommonFAQ title="Frequently Asked Questions" faqs={caseReportFaqs} />
-      <InsightsSection/>
-    </>
-  );
-};
+    return (
+        <>
+            <CaseReportWritingPage />
+            <EditorialWorkflowSection
+                heading={editorialWorkflowData.heading}
+                subheading={editorialWorkflowData.subheading}
+                description={editorialWorkflowData.description}
+                steps={editorialWorkflowData.steps}
+            />
+            <CaseReportSectionsPage />
+            <CommonFAQ
+                title={caseReportFAQData.title}
+                faqs={caseReportFAQData.faqs}
+            />
+        </>
+    )
+}
 
-export default page;
+export default page
