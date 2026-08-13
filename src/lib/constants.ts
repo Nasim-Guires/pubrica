@@ -448,7 +448,7 @@ export const NAV_LINKS = [
             label: "Response To Reviewers",
           },
           {
-            href: "/services/publication-support/poster-preparation",
+            href: "/services/publication-support/Poster-Preparation",
             label: "Poster Creation & Design",
           },
           {
@@ -458,6 +458,10 @@ export const NAV_LINKS = [
           {
             href: "/services/publication-support/art-work-preparation",
             label: "Artwork Editing Service",
+          },
+          {
+            href: "/services/publication-support/peer-review-pre-submission",
+            label: "Pre-Submission Peer Review",
           },
           {
             href: "/services/publication-support/plagiarism-services",
@@ -489,6 +493,10 @@ export const NAV_LINKS = [
           {
             href: "/services/editing-and-translation/post-editing",
             label: "Post Editing",
+          },
+          {
+            href: "/services/editing-and-translation/scientific-grant-review",
+            label: "Proofreading",
           },
           {
             href: "/services/editing-and-translation/thesis-editing",
