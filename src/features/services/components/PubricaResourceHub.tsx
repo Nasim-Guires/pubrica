@@ -12,8 +12,10 @@ import {
   Download,
   Quote,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function PubricaResourceHub() {
+
   // --- TESTIMONIALS DATA ---
   const testimonials = [
     {
@@ -24,6 +26,8 @@ export default function PubricaResourceHub() {
       role: "Postdoctoral Fellow, Pharmacology",
       journalName: "CLINICAL PROBLEM-SOLVING",
       journalSub: "The New England Journal of Medicine",
+      image:
+        "/images/publication-support/scropt-2.jpg",
     },
     {
       id: 2,
@@ -33,11 +37,29 @@ export default function PubricaResourceHub() {
       role: "Research Scientist, Public Health",
       journalName: "CLINICAL PRACTICE",
       journalSub: "The New England Journal of Medicine",
+      image:
+        "/images/publication-support/book-01.jpg",
+    },
+    {
+      id: 3,
+      quote:
+        "Pubrica helped me shortlist the most suitable journals aligned with my manuscript's scope. Their detailed recommendations saved me weeks of research.",
+      author: "DR. ANANYA RAO",
+      role: "Assistant Professor, Life Sciences",
+      journalName: "JOURNAL SELECTION",
+      journalSub: "Pubrica Publication Support",
+      image:
+        "/images/publication-support/book-01.jpg",
     },
   ];
 
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0);
+  const [testimonialSlide, setTestimonialSlide] = useState(0);
 
+  const testimonialSlides = [
+    testimonials.slice(0, 2),
+    testimonials.slice(2, 3),
+  ];
   // --- FAQ DATA ---
   const initialFaqs = [
     {
@@ -45,14 +67,14 @@ export default function PubricaResourceHub() {
       question:
         "How can I increase the chances of getting my research paper published in a high-impact journal?",
       answer:
-        "Improve your chances of getting published by selecting an appropriate journal, complying with authors' requirements, having robust methodologies, offering clear results, and revising your paper through thorough editing.",
+        "Improve your chances of getting published by selecting an appropriate journal, complying with authors’ requirements, having robust methodologies, offering clear results, and revising your paper through thorough editing.",
       isOpen: true,
     },
     {
       id: 2,
       question: "Why do research papers get rejected by journals?",
       answer:
-        "Common rejection reasons include a mismatch with the journal's scope, flawed methodology, weak discussion, plagiarism, poor language quality, or failure to properly follow the submission guidelines.",
+        "Research papers face high chances of rejection if there is poor study design, a lack of originality, poor methodology, ambiguity, mismatch with journal scope, or failure to comply with author guidelines.",
       isOpen: false,
     },
     {
@@ -60,8 +82,16 @@ export default function PubricaResourceHub() {
       question:
         "How can I avoid submitting my manuscript to predatory journals?",
       answer:
-        "Check if the journal is indexed in reputable databases like Scopus or Web of Science, verify its editorial board, look up its publisher on Beall's List, and ensure they adhere to COPE guidelines.",
+        "To avoid predatory journals, researchers can use tools such as indexing databases (Scopus, Web of Science, etc.), evaluating the publisher’s legitimacy, reviewing editorial boards, peer review processes, and consulting reputable sources or experts.",
       isOpen: false,
+    },
+    {
+      id: 4,
+      question:
+        "How long does the academic journal publication process take?",
+      answer:
+        "The process of publishing a research paper in academic journals takes approximately 3 to 12 months, depending upon various factors such as peer review, revisions, etc.",
+      isOpen: true,
     },
     {
       id: 5,
@@ -76,22 +106,30 @@ export default function PubricaResourceHub() {
       question:
         "What are the benefits of using professional publication support services?",
       answer:
-        "Professional support bridges gap boundaries in language editing, guarantees formatting compliance with journal rules, optimizes statistical layouts, and assists in drafting responses to demanding peer reviews.",
+        "Professional publication support services help improve the quality, clarity, and structure of manuscripts. It also helps with journal guideline adherence and submission readiness",
       isOpen: false,
     },
     {
       id: 7,
       question:
-        "What are the key factors journals consider before accepting papers?",
+        ". What are the key factors journals consider before accepting a manuscript?",
       answer:
-        "Journals look closely at novelty, scientific rigor, logical structures, clear societal or technical impact, ethical clearance, and the overall clarity of the presentation.",
+        "The journal checks the originality of the research, its relevance to the journal’s scope, methodology, clarity of the writing, significance of the research findings, ethical issues, and adherence to journal submission guidelines.",
+      isOpen: false,
+    },
+    {
+      id: 8,
+      question:
+        ".What are the best strategies to publish research in indexed journals?",
+      answer:
+        "Publish in indexed journals by selecting the right journal for your work, following author guidelines, using robust methodology, providing clear results, writing well, and revising your work based on feedback from peers.",
       isOpen: false,
     },
   ];
 
   const [faqs, setFaqs] = useState(initialFaqs);
 
-  const toggleFaq = (id:number) => {
+  const toggleFaq = (id: number) => {
     setFaqs(
       faqs.map((faq) =>
         faq.id === id ? { ...faq, isOpen: !faq.isOpen } : faq,
@@ -110,7 +148,7 @@ export default function PubricaResourceHub() {
       snippet:
         "In brief A search word (or search query) has a simple definition. A search term is a single word or phrase used to retrieve relevant information.",
       image:
-        "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+        "/images/publication-support/Examples-of-Search-Terms-from-Published-Studies.webp",
     },
     {
       title: "How to Combine Search Terms for Research paper publication?",
@@ -118,7 +156,7 @@ export default function PubricaResourceHub() {
       snippet:
         "In brief Quick searches with only one search term sometimes provide many irrelevant results. Combining terms improves accuracy.",
       image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+        "/images/publication-support/How-to-Combine-Search-Terms-for-Research-paper-publication.webp",
     },
     {
       title: "How to Develop a search strategy for a systematic review",
@@ -126,28 +164,45 @@ export default function PubricaResourceHub() {
       snippet:
         "In brief A search strategy is a structured set of keywords used to search databases efficiently during systematic reviews.",
       image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
+        "/images/publication-support/How-to-Develop-a-search-strategy-for-a-systematic-review.webp",
     },
     {
-      title: "Structuring Your Abstract for High Impact",
+      title: "The Leading Journals Shaping Medical Understanding",
       category: "How to Article",
       snippet:
-        "Learn the structures that top-tier scientific journals look for to increase your indexing acceptance rates.",
+        "The Leading Journals Shaping Medical Understanding Home Blog High Impact Medical Journals Contact Us…",
       image:
-        "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+        "/images/publication-support/Journal-Shaping-Medical-Understanding-768x478.webp",
     },
     {
-      title: "New AI Integrity Guidelines from COPE",
+      title: "Examples of Search Terms from Published Studies",
       category: "News",
       snippet:
-        "An analytical look at how major publishers are planning to verify raw research integrity checks in late 2026.",
+        "In brief A search word (or search query) has a simple definition. A search term is a single word or phrase used to retrieve relevant information.",
       image:
-        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80",
+        "/images/publication-support/Examples-of-Search-Terms-from-Published-Studies.webp",
     },
+    {
+      title: "How to Combine Search Terms for Research paper publication?",
+      category: "News",
+      snippet:
+        "In brief Quick searches with only one search term sometimes provide many irrelevant results. Combining terms improves accuracy.",
+      image:
+        "/images/publication-support/How-to-Combine-Search-Terms-for-Research-paper-publication.webp",
+    },
+    {
+      title: "How to Develop a search strategy for a systematic review",
+      category: "News",
+      snippet:
+        "In brief A search strategy is a structured set of keywords used to search databases efficiently during systematic reviews.",
+      image:
+        "/images/publication-support/How-to-Develop-a-search-strategy-for-a-systematic-review.webp",
+    }, ,
   ];
 
   const filteredInsights = insights.filter(
-    (item) => item.category === selectedCategory,
+    (item): item is NonNullable<typeof item> =>
+      item !== undefined && item.category === selectedCategory,
   );
 
   return (
@@ -158,28 +213,17 @@ export default function PubricaResourceHub() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Left Cover Book Graphic */}
             <div className="md:col-span-4 flex justify-center">
-              <div className="relative group max-w-[240px] shadow-2xl transition-all duration-300 hover:scale-[1.02]">
-                <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-r from-black/20 to-transparent z-10" />
-                <div className="bg-[#1a3a3a] text-white p-5 rounded-r-md aspect-[3/4] flex flex-col justify-between relative overflow-hidden border-y border-r border-slate-700">
-                  <div className="text-[10px] uppercase tracking-widest text-[#10b981] font-semibold border-b border-[#10b981]/20 pb-1.5">
-                    Pubrica Academic Press
-                  </div>
-                  <div className="space-y-2 z-20 my-4">
-                    <h4 className="text-sm font-bold leading-snug">
-                      The Role of the Corresponding Author in Research
-                      Publication
-                    </h4>
-                    <div className="h-0.5 w-10 bg-[#10b981]" />
-                  </div>
-                  <div className="text-[9px] text-emerald-400 font-mono z-20">
-                    Volume 5 • Issue 12
-                  </div>
-                  {/* Styled Background Element to look like an open book outline */}
-                  <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-xl" />
-                </div>
+              <div className="relative group w-full max-w-[240px] shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden rounded-md">
+                <Image
+                  src="/images/publication-support/W-2-The-Role-of-the-Corresponding-Author-in-Research-Publication-1-723x1024.jpg"
+                  alt="The Role of the Corresponding Author in Research Publication"
+                  width={723}
+                  height={1024}
+                  className="w-full h-auto object-cover transition duration-700"
+                  priority
+                />
               </div>
             </div>
-
             {/* Right Download Information */}
             <div className="md:col-span-8 space-y-6">
               <div>
@@ -235,48 +279,77 @@ export default function PubricaResourceHub() {
 
             {/* Horizontal slider container */}
             <div className="relative">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {testimonials.map((test, index) => (
+              {/* Testimonial Slides */}
+
+              <div className="overflow-hidden">
+                {testimonialSlides.map((slide, slideIndex) => (
                   <div
-                    key={test.id}
-                    className="bg-[#0f443b] text-white rounded-xl p-6 sm:p-8 flex flex-col justify-between shadow-lg relative overflow-hidden transition-all duration-300 hover:shadow-xl"
+                    key={slideIndex}
+                    className={`grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-500 ${testimonialSlide === slideIndex
+                      ? "block"
+                      : "hidden"
+                      }`}
                   >
-                    <Quote className="absolute top-4 right-4 w-12 h-12 text-[#115e51] opacity-50" />
+                    {slide.map((test) => (
+                      <div
+                        key={test.id}
+                        className="bg-[#0f443b] text-white rounded-lg shadow-lg relative overflow-hidden transition-all duration-300 hover:shadow-xl"
+                      >
+                        <div className="flex min-h-[140px]">
+                          {/* Testimonial Content */}
+                          <div className="flex-1 p-5 sm:p-6 flex flex-col justify-between min-w-0">
+                            <div className="relative">
+                              <Quote className="absolute top-0 right-0 w-8 h-8 text-[#115e51] opacity-50" />
 
-                    <div className="space-y-4 z-10">
-                      <p className="text-slate-200 text-sm sm:text-base leading-relaxed italic">
-                        "{test.quote}"
-                      </p>
+                              <p className="text-slate-200 text-xs sm:text-sm leading-relaxed italic pr-6">
+                                "{test.quote}"
+                              </p>
+                            </div>
 
-                      <div className="border-t border-[#115e51] pt-4">
-                        <h4 className="font-bold tracking-wide text-[#10b981]">
-                          {test.author}
-                        </h4>
-                        <p className="text-xs text-slate-300">{test.role}</p>
-                      </div>
-                    </div>
+                            <div className="mt-4">
+                              <h4 className="font-bold tracking-wide text-[#10b981] text-xs sm:text-sm">
+                                {test.author}
+                              </h4>
 
-                    <div className="mt-6 flex items-center gap-3 bg-black/20 p-3 rounded-lg z-10">
-                      <div className="w-8 h-8 rounded bg-white/10 flex items-center justify-center font-bold text-xs shrink-0 text-emerald-400">
-                        NEJM
+                              <p className="text-[10px] sm:text-xs text-slate-300 italic mt-1">
+                                {test.role}
+                              </p>
+                            </div>
+                          </div>
+
+                          {/* Journal / Book Image */}
+                          <div className="w-[105px] sm:w-[120px] shrink-0 bg-white flex items-center justify-center p-2">
+                            <div className="w-[105px] sm:w-[120px] shrink-0 bg-white flex items-center justify-center p-2">
+                              <Image
+                                src={test.image}
+                                alt={test.author}
+                                width={120}
+                                height={150}
+                                className="w-full h-auto max-h-[125px] object-contain"
+                              />
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <p className="text-xs font-bold text-emerald-400 tracking-wider uppercase">
-                          {test.journalName}
-                        </p>
-                        <p className="text-[10px] text-slate-400">
-                          {test.journalSub}
-                        </p>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 ))}
               </div>
 
               {/* Slider Dots */}
-              <div className="flex justify-center gap-2 mt-6">
-                <span className="w-2.5 h-2.5 rounded bg-slate-300 cursor-pointer" />
-                <span className="w-2.5 h-2.5 rounded bg-emerald-600 cursor-pointer" />
+              <div className="flex justify-center items-center gap-2 mt-6">
+                {testimonialSlides.map((_, index) => (
+                  <button
+                    key={index}
+                    type="button"
+                    onClick={() => setTestimonialSlide(index)}
+                    aria-label={`Show testimonial slide ${index + 1}`}
+                    className={`transition-all duration-300 rounded-full ${testimonialSlide === index
+                      ? "w-2.5 h-2.5 bg-emerald-600"
+                      : "w-2.5 h-2.5 bg-slate-300"
+                      }`}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -370,11 +443,10 @@ export default function PubricaResourceHub() {
               <button
                 key={tab}
                 onClick={() => setSelectedCategory(tab)}
-                className={`flex-1 text-center py-2 px-4 rounded-full text-xs sm:text-sm font-bold tracking-wide transition-all duration-300 ${
-                  selectedCategory === tab
-                    ? "bg-[#10b981] text-white shadow-md scale-105"
-                    : "text-slate-300 hover:text-white"
-                }`}
+                className={`flex-1 text-center py-2 px-4 rounded-full text-xs sm:text-sm font-bold tracking-wide transition-all duration-300 ${selectedCategory === tab
+                  ? "bg-[#10b981] text-white shadow-md scale-105"
+                  : "text-slate-300 hover:text-white"
+                  }`}
               >
                 {tab}
               </button>

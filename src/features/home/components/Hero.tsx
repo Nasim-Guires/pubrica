@@ -141,23 +141,13 @@ export default function HomeHeroWithAbout() {
               {/* Back Main Image */}
               <div className="absolute left-0 top-0 w-[70%] h-[80%] rounded-2xl overflow-hidden shadow-md">
                 <Image
-                  src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=100&q=80"// Replace with your standard path
+                  src="/images/Home/pubrica-about-us-section-research-services.webp"// Replace with your standard path
                   alt="Researchers with Microscope"
                   fill
                   className="object-cover"
                 />
               </div>
               {/* Front Foreground Image */}
-              <div className="absolute right-0 bottom-0 w-[65%] h-[65%] rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-10">
-                <Image
-                  src="/images/image-1.png"
-                  alt="Pubrica Logo"
-                  width={180}
-                  height={52}
-                  className="object-contain w-full"
-                  priority
-                />
-              </div>
             </div>
 
             {/* Right Column: Text Content matching image layout */}

@@ -139,33 +139,45 @@ export const mainServicesList = [
 export const audienceList = [
   {
     title: "Researchers & Academics",
+    description:
+      "Ensure your manuscripts, journal articles, dissertations, and research papers meet international publication standards with flawless language, formatting, and journal compliance.",
     bgImage:
-      "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=600",
+      "/images/editing-and-translation/Researchers-Academics-2.png",
   },
   {
     title: "Healthcare & Life Sciences Professionals",
+    description:
+      "Precision medical and scientific editing to ensure clear communication, compliance, and accuracy across healthcare documents.",
     bgImage:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=600",
+      "/images/editing-and-translation/Healthcare-Life-Sciences-Professionals.png",
   },
   {
     title: "Businesses & Corporations",
+    description:
+      "Polished corporate communications, reports, and marketing materials tailored for global audiences and brand integrity.",
     bgImage:
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600",
+      "/images/editing-and-translation/Businesses-Corporations.png",
   },
   {
     title: "Publishers & Authors",
+    description:
+      "Comprehensive editorial support for book manuscripts, journals, and digital content from concept to publication.",
     bgImage:
-      "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?auto=format&fit=crop&q=80&w=600",
+      "/images/editing-and-translation/Publishers-Authors.png",
   },
   {
     title: "Educational Institutions & Students",
+    description:
+      "Enhance theses, dissertations, assignments, and learning resources for clarity, coherence, and professional presentation that meet academic standards.",
     bgImage:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=600",
+      "/images/editing-and-translation/Educational-Institutions-Students.png",
   },
   {
     title: "Government & Non-Profit Organizations",
+    description:
+      "Refined policy documents, reports, and grant proposals designed to effectively communicate mission-critical messaging.",
     bgImage:
-      "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=600",
+      "/images/editing-and-translation/Government-Non-Profit-Organizations.png",
   },
 ];
 

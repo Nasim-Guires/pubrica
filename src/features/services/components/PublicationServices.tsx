@@ -11,6 +11,7 @@ import {
   Globe,
 } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Image from "next/image";
 
 export default function PublicationServices() {
   const complianceFrameworks = [
@@ -169,20 +170,17 @@ export default function PublicationServices() {
             <div className="relative w-full max-w-md aspect-video rounded-xl overflow-hidden shadow-2xl group">
               <div className="absolute inset-0 bg-gradient-to-tr from-cyan-950/80 to-slate-900/40 z-10 flex flex-col justify-end p-6 text-white">
                 <div className="w-12 h-12 rounded-full bg-cyan-400/20 backdrop-blur-md flex items-center justify-center border border-cyan-300/40 mb-3 animate-pulse">
-                  <ShieldCheck className="w-6 h-6 text-cyan-300" />
                 </div>
-                <h4 className="font-bold text-lg">
-                  Verified Compliance Standard
-                </h4>
-                <p className="text-xs text-slate-200">
-                  Global scientific board certified process flow.
-                </p>
+  
               </div>
-              <img
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80"
-                alt="Scientists and data analysts collaborating over scientific compliance checklists"
-                className="w-full h-full object-cover transform group-hover:scale-105 transition duration-700"
-              />
+              <div className="relative w-full h-full overflow-hidden">
+                <Image
+                  src="/images/publication-support/Regulatory-frameworks-we-comply-With.jpg"
+                  alt="Scientists and data analysts collaborating over scientific compliance checklists"
+                  fill
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition duration-700"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -298,7 +296,7 @@ export default function PublicationServices() {
 
         {/* ================= GLOBAL CALL TO ACTION ================= */}
         <div className="text-center">
-         <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
           <p className="text-xs text-slate-400 mt-3">
             No obligation. Confidentiality agreements (NDAs) signed instantly
             prior to file uploads.

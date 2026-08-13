@@ -77,9 +77,9 @@ export default function Navbar() {
               <Link href="/" className="flex items-center">
                 <div className="w-[180px] h-[52px] relative flex items-center justify-center">
                   <Image
-                    src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=100&q=80"
+                    src="/images/logos/pubrica-logo.webp"
                     alt="Pubrica Logo"
-                    width={80}
+                    width={180}
                     height={52}
                     className="object-contain"
                     priority

@@ -5,28 +5,27 @@ import Container from "@/components/common/Container";
 export default function LatestNews() {
   const articles = [
     {
-      title: "What Is Publication Support and Why Is It Important for",
-      date: "June 15, 2026",
+      title: "From Protocol to Publication: Outsourced Research Support for Universities, Pharma",
+      date: "August 5, 2026",
       excerpt:
-        "What Is Publication Support and Why Is It Important for Researchers? No results See all results High-Impact Journals What Is...",
-      image: "/images/news/publication-support.jpg",
+        "From Protocol to Publication: Outsourced Research Support for Universities, Pharma & CROs No results See all results High-Impact Journals Understanding...",
+      image: "/images/Home/news-1.webp",
       href: "#news-1",
     },
     {
-      title:
-        "What Are the Common Challenges Researchers Face During the Journal",
-      date: "May 16, 2026",
+      title: "Struggling to Publish Your Research? Get the Right Support to",
+      date: "July 24, 2026",
       excerpt:
-        "What Are the Common Challenges Researchers Face During the Journal Submission Process? Home Academy Journal Submission What Are the Common...",
-      image: "/images/news/researcher-challenges.jpg",
+        "Struggling to Publish Your Research? Get the Right Support to Turn Findings into Impactful Publications No results See all results...",
+      image: "/images/Home/news-2.webp",
       href: "#news-2",
     },
     {
-      title: "How to Write a Research Paper for Journal Publication in",
-      date: "February 20, 2026",
+      title: "Cover Letter for Article Submission: Emerging Trends and Future Perspectives",
+      date: "July 20, 2026",
       excerpt:
-        "How to Write a Research Paper for Journal Publication in 2026 Home Academy Publication support How to Write a Research...",
-      image: "/images/news/writing-paper.jpg",
+        "Cover Letter for Article Submission: Emerging Trends and Future Perspectives in Healthcare and Patient Safety No results See all results...",
+      image: "/images/Home/news-3.webp",
       href: "#news-3",
     },
   ];
@@ -57,12 +56,12 @@ export default function LatestNews() {
               href={post.href}
               className="group flex flex-col bg-white border border-gray-200 shadow-sm overflow-hidden rounded-sm hover:shadow-md transition-all duration-300"
             >
-              {/* Image Container Aspect Box */}
-              <div className="relative w-full aspect-[16/10] overflow-hidden bg-gray-100 border-b border-gray-100">
+              {/* Image Container with object-contain to make sure the full image (including the PUBRICA watermark) is completely visible */}
+              <div className="relative w-full aspect-[16/10] overflow-hidden bg-gray-50 border-b border-gray-100 flex items-center justify-center p-2">
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                  className="w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                 />
               </div>
 

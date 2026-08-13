@@ -15,7 +15,7 @@ interface ServiceRejectionTableProps {
   service?: Service;
 }
 
-// Complete dataset extracted directly from your images (11 rows total)
+// Complete dataset extracted directly from the image (11 rows total)
 export const FULL_REJECTION_TABLE_DATA: RejectionTableRow[] = [
   {
     reasonBoldPrefix: "",
@@ -101,38 +101,36 @@ const WHO_WE_SERVE_CARDS = [
   {
     title: "PhD Scholars",
     image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=500&auto=format&fit=crop",
+      "/images/publication-support/PhD-Scholars.jpg",
   },
   {
     title: "Early Career Researchers",
     image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=500&auto=format&fit=crop",
+      "/images/publication-support/Early-Career-Researchers.jpg",
   },
   {
     title: "Medical Professionals and Clinicians",
     image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=500&auto=format&fit=crop",
+      "/images/publication-support/Medical-Professionals-and-Clinicians.jpg",
   },
   {
     title: "Academic Institutions and Universities",
     image:
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=500&auto=format&fit=crop",
+      "/images/publication-support/Academic-Institutions-and-Universities.jpg",
   },
   {
     title: "Medical and Clinical Researchers",
     image:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=500&auto=format&fit=crop",
+      "/images/publication-support/Medical-and-Clinical-Researchers.jpg",
   },
 ];
 
 export default function ServiceRejectionTable({
   service,
 }: ServiceRejectionTableProps) {
-  // Uses service.rejectionTable if passed, otherwise falls back to the full 11-row array
-  const tableData =
-    service?.rejectionTable && service.rejectionTable.length > 0
-      ? service.rejectionTable
-      : FULL_REJECTION_TABLE_DATA;
+  // Always use FULL_REJECTION_TABLE_DATA to ensure all 11 rows are rendered,
+  // ignoring any truncated or filtered `service.rejectionTable` prop data.
+  const tableData = FULL_REJECTION_TABLE_DATA;
 
   return (
     <div className="w-full max-w-5xl mx-auto py-12 px-4 sm:px-6 font-sans">

@@ -11,7 +11,7 @@ export const productDevelopmentWhoWeServe = {
         "Support for drug discovery, composition of matter analysis, biomarker identification, and scientific validation aligned with FDA, EMA, and ICMR requirements.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1200&q=80",
+        "/images/product-development/Pharmaceutical-Companies.png",
     },
     {
       title: "Nutraceutical & Dietary Supplement Companies",
@@ -19,7 +19,7 @@ export const productDevelopmentWhoWeServe = {
         "Discovery of bioactive ingredients, clinical literature review, ingredient sourcing, and compliance with FSSAI, FDA, and EFSA standards.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1577174881658-0f30ed549adc?auto=format&fit=crop&w=1200&q=80",
+        "/images/product-development/Nutraceutical-Dietary-Supplement-Companies.png",
     },
     {
       title: "Food & Functional Beverage Manufacturers",
@@ -27,7 +27,7 @@ export const productDevelopmentWhoWeServe = {
         "Support for functional ingredient research, efficacy data collection, and regulatory evidence for novel foods and health claims.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80",
+        "/images/product-development/Food-Functional-Beverage-Manufacturers.png",
     },
     {
       title: "Cosmetics & Personal Care Brands",
@@ -35,7 +35,7 @@ export const productDevelopmentWhoWeServe = {
         "Ingredient discovery, toxicology intelligence, and mechanism-of-action research to support skin, hair, and oral care formulations aligned with INCI, REACH, and safety assessment standards.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80",
+        "/images/product-development/Cosmetics-Personal-Care-Brands.png",
     },
     {
       title: "Medical Device Manufacturers",
@@ -43,7 +43,7 @@ export const productDevelopmentWhoWeServe = {
         "Scientific support for devices that incorporate biologically active materials, combination products, or require regulatory intelligence around material selection and biocompatibility.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
+        "/images/product-development/Medical-Device-Manufacturers.png",
     },
     {
       title: "Startups & Entrepreneurs",
@@ -51,7 +51,7 @@ export const productDevelopmentWhoWeServe = {
         "Support in identifying novel ingredients, clinical backing, and competitive intelligence for product concept validation and investor documentation.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
+        "/images/product-development/Startups-Entrepreneurs.png",
     },
     {
       title: "Contract Research Organizations (CROs)",
@@ -59,7 +59,7 @@ export const productDevelopmentWhoWeServe = {
         "Scientific content development, target and compound validation, secondary research, and regulatory literature reviews to support sponsors and submissions.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=1200&q=80",
+        "/images/product-development/Contract-Research-Organizations-CROs.png",
     },
     {
       title: "Academic Institutions & Research Bodies",
@@ -67,7 +67,7 @@ export const productDevelopmentWhoWeServe = {
         "Collaboration on translational research, technology scouting, and ingredient or compound commercialization through evidence mapping and IP intelligence.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
+        "/images/product-development/Academic-Institutions-Research-Bodies.png",
     },
     {
       title: "Cosmeceutical & Derma Companies",
@@ -75,7 +75,7 @@ export const productDevelopmentWhoWeServe = {
         "Scientific evaluation of active ingredients, dermatological evidence collection, and discovery of anti-aging, acne, and skin-repair compounds using clinical and preclinical data.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=80",
+        "/images/product-development/Cosmeceutical-Derma-Companies.png",
     },
     {
       title: "Pet Food & Veterinary Health Companies",
@@ -83,7 +83,7 @@ export const productDevelopmentWhoWeServe = {
         "Discovery of safe and effective bioactive herbs and functional ingredients for companion animal health, including clinical support for gut health, joint care, and immune support claims.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1200&q=80",
+        "/images/product-development/Pet-Food-Veterinary-Health-Companies.png",
     },
     {
       title: "Biotechnology Companies",
@@ -91,7 +91,7 @@ export const productDevelopmentWhoWeServe = {
         "Early-stage discovery services, including gene/protein target validation, biomarker discovery, and mechanism insights to accelerate preclinical programs.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=1200&q=80",
+        "/images/product-development/Biotechnology-Companies.png",
     },
   ],
 };
@@ -111,7 +111,7 @@ export const productDevelopmentWorkflow = {
       title: "Ideation & Conceptualization",
       description:
         "We begin by understanding your product concept and strategic goals. Through market gap analysis, therapeutic landscape reviews, and competitive intelligence, we help identify high-potential opportunities grounded in unmet needs and innovation potential.",
-      iconSrc: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      iconSrc: "/images/product-development/Ideation-Conceptualization.png",
       position: "top",
     },
     {
@@ -119,7 +119,7 @@ export const productDevelopmentWorkflow = {
       title: "Research & Ingredient Intelligence",
       description:
         "Using primary research (expert/KOL interviews, surveys) and secondary research (scientific publications, clinical trials, regulatory sources), we identify and evaluate bioactive ingredients, APIs, and novel compounds, validating their efficacy, safety, and relevance.",
-      iconSrc: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      iconSrc: "/images/product-development/Research-Ingredient-Intelligence.png",
       position: "bottom",
     },
     {
@@ -127,7 +127,7 @@ export const productDevelopmentWorkflow = {
       title: "Literature & Patent Analysis",
       description:
         "We conduct in-depth literature reviews and chemical patent analysis to assess prior art, freedom to operate (FTO), and novelty of proposed ingredients or formulations. This step supports strategic IP planning and regulatory risk reduction.",
-      iconSrc: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      iconSrc: "/images/product-development/Literature-Patent-Analysis.png",
       position: "top",
     },
     {
@@ -135,7 +135,7 @@ export const productDevelopmentWorkflow = {
       title: "Scientific Validation & Evidence Building",
       description:
         "We compile and synthesize supporting data from clinical studies, biological mechanism research, and toxicology evaluations to strengthen your product’s scientific foundation, enabling regulatory submissions and claims substantiation.",
-      iconSrc: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      iconSrc: "/images/product-development/Scientific-Validation-Evidence-Building.png",
       position: "bottom",
     },
     {
@@ -143,7 +143,7 @@ export const productDevelopmentWorkflow = {
       title: "Go-to-Market Intelligence & Strategic Support",
       description:
         "We provide insight into launch readiness, competitive positioning, and scientific differentiation, ensuring your product stands out with validated claims and a compelling evidence base.",
-      iconSrc: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      iconSrc: "/images/product-development/Go-to-Market-Intelligence-Strategic-Support.png",
       position: "top",
     },
   ],
@@ -161,7 +161,7 @@ export const productDevelopmentPackages = {
 
   packages: [
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      icon: "/images/product-development/Starter.png",
       title: "Starter",
       subtitle: "For Early Discovery & Research Support",
       idealFor: "Startups, pre-formulation R&D, early-stage evaluations",
@@ -179,7 +179,7 @@ export const productDevelopmentPackages = {
       bodyTextColor: "#374151",
     },
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      icon: "/images/product-development/advanced.webp",
       title: "Advanced",
       subtitle: "For Validation & Strategy Development",
       idealFor:
@@ -199,7 +199,7 @@ export const productDevelopmentPackages = {
       bodyTextColor: "#374151",
     },
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      icon: "/images/product-development/Comprehensive.png",
       title: "Comprehensive",
       subtitle: "For Regulatory & Market-Ready Preparation",
       idealFor:
@@ -220,7 +220,7 @@ export const productDevelopmentPackages = {
       bodyTextColor: "#374151",
     },
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      icon: "/images/product-development/Custom.png",
       title: "Custom",
       subtitle: "Tailored Research & Intelligence Solutions",
       idealFor:
@@ -251,7 +251,7 @@ export const productDevelopmentTestimonials = {
   testimonials: [
     {
       image:
-        "https://upload.wikimedia.org/wikipedia/en/5/5f/Journal_of_Clinical_Oncology_cover.jpg",
+        "/images/product-development/international-journal-of-cardialogy.png",
       quote:
         "Pubrica’s scientific research team delivered a comprehensive literature and biomarker review that strengthened our regulatory submission in the EU. Their clinical evidence and mechanism-of-action research was impressive.",
       name: "Elena Morris",
@@ -261,7 +261,7 @@ export const productDevelopmentTestimonials = {
     },
     {
       image:
-        "https://upload.wikimedia.org/wikipedia/en/7/79/International_Journal_of_Surgery_cover.jpg",
+        "/images/product-development/jama-oncology-journal.png",
       quote:
         "We were impressed by Pubrica’s ability to translate complex clinical data into a clear, defensible claim strategy. Their work in patent analysis and ingredient mapping was key to our U.S. nutraceutical launch.",
       name: "Thomas Reynolds",
@@ -271,7 +271,7 @@ export const productDevelopmentTestimonials = {
     },
     {
       image:
-        "https://upload.wikimedia.org/wikipedia/en/8/89/BMJ_Case_Reports_cover.jpg",
+        "/images/product-development/journal-of-neuroscience.png",
       quote:
         "As an herbal supplement company, we needed deep validation for our formulation. Pubrica’s team provided detailed secondary research, supported by regulatory-aligned insights from WHO and AYUSH sources.",
       name: "Rajesh Kumar",
@@ -281,7 +281,7 @@ export const productDevelopmentTestimonials = {
     },
     {
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/3/32/Scale_of_justice_2.svg",
+        "/images/product-development/RSNA.png",
       quote:
         "Pubrica’s discovery insights into pet health ingredients, combined with their knowledge of AAFCO and FDA-CVM guidelines, helped us confidently position our new veterinary formula for the North American market.",
       name: "Sophie Grant",
@@ -291,7 +291,7 @@ export const productDevelopmentTestimonials = {
     },
     {
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/6/67/JAMA_Network_logo.svg",
+        "/images/product-development/the-lancet-of-oncolgy-1-1.png",
       quote:
         "The scientific intelligence Pubrica delivered from therapeutic landscape mapping to regulatory pathway planning helped us fast-track early decisions for our oncology pipeline.",
       name: "Sanya Patel",

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export interface VerticalItem {
@@ -21,47 +22,47 @@ export default function IndustryVerticalsAndProcess({
     {
       id: "pharmaceuticals",
       title: "Pharmaceuticals",
-      iconPlaceholder: "[ Icon: Medicine Bottle ]",
+      iconPlaceholder: "/images/product-development/Pharmaceuticals.png",
     },
     {
       id: "biotechnology",
       title: "Biotechnology",
-      iconPlaceholder: "[ Icon: Microscope ]",
+      iconPlaceholder: "/images/product-development/Biotechnology.png",
     },
     {
       id: "nutraceuticals",
       title: "Nutraceuticals & Dietary Supplements",
-      iconPlaceholder: "[ Icon: Supplement Jar ]",
+      iconPlaceholder: "/images/product-development/Nutraceuticals-Dietary-Supplements.png",
     },
     {
       id: "herbal-ayush",
       title: "Herbal/AYUSH products",
-      iconPlaceholder: "[ Icon: Mortar & Pestle ]",
+      iconPlaceholder: "/images/product-development/HerbalAYUSH-products.png",
     },
     {
       id: "functional-foods",
       title: "Functional Foods & Beverages",
-      iconPlaceholder: "[ Icon: Food & Bottle ]",
+      iconPlaceholder: "/images/product-development/Functional-Foods-Beverages.png",
     },
     {
       id: "medical-devices",
       title: "Medical Devices",
-      iconPlaceholder: "[ Icon: Medical Equipment ]",
+      iconPlaceholder: "/images/product-development/Medical-Devices.png",
     },
     {
       id: "cosmetics",
       title: "Cosmetics & Cosmeceuticals",
-      iconPlaceholder: "[ Icon: Skincare Products ]",
+      iconPlaceholder: "/images/product-development/Cosmetics-Cosmeceuticals.png",
     },
     {
       id: "pet-health",
       title: "Pet Health & Pet Food",
-      iconPlaceholder: "[ Icon: Pet Food Bag ]",
+      iconPlaceholder: "/images/product-development/Pet-Health-Pet-Food.png",
     },
     {
       id: "life-sciences",
       title: "Life Sciences & Healthcare Research",
-      iconPlaceholder: "[ Icon: Plant Flask ]",
+      iconPlaceholder: "/images/product-development/Life-Sciences-Healthcare-Research.png",
     },
   ];
 
@@ -89,11 +90,14 @@ export default function IndustryVerticalsAndProcess({
               key={item.id}
               className="bg-white rounded-xl border border-gray-200/80 p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md transition-shadow group cursor-pointer"
             >
-              {/* Icon Placeholder Container */}
-              <div className="w-16 h-16 mb-4 rounded-full bg-emerald-50/60 group-hover:bg-emerald-100/80 flex items-center justify-center border border-dashed border-emerald-300 transition-colors">
-                <span className="text-[10px] text-emerald-800 font-semibold text-center leading-tight px-1">
-                  {item.iconPlaceholder}
-                </span>
+              {/* Icon Image Container */}
+              <div className="w-12 h-12 sm:w-14 sm:h-14 mb-4 rounded-full bg-emerald-50/60 group-hover:bg-emerald-100/80 flex items-center justify-center border border-emerald-300 relative overflow-hidden transition-colors">
+                <Image
+                  src={item.iconPlaceholder}
+                  alt={item.title}
+                  fill
+                  className="object-contain p-2"
+                />
               </div>
 
               {/* Title */}
@@ -106,7 +110,7 @@ export default function IndustryVerticalsAndProcess({
 
         {/* Center CTA Button */}
         <div className="mt-10 text-center">
-          <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
         </div>
       </div>
     </section>

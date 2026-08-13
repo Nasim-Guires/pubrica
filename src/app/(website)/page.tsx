@@ -12,6 +12,7 @@ import StructuredData from "@/components/seo/StructuredData";
 import ResourceConsolidationBanner from "@/features/home/components/ResourceConsolidationBanner";
 import SpecialisationsMenu from "@/features/home/components/SpecialisationsMenu";
 import FAQAccordion from "@/features/home/components/FAQAccordion";
+import LatestNews from "@/features/home/components/LatestNews";
 
 export const metadata = constructMetadata({
   title:
@@ -50,7 +51,7 @@ export default function HomePage() {
       <TrustedNetwork />
       <SpecialisationsMenu />
       <Testimonials />
-      <LatestBlogs />
+      <LatestNews/>
       <FAQAccordion />
     </>
   );

@@ -54,6 +54,25 @@ const Page = () => {
     }));
   };
 
+  const heroBulletPoints = [
+    {
+      title: "Professional Writing Support",
+      text: "Access to skilled English writers and editors with expertise in specialized niche areas.",
+    },
+    {
+      title: "Advanced Editing Techniques",
+      text: "Focus on concise content, reducing jargon, and enhancing readability through multiple revisions.",
+    },
+    {
+      title: "Quality Assurance",
+      text: "Rigorous proofreading to eliminate errors in grammar, spelling, and vocabulary, ensuring submission-ready manuscripts.",
+    },
+    {
+      title: "High-Impact Journal Publishing",
+      text: "Assistance in publishing with leading firms, enhancing visibility and impact.",
+    },
+  ];
+
   // Split items evenly into two clean layout lists for desktop grids
   const leftColumnFaqs = faqData.filter((item) => item.id <= 5);
   const rightColumnFaqs = faqData.filter((item) => item.id > 5);
@@ -72,7 +91,7 @@ const Page = () => {
         </div>
       </section>
       {/* SECTION 1: HERO / PRECISION SERVICES */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-10 font-sans">
         {/* Heading */}
         <div className="mb-8">
           <h1 className="text-[40px] font-bold leading-tight text-[#083B3A]">
@@ -90,22 +109,23 @@ const Page = () => {
 
         {/* First Row */}
         <div className="relative">
-          {/* Floating image */}
+          {/* Floating image with correct border decoration wrapper */}
           <div className="hidden lg:block float-right ml-12 mb-8 w-[420px]">
-            <div className="relative">
-              {/* Vertical */}
-              <div className="absolute left-0 top-5 h-[270px] w-7 bg-[#083B3A] rounded-l-2xl" />
+            <div className="relative pt-6 pl-6">
+              {/* Vertical shape */}
+              <div />
 
-              {/* Bottom */}
-              <div className="absolute left-7 bottom-0 h-7 w-[270px] bg-[#083B3A] rounded-b-2xl" />
+              {/* Bottom shape */}
 
-              <div className="relative ml-6">
+
+              {/* Image box container */}
+              <div className="relative z-10 bg-white p-2">
                 <Image
-                  src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="/images/editing-and-translation/Precision-Editing-Translation-Services-for-Researchers-and-Academics.webp"
                   alt="Editing Service"
-                  width={220}
-                  height={70}
-                  className="rounded-xl object-cover shadow-lg"
+                  width={380}
+                  height={260}
+                  className="rounded-xl object-cover shadow-lg w-full h-[260px]"
                   priority
                 />
               </div>
@@ -155,12 +175,13 @@ const Page = () => {
 
           {/* Buttons */}
           <div className="mt-10 flex gap-5">
-            <GetFreeQuoteButton/>
+            <GetFreeQuoteButton />
 
-            <button className="rounded-full bg-[#BA0000] px-8 py-3 text-white font-semibold hover:bg-[#980000]">
-              View Brochure
-            </button>
           </div>
+
+          <button className="rounded-full bg-[#BA0000] px-4 py-1.5 text-sm text-white font-semibold hover:bg-[#980000] transition-colors">
+            View Brochure
+          </button>
         </div>
       </section>
       <hr className="border-slate-100" />
@@ -186,33 +207,21 @@ const Page = () => {
             {/* Left Column: Next.js Optimized Image Stack Component */}
             <div className="lg:col-span-5 relative flex justify-center items-center min-h-[360px] pt-4 select-none">
               {/* Soft decorative background circular bubble */}
-              <div className="absolute w-64 h-64 bg-slate-100 rounded-full left-12 top-12 -z-10 opacity-70"></div>
+              <div className="absolute w-64 h-64 bg-slate-100 rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 opacity-70"></div>
 
-              {/* Top Left Image Layer */}
-              <div className="absolute top-0 left-4 w-60 z-10 transform -rotate-3">
-                <div className="relative w-full h-44 rounded-xl shadow-lg overflow-hidden">
+              {/* Centered Image Layer matching the target layout */}
+              <div className="relative w-[320px] z-10 flex flex-col items-center">
+                <div className="relative w-full h-48 rounded-xl shadow-lg overflow-hidden mb-3">
                   <Image
-                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=400"
+                    src="/images/editing-and-translation/Our-Services-1.png"
                     alt="Working on laptop"
                     fill
-                    sizes="(max-w-7xl) 240px"
+                    sizes="(max-w-7xl) 320px"
                     className="object-cover"
                     priority
                   />
                 </div>
-              </div>
 
-              {/* Bottom Right Image Layer */}
-              <div className="absolute bottom-4 right-4 w-64 z-20 transform rotate-2">
-                <div className="relative w-full h-48 rounded-xl shadow-xl overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=400"
-                    alt="Editing paper document"
-                    fill
-                    sizes="(max-w-7xl) 256px"
-                    className="object-cover"
-                  />
-                </div>
               </div>
             </div>
 
@@ -231,11 +240,10 @@ const Page = () => {
                         {isOpen ? "−" : "+"}
                       </span>
                       <span
-                        className={`text-[15px] font-semibold tracking-wide transition ${
-                          isOpen
-                            ? "text-[#0A4D4A]"
-                            : "text-slate-800 hover:text-[#0A4D4A]"
-                        }`}
+                        className={`text-[15px] font-semibold tracking-wide transition ${isOpen
+                          ? "text-[#0A4D4A]"
+                          : "text-slate-800 hover:text-[#0A4D4A]"
+                          }`}
                       >
                         {service.title}
                       </span>
@@ -274,25 +282,38 @@ const Page = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {audienceList.map((audience, index) => (
-            <div
-              key={index}
-              className="relative h-48 rounded-xl overflow-hidden group shadow-md"
-            >
-              <img
-                src={audience.bgImage}
-                alt={audience.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-transparent flex items-end p-6">
-                <h3 className="text-white font-bold text-lg leading-snug">
-                  {audience.title}
-                </h3>
-              </div>
-            </div>
-          ))}
-        </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {audienceList.map((audience, index) => (
+    <div
+      key={index}
+      className="group relative h-64 bg-black rounded-none overflow-hidden cursor-pointer"
+    >
+      {/* Background Image (fades out on hover) */}
+      <img
+        src={audience.bgImage}
+        alt={audience.title}
+        className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+      />
+
+      {/* Default Overlay & Title (bottom-aligned, hides on hover) */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 group-hover:opacity-0 transition-opacity duration-300">
+        <h3 className="text-white font-bold text-lg leading-snug">
+          {audience.title}
+        </h3>
+      </div>
+
+      {/* Hover Content (solid black background with title + description, shows on hover) */}
+      <div className="absolute inset-0 p-6 flex flex-col justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black text-white">
+        <h3 className="font-bold text-lg leading-snug mb-3">
+          {audience.title}
+        </h3>
+        <p className="text-xs leading-relaxed text-gray-300">
+          {audience.description}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
       </section>
       {/* SECTION 4: TYPES OF EDITING SERVICES */}
       <section className="py-12 bg-white px-6 max-w-7xl mx-auto font-sans">
@@ -319,18 +340,16 @@ const Page = () => {
               return (
                 <div
                   key={type.id}
-                  className={`transition-all duration-200 rounded-md border ${
-                    isOpen
-                      ? "border-[#0A4D4A]/20 bg-white shadow-sm"
-                      : "border-transparent bg-[#F4FAF8] hover:bg-[#EAF5F2]"
-                  }`}
+                  className={`transition-all duration-200 rounded-md border ${isOpen
+                    ? "border-[#0A4D4A]/20 bg-white shadow-sm"
+                    : "border-transparent bg-[#F4FAF8] hover:bg-[#EAF5F2]"
+                    }`}
                 >
                   {/* Header Toggle Wrapper Frame */}
                   <div
                     onClick={() => toggleCard(type.id)}
-                    className={`px-4 py-3.5 flex justify-between items-center cursor-pointer select-none ${
-                      isOpen ? "border-b border-slate-100" : ""
-                    }`}
+                    className={`px-4 py-3.5 flex justify-between items-center cursor-pointer select-none ${isOpen ? "border-b border-slate-100" : ""
+                      }`}
                   >
                     <div className="flex items-center gap-3 pr-2 min-w-0">
                       <div className="relative w-7 h-7 flex-shrink-0 opacity-80">
@@ -915,11 +934,10 @@ const Page = () => {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${
-                  currentSlide === index
-                    ? "bg-[#0A7E8C] scale-110"
-                    : "bg-slate-300 hover:bg-slate-400"
-                }`}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${currentSlide === index
+                  ? "bg-[#0A7E8C] scale-110"
+                  : "bg-slate-300 hover:bg-slate-400"
+                  }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}

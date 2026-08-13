@@ -7,19 +7,19 @@ export default function Testimonials() {
       quote: "I thank Pubrica for making my work highly professional through validated methods of editing.",
       name: "Dr. Emily Howard",
       title: "University of Canada",
-      avatar: "/images/testimonials/empty.png", // Replace with your actual asset path
+      avatar: "/images/Home/Emily-Howard.png", // Replace with your actual asset path
     },
     {
       quote: "Pubrica made my research article recognised. Their quality amplified in the impact of my paper. Thank you, Pubrica.",
       name: "Dr. Bryan R. Nicholas",
       title: "University of Cambridge",
-      avatar: "/images/testimonials/empty.png", // Replace with your actual asset path
+      avatar: "/images/Home/Dr. Bryan R. Nicholas.png", // Replace with your actual asset path
     },
     {
       quote: "As a senior researcher, I was looking out for a reliable publication service. I stumbled upon Pubrica. Now, here I am with my second doctorate. Thanks, Pubrica!",
       name: "Prof. Ursula Martin",
       title: "GenTech Labs",
-      avatar: "/images/testimonials/empty.png", // Replace with your actual asset path
+      avatar: "/images/Home/Prof-Ursula-Martin.webp", // Replace with your actual asset path
     },
   ];
 

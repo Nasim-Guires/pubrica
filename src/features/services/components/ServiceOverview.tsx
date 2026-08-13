@@ -1,4 +1,5 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Image from "next/image";
 import React from "react";
 
 // Key phrases dynamically styled as light blue links in the text
@@ -17,22 +18,22 @@ const BLUE_LINKS = [
 
 const COMPLIANCE_ITEMS = [
   {
-    logo: "/images/compliance/cope.png",
+    logo: "/images/publication-support/COPE_thumb.png",
     alt: "COPE Logo",
     title: "Committee on Publication Ethics",
   },
   {
-    logo: "/images/compliance/wame.png",
+    logo: "/images/publication-support/WAME.webp",
     alt: "WAME Logo",
     title: "World Association of Medical Editors",
   },
   {
-    logo: "/images/compliance/icmje.png",
+    logo: "/images/publication-support/ICMJE.webp",
     alt: "ICMJE Logo",
     title: "International Committee of Medical Journal Editors",
   },
   {
-    logo: "/images/compliance/spirit-consort.png",
+    logo: "/images/publication-support/Consort-Logo.webp",
     alt: "SPIRIT CONSORT Logo",
     title: "Consolidated Standards of Reporting Trials",
   },
@@ -130,7 +131,7 @@ export default function ServiceOverview() {
 
         {/* Action CTAs */}
         <div className="flex flex-wrap gap-3 mt-8 mb-16">
-          <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
           <button className="bg-[#b30000] hover:bg-[#900000] text-white px-6 py-2.5 rounded-full font-semibold transition-colors cursor-pointer">
             View Brochure
           </button>
@@ -192,19 +193,17 @@ export default function ServiceOverview() {
               <div className="relative w-full max-w-md h-72 sm:h-80">
                 {/* Background Image */}
                 <div className="absolute top-0 left-0 w-3/4 h-3/4 rounded-2xl overflow-hidden shadow-md">
-                  <img
-                    src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=600&auto=format&fit=crop"
+                  <Image
+                    src="/images/publication-support/image-2.webp"
                     alt="Scientists with microscope"
+                    width={800}
+                    height={600}
                     className="w-full h-full object-cover"
                   />
                 </div>
                 {/* Foreground Overlapping Image */}
                 <div className="absolute bottom-0 right-0 w-2/3 h-2/3 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
-                  <img
-                    src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=600&auto=format&fit=crop"
-                    alt="Researcher in lab"
-                    className="w-full h-full object-cover"
-                  />
+
                 </div>
               </div>
             </div>
@@ -237,7 +236,7 @@ export default function ServiceOverview() {
         </div>
 
         {/* Next Section Title */}
-        
+
       </div>
     </div>
   );

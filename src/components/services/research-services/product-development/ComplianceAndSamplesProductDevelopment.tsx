@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export interface AccordionCard {
     id: string;
@@ -17,18 +18,20 @@ export interface ComplianceAndSamplesProductDevelopmentProps {
 export default function ComplianceAndSamplesProductDevelopment({
     className = "",
 }: ComplianceAndSamplesProductDevelopmentProps) {
-    // State for accordions - set to null so NO cards are open by default
-    const [openCardId, setOpenCardId] = useState<string | null>(null);
+    // State to track multiple open card IDs
+    const [openCardIds, setOpenCardIds] = useState<string[]>([]);
 
     const toggleCard = (id: string): void => {
-        setOpenCardId(openCardId === id ? null : id);
+        setOpenCardIds((prev) =>
+            prev.includes(id) ? prev.filter((cardId) => cardId !== id) : [...prev, id]
+        );
     };
 
     const accordionCards: AccordionCard[] = [
         {
             id: "pharmaceuticals-biotech",
             title: "Pharmaceuticals & Biotech",
-            iconPlaceholder: "[ Icon: Pharma ]",
+            iconPlaceholder: "/images/product-development/Pharmaceuticals-Biotech.png",
             content: (
                 <ul className="list-disc pl-5 space-y-1 text-xs text-gray-700 leading-relaxed">
                     <li>FDA (U.S. Food & Drug Administration)</li>
@@ -42,7 +45,7 @@ export default function ComplianceAndSamplesProductDevelopment({
         {
             id: "nutraceuticals-herbal",
             title: "Nutraceuticals, Herbal & AYUSH",
-            iconPlaceholder: "[ Icon: Herbal ]",
+            iconPlaceholder: "/images/product-development/Nutraceuticals-Herbal-AYUSH.png",
             content: (
                 <ul className="list-disc pl-5 space-y-1 text-xs text-gray-700 leading-relaxed">
                     <li>FSSAI (Food Safety & Standards Authority of India)</li>
@@ -56,7 +59,7 @@ export default function ComplianceAndSamplesProductDevelopment({
         {
             id: "cosmetics-cosmeceuticals",
             title: "Cosmetics & Cosmeceuticals",
-            iconPlaceholder: "[ Icon: Cosmetics ]",
+            iconPlaceholder: "/images/product-development/Cosmetics-Cosmeceuticals-1.png",
             content: (
                 <ul className="list-disc pl-5 space-y-1 text-xs text-gray-700 leading-relaxed">
                     <li>FDA (Cosmetic Regulations – U.S.)</li>
@@ -69,7 +72,7 @@ export default function ComplianceAndSamplesProductDevelopment({
         {
             id: "functional-foods",
             title: "Functional Foods & Ingredients",
-            iconPlaceholder: "[ Icon: Foods ]",
+            iconPlaceholder: "/images/product-development/Functional-Foods-Ingredients.png",
             content: (
                 <ul className="list-disc pl-5 space-y-1 text-xs text-gray-700 leading-relaxed">
                     <li>GRAS (Generally Recognized As Safe – U.S.)</li>
@@ -82,7 +85,7 @@ export default function ComplianceAndSamplesProductDevelopment({
         {
             id: "pet-food-veterinary",
             title: "Pet Food & Veterinary Health",
-            iconPlaceholder: "[ Icon: Pet Food ]",
+            iconPlaceholder: "/images/product-development/Pet-Food-Veterinary-Health.png",
             content: (
                 <ul className="list-disc pl-5 space-y-1 text-xs text-gray-700 leading-relaxed">
                     <li>AAFCO (Association of American Feed Control Officials)</li>
@@ -95,7 +98,7 @@ export default function ComplianceAndSamplesProductDevelopment({
         {
             id: "medical-devices",
             title: "Medical Devices",
-            iconPlaceholder: "[ Icon: Devices ]",
+            iconPlaceholder: "/images/product-development/Medical-Devices-1.png",
             content: (
                 <ul className="list-disc pl-5 space-y-1 text-xs text-gray-700 leading-relaxed">
                     <li>FDA 21 CFR Parts 820 (QSR)</li>
@@ -103,14 +106,13 @@ export default function ComplianceAndSamplesProductDevelopment({
                     <li>ISO 10993 (Biocompatibility)</li>
                     <li>IEC 62304 / ISO 14971 (Software, Risk Management)</li>
                     <li>510(k) & CE Marking Requirements</li>
-
                 </ul>
             ),
         },
         {
             id: "scientific-ethical",
             title: "Scientific & Ethical Guidelines",
-            iconPlaceholder: "[ Icon: Ethics ]",
+            iconPlaceholder: "/images/product-development/Scientific-Ethical-Guidelines.png",
             content: (
                 <ul className="list-disc pl-5 space-y-1 text-xs text-gray-700 leading-relaxed">
                     <li>Good Clinical Practice (GCP – ICH E6)</li>
@@ -118,14 +120,14 @@ export default function ComplianceAndSamplesProductDevelopment({
                     <li>Declaration of Helsinki</li>
                     <li>CONSORT, PRISMA, STROBE (for scientific publication standards)</li>
                     <li>OECD Guidelines for Toxicity & Safety Studies</li>
-                    <li>PubMed, Cochrane, and WHO sources for literature evidence </li>
+                    <li>PubMed, Cochrane, and WHO sources for literature evidence</li>
                 </ul>
             ),
         },
         {
             id: "data-privacy",
             title: "Data Privacy & Confidentiality Compliance",
-            iconPlaceholder: "[ Icon: Privacy ]",
+            iconPlaceholder: "/images/product-development/Data-Privacy-Confidentiality-Compliance.png",
             content: (
                 <ul className="list-disc pl-5 space-y-1 text-xs text-gray-700 leading-relaxed">
                     <li>HIPAA (U.S.) – Patient Data Protection</li>
@@ -165,10 +167,10 @@ export default function ComplianceAndSamplesProductDevelopment({
                     </h3>
                 </header>
 
-                {/* 3-Column Grid for Accordion Cards (No cards open by default) */}
+                {/* 3-Column Grid for Accordion Cards (Multiple cards can be open independently) */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start">
                     {accordionCards.map((card) => {
-                        const isOpen = openCardId === card.id;
+                        const isOpen = openCardIds.includes(card.id);
                         return (
                             <div
                                 key={card.id}
@@ -182,10 +184,13 @@ export default function ComplianceAndSamplesProductDevelopment({
                                     aria-expanded={isOpen}
                                 >
                                     <div className="flex items-center gap-2.5">
-                                        <div className="w-6 h-6 rounded bg-emerald-100/60 flex items-center justify-center border border-dashed border-emerald-300 flex-shrink-0">
-                                            <span className="text-[8px] text-emerald-800 font-bold">
-                                                {card.iconPlaceholder}
-                                            </span>
+                                        <div className="w-7 h-7 rounded bg-emerald-100/60 flex items-center justify-center border border-emerald-300 flex-shrink-0 relative overflow-hidden">
+                                            <Image
+                                                src={card.iconPlaceholder}
+                                                alt={card.title}
+                                                fill
+                                                className="object-contain p-1"
+                                            />
                                         </div>
                                         <span className="text-xs sm:text-sm font-bold text-[#1b2b28]">
                                             {card.title}
@@ -213,10 +218,13 @@ export default function ComplianceAndSamplesProductDevelopment({
                 <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                     {/* Left Image Section Div Placeholder */}
                     <div className="md:col-span-5 flex justify-center">
-                        <div className="w-full max-w-sm h-64 bg-slate-200 rounded-lg border-2 border-dashed border-gray-400 flex items-center justify-center p-4 shadow-sm">
-                            <span className="text-xs text-gray-600 font-semibold text-center">
-                                [ Image Section: Industrial Laboratory Robotic Equipment ]
-                            </span>
+                        <div className="w-full max-w-sm h-64 bg-slate-200 rounded-lg border-2 border-dashed border-gray-400 flex items-center justify-center p-4 shadow-sm relative overflow-hidden">
+                            <Image
+                                src="/images/product-development/image-2.webp"
+                                alt="Industrial Laboratory Robotic Equipment"
+                                fill
+                                className="object-cover"
+                            />
                         </div>
                     </div>
 
