@@ -214,13 +214,11 @@ const WORKFLOW_STEPS: ProcessStep[] = [
 
 // ================= PACKAGES DATA =================
 interface PackageInfo {
-  letter: string;
+  icon: string;
   name: string;
   subtitle: string;
   bgColor: string;
   borderColor: string;
-  badgeBg: string;
-  badgeTextColor: string;
   idealFor: string;
   includes: string[];
   optionalAddons: string[];
@@ -229,13 +227,11 @@ interface PackageInfo {
 
 const PACKAGES: PackageInfo[] = [
   {
-    letter: "S",
+    icon: "/images/publication-support/responding-to-reviewers/standard-logo.png",
     name: "Standard",
     subtitle: "HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW",
     bgColor: "bg-[#d6e3e2]",
     borderColor: "border-[#083b3a]",
-    badgeBg: "bg-[#fcecc9]",
-    badgeTextColor: "text-amber-800",
     idealFor:
       "Authors with minor reviewer comments requiring straightforward responses and light manuscript edits.",
     includes: [
@@ -251,13 +247,11 @@ const PACKAGES: PackageInfo[] = [
     turnaround: "4–5 business days",
   },
   {
-    letter: "A",
+    icon: "/images/publication-support/journal-selection/advanced.webp",
     name: "ADVANCED",
     subtitle: "HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW",
     bgColor: "bg-[#d6c1db]",
     borderColor: "border-[#703081]",
-    badgeBg: "bg-[#d1f2d9]",
-    badgeTextColor: "text-emerald-800",
     idealFor:
       "Manuscripts requiring substantial content changes, data clarifications, or methodology updates, along with a formal cover letter.",
     includes: [
@@ -274,13 +268,11 @@ const PACKAGES: PackageInfo[] = [
     turnaround: "6–7 business days",
   },
   {
-    letter: "P",
+    icon: "/images/publication-support/responding-to-reviewers/pa-icons-.png",
     name: "Premium",
     subtitle: "HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW",
     bgColor: "bg-[#d8c39d]",
     borderColor: "border-[#69421c]",
-    badgeBg: "bg-[#fcecc9]",
-    badgeTextColor: "text-amber-900",
     idealFor:
       "Researchers needing end-to-end support for resubmission, including strategic rebuttal and manuscript reformatting to meet strict journal requirements.",
     includes: [
@@ -315,19 +307,14 @@ export default function PublicationSupportPage() {
       <section className="bg-[#032d1f] text-white py-8 px-6 my-10">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-6">
           <div className="flex-shrink-0">
-            {/* 100% Satisfaction Guarantee Seal */}
-            <div className="relative w-28 h-28 rounded-full bg-sky-200 border-4 border-dashed border-sky-400 p-1 flex items-center justify-center text-center shadow-inner">
-              <div className="w-full h-full rounded-full bg-sky-600 flex flex-col items-center justify-center p-1 text-white">
-                <span className="text-[9px] font-bold tracking-widest uppercase">
-                  Satisfaction
-                </span>
-                <span className="text-xl font-extrabold leading-none my-0.5">
-                  100%
-                </span>
-                <span className="text-[8px] font-bold tracking-widest uppercase">
-                  Guarantee
-                </span>
-              </div>
+            <div className="relative w-28 h-28">
+              <Image
+                src="/images/publication-support/Satisfaction_Guarantee.webp"
+                alt="Satisfaction Guarantee"
+                fill
+                sizes="112px"
+                className="object-contain"
+              />
             </div>
           </div>
 
@@ -410,10 +397,14 @@ export default function PublicationSupportPage() {
               <div
                 className={`p-4 border-t-4 ${pkg.borderColor} flex items-start gap-3 bg-white border-b border-slate-200`}
               >
-                <div
-                  className={`w-10 h-10 rounded-full ${pkg.badgeBg} ${pkg.badgeTextColor} font-extrabold text-xl flex items-center justify-center flex-shrink-0 shadow-sm`}
-                >
-                  {pkg.letter}
+                <div className="relative w-10 h-10 flex-shrink-0">
+                  <Image
+                    src={pkg.icon}
+                    alt={`${pkg.name} package icon`}
+                    fill
+                    sizes="40px"
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-slate-800 leading-none">

@@ -1,14 +1,19 @@
+import Image from "next/image";
 import React from "react";
+
+const PAGE_IMAGES = "/images/publication-support/responding-to-reviewers";
 
 // ================= TYPES OF RESPONSES DATA =================
 interface SupportType {
   title: string;
+  icon: string;
   items: string[];
 }
 
 const SUPPORT_TYPES: SupportType[] = [
   {
     title: "Manuscript & Journal Submissions",
+    icon: `${PAGE_IMAGES}/Manuscript-Journal-Submissions.png`,
     items: [
       "Response to journal reviewer comments",
       "Rebuttal letter for peer-reviewed manuscript",
@@ -19,6 +24,7 @@ const SUPPORT_TYPES: SupportType[] = [
   },
   {
     title: "Academic & Thesis Work",
+    icon: `${PAGE_IMAGES}/Academic-Thesis-Work.png`,
     items: [
       "Response letter for PhD thesis examiner comments",
       "Postgraduate dissertation review response",
@@ -28,6 +34,7 @@ const SUPPORT_TYPES: SupportType[] = [
   },
   {
     title: "Grant & Funding Applications",
+    icon: `${PAGE_IMAGES}/Grant-Funding-Applications.png`,
     items: [
       "Response to grant reviewer feedback (NIH, ERC, Horizon, etc.)",
       "Research funding revision support",
@@ -37,6 +44,7 @@ const SUPPORT_TYPES: SupportType[] = [
   },
   {
     title: "Scientific & Regulatory Submissions",
+    icon: `${PAGE_IMAGES}/Scientific-Regulatory-Submissions.png`,
     items: [
       "Clinical trial manuscript peer review response",
       "Regulatory submission revisions (medical/pharma)",
@@ -45,6 +53,7 @@ const SUPPORT_TYPES: SupportType[] = [
   },
   {
     title: "White Papers & Conference Papers",
+    icon: `${PAGE_IMAGES}/White-Papers-Conference-Papers.png`,
     items: [
       "Reviewer response for conference paper resubmission",
       "Abstract and poster revision support",
@@ -53,6 +62,7 @@ const SUPPORT_TYPES: SupportType[] = [
   },
   {
     title: "Special Services",
+    icon: `${PAGE_IMAGES}/Special-Services.png`,
     items: [
       "Multilingual response writing (English + native language support)",
       "Non-native English speaker response editing",
@@ -162,6 +172,7 @@ interface ProcessStep {
   stepNumber: number;
   title: string;
   description: string;
+  icon: string;
   position: "bottom" | "top"; // Alternates layout position
 }
 
@@ -169,6 +180,7 @@ const WORKFLOW_STEPS: ProcessStep[] = [
   {
     stepNumber: 1,
     title: "COMPREHENSIVE REVIEWER COMMENT ANALYSIS",
+    icon: "/images/publication-support/scopeofthejournal.webp",
     description:
       "Our subject matter expert team systematically reviews all feedback and suggestions also provided by the journal reviewers or editors. We evaluate critical points, reviewer clarifications, and determine the most appropriate way to respond to reviewer comments.",
     position: "bottom",
@@ -176,6 +188,7 @@ const WORKFLOW_STEPS: ProcessStep[] = [
   {
     stepNumber: 2,
     title: "STRATEGIC POINT-BY-POINT RESPONSE DRAFTING",
+    icon: `${PAGE_IMAGES}/Strategic-Point-by-Point-Response-Drafting.png`,
     description:
       "We write focused, concise, and respectful responses to each reviewer's comment. Our responses may include scientific reasoning, data justification, or references to clarify that your position is communicated clearly and appropriately.",
     position: "top",
@@ -183,6 +196,7 @@ const WORKFLOW_STEPS: ProcessStep[] = [
   {
     stepNumber: 3,
     title: "MANUSCRIPT REVISION AND EDITING",
+    icon: `${PAGE_IMAGES}/Manuscript-Revision-and-Editing.png`,
     description:
       "On the basis of reviewer feedback, our editors have edited the manuscript to add the required changes. We indicate each change using Track Changes or whatever method is necessary for your target journal to present our transparency.",
     position: "bottom",
@@ -190,6 +204,7 @@ const WORKFLOW_STEPS: ProcessStep[] = [
   {
     stepNumber: 4,
     title: "CONSISTENCY AND COMPLIANCE CHECK",
+    icon: `${PAGE_IMAGES}/Consistency-and-Compliance-Check.png`,
     description:
       "We assure you that the responses and manuscript revisions are consistent with the journal's formatting guidelines and editorial policies, upholding an exceptionally high standard of academic professionalism.",
     position: "top",
@@ -197,6 +212,7 @@ const WORKFLOW_STEPS: ProcessStep[] = [
   {
     stepNumber: 5,
     title: "FINAL REVIEW AND QUALITY ASSURANCE",
+    icon: `${PAGE_IMAGES}/Final-Review-and-Quality-Assurance.png`,
     description:
       "Before delivery, the team in charge of quality control checks the response document and revised manuscript for clarity, tone, grammar, and accuracy.",
     position: "bottom",
@@ -204,6 +220,7 @@ const WORKFLOW_STEPS: ProcessStep[] = [
   {
     stepNumber: 6,
     title: "SUPPORT FOR RESUBMISSION",
+    icon: `${PAGE_IMAGES}/Support-for-Resubmission.png`,
     description:
       "We help you with resubmission documentation, including cover letters and any additional materials the medical and life science journal may require. For subsequent revisions, we will continue to support you with addressing any new reviewer comments.",
     position: "top",
@@ -226,20 +243,14 @@ export default function PublicationSupportSections() {
               className="group bg-white border border-slate-200 rounded-sm p-6 shadow-sm border-t-4 border-t-[#083b3a] transition-all duration-300 hover:bg-[#555555] hover:text-white cursor-pointer"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-[#fcf4d9] group-hover:bg-[#666666] flex items-center justify-center flex-shrink-0 transition-colors">
-                  <svg
-                    className="w-5 h-5 text-[#083b3a] group-hover:text-amber-300 transition-colors"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                    />
-                  </svg>
+                <div className="relative w-10 h-10 rounded-full bg-[#fcf4d9] group-hover:bg-[#666666] flex-shrink-0 overflow-hidden">
+                  <Image
+                    src={card.icon}
+                    alt={card.title}
+                    fill
+                    sizes="40px"
+                    className="object-contain"
+                  />
                 </div>
                 <h3 className="text-base font-bold text-[#083b3a] group-hover:text-white transition-colors leading-snug">
                   {card.title}
@@ -316,20 +327,14 @@ export default function PublicationSupportSections() {
                       {!isBottom ? (
                         /* Top Card Block */
                         <div className="group w-full bg-white border border-slate-200 rounded-sm p-4 shadow-sm transition-colors duration-300 hover:bg-[#555555] hover:text-white cursor-pointer">
-                          <div className="w-8 h-8 mb-2 flex items-center justify-center">
-                            <svg
-                              className="w-7 h-7 text-slate-700 group-hover:text-white transition-colors"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={1.5}
-                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-                              />
-                            </svg>
+                          <div className="relative w-8 h-8 mb-2">
+                            <Image
+                              src={step.icon}
+                              alt={step.title}
+                              fill
+                              sizes="32px"
+                              className="object-contain"
+                            />
                           </div>
                           <h3 className="text-xs font-bold text-slate-800 group-hover:text-white mb-2 leading-tight uppercase transition-colors">
                             {step.title}
@@ -357,20 +362,14 @@ export default function PublicationSupportSections() {
                       {isBottom ? (
                         /* Bottom Card Block */
                         <div className="group w-full bg-white border border-slate-200 rounded-sm p-4 shadow-sm transition-colors duration-300 hover:bg-[#555555] hover:text-white cursor-pointer">
-                          <div className="w-8 h-8 mb-2 flex items-center justify-center">
-                            <svg
-                              className="w-7 h-7 text-slate-700 group-hover:text-white transition-colors"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={1.5}
-                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                              />
-                            </svg>
+                          <div className="relative w-8 h-8 mb-2">
+                            <Image
+                              src={step.icon}
+                              alt={step.title}
+                              fill
+                              sizes="32px"
+                              className="object-contain"
+                            />
                           </div>
                           <h3 className="text-xs font-bold text-slate-800 group-hover:text-white mb-2 leading-tight uppercase transition-colors">
                             {step.title}

@@ -41,6 +41,16 @@ const TESTIMONIALS: Testimonial[] = [
     journalImage:
       "/images/publication-support/responding-to-reviewers/the-lancet-of-infectious-disease.jpg",
   },
+  {
+    id: 3,
+    quote:
+      '"Our clinical manuscript had multiple reviewer rounds, but Pubrica supported us through each revision. The manuscript is now published in the Indian Journal of Ophthalmology."',
+    author: "DR. NIRMAL A.,",
+    role: "Senior Consultant Ophthalmologist",
+    journal: "Indian Journal of Ophthalmology",
+    journalImage:
+      "/images/publication-support/responding-to-reviewers/v1-indian-journal-of-ophthalmology_thumb.jpg",
+  },
 ];
 
 const FAQS_COL_1: FAQItem[] = [
@@ -99,12 +109,19 @@ const FAQS_COL_2: FAQItem[] = [
 export default function TestimonialsAndFaq() {
   // FAQ 1 & 5 expanded by default as shown in the screenshot
   const [openFaqs, setOpenFaqs] = useState<number[]>([1, 5]);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const toggleFaq = (id: number) => {
     setOpenFaqs((prev) =>
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id],
     );
   };
+
+  const mobileItem = TESTIMONIALS[activeIndex];
+  const desktopItems = [
+    TESTIMONIALS[activeIndex],
+    TESTIMONIALS[(activeIndex + 1) % TESTIMONIALS.length],
+  ];
 
   return (
     <div className="w-full bg-[#f6f8f8] font-sans text-slate-800">
@@ -129,45 +146,30 @@ export default function TestimonialsAndFaq() {
         </div>
 
         {/* Testimonial Cards Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-6">
-          {TESTIMONIALS.map((item) => (
-            <div
-              key={item.id}
-              className="bg-[#1e4a42] text-white p-6 rounded-sm shadow-md flex justify-between gap-4 items-stretch"
-            >
-              {/* Left Quote & Author Details */}
-              <div className="flex-1 flex flex-col justify-between pr-2">
-                <p className="text-xs leading-relaxed text-slate-100 font-normal italic mb-6">
-                  {item.quote}
-                </p>
-                <div>
-                  <h4 className="text-xs font-bold tracking-wider uppercase text-white">
-                    {item.author}
-                  </h4>
-                  <p className="text-[11px] text-slate-300 italic font-medium">
-                    {item.role}
-                  </p>
-                </div>
-              </div>
-
-              {/* Right Thumbnail Image Box */}
-              <div className="w-32 flex-shrink-0 bg-white p-1 rounded-sm shadow-inner flex items-center justify-center">
-                <Image
-                  src={item.journalImage}
-                  alt={item.journal}
-                  width={217}
-                  height={179}
-                  className="w-full h-36 object-cover rounded-sm"
-                />
-              </div>
-            </div>
+        <div className="grid grid-cols-1 gap-6 max-w-5xl mx-auto mb-6 md:hidden">
+          <TestimonialCard item={mobileItem} />
+        </div>
+        <div className="hidden md:grid grid-cols-2 gap-6 max-w-5xl mx-auto mb-6">
+          {desktopItems.map((item) => (
+            <TestimonialCard key={`${activeIndex}-${item.id}`} item={item} />
           ))}
         </div>
 
         {/* Carousel Indicator Square Dots */}
         <div className="flex justify-center items-center gap-2 pt-2">
-          <span className="w-2.5 h-2.5 bg-[#1e4a42] rounded-xs cursor-pointer" />
-          <span className="w-2.5 h-2.5 border border-[#1e4a42] bg-white rounded-xs cursor-pointer" />
+          {TESTIMONIALS.map((item, index) => (
+            <button
+              key={item.id}
+              type="button"
+              aria-label={`Show testimonial ${index + 1}`}
+              onClick={() => setActiveIndex(index)}
+              className={`w-2.5 h-2.5 rounded-xs cursor-pointer ${
+                activeIndex === index
+                  ? "bg-[#1e4a42]"
+                  : "border border-[#1e4a42] bg-white"
+              }`}
+            />
+          ))}
         </div>
       </section>
 
@@ -243,6 +245,36 @@ export default function TestimonialsAndFaq() {
 
       {/* Dark Footer Strip */}
       <div className="w-full h-3 bg-[#1e4a42]" />
+    </div>
+  );
+}
+
+function TestimonialCard({ item }: { item: Testimonial }) {
+  return (
+    <div className="bg-[#1e4a42] text-white p-6 rounded-sm shadow-md flex justify-between gap-4 items-stretch">
+      <div className="flex-1 flex flex-col justify-between pr-2">
+        <p className="text-xs leading-relaxed text-slate-100 font-normal italic mb-6">
+          {item.quote}
+        </p>
+        <div>
+          <h4 className="text-xs font-bold tracking-wider uppercase text-white">
+            {item.author}
+          </h4>
+          <p className="text-[11px] text-slate-300 italic font-medium">
+            {item.role}
+          </p>
+        </div>
+      </div>
+
+      <div className="w-32 flex-shrink-0 bg-white p-1 rounded-sm shadow-inner flex items-center justify-center">
+        <Image
+          src={item.journalImage}
+          alt={item.journal}
+          width={217}
+          height={179}
+          className="w-full h-36 object-cover rounded-sm"
+        />
+      </div>
     </div>
   );
 }
