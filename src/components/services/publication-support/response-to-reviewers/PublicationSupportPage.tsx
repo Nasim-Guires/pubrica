@@ -1,4 +1,5 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Image from "next/image";
 import React from "react";
 
 // ================= TYPES OF RESPONSES DATA =================
@@ -350,9 +351,11 @@ export default function PublicationSupportPage() {
       <section className="max-w-5xl mx-auto px-4 my-12">
         <div className="bg-[#f2faf5] p-8 rounded-sm shadow-sm flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/3 flex-shrink-0">
-            <img
-              src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80"
+            <Image
+              src="/images/publication-support/responding-to-reviewers/response-reviewer-Sample-Work-min.webp"
               alt="Response to Reviewer Sample Work"
+              width={723}
+              height={1024}
               className="w-full h-64 object-cover rounded-sm shadow-md"
             />
           </div>

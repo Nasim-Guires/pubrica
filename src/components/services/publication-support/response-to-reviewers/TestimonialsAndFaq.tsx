@@ -1,5 +1,6 @@
 "use client"
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Image from "next/image";
 import React, { useState } from "react";
 
 // ================= DATA TYPES =================
@@ -28,7 +29,7 @@ const TESTIMONIALS: Testimonial[] = [
     role: "Oncology Researcher",
     journal: "Journal of Clinical Oncology",
     journalImage:
-      "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=300&q=80",
+      "/images/publication-support/responding-to-reviewers/journal-of-clinical-oncology.jpg",
   },
   {
     id: 2,
@@ -38,7 +39,7 @@ const TESTIMONIALS: Testimonial[] = [
     role: "Scholar in Biotechnology",
     journal: "The Lancet Infectious Diseases",
     journalImage:
-      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=300&q=80",
+      "/images/publication-support/responding-to-reviewers/the-lancet-of-infectious-disease.jpg",
   },
 ];
 
@@ -151,9 +152,11 @@ export default function TestimonialsAndFaq() {
 
               {/* Right Thumbnail Image Box */}
               <div className="w-32 flex-shrink-0 bg-white p-1 rounded-sm shadow-inner flex items-center justify-center">
-                <img
+                <Image
                   src={item.journalImage}
                   alt={item.journal}
+                  width={217}
+                  height={179}
                   className="w-full h-36 object-cover rounded-sm"
                 />
               </div>

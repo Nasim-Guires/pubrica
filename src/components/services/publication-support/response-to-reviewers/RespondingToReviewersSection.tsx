@@ -7,15 +7,15 @@ import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 const complianceStandards = [
   {
     title: "Committee on Publication Ethics (COPE)",
-    logo: "/images/standards/cope-logo.png",
+    logo: "/images/publication-support/responding-to-reviewers/COPE_thumb.png",
   },
   {
     title: "International Committee of Medical Journal Editors (ICMJE)",
-    logo: "/images/standards/icmje-logo.png",
+    logo: "/images/publication-support/responding-to-reviewers/ICMJE-1_thumb-2.png",
   },
   {
     title: "Consolidated Standards of Reporting Trials (CONSORT)",
-    logo: "/images/standards/consort-logo.png",
+    logo: "/images/publication-support/responding-to-reviewers/Consort-Logo.webp",
   },
 ];
 

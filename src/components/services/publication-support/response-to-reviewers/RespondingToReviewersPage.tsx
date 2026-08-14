@@ -209,7 +209,7 @@ export default function RespondingToReviewersPage() {
           {/* Side Image Column */}
           <div className="lg:col-span-5 relative w-full h-[320px] rounded-sm overflow-hidden shadow-sm">
             <Image
-              src="/images/responding-to-reviewers.jpg"
+              src="/images/publication-support/responding-to-reviewers/Plagiarism-Checker-Report-.jpg"
               alt="Researcher taking notes and editing reviewer comments"
               fill
               priority
