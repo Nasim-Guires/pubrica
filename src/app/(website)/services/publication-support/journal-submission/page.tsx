@@ -1,4 +1,4 @@
-import InsightsSection from "@/components/services/editing-translation/Insights/InsightsSection";
+import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 import JournalSubmissionBottomSections from "@/components/services/publication-support/journal-submission/JournalSubmissionBottomSections";
 import JournalSubmissionPackagesAndWhyChoose from "@/components/services/publication-support/journal-submission/JournalSubmissionPackagesAndWhyChoose";
 import JournalSubmissionPage from "@/components/services/publication-support/journal-submission/JournalSubmissionPage";
