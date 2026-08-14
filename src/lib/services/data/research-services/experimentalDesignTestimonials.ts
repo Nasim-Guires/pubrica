@@ -1,30 +1,32 @@
 export const experimentalDesignTestimonials = [
   {
-    image: "/images/testimonials/ijo.jpg",
+    image:
+      "/images/research-services/experimental-design/indian-journal-of-ophthalmology.png",
     quote:
       "The experts at Pubrica guided us through the entire experimental design process, from hypothesis formulation to data collection strategy. Their adherence to CONSORT guidelines ensured our research was robust, transparent, and ready for high-impact journal submission.",
     name: "Prof. David Mitchell",
     designation: "Oncology Researcher",
     organization: "UK",
-    flag: "/images/flags/uk.png",
+    flag: "/images/research-services/uk-flag-.png",
   },
   {
-    image: "/images/testimonials/the-lancet-oncology.jpg",
+    image: "/images/research-services/experimental-design/the-lancet.png",
     quote:
       "Our collaborative experience with Pubrica's experimental design team exceeded expectations. They not only helped us meet SPIRIT protocol requirements but also provided valuable insights that enhanced our study's scientific contribution.",
     name: "Dr. Carlos Ramirez",
     designation: "Public Health Researcher",
     organization: "Spain",
-    flag: "/images/flags/spain.png",
+    flag: "/images/editing-and-translation/post-editing/spain.png",
   },
   {
-    image: "/images/testimonials/jama-oncology.jpg",
+    image:
+      "/images/research-services/experimental-design/jama-oncology-journal-2.png",
     quote:
       "Pubrica's experimental design team helped us refine our study protocol to meet both ethical and methodological standards. Their attention to detail in sample size calculation and randomization planning was instrumental in securing IRB approval and producing publishable results.",
     name: "Dr. Ayesha Khan",
     designation: "Clinical Researcher",
     organization: "UAE",
-    flag: "/images/flags/uae.png",
+    flag: "/images/research-services/experimental-design/UAE.png",
   },
 ];
 

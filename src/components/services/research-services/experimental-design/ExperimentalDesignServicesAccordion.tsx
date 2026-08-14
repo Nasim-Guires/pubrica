@@ -126,25 +126,13 @@ export default function ExperimentalDesignServicesAccordion() {
             {/* Soft Gray/Blue Backdrop Shape */}
             <div className="absolute w-[280px] sm:w-[320px] h-[280px] sm:h-[320px] bg-slate-100 rounded-full top-6 left-6 -z-10" />
 
-            {/* Top Image Card (Methodology Book) */}
-            <div className="absolute top-0 left-0 w-48 sm:w-60 h-36 sm:h-44 rounded-xl overflow-hidden shadow-lg border-2 border-white z-10">
+            <div className="relative w-full h-full min-h-[340px] sm:min-h-[400px] rounded-xl overflow-hidden shadow-lg border-2 border-white z-10">
               <Image
-                src="/images/services/methodology-book.jpg"
-                alt="Methodology study textbook with glasses"
+                src="/images/research-services/experimental-design/experimental-design-we-offer.png"
+                alt="Experimental design services we offer"
                 fill
-                className="object-cover"
-                sizes="(max-width: 640px) 192px, 240px"
-              />
-            </div>
-
-            {/* Bottom Image Card (Researchers in Lab) */}
-            <div className="absolute bottom-0 right-2 sm:right-6 w-52 sm:w-64 h-40 sm:h-48 rounded-xl overflow-hidden shadow-lg border-2 border-white z-20">
-              <Image
-                src="/images/services/researchers-microscope.jpg"
-                alt="Researchers conducting analysis with microscope"
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) 208px, 256px"
+                className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 40vw"
               />
             </div>
           </div>

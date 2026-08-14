@@ -3,22 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Search,
-  BookOpen,
-  Lightbulb,
-  TrendingUp,
-  GitMerge,
-  Users,
-  Shuffle,
-  Sliders,
-  Database,
-  BarChart2,
-  ShieldCheck,
-  FileCheck,
-  ArrowRight,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+
+const IMG = "/images/research-services/experimental-design/";
 
 interface ServeCard {
   id: string;
@@ -35,7 +23,7 @@ const serveCards: ServeCard[] = [
     subTitle: "Experimental Design for Theses, Dissertations, and Publications",
     description:
       "We design and review experimental research methodologies including statistical and research methodology design for theses, dissertations, and academic publications (manuscript), ensuring accuracy, reproducibility, and compliance with journal standards.",
-    imageSrc: "/images/services/academic-researchers.jpg",
+    imageSrc: `${IMG}Academic-Researchers.png`,
   },
   {
     id: "pharma",
@@ -43,7 +31,7 @@ const serveCards: ServeCard[] = [
     subTitle: "Rigorous Preclinical & Clinical Trial Design",
     description:
       "Pubrica provides protocol development and experimental design support for pre-clinical studies, randomized controlled trials (RCTs), and clinical trial designs for pharma studies, helping companies generate data suitable for regulatory approval.",
-    imageSrc: "/images/services/pharma-biotech.jpg",
+    imageSrc: `${IMG}Pharmaceutical-Biotechnology-Companies-1.png`,
   },
   {
     id: "cro",
@@ -51,7 +39,7 @@ const serveCards: ServeCard[] = [
     subTitle: "Scalable Statistical & Protocol Optimization",
     description:
       "Our team offers independent study design review, statistical validation, and methodological consultation and bias-free experimental research design support to CROs, ensuring scientifically sound and bias-free experimental studies.",
-    imageSrc: "/images/services/clinical-research.jpg",
+    imageSrc: `${IMG}Clinical-Research-Organizations-CROs-1.png`,
   },
   {
     id: "med-device",
@@ -59,7 +47,7 @@ const serveCards: ServeCard[] = [
     subTitle: "Usability & Performance Testing Protocols",
     description:
       "We develop and validate experimental and quasi-experimental designs to meet regulatory requirements for diagnostic, screening, and interventional studies involving medical devices.",
-    imageSrc: "/images/services/medical-device.jpg",
+    imageSrc: `${IMG}Medical-Device-Manufacturers.png`,
   },
   {
     id: "public-health",
@@ -67,13 +55,13 @@ const serveCards: ServeCard[] = [
     subTitle: "Epidemiological and Intervention Design",
     description:
       "From epidemiological designs to intervention studies, Pubrica ensures that observational, descriptive, and community-based research designs are structured for scientific accuracy and policy relevance.",
-    imageSrc: "/images/services/public-health.jpg",
+    imageSrc: `${IMG}Public-Health-Researchers.png`,
   },
 ];
 
 interface ProcessStep {
   number: number;
-  icon: React.ElementType;
+  iconSrc: string;
   title: string;
   role: string;
   description: string;
@@ -82,7 +70,7 @@ interface ProcessStep {
 const processSteps: ProcessStep[] = [
   {
     number: 1,
-    icon: Search,
+    iconSrc: `${IMG}Research-Problem-Identification-Subject-Specialists.png`,
     title: "Research Problem Identification",
     role: "Subject Specialists",
     description:
@@ -90,7 +78,7 @@ const processSteps: ProcessStep[] = [
   },
   {
     number: 2,
-    icon: BookOpen,
+    iconSrc: `${IMG}Literature-Review-Gap-Analysis.png`,
     title: "Literature Review & Gap Analysis",
     role: "Subject Specialists + Methodology Experts",
     description:
@@ -98,7 +86,7 @@ const processSteps: ProcessStep[] = [
   },
   {
     number: 3,
-    icon: Lightbulb,
+    iconSrc: `${IMG}Hypothesis-Formulation.png`,
     title: "Hypothesis Formulation",
     role: "Subject Specialists + Methodology Experts",
     description:
@@ -106,7 +94,7 @@ const processSteps: ProcessStep[] = [
   },
   {
     number: 4,
-    icon: TrendingUp,
+    iconSrc: `${IMG}Variable-Definition-Operationalization.png`,
     title: "Variable Definition & Operationalization",
     role: "Methodology Experts",
     description:
@@ -114,7 +102,7 @@ const processSteps: ProcessStep[] = [
   },
   {
     number: 5,
-    icon: GitMerge,
+    iconSrc: `${IMG}Study-Design-Protocol-Development.png`,
     title: "Study Design & Protocol Development",
     role: "Methodology Experts + Clinicians",
     description:
@@ -122,7 +110,7 @@ const processSteps: ProcessStep[] = [
   },
   {
     number: 6,
-    icon: Users,
+    iconSrc: `${IMG}Sample-Size-Recruitment.png`,
     title: "Sample Size & Recruitment",
     role: "Statisticians + Methodology Experts",
     description:
@@ -130,7 +118,7 @@ const processSteps: ProcessStep[] = [
   },
   {
     number: 7,
-    icon: Shuffle,
+    iconSrc: `${IMG}Randomization-Control-Measures.png`,
     title: "Randomization & Control Measures",
     role: "Statisticians + Clinicians",
     description:
@@ -138,7 +126,7 @@ const processSteps: ProcessStep[] = [
   },
   {
     number: 8,
-    icon: Sliders,
+    iconSrc: `${IMG}Measurements-Instrumentation.png`,
     title: "Measurements & Instrumentation",
     role: "Subject Specialists + Methodology Experts",
     description:
@@ -146,7 +134,7 @@ const processSteps: ProcessStep[] = [
   },
   {
     number: 9,
-    icon: Database,
+    iconSrc: `${IMG}Data-Collection-Methods-.png`,
     title: "Data Collection Methods",
     role: "Methodology Experts + Regulatory Consultants",
     description:
@@ -154,7 +142,7 @@ const processSteps: ProcessStep[] = [
   },
   {
     number: 10,
-    icon: BarChart2,
+    iconSrc: `${IMG}Data-Analysis-Statistical-Plan.png`,
     title: "Data Analysis & Statistical Plan",
     role: "Statisticians",
     description:
@@ -162,7 +150,7 @@ const processSteps: ProcessStep[] = [
   },
   {
     number: 11,
-    icon: ShieldCheck,
+    iconSrc: `${IMG}Ethical-Regulatory-Compliance.png`,
     title: "Ethical & Regulatory Compliance",
     role: "Regulatory Experts",
     description:
@@ -170,7 +158,7 @@ const processSteps: ProcessStep[] = [
   },
   {
     number: 12,
-    icon: FileCheck,
+    iconSrc: `${IMG}Interpretation-Validation-Reporting.png`,
     title: "Interpretation, Validation & Reporting",
     role: "Subject Specialists + Methodology Experts",
     description:
@@ -299,7 +287,6 @@ export default function WhoWeServeAndProcess() {
           {/* Grid of Steps */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {processSteps.map((step, idx) => {
-              const IconComp = step.icon;
               const isEndOfRow = (idx + 1) % 4 === 0;
 
               return (
@@ -307,8 +294,14 @@ export default function WhoWeServeAndProcess() {
                   <div className="bg-white rounded-xl p-6 shadow-xs border border-slate-200/80 flex-1 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div className="space-y-4">
                       {/* Icon Header */}
-                      <div className="p-3 bg-slate-100 rounded-lg w-fit text-[#0e3b38]">
-                        <IconComp className="w-6 h-6 stroke-[1.5]" />
+                      <div className="p-3 bg-slate-100 rounded-lg w-fit">
+                        <Image
+                          src={step.iconSrc}
+                          alt=""
+                          width={24}
+                          height={24}
+                          className="w-6 h-6 object-contain"
+                        />
                       </div>
 
                       {/* Title & Role */}

@@ -1,30 +1,33 @@
 export const biostatisticalProgrammingTestimonials = [
   {
-    image: "/images/testimonials/the-lancet-oncology.jpg",
+    image:
+      "/images/research-services/biostatistics-and-statistical-programming-service/the-lancet-of-oncolgy-.png",
     quote:
       "Pubrica's biostatistical programming team delivered high-quality, submission-ready datasets and analyses that met strict FDA and CDISC standards. Their attention to detail and proactive communication ensured our clinical trial data package was accepted without any queries.",
     name: "Dr. Emily Carter",
     designation: "Senior Biostatistics Manager",
     organization: "USA",
-    flag: "/images/flags/usa.png",
+    flag: "/images/research-services/biostatistics-and-statistical-programming-service/usa-1-1.png",
   },
   {
-    image: "/images/testimonials/radiology.jpg",
+    image:
+      "/images/research-services/biostatistics-and-statistical-programming-service/RSNA-1-2.png",
     quote:
       "From data cleaning to final TLF generation, Pubrica's biostatistical programmers were exceptionally skilled. Their knowledge of PMDA guidelines and their quick turnaround time helped us achieve regulatory approval faster than expected.",
     name: "Kenji Watanabe",
     designation: "Chief Scientific Officer",
     organization: "Japan",
-    flag: "/images/flags/japan.png",
+    flag: "/images/editing-and-translation/japan.png",
   },
   {
-    image: "/images/testimonials/jama-oncology.jpg",
+    image:
+      "/images/research-services/biostatistics-and-statistical-programming-service/jama-oncology-journal-3.png",
     quote:
       "Working with Pubrica was a seamless experience. Their expertise in SDTM and ADaM programming helped us meet EMA requirements ahead of schedule, and their validation process gave us complete confidence in the accuracy of our deliverables.",
     name: "James Whitmore",
     designation: "Director of Data Management",
     organization: "UK",
-    flag: "/images/flags/uk.png",
+    flag: "/images/research-services/uk-flag-.png",
   },
 ];
 

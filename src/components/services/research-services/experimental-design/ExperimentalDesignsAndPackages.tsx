@@ -456,7 +456,7 @@ export default function ExperimentalDesignsAndPackages() {
           <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
             <div className="h-16 relative w-32 flex items-center justify-center">
               <Image
-                src="/images/compliance/ich-gcp.png"
+                src="/images/research-services/experimental-design/International-Council-for-Harmonisation-%E2%80%93-Good-Clinical-Practice-1.png"
                 alt="ICH GCP Logo"
                 fill
                 className="object-contain"
@@ -477,7 +477,7 @@ export default function ExperimentalDesignsAndPackages() {
           <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
             <div className="h-16 relative w-32 flex items-center justify-center">
               <Image
-                src="/images/compliance/consort.png"
+                src="/images/research-services/experimental-design/Consolidated-Standards-of-Reporting-Trials.png"
                 alt="CONSORT SPIRIT Logo"
                 fill
                 className="object-contain"
@@ -498,7 +498,7 @@ export default function ExperimentalDesignsAndPackages() {
           <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
             <div className="h-16 relative w-28 flex items-center justify-center">
               <Image
-                src="/images/compliance/strobe.png"
+                src="/images/research-services/experimental-design/STROBE.png"
                 alt="STROBE Logo"
                 fill
                 className="object-contain"
@@ -519,7 +519,7 @@ export default function ExperimentalDesignsAndPackages() {
           <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
             <div className="h-16 relative w-28 flex items-center justify-center">
               <Image
-                src="/images/compliance/arrive.png"
+                src="/images/research-services/experimental-design/Animal-Research-Reporting-of-In-Vivo-Experiments-%E2%80%93-ARRIVE.png"
                 alt="ARRIVE Logo"
                 fill
                 className="object-contain"
@@ -540,7 +540,7 @@ export default function ExperimentalDesignsAndPackages() {
           <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
             <div className="h-16 relative w-24 flex items-center justify-center">
               <Image
-                src="/images/compliance/iso.png"
+                src="/images/research-services/experimental-design/ISO-Standards.png"
                 alt="ISO Standards Logo"
                 fill
                 className="object-contain"
@@ -560,7 +560,7 @@ export default function ExperimentalDesignsAndPackages() {
           <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
             <div className="h-16 relative w-28 flex items-center justify-center">
               <Image
-                src="/images/compliance/who-fda.png"
+                src="/images/research-services/experimental-design/WHO-FDA-Guidance.png"
                 alt="WHO and FDA Guidance Logo"
                 fill
                 className="object-contain"
@@ -586,10 +586,10 @@ export default function ExperimentalDesignsAndPackages() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-4 relative h-64 md:h-80 w-full rounded-md overflow-hidden shadow-xs">
             <Image
-              src="/images/sample-work-lab.jpg"
+              src="/images/research-services/experimental-design/Experimental-Design-Services-Sample-Work.png"
               alt="Experimental Design Sample Work"
               fill
-              className="object-cover"
+              className="object-contain bg-white"
             />
           </div>
 
@@ -660,9 +660,13 @@ export default function ExperimentalDesignsAndPackages() {
           <div className="bg-[#d2dedb]/40 rounded-xl overflow-hidden border border-slate-200 flex flex-col justify-between">
             <div className="p-6 space-y-6">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-lg border border-amber-300">
-                  B
-                </div>
+                <Image
+                  src="/images/editing-and-translation/basic-pacakge.png"
+                  alt="Basic package"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 object-contain"
+                />
                 <h3 className="text-lg font-bold text-slate-900">Basic</h3>
               </div>
 
@@ -708,9 +712,13 @@ export default function ExperimentalDesignsAndPackages() {
           <div className="bg-[#d9cbe2]/40 rounded-xl overflow-hidden border border-slate-200 flex flex-col justify-between">
             <div className="p-6 space-y-6">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-lg border border-purple-300">
-                  S
-                </div>
+                <Image
+                  src="/images/publication-support/art-work-preparation/S.png"
+                  alt="Standard package"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 object-contain"
+                />
                 <h3 className="text-lg font-bold text-purple-900">Standard</h3>
               </div>
 
@@ -758,9 +766,13 @@ export default function ExperimentalDesignsAndPackages() {
           <div className="bg-[#fcdcb9]/50 rounded-xl overflow-hidden border border-slate-200 flex flex-col justify-between">
             <div className="p-6 space-y-6">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-lg border border-orange-300">
-                  C
-                </div>
+                <Image
+                  src="/images/research-services/biostatistics-and-statistical-programming-service/c-box-icons.png"
+                  alt="Comprehensive package"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 object-contain"
+                />
                 <h3 className="text-lg font-bold text-orange-900">
                   Comprehensive
                 </h3>
@@ -811,9 +823,13 @@ export default function ExperimentalDesignsAndPackages() {
           <div className="bg-[#e4cd9f]/50 rounded-xl overflow-hidden border border-slate-200 flex flex-col justify-between">
             <div className="p-6 space-y-6">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg border border-amber-400">
-                  C
-                </div>
+                <Image
+                  src="/images/research-services/biostatistics-and-statistical-programming-service/c-box-icons.png"
+                  alt="Custom package"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 object-contain"
+                />
                 <h3 className="text-lg font-bold text-amber-950">Custom</h3>
               </div>
 

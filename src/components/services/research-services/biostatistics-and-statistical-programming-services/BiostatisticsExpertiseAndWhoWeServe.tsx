@@ -11,13 +11,16 @@ interface AudienceCard {
   imageAlt: string;
 }
 
+const IMG =
+  "/images/research-services/biostatistics-and-statistical-programming-service/";
+
 const audienceCards: AudienceCard[] = [
   {
     id: "pharma-biotech",
     title: "Pharmaceutical & Biotechnology Companies",
     description:
       "End-to-end biostatistical and statistical programming support for clinical trials, from early-phase studies to post-marketing surveillance.",
-    imageSrc: "/images/services/pharma-biotech.jpg",
+    imageSrc: `${IMG}Pharmaceutical-Biotechnology-Companies-2.png`,
     imageAlt: "Lab scientist working with microscope",
   },
   {
@@ -25,7 +28,7 @@ const audienceCards: AudienceCard[] = [
     title: "Clinical Research Organizations (CROs)",
     description:
       "Flexible programming and analysis solutions that integrate seamlessly with CRO workflows and timelines.",
-    imageSrc: "/images/services/cros.jpg",
+    imageSrc: `${IMG}Clinical-Research-Organizations-CROs.png`,
     imageAlt: "Clinical research team analyzing samples",
   },
   {
@@ -33,7 +36,7 @@ const audienceCards: AudienceCard[] = [
     title: "Academic & Research Institutions",
     description:
       "Statistical programming for academic research, grant projects, and publication-ready analyses.",
-    imageSrc: "/images/services/academic-research.jpg",
+    imageSrc: `${IMG}Academic-Research-Institutions.png`,
     imageAlt: "Audience attending academic research presentation",
   },
   {
@@ -41,7 +44,7 @@ const audienceCards: AudienceCard[] = [
     title: "Medical Device Manufacturers",
     description:
       "Regulatory-compliant biostatistical programming for device trials, usability studies, and post-market evaluations.",
-    imageSrc: "/images/services/medical-device.jpg",
+    imageSrc: `${IMG}Medical-Device-Manufacturers-1.png`,
     imageAlt: "Cleanroom medical device manufacturing unit",
   },
   {
@@ -49,7 +52,7 @@ const audienceCards: AudienceCard[] = [
     title: "Healthcare Providers & Hospitals",
     description:
       "Data management, statistical analysis, and reporting for clinical research, patient outcome studies, and quality improvement initiatives.",
-    imageSrc: "/images/services/healthcare-providers.jpg",
+    imageSrc: `${IMG}Healthcare-Providers-Hospitals.png`,
     imageAlt: "Group of healthcare professionals and doctors",
   },
   {
@@ -57,7 +60,7 @@ const audienceCards: AudienceCard[] = [
     title: "Regulatory Agencies & Government Bodies",
     description:
       "Submission-ready datasets, tables, listings, and figures (TLFs) that meet FDA, EMA, and ICH standards.",
-    imageSrc: "/images/services/regulatory-agencies.jpg",
+    imageSrc: `${IMG}Regulatory-Agencies-Government-Bodies.png`,
     imageAlt: "Legal and regulatory compliance consultation",
   },
 ];
@@ -93,23 +96,13 @@ export default function BiostatisticsExpertiseAndWhoWeServe() {
               {/* Circular light background accent */}
               <div className="absolute top-0 right-4 w-56 h-56 bg-slate-100 rounded-full -z-10" />
 
-              {/* Main Top Chart Image */}
-              <div className="absolute top-0 left-0 w-3/4 h-52 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-md border border-slate-100">
                 <Image
-                  src="/images/services/data-chart-magnifier.jpg"
-                  alt="Data analysis charts and magnifying glass"
+                  src={`${IMG}Our-Biostatistical-Expertise-Includes.png`}
+                  alt="Our biostatistical expertise collage"
                   fill
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Overlapping Bottom Desk Image */}
-              <div className="absolute bottom-0 right-0 w-2/3 h-48 rounded-2xl overflow-hidden shadow-lg border-2 border-white">
-                <Image
-                  src="/images/services/researcher-laptop.jpg"
-                  alt="Researcher working on statistical data"
-                  fill
-                  className="object-cover"
+                  className="object-contain"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
                 />
               </div>
             </div>

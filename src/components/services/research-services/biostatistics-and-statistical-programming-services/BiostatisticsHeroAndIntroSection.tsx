@@ -108,7 +108,7 @@ export default function BiostatisticsHeroAndIntroSection() {
               <div className="absolute -inset-2 bg-[#0e2c28] rounded-2xl transform translate-x-3 translate-y-3" />
               <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/services/biostatistics-programming.jpg"
+                  src="/images/research-services/biostatistics-and-statistical-programming-service/ENSURE_1-1.webp"
                   alt="Biostatisticians analyzing clinical data"
                   fill
                   className="object-cover"

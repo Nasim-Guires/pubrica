@@ -1,21 +1,16 @@
 "use client";
 
 import React from "react";
-import {
-  ClipboardList,
-  Database,
-  Binary,
-  CheckCircle2,
-  BarChart3,
-  FileCheck,
-  LucideIcon,
-} from "lucide-react";
+import Image from "next/image";
+
+const IMG =
+  "/images/research-services/biostatistics-and-statistical-programming-service/";
 
 interface Step {
   stepNumber: number;
   title: string;
   description: string;
-  icon: LucideIcon;
+  iconSrc: string;
   position: "top" | "bottom";
 }
 
@@ -25,7 +20,7 @@ const steps: Step[] = [
     title: "REQUIREMENT GATHERING & PROJECT SCOPING",
     description:
       "We begin by understanding your study objectives, therapeutic area, regulatory requirements, and preferred statistical methodologies. This helps us design a tailored programming strategy that aligns with your research goals.",
-    icon: ClipboardList,
+    iconSrc: `${IMG}Understand-ing-Your-Needs.png`,
     position: "top",
   },
   {
@@ -33,7 +28,7 @@ const steps: Step[] = [
     title: "DATA ACQUISITION & PREPARATION",
     description:
       "Our team collects and organizes raw datasets, performing data cleaning, transformation, and validation to ensure accuracy, completeness, and compliance with CDISC standards (SDTM, ADaM).",
-    icon: Database,
+    iconSrc: `${IMG}Data-Collection-Preparation.png`,
     position: "bottom",
   },
   {
@@ -41,7 +36,7 @@ const steps: Step[] = [
     title: "STATISTICAL PROGRAMMING & ANALYSIS",
     description:
       "Using advanced tools like SAS, we develop statistical programs for generating datasets, TLFs that support your SAP. This includes descriptive, inferential, and predictive modelling as per study requirements.",
-    icon: Binary,
+    iconSrc: `${IMG}Model-Development.png`,
     position: "top",
   },
   {
@@ -49,7 +44,7 @@ const steps: Step[] = [
     title: "QUALITY CONTROL & VALIDATION",
     description:
       "We implement rigorous QC checks to ensure programming accuracy, consistency, and minimize the risk of delays during regulatory review.",
-    icon: CheckCircle2,
+    iconSrc: `${IMG}Validation-Testing.png`,
     position: "bottom",
   },
   {
@@ -57,7 +52,7 @@ const steps: Step[] = [
     title: "REPORTING & VISUALIZATION",
     description:
       "Our team delivers detailed statistical reports, visualizations, and submission-ready outputs that enhance data interpretation and decision-making for stakeholders.",
-    icon: BarChart3,
+    iconSrc: `${IMG}Visualization-Reporting-Testing.png`,
     position: "top",
   },
   {
@@ -65,7 +60,7 @@ const steps: Step[] = [
     title: "REGULATORY SUBMISSION SUPPORT",
     description:
       "We provide regulatory submission programming services, ensuring all deliverables meet global compliance standards and are ready for submission to agencies like the FDA, EMA, and PMDA.",
-    icon: FileCheck,
+    iconSrc: `${IMG}Delivery-Support.png`,
     position: "bottom",
   },
 ];
@@ -148,7 +143,6 @@ export default function BiostatisticsProcessAndTools() {
           <div className="absolute top-1/2 left-0 right-0 h-2 bg-[#008ba3] -translate-y-1/2 z-0" />
 
           {steps.map((step) => {
-            const IconComponent = step.icon;
             const isTop = step.position === "top";
 
             return (
@@ -174,7 +168,13 @@ export default function BiostatisticsProcessAndTools() {
                 >
                   {/* Icon */}
                   <div className="flex justify-center pt-2">
-                    <IconComponent className="w-10 h-10 text-slate-700 group-hover:text-white group-focus:text-white transition-colors duration-200" />
+                    <Image
+                      src={step.iconSrc}
+                      alt=""
+                      width={40}
+                      height={40}
+                      className="w-10 h-10 object-contain group-hover:invert group-focus:invert transition duration-200"
+                    />
                   </div>
 
                   {/* Title */}

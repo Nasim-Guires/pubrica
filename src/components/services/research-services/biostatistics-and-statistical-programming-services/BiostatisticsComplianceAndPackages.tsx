@@ -2,23 +2,16 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import {
-  FileCheck2,
-  Scale,
-  BookOpen,
-  ShieldCheck,
-  Code2,
-  Plus,
-  Minus,
-  ArrowRightCircle,
-  LucideIcon,
-} from "lucide-react";
+import { Plus, Minus, ArrowRightCircle } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+
+const IMG =
+  "/images/research-services/biostatistics-and-statistical-programming-service/";
 
 interface ComplianceCard {
   id: string;
   title: string;
-  icon: LucideIcon;
+  iconSrc: string;
   defaultOpen: boolean;
   content: string[];
 }
@@ -27,7 +20,7 @@ const complianceItems: ComplianceCard[] = [
   {
     id: "cdisc",
     title: "CDISC Standards",
-    icon: FileCheck2,
+    iconSrc: `${IMG}CDISC-Standards.png`,
     defaultOpen: true, // Card 1: OPEN by default
     content: [
       "SDTM (Study Data Tabulation Model) – Organizing and formatting collected clinical trial data for submission.",
@@ -37,7 +30,7 @@ const complianceItems: ComplianceCard[] = [
   {
     id: "regulatory",
     title: "Regulatory Authority Guidelines",
-    icon: Scale,
+    iconSrc: `${IMG}Regulatory-Authority-Guidelines.png`,
     defaultOpen: false, // Card 2: CLOSED by default
     content: [
       "FDA (Food and Drug Administration – USA) submission standards.",
@@ -48,7 +41,7 @@ const complianceItems: ComplianceCard[] = [
   {
     id: "ich",
     title: "ICH Guidelines",
-    icon: BookOpen,
+    iconSrc: `${IMG}ICH-Guidelines.png`,
     defaultOpen: false, // Card 3: CLOSED by default
     content: [
       "ICH E9 – Statistical principles for clinical trials.",
@@ -58,7 +51,7 @@ const complianceItems: ComplianceCard[] = [
   {
     id: "data-privacy",
     title: "Data Privacy & Security Compliance",
-    icon: ShieldCheck,
+    iconSrc: `${IMG}Data-Privacy-Security-Compliance.png`,
     defaultOpen: true, // Card 4: OPEN by default
     content: [
       "HIPAA (Health Insurance Portability and Accountability Act – USA).",
@@ -68,7 +61,7 @@ const complianceItems: ComplianceCard[] = [
   {
     id: "software-validation",
     title: "Software & Validation Standards",
-    icon: Code2,
+    iconSrc: `${IMG}Software-Validation-Standards.png`,
     defaultOpen: true, // Card 5: OPEN by default
     content: [
       "SAS-compliant programming workflows with rigorous quality control (QC) and validation processes.",
@@ -79,8 +72,7 @@ const complianceItems: ComplianceCard[] = [
 
 interface PackageCard {
   id: string;
-  badge: string;
-  badgeBg: string;
+  iconSrc: string;
   title: string;
   subtitle: string;
   bgColor: string;
@@ -92,8 +84,7 @@ interface PackageCard {
 const packageCards: PackageCard[] = [
   {
     id: "basic",
-    badge: "B",
-    badgeBg: "bg-amber-100 text-amber-800 border-amber-300",
+    iconSrc: "/images/editing-and-translation/basic-pacakge.png",
     title: "Basic",
     subtitle: "Data Preparation & Cleaning",
     bgColor: "bg-[#e2ece9]",
@@ -108,8 +99,7 @@ const packageCards: PackageCard[] = [
   },
   {
     id: "standard",
-    badge: "S",
-    badgeBg: "bg-purple-100 text-purple-800 border-purple-300",
+    iconSrc: "/images/publication-support/art-work-preparation/S.png",
     title: "Standard",
     subtitle: "Statistical Programming & Analysis",
     bgColor: "bg-[#d8c3df]",
@@ -126,8 +116,7 @@ const packageCards: PackageCard[] = [
   },
   {
     id: "premium",
-    badge: "P",
-    badgeBg: "bg-amber-100 text-amber-900 border-amber-300",
+    iconSrc: "/images/editing-and-translation/pro.webp",
     title: "Premium",
     subtitle: "End-To-End Biostatistical Support",
     bgColor: "bg-[#e2c7a0]",
@@ -144,8 +133,7 @@ const packageCards: PackageCard[] = [
   },
   {
     id: "custom",
-    badge: "C",
-    badgeBg: "bg-pink-100 text-pink-800 border-pink-300",
+    iconSrc: `${IMG}c-box-icons.png`,
     title: "Custom",
     subtitle: "Tailored Solutions",
     bgColor: "bg-[#fcd2d1]",
@@ -199,7 +187,6 @@ export default function BiostatisticsComplianceAndPackages() {
         {/* Collapsible Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {complianceItems.map((item) => {
-            const IconComponent = item.icon;
             const isOpen = !!openCards[item.id];
 
             return (
@@ -214,8 +201,13 @@ export default function BiostatisticsComplianceAndPackages() {
                   className="w-full bg-[#edf8f5] hover:bg-[#e2f3ee] p-4 flex items-center justify-between transition-colors text-left focus:outline-none"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="p-1.5 bg-white rounded border border-emerald-200 text-[#0e3b38]">
-                      <IconComponent className="w-5 h-5" />
+                    <div className="relative w-8 h-8 p-1.5 bg-white rounded border border-emerald-200 shrink-0">
+                      <Image
+                        src={item.iconSrc}
+                        alt=""
+                        fill
+                        className="object-contain p-1"
+                      />
                     </div>
                     <h3 className="font-bold text-sm sm:text-base text-[#0e3b38] leading-tight">
                       {item.title}
@@ -271,10 +263,10 @@ export default function BiostatisticsComplianceAndPackages() {
           {/* Left Sample Image */}
           <div className="md:col-span-5 relative w-full h-64 sm:h-72 rounded-lg overflow-hidden shadow-md">
             <Image
-              src="/images/services/sample-work-preview.jpg"
+              src={`${IMG}Biostatistics-and-Statistical-Programming-Services-Sample-Work.png`}
               alt="Biostatistics sample work document review"
               fill
-              className="object-cover"
+              className="object-contain bg-white"
             />
           </div>
 
@@ -346,10 +338,14 @@ export default function BiostatisticsComplianceAndPackages() {
               <div className="space-y-5">
                 {/* Header Badge & Title */}
                 <div className="flex items-start gap-3">
-                  <div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-base border ${pkg.badgeBg} shrink-0`}
-                  >
-                    {pkg.badge}
+                  <div className="relative w-10 h-10 shrink-0">
+                    <Image
+                      src={pkg.iconSrc}
+                      alt={`${pkg.title} package`}
+                      width={40}
+                      height={40}
+                      className="w-10 h-10 object-contain"
+                    />
                   </div>
                   <div>
                     <h3 className="font-bold text-lg text-slate-900 leading-tight">

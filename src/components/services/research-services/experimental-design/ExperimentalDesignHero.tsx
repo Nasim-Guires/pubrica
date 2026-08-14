@@ -149,7 +149,7 @@ export default function ExperimentalDesignHero() {
               {/* Main Image Container */}
               <div className="relative h-72 sm:h-80 md:h-96 w-full rounded-xl overflow-hidden shadow-lg border border-slate-100 bg-slate-100">
                 <Image
-                  src="/images/services/experimental-design-lab.jpg"
+                  src="/images/research-services/experimental-design/Ensure-the-Success-of-Your-Research-with-Pubricas-Experimental-Design-Services.webp"
                   alt="Researchers discussing experimental design and research methodology on laptop"
                   fill
                   priority
