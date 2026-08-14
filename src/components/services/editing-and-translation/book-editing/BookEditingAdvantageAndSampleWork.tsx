@@ -107,7 +107,7 @@ export const BookEditingAdvantageAndSampleWork: React.FC = () => {
         <div className="bg-white border border-slate-200 rounded-xl shadow-md overflow-hidden p-4 sm:p-8">
           <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] min-h-[350px] rounded-lg overflow-hidden border border-slate-100">
             <Image
-              src="/images/services/book-editing/sample-work-preview.png"
+              src="/images/editing-and-translation/book-editing/BOOK-EDITING-SERVICE-SAMPLE-WORK-1.png"
               alt="Checkout the Sample Work of Pubrica's Book Editing Service"
               fill
               sizes="(max-width: 1200px) 100vw, 1200px"

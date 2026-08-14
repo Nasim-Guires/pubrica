@@ -22,7 +22,7 @@ interface FaqItem {
 export const EditingTranslationManuscriptEditingTestimonialsAndFaq: React.FC =
   () => {
     // Testimonial slide index
-    const [currentSlide, setCurrentSlide] = useState<number>(0);
+    const [activeIndex, setActiveIndex] = useState<number>(0);
 
     // FAQ open state (stores ID of currently open FAQ, or null if all closed)
     const [openFaqId, setOpenFaqId] = useState<number | null>(1);
@@ -35,8 +35,10 @@ export const EditingTranslationManuscriptEditingTestimonialsAndFaq: React.FC =
           '"Pubrica\'s manuscript editing service transformed my draft into a polished paper that met all the requirements of my target journal, Journal of Neuroscience. The attention to detail was outstanding."',
         authorName: "DR. EMILY CARTER",
         authorTitle: "Associate Professor of Neuroscience, USA",
-        journalCoverSrc: "/images/testimonials/internal-medicine-journal.webp",
-        flagSrc: "/images/flags/de.svg",
+        journalCoverSrc:
+          "/images/editing-and-translation/manuscript-editing/european-journal-of-internal-medicine.png",
+        flagSrc:
+          "/images/editing-and-translation/manuscript-editing/germany-1-1.png",
         flagAlt: "Germany Flag",
       },
       {
@@ -46,9 +48,21 @@ export const EditingTranslationManuscriptEditingTestimonialsAndFaq: React.FC =
         authorName: "PROF. RAJESH NAIR",
         authorTitle: "Department of Cardiology, India",
         journalCoverSrc:
-          "/images/testimonials/clinical-diagnostic-research.webp",
-        flagSrc: "/images/flags/in.svg",
+          "/images/editing-and-translation/manuscript-editing/journal-of-clinical-and-diagnostic-research.png",
+        flagSrc: "/images/editing-and-translation/manuscript-editing/flag.png",
         flagAlt: "India Flag",
+      },
+      {
+        id: "test-3",
+        quote:
+          '"I truly appreciate the expertise of Pubrica\'s editors. Their guidance on journal-specific formatting and language refinement helped me successfully submit to Nature Communications."',
+        authorName: "DR. ANNA MÜLLER",
+        authorTitle:
+          "Senior Research Scientist in Molecular Biology, Germany",
+        journalCoverSrc:
+          "/images/editing-and-translation/manuscript-editing/journal-of-neuroscience-.png",
+        flagSrc: "/images/editing-and-translation/manuscript-editing/spain.png",
+        flagAlt: "Spain Flag",
       },
     ];
 
@@ -109,6 +123,51 @@ export const EditingTranslationManuscriptEditingTestimonialsAndFaq: React.FC =
       setOpenFaqId(openFaqId === id ? null : id);
     };
 
+    const mobileItem = testimonials[activeIndex];
+    const desktopItems = [
+      testimonials[activeIndex],
+      testimonials[(activeIndex + 1) % testimonials.length],
+    ];
+
+    const renderCard = (item: Testimonial, key: string) => (
+      <div
+        key={key}
+        className="bg-white border border-slate-300 rounded-xl p-5 sm:p-6 shadow-sm flex flex-col justify-between relative"
+      >
+        <div className="bg-slate-200/80 rounded-lg p-4 sm:p-5 flex gap-4 items-center mb-6 min-h-[140px]">
+          <div className="w-20 h-24 relative flex-shrink-0 border border-slate-300 shadow-sm rounded overflow-hidden">
+            <Image
+              src={item.journalCoverSrc}
+              alt="Journal Cover"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <p className="text-xs sm:text-sm text-slate-800 italic leading-relaxed">
+            {item.quote}
+          </p>
+        </div>
+        <div className="flex items-center justify-between pt-1">
+          <div>
+            <h3 className="font-bold text-slate-900 text-sm sm:text-base tracking-wide">
+              — {item.authorName}
+            </h3>
+            <p className="text-xs text-slate-600 italic mt-0.5">
+              {item.authorTitle}
+            </p>
+          </div>
+          <div className="w-6 h-6 rounded-full overflow-hidden border border-slate-200 shadow-sm relative flex-shrink-0">
+            <Image
+              src={item.flagSrc}
+              alt={item.flagAlt}
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    );
+
     return (
       <div className="w-full bg-slate-50 py-12 sm:py-16 text-slate-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-16">
@@ -126,75 +185,29 @@ export const EditingTranslationManuscriptEditingTestimonialsAndFaq: React.FC =
               acceptance potential of your work. Here is what our clients say:
             </p>
 
-            {/* Testimonial Cards Grid / Slider */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              {testimonials.map((item) => (
-                <div
-                  key={item.id}
-                  className="bg-white border border-slate-300 rounded-xl p-5 sm:p-6 shadow-sm flex flex-col justify-between relative"
-                >
-                  {/* Gray Inner Quote Box */}
-                  <div className="bg-slate-200/80 rounded-lg p-4 sm:p-5 flex gap-4 items-center mb-6 min-h-[140px]">
-                    {/* Journal Cover */}
-                    <div className="w-20 h-24 relative flex-shrink-0 border border-slate-300 shadow-sm rounded overflow-hidden">
-                      <Image
-                        src={item.journalCoverSrc}
-                        alt="Journal Cover"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    {/* Quote Content */}
-                    <p className="text-xs sm:text-sm text-slate-800 italic leading-relaxed">
-                      {item.quote}
-                    </p>
-                  </div>
-
-                  {/* Author Info & Country Flag */}
-                  <div className="flex items-center justify-between pt-1">
-                    <div>
-                      <h3 className="font-bold text-slate-900 text-sm sm:text-base tracking-wide">
-                        — {item.authorName}
-                      </h3>
-                      <p className="text-xs text-slate-600 italic mt-0.5">
-                        {item.authorTitle}
-                      </p>
-                    </div>
-
-                    {/* Flag Icon */}
-                    <div className="w-6 h-6 rounded-full overflow-hidden border border-slate-200 shadow-sm relative flex-shrink-0">
-                      <Image
-                        src={item.flagSrc}
-                        alt={item.flagAlt}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 gap-6 mb-6 md:hidden">
+              {renderCard(mobileItem, `mobile-${mobileItem.id}`)}
+            </div>
+            <div className="hidden md:grid grid-cols-2 gap-6 mb-6">
+              {desktopItems.map((item) =>
+                renderCard(item, `${activeIndex}-${item.id}`),
+              )}
             </div>
 
-            {/* Slider Pagination Controls */}
             <div className="flex justify-center items-center gap-2">
-              <button
-                onClick={() => setCurrentSlide(0)}
-                className={`w-3 h-3 rounded-none transition-colors ${
-                  currentSlide === 0
-                    ? "bg-[#0d3b36]"
-                    : "border border-[#0d3b36] bg-transparent"
-                }`}
-                aria-label="Slide 1"
-              />
-              <button
-                onClick={() => setCurrentSlide(1)}
-                className={`w-3 h-3 rounded-none transition-colors ${
-                  currentSlide === 1
-                    ? "bg-[#0d3b36]"
-                    : "border border-[#0d3b36] bg-transparent"
-                }`}
-                aria-label="Slide 2"
-              />
+              {testimonials.map((item, index) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  aria-label={`Show testimonial ${index + 1}`}
+                  onClick={() => setActiveIndex(index)}
+                  className={`w-3 h-3 rounded-none transition-colors ${
+                    activeIndex === index
+                      ? "bg-[#0d3b36]"
+                      : "border border-[#0d3b36] bg-transparent"
+                  }`}
+                />
+              ))}
             </div>
           </section>
 

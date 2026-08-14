@@ -26,10 +26,14 @@ export const EditingTranslationManuscriptEditingProcessAndFeatures: React.FC = (
           {/* Step 1 Card: Default dark, hover is handled inherently */}
           <div className="flex flex-col justify-between group">
             <div className="  p-6 rounded-lg shadow-md flex-1 transition-colors duration-300 group-hover:bg-black">
-              <div className="mb-4">
-                <svg className="w-10 h-10 transition-colors duration-300 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+              <div className="mb-4 relative w-10 h-10">
+                <Image
+                  src="/images/editing-and-translation/manuscript-editing/Upload-Your-Manuscript-Select-a-Service-and-Plan.png"
+                  alt="Upload your manuscript, select a service, and plan"
+                  width={65}
+                  height={65}
+                  className="w-10 h-10 object-contain"
+                />
               </div>
               <h4 className="font-bold text-base sm:text-lg mb-3 tracking-wide uppercase transition-colors duration-300 group-hover:text-white">
                 Upload Your Manuscript, Select a Service, and Plan
@@ -51,10 +55,14 @@ export const EditingTranslationManuscriptEditingProcessAndFeatures: React.FC = (
           {/* Step 2 Card: Default White, Hover turns black */}
           <div className="flex flex-col justify-between md:translate-y-[-16px] group">
             <div className="bg-white border border-slate-200 text-slate-800 p-6 rounded-lg shadow-md flex-1 transition-colors duration-300 group-hover:bg-black group-hover:border-black">
-              <div className="mb-4">
-                <svg className="w-10 h-10 text-slate-700 transition-colors duration-300 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                </svg>
+              <div className="mb-4 relative w-10 h-10">
+                <Image
+                  src="/images/editing-and-translation/manuscript-editing/The-Two-Step-Edit-Process-Delivers-Top-Notch-Quality-and-Timely-Delivery.png"
+                  alt="The two-step edit process"
+                  width={65}
+                  height={65}
+                  className="w-10 h-10 object-contain"
+                />
               </div>
               <h4 className="font-bold text-base sm:text-lg mb-3 tracking-wide uppercase text-slate-900 transition-colors duration-300 group-hover:text-white">
                 The Two-Step Edit Process Delivers Top-Notch Quality and Timely Delivery
@@ -76,10 +84,14 @@ export const EditingTranslationManuscriptEditingProcessAndFeatures: React.FC = (
           {/* Step 3 Card: Default White, Hover turns black */}
           <div className="flex flex-col justify-between group">
             <div className="bg-white border border-slate-200 text-slate-800 p-6 rounded-lg shadow-md flex-1 transition-colors duration-300 group-hover:bg-black group-hover:border-black">
-              <div className="mb-4">
-                <svg className="w-10 h-10 text-slate-700 transition-colors duration-300 group-hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
+              <div className="mb-4 relative w-10 h-10">
+                <Image
+                  src="/images/editing-and-translation/manuscript-editing/Review-Final-Files-Ask-Questions-and-Collaborate.png"
+                  alt="Review final files, ask questions, and collaborate"
+                  width={65}
+                  height={65}
+                  className="w-10 h-10 object-contain"
+                />
               </div>
               <h4 className="font-bold text-base sm:text-lg mb-3 tracking-wide uppercase text-slate-900 transition-colors duration-300 group-hover:text-white">
                 Review Final Files, Ask Questions, and Collaborate
@@ -126,8 +138,8 @@ export const EditingTranslationManuscriptEditingProcessAndFeatures: React.FC = (
           <div className="lg:col-span-5 flex flex-col items-center justify-center bg-slate-50 p-6 rounded-xl border border-slate-100 shadow-sm">
             <div className="relative w-full max-w-[380px] h-[300px]">
               <Image
-                src="/images/services/manuscript-recommended-journals.webp"
-                alt="1600+ journals officially recommended our editing services including IEEE Transactions, Physical Therapy, Foot & Ankle, PNAS, and AJR"
+                src="/images/editing-and-translation/manuscript-editing/Features-of-Our-Research-Paper-Manuscript-Editing-Services.png"
+                alt="Features of our research paper manuscript editing services"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-contain"

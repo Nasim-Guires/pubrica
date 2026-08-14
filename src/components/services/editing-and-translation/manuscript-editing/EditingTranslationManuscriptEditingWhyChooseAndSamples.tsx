@@ -8,7 +8,8 @@ interface WhyChooseItem {
   id: string;
   title: string;
   description: React.ReactNode;
-  icon: React.ReactNode;
+  iconSrc: string;
+  iconAlt: string;
 }
 
 interface Expert {
@@ -29,6 +30,24 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
       "manuscript" | "table" | "figure"
     >("manuscript");
 
+    const sampleWorkImages: Record<
+      "manuscript" | "table" | "figure",
+      { src: string; alt: string }
+    > = {
+      manuscript: {
+        src: "/images/editing-and-translation/manuscript-editing/Manuscript-editing-sample-work-.png",
+        alt: "Manuscript format sample work",
+      },
+      table: {
+        src: "/images/editing-and-translation/manuscript-editing/Manuscript-editing-sample-work-3.png",
+        alt: "Table format sample work",
+      },
+      figure: {
+        src: "/images/editing-and-translation/manuscript-editing/Manuscript-editing-sample-work-2.png",
+        alt: "Figure format sample work",
+      },
+    };
+
     // Data for "Why Choose" section with hover cards
     const whyChooseData: WhyChooseItem[] = [
       {
@@ -47,84 +66,36 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
             to ensure your final product meets the highest academic standards.
           </>
         ),
-        icon: (
-          <svg
-            className="w-6 h-6 text-emerald-700 group-hover:text-emerald-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.8}
-              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-            />
-          </svg>
-        ),
+        iconSrc:
+          "/images/editing-and-translation/manuscript-editing/Expert-Editing-and-Proofreading.png",
+        iconAlt: "Expert Editing and Proofreading",
       },
       {
         id: "quality-assurance",
         title: "Thorough Quality Assurance",
         description:
           "Two editors review each manuscript under our journal manuscript editing services framework.",
-        icon: (
-          <svg
-            className="w-6 h-6 text-emerald-700 group-hover:text-emerald-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.8}
-              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-            />
-          </svg>
-        ),
+        iconSrc:
+          "/images/editing-and-translation/manuscript-editing/Thorough-Quality-Assurance.png",
+        iconAlt: "Thorough Quality Assurance",
       },
       {
         id: "confidentiality",
         title: "Commitment to Confidentiality",
         description:
           "We ensure strict confidentiality in editing, with ISO/IEC 27001:2013 certification guaranteeing complete security for all submitted manuscripts.",
-        icon: (
-          <svg
-            className="w-6 h-6 text-emerald-700 group-hover:text-emerald-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.8}
-              d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-            />
-          </svg>
-        ),
+        iconSrc:
+          "/images/editing-and-translation/manuscript-editing/Commitment-to-Confidentiality.png",
+        iconAlt: "Commitment to Confidentiality",
       },
       {
         id: "exclusive-benefits",
         title: "Exclusive Pubrica Benefits",
         description:
           "Multiple editing rounds, unlimited Q&A, and certification are included in our professional editing for journals.",
-        icon: (
-          <svg
-            className="w-6 h-6 text-emerald-700 group-hover:text-emerald-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.8}
-              d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-            />
-          </svg>
-        ),
+        iconSrc:
+          "/images/editing-and-translation/manuscript-editing/Exclusive-Pubrica-Benefits.png",
+        iconAlt: "Exclusive Pubrica Benefits",
       },
     ];
 
@@ -137,8 +108,9 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
         institution: "All India Institute of Medical Sciences, India",
         experience: "5+ Years of Experience",
         papersEdited: "600+ Papers Edited",
-        avatarSrc: "/images/experts/dr-arjun-mehta.webp",
-        flagSrc: "/images/flags/in.svg",
+        avatarSrc:
+          "/images/editing-and-translation/manuscript-editing/Dr-arjun-mehta.png",
+        flagSrc: "/images/editing-and-translation/manuscript-editing/india.png",
         flagAlt: "India Flag",
       },
       {
@@ -148,8 +120,10 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
         institution: "University of Cambridge, UK",
         experience: "6+ Years of Experience",
         papersEdited: "750+ Papers Edited",
-        avatarSrc: "/images/experts/dr-kavita-reddy.webp",
-        flagSrc: "/images/flags/gb.svg",
+        avatarSrc:
+          "/images/editing-and-translation/manuscript-editing/kavita-reddy-.png",
+        flagSrc:
+          "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
         flagAlt: "UK Flag",
       },
       {
@@ -159,8 +133,9 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
         institution: "Harvard University, USA",
         experience: "4+ Years of Experience",
         papersEdited: "550+ Papers Edited",
-        avatarSrc: "/images/experts/dr-sarah-thompson.webp",
-        flagSrc: "/images/flags/us.svg",
+        avatarSrc:
+          "/images/editing-and-translation/manuscript-editing/Dr.-Sarah-Thompson.png",
+        flagSrc: "/images/editing-and-translation/scientific-editing/usa-.png",
         flagAlt: "USA Flag",
       },
     ];
@@ -194,7 +169,13 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
                   {/* Card Header Top Box */}
                   <div className="bg-emerald-50/70 p-4 border-b border-slate-100 flex items-center justify-between transition-colors duration-300 group-hover:bg-slate-900 group-hover:border-slate-800">
                     <div className="flex items-center gap-3">
-                      {item.icon}
+                      <Image
+                        src={item.iconSrc}
+                        alt={item.iconAlt}
+                        width={35}
+                        height={35}
+                        className="w-6 h-6 object-contain"
+                      />
                       <h3 className="font-bold text-slate-900 text-base sm:text-lg transition-colors duration-300 group-hover:text-white">
                         {item.title}
                       </h3>
@@ -261,195 +242,15 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
 
               {/* Tab Preview Area with Dotted Border */}
               <div className="border border-dashed border-blue-200 rounded-lg p-4 sm:p-6 bg-slate-50 min-h-[400px] flex items-center justify-center relative">
-                {activeTab === "manuscript" && (
-                  <div className="w-full max-w-3xl bg-white p-6 rounded shadow-sm text-left relative overflow-hidden">
-                    <div className="absolute top-4 right-4 bg-emerald-950 text-white font-bold text-xs px-2 py-1 rounded">
-                      PUBRICA Knowledge Works
-                    </div>
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4 pt-6">
-                      After general anesthesia, the patient was positioned in
-                      lithotomy, and 4 ml of 1% methylene blue dye was injected
-                      around the perimeter of the uterine cervical tumor (1 ml
-                      each at the 12, 3, 6, and 9 o'clock position) using a
-                      25-gauge spinal needle. Following injection, the abdominal
-                      area was{" "}
-                      <span className="line-through text-amber-600">
-                        sterilized
-                      </span>{" "}
-                      <span className="text-orange-600 font-semibold">
-                        sterie
-                      </span>{" "}
-                      and draped, and either a laparotomy or laparoscopy was
-                      performed. A Sentinel Lymph Node (SLN) was identified as
-                      any blue-colored node or lymphatic vessel leading to a
-                      node within 20 minutes of dye injection. All dye
-                      injections in the study participants were consistently
-                      performed by the same surgeon.
-                    </p>
-                    <h4 className="font-bold text-sm sm:text-base text-slate-900 mb-2">
-                      2.3.2 SLN mapping:
-                    </h4>
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      During surgery (laparotomy or laparoscopy), a{" "}
-                      <span className="line-through text-amber-600">
-                        detailed search for sins
-                      </span>{" "}
-                      2,{" "}
-                      <span className="text-orange-600 font-semibold">
-                        detailed search for SINS
-                      </span>{" "}
-                      in the bilateral pelvic area was carried out within{" "}
-                      <span className="text-amber-600">20</span>{" "}
-                      <span className="text-orange-600 font-semibold">
-                        twenty
-                      </span>{" "}
-                      minutes of the dye injection. Identified SLNs were
-                      documented with their number and position. Unsuccessful
-                      SLN mapping, where no blue stained{" "}
-                      <span className="text-orange-600 font-semibold">
-                        lymph-node
-                      </span>{" "}
-                      was found, was also recorded. All identified SLNs were
-                      carefully removed for frozen section analysis.
-                      Additionally, all patients underwent a complete bilateral
-                      pelvic lymphadenectomy - and radical{" "}
-                      <span className="text-orange-600 font-semibold">
-                        hystectomy
-                      </span>{" "}
-                      <span className="text-blue-600 font-semibold">
-                        hysterectomy
-                      </span>
-                      , regardless of the initial pathology report. The{" "}
-                      <span className="text-amber-600">sins</span>{" "}
-                      <span className="text-orange-600 font-semibold">
-                        Si.N's
-                      </span>
-                      , the dissected pelvic lymph nodes, and the radical{" "}
-                      <span className="text-orange-600 font-semibold">
-                        hystectomy
-                      </span>{" "}
-                      <span className="text-blue-600 font-semibold">
-                        hysterectomy
-                      </span>{" "}
-                      specimen were all analyzed using final part in sections.
-                    </p>
-                  </div>
-                )}
-
-                {activeTab === "table" && (
-                  <div className="w-full bg-white p-4 rounded shadow-sm overflow-x-auto relative">
-                    <div className="absolute top-2 right-2 bg-emerald-950 text-white font-bold text-xs px-2 py-1 rounded">
-                      PUBRICA Knowledge Works
-                    </div>
-                    <table className="w-full text-xs text-left border-collapse border border-slate-300 mt-8">
-                      <thead>
-                        <tr className="bg-slate-100">
-                          <th
-                            className="border border-slate-300 p-2 font-bold"
-                            rowSpan={2}
-                          >
-                            Parameter
-                          </th>
-                          <th
-                            className="border border-slate-300 p-2 font-bold text-center"
-                            colSpan={3}
-                          >
-                            Part 1
-                          </th>
-                          <th className="border border-slate-300 p-2 font-bold text-center">
-                            Part 2
-                          </th>
-                          <th
-                            className="border border-slate-300 p-2 font-bold text-center"
-                            rowSpan={2}
-                          >
-                            Total (N = 54)
-                          </th>
-                        </tr>
-                        <tr className="bg-slate-100">
-                          <th className="border border-slate-300 p-2">
-                            Placebo (n = 12)
-                          </th>
-                          <th className="border border-slate-300 p-2">
-                            Felzartamab 2-dose (n = 12)
-                          </th>
-                          <th className="border border-slate-300 p-2">
-                            Felzartamab 5-dose (n = 11)
-                          </th>
-                          <th className="border border-slate-300 p-2">
-                            Felzartamab 9-dose (n = 13)
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td className="border border-slate-300 p-2">
-                            Number of infusions per patient, mean (SD)
-                          </td>
-                          <td className="border border-slate-300 p-2">
-                            8.7 (0.7)
-                          </td>
-                          <td className="border border-slate-300 p-2">
-                            8.4 (1.7)
-                          </td>
-                          <td className="border border-slate-300 p-2">
-                            6.5 (3.6)
-                          </td>
-                          <td className="border border-slate-300 p-2">
-                            6.9 (3.2)
-                          </td>
-                          <td className="border border-slate-300 p-2">
-                            7.8 (2.5)
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="border border-slate-300 p-2">
-                            Duration of study drug exposure, d, mean (SD)
-                          </td>
-                          <td className="border border-slate-300 p-2">
-                            140.8 (20.4)
-                          </td>
-                          <td className="border border-slate-300 p-2">
-                            135.4 (37.4)
-                          </td>
-                          <td className="border border-slate-300 p-2">
-                            106.4 (67.7)
-                          </td>
-                          <td className="border border-slate-300 p-2">
-                            110.8 (61.4)
-                          </td>
-                          <td className="border border-slate-300 p-2">
-                            125.2 (48.2)
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <p className="text-[10px] text-slate-400 mt-2 text-center">
-                      Copyright © 2025 pubrica. No part of this document may be
-                      published without permission of the author
-                    </p>
-                  </div>
-                )}
-
-                {activeTab === "figure" && (
-                  <div className="w-full flex flex-col items-center justify-center p-4 bg-white rounded shadow-sm relative">
-                    <div className="absolute top-2 right-2 bg-emerald-950 text-white font-bold text-xs px-2 py-1 rounded">
-                      PUBRICA Knowledge Works
-                    </div>
-                    <div className="relative w-full max-w-md h-64 mt-6">
-                      <Image
-                        src="/images/services/sample-figure-graph.webp"
-                        alt="Probability of retention survival analysis graph sample"
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-[10px] text-slate-400 mt-2 text-center">
-                      Copyright © 2025 pubrica. No part of this document may be
-                      published without permission of the author
-                    </p>
-                  </div>
-                )}
+                <div className="relative w-full min-h-[360px] sm:min-h-[480px]">
+                  <Image
+                    src={sampleWorkImages[activeTab].src}
+                    alt={sampleWorkImages[activeTab].alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 800px"
+                    className="object-contain"
+                  />
+                </div>
               </div>
             </div>
           </section>

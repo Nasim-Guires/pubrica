@@ -27,7 +27,8 @@ export const BookEditingOverviewAndProcess: React.FC = () => {
         "Personalized list of 3-5 publishers for your specific book",
         "Just share your manuscript, target audience, authorship details, and publishing goals in a simple questionnaire",
       ],
-      imageSrc: "/images/services/book-editing/publisher-selection.jpg",
+      imageSrc:
+        "/images/editing-and-translation/book-editing/Publisher-Selection.png",
       imageAlt: "Publisher Selection Process",
     },
     {
@@ -40,7 +41,8 @@ export const BookEditingOverviewAndProcess: React.FC = () => {
         "Customized based on your manuscript draft, target audience, author bio, and comparative title research",
         "Specifically built proposals for each publisher you’ve selected to avoid delays in publishing",
       ],
-      imageSrc: "/images/services/book-editing/proposal-creation.jpg",
+      imageSrc:
+        "/images/editing-and-translation/book-editing/Book-Proposal-Creation.png",
       imageAlt: "Book Proposal Creation",
     },
     {
@@ -53,7 +55,8 @@ export const BookEditingOverviewAndProcess: React.FC = () => {
         "Get advice on which chapter to showcase from experts in the field",
         "No need to look for separate book formatting services: our experts will ensure your showcase chapter matches all publisher requirements.",
       ],
-      imageSrc: "/images/services/book-editing/showcase-chapter.jpg",
+      imageSrc:
+        "/images/editing-and-translation/book-editing/Showcase-Chapter-Preparation.png",
       imageAlt: "Showcase Chapter Preparation",
     },
     {
@@ -68,7 +71,8 @@ export const BookEditingOverviewAndProcess: React.FC = () => {
         "Structural checks to ensure the flow of information is easy to understand",
         "Multi-round support to re-edit modified sections",
       ],
-      imageSrc: "/images/services/book-editing/book-editing.jpg",
+      imageSrc:
+        "/images/editing-and-translation/book-editing/who-we-serve-.png",
       imageAlt: "Book Editing Process",
     },
     {
@@ -81,34 +85,13 @@ export const BookEditingOverviewAndProcess: React.FC = () => {
         "Expert support in coordinating with publishers: we help you draft your emails and find the correct email addresses",
         "Constant and seamless communication throughout the publication process so that you never feel alone on this journey",
       ],
-      imageSrc: "/images/services/book-editing/submission-management.jpg",
+      imageSrc:
+        "/images/editing-and-translation/book-editing/Submission-Management.png",
       imageAlt: "Submission Management",
     },
   ];
 
   const currentStep = stepsData[activeStep];
-
-  // Journal cover sample images for the top section
-  const journalCovers = [
-    {
-      src: "/images/journals/the-lancet-oncology.jpg",
-      alt: "The Lancet Oncology Cover",
-    },
-    {
-      src: "/images/journals/ij-surgery.jpg",
-      alt: "International Journal of Surgery Cover",
-    },
-    { src: "/images/journals/jama-oncology.jpg", alt: "JAMA Oncology Cover" },
-    {
-      src: "/images/journals/bjcp.jpg",
-      alt: "British Journal of Clinical Pharmacology Cover",
-    },
-    { src: "/images/journals/jneurosci.jpg", alt: "JNeurosci Cover" },
-    {
-      src: "/images/journals/health-economics.jpg",
-      alt: "Journal of Health Economics Cover",
-    },
-  ];
 
   return (
     <div className="w-full bg-[#f8fafc] text-slate-800">
@@ -137,22 +120,14 @@ export const BookEditingOverviewAndProcess: React.FC = () => {
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left: 6-Journal Grid Display */}
-          <div className="lg:col-span-5 grid grid-cols-3 gap-3">
-            {journalCovers.map((journal, index) => (
-              <div
-                key={index}
-                className="relative aspect-[3/4] w-full overflow-hidden rounded shadow-sm border border-slate-200 bg-white"
-              >
-                <Image
-                  src={journal.src}
-                  alt={journal.alt}
-                  fill
-                  sizes="(max-width: 768px) 33vw, 15vw"
-                  className="object-cover"
-                />
-              </div>
-            ))}
+          <div className="lg:col-span-5 relative w-full aspect-square overflow-hidden rounded shadow-sm border border-slate-200 bg-white">
+            <Image
+              src="/images/editing-and-translation/book-editing/Book-Editing-and-Peer-reviewing-Support-Services-1.png"
+              alt="Book editing and peer-reviewing support services"
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-contain"
+            />
           </div>
 
           {/* Right: Detailed Text Content */}

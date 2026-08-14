@@ -77,17 +77,42 @@ export const EditingTranslationManuscriptEditingTypesAndPackages: React.FC =
     const recentPublications: Publication[] = [
       {
         id: "pub-1",
-        journalTitle: "Journal of Applied Biology & Biotechnology",
+        journalTitle: "World Journal of Oncology",
         paperTitle:
-          "Astaxanthin: An alga-based natural compound with a potential role in human health-promoting effects: An Comprehensive Review",
-        author: "Jinu Medhi and Mohan Chandra Kalita",
-        publisher: "Open Science Publishers LLP",
-        impactFactor: "NA",
-        coverImage: "/images/publications/journal-applied-biology.webp",
-        linkUrl: "#",
+          "Cutaneous Malignant Melanoma: A Review of Early Diagnosis and Management",
+        author: "Piyu Parth Naik",
+        publisher: "Elmer Press Inc.",
+        impactFactor: "2.2",
+        coverImage:
+          "/images/editing-and-translation/manuscript-editing/JOURNAL-TEMPLATE-COVER-IMAGE-.png",
+        linkUrl: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7935621/",
       },
       {
         id: "pub-2",
+        journalTitle: "The Journal of laryngology and otology",
+        paperTitle:
+          "Regenerative Medicine for End-Stage Fibrosis and Tissue Loss in the Upper Aerodigestive Tract: A Twenty-First Century Review",
+        author: "F R Green, N M Shubber, F S Koumpa, N J I Hamilton",
+        publisher: "Cambridge University Press",
+        impactFactor: "0.8",
+        coverImage:
+          "/images/editing-and-translation/manuscript-editing/JOURNAL-TEMPLATE-COVER-IMAGE-2.png",
+        linkUrl: "https://pubmed.ncbi.nlm.nih.gov/33988100/",
+      },
+      {
+        id: "pub-3",
+        journalTitle: "Journal of Applied Biology & Biotechnology",
+        paperTitle:
+          "Astaxanthin: An alga-based natural compound with a potential role in human health-promoting effects: An Updated Comprehensive Review",
+        author: "Jinu Medhi and Mohan Chandra Kalita",
+        publisher: "Open Science Publishers LLP",
+        impactFactor: "NA",
+        coverImage:
+          "/images/editing-and-translation/manuscript-editing/JOURNAL-TEMPLATE-COVER-IMAGE-3.png",
+        linkUrl: "https://www.jabonline.in/admin/php/uploads/510_pdf.pdf",
+      },
+      {
+        id: "pub-4",
         journalTitle:
           "International Journal of Pharmacy and Pharmaceutical Sciences",
         paperTitle:
@@ -95,18 +120,21 @@ export const EditingTranslationManuscriptEditingTypesAndPackages: React.FC =
         author: "Jinu Medhi and Mohan Chandra Kalita",
         publisher: "Innovare Academic Sciences Pvt. Ltd.",
         impactFactor: "NA",
-        coverImage: "/images/publications/ijpps-cover.webp",
-        linkUrl: "#",
+        coverImage:
+          "/images/editing-and-translation/manuscript-editing/JOURNAL-TEMPLATE-COVER-IMAGE-4.png",
+        linkUrl:
+          "https://journals.innovareacademics.in/index.php/ijpps/article/view/39739",
       },
       {
-        id: "pub-3",
+        id: "pub-5",
         journalTitle: "Journal of Clinical Dermatology & Therapy",
         paperTitle:
           "A Systemic Review on Psoriasis Management by Phenotypic Variations and Targeted Therapies",
         author: "Piyu Parth Naik",
         publisher: "Herald Scholarly Open Access",
         impactFactor: "0.68",
-        coverImage: "/images/publications/clinical-dermatology.webp",
+        coverImage:
+          "/images/editing-and-translation/manuscript-editing/JOURNAL-TEMPLATE-COVER-IMAGE-5.png",
         linkUrl: "#",
       },
     ];
@@ -431,28 +459,55 @@ export const EditingTranslationManuscriptEditingTypesAndPackages: React.FC =
                       recast your work free of charge.
                     </th>
                     <th className="p-4 text-center border-l border-slate-200 w-1/5">
-                      <span className="font-extrabold text-slate-900 block text-sm sm:text-base">
-                        ELITE
-                      </span>
-                      <span className="text-[11px] font-normal text-slate-500 leading-tight block">
-                        Top-level manuscript support.
-                      </span>
+                      <div className="flex flex-col items-center gap-2">
+                        <Image
+                          src="/images/publication-support/responding-to-reviewers/standard-logo.png"
+                          alt="Elite package"
+                          width={48}
+                          height={48}
+                          className="w-12 h-12 object-contain"
+                        />
+                        <span className="font-extrabold text-slate-900 block text-sm sm:text-base">
+                          ELITE
+                        </span>
+                        <span className="text-[11px] font-normal text-slate-500 leading-tight block">
+                          Top-level manuscript support.
+                        </span>
+                      </div>
                     </th>
                     <th className="p-4 text-center border-l border-slate-200 w-1/5">
-                      <span className="font-extrabold text-slate-900 block text-sm sm:text-base">
-                        ADVANCED
-                      </span>
-                      <span className="text-[11px] font-normal text-slate-500 leading-tight block">
-                        High-level manuscript support.
-                      </span>
+                      <div className="flex flex-col items-center gap-2">
+                        <Image
+                          src="/images/publication-support/journal-selection/advanced.webp"
+                          alt="Advanced package"
+                          width={48}
+                          height={48}
+                          className="w-12 h-12 object-contain"
+                        />
+                        <span className="font-extrabold text-slate-900 block text-sm sm:text-base">
+                          ADVANCED
+                        </span>
+                        <span className="text-[11px] font-normal text-slate-500 leading-tight block">
+                          High-level manuscript support.
+                        </span>
+                      </div>
                     </th>
                     <th className="p-4 text-center border-l border-slate-200 w-1/5">
-                      <span className="font-extrabold text-slate-900 block text-sm sm:text-base">
-                        PREMIUM
-                      </span>
-                      <span className="text-[11px] font-normal text-slate-500 leading-tight block">
-                        Mid-level manuscript support
-                      </span>
+                      <div className="flex flex-col items-center gap-2">
+                        <Image
+                          src="/images/editing-and-translation/pro.webp"
+                          alt="Premium package"
+                          width={48}
+                          height={48}
+                          className="w-12 h-12 object-contain"
+                        />
+                        <span className="font-extrabold text-slate-900 block text-sm sm:text-base">
+                          PREMIUM
+                        </span>
+                        <span className="text-[11px] font-normal text-slate-500 leading-tight block">
+                          Mid-level manuscript support
+                        </span>
+                      </div>
                     </th>
                   </tr>
                 </thead>

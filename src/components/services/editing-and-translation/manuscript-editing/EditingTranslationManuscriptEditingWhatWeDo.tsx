@@ -83,31 +83,17 @@ export const EditingTranslationManuscriptEditingWhatWeDo: React.FC = () => {
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          {/* Left Column: Overlapping Images */}
+          {/* Left Column: What We Do collage */}
           <div className="lg:col-span-5 relative w-full flex justify-center lg:justify-start">
             <div className="relative w-full max-w-[460px] h-[360px] sm:h-[420px]">
-              {/* Decorative background circle */}
               <div className="absolute top-0 left-12 w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] bg-slate-100 rounded-full -z-0" />
-
-              {/* Top Left Image - Laptop/Document Review */}
-              <div className="absolute top-0 left-0 w-[65%] h-[55%] rounded-2xl overflow-hidden shadow-md z-10">
+              <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-md z-10">
                 <Image
-                  src="/images/services/manuscript-editing-review.webp"
-                  alt="Scientific manuscript editing and error correction process"
+                  src="/images/editing-and-translation/manuscript-editing/what-we-do-.png"
+                  alt="What we do in manuscript editing"
                   fill
-                  sizes="(max-width: 768px) 60vw, 25vw"
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Bottom Right Image - Specialist Working */}
-              <div className="absolute bottom-0 right-0 w-[65%] h-[60%] rounded-2xl overflow-hidden shadow-lg border-4 border-white z-20">
-                <Image
-                  src="/images/services/manuscript-editor-working.webp"
-                  alt="PhD-qualified editor working on academic paper translation and formatting"
-                  fill
-                  sizes="(max-width: 768px) 60vw, 25vw"
-                  className="object-cover"
+                  sizes="(max-width: 768px) 90vw, 40vw"
+                  className="object-contain"
                 />
               </div>
             </div>

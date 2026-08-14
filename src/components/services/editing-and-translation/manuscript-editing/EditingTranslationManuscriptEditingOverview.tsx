@@ -153,8 +153,8 @@ export const EditingTranslationManuscriptEditingOverview: React.FC = () => {
             <div className="bg-emerald-950/80 rounded-2xl p-6 shadow-xl">
               <div className="relative w-full h-[320px] sm:h-[380px] rounded-lg overflow-hidden">
                 <Image
-                  src="/images/services/manuscript-editing-journals.webp"
-                  alt="Sample Published Manuscripts in Top Scopus and SCI Journals including JAMA, Cancer Cell, and JCI"
+                  src="/images/editing-and-translation/manuscript-editing/Get-Manuscript-Published-with-Confidence-Expert-Manuscript-Editing-Services.webp"
+                  alt="Get Manuscript Published with Confidence — Expert Manuscript Editing Services"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-contain object-center"

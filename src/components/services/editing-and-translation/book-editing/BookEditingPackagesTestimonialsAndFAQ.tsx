@@ -5,9 +5,8 @@ import Image from "next/image";
 
 // --- Interfaces ---
 interface PackageCard {
-  letter: string;
-  badgeBg: string;
-  badgeColor: string;
+  iconSrc: string;
+  iconAlt: string;
   cardHeaderBg: string;
   title: string;
   description: string;
@@ -30,8 +29,8 @@ interface FAQItem {
 }
 
 export const BookEditingPackagesTestimonialsAndFAQ: React.FC = () => {
-  // State for FAQ accordion (Allows multiple or single open toggle)
   const [openFaq, setOpenFaq] = useState<number | null>(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const toggleFaq = (id: number) => {
     setOpenFaq((prev) => (prev === id ? null : id));
@@ -40,9 +39,8 @@ export const BookEditingPackagesTestimonialsAndFAQ: React.FC = () => {
   // --- Data Definitions ---
   const packages: PackageCard[] = [
     {
-      letter: "E",
-      badgeBg: "bg-rose-100",
-      badgeColor: "text-rose-600",
+      iconSrc: "/images/editing-and-translation/book-editing/E-pa-icons-1.png",
+      iconAlt: "End-to-End Book Publication Pack",
       cardHeaderBg: "bg-[#cfdcdb]",
       title: "End-to-End Book Publication Pack",
       description:
@@ -57,9 +55,8 @@ export const BookEditingPackagesTestimonialsAndFAQ: React.FC = () => {
       ],
     },
     {
-      letter: "A",
-      badgeBg: "bg-emerald-100",
-      badgeColor: "text-emerald-600",
+      iconSrc: "/images/publication-support/journal-selection/advanced.webp",
+      iconAlt: "Advanced package",
       cardHeaderBg: "bg-[#d8c5e2]",
       title: "Advanced",
       description:
@@ -72,9 +69,8 @@ export const BookEditingPackagesTestimonialsAndFAQ: React.FC = () => {
       ],
     },
     {
-      letter: "P",
-      badgeBg: "bg-amber-100",
-      badgeColor: "text-amber-600",
+      iconSrc: "/images/editing-and-translation/pro.webp",
+      iconAlt: "Premium package",
       cardHeaderBg: "bg-[#d2b887]",
       title: "Premium",
       description:
@@ -89,22 +85,34 @@ export const BookEditingPackagesTestimonialsAndFAQ: React.FC = () => {
 
   const testimonials: Testimonial[] = [
     {
-      journalImage: "/images/journals/european-heart-journal.jpg",
+      journalImage:
+        "/images/editing-and-translation/book-editing/testimonials-2.png",
       quote:
         "Pubrica’s editors transformed my manuscript into a polished, professional book while preserving my unique voice. Their attention to detail and insightful feedback made all the difference.",
       authorName: "DR. SARAH MITCHELL",
       authorTitle: "Historian & Author, USA",
-      flagImage: "/images/flags/usa.png",
+      flagImage: "/images/editing-and-translation/book-editing/usa-.png",
       flagAlt: "USA Flag",
     },
     {
-      journalImage: "/images/journals/jce.jpg",
+      journalImage:
+        "/images/editing-and-translation/book-editing/journal-of-clinical-epidemiology-1.png",
       quote:
         "Working with Pubrica’s book editing service was a game-changer. They elevated my writing, corrected inconsistencies, and helped me make a stronger connection with readers.",
       authorName: "CARLOS MENDOZA",
       authorTitle: "Academic & Author, Mexico",
-      flagImage: "/images/flags/india.png", // Or Mexico flag image
-      flagAlt: "Flag",
+      flagImage: "/images/editing-and-translation/book-editing/flag.png",
+      flagAlt: "Mexico Flag",
+    },
+    {
+      journalImage:
+        "/images/editing-and-translation/book-editing/international-journal-of-cardialogy-.png",
+      quote:
+        "Their expertise in language and formatting elevated my scientific book to a professional level. The editors were thorough and supportive throughout.",
+      authorName: "DR. THOMAS MULLER",
+      authorTitle: "Scientific Author, Germany",
+      flagImage: "/images/editing-and-translation/book-editing/germany-.png",
+      flagAlt: "Germany Flag",
     },
   ];
 
@@ -151,6 +159,12 @@ export const BookEditingPackagesTestimonialsAndFAQ: React.FC = () => {
     },
   ];
 
+  const mobileItem = testimonials[activeIndex];
+  const desktopItems = [
+    testimonials[activeIndex],
+    testimonials[(activeIndex + 1) % testimonials.length],
+  ];
+
   return (
     <div className="w-full bg-[#f8fafc] text-slate-800 py-12">
       {/* ------------------------------------------------------------- */}
@@ -185,11 +199,13 @@ export const BookEditingPackagesTestimonialsAndFAQ: React.FC = () => {
                 className={`${pkg.cardHeaderBg} p-6 border-b border-slate-200/50`}
               >
                 <div className="flex items-center space-x-3 mb-3">
-                  <span
-                    className={`w-9 h-9 rounded-full ${pkg.badgeBg} ${pkg.badgeColor} flex items-center justify-center font-bold text-lg shadow-sm`}
-                  >
-                    {pkg.letter}
-                  </span>
+                  <Image
+                    src={pkg.iconSrc}
+                    alt={pkg.iconAlt}
+                    width={36}
+                    height={36}
+                    className="w-9 h-9 object-contain rounded-full"
+                  />
                   <h4 className="text-base sm:text-lg font-bold text-slate-900 leading-tight">
                     {pkg.title}
                   </h4>
@@ -241,59 +257,32 @@ export const BookEditingPackagesTestimonialsAndFAQ: React.FC = () => {
           </p>
         </div>
 
-        {/* Testimonial Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {testimonials.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex flex-col justify-between relative"
-            >
-              <div>
-                {/* Upper Box: Journal image + Quote */}
-                <div className="bg-[#eef3f3] rounded-lg p-4 flex flex-col sm:flex-row items-center gap-4 mb-4 border border-slate-100">
-                  <div className="relative w-28 h-36 flex-shrink-0 rounded overflow-hidden shadow-sm border border-slate-200">
-                    <Image
-                      src={item.journalImage}
-                      alt="Journal Cover"
-                      fill
-                      sizes="112px"
-                      className="object-cover"
-                    />
-                  </div>
-                  <p className="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
-                    &ldquo;{item.quote}&rdquo;
-                  </p>
-                </div>
-
-                {/* Author Info & Country Flag */}
-                <div className="flex items-center justify-between pt-2">
-                  <div>
-                    <h4 className="text-xs sm:text-sm font-bold text-slate-900 tracking-wider">
-                      — {item.authorName}
-                    </h4>
-                    <p className="text-xs text-slate-500 italic mt-0.5">
-                      {item.authorTitle}
-                    </p>
-                  </div>
-                  <div className="relative w-6 h-6 flex-shrink-0 rounded-full overflow-hidden shadow-sm">
-                    <Image
-                      src={item.flagImage}
-                      alt={item.flagAlt}
-                      fill
-                      sizes="24px"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className="grid grid-cols-1 gap-6 md:hidden">
+          <BookTestimonialCard item={mobileItem} />
+        </div>
+        <div className="hidden md:grid grid-cols-2 gap-6">
+          {desktopItems.map((item) => (
+            <BookTestimonialCard
+              key={`${activeIndex}-${item.authorName}`}
+              item={item}
+            />
           ))}
         </div>
 
-        {/* Slider Indicator Dots */}
         <div className="flex items-center justify-center space-x-2 mt-6">
-          <span className="w-3 h-3 bg-[#0d3b36] rounded-sm inline-block"></span>
-          <span className="w-3 h-3 border border-[#0d3b36] rounded-sm inline-block"></span>
+          {testimonials.map((item, index) => (
+            <button
+              key={item.authorName}
+              type="button"
+              aria-label={`Show testimonial ${index + 1}`}
+              onClick={() => setActiveIndex(index)}
+              className={`w-3 h-3 rounded-sm inline-block ${
+                activeIndex === index
+                  ? "bg-[#0d3b36]"
+                  : "border border-[#0d3b36] bg-white"
+              }`}
+            />
+          ))}
         </div>
       </section>
 
@@ -340,3 +329,45 @@ export const BookEditingPackagesTestimonialsAndFAQ: React.FC = () => {
     </div>
   );
 };
+
+function BookTestimonialCard({ item }: { item: Testimonial }) {
+  return (
+    <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex flex-col justify-between relative">
+      <div>
+        <div className="bg-[#eef3f3] rounded-lg p-4 flex flex-col sm:flex-row items-center gap-4 mb-4 border border-slate-100">
+          <div className="relative w-28 h-36 flex-shrink-0 rounded overflow-hidden shadow-sm border border-slate-200">
+            <Image
+              src={item.journalImage}
+              alt="Journal Cover"
+              fill
+              sizes="112px"
+              className="object-cover"
+            />
+          </div>
+          <p className="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
+            &ldquo;{item.quote}&rdquo;
+          </p>
+        </div>
+        <div className="flex items-center justify-between pt-2">
+          <div>
+            <h4 className="text-xs sm:text-sm font-bold text-slate-900 tracking-wider">
+              — {item.authorName}
+            </h4>
+            <p className="text-xs text-slate-500 italic mt-0.5">
+              {item.authorTitle}
+            </p>
+          </div>
+          <div className="relative w-6 h-6 flex-shrink-0 rounded-full overflow-hidden shadow-sm">
+            <Image
+              src={item.flagImage}
+              alt={item.flagAlt}
+              fill
+              sizes="24px"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

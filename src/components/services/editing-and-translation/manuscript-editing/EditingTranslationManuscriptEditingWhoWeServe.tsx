@@ -23,7 +23,8 @@ export const EditingTranslationManuscriptEditingWhoWeServe: React.FC = () => {
           for research papers for journals, conferences, and theses.
         </p>
       ),
-      imageSrc: "/images/services/who-we-serve-academic-researchers.webp",
+      imageSrc:
+        "/images/editing-and-translation/manuscript-editing/Academic-Researchers-Scholars.png",
       imageAlt:
         "Academic researchers discussing research findings on a whiteboard",
     },
@@ -37,7 +38,8 @@ export const EditingTranslationManuscriptEditingWhoWeServe: React.FC = () => {
           effectively.
         </p>
       ),
-      imageSrc: "/images/services/who-we-serve-medical-professionals.webp",
+      imageSrc:
+        "/images/editing-and-translation/manuscript-editing/Medical-and-Scientific-Professionals.png",
       imageAlt:
         "Medical professional conducting scientific lab research with microscope",
     },
@@ -50,7 +52,8 @@ export const EditingTranslationManuscriptEditingWhoWeServe: React.FC = () => {
           for submission.
         </p>
       ),
-      imageSrc: "/images/services/who-we-serve-graduate-students.webp",
+      imageSrc:
+        "/images/editing-and-translation/manuscript-editing/Graduate-Postgraduate-Students.png",
       imageAlt: "Postgraduate student holding degree and thesis documents",
     },
     {
@@ -62,7 +65,8 @@ export const EditingTranslationManuscriptEditingWhoWeServe: React.FC = () => {
           enhance the global visibility of their research.
         </p>
       ),
-      imageSrc: "/images/services/who-we-serve-universities.webp",
+      imageSrc:
+        "/images/editing-and-translation/manuscript-editing/Universities-Research-Institutions.png",
       imageAlt: "Empty modern university lecture auditorium",
     },
     {
@@ -74,7 +78,8 @@ export const EditingTranslationManuscriptEditingWhoWeServe: React.FC = () => {
           editing services and medical manuscript editing.
         </p>
       ),
-      imageSrc: "/images/services/who-we-serve-pharma-biotech.webp",
+      imageSrc:
+        "/images/editing-and-translation/manuscript-editing/Pharmaceutical-Biotech-Companies-1.png",
       imageAlt:
         "Pharmaceutical research scientists looking at computer workstation",
     },
@@ -87,7 +92,8 @@ export const EditingTranslationManuscriptEditingWhoWeServe: React.FC = () => {
           ensuring grammatical precision and clarity.
         </p>
       ),
-      imageSrc: "/images/services/who-we-serve-non-native-authors.webp",
+      imageSrc:
+        "/images/editing-and-translation/manuscript-editing/Non-native-English-Authors.png",
       imageAlt:
         "Non-native English author writing and editing manuscript at desk",
     },

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 interface ServeItem {
   id: string;
@@ -19,42 +20,48 @@ export const EditingTranslationBookEditingWhoWeServe: React.FC = () => {
       title: "Academic Authors & Researchers",
       description:
         "Scholars preparing textbooks, reference books, or edited volumes in the sciences, engineering, medicine, and social sciences.",
-      imageSrc: "/images/services/book-editing/academic-authors.jpg",
+      imageSrc:
+        "/images/editing-and-translation/book-editing/Academic-Authors-Researchers.png",
     },
     {
       id: "phd",
       title: "PhD Scholars & Postdoctoral Researchers",
       description:
         "Converting dissertations and theses into publishable academic books or monographs.",
-      imageSrc: "/images/services/book-editing/phd-scholars.jpg",
+      imageSrc:
+        "/images/editing-and-translation/book-editing/PhD-Scholars-Postdoctoral-Researchers.png",
     },
     {
       id: "independent",
       title: "Independent Authors & Professionals",
       description:
         "Writers seeking editing support for nonfiction, technical, or professional books.",
-      imageSrc: "/images/services/book-editing/independent-authors.jpg",
+      imageSrc:
+        "/images/editing-and-translation/book-editing/Independent-Authors-Professionals.png",
     },
     {
       id: "medical",
       title: "Medical & Scientific Experts",
       description:
         "Clinicians, scientists, and specialists compile handbooks, clinical guides, or academic resources.",
-      imageSrc: "/images/services/book-editing/medical-experts.jpg",
+      imageSrc:
+        "/images/editing-and-translation/book-editing/Medical-Scientific-Experts.png",
     },
     {
       id: "publishers",
       title: "Publishers & Editors",
       description:
         "Partnering with publishing houses to deliver editorially polished, market-ready book content.",
-      imageSrc: "/images/services/book-editing/publishers-editors.jpg",
+      imageSrc:
+        "/images/editing-and-translation/book-editing/Publishers-Editors.png",
     },
     {
       id: "universities",
       title: "Universities & Research Institutions",
       description:
         "Supporting institutional publications, edited series, and collaborative works.",
-      imageSrc: "/images/services/book-editing/universities-research.jpg",
+      imageSrc:
+        "/images/editing-and-translation/book-editing/Universities-Research-Institutions-1.png",
     },
   ];
 
@@ -89,11 +96,17 @@ export const EditingTranslationBookEditingWhoWeServe: React.FC = () => {
               >
                 {/* Default Card State (Image background with overlay text) */}
                 <div
-                  className={`absolute inset-0 bg-cover bg-center transition-opacity duration-300 ${
+                  className={`absolute inset-0 transition-opacity duration-300 ${
                     isFlipped ? "opacity-0 pointer-events-none" : "opacity-100"
                   }`}
-                  style={{ backgroundImage: `url(${item.imageSrc})` }}
                 >
+                  <Image
+                    src={item.imageSrc}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                  />
                   {/* Bottom Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end p-5">
                     <h3 className="text-sm sm:text-base font-bold text-white leading-snug">

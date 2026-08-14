@@ -123,8 +123,8 @@ export const EditingTranslationBookEditingHero: React.FC = () => {
             <div className="relative w-full max-w-md bg-[#0d3b36] p-3 rounded-2xl shadow-md">
               <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden">
                 <Image
-                  src="/images/services/book-editing-preview.webp"
-                  alt="Laptop with edited proofreading manuscript"
+                  src="/images/editing-and-translation/book-editing/Polish-Your-Pages-to-Perfection-With-Pubricas-Book-Editing-Service-1.webp"
+                  alt="Polish your pages to perfection with Pubrica's Book Editing Service"
                   fill
                   className="object-cover"
                   priority
