@@ -99,11 +99,12 @@ export const ThesisEditingHeroAndOverview: React.FC = () => {
               {/* Main Circular Image Holder */}
               <div className="relative w-4/5 h-4/5 rounded-full overflow-hidden bg-emerald-700 shadow-xl border-4 border-white">
                 <Image
-                  src="/images/services/thesis-editing/thesis-editing-student.jpg"
-                  alt="Student working on thesis editing"
+                  src="/images/editing-and-translation/thesis-editing/Refine-Your-Research-With-Pubricas-Thesis-Editing-Service.webp"
+                  alt="Refine your research with Pubrica's Thesis Editing Service"
                   fill
                   sizes="(max-width: 768px) 100vw, 400px"
                   className="object-cover object-center"
+                  priority
                 />
               </div>
 
@@ -111,8 +112,8 @@ export const ThesisEditingHeroAndOverview: React.FC = () => {
               <div className="absolute top-6 -right-2 sm:right-0 w-44 sm:w-52 h-28 bg-white rounded-lg shadow-lg border border-slate-200 p-1.5 overflow-hidden transform rotate-2">
                 <div className="relative w-full h-full bg-slate-50 rounded border border-slate-100 overflow-hidden">
                   <Image
-                    src="/images/services/thesis-editing/track-changes-preview.png"
-                    alt="Thesis Track Changes Document Preview"
+                    src="/images/editing-and-translation/thesis-editing/Track-revisions.png"
+                    alt="Thesis track revisions preview"
                     fill
                     sizes="200px"
                     className="object-contain"

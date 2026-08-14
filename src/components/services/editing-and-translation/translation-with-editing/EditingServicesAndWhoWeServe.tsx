@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 // --- Data for Types of Editing Services ---
 interface EditingService {
@@ -61,7 +62,7 @@ const audienceData: AudienceCard[] = [
     id: "researchers",
     title: "Researchers & Academics",
     imageUrl:
-      "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80",
+      "/images/editing-and-translation/translation-with-editing/Researchers-Academics-1.png",
     description:
       "We provide academic translation services and research paper translation with editing to help scholars publish dissertations, theses, and journal articles in top international journals.",
   },
@@ -69,7 +70,7 @@ const audienceData: AudienceCard[] = [
     id: "universities",
     title: "Universities & Institutions",
     imageUrl:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+      "/images/editing-and-translation/translation-with-editing/Universities-Institutions.png",
     description: (
       <>
         Trusted scientific translation and editing services for educational
@@ -85,7 +86,7 @@ const audienceData: AudienceCard[] = [
     id: "publishers",
     title: "Publishers & Journals",
     imageUrl:
-      "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80",
+      "/images/editing-and-translation/translation-with-editing/Publishers-Journals-1.png",
     description: (
       <>
         Professional{" "}
@@ -101,7 +102,7 @@ const audienceData: AudienceCard[] = [
     id: "students",
     title: "Students & Doctoral Candidates",
     imageUrl:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+      "/images/editing-and-translation/translation-with-editing/Students-Doctoral-Candidates-1.png",
     description:
       "Affordable dissertation translation and editing services that ensure accuracy, clarity, and acceptance in academic submissions.",
   },
@@ -109,7 +110,7 @@ const audienceData: AudienceCard[] = [
     id: "medical",
     title: "Medical & Scientific Professionals",
     imageUrl:
-      "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80",
+      "/images/editing-and-translation/translation-with-editing/Medical-Scientific-Professionals.png",
     description: (
       <>
         Specialized medical translation services and scientific{" "}
@@ -125,7 +126,7 @@ const audienceData: AudienceCard[] = [
     id: "corporate",
     title: "Corporate & Industry Clients",
     imageUrl:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+      "/images/editing-and-translation/translation-with-editing/Corporate-Industry-Clients.png",
     description:
       "High-quality technical translation and editing services for proposals, reports, and documentation to enhance international communication.",
   },
@@ -199,10 +200,12 @@ export default function EditingServicesAndWhoWeServe() {
             >
               {/* Default View: Background Image + Title Banner */}
               <div className="absolute inset-0 w-full h-full transition-opacity duration-300 group-hover:opacity-0 group-hover:pointer-events-none">
-                <img
+                <Image
                   src={card.imageUrl}
                   alt={card.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
                 />
                 {/* Dark Bottom Gradient Banner */}
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-4 pt-10">

@@ -69,28 +69,32 @@ export const ThesisEditingPage: React.FC = () => {
       title: "Master’s and PhD Students",
       description:
         "Ensuring your thesis meets university submission standards with clarity, accuracy, and scholarly precision.",
-      imageSrc: "/images/services/thesis-editing/masters-phd-students.jpg",
+      imageSrc:
+        "/images/editing-and-translation/thesis-editing/Masters-and-PhD-Students.png",
     },
     {
       id: "early-career",
       title: "Early-Career Researchers",
       description:
         "Helping you transform your thesis into a polished document that can lead to publications and future research opportunities.",
-      imageSrc: "/images/services/thesis-editing/early-career-researchers.jpg",
+      imageSrc:
+        "/images/editing-and-translation/thesis-editing/Early-Career-Researchers.png",
     },
     {
       id: "international-students",
       title: "International Students",
       description:
         "Assisting non-native English speakers in presenting their research with fluency, coherence, and academic style.",
-      imageSrc: "/images/services/thesis-editing/international-students.jpg",
+      imageSrc:
+        "/images/editing-and-translation/thesis-editing/International-Students.png",
     },
     {
       id: "universities-institutions",
       title: "Universities and Institutions",
       description:
         "Partnering with academic bodies to provide editing support that enhances student success and institutional reputation.",
-      imageSrc: "/images/services/thesis-editing/universities-institutions.jpg",
+      imageSrc:
+        "/images/editing-and-translation/thesis-editing/Universities-and-Institutions.png",
     },
   ];
 
@@ -123,25 +127,13 @@ export const ThesisEditingPage: React.FC = () => {
         {/* What We Do Content Split Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Overlapping Image Collage Column */}
-          <div className="lg:col-span-5 relative py-6 flex flex-col items-center justify-center">
-            {/* Top Left Floating Image */}
-            <div className="relative w-64 h-44 sm:w-72 sm:h-48 rounded-xl overflow-hidden shadow-lg border-2 border-white z-10 self-start">
+          <div className="lg:col-span-5 relative py-6 flex items-center justify-center">
+            <div className="relative w-full max-w-md aspect-square rounded-xl overflow-hidden shadow-lg border-2 border-white">
               <Image
-                src="/images/services/thesis-editing/editing-team-discussion.jpg"
-                alt="Editing team analyzing academic manuscripts"
+                src="/images/editing-and-translation/thesis-editing/What-We-Do.png"
+                alt="Thesis editing what we do"
                 fill
-                sizes="300px"
-                className="object-cover"
-              />
-            </div>
-
-            {/* Bottom Right Overlapping Image */}
-            <div className="relative w-64 h-44 sm:w-72 sm:h-48 rounded-xl overflow-hidden shadow-xl border-2 border-white -mt-16 sm:-mt-20 z-20 self-end">
-              <Image
-                src="/images/services/thesis-editing/thesis-review-process.jpg"
-                alt="Detailed thesis review and proofreading process"
-                fill
-                sizes="300px"
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
               />
             </div>

@@ -1,7 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
+
+const IMG_BASE = "/images/editing-and-translation/thesis-editing/";
 
 // --- Testimonial Data ---
 interface Testimonial {
@@ -11,7 +14,8 @@ interface Testimonial {
   title: string;
   country: string;
   flagUrl: string;
-  journalLogoUrl?: string;
+  journalCover: string;
+  journalAlt: string;
 }
 
 const testimonials: Testimonial[] = [
@@ -22,8 +26,9 @@ const testimonials: Testimonial[] = [
     author: "DR. ANANYA MEHTA",
     title: "Ph.D. Scholar, India",
     country: "India",
-    // SVG circular flag or image placeholder
-    flagUrl: "https://flagcdn.com/w40/in.png",
+    flagUrl: `${IMG_BASE}flag.png`,
+    journalCover: `${IMG_BASE}international-journal-case-reports-surgery.png`,
+    journalAlt: "International Journal Case Reports Surgery cover",
   },
   {
     id: 2,
@@ -32,7 +37,9 @@ const testimonials: Testimonial[] = [
     author: "SARAH JOHNSON",
     title: "Master’s Scholar, UK",
     country: "United Kingdom",
-    flagUrl: "https://flagcdn.com/w40/gb.png",
+    flagUrl: `${IMG_BASE}uk-flag-.png`,
+    journalCover: `${IMG_BASE}jama-oncology-journal-2.png`,
+    journalAlt: "JAMA Oncology journal cover",
   },
   {
     id: 3,
@@ -41,7 +48,9 @@ const testimonials: Testimonial[] = [
     author: "CARLOS RODRÍGUEZ",
     title: "Master’s Student, Spain",
     country: "Spain",
-    flagUrl: "https://flagcdn.com/w40/es.png",
+    flagUrl: `${IMG_BASE}spain-.png`,
+    journalCover: `${IMG_BASE}international-journal-of-surgery-.png`,
+    journalAlt: "International Journal of Surgery cover",
   },
 ];
 
@@ -88,8 +97,7 @@ const faqData: FAQItem[] = [
 ];
 
 export default function TestimonialsAndFAQ() {
-  // Testimonial Pagination State (showing 2 items per slide page)
-  const [activeSlide, setActiveSlide] = useState<number>(0);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
 
   // FAQ Accordion State (stores active item ID, default open is ID 1)
   const [openFaqId, setOpenFaqId] = useState<number | null>(1);
@@ -97,6 +105,12 @@ export default function TestimonialsAndFAQ() {
   const toggleFaq = (id: number) => {
     setOpenFaqId((prev) => (prev === id ? null : id));
   };
+
+  const mobileItem = testimonials[activeIndex];
+  const desktopItems = [
+    testimonials[activeIndex],
+    testimonials[(activeIndex + 1) % testimonials.length],
+  ];
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-12 text-slate-800 font-sans">
@@ -117,73 +131,27 @@ export default function TestimonialsAndFAQ() {
         </p>
 
         {/* Testimonials Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          {testimonials
-            .slice(activeSlide * 2, activeSlide * 2 + 2)
-            .map((item) => (
-              <div
-                key={item.id}
-                className="border border-slate-300 rounded-xl bg-white shadow-sm overflow-hidden flex flex-col justify-between"
-              >
-                {/* Top Gray Container (Quote + Book Cover Placeholder) */}
-                <div className="bg-[#CCCCCC] p-5 sm:p-6 flex flex-col sm:flex-row items-center gap-4 min-h-[160px]">
-                  {/* Mock Journal Cover Image */}
-                  <div className="w-24 h-28 bg-[#00A896] text-white flex-shrink-0 rounded flex flex-col justify-between p-2 shadow-sm text-center border border-white">
-                    <span className="text-[9px] font-bold tracking-tighter uppercase leading-tight">
-                      International Journal of
-                    </span>
-                    <span className="text-[11px] font-black uppercase leading-tight">
-                      Surgery Case Reports
-                    </span>
-                    <div className="w-full h-1 bg-white/40 mt-auto"></div>
-                  </div>
-
-                  {/* Quote Text */}
-                  <p className="text-xs sm:text-sm text-slate-800 font-medium leading-relaxed italic">
-                    &ldquo;{item.quote}&rdquo;
-                  </p>
-                </div>
-
-                {/* Bottom Bar (Author Info + Flag) */}
-                <div className="p-4 bg-white flex items-center justify-between border-t border-slate-200">
-                  <div>
-                    <h4 className="text-sm font-bold text-slate-900 tracking-wide">
-                      — {item.author}
-                    </h4>
-                    <p className="text-xs italic text-slate-600">
-                      {item.title}
-                    </p>
-                  </div>
-
-                  {/* Country Flag Badge */}
-                  <div className="w-7 h-7 rounded-full overflow-hidden border border-slate-200 shadow-sm flex-shrink-0">
-                    <img
-                      src={item.flagUrl}
-                      alt={item.country}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
+        <div className="grid grid-cols-1 gap-6 mb-6 md:hidden">
+          <TestimonialCard item={mobileItem} />
+        </div>
+        <div className="hidden md:grid grid-cols-2 gap-6 mb-6">
+          {desktopItems.map((item) => (
+            <TestimonialCard key={`${activeIndex}-${item.id}`} item={item} />
+          ))}
         </div>
 
-        {/* Carousel Indicators / Dots */}
         <div className="flex justify-center items-center space-x-2">
-          <button
-            onClick={() => setActiveSlide(0)}
-            className={`w-3 h-3 border border-[#003B46] ${
-              activeSlide === 0 ? "bg-[#003B46]" : "bg-transparent"
-            }`}
-            aria-label="Slide 1"
-          />
-          <button
-            onClick={() => setActiveSlide(1)}
-            className={`w-3 h-3 border border-[#003B46] ${
-              activeSlide === 1 ? "bg-[#003B46]" : "bg-transparent"
-            }`}
-            aria-label="Slide 2"
-          />
+          {testimonials.map((item, index) => (
+            <button
+              key={item.id}
+              type="button"
+              onClick={() => setActiveIndex(index)}
+              className={`w-3 h-3 border border-[#003B46] ${
+                activeIndex === index ? "bg-[#003B46]" : "bg-transparent"
+              }`}
+              aria-label={`Show testimonial ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
 
@@ -230,6 +198,46 @@ export default function TestimonialsAndFAQ() {
           })}
         </div>
       </section>
+    </div>
+  );
+}
+
+function TestimonialCard({ item }: { item: Testimonial }) {
+  return (
+    <div className="border border-slate-300 rounded-xl bg-white shadow-sm overflow-hidden flex flex-col justify-between">
+      <div className="bg-[#CCCCCC] p-5 sm:p-6 flex flex-col sm:flex-row items-center gap-4 min-h-[160px]">
+        <div className="relative w-24 h-28 shrink-0 rounded overflow-hidden shadow-sm border border-white bg-white">
+          <Image
+            src={item.journalCover}
+            alt={item.journalAlt}
+            fill
+            sizes="96px"
+            className="object-cover"
+          />
+        </div>
+        <p className="text-xs sm:text-sm text-slate-800 font-medium leading-relaxed italic">
+          &ldquo;{item.quote}&rdquo;
+        </p>
+      </div>
+
+      <div className="p-4 bg-white flex items-center justify-between border-t border-slate-200">
+        <div>
+          <h4 className="text-sm font-bold text-slate-900 tracking-wide">
+            — {item.author}
+          </h4>
+          <p className="text-xs italic text-slate-600">{item.title}</p>
+        </div>
+
+        <div className="relative w-7 h-7 rounded-full overflow-hidden border border-slate-200 shadow-sm shrink-0">
+          <Image
+            src={item.flagUrl}
+            alt={item.country}
+            fill
+            sizes="28px"
+            className="object-cover"
+          />
+        </div>
+      </div>
     </div>
   );
 }

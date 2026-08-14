@@ -1,24 +1,21 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  ArrowRightCircle,
-  Plus,
-  Minus,
-  Languages,
-  UserCheck,
-  FileCheck,
-  Award,
-} from "lucide-react";
+import Image from "next/image";
+import { ArrowRightCircle, Plus, Minus } from "lucide-react";
 
 // --- Step Process Data ---
 interface StepItem {
   stepNumber: number;
   title: string;
   description: string;
-  icon: React.ReactNode;
+  iconSrc: string;
+  iconAlt: string;
   position: "top" | "bottom";
 }
+
+const PROCESS_ICON_BASE =
+  "/images/editing-and-translation/translation-with-editing/";
 
 const stepsData: StepItem[] = [
   {
@@ -26,9 +23,8 @@ const stepsData: StepItem[] = [
     title: "Translation",
     description:
       "A translator converts the manuscript into English, attending to the technical language and conventions in the subject area.",
-    icon: (
-      <Languages className="w-8 h-8 text-slate-700 group-hover:text-slate-200 transition-colors" />
-    ),
+    iconSrc: `${PROCESS_ICON_BASE}Translation.png`,
+    iconAlt: "Translation",
     position: "bottom",
   },
   {
@@ -36,9 +32,8 @@ const stepsData: StepItem[] = [
     title: "Bilingual review",
     description:
       "A bilingual expert checks the accuracy of the translation and ensures that your original meaning is conveyed.",
-    icon: (
-      <UserCheck className="w-8 h-8 text-slate-700 group-hover:text-slate-200 transition-colors" />
-    ),
+    iconSrc: `${PROCESS_ICON_BASE}Bilingual-review.png`,
+    iconAlt: "Bilingual review",
     position: "top",
   },
   {
@@ -46,9 +41,8 @@ const stepsData: StepItem[] = [
     title: "Language edit",
     description:
       "An experienced reviewer checks for punctuation, grammar, language style, formatting, clarity, and fluency.",
-    icon: (
-      <FileCheck className="w-8 h-8 text-slate-700 group-hover:text-slate-200 transition-colors" />
-    ),
+    iconSrc: `${PROCESS_ICON_BASE}Language-edit.png`,
+    iconAlt: "Language edit",
     position: "bottom",
   },
   {
@@ -56,9 +50,8 @@ const stepsData: StepItem[] = [
     title: "Final review",
     description:
       "A senior reviewer checks that all your requirements have been met before sending you the final, submission-ready file.",
-    icon: (
-      <Award className="w-8 h-8 text-slate-700 group-hover:text-slate-200 transition-colors" />
-    ),
+    iconSrc: `${PROCESS_ICON_BASE}Final-review.png`,
+    iconAlt: "Final review",
     position: "top",
   },
 ];
@@ -133,7 +126,15 @@ export default function HowItWorksAndLanguages() {
                   {/* TOP POSITION CARD */}
                   {step.position === "top" ? (
                     <div className="group w-full bg-white border border-slate-200 rounded-lg p-5 shadow-sm text-left hover:bg-[#525252] transition-colors duration-200 cursor-pointer mb-4 min-h-[170px] flex flex-col justify-start">
-                      <div className="mb-2">{step.icon}</div>
+                      <div className="mb-2 relative w-10 h-10">
+                        <Image
+                          src={step.iconSrc}
+                          alt={step.iconAlt}
+                          fill
+                          sizes="40px"
+                          className="object-contain"
+                        />
+                      </div>
                       <h4 className="font-bold text-slate-900 group-hover:text-white text-base mb-1 transition-colors">
                         {step.title}
                       </h4>
@@ -155,7 +156,15 @@ export default function HowItWorksAndLanguages() {
                   {/* BOTTOM POSITION CARD */}
                   {step.position === "bottom" ? (
                     <div className="group w-full bg-white border border-slate-200 rounded-lg p-5 shadow-sm text-left hover:bg-[#525252] transition-colors duration-200 cursor-pointer mt-4 min-h-[170px] flex flex-col justify-start">
-                      <div className="mb-2">{step.icon}</div>
+                      <div className="mb-2 relative w-10 h-10">
+                        <Image
+                          src={step.iconSrc}
+                          alt={step.iconAlt}
+                          fill
+                          sizes="40px"
+                          className="object-contain"
+                        />
+                      </div>
                       <h4 className="font-bold text-slate-900 group-hover:text-white text-base mb-1 transition-colors">
                         {step.title}
                       </h4>

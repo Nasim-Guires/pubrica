@@ -1,6 +1,7 @@
 "use client";
 
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Image from "next/image";
 import React from "react";
 
 export default function TranslationEditingHero() {
@@ -80,19 +81,24 @@ export default function TranslationEditingHero() {
             <div className="relative w-full max-w-sm sm:max-w-md h-[320px] sm:h-[360px]">
               {/* Top/Back Image (Book with pen) */}
               <div className="absolute top-0 left-0 w-[65%] h-[200px] sm:h-[220px] rounded-2xl overflow-hidden shadow-md border-2 border-white bg-slate-100 z-10">
-                <img
-                  src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=800&q=80"
-                  alt="Open book with pen"
-                  className="w-full h-full object-cover"
+                <Image
+                  src="/images/editing-and-translation/translation-with-editing/Comprehensive-translation-and-high-quality-editing-by-language-experts.webp"
+                  alt="Comprehensive translation and high-quality editing by language experts"
+                  fill
+                  sizes="(max-width: 640px) 65vw, 360px"
+                  className="object-cover"
+                  priority
                 />
               </div>
 
               {/* Bottom/Front Image (Hands writing/reviewing document) */}
               <div className="absolute bottom-0 right-0 w-[70%] h-[210px] sm:h-[230px] rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-slate-100 z-20">
-                <img
-                  src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80"
-                  alt="Reviewing academic documents"
-                  className="w-full h-full object-cover"
+                <Image
+                  src="/images/editing-and-translation/translation-with-editing/Translation-with-Editing-Services.png"
+                  alt="Translation with Editing Services"
+                  fill
+                  sizes="(max-width: 640px) 70vw, 400px"
+                  className="object-cover"
                 />
               </div>
 

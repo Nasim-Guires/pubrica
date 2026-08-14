@@ -1,15 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { ArrowRightCircle, Minus, Plus } from "lucide-react";
 
 interface PricingTier {
   title: string;
   subtitle: string;
-  badgeLetter: string;
+  iconSrc: string;
+  iconAlt: string;
   description: string;
   bgColor: string;
-  badgeBg: string;
   includes: {
     category?: string;
     items?: string[];
@@ -21,9 +22,9 @@ const pricingData: PricingTier[] = [
   {
     title: "Thesis Essentials",
     subtitle: "Make Your Thesis Error-Free And Submission-Ready",
-    badgeLetter: "T",
+    iconSrc: "/images/editing-and-translation/thesis-editing/t-icons.png",
+    iconAlt: "Thesis Essentials",
     bgColor: "bg-[#CFD8DC]", // Soft slate gray
-    badgeBg: "bg-[#B0BEC5]",
     description:
       "Suitable for writers who need editing and proofreading to eliminate grammar and spelling mistakes in their thesis and ensure stylistic consistency.",
     includes: [
@@ -58,9 +59,9 @@ const pricingData: PricingTier[] = [
   {
     title: "Thesis Pro",
     subtitle: "Improve The Overall Presentation Of Your Thesis",
-    badgeLetter: "T",
+    iconSrc: "/images/editing-and-translation/thesis-editing/t-icons.png",
+    iconAlt: "Thesis Pro",
     bgColor: "bg-[#D1C4E9]", // Soft purple
-    badgeBg: "bg-[#B39DDB]",
     description:
       "A thorough thesis editing with a deeper intervention to improve clarity and coherence. Recommended for writers who need help enhancing their writing.",
     includes: [
@@ -164,10 +165,14 @@ export default function ServicePricingSection() {
             <div>
               {/* Header Badge */}
               <div className="bg-white rounded-lg p-4 shadow-sm flex items-center space-x-4 mb-6">
-                <div
-                  className={`${plan.badgeBg} w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl text-slate-700 shrink-0 border border-amber-300`}
-                >
-                  {plan.badgeLetter}
+                <div className="relative w-12 h-12 shrink-0">
+                  <Image
+                    src={plan.iconSrc}
+                    alt={plan.iconAlt}
+                    fill
+                    sizes="48px"
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-slate-900">

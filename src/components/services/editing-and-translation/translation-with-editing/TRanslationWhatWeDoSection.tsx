@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
 
 interface AccordionItem {
@@ -124,11 +125,13 @@ export default function WhatWeDoSection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left Side: Workspace / Desk Image */}
         <div className="lg:col-span-5 flex justify-center">
-          <div className="w-full max-w-md lg:max-w-none rounded-lg overflow-hidden shadow-sm">
-            <img
-              src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80"
-              alt="Person working at computer with manuscripts"
-              className="w-full h-auto object-cover rounded-lg"
+          <div className="relative w-full max-w-md lg:max-w-none aspect-square rounded-lg overflow-hidden shadow-sm">
+            <Image
+              src="/images/editing-and-translation/translation-with-editing/Translation-with-Editing-Services.png"
+              alt="Translation with Editing Services"
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-cover rounded-lg"
             />
           </div>
         </div>

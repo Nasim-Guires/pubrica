@@ -1,13 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { 
-  ArrowRightCircle, 
-  FileText, 
-  BookOpen, 
-  FileCode, 
-  FileCheck, 
-  Search 
-} from 'lucide-react';
+import { ArrowRightCircle } from 'lucide-react';
 
 interface Expert {
   id: string;
@@ -48,11 +41,11 @@ const services: ServiceCard[] = [
 ];
 
 const documentTypes = [
-  { label: 'Dissertations', icon: FileText },
-  { label: 'Book manuscripts', icon: BookOpen },
-  { label: 'Scientific articles', icon: FileCode },
-  { label: 'Abstracts', icon: Search },
-  { label: 'Research proposals', icon: FileCheck },
+  { label: 'Dissertations' },
+  { label: 'Book manuscripts' },
+  { label: 'Scientific articles' },
+  { label: 'Abstracts' },
+  { label: 'Research proposals' },
 ];
 
 const experts: Expert[] = [
@@ -63,8 +56,8 @@ const experts: Expert[] = [
     institution: 'All India Institute of Medical Sciences, India',
     experience: '5+ Years of Experience',
     papersEdited: '600+ Papers Edited',
-    avatarUrl: '/images/experts/arjun-mehta.jpg',
-    flagUrl: 'https://flagcdn.com/w40/in.png',
+    avatarUrl: '/images/editing-and-translation/thesis-editing/dr-arjun-mehta-.png',
+    flagUrl: '/images/editing-and-translation/thesis-editing/india.png',
   },
   {
     id: '2',
@@ -73,8 +66,8 @@ const experts: Expert[] = [
     institution: 'University of Cambridge, UK',
     experience: '6+ Years of Experience',
     papersEdited: '750+ Papers Edited',
-    avatarUrl: '/images/experts/kavita-reddy.jpg',
-    flagUrl: 'https://flagcdn.com/w40/gb.png',
+    avatarUrl: '/images/editing-and-translation/thesis-editing/kavita-reddy-1-1.png',
+    flagUrl: '/images/editing-and-translation/thesis-editing/uk-flag-.png',
   },
   {
     id: '3',
@@ -83,8 +76,8 @@ const experts: Expert[] = [
     institution: 'Harvard University, USA',
     experience: '4+ Years of Experience',
     papersEdited: '550+ Papers Edited',
-    avatarUrl: '/images/experts/sarah-thompson.jpg',
-    flagUrl: 'https://flagcdn.com/w40/us.png',
+    avatarUrl: '/images/editing-and-translation/thesis-editing/Dr.-Sarah-Thompson-1.png',
+    flagUrl: '/images/editing-and-translation/thesis-editing/usa-.png',
   },
 ];
 
@@ -177,6 +170,7 @@ export default function ThesisPhdEditingService() {
                     src={expert.avatarUrl}
                     alt={expert.name}
                     fill
+                    sizes="80px"
                     className="rounded-full object-cover border-2 border-slate-100"
                   />
                   <div className="absolute bottom-0 right-0 w-6 h-4 overflow-hidden rounded shadow-sm">
@@ -230,74 +224,14 @@ export default function ThesisPhdEditingService() {
             Checkout Our Sample Work of the Thesis Editing service
           </div>
 
-          <div className="bg-white p-6 sm:p-10 rounded-b-lg shadow-sm max-w-4xl mx-auto relative border border-slate-200">
-            {/* Header / Logo placeholder */}
-            <div className="flex justify-end mb-6">
-              <div className="bg-[#003B46] text-white px-3 py-1 font-extrabold text-sm rounded tracking-wide">
-                PUBRICA
-                <span className="block text-[8px] font-normal tracking-normal text-right">Knowledge Works</span>
-              </div>
-            </div>
-
-            <h3 className="text-xl font-bold text-center underline mb-6 text-slate-900">
-              Proof Reading
-            </h3>
-
-            {/* Proofread Sample Text */}
-            <p className="text-xs sm:text-sm text-slate-800 leading-relaxed space-y-1">
-              The light transmittance through tissue is dictated by two collective properties,; scattering and absorption. 
-              In the visible to near-infrared spectrum, tissue&apos;s scattering{' '}
-              <span className="line-through text-red-500">reduces</span>{' '}
-              <span className="text-sky-600 font-semibold">decreases</span> as wavelength increases,{' '}
-              <span className="line-through text-red-500">leading to; therefore,</span> greater line-of-sight penetration{' '}
-              <span className="text-sky-600">at longer wavelength,</span>{' '}
-              <span className="line-through text-amber-600">can be anticipated at greater wavelengths.</span> However, 
-              absorption of light by tissue constituents, ({' '}
-              <span className="line-through text-amber-600">ie.</span>{' '}
-              <span className="text-sky-600 font-semibold">such as</span> water{' '}
-              <span className="text-sky-600 font-semibold">and</span>, hemoglobin, has complex spectral profiles,{' '}
-              <span className="line-through text-amber-600">in which</span>{' '}
-              <span className="text-sky-600 font-semibold">with</span> increased absorption occurs as wavelength increases from visible to{' '}
-              <span className="line-through text-amber-600">near-infrared</span>
-              <span className="text-sky-600">near-infrared</span>. {' '}
-              <span className="line-through text-amber-600">Identifying</span>{' '}
-              <span className="text-sky-600 font-semibold">Finding</span> the wavelength{' '}
-              <span className="text-sky-600">that provides</span>{' '}
-              <span className="line-through text-amber-600">which renders</span> maximal target level transmission through deep tissue{' '}
-              <span className="text-sky-600">at passage at</span> a tolerable surface dosage should be experimentally examined. 
-              Such <span className="text-sky-600">an</span> examination requires dosimetry investigations relevant to the clinical setting.,{' '}
-              <span className="line-through text-amber-600">because m</span>
-              <span className="font-semibold">M</span>easurements of{' '}
-              <span className="line-through text-amber-600">light</span> the transmission{' '}
-              <span className="line-through text-amber-600">of light</span> from the skin to the spinal cord level conducted with small animals{' '}
-              <span className="line-through text-amber-600">can hardly</span>
-              <span className="text-sky-600 font-semibold">are not</span>{' '}
-              <span className="line-through text-amber-600">be easily</span>{' '}
-              <span className="text-sky-600 font-semibold">translatable</span>
-              <span className="line-through text-amber-600">ed</span> to human use.{' '}
-              <span className="text-sky-600">Therefore,</span> quantification of the intra-spinal irradiance should be conducted in an anatomic structure of an animal much closer in size to human. Towards{' '}
-              <span className="line-through text-amber-600">such a</span>{' '}
-              <span className="text-sky-600 font-semibold">the</span> goal of intra-spinal{' '}
-              <span className="text-sky-600">target-level</span> dosimetry of PBMT for SCI, our group developed a flexible{' '}
-              <span className="line-through text-amber-600">9</span>
-              <span className="text-sky-600 font-semibold">nine</span>-channel photodetector probe [19],{' '}
-              <span className="text-sky-600">x cm in length, designed for intra-spinal dosimetry.</span> Using this intra-spinal probe, we measured the transcutaneous transmission of 980nm PBMT light to the level of{' '}
-              <span className="text-sky-600">the</span> spinal canal along the thoracic to lumbar segment{' '}
-              <span className="line-through text-amber-600">of the interior spinal canal</span> in six cadaver dogs [20]. Our measurements indicated that non-contact transmission of 980nm with skin intact was as low as 12% of the non-contact transmission without skin.{' '}
-              <span className="text-sky-600">Additionally, intact, and</span> contact application increased{' '}
-              <span className="text-sky-600">the</span> transmission by{' '}
-              <span className="line-through text-amber-600">a up to 67%</span>{' '}
-              <span className="text-sky-600 font-semibold">maximum of 67%</span> compared to non-contact application. Under a maximal surface irradiance of 3.14 W/cm2,{' '}
-              <span className="line-through text-amber-600">resulting</span>{' '}
-              <span className="text-sky-600 font-semibold">resulted</span> from 10W of laser power{' '}
-              <span className="text-sky-600">applied ying via a</span>{' '}
-              <span className="text-sky-600 font-semibold">to a</span> conic treatment head, the mode of contact application transmitted a maximum irradiance of 85.4 ± 139.1 μW/cm2 to the spinal canal. Thise information{' '}
-              <span className="text-sky-600">gathered</span> highlights the need to clinically consider the impact of skin transmission and contact application techniques when attempting to treat spinal cord disease with PBMT.
-            </p>
-
-            <div className="mt-8 text-center text-xs text-slate-400">
-              Copyright © 2025 pubrica. No part of this document may be published without permission of the author
-            </div>
+          <div className="relative w-full aspect-[1379/576] bg-white rounded-b-lg overflow-hidden border border-slate-200">
+            <Image
+              src="/images/editing-and-translation/thesis-editing/Graphical-Abstract-Sample-Work.png"
+              alt="Thesis editing services sample work"
+              fill
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              className="object-contain"
+            />
           </div>
         </div>
       </section>

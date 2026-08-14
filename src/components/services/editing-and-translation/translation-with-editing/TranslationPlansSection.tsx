@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { ArrowRightCircle } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface PlanCard {
   id: string;
-  letterBadge: string;
-  badgeBgColor: string;
-  badgeTextColor: string;
+  iconSrc: string;
+  iconAlt: string;
   title: string;
   bgColor: string;
   idealFor: string;
@@ -19,9 +19,8 @@ interface PlanCard {
 const plansData: PlanCard[] = [
   {
     id: "basic",
-    letterBadge: "B",
-    badgeBgColor: "bg-[#F2E3C6]",
-    badgeTextColor: "text-[#B87B28]",
+    iconSrc: "/images/editing-and-translation/basic-pacakge.png",
+    iconAlt: "Basic package",
     title: "Basic",
     bgColor: "bg-[#C3D2CE]", // Sage Green
     idealFor: "Short manuscripts, abstracts, or conference papers",
@@ -34,9 +33,8 @@ const plansData: PlanCard[] = [
   },
   {
     id: "pro",
-    letterBadge: "P",
-    badgeBgColor: "bg-[#FDE3D8]",
-    badgeTextColor: "text-[#D96B27]",
+    iconSrc: "/images/editing-and-translation/pro.webp",
+    iconAlt: "Pro package",
     title: "Pro",
     bgColor: "bg-[#D6BDD8]", // Muted Purple/Lavender
     idealFor: "Full-length research papers, theses, and journal articles",
@@ -50,9 +48,9 @@ const plansData: PlanCard[] = [
   },
   {
     id: "traditional",
-    letterBadge: "T",
-    badgeBgColor: "bg-[#D6E6F2]",
-    badgeTextColor: "text-[#32739D]",
+    iconSrc:
+      "/images/editing-and-translation/translation-with-editing/T-icons.png",
+    iconAlt: "Traditional package",
     title: "Traditional",
     bgColor: "bg-[#CFB487]", // Warm Tan/Gold
     idealFor: "Large documents, multi-author collaborations, or books",
@@ -94,13 +92,15 @@ export default function TranslationPlansSection() {
               <div className="space-y-6">
                 {/* Plan Header Card Box */}
                 <div className="bg-white rounded-lg p-4 flex items-center space-x-4 shadow-sm">
-                  {/* Badge Circle */}
-                  <div
-                    className={`w-12 h-12 rounded-full ${plan.badgeBgColor} flex items-center justify-center shrink-0 font-bold text-2xl ${plan.badgeTextColor}`}
-                  >
-                    {plan.letterBadge}
+                  <div className="relative w-12 h-12 shrink-0">
+                    <Image
+                      src={plan.iconSrc}
+                      alt={plan.iconAlt}
+                      fill
+                      sizes="48px"
+                      className="object-contain"
+                    />
                   </div>
-                  {/* Title */}
                   <h3 className="text-xl font-bold text-slate-800">
                     {plan.title}
                   </h3>

@@ -1,7 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
+
+const IMG_BASE =
+  "/images/editing-and-translation/translation-with-editing/";
 
 // --- Testimonials Data ---
 interface Testimonial {
@@ -10,7 +14,9 @@ interface Testimonial {
   author: string;
   role: string;
   journalCover: string;
-  countryFlag: string;
+  journalAlt: string;
+  flagSrc: string;
+  flagAlt: string;
 }
 
 const testimonialsData: Testimonial[] = [
@@ -20,9 +26,10 @@ const testimonialsData: Testimonial[] = [
       "The Pubrica Translation with Editing Service exceeded my expectations. My manuscript was translated into English flawlessly, preserving the exact meaning and nuances of my original work. The editing made it publication-ready.",
     author: "DR. ANANYA MEHTA",
     role: "Biomedical Researcher, India",
-    journalCover:
-      "https://placehold.co/120x150/2b3a4a/ffffff?text=Journal+Cover",
-    countryFlag: "🇮🇳",
+    journalCover: `${IMG_BASE}nature-biotechnology.png`,
+    journalAlt: "Nature Biotechnology journal cover",
+    flagSrc: `${IMG_BASE}india.png`,
+    flagAlt: "India flag",
   },
   {
     id: "2",
@@ -30,9 +37,10 @@ const testimonialsData: Testimonial[] = [
       "The team at Pubrica provided precise translation along with thorough editing. It truly elevated the quality of my manuscript and helped me communicate my findings effectively to an international audience.",
     author: "PROF. LI WEI",
     role: "Materials Science Professor, China",
-    journalCover:
-      "https://placehold.co/120x150/d32f2f/ffffff?text=THE+LANCET+Oncology",
-    countryFlag: "🇨🇳",
+    journalCover: `${IMG_BASE}the-lancet-of-oncolgy-.png`,
+    journalAlt: "The Lancet Oncology journal cover",
+    flagSrc: `${IMG_BASE}china.png`,
+    flagAlt: "China flag",
   },
   {
     id: "3",
@@ -40,9 +48,10 @@ const testimonialsData: Testimonial[] = [
       "I was struggling to express complex findings in English. Pubrica not only translated my thesis but also polished the style to meet academic standards. The turnaround time and quality were outstanding.",
     author: "MS. ANANYA MEHTA",
     role: "Ph.D. Scholar in Environmental Science, India",
-    journalCover:
-      "https://placehold.co/120x150/111827/ffffff?text=frontiers+In+Neuroscience",
-    countryFlag: "🇮🇳",
+    journalCover: `${IMG_BASE}Frontiers-of-neuro-science-.png`,
+    journalAlt: "Frontiers in Neuroscience journal cover",
+    flagSrc: `${IMG_BASE}india.png`,
+    flagAlt: "India flag",
   },
 ];
 
@@ -84,13 +93,59 @@ const faqData: FAQItem[] = [
   },
 ];
 
+function TestimonialCard({ item }: { item: Testimonial }) {
+  return (
+    <div className="bg-white rounded-lg border border-slate-300 shadow-sm flex flex-col justify-between overflow-hidden">
+      <div className="bg-[#e2e8f0]/60 p-5 flex items-start space-x-4 border-b border-slate-200 min-h-[180px]">
+        <div className="relative w-20 h-24 shrink-0 border border-slate-300 shadow-xs rounded-sm overflow-hidden bg-white">
+          <Image
+            src={item.journalCover}
+            alt={item.journalAlt}
+            fill
+            sizes="80px"
+            className="object-cover"
+          />
+        </div>
+        <p className="text-xs text-slate-800 leading-relaxed font-serif italic">
+          &quot;{item.quote}&quot;
+        </p>
+      </div>
+
+      <div className="p-4 flex justify-between items-end bg-white">
+        <div className="space-y-0.5">
+          <p className="font-bold text-slate-900 text-xs sm:text-sm tracking-wide">
+            — {item.author}
+          </p>
+          <p className="text-[11px] text-slate-500 italic">{item.role}</p>
+        </div>
+
+        <div className="relative w-7 h-7 rounded-full overflow-hidden border border-slate-200 shadow-sm shrink-0">
+          <Image
+            src={item.flagSrc}
+            alt={item.flagAlt}
+            fill
+            sizes="28px"
+            className="object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function TestimonialsAndFAQ() {
-  const [activeSlide, setActiveSlide] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(1);
 
   const toggleFaq = (id: number) => {
     setOpenFaq(openFaq === id ? null : id);
   };
+
+  const mobileItem = testimonialsData[activeIndex];
+  const desktopItems = [
+    testimonialsData[activeIndex],
+    testimonialsData[(activeIndex + 1) % testimonialsData.length],
+  ];
 
   return (
     <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-12 px-4 sm:px-6">
@@ -115,66 +170,31 @@ export default function TestimonialsAndFAQ() {
             </p>
           </div>
 
-          {/* Testimonial Cards Carousel View */}
-          <div className="relative overflow-hidden py-2">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-              {testimonialsData.map((testimonial, idx) => (
-                <div
-                  key={testimonial.id}
-                  className={`bg-white rounded-lg border border-slate-300 shadow-sm flex flex-col justify-between overflow-hidden transition-all duration-300 ${
-                    idx === activeSlide ? "ring-2 ring-[#003B46]" : "opacity-85"
-                  }`}
-                >
-                  {/* Top Light Grey Quote Box with Image */}
-                  <div className="bg-[#e2e8f0]/60 p-5 flex items-start space-x-4 border-b border-slate-200 min-h-[180px]">
-                    <img
-                      src={testimonial.journalCover}
-                      alt="Journal Cover"
-                      className="w-20 h-24 object-cover border border-slate-300 shadow-xs shrink-0 rounded-sm"
-                    />
-                    <p className="text-xs text-slate-800 leading-relaxed font-serif italic">
-                      &quot;{testimonial.quote}&quot;
-                    </p>
-                  </div>
-
-                  {/* Bottom Author Box */}
-                  <div className="p-4 flex justify-between items-end bg-white">
-                    <div className="space-y-0.5">
-                      <p className="font-bold text-slate-900 text-xs sm:text-sm tracking-wide">
-                        — {testimonial.author}
-                      </p>
-                      <p className="text-[11px] text-slate-500 italic">
-                        {testimonial.role}
-                      </p>
-                    </div>
-
-                    {/* Flag Icon / Badge */}
-                    <span className="text-xl leading-none" title="Country Flag">
-                      {testimonial.countryFlag}
-                    </span>
-                  </div>
-                </div>
+          <div className="relative py-2">
+            <div className="grid grid-cols-1 gap-6 items-stretch md:hidden">
+              <TestimonialCard item={mobileItem} />
+            </div>
+            <div className="hidden md:grid grid-cols-2 gap-6 items-stretch">
+              {desktopItems.map((item) => (
+                <TestimonialCard
+                  key={`${activeIndex}-${item.id}`}
+                  item={item}
+                />
               ))}
             </div>
 
-            {/* Pagination Indicators */}
             <div className="flex justify-center items-center space-x-2 mt-8">
-              <button
-                type="button"
-                onClick={() => setActiveSlide(0)}
-                className={`w-3 h-3 border border-slate-800 rounded-xs transition-colors ${
-                  activeSlide === 0 ? "bg-[#003B46]" : "bg-transparent"
-                }`}
-                aria-label="Slide 1"
-              />
-              <button
-                type="button"
-                onClick={() => setActiveSlide(1)}
-                className={`w-3 h-3 border border-slate-800 rounded-xs transition-colors ${
-                  activeSlide === 1 ? "bg-[#003B46]" : "bg-transparent"
-                }`}
-                aria-label="Slide 2"
-              />
+              {testimonialsData.map((item, index) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => setActiveIndex(index)}
+                  className={`w-3 h-3 border border-slate-800 rounded-xs transition-colors ${
+                    activeIndex === index ? "bg-[#003B46]" : "bg-transparent"
+                  }`}
+                  aria-label={`Show testimonial ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
         </section>

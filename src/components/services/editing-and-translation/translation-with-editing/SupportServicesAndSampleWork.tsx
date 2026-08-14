@@ -1,22 +1,20 @@
 "use client";
 
 import React from "react";
-import {
-  FileCheck2,
-  MessageSquare,
-  Languages,
-  Award,
-  RefreshCw,
-} from "lucide-react";
+import Image from "next/image";
 
 // --- Support Services Data ---
 interface SupportService {
   id: string;
   title: string;
   description: string;
-  icon: React.ReactNode;
+  iconSrc: string;
+  iconAlt: string;
   iconBgColor: string;
 }
+
+const SUPPORT_ICON_BASE =
+  "/images/editing-and-translation/translation-with-editing/";
 
 const supportServices: SupportService[] = [
   {
@@ -24,7 +22,8 @@ const supportServices: SupportService[] = [
     title: "Journal-specific Formatting",
     description:
       "Our technical experts help you comply with your target journal's guidelines, including word limit, language style, and general layout requirements.",
-    icon: <FileCheck2 className="w-6 h-6 text-indigo-600" />,
+    iconSrc: `${SUPPORT_ICON_BASE}Journal-specific-Formatting.png`,
+    iconAlt: "Journal-specific Formatting",
     iconBgColor: "bg-purple-100",
   },
   {
@@ -32,7 +31,8 @@ const supportServices: SupportService[] = [
     title: "Free and Unlimited Q&A with your editor",
     description:
       "Communicate with your translator or editor to clarify any doubts, request revision of sections, respond to queries, etc.",
-    icon: <MessageSquare className="w-6 h-6 text-amber-600" />,
+    iconSrc: `${SUPPORT_ICON_BASE}Free-and-Unlimited-QA-with-your-editor.png`,
+    iconAlt: "Free and Unlimited Q&A with your editor",
     iconBgColor: "bg-amber-100",
   },
   {
@@ -40,7 +40,8 @@ const supportServices: SupportService[] = [
     title: "Free re-translation",
     description:
       "Our quality guarantee is paramount to every service we offer. If you are not satisfied with the quality of the translation, we will retranslate your paper at no added cost.",
-    icon: <Languages className="w-6 h-6 text-indigo-600" />,
+    iconSrc: `${SUPPORT_ICON_BASE}Free-re-translation.png`,
+    iconAlt: "Free re-translation",
     iconBgColor: "bg-purple-100",
   },
   {
@@ -48,7 +49,8 @@ const supportServices: SupportService[] = [
     title: "Free editing certificate",
     description:
       "On completion of translation and editing, you can request an editing certificate, which has been recommended by many international journals.",
-    icon: <Award className="w-6 h-6 text-amber-600" />,
+    iconSrc: `${SUPPORT_ICON_BASE}Free-editing-certificate.png`,
+    iconAlt: "Free editing certificate",
     iconBgColor: "bg-amber-100",
   },
   {
@@ -56,7 +58,8 @@ const supportServices: SupportService[] = [
     title: "Re-editing support",
     description:
       "If you've made further changes to the document after our translation and editing, please resubmit your updated document for a 60% discount on further editing assistance.",
-    icon: <RefreshCw className="w-6 h-6 text-indigo-600" />,
+    iconSrc: `${SUPPORT_ICON_BASE}Re-editing-support.png`,
+    iconAlt: "Re-editing support",
     iconBgColor: "bg-purple-100",
   },
 ];
@@ -91,9 +94,15 @@ export default function SupportServicesAndSampleWork() {
               >
                 {/* Circular Pastel Icon Container */}
                 <div
-                  className={`w-12 h-12 rounded-full ${service.iconBgColor} flex items-center justify-center shrink-0 mt-1`}
+                  className={`relative w-12 h-12 rounded-full ${service.iconBgColor} flex items-center justify-center shrink-0 mt-1 overflow-hidden`}
                 >
-                  {service.icon}
+                  <Image
+                    src={service.iconSrc}
+                    alt={service.iconAlt}
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain"
+                  />
                 </div>
 
                 {/* Content */}
@@ -135,68 +144,14 @@ export default function SupportServicesAndSampleWork() {
             </div>
 
             {/* Document Content */}
-            <div className="p-6 sm:p-10 relative bg-white">
-              {/* Logo Header */}
-              <div className="flex justify-end mb-6">
-                <div className="bg-[#003B46] text-white px-3 py-1.5 font-bold text-lg tracking-wider rounded-sm text-right">
-                  PUBRICA
-                  <div className="text-[9px] font-normal tracking-normal text-slate-200 -mt-1">
-                    Knowledge Works
-                  </div>
-                </div>
-              </div>
-
-              {/* Side-by-Side Manuscript Comparison Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
-                {/* Left Column: Original (Spanish) */}
-                <div className="space-y-3">
-                  <h4 className="text-lg font-bold text-slate-900 border-b pb-1">
-                    Original Manuscript (Spanish)
-                  </h4>
-                  <p className="text-xs text-slate-700 leading-relaxed text-justify font-serif">
-                    La diabetes tipo 2 (DT2) es una carga creciente, con un
-                    estimado de 416,70 millones de adultos afectados en todo el
-                    mundo y 110,58 millones de pacientes en China [1]. Es una
-                    enfermedad metabólica crónica caracterizada por
-                    hiperglucemia, causada por la incapacidad de las células
-                    &beta; pancreáticas para secretar suficiente insulina o por
-                    la incapacidad del cuerpo para usar eficazmente la insulina
-                    secretada [2]. La DT2 influye tanto en la salud física como
-                    mental. Aproximadamente dos quintas partes de los pacientes
-                    experimentan problemas mentales, como ansiedad, depresión y
-                    angustia diabética [3]. Entre los pacientes con DT2, la
-                    angustia diabética (AD) es el problema psicológico más común
-                    [4]. Una revisión sistemática encontró que la prevalencia
-                    global general de AD fue del 36,0% en pacientes con DT2 [5].
-                    Un estudio también mostró que aproximadamente entre el 42,5%
-                    y el 77,2% de los chinos con DT2 experimentan AD [6].
-                  </p>
-                </div>
-
-                {/* Right Column: Translated (English) */}
-                <div className="space-y-3">
-                  <h4 className="text-lg font-bold text-[#2e7d32] border-b pb-1">
-                    Translated Manuscript (English)
-                  </h4>
-                  <p className="text-xs text-slate-700 leading-relaxed text-justify font-serif">
-                    Type 2 diabetes (T2D) is a growing burden, with an estimated
-                    416.70 million adults affected worldwide and 110.58 million
-                    patients in China [1]. It is a chronic metabolic disease
-                    characterized by hyperglycaemia, caused by the inability of
-                    pancreatic &beta; cells to secrete sufficient insulin or the
-                    inability of the body to effectively use the secreted
-                    insulin [2]. T2D affects both physical and mental health.
-                    Approximately two-fifths of patients experience mental
-                    problems, such as anxiety, depression, and diabetes distress
-                    [3]. Among patients with T2D, diabetes distress (DD) is the
-                    most common psychological problem [4]. A systematic review
-                    found that the overall global prevalence of DD was 36.0% in
-                    patients with T2D [5]. A study also showed that
-                    approximately 42.5%&ndash;77.2% of Chinese patients with T2D
-                    experience DD [6].
-                  </p>
-                </div>
-              </div>
+            <div className="relative w-full aspect-[1379/576] bg-white">
+              <Image
+                src="/images/editing-and-translation/translation-with-editing/Translation-with-Editing-Service-sample-work.png"
+                alt="Translation with Editing Service sample work"
+                fill
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                className="object-contain"
+              />
             </div>
           </div>
         </section>

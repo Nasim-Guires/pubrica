@@ -1,20 +1,25 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 interface HighlightItem {
   id: string;
   title: string;
   description: string;
-  iconSvg: React.ReactNode;
+  iconSrc: string;
+  iconAlt: string;
 }
 
 interface ProcessStep {
   stepNumber: number;
   title: string;
   description: string;
-  iconSvg: React.ReactNode;
+  iconSrc: string;
+  iconAlt: string;
 }
+
+const HIGHLIGHT_BASE = "/images/editing-and-translation/thesis-editing/";
 
 export const ThesisServiceWorkflow: React.FC = () => {
   // State for toggling individual highlight cards open/closed
@@ -43,132 +48,48 @@ export const ThesisServiceWorkflow: React.FC = () => {
       title: "Subject-Matter Experts",
       description:
         "Our in-house editor allocation system will assign your paper to a professional SME with experience in your subject. Get a free certificate of editing.",
-      iconSvg: (
-        <svg
-          className="w-6 h-6 text-emerald-700"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.5"
-            d="M12 14l9-5-9-5-9 5 9 5z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.5"
-            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-          />
-        </svg>
-      ),
+      iconSrc: `${HIGHLIGHT_BASE}Subject-Matter-Experts.png`,
+      iconAlt: "Subject-Matter Experts",
     },
     {
       id: "track-revisions",
       title: "Track revisions",
       description:
         "All editing is done with the track changes feature turned on. We share a copy of the revisions for your review and feedback.",
-      iconSvg: (
-        <svg
-          className="w-6 h-6 text-emerald-700"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.5"
-            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-          />
-        </svg>
-      ),
+      iconSrc: `${HIGHLIGHT_BASE}Track-revisions.png`,
+      iconAlt: "Track revisions",
     },
     {
       id: "qa-editor",
       title: "Q&A with editor",
       description:
         "Have an unlimited question and answer session with your editor for free.",
-      iconSvg: (
-        <svg
-          className="w-6 h-6 text-emerald-700"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.5"
-            d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-          />
-        </svg>
-      ),
+      iconSrc: `${HIGHLIGHT_BASE}QA-with-editor.png`,
+      iconAlt: "Q&A with editor",
     },
     {
       id: "formatting",
       title: "Formatting and word count",
       description:
         "Formatting and word count reduction are done free of charge. If you want your thesis formatted according to a style guide, your editor will do it for you.",
-      iconSvg: (
-        <svg
-          className="w-6 h-6 text-emerald-700"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.5"
-            d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-          />
-        </svg>
-      ),
+      iconSrc: `${HIGHLIGHT_BASE}Formatting-and-word-count.png`,
+      iconAlt: "Formatting and word count",
     },
     {
       id: "multi-tier",
       title: "Multi-tier editing",
       description:
         "We provide multi-tier editing of the thesis and assure you revisions at least once at a 54% discounted price. The Elite package offers you unlimited editing for one year.",
-      iconSvg: (
-        <svg
-          className="w-6 h-6 text-emerald-700"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.5"
-            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-          />
-        </svg>
-      ),
+      iconSrc: `${HIGHLIGHT_BASE}Multi-tier-editing.png`,
+      iconAlt: "Multi-tier editing",
     },
     {
       id: "deadline-guarantee",
       title: "Guarantee within the deadline",
       description:
         "Affordable thesis editing prices starting at $360. Flexi-swift plans and 24/7 customer support are available.",
-      iconSvg: (
-        <svg
-          className="w-6 h-6 text-emerald-700"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.5"
-            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-          />
-        </svg>
-      ),
+      iconSrc: `${HIGHLIGHT_BASE}Guarantee-within-the-deadline.png`,
+      iconAlt: "Guarantee within the deadline",
     },
   ];
 
@@ -179,21 +100,8 @@ export const ThesisServiceWorkflow: React.FC = () => {
       title: "UPLOAD YOUR MANUSCRIPT, SELECT A SERVICE, AND PLAN",
       description:
         "You start by selecting a service according to your target journal. We then analyze your document and recommend the best plans to choose from. You can choose same-day delivery or a flexible deadline with rates that can accommodate all budgets.",
-      iconSvg: (
-        <svg
-          className="w-10 h-10"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.2"
-            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
+      iconSrc: `${HIGHLIGHT_BASE}Upload-Your-Manuscript-Select-a-Service-and-Plan-1.png`,
+      iconAlt: "Upload your manuscript, select a service, and plan",
     },
     {
       stepNumber: 2,
@@ -201,48 +109,16 @@ export const ThesisServiceWorkflow: React.FC = () => {
         "THE TWO-STEP EDIT PROCESS DELIVERS TOP-NOTCH QUALITY AND TIMELY DELIVERY",
       description:
         "2 best-suited native editors based on your subject area or past preferences will edit your paper, ensuring your quality requirements and journal guidelines are met. A native reviewer and our quality control algorithms ensure that stringent quality guidelines are met.",
-      iconSvg: (
-        <svg
-          className="w-10 h-10"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.2"
-            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.2"
-            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-        </svg>
-      ),
+      iconSrc: `${HIGHLIGHT_BASE}The-Two-Step-Edit-Process-Delivers-Top-Notch-Quality-and-Timely-Delivery-1.png`,
+      iconAlt: "The two-step edit process",
     },
     {
       stepNumber: 3,
       title: "REVIEW FINAL FILES, ASK QUESTIONS, AND COLLABORATE.",
       description:
         "Make a payment to download the final files with track changes to review and accept. Ask unlimited questions to your editor till you are satisfied, or get any clarifications from our customer service team. Depending on your plan, you can also work on multiple re-edits based on feedback from your peers or the journal.",
-      iconSvg: (
-        <svg
-          className="w-10 h-10"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.2"
-            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-          />
-        </svg>
-      ),
+      iconSrc: `${HIGHLIGHT_BASE}Review-Final-Files-Ask-Questions-and-Collaborate-1.png`,
+      iconAlt: "Review final files, ask questions, and collaborate",
     },
   ];
 
@@ -272,7 +148,15 @@ export const ThesisServiceWorkflow: React.FC = () => {
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-center space-x-3">
-                    <div className="shrink-0">{item.iconSvg}</div>
+                    <div className="relative w-8 h-8 shrink-0">
+                      <Image
+                        src={item.iconSrc}
+                        alt={item.iconAlt}
+                        fill
+                        sizes="32px"
+                        className="object-contain"
+                      />
+                    </div>
                     <span className="font-bold text-slate-800 text-sm sm:text-base">
                       {item.title}
                     </span>
@@ -347,8 +231,14 @@ export const ThesisServiceWorkflow: React.FC = () => {
                 {/* Card Container: Default state white -> Hover state dark charcoal/black (#424242 / #333333) with white text */}
                 <div className="w-full bg-white border border-slate-200 rounded-sm p-6 min-h-[320px] flex flex-col transition-all duration-300 shadow-sm hover:bg-[#424242] hover:text-white hover:border-[#424242] hover:shadow-xl cursor-pointer">
                   {/* Step Icon */}
-                  <div className="text-slate-600 group-hover:text-white transition-colors mb-4">
-                    {step.iconSvg}
+                  <div className="relative w-10 h-10 mb-4">
+                    <Image
+                      src={step.iconSrc}
+                      alt={step.iconAlt}
+                      fill
+                      sizes="40px"
+                      className="object-contain"
+                    />
                   </div>
 
                   {/* Step Heading */}
