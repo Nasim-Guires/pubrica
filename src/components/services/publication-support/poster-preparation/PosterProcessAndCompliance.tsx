@@ -1,13 +1,16 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
+
+const PAGE_IMAGES = '/images/publication-support/poster-preparation';
 
 interface StepItem {
   number: number;
   title: string;
   isTopCircle: boolean; // true for 1, 3, 5 | false for 2, 4, 6
-  icon: React.ReactNode;
+  icon: string;
   content: React.ReactNode;
 }
 
@@ -16,11 +19,7 @@ const steps: StepItem[] = [
     number: 1,
     title: 'SUBMIT YOUR REQUEST',
     isTopCircle: true,
-    icon: (
-      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-      </svg>
-    ),
+    icon: `${PAGE_IMAGES}/submit-your-request-.png`,
     content: (
       <>
         <p className="mb-2">Provide your manuscript</p>
@@ -35,11 +34,7 @@ const steps: StepItem[] = [
     number: 2,
     title: 'MATERIAL REVIEW & ORDER CONFIRMATION',
     isTopCircle: false,
-    icon: (
-      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    icon: `${PAGE_IMAGES}/material-review-and-order-confirmation-.png`,
     content: (
       <p className="text-[11px] leading-relaxed">
         Our team examines the content you submitted and confirms your order. We may contact you for clarification of details or to request anything missing from your content before proceeding.
@@ -50,11 +45,7 @@ const steps: StepItem[] = [
     number: 3,
     title: 'SCIENTIFIC CONTENT EDITING',
     isTopCircle: true,
-    icon: (
-      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125" />
-      </svg>
-    ),
+    icon: `${PAGE_IMAGES}/scientific-content-editing-.png`,
     content: (
       <>
         <p className="mb-2">A domain-specific content expert edits the provided text for:</p>
@@ -70,11 +61,7 @@ const steps: StepItem[] = [
     number: 4,
     title: 'POSTER DESIGN & LAYOUT DRAFT',
     isTopCircle: false,
-    icon: (
-      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-      </svg>
-    ),
+    icon: `${PAGE_IMAGES}/poster-design-layout-.png`,
     content: (
       <>
         <p className="mb-2">Our design team creates a structured, visually appealing draft, customized to:</p>
@@ -89,11 +76,7 @@ const steps: StepItem[] = [
     number: 5,
     title: 'REVISION & FINALIZATION',
     isTopCircle: true,
-    icon: (
-      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25h1.5c.65 0 1.222.277 1.62.723m-5.8 0a2.25 2.25 0 00-1.83 2.25v13.5A2.25 2.25 0 0011.25 21h7.5a2.25 2.25 0 002.25-2.25V5.25a2.25 2.25 0 00-2.25-2.25h-1.5" />
-      </svg>
-    ),
+    icon: `${PAGE_IMAGES}/Revision-and-finalization-.png`,
     content: (
       <>
         <p className="mb-2">We incorporate your suggestions and make refinements. Our team re-checks the file for:</p>
@@ -109,11 +92,7 @@ const steps: StepItem[] = [
     number: 6,
     title: 'FINAL DELIVERY',
     isTopCircle: false,
-    icon: (
-      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
-      </svg>
-    ),
+    icon: `${PAGE_IMAGES}/final-delivery-.png`,
     content: (
       <>
         <p className="mb-2">The finalized poster is delivered in:</p>
@@ -182,8 +161,14 @@ export default function PosterProcessExactDesign() {
                   group-hover:bg-[#7f7f7f] group-hover:border-[#7f7f7f] group-hover:text-white shadow-sm"
               >
                 {/* Icon */}
-                <div className="flex justify-center mb-3 text-gray-700 group-hover:text-white transition-colors">
-                  {step.icon}
+                <div className="relative w-10 h-10 mx-auto mb-3">
+                  <Image
+                    src={step.icon}
+                    alt={step.title}
+                    fill
+                    sizes="40px"
+                    className="object-contain"
+                  />
                 </div>
 
                 {/* Title */}

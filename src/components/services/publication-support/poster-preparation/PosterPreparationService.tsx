@@ -124,7 +124,7 @@ export default function PosterPreparationPage() {
             <div className="bg-[#487a68] p-3 rounded-2xl shadow-md max-w-md w-full">
               <div className="bg-white rounded-xl overflow-hidden p-2 relative">
                 <Image
-                  src="https://images.unsplash.com/photo-1542744094-3a3121699563?q=80&w=800&auto=format&fit=crop"
+                  src="/images/publication-support/poster-preparation/poster-presentation-PUB-min.webp"
                   alt="Scientific poster design preview on a laptop"
                   width={800}
                   height={500}

@@ -123,7 +123,7 @@ export default function WhoWeServeSection() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full h-[340px] md:h-[400px] rounded-lg overflow-hidden shadow-sm">
               <Image
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop"
+                src="/images/publication-support/poster-preparation/Our-academic-and-scientific-poster-design-and-creation-service-provides-min.jpg"
                 alt="Researcher working on scientific presentation on computer"
                 fill
                 className="object-cover"

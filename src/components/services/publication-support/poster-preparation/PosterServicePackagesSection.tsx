@@ -1,14 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface PackageCardProps {
   title: string;
-  badgeLetter: string;
-  badgeBgColor: string;
-  badgeTextColor: string;
+  icon: string;
   accentBarColor: string;
   cardBgColor: string;
   idealFor: string;
@@ -20,9 +19,7 @@ interface PackageCardProps {
 const packages: PackageCardProps[] = [
   {
     title: "Standard",
-    badgeLetter: "S",
-    badgeBgColor: "bg-[#fee2e2]",
-    badgeTextColor: "text-[#d97706]",
+    icon: "/images/publication-support/poster-preparation/S.png",
     accentBarColor: "bg-[#154d44]",
     cardBgColor: "bg-[#cddcd9]",
     idealFor:
@@ -39,9 +36,7 @@ const packages: PackageCardProps[] = [
   },
   {
     title: "ADVANCED",
-    badgeLetter: "A",
-    badgeBgColor: "bg-[#e0e7ff]",
-    badgeTextColor: "text-[#166534]",
+    icon: "/images/publication-support/journal-selection/advanced.webp",
     accentBarColor: "bg-[#8b5cf6]",
     cardBgColor: "bg-[#d8c2e5]",
     idealFor:
@@ -63,9 +58,7 @@ const packages: PackageCardProps[] = [
   },
   {
     title: "Premium",
-    badgeLetter: "P",
-    badgeBgColor: "bg-[#fee2e2]",
-    badgeTextColor: "text-[#dc2626]",
+    icon: "/images/publication-support/responding-to-reviewers/pa-icons-.png",
     accentBarColor: "bg-[#78350f]",
     cardBgColor: "bg-[#d8be92]",
     idealFor:
@@ -126,10 +119,14 @@ export default function PosterServicePackagesSection() {
 
               {/* Card Header (White Background) */}
               <div className="bg-white p-4 border-x border-t border-gray-200 flex items-center space-x-3">
-                <div
-                  className={`w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center font-bold text-xl shadow-inner ${pkg.badgeBgColor} ${pkg.badgeTextColor}`}
-                >
-                  {pkg.badgeLetter}
+                <div className="relative w-12 h-12 flex-shrink-0">
+                  <Image
+                    src={pkg.icon}
+                    alt={`${pkg.title} package icon`}
+                    fill
+                    sizes="48px"
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg text-gray-900 leading-tight">
