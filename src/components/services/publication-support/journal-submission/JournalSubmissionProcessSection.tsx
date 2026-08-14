@@ -7,23 +7,23 @@ import Image from "next/image";
 const whoWeServeData = [
   {
     title: "Academic Researchers & Scientists",
-    image: "/images/who-we-serve/academic-researchers.jpg",
+    image: "/images/publication-support/journal-submission/Academic-Researchers-Scientists.jpg",
   },
   {
     title: "Clinical Trial Teams & CROs",
-    image: "/images/who-we-serve/clinical-trial-teams.jpg",
+    image: "/images/publication-support/journal-submission/Clinical-Trial-Teams-CROs.jpg",
   },
   {
     title: "Pharmaceutical & Biotech Companies",
-    image: "/images/who-we-serve/pharma-biotech.jpg",
+    image: "/images/publication-support/journal-submission/Pharmaceutical-Biotech-Companies.jpg",
   },
   {
     title: "Medical Device & Diagnostics Companies",
-    image: "/images/who-we-serve/medical-device.jpg",
+    image: "/images/publication-support/journal-submission/Medical-Device-Diagnostics-Companies.jpg",
   },
   {
     title: "Universities, Hospitals & Research Institutions",
-    image: "/images/who-we-serve/universities-hospitals.jpg",
+    image: "/images/publication-support/journal-submission/Universities-Hospitals-Research-Institutions.jpg",
   },
 ];
 
@@ -34,7 +34,7 @@ const processSteps = [
     title: "SHARE YOUR MANUSCRIPT & REQUIREMENTS",
     description:
       "Begin by submitting your finished manuscript. Tell us where you would like the paper submitted (journal(s)) and any submission guidelines, timelines, or ethical declaration that you would like us to keep in mind.",
-    icon: "/images/icons/manuscript-req.svg",
+    icon: "/images/publication-support/journal-submission/scopeofthejournal.webp",
     position: "bottom", // Rendered below horizontal line
   },
   {
@@ -42,7 +42,7 @@ const processSteps = [
     title: "RECEIVE A PROFESSIONALLY DRAFTED COVER LETTER",
     description:
       "We format your manuscript according to the target journal’s guidelines and craft a compelling cover letter journal submission that highlights the significance of your research and its alignment with the journal’s scope.",
-    icon: "/images/icons/cover-letter.svg",
+    icon: "/images/publication-support/journal-submission/target-readership.webp",
     position: "top", // Rendered above horizontal line
   },
   {
@@ -50,7 +50,7 @@ const processSteps = [
     title: "JOURNAL ACCOUNT SETUP & SUBMISSION PREP",
     description:
       "Our professionals will set up and/or manage your submission account to ensure that all necessary metadata, declarations, and documents are complete. We will work with you for the needed information and follow journal submission practices.",
-    icon: "/images/icons/account-setup.svg",
+    icon: "/images/publication-support/journal-submission/timecost.webp",
     position: "bottom", // Rendered below horizontal line
   },
   {
@@ -58,7 +58,7 @@ const processSteps = [
     title: "MANUSCRIPT SUBMISSION & PROOF OF COMPLETION",
     description:
       "We will submit your manuscript on your behalf and send you a PDF proof of the submission for your record. Our team will continue to monitor the progress and can assist you if you ever have questions about your post-submission communications.",
-    icon: "/images/icons/proof-completion.svg",
+    icon: "/images/publication-support/journal-submission/visibilityquality.webp",
     position: "top", // Rendered above horizontal line
   },
 ];
@@ -93,7 +93,7 @@ export default function JournalSubmissionProcessSection() {
           {whoWeServeData.map((item, idx) => (
             <div
               key={idx}
-              className="group relative h-56 rounded-sm overflow-hidden shadow-md cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+              className="group relative h-56 rounded-sm overflow-hidden shadow-md cursor-pointer transition-all duration-300 "
             >
               <Image
                 src={item.image}
@@ -103,7 +103,7 @@ export default function JournalSubmissionProcessSection() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               {/* Gradient Dark Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent group-hover:bg-black/90 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent " />
               <div className="absolute bottom-0 left-0 right-0 p-3.5">
                 <h3 className="text-white font-bold text-xs sm:text-sm leading-snug">
                   {item.title}

@@ -4,11 +4,14 @@ import React, { useState } from "react";
 import Image from "next/image";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
+// Base image path for package badge icons
+const BASE_IMAGE_PATH = "/images/publication-support/peer-review-pre-submission";
+
 // 1. Package Cards Data
 const packagesData = [
   {
     id: "basic",
-    letter: "B",
+    badgeImage: `${BASE_IMAGE_PATH}/Basic-480x480.webp`,
     name: "Basic",
     subtitle: "HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW",
     badgeBg: "bg-[#f4d17b]", // Soft yellow badge
@@ -29,7 +32,7 @@ const packagesData = [
   },
   {
     id: "advanced",
-    letter: "A",
+    badgeImage: `${BASE_IMAGE_PATH}/advanced.webp`,
     name: "ADVANCED",
     subtitle: "HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW",
     badgeBg: "bg-[#98cf82]", // Light green badge
@@ -51,7 +54,7 @@ const packagesData = [
   },
   {
     id: "comprehensive",
-    letter: "C",
+    badgeImage: `${BASE_IMAGE_PATH}/Comprehensive-480x480.webp`,
     name: "Comprehensive",
     subtitle: "HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW",
     badgeBg: "bg-[#f57c7c]", // Soft red/coral badge
@@ -82,7 +85,8 @@ const testimonialsData = [
       '" The peer-review report I received from Pubrica was more detailed than expected. It helped me fix gaps in my discussion section before submitting to a Scopus-indexed journal. "',
     author: "DR. KAVITHA M",
     role: "Biotech Researcher",
-    journalCover: "/images/testimonials/clinical-practice.jpg",
+    journalCover:
+      "/images/publication-support/peer-review-pre-submission/book-01.jpg",
   },
   {
     id: 2,
@@ -90,12 +94,41 @@ const testimonialsData = [
       '"I was very impressed with the thorough peer review I received. They even pointed out statistical flaws in my results section. The feedback improved the clarity and impact of my manuscript."',
     author: "DR. RAMESH NAIR",
     role: "Clinical Epidemiologist",
-    journalCover: "/images/testimonials/clinical-problem-solving.jpg",
+    journalCover:
+      "/images/publication-support/peer-review-pre-submission/scropt-2.jpg",
+  },
+  {
+    id: 3,
+    quote:
+      '"I was very impressed with the thorough peer review I received. They even pointed out statistical flaws in my results section. The feedback improved the clarity and impact of my manuscript."',
+    author: "DR. RAMESH NAIR",
+    role: "Clinical Epidemiologist",
+    journalCover:
+      "/images/publication-support/peer-review-pre-submission/book-01.jpg",
   },
 ];
 
+const ITEMS_PER_PAGE = 2;
+
 export default function PackagesAndTestimonialsSection() {
   const [activeTestimonialPage, setActiveTestimonialPage] = useState(0);
+
+  // Calculate total pages based on 2 items per page
+  const totalPages = Math.ceil(testimonialsData.length / ITEMS_PER_PAGE);
+
+  // Slice testimonials array to get items for current page
+  const currentTestimonials = testimonialsData.slice(
+    activeTestimonialPage * ITEMS_PER_PAGE,
+    (activeTestimonialPage + 1) * ITEMS_PER_PAGE
+  );
+
+  const handlePrev = () => {
+    setActiveTestimonialPage((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setActiveTestimonialPage((prev) => (prev === totalPages - 1 ? 0 : prev + 1));
+  };
 
   return (
     <div className="w-full font-sans text-gray-800 bg-white">
@@ -116,11 +149,17 @@ export default function PackagesAndTestimonialsSection() {
             >
               {/* Header Box */}
               <div className="bg-white p-5 border-b border-gray-100 flex items-start space-x-3 transition-colors duration-300">
-                {/* Letter Circle Badge */}
+                {/* Image Circle Badge */}
                 <div
-                  className={`w-12 h-12 rounded-full ${pkg.badgeBg} text-gray-800 flex items-center justify-center font-extrabold text-xl shrink-0 shadow-inner`}
+                  className={`w-12 h-12 rounded-full ${pkg.badgeBg} p-2 flex items-center justify-center shrink-0 shadow-inner relative overflow-hidden`}
                 >
-                  {pkg.letter}
+                  <Image
+                    src={pkg.badgeImage}
+                    alt={`${pkg.name} Package Icon`}
+                    fill
+                    sizes="48px"
+                    className="object-contain p-1.5"
+                  />
                 </div>
 
                 {/* Package Name & Subtitle */}
@@ -205,7 +244,7 @@ export default function PackagesAndTestimonialsSection() {
 
         {/* Full-width "Get a Free Quote" Button */}
         <div className="w-full text-center">
-          <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
         </div>
       </section>
 
@@ -221,18 +260,16 @@ export default function PackagesAndTestimonialsSection() {
           <div className="relative flex items-center justify-between gap-4">
             {/* Left Chevron Button */}
             <button
-              onClick={() =>
-                setActiveTestimonialPage((prev) => (prev === 0 ? 1 : 0))
-              }
+              onClick={handlePrev}
               className="w-8 h-8 rounded-full bg-white text-gray-700 flex items-center justify-center shadow hover:bg-black hover:text-white transition-colors shrink-0"
               aria-label="Previous testimonial"
             >
               &#10094;
             </button>
 
-            {/* Testimonials Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1">
-              {testimonialsData.map((item) => (
+            {/* Testimonials Cards Grid (Renders max 2 active items) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1 min-h-[180px]">
+              {currentTestimonials.map((item) => (
                 <div
                   key={item.id}
                   className="group bg-[#2a4d3e] rounded-xl p-5 border-2 border-[#1c382d] shadow-lg flex items-center space-x-4 transition-all duration-300 hover:bg-black hover:border-black hover:text-white hover:shadow-2xl hover:-translate-y-1 cursor-pointer"
@@ -268,9 +305,7 @@ export default function PackagesAndTestimonialsSection() {
 
             {/* Right Chevron Button */}
             <button
-              onClick={() =>
-                setActiveTestimonialPage((prev) => (prev === 0 ? 1 : 0))
-              }
+              onClick={handleNext}
               className="w-8 h-8 rounded-full bg-white text-gray-700 flex items-center justify-center shadow hover:bg-black hover:text-white transition-colors shrink-0"
               aria-label="Next testimonial"
             >
@@ -278,20 +313,17 @@ export default function PackagesAndTestimonialsSection() {
             </button>
           </div>
 
-          {/* Carousel Pagination Dots */}
+          {/* Dynamic Carousel Pagination Dots */}
           <div className="flex justify-center items-center space-x-2 mt-8">
-            <span
-              onClick={() => setActiveTestimonialPage(0)}
-              className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-colors ${
-                activeTestimonialPage === 0 ? "bg-gray-600" : "bg-gray-300"
-              }`}
-            />
-            <span
-              onClick={() => setActiveTestimonialPage(1)}
-              className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-colors ${
-                activeTestimonialPage === 1 ? "bg-gray-600" : "bg-gray-300"
-              }`}
-            />
+            {Array.from({ length: totalPages }).map((_, idx) => (
+              <span
+                key={idx}
+                onClick={() => setActiveTestimonialPage(idx)}
+                className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-colors ${
+                  activeTestimonialPage === idx ? "bg-gray-800" : "bg-gray-300"
+                }`}
+              />
+            ))}
           </div>
         </div>
       </section>

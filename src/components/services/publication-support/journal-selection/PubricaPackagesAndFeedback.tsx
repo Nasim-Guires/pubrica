@@ -1,14 +1,51 @@
 "use client";
 
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
-import React from "react";
+import Image from "next/image";
+import React, { useState } from "react";
 
 export default function PubricaPackagesAndFeedback() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const testimonialSlides = [
+    [
+      {
+        quote:
+          "I had a strict deadline for the publication I needed for my grant proposal. Pubrica's journal selection service identified appropriate indexed fast-track journals. My manuscript was accepted within 7 weeks. Outstanding service.",
+        name: "DR. DAVID MENSAH",
+        role: "- Independent Researcher - Public Health",
+        image:
+          "/images/publication-support/journal-selection/book-01.jpg",
+      },
+      {
+        quote:
+          "Pubrica's journal discovery team helped me quickly identify journals aligned with the scope and significance of my manuscript. The database filtering and editorial insights saved months of guessing. I am now published in a Q2 Journal based on Scopus. Highly recommended!",
+        name: "DR. ANJALI VERMA, PHD",
+        role: "- Scholar - Life Sciences",
+        image:
+          "/images/publication-support/journal-selection/book-01.jpg", // Fixed image path to match the journal cover style
+      },
+    ],
+    [
+      {
+        quote:
+          "Thanks to Pubrica, I submitted to a high-impact open-access journal I would not have found on my own. Their review and selection based on rankings confirmed the journal was appropriate for my research goals.",
+        name: "DR. FATIMA AL-NOURI",
+        role: "- Postdoc Researcher - Medical Genetics",
+        image:
+          "/images/publication-support/journal-selection/scropt-2.jpg",
+      },
+    ],
+  ];
+
+  const currentTestimonials = testimonialSlides[activeSlide];
+
   return (
     <div className="w-full font-sans bg-[#f8fafc]">
       {/* ---------------------------------------------------- */}
       {/* SECTION 1: OUR PACKAGES                              */}
       {/* ---------------------------------------------------- */}
+
       <section className="py-14 px-4 sm:px-8 lg:px-12 max-w-7xl mx-auto">
         <h2 className="text-3xl font-extrabold text-[#0d3b44] text-center mb-10">
           Our Packages
@@ -20,13 +57,21 @@ export default function PubricaPackagesAndFeedback() {
             <div>
               {/* Header Badge */}
               <div className="bg-white p-5 border-b border-slate-200 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-amber-100 text-amber-600 font-extrabold text-xl flex items-center justify-center border border-amber-300 shadow-inner shrink-0">
-                  S
+                <div className="w-12 h-12 rounded-full overflow-hidden border border-amber-300 shadow-inner shrink-0">
+                  <Image
+                    src="/images/publication-support/journal-selection/standard-logo-480x480.png"
+                    alt="Icon"
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
+
                 <div>
                   <h3 className="text-xl font-bold text-slate-800 tracking-tight">
                     Standard
                   </h3>
+
                   <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">
                     High-End Publication Support + Rapid Technical Review
                   </p>
@@ -39,6 +84,7 @@ export default function PubricaPackagesAndFeedback() {
                   <p className="font-bold text-slate-900 flex items-center gap-2 mb-1">
                     <span className="text-slate-900">➔</span> Ideal for:
                   </p>
+
                   <p className="pl-5 text-slate-600 leading-relaxed">
                     Authors seeking expert journal advice in determining the
                     best fit for their manuscript.
@@ -49,11 +95,13 @@ export default function PubricaPackagesAndFeedback() {
                   <p className="font-bold text-slate-900 flex items-center gap-2 mb-1">
                     <span className="text-slate-900">➔</span> Includes:
                   </p>
+
                   <ul className="pl-5 space-y-2 text-slate-600 leading-relaxed">
                     <li>
                       3 Curated Journal Recommendations (Scopus/SCI/PubMed
                       aligned) based on your research scope and goals.
                     </li>
+
                     <li>
                       Summary Report with journal aims, scope, acceptance rates,
                       and author guidelines.
@@ -65,6 +113,7 @@ export default function PubricaPackagesAndFeedback() {
                   <p className="font-bold text-slate-900 flex items-center gap-2 mb-1">
                     <span className="text-slate-900">➔</span> Optional Add-ons:
                   </p>
+
                   <p className="pl-5 text-slate-600 leading-relaxed">
                     Impact Factor & Indexing.
                     <br />
@@ -79,7 +128,10 @@ export default function PubricaPackagesAndFeedback() {
               <p className="font-bold text-slate-900 flex items-center gap-2">
                 <span className="text-slate-900">➔</span> Turnaround:
               </p>
-              <p className="pl-5 font-medium text-slate-800">5 working days.</p>
+
+              <p className="pl-5 font-medium text-slate-800">
+                5 working days.
+              </p>
             </div>
           </div>
 
@@ -88,13 +140,21 @@ export default function PubricaPackagesAndFeedback() {
             <div>
               {/* Header Badge */}
               <div className="bg-white p-5 border-b border-slate-200 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 font-extrabold text-xl flex items-center justify-center border border-emerald-300 shadow-inner shrink-0">
-                  A
+                <div className="w-12 h-12 rounded-full overflow-hidden border border-emerald-300 shadow-inner shrink-0">
+                  <Image
+                    src="/images/publication-support/journal-selection/advanced.webp"
+                    alt="Icon"
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
+
                 <div>
                   <h3 className="text-xl font-bold text-slate-800 tracking-tight">
                     ADVANCED
                   </h3>
+
                   <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">
                     High-End Publication Support + Rapid Technical Review
                   </p>
@@ -107,6 +167,7 @@ export default function PubricaPackagesAndFeedback() {
                   <p className="font-bold text-slate-900 flex items-center gap-2 mb-1">
                     <span className="text-slate-900">➔</span> Ideal for:
                   </p>
+
                   <p className="pl-5 text-slate-600 leading-relaxed">
                     Researchers who want the journal selection and the
                     manuscript preparation for a clear and timely submission
@@ -118,14 +179,17 @@ export default function PubricaPackagesAndFeedback() {
                   <p className="font-bold text-slate-900 flex items-center gap-2 mb-1">
                     <span className="text-slate-900">➔</span> Includes:
                   </p>
+
                   <ul className="pl-5 space-y-2 text-slate-600 leading-relaxed">
                     <li>
                       All deliverables are provided in the Standard Package.
                     </li>
+
                     <li>
                       Manuscript Formatting for the selected journal’s
                       guidelines.
                     </li>
+
                     <li>
                       Customized Cover Letter draft as per the journal
                       guidelines.
@@ -137,6 +201,7 @@ export default function PubricaPackagesAndFeedback() {
                   <p className="font-bold text-slate-900 flex items-center gap-2 mb-1">
                     <span className="text-slate-900">➔</span> Optional Add-ons:
                   </p>
+
                   <p className="pl-5 text-slate-600 leading-relaxed">
                     Impact Factor & Indexing Analysis.
                     <br />
@@ -155,6 +220,7 @@ export default function PubricaPackagesAndFeedback() {
               <p className="font-bold text-slate-900 flex items-center gap-2">
                 <span className="text-slate-900">➔</span> Turnaround:
               </p>
+
               <p className="pl-5 font-medium text-slate-800">
                 7–8 working days.
               </p>
@@ -166,13 +232,21 @@ export default function PubricaPackagesAndFeedback() {
             <div>
               {/* Header Badge */}
               <div className="bg-white p-5 border-b border-slate-200 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-rose-100 text-rose-600 font-extrabold text-xl flex items-center justify-center border border-rose-300 shadow-inner shrink-0">
-                  E
+                <div className="w-12 h-12 rounded-full overflow-hidden border border-rose-300 shadow-inner shrink-0">
+                  <Image
+                    src="/images/publication-support/journal-selection/elite.webp"
+                    alt="Icon"
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
+
                 <div>
                   <h3 className="text-xl font-bold text-slate-800 tracking-tight">
                     ELITE
                   </h3>
+
                   <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">
                     High-End Publication Support + Rapid Technical Review
                   </p>
@@ -185,6 +259,7 @@ export default function PubricaPackagesAndFeedback() {
                   <p className="font-bold text-slate-900 flex items-center gap-2 mb-1">
                     <span className="text-slate-900">➔</span> Ideal for:
                   </p>
+
                   <p className="pl-5 text-slate-600 leading-relaxed">
                     Authors requiring complete support from journal selection
                     through to submission and peer review.
@@ -195,12 +270,15 @@ export default function PubricaPackagesAndFeedback() {
                   <p className="font-bold text-slate-900 flex items-center gap-2 mb-1">
                     <span className="text-slate-900">➔</span> Includes:
                   </p>
+
                   <ul className="pl-5 space-y-2 text-slate-600 leading-relaxed">
                     <li>All of the deliverables in the Advanced Package</li>
+
                     <li>
                       Submission Support, including tracking and communication
                       management
                     </li>
+
                     <li>
                       Peer-Review Rebuttal Support with expert response drafting
                     </li>
@@ -211,6 +289,7 @@ export default function PubricaPackagesAndFeedback() {
                   <p className="font-bold text-slate-900 flex items-center gap-2 mb-1">
                     <span className="text-slate-900">➔</span> Optional Add-ons:
                   </p>
+
                   <p className="pl-5 text-slate-600 leading-relaxed">
                     Impact Factor & Indexing Analysis.
                     <br />
@@ -229,6 +308,7 @@ export default function PubricaPackagesAndFeedback() {
               <p className="font-bold text-slate-900 flex items-center gap-2">
                 <span className="text-slate-900">➔</span> Turnaround:
               </p>
+
               <p className="pl-5 font-medium text-slate-800">
                 10–12 working days.
               </p>
@@ -238,188 +318,150 @@ export default function PubricaPackagesAndFeedback() {
 
         {/* Call To Action Button */}
         <div className="mt-10 text-center">
-          <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
         </div>
       </section>
 
       {/* ---------------------------------------------------- */}
       {/* SECTION 2: TESTIMONIALS                              */}
       {/* ---------------------------------------------------- */}
+
       <section className="py-14 px-4 sm:px-8 lg:px-12 max-w-7xl mx-auto">
         <h2 className="text-3xl font-extrabold text-[#0d3b44] text-left mb-8">
           Testimonials
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Testimonial 1 */}
-          <div className="bg-[#1e4339] text-white p-6 sm:p-8 rounded-lg shadow-md flex justify-between gap-4 items-start">
-            <div className="space-y-4 flex-1">
-              <p className="text-xs sm:text-sm leading-relaxed text-slate-100 italic">
-                &ldquo;I had a strict deadline for the publication I needed for
-                my grant proposal. Pubrica&apos;s journal selection service
-                identified appropriate indexed fast-track journals. My
-                manuscript was accepted within 7 weeks. Outstanding
-                service.&rdquo;
-              </p>
-              <div>
-                <p className="font-bold text-xs sm:text-sm uppercase tracking-wide">
-                  DR. DAVID MENSAH
+          {currentTestimonials.map((testimonial) => (
+            <div
+              key={`${activeSlide}-${testimonial.name}`}
+              className="bg-[#1e4339] text-white p-6 sm:p-8 rounded-lg shadow-md flex justify-between gap-4 items-center"
+            >
+              <div className="space-y-4 flex-1">
+                <p className="text-xs sm:text-sm leading-relaxed text-slate-100 italic">
+                  &ldquo;{testimonial.quote}&rdquo;
                 </p>
-                <p className="text-[11px] text-slate-300 italic">
-                  - Independent Researcher - Public Health
-                </p>
+
+                <div>
+                  <p className="font-bold text-xs sm:text-sm uppercase tracking-wide">
+                    {testimonial.name}
+                  </p>
+
+                  <p className="text-[11px] text-slate-300 italic">
+                    {testimonial.role}
+                  </p>
+                </div>
+              </div>
+
+              {/* Individual Testimonial Image Container */}
+              <div className="w-20 sm:w-24 h-28 sm:h-32 shrink-0 bg-white p-1 rounded shadow-sm border border-slate-200 flex items-center justify-center">
+                <Image
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  width={96}
+                  height={128}
+                  className="w-full h-full object-contain"
+                />
               </div>
             </div>
-
-            {/* Journal Cover Graphic Placeholder */}
-            <div className="w-20 sm:w-24 h-28 sm:h-32 bg-emerald-900 border border-emerald-700 rounded shadow shrink-0 flex flex-col justify-between p-2 text-center text-[8px] font-bold uppercase tracking-tighter">
-              <span className="text-slate-300">
-                New England Journal of Medicine
-              </span>
-              <span className="bg-emerald-800 text-white py-1 rounded">
-                Clinical Practice
-              </span>
-            </div>
-          </div>
-
-          {/* Testimonial 2 */}
-          <div className="bg-[#1e4339] text-white p-6 sm:p-8 rounded-lg shadow-md flex justify-between gap-4 items-start">
-            <div className="space-y-4 flex-1">
-              <p className="text-xs sm:text-sm leading-relaxed text-slate-100 italic">
-                &ldquo;Pubrica&apos;s journal discovery team helped me quickly
-                identify journals aligned with the scope and significance of my
-                manuscript. The database filtering and editorial insights saved
-                months of guessing. I am now published in a Q2 Journal based on
-                Scopus. Highly recommended!&rdquo;
-              </p>
-              <div>
-                <p className="font-bold text-xs sm:text-sm uppercase tracking-wide">
-                  DR. ANJALI VERMA, PHD
-                </p>
-                <p className="text-[11px] text-slate-300 italic">
-                  - Scholar - Life Sciences
-                </p>
-              </div>
-            </div>
-
-            {/* Journal Cover Graphic Placeholder */}
-            <div className="w-20 sm:w-24 h-28 sm:h-32 bg-emerald-900 border border-emerald-700 rounded shadow shrink-0 flex flex-col justify-between p-2 text-center text-[8px] font-bold uppercase tracking-tighter">
-              <span className="text-slate-300">
-                New England Journal of Medicine
-              </span>
-              <span className="bg-emerald-800 text-white py-1 rounded">
-                Clinical Practice
-              </span>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Carousel Pagination Indicators */}
         <div className="flex justify-center items-center gap-2 mt-6">
-          <span className="w-2.5 h-2.5 rounded-full border border-slate-600 bg-transparent cursor-pointer" />
-          <span className="w-2.5 h-2.5 rounded-full bg-slate-800 cursor-pointer" />
+          <button
+            type="button"
+            onClick={() => setActiveSlide(0)}
+            aria-label="Show first testimonials"
+            className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-all ${activeSlide === 0
+              ? "bg-slate-800"
+              : "border border-slate-600 bg-transparent"
+              }`}
+          />
+
+          <button
+            type="button"
+            onClick={() => setActiveSlide(1)}
+            aria-label="Show second testimonials"
+            className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-all ${activeSlide === 1
+              ? "bg-slate-800"
+              : "border border-slate-600 bg-transparent"
+              }`}
+          />
         </div>
       </section>
 
       {/* ---------------------------------------------------- */}
       {/* SECTION 3: CLIENT FEEDBACK                           */}
       {/* ---------------------------------------------------- */}
-      <section className="py-14 px-4 sm:px-8 lg:px-12 max-w-7xl mx-auto">
-        <h2 className="text-3xl font-extrabold text-[#0d3b44] text-left mb-3">
-          Client Feedback
-        </h2>
 
-        <p className="text-xs sm:text-sm text-slate-600 max-w-4xl leading-relaxed mb-10">
-          We prioritize open, timely, and transparent communications to keep the
-          client informed through every stage of their project. Using a
-          quality-driven approach guarantees precise feedback with a
-          collaborative support framework for their research to work!
-        </p>
+     <section className="py-14 px-4 sm:px-6">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-3xl font-extrabold text-[#0d3b44] text-left mb-3">
+      Client Feedback
+    </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Card 1: Plagiarism Report */}
-          <div className="flex flex-col items-center">
-            <div className="w-full bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden h-48 flex items-center justify-center p-4">
-              <div className="w-full space-y-3 text-[10px] text-slate-500">
-                <div className="font-bold text-slate-700 text-xs">
-                  2% Matches
-                </div>
-                <div className="space-y-1">
-                  <span className="px-2 py-0.5 bg-rose-500 text-white rounded-full text-[9px]">
-                    1 Internet
-                  </span>
-                  <div className="h-1 bg-slate-100 rounded w-full"></div>
-                </div>
-                <div className="space-y-1">
-                  <span className="px-2 py-0.5 bg-sky-500 text-white rounded-full text-[9px]">
-                    2 Internet
-                  </span>
-                  <div className="h-1 bg-slate-100 rounded w-3/4"></div>
-                </div>
-                <div className="space-y-1">
-                  <span className="px-2 py-0.5 bg-emerald-500 text-white rounded-full text-[9px]">
-                    3 Internet
-                  </span>
-                  <div className="h-1 bg-slate-100 rounded w-1/2"></div>
-                </div>
-              </div>
-            </div>
-            <p className="mt-3 font-semibold text-slate-800 text-xs sm:text-sm text-center">
-              Plagiarism Report
-            </p>
-          </div>
+    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-8">
+      We prioritize open, timely, and transparent communications to keep the
+      client informed through every stage of their project. Using a
+      quality-driven approach guarantees precise feedback with a collaborative
+      support framework for their research to work!
+    </p>
 
-          {/* Card 2: ERP System */}
-          <div className="flex flex-col items-center">
-            <div className="w-full bg-[#1e293b] border border-slate-200 rounded-lg shadow-sm overflow-hidden h-48 flex items-center justify-center p-2 text-slate-300 text-[10px]">
-              <div className="w-full h-full bg-[#0f172a] rounded p-2 flex flex-col justify-between">
-                <div className="flex justify-between border-b border-slate-700 pb-1 font-mono text-[9px]">
-                  <span>Dashboard / Projects</span>
-                  <span className="text-emerald-400">● Active</span>
-                </div>
-                <div className="space-y-1 font-mono">
-                  <div className="bg-slate-800 p-1 rounded">
-                    Task: Literature Gap Review
-                  </div>
-                  <div className="bg-slate-800 p-1 rounded">
-                    Status: In Review
-                  </div>
-                </div>
-                <div className="text-right text-[8px] text-slate-500">
-                  Pubrica ERP v2.4
-                </div>
-              </div>
-            </div>
-            <p className="mt-3 font-semibold text-slate-800 text-xs sm:text-sm text-center">
-              Communication through ERP system
-            </p>
-          </div>
-
-          {/* Card 3: WhatsApp */}
-          <div className="flex flex-col items-center">
-            <div className="w-full bg-[#efeae2] border border-slate-200 rounded-lg shadow-sm overflow-hidden h-48 p-3 flex flex-col justify-between">
-              <div className="bg-[#075e54] text-white p-2 rounded text-[10px] flex justify-between items-center">
-                <span>Alice Om</span>
-                <span className="text-[8px] text-emerald-200">Online</span>
-              </div>
-              <div className="space-y-2 text-[9px]">
-                <div className="bg-white p-2 rounded-lg max-w-[80%] shadow-sm text-slate-700">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-                <div className="bg-[#dcf8c6] p-2 rounded-lg max-w-[80%] ml-auto shadow-sm text-slate-800">
-                  Lorem ipsum dolor sit amet, updates shared!
-                </div>
-              </div>
-              <div className="bg-white p-1 rounded-full text-[9px] text-slate-400 px-3">
-                Type a message...
-              </div>
-            </div>
-            <p className="mt-3 font-semibold text-slate-800 text-xs sm:text-sm text-center">
-              Communication through Whatsapp
-            </p>
-          </div>
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
+      {/* Card 1: Plagiarism Report */}
+      <div className="flex flex-col items-center w-full">
+        <div className="w-full h-44 bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+          <Image
+            src="/images/publication-support/journal-selection/Plar-REport-768x525.png"
+            alt="Plagiarism Report"
+            width={768}
+            height={525}
+            className="w-full h-full object-cover"
+          />
         </div>
-      </section>
+
+        <p className="mt-3 font-semibold text-slate-800 text-xs sm:text-sm text-center">
+          Plagiarism Report
+        </p>
+      </div>
+
+      {/* Card 2: ERP System */}
+      <div className="flex flex-col items-center w-full">
+        <div className="w-full h-44 bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+          <Image
+            src="/images/publication-support/journal-selection/sample-ERP-QC-768x346.png"
+            alt="Communication through ERP system"
+            width={768}
+            height={346}
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <p className="mt-3 font-semibold text-slate-800 text-xs sm:text-sm text-center">
+          Communication through ERP system
+        </p>
+      </div>
+
+      {/* Card 3: WhatsApp */}
+      <div className="flex flex-col items-center w-full">
+        <div className="w-full h-44 bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+          <Image
+            src="/images/publication-support/journal-selection/Whatsapp-group.png"
+            alt="Communication through Whatsapp"
+            width={768}
+            height={500}
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <p className="mt-3 font-semibold text-slate-800 text-xs sm:text-sm text-center">
+          Communication through Whatsapp
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
     </div>
   );
 }

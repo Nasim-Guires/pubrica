@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 export default function PubricaSampleWorkAndFAQ() {
@@ -21,35 +23,35 @@ export default function PubricaSampleWorkAndFAQ() {
       id: 2,
       question: "2. How do I know if my manuscript fits a journal's scope?",
       answer:
-        "Review the journal's 'Aims & Scope' section on their official website, check recently published articles in your topic area, and ensure your study's objectives and target audience align with the journal's focus.",
+        "Examine the journal’s aims and scope, peruse recently published articles, compare your topic and methods with similar studies, and ensure your research is appropriate for the journal’s scope.",
     },
     {
       id: 3,
       question:
         "3. What tools can help researchers find suitable journals for their manuscripts?",
       answer:
-        "Researchers can utilize journal matcher tools provided by publishers (such as Elsevier JournalFinder, Springer Journal Suggester, or IEEE Publication Recommender), as well as indexing databases like Scopus and Web of Science.",
+        "Researchers can use journal finder tools, database search engines such as Scopus and Web of Science, and citation analysis tools to find a proper journal for submission.",
     },
     {
       id: 4,
       question:
         "4. What factors should I consider when selecting a journal for publication?",
       answer:
-        "Key factors include indexing (Scopus, SCI, PubMed), Impact Factor, acceptance rate, target audience, review turn-around time, open access vs. subscription options, and article processing charges (APCs).",
+        "When selecting a journal for publication, it is important to take into account the journal’s scope, audience, whether it is indexed or not, its impact and reputation, its peer-review process, publication time, and requirements.",
     },
     {
       id: 5,
       question:
         "5. How can I ensure my manuscript meets a journal's submission requirements?",
       answer:
-        "Thoroughly review the 'Author Guidelines' or 'Instructions for Authors' for your target journal. Pay close attention to word counts, formatting styles, reference styles, figure/table guidelines, and required declarations.",
+        "Carefully read and adhere to author guidelines provided by the journal, format requirements, and then structure your work in a similar manner. Also, be mindful of word counts and references.",
     },
     {
       id: 6,
       question:
         "6. How can researchers identify reputable journals in their field?",
       answer:
-        "Check if the journal is indexed in trusted databases like Scopus or Web of Science, verify its publisher with DOAJ or OASPA for open access journals, and consult senior colleagues or institutional library guides to avoid predatory publishers.",
+        "Researchers may identify reliable journals by checking database indexing, publisher reputation, editorial boards, transparency in peer review processes, and journal evaluation lists provided by reputable sources.",
     },
     {
       id: 7,
@@ -63,28 +65,28 @@ export default function PubricaSampleWorkAndFAQ() {
       question:
         "8. How to verify the credibility of a journal before submission?",
       answer:
-        "Verify that the journal has a clear peer-review process, legitimate editorial board members, transparent fee structures, valid contact info, and verifiable citations on official databases like Journal Citation Reports (JCR).",
+        "Verify the journal’s credibility by checking the databases in which the journal is indexed, the reputation of the publisher, the journal’s editorial board, the journal’s peer review policy, and the journal’s ethical policies.",
     },
     {
       id: 9,
       question:
         "9. What criteria do journals use to evaluate whether a manuscript fits their scope?",
       answer:
-        "Editors evaluate whether the core topic, methodology, clinical or practical relevance, and target reader interest match the journal's established focus and thematic boundaries.",
+        "Journals use various parameters to determine whether your manuscript is a good fit, such as relevance, alignment with their aims, quality of methods, originality, importance, and contribution to the field.",
     },
     {
       id: 10,
       question:
         "10. Why is selecting the right journal important for research publication success?",
       answer:
-        "Selecting the right journal maximizes article visibility, ensures accurate peer-review feedback, prevents unnecessary desk rejections, and enhances academic impact and citations within your research community.",
+        "Choosing the appropriate journal boosts your chances of getting published, reaches your intended audience, maximizes your paper’s visibility, boosts your citations, and maximizes alignment with the journal’s scope.",
     },
     {
       id: 11,
       question:
         "11. When should researchers decide on the target journal during the research process?",
       answer:
-        "Ideally, researchers should select candidate journals early during manuscript drafting or research design so the structure, depth, formatting, and tone can be customized specifically for the target journal.",
+        "A choice should be made about the target journal early in the research process—in fact, as early as possible in the design phase.",
     },
   ];
 
@@ -97,13 +99,14 @@ export default function PubricaSampleWorkAndFAQ() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           {/* Left Column Graphic / Stock Image Placeholder */}
           <div className="md:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-sm h-64 bg-slate-200 rounded-lg overflow-hidden shadow-md flex items-center justify-center border border-slate-300">
-              <div className="text-center p-4">
-                <span className="text-4xl mb-2 block">✍️</span>
-                <p className="text-xs text-slate-500 font-medium">
-                  Sample Journal Report & Manuscript Preparation Visual
-                </p>
-              </div>
+            <div className="relative w-full max-w-sm h-64 rounded-lg overflow-hidden shadow-md border border-slate-300">
+              <Image
+                src="/images/publication-support/journal-selection/Journal-Selection-Sample-Work.jpg"
+                alt="Sample Journal Report and Manuscript Preparation"
+                width={600}
+                height={400}
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
@@ -124,12 +127,12 @@ export default function PubricaSampleWorkAndFAQ() {
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
                 Explore our{" "}
-                <a
-                  href="#"
+                <Link
+                  href="/services/publication-support/journal-selection/identify-predatory-journals-2026/"
                   className="text-cyan-600 font-medium hover:underline"
                 >
                   Journal Selection
-                </a>{" "}
+                </Link>
                 sample work tailored to your manuscript’s scope, indexing
                 requirements, and impact factor goals.
               </p>
@@ -167,10 +170,14 @@ export default function PubricaSampleWorkAndFAQ() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
           {/* Logo / Publisher Visual */}
           <div className="md:col-span-3 flex justify-center md:justify-start">
-            <div className="w-48 h-36 border border-slate-200 rounded-md p-4 flex flex-col items-center justify-center bg-slate-50 shadow-sm">
-              <div className="text-red-700 font-extrabold text-sm text-center leading-tight">
-                ▲ American Diabetes Association.
-              </div>
+            <div className="w-48 h-36 border border-slate-200 rounded-md overflow-hidden bg-slate-50 shadow-sm">
+              <Image
+                src="/images/publication-support/journal-selection/Diabetes-Care-Journal-ΓCo-Metrics-Scope-Submissions-768x768.jpg"
+                alt="American Diabetes Association"
+                width={192}
+                height={144}
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
 

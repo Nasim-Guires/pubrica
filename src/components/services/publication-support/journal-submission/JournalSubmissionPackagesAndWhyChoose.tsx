@@ -4,11 +4,14 @@ import React, { useState } from "react";
 import Image from "next/image";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
+// Common path prefix for package icons
+const COMMON_IMAGE_PATH = "/images/publication-support/journal-submission/";
+
 // 1. Support Packages Data
 const packagesData = [
   {
     id: "silver",
-    letter: "S",
+    iconImage: `${COMMON_IMAGE_PATH}standard-logo-480x480.png`, // Add specific file name
     title: "Silver Pack",
     subtitle:
       "Essential & Budget-Friendly Support For Single Journal Submission",
@@ -30,7 +33,7 @@ const packagesData = [
   },
   {
     id: "gold",
-    letter: "G",
+    iconImage: `${COMMON_IMAGE_PATH}gold-icons-480x480.png`, // Add specific file name
     title: "Gold Pack",
     subtitle: "Complete Publication Support For Up To Two Journals",
     intro:
@@ -47,7 +50,7 @@ const packagesData = [
   },
   {
     id: "platinum",
-    letter: "P",
+    iconImage: `${COMMON_IMAGE_PATH}pa-icons--480x480.png`, // Add specific file name
     title: "Platinum Pack",
     subtitle: "End-To-End Publication Support With Technical Review.",
     intro:
@@ -90,7 +93,7 @@ const whyChooseData = [
 ];
 
 export default function JournalSubmissionPackagesAndWhyChoose() {
-  // Accordion state: item 2 ('cover-letter') open by default to match screenshot image_d44265.png
+  // Accordion state: item 2 ('cover-letter') open by default
   const [openWhyChoose, setOpenWhyChoose] = useState<string>("cover-letter");
 
   const toggleWhyChoose = (id: string) => {
@@ -123,10 +126,13 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
             >
               {/* Card Header */}
               <div className="bg-white p-5 border-t-4 border-t-[#0c3547] flex items-start space-x-3 min-h-[100px]">
-                <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl shrink-0 ${pkg.badgeBg}`}
-                >
-                  {pkg.letter}
+                <div className="relative w-10 h-10 shrink-0">
+                  <Image
+                    src={pkg.iconImage}
+                    alt={`${pkg.title} Icon`}
+                    fill
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="font-bold text-base text-gray-900 leading-tight">
@@ -170,7 +176,7 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
 
         {/* Action CTA Button */}
         <div className="text-center">
-         <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
         </div>
       </section>
 
@@ -183,7 +189,7 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
           <div className="shrink-0">
             <div className="w-28 h-28 relative">
               <Image
-                src="/images/satisfaction-guarantee-badge.png"
+                src="/images/publication-support/journal-submission/Satisfaction_Guarantee.webp"
                 alt="100% Satisfaction Guarantee"
                 fill
                 className="object-contain"
@@ -198,7 +204,7 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
             </h2>
             <p className="text-xs sm:text-sm text-gray-200 leading-relaxed max-w-3xl">
               Accelerate your path to publication with Pubrica’s comprehensive{" "}
-              <a href="#" className="text-[#38bdf8] hover:underline">
+              <a href="/insights/sample-work/prevalence-thyroid-disorders-tertiary-care-north-india/" className="text-[#38bdf8] hover:underline">
                 journal submission
               </a>{" "}
               support service. Gain expert assistance to navigate submission
@@ -260,7 +266,7 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative w-full max-w-md h-72 sm:h-80">
                 <Image
-                  src="/images/researchers-at-work.jpg"
+                  src="/images/publication-support/journal-submission/Leading-Researchers.png"
                   alt="Researchers drafting and reviewing manuscript submission"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"

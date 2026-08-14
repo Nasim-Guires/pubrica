@@ -123,12 +123,12 @@ export default function PeerReviewPreSubmissionClient() {
             professionally presented.
           </p>
 
-          {/* Action Buttons */}
-          <div className="flex flex-wrap gap-4 pt-4">
-           <GetFreeQuoteButton/>
+          {/* Action Buttons (FIXED STYLING HERE) */}
+          <div className="flex flex-wrap items-center gap-4 pt-4">
+            <GetFreeQuoteButton />
             <Link
               href="/brochure"
-              className="px-6 py-3 bg-[#b30000] hover:bg-[#8e0000] text-white font-semibold rounded-full text-sm transition-colors duration-200 shadow-md"
+              className="inline-flex items-center justify-center px-6 py-2.5 bg-[#b30000] hover:bg-[#8e0000] text-white font-semibold rounded-md text-sm transition-colors duration-200 shadow-sm h-[42px]"
             >
               View Brochure
             </Link>
@@ -190,13 +190,160 @@ export default function PeerReviewPreSubmissionClient() {
             {/* Right Column: Next.js Optimized Image */}
             <div className="lg:col-span-5 relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg border border-gray-100">
               <Image
-                src="/images/peer-review-analysis.jpg"
+                src="/images/publication-support/peer-review-pre-submission/Regulatory-frameworks-we-comply-With.webp"
                 alt="Researchers conducting pre-submission peer review on scientific documents"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
-                priority={false}
               />
+            </div>
+          </div>
+        </div>
+
+        {/* What We Peer Review Section */}
+        <div className="pt-10 space-y-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547]">
+            What We Peer Review
+          </h2>
+
+          <p className="text-base text-gray-700 leading-relaxed max-w-5xl">
+            At Pubrica, we appreciate that obtaining meaningful feedback before
+            submitting your manuscript is essential. Our{" "}
+            <span className="text-cyan-700 font-medium">peer review</span>{" "}
+            pre-submission service provides impartial, comprehensive, and
+            structured evaluation by experts in your discipline. Regardless of
+            whether your discipline is medical sciences, engineering, life
+            sciences, or social sciences, we provide meaningful recommendations
+            with actionable improvements based on current peer review standards
+            of{" "}
+            <span className="text-cyan-700 font-medium">high-impact</span>{" "}
+            journals.
+          </p>
+
+          {/* Grid Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+            {/* Card 1 */}
+            <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md flex flex-col justify-between">
+              <div className="space-y-4">
+                <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
+                  1. Scientific/Technical Quality
+                </h3>
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <span className="text-gray-800 font-bold">&#8226;</span>
+                    <span>Are the methods sound and appropriate?</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gray-800 font-bold">&#8226;</span>
+                    <span>Is the data accurate and reproducible?</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md flex flex-col justify-between">
+              <div className="space-y-4">
+                <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
+                  2. Originality and Novelty
+                </h3>
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <span className="text-gray-800 font-bold">&#8226;</span>
+                    <span>Is this a new contribution to the field?</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gray-800 font-bold">&#8226;</span>
+                    <span>Does it address an important research gap?</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md flex flex-col justify-between">
+              <div className="space-y-4">
+                <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
+                  3. Clarity and Organization
+                </h3>
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <span className="text-gray-800 font-bold">&#8226;</span>
+                    <span>Logical, and well-structured?</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gray-800 font-bold">&#8226;</span>
+                    <span>
+                      Are figures and tables informative and accurate?
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md flex flex-col justify-between">
+              <div className="space-y-4">
+                <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
+                  4. Relevance and Significance
+                </h3>
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <span className="text-gray-800 font-bold">&#8226;</span>
+                    <span>
+                      Is the topic important and relevant to the journal or
+                      audience?
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gray-800 font-bold">&#8226;</span>
+                    <span>
+                      Does it contribute to advancing knowledge?
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Card 5 */}
+            <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md flex flex-col justify-between">
+              <div className="space-y-4">
+                <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
+                  5. References and Citations
+                </h3>
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <span className="text-gray-800 font-bold">&#8226;</span>
+                    <span>Are sources current and appropriate?</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gray-800 font-bold">&#8226;</span>
+                    <span>Is the literature review complete?</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Card 6 */}
+            <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md flex flex-col justify-between">
+              <div className="space-y-4">
+                <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
+                  6. Ethical and Legal Aspects
+                </h3>
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <span className="text-gray-800 font-bold">&#8226;</span>
+                    <span>
+                      Were ethical standards followed (e.g., in clinical trials
+                      or human/animal research)?
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gray-800 font-bold">&#8226;</span>
+                    <span>Any plagiarism or data manipulation?</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

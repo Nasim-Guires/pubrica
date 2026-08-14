@@ -1,4 +1,5 @@
-import InsightsSection from '@/components/services/editing-translation/Insights/InsightsSection'
+import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+
 import FaqSection from '@/components/services/publication-support/peer-review-pre-submission/FaqSection'
 import OutcomeAccordionSection from '@/components/services/publication-support/peer-review-pre-submission/OutcomeAccordionSection'
 import PackagesAndTestimonialsSection from '@/components/services/publication-support/peer-review-pre-submission/PackagesAndTestimonialsSection'

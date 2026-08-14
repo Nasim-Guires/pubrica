@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 // ==========================================
@@ -10,28 +11,28 @@ interface ComplianceCard {
   id: string;
   logoUrl?: string;
   title: string;
-  acronym: string;
+  image: string;
 }
 
 const complianceStandards: ComplianceCard[] = [
   {
     id: "cope",
-    acronym: "COPE",
+    image: "/images/publication-support/journal-selection/COPE_thumb.png",
     title: "Committee on Publication Ethics",
   },
   {
     id: "wame",
-    acronym: "WAME",
+    image: "/images/publication-support/journal-selection/WAME.webp",
     title: "World Association of Medical Editors",
   },
   {
     id: "icmje",
-    acronym: "ICMJE",
+    image: "/images/publication-support/journal-selection/ICMJE.webp",
     title: "International Committee of Medical Journal Editors",
   },
   {
     id: "spirit-consort",
-    acronym: "SPIRIT / CONSORT",
+    image: "/images/publication-support/journal-selection/Consort-Logo.webp",
     title: "Consolidated Standards of Reporting Trials",
   },
 ];
@@ -58,11 +59,13 @@ export default function ComplianceAndFeaturesSection() {
                 key={item.id}
                 className="bg-white rounded-lg p-6 shadow-sm border border-slate-200/80 flex flex-col items-center justify-between text-center min-h-[180px] hover:shadow-md transition-shadow"
               >
-                {/* Logo Placeholder / Acronym Display */}
+                {/* Logo / Image Display */}
                 <div className="h-16 flex items-center justify-center">
-                  <span className="text-xl sm:text-2xl font-black text-slate-700 tracking-wider">
-                    {item.acronym}
-                  </span>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="max-h-full max-w-full object-contain"
+                  />
                 </div>
 
                 {/* Standard Title */}
@@ -222,53 +225,16 @@ export default function ComplianceAndFeaturesSection() {
             </div>
           </div>
 
-          {/* Right Column: Visual Journal Mockup & Floating Badges */}
+          {/* Right Column: Visual Journal Mockup */}
           <div className="lg:col-span-5 relative flex justify-center items-center py-6">
-            <div className="relative w-full max-w-sm rounded-md overflow-hidden shadow-lg border border-slate-200 bg-white">
-              {/* Journal Cover Graphic Representation */}
-              <div className="bg-[#0b1f3a] text-white p-6 min-h-[320px] flex flex-col justify-between relative">
-                {/* Paper Preview Overlay */}
-                <div className="bg-white/90 text-slate-800 p-3 rounded text-[9px] leading-tight space-y-1 shadow-xs max-w-[65%] border border-slate-300">
-                  <p className="font-bold">
-                    Contemporary Intensive Care Methods
-                  </p>
-                  <p className="text-[8px] text-slate-500">
-                    Methodology & Clinical Results...
-                  </p>
-                  <div className="h-12 bg-slate-100 rounded border border-slate-200 mt-1"></div>
-                </div>
-
-                {/* Journal Title Branding */}
-                <div className="text-right space-y-0.5 pt-8">
-                  <h3 className="text-xl font-serif font-bold tracking-tight leading-none text-slate-100">
-                    ANNALS OF
-                  </h3>
-                  <h3 className="text-2xl font-serif font-black tracking-wider text-slate-100">
-                    MEDICINE
-                  </h3>
-                  <p className="text-xs font-serif italic text-slate-300">
-                    & SURGERY
-                  </p>
-                </div>
-              </div>
-
-              {/* Floating Badge 1: Impact Factor */}
-              <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-xs border border-slate-200 rounded-lg px-3 py-1.5 shadow-md text-center min-w-[100px]">
-                <span className="block text-[10px] text-slate-600 font-medium border-b border-slate-200 pb-0.5">
-                  Impact Factor
-                </span>
-                <span className="block text-xs font-bold text-slate-900 pt-0.5">
-                  0.09
-                </span>
-              </div>
-
-              {/* Floating Badge 2: APC Charges */}
-              <div className="absolute bottom-6 right-4 bg-white/95 backdrop-blur-xs border border-slate-200 rounded-lg px-4 py-1.5 shadow-md text-center">
-                <span className="text-xs font-semibold text-slate-800">
-                  APC Charges
-                </span>
-              </div>
-            </div>
+            <Image
+              src="/images/publication-support/journal-selection/Journal-selelction-1024x1024.webp"
+              alt="Journal cover"
+              width={1024}
+              height={1024}
+              className="w-full max-w-md h-auto object-contain rounded-md"
+              priority
+            />
           </div>
         </section>
       </div>

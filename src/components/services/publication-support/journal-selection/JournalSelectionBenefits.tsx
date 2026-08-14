@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 export default function JournalSelectionBenefits() {
@@ -8,23 +9,20 @@ export default function JournalSelectionBenefits() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 1: SATISFACTION GUARANTEE BANNER             */}
       {/* ---------------------------------------------------- */}
+
+
       <section className="bg-[#052b1e] text-white py-12 px-6 sm:px-12 lg:px-16">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12">
-          {/* Badge Graphic */}
+
+          {/* Satisfaction Guarantee Image */}
           <div className="shrink-0">
-            <div className="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 p-1 flex items-center justify-center shadow-lg">
-              <div className="w-full h-full rounded-full border-4 border-dashed border-white/80 flex flex-col items-center justify-center text-center p-2 bg-gradient-to-tr from-cyan-500 to-sky-300">
-                <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-slate-800">
-                  Satisfaction
-                </span>
-                <span className="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-none my-0.5">
-                  100%
-                </span>
-                <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-slate-800">
-                  Guarantee
-                </span>
-              </div>
-            </div>
+            <Image
+              src="/images/publication-support/journal-selection/Satisfaction_Guarantee.webp"
+              alt="100% Satisfaction Guarantee"
+              width={160}
+              height={160}
+              className="w-36 h-36 sm:w-40 sm:h-40 object-contain"
+            />
           </div>
 
           {/* Text Content */}
@@ -43,16 +41,17 @@ export default function JournalSelectionBenefits() {
               journal requirements.
             </p>
 
-            {/* Bullet List */}
             <ul className="space-y-2 pt-1 text-xs sm:text-sm">
               <li className="flex items-center gap-2 font-semibold text-slate-100">
                 <span className="h-1.5 w-1.5 rounded-full bg-red-500 inline-block shrink-0" />
                 GDPR & Data Privacy
               </li>
+
               <li className="flex items-center gap-2 font-semibold text-slate-100">
                 <span className="h-1.5 w-1.5 rounded-full bg-red-500 inline-block shrink-0" />
                 No Predatory Journals Guarantee
               </li>
+
               <li className="flex items-center gap-2 font-semibold text-slate-100">
                 <span className="h-1.5 w-1.5 rounded-full bg-red-500 inline-block shrink-0" />
                 Ethical Journal Practices
@@ -136,33 +135,16 @@ export default function JournalSelectionBenefits() {
             {/* Right Graphic Showcase */}
             <div className="lg:col-span-5 flex flex-col items-center justify-center">
               {/* Ribbon Graphic */}
-              <div className="bg-[#1d6b9e] text-white px-6 py-2 rounded-full font-bold text-xs sm:text-sm shadow-md flex items-center gap-2 mb-6">
-                <span className="text-base">👍</span>
-                <span>
-                  1,600+ journals officially recommend our editing services
-                </span>
+              <div className="mb-6">
+                <Image
+                  src="/images/publication-support/journal-selection/journals-recommend-us.webp"
+                  alt="1,600+ journals officially recommend our editing services"
+                  width={600}
+                  height={100}
+                  className="w-full max-w-md h-auto object-contain"
+                />
               </div>
 
-              {/* Journal Covers Preview */}
-              <div className="relative flex items-center justify-center gap-2 sm:gap-4 py-4">
-                <div className="w-24 sm:w-28 h-36 bg-gradient-to-b from-red-800 to-red-950 rounded shadow-md transform -rotate-6 transition-transform hover:rotate-0">
-                  <div className="p-2 text-white font-serif text-[10px] font-bold">
-                    blood
-                  </div>
-                </div>
-
-                <div className="w-24 sm:w-28 h-36 bg-gradient-to-b from-sky-700 to-blue-950 rounded shadow-lg z-10">
-                  <div className="p-2 text-white font-serif text-[10px] font-bold">
-                    jbc
-                  </div>
-                </div>
-
-                <div className="w-24 sm:w-28 h-36 bg-gradient-to-b from-rose-900 to-rose-950 rounded shadow-md transform rotate-6 transition-transform hover:rotate-0">
-                  <div className="p-2 text-white font-serif text-[10px] font-bold">
-                    JNT
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

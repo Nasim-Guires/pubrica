@@ -36,18 +36,18 @@ const deliverablesData = [
 const complianceData = [
   {
     title: "Consolidated Standards of Reporting Trials (CONSORT)",
-    logo: "/images/compliance/consort-logo.png",
-    url: "https://www.consort-spirit.org",
+    logo: "/images/publication-support/journal-submission/Consort-Logo.webp",
+    url: "https://www.consort-spirit.org/",
   },
   {
     title: "Committee on Publication Ethics (COPE)",
-    logo: "/images/compliance/cope-logo.png",
-    url: "#cope",
+    logo: "/images/publication-support/journal-submission/COPE_thumb.png",
+    url: "https://publicationethics.org/",
   },
   {
     title: "International Committee of Medical Journal Editors (ICMJE)",
-    logo: "/images/compliance/icmje-logo.png",
-    url: "#icmje",
+    logo: "/images/publication-support/journal-submission/ICMJE-1_thumb-2.png",
+    url: "https://www.icmje.org/",
   },
 ];
 
@@ -175,7 +175,7 @@ export default function JournalSubmissionBottomSections() {
           <div className="md:col-span-5 flex justify-center">
             <div className="relative w-full max-w-xs h-72 rounded-sm overflow-hidden shadow-md">
               <Image
-                src="/images/journal-sample-notebook.jpg"
+                src="/images/publication-support/journal-submission/Journal-Submission-Sample-Work.jpg"
                 alt="Person taking notes in open notebook"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"

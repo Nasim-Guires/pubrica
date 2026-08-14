@@ -15,41 +15,41 @@ const leftFaqs = [
     question:
       "2. How long does the journal submission and peer-review process take?",
     answer:
-      "The pre-submission turnaround typically takes 5 to 10 working days depending on the package selected. Actual journal peer-review timelines vary by publisher, usually ranging from 4 to 12 weeks.",
+      "The journal submission and peer review process may take a few weeks to a few months depending on various factors such as journal policies and timelines.",
   },
   {
     id: 3,
     question:
       "3. How can researchers ensure compliance with journal ethical guidelines during submission?",
     answer:
-      "Ensure clear disclosure of funding sources, institutional review board (IRB) approvals, conflict of interest statements, and proper data attribution before finalizing your manuscript.",
+      "A researcher can comply with ethical standards by respecting a journal’s ethical policies, declaring conflicts of interest, seeking approvals such as ethics committee clearance, obtaining informed consent, avoiding plagiarism, and reporting results accurately",
   },
   {
     id: 4,
     question: "4. How to prepare a cover letter for journal submission?",
     answer:
-      "Highlight the significance of your findings, explain why your study fits the journal scope, declare no competing interests, and confirm that the work has not been published elsewhere.",
+      "Prepare a cover letter that entails a brief description of your study, its importance, and whether it is original, your conflicts of interest, and why it is a good fit for the journal.",
   },
   {
     id: 5,
     question:
       "5. What are the benefits of expert review before submitting a research paper?",
     answer:
-      "Expert review identifies methodology gaps, statistical issues, structural flaws, and language ambiguities early, drastically lowering your risk of desk rejection.",
+      "Expert review will help in clarity, methodology, gaps in information, structure and language quality, and preparation for journal evaluation and peer review.",
   },
   {
     id: 6,
     question:
       "6. How does pre-submission peer review differ from journal peer review?",
     answer:
-      "Pre-submission review is a collaborative feedback service to improve your paper before submission, whereas journal peer review is an evaluative process conducted by the publisher to make an editorial decision.",
+      "Pre-submission peer review is an optional process, where experts review your manuscript to improve it, while journal peer review is a formal process conducted by experts to determine whether your manuscript is worthy of publication.",
   },
   {
     id: 7,
     question:
       "7. What mistakes can be avoided through pre-submission peer review?",
     answer:
-      "Common issues like incorrect formatting, missing ethical statements, unaddressed limitations, unclear data presentation, and weak discussion sections can all be resolved prior to formal submission.",
+      " Pre-submission peer review enables the avoidance of unclear writing, poor methodology, inadequate reporting, formatting issues, non-compliance with the guidelines, logical gaps, and potential issues that may result in the rejection of the manuscript from the journal.",
   },
 ];
 
@@ -66,35 +66,35 @@ const rightFaqs = [
     question:
       "9. How do research teams ensure their manuscript is ready for journal submission?",
     answer:
-      "Conduct a thorough pre-submission checklist review covering target journal scope alignment, reference formatting, high-resolution figures, plagiarism checks, and co-author approvals.",
+      "Research groups prepare for submission by refining their study, reviewing journal guidelines, refining the manuscript for clarity and structure, reviewing references, ensuring compliance with guidelines, and possibly conducting internal or expert reviews.  ",
   },
   {
     id: 10,
     question:
       "10. How can researchers strengthen their manuscript before journal submission?",
     answer:
-      "Focus on refining the abstract for clarity, ensuring the introduction states a strong research gap, rigorously validating statistical claims, and linking conclusions back to your core data.",
+      "Researchers can improve their manuscript by refining the research question, improving structure and clarity, ensuring data accuracy, aligning it with journal guidelines, and seeking feedback from experts.",
   },
   {
     id: 11,
     question:
       "11. Can pre-submission peer review increase journal acceptance chances?",
     answer:
-      "Yes. By addressing peer reviewer concerns and technical errors proactively, your manuscript presents a significantly higher standard of quality to journal editors, improving peer review outcomes.",
+      "Yes, pre-submission peer review may help in increasing the probability of acceptance by helping identify potential flaws in the study, improving clarity and methodology, ensuring that it aligns with journal guidelines, and improving overall quality.",
   },
   {
     id: 12,
     question:
       "12. What should I check before submitting my research paper to a journal?",
     answer:
-      "Verify word counts, target journal reference style, figure formatting, author affiliations, supplementary material files, and ensure all reviewer feedback has been systematically addressed.",
+      "Before submission, it is important to assess whether it aligns with journal scope, formatting requirements, word count, reference style, ethical approvals, conflict of interest statements, data accuracy, and overall quality.",
   },
   {
     id: 13,
     question:
       "13. What do journal reviewers typically look for in a research manuscript?",
     answer:
-      "Reviewers evaluate novelty, methodological rigor, clarity of results, proper citation of existing literature, adherence to ethical standards, and whether conclusions are soundly supported by evidence.",
+      "Journal reviewers usually consider originality, methodological quality, clarity of the manuscript, validity of the data, ethical standards, relevance, and contribution of the research to the discipline.",
   },
 ];
 

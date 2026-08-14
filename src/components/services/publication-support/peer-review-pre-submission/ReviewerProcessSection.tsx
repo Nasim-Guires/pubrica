@@ -5,13 +5,34 @@ import Image from 'next/image';
 
 // 1. Who We Serve Cards Data
 const whoWeServeData = [
-  { title: 'PhD Scholars', image: '/images/phd-scholars.jpg' },
-  { title: 'Early-Career Researchers', image: '/images/early-career-researchers.jpg' },
-  { title: 'Academic Faculty and Professors', image: '/images/academic-faculty.jpg' },
-  { title: 'Independent Researchers', image: '/images/independent-researchers.jpg' },
-  { title: 'Medical Device manufacturers', image: '/images/medical-device-manufacturers.jpg' },
-  { title: 'Pharmaceutical Companies', image: '/images/pharma-companies.jpg' },
-  { title: 'Life Science & Biotechnology Companies', image: '/images/life-science-companies.jpg' },
+  { title: 'PhD Scholars', image: '/images/publication-support/peer-review-pre-submission/PhD-Scholars-1.jpg' },
+  { title: 'Early-Career Researchers', image: '/images/publication-support/peer-review-pre-submission/Early-Career-Researchers-1.jpg' },
+  { title: 'Academic Faculty and Professors', image: '/images/publication-support/peer-review-pre-submission/Academic-Faculty-and-Professors.jpg' },
+  { title: 'Independent Researchers', image: '/images/publication-support/peer-review-pre-submission/Independent-Researchers-1.jpg' },
+  { title: 'Medical Device manufacturers', image: '/images/publication-support/peer-review-pre-submission/Medical-Device-manufacturers-1.jpg' },
+  { title: 'Pharmaceutical Companies', image: '/images/publication-support/peer-review-pre-submission/Pharmaceutical-Companies-1.jpg' },
+  { title: 'Life Science & Biotechnology Companies', image: '/images/publication-support/peer-review-pre-submission/Life-Science-Biotechnology-Companies.jpg' },
+];
+
+const standards = [
+  {
+    title: "CONSORT",
+    subtitle: "Consolidated Standards of Reporting Trials (CONSORT)",
+    imageSrc: "/images/publication-support/peer-review-pre-submission/Consort-Logo.webp", // Update path to your image
+    alt: "SPIRIT CONSORT",
+  },
+  {
+    title: "PRISMA",
+    subtitle: "Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA)",
+    imageSrc: "/images/publication-support/peer-review-pre-submission/prisma_logo.png", // Update path to your image
+    alt: "PRISMA",
+  },
+  {
+    title: "STROBE",
+    subtitle: "Strengthening the Reporting of Observational Studies in Epidemiology (STROBE)",
+    imageSrc: "/images/publication-support/peer-review-pre-submission/Strengthening-the-Reporting-of-Observational-Studies-in-Epidemiology.png", // Update path to your image
+    alt: "STROBE",
+  },
 ];
 
 // 2. Process Steps Data
@@ -21,7 +42,7 @@ const processSteps = [
     title: 'UPLOAD YOUR MANUSCRIPT',
     description:
       'The process begins by submitting your manuscript and any specific guidelines for the journal or instructions from your institution. This helps us align our review with your publication objectives.',
-    icon: '/images/icons/upload-manuscript.svg',
+    icon: '/images/publication-support/peer-review-pre-submission/scopeofthejournal.webp',
     position: 'bottom', // Card rendered below horizontal timeline bar
   },
   {
@@ -29,7 +50,7 @@ const processSteps = [
     title: 'TECHNICAL REVIEW',
     description:
       "Pubrica's peer review pre-submission service raises the impact and compliance of your research with industry publication expectations.",
-    icon: '/images/icons/technical-review.svg',
+    icon: '/images/publication-support/peer-review-pre-submission/target-readership.webp',
     position: 'top', // Card rendered above horizontal timeline bar
   },
   {
@@ -37,7 +58,7 @@ const processSteps = [
     title: 'EXPERT SCIENTIFIC FEEDBACK',
     description:
       "Following a comprehensive technical review, Pubrica's editors highlight gaps and provide feedback on the most important elements, ensuring ethical compliance.",
-    icon: '/images/icons/scientific-feedback.svg',
+    icon: '/images/publication-support/peer-review-pre-submission/timecost.webp',
     position: 'bottom', // Card rendered below horizontal timeline bar
   },
   {
@@ -45,7 +66,7 @@ const processSteps = [
     title: 'MULTIPLE ROUNDS OF REVIEW',
     description:
       'Following your revisions, Pubrica provides one complimentary re-review by a subject matter expert to ensure that the revision reflects the original recommendations and the journal\'s expectations.',
-    icon: '/images/icons/multiple-reviews.svg',
+    icon: '/images/publication-support/peer-review-pre-submission/visibilityquality.webp',
     position: 'top', // Card rendered above horizontal timeline bar
   },
 ];
@@ -71,7 +92,7 @@ export default function ReviewerProcessSection() {
           {whoWeServeData.slice(0, 4).map((item, idx) => (
             <div
               key={idx}
-              className="group relative h-48 rounded-md overflow-hidden shadow-md cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+              className="group relative h-48 rounded-md overflow-hidden 1"
             >
               <Image
                 src={item.image}
@@ -80,7 +101,7 @@ export default function ReviewerProcessSection() {
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent group-hover:bg-black/90 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4">
                 <h3 className="text-white font-bold text-sm sm:text-base leading-snug">
                   {item.title}
@@ -95,7 +116,7 @@ export default function ReviewerProcessSection() {
           {whoWeServeData.slice(4).map((item, idx) => (
             <div
               key={idx}
-              className="group relative h-48 rounded-md overflow-hidden shadow-md cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+              className="group relative h-48 rounded-md overflow-hidden shadow-md "
             >
               <Image
                 src={item.image}
@@ -104,7 +125,7 @@ export default function ReviewerProcessSection() {
                 sizes="(max-width: 640px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent group-hover:bg-black/90 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4">
                 <h3 className="text-white font-bold text-sm sm:text-base leading-snug">
                   {item.title}
@@ -167,12 +188,12 @@ export default function ReviewerProcessSection() {
       {/* ========================================== */}
       {/* SECTION 3: SATISFACTION BANNER             */}
       {/* ========================================== */}
-      <section className="w-full bg-[#032d20] text-white py-8 px-4">
+      <section className="w-full bg-[#032d20] text-white py-4 px-4">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
-          {/* Badge Image */}
-          <div className="w-24 h-24 relative shrink-0">
+          {/* Badge Image - Increased size to match screenshot balance */}
+          <div className="w-36 h-36 sm:w-40 sm:h-40 relative shrink-0">
             <Image
-              src="/images/satisfaction-badge.png"
+              src="/images/publication-support/peer-review-pre-submission/Satisfaction_Guarantee.webp"
               alt="100% Satisfaction Guarantee"
               fill
               className="object-contain"
@@ -185,8 +206,43 @@ export default function ReviewerProcessSection() {
               Speed up your Journey to Publication with Pubrica
             </h2>
             <p className="text-xs sm:text-sm text-teal-100/90 leading-relaxed max-w-2xl">
-              Accelerate your path to publication with Pubrica&apos;s expert guidance and streamlined processes. Gain the advantage of efficient manuscript handling and editorial support today.
+              Accelerate your path to publication with Pubrica&apos;s expert guidance and streamlined processes.
+              Gain the advantage of efficient manuscript handling and editorial support today.
             </p>
+          </div>
+        </div>
+      </section>
+      {/* Compliance Standards Section */}
+      <section className="w-full bg-gray-50/50 py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          {/* Section Heading */}
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center mb-8">
+            Our Compliance and guideline Standards
+          </h2>
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+            {standards.map((standard, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex flex-col items-center text-center justify-between transition-all hover:shadow-md"
+              >
+                {/* Logo Graphic Container */}
+                <div className="w-full h-24 relative mb-4 flex items-center justify-center">
+                  <Image
+                    src={standard.imageSrc}
+                    alt={standard.alt}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+
+                {/* Card Subtitle/Description */}
+                <p className="text-xs text-gray-600 font-medium leading-snug mt-2">
+                  {standard.subtitle}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
