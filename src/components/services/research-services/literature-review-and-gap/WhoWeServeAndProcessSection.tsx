@@ -22,7 +22,8 @@ const audienceCards: AudienceCard[] = [
     title: "Pharmaceutical and Biotech Companies",
     description:
       "For drug development documentation, mechanism-of-action reviews, safety/efficacy evaluations, and literature support for regulatory dossiers (e.g., IND, NDA, CTD).",
-    imageSrc: "/images/services/pharma-biotech.jpg",
+    imageSrc:
+      "/images/research-services/literature-review-and-gap/Pharmaceutical-and-Biotech-Companies.png",
     altText: "Pharmaceutical and Biotech research environment",
   },
   {
@@ -30,7 +31,8 @@ const audienceCards: AudienceCard[] = [
     title: "Medical Device and Diagnostic Firms",
     description:
       "To support clinical evaluation reports (CER) (CE marking, 510(k), PMA), white papers, and technical documentation for regulatory approvals (e.g., EU MDR, FDA).",
-    imageSrc: "/images/services/medical-devices.jpg",
+    imageSrc:
+      "/images/research-services/literature-review-and-gap/Medical-Device-and-Diagnostic-Firms.png",
     altText: "Medical Device and Diagnostic firm software",
   },
   {
@@ -38,7 +40,8 @@ const audienceCards: AudienceCard[] = [
     title: "Healthcare Providers and Clinical Practitioners",
     description:
       "To support diagnostic decisions, treatment planning, CME, and practice guideline development through structured synthesis of recent clinical evidence.",
-    imageSrc: "/images/services/healthcare-providers.jpg",
+    imageSrc:
+      "/images/research-services/literature-review-and-gap/Healthcare-Providers-and-Clinical-Practitioners.png",
     altText: "Healthcare provider holding patient hands in care",
   },
   {
@@ -46,7 +49,8 @@ const audienceCards: AudienceCard[] = [
     title: "Academic and Research Institutions",
     description:
       "For dissertation development, thesis writing, systematic review, topic mapping, research consultancy, gap analysis, and peer-reviewed journal publications, requiring methodologically sound and publication-ready literature review is required.",
-    imageSrc: "/images/services/academic-institutions.jpg",
+    imageSrc:
+      "/images/research-services/literature-review-and-gap/Academic-and-Research-Institutions.png",
     altText: "Academic researcher reading open books with stationery",
   },
   {
@@ -54,7 +58,8 @@ const audienceCards: AudienceCard[] = [
     title: "Regulatory & Government Agencies",
     description:
       "Evidence gathering for public health programs, Data reviews for health policy decisions, and technical documentation for compliance and surveillance",
-    imageSrc: "/images/services/regulatory-agencies.jpg",
+    imageSrc:
+      "/images/research-services/literature-review-and-gap/Regulatory-Government-Agencies.png",
     altText: "Regulatory compliance binder on desk with executive",
   },
   {
@@ -62,7 +67,8 @@ const audienceCards: AudienceCard[] = [
     title: "Hospitals and Medical Research Units",
     description:
       "To facilitate clinical audits, protocol development, institutional ethics committee submissions, and internal training material based on updated clinical findings.",
-    imageSrc: "/images/services/hospitals-research.jpg",
+    imageSrc:
+      "/images/research-services/literature-review-and-gap/Hospitals-and-Medical-Research-Units.png",
     altText: "Medical team and hospital research unit holding hands",
   },
   {
@@ -70,7 +76,8 @@ const audienceCards: AudienceCard[] = [
     title: "Contract Research Organizations (CROs)",
     description:
       "To aid in clinical trial documentation, literature-based justification of endpoints, and background sections for study protocols or investigator brochures.",
-    imageSrc: "/images/services/cros.jpg",
+    imageSrc:
+      "/images/research-services/literature-review-and-gap/Contract-Research-Organizations-CROs.png",
     altText: "Contract Research Organization document review stack",
   },
   {
@@ -78,7 +85,8 @@ const audienceCards: AudienceCard[] = [
     title: "Health Technology Assessment (HTA) & Market Access Teams",
     description:
       "Cost-effectiveness and value demonstration. Comparative effectiveness and outcomes evidence and support for payer submissions and value dossiers.",
-    imageSrc: "/images/services/hta-market-access.jpg",
+    imageSrc:
+      "/images/research-services/literature-review-and-gap/Health-Technology-Assessment-HTA-Market-Access-Teams.png",
     altText: "Health Technology Assessment team analyzing data graphs",
   },
 ];

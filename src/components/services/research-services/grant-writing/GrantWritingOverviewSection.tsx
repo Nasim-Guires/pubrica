@@ -131,7 +131,7 @@ export default function GrantWritingOverviewSection() {
               {/* Foreground Image Card */}
               <div className="absolute top-0 left-6 right-0 bottom-6 rounded-2xl overflow-hidden shadow-xl z-10 border border-slate-100">
                 <Image
-                  src="/images/services/grant-writing-workspace.jpg"
+                  src="/images/research-services/grant-writing/Professional-Research-Grant-Writing-Services.webp"
                   alt="Researcher working on grant proposal draft with laptop and notebook"
                   fill
                   className="object-cover"

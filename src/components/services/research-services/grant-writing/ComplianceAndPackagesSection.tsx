@@ -8,14 +8,13 @@ import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 interface ComplianceItem {
   id: string;
   title: string;
-  icon: React.ReactNode;
+  iconSrc: string;
   content: React.ReactNode;
 }
 
 interface PackageItem {
   id: string;
-  badge: string;
-  badgeBg: string;
+  badgeImage: string;
   title: string;
   subtitle: string;
   description: string;
@@ -37,21 +36,8 @@ export default function ComplianceAndPackagesSection() {
     {
       id: "funding",
       title: "Funding Agency Guidelines",
-      icon: (
-        <svg
-          className="w-6 h-6 text-emerald-800"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.5"
-            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
+      iconSrc:
+        "/images/research-services/grant-writing/Funding-Agency-Guidelines.png",
       content: (
         <div className="space-y-3 text-xs sm:text-sm text-slate-700">
           <p>
@@ -91,21 +77,8 @@ export default function ComplianceAndPackagesSection() {
     {
       id: "ethics",
       title: "Ethical and Scientific Integrity",
-      icon: (
-        <svg
-          className="w-6 h-6 text-emerald-800"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.5"
-            d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
-          />
-        </svg>
-      ),
+      iconSrc:
+        "/images/research-services/grant-writing/Ethical-and-Scientific-Integrity.png",
       content: (
         <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
           Our writing complies with ethical standards in research proposal
@@ -124,21 +97,8 @@ export default function ComplianceAndPackagesSection() {
     {
       id: "budget",
       title: "Budgetary and Financial Accuracy",
-      icon: (
-        <svg
-          className="w-6 h-6 text-emerald-800"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.5"
-            d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-          />
-        </svg>
-      ),
+      iconSrc:
+        "/images/research-services/grant-writing/Budgetary-and-Financial-Accuracy.png",
       content: (
         <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
           Adhere to Uniform Guidance (21 CFR 200) for U.S. federal grants and
@@ -152,8 +112,7 @@ export default function ComplianceAndPackagesSection() {
   const packageData: PackageItem[] = [
     {
       id: "basic",
-      badge: "B",
-      badgeBg: "bg-amber-100 text-amber-800 border-amber-300",
+      badgeImage: "/images/editing-and-translation/basic-pacakge.png",
       title: "Basic",
       subtitle: "Grant Proposal Review & Editing",
       description:
@@ -169,8 +128,8 @@ export default function ComplianceAndPackagesSection() {
     },
     {
       id: "standard",
-      badge: "S",
-      badgeBg: "bg-sky-100 text-sky-800 border-sky-300",
+      badgeImage:
+        "/images/publication-support/responding-to-reviewers/standard-logo.png",
       title: "Standard",
       subtitle: "Grant Proposal Writing",
       description:
@@ -187,8 +146,7 @@ export default function ComplianceAndPackagesSection() {
     },
     {
       id: "premium",
-      badge: "P",
-      badgeBg: "bg-orange-100 text-orange-800 border-orange-300",
+      badgeImage: "/images/editing-and-translation/pro.webp",
       title: "Premium",
       subtitle: "End-To-End Grant Support",
       description:
@@ -240,8 +198,14 @@ export default function ComplianceAndPackagesSection() {
                   className="w-full bg-[#e6f4f1] p-4 flex items-center justify-between gap-3 text-left hover:bg-[#d8ece8] transition-colors duration-200"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="p-1.5 bg-white rounded-md shadow-xs">
-                      {item.icon}
+                    <div className="relative w-9 h-9 flex-shrink-0">
+                      <Image
+                        src={item.iconSrc}
+                        alt=""
+                        width={35}
+                        height={35}
+                        className="object-contain"
+                      />
                     </div>
                     <span className="font-bold text-[#0e3b38] text-sm sm:text-base">
                       {item.title}
@@ -272,7 +236,7 @@ export default function ComplianceAndPackagesSection() {
           {/* Left Image Column */}
           <div className="md:col-span-5 relative h-64 sm:h-80 w-full rounded-md overflow-hidden shadow-sm">
             <Image
-              src="/images/services/grant-sample-work.jpg"
+              src="/images/research-services/grant-writing/Grant-Writing-Services-Sample-Work.png"
               alt="Hand holding fountain pen writing grant proposal"
               fill
               className="object-cover"
@@ -348,10 +312,14 @@ export default function ComplianceAndPackagesSection() {
               <div>
                 {/* White Top Header Banner */}
                 <div className="bg-white p-5 border-b border-slate-200/60 flex items-center gap-4">
-                  <div
-                    className={`w-10 h-10 rounded-full border flex items-center justify-center font-bold text-lg ${pkg.badgeBg}`}
-                  >
-                    {pkg.badge}
+                  <div className="relative w-10 h-10 flex-shrink-0">
+                    <Image
+                      src={pkg.badgeImage}
+                      alt={`${pkg.title} package`}
+                      width={40}
+                      height={40}
+                      className="object-contain"
+                    />
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-slate-900 leading-tight">

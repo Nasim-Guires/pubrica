@@ -17,12 +17,14 @@ interface AudienceCard {
 interface FeatureCard {
   id: string;
   title: string;
-  iconSvg: React.ReactNode;
+  iconSrc: string;
   description: string;
   highlightText?: string;
   needFromYou: string[];
   youllGet: string[];
 }
+
+const GW_IMG = "/images/research-services/grant-writing";
 
 const audienceCards: AudienceCard[] = [
   {
@@ -32,7 +34,7 @@ const audienceCards: AudienceCard[] = [
       "Faculty, postdoctoral researchers, and universities seeking national or international funding benefit from our ",
     linkText: "research proposal writing service.",
     linkUrl: "#research-proposal-writing",
-    imageSrc: "/images/services/who-we-serve-academic.jpg",
+    imageSrc: `${GW_IMG}/Academic-Researchers-and-Institutions.png`,
     altText: "Researcher working on computer in university office",
   },
   {
@@ -42,7 +44,7 @@ const audienceCards: AudienceCard[] = [
       "Hospitals and clinicians rely on our clinical research grant writing expertise for grants supporting ",
     linkText: "trials and public health initiatives.",
     linkUrl: "#clinical-trials",
-    imageSrc: "/images/services/who-we-serve-healthcare.jpg",
+    imageSrc: `${GW_IMG}/Healthcare-Professionals-and-Clinical-Researchers.png`,
     altText: "Healthcare professional reviewing medical data on laptop",
   },
   {
@@ -52,7 +54,7 @@ const audienceCards: AudienceCard[] = [
       "Charitable, advocacy, and development-focused organizations are applying for government or private foundation grants to fund projects and community initiatives.",
     linkText: "community programs.",
     linkUrl: "#nonprofit-grants",
-    imageSrc: "/images/services/who-we-serve-nonprofit.jpg",
+    imageSrc: `${GW_IMG}/Nonprofit-Organizations-and-NGOs.png`,
     altText: "Non-profit notepad with financial documents and calculator",
   },
   {
@@ -62,7 +64,7 @@ const audienceCards: AudienceCard[] = [
       "Startups and established companies are applying for R&D grants, SBIR/STTR programs, or public-private partnerships to advance innovation and product development.",
     linkText: "SBIR/STTR funding requests.",
     linkUrl: "#industry-grants",
-    imageSrc: "/images/services/who-we-serve-biotech.jpg",
+    imageSrc: `${GW_IMG}/Biotech-Pharma-and-Industry-Partners.png`,
     altText: "Lab scientists working in modern research laboratory",
   },
   {
@@ -72,7 +74,7 @@ const audienceCards: AudienceCard[] = [
       "Freelancers and individuals receive personalised support from experienced grant writing consultants.",
     linkText: "grant writing consultants.",
     linkUrl: "#consultant-support",
-    imageSrc: "/images/services/who-we-serve-consultant.jpg",
+    imageSrc: `${GW_IMG}/Independent-Consultants-Grant-Seekers.png`,
     altText: "Independent consultant with headset working at desk",
   },
   {
@@ -82,7 +84,7 @@ const audienceCards: AudienceCard[] = [
       "We collaborate with local, regional, and national government bodies to craft impactful proposals that align with funding agency priorities and public policy goals.",
     linkText: "grant documentation.",
     linkUrl: "#public-sector-grants",
-    imageSrc: "/images/services/who-we-serve-government.jpg",
+    imageSrc: `${GW_IMG}/Government-Public-Sector-Bodies.png`,
     altText: "Public sector team presenting data on large monitor screen",
   },
 ];
@@ -91,28 +93,7 @@ const serviceDetails: FeatureCard[] = [
   {
     id: "writing-dev",
     title: "Grant Proposal Writing and Development",
-    iconSvg: (
-      <svg
-        className="w-20 h-20 text-[#0e3b38]"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.2"
-          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.2"
-          d="M15 11l2-2 2 2m-2-2v6"
-        />
-      </svg>
-    ),
+    iconSrc: `${GW_IMG}/Grant-Proposal-Writing-and-Development.png`,
     description:
       "Our grant proposal writing services are tailored to meet the specific needs of your research project. We craft compelling proposals that clearly articulate novelty, significance, and impact while aligning with funder priorities.",
     highlightText: "grant writing",
@@ -130,22 +111,7 @@ const serviceDetails: FeatureCard[] = [
   {
     id: "review",
     title: "Grant Proposal Review",
-    iconSvg: (
-      <svg
-        className="w-20 h-20 text-[#0e3b38]"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.2"
-          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-        />
-      </svg>
-    ),
+    iconSrc: `${GW_IMG}/Grant-Proposal-Review.png`,
     description:
       "Our professional grant review service evaluates your draft proposal to identify key problem areas such as feasibility, clarity, and methodology alignment. We also ensure your proposal meets expectations for research grant writing services and funding success.",
     needFromYou: [
@@ -162,22 +128,7 @@ const serviceDetails: FeatureCard[] = [
   {
     id: "editing",
     title: "Grant Proposal Editing",
-    iconSvg: (
-      <svg
-        className="w-20 h-20 text-[#0e3b38]"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.2"
-          d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-        />
-      </svg>
-    ),
+    iconSrc: `${GW_IMG}/Grant-Proposal-Editing.png`,
     description:
       "Our grant proposal editing experts improve clarity, coherence, and persuasiveness while ensuring alignment with funder priorities. This service is ideal for researchers seeking research grant proposal writing and editing support before submission.",
     needFromYou: [
@@ -306,7 +257,13 @@ export default function WhoWeServeAndServiceDetailsSection() {
               {/* Left Side: Icon and Service Title */}
               <div className="md:col-span-4 flex flex-col items-center justify-center text-center space-y-4 md:border-r md:border-sky-200/80 md:pr-6 h-full">
                 <div className="p-3 bg-white/80 rounded-2xl shadow-sm group-hover:scale-110 transition-transform duration-300">
-                  {service.iconSvg}
+                  <Image
+                    src={service.iconSrc}
+                    alt=""
+                    width={80}
+                    height={80}
+                    className="object-contain w-20 h-20"
+                  />
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-[#0e3b38] leading-tight">
                   {service.title}

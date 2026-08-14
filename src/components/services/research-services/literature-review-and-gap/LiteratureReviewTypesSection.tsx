@@ -185,7 +185,7 @@ export default function LiteratureReviewTypesSection() {
           <div className="lg:col-span-4 flex justify-center py-4 lg:py-0">
             <div className="relative w-full max-w-sm h-80 sm:h-96 rounded-2xl overflow-hidden shadow-lg border border-slate-200">
               <Image
-                src="/images/services/open-books-glasses.jpg"
+                src="/images/research-services/literature-review-and-gap/Types-of-Literature-Review-That-We-Offer.png"
                 alt="Open academic books stacked with eyeglasses on top"
                 fill
                 className="object-cover"

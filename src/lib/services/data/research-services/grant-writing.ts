@@ -1,30 +1,35 @@
+const GW_IMG = "/images/research-services/grant-writing";
+
 export const grantWritingTestimonials = [
   {
-    image: "/images/testimonials/indian-journal-of-medical-research.jpg",
+    image: `${GW_IMG}/Indian-council-of-medical-research.png`,
     quote:
       "With Pubrica's guidance, we successfully submitted our proposal to the Indian Council of Medical Research (ICMR). Their knowledge of the Indian funding landscape and medical writing standards ensured our grant stood out among hundreds of applicants.",
     name: "Dr. Nishant Reddy",
     designation: "Director",
     organization: "Biomedical Research Lab – India",
-    flag: "/images/flags/india.png",
+    flag: "/images/editing-and-translation/flag.png",
+    flagSrc: "/images/editing-and-translation/flag.png",
   },
   {
-    image: "/images/testimonials/horizon-europe.jpg",
+    image: `${GW_IMG}/horizon-grant-application-journal.png`,
     quote:
       "We collaborated with Pubrica on a complex Horizon Europe grant application. Their writers demonstrated a strong grasp of EU requirements and delivered a thoroughly compliant, reviewer-ready document.",
     name: "Dr. Elena Petrova",
     designation: "EU Research Coordinator",
     organization: "Germany",
-    flag: "/images/flags/germany.png",
+    flag: "/images/editing-and-translation/germany-1-1.png",
+    flagSrc: "/images/editing-and-translation/germany-1-1.png",
   },
   {
-    image: "/images/testimonials/nih-research.jpg",
+    image: `${GW_IMG}/national-institute-of-health-journal.png`,
     quote:
       "Pubrica's grant writing support was instrumental in helping us secure funding through the NIH (National Institutes of Health). Their clarity in writing, adherence to US federal guidelines, and ability to present our research impact convincingly were outstanding.",
     name: "Dr. Aarti Menon",
     designation: "Principal Investigator",
     organization: "Clinical Research Institute – USA",
-    flag: "/images/flags/usa.png",
+    flag: `${GW_IMG}/usa-1-1.png`,
+    flagSrc: `${GW_IMG}/usa-1-1.png`,
   },
 ];
 

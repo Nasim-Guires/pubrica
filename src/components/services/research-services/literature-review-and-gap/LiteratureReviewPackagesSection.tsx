@@ -1,13 +1,12 @@
 "use client";
 
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Image from "next/image";
 import React from "react";
 
 interface PackagePlan {
   id: string;
-  badgeLetter: string;
-  badgeBg: string;
-  badgeTextColor: string;
+  badgeImage: string;
   name: string;
   subtitle: string;
   cardHeaderBorder: string;
@@ -21,9 +20,7 @@ interface PackagePlan {
 const packageData: PackagePlan[] = [
   {
     id: "basic",
-    badgeLetter: "B",
-    badgeBg: "bg-amber-100",
-    badgeTextColor: "text-amber-600",
+    badgeImage: "/images/editing-and-translation/basic-pacakge.png",
     name: "Basic",
     subtitle: "Literature Mapping",
     cardHeaderBorder: "border-slate-300",
@@ -39,9 +36,7 @@ const packageData: PackagePlan[] = [
   },
   {
     id: "advanced",
-    badgeLetter: "A",
-    badgeBg: "bg-green-100",
-    badgeTextColor: "text-green-600",
+    badgeImage: "/images/product-development/advanced.webp",
     name: "Advanced",
     subtitle: "Critical Review & Gap Analysis",
     cardHeaderBorder: "border-purple-300",
@@ -58,9 +53,7 @@ const packageData: PackagePlan[] = [
   },
   {
     id: "premium",
-    badgeLetter: "P",
-    badgeBg: "bg-blue-100",
-    badgeTextColor: "text-blue-600",
+    badgeImage: "/images/editing-and-translation/pro.webp",
     name: "Premium",
     subtitle: "Publication-Ready Systematic Review",
     cardHeaderBorder: "border-amber-300",
@@ -111,10 +104,14 @@ export default function LiteratureReviewPackagesSection() {
             >
               {/* Card Top Banner (White with Circle Icon & Titles) */}
               <div className="p-5 flex items-center gap-4 bg-white border-b border-slate-200">
-                <div
-                  className={`w-12 h-12 rounded-full ${pkg.badgeBg} ${pkg.badgeTextColor} flex items-center justify-center font-extrabold text-xl shadow-inner flex-shrink-0`}
-                >
-                  {pkg.badgeLetter}
+                <div className="relative w-12 h-12 flex-shrink-0">
+                  <Image
+                    src={pkg.badgeImage}
+                    alt={`${pkg.name} package`}
+                    width={48}
+                    height={48}
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-slate-900 leading-tight">

@@ -94,7 +94,7 @@ export default function LiteratureReviewHeroAndIntroSection() {
               <div className="relative w-full max-w-md h-72 sm:h-80 lg:h-96 rounded-3xl overflow-hidden bg-[#0d2a2a] p-3 shadow-lg">
                 <div className="relative w-full h-full rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/services/literature-review-writing.jpg"
+                    src="/images/research-services/literature-review-and-gap/Literature-Reviews-and-Gap-Analyses-for-Research.webp"
                     alt="Researcher writing and reviewing academic papers for gap analysis"
                     fill
                     className="object-cover"

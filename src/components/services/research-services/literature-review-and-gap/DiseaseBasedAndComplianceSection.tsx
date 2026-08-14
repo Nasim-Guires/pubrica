@@ -279,7 +279,7 @@ export default function DiseaseBasedAndComplianceSection() {
           <div className="md:col-span-5 flex justify-center">
             <div className="relative w-full max-w-xs h-72 sm:h-80 rounded-lg overflow-hidden shadow-md">
               <Image
-                src="/images/services/sample-work-discussion.jpg"
+                src="/images/research-services/literature-review-and-gap/image-7.webp"
                 alt="Two academic researchers discussing literature review documents"
                 fill
                 className="object-cover"
