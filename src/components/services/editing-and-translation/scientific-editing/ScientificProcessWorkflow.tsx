@@ -1,13 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import { FiAward, FiBookOpen, FiEdit3, FiMessageSquare } from "react-icons/fi";
+import Image from "next/image";
+
+const IMG = "/images/editing-and-translation/scientific-editing";
 
 interface Step {
   number: number;
   title: string;
   description: string;
-  icon: React.ReactNode;
+  iconSrc: string;
   position: "top" | "bottom";
 }
 
@@ -17,7 +19,7 @@ const steps: Step[] = [
     title: "Choosing the most suitable experts",
     description:
       "A customer service executive understands your preferences and passes them on to our project managers",
-    icon: <FiAward className="w-8 h-8 text-slate-700" />,
+    iconSrc: `${IMG}/Choosing-the-most-suitable-experts.png`,
     position: "bottom",
   },
   {
@@ -25,7 +27,7 @@ const steps: Step[] = [
     title: "Understanding your work",
     description:
       "Project managers then handpick the most suitable native English experts based on a subject area match",
-    icon: <FiBookOpen className="w-8 h-8 text-slate-700" />,
+    iconSrc: `${IMG}/Understanding-your-work.png`,
     position: "top",
   },
   {
@@ -33,7 +35,7 @@ const steps: Step[] = [
     title: "3 senior experts create a robust publication strategy for you",
     description:
       "A high-impact journal peer reviewer conducts a thorough technical review. Senior editors handle developmental and language edits. The managing editor ensures submission readiness.",
-    icon: <FiEdit3 className="w-8 h-8 text-slate-700" />,
+    iconSrc: `${IMG}/senior-experts-create-a-robust-publication-strategy-for-you.png`,
     position: "bottom",
   },
   {
@@ -42,7 +44,7 @@ const steps: Step[] = [
       "Unlimited review and rework based on your feedback for up to 365 days",
     description:
       "You review, suggest revisions, and resubmit. Request a discounted recheck by the same peer reviewer. Experts re-edit and reformat for free.",
-    icon: <FiMessageSquare className="w-8 h-8 text-slate-700" />,
+    iconSrc: `${IMG}/Unlimited-review-and-rework-based-on-your-feedback-for-up-to-365-days.png`,
     position: "top",
   },
 ];
@@ -96,7 +98,15 @@ export default function ScientificProcessWorkflow() {
                       : "bg-white text-slate-800 border-slate-200 shadow-sm hover:shadow-md"
                   }`}
                 >
-                  <div className="mb-4">{step.icon}</div>
+                  <div className="mb-4">
+                    <Image
+                      src={step.iconSrc}
+                      alt={step.title}
+                      width={32}
+                      height={32}
+                      className={`w-8 h-8 object-contain ${isActive ? "invert brightness-200" : ""}`}
+                    />
+                  </div>
                   <h4
                     className={`font-bold text-sm mb-2 ${isActive ? "text-white" : "text-slate-900"}`}
                   >

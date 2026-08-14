@@ -228,10 +228,10 @@ export default function TypesOfEditing() {
         <div className="lg:col-span-4 flex justify-center py-4 lg:py-0">
           <div className="relative w-full max-w-[340px] h-[420px] rounded-lg overflow-hidden shadow-md border border-slate-200">
             <Image
-              src="/images/scientific-editing/researcher-laptop.jpg"
+              src="/images/editing-and-translation/scientific-editing/Types-of-Scientific-Editing-We-Offer.png"
               alt="Researcher working on scientific editing laptop"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
         </div>

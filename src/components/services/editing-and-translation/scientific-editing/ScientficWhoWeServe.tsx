@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+const IMG = "/images/editing-and-translation/scientific-editing";
+
 interface AudienceCard {
   id: string;
   title: string;
@@ -15,7 +17,7 @@ const audiences: AudienceCard[] = [
   {
     id: "researchers",
     title: "Researchers & Academics",
-    imageSrc: "/images/who-we-serve/researchers.jpg",
+    imageSrc: `${IMG}/Researchers-Academics.png`,
     description: (
       <>
         Individual scholars, early-career researchers, and senior academics seeking to refine manuscripts, theses, or dissertations for{" "}
@@ -29,7 +31,7 @@ const audiences: AudienceCard[] = [
   {
     id: "pharma",
     title: "Pharmaceutical & Biotech Companies",
-    imageSrc: "/images/who-we-serve/pharma-biotech.jpg",
+    imageSrc: `${IMG}/Pharmaceutical-Biotech-Companies.png`,
     description: (
       <>
         Organizations involved in drug discovery, clinical trials, and product development that require clear, regulatory-compliant manuscripts, technical reports, and publications.
@@ -39,7 +41,7 @@ const audiences: AudienceCard[] = [
   {
     id: "medical",
     title: "Medical & Healthcare Professionals",
-    imageSrc: "/images/who-we-serve/healthcare.jpg",
+    imageSrc: `${IMG}/Medical-Healthcare-Professionals.png`,
     description: (
       <>
         Clinicians, surgeons, and healthcare practitioners aiming to publish clinical research, case studies, and{" "}
@@ -53,7 +55,7 @@ const audiences: AudienceCard[] = [
   {
     id: "universities",
     title: "Universities & Research Institutions",
-    imageSrc: "/images/who-we-serve/universities.jpg",
+    imageSrc: `${IMG}/Universities-Research-Institutions.png`,
     description: (
       <>
         Departments, research groups, and institutions strive to maintain publication excellence and enhance the global visibility of their scientific output.
@@ -63,7 +65,7 @@ const audiences: AudienceCard[] = [
   {
     id: "publishers",
     title: "Publishers & Journals",
-    imageSrc: "/images/who-we-serve/publishers.jpg",
+    imageSrc: `${IMG}/Publishers-Journals.png`,
     description: (
       <>
         Academic publishers and journal editorial teams need professional editing to ensure manuscripts meet editorial standards and formatting requirements.
@@ -73,7 +75,7 @@ const audiences: AudienceCard[] = [
   {
     id: "students",
     title: "Students & Doctoral Candidates",
-    imageSrc: "/images/who-we-serve/students.jpg",
+    imageSrc: `${IMG}/Students-Doctoral-Candidates.png`,
     description: (
       <>
         Master's and PhD candidates preparing theses, dissertations, or research papers to align with academic and institutional submission guidelines.

@@ -1,27 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import {
-  FiBook,
-  FiFileText,
-  FiLayers,
-  FiTv,
-  FiEdit,
-  FiSettings,
-  FiCheckSquare,
-  FiBookOpen,
-  FiCrosshair,
-  FiSearch,
-  FiGrid,
   FiArrowRightCircle,
-  FiChevronLeft,
-  FiChevronRight,
   FiPlus,
   FiMinus,
 } from "react-icons/fi";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+
+const IMG = "/images/editing-and-translation/scientific-editing";
 
 // ==========================================
 // 1. DATA DEFINITIONS
@@ -32,43 +20,59 @@ const sampleWorks = [
   {
     id: "dermatology",
     tabLabel: "Dermatology",
-    imageSrc: "/images/samples/sample-dermatology.png",
+    imageSrc: `${IMG}/Editing-and-Translation-Services-sample-work-2.jpg`,
     altText: "Scientific editing sample for Dermatology research manuscript",
   },
   {
     id: "neuroscience",
     tabLabel: "Neuroscience and Neurology",
-    imageSrc: "/images/samples/sample-neuroscience.png",
+    imageSrc: `${IMG}/Editing-and-Translation-Services-sample-work-1-.jpg`,
     altText: "Scientific editing sample for Neuroscience research manuscript",
   },
 ];
 
 // Top-Tier Journals Carousel
 const journalCovers = [
+  { id: "nature", title: "Nature", imageSrc: `${IMG}/1.jpg` },
+  { id: "cell", title: "Cell", imageSrc: `${IMG}/2.jpg` },
+  { id: "bmj", title: "BMJ", imageSrc: `${IMG}/Picture3.jpg` },
   {
-    id: "plos",
-    title: "PLOS Biology",
-    imageSrc: "/images/journals/plos-biology.jpg",
+    id: "protein-science",
+    title: "Protein Science",
+    imageSrc: `${IMG}/Picture4.jpg`,
   },
   {
-    id: "diabetes",
-    title: "Diabetes Care",
-    imageSrc: "/images/journals/diabetes-care.jpg",
+    id: "translational-medicine",
+    title: "Translational Medicine",
+    imageSrc: `${IMG}/Picture5.jpg`,
   },
   {
-    id: "healthcare",
-    title: "Health Care Science",
-    imageSrc: "/images/journals/healthcare-science.jpg",
+    id: "biomaterials-science",
+    title: "Biomaterials Science",
+    imageSrc: `${IMG}/Picture6.jpg`,
   },
-  { id: "science", title: "Science", imageSrc: "/images/journals/science.jpg" },
+  { id: "nejm", title: "NEJM", imageSrc: `${IMG}/Picture7.jpg` },
+  { id: "science", title: "Science", imageSrc: `${IMG}/Picture8.jpg` },
   {
-    id: "acs",
+    id: "nature-chemical-biology",
+    title: "Nature Chemical Biology",
+    imageSrc: `${IMG}/Picture9.jpg`,
+  },
+  {
+    id: "acs-chemical-biology",
     title: "ACS Chemical Biology",
-    imageSrc: "/images/journals/acs-chem-bio.jpg",
+    imageSrc: `${IMG}/Picture10.jpg`,
   },
-  { id: "nature", title: "Nature", imageSrc: "/images/journals/nature.jpg" },
-  { id: "cell", title: "Cell", imageSrc: "/images/journals/cell.jpg" },
-  { id: "bmj", title: "BMJ", imageSrc: "/images/journals/bmj.jpg" },
+  {
+    id: "acs-catalysis",
+    title: "ACS Catalysis",
+    imageSrc: `${IMG}/Picture11.jpg`,
+  },
+  {
+    id: "healthcare-science",
+    title: "Health Care Science",
+    imageSrc: `${IMG}/Picture12.jpg`,
+  },
 ];
 
 // Compliance Accordions
@@ -143,57 +147,57 @@ const documentTypes = [
   {
     id: "journal-manuscripts",
     title: "Journal manuscripts",
-    icon: <FiBook className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Journal-manuscripts.png`,
   },
   {
     id: "grants",
     title: "Grants/NIH, NSF, and private foundation grants/grant revisions",
-    icon: <FiFileText className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/GrantsNIH-NSF-and-private-foundation-grantsgrant-revisions.png`,
   },
   {
     id: "proposals",
     title: "Proposals",
-    icon: <FiLayers className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Proposals.png`,
   },
   {
     id: "ppt-slides",
     title: "PowerPoint slides",
-    icon: <FiTv className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/PowerPoint-slides.png`,
   },
   {
     id: "theses",
     title: "Theses",
-    icon: <FiEdit className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Theses.png`,
   },
   {
     id: "technical-docs",
     title: "Technical documents",
-    icon: <FiSettings className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Technical-documents.png`,
   },
   {
     id: "abstracts",
     title: "Abstracts",
-    icon: <FiCheckSquare className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Abstracts.png`,
   },
   {
     id: "book-chapters",
     title: "Book chapters",
-    icon: <FiBookOpen className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Book-chapters.png`,
   },
   {
     id: "medical-editing",
     title: "Medical editing",
-    icon: <FiCrosshair className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Medical-editing.png`,
   },
   {
     id: "medical-proofreading",
     title: "Medical manuscript proofreading",
-    icon: <FiSearch className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Medical-manuscript-proofreading.png`,
   },
   {
     id: "conference-posters",
     title: "Conference posters",
-    icon: <FiGrid className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Conference-posters.png`,
   },
 ];
 
@@ -201,7 +205,8 @@ const documentTypes = [
 const packages = [
   {
     id: "standard",
-    badgeLetter: "S",
+    badgeImage:
+      "/images/publication-support/responding-to-reviewers/standard-logo.png",
     name: "Standard",
     bgColor: "bg-slate-200/80 border-slate-300",
     headerBadgeBg: "bg-amber-100 text-amber-700 border-amber-300",
@@ -215,7 +220,7 @@ const packages = [
   },
   {
     id: "advanced",
-    badgeLetter: "A",
+    badgeImage: "/images/publication-support/journal-selection/advanced.webp",
     name: "Advanced",
     bgColor: "bg-purple-100/70 border-purple-200",
     headerBadgeBg: "bg-emerald-100 text-emerald-700 border-emerald-300",
@@ -230,7 +235,7 @@ const packages = [
   },
   {
     id: "premium",
-    badgeLetter: "P",
+    badgeImage: "/images/editing-and-translation/pro.webp",
     name: "Premium/Publication-Ready",
     bgColor: "bg-amber-100/60 border-amber-200",
     headerBadgeBg: "bg-sky-100 text-sky-700 border-sky-300",
@@ -253,57 +258,45 @@ interface Testimonial {
   author: string;
   field: string;
   country: string;
-  countryCode: string;
   journalImage: string;
+  journalAlt: string;
+  flagSrc: string;
 }
 
-const testimonials: Testimonial[][] = [
-  // Slide 1
-  [
-    {
-      id: "1",
-      quote:
-        "Pubrica's scientific editing service exceeded my expectations. From compliance with journal standards to meticulous proofreading, every aspect was handled professionally.",
-      author: "DR. MICHAEL TAN",
-      field: "Neuroscience",
-      country: "Singapore",
-      countryCode: "sg",
-      journalImage: "/images/testimonials/bmc-journal.jpg",
-    },
-    {
-      id: "2",
-      quote:
-        "The editors improved clarity and flow of my paper. Their understanding of scientific nuances is exceptional. My paper was accepted in a top-tier journal within weeks.",
-      author: "PROF. JAMES REYNOLDS",
-      field: "Biochemistry",
-      country: "USA",
-      countryCode: "us",
-      journalImage: "/images/testimonials/lancet-journal.jpg",
-    },
-  ],
-  // Slide 2
-  [
-    {
-      id: "3",
-      quote:
-        "The technical precision applied to our manuscript was impressive. References and figures aligned perfectly with our target publication's strict guidelines.",
-      author: "DR. ELENA ROSTOVA",
-      field: "Molecular Biology",
-      country: "Germany",
-      countryCode: "de",
-      journalImage: "/images/testimonials/nature-journal.jpg",
-    },
-    {
-      id: "4",
-      quote:
-        "Extremely thorough language and logic editing. Their support during the response-to-reviewers phase made a significant difference in final acceptance.",
-      author: "DR. AHMED AL-MANSOORI",
-      field: "Clinical Medicine",
-      country: "UAE",
-      countryCode: "ae",
-      journalImage: "/images/testimonials/cell-journal.jpg",
-    },
-  ],
+const testimonials: Testimonial[] = [
+  {
+    id: "1",
+    quote:
+      "Pubrica's scientific editing team transformed my manuscript. Their attention to detail and adherence to journal guidelines made the submission process seamless. I highly recommend their services to anyone aiming for high-impact publications.",
+    author: "DR. PRIYA MENON",
+    field: "Oncology Researcher",
+    country: "India",
+    journalImage: `${IMG}/testimonials-2.png`,
+    journalAlt: "Oncology scientific editing testimonial",
+    flagSrc: `${IMG}/flag.png`,
+  },
+  {
+    id: "2",
+    quote:
+      "Pubrica's scientific editing service exceeded my expectations. From compliance with journal standards to meticulous proofreading, every aspect was handled professionally.",
+    author: "DR. MICHAEL TAN",
+    field: "Neuroscience",
+    country: "Singapore",
+    journalImage: `${IMG}/testimonials-1.png`,
+    journalAlt: "Neuroscience scientific editing testimonial",
+    flagSrc: `${IMG}/singapore-.png`,
+  },
+  {
+    id: "3",
+    quote:
+      "The editors improved clarity and flow of my paper. Their understanding of scientific nuances is exceptional. My paper was accepted in a top-tier journal within weeks.",
+    author: "PROF. JAMES REYNOLDS",
+    field: "Biochemistry",
+    country: "USA",
+    journalImage: `${IMG}/testimonials-3.png`,
+    journalAlt: "Biochemistry scientific editing testimonial",
+    flagSrc: `${IMG}/usa-.png`,
+  },
 ];
 
 // FAQ Items Data
@@ -364,8 +357,8 @@ export default function ScientificPackageDetails() {
     "regulatory",
   ]);
 
-  // State 3: Testimonials Active Slide Index
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  // State 3: Testimonials carousel index
+  const [activeIndex, setActiveIndex] = useState<number>(0);
 
   // State 4: FAQ Accordion Active Item ID (null = none open, number = open ID)
   const [openFaq, setOpenFaq] = useState<number | null>(1);
@@ -382,6 +375,12 @@ export default function ScientificPackageDetails() {
 
   const activeSample =
     sampleWorks.find((s) => s.id === activeTab) || sampleWorks[0];
+
+  const mobileItem = testimonials[activeIndex];
+  const desktopItems = [
+    testimonials[activeIndex],
+    testimonials[(activeIndex + 1) % testimonials.length],
+  ];
 
   return (
     <div className="w-full bg-white font-sans text-slate-800">
@@ -566,7 +565,13 @@ export default function ScientificPackageDetails() {
               className="bg-white border border-slate-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col items-center justify-center text-center group cursor-pointer"
             >
               <div className="mb-4 transform group-hover:scale-110 transition-transform duration-200">
-                {doc.icon}
+                <Image
+                  src={doc.iconSrc}
+                  alt={doc.title}
+                  width={28}
+                  height={28}
+                  className="object-contain"
+                />
               </div>
               <p className="text-xs sm:text-sm font-semibold text-slate-700 group-hover:text-[#0c373b] transition-colors leading-snug">
                 {doc.title}
@@ -603,9 +608,15 @@ export default function ScientificPackageDetails() {
               <div>
                 <div className="bg-white rounded-md p-3 mb-6 shadow-xs flex items-center space-x-3 border border-slate-200">
                   <div
-                    className={`w-9 h-9 rounded-full font-extrabold flex items-center justify-center text-lg border ${pkg.headerBadgeBg}`}
+                    className={`w-9 h-9 rounded-full font-extrabold flex items-center justify-center text-lg border overflow-hidden relative ${pkg.headerBadgeBg}`}
                   >
-                    {pkg.badgeLetter}
+                    <Image
+                      src={pkg.badgeImage}
+                      alt={`${pkg.name} package`}
+                      width={36}
+                      height={36}
+                      className="object-contain"
+                    />
                   </div>
                   <h3 className="font-bold text-base sm:text-lg text-slate-900">
                     {pkg.name}
@@ -676,61 +687,26 @@ export default function ScientificPackageDetails() {
         </div>
 
         {/* Testimonials Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          {testimonials[currentSlide].map((item) => (
-            <div
-              key={item.id}
-              className="bg-white border border-slate-300 rounded-lg p-5 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow"
-            >
-              {/* Inner Gray Quote Box */}
-              <div className="bg-slate-200/80 rounded-md p-4 sm:p-5 flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
-                <div className="relative w-28 h-24 shrink-0 border border-slate-300 rounded bg-white overflow-hidden shadow-xs">
-                  <Image
-                    src={item.journalImage}
-                    alt="Journal sample"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <p className="text-xs sm:text-sm text-slate-800 italic leading-relaxed text-center sm:text-left">
-                  "{item.quote}"
-                </p>
-              </div>
-
-              {/* Author Info Footer */}
-              <div className="flex items-center justify-between px-1">
-                <div>
-                  <h4 className="font-bold text-xs sm:text-sm text-slate-900 tracking-wide">
-                    — {item.author}
-                  </h4>
-                  <p className="text-[11px] sm:text-xs text-slate-500 italic">
-                    {item.field}, {item.country}
-                  </p>
-                </div>
-
-                {/* Country Flag Badge */}
-                <div className="w-6 h-6 rounded-full overflow-hidden border border-slate-200 shadow-xs flex items-center justify-center shrink-0">
-                  <img
-                    src={`https://flagcdn.com/w40/${item.countryCode}.png`}
-                    alt={item.country}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
+        <div className="grid grid-cols-1 gap-6 mb-8 md:hidden">
+          <TestimonialCard item={mobileItem} />
+        </div>
+        <div className="hidden md:grid grid-cols-2 gap-6 mb-8">
+          {desktopItems.map((item) => (
+            <TestimonialCard key={`${activeIndex}-${item.id}`} item={item} />
           ))}
         </div>
 
         {/* Carousel Slide Indicators */}
         <div className="flex justify-center items-center space-x-2">
-          {testimonials.map((_, idx) => (
+          {testimonials.map((item, idx) => (
             <button
-              key={idx}
-              onClick={() => setCurrentSlide(idx)}
+              key={item.id}
+              type="button"
+              onClick={() => setActiveIndex(idx)}
               className={`w-3 h-3 transition-all duration-200 border border-[#0c373b] ${
-                currentSlide === idx ? "bg-[#0c373b]" : "bg-white"
+                activeIndex === idx ? "bg-[#0c373b]" : "bg-white"
               }`}
-              aria-label={`Go to slide ${idx + 1}`}
+              aria-label={`Show testimonial ${idx + 1}`}
             />
           ))}
         </div>
@@ -805,6 +781,47 @@ export default function ScientificPackageDetails() {
           animation: fadeIn 0.2s ease-out forwards;
         }
       `}</style>
+    </div>
+  );
+}
+
+function TestimonialCard({ item }: { item: Testimonial }) {
+  return (
+    <div className="bg-white border border-slate-300 rounded-lg p-5 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
+      <div className="bg-slate-200/80 rounded-md p-4 sm:p-5 flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
+        <div className="relative w-28 h-24 shrink-0 border border-slate-300 rounded bg-white overflow-hidden shadow-xs">
+          <Image
+            src={item.journalImage}
+            alt={item.journalAlt}
+            fill
+            className="object-cover"
+          />
+        </div>
+        <p className="text-xs sm:text-sm text-slate-800 italic leading-relaxed text-center sm:text-left">
+          &quot;{item.quote}&quot;
+        </p>
+      </div>
+
+      <div className="flex items-center justify-between px-1">
+        <div>
+          <h4 className="font-bold text-xs sm:text-sm text-slate-900 tracking-wide">
+            — {item.author}
+          </h4>
+          <p className="text-[11px] sm:text-xs text-slate-500 italic">
+            {item.field}, {item.country}
+          </p>
+        </div>
+
+        <div className="w-6 h-6 rounded-full overflow-hidden border border-slate-200 shadow-xs flex items-center justify-center shrink-0 relative">
+          <Image
+            src={item.flagSrc}
+            alt={item.country}
+            width={24}
+            height={24}
+            className="object-cover w-full h-full"
+          />
+        </div>
+      </div>
     </div>
   );
 }

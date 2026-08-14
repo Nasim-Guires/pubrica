@@ -3,14 +3,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  FiDatabase,
-  FiSliders,
-  FiFileText,
-  FiBarChart2,
-  FiShield,
-} from "react-icons/fi";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+
+const IMG = "/images/editing-and-translation/scientific-editing";
 
 // --- Types ---
 interface StatItem {
@@ -220,7 +215,7 @@ export default function ScientificEditingPage() {
               {/* Main Image */}
               <div className="relative w-full h-full rounded-xl overflow-hidden shadow-xl border-2 border-white">
                 <Image
-                  src="/images/scientific-editing/microscope-research.jpg"
+                  src={`${IMG}/Scientific-Editing.webp`}
                   alt="Scientific Editing Microscope Analysis"
                   fill
                   className="object-cover"
@@ -276,7 +271,13 @@ export default function ScientificEditingPage() {
             <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
               <div className="flex items-start space-x-4">
                 <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300">
-                  <FiDatabase className="w-6 h-6" />
+                  <Image
+                    src={`${IMG}/Advanced-Data-Management.png`}
+                    alt="Advanced Data Management"
+                    width={24}
+                    height={24}
+                    className="object-contain"
+                  />
                 </div>
                 <div className="pr-2">
                   <h3 className="font-bold text-sm text-slate-900 mb-2">
@@ -295,7 +296,13 @@ export default function ScientificEditingPage() {
             <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
               <div className="flex items-start space-x-4">
                 <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300">
-                  <FiSliders className="w-6 h-6" />
+                  <Image
+                    src={`${IMG}/Customized-Editing-Strategies.png`}
+                    alt="Customized Editing Strategies"
+                    width={24}
+                    height={24}
+                    className="object-contain"
+                  />
                 </div>
                 <div className="pr-2">
                   <h3 className="font-bold text-sm text-slate-900 mb-2">
@@ -314,7 +321,13 @@ export default function ScientificEditingPage() {
             <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
               <div className="flex items-start space-x-4">
                 <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300">
-                  <FiFileText className="w-6 h-6" />
+                  <Image
+                    src={`${IMG}/In-depth-Scientific-Assessment.png`}
+                    alt="In-depth Scientific Assessment"
+                    width={24}
+                    height={24}
+                    className="object-contain"
+                  />
                 </div>
                 <div className="pr-2">
                   <h3 className="font-bold text-sm text-slate-900 mb-2">
@@ -337,7 +350,13 @@ export default function ScientificEditingPage() {
             <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
               <div className="flex items-start space-x-4">
                 <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300">
-                  <FiBarChart2 className="w-6 h-6" />
+                  <Image
+                    src={`${IMG}/Comprehensive-Statistical-Analysis.png`}
+                    alt="Comprehensive Statistical Analysis"
+                    width={24}
+                    height={24}
+                    className="object-contain"
+                  />
                 </div>
                 <div className="pr-2">
                   <h3 className="font-bold text-sm text-slate-900 mb-2">
@@ -356,7 +375,13 @@ export default function ScientificEditingPage() {
             <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group md:col-span-2 lg:col-span-1">
               <div className="flex items-start space-x-4">
                 <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300">
-                  <FiShield className="w-6 h-6" />
+                  <Image
+                    src={`${IMG}/Publication-Support.png`}
+                    alt="Publication Support"
+                    width={24}
+                    height={24}
+                    className="object-contain"
+                  />
                 </div>
                 <div className="pr-2">
                   <h3 className="font-bold text-sm text-slate-900 mb-2">

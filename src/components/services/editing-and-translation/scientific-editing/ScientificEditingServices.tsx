@@ -1,22 +1,11 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
-import {
-  FiBook,
-  FiFileText,
-  FiLayers,
-  FiTv,
-  FiEdit,
-  FiSettings,
-  FiCheckSquare,
-  FiBookOpen,
-  FiCrosshair,
-  FiSearch,
-  FiGrid,
-  FiArrowRightCircle,
-} from "react-icons/fi";
+import Image from "next/image";
+import { FiArrowRightCircle } from "react-icons/fi";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+
+const IMG = "/images/editing-and-translation/scientific-editing";
 
 // ==========================================
 // DATA DEFINITIONS
@@ -26,71 +15,71 @@ import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 interface DocumentType {
   id: string;
   title: string;
-  icon: React.ReactNode;
+  iconSrc: string;
 }
 
 const documentTypes: DocumentType[] = [
   {
     id: "journal-manuscripts",
     title: "Journal manuscripts",
-    icon: <FiBook className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Journal-manuscripts.png`,
   },
   {
     id: "grants",
     title: "Grants/NIH, NSF, and private foundation grants/grant revisions",
-    icon: <FiFileText className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/GrantsNIH-NSF-and-private-foundation-grantsgrant-revisions.png`,
   },
   {
     id: "proposals",
     title: "Proposals",
-    icon: <FiLayers className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Proposals.png`,
   },
   {
     id: "ppt-slides",
     title: "PowerPoint slides",
-    icon: <FiTv className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/PowerPoint-slides.png`,
   },
   {
     id: "theses",
     title: "Theses",
-    icon: <FiEdit className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Theses.png`,
   },
   {
     id: "technical-docs",
     title: "Technical documents",
-    icon: <FiSettings className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Technical-documents.png`,
   },
   {
     id: "abstracts",
     title: "Abstracts",
-    icon: <FiCheckSquare className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Abstracts.png`,
   },
   {
     id: "book-chapters",
     title: "Book chapters",
-    icon: <FiBookOpen className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Book-chapters.png`,
   },
   {
     id: "medical-editing",
     title: "Medical editing",
-    icon: <FiCrosshair className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Medical-editing.png`,
   },
   {
     id: "medical-proofreading",
     title: "Medical manuscript proofreading",
-    icon: <FiSearch className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Medical-manuscript-proofreading.png`,
   },
   {
     id: "conference-posters",
     title: "Conference posters",
-    icon: <FiGrid className="w-7 h-7 text-indigo-900" />,
+    iconSrc: `${IMG}/Conference-posters.png`,
   },
 ];
 
 // 2. Packages Pricing Tiers
 interface PricingPackage {
   id: string;
-  badgeLetter: string;
+  badgeImage: string;
   name: string;
   bgColor: string;
   headerBadgeBg: string;
@@ -102,7 +91,8 @@ interface PricingPackage {
 const packages: PricingPackage[] = [
   {
     id: "standard",
-    badgeLetter: "S",
+    badgeImage:
+      "/images/publication-support/responding-to-reviewers/standard-logo.png",
     name: "Standard",
     bgColor: "bg-slate-200/80 border-slate-300",
     headerBadgeBg: "bg-amber-100 text-amber-700 border-amber-300",
@@ -116,7 +106,7 @@ const packages: PricingPackage[] = [
   },
   {
     id: "advanced",
-    badgeLetter: "A",
+    badgeImage: "/images/publication-support/journal-selection/advanced.webp",
     name: "Advanced",
     bgColor: "bg-purple-100/70 border-purple-200",
     headerBadgeBg: "bg-emerald-100 text-emerald-700 border-emerald-300",
@@ -131,7 +121,7 @@ const packages: PricingPackage[] = [
   },
   {
     id: "premium",
-    badgeLetter: "P",
+    badgeImage: "/images/editing-and-translation/pro.webp",
     name: "Premium/Publication-Ready",
     bgColor: "bg-amber-100/60 border-amber-200",
     headerBadgeBg: "bg-sky-100 text-sky-700 border-sky-300",
@@ -169,7 +159,13 @@ export default function ScientificEditingServices() {
               className="bg-white border border-slate-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col items-center justify-center text-center group cursor-pointer"
             >
               <div className="mb-4 transform group-hover:scale-110 transition-transform duration-200">
-                {doc.icon}
+                <Image
+                  src={doc.iconSrc}
+                  alt={doc.title}
+                  width={28}
+                  height={28}
+                  className="object-contain"
+                />
               </div>
               <p className="text-xs sm:text-sm font-semibold text-slate-700 group-hover:text-[#0c373b] transition-colors leading-snug">
                 {doc.title}
@@ -207,9 +203,15 @@ export default function ScientificEditingServices() {
                 {/* Header Badge & Title */}
                 <div className="bg-white rounded-md p-3 mb-6 shadow-xs flex items-center space-x-3 border border-slate-200">
                   <div
-                    className={`w-9 h-9 rounded-full font-extrabold flex items-center justify-center text-lg border ${pkg.headerBadgeBg}`}
+                    className={`w-9 h-9 rounded-full font-extrabold flex items-center justify-center text-lg border overflow-hidden relative ${pkg.headerBadgeBg}`}
                   >
-                    {pkg.badgeLetter}
+                    <Image
+                      src={pkg.badgeImage}
+                      alt={`${pkg.name} package`}
+                      width={36}
+                      height={36}
+                      className="object-contain"
+                    />
                   </div>
                   <h3 className="font-bold text-base sm:text-lg text-slate-900">
                     {pkg.name}

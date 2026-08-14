@@ -1,19 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import {
-  FiUsers,
-  FiFileText,
-  FiShield,
-  FiCheckCircle,
-  FiRefreshCw,
-  FiSend,
-} from "react-icons/fi";
+
+const IMG = "/images/editing-and-translation/scientific-editing";
+
 interface FeatureCard {
   id: string;
   title: string;
-  icon: React.ReactNode;
+  iconSrc: string;
   content: React.ReactNode;
 }
 
@@ -21,7 +17,7 @@ const featuresData: FeatureCard[] = [
   {
     id: "editor-system",
     title: "3 Editor System",
-    icon: <FiUsers className="w-6 h-6 text-[#0c373b]" />,
+    iconSrc: `${IMG}/Editor-System.png`,
     content: (
       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
         One scientific editor and two native English-speaking editors will edit
@@ -32,7 +28,7 @@ const featuresData: FeatureCard[] = [
   {
     id: "scientific-report",
     title: "Top Impact Scientific Report",
-    icon: <FiFileText className="w-6 h-6 text-[#0c373b]" />,
+    iconSrc: `${IMG}/Top-Impact-Scientific-Report.png`,
     content: (
       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
         A simulated peer review to pre-empt journal reviewer criticisms and fix
@@ -43,7 +39,7 @@ const featuresData: FeatureCard[] = [
   {
     id: "plagiarism-check",
     title: "Plagiarism Check",
-    icon: <FiShield className="w-6 h-6 text-[#0c373b]" />,
+    iconSrc: `${IMG}/Plagiarism-Check.png`,
     content: (
       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
         Powered by iThenticate, it provides a detailed report to help you
@@ -61,7 +57,7 @@ const featuresData: FeatureCard[] = [
   {
     id: "qa-check",
     title: "Quality Assurance Check",
-    icon: <FiCheckCircle className="w-6 h-6 text-[#0c373b]" />,
+    iconSrc: `${IMG}/Quality-Assurance-Check.png`,
     content: (
       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
         Additional review by another expert from high-impact-factor journals for
@@ -72,7 +68,7 @@ const featuresData: FeatureCard[] = [
   {
     id: "revision-support",
     title: "Journal Revision Support",
-    icon: <FiRefreshCw className="w-6 h-6 text-[#0c373b]" />,
+    iconSrc: `${IMG}/Journal-Revision-Support.png`,
     content: (
       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
         Get unlimited revision support during journal peer review up to 365 days
@@ -83,7 +79,7 @@ const featuresData: FeatureCard[] = [
   {
     id: "submission-support",
     title: "Submission-ready Support",
-    icon: <FiSend className="w-6 h-6 text-[#0c373b]" />,
+    iconSrc: `${IMG}/Submission-ready-Support.png`,
     content: (
       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
         <Link
@@ -138,7 +134,13 @@ export default function ScientificKeyFeatures() {
               >
                 <div className="flex items-center space-x-3">
                   <div className="p-1.5 bg-emerald-100/60 rounded-md">
-                    {feature.icon}
+                    <Image
+                      src={feature.iconSrc}
+                      alt={feature.title}
+                      width={24}
+                      height={24}
+                      className="object-contain"
+                    />
                   </div>
                   <h3 className="text-sm sm:text-base font-bold text-[#0c373b]">
                     {feature.title}

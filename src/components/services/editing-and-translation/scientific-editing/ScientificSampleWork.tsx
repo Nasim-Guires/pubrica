@@ -15,17 +15,19 @@ interface SampleWork {
   altText: string;
 }
 
+const IMG = "/images/editing-and-translation/scientific-editing";
+
 const sampleWorks: SampleWork[] = [
   {
     id: "dermatology",
     tabLabel: "Dermatology",
-    imageSrc: "/images/samples/sample-dermatology.png", // Replace with your image path
+    imageSrc: `${IMG}/Editing-and-Translation-Services-sample-work-2.jpg`,
     altText: "Scientific editing sample for Dermatology research manuscript",
   },
   {
     id: "neuroscience",
     tabLabel: "Neuroscience and Neurology",
-    imageSrc: "/images/samples/sample-neuroscience.png", // Replace with your image path
+    imageSrc: `${IMG}/Editing-and-Translation-Services-sample-work-1-.jpg`,
     altText: "Scientific editing sample for Neuroscience and Neurology research manuscript",
   },
 ];
@@ -38,14 +40,18 @@ interface Journal {
 }
 
 const journalCovers: Journal[] = [
-  { id: "plos", title: "PLOS Biology", imageSrc: "/images/journals/plos-biology.jpg" },
-  { id: "diabetes", title: "Diabetes Care", imageSrc: "/images/journals/diabetes-care.jpg" },
-  { id: "healthcare", title: "Health Care Science", imageSrc: "/images/journals/healthcare-science.jpg" },
-  { id: "science", title: "Science", imageSrc: "/images/journals/science.jpg" },
-  { id: "acs", title: "ACS Chemical Biology", imageSrc: "/images/journals/acs-chem-bio.jpg" },
-  { id: "nature", title: "Nature", imageSrc: "/images/journals/nature.jpg" },
-  { id: "cell", title: "Cell", imageSrc: "/images/journals/cell.jpg" },
-  { id: "bmj", title: "BMJ", imageSrc: "/images/journals/bmj.jpg" },
+  { id: "nature", title: "Nature", imageSrc: `${IMG}/1.jpg` },
+  { id: "cell", title: "Cell", imageSrc: `${IMG}/2.jpg` },
+  { id: "bmj", title: "BMJ", imageSrc: `${IMG}/Picture3.jpg` },
+  { id: "protein-science", title: "Protein Science", imageSrc: `${IMG}/Picture4.jpg` },
+  { id: "translational-medicine", title: "Translational Medicine", imageSrc: `${IMG}/Picture5.jpg` },
+  { id: "biomaterials-science", title: "Biomaterials Science", imageSrc: `${IMG}/Picture6.jpg` },
+  { id: "nejm", title: "NEJM", imageSrc: `${IMG}/Picture7.jpg` },
+  { id: "science", title: "Science", imageSrc: `${IMG}/Picture8.jpg` },
+  { id: "nature-chemical-biology", title: "Nature Chemical Biology", imageSrc: `${IMG}/Picture9.jpg` },
+  { id: "acs-chemical-biology", title: "ACS Chemical Biology", imageSrc: `${IMG}/Picture10.jpg` },
+  { id: "acs-catalysis", title: "ACS Catalysis", imageSrc: `${IMG}/Picture11.jpg` },
+  { id: "healthcare-science", title: "Health Care Science", imageSrc: `${IMG}/Picture12.jpg` },
 ];
 
 // 3. Accordion Standards Data
