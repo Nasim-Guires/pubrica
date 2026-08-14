@@ -432,7 +432,15 @@ const Page = () => {
               key={index}
               className="bg-white border border-slate-100 shadow-sm rounded-2xl p-6 hover:shadow-md transition"
             >
-              <div className="text-4xl mb-4">{service.icon}</div>
+              <div className="relative w-12 h-12 mb-4">
+                <Image
+                  src={service.icon}
+                  alt={service.title}
+                  fill
+                  sizes="48px"
+                  className="object-contain"
+                />
+              </div>
               <h3 className="text-xl font-bold text-teal-800 mb-2">
                 {service.title}
               </h3>
@@ -637,123 +645,24 @@ const Page = () => {
             impact for academic, clinical, and professional research.
           </p>
 
-          {/* Shadowed Manuscript Showcase Frame */}
-          <div className="border border-slate-300 rounded-sm bg-white shadow-xl max-w-5xl mx-auto overflow-hidden">
-            {/* Top Banner Tab Header */}
-            <div className="bg-[#D9DEE0] text-center py-3 border-b border-slate-300">
-              <h3 className="text-sm md:text-base font-bold text-[#0A4D5C]">
-                Check out Our Editing and Translation Services Sample Work
-              </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <div className="relative w-full aspect-[1379/776] overflow-hidden rounded-sm border border-slate-200 shadow-xl">
+              <Image
+                src="/images/editing-and-translation/Editing-and-Translation-Services.png"
+                alt="Editing and Translation Services sample work"
+                fill
+                sizes="(max-width: 768px) 100vw, 640px"
+                className="object-contain"
+              />
             </div>
-
-            {/* Manuscript Compare Grid View Container */}
-            <div className="p-6 md:p-10 relative bg-white">
-              {/* Watermark Element */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-[0.04] pointer-events-none select-none z-0">
-                <span className="text-6xl md:text-9xl font-black tracking-widest uppercase rotate-[330deg]">
-                  SAMPLE
-                </span>
-              </div>
-
-              {/* Showcase Core Content */}
-              <div className="relative z-10">
-                {/* Branding Header Area */}
-                <div className="flex justify-between items-start mb-6">
-                  <div className="w-6 h-6 bg-[#1F2431] rounded-sm flex items-center justify-center">
-                    <span className="text-[10px] text-white font-bold">🧠</span>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-[#0A4D5C] font-black tracking-wider text-xl leading-none">
-                      PUBRICA
-                    </div>
-                    <span className="text-[8px] tracking-widest text-slate-500 block uppercase font-semibold">
-                      Knowledge Works
-                    </span>
-                  </div>
-                </div>
-
-                {/* Two Column Comparative Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-justify">
-                  {/* Left Side: English Original */}
-                  <div>
-                    <h4 className="text-base md:text-lg font-bold text-slate-800 mb-3">
-                      Original Manuscript(English)
-                    </h4>
-                    <div className="text-slate-700 text-[11px] md:text-xs leading-relaxed space-y-3 font-normal">
-                      <p>
-                        The ability of non-invasive radiofrequency treatments to
-                        treat several dermatological issues at once is one of
-                        its main benefits. Radiofrequency technology provides
-                        customizable treatment choices that may be personalized
-                        to match the individual needs and preferences of each
-                        patient, whether it is being utilized for scar
-                        correction, skin tightening, or wrinkle reduction.
-                        Non-invasive radiofrequency techniques also involve less
-                        discomfort and recovery time, which makes them
-                        appropriate for those with hectic schedules who cannot
-                        afford lengthy recuperation times.
-                      </p>
-                      <p>
-                        There are several varieties of non-invasive
-                        radiofrequency devices on the market, and they all work
-                        in different ways to rejuvenate skin. Using a single
-                        electrode, monopolar radiofrequency devices penetrate
-                        the skin deeply to produce heat energy that tightens
-                        loose skin and promotes the formation of collagen.
-                        Contrarily, bipolar radiofrequency devices target fine
-                        lines and wrinkles by delivering energy to a superficial
-                        depth through the use of two electrodes positioned near
-                        to one another.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Right Side: Spanish Translated */}
-                  <div className="border-t md:border-t-0 md:border-l border-slate-100 pt-6 md:pt-0 md:pl-8">
-                    <h4 className="text-base md:text-lg font-bold text-green-600 mb-3">
-                      Translated Manuscript(Spanish)
-                    </h4>
-                    <div className="text-slate-700 text-[11px] md:text-xs leading-relaxed space-y-3 font-normal">
-                      <p>
-                        La capacidad de los tratamientos de radiofrecuencia no
-                        invasivos para tratar varios problemas dermatológicos a
-                        la vez es uno de sus principales beneficios. La
-                        tecnología de radiofrecuencia ofrece opciones de
-                        tratamiento personalizables que pueden personalizarse
-                        para satisfacer las necesidades y preferencias
-                        individuales de cada paciente, ya sea que se utilice
-                        para corregir cicatrices, tensar la piel o reducir las
-                        arrugas. Las técnicas de radiofrecuencia no invasiva
-                        también implican menos molestias y tiempo de
-                        recuperación, lo que las hace apropiadas para quienes
-                        tienen agendas agitadas y no pueden permitirse tiempos
-                        de recuperación prolongados.
-                      </p>
-                      <p>
-                        Existen varias variedades de dispositivos de
-                        radiofrecuencia no invasivos en el mercado y todos
-                        funcionan de destas matras para rejer Udicado a la
-                        destrado dispositivos de radiofrecuencia monopolar
-                        penetran profundamente en la piel para producir energía
-                        térmica que tensa la piel flácida y promueve la
-                        formación de colágeno. Por el contrario, los
-                        dispositivos de radiofrecuencia bipolar atacan las
-                        líneas finas y las arrugas entregando energía a una
-                        profundidad superficial mediante el uso de dos
-                        electrodos colocados uno cerca del otro.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Document Disclaimer / Footer Line */}
-                <div className="mt-12 pt-4 border-t border-slate-100 text-center">
-                  <p className="text-[10px] text-slate-400">
-                    Copyright &copy; 2026 pubrica. No part of this document may
-                    be published without permission of the author
-                  </p>
-                </div>
-              </div>
+            <div className="relative w-full aspect-[723/1024] overflow-hidden rounded-sm border border-slate-200 shadow-xl mx-auto max-w-md">
+              <Image
+                src="/images/editing-and-translation/Editing-and-Translation-Services-Sample-Work.png"
+                alt="Editing and Translation Services Sample Work"
+                fill
+                sizes="(max-width: 768px) 100vw, 480px"
+                className="object-contain"
+              />
             </div>
           </div>
         </section>
@@ -789,11 +698,13 @@ const Page = () => {
               <div>
                 {/* Header White Card Area */}
                 <div className="bg-white rounded-sm p-4 mb-6 flex items-center gap-4 border border-slate-100 shadow-sm">
-                  <div
-                    className={`w-14 h-14 rounded-full bg-[#EBF3F5] ${pkg.badgeTextColor} font-serif font-semibold text-3xl flex items-center justify-center border-2 border-dashed border-slate-300 shadow-inner select-none`}
-                  >
-                    {pkg.badge}
-                  </div>
+                  <Image
+                    src={pkg.badgeIcon}
+                    alt={`${pkg.name} package`}
+                    width={56}
+                    height={56}
+                    className="w-14 h-14 object-contain shrink-0"
+                  />
                   <div>
                     <h3 className="text-xl font-bold text-slate-800 leading-tight">
                       {pkg.name}
@@ -887,16 +798,14 @@ const Page = () => {
                 {/* Gray Inner Bubble Box */}
                 <div className="bg-[#D9D9D9]/50 rounded-xl p-5 flex flex-col sm:flex-row gap-5 items-start flex-grow">
                   {/* Visual Journal Cover Mockup Thumbnail */}
-                  <div
-                    className={`w-32 h-24 rounded border border-slate-200 shadow-sm flex flex-col justify-between p-2 text-white shrink-0 ${item.bgAccent} select-none`}
-                  >
-                    <span className="text-[7px] tracking-widest uppercase font-semibold opacity-70">
-                      Pubrica Indexed
-                    </span>
-                    <span className="text-[10px] font-black leading-tight tracking-tight mt-1">
-                      {item.journalTitle}
-                    </span>
-                    <div className="w-full h-[3px] bg-white/30 rounded-full mt-auto" />
+                  <div className="relative w-32 h-24 rounded border border-slate-200 shadow-sm overflow-hidden bg-white shrink-0">
+                    <Image
+                      src={item.image}
+                      alt={item.journalTitle}
+                      fill
+                      sizes="128px"
+                      className="object-contain"
+                    />
                   </div>
 
                   {/* Quote Text */}

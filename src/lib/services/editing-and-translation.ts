@@ -18,7 +18,7 @@ export const insightsData: InsightCard[] = [
     description:
       "Medical journals expect a structure for case reports and review articles, with clear objectives...",
     imageUrl:
-      "https://images.unsplash.com/photo-1584515933487-78021ea4a8d5?auto=format&fit=crop&q=80&w=500", // Doctor with clipboard
+      "/images/editing-and-translation/How-to-Structure-Case-Reports-and-Review-Articles-for-Medical-Journals.jpg",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const insightsData: InsightCard[] = [
     description:
       "Publishing a case report involves more than clinical knowledge; it also demands strategic journal ...",
     imageUrl:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=500", // Physician studying document
+      "/images/editing-and-translation/How-Should-Physicians-Choose-the-Right-Journal-for-Submitting-a-Case-Report.jpg",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ export const insightsData: InsightCard[] = [
     description:
       "Effective patient education materials (PEMs) are crucial for promoting health literacy, enhancing...",
     imageUrl:
-      "https://images.unsplash.com/photo-1530026405186-ed1ea0ac7a63?auto=format&fit=crop&q=80&w=500", // Healthcare consultation
+      "/images/editing-and-translation/How-Physicians-Can-Write-Clear-and-Impactful-Patient-Education-Materials.jpg",
   },
 ];
 
@@ -185,91 +185,91 @@ export const editingTypesList = [
   {
     id: "proofreading",
     title: "Proofreading",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/editing-and-translation/Proofreading.png",
     description:
       "The final review stage focuses on catching surface errors such as misspellings, typographical mistakes, and basic grammar issues. Proofreading is the last step before submission or publication.",
   },
   {
     id: "substantive",
     title: "Substantive Editing",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/editing-and-translation/Substantive-Editing.png",
     description:
       "A deep editing process involving extensive revisions, including rewriting, reordering, and suggestions for additional content. It ensures the manuscript meets journal expectations and significantly enhances readability.",
   },
   {
     id: "line",
     title: "Line Editing",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/editing-and-translation/Line-Editing.png",
     description:
       "Concentrates on sentence- and paragraph-level clarity, enhancing tone, readability, and logical flow. It involves eliminating jargon, refining word choice, and smoothing language usage without a complete rewrite.",
   },
   {
     id: "copyediting",
     title: "Copyediting",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/editing-and-translation/Copyediting.png",
     description:
       "Ensures correctness, consistency, and accuracy in grammar, vocabulary, punctuation, and syntax. Copyediting also involves checking for style guide compliance (APA, AMA, Chicago, Vancouver, etc.) and maintaining uniform terminology.",
   },
   {
     id: "content",
     title: "Content Editing",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/editing-and-translation/Content-Editing.png",
     description:
       "Examines the accuracy, consistency, and relevance of content, ensuring the document fulfills its purpose. May include fact-checking, refining arguments, and restructuring for better readability and impact.",
   },
   {
     id: "technical",
     title: "Technical Editing",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/editing-and-translation/Technical-Editing.png",
     description:
       "Reviews documents for technical accuracy, completeness, and adherence to industry or scientific standards. Ensures terminology, data, and references meet field-specific requirements.",
   },
   {
     id: "manuscript",
     title: "Manuscript Editing",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/editing-and-translation/Manuscript-Editing.png",
     description:
       "Tailored for academic authors submitting to journals or book publishers, focusing on both language use and publisher guidelines. Helps improve acceptance chances in high-impact journals.",
   },
   {
     id: "structural",
     title: "Structural Editing",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/editing-and-translation/Structural-Editing.png",
     description:
       "Assesses and reshapes the document structure, ensuring that ideas are logically organized and presented in a coherent way. May involve reordering chapters, sections, or arguments for maximum impact.",
   },
   {
     id: "formatting",
     title: "Formatting & Style Editing",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/editing-and-translation/Formatting-Style-Editing.png",
     description:
       "Ensures journal-specific formatting (references, tables, figures, word limits) and style guide compliance (APA, AMA, Vancouver, MLA, Chicago).",
   },
   {
     id: "reviewer",
     title: "Reviewer Response Editing",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/editing-and-translation/Reviewer-Response-Editing.png",
     description:
       "Helps authors refine and polish responses to peer reviewer comments. Improves clarity, professionalism, and alignment with journal requirements.",
   },
   {
     id: "plagiarism",
     title: "Plagiarism Check & Ethical Editing",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/editing-and-translation/Plagiarism-Check-Ethical-Editing.png",
     description:
       "Provides plagiarism screening and ensures manuscripts meet ethical publishing standards by improving originality, paraphrasing, and citation accuracy.",
   },
   {
     id: "developmental",
     title: "Developmental Editing",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/editing-and-translation/Developmental-Editing.png",
     description:
       "Focuses on the structure and content of a document, helping authors develop their manuscript from initial concept to complete draft. This type of editing addresses big-picture aspects such as organization, coherence, research argument strength, and overall narrative flow.",
   },
   {
     id: "language",
     title: "Language Polishing (ESL Support)",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/editing-and-translation/Language-Polishing-ESL-Support.png",
     description:
       "Specialized service for non-native English authors, improving clarity, grammar, and flow while retaining author intent.",
   },
@@ -280,25 +280,25 @@ export const translationServicesList = [
     title: "Document & Website Translation",
     description:
       "Accurate translation of academic papers, business reports, policy documents, and websites, ensuring the message is preserved and resonates with the target audience.",
-    icon: "📄",
+    icon: "/images/editing-and-translation/Document-Website-Translation.png",
   },
   {
     title: "Translation with Editing (Bilingual Editing)",
     description:
       "A premium service where native translators and subject-matter editors collaborate to refine translated texts for linguistic accuracy, readability, and journal compliance. Ideal for researchers and academics preparing manuscripts for publication.",
-    icon: "🌐",
+    icon: "/images/editing-and-translation/Translation-with-Editing-Bilingual-Editing.png",
   },
   {
     title: "Technical & Scientific Translation",
     description:
       "Specialized translation of scientific, medical, and technical documents such as clinical reports, product manuals, patents, and regulatory submissions, with strict adherence to field-specific terminology and standards.",
-    icon: "🔬",
+    icon: "/images/editing-and-translation/Technical-Scientific-Translation.png",
   },
   {
     title: "Software Localization",
     description:
       "Adaptation of software, mobile applications, and digital platforms to ensure seamless functionality, cultural relevance, and user accessibility across global markets.",
-    icon: "💻",
+    icon: "/images/editing-and-translation/Software-Localization.png",
   },
 ];
 
@@ -308,42 +308,42 @@ export const workflowSteps = [
     title: "Project Consultation & Requirement Analysis",
     description:
       "We begin by understanding your project goals, target audience, document type, language preferences, and formatting needs.",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40", // Replace with local step icons
+    icon: "/images/publication-support/video-abstract/Send-Materials.png", // Replace with local step icons
   },
   {
     step: "2",
     title: "Content Assessment",
     description:
       "Our team reviews your materials to define the scope of work, evaluating language quality, structure, clarity, and technical terminology.",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/publication-support/video-abstract/Script-Content-Development.png",
   },
   {
     step: "3",
     title: "Expert Editing & Translation",
     description:
       "Your document is refined by subject-matter experts:\n• Editing → grammar, punctuation, style, readability, and journal compliance.\n• Translation → linguistic accuracy, cultural adaptation, and technical precision.",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/publication-support/video-abstract/Video-Development.png",
   },
   {
     step: "4",
     title: "Quality Assurance Review",
     description:
       "Every document undergoes multi-level checks by senior editors to ensure consistency, accuracy, and adherence to international standards.",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/publication-support/video-abstract/Author-Feedback.png",
   },
   {
     step: "5",
     title: "Client Feedback & Revisions",
     description:
       "You review the refined document. We incorporate your feedback and provide unlimited revisions until you are fully satisfied.",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/publication-support/video-abstract/Add-Captions-and-Subtitles.png",
   },
   {
     step: "6",
     title: "Final Delivery",
     description:
       "Your polished, publication-ready document is delivered in the preferred format, ready for submission, publication, or professional use.",
-    icon: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=40",
+    icon: "/images/publication-support/video-abstract/Author-Accepts-the-Video-and-Abstract.png",
   },
 ];
 
@@ -352,6 +352,7 @@ export const packagesList = [
     name: "Basic",
     tagline: "Language Clarity",
     badge: "B",
+    badgeIcon: "/images/editing-and-translation/basic-pacakge.png",
     // Match the exact muted greenish-gray tone
     cardBg: "bg-[#CAD6D5]",
     badgeTextColor: "text-[#B9A682]",
@@ -369,6 +370,7 @@ export const packagesList = [
     name: "Standard",
     tagline: "Enhanced Quality",
     badge: "S",
+    badgeIcon: "/images/publication-support/poster-preparation/S.png",
     // Match the exact soft lavender-purple shade
     cardBg: "bg-[#D5BEDC]",
     badgeTextColor: "text-[#B9A682]",
@@ -391,6 +393,7 @@ export const packagesList = [
     name: "Premium",
     tagline: "Publication Ready",
     badge: "P",
+    badgeIcon: "/images/editing-and-translation/pro.webp",
     // Match the exact golden ochre/tan background shade
     cardBg: "bg-[#CCA673]",
     badgeTextColor: "text-[#5597AC]",
@@ -465,31 +468,31 @@ export const mainServicesData = [
 export const trustPartners = [
   {
     name: "American Heart Association",
-    logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=120",
+    logo: "/images/editing-and-translation/logo12.png",
   },
   {
     name: "ASCO",
-    logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=120",
+    logo: "/images/editing-and-translation/logo11.png",
   },
   {
     name: "Rockefeller University Press",
-    logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=120",
+    logo: "/images/editing-and-translation/logo10.png",
   },
   {
     name: "Yonsei University",
-    logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=120",
+    logo: "/images/editing-and-translation/logo9.png",
   },
   {
     name: "Wolters Kluwer",
-    logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=120",
+    logo: "/images/editing-and-translation/logo8.png",
   },
   {
     name: "Obstetrics & Gynecology",
-    logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=120",
+    logo: "/images/editing-and-translation/logo7.png",
   },
   {
     name: "American Academy of Neurology",
-    logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=120",
+    logo: "/images/editing-and-translation/logo6.png",
   },
 ];
 
@@ -501,10 +504,8 @@ export const testimonialsData = [
     name: "DR. MARIA SCHNEIDER",
     role: "Academic Researcher, Germany",
     flag: "🇩🇪", // Or use an SVG/image if preferred
-    flagSrc:
-      "https://images.unsplash.com/photo-1527866512907-a35a62a7f6be?auto=format&fit=crop&q=80&w=40",
-    image:
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=200", // Replace with Asian Journal of Psychiatry thumb
+    flagSrc: "/images/editing-and-translation/germany-1-1.png",
+    image: "/images/editing-and-translation/asian-journal-of-psychiatry-1.png",
     bgAccent: "bg-[#0b1f3a]",
     journalTitle: "Asian Journal of Psychiatry",
   },
@@ -514,10 +515,8 @@ export const testimonialsData = [
     name: "DR. HIROSHI TANAKA",
     role: "Clinical Practitioner, Japan",
     flag: "🇯🇵",
-    flagSrc:
-      "https://images.unsplash.com/photo-1528164344705-47542687990d?auto=format&fit=crop&q=80&w=40",
-    image:
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=200", // Replace with JAMA Oncology thumb
+    flagSrc: "/images/editing-and-translation/japan.png",
+    image: "/images/editing-and-translation/jama-oncology-journal-5.png",
     bgAccent: "bg-[#1d4ed8]",
     journalTitle: "JAMA Oncology",
   },
@@ -527,10 +526,8 @@ export const testimonialsData = [
     name: "ANANYA RAO",
     role: "PhD Scholar, India",
     flag: "🇮🇳",
-    flagSrc:
-      "https://images.unsplash.com/photo-1532375810709-75b1da00537c?auto=format&fit=crop&q=80&w=40",
-    image:
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=200", // Replace with BJCP thumb
+    flagSrc: "/images/editing-and-translation/flag.png",
+    image: "/images/editing-and-translation/british-journal-of-clinical-pharmacology.png",
     bgAccent: "bg-[#047857]",
     journalTitle: "British Journal of Clinical Pharmacology",
   },
