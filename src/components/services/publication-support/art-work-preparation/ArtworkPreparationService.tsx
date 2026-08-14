@@ -118,7 +118,7 @@ export default function ArtworkPreparationService() {
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md h-72 sm:h-80 lg:h-96 rounded-xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" // Replace with exact graphic illustration asset
+                src="/images/publication-support/art-work-preparation/Artwork-Preparation.webp"
                 alt="Artwork Preparation Service Illustration"
                 fill
                 className="object-contain"

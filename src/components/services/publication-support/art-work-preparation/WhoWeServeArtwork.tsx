@@ -103,7 +103,7 @@ export default function WhoWeServeArtwork() {
           <div className="flex flex-col items-start lg:col-span-6">
             <div className="relative mb-6 h-[280px] sm:h-[350px] w-full overflow-hidden rounded-sm border border-gray-100 shadow-sm">
               <Image
-                src="/images/artwork-preparation.jpg"
+                src="/images/publication-support/art-work-preparation/Artwork-Preparation-Journal-Publishers-and-Editors.jpg"
                 alt="Who We Serve - Artwork Preparation"
                 fill
                 priority

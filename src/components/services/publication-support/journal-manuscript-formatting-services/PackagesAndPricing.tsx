@@ -15,7 +15,7 @@ export default function PackagesAndPricing() {
           {/* Left Image */}
           <div className="md:col-span-5 relative h-56 md:h-64 rounded-xl overflow-hidden shadow-sm">
             <Image
-              src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop"
+              src="/images/publication-support/journal-manuscript-formatting-services/Manuscript-Formatting-Sample-Work.jpg"
               alt="Manuscript Formatting Sample Work"
               fill
               className="object-cover"
@@ -86,9 +86,13 @@ export default function PackagesAndPricing() {
           <div className="bg-white rounded-t-xl overflow-hidden border border-gray-200/80 shadow-xs flex flex-col transition-all duration-300 hover:shadow-lg">
             {/* Header */}
             <div className="p-5 border-t-4 border-[#0c3830] border-b border-gray-100 flex items-center space-x-4 bg-white">
-              <div className="w-12 h-12 rounded-full bg-[#e2e8f0] flex items-center justify-center font-bold text-xl text-[#0c3830] shrink-0 border border-dashed border-gray-400">
-                S
-              </div>
+              <Image
+                src="/images/publication-support/poster-preparation/S.png"
+                alt="Standard package"
+                width={48}
+                height={48}
+                className="w-12 h-12 object-contain shrink-0"
+              />
               <div>
                 <h3 className="text-xl font-extrabold text-[#0c3830]">
                   Standard
@@ -161,9 +165,13 @@ export default function PackagesAndPricing() {
           <div className="bg-white rounded-t-xl overflow-hidden border border-gray-200/80 shadow-xs flex flex-col transition-all duration-300 hover:shadow-lg">
             {/* Header */}
             <div className="p-5 border-t-4 border-[#8b5cf6] border-b border-gray-100 flex items-center space-x-4 bg-white">
-              <div className="w-12 h-12 rounded-full bg-[#f3e8ff] flex items-center justify-center font-bold text-xl text-[#7c3aed] shrink-0 border border-dashed border-[#c084fc]">
-                A
-              </div>
+              <Image
+                src="/images/publication-support/journal-selection/advanced.webp"
+                alt="Advanced package"
+                width={48}
+                height={48}
+                className="w-12 h-12 object-contain shrink-0"
+              />
               <div>
                 <h3 className="text-xl font-extrabold text-[#6d28d9]">
                   ADVANCED
@@ -237,9 +245,13 @@ export default function PackagesAndPricing() {
           <div className="bg-white rounded-t-xl overflow-hidden border border-gray-200/80 shadow-xs flex flex-col transition-all duration-300 hover:shadow-lg">
             {/* Header */}
             <div className="p-5 border-t-4 border-[#b45309] border-b border-gray-100 flex items-center space-x-4 bg-white">
-              <div className="w-12 h-12 rounded-full bg-[#fef3c7] flex items-center justify-center font-bold text-xl text-[#d97706] shrink-0 border border-dashed border-[#f59e0b]">
-                P
-              </div>
+              <Image
+                src="/images/publication-support/responding-to-reviewers/pa-icons-.png"
+                alt="Premium package"
+                width={48}
+                height={48}
+                className="w-12 h-12 object-contain shrink-0"
+              />
               <div>
                 <h3 className="text-xl font-extrabold text-[#78350f]">
                   Premium
@@ -333,9 +345,13 @@ export default function PackagesAndPricing() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 bg-white rounded-md border border-gray-200 overflow-hidden shadow-2xs divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
           <div className="p-6 flex items-center justify-center space-x-3">
-            <div className="w-9 h-9 rounded-full bg-[#2563eb] text-white flex items-center justify-center font-bold text-lg shrink-0">
-              $
-            </div>
+            <Image
+              src="/images/publication-support/journal-manuscript-formatting-services/dollar-sign.png"
+              alt="Price"
+              width={36}
+              height={36}
+              className="w-9 h-9 object-contain shrink-0"
+            />
             <p className="text-sm md:text-base font-semibold text-gray-800">
               <span className="font-bold text-lg text-black">149</span> for full
               manuscript formatting
@@ -343,11 +359,13 @@ export default function PackagesAndPricing() {
           </div>
 
           <div className="p-6 flex items-center justify-center space-x-3">
-            <div className="w-9 h-9 rounded-md bg-[#2563eb] text-white flex items-center justify-center shrink-0">
-              <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z" />
-              </svg>
-            </div>
+            <Image
+              src="/images/publication-support/journal-manuscript-formatting-services/date.png"
+              alt="Turnaround"
+              width={36}
+              height={36}
+              className="w-9 h-9 object-contain shrink-0"
+            />
             <p className="text-sm md:text-base font-bold text-gray-800">
               3 days
             </p>

@@ -21,8 +21,8 @@ const tabData: ShowcaseTabContent[] = [
       "Professional illustrators produce high-quality vector images specifically for your research.",
       "You just send your hand-drawn sketches or reference images in the desired style. We will provide you with editable, journal-compliant illustrations for publication or presentation.",
     ],
-    beforeImage: "/images/showcase/creation-before.jpg",
-    afterImage: "/images/showcase/creation-after.jpg",
+    beforeImage: "/images/publication-support/art-work-preparation/Illustration-Creation-Images-Before.png",
+    afterImage: "/images/publication-support/art-work-preparation/Illustration-Creation-after.jpg",
   },
   {
     id: "enhancement",
@@ -30,8 +30,8 @@ const tabData: ShowcaseTabContent[] = [
     descriptions: [
       "Not satisfied with your existing figure? We refines and enhances your visuals to ensure they align with your vision and meet publication standards.",
     ],
-    beforeImage: "/images/showcase/enhancement-before.jpg",
-    afterImage: "/images/showcase/enhancement-after.jpg",
+    beforeImage: "/images/publication-support/art-work-preparation/Eye-min.jpg",
+    afterImage: "/images/publication-support/art-work-preparation/Artwork-Enhancement-after.jpg",
   },
   {
     id: "formatting",
@@ -39,8 +39,8 @@ const tabData: ShowcaseTabContent[] = [
     descriptions: [
       "We makes precise adjustments to your figures based on the target journal's submission guidelines and ensure every visual is technically compliant and ready for submission.",
     ],
-    beforeImage: "/images/showcase/formatting-before.jpg",
-    afterImage: "/images/showcase/formatting-after.jpg",
+    beforeImage: "/images/publication-support/art-work-preparation/Artwork-Formatting.png",
+    afterImage: "/images/publication-support/art-work-preparation/Artwork-Formatting-after.webp",
   },
 ];
 

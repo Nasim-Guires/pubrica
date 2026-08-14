@@ -1,20 +1,13 @@
 "use client";
 
 import React from "react";
-import {
-  FiSend,
-  FiCode,
-  FiMessageSquare,
-  FiVideo,
-  FiMessageSquare as FiSubtitles,
-  FiCheckCircle,
-} from "react-icons/fi";
+import Image from "next/image";
 
 interface ProcessStep {
   stepNumber: number;
   title: string;
   description: string;
-  icon: React.ReactNode;
+  iconSrc: string;
   position: "top" | "bottom";
 }
 
@@ -24,7 +17,7 @@ const stepsData: ProcessStep[] = [
     title: "SEND MATERIALS",
     description:
       "You place the order for your video and send your final manuscript and materials, such as graphs, charts, tables, and figures.",
-    icon: <FiSend className="w-8 h-8" />,
+    iconSrc: "/images/publication-support/video-abstract/Send-Materials.png",
     position: "bottom",
   },
   {
@@ -32,7 +25,8 @@ const stepsData: ProcessStep[] = [
     title: "SCRIPT & CONTENT DEVELOPMENT",
     description:
       "The Pubrica team of knowledgeable subject matter experts reviews the submitted manuscript and prepares the video script for every section of the manuscript.",
-    icon: <FiCode className="w-8 h-8" />,
+    iconSrc:
+      "/images/publication-support/video-abstract/Script-Content-Development.png",
     position: "top",
   },
   {
@@ -40,7 +34,7 @@ const stepsData: ProcessStep[] = [
     title: "AUTHOR FEEDBACK",
     description:
       "You review the initial script and provide suggestions or ideas, if any.",
-    icon: <FiMessageSquare className="w-8 h-8" />,
+    iconSrc: "/images/publication-support/video-abstract/Author-Feedback.png",
     position: "bottom",
   },
   {
@@ -48,7 +42,7 @@ const stepsData: ProcessStep[] = [
     title: "VIDEO DEVELOPMENT",
     description:
       "We add suitable background music and a voiceover that contains a brief explanation of the video content.",
-    icon: <FiVideo className="w-8 h-8" />,
+    iconSrc: "/images/publication-support/video-abstract/Video-Development.png",
     position: "top",
   },
   {
@@ -56,14 +50,16 @@ const stepsData: ProcessStep[] = [
     title: "ADD CAPTIONS AND SUBTITLES",
     description:
       "Our experienced transcribers add English subtitles for wider viewership.",
-    icon: <FiSubtitles className="w-8 h-8" />,
+    iconSrc:
+      "/images/publication-support/video-abstract/Add-Captions-and-Subtitles.png",
     position: "bottom",
   },
   {
     stepNumber: 6,
     title: "AUTHOR ACCEPTS THE VIDEO AND ABSTRACT",
     description: "You get all the deliverables in your inbox!",
-    icon: <FiCheckCircle className="w-8 h-8" />,
+    iconSrc:
+      "/images/publication-support/video-abstract/Author-Accepts-the-Video-and-Abstract.png",
     position: "top",
   },
 ];
@@ -113,8 +109,14 @@ export default function VideoAbstractProcess() {
 
                 {/* Card Container with Interactive Black Hover Effect */}
                 <div className="w-full p-4 rounded-sm border border-slate-200 bg-white text-slate-800 shadow-sm flex flex-col min-h-[260px] text-left transition-all duration-300 hover:bg-[#4a4a4a] hover:text-white hover:border-transparent hover:-translate-y-1 group cursor-pointer">
-                  <div className="mb-3 text-slate-600 font-bold group-hover:text-white transition-colors duration-300">
-                    {step.icon}
+                  <div className="mb-3">
+                    <Image
+                      src={step.iconSrc}
+                      alt={step.title}
+                      width={32}
+                      height={32}
+                      className="w-8 h-8 object-contain group-hover:invert group-hover:brightness-200 transition-all duration-300"
+                    />
                   </div>
                   <h4 className="text-xs font-bold uppercase tracking-wide mb-2 text-slate-800 group-hover:text-white transition-colors duration-300">
                     {step.title}

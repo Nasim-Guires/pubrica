@@ -27,40 +27,40 @@ const steps: Step[] = [
     title: "UPLOAD YOUR MANUSCRIPT",
     description:
       "Upload your manuscript, thesis, or academic document securely through our platform",
-    iconSrc: "/icons/upload-doc.svg",
+    iconSrc: "/images/publication-support/poster-preparation/submit-your-request-.png",
   },
   {
     stepNumber: 2,
     title: "MANUSCRIPT PLAGIARISM",
     description:
       "Specialized software checks for plagiarism & identifies the percentage",
-    iconSrc: "/icons/manuscript-check.svg",
+    iconSrc: "/images/publication-support/poster-preparation/material-review-and-order-confirmation-.png",
   },
   {
     stepNumber: 3,
     title: "RE-WRITE",
     description:
       "Will rewrite similar/overlapping text of your manuscript to make it plagiarism-free",
-    iconSrc: "/icons/rewrite.svg",
+    iconSrc: "/images/publication-support/poster-preparation/scientific-content-editing-.png",
   },
   {
     stepNumber: 4,
     title: "LANGUAGE STYLE CHECK",
     description: "Experts check for scientific language accuracy",
-    iconSrc: "/icons/language-check.svg",
+    iconSrc: "/images/publication-support/poster-preparation/poster-design-layout-.png",
   },
   {
     stepNumber: 5,
     title: "TRACKED CHANGES",
     description:
       "Expert adds comments indicating needed revisions, such as word count restrictions",
-    iconSrc: "/icons/tracked-changes.svg",
+    iconSrc: "/images/publication-support/poster-preparation/Revision-and-finalization-.png",
   },
   {
     stepNumber: 6,
     title: "PUBLISH READY MANUSCRIPT",
     description: "Receive your plagiarism-free manuscript",
-    iconSrc: "/icons/publish-ready.svg",
+    iconSrc: "/images/publication-support/poster-preparation/final-delivery-.png",
   },
 ];
 
@@ -68,19 +68,19 @@ const standards: StandardLogo[] = [
   {
     id: 1,
     title: "Committee on Publication Ethics",
-    logoSrc: "/images/compliance/cope-logo.png",
+    logoSrc: "/images/publication-support/COPE_thumb.png",
     logoAlt: "COPE Logo",
   },
   {
     id: 2,
     title: "World Association of Medical Editors",
-    logoSrc: "/images/compliance/wame-logo.png",
+    logoSrc: "/images/publication-support/WAME.webp",
     logoAlt: "WAME Logo",
   },
   {
     id: 3,
     title: "International Committee of Medical Journal Editors",
-    logoSrc: "/images/compliance/icmje-logo.png",
+    logoSrc: "/images/publication-support/ICMJE.webp",
     logoAlt: "ICMJE Logo",
   },
 ];
@@ -148,7 +148,7 @@ export default function PlagiarismSectionGroup() {
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative w-full max-w-md h-[280px] md:h-[340px] rounded-lg overflow-hidden shadow-md">
                 <Image
-                  src="/images/ai-robot-glowing.jpg"
+                  src="/images/publication-support/plagiarism-services/Plagiarism-and-AI-authorship-identification-in-Scientific-Services.jpg"
                   alt="AI Authorship Identification Concept"
                   fill
                   className="object-cover"

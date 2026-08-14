@@ -1,6 +1,10 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
+
+const PAGE_IMAGES =
+  "/images/publication-support/journal-manuscript-formatting-services";
 
 export default function ManuscriptFormattingService() {
   return (
@@ -149,57 +153,16 @@ export default function ManuscriptFormattingService() {
             </div>
           </div>
 
-          {/* Right Graphic / Mockup Vector Illustration */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-sm bg-white p-4 rounded-xl border border-gray-200 shadow-sm space-y-3">
-              {/* Browser Window Mockup */}
-              <div className="bg-[#a5b4fc]/30 rounded-lg p-3 border border-indigo-100 flex gap-3">
-                <div className="w-1/3 space-y-1.5">
-                  <div className="h-4 bg-[#818cf8]/40 rounded-xs"></div>
-                  <div className="h-4 bg-[#818cf8]/30 rounded-xs"></div>
-                  <div className="h-4 bg-[#818cf8]/30 rounded-xs"></div>
-                  <div className="h-4 bg-[#818cf8]/30 rounded-xs"></div>
-                </div>
-                <div className="w-2/3 space-y-2">
-                  <div className="h-5 bg-[#818cf8]/50 rounded-xs w-3/4"></div>
-                  <div className="h-10 bg-white rounded-xs p-1 flex gap-1 border border-indigo-100">
-                    <div className="w-1/2 bg-gray-200 rounded-xs"></div>
-                    <div className="w-1/2 bg-indigo-100 rounded-xs"></div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Guidelines Popup Mockup */}
-              <div className="absolute top-2 right-2 bg-[#dcfce7] border border-green-200 rounded-md p-2 shadow-md flex items-center gap-2 max-w-[190px]">
-                <div className="w-7 h-7 rounded-full bg-gray-300 overflow-hidden shrink-0">
-                  <div className="w-full h-full bg-slate-400 flex items-center justify-center text-[8px] text-white">
-                    IMG
-                  </div>
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold text-green-900 leading-tight">
-                    Formatting Comment
-                  </p>
-                  <p className="text-[8px] text-green-700 leading-tight">
-                    The journal guidelines limits the abstract to 250 words
-                  </p>
-                </div>
-              </div>
-
-              {/* Checklists */}
-              <div className="bg-white border border-gray-100 rounded-md p-3 space-y-1 shadow-2xs">
-                <p className="text-[10px] font-bold text-emerald-800 uppercase tracking-wider">
-                  GUIDELINES
-                </p>
-                {["", "", "", ""].map((_, i) => (
-                  <div key={i} className="flex items-center gap-1.5">
-                    <span className="text-emerald-600 text-xs font-bold">
-                      ✓
-                    </span>
-                    <div className="h-1.5 bg-gray-200 rounded-xs w-full"></div>
-                  </div>
-                ))}
-              </div>
+            <div className="relative w-full max-w-sm h-72 sm:h-80">
+              <Image
+                src={`${PAGE_IMAGES}/poster-presentation-.webp`}
+                alt="Scientific and Academic Manuscript Formatting Service"
+                fill
+                className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -225,29 +188,13 @@ export default function ManuscriptFormattingService() {
           {/* Card 1: CONSORT */}
           <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-2xs flex flex-col items-center text-center justify-between hover:shadow-md transition-shadow">
             <div className="h-20 flex items-center justify-center mb-4">
-              <div className="flex items-center gap-1">
-                <svg
-                  className="w-8 h-8 text-[#0284c7]"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                <div className="text-left leading-none">
-                  <span className="block font-black text-lg text-[#0369a1] tracking-tight">
-                    SPIRIT
-                  </span>
-                  <span className="block font-black text-xl text-[#0c4a6e] tracking-tight">
-                    CONSORT
-                  </span>
-                </div>
-              </div>
+              <Image
+                src="/images/publication-support/Consort-Logo.webp"
+                alt="CONSORT"
+                width={160}
+                height={64}
+                className="object-contain max-h-16"
+              />
             </div>
             <p className="text-xs font-bold text-gray-800 leading-snug">
               Consolidated Standards of Reporting Trials (CONSORT)
@@ -257,14 +204,13 @@ export default function ManuscriptFormattingService() {
           {/* Card 2: PRISMA */}
           <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-2xs flex flex-col items-center text-center justify-between hover:shadow-md transition-shadow">
             <div className="h-20 flex items-center justify-center mb-4">
-              <div className="flex flex-col items-center">
-                <div className="w-10 h-8 relative flex items-center justify-center">
-                  <div className="w-0 h-0 border-l-[16px] border-l-transparent border-r-[16px] border-r-transparent border-b-[28px] border-b-cyan-500 transform -rotate-45"></div>
-                </div>
-                <span className="font-black text-lg tracking-widest text-[#1e293b] mt-1">
-                  PRISMA
-                </span>
-              </div>
+              <Image
+                src="/images/publication-support/peer-review-pre-submission/prisma_logo.png"
+                alt="PRISMA"
+                width={140}
+                height={64}
+                className="object-contain max-h-16"
+              />
             </div>
             <p className="text-xs font-bold text-gray-800 leading-snug">
               Preferred Reporting Items for Systematic Reviews and Meta-Analyses
@@ -275,19 +221,13 @@ export default function ManuscriptFormattingService() {
           {/* Card 3: STROBE */}
           <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-2xs flex flex-col items-center text-center justify-between hover:shadow-md transition-shadow">
             <div className="h-20 flex items-center justify-center mb-4">
-              <div className="flex items-center gap-1">
-                <div className="w-5 h-5 bg-[#dc2626] flex items-center justify-center text-white text-[10px] font-bold rounded-2xs">
-                  ≡
-                </div>
-                <div className="text-left">
-                  <span className="font-black text-lg text-[#1e293b] tracking-wider">
-                    STROBE
-                  </span>
-                  <span className="block text-[7px] text-gray-500 font-medium -mt-1">
-                    Strengthening the Reporting of OBservational
-                  </span>
-                </div>
-              </div>
+              <Image
+                src="/images/publication-support/peer-review-pre-submission/Strengthening-the-Reporting-of-Observational-Studies-in-Epidemiology.png"
+                alt="STROBE"
+                width={160}
+                height={64}
+                className="object-contain max-h-16"
+              />
             </div>
             <p className="text-xs font-bold text-gray-800 leading-snug">
               Strengthening the Reporting of Observational Studies in
@@ -298,14 +238,13 @@ export default function ManuscriptFormattingService() {
           {/* Card 4: ICMJE */}
           <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-2xs flex flex-col items-center text-center justify-between hover:shadow-md transition-shadow">
             <div className="h-20 flex items-center justify-center mb-4">
-              <div className="text-center">
-                <span className="font-black text-2xl text-[#0284c7] tracking-wider">
-                  ICMJE
-                </span>
-                <span className="block text-[6px] text-[#0369a1] font-semibold uppercase tracking-tighter">
-                  International Committee of Medical Journal Editors
-                </span>
-              </div>
+              <Image
+                src="/images/publication-support/journal-submission/ICMJE-1_thumb-2.png"
+                alt="ICMJE"
+                width={140}
+                height={64}
+                className="object-contain max-h-16"
+              />
             </div>
             <p className="text-xs font-bold text-gray-800 leading-snug">
               International Committee of Medical Journal Editors (ICMJE)

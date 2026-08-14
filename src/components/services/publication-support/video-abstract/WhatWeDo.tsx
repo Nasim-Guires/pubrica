@@ -145,7 +145,7 @@ export default function WhatWeDo() {
             {/* Top Left Image Card (Videographer) */}
             <div className="absolute top-0 left-4 md:left-8 w-44 sm:w-52 md:w-56 h-56 sm:h-64 rounded-2xl overflow-hidden shadow-md z-10">
               <Image
-                src="/images/what-we-do-cameraman.jpg"
+                src="/images/publication-support/video-abstract/What-We-Do-1.png"
                 alt="Videographer recording research pitch"
                 fill
                 className="object-cover"
@@ -155,7 +155,7 @@ export default function WhatWeDo() {
             {/* Bottom Right Image Card (Video Editor Workspace) */}
             <div className="absolute bottom-0 right-4 md:right-8 w-48 sm:w-56 md:w-60 h-44 sm:h-52 rounded-2xl overflow-hidden shadow-lg border-2 border-white z-20">
               <Image
-                src="/images/what-we-do-editor.jpg"
+                src="/images/publication-support/video-abstract/What-We-Do-1.png"
                 alt="Video editor working on scientific animation"
                 fill
                 className="object-cover"

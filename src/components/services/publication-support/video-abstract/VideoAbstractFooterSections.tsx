@@ -4,8 +4,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import {
   FiCheck,
-  FiClock,
-  FiDollarSign,
   FiPlus,
   FiMinus,
 } from "react-icons/fi";
@@ -48,17 +46,27 @@ const pricingPlans: Record<PricingTab, PricingPlan> = {
 const testimonials = [
   {
     quote:
+      "The quality and clarity of the video abstract by Pubrica for our paper in Frontiers in Neuroscience exceeded expectations. It was an excellent tool for conference presentations and online dissemination, enhancing the overall impact of our research.",
+    author: "DR. VIKRAM PATEL,",
+    affiliation: "Neuroscience",
+    journalImage:
+      "/images/publication-support/video-abstract/neuroscience-.jpg",
+  },
+  {
+    quote:
       "Pubrica's video abstract perfectly complemented our article published in The Lancet Oncology. Their team delivered a professionally formatted, engaging video that helped us present our research to peers and stakeholders efficiently, saving time and increasing outreach.",
     author: "DR. NEHA SINGH,",
     affiliation: "Oncology Research Group",
-    journalImage: "/images/testimonials/lancet-oncology.jpg",
+    journalImage:
+      "/images/publication-support/video-abstract/the-lancet-of-oncolgy-.jpg",
   },
   {
     quote:
       "The video abstract created by Pubrica for our manuscript in Nature Communications was expertly produced, capturing the essence of our study without losing scientific rigor. It simplified complex data into an accessible format, facilitating better communication with a wider audience.",
     author: "PROF. RAJESH KUMAR,",
     affiliation: "Institute of Molecular Biology",
-    journalImage: "/images/testimonials/nature-communications.jpg",
+    journalImage:
+      "/images/publication-support/video-abstract/natural-of-communication-.jpg",
   },
 ];
 
@@ -158,8 +166,14 @@ export default function VideoAbstractFooterSections() {
             <div className="flex items-center space-x-8 w-full sm:w-auto justify-around sm:justify-start">
               {/* Delivery */}
               <div className="flex items-center space-x-3">
-                <div className="p-2 bg-slate-100 rounded-md text-slate-800">
-                  <FiClock className="w-6 h-6" />
+                <div className="p-2 bg-slate-100 rounded-md">
+                  <Image
+                    src="/images/publication-support/video-abstract/delivery.png"
+                    alt="Delivery"
+                    width={24}
+                    height={24}
+                    className="w-6 h-6 object-contain"
+                  />
                 </div>
                 <div>
                   <span className="block text-[10px] font-bold text-slate-500 tracking-wider uppercase">
@@ -173,8 +187,14 @@ export default function VideoAbstractFooterSections() {
 
               {/* Fees */}
               <div className="flex items-center space-x-3">
-                <div className="p-2 bg-slate-100 rounded-md text-slate-800">
-                  <FiDollarSign className="w-6 h-6" />
+                <div className="p-2 bg-slate-100 rounded-md">
+                  <Image
+                    src="/images/publication-support/video-abstract/fees.png"
+                    alt="Fees"
+                    width={24}
+                    height={24}
+                    className="w-6 h-6 object-contain"
+                  />
                 </div>
                 <div>
                   <span className="block text-[10px] font-bold text-slate-500 tracking-wider uppercase">
@@ -202,26 +222,58 @@ export default function VideoAbstractFooterSections() {
             Testimonials
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {testimonials.map((item, idx) => (
+          <div className="grid grid-cols-1 gap-6 md:hidden">
+            {(() => {
+              const item = testimonials[activeTestimonialIdx];
+              return (
+                <div className="bg-[#1b3d36] text-white p-6 md:p-8 rounded-sm flex flex-col justify-between min-h-[220px]">
+                  <div className="grid grid-cols-12 gap-4 items-center mb-6">
+                    <p className="col-span-8 text-xs md:text-sm leading-relaxed text-slate-100 italic">
+                      &quot;{item.quote}&quot;
+                    </p>
+                    <div className="col-span-4 relative h-28 sm:h-32 rounded-sm overflow-hidden border border-white/20 bg-white">
+                      <Image
+                        src={item.journalImage}
+                        alt={item.author}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-xs md:text-sm font-bold uppercase tracking-wider text-white">
+                      {item.author}
+                    </h4>
+                    <p className="text-[11px] text-slate-300 italic">
+                      {item.affiliation}
+                    </p>
+                  </div>
+                </div>
+              );
+            })()}
+          </div>
+          <div className="hidden md:grid grid-cols-2 gap-6">
+            {[
+              testimonials[activeTestimonialIdx],
+              testimonials[(activeTestimonialIdx + 1) % testimonials.length],
+            ].map((item, idx) => (
               <div
-                key={idx}
+                key={`${activeTestimonialIdx}-${idx}`}
                 className="bg-[#1b3d36] text-white p-6 md:p-8 rounded-sm flex flex-col justify-between min-h-[220px]"
               >
                 <div className="grid grid-cols-12 gap-4 items-center mb-6">
                   <p className="col-span-8 text-xs md:text-sm leading-relaxed text-slate-100 italic">
                     &quot;{item.quote}&quot;
                   </p>
-                  <div className="col-span-4 relative h-28 sm:h-32 rounded-sm overflow-hidden border border-white/20">
+                  <div className="col-span-4 relative h-28 sm:h-32 rounded-sm overflow-hidden border border-white/20 bg-white">
                     <Image
                       src={item.journalImage}
                       alt={item.author}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                     />
                   </div>
                 </div>
-
                 <div>
                   <h4 className="text-xs md:text-sm font-bold uppercase tracking-wider text-white">
                     {item.author}
@@ -234,22 +286,19 @@ export default function VideoAbstractFooterSections() {
             ))}
           </div>
 
-          {/* Carousel Pagination Dots */}
           <div className="flex justify-center items-center space-x-2 mt-8">
-            <button
-              onClick={() => setActiveTestimonialIdx(0)}
-              className={`w-3 h-3 border border-[#0c373b] transition-all duration-300 ${
-                activeTestimonialIdx === 0 ? "bg-transparent" : "bg-[#0c373b]"
-              }`}
-              aria-label="Testimonial slide 1"
-            />
-            <button
-              onClick={() => setActiveTestimonialIdx(1)}
-              className={`w-3 h-3 border border-[#0c373b] transition-all duration-300 ${
-                activeTestimonialIdx === 1 ? "bg-[#0c373b]" : "bg-transparent"
-              }`}
-              aria-label="Testimonial slide 2"
-            />
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveTestimonialIdx(index)}
+                className={`w-3 h-3 border border-[#0c373b] transition-all duration-300 ${
+                  activeTestimonialIdx === index
+                    ? "bg-transparent"
+                    : "bg-[#0c373b]"
+                }`}
+                aria-label={`Testimonial slide ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </section>

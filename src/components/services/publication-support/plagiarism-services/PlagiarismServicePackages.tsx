@@ -11,9 +11,7 @@ interface PackageFeature {
 
 interface PackageItem {
   id: string;
-  badgeLetter: string;
-  badgeBgColor: string;
-  badgeTextColor: string;
+  icon: string;
   title: string;
   subtitle: string;
   cardHeaderBg: string;
@@ -27,9 +25,7 @@ interface PackageItem {
 const packages: PackageItem[] = [
   {
     id: "silver",
-    badgeLetter: "S",
-    badgeBgColor: "bg-amber-100 border-amber-300",
-    badgeTextColor: "text-amber-800",
+    icon: "/images/publication-support/art-work-preparation/S.png",
     title: "Silver",
     subtitle: "Budget Publication-Support Package",
     cardHeaderBg: "bg-slate-50",
@@ -51,9 +47,7 @@ const packages: PackageItem[] = [
   },
   {
     id: "gold",
-    badgeLetter: "G",
-    badgeBgColor: "bg-emerald-100 border-emerald-300",
-    badgeTextColor: "text-emerald-800",
+    icon: "/images/publication-support/plagiarism-services/gold-icons.png",
     title: "Gold",
     subtitle: "End-To-End Publication-Focused Support For Up To Two Journals",
     cardHeaderBg: "bg-slate-50",
@@ -76,9 +70,7 @@ const packages: PackageItem[] = [
   },
   {
     id: "premium",
-    badgeLetter: "P",
-    badgeBgColor: "bg-rose-100 border-rose-300",
-    badgeTextColor: "text-rose-800",
+    icon: "/images/publication-support/art-work-preparation/pa-icons-.png",
     title: "Premium",
     subtitle:
       "High-End Publication Support, Including A Complete Technical Review",
@@ -148,7 +140,7 @@ export default function PlagiarismServicePackages() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md h-[220px] sm:h-[260px] rounded-lg overflow-hidden shadow-md">
               <Image
-                src="/images/laptop-plagiarism-report.jpg"
+                src="/images/publication-support/plagiarism-services/Plagiarism-Checker-Report-thumb.jpg"
                 alt="Plagiarism Report Analysis on Laptop"
                 fill
                 className="object-cover"
@@ -163,7 +155,7 @@ export default function PlagiarismServicePackages() {
           <div className="md:col-span-4 flex justify-center">
             <div className="relative w-full max-w-[240px] h-[220px] rounded overflow-hidden shadow-sm">
               <Image
-                src="/images/researchers-review.jpg"
+                src="/images/publication-support/plagiarism-services/Plagiarism-Check-Service-Sample-Work.jpg"
                 alt="Researchers reviewing document"
                 fill
                 className="object-cover"
@@ -234,11 +226,13 @@ export default function PlagiarismServicePackages() {
               <div
                 className={`${pkg.cardHeaderBg} p-5 border-b border-slate-300 flex items-center space-x-4 min-h-[100px]`}
               >
-                <div
-                  className={`w-12 h-12 rounded-full border-2 ${pkg.badgeBgColor} ${pkg.badgeTextColor} font-extrabold text-xl flex items-center justify-center shrink-0 shadow-sm`}
-                >
-                  {pkg.badgeLetter}
-                </div>
+                <Image
+                  src={pkg.icon}
+                  alt={`${pkg.title} package`}
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 object-contain shrink-0"
+                />
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 leading-tight">
                     {pkg.title}
@@ -324,22 +318,24 @@ export default function PlagiarismServicePackages() {
         {/* Price & Turnaround Display Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-slate-300 rounded-md overflow-hidden border border-slate-300 max-w-2xl mx-auto mb-8 shadow-sm">
           <div className="bg-[#f1f5f9] p-6 flex items-center justify-center space-x-3">
-            <div className="w-9 h-9 rounded-full bg-sky-500 text-white font-bold text-lg flex items-center justify-center">
-              $
-            </div>
+            <Image
+              src="/images/publication-support/art-work-preparation/dollar-sign.png"
+              alt="Price"
+              width={36}
+              height={36}
+              className="w-9 h-9 object-contain"
+            />
             <span className="text-2xl font-bold text-slate-800">70</span>
           </div>
 
           <div className="bg-[#f1f5f9] p-6 flex items-center justify-center space-x-3">
-            <div className="w-9 h-9 rounded-full bg-sky-500 text-white flex items-center justify-center">
-              <svg
-                className="w-5 h-5 fill-current"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" />
-              </svg>
-            </div>
+            <Image
+              src="/images/publication-support/art-work-preparation/date.png"
+              alt="Turnaround"
+              width={36}
+              height={36}
+              className="w-9 h-9 object-contain"
+            />
             <span className="text-xl font-bold text-slate-800">
               3 <span className="font-normal text-base">days</span>
             </span>

@@ -102,7 +102,7 @@ export default function PlagiarismHeroAndOverview() {
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-md h-[240px] sm:h-[280px] rounded-lg overflow-hidden shadow-lg border-b-8 border-r-8 border-[#11312d]">
                 <Image
-                  src="/images/plagiarism-review-desk.jpg"
+                  src="/images/publication-support/plagiarism-services/Plagiarism-Check-Service.webp"
                   alt="Academic editorial review and manuscript inspection"
                   fill
                   className="object-cover"

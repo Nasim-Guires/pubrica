@@ -17,7 +17,8 @@ const audienceData: TargetAudience[] = [
     title: "PhD Scholars and Doctoral Candidates",
     description:
       "To ensure that thesis, dissertations, and manuscripts meet institutional and publication-level originality standards.",
-    imageSrc: "/images/who-we-serve/phd-scholars.jpg",
+    imageSrc:
+      "/images/publication-support/plagiarism-services/PhD-Scholars-and-Doctoral-Candidates.jpg",
     imageAlt: "PhD Scholars graduating",
   },
   {
@@ -25,7 +26,8 @@ const audienceData: TargetAudience[] = [
     title: "Academic Researchers and Scientists",
     description:
       "For checking journal articles, original research, case reports, and reviews before peer review submission.",
-    imageSrc: "/images/who-we-serve/academic-researchers.jpg",
+    imageSrc:
+      "/images/publication-support/plagiarism-services/Academic-Researchers-and-Scientists.jpg",
     imageAlt: "Academic researchers in a laboratory",
   },
   {
@@ -33,7 +35,8 @@ const audienceData: TargetAudience[] = [
     title: "Medical and Scientific Writers",
     description:
       "Specialists drafting clinical study reports, medical writing projects, and regulatory documents need plagiarism scrutiny.",
-    imageSrc: "/images/who-we-serve/medical-writers.jpg",
+    imageSrc:
+      "/images/publication-support/plagiarism-services/Medical-and-Scientific-Writers.jpg",
     imageAlt: "Medical and scientific writer taking notes",
   },
   {
@@ -41,7 +44,8 @@ const audienceData: TargetAudience[] = [
     title: "Medical Communication and CRO Firms",
     description:
       "For plagiarism and AI content review of deliverables like meta-analyses, systematic reviews, and regulatory documentation.",
-    imageSrc: "/images/who-we-serve/cro-firms.jpg",
+    imageSrc:
+      "/images/publication-support/plagiarism-services/Medical-Communication-and-CRO-Firms.jpg",
     imageAlt: "Medical communication team meeting",
   },
   {
@@ -49,7 +53,8 @@ const audienceData: TargetAudience[] = [
     title: "Journal Editors and Publishers",
     description:
       "Editorial boards seek to maintain publication ethics by screening submitted manuscripts for plagiarism.",
-    imageSrc: "/images/who-we-serve/journal-publishers.jpg",
+    imageSrc:
+      "/images/publication-support/plagiarism-services/Journal-Editors-and-Publishers.jpg",
     imageAlt: "Publishing contract document and fountain pen",
   },
   {
@@ -57,7 +62,8 @@ const audienceData: TargetAudience[] = [
     title: "Research Institutions and Universities",
     description:
       "Offering institutional-level screening support for student theses, faculty publications, and funded research.",
-    imageSrc: "/images/who-we-serve/universities.jpg",
+    imageSrc:
+      "/images/publication-support/plagiarism-services/Research-Institutions-and-Universities.jpg",
     imageAlt: "University campus building",
   },
 ];

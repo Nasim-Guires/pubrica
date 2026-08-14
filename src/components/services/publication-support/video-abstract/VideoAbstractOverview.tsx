@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { FiMessageSquare, FiGitCommit, FiMusic } from "react-icons/fi";
+
+const PAGE_IMAGES = "/images/publication-support/video-abstract";
 
 // --- Types ---
 interface ComplianceCard {
@@ -20,34 +21,34 @@ const complianceData: ComplianceData = {
   journalGuidelines: [
     {
       title: "Elsevier",
-      logoSrc: "/images/video-abstract/compliance/elsevier.png",
+      logoSrc: `${PAGE_IMAGES}/elsevier-.png`,
     },
     {
       title: "Springer",
-      logoSrc: "/images/video-abstract/compliance/springer.png",
+      logoSrc: `${PAGE_IMAGES}/Springer.png`,
     },
-    { title: "Wiley", logoSrc: "/images/video-abstract/compliance/wiley.png" },
+    { title: "Wiley", logoSrc: `${PAGE_IMAGES}/Wiley.png` },
     {
       title: "New England Journal of Medicine",
-      logoSrc: "/images/video-abstract/compliance/nejm.png",
+      logoSrc: `${PAGE_IMAGES}/New-England-Journal-of-Medicine.png`,
     },
   ],
   clinicalEthical: [
     {
       title: "Committee on Publication Ethics (COPE)",
-      logoSrc: "/images/video-abstract/compliance/cope.png",
+      logoSrc: "/images/publication-support/COPE_thumb.png",
     },
     {
       title: "Consolidated Standards of Reporting Trials (CONSORT)",
-      logoSrc: "/images/video-abstract/compliance/consort.png",
+      logoSrc: `${PAGE_IMAGES}/consort-logo-.png`,
     },
     {
       title: "World Association of Medical Editors (WAME)",
-      logoSrc: "/images/video-abstract/compliance/wame.png",
+      logoSrc: `${PAGE_IMAGES}/wame-logo.png`,
     },
     {
       title: "International Committee of Medical Journal Editors (ICMJE)",
-      logoSrc: "/images/video-abstract/compliance/icmje.png",
+      logoSrc: "/images/publication-support/ICMJE.webp",
     },
   ],
 };
@@ -156,7 +157,7 @@ export default function VideoAbstractOverview() {
               {/* Top Left Image */}
               <div className="absolute top-0 left-0 w-56 h-48 sm:w-64 sm:h-52 rounded-xl overflow-hidden shadow-lg border-2 border-white">
                 <Image
-                  src="/images/video-abstract/overview/editor-working.jpg"
+                  src={`${PAGE_IMAGES}/video-abstracts-services.png`}
                   alt="Video Abstract Editing"
                   fill
                   className="object-cover"
@@ -166,7 +167,7 @@ export default function VideoAbstractOverview() {
               {/* Bottom Right Overlapping Image */}
               <div className="absolute bottom-2 right-0 w-56 h-48 sm:w-64 sm:h-52 rounded-xl overflow-hidden shadow-2xl border-4 border-white">
                 <Image
-                  src="/images/video-abstract/overview/video-production.jpg"
+                  src={`${PAGE_IMAGES}/video-abstracts-services.png`}
                   alt="Video Abstract Production"
                   fill
                   className="object-cover"
@@ -187,8 +188,14 @@ export default function VideoAbstractOverview() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Feature 1 */}
             <div className="bg-white border border-[#008099] p-6 text-center rounded-sm flex flex-col items-center">
-              <div className="mb-4 text-[#0c373b]">
-                <FiMessageSquare className="w-12 h-12 stroke-[1.5]" />
+              <div className="mb-4">
+                <Image
+                  src={`${PAGE_IMAGES}/HD-animations-and-subtitles.png`}
+                  alt="HD animations and subtitles"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 object-contain"
+                />
               </div>
               <h4 className="font-bold text-[#0c373b] text-sm md:text-base mb-3">
                 HD animations and subtitles
@@ -202,8 +209,14 @@ export default function VideoAbstractOverview() {
 
             {/* Feature 2 */}
             <div className="bg-white border border-[#008099] p-6 text-center rounded-sm flex flex-col items-center">
-              <div className="mb-4 text-[#0c373b]">
-                <FiGitCommit className="w-12 h-12 stroke-[1.5]" />
+              <div className="mb-4">
+                <Image
+                  src={`${PAGE_IMAGES}/5-Step-Process-Model.png`}
+                  alt="5-Step Process Model"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 object-contain"
+                />
               </div>
               <h4 className="font-bold text-[#0c373b] text-sm md:text-base mb-3">
                 5-Step Process Model
@@ -217,8 +230,14 @@ export default function VideoAbstractOverview() {
 
             {/* Feature 3 */}
             <div className="bg-white border border-[#008099] p-6 text-center rounded-sm flex flex-col items-center">
-              <div className="mb-4 text-[#0c373b]">
-                <FiMusic className="w-12 h-12 stroke-[1.5]" />
+              <div className="mb-4">
+                <Image
+                  src={`${PAGE_IMAGES}/Soundtrack.png`}
+                  alt="Soundtrack"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 object-contain"
+                />
               </div>
               <h4 className="font-bold text-[#0c373b] text-sm md:text-base mb-3">
                 Soundtrack
@@ -299,7 +318,7 @@ export default function VideoAbstractOverview() {
           {/* Left Column Image */}
           <div className="md:col-span-5 relative h-64 md:h-80 rounded-sm overflow-hidden shadow-sm">
             <Image
-              src="/images/video-abstract/overview/sample-work-editor.jpg"
+              src={`${PAGE_IMAGES}/Video-Abstract-Sample-Work.jpg`}
               alt="Video Abstract Sample Work"
               fill
               className="object-cover"

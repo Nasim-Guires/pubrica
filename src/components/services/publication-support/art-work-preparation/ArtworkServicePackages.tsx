@@ -2,10 +2,10 @@
 
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
+import Image from "next/image";
 
 interface PackageCardProps {
-  letter: string;
-  badgeBg: string;
+  icon: string;
   title: string;
   subtitle: string;
   bgColor: string;
@@ -17,8 +17,7 @@ interface PackageCardProps {
 
 const packagesData: PackageCardProps[] = [
   {
-    letter: "S",
-    badgeBg: "bg-[#e8f1f5] text-[#d9a13b]",
+    icon: "/images/publication-support/art-work-preparation/S.png",
     title: "Silver",
     subtitle: "Budget Publication-Support Package",
     bgColor: "bg-[#c8d6d5]",
@@ -32,8 +31,7 @@ const packagesData: PackageCardProps[] = [
     turnaround: "5–7 business days",
   },
   {
-    letter: "G",
-    badgeBg: "bg-[#e3f0d8] text-[#5b9e38]",
+    icon: "/images/publication-support/art-work-preparation/gold-icons.png",
     title: "Gold",
     subtitle: "End-To-End Publication-Focused Support For Up To Two Journals",
     bgColor: "bg-[#cbb8d7]",
@@ -51,8 +49,7 @@ const packagesData: PackageCardProps[] = [
     turnaround: "3–5 business days",
   },
   {
-    letter: "P",
-    badgeBg: "bg-[#fce8e8] text-[#e04848]",
+    icon: "/images/publication-support/art-work-preparation/pa-icons-.png",
     title: "Platinum",
     subtitle:
       "High-End Publication Support, Including A Complete Technical Review",
@@ -96,11 +93,13 @@ export default function ArtworkServicePackages() {
               {/* Header Box */}
               <div className="bg-white p-6 border-b border-gray-200 flex items-start gap-4 min-h-[110px]">
                 {/* Circle Letter Badge */}
-                <div
-                  className={`w-12 h-12 shrink-0 rounded-full flex items-center justify-center text-xl font-bold shadow-sm ${pkg.badgeBg}`}
-                >
-                  {pkg.letter}
-                </div>
+                <Image
+                  src={pkg.icon}
+                  alt={`${pkg.title} package`}
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 object-contain shrink-0"
+                />
                 <div>
                   <h3 className="text-xl font-bold text-slate-900">
                     {pkg.title}

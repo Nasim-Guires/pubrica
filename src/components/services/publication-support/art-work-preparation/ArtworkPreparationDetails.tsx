@@ -8,7 +8,7 @@ interface ProcessStep {
   number: number;
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon: string;
 }
 
 interface ComplianceItem {
@@ -17,69 +17,44 @@ interface ComplianceItem {
   imageSrc: string;
 }
 
+const PAGE_IMAGES = "/images/publication-support/art-work-preparation";
+
 const steps: ProcessStep[] = [
   {
     number: 1,
     title: "SUBMIT YOUR FILES",
     description:
       "Send us your final editable artwork files and other relevant information",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-        />
-      </svg>
-    ),
+    icon: `${PAGE_IMAGES}/submit-your-files.png`,
   },
   {
     number: 2,
     title: "PRECISION FORMATTING & TECHNICAL REVIEW",
     description:
       "Check the files and resend for revisions (as many times as required, within 60 days)",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-        />
-      </svg>
-    ),
+    icon: `${PAGE_IMAGES}/Precision-Formatting-Technical-Review.png`,
   },
   {
     number: 3,
     title: "OUR EXPERTS WORK ON YOUR ARTWORK",
     description:
       "Our designers will format/revise your artwork to meet the journal's technical requirements, while an expert editor checks your artwork for consistency and technical accuracy",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
-        />
-      </svg>
-    ),
+    icon: `${PAGE_IMAGES}/Our-experts-work-on-your-artwork.png`,
   },
 ];
 
 const clinicalItems: ComplianceItem[] = [
-  { id: "cope", name: "Committee on Publication Ethics (COPE)", imageSrc: "/images/compliance/cope.png" },
-  { id: "consort", name: "Consolidated Standards of Reporting Trials (CONSORT)", imageSrc: "/images/compliance/consort.png" },
-  { id: "hipaa", name: "Health Insurance Portability and Accountability Act", imageSrc: "/images/compliance/hipaa.png" },
-  { id: "icmje", name: "International Committee of Medical Journal Editors (ICMJE)", imageSrc: "/images/compliance/icmje.png" },
+  { id: "cope", name: "Committee on Publication Ethics (COPE)", imageSrc: "/images/publication-support/responding-to-reviewers/COPE_thumb.png" },
+  { id: "consort", name: "Consolidated Standards of Reporting Trials (CONSORT)", imageSrc: "/images/publication-support/poster-preparation/consort-logo-.png" },
+  { id: "hipaa", name: "Health Insurance Portability and Accountability Act", imageSrc: "/images/publication-support/poster-preparation/HIPAA-COMPILANCE-.png" },
+  { id: "icmje", name: "International Committee of Medical Journal Editors (ICMJE)", imageSrc: "/images/publication-support/ICMJE.webp" },
 ];
 
 const journalItems: ComplianceItem[] = [
-  { id: "elsevier", name: "Elsevier", imageSrc: "/images/compliance/elsevier.png" },
-  { id: "springer", name: "Springer", imageSrc: "/images/compliance/springer.png" },
-  { id: "wiley", name: "Wiley", imageSrc: "/images/compliance/wiley.png" },
-  { id: "nejm", name: "New England Journal of Medicine", imageSrc: "/images/compliance/nejm.png" },
+  { id: "elsevier", name: "Elsevier", imageSrc: `${PAGE_IMAGES}/elsevier-.png` },
+  { id: "springer", name: "Springer", imageSrc: `${PAGE_IMAGES}/Springer.png` },
+  { id: "wiley", name: "Wiley", imageSrc: `${PAGE_IMAGES}/Wiley.png` },
+  { id: "nejm", name: "New England Journal of Medicine", imageSrc: `${PAGE_IMAGES}/New-England-Journal-of-Medicine.png` },
 ];
 
 export default function ArtworkPreparationDetails() {
@@ -142,8 +117,14 @@ export default function ArtworkPreparationDetails() {
                         : "bg-white text-slate-800"
                     }`}
                   >
-                    <div className={`mb-4 ${isHovered ? "text-white" : "text-[#0a7a94]"}`}>
-                      {step.icon}
+                    <div className="mb-4">
+                      <Image
+                        src={step.icon}
+                        alt={step.title}
+                        width={32}
+                        height={32}
+                        className={`w-8 h-8 object-contain ${isHovered ? "invert brightness-200" : ""}`}
+                      />
                     </div>
                     <h4 className={`font-bold text-sm tracking-wide uppercase mb-3 ${isHovered ? "text-white" : "text-black"}`}>
                       {step.title}
@@ -245,7 +226,7 @@ export default function ArtworkPreparationDetails() {
           <div className="md:col-span-4 flex justify-center">
             <div className="relative w-[220px] h-[300px] border border-gray-200 shadow-md rounded-sm overflow-hidden bg-white">
               <Image
-                src="/images/sample-artwork-preview.jpg"
+                src={`${PAGE_IMAGES}/Artwork-Preparation-Sample-Work.jpg`}
                 alt="Artwork Preparation Sample Work"
                 fill
                 className="object-cover"

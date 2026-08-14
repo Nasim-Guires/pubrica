@@ -16,28 +16,28 @@ const audienceData: AudienceCard[] = [
     title: "Researchers and Academics",
     description:
       "PhD students, postdocs, and independent researchers who want to improve the visibility and impact of their published works.",
-    imageSrc: "/images/video-abstract/who-we-serve/researchers.jpg",
+    imageSrc: "/images/publication-support/video-abstract/Researchers-and-Academics.jpg",
   },
   {
     id: "academic-institutions",
     title: "Academic Institutions",
     description:
       "Institutions are trying to promote faculty or student research output through engaging formats or for internal showcase, or public distribution.",
-    imageSrc: "/images/video-abstract/who-we-serve/academic-institutions.jpg",
+    imageSrc: "/images/publication-support/video-abstract/Academic-Institutions.jpg",
   },
   {
     id: "journal-publishers",
     title: "Journal Publishers and Editorial Boards",
     description:
       "Academic publishers are embracing multimedia abstracts to improve the discoverability of articles, user engagement with articles, and citation metrics.",
-    imageSrc: "/images/video-abstract/who-we-serve/journal-publishers.jpg",
+    imageSrc: "/images/publication-support/video-abstract/Journal-Publishers-and-Editorial-Boards.jpg",
   },
   {
     id: "funding-agencies",
     title: "Funding Agencies",
     description:
       "Organizations that fund research and seek concise visual summaries of project outcomes to share with stakeholders and policymakers.",
-    imageSrc: "/images/video-abstract/who-we-serve/funding-agencies.jpg",
+    imageSrc: "/images/publication-support/video-abstract/Funding-Agencies.jpg",
   },
   {
     id: "healthcare-professionals",
@@ -45,14 +45,14 @@ const audienceData: AudienceCard[] = [
     description:
       "Practitioners interested in concise, visual summaries of clinical trial findings and applied research.",
     imageSrc:
-      "/images/video-abstract/who-we-serve/healthcare-professionals.jpg",
+      "/images/publication-support/video-abstract/Healthcare-Professionals.jpg",
   },
   {
     id: "pharma-biotech-rd",
     title: "Nutraceutical, Pharma & Biotech R&D Teams",
     description:
       "Industry researchers evaluate published findings for product development and competitive analysis.",
-    imageSrc: "/images/video-abstract/who-we-serve/pharma-biotech.jpg",
+    imageSrc: "/images/publication-support/video-abstract/Nutraceutical-Pharma-Biotech-RD-Teams.jpg",
   },
 ];
 

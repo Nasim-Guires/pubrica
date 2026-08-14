@@ -91,7 +91,7 @@ export default function VideoAbstractHero() {
               {/* Foreground Image */}
               <div className="absolute top-0 right-0 w-[95%] h-[95%] rounded-lg overflow-hidden shadow-lg z-10">
                 <Image
-                  src="/images/video-editing-workspace.jpg"
+                  src="/images/publication-support/video-abstract/Video-Abstract-Service.webp"
                   alt="Video Abstract Editing Workspace"
                   fill
                   className="object-cover"

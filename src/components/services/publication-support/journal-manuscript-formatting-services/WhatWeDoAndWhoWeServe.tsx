@@ -174,7 +174,7 @@ export default function WhatWeDoAndWhoWeServe() {
                 <div className="absolute inset-0 bg-[#e2e8f0]/60 rounded-full transform -rotate-12 scale-90 -z-0"></div>
                 <div className="absolute top-0 left-0 w-3/4 h-48 rounded-xl overflow-hidden shadow-md border-2 border-white z-10">
                   <Image
-                    src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop"
+                    src="/images/publication-support/journal-manuscript-formatting-services/Manuscript-Formatting-Service-what-we-do.jpg"
                     alt="Reviewing academic documents"
                     fill
                     className="object-cover"
@@ -183,7 +183,7 @@ export default function WhatWeDoAndWhoWeServe() {
                 </div>
                 <div className="absolute bottom-0 right-0 w-3/4 h-48 rounded-xl overflow-hidden shadow-md border-2 border-white z-20">
                   <Image
-                    src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop"
+                    src="/images/publication-support/journal-manuscript-formatting-services/Manuscript-Formatting-Service-what-we-do.jpg"
                     alt="Digital research documents"
                     fill
                     className="object-cover"

@@ -147,7 +147,7 @@ export default function PlagiarismWhatWeDo() {
             {/* Top Left Image */}
             <div className="absolute top-0 left-0 w-3/5 h-[220px] rounded-lg overflow-hidden shadow-lg border-4 border-white">
               <Image
-                src="/images/plagiarism-presentation.jpg"
+                src="/images/publication-support/plagiarism-services/Plagiarism-Check-Service-what-we-do.png"
                 alt="Expert presenting data"
                 fill
                 className="object-cover"
@@ -157,7 +157,7 @@ export default function PlagiarismWhatWeDo() {
             {/* Bottom Right Image */}
             <div className="absolute bottom-0 right-10 w-3/5 h-[220px] rounded-lg overflow-hidden shadow-lg border-4 border-white z-10">
               <Image
-                src="/images/plagiarism-document-review.jpg"
+                src="/images/publication-support/plagiarism-services/Plagiarism-Check-Service-what-we-do.png"
                 alt="Reviewing physical documents"
                 fill
                 className="object-cover"

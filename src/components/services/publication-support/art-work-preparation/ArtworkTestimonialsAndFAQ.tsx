@@ -27,8 +27,9 @@ const testimonialsData: Testimonial[] = [
       "Pubrica's team transformed my raw clinical diagrams into publication-quality figures that strictly adhered to The Lancet's artwork submission standards. Their precision and speed made the revision process seamless.",
     author: "DR. AARTI MENON",
     role: "Clinical Researcher",
-    journalImage: "/images/testimonials/lancet-oncology.jpg",
-    journalAlt: "The Lancet Oncology",
+    journalImage:
+      "/images/publication-support/art-work-preparation/the-lancet.jpg",
+    journalAlt: "The Lancet",
   },
   {
     id: 2,
@@ -36,8 +37,18 @@ const testimonialsData: Testimonial[] = [
       "The graphical abstract and illustrations submitted to Nature Biotechnology were created entirely by Pubrica. The editors specifically appreciated the clarity and visual balance of the figures.",
     author: "PROF. NEERAJ KULKARNI",
     role: "Biotechnology",
-    journalImage: "/images/testimonials/nature-biotechnology.jpg",
+    journalImage:
+      "/images/publication-support/art-work-preparation/nature-biotechnology.jpg",
     journalAlt: "Nature Biotechnology",
+  },
+  {
+    id: 3,
+    quote:
+      "My MRI image series needed technical enhancements and resolution upgrades. Pubrica delivered journal-compliant TIFF files in perfect resolution, which helped me meet RSNA’s stringent submission criteria.",
+    author: "DR. KAVITHA NARAYANAN",
+    role: "Medical Imaging Specialist",
+    journalImage: "/images/publication-support/art-work-preparation/RSNA-.jpg",
+    journalAlt: "RSNA",
   },
 ];
 
@@ -83,6 +94,12 @@ export default function ArtworkTestimonialsAndFAQ() {
     setOpenFaqId((prev) => (prev === id ? null : id));
   };
 
+  const mobileItem = testimonialsData[activeTestimonialPage];
+  const desktopItems = [
+    testimonialsData[activeTestimonialPage],
+    testimonialsData[(activeTestimonialPage + 1) % testimonialsData.length],
+  ];
+
   return (
     <div className="w-full font-sans text-slate-800 bg-white">
       {/* ---------------- 1. TESTIMONIALS SECTION ---------------- */}
@@ -98,65 +115,32 @@ export default function ArtworkTestimonialsAndFAQ() {
             say:
           </p>
 
-          {/* Testimonial Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            {testimonialsData.map((item) => (
-              <div
-                key={item.id}
-                className="bg-[#1c473c] text-white p-6 md:p-8 rounded-lg shadow-md flex flex-col justify-between"
-              >
-                <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-start">
-                  <div className="sm:col-span-8">
-                    <p className="text-xs md:text-sm leading-relaxed mb-6 font-light italic">
-                      &quot;{item.quote}&quot;
-                    </p>
-                  </div>
-                  <div className="sm:col-span-4 flex justify-center sm:justify-end">
-                    <div className="relative w-28 h-24 border border-emerald-800/50 rounded overflow-hidden shadow-sm">
-                      <Image
-                        src={item.journalImage}
-                        alt={item.journalAlt}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-bold text-xs md:text-sm tracking-wide uppercase">
-                    {item.author}
-                  </h4>
-                  <p className="text-xs text-emerald-200/80 italic mt-0.5">
-                    {item.role}
-                  </p>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 gap-6 mb-8 md:hidden">
+            <ArtworkTestimonialCard item={mobileItem} />
+          </div>
+          <div className="hidden md:grid grid-cols-2 gap-6 mb-8">
+            {desktopItems.map((item) => (
+              <ArtworkTestimonialCard
+                key={`${activeTestimonialPage}-${item.id}`}
+                item={item}
+              />
             ))}
           </div>
 
-          {/* Pagination Indicators */}
           <div className="flex items-center justify-center gap-2">
-            <button
-              type="button"
-              onClick={() => setActiveTestimonialPage(0)}
-              aria-label="Slide 1"
-              className={`w-2.5 h-2.5 transition-all ${
-                activeTestimonialPage === 0
-                  ? "bg-[#0c373b]"
-                  : "border border-[#0c373b] bg-transparent"
-              }`}
-            />
-            <button
-              type="button"
-              onClick={() => setActiveTestimonialPage(1)}
-              aria-label="Slide 2"
-              className={`w-2.5 h-2.5 transition-all ${
-                activeTestimonialPage === 1
-                  ? "bg-[#0c373b]"
-                  : "border border-[#0c373b] bg-transparent"
-              }`}
-            />
+            {testimonialsData.map((item, index) => (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => setActiveTestimonialPage(index)}
+                aria-label={`Slide ${index + 1}`}
+                className={`w-2.5 h-2.5 transition-all ${
+                  activeTestimonialPage === index
+                    ? "bg-white border border-[#0c373b]"
+                    : "bg-[#0c373b]"
+                }`}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -215,7 +199,7 @@ export default function ArtworkTestimonialsAndFAQ() {
             <div className="md:col-span-5 flex justify-center">
               <div className="relative w-full h-[260px] sm:h-[320px] rounded-sm overflow-hidden shadow-sm border border-gray-200">
                 <Image
-                  src="/images/artwork-assistance-blueprint.jpg"
+                  src="/images/publication-support/art-work-preparation/Table-Formatting-and-Article-Artwork-Preparation.jpg"
                   alt="Reviewing technical blueprints and artwork"
                   fill
                   className="object-cover"
@@ -260,6 +244,36 @@ export default function ArtworkTestimonialsAndFAQ() {
           </div>
         </div>
       </section>
+    </div>
+  );
+}
+
+function ArtworkTestimonialCard({ item }: { item: Testimonial }) {
+  return (
+    <div className="bg-[#1c473c] text-white p-6 md:p-8 rounded-lg shadow-md flex flex-col justify-between">
+      <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-start">
+        <div className="sm:col-span-8">
+          <p className="text-xs md:text-sm leading-relaxed mb-6 font-light italic">
+            &quot;{item.quote}&quot;
+          </p>
+        </div>
+        <div className="sm:col-span-4 flex justify-center sm:justify-end">
+          <div className="relative w-28 h-24 border border-emerald-800/50 rounded overflow-hidden shadow-sm bg-white">
+            <Image
+              src={item.journalImage}
+              alt={item.journalAlt}
+              fill
+              className="object-contain"
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4 className="font-bold text-xs md:text-sm tracking-wide uppercase">
+          {item.author}
+        </h4>
+        <p className="text-xs text-emerald-200/80 italic mt-0.5">{item.role}</p>
+      </div>
     </div>
   );
 }

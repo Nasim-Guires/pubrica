@@ -28,7 +28,8 @@ const testimonialsData: Testimonial[] = [
     journalName: "Journal of Clinical Oncology",
     authorName: "DR. ANJALI MEHTA,",
     authorRole: "Oncology Researcher",
-    coverImageSrc: "/images/testimonials/jco-cover.jpg",
+    coverImageSrc:
+      "/images/publication-support/poster-preparation/journal-of-clinical-oncology-1.jpg",
   },
   {
     id: 2,
@@ -37,7 +38,8 @@ const testimonialsData: Testimonial[] = [
     journalName: "The Lancet Respiratory Medicine",
     authorName: "DR. RAJESH KUMAR,",
     authorRole: "Pulmonologist",
-    coverImageSrc: "/images/testimonials/lancet-cover.jpg",
+    coverImageSrc:
+      "/images/publication-support/plagiarism-services/the-lancet-respiratory-medicine.jpg",
   },
   {
     id: 3,
@@ -46,7 +48,8 @@ const testimonialsData: Testimonial[] = [
     journalName: "Journal of Medical Case Reports",
     authorName: "DR. KARAN PATEL,",
     authorRole: "Clinical Researcher",
-    coverImageSrc: "/images/testimonials/bmc-cover.jpg",
+    coverImageSrc:
+      "/images/publication-support/plagiarism-services/journal-of-medical-case-report.jpg",
   },
 ];
 
@@ -107,34 +110,69 @@ export default function TestimonialsAndFaq() {
         </p>
 
         {/* Testimonials Grid / Carousel */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          {testimonialsData.slice(activeSlide, activeSlide + 2).map((item) => (
+        <div className="grid grid-cols-1 gap-6 mb-6 md:hidden">
+          {(() => {
+            const item = testimonialsData[activeSlide];
+            return (
+              <div
+                key={item.id}
+                className="bg-[#1f4037] text-white rounded-sm p-6 md:p-8 flex flex-col justify-between shadow-md min-h-[260px] transition-all duration-300"
+              >
+                <div className="grid grid-cols-12 gap-4 items-start">
+                  <div className="col-span-8 space-y-3">
+                    <p className="text-xs md:text-sm text-gray-200 leading-relaxed italic font-light">
+                      &quot;{item.quote}&quot;
+                    </p>
+                  </div>
+                  <div className="col-span-4 flex justify-end">
+                    <div className="relative w-28 h-36 bg-white rounded overflow-hidden shadow-sm">
+                      <Image
+                        src={item.coverImageSrc}
+                        alt={item.journalName}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-4 pt-2 border-t border-emerald-800/40">
+                  <h4 className="text-xs md:text-sm font-bold tracking-wider uppercase text-white">
+                    {item.authorName}
+                  </h4>
+                  <p className="text-xs italic text-emerald-200">
+                    {item.authorRole}
+                  </p>
+                </div>
+              </div>
+            );
+          })()}
+        </div>
+        <div className="hidden md:grid grid-cols-2 gap-6 mb-6">
+          {[
+            testimonialsData[activeSlide],
+            testimonialsData[(activeSlide + 1) % testimonialsData.length],
+          ].map((item) => (
             <div
-              key={item.id}
+              key={`${activeSlide}-${item.id}`}
               className="bg-[#1f4037] text-white rounded-sm p-6 md:p-8 flex flex-col justify-between shadow-md min-h-[260px] transition-all duration-300"
             >
               <div className="grid grid-cols-12 gap-4 items-start">
-                {/* Quote Content */}
                 <div className="col-span-8 space-y-3">
                   <p className="text-xs md:text-sm text-gray-200 leading-relaxed italic font-light">
                     &quot;{item.quote}&quot;
                   </p>
                 </div>
-
-                {/* Journal Cover Image */}
                 <div className="col-span-4 flex justify-end">
                   <div className="relative w-28 h-36 bg-white rounded overflow-hidden shadow-sm">
                     <Image
                       src={item.coverImageSrc}
                       alt={item.journalName}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                     />
                   </div>
                 </div>
               </div>
-
-              {/* Author Info */}
               <div className="mt-4 pt-2 border-t border-emerald-800/40">
                 <h4 className="text-xs md:text-sm font-bold tracking-wider uppercase text-white">
                   {item.authorName}
@@ -149,24 +187,18 @@ export default function TestimonialsAndFaq() {
 
         {/* Slide Pagination Indicators */}
         <div className="flex justify-center items-center space-x-2 pt-2">
-          <button
-            onClick={() => setActiveSlide(0)}
-            aria-label="Testimonial Page 1"
-            className={`w-3 h-3 transition-colors ${
-              activeSlide === 0
-                ? "bg-[#0c373b]"
-                : "border border-[#0c373b] bg-white"
-            }`}
-          />
-          <button
-            onClick={() => setActiveSlide(1)}
-            aria-label="Testimonial Page 2"
-            className={`w-3 h-3 transition-colors ${
-              activeSlide === 1
-                ? "bg-[#0c373b]"
-                : "border border-[#0c373b] bg-white"
-            }`}
-          />
+          {testimonialsData.map((item, index) => (
+            <button
+              key={item.id}
+              onClick={() => setActiveSlide(index)}
+              aria-label={`Testimonial Page ${index + 1}`}
+              className={`w-3 h-3 transition-colors ${
+                activeSlide === index
+                  ? "border border-[#0c373b] bg-white"
+                  : "bg-[#0c373b]"
+              }`}
+            />
+          ))}
         </div>
       </section>
 

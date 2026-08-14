@@ -3,6 +3,48 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
+interface Testimonial {
+  id: number;
+  quote: string;
+  author: string;
+  role: string;
+  journal: string;
+  journalImage: string;
+}
+
+const testimonialsData: Testimonial[] = [
+  {
+    id: 1,
+    quote:
+      "Pubrica's formatting team demonstrated a deep understanding of journal-specific structure and ethical compliance. They reformatted our entire manuscript and supplementary files exactly as per the International Journal of Cardiology requirements.",
+    author: "DR. M.RAJKUMAR,",
+    role: "Consultant Cardiologist",
+    journal: "International Journal of Cardiology",
+    journalImage:
+      "/images/publication-support/journal-manuscript-formatting-services/international-journal-of-cardiology-recruitment.jpg",
+  },
+  {
+    id: 2,
+    quote:
+      "I struggled with the technical formatting and figure resolution issues required by PLOS ONE. Pubrica resolved all layout, table, and referencing inconsistencies quickly and professionally. Their service exceeded expectations.",
+    author: "DR. KAVITHA NARAYANAN,",
+    role: "PhD Scholar in Public Health",
+    journal: "PLOS ONE",
+    journalImage:
+      "/images/publication-support/journal-manuscript-formatting-services/plos-one-.jpg",
+  },
+  {
+    id: 3,
+    quote:
+      "The formatting support from Pubrica was instrumental in aligning our manuscript with BMC Cancer's strict submission guidelines. Their attention to detail in referencing and figure placement saved us valuable time during the submission phase.",
+    author: "DR. SHALINI VERMA,",
+    role: "Oncology Research Fellow",
+    journal: "BMC Cancer",
+    journalImage:
+      "/images/publication-support/journal-manuscript-formatting-services/Bmc-cancer.jpg",
+  },
+];
+
 interface FAQItem {
   id: number;
   question: string;
@@ -44,12 +86,19 @@ const faqData: FAQItem[] = [
 ];
 
 export default function TestimonialsAndFAQ() {
+  const [activeSlide, setActiveSlide] = useState(0);
   // Toggle FAQ accordion state (defaults to item 2 expanded as shown in screenshot)
   const [openFaq, setOpenFaq] = useState<number | null>(2);
 
   const toggleFaq = (id: number) => {
     setOpenFaq((prev) => (prev === id ? null : id));
   };
+
+  const mobileItem = testimonialsData[activeSlide];
+  const desktopItems = [
+    testimonialsData[activeSlide],
+    testimonialsData[(activeSlide + 1) % testimonialsData.length],
+  ];
 
   return (
     <div className="w-full bg-[#f8fafc] font-sans text-gray-800 py-12 space-y-20 antialiased">
@@ -69,98 +118,29 @@ export default function TestimonialsAndFAQ() {
           smooth submission. Here is what our clients say:
         </p>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-          {/* Card 1: Dr. M. Rajkumar */}
-          <div className="bg-[#1e3e35] text-white p-6 md:p-8 rounded-md flex flex-col justify-between shadow-md">
-            <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-start">
-              <div className="sm:col-span-8 space-y-3">
-                <p className="text-xs md:text-sm text-gray-100 leading-relaxed italic">
-                  &quot;Pubrica&apos;s formatting team demonstrated a deep
-                  understanding of journal-specific structure and ethical
-                  compliance. They reformatted our entire manuscript and
-                  supplementary files exactly as per the{" "}
-                  <strong className="font-semibold not-italic text-white">
-                    International Journal of Cardiology
-                  </strong>{" "}
-                  requirements.&quot;
-                </p>
-              </div>
-
-              {/* Journal Cover Image */}
-              <div className="sm:col-span-4 relative h-32 w-full rounded overflow-hidden bg-white shadow-xs">
-                <Image
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=400&auto=format&fit=crop" // Replace with exact journal cover asset
-                  alt="International Journal of Cardiology"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 25vw"
-                />
-              </div>
-            </div>
-
-            <div className="mt-6 pt-2">
-              <h4 className="text-xs font-bold tracking-wider uppercase text-white">
-                DR. M.RAJKUMAR,
-              </h4>
-              <p className="text-[11px] text-gray-300 italic">
-                Consultant Cardiologist
-              </p>
-            </div>
-          </div>
-
-          {/* Card 2: Dr. Kavitha Narayanan */}
-          <div className="bg-[#1e3e35] text-white p-6 md:p-8 rounded-md flex flex-col justify-between shadow-md">
-            <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-start">
-              <div className="sm:col-span-8 space-y-3">
-                <p className="text-xs md:text-sm text-gray-100 leading-relaxed italic">
-                  &quot;I struggled with the technical formatting and figure
-                  resolution issues required by{" "}
-                  <strong className="font-semibold not-italic text-white">
-                    PLOS ONE
-                  </strong>
-                  . Pubrica resolved all layout, table, and referencing
-                  inconsistencies quickly and professionally. Their service
-                  exceeded expectations.&quot;
-                </p>
-              </div>
-
-              {/* Journal Cover Image */}
-              <div className="sm:col-span-4 relative h-32 w-full rounded overflow-hidden bg-black shadow-xs flex items-center justify-center p-2">
-                <div className="text-center text-white space-y-1">
-                  <span className="text-xs font-bold tracking-widest block border-b border-gray-600 pb-1">
-                    PLOS ONE
-                  </span>
-                  <span className="text-[9px] text-yellow-400 block pt-1">
-                    All good science deserves to be published.
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-6 pt-2">
-              <h4 className="text-xs font-bold tracking-wider uppercase text-white">
-                DR. KAVITHA NARAYANAN,
-              </h4>
-              <p className="text-[11px] text-gray-300 italic">
-                PhD Scholar in Public Health
-              </p>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 gap-6 items-stretch mb-6 md:hidden">
+          <JournalTestimonialCard item={mobileItem} />
         </div>
-
-        {/* Carousel Pagination Indicators */}
+        <div className="hidden md:grid grid-cols-2 gap-6 items-stretch mb-6">
+          {desktopItems.map((item) => (
+            <JournalTestimonialCard
+              key={`${activeSlide}-${item.id}`}
+              item={item}
+            />
+          ))}
+        </div>
         <div className="flex justify-center items-center space-x-2 mt-6">
-          <button
-            type="button"
-            aria-label="Slide 1"
-            className="w-3 h-3 bg-[#0c3830] rounded-xs cursor-pointer"
-          />
-          <button
-            type="button"
-            aria-label="Slide 2"
-            className="w-3 h-3 border border-[#0c3830] bg-transparent rounded-xs cursor-pointer"
-          />
+          {testimonialsData.map((item, index) => (
+            <button
+              key={item.id}
+              type="button"
+              onClick={() => setActiveSlide(index)}
+              aria-label={`Slide ${index + 1}`}
+              className={`w-3 h-3 border border-[#1e3e35] ${
+                activeSlide === index ? "bg-white" : "bg-[#1e3e35]"
+              }`}
+            />
+          ))}
         </div>
       </section>
 
@@ -210,6 +190,35 @@ export default function TestimonialsAndFAQ() {
           })}
         </div>
       </section>
+    </div>
+  );
+}
+
+function JournalTestimonialCard({ item }: { item: Testimonial }) {
+  return (
+    <div className="bg-[#1e3e35] text-white p-6 md:p-8 rounded-md flex flex-col justify-between shadow-md">
+      <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-start">
+        <div className="sm:col-span-8 space-y-3">
+          <p className="text-xs md:text-sm text-gray-100 leading-relaxed italic">
+            &quot;{item.quote}&quot;
+          </p>
+        </div>
+        <div className="sm:col-span-4 relative h-32 w-full rounded overflow-hidden bg-white shadow-xs">
+          <Image
+            src={item.journalImage}
+            alt={item.journal}
+            fill
+            className="object-contain"
+            sizes="(max-width: 640px) 100vw, 25vw"
+          />
+        </div>
+      </div>
+      <div className="mt-6 pt-2">
+        <h4 className="text-xs font-bold tracking-wider uppercase text-white">
+          {item.author}
+        </h4>
+        <p className="text-[11px] text-gray-300 italic">{item.role}</p>
+      </div>
     </div>
   );
 }
