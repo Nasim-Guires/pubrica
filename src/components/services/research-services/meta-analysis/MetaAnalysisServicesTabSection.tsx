@@ -55,7 +55,8 @@ const servicesData: TabData[] = [
     id: "data-extraction",
     label: "Data Extraction & Analysis",
     title: "Data Extraction & Analysis",
-    imageSrc: "/images/services/data-extraction-chart.jpg",
+    imageSrc:
+      "/images/research-services/systematic-review/Data-Extraction-Analysis.png",
     imageAlt: "Data Extraction and Analysis Charts",
     content: (
       <ul
@@ -94,7 +95,8 @@ const servicesData: TabData[] = [
     id: "writing-formatting",
     label: "Writing & Formatting",
     title: "Writing & Formatting",
-    imageSrc: "/images/services/writing-formatting-book.jpg",
+    imageSrc:
+      "/images/research-services/systematic-review/Writing-Formatting.png",
     imageAlt: "Writing and Formatting Academic Journal Manuscripts",
     content: (
       <ul

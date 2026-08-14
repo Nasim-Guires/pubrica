@@ -456,7 +456,9 @@ export default function ExperimentalDesignsAndPackages() {
           <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
             <div className="h-16 relative w-32 flex items-center justify-center">
               <Image
-                src="/images/research-services/experimental-design/International-Council-for-Harmonisation-%E2%80%93-Good-Clinical-Practice-1.png"
+                src={
+                  "/images/research-services/experimental-design/International-Council-for-Harmonisation-\u2013-Good-Clinical-Practice-1.png"
+                }
                 alt="ICH GCP Logo"
                 fill
                 className="object-contain"
@@ -519,7 +521,9 @@ export default function ExperimentalDesignsAndPackages() {
           <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
             <div className="h-16 relative w-28 flex items-center justify-center">
               <Image
-                src="/images/research-services/experimental-design/Animal-Research-Reporting-of-In-Vivo-Experiments-%E2%80%93-ARRIVE.png"
+                src={
+                  "/images/research-services/experimental-design/Animal-Research-Reporting-of-In-Vivo-Experiments-\u2013-ARRIVE.png"
+                }
                 alt="ARRIVE Logo"
                 fill
                 className="object-contain"
