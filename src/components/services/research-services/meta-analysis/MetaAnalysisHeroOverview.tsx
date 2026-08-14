@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
@@ -295,9 +296,11 @@ export default function MetaAnalysisHeroOverview() {
                     boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
                   }}
                 >
-                  <img
-                    src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop"
-                    alt="Lab researcher analyzing clinical research data"
+                  <Image
+                    src="/images/research-services/meta-analysis/Meta-Analysis-Services-for-Life-Sciences-Pharma-and-Research.webp"
+                    alt="Meta-Analysis Services for Life Sciences, Pharma, and Research"
+                    width={420}
+                    height={420}
                     style={{
                       width: "100%",
                       height: "auto",

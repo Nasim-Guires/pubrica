@@ -1,34 +1,24 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 interface ArticleTypeCategory {
   id: string;
   title: string;
-  iconSvg: React.ReactNode;
+  iconSrc: string;
   items: string[];
 }
+
+const IMG =
+  "/images/physician-writing-services/original-research-article";
 
 const categories: ArticleTypeCategory[] = [
   {
     id: "physicians",
     title: "For Physicians & Clinicians",
-    iconSvg: (
-      <svg
-        className="w-6 h-6 text-emerald-800"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-        />
-      </svg>
-    ),
+    iconSrc: `${IMG}/For-Physicians-Clinicians.png`,
     items: [
       "Clinical Audits & Case Series",
       "Prospective and Retrospective Cohort Studies (Cohort Study Manuscript Development)",
@@ -40,21 +30,7 @@ const categories: ArticleTypeCategory[] = [
   {
     id: "surgeons",
     title: "For Surgeons & Procedural Specialists",
-    iconSvg: (
-      <svg
-        className="w-6 h-6 text-emerald-800"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-        />
-      </svg>
-    ),
+    iconSrc: `${IMG}/For-Surgeons-Procedural-Specialists.png`,
     items: [
       "Surgical Innovation Studies",
       "Perioperative Outcome Analysis",
@@ -66,27 +42,7 @@ const categories: ArticleTypeCategory[] = [
   {
     id: "academics",
     title: "For Academic Faculty & Researchers",
-    iconSvg: (
-      <svg
-        className="w-6 h-6 text-emerald-800"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M12 14l9-5-9-5-9 5 9 5z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-        />
-      </svg>
-    ),
+    iconSrc: `${IMG}/For-Academic-Faculty-Researchers.png`,
     items: [
       "Investigator-Initiated Research (IIR)",
       "Institution-Based Studies (Cohort/Cross-sectional)",
@@ -98,21 +54,7 @@ const categories: ArticleTypeCategory[] = [
   {
     id: "pharma",
     title: "For Pharma & Biotech Professionals",
-    iconSvg: (
-      <svg
-        className="w-6 h-6 text-emerald-800"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-        />
-      </svg>
-    ),
+    iconSrc: `${IMG}/For-Pharma-Biotech-Professionals.png`,
     items: [
       "Phase I–IV Clinical Trials",
       "Pharmacoeconomic Studies",
@@ -124,21 +66,7 @@ const categories: ArticleTypeCategory[] = [
   {
     id: "public-health",
     title: "For Public Health Experts & Epidemiologists",
-    iconSvg: (
-      <svg
-        className="w-6 h-6 text-emerald-800"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-        />
-      </svg>
-    ),
+    iconSrc: `${IMG}/For-Public-Health-Experts-Epidemiologists.png`,
     items: [
       "Disease Surveillance Studies",
       "Community Health Assessments",
@@ -239,8 +167,14 @@ export default function ResearchArticleTypesAccordion() {
                   className="w-full bg-emerald-50/70 hover:bg-emerald-100/60 p-4 flex items-center justify-between text-left transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
                 >
                   <div className="flex items-center space-x-3">
-                    <div className="p-1.5 bg-emerald-100/80 rounded-full flex-shrink-0">
-                      {cat.iconSvg}
+                    <div className="relative w-8 h-8 bg-emerald-100/80 rounded-full flex-shrink-0 overflow-hidden">
+                      <Image
+                        src={cat.iconSrc}
+                        alt=""
+                        fill
+                        className="object-cover"
+                        sizes="32px"
+                      />
                     </div>
                     <h3 className="text-base font-bold text-slate-900">
                       {cat.title}

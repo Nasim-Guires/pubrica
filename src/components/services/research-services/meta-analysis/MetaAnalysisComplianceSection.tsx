@@ -176,7 +176,7 @@ export default function MetaAnalysisComplianceSection() {
         }}
       >
         <Image
-          src="/images/services/meta-analysis-sample.jpg"
+          src="/images/research-services/meta-analysis/Meta-Analysis-Service-Sample-Work.png"
           alt="Meta-analysis sample work"
           width={320}
           height={320}

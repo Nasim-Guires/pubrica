@@ -117,7 +117,7 @@ export default function OriginalResearchArticle() {
             <div className="relative w-full max-w-lg bg-emerald-950 rounded-2xl p-4 sm:p-6 shadow-xl">
               <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden bg-white shadow-inner">
                 <Image
-                  src="/images/original-research-article-writing-cycle.png"
+                  src="/images/physician-writing-services/original-research-article/original-research-article-writing-services.webp"
                   alt="Original Research Article Writing workflow diagram covering Abstract, Keywords, Introduction, Methods, Results, Discussion, Conclusion, and References"
                   fill
                   className="object-contain p-2"

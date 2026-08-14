@@ -18,7 +18,8 @@ const servicesData: TabData[] = [
     id: "meta-analysis guidelines compliance",
     label: "Meta-Analysis Guidelines Compliance",
     title: "Meta-Analysis Guidelines Compliance",
-    imageSrc: "/images/services/protocols-folder.jpg",
+    imageSrc:
+      "/images/research-services/meta-analysis/Meta-Analysis-Guidelines-Compliance.png",
     imageAlt: "Meta-Analysis Guidelines Compliance",
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
@@ -31,7 +32,8 @@ const servicesData: TabData[] = [
     id: "structured-reporting",
     label: "Structured Reporting",
     title: "Structured Reporting",
-    imageSrc: "/images/services/literature-search-chart.jpg",
+    imageSrc:
+      "/images/research-services/meta-analysis/Structured-Reporting.png",
     imageAlt: "Structured Reporting",
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
@@ -127,7 +129,8 @@ const servicesData: TabData[] = [
     id: "publication-support",
     label: "Publication Support",
     title: "Publication Support",
-    imageSrc: "/images/services/publication-support-call.jpg",
+    imageSrc:
+      "/images/research-services/meta-analysis/Publication-Support-Services.png",
     imageAlt: "Publication Support and Journal Advisory Services",
     content: (
       <ul
@@ -164,7 +167,8 @@ const servicesData: TabData[] = [
     id: "documentation-templates",
     label: "Documentation Templates",
     title: "Documentation Templates",
-    imageSrc: "/images/services/documentation-templates.jpg",
+    imageSrc:
+      "/images/research-services/meta-analysis/Documentation-Templates-1.png",
     imageAlt: "Documentation Templates and Study Protocols",
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
@@ -185,7 +189,8 @@ const servicesData: TabData[] = [
     id: "enhancement-services",
     label: "Enhancement Services",
     title: "Enhancement Services",
-    imageSrc: "/images/services/enhancement-services-meeting.jpg",
+    imageSrc:
+      "/images/research-services/meta-analysis/Enhancement-Services-1.png",
     imageAlt: "Enhancement Services and Research Editing",
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
@@ -199,7 +204,8 @@ const servicesData: TabData[] = [
     id: "plagiarism-analysis",
     label: "Plagiarism Analysis",
     title: "Plagiarism Analysis",
-    imageSrc: "/images/services/quality-integrity-clipboard.jpg",
+    imageSrc:
+      "/images/research-services/meta-analysis/Plagiarism-Analysis.png",
     imageAlt: "Plagiarism Analysis",
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
@@ -212,7 +218,8 @@ const servicesData: TabData[] = [
     id: "dedicated-project-coordination",
     label: "Dedicated Project Coordination",
     title: "Dedicated Project Coordination",
-    imageSrc: "/images/services/project-coordination.jpg",
+    imageSrc:
+      "/images/research-services/meta-analysis/Dedicated-Project-Coordination-1.png",
     imageAlt: "Dedicated Project Coordination Team",
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
@@ -224,7 +231,9 @@ const servicesData: TabData[] = [
 ];
 
 export default function MetaAnalysisServicesTabSection() {
-  const [activeTabId, setActiveTabId] = useState<string>("planning-protocol");
+  const [activeTabId, setActiveTabId] = useState<string>(
+    "meta-analysis guidelines compliance",
+  );
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {

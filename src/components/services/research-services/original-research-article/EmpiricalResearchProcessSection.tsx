@@ -1,4 +1,5 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Image from "next/image";
 import Link from "next/link";
 
 interface ProcessStep {
@@ -222,16 +223,14 @@ export default function EmpiricalResearchProcessSection() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
             {/* Guarantee Badge Graphic */}
-            <div className="relative w-28 h-28 flex-shrink-0 flex items-center justify-center rounded-full border-4 border-dashed border-sky-300 bg-sky-900/40 p-2 shadow-inner">
-              <div className="text-center font-extrabold text-sky-200 leading-tight">
-                <span className="text-xs uppercase tracking-widest block">
-                  Satisfaction
-                </span>
-                <span className="text-2xl text-white block">100%</span>
-                <span className="text-xs uppercase tracking-widest block">
-                  Guarantee
-                </span>
-              </div>
+            <div className="relative w-28 h-28 flex-shrink-0">
+              <Image
+                src="/images/publication-support/Satisfaction_Guarantee.webp"
+                alt="100% Satisfaction Guarantee"
+                fill
+                className="object-contain"
+                sizes="112px"
+              />
             </div>
 
             {/* Banner Text */}

@@ -1,31 +1,33 @@
+const IMG =
+  "/images/physician-writing-services/original-research-article";
+
 export const originalResearchTestimonials = [
   {
-    image: "/images/testimonials/bmc-public-health.jpg",
+    image: `${IMG}/bmc-public-health.jpg`,
     quote:
       "Pubrica's team provided exceptional support in finalizing my cross-sectional study on adolescent nutrition. Their attention to ethical standards and STROBE compliance helped secure acceptance in BMC Public Health without major revisions.",
     name: "Dr. Anitha Raj",
     designation: "Assistant Professor",
     organization: "India",
-    flag: "/images/flags/india.png",
+    flag: "/images/editing-and-translation/flag.png",
   },
   {
-    image: "/images/testimonials/journal-of-translational-medicine.jpg",
+    image: `${IMG}/the-journal-of-translational-medicine.jpg`,
     quote:
       "The scientific accuracy and journal-specific formatting were excellent. Pubrica structured the manuscript precisely to match the Journal of Translational Medicine submission format, especially in compliance with STROBE guidelines. This significantly accelerated the peer-review outcome.",
     name: "Prof. Markus Klein",
     designation: "Biomedical Researcher",
     organization: "Germany",
-    flag: "/images/flags/germany.png",
+    flag: `${IMG}/germany.png`,
   },
   {
-    image:
-      "/images/testimonials/asian-pacific-journal-of-cancer-prevention.jpg",
+    image: `${IMG}/asian-pacific-journal-of-cancer-prevention.jpg`,
     quote:
       "Pubrica's team demonstrated high-level scientific expertise in writing and structuring my oncology manuscript. Their adherence to CONSORT guidelines and formatting as per the Asian Pacific Journal of Cancer Prevention ensured quick peer acceptance. Highly recommended for clinicians aiming for an indexed publication.",
     name: "Dr. Sanjay Menon",
     designation: "Clinical Oncologist",
     organization: "India",
-    flag: "/images/flags/india.png",
+    flag: "/images/editing-and-translation/flag.png",
   },
 ];
 

@@ -1,4 +1,5 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Image from "next/image";
 import React from "react";
 
 const MetaAnalysisPackagesSection = () => {
@@ -72,21 +73,12 @@ const MetaAnalysisPackagesSection = () => {
               gap: "15px",
             }}
           >
-            <div
-              style={{
-                width: 58,
-                height: 58,
-                borderRadius: "50%",
-                background: "#F8D57A",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                fontSize: 34,
-                fontWeight: 700,
-              }}
-            >
-              B
-            </div>
+            <Image
+              src="/images/editing-and-translation/basic-pacakge.png"
+              alt="Basic package"
+              width={58}
+              height={58}
+            />
 
             <div>
               <h3 style={{ margin: 0, color: "#1F4B60" }}>Basic</h3>
@@ -135,21 +127,12 @@ const MetaAnalysisPackagesSection = () => {
               gap: "15px",
             }}
           >
-            <div
-              style={{
-                width: 58,
-                height: 58,
-                borderRadius: "50%",
-                background: "#F8D57A",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                fontSize: 34,
-                fontWeight: 700,
-              }}
-            >
-              S
-            </div>
+            <Image
+              src="/images/publication-support/art-work-preparation/S.png"
+              alt="Standard package"
+              width={58}
+              height={58}
+            />
 
             <div>
               <h3 style={{ margin: 0, color: "#7A44A8" }}>Standard</h3>
@@ -198,21 +181,12 @@ const MetaAnalysisPackagesSection = () => {
               gap: "15px",
             }}
           >
-            <div
-              style={{
-                width: 58,
-                height: 58,
-                borderRadius: "50%",
-                background: "#F8D57A",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                fontSize: 34,
-                fontWeight: 700,
-              }}
-            >
-              P
-            </div>
+            <Image
+              src="/images/editing-and-translation/pro.webp"
+              alt="Premium package"
+              width={58}
+              height={58}
+            />
 
             <div>
               <h3 style={{ margin: 0, color: "#7A4D0B" }}>Premium</h3>

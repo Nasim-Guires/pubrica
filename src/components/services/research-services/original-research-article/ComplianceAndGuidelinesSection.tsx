@@ -13,23 +13,26 @@ interface GuidelineItem {
   altText: string;
 }
 
+const IMG =
+  '/images/physician-writing-services/original-research-article';
+
 const ethicalStandards: GuidelineItem[] = [
   {
     id: 'icmje',
     title: 'International Committee of Medical Journal Editors',
-    logoSrc: '/images/standards/icmje-logo.png',
+    logoSrc: `${IMG}/icmje.png`,
     altText: 'ICMJE - International Committee of Medical Journal Editors Logo',
   },
   {
     id: 'cope',
     title: 'Committee on Publication Ethics',
-    logoSrc: '/images/standards/cope-logo.png',
+    logoSrc: `${IMG}/COPE.png`,
     altText: 'COPE - Committee on Publication Ethics Logo',
   },
   {
     id: 'helsinki',
     title: 'Declaration of Helsinki',
-    logoSrc: '/images/standards/helsinki-logo.png',
+    logoSrc: `${IMG}/Declaration-of-Helsinki.png`,
     altText: 'World Medical Association Declaration of Helsinki Logo',
   },
 ];
@@ -39,42 +42,42 @@ const reportingGuidelines: GuidelineItem[] = [
     id: 'consort',
     title: 'Consolidated Standards of Reporting Trials – CONSORT',
     subtitle: 'For randomized controlled trials',
-    logoSrc: '/images/standards/spirit-consort-logo.png',
+    logoSrc: `${IMG}/Consolidated-Standards-of-Reporting-Trials.png`,
     altText: 'SPIRIT CONSORT Logo',
   },
   {
     id: 'strobe',
     title: 'Strengthening the Reporting of Observational Studies in Epidemiology – STROBE',
     subtitle: 'For observational studies',
-    logoSrc: '/images/standards/strobe-logo.png',
+    logoSrc: `${IMG}/Strengthening-the-Reporting-of-Observational-Studies-in-Epidemiology-1.png`,
     altText: 'STROBE Statement Logo',
   },
   {
     id: 'prisma',
     title: 'Preferred Reporting Items for Systematic Reviews and Meta-Analyses – PRISMA',
     subtitle: 'For systematic reviews and meta-analyses',
-    logoSrc: '/images/standards/prisma-logo.png',
+    logoSrc: `${IMG}/Preferred-Reporting-Items-for-Systematic-Reviews-1.png`,
     altText: 'PRISMA Guidelines Logo',
   },
   {
     id: 'care',
     title: 'Case Report Guidelines',
     description: 'Designed to improve the completeness and transparency of case reports.',
-    logoSrc: '/images/standards/care-logo.png',
+    logoSrc: `${IMG}/Case-Report-Guidelines-1.png`,
     altText: 'CARE Case Report Guidelines Logo',
   },
   {
     id: 'arrive',
     title: 'Animal Research: Reporting of In Vivo Experiments – ARRIVE',
     description: 'Designed to improve the reporting of research involving animals.',
-    logoSrc: '/images/standards/arrive-logo.png',
+    logoSrc: `${IMG}/Animal-Research-Reporting-of-In-Vivo-Experiments-\u2013-ARRIVE.png`,
     altText: 'ARRIVE Guidelines Logo',
   },
   {
     id: 'trend',
     title: 'Transparent Reporting of Evaluations',
     description: 'Used for reporting non-randomized public health intervention studies.',
-    logoSrc: '/images/standards/trend-logo.png',
+    logoSrc: `${IMG}/Transparent-Reporting-of-Evaluations-with-Nonrandomized-Designs-1.png`,
     altText: 'TREND Statement Logo',
   },
 ];

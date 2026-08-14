@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 interface AccordionItem {
@@ -211,9 +212,11 @@ export default function MetaAnalysisTypesAccordion() {
                 marginBottom: "60px",
               }}
             >
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop"
-                alt="Statistical charts and data report"
+              <Image
+                src="/images/research-services/meta-analysis/Types-of-Meta-Analysis-That-We-Offer.png"
+                alt="Types of meta-analysis that we offer"
+                width={280}
+                height={200}
                 style={{
                   width: "100%",
                   height: "200px",
@@ -237,9 +240,11 @@ export default function MetaAnalysisTypesAccordion() {
                 border: "4px solid #ffffff",
               }}
             >
-              <img
-                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=600&auto=format&fit=crop"
-                alt="Laboratory research microscope"
+              <Image
+                src="/images/research-services/meta-analysis/Types-of-Meta-Analysis-That-We-Offer.png"
+                alt="Types of meta-analysis that we offer"
+                width={260}
+                height={190}
                 style={{
                   width: "100%",
                   height: "190px",

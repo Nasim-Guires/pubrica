@@ -1,7 +1,5 @@
-import InsightCard from "@/components/services/editing-translation/Insights/InsightCard";
-import TestimonialCard from "@/components/services/editing-translation/Testimonials/TestimonialCard";
-import TestimonialSlider from "@/components/services/editing-translation/Testimonials/TestimonialSlider";
-import TestimonialsAndFAQSection from "@/components/services/educational-content-development/TestimonialsAndFAQSection";
+import CommonTestimonial from "@/components/common/CommonTestimonials";
+import CommonFAQ from "@/components/common/FAQ";
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 import MetaAnalysisComplianceSection from "@/components/services/research-services/meta-analysis/MetaAnalysisComplianceSection";
 import MetaAnalysisHeroOverview from "@/components/services/research-services/meta-analysis/MetaAnalysisHeroOverview";
@@ -11,6 +9,10 @@ import MetaAnalysisServicesTabSection from "@/components/services/research-servi
 import MetaAnalysisTypesAccordion from "@/components/services/research-services/meta-analysis/MetaAnalysisTypesAccordion";
 import MetaReviewServiceOverview from "@/components/services/research-services/meta-analysis/MetaReviewServiceOverview";
 import WhoWeServe from "@/components/services/research-services/meta-analysis/WhoWeServe";
+import {
+  metaAnalysisFAQ,
+  metaAnalysisTestimonials,
+} from "@/lib/services/data/research-services/metaAnalysisTestimonials";
 
 import React from "react";
 
@@ -25,8 +27,16 @@ const page = () => {
       <MetaReviewServiceOverview />
       <MetaAnalysisComplianceSection />
       <MetaAnalysisPackagesSection />
-      <TestimonialsAndFAQSection/>
-      <InsightsSection/>
+      <CommonTestimonial
+        title="Testimonials"
+        description="Learn how Pubrica's meta-analysis service has helped researchers publish statistically rigorous, guideline-compliant evidence syntheses in leading journals. Here is what our clients say:"
+        testimonials={metaAnalysisTestimonials}
+      />
+      <CommonFAQ
+        title="Frequently Asked Questions – Meta Analysis Service"
+        faqs={metaAnalysisFAQ}
+      />
+      <InsightsSection />
     </>
   );
 };

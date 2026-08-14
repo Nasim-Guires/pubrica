@@ -1,27 +1,21 @@
+import Image from "next/image";
 import Link from "next/link";
-import {
-  UserGroupIcon,
-  AcademicCapIcon,
-  BeakerIcon,
-  BuildingLibraryIcon,
-  DocumentTextIcon,
-  LightBulbIcon,
-  MagnifyingGlassIcon,
-  GlobeAltIcon,
-} from "@heroicons/react/24/outline";
 
 interface AudienceCard {
   id: string;
   title: string;
   description: React.ReactNode;
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  imageSrc: string;
 }
+
+const IMG =
+  "/images/physician-writing-services/original-research-article";
 
 const audiences: AudienceCard[] = [
   {
     id: "physicians",
     title: "Physicians & Clinicians",
-    icon: UserGroupIcon,
+    imageSrc: `${IMG}/Physicians-Clinicians.png`,
     description: (
       <>
         Busy medical practitioners conducting clinical audits, case series, or
@@ -33,7 +27,7 @@ const audiences: AudienceCard[] = [
   {
     id: "surgeons",
     title: "Surgeons & Surgical Researchers",
-    icon: AcademicCapIcon,
+    imageSrc: `${IMG}/Surgeons-Surgical-Researchers.png`,
     description: (
       <>
         Specialists working on procedural innovations, surgical outcomes, and
@@ -45,7 +39,7 @@ const audiences: AudienceCard[] = [
   {
     id: "medical-researchers",
     title: "Medical Researchers & Academicians",
-    icon: AcademicCapIcon,
+    imageSrc: `${IMG}/Medical-Researchers-Academicians.png`,
     description: (
       <>
         Researchers in academic institutions, teaching hospitals, or independent
@@ -56,7 +50,7 @@ const audiences: AudienceCard[] = [
   {
     id: "pharma-scientists",
     title: "Pharmaceutical & Biotech Scientists",
-    icon: BeakerIcon,
+    imageSrc: `${IMG}/Pharmaceutical-Biotech-Scientists.png`,
     description: (
       <>
         Industry professionals developing drug efficacy primary research
@@ -69,7 +63,7 @@ const audiences: AudienceCard[] = [
   {
     id: "postgrad-candidates",
     title: "Postgraduate and doctoral candidates",
-    icon: UserGroupIcon,
+    imageSrc: `${IMG}/Postgraduate-and-doctoral-candidates.png`,
     description: (
       <>
         We assist doctoral candidates in drafting original research manuscripts
@@ -81,7 +75,7 @@ const audiences: AudienceCard[] = [
   {
     id: "public-health",
     title: "Public Health & Epidemiology Experts",
-    icon: GlobeAltIcon,
+    imageSrc: `${IMG}/Public-Health-Epidemiology-Experts.png`,
     description: (
       <>
         Researchers engaged in community health survey-based research or
@@ -92,7 +86,7 @@ const audiences: AudienceCard[] = [
   {
     id: "med-comm",
     title: "Medical Communication & Regulatory Teams",
-    icon: DocumentTextIcon,
+    imageSrc: `${IMG}/Medical-Communication-Regulatory-Teams.png`,
     description: (
       <>
         Organizations or teams needing writing support for medical device study
@@ -103,7 +97,7 @@ const audiences: AudienceCard[] = [
   {
     id: "academic-researchers",
     title: "Academic Researchers",
-    icon: MagnifyingGlassIcon,
+    imageSrc: `${IMG}/Academic-Researchers.png`,
     description: (
       <>
         Pubrica helps academic researchers with the entire article development
@@ -122,7 +116,7 @@ const audiences: AudienceCard[] = [
   {
     id: "med-clinical-researchers",
     title: "Medical and Clinical Researchers",
-    icon: BeakerIcon,
+    imageSrc: `${IMG}/Medical-and-Clinical-Researchers.png`,
     description: (
       <>
         We provide manuscript writing support for clinicians and healthcare
@@ -135,7 +129,7 @@ const audiences: AudienceCard[] = [
   {
     id: "professors",
     title: "Academic Faculty and Professors",
-    icon: BuildingLibraryIcon,
+    imageSrc: `${IMG}/Academic-Faculty-and-Professors.png`,
     description: (
       <>
         We help academicians document funded or departmental research into
@@ -147,7 +141,7 @@ const audiences: AudienceCard[] = [
   {
     id: "industry-scientists",
     title: "Industry Scientists and R&D Professionals",
-    icon: LightBulbIcon,
+    imageSrc: `${IMG}/Industry-Scientists-and-RD-Professionals.png`,
     description: (
       <>
         We collaborate with corporate researchers in life sciences, pharma, and
@@ -159,7 +153,7 @@ const audiences: AudienceCard[] = [
   {
     id: "independent-researchers",
     title: "Independent Researchers",
-    icon: MagnifyingGlassIcon,
+    imageSrc: `${IMG}/Independent-Researchers.png`,
     description: (
       <>
         We enable individual researchers to translate raw data into structured
@@ -177,7 +171,6 @@ export default function PhysicianWhoWeServeSection() {
       className="w-full bg-slate-100 py-16 px-4 sm:px-6 lg:px-8 text-slate-800"
     >
       <div className="max-w-7xl mx-auto space-y-8">
-        {/* --- Header Section --- */}
         <header className="max-w-4xl space-y-3">
           <h2
             id="who-we-serve-heading"
@@ -199,10 +192,8 @@ export default function PhysicianWhoWeServeSection() {
           </p>
         </header>
 
-        {/* --- Cards Grid Layout with Hover Effect --- */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {audiences.map((card) => {
-            const IconComponent = card.icon;
             return (
               <article
                 key={card.id}
@@ -210,15 +201,16 @@ export default function PhysicianWhoWeServeSection() {
                 className="group relative bg-white p-6 rounded-lg transition-all duration-300 ease-in-out hover:bg-sky-50/80 hover:-translate-y-1 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-sky-500 border border-slate-200/50 hover:border-sky-200 cursor-pointer"
               >
                 <div className="flex items-start space-x-4">
-                  {/* Yellow Background Circle with Icon */}
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 group-hover:bg-amber-200 transition-colors duration-300 flex items-center justify-center text-slate-700">
-                    <IconComponent
-                      className="w-6 h-6 stroke-[1.5]"
-                      aria-hidden="true"
+                  <div className="relative flex-shrink-0 w-12 h-12 rounded-full overflow-hidden bg-amber-100">
+                    <Image
+                      src={card.imageSrc}
+                      alt={card.title}
+                      fill
+                      className="object-cover"
+                      sizes="48px"
                     />
                   </div>
 
-                  {/* Card Title and Description */}
                   <div className="space-y-2">
                     <h3 className="text-base font-bold text-slate-900 leading-snug group-hover:text-sky-950 transition-colors duration-200">
                       {card.title}
