@@ -1,26 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 const industryCards = [
   {
     id: "fintech",
     title: "FinTech",
-    icon: (
-      <svg
-        className="w-6 h-6 text-emerald-800"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/ai-ml-support/FinTech.png",
     summary:
       "AI makes lending decisions fairer, catches fraud sooner, and cuts down on manual work.",
     bullets: [
@@ -33,21 +20,7 @@ const industryCards = [
   {
     id: "insurance",
     title: "Insurance",
-    icon: (
-      <svg
-        className="w-6 h-6 text-emerald-800"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/ai-ml-support/Insurance.png",
     summary:
       "Streamline risk assessment, automated claims processing, and policy pricing precision.",
     bullets: [
@@ -59,21 +32,7 @@ const industryCards = [
   {
     id: "healthcare",
     title: "Healthcare",
-    icon: (
-      <svg
-        className="w-6 h-6 text-emerald-800"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.684a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/ai-ml-support/Healthcare.png",
     summary:
       "Enhance patient outcomes with diagnostic assistance, predictive care, and operational optimization.",
     bullets: [
@@ -85,21 +44,7 @@ const industryCards = [
   {
     id: "manufacturing",
     title: "Manufacturing",
-    icon: (
-      <svg
-        className="w-6 h-6 text-emerald-800"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/ai-ml-support/Manufacturing.png",
     summary:
       "Optimize supply chain logistics, equipment maintenance, and quality control.",
     bullets: [
@@ -111,21 +56,7 @@ const industryCards = [
   {
     id: "banking",
     title: "Banking",
-    icon: (
-      <svg
-        className="w-6 h-6 text-emerald-800"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/ai-ml-support/Banking.png",
     summary:
       "Empower core banking with real-time analytics, automated portfolio management, and anti-money laundering.",
     bullets: [
@@ -137,21 +68,7 @@ const industryCards = [
   {
     id: "telecom",
     title: "Telecom",
-    icon: (
-      <svg
-        className="w-6 h-6 text-emerald-800"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071a10 10 0 0114.142 0M2.929 8.586a15 15 0 0121.214 0"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/ai-ml-support/Telecom.png",
     summary:
       "Improve network reliability, bandwidth allocation, and customer retention strategies.",
     bullets: [
@@ -220,7 +137,7 @@ export default function IndustriesEmpoweredSection() {
                   >
                     <div className="flex items-center space-x-3">
                       <span className="p-1.5 bg-emerald-100/60 rounded-md">
-                        {item.icon}
+                        <Image src={item.iconSrc} alt="" width={24} height={24} className="object-contain" />
                       </span>
                       <span className="text-sm sm:text-base">{item.title}</span>
                     </div>

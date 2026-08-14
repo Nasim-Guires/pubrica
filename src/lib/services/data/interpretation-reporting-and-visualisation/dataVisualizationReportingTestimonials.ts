@@ -10,7 +10,7 @@ export const dataVisualizationReportingWhoWeServe = {
                 "Our expert team ensures clarity, reproducibility, and precision in research reporting."
             ],
             imageUrl:
-                "/images/services/data-visualization-reporting/academic-researchers.jpg"
+                "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Academic-Researchers-Scholars-1.webp"
         },
         {
             title: "Clinical Researchers & Healthcare Professionals",
@@ -19,7 +19,7 @@ export const dataVisualizationReportingWhoWeServe = {
                 "Our solutions enhance transparency, compliance, and evidence-based decision-making."
             ],
             imageUrl:
-                "/images/services/data-visualization-reporting/clinical-researchers.jpg"
+                "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Clinical-Researchers-Healthcare-Professionals.webp"
         },
         {
             title: "Pharmaceutical & Biotech Companies",
@@ -27,7 +27,7 @@ export const dataVisualizationReportingWhoWeServe = {
                 "We support R&D teams by presenting research outcomes and trial data in clear, structured formats for internal reviews, regulatory submissions, and scientific communications."
             ],
             imageUrl:
-                "/images/services/data-visualization-reporting/pharmaceutical-biotech.jpg"
+                "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Pharmaceutical-Biotech-Companies-1.webp"
         },
         {
             title: "Corporations & Business Analysts",
@@ -35,7 +35,7 @@ export const dataVisualizationReportingWhoWeServe = {
                 "Businesses use our reporting and data visualization services to derive actionable insights from analytics, streamline operations, and communicate trends effectively to stakeholders."
             ],
             imageUrl:
-                "/images/services/data-visualization-reporting/business-analysts.jpg"
+                "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Corporations-Business-Analysts.webp"
         },
         {
             title: "Government & Non-Governmental Organisations (NGOs)",
@@ -43,7 +43,7 @@ export const dataVisualizationReportingWhoWeServe = {
                 "For policy-making, program evaluation, and funding assessments, we provide data interpretation and reporting that support evidence-driven strategies and measurable impact."
             ],
             imageUrl:
-                "/images/services/data-visualization-reporting/government-ngos.jpg"
+                "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Government-Non-Governmental.webp"
         },
         {
             title: "Publishers & Scientific Communication Professionals",
@@ -52,7 +52,7 @@ export const dataVisualizationReportingWhoWeServe = {
                 "Our services enhance the readability and impact of scientific manuscripts."
             ],
             imageUrl:
-                "/images/services/data-visualization-reporting/publishers-scientific-communication.jpg"
+                "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Publishers-Scientific-Communication.webp"
         }
     ]
 };
@@ -65,33 +65,33 @@ export const dataVisualizationReportingTestimonials = {
     testimonials: [
         {
             image:
-                "/images/services/data-visualization-reporting/testimonial-susan-lee.jpg",
+                "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/nature-biotechnology.webp",
             quote:
                 "Pubrica’s team turned our raw clinical trial data into a comprehensive, guideline-compliant report with intuitive visualisations. Their ability to highlight meaningful insights not only accelerated our regulatory submission process but also strengthened the clarity of our publication. Highly recommended!",
             name: "Dr. Susan Lee",
             designation: "Clinical Researcher",
             organization: "USA",
-            flag: "/images/flags/usa.png"
+            flag: "/images/editing-and-translation/book-editing/usa-.png"
         },
         {
             image:
-                "/images/services/data-visualization-reporting/testimonial-hana-kim.jpg",
+                "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/neuroscience-.webp",
             quote:
                 "Pubrica’s interpretation and visualisation services were invaluable to our pharmaceutical research project. They not only provided accurate, regulator-ready documentation but also enhanced the overall presentation of our findings, making our publication highly accessible to a wider audience.",
             name: "Dr. Hana Kim",
             designation: "Pharmaceutical Scientist",
             organization: "India",
-            flag: "/images/flags/india.png"
+            flag: "/images/editing-and-translation/book-editing/flag.png"
         },
         {
             image:
-                "/images/services/data-visualization-reporting/testimonial-rajiv-menon.jpg",
+                "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/journal-of-cancer-reserach-clinical-oncology-.webp",
             quote:
                 "Working with Pubrica made a significant difference in our research outcomes. They transformed complex statistical outputs into clear, publication-ready reports, complete with high-quality visualisations. Their precision and adherence to journal guidelines ensured our manuscript sailed through peer review with ease.",
             name: "Dr. Rajiv Menon",
             designation: "Principal Investigator",
             organization: "India",
-            flag: "/images/flags/india.png"
+            flag: "/images/editing-and-translation/manuscript-editing/india.png"
         }
     ]
 };

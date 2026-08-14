@@ -130,7 +130,7 @@ export default function HealthEconomicsOutcomeResearch() {
                         <div className="relative w-full max-w-md h-72 sm:h-80 rounded-2xl overflow-hidden shadow-md bg-emerald-900/10 p-2">
                             <div className="relative w-full h-full rounded-xl overflow-hidden">
                                 <Image
-                                    src="/images/heor-analytics.jpg"
+                                    src="/images/data-analytics-machine-learning/health-economics-outcome-research/Health-Economics-Outcomes-Research-HEOR-Expertise.webp"
                                     alt="Health Economics and Outcomes Research Team Analysis"
                                     fill
                                     className="object-cover"
@@ -158,7 +158,7 @@ export default function HealthEconomicsOutcomeResearch() {
                         <div className="lg:col-span-5 flex justify-center">
                             <div className="relative w-full max-w-md h-80 rounded-2xl overflow-hidden shadow-sm">
                                 <Image
-                                    src="/images/heor-collaboration.jpg"
+                                    src="/images/data-analytics-machine-learning/health-economics-outcome-research/What-We-Do-3.png"
                                     alt="HEOR Professionals Collaborating"
                                     fill
                                     className="object-cover"

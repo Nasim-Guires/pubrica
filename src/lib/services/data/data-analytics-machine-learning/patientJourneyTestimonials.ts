@@ -7,7 +7,7 @@ export const patientJourneyInsightsWhoWeServe = [
       "Generate RWE and HEOR evidence to support regulatory and payer submissions.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1576086213369-97a306d36557",
+      "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Pharmaceutical-Biotech-Companies-3.png",
   },
   {
     title: "Healthcare Providers & Hospitals",
@@ -17,7 +17,7 @@ export const patientJourneyInsightsWhoWeServe = [
       "Enhance treatment adherence and quality of care delivery.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1516549655169-df83a0774514",
+      "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Healthcare-Providers-Hospitals-2.png",
   },
   {
     title: "Payers & Insurance Companies",
@@ -27,7 +27,7 @@ export const patientJourneyInsightsWhoWeServe = [
       "Support value-based reimbursement models with real-world insights.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f",
+      "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Payers-Insurance-Companies-1.png",
   },
   {
     title: "Medical Device & Diagnostics Companies",
@@ -37,7 +37,7 @@ export const patientJourneyInsightsWhoWeServe = [
       "Leverage patient insights to design effective support programs.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1581595219315-a187dd40c322",
+      "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Medical-Device-Diagnostics-Companies.png",
   },
   {
     title: "Contract Research Organizations (CROs)",
@@ -47,7 +47,7 @@ export const patientJourneyInsightsWhoWeServe = [
       "Enable predictive modeling for trial outcomes.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1532187643603-ba119ca4109e",
+      "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Contract-Research-Organizations-CROs-1.png",
   },
   {
     title: "Regulatory Bodies & HTA Agencies",
@@ -57,40 +57,40 @@ export const patientJourneyInsightsWhoWeServe = [
       "Facilitate health technology assessments and policy decision-making.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a",
+      "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Regulatory-Bodies-HTA-Agencies.png",
   },
 ];
 
 export const patientJourneyInsightsTestimonials = [
   {
     image:
-      "https://pubrica.com/wp-content/uploads/2024/08/The-Lancet-Oncology.webp",
+      "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/the-lancet-of-oncolgy-1-1.png",
     quote:
       "Pubrica’s Patient Journey & Insights – Machine Learning solution helped us uncover hidden patterns in patient behaviour and treatment adherence. The predictive models guided our care plans, resulting in improved patient outcomes and reduced readmission rates. Their expertise in combining clinical data with AI-driven insights is truly impressive.",
     name: "Dr. Meera Krishnan",
     designation: "Chief Medical Officer",
     organization: "Sunrise Multispecialty Hospital, India",
-    flag: "https://flagcdn.com/w80/in.png",
+    flag: "/images/editing-and-translation/book-editing/flag.png",
   },
   {
     image:
-      "https://pubrica.com/wp-content/uploads/2024/08/JAMA-Oncology.webp",
+      "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/jama-oncology-journal-4.png",
     quote:
       "The insights provided by Pubrica transformed how we understand the treatment journey of patients. By mapping real-world patient data, we were able to identify critical drop-off points in adherence and design better patient support programs. This has been a game-changer in optimizing our market access strategies.",
     name: "Mr. Rajesh Menon",
     designation: "Director – Market Access & Strategy",
     organization: "BioCura Pharma Ltd., United Kingdom",
-    flag: "https://flagcdn.com/w80/gb.png",
+    flag: "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/uk-flag.png",
   },
   {
     image:
-      "https://pubrica.com/wp-content/uploads/2024/08/BMC-Public-Health.webp",
+      "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/bmc-public-health-1.png",
     quote:
       "Pubrica’s AI-powered patient journey mapping provided us with deep insights into disease progression patterns. This accelerated our clinical research initiatives and helped us design more patient-centric trials. The clarity and precision in their reporting were exceptional.",
     name: "Prof. Arvind Rao",
     designation: "Head of Clinical Research",
     organization: "MedTech Academic Center, Singapore",
-    flag: "https://flagcdn.com/w80/sg.png",
+    flag: "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/singapore-flag.png",
   },
 ];
 

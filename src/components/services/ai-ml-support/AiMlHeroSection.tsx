@@ -83,7 +83,7 @@ export default function AiMlHeroSection() {
               {/* Foreground Image Card */}
               <div className="relative z-10 w-full h-64 sm:h-80 rounded-2xl overflow-hidden shadow-lg border border-slate-200">
                 <Image
-                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800"
+                  src="/images/ai-ml-support/Transform-complex-patient-data-into-actionable-insights-.webp"
                   alt="Person working on laptop showing data charts"
                   fill
                   sizes="(max-width: 768px) 100vw, 500px"

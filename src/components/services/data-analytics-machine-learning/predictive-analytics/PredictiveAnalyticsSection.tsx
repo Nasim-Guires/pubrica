@@ -137,7 +137,7 @@ export default function PredictiveAnalyticsSection() {
                             {/* Image Container */}
                             <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-md z-10">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
+                                    src="/images/data-analytics-machine-learning/predictive-analytics/poster-presentation-1-1.webp"
                                     alt="Predictive analytics laptop dashboard displaying charts"
                                     fill
                                     className="object-cover"
@@ -164,27 +164,14 @@ export default function PredictiveAnalyticsSection() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                         {/* Left Decorative Image Collage */}
                         <div className="lg:col-span-5 flex justify-center">
-                            <div className="relative w-full max-w-sm h-[260px] md:h-[300px]">
-                                {/* Main image */}
-                                <div className="absolute top-0 left-0 w-3/4 h-3/4 rounded-2xl overflow-hidden shadow-md border-2 border-white z-10">
-                                    <Image
-                                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
-                                        alt="Data analysts discussing predictive model strategy"
-                                        fill
-                                        className="object-cover"
-                                        sizes="300px"
-                                    />
-                                </div>
-                                {/* Secondary overlapping image */}
-                                <div className="absolute bottom-0 right-0 w-3/5 h-3/5 rounded-2xl overflow-hidden shadow-lg border-2 border-white z-20">
-                                    <Image
-                                        src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=600&auto=format&fit=crop"
-                                        alt="Laptop screen with predictive analytics network nodes"
-                                        fill
-                                        className="object-cover"
-                                        sizes="250px"
-                                    />
-                                </div>
+                            <div className="relative w-full max-w-sm h-[260px] md:h-[300px] rounded-2xl overflow-hidden shadow-md border-2 border-white">
+                                <Image
+                                    src="/images/data-analytics-machine-learning/predictive-analytics/Why-is-Predictive-Analytics-Important.webp"
+                                    alt="Why is Predictive Analytics Important"
+                                    fill
+                                    className="object-cover"
+                                    sizes="300px"
+                                />
                             </div>
                         </div>
 

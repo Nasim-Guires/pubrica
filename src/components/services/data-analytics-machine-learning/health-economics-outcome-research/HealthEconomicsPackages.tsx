@@ -1,9 +1,10 @@
 import React from "react";
+import Image from "next/image";
 
 const pricingData = [
   {
     tier: "Basic",
-    icon: "B",
+    iconSrc: "/images/editing-and-translation/basic-pacakge.png",
     colorScheme: {
       border: "border-teal-200",
       badgeBg: "bg-amber-100 text-amber-700",
@@ -22,7 +23,7 @@ const pricingData = [
   },
   {
     tier: "Standard",
-    icon: "S",
+    iconSrc: "/images/publication-support/responding-to-reviewers/standard-logo.png",
     colorScheme: {
       border: "border-purple-200",
       badgeBg: "bg-sky-100 text-sky-700",
@@ -46,7 +47,7 @@ const pricingData = [
   },
   {
     tier: "Premium",
-    icon: "P",
+    iconSrc: "/images/editing-and-translation/translation-with-editing/pro.webp",
     colorScheme: {
       border: "border-amber-200",
       badgeBg: "bg-purple-100 text-purple-700",
@@ -85,10 +86,8 @@ export default function HealthEconomicsPackages() {
           >
             {/* Header / Badge */}
             <div className="flex items-center gap-3 mb-6">
-              <span
-                className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg ${pkg.colorScheme.badgeBg}`}
-              >
-                {pkg.icon}
+              <span className="relative w-10 h-10 shrink-0">
+                <Image src={pkg.iconSrc} alt={`${pkg.tier} package`} fill className="object-contain" />
               </span>
               <h3 className={`text-xl font-bold ${pkg.colorScheme.headerText}`}>
                 {pkg.tier}

@@ -2,10 +2,12 @@
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import React from 'react';
+import Image from 'next/image';
 
 interface PackageItem {
     id: string;
-    badgeLetter: string;
+    badgeLetter?: string;
+    badgeSrc: string;
     name: string;
     badgeBg: string;
     badgeColor: string;
@@ -20,7 +22,7 @@ interface PackageItem {
 const packagesData: PackageItem[] = [
     {
         id: 'basic',
-        badgeLetter: 'B',
+        badgeSrc: '/images/editing-and-translation/basic-pacakge.png',
         name: 'Basic',
         badgeBg: 'bg-amber-100',
         badgeColor: 'text-amber-700',
@@ -39,7 +41,7 @@ const packagesData: PackageItem[] = [
     },
     {
         id: 'standard',
-        badgeLetter: 'S',
+        badgeSrc: '/images/publication-support/poster-preparation/S.png',
         name: 'Standard',
         badgeBg: 'bg-purple-100',
         badgeColor: 'text-purple-700',
@@ -57,7 +59,7 @@ const packagesData: PackageItem[] = [
     },
     {
         id: 'advanced',
-        badgeLetter: 'A',
+        badgeSrc: '/images/publication-support/peer-review-pre-submission/advanced.webp',
         name: 'Advanced',
         badgeBg: 'bg-emerald-100',
         badgeColor: 'text-emerald-700',
@@ -75,7 +77,7 @@ const packagesData: PackageItem[] = [
     },
     {
         id: 'custom',
-        badgeLetter: 'C',
+        badgeSrc: '/images/data-analytics-machine-learning/predictive-analytics/C-icons.webp',
         name: 'Custom',
         badgeBg: 'bg-sky-100',
         badgeColor: 'text-sky-700',
@@ -114,10 +116,8 @@ export default function PredictiveAnalyticsPackages() {
                         >
                             {/* Card Header Top */}
                             <div className={`bg-white/75 backdrop-blur-xs py-4 px-5 flex items-center gap-3 border-b ${pkg.headerBorder}`}>
-                                <div
-                                    className={`w-9 h-9 rounded-full ${pkg.badgeBg} ${pkg.badgeColor} flex items-center justify-center font-bold text-base shadow-xs shrink-0`}
-                                >
-                                    {pkg.badgeLetter}
+                                <div className="relative w-9 h-9 shrink-0">
+                                    <Image src={pkg.badgeSrc} alt={`${pkg.name} package`} fill className="object-contain" />
                                 </div>
                                 <h3 className={`text-lg font-bold ${pkg.textColor}`}>
                                     {pkg.name}

@@ -9,7 +9,7 @@
                 "Researchers seeking advanced predictive models to strengthen hypothesis testing, clinical trials, and evidence-based publications.",
                 "Universities and research institutes aiming to publish high-impact studies supported by robust predictive analytics."
             ],
-            imageUrl: "/images/services/predictive-analytics/academic-clinical-researchers.jpg"
+            imageUrl: "/images/data-analytics-machine-learning/predictive-analytics/Academic-and-Clinical-Researchers.webp"
         },
         {
             title: "Healthcare and Life Sciences",
@@ -17,7 +17,7 @@
                 "Hospitals, clinics, and healthcare providers using predictive analytics for patient outcome prediction, risk stratification, and personalized treatment strategies.",
                 "Pharmaceutical and biotech firms leveraging predictive models for drug discovery, clinical trial optimization, and market forecasting."
             ],
-            imageUrl: "/images/services/predictive-analytics/healthcare-life-sciences.jpg"
+            imageUrl: "/images/data-analytics-machine-learning/predictive-analytics/Healthcare-and-Life-Sciences.webp"
         },
         {
             title: "Financial and Insurance Sectors",
@@ -25,7 +25,7 @@
                 "Banks and financial institutions applying predictive modeling for fraud detection, credit scoring, and portfolio optimization.",
                 "Insurance companies forecasting claims, assessing risks, and improving policy pricing strategies."
             ],
-            imageUrl: "/images/services/predictive-analytics/financial-insurance.jpg"
+            imageUrl: "/images/data-analytics-machine-learning/predictive-analytics/Financial-and-Insurance-Sectors.webp"
         },
         {
             title: "Businesses and Enterprises",
@@ -33,7 +33,7 @@
                 "Corporations improving customer segmentation, demand forecasting, and operational efficiency through predictive insights.",
                 "Marketing and sales teams utilizing predictive analytics to enhance targeting, customer retention, and campaign ROI."
             ],
-            imageUrl: "/images/services/predictive-analytics/business-enterprises.jpg"
+            imageUrl: "/images/data-analytics-machine-learning/predictive-analytics/Businesses-and-Enterprises.webp"
         },
         {
             title: "Government and Public Sector",
@@ -41,7 +41,7 @@
                 "Public health agencies using predictive analytics for disease surveillance, resource allocation, and crisis management.",
                 "Policy makers applying data-driven forecasting to design effective social and economic interventions."
             ],
-            imageUrl: "/images/services/predictive-analytics/government-public-sector.jpg"
+            imageUrl: "/images/data-analytics-machine-learning/predictive-analytics/Government-and-Public-Sector.webp"
         }
     ]
 };
@@ -52,31 +52,31 @@ export const predictiveAnalyticsTestimonials = {
     "Learn how Pubrica’s predictive analytics service has enabled researchers and businesses to generate accurate, actionable, and publication-ready insights that drive evidence-based decisions and enhance visibility in their field. Here is what our clients say:",
   testimonials: [
     {
-      image: "/images/services/predictive-analytics/testimonial-li-wei.jpg",
+      image: "/images/editing-and-translation/book-editing/testimonials-2.png",
       quote:
         "Pubrica’s predictive analytics team translated complex datasets into clear, actionable insights. Their rigorous modeling and transparent reporting were key to my manuscript’s acceptance in Nature Scientific Reports.",
       name: "Prof. Li Wei",
       designation: "Biostatistician",
       organization: "China",
-      flag: "/images/flags/china.png"
+      flag: "/images/editing-and-translation/manuscript-editing/germany-1-1.png"
     },
     {
-      image: "/images/services/predictive-analytics/testimonial-emily-rodriguez.jpg",
+      image: "/images/editing-and-translation/scientific-editing/testimonials-1.png",
       quote:
         "Pubrica’s predictive analytics support ensured robust, reproducible results for our healthcare study. Their guidance from data cleaning to model validation made our research publication-ready in the Journal of Medical Internet Research (JMIR).",
       name: "Dr. Emily Rodriguez",
       designation: "Public Health Researcher",
       organization: "USA",
-      flag: "/images/flags/usa.png"
+      flag: "/images/editing-and-translation/book-editing/flag.png"
     },
     {
-      image: "/images/services/predictive-analytics/testimonial-rajesh-kumar.jpg",
+      image: "/images/editing-and-translation/scientific-editing/testimonials-3.png",
       quote:
         "Their team’s expertise in predictive modeling helped optimize our clinical trial design. The insights we gained were crucial for our paper in BMJ Open.",
       name: "Dr. Rajesh Kumar",
       designation: "Pharmaceutical Scientist",
       organization: "India",
-      flag: "/images/flags/india.png"
+      flag: "/images/editing-and-translation/manuscript-editing/spain.png"
     }
   ]
 };

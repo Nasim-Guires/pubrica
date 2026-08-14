@@ -87,7 +87,7 @@ export default function CustomerSegmentationPage() {
           {/* Section Image using Next.js Image Tag */}
           <div className="relative w-full h-[320px] md:h-[400px] rounded-lg overflow-hidden shadow-md">
             <Image
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
+              src="/images/data-analytics-machine-learning/customer-segmentation/Tailored-Insights-for-Targeted-Research-Marketing-and-Publication-Strategies.webp"
               alt="Healthcare data analytics and dashboard report visualization"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -110,7 +110,7 @@ export default function CustomerSegmentationPage() {
             {/* Approach Image using Next.js Image Tag */}
             <div className="relative w-full h-[320px] md:h-[380px] rounded-lg overflow-hidden shadow-md order-2 md:order-1">
               <Image
-                src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1200&auto=format&fit=crop"
+                src="/images/data-analytics-machine-learning/customer-segmentation/Pubricas-Customer-Segmentation-Expertise.webp"
                 alt="Professional team performing audience clustering and market persona strategy"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

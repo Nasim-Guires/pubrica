@@ -1,22 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import {
-    FileText,
-    Users,
-    Handshake,
-    Globe,
-    BarChart3,
-    Award,
     Plus,
     Minus,
     ArrowRight,
     ArrowDown,
     ArrowLeft,
-    ClipboardCheck,
-    FileCheck,
-    Scale,
-    ShieldCheck
 } from 'lucide-react';
 
 // --- DATA ARRAYS ---
@@ -25,37 +16,37 @@ const approachData = [
     {
         id: 1,
         title: 'Evidence-Based Methodologies',
-        icon: FileText,
+        iconSrc: '/images/data-analytics-machine-learning/health-economics-outcome-research/Evidence-Based-Methodologies.png',
         content: 'We apply advanced econometric models, cost-effectiveness analysis, budget impact analysis (BIA), Pharmacoeconomics, comparative effectiveness research (CER), and real-world evidence generation to uncover the clinical and economic value of healthcare interventions.',
     },
     {
         id: 2,
         title: 'Patient-Centred Focus',
-        icon: Users,
+        iconSrc: '/images/data-analytics-machine-learning/health-economics-outcome-research/Patient-Centred-Focus.png',
         content: 'We integrate patient-reported outcomes (PROs), patient journey mapping, and quality-of-life assessments, ensuring healthcare decisions reflect what matters most to patients.',
     },
     {
         id: 3,
         title: 'Collaborative Engagement',
-        icon: Handshake,
+        iconSrc: '/images/data-analytics-machine-learning/health-economics-outcome-research/Collaborative-Engagement.png',
         content: 'Our team works closely with clients, payers, clinicians, and policy makers to align HEOR research with stakeholder needs and expectations.',
     },
     {
         id: 4,
         title: 'Global Standards & Compliance',
-        icon: Globe,
+        iconSrc: '/images/data-analytics-machine-learning/health-economics-outcome-research/Global-Standards-Compliance.png',
         content: 'All research adheres to ISPOR, NICE, ICER, and HTA body guidelines, ensuring credibility, regulatory acceptance, and successful HTA submissions across global markets.',
     },
     {
         id: 5,
         title: 'Data-Driven Insights',
-        icon: BarChart3,
+        iconSrc: '/images/data-analytics-machine-learning/health-economics-outcome-research/Data-Driven-Insights.png',
         content: 'Leveraging real-world data, clinical trial results, and predictive modeling, we transform complex healthcare data into actionable strategies for decision-making.',
     },
     {
         id: 6,
         title: 'Value Demonstration',
-        icon: Award,
+        iconSrc: '/images/data-analytics-machine-learning/health-economics-outcome-research/Value-Demonstration.png',
         content: 'We translate evidence into clear value stories that support market access, reimbursement approvals, and peer-reviewed publications, driving value-based care initiatives.',
     },
 ];
@@ -101,22 +92,22 @@ const processSteps = [
 const complianceData = [
     {
         title: 'International Guidelines',
-        icon: ClipboardCheck,
+        iconSrc: '/images/data-analytics-machine-learning/health-economics-outcome-research/International-Guidelines.png',
         description: 'We align with ISPOR, CHEERS 2022, PRISMA (for systematic reviews), and HTA body requirements including NICE (UK), CADTH (Canada), ICER (US), HAS (France), and IQWiG (Germany).',
     },
     {
         title: 'Regulatory Compliance',
-        icon: FileCheck,
+        iconSrc: '/images/data-analytics-machine-learning/health-economics-outcome-research/Regulatory-Compliance.png',
         description: 'Our deliverables adhere to FDA, EMA, and other regional authority guidelines, ensuring acceptance in submissions, approvals, and market access strategies.',
     },
     {
         title: 'Ethical Standards',
-        icon: Scale,
+        iconSrc: '/images/data-analytics-machine-learning/health-economics-outcome-research/Ethical-Standards.png',
         description: 'We follow Good Publication Practice (GPP), ICMJE, and data transparency requirements to guarantee ethical integrity and scientific credibility in all research outputs.',
     },
     {
         title: 'Data Privacy & Security',
-        icon: ShieldCheck,
+        iconSrc: '/images/data-analytics-machine-learning/health-economics-outcome-research/Data-Privacy-Security.png',
         description: 'We strictly comply with GDPR (EU), HIPAA (US), and other local data protection regulations, safeguarding patient information and sensitive healthcare data.',
     },
 ];
@@ -151,7 +142,6 @@ export default function OurApproachSectionHealthEconomicsOutcomeResearch() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
                     {approachData.map((card) => {
-                        const Icon = card.icon;
                         const isOpen = Boolean(openCards[card.id]);
 
                         return (
@@ -165,8 +155,8 @@ export default function OurApproachSectionHealthEconomicsOutcomeResearch() {
                                     className="w-full p-4 flex items-center justify-between text-left focus:outline-none"
                                 >
                                     <div className="flex items-center space-x-3">
-                                        <div className="p-2 rounded-md text-[#0A322C]">
-                                            <Icon className="w-6 h-6" />
+                                        <div className="relative w-8 h-8 shrink-0">
+                                            <Image src={card.iconSrc} alt="" fill className="object-contain" />
                                         </div>
                                         <h3 className="font-semibold text-[#0A322C] text-sm sm:text-base">
                                             {card.title}
@@ -310,11 +300,10 @@ export default function OurApproachSectionHealthEconomicsOutcomeResearch() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {complianceData.map((item, index) => {
-                        const Icon = item.icon;
                         return (
                             <div key={index} className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
-                                <div className="mb-4 text-[#0A322C]">
-                                    <Icon className="w-10 h-10 stroke-[1.5]" />
+                                <div className="mb-4 relative w-12 h-12">
+                                    <Image src={item.iconSrc} alt="" fill className="object-contain" />
                                 </div>
                                 <h3 className="font-bold text-[#0A322C] mb-3 text-lg">
                                     {item.title}

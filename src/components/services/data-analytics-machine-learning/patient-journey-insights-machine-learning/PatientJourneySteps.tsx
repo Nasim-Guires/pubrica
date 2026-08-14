@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 export default function PatientJourneySteps() {
     // State for Sample Work tabs (Image 2)
@@ -12,49 +13,33 @@ export default function PatientJourneySteps() {
             id: 1,
             title: "Comprehensive Data Collection",
             desc: "Gather comprehensive patient data from various sources, including EMR and EHR data analysis services, and wearable devices.",
-            icon: (
-                <svg className="w-10 h-10 mb-3 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-                </svg>
-            ),
+            iconSrc: "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Comprehensive-Data-Collection.png",
         },
         {
             id: 2,
             title: "Advanced Data Analysis",
             desc: "Employ advanced algorithms to analyse patient data and identify key patterns and trends in the healthcare journey.",
-            icon: (
-                <svg className="w-10 h-10 mb-3 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-            ),
+            iconSrc: "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Advanced-Data-Analysis.png",
         },
         {
             id: 3,
             title: "Actionable Insights Extraction",
             desc: "Extract patient insights services to enhance patient care, improve outcomes, and optimize healthcare processes.",
-            icon: (
-                <svg className="w-10 h-10 mb-3 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-            ),
+            iconSrc: "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Actionable-Insights-Extraction.png",
         },
         {
             id: 4,
             title: "Clear Reporting and Strategic Guidance",
             desc: "Present findings in clear and concise reports, facilitating informed decision-making and guiding the implementation of data-driven strategies for improved patient experiences.",
-            icon: (
-                <svg className="w-10 h-10 mb-3 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-            ),
+            iconSrc: "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Clear-Reporting-and-Strategic-Guidance.png",
         },
     ];
 
     // Images for Sample Work tabs (Image 2)
     const sampleImages: Record<number, string> = {
-        1: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
-        2: "https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=1200&q=80",
-        3: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+        1: "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/patient-education-1.png",
+        2: "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/patient-education-2.png",
+        3: "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/patient-education-3.png",
     };
 
     return (
@@ -93,8 +78,8 @@ export default function PatientJourneySteps() {
                   bg-white text-slate-800 hover:bg-[#4A5552] hover:text-white group relative
                   ${!isTop ? "mb-4" : ""}`}
                                 >
-                                    <div className="group-hover:brightness-200 transition-all">
-                                        {step.icon}
+                                    <div className="relative w-10 h-10 mb-3 group-hover:brightness-200 transition-all">
+                                        <Image src={step.iconSrc} alt="" fill className="object-contain" />
                                     </div>
                                     <h4 className="font-bold text-lg mb-2 group-hover:text-white transition-colors">
                                         {step.title}
@@ -159,10 +144,12 @@ export default function PatientJourneySteps() {
                 {/* Image Box */}
                 <div className="bg-white p-4 border border-slate-200 rounded-lg shadow-md max-w-4xl mx-auto">
                     <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden rounded bg-slate-100">
-                        <img
+                        <Image
                             src={sampleImages[activeTab]}
                             alt={`Patient Journey Sample Work ${activeTab}`}
-                            className="w-full h-full object-cover transition-opacity duration-300"
+                            fill
+                            className="object-contain transition-opacity duration-300"
+                            sizes="(max-width: 768px) 100vw, 900px"
                         />
                         <div className="absolute top-4 right-4 bg-slate-900/80 text-white font-bold px-3 py-1 text-sm rounded">
                             PUBRICA
@@ -241,9 +228,9 @@ export default function PatientJourneySteps() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Card 1 */}
                     <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm flex flex-col items-center">
-                        <svg className="w-12 h-12 text-[#008080] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
+                        <div className="relative w-12 h-12 mb-4">
+                            <Image src="/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Regulatory-Compliance-1.png" alt="" fill className="object-contain" />
+                        </div>
                         <h4 className="font-bold text-lg text-[#008080] mb-2">Regulatory Compliance</h4>
                         <p className="text-xs text-slate-600 leading-relaxed max-w-sm">
                             We align with HIPAA, GDPR, FDA, and EMA guidelines, ensuring the privacy, protection, and ethical handling of patient data across all projects.
@@ -252,9 +239,9 @@ export default function PatientJourneySteps() {
 
                     {/* Card 2 */}
                     <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm flex flex-col items-center">
-                        <svg className="w-12 h-12 text-[#008080] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
+                        <div className="relative w-12 h-12 mb-4">
+                            <Image src="/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Clinical-and-Scientific-Guidelines.png" alt="" fill className="object-contain" />
+                        </div>
                         <h4 className="font-bold text-lg text-[#008080] mb-2">Clinical and Scientific Guidelines</h4>
                         <p className="text-xs text-slate-600 leading-relaxed max-w-sm">
                             Adherence to ICMJE, CONSORT, STROBE, and GCP standards guarantees research integrity and reliable outcomes.

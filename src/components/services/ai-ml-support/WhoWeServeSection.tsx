@@ -7,43 +7,37 @@ const targetAudiences = [
   {
     id: 1,
     title: "Academia & Researchers",
-    image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
+    image: "/images/ai-ml-support/Academia-Researchers.webp",
     alt: "Researchers looking over desk documentation",
   },
   {
     id: 2,
     title: "Healthcare & Life Sciences",
-    image:
-      "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&q=80&w=600",
+    image: "/images/ai-ml-support/Healthcare-Life-Sciences.webp",
     alt: "Doctor holding DNA strand visualization",
   },
   {
     id: 3,
     title: "Biotechnology & Pharmaceuticals",
-    image:
-      "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=600",
+    image: "/images/ai-ml-support/Biotechnology-Pharmaceuticals.webp",
     alt: "Scientist examining flask in laboratory",
   },
   {
     id: 4,
     title: "Business & Industry",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600",
+    image: "/images/ai-ml-support/Business-Industry.webp",
     alt: "Skyscrapers with connected digital network overlay",
   },
   {
     id: 5,
     title: "Government & Policy Makers",
-    image:
-      "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=600",
+    image: "/images/ai-ml-support/Government-Policy-Makers.webp",
     alt: "Magnifying glass examining policy book",
   },
   {
     id: 6,
     title: "Technology & Software Companies",
-    image:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600",
+    image: "/images/ai-ml-support/Technology-Software-Companies.webp",
     alt: "Developer writing software code on laptop",
   },
 ];

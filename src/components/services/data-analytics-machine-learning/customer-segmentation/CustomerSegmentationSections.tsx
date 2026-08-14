@@ -16,28 +16,28 @@ const stepsData: Step[] = [
     title: 'Strategic Segmentation Refinement',
     description:
       'Our experts meticulously refine the segmentation strategy for precision and effectiveness, aligning with industry standards and best practices to ensure optimal outcomes.',
-    icon: '🎯',
+    icon: "/images/data-analytics-machine-learning/customer-segmentation/Strategic-Segmentation-Refinement.png",
   },
   {
     id: 2,
     title: 'Comprehensive Market Data Analysis',
     description:
       'We conduct a thorough review of market data to identify priority segments based on demographics, behavior patterns, and preferences. This ensures that segmentation begins with a strong evidence-driven foundation using data analytics algorithms.',
-    icon: '📊',
+    icon: "/images/data-analytics-machine-learning/customer-segmentation/Comprehensive-Market-Data-Analysis.png",
   },
   {
     id: 3,
     title: 'Enhancement for Relevance and Impact',
     description:
       'We enhance the segmentation framework to elevate readability, relevance, and strategic appeal, addressing market nuances and aligning with client objectives.',
-    icon: '💡',
+    icon: "/images/data-analytics-machine-learning/customer-segmentation/Enhancement-for-Relevance-and-Impact.png",
   },
   {
     id: 4,
     title: 'Final Integration and Quality Assurance',
     description:
       'A final check ensures all refinements are seamlessly integrated, presenting a coherent and polished segmentation approach that is ready for immediate implementation.',
-    icon: '🛡️',
+    icon: "/images/data-analytics-machine-learning/customer-segmentation/Final-Integration-and-Quality-Assurance.png",
   },
 ];
 
@@ -68,8 +68,8 @@ export default function CustomerSegmentationSections() {
             {/* Reusable Card Component with Hover State */}
             const processCard = (
               <div className="group relative w-full bg-white hover:bg-neutral-800 p-6 rounded-sm border border-slate-200 hover:border-neutral-800 shadow-sm hover:shadow-xl transition-all duration-300 text-left flex flex-col min-h-[260px] cursor-pointer">
-                <div className="text-3xl mb-4 text-center transition-transform duration-300 group-hover:scale-110">
-                  {step.icon}
+                <div className="relative w-10 h-10 mx-auto mb-4 transition-transform duration-300 group-hover:scale-110">
+                  <Image src={step.icon} alt="" fill className="object-contain" />
                 </div>
                 <h4 className="font-bold text-slate-900 group-hover:text-white text-sm mb-3 leading-snug transition-colors duration-300">
                   {step.title}
@@ -156,7 +156,7 @@ export default function CustomerSegmentationSections() {
             <div className="relative w-full h-[350px] md:h-[450px] bg-white rounded-md border border-slate-200 overflow-hidden shadow-sm flex items-center justify-center">
               {activeTab === 'mapping' ? (
                 <Image
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
+                  src="/images/data-analytics-machine-learning/customer-segmentation/Graphical-Abstract-Sample-Work-1.webp"
                   alt="Customer Segmentation Model Loss and Accuracy Chart"
                   fill
                   className="object-contain p-4"
@@ -164,7 +164,7 @@ export default function CustomerSegmentationSections() {
                 />
               ) : (
                 <Image
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
+                  src="/images/data-analytics-machine-learning/customer-segmentation/Graphical-Abstract-Sample-Work-2.webp"
                   alt="Customer Collaboration and Data Insights Display"
                   fill
                   className="object-contain p-4"
@@ -184,7 +184,7 @@ export default function CustomerSegmentationSections() {
           {/* Representative Image */}
           <div className="relative w-full h-[280px] md:h-[350px] rounded-lg overflow-hidden shadow-md">
             <Image
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
+              src="/images/data-analytics-machine-learning/customer-segmentation/Customer-Segmentation-Sample-Work.webp"
               alt="Professional analyzing customer segmentation sample work"
               fill
               className="object-cover"

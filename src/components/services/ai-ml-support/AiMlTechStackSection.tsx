@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const techStackData = [
   {
@@ -10,21 +11,7 @@ const techStackData = [
       "Python, R, Julia, Scala, Java – for machine learning, statistical modeling, and scalable applications.",
     bgColor: "bg-purple-100",
     iconColor: "text-purple-600",
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/ai-ml-support/Programming-Languages.png",
     active: false,
   },
   {
@@ -34,21 +21,7 @@ const techStackData = [
       "TensorFlow, PyTorch, Scikit-learn, Keras, XGBoost, LightGBM – for supervised, unsupervised, and deep learning tasks.",
     bgColor: "bg-amber-100",
     iconColor: "text-amber-600",
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/ai-ml-support/Machine-Learning-Deep-Learning-Frameworks.png",
     active: true, // Dark border outline as seen in screenshot
   },
   {
@@ -58,21 +31,7 @@ const techStackData = [
       "Optimize your document through our comprehensive Systematic Review Services.",
     bgColor: "bg-purple-100",
     iconColor: "text-purple-600",
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/ai-ml-support/Natural-Language-Processing-NLPLanguages.png",
     active: false,
   },
   {
@@ -82,21 +41,7 @@ const techStackData = [
       "SQL, MongoDB, Neo4j, PostgreSQL – for structured, unstructured, and graph-based biomedical datasets. Apache Hadoop, Spark – for big data processing.",
     bgColor: "bg-amber-100",
     iconColor: "text-amber-600",
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/ai-ml-support/Data-Management-Databases.png",
     active: false,
   },
   {
@@ -106,21 +51,7 @@ const techStackData = [
       "AWS, Google Cloud, Microsoft Azure – for scalable model training, deployment, and integration with enterprise workflows. Docker, Kubernetes – for containerization and model orchestration.",
     bgColor: "bg-purple-100",
     iconColor: "text-purple-600",
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M3 15a4 4 0 004 4h9a5 5 0 00-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/ai-ml-support/Cloud-Deployment.png",
     active: false,
   },
   {
@@ -130,21 +61,7 @@ const techStackData = [
       "Tableau, Power BI, Matplotlib, Seaborn, Plotly – for interactive dashboards and insights visualization.",
     bgColor: "bg-amber-100",
     iconColor: "text-amber-600",
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/ai-ml-support/Visualization-BI-Tools.png",
     active: false,
   },
   {
@@ -154,21 +71,7 @@ const techStackData = [
       "MLflow, Kubeflow, Airflow – for experiment tracking, model lifecycle management, and automation pipelines.",
     bgColor: "bg-purple-100",
     iconColor: "text-purple-600",
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/ai-ml-support/MLOps-Automation.png",
     active: false,
   },
 ];
@@ -207,7 +110,7 @@ export default function AiMlTechStackSection() {
                 <div
                   className={`w-12 h-12 rounded-full ${item.bgColor} ${item.iconColor} flex items-center justify-center mb-4`}
                 >
-                  {item.icon}
+                  <Image src={item.iconSrc} alt="" width={28} height={28} className="object-contain" />
                 </div>
 
                 {/* Card Title */}

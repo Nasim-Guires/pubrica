@@ -2,6 +2,7 @@
 
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React, { useState } from "react";
+import Image from "next/image";
 
 export default function InterpretationReportingVisualisation() {
     // Accordion state for "Types We Offer" grid cards (null = all closed by default)
@@ -16,21 +17,21 @@ export default function InterpretationReportingVisualisation() {
         {
             id: 1,
             title: "Types of Interpretation",
-            icon: "📊",
+            iconSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Types-of-Interpretation.png",
             content:
                 "Quantitative and qualitative data analysis methods including statistical hypothesis testing, correlation analysis, and contextual domain interpretation to derive actionable research intelligence.",
         },
         {
             id: 2,
             title: "Types of Reporting",
-            icon: "📑",
+            iconSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Types-of-Reporting.png",
             content:
                 "Structured narrative documentation including executive summaries, clinical trial reports, regulatory submission packages, and manuscript-ready research summaries adhering strictly to CONSORT, PRISMA, and STROBE guidelines.",
         },
         {
             id: 3,
             title: "Types of Visualization",
-            icon: "📈",
+            iconSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Types-of-Visualization.png",
             content: (
                 <ul className="space-y-2 text-xs md:text-sm text-gray-700">
                     <li>
@@ -101,13 +102,15 @@ export default function InterpretationReportingVisualisation() {
                     <div className="lg:col-span-5 relative flex justify-center">
                         <div className="bg-[#1b3d36] p-2 rounded-2xl w-full max-w-md">
                             {/* Image Section: Business professional looking over printed graphs and report documentation */}
-                            <div className="w-full h-[280px] sm:h-[320px] bg-slate-800 rounded-xl shadow-md border border-gray-600 flex flex-col items-center justify-center p-4 text-center">
-                                <p className="text-xs font-semibold text-teal-400 uppercase tracking-widest mb-2">
-                                    [ Image Section ]
-                                </p>
-                                <p className="text-xs text-gray-300">
-                                    Professional reviewing printed charts, graphs, and analytical research report
-                                </p>
+                            <div className="relative w-full h-[280px] sm:h-[320px] rounded-xl overflow-hidden">
+                                <Image
+                                    src="/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/poster-presentation-.webp"
+                                    alt="Interpretation, Reporting and Visualisation"
+                                    fill
+                                    className="object-cover"
+                                    sizes="(max-width: 768px) 100vw, 400px"
+                                    priority
+                                />
                             </div>
                         </div>
                     </div>
@@ -226,8 +229,8 @@ export default function InterpretationReportingVisualisation() {
                                     className="w-full flex items-center justify-between text-left focus:outline-none"
                                 >
                                     <div className="flex items-center space-x-2">
-                                        <span className="text-lg" role="img" aria-hidden="true">
-                                            {item.icon}
+                                        <span className="relative w-6 h-6 shrink-0">
+                                            <Image src={item.iconSrc} alt="" fill className="object-contain" />
                                         </span>
                                         <h3 className="text-xs md:text-sm font-bold text-[#1b3d36]">
                                             {item.title}

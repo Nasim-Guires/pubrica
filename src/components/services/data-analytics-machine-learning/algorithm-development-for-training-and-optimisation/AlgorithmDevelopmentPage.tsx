@@ -52,56 +52,56 @@ export default function AlgorithmDevelopmentService() {
         {
             id: 1,
             title: "AI & Machine Learning Algorithms",
-            icon: "🤖",
+            iconSrc: "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/AI-Machine-Learning-Algorithms.png",
             content:
                 "Predictive models for drug discovery, patient outcomes, nutrition science, and life sciences research.",
         },
         {
             id: 2,
             title: "Deep Learning Algorithms",
-            icon: "🧠",
+            iconSrc: "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Deep-Learning-Algorithms.png",
             content:
                 "Neural networks for medical imaging, computer vision, face and emotion recognition, video, and speech analysis.",
         },
         {
             id: 3,
             title: "Privacy & Security Algorithms",
-            icon: "🔒",
+            iconSrc: "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Privacy-Security-Algorithms.png",
             content:
                 "Safeguarding sensitive research and healthcare data while ensuring compliance with HIPAA, GDPR, and FDA/EMA regulations.",
         },
         {
             id: 4,
             title: "Multi-Objective Optimization",
-            icon: "📊",
+            iconSrc: "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Multi-Objective-Optimization.png",
             content:
                 "Balancing efficiency, accuracy, and cost for scientific and industrial applications.",
         },
         {
             id: 5,
             title: "Text & Web Mining Algorithms",
-            icon: "📄",
+            iconSrc: "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Text-Web-Mining-Algorithms.png",
             content:
                 "Extracting insights from clinical trial data, EHRs, regulatory documents, and scientific literature.",
         },
         {
             id: 6,
             title: "Data Visualization Algorithms",
-            icon: "📈",
+            iconSrc: "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Data-Visualization-Algorithms.png",
             content:
                 "Turning complex datasets into clear, actionable narratives for faster decision-making.",
         },
         {
             id: 7,
             title: "Workflow & Business Logic Models",
-            icon: "⚙️",
+            iconSrc: "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Workflow-Business-Logic-Models.png",
             content:
                 "Automating processes in healthcare, food R&D, and pharma research to improve efficiency and scalability.",
         },
         {
             id: 8,
             title: "Networking & IoT Algorithms",
-            icon: "🌐",
+            iconSrc: "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Networking-IoT-Algorithms.png",
             content:
                 "Enabling wireless communication and connectivity for smart medical devices and digital health systems.",
         },
@@ -204,7 +204,7 @@ export default function AlgorithmDevelopmentService() {
                         <div className="bg-[#1b3d36] p-2 rounded-2xl w-full max-w-md">
                             <div className="relative w-full h-[280px] sm:h-[320px] rounded-xl overflow-hidden">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80"
+                                    src="/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Algorithm-Development-for-Training-and-Optimisation.webp"
                                     alt="Software developer analyzing code algorithm on multiple monitors"
                                     fill
                                     className="object-cover"
@@ -238,7 +238,7 @@ export default function AlgorithmDevelopmentService() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-full max-w-sm h-[300px] rounded-xl overflow-hidden shadow-md">
                             <Image
-                                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                                src="/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/How-We-Do.png"
                                 alt="Healthcare analytics and algorithm development planning"
                                 fill
                                 className="object-cover"
@@ -315,8 +315,8 @@ export default function AlgorithmDevelopmentService() {
                                     className="w-full flex items-center justify-between text-left focus:outline-none"
                                 >
                                     <div className="flex items-center space-x-3">
-                                        <span className="text-xl" role="img" aria-hidden="true">
-                                            {card.icon}
+                                        <span className="relative w-8 h-8 shrink-0">
+                                            <Image src={card.iconSrc} alt="" fill className="object-contain" />
                                         </span>
                                         <h3 className="text-sm md:text-base font-bold text-[#1b3d36]">
                                             {card.title}

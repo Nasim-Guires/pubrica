@@ -1,20 +1,13 @@
 "use client";
 import React, { useState } from 'react';
-import { 
-  ClipboardList, 
-  BarChart3, 
-  FileText, 
-  Palette, 
-  CheckCircle2, 
-  LucideIcon 
-} from 'lucide-react';
+import Image from 'next/image';
 
 // --- Interface Definitions ---
 interface StepItem {
   id: number;
   title: string;
   description: React.ReactNode;
-  icon: LucideIcon;
+  iconSrc: string;
   position: 'top' | 'bottom';
 }
 
@@ -35,7 +28,7 @@ const STEP_ITEMS: StepItem[] = [
     id: 1,
     title: "CONSULTATION & REQUIREMENT GATHERING",
     description: "We begin by understanding your research goals, study design, and data sources.",
-    icon: ClipboardList,
+    iconSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Consultation-Requirement-Gathering.png",
     position: 'top',
   },
   {
@@ -46,21 +39,21 @@ const STEP_ITEMS: StepItem[] = [
         Our <span className="text-teal-600 font-medium group-hover:text-teal-400">subject matter experts</span> and statisticians work together to derive meaningful insights from your raw datasets.
       </>
     ),
-    icon: BarChart3,
+    iconSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Data-Analysis-Interpretation.png",
     position: 'bottom',
   },
   {
     id: 3,
     title: "DRAFTING THE REPORT",
     description: "We create structured reports that include methodology, findings, discussions, and conclusions in compliance with journal or regulatory guidelines.",
-    icon: FileText,
+    iconSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Drafting-the-Report.png",
     position: 'top',
   },
   {
     id: 4,
     title: "DESIGNING VISUAL OUTPUTS",
     description: "We create customised visual graphs, dashboards, tables, and infographics tailored for your target audience.",
-    icon: Palette,
+    iconSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Designing-Visual-Outputs.png",
     position: 'bottom',
   },
   {
@@ -71,7 +64,7 @@ const STEP_ITEMS: StepItem[] = [
         A thorough <span className="text-teal-600 font-medium group-hover:text-teal-400">peer review</span> ensures accuracy, readability, and alignment with your objectives before delivery.
       </>
     ),
-    icon: CheckCircle2,
+    iconSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Review-Finalisation.png",
     position: 'top',
   },
 ];
@@ -167,8 +160,6 @@ export const ProcessAndComplianceSection: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
             {STEP_ITEMS.map((step) => {
-              const IconComponent = step.icon;
-
               return (
                 <div key={step.id} className="flex flex-col items-center group relative">
                   {step.position === 'top' && (
@@ -190,8 +181,8 @@ export const ProcessAndComplianceSection: React.FC = () => {
                   >
                     <div className="w-full h-1 bg-[#00809d] mb-6"></div>
 
-                    <div className="mb-4 text-slate-600 group-hover:text-white transition-colors duration-300">
-                      <IconComponent className="w-10 h-10 stroke-[1.5]" />
+                    <div className="mb-4 relative w-10 h-10">
+                      <Image src={step.iconSrc} alt="" fill className="object-contain" />
                     </div>
 
                     <h3 className="font-bold text-sm tracking-wide text-slate-800 group-hover:text-white uppercase mb-3">
@@ -231,11 +222,13 @@ export const ProcessAndComplianceSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pt-2">
             {/* Left Column: Image */}
             <div className="md:col-span-5">
-              <div className="overflow-hidden rounded-sm shadow-md">
-                <img 
-                  src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800" 
-                  alt="Data analysis and reporting work" 
-                  className="w-full h-auto object-cover"
+              <div className="relative w-full h-56 overflow-hidden rounded-sm shadow-md">
+                <Image
+                  src="/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Our-Comprehensive-Interpretation-Reporting-and-Visualisation.webp"
+                  alt="Data analysis and reporting work"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 40vw"
                 />
               </div>
             </div>
@@ -305,11 +298,13 @@ export const ProcessAndComplianceSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Left Image */}
             <div className="md:col-span-5">
-              <div className="overflow-hidden rounded-sm shadow-sm bg-white">
-                <img 
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" 
-                  alt="Interpretation sample work" 
-                  className="w-full h-auto object-cover"
+              <div className="relative w-full h-64 overflow-hidden rounded-sm shadow-sm bg-white">
+                <Image
+                  src="/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Interpretation-Reporting-and-Visualisation-Sample-Work.webp"
+                  alt="Interpretation sample work"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 40vw"
                 />
               </div>
             </div>

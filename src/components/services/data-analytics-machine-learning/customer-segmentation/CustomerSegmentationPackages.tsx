@@ -2,10 +2,12 @@
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import React from 'react';
+import Image from 'next/image';
 
 interface PackageItem {
     id: string;
-    badgeLetter: string;
+    badgeLetter?: string;
+    badgeSrc: string;
     badgeBg: string;
     title: string;
     subtitle: string;
@@ -20,7 +22,7 @@ interface PackageItem {
 const packagesData: PackageItem[] = [
     {
         id: 'basic',
-        badgeLetter: 'B',
+        badgeSrc: '/images/editing-and-translation/basic-pacakge.png',
         badgeBg: 'bg-amber-100 text-amber-700 border-amber-300',
         title: 'Basic',
         subtitle: 'Segment Starter',
@@ -39,7 +41,7 @@ const packagesData: PackageItem[] = [
     },
     {
         id: 'standard',
-        badgeLetter: 'S',
+        badgeSrc: '/images/publication-support/poster-preparation/S.png',
         badgeBg: 'bg-amber-100 text-amber-700 border-amber-300',
         title: 'Standard',
         subtitle: 'Growth Segments',
@@ -59,7 +61,7 @@ const packagesData: PackageItem[] = [
     },
     {
         id: 'premium',
-        badgeLetter: 'P',
+        badgeSrc: '/images/editing-and-translation/translation-with-editing/pro.webp',
         badgeBg: 'bg-amber-100 text-amber-700 border-amber-300',
         title: 'Premium',
         subtitle: 'Strategic Segmentation',
@@ -103,8 +105,8 @@ export default function CustomerSegmentationPackages() {
                                 <div className={`h-2.5 w-full rounded-full ${pkg.topBarBg} mb-4`} />
                                 <div className="flex items-center gap-3">
                                     {/* Badge Circle */}
-                                    <div className="w-12 h-12 rounded-full bg-amber-100 border-2 border-amber-200 flex items-center justify-center font-bold text-amber-700 text-xl shadow-xs">
-                                        {pkg.badgeLetter}
+                                    <div className="relative w-12 h-12 shrink-0">
+                                        <Image src={pkg.badgeSrc} alt={`${pkg.title} package`} fill className="object-contain" />
                                     </div>
                                     {/* Title & Subtitle */}
                                     <div>

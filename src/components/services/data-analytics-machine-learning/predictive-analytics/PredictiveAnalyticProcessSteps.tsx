@@ -24,42 +24,42 @@ const stepsData: Step[] = [
         title: 'DATA COLLECTION & PREPARATION',
         description:
             'We begin by gathering structured and unstructured datasets from diverse sources such as clinical trials, electronic health records, research repositories, or market databases. Data is cleaned, standardized, and validated to ensure reliability.',
-        icon: '📊',
+        icon: '/images/data-analytics-machine-learning/predictive-analytics/Data-Collection-Preparation.png',
     },
     {
         id: 2,
         title: 'EXPLORATORY DATA ANALYSIS (EDA)',
         description:
             'Our experts conduct a thorough analysis to identify trends, patterns, and hidden variables that influence future outcomes. This step ensures that modeling is grounded in strong, data-driven insights.',
-        icon: '🔍',
+        icon: '/images/data-analytics-machine-learning/predictive-analytics/Exploratory-Data-Analysis-EDA.png',
     },
     {
         id: 3,
         title: 'MODEL VALIDATION & TESTING',
         description:
             'Every model undergoes rigorous validation and cross-checking against real-world datasets to ensure high accuracy, reproducibility, and generalizability.',
-        icon: '📉',
+        icon: '/images/data-analytics-machine-learning/predictive-analytics/Model-Validation-Testing.png',
     },
     {
         id: 4,
         title: 'MODEL DEVELOPMENT & SELECTION',
         description:
             'We design predictive models tailored to your objectives, using methods such as regression, classification, time-series forecasting, survival analysis, and advanced machine learning algorithms. The most suitable model is selected based on accuracy and robustness.',
-        icon: '⚙️',
+        icon: '/images/data-analytics-machine-learning/predictive-analytics/Model-Development-Selection.png',
     },
     {
         id: 5,
         title: 'SCENARIO SIMULATION & FORECASTING',
         description:
             'Through simulations and forecasting, we anticipate multiple outcomes and provide actionable insights that enable better decision-making and risk management.',
-        icon: '🖥️',
+        icon: '/images/data-analytics-machine-learning/predictive-analytics/Scenario-Simulation-Forecasting.png',
     },
     {
         id: 6,
         title: 'EVIDENCE-BASED REPORTING',
         description:
             'We deliver detailed, publication-ready reports with clear interpretations, visual dashboards, and strategic recommendations aligned with global research and industry standards.',
-        icon: '📋',
+        icon: '/images/data-analytics-machine-learning/predictive-analytics/Evidence-Based-Reporting.png',
     },
 ];
 
@@ -147,8 +147,8 @@ export default function PredictiveAnalyticProcessSteps() {
                         {/* Step Card: All start WHITE, turn DARK GRAY/BLACK on HOVER */ }
                         const processCard = (
                             <div className="group relative w-full bg-white hover:bg-neutral-800 p-5 rounded-xs border border-slate-200 hover:border-neutral-800 shadow-xs hover:shadow-xl transition-all duration-300 text-left flex flex-col min-h-[300px] cursor-pointer">
-                                <div className="text-3xl mb-3 text-center transition-transform duration-300 group-hover:scale-110">
-                                    {step.icon}
+                                <div className="relative w-10 h-10 mx-auto mb-3 transition-transform duration-300 group-hover:scale-110">
+                                    <Image src={step.icon} alt="" fill className="object-contain" />
                                 </div>
                                 <h4 className="font-bold text-slate-900 group-hover:text-white text-xs md:text-sm mb-3 leading-snug transition-colors duration-300 uppercase tracking-tight">
                                     {step.title}
@@ -204,7 +204,7 @@ export default function PredictiveAnalyticProcessSteps() {
                         <div className="lg:col-span-5 flex justify-center">
                             <div className="relative w-full max-w-md h-[280px] md:h-[340px] rounded-lg overflow-hidden shadow-md">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
+                                    src="/images/data-analytics-machine-learning/predictive-analytics/Benefits-of-Using-Our-Predictive-Analytics.webp"
                                     alt="Predictive analytics dashboard showing charts on laptop screen"
                                     fill
                                     className="object-cover"
@@ -287,7 +287,7 @@ export default function PredictiveAnalyticProcessSteps() {
                             <div className="md:col-span-5 flex justify-center">
                                 <div className="relative w-full max-w-xs h-[220px] md:h-[260px] rounded-md overflow-hidden shadow-sm">
                                     <Image
-                                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+                                        src="/images/data-analytics-machine-learning/predictive-analytics/Predictive-Analytics-Sample-Work.webp"
                                         alt="Predictive analytics sample work report display"
                                         fill
                                         className="object-cover"

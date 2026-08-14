@@ -90,24 +90,12 @@ export default function OurApproachSection() {
           {/* Left Column: Layered Visual Graphic */}
           <div className="lg:col-span-5 relative flex justify-center py-4">
             <div className="relative w-full max-w-md h-[340px] sm:h-[380px]">
-              {/* Bottom Layer Image Card (Robot with dashboard) */}
-              <div className="absolute bottom-0 right-0 w-[85%] h-[68%] rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white">
+              <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white">
                 <Image
-                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800"
-                  alt="AI and Robotics Data Dashboard"
+                  src="/images/ai-ml-support/Our-Approach-Helping-You-At-Every-Stage-Of-Your-AI-Journey.webp"
+                  alt="Our Approach: Helping You At Every Stage Of Your AI Journey"
                   fill
                   sizes="(max-width: 768px) 100vw, 400px"
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Top Overlapping Card (AI brain visualization) */}
-              <div className="absolute top-0 left-0 w-[60%] h-[58%] rounded-2xl overflow-hidden shadow-xl border-2 border-white bg-slate-900 z-10">
-                <Image
-                  src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=600"
-                  alt="AI Neural Network Graph"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 300px"
                   className="object-cover"
                 />
               </div>

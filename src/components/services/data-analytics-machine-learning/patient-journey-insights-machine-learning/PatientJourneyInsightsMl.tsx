@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 const servicesData = [
     {
@@ -88,11 +89,14 @@ export default function PatientJourneyInsightsMl() {
 
                     {/* Hero Image Block */}
                     <div className="lg:col-span-5 relative flex justify-center">
-                        <div className="relative rounded-2xl overflow-hidden shadow-lg border-4 border-[#143330]">
-                            <img
-                                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80"
-                                alt="Patient Journey Analytics Laptop"
-                                className="w-full h-auto object-cover"
+                        <div className="relative rounded-2xl overflow-hidden shadow-lg border-4 border-[#143330] w-full h-56 sm:h-72">
+                            <Image
+                                src="/images/ai-ml-support/Transform-complex-patient-data-into-actionable-insights-.webp"
+                                alt="Patient Journey Analytics"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 1024px) 100vw, 40vw"
+                                priority
                             />
                         </div>
                     </div>
@@ -132,18 +136,13 @@ export default function PatientJourneyInsightsMl() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                     {/* Side Image Showcase */}
                     <div className="lg:col-span-5 flex flex-col gap-4 items-center">
-                        <div className="w-64 rounded-2xl overflow-hidden shadow-md border-2 border-teal-700">
-                            <img
-                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=500&q=80"
-                                alt="Mobile Dashboard Analytics"
-                                className="w-full h-auto object-cover"
-                            />
-                        </div>
-                        <div className="w-64 rounded-2xl overflow-hidden shadow-md border-2 border-teal-700 -mt-6 ml-10">
-                            <img
-                                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=500&q=80"
-                                alt="Data Review"
-                                className="w-full h-auto object-cover"
+                        <div className="relative w-64 h-80 rounded-2xl overflow-hidden shadow-md border-2 border-teal-700">
+                            <Image
+                                src="/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Our-Services.png"
+                                alt="Patient journey services"
+                                fill
+                                className="object-cover"
+                                sizes="256px"
                             />
                         </div>
                     </div>

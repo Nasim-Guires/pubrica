@@ -1,12 +1,13 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 export default function PatientJourneyPackagesSection() {
   const packagesData = [
     {
       id: "basic",
-      badge: "B",
+      badgeSrc: "/images/editing-and-translation/basic-pacakge.png",
       badgeColor: "bg-amber-100 text-amber-600 border-amber-300",
       topBg: "bg-slate-50",
       contentBg: "bg-[#D8E3E0]", // Soft muted teal/sage grey
@@ -28,7 +29,7 @@ export default function PatientJourneyPackagesSection() {
     },
     {
       id: "advanced",
-      badge: "A",
+      badgeSrc: "/images/publication-support/peer-review-pre-submission/advanced.webp",
       badgeColor: "bg-emerald-100 text-emerald-600 border-emerald-300",
       topBg: "bg-slate-50",
       contentBg: "bg-[#E3D1E8]", // Soft lavender/purple
@@ -51,7 +52,7 @@ export default function PatientJourneyPackagesSection() {
     },
     {
       id: "premium",
-      badge: "P",
+      badgeSrc: "/images/editing-and-translation/translation-with-editing/pro.webp",
       badgeColor: "bg-blue-100 text-blue-600 border-blue-300",
       topBg: "bg-slate-50",
       contentBg: "bg-[#E6D4B2]", // Soft warm gold/beige
@@ -97,10 +98,8 @@ export default function PatientJourneyPackagesSection() {
             >
               {/* Header Badge & Title Block */}
               <div className="bg-slate-50 border-b border-slate-200 p-6 flex items-center gap-4">
-                <div
-                  className={`w-12 h-12 rounded-full border-2 flex items-center justify-center font-bold text-xl ${pkg.badgeColor}`}
-                >
-                  {pkg.badge}
+                <div className="relative w-12 h-12 shrink-0">
+                  <Image src={pkg.badgeSrc} alt={`${pkg.title} package`} fill className="object-contain" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-800">
                   {pkg.title}

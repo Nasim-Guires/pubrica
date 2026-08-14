@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 export default function AlgorithmWorkflowAndPackages() {
   // Data for 7-Step Workflow Process
@@ -52,7 +53,7 @@ export default function AlgorithmWorkflowAndPackages() {
   // Data for Pricing Packages matching exact design
   const packages = [
     {
-      badge: "B",
+      badgeSrc: "/images/editing-and-translation/basic-pacakge.png",
       badgeColor: "text-[#d9a24a] border-[#e2b05c]",
       title: "Basic",
       subtitle: "Foundational Algorithm Development",
@@ -67,7 +68,7 @@ export default function AlgorithmWorkflowAndPackages() {
       timeline: "2–3 weeks",
     },
     {
-      badge: "S",
+      badgeSrc: "/images/publication-support/poster-preparation/S.png",
       badgeColor: "text-[#d9a24a] border-[#e2b05c]",
       title: "Standard",
       subtitle: "Optimised Algorithm Development",
@@ -83,7 +84,7 @@ export default function AlgorithmWorkflowAndPackages() {
       timeline: "4–6 weeks",
     },
     {
-      badge: "P",
+      badgeSrc: "/images/editing-and-translation/translation-with-editing/pro.webp",
       badgeColor: "text-[#d9a24a] border-[#e2b05c]",
       title: "Premium",
       subtitle: "Advanced & Custom Algorithm Solutions",
@@ -200,13 +201,14 @@ export default function AlgorithmWorkflowAndPackages() {
           {/* Image Section Replacement Div */}
           <div className="md:col-span-5 flex justify-center">
             {/* Image Section: Hands typing on a laptop screen with algorithm code */}
-            <div className="w-full max-w-sm h-64 bg-slate-800 rounded-xl shadow-md border border-gray-300 flex flex-col items-center justify-center p-4 text-center">
-              <p className="text-xs font-semibold text-teal-400 uppercase tracking-widest mb-2">
-                [ Image Section ]
-              </p>
-              <p className="text-xs text-gray-300">
-                Laptop showing developer workspace & training algorithms code
-              </p>
+            <div className="relative w-full max-w-sm h-64 rounded-xl overflow-hidden shadow-md border border-gray-300">
+              <Image
+                src="/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Algorithm-Development-for-Training-and-Optimisation-Sample-Work.png"
+                alt="Algorithm Development for Training and Optimisation Sample Work"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 400px"
+              />
             </div>
           </div>
 
@@ -261,8 +263,8 @@ export default function AlgorithmWorkflowAndPackages() {
               <div>
                 {/* Header Banner Inside Card */}
                 <div className="bg-white/80 backdrop-blur-sm rounded-md p-3 flex items-center space-x-3 mb-6 shadow-xs">
-                  <div className={`w-9 h-9 rounded-full border-2 ${pkg.badgeColor} bg-amber-50/50 flex items-center justify-center font-bold text-base`}>
-                    {pkg.badge}
+                  <div className="relative w-9 h-9 shrink-0">
+                    <Image src={pkg.badgeSrc} alt={`${pkg.title} package`} fill className="object-contain" />
                   </div>
                   <div>
                     <h3 className="font-bold text-base text-[#1b3d36] leading-tight">

@@ -12,7 +12,7 @@ export default function SampleWorkSection() {
           <div className="md:col-span-5 flex justify-center">
             <div className="relative w-full max-w-xs h-64 sm:h-72 rounded-lg overflow-hidden shadow-md">
               <Image
-                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=600"
+                src="/images/ai-ml-support/Artificial-Intelligence-and-Machine-Learning-Services-Sample-Work.webp"
                 alt="AI and Machine Learning Services Sample Work"
                 fill
                 sizes="(max-width: 768px) 100vw, 350px"

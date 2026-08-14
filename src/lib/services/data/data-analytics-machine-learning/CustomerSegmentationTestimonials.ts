@@ -7,7 +7,7 @@ export const customerSegmentationWhoWeServe = [
       "Optimize outreach for preventive healthcare and chronic disease management.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1516549655169-df83a0774514",
+      "/images/data-analytics-machine-learning/customer-segmentation/Healthcare-Providers-Hospitals.webp",
   },
   {
     title: "Pharmaceutical & Biotech Companies",
@@ -17,7 +17,7 @@ export const customerSegmentationWhoWeServe = [
       "Enhance product positioning through evidence-based customer insights.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1576086213369-97a306d36557",
+      "/images/data-analytics-machine-learning/customer-segmentation/Pharmaceutical-Biotech-Companies.webp",
   },
   {
     title: "Academic & Research Institutions",
@@ -27,7 +27,7 @@ export const customerSegmentationWhoWeServe = [
       "Strengthen collaborations by identifying high-potential research clusters.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
+      "/images/data-analytics-machine-learning/customer-segmentation/Academic-Research-Institutions-1.webp",
   },
   {
     title: "Publishers & Knowledge Providers",
@@ -37,7 +37,7 @@ export const customerSegmentationWhoWeServe = [
       "Build strong relationships with niche communities in scientific publishing.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1512820790803-83ca734da794",
+      "/images/data-analytics-machine-learning/customer-segmentation/Publishers-Knowledge-Providers.webp",
   },
   {
     title: "Medical Device & Health-Tech Companies",
@@ -47,40 +47,37 @@ export const customerSegmentationWhoWeServe = [
       "Improve adoption rates by personalizing training and support through medical device market segmentation.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1581595219315-a187dd40c322",
+      "/images/data-analytics-machine-learning/customer-segmentation/Medical-Device-Health-Tech-Companies.webp",
   },
 ];
 
 export const customerSegmentationTestimonials = [
   {
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    image: "/images/editing-and-translation/book-editing/testimonials-2.png",
     quote:
       "Pubrica’s precise segmentation approach transformed our approach to target audiences. The insights were easy to interpret and immediately applicable to our business strategy.",
     name: "Ms. Sofia Martinez",
     designation: "Product Manager",
     organization: "Spain",
-    flag: "https://flagcdn.com/w80/es.png",
+    flag: "/images/editing-and-translation/thesis-editing/spain-.png",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978",
+    image: "/images/editing-and-translation/scientific-editing/testimonials-1.png",
     quote:
       "The segmentation models developed by Pubrica allowed us to understand our customers’ behavior in ways we never imagined. Their clear reporting and strategic recommendations were invaluable.",
     name: "Mr. David Thompson",
     designation: "Head of Customer Analytics",
     organization: "UK",
-    flag: "https://flagcdn.com/w80/gb.png",
+    flag: "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a",
+    image: "/images/editing-and-translation/scientific-editing/testimonials-3.png",
     quote:
       "Pubrica’s customer segmentation team helped us identify high-value segments and tailor our marketing strategies effectively. Their actionable insights significantly boosted our campaign ROI.",
     name: "Dr. Ananya Rao",
     designation: "Marketing Strategy Consultant",
     organization: "India",
-    flag: "https://flagcdn.com/w80/in.png",
+    flag: "/images/editing-and-translation/book-editing/flag.png",
   },
 ];
 

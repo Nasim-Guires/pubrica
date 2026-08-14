@@ -9,7 +9,7 @@ export const algorithmDevelopmentWhoWeServe = {
         "AI/ML algorithm development for biomedical research, clinical studies, and computational modeling to support high-impact publications."
       ],
       imageUrl:
-        "/images/services/algorithm-development/researchers-academicians.jpg"
+        "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Researchers-Academicians-1.png"
     },
     {
       title: "Healthcare & Life Science Companies",
@@ -17,7 +17,7 @@ export const algorithmDevelopmentWhoWeServe = {
         "Algorithms for drug discovery, diagnostics, patient monitoring, and personalized medicine."
       ],
       imageUrl:
-        "/images/services/algorithm-development/healthcare-life-science.jpg"
+        "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Healthcare-Life-Science-Companies.png"
     },
     {
       title: "Clinicians & Healthcare Providers",
@@ -25,7 +25,7 @@ export const algorithmDevelopmentWhoWeServe = {
         "Predictive and decision-support algorithms that enhance diagnosis, treatment planning, and patient outcome tracking."
       ],
       imageUrl:
-        "/images/services/algorithm-development/clinicians-healthcare-providers.jpg"
+        "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Clinicians-Healthcare-Providers.png"
     },
     {
       title: "Pharmaceutical & Biotech Firms",
@@ -33,7 +33,7 @@ export const algorithmDevelopmentWhoWeServe = {
         "Optimization models for clinical trials, molecular simulations, and large-scale drug development data interpretation."
       ],
       imageUrl:
-        "/images/services/algorithm-development/pharmaceutical-biotech.jpg"
+        "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Pharmaceutical-Biotech-Firms.png"
     },
     {
       title: "Food & Nutraceutical Innovators",
@@ -41,7 +41,7 @@ export const algorithmDevelopmentWhoWeServe = {
         "Algorithms for nutrition modeling, product R&D, consumer insights, and safety validation."
       ],
       imageUrl:
-        "/images/services/algorithm-development/food-nutraceutical.jpg"
+        "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Food-Nutraceutical-Innovators.png"
     },
     {
       title: "Business & Industry Leaders",
@@ -49,7 +49,7 @@ export const algorithmDevelopmentWhoWeServe = {
         "Data-driven algorithms for operations optimization, market analytics, and strategic forecasting."
       ],
       imageUrl:
-        "/images/services/algorithm-development/business-industry.jpg"
+        "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Business-Industry-Leaders.png"
     },
     {
       title: "Regulatory Bodies & Policy Makers",
@@ -57,7 +57,7 @@ export const algorithmDevelopmentWhoWeServe = {
         "Transparent, interpretable models for compliance, safety assessment, and evidence-based decision-making."
       ],
       imageUrl:
-        "/images/services/algorithm-development/regulatory-policy-makers.jpg"
+        "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Regulatory-Bodies-Policy-Makers.png"
     }
   ]
 };
@@ -70,33 +70,33 @@ export const algorithmDevelopmentTestimonials = {
   testimonials: [
     {
       image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop",
+        "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/journal-of-health-economics-1.png",
       quote:
         "The experts at Pubrica guided us through the entire algorithm development process, from model selection to optimization and validation. Their adherence to industry standards and compliance guidelines ensured our solution was robust, reliable, and ready for real-world application.",
       name: "Dr. Sarah Thompson",
       designation: "AI Research Scientist",
       organization: "USA",
-      flag: "/images/flags/usa.png"
+      flag: "/images/research-services/grant-writing/usa-1-1.png"
     },
     {
       image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop",
+        "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/case-reports-in-paediatrics.png",
       quote:
         "Pubrica’s team worked closely with us to develop and optimize our predictive algorithms for clinical data analysis. Their rigorous approach and compliance with HIPAA and GDPR made our models trustworthy and publication-ready.",
       name: "Dr. Michael Lee",
       designation: "Biomedical Data Scientist",
       organization: "Canada",
-      flag: "/images/flags/canada.png"
+      flag: "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/canada-flag.png"
     },
     {
       image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop",
+        "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/asian-journal-of-psychiatry.png",
       quote:
         "Pubrica helped us implement optimized algorithms that improved our decision-making processes and operational efficiency. Their expertise ensured reliable, actionable insights from complex datasets.",
       name: "James Carter",
       designation: "Data Analytics Lead",
       organization: "UK",
-      flag: "/images/flags/uk.png"
+      flag: "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/uk-flag.png"
     }
   ]
 };

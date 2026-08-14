@@ -1,11 +1,13 @@
 import React from 'react';
+import Image from 'next/image';
 import { ArrowRightCircle } from 'lucide-react';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 // --- Types ---
 interface PackagePlan {
     id: string;
-    badge: string;
+    badge?: string;
+    badgeSrc: string;
     name: string;
     headerBg: string; // Tailored colors matching screenshot
     headerTextColor: string;
@@ -20,7 +22,7 @@ interface PackagePlan {
 const PACKAGES_DATA: PackagePlan[] = [
     {
         id: 'basic',
-        badge: 'B',
+        badgeSrc: '/images/editing-and-translation/basic-pacakge.png',
         name: 'Basic',
         headerBg: 'bg-[#e2ebeb]',
         headerTextColor: 'text-[#355252]',
@@ -36,7 +38,7 @@ const PACKAGES_DATA: PackagePlan[] = [
     },
     {
         id: 'standard',
-        badge: 'S',
+        badgeSrc: '/images/publication-support/poster-preparation/S.png',
         name: 'Standard',
         headerBg: 'bg-[#eee3f5]',
         headerTextColor: 'text-[#6a3b7d]',
@@ -53,7 +55,7 @@ const PACKAGES_DATA: PackagePlan[] = [
     },
     {
         id: 'premium',
-        badge: 'P',
+        badgeSrc: '/images/editing-and-translation/translation-with-editing/pro.webp',
         name: 'Premium',
         headerBg: 'bg-[#e9ded0]',
         headerTextColor: 'text-[#705638]',
@@ -96,8 +98,8 @@ export const ReportingPackagesSection: React.FC = () => {
                         >
                             {/* Header Banner */}
                             <div className={`p-4 flex items-center justify-center gap-3 border-b border-slate-200/50 ${pkg.headerBg}`}>
-                                <div className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-lg shadow-inner ${pkg.badgeBg}`}>
-                                    {pkg.badge}
+                                <div className="relative w-9 h-9 shrink-0">
+                                    <Image src={pkg.badgeSrc} alt={`${pkg.name} package`} fill className="object-contain" />
                                 </div>
                                 <h3 className={`text-xl font-bold ${pkg.headerTextColor}`}>
                                     {pkg.name}

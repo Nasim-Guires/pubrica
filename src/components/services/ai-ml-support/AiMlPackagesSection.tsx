@@ -2,11 +2,13 @@
 
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
+import Image from "next/image";
 
 const packagesData = [
   {
     id: "starter",
     badge: "S",
+    badgeSrc: "/images/publication-support/poster-preparation/S.png",
     name: "Starter",
     badgeBg: "bg-amber-100 text-amber-700 border-amber-300",
     cardBg: "bg-[#c5d5d5]",
@@ -30,6 +32,7 @@ const packagesData = [
   {
     id: "advanced",
     badge: "A",
+    badgeSrc: "/images/publication-support/peer-review-pre-submission/advanced.webp",
     name: "Advanced",
     badgeBg: "bg-emerald-100 text-emerald-700 border-emerald-300",
     cardBg: "bg-[#d2c1d8]",
@@ -53,6 +56,7 @@ const packagesData = [
   {
     id: "premium",
     badge: "P",
+    badgeSrc: "/images/editing-and-translation/translation-with-editing/pro.webp",
     name: "Premium",
     badgeBg: "bg-blue-100 text-blue-700 border-blue-300",
     cardBg: "bg-[#d8c399]",
@@ -76,6 +80,7 @@ const packagesData = [
   {
     id: "enterprise",
     badge: "E",
+    badgeSrc: "/images/editing-and-translation/book-editing/E-pa-icons-1.png",
     name: "Enterprise & Custom",
     badgeBg: "bg-rose-100 text-rose-700 border-rose-300",
     cardBg: "bg-[#f8c8c8]",
@@ -138,10 +143,13 @@ export default function AiMlPackagesSection() {
                 <div
                   className={`p-4 flex items-center gap-3 border-b border-black/5 ${pkg.headerBg}`}
                 >
-                  <div
-                    className={`w-9 h-9 rounded-full border flex items-center justify-center font-bold text-base shadow-sm ${pkg.badgeBg}`}
-                  >
-                    {pkg.badge}
+                  <div className="relative w-9 h-9 shrink-0">
+                    <Image
+                      src={pkg.badgeSrc}
+                      alt={`${pkg.name} package`}
+                      fill
+                      className="object-contain"
+                    />
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 leading-tight">
                     {pkg.name}
