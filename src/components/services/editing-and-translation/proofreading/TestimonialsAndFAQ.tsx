@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { ThumbsUp, Minus } from "lucide-react";
 
 // ==========================================
@@ -11,31 +12,36 @@ interface Testimonial {
   quote: string;
   name: string;
   role: string;
-  journalCoverTitle: string;
-  journalCoverSubtitle: string;
-  journalCoverBg: string;
+  journalImage: string;
 }
 
 const testimonialsData: Testimonial[] = [
   {
     id: 1,
     quote:
-      "“The proofreading team corrected subtle grammar and formatting issues I had missed. My thesis looked polished and professional.”",
-    name: "Ananya Rao",
-    role: "PhD Scholar, India",
-    journalCoverTitle: "CLINICAL PROBLEM-SOLVING",
-    journalCoverSubtitle: "The New England Journal of Medicine",
-    journalCoverBg: "from-blue-900 to-slate-900",
+      "“Pubrica’s proofreading service ensured my manuscript was completely error-free before submission. The reviewers appreciated the clarity and professionalism.”",
+    name: "Dr Maria Schneider",
+    role: "Academic Researcher, Germany",
+    journalImage:
+      "/images/editing-and-translation/proofreading/testimonials-1.webp",
   },
   {
     id: 2,
     quote:
+      "“The proofreading team corrected subtle grammar and formatting issues I had missed. My thesis looked polished and professional.”",
+    name: "Ananya Rao",
+    role: "PhD Scholar, India",
+    journalImage:
+      "/images/editing-and-translation/proofreading/testimonials-2.webp",
+  },
+  {
+    id: 3,
+    quote:
       "“Thanks to Pubrica’s editorial support, my research paper was ready for journal submission without any formatting or citation issues. The process was smooth, and I felt confident submitting it.”",
     name: "Dr Liam O’Connor",
     role: "Postdoctoral Researcher, Canada",
-    journalCoverTitle: "CLINICAL PRACTICE",
-    journalCoverSubtitle: "The New England Journal of Medicine",
-    journalCoverBg: "from-emerald-900 to-slate-900",
+    journalImage:
+      "/images/editing-and-translation/proofreading/testimonials-1.webp",
   },
 ];
 
@@ -106,6 +112,12 @@ export default function TestimonialsAndFAQ() {
     setOpenFAQ((prev) => (prev === id ? "" : id));
   };
 
+  const mobileItem = testimonialsData[activeSlide];
+  const desktopItems = [
+    testimonialsData[activeSlide],
+    testimonialsData[(activeSlide + 1) % testimonialsData.length],
+  ];
+
   return (
     <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-12 space-y-16">
       {/* ======================================= */}
@@ -116,68 +128,30 @@ export default function TestimonialsAndFAQ() {
           Testimonials
         </h2>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {testimonialsData.map((item) => (
-            <div
-              key={item.id}
-              className="bg-[#1f3d35] text-white p-6 sm:p-8 rounded-lg shadow-lg flex flex-col justify-between space-y-6 relative border border-[#162d27]"
-            >
-              <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
-                {/* Quote and Author Info */}
-                <div className="space-y-6 flex-1">
-                  <p className="text-xs sm:text-sm text-slate-200 leading-relaxed italic">
-                    {item.quote}
-                  </p>
-                  <div>
-                    <h3 className="font-bold text-sm sm:text-base text-white">
-                      — {item.name}
-                    </h3>
-                    <p className="text-xs text-emerald-200 italic">
-                      {item.role}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Simulated Book/Journal Cover Frame */}
-                <div className="w-28 h-36 shrink-0 bg-slate-900 border-2 border-slate-400 rounded-sm p-1.5 flex flex-col justify-between shadow-md self-center sm:self-start">
-                  <div className="bg-white text-[7px] text-slate-800 font-serif p-0.5 text-center font-bold uppercase tracking-tighter border-b border-slate-300">
-                    The New England Journal of Medicine
-                  </div>
-                  <div
-                    className={`flex-1 bg-gradient-to-b ${item.journalCoverBg} p-1 flex items-center justify-center text-center my-0.5`}
-                  >
-                    <span className="text-[9px] font-bold text-white leading-tight uppercase font-serif">
-                      {item.journalCoverTitle}
-                    </span>
-                  </div>
-                  <div className="text-[6px] text-slate-400 text-center font-mono">
-                    Publication Preview
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className="grid grid-cols-1 gap-6 md:hidden">
+          <ProofreadingTestimonialCard item={mobileItem} />
+        </div>
+        <div className="hidden md:grid grid-cols-2 gap-6">
+          {desktopItems.map((item) => (
+            <ProofreadingTestimonialCard
+              key={`${activeSlide}-${item.id}`}
+              item={item}
+            />
           ))}
         </div>
 
-        {/* Carousel Pagination Dots */}
         <div className="flex items-center justify-center space-x-2 pt-2">
-          <button
-            type="button"
-            onClick={() => setActiveSlide(0)}
-            className={`w-3 h-3 rounded-full border border-slate-700 transition-colors ${
-              activeSlide === 0 ? "bg-transparent" : "bg-transparent"
-            }`}
-            aria-label="Slide 1"
-          />
-          <button
-            type="button"
-            onClick={() => setActiveSlide(1)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              activeSlide === 1 ? "bg-slate-900" : "bg-slate-800"
-            }`}
-            aria-label="Slide 2"
-          />
+          {testimonialsData.map((item, index) => (
+            <button
+              key={item.id}
+              type="button"
+              onClick={() => setActiveSlide(index)}
+              className={`w-3 h-3 rounded-full border border-slate-700 transition-colors ${
+                activeSlide === index ? "bg-slate-900" : "bg-white"
+              }`}
+              aria-label={`Show testimonial ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
 
@@ -234,6 +208,35 @@ export default function TestimonialsAndFAQ() {
           })}
         </div>
       </section>
+    </div>
+  );
+}
+
+function ProofreadingTestimonialCard({ item }: { item: Testimonial }) {
+  return (
+    <div className="bg-[#1f3d35] text-white p-6 sm:p-8 rounded-lg shadow-lg flex flex-col justify-between space-y-6 relative border border-[#162d27]">
+      <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
+        <div className="space-y-6 flex-1">
+          <p className="text-xs sm:text-sm text-slate-200 leading-relaxed italic">
+            {item.quote}
+          </p>
+          <div>
+            <h3 className="font-bold text-sm sm:text-base text-white">
+              — {item.name}
+            </h3>
+            <p className="text-xs text-emerald-200 italic">{item.role}</p>
+          </div>
+        </div>
+        <div className="relative w-28 h-36 shrink-0 bg-white border-2 border-slate-400 rounded-sm p-1 overflow-hidden shadow-md self-center sm:self-start">
+          <Image
+            src={item.journalImage}
+            alt={`${item.name} testimonial`}
+            fill
+            sizes="112px"
+            className="object-contain"
+          />
+        </div>
+      </div>
     </div>
   );
 }

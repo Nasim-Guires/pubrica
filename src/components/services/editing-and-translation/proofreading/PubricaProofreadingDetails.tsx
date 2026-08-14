@@ -1,15 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Minus,
-  Plus,
-  ArrowRightCircle,
-  FileCheck2,
-  ExternalLink,
-  Clock,
-  ShieldCheck,
-} from "lucide-react";
+import Image from "next/image";
+import { ArrowRightCircle } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // ==========================================
@@ -29,6 +22,7 @@ const reasonsList = [
 interface PackageItem {
   id: string;
   badgeLetter: string;
+  iconSrc: string;
   title: string;
   rateText: string;
   bgColor: string;
@@ -43,6 +37,7 @@ const packagesData: PackageItem[] = [
   {
     id: "basic",
     badgeLetter: "B",
+    iconSrc: "/images/editing-and-translation/proofreading/Basic.webp",
     title: "Basic Package",
     rateText: "At A Rate Of 0.08 Per Word With A Minimum Of 1000 Words",
     bgColor: "bg-[#dce5e7]",
@@ -61,6 +56,7 @@ const packagesData: PackageItem[] = [
   {
     id: "standard",
     badgeLetter: "S",
+    iconSrc: "/images/publication-support/poster-preparation/S.png",
     title: "Standard Package",
     rateText: "At A Rate Of 0.12 Per Word, With A Minimum Of 1000 Words",
     bgColor: "bg-[#e3d5ea]",
@@ -77,6 +73,7 @@ const packagesData: PackageItem[] = [
   {
     id: "premium",
     badgeLetter: "P",
+    iconSrc: "/images/editing-and-translation/pro.webp",
     title: "Premium Package",
     rateText: "At A Rate Of 0.16 Per Word, With A Minimum Of 1000 Words",
     bgColor: "bg-[#e5d5b7]",
@@ -166,119 +163,15 @@ export default function PubricaProofreadingDetails() {
           </div>
 
           {/* Sample Document Body Area */}
-          <div className="bg-white p-6 sm:p-10 relative text-slate-800 font-serif leading-relaxed text-xs sm:text-sm md:text-base border-b border-slate-200 min-h-[380px]">
-            {/* Watermark Logo Placeholder */}
-            <div className="absolute right-6 top-6 opacity-90 hidden sm:block">
-              <div className="bg-[#003B46] text-white px-3 py-1 font-sans font-bold text-lg tracking-wider rounded-xs">
-                PUBRICA
-              </div>
-              <p className="text-[10px] font-sans text-right text-slate-500">
-                Knowledge Works
-              </p>
-            </div>
-
-            {/* Document Paragraph 1 with highlights */}
-            <p className="mb-6 max-w-3xl">
-              Since the <span className="font-bold text-purple-700">ABR</span>{" "}
-              emergence of{" "}
-              <span className="text-purple-700 underline font-semibold">
-                Auditory Brainstem Response (ABR)
-              </span>
-              , non-level-dependent stimuli such as click, tone burst, and
-              upward chirp have been used to elicit ABRS until the development
-              of{" "}
-              <span className="line-through text-pink-600">
-                level-dependent stimulus, namely,
-              </span>{" "}
-              the{" "}
-              <span className="text-purple-700 font-semibold underline">
-                Level-specific CE-Chirp (LS CE-Chirp)
-              </span>{" "}
-              (1-3). LS CE-Chirp is the latest{" "}
-              <span className="line-through text-pink-600">innovated</span>
-              <span className="text-purple-700 font-semibold">
-                innovative
-              </span>{" "}
-              stimulus{" "}
-              <span className="line-through text-pink-600">that has</span>
-              <span className="text-purple-700 font-semibold">with</span> at
-              least two{" "}
-              <span className="line-through text-pink-600">supremacy</span>
-              <span className="text-purple-700 font-semibold">
-                advantages
-              </span>{" "}
-              compared to other stimuli,{" "}
-              <span className="line-through text-pink-600">which are:</span> i){" "}
-              <span className="line-through text-pink-600">able to</span>
-              <span className="text-purple-700 font-semibold">it can</span>{" "}
-              compensate for the broader excitation at a high-intensity level in
-              chirp and ii){" "}
-              <span className="line-through text-pink-600">overcome</span>
-              <span className="text-purple-700 font-semibold">
-                it overcomes
-              </span>{" "}
-              the “travelling wave delay” issue in{" "}
-              <span className="text-purple-700 underline">the</span> click
-              stimulus.
-            </p>
-
-            {/* Document Paragraph 2 with highlights */}
-            <p className="max-w-3xl">
-              The “broad excitation at the high-intensity level and changes in
-              the cochlear neural delay at the low-intensity level” refers to a
-              situation in which, at a high stimulus level, the excitation of{" "}
-              <span className="line-through text-pink-600">cochlea</span>
-              <span className="text-purple-700 font-semibold">
-                cochlear
-              </span>{" "}
-              regions broadens but{" "}
-              <span className="line-through text-pink-600">narrowed</span>
-              <span className="text-purple-700 font-semibold">narrows</span> at
-              a low stimulus level (4). The theory underlying the development of{" "}
-              <span className="line-through text-pink-600">this</span> LS
-              CE-Chirp is the delay in stimulus presentation and compensation
-              concept. Therefore, following the specified delay model-
-              <span className="line-through text-pink-600">suggested</span> a
-              shorter stimulus presentation at a high-intensity level{" "}
-              <span className="line-through text-pink-600">than at</span>
-              <span className="text-purple-700 font-semibold">
-                is suggested compared
-              </span>{" "}
-              to the mid and low-intensity levels (2).{" "}
-              <span className="text-purple-700 font-semibold">Hence,</span>
-              <span className="line-through text-pink-600">This allows</span> LS
-              CE-Chirp <span className="line-through text-pink-600">can</span>
-              <span className="text-purple-700 font-semibold">
-                to
-              </span> reduce{" "}
-              <span className="text-purple-700 underline">the</span> neural
-              firing desynchronisation and compensate for the{" "}
-              <span className="text-purple-700 font-semibold">
-                broader arousal's
-              </span>{" "}
-              negative effect{" "}
-              <span className="text-purple-700 underline">
-                of broader arousal
-              </span>{" "}
-              in chirp{" "}
-              <span className="text-purple-700 underline">stimuli</span> (2,
-              5-6).
-            </p>
-
-            {/* Sample Annotation Callout Badges */}
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-3 font-sans text-xs">
-              <div className="bg-slate-200 border-l-4 border-slate-500 p-2 text-slate-700">
-                <strong>Annotation:</strong> Full form is mentioned at first
-                appearance.
-              </div>
-              <div className="bg-slate-200 border-l-4 border-slate-500 p-2 text-slate-700">
-                <strong>Annotation:</strong> Grammar & word usage correction
-                done.
-              </div>
-              <div className="bg-slate-200 border-l-4 border-slate-500 p-2 text-slate-700">
-                <strong>Annotation:</strong> Correct punctuation & journal
-                formatting aligned.
-              </div>
+          <div className="bg-white p-4 sm:p-6 relative border-b border-slate-200">
+            <div className="relative w-full min-h-[350px] sm:min-h-[480px] bg-white rounded-lg border border-slate-200 overflow-hidden">
+              <Image
+                src="/images/editing-and-translation/proofreading/Proofreading.webp"
+                alt="Proofreading services sample work"
+                fill
+                sizes="(max-width: 1200px) 100vw, 1100px"
+                className="object-contain"
+              />
             </div>
           </div>
 
@@ -309,8 +202,14 @@ export default function PubricaProofreadingDetails() {
                 {/* Package Header */}
                 <div className="flex items-start space-x-3">
                   {/* Badge Letter Icon */}
-                  <div className="w-12 h-12 rounded-full bg-white/70 border border-slate-300 flex items-center justify-center font-bold text-xl text-slate-700 shrink-0 shadow-2xs">
-                    {pkg.badgeLetter}
+                  <div className="w-12 h-12 rounded-full bg-white/70 border border-slate-300 flex items-center justify-center font-bold text-xl text-slate-700 shrink-0 shadow-2xs overflow-hidden">
+                    <Image
+                      src={pkg.iconSrc}
+                      alt={`${pkg.title} icon`}
+                      width={48}
+                      height={48}
+                      className="w-12 h-12 object-contain"
+                    />
                   </div>
                   <div>
                     <h3 className="text-xl font-extrabold text-slate-900 leading-tight">

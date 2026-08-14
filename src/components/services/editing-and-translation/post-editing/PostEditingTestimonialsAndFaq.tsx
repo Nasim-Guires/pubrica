@@ -28,13 +28,24 @@ export const PostEditingTestimonialsAndFaq: React.FC = () => {
 
   const testimonials: Testimonial[] = [
     {
+      id: "priya-menon",
+      quote:
+        "Pubrica’s post-editing team transformed my manuscript into a polished, publication-ready document. Their attention to detail and understanding of medical terminology were exceptional.",
+      author: "DR. PRIYA MENON",
+      role: "Medical Researcher, India",
+      journalImage:
+        "/images/editing-and-translation/post-editing/plos-one-.png",
+      flagIcon: "/images/editing-and-translation/post-editing/flag.png",
+    },
+    {
       id: "ayesha-patel",
       quote:
         "As a non-native English speaker, I found Pubrica’s post-editing services invaluable. They ensured my manuscript met international publication standards.",
       author: "DR. AYESHA PATEL",
       role: "Clinical Researcher, India",
-      journalImage: "/images/testimonials/diabetologia.png",
-      flagIcon: "🇮🇳",
+      journalImage:
+        "/images/editing-and-translation/post-editing/diabetologia.png",
+      flagIcon: "/images/editing-and-translation/post-editing/flag.png",
     },
     {
       id: "maria-gonzales",
@@ -42,9 +53,16 @@ export const PostEditingTestimonialsAndFaq: React.FC = () => {
         "Pubrica’s post-editing service improved clarity and precision without altering meaning. My paper was accepted quickly.",
       author: "DR. MARIA GONZALES",
       role: "Research Scientist, Spain",
-      journalImage: "/images/testimonials/bmc-health.png",
-      flagIcon: "🇪🇸",
+      journalImage:
+        "/images/editing-and-translation/post-editing/bmc-public-health.png",
+      flagIcon: "/images/editing-and-translation/post-editing/spain.png",
     },
+  ];
+
+  const mobileItem = testimonials[activeSlide];
+  const desktopItems = [
+    testimonials[activeSlide],
+    testimonials[(activeSlide + 1) % testimonials.length],
   ];
 
   // FAQ Column 1 (Questions 1 to 4)
@@ -127,72 +145,30 @@ export const PostEditingTestimonialsAndFaq: React.FC = () => {
           fully ready for successful publication. Here is what our clients say:
         </p>
 
-        {/* Testimonial Cards Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {testimonials.map((item) => (
-            <div
-              key={item.id}
-              className="bg-white rounded-xl border border-slate-300 p-6 shadow-sm flex flex-col justify-between space-y-6"
-            >
-              {/* Top Row: Journal Cover Placeholder + Quote Box */}
-              <div className="bg-[#d5d8d8] rounded-lg p-4 flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                {/* Journal Cover Image Box */}
-                <div className="relative w-28 h-28 bg-white rounded border border-slate-300 shrink-0 overflow-hidden flex items-center justify-center p-1">
-                  <Image
-                    src={item.journalImage}
-                    alt={`${item.author} publication cover`}
-                    fill
-                    sizes="112px"
-                    className="object-contain p-1"
-                  />
-                </div>
-
-                {/* Quote Text */}
-                <p className="text-xs sm:text-sm text-slate-800 font-medium italic leading-relaxed">
-                  &ldquo;{item.quote}&rdquo;
-                </p>
-              </div>
-
-              {/* Bottom Row: Author Details + Country Flag */}
-              <div className="flex items-center justify-between pt-2">
-                <div>
-                  <h3 className="font-bold text-xs sm:text-sm text-slate-900 tracking-wide">
-                    — {item.author}
-                  </h3>
-                  <p className="text-xs text-slate-600 italic mt-0.5">
-                    {item.role}
-                  </p>
-                </div>
-
-                {/* Country Flag Badge */}
-                <div className="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-lg shadow-sm border border-slate-200">
-                  {item.flagIcon}
-                </div>
-              </div>
-            </div>
+        <div className="grid grid-cols-1 gap-6 md:hidden">
+          <PostEditingTestimonialCard item={mobileItem} />
+        </div>
+        <div className="hidden md:grid grid-cols-2 gap-6">
+          {desktopItems.map((item) => (
+            <PostEditingTestimonialCard
+              key={`${activeSlide}-${item.id}`}
+              item={item}
+            />
           ))}
         </div>
 
-        {/* Carousel Pagination Indicator Dots */}
         <div className="flex justify-center items-center space-x-2 mt-8">
-          <button
-            type="button"
-            onClick={() => setActiveSlide(0)}
-            aria-label="Slide 1"
-            className={`w-3 h-3 rounded-sm border border-[#0d3b36] transition-colors ${
-              activeSlide === 0 ? "bg-white" : "bg-transparent"
-            }`}
-          />
-          <button
-            type="button"
-            onClick={() => setActiveSlide(1)}
-            aria-label="Slide 2"
-            className={`w-3 h-3 rounded-sm transition-colors ${
-              activeSlide === 1
-                ? "bg-white border border-[#0d3b36]"
-                : "bg-[#0d3b36]"
-            }`}
-          />
+          {testimonials.map((item, index) => (
+            <button
+              key={item.id}
+              type="button"
+              onClick={() => setActiveSlide(index)}
+              aria-label={`Show testimonial ${index + 1}`}
+              className={`w-3 h-3 rounded-sm border border-[#0d3b36] transition-colors ${
+                activeSlide === index ? "bg-[#0d3b36]" : "bg-white"
+              }`}
+            />
+          ))}
         </div>
       </section>
 
@@ -284,3 +260,42 @@ export const PostEditingTestimonialsAndFaq: React.FC = () => {
     </div>
   );
 };
+
+function PostEditingTestimonialCard({ item }: { item: Testimonial }) {
+  return (
+    <div className="bg-white rounded-xl border border-slate-300 p-6 shadow-sm flex flex-col justify-between space-y-6">
+      <div className="bg-[#d5d8d8] rounded-lg p-4 flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <div className="relative w-28 h-28 bg-white rounded border border-slate-300 shrink-0 overflow-hidden flex items-center justify-center p-1">
+          <Image
+            src={item.journalImage}
+            alt={`${item.author} publication cover`}
+            fill
+            sizes="112px"
+            className="object-contain p-1"
+          />
+        </div>
+        <p className="text-xs sm:text-sm text-slate-800 font-medium italic leading-relaxed">
+          &ldquo;{item.quote}&rdquo;
+        </p>
+      </div>
+
+      <div className="flex items-center justify-between pt-2">
+        <div>
+          <h3 className="font-bold text-xs sm:text-sm text-slate-900 tracking-wide">
+            — {item.author}
+          </h3>
+          <p className="text-xs text-slate-600 italic mt-0.5">{item.role}</p>
+        </div>
+        <div className="relative w-7 h-7 rounded-full bg-slate-100 overflow-hidden shadow-sm border border-slate-200">
+          <Image
+            src={item.flagIcon}
+            alt=""
+            fill
+            sizes="28px"
+            className="object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}

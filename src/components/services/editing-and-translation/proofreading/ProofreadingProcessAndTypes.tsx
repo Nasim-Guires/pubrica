@@ -1,21 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  FileCheck,
-  Sliders,
-  Layout,
-  BookOpen,
-  Cpu,
-  Globe2,
-  FileSearch,
-  ClipboardList,
-  UserCheck,
-  CheckCircle2,
-  MessageSquare,
-  Send,
-  Award,
-} from "lucide-react";
+import Image from "next/image";
 
 // ==========================================
 // 1. TYPES OF PROOFREADING DATA & TYPES
@@ -24,7 +10,7 @@ interface ProofreadingType {
   id: string;
   title: string;
   description: string;
-  icon: React.ReactNode;
+  iconSrc: string;
 }
 
 const proofreadingTypes: ProofreadingType[] = [
@@ -33,42 +19,48 @@ const proofreadingTypes: ProofreadingType[] = [
     title: "Final Proofreading",
     description:
       "Concentrates on fixing grammatical, spelling, punctuation, and typo mistakes.",
-    icon: <FileCheck className="w-5 h-5 text-teal-700" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/Final-Proofreading.webp",
   },
   {
     id: "consistency",
     title: "Consistency Proofreading",
     description:
       "Guarantees that all terms, abbreviations, and writing styles used are consistent.",
-    icon: <Sliders className="w-5 h-5 text-teal-700" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/Consistency-Proofreading.webp",
   },
   {
     id: "formatting",
     title: "Formatting Proofreading",
     description:
       "Makes sure there is consistency in formatting references, headings, tables, etc., as required.",
-    icon: <Layout className="w-5 h-5 text-teal-700" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/Formatting-Proofreading.webp",
   },
   {
     id: "journal-formatting",
     title: "Journal Formatting Proofreading",
     description:
       "Make sure your manuscript is formatted per the specific journal's instructions.",
-    icon: <BookOpen className="w-5 h-5 text-teal-700" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/Journal-Formatting-Proofreading.webp",
   },
   {
     id: "technical",
     title: "Technical Proofreading",
     description:
       "Accurate scientific proofreading and scientific paper proofreading service.",
-    icon: <Cpu className="w-5 h-5 text-teal-700" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/Technical-Proofreading.webp",
   },
   {
     id: "esl",
     title: "ESL Proofreading",
     description:
       "Enhances fluency without changing meaning for ESL students/writers.",
-    icon: <Globe2 className="w-5 h-5 text-teal-700" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/ESL-Proofreading.webp",
   },
 ];
 
@@ -79,7 +71,7 @@ interface ProcessStep {
   stepNumber: number;
   title: string;
   description: string;
-  icon: React.ReactNode;
+  iconSrc: string;
   position: "top" | "bottom";
 }
 
@@ -89,7 +81,8 @@ const processSteps: ProcessStep[] = [
     title: "PROJECT CONSULTATION & REQUIREMENT ANALYSIS",
     description:
       "We understand your needs for online proofreading services and document types.",
-    icon: <FileSearch className="w-8 h-8" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/Project-Consultation-Requirement-Analysis.webp",
     position: "bottom",
   },
   {
@@ -97,7 +90,8 @@ const processSteps: ProcessStep[] = [
     title: "CONTENT ASSESSMENT",
     description:
       "Evaluation aligned with research paper proofreading service standards.",
-    icon: <ClipboardList className="w-8 h-8" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/Content-Assessment.webp",
     position: "top",
   },
   {
@@ -105,7 +99,8 @@ const processSteps: ProcessStep[] = [
     title: "EXPERT PROOFREADING",
     description:
       "Your document is reviewed by professionals to correct grammar, punctuation, and consistency errors.",
-    icon: <UserCheck className="w-8 h-8" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/Expert-Proofreading.webp",
     position: "bottom",
   },
   {
@@ -113,7 +108,8 @@ const processSteps: ProcessStep[] = [
     title: "QUALITY ASSURANCE REVIEW",
     description:
       "Multi-level checks ensure accuracy, consistency, and adherence to standards.",
-    icon: <CheckCircle2 className="w-8 h-8" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/Quality-Assurance-Review.webp",
     position: "top",
   },
   {
@@ -121,7 +117,8 @@ const processSteps: ProcessStep[] = [
     title: "CLIENT FEEDBACK & REVISIONS",
     description:
       "Refinement aligned with best proofreading services for research papers expectations.",
-    icon: <MessageSquare className="w-8 h-8" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/Client-Feedback-Revisions.webp",
     position: "bottom",
   },
   {
@@ -129,7 +126,8 @@ const processSteps: ProcessStep[] = [
     title: "FINAL DELIVERY",
     description:
       "You receive a polished, error-free document ready for submission or use.",
-    icon: <Send className="w-8 h-8" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/Final-Delivery-1.webp",
     position: "top",
   },
 ];
@@ -177,7 +175,13 @@ export default function ProofreadingProcessAndTypes() {
                 >
                   <div className="flex items-center space-x-3">
                     <div className="p-1.5 bg-white rounded-md border border-emerald-100 shadow-2xs">
-                      {item.icon}
+                      <Image
+                        src={item.iconSrc}
+                        alt={item.title}
+                        width={20}
+                        height={20}
+                        className="w-5 h-5 object-contain"
+                      />
                     </div>
                     <span className="leading-snug">{item.title}</span>
                   </div>
@@ -204,19 +208,14 @@ export default function ProofreadingProcessAndTypes() {
       <section className="w-full bg-[#003B46] text-white py-8 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-center sm:text-left">
           {/* Badge Graphic */}
-          <div className="shrink-0">
-            <div className="w-24 h-24 rounded-full border-4 border-dashed border-sky-200 flex flex-col items-center justify-center bg-sky-600 text-white shadow-lg">
-              <Award className="w-6 h-6 mb-0.5" />
-              <span className="text-[10px] font-bold uppercase tracking-wider leading-none">
-                Satisfaction
-              </span>
-              <span className="text-base font-extrabold leading-none my-0.5">
-                100%
-              </span>
-              <span className="text-[9px] uppercase tracking-wider leading-none">
-                Guarantee
-              </span>
-            </div>
+          <div className="relative w-24 h-24 shrink-0">
+            <Image
+              src="/images/editing-and-translation/proofreading/Satisfaction_Guarantee_blue2.png"
+              alt="100% satisfaction guarantee"
+              fill
+              sizes="96px"
+              className="object-contain"
+            />
           </div>
 
           {/* Text Content */}
@@ -268,11 +267,15 @@ export default function ProofreadingProcessAndTypes() {
                     }`}
                   >
                     <div className="flex justify-center mb-2">
-                      <div
-                        className={isHovered ? "text-white" : "text-slate-700"}
-                      >
-                        {step.icon}
-                      </div>
+                      <Image
+                        src={step.iconSrc}
+                        alt={step.title}
+                        width={32}
+                        height={32}
+                        className={`w-8 h-8 object-contain transition-all duration-300 ${
+                          isHovered ? "invert brightness-200" : ""
+                        }`}
+                      />
                     </div>
                     <div>
                       <h4
@@ -308,11 +311,15 @@ export default function ProofreadingProcessAndTypes() {
                     }`}
                   >
                     <div className="flex justify-center mb-2">
-                      <div
-                        className={isHovered ? "text-white" : "text-slate-700"}
-                      >
-                        {step.icon}
-                      </div>
+                      <Image
+                        src={step.iconSrc}
+                        alt={step.title}
+                        width={32}
+                        height={32}
+                        className={`w-8 h-8 object-contain transition-all duration-300 ${
+                          isHovered ? "invert brightness-200" : ""
+                        }`}
+                      />
                     </div>
                     <div>
                       <h4

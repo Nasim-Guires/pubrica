@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { ArrowRightCircle } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
@@ -208,19 +209,26 @@ export default function ProofreadingHeroSection() {
 
             {/* Right Column Stacked Sample Images */}
             <div className="lg:col-span-5 relative flex justify-center lg:justify-end min-h-[220px]">
-              <div className="relative w-full max-w-[340px]">
-                {/* Back Image (Laptop view) */}
-                <img
-                  src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=400&q=80"
-                  alt="Laptop with proofread manuscript"
-                  className="w-48 h-32 object-cover rounded-lg shadow-md border border-slate-200 absolute top-0 left-0 z-10"
-                />
-                {/* Front Image (Hand marking manuscript) */}
-                <img
-                  src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=400&q=80"
-                  alt="Reviewing proofread document"
-                  className="w-56 h-36 object-cover rounded-lg shadow-lg border border-slate-200 absolute top-12 left-20 z-20"
-                />
+              <div className="relative w-full max-w-[340px] h-[180px]">
+                <div className="absolute top-0 left-0 z-10 w-48 h-32 rounded-lg overflow-hidden shadow-md border border-slate-200">
+                  <Image
+                    src="/images/editing-and-translation/proofreading/Proofreading-your-copy.webp"
+                    alt="Proofreading your copy"
+                    fill
+                    sizes="192px"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                <div className="absolute top-12 left-20 z-20 w-56 h-36 rounded-lg overflow-hidden shadow-lg border border-slate-200">
+                  <Image
+                    src="/images/editing-and-translation/proofreading/Proofreading.webp"
+                    alt="Proofreading manuscript sample"
+                    fill
+                    sizes="224px"
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>

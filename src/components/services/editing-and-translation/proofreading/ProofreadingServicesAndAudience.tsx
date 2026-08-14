@@ -1,23 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Microscope,
-  FileText,
-  BookOpen,
-  Edit3,
-  GraduationCap,
-  Languages,
-  Briefcase,
-  UserCheck,
-} from "lucide-react";
+import Image from "next/image";
 
 // ==========================================
 // 1. DATA TYPES & DATA FOR "OUR SERVICES"
 // ==========================================
 interface ServiceCard {
   id: string;
-  icon: React.ReactNode;
+  iconSrc: string;
   title: string;
   description: string;
   highlightText?: string;
@@ -27,14 +18,16 @@ interface ServiceCard {
 const servicesData: ServiceCard[] = [
   {
     id: "scientific-editing",
-    icon: <Microscope className="w-6 h-6 text-teal-700" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/Scientific-Editing.webp",
     title: "Scientific Editing",
     description:
       "Enhance your academic documents with our journal manuscript proofreading and editing expertise,",
   },
   {
     id: "manuscript-editing",
-    icon: <FileText className="w-6 h-6 text-teal-700" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/Manuscript-Editing.webp",
     title: "Manuscript Editing",
     description: "Enhance your academic and ",
     highlightText: "manuscripts",
@@ -42,7 +35,7 @@ const servicesData: ServiceCard[] = [
   },
   {
     id: "book-editing",
-    icon: <BookOpen className="w-6 h-6 text-teal-700" />,
+    iconSrc: "/images/editing-and-translation/proofreading/Book-Editing.webp",
     title: "Book Editing",
     description:
       "Perfect your academic or professional book manuscript with Pubrica's ",
@@ -51,7 +44,7 @@ const servicesData: ServiceCard[] = [
   },
   {
     id: "post-editing",
-    icon: <Edit3 className="w-6 h-6 text-teal-700" />,
+    iconSrc: "/images/editing-and-translation/proofreading/Post-Editing.webp",
     title: "Post Editing",
     description:
       "Refine and polish machine-translated documents with Pubrica's ",
@@ -60,7 +53,7 @@ const servicesData: ServiceCard[] = [
   },
   {
     id: "thesis-editing",
-    icon: <GraduationCap className="w-6 h-6 text-teal-700" />,
+    iconSrc: "/images/editing-and-translation/proofreading/Thesis-Editing.webp",
     title: "Thesis Editing",
     description: "Specialised ",
     highlightText: "thesis proofreading service",
@@ -68,7 +61,8 @@ const servicesData: ServiceCard[] = [
   },
   {
     id: "translation-editing",
-    icon: <Languages className="w-6 h-6 text-teal-700" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/Translation-with-Editing.webp",
     title: "Translation with Editing",
     description:
       "Achieve accurate, culturally adapted translations with Pubrica's ",
@@ -77,14 +71,16 @@ const servicesData: ServiceCard[] = [
   },
   {
     id: "grant-business-editing",
-    icon: <Briefcase className="w-6 h-6 text-teal-700" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/Grant-Business-Document-Editing.webp",
     title: "Grant & Business Document Editing",
     description:
       "Clear and persuasive communication using professional proofreading services.",
   },
   {
     id: "resume-cv-editing",
-    icon: <UserCheck className="w-6 h-6 text-teal-700" />,
+    iconSrc:
+      "/images/editing-and-translation/proofreading/Resume_CV-Application-Editing.webp",
     title: "Resume/CV & Application Editing",
     description:
       "Tailoring and polishing CVs, resumes, and application letters to make a strong professional",
@@ -108,7 +104,7 @@ const audienceData: AudienceCard[] = [
     description:
       "Experts in research paper proofreading and journal article proofreading service.",
     imageSrc:
-      "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+      "/images/editing-and-translation/proofreading/Researchers-Academics-1.webp",
   },
   {
     id: "healthcare",
@@ -116,7 +112,7 @@ const audienceData: AudienceCard[] = [
     description:
       "Accurate medical proofreading services and medical manuscript proofreading service.",
     imageSrc:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80",
+      "/images/editing-and-translation/proofreading/Professionals-in-Healthcare-Life-Sciences.webp",
   },
   {
     id: "organizations",
@@ -124,7 +120,7 @@ const audienceData: AudienceCard[] = [
     description:
       "Perfect reports, presentations, and corporate communications across cultures.",
     imageSrc:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80",
+      "/images/editing-and-translation/proofreading/Organisations-Businesses-Corporations.webp",
   },
   {
     id: "publishers",
@@ -132,7 +128,7 @@ const audienceData: AudienceCard[] = [
     description:
       "Submit manuscripts for publication that are free from errors.",
     imageSrc:
-      "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
+      "/images/editing-and-translation/proofreading/Publishing-Houses-Writers.webp",
   },
   {
     id: "students",
@@ -140,7 +136,7 @@ const audienceData: AudienceCard[] = [
     description:
       "Polish theses, essays, dissertations, and other academic writings.",
     imageSrc:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80",
+      "/images/editing-and-translation/proofreading/Students-Educational-Institutions.webp",
   },
   {
     id: "government",
@@ -148,7 +144,7 @@ const audienceData: AudienceCard[] = [
     description:
       "Clear, accurate, and culturally appropriate documentation for government bodies.",
     imageSrc:
-      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80",
+      "/images/editing-and-translation/proofreading/Governments-NGOs.webp",
   },
 ];
 
@@ -185,8 +181,14 @@ export default function PubricaServicesAndAudience() {
             >
               <div className="space-y-4">
                 {/* Icon Box */}
-                <div className="w-12 h-12 bg-slate-100/80 rounded-md flex items-center justify-center">
-                  {service.icon}
+                <div className="w-12 h-12 bg-slate-100/80 rounded-md flex items-center justify-center overflow-hidden p-1.5">
+                  <Image
+                    src={service.iconSrc}
+                    alt={service.title}
+                    width={32}
+                    height={32}
+                    className="w-8 h-8 object-contain"
+                  />
                 </div>
 
                 {/* Service Title */}
@@ -249,10 +251,12 @@ export default function PubricaServicesAndAudience() {
                 ) : (
                   /* Condition B: Default State (Full Image with Bottom Gradient Overlay) */
                   <div className="relative w-full h-full">
-                    <img
+                    <Image
                       src={item.imageSrc}
                       alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     {/* Dark gradient overlay for bottom text contrast */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-5">

@@ -1,11 +1,13 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 interface ProcessStep {
   number: number;
   title: string;
   description: string;
+  iconSrc: string;
 }
 
 export const PostEditingProcessTimeline: React.FC = () => {
@@ -15,36 +17,48 @@ export const PostEditingProcessTimeline: React.FC = () => {
       title: "MANUSCRIPT ASSESSMENT",
       description:
         "Our experts review your manuscript to understand its structure, content, and intended audience. We identify areas that need improvement for clarity, consistency, and quality.",
+      iconSrc:
+        "/images/editing-and-translation/post-editing/Manuscript-Assessment.png",
     },
     {
       number: 2,
       title: "CONTENT POST-EDITING",
       description:
         "We refine your text by correcting errors, enhancing readability, and ensuring coherence while preserving your original meaning and style.",
+      iconSrc:
+        "/images/editing-and-translation/post-editing/Content-Post-Editing.png",
     },
     {
       number: 3,
       title: "LANGUAGE & GRAMMAR ENHANCEMENT",
       description:
         "Grammar, punctuation, and syntax are polished to meet academic or professional standards. Specialized terminology is checked for accuracy and consistency.",
+      iconSrc:
+        "/images/editing-and-translation/post-editing/Language-Grammar-Enhancement.png",
     },
     {
       number: 4,
       title: "FORMATTING & STYLE COMPLIANCE",
       description:
         "The manuscript is formatted according to your target journal, publisher, or organization guidelines, including references, headings, and citations.",
+      iconSrc:
+        "/images/editing-and-translation/post-editing/Formatting-Style-Compliance.png",
     },
     {
       number: 5,
       title: "QUALITY ASSURANCE & REVIEW",
       description:
         "A senior editor reviews the post-edited manuscript to ensure it meets high-quality standards and is ready for submission or publication.",
+      iconSrc:
+        "/images/editing-and-translation/post-editing/Quality-Assurance-Review.png",
     },
     {
       number: 6,
       title: "DELIVERY & FEEDBACK",
       description:
         "The final manuscript is delivered along with suggestions or notes (if necessary) for any final tweaks, ensuring your work is publication-ready.",
+      iconSrc:
+        "/images/editing-and-translation/post-editing/Delivery-Feedback.png",
     },
   ];
 
@@ -116,20 +130,14 @@ export const PostEditingProcessTimeline: React.FC = () => {
                   <div className="w-full min-h-[270px] p-5 rounded-md shadow-sm border border-slate-200 bg-white text-slate-800 transition-all duration-300 cursor-pointer text-left flex flex-col hover:bg-[#1a1a1a] hover:text-white hover:border-[#1a1a1a] hover:shadow-xl hover:-translate-y-1">
                     {/* Icon Container */}
                     <div className="mb-3">
-                      <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-slate-100 text-slate-700 transition-colors duration-300 group-hover:bg-slate-800 group-hover:text-white">
-                        <svg
-                          className="w-6 h-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="1.5"
-                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                          />
-                        </svg>
+                      <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-slate-100 transition-colors duration-300 group-hover:bg-slate-800">
+                        <Image
+                          src={step.iconSrc}
+                          alt={step.title}
+                          width={24}
+                          height={24}
+                          className="w-6 h-6 object-contain group-hover:invert group-hover:brightness-200 transition-all duration-300"
+                        />
                       </div>
                     </div>
 

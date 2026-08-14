@@ -21,35 +21,40 @@ export const PostEditingServicesAndWhoWeServe: React.FC = () => {
       title: "Academic Authors & Researchers",
       description:
         "Ensure your manuscripts, theses, or research papers are polished for submission to journals or academic publishers.",
-      imageSrc: "/images/services/post-editing/academic-authors.jpg",
+      imageSrc:
+        "/images/editing-and-translation/post-editing/Academic-Authors-Researchers-1.png",
     },
     {
       id: "publishers",
       title: "Publishers",
       description:
         "Ensure books, journals, and periodicals meet the highest editorial standards before publication.",
-      imageSrc: "/images/services/post-editing/publishers.jpg",
+      imageSrc:
+        "/images/editing-and-translation/post-editing/Publishers.png",
     },
     {
       id: "scientists",
       title: "Researchers & Scientists",
       description:
         "Refine technical documents, grant proposals, and scientific articles for accuracy and impact.",
-      imageSrc: "/images/services/post-editing/researchers-scientists.jpg",
+      imageSrc:
+        "/images/editing-and-translation/post-editing/Researchers-Scientists.png",
     },
     {
       id: "corporate",
       title: "Corporate Professionals",
       description:
         "Improve business reports, white papers, and presentations for professionalism and consistency.",
-      imageSrc: "/images/services/post-editing/corporate-professionals.jpg",
+      imageSrc:
+        "/images/editing-and-translation/post-editing/Corporate-Professionals.png",
     },
     {
       id: "students",
       title: "Students & Educators",
       description:
         "Perfect assignments, dissertations, and educational materials for clear communication and correctness.",
-      imageSrc: "/images/services/post-editing/students-educators.jpg",
+      imageSrc:
+        "/images/editing-and-translation/post-editing/Students-Educators.png",
     },
   ];
 
@@ -70,24 +75,12 @@ export const PostEditingServicesAndWhoWeServe: React.FC = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 sm:w-80 sm:h-80 bg-slate-100 rounded-full -z-0" />
 
             <div className="relative z-10 w-full max-w-md h-[320px]">
-              {/* Top-Left Image: Hand writing on document */}
-              <div className="absolute top-0 left-2 w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden shadow-lg border-2 border-white">
+              <div className="absolute inset-y-0 left-2 right-2 rounded-2xl overflow-hidden shadow-xl border-2 border-white">
                 <Image
-                  src="/images/services/post-editing/editing-hand.jpg"
-                  alt="Editing manuscript with pen"
+                  src="/images/editing-and-translation/post-editing/Our-Post-Editing-Services.png"
+                  alt="Our post-editing services"
                   fill
-                  sizes="224px"
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Bottom-Right Image: Professional at work */}
-              <div className="absolute bottom-0 right-2 w-52 h-52 sm:w-60 sm:h-60 rounded-2xl overflow-hidden shadow-xl border-2 border-white">
-                <Image
-                  src="/images/services/post-editing/editor-at-desk.jpg"
-                  alt="Professional editor working on computer"
-                  fill
-                  sizes="240px"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover"
                 />
               </div>

@@ -7,12 +7,14 @@ interface FeatureCard {
   id: string;
   title: string;
   description: string;
+  iconSrc: string;
 }
 
 interface PackageTier {
   id: string;
   letter: string;
   name: string;
+  iconSrc: string;
   headerBg: string;
   badgeBg: string;
   cardBg: string;
@@ -49,30 +51,40 @@ export const PostEditingDetailsAndPricing: React.FC = () => {
       title: "Expert Editors",
       description:
         "Work with field-specific PhD/Master’s editors who ensure accuracy, clarity, and consistency.",
+      iconSrc:
+        "/images/editing-and-translation/post-editing/Expert-Editors.png",
     },
     {
       id: "enhanced-quality",
       title: "Enhanced Quality",
       description:
         "Improve readability, language, and overall manuscript presentation for maximum impact.",
+      iconSrc:
+        "/images/editing-and-translation/post-editing/Enhanced-Quality.png",
     },
     {
       id: "guideline-compliance",
       title: "Guideline Compliance",
       description:
         "We format and edit your work according to journal, publisher, or institutional standards.",
+      iconSrc:
+        "/images/editing-and-translation/post-editing/Guideline-Compliance.png",
     },
     {
       id: "time-efficient",
       title: "Time-Efficient",
       description:
         "Fast turnaround without compromising on quality, so your manuscript is publication-ready on schedule.",
+      iconSrc:
+        "/images/editing-and-translation/post-editing/Time-Efficient.png",
     },
     {
       id: "personalized-support",
       title: "Personalized Support",
       description:
         "Receive detailed feedback and tailored recommendations to strengthen your manuscript.",
+      iconSrc:
+        "/images/editing-and-translation/post-editing/Personalized-Support.png",
     },
   ];
 
@@ -82,6 +94,8 @@ export const PostEditingDetailsAndPricing: React.FC = () => {
       id: "standard",
       letter: "S",
       name: "Standard",
+      iconSrc:
+        "/images/publication-support/responding-to-reviewers/standard-logo.png",
       headerBg: "bg-[#d8e3e2]",
       badgeBg: "bg-[#b2c8c6] text-[#0d3b36]",
       cardBg: "bg-[#cfdedd]",
@@ -99,6 +113,7 @@ export const PostEditingDetailsAndPricing: React.FC = () => {
       id: "advanced",
       letter: "A",
       name: "Advanced",
+      iconSrc: "/images/publication-support/journal-selection/advanced.webp",
       headerBg: "bg-[#e2d5e8]",
       badgeBg: "bg-[#c9b3d4] text-[#4a235a]",
       cardBg: "bg-[#d8c3e2]",
@@ -121,6 +136,7 @@ export const PostEditingDetailsAndPricing: React.FC = () => {
       id: "premium",
       letter: "P",
       name: "Premium",
+      iconSrc: "/images/editing-and-translation/pro.webp",
       headerBg: "bg-[#e8dec7]",
       badgeBg: "bg-[#d6c299] text-[#5c4314]",
       cardBg: "bg-[#decfae]",
@@ -167,20 +183,14 @@ export const PostEditingDetailsAndPricing: React.FC = () => {
                   className="w-full bg-[#f0fdf4] px-5 py-3.5 border-b border-emerald-100/60 flex items-center justify-between text-left focus:outline-none transition-colors hover:bg-[#e6f9ed]"
                 >
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 rounded-lg bg-white border border-emerald-200 flex items-center justify-center text-emerald-700 shrink-0">
-                      <svg
-                        className="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="1.8"
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
+                    <div className="w-8 h-8 rounded-lg bg-white border border-emerald-200 flex items-center justify-center shrink-0 overflow-hidden p-1">
+                      <Image
+                        src={feature.iconSrc}
+                        alt={feature.title}
+                        width={24}
+                        height={24}
+                        className="w-5 h-5 object-contain"
+                      />
                     </div>
                     <h3 className="font-bold text-slate-800 text-sm sm:text-base">
                       {feature.title}
@@ -233,7 +243,7 @@ export const PostEditingDetailsAndPricing: React.FC = () => {
           <div className="p-4 sm:p-6 bg-slate-50">
             <div className="relative w-full min-h-[350px] sm:min-h-[480px] bg-white rounded-lg border border-slate-200 overflow-hidden">
               <Image
-                src="/images/services/post-editing/sample-work-before-after.jpg"
+                src="/images/editing-and-translation/post-editing/post-editing-Sample-Work.webp"
                 alt="Post Editing Service Sample Work Before and After Comparison"
                 fill
                 sizes="(max-width: 1200px) 100vw, 1100px"
@@ -272,9 +282,15 @@ export const PostEditingDetailsAndPricing: React.FC = () => {
                 className={`${pkg.headerBg} p-6 flex items-center justify-center space-x-3`}
               >
                 <div
-                  className={`w-10 h-10 rounded-full ${pkg.badgeBg} flex items-center justify-center font-bold text-lg shadow-sm`}
+                  className={`w-10 h-10 rounded-full ${pkg.badgeBg} flex items-center justify-center font-bold text-lg shadow-sm overflow-hidden`}
                 >
-                  {pkg.letter}
+                  <Image
+                    src={pkg.iconSrc}
+                    alt={`${pkg.name} package`}
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900">{pkg.name}</h3>
               </div>

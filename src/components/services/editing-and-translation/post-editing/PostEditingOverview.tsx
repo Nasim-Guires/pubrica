@@ -112,8 +112,8 @@ export const PostEditingOverview: React.FC = () => {
             <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border-4 border-[#03231a] bg-[#03231a] p-2">
               <div className="relative w-full h-full rounded-xl overflow-hidden bg-white">
                 <Image
-                  src="/images/services/post-editing/proofreading-preview.jpg"
-                  alt="Post Editing Proofreading Preview"
+                  src="/images/editing-and-translation/post-editing/Perfect-Your-Manuscript-With-Pubricas-Post-Editing-Service.webp"
+                  alt="Perfect your manuscript with Pubrica’s post-editing service"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover"
