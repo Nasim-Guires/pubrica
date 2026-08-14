@@ -5,7 +5,7 @@ export const physicianWritingWhoWeServe = [
       "Content developed by qualified professionals with subject-matter expertise in your specialty.",
       "Writing tailored to Q1/Q2 journals, university review boards, and funding agencies.",
     ],
-    imageUrl: "/images/physician-writing/domain-specific-medical-writers.webp",
+    imageUrl: "/images/physician-writing-services/customized-writing/Domain-Specific-Medical-Writers.jpg",
   },
   {
     title: "Journal & Regulatory Compliance",
@@ -13,7 +13,7 @@ export const physicianWritingWhoWeServe = [
       "Accurate formatting and referencing in APA, MLA, Vancouver, Harvard, and other citation styles.",
       "Full alignment with ICMJE, CONSORT, GPP3, and target journal author instructions.",
     ],
-    imageUrl: "/images/physician-writing/journal-regulatory-compliance.webp",
+    imageUrl: "/images/physician-writing-services/customized-writing/Medical-Device-Diagnostics-Companies-1.jpg",
   },
   {
     title: "100% Original and Ethical Writing",
@@ -21,7 +21,7 @@ export const physicianWritingWhoWeServe = [
       "Guaranteed plagiarism-free manuscripts with Turnitin or iThenticate reports.",
       "Ethical content development with no ghostwriting, data manipulation, or duplicate publication.",
     ],
-    imageUrl: "/images/physician-writing/original-ethical-writing.webp",
+    imageUrl: "/images/physician-writing-services/customized-writing/100-Original-and-Ethical-Writing.jpg",
   },
   {
     title: "Evidence-Based, Data-Driven Drafting",
@@ -29,7 +29,7 @@ export const physicianWritingWhoWeServe = [
       "Every manuscript is supported by current, peer-reviewed scientific literature.",
       "Support with data interpretation, statistical framing, and literature synthesis.",
     ],
-    imageUrl: "/images/physician-writing/evidence-based-drafting.webp",
+    imageUrl: "/images/physician-writing-services/customized-writing/Evidence-Based-Data-Driven-Drafting.jpg",
   },
   {
     title: "Confidentiality and Data Security",
@@ -37,7 +37,7 @@ export const physicianWritingWhoWeServe = [
       "All projects are governed by strict NDAs and ISO 27001-certified data protection protocols.",
       "Secure document handling with encryption and controlled access.",
     ],
-    imageUrl: "/images/physician-writing/confidentiality-data-security.webp",
+    imageUrl: "/images/physician-writing-services/customized-writing/Confidentiality-and-Data-Security.jpg",
   },
   {
     title: "Reliable Timelines and Project Tracking",
@@ -45,37 +45,37 @@ export const physicianWritingWhoWeServe = [
       "Structured delivery with milestone tracking, Gantt charts (if needed), and real-time project updates.",
       "Support for urgent submissions, revisions, and journal resubmissions.",
     ],
-    imageUrl: "/images/physician-writing/reliable-timelines.webp",
+    imageUrl: "/images/physician-writing-services/customized-writing/Reliable-Timelines-and-Project-Tracking.jpg",
   },
 ];
 
 export const customizedMedicalWritingTestimonials = [
   {
-    image: "/images/testimonials/customized-medical-writing/bmj-open.jpg",
+    image: "/images/physician-writing-services/customized-writing/bmj-open-1-1.jpg",
     quote:
       "The manuscript was professionally structured with precise referencing and aligned perfectly with the BMJ Open submission guidelines. Their support team also handled my revisions post-review efficiently.",
     name: "Dr. Ayesha Rahman",
     designation: "Clinical Researcher",
     organization: "UAE",
-    flag: "/images/flags/uae.png",
+    flag: "/images/physician-writing-services/literature-search-and-citation/united-arab-emirates.png",
   },
   {
-    image: "/images/testimonials/customized-medical-writing/journal-of-translational-medicine.jpg",
+    image: "/images/physician-writing-services/customized-writing/the-journal-of-translational-medicine.jpg",
     quote:
       "Our grant proposal for the Journal of Translational Medicine was developed with clear objectives, sound methodology, and regulatory compliance. It was accepted with minor revisions.",
     name: "Dr. Ingrid Moller",
     designation: "Biotech R&D Director",
     organization: "Germany",
-    flag: "/images/flags/germany.png",
+    flag: "/images/research-services/grant-writing/germany.png",
   },
   {
-    image: "/images/testimonials/customized-medical-writing/diabetologia.jpg",
+    image: "/images/physician-writing-services/customized-writing/diabetologia.jpg",
     quote:
       "The customized writing service was integral to the success of my manuscript on diabetes treatment protocols. It was accepted in Diabetologia without major revisions. Highly structured and scientifically sound.",
     name: "Dr. Ananya R",
     designation: "Clinical Researcher",
     organization: "India",
-    flag: "/images/flags/india.png",
+    flag: "/images/editing-and-translation/scientific-editing/flag.png",
   },
 ];
 

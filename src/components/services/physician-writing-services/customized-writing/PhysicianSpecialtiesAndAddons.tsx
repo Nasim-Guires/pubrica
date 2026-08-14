@@ -140,7 +140,7 @@ export default function PhysicianSpecialtiesAndAddons() {
                         <div className="lg:col-span-5 flex justify-center lg:justify-start">
                             <div className="relative w-full max-w-md h-64 md:h-72 rounded-lg overflow-hidden border border-slate-200 shadow-sm">
                                 <Image
-                                    src="https://pubrica.com/wp-content/uploads/2023/04/supporting-physicians-across-specialties.jpg"
+                                    src="/images/physician-writing-services/customized-writing/Physicians-Across-Specialties.webp"
                                     alt="Doctor with stethoscope reviewing documents"
                                     fill
                                     className="object-cover"

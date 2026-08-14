@@ -28,32 +28,32 @@ export default function PatientEducationApplicationsAndSources() {
     {
       id: 1,
       title: "Hospital discharge instructions",
-      image: "/images/hospital-discharge.jpg",
+      image: "/images/physician-writing-services/patient-education-content/hospital-discharge-instruction-.png",
     },
     {
       id: 2,
       title: "Chronic disease management guides",
-      image: "/images/chronic-disease-management.jpg",
+      image: "/images/physician-writing-services/patient-education-content/Chronic-disease-management-guides.jpg",
     },
     {
       id: 3,
       title: "Medication adherence tools",
-      image: "/images/medication-adherence.jpg",
+      image: "/images/physician-writing-services/patient-education-content/Medication-adherence-tools.jpg",
     },
     {
       id: 4,
       title: "Pre- and post-operative patient materials",
-      image: "/images/post-operative-materials.jpg",
+      image: "/images/physician-writing-services/patient-education-content/Pre-and-post-operative-patient-materials.jpg",
     },
     {
       id: 5,
       title: "Clinical trial patient information sheets",
-      image: "/images/clinical-trial-info.jpg",
+      image: "/images/physician-writing-services/patient-education-content/Clinical-trial-patient-information-sheets.jpg",
     },
     {
       id: 6,
       title: "Medical device usage tutorials",
-      image: "/images/medical-device-tutorials.jpg",
+      image: "/images/physician-writing-services/patient-education-content/Medical-device-usage-tutorials.jpg",
     },
   ];
 

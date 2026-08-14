@@ -449,7 +449,7 @@ export default function CustomizedWritingGuidelineStandards() {
             <div className="md:col-span-5 flex justify-center">
               <div className="w-full max-w-xs h-72 relative rounded-md overflow-hidden shadow-md bg-gray-200">
                 <img
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80"
+                  src="/images/physician-writing-services/customized-writing/Customized-Medical-Writing-Service-Sample-Work.jpg"
                   alt="Physician medical writing sample"
                   className="w-full h-full object-cover"
                 />

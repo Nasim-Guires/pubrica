@@ -98,7 +98,7 @@ export default function PatientEducationPackagesAndPricing() {
           <div className="flex items-center gap-6">
             <div className="relative w-32 h-32 shrink-0">
               <Image
-                src="/images/100-percent-satisfaction-guarantee.png"
+                src="/images/publication-support/peer-review-pre-submission/Satisfaction_Guarantee.webp"
                 alt="100% Satisfaction Guarantee Badge"
                 fill
                 sizes="128px"
@@ -217,7 +217,7 @@ export default function PatientEducationPackagesAndPricing() {
             <div className="lg:col-span-5 relative flex justify-center">
               <div className="relative w-full aspect-[4/3] rounded-sm overflow-hidden shadow-sm bg-slate-100">
                 <Image
-                  src="/images/medical-team-regulatory-compliance.jpg"
+                  src="/images/physician-writing-services/patient-education-content/Why-Choose-Pubrica-for-Patient-Education-Content-Service.jpg"
                   alt="Medical team reviewing regulatory compliance documentation"
                   fill
                   sizes="(max-width: 768px) 100vw, 40vw"
@@ -237,7 +237,7 @@ export default function PatientEducationPackagesAndPricing() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-5 relative w-full aspect-[4/3] rounded-sm overflow-hidden shadow-sm bg-slate-100">
             <Image
-              src="/images/doctor-writing-medical-report.jpg"
+              src="/images/physician-writing-services/patient-education-content/Patient-Education-Content-Service-Sample-Work.jpg"
               alt="Doctor writing medical report and documentation"
               fill
               sizes="(max-width: 768px) 100vw, 40vw"

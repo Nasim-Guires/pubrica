@@ -57,37 +57,37 @@ export default function PhysicianResearchProposalProcessWorkflow() {
         {
             step: 1,
             title: "INITIAL CONSULTATION & NEEDS ASSESSMENT",
-            icon: "https://pubrica.com/wp-content/uploads/2023/05/consultation-icon.png",
+            icon: "/images/physician-writing-services/research-proposal/Initial-Consultation-Needs-Assessment-1.png",
             content: "We initiate a detailed consultation to review your clinical research topic, study objectives, IRB or funding requirements, and submission dates. A committed project coordinator will help streamline your contacts throughout the process."
         },
         {
             step: 2,
             title: "RESEARCH TOPIC VALIDATION & GAP IDENTIFICATION",
-            icon: "https://pubrica.com/wp-content/uploads/2023/05/validation-icon.png",
+            icon: "/images/physician-writing-services/research-proposal/Research-Topic-Validation-Gap-Identification.png",
             content: "Our subject-matter experts assess the originality and feasibility of your topic and perform a focused medical literature review to identify current knowledge gaps and establish a strong rationale."
         },
         {
             step: 3,
             title: "OBJECTIVE SETTING, HYPOTHESIS & STUDY DESIGN",
-            icon: "https://pubrica.com/wp-content/uploads/2023/05/hypothesis-icon.png",
+            icon: "/images/physician-writing-services/research-proposal/Objective-Setting-Hypothesis-Study-Design.png",
             content: "We identify your research aims and hypotheses and create an appropriate study design (e.g., RCT, observational, cross-sectional), including sample size justification, tools, and statistical plan."
         },
         {
             step: 4,
             title: "FULL PROPOSAL OR PROTOCOL DRAFTING",
-            icon: "https://pubrica.com/wp-content/uploads/2023/05/drafting-icon.png",
+            icon: "/images/physician-writing-services/research-proposal/Full-Proposal-or-Protocol-Drafting.png",
             content: "We compile a structured, journal- or funder-compliant proposal that includes:\n\n• Background and rationale\n• Literature review\n• Methodology and data collection plan\n• Data analysis methods (SPSS, R, STATA)\n• Expected results and clinical impact\n• Proper referencing (APA, Vancouver, AMA, etc.)"
         },
         {
             step: 5,
             title: "ETHICS & REGULATORY COMPLIANCE SUPPORT",
-            icon: "https://pubrica.com/wp-content/uploads/2023/05/ethics-icon.png",
+            icon: "/images/physician-writing-services/research-proposal/Ethics-Regulatory-Compliance-Support.png",
             content: "We draft the necessary IRB submission documents, including:\n\n• Informed consent forms\n• Risk-benefit analysis\n• Data protection and compliance with GCP\n\nAll protocols are consistent with ICH, GCP, and local standards."
         },
         {
             step: 6,
             title: "FINAL REVIEW, PLAGIARISM CHECK & DELIVERY",
-            icon: "https://pubrica.com/wp-content/uploads/2023/05/delivery-icon.png",
+            icon: "/images/physician-writing-services/research-proposal/Final-Review-Plagiarism-Check-Delivery.png",
             content: "Your protocol or proposal is reviewed by a second expert, plagiarism-checked (Turnitin/iThenticate), language-edited, and formatted per your institutional or funder guidelines. We also support revisions based on committee or reviewer feedback."
         }
     ];
@@ -123,32 +123,32 @@ export default function PhysicianResearchProposalProcessWorkflow() {
         {
             title: "Consolidated Standards of Reporting Trials – CONSORT",
             sub: "For randomized controlled trials",
-            logo: "https://pubrica.com/wp-content/uploads/2023/05/consort-logo.png"
+            logo: "/images/physician-writing-services/research-proposal/Consolidated-Standards-of-Reporting-Trials.png"
         },
         {
             title: "Strengthening the Reporting of Observational Studies in Epidemiology – STROBE",
             sub: "For observational studies",
-            logo: "https://pubrica.com/wp-content/uploads/2023/05/strobe-logo.png"
+            logo: "/images/physician-writing-services/research-proposal/Strengthening-the-Reporting-of-Observational-Studies-in-Epidemiology-1.png"
         },
         {
             title: "Preferred Reporting Items for Systematic Reviews and Meta-Analyses – PRISMA",
             sub: "For systematic reviews and meta-analyses",
-            logo: "https://pubrica.com/wp-content/uploads/2023/05/prisma-logo.png"
+            logo: "/images/physician-writing-services/research-proposal/Preferred-Reporting-Items-for-Systematic-Reviews-1.png"
         },
         {
             title: "Case Report Guidelines",
             sub: "Designed to improve the completeness and transparency of case reports.",
-            logo: "https://pubrica.com/wp-content/uploads/2023/05/care-logo.png"
+            logo: "/images/physician-writing-services/research-proposal/Case-Report-Guidelines-1.png"
         },
         {
             title: "Animal Research: Reporting of In Vivo Experiments – ARRIVE",
             sub: "Designed to improve the reporting of research involving animals.",
-            logo: "https://pubrica.com/wp-content/uploads/2023/05/arrive-logo.png"
+            logo: "/images/physician-writing-services/research-proposal/Animal-Research-Reporting-of-In-Vivo-Experiments-–-ARRIVE.png"
         },
         {
             title: "Transparent Reporting of Evaluations with Nonrandomized Designs – TREND",
             sub: "Used for reporting non-randomized public health or behavioural intervention studies.",
-            logo: "https://pubrica.com/wp-content/uploads/2023/05/trend-logo.png"
+            logo: "/images/physician-writing-services/research-proposal/Transparent-Reporting-of-Evaluations-with-Nonrandomized-Designs-1.png"
         }
     ];
 
@@ -244,7 +244,7 @@ export default function PhysicianResearchProposalProcessWorkflow() {
                         <div className="flex items-center space-x-6">
                             <div className="hidden sm:block w-20 h-20 relative flex-shrink-0">
                                 <Image
-                                    src="https://pubrica.com/wp-content/uploads/2023/05/satisfaction-badge.png"
+                                    src="/images/publication-support/peer-review-pre-submission/Satisfaction_Guarantee.webp"
                                     alt="100% Satisfaction Guarantee"
                                     fill
                                     sizes="80px"
@@ -401,7 +401,7 @@ export default function PhysicianResearchProposalProcessWorkflow() {
                         {/* Image using Next.js Image Tag */}
                         <div className="w-full md:w-1/2 h-56 sm:h-64 relative rounded-lg overflow-hidden shadow-sm">
                             <Image
-                                src="https://pubrica.com/wp-content/uploads/2023/05/sample-report-preview.jpg"
+                                src="/images/physician-writing-services/research-proposal/Medical-Research-Protocol-Proposal-Writing.jpg"
                                 alt="Medical Research Protocol and Proposal Writing Sample Work"
                                 fill
                                 sizes="(max-width: 768px) 100vw, 50vw"

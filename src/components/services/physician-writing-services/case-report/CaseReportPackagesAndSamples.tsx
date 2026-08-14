@@ -100,7 +100,7 @@ export default function CaseReportPackagesAndSamples() {
             <div className="w-full md:w-2/5 shrink-0 flex justify-center">
               <div className="relative w-full max-w-[320px] h-[260px] sm:h-[300px] shadow-md rounded-xs overflow-hidden">
                 <Image
-                  src="/images/sample-work-reading.jpg" // Replace with your image path
+                  src="/images/physician-writing-services/case-report/Case-Report-Writing-Sample-Work.webp" // Replace with your image path
                   alt="Case Report Writing Service Sample Work"
                   fill
                   className="object-cover"

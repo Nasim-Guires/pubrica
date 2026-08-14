@@ -216,7 +216,7 @@ export default function ClinicalLiteratureReviewHero() {
                         {/* Right Column Image */}
                         <div className="md:col-span-5 relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
                             <Image
-                                src="https://pubrica.com/wp-content/uploads/2023/04/clinical-literature-review.jpg"
+                                src="/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Professional-Clinical-Literature-Review-for-Evidence.webp"
                                 alt="Doctor reviewing clinical literature document"
                                 fill
                                 className="object-cover"
@@ -244,7 +244,7 @@ export default function ClinicalLiteratureReviewHero() {
                         {/* Left Image */}
                         <div className="md:col-span-5 relative h-80 md:h-[450px] rounded-lg overflow-hidden shadow-md">
                             <Image
-                                src="https://pubrica.com/wp-content/uploads/2023/04/clinical-literature-review-services.jpg"
+                                src="/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Clinical-Literature-Review-Services.jpg"
                                 alt="Person writing notes on literature review paper"
                                 fill
                                 className="object-cover"

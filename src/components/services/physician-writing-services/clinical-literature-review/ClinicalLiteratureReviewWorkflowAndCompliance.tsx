@@ -287,7 +287,7 @@ export default function ClinicalLiteratureReviewWorkflowAndCompliance() {
             {/* Image */}
             <div className="md:col-span-4 relative h-56 w-full rounded-lg overflow-hidden shadow">
               <Image
-                src="https://pubrica.com/wp-content/uploads/2023/04/clinical-sample-work.jpg"
+                src="/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Clinical-Literature-Review-Sample-Work.jpg"
                 alt="Person reviewing printed document"
                 fill
                 className="object-cover"

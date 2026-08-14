@@ -1,94 +1,80 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { 
-  FileText, 
-  BookOpen, 
-  Layers, 
-  Search, 
-  BarChart2, 
-  MessageSquare, 
-  ClipboardCheck, 
-  MessageCircle, 
-  Mail, 
-  ShieldCheck, 
-  Eye, 
-  Scissors, 
-  Activity, 
-  UserCheck,
-  Image as ImageIcon
-} from 'lucide-react';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+
+const MS = "/images/physician-writing-services/physician-manuscript";
 
 const manuscriptTypes = [
   {
     title: "Original Research Article",
     description: "Presents findings from prospective or retrospective clinical studies, including hypothesis, methodology, results, and discussion.",
-    icon: FileText,
+    iconSrc: `${MS}/Original-Research-Article.png`,
   },
   {
     title: "Case Report",
     description: "Describes rare or unusual clinical cases with diagnostic challenges, treatment outcomes, or novel management approaches.",
-    icon: BookOpen,
+    iconSrc: `${MS}/Case-Report.png`,
   },
   {
     title: "Case Series",
     description: "Summarizes multiple similar patient cases to highlight emerging patterns, treatment responses, or disease characteristics.",
-    icon: Layers,
+    iconSrc: `${MS}/Case-Series.png`,
   },
   {
     title: "Systematic Review",
     description: "Follows a defined (PRISMA or Cochrane guidelines) protocol to critically appraise and compile all relevant studies addressing a specific clinical question.",
-    icon: Search,
+    iconSrc: `${MS}/Systematic-Review.png`,
   },
   {
     title: "Meta-analysis",
     description: "Combines data from multiple studies statistically to derive pooled estimates and strengthen evidence for clinical practice.",
-    icon: BarChart2,
+    iconSrc: `${MS}/Meta-analysis.png`,
   },
   {
     title: "Brief Communication / Short Report",
     description: "Concise presentation of preliminary results, small-scale studies, or novel clinical observations warranting rapid dissemination.",
-    icon: MessageSquare,
+    iconSrc: `${MS}/Brief-Communication-Short-Report.png`,
   },
   {
     title: "Clinical Audit Report",
     description: "Documents the comparison of clinical practices against established standards to identify gaps and propose quality improvements.",
-    icon: ClipboardCheck,
+    iconSrc: `${MS}/Clinical-Audit-Report.png`,
   },
   {
     title: "Commentary / Perspective",
     description: "Offers expert opinion or contextual analysis on recent research, policy updates, or evolving clinical practices.",
-    icon: MessageCircle,
+    iconSrc: `${MS}/Commentary-Perspective.png`,
   },
   {
     title: "Letter to the Editor",
     description: "Provides critique, clarification, or supplementary commentary on a recently published article in a peer-reviewed journal.",
-    icon: Mail,
+    iconSrc: `${MS}/Letter-to-the-Editor.png`,
   },
   {
     title: "Drug Efficacy and Safety Studies",
     description: "Evidence-based analyses of therapeutic interventions, focusing on clinical outcomes, safety profiles, and regulatory standards.",
-    icon: ShieldCheck,
+    iconSrc: `${MS}/Drug-Efficacy-and-Safety-Studies.png`,
   },
   {
     title: "Observational, Cohort & Retrospective Studies",
     description: "Real-world clinical research uses patient data to identify trends, associations, and outcomes in natural settings.",
-    icon: Eye,
+    iconSrc: `${MS}/Observational-Cohort-Retrospective-Studies.png`,
   },
   {
     title: "Surgical Techniques & Innovation Articles",
     description: "Manuscripts detailing novel surgical methods, procedural advancements, and operative outcomes supported by images or intraoperative data.",
-    icon: Scissors,
+    iconSrc: `${MS}/Surgical-Techniques-Innovation-Articles.png`,
   },
   {
     title: "Health Outcomes & Real-World Evidence (RWE) Studies",
     description: "Post-marketing or registry-based studies evaluating treatment effectiveness, cost-efficiency, and patient-reported outcomes.",
-    icon: Activity,
+    iconSrc: `${MS}/Health-Outcomes-Real-World-Evidence-RWE-Studies.png`,
   },
   {
     title: "Narrative Reviews, Expert Opinions & Perspectives",
     description: "Authoritative commentaries or thematic reviews by specialists contextualizing current practices, new therapies, or policy updates.",
-    icon: UserCheck,
+    iconSrc: `${MS}/Narrative-Reviews-Expert-Opinions-Perspectives-Authoritative-commentaries-or-thematic-reviews.png`,
   },
 ];
 
@@ -146,10 +132,14 @@ export default function PhysicianManuscriptsPage() {
 
           {/* Image Placeholder Div */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative rounded-2xl overflow-hidden shadow-lg border-4 border-[#1c3f39] max-w-md w-full h-[320px] bg-slate-200 flex flex-col items-center justify-center p-6 text-center text-slate-500">
-              <ImageIcon className="w-12 h-12 mb-2 text-slate-400" />
-              <span className="font-semibold text-sm">Image Area</span>
-              <span className="text-xs text-slate-400 mt-1">(Doctor writing / manuscript review image)</span>
+            <div className="relative rounded-2xl overflow-hidden shadow-lg border-4 border-[#1c3f39] max-w-md w-full h-[320px]">
+              <Image
+                src="/images/physician-writing-services/physician-manuscript/Physician-Manuscript-Service.webp"
+                alt="Physician manuscript writing service"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 420px"
+              />
             </div>
           </div>
         </div>
@@ -170,17 +160,23 @@ export default function PhysicianManuscriptsPage() {
             {/* Image Collage Placeholder Divs */}
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative w-full max-w-md h-[300px]">
-                {/* Image Area 1 */}
-                <div className="absolute top-0 left-0 w-3/4 h-3/4 rounded-xl shadow-md border-2 border-white bg-slate-200 flex flex-col items-center justify-center p-4 text-center text-slate-500">
-                  <ImageIcon className="w-8 h-8 mb-1 text-slate-400" />
-                  <span className="font-semibold text-xs">Image Area 1</span>
-                  <span className="text-[10px] text-slate-400">(Writing desk / research notes)</span>
+                <div className="absolute top-0 left-0 w-3/4 h-3/4 rounded-xl shadow-md border-2 border-white overflow-hidden">
+                  <Image
+                    src="/images/physician-writing-services/physician-manuscript/Physician-Manuscript-Service-What-We-do.webp"
+                    alt="Physician manuscript writing desk"
+                    fill
+                    className="object-cover"
+                    sizes="320px"
+                  />
                 </div>
-                {/* Image Area 2 */}
-                <div className="absolute bottom-0 right-0 w-3/4 h-3/4 rounded-xl shadow-lg border-2 border-white bg-slate-300 flex flex-col items-center justify-center p-4 text-center text-slate-600">
-                  <ImageIcon className="w-8 h-8 mb-1 text-slate-500" />
-                  <span className="font-semibold text-xs">Image Area 2</span>
-                  <span className="text-[10px] text-slate-500">(Medical presentation / consultation)</span>
+                <div className="absolute bottom-0 right-0 w-3/4 h-3/4 rounded-xl shadow-lg border-2 border-white overflow-hidden">
+                  <Image
+                    src="/images/physician-writing-services/physician-manuscript/video-what-we-do.jpg"
+                    alt="Medical presentation and consultation"
+                    fill
+                    className="object-cover"
+                    sizes="320px"
+                  />
                 </div>
               </div>
             </div>
@@ -240,15 +236,19 @@ export default function PhysicianManuscriptsPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {manuscriptTypes.map((item, index) => {
-              const IconComponent = item.icon;
               return (
                 <div
                   key={index}
                   className="bg-white rounded-xl p-6 shadow-sm border border-transparent hover:border-sky-300 hover:bg-[#ebf4fa] transition-all duration-300 flex flex-col items-start group cursor-pointer"
                 >
-                  {/* Circle Icon - Standardized Blue Hover across all cards */}
-                  <div className="w-12 h-12 rounded-full bg-amber-100 group-hover:bg-sky-200 transition-colors flex items-center justify-center mb-4 text-amber-700 group-hover:text-sky-800">
-                    <IconComponent className="w-6 h-6" />
+                  <div className="relative w-12 h-12 mb-4">
+                    <Image
+                      src={item.iconSrc}
+                      alt=""
+                      fill
+                      className="object-contain"
+                      sizes="48px"
+                    />
                   </div>
                   
                   <h3 className="font-bold text-gray-900 group-hover:text-sky-900 text-base mb-2 transition-colors">

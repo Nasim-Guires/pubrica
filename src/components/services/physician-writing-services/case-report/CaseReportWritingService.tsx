@@ -268,7 +268,7 @@ export default function CaseReportWritingService() {
             <div className="absolute top-6 -left-6 w-full h-full bg-[#0e3b38] rounded-xl -z-10 hidden sm:block"></div>
             <div className="relative rounded-xl overflow-hidden shadow-lg h-64 sm:h-80 w-full bg-slate-100">
               <Image
-                src="/images/writing-document.jpg" // Note: Replace with the actual image path you intend to use
+                src="/images/physician-writing-services/case-report/Professional-Journal-ready-Case-Report-Writing-intro.webp" // Note: Replace with the actual image path you intend to use
                 alt="Hand writing a medical case report"
                 fill
                 className="object-cover"
@@ -323,7 +323,7 @@ export default function CaseReportWritingService() {
 
             <div className="relative rounded-xl overflow-hidden shadow-md h-64 sm:h-80 w-full max-w-md bg-slate-100">
               <Image
-                src="/images/doctor-patient.jpg" // Note: Replace with the actual image path you intend to use
+                src="/images/physician-writing-services/case-report/Case-Report-What-We-do.webp" // Note: Replace with the actual image path you intend to use
                 alt="Doctor consulting with patient"
                 fill
                 className="object-cover"

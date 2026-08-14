@@ -91,24 +91,24 @@ export default function PatientEducationProcessAndWhoWeServe() {
 
   // Who we serve grid items
   const whoWeServe = [
-    { title: "Hospitals & Clinics", image: "/images/hospitals-clinics.jpg" },
+    { title: "Hospitals & Clinics", image: "/images/physician-writing-services/patient-education-content/Hospitals-Clinics.jpg" },
     {
       title: "Pharmaceutical & Biotech Companies",
-      image: "/images/pharma-biotech.jpg",
+      image: "/images/physician-writing-services/patient-education-content/Pharmaceutical-Biotech-Companies.jpg",
     },
     {
       title: "Medical Device Manufacturers",
-      image: "/images/medical-device.jpg",
+      image: "/images/physician-writing-services/patient-education-content/Medical-Device-Manufacturers.jpg",
     },
     {
       title: "Contract Research Organizations",
-      image: "/images/cro-research.jpg",
+      image: "/images/physician-writing-services/patient-education-content/Contract-Research-Organizations.jpg",
     },
     {
       title: "Public Health Authorities & NGOs",
-      image: "/images/public-health.jpg",
+      image: "/images/physician-writing-services/patient-education-content/Public-Health-Authorities-NGOs.jpg",
     },
-    { title: "Digital Health Platforms", image: "/images/digital-health.jpg" },
+    { title: "Digital Health Platforms", image: "/images/physician-writing-services/patient-education-content/Digital-Health-Platforms.jpg" },
   ];
 
   return (

@@ -12,7 +12,7 @@ const insightsData = [
     summary:
       "Medical journals expect a structure for case reports and review articles, with clear objectives....",
     image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600",
+      "/images/editing-and-translation/How-to-Structure-Case-Reports-and-Review-Articles-for-Medical-Journals.jpg",
     alt: "Doctor holding a clipboard",
     link: "#",
   },
@@ -23,7 +23,7 @@ const insightsData = [
     summary:
       "Publishing a case report involves more than clinical knowledge; it also demands strategic journal ....",
     image:
-      "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&q=80&w=600",
+      "/images/editing-and-translation/How-Should-Physicians-Choose-the-Right-Journal-for-Submitting-a-Case-Report.jpg",
     alt: "Physician working on laptop with documents",
     link: "#",
   },
@@ -34,7 +34,7 @@ const insightsData = [
     summary:
       "Effective patient education materials (PEMs) are crucial for promoting health literacy, enhancing....",
     image:
-      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=600",
+      "/images/editing-and-translation/How-Physicians-Can-Write-Clear-and-Impactful-Patient-Education-Materials.jpg",
     alt: "Doctor discussing with a patient",
     link: "#",
   },

@@ -198,7 +198,7 @@ export default function CustomizedPhysicianMedicalWritingService() {
               {/* Foreground Image */}
               <div className="relative z-10 rounded-xl overflow-hidden shadow-lg border border-slate-200">
                 <Image
-                  src="https://pubrica.com/wp-content/uploads/2023/04/customized-writing-physicians.jpg"
+                  src="/images/physician-writing-services/customized-writing/Customized-Medical-Writing-Services-Exclusively-for-Physicians.webp"
                   alt="Physicians reviewing clinical documents"
                   width={500}
                   height={350}

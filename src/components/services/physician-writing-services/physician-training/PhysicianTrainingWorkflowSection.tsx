@@ -15,7 +15,7 @@ const whoWeServeData = [
             "CME-ready content for physician education and post-marketing programs",
             "Research-focused content for publication and clinical trial education"
         ],
-        imageUrl: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/images/physician-writing-services/physician-training/Pharmaceutical-Biotech-Companies-1.jpg"
     },
     {
         title: "Medical Device & Diagnostics Companies",
@@ -24,7 +24,7 @@ const whoWeServeData = [
             "Diagnostic algorithms and clinical pathway content for specialists",
             "KOL training programs and medical affairs presentation decks"
         ],
-        imageUrl: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/images/physician-writing-services/physician-training/Medical-Device-Diagnostics-Companies.jpg"
     },
     {
         title: "Hospitals, Health Systems & Medical Institutions",
@@ -33,7 +33,7 @@ const whoWeServeData = [
             "Continuing medical education (CME) resources for hospital medical staff",
             "Institutional guidelines and protocol implementation materials"
         ],
-        imageUrl: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/images/physician-writing-services/physician-training/Hospitals-Health-Systems-Medical-Institutions.jpg"
     },
     {
         title: "Academic & Research Institutions",
@@ -42,7 +42,7 @@ const whoWeServeData = [
             "Clinical research methodology and biostatistics workshop content",
             "Grant writing and evidence synthesis instructional resources"
         ],
-        imageUrl: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/images/physician-writing-services/physician-training/Academic-Research-Institutions.jpg"
     },
     {
         title: "Healthcare Communication & CME Providers",
@@ -51,7 +51,7 @@ const whoWeServeData = [
             "Interactive case studies for online and in-person CME events",
             "End-to-end educational content for medical education agencies"
         ],
-        imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/images/physician-writing-services/physician-training/Healthcare-Communication-CME-Providers.jpg"
     },
     {
         title: "Nutraceutical & Life Sciences Companies",
@@ -60,7 +60,7 @@ const whoWeServeData = [
             "Mechanisms of action (MoA) visual decks for clinician education",
             "Safety and clinical study summary training materials"
         ],
-        imageUrl: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/images/physician-writing-services/physician-training/Nutraceutical-Life-Sciences-Companies.jpg"
     }
 ];
 

@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 // Type definitions for service data
 interface CoreService {
@@ -93,13 +94,14 @@ export default function CoreAndTypesServices() {
           
           {/* Image Section Placeholder */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="w-full max-w-sm aspect-[4/5] bg-slate-100 rounded-lg overflow-hidden border-2 border-dashed border-gray-300 flex flex-col items-center justify-center p-6 text-center shadow-sm">
-              <span className="font-semibold text-gray-700 text-sm sm:text-base">
-                /* Image Section: Laboratory Researcher with Beakers & Microscope */
-              </span>
-              <span className="text-xs text-gray-500 mt-2">
-                (Scientist wearing blue gloves inspecting chemical flasks in a modern laboratory setting)
-              </span>
+            <div className="relative w-full max-w-sm aspect-[4/5] rounded-lg overflow-hidden shadow-sm">
+              <Image
+                src="/images/physician-writing-services/literature-search-and-citation/Build-Scientific-Evidence-for-Research-Publication-and-Product-Development.webp"
+                alt="Build scientific evidence for research, publication, and product development"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 380px"
+              />
             </div>
           </div>
 

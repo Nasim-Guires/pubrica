@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
@@ -16,7 +17,7 @@ export default function WhoWeServeAndProcessLiterature() {
                 'Reference sourcing for theses, dissertations, and journal submissions',
                 'Support with reviewer comments requiring additional citations',
             ],
-            imageUrl: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80',
+            imageUrl: '/images/publication-support/plagiarism-services/PhD-Scholars-and-Doctoral-Candidates.jpg',
         },
         {
             id: 2,
@@ -26,7 +27,7 @@ export default function WhoWeServeAndProcessLiterature() {
                 'Literature support for medical research & guidelines',
                 'Publication-ready citation formatting',
             ],
-            imageUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80',
+            imageUrl: '/images/physician-writing-services/literature-search-and-citation/Clinical-Healthcare-Professionals.jpg',
         },
         {
             id: 3,
@@ -36,7 +37,7 @@ export default function WhoWeServeAndProcessLiterature() {
                 'Technology and competitor research reviews',
                 'Patent & safety literature sourcing',
             ],
-            imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            imageUrl: '/images/physician-writing-services/literature-search-and-citation/Product-Development-RD-Teams.jpg',
         },
         {
             id: 4,
@@ -46,7 +47,7 @@ export default function WhoWeServeAndProcessLiterature() {
                 'Faculty publication assistance',
                 'Curriculum reference research',
             ],
-            imageUrl: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80',
+            imageUrl: '/images/physician-writing-services/literature-search-and-citation/Universities-Institutions.jpg',
         },
         {
             id: 5,
@@ -56,7 +57,7 @@ export default function WhoWeServeAndProcessLiterature() {
                 'Academic integrity & anti-plagiarism checks',
                 'Formatting according to APA, Vancouver, IEEE, etc.',
             ],
-            imageUrl: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80',
+            imageUrl: '/images/physician-writing-services/literature-search-and-citation/Global-Scholars-International-Students.jpg',
         },
     ];
 
@@ -384,10 +385,14 @@ export default function WhoWeServeAndProcessLiterature() {
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
                 <div className="bg-[#f0faf6] rounded-2xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-emerald-100">
                     <div className="lg:col-span-5 flex justify-center">
-                        <div className="w-full max-w-xs sm:max-w-sm aspect-[4/5] bg-slate-200 rounded-xl overflow-hidden border-2 border-dashed border-gray-400 flex flex-col items-center justify-center p-6 text-center shadow-inner">
-                            <span className="font-semibold text-gray-700 text-sm sm:text-base">
-                                Sample Work Representation
-                            </span>
+                        <div className="relative w-full max-w-xs sm:max-w-sm aspect-[4/5] rounded-xl overflow-hidden shadow-inner">
+                            <Image
+                                src="/images/physician-writing-services/literature-search-and-citation/Literature-Search-and-Citation-Service-Sample-Work.webp"
+                                alt="Literature Search and Citation Service Sample Work"
+                                fill
+                                className="object-cover"
+                                sizes="320px"
+                            />
                         </div>
                     </div>
 

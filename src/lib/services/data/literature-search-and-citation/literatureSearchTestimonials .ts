@@ -1,30 +1,30 @@
 export const literatureSearchTestimonials = [
   {
-    image: "/images/testimonials/literature-search/journal-of-cancer-research-and-clinical-oncology.jpg",
+    image: "/images/physician-writing-services/literature-search-and-citation/journal-of-cancer-reserach-clinical-oncology-.jpg",
     quote:
       "Pubrica’s literature search team helped me consolidate relevant, up-to-date sources for my oncology manuscript, ensuring alignment with the scope of the Journal of Cancer Research and Clinical Oncology. The referencing was flawless, and the review process was smooth.",
     name: "Dr. Radhika Nair",
     designation: "Senior Oncology Researcher",
     organization: "India",
-    flag: "/images/flags/india.png",
+    flag: "/images/editing-and-translation/scientific-editing/flag.png",
   },
   {
-    image: "/images/testimonials/literature-search/international-journal-of-cardiology.jpg",
+    image: "/images/physician-writing-services/literature-search-and-citation/international-journal-of-cardialogy-.jpg",
     quote:
       "For my research submission to the International Journal of Cardiology, Pubrica’s citation team ensured complete consistency between in-text citations and the reference list. Their use of Scopus-indexed sources and journal-compliant referencing helped me clear peer review without a single citation error.",
     name: "Prof. James Holloway",
     designation: "Cardiology Researcher",
     organization: "UK",
-    flag: "/images/flags/uk.png",
+    flag: "/images/physician-writing-services/literature-search-and-citation/united-kingdom.png",
   },
   {
-    image: "/images/testimonials/literature-search/international-journal-of-environmental-research-and-public-health.jpg",
+    image: "/images/physician-writing-services/literature-search-and-citation/international-journal-of-environmental-research-and-public-health-.jpg",
     quote:
       "The literature synthesis provided by Pubrica was instrumental in strengthening the background and discussion sections of my manuscript. Their citation formatting met all the requirements of the International Journal of Environmental Research and Public Health, making the submission process seamless.",
     name: "Dr. Fatima El-Amin",
     designation: "Environmental Health Researcher",
     organization: "UAE",
-    flag: "/images/flags/uae.png",
+    flag: "/images/physician-writing-services/literature-search-and-citation/united-arab-emirates.png",
   },
 ];
 

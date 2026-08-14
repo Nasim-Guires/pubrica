@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 
 interface PhysicianHeroProps {
@@ -35,7 +36,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
     "Literature review from PubMed, Embase, Scopus, and Cochrane",
     "Reference formatting by journal. (AMA, Vancouver, APA)",
   ],
-  imageUrl = "/images/physician-writing-hero.jpg",
+  imageUrl = "/images/physician-writing-services/physician-writing-services.webp",
 }) => {
   return (
     <div className="w-full font-sans">
@@ -109,14 +110,13 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
               {/* Dark green background shadow container */}
               <div className="bg-[#0b332d] rounded-2xl p-0.5 pt-6 pl-6 relative">
                 {/* Actual Foreground Image Box */}
-                <div className="w-full h-[240px] md:h-[260px] bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
-                  <img
+                <div className="relative w-full h-[240px] md:h-[260px] bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                  <Image
                     src={imageUrl}
-                    alt="Medical Professional working on document analysis"
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      (e.target as HTMLElement).style.display = "none";
-                    }}
+                    alt="Physician writing services"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 420px"
                   />
                 </div>
               </div>

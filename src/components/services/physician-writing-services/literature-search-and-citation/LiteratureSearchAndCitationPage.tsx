@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
@@ -97,14 +98,14 @@ export default function LiteratureSearchAndCitationPage() {
           {/* Image Section 1 */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end pt-4 lg:pt-0">
             <div className="relative w-full max-w-md aspect-[4/3] bg-[#1a3835] rounded-2xl p-4 flex items-center justify-center shadow-md">
-              {/* Image Container Placeholder */}
-              <div className="w-full h-full bg-slate-200 rounded-xl overflow-hidden border-2 border-dashed border-gray-400 flex flex-col items-center justify-center text-center p-4">
-                <span className="font-semibold text-gray-700 text-sm sm:text-base">
-                  /* Image Section: Open Books and Academic Literature Stack */
-                </span>
-                <span className="text-xs text-gray-500 mt-2">
-                  (Representing literature search, research papers, and academic citations)
-                </span>
+              <div className="relative w-full h-full bg-white rounded-xl overflow-hidden">
+                <Image
+                  src="/images/physician-writing-services/literature-search-and-citation/Expert-Literature-Search-and-Citation-Service.webp"
+                  alt="Expert literature search and citation service"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 420px"
+                />
               </div>
             </div>
           </div>
@@ -171,14 +172,14 @@ export default function LiteratureSearchAndCitationPage() {
           {/* Image Section 2 */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end pt-4 lg:pt-0">
             <div className="relative w-full max-w-md aspect-square bg-slate-100 rounded-full flex items-center justify-center p-6">
-              {/* Image Container Placeholder */}
-              <div className="w-full h-full bg-slate-200 rounded-2xl overflow-hidden border-2 border-dashed border-gray-400 flex flex-col items-center justify-center text-center p-4">
-                <span className="font-semibold text-gray-700 text-sm sm:text-base">
-                  /* Image Section: Researchers analyzing documents and taking notes */
-                </span>
-                <span className="text-xs text-gray-500 mt-2">
-                  (Representing document review, manuscript evaluation, and team collaboration)
-                </span>
+              <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/physician-writing-services/literature-search-and-citation/What-We-do.webp"
+                  alt="Literature search document review"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 420px"
+                />
               </div>
             </div>
           </div>

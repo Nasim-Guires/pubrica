@@ -1,24 +1,46 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Image from "next/image";
 import React from "react";
 
 interface AudienceCard {
   title: string;
-  imageKey: string;
+  imageUrl: string;
 }
 
 export const PhysicianWhoWeServe: React.FC = () => {
-  // Ordered data structure mapping the 8 targeted audience grid items
+  const IMG = "/images/physician-writing-services";
   const audiences: AudienceCard[] = [
-    { title: "Clinicians and Physicians", imageKey: "clinicians" },
-    { title: "Medical Researchers and Academics", imageKey: "researchers" },
-    { title: "Hospitals and Healthcare Institutions", imageKey: "hospitals" },
-    { title: "Pharmaceutical and Biotechnology Companies", imageKey: "pharma" },
-    { title: "Contract Research Organizations", imageKey: "cro" },
-    { title: "Medical Education Providers", imageKey: "education" },
-    { title: "Medical Device and Diagnostics Companies", imageKey: "devices" },
+    {
+      title: "Clinicians and Physicians",
+      imageUrl: `${IMG}/Clinicians-and-Physicians.jpg`,
+    },
+    {
+      title: "Medical Researchers and Academics",
+      imageUrl: `${IMG}/Medical-Researchers-and-Academics.jpg`,
+    },
+    {
+      title: "Hospitals and Healthcare Institutions",
+      imageUrl: `${IMG}/Hospitals-and-Healthcare-Institutions.jpg`,
+    },
+    {
+      title: "Pharmaceutical and Biotechnology Companies",
+      imageUrl: `${IMG}/Pharmaceutical-and-Biotechnology-Companies.jpg`,
+    },
+    {
+      title: "Contract Research Organizations",
+      imageUrl: `${IMG}/Contract-Research-Organizations.jpg`,
+    },
+    {
+      title: "Medical Education Providers",
+      imageUrl: `${IMG}/Medical-Education-Providers.jpg`,
+    },
+    {
+      title: "Medical Device and Diagnostics Companies",
+      imageUrl: `${IMG}/Medical-Device-and-Diagnostics-Companies.jpg`,
+    },
     {
       title: "Healthcare Marketing and MedCom Agencies",
-      imageKey: "marketing",
+      imageUrl: `${IMG}/Healthcare-Marketing-and-MedCom-Agencies.jpg`,
     },
   ];
 
@@ -49,8 +71,13 @@ export const PhysicianWhoWeServe: React.FC = () => {
               key={idx}
               className="relative w-full aspect-[4/3] rounded-sm overflow-hidden group shadow-sm bg-gray-100 border border-gray-100"
             >
-              {/* Fallback color blocking in place of image source strings */}
-              <div className="w-full h-full bg-[#11222b] absolute inset-0 transition-transform duration-300 group-hover:scale-105" />
+              <Image
+                src={card.imageUrl}
+                alt={card.title}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
 
               {/* Semi-transparent dark gradient masking to match image references */}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />

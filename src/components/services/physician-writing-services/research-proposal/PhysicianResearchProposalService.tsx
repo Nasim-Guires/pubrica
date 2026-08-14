@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import Image from 'next/image';
 
 export default function PhysicianResearchProposalService() {
     const [isAccordionOpen, setIsAccordionOpen] = useState(false);
@@ -124,20 +125,14 @@ export default function PhysicianResearchProposalService() {
                         {/* Right Column: Image Section Placeholder */}
                         <aside className="lg:col-span-5 flex justify-center">
                             <div className="relative w-full max-w-md bg-[#132d27] p-3 rounded-lg shadow-md">
-                                {/* 
-                  IMAGE SECTION 
-                  Representing the medical research team in laboratory setting
-                */}
-                                <div
-                                    className="w-full h-72 sm:h-80 bg-gray-200 border-2 border-dashed border-gray-400 rounded flex flex-col items-center justify-center text-center p-4"
-                                    aria-label="Image Section: Researchers analyzing clinical samples in a laboratory setting"
-                                >
-                                    <span className="text-gray-600 font-semibold text-sm sm:text-base">
-                                        [ IMAGE SECTION ]
-                                    </span>
-                                    <span className="text-gray-500 text-xs mt-1">
-                                        Description: Female scientist looking through microscope and male colleague inspecting glass beaker in lab
-                                    </span>
+                                <div className="relative w-full h-72 sm:h-80 rounded overflow-hidden">
+                                    <Image
+                                        src="/images/physician-writing-services/research-proposal/Research-Protocol-Services.webp"
+                                        alt="Research protocol and proposal writing services"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 1024px) 100vw, 420px"
+                                    />
                                 </div>
                             </div>
                         </aside>

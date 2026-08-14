@@ -153,7 +153,7 @@ export default function PhysicianManuscriptPackagesSection() {
                         <div className="w-full md:w-1/3 flex justify-center shrink-0">
                             <div className="relative overflow-hidden rounded-xl border border-gray-200 shadow-md max-w-[260px]">
                                 <img
-                                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80"
+                                    src="/images/physician-writing-services/physician-manuscript/Physician-Manuscript-Service-Sample-Work.jpg"
                                     alt="Doctor writing clinical manuscript notes"
                                     className="w-full h-56 object-cover"
                                 />

@@ -76,7 +76,7 @@ export default function PhysicianTrainingPackage() {
                         {/* Image Box */}
                         <div className="md:col-span-5 relative h-64 md:h-80 w-full overflow-hidden rounded-lg shadow">
                             <Image
-                                src="/images/physician-training.jpg" // Replace with your image path
+                                src="/images/physician-writing-services/physician-training/Physician-Training-Content-Development-Sample-Work-Discover-More.jpg" // Replace with your image path
                                 alt="Physician Training Session"
                                 fill
                                 className="object-cover"

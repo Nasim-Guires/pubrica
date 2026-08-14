@@ -22,27 +22,27 @@ import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 const whoWeServeCards = [
   {
     title: "Medical Professionals",
-    image: "/images/medical-professionals.jpg",
+    image: "/images/physician-writing-services/case-report/Medical-Professionals.jpg",
   },
   {
     title: "Hospitals and Healthcare Institutions",
-    image: "/images/hospitals-healthcare.jpg",
+    image: "/images/physician-writing-services/case-report/Hospitals-and-Healthcare-Institutions.jpg",
   },
   {
     title: "Pharmaceutical and Medical Device Companies",
-    image: "/images/pharma-device.jpg",
+    image: "/images/physician-writing-services/case-report/Pharmaceutical-and-Medical-Device-Companies.jpg",
   },
   {
     title: "Medical Postgraduates and Doctoral Candidates",
-    image: "/images/postgraduates-doctoral.jpg",
+    image: "/images/physician-writing-services/case-report/Medical-Postgraduates-and-Doctoral-Candidates.jpg",
   },
   {
     title: "Early-Career Researchers and Medical Interns",
-    image: "/images/early-career-interns.jpg",
+    image: "/images/physician-writing-services/case-report/Early-Career-Researchers-and-Medical-Interns.jpg",
   },
   {
     title: "Private Practitioners & Diagnostics Consultants",
-    image: "/images/private-practitioners.jpg",
+    image: "/images/physician-writing-services/case-report/Private-Practitioners-Diagnostics-Consultants.jpg",
   },
 ];
 

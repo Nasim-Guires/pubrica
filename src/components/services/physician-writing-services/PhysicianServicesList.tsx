@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 interface ServiceItem {
   label: string;
@@ -11,7 +12,7 @@ interface PhysicianServicesListProps {
 }
 
 export const PhysicianServicesList: React.FC<PhysicianServicesListProps> = ({
-  imageUrl = "/images/physician-services.jpg", // Replace with your actual image path
+  imageUrl,
 }) => {
   // Managing visibility states for each accordion group block separately
   const [caseReportOpen, setCaseReportOpen] = useState<boolean>(true);
@@ -196,14 +197,13 @@ export const PhysicianServicesList: React.FC<PhysicianServicesListProps> = ({
           {imageUrl && (
             <div className="w-full lg:w-[380px] shrink-0">
               <div className="bg-[#113a35] rounded-xl p-1 relative shadow-md">
-                <div className="w-full h-[200px] md:h-[220px] bg-white rounded-lg overflow-hidden border border-gray-100">
-                  <img
+                <div className="relative w-full h-[200px] md:h-[220px] bg-white rounded-lg overflow-hidden border border-gray-100">
+                  <Image
                     src={imageUrl}
                     alt="Physician writing and research support services"
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      (e.target as HTMLElement).style.display = "none";
-                    }}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 380px"
                   />
                 </div>
               </div>

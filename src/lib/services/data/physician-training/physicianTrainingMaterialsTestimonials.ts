@@ -1,30 +1,30 @@
 export const physicianTrainingMaterialsTestimonials = [
   {
-    image: "/images/testimonials/physician-training-materials/evidence-based-medicine-training.jpg",
+    image: "/images/physician-writing-services/physician-training/the-lancet-of-oncolgy-.png",
     quote:
       "Pubrica’s training materials helped us deliver high-impact sessions on evidence-based medicine. The STROBE and CONSORT slide decks were clear, well-structured, and perfectly suited for our internal CME programs. These resources helped our department elevate the quality of clinical discussions and decision-making.",
     name: "Dr. Mark Jensen",
     designation: "Internal Medicine Specialist",
     organization: "USA",
-    flag: "/images/flags/usa.png",
+    flag: "/images/physician-writing-services/physician-manuscript/united-states-of-america.png",
   },
   {
-    image: "/images/testimonials/physician-training-materials/cardiology-cme-workshops.jpg",
+    image: "/images/physician-writing-services/physician-training/asian-journal-of-psychiatry.png",
     quote:
       "We used Pubrica’s manuscript writing and statistics training content as part of our CME-certified cardiology workshops. The slide decks and case studies were practical, clinician-friendly, and easy to integrate into our sessions. Pubrica’s content significantly improved how our team engages with clinical research and continuing education.",
     name: "Dr. Anil Kumar",
     designation: "Consultant Cardiologist",
     organization: "India",
-    flag: "/images/flags/india.png",
+    flag: "/images/editing-and-translation/scientific-editing/flag.png",
   },
   {
-    image: "/images/testimonials/physician-training-materials/prisma-systematic-review-training.jpg",
+    image: "/images/physician-writing-services/physician-training/case-reports-in-paediatrics.jpg",
     quote:
       "I had limited experience with systematic review methodology. Pubrica’s training slide decks on PRISMA and reference management tools helped simplify complex concepts. We now use their materials for our oncology department’s resident teaching modules. Highly recommended for anyone building evidence-based clinical training programs.",
     name: "Dr. Priya K.",
     designation: "Academic Clinical Fellow in Oncology",
     organization: "UK",
-    flag: "/images/flags/uk.png",
+    flag: "/images/physician-writing-services/literature-search-and-citation/united-kingdom.png",
   },
 ];
 

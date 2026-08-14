@@ -7,7 +7,7 @@ export const literatureSearchWhoWeServe = [
             "Evidence for regulatory dossiers, including IND, NDA, and CTD submissions.",
         ],
         imageUrl:
-            "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80",
+            "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Pharmaceutical-and-Biotech-Companies.jpg",
     },
     {
         title: "Medical Device & Diagnostic Firms",
@@ -17,7 +17,7 @@ export const literatureSearchWhoWeServe = [
             "Evidence support for EU MDR and FDA compliance.",
         ],
         imageUrl:
-            "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80",
+            "/images/publication-support/plagiarism-services/Academic-Researchers-and-Scientists.jpg",
     },
     {
         title: "Healthcare Providers & Clinical Practitioners",
@@ -27,7 +27,7 @@ export const literatureSearchWhoWeServe = [
             "Development of evidence-based clinical practice guidelines.",
         ],
         imageUrl:
-            "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80",
+            "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Healthcare-Providers-and-Clinical-Practitioners.jpg",
     },
     {
         title: "Academic & Research Institutions",
@@ -37,7 +37,7 @@ export const literatureSearchWhoWeServe = [
             "Publication-ready reviews for peer-reviewed journals.",
         ],
         imageUrl:
-            "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80",
+            "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Academic-and-Research-Institutions.jpg",
     },
     {
         title: "Regulatory & Government Agencies",
@@ -47,7 +47,7 @@ export const literatureSearchWhoWeServe = [
             "Technical documentation for compliance and surveillance.",
         ],
         imageUrl:
-            "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+            "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Regulatory-Government-Agencies.jpg",
     },
     {
         title: "Hospitals & Medical Research Units",
@@ -57,7 +57,7 @@ export const literatureSearchWhoWeServe = [
             "Training materials based on updated clinical evidence.",
         ],
         imageUrl:
-            "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
+            "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Hospitals-and-Medical-Research-Units.jpg",
     },
     {
         title: "Biomedical & Material Science Companies",
@@ -67,7 +67,7 @@ export const literatureSearchWhoWeServe = [
             "Device-material interaction and biocompatibility evidence.",
         ],
         imageUrl:
-            "https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=800&q=80",
+            "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Biomedical-Material-Science-Companies.jpg",
     },
     {
         title: "Contract Research Organizations (CROs)",
@@ -77,7 +77,7 @@ export const literatureSearchWhoWeServe = [
             "Background research for study protocols and investigator brochures.",
         ],
         imageUrl:
-            "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=800&q=80",
+            "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Contract-Research-Organizations-1.jpg",
     },
     {
         title: "HTA & Market Access Teams",
@@ -87,37 +87,37 @@ export const literatureSearchWhoWeServe = [
             "Support for payer submissions and value dossiers.",
         ],
         imageUrl:
-            "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
+            "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Health-Technology-Assessment-HTA-Market-Access-Teams.jpg",
     },
 ];
 
 export const clinicalLiteratureReviewTestimonials = [
   {
-    image: "/images/testimonials/clinical-literature-review/european-journal-of-internal-medicine.jpg",
+    image: "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/european-journal-of-internal-medicine.jpg",
     quote:
       "Pubrica’s team delivered a systematic review on anticoagulant therapy in atrial fibrillation that surpassed our expectations. The review followed PRISMA and GRADE methodology with well-structured forest plots and bias assessments. The work was published in the European Journal of Internal Medicine.",
     name: "Dr. Elena Hoffman",
     designation: "Clinical Research Director",
     organization: "Germany",
-    flag: "/images/flags/germany.png",
+    flag: "/images/research-services/grant-writing/germany.png",
   },
   {
-    image: "/images/testimonials/clinical-literature-review/bmc-public-health.jpg",
+    image: "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/journal-of-cancer-research-and-therapeutics.jpg",
     quote:
       "The literature review prepared by Pubrica was comprehensive, methodologically sound, and supported by high-quality evidence. Their systematic search strategy and critical appraisal significantly strengthened our publication in BMC Public Health.",
     name: "Dr. Priya Raman",
     designation: "Public Health Researcher",
     organization: "India",
-    flag: "/images/flags/india.png",
+    flag: "/images/editing-and-translation/scientific-editing/flag.png",
   },
   {
-    image: "/images/testimonials/clinical-literature-review/journal-of-clinical-medicine.jpg",
+    image: "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/british-journal-of-clinical-pharmacology.jpg",
     quote:
       "Pubrica synthesized a large volume of clinical evidence into a clear, publication-ready review. Their expertise in evidence grading and manuscript organization helped our review article gain acceptance in the Journal of Clinical Medicine.",
     name: "Prof. Michael Carter",
     designation: "Clinical Epidemiologist",
     organization: "United Kingdom",
-    flag: "/images/flags/uk.png",
+    flag: "/images/physician-writing-services/literature-search-and-citation/united-kingdom.png",
   },
 ];
 

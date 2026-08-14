@@ -1,13 +1,6 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
-
-interface TestimonialData {
-  id: number;
-  author: string;
-  role: string;
-  quote: string;
-  journalName: string;
-}
 
 interface FAQData {
   id: number;
@@ -19,30 +12,11 @@ interface InsightCard {
   id: number;
   title: string;
   excerpt: string;
+  image: string;
 }
 
 export const PhysicianWritingExtensions: React.FC = () => {
-  // Track open state for FAQ collapse framework
   const [openFaqId, setOpenFaqId] = useState<number | null>(1);
-
-  const testimonials: TestimonialData[] = [
-    {
-      id: 1,
-      author: "DR. KAVITA SHARMA",
-      role: "General Surgeon",
-      quote:
-        "My manuscript on post-operative infection control was accurately written and referenced, thanks to Pubrica's physician writing service. It was accepted by the International Journal of Surgery after a single round of peer review. I recommend them for busy clinicians.",
-      journalName: "International Journal of Surgery",
-    },
-    {
-      id: 2,
-      author: "DR. ANITA REDDY",
-      role: "Interventional Cardiologist",
-      quote:
-        "As a practicing cardiologist, documenting complex trials can be overwhelming. Pubrica's writers developed a case report with proper reporting structure, leading to its publication in BMJ Case Reports. Highly responsive team.",
-      journalName: "BMJ Case Reports",
-    },
-  ];
 
   const faqs: FAQData[] = [
     {
@@ -89,6 +63,8 @@ export const PhysicianWritingExtensions: React.FC = () => {
         "How to Structure Case Reports and Review Articles for Medical Journals",
       excerpt:
         "Journals expect a clear structure for case reports and review articles, featuring precise objectives, rigorous timeline analysis...",
+      image:
+        "/images/editing-and-translation/How-to-Structure-Case-Reports-and-Review-Articles-for-Medical-Journals.jpg",
     },
     {
       id: 2,
@@ -96,6 +72,8 @@ export const PhysicianWritingExtensions: React.FC = () => {
         "How Should Physicians Choose the Right Journal for Submitting a Case...",
       excerpt:
         "Publishing a case report involves more than clinical knowledge; it also demands strategic journal targeting, matching visibility metrics...",
+      image:
+        "/images/editing-and-translation/How-Should-Physicians-Choose-the-Right-Journal-for-Submitting-a-Case-Report.jpg",
     },
     {
       id: 3,
@@ -103,67 +81,14 @@ export const PhysicianWritingExtensions: React.FC = () => {
         "How Physicians Can Write Clear and Impactful Patient Education Materials",
       excerpt:
         "Effective patient education materials (PEMs) are crucial for promoting health literacy, enhancing compliance, and bridging care delivery gaps...",
+      image:
+        "/images/editing-and-translation/How-Physicians-Can-Write-Clear-and-Impactful-Patient-Education-Materials.jpg",
     },
   ];
 
   return (
     <div className="w-full bg-[#f8f9fa] font-sans text-left text-gray-800">
-      {/* --- Section 1: Testimonials Carousel Layout --- */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
-        <h2 className="text-black text-xl md:text-2xl lg:text-[26px] font-bold tracking-tight mb-2">
-          Testimonials
-        </h2>
-        <p className="text-gray-600 text-xs md:text-sm lg:text-[15px] leading-relaxed mb-10 max-w-5xl text-justify">
-          Learn how Pubrica's physician writing service has supported clinicians
-          in producing publication-ready manuscripts, adhering to evidence-based
-          standards, and meeting the ethical and formatting requirements of
-          leading journals. Here is what our clients say:
-        </p>
-
-        {/* Card display viewport */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-          {testimonials.map((t) => (
-            <div
-              key={t.id}
-              className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm flex flex-col justify-between"
-            >
-              {/* Content core */}
-              <div className="flex flex-col sm:flex-row gap-5 items-start mb-6">
-                <div className="w-[110px] h-[110px] bg-zinc-100 rounded border border-gray-200 flex-shrink-0 flex items-center justify-center p-2 text-center text-[10px] font-mono font-bold text-gray-400 select-none uppercase">
-                  [{t.journalName} Cover]
-                </div>
-                <p className="text-gray-700 italic text-xs md:text-sm leading-relaxed text-justify">
-                  "{t.quote}"
-                </p>
-              </div>
-
-              {/* Author Footer bar */}
-              <div className="border-t border-gray-100 pt-4 flex justify-between items-center">
-                <div>
-                  <h4 className="text-sm font-extrabold text-slate-900 tracking-wide">
-                    {t.author},
-                  </h4>
-                  <p className="text-xs text-gray-500 italic mt-0.5">
-                    {t.role}
-                  </p>
-                </div>
-                {/* Visual Flag indicator frame */}
-                <div className="w-6 h-4 bg-zinc-200 border border-zinc-300 rounded-sm flex items-center justify-center text-[8px] text-zinc-500 font-bold select-none">
-                  IND
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Pagination Dots indicator */}
-        <div className="flex items-center justify-center gap-2 mt-8">
-          <span className="w-2.5 h-2.5 bg-[#0e3a2f] rounded-none cursor-pointer" />
-          <span className="w-2.5 h-2.5 border border-gray-400 bg-white rounded-none cursor-pointer" />
-        </div>
-      </section>
-
-      {/* --- Section 2: FAQ Accordion Structure --- */}
+      {/* --- FAQ Accordion Structure --- */}
       <section className="py-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-200/60">
         <h2 className="text-black text-xl md:text-2xl lg:text-[26px] font-bold tracking-tight mb-8">
           Frequently Asked Questions – Physician Writing Service
@@ -221,8 +146,14 @@ export const PhysicianWritingExtensions: React.FC = () => {
               className="bg-white rounded border border-gray-200/80 shadow-sm overflow-hidden flex flex-col group cursor-pointer hover:shadow-md transition-shadow"
             >
               {/* Graphic Banner Top Area */}
-              <div className="w-full aspect-[16/10] bg-zinc-100 border-b border-gray-100 flex items-center justify-center text-zinc-400 text-xs font-mono font-medium select-none">
-                [Insight Cover Visual Asset]
+              <div className="relative w-full aspect-[16/10] bg-zinc-100 border-b border-gray-100 overflow-hidden">
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
 
               {/* Informational Text Description Wrapper */}

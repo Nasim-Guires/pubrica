@@ -128,7 +128,7 @@ export default function PatientEducationContentOverviewSection() {
             <div className="relative p-3 bg-[#0d211d] rounded-2xl shadow-xl max-w-md w-full">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-white">
                 <Image
-                  src="/images/patient-education-doctor-consultation.jpg"
+                  src="/images/physician-writing-services/patient-education-content/Patient-Education-Content-Service.webp"
                   alt="Doctor explaining medical treatment using visual aids to a patient"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -249,7 +249,7 @@ export default function PatientEducationContentOverviewSection() {
               {/* Top Image */}
               <div className="absolute top-0 left-0 w-3/4 h-48 rounded-xl overflow-hidden shadow-lg border-2 border-white z-10">
                 <Image
-                  src="/images/digital-tablet-patient-discussion.jpg"
+                  src="/images/physician-writing-services/patient-education-content/WHAT-WE-DO-.webp"
                   alt="Healthcare provider demonstrating information on a tablet"
                   fill
                   sizes="(max-width: 768px) 100vw, 30vw"
@@ -260,7 +260,7 @@ export default function PatientEducationContentOverviewSection() {
               {/* Bottom Overlapping Image */}
               <div className="absolute bottom-0 right-0 w-3/4 h-52 rounded-xl overflow-hidden shadow-xl border-2 border-white z-20">
                 <Image
-                  src="/images/medical-team-collaboration.jpg"
+                  src="/images/physician-writing-services/patient-education-content/Pubrica-Patient-Education-Content-Format.jpg"
                   alt="Medical team hands stacked in collaboration"
                   fill
                   sizes="(max-width: 768px) 100vw, 30vw"

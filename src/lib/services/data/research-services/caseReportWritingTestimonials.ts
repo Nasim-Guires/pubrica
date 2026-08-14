@@ -1,31 +1,31 @@
 export const caseReportWritingTestimonials = [
   {
-    image: "/images/testimonials/case-reports-in-paediatrics.jpg",
+    image: "/images/physician-writing-services/case-report/case-reports-in-paediatrics.jpg",
     quote:
       "We struggled to get our case of neonatal lupus accepted until we approached Pubrica. Their team restructured the narrative, enhanced the discussion with evidence-based literature, and prepared ethical documentation. Within weeks, the paper was accepted by Case Reports in Paediatrics. Their subject-matter expertise is top-notch.",
     name: "Dr. S. Rathi",
     designation: "Paediatrician & NICU Specialist",
     organization: "India",
-    flag: "/images/flags/india.png",
+    flag: "/images/editing-and-translation/scientific-editing/flag.png",
   },
   {
-    image: "/images/testimonials/bmj-case-reports.jpg",
+    image: "/images/physician-writing-services/case-report/bmj-case-report.jpg",
     quote:
       "As a first-time author, I was unsure how to convert my case observation into a structured narrative. Pubrica's writing team helped me prepare a detailed manuscript on a rare case of anti-NMDA receptor encephalitis. Thanks to their guidance and technical clarity, it was published in the BMJ Case Reports. I appreciate their commitment to scientific standards.",
     name: "Dr. L. Ghosh",
     designation: "Consultant Neurologist",
     organization: "UAE",
-    flag: "/images/flags/uae.png",
+    flag: "/images/physician-writing-services/case-report/united-arab-emirates.png",
   },
   {
     image:
-      "/images/testimonials/international-journal-of-surgery-case-reports.jpg",
+      "/images/physician-writing-services/case-report/international-journal-case-reports-surgery.jpg",
     quote:
       "Pubrica's case report writing support was exceptional. Their team helped me structure a rare femoral neck fracture case in a young athlete with a clear diagnostic and surgical pathway. The manuscript was accepted in the International Journal of Surgery Case Reports with minor revisions. I highly recommend their clinical writing expertise for surgeons aiming for quick and accurate publication.",
     name: "Dr. R. Mehta",
     designation: "MS Orthopaedics",
     organization: "India",
-    flag: "/images/flags/india.png",
+    flag: "/images/editing-and-translation/scientific-editing/flag.png",
   },
 ];
 

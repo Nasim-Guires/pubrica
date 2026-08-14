@@ -1,14 +1,15 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Image from "next/image";
 import React from "react";
 
 interface Specialty {
   name: string;
-  iconKey: string;
+  iconSrc: string;
 }
 
 interface StandardItem {
   name: string;
-  logoText?: string;
+  logoSrc: string;
 }
 
 interface PackageFeatureBlock {
@@ -19,6 +20,7 @@ interface PackageFeatureBlock {
 interface PackageData {
   id: string;
   badgeLetter: string;
+  badgeSrc: string;
   badgeTitle: string;
   badgeSubtitle: string;
   idealFor: string;
@@ -35,37 +37,43 @@ interface PackageData {
 
 export const TherapeuticAndComplianceSpecialties: React.FC = () => {
   // Mapped list of 16 therapeutic areas explicitly matching the table rows
+  const IMG = "/images/physician-writing-services";
   const specialties: Specialty[] = [
-    { name: "Oncology", iconKey: "oncology" },
-    { name: "Cardiology", iconKey: "cardiology" },
-    { name: "Neurology", iconKey: "neurology" },
-    { name: "Psychiatry", iconKey: "psychiatry" },
-    { name: "Pulmonology", iconKey: "pulmonology" },
-    { name: "Nephrology", iconKey: "nephrology" },
-    { name: "Psychology", iconKey: "psychology" },
-    { name: "Haematology", iconKey: "haematology" },
-    { name: "Gastroenterology", iconKey: "gastroenterology" },
-    { name: "Obstetrics & Gynaecology", iconKey: "obgyn" },
-    { name: "Paediatrics", iconKey: "paediatrics" },
-    { name: "Urology", iconKey: "urology" },
-    { name: "General Medicine", iconKey: "general" },
-    { name: "Rheumatology", iconKey: "rheumatology" },
-    { name: "Dermatology", iconKey: "dermatology" },
-    { name: "Orthopaedics", iconKey: "ortho" },
+    { name: "Oncology", iconSrc: `${IMG}/Oncology-1-1.png` },
+    { name: "Cardiology", iconSrc: `${IMG}/Cardiology-1.png` },
+    { name: "Neurology", iconSrc: `${IMG}/Neurology-1.png` },
+    { name: "Psychiatry", iconSrc: `${IMG}/Psychiatry-1.png` },
+    { name: "Pulmonology", iconSrc: `${IMG}/Pulmonology-1.png` },
+    { name: "Nephrology", iconSrc: `${IMG}/Nephrology-1.png` },
+    { name: "Psychology", iconSrc: `${IMG}/Psychology.png` },
+    { name: "Haematology", iconSrc: `${IMG}/Haematology-1.png` },
+    { name: "Gastroenterology", iconSrc: `${IMG}/Gastroenterology.png` },
+    { name: "Obstetrics & Gynaecology", iconSrc: `${IMG}/Obstetrics-Gynaecology-1.png` },
+    { name: "Paediatrics", iconSrc: `${IMG}/Paediatrics-1.png` },
+    { name: "Urology", iconSrc: `${IMG}/Urology-1.png` },
+    { name: "General Medicine", iconSrc: `${IMG}/General-Medicine-1-1.png` },
+    { name: "Rheumatology", iconSrc: `${IMG}/Rheumatology-1.png` },
+    { name: "Dermatology", iconSrc: `${IMG}/Dermatology.png` },
+    { name: "Orthopaedics", iconSrc: `${IMG}/Orthopaedics.png` },
   ];
 
-  // Compliance standards shown along the bottom row showcase splitters
   const standards: StandardItem[] = [
-    { name: "Good Pharmacy Practice" },
+    { name: "Good Pharmacy Practice", logoSrc: `${IMG}/GPP.png` },
     {
       name: "Consolidated Standards of Reporting Trials",
-      logoText: "SPIRIT CONSORT",
+      logoSrc: `${IMG}/Consolidated-Standards-of-Reporting-Trials.png`,
     },
-    { name: "International Council for Harmonisation" },
-    { name: "Food and Drug Administration", logoText: "FDA" },
+    {
+      name: "International Council for Harmonisation",
+      logoSrc: `${IMG}/International-Council-for-Harmonisation.png`,
+    },
+    {
+      name: "Food and Drug Administration",
+      logoSrc: `${IMG}/FDA-.png`,
+    },
     {
       name: "International Committee of Medical Journal Editors",
-      logoText: "ICMJE",
+      logoSrc: "/images/publication-support/journal-selection/ICMJE.webp",
     },
   ];
 
@@ -74,6 +82,7 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
     {
       id: "standard",
       badgeLetter: "S",
+      badgeSrc: "/images/publication-support/poster-preparation/S.png",
       badgeTitle: "Standard",
       badgeSubtitle: "Budget-Friendly Choice",
       idealFor:
@@ -101,6 +110,7 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
     {
       id: "advanced",
       badgeLetter: "A",
+      badgeSrc: "/images/publication-support/peer-review-pre-submission/advanced.webp",
       badgeTitle: "Advanced",
       badgeSubtitle: "Most Popular",
       idealFor:
@@ -129,6 +139,7 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
     {
       id: "elite",
       badgeLetter: "E",
+      badgeSrc: "/images/physician-writing-services/ELITE-LOGO.png",
       badgeTitle: "Elite",
       badgeSubtitle: "Comprehensive & Premium",
       idealFor:
@@ -187,8 +198,14 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
                   isNephrology ? "bg-[#f4faf8]" : "bg-white hover:bg-gray-50/50"
                 }`}
               >
-                <div className="w-16 h-16 rounded-full bg-[#112d35] flex items-center justify-center mb-3.5 shadow-sm text-white font-bold text-lg">
-                  {specialty.name.charAt(0)}
+                <div className="relative w-16 h-16 mb-3.5">
+                  <Image
+                    src={specialty.iconSrc}
+                    alt={specialty.name}
+                    fill
+                    className="object-contain"
+                    sizes="64px"
+                  />
                 </div>
                 <h3 className="text-[#0f172a] text-sm md:text-[15px] font-semibold tracking-wide">
                   {specialty.name}
@@ -224,15 +241,15 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
                 className="w-1/2 sm:w-1/3 lg:w-1/5 px-4 flex flex-col items-center justify-between border-l border-gray-300 first:border-l-0"
               >
                 <div className="h-16 flex items-center justify-center mb-4 px-2">
-                  {standard.logoText ? (
-                    <span className="text-[#1e40af] font-mono text-base md:text-lg font-extrabold tracking-tight">
-                      {standard.logoText}
-                    </span>
-                  ) : (
-                    <div className="w-11 h-11 rounded-full bg-gray-200 border border-gray-300 flex items-center justify-center text-gray-500 font-mono text-xs">
-                      LOGO
-                    </div>
-                  )}
+                  <div className="relative w-14 h-14">
+                    <Image
+                      src={standard.logoSrc}
+                      alt={standard.name}
+                      fill
+                      className="object-contain"
+                      sizes="56px"
+                    />
+                  </div>
                 </div>
                 <p className="text-[#083c4c] text-xs md:text-sm font-bold leading-snug tracking-wide max-w-[160px] mt-auto">
                   {standard.name}
@@ -246,19 +263,14 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
       {/* --- Section 3: Deep Green Satisfaction & Empowering Banner --- */}
       <section className="w-full bg-[#05261e] py-10 px-6 md:px-12 lg:px-24 border-t border-b border-emerald-950">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 lg:gap-12">
-          <div className="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 flex items-center justify-center relative select-none">
-            <div className="w-full h-full rounded-full border-4 border-dashed border-[#5bb3e5] animate-[spin_120s_linear_infinite] absolute inset-0" />
-            <div className="w-[88%] h-[88%] bg-[#4fa3d4] rounded-full flex flex-col items-center justify-center text-white p-2 text-center shadow-inner border border-sky-300">
-              <span className="text-[9px] md:text-[10px] font-bold tracking-widest uppercase opacity-90 leading-none mb-1">
-                Satisfaction
-              </span>
-              <span className="text-xl md:text-2xl font-black tracking-tighter leading-none my-0.5">
-                100%
-              </span>
-              <span className="text-[9px] md:text-[10px] font-bold tracking-widest uppercase opacity-90 leading-none mt-1">
-                Guarantee
-              </span>
-            </div>
+          <div className="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 relative">
+            <Image
+              src="/images/publication-support/peer-review-pre-submission/Satisfaction_Guarantee.webp"
+              alt="100% Satisfaction Guarantee"
+              fill
+              className="object-contain"
+              sizes="160px"
+            />
           </div>
 
           <div className="flex-1 space-y-4 text-center md:text-left">
@@ -283,11 +295,14 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
       {/* --- Section 4: Physician Writing Service Sample Work Block --- */}
       <section className="bg-[#f3faf7] py-14 px-6 md:px-12 lg:px-24">
         <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-sm border border-emerald-100/40 p-6 md:p-8 flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          <div className="w-full md:w-[260px] aspect-[4/5] bg-gray-50 rounded border border-gray-100 overflow-hidden flex-shrink-0 shadow-sm relative">
-            <div className="absolute inset-0 bg-slate-900/5 mix-blend-multiply z-10" />
-            <div className="w-full h-full bg-emerald-900/10 flex items-center justify-center text-emerald-800 text-xs font-mono">
-              [Doctor Sample Clipboard Asset]
-            </div>
+          <div className="relative w-full md:w-[260px] aspect-[4/5] bg-gray-50 rounded border border-gray-100 overflow-hidden flex-shrink-0 shadow-sm">
+            <Image
+              src="/images/physician-writing-services/Physician-Writing-Service-Sample-Work.jpg"
+              alt="Physician Writing Service Sample Work"
+              fill
+              className="object-cover"
+              sizes="260px"
+            />
           </div>
 
           <div className="flex-1 flex flex-col justify-center space-y-5">
@@ -338,10 +353,14 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
             >
               {/* Card Header Frame */}
               <div className="bg-white p-5 border-b border-inherit flex items-center gap-4">
-                <div
-                  className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-sm ${pkg.theme.badgeBg}`}
-                >
-                  {pkg.badgeLetter}
+                <div className="relative w-12 h-12 flex-shrink-0">
+                  <Image
+                    src={pkg.badgeSrc}
+                    alt={`${pkg.badgeTitle} package`}
+                    fill
+                    className="object-contain"
+                    sizes="48px"
+                  />
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 leading-tight">

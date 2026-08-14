@@ -229,7 +229,7 @@ export default function ClinicalReviewScopeAndApproach() {
             {/* Top Image Card */}
             <div className="absolute top-0 right-4 w-3/4 h-52 rounded-xl overflow-hidden shadow-lg border-2 border-white z-10">
               <Image
-                src="https://pubrica.com/wp-content/uploads/2023/04/our-approach-researcher.jpg"
+                src="/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/our-approch-.webp"
                 alt="Researcher reading books"
                 fill
                 className="object-cover"
@@ -239,7 +239,7 @@ export default function ClinicalReviewScopeAndApproach() {
             {/* Bottom Image Card */}
             <div className="absolute bottom-0 left-0 w-4/5 h-48 rounded-xl overflow-hidden shadow-xl border-2 border-white z-20">
               <Image
-                src="https://pubrica.com/wp-content/uploads/2023/04/our-approach-analytics.jpg"
+                src="/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/our-approch-.webp"
                 alt="Data analytics and charts"
                 fill
                 className="object-cover"

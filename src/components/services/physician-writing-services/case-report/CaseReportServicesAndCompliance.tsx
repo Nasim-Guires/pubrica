@@ -23,27 +23,27 @@ import {
 const whoWeServeCards = [
   {
     title: "Medical Professionals",
-    image: "/images/medical-professionals.jpg",
+    image: "/images/physician-writing-services/case-report/Medical-Professionals.jpg",
   },
   {
     title: "Hospitals and Healthcare Institutions",
-    image: "/images/hospitals-healthcare.jpg",
+    image: "/images/physician-writing-services/case-report/Hospitals-and-Healthcare-Institutions.jpg",
   },
   {
     title: "Pharmaceutical and Medical Device Companies",
-    image: "/images/pharma-device.jpg",
+    image: "/images/physician-writing-services/case-report/Pharmaceutical-and-Medical-Device-Companies.jpg",
   },
   {
     title: "Medical Postgraduates and Doctoral Candidates",
-    image: "/images/postgraduates-doctoral.jpg",
+    image: "/images/physician-writing-services/case-report/Medical-Postgraduates-and-Doctoral-Candidates.jpg",
   },
   {
     title: "Early-Career Researchers and Medical Interns",
-    image: "/images/early-career-interns.jpg",
+    image: "/images/physician-writing-services/case-report/Early-Career-Researchers-and-Medical-Interns.jpg",
   },
   {
     title: "Private Practitioners & Diagnostics Consultants",
-    image: "/images/private-practitioners.jpg",
+    image: "/images/physician-writing-services/case-report/Private-Practitioners-Diagnostics-Consultants.jpg",
   },
 ];
 
@@ -168,15 +168,15 @@ const complianceAccordionData = [
     cards: [
       {
         title: "Case Report Guidelines (CARE)",
-        logo: "/images/care-logo.png",
+        logo: "/images/physician-writing-services/case-report/CARE-.png",
       },
       {
         title: "International Committee of Medical Journal Editors (ICMJE)",
-        logo: "/images/icmje-logo.png",
+        logo: "/images/physician-writing-services/case-report/icmje-vydfghj.png",
       },
       {
         title: "Health Insurance Portability and Accountability Act",
-        logo: "/images/hipaa-logo.png",
+        logo: "/images/publication-support/poster-preparation/HIPAA-COMPILANCE-.png",
       },
     ],
   },
@@ -186,19 +186,19 @@ const complianceAccordionData = [
     cards: [
       {
         title: "Editorial Manager",
-        logo: "/images/editorial-manager-logo.png",
+        logo: "/images/physician-writing-services/case-report/em-logo-.png",
       },
       {
         title: "Wiley",
-        logo: "/images/wiley-logo.png",
+        logo: "/images/publication-support/art-work-preparation/Wiley.png",
       },
       {
         title: "Springer",
-        logo: "/images/springer-logo.png",
+        logo: "/images/publication-support/art-work-preparation/Springer.png",
       },
       {
         title: "Elsevier Portals",
-        logo: "/images/elsevier-logo.png",
+        logo: "/images/publication-support/art-work-preparation/elsevier-.png",
       },
     ],
   },
@@ -208,19 +208,19 @@ const complianceAccordionData = [
     cards: [
       {
         title: "International Journal of Surgery Case Reports",
-        logo: "/images/ijscr-cover.png",
+        logo: "/images/physician-writing-services/case-report/ijscs.png",
       },
       {
         title: "BMJ Case Reports",
-        logo: "/images/bmj-cover.png",
+        logo: "/images/physician-writing-services/case-report/bmj-case-report.png",
       },
       {
         title: "Journal of Medical Case Reports",
-        logo: "/images/jmcr-cover.png",
+        logo: "/images/physician-writing-services/case-report/pa-icons-.png",
       },
       {
         title: "American Journal of Case Reports",
-        logo: "/images/ajcr-cover.png",
+        logo: "/images/physician-writing-services/case-report/ajcr.png",
       },
     ],
   },

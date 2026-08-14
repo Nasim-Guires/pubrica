@@ -243,7 +243,7 @@ export default function CaseReportDetails() {
               {/* Back Image (Doctor talking to colleagues) */}
               <div className="absolute top-0 right-4 w-4/5 h-56 rounded-xl overflow-hidden shadow-md">
                 <Image
-                  src="/images/medical-discussion.jpg" // Replace with actual image path
+                  src="/images/physician-writing-services/case-report/Structure-of-the-Case-Report.webp" // Replace with actual image path
                   alt="Medical team discussing case"
                   fill
                   className="object-cover"
@@ -253,7 +253,7 @@ export default function CaseReportDetails() {
               {/* Front Overlapping Image (Person analyzing charts) */}
               <div className="absolute bottom-0 left-4 w-3/4 h-52 rounded-xl overflow-hidden shadow-xl border-4 border-white">
                 <Image
-                  src="/images/data-chart-review.jpg" // Replace with actual image path
+                  src="/images/physician-writing-services/case-report/Structure-of-the-Case-Report.webp" // Replace with actual image path
                   alt="Doctor reviewing charts"
                   fill
                   className="object-cover"

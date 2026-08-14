@@ -4,7 +4,7 @@ import { PhysicianWhoWeServe } from "@/components/services/physician-writing-ser
 import { PhysicianWritingExtensions } from "@/components/services/physician-writing-services/PhysicianWritingExtensions";
 import { PhysicianWritingHero } from "@/components/services/physician-writing-services/PhysicianWritingHero";
 import { TherapeuticAndComplianceSpecialties } from "@/components/services/physician-writing-services/TherapeuticAndComplianceSpecialties";
-import { grantWritingTestimonials } from "@/lib/services/data/research-services/grant-writing";
+import { physicianWritingHubTestimonials } from "@/lib/services/data/physician-writing-services/physicianWritingHubTestimonials";
 import React from "react";
 
 const page = () => {
@@ -14,9 +14,12 @@ const page = () => {
       <PhysicianServicesList />
       <PhysicianWhoWeServe />
       <TherapeuticAndComplianceSpecialties />
+      <CommonTestimonial
+        title="Testimonials"
+        description="Learn how Pubrica's physician writing service has supported clinicians in producing publication-ready manuscripts, adhering to evidence-based standards, and meeting the ethical and formatting requirements of leading journals. Here is what our clients say:"
+        testimonials={physicianWritingHubTestimonials}
+      />
       <PhysicianWritingExtensions />
-
-    
     </>
   );
 };

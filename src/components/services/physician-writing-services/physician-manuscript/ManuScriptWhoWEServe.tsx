@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import Image from 'next/image';
 
 // Process Steps Data
 const processSteps = [
@@ -120,8 +121,14 @@ const toggleAccordion = (id: string) => {
             <section className="bg-[#0f3d2e] text-white py-10 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                     <div className="flex items-center gap-6 flex-col sm:flex-row">
-                        <div className="w-20 h-20 rounded-full border-2 border-dashed border-amber-300 flex items-center justify-center p-2 text-center text-[10px] font-bold uppercase text-amber-200 shrink-0 leading-tight">
-                            100% Satisfaction Guarantee
+                        <div className="relative w-20 h-20 shrink-0">
+                            <Image
+                                src="/images/publication-support/peer-review-pre-submission/Satisfaction_Guarantee.webp"
+                                alt="100% Satisfaction Guarantee"
+                                fill
+                                className="object-contain"
+                                sizes="80px"
+                            />
                         </div>
                         <div>
                             <h3 className="text-xl font-bold mb-1">

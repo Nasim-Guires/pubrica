@@ -51,7 +51,7 @@ export default function PhysicianTrainingHeroSection() {
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative p-2 bg-[#122826] rounded-2xl shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80"
+                  src="/images/physician-writing-services/physician-training/Physician-Training-Content-Development.webp"
                   alt="Medical team reviewing clinical training materials"
                   className="rounded-xl object-cover w-full h-[320px] sm:h-[380px]"
                 />
@@ -86,7 +86,7 @@ export default function PhysicianTrainingHeroSection() {
                 {/* Image 1 (Top Left) */}
                 <div className="absolute top-0 left-0 w-3/5 h-48 rounded-xl overflow-hidden border-2 border-white shadow-lg z-10">
                   <img
-                    src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=500&q=80"
+                    src="/images/physician-writing-services/physician-training/Physician-Training-What-We-do.webp"
                     alt="Lab training"
                     className="w-full h-full object-cover"
                   />
@@ -95,7 +95,7 @@ export default function PhysicianTrainingHeroSection() {
                 {/* Image 2 (Bottom Right) */}
                 <div className="absolute bottom-0 right-0 w-3/4 h-56 rounded-xl overflow-hidden border-2 border-white shadow-xl z-20">
                   <img
-                    src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80"
+                    src="/images/physician-writing-services/physician-training/Physician-Training-What-We-do.webp"
                     alt="Doctors discussing medical research"
                     className="w-full h-full object-cover"
                   />

@@ -246,7 +246,7 @@ export default function PatientEducationContentFormatsAccordionSection() {
             {/* Image Banner */}
             <div className="relative w-full aspect-[4/3] rounded-sm overflow-hidden shadow-sm border border-slate-200 bg-slate-100">
               <Image
-                src="/images/doctor-assisting-elderly-patient-tablet.jpg"
+                src="/images/physician-writing-services/patient-education-content/Pubrica-Patient-Education-Content-Format.jpg"
                 alt="Female doctor helping an elderly patient view health information on a tablet"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"

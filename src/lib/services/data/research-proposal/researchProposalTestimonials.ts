@@ -5,14 +5,14 @@ export const researchProposalWhoWeServe = [
             "Requiring IRB-compliant clinical trial.",
             "protocols, epidemiological study designs, or translational research proposals..",
         ],
-        imageUrl: "/images/who-we-serve/medical-practitioners.webp",
+        imageUrl: "/images/physician-writing-services/research-proposal/Medical-Practitioners-and-Clinical-Researchers.jpg",
     },
     {
         title: "Physicians & Clinician-Researchers",
         bullets: [
             "Practicing doctors seeking to conduct research alongside clinical responsibilities, whether for IRB submission, grant funding, or academic promotion.",
         ],
-        imageUrl: "/images/who-we-serve/physicians.webp",
+        imageUrl: "/images/physician-writing-services/research-proposal/Physicians-Clinician-Researchers.jpg",
     },
     {
         title: "Surgeons & Interventional Specialists",
@@ -20,82 +20,82 @@ export const researchProposalWhoWeServe = [
             "Surgeons planning to evaluate procedural techniques, device efficacy, or post-operative outcomes need structured, ethics-ready protocols.",
            
         ],
-        imageUrl: "/images/who-we-serve/surgeons.webp",
+        imageUrl: "/images/physician-writing-services/research-proposal/Surgeons-Interventional-Specialists.jpg",
     },
     {
         title: "Residents, Fellows & PhD Scholars",
         bullets: [
             "Medical trainees are preparing dissertation proposals or converting academic topics into structured research protocols..",
         ],
-        imageUrl: "/images/who-we-serve/residents.webp",
+        imageUrl: "/images/physician-writing-services/research-proposal/Residents-Fellows-PhD-Scholars-in-Medicine.jpg",
     },
     {
         title: "Early-Career Researchers & Postdoctoral Fellows",
         bullets: [
             "Needing structured, fundable proposals aligned with grant guidelines and institutional protocols.",
         ],
-        imageUrl: "/images/who-we-serve/postdoctoral.webp",
+        imageUrl: "/images/physician-writing-services/research-proposal/Early-Career-Researchers-and-Postdoctoral-Fellows.jpg",
     },
     {
         title: "Pharmaceutical & MedTech Investigators",
         bullets: [
             "Industry researchers and clinicians involved in investigator-initiated studies (IIS), early-phase trials, or device evaluations need regulatory-compliant protocols.",
         ],
-        imageUrl: "/images/who-we-serve/pharma-medtech.webp",
+        imageUrl: "/images/physician-writing-services/research-proposal/Pharmaceutical-MedTech-Investigators.jpg",
     },
     {
         title: "University Professors & Research Faculty",
         bullets: [
             "Seeking proposal support for funded projects, including government (ICMR, DST, DBT, CSIR) and international (NIH, Horizon 2020) grants.",
         ],
-        imageUrl: "/images/who-we-serve/university-professors.webp",
+        imageUrl: "/images/physician-writing-services/research-proposal/University-Professors-and-Research-Faculty.jpg",
     },
     {
         title: "Independent Research Consultants",
         bullets: [
             "For multi-disciplinary, collaborative, or multi-centre research submissions.",
         ],
-        imageUrl: "/images/who-we-serve/research-consultants.webp",
+        imageUrl: "/images/physician-writing-services/research-proposal/Independent-Research-Consultants.jpg",
     },
     {
         title: "Academic Institutions & Research Centres",
         bullets: [
             "Outsourcing proposal development for internal research, consortium-based applications, or regulatory submissions..",
         ],
-        imageUrl: "/images/who-we-serve/research-centres.webp",
+        imageUrl: "/images/physician-writing-services/research-proposal/Academic-Institutions-and-Research-Centres.jpg",
     },
 ];
 
 export const researchProposalTestimonials = [
   {
     image:
-      "https://pubrica.com/wp-content/uploads/2024/08/Asian-Journal-of-Psychiatry.webp",
+      "/images/research-services/grant-writing/asian-journal-of-psychiatry.jpg",
     quote:
       "Pubrica’s team helped me draft a compelling PhD proposal in clinical psychology. Their attention to ethical compliance and methodological detailing impressed my supervisor and fast-tracked my IRB approval. The final study was later accepted in the Asian Journal of Psychiatry. Highly recommend their service.",
     name: "Dr. Meena Rao",
     designation: "University of Delhi",
     organization: "India",
-    flag: "https://pubrica.com/wp-content/uploads/2023/09/india-flag.webp",
+    flag: "/images/editing-and-translation/scientific-editing/flag.png",
   },
   {
     image:
-      "https://pubrica.com/wp-content/uploads/2024/08/PLOS-ONE.webp",
+      "/images/research-services/grant-writing/plos-one-.jpg",
     quote:
       "I approached Pubrica for a research grant proposal in molecular biology. The team understood the NIH formatting requirements and delivered a technically sound proposal that secured initial funding approval. The subsequent article was published in PLOS ONE.",
     name: "Dr. Kevin Andrews",
     designation: "NIH-Funded Researcher",
     organization: "United States",
-    flag: "https://pubrica.com/wp-content/uploads/2023/09/usa-flag.webp",
+    flag: "/images/physician-writing-services/physician-manuscript/united-states-of-america.png",
   },
   {
     image:
-      "https://pubrica.com/wp-content/uploads/2024/08/Frontiers-in-Neuroscience.webp",
+      "/images/research-services/grant-writing/Frontiers-of-neuro-science-.jpg",
     quote:
       "Pubrica’s expertise in scientific structuring and funding compliance helped secure approval for my neuroscience research proposal. The clarity in objectives and methodology contributed to a successful grant. The outcomes were later published in Frontiers in Neuroscience.",
     name: "Dr. Emily Carter",
     designation: "University of Cambridge",
     organization: "United Kingdom",
-    flag: "https://pubrica.com/wp-content/uploads/2023/09/united-kingdom-flag.webp",
+    flag: "/images/physician-writing-services/literature-search-and-citation/united-kingdom.png",
   },
 ];
 
