@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface FeatureItem {
   text: string;
@@ -25,7 +26,7 @@ export const ResearchServicesHero: React.FC<ResearchHeroProps> = ({
     "Selecting the proper research partner establishes whether your work meets publication standards, regulatory compliance, and global credibility. At Pubrica, we combine scientific rigor, methodological integrity, and domain expertise to deliver outputs that are accurate, reproducible, and impactful.",
     "Our team of PhD-qualified medical writers, biostatisticians, data scientists, and subject matter experts, every project will utilize either PRISMA, Cochrane, PROSPERO, JBI, or any other globally recognized framework. We have extensive experience from academic research, clinical trials, bioinformatics, healthcare, pharma, and biotech, ensuring we can help you go from concept to published with confidence."
   ],
-  imageUrl = "/images/research-microscope.jpg", // Replace with your public asset path
+  imageUrl = "/images/research-services/Research-Services.webp",
   features = [
     { text: "15+ years of global experience in delivering high-quality academic, clinical, and healthcare research solutions." },
     { text: "5,000+ completed projects including systematic reviews, meta-analyses, bioinformatics studies, and clinical trial analyses." },
@@ -91,10 +92,12 @@ export const ResearchServicesHero: React.FC<ResearchHeroProps> = ({
                 
                 {/* Actual Image foreground */}
                 <div className="relative bg-white p-2 rounded-xl shadow-lg w-[320px] h-[220px] md:w-[380px] md:h-[260px] overflow-hidden">
-                  <img 
-                    src={imageUrl} 
-                    alt="Scientist analyzing samples using a laboratory microscope" 
-                    className="w-full h-full object-cover rounded-lg"
+                  <Image
+                    src={imageUrl}
+                    alt="Scientist analyzing samples using a laboratory microscope"
+                    fill
+                    className="object-cover rounded-lg"
+                    sizes="(max-width: 768px) 320px, 380px"
                   />
                 </div>
               </div>

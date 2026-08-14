@@ -128,7 +128,7 @@ export default function SystematicReviewTypesAccordion() {
           alignItems: "start",
         }}
       >
-        {/* Left Double Image Display */}
+        {/* Left collage visual */}
         <div
           style={{
             position: "relative",
@@ -138,48 +138,21 @@ export default function SystematicReviewTypesAccordion() {
             justifyContent: "center",
           }}
         >
-          {/* Top/Left Overlay Image */}
           <div
             style={{
-              position: "absolute",
-              top: "0",
-              left: "10%",
-              width: "55%",
-              height: "230px",
+              position: "relative",
+              width: "90%",
+              height: "340px",
               borderRadius: "16px",
               overflow: "hidden",
-              zIndex: 1,
-              boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
+              boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.12)",
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=800"
-              alt="Systematic review paperwork and research documentation"
+              src="/images/research-services/systematic-review/What-We-Do-2.png"
+              alt="Systematic review writing and evidence synthesis overview"
               fill
-              sizes="(max-width: 768px) 100vw, 30vw"
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-
-          {/* Bottom/Right Overlay Image */}
-          <div
-            style={{
-              position: "absolute",
-              bottom: "0",
-              right: "10%",
-              width: "55%",
-              height: "230px",
-              borderRadius: "16px",
-              overflow: "hidden",
-              zIndex: 2,
-              boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.15)",
-            }}
-          >
-            <Image
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800"
-              alt="Evidence synthesis and data extraction review"
-              fill
-              sizes="(max-width: 768px) 100vw, 30vw"
+              sizes="(max-width: 768px) 100vw, 40vw"
               style={{ objectFit: "cover" }}
             />
           </div>

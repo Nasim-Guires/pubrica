@@ -19,7 +19,7 @@ const audienceData: AudienceCard[] = [
     description:
       "Evidence synthesis to guide clinical decision-making, guideline development, and best practice recommendations.",
     imageUrl:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
+      "/images/research-services/systematic-review/Clinicians-Healthcare-Professionals-1.png",
     imageAlt:
       "Clinicians and healthcare professionals reviewing research online",
   },
@@ -29,7 +29,7 @@ const audienceData: AudienceCard[] = [
     description:
       "Pharma regulatory systematic reviews for drug approvals, network meta-analysis for product comparisons, and literature support for post-marketing surveillance.",
     imageUrl:
-      "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=800",
+      "/images/research-services/systematic-review/Pharmaceutical-Biotech-Companies-1.png",
     imageAlt: "Pharmaceutical and biotech laboratory researchers",
   },
   {
@@ -38,7 +38,7 @@ const audienceData: AudienceCard[] = [
     description:
       "Comprehensive reviews assessing clinical effectiveness, cost-effectiveness, and budget impact analysis of interventions and devices.",
     imageUrl:
-      "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800",
+      "/images/research-services/systematic-review/Health-Technology-Assessment-HTA-Agencies.png",
     imageAlt: "HTA agency professional analyzing medical scanning imagery",
   },
   {
@@ -47,7 +47,7 @@ const audienceData: AudienceCard[] = [
     description:
       "Evidence-based reviews for public health strategies, environmental health policies, and healthcare reforms.",
     imageUrl:
-      "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&q=80&w=800",
+      "/images/research-services/systematic-review/Policy-Makers-Government-Bodies.png",
     imageAlt: "Government administration building representing policy makers",
   },
   {
@@ -56,7 +56,7 @@ const audienceData: AudienceCard[] = [
     description:
       "Integrated systematic review writing, data extraction, and evidence synthesis as part of broader clinical research and regulatory services.",
     imageUrl:
-      "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=800",
+      "/images/research-services/systematic-review/Contract-Research-Organizations.png",
     imageAlt: "Contract research organization handling research paper stacks",
   },
   {
@@ -65,7 +65,7 @@ const audienceData: AudienceCard[] = [
     description:
       "Rapid reviews and scoping reviews to support population health studies and global health interventions.",
     imageUrl:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800",
+      "/images/research-services/systematic-review/Non-Governmental-Organizations.png",
     imageAlt: "Non-governmental organization report paperwork and clipboard",
   },
 ];

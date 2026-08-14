@@ -18,7 +18,8 @@ const servicesData: TabData[] = [
     id: "planning-protocol",
     label: "Planning & Protocol Development",
     title: "Planning & Protocol Development",
-    imageSrc: "/images/services/protocols-folder.jpg",
+    imageSrc:
+      "/images/research-services/systematic-review/Planning-Protocol-Development.png",
     imageAlt: "Protocols Folder for Systematic Review Planning",
     content: (
       <ul
@@ -51,7 +52,8 @@ const servicesData: TabData[] = [
     id: "literature-search",
     label: "Literature Search & Data Sourcing",
     title: "Literature Search & Data Sourcing",
-    imageSrc: "/images/services/literature-search-chart.jpg",
+    imageSrc:
+      "/images/research-services/systematic-review/Literature-Search-Data-Sourcing.png",
     imageAlt: "Literature Search and Data Sourcing Analysis",
     content: (
       <ul
@@ -84,7 +86,8 @@ const servicesData: TabData[] = [
     id: "data-extraction",
     label: "Data Extraction & Analysis",
     title: "Data Extraction & Analysis",
-    imageSrc: "/images/services/data-extraction-chart.jpg",
+    imageSrc:
+      "/images/research-services/systematic-review/Data-Extraction-Analysis.png",
     imageAlt: "Data Extraction and Analysis Charts",
     content: (
       <ul
@@ -123,7 +126,8 @@ const servicesData: TabData[] = [
     id: "writing-formatting",
     label: "Writing & Formatting",
     title: "Writing & Formatting",
-    imageSrc: "/images/services/writing-formatting-book.jpg",
+    imageSrc:
+      "/images/research-services/systematic-review/Writing-Formatting.png",
     imageAlt: "Writing and Formatting Academic Journal Manuscripts",
     content: (
       <ul
@@ -158,7 +162,8 @@ const servicesData: TabData[] = [
     id: "publication-support",
     label: "Publication Support",
     title: "Publication Support",
-    imageSrc: "/images/services/publication-support-call.jpg",
+    imageSrc:
+      "/images/research-services/systematic-review/Publication-Support.png",
     imageAlt: "Publication Support and Journal Advisory Services",
     content: (
       <ul
@@ -195,7 +200,8 @@ const servicesData: TabData[] = [
     id: "documentation-templates",
     label: "Documentation Templates",
     title: "Documentation Templates",
-    imageSrc: "/images/services/documentation-templates.jpg",
+    imageSrc:
+      "/images/research-services/systematic-review/Documentation-Templates.png",
     imageAlt: "Documentation Templates and Study Protocols",
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
@@ -218,7 +224,8 @@ const servicesData: TabData[] = [
     id: "enhancement-services",
     label: "Enhancement Services",
     title: "Enhancement Services",
-    imageSrc: "/images/services/enhancement-services-meeting.jpg",
+    imageSrc:
+      "/images/research-services/systematic-review/Enhancement-Services.png",
     imageAlt: "Enhancement Services and Research Editing",
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
@@ -240,7 +247,8 @@ const servicesData: TabData[] = [
     id: "quality-integrity-checks",
     label: "Quality & Integrity Checks",
     title: "Quality & Integrity Checks",
-    imageSrc: "/images/services/quality-integrity-clipboard.jpg",
+    imageSrc:
+      "/images/research-services/systematic-review/Quality-Integrity-Checks.png",
     imageAlt: "Quality and Integrity Checks for Systematic Reviews",
     content: (
       <ul
@@ -272,7 +280,8 @@ const servicesData: TabData[] = [
     id: "dedicated-project-coordination",
     label: "Dedicated Project Coordination",
     title: "Dedicated Project Coordination",
-    imageSrc: "/images/services/project-coordination.jpg",
+    imageSrc:
+      "/images/research-services/systematic-review/Dedicated-Project-Coordination.png",
     imageAlt: "Dedicated Project Coordination Team",
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>

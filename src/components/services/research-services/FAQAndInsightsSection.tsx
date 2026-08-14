@@ -1,6 +1,7 @@
 "use client";
 
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Image from "next/image";
 import React, { useState } from "react";
 
 interface FAQItem {
@@ -67,21 +68,24 @@ export const FAQAndInsightsSection: React.FC = () => {
         "How to Structure Case Reports and Review Articles for Medical Journals",
       excerpt:
         "Medical journals expect a structure for case reports and review articles, with clear objectives....",
-      imageUrl: "/images/insights-case-report.jpg", // Replace with local project path
+      imageUrl:
+        "/images/editing-and-translation/How-to-Structure-Case-Reports-and-Review-Articles-for-Medical-Journals.jpg",
     },
     {
       title:
         "How Should Physicians Choose the Right Journal for Submitting a Case...",
       excerpt:
         "Publishing a case report involves more than clinical knowledge; it also demands strategic journal ....",
-      imageUrl: "/images/insights-choose-journal.jpg", // Replace with local project path
+      imageUrl:
+        "/images/editing-and-translation/How-Should-Physicians-Choose-the-Right-Journal-for-Submitting-a-Case-Report.jpg",
     },
     {
       title:
         "How Physicians Can Write Clear and Impactful Patient Education Materials",
       excerpt:
         "Effective patient education materials (PEMs) are crucial for promoting health literacy, enhancing....",
-      imageUrl: "/images/insights-patient-edu.jpg", // Replace with local project path
+      imageUrl:
+        "/images/editing-and-translation/How-Physicians-Can-Write-Clear-and-Impactful-Patient-Education-Materials.jpg",
     },
   ];
 
@@ -159,13 +163,12 @@ export const FAQAndInsightsSection: React.FC = () => {
             >
               {/* Image Graphic Block */}
               <div className="w-full h-48 bg-gray-100 overflow-hidden relative border-b border-gray-50">
-                <img
+                <Image
                   src={article.imageUrl}
                   alt={article.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                  onError={(e) => {
-                    (e.target as HTMLElement).style.display = "none";
-                  }}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
               </div>

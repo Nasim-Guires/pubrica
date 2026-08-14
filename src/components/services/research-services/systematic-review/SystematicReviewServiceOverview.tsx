@@ -1,4 +1,5 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Image from "next/image";
 import React from "react";
 
 const SystematicReviewServiceOverview = () => {
@@ -193,9 +194,11 @@ const SystematicReviewServiceOverview = () => {
                 backgroundColor: "#ffffff",
               }}
             >
-              <img
-                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=800"
+              <Image
+                src="/images/research-services/systematic-review/Systematic-Review-Services-for-Clinical-and-Evidence-Based-Research.webp"
                 alt="Medical researchers analyzing systematic review data and clinical evidence"
+                width={800}
+                height={560}
                 style={{
                   width: "100%",
                   height: "auto",

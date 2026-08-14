@@ -1,8 +1,10 @@
 import React from "react";
+import Image from "next/image";
 
 interface JourneyPhase {
   title: string;
   description: string;
+  iconSrc: string;
 }
 
 export const ResearchJourneyPhases: React.FC = () => {
@@ -10,30 +12,37 @@ export const ResearchJourneyPhases: React.FC = () => {
     {
       title: "Define the problem",
       description: "Select the topic for your research.",
+      iconSrc: "/images/research-services/Define-the-problem.png",
     },
     {
       title: "Review literature",
       description: "Acquaint yourself with existing literature.",
+      iconSrc: "/images/research-services/Review-literature.png",
     },
     {
       title: "Research design",
       description: "Select one or more research methods.",
+      iconSrc: "/images/research-services/Research-design.png",
     },
     {
       title: "Hypothesis",
       description: "State what you intend to test and the variables.",
+      iconSrc: "/images/research-services/Hypothesis.png",
     },
     {
       title: "Interpret results",
       description: "Implications of the data analysis.",
+      iconSrc: "/images/research-services/Interpret-results.png",
     },
     {
       title: "Report findings",
       description: "State the significance of your findings.",
+      iconSrc: "/images/research-services/Report-findings.png",
     },
     {
       title: "Further research",
       description: "Follow up with more research after review.",
+      iconSrc: "/images/research-services/Further-research.png",
     },
   ];
 
@@ -56,17 +65,14 @@ export const ResearchJourneyPhases: React.FC = () => {
               key={idx}
               className="bg-white border border-gray-200/80 rounded-xl p-6 text-center flex flex-col items-center justify-center min-h-[200px] shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer"
             >
-              <div className="w-16 h-16 text-[#083c4c] flex items-center justify-center mb-4">
-                <svg
-                  className="w-12 h-12 stroke-current fill-none stroke-[1.5]"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                  />
-                </svg>
+              <div className="relative w-16 h-16 mb-4">
+                <Image
+                  src={phase.iconSrc}
+                  alt=""
+                  fill
+                  className="object-contain"
+                  sizes="64px"
+                />
               </div>
               <h4 className="text-[#083c4c] font-bold text-base mb-2">
                 {phase.title}
@@ -82,8 +88,14 @@ export const ResearchJourneyPhases: React.FC = () => {
       {/* 2. New Integrated CTA Section */}
       <div className="max-w-7xl mx-auto bg-[#f0fbf4] p-8 md:p-12 rounded-2xl flex flex-col md:flex-row items-center gap-8 md:gap-16 border border-green-100">
         {/* Placeholder for Sample Work Image */}
-        <div className="w-full md:w-1/3 h-48 bg-white border border-gray-100 rounded-lg flex items-center justify-center shadow-inner text-gray-400 text-sm italic">
-          [Image Placeholder]
+        <div className="relative w-full md:w-1/3 h-48 bg-white border border-gray-100 rounded-lg overflow-hidden shadow-inner">
+          <Image
+            src="/images/research-services/image-3.webp"
+            alt="Research service sample work"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
         </div>
 
         {/* Content Area */}

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 // ==========================================
 // TYPE DEFINITIONS
@@ -319,21 +320,13 @@ export const ResearchServicesSections: React.FC = () => {
             {/* Soft Gray/Blue background shape circle */}
             <div className="absolute w-[280px] h-[280px] bg-[#e6eff4] rounded-full left-10 top-8 z-0" />
 
-            {/* Top Left Image: Handing envelope */}
-            <div className="absolute left-0 top-0 z-20 w-[220px] h-[160px] shadow-md rounded-xl overflow-hidden bg-white border-4 border-white transform -rotate-1">
-              <img
-                src="/images/handover-envelope.jpg"
-                alt="Handing over document envelope"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Bottom Right Image: Financial charts / Calculator */}
-            <div className="absolute right-4 bottom-0 z-10 w-[220px] h-[220px] shadow-lg rounded-xl overflow-hidden bg-white border-4 border-white transform rotate-2">
-              <img
-                src="/images/data-analysis.jpg"
-                alt="Analyzing scientific charts and calculator"
-                className="w-full h-full object-cover"
+            <div className="relative z-10 w-full max-w-[420px] aspect-square shadow-lg rounded-xl overflow-hidden bg-white border-4 border-white">
+              <Image
+                src="/images/research-services/What-We-Do-1.png"
+                alt="Pubrica research services overview collage"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 90vw, 420px"
               />
             </div>
           </div>

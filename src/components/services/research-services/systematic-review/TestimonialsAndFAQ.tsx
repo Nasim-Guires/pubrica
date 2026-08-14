@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 interface TestimonialData {
@@ -24,26 +25,38 @@ const testimonials: TestimonialData[] = [
   {
     id: "test-1",
     quote:
-      "Pubrica's support in crafting our systematic review was exceptional. The final manuscript, accepted in the BMJ Open, stood out for its rigorous methodology and scientific coherence. I highly recommend their service to researchers seeking high-impact publications.",
-    author: "PROF. MATTHEW JOHNSON",
-    role: "Health Policy Analyst, United Kingdom",
-    flagUrl: "https://flagcdn.com/w40/gb.png",
-    country: "United Kingdom",
+      "The team at Pubrica delivered a comprehensive and meticulously structured systematic review that met all PRISMA guidelines. Their expertise significantly enhanced the clarity and depth of my submission to the Journal of Clinical Medicine. I truly appreciate their professionalism and attention to detail.",
+    author: "DR. ISABELLA ROSSI",
+    role: "Clinical Researcher, Italy",
+    flagUrl: "/images/research-services/systematic-review/italy.png",
+    country: "Italy",
     journalImg:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=400&auto=format&fit=crop",
-    journalAlt: "Radiology / BMJ Open Journal Cover",
+      "/images/research-services/systematic-review/nature-biotechnology.png",
+    journalAlt: "Nature Biotechnology journal cover",
   },
   {
     id: "test-2",
     quote:
+      "Pubrica's support in crafting our systematic review was exceptional. The final manuscript, accepted in the BMJ Open, stood out for its rigorous methodology and scientific coherence. I highly recommend their service to researchers seeking high-impact publications.",
+    author: "PROF. MATTHEW JOHNSON",
+    role: "Health Policy Analyst, United Kingdom",
+    flagUrl:
+      "/images/research-services/systematic-review/united-kingdom-.png",
+    country: "United Kingdom",
+    journalImg: "/images/research-services/systematic-review/RSNA-1-1.png",
+    journalAlt: "RSNA journal cover",
+  },
+  {
+    id: "test-3",
+    quote:
       "I'm thoroughly impressed by the systematic review services provided by Pubrica. Their structured approach and adherence to journal-specific guidelines helped our team get published in PLOS ONE. Their communication and scientific rigor were excellent throughout.",
     author: "DR. CARLOS MENDES",
     role: "Public Health Specialist, Brazil",
-    flagUrl: "https://flagcdn.com/w40/br.png",
+    flagUrl: "/images/research-services/systematic-review/brazil.png",
     country: "Brazil",
     journalImg:
-      "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=400&auto=format&fit=crop",
-    journalAlt: "JAMA Oncology / PLOS ONE Journal Cover",
+      "/images/research-services/systematic-review/jama-oncology-journal-1.png",
+    journalAlt: "JAMA Oncology journal cover",
   },
 ];
 
@@ -123,12 +136,125 @@ const rightFaqs: FaqItemData[] = [
 ];
 
 export default function TestimonialsAndFAQ() {
-  // Store open state by question ID. Pre-open Q1 by default as seen in screenshot.
   const [openFaqId, setOpenFaqId] = useState<number | null>(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const toggleFaq = (id: number) => {
     setOpenFaqId(openFaqId === id ? null : id);
   };
+
+  const mobileItem = testimonials[activeIndex];
+  const desktopItems = [
+    testimonials[activeIndex],
+    testimonials[(activeIndex + 1) % testimonials.length],
+  ];
+
+  const renderTestimonialCard = (item: TestimonialData, key: string) => (
+    <div
+      key={key}
+      style={{
+        border: "1px solid #103d39",
+        borderRadius: "8px",
+        backgroundColor: "#ffffff",
+        padding: "16px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
+    >
+      <div
+        style={{
+          backgroundColor: "#f3f4f6",
+          borderRadius: "6px",
+          padding: "16px",
+          display: "flex",
+          gap: "16px",
+          alignItems: "flex-start",
+          marginBottom: "16px",
+        }}
+      >
+        <div
+          style={{
+            width: "100px",
+            height: "120px",
+            flexShrink: 0,
+            backgroundColor: "#ffffff",
+            border: "1px solid #e5e7eb",
+            borderRadius: "4px",
+            overflow: "hidden",
+            position: "relative",
+          }}
+        >
+          <Image
+            src={item.journalImg}
+            alt={item.journalAlt}
+            fill
+            sizes="100px"
+            style={{ objectFit: "contain" }}
+          />
+        </div>
+        <p
+          style={{
+            fontSize: "0.825rem",
+            color: "#374151",
+            lineHeight: "1.5",
+            margin: 0,
+          }}
+        >
+          "{item.quote}"
+        </p>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "0 4px",
+        }}
+      >
+        <div>
+          <h4
+            style={{
+              fontSize: "0.875rem",
+              fontWeight: "700",
+              color: "#000000",
+              margin: 0,
+            }}
+          >
+            — {item.author}
+          </h4>
+          <span
+            style={{
+              fontSize: "0.775rem",
+              color: "#4b5563",
+              fontStyle: "italic",
+            }}
+          >
+            {item.role}
+          </span>
+        </div>
+        <div
+          style={{
+            width: "24px",
+            height: "24px",
+            borderRadius: "50%",
+            overflow: "hidden",
+            position: "relative",
+            flexShrink: 0,
+            boxShadow: "0 1px 2px rgba(0,0,0,0.2)",
+          }}
+        >
+          <Image
+            src={item.flagUrl}
+            alt={item.country}
+            fill
+            sizes="24px"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <div
@@ -179,124 +305,15 @@ export default function TestimonialsAndFAQ() {
             and enhance their academic visibility. Here is what our clients say:
           </p>
 
-          {/* Testimonial Cards Row */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-              gap: "24px",
-              marginBottom: "20px",
-            }}
-          >
-            {testimonials.map((item) => (
-              <div
-                key={item.id}
-                style={{
-                  border: "1px solid #103d39",
-                  borderRadius: "8px",
-                  backgroundColor: "#ffffff",
-                  padding: "16px",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                }}
-              >
-                {/* Content Container (Light Gray Box) */}
-                <div
-                  style={{
-                    backgroundColor: "#f3f4f6",
-                    borderRadius: "6px",
-                    padding: "16px",
-                    display: "flex",
-                    gap: "16px",
-                    alignItems: "flex-start",
-                    marginBottom: "16px",
-                  }}
-                >
-                  {/* Journal Image Frame */}
-                  <div
-                    style={{
-                      width: "100px",
-                      height: "120px",
-                      flexShrink: 0,
-                      backgroundColor: "#ffffff",
-                      border: "1px solid #e5e7eb",
-                      borderRadius: "4px",
-                      overflow: "hidden",
-                    }}
-                  >
-                    <img
-                      src={item.journalImg}
-                      alt={item.journalAlt}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </div>
-
-                  {/* Quote text */}
-                  <p
-                    style={{
-                      fontSize: "0.825rem",
-                      color: "#374151",
-                      lineHeight: "1.5",
-                      margin: 0,
-                    }}
-                  >
-                    "{item.quote}"
-                  </p>
-                </div>
-
-                {/* Author Info & Country Flag */}
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    padding: "0 4px",
-                  }}
-                >
-                  <div>
-                    <h4
-                      style={{
-                        fontSize: "0.875rem",
-                        fontWeight: "700",
-                        color: "#000000",
-                        margin: 0,
-                      }}
-                    >
-                      — {item.author}
-                    </h4>
-                    <span
-                      style={{
-                        fontSize: "0.775rem",
-                        color: "#4b5563",
-                        fontStyle: "italic",
-                      }}
-                    >
-                      {item.role}
-                    </span>
-                  </div>
-
-                  <img
-                    src={item.flagUrl}
-                    alt={item.country}
-                    style={{
-                      width: "24px",
-                      height: "16px",
-                      borderRadius: "2px",
-                      objectFit: "cover",
-                      boxShadow: "0 1px 2px rgba(0,0,0,0.2)",
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 gap-6 mb-5 md:hidden">
+            {renderTestimonialCard(mobileItem, `mobile-${mobileItem.id}`)}
+          </div>
+          <div className="hidden md:grid grid-cols-2 gap-6 mb-5">
+            {desktopItems.map((item) =>
+              renderTestimonialCard(item, `${activeIndex}-${item.id}`),
+            )}
           </div>
 
-          {/* Slider Indicators */}
           <div
             style={{
               display: "flex",
@@ -305,23 +322,23 @@ export default function TestimonialsAndFAQ() {
               marginTop: "16px",
             }}
           >
-            <span
-              style={{
-                width: "8px",
-                height: "8px",
-                backgroundColor: "#0d3b38",
-                display: "inline-block",
-              }}
-            />
-            <span
-              style={{
-                width: "8px",
-                height: "8px",
-                border: "1px solid #0d3b38",
-                backgroundColor: "transparent",
-                display: "inline-block",
-              }}
-            />
+            {testimonials.map((item, index) => (
+              <button
+                key={item.id}
+                type="button"
+                aria-label={`Show testimonial ${index + 1}`}
+                onClick={() => setActiveIndex(index)}
+                style={{
+                  width: "8px",
+                  height: "8px",
+                  border: "1px solid #0d3b38",
+                  backgroundColor:
+                    activeIndex === index ? "#0d3b38" : "transparent",
+                  padding: 0,
+                  cursor: "pointer",
+                }}
+              />
+            ))}
           </div>
         </div>
       </section>

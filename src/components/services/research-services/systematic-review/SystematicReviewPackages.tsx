@@ -7,7 +7,7 @@ import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface PackageData {
   id: string;
-  badgeLetter: string;
+  iconSrc: string;
   badgeBg: string;
   badgeTextColor: string;
   cardHeaderBg: string;
@@ -23,7 +23,7 @@ interface PackageData {
 const packagesData: PackageData[] = [
   {
     id: "basic",
-    badgeLetter: "B",
+    iconSrc: "/images/editing-and-translation/basic-pacakge.png",
     badgeBg: "#fed7aa",
     badgeTextColor: "#c2410c",
     cardHeaderBg: "#f8fafc",
@@ -44,7 +44,7 @@ const packagesData: PackageData[] = [
   },
   {
     id: "standard",
-    badgeLetter: "S",
+    iconSrc: "/images/publication-support/art-work-preparation/S.png",
     badgeBg: "#fef08a",
     badgeTextColor: "#a16207",
     cardHeaderBg: "#ffffff",
@@ -65,7 +65,7 @@ const packagesData: PackageData[] = [
   },
   {
     id: "advanced",
-    badgeLetter: "A",
+    iconSrc: "/images/product-development/advanced.webp",
     badgeBg: "#bbf7d0",
     badgeTextColor: "#15803d",
     cardHeaderBg: "#ffffff",
@@ -87,7 +87,7 @@ const packagesData: PackageData[] = [
   },
   {
     id: "rewriting",
-    badgeLetter: "R",
+    iconSrc: "/images/research-services/systematic-review/pa-icons-HFDYSD.png",
     badgeBg: "#fbcfe8",
     badgeTextColor: "#be185d",
     cardHeaderBg: "#f8fafc",
@@ -158,17 +158,16 @@ export default function SystematicReviewPackages() {
               position: "relative",
               borderRadius: "4px",
               overflow: "hidden",
+              minHeight: "220px",
+              height: "240px",
             }}
           >
-            <img
-              src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=800&auto=format&fit=crop"
-              alt="Person writing on paper"
-              style={{
-                width: "100%",
-                height: "auto",
-                display: "block",
-                objectFit: "cover",
-              }}
+            <Image
+              src="/images/research-services/systematic-review/Systematic-Review-Writing-Rewriting-Services-Sample-Work.png"
+              alt="Systematic Review Writing and Rewriting Services sample work"
+              fill
+              sizes="360px"
+              style={{ objectFit: "cover" }}
             />
           </div>
 
@@ -349,16 +348,18 @@ export default function SystematicReviewPackages() {
                     height: "38px",
                     borderRadius: "50%",
                     backgroundColor: pkg.badgeBg,
-                    color: pkg.badgeTextColor,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontWeight: "800",
-                    fontSize: "1.1rem",
+                    position: "relative",
                     flexShrink: 0,
+                    overflow: "hidden",
                   }}
                 >
-                  {pkg.badgeLetter}
+                  <Image
+                    src={pkg.iconSrc}
+                    alt=""
+                    fill
+                    sizes="38px"
+                    style={{ objectFit: "contain" }}
+                  />
                 </div>
 
                 <div>

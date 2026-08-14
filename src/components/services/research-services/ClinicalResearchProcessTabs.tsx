@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 interface TabContent {
   id: string;
@@ -23,7 +24,7 @@ export const ClinicalResearchProcessTabs: React.FC = () => {
         "Prior studies (preferably within the last 5 years) are reviewed to establish the current state of knowledge.",
         "We highlight shortcomings in the field and explain how your study will address them.",
       ],
-      imageUrl: "/images/process-importance.jpg",
+      imageUrl: "/images/research-services/Importance-of-the-Topic.png",
     },
     {
       id: "methodology",
@@ -37,7 +38,7 @@ export const ClinicalResearchProcessTabs: React.FC = () => {
         "Ethical approvals, subject handling, control groups, and data collection techniques",
         "Statistical methods applied for analysis",
       ],
-      imageUrl: "/images/process-methodology.jpg",
+      imageUrl: "/images/research-services/Clear-Methodology-Data-Collection.png",
     },
     {
       id: "statistical",
@@ -49,7 +50,7 @@ export const ClinicalResearchProcessTabs: React.FC = () => {
         "Avoiding raw data dumps, focusing instead on interpreted outcomes",
         "Discussing results in context with prior research to validate the hypothesis",
       ],
-      imageUrl: "/images/process-statistical.jpg",
+      imageUrl: "/images/research-services/Statistical-Analyses-Results.png",
     },
     {
       id: "conclusion",
@@ -61,7 +62,7 @@ export const ClinicalResearchProcessTabs: React.FC = () => {
         "Justifies the research hypothesis",
         "Outlines applications and future research directions",
       ],
-      imageUrl: "/images/process-conclusion.jpg",
+      imageUrl: "/images/research-services/Conclusion-Discussion.png",
     },
     {
       id: "formatting",
@@ -73,7 +74,7 @@ export const ClinicalResearchProcessTabs: React.FC = () => {
         "References formatted per target journal guidelines (APA, Vancouver, etc.)",
         "High-quality figures and tables that meet publication standards",
       ],
-      imageUrl: "/images/process-formatting.jpg",
+      imageUrl: "/images/research-services/Formatting-Copyediting.png",
     },
     {
       id: "journal",
@@ -86,7 +87,7 @@ export const ClinicalResearchProcessTabs: React.FC = () => {
         "Formatting per submission requirements",
         "Managing the submission process and addressing reviewer comments",
       ],
-      imageUrl: "/images/process-journal.jpg",
+      imageUrl: "/images/research-services/Journal-Selection-Submission.png",
     },
   ];
 
@@ -131,11 +132,13 @@ export const ClinicalResearchProcessTabs: React.FC = () => {
         {/* Right Content Area */}
         <div className="md:col-span-8 space-y-6 md:pl-4">
           {/* Main Top Visual Header */}
-          <div className="w-full h-48 md:h-56 overflow-hidden rounded-none bg-gray-100">
-            <img
+          <div className="relative w-full h-48 md:h-56 overflow-hidden rounded-none bg-gray-100">
+            <Image
               src={currentData.imageUrl}
               alt={currentData.title}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 66vw"
             />
           </div>
 

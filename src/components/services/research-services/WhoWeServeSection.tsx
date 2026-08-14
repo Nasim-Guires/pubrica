@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface SectorItem {
   title: string;
@@ -17,50 +18,56 @@ interface WhoWeServeProps {
 const DEFAULT_SECTORS: SectorItem[] = [
   {
     title: "Academic Researchers & Universities",
-    imageUrl: "/images/serve-academic.jpg",
+    imageUrl: "/images/research-services/Academic-Researchers-Universities.png",
     description:
       "Supporting faculty, postdoctoral researchers, and graduate students with systematic review writing, meta-analysis, statistical analysis, and manuscript publication to improve the quality, visibility, and impact of scientific work.",
   },
   {
     title: "Pharmaceutical & Biotechnology Companies",
-    imageUrl: "/images/serve-pharma.jpg",
+    imageUrl:
+      "/images/research-services/Pharmaceutical-Biotechnology-Companies.png",
     description:
       "Providing data-driven research support for drug discovery, pre-clinical & clinical trials, regulatory submissions, and scientific communications.",
   },
   {
     title: "Healthcare Institutions & Hospitals",
-    imageUrl: "/images/serve-healthcare.jpg",
+    imageUrl:
+      "/images/research-services/Healthcare-Institutions-Hospitals.png",
     description:
       "Partnering with clinicians and healthcare professionals to design and analyse studies, publish findings, and improve patient outcomes.",
   },
   {
     title: "Government & Public Health Agencies",
-    imageUrl: "/images/serve-government.jpg",
+    imageUrl:
+      "/images/research-services/Government-Public-Health-Agencies.png",
     description:
       "Delivering evidence-based research, policy briefs, and epidemiological reviews to inform healthcare policies, strengthen health systems, and guide public health interventions.",
   },
   {
     title: "CROs (Contract Research Organizations)",
-    imageUrl: "/images/serve-cro.jpg",
+    imageUrl:
+      "/images/research-services/CROs-Contract-Research-Organizations.png",
     description:
       "Offering end-to-end clinical research support, including protocol writing, statistical analysis plans (SAP), systematic reviews, regulatory writing, and journal submission assistance.",
   },
   {
     title:
       "Non-Governmental Organizations (NGOs) & Global Health Organizations",
-    imageUrl: "/images/serve-ngo.jpg",
+    imageUrl:
+      "/images/research-services/Non-Governmental-Organizations-NGOs-Global-Health-Organizations.png",
     description:
       "Enhancing research capacity, monitoring & evaluation, and scientific communication for health, nutrition, and development programs.",
   },
   {
     title: "Medical Device Companies",
-    imageUrl: "/images/serve-medical-device.jpg",
+    imageUrl: "/images/research-services/Medical-Device-Companies.png",
     description:
       "Developing clinical evaluation reports (CERs), safety and performance reviews, post-market surveillance literature reviews, and regulatory-compliant submissions.",
   },
   {
     title: "Food, Nutraceutical & Cosmeceutical Companies",
-    imageUrl: "/images/serve-nutraceutical.jpg",
+    imageUrl:
+      "/images/research-services/Food-Nutraceutical-Cosmeceutical-Companies.png",
     description:
       "Providing scientific evidence gathering, regulatory dossiers, white papers, and publication support to substantiate health claims, product efficacy, and market entry compliance.",
   },
@@ -109,10 +116,12 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
             >
               {/* Default State: Image background */}
               {sector.imageUrl && (
-                <img
+                <Image
                   src={sector.imageUrl}
                   alt={sector.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                  fill
+                  className="object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               )}
 

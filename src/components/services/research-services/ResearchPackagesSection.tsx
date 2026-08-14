@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface PackageColumn {
   title: string;
@@ -11,6 +12,7 @@ interface PackageColumn {
     iconBg?: string; // Color treatment for icons if needed
   };
   icon?: React.ReactNode;
+  iconSrc?: string;
 }
 
 interface ResearchPackagesProps {
@@ -38,6 +40,7 @@ export const ResearchPackagesSection: React.FC<ResearchPackagesProps> = ({
         bgContainer: "bg-[#cad7d8]",
         textColor: "text-[#0c4a60]",
       },
+      iconSrc: "/images/publication-support/poster-preparation/S.png",
     },
     {
       title: "Standard",
@@ -54,6 +57,7 @@ export const ResearchPackagesSection: React.FC<ResearchPackagesProps> = ({
         bgContainer: "bg-[#d9cce3]",
         textColor: "text-[#6b21a8]",
       },
+      iconSrc: "/images/publication-support/poster-preparation/S.png",
     },
     {
       title: "Advanced",
@@ -70,6 +74,7 @@ export const ResearchPackagesSection: React.FC<ResearchPackagesProps> = ({
         bgContainer: "bg-[#cfb997]",
         textColor: "text-[#78350f]",
       },
+      iconSrc: "/images/product-development/advanced.webp",
     },
     {
       title: "Custom",
@@ -85,6 +90,7 @@ export const ResearchPackagesSection: React.FC<ResearchPackagesProps> = ({
         bgContainer: "bg-[#dca482]",
         textColor: "text-[#c2410c]",
       },
+      iconSrc: "/images/research-services/c-box-icons.png",
     },
   ],
 }) => {
@@ -115,8 +121,20 @@ export const ResearchPackagesSection: React.FC<ResearchPackagesProps> = ({
               {/* White Top Card Badge */}
               <div className="bg-white p-4 shadow-sm flex items-center gap-3 w-full min-h-[76px]">
                 {/* Package Specific Icon Circle Graphic */}
-                <div className="w-10 h-10 rounded-full bg-gray-100 border border-gray-200 flex-shrink-0 flex items-center justify-center font-bold text-[#083c4c]">
-                  {pkg.title.charAt(0)}
+                <div className="relative w-10 h-10 rounded-full bg-gray-100 border border-gray-200 flex-shrink-0 overflow-hidden">
+                  {pkg.iconSrc ? (
+                    <Image
+                      src={pkg.iconSrc}
+                      alt=""
+                      fill
+                      className="object-contain p-1"
+                      sizes="40px"
+                    />
+                  ) : (
+                    <span className="flex h-full w-full items-center justify-center font-bold text-[#083c4c]">
+                      {pkg.title.charAt(0)}
+                    </span>
+                  )}
                 </div>
                 <div>
                   <h3

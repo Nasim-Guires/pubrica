@@ -1,19 +1,24 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface ReviewPurposeItem {
   id: string;
   title: string;
+  iconSrc: string;
   content: React.ReactNode;
 }
+
+const SR_IMG = "/images/research-services/systematic-review";
 
 const purposeData: ReviewPurposeItem[] = [
   {
     id: "nutrition-functional-food",
     title: "Nutrition & Functional Food Reviews",
+    iconSrc: `${SR_IMG}/Nutrition-Functional-Food-Reviews.png`,
     content: (
       <p>
         Assess the efficacy and safety of nutrition interventions and functional
@@ -24,11 +29,13 @@ const purposeData: ReviewPurposeItem[] = [
   {
     id: "environmental-occupational-health",
     title: "Environmental & Occupational Health Reviews",
+    iconSrc: `${SR_IMG}/Environmental-Occupational-Health-Reviews.png`,
     content: <p>Examine hazards, exposures, and preventive measures.</p>,
   },
   {
     id: "economic-evaluation-cost-effectiveness",
     title: "Economic Evaluation / Cost-effectiveness Reviews",
+    iconSrc: `${SR_IMG}/Economic-Evaluation-Cost-effectiveness-Reviews.png`,
     content: (
       <p>
         Examine costs, cost-effectiveness, and budget impact in healthcare and
@@ -39,6 +46,7 @@ const purposeData: ReviewPurposeItem[] = [
   {
     id: "diagnostic-test-accuracy",
     title: "Diagnostic Test Accuracy (DTA) Reviews",
+    iconSrc: `${SR_IMG}/Diagnostic-Test-Accuracy-DTA-Reviews.png`,
     content: (
       <p>
         Evaluate diagnostic tools using sensitivity, specificity, and predictive
@@ -49,11 +57,13 @@ const purposeData: ReviewPurposeItem[] = [
   {
     id: "living-systematic-reviews",
     title: "Living Systematic Reviews",
+    iconSrc: `${SR_IMG}/Living-Systematic-Reviews.png`,
     content: <p>Continuously update findings as new evidence emerges.</p>,
   },
   {
     id: "etiology-risk-reviews",
     title: "Etiology / Risk Reviews",
+    iconSrc: `${SR_IMG}/Etiology-Risk-Reviews.png`,
     content: (
       <p>Identify causal relationships and assess risk factors for diseases.</p>
     ),
@@ -61,6 +71,7 @@ const purposeData: ReviewPurposeItem[] = [
   {
     id: "effectiveness-intervention-reviews",
     title: "Effectiveness / Intervention Reviews",
+    iconSrc: `${SR_IMG}/Effectiveness-Intervention-Reviews.png`,
     content: (
       <p>
         Assess treatment or intervention outcomes, often with meta-analysis or
@@ -71,6 +82,7 @@ const purposeData: ReviewPurposeItem[] = [
   {
     id: "psychometric-reviews",
     title: "Psychometric Reviews",
+    iconSrc: `${SR_IMG}/Psychometric-Reviews.png`,
     content: (
       <p>
         Evaluate the validity, reliability, and measurement properties of tools.
@@ -80,6 +92,7 @@ const purposeData: ReviewPurposeItem[] = [
   {
     id: "methodological-reviews",
     title: "Methodological Reviews",
+    iconSrc: `${SR_IMG}/Methodological-Reviews.png`,
     content: (
       <p>
         Assess and improve research methods, designs, and reporting quality.
@@ -89,6 +102,7 @@ const purposeData: ReviewPurposeItem[] = [
   {
     id: "prevalence-incidence-reviews",
     title: "Prevalence / Incidence Reviews",
+    iconSrc: `${SR_IMG}/Prevalence-Incidence-Reviews.png`,
     content: (
       <p>Summarize disease or condition frequency across populations.</p>
     ),
@@ -96,6 +110,7 @@ const purposeData: ReviewPurposeItem[] = [
   {
     id: "burden-of-disease-reviews",
     title: "Burden of Disease Reviews",
+    iconSrc: `${SR_IMG}/Burden-of-Disease-Reviews.png`,
     content: (
       <p>
         Estimate DALYs, QALYs, and YLL for global and local health priorities.
@@ -105,6 +120,7 @@ const purposeData: ReviewPurposeItem[] = [
   {
     id: "health-services-policy-reviews",
     title: "Health Services & Policy Reviews",
+    iconSrc: `${SR_IMG}/Health-Services-Policy-Reviews.png`,
     content: (
       <p>Assess healthcare delivery models, access, and system performance.</p>
     ),
@@ -112,16 +128,19 @@ const purposeData: ReviewPurposeItem[] = [
   {
     id: "genomic-biomarker-reviews",
     title: "Genomic & Biomarker Reviews",
+    iconSrc: `${SR_IMG}/Genomic-Biomarker-Reviews.png`,
     content: <p>Evaluate the predictive and diagnostic value of biomarkers.</p>,
   },
   {
     id: "adverse-events-safety-reviews",
     title: "Adverse Events & Safety Reviews",
+    iconSrc: `${SR_IMG}/Adverse-Events-Safety-Reviews.png`,
     content: <p>Assess treatment or intervention safety profiles.</p>,
   },
   {
     id: "pharma-regulatory-submission-reviews",
     title: "Pharma Regulatory Submission Reviews",
+    iconSrc: `${SR_IMG}/Pharma-Regulatory-Submission-Reviews.png`,
     content: (
       <ul style={{ margin: 0, paddingLeft: "20px", lineHeight: "1.6" }}>
         <li>Phase I–IV Clinical Trials</li>
@@ -135,6 +154,7 @@ const purposeData: ReviewPurposeItem[] = [
   {
     id: "infectious-disease-reviews",
     title: "Infectious Disease Reviews",
+    iconSrc: `${SR_IMG}/Infectious-Disease-Reviews.png`,
     content: (
       <p>
         Synthesize evidence for prevention, treatment, and epidemiology of
@@ -145,6 +165,7 @@ const purposeData: ReviewPurposeItem[] = [
   {
     id: "psychological-behavioural-reviews",
     title: "Psychological & Behavioural Reviews",
+    iconSrc: `${SR_IMG}/Psychological-Behavioural-Reviews.png`,
     content: (
       <p>
         Evaluate mental health, behaviour change, and psychosocial
@@ -155,6 +176,7 @@ const purposeData: ReviewPurposeItem[] = [
   {
     id: "policy-reviews",
     title: "Policy Reviews",
+    iconSrc: `${SR_IMG}/Policy-Reviews.png`,
     content: (
       <p>
         Summarize evidence for health, environmental, and social policy
@@ -165,6 +187,7 @@ const purposeData: ReviewPurposeItem[] = [
   {
     id: "rapid-reviews",
     title: "Rapid Reviews",
+    iconSrc: `${SR_IMG}/Rapid-Reviews.png`,
     content: (
       <p>Deliver timely evidence synthesis for urgent decision-making.</p>
     ),
@@ -172,11 +195,13 @@ const purposeData: ReviewPurposeItem[] = [
   {
     id: "prognostic-reviews",
     title: "Prognostic Reviews",
+    iconSrc: `${SR_IMG}/Prognostic-Reviews.png`,
     content: <p>Predict disease progression, outcomes, or survival rates.</p>,
   },
   {
     id: "experiential-qualitative-reviews",
     title: "Experiential (Qualitative) Reviews / Meta-synthesis",
+    iconSrc: `${SR_IMG}/Experiential-Qualitative-Reviews-Meta-synthesis.png`,
     content: (
       <p>
         Use qualitative methods to explore lived experiences, perceptions, and
@@ -187,6 +212,7 @@ const purposeData: ReviewPurposeItem[] = [
   {
     id: "mental-health-epidemiology-reviews",
     title: "Mental Health Epidemiology Reviews",
+    iconSrc: `${SR_IMG}/Mental-Health-Epidemiology-Reviews.png`,
     content: (
       <p>
         Summarize prevalence, incidence, and risk factors in mental health
@@ -320,24 +346,22 @@ export default function SystematicReviewsByPurpose() {
                       gap: "10px",
                     }}
                   >
-                    {/* SVG Icon Placeholder */}
-                    <svg
-                      width="22"
-                      height="22"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#15803d"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      style={{ flexShrink: 0 }}
+                    <div
+                      style={{
+                        position: "relative",
+                        width: "22px",
+                        height: "22px",
+                        flexShrink: 0,
+                      }}
                     >
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                      <polyline points="14 2 14 8 20 8" />
-                      <line x1="16" y1="13" x2="8" y2="13" />
-                      <line x1="16" y1="17" x2="8" y2="17" />
-                      <polyline points="10 9 9 9 8 9" />
-                    </svg>
+                      <Image
+                        src={item.iconSrc}
+                        alt=""
+                        fill
+                        sizes="22px"
+                        style={{ objectFit: "contain" }}
+                      />
+                    </div>
                     <span>{item.title}</span>
                   </div>
                   <span

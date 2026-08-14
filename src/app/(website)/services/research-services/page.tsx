@@ -6,7 +6,7 @@ import ResearchServicesHero from '@/components/services/research-services/Resear
 import ResearchServicesSections from '@/components/services/research-services/ResearchServicesSections'
 import { ResearchWorkflowProcess } from '@/components/services/research-services/ResearchWorkflowProcess'
 import { WhoWeServeSection } from '@/components/services/research-services/WhoWeServeSection'
-import TestimonialsSection from '@/components/services/editing-translation/Testimonials/TestimonialsSection'
+import { TestimonialsSection } from '@/components/services/research-services/TestimonialsSection'
 import React from 'react'
 
 const page = () => {

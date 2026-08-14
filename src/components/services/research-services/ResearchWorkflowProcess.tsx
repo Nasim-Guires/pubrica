@@ -1,12 +1,15 @@
 import React from "react";
+import Image from "next/image";
 
 interface ProcessStep {
   stepNumber: number;
   title: string;
   description: string;
-  iconPath?: string;
+  iconPath: string;
   isDarkBg?: boolean;
 }
+
+const RS_IMG = "/images/research-services";
 
 export const ResearchWorkflowProcess: React.FC = () => {
   const steps: ProcessStep[] = [
@@ -15,30 +18,35 @@ export const ResearchWorkflowProcess: React.FC = () => {
       title: "REQUIREMENT GATHERING",
       description:
         "We begin by understanding your specific research project help needs through consultation. This includes topic selection, research objectives, target audience, and expected deliverables.",
+      iconPath: `${RS_IMG}/Requirement-Gathering.png`,
     },
     {
       stepNumber: 2,
       title: "PROPOSAL AND SCOPE FINALIZATION",
       description:
         "Based on your inputs, we will prepare a research proposal detailing the scope, methodology, compliance guidelines (e.g., PRISMA, Cochrane, ICMJE), timelines, and cost.",
+      iconPath: `${RS_IMG}/Proposal-and-Scope-Finalization.png`,
     },
     {
       stepNumber: 3,
       title: "IN-DEPTH RESEARCH AND DATA COLLECTION",
       description:
         "Our subject-matter experts conduct comprehensive literature searches, data sourcing, and evidence-based research using trusted databases like PubMed, Scopus, and Web of Science.",
+      iconPath: `${RS_IMG}/In-Depth-Research-and-Data-Collection.png`,
     },
     {
       stepNumber: 4,
       title: "ANALYSIS AND INTERPRETATION",
       description:
         "We perform qualitative and quantitative data analysis, applying statistical tools, AI/ML models (if required), and domain-specific validation to ensure accuracy and reproducibility.",
+      iconPath: `${RS_IMG}/Analysis-and-Interpretation.png`,
     },
     {
       stepNumber: 5,
       title: "CONTENT DEVELOPMENT AND REVIEW",
       description:
         "We draft structured manuscripts, reports, and white papers, supported by citations (APA, Oxford, MLA) and IMRAD structure. Our internal quality team performs peer review and compliance checks.",
+      iconPath: `${RS_IMG}/Content-Development-and-Review.png`,
       isDarkBg: true,
     },
     {
@@ -46,6 +54,7 @@ export const ResearchWorkflowProcess: React.FC = () => {
       title: "FINAL DELIVERY AND REVISIONS",
       description:
         "The completed output is delivered in your preferred format. We incorporate reviewer comments, perform revisions, and ensure readiness for journal submission or regulatory approval.",
+      iconPath: `${RS_IMG}/Final-Delivery-and-Revisions.png`,
     },
   ];
 
@@ -87,6 +96,15 @@ export const ResearchWorkflowProcess: React.FC = () => {
                     <div
                       className={`w-full min-h-[290px] border border-gray-200 bg-white shadow-sm p-4 rounded-sm flex flex-col items-start text-left`}
                     >
+                      <div className="relative w-10 h-10 mb-3">
+                        <Image
+                          src={step.iconPath}
+                          alt=""
+                          fill
+                          className="object-contain"
+                          sizes="40px"
+                        />
+                      </div>
                       <h4 className="text-[#083c4c] font-bold text-xs mb-3 tracking-wider">
                         {step.title}
                       </h4>
@@ -102,6 +120,15 @@ export const ResearchWorkflowProcess: React.FC = () => {
                     <div
                       className={`w-full min-h-[290px] border border-gray-200 bg-white shadow-sm p-4 rounded-sm flex flex-col items-start text-left ${step.isDarkBg ? "bg-[#4a4a4a] text-white border-none" : ""}`}
                     >
+                      <div className="relative w-10 h-10 mb-3">
+                        <Image
+                          src={step.iconPath}
+                          alt=""
+                          fill
+                          className="object-contain"
+                          sizes="40px"
+                        />
+                      </div>
                       <h4
                         className={`font-bold text-xs mb-3 tracking-wider ${step.isDarkBg ? "text-white" : "text-[#083c4c]"}`}
                       >
@@ -137,6 +164,15 @@ export const ResearchWorkflowProcess: React.FC = () => {
             <div
               className={`flex-1 border border-gray-200 bg-white p-5 shadow-sm rounded-md ${step.isDarkBg ? "bg-[#4a4a4a] text-white border-none" : ""}`}
             >
+              <div className="relative w-10 h-10 mb-3">
+                <Image
+                  src={step.iconPath}
+                  alt=""
+                  fill
+                  className="object-contain"
+                  sizes="40px"
+                />
+              </div>
               <h4
                 className={`font-bold text-sm mb-2 tracking-wide ${step.isDarkBg ? "text-white" : "text-[#083c4c]"}`}
               >
