@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
 import Container from '@/components/common/Container';
 
@@ -14,13 +15,15 @@ export default function SpecialisationsMenu() {
   return (
     <div className="w-full bg-white select-none">
       
-      {/* 1. TOP PORTION: Featured Services (Dark Overlay Background) */}
-      <section 
-        className="relative w-full py-20 bg-cover bg-center overflow-hidden"
-        style={{ 
-          backgroundImage: `linear-gradient(to right, rgba(15, 23, 42, 0.85), rgba(16, 44, 87, 0.9)), url('/images/featured-services-bg.jpg')` 
-        }}
-      >
+      {/* Featured Services banner */}
+      <section className="relative w-full py-20 overflow-hidden">
+        <Image
+          src="/images/home/bg-5.jpg"
+          alt=""
+          fill
+          className="object-cover object-top"
+          sizes="100vw"
+        />
         <Container className="relative z-10 flex flex-col items-center justify-center text-center text-white">
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight font-display leading-tight">
             Our Featured Services
