@@ -1,19 +1,19 @@
 "use client";
 
+import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import {
   newsCategories,
-  blogPosts,
   infographics,
   storyboards,
   sampleWorks,
   factSheets,
   checklists,
 } from "@/lib/data-insight";
-import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image"; // Imported Next.js Image component
+import BlogSection from "../blog/page";
+
 
 const InsightsPage = () => {
-  // --- CAROUSEL SLIDER LOGIC FOR CATEGORIES ---
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -25,11 +25,10 @@ const InsightsPage = () => {
 
     const autoPlay = setInterval(() => {
       if (isDragging) return;
-
       const firstItem = container.firstElementChild as HTMLElement | null;
       if (!firstItem) return;
 
-      const itemWidth = firstItem.offsetWidth + 16; // 16px matches the gap-4 spacing
+      const itemWidth = firstItem.offsetWidth + 16;
       const maxScrollLeft = container.scrollWidth - container.clientWidth;
 
       if (container.scrollLeft >= maxScrollLeft - 5) {
@@ -37,31 +36,26 @@ const InsightsPage = () => {
       } else {
         container.scrollBy({ left: itemWidth, behavior: "smooth" });
       }
-    }, 3000); // 3 seconds stay interval
+    }, 3000);
 
     return () => clearInterval(autoPlay);
   }, [isDragging]);
 
-  const handleMouseDown = (e: { pageX: number; }) => {
+  const handleMouseDown = (e: React.MouseEvent) => {
     if (!containerRef.current) return;
     setIsDragging(true);
     setStartX(e.pageX - containerRef.current.offsetLeft);
     setScrollLeft(containerRef.current.scrollLeft);
   };
 
-  const handleMouseLeave = () => {
-    setIsDragging(false);
-  };
+  const handleMouseLeave = () => setIsDragging(false);
+  const handleMouseUp = () => setIsDragging(false);
 
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseMove = (e: { preventDefault: () => void; pageX: number; }) => {
+  const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging || !containerRef.current) return;
     e.preventDefault();
     const x = e.pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5; // Drag sensitivity scale
+    const walk = (x - startX) * 1.5;
     containerRef.current.scrollLeft = scrollLeft - walk;
   };
 
@@ -78,20 +72,16 @@ const InsightsPage = () => {
               Insights for Research Services
             </h1>
             <p className="text-slate-600 text-sm md:text-base leading-relaxed">
-              Pubrica Insights offers a range of services under Patient Journey
-              & Insights — Machine Learning Services, including Data Extraction,
-              data analytics, and specific analytics such as Multivariate
-              Analytics and Health Economic Modeling.
+              Pubrica Insights offers a range of services under Patient Journey & Insights — Machine Learning Services, including Data Extraction, data analytics, and specific analytics such as Multivariate Analytics and Health Economic Modeling.
             </p>
           </div>
           <div className="flex justify-center md:justify-end">
-            {/* Added relative layout for Next.js Image fill */}
             <div className="relative w-full max-w-md h-64 rounded-2xl overflow-hidden shadow-md">
               <Image
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=500&q=80"
                 alt="Research Insights Graphics"
                 fill
-                priority // Priority added as this image is structural visual content above the fold
+                priority
                 sizes="(max-w-7xl) 100vw, 500px"
                 className="object-cover filter grayscale contrast-125"
               />
@@ -100,12 +90,10 @@ const InsightsPage = () => {
         </div>
       </section>
 
-      {/* 2. ALL NEWS & NAVIGATION CARDS (CAROUSEL SLIDER) */}
+      {/* 2. CATEGORIES CAROUSEL */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 overflow-hidden">
         <div className="flex items-center gap-4 mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 whitespace-nowrap">
-            All News
-          </h2>
+          <h2 className="text-2xl font-bold text-slate-900 whitespace-nowrap">All News</h2>
           <div className="h-[1px] w-full bg-slate-200"></div>
         </div>
 
@@ -139,56 +127,8 @@ const InsightsPage = () => {
         </div>
       </section>
 
-      {/* 3. BLOG SECTION */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="flex justify-between items-center mb-2">
-          <div className="flex items-center gap-4 w-full">
-            <h2 className="text-xl font-bold text-slate-900">Blog</h2>
-            <div className="h-[1px] flex-grow bg-slate-200"></div>
-          </div>
-          <button className="ml-4 bg-[#004d40] text-white px-4 py-1.5 rounded text-xs font-semibold whitespace-nowrap hover:bg-[#00332a] transition-colors flex items-center gap-1">
-            Explore More &rarr;
-          </button>
-        </div>
-        <p className="text-xs text-slate-500 mb-6">
-          Stay updated with Pubrica's latest insights, tips, and expert advice
-          on publishing guidelines and procedures. Explore new perspectives to
-          streamline your publishing journey.
-        </p>
-
-        <div className="grid md:grid-cols-3 gap-6 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-          {blogPosts.map((post, i) => (
-            <div
-              key={i}
-              className="flex flex-col border border-slate-100 rounded-xl overflow-hidden hover:shadow-md transition-shadow bg-slate-50"
-            >
-              {/* Parent needs relative positioning for next/image fill layout */}
-              <div className="h-44 overflow-hidden relative">
-                <Image
-                  src={post.img}
-                  alt={post.title}
-                  fill
-                  sizes="(max-w-7xl) 33vw, 400px"
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-4 flex flex-col flex-grow justify-between space-y-3">
-                <div className="space-y-2">
-                  <h3 className="text-sm font-bold text-slate-800 line-clamp-2 hover:text-[#004d40] cursor-pointer">
-                    {post.title}
-                  </h3>
-                  <span className="text-[11px] text-slate-400 block">
-                    📅 {post.date}
-                  </span>
-                  <p className="text-xs text-slate-500 line-clamp-2">
-                    {post.desc}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* 3. BLOG SECTION COMPONENT */}
+      <BlogSection />
 
       {/* 4. STORYBOARDS SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
@@ -202,10 +142,7 @@ const InsightsPage = () => {
           </button>
         </div>
         <p className="text-xs text-slate-500 mb-6">
-          Storyboarding is how we dialogue with you; we want to communicate
-          news, views, trends, and technology via storyboarding. Simply put, it
-          is a dialogue between folks (in a cartoon-like manner) who delve into
-          a discussion about the topic. A creative way to inform our readers.
+          Storyboarding is how we dialogue with you; we want to communicate news, views, trends, and technology via storyboarding.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -214,7 +151,6 @@ const InsightsPage = () => {
               key={i}
               className="bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200 flex flex-col hover:shadow-md transition-all"
             >
-              {/* Parent relative class matches standard aspect-ratio logic */}
               <div className="aspect-[4/3] bg-slate-100 relative border-b border-slate-100 overflow-hidden">
                 <Image
                   src={board.img}
@@ -246,11 +182,7 @@ const InsightsPage = () => {
           </button>
         </div>
         <p className="text-xs text-slate-500 mb-6">
-          We take pride in the high quality of our work. To learn more, take a
-          look at some of our samples created by Pubrica writers. The samples
-          demonstrate our expertise while also reflecting quality. You can get
-          an understanding of our versatility across topics and subject domains
-          by looking through these samples.
+          We take pride in the high quality of our work. To learn more, take a look at some of our samples created by Pubrica writers.
         </p>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -289,10 +221,6 @@ const InsightsPage = () => {
       </section>
 
       {/* 6. INFOGRAPHICS GRID */}
-      {/* 
-         Note: Leave Section 6 as is since it relies entirely on a stylized container 
-         containing static icon emojis rather than traditional <img> elements.
-      */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="flex justify-between items-center mb-2">
           <div className="flex items-center gap-4 w-full">
@@ -304,8 +232,7 @@ const InsightsPage = () => {
           </button>
         </div>
         <p className="text-xs text-slate-500 mb-6">
-          Infographics are the way to go when it comes to presenting new or
-          trending topics of interest in the academic research community.
+          Infographics are the way to go when it comes to presenting new or trending topics of interest.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -343,13 +270,7 @@ const InsightsPage = () => {
           </button>
         </div>
         <p className="text-xs text-slate-500 mb-6">
-          Our factsheets are designed to help you enhance your knowledge,
-          whether you&apos;re preparing for writing a paper, or simply curious
-          about a subject. We provide clear and concise information that is easy
-          to grasp. Start learning today and allow us to guide you through the
-          world of knowledge. If you find a factsheet that you particularly
-          enjoy, don't hesitate to share it with others and let us know how it
-          has helped you!
+          Our factsheets are designed to help you enhance your knowledge across subjects.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6">
@@ -393,12 +314,7 @@ const InsightsPage = () => {
           </button>
         </div>
         <p className="text-xs text-slate-500 mb-6">
-          Our collection of checklists is designed to support you throughout
-          your research and publication process. We have a wide range of
-          checklists made for every step, from conducting a thorough literature
-          review to polishing your manuscript for publication. Let our
-          checklists be your guiding light and help you stay organized as you
-          work towards your goals.
+          Our collection of checklists is designed to support you throughout your research process.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6">
