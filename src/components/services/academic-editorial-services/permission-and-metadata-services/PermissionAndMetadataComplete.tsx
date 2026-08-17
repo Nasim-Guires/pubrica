@@ -1,6 +1,7 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -46,33 +47,31 @@ export default function PermissionAndMetadataComplete() {
         {
             title: 'Global Compliance',
             desc: 'We ensure that your work meets international copyright regulations and publishing standards, reducing legal and ethical risks.',
-            icon: '🌐',
+            iconSrc: '/images/academic-editorial-services/permission-and-metadata-services/Global-Compliance.png',
         },
         {
             title: 'Comprehensive Solutions',
             desc: 'From manuscript audit and permissions assessment to metadata creation and submission-ready packages, we manage every step of the process.',
-            icon: '💡',
+            iconSrc: '/images/academic-editorial-services/permission-and-metadata-services/Comprehensive-Solutions.png',
         },
         {
             title: 'Time-Saving & Efficient',
             desc: 'We streamline communication with copyright holders, handle all formal requests, and ensure timely completion, so you can focus on your research.',
-            icon: '⏱️',
+            iconSrc: '/images/academic-editorial-services/permission-and-metadata-services/Time-Saving-Efficient.png',
         },
         {
             title: 'Expertise in Copyright & Permissions',
             desc: 'Our team is well-versed in copyright laws, licensing agreements, and intellectual property rights across academic, medical, and scientific publications. We handle all correspondence with copyright holders, ensuring your work complies with legal and ethical standards.',
-            icon: '⚖️',
         },
         {
             title: 'Tailored Services',
             desc: 'Whether you are a researcher, institution, or publisher, our solutions are customized to meet your unique needs and publication goals.',
-            icon: '⚙️',
         },
     ];
 
     const packages = [
         {
-            badge: 'B',
+            badgeSrc: '/images/editing-and-translation/basic-pacakge.png',
             title: 'Basic',
             idealFor: 'Authors and small research teams with limited permissions needs.',
             included: [
@@ -85,7 +84,7 @@ export default function PermissionAndMetadataComplete() {
             borderColor: 'border-emerald-300',
         },
         {
-            badge: 'S',
+            badgeSrc: '/images/publication-support/poster-preparation/S.png',
             title: 'Standard',
             idealFor: 'Researchers, thesis authors, and small publishers.',
             included: [
@@ -99,7 +98,7 @@ export default function PermissionAndMetadataComplete() {
             borderColor: 'border-purple-300',
         },
         {
-            badge: 'P',
+            badgeSrc: '/images/editing-and-translation/translation-with-editing/pro.webp',
             title: 'Premium',
             idealFor: 'Large publishers, journals, and research institutions.',
             included: [
@@ -188,8 +187,10 @@ export default function PermissionAndMetadataComplete() {
                                                 : 'border-gray-200 shadow-sm'
                                         }`}
                                 >
-                                    <div className="w-10 h-10 rounded-full bg-emerald-100 text-[#0b3b2c] flex items-center justify-center text-lg mb-4">
-                                        {card.icon}
+                                    <div className="relative w-10 h-10 rounded-full bg-emerald-100 mb-4 overflow-hidden">
+                                        {card.iconSrc ? (
+                                            <Image src={card.iconSrc} alt="" fill className="object-contain p-1" />
+                                        ) : null}
                                     </div>
                                     <h3 className="text-xs font-bold text-gray-900 mb-2">{card.title}</h3>
                                     <p className="text-[11px] text-gray-600 leading-relaxed">{card.desc}</p>
@@ -204,12 +205,14 @@ export default function PermissionAndMetadataComplete() {
             <section className="py-14 px-4 max-w-5xl mx-auto text-center" aria-labelledby="sample-heading">
                 <div className="bg-[#f4faf7] border border-emerald-100 rounded-xl p-8 shadow-sm">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div className="bg-[#0b3b2c] p-3 rounded-lg shadow-md flex justify-center items-center">
-                            <div className="bg-white rounded p-4 w-full h-48 flex flex-col items-center justify-center">
-                                <span className="text-3xl mb-2">📄</span>
-                                <span className="text-xs font-bold text-gray-800">Permission & Metadata Sample</span>
-                                <span className="text-[10px] text-gray-500 mt-1">Compliance & Rights Preview</span>
-                            </div>
+                        <div className="bg-[#0b3b2c] p-3 rounded-lg shadow-md flex justify-center items-center relative h-48 overflow-hidden">
+                            <Image
+                                src="/images/academic-editorial-services/permission-and-metadata-services/Permission-and-Metadata-Services.png"
+                                alt="Permission and Metadata Services sample work"
+                                fill
+                                className="object-cover rounded"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
                         </div>
                         <div className="text-left">
                             <h2 id="sample-heading" className="text-base md:text-lg font-bold text-[#0b3b2c] mb-2">
@@ -247,8 +250,8 @@ export default function PermissionAndMetadataComplete() {
                     {packages.map((pkg, idx) => (
                         <div key={idx} className={`bg-white border-2 ${pkg.borderColor} rounded-xl shadow-sm overflow-hidden flex flex-col justify-between`}>
                             <div className={`${pkg.bgColor} p-6 border-b ${pkg.borderColor} text-center`}>
-                                <div className="w-10 h-10 mx-auto rounded-full bg-white font-bold flex items-center justify-center text-sm shadow-sm mb-2 text-gray-900">
-                                    {pkg.badge}
+                                <div className="relative w-10 h-10 mx-auto rounded-full bg-white shadow-sm mb-2 overflow-hidden">
+                                    <Image src={pkg.badgeSrc} alt={`${pkg.title} package`} fill className="object-contain p-1" />
                                 </div>
                                 <h3 className="text-sm font-bold text-gray-900">{pkg.title}</h3>
                             </div>

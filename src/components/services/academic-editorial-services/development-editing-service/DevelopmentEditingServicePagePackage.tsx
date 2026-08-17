@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 export default function DevelopmentEditingServicePagePackage() {
@@ -95,8 +96,13 @@ export default function DevelopmentEditingServicePagePackage() {
             <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm transition-all duration-300 group hover:bg-black hover:border-black relative">
               <div className="w-8 h-8 rounded-full bg-[#008080] text-white flex items-center justify-center font-bold text-sm mb-4">1</div>
               {/* Image Section Placeholder */}
-              <div className="w-full h-16 bg-gray-100 rounded flex items-center justify-center text-xs text-gray-400 mb-4 border border-dashed border-gray-300 group-hover:border-gray-700">
-                [Image Section: Initial Assessment Icon]
+              <div className="relative w-full h-16 mb-4">
+                <Image
+                  src="/images/academic-editorial-services/development-editing-service/Initial-Assessment.png"
+                  alt="Initial Assessment"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <h3 className="font-bold text-base mb-2 text-[#1b3b36] group-hover:text-white transition-colors duration-300">INITIAL ASSESSMENT</h3>
               <p className="text-xs text-gray-600 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
@@ -107,8 +113,13 @@ export default function DevelopmentEditingServicePagePackage() {
             {/* Step 2 */}
             <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm transition-all duration-300 group hover:bg-black hover:border-black relative">
               <div className="w-8 h-8 rounded-full bg-[#008080] text-white flex items-center justify-center font-bold text-sm mb-4">2</div>
-              <div className="w-full h-16 bg-gray-100 rounded flex items-center justify-center text-xs text-gray-400 mb-4 border border-dashed border-gray-300 group-hover:border-gray-700">
-                [Image Section: Content Enhancement Icon]
+              <div className="relative w-full h-16 mb-4">
+                <Image
+                  src="/images/academic-editorial-services/development-editing-service/Content-Enhancement.png"
+                  alt="Content Enhancement"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <h3 className="font-bold text-base mb-2 text-[#1b3b36] group-hover:text-white transition-colors duration-300">CONTENT ENHANCEMENT</h3>
               <p className="text-xs text-gray-600 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
@@ -119,8 +130,13 @@ export default function DevelopmentEditingServicePagePackage() {
             {/* Step 3 */}
             <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm transition-all duration-300 group hover:bg-black hover:border-black relative">
               <div className="w-8 h-8 rounded-full bg-[#008080] text-white flex items-center justify-center font-bold text-sm mb-4">3</div>
-              <div className="w-full h-16 bg-gray-100 rounded flex items-center justify-center text-xs text-gray-400 mb-4 border border-dashed border-gray-300 group-hover:border-gray-700">
-                [Image Section: Language Style Refinement Icon]
+              <div className="relative w-full h-16 mb-4">
+                <Image
+                  src="/images/academic-editorial-services/development-editing-service/Language-and-Style-Refinement.png"
+                  alt="Language and Style Refinement"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <h3 className="font-bold text-base mb-2 text-[#1b3b36] group-hover:text-white transition-colors duration-300">LANGUAGE AND STYLE REFINEMENT</h3>
               <p className="text-xs text-gray-600 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
@@ -131,8 +147,13 @@ export default function DevelopmentEditingServicePagePackage() {
             {/* Step 4 */}
             <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm transition-all duration-300 group hover:bg-black hover:border-black relative">
               <div className="w-8 h-8 rounded-full bg-[#008080] text-white flex items-center justify-center font-bold text-sm mb-4">4</div>
-              <div className="w-full h-16 bg-gray-100 rounded flex items-center justify-center text-xs text-gray-400 mb-4 border border-dashed border-gray-300 group-hover:border-gray-700">
-                [Image Section: Detailed Feedback Icon]
+              <div className="relative w-full h-16 mb-4">
+                <Image
+                  src="/images/academic-editorial-services/development-editing-service/Detailed-Feedback-and-Queries.png"
+                  alt="Detailed Feedback and Queries"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <h3 className="font-bold text-base mb-2 text-[#1b3b36] group-hover:text-white transition-colors duration-300">DETAILED FEEDBACK AND QUERIES</h3>
               <p className="text-xs text-gray-600 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
@@ -143,8 +164,13 @@ export default function DevelopmentEditingServicePagePackage() {
             {/* Step 5 */}
             <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm transition-all duration-300 group hover:bg-black hover:border-black relative">
               <div className="w-8 h-8 rounded-full bg-[#008080] text-white flex items-center justify-center font-bold text-sm mb-4">5</div>
-              <div className="w-full h-16 bg-gray-100 rounded flex items-center justify-center text-xs text-gray-400 mb-4 border border-dashed border-gray-300 group-hover:border-gray-700">
-                [Image Section: Final Review Icon]
+              <div className="relative w-full h-16 mb-4">
+                <Image
+                  src="/images/academic-editorial-services/development-editing-service/Final-Review-and-Approval.png"
+                  alt="Final Review and Approval"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <h3 className="font-bold text-base mb-2 text-[#1b3b36] group-hover:text-white transition-colors duration-300">FINAL REVIEW AND APPROVAL</h3>
               <p className="text-xs text-gray-600 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
@@ -165,24 +191,48 @@ export default function DevelopmentEditingServicePagePackage() {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-left">
             {[
-              "Address big-picture elements to elevate your manuscript as a whole.",
-              "Refine your argument for seamless flow throughout the text.",
-              "Organise sections to logically support your argument.",
-              "Strengthen your evidence for a compelling argument.",
-              "Respond to peer reviewer or reader feedback.",
-              "Ensure your tone and voice are targeted to your audience.",
-              "Make large word count cuts without compromising clarity.",
-              "Suggest ways to expand your content while maintaining quality."
-            ].map((text, index) => (
+              {
+                text: "Address big-picture elements to elevate your manuscript as a whole.",
+                icon: "/images/academic-editorial-services/development-editing-service/Address-big-picture-elements-to-elevate-your-manuscript-as-a-whole.png",
+              },
+              {
+                text: "Refine your argument for seamless flow throughout the text.",
+                icon: "/images/academic-editorial-services/development-editing-service/Refine-your-argument-for-seamless-flow-throughout-the-text.png",
+              },
+              {
+                text: "Organise sections to logically support your argument.",
+                icon: "/images/academic-editorial-services/development-editing-service/Organise-sections-to-logically-support-your-argument.png",
+              },
+              {
+                text: "Strengthen your evidence for a compelling argument.",
+                icon: "/images/academic-editorial-services/development-editing-service/Strengthen-your-evidence-for-a-compelling-argument.png",
+              },
+              {
+                text: "Respond to peer reviewer or reader feedback.",
+                icon: "/images/academic-editorial-services/development-editing-service/Respond-to-peer-reviewer-or-reader-feedback.png",
+              },
+              {
+                text: "Ensure your tone and voice are targeted to your audience.",
+                icon: "/images/academic-editorial-services/development-editing-service/Ensure-your-tone-and-voice-are-targeted-to-your-audience.png",
+              },
+              {
+                text: "Make large word count cuts without compromising clarity.",
+                icon: "/images/academic-editorial-services/development-editing-service/Make-large-word-count-cuts-without-compromising-clarity.png",
+              },
+              {
+                text: "Suggest ways to expand your content while maintaining quality.",
+                icon: "/images/academic-editorial-services/development-editing-service/Suggest-ways-to-expand-your-content-while-maintaining-quality.png",
+              },
+            ].map((item, index) => (
               <div
                 key={index}
                 className="p-5 bg-white border border-gray-200 rounded-lg shadow-sm transition-all duration-300 group hover:bg-black hover:border-black flex items-start space-x-3"
               >
-                <div className="w-8 h-8 bg-purple-100 rounded-full flex-shrink-0 flex items-center justify-center text-xs text-purple-800 font-bold">
-                  {index + 1}
+                <div className="relative w-8 h-8 flex-shrink-0">
+                  <Image src={item.icon} alt="" fill className="object-contain" />
                 </div>
                 <p className="text-xs text-gray-700 leading-relaxed group-hover:text-white transition-colors duration-300">
-                  {text}
+                  {item.text}
                 </p>
               </div>
             ))}
@@ -230,26 +280,29 @@ export default function DevelopmentEditingServicePagePackage() {
                 degree: "PhD in Life Sciences",
                 institute: "Indian Institute of Technology, India",
                 exp: "10+ Years of Experience",
-                papers: "950+ Papers Edited"
+                papers: "950+ Papers Edited",
+                photo: "/images/academic-editorial-services/development-editing-service/Dr.-Aarav-Mehta.png",
               },
               {
                 name: "Dr. Priya Rangan",
                 degree: "PhD in Biochemistry",
                 institute: "University of Delhi, Delhi, India",
                 exp: "8+ Years of Experience",
-                papers: "740+ Papers Edited"
+                papers: "740+ Papers Edited",
+                photo: "/images/academic-editorial-services/development-editing-service/Dr.-Priya-Rangan.png",
               },
               {
                 name: "Dr. Rohan Verma",
                 degree: "PhD in Neuroscience",
                 institute: "All India Institute of Medical Sciences, India",
                 exp: "9+ Years of Experience",
-                papers: "850+ Papers Edited"
+                papers: "850+ Papers Edited",
+                photo: "/images/academic-editorial-services/development-editing-service/Dr.-Rohan-Verma.png",
               }
             ].map((expert, idx) => (
               <div key={idx} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm text-center">
-                <div className="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center text-xs text-gray-500 border border-dashed border-gray-400">
-                  [Expert Photo]
+                <div className="relative w-16 h-16 rounded-full mx-auto mb-4 overflow-hidden">
+                  <Image src={expert.photo} alt={expert.name} fill className="object-cover" sizes="64px" />
                 </div>
                 <h3 className="font-bold text-base text-[#1b3b36]">{expert.name}</h3>
                 <p className="text-xs text-gray-600 mt-1">{expert.degree}</p>
@@ -282,8 +335,7 @@ export default function DevelopmentEditingServicePagePackage() {
               <span className="font-semibold text-gray-700">Medicine</span>
               <span>v1-J... | 1 / 1 | 48%</span>
             </div>
-            <div className="w-full h-80 bg-gray-100 rounded flex items-center justify-center text-gray-400 border border-dashed border-gray-300">
-              [Image Section: Sample PDF / Document View Area]
+            <div className="w-full h-80 bg-gray-50 rounded flex items-center justify-center text-gray-400">
             </div>
           </div>
 
@@ -302,7 +354,9 @@ export default function DevelopmentEditingServicePagePackage() {
             <div className="bg-white border border-gray-300 rounded-lg p-6 shadow-sm flex flex-col justify-between">
               <div>
                 <div className="flex items-center space-x-2 mb-3">
-                  <div className="w-8 h-8 bg-blue-100 text-blue-800 rounded-full flex items-center justify-center font-bold text-sm">S</div>
+                  <div className="relative w-8 h-8">
+                    <Image src="/images/publication-support/poster-preparation/S.png" alt="Standard package" fill className="object-contain" />
+                  </div>
                   <h4 className="font-bold text-lg text-[#1b3b36]">Standard Development</h4>
                 </div>
                 <p className="text-xs text-gray-700 font-semibold mb-3">Ideal For: Early drafts and manuscripts needing structural guidance.</p>
@@ -325,7 +379,9 @@ export default function DevelopmentEditingServicePagePackage() {
             <div className="bg-white border border-gray-300 rounded-lg p-6 shadow-sm flex flex-col justify-between">
               <div>
                 <div className="flex items-center space-x-2 mb-3">
-                  <div className="w-8 h-8 bg-purple-100 text-purple-800 rounded-full flex items-center justify-center font-bold text-sm">A</div>
+                  <div className="relative w-8 h-8">
+                    <Image src="/images/publication-support/peer-review-pre-submission/advanced.webp" alt="Advanced package" fill className="object-contain" />
+                  </div>
                   <h4 className="font-bold text-lg text-[#1b3b36]">Advanced Development</h4>
                 </div>
                 <p className="text-xs text-gray-700 font-semibold mb-3">Ideal For: Manuscripts with strong content that require detailed refinement.</p>
@@ -347,7 +403,9 @@ export default function DevelopmentEditingServicePagePackage() {
             <div className="bg-white border border-gray-300 rounded-lg p-6 shadow-sm flex flex-col justify-between">
               <div>
                 <div className="flex items-center space-x-2 mb-3">
-                  <div className="w-8 h-8 bg-yellow-100 text-yellow-800 rounded-full flex items-center justify-center font-bold text-sm">P</div>
+                  <div className="relative w-8 h-8">
+                    <Image src="/images/editing-and-translation/translation-with-editing/pro.webp" alt="Premium package" fill className="object-contain" />
+                  </div>
                   <h4 className="font-bold text-lg text-[#1b3b36]">Premium Development</h4>
                 </div>
                 <p className="text-xs text-gray-700 font-semibold mb-3">Ideal For: Manuscripts intended for high-impact journals or publication.</p>

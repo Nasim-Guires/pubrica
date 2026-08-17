@@ -1,6 +1,7 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -52,7 +53,7 @@ export default function ForensicAndQualityAuditComplete() {
 
     const packages = [
         {
-            badge: 'B',
+            badgeSrc: '/images/editing-and-translation/basic-pacakge.png',
             title: 'Basic Compliance Check',
             idealFor: 'Startups, small businesses, or teams need a quick health check of processes and documentation.',
             included: [
@@ -66,7 +67,7 @@ export default function ForensicAndQualityAuditComplete() {
             headerBg: 'bg-emerald-50',
         },
         {
-            badge: 'S',
+            badgeSrc: '/images/publication-support/poster-preparation/S.png',
             title: 'Standard Forensic & Quality Review',
             idealFor: 'Medium-sized organisations require deeper analysis for quality, risk, and operational accuracy.',
             included: [
@@ -80,7 +81,7 @@ export default function ForensicAndQualityAuditComplete() {
             headerBg: 'bg-purple-50',
         },
         {
-            badge: 'A',
+            badgeSrc: '/images/publication-support/peer-review-pre-submission/advanced.webp',
             title: 'Advanced Forensic Investigation',
             idealFor: 'Businesses facing suspected fraud, misconduct, major quality lapses, or needing high-level accuracy checks.',
             included: [
@@ -153,12 +154,14 @@ export default function ForensicAndQualityAuditComplete() {
             <section className="py-14 px-4 bg-[#f4faf7] text-center" aria-labelledby="sample-heading">
                 <div className="max-w-4xl mx-auto bg-white border border-emerald-100 rounded-xl p-8 shadow-sm">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div className="bg-[#0b3b2c] p-3 rounded-lg shadow-md flex justify-center items-center">
-                            <div className="bg-white rounded p-4 w-full h-48 flex flex-col items-center justify-center">
-                                <span className="text-3xl mb-2">📋</span>
-                                <span className="text-xs font-bold text-gray-800">Forensic & Quality Audit Sample</span>
-                                <span className="text-[10px] text-gray-500 mt-1">Audit Compliance Report Preview</span>
-                            </div>
+                        <div className="bg-[#0b3b2c] p-3 rounded-lg shadow-md flex justify-center items-center relative h-48 overflow-hidden">
+                            <Image
+                                src="/images/academic-editorial-services/forensic-and-quality-audit-service/Forensic-Quality-Audit-Services-sample-work-.webp"
+                                alt="Forensic and Quality Audit Services sample work"
+                                fill
+                                className="object-cover rounded"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
                         </div>
                         <div className="text-left">
                             <h2 id="sample-heading" className="text-base md:text-lg font-bold text-[#0b3b2c] mb-4">
@@ -201,8 +204,8 @@ export default function ForensicAndQualityAuditComplete() {
                         >
                             {/* Card Header */}
                             <div className={`${pkg.headerBg} p-6 border-b ${pkg.borderColor} text-center`}>
-                                <div className="w-10 h-10 mx-auto rounded-full bg-white font-bold flex items-center justify-center text-sm shadow-sm mb-2 text-gray-900">
-                                    {pkg.badge}
+                                <div className="relative w-10 h-10 mx-auto rounded-full bg-white shadow-sm mb-2 overflow-hidden">
+                                    <Image src={pkg.badgeSrc} alt={`${pkg.title} package`} fill className="object-contain p-1" />
                                 </div>
                                 <h3 className="text-sm font-bold text-gray-900">{pkg.title}</h3>
                             </div>

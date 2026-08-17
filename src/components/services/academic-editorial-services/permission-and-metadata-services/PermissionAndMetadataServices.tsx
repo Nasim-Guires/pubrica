@@ -1,6 +1,7 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import Image from 'next/image';
 import React from 'react';
 
 export const metadata = {
@@ -76,12 +77,14 @@ export default function PermissionAndMetadataServices() {
                         </p>
                     </div>
 
-                    <div className="bg-[#0b3b2c] p-4 rounded-xl shadow-md flex justify-center items-center">
-                        <div className="bg-white rounded p-4 w-full h-56 flex flex-col items-center justify-center text-center">
-                            <span className="text-4xl mb-2">📊</span>
-                            <span className="text-xs font-bold text-gray-800">Permission & Metadata Support</span>
-                            <span className="text-[10px] text-gray-500 mt-1">Ensuring Global Publishing Compliance</span>
-                        </div>
+                    <div className="bg-[#0b3b2c] p-4 rounded-xl shadow-md flex justify-center items-center relative h-56 overflow-hidden">
+                        <Image
+                            src="/images/academic-editorial-services/permission-and-metadata-services/Ensure-Seamless-Publishing-Compliance-with-Pubricas-Expert-Permission-Metadata-Services.webp"
+                            alt="Permission and Metadata Services"
+                            fill
+                            className="object-cover rounded"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                        />
                     </div>
                 </div>
 

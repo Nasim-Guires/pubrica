@@ -11,7 +11,7 @@ export const visualAndAccessibilityEditingServicesWhoWeServeData = {
                 "We help maintain clarity in charts, figures, and diagrams while adhering to accessibility standards.",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/visual-and-accessibility-editing-services/academic-researchers-scholars.webp",
+                "/images/academic-editorial-services/visual-and-accessibility-editing-services/Academic-Researchers-Scholars.webp",
         },
         {
             title: "Publishers & Journals",
@@ -20,7 +20,7 @@ export const visualAndAccessibilityEditingServicesWhoWeServeData = {
                 "From layout adjustments to alternative text for images, we ensure publications are readable and professional.",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/visual-and-accessibility-editing-services/publishers-journals.webp",
+                "/images/academic-editorial-services/visual-and-accessibility-editing-services/Publishers-Journals.webp",
         },
         {
             title: "Educational Institutions & E-Learning Platforms",
@@ -29,7 +29,7 @@ export const visualAndAccessibilityEditingServicesWhoWeServeData = {
                 "Enhancing learning outcomes for all.",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/visual-and-accessibility-editing-services/educational-institutions-elearning-platforms.webp",
+                "/images/academic-editorial-services/visual-and-accessibility-editing-services/Educational-Institutions-E-Learning-Platforms.webp",
         },
         {
             title: "Authors & Content Creators",
@@ -38,7 +38,7 @@ export const visualAndAccessibilityEditingServicesWhoWeServeData = {
                 "This includes optimizing images, figures, and interactive content for inclusivity.",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/visual-and-accessibility-editing-services/authors-content-creators.webp",
+                "/images/academic-editorial-services/visual-and-accessibility-editing-services/Authors-Content-Creators.webp",
         },
         {
             title: "Non-Profit Organizations & Government Agencies",
@@ -47,7 +47,7 @@ export const visualAndAccessibilityEditingServicesWhoWeServeData = {
                 "Fostering inclusivity and equity.",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/visual-and-accessibility-editing-services/non-profit-government-agencies.webp",
+                "/images/academic-editorial-services/visual-and-accessibility-editing-services/Non-Profit-Organizations-Government-Agencies.webp",
         },
         {
             title: "Corporate & Marketing Teams",
@@ -56,7 +56,7 @@ export const visualAndAccessibilityEditingServicesWhoWeServeData = {
                 "Improving engagement and compliance.",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/visual-and-accessibility-editing-services/corporate-marketing-teams.webp",
+                "/images/academic-editorial-services/visual-and-accessibility-editing-services/Corporate-Marketing-Teams.webp",
         },
     ],
 };
@@ -69,33 +69,33 @@ export const visualAndAccessibilityEditingServicesTestimonialData = {
     testimonials: [
         {
             image:
-                "/images/services/academic-editorial-services/visual-and-accessibility-editing-services/testimonials/asian-journal-of-psychiatry.webp",
+                "/images/academic-editorial-services/visual-and-accessibility-editing-services/asian-journal-of-psychiatry.webp",
             quote:
                 "Pubrica’s Visual and Accessibility Editing transformed my manuscript. The team ensured all figures, tables, and text were not only error-free but fully accessible, making my research readable for all audiences. Truly publication-ready.",
             name: "Dr. Emily Carter",
             designation: "Neuroscientist",
             organization: "USA",
-            flag: "/images/flags/united-states.webp",
+            flag: "/images/research-impact/graphical-abstract/usa-.png",
         },
         {
             image:
-                "/images/services/academic-editorial-services/visual-and-accessibility-editing-services/testimonials/scientific-journal-illustration.webp",
+                "/images/editing-and-translation/scientific-editing/testimonials-1.png",
             quote:
                 "I was impressed by how Pubrica’s editors enhanced both the visual presentation and accessibility of my manuscript. Every figure, chart, and section now communicates clearly, making it publication-ready.",
             name: "Dr. Priya Menon",
             designation: "Clinical Researcher",
             organization: "India",
-            flag: "/images/flags/india.webp",
+            flag: "/images/editing-and-translation/manuscript-editing/flag.png",
         },
         {
             image:
-                "/images/services/academic-editorial-services/visual-and-accessibility-editing-services/testimonials/journal-of-health-economics.webp",
+                "/images/academic-editorial-services/visual-and-accessibility-editing-services/journal-of-health-economics.webp",
             quote:
                 "Pubrica transformed my scientific figures and tables to meet journal accessibility standards. The alt-text descriptions were precise, and the visual edits improved clarity significantly.",
             name: "Dr. Maria Thompson",
             designation: "Medical Researcher",
             organization: "United Kingdom",
-            flag: "/images/flags/united-kingdom.webp",
+            flag: "/images/research-services/systematic-review/united-kingdom-.png",
         },
     ],
 };

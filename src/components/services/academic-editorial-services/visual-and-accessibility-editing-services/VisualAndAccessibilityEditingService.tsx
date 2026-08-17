@@ -1,6 +1,7 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -27,32 +28,32 @@ export default function VisualAndAccessibilityEditingService() {
     {
       title: 'Document Layout & Formatting',
       description: 'We refine the overall layout of your documents, including headings, subheadings, tables, and images, to create a consistent structure.',
-      icon: '📄',
+      iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Document-Layout-Formatting.png',
     },
     {
       title: 'Color & Contrast Optimization',
       description: 'Our experts adjust color schemes, contrasts, and highlights to improve visibility and readability for individuals with visual impairments.',
-      icon: '🎨',
+      iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Color-Contrast-Optimization.png',
     },
     {
       title: 'Image & Graphics Enhancement',
       description: 'We enhance figures, images, and diagrams to ensure clarity, correct labelling, and compliance with accessibility guidelines.',
-      icon: '🖼️',
+      iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Image-Graphics-Enhancement.png',
     },
     {
       title: 'Text Readability & Typography',
       description: 'We improve font choices, sizes, spacing, and alignment to enhance readability. Our editing ensures that content is accessible across all devices.',
-      icon: '✍️',
+      iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Text-Readability-Typography.png',
     },
     {
       title: 'Compliance with Accessibility Standards',
       description: 'Our team ensures that your content complies with international accessibility guidelines such as WCAG 2.1, Section 508, and ADA.',
-      icon: '📋',
+      iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Compliance-with-Accessibility-Standards.png',
     },
     {
       title: 'Interactive & Multimedia Content Accessibility',
       description: 'For presentations, e-learning modules, or digital publications, we optimize multimedia elements with captions, transcripts, and accessible tags.',
-      icon: '💻',
+      iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Interactive-Multimedia-Content-Accessibility.png',
     },
   ];
 
@@ -105,16 +106,14 @@ export default function VisualAndAccessibilityEditingService() {
           </div>
 
           {/* Right Side Decorative Box / Image Mockup container */}
-          <div className="bg-[#0b3b2c] p-4 rounded-xl shadow-lg flex justify-center items-center">
-            <div className="bg-white rounded-lg p-6 shadow-inner w-full flex flex-col items-center justify-center min-h-[280px]">
-              <div className="w-16 h-16 rounded-full bg-emerald-100 text-[#0b3b2c] flex items-center justify-center text-2xl font-bold mb-4 shadow-sm">
-                ♿
-              </div>
-              <h4 className="text-sm font-bold text-gray-900 mb-2">Universal Design & Compliance</h4>
-              <p className="text-xs text-gray-600 text-center max-w-xs leading-relaxed">
-                Transforming complex data visualizations and academic manuscripts into fully accessible formats for every reader.
-              </p>
-            </div>
+          <div className="bg-[#0b3b2c] p-4 rounded-xl shadow-lg flex justify-center items-center relative min-h-[280px] overflow-hidden">
+            <Image
+              src="/images/academic-editorial-services/visual-and-accessibility-editing-services/Visual-Accessibility-Editing-Services.webp"
+              alt="Visual and Accessibility Editing Services"
+              fill
+              className="object-cover rounded-xl"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
         </div>
       </section>
@@ -134,7 +133,9 @@ export default function VisualAndAccessibilityEditingService() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             {editingTypes.map((type, idx) => (
               <div key={idx} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm flex flex-col justify-between relative">
-                <div className="absolute top-6 right-6 text-xl">{type.icon}</div>
+                <div className="absolute top-6 right-6 w-10 h-10">
+                  <Image src={type.iconSrc} alt="" fill className="object-contain" />
+                </div>
                 <div>
                   <h3 className="text-sm font-bold text-gray-900 mb-3 pr-8">{type.title}</h3>
                   <p className="text-xs text-gray-600 leading-relaxed">{type.description}</p>

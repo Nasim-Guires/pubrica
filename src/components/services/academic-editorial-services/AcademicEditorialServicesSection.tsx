@@ -1,6 +1,7 @@
 "use client";
 
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Image from "next/image";
 import React from "react";
 
 // ==========================================
@@ -13,6 +14,33 @@ interface FeatureItem {
   afterLinkText?: string;
   description: string;
 }
+
+const serviceTypes = [
+  {
+    title: "Copy Editing",
+    iconSrc: "/images/academic-editorial-services/Copy-Editing.png",
+  },
+  {
+    title: "Development Editing",
+    iconSrc: "/images/academic-editorial-services/Development-Editing.png",
+  },
+  {
+    title: "Revisioning and Localisation",
+    iconSrc: "/images/academic-editorial-services/Revisioning-and-Localisation.png",
+  },
+  {
+    title: "Permission and Metadata Support",
+    iconSrc: "/images/academic-editorial-services/Permission-and-Metadata-Support.png",
+  },
+  {
+    title: "Visual and Accessibility Editing",
+    iconSrc: "/images/academic-editorial-services/Visual-and-Accessibility-Editing.png",
+  },
+  {
+    title: "Forensic and Quality Audit",
+    iconSrc: "/images/academic-editorial-services/Forensic-and-Quality-Audit.png",
+  },
+];
 
 const keyFeatures: FeatureItem[] = [
   {
@@ -158,14 +186,36 @@ export default function AcademicEditorialServicesSection() {
 
               {/* Foreground Image Container */}
               <div className="relative rounded-2xl overflow-hidden border-2 border-white shadow-xl bg-slate-200 aspect-[4/3]">
-                <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+                <Image
+                  src="/images/academic-editorial-services/Empowering-Your-Research-with-Expert-Academic-Editorial-Support.webp"
                   alt="Academic Editorial Team collaborating over a research manuscript"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  priority
                 />
               </div>
             </div>
           </div>
+        </section>
+
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {serviceTypes.map((service) => (
+            <div
+              key={service.title}
+              className="bg-white border border-slate-200 rounded-lg p-4 flex items-center gap-3 shadow-sm"
+            >
+              <div className="relative w-10 h-10 shrink-0">
+                <Image
+                  src={service.iconSrc}
+                  alt=""
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-sm font-bold text-[#0d3b44]">{service.title}</h3>
+            </div>
+          ))}
         </section>
       </div>
     </div>

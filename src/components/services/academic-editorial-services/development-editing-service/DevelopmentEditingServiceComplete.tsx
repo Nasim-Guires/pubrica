@@ -1,6 +1,7 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -69,50 +70,6 @@ export default function DevelopmentEditingServiceComplete() {
         },
     ];
 
-    const packages = [
-        {
-            badge: 'B',
-            title: 'Basic',
-            idealFor: 'Early-stage drafts requiring structural overview and basic reorganization.',
-            included: [
-                'High-level structural audit',
-                'Guidance on section flow and logical sequencing',
-                'Basic argument clarity feedback',
-                'Reviewer-readiness checklist',
-            ],
-            bgColor: 'bg-emerald-50',
-            borderColor: 'border-emerald-300',
-        },
-        {
-            badge: 'S',
-            title: 'Standard',
-            idealFor: 'Research papers and manuscripts preparing for high-impact journal submission.',
-            included: [
-                'Includes everything in Basic, plus:',
-                'Full substantive and developmental editing',
-                'Paragraph and heading reorganization',
-                'Tone, consistency, and terminology alignment',
-                'Detailed editor commentary and improvement notes',
-            ],
-            bgColor: 'bg-purple-50',
-            borderColor: 'border-purple-300',
-        },
-        {
-            badge: 'P',
-            title: 'Premium',
-            idealFor: 'Complex research articles, thesis conversions, and resubmissions needing deep rewriting.',
-            included: [
-                'Includes everything in Standard, plus:',
-                'Extensive content rewriting and narrative enhancement',
-                'Rigorous defense of scientific arguments and hypotheses',
-                'Target journal guideline customization',
-                'Post-editing consultation and priority support',
-            ],
-            bgColor: 'bg-amber-50',
-            borderColor: 'border-amber-300',
-        },
-    ];
-
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
             {/* ------------------- HERO BANNER ------------------- */}
@@ -148,12 +105,14 @@ export default function DevelopmentEditingServiceComplete() {
                         </p>
                     </div>
 
-                    <div className="bg-[#0b3b2c] p-3 rounded-xl shadow-md flex justify-center items-center">
-                        <div className="bg-white rounded-lg p-6 w-full h-64 flex flex-col items-center justify-center text-center shadow-inner">
-                            <span className="text-4xl mb-3">💻</span>
-                            <span className="text-xs font-bold text-gray-800">Development Editing Preview</span>
-                            <span className="text-[10px] text-gray-500 mt-1">Structural & Substantive Manuscript Enhancement</span>
-                        </div>
+                    <div className="bg-[#0b3b2c] p-3 rounded-xl shadow-md flex justify-center items-center relative h-64 overflow-hidden">
+                        <Image
+                            src="/images/academic-editorial-services/development-editing-service/Enhance-Clarity-Improve-Your-Manuscript-with-Expert-Development-Editing-Services.webp"
+                            alt="Development Editing Services"
+                            fill
+                            className="object-cover rounded-lg"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                        />
                     </div>
                 </div>
 

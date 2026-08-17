@@ -11,7 +11,7 @@ export const forensicAndQualityAuditServiceWhoWeServeData = {
                 "We help maintain transparency in research, clinical trials, billing processes, procurement, and patient",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/forensic-and-quality-audit-service/healthcare-life-sciences-organizations.webp",
+                "/images/data-analytics-machine-learning/predictive-analytics/Healthcare-and-Life-Sciences.webp",
         },
         {
             title: "Academic & Research Institutions",
@@ -20,7 +20,7 @@ export const forensicAndQualityAuditServiceWhoWeServeData = {
                 "Our audits support responsible research practices and ensure the credibility of scientific outputs.",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/forensic-and-quality-audit-service/academic-research-institutions.webp",
+                "/images/academic-editorial-services/forensic-and-quality-audit-service/Academic-Research-Institutions.webp",
         },
         {
             title: "Government Bodies & Public Sector Units",
@@ -29,7 +29,7 @@ export const forensicAndQualityAuditServiceWhoWeServeData = {
                 "Our audits help improve public trust and operational transparency.",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/forensic-and-quality-audit-service/government-public-sector-units.webp",
+                "/images/academic-editorial-services/forensic-and-quality-audit-service/Government-Bodies-Public-Sector-Units.webp",
         },
         {
             title: "Non-Profit & Non-Governmental Organizations",
@@ -38,7 +38,7 @@ export const forensicAndQualityAuditServiceWhoWeServeData = {
                 "Our audits help strengthen accountability and stakeholder trust.",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/forensic-and-quality-audit-service/non-profit-non-governmental-organizations.webp",
+                "/images/academic-editorial-services/forensic-and-quality-audit-service/Non-Profit-Non-Governmental-Organizations.webp",
         },
         {
             title: "Legal & Investigation Firms",
@@ -47,7 +47,7 @@ export const forensicAndQualityAuditServiceWhoWeServeData = {
                 "Our findings support litigation, dispute resolution, and arbitration processes.",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/forensic-and-quality-audit-service/legal-investigation-firms.webp",
+                "/images/academic-editorial-services/forensic-and-quality-audit-service/Legal-Investigation-Firms.webp",
         },
     ],
 };
@@ -60,33 +60,33 @@ export const forensicAndQualityAuditServiceTestimonialData = {
     testimonials: [
         {
             image:
-                "/images/services/academic-editorial-services/forensic-and-quality-audit-service/testimonials/rsna.webp",
+                "/images/academic-editorial-services/forensic-and-quality-audit-service/RSNA-.webp",
             quote:
                 "The forensic audit conducted by the team was exceptionally detailed and professional. Their ability to detect hidden discrepancies and present evidence-backed findings helped us strengthen our compliance framework and regain full financial transparency. A truly reliable partner for risk mitigation.",
             name: "Ananya Mehta",
             designation: "Chief Compliance Officer",
             organization: "India",
-            flag: "/images/flags/india.webp",
+            flag: "/images/editing-and-translation/manuscript-editing/india.png",
         },
         {
             image:
-                "/images/services/academic-editorial-services/forensic-and-quality-audit-service/testimonials/jama-oncology.webp",
+                "/images/product-development/jama-oncology-journal.png",
             quote:
                 "We regularly depend on their forensic audit reports for litigation support. Their documentation is clear, evidence-driven, and presented with a high level of precision. Their ability to translate complex financial data into meaningful legal insights has strengthened several of our cases.",
             name: "Jonathan Reed",
             designation: "Senior Partner",
             organization: "United Kingdom",
-            flag: "/images/flags/united-kingdom.webp",
+            flag: "/images/research-services/systematic-review/united-kingdom-.png",
         },
         {
             image:
-                "/images/services/academic-editorial-services/forensic-and-quality-audit-service/testimonials/journal-of-clinical-epidemiology.webp",
+                "/images/academic-editorial-services/journal-of-clinical-epidemiology.png",
             quote:
                 "Their forensic audit expertise played a key role in resolving potential compliance challenges within our clinical and procurement divisions. The team worked discreetly, delivered accurate insights, and ensured full alignment with global healthcare regulatory standards. We greatly appreciate their professionalism and depth of analysis.",
             name: "Dr. Sofia Alvarez",
             designation: "Quality & Compliance Head",
             organization: "Spain",
-            flag: "/images/flags/spain.webp",
+            flag: "/images/editing-and-translation/thesis-editing/spain-.png",
         },
     ],
 };

@@ -1,6 +1,7 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import Image from 'next/image';
 import React from 'react';
 
 export const metadata = {
@@ -25,32 +26,32 @@ export default function RevisioningAndLocalisationService() {
         {
             title: 'Content Revisioning',
             description: 'Enhance clarity, coherence, and readability of your manuscript while preserving the original intent. Pubrica’s...',
-            icon: '📄',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Content-Revisioning.png',
         },
         {
             title: 'Linguistic Localisation',
             description: 'Adapt your manuscript to meet the linguistic expectations of specific regions or global audiences.',
-            icon: '🌐',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Linguistic-Localisation.png',
         },
         {
             title: 'Cultural Localisation',
             description: 'We tailor your content to the cultural context of the target audience. This includes adapting examples, idioms...',
-            icon: '🌍',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Cultural-Localisation.png',
         },
         {
             title: 'Technical Localization',
             description: 'For specialised scientific, medical, and academic manuscripts, our team ensures domain-specific...',
-            icon: '💻',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Technical-Localisation.png',
         },
         {
             title: 'Journal-Specific Revisioning',
             description: 'Every journal has its own stylistic, structural, and linguistic requirements. Pubrica revises and localises...',
-            icon: '📋',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Journal-Specific-Revisioning.png',
         },
         {
             title: 'Translation-Integrated Localisation',
             description: 'For authors working with translated manuscripts, we refine translated content to ensure fluency, natural...',
-            icon: '⚙️',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Translation-Integrated-Localisation.png',
         },
     ];
 
@@ -103,16 +104,14 @@ export default function RevisioningAndLocalisationService() {
                     </div>
 
                     {/* Right Side Image Box Mockup container */}
-                    <div className="bg-[#0b3b2c] p-4 rounded-xl shadow-lg flex justify-center items-center">
-                        <div className="bg-white rounded-lg p-6 shadow-inner w-full flex flex-col items-center justify-center min-h-[280px]">
-                            <div className="w-16 h-16 rounded-full bg-emerald-100 text-[#0b3b2c] flex items-center justify-center text-2xl font-bold mb-4 shadow-sm">
-                                🌐
-                            </div>
-                            <h4 className="text-sm font-bold text-gray-900 mb-2">Global Research Localisation</h4>
-                            <p className="text-xs text-gray-600 text-center max-w-xs leading-relaxed">
-                                Adapting academic content for cross-regional impact, linguistic clarity, and cultural alignment.
-                            </p>
-                        </div>
+                    <div className="bg-[#0b3b2c] p-4 rounded-xl shadow-lg flex justify-center items-center relative min-h-[280px] overflow-hidden">
+                        <Image
+                            src="/images/academic-editorial-services/revisioning-and-localisation-service/Transform-Your-Research-for-Global-Impact-with-Pubricas-Expert-Revisioning-Localisation-Services.webp"
+                            alt="Revisioning and Localisation Services"
+                            fill
+                            className="object-cover rounded-xl"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                        />
                     </div>
                 </div>
             </section>
@@ -132,7 +131,9 @@ export default function RevisioningAndLocalisationService() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
                         {serviceTypes.map((type, idx) => (
                             <div key={idx} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm flex flex-col justify-between relative">
-                                <div className="absolute top-6 right-6 text-xl">{type.icon}</div>
+                                <div className="absolute top-6 right-6 w-10 h-10">
+                                    <Image src={type.iconSrc} alt="" fill className="object-contain" />
+                                </div>
                                 <div>
                                     <h3 className="text-sm font-bold text-gray-900 mb-3 pr-8">{type.title}</h3>
                                     <p className="text-xs text-gray-600 leading-relaxed">{type.description}</p>
