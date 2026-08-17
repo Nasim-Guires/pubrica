@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Landmark, Home, PenTool, User } from "lucide-react";
 import Container from "@/components/common/Container";
 
@@ -73,10 +74,12 @@ export default function WhoWeWorkFor() {
               >
                 {/* Image Section - shrinks smoothly on hover to clear room for text */}
                 <div className="relative h-2/3 w-full overflow-hidden bg-gray-100 transition-all duration-500 ease-in-out group-hover:h-1/2">
-                  <img
+                  <Image
                     src={sec.image}
                     alt={sec.title}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
                   />
 
                   {/* Overlapping Floating Badge */}

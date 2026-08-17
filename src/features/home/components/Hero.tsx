@@ -10,10 +10,16 @@ export default function HomeHeroWithAbout() {
   return (
     <>
       {/* --- HERO SECTION --- */}
-      <section className="relative bg-[#073632] text-white pt-12 pb-[100px] lg:pt-16 overflow-hidden select-none">
-        {/* Background patterns */}
-        <div className="absolute inset-0 grid-bg-dark opacity-20 pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary-500/10 rounded-full blur-3xl pointer-events-none" />
+      <section className="relative text-white pt-12 pb-[100px] lg:pt-16 overflow-hidden select-none">
+        <Image
+          src="/images/home/banner1-min-scaled-8.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[#113839] opacity-[0.84]" />
 
         <Container className="relative z-10 max-w-7xl mx-auto flex flex-col items-center px-4">
           {/* Headline */}
@@ -137,17 +143,14 @@ export default function HomeHeroWithAbout() {
         <Container className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Column: Overlapping Lab Images Layout */}
-            <div className="lg:col-span-5 relative flex justify-center items-center h-[380px] sm:h-[450px]">
-              {/* Back Main Image */}
-              <div className="absolute left-0 top-0 w-[70%] h-[80%] rounded-2xl overflow-hidden shadow-md">
-                <Image
-                  src="/images/Home/pubrica-about-us-section-research-services.webp"// Replace with your standard path
-                  alt="Researchers with Microscope"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              {/* Front Foreground Image */}
+            <div className="lg:col-span-5 relative w-full aspect-[865/744] min-h-[280px]">
+              <Image
+                src="/images/home/1.webp"
+                alt="Algorithm Development"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
             </div>
 
             {/* Right Column: Text Content matching image layout */}

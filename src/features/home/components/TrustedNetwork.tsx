@@ -1,11 +1,12 @@
 import React from 'react';
+import Image from 'next/image';
 import Container from '@/components/common/Container';
 
 export default function TrustedNetwork() {
   const groups = [
     {
       title: '40+ Journals & Publishers',
-      image: '/images/Home/journal.jpg',
+      image: '/images/home/universities.jpg',
       alt: 'Journals and Publishers Logos',
     },
     {
@@ -15,7 +16,7 @@ export default function TrustedNetwork() {
     },
     {
       title: '1,100+ Societies',
-      image: '/images/Home/socities.jpg',
+      image: '/images/home/Socities.jpg',
       alt: 'Societies Logos',
     },
   ];
@@ -49,11 +50,13 @@ export default function TrustedNetwork() {
               </h3>
 
               {/* Single Image Card Box Container (Color filter removed) */}
-              <div className="w-full bg-white border border-gray-100 shadow-sm rounded-lg p-6 flex items-center justify-center min-h-[260px] transition-all duration-300">
-                <img 
-                  src={group.image} 
-                  alt={group.alt} 
-                  className="max-h-[220px] w-full object-contain"
+              <div className="relative w-full bg-white border border-gray-100 shadow-sm rounded-lg p-6 min-h-[260px]">
+                <Image
+                  src={group.image}
+                  alt={group.alt}
+                  fill
+                  className="object-contain p-6"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
             </div>

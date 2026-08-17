@@ -1,15 +1,18 @@
 import React from 'react';
+import Image from 'next/image';
 import Container from '@/components/common/Container';
 
 export default function ResourceConsolidationBanner() {
   return (
-    <section 
-      className="relative w-full py-16 bg-cover bg-center select-none overflow-hidden"
-      style={{ 
-        // Replace with your actual background image asset path
-        backgroundImage: `linear-gradient(to right, rgba(30, 64, 175, 0.6), rgba(15, 23, 42, 0.7)), url('/images/banner-bg.webp')` 
-      }}
-    >
+    <section className="relative w-full py-16 select-none overflow-hidden">
+      <Image
+        src="/images/home/bg-1-min-scaled-1.jpg"
+        alt=""
+        fill
+        className="object-cover object-center"
+        sizes="100vw"
+      />
+      <div className="absolute inset-0 bg-black/50" />
       <Container className="relative z-10 flex justify-center items-center">
         {/* Centered Floating Resource Container Card */}
         <div className="w-full max-w-5xl bg-white shadow-xl border border-gray-100 px-6 py-12 md:px-16 md:py-14 text-center flex flex-col items-center justify-center">
