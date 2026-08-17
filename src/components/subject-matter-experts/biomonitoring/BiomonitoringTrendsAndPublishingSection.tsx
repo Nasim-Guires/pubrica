@@ -146,8 +146,8 @@ export default function BiomonitoringTrendsAndPublishingSection() {
                                 key={idx}
                                 onClick={() => setActiveTab(idx)}
                                 className={`py-3 px-2 text-[11px] font-bold transition-all border-r border-b lg:border-b-0 border-gray-300 last:border-r-0 flex items-center justify-center leading-snug ${isActive
-                                        ? "bg-[#0d3630] text-white border-b-2 border-b-[#0d3630]"
-                                        : "bg-[#f8f9fa] text-gray-700 hover:bg-gray-100"
+                                    ? "bg-[#0d3630] text-white border-b-2 border-b-[#0d3630]"
+                                    : "bg-[#f8f9fa] text-gray-700 hover:bg-gray-100"
                                     }`}
                             >
                                 {tab.title}
@@ -210,13 +210,14 @@ export default function BiomonitoringTrendsAndPublishingSection() {
                     </div>
 
                     {/* Right Side Microscope Image */}
-                    <div className="lg:col-span-5 flex justify-center sticky top-6">
-                        <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-md border border-gray-200">
+                    <div className="md:col-span-5 flex justify-center">
+                        <div className="relative w-full max-w-[280px] h-[395px] overflow-hidden">
                             <Image
                                 src="/images/subject-matter-experts/biomonitoring/Applications-of-Biomonitoring.webp"
                                 alt="Laboratory Microscope Analysis"
                                 fill
                                 className="object-cover"
+                                sizes="(max-width: 768px) 100vw, 280px"
                             />
                         </div>
                     </div>
@@ -240,7 +241,8 @@ export default function BiomonitoringTrendsAndPublishingSection() {
                             src="/images/subject-matter-experts/biomonitoring/sample-works-7-3.webp"
                             alt="Atmosphere Journal Cover"
                             fill
-                            className="object-cover"
+                            className="object-contain"
+                            sizes="160px"
                         />
                     </div>
                     <div className="space-y-2 text-xs md:text-sm">

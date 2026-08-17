@@ -1,17 +1,17 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { 
-  Search, 
-  BookOpen, 
-  CheckSquare, 
-  HelpCircle, 
-  Video, 
-  FileText, 
-  FileSignature, 
-  Layout, 
-  Info, 
-  ChevronLeft, 
+import {
+  Search,
+  BookOpen,
+  CheckSquare,
+  HelpCircle,
+  Video,
+  FileText,
+  FileSignature,
+  Layout,
+  Info,
+  ChevronLeft,
   ChevronRight,
   TrendingUp,
   Mail,
@@ -54,7 +54,7 @@ const LATEST_ARTICLES = [
     title: 'What Is Publication Support and How Does It Help Researchers?',
     date: 'July 15, 2026',
     author: 'admin',
-    image: '/images/publication-support.jpg', // Replace with your asset
+    image: '/images/publication-support.jpg',
     alt: 'Researchers collaborating in front of desktop computer monitor'
   },
   {
@@ -62,7 +62,7 @@ const LATEST_ARTICLES = [
     title: 'Overcoming Challenges in Academic Writing: Articles and Grant Applications',
     date: 'July 14, 2026',
     author: 'admin',
-    image: '/images/grants.jpg', // Replace with your asset
+    image: '/images/grants.jpg',
     alt: 'Stacked legal files labeled Applications and Grants'
   },
   {
@@ -70,7 +70,7 @@ const LATEST_ARTICLES = [
     title: 'Machine Learning: The Art of Crafting Effective Research Grant Proposals',
     date: 'July 13, 2026',
     author: 'admin',
-    image: '/images/machine-learning.jpg', // Replace with your asset
+    image: '/images/machine-learning.jpg',
     alt: 'Abstract digital interface representing online learning frameworks'
   }
 ];
@@ -91,22 +91,22 @@ const TOP_ARTICLES = [
   {
     title: 'Sci-Hub an integrated search system and its ethical use',
     desc: 'Sci-Hub is an integrated search system that works with Library Catalogs to provide instant access to millions of research papers...',
-    image: '/images/scihub-laptop.jpg', // Replace with your asset
+    image: '/images/academy/Screenshot-2025-11-25-153459.png',
     alt: 'Person working on a laptop showing the Sci-Hub landing interface'
   },
   {
     title: 'Nature Journal Manuscript Formatting Guide',
-    image: '/images/nature-formatting.jpg', // Replace with your asset
+    image: '/images/academy/Nature-Journal-Manuscript-Formatting-Guide-1-e1764139406167.jpg',
     alt: 'Hand taking notes with scientific formatting guidelines adjacent'
   },
   {
     title: 'Sci-Hub: An Integrated Search System and Its Ethical Use',
-    image: '/images/scihub-use.jpg', // Replace with your asset
+    image: '/images/academy/Screenshot-2025-11-25-153459.png',
     alt: 'Closeup of laptop monitor exploring educational platforms'
   },
   {
     title: 'Nature Journal Manuscript Formatting Guide (Part II)',
-    image: '/images/nature-formatting-2.jpg', // Replace with your asset
+    image: '/images/academy/What-is-the-difference-between-APA-6thand-APA7th-edition.jpg',
     alt: 'Academic researcher holding physical feedback metrics signs'
   }
 ];
@@ -139,7 +139,7 @@ export default function PubricaKnowledgeBase() {
 
   return (
     <div className="bg-[#f9fbfb] min-h-screen text-gray-800 font-sans selection:bg-[#0f3430] selection:text-white">
-      
+
       {/* ========================================================================= */}
       {/* SECTION 1: KNOWLEDGE BASE SEARCH HERO                                      */}
       {/* ========================================================================= */}
@@ -152,7 +152,6 @@ export default function PubricaKnowledgeBase() {
             Explore hundreds of articles, videos, and other resources used by 4 million students every month.
           </p>
 
-          {/* Core Search bar */}
           <div className="max-w-3xl mx-auto bg-white rounded-md shadow-lg flex items-center px-4 py-3 text-gray-700">
             <Search className="h-5 w-5 text-gray-400 mr-3 shrink-0" />
             <input
@@ -174,8 +173,8 @@ export default function PubricaKnowledgeBase() {
           {KNOWLEDGE_CATEGORIES.map((category, idx) => {
             const IconComponent = category.icon;
             return (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="bg-white rounded-md p-6 border border-gray-200/60 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
@@ -190,8 +189,7 @@ export default function PubricaKnowledgeBase() {
                   <p className="text-xs text-gray-500 font-light leading-relaxed mb-6">
                     {category.description}
                   </p>
-                  
-                  {/* Category Inner Action links */}
+
                   <ul className="space-y-3 mb-8">
                     {category.links.map((link, linkIdx) => (
                       <li key={linkIdx} className="text-xs font-semibold text-sky-800 hover:text-emerald-700 cursor-pointer flex items-center gap-1.5 transition-colors">
@@ -218,7 +216,6 @@ export default function PubricaKnowledgeBase() {
       <section className="max-w-7xl mx-auto px-4 py-16">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-2xl font-bold text-[#0b2825]">Latest Articles</h2>
-          {/* Slider Controllers */}
           <div className="flex gap-2">
             <button className="p-2 border border-gray-200 bg-white text-emerald-800 rounded-full hover:bg-emerald-50 transition-colors">
               <ChevronLeft className="h-4 w-4" />
@@ -231,16 +228,17 @@ export default function PubricaKnowledgeBase() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {LATEST_ARTICLES.map((article, idx) => (
-            <article 
-              key={idx} 
+            <article
+              key={idx}
               className="bg-white border border-gray-200/80 rounded-sm overflow-hidden shadow-xs hover:shadow-md transition-shadow"
             >
               <div className="relative aspect-[16/10] w-full bg-gray-100 overflow-hidden">
-                {/* Fallback pattern representing the image layout structure */}
-                <div className="absolute inset-0 bg-gray-200 flex flex-col justify-center items-center text-center p-4">
-                  <span className="text-xs font-bold text-gray-400 tracking-widest mb-1">{article.category.toUpperCase()}</span>
-                  <span className="text-[10px] text-gray-400 font-light px-4">{article.alt}</span>
-                </div>
+                <Image
+                  src={article.image}
+                  alt={article.alt}
+                  fill
+                  className="object-cover"
+                />
               </div>
 
               <div className="p-5">
@@ -276,11 +274,10 @@ export default function PubricaKnowledgeBase() {
               return (
                 <div
                   key={idx}
-                  className={`p-6 rounded-md transition-transform hover:-translate-y-1 duration-200 flex flex-col justify-between ${
-                    item.dark 
-                      ? 'bg-[#0d2a27] text-white' 
-                      : 'bg-[#e2eff1] text-gray-800 border border-transparent'
-                  }`}
+                  className={`p-6 rounded-md transition-transform hover:-translate-y-1 duration-200 flex flex-col justify-between ${item.dark
+                    ? 'bg-[#0d2a27] text-white'
+                    : 'bg-[#e2eff1] text-gray-800 border border-transparent'
+                    }`}
                 >
                   <div>
                     <div className="mb-4">
@@ -306,48 +303,56 @@ export default function PubricaKnowledgeBase() {
       <section className="max-w-7xl mx-auto px-4 py-16">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-2xl font-bold text-[#0b2825]">Top Articles</h2>
-          <button className="text-xs font-semibold text-sky-800 hover:text-emerald-700 transition-colors uppercase tracking-wider">
+          <button className="text-xs font-semibold text-gray-600 hover:text-emerald-700 transition-colors uppercase tracking-wider">
             View All
           </button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+
           {/* Main Hero Column (Left) */}
           <div className="lg:col-span-6 bg-white border border-gray-200 rounded-sm overflow-hidden p-3 shadow-xs">
             <div className="relative aspect-[16/10] w-full bg-gray-150 overflow-hidden mb-4 rounded-xs">
-              <div className="absolute inset-0 bg-gray-200 flex flex-col justify-center items-center p-6 text-center">
-                <span className="text-xs uppercase text-gray-500 tracking-wider font-semibold mb-1">Featured Academic Resource</span>
-                <span className="text-[10px] text-gray-400 font-light">{TOP_ARTICLES[0].alt}</span>
-              </div>
+              <Image
+                src={TOP_ARTICLES[0].image}
+                alt={TOP_ARTICLES[0].alt}
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
             <div className="p-2">
               <h3 className="text-base md:text-lg font-bold text-[#0b2825] mb-2 leading-snug">
                 {TOP_ARTICLES[0].title}
               </h3>
-              <p className="text-xs text-gray-500 font-light leading-relaxed mb-4">
+              <p className="text-xs text-gray-500 font-light leading-relaxed">
                 {TOP_ARTICLES[0].desc}
               </p>
             </div>
           </div>
 
-          {/* Vertical Stack List (Right) */}
-          <div className="lg:col-span-6 space-y-4">
+          {/* Vertical Banner Card Stack List (Right Column - Matching Target Design) */}
+          <div className="lg:col-span-6 flex flex-col justify-between space-y-4">
             {TOP_ARTICLES.slice(1).map((item, idx) => (
-              <div 
-                key={idx} 
-                className="bg-white border border-gray-200 rounded-sm overflow-hidden p-3 flex gap-4 items-center hover:shadow-sm transition-shadow cursor-pointer"
+              <div
+                key={idx}
+                className="relative h-28 md:h-32 rounded-lg overflow-hidden shadow-md group cursor-pointer"
               >
-                <div className="relative aspect-[4/3] w-28 md:w-36 bg-gray-150 shrink-0 rounded-xs overflow-hidden">
-                  <div className="absolute inset-0 bg-gray-200 flex flex-col justify-center items-center text-center p-2">
-                    <span className="text-[8px] text-gray-400 font-semibold">{item.alt}</span>
-                  </div>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="text-xs md:text-sm font-bold text-[#0b2825] leading-snug line-clamp-2 hover:text-sky-800 transition-colors">
+                {/* Full Background Image */}
+                <Image
+                  src={item.image}
+                  alt={item.alt}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                {/* Dark Overlay for Text Contrast */}
+                <div className="absolute inset-0 bg-black/45 group-hover:bg-black/35 transition-colors" />
+
+                {/* Overlay Card Title */}
+                <div className="absolute inset-0 p-5 flex items-center z-10">
+                  <h4 className="text-sm md:text-base font-bold text-white leading-snug drop-shadow-sm max-w-md">
                     {item.title}
                   </h4>
-                  <span className="text-[11px] text-gray-400 mt-1 block">Read Article &gt;</span>
                 </div>
               </div>
             ))}
@@ -370,8 +375,8 @@ export default function PubricaKnowledgeBase() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {QA_ITEMS.map((item, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="bg-[#0b2825] text-white rounded-md p-6 flex flex-col justify-between shadow-md hover:-translate-y-1 transition-all duration-200 min-h-[280px]"
               >
                 <div>

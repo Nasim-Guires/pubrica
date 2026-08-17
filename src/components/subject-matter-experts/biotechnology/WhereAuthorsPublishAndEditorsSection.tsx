@@ -30,7 +30,7 @@ export default function WhereAuthorsPublishAndEditorsSection() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12 bg-white font-sans text-gray-800 space-y-16">
-      
+
       {/* SECTION 1: WHERE OUR AUTHORS PUBLISH */}
       <section className="space-y-6">
         <div className="text-center space-y-2">
@@ -48,7 +48,8 @@ export default function WhereAuthorsPublishAndEditorsSection() {
               src="/images/subject-matter-experts/biotechnology/sample-works-1-1.webp"
               alt="Biotechnology Advances Journal Cover"
               fill
-              className="object-cover"
+              className="object-contain"
+              sizes="160px"
             />
           </div>
           <div className="space-y-2 text-xs md:text-sm">

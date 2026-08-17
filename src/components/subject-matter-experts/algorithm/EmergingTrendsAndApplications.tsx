@@ -173,8 +173,8 @@ export default function EmergingTrendsAndApplications() {
                   key={trend.id}
                   onClick={() => setActiveTrend(trend)}
                   className={`py-3 px-2 text-center text-[11px] font-semibold transition-colors duration-150 border ${isActive
-                      ? "bg-[#12433e] text-white border-[#12433e]"
-                      : "bg-[#edf0f0] text-gray-800 border-gray-200 hover:bg-gray-200"
+                    ? "bg-[#12433e] text-white border-[#12433e]"
+                    : "bg-[#edf0f0] text-gray-800 border-gray-200 hover:bg-gray-200"
                     }`}
                 >
                   {trend.title}
@@ -239,13 +239,16 @@ export default function EmergingTrendsAndApplications() {
           </div>
 
           {/* Workspace Image */}
-          <div className="md:col-span-5 relative h-72 md:h-80 w-full rounded overflow-hidden border border-gray-200 shadow-sm">
-            <Image
-              src="/images/subject-matter-experts/algorithm/Applications-of-Algorithm.webp"
-              alt="Developer workstation with code on dual monitors"
-              fill
-              className="object-cover"
-            />
+          <div className="md:col-span-5 flex justify-center">
+            <div className="relative w-full max-w-[280px] h-[395px] overflow-hidden">
+              <Image
+                src="/images/subject-matter-experts/algorithm/Applications-of-Algorithm.webp"
+                alt="Developer workstation with code on dual monitors"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 280px"
+              />
+            </div>
           </div>
         </div>
       </div>

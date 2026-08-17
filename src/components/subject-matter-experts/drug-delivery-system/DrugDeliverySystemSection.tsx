@@ -68,17 +68,17 @@ const applicationsData = [
 ];
 
 const areasOfStudyData = [
-    'Molecular Biology',
-    'Gene Therapy',
-    'Immunology',
-    'Surface Chemistry',
-    'Microbiology',
-    'Nanomedicine',
-    'Tissue Engineering',
-    'Formulation Science',
-    'Pharmacogenomics',
-    'In Vitro & In Vivo Studies',
-    'Wound Healing & Regenerative Medicine'
+    "Molecular Biology",
+    "Gene Therapy",
+    "Immunology",
+    "Surface Chemistry",
+    "Microbiology",
+    "Nanomedicine",
+    "Tissue Engineering",
+    "Formulation Science",
+    "Pharmacogenomics",
+    "In Vitro & In Vivo Studies",
+    "Wound Healing & Regenerative Medicine",
 ];
 
 const editorsData = [
@@ -195,6 +195,7 @@ export default function DrugDeliverySystemSection() {
             {/* SECTION 3: Areas of Study (Full-Width Dark Green Background) */}
             <section className="w-full bg-[#0a2923] py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto space-y-10">
+                    {/* Section Header */}
                     <div className="text-center space-y-3">
                         <h2 className="text-3xl sm:text-4xl font-bold text-white">
                             Areas of Study
@@ -202,22 +203,34 @@ export default function DrugDeliverySystemSection() {
                         <div className="w-16 h-1 bg-white mx-auto rounded-full"></div>
                     </div>
 
-                    {/* Intro text / banner card on the left with grid of study tags on right */}
+                    {/* Content Layout */}
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                        <div className="lg:col-span-5 rounded-lg overflow-hidden shadow-lg relative min-h-[250px] flex items-end p-6 bg-cover bg-center" style={{ backgroundImage: `url('/images/subject-matter-experts/drug-delivery-system/Drug-Delivery-System.webp')` }}>
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                            <p className="relative z-10 text-white text-sm sm:text-base leading-relaxed">
-                                Pubrica's experts provide comprehensive support for drug delivery system research, ensuring your work is accurate, impactful, and reaches the right audience, from design to clinical application.
+                        {/* Banner Card Left */}
+                        <div
+                            className="lg:col-span-5 rounded-lg overflow-hidden shadow-lg relative min-h-[280px] flex items-center p-8 bg-cover bg-center"
+                            style={{
+                                backgroundImage: `url('/images/subject-matter-experts/drug-delivery-system/Drug-Delivery-System.webp')`,
+                            }}
+                        >
+                            <div className="absolute inset-0 bg-black/60"></div>
+                            <p className="relative z-10 text-white text-xs sm:text-sm leading-relaxed">
+                                Pubrica's experts provide comprehensive support for drug delivery
+                                system research, ensuring your work is accurate, impactful, and
+                                reaches the right audience, from design to clinical application.
                             </p>
                         </div>
 
-                        <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                        {/* Tag Grid Right */}
+                        <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-3">
                             {areasOfStudyData.map((study, index) => (
                                 <div
                                     key={index}
-                                    className="bg-white text-gray-900 px-4 py-3 rounded-md shadow-sm flex items-center space-x-2 text-sm font-semibold"
+                                    className={`bg-white text-[#111827] px-3 py-2 rounded-md shadow-sm flex items-center space-x-2 text-xs font-bold leading-tight ${index === 9 || index === 10 ? "sm:col-span-2" : ""
+                                        }`}
                                 >
-                                    <ChevronRight className="w-4 h-4 text-[#0e3b32] shrink-0" />
+                                    <div className="w-4 h-4 rounded-full bg-[#0a2923] flex items-center justify-center shrink-0">
+                                        <ChevronRight className="w-3 h-3 text-white" />
+                                    </div>
                                     <span>{study}</span>
                                 </div>
                             ))}

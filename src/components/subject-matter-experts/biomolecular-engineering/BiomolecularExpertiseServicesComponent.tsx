@@ -27,7 +27,7 @@ export default function BiomolecularExpertiseServicesComponent() {
       title: "Editing & Proofreading",
       iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Genetic-Protein-Engineering.webp",
       desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-      img: "/images/subject-matter-experts/biomolecular-engineering/Biomolecular-Engineering.webp",
+      img: "/images/subject-matter-experts/biomolecular-engineering/Editing-Proofreading.png",
       icon: Edit3,
     },
     {
@@ -53,7 +53,7 @@ export default function BiomolecularExpertiseServicesComponent() {
     {
       title: "Systematic Reviews",
       desc: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-      img: "/images/subject-matter-experts/biomolecular-engineering/Biomolecular-Engineering.webp",
+      img: "/images/subject-matter-experts/biomolecular-engineering/Journal-Selection.png",
       icon: BookOpen,
     },
     {

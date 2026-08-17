@@ -159,7 +159,7 @@ export default function BiomonitoringPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="/images/subject-matter-experts/biomonitoring/sample-works-7-3.webp"
+                                src="/images/subject-matter-experts/biomonitoring/Biomonitoring-480x480.webp"
                                 alt="Biomonitoring Laboratory Microscope"
                                 fill
                                 className="object-cover"

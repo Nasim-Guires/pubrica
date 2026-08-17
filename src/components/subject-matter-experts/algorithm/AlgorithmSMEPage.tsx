@@ -218,13 +218,14 @@ export default function AlgorithmSMEPage() {
                     </div>
 
                     <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white">
+                        <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white bg-gray-100">
                             <Image
                                 src="/images/subject-matter-experts/algorithm/Algorithm-1.webp"
                                 alt="Algorithm Research Visualization"
                                 fill
-                                className="object-cover"
+                                className="object-contain p-2"
                                 priority
+                                sizes="(max-width: 768px) 288px, 320px"
                             />
                         </div>
                     </div>

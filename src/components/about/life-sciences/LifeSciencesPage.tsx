@@ -34,18 +34,18 @@ const accordionData: AccordionSection[] = [
     items: [
       { label: 'MEDICINE', href: '/about-us/medicine' },
       { label: 'LIFE SCIENCE', href: '/about-us/life-sciences' },
-      { label: 'PHYSICAL SCIENCES AND ENGINEERING', href: '/about-us/physical-sciences' },
+      { label: 'PHYSICAL SCIENCES AND ENGINEERING', href: '/about-us/physical-sciences-engineering' },
     ],
   },
   {
     id: 'therapeutic-expertise',
     title: 'THERAPEUTIC EXPERTISE',
-    items: [{ label: 'OVERVIEW', href: '/about-us/therapeutic-expertise' }],
+    items: [{ label: 'OVERVIEW', href: '/therapeutic-expertise' }],
   },
   {
     id: 'global-partners',
     title: 'GLOBAL PARTNERS AND MEMBERSHIP',
-    items: [{ label: 'PARTNERS', href: '/about-us/global-partners' }],
+    items: [{ label: 'PARTNERS', href: '/strategic-partnerships-memberships' }],
   },
   {
     id: 'contact-us',

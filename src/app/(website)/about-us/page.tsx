@@ -3,22 +3,26 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { 
-  Users, 
-  ShieldCheck, 
-  GraduationCap, 
-  ChevronRight, 
-  FileText, 
-  CheckCircle, 
-  Layers, 
-  FileCheck, 
+import {
+  Users,
+  ShieldCheck,
+  GraduationCap,
+  ChevronRight,
+  FileText,
+  CheckCircle,
+  Layers,
+  FileCheck,
   Briefcase,
   HelpCircle,
   Plus,
-  Minus
+  Minus,
+  FileEdit,
+  UserCheck,
+  Scale
 } from 'lucide-react';
 import Container from '@/components/common/Container';
 import Breadcrumb from '@/components/seo/Breadcrumb';
+import Image from 'next/image';
 
 // Comprehensive Accordion Interface Data mapping all 15 services with complete details
 interface AccordionItem {
@@ -497,23 +501,25 @@ export default function AboutPage() {
       </header>
 
       <main className="bg-white min-h-screen text-gray-800 antialiased selection:bg-emerald-600 selection:text-white">
-        
+
         {/* ========================================================================= */}
         {/* SECTION 1: CORE PROFILE HERO SPLIT LAYOUT                                 */}
         {/* ========================================================================= */}
         <section className="py-16 bg-white font-sans" aria-label="Company Overview">
           <Container className="max-w-6xl px-4">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-              
+
               <div className="lg:col-span-5 relative">
                 <div className="relative aspect-[4/4] w-full rounded-xs overflow-hidden bg-gray-100 border border-gray-200 shadow-xs">
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-gray-400 bg-gray-50">
-                    <span className="text-emerald-800 font-semibold text-xs uppercase tracking-widest mb-2">Pubrica Media Vector</span>
-                    <span className="text-xs max-w-[200px] text-gray-500 font-light">Female researcher working with laboratory high-precision microscope setup</span>
-                  </div>
+                  <Image
+                    src="/images/academy/single-first-image-1-480x537.jpg"
+                    alt="Female researcher working with laboratory high-precision microscope setup"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                  />
                 </div>
               </div>
-
               <div className="lg:col-span-7 flex flex-col">
                 <span className="text-emerald-800 font-bold underline decoration-emerald-600 decoration-2 underline-offset-4 text-sm mb-4 tracking-wide font-display">
                   About Us
@@ -562,7 +568,7 @@ export default function AboutPage() {
         <section className="bg-[#11231f] py-16 text-white font-sans" aria-label="Key Capabilities">
           <Container className="max-w-7xl px-4">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              
+
               <div className="lg:col-span-4 bg-white rounded-xs p-2 text-[#11231f] shadow-xl">
                 <nav className="divide-y divide-gray-100 text-xs font-bold font-sans tracking-wide uppercase">
                   {NAV_ITEMS.map((item, idx) => {
@@ -572,9 +578,8 @@ export default function AboutPage() {
                       <Link
                         key={idx}
                         href={item.href}
-                        className={`flex items-center justify-between p-4 transition-colors group ${
-                          isActive ? "bg-gray-100 text-[#1b8c6e]" : "bg-white hover:bg-gray-50"
-                        }`}
+                        className={`flex items-center justify-between p-4 transition-colors group ${isActive ? "bg-gray-100 text-[#1b8c6e]" : "bg-white hover:bg-gray-50"
+                          }`}
                       >
                         <div className="flex items-center gap-3">
                           <ChevronRight className="h-4 w-4 text-white bg-black rounded-full p-0.5 group-hover:scale-110 transition-transform" />
@@ -712,6 +717,118 @@ export default function AboutPage() {
         </section>
 
         {/* ========================================================================= */}
+        {/* SECTION: WHY CHOOSE PUBRICA (IMAGE & COMPLIANCE FEATURES SPLIT)          */}
+        {/* ========================================================================= */}
+        <section className="bg-white py-16 font-sans text-gray-800 border-t border-gray-100" aria-label="Why Choose Pubrica Details">
+          <Container className="max-w-7xl px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+              {/* Left Column: Image & Feature Items Below */}
+              <div className="lg:col-span-5 flex flex-col space-y-10">
+                {/* Main Hero Composite Image */}
+                <div className="relative aspect-[4/3.5] w-full rounded-xs overflow-hidden">
+                  <Image
+                    src="/images/academy/about-us-768x661.webp"
+                    alt="Why Choose Pubrica Quality Assurance and Research Capabilities"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                  />
+                </div>
+
+                {/* Left Side Feature 1: Ethical Standards */}
+                <div className="flex items-start gap-4">
+                  <div className="p-2.5 bg-[#eaf4f2] text-[#11231f] rounded-xs shrink-0 mt-1">
+                    <Scale className="h-6 w-6 stroke-[1.75]" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-[#11231f] font-display mb-1.5">
+                      Ethical Standards:
+                    </h3>
+                    <p className="text-xs text-gray-600 font-light leading-relaxed">
+                      Pubrica strictly adheres to the ISMPP Code of Ethics in all our medical publication services. We follow Good Publication Practice (GPP) and the ethical principles outlined in the World Medical Association Declaration of Helsinki. Additionally, we comply with the Principles on Conduct of Clinical Trials and Communication of Clinical Trial Results (PhRMA), Joint Position on the Publication of Clinical Trial Results in Scientific Literature (IFPMA/EFPIA/JPMA/PhRMA), the EQUATOR Network, and Good Practices for Outcomes Research (ISPOR).
+                    </p>
+                  </div>
+                </div>
+
+                {/* Left Side Feature 2: Efficient Process */}
+                <div className="flex items-start gap-4">
+                  <div className="p-2.5 bg-[#eaf4f2] text-[#11231f] rounded-xs shrink-0 mt-1">
+                    <UserCheck className="h-6 w-6 stroke-[1.75]" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-[#11231f] font-display mb-1.5">
+                      Efficient Process:
+                    </h3>
+                    <p className="text-xs text-gray-600 font-light leading-relaxed">
+                      Our streamlined process saves you time and money, making publishing in journals or obtaining regulatory drug approvals easy and hassle-free. Choose Pubrica for a seamless, high-quality, and ethically sound research and publication experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Title, Intro & Feature Items */}
+              <div className="lg:col-span-7 flex flex-col space-y-8">
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-extrabold text-[#11231f] font-display mb-3">
+                    Why Choose Pubrica?
+                  </h2>
+                  <p className="text-xs md:text-sm text-gray-600 font-light leading-relaxed">
+                    Pubrica stands out as a leader in scientific research support and communication, offering unparalleled expertise and quality. Here's why you should choose us:
+                  </p>
+                </div>
+
+                {/* Right Side Feature 1: Expert Team */}
+                <div className="flex items-start gap-4 pt-2">
+                  <div className="p-2.5 bg-[#eaf4f2] text-[#11231f] rounded-xs shrink-0 mt-1">
+                    <UserCheck className="h-6 w-6 stroke-[1.75]" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-[#11231f] font-display mb-1.5">
+                      Expert Team:
+                    </h3>
+                    <p className="text-xs text-gray-600 font-light leading-relaxed">
+                      Our team of certified professionals, including the American Medical Writers Association (AMWA) and the European Medical Writers Association (EMWA) certified writers, ensures the highest standards in medical writing and research support.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Right Side Feature 2: Comprehensive Compliance */}
+                <div className="flex items-start gap-4">
+                  <div className="p-2.5 bg-[#eaf4f2] text-[#11231f] rounded-xs shrink-0 mt-1">
+                    <ShieldCheck className="h-6 w-6 stroke-[1.75]" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-[#11231f] font-display mb-1.5">
+                      Comprehensive Compliance:
+                    </h3>
+                    <p className="text-xs text-gray-600 font-light leading-relaxed">
+                      We guarantee 100% quality assurance by adhering to guidelines set by the International Conference on Harmonisation (ICH), Conformité Européenne (CE), EU General Data Protection Regulation (GDPR), Food and Drug Administration Amendment Act (FDAAA), Foreign Corrupt Practices Act (FCPA), Good Clinical Practice (GCP), and Clinical Data Interchange Standards Consortium (CDISC), among others.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Right Side Feature 3: Comprehensive Support */}
+                <div className="flex items-start gap-4">
+                  <div className="p-2.5 bg-[#eaf4f2] text-[#11231f] rounded-xs shrink-0 mt-1">
+                    <FileEdit className="h-6 w-6 stroke-[1.75]" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-[#11231f] font-display mb-1.5">
+                      Comprehensive Support:
+                    </h3>
+                    <p className="text-xs text-gray-600 font-light leading-relaxed">
+                      Our team includes PhD-level Subject-Matter Experts (SMEs) across life sciences, computer science, medicine, and technology. These PhD-level experts with specialized therapeutic knowledge are available at every stage of your project. Our Scientific Writing &amp; Publishing team is dedicated to aiding you in publishing in journals or obtaining regulatory drug approvals, making the process efficient and cost-effective.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </Container>
+        </section>
+
+        {/* ========================================================================= */}
         {/* SECTION 4: FULL EXPANDABLE ACCORDIONS WITH RICH TEXT CONTENT              */}
         {/* ========================================================================= */}
         <section className="bg-gray-50 py-16 font-sans border-t border-gray-100" aria-label="Outsourcing Domains">
@@ -730,18 +847,16 @@ export default function AboutPage() {
               {CONSULTING_SERVICES.map((item, idx) => {
                 const isOpen = openAccordion === idx;
                 return (
-                  <div 
-                    key={item.id} 
-                    className={`border rounded-xs overflow-hidden transition-all bg-white ${
-                      isOpen ? "border-emerald-600/40 shadow-xs" : "border-gray-200/80"
-                    }`}
+                  <div
+                    key={item.id}
+                    className={`border rounded-xs overflow-hidden transition-all bg-white ${isOpen ? "border-emerald-600/40 shadow-xs" : "border-gray-200/80"
+                      }`}
                   >
                     {/* Header Button */}
                     <button
                       onClick={() => toggleAccordion(idx)}
-                      className={`w-full text-left px-5 py-3.5 flex items-center justify-between text-xs md:text-sm font-bold transition-colors focus:outline-hidden ${
-                        isOpen ? "text-[#11231f]" : "text-gray-800 hover:text-emerald-800"
-                      }`}
+                      className={`w-full text-left px-5 py-3.5 flex items-center justify-between text-xs md:text-sm font-bold transition-colors focus:outline-hidden ${isOpen ? "text-[#11231f]" : "text-gray-800 hover:text-emerald-800"
+                        }`}
                       aria-expanded={isOpen}
                     >
                       <span className="pr-4 tracking-wide leading-snug">{item.title}</span>
@@ -749,7 +864,7 @@ export default function AboutPage() {
                         {isOpen ? <Minus className="h-4 w-4 stroke-[2.5]" /> : <Plus className="h-4 w-4 stroke-[2.5]" />}
                       </span>
                     </button>
-                    
+
                     {/* Opened Content Layout */}
                     {isOpen && (
                       <div className="px-6 pb-6 pt-2 text-xs md:text-sm text-gray-700 leading-relaxed font-sans border-t border-gray-100 space-y-4">
@@ -772,7 +887,7 @@ export default function AboutPage() {
                                 <span className="font-bold text-gray-900 block">
                                   {section.title}
                                 </span>
-                                
+
                                 {section.description && (
                                   <p className="text-gray-600 pl-4 font-normal">
                                     {section.description}
@@ -823,7 +938,7 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {INDUSTRIES_SERVED.map((industry, idx) => (
-                <div 
+                <div
                   key={idx}
                   className="bg-white border border-gray-200/90 rounded-sm p-5 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-start"
                 >

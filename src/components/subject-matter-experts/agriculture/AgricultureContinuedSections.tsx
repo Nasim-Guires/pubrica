@@ -43,7 +43,7 @@ export default function AgricultureContinuedSections() {
   return (
     <div className="w-full bg-[#fcfcfc] font-sans text-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
-        
+
         {/* SECTION 1: EMERGING TRENDS IN AGRICULTURE */}
         <section className="space-y-6">
           <div className="space-y-2">
@@ -95,13 +95,16 @@ export default function AgricultureContinuedSections() {
             </div>
 
             {/* Image */}
-            <div className="md:col-span-5 relative h-72 md:h-80 w-full rounded overflow-hidden shadow-sm border border-gray-200">
-              <Image
-                src="/images/subject-matter-experts/agriculture/Emerging-Trends-in-Agriculture.webp"
-                alt="Emerging trends in agriculture"
-                fill
-                className="object-cover"
-              />
+            <div className="md:col-span-5 flex justify-center">
+              <div className="relative w-full max-w-[280px] h-[395px] overflow-hidden">
+                <Image
+                  src="/images/subject-matter-experts/agriculture/Emerging-Trends-in-Agriculture.webp"
+                  alt="Emerging trends in agriculture"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 280px"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -120,22 +123,15 @@ export default function AgricultureContinuedSections() {
 
           <div className="bg-white border border-gray-200 rounded p-6 shadow-sm text-left flex flex-col md:flex-row items-center gap-8 justify-center">
             {/* Journal Cover Box */}
-            <div className="relative w-48 h-64 shadow-md shrink-0 border border-gray-100 bg-[#388e3c] flex flex-col justify-between overflow-hidden">
-              <div className="p-3 text-white">
-                <span className="text-[10px] font-bold block lowercase">agriculture</span>
-                <p className="text-[8px] mt-1 leading-tight text-white/90">
-                  A New Way to Stabilize Agricultural Supply Consumption, and General Prices
-                </p>
-              </div>
-              <div className="relative h-28 w-full">
-                <Image
-                  src="/images/subject-matter-experts/agriculture/sample-works.webp"
-                  alt="Farmer examining field"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
+     <div className="relative w-48 h-64 shadow-md shrink-0 border border-gray-100 overflow-hidden bg-white">
+  <Image
+    src="/images/subject-matter-experts/agriculture/sample-works.webp"
+    alt="Farmer examining field"
+    fill
+    className="object-cover"
+    sizes="192px"
+  />
+</div>
 
             {/* Paper Details */}
             <div className="space-y-3.5 text-xs text-gray-700">

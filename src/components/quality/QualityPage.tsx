@@ -2,19 +2,29 @@
 
 import React from "react";
 import Link from "next/link";
+import {
+  BookOpen,
+  FileEdit,
+  Users,
+  Calendar,
+  ShieldCheck,
+  Award,
+  Laptop,
+  CheckCircle2,
+} from "lucide-react";
+import Image from "next/image";
 
 export interface QualityFeature {
   id: string;
   title: string;
   description: string;
-  iconPlaceholder: string;
 }
 
 export interface MetricItem {
   id: string;
   value: string;
   label: string;
-  iconPlaceholder: string;
+  icon: React.ReactNode;
 }
 
 export interface GuaranteeItem {
@@ -22,7 +32,6 @@ export interface GuaranteeItem {
   title: string;
   subtitle: string;
   description: string;
-  iconPlaceholder: string;
   ctaText: string;
   ctaLink: string;
 }
@@ -39,28 +48,24 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       title: "Experts from different specializations",
       description:
         "Pubrica: Experts from various fields collaborate, ensuring top-quality publications tailored to diverse disciplines.",
-      iconPlaceholder: "[ Icon: Book / Experts ]",
     },
     {
       id: "native-writers",
       title: "Native English writers",
       description:
         "Pubrica: Native English writers ensure impeccable manuscripts, meeting the highest standards of academic and scientific publishing.",
-      iconPlaceholder: "[ Icon: Book / Native Writers ]",
     },
     {
       id: "project-coordinator",
       title: "Specific project coordinator guidance",
       description:
         "Pubrica's project coordinators offer tailored guidance, ensuring seamless execution of your specific project needs.",
-      iconPlaceholder: "[ Icon: Book / Coordinator ]",
     },
     {
       id: "phase-quality",
       title: "Quality assured at every phase",
       description:
         "Pubrica ensures quality at every phase, guaranteeing meticulous attention to detail throughout the publication process.",
-      iconPlaceholder: "[ Icon: Book / Quality Phase ]",
     },
   ];
 
@@ -70,31 +75,31 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       id: "papers",
       value: "972,000+",
       label: "papers edited",
-      iconPlaceholder: "[ Icon: Edit ]",
+      icon: <FileEdit className="w-6 h-6 text-slate-700" />,
     },
     {
       id: "authors",
       value: "260,000+",
       label: "authors served",
-      iconPlaceholder: "[ Icon: Author ]",
+      icon: <BookOpen className="w-6 h-6 text-slate-700" />,
     },
     {
       id: "subjects",
       value: "1200+",
       label: "subjects covered",
-      iconPlaceholder: "[ Icon: Calendar / Subjects ]",
+      icon: <Calendar className="w-6 h-6 text-slate-700" />,
     },
     {
       id: "experts",
       value: "2000+",
       label: "experts",
-      iconPlaceholder: "[ Icon: Shield Expert ]",
+      icon: <Users className="w-6 h-6 text-slate-700" />,
     },
     {
       id: "experience",
       value: "16+",
       label: "years of experience",
-      iconPlaceholder: "[ Icon: Sparkles ]",
+      icon: <Award className="w-6 h-6 text-slate-700" />,
     },
   ];
 
@@ -106,7 +111,6 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       subtitle: "All specializations",
       description:
         "We have a team of 200+ professional, experienced editors in Science, Technology, and Management who work on 170 specializations. Ensure your content is succinct, structured, cohesive, and collated. We help you through the entire lifecycle for academic, scientific, and medical content. We help you with selection, review, preparation, artwork, review, and submission.",
-      iconPlaceholder: "[ Icon: Laptop / Experts ]",
       ctaText: "Contact us",
       ctaLink: "/contact",
     },
@@ -116,7 +120,6 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       subtitle: "Thorough review",
       description:
         "Every project is vetted by couple of experts in language and the core subject. And we have a team of editors and reviewers who check quality of content; moreover, our knowledge at the publication process means your work has a higher chance of being published.",
-      iconPlaceholder: "[ Icon: Laptop / Response ]",
       ctaText: "Contact us",
       ctaLink: "/contact",
     },
@@ -126,7 +129,6 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       subtitle: "Safeguarding data",
       description:
         "Your data, work, concepts, ideas, creative—these are all kept confidential and we guarantee you privacy of your information; you will be have a project coordinator who will work with you every day of the project.",
-      iconPlaceholder: "[ Icon: Laptop / Security ]",
       ctaText: "Contact us",
       ctaLink: "/contact",
     },
@@ -136,7 +138,6 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       subtitle: "Writing styles",
       description:
         "We can help you in all types of writing projects—Science, Technology, Engineering and Mathematics (STEM). Certified writing experts available in academic, scientific, medical, fiction, and non-fiction. Let us know your requirements today.",
-      iconPlaceholder: "[ Icon: Laptop / Genres ]",
       ctaText: "Contact us",
       ctaLink: "/contact",
     },
@@ -187,18 +188,16 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
           {mainFeatures.map((item) => (
             <div
               key={item.id}
-              className="bg-[#0b3328] hover:bg-[#07271e] transition-colors text-white p-6 sm:p-7 rounded-xl flex items-start gap-5 shadow-md"
+              className="bg-[#0b3328] hover:bg-[#07271e] transition-colors text-white p-6 sm:p-7 rounded-xl flex items-center gap-5 shadow-md"
             >
-              <div className="w-12 h-12 rounded-lg bg-[#14483a] border border-dashed border-emerald-400/40 flex-shrink-0 flex items-center justify-center p-1 text-center">
-                <span className="text-[9px] text-emerald-200 leading-tight font-medium">
-                  {item.iconPlaceholder}
-                </span>
+              <div className="w-14 h-14 rounded-lg flex-shrink-0 flex items-center justify-center text-white">
+                <BookOpen className="w-10 h-10 stroke-[1.5]" />
               </div>
-              <div className="space-y-2">
+              <div className="space-y-1">
                 <h3 className="text-sm sm:text-base font-bold text-white leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-xs text-emerald-100/80 leading-relaxed">
+                <p className="text-xs text-emerald-100/80 leading-relaxed font-light">
                   {item.description}
                 </p>
               </div>
@@ -208,14 +207,12 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       </section>
 
       {/* 4. Stats Banner */}
-      <section className="w-full bg-slate-50 border-y border-slate-200/60 py-12 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-white border-y border-slate-200/60 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-around gap-8 text-center">
           {metrics.map((stat) => (
             <div key={stat.id} className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-emerald-100/60 border border-emerald-300 flex items-center justify-center text-center p-1">
-                <span className="text-[8px] font-bold text-emerald-800 leading-tight">
-                  {stat.iconPlaceholder}
-                </span>
+              <div className="flex items-center justify-center shrink-0">
+                {stat.icon}
               </div>
               <div className="text-left">
                 <p className="text-xl sm:text-2xl font-black text-[#1b2b28]">
@@ -233,12 +230,18 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       {/* 5. Editorial & Tag Cloud Section */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm">
-          {/* Word Cloud Visual Placeholder */}
+
+          {/* Word Art Image Column */}
           <div className="md:col-span-5 flex justify-center">
-            <div className="w-full max-w-xs h-56 rounded-xl bg-emerald-50/50 border-2 border-dashed border-emerald-300 flex flex-col items-center justify-center p-6 text-center">
-              <span className="text-2xl font-extrabold text-[#0d4738] mb-1">Quality</span>
-              <span className="text-lg font-bold text-slate-700">ISO | MLA | APA</span>
-              <span className="text-xs text-slate-500 mt-2">[ Interactive Tag Cloud Visual ]</span>
+            <div className="relative w-full max-w-sm aspect-square">
+              <Image
+                src="/images/academy/Word-Art-2.png"
+                alt="Pubrica Quality Word Cloud Graphic"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 40vw"
+                priority
+              />
             </div>
           </div>
 
@@ -255,6 +258,7 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
               .
             </p>
           </div>
+
         </div>
       </section>
 
@@ -277,11 +281,8 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
               className="bg-white rounded-xl border border-slate-200 p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center justify-between"
             >
               <div>
-                {/* Icon Placeholder */}
-                <div className="w-14 h-14 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center mx-auto mb-5 p-2">
-                  <span className="text-[9px] font-bold text-emerald-800 leading-tight">
-                    {item.iconPlaceholder}
-                  </span>
+                <div className="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center mx-auto mb-5">
+                  <Laptop className="w-6 h-6 text-[#0b3328]" />
                 </div>
 
                 <h3 className="text-sm font-bold text-[#1b2b28] tracking-wider uppercase mb-1">

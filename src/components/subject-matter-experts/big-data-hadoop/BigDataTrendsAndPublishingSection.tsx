@@ -190,13 +190,14 @@ export default function BigDataTrendsAndPublishingSection() {
                     </div>
 
                     {/* Right Side Cloud Graphic Image */}
-                    <div className="lg:col-span-5 flex justify-center sticky top-6">
-                        <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-md border border-gray-200">
+                    <div className="md:col-span-5 flex justify-center">
+                        <div className="relative w-full max-w-[280px] h-[395px] overflow-hidden">
                             <Image
                                 src="/images/subject-matter-experts/big-data-hadoop/Applications-of-Big-Data-Hadoop-.webp"
                                 alt="Big Data Cloud Analytics"
                                 fill
                                 className="object-cover"
+                                sizes="(max-width: 768px) 100vw, 280px"
                             />
                         </div>
                     </div>

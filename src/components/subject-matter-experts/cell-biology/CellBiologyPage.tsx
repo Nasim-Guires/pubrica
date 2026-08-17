@@ -180,7 +180,7 @@ export default function CellBiologyPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="/images/subject-matter-experts/cell-biology/sample-works-6.webp"
+                                src="/images/subject-matter-experts/cell-biology/Comprehensive-Research-Writing-and-Publication-Support-in-Cell-Biology-480x480.webp"
                                 alt="Cell biology chromosome and cellular research visual"
                                 fill
                                 priority

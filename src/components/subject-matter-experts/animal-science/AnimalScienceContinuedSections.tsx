@@ -97,7 +97,7 @@ export default function AnimalScienceContinuedSections() {
   return (
     <div className="w-full bg-[#fcfcfc] font-sans text-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
-        
+
         {/* SECTION 1: EMERGING TRENDS */}
         <section className="max-w-5xl space-y-6">
           <div className="space-y-2">
@@ -118,11 +118,10 @@ export default function AnimalScienceContinuedSections() {
                   <button
                     key={trend.id}
                     onClick={() => setActiveTrend(trend)}
-                    className={`py-3 px-4 text-center text-[11px] font-semibold transition-colors duration-150 border flex-1 min-w-[140px] ${
-                      isActive
-                        ? "bg-[#12433e] text-white border-[#12433e]"
-                        : "bg-[#edf0f0] text-gray-700 border-gray-200 hover:bg-gray-200"
-                    }`}
+                    className={`py-3 px-4 text-center text-[11px] font-semibold transition-colors duration-150 border flex-1 min-w-[140px] ${isActive
+                      ? "bg-[#12433e] text-white border-[#12433e]"
+                      : "bg-[#edf0f0] text-gray-700 border-gray-200 hover:bg-gray-200"
+                      }`}
                   >
                     {trend.title}
                   </button>
@@ -189,13 +188,16 @@ export default function AnimalScienceContinuedSections() {
             </div>
 
             {/* Image */}
-            <div className="md:col-span-5 relative h-72 md:h-80 w-full rounded overflow-hidden shadow-sm">
-              <Image
-                src="/images/subject-matter-experts/animal-science/Applications-of-Animal-Science.png"
-                alt="Veterinarian examining a rabbit with a stethoscope"
-                fill
-                className="object-cover"
-              />
+            <div className="md:col-span-5 flex justify-center">
+              <div className="relative w-full max-w-[280px] h-[395px] overflow-hidden">
+                <Image
+                  src="/images/subject-matter-experts/animal-science/Applications-of-Animal-Science.png"
+                  alt="Veterinarian examining a rabbit with a stethoscope"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 280px"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -225,11 +227,11 @@ export default function AnimalScienceContinuedSections() {
             <h2 className="text-2xl font-bold text-white mb-8 text-center md:text-left relative inline-block">
               Areas of <span className="underline decoration-2 underline-offset-4 decoration-white">Study</span>
             </h2>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {areasOfStudy.map((area, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="bg-white rounded-sm py-2 px-3 flex items-center gap-2 shadow-sm hover:bg-gray-50 transition-colors"
                 >
                   <div className="bg-[#0d3630] rounded-full p-0.5 flex-shrink-0">
@@ -261,21 +263,21 @@ export default function AnimalScienceContinuedSections() {
           <div className="bg-white border border-gray-200 rounded p-6 shadow-sm text-left flex flex-col md:flex-row items-center gap-8 justify-center">
             {/* Journal Cover Placeholder */}
             <div className="relative w-48 h-64 shadow-md shrink-0 border border-gray-100 bg-[#8bc34a] flex flex-col items-center justify-between p-4">
-               {/* Recreating a CSS approximation of the cover in the screenshot */}
-               <div className="text-center w-full text-white">
-                 <p className="text-[8px] uppercase tracking-widest font-semibold">Journal of</p>
-                 <p className="text-[10px] uppercase font-bold">Animal Science</p>
-               </div>
-               <h1 className="text-5xl font-black text-white/90">JAS</h1>
-               <div className="w-full relative h-20">
-                 {/* Geometric Cow Image Approximation */}
-                 <Image 
-                   src="/images/subject-matter-experts/animal-science/animal.jpg" 
-                   alt="Cow abstract" 
-                   fill 
-                   className="object-cover mix-blend-overlay opacity-50"
-                 />
-               </div>
+              {/* Recreating a CSS approximation of the cover in the screenshot */}
+              <div className="text-center w-full text-white">
+                <p className="text-[8px] uppercase tracking-widest font-semibold">Journal of</p>
+                <p className="text-[10px] uppercase font-bold">Animal Science</p>
+              </div>
+              <h1 className="text-5xl font-black text-white/90">JAS</h1>
+              <div className="w-full h-20 overflow-hidden">
+                <Image
+                  src="/images/subject-matter-experts/animal-science/animal.jpg"
+                  alt="Cow"
+                  width={1200}
+                  height={400}
+                  className="w-full h-full object-contain mix-blend-overlay opacity-50"
+                />
+              </div>
             </div>
 
             {/* Paper Info */}

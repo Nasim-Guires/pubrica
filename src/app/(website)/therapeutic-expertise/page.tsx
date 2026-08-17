@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus, Star, PlusCircle } from "lucide-react";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Therapeutic Expertise | Niche Areas - Pubrica",
@@ -81,7 +82,7 @@ export default function TherapeuticExpertisePage() {
           <nav className="space-y-1 border-t border-gray-200 pt-4">
 
 
-            {sidebarItems.map((item)=>(
+            {sidebarItems.map((item) => (
 
               <button
                 key={item.name}
@@ -91,11 +92,10 @@ export default function TherapeuticExpertisePage() {
 
 
                 <span
-                  className={`p-0.5 border flex items-center justify-center ${
-                    item.active
-                      ? "bg-gray-600 border-gray-600 text-white"
-                      : "border-gray-400 text-gray-600 group-hover:bg-gray-100"
-                  }`}
+                  className={`p-0.5 border flex items-center justify-center ${item.active
+                    ? "bg-gray-600 border-gray-600 text-white"
+                    : "border-gray-400 text-gray-600 group-hover:bg-gray-100"
+                    }`}
                 >
 
                   <Plus
@@ -108,11 +108,10 @@ export default function TherapeuticExpertisePage() {
 
 
                 <span
-                  className={`text-xs font-semibold tracking-wider ${
-                    item.active
+                  className={`text-xs font-semibold tracking-wider ${item.active
                     ? "text-gray-900 font-bold"
                     : "text-gray-600"
-                  }`}
+                    }`}
                 >
 
                   {item.name}
@@ -185,38 +184,15 @@ export default function TherapeuticExpertisePage() {
           {/* Infographic Placeholder */}
           <section className="flex justify-center">
 
-
-            <div
-              className="
-              w-full
-              max-w-2xl
-              h-96
-              bg-gray-100
-              border-2
-              border-dashed
-              border-gray-400
-              rounded-lg
-              flex
-              flex-col
-              items-center
-              justify-center
-              text-center
-              p-6
-              "
-            >
-
-              <span className="font-bold text-gray-700">
-                [ Image Section ]
-              </span>
-
-
-              <span className="text-sm text-gray-500 mt-2">
-                Niche Therapeutic Services Diagram
-              </span>
-
-
+            <div className="w-full max-w-2xl h-96 relative bg-gray-100 border-2 border-gray-400 rounded-lg overflow-hidden">
+              <Image
+                src="/images/academy/cns-shart-01-1021x1024.jpg"
+                alt="Niche Therapeutic Services Diagram"
+                fill
+                className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 672px"
+              />
             </div>
-
 
           </section>
 
@@ -233,7 +209,7 @@ export default function TherapeuticExpertisePage() {
                 "Scientific & Medical Communication",
                 "Upgradation of Services",
                 "Research Services"
-              ].map((item)=>(
+              ].map((item) => (
 
 
                 <div
@@ -281,7 +257,7 @@ export default function TherapeuticExpertisePage() {
 
 
               {
-                focusAreas.map((area)=>(
+                focusAreas.map((area) => (
 
                   <li
                     key={area}
@@ -319,36 +295,14 @@ export default function TherapeuticExpertisePage() {
             </h3>
 
 
-
-            <div
-              className="
-              h-80
-              bg-gray-100
-              border-2
-              border-dashed
-              border-gray-400
-              rounded-lg
-              flex
-              items-center
-              justify-center
-              text-center
-              "
-            >
-
-              <div>
-
-                <p className="font-bold text-gray-700">
-                  [ Image Section ]
-                </p>
-
-
-                <p className="text-sm text-gray-500 mt-2">
-                  Research Wheel Chart
-                </p>
-
-              </div>
-
-
+            <div className="h-80 relative bg-gray-100 border-2 border-gray-400 rounded-lg overflow-hidden">
+              <Image
+                src="/images/academy/circle-1-1024x441.png"
+                alt="Research Wheel Chart"
+                fill
+                className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 1024px"
+              />
             </div>
 
 

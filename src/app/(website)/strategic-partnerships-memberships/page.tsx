@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 // ----------------------------------------------------------------------------
 // SEO METADATA
@@ -48,8 +49,8 @@ type Partner = {
   description: string;
   source: string;
   sourceHref: string;
-  logoText: string;
-  logoClassName: string;
+  logoSrc?: string; // Optional image source
+  logoAlt?: string; // Optional alt text
 };
 
 const partners: Partner[] = [
@@ -59,8 +60,8 @@ const partners: Partner[] = [
       "ALPSP is an international membership trade body that supports and represents not-for-profit organizations and institutions that publish scholarly and professional content. Their mission is to connect, inform, develop, and represent the international scholarly and professional publishing community.",
     source: "www.alpsp.org",
     sourceHref: "https://www.alpsp.org",
-    logoText: "ALPSP",
-    logoClassName: "bg-white text-emerald-700 border border-emerald-200",
+    logoSrc: "/images/academy/alpsp-logo.png",
+    logoAlt: "ALPSP Logo",
   },
   {
     name: "STM",
@@ -68,8 +69,8 @@ const partners: Partner[] = [
       "STM is the leading global trade association for academic and professional publishers. STM aims to assist publishers and their authors in their activities in disseminating the results of research in the fields of science, technology, and medicine, assist national and international organizations/communications industries in the electronic environment for improving the dissemination, storage, and retrieval of scientific, technical, and medical information; and carry out the foregoing work in conjunction with the International Publishers Association (IPA) and other governmental and professional bodies. STM participates in the development of information identification protocols and electronic copyright management systems.",
     source: "www.stm-assoc.org",
     sourceHref: "https://www.stm-assoc.org",
-    logoText: "STM",
-    logoClassName: "bg-purple-700 text-white",
+    logoSrc: "/images/academy/stm-logo.webp",
+    logoAlt: "STM Logo",
   },
   {
     name: "Society for Scholarly Publishing (SSP)",
@@ -77,8 +78,7 @@ const partners: Partner[] = [
       "The Society for Scholarly Publishing (SSP), founded in 1978, is a non-profit organization formed to promote and advance communication among all sectors of the scholarly publication community through networking, information dissemination, and facilitation of new developments in the field.",
     source: "www.sspnet.org",
     sourceHref: "https://www.sspnet.org",
-    logoText: "SSP",
-    logoClassName: "bg-sky-700 text-white",
+    // Omitted logoSrc & logoAlt so no image box renders
   },
   {
     name: "Council of Asian Science Editors (CASE)",
@@ -86,8 +86,8 @@ const partners: Partner[] = [
       "CASE is a non-governmental and non-profit organization that aims to improve the quality of science research journals published in Asia by consulting regulations on the editing and sharing of information about editing and publishing such journals, thereby contributing to the development of science and human well-being.",
     source: "www.asianeditor.org",
     sourceHref: "https://www.asianeditor.org",
-    logoText: "CASE",
-    logoClassName: "bg-white text-amber-700 border border-amber-200",
+    logoSrc: "/images/academy/case-logo.webp",
+    logoAlt: "CASE Logo",
   },
   {
     name: "Korean Council of Science Editors (KCSE)",
@@ -95,8 +95,8 @@ const partners: Partner[] = [
       "KCSE was founded with a vision to improve the quality and international status of the scientific journals published in Korea. KCSE has provided various professional development programs to editors, authors, reviewers, and manuscript editors, which include the organization of many workshops and training programs for editors as well as workshops devoted to publication and research ethics.",
     source: "www.kcse.org",
     sourceHref: "https://www.kcse.org",
-    logoText: "KCSE",
-    logoClassName: "bg-blue-900 text-white",
+    logoSrc: "/images/academy/kcse-logo.webp",
+    logoAlt: "KCSE Logo",
   },
 ];
 
@@ -110,7 +110,7 @@ const sidebarLinks: { label: string; href: string }[] = [
 ];
 
 // ----------------------------------------------------------------------------
-// JSON-LD STRUCTURED DATA (helps search engines understand the org's affiliations)
+// JSON-LD STRUCTURED DATA
 // ----------------------------------------------------------------------------
 function StructuredData() {
   const jsonLd = {
@@ -233,12 +233,19 @@ export default function StrategicPartnershipsMembershipsPage() {
                       </a>
                     </p>
                   </div>
-                  <div
-                    className={`flex h-16 w-32 shrink-0 items-center justify-center rounded text-sm font-bold sm:h-20 sm:w-40 ${partner.logoClassName}`}
-                    aria-hidden="true"
-                  >
-                    {partner.logoText}
-                  </div>
+
+                  {/* Render logo container only if logoSrc is defined */}
+                  {partner.logoSrc && (
+                    <div className="relative flex h-20 w-40 shrink-0 items-center justify-center bg-white p-2 border border-slate-200 rounded">
+                      <Image
+                        src={partner.logoSrc}
+                        alt={partner.logoAlt || partner.name}
+                        width={160}
+                        height={80}
+                        className="max-h-full max-w-full object-contain"
+                      />
+                    </div>
+                  )}
                 </article>
               ))}
             </div>
@@ -253,7 +260,7 @@ export default function StrategicPartnershipsMembershipsPage() {
                 you within 1 hour with an accurate price and delivery time.
               </p>
               <Link
-                href="/get-a-quote/"
+                href="/order-now"
                 className="mt-6 inline-flex items-center gap-2 bg-emerald-800 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-emerald-900"
               >
                 Get a Quote

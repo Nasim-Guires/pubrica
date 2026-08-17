@@ -95,7 +95,7 @@ export default function AgrotechnologyCompleteSection() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12 bg-white font-sans text-gray-800 space-y-16">
-      
+
       {/* SECTION 1: EMERGING TRENDS IN AGROTECHNOLOGY */}
       <section className="space-y-4">
         <div className="space-y-1">
@@ -115,11 +115,10 @@ export default function AgrotechnologyCompleteSection() {
               <button
                 key={idx}
                 onClick={() => setActiveTab(idx)}
-                className={`py-3 px-3 text-[11px] md:text-xs font-bold transition-all border-r border-b lg:border-b-0 border-gray-300 last:border-r-0 flex items-center justify-center leading-snug ${
-                  isActive
+                className={`py-3 px-3 text-[11px] md:text-xs font-bold transition-all border-r border-b lg:border-b-0 border-gray-300 last:border-r-0 flex items-center justify-center leading-snug ${isActive
                     ? "bg-[#0d3630] text-white border-b-2 border-b-[#0d3630]"
                     : "bg-[#f8f9fa] text-gray-700 hover:bg-gray-100"
-                }`}
+                  }`}
               >
                 {tab.title}
               </button>
@@ -201,7 +200,8 @@ export default function AgrotechnologyCompleteSection() {
               src="/images/subject-matter-experts/agrotechnology/sample-works-2.webp"
               alt="Agronomy Journal Cover"
               fill
-              className="object-cover"
+              className="object-contain"
+              sizes="160px"
             />
           </div>
           <div className="space-y-2 text-xs md:text-sm">

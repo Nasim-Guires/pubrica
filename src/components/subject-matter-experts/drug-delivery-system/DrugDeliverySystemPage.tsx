@@ -256,7 +256,7 @@ export default function DrugDeliverySystemPage() {
                         <div className="lg:col-span-5 flex justify-center">
                             <div className="relative w-full h-[350px] sm:h-[420px] rounded-lg overflow-hidden shadow-md">
                                 <Image
-                                    src="/images/subject-matter-experts/drug-delivery-system/Applications-of-Drug-Delivery-System.webp"
+                                    src="/images/subject-matter-experts/drug-delivery-system/Our-Expertise-in-Drug-Delivery-System-Includes-1.webp"
                                     alt="Expertise in Drug Delivery System"
                                     fill
                                     className="object-cover"

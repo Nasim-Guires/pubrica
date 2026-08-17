@@ -78,7 +78,7 @@ const InsightsPage = () => {
           <div className="flex justify-center md:justify-end">
             <div className="relative w-full max-w-md h-64 rounded-2xl overflow-hidden shadow-md">
               <Image
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=500&q=80"
+                src="/images/academy/Forensics-2.webp"
                 alt="Research Insights Graphics"
                 fill
                 priority

@@ -1,7 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export interface NavSubItem {
   id: string;
@@ -21,6 +23,114 @@ export interface SocietyLogo {
   src: string;
 }
 
+export interface DoctorProfile {
+  id: number;
+  name: string;
+  experience: string;
+  location: string;
+  image: string;
+}
+
+const doctorsList: DoctorProfile[] = [
+  {
+    id: 1,
+    name: "Dr. Maria MD",
+    experience: "10 Years Experience",
+    location: "United States of America",
+    image: "/images/academy/Maria-1.webp",
+  },
+
+  {
+    id: 2,
+    name: "  Dr. R. J MPharm MD",
+    experience: "18Years Experience",
+    location: " United States of America",
+    image: "/images/academy/rah.webp",
+  },
+
+
+  {
+    id: 3,
+    name: " Dr. Michelle MD",
+    experience: "16Years Experience",
+    location: " United States of America",
+    image: "/images/academy/Michelle.webp",
+  },
+
+
+
+
+  {
+    id: 4,
+    name: "  Dr. Ravi Kumar",
+    experience: "20Years Experience ",
+    location: "India",
+    image: "/images/academy/ravikumar.webp",
+  },
+
+
+
+  {
+    id: 5,
+    name: " Dr. AJ MD",
+    experience: "5Years Experience",
+    location: " United States of America",
+    image: "/images/academy/AJ.webp",
+  },
+
+
+
+  {
+    id: 6,
+    name: "Dr. Giles MD",
+    experience: "20 Years Experience",
+    location: "United States of America",
+    image: "/images/academy/Giles.webp",
+  },
+
+
+
+
+  {
+    id: 7,
+    name: "  Dr. Isaac Newton",
+    experience: "20Years Experience ",
+    location: "India",
+    image: "/images/academy/isac.webp",
+  },
+
+
+  {
+    id: 8,
+    name: "Dr. Jay MD",
+    experience: "12Years Experience",
+    location: " United States of America",
+    image: "/images/academy/Jay.webp",
+  },
+
+
+
+  {
+    id: 9,
+    name: " Dr. Laurence MD ",
+    experience: "7Years Experience ",
+    location: " United States of America",
+    image: "/images/academy/Laurence-rf2b3g6phrgj082al6gifqrvchf0qy7raorsobv1m0.webp",
+  },
+
+
+  {
+
+    id: 10,
+    name: "Dr. Julies MD",
+    experience: "30Years Experience",
+    location: " United States of America",
+    image: "/images/academy/Julie.webp",
+  },
+];
+
+
+
 export default function OurEditorsPage() {
   const [activeSidebar, setActiveSidebar] = useState("our-editors");
   // Manage open accordions (MEET THE EXPERTS & SUBJECT AREA open by default)
@@ -28,6 +138,30 @@ export default function OurEditorsPage() {
     "experts",
     "subject",
   ]);
+
+  // Active doctor carousel state
+  const [currentDoctorIndex, setCurrentDoctorIndex] = useState(0);
+
+  // Switch to next doctor
+  const handleNextDoctor = () => {
+    setCurrentDoctorIndex((prev) => (prev + 1) % doctorsList.length);
+  };
+
+  // Switch to previous doctor
+  const handlePrevDoctor = () => {
+    setCurrentDoctorIndex((prev) => (prev - 1 + doctorsList.length) % doctorsList.length);
+  };
+
+  // Auto-switch doctor every 2 minutes (120,000 ms)
+  useEffect(() => {
+    const timer = setInterval(() => {
+      handleNextDoctor();
+    }, 120000);
+
+    return () => clearInterval(timer);
+  }, [currentDoctorIndex]);
+
+  const currentDoctor = doctorsList[currentDoctorIndex];
 
   const sidebarLinks: NavLinkItem[] = [
     {
@@ -79,26 +213,33 @@ export default function OurEditorsPage() {
   // Publisher Logos
   const publisherLogos: SocietyLogo[] = [
     {
+      name: "Cambridge logo",
+      src: "/images/academy/cambridge-logo.webp",
+    },
+    {
       name: "Elsevier",
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Elsevier_logo.svg/512px-Elsevier_logo.svg.png",
+      src: "/images/academy/elsevier-logo.webp",
     },
     {
-      name: "Lund University",
-      src: "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Lund_University_seal.svg/512px-Lund_University_seal.svg.png",
+      name: "Lund",
+      src: "/images/academy/lund-logo.webp",
     },
     {
-      name: "McGraw Hill",
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/McGraw-Hill_Education_Logo.svg/512px-McGraw-Hill_Education_Logo.svg.png",
+      name: "McGraw",
+      src: "/images/academy/mcgrow-logo.webp",
     },
     {
-      name: "Northwestern University",
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Northwestern_University_seal.svg/512px-Northwestern_University_seal.svg.png",
+      name: "Northwestern",
+      src: "/images/academy/northwestern-logo.webp",
     },
     {
       name: "Oxford University Press",
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Oxford_University_Press_logo.svg/512px-Oxford_University_Press_logo.svg.png",
+      src: "/images/academy/oxford-logo.webp",
     },
   ];
+
+  // Doubled logos array to ensure continuous seamless infinite looping
+  const carouselLogos = [...publisherLogos, ...publisherLogos];
 
   return (
     <main className="w-full bg-[#fcfcfd] font-sans text-slate-800 min-h-screen">
@@ -117,7 +258,7 @@ export default function OurEditorsPage() {
       {/* 2. Main Layout Container */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          
+
           {/* Left Sidebar Navigation */}
           <aside className="lg:col-span-3">
             <div className="sticky top-6 bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-2">
@@ -143,9 +284,8 @@ export default function OurEditorsPage() {
                           className="w-full flex items-center gap-2.5 text-xs font-bold p-2 rounded transition-colors text-left text-slate-800 hover:bg-slate-50"
                         >
                           <span
-                            className={`w-5 h-5 flex items-center justify-center text-xs font-bold text-white transition-colors ${
-                              isOpen ? "bg-amber-500" : "bg-slate-500"
-                            }`}
+                            className={`w-5 h-5 flex items-center justify-center text-xs font-bold text-white transition-colors ${isOpen ? "bg-amber-500" : "bg-slate-500"
+                              }`}
                           >
                             {isOpen ? "−" : "+"}
                           </span>
@@ -162,11 +302,10 @@ export default function OurEditorsPage() {
                                   key={sub.id}
                                   href={sub.href}
                                   onClick={() => setActiveSidebar(sub.id)}
-                                  className={`block text-[11px] font-bold leading-snug transition-colors ${
-                                    isSubActive
+                                  className={`block text-[11px] font-bold leading-snug transition-colors ${isSubActive
                                       ? "text-blue-600 underline font-extrabold"
                                       : "text-blue-600 hover:underline"
-                                  }`}
+                                    }`}
                                 >
                                   • {sub.label}
                                 </Link>
@@ -178,7 +317,7 @@ export default function OurEditorsPage() {
                     );
                   }
 
-                  {/* Standard Direct Nav Links */}
+                  /* Standard Direct Nav Links */
                   return (
                     <Link
                       key={item.id}
@@ -254,34 +393,88 @@ export default function OurEditorsPage() {
                 Our editors maintain active memberships across well-known editorial institutions such as EMWA, AMWA, BELS, EASE, and CSE.
               </p>
 
-              {/* Publisher Logos Row */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center justify-items-center bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm">
-                {publisherLogos.map((logo) => (
-                  <div key={logo.name} className="relative w-28 h-14 flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-                    <img
-                      src={logo.src}
-                      alt={logo.name}
-                      className="max-h-12 max-w-full object-contain"
-                    />
+              {/* Publisher Logos Continuous Smooth Carousel (Shows 5 at a time) */}
+              <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
+                <div className="w-full overflow-hidden">
+                  <div className="flex items-center animate-logo-slide space-x-8">
+                    {carouselLogos.map((logo, index) => (
+                      <div
+                        key={`${logo.name}-${index}`}
+                        className="relative flex-shrink-0 w-1/5 h-20 flex items-center justify-center p-2"
+                      >
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={logo.src}
+                            alt={logo.name}
+                            fill
+                            sizes="(max-width: 768px) 33vw, 20vw"
+                            className="object-contain"
+                          />
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
 
-            {/* Expert Profile Showcase */}
-            <div className="bg-white p-6 rounded-xl border border-slate-200/80 text-center max-w-md mx-auto shadow-sm space-y-3">
-              <div className="w-20 h-20 mx-auto rounded-full overflow-hidden bg-slate-100 border-2 border-emerald-600">
-                <img
-                  src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=300"
-                  alt="Dr. Giles MD"
-                  className="w-full h-full object-cover"
+            {/* Interactive Expert Profile Showcase Carousel */}
+            <div className="bg-white p-6 rounded-xl border border-slate-200/80 text-center max-w-md mx-auto shadow-sm space-y-4 relative group">
+              {/* Left Arrow Button */}
+              <button
+                type="button"
+                onClick={handlePrevDoctor}
+                aria-label="Previous Doctor"
+                className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-100 hover:bg-emerald-700 hover:text-white text-slate-700 flex items-center justify-center transition-colors shadow-sm z-10"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+
+              {/* Right Arrow Button */}
+              <button
+                type="button"
+                onClick={handleNextDoctor}
+                aria-label="Next Doctor"
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-100 hover:bg-emerald-700 hover:text-white text-slate-700 flex items-center justify-center transition-colors shadow-sm z-10"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+
+              {/* Active Doctor Image */}
+              <div className="w-20 h-20 mx-auto rounded-full overflow-hidden bg-slate-100 border-2 border-emerald-600 relative shadow-inner">
+                <Image
+                  src={currentDoctor.image}
+                  alt={currentDoctor.name}
+                  fill
+                  sizes="80px"
+                  className="object-cover transition-all duration-300"
                 />
               </div>
-              <div>
-                <h4 className="text-sm font-bold text-[#1b2b28]">Dr. Giles MD</h4>
+
+              {/* Active Doctor Information */}
+              <div className="space-y-1 px-6">
+                <h4 className="text-sm font-bold text-[#1b2b28]">
+                  {currentDoctor.name}
+                </h4>
                 <p className="text-xs text-slate-500 font-medium">
-                  20 Years Experience • United States of America
+                  {currentDoctor.experience} • {currentDoctor.location}
                 </p>
+              </div>
+
+              {/* Pagination Dots */}
+              <div className="flex items-center justify-center gap-1.5 pt-1">
+                {doctorsList.map((_, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => setCurrentDoctorIndex(idx)}
+                    aria-label={`Go to profile ${idx + 1}`}
+                    className={`h-1.5 rounded-full transition-all ${idx === currentDoctorIndex
+                        ? "w-5 bg-emerald-600"
+                        : "w-1.5 bg-slate-300 hover:bg-slate-400"
+                      }`}
+                  />
+                ))}
               </div>
             </div>
 
@@ -306,6 +499,26 @@ export default function OurEditorsPage() {
           </div>
         </div>
       </section>
+
+      {/* Global Style Definition for Smooth Infinite Logo Sliding Animation */}
+      <style jsx global>{`
+        @keyframes logoSlide {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .animate-logo-slide {
+          display: flex;
+          width: 200%;
+          animation: logoSlide 30s linear infinite;
+        }
+        .animate-logo-slide:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </main>
   );
 }

@@ -44,31 +44,31 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
   const applications = [
     {
       title: "Healthcare",
-            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Genetic-Protein-Engineering.webp",
+      iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Genetic-Protein-Engineering.webp",
       desc: "Development of targeted biologics, vaccines, and personalized medicine tools.",
       icon: HeartPulse,
     },
     {
       title: "Industrial Biotechnology",
-            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Metabolic-Engineering.webp",
+      iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Metabolic-Engineering.webp",
       desc: "Biosynthesis of chemicals, materials, and environmentally friendly alternatives.",
       icon: Factory,
     },
     {
       title: "Agriculture",
-            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Synthetic-Biology.webp",
+      iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Synthetic-Biology.webp",
       desc: "Engineering stress-tolerant crops, biosensors for soil health, and microbial inoculants.",
       icon: Sprout,
     },
     {
       title: "Environmental Technologies",
-            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Molecular-Diagnostics-and-Therapeutics.webp",
+      iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Molecular-Diagnostics-and-Therapeutics.webp",
       desc: "Bioremediation, pollutant degradation, and microbial fuel cells.",
       icon: Leaf,
     },
     {
       title: "Energy",
-            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Bioprocess-Engineering.webp",
+      iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Bioprocess-Engineering.webp",
       desc: "Biofuel production, hydrogen generation, and metabolic design for renewable energy pathways.",
       icon: Zap,
     },
@@ -101,7 +101,7 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
   return (
     <div className="font-sans text-gray-800 bg-white py-12 px-4 space-y-16">
       <div className="max-w-5xl mx-auto space-y-16">
-        
+
         {/* SECTION 1: Emerging Trends */}
         <div className="space-y-6">
           <div className="space-y-2">
@@ -119,11 +119,10 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
                 <button
                   key={idx}
                   onClick={() => setActiveTab(idx)}
-                  className={`py-3 px-2 transition-all border-r border-b sm:border-b-0 border-gray-200 last:border-r-0 ${
-                    activeTab === idx
+                  className={`py-3 px-2 transition-all border-r border-b sm:border-b-0 border-gray-200 last:border-r-0 ${activeTab === idx
                       ? "bg-[#0d3630] text-white shadow-inner"
                       : "text-gray-700 hover:bg-gray-100"
-                  }`}
+                    }`}
                 >
                   {trend.title}
                 </button>
@@ -133,11 +132,10 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
             <div className="border-b border-gray-200 bg-gray-50 text-center text-xs font-semibold">
               <button
                 onClick={() => setActiveTab(5)}
-                className={`w-full py-3 px-4 transition-all ${
-                  activeTab === 5
+                className={`w-full py-3 px-4 transition-all ${activeTab === 5
                     ? "bg-[#0d3630] text-white shadow-inner"
                     : "text-gray-700 hover:bg-gray-100"
-                }`}
+                  }`}
               >
                 {trends[5].title}
               </button>
@@ -177,10 +175,10 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
                   <div key={idx} className="flex items-start gap-3.5">
                     <div className="p-2 bg-[#0d3630]/10 text-[#0d3630] rounded-lg mt-0.5 shrink-0">
                       {(app as { iconSrc?: string }).iconSrc ? (
-                                            <Image src={(app as { iconSrc?: string }).iconSrc!} alt="" width={20} height={20} className="object-contain shrink-0" />
-                                        ) : (
-                                            <Icon className="w-5 h-5" />
-                                        )}
+                        <Image src={(app as { iconSrc?: string }).iconSrc!} alt="" width={20} height={20} className="object-contain shrink-0" />
+                      ) : (
+                        <Icon className="w-5 h-5" />
+                      )}
                     </div>
                     <div>
                       <h4 className="font-bold text-[#0d3630] text-xs md:text-sm">
@@ -222,12 +220,13 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
           </div>
 
           <div className="border border-gray-200 rounded-lg p-6 bg-white shadow-sm grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-            <div className="md:col-span-5 relative h-56 w-full rounded-md overflow-hidden bg-rose-900 flex items-center justify-center p-4">
+            <div className="md:col-span-5 relative h-56 w-full rounded-md overflow-hidden flex items-center justify-center p-4">
               <Image
                 src="/images/subject-matter-experts/biomolecular-engineering/sample-works-8-1.webp"
                 alt="Journal cover"
                 fill
-                className="object-cover"
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div className="md:col-span-7 space-y-3 text-xs md:text-sm">
