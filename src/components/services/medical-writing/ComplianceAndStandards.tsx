@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState } from "react";
 
 interface StandardCard {
@@ -15,28 +16,28 @@ const standardsData: StandardCard[] = [
     id: "cope",
     name: "COPE",
     title: "Committee on Publication Ethics",
-    logo: "https://placehold.co/180x60/ffffff/0d3b36?text=C|O|P|E",
+    logo: "/images/publication-support/responding-to-reviewers/COPE_thumb.png",
     url: "https://publicationethics.org/",
   },
   {
     id: "wame",
     name: "WAME",
     title: "World Association of Medical Editors",
-    logo: "https://placehold.co/180x60/ffffff/0d3b36?text=WAME",
+    logo: "/images/publication-support/journal-selection/WAME.webp",
     url: "https://www.wame.org",
   },
   {
     id: "icmje",
     name: "ICMJE",
     title: "International Committee of Medical Journal Editors",
-    logo: "https://placehold.co/180x60/ffffff/0d3b36?text=ICMJE",
+    logo: "/images/publication-support/journal-selection/ICMJE.webp",
     url: "https://www.icmje.org",
   },
   {
     id: "consort",
     name: "SPIRIT / CONSORT",
     title: "Consolidated Standards of Reporting Trials",
-    logo: "https://placehold.co/180x60/ffffff/0d3b36?text=SPIRIT+CONSORT",
+    logo: "/images/publication-support/responding-to-reviewers/Consort-Logo.webp",
     url: "https://www.equator-network.org",
   },
 ];
@@ -84,11 +85,13 @@ export default function ComplianceAndStandards(): React.ReactElement {
                       : "border-slate-200 shadow-sm bg-white hover:shadow-md"
                   }`}
                 >
-                  <div className="h-20 flex items-center justify-center w-full mb-4">
-                    <img
+                  <div className="h-20 flex items-center justify-center w-full mb-4 relative">
+                    <Image
                       src={item.logo}
                       alt={item.name}
-                      className="max-h-16 object-contain"
+                      width={180}
+                      height={60}
+                      className="max-h-16 w-auto object-contain"
                     />
                   </div>
                   <p
@@ -127,10 +130,8 @@ export default function ComplianceAndStandards(): React.ReactElement {
             </p>
           </div>
 
-          {/* Grid Layout: Bullet List (Left) + Overlapping Images (Right) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start pt-4">
-            {/* Left Column: Bullet List */}
-            <div className="lg:col-span-7 space-y-6">
+          <div className="pt-4 max-w-3xl">
+            <div className="space-y-6">
               <h3 className="text-xl sm:text-2xl font-bold text-[#09322e]">
                 Regulatory Frameworks We Comply With
               </h3>
@@ -141,7 +142,6 @@ export default function ComplianceAndStandards(): React.ReactElement {
                     key={index}
                     className="flex items-start gap-3 text-sm sm:text-base text-slate-700"
                   >
-                    {/* Custom Red Circle Bullet */}
                     <span className="flex-shrink-0 mt-1.5 w-2.5 h-2.5 rounded-full border-2 border-[#b91c1c] bg-white flex items-center justify-center">
                       <span className="w-1 h-1 rounded-full bg-[#b91c1c]" />
                     </span>
@@ -149,30 +149,6 @@ export default function ComplianceAndStandards(): React.ReactElement {
                   </li>
                 ))}
               </ul>
-            </div>
-
-            {/* Right Column: Layered Researcher Images */}
-            <div className="lg:col-span-5 relative min-h-[380px] sm:min-h-[440px] flex items-center justify-center">
-              {/* Subtle background circle decoration */}
-              <div className="absolute top-0 right-4 w-64 h-64 bg-slate-100 rounded-full -z-10 opacity-70" />
-
-              {/* Top Image: Microscope Laboratory */}
-              <div className="absolute top-0 left-0 w-3/4 shadow-lg rounded-md overflow-hidden z-10 border-4 border-white">
-                <img
-                  src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80"
-                  alt="Researchers examining microscope"
-                  className="w-full h-48 sm:h-56 object-cover"
-                />
-              </div>
-
-              {/* Bottom Image: Researcher with Flask */}
-              <div className="absolute bottom-0 right-0 w-3/4 shadow-xl rounded-md overflow-hidden z-20 border-4 border-white">
-                <img
-                  src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=600&q=80"
-                  alt="Female scientist looking at chemical flask"
-                  className="w-full h-52 sm:h-60 object-cover"
-                />
-              </div>
             </div>
           </div>
         </div>

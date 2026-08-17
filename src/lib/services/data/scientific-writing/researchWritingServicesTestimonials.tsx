@@ -4,12 +4,20 @@ export const researchWritingServicesWhoWeServe = {
         "Our academic writing services are designed to support researchers, scholars, institutions, and professionals at every stage of their academic journey.",
     data: [
         {
+            title: "Researchers & PhD Scholars",
+            bullets: [
+                "We support early- and advanced-career researchers to write, edit, and prepare for submission of high-quality manuscripts, theses, and reviews for academic review or publication in journals."
+            ],
+            imageUrl:
+                "/images/research-services/scientific-writing/PhD-Scholars.jpg"
+        },
+        {
             title: "Universities & Academic Institutions",
             bullets: [
                 "We partner with universities and academic institutions to assist their faculty, students, and research departments with academic writing, proposal writing, basic thesis editing, training needs, and larger research projects or programs."
             ],
             imageUrl:
-                "/images/services/research-writing-services/universities-academic-institutions.jpg"
+                "/images/research-services/scientific-writing/Academic-Institutions-and-Universities.jpg"
         },
         {
             title: "Faculty & Academicians",
@@ -17,7 +25,7 @@ export const researchWritingServicesWhoWeServe = {
                 "Our subject-matter experts assist professors, instructors, and postdoctoral researchers in crafting compelling research papers, white papers, and grant proposals aligned with departmental goals, academic values, and publication standards."
             ],
             imageUrl:
-                "/images/services/research-writing-services/faculty-academicians.jpg"
+                "/images/research-services/scientific-writing/Medical-Professionals-and-Clinicians.jpg"
         },
         {
             title: "Research Labs & Think Tanks",
@@ -25,7 +33,7 @@ export const researchWritingServicesWhoWeServe = {
                 "We provide analytical writing, technical writing, and literature review writing for research organizations undertaking institutionally funded or sponsored projects."
             ],
             imageUrl:
-                "/images/services/research-writing-services/research-labs-think-tanks.jpg"
+                "/images/research-services/scientific-writing/Early-Career-Researchers-1.jpg"
         },
         {
             title: "Independent Authors & Scientists",
@@ -33,7 +41,7 @@ export const researchWritingServicesWhoWeServe = {
                 "Independent researchers from academia or industry can rely on our expert writing and formatting support for journal submissions, research dissemination, and professional development."
             ],
             imageUrl:
-                "/images/services/research-writing-services/independent-authors-scientists.jpg"
+                "/images/research-services/scientific-writing/Independent-Researchers-1.jpg"
         },
         {
             title: "International Students & Non-Native English Speakers",
@@ -41,7 +49,7 @@ export const researchWritingServicesWhoWeServe = {
                 "We provide English editing, thesis writing, and formatting expertise to help non-native English speakers meet international language, academic, and publication standards."
             ],
             imageUrl:
-                "/images/services/research-writing-services/international-students.jpg"
+                "/images/research-services/scientific-writing/Academic-Faculty-and-Professors.jpg"
         }
     ]
 };
@@ -52,55 +60,53 @@ export const researchWritingServicesTestimonials = {
     "Discover how Pubrica's research and academic writing services have helped researchers, academicians, and professionals transform their ideas into publication-ready manuscripts that meet international journal standards. Here is what our clients say:",
   testimonials: [
     {
-      image:
-        "/images/services/research-writing-services/testimonial-neha.jpg",
+      image: "/images/medical-writing/book-01.jpg",
       quote:
         "I had a hard time getting my data organized into a publishable format. The writing support I received turned my research study into a clear and organized manuscript, which was accepted at a high-impact journal. Very professional!",
       name: "Dr. Neha S.",
       designation: "Clinical Researcher",
       organization: "India",
-      flag: "/images/flags/india.png"
     },
     {
-      image:
-        "/images/services/research-writing-services/testimonial-yong.jpg",
+      image: "/images/medical-writing/scropt-2.jpg",
       quote:
         "As a non-native English speaker, I was worried my manuscript wouldn’t meet academic quality. The editing and structuring support made a big difference in the quality and clarity of the manuscript. I would highly recommend them to international researchers!",
       name: "Prof. Yong C.",
       designation: "Sciences",
       organization: "South Korea",
-      flag: "/images/flags/south-korea.png"
     },
     {
-      image:
-        "/images/services/research-writing-services/testimonial-maria.jpg",
+      image: "/images/medical-writing/book-01.jpg",
       quote:
         "They understood the complexity of my multidisciplinary research and guided me in formatting my research into a coherent, journal-ready manuscript. Their adherence to ethical guidelines and referencing standards was exemplary.",
       name: "Dr. Maria R.",
       designation: "Biomedical Engineer",
       organization: "Spain",
-      flag: "/images/flags/spain.png"
     },
     {
-      image:
-        "/images/services/research-writing-services/testimonial-khalid.jpg",
+      image: "/images/medical-writing/scropt-2.jpg",
       quote:
         "Their team assisted me in properly applying PRISMA guidelines and successfully completing my systematic review on time. The manuscript was accepted with minor revisions and received excellent reviewer comments.",
       name: "Dr. Khalid A.",
       designation: "Public Health Researcher",
       organization: "UAE",
-      flag: "/images/flags/uae.png"
     },
     {
-      image:
-        "/images/services/research-writing-services/testimonial-emma.jpg",
+      image: "/images/medical-writing/book-01.jpg",
       quote:
         "The level of detail and scientific precision in the manuscript was fantastic. They didn’t just edit my draft; they helped me rethink how I had constructed the results and discussion. I’m already working on my next project with them.",
       name: "Dr. Emma L.",
       designation: "Pharmacology Faculty",
       organization: "UK",
-      flag: "/images/flags/uk.png"
-    }
+    },
+    {
+      image: "/images/medical-writing/scropt-2.jpg",
+      quote:
+        "I had a smooth and timely experience from refining the topic to post-submission. The team’s knowledge of the journal requirements and ability to respond to peer reviewers helped accelerate my publication process.",
+      name: "Dr. James T.",
+      designation: "Oncology Resident",
+      organization: "USA",
+    },
   ]
 };
 

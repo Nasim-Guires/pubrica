@@ -1,13 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { 
-  HeartPulse, 
-  Activity, 
-  Brain, 
-  Baby, 
-  ShieldAlert, 
-  LucideIcon 
-} from 'lucide-react';
+import Image from 'next/image';
 
 // --- Types ---
 interface ServiceCard {
@@ -38,7 +31,7 @@ interface PackageCard {
 interface TherapeuticArea {
   id: string;
   name: string;
-  icon: LucideIcon;
+  iconSrc: string;
 }
 
 interface DisciplineCard {
@@ -296,11 +289,11 @@ const PACKAGES_DATA: PackageCard[] = [
 
 // 3. Therapeutic Areas
 const THERAPEUTIC_AREAS: TherapeuticArea[] = [
-  { id: 'oncology', name: 'Oncology', icon: HeartPulse },
-  { id: 'cardiology', name: 'Cardiology', icon: Activity },
-  { id: 'neurology', name: 'Neurology', icon: Brain },
-  { id: 'paediatrics', name: 'Paediatrics', icon: Baby },
-  { id: 'immunology', name: 'Immunology', icon: ShieldAlert },
+  { id: 'oncology', name: 'Oncology', iconSrc: '/images/medical-writing/Oncology-.png' },
+  { id: 'cardiology', name: 'Cardiology', iconSrc: '/images/medical-writing/Cardiology.png' },
+  { id: 'neurology', name: 'Neurology', iconSrc: '/images/medical-writing/Neurology.png' },
+  { id: 'paediatrics', name: 'Paediatrics', iconSrc: '/images/medical-writing/Paediatrics.png' },
+  { id: 'immunology', name: 'Immunology', iconSrc: '/images/medical-writing/Immunology.png' },
 ];
 
 // 4. Disciplines Supported
@@ -581,13 +574,12 @@ export const ScientificServicesAndPackages: React.FC = () => {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {THERAPEUTIC_AREAS.map((area) => {
-              const IconComp = area.icon;
               return (
                 <div 
                   key={area.id} 
                   className="bg-white p-6 rounded-sm border border-slate-200/60 shadow-xs flex flex-col items-center justify-center space-y-3 hover:shadow-md transition-shadow"
                 >
-                  <IconComp className="w-10 h-10 text-[#0b3b36] stroke-[1.5]" />
+                  <Image src={area.iconSrc} alt={area.name} width={40} height={40} className="object-contain" />
                   <span className="font-bold text-xs text-slate-800">
                     {area.name}
                   </span>
