@@ -13,15 +13,6 @@ export const graphicalAbstractWhoWeServeData = {
             imageUrl: "/images/research-impact/graphical-abstract/PhD-Scholars-Early-Career-Researchers.png",
         },
         {
-            title: "Research Institutions & Laboratories",
-            bullets: [
-                "Maintain consistent visual branding.",
-                "Support dissemination of high-volume research outputs.",
-            ],
-            imageUrl:
-                "/images/research-impact/graphical-abstract/Research-Institutions-Laboratories.png",
-        },
-        {
             title: "University Professors & Academic Authors",
             bullets: [
                 "Increase readership through engaging graphical summaries.",
@@ -29,6 +20,15 @@ export const graphicalAbstractWhoWeServeData = {
             ],
             imageUrl:
                 "/images/research-impact/graphical-abstract/University-Professors-Academic-Authors.png",
+        },
+        {
+            title: "Research Institutions & Laboratories",
+            bullets: [
+                "Maintain consistent visual branding.",
+                "Support dissemination of high-volume research outputs.",
+            ],
+            imageUrl:
+                "/images/research-impact/graphical-abstract/Research-Institutions-Laboratories.png",
         },
         {
             title: "Medical & Life Science Researchers",

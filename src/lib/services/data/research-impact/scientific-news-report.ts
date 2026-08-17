@@ -37,20 +37,20 @@ export const scientificNewsReportWhoWeServeData = {
                 "/images/research-impact/scientific-news-report/Government-Funding-Agenciess.png",
         },
         {
-            title: "Scientific Media & Press Offices",
-            bullets: [
-                "Receive ready-to-publish scientific news briefs rooted in accuracy and editorial excellence.",
-            ],
-            imageUrl:
-                "/images/research-impact/scientific-news-report/Scientific-Media-Press-Offices.png",
-        },
-        {
             title: "Medical & Healthcare Professionals",
             bullets: [
                 "Access accurate scientific news summaries to stay current with research that informs clinical practice.",
             ],
             imageUrl:
                 "/images/research-impact/scientific-news-report/Medical-Healthcare-Professionals.png",
+        },
+        {
+            title: "Scientific Media & Press Offices",
+            bullets: [
+                "Receive ready-to-publish scientific news briefs rooted in accuracy and editorial excellence.",
+            ],
+            imageUrl:
+                "/images/research-impact/scientific-news-report/Scientific-Media-Press-Offices.png",
         },
     ],
 };

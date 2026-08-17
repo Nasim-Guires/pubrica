@@ -152,15 +152,8 @@ export default function WhatWeDo() {
               />
             </div>
 
-            {/* Bottom Right Image Card (Video Editor Workspace) */}
-            <div className="absolute bottom-0 right-4 md:right-8 w-48 sm:w-56 md:w-60 h-44 sm:h-52 rounded-2xl overflow-hidden shadow-lg border-2 border-white z-20">
-              <Image
-                src="/images/publication-support/video-abstract/What-We-Do-1.png"
-                alt="Video editor working on scientific animation"
-                fill
-                className="object-cover"
-              />
-            </div>
+            {/* Live Pubrica shows a single What We Do collage image */}
+            <div className="absolute bottom-0 right-4 md:right-8 w-48 sm:w-56 md:w-60 h-44 sm:h-52 rounded-2xl overflow-hidden shadow-lg border-2 border-white z-20 hidden" aria-hidden="true" />
           </div>
 
           {/* Right Column: Interactive Accordion List */}

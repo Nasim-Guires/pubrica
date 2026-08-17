@@ -359,9 +359,9 @@ export default function ResearchImpactGraphicalAbstract() {
 
             {/* Illustration Graphic Box */}
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center space-y-4">
-              <div className="relative rounded-lg overflow-hidden border border-slate-200 max-h-80 bg-white flex items-center justify-center">
+              <div className={`relative rounded-lg overflow-hidden border border-slate-200 max-h-80 bg-white flex items-center justify-center ${dimensionMode === '3D' && !currentExample.image3D ? 'hidden' : ''}`}>
                 <Image
-                  src={currentExample.image2D}
+                  src={dimensionMode === '3D' && currentExample.image3D ? currentExample.image3D : currentExample.image2D}
                   alt={currentExample.articleTitle}
                   width={900}
                   height={256}

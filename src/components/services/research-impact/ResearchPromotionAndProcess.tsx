@@ -101,8 +101,15 @@ export default function ResearchPromotionAndProcess(): React.ReactElement {
         {/* Gray Outer Frame Container */}
         <div className="bg-[#e7e8ea] p-6 sm:p-10 rounded-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Live counterpart image-1.webp was not in copied.json; hide extra Next.js image */}
-            <div className="lg:col-span-5 hidden" aria-hidden="true" />
+            <div className="lg:col-span-5 relative min-h-[280px] sm:min-h-[340px] rounded-md overflow-hidden">
+              <Image
+                src="/images/research-impact/why-promote-image-1.webp"
+                alt="People discussing research"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+            </div>
 
             {/* Right Cards Stack */}
             <div className="lg:col-span-7 space-y-4">

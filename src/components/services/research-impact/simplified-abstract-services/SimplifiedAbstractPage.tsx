@@ -172,6 +172,7 @@ const publishers = [
     { name: 'Springer', logoUrl: '/images/publication-support/art-work-preparation/Springer.png' },
     { name: 'BMJ', logoUrl: '/images/research-impact/graphical-abstract/bmj-.png' },
     { name: 'ELSEVIER', logoUrl: '/images/research-impact/graphical-abstract/Elsevier-.png' },
+    { name: 'Taylor & Francis', logoUrl: '/images/research-impact/scientific-news-report/Taylor-Francis.png' },
 ];
 
 export default function SimplifiedAbstractPage() {
@@ -199,66 +200,14 @@ export default function SimplifiedAbstractPage() {
                     Simplified Abstract Example by Pubrica
                 </h2>
 
-                {/* Abstract Card Container */}
-                <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-4 sm:p-6 text-left space-y-4">
-                    {/* Top Journal Badges */}
-                    <div className="bg-emerald-50/80 rounded-lg p-3 sm:p-4 flex flex-wrap justify-between items-center text-xs sm:text-sm border border-emerald-100">
-                        <div>
-                            <span className="font-bold text-slate-900 block sm:inline">Nature</span>
-                            <span className="text-slate-600 sm:ml-4">Journal Impact Factor: 50.5</span>
-                        </div>
-                        <div className="font-semibold text-slate-700 mt-1 sm:mt-0">
-                            Journal Cite Score: 78.1
-                        </div>
-                    </div>
-
-                    {/* Article Abstract Diagram Mockup */}
-                    <div className="border border-slate-200 rounded-lg p-4 sm:p-8 bg-white space-y-4 relative">
-                        <div className="border-b pb-2">
-                            <span className="text-2xl sm:text-3xl font-serif font-bold tracking-tight text-slate-900">
-                                ARTICLE
-                            </span>
-                            <span className="text-[10px] sm:text-xs text-slate-400 float-right mt-2">doi:10.1038/nature13814</span>
-                        </div>
-
-                        <h3 className="text-lg sm:text-2xl font-serif font-bold text-slate-900">
-                            Clonal dynamics of native haematopoiesis
-                        </h3>
-
-                        <p className="text-[11px] text-slate-500 font-serif">
-                            Jianlong Sun<sup>1,2</sup>, Azucena Ramos<sup>1</sup>, Brad Chapman<sup>1</sup>, Jonathan B. Johnnidis<sup>1</sup>, Linda Lei<sup>1</sup>, Yu-Jui Ho<sup>1</sup>, Allon Klein<sup>1</sup>, Oliver Hofmann<sup>1</sup> & Fernando D. Camargo<sup>1,2</sup>
-                        </p>
-
-                        {/* Simulated Annotations Box */}
-                        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 pt-4 text-xs">
-                            <div className="md:col-span-1 space-y-6 text-right hidden md:block text-slate-600 font-sans italic text-[11px]">
-                                <div className="pt-2">general background &rarr;</div>
-                                <div className="pt-8">here we show &rarr;</div>
-                            </div>
-
-                            <div className="md:col-span-2 space-y-2 text-[11px] leading-relaxed font-serif bg-slate-50 p-3 rounded border border-slate-200">
-                                <p className="bg-emerald-100/70 p-1 rounded">
-                                    It is currently thought that life-long blood cell production is driven by the action of a small number of multipotent haematopoietic stem cells. Evidence supporting this view has been largely acquired through the use of functional assays involving transplantation. <span className="bg-sky-200/80 font-semibold">However, whether these mechanisms also govern native non-transplant haematopoiesis is entirely unclear.</span>
-                                </p>
-                                <p className="bg-pink-100/80 p-1 rounded">
-                                    Here we have established a novel experimental model in mice where cells can be uniquely and genetically labelled in situ to address this question.
-                                </p>
-                                <p className="p-1">
-                                    Using this approach, we have performed longitudinal analyses of clonal dynamics in adult mice that reveal unprecedented features of native haematopoiesis...
-                                </p>
-                            </div>
-
-                            <div className="md:col-span-1 space-y-4 text-left hidden md:block text-slate-600 font-sans italic text-[11px]">
-                                <div>&larr; specific background</div>
-                                <div>&larr; knowledge gap</div>
-                                <div>&larr; results & methodology</div>
-                            </div>
-                        </div>
-
-                        <p className="text-[10px] text-slate-400 text-center pt-2">
-                            All rights reserved by Nature. Reproduced here for educational purposes only.
-                        </p>
-                    </div>
+                <div className="relative w-full max-w-4xl mx-auto aspect-[16/10] rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-white">
+                    <Image
+                        src="/images/research-impact/simplified-abstract-services/v1-simplified-abstract-writing-recreation-image.png"
+                        alt="Simplified Abstract Example by Pubrica"
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 1024px) 100vw, 896px"
+                    />
                 </div>
             </section>
 
@@ -465,7 +414,7 @@ export default function SimplifiedAbstractPage() {
                 </div>
 
                 {/* Publisher Logos Card Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                     {publishers.map((pub, idx) => (
                         <div
                             key={idx}
