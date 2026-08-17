@@ -11,6 +11,7 @@ interface ServiceItem {
 interface SegmentItem {
   title: string;
   description: string;
+  iconSrc?: string;
 }
 
 interface PharmaceuticalDiscoveryAndPublishingPageProps {
@@ -66,13 +67,20 @@ const defaultAdditionalServices: ServiceItem[] = [
 ];
 
 const defaultSegments: SegmentItem[] = [
-  { title: 'Oral Solid Dosage Forms (OSD)', description: 'Tablets, capsules, and powders, supporting formulation, regulatory submissions, and...' },
-  { title: 'Injectables & Parenterals', description: 'Sterile products, including vials, ampoules, and pre-filled syringes, with guidance on...' },
-  { title: 'Topical & Transdermal Formulations', description: 'Creams, gels, ointments, patches, covering quality control, clinical evaluation, and...' },
-  { title: 'Respiratory & Inhalation Products', description: 'Metered-dose inhalers, nebulizers, and dry powder inhalers with regulatory strategy and...' },
-  { title: 'Orphan & Niche Generics', description: 'Rare disease therapies or hard-to-manufacture generics, supported with tailored regulatory and...' },
-  { title: 'Biologics & Biosimilars', description: 'Complex protein-based generics, with support for analytical characterization.' },
-  { title: 'Over-the-Counter (OTC) Generics', description: 'Non-prescription drugs with assistance in labeling, safety data, and regulatory...' }
+  { title: 'Oral Solid Dosage Forms (OSD)',
+    iconSrc: '/images/industries/generics/Oral-Solid-Dosage-Forms-OSD.webp', description: 'Tablets, capsules, and powders, supporting formulation, regulatory submissions, and...' },
+  { title: 'Injectables & Parenterals',
+    iconSrc: '/images/industries/generics/Injectables-Parenter-als.webp', description: 'Sterile products, including vials, ampoules, and pre-filled syringes, with guidance on...' },
+  { title: 'Topical & Transdermal Formulations',
+    iconSrc: '/images/industries/generics/Topical-Transdermal-Formulations.webp', description: 'Creams, gels, ointments, patches, covering quality control, clinical evaluation, and...' },
+  { title: 'Respiratory & Inhalation Products',
+    iconSrc: '/images/industries/generics/Respiratory-Inhalation-Products.webp', description: 'Metered-dose inhalers, nebulizers, and dry powder inhalers with regulatory strategy and...' },
+  { title: 'Orphan & Niche Generics',
+    iconSrc: '/images/industries/generics/Orphan-Niche-Generics.webp', description: 'Rare disease therapies or hard-to-manufacture generics, supported with tailored regulatory and...' },
+  { title: 'Biologics & Biosimilars',
+    iconSrc: '/images/industries/generics/Biologics-Biosi-milars.webp', description: 'Complex protein-based generics, with support for analytical characterization.' },
+  { title: 'Over-the-Counter (OTC) Generics',
+    iconSrc: '/images/industries/generics/Over-the-Counter-OTC-Generics.webp', description: 'Non-prescription drugs with assistance in labeling, safety data, and regulatory...' }
 ];
 
 export default function PharmaceuticalDiscoveryAndPublishingPage({
@@ -122,7 +130,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
           <div className="relative w-full h-[350px] flex justify-center items-center">
             <div className="relative w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] rounded-full overflow-hidden shadow-xl">
               <Image 
-                src="/images/generic-consultation.jpg" 
+                src="/images/industries/generics/Generic-drugs-are-just-as-safe-and-just-as-effective.webp" 
                 alt="Medical professionals discussing generic drug regulatory compliance and market strategies"
                 fill
                 sizes="(max-width: 768px) 100vw, 350px"
@@ -162,7 +170,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
             <div className="relative w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] lg:mx-[-40px] z-0 flex-shrink-0 flex items-center justify-center">
               <div className="absolute inset-0 rounded-full border-[12px] border-white shadow-2xl overflow-hidden bg-gray-100">
                 <Image
-                  src="/images/generic-expert-doctor.jpg" 
+                  src="/images/industries/generics/Our-Expertise-for-the-Generics-Industry-Includes.webp" 
                   alt="Medical professional reviewing data for generic pharmaceuticals"
                   fill
                   sizes="(max-width: 768px) 320px, 420px"
@@ -205,6 +213,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {segments.map((segment, index) => (
               <div key={index} className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                {segment.iconSrc ? <div className="relative w-10 h-10 mb-3"><Image src={segment.iconSrc} alt="" fill className="object-contain" sizes="40px" /></div> : null}
                 <h4 className="font-bold text-base text-[#0f2824] mb-2">{segment.title}</h4>
                 <p className="text-gray-600 text-xs md:text-sm leading-relaxed">{segment.description}</p>
               </div>

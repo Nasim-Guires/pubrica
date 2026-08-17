@@ -39,7 +39,7 @@ const defaultPublication: PublicationItem = {
   journal: 'Nutrients',
   publisher: 'MDPI',
   impactFactor: '5.0',
-  coverImage: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80'
+  coverImage: '/images/industries/foods-nutraceuticals/sample-works-3.webp'
 };
 
 const defaultEditors: EditorProfile[] = [
@@ -48,21 +48,21 @@ const defaultEditors: EditorProfile[] = [
     qualification: 'PhD, M.Sc. - Nutrition & Functional Foods',
     experience: '18 Years of Experience',
     manuscripts: '80+ manuscripts edited',
-    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=300&q=80'
+    image: '/images/industries/foods-nutraceuticals/Dr.-Ananya-Mehta-1.webp'
   },
   {
     name: 'Dr. Raghav Varma',
     qualification: 'PhD, FIAMS - Clinical Nutrition',
     experience: '22 Years of Experience',
     manuscripts: '120+ manuscripts edited',
-    image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=300&q=80'
+    image: '/images/industries/foods-nutraceuticals/Dr.-Raghav-Varma.webp'
   },
   {
     name: 'Dr. Priya Chandrasekhar',
     qualification: 'PhD, DNB - Nutraceutical Sciences',
     experience: '20 Years of Experience',
     manuscripts: '90+ manuscripts edited',
-    image: 'https://images.unsplash.com/photo-1594824813554-5a485556a297?auto=format&fit=crop&w=300&q=80'
+    image: '/images/industries/biotechnology/Dr.-Meera-Sharma-1.webp'
   }
 ];
 
@@ -96,17 +96,17 @@ export default function FoodsNutraceuticalsComplianceSection({
           <p className="text-gray-600 text-sm sm:text-base mb-8">{regulatoryIntro}</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex items-center justify-center h-32 hover:shadow-md transition-shadow">
-              <span className="font-extrabold text-blue-900 tracking-wider text-lg">U.S. FOOD & DRUG ADMINISTRATION</span>
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex items-center justify-center h-32 hover:shadow-md transition-shadow relative">
+              <Image src="/images/industries/foods-nutraceuticals/fda.webp" alt="U.S. Food and Drug Administration" width={140} height={48} className="object-contain max-h-16" />
             </div>
             <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex items-center justify-center h-32 hover:shadow-md transition-shadow">
-              <span className="font-extrabold text-blue-600 tracking-wide text-xl">efsa</span>
+              <Image src="/images/industries/foods-nutraceuticals/efsa.webp" alt="EFSA" width={140} height={48} className="object-contain max-h-16" />
             </div>
             <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex items-center justify-center h-32 hover:shadow-md transition-shadow">
-              <span className="font-bold text-orange-600 italic text-2xl tracking-tighter">fssai</span>
+              <Image src="/images/industries/foods-nutraceuticals/fssai.webp" alt="FSSAI" width={140} height={48} className="object-contain max-h-16" />
             </div>
             <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex items-center justify-center h-32 hover:shadow-md transition-shadow text-center">
-              <span className="font-serif font-bold text-gray-700 text-xs uppercase leading-tight">Codex Alimentarius</span>
+              <Image src="/images/industries/foods-nutraceuticals/codex-allimentariyus.webp" alt="Codex Alimentarius" width={140} height={48} className="object-contain max-h-16" />
             </div>
           </div>
         </div>
@@ -118,17 +118,23 @@ export default function FoodsNutraceuticalsComplianceSection({
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col items-center justify-center text-center h-44 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center mb-3 font-bold text-xs border border-emerald-200">GMP</div>
+              <div className="relative w-12 h-12 mb-3">
+                <Image src="/images/industries/foods-nutraceuticals/gmp-.webp" alt="GMP" fill className="object-contain" sizes="48px" />
+              </div>
               <h4 className="font-semibold text-sm sm:text-base text-gray-800">GMP (Good Manufacturing Practices) compliance</h4>
             </div>
 
             <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col items-center justify-center text-center h-44 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-full bg-blue-50 text-blue-700 flex items-center justify-center mb-3 font-bold text-xs border border-blue-200">HACCP</div>
+              <div className="relative w-12 h-12 mb-3">
+                <Image src="/images/industries/foods-nutraceuticals/pa-iconshccp.webp" alt="HACCP" fill className="object-contain" sizes="48px" />
+              </div>
               <h4 className="font-semibold text-sm sm:text-base text-gray-800">HACCP (Hazard Analysis Critical Control Points)</h4>
             </div>
 
             <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col items-center justify-center text-center h-44 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-full bg-blue-50 text-blue-700 flex items-center justify-center mb-3 font-bold text-xs border border-blue-200">ISO</div>
+              <div className="relative w-12 h-12 mb-3">
+                <Image src="/images/industries/foods-nutraceuticals/iso.webp" alt="ISO" fill className="object-contain" sizes="48px" />
+              </div>
               <h4 className="font-semibold text-sm sm:text-base text-gray-800">ISO certifications for food safety and quality</h4>
             </div>
           </div>

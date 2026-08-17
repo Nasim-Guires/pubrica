@@ -14,6 +14,8 @@ export const cosmeticsTestimonialsData = {
                 "Portrait of Dr. Laura Mitchell, dermatologist from the United Kingdom",
             flagLabel:
                 "United Kingdom flag representing author's location",
+            avatarSrc: "/images/industries/cosmetics/--Dr.-Laura-Mitchell.webp",
+            flagSrc: "/images/research-services/systematic-review/united-kingdom-.png",
         },
         {
             id: "testimonial-2",
@@ -26,6 +28,8 @@ export const cosmeticsTestimonialsData = {
                 "Portrait of Dr. Arjun Rao, dermatologist from India",
             flagLabel:
                 "India flag representing author's location",
+            avatarSrc: "/images/industries/cosmetics/Dr.-Arjun-Rao.webp",
+            flagSrc: "/images/industries/biotechnology/india.webp",
         },
         {
             id: "testimonial-3",
@@ -38,6 +42,8 @@ export const cosmeticsTestimonialsData = {
                 "Portrait of Elena Petrova, R&D Director from Russia",
             flagLabel:
                 "Russia flag representing author's location",
+            avatarSrc: "/images/industries/biotechnology/Dr.-Jonathan-Lee.webp",
+            flagSrc: "/images/industries/nutraceutical-research/russsia.webp",
         },
     ],
 };

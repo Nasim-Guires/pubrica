@@ -9,6 +9,7 @@ interface ExpertiseItem {
 interface SegmentItem {
   title: string;
   description: string;
+  iconSrc?: string;
 }
 
 interface CosmeticsPageProps {
@@ -64,22 +65,27 @@ const defaultExpertiseItems: ExpertiseItem[] = [
 const defaultSegmentsItems: SegmentItem[] = [
   {
     title: 'Skincare & Dermatology',
+    iconSrc: '/images/industries/cosmetics/Skincare-Dermatology.webp',
     description: 'We support brands and researchers in developing innovative skincare solutions, dermatological formulations, and clinical trials.'
   },
   {
     title: 'Haircare & Scalp Treatments',
+    iconSrc: '/images/industries/cosmetics/Haircare-Scalp-Treatments.webp',
     description: 'From shampoos and conditioners to advanced scalp therapies, we help companies develop effective, nourishing hair products.'
   },
   {
     title: 'Makeup & Color Cosmetics',
+    iconSrc: '/images/industries/cosmetics/Makeup-Color-Cosmetics.webp',
     description: 'We help makeup and colour cosmetics brands launch high-quality, trend-forward products. Our expertise ensures vibrant formulations.'
   },
   {
     title: 'Personal Care & Hygiene',
+    iconSrc: '/images/industries/cosmetics/Personal-Care-Hygiene.webp',
     description: 'Pubrica supports the development of personal care essentials, including soaps, body washes, oral hygiene, and deodorants.'
   },
   {
     title: 'Natural, Organic & Sustainable Beauty',
+    iconSrc: '/images/industries/cosmetics/Natural-Organic-Sustainable-Beauty.webp',
     description: 'We guide brands in creating eco-friendly and sustainable beauty products. From sourcing clean ingredients to eco-packaging.'
   }
 ];
@@ -91,12 +97,12 @@ export default function CosmeticsIndustryPage({
   transformParagraph1 = 'The cosmetic industry is a fast-evolving sector where science, technology, and consumer trends intersect. From skincare and haircare to personal care products and advanced cosmeceuticals, brands must balance innovation with safety, regulatory compliance, and effective product positioning. With rising consumer demand for sustainable, clinically proven, and regulatory-compliant products, companies need expert guidance to navigate research, development, and market launch.',
   transformParagraph2 = 'The cosmetic industry, also known as the cosmetics sector, encompasses all activities and companies involved in the research, development, production, and marketing of products for personal care and beautification. This dynamic and constantly evolving sector is made up of many segments, including skincare, hair care, makeup products, perfumes, and hygiene products.',
   transformParagraph3 = 'At Pubrica, we provide end-to-end services tailored to cosmetic brands, manufacturers, and research teams. Our expertise helps you streamline R&D, accelerate time-to-market, and ensure compliance with international cosmetic regulations.',
-  transformImage = 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
+  transformImage = '/images/industries/cosmetics/Transforming-Ideas-into-Market-Ready-Cosmetic-Innovations.webp',
   ctaText = 'Get a Free Quote',
   ctaLink = '#',
   expertiseTitle = 'Our Expertise in the Cosmetics Industry Includes',
   expertiseSubtitle = 'At Pubrica, we specialize in delivering end-to-end expertise in the cosmetics industry, helping brands innovate, comply, and connect with consumers effectively.',
-  expertiseCenterImage = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
+  expertiseCenterImage = '/images/industries/cosmetics/Our-Expertise-in-the-Cosmetics-Industry-Includes.webp',
   segmentsTitle = 'Cosmetic Segments We Serve',
   segmentsSubtitle = 'At Pubrica, we cater to a diverse range of segments within the cosmetics industry, offering specialized services tailored to each category. Our expertise spans the entire beauty and personal care spectrum, enabling brands to achieve regulatory compliance, market readiness, and consumer trust. Key segments we serve include:'
 }: CosmeticsPageProps) {
@@ -232,9 +238,7 @@ export default function CosmeticsIndustryPage({
           {defaultSegmentsItems.map((item, idx) => (
             <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
               <div>
-                <div className="w-10 h-10 rounded-full bg-emerald-50 text-[#0f2824] flex items-center justify-center mb-4 font-bold text-sm">
-                  {idx + 1}
-                </div>
+                {item.iconSrc ? <div className="relative w-10 h-10 mb-4"><Image src={item.iconSrc} alt="" fill className="object-contain" sizes="40px" /></div> : null}
                 <h3 className="font-bold text-base text-[#0f2824] mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{item.description}</p>
               </div>

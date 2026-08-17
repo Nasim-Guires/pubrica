@@ -13,6 +13,8 @@ export const genericsTestimonialsData = {
             avatarLabel:
                 "Portrait of Dr. Emily Johnson, Head of Regulatory Affairs at PharmaGenics Inc., USA",
             flagLabel: "United States flag icon",
+            avatarSrc: "/images/industries/generics/Dr.-Emily-Johnson.webp",
+            flagSrc: "/images/industries/cosmeceutical-research/usa-.png",
         },
         {
             id: "testimonial-2",
@@ -24,6 +26,8 @@ export const genericsTestimonialsData = {
             avatarLabel:
                 "Portrait of Dr. Markus Bauer, Director of Operations at MedicaGen GmbH, Germany",
             flagLabel: "Germany flag icon",
+            avatarSrc: "/images/education-editorial-service/accessibility-compliance/Dr.-Vikram-Joshi.webp",
+            flagSrc: "/images/industries/generics/germany-.webp",
         },
         {
             id: "testimonial-3",
@@ -35,6 +39,8 @@ export const genericsTestimonialsData = {
             avatarLabel:
                 "Portrait of Dr. James Fletcher, Regulatory Lead at Global Pharma Solutions, United Kingdom",
             flagLabel: "United Kingdom flag icon",
+            avatarSrc: "/images/industries/foods-nutraceuticals/Dr.-Raghav-Varma.webp",
+            flagSrc: "/images/editing-and-translation/thesis-editing/uk-flag-.png",
         },
     ],
 };

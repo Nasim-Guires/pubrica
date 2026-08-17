@@ -1,82 +1,71 @@
 import React from "react";
 import Link from "next/link";
-import {
-  Activity,
-  Pill,
-  Dna,
-  Syringe,
-  Component,
-  Sparkles,
-  FlameKindling,
-  Droplet,
-  Leaf,
-} from "lucide-react";
+import Image from "next/image";
 import Container from "@/components/common/Container";
 import Breadcrumb from "@/components/seo/Breadcrumb";
 
-// Industry data gathered directly from the design mockups
 const INDUSTRIES = [
   {
     title: "Medical Device",
     description:
       "We offer a wide range of research services for medical device companies...",
-    icon: Activity,
+    iconSrc: "/images/industries/hub/Medical-Device.webp",
     href: "/Industries/medical-device",
   },
   {
     title: "Pharmaceutical",
     description:
       "We offer a wide range of research services for the pharmaceutical industry...",
-    icon: Pill,
+    iconSrc: "/images/industries/hub/Pharmaceutical.webp",
     href: "/Industries/pharmaceutical",
   },
   {
     title: "Generics",
     description:
       "We offer a wide range of research services for the generics pharmaceutical...",
-    icon: Dna,
+    iconSrc: "/images/industries/hub/Generics.webp",
     href: "/Industries/generics",
   },
   {
     title: "Biosimilar",
     description:
       "We offer a wide range of research services for a biosimilar Research...",
-    icon: Syringe,
+    iconSrc: "/images/industries/hub/Biosimilar.webp",
     href: "/Industries/biosimilar",
   },
   {
     title: "Biotechnology",
     description:
       "We offer a wide range of research services for biotechnology...",
-    icon: Component,
+    iconSrc: "/images/industries/hub/Biotechnology-5.webp",
     href: "/Industries/biotechnology",
   },
   {
     title: "Cosmetics",
     description:
       "We offer a wide range of research services for the cosmetic industry...",
-    icon: Sparkles,
+    iconSrc: "/images/industries/hub/Cosmetics.webp",
     href: "/Industries/cosmetics",
   },
   {
     title: "Foods and Nutraceuticals",
     description:
       "We offer a wide range of research services for nutraceutical ingredients...",
-    icon: FlameKindling,
+    iconSrc: "/images/industries/hub/Foods-and-Nutraceuticals-2.webp",
     href: "/Industries/foods-nutraceuticals",
   },
   {
     title: "Cosmeceutical",
     description:
       "We offer a wide range of research services for cosmeceutical industry...",
-    icon: Droplet,
+    iconSrc: "/images/industries/hub/Cosmeceutical-1.webp",
     href: "/Industries/cosmeceutical-research",
   },
   {
     title: "Nutraceutical",
     description:
       "We offer a wide range of research services for nutraceutical industry...",
-    icon: Leaf,
+    iconSrc: "/images/industries/hub/Nutraceutical-1.webp",
     href: "/Industries/nutraceutical-research",
   },
 ];
@@ -84,13 +73,11 @@ const INDUSTRIES = [
 export default function IndustryPage() {
   return (
     <>
-      {/* Dynamic SEO Structure Elements */}
       <header aria-label="Breadcrumb Navigation" className="bg-white py-2">
         <Breadcrumb items={[{ label: "Industries", href: "/industries" }]} />
       </header>
 
       <main className="bg-gray-100 min-h-screen pb-24">
-        {/* Banner Section with Dark Gradient and Framed Outlined Box */}
         <section
           className="bg-gradient-to-r from-[#172b26] via-[#1f3831] to-[#172b26] py-16 px-4 border-b border-emerald-900/20"
           aria-labelledby="hero-heading"
@@ -109,23 +96,25 @@ export default function IndustryPage() {
           </div>
         </section>
 
-        {/* 3-Column Industry Grid Layout */}
         <section className="mt-12" aria-label="Our Core Industries">
           <Container className="max-w-6xl">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {INDUSTRIES.map((industry) => {
-                const IconComponent = industry.icon;
                 return (
                   <article
                     key={industry.title}
                     className="bg-white rounded-md p-8 shadow-xs border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:shadow-md group"
                   >
-                    {/* Circle Framed Outline Vector Icon container */}
-                    <div className="w-20 h-20 rounded-full border-2 border-gray-500/60 flex items-center justify-center p-4 mb-5 group-hover:border-emerald-600 transition-colors">
-                      <IconComponent className="w-10 h-10 text-emerald-600 stroke-[1.5]" />
+                    <div className="w-20 h-20 rounded-full border-2 border-gray-500/60 flex items-center justify-center p-4 mb-5 group-hover:border-emerald-600 transition-colors relative overflow-hidden">
+                      <Image
+                        src={industry.iconSrc}
+                        alt={`${industry.title} icon`}
+                        width={48}
+                        height={48}
+                        className="object-contain"
+                      />
                     </div>
 
-                    {/* Content Section */}
                     <h2 className="text-gray-900 font-bold text-lg mb-3 tracking-tight font-display">
                       {industry.title}
                     </h2>
@@ -133,7 +122,6 @@ export default function IndustryPage() {
                       {industry.description}
                     </p>
 
-                    {/* Interactive CTA Link */}
                     <Link
                       href={industry.href}
                       className="text-gray-900 font-bold text-sm tracking-wide border-b-2 border-transparent hover:border-emerald-600 transition-all font-sans"

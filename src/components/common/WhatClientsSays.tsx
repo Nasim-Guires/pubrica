@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { FC } from "react";
+import Image from "next/image";
 
 /**
  * Path: /industries/medical-device
@@ -22,6 +23,8 @@ export interface Testimonial {
   avatarLabel: string;
   /** Alt/label for the country-flag image-section placeholder */
   flagLabel: string;
+  avatarSrc?: string;
+  flagSrc?: string;
 }
 
 export interface ClientTestimonialsProps {
@@ -85,7 +88,17 @@ const WhatClientsSays: FC<ClientTestimonialsProps> = ({
                     </p>
 
                     <div className="mt-6 flex items-center gap-4">
-                      {/* Avatar image section placeholder */}
+                      {testimonial.avatarSrc ? (
+                        <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full border border-gray-200">
+                          <Image
+                            src={testimonial.avatarSrc}
+                            alt={testimonial.avatarLabel}
+                            fill
+                            className="object-cover"
+                            sizes="48px"
+                          />
+                        </div>
+                      ) : (
                       <div
                         role="img"
                         aria-label={testimonial.avatarLabel}
@@ -95,6 +108,7 @@ const WhatClientsSays: FC<ClientTestimonialsProps> = ({
                           Image Section
                         </span>
                       </div>
+                      )}
 
                       <div className="flex-1">
                         <p className="text-sm font-bold text-gray-900">
@@ -108,7 +122,17 @@ const WhatClientsSays: FC<ClientTestimonialsProps> = ({
                         </p>
                       </div>
 
-                      {/* Flag image section placeholder */}
+                      {testimonial.flagSrc ? (
+                        <div className="relative h-8 w-10 flex-shrink-0 overflow-hidden rounded-sm">
+                          <Image
+                            src={testimonial.flagSrc}
+                            alt={testimonial.flagLabel}
+                            fill
+                            className="object-cover"
+                            sizes="40px"
+                          />
+                        </div>
+                      ) : (
                       <div
                         role="img"
                         aria-label={testimonial.flagLabel}
@@ -118,6 +142,7 @@ const WhatClientsSays: FC<ClientTestimonialsProps> = ({
                           Image
                         </span>
                       </div>
+                      )}
                     </div>
                   </article>
                 ))}

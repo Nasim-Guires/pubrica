@@ -14,7 +14,7 @@ const WhereOurAuthorsPublishAndEditors: NextPage = () => {
       journal: 'Coatings',
       publisher: 'MDPI',
       impactFactor: '2.8',
-      image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=400&q=80'
+      image: '/images/industries/medical-device/sample-works.png'
     }
   ];
 
@@ -24,21 +24,21 @@ const WhereOurAuthorsPublishAndEditors: NextPage = () => {
       qualification: 'PHD, FIAMS, DMRD, DMRE, DNB - Medical',
       experience: '20 years of experience',
       manuscripts: '100+ manuscripts edited',
-      image: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=200&q=80'
+      image: '/images/industries/medical-device/DR-RAVIKUMAR.png'
     },
     {
       name: 'Dr. Isaac Newton',
       qualification: 'MD - Medical',
       experience: '25 Years of Experience',
       manuscripts: '100+ manuscripts edited',
-      image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=200&q=80'
+      image: '/images/industries/medical-device/DR-ISACC-NEWTON.png'
     },
     {
       name: 'Dr. Krishna',
       qualification: 'MD - Medical',
       experience: '15 Years of Experience',
       manuscripts: '100+ manuscripts edited',
-      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=200&q=80'
+      image: '/images/industries/medical-device/DR-KRISHNA.png'
     }
   ];
 
@@ -124,10 +124,7 @@ const WhereOurAuthorsPublishAndEditors: NextPage = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 text-base">{editor.name}</h3>
-                    <div className="flex items-center space-x-1 text-xs text-gray-600">
-                      <span>🇺🇸</span>
-                      <span>Medical</span>
-                    </div>
+                    <div className="text-xs text-gray-600">Medical</div>
                   </div>
                 </div>
 

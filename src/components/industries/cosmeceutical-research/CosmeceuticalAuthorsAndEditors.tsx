@@ -33,7 +33,7 @@ const defaultPublication: PublicationItem = {
     journal: 'Journal of Cosmetic Dermatology',
     publisher: 'Wiley',
     impactFactor: '2.5',
-    coverImage: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=600&q=80'
+    coverImage: '/images/industries/cosmeceutical-research/sample-works-4.webp'
 };
 
 const defaultEditors: EditorProfile[] = [
@@ -42,21 +42,21 @@ const defaultEditors: EditorProfile[] = [
         qualification: 'PhD - Cosmetic Science & Dermatology',
         experience: '18 Years of Experience',
         manuscripts: '120+ manuscripts edited',
-        image: 'https://images.unsplash.com/photo-1594824813554-5a485556a297?auto=format&fit=crop&w=300&q=80'
+        image: '/images/education-editorial-service/accessibility-compliance/Dr.-Aditi-Mehta.webp'
     },
     {
         name: 'Dr. Shalini Verma',
         qualification: 'MD - Dermatology & Skin Pharmacology',
         experience: '22 Years of Experience',
         manuscripts: '110+ manuscripts edited',
-        image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=300&q=80'
+        image: '/images/industries/cosmeceutical-research/Dr.-Shalini-Verma.webp'
     },
     {
         name: 'Dr. Rajesh Iyer',
         qualification: 'PhD - Cosmeceutical Research & Innovation',
         experience: '17 Years of Experience',
         manuscripts: '95+ manuscripts edited',
-        image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=300&q=80'
+        image: '/images/education-editorial-service/accessibility-compliance/Dr.-Vikram-Joshi.webp'
     }
 ];
 

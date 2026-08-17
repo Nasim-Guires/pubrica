@@ -9,6 +9,7 @@ interface ExpertiseItem {
 interface SegmentItem {
   title: string;
   description: string;
+  iconSrc?: string;
 }
 
 interface NutraceuticalResearchProps {
@@ -59,22 +60,27 @@ const defaultExpertiseItems: ExpertiseItem[] = [
 const defaultSegments: SegmentItem[] = [
   {
     title: "Vitamins and Minerals",
+    iconSrc: "/images/industries/nutraceutical-research/Vitamins-and-Minerals.webp",
     description: "Vitamin and mineral supplements remain the largest category in the..."
   },
   {
     title: "Herbal and Botanical Nutraceuticals",
+    iconSrc: "/images/industries/nutraceutical-research/Herbal-and-Botanical-Nutraceuticals.webp",
     description: "Herbal and botanical supplements use plant extracts to support health..."
   },
   {
     title: "Functional Foods and Beverages",
+    iconSrc: "/images/industries/nutraceutical-research/Functional-Foods-and-Beverages.webp",
     description: "Functional foods are everyday consumables enhanced with bioactive..."
   },
   {
     title: "Protein and Amino Acid Supplements",
+    iconSrc: "/images/industries/nutraceutical-research/Protein-and-Amino-Acid-Supplements.webp",
     description: "High-protein diets and sports nutrition are driving the demand for protein..."
   },
   {
     title: "Probiotics and Prebiotics",
+    iconSrc: "/images/industries/nutraceutical-research/Probiotics-and-Prebiotics.webp",
     description: "Gut health has become a major focus area in the nutraceutical sector..."
   }
 ];
@@ -85,12 +91,12 @@ export default function NutraceuticalResearch({
   transformTitle = "Transforming Health with Advanced Nutraceutical Solutions",
   transformSubtitle = "Empowering wellness through science-backed nutraceutical innovations that enhance life, naturally.",
   transformParagraphs = defaultTransformParagraphs,
-  transformImage = "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80",
+  transformImage = "/images/industries/nutraceutical-research/Transforming-Health-with-Advanced-Nutraceutical-Solutions.webp",
   ctaText = "Get a Free Quote",
   expertiseTitle = "Our Expertise in Nutraceutical Development",
   expertiseSubtitle = "Developing a nutraceutical product requires a meticulous blend of scientific research, formulation expertise, quality control, and regulatory compliance. At Pubrica, we offer end-to-end support for:",
   expertiseItems = defaultExpertiseItems,
-  expertiseCenterImage = "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+  expertiseCenterImage = "/images/industries/nutraceutical-research/Our-Expertise-in-Nutraceutical-Development.webp",
   segmentsTitle = "Key Segments Of The Nutraceutical Industry",
   segmentsSubtitle = "At Pubrica, we understand the evolving nutraceutical landscape and its impact on health and wellness. The industry spans a variety of segments from vitamins and minerals to herbal extracts and functional foods; each is designed to support specific health goals and enhance overall well-being.",
   segments = defaultSegments
@@ -201,9 +207,7 @@ export default function NutraceuticalResearch({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {segments.map((segment, index) => (
             <div key={index} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col items-start text-left hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center mb-4 font-bold text-lg border border-emerald-100">
-                0{index + 1}
-              </div>
+              {segment.iconSrc ? <div className="relative w-12 h-12 mb-4"><Image src={segment.iconSrc} alt="" fill className="object-contain" sizes="48px" /></div> : null}
               <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{segment.title}</h3>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{segment.description}</p>
             </div>

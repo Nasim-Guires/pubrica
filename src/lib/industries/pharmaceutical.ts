@@ -10,6 +10,8 @@ export const pharmaTestimonials: Testimonial[] = [
     authorLocation: "India",
     avatarLabel: "Portrait of Dr. Rakesh Mehta",
     flagLabel: "Flag of India",
+    avatarSrc: "/images/industries/pharmaceutical/Dr.-Rakesh-Mehta.webp",
+    flagSrc: "/images/industries/biotechnology/india.webp",
   },
   {
     id: "priya-nair",
@@ -20,6 +22,8 @@ export const pharmaTestimonials: Testimonial[] = [
     authorLocation: "Switzerland",
     avatarLabel: "Portrait of Dr. Priya Nair",
     flagLabel: "Flag of Switzerland",
+    avatarSrc: "/images/industries/pharmaceutical/Dr.-Priya-Nair.webp",
+    flagSrc: "/images/industries/pharmaceutical/switzerland.webp",
   },
   {
     id: "neha-verma",
@@ -30,5 +34,7 @@ export const pharmaTestimonials: Testimonial[] = [
     authorLocation: "Germany",
     avatarLabel: "Portrait of Dr. Neha Verma",
     flagLabel: "Flag of Germany",
+    avatarSrc: "/images/industries/pharmaceutical/Dr.-Neha-Verma.webp",
+    flagSrc: "/images/industries/generics/germany-.webp",
   },
 ];

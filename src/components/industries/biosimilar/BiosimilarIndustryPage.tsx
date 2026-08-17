@@ -11,6 +11,7 @@ interface ServiceItem {
 interface SegmentItem {
   title: string;
   description: string;
+  iconSrc?: string;
 }
 
 interface FeatureItem {
@@ -77,27 +78,33 @@ const defaultServices: ServiceItem[] = [
 
 const defaultSegments: SegmentItem[] = [
   { 
-    title: 'Monoclonal Antibodies (mAbs)', 
+    title: 'Monoclonal Antibodies (mAbs)',
+    iconSrc: '/images/industries/biosimilar/Monoclonal-Antibodies-mAbs.webp', 
     description: 'Assistance in development, analytical characterization, and regulatory submissions for complex biologics.' 
   },
   { 
-    title: 'Insulins', 
+    title: 'Insulins',
+    iconSrc: '/images/industries/biosimilar/Insulins.webp', 
     description: 'Support for biosimilar insulin development, clinical trials, and market entry strategies.' 
   },
   { 
-    title: 'Growth Hormones', 
+    title: 'Growth Hormones',
+    iconSrc: '/images/industries/biosimilar/Growth-Hormones.webp', 
     description: 'Expertise in formulation, comparability studies, and documentation for growth hormone biosimilars.' 
   },
   { 
-    title: 'Erythropoietins (EPOs)', 
+    title: 'Erythropoietins (EPOs)',
+    iconSrc: '/images/industries/biosimilar/Erythropoietins-EPOs.webp', 
     description: 'Guidance on analytical, preclinical, and clinical requirements for erythropoietin biosimilars.' 
   },
   { 
-    title: 'Interferons', 
+    title: 'Interferons',
+    iconSrc: '/images/industries/biosimilar/Interferons.webp', 
     description: 'End-to-end support for biosimilar interferons, including pharmacovigilance and safety monitoring.' 
   },
   { 
-    title: 'Other Recombinant Proteins', 
+    title: 'Other Recombinant Proteins',
+    iconSrc: '/images/industries/biosimilar/Other-Recombinant-Proteins.webp', 
     description: 'Customized solutions for a variety of recombinant protein biosimilars, ensuring regulatory compliance and quality.' 
   }
 ];
@@ -166,7 +173,7 @@ export default function BiosimilarIndustryPage({
           <div className="relative w-full h-[450px] flex justify-center items-center">
             <div className="relative w-[380px] h-[380px] sm:w-[420px] sm:h-[420px] rounded-full overflow-hidden shadow-xl bg-gray-100 border-[10px] border-white">
               <Image 
-                src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80" 
+                src="/images/industries/biosimilar/Advancing-Compliance-and-Market-Access-for-Biosimilars.webp" 
                 alt="Scientists working in a laboratory conducting biosimilar research and analysis"
                 fill
                 sizes="(max-width: 768px) 100vw, 420px"
@@ -205,7 +212,7 @@ export default function BiosimilarIndustryPage({
             <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:mx-[-30px] z-0 flex-shrink-0 flex items-center justify-center">
               <div className="absolute inset-0 rounded-full border-[12px] border-white shadow-2xl overflow-hidden bg-gray-200">
                 <Image
-                  src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80" 
+                  src="/images/industries/biosimilar/Our-Expertise-in-Biosimilars-Includes.webp" 
                   alt="Researchers collaborating on biosimilar regulatory and scientific evidence"
                   fill
                   sizes="(max-width: 768px) 300px, 400px"
@@ -242,6 +249,7 @@ export default function BiosimilarIndustryPage({
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {segments.map((seg, index) => (
               <div key={index} className="bg-white border border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                {seg.iconSrc ? <div className="relative w-10 h-10 mb-3"><Image src={seg.iconSrc} alt="" fill className="object-contain" sizes="40px" /></div> : null}
                 <h3 className="font-bold text-lg text-[#0f2824] mb-3">{seg.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{seg.description}</p>
               </div>

@@ -46,7 +46,7 @@ const MedicalDeviceIndustryPage: NextPage = () => {
             <div className="float-right ml-8 mb-6 w-[280px] h-[280px] md:w-[360px] md:h-[360px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 flex items-center justify-center relative">
               <div className="relative w-full h-full rounded-full overflow-hidden">
                 <Image 
-                  src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80" 
+                  src="/images/industries/medical-device/Enhancing-Compliance-and-Market-Readiness-of-Medical-Devices-1.png" 
                   alt="Medical Device Operating Room" 
                   fill
                   className="object-cover"
@@ -110,7 +110,7 @@ const MedicalDeviceIndustryPage: NextPage = () => {
             {/* CENTER CIRCLE IMAGE */}
             <div className="absolute z-10 w-[340px] h-[340px] rounded-full overflow-hidden border-4 border-white shadow-xl bg-gray-100 flex items-center justify-center">
               <Image 
-                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" 
+                src="/images/industries/medical-device/Our-Expertise-in-Medical-Devices-Includes.png" 
                 alt="Medical Professional" 
                 fill
                 className="object-cover"
@@ -207,31 +207,40 @@ const MedicalDeviceIndustryPage: NextPage = () => {
             {[
               {
                 title: 'Diagnostic & Imaging Devices',
-                description: 'MRI, CT, ultrasound systems, X-ray machines, and laboratory diagnostic equipment.'
+                description: 'MRI, CT, ultrasound systems, X-ray machines, and laboratory diagnostic equipment.',
+                iconSrc: '/images/industries/medical-device/Diagnostic-Imaging-Devices.png',
               },
               {
                 title: 'Therapeutic Devices',
-                description: 'Surgical instruments, infusion pumps, dialysis equipment, and physiotherapy devices.'
+                description: 'Surgical instruments, infusion pumps, dialysis equipment, and physiotherapy devices.',
+                iconSrc: '/images/industries/medical-device/Therapeutic-Devices.png',
               },
               {
                 title: 'Monitoring Devices',
-                description: 'Wearable devices, patient monitors, and remote monitoring systems.'
+                description: 'Wearable devices, patient monitors, and remote monitoring systems.',
+                iconSrc: '/images/industries/medical-device/Monitoring-Devices.png',
               },
               {
                 title: 'Implants & Prosthetics',
-                description: 'Orthopaedic implants, cardiovascular devices, dental implants, and prosthetic limbs.'
+                description: 'Orthopaedic implants, cardiovascular devices, dental implants, and prosthetic limbs.',
+                iconSrc: '/images/industries/medical-device/Implants-ProstheticsDevices.png',
               },
               {
                 title: 'Digital Health & Software',
-                description: 'Mobile health applications, AI-based diagnostic tools, and software-as-a-medical-device (SaMD).'
+                description: 'Mobile health applications, AI-based diagnostic tools, and software-as-a-medical-device (SaMD).',
+                iconSrc: '/images/industries/medical-device/Digital-Health-Software.png',
               },
               {
                 title: 'Surgical & Hospital Devices',
-                description: 'Surgical instruments, operating room equipment, anaesthesia machines, and infusion pumps.'
+                description: 'Surgical instruments, operating room equipment, anaesthesia machines, and infusion pumps.',
+                iconSrc: '/images/industries/medical-device/Surgical-Hospital-Devices.png',
               }
             ].map((segment, idx) => (
               <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
                 <div>
+                  <div className="relative w-10 h-10 mb-3">
+                    <Image src={segment.iconSrc} alt="" fill className="object-contain" sizes="40px" />
+                  </div>
                   <h3 className="font-bold text-gray-900 text-base mb-2">{segment.title}</h3>
                   <p className="text-xs md:text-sm text-gray-600 leading-relaxed">{segment.description}</p>
                 </div>

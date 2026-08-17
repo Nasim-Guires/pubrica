@@ -6,6 +6,7 @@ import Image from 'next/image';
 interface WhyItem {
   title: string;
   description: string;
+  iconSrc?: string;
 }
 
 interface EditorProfile {
@@ -41,18 +42,22 @@ interface BiotechAdditionalSectionsProps {
 const defaultWhyItems: WhyItem[] = [
   {
     title: 'End-to-End Solutions',
+    iconSrc: '/images/industries/biotechnology/End-to-end-solutions-.webp',
     description: 'Support throughout the product lifecycle, from discovery to market access.'
   },
   {
     title: 'Global Expertise',
+    iconSrc: '/images/industries/biotechnology/Global-expertise.webp',
     description: 'Experience with submissions and compliance across multiple regulatory authorities worldwide.'
   },
   {
     title: 'Tailored Approach',
+    iconSrc: '/images/industries/biotechnology/Tailored-approach-.webp',
     description: 'Customized solutions aligned with your product, therapeutic area, and development stage.'
   },
   {
     title: 'Scientific Excellence',
+    iconSrc: '/images/industries/biotechnology/scientific-excellence-.webp',
     description: 'Team of experienced scientists, medical writers, and regulatory specialists committed to quality and innovation.'
   }
 ];
@@ -63,24 +68,24 @@ const defaultEditors: EditorProfile[] = [
     title: 'PhD - Biotechnology',
     experience: '7 years of experience',
     manuscripts: '100+ manuscripts edited',
-    imageSrc: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
-    flagSrc: 'https://flagcdn.com/w40/gb.png'
+    imageSrc: '/images/industries/biotechnology/Dr.-R.-J-M-Pharm.webp',
+    flagSrc: '/images/research-services/systematic-review/united-kingdom-.png'
   },
   {
     name: 'Dr. Giles M Pharm',
     title: 'PhD - Biotechnology',
     experience: '5 Years of Experience',
     manuscripts: '100+ manuscripts edited',
-    imageSrc: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
-    flagSrc: 'https://flagcdn.com/w40/us.png'
+    imageSrc: '/images/industries/biotechnology/Dr.-Giles-M-Pharm.webp',
+    flagSrc: '/images/editing-and-translation/book-editing/usa-.png'
   },
   {
     name: 'Dr. AD',
     title: 'PhD - Biotechnology',
     experience: '15 Years of Experience',
     manuscripts: '100+ manuscripts edited',
-    imageSrc: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
-    flagSrc: 'https://flagcdn.com/w40/us.png'
+    imageSrc: '/images/industries/biotechnology/Dr.-AD.webp',
+    flagSrc: '/images/editing-and-translation/book-editing/usa-.png'
   }
 ];
 
@@ -94,7 +99,7 @@ export default function BiotechAdditionalSections({
   journalName = 'Journal of Biotechnology',
   publisher = 'Elsevier',
   impactFactor = '3.9',
-  journalCoverImage = 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80',
+  journalCoverImage = '/images/industries/biotechnology/sample-works-2-1.webp',
   editorsSectionTitle = 'Our Expert Biotechnology Editors',
   editorsSectionSubtitle = 'Pubrica’s team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do.',
   editors = defaultEditors
@@ -125,10 +130,8 @@ export default function BiotechAdditionalSections({
                   className="w-full py-4 px-6 flex items-center justify-between text-[#0f2824] font-semibold text-base focus:outline-none hover:bg-gray-50/50 transition-colors"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-emerald-50 text-[#0f2824] flex items-center justify-center flex-shrink-0">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                      </svg>
+                    <div className="relative w-8 h-8 flex-shrink-0">
+                      {item.iconSrc ? <Image src={item.iconSrc} alt="" fill className="object-contain" sizes="32px" /> : null}
                     </div>
                     <span>{item.title}</span>
                   </div>

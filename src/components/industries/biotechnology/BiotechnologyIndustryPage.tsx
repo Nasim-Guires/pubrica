@@ -11,6 +11,7 @@ interface ServiceItem {
 interface BiotechSegment {
   title: string;
   description: string;
+  iconSrc?: string;
 }
 
 interface BiotechTypeItem {
@@ -66,43 +67,35 @@ const defaultServices: ServiceItem[] = [
   }
 ];
 
-const defaultBiotechTypes: BiotechTypeItem[] = [
-  { color: 'Red', label: 'Medical and Pharmaceutical' },
-  { color: 'Yellow', label: 'Food biotechnology' },
-  { color: 'Blue', label: 'Aquaculture marine biotech' },
-  { color: 'Green', label: 'Agriculture (biofuel, biofertilizers)' },
-  { color: 'Brown', label: 'Arid zone and desert biotechnology' },
-  { color: 'Black', label: 'Bioterrorism, Biowarfare' },
-  { color: 'Purple', label: 'Patents, Publications, Inventions' },
-  { color: 'White', label: 'Gene-bases bioindustries' },
-  { color: 'Gold', label: 'Bioinformatics nanobiotechnology' },
-  { color: 'Grey', label: 'Fermentation and bioprocess technology' },
-  { color: 'Orange', label: 'Attract future scientists' }
-];
-
 const defaultSegments: BiotechSegment[] = [
   {
     title: 'Medical Biotechnology',
+    iconSrc: '/images/industries/biotechnology/Medical-Biotechnology.webp',
     description: 'We support companies involved in the development of novel therapeutics, vaccines, and diagnostics.'
   },
   {
     title: 'Agricultural Biotechnology',
+    iconSrc: '/images/industries/biotechnology/Agricultural-Biotechnology.webp',
     description: 'Our expertise extends to plant genetics, crop improvement, and sustainable farming.'
   },
   {
     title: 'Industrial Biotechnology',
+    iconSrc: '/images/industries/biotechnology/Industrial-Biotechnology.webp',
     description: 'We work with organizations leveraging microorganisms, enzymes, and bio-based processes for industrial.'
   },
   {
     title: 'Environmental Biotechnology',
+    iconSrc: '/images/industries/biotechnology/Environmental-Biotechnology.webp',
     description: 'Our team aids companies focused on waste management, bioremediation, and.'
   },
   {
     title: 'Pharmaceutical Biotechnology',
+    iconSrc: '/images/industries/biotechnology/Pharmaceutical-Biotechnology.webp',
     description: 'We cater to biotech firms developing biologics, biosimilars, and advanced therapeutics. Services.'
   },
   {
     title: 'Nutraceuticals & Functional Foods',
+    iconSrc: '/images/industries/biotechnology/Nutraceuticals-Functional-Foods.webp',
     description: 'We assist companies in developing health-promoting products derived from biological sources. Our.'
   }
 ];
@@ -121,7 +114,6 @@ export default function BiotechnologyIndustryPage({
   services = defaultServices,
   typesHeading = 'Types Of Biotechnology We Offer',
   typesDescription = 'Biotechnology is a broad field that applies biological systems, organisms, or derivatives to develop products and technologies for various industries. It can be classified into several types based on applications, techniques, and the focus area. Here\'s a clear breakdown:',
-  biotechTypes = defaultBiotechTypes,
   segmentsHeading = 'Biotechnology Segments We Serve',
   segmentsDescription = 'At Pubrica, we provide specialized scientific, regulatory, and publishing support across diverse segments of the biotechnology industry. Our services are tailored to meet the unique needs of each segment, enabling innovation, compliance, and high-quality dissemination of research. Key segments we serve include:',
   segments = defaultSegments
@@ -158,7 +150,7 @@ export default function BiotechnologyIndustryPage({
           <div className="relative w-full h-[450px] flex justify-center items-center">
             <div className="relative w-[380px] h-[380px] sm:w-[420px] sm:h-[420px] rounded-full overflow-hidden shadow-xl bg-gray-100 border-[10px] border-white">
               <Image 
-                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80" 
+                src="/images/industries/biotechnology/Empowering-Biotechnology-Innovation.webp" 
                 alt="Scientist looking through microscope in a biotechnology laboratory"
                 fill
                 sizes="(max-width: 768px) 100vw, 420px"
@@ -197,7 +189,7 @@ export default function BiotechnologyIndustryPage({
             <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:mx-[-20px] z-0 flex-shrink-0 flex items-center justify-center">
               <div className="absolute inset-0 rounded-full border-[12px] border-white shadow-2xl overflow-hidden bg-gray-200">
                 <Image
-                  src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80" 
+                  src="/images/industries/biotechnology/Our-Expertise-in-Biotechnology-Includes.webp" 
                   alt="Biotechnology research laboratory setup with scientific equipment"
                   fill
                   sizes="(max-width: 768px) 300px, 400px"
@@ -231,28 +223,14 @@ export default function BiotechnologyIndustryPage({
             <p className="text-gray-600 max-w-3xl mx-auto text-sm md:text-base leading-relaxed">{typesDescription}</p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-            {biotechTypes.map((item, index) => (
-              <div key={index} className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm flex flex-col items-center text-center">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white mb-3 shadow-sm text-xs uppercase"
-                     style={{
-                       backgroundColor: 
-                         item.color === 'Red' ? '#ef4444' :
-                         item.color === 'Yellow' ? '#eab308' :
-                         item.color === 'Blue' ? '#3b82f6' :
-                         item.color === 'Green' ? '#22c55e' :
-                         item.color === 'Brown' ? '#a0522d' :
-                         item.color === 'Black' ? '#1f2937' :
-                         item.color === 'Purple' ? '#8b5cf6' :
-                         item.color === 'White' ? '#6b7280' :
-                         item.color === 'Gold' ? '#d97706' :
-                         item.color === 'Grey' ? '#4b5563' : '#f97316'
-                     }}>
-                  {item.color}
-                </div>
-                <h3 className="font-bold text-sm text-[#0f2824]">{item.label}</h3>
-              </div>
-            ))}
+          <div className="relative mx-auto w-full max-w-4xl aspect-[765/246]">
+            <Image
+              src="/images/industries/biotechnology/dafregdvg.webp"
+              alt="Types of Biotechnology We Offer"
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 100vw, 765px"
+            />
           </div>
         </section>
 
@@ -267,6 +245,7 @@ export default function BiotechnologyIndustryPage({
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {segments.map((seg, index) => (
                 <div key={index} className="bg-white border border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  {seg.iconSrc ? <div className="relative w-10 h-10 mb-3"><Image src={seg.iconSrc} alt="" fill className="object-contain" sizes="40px" /></div> : null}
                   <h3 className="font-bold text-lg text-[#0f2824] mb-3">{seg.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{seg.description}</p>
                 </div>

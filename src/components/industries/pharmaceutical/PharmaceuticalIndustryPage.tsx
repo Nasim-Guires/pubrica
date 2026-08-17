@@ -42,15 +42,15 @@ export default function PharmaceuticalIndustryPage() {
            <GetFreeQuoteButton/>
           </div>
 
-          {/* Image Section Placeholder */}
           <div className="flex justify-center">
-            <div 
-              className="w-72 h-72 md:w-96 md:h-96 rounded-full border-8 border-gray-100 shadow-lg flex items-center justify-center bg-gray-50 text-gray-400 text-center p-6"
-              aria-label="Image Section: Researcher writing notes with medical equipment and medicine bottles"
-            >
-              <span className="text-xs uppercase tracking-widest font-semibold text-gray-500">
-                [Image Section: Researcher & Medical Equipment Placeholder]
-              </span>
+            <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full border-8 border-gray-100 shadow-lg overflow-hidden">
+              <Image
+                src="/images/industries/pharmaceutical/Enhancing-Regulatory-Compliance-and-Market-Readiness-of-Pharmaceutical-Products-.webp"
+                alt="Researcher writing notes with medical equipment and medicine bottles"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 288px, 384px"
+              />
             </div>
           </div>
         </div>
@@ -91,15 +91,15 @@ export default function PharmaceuticalIndustryPage() {
             </div>
           </div>
 
-          {/* Center Circular Image Section Placeholder */}
           <div className="flex justify-center my-6 md:my-0">
-            <div 
-              className="w-64 h-64 rounded-full border-4 border-white shadow-md flex items-center justify-center bg-gray-100 text-gray-400 text-center p-4"
-              aria-label="Image Section: Laboratory scientist in white coat"
-            >
-              <span className="text-xs uppercase tracking-wider font-semibold text-gray-500">
-                [Image Section: Lab Professional Placeholder]
-              </span>
+            <div className="relative w-64 h-64 rounded-full border-4 border-white shadow-md overflow-hidden">
+              <Image
+                src="/images/industries/pharmaceutical/Our-Expertise-in-the-Pharmaceutical-Industry-Includes.webp"
+                alt="Laboratory scientist in white coat"
+                fill
+                className="object-cover"
+                sizes="256px"
+              />
             </div>
           </div>
 
@@ -140,48 +140,23 @@ export default function PharmaceuticalIndustryPage() {
 
         {/* Segments Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-            <h3 className="font-bold text-sm text-gray-900 mb-2">Innovative Pharmaceuticals</h3>
-            <p className="text-xs text-gray-600 leading-relaxed">
-              Small molecules, biologics, and advanced therapies require rigorous regulatory and clinical compliance.
-            </p>
+          {[
+            { title: 'Innovative Pharmaceuticals', description: 'Small molecules, biologics, and advanced therapies require rigorous regulatory and clinical compliance.', icon: '/images/industries/pharmaceutical/Innovative-Pharmaceuticals.webp' },
+            { title: 'Generic Drugs', description: 'Support for regulatory submissions, bioequivalence studies, and market entry.', icon: '/images/industries/pharmaceutical/Generic-Drugs.webp' },
+            { title: 'Over-the-Counter (OTC) Products', description: 'Guidance on regulatory compliance, labeling, and safety monitoring.', icon: '/images/industries/pharmaceutical/Over-the-Counter-OTC-Products.webp' },
+            { title: 'Vaccines & Biologics', description: 'Expertise in clinical trials, pharmacovigilance, and regulatory dossier preparation.', icon: '/images/industries/pharmaceutical/Vaccines-Biologics.webp' },
+            { title: 'Specialty Medicines', description: 'Orphan drugs, oncology treatments, and niche therapeutics with complex development paths.', icon: '/images/industries/pharmaceutical/Specialty-Medicines.webp' },
+            { title: 'Nutraceuticals & Dietary Supplements', description: 'Regulatory guidance, quality assurance, and compliance documentation.', icon: '/images/industries/pharmaceutical/Nutraceuticals-Dietary-Supplements.webp' },
+            { title: 'Pharmaceutical Excipients & APIs', description: 'Support in quality control, regulatory filings, and compliance documentation.', icon: '/images/industries/pharmaceutical/Pharmaceutical-Excipients-APIs.webp' },
+          ].map((item) => (
+          <div key={item.title} className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div className="relative w-10 h-10 mb-3">
+              <Image src={item.icon} alt="" fill className="object-contain" sizes="40px" />
+            </div>
+            <h3 className="font-bold text-sm text-gray-900 mb-2">{item.title}</h3>
+            <p className="text-xs text-gray-600 leading-relaxed">{item.description}</p>
           </div>
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-            <h3 className="font-bold text-sm text-gray-900 mb-2">Generic Drugs</h3>
-            <p className="text-xs text-gray-600 leading-relaxed">
-              Support for regulatory submissions, bioequivalence studies, and market entry.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-            <h3 className="font-bold text-sm text-gray-900 mb-2">Over-the-Counter (OTC) Products</h3>
-            <p className="text-xs text-gray-600 leading-relaxed">
-              Guidance on regulatory compliance, labeling, and safety monitoring.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-            <h3 className="font-bold text-sm text-gray-900 mb-2">Vaccines & Biologics</h3>
-            <p className="text-xs text-gray-600 leading-relaxed">
-              Expertise in clinical trials, pharmacovigilance, and regulatory dossier preparation.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-            <h3 className="font-bold text-sm text-gray-900 mb-2">Specialty Medicines</h3>
-            <p className="text-xs text-gray-600 leading-relaxed">
-              Orphan drugs, oncology treatments, and niche therapeutics with complex development paths.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-            <h3 className="font-bold text-sm text-gray-900 mb-2">Nutraceuticals & Dietary Supplements</h3>
-            <p className="text-xs text-gray-600 leading-relaxed">
-              Regulatory guidance, quality assurance, and compliance documentation.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-            <h3 className="font-bold text-sm text-gray-900 mb-2">Pharmaceutical Excipients & APIs</h3>
-            <p className="text-xs text-gray-600 leading-relaxed">
-              Support in quality control, regulatory filings, and compliance documentation.
-            </p>
-          </div>
+          ))}
         </div>
       </section>
     </main>

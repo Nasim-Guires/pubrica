@@ -7,6 +7,7 @@ import Image from 'next/image';
 interface ComplianceItem {
     title: string;
     description: string;
+    iconSrc?: string;
 }
 
 interface PublicationDetails {
@@ -42,22 +43,27 @@ interface CosmeticsAuthorsAndComplianceProps {
 const defaultComplianceItems: ComplianceItem[] = [
     {
         title: 'Sustainability & Ethical Practices',
+        iconSrc: '/images/industries/cosmetics/sustainability-and-ethical-practices.webp',
         description: 'Support for natural, organic, and cruelty-free certifications to align with consumer expectations and regulatory norms.'
     },
     {
         title: 'Clinical & Dermatological Guidelines',
+        iconSrc: '/images/industries/cosmetics/clinical-and-dermatological-guidelines.webp',
         description: 'Conduct and document studies following Good Clinical Practice (GCP) and ethical standards for skin and hair care products.'
     },
     {
         title: 'Labelling & Claims Substantiation',
+        iconSrc: '/images/industries/cosmetics/labeling-and-claims-substantiation.webp',
         description: 'Review and validation of product labels, marketing claims, and advertising materials to ensure compliance with legal and ethical requirements.'
     },
     {
         title: 'Regulatory Adherence',
+        iconSrc: '/images/industries/cosmetics/regulatory-adherence.webp',
         description: 'Guidance on FDA (US), EU Cosmetics Regulation, ASEAN Cosmetic Directives, and other regional standards.'
     },
     {
         title: 'Safety & Quality Standards',
+        iconSrc: '/images/industries/cosmetics/safety-and-quality-standarad.webp',
         description: 'Comprehensive assessment of ingredients, formulations, and finished products to ensure consumer safety.'
     }
 ];
@@ -68,7 +74,7 @@ const defaultPublication: PublicationDetails = {
     journal: 'Cosmetics',
     publisher: 'MDPI',
     impactFactor: '3.2',
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80'
+    image: '/images/industries/cosmetics/sample-works-2-2.webp'
 };
 
 const defaultEditors: ExpertEditor[] = [
@@ -77,24 +83,24 @@ const defaultEditors: ExpertEditor[] = [
         role: 'PhD, MSc - Cosmetic Science & Dermatology',
         experience: '15 years of experience',
         manuscripts: '80+ manuscripts edited',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=200&q=80',
-        flag: '🇺🇸'
+        avatar: '/images/industries/nutraceutical-research/Dr.-Ananya-Mehta-2.webp',
+        flag: ''
     },
     {
         name: 'Dr. Priya Nair',
         role: 'PhD, M Pharm - Cosmeceuticals & Skincare Research',
         experience: '12 years of Experience',
         manuscripts: '70+ manuscripts edited',
-        avatar: 'https://images.unsplash.com/photo-1594824813576-963d34b42b93?auto=format&fit=crop&w=200&q=80',
-        flag: '🇺🇸'
+        avatar: '/images/industries/nutraceutical-research/Dr.-Priya-Nair-1.webp',
+        flag: ''
     },
     {
         name: 'Dr. Kiran Sharma',
         role: 'PhD, MD - Dermatology & Aesthetic Medicine',
         experience: '18 Years of Experience',
         manuscripts: '95+ manuscripts edited',
-        avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=200&q=80',
-        flag: '🇺🇸'
+        avatar: '/images/industries/nutraceutical-research/Dr.-Rohit-Kapoor.webp',
+        flag: ''
     }
 ];
 
@@ -146,10 +152,8 @@ export default function CosmeticsAuthorsAndCompliance({
                                     className="w-full py-5 px-6 flex items-center justify-between text-left focus:outline-none hover:bg-gray-50/50 transition-colors"
                                 >
                                     <div className="flex items-center gap-3 pr-2">
-                                        <div className="w-8 h-8 rounded-full bg-emerald-50 text-[#0f2824] flex items-center justify-center flex-shrink-0">
-                                            <svg className="w-4 h-4 text-[#0f2824]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                            </svg>
+                                        <div className="relative w-8 h-8 flex-shrink-0">
+                                            {item.iconSrc ? <Image src={item.iconSrc} alt="" fill className="object-contain" sizes="32px" /> : null}
                                         </div>
                                         <span className="font-bold text-sm sm:text-base text-[#0f2824] leading-snug">{item.title}</span>
                                     </div>
@@ -245,7 +249,7 @@ export default function CosmeticsAuthorsAndCompliance({
                                 </div>
                                 <div className="flex items-center justify-center gap-1.5 mb-1">
                                     <h3 className="font-bold text-base text-[#0f2824]">{editor.name}</h3>
-                                    <span className="text-sm">{editor.flag}</span>
+                                    {editor.flag ? <span className="text-sm">{editor.flag}</span> : null}
                                 </div>
                                 <p className="text-gray-700 text-xs sm:text-sm font-medium mb-6 leading-relaxed">
                                     {editor.role}
