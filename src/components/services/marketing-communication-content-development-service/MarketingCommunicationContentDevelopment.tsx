@@ -170,7 +170,7 @@ export default function MarketingCommunicationContentDevelopment() {
                         </p>
                     </div>
 
-                    {/* Right Image Section Placeholder */}
+                    {/* Right image */}
                     <div className="md:col-span-5 flex justify-center">
                         <div className="relative w-full max-w-md">
                             <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden shadow-md">
@@ -182,7 +182,6 @@ export default function MarketingCommunicationContentDevelopment() {
                                     sizes="(max-width: 768px) 100vw, 28rem"
                                 />
                             </div>
-                            {/* Dark teal accent box under image */}
                             <div className="absolute -bottom-3 -right-3 -z-10 w-full h-full bg-[#0b3b2c] rounded-2xl"></div>
                         </div>
                     </div>
@@ -196,7 +195,7 @@ export default function MarketingCommunicationContentDevelopment() {
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-                    {/* Left Image Section Placeholder */}
+                    {/* Left image */}
                     <div className="md:col-span-5 flex justify-center">
                         <div className="relative w-full max-w-md h-80 rounded-2xl overflow-hidden shadow-inner">
                             <Image

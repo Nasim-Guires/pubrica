@@ -14,7 +14,8 @@ interface WorkflowStep {
 }
 
 interface PackageTier {
-    letter: string;
+
+    letter?: string;
     badgeSrc: string;
     badgeBg: string;
     badgeColor: string;
