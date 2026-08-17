@@ -11,7 +11,7 @@ export const editorialQualitySupportWhoWeServe = {
                 "Authors requiring language editing, formatting, or compliance support for theses, dissertations, or manuscripts."
             ],
             imageUrl:
-                "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80"
+                "/images/medical-writing/editorial-quality-support-service/Researchers-Academics.png"
         },
         {
             title: "Clinicians & Healthcare Professionals",
@@ -20,7 +20,7 @@ export const editorialQualitySupportWhoWeServe = {
                 "Professionals needing assistance with CME materials, white papers, or medical communication content."
             ],
             imageUrl:
-                "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80"
+                "/images/medical-writing/editorial-quality-support-service/Clinicians-Healthcare-Professionals.png"
         },
         {
             title: "Pharmaceutical & Biotech Companies",
@@ -29,7 +29,7 @@ export const editorialQualitySupportWhoWeServe = {
                 "Research teams requiring quality control (QC) and formatting for technical documentation and submission materials."
             ],
             imageUrl:
-                "https://images.unsplash.com/photo-1532187643603-ba119ca4109e?w=1200&q=80"
+                "/images/medical-writing/editorial-quality-support-service/Pharmaceutical-Biotech-Companies.png"
         },
         {
             title: "Universities & Academic Institutions",
@@ -38,7 +38,7 @@ export const editorialQualitySupportWhoWeServe = {
                 "Institutional repositories ensuring compliance and presentation standards in submitted documents."
             ],
             imageUrl:
-                "https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80"
+                "/images/medical-writing/editorial-quality-support-service/Universities-Academic-Institutions.png"
         },
         {
             title: "Scientific & Medical Publishers",
@@ -47,7 +47,7 @@ export const editorialQualitySupportWhoWeServe = {
                 "Editors managing high-volume submissions who require efficient and reliable manuscript polishing."
             ],
             imageUrl:
-                "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80"
+                "/images/medical-writing/editorial-quality-support-service/Scientific-Medical-Publishers.png"
         },
         {
             title: "Non-Native English Authors",
@@ -56,7 +56,7 @@ export const editorialQualitySupportWhoWeServe = {
                 "Researchers needing both linguistic support and scientific clarity to improve their chances of publication acceptance."
             ],
             imageUrl:
-                "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80"
+                "/images/medical-writing/editorial-quality-support-service/Non-Native-English-Authors.png"
         }
     ]
 };
@@ -69,36 +69,36 @@ export const editorialQualityTestimonials = {
 
   testimonials: [
     {
-      image: "/images/testimonials/journal-clinical-oncology.png",
+      image: "/images/publication-support/poster-preparation/journal-of-clinical-oncology-1.jpg",
       quote:
         "The editorial team at Pubrica transformed my manuscript into a well-polished, submission-ready article. Their adherence to CONSORT guidelines and journal formatting helped me gain swift acceptance in the Trials journal.",
 
       name: "Dr. Ravi Kumar",
       designation: "Clinical Researcher",
       organization: "India",
-      flag: "/images/flags/india.png",
+      flag: "/images/editing-and-translation/manuscript-editing/flag.png",
     },
 
     {
-      image: "/images/testimonials/international-journal-surgery.png",
+      image: "/images/physician-writing-services/international-journal-of-surgery-.jpg",
       quote:
         "Thanks to Pubrica’s editorial expertise, my systematic review on telemedicine was edited to perfection. Their focus on PRISMA compliance and scientific clarity made the peer-review process smooth and efficient.",
 
       name: "Dr. Susan Mendez",
       designation: "Public Health Specialist",
       organization: "UK",
-      flag: "/images/flags/uk.png",
+      flag: "/images/research-services/uk-flag-.png",
     },
 
     {
-      image: "/images/testimonials/bmj-case-reports.png",
+      image: "/images/physician-writing-services/BMJ-case-report-.jpg",
       quote:
         "I was impressed by the level of detail in Pubrica’s editorial support. They ensured every section of my observational study met STROBE criteria, and their feedback elevated the scientific quality of my submission.",
 
       name: "Dr. Thomas Lee",
       designation: "Epidemiologist",
       organization: "USA",
-      flag: "/images/flags/usa.png",
+      flag: "/images/research-services/grant-writing/usa-1-1.png",
     },
   ],
 };

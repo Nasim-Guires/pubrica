@@ -1,32 +1,33 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState } from "react";
 
-// --- Therapeutic Areas Data ---
+const IMG = "/images/medical-writing";
+
 interface TherapeuticArea {
   id: number;
   name: string;
-  // Circular icon representation or image path
-  iconSvg: React.ReactNode;
+  iconSrc: string;
 }
 
 const therapeuticAreas: TherapeuticArea[] = [
-  { id: 1, name: "Endocrinology", iconSvg: <ThyroidIcon /> },
-  { id: 2, name: "Haematology", iconSvg: <DropIcon /> },
-  { id: 3, name: "Gastroenterology", iconSvg: <StomachIcon /> },
-  { id: 4, name: "Dermatology", iconSvg: <SkinIcon /> },
-  { id: 5, name: "Oncology", iconSvg: <RibbonIcon /> },
-  { id: 6, name: "Cardiology", iconSvg: <HeartIcon /> },
-  { id: 7, name: "Neurology", iconSvg: <BrainIcon /> },
-  { id: 8, name: "Urology", iconSvg: <KidneyIcon /> },
-  { id: 9, name: "Paediatrics", iconSvg: <BabyIcon /> },
-  { id: 10, name: "Immunology", iconSvg: <ShieldIcon /> },
-  { id: 11, name: "Devices (Class I–III)", iconSvg: <MonitorIcon /> },
-  { id: 12, name: "Obstetrics and Gynaecology", iconSvg: <FetusIcon /> },
-  { id: 13, name: "Psychiatry", iconSvg: <HeadIcon /> },
-  { id: 14, name: "Geriatrics", iconSvg: <ElderlyIcon /> },
-  { id: 15, name: "Rheumatology", iconSvg: <BoneIcon /> },
-  { id: 16, name: "Genetic Disorders", iconSvg: <DnaIcon /> },
+  { id: 1, name: "Endocrinology", iconSrc: `${IMG}/Endocrinology.png` },
+  { id: 2, name: "Haematology", iconSrc: `${IMG}/Haematology.png` },
+  { id: 3, name: "Gastroenterology", iconSrc: `${IMG}/Gastroenterology.png` },
+  { id: 4, name: "Dermatology", iconSrc: `${IMG}/Dermatology.png` },
+  { id: 5, name: "Oncology", iconSrc: `${IMG}/Oncology-.png` },
+  { id: 6, name: "Cardiology", iconSrc: `${IMG}/Cardiology.png` },
+  { id: 7, name: "Neurology", iconSrc: `${IMG}/Neurology.png` },
+  { id: 8, name: "Urology", iconSrc: `${IMG}/Urology.png` },
+  { id: 9, name: "Paediatrics", iconSrc: `${IMG}/Paediatrics.png` },
+  { id: 10, name: "Immunology", iconSrc: `${IMG}/Immunology.png` },
+  { id: 11, name: "Devices (Class I–III)", iconSrc: `${IMG}/Devices-Class-I-III.png` },
+  { id: 12, name: "Obstetrics and Gynaecology", iconSrc: `${IMG}/Obstetrics-Gynaecology.png` },
+  { id: 13, name: "Psychiatry", iconSrc: `${IMG}/Psychiatry.png` },
+  { id: 14, name: "Geriatrics", iconSrc: `${IMG}/Geriatrics.png` },
+  { id: 15, name: "Rheumatology", iconSrc: `${IMG}/Rheumatology.png` },
+  { id: 16, name: "Genetic Disorders", iconSrc: `${IMG}/Genetic-Disorders.png` },
 ];
 
 // --- Workflow Process Data ---
@@ -34,13 +35,15 @@ interface StepItem {
   stepNumber: number;
   title: string;
   description: string;
-  isTop: boolean; // Controls top vs bottom staggered layout
+  isTop: boolean;
+  iconSrc: string;
 }
 
 const workflowSteps: StepItem[] = [
   {
     stepNumber: 1,
     title: "CONSULTATION & SCOPING",
+    iconSrc: `${IMG}/1-Consultation-Scoping.png`,
     description:
       "Our first step is an engagement discussion with you to understand what your project goals and objectives are, the types of content you are looking for, the audiences you will be targeting, any regulatory or publication context, and the desired timelines. It is important for a consistent baseline to build an appropriate scope from, and to be engaged collaboratively, and deliver as you would expect.",
     isTop: false,
@@ -48,6 +51,7 @@ const workflowSteps: StepItem[] = [
   {
     stepNumber: 2,
     title: "LITERATURE SEARCH & CONTEXT GATHERING",
+    iconSrc: `${IMG}/Literature-Search-Context-Gathering.png`,
     description:
       "We conduct a search of the relevant primary literature, grey literature, any applicable guidelines (e.g., ICH, MDR, GCP), and/or any relevant internal documentation (e.g., product monographs, protocols). We also will create the scientific context and keep the foundation material that allows the writing to be performed accurately.",
     isTop: true,
@@ -55,6 +59,7 @@ const workflowSteps: StepItem[] = [
   {
     stepNumber: 3,
     title: "MEDICAL WRITING & DEVELOPMENT",
+    iconSrc: `${IMG}/Medical-Writing-Development.png`,
     description:
       "Our team of trained writers will create the appropriate content according to your specific needs, whether that’s a peer-reviewed manuscript, CTD Module 2, Instructions for Use (IFU), a Medical Science Liaison (MSL) slide deck, or a patient information leaflet. We will maintain scientific integrity, use the correct terminology, produce content that is suitable for the intended audience.",
     isTop: false,
@@ -62,6 +67,7 @@ const workflowSteps: StepItem[] = [
   {
     stepNumber: 4,
     title: "QUALITY REVIEW & DELIVERY",
+    iconSrc: `${IMG}/Quality-Review-Delivery.png`,
     description:
       "Every document has multiple levels of quality assurance; we review for scientific accuracy, format correctness, reference check, and plagiarism. The final deliverables can also be provided with an optional editorial/QC report if needed for transparency, accountability, and traceability.",
     isTop: true,
@@ -87,8 +93,14 @@ export default function TherapeuticAreasAndWorkflow(): React.ReactElement {
               key={area.id}
               className="border-b border-r border-slate-200 p-6 flex flex-col items-center justify-center text-center bg-white hover:bg-slate-50 transition-colors duration-200 group cursor-pointer"
             >
-              <div className="w-16 h-16 rounded-full bg-[#0d3b36] flex items-center justify-center text-white mb-3 group-hover:scale-105 transition-transform duration-200 shadow-sm">
-                {area.iconSvg}
+              <div className="w-16 h-16 rounded-full bg-[#0d3b36] flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-200 shadow-sm overflow-hidden">
+                <Image
+                  src={area.iconSrc}
+                  alt={area.name}
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                />
               </div>
               <span className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#0d3b36] transition-colors">
                 {area.name}
@@ -201,72 +213,15 @@ function CardContent({
         </p>
       </div>
 
-      {/* Bottom Icon */}
       <div className="pt-4 flex justify-start">
-        <svg
-          className={`w-8 h-8 ${isActive ? "text-slate-300" : "text-slate-500"}`}
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.25 11.25h3m-3-3h3m-12-3h9m-9 3h3m-3 3h3m2.25-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
-          />
-        </svg>
+        <Image
+          src={step.iconSrc}
+          alt=""
+          width={40}
+          height={40}
+          className="object-contain"
+        />
       </div>
     </div>
   );
-}
-
-// --- ICON HELPERS ---
-function ThyroidIcon() {
-  return <span className="text-xl">🩺</span>;
-}
-function DropIcon() {
-  return <span className="text-xl">🩸</span>;
-}
-function StomachIcon() {
-  return <span className="text-xl">🫁</span>;
-}
-function SkinIcon() {
-  return <span className="text-xl">🧕</span>;
-}
-function RibbonIcon() {
-  return <span className="text-xl">🎗️</span>;
-}
-function HeartIcon() {
-  return <span className="text-xl">🫀</span>;
-}
-function BrainIcon() {
-  return <span className="text-xl">🧠</span>;
-}
-function KidneyIcon() {
-  return <span className="text-xl">🫘</span>;
-}
-function BabyIcon() {
-  return <span className="text-xl">👶</span>;
-}
-function ShieldIcon() {
-  return <span className="text-xl">🛡️</span>;
-}
-function MonitorIcon() {
-  return <span className="text-xl">💻</span>;
-}
-function FetusIcon() {
-  return <span className="text-xl">🤰</span>;
-}
-function HeadIcon() {
-  return <span className="text-xl">🗣️</span>;
-}
-function ElderlyIcon() {
-  return <span className="text-xl">🦯</span>;
-}
-function BoneIcon() {
-  return <span className="text-xl">🦴</span>;
-}
-function DnaIcon() {
-  return <span className="text-xl">🧬</span>;
 }

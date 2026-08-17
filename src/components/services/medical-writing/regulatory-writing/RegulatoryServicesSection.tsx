@@ -1,13 +1,15 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
-// --- DATA STRUCTURES ---
+const RW = '/images/medical-writing/regulatory-writing';
 
 interface CardData {
     id: string;
     title: string;
     bullets: string[];
+    iconSrc: string;
 }
 
 interface AccordionItem {
@@ -21,6 +23,7 @@ const productDevCards: CardData[] = [
     {
         id: 'pd-1',
         title: 'Clinical & Nonclinical Documentation',
+        iconSrc: `${RW}/Clinical-Nonclinical-Documentation-1.png`,
         bullets: [
             'Clinical Study Protocols (Phases I–IV)',
             'Investigator Brochures (IBs)',
@@ -32,6 +35,7 @@ const productDevCards: CardData[] = [
     {
         id: 'pd-2',
         title: 'Regulatory Dossier Preparation',
+        iconSrc: `${RW}/Regulatory-Dossier-Preparation-1.png`,
         bullets: [
             'Common Technical Document (CTD) Modules 2–5',
             'Investigational New Drug Applications (IND)',
@@ -42,6 +46,7 @@ const productDevCards: CardData[] = [
     {
         id: 'pd-3',
         title: 'Applications (MAA) Agency Communication Documents',
+        iconSrc: `${RW}/Applications-MAA-Agency-Communication-Documents-1.png`,
         bullets: [
             'Briefing Documents (FDA, EMA, etc.)',
             'Meeting Packages & Backgrounders',
@@ -52,6 +57,7 @@ const productDevCards: CardData[] = [
     {
         id: 'pd-4',
         title: 'Medical Device Regulatory Writing',
+        iconSrc: `${RW}/Medical-Device-Regulatory-Writing-1.png`,
         bullets: [
             'Clinical Evaluation Reports (CERs)',
             'Performance Evaluation Reports (PERs)',
@@ -62,6 +68,7 @@ const productDevCards: CardData[] = [
     {
         id: 'pd-5',
         title: 'Submission Strategy & Support',
+        iconSrc: `${RW}/Submission-Strategy-Support-1.png`,
         bullets: [
             'Regulatory Pathway Consulting',
             'Submission Project Management',
@@ -76,6 +83,7 @@ const complianceCards: CardData[] = [
     {
         id: 'cm-1',
         title: 'Safety and Pharmacovigilance Documentation',
+        iconSrc: `${RW}/Safety-and-Pharmacovigilance-Documentation.png`,
         bullets: [
             'Risk Management Plans (RMPs)',
             'Periodic Safety Update Report (PSURs)',
@@ -86,6 +94,7 @@ const complianceCards: CardData[] = [
     {
         id: 'cm-2',
         title: 'Post Marketing Support',
+        iconSrc: `${RW}/Post-Marketing-Support.png`,
         bullets: [
             'Variations and Renewals Documentation',
             'Post Marketing Study Report',
@@ -96,6 +105,7 @@ const complianceCards: CardData[] = [
     {
         id: 'cm-3',
         title: 'Quality and Regulatory Compliance',
+        iconSrc: `${RW}/Quality-and-Regulatory-Compliance.png`,
         bullets: [
             'ICH and GCP Compliance Review',
             'QC of Regulatory Documents',
@@ -106,6 +116,7 @@ const complianceCards: CardData[] = [
     {
         id: 'cm-4',
         title: 'Specialized Document Services',
+        iconSrc: `${RW}/Specialized-Document-Services.png`,
         bullets: [
             'Layperson Summaries, per EU Regulation',
             'Plain Language Summaries (PLS)',
@@ -210,10 +221,8 @@ export default function RegulatoryWritingPage() {
                             className="group bg-white rounded-md p-6 border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#0B3C3D] hover:border-[#0B3C3D] hover:-translate-y-1 hover:shadow-xl"
                         >
                             {/* Card Icon Container */}
-                            <div className="w-12 h-12 mb-4 text-[#0B3C3D] transition-colors duration-300 group-hover:text-white">
-                                <svg className="w-full h-full stroke-current fill-none" viewBox="0 0 24 24" strokeWidth="1.2">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9z" />
-                                </svg>
+                            <div className="w-12 h-12 mb-4 relative">
+                                <Image src={card.iconSrc} alt="" fill className="object-contain" sizes="48px" />
                             </div>
 
                             {/* Title */}
@@ -320,8 +329,14 @@ export default function RegulatoryWritingPage() {
 
                 {/* SAMPLE WORK CALLOUT CARD */}
                 <div className="bg-[#f0f7f6] rounded-xl p-6 border border-teal-100 flex flex-col md:flex-row items-center justify-between gap-6 mt-12">
-                    <div className="w-full md:w-1/3 h-40 bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center text-xs text-gray-500">
-                        [ Image Placeholder ]
+                    <div className="relative w-full md:w-1/3 h-40 rounded-lg overflow-hidden bg-gray-200">
+                        <Image
+                            src={`${RW}/Regulatory-writing-Sample-Work.png`}
+                            alt="Regulatory Writing Sample Work"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                        />
                     </div>
 
                     <div className="w-full md:w-2/3 space-y-4">

@@ -138,7 +138,7 @@ export default function EditorialQualitySupportPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-full max-w-sm h-[320px] rounded-2xl overflow-hidden shadow-lg border-4 border-[#0d312e]">
                             <Image
-                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                                src="/images/medical-writing/editorial-quality-support-service/Editorial-Quality-Support-Services-1.webp"
                                 alt="Professional editorial customer support specialist reviewing scientific documents"
                                 title="Pubrica Editorial and Quality Support Services"
                                 fill
@@ -167,27 +167,13 @@ export default function EditorialQualitySupportPage() {
 
                     {/* Overlapping/Offset Images Column */}
                     <div className="lg:col-span-5 relative min-h-[300px] flex items-center justify-center">
-                        {/* Base Image */}
-                        <div className="relative w-56 h-48 rounded-lg overflow-hidden shadow-md border border-gray-200 -translate-x-6 -translate-y-4">
+                        <div className="relative w-full max-w-sm h-64 rounded-lg overflow-hidden shadow-md border border-gray-200">
                             <Image
-                                src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80"
-                                alt="Scientist editing manuscript draft and reviewing research papers"
-                                title="Scientific Manuscript Review"
+                                src="/images/medical-writing/editorial-quality-support-service/What-We-Do.png"
+                                alt="What we do"
                                 fill
-                                sizes="250px"
-                                className="object-cover"
-                            />
-                        </div>
-
-                        {/* Overlapping Secondary Image */}
-                        <div className="absolute right-2 bottom-0 w-48 h-40 rounded-lg overflow-hidden shadow-xl border-2 border-white">
-                            <Image
-                                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80"
-                                alt="Quality control team inspecting scientific documents for journal submission"
-                                title="Editorial Quality Control Support"
-                                fill
-                                sizes="200px"
-                                className="object-cover"
+                                sizes="400px"
+                                className="object-contain"
                             />
                         </div>
                     </div>

@@ -10,69 +10,47 @@ interface Step {
     num: number;
     title: string;
     desc: string;
-    iconSvg: React.ReactNode;
+    iconSrc: string;
 }
+
+const EQ = '/images/medical-writing/editorial-quality-support-service';
 
 const stepsData: Step[] = [
     {
         num: 1,
         title: 'MANUSCRIPT SUBMISSION & EVALUATION',
         desc: 'You submit your manuscript, and our editorial team performs an initial assessment to identify language, structure, and formatting needs.',
-        iconSvg: (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-        ),
+        iconSrc: `${EQ}/Manuscript-Submission-Evaluation.png`,
     },
     {
         num: 2,
         title: 'EXPERT EDITOR ASSIGNMENT',
         desc: 'We assign your manuscript to an SME with experience in your academic or scientific field for focused editing.',
-        iconSvg: (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
-        ),
+        iconSrc: `${EQ}/Expert-Editor-Assignment.png`,
     },
     {
         num: 3,
         title: 'LANGUAGE & STRUCTURAL EDITING',
         desc: 'The editor refines grammar, clarity, sentence flow, and logical structure while preserving the integrity of your scientific content.',
-        iconSvg: (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-            </svg>
-        ),
+        iconSrc: `${EQ}/Language-Structural-Editing.png`,
     },
     {
         num: 4,
         title: 'JOURNAL FORMATTING & REFERENCING',
         desc: 'We format your manuscript as per the guidelines of your target journal, including references, figures, tables, and overall layout.',
-        iconSvg: (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-            </svg>
-        ),
+        iconSrc: `${EQ}/Journal-Formatting-Referencing.png`,
     },
     {
         num: 5,
         title: 'QUALITY CHECK & AUTHOR REVISIONS',
         desc: 'A senior editor reviews the document for consistency and compliance. You’ll receive the edited version for feedback or revisions.',
-        iconSvg: (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-        ),
+        iconSrc: `${EQ}/Quality-Check-Author-Revisions.png`,
     },
     {
         num: 6,
         title: 'FINAL PROOFREADING & SUBMISSION SUPPORT',
         desc: 'A final proofreading ensures readiness for submission. If requested, we assist with cover letters, submission, and reviewer response.',
-        iconSvg: (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-        ),
+        iconSrc: `${EQ}/Final-Proofreading-Submission-Support.png`,
     },
 ];
 
@@ -93,22 +71,22 @@ const complianceData: ComplianceCategory[] = [
         title: 'Reporting Guidelines Based on Study Type',
         items: [
             {
-                logoUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=300&q=80',
+                logoUrl: '/images/publication-support/responding-to-reviewers/Consort-Logo.webp',
                 title: 'Consolidated Standards of Reporting Trials – CONSORT',
                 desc: 'For randomized controlled trials',
             },
             {
-                logoUrl: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=300&q=80',
+                logoUrl: '/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/CONSORT-STROBE-Guidelines.png',
                 title: 'Strengthening the Reporting of Observational Studies in Epidemiology – STROBE',
                 desc: 'For observational studies',
             },
             {
-                logoUrl: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=300&q=80',
+                logoUrl: '/images/publication-support/peer-review-pre-submission/prisma_logo.png',
                 title: 'Preferred Reporting Items for Systematic Reviews and Meta-Analyses – PRISMA',
                 desc: 'For systematic reviews and meta-analyses',
             },
             {
-                logoUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=300&q=80',
+                logoUrl: '/images/physician-writing-services/case-report/CARE-.png',
                 title: 'Case Report Guidelines – CARE',
                 desc: 'Designed to improve the completeness and transparency of case reports',
             },
@@ -119,12 +97,12 @@ const complianceData: ComplianceCategory[] = [
         title: 'Ethical Research and Publication Standards',
         items: [
             {
-                logoUrl: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=300&q=80',
+                logoUrl: '/images/physician-writing-services/case-report/icmje-vydfghj.png',
                 title: 'International Committee of Medical Journal Editors',
                 desc: 'ICMJE Recommendations for manuscript preparation and ethics',
             },
             {
-                logoUrl: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=300&q=80',
+                logoUrl: '/images/medical-writing/editorial-quality-support-service/copelogo.webp',
                 title: 'Committee on Publication Ethics',
                 desc: 'COPE guidelines for publication integrity and author standards',
             },
@@ -135,17 +113,17 @@ const complianceData: ComplianceCategory[] = [
         title: 'Regulatory Compliance',
         items: [
             {
-                logoUrl: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=300&q=80',
+                logoUrl: '/images/medical-writing/editorial-quality-support-service/FDA-and-EMA-Standards.png',
                 title: 'FDA (Food and Drug Administration)',
                 desc: 'US regulatory standards compliance for medical dossiers',
             },
             {
-                logoUrl: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80',
+                logoUrl: '/images/medical-writing/editorial-quality-support-service/EMA-European-Medicines-Agency.png',
                 title: 'EMA (European Medicines Agency)',
                 desc: 'European regulatory guidelines for pharmaceutical products',
             },
             {
-                logoUrl: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=300&q=80',
+                logoUrl: '/images/medical-writing/editorial-quality-support-service/International-Council-for-Harmonisation-Good-Clinical-Practice.png',
                 title: 'Good Clinical Practice (GCP)',
                 desc: 'International ethical and scientific quality standard for clinical trials',
             },
@@ -157,6 +135,7 @@ const complianceData: ComplianceCategory[] = [
 interface EditorialPackage {
     id: string;
     badgeLetter: string;
+    logoSrc: string;
     badgeBg: string;
     badgeTextColor: string;
     title: string;
@@ -171,6 +150,7 @@ const packagesData: EditorialPackage[] = [
     {
         id: 'pkg-standard',
         badgeLetter: 'S',
+        logoSrc: '/images/publication-support/poster-preparation/S.png',
         badgeBg: 'bg-[#fce5c8]',
         badgeTextColor: 'text-[#d97706]',
         title: 'Standard',
@@ -185,6 +165,7 @@ const packagesData: EditorialPackage[] = [
     {
         id: 'pkg-advanced',
         badgeLetter: 'A',
+        logoSrc: '/images/publication-support/peer-review-pre-submission/advanced.webp',
         badgeBg: 'bg-[#dcfce7]',
         badgeTextColor: 'text-[#16a34a]',
         title: 'Advanced',
@@ -202,6 +183,7 @@ const packagesData: EditorialPackage[] = [
     {
         id: 'pkg-premium',
         badgeLetter: 'P',
+        logoSrc: '/images/editing-and-translation/translation-with-editing/pro.webp',
         badgeBg: 'bg-[#e0e7ff]',
         badgeTextColor: 'text-[#4f46e5]',
         title: 'Premium',
@@ -269,8 +251,8 @@ export default function EditorialProcessAndCompliance() {
 
                                 {/* Card Container: White default, Black on Cursor Hover */}
                                 <div className="w-full flex-1 bg-white border border-gray-200 p-4 rounded-sm flex flex-col items-center text-center transition-all duration-300 group-hover:bg-[#2b2b2b] group-hover:border-[#2b2b2b] group-hover:shadow-lg">
-                                    <div className="text-[#008ba3] group-hover:text-white mb-3 transition-colors">
-                                        {step.iconSvg}
+                                    <div className="mb-3 relative w-10 h-10 mx-auto">
+                                        <Image src={step.iconSrc} alt="" fill className="object-contain" sizes="40px" />
                                     </div>
                                     <h4 className="text-[11px] font-bold text-gray-800 group-hover:text-white mb-2 leading-snug uppercase tracking-tight transition-colors">
                                         {step.title}
@@ -363,7 +345,7 @@ export default function EditorialProcessAndCompliance() {
                     {/* Left Sample Graphic Image */}
                     <div className="md:col-span-4 relative h-56 rounded-md overflow-hidden shadow-sm border border-gray-200">
                         <Image
-                            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
+                            src="/images/medical-writing/editorial-quality-support-service/image-5.webp"
                             alt="Quality Assurance report sample for medical writing"
                             title="Editorial Sample Work"
                             fill
@@ -430,10 +412,8 @@ export default function EditorialProcessAndCompliance() {
                         >
                             {/* White Header Top with Badge & Title */}
                             <div className="bg-white p-4 border-t-4 border-gray-300 flex items-center gap-3">
-                                <div
-                                    className={`w-8 h-8 rounded-full ${pkg.badgeBg} ${pkg.badgeTextColor} font-extrabold text-sm flex items-center justify-center shadow-xs`}
-                                >
-                                    {pkg.badgeLetter}
+                                <div className="relative w-10 h-10 shrink-0">
+                                    <Image src={pkg.logoSrc} alt="" fill className="object-contain" sizes="40px" />
                                 </div>
                                 {pkg.titleBg ? (
                                     <span className={`${pkg.titleBg} ${pkg.titleTextColor} px-3 py-1 rounded-md text-sm font-bold`}>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 interface Testimonial {
   image: string;
@@ -8,7 +9,7 @@ interface Testimonial {
   name: string;
   designation: string;
   organization: string;
-  flag: string;
+  flag?: string;
 }
 
 interface TestimonialsProps {
@@ -77,11 +78,15 @@ export default function CommonTestimonial({
             >
               <div className="border border-[#0b3a57] rounded-xl shadow-md overflow-hidden bg-white">
                 <div className="bg-gray-200 p-4 flex flex-col sm:flex-row gap-4">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-28 h-32 mx-auto sm:mx-0 object-cover rounded"
-                  />
+                  <div className="relative w-28 h-32 mx-auto sm:mx-0 shrink-0">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      className="object-cover rounded"
+                      sizes="112px"
+                    />
+                  </div>
 
                   <p className="text-sm md:text-base leading-7 text-gray-700">
                     "{item.quote}"
@@ -97,11 +102,15 @@ export default function CommonTestimonial({
                     {item.designation}, {item.organization}
                   </p>
 
-                  <img
-                    src={item.flag}
-                    alt="flag"
-                    className="w-10 absolute right-5 bottom-5"
-                  />
+                  {item.flag ? (
+                    <Image
+                      src={item.flag}
+                      alt=""
+                      width={40}
+                      height={28}
+                      className="w-10 h-auto absolute right-5 bottom-5"
+                    />
+                  ) : null}
                 </div>
               </div>
             </div>

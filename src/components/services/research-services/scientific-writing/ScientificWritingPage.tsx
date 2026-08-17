@@ -1,39 +1,31 @@
 import React from 'react';
-import {
-    CheckCircle2,
-    Users2,
-    ShieldCheck,
-    GraduationCap,
-    LucideIcon
-} from 'lucide-react';
+import Image from 'next/image';
 
-// --- Types ---
 interface FeatureItem {
     id: number;
-    icon: LucideIcon;
+    iconSrc: string;
     title: string;
 }
 
-// --- Data ---
 const WHY_CHOOSE_ITEMS: FeatureItem[] = [
     {
         id: 1,
-        icon: CheckCircle2,
+        iconSrc: '/images/research-services/scientific-writing/projects-completed.png',
         title: '1000+ projects completed',
     },
     {
         id: 2,
-        icon: Users2,
+        iconSrc: '/images/research-services/scientific-writing/discipline.png',
         title: 'Subject-matter experts across 40+ disciplines',
     },
     {
         id: 3,
-        icon: ShieldCheck,
+        iconSrc: '/images/research-services/scientific-writing/commitment.png',
         title: '100% confidentiality and originality',
     },
     {
         id: 4,
-        icon: GraduationCap,
+        iconSrc: '/images/research-services/scientific-writing/graduation.png',
         title: 'University & journal-compliant writing',
     },
 ];
@@ -142,14 +134,19 @@ export const ScientificWritingPage: React.FC = () => {
                 {/* 4 Columns Feature Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 border-l border-r border-slate-200/80 bg-white">
                     {WHY_CHOOSE_ITEMS.map((item) => {
-                        const IconComponent = item.icon;
                         return (
                             <div
                                 key={item.id}
                                 className="flex flex-col items-center text-center p-6 border-b sm:border-b-0 border-r last:border-r-0 border-slate-200/80 space-y-4"
                             >
-                                <div className="w-16 h-16 rounded-full border-2 border-slate-800 flex items-center justify-center p-2 text-slate-800">
-                                    <IconComponent className="w-8 h-8 stroke-[1.5]" />
+                                <div className="w-16 h-16 rounded-full border-2 border-slate-800 flex items-center justify-center p-2 overflow-hidden">
+                                    <Image
+                                        src={item.iconSrc}
+                                        alt=""
+                                        width={40}
+                                        height={40}
+                                        className="object-contain"
+                                    />
                                 </div>
                                 <p className="text-xs font-bold text-slate-800 leading-snug">
                                     {item.title}
