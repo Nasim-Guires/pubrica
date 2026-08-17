@@ -9,32 +9,39 @@ import Link from 'next/link';
 type ServiceItem = {
     title: string;
     description: string;
+    icon: string;
 };
 
 const servicesData: ServiceItem[] = [
     {
         title: 'Assessment of Test Papers and Assessment',
         description: 'Your test paper will be assessed for readability, relevance to your syllabus, balanced difficulty levels, and',
+        icon: '/images/education-editorial-service/assessment-and-exam-review-services/Assessment-of-Test-Papers-and-Assessment.webp',
     },
     {
         title: 'Grading Rubric and Grading System Review',
         description: 'Rubric/grading criteria will be reviewed and evaluated by one of our actively qualified staff members for equity.',
+        icon: '/images/education-editorial-service/assessment-and-exam-review-services/Grading-Rubric-and-Grading-System-Review.webp',
     },
     {
         title: 'The evaluation of Learning Outcomes for Test alignment',
         description: 'Will determine if the test items assess the desired Learning Outcomes, the learner\'s thinking, and the',
+        icon: '/images/education-editorial-service/assessment-and-exam-review-services/The-evaluation-of-Learning-Outcomes-for-Test-alignment.webp',
     },
     {
         title: 'Bias Review Fairness',
         description: 'We will review test questions/assignments for every cultural, linguistic, or cognitive bias that may exist.',
+        icon: '/images/education-editorial-service/assessment-and-exam-review-services/Bias-Review-Fairness.webp',
     },
     {
         title: 'Ongoing assessment of assessments',
         description: 'The baseline of quiz assignment/project/formative assessment will be determined and used to',
+        icon: '/images/education-editorial-service/assessment-and-exam-review-services/Ongoing-assessment-of-assessments.webp',
     },
     {
         title: 'Compliance with Accreditation Process',
         description: 'To validate that the evaluation is following both the institution and the requirements of the',
+        icon: '/images/education-editorial-service/assessment-and-exam-review-services/Compliance-with-Accreditation-Process.webp',
     },
 ];
 
@@ -80,7 +87,7 @@ const AssessmentExamReviewPage: NextPage = () => {
                         <div className="float-right ml-8 mb-6 w-full md:w-[380px] lg:w-[420px] bg-[#1b3b32] p-3 rounded-2xl shadow-lg">
                             <div className="relative w-full h-[220px] md:h-[240px] rounded-xl overflow-hidden bg-gray-100">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                                    src="/images/education-editorial-service/assessment-and-exam-review-services/poster-presentation-1-2.webp"
                                     alt="Assessment and Exam Review session"
                                     fill
                                     className="object-cover"
@@ -152,8 +159,8 @@ const AssessmentExamReviewPage: NextPage = () => {
                         {servicesData.map((service, idx) => (
                             <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
                                 <div>
-                                    <div className="w-12 h-12 rounded-lg bg-[#0b3b2c]/10 flex items-center justify-center text-[#0b3b2c] font-bold text-lg mb-4">
-                                        0{idx + 1}
+                                    <div className="w-12 h-12 relative mb-4">
+                                        <Image src={service.icon} alt={service.title} fill className="object-contain" sizes="48px" />
                                     </div>
                                     <h3 className="font-bold text-gray-900 text-base mb-2">{service.title}</h3>
                                     <p className="text-xs md:text-sm text-gray-600 leading-relaxed">{service.description}</p>

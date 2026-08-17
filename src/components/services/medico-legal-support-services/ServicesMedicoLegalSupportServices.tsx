@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function ServicesMedicoLegalSupportServices() {
@@ -77,10 +78,15 @@ const toggleAccordion = (index: number) => {
 
           {/* Image Section Placeholder */}
           <div className="relative flex justify-center items-center">
-            <div className="w-full max-w-md h-64 sm:h-80 bg-slate-200 rounded-xl flex items-center justify-center border-2 border-dashed border-gray-400 shadow-md">
-              <span className="text-gray-600 font-semibold text-sm">
-                [ Image Section: Gavel, Legal Documents, and Desk ]
-              </span>
+            <div className="relative w-full max-w-md h-64 sm:h-80 rounded-xl overflow-hidden shadow-md">
+              <Image
+                src="/images/medico-legal-support-services/Medico-Legal-Services-Bridging-Medicine-and-Law-with-Expertise-and-Precision.webp"
+                alt="Medico-legal services bridging medicine and law"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 28rem"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -127,16 +133,16 @@ const toggleAccordion = (index: number) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mt-10">
           {/* Left Side: Dual Image Placeholder */}
           <div className="lg:col-span-5 flex flex-col gap-4">
-            <div className="w-full h-44 bg-slate-200 rounded-lg flex items-center justify-center border border-dashed border-gray-400">
-              <span className="text-gray-600 font-semibold text-xs sm:text-sm text-center px-4">
-                [ Image Section: Medical Legal Consultation / Hands Writing ]
-              </span>
+            <div className="relative w-full h-44 rounded-lg overflow-hidden">
+              <Image
+                src="/images/medico-legal-support-services/Medico-legal-consulting-services-providing-expert-medical-opinions.webp"
+                alt="Medico-legal consulting services providing expert medical opinions"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
             </div>
-            <div className="w-full h-44 bg-slate-200 rounded-lg flex items-center justify-center border border-dashed border-gray-400">
-              <span className="text-gray-600 font-semibold text-xs sm:text-sm text-center px-4">
-                [ Image Section: Scales of Justice & Gavel ]
-              </span>
-            </div>
+            <div className="w-full h-44 rounded-lg hidden" aria-hidden="true" />
           </div>
 
           {/* Right Side: Interactive Accordion List (All Closed by Default) */}

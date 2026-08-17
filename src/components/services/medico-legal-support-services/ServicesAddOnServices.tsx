@@ -1,11 +1,12 @@
     "use client";
 
 import React from "react";
+import Image from "next/image";
 
 export interface AddOnServiceItem {
   id: string;
   title: string;
-  iconPlaceholder: string;
+  iconSrc: string;
 }
 
 export interface ServicesAddOnServicesProps {
@@ -19,22 +20,22 @@ export default function ServicesAddOnServices({
     {
       id: "lit-precedent-research",
       title: "Medical literature and legal precedent research",
-      iconPlaceholder: "[ Icon: Research ]",
+      iconSrc: "/images/medico-legal-support-services/Outsource-medico-legal-services-for-law-firms-handling-medical-cases.webp",
     },
     {
       id: "regulatory-consultation",
       title: "Regulatory compliance consultation",
-      iconPlaceholder: "[ Icon: Compliance ]",
+      iconSrc: "/images/medico-legal-support-services/Outsource-medico-legal-services-for-accurate-medical-record-analysis.webp",
     },
     {
       id: "personalized-reports",
       title: "Personalized medico-legal reports for family members",
-      iconPlaceholder: "[ Icon: Personal Reports ]",
+      iconSrc: "/images/medico-legal-support-services/Medico-legal-services-supporting-court-ready-medical-documentation.webp",
     },
     {
       id: "disability-rating",
       title: "Disability & impairment rating for insurance claims",
-      iconPlaceholder: "[ Icon: Disability Rating ]",
+      iconSrc: "/images/medico-legal-support-services/Medico-legal-support-services-for-healthcare-litigation-and-claims.webp",
     },
   ];
 
@@ -59,10 +60,8 @@ export default function ServicesAddOnServices({
               className="bg-white rounded-xl p-6 border border-gray-200/80 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center group"
             >
               {/* Image / Icon Section Div Placeholder */}
-              <div className="w-14 h-14 mb-5 rounded-full bg-emerald-50 group-hover:bg-emerald-100/70 flex items-center justify-center border border-dashed border-emerald-300 transition-colors">
-                <span className="text-[10px] text-emerald-800 font-semibold leading-tight px-1">
-                  {service.iconPlaceholder}
-                </span>
+              <div className="relative w-14 h-14 mb-5">
+                <Image src={service.iconSrc} alt="" fill className="object-contain" sizes="56px" />
               </div>
 
               {/* Title */}

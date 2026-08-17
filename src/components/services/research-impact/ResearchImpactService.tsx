@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 export default function ResearchImpactService(): React.ReactElement {
@@ -92,11 +93,14 @@ export default function ResearchImpactService(): React.ReactElement {
               <div className="absolute inset-0 bg-[#0e2c29] rounded-2xl transform translate-x-3 translate-y-3 -z-10" />
 
               {/* Foreground Image */}
-              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white">
-                <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white aspect-[4/3]">
+                <Image
+                  src="/images/research-impact/Our-Research-Impact-Expertise-Includes.webp"
                   alt="Team reviewing research documents"
-                  className="w-full h-auto object-cover aspect-[4/3]"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  priority
                 />
               </div>
             </div>

@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 export interface SectorItem {
   id: string;
   name: string;
-  iconPlaceholder: string;
+  iconSrc: string;
 }
 
 export interface ServicesExpertiseSectorsProps {
@@ -16,21 +17,21 @@ export default function ServicesExpertiseSectors({
   className = "",
 }: ServicesExpertiseSectorsProps) {
   const sectors: SectorItem[] = [
-    { id: "orthopaedic", name: "Orthopaedic", iconPlaceholder: "[ Icon: Orthopaedic ]" },
-    { id: "psychology", name: "Psychology", iconPlaceholder: "[ Icon: Psychology ]" },
-    { id: "ent", name: "ENT", iconPlaceholder: "[ Icon: ENT ]" },
-    { id: "dental", name: "Dental", iconPlaceholder: "[ Icon: Dental ]" },
-    { id: "psychiatry", name: "Psychiatry", iconPlaceholder: "[ Icon: Psychiatry ]" },
-    { id: "maxillo-facial", name: "Maxillo-Facial", iconPlaceholder: "[ Icon: Maxillo-Facial ]" },
-    { id: "neurologist", name: "Neurologist", iconPlaceholder: "[ Icon: Neurologist ]" },
-    { id: "respiratory", name: "Respiratory", iconPlaceholder: "[ Icon: Respiratory ]" },
-    { id: "gynaecology", name: "Gynaecology", iconPlaceholder: "[ Icon: Gynaecology ]" },
-    { id: "general-surgery", name: "General Surgery", iconPlaceholder: "[ Icon: General Surgery ]" },
-    { id: "urology", name: "Urology", iconPlaceholder: "[ Icon: Urology ]" },
-    { id: "physiotherapy", name: "Physiotherapy", iconPlaceholder: "[ Icon: Physiotherapy ]" },
-    { id: "ophthalmology", name: "Ophthalmology", iconPlaceholder: "[ Icon: Ophthalmology ]" },
-    { id: "paediatrics", name: "Paediatrics", iconPlaceholder: "[ Icon: Paediatrics ]" },
-    { id: "pain-management", name: "Pain Management", iconPlaceholder: "[ Icon: Pain Management ]" },
+    { id: "orthopaedic", name: "Orthopaedic", iconSrc: "/images/medico-legal-support-services/Medical-record-review-services-ensuring-accurate-legal-reporting.webp" },
+    { id: "psychology", name: "Psychology", iconSrc: "/images/medico-legal-support-services/Professional-medico-legal-services-helping-attorneys-interpret-medical-data.webp" },
+    { id: "ent", name: "ENT", iconSrc: "/images/medico-legal-support-services/Professional-medico-legal-services-supporting-legal-investigations.webp" },
+    { id: "dental", name: "Dental", iconSrc: "/images/medico-legal-support-services/Healthcare-experts-providing-medico-legal-consulting-services.webp" },
+    { id: "psychiatry", name: "Psychiatry", iconSrc: "/images/medico-legal-support-services/Medical-record-summary-services-prepared-for-legal-case-reports.webp" },
+    { id: "maxillo-facial", name: "Maxillo-Facial", iconSrc: "/images/medico-legal-support-services/Litigation-support-services-for-medical-negligence-cases.webp" },
+    { id: "neurologist", name: "Neurologist", iconSrc: "/images/medico-legal-support-services/Litigation-support-services-with-expert-medical-record-analysis.webp" },
+    { id: "respiratory", name: "Respiratory", iconSrc: "/images/medico-legal-support-services/Comprehensive-medico-legal-support-services-for-complex-healthcare-cases.webp" },
+    { id: "gynaecology", name: "Gynaecology", iconSrc: "/images/medico-legal-support-services/Medical-record-summary-services-supporting-litigation-support-services.webp" },
+    { id: "general-surgery", name: "General Surgery", iconSrc: "/images/medico-legal-support-services/Litigation-support-services-for-healthcare-legal-disputes.webp" },
+    { id: "urology", name: "Urology", iconSrc: "/images/medico-legal-support-services/Outsource-medico-legal-services-for-law-firms-handling-medical-cases.webp" },
+    { id: "physiotherapy", name: "Physiotherapy", iconSrc: "/images/medico-legal-support-services/Outsource-medico-legal-services-for-accurate-medical-record-analysis.webp" },
+    { id: "ophthalmology", name: "Ophthalmology", iconSrc: "/images/medico-legal-support-services/Medico-legal-services-supporting-court-ready-medical-documentation.webp" },
+    { id: "paediatrics", name: "Paediatrics", iconSrc: "/images/medico-legal-support-services/Medico-legal-support-services-for-healthcare-litigation-and-claims.webp" },
+    { id: "pain-management", name: "Pain Management", iconSrc: "/images/medico-legal-support-services/Medico-legal-support-services-assisting-lawyers-with-medical-evidence-analysis.webp" },
   ];
 
   return (
@@ -54,10 +55,8 @@ export default function ServicesExpertiseSectors({
               className="flex flex-col items-center text-center group cursor-pointer"
             >
               {/* Image / Icon Section Div Placeholder */}
-              <div className="w-16 h-16 rounded-full bg-emerald-50/50 group-hover:bg-emerald-100/60 flex items-center justify-center border border-dashed border-emerald-300 transition-colors mb-3">
-                <span className="text-[9px] text-emerald-800 font-medium text-center px-1 leading-tight">
-                  {sector.iconPlaceholder}
-                </span>
+              <div className="relative w-16 h-16 mb-3">
+                <Image src={sector.iconSrc} alt={sector.name} fill className="object-contain" sizes="64px" />
               </div>
 
               {/* Title */}

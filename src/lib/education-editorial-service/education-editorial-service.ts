@@ -13,7 +13,7 @@ export const educationEditorialWhoWeServeData = {
                 "From conceptual papers to empirical studies, we refine manuscripts to meet international journal standards, ensuring accuracy, coherence, and academic rigor.",
             ],
             imageUrl:
-                "/images/services/education-editorial-service/researchers-and-academicians.webp",
+                "/images/education-editorial-service/Researchers-Academicians.webp",
         },
         {
             title: "University Students",
@@ -22,7 +22,7 @@ export const educationEditorialWhoWeServeData = {
                 "We help them communicate their ideas with clarity and adhere to academic writing conventions and formatting requirements.",
             ],
             imageUrl:
-                "/images/services/education-editorial-service/university-students.webp",
+                "/images/education-editorial-service/University-Students.webp",
         },
         {
             title: "Educational Publishers",
@@ -31,7 +31,7 @@ export const educationEditorialWhoWeServeData = {
                 "Our team ensures content accuracy, structural coherence, and pedagogical alignment.",
             ],
             imageUrl:
-                "/images/services/education-editorial-service/educational-publishers.webp",
+                "/images/education-editorial-service/Educational-Publishers.webp",
         },
         {
             title: "EdTech Companies",
@@ -40,7 +40,7 @@ export const educationEditorialWhoWeServeData = {
                 "Our editors optimize usability, language clarity, and instructional effectiveness.",
             ],
             imageUrl:
-                "/images/services/education-editorial-service/edtech-companies.webp",
+                "/images/education-editorial-service/EdTech-Companies.webp",
         },
         {
             title: "NGOs & Educational Foundations",
@@ -48,7 +48,7 @@ export const educationEditorialWhoWeServeData = {
                 "Organizations working in educational development depend on our editorial support for policy documents, project reports, training manuals, white papers, and advocacy materials in the education domain.",
             ],
             imageUrl:
-                "/images/services/education-editorial-service/ngos-and-educational-foundations.webp",
+                "/images/education-editorial-service/NGOs-Educational-Foundations.webp",
         },
         {
             title: "Government & Policy Bodies",
@@ -56,7 +56,7 @@ export const educationEditorialWhoWeServeData = {
                 "We assist government departments, education boards, and regulatory bodies by editing policy frameworks, guidelines, training documents, evaluation reports, and educational reform materials.",
             ],
             imageUrl:
-                "/images/services/education-editorial-service/government-and-policy-bodies.webp",
+                "/images/ai-ml-support/Government-Policy-Makers.webp",
         },
     ],
 };
@@ -68,7 +68,7 @@ export const workflowData: WorkflowStep[] = [
         title: "UNDERSTANDING YOUR REQUIREMENTS",
         description:
             "We begin by reviewing the document type, target audience, publishing guidelines, academic framework, and project objectives. This ensures we fully understand your needs and assign the most suitable editor for your work.",
-        iconSrc: "/icons/document-search.svg",
+        iconSrc: "/images/education-editorial-service/Under-standing-Your-Requiremen-ts.webp",
         position: "top",
     },
     {
@@ -76,7 +76,7 @@ export const workflowData: WorkflowStep[] = [
         title: "ASSIGNMENT TO SUBJECT-EXPERT EDITORS",
         description:
             "Your work is matched with editors specialized in pedagogy, educational psychology, curriculum development, and more. This guarantees domain-specific accuracy and alignment with educational standards.",
-        iconSrc: "/icons/assignment.svg",
+        iconSrc: "/images/education-editorial-service/Assignment-to-Subject-Expert-Editors.webp",
         position: "bottom",
     },
     {
@@ -84,7 +84,7 @@ export const workflowData: WorkflowStep[] = [
         title: "MULTI-LAYER EDITING AND QUALITY CHECKS",
         description:
             "Each project undergoes primary editing, secondary review, and final QA by senior editors. This layered approach ensures clarity, consistency, and an error-free final document.",
-        iconSrc: "/icons/checklist.svg",
+        iconSrc: "/images/education-editorial-service/Multi-Layer-Editing-and-Quality-Checks.webp",
         position: "top",
     },
     {
@@ -92,7 +92,7 @@ export const workflowData: WorkflowStep[] = [
         title: "AUTHOR FEEDBACK AND REVISION SUPPORT",
         description:
             "We provide track-changes files, editorial comments, and actionable suggestions for improvement. Authors can request revisions to refine arguments, learning design, or overall readability.",
-        iconSrc: "/icons/review.svg",
+        iconSrc: "/images/education-editorial-service/Author-Feedback-and-Revision-Support.webp",
         position: "bottom",
     },
     {
@@ -100,7 +100,7 @@ export const workflowData: WorkflowStep[] = [
         title: "FINAL DELIVERY AND PUBLISHING SUPPORT",
         description:
             "You receive a polished, publication-ready document formatted to journal or institutional guidelines. Optional services include similarity checks, reference validation, and final formatting support.",
-        iconSrc: "/icons/delivery.svg",
+        iconSrc: "/images/education-editorial-service/Final-Delivery-and-Publishing-Support.webp",
         position: "top",
     },
 ];
@@ -120,33 +120,33 @@ export const educationEditorialTestimonialData = {
     testimonials: [
         {
             image:
-                "/images/services/education-editorial-service/testimonials/the-lancet-infectious-diseases.webp",
+                "/images/education-editorial-service/the-lancet-of-infectious-disease.webp",
             quote:
                 "Working with the Pubrica Education Editorial Service was seamless and professional. The editors understood the nuances of academic writing, ensuring our research papers were publication-ready without compromising on content integrity.",
             name: "Prof. John Thompson",
             designation: "Education Researcher",
             organization: "United States",
-            flag: "/images/flags/united-kingdom.webp",
+            flag: "/images/research-services/systematic-review/united-kingdom-.png",
         },
         {
             image:
-                "/images/services/education-editorial-service/testimonials/rsna.webp",
+                "/images/education-editorial-service/RSNA-1.webp",
             quote:
                 "Pubrica’s editorial team transformed our curriculum manuscripts into clear, cohesive, and engaging content. Their attention to educational frameworks and pedagogical accuracy is unparalleled. Every revision added value and enhanced the overall quality.",
             name: "Dr. Meera Sharma",
             designation: "Curriculum Developer",
             organization: "India",
-            flag: "/images/flags/india.webp",
+            flag: "/images/editing-and-translation/manuscript-editing/flag.png",
         },
         {
             image:
-                "/images/services/education-editorial-service/testimonials/plos-one.webp",
+                "/images/education-editorial-service/plos-one-.webp",
             quote:
                 "The team at Pubrica helped us refine our teaching guides with exceptional precision. Their expertise in pedagogy and educational psychology made a tangible difference in how our materials are now received by teachers and students alike.",
             name: "Dr. Arjun Menon",
             designation: "Education Consultant",
             organization: "Australia",
-            flag: "/images/flags/australia.webp",
+            flag: "/images/marketing-communication-content-development-service/Australia.webp",
         },
     ],
 };

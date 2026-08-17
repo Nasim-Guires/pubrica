@@ -8,7 +8,7 @@ export const marketingCommunicationWhoWeServeData = {
             title: "Healthcare & Life Sciences Companies",
             bullets: ["Communicate complex medical or scientific information clearly to professionals and patients."],
             imageUrl:
-                "/images/services/marketing-communication/healthcare-life-sciences-companies.webp",
+                "/images/marketing-communication-content-development-service/Healthcare-Life-Sciences-Companies.png",
         },
         {
             title: "Pharmaceutical & Biotech Organizations",
@@ -16,7 +16,7 @@ export const marketingCommunicationWhoWeServeData = {
                 "Crafting strategic messaging to support product launches, campaigns, and stakeholder engagement.",
             ],
             imageUrl:
-                "/images/services/marketing-communication/pharmaceutical-biotech-organizations.webp",
+                "/images/marketing-communication-content-development-service/Pharmaceutical-Biotech-Organizations.png",
         },
         {
             title: "Medical Device & Diagnostics Firms",
@@ -24,7 +24,7 @@ export const marketingCommunicationWhoWeServeData = {
                 "Develop content that highlights innovation and product value effectively.",
             ],
             imageUrl:
-                "/images/services/marketing-communication/medical-device-diagnostics-firms.webp",
+                "/images/marketing-communication-content-development-service/Medical-Device-Diagnostics-Firms.png",
         },
         {
             title: "Corporate & B2B Organizations",
@@ -32,7 +32,7 @@ export const marketingCommunicationWhoWeServeData = {
                 "Create marketing materials that strengthen brand positioning and business communication.",
             ],
             imageUrl:
-                "/images/services/marketing-communication/corporate-b2b-organizations.webp",
+                "/images/marketing-communication-content-development-service/Corporate-B2B-Organizations.png",
         },
         {
             title: "Digital & Marketing Agencies",
@@ -40,7 +40,7 @@ export const marketingCommunicationWhoWeServeData = {
                 "Supporting content strategy, copywriting, and creative collateral development for diverse clients.",
             ],
             imageUrl:
-                "/images/services/marketing-communication/digital-marketing-agencies.webp",
+                "/images/marketing-communication-content-development-service/Digital-Marketing-Agencies.png",
         },
     ],
 };
@@ -53,33 +53,33 @@ export const marketingCommunicationContentDevelopmentServiceTestimonialData = {
   testimonials: [
     {
       image:
-        "/images/services/marketing-communication-content-development-service/testimonials/journal-of-cancer-research-and-clinical-oncology.webp",
+        "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/journal-of-cancer-reserach-clinical-oncology-.webp",
       quote:
         "Pubrica’s educational content development team transformed our curriculum materials with clarity and precision. The engaging modules they created have significantly improved learner interaction and comprehension.",
       name: "Dr. Emily Roberts",
       designation: "Program Director",
       organization: "Leading Medical University, USA",
-      flag: "/images/flags/united-states.webp",
+      flag: "/images/editing-and-translation/scientific-editing/usa-.png",
     },
     {
       image:
-        "/images/services/marketing-communication-content-development-service/testimonials/jama-oncology.webp",
+        "/images/marketing-communication-content-development-service/jama-oncology-journal-1-1.webp",
       quote:
         "Working with Pubrica has been a seamless experience. Their ability to deliver evidence-based and compliant educational content has strengthened our training programs and elevated the learning outcomes for our students.",
       name: "Prof. James Thornton",
       designation: "Head of Academics",
       organization: "Global Healthcare Training Institute, UK",
-      flag: "/images/flags/united-kingdom.webp",
+      flag: "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
     },
     {
       image:
-        "/images/services/marketing-communication-content-development-service/testimonials/british-journal-of-clinical-pharmacology.webp",
+        "/images/marketing-communication-content-development-service/british-journal-of-clinical-pharmacology.webp",
       quote:
         "Pubrica’s team exceeded our expectations in developing interactive and impactful educational materials. Their attention to detail and commitment to excellence have made a real difference in our learners’ success.",
       name: "Prof. Liam O’Connor",
       designation: "Dean, School of Health Sciences",
       organization: "Australia",
-      flag: "/images/flags/australia.webp",
+      flag: "/images/marketing-communication-content-development-service/Australia.webp",
     },
   ],
 };

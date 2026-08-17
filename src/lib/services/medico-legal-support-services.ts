@@ -11,7 +11,7 @@ export const medicoLegalSupportWhoWeServe = {
         "We support legal professionals with accurate, evidence-based expert medical opinions in medical negligence, personal injury, wrongful death, and malpractice lawsuits through specialized litigation support services.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80",
+        "/images/medico-legal-support-services/Medical-record-review-services-for-legal-case-preparation.webp",
     },
     {
       title: "Insurance Providers",
@@ -19,7 +19,7 @@ export const medicoLegalSupportWhoWeServe = {
         "Our experts assist in evaluating disputed claims through independent medical evaluations and medical record review services.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80",
+        "/images/medico-legal-support-services/Healthcare-experts-providing-medico-legal-services-globally.webp",
     },
     {
       title: "Government Agencies",
@@ -28,7 +28,7 @@ export const medicoLegalSupportWhoWeServe = {
         "Our team assists with forensic reviews, autopsy evaluations, and reports for regulatory bodies and legal departments.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1200&q=80",
+        "/images/medico-legal-support-services/Medico-legal-case-screening-services-for-legal-case-evaluation.webp",
     },
     {
       title: "Healthcare Providers",
@@ -37,7 +37,7 @@ export const medicoLegalSupportWhoWeServe = {
         "We offer objective medical-legal opinions to help manage risk and respond to legal inquiries.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+        "/images/medico-legal-support-services/Medical-record-review-services-for-personal-injury-claims.webp",
     },
     {
       title: "Patients and Families",
@@ -45,7 +45,7 @@ export const medicoLegalSupportWhoWeServe = {
         "We empower individuals navigating medical malpractice or insurance denial cases with professional medico legal support services.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=1200&q=80",
+        "/images/medico-legal-support-services/Advanced-medical-record-review-services-for-medico-legal-investigations.webp",
     },
     {
       title: "Medical Professionals",
@@ -54,7 +54,7 @@ export const medicoLegalSupportWhoWeServe = {
         "From defending against negligence claims to regulatory compliance reviews, our services ensure that their practices meet legal standards.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=1200&q=80",
+        "/images/medico-legal-support-services/Outsource-medico-legal-services-for-law-firms-worldwide.webp",
     },
     {
       title: "Private Investigators and Forensic Experts",
@@ -62,7 +62,7 @@ export const medicoLegalSupportWhoWeServe = {
         "We collaborate with private investigators and forensic consultants to provide expert analysis on injury patterns, cause of death, and other medico-legal findings relevant to criminal and civil cases.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
+        "/images/medico-legal-support-services/Medico-legal-case-screening-services-for-medical-malpractice-evaluation.webp",
     },
     {
       title: "Educational Institutions",
@@ -70,7 +70,7 @@ export const medicoLegalSupportWhoWeServe = {
         "We support medical schools, universities, and research bodies in developing medico-legal curricula, evaluating ethical standards, and guiding research involving clinical and legal intersections.",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80",
+        "/images/medico-legal-support-services/Medical-record-review-services-for-malpractice-litigation.webp",
     },
   ],
 };
@@ -92,7 +92,7 @@ export const medicoLegalSupportWorkflow = {
       description:
         "We begin with a comprehensive discussion to understand the case specifics, whether it's medical negligence, personal injury, malpractice review, or an insurance claim dispute. Our team gathers relevant case history and defines client objectives to tailor our strategy effectively.",
       iconSrc:
-        "https://cdn-icons-png.flaticon.com/512/2966/2966483.png",
+        "/images/medico-legal-support-services/Outsource-medico-legal-services-for-efficient-legal-case-analysis.webp",
       position: "top",
     },
     {
@@ -101,7 +101,7 @@ export const medicoLegalSupportWorkflow = {
       description:
         "Our experts conduct a thorough medical record analysis, examining clinical documentation, treatment timelines, and healthcare protocols. We identify gaps in care, inconsistencies, and potential breaches of duty that are critical for building strong legal arguments.",
       iconSrc:
-        "https://cdn-icons-png.flaticon.com/512/2966/2966483.png",
+        "/images/medico-legal-support-services/Professional-medico-legal-consulting-services-for-attorneys.webp",
       position: "bottom",
     },
     {
@@ -110,7 +110,7 @@ export const medicoLegalSupportWorkflow = {
       description:
         "We provide detailed, structured medico-legal reports that highlight findings clearly and align with legal standards. Our documentation includes medical chronologies, summary reports, and causation analysis to support litigation, insurance negotiations, or regulatory defense.",
       iconSrc:
-        "https://cdn-icons-png.flaticon.com/512/2966/2966483.png",
+        "/images/medico-legal-support-services/Medical-record-review-services-for-detailed-medico-legal-case-evaluation.webp",
       position: "top",
     },
     {
@@ -119,7 +119,7 @@ export const medicoLegalSupportWorkflow = {
       description:
         "Based on our analysis, we deliver actionable insights to support your legal strategy, including recommendations on the standard of care, causation, and potential negligence. Our expert assessments help lawyers, insurers, and healthcare entities make informed decisions backed by reliable medical data.",
       iconSrc:
-        "https://cdn-icons-png.flaticon.com/512/2966/2966483.png",
+        "/images/medico-legal-support-services/Expert-medical-record-review-services-for-medico-legal-cases.webp",
       position: "bottom",
     },
   ],
@@ -135,43 +135,53 @@ export const medicoLegalSupportTestimonials = {
   testimonials: [
     {
       image:
-        "https://upload.wikimedia.org/wikipedia/en/6/6e/International_Journal_of_Cardiology_cover.jpg",
+        "/images/product-development/international-journal-of-cardialogy.png",
       quote:
         "The medico-legal expertise provided by the team at Pubrica has been invaluable to our firm. Their detailed, research-driven medical reports helped clarify causation in a complex stroke malpractice case.",
       name: "Dr. R. Sharma",
       designation: "Medical Malpractice Attorney",
       organization: "India",
-      flag: "https://flagcdn.com/w80/in.png",
+      flag: "/images/editing-and-translation/flag.png",
     },
     {
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/6/67/JAMA_Network_logo.svg",
+        "/images/product-development/jama-oncology-journal.png",
       quote:
         "Working with Pubrica made a significant difference in our legal proceedings. Their precise understanding of the intersection between medicine and law was instrumental in our delayed diagnosis case.",
       name: "Prof. A. Patel",
       designation: "Legal Consultant",
       organization: "United Kingdom",
-      flag: "https://flagcdn.com/w80/gb.png",
+      flag: "/images/research-services/systematic-review/united-kingdom-.png",
     },
     {
       image:
-        "https://upload.wikimedia.org/wikipedia/en/0/09/Journal_of_Neuroscience_cover.gif",
+        "/images/medico-legal-support-services/journal-of-neuroscience-.png",
       quote:
         "After my father’s stroke, we felt lost. Pubrica’s team helped us understand the records and what really happened. Their breakdown of events gave us the confidence to pursue legal options.",
       name: "Anjali Mehta",
       designation: "Family Member of Patient",
       organization: "India",
-      flag: "https://flagcdn.com/w80/in.png",
+      flag: "/images/editing-and-translation/flag.png",
     },
     {
       image:
-        "https://upload.wikimedia.org/wikipedia/en/7/79/RSNA_logo.svg",
+        "/images/product-development/RSNA.png",
       quote:
         "Pubrica’s comprehensive medico-legal documentation helped our team secure a favorable outcome in a personal injury case. Their ability to analyze medical records and identify overlooked clinical errors was impressive and case-defining.",
       name: "Dr. M. Kapoor",
       designation: "Injury Claims Specialist",
       organization: "Australia",
-      flag: "https://flagcdn.com/w80/au.png",
+      flag: "/images/continuing-medical-education-cme-content-development/australia-.png",
+    },
+    {
+      image:
+        "/images/product-development/the-lancet-of-oncolgy-1-1.png",
+      quote:
+        "Pubrica’s medico-legal analysis provided the clarity we needed to proceed with confidence. Their documentation was thorough, timely, and aligned with legal reporting standards.",
+      name: "Dr. L. Bennett",
+      designation: "Healthcare Litigation Counsel",
+      organization: "United States",
+      flag: "/images/research-services/grant-writing/usa-1-1.png",
     },
   ],
 };
@@ -186,7 +196,7 @@ export const medicoLegalSupportPackages = {
 
   packages: [
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      icon: "/images/editing-and-translation/basic-pacakge.png",
       title: "Basic",
       subtitle: "Basic Medico-Legal Consultation",
       idealFor: "Preliminary case screening, early-stage litigation decisions",
@@ -204,7 +214,7 @@ export const medicoLegalSupportPackages = {
     },
 
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      icon: "/images/publication-support/poster-preparation/S.png",
       title: "Standard",
       subtitle: "Standard Medico-Legal Analysis Package",
       idealFor:
@@ -225,7 +235,7 @@ export const medicoLegalSupportPackages = {
     },
 
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      icon: "/images/research-services/c-box-icons.png",
       title: "Comprehensive",
       subtitle: "Comprehensive Litigation Support Package",
       idealFor: "Cases requiring expert testimony in court",

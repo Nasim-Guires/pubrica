@@ -7,7 +7,7 @@ export const accessibilityComplianceWhoWeServe = {
     {
       title: "Researchers & Academics",
       imageUrl:
-        "https://images.unsplash.com/photo-1532094349884-543bc11b2340",
+        "/images/education-editorial-service/accessibility-compliance/Researchers-Academics-1.webp",
       bullets: [
         "We assist researchers, scholars and independent authors verify that their manuscripts conform to specific accessibility expectations established by the journals, publishers and funding organizations, whilst maintaining the integrity of the scholarly content and the author's original intent.",
       ],
@@ -15,7 +15,7 @@ export const accessibilityComplianceWhoWeServe = {
     {
       title: "Publishers and Journals",
       imageUrl:
-        "https://images.unsplash.com/photo-1455390582262-044cdead277a",
+        "/images/education-editorial-service/accessibility-compliance/Publishers-and-Journals.webp",
       bullets: [
         "We assist academic publishers and journal editors in creating accessibility-compliant manuscripts, books, and supplementary materials that conform to WCAG, Section 508, and the unique accessibility policy of the publisher.",
       ],
@@ -23,7 +23,7 @@ export const accessibilityComplianceWhoWeServe = {
     {
       title: "Early-Career Researchers",
       imageUrl:
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+        "/images/education-editorial-service/accessibility-compliance/Early-Career-Researchers.webp",
       bullets: [
         "Our services help graduate students and early-career researchers meet the accessibility and submission requirements for their dissertations, theses, and academic projects.",
       ],
@@ -31,7 +31,7 @@ export const accessibilityComplianceWhoWeServe = {
     {
       title: "Technical and Scientific Accessibility Compliance",
       imageUrl:
-        "https://images.unsplash.com/photo-1532187643603-ba119ca4109e",
+        "/images/education-editorial-service/accessibility-compliance/Technical-and-Scientific-Accessibility-Compliance.webp",
       bullets: [
         "This is a dedicated service for academic publications, such as research papers, theses, and other scientific publications, which helps to ensure that your tables, figures, and equations are accurate, as well as the specific content for your discipline, and helps to provide accessibility compliance.",
       ],
@@ -39,7 +39,7 @@ export const accessibilityComplianceWhoWeServe = {
     {
       title: "Detailed Line-Level Accessibility",
       imageUrl:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
+        "/images/education-editorial-service/accessibility-compliance/Detailed-Line-Level-Accessibility.webp",
       bullets: [
         "The goal of our service is to increase readability and clarity at the sentence and paragraph level for all users including those utilizing assistive technology. Every section of our content has been specifically written to provide an optimum level of engagement, comprehension, and accessibility.",
       ],
@@ -47,7 +47,7 @@ export const accessibilityComplianceWhoWeServe = {
     {
       title: "Final Accessibility Proofing",
       imageUrl:
-        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85",
+        "/images/education-editorial-service/accessibility-compliance/Final-Accessibility-Proofing.webp",
       bullets: [
         "In the Final Review Process, we'll conduct a thorough check of your manuscript for compliance with WCAG, Section 508, and any specific guidelines set forth by the publisher. We will also identify and correct any minor accessibility issues, so your manuscript is fully prepared for publication and is inclusive.",
       ],
@@ -69,7 +69,7 @@ export const accessibilityComplianceWorkflow = {
       description:
         "Initially, we will discuss your manuscript type, journal or publisher accessibility guidelines, discipline-specific requirements and the amount of compliance required for accessibility. After gaining this information we will adjust our methodology to meet your goals.",
       iconSrc:
-        "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "/images/education-editorial-service/accessibility-compliance/Requirement-Analysis-Project-Scoping.webp",
       position: "top",
     },
     {
@@ -78,7 +78,7 @@ export const accessibilityComplianceWorkflow = {
       description:
         "An accessibility specialist who will work on your manuscript has experience in scientific, academic or technical content. This will assure that your manuscript has a well-defined structure and conforms to all accessibility requirements.",
       iconSrc:
-        "https://cdn-icons-png.flaticon.com/512/1995/1995574.png",
+        "/images/education-editorial-service/accessibility-compliance/Assignment-to-Accessibility-Experts.webp",
       position: "bottom",
     },
     {
@@ -87,7 +87,7 @@ export const accessibilityComplianceWorkflow = {
       description:
         "Our professional writers will enhance or create headings, tables, figures, images, and text so they are completely accessible. All written materials will include a logical sequence (i.e., an outline), be easy to read, provide alt text for all visual elements, and comply with the Web Content Accessibility Guidelines (WCAG), Section 508 and journal-specific guidelines.",
       iconSrc:
-        "https://cdn-icons-png.flaticon.com/512/2991/2991148.png",
+        "/images/education-editorial-service/accessibility-compliance/Comprehensive-Structural-Content-Accessibility.webp",
       position: "top",
     },
     {
@@ -96,7 +96,7 @@ export const accessibilityComplianceWorkflow = {
       description:
         "In addition to using assistive technology (AT) to enhance the content of tables, charts, equations, etc. for those who may use AT to access the materials, we ensure that all parts of the manuscript will use the same formatting, labelling and terminology.",
       iconSrc:
-        "https://cdn-icons-png.flaticon.com/512/1055/1055687.png",
+        "/images/education-editorial-service/accessibility-compliance/Technical-Visual-Element-Optimization.webp",
       position: "bottom",
     },
     {
@@ -105,7 +105,7 @@ export const accessibilityComplianceWorkflow = {
       description:
         "After the initial round of editing, a senior accessibility editor performs a quality control assessment to ensure that all elements are compliant with Pubrica's accessibility standards concerning clarity and ease of use.",
       iconSrc:
-        "https://cdn-icons-png.flaticon.com/512/3063/3063822.png",
+        "/images/education-editorial-service/accessibility-compliance/Editorial-Quality-Review.webp",
       position: "top",
     },
     {
@@ -114,7 +114,7 @@ export const accessibilityComplianceWorkflow = {
       description:
         "We will conduct a final review to resolve any remaining problems and ensure that the document meets the following conditions: The document is completely accessible, ready for publication, and meets all current accessibility standard requirements from both the publisher and the Government of Canada.",
       iconSrc:
-        "https://cdn-icons-png.flaticon.com/512/190/190411.png",
+        "/images/education-editorial-service/accessibility-compliance/Accessibility-Verification.webp",
       position: "bottom",
     },
   ],
@@ -129,36 +129,36 @@ export const accessibilityComplianceTestimonials = {
   testimonials: [
     {
       image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+        "/images/academic-editorial-services/revisioning-and-localisation-service/journal-of-clinical-epidemiology-1.png",
       quote:
         "The editorial and compliance support ensured my manuscript met all accessibility and digital compliance standards. The team improved clarity, technical accuracy, and adherence to WCAG guidelines, making it fully publication-ready.",
       name: "Dr. Neha Verma",
       designation: "Human-Computer Interaction Researcher",
       organization: "India",
       flag:
-        "https://flagcdn.com/w80/in.png",
+        "/images/research-services/uk-flag-.png",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
+        "/images/academic-editorial-services/revisioning-and-localisation-service/journal-of-health-economics.png",
       quote:
         "Pubrica’s experts elevated my manuscript on digital compliance. Their attention to detail, clear guidance on accessibility terminology, and structural improvements made my submission journal ready.",
       name: "Dr. Michael Chen",
       designation: "Digital Accessibility Specialist",
       organization: "Singapore",
       flag:
-        "https://flagcdn.com/w80/sg.png",
+        "/images/editing-and-translation/scientific-editing/singapore-.png",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1531482615713-2afd69097998",
+        "/images/academic-editorial-services/revisioning-and-localisation-service/Indian-council-of-medical-research-1.png",
       quote:
         "Pubrica’s editorial expertise made my accessibility research paper much more coherent and publication ready. Their guidance on structure, clarity, and compliance content was invaluable.",
       name: "Dr. Emily Thompson",
       designation: "Inclusive Design Researcher",
       organization: "UK",
       flag:
-        "https://flagcdn.com/w80/gb.png",
+        "/images/research-services/uk-flag-.png",
     },
   ],
 };

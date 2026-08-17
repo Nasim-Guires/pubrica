@@ -116,7 +116,7 @@ export default function ScientificNewsReportServices() {
                         <div className="relative w-full max-w-md h-64 sm:h-72 bg-emerald-900 rounded-2xl overflow-hidden p-2 shadow-lg">
                             <div className="relative w-full h-full rounded-xl overflow-hidden">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
+                                    src="/images/research-impact/scientific-news-report/scientific-news-report-involves-the-transformation-of-your-manuscript.webp"
                                     alt="Researcher preparing scientific news story"
                                     fill
                                     sizes="(max-width: 768px) 100vw, 400px"
@@ -151,22 +151,14 @@ export default function ScientificNewsReportServices() {
                         <div className="relative w-full max-w-sm h-72">
                             <div className="absolute top-0 left-0 w-3/5 h-48 rounded-xl overflow-hidden shadow-md border-2 border-white z-10">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600"
+                                    src="/images/research-impact/scientific-news-report/What-We-Do.png"
                                     alt="Doctor writing report"
                                     fill
                                     sizes="300px"
                                     className="object-cover"
                                 />
                             </div>
-                            <div className="absolute bottom-0 right-0 w-3/5 h-44 rounded-xl overflow-hidden shadow-lg border-2 border-white z-20">
-                                <Image
-                                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600"
-                                    alt="Team celebrating successful news release"
-                                    fill
-                                    sizes="300px"
-                                    className="object-cover"
-                                />
-                            </div>
+                            <div className="absolute bottom-0 right-0 w-3/5 h-44 rounded-xl overflow-hidden shadow-lg border-2 border-white z-20 hidden" aria-hidden="true" />
                         </div>
                     </div>
 

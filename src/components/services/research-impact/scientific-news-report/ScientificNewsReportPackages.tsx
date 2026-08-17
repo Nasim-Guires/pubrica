@@ -1,11 +1,12 @@
 'use client';
 
 import React from 'react';
-import { DollarSign, Calendar } from 'lucide-react';
+import Image from 'next/image';
 
 interface PackageTier {
     id: string;
     badge: string;
+    badgeSrc: string;
     title: string;
     idealFor: string;
     includes: string[];
@@ -22,6 +23,7 @@ const packagesData: PackageTier[] = [
     {
         id: 'basic-package',
         badge: 'B',
+        badgeSrc: '/images/editing-and-translation/basic-pacakge.png',
         title: 'Basic Package',
         idealFor: 'Individual researchers needing a simplified media summary for general outreach.',
         includes: [
@@ -41,6 +43,7 @@ const packagesData: PackageTier[] = [
     {
         id: 'standard-package',
         badge: 'S',
+        badgeSrc: '/images/publication-support/poster-preparation/S.png',
         title: 'Standard Package',
         idealFor: 'Research teams or universities looking for media-ready summaries for websites and PR.',
         includes: [
@@ -60,6 +63,7 @@ const packagesData: PackageTier[] = [
     {
         id: 'premium-package',
         badge: 'P',
+        badgeSrc: '/images/publication-support/responding-to-reviewers/pa-icons-.png',
         title: 'Premium Package',
         idealFor: 'Institutions, funded projects, or research groups with outreach and policy goals.',
         includes: [
@@ -104,8 +108,8 @@ export default function ScientificNewsReportPackages() {
                             <div>
                                 {/* Package Card Header */}
                                 <div className={`p-4 border-b ${pkg.borderColor} ${pkg.headerBg} flex items-center justify-center gap-3`}>
-                                    <span className={`w-8 h-8 rounded-full ${pkg.badgeBg} ${pkg.badgeTextColor} font-bold flex items-center justify-center text-sm shadow-sm`}>
-                                        {pkg.badge}
+                                    <span className={`relative w-8 h-8 rounded-full ${pkg.badgeBg} overflow-hidden shadow-sm`}>
+                                        <Image src={pkg.badgeSrc} alt={pkg.title} fill className="object-contain" sizes="32px" />
                                     </span>
                                     <h3 className="text-lg font-bold text-[#033c2a]">
                                         {pkg.title}
@@ -155,14 +159,14 @@ export default function ScientificNewsReportPackages() {
                     <div className="md:col-span-3 mt-4 bg-white border border-slate-200 rounded-xl p-4 shadow-lg flex flex-col sm:flex-row items-center justify-between gap-4 max-w-2xl mx-auto w-full">
                         <div className="flex items-center gap-6">
                             <div className="flex items-center gap-2 text-slate-800 text-sm font-semibold">
-                                <div className="p-1.5 bg-blue-100 text-blue-600 rounded-full">
-                                    <DollarSign className="w-4 h-4" />
+                                <div className="relative w-6 h-6">
+                                    <Image src="/images/publication-support/journal-manuscript-formatting-services/dollar-sign.png" alt="" fill className="object-contain" sizes="24px" />
                                 </div>
                                 <span>Starts from <strong className="text-slate-900 font-bold">350</strong></span>
                             </div>
                             <div className="flex items-center gap-2 text-slate-800 text-sm font-semibold">
-                                <div className="p-1.5 bg-sky-100 text-sky-600 rounded-full">
-                                    <Calendar className="w-4 h-4" />
+                                <div className="relative w-6 h-6">
+                                    <Image src="/images/publication-support/journal-manuscript-formatting-services/date.png" alt="" fill className="object-contain" sizes="24px" />
                                 </div>
                                 <span>7 days</span>
                             </div>

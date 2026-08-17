@@ -7,7 +7,7 @@ export const aiAndDataPreparationServicesWhoWeServe = {
     {
       title: "Academic Researchers & Data Scientists",
       imageUrl:
-        "https://images.unsplash.com/photo-1532094349884-543bc11b2340",
+        "/images/education-editorial-service/ai-and-data-preparation-services/Academic-Researchers-Data-Scientists.webp",
       bullets: [
         "Clean, Annotated and AI-Ready Research Data Sets that Support Reproducibility for Robust Analyses. Complete Your Project with Clean, Annotated, and AI-Ready Research Data Sets that Allow Reproducibility of Analyses and Will Lead to High Impact Results.",
       ],
@@ -15,7 +15,7 @@ export const aiAndDataPreparationServicesWhoWeServe = {
     {
       title: "Universities & Research Institutions",
       imageUrl:
-        "https://images.unsplash.com/photo-1562774053-701939374585",
+        "/images/education-editorial-service/ai-and-data-preparation-services/Universities-Research-Institutions.webp",
       bullets: [
         "Develop and document datasets through comprehensive preparation for use in AI-based research, data archives, and different discipline activities of research.",
       ],
@@ -23,7 +23,7 @@ export const aiAndDataPreparationServicesWhoWeServe = {
     {
       title: "Publishers & Research Platforms",
       imageUrl:
-        "https://images.unsplash.com/photo-1455390582262-044cdead277a",
+        "/images/education-editorial-service/ai-and-data-preparation-services/Publishers-Research-Platforms.webp",
       bullets: [
         "Assistance with dataset publication (including supplemental materials), as well as assistance with preparing datasets to be deposited into an open-access repository, will be done consistently and coherently.",
       ],
@@ -31,7 +31,7 @@ export const aiAndDataPreparationServicesWhoWeServe = {
     {
       title: "AI Developers & Industry Teams",
       imageUrl:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+        "/images/education-editorial-service/ai-and-data-preparation-services/AI-Developers-Industry-Teams.webp",
       bullets: [
         "Structured, labelled, and optimised data improves efficiency in developing AI models by accelerating the training and validation processes.",
       ],
@@ -39,7 +39,7 @@ export const aiAndDataPreparationServicesWhoWeServe = {
     {
       title: "Non-Profit Organizations & Government Agencies",
       imageUrl:
-        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+        "/images/education-editorial-service/ai-and-data-preparation-services/Non-Profit-Organizations-Government-Agencies-1.webp",
       bullets: [
         "Support Data-Driven Policy, Research, and Innovation Initiatives with the Use of Ethical Compliant and Well-Prepared Datasets.",
       ],
@@ -47,7 +47,7 @@ export const aiAndDataPreparationServicesWhoWeServe = {
     {
       title: "Corporate & Analytics Teams",
       imageUrl:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978",
+        "/images/education-editorial-service/ai-and-data-preparation-services/Corporate-Analytics-Teams.webp",
       bullets: [
         "Organisations will receive support from Pelican in collecting all the business data required for them to work towards their full automation.",
       ],
@@ -68,7 +68,7 @@ export const aiAndDataPreparationServicesWorkflow = {
       title: "Initial Assessment",
       description:
         "We assess your dataset, define your Research Objectives, explore the use cases of AI along with the Technical Requirements defining the overall quality issues and preparation requirements for your dataset.",
-      iconSrc: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      iconSrc: "/images/education-editorial-service/ai-and-data-preparation-services/Initial-Assessment.webp",
       position: "top",
     },
     {
@@ -76,7 +76,7 @@ export const aiAndDataPreparationServicesWorkflow = {
       title: "Data Cleaning & Structuring",
       description:
         "Our specialists will clean, organise and standardise your dataset to create Accuracy, Consistency and Usability in the dataset.",
-      iconSrc: "https://cdn-icons-png.flaticon.com/512/3062/3062634.png",
+      iconSrc: "/images/education-editorial-service/ai-and-data-preparation-services/Data-Cleaning-Structuring.webp",
       position: "bottom",
     },
     {
@@ -84,7 +84,7 @@ export const aiAndDataPreparationServicesWorkflow = {
       title: "Annotation & Preparation",
       description:
         "We use precise Annotation, Labelling and Feature Preparation that is aligned with your AI or Analytical Objectives.",
-      iconSrc: "https://cdn-icons-png.flaticon.com/512/1995/1995574.png",
+      iconSrc: "/images/education-editorial-service/ai-and-data-preparation-services/Annotation-Preparation.webp",
       position: "top",
     },
     {
@@ -92,7 +92,7 @@ export const aiAndDataPreparationServicesWorkflow = {
       title: "Data Optimization",
       description:
         "We enhance Clarity, Balance and Relevance to our datasets while preserving the Original Data Integrity.",
-      iconSrc: "https://cdn-icons-png.flaticon.com/512/2991/2991148.png",
+      iconSrc: "/images/education-editorial-service/ai-and-data-preparation-services/Data-Optimization.webp",
       position: "bottom",
     },
     {
@@ -100,7 +100,7 @@ export const aiAndDataPreparationServicesWorkflow = {
       title: "Review & Quality Assurance",
       description:
         "Every Dataset undergoes a rigorous Quality Check for Accuracy, Consistency and Readiness for AI.",
-      iconSrc: "https://cdn-icons-png.flaticon.com/512/3063/3063822.png",
+      iconSrc: "/images/education-editorial-service/ai-and-data-preparation-services/Review-Quality-Assurance-1.webp",
       position: "top",
     },
     {
@@ -108,7 +108,7 @@ export const aiAndDataPreparationServicesWorkflow = {
       title: "Final Delivery with Transparency",
       description:
         "You will receive a fully prepared, documented & AI ready dataset that is able to utilise for Research, Modelling or Production purposes.",
-      iconSrc: "https://cdn-icons-png.flaticon.com/512/190/190411.png",
+      iconSrc: "/images/education-editorial-service/ai-and-data-preparation-services/Final-Delivery-with-Transparency.webp",
       position: "bottom",
     },
   ],
@@ -123,7 +123,7 @@ export const aiAndDataPreparationServicesPackages = {
 
   packages: [
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      icon: "/images/editing-and-translation/basic-pacakge.png",
       title: "Basic Data Preparation",
       subtitle: "Basic Package",
       description:
@@ -143,7 +143,7 @@ export const aiAndDataPreparationServicesPackages = {
       borderColor: "#F5A623",
     },
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/1995/1995574.png",
+      icon: "/images/publication-support/peer-review-pre-submission/advanced.webp",
       title: "Advanced AI Data Optimization",
       subtitle: "Advanced Package",
       description:
@@ -163,7 +163,7 @@ export const aiAndDataPreparationServicesPackages = {
       borderColor: "#22A06B",
     },
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/190/190411.png",
+      icon: "/images/editing-and-translation/translation-with-editing/pro.webp",
       title: "Premium AI Data Engineering & Compliance",
       subtitle: "Premium Package",
       description:
@@ -193,36 +193,36 @@ export const aiAndDataTestimonials = {
   testimonials: [
     {
       image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+        "/images/education-editorial-service/ai-and-data-preparation-services/the-lancet.webp",
       quote:
         "The precision of data annotation and preprocessing provided by Pubrica significantly accelerated our machine learning workflow.",
       name: "Dr. Priya Menon",
       designation: "AI Researcher",
       organization: "India",
       flag:
-        "https://flagcdn.com/w80/in.png",
+        "/images/editing-and-translation/scientific-editing/usa-.png",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
+        "/images/education-editorial-service/ai-and-data-preparation-services/THE-INDIAN-JOURNAL-PUBLIC-HEALTH-2.webp",
       quote:
         "Pubrica helped us prepare complex research datasets with clarity and consistency, making them suitable for both publication and AI analysis.",
       name: "Dr. Maria Thompson",
       designation: "Computational Researcher",
       organization: "United Kingdom",
       flag:
-        "https://flagcdn.com/w80/sg.png",
+        "/images/editing-and-translation/manuscript-editing/india.png",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1531482615713-2afd69097998",
+        "/images/education-editorial-service/ai-and-data-preparation-services/international-journal-of-surgery-1.webp",
       quote:
         "Pubrica’s AI and Data Preparation services transformed our raw datasets into clean, model-ready resources. The improvement in model performance was immediate.",
       name: "Dr. Emily Carter",
       designation: "Data Scientist",
       organization: "USAInternational",
       flag:
-        "https://flagcdn.com/w80/gb.png",
+        "/images/research-services/systematic-review/united-kingdom-.png",
     },
   ],
 };

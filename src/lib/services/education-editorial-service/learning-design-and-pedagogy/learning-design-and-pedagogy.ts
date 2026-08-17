@@ -7,7 +7,7 @@ export const learningDesignAndPedagogyWhoWeServe = {
         {
             title: "Academic Researchers & Educators",
             imageUrl:
-                "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+                "/images/education-editorial-service/learning-design-and-pedagogy/Academic-Researchers-Educators.webp",
             bullets: [
                 "Utilize pedagogically sound course design in developing courses, subdivisions and teaching material with proven success rates (e.g., enhancing student achievement, supporting student involvement in class).",
             ],
@@ -15,7 +15,7 @@ export const learningDesignAndPedagogyWhoWeServe = {
         {
             title: "Universities & Educational Institutions",
             imageUrl:
-                "https://images.unsplash.com/photo-1562774053-701939374585",
+                "/images/education-editorial-service/learning-design-and-pedagogy/Universities-Educational-Institutions.webp",
             bullets: [
                 "Aid in the creation of curriculum, the redesign or re-structuring of courses and their associated programs to achieve compliance with Accrediting Standard requirements while providing a proper fit for the Institution's own stated Learning Goals.",
             ],
@@ -23,7 +23,7 @@ export const learningDesignAndPedagogyWhoWeServe = {
         {
             title: "Publishers & Educational Content Developers",
             imageUrl:
-                "https://images.unsplash.com/photo-1455390582262-044cdead277a",
+                "/images/education-editorial-service/learning-design-and-pedagogy/Publishers-Educational-Content-Developers.webp",
             bullets: [
                 "Support the development of Comprehensive course manuals, Supplementary educational materials and e-books that are reliable and suitable for classroom use.",
             ],
@@ -31,7 +31,7 @@ export const learningDesignAndPedagogyWhoWeServe = {
         {
             title: "Corporate Training & Professional Development Teams",
             imageUrl:
-                "https://images.unsplash.com/photo-1552664730-d307ca884978",
+                "/images/education-editorial-service/learning-design-and-pedagogy/Corporate-Training-Professional-Development-Teams.webp",
             bullets: [
                 "Create effective training programmes, onboarding modules and skill-based learning content in line with adult learning principles.",
             ],
@@ -39,7 +39,7 @@ export const learningDesignAndPedagogyWhoWeServe = {
         {
             title: "E-Learning Platforms & EdTech Providers",
             imageUrl:
-                "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+                "/images/education-editorial-service/learning-design-and-pedagogy/E-Learning-Platforms-EdTech-Providers.webp",
             bullets: [
                 "Utilization of Structured Instructional Design and Learner-Centred Learner-Centred Learning to Improve Online Courses and Digital Learning Experiences.",
             ],
@@ -47,7 +47,7 @@ export const learningDesignAndPedagogyWhoWeServe = {
         {
             title: "Non-Profit & Government Organizations",
             imageUrl:
-                "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                "/images/education-editorial-service/learning-design-and-pedagogy/Non-Profit-Government-Organizations.webp",
             bullets: [
                 "Establish and maintain support for education and capacity-building activities by providing well designed, accessible and effective education programs.",
             ],
@@ -68,7 +68,7 @@ export const learningDesignAndPedagogyWorkflow = {
             title: "Initial Needs Analysis",
             description:
                 "We will first establish your target audience, learning goals, & delivery method as outlined by your institution. This helps formulate a pedagogically tailored approach (no more guesswork).",
-            iconSrc: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+            iconSrc: "/images/education-editorial-service/learning-design-and-pedagogy/Initial-Needs-Analysis.webp",
             position: "top",
         },
         {
@@ -76,7 +76,7 @@ export const learningDesignAndPedagogyWorkflow = {
             title: "Learning Design & Structuring",
             description:
                 "Our editors structure the course materials into manageable chunks (modules) along with lesson plan components that align with your objectives, teach & assess outcomes that maximise retention.",
-            iconSrc: "https://cdn-icons-png.flaticon.com/512/3062/3062634.png",
+            iconSrc: "/images/education-editorial-service/learning-design-and-pedagogy/Learning-Design-Structuring.webp",
             position: "bottom",
         },
         {
@@ -84,7 +84,7 @@ export const learningDesignAndPedagogyWorkflow = {
             title: "Pedagogical Review & Enhancement",
             description:
                 "The course materials are reviewed against the best practices for pedagogy to ensure clarity in instructional delivery, engage the learner & remain grounded in the major educational theories.",
-            iconSrc: "https://cdn-icons-png.flaticon.com/512/1995/1995574.png",
+            iconSrc: "/images/education-editorial-service/learning-design-and-pedagogy/Pedagogical-Review-Enhancement.webp",
             position: "top",
         },
         {
@@ -92,7 +92,7 @@ export const learningDesignAndPedagogyWorkflow = {
             title: "Content Optimization",
             description:
                 "We take the written content and revise it for clarity, conciseness, consistency and reliability. Therefore, your manuscript has been written in a manner that is easy to access, understand, and present professionally.",
-            iconSrc: "https://cdn-icons-png.flaticon.com/512/2991/2991148.png",
+            iconSrc: "/images/education-editorial-service/learning-design-and-pedagogy/Content-Optimization.webp",
             position: "bottom",
         },
         {
@@ -100,7 +100,7 @@ export const learningDesignAndPedagogyWorkflow = {
             title: "Review & Quality Assurance",
             description:
                 "Every individual project will receive a comprehensive quality review including an overall check for continuity, coherence & pedagogical integrity.",
-            iconSrc: "https://cdn-icons-png.flaticon.com/512/3063/3063822.png",
+            iconSrc: "/images/education-editorial-service/learning-design-and-pedagogy/Review-Quality-Assurance.webp",
             position: "top",
         },
         {
@@ -108,7 +108,7 @@ export const learningDesignAndPedagogyWorkflow = {
             title: "Delivery",
             description:
                 "You will receive a complete learning resource that has been designed, aligned to pedagogy and is ready for implementation into the classroom.",
-            iconSrc: "https://cdn-icons-png.flaticon.com/512/190/190411.png",
+            iconSrc: "/images/education-editorial-service/learning-design-and-pedagogy/Delivery.webp",
             position: "bottom",
         },
     ],
@@ -123,7 +123,7 @@ export const learningDesignAndPedagogyPackages = {
 
     packages: [
         {
-            icon: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+            icon: "/images/editing-and-translation/basic-pacakge.png",
             title: "Basic Learning Design",
             subtitle: "Basic Package",
             description:
@@ -143,7 +143,7 @@ export const learningDesignAndPedagogyPackages = {
             borderColor: "#F5A623",
         },
         {
-            icon: "https://cdn-icons-png.flaticon.com/512/1995/1995574.png",
+            icon: "/images/publication-support/peer-review-pre-submission/advanced.webp",
             title: "Advanced Pedagogical Enhancement",
             subtitle: "Advanced Package",
             description:
@@ -163,7 +163,7 @@ export const learningDesignAndPedagogyPackages = {
             borderColor: "#22A06B",
         },
         {
-            icon: "https://cdn-icons-png.flaticon.com/512/190/190411.png",
+            icon: "/images/editing-and-translation/translation-with-editing/pro.webp",
             title: "Premium Curriculum & Learning Experience Design",
             subtitle: "Premium Package",
             description:
@@ -193,33 +193,33 @@ export const learningDesignAndPedagogyTestimonials = {
     testimonials: [
         {
             image:
-                "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
+                "/images/education-editorial-service/learning-design-and-pedagogy/THE-INDIAN-JOURNAL-PUBLIC-HEALTH-1.webp",
             quote:
                 "At Pubrica, the Learning Design and Pedagogy team transformed my course materials into a structured, learner-focused program. Engagement and clarity improved significantly.",
             name: "Dr. Emily Carter",
             designation: "Education Researcher",
             organization: "USA",
-            flag: "https://flagcdn.com/w80/us.png",
+            flag: "/images/editing-and-translation/scientific-editing/usa-.png",
         },
         {
             image:
-                "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
+                "/images/education-editorial-service/learning-design-and-pedagogy/british-journal-of-clinical-pharmacology-1.webp",
             quote:
                 "Pubrica helped redesign our training modules using sound pedagogical principles. The learning outcomes were clearer, and learner feedback improved dramatically.",
             name: "Dr. Priya Menon",
             designation: "Academic Consultant",
             organization: "India",
-            flag: "https://flagcdn.com/w80/in.png",
+            flag: "/images/editing-and-translation/manuscript-editing/india.png",
         },
         {
             image:
-                "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+                "/images/academic-editorial-services/revisioning-and-localisation-service/Indian-council-of-medical-research-1.png",
             quote:
                 "Their expertise in instructional design and pedagogy elevated our curriculum to meet accreditation and learner needs seamlessly.",
             name: "Dr. Maria Thompson",
             designation: "Curriculum Specialist",
             organization: "United Kingdom",
-            flag: "https://flagcdn.com/w80/gb.png",
+            flag: "/images/research-services/uk-flag-.png",
         },
     ],
 };

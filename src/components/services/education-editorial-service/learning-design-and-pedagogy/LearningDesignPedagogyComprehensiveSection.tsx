@@ -11,12 +11,14 @@ type ServiceItem = {
   title: string;
   description: string;
   details: string[];
+  icon: string;
 };
 
 const servicesData: ServiceItem[] = [
   {
     title: 'Learning Structure & Curriculum Design',
     description: 'We improve the overall structure of Courses, Modules and Programs through aligning Learning Objectives, content flow, and module sequencing to ensure a cohesive educational journey.',
+    icon: '/images/education-editorial-service/learning-design-and-pedagogy/Learning-Structure-Curriculum-Design.webp',
     details: [
       'Comprehensive curriculum mapping and alignment',
       'Logical module sequencing and hierarchical structuring',
@@ -26,6 +28,7 @@ const servicesData: ServiceItem[] = [
   {
     title: 'Instructional Strategy Development',
     description: 'The experts at Pubrica design instructional methods that accommodate different learning styles and foster active student participation and engagement.',
+    icon: '/images/education-editorial-service/learning-design-and-pedagogy/Instructional-Strategy-Development.webp',
     details: [
       'Tailored strategies for diverse learning modalities',
       'Interactive and learner-centric engagement models',
@@ -35,6 +38,7 @@ const servicesData: ServiceItem[] = [
   {
     title: 'Assessment & Learning Outcome Alignment',
     description: 'All assessment and evaluation methods are aligned with the Learning Outcomes as defined, ensuring valid measurement of student competencies and skill mastery.',
+    icon: '/images/education-editorial-service/learning-design-and-pedagogy/Assessment-Learning-Outcome-Alignment.webp',
     details: [
       'Formative and summative assessment planning',
       'Rubric design tied directly to course objectives',
@@ -44,6 +48,7 @@ const servicesData: ServiceItem[] = [
   {
     title: 'Content Readability & Cognitive Load Optimization',
     description: 'We create clear, paced content that has been broken down into sections to help learners avoid cognitive overload while retaining critical information effectively.',
+    icon: '/images/education-editorial-service/learning-design-and-pedagogy/Content-Readability-Cognitive-Load-Optimization.webp',
     details: [
       'Segmented information chunking and pacing',
       'Readability enhancement and linguistic clarity',
@@ -53,6 +58,7 @@ const servicesData: ServiceItem[] = [
   {
     title: 'Pedagogical Framework & Theory Integration',
     description: 'Established pedagogical models and learning theories, including constructivism, experiential learning, and Bloom’s Taxonomy, are systematically integrated into your materials.',
+    icon: '/images/education-editorial-service/learning-design-and-pedagogy/Pedagogical-Framework-Theory-Integration.webp',
     details: [
       'Application of Bloom’s Taxonomy for cognitive progression',
       'Integration of constructivist and experiential frameworks',
@@ -62,6 +68,7 @@ const servicesData: ServiceItem[] = [
   {
     title: 'Digital, Blended & E-Learning Design',
     description: 'We create the best learning experience possible through our process of optimising how content flows, the design of multimedia interactions, and digital accessibility compliance.',
+    icon: '/images/education-editorial-service/learning-design-and-pedagogy/Digital-Blended-E-Learning-Design.webp',
     details: [
       'Seamless digital and blended learning flows',
       'Multimedia interaction and engagement optimization',
@@ -121,8 +128,8 @@ const LearningDesignPedagogyComprehensiveSection: NextPage = () => {
             <div className="float-right ml-8 mb-6 w-full md:w-[380px] lg:w-[420px] bg-[#1b3b32] p-2.5 rounded-2xl shadow-lg">
               <div className="relative w-full h-[240px] md:h-[260px] rounded-xl overflow-hidden bg-gray-100">
                 <Image 
-                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" 
-                  alt="Online student learning with headset and laptop" 
+                  src="/images/education-editorial-service/learning-design-and-pedagogy/Design-Learning.-Strengthen-Pedagogy.-Elevate-Educational-Impact.webp" 
+                  alt="Design Learning. Strengthen Pedagogy. Elevate Educational Impact" 
                   fill
                   className="object-cover"
                 />
@@ -203,8 +210,8 @@ const LearningDesignPedagogyComprehensiveSection: NextPage = () => {
               return (
                 <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between transition-all h-fit hover:shadow-md">
                   <div>
-                    <div className="w-12 h-12 rounded-lg bg-[#0b3b2c]/10 flex items-center justify-center text-[#0b3b2c] font-bold text-lg mb-4">
-                      0{idx + 1}
+                    <div className="w-12 h-12 relative mb-4">
+                      <Image src={service.icon} alt={service.title} fill className="object-contain" sizes="48px" />
                     </div>
                     <h3 className="font-bold text-gray-900 text-base mb-2">{service.title}</h3>
                     <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-4">{service.description}</p>

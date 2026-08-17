@@ -67,23 +67,23 @@ const designOptionsData: DesignOption[] = [
 const publishersData = [
   {
     name: 'Wiley',
-    logoUrl: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=300',
+    logoUrl: '/images/publication-support/art-work-preparation/Wiley.png',
   },
   {
     name: 'Sage Publishing',
-    logoUrl: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=300',
+    logoUrl: '/images/research-impact/graphical-abstract/Sage-Publishing.png',
   },
   {
     name: 'BMJ',
-    logoUrl: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=300',
+    logoUrl: '/images/research-impact/graphical-abstract/bmj-.png',
   },
   {
     name: 'Elsevier',
-    logoUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=300',
+    logoUrl: '/images/research-impact/graphical-abstract/Elsevier-.png',
   },
   {
     name: 'Hindawi',
-    logoUrl: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=300',
+    logoUrl: '/images/research-impact/graphical-abstract/Hindawi.png',
   },
 ];
 
@@ -214,7 +214,7 @@ export default function GraphicalAbstractDesignOptions() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md h-72 bg-indigo-50/50 border border-indigo-100 rounded-lg overflow-hidden shadow-sm flex items-center justify-center">
               <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+                src="/images/research-impact/graphical-abstract/Why-Choose-Our-Graphical-Abstract-Services.png"
                 alt="Graphical abstract impact illustration"
                 fill
                 sizes="(max-width: 768px) 100vw, 400px"
@@ -233,7 +233,7 @@ export default function GraphicalAbstractDesignOptions() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-sm h-64 bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm">
               <Image
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
+                src="/images/research-impact/graphical-abstract/Graphical-Abstract-Service-Sample-Work.png"
                 alt="Designer working on graphical abstract samples"
                 fill
                 sizes="(max-width: 768px) 100vw, 400px"

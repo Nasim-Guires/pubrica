@@ -1,17 +1,12 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import {
   ArrowRightCircle,
   PlusCircle,
   Clock,
   CheckCircle2,
-  Activity,
-  UserX,
-  AlertTriangle,
-  TrendingUp,
-  Heart,
-  Skull,
 } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
@@ -22,6 +17,7 @@ import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 interface PackageData {
   id: string;
   badge: string;
+  badgeSrc: string;
   name: string;
   headerBg: string;
   badgeColor: string;
@@ -37,6 +33,7 @@ const packagesData: PackageData[] = [
   {
     id: "basic",
     badge: "B",
+    badgeSrc: "/images/editing-and-translation/basic-pacakge.png",
     name: "Basic",
     headerBg: "bg-white text-slate-800",
     badgeColor: "text-[#b28b48]",
@@ -55,6 +52,7 @@ const packagesData: PackageData[] = [
   {
     id: "standard",
     badge: "S",
+    badgeSrc: "/images/publication-support/poster-preparation/S.png",
     name: "Standard",
     headerBg: "bg-white text-slate-800",
     badgeColor: "text-[#9c7811]",
@@ -74,6 +72,7 @@ const packagesData: PackageData[] = [
   {
     id: "premium",
     badge: "P",
+    badgeSrc: "/images/editing-and-translation/translation-with-editing/pro.webp",
     name: "Premium",
     headerBg: "bg-white text-slate-800",
     badgeColor: "text-[#2b6d7a]",
@@ -126,10 +125,8 @@ export default function PackagesAndSampleWorkSection() {
               >
                 {/* Header Tile */}
                 <div className="bg-white p-5 flex items-center gap-4 border-b border-gray-100 transition-colors duration-300 group-hover:bg-[#262626]">
-                  <div
-                    className={`w-12 h-12 rounded-full font-bold text-2xl flex items-center justify-center border-2 border-dashed border-gray-300 ${pkg.badgeBg} ${pkg.badgeColor}`}
-                  >
-                    {pkg.badge}
+                  <div className="relative w-12 h-12">
+                    <Image src={pkg.badgeSrc} alt={pkg.name} fill className="object-contain" sizes="48px" />
                   </div>
                   <h3 className="text-xl font-bold text-slate-800 group-hover:text-white transition-colors duration-300">
                     {pkg.name}
@@ -215,132 +212,14 @@ export default function PackagesAndSampleWorkSection() {
           </div>
 
           {/* Medical Infographic Card Reproduction */}
-          <div className="max-w-4xl mx-auto border border-gray-200 rounded-lg p-6 bg-white shadow-lg space-y-6">
-            {/* Header Banner */}
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-[#133036] text-white p-4 rounded-md gap-4">
-              <h3 className="text-base sm:text-lg font-bold tracking-wide uppercase">
-                PERIPHERAL ARTERY DISEASE & Chronic Wounds
-              </h3>
-              <div className="text-right">
-                <span className="text-lg font-black tracking-widest text-teal-400">
-                  PUBRICA
-                </span>
-                <span className="block text-[10px] text-gray-300 uppercase -mt-1">
-                  Knowledge Works
-                </span>
-              </div>
-            </div>
-
-            {/* Introductory Text */}
-            <p className="text-xs sm:text-sm text-gray-700 leading-relaxed border-l-4 border-red-800 pl-4 bg-red-50/50 py-2">
-              Peripheral artery disease (PAD) arises when{" "}
-              <strong className="text-red-700">
-                plaque accumulation narrows the arteries
-              </strong>{" "}
-              and reduces blood flow to the limbs, which can lead to leg ulcers,
-              gangrene, and potential limb loss. This condition develops as the
-              arteries carrying{" "}
-              <strong className="text-red-700">
-                blood to the legs become clogged with plaque
-              </strong>
-              , restricting circulation.
-            </p>
-
-            {/* Stat Row 1 */}
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 items-center text-center pt-2">
-              <div className="p-3 bg-neutral-50 rounded border border-gray-100 flex flex-col items-center">
-                <UserX className="w-8 h-8 text-red-700 mb-1" />
-                <span className="text-base font-extrabold text-slate-900">
-                  1 in 5
-                </span>
-                <span className="text-[10px] text-gray-600">
-                  people over age 60 have PAD
-                </span>
-              </div>
-
-              <div className="p-3 bg-neutral-50 rounded border border-gray-100 flex flex-col items-center">
-                <div className="w-10 h-10 rounded-full border-4 border-red-700 text-red-700 font-bold text-xs flex items-center justify-center mb-1">
-                  40%
-                </div>
-                <span className="text-[10px] text-gray-600">
-                  of those living with PAD may not experience symptoms or leg
-                  pain
-                </span>
-              </div>
-
-              <div className="p-3 bg-neutral-50 rounded border border-gray-100 flex flex-col items-center col-span-2 sm:col-span-1">
-                <Activity className="w-8 h-8 text-red-700 mb-1" />
-                <span className="text-[10px] text-gray-600">
-                  Restricted artery blood flow illustration
-                </span>
-              </div>
-
-              <div className="p-3 bg-neutral-50 rounded border border-gray-100 flex flex-col items-center">
-                <span className="text-xl font-black text-red-700">82%</span>
-                <span className="text-[10px] text-gray-600">
-                  of leg amputations are due to poor circulation of affected
-                  limb
-                </span>
-              </div>
-
-              <div className="p-3 bg-neutral-50 rounded border border-gray-100 flex flex-col items-center">
-                <span className="text-lg font-extrabold text-slate-900">
-                  8 to 12 MIL
-                </span>
-                <span className="text-[10px] text-gray-600">
-                  people in the US living with PAD
-                </span>
-              </div>
-            </div>
-
-            {/* Stat Row 2 */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center pt-2">
-              <div className="p-4 bg-red-800 text-white rounded flex items-center gap-4">
-                <AlertTriangle className="w-10 h-10 shrink-0 text-amber-300" />
-                <div className="text-left">
-                  <span className="text-lg font-bold">25%</span>
-                  <p className="text-[11px] text-red-100">
-                    of people with late stage PAD may require an amputation
-                    within one year
-                  </p>
-                </div>
-              </div>
-
-              <div className="p-4 bg-neutral-50 rounded border border-gray-200 flex items-center gap-4">
-                <TrendingUp className="w-10 h-10 shrink-0 text-red-700" />
-                <div className="text-left">
-                  <span className="text-xs font-bold text-slate-900 block uppercase">
-                    Obstructed Blood Flow
-                  </span>
-                  <p className="text-[11px] text-gray-600">
-                    Decreased blood flow hinders delivery of oxygen & nutrients
-                    needed for proper wound healing
-                  </p>
-                </div>
-              </div>
-
-              <div className="p-4 bg-neutral-900 text-white rounded flex items-center gap-4">
-                <Skull className="w-10 h-10 shrink-0 text-gray-400" />
-                <div className="text-left">
-                  <span className="text-lg font-bold text-red-400">
-                    Nearly 50%
-                  </span>
-                  <p className="text-[11px] text-gray-300">
-                    of individuals who have an amputation due to vascular
-                    disease will die within 5 years
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Footer Takeaway */}
-            <div className="text-center pt-4 border-t border-gray-200">
-              <p className="text-xs font-bold text-[#0d3b44]">
-                Don't let PAD limit your mobility. Consult an advanced wound
-                care expert today and restore circulation with hyperbaric oxygen
-                therapy.
-              </p>
-            </div>
+          <div className="max-w-4xl mx-auto relative w-full min-h-[280px] h-[420px] rounded-lg overflow-hidden border border-gray-200 bg-white shadow-lg">
+            <Image
+              src="/images/educational-content-development/Educational-Content-Development-Service.webp"
+              alt="Education Content Development Service sample work"
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 100vw, 896px"
+            />
           </div>
         </section>
       </div>

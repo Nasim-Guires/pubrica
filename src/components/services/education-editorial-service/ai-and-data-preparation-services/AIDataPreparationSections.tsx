@@ -41,7 +41,7 @@ const expertsData: ExpertItem[] = [
         university: 'Jawcharlal Nehru University, India',
         experience: '10+ Years of Experience',
         stats: '800+ Datasets & Manuscripts Prepared',
-        image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
+        image: '/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Arjun-Mehta.png',
     },
     {
         name: 'Dr. Priya Rao',
@@ -49,7 +49,7 @@ const expertsData: ExpertItem[] = [
         university: 'University of Delhi, India',
         experience: '8+ Years of Experience',
         stats: '400+ AI Ready Research Datasets',
-        image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80',
+        image: '/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Priya-Rao.png',
     },
     {
         name: 'Dr. Rohan Iyer',
@@ -57,7 +57,7 @@ const expertsData: ExpertItem[] = [
         university: 'Indian Institute of Technology, Bombay',
         experience: '9+ Years of Experience',
         stats: '800+ AI Optimized Scientific Datasets',
-        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
+        image: '/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Rohan-Iyer.png',
     },
 ];
 
@@ -121,7 +121,13 @@ const AIDataPreparationSections: NextPage = () => {
                                 <div>
                                     <div className="flex items-center space-x-1.5">
                                         <h3 className="font-bold text-gray-900 text-base">{expert.name}</h3>
-                                        <span className="text-xs">🇮🇳</span>
+                                        <Image
+                                            src="/images/editing-and-translation/manuscript-editing/india.png"
+                                            alt=""
+                                            width={18}
+                                            height={12}
+                                            className="h-3 w-auto object-contain"
+                                        />
                                     </div>
                                     <p className="text-xs font-semibold text-gray-700 mt-0.5">{expert.qualification}</p>
                                     <p className="text-[11px] text-gray-500">{expert.university}</p>
@@ -153,8 +159,8 @@ const AIDataPreparationSections: NextPage = () => {
                 <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div className="relative w-full h-[280px] md:h-[320px] rounded-2xl overflow-hidden shadow-md bg-white">
                         <Image
-                            src="https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&w=800&q=80"
-                             alt="AI Robot Sample Work"
+                            src="/images/education-editorial-service/ai-and-data-preparation-services/AI-and-Data-Preparation-Services-Sample-Work.webp"
+                             alt="AI and Data Preparation Services Sample Work"
                             fill
                             className="object-cover"
                         />

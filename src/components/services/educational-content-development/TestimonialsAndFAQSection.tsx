@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Plus, Minus } from 'lucide-react';
 
 // ==========================================
@@ -13,9 +14,9 @@ interface Testimonial {
   author: string;
   role: string;
   country: string;
-  flagCode: string;
+  coverSrc: string;
+  flagSrc: string;
   imageAlt: string;
-  journalTitle: string;
 }
 
 interface FAQItem {
@@ -32,9 +33,9 @@ const testimonialsData: Testimonial[] = [
     author: 'DR. EMILY ROBERTS',
     role: 'Program Director, Leading Medical University, USA',
     country: 'USA',
-    flagCode: 'us',
+    coverSrc: '/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/journal-of-cancer-reserach-clinical-oncology-.webp',
+    flagSrc: '/images/editing-and-translation/scientific-editing/usa-.png',
     imageAlt: 'Journal of Cancer Research and Clinical Oncology',
-    journalTitle: 'Journal of Cancer Research & Clinical Oncology',
   },
   {
     id: '2',
@@ -43,9 +44,20 @@ const testimonialsData: Testimonial[] = [
     author: 'PROF. JAMES THORNTON',
     role: 'Head of Academics, Global Healthcare Training Institute, UK',
     country: 'UK',
-    flagCode: 'gb',
+    coverSrc: '/images/marketing-communication-content-development-service/jama-oncology-journal-1-1.webp',
+    flagSrc: '/images/editing-and-translation/manuscript-editing/uk-flag-.png',
     imageAlt: 'JAMA Oncology',
-    journalTitle: 'JAMA Oncology',
+  },
+  {
+    id: '3',
+    quote:
+      'Pubrica’s team exceeded our expectations in developing interactive and impactful educational materials. Their attention to detail and commitment to excellence have made a real difference in our learners’ success.',
+    author: "PROF. LIAM O'CONNOR",
+    role: 'Dean, School of Health Sciences, Australia',
+    country: 'Australia',
+    coverSrc: '/images/marketing-communication-content-development-service/british-journal-of-clinical-pharmacology.webp',
+    flagSrc: '/images/marketing-communication-content-development-service/Australia.webp',
+    imageAlt: 'British Journal of Clinical Pharmacology',
   },
 ];
 
@@ -133,7 +145,7 @@ export default function TestimonialsAndFAQSection() {
           </div>
 
           {/* Testimonial Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonialsData.map((item) => (
               <div
                 key={item.id}
@@ -142,16 +154,8 @@ export default function TestimonialsAndFAQSection() {
                 {/* Outer Content Box (Grey background inside card) */}
                 <div className="bg-[#cdcfd2] rounded-lg p-5 flex flex-col sm:flex-row gap-4 items-center sm:items-start min-h-[160px]">
                   {/* Publication Cover Image Placeholder/Mockup */}
-                  <div className="w-28 h-36 bg-[#0a233c] rounded border border-gray-400 shrink-0 flex flex-col justify-between p-2 shadow-inner text-white text-[10px]">
-                    <div className="border-b border-gray-500 pb-1 font-semibold uppercase tracking-tighter text-[8px] text-teal-300">
-                      Pubrica Review
-                    </div>
-                    <div className="my-auto font-bold text-center leading-tight">
-                      {item.journalTitle}
-                    </div>
-                    <div className="bg-teal-600 text-[7px] text-center py-0.5 rounded uppercase font-mono">
-                      Indexed
-                    </div>
+                  <div className="relative w-28 h-36 shrink-0 rounded border border-gray-400 overflow-hidden shadow-inner">
+                    <Image src={item.coverSrc} alt={item.imageAlt} fill className="object-cover" sizes="112px" />
                   </div>
 
                   {/* Quote Body */}
@@ -172,12 +176,8 @@ export default function TestimonialsAndFAQSection() {
                   </div>
 
                   {/* Flag Icon */}
-                  <div className="w-7 h-7 rounded-full overflow-hidden border border-gray-200 shadow-sm shrink-0 flex items-center justify-center bg-gray-100">
-                    {item.country === 'USA' ? (
-                      <span className="text-base" title="United States">🇺🇸</span>
-                    ) : (
-                      <span className="text-base" title="United Kingdom">🇬🇧</span>
-                    )}
+                  <div className="relative w-7 h-7 rounded-full overflow-hidden border border-gray-200 shadow-sm shrink-0">
+                    <Image src={item.flagSrc} alt={`${item.country} flag`} fill className="object-cover" sizes="28px" />
                   </div>
                 </div>
               </div>
@@ -199,6 +199,13 @@ export default function TestimonialsAndFAQSection() {
                 activeSlide === 1 ? 'bg-[#0d3b44]' : 'border border-[#0d3b44] bg-transparent'
               }`}
               aria-label="Slide 2"
+            />
+            <button
+              onClick={() => setActiveSlide(2)}
+              className={`w-3 h-3 rounded-sm transition-all ${
+                activeSlide === 2 ? 'bg-[#0d3b44]' : 'border border-[#0d3b44] bg-transparent'
+              }`}
+              aria-label="Slide 3"
             />
           </div>
         </section>

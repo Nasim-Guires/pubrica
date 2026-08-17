@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export interface AccordionItem {
     id: string;
@@ -101,10 +102,14 @@ export default function ServicesMedicoLegalComplianceAndSamples({
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-10">
                     {/* Badge Image Section Placeholder */}
                     <div className="flex-shrink-0">
-                        <div className="w-28 h-28 rounded-full border-2 border-dashed border-emerald-400 bg-[#084533] flex items-center justify-center text-center p-2 shadow-inner">
-                            <span className="text-[10px] text-emerald-200 font-bold uppercase tracking-wider">
-                                [ Image Section: 100% Satisfaction Guarantee Badge ]
-                            </span>
+                        <div className="relative w-28 h-28">
+                            <Image
+                                src="/images/publication-support/peer-review-pre-submission/Satisfaction_Guarantee.webp"
+                                alt="100% Satisfaction Guarantee"
+                                fill
+                                className="object-contain"
+                                sizes="112px"
+                            />
                         </div>
                     </div>
 
@@ -179,10 +184,14 @@ export default function ServicesMedicoLegalComplianceAndSamples({
                 <div className="bg-emerald-50/40 border border-emerald-100 rounded-xl p-6 sm:p-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                     {/* Left Image Section Div Placeholder */}
                     <div className="md:col-span-5 flex justify-center">
-                        <div className="w-full max-w-xs h-64 bg-slate-200 rounded-lg border-2 border-dashed border-gray-400 flex items-center justify-center shadow-md">
-                            <span className="text-xs text-gray-600 font-semibold text-center px-4">
-                                [ Image Section: Gavel, Scales of Justice & Signed Case Documents ]
-                            </span>
+                        <div className="relative w-full max-w-xs h-64 rounded-lg overflow-hidden shadow-md">
+                            <Image
+                                src="/images/medico-legal-support-services/Medico-legal-consulting-services-for-litigation-strategy-support.webp"
+                                alt="Medico-legal consulting services for litigation strategy support"
+                                fill
+                                className="object-cover"
+                                sizes="320px"
+                            />
                         </div>
                     </div>
 

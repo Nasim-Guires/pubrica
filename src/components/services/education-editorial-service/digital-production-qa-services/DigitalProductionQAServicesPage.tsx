@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { FC } from "react";
 
@@ -8,17 +9,14 @@ import type { FC } from "react";
  * Fully reusable, typed, SEO-friendly section for the
  * "Digital Production QA Services" page.
  *
- * NOTE: Per project convention, every image slot below is rendered as a
- * labelled placeholder <div> (NOT an <img> / next/image tag). Swap the
- * placeholder div for a Next.js <Image /> component once real assets
- * are available — the alt text / labels are already written for you.
+ * Images use live Pubrica assets via next/image.
  */
 
 export interface QaServiceItem {
   id: string;
   title: string;
   description: string;
-  /** Label used for the icon image-section placeholder + alt text */
+  iconSrc: string;
   iconLabel: string;
 }
 
@@ -56,6 +54,7 @@ const DEFAULT_OFFER_ITEMS: QaServiceItem[] = [
     title: "Content & Layout QA",
     description:
       "All digital formats have been checked for accuracy of text, format, page numbers, headings, tables, figures, and overall layout consistency across every output format.",
+    iconSrc: "/images/education-editorial-service/digital-production-qa-services/Content-Layout-QA.webp",
     iconLabel: "Content and layout QA icon",
   },
   {
@@ -63,6 +62,7 @@ const DEFAULT_OFFER_ITEMS: QaServiceItem[] = [
     title: "XML & Metadata QA",
     description:
       "The XML structure, tags, and metadata of an article must be validated by our staff. They do this through various automated and manual checks to ensure indexing accuracy.",
+    iconSrc: "/images/education-editorial-service/digital-production-qa-services/XML-Metadata-QA.webp",
     iconLabel: "XML and metadata QA icon",
   },
   {
@@ -70,6 +70,7 @@ const DEFAULT_OFFER_ITEMS: QaServiceItem[] = [
     title: "Proofreading & Typesetting QA",
     description:
       "An examination of typeset proofs to find typographical errors, improper formatting, incorrect fonts, improper spacing, and other presentation issues before final release.",
+    iconSrc: "/images/education-editorial-service/digital-production-qa-services/Proofreading-Typesetting-QA.webp",
     iconLabel: "Proofreading and typesetting QA icon",
   },
   {
@@ -77,6 +78,7 @@ const DEFAULT_OFFER_ITEMS: QaServiceItem[] = [
     title: "Accessibility & Compliance QA",
     description:
       "We guarantee that we comply with Current Good Practices (CGP) for Accessibility according to global accessibility standards and publisher-specific requirements.",
+    iconSrc: "/images/education-editorial-service/digital-production-qa-services/Accessibility-Compliance-QA.webp",
     iconLabel: "Accessibility and compliance QA icon",
   },
   {
@@ -84,6 +86,7 @@ const DEFAULT_OFFER_ITEMS: QaServiceItem[] = [
     title: "Post-Publication QA",
     description:
       "Post-publication audits are conducted to identify any errors and make necessary corrections of errors on all published platforms and distribution channels.",
+    iconSrc: "/images/education-editorial-service/digital-production-qa-services/Post-Publication-QA.webp",
     iconLabel: "Post publication QA icon",
   },
   {
@@ -91,6 +94,7 @@ const DEFAULT_OFFER_ITEMS: QaServiceItem[] = [
     title: "Compliance and Regulatory Audit",
     description:
       "We audit your research content for adherence to global scientific and ethical guidelines, ensuring every publication meets regulatory and journal-specific standards.",
+    iconSrc: "/images/education-editorial-service/digital-production-qa-services/Compliance-and-Regulatory-Audit.webp",
     iconLabel: "Compliance and regulatory audit icon",
   },
 ];
@@ -147,16 +151,15 @@ const DigitalProductionQaServices: FC<DigitalProductionQaServicesProps> = ({
             ))}
           </div>
 
-          {/* Image section placeholder (swap for next/image <Image /> later) */}
-          <div
-            role="img"
-            aria-label={heroImageLabel}
-            className="relative flex h-72 w-full items-center justify-center rounded-md bg-[#0b3b3c] p-3 sm:h-80 lg:h-full lg:min-h-[320px]"
-          >
-            <div className="flex h-full w-full items-center justify-center rounded-sm border border-dashed border-white/40 bg-gray-100 text-center">
-              <span className="px-4 text-xs font-medium uppercase tracking-wide text-gray-500 sm:text-sm">
-                Image Section: {heroImageLabel}
-              </span>
+          <div className="relative h-72 w-full rounded-md bg-[#0b3b3c] p-3 sm:h-80 lg:h-full lg:min-h-[320px]">
+            <div className="relative h-full w-full overflow-hidden rounded-sm">
+              <Image
+                src="/images/education-editorial-service/digital-production-qa-services/Digital-Production-QA-Services.webp"
+                alt={heroImageLabel}
+                fill
+                className="object-cover"
+                sizes="(max-width:1024px)100vw,40vw"
+              />
             </div>
           </div>
         </div>
@@ -209,15 +212,14 @@ const DigitalProductionQaServices: FC<DigitalProductionQaServicesProps> = ({
                 aria-hidden="true"
                 className="absolute right-0 top-5 h-10 w-1 rounded-l bg-red-600"
               />
-              {/* Icon image section placeholder */}
-              <div
-                role="img"
-                aria-label={service.iconLabel}
-                className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-sm border border-dashed border-gray-300 bg-gray-100"
-              >
-                <span className="px-1 text-center text-[8px] font-medium uppercase leading-tight tracking-wide text-gray-500">
-                  Image Section
-                </span>
+              <div className="relative h-11 w-11 flex-shrink-0">
+                <Image
+                  src={service.iconSrc}
+                  alt={service.iconLabel}
+                  fill
+                  className="object-contain"
+                  sizes="44px"
+                />
               </div>
 
               <div>

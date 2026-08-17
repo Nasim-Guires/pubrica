@@ -10,7 +10,7 @@ export const continuingMedicalEducationCmeContentDevelopmentWhoWeServeData = {
                 "We partner with hospitals, clinics, and healthcare networks to design CME programs that enhance staff competencies, improve clinical outcomes, and maintain accreditation compliance.",
             ],
             imageUrl:
-                "/images/services/continuing-medical-education-cme-content-development/hospitals-healthcare-institutions.webp",
+                "/images/continuing-medical-education-cme-content-development/Hospitals-Healthcare-Institutions.png",
         },
         {
             title: "Medical Schools & Universities",
@@ -18,7 +18,7 @@ export const continuingMedicalEducationCmeContentDevelopmentWhoWeServeData = {
                 "We support academic institutions in developing structured CME curricula, integrating research-based content, and providing faculty with resources for lifelong learning.",
             ],
             imageUrl:
-                "/images/services/continuing-medical-education-cme-content-development/medical-schools-universities.webp",
+                "/images/continuing-medical-education-cme-content-development/Medical-Schools-Universities.png",
         },
         {
             title: "Professional Medical Associations",
@@ -26,7 +26,7 @@ export const continuingMedicalEducationCmeContentDevelopmentWhoWeServeData = {
                 "We work with associations and societies to create accredited CME activities that engage members, update them on the latest guidelines, and strengthen professional communities.",
             ],
             imageUrl:
-                "/images/services/continuing-medical-education-cme-content-development/professional-medical-associations.webp",
+                "/images/continuing-medical-education-cme-content-development/Professional-Medical-Associations.png",
         },
         {
             title: "Pharmaceutical & Biotech Companies",
@@ -34,7 +34,7 @@ export const continuingMedicalEducationCmeContentDevelopmentWhoWeServeData = {
                 "We assist life sciences companies in delivering unbiased, evidence-based CME programs to healthcare professionals, helping ensure the safe and effective use of therapies and technologies.",
             ],
             imageUrl:
-                "/images/services/continuing-medical-education-cme-content-development/pharmaceutical-biotech-companies.webp",
+                "/images/continuing-medical-education-cme-content-development/Pharmaceutical-Biotech-Companies.png",
         },
         {
             title: "Continuing Education Providers",
@@ -42,7 +42,7 @@ export const continuingMedicalEducationCmeContentDevelopmentWhoWeServeData = {
                 "We collaborate with independent CME providers and education platforms to develop, accredit, and deliver high-quality learning experiences in multiple formats, online, hybrid, and live events.",
             ],
             imageUrl:
-                "/images/services/continuing-medical-education-cme-content-development/continuing-education-providers.webp",
+                "/images/continuing-medical-education-cme-content-development/Continuing-Education-Providers.png",
         },
         {
             title: "Individual Healthcare Professionals",
@@ -50,7 +50,7 @@ export const continuingMedicalEducationCmeContentDevelopmentWhoWeServeData = {
                 "We offer tailored CME content for physicians, nurses, pharmacists, and allied health professionals who seek flexible, accredited learning opportunities to maintain licensure and enhance practice.",
             ],
             imageUrl:
-                "/images/services/continuing-medical-education-cme-content-development/individual-healthcare-professionals.webp",
+                "/images/continuing-medical-education-cme-content-development/Individual-Healthcare-Professionals.png",
         },
     ],
 };
@@ -63,33 +63,33 @@ export const continuingMedicalEducationCmeContentDevelopmentTestimonialData = {
     testimonials: [
         {
             image:
-                "/images/services/continuing-medical-education-cme-content-development/testimonials/journal-of-health-economics.webp",
+                "/images/continuing-medical-education-cme-content-development/journal-of-health-economics.png",
             quote:
                 "Pubrica’s CME program development was seamless and highly professional. The content was evidence-based, engaging, and fully compliant with accreditation standards, helping our staff stay updated with the latest clinical guidelines.",
             name: "Dr. Ananya Mehta",
             designation: "Chief Medical Officer",
             organization: "India",
-            flag: "/images/flags/india.webp",
+            flag: "/images/editing-and-translation/flag.png",
         },
         {
             image:
-                "/images/services/continuing-medical-education-cme-content-development/testimonials/journal-of-clinical-epidemiology.webp",
+                "/images/continuing-medical-education-cme-content-development/journal-of-clinical-epidemiology.png",
             quote:
                 "Pubrica’s CME services helped us enhance professional development across our institution. The programs were tailored to our needs, evidence-based, and fully accredited, making a real difference in patient care outcomes.",
             name: "Dr. Sameer Kapoor",
             designation: "Hospital Administrator",
             organization: "Australia",
-            flag: "/images/flags/australia.webp",
+            flag: "/images/continuing-medical-education-cme-content-development/australia-.png",
         },
         {
             image:
-                "/images/services/continuing-medical-education-cme-content-development/testimonials/jama-oncology.webp",
+                "/images/continuing-medical-education-cme-content-development/jama-oncology-journal-1.png",
             quote:
                 "Working with Pubrica elevated our CME initiatives. Their expertise in curriculum design and regulatory compliance ensured impactful learning experiences for our healthcare professionals.",
             name: "Dr. Rajiv Sharma",
             designation: "Director of Medical Education",
             organization: "United Kingdom",
-            flag: "/images/flags/united-kingdom.webp",
+            flag: "/images/physician-writing-services/patient-education-content/united-kingdom.png",
         },
     ],
 };

@@ -152,8 +152,8 @@ export default function EducationalContentDevelopmentPage() {
               {/* Image Container */}
               <div className="relative z-10 rounded-2xl overflow-hidden border-2 border-white shadow-md bg-white">
                 <Image
-                  src="/images/educational-content-students.jpg"
-                  alt="Students learning together on desktop computer"
+                  src="/images/educational-content-development/poster-presentation.webp"
+                  alt="Educational content development"
                   width={500}
                   height={350}
                   className="w-full h-auto object-cover"

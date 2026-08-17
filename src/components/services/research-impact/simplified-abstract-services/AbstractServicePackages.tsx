@@ -2,11 +2,13 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // --- DATA TYPES & CONSTANTS ---
 
 interface PackageTier {
   letter: string;
+  badgeSrc: string;
   badgeBg: string;
   badgeColor: string;
   cardHeaderBg: string;
@@ -19,6 +21,7 @@ interface PackageTier {
 const packagesData: PackageTier[] = [
   {
     letter: 'B',
+    badgeSrc: '/images/editing-and-translation/basic-pacakge.png',
     badgeBg: 'bg-amber-100',
     badgeColor: 'text-amber-700 border-amber-300',
     cardHeaderBg: 'bg-[#d8e3e1]',
@@ -34,6 +37,7 @@ const packagesData: PackageTier[] = [
   },
   {
     letter: 'S',
+    badgeSrc: '/images/publication-support/poster-preparation/S.png',
     badgeBg: 'bg-purple-100',
     badgeColor: 'text-purple-700 border-purple-300',
     cardHeaderBg: 'bg-[#e5d8eb]',
@@ -50,6 +54,7 @@ const packagesData: PackageTier[] = [
   },
   {
     letter: 'P',
+    badgeSrc: '/images/publication-support/responding-to-reviewers/pa-icons-.png',
     badgeBg: 'bg-red-100',
     badgeColor: 'text-red-700 border-red-300',
     cardHeaderBg: 'bg-[#ebd8bd]',
@@ -66,6 +71,7 @@ const packagesData: PackageTier[] = [
   },
   {
     letter: 'E',
+    badgeSrc: '/images/physician-writing-services/ELITE-LOGO.png',
     badgeBg: 'bg-pink-100',
     badgeColor: 'text-pink-700 border-pink-300',
     cardHeaderBg: 'bg-[#f4c8c5]',
@@ -107,10 +113,8 @@ export default function AbstractServicePackages() {
             <div>
               {/* Card Header */}
               <div className={`${pkg.cardHeaderBg} p-5 relative flex items-center gap-3`}>
-                <div
-                  className={`w-9 h-9 rounded-full ${pkg.badgeBg} ${pkg.badgeColor} border font-extrabold flex items-center justify-center text-sm shadow-sm shrink-0`}
-                >
-                  {pkg.letter}
+                <div className="relative w-9 h-9 shrink-0">
+                  <Image src={pkg.badgeSrc} alt={pkg.title} fill className="object-contain" sizes="36px" />
                 </div>
                 <h3 className="text-sm font-bold text-slate-900 leading-tight">
                   {pkg.title}
