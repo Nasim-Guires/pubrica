@@ -12,7 +12,7 @@ const discoverySteps = [
       "Lead compound identification includes rigorous analysis of compound potency, selectivity, pharmacokinetics, and safety profiles. Successful identification of lead compounds provides a starting point for further optimization and development, ultimately leading to potential treatments.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1580281657702-257584239a55",
+      src: "/images/industries/pharmaceutical/Target-Identification-and-Discovery-of-Potential-Drugs.webp",
       alt: "Researchers examining samples during target identification",
     },
   },
@@ -24,7 +24,7 @@ const discoverySteps = [
       "Target validation establishes the relevance and potential efficacy of altering the target, guiding the approach to identifying a new drug candidate with therapeutic benefit and reducing the risk of costly failures in later stages of a drug program.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88",
+      src: "/images/industries/pharmaceutical/Target-Validation-for-the-Drug-Development-Process.webp",
       alt: "Pharmacist reviewing blister packs of tablets for target validation",
     },
   },
@@ -36,7 +36,7 @@ const discoverySteps = [
       "Lead compound identification includes rigorous analysis of compound potency, selectivity, pharmacokinetics, and safety profiles. Successful identification of lead compounds provides a starting point for further optimization and development, ultimately leading to potential treatments.",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1579154204601-01588f351e67",
+      src: "/images/industries/pharmaceutical/Lead-Compound-Identification.webp",
       alt: "Scientists analyzing a compound sample in a laboratory",
     },
   },
@@ -47,7 +47,7 @@ const discoverySteps = [
       "After a lead compound is identified, it will be refined and optimized to enhance its potency, selectivity, and pharmacokinetic properties. Additional changes may be necessary to improve the expected safety profile by minimizing potential toxicity. Through cycles of chemical modifications, structure-activity relationship studies, and biological evaluations, researchers work to improve the therapeutic potential of the lead compound. ",
     ],
     image: {
-      src: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69",
+      src: "/images/industries/pharmaceutical/Lead-Optimization.webp",
       alt: "Chemist optimizing a lead compound formulation in a lab",
     },
   },
@@ -62,7 +62,7 @@ const publishedPapers = [
     publisher: "MDPI",
     impactFactor: "3.4",
     cover: {
-      src: "https://images.unsplash.com/photo-1583912267550-d44c9c821754",
+      src: "/images/industries/pharmaceutical/sample-works-1.webp",
       alt: "Cover of the published journal Life, featuring the macular degeneration research paper",
     },
   },
@@ -75,7 +75,7 @@ const experts = [
     experience: "10 years of experience",
     manuscripts: "100+ manuscripts edited",
     photo: {
-      src: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2",
+      src: "/images/industries/pharmaceutical/Dr.-Maria.webp",
       alt: "Portrait of Dr. Maria, PhD in Pharmaceutical Research",
     },
   },
@@ -85,7 +85,7 @@ const experts = [
     experience: "33 years of experience",
     manuscripts: "100+ manuscripts edited",
     photo: {
-      src: "https://images.unsplash.com/photo-1622253692010-333f2da6031d",
+      src: "/images/industries/pharmaceutical/Dr.-Julie.webp",
       alt: "Portrait of Dr. Julie, PhD in Pharmaceutical Research",
     },
   },
@@ -95,7 +95,7 @@ const experts = [
     experience: "10 years of experience",
     manuscripts: "100+ manuscripts edited",
     photo: {
-      src: "https://images.unsplash.com/photo-1537368910025-700350fe46c7",
+      src: "/images/industries/foods-nutraceuticals/Dr.-Raghav-Varma.webp",
       alt: "Portrait of Dr. Michelle, PhD in Pharmaceutical Research",
     },
   },
@@ -116,7 +116,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <Image
-            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d"
+            src="/images/industries/pharmaceutical/Drug-Discovery-and-Development-Process.webp"
             alt="Scientist holding a glass vial of medicine during the drug discovery phase"
             width={640}
             height={480}

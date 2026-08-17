@@ -14,6 +14,8 @@ export const biotechnologyTestimonialsData = {
                 "Portrait of Dr. Jonathan Lee, Director of Research at Genova Biotech, USA",
             flagLabel:
                 "USA country flag representing location of Genova Biotech",
+            avatarSrc: "/images/industries/biotechnology/Dr.-Jonathan-Lee.webp",
+            flagSrc: "/images/editing-and-translation/book-editing/usa-.png",
         },
         {
             id: "testimonial-2",
@@ -26,6 +28,8 @@ export const biotechnologyTestimonialsData = {
                 "Portrait of Dr. Meera Sharma, Chief Scientific Officer at BioGenix Labs, India",
             flagLabel:
                 "India country flag representing location of BioGenix Labs",
+            avatarSrc: "/images/industries/biotechnology/Dr.-Meera-Sharma-1.webp",
+            flagSrc: "/images/industries/biotechnology/india.webp",
         },
         {
             id: "testimonial-3",
@@ -38,6 +42,8 @@ export const biotechnologyTestimonialsData = {
                 "Portrait of Dr. Ananya Rao, Head of R&D at CellTech Innovations, Singapore",
             flagLabel:
                 "Singapore country flag representing location of CellTech Innovations",
+            avatarSrc: "/images/industries/biotechnology/Dr.-Ananya-Rao.webp",
+            flagSrc: "/images/editing-and-translation/scientific-editing/singapore-.png",
         },
     ],
 };

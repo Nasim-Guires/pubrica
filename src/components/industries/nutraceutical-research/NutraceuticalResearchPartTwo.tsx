@@ -11,6 +11,7 @@ interface ResearchListItem {
 interface StandardItem {
   title: string;
   description: string;
+  iconSrc?: string;
 }
 
 interface CommitmentBullet {
@@ -76,18 +77,22 @@ const defaultRdItems: ResearchListItem[] = [
 const defaultStandardsTabs: StandardItem[] = [
   {
     title: "Clinical evidence",
+    iconSrc: "/images/industries/nutraceutical-research/Clinical-evidence-.webp",
     description: "Rigorous scientific studies substantiating product efficacy and health benefits."
   },
   {
     title: "Labelling compliance",
+    iconSrc: "/images/industries/nutraceutical-research/labelling-compilance-.webp",
     description: "Accurate disclosure of ingredients, dosage, and health claims."
   },
   {
     title: "Safety assessments",
+    iconSrc: "/images/industries/nutraceutical-research/safety-assesments-.webp",
     description: "Comprehensive toxicology and safety evaluations prior to market release."
   },
   {
     title: "Good Manufacturing Practices (GMP)",
+    iconSrc: "/images/industries/nutraceutical-research/good-manufacturing-practices-.webp",
     description: "Adhering to strict quality control and standardized production protocols."
   }
 ];
@@ -104,7 +109,7 @@ const defaultPublication: PublicationItem = {
   journal: "Nutraceuticals",
   publisher: "MDPI",
   impactFactor: "5.1",
-  coverImage: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80"
+  coverImage: "/images/industries/nutraceutical-research/sample-works-5.webp"
 };
 
 const defaultEditors: EditorProfile[] = [
@@ -113,21 +118,21 @@ const defaultEditors: EditorProfile[] = [
     qualification: "PhD - Nutraceutical Science",
     experience: "12 Years of Experience",
     manuscripts: "80+ manuscripts edited",
-    image: "https://images.unsplash.com/photo-1594824813554-5a485556a297?auto=format&fit=crop&w=300&q=80"
+    image: "/images/industries/nutraceutical-research/Dr.-Ananya-Mehta-2.webp"
   },
   {
     name: "Dr. Rohit Kapoor",
     qualification: "PhD - Herbal Nutraceuticals",
     experience: "18 Years of Experience",
     manuscripts: "120+ manuscripts edited",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=300&q=80"
+    image: "/images/industries/nutraceutical-research/Dr.-Rohit-Kapoor.webp"
   },
   {
     name: "Dr. Priya Nair",
     qualification: "PhD - Nutraceutical Research",
     experience: "10 Years of Experience",
     manuscripts: "70+ manuscripts edited",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=300&q=80"
+    image: "/images/industries/nutraceutical-research/Dr.-Priya-Nair-1.webp"
   }
 ];
 
@@ -136,8 +141,8 @@ export default function NutraceuticalResearchPartTwo({
   rdSubtitle = "Innovation is at the heart of the nutraceutical industry. R&D efforts focus on identifying new bioactive compounds, understanding their mechanisms of action, and developing novel delivery systems. Leading areas of research include:",
   rdItems = defaultRdItems,
   rdImages = {
-    main: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80",
-    secondary: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=400&q=80"
+    main: "/images/industries/nutraceutical-research/Research-and-Development-in-Nutraceuticals.webp",
+    secondary: ""
   },
   standardsTitle = "Quality And Regulatory Standards",
   standardsSubtitle = "Quality, safety, and regulatory compliance are critical in the nutraceutical industry. Regulatory authorities such as the US FDA, EFSA (European Food Safety Authority), and FSSAI (India) provide guidelines for manufacturing, labelling, and marketing nutraceutical products. Key considerations include:",
@@ -145,7 +150,7 @@ export default function NutraceuticalResearchPartTwo({
   commitmentTitle = "Our Commitment To The Nutraceutical Industry",
   commitmentDescription = "At Pubrica, we are dedicated to transforming ideas into impactful nutraceutical solutions. Our multi-disciplinary team of scientists, regulatory experts, and marketing professionals ensures that every product:",
   commitmentBullets = defaultCommitmentBullets,
-  commitmentImage = "https://images.unsplash.com/photo-1583912267670-6674a7ca6355?auto=format&fit=crop&w=600&q=80",
+  commitmentImage = "/images/industries/nutraceutical-research/Our-Commitment-to-the-Nutraceutical-Industry.webp",
   authorsPublishTitle = "Where Our Authors Publish",
   authorsPublishDescription = "Our authors share Pubrica's expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity.",
   publication = defaultPublication,
@@ -173,15 +178,7 @@ export default function NutraceuticalResearchPartTwo({
                 style={{ objectFit: 'cover' }}
               />
             </div>
-            <div className="absolute -bottom-6 -right-2 sm:right-4 w-[160px] h-[120px] sm:w-[180px] sm:h-[130px] rounded-xl overflow-hidden shadow-xl border-4 border-white">
-              <Image 
-                src={rdImages.secondary} 
-                alt="Laboratory equipment" 
-                fill 
-                sizes="180px"
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
+            <div className="absolute -bottom-6 -right-2 sm:right-4 w-[160px] h-[120px] sm:w-[180px] sm:h-[130px] rounded-xl overflow-hidden shadow-xl border-4 border-white hidden" aria-hidden="true" />
           </div>
 
           <div className="lg:col-span-7 space-y-4">
@@ -223,8 +220,8 @@ export default function NutraceuticalResearchPartTwo({
                     : 'bg-white/60 border-gray-200 text-gray-600 hover:bg-white'
                 }`}
               >
-                <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center font-bold text-xs">
-                  0{index + 1}
+                <div className="relative w-8 h-8">
+                  {tab.iconSrc ? <Image src={tab.iconSrc} alt="" fill className="object-contain" sizes="32px" /> : null}
                 </div>
                 <span className="font-semibold text-xs sm:text-sm">{tab.title}</span>
               </button>

@@ -13,6 +13,8 @@ export const biosimilarsTestimonialsData = {
       avatarLabel:
         "Dr. Meera Sharma portrait, Head of R&D in India sharing testimonial on biosimilar development support",
       flagLabel: "India country representation icon for testimonial origin",
+      avatarSrc: "/images/industries/cosmeceutical-research/Dr.-Meera-Shastri.webp",
+      flagSrc: "/images/industries/biotechnology/india.webp",
     },
     {
       id: "testimonial-2",
@@ -24,6 +26,8 @@ export const biosimilarsTestimonialsData = {
       avatarLabel:
         "Dr. Anita Kapoor portrait, CEO in Germany sharing testimonial on biosimilar consulting services",
       flagLabel: "Germany country representation icon for testimonial origin",
+      avatarSrc: "/images/industries/generics/Dr.-Emily-Johnson.webp",
+      flagSrc: "/images/industries/generics/germany-.webp",
     },
     {
       id: "testimonial-3",
@@ -35,6 +39,8 @@ export const biosimilarsTestimonialsData = {
       avatarLabel:
         "Rajiv Menon portrait, Director in Clinical Development in the United States sharing testimonial on biosimilar approval support",
       flagLabel: "United Kingdom flag icon representing testimonial location",
+      avatarSrc: "/images/industries/biosimilar/Rajiv-Menon.webp",
+      flagSrc: "/images/industries/biosimilar/united-kingdom-.png",
     },
   ],
 };

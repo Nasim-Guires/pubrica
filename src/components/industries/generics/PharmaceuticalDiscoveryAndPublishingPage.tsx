@@ -106,21 +106,21 @@ const defaultEditors: EditorProfile[] = [
     credential: 'PHD - Generics',
     experience: '7 years of experience',
     manuscripts: '100+ manuscripts edited',
-    image: '/images/editor-laurence.jpg'
+    image: '/images/industries/generics/Dr.-Laurence.webp'
   },
   {
     name: 'Dr. AJ',
     credential: 'PHD - Generics',
     experience: '5 Years of Experience',
     manuscripts: '100+ manuscripts edited',
-    image: '/images/editor-aj.jpg'
+    image: '/images/industries/generics/Dr.-AJ.webp'
   },
   {
     name: 'Dr. Jay',
     credential: 'PHD, FIAMS, DMRD, DMRE, DNB - Medical',
     experience: '15 Years of Experience',
     manuscripts: '100+ manuscripts edited',
-    image: '/images/editor-jay.jpg'
+    image: '/images/industries/nutraceutical-research/Dr.-Rohit-Kapoor.webp'
   }
 ];
 
@@ -160,16 +160,28 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm text-center">
+            <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm text-center flex flex-col items-center gap-3">
+              <div className="relative h-12 w-12">
+                <Image src="/images/industries/generics/same-active-ingredient-.webp" alt="Icon representing same active ingredient in pharmaceutical product" fill className="object-contain" sizes="48px" />
+              </div>
               <p className="text-gray-800 font-medium text-sm">Contains the same active ingredient</p>
             </div>
-            <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm text-center">
+            <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm text-center flex flex-col items-center gap-3">
+              <div className="relative h-12 w-12">
+                <Image src="/images/industries/generics/identical-in-strength-dosage-form-.webp" alt="Icon representing identical strength dosage form and route of administration" fill className="object-contain" sizes="48px" />
+              </div>
               <p className="text-gray-800 font-medium text-sm">Is identical in strength, dosage form, and route of administration</p>
             </div>
-            <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm text-center">
+            <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm text-center flex flex-col items-center gap-3">
+              <div className="relative h-12 w-12">
+                <Image src="/images/industries/generics/indication-dosing-and-lablelling.webp" alt="Icon representing same indications dosing and labeling in pharmaceutical product" fill className="object-contain" sizes="48px" />
+              </div>
               <p className="text-gray-800 font-medium text-sm">Has the same indications, dosing, and labelling</p>
             </div>
-            <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm text-center">
+            <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm text-center flex flex-col items-center gap-3">
+              <div className="relative h-12 w-12">
+                <Image src="/images/industries/generics/efficacy-and-safety-bioequivalent-.webp" alt="Icon representing bioequivalence with same efficacy and safety profile" fill className="object-contain" sizes="48px" />
+              </div>
               <p className="text-gray-800 font-medium text-sm">Provides the same efficacy and safety profile to patients (&quot;bioequivalent&quot;)</p>
             </div>
           </div>
@@ -199,7 +211,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
           <div className="relative w-full h-[400px] flex justify-center items-center">
             <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl">
               <Image 
-                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80" 
+                src="/images/industries/generics/Generic-Drugs-Must-Meet-the-Same-High-Standards.webp" 
                 alt="Scientific visual representation of generic medicine standards and FDA approval"
                 fill
                 sizes="(max-width: 768px) 100vw, 500px"
@@ -251,7 +263,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
           <div className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm flex flex-col md:flex-row gap-8 items-center max-w-4xl mx-auto">
             <div className="relative w-full md:w-[220px] h-[280px] flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
               <Image 
-                src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" 
+                src="/images/industries/generics/sample-works-2.webp" 
                 alt="Clinical Therapeutics Journal Cover"
                 fill
                 sizes="220px"

@@ -45,17 +45,17 @@ const MedicalDeviceIndustry: NextPage = () => {
   ];
 
   const guidelineCards = [
-    { title: 'MEDDEV Guidelines' },
-    { title: 'MDCG Guidelines' },
-    { title: 'Health Canada' },
-    { title: 'NMPA (National Medical Products Administration)' },
-    { title: 'DSMB (Data Safety Monitoring Boards) Guidelines' },
-    { title: 'IMDRF (International Medical Device Regulators Forum)' },
-    { title: 'MHRA (Medicines and Healthcare Products Regulatory Agency)' },
-    { title: 'COFEPRIS (Federal Commission for Protection against Sanitary Risks)' },
-    { title: 'PMDA (The Pharmaceuticals and Medical Devices Agency)' },
-    { title: 'ANVISA (Brazilian Health Regulatory Agency)' },
-    { title: 'TGA (Therapeutic Goods Administration)' }
+    { title: 'MEDDEV Guidelines', iconSrc: '/images/industries/medical-device/MEDDEV-GUIDELINES.png' },
+    { title: 'MDCG Guidelines', iconSrc: '/images/industries/medical-device/MDGC-GUIDELINES.png' },
+    { title: 'Health Canada', iconSrc: '/images/industries/medical-device/HEALTH-CANADA.png' },
+    { title: 'NMPA (National Medical Products Administration)', iconSrc: '/images/industries/medical-device/NMPA.png' },
+    { title: 'DSMB (Data Safety Monitoring Boards) Guidelines', iconSrc: '/images/industries/medical-device/DSMB.png' },
+    { title: 'IMDRF (International Medical Device Regulators Forum)', iconSrc: '/images/industries/medical-device/IMDRF.png' },
+    { title: 'MHRA (Medicines and Healthcare Products Regulatory Agency)', iconSrc: '/images/industries/medical-device/MHRA.png' },
+    { title: 'COFEPRIS (Federal Commission for Protection against Sanitary Risks)', iconSrc: '/images/industries/medical-device/COFEPRIS.png' },
+    { title: 'PMDA (The Pharmaceuticals and Medical Devices Agency)', iconSrc: '/images/industries/medical-device/PMDA.png' },
+    { title: 'ANVISA (Brazilian Health Regulatory Agency)', iconSrc: '/images/industries/medical-device/ANVISA.png' },
+    { title: 'TGA (Therapeutic Goods Administration)', iconSrc: '/images/industries/medical-device/TGA.png' }
   ];
 
   return (
@@ -186,8 +186,8 @@ const MedicalDeviceIndustry: NextPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {(showAllGuidelines ? guidelineCards : guidelineCards.slice(0, 3)).map((item, idx) => (
               <div key={idx} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex items-center space-x-4">
-                <div className="w-10 h-10 rounded-lg bg-[#f0f4f1] flex items-center justify-center text-[#1b3b32] font-bold shrink-0">
-                  📄
+                <div className="relative w-10 h-10 rounded-lg bg-[#f0f4f1] shrink-0 overflow-hidden">
+                  <Image src={item.iconSrc} alt="" fill className="object-contain p-1" sizes="40px" />
                 </div>
                 <h3 className="font-bold text-gray-900 text-xs md:text-sm">{item.title}</h3>
               </div>

@@ -14,6 +14,8 @@ export const cosmeceuticalsTestimonialsData = {
                 "Portrait of Dr. Meera Shastri, Dermatologist and Research Consultant from India",
             flagLabel:
                 "India country flag representing location of the consultant",
+            avatarSrc: "/images/industries/cosmeceutical-research/Dr.-Meera-Shastri.webp",
+            flagSrc: "/images/industries/biotechnology/india.webp",
         },
         {
             id: "testimonial-2",
@@ -26,6 +28,8 @@ export const cosmeceuticalsTestimonialsData = {
                 "Portrait of Dr. Arjun Menon, Cosmetic Scientist based in the USA",
             flagLabel:
                 "USA country flag representing location of the scientist",
+            avatarSrc: "/images/industries/cosmeceutical-research/Dr.-Arjun-Menon.webp",
+            flagSrc: "/images/industries/cosmeceutical-research/usa-.png",
         },
         {
             id: "testimonial-3",
@@ -38,6 +42,8 @@ export const cosmeceuticalsTestimonialsData = {
                 "Portrait of Dr. Kavita Rao, Clinical Research Specialist based in the UK",
             flagLabel:
                 "United Kingdom flag representing location of the specialist",
+            avatarSrc: "/images/industries/nutraceutical-research/dr.-Kavita-Rao-1.webp",
+            flagSrc: "/images/editing-and-translation/thesis-editing/uk-flag-.png",
         },
     ],
 };

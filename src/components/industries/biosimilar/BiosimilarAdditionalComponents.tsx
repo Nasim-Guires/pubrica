@@ -22,7 +22,7 @@ interface BiosimilarAdditionalComponentsProps {
   featureCards?: Array<{
     title: string;
     description: string;
-    icon: string; // SVG path or symbol representation
+    iconSrc: string;
   }>;
   
   // Author Publication Section
@@ -50,17 +50,17 @@ const defaultFeatureCards = [
   {
     title: 'Complexity',
     description: 'Biosimilars are large, complex proteins, while generics are simpler, small-molecule drugs.',
-    icon: 'complexity'
+    iconSrc: '/images/industries/biosimilar/Complexity.webp'
   },
   {
     title: 'Development Requirements',
     description: 'Biosimilars need extensive analytical, preclinical, and clinical studies; generics usually require only bioequivalence studies.',
-    icon: 'development'
+    iconSrc: '/images/industries/biosimilar/Development-Requirements.webp'
   },
   {
     title: 'Regulatory Pathways',
     description: 'Approval for biosimilars involves demonstrating similarity to the reference biologic; generics demonstrate chemical equivalence.',
-    icon: 'regulatory'
+    iconSrc: '/images/industries/biosimilar/Regulatory-Pathways.webp'
   }
 ];
 
@@ -82,24 +82,24 @@ const defaultEditors: EditorProfile[] = [
     title: 'PHD - Biosimilar Research',
     experience: '7 years of experience',
     manuscripts: '100+ manuscripts edited',
-    imageSrc: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
-    flagSrc: 'https://flagcdn.com/w40/gb.png'
+    imageSrc: '/images/industries/generics/Dr.-Laurence.webp',
+    flagSrc: '/images/industries/biosimilar/united-kingdom-.png'
   },
   {
     name: 'Dr. AJ',
     title: 'PHD - Biosimilar Research',
     experience: '5 Years of Experience',
     manuscripts: '90+ manuscripts edited',
-    imageSrc: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
-    flagSrc: 'https://flagcdn.com/w40/us.png'
+    imageSrc: '/images/industries/generics/Dr.-AJ.webp',
+    flagSrc: '/images/industries/cosmeceutical-research/usa-.png'
   },
   {
     name: 'Dr. Jay',
     title: 'PHD - Biosimilar Research',
     experience: '15 Years of Experience',
     manuscripts: '150+ manuscripts edited',
-    imageSrc: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
-    flagSrc: 'https://flagcdn.com/w40/us.png'
+    imageSrc: '/images/industries/nutraceutical-research/Dr.-Rohit-Kapoor.webp',
+    flagSrc: '/images/industries/cosmeceutical-research/usa-.png'
   }
 ];
 
@@ -112,7 +112,7 @@ export default function BiosimilarAdditionalComponents({
   journalName = 'harmaceuticals (Basel, Switzerland)',
   publisher = 'MDPI',
   impactFactor = '4.8',
-  journalCoverImage = 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80',
+  journalCoverImage = '/images/industries/biosimilar/sample-works-1-1.webp',
   fdaSectionTitle = 'FDA-Approved Biosimilar Products',
   fdaSectionDescription = 'The Food and Drug Administration approves biosimilar products and provides the scientific and regulatory advice needed to bring safe and effective biosimilars to market. The approval of biosimilar products can improve access to care for patients by increasing the number of medication options and potentially lowering costs.',
   fdaProducts = defaultFdaProducts,
@@ -131,10 +131,8 @@ export default function BiosimilarAdditionalComponents({
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="font-bold text-lg text-[#0f2824]">{card.title}</h3>
-                  <div className="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-[#0f2824]">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
+                  <div className="relative w-10 h-10">
+                    <Image src={card.iconSrc} alt="" fill className="object-contain" sizes="40px" />
                   </div>
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed">{card.description}</p>

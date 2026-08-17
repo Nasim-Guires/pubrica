@@ -6,6 +6,7 @@ import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 interface SegmentItem {
   title: string;
   description: string;
+  iconSrc?: string;
 }
 
 interface ExpertiseItem {
@@ -70,22 +71,27 @@ const defaultExpertiseItems: ExpertiseItem[] = [
 const defaultSegmentsItems: SegmentItem[] = [
   {
     title: 'Dietary Supplements',
+    iconSrc: '/images/industries/foods-nutraceuticals/Dietary-Supplements.webp',
     description: 'Comprehensive support in formulation, regulatory compliance, and scientific documentation for vitamins, minerals, and herbal supplements.'
   },
   {
     title: 'Functional Beverages',
+    iconSrc: '/images/industries/foods-nutraceuticals/Functional-Beverages.webp',
     description: 'Expert guidance in the development and positioning of health-oriented drinks, including energy, immunity, and wellness formulations.'
   },
   {
     title: 'Fortified Foods & Snacks',
+    iconSrc: '/images/industries/foods-nutraceuticals/Fortified-Foods-Snacks.webp',
     description: 'Support for food products enriched with nutrients or bioactive compounds, including cereals, bars, functional bakery, and confectionery.'
   },
   {
     title: 'Sports Nutrition Products',
+    iconSrc: '/images/industries/foods-nutraceuticals/Sports-Nutrition-Products.webp',
     description: 'End-to-end assistance in sports nutrition, from protein powders and amino acids to recovery supplements and pre-workout formulas.'
   },
   {
     title: 'Herbal & Traditional Health Products',
+    iconSrc: '/images/industries/foods-nutraceuticals/Herbal-Traditional-Health-Products.webp',
     description: 'Guidance in the research, documentation, and regulatory approval of herbal extracts, traditional formulations, and botanical products.'
   }
 ];
@@ -151,7 +157,7 @@ export default function FunctionalFoodsPage({
           <div className="w-full lg:w-[420px] flex-shrink-0 flex justify-center">
             <div className="relative w-[340px] h-[340px] sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden shadow-xl border-4 border-white">
               <Image 
-                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80" 
+                src="/images/industries/foods-nutraceuticals/Functional-Foods-Nutraceutical-Innovation.webp" 
                 alt="Laboratory research" 
                 fill 
                 sizes="400px"
@@ -203,7 +209,7 @@ export default function FunctionalFoodsPage({
           {/* Central Circular Image */}
           <div className="absolute z-10 w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] rounded-full overflow-hidden shadow-2xl border-4 border-white bg-white">
             <Image 
-              src="https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&w=800&q=80" 
+              src="/images/industries/foods-nutraceuticals/Our-Expertise-in-Functional-Foods-Nutraceuticals-Includes.webp" 
               alt="Microscope research" 
               fill 
               sizes="340px"
@@ -278,10 +284,8 @@ export default function FunctionalFoodsPage({
                   className="w-full py-5 px-6 flex items-center justify-between text-left focus:outline-none hover:bg-gray-50/50 transition-colors"
                 >
                   <div className="flex items-center gap-3 pr-2">
-                    <div className="w-8 h-8 rounded-full bg-emerald-50 text-[#0f2824] flex items-center justify-center flex-shrink-0">
-                      <svg className="w-4 h-4 text-[#0f2824]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                      </svg>
+                    <div className="relative w-8 h-8 flex-shrink-0">
+                      {item.iconSrc ? <Image src={item.iconSrc} alt="" fill className="object-contain" sizes="32px" /> : null}
                     </div>
                     <span className="font-bold text-sm sm:text-base text-[#0f2824] leading-snug">{item.title}</span>
                   </div>

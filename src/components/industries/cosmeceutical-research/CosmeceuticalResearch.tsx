@@ -9,7 +9,7 @@ interface SegmentItem {
 interface ExpertiseItem {
   title: string;
   description: string;
-  iconBg?: string;
+  iconSrc?: string;
 }
 
 interface CosmeceuticalResearchProps {
@@ -64,22 +64,27 @@ const defaultSegments: SegmentItem[] = [
 const defaultExpertiseItems: ExpertiseItem[] = [
   {
     title: "Product Development & Formulation",
+    iconSrc: "/images/industries/cosmeceutical-research/Product-Development-Formulation.webp",
     description: "We assist in designing innovative cosmeceutical formulations, leveraging the latest scientific research"
   },
   {
     title: "Regulatory Compliance & Documentation",
+    iconSrc: "/images/industries/cosmeceutical-research/Regulatory-Compliance-Documentation.webp",
     description: "Our experts guide you through global regulatory frameworks, including FDA, EU, ASEAN, and other"
   },
   {
     title: "Clinical Evaluation & Efficacy Studies",
+    iconSrc: "/images/industries/cosmeceutical-research/Clinical-Evaluation-Efficacy-Studies.webp",
     description: "Pubrica provides support in conducting clinical trials, safety assessments, and efficacy studies to"
   },
   {
     title: "Quality Assurance & Safety Testing",
+    iconSrc: "/images/industries/cosmeceutical-research/Quality-Assurance-Safety-Testing.webp",
     description: "We help implement robust quality control measures, including stability studies, microbiological testing, and"
   },
   {
     title: "Market & Trend Analysis",
+    iconSrc: "/images/industries/cosmeceutical-research/Market-Trend-Analysis.webp",
     description: "We provide insights into global trends, consumer behavior, and competitive landscapes to help you"
   }
 ];
@@ -89,12 +94,12 @@ export default function CosmeceuticalResearch({
   heroSubtitle = "From concept to market-ready solutions, we help brands in the cosmeceutical industry navigate research, development, and regulatory compliance with precision and expertise.",
   transformTitle = "Transforming Ideas into Market-Ready Cosmeceutical Innovations",
   transformParagraphs = defaultTransformParagraphs,
-  transformImage = "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80",
+  transformImage = "/images/industries/cosmeceutical-research/Transforming-Ideas-into-Market-Ready-Cosmeceutical-Innovations.webp",
   ctaText = "Get a Free Quote",
   segmentsTitle = "Cosmeceutical Segments We Serve",
   segmentsSubtitle = "At Pubrica, we cater to a wide spectrum of cosmeceutical products and services, helping brands bring safe, effective, and innovative solutions to the market. Our expertise spans the following segments:",
   segments = defaultSegments,
-  segmentsCenterImage = "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80",
+  segmentsCenterImage = "/images/industries/cosmeceutical-research/Cosmeceutical-Segments-We-Serve.webp",
   expertiseTitle = "Our Expertise In Cosmeceuticals Includes",
   expertiseSubtitle = "At Pubrica, we combine scientific rigor, regulatory knowledge, and clinical insight to help companies develop innovative cosmeceutical products that are safe, effective, and market-ready. Our comprehensive expertise covers the entire product lifecycle, from concept development to post-market support.",
   expertiseItems = defaultExpertiseItems
@@ -200,9 +205,7 @@ export default function CosmeceuticalResearch({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {expertiseItems.map((item, index) => (
             <div key={index} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col items-start text-left hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center mb-4 font-bold text-lg border border-emerald-100">
-                0{index + 1}
-              </div>
+              {item.iconSrc ? <div className="relative w-12 h-12 mb-4"><Image src={item.iconSrc} alt="" fill className="object-contain" sizes="48px" /></div> : null}
               <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{item.title}</h3>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{item.description}</p>
             </div>
