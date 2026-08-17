@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight } from 'lucide-react';
 
@@ -60,7 +61,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '90+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1594824813572-9d0d08e5c0fa?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/dermatology/Dr.-Priya-Sharma-1.webp"
     },
     {
         name: 'Dr. Rohan Kapoor',
@@ -68,7 +69,7 @@ const editorsData = [
         experience: '15 years of experience',
         manuscripts: '150+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/dermatology/Dr.-Rohan-Kapoor.webp"
     },
     {
         name: 'Dr. Ananya Mehra',
@@ -76,7 +77,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '120+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/dermatology/Dr.-Ananya-Mehra.webp"
     }
 ];
 
@@ -161,7 +162,7 @@ export default function DermatologySection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/dermatology/Empowering-Dermatology-Research-and-Innovation-through-Expert-Guidance-and-Support.webp"
                             alt="Applications of Dermatology Services"
                             className="w-full h-auto object-cover"
                         />
@@ -186,7 +187,7 @@ export default function DermatologySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/dermatology/Clinical-Dermatology.png"
                             alt="International Journal of Dermatology Cover"
                             className="w-full h-auto object-cover"
                         />

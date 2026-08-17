@@ -12,7 +12,9 @@ export const biochemistryTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Research Scientist",
       authorLocation: "Italy",
       avatarLabel: "Photo of Dr. Elena Moretti",
+      avatarSrc: "/images/subject-matter-experts/biochemistry/Dr.-Elena-Moretti.webp",
       flagLabel: "Italy Flag",
+      flagSrc: "/images/research-services/systematic-review/italy.png",
     },
     {
       id: "biochemistry-testimonial-2",
@@ -22,7 +24,9 @@ export const biochemistryTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Professor of Biochemistry",
       authorLocation: "USA",
       avatarLabel: "Photo of Prof. James Thompson",
+      avatarSrc: "/images/subject-matter-experts/biotechnology/Prof.-Michael-Thompson.webp",
       flagLabel: "USA Flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
     {
       id: "biochemistry-testimonial-3",
@@ -32,7 +36,9 @@ export const biochemistryTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Senior Scientist",
       authorLocation: "India",
       avatarLabel: "Photo of Dr. Ananya Patel",
+      avatarSrc: "/images/subject-matter-experts/biochemistry/Dr.-Ananya-Patel.webp",
       flagLabel: "India Flag",
+      flagSrc: "/images/subject-matter-experts/biomonitoring/india.webp",
     },
   ],
 };

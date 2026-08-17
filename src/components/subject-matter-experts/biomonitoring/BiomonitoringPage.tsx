@@ -25,30 +25,35 @@ export default function BiomonitoringPage() {
     const coreDisciplines = [
         {
             title: "Environmental Biomonitoring",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Environmental-Biomonitoring.webp",
             subtitle: "Heavy Metals & Pollutants",
             desc: "Focused on tracking environmental pollutants such as heavy metals, pesticides, and persistent organic pollutants (POPs), environmental biomonitoring uses living organisms (e.g., fish, mosses, lichens, or invertebrates) as bioindicators of ecosystem health. This approach helps identify contamination patterns, bioaccumulation, and potential ecological risks.",
             icon: Leaf,
         },
         {
             title: "Human Biomonitoring",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Human-Feed-Biomonitoring.webp",
             subtitle: "Biochemical Matrices",
             desc: "Human biomonitoring assesses chemical exposure in individuals or populations through analysis of biological matrices like blood, urine, or breast milk. It is widely used in epidemiological research, occupational safety studies, and public health surveillance to evaluate exposure to chemicals such as lead, mercury, phthalates, or bisphenol A (BPA).",
             icon: Users,
         },
         {
             title: "Occupational Biomonitoring",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Human-Feed-Biomonitoring.webp",
             subtitle: "Workplace Exposure",
             desc: "In industrial and workplace settings, biomonitoring evaluates exposure to hazardous substances, including solvents, metals, or industrial chemicals. This information supports risk management, exposure control, and compliance with occupational safety standards.",
             icon: Shield,
         },
         {
             title: "Ecological Biomonitoring",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Environmental-Biomonitoring.webp",
             subtitle: "Bioindicator Species",
             desc: "It uses bioindicator species to assess environmental quality and ecosystem responses to pollutants. Aquatic organisms like mussels, algae, or macroinvertebrates serve as effective indicators for monitoring the health of rivers, lakes, and coastal systems.",
             icon: Activity,
         },
         {
             title: "Pharmacokinetic and Toxicological Research",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Pharmacokinetic-and-Toxicological-Research.webp",
             subtitle: "Chemical Absorption",
             desc: "Biomonitoring data enhance understanding of how chemicals are absorbed, distributed, metabolized, and excreted in the body, contributing to toxicokinetic modeling and safety evaluations.",
             icon: Cpu,
@@ -59,37 +64,37 @@ export default function BiomonitoringPage() {
         {
             title: "Publication Support",
             subtitle: "Complete support for publishing in high-impact journals, translating concepts into incisive reports.",
-            imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: FileText,
         },
         {
             title: "Editing & Proofreading",
             subtitle: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            imageUrl: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
         },
         {
             title: "Translation Services",
             subtitle: "Accurate scientific translations to broaden the reach of your research.",
-            imageUrl: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Languages,
         },
         {
             title: "Scientific Writing",
             subtitle: "Crafting clear, precise, and publication-ready research manuscripts.",
-            imageUrl: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: BookOpen,
         },
         {
             title: "Peer-Reviewing Services",
             subtitle: "Comprehensive review to refine and validate your research pre-submission.",
-            imageUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: CheckCircle,
         },
         {
             title: "Journal Selection",
             subtitle: "Strategic journal selection to maximize publication success.",
-            imageUrl: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: Compass,
         },
     ];
@@ -155,7 +160,7 @@ export default function BiomonitoringPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=800"
+                                src="/images/subject-matter-experts/biomonitoring/Biomonitoring.webp"
                                 alt="Biomonitoring Laboratory Microscope"
                                 fill
                                 className="object-cover"

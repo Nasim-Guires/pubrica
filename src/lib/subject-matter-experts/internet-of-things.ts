@@ -12,7 +12,9 @@ export const internetOfThingsTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Assistant Professor",
       authorLocation: "India",
       avatarLabel: "Portrait of Dr. Praveen R",
+      avatarSrc: "/images/subject-matter-experts/material-science/Dr.-Praveen-R-1.webp",
       flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
       id: "internet-of-things-testimonial-2",
@@ -22,7 +24,9 @@ export const internetOfThingsTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Materials Scientist",
       authorLocation: "Japan",
       avatarLabel: "Portrait of Dr. Hiroko S",
+      avatarSrc: "/images/subject-matter-experts/material-science/Dr.-Hiroko-S-1.webp",
       flagLabel: "Japan flag",
+      flagSrc: "/images/editing-and-translation/japan.png",
     },
     {
       id: "internet-of-things-testimonial-3",
@@ -32,7 +36,9 @@ export const internetOfThingsTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Research Scholar",
       authorLocation: "United Kingdom",
       avatarLabel: "Portrait of Maria L",
+      avatarSrc: "/images/subject-matter-experts/internet-of-things/Maria-L.webp",
       flagLabel: "United Kingdom flag",
+      flagSrc: "/images/research-services/systematic-review/united-kingdom-.png",
     },
   ],
 };

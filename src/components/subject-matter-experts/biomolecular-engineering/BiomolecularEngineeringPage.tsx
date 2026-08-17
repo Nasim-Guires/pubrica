@@ -99,7 +99,7 @@ export default function BiomolecularEngineeringPage() {
                         ">
 
                             <Image
-                                src="/images/subject-matter/biomolecular-engineering.png"
+                                src="/images/subject-matter-experts/biomolecular-engineering/Biomolecular-Engineering.webp"
                                 alt="Biomolecular Engineering"
                                 width={500}
                                 height={500}

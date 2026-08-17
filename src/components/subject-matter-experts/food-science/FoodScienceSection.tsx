@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight, Plus, Minus } from 'lucide-react';
 
@@ -98,7 +99,7 @@ const editorsData = [
         experience: '14 years of experience',
         manuscripts: '180+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biomedical-imaging/Dr.-Evelyn-Carter-3.webp"
     },
     {
         name: 'Dr. Elena Garcia',
@@ -106,7 +107,7 @@ const editorsData = [
         experience: '15 years of experience',
         manuscripts: '200+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biocatalysts/Dr.-Amanda-Lee.webp"
     },
     {
         name: 'Dr. Arjun Mehta',
@@ -114,7 +115,7 @@ const editorsData = [
         experience: '11 years of experience',
         manuscripts: '130+ manuscripts edited',
         countryFlag: '🇮🇳',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/animal-science/karrel.png"
     }
 ];
 
@@ -245,7 +246,7 @@ export default function FoodScienceSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/food-science/Food-Chemistry.webp"
                             alt="Food science laboratory setup"
                             className="w-full h-auto object-cover"
                         />
@@ -271,7 +272,7 @@ export default function FoodScienceSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/food-science/Food-Microbiology.webp"
                             alt="Journal of Food Science Cover"
                             className="w-full h-auto object-cover"
                         />

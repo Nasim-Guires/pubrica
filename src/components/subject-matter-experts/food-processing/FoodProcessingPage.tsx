@@ -20,46 +20,55 @@ export default function FoodProcessingPage() {
     const disciplines = [
         {
             title: "Heat Transfer Models",
+            iconSrc: "/images/subject-matter-experts/food-processing/Heat-Transfer-Models.webp",
             description: "To guarantee the quality of food and ensure its safety during its production process, you need to know the temperature distribution throughout the food or ingredients' surface. This temperature distribution is determined by mathematical models that are based on Fourier's Law of Heat Conduction and Newton's Law of Cooling. These models are widely utilised in the evaluation of thermal processing techniques such as pasteurisation and cooking to guarantee proper penetration of heat and survival of bacterium.",
             icon: Search
         },
         {
             title: "Mass Transfer Models",
+            iconSrc: "/images/subject-matter-experts/food-processing/Mass-Transfer-Models.webp",
             description: "Mass transfer models form an integral part in processes that involve the movement of moisture or solute. Models that follow Fick’s laws of diffusion apply in drying, extraction, and osmotic dehydration.",
             icon: TrendingUp
         },
         {
             title: "Kinetic models",
+            iconSrc: "/images/subject-matter-experts/food-processing/Kinetic-models.webp",
             description: "Kinetic models can be used to assess the rate of chemical and biochemical changes in food systems. These models can support the study of the degradation of nutrients, enzymes, and the inactivation of microorganisms, which can be used to make accurate predictions.",
             icon: FileText
         },
         {
             title: "Microbial Growth Models",
+            iconSrc: "/images/subject-matter-experts/food-processing/Microbial-Growth-Models.webp",
             description: "Models of microorganisms' growth are very important in helping to maintain safe and high-quality food products. Predictive models of the growth of microorganisms (the logistic growth model) are used to determine the possibilities for the growth, survival and inactivation of microorganisms due to various environmental conditions and are used to assist in hazard analysis as well as in risk assessment.",
             icon: Database
         },
         {
             title: "Drying Models",
+            iconSrc: "/images/subject-matter-experts/food-processing/Mass-Transfer-Models.webp",
             description: "Moisture is an important aspect of drying food products, and drying models provide a way to understand how moisture is removed from food products. Thin-layer and diffusion drying models help optimise drying processes while maintaining the texture and nutritional value of the finished product.",
             icon: AlertTriangle
         },
         {
             title: "Rheological Models",
+            iconSrc: "/images/subject-matter-experts/food-processing/Rheological-Models.webp",
             description: "Rheological models are used to characterise the flow and deformation of food materials. The models are often used in the processing of liquid and semi-solid food products, where control of viscosity, texture, and consistency of food products is required.",
             icon: Layers
         },
         {
             title: "Computational Fluid Dynamics (CFD) Models",
+            iconSrc: "/images/subject-matter-experts/food-processing/Computational-Fluid-Dynamics-CFD-Models.webp",
             description: "Computational Fluid Dynamics (CFD) models are sophisticated computer models used in the analysis of fluid flow, heat transfer, and mass transfer in food processing operations.",
             icon: Cpu
         },
         {
             title: "Process Optimisation Models",
+            iconSrc: "/images/subject-matter-experts/food-processing/Process-Optimisation-Models.webp",
             description: "Response Surface Methodology (RSM) and Artificial Neural Networks (ANN) are optimisation models that are used in determining the processing conditions. These models increase efficiency, reduce costs, and improve the quality of products.",
             icon: BarChart3
         },
         {
             title: "Packaging and Shelf Life Models",
+            iconSrc: "/images/subject-matter-experts/food-processing/Packaging-and-Shelf-Life-Models.webp",
             description: "These models are used in predicting the stability of the product under various storage conditions. The models are important in the development of an effective packaging system.",
             icon: PenTool
         }
@@ -69,56 +78,56 @@ export default function FoodProcessingPage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: FileText,
             href: "/services/research-services"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/editing-and-translation"
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: FileSearch,
             href: "/services/medical-data-collection/"
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: FileText,
             href: "/services/editing-and-translation"
         },
         {
             title: "Artwork Editing",
             description: "Professional visuals for your figures, tables, and graphical abstracts",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: Cpu,
             href: "/services/publication-support/art-work-preparation"
         },
         {
             title: "Journal Formatting",
             description: "Tailored manuscript formatting to meet specific journal guidelines.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Layers,
             href: "/services/publication-support/journal-manuscript-formatting-services"
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BarChart3,
             href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSearch,
             href: "/services/publication-support/journal-selection"
         }
@@ -168,7 +177,7 @@ export default function FoodProcessingPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/food-processing/Food-Processing.webp"
                                 alt="Food processing research visualization"
                                 fill
                                 priority
@@ -208,7 +217,13 @@ export default function FoodProcessingPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

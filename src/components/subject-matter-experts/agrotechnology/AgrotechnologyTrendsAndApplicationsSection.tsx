@@ -75,21 +75,21 @@ export default function AgrotechnologyCompleteSection() {
       role: "Ph.D. in Plant Biotechnology",
       experience: "9 years of experience",
       manuscripts: "90+ manuscripts edited",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/agriculture/Dr.-Neha-Verma.webp",
     },
     {
       name: "Dr. Kavita Reddy",
       role: "Ph.D. in Agricultural Engineering",
       experience: "10 years of experience",
       manuscripts: "100+ manuscripts edited",
-      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/agrotechnology/Dr.-Kavita-Reddy.webp",
     },
     {
       name: "Dr. Priya Sharma",
       role: "Ph.D. in Crop Science",
       experience: "8 years of experience",
       manuscripts: "85+ manuscripts edited",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/agrotechnology/Dr.-Priya-Sharma.webp",
     },
   ];
 
@@ -174,7 +174,7 @@ export default function AgrotechnologyCompleteSection() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full h-72 md:h-80 rounded-md overflow-hidden shadow-sm border border-gray-200 bg-gray-50">
               <Image
-                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=800"
+                src="/images/subject-matter-experts/agrotechnology/Agrotechnology-Advancing-Modern-Agriculture-Through-Science-and-Innovation.webp"
                 alt="Hand writing on paper workspace"
                 fill
                 className="object-cover"
@@ -198,7 +198,7 @@ export default function AgrotechnologyCompleteSection() {
         <div className="bg-white border border-gray-200 rounded-md p-6 shadow-sm flex flex-col md:flex-row gap-6 items-center">
           <div className="relative w-40 h-52 shrink-0 border border-gray-200 shadow-sm rounded overflow-hidden bg-gray-50">
             <Image
-              src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=400"
+              src="/images/subject-matter-experts/agrotechnology/Crop-Science-Management.png"
               alt="Agronomy Journal Cover"
               fill
               className="object-cover"

@@ -12,7 +12,9 @@ export const biocatalystsTestimonialsData: ClientTestimonialsProps = {
       authorRole: "PhD in Biochemistry",
       authorLocation: "USA",
       avatarLabel: "Portrait of Dr. Amanda Lee",
+      avatarSrc: "/images/subject-matter-experts/biocatalysts/Dr.-Amanda-Lee.webp",
       flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
     {
       id: "biocatalysts-testimonial-2",
@@ -22,7 +24,9 @@ export const biocatalystsTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Pharmaceutical Scientist",
       authorLocation: "Spain",
       avatarLabel: "Portrait of Dr. Elena Rodriguez",
+      avatarSrc: "/images/subject-matter-experts/biocatalysts/Dr.-Elena-Rodriguez.webp",
       flagLabel: "Spain flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
     },
     {
       id: "biocatalysts-testimonial-3",
@@ -32,7 +36,9 @@ export const biocatalystsTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Molecular Biologist",
       authorLocation: "China",
       avatarLabel: "Portrait of Dr. Michael Chen",
+      avatarSrc: "/images/subject-matter-experts/biomolecular-engineering/Dr.-Michael-Turner.webp",
       flagLabel: "China flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/china.png",
     },
   ],
 };

@@ -9,7 +9,9 @@ export const GLYCOBIOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Research Scientist",
     authorLocation: "United Kingdom",
     avatarLabel: "Portrait of Dr. Rebecca Lawson",
+      avatarSrc: "/images/subject-matter-experts/biocomputing/Dr.-Elena-Varkins.webp",
     flagLabel: "United Kingdom flag",
+      flagSrc: "/images/research-services/systematic-review/united-kingdom-.png",
   },
   {
     id: "glycobiology-2",
@@ -19,7 +21,9 @@ export const GLYCOBIOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Principal Investigator",
     authorLocation: "Italy",
     avatarLabel: "Portrait of Dr. Marco Rossi",
+      avatarSrc: "/images/subject-matter-experts/glycobiology/Dr.-Marco-Rossi.webp",
     flagLabel: "Italy flag",
+      flagSrc: "/images/research-services/systematic-review/italy.png",
   },
   {
     id: "glycobiology-3",
@@ -29,6 +33,8 @@ export const GLYCOBIOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Associate Professor",
     authorLocation: "Japan",
     avatarLabel: "Portrait of Dr. Haruki Sato",
+      avatarSrc: "/images/subject-matter-experts/glycobiology/Dr.-Haruki-Sato.webp",
     flagLabel: "Japan flag",
+      flagSrc: "/images/editing-and-translation/japan.png",
   },
 ];

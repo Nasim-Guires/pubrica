@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight, ClipboardList, Syringe, Stethoscope, HeartPulse } from 'lucide-react';
 
@@ -33,21 +34,25 @@ const advancesInSurgeryData = [
 const surgicalProcessData = [
     {
         title: 'Preoperative Assessment',
+            iconSrc: "/images/subject-matter-experts/surgery/Preoperative-Assessment.webp",
         description: 'Before surgery, patients undergo thorough evaluations, including medical history review, physical examination, imaging, and laboratory tests. This ensures appropriate risk assessment and surgical planning.',
         icon: ClipboardList
     },
     {
         title: 'Anaesthesia and Preparation',
+            iconSrc: "/images/subject-matter-experts/surgery/Anaesthesia-and-Preparation.webp",
         description: 'Administered by specialized anaesthesiologists, anaesthesia ensures patient comfort and safety during the procedure. Preoperative preparation also includes sterilization protocols, patient positioning, and equipment readiness.',
         icon: Syringe
     },
     {
         title: 'Surgical Procedure',
+            iconSrc: "/images/subject-matter-experts/surgery/Surgical-Procedure.webp",
         description: 'Surgeons operate using a variety of techniques, ranging from traditional open surgery to advanced minimally invasive surgery research techniques such as laparoscopy or robotic-assisted surgery.',
         icon: Stethoscope
     },
     {
         title: 'Postoperative Care',
+            iconSrc: "/images/subject-matter-experts/surgery/Postoperative-Care.webp",
         description: 'Recovery begins immediately after surgery with careful monitoring of vital signs, pain management, and prevention of complications. Rehabilitation may include physical therapy, wound care, and lifestyle modifications.',
         icon: HeartPulse
     }
@@ -60,7 +65,7 @@ const editorsData = [
         experience: '8 years of experience',
         manuscripts: '100+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/surgery/Dr.-Arjun-Mehta.webp"
     },
     {
         name: 'Dr. Sophia Reynolds',
@@ -68,7 +73,7 @@ const editorsData = [
         experience: '8 years of experience',
         manuscripts: '70+ manuscripts edited',
         countryFlag: '🇦🇺',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/surgery/Dr.-Sophia-Reynolds.webp"
     },
     {
         name: 'Dr. Michael Carter',
@@ -76,7 +81,7 @@ const editorsData = [
         experience: '7 years of experience',
         manuscripts: '80+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/surgery/Dr.-Michael-Carter.webp"
     }
 ];
 
@@ -186,7 +191,7 @@ export default function SurgerySubjectMatterExpertsSection() {
                     {/* Journal Cover */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <img
-                            src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/surgery/Advancing-Surgical-Science.webp"
                             alt="Annals of Surgery Journal Cover"
                             className="w-full h-auto object-cover"
                         />

@@ -23,31 +23,37 @@ export default function BiocatalystsPage() {
     const disciplines = [
         {
             title: "Enzyme Engineering and Optimization",
+            iconSrc: "/images/subject-matter-experts/biocatalysts/Enzyme-Engineering-and-Optimization.webp",
             description: "Our team focuses on the design, modification, and optimization of enzymes for industrial and laboratory applications. From improving catalytic efficiency to enhancing stability under diverse conditions, we assist in developing enzymes tailored to specific biochemical processes.",
             icon: Dna
         },
         {
             title: "Biocatalytic Process Development",
+            iconSrc: "/images/subject-matter-experts/biocatalysts/Biocatalytic-Process-Development.webp",
             description: "We provide end-to-end support for the development of biocatalytic processes, including substrate screening, reaction optimization, and scale-up. Our approach ensures reproducibility, efficiency, and cost-effectiveness in industrial biocatalysis.",
             icon: Workflow
         },
         {
             title: "Metabolic Pathway Analysis",
+            iconSrc: "/images/subject-matter-experts/biocatalysts/Metabolic-Pathway-Analysis.webp",
             description: "Understanding metabolic pathways is key to improving biocatalyst performance. We assist in mapping, modelling, and analysing metabolic networks to identify bottlenecks and optimize production of desired bioproducts.",
             icon: GitBranch
         },
         {
             title: "Enzyme Immobilization Techniques",
+            iconSrc: "/images/subject-matter-experts/biocatalysts/Enzyme-Immobilization-Techniques.webp",
             description: "We specialize in enzyme immobilization strategies that enhance enzyme reusability and stability. Our solutions include various carriers, matrices, and novel techniques to maximize biocatalyst efficiency in industrial applications.",
             icon: Lock
         },
         {
             title: "Biocatalyst Screening and Characterization",
+            iconSrc: "/images/subject-matter-experts/biocatalysts/Biocatalyst-Screening-and-Characterization.webp",
             description: "Through advanced screening methods, we identify enzymes with high activity, selectivity, and compatibility for specific reactions. Our characterization services include kinetic studies, substrate specificity profiling, and structural analysis.",
             icon: SearchCheck
         },
         {
             title: "Green Chemistry and Sustainable Bioprocessing",
+            iconSrc: "/images/subject-matter-experts/biocatalysts/Green-Chemistry-and-Sustainable-Bioprocessing.webp",
             description: "We emphasize environmentally friendly approaches, promoting the use of biocatalysts to reduce chemical waste, energy consumption, and the carbon footprint in industrial processes.",
             icon: Leaf
         }
@@ -57,49 +63,49 @@ export default function BiocatalystsPage() {
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: FileSearch
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Editing-Proofreading.webp",
             icon: FileText
         },
         {
             title: "Peer-Reviewing Services",
             description: "Comprehensive review to refine and validate your research pre-submission",
-            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
             icon: UserCheck
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Languages
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: PenTool
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
             icon: Send
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biopolymers/Graphical-Abstract.webp",
             icon: ImageIcon
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Selection.webp",
             icon: BookMarked
         }
     ];
@@ -152,7 +158,7 @@ export default function BiocatalystsPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/biocatalysts/Biocatalysts.webp"
                                 alt="Biocatalyst research in laboratory"
                                 fill
                                 priority
@@ -192,7 +198,13 @@ export default function BiocatalystsPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

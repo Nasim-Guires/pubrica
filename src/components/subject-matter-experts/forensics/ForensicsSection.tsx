@@ -1,3 +1,4 @@
+import Image from "next/image";
     "use client";
     import React, { useState } from 'react';
     import { Briefcase, FileText, ChevronRight, Plus, Minus } from 'lucide-react';
@@ -103,7 +104,7 @@
             experience: '15 years of experience',
             manuscripts: '200+ manuscripts edited',
             countryFlag: '🇬🇧',
-            avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+            avatar: "/images/subject-matter-experts/biomonitoring/Dr.-Emily-Carter-1.webp"
         },
         {
             name: 'Dr. Rajesh Nair',
@@ -111,7 +112,7 @@
             experience: '12 years of experience',
             manuscripts: '170+ manuscripts edited',
             countryFlag: '🇮🇳',
-            avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+            avatar: "/images/subject-matter-experts/biomonitoring/Dr.-Rajesh-Nair.webp"
         },
         {
             name: 'Dr. Laura Mitchell',
@@ -119,7 +120,7 @@
             experience: '16 years of experience',
             manuscripts: '210+ manuscripts edited',
             countryFlag: '🇺🇸',
-            avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200'
+            avatar: '/images/subject-matter-experts/forensics/Forensic.webp'
         }
     ];
 
@@ -211,7 +212,7 @@
 
                         <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                             <img
-                                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600"
+                                src="/images/subject-matter-experts/forensics/Forensic-Pathology.webp"
                                 alt="Forensic laboratory setup"
                                 className="w-full h-auto object-cover"
                             />
@@ -236,7 +237,7 @@
                         {/* Journal Cover Image */}
                         <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                             <img
-                                src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                                src="/images/subject-matter-experts/forensics/Forensic-Toxicology.webp"
                                 alt="Journal of Forensic and Legal Medicine Cover"
                                 className="w-full h-auto object-cover"
                             />

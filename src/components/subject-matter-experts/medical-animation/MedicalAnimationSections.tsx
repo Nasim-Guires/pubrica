@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { BookOpen, Award, Briefcase, FileText, ChevronRight } from 'lucide-react';
 
@@ -53,7 +54,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '200+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/cancer-research/Dr.-Meera-Iyer-1.webp"
     },
     {
         name: 'John Miller',
@@ -61,7 +62,7 @@ const editorsData = [
         experience: '8 years of experience',
         manuscripts: '150+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/medical-animation/John-Miller.webp"
     },
     {
         name: 'Dr. Sophia Bennett',
@@ -69,7 +70,7 @@ const editorsData = [
         experience: '4 years of experience',
         manuscripts: '80+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biomedical-imaging/Dr.-Evelyn-Carter-3.webp"
     }
 ];
 
@@ -161,7 +162,7 @@ export default function MedicalAnimationSections() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <img
-                            src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/medical-animation/Empowering-Research-Excellence-in-Medical-Animation-through-Expert-Guidance.webp"
                             alt="Medical Science Educator Journal Cover"
                             className="w-full h-auto object-cover"
                         />

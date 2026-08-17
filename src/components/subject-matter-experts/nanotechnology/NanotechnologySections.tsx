@@ -40,7 +40,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '100+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/material-science/Dr.-Ayesha-Kapoor-2.webp"
     },
     {
         name: 'Dr. Michael Thompson',
@@ -48,7 +48,7 @@ const editorsData = [
         experience: '16 years of experience',
         manuscripts: '130+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/augmented-reality/Dr.-Robert-Klein-1.webp"
     },
     {
         name: 'Dr. Sofia Martinez',
@@ -56,7 +56,7 @@ const editorsData = [
         experience: '14 years of experience',
         manuscripts: '110+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biotechnology/Dr.-Sofia-Martinez.webp"
     }
 ];
 
@@ -123,7 +123,7 @@ export default function NanotechnologySections() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white relative h-[280px]">
                         <Image
-                            src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/nanotechnology/Empowering-Research-Excellence-in-Nanotechnology.webp"
                             alt="Nature Nanotechnology Journal Cover"
                             fill
                             className="object-cover"

@@ -48,31 +48,37 @@ export default function SurgeryPage() {
     const disciplines = [
         {
             title: "General Surgery",
+            iconSrc: "/images/subject-matter-experts/surgery/General-Surgery.webp",
             description: "It is the foundation of surgical practice, focusing on the diagnosis, preoperative, operative, and postoperative management of a broad spectrum of conditions. Research in this discipline often spans gastrointestinal, hepatobiliary, endocrine, and trauma surgery. Our services support clinical research editing, manuscript preparation, literature review, data analysis, and journal submission services to ensure rigorous and impactful publications.",
             icon: Stethoscope,
         },
         {
             title: "Cardiothoracic Surgery",
+            iconSrc: "/images/subject-matter-experts/surgery/Cardiothoracic-Surgery.webp",
             description: "These surgery deals with the surgical treatment of diseases affecting the heart, lungs, oesophagus, and thoracic cavity. Precision and technical expertise are critical in this discipline. Pubrica assists authors in presenting complex procedures, case studies, and clinical trials in a clear and scientifically robust manner, enhancing the chances of publication in top-tier journals.",
             icon: Heart,
         },
         {
             title: "Neurosurgery",
+            iconSrc: "/images/subject-matter-experts/surgery/Neurosurgery.webp",
             description: "They focus on the surgical management of neurological disorders affecting the brain, spinal cord, and peripheral nerves. Research in this field requires meticulous data presentation and interpretation. Our experts help structure manuscripts, refine imaging and procedural data, and optimize neurosurgery editing to meet the stringent standards of neurosurgical journals.",
             icon: Brain,
         },
         {
             title: "Orthopaedic Surgery",
+            iconSrc: "/images/subject-matter-experts/surgery/Orthopaedic-Surgery.webp",
             description: "It specializes in the musculoskeletal system, including bones, joints, ligaments, tendons, and muscles. From trauma management to reconstructive and arthroscopic procedures, orthopaedic research demands detailed reporting of techniques and outcomes. Pubrica’s editorial team ensures accuracy, clarity, and adherence to journal guidelines, facilitating the successful dissemination of innovative research and orthopaedic manuscript",
             icon: Activity,
         },
         {
             title: "Paediatric Surgery",
+            iconSrc: "/images/subject-matter-experts/surgery/Paediatric-Surgery.webp",
             description: "Paediatric Surgery addresses surgical care in neonates, infants, and children, often involving delicate and highly specialized procedures. Manuscripts in this discipline require a combination of clinical precision and compassionate care presentation. Our services include editing, formatting, and submission support tailored to paediatric surgery editing.",
             icon: Baby,
         },
         {
             title: "Plastic and Reconstructive Surgery",
+            iconSrc: "/images/subject-matter-experts/surgery/Plastic-and-Reconstructive-Surgery.webp",
             description: "It encompasses aesthetic, reconstructive, and microsurgical procedures. Research often emphasizes technique innovation, outcomes analysis, and case series reporting. Pubrica assists in refining technical descriptions, enhancing visual presentation, and ensuring manuscripts meet the publication standards of high-impact surgical journals.",
             icon: Sparkles,
         }
@@ -82,56 +88,56 @@ export default function SurgeryPage() {
         {
             title: "Editorial Comment Addressal",
             description: "Expert responses to enhance your manuscript based on reviewer comments.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: FileSearch,
             href: "/services/publication-support/responding-to-reviewers"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/editing-and-translation"
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Database,
             href: "/services/medical-data-collection"
         },
         {
             title: "Peer-Reviewing Services",
             description: "Comprehensive review to refine and validate your research pre-submission.",
-            image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
             icon: Search,
             href: "/services/publication-support/peer-review-pre-submission"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: Layers,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Send,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Original Research Article",
             description: "End-to-end writing, statistical analysis, and formatting tailored to journal-specific guidelines",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BookOpen,
             href: "/services/physician-writing-services/original-research-article"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSpreadsheet,
             href: "/services/publication-support/journal-selection"
         }
@@ -184,7 +190,7 @@ export default function SurgeryPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white bg-[#a3c9bd]/30 flex items-center justify-center">
                             <Image
-                                src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/surgery/Advancing-Surgical-Science.webp"
                                 alt="Surgical Science and Clinical Research"
                                 fill
                                 priority
@@ -224,7 +230,13 @@ export default function SurgeryPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

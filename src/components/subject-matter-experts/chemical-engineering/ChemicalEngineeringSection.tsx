@@ -28,41 +28,49 @@ const applicationsData = [
     {
         icon: Pill,
         title: "Pharmaceuticals",
+            iconSrc: "/images/subject-matter-experts/biocatalysts/Pharmaceuticals-1.webp",
         description: "developing and manufacturing drug and biopharmaceutical products"
     },
     {
         icon: Zap,
         title: "Energy",
+            iconSrc: "/images/subject-matter-experts/chemical-engineering/Sustainable_Green-Engineering.webp",
         description: "developing fuel, alternative energy technologies, and storage"
     },
     {
         icon: Droplets,
         title: "Environmental engineering",
+            iconSrc: "/images/subject-matter-experts/chemical-engineering/Environmental-engineering.webp",
         description: "waste treatment, water purification, and pollution"
     },
     {
         icon: Utensils,
         title: "Food processing",
+            iconSrc: "/images/subject-matter-experts/chemical-engineering/Food-processing-1.webp",
         description: "improving the process for producing and preserving food"
     },
     {
         icon: Layers,
         title: "Materials science",
+            iconSrc: "/images/subject-matter-experts/chemical-engineering/Materials-science.webp",
         description: "developing new materials such as polymers and nanomaterials"
     },
     {
         icon: Flame,
         title: "Petrochemical industry",
+            iconSrc: "/images/subject-matter-experts/chemical-engineering/Petrochemical-industry.webp",
         description: "developing processes for refining crude oil, producing petrochemical products, and producing fuels"
     },
     {
         icon: Dna,
         title: "Biotechnology",
+            iconSrc: "/images/subject-matter-experts/chemical-engineering/Biotechnology-1.webp",
         description: "developing products such as enzymes and vaccines"
     },
     {
         icon: Leaf,
         title: "Sustainability",
+            iconSrc: "/images/subject-matter-experts/chemical-engineering/Sustainability.webp",
         description: "developing new processes that are sustainable and have a lower effect on the environment"
     }
 ];
@@ -74,7 +82,7 @@ const editorsData = [
         experience: '15 years of experience',
         manuscripts: '200+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/chemical-engineering/Dr.-Robert-Williams.webp"
     },
     {
         name: 'Dr. Anjali Rao',
@@ -82,7 +90,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '160+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/chemical-engineering/Dr.-Anjali-Rao.webp"
     },
     {
         name: 'Dr. David Lee',
@@ -90,7 +98,7 @@ const editorsData = [
         experience: '11 years of experience',
         manuscripts: '150+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/chemical-engineering/Dr.-David-Lee.webp"
     }
 ];
 
@@ -159,7 +167,13 @@ export default function ChemicalEngineeringSection() {
                             return (
                                 <div key={idx} className="flex items-start space-x-3 text-gray-800">
                                     <div className="p-1 text-gray-700 shrink-0 mt-0.5">
+                                        {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                        <span className="relative w-6 h-6">
+                                            <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                        </span>
+                                    ) : (
                                         <IconComponent className="w-6 h-6 stroke-[1.5]" />
+                                    )}
                                     </div>
                                     <div className="text-xs sm:text-sm leading-relaxed">
                                         <strong className="font-bold text-gray-900">{app.title}: </strong>
@@ -174,7 +188,7 @@ export default function ChemicalEngineeringSection() {
                     <div className="lg:col-span-6 flex justify-center">
                         <div className="relative w-full h-[400px] sm:h-[480px] rounded-lg overflow-hidden shadow-md border border-gray-200">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=800"
+                                src="/images/subject-matter-experts/chemical-engineering/Chemical-Engineering.webp"
                                 alt="Chemical Engineering Research Laboratory"
                                 fill
                                 className="object-cover"
@@ -203,7 +217,7 @@ export default function ChemicalEngineeringSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <Image
-                            src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/chemical-engineering/Reaction-Engineering.webp"
                             alt="Chemical Engineering Journal Cover"
                             width={224}
                             height={300}

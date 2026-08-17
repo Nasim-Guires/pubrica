@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight, Plus, Minus } from 'lucide-react';
 
@@ -101,7 +102,7 @@ const editorsData = [
         experience: '15 years of experience',
         manuscripts: '180+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/cell-biology/Dr.-Sarah-Mitchell.webp"
     },
     {
         name: 'Dr. Rajesh Kumar',
@@ -109,7 +110,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '140+ manuscripts edited',
         countryFlag: '🇮🇳',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/dentistry/Dr.-Rajesh-Kumar.webp"
     },
     {
         name: 'Dr. Emily Zhao',
@@ -117,7 +118,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '120+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/neurology/Dr.-Laura-Stein.webp"
     }
 ];
 
@@ -207,7 +208,7 @@ export default function RadiologyExpertsSection() {
                     {/* Right Hand Image */}
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/radiology/Radiology.webp"
                             alt="Radiology medical MRI scanner equipment"
                             className="w-full h-auto object-cover"
                         />
@@ -232,7 +233,7 @@ export default function RadiologyExpertsSection() {
                     {/* Journal Cover */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <img
-                            src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/radiology/Diagnostic-Radiology.webp"
                             alt="Radiology Journal Cover"
                             className="w-full h-auto object-cover"
                         />

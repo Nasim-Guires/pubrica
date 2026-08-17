@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight } from 'lucide-react';
 
@@ -78,7 +79,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '180+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/production-engineering/Dr.-Evelyn-Carter-2.webp"
     },
     {
         name: 'Dr. Maya Chen',
@@ -86,7 +87,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '145+ manuscripts edited',
         countryFlag: '🇨🇳',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biomedical-imaging/Dr.-Maya-Chen-3.webp"
     },
     {
         name: 'Dr. Arjun Mehta',
@@ -94,7 +95,7 @@ const editorsData = [
         experience: '13 years of experience',
         manuscripts: '170+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/algorithm/Dr.-David-Chen.webp"
     }
 ];
 
@@ -175,7 +176,7 @@ export default function ProductionEngineeringSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/production-engineering/Production-Engineering.webp"
                             alt="Production Engineering Specialist operating automated machinery"
                             className="w-full h-auto object-cover"
                         />
@@ -204,7 +205,7 @@ export default function ProductionEngineeringSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/production-engineering/Manufacturing-Methods-Technology.webp"
                             alt="Recent Trends in Industrial and Production Engineering Journal Cover"
                             className="w-full h-auto object-cover"
                         />

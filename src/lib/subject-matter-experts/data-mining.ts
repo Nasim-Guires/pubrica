@@ -9,7 +9,9 @@ export const DATA_MINING_TESTIMONIALS: Testimonial[] = [
     authorRole: "Data Scientist",
     authorLocation: "India",
     avatarLabel: "Dr. Emily Harris - Data Scientist testimonial",
+    avatarSrc: "/images/subject-matter-experts/shared/--Dr.-Emily-Harris.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "data-mining-2",
@@ -19,7 +21,9 @@ export const DATA_MINING_TESTIMONIALS: Testimonial[] = [
     authorRole: "Professor of Computer Science, MIT",
     authorLocation: "Spain",
     avatarLabel: "Dr. Jason Lee - Professor of Computer Science testimonial",
+      avatarSrc: "/images/subject-matter-experts/big-data-hadoop/Dr.-M.-Chen.webp",
     flagLabel: "Spain flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
   },
   {
     id: "data-mining-3",
@@ -29,6 +33,8 @@ export const DATA_MINING_TESTIMONIALS: Testimonial[] = [
     authorRole: "Researcher, Global Analytics Inc",
     authorLocation: "USA",
     avatarLabel: "Dr. Mark Robinson - Researcher testimonial",
+      avatarSrc: "/images/subject-matter-experts/data-mining/Dr.-Mark-Robinson.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
 ];

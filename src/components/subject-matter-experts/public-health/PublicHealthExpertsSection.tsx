@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight, Plus, Minus } from 'lucide-react';
 
@@ -113,7 +114,7 @@ const editorsData = [
         experience: '15 years of experience',
         manuscripts: '180+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/genomics/Dr.-Maria-Oliveira.webp"
     },
     {
         name: 'Dr. Michael Thompson',
@@ -121,7 +122,7 @@ const editorsData = [
         experience: '17 years of experience',
         manuscripts: '210+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/big-data-hadoop/Dr.-M.-Chen.webp"
     },
     {
         name: 'Dr. Ritu Sharma',
@@ -129,7 +130,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '140+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/big-data-hadoop/Dr.-Ananya-Verma-1.webp"
     }
 ];
 
@@ -197,7 +198,7 @@ export default function PublicHealthExpertsSection() {
                             {/* Top Left Image */}
                             <div className="absolute top-0 left-0 w-[62%] h-[180px] rounded-2xl overflow-hidden shadow-md border-2 border-white">
                                 <img
-                                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=400"
+                                    src="/images/subject-matter-experts/public-health/Biostatistics.webp"
                                     alt="Medical research digital interface"
                                     className="w-full h-full object-cover"
                                 />
@@ -205,7 +206,7 @@ export default function PublicHealthExpertsSection() {
                             {/* Bottom Right Image */}
                             <div className="absolute bottom-0 right-0 w-[62%] h-[180px] rounded-2xl overflow-hidden shadow-lg border-2 border-white">
                                 <img
-                                    src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=400"
+                                    src="/images/subject-matter-experts/public-health/Environmental-Health.webp"
                                     alt="Environmental public health globe"
                                     className="w-full h-full object-cover"
                                 />
@@ -293,7 +294,7 @@ export default function PublicHealthExpertsSection() {
                     {/* Right Hand Image */}
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/public-health/Global-Health.webp"
                             alt="Public health digital analytics tablet"
                             className="w-full h-auto object-cover"
                         />
@@ -376,7 +377,7 @@ export default function PublicHealthExpertsSection() {
                     {/* The Lancet Journal Cover */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <img
-                            src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/public-health/Health-Policy-and-Management.webp"
                             alt="The Lancet Public Health Cover"
                             className="w-full h-auto object-cover"
                         />

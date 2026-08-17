@@ -23,31 +23,37 @@ export default function BiocomputingPage() {
     const disciplines = [
         {
             title: "Bioinformatics and Computational Biology",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Bioinformatics-and-Computational-Biology.webp",
             description: "Bioinformatics is the backbone of biocomputing, focusing on the storage, retrieval, and analysis of biological data. We assist researchers in developing algorithms for sequence alignment, genome assembly, molecular modelling, and evolutionary analysis.",
             icon: Dna
         },
         {
             title: "Systems Biology",
+            iconSrc: "/images/subject-matter-experts/biocomputing/Systems-Biology.webp",
             description: "It integrates computational models to study complex biological networks and interactions. Our support includes constructing predictive models of cellular pathways, gene regulatory networks, and metabolic circuits.",
             icon: Network
         },
         {
             title: "Structural Bioinformatics",
+            iconSrc: "/images/subject-matter-experts/biocomputing/Structural-Bioinformatics.webp",
             description: "It involves analysing three-dimensional structures of biomolecules such as proteins, nucleic acids, and complexes. We guide researchers in molecular docking, structure prediction, and simulation of protein-ligand interactions.",
             icon: Layers
         },
         {
             title: "Synthetic Biology and Computational Modelling",
+            iconSrc: "/images/subject-matter-experts/biocomputing/Synthetic-Biology-and-Computational-Modelling.webp",
             description: "Synthetic biology leverages biocomputing to design and optimize genetic circuits, metabolic pathways, and synthetic organisms. Our experts facilitate computational modelling of synthetic constructs, enabling accurate predictions of biological behaviour.",
             icon: Cpu
         },
         {
             title: "Omics Data Analysis",
+            iconSrc: "/images/subject-matter-experts/biocomputing/Omics-Data-Analysis.webp",
             description: "Omics technologies, including genomics, transcriptomics, proteomics, and metabolomics, generate massive datasets. We support researchers in multi-omics integration, pathway enrichment analysis, and machine learning-based predictions.",
             icon: BarChart3
         },
         {
             title: "Machine Learning and AI in Biocomputing",
+            iconSrc: "/images/subject-matter-experts/biocomputing/Machine-Learning-and-AI-in-Biocomputing.webp",
             description: "Artificial intelligence (AI) and machine learning are revolutionizing biocomputing by identifying patterns, predicting molecular interactions, and optimizing experimental design. Our team specializes in training AI models for disease prediction, drug discovery, and personalized medicine.",
             icon: Bot
         }
@@ -57,49 +63,49 @@ export default function BiocomputingPage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: Search
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: FileText
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Database
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: PenTool
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/material-science/Systematic-Reviews.webp",
             icon: FileSearch
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Send
         },
         {
             title: "Original Research",
             description: "End-to-end writing, statistical analysis, and formatting tailored to journal-specific guidelines.",
-            image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: FileSpreadsheet
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: BookMarked
         }
     ];
@@ -156,7 +162,7 @@ export default function BiocomputingPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/biocomputing/Biocomputing.webp"
                                 alt="Biocomputing and laboratory research"
                                 fill
                                 priority
@@ -196,7 +202,13 @@ export default function BiocomputingPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

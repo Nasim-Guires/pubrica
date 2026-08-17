@@ -21,6 +21,7 @@ export default function MedicinalChemistryPage() {
     const disciplines = [
         {
             title: "Drug Discovery and Lead Identification",
+            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Drug-Discovery-and-Lead-Identification.webp",
             description: 'This discipline focuses on identifying and validating potential drugs and our experts are available to help authors with the preparation and writing of manuscripts that fall under the broad headings of "target screening," "HTS," and "Hit-to-Lead Optimization."',
             icon: Search,
         },
@@ -31,36 +32,43 @@ export default function MedicinalChemistryPage() {
         },
         {
             title: "Cheminformatics and molecular docking",
+            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Cheminformatics-and-molecular-docking.webp",
             description: "Encompassing molecular modelling, docking, and in silico predictions, our team provides editorial and analytical assistance for research involving computational drug design and virtual screening.",
             icon: FileText
         },
         {
             title: "Organic and Synthetic Chemistry",
+            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Organic-and-Synthetic-Chemistry.webp",
             description: "Our chemists aid with the writing of manuscripts that detail the Synthetic Pathways of Novel Compounds and their associated Reaction Mechanisms. Additionally, our Chemists have developed and can describe methods that can be used for Scale-Up Synthesis.",
             icon: Database
         },
         {
             title: "Pharmacokinetics (ADME) and Pharmacodynamics",
+            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Pharmacokinetics-ADME-and-Pharmacodynamics.webp",
             description: "Our Pharmacokinetics and Pharmacodynamics team aids authors in preparing their manuscripts that describe, through analytical methods, how their drugs behave in terms of Absorption, Distribution, Metabolism and Excretion (ADME), and their effects on Biological Systems.",
             icon: ShieldAlert
         },
         {
             title: "Bioorganic and Medicinal Biochemistry",
+            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Bioorganic-and-Medicinal-Biochemistry.webp",
             description: "Experts assist Authors with their preparation of Studies describing the interaction of Chemical Compounds with Biological Targets. This includes studies related to enzyme inhibition, receptor binding, as well as Biochemical Assays.",
             icon: Layers
         },
         {
             title: "Natural Product Chemistry",
+            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Natural-Product-Chemistry.webp",
             description: "We help our authors to prepare manuscripts describing the extraction method, structural identification and biological testing for natural products that have a biological activity.",
             icon: BookOpen
         },
         {
             title: "Analytical Chemistry for Drug Development",
+            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Analytical-Chemistry-for-Drug-Development.webp",
             description: "Our editorial support incorporates analytical methods, validation of analytical methods (including chromatography and spectroscopy), and use these methodologies during the development of drug products by providing Editorial Support.",
             icon: BarChart3
         },
         {
             title: "Preclinical Drug Development",
+            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Preclinical-Drug-Development.webp",
             description: "In addition to comprehensive reports, we assist researchers during preparation of their comprehensive preclinical chemistry research and preparation of scientific manuscripts that incorporate pharmacology, toxicity studies, and efficacy evaluations both through in vivo and in vitro methods.",
             icon: FileSearch
         }
@@ -70,56 +78,56 @@ export default function MedicinalChemistryPage() {
         {
             title: "Literature Review and Gap Analysis",
             description: "Research gaps are recognized and thoroughly examined using extensive literature analysis enabled by medicinal chemistry review writing.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: FileText,
             href: "/subject-matter-experts/medicinal-chemistry"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts, in adjunct with medicinal chemistry manuscript editing.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: PenTool,
             href: "/subject-matter-experts/medicinal-chemistry"
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Cpu,
             href: "/subject-matter-experts/medicinal-chemistry"
         },
         {
             title: "Graphical Abstract",
             description: "Providing a single, clear visual summary of your research and its findings.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BookOpen,
             href: "/subject-matter-experts/medicinal-chemistry"
         },
         {
             title: "Research Services",
             description: "Expert counsel on how to plan your project, execute your project and analyze your data.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biomolecular-engineering/Research-Services.webp",
             icon: Cpu,
             href: "/subject-matter-experts/medicinal-chemistry"
         },
         {
             title: "Systematic Reviews",
             description: "Providing literature reviews and evidence synthesis on the extent of the literature available on a topic related to the Clinical Research and Academic Research fields",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Layers,
             href: "/subject-matter-experts/medicinal-chemistry"
         },
         {
             title: "Journal Submission",
             description: "Assisting you in determining which journals will be most appropriate for your submission and subsequently providing you with a streamlined submission process",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BarChart3,
             href: "/subject-matter-experts/medicinal-chemistry"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSearch,
             href: "/subject-matter-experts/medicinal-chemistry"
         }
@@ -169,7 +177,7 @@ export default function MedicinalChemistryPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/medicinal-chemistry/Medicinal-Chemistry.webp"
                                 alt="Medicinal Chemistry research visualization"
                                 fill
                                 priority
@@ -209,7 +217,13 @@ export default function MedicinalChemistryPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

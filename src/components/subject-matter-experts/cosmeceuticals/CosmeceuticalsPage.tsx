@@ -23,36 +23,43 @@ export default function CosmeceuticalsPage() {
     const disciplines = [
         {
             title: "Cosmeceutical Formulation Science",
+            iconSrc: "/images/subject-matter-experts/cosmeceuticals/Cosmeceutical-Formulation-Science.webp",
             description: "The development and optimization of stable, effective, and safe skincare formulations.",
             icon: FlaskConical
         },
         {
             title: "Dermatological Science & Skin Biology",
+            iconSrc: "/images/subject-matter-experts/cosmeceuticals/Dermatological-Science-Skin-Biology.webp",
             description: "The purpose of this project is to provide an overview of research into how the skin is formed and its function, how it changes in appearance, and how diseases develop in the body through time.",
             icon: Dna
         },
         {
             title: "Active Ingredients & Bioactive",
+            iconSrc: "/images/subject-matter-experts/cosmeceuticals/Active-Ingredients-Bioactive.webp",
             description: "Investigation of Peptides, Antioxidants, Botanicals, Growth Factors, and Novel Compounds.",
             icon: Sparkles
         },
         {
             title: "Clinical Evaluation & Efficacy Studies",
+            iconSrc: "/images/subject-matter-experts/cosmeceuticals/Clinical-Evaluation-Efficacy-Studies-1.webp",
             description: "In Vitro, In Vivo, and Clinical Studies Establishing the Efficacy of a Cosmeceutical Product.",
             icon: Activity
         },
         {
             title: "Regulatory Affairs & Product Compliance",
+            iconSrc: "/images/subject-matter-experts/cosmeceuticals/Regulatory-Affairs-Product-Compliance.webp",
             description: "Guidance on Global Cosmetic Regulatory Requirements and Safety Evaluation Procedures, as well as Making Valid Product Claims.",
             icon: ShieldCheck
         },
         {
             title: "Quality Control & Safety Assessment",
+            iconSrc: "/images/subject-matter-experts/cosmeceuticals/Quality-Control-Safety-Assessment.webp",
             description: "Perform Toxicity Studies, Conduct Stability Testing, and Ensure Product Quality.",
             icon: CheckCircle2
         },
         {
             title: "Cosmetic Biotechnology",
+            iconSrc: "/images/subject-matter-experts/animal-science/Biotechnology-and-Emerging-Technologies.png",
             description: "Using Biotechnology to Develop New Ingredients and Produce Cosmetic Products in a Sustainable Manner.",
             icon: Microscope
         }
@@ -62,37 +69,37 @@ export default function CosmeceuticalsPage() {
         {
             title: "Editing & Proofreading",
             description: "As a result of improved wording and sentence structure, scientific clarity and precise use of language will help improve how readers view and understand professional documents related to cosmeceutical products.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: FileText
         },
         {
             title: "Data Collection for AI & ML",
             description: "Collect, organize, and store structured and curated datasets to facilitate the use of artificial intelligence (AI) and machine learning (ML) for skin research, ingredient discovery, and formulation optimization.",
-            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Database
         },
         {
             title: "Grant Writing",
             description: "Use persuasive writing skills to develop research proposals that aim to gain funders’ support for new products in the cosmeceuticals market as well as.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biotechnology/Grant-writing-.webp",
             icon: PenTool
         },
         {
             title: "Artwork Editing",
             description: "Create high-quality scientific figures, diagrams of formulations, illustrations of the biology of the skin, and graphical abstracts that will meet publication standards.",
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: Wrench
         },
         {
             title: "Journal Formatting",
             description: "Format your manuscript following the guidelines of both your selected journal and the regulations of any government agencies that require submission of your manuscript before publication.",
-            image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: FileSpreadsheet
         },
         {
             title: "Journal Selection",
             description: "Identify the most appropriate journals in the areas of dermatology, cosmetic science, and cosmeceuticals that will maximize publication rates and provide the highest potential for earning a high impact factor.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: BookMarked
         }
     ];
@@ -149,7 +156,7 @@ export default function CosmeceuticalsPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white bg-[#0e2723]">
                             <Image
-                                src="https://images.unsplash.com/photo-1581093458791-9f3c3250a8b0?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/cosmeceuticals/Transforming-Ideas-into-Market-Ready-Cosmeceutical-Innovations.webp"
                                 alt="Cosmeceutical Laboratory Research"
                                 fill
                                 priority
@@ -189,7 +196,13 @@ export default function CosmeceuticalsPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { 
     Briefcase, 
@@ -54,36 +55,43 @@ const applicationsData = [
     {
         icon: Rocket,
         title: "Aerospace and Defense",
+            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Aerospace-and-Defense.webp",
         description: "heat resistant components, thermal barrier materials, and lightweight structural components."
     },
     {
         icon: Zap,
         title: "Energy and Power",
+            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Energy-and-Power.webp",
         description: "fuel cells, batteries, solar panels, and nuclear reactors."
     },
     {
         icon: Cpu,
         title: "Electrical and Electronics",
+            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Electrical-and-Electronics.webp",
         description: "capacitors, insulators, semiconductors, and sensors."
     },
     {
         icon: HeartPulse,
         title: "Health and Biomedical",
+            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Health-and-Biomedical.webp",
         description: "implants, prosthetics, dental ceramics, and bioactive ceramics."
     },
     {
         icon: Car,
         title: "Automobile and Transportation",
+            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Automobile-and-Transportation.webp",
         description: "engine parts, wear-resistant coatings for brakes."
     },
     {
         icon: Factory,
         title: "Industrial Manufacturing",
+            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Industrial-Manufacturing.webp",
         description: "cutting tools, select refractory materials, and various chemical processing equipment."
     },
     {
         icon: Leaf,
         title: "Environmental and Sustainable Applications",
+            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Environmental-and-Sustainable-Applications.webp",
         description: "ceramic filters, environmental catalysts, and environmental ceramic materials."
     }
 ];
@@ -95,7 +103,7 @@ const editorsData = [
         experience: '15 years of experience',
         manuscripts: '180+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/animal-science/warvien.png"
     },
     {
         name: 'Dr. Priya Desai',
@@ -103,7 +111,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '145+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/material-science/Dr.-Ayesha-Kapoor-2.webp"
     },
     {
         name: 'Dr. Michael Thompson',
@@ -111,7 +119,7 @@ const editorsData = [
         experience: '13 years of experience',
         manuscripts: '170+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/augmented-reality/Dr.-Robert-Klein-1.webp"
     }
 ];
 
@@ -202,7 +210,7 @@ export default function CeramicEngineeringSection() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-full max-w-md h-[340px] sm:h-[420px] rounded-lg overflow-hidden shadow-md border border-gray-200">
                             <img
-                                src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&q=80&w=800"
+                                src="/images/subject-matter-experts/ceramic-engineering/Processing-Fabrication-Engineering.webp"
                                 alt="Pottery and Ceramic Engineering Manufacturing"
                                 className="w-full h-full object-cover"
                             />
@@ -232,7 +240,7 @@ export default function CeramicEngineeringSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/ceramic-engineering/Microstructural-analysis-and-characterization.webp"
                             alt="Ceramic Science and Engineering Cover"
                             className="w-full h-auto object-cover"
                         />

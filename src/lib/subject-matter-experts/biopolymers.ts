@@ -12,7 +12,9 @@ export const polymerScienceTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Polymer Research Scientist",
       authorLocation: "India",
       avatarLabel: "Photo of Dr. Kavita Rao",
+      avatarSrc: "/images/subject-matter-experts/algorithm/Dr.-Ananya-Iyer-1.webp",
       flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
       id: "polymer-science-testimonial-2",
@@ -22,7 +24,9 @@ export const polymerScienceTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Director of Biomedical Polymer Lab",
       authorLocation: "USA",
       avatarLabel: "Photo of Prof. Meera Nair",
+      avatarSrc: "/images/education-editorial-service/accessibility-compliance/Dr.-Aditi-Mehta.webp",
       flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
     {
       id: "polymer-science-testimonial-3",
@@ -32,7 +36,9 @@ export const polymerScienceTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Senior Biopolymer Researcher",
       authorLocation: "China",
       avatarLabel: "Photo of Dr. T. Han",
+      avatarSrc: "/images/subject-matter-experts/biopolymers/Dr.-T.-Han.webp",
       flagLabel: "China flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/china.png",
     },
   ],
 };  

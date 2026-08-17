@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight, Plus, Minus } from 'lucide-react';
 
@@ -87,7 +88,7 @@ const editorsData = [
         experience: '14 years of experience',
         manuscripts: '180+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/nanobiotechnology/Dr.-Isabella-Zhang-1.webp"
     },
     {
         name: 'Dr. Oliver Patel',
@@ -95,7 +96,7 @@ const editorsData = [
         experience: '11 years of experience',
         manuscripts: '150+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/bioinformatics/Dr.-Laura-Kim.webp"
     },
     {
         name: 'Dr. Priya Sharma',
@@ -103,7 +104,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '160+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/dermatology/Dr.-Priya-Sharma-1.webp"
     }
 ];
 
@@ -184,7 +185,7 @@ export default function NanobiotechnologyTechniquesSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/nanobiotechnology/Nano-Biotechnology.webp"
                             alt="Nanobiotechnology research setup"
                             className="w-full h-auto object-cover"
                         />
@@ -209,7 +210,7 @@ export default function NanobiotechnologyTechniquesSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/nanobiotechnology/Drug-delivery-and-systems.webp"
                             alt="Nature Nanotechnology Journal Cover"
                             className="w-full h-auto object-cover"
                         />

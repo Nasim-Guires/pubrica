@@ -9,7 +9,9 @@ export const surgeryTestimonials: Testimonial[] = [
         authorRole: "General Surgeon",
         authorLocation: "India",
         avatarLabel: "Portrait of Dr. Ramesh Iyer",
+      avatarSrc: "/images/subject-matter-experts/biomonitoring/Dr.-Arjun-Mehta-1.webp",
         flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
         id: "surgery-2",
@@ -19,7 +21,9 @@ export const surgeryTestimonials: Testimonial[] = [
         authorRole: "Orthopaedic Researcher",
         authorLocation: "South Korea",
         avatarLabel: "Portrait of Dr. Laura Kim",
+      avatarSrc: "/images/subject-matter-experts/bioinformatics/Dr.-Laura-Kim.webp",
         flagLabel: "South Korea flag",
+      flagSrc: "/images/subject-matter-experts/psychiatry/south-korea.webp",
     },
     {
         id: "surgery-3",
@@ -29,6 +33,8 @@ export const surgeryTestimonials: Testimonial[] = [
         authorRole: "Cardiothoracic Surgeon",
         authorLocation: "UK",
         avatarLabel: "Portrait of Dr. Emily Stone",
+      avatarSrc: "/images/subject-matter-experts/biophysics/Dr.-Emily-Harrison.webp",
         flagLabel: "UK flag",
+      flagSrc: "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
     },
 ];

@@ -9,7 +9,9 @@ export const tissueEngineeringTestimonials: Testimonial[] = [
     authorRole: "University of California",
     authorLocation: "",
     avatarLabel: "Portrait of Dr. Lucas Harrington",
+      avatarSrc: "/images/subject-matter-experts/biophysics/Dr.-Alexander-Weiss.webp",
     flagLabel: "Country flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
   {
     id: "tissue-engineering-2",
@@ -19,7 +21,9 @@ export const tissueEngineeringTestimonials: Testimonial[] = [
     authorRole: "Harvard Medical School",
     authorLocation: "",
     avatarLabel: "Portrait of Dr. Olivia Martinez",
+      avatarSrc: "/images/subject-matter-experts/biocatalysts/Dr.-Priya-Kapoor.webp",
     flagLabel: "Country flag",
+      flagSrc: "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
   },
   {
     id: "tissue-engineering-3",
@@ -29,6 +33,8 @@ export const tissueEngineeringTestimonials: Testimonial[] = [
     authorRole: "Imperial College London",
     authorLocation: "",
     avatarLabel: "Portrait of Dr. Ethan Clark",
+      avatarSrc: "/images/subject-matter-experts/drug-delivery-system/Dr.-Sarah-Williams-1.webp",
     flagLabel: "Country flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
 ];

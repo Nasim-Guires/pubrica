@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight } from 'lucide-react';
 
@@ -77,7 +78,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '150+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biophysics/Dr.-Alexander-Weiss.webp"
     },
     {
         name: 'Dr. Priya Mehta',
@@ -85,7 +86,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '130+ manuscripts edited',
         countryFlag: '🇮🇳',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/algorithm/Dr.-Ananya-Iyer-1.webp"
     },
     {
         name: 'Dr. Ananya Rao',
@@ -93,7 +94,7 @@ const editorsData = [
         experience: '11 years of experience',
         manuscripts: '160+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/medicinal-chemistry/Dr.-Hiroshi-Nakamura.webp"
     }
 ];
 
@@ -174,7 +175,7 @@ export default function PeptidesSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/peptides/Synthetic-Peptide-Development-and-Engineered-Peptides.webp"
                             alt="Peptide research bottle products"
                             className="w-full h-auto object-cover"
                         />
@@ -199,7 +200,7 @@ export default function PeptidesSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/peptides/Characterization-and-Analysis-of-Peptides.webp"
                             alt="Journal of Food Composition and Analysis Cover"
                             className="w-full h-auto object-cover"
                         />

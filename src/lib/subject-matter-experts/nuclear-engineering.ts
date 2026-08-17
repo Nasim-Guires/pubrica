@@ -9,7 +9,9 @@ export const NUCLEAR_ENGINEERING_TESTIMONIALS: Testimonial[] = [
     authorRole: "Nuclear Engineer",
     authorLocation: "Japan",
     avatarLabel: "Portrait of Dr. Hiroshi Tanaka",
+      avatarSrc: "/images/subject-matter-experts/medicinal-chemistry/Dr.-Hiroshi-Nakamura.webp",
     flagLabel: "Japan flag",
+      flagSrc: "/images/editing-and-translation/japan.png",
   },
   {
     id: "nuclear-engineering-2",
@@ -19,7 +21,9 @@ export const NUCLEAR_ENGINEERING_TESTIMONIALS: Testimonial[] = [
     authorRole: "Radiation Scientist",
     authorLocation: "Russia",
     avatarLabel: "Portrait of Dr. Elena Petrova",
+      avatarSrc: "/images/subject-matter-experts/algorithm/Dr.-Elena-Petrova-1.webp",
     flagLabel: "Russia flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/russsia.webp",
   },
   {
     id: "nuclear-engineering-3",
@@ -29,6 +33,8 @@ export const NUCLEAR_ENGINEERING_TESTIMONIALS: Testimonial[] = [
     authorRole: "Energy Systems Researcher",
     authorLocation: "USA",
     avatarLabel: "Portrait of Prof. Michael Anderson",
+      avatarSrc: "/images/subject-matter-experts/biophysics/Dr.-Alexander-Weiss.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/research-services/grant-writing/usa-1-1.png",
   },
 ];

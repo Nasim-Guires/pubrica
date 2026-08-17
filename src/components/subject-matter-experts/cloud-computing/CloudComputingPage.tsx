@@ -28,46 +28,55 @@ export default function CloudComputingPage() {
     const disciplines = [
         {
             title: "Cloud Architecture & Infrastructure",
+            iconSrc: "/images/subject-matter-experts/cloud-computing/Cloud-Architecture-Infrastructure.webp",
             description: "The architecture and infrastructure of a cloud environment refer to the overall design and optimization of scalable, and fault tolerant cloud architectures deployed across public, private, and hybrid environments.",
             icon: Cloud
         },
         {
             title: "Cloud security and privacy",
+            iconSrc: "/images/subject-matter-experts/cloud-computing/Cloud-security-and-privacy.webp",
             description: "refer to the methods used to protect user data when it is being stored and accessed within a cloud environment. These include control of user access to that data, compliance with applicable regulations and protection from cyber-attacks.",
             icon: Shield
         },
         {
             title: "Distributed computing/ high performance computing",
+            iconSrc: "/images/subject-matter-experts/cloud-computing/Distributed-computing_high.webp",
             description: "performance computing refers to the ability for developers to create systems that allow multiple computers to work together to process large volumes of data and provide high-performance computing services.",
             icon: Cpu
         },
         {
             title: "Cloud Security & Data Privacy",
+            iconSrc: "/images/subject-matter-experts/cloud-computing/Cloud-security-and-privacy.webp",
             description: "Cloud Storage refers to the use of a public cloud to manage, store and retrieve vast amounts of both structured and unstructured information.",
             icon: Database
         },
         {
             title: "Virtualization/ Containerization",
+            iconSrc: "/images/subject-matter-experts/cloud-computing/Virtualization_-Containerization.webp",
             description: "refers to the virtualization of servers and the containerization of applications. Virtualization and containerization enable customers to deploy their applications in a scalable and flexible manner.",
             icon: Boxes
         },
         {
             title: "Edge computing/fog computing",
+            iconSrc: "/images/subject-matter-experts/cloud-computing/Edge-computing_fog-computing.webp",
             description: "Moved closer to where data is generated (i.e., edge or fog), edge computing helps eliminate latency issues and improves the ability to process data in real-time.",
             icon: Server
         },
         {
             title: "Cloud-based AI machine learning",
+            iconSrc: "/images/subject-matter-experts/cloud-computing/Cloud-based-AI-machine-learning.webp",
             description: "Developers will be able to leverage the cloud to build, train and deploy AI/machine learning models that will be able to process large amounts of data and deliver at scale.",
             icon: Brain
         },
         {
             title: "DevOps cloud automation",
+            iconSrc: "/images/subject-matter-experts/cloud-computing/DevOps-cloud-automation.webp",
             description: "Automating the deployment, monitoring, and maintenance of cloud applications and services is made possible by using the capabilities of Continuous Integration/Continuous Delivery (CI/CD) pipelines and Infrastructure-As-Code (IaC) methodologies",
             icon: Settings
         },
         {
             title: "Cloud Networking Infrastructural Management",
+            iconSrc: "/images/subject-matter-experts/cloud-computing/Cloud-Networking-Infrastructural-Management.webp",
             description: "The infrastructure, application, and user requirements of a system are combined into a single design for creating a robust, highly reliable, and scalable networks for cloud systems",
             icon: Network
         }
@@ -77,49 +86,49 @@ export default function CloudComputingPage() {
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: PenTool
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: FileText
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Database
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Languages
         },
         {
             title: "Original Research Article",
             description: "End-to-end writing, statistical analysis, and formatting tailored to journal-specific guidelines.",
-            image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: FileSpreadsheet
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: FileSearch
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: Send
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: BookMarked
         }
     ];
@@ -180,7 +189,7 @@ export default function CloudComputingPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white bg-[#0e2723]">
                             <Image
-                                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/cloud-computing/Cloud-Computing.webp"
                                 alt="Cloud Computing Research Concept"
                                 fill
                                 priority
@@ -220,7 +229,13 @@ export default function CloudComputingPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

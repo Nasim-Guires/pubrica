@@ -9,7 +9,9 @@ export const sensorsTestimonials: Testimonial[] = [
         authorRole: "Research Scientist",
         authorLocation: "",
         avatarLabel: "Portrait of Dr. A. Kumar",
+      avatarSrc: "/images/subject-matter-experts/biophysics/Dr.-Alexander-Weiss.webp",
         flagLabel: "Country flag",
+      flagSrc: "/images/marketing-communication-content-development-service/Australia.webp",
     },
     {
         id: "sensors-2",
@@ -19,7 +21,9 @@ export const sensorsTestimonials: Testimonial[] = [
         authorRole: "Biomedical Engineer",
         authorLocation: "",
         avatarLabel: "Portrait of Dr. L. Fernandez",
+      avatarSrc: "/images/subject-matter-experts/nanotechnology/Dr.-L.-Fernandez.webp",
         flagLabel: "Country flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
         id: "sensors-3",
@@ -29,6 +33,8 @@ export const sensorsTestimonials: Testimonial[] = [
         authorRole: "Electronics & Instrumentation",
         authorLocation: "",
         avatarLabel: "Portrait of Prof. R. Singh",
+      avatarSrc: "/images/subject-matter-experts/sensor-technology/Prof.-R.-Singh.webp",
         flagLabel: "Country flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
 ];

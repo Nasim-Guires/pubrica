@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText } from 'lucide-react';
 
@@ -48,7 +49,7 @@ const editorsData = [
         experience: '8 years of experience',
         manuscripts: '120+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biocatalysts/Dr.-Arjun-Mehta-2.webp"
     },
     {
         name: 'Dr. Ethan Li',
@@ -56,7 +57,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '130+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biomedical-engineering/Dr.-Ethan-Varghese-1.webp"
     },
     {
         name: 'Dr. Priya Kapoor',
@@ -64,7 +65,7 @@ const editorsData = [
         experience: '7 years of experience',
         manuscripts: '95 manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biocatalysts/Dr.-Priya-Kapoor.webp"
     }
 ];
 
@@ -134,7 +135,7 @@ export default function BiocatalystsSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/biocatalysts/Biocatalysts.webp"
                             alt="ACS Catalysis Journal Cover"
                             className="w-full h-auto object-cover"
                         />

@@ -18,8 +18,7 @@ export default function AgricultureContinuedSections() {
       name: "Dr. Arjun Rao",
       degree: "PhD in Agronomy",
       flag: "🇬🇧",
-      avatar:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/animal-science/warvien.png",
       experience: "18 years of experience",
       manuscripts: "200+ manuscripts edited",
     },
@@ -27,8 +26,7 @@ export default function AgricultureContinuedSections() {
       name: "Dr. Kavita Nair",
       degree: "PhD in Horticulture",
       flag: "🇺🇸",
-      avatar:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/agriculture/Dr.-Kavita-Nair.webp",
       experience: "14 years of experience",
       manuscripts: "130+ manuscripts edited",
     },
@@ -36,8 +34,7 @@ export default function AgricultureContinuedSections() {
       name: "Dr. Meera Iyer",
       degree: "PhD in Crop Science",
       flag: "🇺🇸",
-      avatar:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/agriculture/Dr.-Meera-Iyer.webp",
       experience: "12 years of experience",
       manuscripts: "150+ manuscripts edited",
     },
@@ -100,7 +97,7 @@ export default function AgricultureContinuedSections() {
             {/* Image */}
             <div className="md:col-span-5 relative h-72 md:h-80 w-full rounded overflow-hidden shadow-sm border border-gray-200">
               <Image
-                src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=800"
+                src="/images/subject-matter-experts/agriculture/Agronomy.png"
                 alt="Smart phone showing smart farming interface"
                 fill
                 className="object-cover"
@@ -132,7 +129,7 @@ export default function AgricultureContinuedSections() {
               </div>
               <div className="relative h-28 w-full">
                 <Image
-                  src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=400"
+                  src="/images/subject-matter-experts/agriculture/Horticulture.png"
                   alt="Farmer examining field"
                   fill
                   className="object-cover"

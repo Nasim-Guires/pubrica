@@ -9,7 +9,9 @@ export const CARDIOVASCULAR_BIOLOGY_TESTIMONIALS: Testimonial[] = [
         authorRole: "Research Scientist",
         authorLocation: "India",
         avatarLabel: "Portrait of Dr. Priya Krishnan, Research Scientist from India",
+      avatarSrc: "/images/subject-matter-experts/cardiovascular-biology/DR.-Priya-Krishnan.webp",
         flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
         id: "cardiovascular-biology-2",
@@ -19,7 +21,9 @@ export const CARDIOVASCULAR_BIOLOGY_TESTIMONIALS: Testimonial[] = [
         authorRole: "Consultant Cardiologist",
         authorLocation: "Spain",
         avatarLabel: "Portrait of Dr. Sofia Martinez, Consultant Cardiologist from Spain",
+      avatarSrc: "/images/subject-matter-experts/cardiovascular-biology/Dr.-Sofia-Martinez-2.webp",
         flagLabel: "Spain flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
     },
     {
         id: "cardiovascular-biology-3",
@@ -29,6 +33,8 @@ export const CARDIOVASCULAR_BIOLOGY_TESTIMONIALS: Testimonial[] = [
         authorRole: "Postdoctoral Fellow in Vascular Biology",
         authorLocation: "USA",
         avatarLabel: "Portrait of Dr. Ethan Williams, Postdoctoral Fellow in Vascular Biology from the USA",
+      avatarSrc: "/images/subject-matter-experts/cardiovascular-biology/Dr.-Ethan-Williams.webp",
         flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
 ];

@@ -29,46 +29,55 @@ export default function AgricultureSMEPage() {
   const coreDisciplines = [
     {
       title: "Agronomy",
+            iconSrc: "/images/subject-matter-experts/agriculture/Agronomy.png",
       desc: "It focuses on the science and technology of crop production and soil management. It involves studying crop physiology, soil fertility, irrigation, and sustainable practices to optimize yield while maintaining environmental balance.",
       icon: Sprout,
     },
     {
       title: "Horticulture",
+            iconSrc: "/images/subject-matter-experts/agriculture/Horticulture.png",
       desc: "Deals with the cultivation of fruits, vegetables, flowers, and ornamental plants. It encompasses plant breeding, pest management, post-harvest technology, and landscape design, emphasizing both productivity and aesthetic value.",
       icon: Apple,
     },
     {
       title: "Plant Pathology",
+            iconSrc: "/images/subject-matter-experts/agriculture/Plant-Pathology.png",
       desc: "This discipline studies plant diseases caused by pathogens such as fungi, bacteria, viruses, and nematodes. Understanding disease mechanisms and developing effective control strategies is critical for maintaining healthy crops and food security.",
       icon: Microscope,
     },
     {
       title: "Entomology",
+            iconSrc: "/images/subject-matter-experts/agriculture/Entomology.png",
       desc: "It is the study of insects that affect agriculture, both as pests and beneficial species. Integrated pest management, biological control, and ecological studies help minimize crop losses and support sustainable farming practices.",
       icon: Bug,
     },
     {
       title: "Soil Science",
+            iconSrc: "/images/subject-matter-experts/agriculture/Agronomy.png",
       desc: "Explores soil properties, classification, fertility, and conservation. Knowledge of soil chemistry, physics, and biology is essential for sustainable crop production and environmental stewardship.",
       icon: FlaskConical,
     },
     {
       title: "Agricultural Engineering",
+            iconSrc: "/images/subject-matter-experts/agriculture/Agricultural-Engineering.png",
       desc: "This discipline focuses on mechanization, irrigation systems, post-harvest technology, and sustainable farming infrastructure. Our expertise helps optimize farm efficiency and reduce environmental impact.",
       icon: Wrench,
     },
     {
       title: "Agricultural Economics",
+            iconSrc: "/images/subject-matter-experts/agriculture/Agricultural-Economics.png",
       desc: "Efficient management of agricultural resources is essential for economic sustainability. We assist in research related to farm management, market analysis, policy planning, and rural development.",
       icon: TrendingUp,
     },
     {
       title: "Agricultural Biotechnology",
+            iconSrc: "/images/subject-matter-experts/agriculture/Agricultural-Biotechnology.png",
       desc: "It is revolutionizing agriculture through genetic modification, tissue culture, and molecular biology techniques. Pubrica supports innovations aimed at enhancing crop resilience, productivity, and nutritional quality.",
       icon: Dna,
     },
     {
       title: "Agroforestry",
+            iconSrc: "/images/subject-matter-experts/agriculture/Agroforestry.png",
       desc: "It combines agriculture and forestry to improve biodiversity, soil health, and climate resilience. Agroforestry practices integrate trees, crops, and livestock for sustainable resource use.",
       icon: Trees,
     },
@@ -80,57 +89,49 @@ export default function AgricultureSMEPage() {
       title: "Journal Formatting",
       desc: "Tailored manuscript formatting to meet specific journal guidelines.",
       icon: Layout,
-      imageUrl:
-        "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=800",
+      imageUrl: "/images/subject-matter-experts/agriculture/Journal-Formatting.webp",
     },
     {
       title: "Journal Selection",
       desc: "Guidance on selecting the most appropriate journals for your research.",
       icon: BookCheck,
-      imageUrl:
-        "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80&w=800",
+      imageUrl: "/images/subject-matter-experts/agriculture/Journal-Selection.webp",
     },
     {
       title: "Responding to Reviewers",
       desc: "Assistance in addressing reviewer comments to enhance your manuscript's chances of acceptance.",
       icon: MessageSquare,
-      imageUrl:
-        "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=800",
+      imageUrl: "/images/subject-matter-experts/agriculture/Responding-to-Reviewers.webp",
     },
     {
       title: "Scientific Writing",
       desc: "Crafting clear, precise, and publication-ready research manuscripts.",
       icon: PenTool,
-      imageUrl:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
+      imageUrl: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
     },
     {
       title: "Biostatistical Programming",
       desc: "Advanced statistical analysis to support your research findings.",
       icon: BarChart2,
-      imageUrl:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+      imageUrl: "/images/subject-matter-experts/agriculture/Biostatistical-Programming.webp",
     },
     {
       title: "Peer-Review",
       desc: "Comprehensive review to refine and validate your research pre-submission.",
       icon: Users,
-      imageUrl:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
+      imageUrl: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
     },
     {
       title: "Editing & Proofreading",
       desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
       icon: FileText,
-      imageUrl:
-        "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
+      imageUrl: "/images/subject-matter-experts/agriculture/Editing-Proofreading.webp",
     },
     {
       title: "Journal Submission",
       desc: "Helping select the right journals and manage the submission process seamlessly.",
       icon: Send,
-      imageUrl:
-        "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800",
+      imageUrl: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
     },
   ];
 
@@ -247,7 +248,7 @@ export default function AgricultureSMEPage() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white">
               <Image
-                src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=800"
+                src="/images/subject-matter-experts/agriculture/Empowering-Sustainable-Agriculture-Through-Expert-Research-Innovation-and-Insight.webp"
                 alt="Agricultural Data Analytics Dashboard on Tablet"
                 fill
                 className="object-cover"
@@ -289,7 +290,7 @@ export default function AgricultureSMEPage() {
 
                   {/* Indicator bar visual column */}
                   <div className="flex flex-col items-center justify-between flex-shrink-0 w-8 border-l border-gray-100 pl-2 pointer-events-none">
-                    <Icon className="w-5 h-5 text-gray-700 shrink-0" />
+                    {(item as any).iconSrc ? <span className="relative w-6 h-6 shrink-0"><Image src={(item as any).iconSrc} alt="" fill className="object-contain" /></span> : <Icon className="w-5 h-5 text-gray-700 shrink-0" />}
 
                     <div className="flex flex-col items-center justify-between h-20 my-1">
                       <ChevronUp className="w-3 h-3 text-gray-400" />

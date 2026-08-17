@@ -27,41 +27,49 @@ export default function ComputerSciencePage() {
     const disciplines = [
         {
             title: "Algorithms and Data Structures",
+            iconSrc: "/images/subject-matter-experts/computer-science/Algorithms-and-Data-Structures.webp",
             description: "Without optimised data structures and the efficient use of algorithms, it is impossible to solve many types of computational problems. Research in this field includes examination of complexity, scalability, and methods to optimize the performance of algorithms and data structures.",
             icon: Cpu
         },
         {
             title: "Artificial Intelligence and Machine Learning",
+            iconSrc: "/images/subject-matter-experts/computer-science/Artificial-Intelligence-and-Machine-Learning.webp",
             description: "Artificial intelligence (AI) uses data to create systems that can learn and change with the use of algorithms. For example, neural networks, deep learning, and reinforcement learning are transforming the way we operate in industries around the world.",
             icon: Brain
         },
         {
             title: "Software Engineering",
+            iconSrc: "/images/subject-matter-experts/computer-science/Software-Engineering.webp",
             description: "Software engineering provides the tools necessary to create reliable, scalable, and maintainable systems. Software engineering covers structured systems development, testing, and lifecycle management.",
             icon: Code
         },
         {
             title: "Cybersecurity",
+            iconSrc: "/images/subject-matter-experts/computer-science/Cybersecurity.webp",
             description: "Cybersecurity involves safeguarding systems and applications from attacks on the network, as well as protecting the data stored on those networks. Cybersecurity encompasses many different areas, including cryptography, authentication, and intrusion detection.",
             icon: ShieldCheck
         },
         {
             title: "Database Systems",
+            iconSrc: "/images/subject-matter-experts/computer-science/Database-Systems.webp",
             description: "The goal of research in database systems is to develop efficient methods for storing, retrieving and managing large amounts of data (e.g., both relational and non-relational forms).",
             icon: Database
         },
         {
             title: "Computer Networks",
+            iconSrc: "/images/subject-matter-experts/computer-science/Computer-Networks.webp",
             description: "The research and study of networking enable communication between numerous devices using various protocols and architectures, as well as the secure transmission of information.",
             icon: Network
         },
         {
             title: "Cloud Computing and Distributed Systems",
+            iconSrc: "/images/subject-matter-experts/computer-science/Cloud-Computing-and-Distributed-Systems.webp",
             description: "Cloud computing and distributed systems enable the ability to provide scalable computing resources and distributed processing to effectively manage applications that require large amounts of resources.",
             icon: Cloud
         },
         {
             title: "Human-Computer Interaction",
+            iconSrc: "/images/subject-matter-experts/computer-science/Human-Computer-Interaction.webp",
             description: "Research on human-computer interaction (HCI) strives to create interfaces that allow intuitive and friendly ways to interact with computer systems.",
             icon: Monitor
         }
@@ -71,49 +79,49 @@ export default function ComputerSciencePage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: Search
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: CheckCircle
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: UserCheck
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Languages
         },
         {
             title: "Artwork Editing",
             description: "Professional visuals for your figures, tables, and graphical abstracts.",
-            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: ImageIcon
         },
         {
             title: "Journal Formatting",
             description: "Tailored manuscript formatting to meet specific journal guidelines.",
-            image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: BookOpen
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: PenTool
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileText
         }
     ];
@@ -203,7 +211,7 @@ export default function ComputerSciencePage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/computer-science/Empowering-Research-Excellence-in-Computer-Science-through-Expert-Guidance.webp"
                                 alt="Computer Science and programming research visual"
                                 fill
                                 priority
@@ -240,7 +248,13 @@ export default function ComputerSciencePage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

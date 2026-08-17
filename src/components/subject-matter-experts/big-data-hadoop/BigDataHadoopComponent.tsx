@@ -25,36 +25,42 @@ export default function BiomonitoringPage() {
     const coreDisciplines = [
         {
             title: "Big Data Architecture & Management",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Big-Data-Architecture-Management.webp",
             subtitle: "Big Data Architecture & Management",
             desc: "Creating and implementing large-scale data architectures using components such as Hadoop, HDFS, mainstream/open-source distributed computing systems for the management of large amounts of both structured and unstructured data.",
             icon: Leaf,
         },
         {
             title: "Data Analytics & Mining",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Data-Analytics-Mining.webp",
             subtitle: "Biochemical Matrices",
             desc: "Utilising advanced techniques for analysis of data to identify patterns, trends, and insights through statistical methods, machine learning techniques and predictive modelling.",
             icon: Users,
         },
         {
             title: "Hadoop Ecosystem Technology",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/471.webp",
             subtitle: "Workplace Exposure",
             desc: "Extensive experience in many of the tools contained in the Hadoop Ecosystem such as Hive, Pig, HBase, Spark, and MapReduce for efficient and effective processing and management of data.",
             icon: Shield,
         },
         {
             title: "Real-time & Streaming Analytics",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Real-time-Streaming-Analytics.webp",
             subtitle: "Bioindicator Species",
             desc: "Utilisation of rapid data stream analytics to create an immediate response to high-velocity data by using real-time frameworks.",
             icon: Activity,
         },
         {
             title: "Data Integration & Warehousing",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Data-Integration-Warehousing.webp",
             subtitle: "Chemical Absorption",
             desc: "Combining multiple sources of data into a single centralised repository for storage, retrieval and analysis purposes.",
             icon: Cpu,
         },
         {
             title: "Big Data Security & Governance",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Big-Data-Security-Governance.webp",
             subtitle: "Chemical Absorption",
             desc: "The implementation n of data integrity, privacy and compliance standards are maintained through secure data management and governance frameworks.",
             icon: Cpu,
@@ -65,31 +71,31 @@ export default function BiomonitoringPage() {
         {
             title: "Research Design & Data Analysis",
             subtitle: "Assist you in developing an effective approach for conducting your study, selecting appropriate methods for use in your study, and analysing large datasets.",
-            imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: FileText,
         },
         {
             title: "Journal Submission & Formatting",
             subtitle: "preparation and submission of your manuscript to the journal and with the formatting of the manuscript based on the specific requirements of that journal.",
-            imageUrl: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: PenTool,
         },
         {
             title: "Systematic Reviews & Literature Gap Analysis",
             subtitle: "Complete systematic literature reviews and conduct a thorough analysis of research gaps within the field of data mining.",
-            imageUrl: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Languages,
         },
         {
             title: "Manuscript Preparation",
             subtitle: "writing and editing services to help you prepare a manuscript of the highest quality that can be successfully published.",
-            imageUrl: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: BookOpen,
         },
         {
             title: "Data Visualization & Reporting",
             subtitle: "Create professional visualizations and graphics that enhance and effectively depict complex findings.",
-            imageUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: CheckCircle,
         },
     ];
@@ -155,7 +161,7 @@ export default function BiomonitoringPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=800"
+                                src="/images/subject-matter-experts/big-data-hadoop/Big-Data-Hadoop-.webp"
                                 alt="Biomonitoring Laboratory Microscope"
                                 fill
                                 className="object-cover"

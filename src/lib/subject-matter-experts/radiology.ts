@@ -9,7 +9,9 @@ export const radiologyTestimonials: Testimonial[] = [
     authorRole: "Consultant Radiologist",
     authorLocation: "United Kingdom",
     avatarLabel: "Portrait of Dr. Helen Carter",
+      avatarSrc: "/images/subject-matter-experts/biochemistry/Dr.-Sophia-Patel.webp",
     flagLabel: "United Kingdom flag",
+      flagSrc: "/images/research-services/systematic-review/united-kingdom-.png",
   },
   {
     id: "radiology-2",
@@ -19,7 +21,9 @@ export const radiologyTestimonials: Testimonial[] = [
     authorRole: "Professor of Radiology",
     authorLocation: "India",
     avatarLabel: "Portrait of Dr. Anil Mehta",
+      avatarSrc: "/images/subject-matter-experts/radiology/Dr.-Anil-Mehta.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/subject-matter-experts/biomonitoring/india.webp",
   },
   {
     id: "radiology-3",
@@ -29,6 +33,8 @@ export const radiologyTestimonials: Testimonial[] = [
     authorRole: "Interventional Radiologist",
     authorLocation: "United States",
     avatarLabel: "Portrait of Dr. Michael Thompson",
+      avatarSrc: "/images/subject-matter-experts/radiology/Dr.-Michael-Thompson.webp",
     flagLabel: "United States flag",
+      flagSrc: "/images/physician-writing-services/patient-education-content/united-states-of-america.png",
   },
 ];

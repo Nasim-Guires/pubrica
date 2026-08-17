@@ -43,46 +43,55 @@ export default function RadiologyPage() {
     const disciplines = [
         {
             title: "Diagnostic Radiology",
+            iconSrc: "/images/subject-matter-experts/radiology/Diagnostic-Radiology.webp",
             description: "It is at the heart of medical imaging, focusing on the interpretation of imaging studies to diagnose disease. Our experts assist in writing and editing research papers, systematic reviews, and case reports covering X-rays, CT scans, MRI, and ultrasound modalities.",
             icon: ImageIcon,
         },
         {
             title: "Interventional Radiology (IR)",
+            iconSrc: "/images/subject-matter-experts/radiology/Interventional-Radiology-IR.webp",
             description: "It combines imaging with minimally invasive procedures to diagnose and treat various conditions without major surgery. Pubrica provides expert support in writing and editing clinical research, procedure-based case series, and reviews focusing on novel IR techniques and outcomes.",
             icon: Activity,
         },
         {
             title: "Neuroradiology",
+            iconSrc: "/images/subject-matter-experts/radiology/Neuroradiology.webp",
             description: "They focus on imaging the brain, spine, and nervous system. Our radiology writers and editors have extensive experience in neurological imaging research, including MRI, functional MRI, CT angiography, and diffusion imaging.",
             icon: Brain,
         },
         {
             title: "Musculoskeletal Radiology",
+            iconSrc: "/images/subject-matter-experts/radiology/Musculoskeletal-Radiology.webp",
             description: "It specializes in imaging bones, joints, and soft tissues to assess trauma, sports injuries, arthritis, and tumours. Our editors provide tailored assistance for manuscripts and reviews involving MRI, ultrasound, and CT techniques used in orthopaedic and sports medicine research.",
             icon: Activity,
         },
         {
             title: "Cardiothoracic Radiology",
+            iconSrc: "/images/subject-matter-experts/radiology/Cardiothoracic-Radiology.webp",
             description: "This field focuses on imaging the heart, lungs, and mediastinum, providing critical insights into cardiovascular and pulmonary diseases. We support research on advanced imaging modalities such as cardiac MRI, CT angiography, and dual-energy CT that improve diagnostic precision and patient outcomes.",
             icon: HeartHandshake,
         },
         {
             title: "Breast Imaging",
+            iconSrc: "/images/subject-matter-experts/radiology/Breast-Imaging.webp",
             description: "It plays a vital role in the early detection and management of breast cancer. Our services extend to research papers on mammography, breast ultrasound, digital breast tomosynthesis, and MRI. We ensure scientific rigor, clarity, and adherence to international reporting standards such as BI-RADS.",
             icon: ShieldCheck,
         },
         {
             title: "Paediatric Radiology",
+            iconSrc: "/images/subject-matter-experts/radiology/Paediatric-Radiology.webp",
             description: "Children’s imaging demands precision, safety, and sensitivity. Our paediatric radiology experts provide editorial and analytical support for studies addressing developmental abnormalities, congenital disorders, and paediatric oncology imaging, with attention to radiation safety and ethical standards.",
             icon: UserCheck,
         },
         {
             title: "Abdominal and Gastrointestinal Radiology",
+            iconSrc: "/images/subject-matter-experts/radiology/Abdominal-and-Gastrointestinal-Radiology.webp",
             description: "This discipline focuses on imaging the abdominal organs, including the liver, pancreas, kidneys, and gastrointestinal tract. Our experts provide specialized support for abdominal CT, MRI, ultrasound, and nuclear imaging studies, ensuring scientific precision and compliance with publication standards.",
             icon: Microscope,
         },
         {
             title: "Emergency and Trauma Imaging",
+            iconSrc: "/images/subject-matter-experts/radiology/Emergency-and-Trauma-Imaging.webp",
             description: "Emergency radiology plays a critical role in acute care. Our editorial team supports authors presenting imaging research on trauma, acute stroke, haemorrhage, and thoracic emergencies, emphasizing rapid diagnosis, evidence-based interventions, and clinical relevance.",
             icon: ShieldAlert,
         }
@@ -92,56 +101,56 @@ export default function RadiologyPage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: FileSearch,
             href: "/services/research-services"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/editing-and-translation"
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Database,
             href: "/services/medical-data-collection"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: FileText,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Layers,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: Send,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Original Research Article",
             description: "End-to-end writing, statistical analysis, and formatting tailored to journal-specific guidelines.",
-            image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BookOpen,
             href: "/services/physician-writing-services/original-research-article"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSpreadsheet,
             href: "/services/publication-support/journal-selection"
         }
@@ -197,7 +206,7 @@ export default function RadiologyPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white bg-[#a3c9bd]/30 flex items-center justify-center">
                             <Image
-                                src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/radiology/Radiology.webp"
                                 alt="Radiology Research and Diagnostic Imaging"
                                 fill
                                 priority
@@ -237,7 +246,13 @@ export default function RadiologyPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

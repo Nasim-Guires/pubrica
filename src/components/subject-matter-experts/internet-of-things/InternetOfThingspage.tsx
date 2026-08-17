@@ -22,31 +22,37 @@ export default function InternetOfThingsPage() {
     const disciplines = [
         {
             title: "IoT System Architecture",
+            iconSrc: "/images/subject-matter-experts/internet-of-things/IoT-Architecture-and-System-Design.webp",
             description: "To create an Internet of Things (IoT) system that is scalable and secure requires the design of a system that incorporates all the components required to support the seamless movement of information between smart devices, communication gateways, communication protocols, and cloud-based storage.",
             icon: Atom
         },
         {
             title: "Embedded Systems and Sensor Technologies",
+            iconSrc: "/images/subject-matter-experts/internet-of-things/Embedded-Systems-and-Sensor-Technologies.webp",
             description: "The development of embedded and smart sensors, microcontrollers, and platforms to enable devices to collect data in real-time for the purpose of establishing intelligent decision-making capabilities at the device level.",
             icon: Cog
         },
         {
             title: "IoT Communication and Networking",
+            iconSrc: "/images/subject-matter-experts/internet-of-things/IoT-Communication-and-Networking.webp",
             description: "The development of wireless communication technologies (5G, LPWAN, and Bluetooth) will enable the reliable flow of information and transfer of data between IoT devices.",
             icon: Stethoscope
         },
         {
             title: "Data Analytics and Artificial Intelligence for IoT",
+            iconSrc: "/images/subject-matter-experts/internet-of-things/Data-Analytics-and-Artificial-Intelligence-for-IoT.webp",
             description: "Machine Learning (ML) and data analytical tools will enable predictive analysis for use in smart decisions with a strong focus on ML and data analysis solutions to process large volumes of IoT data.",
             icon: Activity
         },
         {
             title: "Edge and Cloud Computing",
+            iconSrc: "/images/subject-matter-experts/internet-of-things/Edge-and-Cloud-Computing.webp",
             description: "Distributed computing architecture can enhance the productivity of processing IoT data by allowing Edge and Cloud Computing environments to efficiently share the processing load and reduce latency between Edge and Cloud Computing environments.",
             icon: TestTube2
         },
         {
             title: "IoT Security and Privacy",
+            iconSrc: "/images/subject-matter-experts/internet-of-things/IoT-Security-and-Privacy.webp",
             description: "The challenges of developing IoT solutions for Cybersecurity, such as protecting data, authenticating devices and ensuring that secure communications occur in an IoT ecosystem.",
             icon: FileSearch
         }
@@ -56,49 +62,49 @@ export default function InternetOfThingsPage() {
         {
             title: "Peer-Reviewing Services",
             description: "Comprehensive review to refine and validate your research pre-submission",
-            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
             icon: UserCheck
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: FileText
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Activity
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Languages
         },
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biomolecular-engineering/Research-Services.webp",
             icon: FileSearch
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: PenTool
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: Send
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: BookMarked
         }
     ];
@@ -159,7 +165,7 @@ export default function InternetOfThingsPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/internet-of-things/Internet-of-Things-.webp"
                                 alt="IoT Microchip Concept"
                                 fill
                                 priority
@@ -199,7 +205,13 @@ export default function InternetOfThingsPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

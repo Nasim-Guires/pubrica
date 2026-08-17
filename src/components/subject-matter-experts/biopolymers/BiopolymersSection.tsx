@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText } from 'lucide-react';
 
@@ -48,7 +49,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '120+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biopolymers/Dr.-Ananya-Krishnan-1.webp"
     },
     {
         name: 'Dr. Aarav Mehta',
@@ -56,7 +57,7 @@ const editorsData = [
         experience: '11 years of experience',
         manuscripts: '110+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biochemistry/Dr.-Ananya-Patel.webp"
     },
     {
         name: 'Dr. Shreya Nambiar',
@@ -64,7 +65,7 @@ const editorsData = [
         experience: '9 years of experience',
         manuscripts: '80 manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biopolymers/Dr.-Shreya-Nambiar.webp"
     }
 ];
 
@@ -134,7 +135,7 @@ export default function BiopolymersSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/biopolymers/Biopolymers.webp"
                             alt="Biopolymers Journal Cover"
                             className="w-full h-auto object-cover"
                         />

@@ -30,46 +30,55 @@ export default function AugmentedRealitySMEPage() {
     const coreAreas = [
         {
             title: "AR Applications Designing and Developing",
+            iconSrc: "/images/subject-matter-experts/augmented-reality/AR-Applications-Designing-and-Developing.webp",
             desc: "Create applications that use AR technology in order to enhance users' experience by providing interactive elements.",
             icon: Smartphone,
         },
         {
             title: "Computer Vision and Object Tracking",
+            iconSrc: "/images/subject-matter-experts/augmented-reality/Computer-Vision-and-Object-Tracking.webp",
             desc: "Use different methods to track and recognize images and objects in real-time so that we can provide accurate placements.",
             icon: Eye,
         },
         {
             title: "Building and Visualizing 3D Models",
+            iconSrc: "/images/subject-matter-experts/augmented-reality/Building-and-Visualizing-3D-Models.webp",
             desc: "Build high-quality 3D assets and environments that can be used within immersive AR experiences.",
             icon: Box,
         },
         {
             title: "Spatial Computing",
+            iconSrc: "/images/subject-matter-experts/augmented-reality/Spatial-Computing.webp",
             desc: "Combine digital content and the real world, allowing users to interact with digital content within their real world.",
             icon: Layers,
         },
         {
             title: "Designing the User Experiences (UX/UI) for AR",
+            iconSrc: "/images/subject-matter-experts/augmented-reality/Designing-the-User-Experiences-UX_UI-for-AR.webp",
             desc: "Create user interfaces (UI) and user experiences (UX) that allow users to interact with AR fluidly.",
             icon: Layout,
         },
         {
             title: "Simulating and Rendering in Real-time",
+            iconSrc: "/images/subject-matter-experts/augmented-reality/Simulating-and-Rendering-in-Real-time.webp",
             desc: "Use advanced tools to both simulate environments and to render content in an efficient manner.",
             icon: Cpu,
         },
         {
             title: "Wearable AR Technologies",
+            iconSrc: "/images/subject-matter-experts/augmented-reality/Wearable-AR-Technologies.webp",
             desc: "Create AR technologies specifically designed for wearables (i.e. Smart Glasses, Head Mounted Displays).",
             icon: Watch,
         },
         {
             title: "AR Cloud and Networking",
+            iconSrc: "/images/subject-matter-experts/augmented-reality/AR-Cloud-and-Networking.webp",
             desc: "Create a cloud-based infrastructure where AR can be experienced collectively (and/or) continuously.",
             icon: Cloud,
         },
         {
             title: "Environmental Mapping and SLAM",
+            iconSrc: "/images/subject-matter-experts/augmented-reality/Environmental-Mapping-and-SLAM.webp",
             desc: "We create efficient algorithms for processing and analysing large volumes of data sets.",
             icon: Globe,
         },
@@ -80,64 +89,55 @@ export default function AugmentedRealitySMEPage() {
         {
             title: "Research Services",
             subtitle: "Expert guidance on project planning, execution, and data analysis.",
-            imageUrl:
-                "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: Search,
         },
         {
             title: "Editing & Proofreading",
             subtitle: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            imageUrl:
-                "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: FileCheck,
         },
         {
             title: "Publication Support",
             subtitle: "Complete support for publishing in high-impact journals, translating concepts into incisive reports.",
-            imageUrl:
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Send,
         },
         {
             title: "Scientific Writing",
             subtitle: "Crafting clear, precise, and publication-ready research manuscripts.",
-            imageUrl:
-                "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: PenTool,
         },
         {
             title: "Artwork Editing",
             subtitle: "Professional visuals for your figures, tables, and graphical abstracts.",
-            imageUrl:
-                "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: ImageIcon,
         },
         {
             title: "Journal Formatting",
             subtitle: "Tailored manuscript formatting to meet specific journal guidelines.",
-            imageUrl:
-                "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: FileText,
         },
         {
             title: "Graphical Abstract",
             subtitle: "Engaging summaries of your research in a single, informative graphic.",
-            imageUrl:
-                "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: PieChart,
         },
         {
             title: "Systematic Reviews",
             subtitle: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            imageUrl:
-                "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: BookOpen,
         },
         {
             title: "Literature Review and Gap Analysis",
             subtitle: "Identifying research gaps and providing comprehensive literature reviews.",
-            imageUrl:
-                "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: HelpCircle,
         },
     ];
@@ -207,7 +207,7 @@ export default function AugmentedRealitySMEPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&q=80&w=800"
+                                src="/images/subject-matter-experts/augmented-reality/Augmented-Reality.webp"
                                 alt="Person experiencing Augmented Reality with Headset"
                                 fill
                                 className="object-cover"
@@ -249,7 +249,7 @@ export default function AugmentedRealitySMEPage() {
 
                                     {/* Indicator bar visual column */}
                                     <div className="flex flex-col items-center justify-between flex-shrink-0 w-8 border-l border-gray-100 pl-2 pointer-events-none">
-                                        <Icon className="w-5 h-5 text-gray-700 shrink-0" />
+                                        {(item as any).iconSrc ? <span className="relative w-6 h-6 shrink-0"><Image src={(item as any).iconSrc} alt="" fill className="object-contain" /></span> : <Icon className="w-5 h-5 text-gray-700 shrink-0" />}
 
                                         <div className="flex flex-col items-center justify-between h-16 my-1">
                                             <ChevronUp className="w-3 h-3 text-gray-400" />

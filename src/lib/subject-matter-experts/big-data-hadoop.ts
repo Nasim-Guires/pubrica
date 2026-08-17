@@ -9,7 +9,9 @@ export const bigDataAnalyticsTestimonials: Testimonial[] = [
     authorRole: "Data Scientist",
     authorLocation: "Australia",
     avatarLabel: "Portrait of Dr. S. Rao",
+      avatarSrc: "/images/subject-matter-experts/big-data-hadoop/Dr.-S.-Rao.webp",
     flagLabel: "Australia flag",
+      flagSrc: "/images/marketing-communication-content-development-service/Australia.webp",
   },
   {
     id: "big-data-2",
@@ -19,7 +21,9 @@ export const bigDataAnalyticsTestimonials: Testimonial[] = [
     authorRole: "Research Engineer",
     authorLocation: "India",
     avatarLabel: "Portrait of Dr. M. Chen",
+      avatarSrc: "/images/subject-matter-experts/big-data-hadoop/Dr.-M.-Chen.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "big-data-3",
@@ -29,6 +33,8 @@ export const bigDataAnalyticsTestimonials: Testimonial[] = [
     authorRole: "Computer Science",
     authorLocation: "USA",
     avatarLabel: "Portrait of Prof. A. Williams",
+      avatarSrc: "/images/subject-matter-experts/big-data-hadoop/Prof.-A.-Williams.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
 ];

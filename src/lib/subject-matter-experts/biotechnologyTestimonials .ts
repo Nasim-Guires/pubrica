@@ -12,7 +12,9 @@ export const biotechnologyTestimonials = {
       authorRole: "PhD in Molecular Biology",
       authorLocation: "India",
       avatarLabel: "Portrait of Dr. Ananya Singh",
+      avatarSrc: "/images/subject-matter-experts/biotechnology/Dr.-Ananya-Singh.webp",
       flagLabel: "India flag icon",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
       id: "testimonial-2",
@@ -22,7 +24,9 @@ export const biotechnologyTestimonials = {
       authorRole: "Biotechnology Researcher",
       authorLocation: "USA",
       avatarLabel: "Portrait of Prof. Michael Thompson",
+      avatarSrc: "/images/subject-matter-experts/biotechnology/Dr.-Li-Wei.webp",
       flagLabel: "USA flag icon",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
     {
       id: "testimonial-3",
@@ -32,7 +36,9 @@ export const biotechnologyTestimonials = {
       authorRole: "Bioprocessing Scientist",
       authorLocation: "China",
       avatarLabel: "Portrait of Dr. Li Wei",
+      avatarSrc: "/images/subject-matter-experts/biotechnology/Prof.-Michael-Thompson.webp",
       flagLabel: "China flag icon",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/china.png",
     },
   ],
 };

@@ -28,41 +28,49 @@ export default function CellBiologyPage() {
     const disciplines = [
         {
             title: "Cell Structure and Organization",
+            iconSrc: "/images/subject-matter-experts/cell-biology/Cell-Structure-and-Organization.webp",
             description: "We provide expertise in the study of cellular architecture, including organelles, membranes, and cytoskeletal components. Our editors assist researchers in exploring how cell structures support essential biological functions such as metabolism, transport, and communication.",
             icon: Dna
         },
         {
             title: "Cell Division and Cell Cycle Regulation",
+            iconSrc: "/images/subject-matter-experts/cell-biology/Cell-Division-and-Cell-Cycle-Regulation.webp",
             description: "Understanding the precise control of cell growth and replication is central to biology and medicine. We support research on mitosis, meiosis, checkpoints, and regulatory proteins that maintain genomic integrity and prevent uncontrolled cell proliferation.",
             icon: RotateCw
         },
         {
             title: "Cellular Signalling and Communication",
+            iconSrc: "/images/subject-matter-experts/cell-biology/Cellular-Signalling-and-Communication.webp",
             description: "Our experts assist in studies focusing on how cells perceive and respond to their environment through signalling pathways. We help authors communicate discoveries related to receptor-ligand interactions, intracellular signalling cascades, and molecular cross-talk between cells and tissues.",
             icon: Radio
         },
         {
             title: "Cell Differentiation and Development",
+            iconSrc: "/images/subject-matter-experts/cell-biology/Cell-Differentiation-and-Development.webp",
             description: "Cell differentiation underlies tissue formation and organismal development. We guide research manuscripts that uncover transcriptional, epigenetic, and environmental factors influencing cell fate, morphogenesis, and regeneration.",
             icon: GitCommit
         },
         {
             title: "Stem Cell Biology",
+            iconSrc: "/images/subject-matter-experts/cell-biology/Stem-Cell-Public-Biology.webp",
             description: "Stem cells represent a frontier in regenerative medicine. We specialize in assisting manuscripts related to pluripotency, lineage commitment, reprogramming, and therapeutic applications of stem cells in tissue repair and disease treatment.",
             icon: Sparkles
         },
         {
             title: "Cell Death and Survival Mechanisms",
+            iconSrc: "/images/subject-matter-experts/cell-biology/Cell-Death-and-Survival-Mechanisms.webp",
             description: "Apoptosis, necrosis, and autophagy are critical to maintaining cellular balance. Our subject-matter experts provide editorial guidance on molecular pathways regulating programmed cell death and their implications in cancer and degenerative diseases.",
             icon: ShieldAlert
         },
         {
             title: "Cytoskeleton and Cell Motility",
+            iconSrc: "/images/subject-matter-experts/cell-biology/Cytoskeleton-and-Cell-Motility.webp",
             description: "Cell motility drives development, immune responses, and metastasis. Our expertise spans cytoskeletal dynamics, motor proteins, and cell migration mechanisms, all central to physiology and pathology.",
             icon: Move
         },
         {
             title: "Cellular Pathology and Disease Mechanisms",
+            iconSrc: "/images/subject-matter-experts/cell-biology/Cellular-Pathology-and-Disease-Mechanisms.webp",
             description: "We help researchers connect molecular alterations to disease phenotypes. Our editors ensure accuracy and impact in studies linking cellular dysfunction to conditions such as cancer, neurodegeneration, and infectious diseases.",
             icon: Microscope
         }
@@ -72,49 +80,49 @@ export default function CellBiologyPage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biomolecular-engineering/Research-Services.webp",
             icon: Search
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: CheckCircle
         },
         {
             title: "Peer-Reviewing Services",
             description: "Comprehensive review to refine and validate your research pre-submission.",
-            image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: UserCheck
         },
         {
             title: "Artwork Editing",
             description: "Professional visuals for your figures, tables, and graphical abstracts.",
-            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: ImageIcon
         },
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: BookOpen
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Send
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: PenTool
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileText
         }
     ];
@@ -171,7 +179,7 @@ export default function CellBiologyPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/cell-biology/Comprehensive-Research-Writing-and-Publication-Support-in-Cell-Biology.webp"
                                 alt="Cell biology chromosome and cellular research visual"
                                 fill
                                 priority
@@ -211,7 +219,13 @@ export default function CellBiologyPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

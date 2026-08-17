@@ -9,7 +9,9 @@ export const OPTICS_ELECTRONICS_TESTIMONIALS: Testimonial[] = [
     authorRole: "Optical Engineer",
     authorLocation: "India",
     avatarLabel: "Portrait of Dr. R. Mehta",
+      avatarSrc: "/images/subject-matter-experts/biopolymers/Dr.-Shreya-Nambiar.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/marketing-communication-content-development-service/Australia.webp",
   },
   {
     id: "optics-electronics-2",
@@ -19,7 +21,9 @@ export const OPTICS_ELECTRONICS_TESTIMONIALS: Testimonial[] = [
     authorRole: "Research Scientist",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. L. Anderson",
+      avatarSrc: "/images/subject-matter-experts/chemical-engineering/Dr.-Robert-Williams.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "optics-electronics-3",
@@ -29,6 +33,8 @@ export const OPTICS_ELECTRONICS_TESTIMONIALS: Testimonial[] = [
     authorRole: "Department of Electronics",
     authorLocation: "India",
     avatarLabel: "Portrait of Prof. K. Nair",
+      avatarSrc: "/images/subject-matter-experts/algorithm/Prof.-Michael-Anderson.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
 ];

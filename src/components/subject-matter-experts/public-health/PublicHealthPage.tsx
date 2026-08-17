@@ -26,46 +26,55 @@ export default function PublicHealthPage() {
     const disciplines = [
         {
             title: "Epidemiology",
+            iconSrc: "/images/subject-matter-experts/public-health/Epidemiology.webp",
             description: "Epidemiologists assess disease patterns and cause to enable effective prevention and controlling illnesses using epidemiological data.",
             icon: Activity,
         },
         {
             title: "Biostatistics",
+            iconSrc: "/images/subject-matter-experts/public-health/Biostatistics.webp",
             description: "Biostatistics uses statistical techniques to evaluate data related to health and help researchers with their evidence-based decision-making.",
             icon: BarChart2,
         },
         {
             title: "Environmental Health",
+            iconSrc: "/images/subject-matter-experts/public-health/Environmental-Health.webp",
             description: "Environmental Health assesses environmental factors and how they affect the health of individuals, including exposure to air pollutants, water sources, and other occupational hazards.",
             icon: Globe,
         },
         {
             title: "Global Health",
+            iconSrc: "/images/subject-matter-experts/public-health/Global-Health.webp",
             description: "Global Health provides solutions for addressing health-related challenges among different populations with a focus on addressing health inequities, developing health policies, and improving international health systems.",
             icon: Users,
         },
         {
             title: "Health Policy and Management",
+            iconSrc: "/images/subject-matter-experts/public-health/Health-Policy-and-Management.webp",
             description: "Health Policy and Management perform research related to health systems, developing health policies, understanding the economics of healthcare, and evaluating healthcare programs.",
             icon: FileText,
         },
         {
             title: "Nutrition and Public Health",
+            iconSrc: "/images/subject-matter-experts/public-health/Nutrition-and-Public-Health.webp",
             description: "Nutrition and Public Health examine how a person's diet and nutritional intake influence a population's overall health.",
             icon: Apple,
         },
         {
             title: "Epidemiology and Disease Prevention",
+            iconSrc: "/images/subject-matter-experts/public-health/Epidemiology.webp",
             description: "Epidemiology and Disease Prevention evaluate the trends in disease and establish systems for the surveillance of diseases, and to develop preventive measures to reduce risk to the population at large.",
             icon: ShieldAlert,
         },
         {
             title: "Health Promotion and Behavioural Sciences",
+            iconSrc: "/images/subject-matter-experts/public-health/Health-promotion-and-education.webp",
             description: "Health Promotion and Behavioural Sciences focus on the behaviours that contribute to an individual's health status, and to develop interventions that improve these types of behaviours.",
             icon: Heart,
         },
         {
             title: "Maternal and Child Health and Community Health",
+            iconSrc: "/images/subject-matter-experts/public-health/Maternal-and-Child-Health-and-Community-Health.webp",
             description: "Maternal and Child Health and Community Health work to enhance the quality of life for mothers, infants, children, and low-income populations living in poverty.",
             icon: Users,
         }
@@ -75,56 +84,56 @@ export default function PublicHealthPage() {
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: PenTool,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: Search,
             href: "/services/editing-and-translation"
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Database,
             href: "/services/medical-data-collection"
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Languages,
             href: "/services/editing-and-translation"
         },
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biomolecular-engineering/Research-Services.webp",
             icon: Layers,
             href: "/services/research-services"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: BookOpen,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: Send,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: UserCheck,
             href: "/services/publication-support/journal-selection"
         }
@@ -177,7 +186,7 @@ export default function PublicHealthPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white bg-[#a3c9bd]/30 flex items-center justify-center">
                             <Image
-                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/public-health/Public-health.webp"
                                 alt="Public health medical research"
                                 fill
                                 priority
@@ -217,7 +226,13 @@ export default function PublicHealthPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

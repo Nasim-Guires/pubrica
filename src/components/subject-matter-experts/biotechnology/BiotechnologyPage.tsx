@@ -26,36 +26,42 @@ export default function BiotechnologyPage() {
     const coreDisciplines = [
         {
             title: "Understanding Gene Expression",
+            iconSrc: "/images/subject-matter-experts/biotechnology/Molecular-Biology-and-Genetics-1.png",
             subtitle: "Molecular Biology & Genetics",
             desc: "Understanding gene expression, DNA sequencing, and protein interactions forms the foundation of modern biotechnology. Our experts assist in designing experiments, analysing genetic data, and interpreting results to help researchers draw meaningful conclusions.",
             icon: Settings,
         },
         {
             title: "Microbiology and Immunology",
+            iconSrc: "/images/subject-matter-experts/biotechnology/Microbiology-and-Immunology.png",
             subtitle: "Immune Systems & Pathogens",
             desc: "We support research in microbial biotechnology, including bacteriology, virology, and fungal studies. Our experts aid in microbial culture analysis, pathogenic studies, and immunological assays, helping researchers explore vaccine development, antimicrobial resistance, and immune system interactions.",
             icon: Shield,
         },
         {
             title: "Bioprocessing and Industrial Biotechnology",
+            iconSrc: "/images/subject-matter-experts/biotechnology/Bioprocessing-and-Industrial-Biotechnology.png",
             subtitle: "Scaling & Fermentation",
             desc: "We offer expertise in bioprocess engineering, fermentation technology, and enzyme production. From optimizing large-scale production processes to ensuring sustainability and efficiency, our guidance helps bridge the gap between laboratory research and industrial application.",
             icon: Layers,
         },
         {
             title: "Bioinformatics and Computational Biology",
+            iconSrc: "/images/subject-matter-experts/biotechnology/Bioinformatics-and-Computational-Biology.png",
             subtitle: "Genomic Big Data",
             desc: "In the era of big data, our bioinformatics experts assist with genomic, proteomic, and metabolomic analyses. We provide computational modelling, data mining, and predictive analysis support to help researchers derive meaningful insights from complex biological datasets.",
             icon: Cpu,
         },
         {
             title: "Pharmaceutical and Medical Biotechnology",
+            iconSrc: "/images/subject-matter-experts/biotechnology/Pharmaceutical-and-Medical-Biotechnology.png",
             subtitle: "Therapeutics & Diagnostics",
             desc: "We support research in drug development, molecular diagnostics, and therapeutic interventions. Our guidance encompasses preclinical studies, biomarker identification, and formulation research to accelerate discoveries from bench to bedside.",
             icon: Activity,
         },
         {
             title: "Plant and Animal Biotechnology",
+            iconSrc: "/images/subject-matter-experts/biotechnology/Plant-and-Animal-Biotechnology.png",
             subtitle: "Agricultural Innovations",
             desc: "Our services extend to agricultural and animal research, assisting in crop improvement, transgenic plant studies, and livestock genetic enhancement. We provide support in tissue culture, cloning, and molecular breeding to accelerate innovations in agriculture and animal husbandry.",
             icon: Leaf,
@@ -66,37 +72,37 @@ export default function BiotechnologyPage() {
         {
             title: "Editing & Proofreading",
             subtitle: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/agriculture/Editing-Proofreading.webp",
             icon: FileText,
         },
         {
             title: "Grant Writing",
             subtitle: "Crafting compelling research proposals to secure funding for innovative projects.",
-            imageUrl: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/biotechnology/Grant-writing-.webp",
             icon: PenTool,
         },
         {
             title: "Artwork Editing",
             subtitle: "Professional visuals for your figures, tables, and graphical abstracts.",
-            imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/biotechnology/Artwork-Editing.webp",
             icon: ImageIcon,
         },
         {
             title: "Journal Formatting",
             subtitle: "Tailored manuscript formatting to meet specific journal guidelines.",
-            imageUrl: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/agriculture/Journal-Formatting.webp",
             icon: FileText,
         },
         {
             title: "Data Collection for AI & ML",
             subtitle: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            imageUrl: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/biotechnology/Data-Collection-for-AI-ML.webp",
             icon: Database,
         },
         {
             title: "Journal Selection",
             subtitle: "Strategic journal selection to maximize publication success.",
-            imageUrl: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=600",
+            imageUrl: "/images/subject-matter-experts/agriculture/Journal-Selection.webp",
             icon: Compass,
         },
     ];
@@ -198,7 +204,7 @@ export default function BiotechnologyPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=800"
+                                src="/images/subject-matter-experts/biotechnology/Biotechnology.webp"
                                 alt="Biotechnology Laboratory Research"
                                 fill
                                 className="object-cover"

@@ -20,36 +20,43 @@ export default function GynaecologyPage() {
     const disciplines = [
         {
             title: "Reproductive Endocrinology and Infertility",
+            iconSrc: "/images/subject-matter-experts/gynecology/Reproductive-Endocrinology-and-Infertility.webp",
             description: "Investigating hormonal regulation, ovulation mechanisms, assisted reproductive technologies (ART), and fertility preservation.",
             icon: Search
         },
         {
             title: "Gynaecologic Oncology",
+            iconSrc: "/images/subject-matter-experts/gynecology/Gynaecologic-Oncology.webp",
             description: "Focused on cancers of the female reproductive organs, cervical, ovarian, uterine, vaginal, and vulvar cancers, and their prevention, early detection, and treatment.",
             icon: TrendingUp
         },
         {
             title: "Urogynaecology",
+            iconSrc: "/images/subject-matter-experts/gynecology/Urogynaecology.webp",
             description: "Addressing pelvic floor disorders such as urinary incontinence, pelvic organ prolapse, and reconstructive surgery.",
             icon: FileText
         },
         {
             title: "Adolescent Gynaecology",
+            iconSrc: "/images/subject-matter-experts/gynecology/Adolescent-Gynaecology.webp",
             description: "Concentrating on puberty, menstrual irregularities, and sexual health education for young women..",
             icon: Database
         },
         {
             title: "Menopause and Hormone Therapy",
+            iconSrc: "/images/subject-matter-experts/gynecology/Menopause-and-Hormone-Therapy.webp",
             description: "Exploring the physiological changes during menopause, hormone replacement therapy (HRT), and associated long-term health impacts.",
             icon: AlertTriangle
         },
         {
             title: "Minimally Invasive and Robotic Surgery",
+            iconSrc: "/images/subject-matter-experts/gynecology/Minimally-Invasive-and-Robotic-Surgery.webp",
             description: "Employing laparoscopic and robotic-assisted techniques for gynaecologic procedures to reduce complications and recovery time.",
             icon: Layers
         },
         {
             title: "Preventive Gynaecology",
+            iconSrc: "/images/subject-matter-experts/gynecology/Preventive-Gynaecology.webp",
             description: "Promoting routine screening, vaccination, and public health initiatives to enhance overall women’s wellness.",
             icon: FileSearch
         }
@@ -59,56 +66,56 @@ export default function GynaecologyPage() {
         {
             title: "Original Research Article",
             description: "End-to-end writing, statistical analysis, and formatting tailored to journal-specific guidelines",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: FileText,
             href: "/services/physician-writing-services/original-research-article"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: FileSearch,
             href: "/services/medical-data-collection"
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Cpu,
             href: "/services/editing-and-translation"
         },
         {
             title: "Literature Review and Systematic Reviews",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Cpu,
             href: "/services/research-services/literature-review-and-gap"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Layers,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BarChart3,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSearch,
             href: "/services/publication-support/journal-selection"
         }
@@ -166,7 +173,7 @@ export default function GynaecologyPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/gynecology/Comprehensive-Research-Writing-and-Publication-Support-in-Gynaecology.webp"
                                 alt="Gynaecology research visualization"
                                 fill
                                 priority
@@ -206,7 +213,13 @@ export default function GynaecologyPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { 
     Briefcase, 
@@ -97,7 +98,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '120+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/agrotechnology/Dr.-Priya-Sharma.webp"
     },
     {
         name: 'Dr. Sanjay Verma',
@@ -105,7 +106,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '140+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biocomputing/Dr.-Sanjay-Verma.webp"
     },
     {
         name: 'Dr. Kavita Reddy',
@@ -113,7 +114,7 @@ const editorsData = [
         experience: '8 years of experience',
         manuscripts: '110+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/agrotechnology/Dr.-Kavita-Reddy.webp"
     }
 ];
 
@@ -221,7 +222,7 @@ export default function CancerResearchSection() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-full max-w-sm h-[300px] sm:h-[350px] rounded-lg overflow-hidden shadow-md border border-gray-200">
                             <img
-                                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800"
+                                src="/images/subject-matter-experts/cancer-research/Cancer-Research.webp"
                                 alt="Cancer Research ribbon awareness"
                                 className="w-full h-full object-cover"
                             />
@@ -247,7 +248,7 @@ export default function CancerResearchSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/cancer-research/Molecular-and-Cellular-Oncology.webp"
                             alt="Cancer Research Journal Cover"
                             className="w-full h-auto object-cover"
                         />

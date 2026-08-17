@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight } from 'lucide-react';
 
@@ -73,7 +74,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '200+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/data-mining/Dr.-Sarah-Thompson.webp"
     },
     {
         name: 'Dr. Michael Roberts',
@@ -81,7 +82,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '150+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/computer-science/Dr.-Kevin-Marshall.webp"
     },
     {
         name: 'Dr. Jane Matthews',
@@ -89,7 +90,7 @@ const editorsData = [
         experience: '14 years of experience',
         manuscripts: '180+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/data-mining/Dr.-Jane-Matthews.webp"
     }
 ];
 
@@ -172,7 +173,7 @@ export default function DataMiningSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/data-mining/Data-Mining.webp"
                             alt="Applications of Data Mining"
                             className="w-full h-auto object-cover"
                         />
@@ -197,7 +198,7 @@ export default function DataMiningSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/data-mining/Descriptive-Exploratory-Data-Mining.webp"
                             alt="Data Mining: A Knowledge Discovery Approach Book Cover"
                             className="w-full h-auto object-cover"
                         />

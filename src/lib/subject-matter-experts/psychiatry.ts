@@ -9,7 +9,9 @@ export const psychiatryTestimonials: Testimonial[] = [
     authorRole: "Psychiatrist",
     authorLocation: "South Korea",
     avatarLabel: "Portrait of Dr. Laura Kim",
+      avatarSrc: "/images/subject-matter-experts/bioinformatics/Dr.-Laura-Kim.webp",
     flagLabel: "South Korea flag",
+      flagSrc: "/images/subject-matter-experts/psychiatry/south-korea.webp",
   },
   {
     id: "psychiatry-2",
@@ -19,7 +21,9 @@ export const psychiatryTestimonials: Testimonial[] = [
     authorRole: "Clinical Researcher",
     authorLocation: "UAE",
     avatarLabel: "Portrait of Dr. Ahmed Hassan",
+      avatarSrc: "/images/subject-matter-experts/environmental-science/Dr.-Michael-Taylor.webp",
     flagLabel: "UAE flag",
+      flagSrc: "/images/subject-matter-experts/biocomputing/uae.webp",
   },
   {
     id: "psychiatry-3",
@@ -29,6 +33,8 @@ export const psychiatryTestimonials: Testimonial[] = [
     authorRole: "Mental Health Researcher",
     authorLocation: "UK",
     avatarLabel: "Portrait of Prof. David Miller",
+      avatarSrc: "/images/subject-matter-experts/biomedical-imaging/Dr.-Miguel-Torres.webp",
     flagLabel: "UK flag",
+      flagSrc: "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
   },
 ];

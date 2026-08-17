@@ -6,6 +6,7 @@ export default function BioChemistryPage() {
     const disciplines = [
         {
             title: "Molecular Biology and Genetics",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Molecular-Biology-and-Genetics.webp",
             description: "Understanding gene expression, DNA replication, transcription, translation, and epigenetic modifications is central to molecular biology. Biochemists study how genetic information translates into functional proteins and how alterations in these processes can lead to disease.",
             icon: (
                 <svg className="w-6 h-6 text-[#0F393B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -15,6 +16,7 @@ export default function BioChemistryPage() {
         },
         {
             title: "Enzymology and Protein Chemistry",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Enzymology-andProtein-Chemistry.webp",
             description: "Enzymes are biological catalysts that facilitate virtually all biochemical reactions. By studying enzyme kinetics, regulation, and structure-function relationships, biochemists can develop targeted therapeutics and understand metabolic control mechanisms.",
             icon: (
                 <svg className="w-6 h-6 text-[#0F393B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -24,6 +26,7 @@ export default function BioChemistryPage() {
         },
         {
             title: "Metabolism and Bioenergetics",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Metabolism-and-Bioenergetics.webp",
             description: "Biochemical research on metabolic pathways provides insight into how cells generate energy, manage resources, and maintain homeostasis. Metabolic studies are critical for understanding conditions such as diabetes, obesity, and cancer.",
             icon: (
                 <svg className="w-6 h-6 text-[#0F393B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -33,6 +36,7 @@ export default function BioChemistryPage() {
         },
         {
             title: "Structural Biology",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Structural-Biology.webp",
             description: "Determining the three-dimensional structures of biomolecules using techniques like X-ray crystallography, NMR spectroscopy, and cryo-electron microscopy helps elucidate their functions, interactions, and therapeutic potential.",
             icon: (
                 <svg className="w-6 h-6 text-[#0F393B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -42,6 +46,7 @@ export default function BioChemistryPage() {
         },
         {
             title: "Cell Signalling and Molecular Interactions",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Cell-Signalling-and-Molecular-Interactions.webp",
             description: "Cells communicate through intricate signalling networks. Biochemical studies of receptors, second messengers, and signal transduction pathways reveal mechanisms behind cellular responses, development, and disease progression.",
             icon: (
                 <svg className="w-6 h-6 text-[#0F393B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,6 +56,7 @@ export default function BioChemistryPage() {
         },
         {
             title: "Biotechnology and Applied Biochemistry",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Biotechnology-and-Applied-Biochemistry.webp",
             description: "Modern biotechnology leverages biochemical principles for industrial, agricultural, and medical applications, including recombinant protein production, gene therapy, biomarker discovery, and synthetic biology.",
             icon: (
                 <svg className="w-6 h-6 text-[#0F393B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,7 +70,7 @@ export default function BioChemistryPage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: (
                 <svg className="w-6 h-6 text-[#0F393B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
@@ -74,7 +80,7 @@ export default function BioChemistryPage() {
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: (
                 <svg className="w-6 h-6 text-[#0F393B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
@@ -84,7 +90,7 @@ export default function BioChemistryPage() {
         {
             title: "Peer-Reviewing Services",
             description: "Comprehensive review to refine and validate your research pre-submission.",
-            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
             icon: (
                 <svg className="w-6 h-6 text-[#0F393B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25" />
@@ -94,7 +100,7 @@ export default function BioChemistryPage() {
         {
             title: "Data Science & Analytics",
             description: "Advanced statistical analysis and interpretation to uncover actionable insights.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biochemistry/Data-Science-Analytics.webp",
             icon: (
                 <svg className="w-6 h-6 text-[#0F393B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
@@ -104,7 +110,7 @@ export default function BioChemistryPage() {
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: (
                 <svg className="w-6 h-6 text-[#0F393B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
@@ -114,7 +120,7 @@ export default function BioChemistryPage() {
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
             icon: (
                 <svg className="w-6 h-6 text-[#0F393B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25" />
@@ -124,7 +130,7 @@ export default function BioChemistryPage() {
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: (
                 <svg className="w-6 h-6 text-[#0F393B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
@@ -134,7 +140,7 @@ export default function BioChemistryPage() {
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: (
                 <svg className="w-6 h-6 text-[#0F393B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
@@ -203,7 +209,7 @@ export default function BioChemistryPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/biochemistry/Biochemistry.webp"
                                 alt="Biochemistry lab research"
                                 fill
                                 priority
@@ -241,7 +247,13 @@ export default function BioChemistryPage() {
                                             {item.title}
                                         </h3>
                                         <div className="p-2 bg-gray-50 rounded-lg shrink-0">
-                                            {item.icon}
+                                            {"iconSrc" in item && item.iconSrc ? (
+                                                <span className="relative w-6 h-6 block">
+                                                    <Image src={item.iconSrc} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
+                                                item.icon
+                                            )}
                                         </div>
                                     </div>
                                     <p className="text-gray-600 text-xs leading-relaxed mb-6">

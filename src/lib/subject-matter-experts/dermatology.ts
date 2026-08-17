@@ -9,7 +9,9 @@ export const DERMATOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Dermatologist",
     authorLocation: "India",
     avatarLabel: "Portrait of Dr. Ananya Verma, Dermatologist from India",
+      avatarSrc: "/images/subject-matter-experts/material-science/Dr.-Ayesha-Kapoor-2.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "dermatology-2",
@@ -19,7 +21,9 @@ export const DERMATOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Professor of Dermatology",
     authorLocation: "Spain",
     avatarLabel: "Portrait of Dr. Sofia Martinez, Professor of Dermatology from Spain",
+      avatarSrc: "/images/subject-matter-experts/biotechnology/Dr.-Sofia-Martinez.webp",
     flagLabel: "Spain flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
   },
   {
     id: "dermatology-3",
@@ -29,6 +33,8 @@ export const DERMATOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Dermatology Consultant",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. Ahmed El-Sayed, Dermatology Consultant from USA",
+      avatarSrc: "/images/subject-matter-experts/dermatology/Dr.-Ahmed-El-Sayed.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
 ];

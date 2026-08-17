@@ -9,7 +9,9 @@ export const peptideTestimonials: Testimonial[] = [
     authorRole: "Director of Research, Biotech Solutions",
     authorLocation: "",
     avatarLabel: "Portrait of Dr. Emily Roberts",
+      avatarSrc: "/images/subject-matter-experts/peptides/Dr.-Emily-Roberts.webp",
     flagLabel: "Country flag",
+      flagSrc: "/images/marketing-communication-content-development-service/Australia.webp",
   },
   {
     id: "peptide-2",
@@ -19,7 +21,9 @@ export const peptideTestimonials: Testimonial[] = [
     authorRole: "CEO, BioPharma Innovations",
     authorLocation: "",
     avatarLabel: "Portrait of Dr. Michael Harris",
+      avatarSrc: "/images/subject-matter-experts/environmental-science/Dr.-Michael-Taylor.webp",
     flagLabel: "Country flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "peptide-3",
@@ -29,6 +33,8 @@ export const peptideTestimonials: Testimonial[] = [
     authorRole: "Senior Research Scientist, Peptide Therapeutics Ltd.",
     authorLocation: "",
     avatarLabel: "Portrait of Dr. Sofia Patel",
+      avatarSrc: "/images/subject-matter-experts/biochemistry/Dr.-Sophia-Patel.webp",
     flagLabel: "Country flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
 ];

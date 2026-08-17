@@ -43,31 +43,37 @@ export default function ProductionEngineeringPage() {
     const disciplines = [
         {
             title: "Manufacturing Methods & Technology",
+            iconSrc: "/images/subject-matter-experts/production-engineering/Manufacturing-Methods-Technology.webp",
             description: "This area encompasses selecting, analysing, and optimizing manufacturing methods for converting raw material into finished goods. Selecting processes such as casting, forming, tooling, machining, joining, and additive manufacturing; then developing these processes for stable, high-quality, and consistent production.",
             icon: Settings,
         },
         {
             title: "Production planning and control",
+            iconSrc: "/images/subject-matter-experts/production-engineering/Production-Planning-Controls.webp",
             description: "involves planning, scheduling, routing, and controlling production activities for timely delivery of products to customers, optimally using available resources and being cost-effective. It covers inventory management, demand forecasting, capacity planning, and workflow coordination.",
             icon: Clock,
         },
         {
             title: "Process Design and Optimisation",
+            iconSrc: "/images/subject-matter-experts/production-engineering/Process-Design-and-Optimisation.webp",
             description: "The Process Design and Optimisation area focuses on designing production processes to be as efficient as possible. These activities include Process Modelling, Layout Planning, Time Study and Continuous Improvement Techniques. Optimisation Methods are used to minimise waste, cycle time, and improve productivity.",
             icon: Sliders,
         },
         {
             title: "Manufacturing systems and automation",
+            iconSrc: "/images/subject-matter-experts/production-engineering/Manufacturing-systems-and-automation.webp",
             description: "The goal of automation is to automate tasks using technologies like CNC machine tools, Robotics, Programmable Logic Controller (PLC) System), as well as the use of Flexible Manufacturing System (FMS). The use of automation in the manufacturing processes increases production accuracy repeatability and allows for greater scale of operation.",
             icon: Bot,
         },
         {
             title: "Quality Engineering & Reliability",
+            iconSrc: "/images/subject-matter-experts/production-engineering/Quality-Engineering-Reliability.webp",
             description: "Quality Engineering and Reliability is the process of ensuring products conform to both Engineering and Customer requirements by way of Quality Planning, Inspection, and Control. Statistical Quality Control, Six Sigma Methodology, Reliability Testing, and Failure Prevention are all part of Quality Engineering and Reliability.",
             icon: Shield,
         },
         {
             title: "Asset Management and Maintenance",
+            iconSrc: "/images/subject-matter-experts/production-engineering/Asset-Management-and-Maintenance.webp",
             description: "There are three aspects to Maintaining & Improving Equipment Performance – Preventive, Predictive and Condition Based Maintenance Manager (CBM). Asset management allows for greater operational safety, decreases or eliminates equipment downtime (i.e., less wasted time), and increases longer equipment lifespan.",
             icon: Wrench,
         }
@@ -77,63 +83,63 @@ export default function ProductionEngineeringPage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis",
-            image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biomolecular-engineering/Research-Services.webp",
             icon: Search,
             href: "/services/research-services"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Editing-Proofreading.webp",
             icon: PenTool,
             href: "/services/editing-and-translation"
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Languages,
             href: "/services/editing-and-translation/translation-with-editing"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
             icon: Layers,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
             icon: Send,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Selection.webp",
             icon: FileSpreadsheet,
             href: "/services/publication-support/journal-selection"
         },
         {
             title: "Publication Support",
             description: "Complete support for publishing in high-impact journals, translating concepts into incisive reports.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Responding-to-Reviewers.webp",
             icon: BookOpen,
             href: "/services/publication-support"
         },
         {
             title: "Graphical Abstract",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: ImageIcon,
             href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: ImageIcon,
             href: "/services/research-services/literature-review-and-gap"
         }
@@ -186,7 +192,7 @@ export default function ProductionEngineeringPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white bg-[#a3c9bd]/30 flex items-center justify-center">
                             <Image
-                                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/production-engineering/Production-Engineering.webp"
                                 alt="Production Engineering Research Support"
                                 fill
                                 priority
@@ -226,7 +232,13 @@ export default function ProductionEngineeringPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

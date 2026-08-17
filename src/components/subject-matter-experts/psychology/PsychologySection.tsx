@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight } from 'lucide-react';
 
@@ -60,7 +61,7 @@ const editorsData = [
         experience: '14 years of experience',
         manuscripts: '180+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biomedical-imaging/Dr.-Evelyn-Carter-3.webp"
     },
     {
         name: 'Dr. Olivia Hughes',
@@ -68,7 +69,7 @@ const editorsData = [
         experience: '8 years of experience',
         manuscripts: '100+ manuscripts edited',
         countryFlag: '🇦🇺',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biocatalysts/Dr.-Amanda-Lee.webp"
     },
     {
         name: 'Dr. Ethan Carter',
@@ -76,7 +77,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '120+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/psychology/Dr.-Ethan-Carter.webp"
     }
 ];
 
@@ -158,7 +159,7 @@ export default function PsychologySection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/psychology/Empowering-psychological.webp"
                             alt="Psychology books stack"
                             className="w-full h-auto object-cover"
                         />
@@ -183,7 +184,7 @@ export default function PsychologySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/psychology/Clinical-psychology.webp"
                             alt="Psychological Science Cover"
                             className="w-full h-auto object-cover"
                         />

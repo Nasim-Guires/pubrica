@@ -9,7 +9,9 @@ export const PHARMACEUTICAL_TESTIMONIALS: Testimonial[] = [
         authorRole: "Director of Pharmaceutical Research at BioMed Pharmaceuticals",
         authorLocation: "USA",
         avatarLabel: "Portrait of Dr. Emily Johnson",
+      avatarSrc: "/images/subject-matter-experts/chemical-engineering/Dr.-Anjali-Rao.webp",
         flagLabel: "USA flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
         id: "pharmaceutical-2",
@@ -19,7 +21,9 @@ export const PHARMACEUTICAL_TESTIMONIALS: Testimonial[] = [
         authorRole: "Clinical Pharmacologist, MedTech Innovations",
         authorLocation: "USA",
         avatarLabel: "Portrait of Dr. Michael Shaw",
+      avatarSrc: "/images/subject-matter-experts/computer-science/Dr.-Kevin-Marshall.webp",
         flagLabel: "USA flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
     },
     {
         id: "pharmaceutical-3",
@@ -29,6 +33,8 @@ export const PHARMACEUTICAL_TESTIMONIALS: Testimonial[] = [
         authorRole: "Senior Researcher, Global Health Solutions",
         authorLocation: "USA",
         avatarLabel: "Portrait of Dr. Natalie Torres",
+      avatarSrc: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Dr.-Natalie-Torres.webp",
         flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
 ];

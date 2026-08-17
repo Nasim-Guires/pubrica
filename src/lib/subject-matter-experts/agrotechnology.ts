@@ -12,7 +12,9 @@ export const agrotechnologyTestimonials = {
       authorRole: "Crop Scientist",
       authorLocation: "India",
       avatarLabel: "Portrait of Dr. Suresh Kumar",
+      avatarSrc: "/images/subject-matter-experts/agrotechnology/Dr.-Suresh-Kumar.webp",
       flagLabel: "India flag icon",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
       id: "testimonial-2",
@@ -22,7 +24,9 @@ export const agrotechnologyTestimonials = {
       authorRole: "Plant Biotechnology Specialist",
       authorLocation: "Canada",
       avatarLabel: "Portrait of Dr. Priya Menon",
+      avatarSrc: "/images/subject-matter-experts/agrotechnology/Dr.-Priya-Menon.webp",
       flagLabel: "Canada flag icon",
+      flagSrc: "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/canada-flag.png",
     },
     {
       id: "testimonial-3",
@@ -32,7 +36,9 @@ export const agrotechnologyTestimonials = {
       authorRole: "Horticulture Specialist",
       authorLocation: "Australia",
       avatarLabel: "Portrait of Dr. Meera Nair",
+      avatarSrc: "/images/subject-matter-experts/agrotechnology/Dr.-Meera-Nair.webp",
       flagLabel: "Australia flag icon",
+      flagSrc: "/images/marketing-communication-content-development-service/Australia.webp",
     },
   ],
 };

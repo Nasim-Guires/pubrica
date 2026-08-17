@@ -9,7 +9,9 @@ export const productionEngineeringTestimonials: Testimonial[] = [
         authorRole: "Production Engineering",
         authorLocation: "",
         avatarLabel: "Portrait of Assistant Professor",
+      avatarSrc: "/images/subject-matter-experts/production-engineering/Assistant-Professor.webp",
         flagLabel: "Country flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
     {
         id: "production-engineering-2",
@@ -19,7 +21,9 @@ export const productionEngineeringTestimonials: Testimonial[] = [
         authorRole: "Manufacturing Engineering",
         authorLocation: "",
         avatarLabel: "Portrait of PhD Scholar",
+      avatarSrc: "/images/subject-matter-experts/production-engineering/PhD-Scholar.webp",
         flagLabel: "Country flag",
+      flagSrc: "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
     },
     {
         id: "production-engineering-3",
@@ -29,6 +33,8 @@ export const productionEngineeringTestimonials: Testimonial[] = [
         authorRole: "Industrial Engineering",
         authorLocation: "",
         avatarLabel: "Portrait of Research Scientist",
+      avatarSrc: "/images/subject-matter-experts/cardiology/Prof.-Rajesh-Kumar.webp",
         flagLabel: "Country flag",
+      flagSrc: "/images/subject-matter-experts/production-engineering/Research-Scientist.webp",
     },
 ];

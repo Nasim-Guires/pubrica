@@ -9,7 +9,9 @@ export const biomolecularEngineeringTestimonials: Testimonial[] = [
     authorRole: "Assistant Professor",
     authorLocation: "India",
     avatarLabel: "Portrait of Dr. Ananya Rao",
+      avatarSrc: "/images/subject-matter-experts/biomolecular-engineering/Dr.-Ananya-Rao.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "biomolecular-engineering-2",
@@ -19,7 +21,9 @@ export const biomolecularEngineeringTestimonials: Testimonial[] = [
     authorRole: "Research Scientist",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. Michael Turner",
+      avatarSrc: "/images/subject-matter-experts/biomolecular-engineering/Dr.-Michael-Turner.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
   {
     id: "biomolecular-engineering-3",
@@ -29,6 +33,8 @@ export const biomolecularEngineeringTestimonials: Testimonial[] = [
     authorRole: "Senior Research Fellow",
     authorLocation: "UK",
     avatarLabel: "Portrait of Prof. Leena Deshmukh",
+      avatarSrc: "/images/subject-matter-experts/biomolecular-engineering/Prof.-Leena-Deshmukh.webp",
     flagLabel: "UK flag",
+      flagSrc: "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
   },
 ];

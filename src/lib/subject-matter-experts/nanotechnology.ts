@@ -9,7 +9,9 @@ export const NANOTECHNOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Research Scientist",
     authorLocation: "India",
     avatarLabel: "Portrait of Dr. R. Kumar",
+      avatarSrc: "/images/subject-matter-experts/biophysics/Dr.-Alexander-Weiss.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "nanotechnology-2",
@@ -19,7 +21,9 @@ export const NANOTECHNOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Nanomaterials Researcher",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. L. Fernandez",
+      avatarSrc: "/images/subject-matter-experts/nanotechnology/Dr.-L.-Fernandez.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
   },
   {
     id: "nanotechnology-3",
@@ -29,6 +33,8 @@ export const NANOTECHNOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Nanoengineering Specialist",
     authorLocation: "India",
     avatarLabel: "Portrait of Dr. S. Mehta",
+      avatarSrc: "/images/subject-matter-experts/nanotechnology/Dr.-S.-Mehta.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
 ];

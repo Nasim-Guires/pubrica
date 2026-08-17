@@ -22,31 +22,37 @@ export default function MedicalImagingTechniquesPage() {
     const disciplines = [
         {
             title: "Radiology and Diagnostic Imaging",
+            iconSrc: "/images/subject-matter-experts/medical-imaging-techniques/Radiology-and-Diagnostic-Imaging.webp",
             description: "Radiology remains a cornerstone of medical diagnostics, encompassing X-rays, computed tomography (CT), and fluoroscopy. Our specialists provide expert guidance in both clinical research and manuscript preparation related to radiology, from evaluating image quality to interpreting complex pathologies.",
             icon: Search
         },
         {
             title: "Magnetic Resonance Imaging (MRI)",
+            iconSrc: "/images/subject-matter-experts/medical-imaging-techniques/Magnetic-Resonance-Imaging-MRI.webp",
             description: "MRI is indispensable for high-resolution, non-invasive imaging of soft tissues, the brain, musculoskeletal system, and internal organs. Our team assists in refining research studies involving functional MRI (fMRI), diffusion tensor imaging (DTI), and advanced contrast techniques.",
             icon: TrendingUp
         },
         {
             title: "Ultrasound Imaging",
+            iconSrc: "/images/subject-matter-experts/medical-imaging-techniques/Ultrasound-Imaging.webp",
             description: "It offers real-time visualization of organs, blood flow, and foetal development. Pubrica supports research in areas including Doppler studies, echocardiography, and elastography. We guide authors in presenting ultrasound methodologies, optimizing image interpretation, and articulating clinical significance.",
             icon: FileText
         },
         {
             title: "Nuclear Medicine and Molecular Imaging",
+            iconSrc: "/images/subject-matter-experts/medical-imaging-techniques/Nuclear-Medicine-and-Molecular-Imaging.webp",
             description: "Nuclear medicine combines the power of radioactive tracers with advanced imaging technologies to investigate physiological processes at the molecular level. Our experts assist researchers in PET, SPECT, and hybrid imaging studies, ensuring accurate representation of tracer kinetics, quantification methods, and clinical relevance.",
             icon: Database
         },
         {
             title: "Oncologic Imaging",
+            iconSrc: "/images/subject-matter-experts/medical-imaging-techniques/Oncologic-Imaging.webp",
             description: "Medical imaging is pivotal in oncology, enabling early detection, staging, and treatment monitoring of cancer. Our team supports studies utilizing CT, MRI, PET, and hybrid imaging for tumour evaluation. We help authors highlight imaging biomarkers, response assessment criteria, and clinical correlations, enhancing the translational impact of oncologic research.",
             icon: AlertTriangle
         },
         {
             title: "Interventional Imaging",
+            iconSrc: "/images/subject-matter-experts/medical-imaging-techniques/Interventional-Imaging.webp",
             description: "It integrates imaging techniques such as CT, fluoroscopy, and ultrasound to guide minimally invasive procedures. Pubrica provides insights into study design, procedural documentation, and outcome reporting for interventional research.",
             icon: ShieldAlert
         }
@@ -56,56 +62,56 @@ export default function MedicalImagingTechniquesPage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: FileText,
             href: "/services/research-services"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/editing-and-proofreading"
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Cpu,
             href: "/services/medical-data-collection"
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: FileSearch,
             href: "/services/editing-and-translation"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
             icon: Layers,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Journal Formatting",
             description: "Tailored manuscript formatting to meet specific journal guidelines.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: BookOpen,
             href: "/services/publication-support/journal-manuscript-formatting-services"
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BarChart3,
             href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSearch,
             href: "/services/publication-support/journal-selection"
         }
@@ -161,7 +167,7 @@ export default function MedicalImagingTechniquesPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/medical-imaging-techniques/Medical-Imaging-Techniques.webp"
                                 alt="Medical Imaging research visualization"
                                 fill
                                 priority
@@ -201,7 +207,13 @@ export default function MedicalImagingTechniquesPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

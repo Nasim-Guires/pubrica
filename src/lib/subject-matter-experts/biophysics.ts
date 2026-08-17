@@ -12,7 +12,9 @@ export const biophysicsTestimonialsData: ClientTestimonialsProps = {
       authorRole: "University Lecturer",
       authorLocation: "United Kingdom",
       avatarLabel: "Photo of Dr. A. Kumar",
+      avatarSrc: "/images/subject-matter-experts/biophysics/Dr.-A.-Kumar.webp",
       flagLabel: "United Kingdom flag",
+      flagSrc: "/images/research-services/systematic-review/united-kingdom-.png",
     },
     {
       id: "testimonial-2",
@@ -22,7 +24,9 @@ export const biophysicsTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Assistant Professor",
       authorLocation: "Japan",
       avatarLabel: "Photo of Dr. H. Nakamura",
+      avatarSrc: "/images/subject-matter-experts/biomedical-engineering/Dr.-Aidan-Matthews-1.webp",
       flagLabel: "Japan flag",
+      flagSrc: "/images/editing-and-translation/japan.png",
     },
     {
       id: "testimonial-3",
@@ -32,7 +36,9 @@ export const biophysicsTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Research Scientist",
       authorLocation: "India",
       avatarLabel: "Photo of Dr. S. Patel",
+      avatarSrc: "/images/subject-matter-experts/biomedical-engineering/Dr.-Neeraj-S.webp",
       flagLabel: "India flag",
+      flagSrc: "/images/subject-matter-experts/biomonitoring/india.webp",
     },
   ],
 };

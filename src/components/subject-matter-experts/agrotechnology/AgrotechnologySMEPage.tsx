@@ -26,31 +26,37 @@ export default function AgrotechnologySMEPage() {
   const coreDisciplines = [
     {
       title: "Crop Science & Management",
+            iconSrc: "/images/subject-matter-experts/agrotechnology/Crop-Science-Management.png",
       desc: "We focus on improving crop yield, quality, and resilience through modern cultivation practices, hybrid varieties, and integrated pest and disease management strategies.",
       icon: Sprout,
     },
     {
       title: "Soil Science & Fertility",
+            iconSrc: "/images/subject-matter-experts/agrotechnology/Soil-Science-Fertility.png",
       desc: "Our work emphasizes understanding soil properties and nutrient dynamics to enhance soil health, optimize fertilizer use, and ensure long-term land productivity.",
       icon: Layers,
     },
     {
       title: "Water & Irrigation Technology",
+            iconSrc: "/images/subject-matter-experts/agrotechnology/Water-Irrigation-Technology.png",
       desc: "We implement efficient water management solutions, including drip and sprinkler irrigation systems, to conserve water resources and enhance crop performance.",
       icon: Droplet,
     },
     {
       title: "Farm Mechanization",
+            iconSrc: "/images/subject-matter-experts/agrotechnology/Farm-Mechanization.png",
       desc: "Pubrica promotes the adoption of modern agricultural machinery for planting, harvesting, and post-harvest operations, reducing labour requirements and improving efficiency.",
       icon: Cog,
     },
     {
       title: "Plant Biotechnology",
+            iconSrc: "/images/subject-matter-experts/agrotechnology/Plant-Biotechnology.png",
       desc: "Through genetic improvement and biotechnological interventions, we develop crops with enhanced resistance, productivity, and nutritional value.",
       icon: Dna,
     },
     {
       title: "Agro-Ecology & Sustainable Farming",
+            iconSrc: "/images/subject-matter-experts/agrotechnology/Agro-Ecology-Sustainable-Farming.png",
       desc: "We advocate for environmentally responsible practices such as organic farming, crop rotation, and integrated farming systems to ensure sustainability and ecological balance.",
       icon: Leaf,
     },
@@ -61,55 +67,55 @@ export default function AgrotechnologySMEPage() {
     {
       title: "Scientific Writing",
       subtitle: "Crafting clear, precise, and publication-ready research manuscripts.",
-      imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600",
+      imageUrl: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
       icon: Search,
     },
     {
       title: "Editing & Proofreading",
       subtitle: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-      imageUrl: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=600",
+      imageUrl: "/images/subject-matter-experts/agriculture/Editing-Proofreading.webp",
       icon: FileCheck,
     },
     {
       title: "Biostatistical Programming",
       subtitle: "Advanced statistical analysis to support your research findings.",
-      imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
+      imageUrl: "/images/subject-matter-experts/agriculture/Biostatistical-Programming.webp",
       icon: BarChart2,
     },
     {
       title: "Peer-Review",
       subtitle: "Comprehensive review to refine and validate your research pre-submission.",
-      imageUrl: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=600",
+      imageUrl: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
       icon: CheckCircle,
     },
     {
       title: "Journal Formatting",
       subtitle: "Tailored manuscript formatting to meet specific journal guidelines..",
-      imageUrl: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=600",
+      imageUrl: "/images/subject-matter-experts/agriculture/Journal-Formatting.webp",
       icon: FileText,
     },
     {
       title: "Journal Submission",
       subtitle: "Helping select the right journals and manage the submission process seamlessly.",
-      imageUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
+      imageUrl: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
       icon: Send,
     },
     {
       title: "Journal Selection",
       subtitle: "Strategic journal selection to maximize publication success.",
-      imageUrl: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=600",
+      imageUrl: "/images/subject-matter-experts/agriculture/Journal-Selection.webp",
       icon: Compass,
     },
     {
       title: "Responding to Reviewers",
       subtitle: "Assistance in addressing reviewer comments to enhance your manuscript's chances of acceptance.",
-      imageUrl: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=600",
+      imageUrl: "/images/subject-matter-experts/agriculture/Responding-to-Reviewers.webp",
       icon: MessageSquare,
     },
     {
       title: "Literature Review and Gap Analysis",
       subtitle: "Identifying research gaps and providing comprehensive literature reviews.",
-      imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600",
+      imageUrl: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
       icon: BookOpen,
     },
   ];
@@ -195,7 +201,7 @@ export default function AgrotechnologySMEPage() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white">
               <Image
-                src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&q=80&w=800"
+                src="/images/subject-matter-experts/agrotechnology/Agrotechnology-Advancing-Modern-Agriculture-Through-Science-and-Innovation.webp"
                 alt="Agrotechnology and Modern Farming"
                 fill
                 className="object-cover"

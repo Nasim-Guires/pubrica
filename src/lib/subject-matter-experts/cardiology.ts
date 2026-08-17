@@ -12,7 +12,9 @@ export const cardiologyTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Cardiologist",
       authorLocation: "USA",
       avatarLabel: "Portrait of Dr. Emily Carter",
+      avatarSrc: "/images/subject-matter-experts/cardiology/Dr.-Emily-Carter.webp",
       flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
     {
       id: "cardiology-testimonial-2",
@@ -23,6 +25,7 @@ export const cardiologyTestimonialsData: ClientTestimonialsProps = {
       authorLocation: "UK",
       avatarLabel: "Portrait of Dr. Laura Mitchell",
       flagLabel: "United Kingdom flag",
+      flagSrc: "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
     },
     {
       id: "cardiology-testimonial-3",
@@ -32,7 +35,9 @@ export const cardiologyTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Cardiology Researcher",
       authorLocation: "India",
       avatarLabel: "Portrait of Prof. Rajesh Kumar",
+      avatarSrc: "/images/subject-matter-experts/cardiology/Prof.-Rajesh-Kumar.webp",
       flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
   ],
 };

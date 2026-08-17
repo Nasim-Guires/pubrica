@@ -22,31 +22,37 @@ export default function NeurosciencePage() {
     const disciplines = [
         {
             title: "Molecular and Cellular Neuroscience",
+            iconSrc: "/images/subject-matter-experts/neuroscience/Molecular-and-Cellular-Neuroscience.webp",
             description: "This area focuses on understanding how individual neurons function at a molecular and cellular level. It studies the roles of neurotransmitters, ion channels, synapses, and genetic mechanisms that govern neural signalling. Research in this area helps in identifying the root causes of neurological diseases.",
             icon: Search
         },
         {
             title: "Systems Neuroscience",
+            iconSrc: "/images/subject-matter-experts/neuroscience/Systems-Neuroscience.webp",
             description: "It investigates how networks of neurons interact to control behavior and cognition. It explores sensory processing, motor control, and neural circuits responsible for perception, attention, and movement.",
             icon: TrendingUp
         },
         {
             title: "Cognitive and Behavioural Neuroscience",
+            iconSrc: "/images/subject-matter-experts/neuroscience/Cognitive-and-Behavioural-Neuroscience.webp",
             description: "This branch explores how brain activity is linked to higher mental processes such as memory, language, decision-making, and emotion. It combines psychology with neuroscience to understand how the brain produces thought and behavior.",
             icon: FileText
         },
         {
             title: "Developmental Neuroscience",
+            iconSrc: "/images/subject-matter-experts/neuroscience/Developmental-Neuroscience.webp",
             description: "It examines how the nervous system forms during embryonic development and how it changes throughout life. It studies neurogenesis, neural migration, and synaptic pruning to uncover how early experiences shape the brain.",
             icon: Database
         },
         {
             title: "Clinical Neuroscience",
+            iconSrc: "/images/subject-matter-experts/neuroscience/Clinical-Neuroscience.webp",
             description: "It bridges laboratory research and medical practice. It focuses on diagnosing, treating, and preventing neurological and psychiatric disorders such as epilepsy, multiple sclerosis, schizophrenia, and depression.",
             icon: AlertTriangle
         },
         {
             title: "Computational Neuroscience",
+            iconSrc: "/images/subject-matter-experts/neuroscience/Computational-Neuroscience.webp",
             description: "This area uses mathematical models and simulations to understand brain function. It plays a crucial role in developing artificial intelligence, neural networks, and brain–computer interface technologies.",
             icon: ShieldAlert
         }
@@ -56,56 +62,56 @@ export default function NeurosciencePage() {
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: FileText,
             href: "/ervices/research-services/systematic-review"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Literature Review and Data Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Cpu,
             href: "/services/research-services/literature-review-and-gap"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
             icon: FileSearch,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Medical Writing",
             description: "Our medical writers create high-quality manuscripts and case reports for dermatology journals.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/machine-learning/Medical-Writing.webp",
             icon: Layers,
             href: "/services/research-services/medical-writing"
         },
         {
             title: "Statistical Analysis",
             description: "We provide biostatistical support for data interpretation, ensuring robust and scientifically valid conclusions",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: BookOpen,
             href: "/services/research-services/biostatistics-and-statistical-programming-services"
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BarChart3,
             href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSearch,
             href: "/services/publication-support/journal-selection/"
         }
@@ -161,7 +167,7 @@ export default function NeurosciencePage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/neuroscience/Comprehensive-Support-for-Neuroscience-Research-Writing-and-Publication.webp"
                                 alt="Neuroscience research visualization"
                                 fill
                                 priority
@@ -201,7 +207,13 @@ export default function NeurosciencePage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

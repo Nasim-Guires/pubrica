@@ -56,26 +56,32 @@ export default function BigDataTrendsAndPublishingSection() {
     const applications = [
         {
             title: "Hospital's Information: Diagnosis, Monitoring and Analytics are Based on Data",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Hospitals-Information.webp",
             icon: Building2,
         },
         {
             title: "Banks and Insurance: Fraud Detection, Risk Management and Real-time Analytics",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Banks-and-Insurance.webp",
             icon: Landmark,
         },
         {
             title: "Retailers: Analysis of Consumer Behaviour and Forecasting Demand",
+            iconSrc: "/images/subject-matter-experts/augmented-reality/Retailers.webp",
             icon: ShoppingCart,
         },
         {
             title: "Telecoms: Network Optimisation and Use Analytics",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Telecoms.webp",
             icon: Radio,
         },
         {
             title: "Smart Cities: Traffic Management, Energy Optimisation and Analytics of IoT",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Smart-Cities.webp",
             icon: Cpu,
         },
         {
             title: "Manufacturing: Predictive Maintenance and Optimisation of Processes",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Manufacturing.webp",
             icon: Factory,
         },
     ];
@@ -86,21 +92,21 @@ export default function BigDataTrendsAndPublishingSection() {
             role: "PhD in Big Data Analytics",
             experience: "14 years of experience",
             manuscripts: "100+ manuscripts edited",
-            avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+            avatar: "/images/subject-matter-experts/big-data-hadoop/Dr.-Rajesh-Kumar-1.webp",
         },
         {
             name: "Dr. Ananya Verma",
             role: "PhD in Data Science and Hadoop Technologies",
             experience: "11 years of experience",
             manuscripts: "140+ manuscripts edited",
-            avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200",
+            avatar: "/images/subject-matter-experts/big-data-hadoop/Dr.-Ananya-Verma-1.webp",
         },
         {
             name: "Dr. Michael Thompson",
             role: "PhD in Distributed Computing and Big Data Systems",
             experience: "16 years of experience",
             manuscripts: "150+ manuscripts edited",
-            avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
+            avatar: "/images/subject-matter-experts/augmented-reality/Dr.-Robert-Klein-1.webp",
         },
     ];
 
@@ -183,7 +189,7 @@ export default function BigDataTrendsAndPublishingSection() {
                     <div className="lg:col-span-5 flex justify-center sticky top-6">
                         <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-md border border-gray-200">
                             <Image
-                                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800"
+                                src="/images/subject-matter-experts/big-data-hadoop/Big-Data-Hadoop-.webp"
                                 alt="Big Data Cloud Analytics"
                                 fill
                                 className="object-cover"
@@ -207,7 +213,7 @@ export default function BigDataTrendsAndPublishingSection() {
                 <div className="bg-white border border-gray-200 rounded-md p-6 shadow-sm flex flex-col md:flex-row gap-6 items-center">
                     <div className="relative w-40 h-52 shrink-0 border border-gray-200 shadow-sm rounded overflow-hidden bg-gray-50">
                         <Image
-                            src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/big-data-hadoop/Big-Data-Architecture-Management.webp"
                             alt="Big Data Research Journal Cover"
                             fill
                             className="object-cover"

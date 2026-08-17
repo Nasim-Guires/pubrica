@@ -43,41 +43,49 @@ export default function ProteinEngineeringPage() {
     const disciplines = [
         {
             title: "Directed Evolution",
+            iconSrc: "/images/subject-matter-experts/protein-engineering/Directed-Evolution.webp",
             description: "A technique to produce proteins that have higher stability, specificity, or catalytic efficiency than naturally occurring proteins by utilizing natural evolutionary processes through oligonucleotide-based mutagenesis and subsequent selection of the improved proteins.",
             icon: Dna,
         },
         {
             title: "Site-Directed Mutagenesis",
+            iconSrc: "/images/subject-matter-experts/protein-engineering/Site-Directed-Mutagenesis.webp",
             description: "A method of designing proteins with specific mutations to learn how function or character of specific proteins might be improved, through targeted modification of proteins for therapeutic, diagnostic, or industrial use.",
             icon: Microscope,
         },
         {
             title: "Protein Expression & Purification",
+            iconSrc: "/images/subject-matter-experts/protein-engineering/Protein-Expression-Purification.webp",
             description: "A technology used to produce large quantities of proteins through recombinant DNA technology in microbes, insects, or mammals, followed by purification methods to obtain pure protein for downstream applications.",
             icon: FlaskConical,
         },
         {
             title: "Computational Protein Design",
+            iconSrc: "/images/subject-matter-experts/protein-engineering/Computational-Protein-Design.webp",
             description: "Computational prediction and design of protein folds and stabilities for the development of new proteins for use in drug development or enzyme engineering.",
             icon: Cpu,
         },
         {
             title: "Enzyme Engineering",
+            iconSrc: "/images/subject-matter-experts/protein-engineering/Computational-Protein-Design.webp",
             description: "The manipulation of the properties of enzymes so they can be used more efficiently; the use of enzymes for industry, diagnostics, and therapeutics.",
             icon: Activity,
         },
         {
             title: "Antibody Engineering",
+            iconSrc: "/images/subject-matter-experts/protein-engineering/Antibody-Engineering.webp",
             description: "The design of monoclonal antibodies with very specific properties and characteristics (e.g., specificity, affinity, and therapeutic potential) necessary for clinical diagnostics and targeted therapies.",
             icon: ShieldCheck,
         },
         {
             title: "Synthetic Biology and Gene Synthesis",
+            iconSrc: "/images/subject-matter-experts/protein-engineering/Synthetic-Biology-and-Gene-Synthesis.webp",
             description: "The synthesis of genes to create new proteins and metabolic pathways, thus creating completely new biosynthetic pathways for the generation of high-value products for pharmaceuticals, agricultural products, and biotechnology.",
             icon: Sliders,
         },
         {
             title: "HTS (High-Throughput Screening)",
+            iconSrc: "/images/subject-matter-experts/protein-engineering/HTS-High-Throughput-Screening.webp",
             description: "Automated systems can quickly screen engineered proteins from large libraries and help identify quickly the best candidates for your own research applications, drug development, or end uses in manufacturing.",
             icon: TrendingUp,
         }
@@ -87,56 +95,56 @@ export default function ProteinEngineeringPage() {
         {
             title: "Journal Formatting",
             description: "Tailored manuscript formatting to meet specific journal guidelines.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Formatting.webp",
             icon: FileText,
             href: "/services/publication-support/journal-manuscript-formatting-services"
         },
         {
             title: "Journal Selection",
             description: "Guidance on selecting the most appropriate journals for your research.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Selection.webp",
             icon: FileSpreadsheet,
             href: "/services/publication-support/journal-selection"
         },
         {
             title: "Case Report Writing",
             description: "Assistance in drafting and editing case reports for rare diseases.",
-            image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Responding-to-Reviewers.webp",
             icon: UserCheck,
             href: "/services/physician-writing-services/case-report"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: PenTool,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Publication Support",
             description: "Complete support for publishing in high-impact journals, translating concepts into incisive reports.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biomolecular-engineering/Publication-Support-1.webp",
             icon: BookOpen,
             href: "/services/publication-support"
         },
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: FileSearch,
             href: "/services/research-services/literature-review-and-gap"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Editing-Proofreading.webp",
             icon: PenTool,
             href: "/services/editing-and-translation"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
             icon: Send,
             href: "/services/publication-support/journal-submission"
         }
@@ -217,7 +225,7 @@ export default function ProteinEngineeringPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white bg-[#a3c9bd]/30 flex items-center justify-center">
                             <Image
-                                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/protein-engineering/Protein-Engineering.webp"
                                 alt="Protein Engineering Support"
                                 fill
                                 priority
@@ -257,7 +265,13 @@ export default function ProteinEngineeringPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

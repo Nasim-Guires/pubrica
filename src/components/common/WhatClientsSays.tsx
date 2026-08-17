@@ -9,8 +9,7 @@ import Image from "next/image";
  * Component: ClientTestimonials ("What Our Client Says About Us")
  *
  * Reusable, typed testimonial carousel. Avatar + flag image slots are
- * rendered as labelled placeholder <div>s (NOT <img> / next/image) —
- * swap them for <Image /> once real assets are ready.
+ * rendered as labelled placeholder <div>s unless avatarSrc / flagSrc are set.
  */
 
 export interface Testimonial {

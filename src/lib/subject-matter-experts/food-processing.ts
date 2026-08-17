@@ -11,7 +11,9 @@ export const FOOD_PROCESSING_TESTIMONIALS: Testimonial[] = [
     authorLocation: "Germany",
     avatarLabel:
       "Portrait of Dr Andreas Müller, Food Processing Engineer from Germany",
+      avatarSrc: "/images/subject-matter-experts/biochemistry/Dr.-Sophia-Patel.webp",
     flagLabel: "Germany flag icon",
+      flagSrc: "/images/subject-matter-experts/biomonitoring/germany-.webp",
   },
   {
     id: "food-processing-2",
@@ -22,7 +24,9 @@ export const FOOD_PROCESSING_TESTIMONIALS: Testimonial[] = [
     authorLocation: "India",
     avatarLabel:
       "Portrait of Dr Kavita Sharma, Food Process Technologist from India",
+      avatarSrc: "/images/subject-matter-experts/food-processing/Dr-Kavita-Sharma.webp",
     flagLabel: "India flag icon",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "food-processing-3",
@@ -33,6 +37,8 @@ export const FOOD_PROCESSING_TESTIMONIALS: Testimonial[] = [
     authorLocation: "United States",
     avatarLabel:
       "Portrait of Professor James Walker, Food Engineering Researcher from the United States",
+      avatarSrc: "/images/subject-matter-experts/food-processing/Prof.-James-Walker.webp",
     flagLabel: "United States flag icon",
+      flagSrc: "/images/physician-writing-services/patient-education-content/united-states-of-america.png",
   },
 ];

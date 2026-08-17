@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { BookOpen, Award, Briefcase, FileText, ChevronRight, Plus, Minus } from 'lucide-react';
 
@@ -77,7 +78,7 @@ const editorsData = [
         experience: '15 years of experience',
         manuscripts: '200+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Dr.-Alexander-Lee.webp"
     },
     {
         name: 'Dr. Maria Gonzalez',
@@ -85,7 +86,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '150+ manuscripts edited',
         countryFlag: '🇪🇸',
-        avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biochemistry/Dr.-Sophia-Patel.webp"
     },
     {
         name: 'Dr. James Smith',
@@ -93,7 +94,7 @@ const editorsData = [
         experience: '13 years of experience',
         manuscripts: '180+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Dr.-James-Smith.webp"
     }
 ];
 
@@ -246,7 +247,7 @@ export default function MedicinalAndPharmaceuticalChemistrySections() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-lg border border-gray-200">
                             <img
-                                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800"
+                                src="/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Medical-and-Pharmaceutical-Chemistry.webp"
                                 alt="Clinical Applications of Medicinal Chemistry"
                                 className="w-full h-full object-cover"
                             />
@@ -272,7 +273,7 @@ export default function MedicinalAndPharmaceuticalChemistrySections() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <img
-                            src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Pharmacogenomics-Personalized-Medicine.webp"
                             alt="Journal of Medicinal Chemistry Cover"
                             className="w-full h-auto object-cover"
                         />

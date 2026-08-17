@@ -25,36 +25,43 @@ export default function PsychologyPage() {
     const disciplines = [
         {
             title: "Clinical Psychology",
+            iconSrc: "/images/subject-matter-experts/psychology/Clinical-psychology.webp",
             description: "It focuses on diagnosing and treating mental health disorders such as anxiety, depression, and schizophrenia. It combines psychotherapy, assessment, and intervention techniques to promote psychological well-being. Our clinical psychology editing ensures accuracy, clarity, and compliance with APA standards for academic publishing.",
             icon: Stethoscope,
         },
         {
             title: "Cognitive Psychology",
+            iconSrc: "/images/subject-matter-experts/psychology/Cognitive-Psychology.webp",
             description: "This branch explores mental processes such as perception, memory, learning, language, and problem-solving. Cognitive psychologists investigate how people process information and how these processes influence behavior. Our experts provide cognitive psychology writing assistance to strengthen the theoretical and methodological sections of your manuscripts.",
             icon: Brain,
         },
         {
             title: "Health Psychology",
+            iconSrc: "/images/subject-matter-experts/psychology/Clinical-psychology.webp",
             description: "It studies how psychological factors affect physical health and illness. It promotes health-enhancing behaviours, such as stress management, exercise, and nutrition. Health psychologists often collaborate with medical professionals to develop patient-centered care models.",
             icon: HeartPulse,
         },
         {
             title: "Social Psychology",
+            iconSrc: "/images/subject-matter-experts/psychology/Social-Psychology.webp",
             description: "Examines how others influence individuals’ thoughts and behaviours. It explores concepts like conformity, persuasion, prejudice, and interpersonal relationships.",
             icon: Users,
         },
         {
             title: "Neuropsychology",
+            iconSrc: "/images/subject-matter-experts/psychology/Neuropsychology.webp",
             description: "It bridges psychology and neuroscience, studying the relationship between brain function and behavior. It plays a vital role in understanding brain injuries, neurodegenerative disorders, and cognitive rehabilitation.",
             icon: Activity,
         },
         {
             title: "Developmental Psychology",
+            iconSrc: "/images/subject-matter-experts/psychology/Developmental-Psychology.webp",
             description: "It studies how people grow and change throughout life, from infancy to old age. Topics include cognitive development, emotional regulation, and social learning.",
             icon: GraduationCap,
         },
         {
             title: "Educational Psychology",
+            iconSrc: "/images/subject-matter-experts/psychology/Educational-Psychology.webp",
             description: "Focuses on how people learn and retain knowledge. It explores teaching methods, learning styles, and motivation. Educational psychologists work closely with schools and institutions to develop effective learning environments and address learning difficulties such as dyslexia or ADHD.",
             icon: BookOpenCheck,
         }
@@ -64,56 +71,56 @@ export default function PsychologyPage() {
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: Search,
             href: "/services/research-services/literature-review-and-gap"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: FileText,
             href: "/services/editing-and-translation"
         },
         {
             title: "Peer-Reviewing Services",
             description: "Comprehensive review to refine and validate your research pre-submission.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Cpu,
             href: "/services/publication-support/peer-review-pre-submission"
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: PenTool,
             href: "/services/editing-and-translation"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: Layers,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: FileSearch,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1542744094-3a31b272c490?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BookOpen,
             href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: UserCheck,
             href: "/services/publication-support/journal-selection"
         }
@@ -166,7 +173,7 @@ export default function PsychologyPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white bg-[#a3c9bd]/30 flex items-center justify-center">
                             <Image
-                                src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/psychology/Empowering-psychological.webp"
                                 alt="Psychology research visualization"
                                 fill
                                 priority
@@ -206,7 +213,13 @@ export default function PsychologyPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

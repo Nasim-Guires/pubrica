@@ -22,41 +22,49 @@ export default function MolecularEngineeringPage() {
     const disciplines = [
         {
             title: "Molecular Design and Synthesis",
+            iconSrc: "/images/subject-matter-experts/molecular-engineering/Molecular-Design-and-Synthesis.webp",
             description: "Custom designs are created for molecules and materials in healthcare, energy and many other fields.",
             icon: Search
         },
         {
             title: "Nanotechnology",
+            iconSrc: "/images/subject-matter-experts/molecular-engineering/Nanotechnology-1.webp",
             description: "Nanoscale materials and devices are used to improve drug delivery, diagnostics, and environmentally friendly technologies.",
             icon: TrendingUp
         },
         {
             title: "Biomolecular Engineering",
+            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Biomolecular-Engineering.webp",
             description: "The creation and optimization of biomolecules, such as proteins, enzymes, and DNA, create technologies used in the development of biotechnology, medicine, and industrial processes.",
             icon: FileText
         },
         {
             title: "Computational Modelling",
+            iconSrc: "/images/subject-matter-experts/molecular-engineering/Computational-Modelling.webp",
             description: "Advanced computer tools allow for predicting the behaviour of molecules, which in turn develops new materials and therapies.",
             icon: Database
         },
         {
             title: "Synthetic Biology",
+            iconSrc: "/images/subject-matter-experts/molecular-engineering/Synthetic-Biology-2.webp",
             description: "Synthetic biology is a means by which new biological systems and sustainable solutions are advanced using genetic engineering and synthetic pathways.",
             icon: AlertTriangle
         },
         {
             title: "Advanced Bioprocessing",
+            iconSrc: "/images/subject-matter-experts/molecular-engineering/Advanced-Bioprocessing.webp",
             description: "The innovation of bioprocessing techniques enables the efficient manufacture of pharmaceuticals, biofuels, and other biological-based products.",
             icon: ShieldAlert
         },
         {
             title: "Material Science",
+            iconSrc: "/images/subject-matter-experts/molecular-engineering/Material-Science.webp",
             description: "The molecular architecture of the next generation of materials includes “smart” materials, as well as self-healing material systems.",
             icon: Layers
         },
         {
             title: "Environmental Engineering",
+            iconSrc: "/images/subject-matter-experts/molecular-engineering/Environmental-Engineering.webp",
             description: "Applying molecular engineering principles to develop solutions for pollution control, waste management, and resource conservation.",
             icon: Cpu
         }
@@ -66,63 +74,63 @@ export default function MolecularEngineeringPage() {
         {
             title: "Journal Formatting",
             description: "Tailored manuscript formatting to meet specific journal guidelines.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Formatting.webp",
             icon: FileText,
             href: "/services/publication-support/journal-manuscript-formatting-services"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Editing-Proofreading.webp",
             icon: PenTool,
             href: "/services/editing-and-translation"
         },
         {
             title: "Artwork Editing",
             description: "Professional visuals for your figures, tables, and graphical abstracts.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biotechnology/Artwork-Editing.webp",
             icon: FileSearch,
             href: "/services/publication-support/art-work-preparation"
         },
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: Cpu,
             href: "/services/research-services/"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
             icon: BarChart3,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Publication Support",
             description: "Complete support for publishing in high-impact journals, translating concepts into incisive reports.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Selection.webp",
             icon: Layers,
             href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BarChart3,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: FileSearch,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: BookOpen,
             href: "/services/research-services/literature-review-and-gap"
         }
@@ -178,7 +186,7 @@ export default function MolecularEngineeringPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/molecular-engineering/Molecular-Engineering.webp"
                                 alt="Molecular Engineering research visualization"
                                 fill
                                 priority
@@ -218,7 +226,13 @@ export default function MolecularEngineeringPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 import {
     Activity,
@@ -21,6 +22,7 @@ export default function CoreDisciplinesBiomedicalEngineering() {
     const disciplines = [
         {
             title: "Biomechanics",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Biomechanics.webp",
             description:
                 "Biomechanics applies mechanical engineering principles to biological systems. It helps analyse movement, tissue mechanics, orthopaedic implant performance, and sports injury prevention. Our biomechanics research writing and editing services support detailed modelling, gait analysis research, and computational simulations.",
             category: "Movement & Mechanics",
@@ -28,6 +30,7 @@ export default function CoreDisciplinesBiomedicalEngineering() {
         },
         {
             title: "Biomaterials and Tissue Engineering",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Biomaterials-and-Tissue-Engineering.webp",
             description:
                 "This discipline focuses on biocompatible materials used in implants, prosthetics, regenerative medicine, and drug delivery systems. Pubrica’s biomaterials manuscript support ensures strong scientific clarity, regulatory alignment, and impactful presentation of experimental results.",
             category: "Materials & Scaffolds",
@@ -35,6 +38,7 @@ export default function CoreDisciplinesBiomedicalEngineering() {
         },
         {
             title: "Biomedical Imaging and Instrumentation",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Biomedical-Imaging-and-Instrumentation.webp",
             description:
                 "Innovations in MRI, CT, PET, ultrasound, and optical imaging rely heavily on engineering precision. Our Biomedical Engineering editing services help researchers refine complex imaging studies, segmentation algorithms, and diagnostic research papers for high-impact journals.",
             category: "Diagnostic Systems",
@@ -42,6 +46,7 @@ export default function CoreDisciplinesBiomedicalEngineering() {
         },
         {
             title: "Medical Devices and Therapeutic Technologies",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Medical-Devices-and-Therapeutic-Technologies.webp",
             description:
                 "From ventilators and infusion pumps to surgical robots and neuroprosthetics, medical device innovation demands rigorous documentation and research accuracy. Pubrica supports medical device research writing, regulatory-focused documentation, and publication support for biomedical engineering.",
             category: "Devices & Robotics",
@@ -49,6 +54,7 @@ export default function CoreDisciplinesBiomedicalEngineering() {
         },
         {
             title: "Bioinformatics and Computational Biology",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Bioinformatics-and-Computational-Biology.webp",
             description:
                 "This field involves analysing biological datasets, developing predictive models, and supporting precision medicine. Our experts in computational Biomedical Engineering support with algorithm documentation, modelling papers, and AI-based diagnostic research.",
             category: "Computational Analysis",
@@ -56,6 +62,7 @@ export default function CoreDisciplinesBiomedicalEngineering() {
         },
         {
             title: "Rehabilitation Engineering",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/RehabilitationEngineering.webp",
             description:
                 "It develops technologies such as exoskeletons, prosthetics, communication tools, and therapeutic robots to enhance mobility and independence. Pubrica provides specialised writing, editing, and publication support for rehabilitation-focused studies.",
             category: "Assistive Technology",
@@ -95,7 +102,13 @@ export default function CoreDisciplinesBiomedicalEngineering() {
                                             {item.title}
                                         </h3>
                                         <div className="w-10 h-10 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 group-hover:bg-[#0d3630]/5 group-hover:border-[#0d3630]/20 transition-all">
+                                            {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                            <span className="relative w-5 h-5">
+                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                            </span>
+                                        ) : (
                                             <IconComponent className="w-5 h-5 text-[#0d3630]" />
+                                        )}
                                         </div>
                                     </div>
 

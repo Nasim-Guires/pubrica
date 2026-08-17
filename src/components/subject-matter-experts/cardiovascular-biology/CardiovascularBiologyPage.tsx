@@ -30,61 +30,73 @@ export default function CardiovascularBiologyPage() {
     const disciplines = [
         {
             title: "Angiogenesis",
+            iconSrc: "/images/subject-matter-experts/cardiovascular-biology/Angiogenesis.png",
             description: "Study of new blood vessel formation.",
             icon: GitBranch
         },
         {
             title: "Atherosclerosis",
+            iconSrc: "/images/subject-matter-experts/cardiovascular-biology/Atherosclerosis.png",
             description: "Research on buildup of fats and cholesterol in artery walls.",
             icon: Shield
         },
         {
             title: "Calcification",
+            iconSrc: "/images/subject-matter-experts/cardiovascular-biology/Calcification.png",
             description: "Study of calcium deposits in the cardiovascular system.",
             icon: Heart
         },
         {
             title: "Bioactive Lipids and Receptors",
+            iconSrc: "/images/subject-matter-experts/cardiovascular-biology/Bioactive-Lipids-and-Receptors.png",
             description: "Investigation of lipids and their receptors in cardiovascular function.",
             icon: Radio
         },
         {
             title: "Cardiac Hypertrophy",
+            iconSrc: "/images/subject-matter-experts/cardiovascular-biology/Cardiac-Hypertrophy.png",
             description: "Research on the thickening of the heart muscle.",
             icon: Activity
         },
         {
             title: "Cardiac Regeneration",
+            iconSrc: "/images/subject-matter-experts/cardiovascular-biology/Cardiac-Regeneration.png",
             description: "Investigating methods to regenerate damaged heart tissues.",
             icon: Flame
         },
         {
             title: "Cardiovascular Genetics",
+            iconSrc: "/images/subject-matter-experts/cardiovascular-biology/Cardiovascular-Genetics.png",
             description: "Research on genetic factors influencing cardiovascular health.",
             icon: Dna
         },
         {
             title: "Coagulation",
+            iconSrc: "/images/subject-matter-experts/cardiovascular-biology/Coagulation.png",
             description: "Study of blood clotting mechanisms and related disorders.",
             icon: Droplets
         },
         {
             title: "Hormones and Receptors",
+            iconSrc: "/images/subject-matter-experts/cardiovascular-biology/Hormones-and-Receptors.png",
             description: "Research on hormonal regulation and receptor activity in the heart.",
             icon: Zap
         },
         {
             title: "Platelets",
+            iconSrc: "/images/subject-matter-experts/cardiovascular-biology/Platelets.png",
             description: "Study of platelet function in cardiovascular diseases.",
             icon: Disc
         },
         {
             title: "Signal Transduction",
+            iconSrc: "/images/subject-matter-experts/cardiovascular-biology/Signal-Transduction.png",
             description: "Investigation of cellular signalling pathways in cardiovascular systems.",
             icon: Cpu
         },
         {
             title: "Lipid/Cholesterol Metabolism",
+            iconSrc: "/images/subject-matter-experts/cardiovascular-biology/Lipid_Cholesterol-Metabolism.png",
             description: "Study of lipid and cholesterol metabolism in cardiovascular health.",
             icon: Scale
         }
@@ -94,63 +106,63 @@ export default function CardiovascularBiologyPage() {
         {
             title: "Journal Formatting",
             description: "Tailored manuscript formatting to meet specific journal guidelines.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: FileText,
             href: "/services/publication-support/journal-manuscript-formatting-services"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/editing-and-translation"
         },
         {
             title: "Artwork Editing",
             description: "Professional visuals for your figures, tables, and graphical abstracts.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: CheckCircle2,
             href: "/services/publication-support/art-work-preparation"
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: Languages,
             href: "/services/editing-and-translation/"
         },
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Search,
             href: "/services/research-services"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSearch,
             href: "/services/publication-support/journal-selection"
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Send,
             href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Manuscript Editing",
             description: "Expert editing to ensure technical accuracy, scientific integrity, and compliance with target journal standards.",
-            image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: FileText,
             href: "/services/editing-and-translation/manuscript-editing"
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: Database,
             href: "/services/medical-data-collection"
         }
@@ -215,7 +227,7 @@ export default function CardiovascularBiologyPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/cardiovascular-biology/Comprehensive-Research-Writing-and-Publication-Support-in-Cardiovascular-Biology.webp"
                                 alt="Cardiovascular biology research model visual"
                                 fill
                                 priority
@@ -255,7 +267,13 @@ export default function CardiovascularBiologyPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

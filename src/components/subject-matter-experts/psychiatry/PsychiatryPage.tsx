@@ -29,46 +29,55 @@ export default function PsychiatryPage() {
     const disciplines = [
         {
             title: "Clinical Psychiatry and Diagnosis",
+            iconSrc: "/images/subject-matter-experts/psychiatry/Clinical-Psychiatry-and-Diagnosis.webp",
             description: "The assessment, diagnosis, and treatment of mental health issues through standardized clinical models.",
             icon: Activity,
         },
         {
             title: "Psychotherapy and Counseling",
+            iconSrc: "/images/subject-matter-experts/psychiatry/Psychotherapy-and-Counseling.webp",
             description: "Evidence-based therapeutic techniques, such as CBT, DBT, and psychodynamic therapy, for the treatment and management of mental health issues.",
             icon: HeartHandshake,
         },
         {
             title: "Neuropsychiatry",
+            iconSrc: "/images/subject-matter-experts/psychiatry/Neuropsychiatry.webp",
             description: "The study of the correlation between the brain and behavior, and the associated neurological and psychiatric conditions.",
             icon: Brain,
         },
         {
             title: "Child and Adolescent Psychiatry",
+            iconSrc: "/images/subject-matter-experts/psychiatry/Child-and-Adolescent-Psychiatry.webp",
             description: "The diagnosis and treatment of mental health issues among children and adolescents.",
             icon: Users,
         },
         {
             title: "Addiction Psychiatry",
+            iconSrc: "/images/subject-matter-experts/psychiatry/Addiction-Psychiatry.webp",
             description: "The assessment, diagnosis, and treatment of substance abuse and behavioral addictions through therapeutic and counseling techniques.",
             icon: ShieldAlert,
         },
         {
             title: "Geriatric Psychiatry",
+            iconSrc: "/images/subject-matter-experts/psychiatry/Geriatric-Psychiatry.webp",
             description: "The focus is on the mental health issues among the elderly, including dementia and cognitive impairments associated with aging.",
             icon: UserCheck,
         },
         {
             title: "Psychopharmacology",
+            iconSrc: "/images/subject-matter-experts/psychiatry/Psychopharmacology.webp",
             description: "The study and application of medications and drugs used to treat psychiatric conditions and disorders.",
             icon: Pill,
         },
         {
             title: "Behavioral and Cognitive Sciences",
+            iconSrc: "/images/subject-matter-experts/psychiatry/Behavioral-and-Cognitive-Sciences.webp",
             description: "The study and understanding of human behavior, cognition, and emotions.",
             icon: Cpu,
         },
         {
             title: "Community and Social Psychiatry",
+            iconSrc: "/images/subject-matter-experts/psychiatry/Community-and-Social-Psychiatry.webp",
             description: "The focus is on the mental health issues among communities and the social determinants of mental illnesses.",
             icon: Globe,
         }
@@ -78,63 +87,63 @@ export default function PsychiatryPage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: Search,
             href: "/services/research-services"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts through our Chemical engineering editing services.",
-            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/editing-and-translation"
         },
         {
             title: "Publication Support",
             description: "Complete support for publishing in high-impact journals, translating concepts into incisive reports.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Send,
             href: "/services/publication-support"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: BookOpen,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Artwork Editing",
             description: "Professional visuals for your figures, tables, and graphical abstracts.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: Palette,
             href: "/services/publication-support/art-work-preparation"
         },
         {
             title: "Journal Formatting",
             description: "Tailored manuscript formatting to meet specific journal guidelines.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: FileSpreadsheet,
             href: "/services/publication-support/journal-manuscript-formatting-services"
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: ImageIcon,
             href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Layers,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: Layers,
             href: "/services/research-services/literature-review-and-gap"
         }
@@ -190,7 +199,7 @@ export default function PsychiatryPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white bg-[#a3c9bd]/30 flex items-center justify-center">
                             <Image
-                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/psychiatry/Psychiatry.webp"
                                 alt="Psychiatry research and clinical support"
                                 fill
                                 priority
@@ -230,7 +239,13 @@ export default function PsychiatryPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

@@ -72,8 +72,7 @@ export default function AnimalScienceContinuedSections() {
       name: "Warvien",
       degree: "PhD in Animal Science",
       flag: "🇬🇧",
-      avatar:
-        "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/animal-science/warvien.png",
       experience: "14 years of experience",
       manuscripts: "100+ manuscripts edited",
     },
@@ -81,8 +80,7 @@ export default function AnimalScienceContinuedSections() {
       name: "Victor",
       degree: "Masters in Animal Nutrition",
       flag: "🇺🇸",
-      avatar:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/animal-science/victor.png",
       experience: "8 years of experience",
       manuscripts: "70+ manuscripts edited",
     },
@@ -90,8 +88,7 @@ export default function AnimalScienceContinuedSections() {
       name: "Karrel",
       degree: "PhD in Animal Science",
       flag: "🇺🇸",
-      avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/animal-science/karrel.png",
       experience: "5 years of experience",
       manuscripts: "55+ manuscripts edited",
     },
@@ -194,7 +191,7 @@ export default function AnimalScienceContinuedSections() {
             {/* Image */}
             <div className="md:col-span-5 relative h-72 md:h-80 w-full rounded overflow-hidden shadow-sm">
               <Image
-                src="https://images.unsplash.com/photo-1629853921132-4752c0022f1c?auto=format&fit=crop&q=80&w=800"
+                src="/images/subject-matter-experts/animal-science/Empowering-Research-Excellence-in-Animal-Science-through-Expert-Guidance.png"
                 alt="Veterinarian examining a rabbit with a stethoscope"
                 fill
                 className="object-cover"
@@ -210,7 +207,7 @@ export default function AnimalScienceContinuedSections() {
           {/* Left Side: Image with Text Overlay */}
           <div className="md:w-5/12 relative min-h-[300px]">
             <Image
-              src="https://images.unsplash.com/photo-1574621100236-d2506b3e34b9?auto=format&fit=crop&q=80&w=800"
+              src="/images/subject-matter-experts/animal-science/Genetics-and-Breeding.png"
               alt="Laboratory research with rabbit"
               fill
               className="object-cover"
@@ -273,7 +270,7 @@ export default function AnimalScienceContinuedSections() {
                <div className="w-full relative h-20">
                  {/* Geometric Cow Image Approximation */}
                  <Image 
-                   src="https://images.unsplash.com/photo-1546445317-29f4545e9d53?auto=format&fit=crop&q=80&w=400" 
+                   src="/images/subject-matter-experts/animal-science/Nutrition-and-Feed-Technology.png" 
                    alt="Cow abstract" 
                    fill 
                    className="object-cover mix-blend-overlay opacity-50"

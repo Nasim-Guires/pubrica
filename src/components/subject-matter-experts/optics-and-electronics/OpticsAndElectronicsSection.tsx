@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight } from 'lucide-react';
 
@@ -65,7 +66,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '140+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biomedical-imaging/Prof.-Chen-Li.webp"
     },
     {
         name: 'Dr. Elena Kovacs',
@@ -73,7 +74,7 @@ const editorsData = [
         experience: '13 years of experience',
         manuscripts: '155+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/cosmeceuticals/Dr.-Laura-Kim-1.webp"
     },
     {
         name: 'Dr. Vikram Iyer',
@@ -81,7 +82,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '125+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biophysics/Dr.-Alexander-Weiss.webp"
     }
 ];
 
@@ -149,7 +150,7 @@ export default function OpticsAndElectronicsSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/optics-and-electronics/Optics-and-Electronics.webp"
                             alt="Optics and electronics research setup"
                             className="w-full h-auto object-cover"
                         />
@@ -229,7 +230,7 @@ export default function OpticsAndElectronicsSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/optics-and-electronics/Photonics-and-Optical-Systems.webp"
                             alt="Clinical optics and electronics setup"
                             className="w-full h-auto object-cover"
                         />
@@ -254,7 +255,7 @@ export default function OpticsAndElectronicsSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/optics-and-electronics/Optoelectronics.webp"
                             alt="BMC Medical Imaging Cover"
                             className="w-full h-auto object-cover"
                         />
