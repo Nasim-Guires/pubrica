@@ -18,14 +18,14 @@ export default function BiomolecularExpertiseServicesComponent() {
   const services = [
     {
       title: "Journal Formatting",
-            iconSrc: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
+      iconSrc: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
       desc: "Tailored manuscript formatting to meet specific journal guidelines.",
       img: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
       icon: FileText,
     },
     {
       title: "Editing & Proofreading",
-            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Genetic-Protein-Engineering.webp",
+      iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Genetic-Protein-Engineering.webp",
       desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
       img: "/images/subject-matter-experts/biomolecular-engineering/Biomolecular-Engineering.webp",
       icon: Edit3,
@@ -38,14 +38,14 @@ export default function BiomolecularExpertiseServicesComponent() {
     },
     {
       title: "Publication Support",
-            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Bioprocess-Engineering.webp",
+      iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Bioprocess-Engineering.webp",
       desc: "Complete support for publishing in high-impact journals, translating concepts into incisive reports.",
       img: "/images/subject-matter-experts/biomolecular-engineering/Publication-Support-1.webp",
       icon: CheckCircle2,
     },
     {
       title: "Research Services",
-            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Molecular-Diagnostics-and-Therapeutics.webp",
+      iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Molecular-Diagnostics-and-Therapeutics.webp",
       desc: "Expert guidance on project planning, execution, and data analysis.",
       img: "/images/subject-matter-experts/biomolecular-engineering/Research-Services.webp",
       icon: Search,
@@ -58,21 +58,21 @@ export default function BiomolecularExpertiseServicesComponent() {
     },
     {
       title: "Graphical Abstract",
-            iconSrc: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
+      iconSrc: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
       desc: "Engaging summaries of your research in a single, informative graphic.",
       img: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
       icon: PieChart,
     },
     {
       title: "Scientific Writing",
-            iconSrc: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
+      iconSrc: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
       desc: "Crafting clear, precise, and publication-ready research manuscripts.",
       img: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
       icon: PenTool,
     },
     {
       title: "Literature Review and Gap Analysis",
-            iconSrc: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
+      iconSrc: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
       desc: "Identifying research gaps and providing comprehensive literature reviews.",
       img: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
       icon: Layers,
@@ -82,7 +82,7 @@ export default function BiomolecularExpertiseServicesComponent() {
   return (
     <div className="font-sans text-gray-800 bg-white py-12 px-4">
       <div className="max-w-6xl mx-auto space-y-10">
-        
+
         {/* Header Section */}
         <div className="space-y-4 max-w-4xl">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0d3630] border-b-2 border-gray-800 inline-block pb-1">
@@ -116,7 +116,18 @@ export default function BiomolecularExpertiseServicesComponent() {
                 <div className="relative p-5 pt-8 flex-1 flex flex-col items-center text-center bg-white">
                   {/* Floating Icon */}
                   <div className="absolute -top-7 bg-white p-3 rounded-full shadow-md border border-gray-100 transition-all duration-300 group-hover:bg-[#0d3630] group-hover:text-white group-hover:border-[#0d3630]">
-                    {(item as any).iconSrc ? <span className="relative w-6 h-6 shrink-0"><Image src={(item as any).iconSrc} alt="" fill className="object-contain" /></span> : <Icon className="w-5 h-5 text-[#0d3630] transition-colors duration-300 group-hover:text-white" />}
+                    {service.iconSrc ? (
+                      <span className="relative w-6 h-6 shrink-0">
+                        <Image
+                          src={service.iconSrc}
+                          alt=""
+                          fill
+                          className="object-contain"
+                        />
+                      </span>
+                    ) : (
+                      <Icon className="w-5 h-5 text-[#0d3630] transition-colors duration-300 group-hover:text-white" />
+                    )}
                   </div>
 
                   {/* Title */}

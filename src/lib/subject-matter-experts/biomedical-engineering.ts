@@ -24,6 +24,7 @@ export interface DisciplineData {
   title: string;
   description: string;
   icon: LucideIcon;
+  iconSrc?: string;
   expandableTitle: string;
   expandableContent: string;
   links?: DisciplineLink[];

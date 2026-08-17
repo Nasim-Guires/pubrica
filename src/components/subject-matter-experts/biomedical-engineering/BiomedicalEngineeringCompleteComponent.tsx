@@ -237,7 +237,18 @@ export default function BiomedicalEngineeringCompleteComponent() {
 
                                     <div className="relative p-5 pt-8 flex-1 flex flex-col items-center text-center bg-white">
                                         <div className="absolute -top-7 bg-white p-3 rounded-full shadow-md border border-gray-100 transition-all duration-300 group-hover:bg-[#0d3630] group-hover:text-white group-hover:border-[#0d3630]">
-                                            {(item as any).iconSrc ? <span className="relative w-6 h-6 shrink-0"><Image src={(item as any).iconSrc} alt="" fill className="object-contain" /></span> : <Icon className="w-5 h-5 text-[#0d3630] transition-colors duration-300 group-hover:text-white" />}
+                                            {service.iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image
+                                                        src={service.iconSrc}
+                                                        alt=""
+                                                        fill
+                                                        className="object-contain"
+                                                    />
+                                                </span>
+                                            ) : (
+                                                <Icon className="w-5 h-5 text-[#0d3630] transition-colors duration-300 group-hover:text-white" />
+                                            )}
                                         </div>
 
                                         <h3 className="font-bold text-[#0d3630] text-sm mb-1 transition-colors duration-300 group-hover:text-emerald-800">
@@ -276,8 +287,8 @@ export default function BiomedicalEngineeringCompleteComponent() {
                                     key={idx}
                                     onClick={() => setActiveTrendTab(idx)}
                                     className={`py-3 px-2 transition-all border-r border-b sm:border-b-0 border-gray-200 last:border-r-0 ${activeTrendTab === idx
-                                            ? "bg-[#0d3630] text-white shadow-inner"
-                                            : "text-gray-700 hover:bg-gray-100"
+                                        ? "bg-[#0d3630] text-white shadow-inner"
+                                        : "text-gray-700 hover:bg-gray-100"
                                         }`}
                                 >
                                     {trend.title}
