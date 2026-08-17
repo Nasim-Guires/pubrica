@@ -136,7 +136,7 @@ export default function ScientificMedicalCommunication() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border-l-8 border-b-8 border-[#133c3f]">
               <Image
-                src="/images/medical-scientists-working.jpg"
+                src="/images/research-services/experimental-design/Ensure-the-Success-of-Your-Research-with-Pubricas-Experimental-Design-Services.webp"
                 alt="Medical scientists discussing research results on laptop"
                 fill
                 className="object-cover"
@@ -160,21 +160,13 @@ export default function ScientificMedicalCommunication() {
               {/* Back Card Image */}
               <div className="absolute top-0 left-0 w-3/4 h-2/3 rounded-xl overflow-hidden shadow-md z-10 border border-gray-200">
                 <Image
-                  src="/images/compliance-laptop.jpg"
+                  src="/images/scientific-communication/Why-Scientific-Medical-Communication-Matters.webp"
                   alt="Compliance and regulation guidelines on laptop screen"
                   fill
                   className="object-cover"
                 />
               </div>
-              {/* Front Card Image */}
-              <div className="absolute bottom-0 right-0 w-3/4 h-2/3 rounded-xl overflow-hidden shadow-xl z-20 border-2 border-white">
-                <Image
-                  src="/images/data-analytics-dashboard.jpg"
-                  alt="Data analysis charts and graph dashboard"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <div className="absolute bottom-0 right-0 w-3/4 h-2/3 rounded-xl overflow-hidden shadow-xl z-20 border-2 border-white hidden" aria-hidden="true" />
             </div>
           </div>
 

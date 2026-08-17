@@ -1,6 +1,7 @@
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 
 type ServiceFeature = {
@@ -11,27 +12,27 @@ type ServiceFeature = {
 
 const serviceFeatures: ServiceFeature[] = [
     {
-        icon: 'WCAG Icon', // Placeholder for SVG/Image
+        icon: '/images/education-editorial-service/accessibility-compliance/WCAG-Accessibility-Compliance.webp',
         title: 'WCAG Accessibility Compliance',
         description: 'Our firm guarantees that our written and submitted works are following the Web Content Accessibility...',
     },
     {
-        icon: 'Section 508 Icon',
+        icon: '/images/education-editorial-service/accessibility-compliance/Section-508-Compliance.webp',
         title: 'Section 508 Compliance',
         description: 'The experts that we employ will prepare all your documentation in accordance with the Section...',
     },
     {
-        icon: 'Publisher-Specific Icon',
+        icon: '/images/education-editorial-service/accessibility-compliance/Publisher-Specific-Accessibility-Compliance.webp',
         title: 'Publisher-Specific Accessibility Compliance',
         description: 'The way each publisher defines accessibility is different, which creates a challenge when trying to find...',
     },
     {
-        icon: 'Quality Assurance Icon',
+        icon: '/images/education-editorial-service/accessibility-compliance/Quality-Assurance-and-Accessibility-Validation.webp',
         title: 'Quality Assurance and Accessibility Validation',
         description: 'Every document goes through an extensive review and validation process to make sure that it is...',
     },
     {
-        icon: 'Accessible Document Icon',
+        icon: '/images/education-editorial-service/accessibility-compliance/Accessible-Document-Formatting.webp',
         title: 'Accessible Document Formatting',
         description: 'Pubrica structures your documents using semantic headings, styles, and tags to support screen readers and...',
     },
@@ -89,17 +90,15 @@ const AccessibilityCompliancePage: NextPage = () => {
                             </div>
                         </div>
 
-                        {/* Image Section (as requested: div placeholder) */}
-                        <div className="bg-gray-100 rounded-lg p-6 flex items-center justify-center shadow-inner aspect-[4/3] relative overflow-hidden">
-                            {/* This div represents the 'Compliance' image from the screenshot */}
-                            <div className="absolute inset-4 bg-white rounded-lg shadow-lg flex flex-col p-4 border border-gray-200">
-                                <div className="flex-grow bg-gray-50 rounded mb-3 relative">
-                                    {/* Simulate image content */}
-                                    <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium">Meeting compliance standards</div>
-                                </div>
-                                <div className="h-10 w-2/3 bg-gray-200 rounded flex items-center px-3 text-sm text-gray-600 font-mono border border-gray-300">
-                                    Compliance
-                                </div>
+                        <div className="rounded-lg shadow-inner aspect-[4/3] relative overflow-hidden bg-[#0b3b2c] p-4">
+                            <div className="relative h-full w-full overflow-hidden rounded-lg">
+                                <Image
+                                    src="/images/education-editorial-service/accessibility-compliance/Refine-Your-Manuscripts-with-Professional-Accessibility-Compliance.webp"
+                                    alt="Refine Your Manuscripts with Professional Accessibility Compliance"
+                                    fill
+                                    className="object-cover"
+                                    sizes="(max-width:768px)100vw,50vw"
+                                />
                             </div>
                         </div>
                     </section>
@@ -116,10 +115,14 @@ const AccessibilityCompliancePage: NextPage = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                             {serviceFeatures.map((service, index) => (
                                 <article key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                                    <div className="w-16 h-16 mb-6 bg-[#e6f2f2] rounded-full flex items-center justify-center text-[#1a3a3a] border-4 border-white ring-2 ring-[#1a3a3a]/10">
-                                        {/* Icon Placeholder - In real app, use next/image or SVG component */}
-                                        <span className="sr-only">{service.icon}</span>
-                                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                                    <div className="w-16 h-16 mb-6 relative">
+                                        <Image
+                                            src={service.icon}
+                                            alt={service.title}
+                                            fill
+                                            className="object-contain"
+                                            sizes="64px"
+                                        />
                                     </div>
                                     <h3 className="text-xl font-semibold text-[#1a3a3a] mb-3">{service.title}</h3>
                                     <p className="text-gray-600 text-base flex-grow">{service.description}</p>

@@ -11,7 +11,7 @@ export const permissionAndMetadataServicesWhoWeServeData = {
         "This streamlines the submission process and enhances manuscript credibility.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/permission-and-metadata-services/researchers-submitting-manuscripts-to-international-journals.webp",
+        "/images/academic-editorial-services/permission-and-metadata-services/Researchers-submitting-manuscripts-to-international-journals.png",
     },
     {
       title: "Postgraduate and doctoral students preparing theses",
@@ -20,7 +20,7 @@ export const permissionAndMetadataServicesWhoWeServeData = {
         "This facilitates smoother thesis submission and archiving.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/permission-and-metadata-services/postgraduate-and-doctoral-students-preparing-theses.webp",
+        "/images/academic-editorial-services/permission-and-metadata-services/Postgraduate-and-doctoral-students-preparing-theses.png",
     },
     {
       title: "Research groups managing datasets and supplementary materials",
@@ -29,7 +29,7 @@ export const permissionAndMetadataServicesWhoWeServeData = {
         "This ensures reproducibility and seamless data sharing.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/permission-and-metadata-services/research-groups-managing-datasets-and-supplementary-materials.webp",
+        "/images/academic-editorial-services/permission-and-metadata-services/Research-groups-managing-datasets-and-supplementary-materials.png",
     },
     {
       title: "Authors preparing book chapters or monographs",
@@ -37,7 +37,7 @@ export const permissionAndMetadataServicesWhoWeServeData = {
         "Authors receive support in acquiring permissions for figures, tables, or excerpts and in structuring metadata for each chapter, ensuring smooth publication and compliance.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/permission-and-metadata-services/authors-preparing-book-chapters-or-monographs.webp",
+        "/images/academic-editorial-services/permission-and-metadata-services/Authors-preparing-book-chapters-or-monographs.png",
     },
     {
       title: "Systematic review teams",
@@ -46,7 +46,7 @@ export const permissionAndMetadataServicesWhoWeServeData = {
         "This streamlines the review process and ensures ethical compliance.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/permission-and-metadata-services/systematic-review-teams.webp",
+        "/images/academic-editorial-services/permission-and-metadata-services/Systematic-review-teams.png",
     },
     {
       title: "Publishers requiring metadata support",
@@ -54,7 +54,7 @@ export const permissionAndMetadataServicesWhoWeServeData = {
         "Publishers benefit from our expertise in generating precise metadata and obtaining necessary permissions, enabling efficient cataloguing and improved content discoverability.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/permission-and-metadata-services/publishers-requiring-metadata-support.webp",
+        "/images/academic-editorial-services/permission-and-metadata-services/Publishers-requiring-metadata-support.png",
     },
   ],
 };
@@ -68,33 +68,33 @@ export const permissionAndMetadataServicesTestimonialData = {
   testimonials: [
     {
       image:
-        "/images/services/academic-editorial-services/permission-and-metadata-services/testimonials/european-journal-of-internal-medicine.webp",
+        "/images/academic-editorial-services/permission-and-metadata-services/european-journal-of-internal-medicine-1.png",
       quote:
         "Pubrica’s Permission & Metadata Services made the publication process seamless. They handled all copyright permissions efficiently, ensuring my manuscript met journal standards without delays. Truly professional and reliable.",
       name: "Dr. Ananya Mehta",
       designation: "Academic Researcher",
       organization: "India",
-      flag: "/images/flags/india.webp",
+      flag: "/images/editing-and-translation/manuscript-editing/india.png",
     },
     {
       image:
-        "/images/services/academic-editorial-services/permission-and-metadata-services/testimonials/plos-one.webp",
+        "/images/academic-editorial-services/permission-and-metadata-services/plos-one-1-1.png",
       quote:
         "Pubrica’s Permission & Metadata Services are exceptional. They not only manage copyright issues but also optimize metadata for smoother indexing and discoverability. Highly recommended for any author or publisher.",
       name: "Mr. Arjun Das",
       designation: "Journal Editor",
       organization: "Australia",
-      flag: "/images/flags/australia.webp",
+      flag: "/images/continuing-medical-education-cme-content-development/australia-.png",
     },
     {
       image:
-        "/images/services/academic-editorial-services/permission-and-metadata-services/testimonials/international-journal-of-cardiology.webp",
+        "/images/academic-editorial-services/permission-and-metadata-services/international-journal-of-cardialogy-.png",
       quote:
         "The team ensured that all permissions were secured and metadata perfectly compiled. Their support made my research article publication-ready and completely compliant with international journal requirements.",
       name: "Dr. Sneha Verma",
       designation: "Medical Researcher",
       organization: "United States",
-      flag: "/images/flags/united-states.webp",
+      flag: "/images/physician-writing-services/patient-education-content/united-states-of-america.png",
     },
   ],
 };

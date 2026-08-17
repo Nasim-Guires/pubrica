@@ -11,7 +11,7 @@ export const revisioningAndLocalisationServiceWhoWeServeData = {
         "Our services ensure your research is clearly articulated, culturally adapted, and publication-ready, increasing your chances of acceptance in high-impact journals.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/revisioning-and-localisation-service/academic-researchers-and-scholars.webp",
+        "/images/academic-editorial-services/revisioning-and-localisation-service/Academic-Researchers-and-Scholars.png",
     },
     {
       title: "Healthcare and Life Sciences Professionals",
@@ -20,7 +20,7 @@ export const revisioningAndLocalisationServiceWhoWeServeData = {
         "We ensure accuracy in terminology and clarity in presentation for an international readership.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/revisioning-and-localisation-service/healthcare-and-life-sciences-professionals.webp",
+        "/images/academic-editorial-services/revisioning-and-localisation-service/Healthcare-and-Life-Sciences-Professionals.png",
     },
     {
       title: "Universities and Research Institutions",
@@ -29,7 +29,7 @@ export const revisioningAndLocalisationServiceWhoWeServeData = {
         "By providing high-quality revisioning and localisation, we help your researchers communicate effectively with international peers, stakeholders, and funding bodies.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/revisioning-and-localisation-service/universities-and-research-institutions.webp",
+        "/images/academic-editorial-services/revisioning-and-localisation-service/Universities-and-Research-Institutions.png",
     },
     {
       title: "Medical and Scientific Publishers",
@@ -38,7 +38,7 @@ export const revisioningAndLocalisationServiceWhoWeServeData = {
         "Our work helps publications reach broader, global audiences.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/revisioning-and-localisation-service/medical-and-scientific-publishers.webp",
+        "/images/academic-editorial-services/revisioning-and-localisation-service/Medical-and-Scientific-Publishers.png",
     },
     {
       title: "Corporate and Industry Researchers",
@@ -46,7 +46,7 @@ export const revisioningAndLocalisationServiceWhoWeServeData = {
         "Pharmaceutical, biotech, and healthcare companies producing technical documents, white papers, or research reports can rely on us for precise, culturally adapted content that aligns with international standards.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/revisioning-and-localisation-service/corporate-and-industry-researchers.webp",
+        "/images/academic-editorial-services/revisioning-and-localisation-service/Corporate-and-Industry-Researchers.png",
     },
     {
       title: "Non-Native English Authors",
@@ -55,7 +55,7 @@ export const revisioningAndLocalisationServiceWhoWeServeData = {
         "We ensure that manuscripts convey your ideas clearly and conform to journal-specific requirements, maintaining your scientific voice while enhancing readability.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/revisioning-and-localisation-service/non-native-english-authors.webp",
+        "/images/academic-editorial-services/revisioning-and-localisation-service/Non-Native-English-Authors-1.png",
     },
   ],
 };
@@ -69,33 +69,33 @@ export const revisioningAndLocalisationServiceTestimonialData = {
   testimonials: [
     {
       image:
-        "/images/services/academic-editorial-services/revisioning-and-localisation-service/testimonials/journal-of-clinical-epidemiology.webp",
+        "/images/academic-editorial-services/revisioning-and-localisation-service/journal-of-clinical-epidemiology-1.png",
       quote:
         "Pubrica’s revisioning and localisation team transformed my manuscript for an international journal. Their attention to cultural nuances and scientific clarity ensured my paper was not only accurate but also resonated with a global audience.",
       name: "Dr. Ananya Mehta",
       designation: "Molecular Biologist",
       organization: "India",
-      flag: "/images/flags/india.webp",
+      flag: "/images/editing-and-translation/manuscript-editing/flag.png",
     },
     {
       image:
-        "/images/services/academic-editorial-services/revisioning-and-localisation-service/testimonials/journal-of-health-economics.webp",
+        "/images/academic-editorial-services/revisioning-and-localisation-service/journal-of-health-economics.png",
       quote:
         "Pubrica’s experts ensured that my manuscript was not only linguistically polished but also culturally tailored for an international audience. Their meticulous revision significantly improved the readability and acceptance potential of my paper.",
       name: "Dr. Maria Gonzalez",
       designation: "Public Health",
       organization: "Spain",
-      flag: "/images/flags/spain.webp",
+      flag: "/images/editing-and-translation/thesis-editing/spain-.png",
     },
     {
       image:
-        "/images/services/academic-editorial-services/revisioning-and-localisation-service/testimonials/indian-council-of-medical-research.webp",
+        "/images/academic-editorial-services/revisioning-and-localisation-service/Indian-council-of-medical-research-1.png",
       quote:
         "The team at Pubrica meticulously revised and localised my research article. Their expertise in aligning content with journal standards made the submission process seamless and boosted my confidence in the manuscript’s quality.",
       name: "Prof. James Carter",
       designation: "Environmental Science",
       organization: "UK",
-      flag: "/images/flags/united-kingdom.webp",
+      flag: "/images/research-services/uk-flag-.png",
     },
   ],
 };

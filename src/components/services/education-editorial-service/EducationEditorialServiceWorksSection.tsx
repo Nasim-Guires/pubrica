@@ -3,6 +3,7 @@
 import { EditorialWorkflowSection } from '@/components/common/EditorialWorkflowSection';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import { workflowData, workflowSectionData } from '@/lib/education-editorial-service/education-editorial-service';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -21,27 +22,27 @@ export default function EducationEditorialServicePage() {
         {
             title: 'Accessibility Compliance',
             desc: 'Ensure your educational content meets global accessibility standards such as WCAG, ADA, and Section 508.',
-            icon: '♿',
+            icon: '/images/education-editorial-service/Accessibility-Compliance.webp',
         },
         {
             title: 'Learning Design and Pedagogy',
             desc: 'Transform instructional content with research-backed learning design principles. We refine frameworks to boost student engagement.',
-            icon: '📚',
+            icon: '/images/education-editorial-service/Learning-Design-and-Pedagogy.webp',
         },
         {
             title: 'Assessment and Exam Review',
             desc: 'We develop, review, validate, and refine assessments with precision and fairness. Our experts ensure question validity and reliable testing outcomes.',
-            icon: '📝',
+            icon: '/images/education-editorial-service/Assessment-and-Exam-Review.webp',
         },
         {
             title: 'Digital Production QA',
             desc: 'Maintain exceptional quality across digital learning products. We conduct meticulous QA checks for interactive media, e-books, and platforms.',
-            icon: '💻',
+            icon: '/images/education-editorial-service/Digital-Production-QA.webp',
         },
         {
             title: 'AI and Data Preparation',
             desc: 'We prepare, structure, label, and quality-check data for AI-driven educational solutions. Our team supports machine learning models with accurate annotations.',
-            icon: '🤖',
+            icon: '/images/education-editorial-service/AI-and-Data-Preparation.webp',
         },
     ];
 
@@ -106,11 +107,14 @@ export default function EducationEditorialServicePage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative bg-[#0b3b2c] p-4 rounded-xl shadow-lg w-full max-w-md">
                             <div className="bg-white rounded-lg overflow-hidden shadow-inner p-2">
-                                <div className="h-64 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
-                                    <div className="absolute inset-0 bg-gradient-to-br from-amber-50 to-emerald-50 flex flex-col items-center justify-center p-6 text-center">
-                                        <span className="text-5xl mb-3">🎓📚</span>
-                                        <span className="text-xs font-bold text-[#0b3b2c]">Academic Excellence & Editorial Precision</span>
-                                    </div>
+                                <div className="h-64 bg-gray-100 rounded relative overflow-hidden">
+                                    <Image
+                                        src="/images/education-editorial-service/Driving-Academic-Quality-Through-Expert-Education-Editorial-Services.webp"
+                                        alt="Driving Academic Quality Through Expert Education Editorial Services"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width:1024px)100vw,420px"
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -143,9 +147,15 @@ export default function EducationEditorialServicePage() {
                                         }`}
                                 >
                                     <div>
-                                        <div className={`w-10 h-10 rounded-full flex items-center justify-center text-lg mb-4 ${isHovered ? 'bg-white text-neutral-900' : 'bg-emerald-100 text-[#0b3b2c]'
+                                        <div className={`w-10 h-10 rounded-full flex items-center justify-center mb-4 relative overflow-hidden ${isHovered ? 'bg-white' : 'bg-emerald-100'
                                             }`}>
-                                            {service.icon}
+                                            <Image
+                                                src={service.icon}
+                                                alt={service.title}
+                                                width={28}
+                                                height={28}
+                                                className="object-contain"
+                                            />
                                         </div>
                                         <h3 className={`text-xs font-bold mb-2 uppercase tracking-wide ${isHovered ? 'text-white' : 'text-[#0b3b2c]'}`}>
                                             {service.title}
@@ -202,11 +212,14 @@ export default function EducationEditorialServicePage() {
                     {/* Left: Image / Mockup */}
                     <div className="md:col-span-5 flex justify-center">
                         <div className="bg-white p-3 rounded-xl shadow-md border border-emerald-100 w-full max-w-xs">
-                            <div className="h-64 bg-gray-900 rounded-lg flex flex-col items-center justify-center relative overflow-hidden text-white p-4 text-center">
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                                <span className="text-4xl mb-2 relative z-10">🏛️</span>
-                                <span className="text-xs font-bold relative z-10 text-emerald-300 mb-1">Education Editorial Sample</span>
-                                <span className="text-[10px] text-gray-300 relative z-10">Peer-Reviewed Curriculum & Framework Reports</span>
+                            <div className="h-64 rounded-lg relative overflow-hidden">
+                                <Image
+                                    src="/images/education-editorial-service/Education-Editorial-Services-Sample-Work.webp"
+                                    alt="Education Editorial Services Sample Work"
+                                    fill
+                                    className="object-cover"
+                                    sizes="(max-width:768px)100vw,320px"
+                                />
                             </div>
                         </div>
                     </div>

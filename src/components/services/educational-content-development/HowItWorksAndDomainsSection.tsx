@@ -1,18 +1,8 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import {
-  FileText,
-  Lightbulb,
-  Video,
-  RefreshCw,
-  CheckSquare,
-  Monitor,
-  GraduationCap,
-  PlayCircle,
-  BookOpen,
-  Zap,
-  UserCheck,
   Book,
   Edit3,
 } from "lucide-react";
@@ -25,7 +15,7 @@ interface ProcessStep {
   stepNumber: number;
   title: string;
   description: string;
-  icon: () => React.ReactNode;
+  iconSrc: string;
   position: "top" | "bottom";
 }
 
@@ -35,9 +25,7 @@ const processSteps: ProcessStep[] = [
     title: "INITIAL CONSULTATION & NEEDS ASSESSMENT",
     description:
       "Engage in an initial discussion where we understand your educational objectives, target audience, and content requirements to tailor our approach effectively.",
-    icon: () => (
-      <FileText className="w-8 h-8 text-gray-700 group-hover:text-white transition-colors duration-300" />
-    ),
+    iconSrc: "/images/publication-support/video-abstract/Send-Materials.png",
     position: "top",
   },
   {
@@ -45,9 +33,7 @@ const processSteps: ProcessStep[] = [
     title: "STRATEGIC ROADMAP DEVELOPMENT",
     description:
       "Strategize a comprehensive roadmap outlining topics, learning objectives, and engaging formats aligned with your educational goals and audience preferences.",
-    icon: () => (
-      <Lightbulb className="w-8 h-8 text-gray-700 group-hover:text-white transition-colors duration-300" />
-    ),
+    iconSrc: "/images/publication-support/video-abstract/Script-Content-Development.png",
     position: "bottom",
   },
   {
@@ -55,10 +41,7 @@ const processSteps: ProcessStep[] = [
     title: "EXPERT CONTENT CREATION",
     description:
       "Our expert team crafts high-quality educational content using evidence-based methodologies, ensuring accuracy, clarity, and effectiveness in conveying complex concepts.",
-    // Updated icon color to text-gray-700 so it matches the other cards on the normal white background
-    icon: () => (
-      <Video className="w-8 h-8 text-gray-700 group-hover:text-white transition-colors duration-300" />
-    ),
+    iconSrc: "/images/publication-support/video-abstract/Author-Feedback.png",
     position: "top",
   },
   {
@@ -66,9 +49,7 @@ const processSteps: ProcessStep[] = [
     title: "REVIEW & FEEDBACK LOOP",
     description:
       "Your feedback is integrated through thorough review cycles to refine the content and ensure alignment with your expectations.",
-    icon: () => (
-      <RefreshCw className="w-8 h-8 text-gray-700 group-hover:text-white transition-colors duration-300" />
-    ),
+    iconSrc: "/images/publication-support/video-abstract/Video-Development.png",
     position: "bottom",
   },
   {
@@ -76,9 +57,7 @@ const processSteps: ProcessStep[] = [
     title: "FINAL DELIVERY & IMPLEMENTATION SUPPORT",
     description:
       "We deliver polished, ready-to-use educational content and guide effective implementation and learner engagement.",
-    icon: () => (
-      <CheckSquare className="w-8 h-8 text-gray-700 group-hover:text-white transition-colors duration-300" />
-    ),
+    iconSrc: "/images/publication-support/video-abstract/Add-Captions-and-Subtitles.png",
     position: "top",
   },
 ];
@@ -86,27 +65,27 @@ const processSteps: ProcessStep[] = [
 const elearningDomains = [
   {
     title: "ILT/VILT",
-    icon: <Monitor className="w-6 h-6 text-emerald-800" />,
+    iconSrc: "/images/educational-content-development/ILT_VILT.webp",
   },
   {
     title: "Blended Learning",
-    icon: <GraduationCap className="w-6 h-6 text-emerald-800" />,
+    iconSrc: "/images/educational-content-development/Blended-Learning.webp",
   },
   {
     title: "Video Based Learning",
-    icon: <PlayCircle className="w-6 h-6 text-emerald-800" />,
+    iconSrc: "/images/educational-content-development/Video-Based-Learning.webp",
   },
   {
     title: "Content Based Learning",
-    icon: <BookOpen className="w-6 h-6 text-emerald-800" />,
+    iconSrc: "/images/educational-content-development/Content-Based-Learning.webp",
   },
   {
     title: "Micro Learning",
-    icon: <Zap className="w-6 h-6 text-emerald-800" />,
+    iconSrc: "/images/educational-content-development/Micro-Learning.webp",
   },
   {
     title: "Personalised Learning",
-    icon: <UserCheck className="w-6 h-6 text-emerald-800" />,
+    iconSrc: "/images/educational-content-development/Personalised-Learning.webp",
   },
 ];
 
@@ -159,8 +138,8 @@ export default function HowItWorksAndDomainsSection() {
 
                   {/* Content Box - Now uniformly white by default, turning black on hover */}
                   <div className="group cursor-pointer w-full p-5 rounded-sm border transition-all duration-300 ease-in-out flex flex-col items-center text-center h-full min-h-[260px] bg-white text-slate-800 border-gray-200 shadow-sm hover:bg-[#1a1a1a] hover:text-white hover:border-slate-900 hover:shadow-2xl">
-                    <div className="mb-3 p-2 rounded-md bg-gray-50/10 transition-transform duration-300 group-hover:scale-110">
-                      {step.icon()}
+                    <div className="relative mb-3 w-8 h-8">
+                      <Image src={step.iconSrc} alt="" fill className="object-contain" sizes="32px" />
                     </div>
                     <h3 className="text-xs font-bold tracking-wider uppercase mb-3 text-slate-900 group-hover:text-white transition-colors duration-300">
                       {step.title}
@@ -191,8 +170,8 @@ export default function HowItWorksAndDomainsSection() {
                 className="flex flex-col items-center group cursor-pointer"
               >
                 {/* Circular Icon Container */}
-                <div className="w-16 h-16 rounded-full bg-[#133036] group-hover:bg-[#091b1f] flex items-center justify-center text-white shadow-md mb-3 transition-all duration-300 group-hover:scale-110">
-                  <div className="text-teal-300">{domain.icon}</div>
+                <div className="relative w-16 h-16 mb-3">
+                  <Image src={domain.iconSrc} alt={domain.title} fill className="object-contain" sizes="64px" />
                 </div>
                 <h3 className="text-xs font-bold text-slate-900 group-hover:text-teal-800 transition-colors">
                   {domain.title}

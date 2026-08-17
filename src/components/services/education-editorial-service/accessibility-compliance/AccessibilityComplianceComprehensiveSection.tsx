@@ -2,6 +2,7 @@
 
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -10,6 +11,8 @@ type Expert = {
   title: string;
   experience: string;
   papersEdited: string;
+  image: string;
+  flag: string;
 };
 
 type PublishedPaper = {
@@ -26,18 +29,24 @@ const expertsData: Expert[] = [
     title: 'PhD in Bioinformatics Indian Institute of Technology, India',
     experience: '8+ Years of Experience',
     papersEdited: '700+ Papers Edited',
+    image: '/images/education-editorial-service/accessibility-compliance/Dr.-Aditi-Mehta.webp',
+    flag: '/images/editing-and-translation/manuscript-editing/india.png',
   },
   {
     name: 'Dr. Vikram Joshi',
     title: 'PhD in Environmental Science University of Delhi, India',
     experience: '7+ Years of Experience',
     papersEdited: '750+ Papers Edited',
+    image: '/images/education-editorial-service/accessibility-compliance/Dr.-Vikram-Joshi.webp',
+    flag: '/images/editing-and-translation/manuscript-editing/india.png',
   },
   {
     name: 'Dr. Priya Kumar',
     title: 'PhD in Artificial Intelligence Indian Institute of Technology, India',
     experience: '6+ Years of Experience',
     papersEdited: '600+ Papers Edited',
+    image: '/images/education-editorial-service/accessibility-compliance/Dr.-Priya-Kumar.webp',
+    flag: '/images/editing-and-translation/manuscript-editing/india.png',
   },
 ];
 
@@ -141,14 +150,26 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
                 <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between text-left relative">
                   <div>
                     <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-12 h-12 rounded-full bg-gray-200 relative overflow-hidden flex-shrink-0 border border-gray-300">
-                        {/* Image Section Placeholder */}
-                        <div className="absolute inset-0 flex items-center justify-center text-xs text-gray-500 font-semibold bg-gray-100">
-                          Expert
-                        </div>
+                      <div className="w-12 h-12 rounded-full relative overflow-hidden flex-shrink-0 border border-gray-300">
+                        <Image
+                          src={expert.image}
+                          alt={expert.name}
+                          fill
+                          className="object-cover"
+                          sizes="48px"
+                        />
                       </div>
                       <div>
-                        <h4 className="font-bold text-gray-900 text-base">{expert.name}</h4>
+                        <div className="flex items-center gap-2">
+                          <h4 className="font-bold text-gray-900 text-base">{expert.name}</h4>
+                          <Image
+                            src={expert.flag}
+                            alt=""
+                            width={20}
+                            height={14}
+                            className="h-3.5 w-auto object-contain"
+                          />
+                        </div>
                         <p className="text-xs text-gray-500 leading-tight mt-0.5">{expert.title}</p>
                       </div>
                     </div>
@@ -213,19 +234,23 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
             {[
               {
                 title: 'Expertise in Global Standards',
-                description: 'All manuscripts produced by Pubrica’s team of specialists meet International Accessibility Standards such as WCAG and Section 508 and are guaranteed to comply with both Digital and Print format requirements.'
+                description: 'All manuscripts produced by Pubrica’s team of specialists meet International Accessibility Standards such as WCAG and Section 508 and are guaranteed to comply with both Digital and Print format requirements.',
+                image: '/images/education-editorial-service/accessibility-compliance/Expertise-in-Global-Standards.webp',
               },
               {
                 title: 'Quality Assurance & Validation',
-                description: 'We offer rigorous quality assurance and accessibility validation to ensure your document is fully compliant, improving its chances of acceptance and reaching a wider, more inclusive audience.'
+                description: 'We offer rigorous quality assurance and accessibility validation to ensure your document is fully compliant, improving its chances of acceptance and reaching a wider, more inclusive audience.',
+                image: '/images/education-editorial-service/accessibility-compliance/Quality-Assurance-Validation.webp',
               },
               {
                 title: 'Improved Accessibility and Readability',
-                description: 'We optimize your documents for assistive technologies, enhancing readability and navigation for people with disabilities, including those who rely on screen readers.'
+                description: 'We optimize your documents for assistive technologies, enhancing readability and navigation for people with disabilities, including those who rely on screen readers.',
+                image: '/images/education-editorial-service/accessibility-compliance/Improved-Accessibility-and-Readability.webp',
               },
               {
                 title: 'Enhanced Readability & Usability',
-                description: 'We improve the readability and usability of your content, making it more accessible to individuals using assistive technologies such as screen readers and magnifiers.'
+                description: 'We improve the readability and usability of your content, making it more accessible to individuals using assistive technologies such as screen readers and magnifiers.',
+                image: '/images/education-editorial-service/accessibility-compliance/Enhanced-Readability-Usability.webp',
               }
             ].map((item, idx) => {
               const isOpen = !!openWhyIndices[idx];
@@ -236,7 +261,9 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
                     className="w-full p-4 text-left font-bold text-[#0b3b2c] flex justify-between items-center text-base"
                   >
                     <span className="flex items-center space-x-3">
-                      <div className="w-6 h-6 rounded bg-[#0b3b2c]/10 flex items-center justify-center text-xs text-[#0b3b2c]">✓</div>
+                      <div className="w-6 h-6 relative flex-shrink-0">
+                        <Image src={item.image} alt="" fill className="object-contain" sizes="24px" />
+                      </div>
                       <span>{item.title}</span>
                     </span>
                     <span className="text-xl font-mono">{isOpen ? '−' : '+'}</span>
@@ -264,10 +291,6 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
             {publishedPapersData.map((paper, idx) => (
               <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="h-36 bg-gray-100 rounded mb-4 relative overflow-hidden flex items-center justify-center border border-gray-200">
-                    {/* Image Section Placeholder */}
-                    <span className="text-xs text-gray-400 font-medium">Paper Thumbnail / Mockup</span>
-                  </div>
                   <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">{paper.journal}</span>
                   <h3 className="font-bold text-gray-900 text-sm mt-1 mb-2 line-clamp-3">{paper.title}</h3>
                   <p className="text-xs text-gray-600 mb-1">{paper.author}</p>
@@ -284,7 +307,7 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
           </div>
 
           {/* Sample Work Viewer Section */}
-          <div className="text-center pt-10 space-y-6">
+            <div className="text-center pt-10 space-y-6">
             <div>
               <h3 className="text-2xl font-bold text-[#0b3b2c] mb-2">
                 Explore Sample Work From Our Professional Accessibility Compliance
@@ -292,46 +315,6 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
               <p className="text-sm text-gray-600 max-w-2xl mx-auto">
                 Professional Accessibility Compliance Services, showcasing how we ensure academic and research manuscripts meet global accessibility standards. Our expert team enhances readability and usability for diverse audiences, ensuring your work is fully accessible across all digital platforms.
               </p>
-            </div>
-
-            <div className="bg-[#1e1e1e] rounded-xl p-4 md:p-6 max-w-4xl mx-auto shadow-2xl border border-gray-700 text-left">
-              {/* PDF Viewer Mockup Toolbar */}
-              <div className="bg-[#2d2d2d] text-gray-300 p-2 rounded-lg flex flex-wrap items-center justify-between gap-2 mb-4 text-xs">
-                <div className="flex items-center space-x-2">
-                  <span className="bg-[#0b3b2c] text-white px-2 py-1 rounded font-medium">Academic Manuscript</span>
-                </div>
-                <div className="flex items-center space-x-4 bg-[#3d3d3d] px-3 py-1 rounded">
-                  <span>Graphic</span>
-                  <span>1 / 1</span>
-                  <span>- 28% +</span>
-                </div>
-              </div>
-
-              {/* PDF Document Viewer Container */}
-              <div className="bg-[#252525] rounded p-4 flex flex-col md:flex-row gap-4 items-center justify-center min-h-[350px]">
-                {/* Thumbnail pane */}
-                <div className="w-full md:w-1/3 bg-white rounded p-2 shadow border border-gray-600">
-                  <div className="h-32 bg-gray-50 border border-gray-200 rounded flex items-center justify-center text-xs text-gray-400">
-                    Page 1 Thumbnail
-                  </div>
-                  <div className="text-center text-xs mt-1 font-semibold text-gray-700">1</div>
-                </div>
-
-                {/* Main page preview pane */}
-                <div className="w-full md:w-2/3 bg-white rounded p-4 shadow border border-gray-600 min-h-[300px] flex flex-col justify-between">
-                  <div className="space-y-2">
-                    <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-                    <div className="h-3 bg-gray-100 rounded w-full"></div>
-                    <div className="h-3 bg-gray-100 rounded w-5/6"></div>
-                    <div className="h-20 bg-red-50 border border-red-100 rounded p-2 text-[10px] text-gray-600 mt-2">
-                      Sample text layout showing highlighted compliance review notes and comments sections.
-                    </div>
-                  </div>
-                  <div className="text-right text-[10px] text-gray-400 font-mono mt-4">
-                    SAMPLE WORK PREVIEW
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>

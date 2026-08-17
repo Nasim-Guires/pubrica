@@ -58,7 +58,7 @@ const whoWeServeData: TargetAudience[] = [
   {
     id: "1",
     title: "Universities & Colleges",
-    imageSrc: "/images/who-we-serve/universities.jpg",
+    imageSrc: "/images/educational-content-development/Universities-Colleges.webp",
     imageAlt: "University students studying together on laptops",
     description:
       "Empowering higher education institutions with accredited curriculum design, courseware development, and faculty support resources.",
@@ -66,7 +66,7 @@ const whoWeServeData: TargetAudience[] = [
   {
     id: "2",
     title: "Researchers & Academicians",
-    imageSrc: "/images/who-we-serve/researchers.jpg",
+    imageSrc: "/images/educational-content-development/Researchers-Academicians-1.webp",
     imageAlt: "Academic researcher focusing on data and scholarly content",
     description:
       "Developing scholarly content, training modules, and knowledge dissemination materials to aid in research visibility and academic excellence.",
@@ -74,7 +74,7 @@ const whoWeServeData: TargetAudience[] = [
   {
     id: "3",
     title: "Medical & Healthcare Institutions",
-    imageSrc: "/images/who-we-serve/medical.jpg",
+    imageSrc: "/images/educational-content-development/Medical-Healthcare-Institutions.webp",
     imageAlt:
       "Healthcare professionals discussing medical cases around a conference table",
     description:
@@ -83,7 +83,7 @@ const whoWeServeData: TargetAudience[] = [
   {
     id: "4",
     title: "Publishers & EdTech Companies",
-    imageSrc: "/images/who-we-serve/edtech.jpg",
+    imageSrc: "/images/educational-content-development/Publishers-EdTech-Companies.webp",
     imageAlt: "EdTech professionals collaborating on digital education tools",
     description:
       "Partnering with educational publishers and digital platforms to produce interactive, digital-first learning content and LMS modules.",
@@ -91,7 +91,7 @@ const whoWeServeData: TargetAudience[] = [
   {
     id: "5",
     title: "Nonprofits & NGOs in Education",
-    imageSrc: "/images/who-we-serve/ngo.jpg",
+    imageSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Government-Non-Governmental.webp",
     imageAlt: "Clipboard with NGO document and educational materials",
     description:
       "Creating accessible, high-impact educational toolkits and outreach programs tailored to community learning and global initiatives.",
@@ -161,22 +161,14 @@ export default function EducationalOfferingsAndAudience() {
               {/* Top/Left Card Image */}
               <div className="absolute top-0 left-0 w-56 sm:w-64 h-40 sm:h-48 rounded-2xl overflow-hidden shadow-md border-2 border-white z-10">
                 <Image
-                  src="/images/what-we-offer-top.jpg"
-                  alt="Team of professionals analyzing content on laptops"
+                  src="/images/educational-content-development/What-We-Offer.webp"
+                  alt="What we offer"
                   fill
                   className="object-cover"
                 />
               </div>
 
-              {/* Bottom/Right Card Image */}
-              <div className="absolute bottom-0 right-2 w-56 sm:w-64 h-48 sm:h-56 rounded-2xl overflow-hidden shadow-lg border-2 border-white z-20">
-                <Image
-                  src="/images/what-we-offer-bottom.jpg"
-                  alt="Students reviewing educational materials together"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <div className="absolute bottom-0 right-2 w-56 sm:w-64 h-48 sm:h-56 rounded-2xl overflow-hidden shadow-lg border-2 border-white z-20 hidden" aria-hidden="true" />
             </div>
 
             {/* Right Column: Narrative + Accordion List */}

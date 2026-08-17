@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { ArrowRightCircle } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
@@ -10,7 +11,7 @@ import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface PackageTier {
   id: string;
-  badgeLetter: string;
+  badgeSrc: string;
   badgeBg: string;
   headerTextColor: string;
   cardBg: string;
@@ -24,7 +25,7 @@ interface PackageTier {
 const packagesData: PackageTier[] = [
   {
     id: "basic",
-    badgeLetter: "B",
+    badgeSrc: "/images/editing-and-translation/basic-pacakge.png",
     badgeBg: "bg-[#e2e8f0]",
     headerTextColor: "text-[#1e3a8a]",
     cardBg: "bg-[#cad5d8]",
@@ -40,7 +41,7 @@ const packagesData: PackageTier[] = [
   },
   {
     id: "standard",
-    badgeLetter: "S",
+    badgeSrc: "/images/publication-support/poster-preparation/S.png",
     badgeBg: "bg-[#fef08a]",
     headerTextColor: "text-[#6b21a8]",
     cardBg: "bg-[#d8c3e5]",
@@ -57,7 +58,7 @@ const packagesData: PackageTier[] = [
   },
   {
     id: "advanced",
-    badgeLetter: "A",
+    badgeSrc: "/images/publication-support/peer-review-pre-submission/advanced.webp",
     badgeBg: "bg-[#bfdbfe]",
     headerTextColor: "text-[#854d0e]",
     cardBg: "bg-[#ddc89e]",
@@ -75,7 +76,7 @@ const packagesData: PackageTier[] = [
   },
   {
     id: "premium",
-    badgeLetter: "P",
+    badgeSrc: "/images/editing-and-translation/translation-with-editing/pro.webp",
     badgeBg: "bg-[#fbcfe8]",
     headerTextColor: "text-[#be123c]",
     cardBg: "bg-[#fbcfe8]",
@@ -127,10 +128,13 @@ export default function EditorialPackagesSection() {
                 <div className="space-y-5">
                   {/* Card Header (Badge + Title) */}
                   <div className="bg-white/80 rounded-md p-3 flex items-center gap-3 shadow-xs min-h-[68px]">
-                    <div
-                      className={`w-9 h-9 ${pkg.badgeBg} rounded-full flex items-center justify-center font-bold text-lg text-slate-800 shrink-0 shadow-inner`}
-                    >
-                      {pkg.badgeLetter}
+                    <div className={`relative w-9 h-9 ${pkg.badgeBg} rounded-full shrink-0 shadow-inner overflow-hidden`}>
+                      <Image
+                        src={pkg.badgeSrc}
+                        alt={`${pkg.title} package`}
+                        fill
+                        className="object-contain p-1"
+                      />
                     </div>
                     <div>
                       <h3

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 // ==========================================
@@ -19,16 +20,14 @@ const audiencesData: AudienceCard[] = [
     title: "Researchers & Scientists",
     description:
       "We assist scholars across disciplines in polishing research manuscripts, grant proposals, and review articles to meet rigorous peer-review standards.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "/images/academic-editorial-services/Researchers-Scientists.png",
   },
   {
     id: "academicians",
     title: "Academicians & Educators",
     description:
       "We support faculty members, curriculum developers, and academic authors in refining textbooks, lecture materials, theses, dissertations, and educational resources, enhancing readability and pedagogical impact.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "/images/academic-editorial-services/Academicians-Educators.png",
   },
   {
     id: "healthcare",
@@ -36,15 +35,14 @@ const audiencesData: AudienceCard[] = [
     description:
       "Our medical editors refine clinical trial reports, systematic reviews, case studies, and healthcare manuscripts to ensure precision and compliance.",
     imageUrl:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+      "/images/academic-editorial-services/Medical-Healthcare-Professionals.png",
   },
   {
     id: "institutions",
     title: "Institutions & Organizations",
     description:
       "We partner with universities, research centers, and academic societies to deliver high-quality institutional editing and publishing support.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "/images/academic-editorial-services/Institutions-Organizations.png",
   },
   {
     id: "international-authors",
@@ -52,7 +50,7 @@ const audiencesData: AudienceCard[] = [
     description:
       "We empower non-native English scholars to eliminate language barriers and present their findings clearly for top-tier international journals.",
     imageUrl:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+      "/images/academic-editorial-services/Multilingual-International-Authors.png",
   },
 ];
 
@@ -88,10 +86,12 @@ export default function WhoWeServeSection() {
               className="group relative rounded-md overflow-hidden shadow-md aspect-[16/10] bg-black cursor-pointer"
             >
               {/* Default Image State */}
-              <img
+              <Image
                 src={audience.imageUrl}
                 alt={audience.title}
-                className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+                fill
+                className="object-cover transition-opacity duration-300 group-hover:opacity-0"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
 
               {/* Default Bottom Gradient Bar (Visible when not hovered) */}

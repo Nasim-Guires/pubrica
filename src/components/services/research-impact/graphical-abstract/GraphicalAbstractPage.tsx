@@ -101,7 +101,7 @@ export default function GraphicalAbstractPage() {
                         {/* Image Section Container */}
                         <div className="relative w-full max-w-md h-64 sm:h-72 bg-slate-100 rounded-lg overflow-hidden border border-slate-200 shadow-sm flex items-center justify-center">
                             <Image
-                                src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800"
+                                src="/images/research-impact/graphical-abstract/Transform-Your-Research-into-an-Engaging-Visual-Summary.webp"
                                 alt="Graphical Abstract Service Illustration - Targeted In-vivo mRNA delivery"
                                 fill
                                 priority
@@ -139,7 +139,7 @@ export default function GraphicalAbstractPage() {
                         {/* Image Section Container */}
                         <div className="relative w-full max-w-md h-80 bg-slate-100 rounded-lg overflow-hidden border border-slate-200 shadow-sm">
                             <Image
-                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
+                                src="/images/research-impact/graphical-abstract/what-we-do-.png"
                                 alt="Research team collaborating on graphical abstract designs"
                                 fill
                                 sizes="(max-width: 768px) 100vw, 50vw"

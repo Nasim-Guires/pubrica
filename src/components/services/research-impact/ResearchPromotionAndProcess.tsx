@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState } from "react";
 
 // --- Types ---
@@ -13,7 +14,7 @@ interface ProcessStep {
   stepNumber: number;
   title: string;
   description: string;
-  icon: React.ReactNode;
+  iconSrc: string;
 }
 
 // --- Data ---
@@ -44,128 +45,42 @@ const processSteps: ProcessStep[] = [
     title: "IMPACT GOAL DEFINITION",
     description:
       "We begin by identifying your research objectives, target stakeholders, and required impact metrics (e.g., REF, SDG, ARC).",
-    icon: (
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <circle cx="12" cy="12" r="9" strokeWidth="1.5" />
-        <circle cx="12" cy="12" r="5" strokeWidth="1.5" />
-        <circle cx="12" cy="12" r="1" fill="currentColor" />
-        <path
-          strokeLinecap="round"
-          strokeWidth="1.5"
-          d="M12 3v3M12 18v3M3 12h3M18 12h3"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/research-impact/Impact-Goal-Definition.png",
   },
   {
     stepNumber: 2,
     title: "RESEARCH ASSESSMENT",
     description:
       "Our team evaluates your publications, data, and project outputs to identify impact gaps and content needs.",
-    icon: (
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/research-impact/Research-Assessment.png",
   },
   {
     stepNumber: 3,
     title: "STRATEGY DEVELOPMENT",
     description:
       "We design a tailored impact strategy that defines dissemination channels, messaging formats, and stakeholder pathways.",
-    icon: (
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M11 4a2 2 0 114 0v1a2 2 0 01-2 2 2 2 0 01-2-2V4zm-6 8a2 2 0 114 0v1a2 2 0 01-2 2 2 2 0 01-2-2v-1zm12 4a2 2 0 114 0v1a2 2 0 01-2 2 2 2 0 01-2-2v-1z"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/research-impact/Strategy-Development.png",
   },
   {
     stepNumber: 4,
     title: "CONTENT CREATION",
     description:
       "We develop high-quality, audience-specific materials—such as plain-language summaries, policy briefs, infographics, and video scripts.",
-    icon: (
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/research-impact/Content-Creation.png",
   },
   {
     stepNumber: 5,
     title: "REVIEW & COMPLIANCE",
     description:
       "All deliverables undergo expert review for scientific accuracy, clarity, and compliance with institutional or funder guidelines.",
-    icon: (
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/research-impact/Review-Compliance.png",
   },
   {
     stepNumber: 6,
     title: "DISSEMINATION & IMPACT REPORTING",
     description:
       "We support strategic dissemination and provide tools to monitor, measure, and report the real-world influence of your research.",
-    icon: (
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h18"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/research-impact/Dissemination-Impact-Reporting.png",
   },
 ];
 
@@ -186,15 +101,14 @@ export default function ResearchPromotionAndProcess(): React.ReactElement {
         {/* Gray Outer Frame Container */}
         <div className="bg-[#e7e8ea] p-6 sm:p-10 rounded-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Left Image */}
-            <div className="lg:col-span-5">
-              <div className="rounded-xl overflow-hidden shadow-md">
-                <img
-                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
-                  alt="Person working with charts and laptop"
-                  className="w-full h-auto object-cover aspect-[4/3]"
-                />
-              </div>
+            <div className="lg:col-span-5 relative min-h-[280px] sm:min-h-[340px] rounded-md overflow-hidden">
+              <Image
+                src="/images/research-impact/why-promote-image-1.webp"
+                alt="People discussing research"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
             </div>
 
             {/* Right Cards Stack */}
@@ -296,13 +210,14 @@ export default function ResearchPromotionAndProcess(): React.ReactElement {
                         : "bg-white text-slate-800 border-slate-200"
                     }`}
                   >
-                    {/* Icon */}
-                    <div
-                      className={`mb-3 ${
-                        isHovered ? "text-white" : "text-slate-700"
-                      }`}
-                    >
-                      {step.icon}
+                    <div className="mb-3 relative w-8 h-8">
+                      <Image
+                        src={step.iconSrc}
+                        alt=""
+                        fill
+                        className="object-contain"
+                        sizes="32px"
+                      />
                     </div>
 
                     {/* Title */}

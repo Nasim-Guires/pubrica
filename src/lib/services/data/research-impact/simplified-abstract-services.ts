@@ -11,7 +11,7 @@ export const simplifiedAbstractServicesWhoWeServeData = {
                 "We simplify complex ideas while retaining scientific depth.",
             ],
             imageUrl:
-                "/images/services/research-impact/simplified-abstract-services/phd-scholars-early-stage-researchers.webp",
+                "/images/research-impact/simplified-abstract-services/PhD-Scholars-Early-Stage-Researchers.png",
         },
         {
             title: "Journal Authors & Manuscript Submitters",
@@ -19,7 +19,7 @@ export const simplifiedAbstractServicesWhoWeServeData = {
                 "We help you meet strict abstract formatting guidelines with structured, keyword-optimized summaries ready for peer-reviewed journals and conferences.",
             ],
             imageUrl:
-                "/images/services/research-impact/simplified-abstract-services/journal-authors-manuscript-submitters.webp",
+                "/images/research-impact/simplified-abstract-services/journal-Authors-Manuscript-Submitters.png",
         },
         {
             title: "Grant Applicants & Research Project Leads",
@@ -27,7 +27,7 @@ export const simplifiedAbstractServicesWhoWeServeData = {
                 "Craft compelling research abstracts for funding proposals and institutional reports, emphasizing innovation, impact, and alignment with grantor priorities.",
             ],
             imageUrl:
-                "/images/services/research-impact/simplified-abstract-services/grant-applicants-research-project-leads.webp",
+                "/images/research-impact/simplified-abstract-services/Grant-Applicants-Research-Project-Leads.png",
         },
         {
             title: "Universities & Research Institutes",
@@ -35,7 +35,7 @@ export const simplifiedAbstractServicesWhoWeServeData = {
                 "Support for students and faculty in developing thesis, dissertations, and repository abstracts aligned with academic standards and institutional formatting.",
             ],
             imageUrl:
-                "/images/services/research-impact/simplified-abstract-services/universities-research-institutes.webp",
+                "/images/research-impact/simplified-abstract-services/Universities-Research-Institutes.png",
         },
         {
             title: "Medical, Clinical & Life Science Professionals",
@@ -43,7 +43,7 @@ export const simplifiedAbstractServicesWhoWeServeData = {
                 "Professionals submitting to medical journals, clinical trials, or systematic reviews benefit from our structured, statistics-informed abstracts tailored to clinical relevance and evidence synthesis.",
             ],
             imageUrl:
-                "/images/services/research-impact/simplified-abstract-services/medical-clinical-life-science-professionals.webp",
+                "/images/research-impact/simplified-abstract-services/Medical-Clinical-Life-Science-Professionals.png",
         },
         {
             title: "Science Communicators & Research Outreach Teams",
@@ -51,7 +51,7 @@ export const simplifiedAbstractServicesWhoWeServeData = {
                 "Convert highly technical content into lay summaries, policy briefs, or public-facing abstracts for websites, podcasts, media engagement, or stakeholder reporting.",
             ],
             imageUrl:
-                "/images/services/research-impact/simplified-abstract-services/science-communicators-research-outreach-teams.webp",
+                "/images/research-impact/simplified-abstract-services/Science-Communicators-Research-Outreach-Teams.png",
         },
     ],
 };
@@ -64,33 +64,33 @@ export const simplifiedAbstractServicesTestimonialData = {
     testimonials: [
         {
             image:
-                "/images/services/research-impact/simplified-abstract-services/testimonials/bmc-public-health.webp",
+                "/images/research-impact/scientific-news-report/bmc-public-health.png",
             quote:
                 "Pubrica’s simplified abstract captured the essence of my work with clarity and precision. It followed the structured abstract format and aligned seamlessly with BMC Public Health’s submission guidelines. My abstract was accepted without edits.",
             name: "Dr. Ananya Iyer",
             designation: "Public Health Researcher",
             organization: "India",
-            flag: "/images/flags/india.webp",
+            flag: "/images/editing-and-translation/flag.png",
         },
         {
             image:
-                "/images/services/research-impact/simplified-abstract-services/testimonials/scientific-reports.webp",
+                "/images/research-impact/simplified-abstract-services/scientific-reports.png",
             quote:
                 "I was struggling to condense my experimental findings into a concise, publication-ready abstract for Scientific Reports. Pubrica’s team provided professional abstract writing support, logically organizing my results without compromising technical accuracy.",
             name: "Dr. Naomi Tanaka",
             designation: "Molecular Biologist",
             organization: "Japan",
-            flag: "/images/flags/japan.webp",
+            flag: "/images/research-impact/simplified-abstract-services/japan.png",
         },
         {
             image:
-                "/images/services/research-impact/simplified-abstract-services/testimonials/frontiers-in-psychology.webp",
+                "/images/research-impact/simplified-abstract-services/frontiers-in-psychology.png",
             quote:
                 "The team translated my highly technical manuscript into a well-written, simplified abstract suitable for Frontiers in Psychology. Their service enhanced both the readability and search visibility of my work.",
             name: "Dr. Matteo Ricci",
             designation: "Cognitive Science Researcher",
             organization: "Italy",
-            flag: "/images/flags/italy.webp",
+            flag: "/images/research-impact/scientific-news-report/italy-.png",
         },
     ],
 };

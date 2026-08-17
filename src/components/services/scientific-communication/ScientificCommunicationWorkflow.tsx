@@ -18,42 +18,42 @@ const processSteps: ProcessStep[] = [
   {
     id: 1,
     title: 'CONSULTATION & REQUIREMENT GATHERING',
-    iconSrc: '/images/icons/consultation.svg',
+    iconSrc: '/images/scientific-communication/Consultation-Requirement-Gathering.webp',
     description:
       'We begin by understanding your research goals, target audience, and specific communication needs, whether it\'s for journals, regulators, clinicians, or patients.',
   },
   {
     id: 2,
     title: 'CONTENT DEVELOPMENT',
-    iconSrc: '/images/icons/content-dev.svg',
+    iconSrc: '/images/scientific-communication/Content-Development.webp',
     description:
       'Our subject matter experts, medical writers, and editors draft scientifically accurate and well-structured documents such as manuscripts, clinical study reports, abstracts, or educational content.',
   },
   {
     id: 3,
     title: 'SCIENTIFIC REVIEW & VALIDATION',
-    iconSrc: '/images/icons/review.svg',
+    iconSrc: '/images/scientific-communication/Scientific-Review-Validation.webp',
     description:
       'Each document undergoes expert review for scientific accuracy, consistency, and adherence to international guidelines (ICMJE, GPP, CONSORT, etc.).',
   },
   {
     id: 4,
     title: 'DESIGN & VISUALIZATION',
-    iconSrc: '/images/icons/design.svg',
+    iconSrc: '/images/scientific-communication/Design-VisualizationReview-Validation.webp',
     description:
       'To enhance clarity and impact, we integrate data visualization, infographics, and graphical summaries that simplify complex findings.',
   },
   {
     id: 5,
     title: 'COMPLIANCE & QUALITY CHECK',
-    iconSrc: '/images/icons/compliance.svg',
+    iconSrc: '/images/scientific-communication/Compliance-Quality-Check.webp',
     description:
       'We ensure your communication meets journal standards, regulatory requirements, and ethical guidelines while maintaining high editorial quality.',
   },
   {
     id: 6,
     title: 'DELIVERY & FEEDBACK',
-    iconSrc: '/images/icons/delivery.svg',
+    iconSrc: '/images/scientific-communication/Delivery-Feedback.webp',
     description:
       'Final drafts are shared for your review. Based on feedback, we refine and finalize content for submission, publication, or distribution.',
   },
@@ -67,14 +67,14 @@ interface BenefitItem {
 }
 
 const benefitsData: BenefitItem[] = [
-  { id: '1', title: 'Expertise in Scientific Communication', iconSrc: '/images/icons/benefit-1.svg', bgColor: 'bg-purple-100' },
-  { id: '2', title: 'Time and Resource Efficiency', iconSrc: '/images/icons/benefit-2.svg', bgColor: 'bg-amber-100' },
-  { id: '3', title: 'Innovation and Technology', iconSrc: '/images/icons/benefit-3.svg', bgColor: 'bg-purple-100' },
-  { id: '4', title: 'Tailored Strategies', iconSrc: '/images/icons/benefit-4.svg', bgColor: 'bg-amber-100' },
-  { id: '5', title: 'Enhanced Research Impact', iconSrc: '/images/icons/benefit-5.svg', bgColor: 'bg-purple-100' },
-  { id: '6', title: 'Continuous Improvement', iconSrc: '/images/icons/benefit-6.svg', bgColor: 'bg-amber-100' },
-  { id: '7', title: 'Scalability and Flexibility', iconSrc: '/images/icons/benefit-7.svg', bgColor: 'bg-purple-100' },
-  { id: '8', title: 'Diverse Channels', iconSrc: '/images/icons/benefit-8.svg', bgColor: 'bg-amber-100' },
+  { id: '1', title: 'Expertise in Scientific Communication', iconSrc: '/images/scientific-communication/Expertise-in-Scientific-Communication.webp', bgColor: 'bg-purple-100' },
+  { id: '2', title: 'Time and Resource Efficiency', iconSrc: '/images/scientific-communication/Time-and-Resource-Efficiency.webp', bgColor: 'bg-amber-100' },
+  { id: '3', title: 'Innovation and Technology', iconSrc: '/images/scientific-communication/Innovation-and-Technology.webp', bgColor: 'bg-purple-100' },
+  { id: '4', title: 'Tailored Strategies', iconSrc: '/images/scientific-communication/Tailored-Strategies.webp', bgColor: 'bg-amber-100' },
+  { id: '5', title: 'Enhanced Research Impact', iconSrc: '/images/scientific-communication/Enhanced-Research-Impact.webp', bgColor: 'bg-purple-100' },
+  { id: '6', title: 'Continuous Improvement', iconSrc: '/images/scientific-communication/Continuous-Improvement.webp', bgColor: 'bg-amber-100' },
+  { id: '7', title: 'Scalability and Flexibility', iconSrc: '/images/scientific-communication/Scalability-and-Flexibility.webp', bgColor: 'bg-purple-100' },
+  { id: '8', title: 'Diverse Channels', iconSrc: '/images/scientific-communication/Diverse-Channels.webp', bgColor: 'bg-amber-100' },
 ];
 
 interface RegulatoryItem {
@@ -85,11 +85,11 @@ interface RegulatoryItem {
 }
 
 const globalRegulations: RegulatoryItem[] = [
-  { id: 'fda', title: 'FDA Regulations (USA)', iconSrc: '/images/icons/fda.svg', content: 'Compliance with U.S. Food and Drug Administration guidelines for clinical data and medical communication.' },
-  { id: 'ema', title: 'EMA Regulations (Europe)', iconSrc: '/images/icons/ema.svg', content: 'Adherence to European Medicines Agency standards for safety reporting and product information.' },
-  { id: 'hc', title: 'Health Canada Regulations', iconSrc: '/images/icons/health-canada.svg', content: 'Fulfillment of Canadian regulatory submission requirements and healthcare communications.' },
-  { id: 'tga', title: 'TGA Regulations (Australia)', iconSrc: '/images/icons/tga.svg', content: 'Therapeutic Goods Administration compliance for medical technology and pharmaceuticals.' },
-  { id: 'pmda', title: 'PMDA Regulations (Japan)', iconSrc: '/images/icons/pmda.svg', content: 'Pharmaceuticals and Medical Devices Agency regulatory standards for Japanese medical publishing.' },
+  { id: 'fda', title: 'FDA Regulations (USA)', iconSrc: '/images/scientific-communication/FDA-Regulations-USA.webp', content: 'Compliance with U.S. Food and Drug Administration guidelines for clinical data and medical communication.' },
+  { id: 'ema', title: 'EMA Regulations (Europe)', iconSrc: '/images/scientific-communication/EMA-Regulations-Europe.webp', content: 'Adherence to European Medicines Agency standards for safety reporting and product information.' },
+  { id: 'hc', title: 'Health Canada Regulations', iconSrc: '/images/scientific-communication/Health-Canada-Regulations.webp', content: 'Fulfillment of Canadian regulatory submission requirements and healthcare communications.' },
+  { id: 'tga', title: 'TGA Regulations (Australia)', iconSrc: '/images/scientific-communication/TGA-Regulations-Australia.webp', content: 'Therapeutic Goods Administration compliance for medical technology and pharmaceuticals.' },
+  { id: 'pmda', title: 'PMDA Regulations (Japan)', iconSrc: '/images/scientific-communication/PMDA-Regulations-JapanRegulations-Australia.webp', content: 'Pharmaceuticals and Medical Devices Agency regulatory standards for Japanese medical publishing.' },
 ];
 
 const keyStandards: RegulatoryItem[] = [

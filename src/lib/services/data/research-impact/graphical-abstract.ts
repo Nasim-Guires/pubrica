@@ -10,16 +10,7 @@ export const graphicalAbstractWhoWeServeData = {
                 "Present complex research findings clearly.",
                 "Meet journal submission requirements.",
             ],
-            imageUrl: "/images/services/research-impact/graphical-abstract/phd-scholars.webp",
-        },
-        {
-            title: "Research Institutions & Laboratories",
-            bullets: [
-                "Maintain consistent visual branding.",
-                "Support dissemination of high-volume research outputs.",
-            ],
-            imageUrl:
-                "/images/services/research-impact/graphical-abstract/research-institutions.webp",
+            imageUrl: "/images/research-impact/graphical-abstract/PhD-Scholars-Early-Career-Researchers.png",
         },
         {
             title: "University Professors & Academic Authors",
@@ -28,7 +19,16 @@ export const graphicalAbstractWhoWeServeData = {
                 "Improve citation potential with impactful visual communication.",
             ],
             imageUrl:
-                "/images/services/research-impact/graphical-abstract/university-professors.webp",
+                "/images/research-impact/graphical-abstract/University-Professors-Academic-Authors.png",
+        },
+        {
+            title: "Research Institutions & Laboratories",
+            bullets: [
+                "Maintain consistent visual branding.",
+                "Support dissemination of high-volume research outputs.",
+            ],
+            imageUrl:
+                "/images/research-impact/graphical-abstract/Research-Institutions-Laboratories.png",
         },
         {
             title: "Medical & Life Science Researchers",
@@ -37,7 +37,7 @@ export const graphicalAbstractWhoWeServeData = {
                 "Communicate scientific findings to a broader audience.",
             ],
             imageUrl:
-                "/images/services/research-impact/graphical-abstract/medical-researchers.webp",
+                "/images/research-impact/graphical-abstract/Medical-Life-Science-Researchers.png",
         },
         {
             title: "Scientific Publishers & Journals",
@@ -46,7 +46,7 @@ export const graphicalAbstractWhoWeServeData = {
                 "Ensure compliance with editorial and publication standards.",
             ],
             imageUrl:
-                "/images/services/research-impact/graphical-abstract/publishers.webp",
+                "/images/research-impact/graphical-abstract/Scientific-Publishers-Journals.png",
         },
         {
             title: "Research Consultants & Grant Writers",
@@ -55,7 +55,7 @@ export const graphicalAbstractWhoWeServeData = {
                 "Enhance white papers and policy briefs with clear illustrations.",
             ],
             imageUrl:
-                "/images/services/research-impact/graphical-abstract/grant-writers.webp",
+                "/images/research-impact/graphical-abstract/Research-Consultants-Grant-Writers.png",
         },
         {
             title: "Healthcare & Pharmaceutical Companies",
@@ -64,7 +64,7 @@ export const graphicalAbstractWhoWeServeData = {
                 "Communicate research outcomes effectively to stakeholders.",
             ],
             imageUrl:
-                "/images/services/research-impact/graphical-abstract/pharma-companies.webp",
+                "/images/research-impact/graphical-abstract/Healthcare-Pharmaceutical-Companies.png",
         },
     ],
 };
@@ -78,33 +78,33 @@ export const graphicalAbstractTestimonialData = {
     testimonials: [
         {
             image:
-                "/images/services/research-impact/graphical-abstract/testimonials/jama-neurology-cover.webp",
+                "/images/research-impact/graphical-abstract/jama-neurology-1-1.png",
             quote:
                 "The graphical abstract designed by Pubrica was precise, well-structured, and aligned perfectly with the journal's specifications. It significantly enhanced the presentation of my article in Computers in Biology and Medicine.",
             name: "Dr. Ananya Rao",
             designation: "PhD Scholar, Biotechnology",
             organization: "India",
-            flag: "/images/flags/india.webp",
+            flag: "/images/editing-and-translation/flag.png",
         },
         {
             image:
-                "/images/services/research-impact/graphical-abstract/testimonials/jama-oncology-cover.webp",
+                "/images/research-impact/graphical-abstract/jama-oncology-journal-1.png",
             quote:
                 "Pubrica’s team translated our complex oncology research into a clear and visually compelling abstract. The submission to Cancer Letters was smooth and well-received.",
             name: "Prof. Michael Lang",
             designation: "Oncology Researcher",
             organization: "Germany",
-            flag: "/images/flags/germany.webp",
+            flag: "/images/research-impact/graphical-abstract/germany-.png",
         },
         {
             image:
-                "/images/services/research-impact/graphical-abstract/testimonials/british-journal-clinical-pharmacology-cover.webp",
+                "/images/research-impact/graphical-abstract/british-journal-of-clinical-pharmacology-1.png",
             quote:
                 "Their graphical abstract service added real value to my article in Biological Psychology. The visual summarization aligned well with the journal format and submission requirements.",
             name: "Dr. Jacob Williams",
             designation: "Clinical Psychologist & Researcher",
             organization: "USA",
-            flag: "/images/flags/usa.webp",
+            flag: "/images/research-impact/graphical-abstract/usa-.png",
         },
     ],
 };

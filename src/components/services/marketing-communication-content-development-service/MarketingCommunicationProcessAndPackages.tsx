@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Marketing Communication Content Development Process & Packages | Pubrica',
@@ -146,11 +147,14 @@ export default function MarketingCommunicationProcessAndPackages() {
       <section className="bg-emerald-50/50 py-12 px-4 border-y border-emerald-100">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image Placeholder */}
-          <div className="w-full h-80 bg-teal-100/70 rounded-lg border border-dashed border-teal-400 flex flex-col items-center justify-center p-4 text-center shadow-inner">
-            <span className="text-lg font-bold text-teal-800">Image Section</span>
-            <span className="text-xs text-teal-600 mt-1">
-              [ Marketing strategy team reviewing collateral samples visual ]
-            </span>
+          <div className="relative w-full h-80 rounded-lg overflow-hidden">
+            <Image
+              src="/images/marketing-communication-content-development-service/Marketing-Communication-Content-Development-Sample-Work.png"
+              alt="Marketing communication sample work"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
 
           <div className="flex flex-col items-start space-y-4">
@@ -188,7 +192,9 @@ export default function MarketingCommunicationProcessAndPackages() {
           <div className="bg-[#dbe3e3] rounded-lg p-6 flex flex-col justify-between border border-gray-300">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <span className="w-9 h-9 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-lg border border-blue-300">S</span>
+                <span className="relative w-9 h-9">
+                  <Image src="/images/publication-support/responding-to-reviewers/standard-logo.png" alt="Standard" fill className="object-contain" sizes="36px" />
+                </span>
                 <h3 className="text-base font-bold text-gray-900">Standard</h3>
               </div>
               <ul className="space-y-4 text-xs text-gray-800">
@@ -230,7 +236,9 @@ export default function MarketingCommunicationProcessAndPackages() {
           <div className="bg-[#e4d3e8] rounded-lg p-6 flex flex-col justify-between border border-purple-200">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <span className="w-9 h-9 rounded-full bg-purple-100 text-purple-600 font-bold flex items-center justify-center text-lg border border-purple-300">P</span>
+                <span className="relative w-9 h-9">
+                  <Image src="/images/editing-and-translation/translation-with-editing/pro.webp" alt="Professional" fill className="object-contain" sizes="36px" />
+                </span>
                 <h3 className="text-base font-bold text-purple-900">Professional</h3>
               </div>
               <ul className="space-y-4 text-xs text-gray-800">
@@ -273,7 +281,9 @@ export default function MarketingCommunicationProcessAndPackages() {
           <div className="bg-[#e8daaa] rounded-lg p-6 flex flex-col justify-between border border-amber-300">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <span className="w-9 h-9 rounded-full bg-amber-100 text-amber-700 font-bold flex items-center justify-center text-lg border border-amber-400">P</span>
+                <span className="relative w-9 h-9">
+                  <Image src="/images/editing-and-translation/translation-with-editing/pro.webp" alt="Premium" fill className="object-contain" sizes="36px" />
+                </span>
                 <h3 className="text-base font-bold text-amber-950">Premium</h3>
               </div>
               <ul className="space-y-4 text-xs text-gray-800">

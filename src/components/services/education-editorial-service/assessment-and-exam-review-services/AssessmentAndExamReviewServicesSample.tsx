@@ -11,7 +11,7 @@ const AssessmentAndExamReviewServicesSample: NextPage = () => {
           {/* LEFT COLUMN: IMAGE */}
           <div className="md:col-span-5 relative w-full h-[280px] md:h-[340px] rounded-2xl overflow-hidden shadow-md">
             <Image 
-              src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" 
+              src="/images/education-editorial-service/assessment-and-exam-review-services/Assessment-and-Exam-Review-Services-Sample-Work.webp" 
               alt="Assessment and Exam Review Services Sample Work" 
               fill 
               className="object-cover"

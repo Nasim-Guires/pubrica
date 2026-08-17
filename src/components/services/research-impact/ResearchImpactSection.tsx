@@ -1,13 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState } from "react";
 import {
   Plus,
   Minus,
   ArrowRightCircle,
-  HelpCircle,
-  ArrowDown,
-  FileText,
 } from "lucide-react";
 
 // Data structure for Cards
@@ -15,7 +13,7 @@ interface ServiceCard {
   id: string;
   badgeText: string;
   badgeSubtext: string;
-  badgeIcon: React.ReactNode;
+  badgeIconSrc: string;
   bgColor: string;
   borderColor: string;
   offers: string[];
@@ -26,7 +24,7 @@ const serviceCards: ServiceCard[] = [
     id: "help",
     badgeText: "TO HELP YOU",
     badgeSubtext: "Engage With Your Peers",
-    badgeIcon: <HelpCircle className="w-8 h-8 text-purple-700" />,
+    badgeIconSrc: "/images/research-impact/Help.svg",
     bgColor: "bg-[#cfdede]/60",
     borderColor: "border-[#b1c7c7]",
     offers: [
@@ -39,7 +37,7 @@ const serviceCards: ServiceCard[] = [
     id: "need",
     badgeText: "WHEN YOU NEED",
     badgeSubtext: "To Communicate Your Work With The Media",
-    badgeIcon: <ArrowDown className="w-8 h-8 text-purple-700" />,
+    badgeIconSrc: "/images/research-impact/need.svg",
     bgColor: "bg-[#e2e6c8]/60",
     borderColor: "border-[#ccd1a5]",
     offers: [
@@ -52,7 +50,7 @@ const serviceCards: ServiceCard[] = [
     id: "plan",
     badgeText: "WHEN YOU PLAN",
     badgeSubtext: "To Get The Right Funding",
-    badgeIcon: <FileText className="w-8 h-8 text-purple-700" />,
+    badgeIconSrc: "/images/research-impact/plan.svg",
     bgColor: "bg-[#dbd1d0]/60",
     borderColor: "border-[#c2b2b1]",
     offers: [
@@ -159,7 +157,9 @@ export default function ResearchImpactSection() {
           >
             {/* Top Badge Card Header */}
             <div className="bg-white rounded-md p-4 mb-6 shadow-sm border border-gray-100 flex items-center gap-3 min-h-[96px]">
-              <div className="flex-shrink-0">{card.badgeIcon}</div>
+              <div className="flex-shrink-0 relative w-8 h-8">
+                <Image src={card.badgeIconSrc} alt="" fill className="object-contain" sizes="32px" />
+              </div>
               <div>
                 <h3 className="text-sm font-bold text-purple-800 uppercase tracking-wide">
                   {card.badgeText}

@@ -164,15 +164,8 @@ export default function VideoAbstractOverview() {
                 />
               </div>
 
-              {/* Bottom Right Overlapping Image */}
-              <div className="absolute bottom-2 right-0 w-56 h-48 sm:w-64 sm:h-52 rounded-xl overflow-hidden shadow-2xl border-4 border-white">
-                <Image
-                  src={`${PAGE_IMAGES}/video-abstracts-services.png`}
-                  alt="Video Abstract Production"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              {/* Live Pubrica shows a single video-abstracts-services image */}
+              <div className="absolute bottom-2 right-0 w-56 h-48 sm:w-64 sm:h-52 rounded-xl overflow-hidden shadow-2xl border-4 border-white hidden" aria-hidden="true" />
             </div>
           </div>
         </div>

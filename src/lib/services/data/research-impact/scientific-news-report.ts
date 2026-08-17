@@ -10,7 +10,7 @@ export const scientificNewsReportWhoWeServeData = {
                 "Transform peer-reviewed research into accessible news stories for broader dissemination.",
             ],
             imageUrl:
-                "/images/services/research-impact/scientific-news-report/academic-researchers-scientists.webp",
+                "/images/research-impact/scientific-news-report/Academic-Researchers-Scientistss.png",
         },
         {
             title: "Universities & Research Institutions",
@@ -18,7 +18,7 @@ export const scientificNewsReportWhoWeServeData = {
                 "Promote institutional research breakthroughs to media, funding bodies, and the general public.",
             ],
             imageUrl:
-                "/images/services/research-impact/scientific-news-report/universities-research-institutions.webp",
+                "/images/research-impact/scientific-news-report/Universities-Research-Institutions.png",
         },
         {
             title: "Journals & Publishers",
@@ -26,7 +26,7 @@ export const scientificNewsReportWhoWeServeData = {
                 "Increase article visibility and public engagement with scientifically accurate news summaries.",
             ],
             imageUrl:
-                "/images/services/research-impact/scientific-news-report/journals-publishers.webp",
+                "/images/research-impact/scientific-news-report/Journals-Publishers.png",
         },
         {
             title: "Government & Funding Agencies",
@@ -34,7 +34,15 @@ export const scientificNewsReportWhoWeServeData = {
                 "Communicate funded research outcomes to demonstrate societal impact and policy relevance.",
             ],
             imageUrl:
-                "/images/services/research-impact/scientific-news-report/government-funding-agencies.webp",
+                "/images/research-impact/scientific-news-report/Government-Funding-Agenciess.png",
+        },
+        {
+            title: "Medical & Healthcare Professionals",
+            bullets: [
+                "Access accurate scientific news summaries to stay current with research that informs clinical practice.",
+            ],
+            imageUrl:
+                "/images/research-impact/scientific-news-report/Medical-Healthcare-Professionals.png",
         },
         {
             title: "Scientific Media & Press Offices",
@@ -42,7 +50,7 @@ export const scientificNewsReportWhoWeServeData = {
                 "Receive ready-to-publish scientific news briefs rooted in accuracy and editorial excellence.",
             ],
             imageUrl:
-                "/images/services/research-impact/scientific-news-report/scientific-media-press-offices.webp",
+                "/images/research-impact/scientific-news-report/Scientific-Media-Press-Offices.png",
         },
     ],
 };
@@ -55,33 +63,33 @@ export const scientificNewsReportTestimonialData = {
     testimonials: [
         {
             image:
-                "/images/services/research-impact/scientific-news-report/testimonials/journal-of-clinical-oncology.webp",
+                "/images/research-impact/scientific-news-report/bmc-public-health.png",
             quote:
                 "Pubrica’s news report perfectly captured the essence of our study published in BMC Public Health and translated it into accessible language for broader outreach. The editorial precision and turnaround were excellent.",
             name: "Dr. Sarah Thompson",
             designation: "University of Leeds",
             organization: "United Kingdom",
-            flag: "/images/flags/india.webp",
+            flag: "/images/physician-writing-services/patient-education-content/united-kingdom.png",
         },
         {
             image:
-                "/images/services/research-impact/scientific-news-report/testimonials/international-journal-of-surgery.webp",
+                "/images/research-impact/scientific-news-report/nature-communication-article-.png",
             quote:
                 "We approached Pubrica to create a news summary of our Nature Communications article. The final output was clear, engaging, and scientifically sound, perfect for institutional promotion and press release distribution.",
             name: "Dr. Lukas Weber",
             designation: "University of Zurich",
             organization: "Switzerland",
-            flag: "/images/flags/japan.webp",
+            flag: "/images/research-impact/scientific-news-report/switzerland-flag.png",
         },
         {
             image:
-                "/images/services/research-impact/scientific-news-report/testimonials/jama-neurology.webp",
+                "/images/research-impact/graphical-abstract/jama-neurology-1-1.png",
             quote:
                 "Our publication in JAMA Neurology received significantly more attention after Pubrica prepared a professional news report tailored for a non-specialist audience. Their understanding of scientific accuracy and readability was outstanding.",
             name: "Dr. Elena Rossi",
             designation: "Sapienza University of Rome",
             organization: "Italy",
-            flag: "/images/flags/italy.webp",
+            flag: "/images/research-impact/scientific-news-report/italy-.png",
         },
     ],
 };

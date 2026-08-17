@@ -1,6 +1,7 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -56,6 +57,7 @@ export default function AcademicDevelopmentEditingService() {
     const packages = [
         {
             letter: 'S',
+            badgeSrc: '/images/publication-support/poster-preparation/S.png',
             title: 'Standard Development',
             headerBg: 'bg-[#e2ebe8]',
             badgeColor: 'bg-emerald-200 text-emerald-800',
@@ -71,6 +73,7 @@ export default function AcademicDevelopmentEditingService() {
         },
         {
             letter: 'A',
+            badgeSrc: '/images/publication-support/peer-review-pre-submission/advanced.webp',
             title: 'Advanced Development',
             headerBg: 'bg-[#f0e6f5]',
             badgeColor: 'bg-purple-200 text-purple-800',
@@ -85,6 +88,7 @@ export default function AcademicDevelopmentEditingService() {
         },
         {
             letter: 'P',
+            badgeSrc: '/images/editing-and-translation/translation-with-editing/pro.webp',
             title: 'Premium Development',
             headerBg: 'bg-[#f5f0e1]',
             badgeColor: 'bg-amber-200 text-amber-800',
@@ -150,13 +154,14 @@ export default function AcademicDevelopmentEditingService() {
         'Reports, policy drafts, and educational materials',
     ];
 
-    const experts: Expert[] = [
+    const experts: (Expert & { photo: string })[] = [
         {
             name: 'Dr. Aarav Mehta',
             qualification: 'PhD in Life Sciences',
             institution: 'Indian Institute of Technology, India',
             experience: '10+',
             papers: '950+',
+            photo: '/images/academic-editorial-services/copy-editing-services/sneha-kapoor-.webp',
         },
         {
             name: 'Dr. Priya Rangan',
@@ -164,6 +169,7 @@ export default function AcademicDevelopmentEditingService() {
             institution: 'University of Delhi, India',
             experience: '8+',
             papers: '740+',
+            photo: '/images/academic-editorial-services/copy-editing-services/rohith-sharama.webp',
         },
         {
             name: 'Dr. Rohan Verma',
@@ -171,6 +177,7 @@ export default function AcademicDevelopmentEditingService() {
             institution: 'All India Institute of Medical Sciences, India',
             experience: '9+',
             papers: '850+',
+            photo: '/images/academic-editorial-services/copy-editing-services/Dr.-ananya-reddy-.webp',
         },
     ];
 
@@ -295,8 +302,8 @@ export default function AcademicDevelopmentEditingService() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
                     {experts.map((exp, idx) => (
                         <div key={idx} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm flex flex-col items-center text-center">
-                            <div className="w-16 h-16 rounded-full bg-slate-200 flex items-center justify-center font-bold text-gray-700 mb-4 text-xl border">
-                                {exp.name.charAt(4)}
+                            <div className="relative w-16 h-16 rounded-full mb-4 overflow-hidden">
+                                <Image src={exp.photo} alt={exp.name} fill className="object-cover" sizes="64px" />
                             </div>
                             <h3 className="text-sm font-bold text-gray-900">{exp.name}</h3>
                             <p className="text-xs text-gray-600 mt-1">{exp.qualification}</p>
@@ -396,9 +403,10 @@ export default function AcademicDevelopmentEditingService() {
                         {packages.map((pkg, idx) => (
                             <div key={idx} className={`bg-white border ${pkg.borderColor} rounded-lg shadow-sm flex flex-col overflow-hidden`}>
                                 {/* Package Header with Letter Badge & Title */}
-                                <div className={`${pkg.headerBg} p-5 border-b ${pkg.borderColor} flex items-center gap-3`}>                <div className={`w-10 h-10 rounded-full ${pkg.badgeColor} font-extrabold flex items-center justify-center text-sm shadow-sm`}>
-                                    {pkg.letter}
-                                </div>
+                                <div className={`${pkg.headerBg} p-5 border-b ${pkg.borderColor} flex items-center gap-3`}>
+                                    <div className="relative w-10 h-10">
+                                        <Image src={pkg.badgeSrc} alt={`${pkg.title} package`} fill className="object-contain" />
+                                    </div>
                                     <h3 className="text-sm font-bold text-gray-900">{pkg.title}</h3>
                                 </div>
 

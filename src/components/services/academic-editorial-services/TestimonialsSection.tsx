@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState } from "react";
 
 interface Testimonial {
@@ -8,29 +9,37 @@ interface Testimonial {
   quote: string;
   author: string;
   title: string;
-  countryFlag: string;
+  flagSrc?: string;
 }
 
 const testimonialsData: Testimonial[] = [
   {
     id: "1",
-    journalCover:
-      "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=300&q=80",
+    journalCover: "/images/academic-editorial-services/journal-of-neuroscience-.png",
     quote:
       '"Pubrica\'s editorial team elevated the quality of my manuscript with incredible precision and academic clarity."',
     author: "— Dr. Aisha Rahman",
     title: "PhD in Public Health, Malaysia",
-    countryFlag: "🇲🇾",
+    flagSrc: "/images/academic-editorial-services/Malaysia-.png",
   },
   {
     id: "2",
     journalCover:
-      "https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=300&q=80",
+      "/images/academic-editorial-services/journal-of-clinical-epidemiology.png",
     quote:
       '"Working with Pubrica was a smooth and professional experience with excellent editing quality."',
     author: "— Prof. Daniel Thompson",
     title: "Research Scientist, USA",
-    countryFlag: "🇬🇧",
+    flagSrc: "/images/research-services/systematic-review/united-kingdom-.png",
+  },
+  {
+    id: "3",
+    journalCover: "/images/academic-editorial-services/jama-oncology-journal.png",
+    quote:
+      '"Exceptional editorial assistance improved readability and academic accuracy throughout."',
+    author: "— Maria Fernandes",
+    title: "MSc Biotechnology, Portugal",
+    flagSrc: "/images/academic-editorial-services/Portugal-.png",
   },
 ];
 
@@ -64,11 +73,13 @@ export function TestimonialsSection() {
             >
               {/* Top Quote Box with Journal Cover */}
               <div className="bg-[#d1d5db] rounded-md p-4 flex items-center gap-4 min-h-[140px]">
-                <div className="w-24 h-28 bg-slate-900 rounded overflow-hidden shrink-0 shadow-sm">
-                  <img
+                <div className="w-24 h-28 bg-slate-900 rounded overflow-hidden shrink-0 shadow-sm relative">
+                  <Image
                     src={item.journalCover}
                     alt="Journal Cover"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="96px"
                   />
                 </div>
                 <p className="text-xs sm:text-sm text-slate-800 font-medium leading-normal italic">
@@ -84,9 +95,15 @@ export function TestimonialsSection() {
                   </h4>
                   <p className="text-xs text-slate-600 italic">{item.title}</p>
                 </div>
-                <span className="text-2xl" role="img" aria-label="country flag">
-                  {item.countryFlag}
-                </span>
+                {item.flagSrc ? (
+                  <Image
+                    src={item.flagSrc}
+                    alt=""
+                    width={40}
+                    height={28}
+                    className="w-10 h-auto"
+                  />
+                ) : null}
               </div>
             </div>
           ))}
@@ -94,20 +111,16 @@ export function TestimonialsSection() {
 
         {/* Carousel Indicators */}
         <div className="flex justify-center items-center gap-2 pt-4">
-          <button
-            onClick={() => setActiveIndex(0)}
-            className={`w-2.5 h-2.5 rounded-full transition-colors ${
-              activeIndex === 0 ? "bg-[#0d3b44]" : "bg-slate-300"
-            }`}
-            aria-label="Slide 1"
-          />
-          <button
-            onClick={() => setActiveIndex(1)}
-            className={`w-2.5 h-2.5 rounded-full border border-slate-400 transition-colors ${
-              activeIndex === 1 ? "bg-[#0d3b44]" : "bg-transparent"
-            }`}
-            aria-label="Slide 2"
-          />
+          {testimonialsData.map((item, index) => (
+            <button
+              key={item.id}
+              onClick={() => setActiveIndex(index)}
+              className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                activeIndex === index ? "bg-[#0d3b44]" : "bg-slate-300"
+              }`}
+              aria-label={`Slide ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>

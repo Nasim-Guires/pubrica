@@ -20,8 +20,8 @@ const LearningDesignSampleSection: NextPage = () => {
           {/* Left Image Column */}
           <div className="w-full md:w-1/2 relative h-[260px] md:h-[300px] rounded-xl overflow-hidden shadow-inner bg-gray-100 flex-shrink-0">
             <Image 
-              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" 
-              alt="Learning Design and Pedagogy sample work desk setup" 
+              src="/images/education-editorial-service/learning-design-and-pedagogy/Learning-Design-and-Pedagogy-Services-Sample-Work.webp" 
+              alt="Learning Design and Pedagogy Services Sample Work" 
               fill
               className="object-cover"
             />

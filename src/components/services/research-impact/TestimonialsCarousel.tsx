@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState } from "react";
 
 // --- Types ---
@@ -11,7 +12,7 @@ interface Testimonial {
   location: string;
   journalCoverUrl: string;
   journalName: string;
-  flagUrl: string;
+  flagUrl?: string;
 }
 
 // --- Data ---
@@ -24,9 +25,9 @@ const testimonials: Testimonial[] = [
     role: "Clinical Oncology",
     location: "India",
     journalCoverUrl:
-      "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=300&q=80",
+      "/images/research-impact/journal-of-clinical-oncology.png",
     journalName: "Journal of Clinical Oncology",
-    flagUrl: "https://flagcdn.com/w40/in.png",
+    flagUrl: "/images/editing-and-translation/flag.png",
   },
   {
     id: 2,
@@ -36,9 +37,9 @@ const testimonials: Testimonial[] = [
     role: "Oncology Research",
     location: "United Kingdom",
     journalCoverUrl:
-      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=300&q=80",
+      "/images/research-impact/the-lancet-of-oncolgy-.png",
     journalName: "The Lancet Oncology",
-    flagUrl: "https://flagcdn.com/w40/gb.png",
+    flagUrl: "/images/research-impact/Engineering-Technology.png",
   },
   {
     id: 3,
@@ -48,9 +49,9 @@ const testimonials: Testimonial[] = [
     role: "Neuroscience",
     location: "Spain",
     journalCoverUrl:
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=300&q=80",
+      "/images/research-impact/journal-of-neuroscience-.png",
     journalName: "JNeurosci",
-    flagUrl: "https://flagcdn.com/w40/es.png",
+    flagUrl: "/images/editing-and-translation/manuscript-editing/spain.png",
   },
 ];
 
@@ -88,11 +89,13 @@ export default function TestimonialsCarousel(): React.ReactElement {
                 {/* Gray Quote Inner Box */}
                 <div className="bg-[#dcdcdc] rounded-lg p-4 sm:p-5 flex gap-4 items-start min-h-[160px]">
                   {/* Journal Cover Thumbnail */}
-                  <div className="w-20 h-24 flex-shrink-0 rounded bg-slate-900 overflow-hidden shadow-inner border border-slate-300">
-                    <img
+                  <div className="w-20 h-24 flex-shrink-0 rounded bg-slate-900 overflow-hidden shadow-inner border border-slate-300 relative">
+                    <Image
                       src={item.journalCoverUrl}
                       alt={item.journalName}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
+                      sizes="80px"
                     />
                   </div>
 
@@ -113,14 +116,17 @@ export default function TestimonialsCarousel(): React.ReactElement {
                     </p>
                   </div>
 
-                  {/* Country Flag */}
-                  <div className="w-6 h-4 rounded overflow-hidden shadow-sm flex-shrink-0 mb-0.5">
-                    <img
+                  {item.flagUrl ? (
+                  <div className="w-6 h-4 rounded overflow-hidden shadow-sm flex-shrink-0 mb-0.5 relative">
+                    <Image
                       src={item.flagUrl}
                       alt={item.location}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
+                      sizes="24px"
                     />
                   </div>
+                  ) : null}
                 </div>
               </div>
             ))}

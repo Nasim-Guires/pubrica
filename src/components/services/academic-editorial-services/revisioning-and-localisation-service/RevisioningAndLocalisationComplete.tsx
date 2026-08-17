@@ -1,6 +1,7 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -17,31 +18,37 @@ export default function RevisioningAndLocalisationComplete() {
             num: 1,
             title: 'UNDERSTANDING YOUR TARGET AUDIENCE',
             desc: 'We begin by analysing your manuscript’s target region, intended journal, readership level, and field-specific requirements. This allows us to pinpoint the exact revisioning and localisation needs, ensuring your work resonates with the intended readers.',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Understanding-Your-Target-Audience.png',
         },
         {
             num: 2,
             title: 'ASSIGNMENT TO A SUBJECT-MATTER EXPERT',
             desc: 'Your manuscript is assigned to an editor with relevant academic expertise and regional linguistic proficiency. This ensures that both the scientific content and regional nuances are accurately addressed.',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Assignment-to-a-Subject-Matter-Expert.png',
         },
         {
             num: 3,
             title: 'DEEP STRUCTURAL REVISIONING',
             desc: 'Our experts refine your manuscript at a conceptual and structural level. We enhance clarity, strengthen arguments, improve logical flow, and optimize scientific communication to meet the highest standards.',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Deep-Structural-Revisioning.png',
         },
         {
             num: 4,
             title: 'LINGUISTIC & CULTURAL LOCALISATION',
             desc: 'We adapt your manuscript for the target region, tailoring language style, terminology, formatting norms, local regulations, and contextual sensitivities. This ensures your research communicates effectively and appropriately to the intended audience.',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Linguistic-Cultural-Localisation.png',
         },
         {
             num: 5,
             title: 'QUALITY CHECK BY SENIOR EDITOR',
             desc: 'A senior editor conducts a rigorous second-level review to verify scientific accuracy, coherence, and compliance with journal and regional guidelines.',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Quality-Check-by-Senior-Editor.png',
         },
         {
             num: 6,
             title: 'FINAL DELIVERY WITH TRANSPARENCY',
             desc: 'You receive:\n• A fully revised and localised manuscript ready for submission\n• A tracked-changes version highlighting all modifications\n• Detailed editor comments and suggestions\n• A certificate of editing (available upon request)',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Final-Delivery-with-Transparency-Check-by-Senior-Editor.png',
         },
     ];
 
@@ -67,6 +74,7 @@ export default function RevisioningAndLocalisationComplete() {
             university: 'Jawaharlal Nehru University, India',
             experience: '10+ Years of Experience',
             manuscripts: '800+ Manuscripts Localised & Revised',
+            photo: '/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Arjun-Mehta.png',
         },
         {
             name: 'Dr. Priya Rao',
@@ -74,6 +82,7 @@ export default function RevisioningAndLocalisationComplete() {
             university: 'University of Delhi, India',
             experience: '8+ Years of Experience',
             manuscripts: '400+ Papers Localised & Revised',
+            photo: '/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Priya-Rao.png',
         },
         {
             name: 'Dr. Rohan Iyer',
@@ -81,6 +90,7 @@ export default function RevisioningAndLocalisationComplete() {
             university: 'Indian Institute of Technology, Bombay',
             experience: '9+ Years of Experience',
             manuscripts: '500+ Manuscripts Localised & Revised',
+            photo: '/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Rohan-Iyer.png',
         },
     ];
 
@@ -104,7 +114,7 @@ export default function RevisioningAndLocalisationComplete() {
 
     const packages = [
         {
-            badge: 'S',
+            badgeSrc: '/images/publication-support/poster-preparation/S.png',
             title: 'Basic',
             subtitle: 'Essential Revisioning',
             idealFor: 'Early drafts or manuscripts needing light refinement.',
@@ -118,7 +128,7 @@ export default function RevisioningAndLocalisationComplete() {
             borderColor: 'border-emerald-300',
         },
         {
-            badge: 'S',
+            badgeSrc: '/images/publication-support/poster-preparation/S.png',
             title: 'Standard',
             subtitle: 'Advanced Revisioning & Localisation',
             idealFor: 'Manuscripts requiring structural clarity and regional adaptation.',
@@ -132,7 +142,7 @@ export default function RevisioningAndLocalisationComplete() {
             borderColor: 'border-purple-300',
         },
         {
-            badge: 'P',
+            badgeSrc: '/images/editing-and-translation/translation-with-editing/pro.webp',
             title: 'Premium',
             subtitle: 'Comprehensive Revisioning & Localisation',
             idealFor: 'High-impact manuscripts aimed at top-tier journals or international audiences.',
@@ -187,11 +197,11 @@ export default function RevisioningAndLocalisationComplete() {
                                 }`}
                             >
                                 <div
-                                    className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs mb-3 ${
-                                        isHovered ? 'bg-white text-[#333333]' : 'bg-[#007791] text-white'
+                                    className={`relative w-10 h-10 rounded-full overflow-hidden mb-3 ${
+                                        isHovered ? 'bg-white' : 'bg-[#007791]'
                                     }`}
                                 >
-                                    {step.num}
+                                    <Image src={step.iconSrc} alt="" fill className="object-contain p-1" />
                                 </div>
                                 <h3 className="text-xs font-bold mb-2 text-center">{step.title}</h3>
                                 <p className={`text-[10px] leading-relaxed whitespace-pre-line ${isHovered ? 'text-gray-200' : 'text-gray-600'}`}>
@@ -229,8 +239,8 @@ export default function RevisioningAndLocalisationComplete() {
                     {experts.map((exp, idx) => (
                         <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between text-center">
                             <div>
-                                <div className="w-16 h-16 mx-auto bg-emerald-100 rounded-full flex items-center justify-center text-xl mb-3 text-[#0b3b2c] font-bold">
-                                    👨‍🏫
+                                <div className="relative w-16 h-16 mx-auto mb-3 overflow-hidden rounded-full bg-emerald-100">
+                                    <Image src={exp.photo} alt={exp.name} fill className="object-cover" sizes="64px" />
                                 </div>
                                 <h3 className="text-sm font-bold text-gray-900 mb-1">{exp.name}</h3>
                                 <p className="text-xs text-emerald-800 font-medium mb-1">{exp.qualification}</p>
@@ -255,12 +265,14 @@ export default function RevisioningAndLocalisationComplete() {
             <section className="py-14 px-4 bg-[#f4faf7] text-center" aria-labelledby="sample-heading">
                 <div className="max-w-4xl mx-auto bg-white border border-emerald-100 rounded-xl p-8 shadow-sm">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div className="bg-[#0b3b2c] p-3 rounded-lg shadow-md flex justify-center items-center">
-                            <div className="bg-white rounded p-4 w-full h-48 flex flex-col items-center justify-center">
-                                <span className="text-3xl mb-2">📄</span>
-                                <span className="text-xs font-bold text-gray-800">Revisioning & Localisation Sample</span>
-                                <span className="text-[10px] text-gray-500 mt-1">Editorial Compliance Preview</span>
-                            </div>
+                        <div className="bg-[#0b3b2c] p-3 rounded-lg shadow-md flex justify-center items-center relative h-48 overflow-hidden">
+                            <Image
+                                src="/images/academic-editorial-services/revisioning-and-localisation-service/Revisioning-and-Localisation-Service-Sample-Work.png"
+                                alt="Revisioning and Localisation Service sample work"
+                                fill
+                                className="object-cover rounded"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
                         </div>
                         <div className="text-left">
                             <h2 id="sample-heading" className="text-base md:text-lg font-bold text-[#0b3b2c] mb-4">
@@ -319,8 +331,8 @@ export default function RevisioningAndLocalisationComplete() {
                     {packages.map((pkg, idx) => (
                         <div key={idx} className={`bg-white border-2 ${pkg.borderColor} rounded-xl shadow-sm overflow-hidden flex flex-col justify-between`}>
                             <div className={`${pkg.bgColor} p-6 border-b ${pkg.borderColor} text-center`}>
-                                <div className="w-10 h-10 mx-auto rounded-full bg-white font-bold flex items-center justify-center text-sm shadow-sm mb-2 text-gray-900">
-                                    {pkg.badge}
+                                <div className="relative w-10 h-10 mx-auto rounded-full bg-white shadow-sm mb-2 overflow-hidden">
+                                    <Image src={pkg.badgeSrc} alt={`${pkg.title} package`} fill className="object-contain p-1" />
                                 </div>
                                 <h3 className="text-sm font-bold text-gray-900">{pkg.title}</h3>
                                 <span className="text-[11px] text-gray-600">{pkg.subtitle}</span>

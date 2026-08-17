@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // --- DATA TYPES & CONSTANTS ---
 
@@ -118,7 +119,7 @@ interface WorkflowStep {
     id: number;
     title: string;
     description: string;
-    iconSvg: React.ReactNode;
+    iconSrc: string;
 }
 
 const workflowSteps: WorkflowStep[] = [
@@ -127,74 +128,51 @@ const workflowSteps: WorkflowStep[] = [
         title: 'MANUSCRIPT SUBMISSION',
         description:
             'You submit your full-length research manuscript, thesis chapter, or academic paper, along with any specific journal formatting guidelines or institutional requirements.',
-        iconSvg: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
-            </svg>
-        ),
+        iconSrc: '/images/research-impact/simplified-abstract-services/Manuscript-Submission.png',
     },
     {
         id: 2,
         title: "INITIAL REVIEW BY PUBRICA'S DOMAIN EXPERTS",
         description:
             "Our subject-matter experts thoroughly review your study's objectives, methodology, results, and conclusions. We extract the core scientific message that forms the basis of your research abstract.",
-        iconSvg: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-        ),
+        iconSrc: '/images/research-impact/simplified-abstract-services/Initial-Review-by-Pubricas-Domain-Experts.png',
     },
     {
         id: 3,
         title: 'ABSTRACT STRUCTURING & DRAFTING',
         description:
             'A clear, coherent, and structured abstract is drafted using formats like IMRaD or unstructured formats, depending on your target journal. This step ensures effective scientific communication.',
-        iconSvg: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-            </svg>
-        ),
+        iconSrc: '/images/research-impact/simplified-abstract-services/Abstract-Structuring-Drafting.png',
     },
     {
         id: 4,
         title: 'KEYWORD IDENTIFICATION & OPTIMIZATION',
         description:
             'We integrate high-impact, SEO-optimized keywords to improve visibility on platforms like PubMed, Scopus, and Web of Science. This helps your abstract reach the right scholarly audience.',
-        iconSvg: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-            </svg>
-        ),
+        iconSrc: '/images/research-impact/simplified-abstract-services/Keyword-Identification-Optimization.png',
     },
     {
         id: 5,
         title: 'INTERNAL REVIEW & QUALITY CHECK BY THE PUBRICA TEAM',
         description:
             'Your abstract undergoes internal peer review for scientific accuracy, clarity, and language precision. This includes editing and proofreading by experienced editors to maintain publication standards.',
-        iconSvg: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-        ),
+        iconSrc: '/images/research-impact/simplified-abstract-services/Internal-Review-Quality-Check-by-the-Pubrica-team.png',
     },
     {
         id: 6,
         title: 'FINAL DELIVERY',
         description:
             'You receive a submission-ready abstract, customized to your target audience, platform, or publication outlet, ensuring alignment with both technical content and readability expectations.',
-        iconSvg: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-        ),
+        iconSrc: '/images/research-impact/simplified-abstract-services/Final-Delivery.png',
     },
 ];
 
 const publishers = [
-    { name: 'WILEY', fontStyle: 'font-serif tracking-widest font-bold text-xl sm:text-2xl' },
-    { name: 'Springer', fontStyle: 'font-sans tracking-tight font-semibold text-xl sm:text-2xl text-slate-700' },
-    { name: 'BMJ', fontStyle: 'font-sans font-black tracking-wider text-2xl sm:text-3xl text-sky-600' },
-    { name: 'ELSEVIER', fontStyle: 'font-serif font-bold tracking-widest text-lg sm:text-xl text-orange-600' },
+    { name: 'WILEY', logoUrl: '/images/publication-support/art-work-preparation/Wiley.png' },
+    { name: 'Springer', logoUrl: '/images/publication-support/art-work-preparation/Springer.png' },
+    { name: 'BMJ', logoUrl: '/images/research-impact/graphical-abstract/bmj-.png' },
+    { name: 'ELSEVIER', logoUrl: '/images/research-impact/graphical-abstract/Elsevier-.png' },
+    { name: 'Taylor & Francis', logoUrl: '/images/research-impact/scientific-news-report/Taylor-Francis.png' },
 ];
 
 export default function SimplifiedAbstractPage() {
@@ -222,66 +200,14 @@ export default function SimplifiedAbstractPage() {
                     Simplified Abstract Example by Pubrica
                 </h2>
 
-                {/* Abstract Card Container */}
-                <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-4 sm:p-6 text-left space-y-4">
-                    {/* Top Journal Badges */}
-                    <div className="bg-emerald-50/80 rounded-lg p-3 sm:p-4 flex flex-wrap justify-between items-center text-xs sm:text-sm border border-emerald-100">
-                        <div>
-                            <span className="font-bold text-slate-900 block sm:inline">Nature</span>
-                            <span className="text-slate-600 sm:ml-4">Journal Impact Factor: 50.5</span>
-                        </div>
-                        <div className="font-semibold text-slate-700 mt-1 sm:mt-0">
-                            Journal Cite Score: 78.1
-                        </div>
-                    </div>
-
-                    {/* Article Abstract Diagram Mockup */}
-                    <div className="border border-slate-200 rounded-lg p-4 sm:p-8 bg-white space-y-4 relative">
-                        <div className="border-b pb-2">
-                            <span className="text-2xl sm:text-3xl font-serif font-bold tracking-tight text-slate-900">
-                                ARTICLE
-                            </span>
-                            <span className="text-[10px] sm:text-xs text-slate-400 float-right mt-2">doi:10.1038/nature13814</span>
-                        </div>
-
-                        <h3 className="text-lg sm:text-2xl font-serif font-bold text-slate-900">
-                            Clonal dynamics of native haematopoiesis
-                        </h3>
-
-                        <p className="text-[11px] text-slate-500 font-serif">
-                            Jianlong Sun<sup>1,2</sup>, Azucena Ramos<sup>1</sup>, Brad Chapman<sup>1</sup>, Jonathan B. Johnnidis<sup>1</sup>, Linda Lei<sup>1</sup>, Yu-Jui Ho<sup>1</sup>, Allon Klein<sup>1</sup>, Oliver Hofmann<sup>1</sup> & Fernando D. Camargo<sup>1,2</sup>
-                        </p>
-
-                        {/* Simulated Annotations Box */}
-                        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 pt-4 text-xs">
-                            <div className="md:col-span-1 space-y-6 text-right hidden md:block text-slate-600 font-sans italic text-[11px]">
-                                <div className="pt-2">general background &rarr;</div>
-                                <div className="pt-8">here we show &rarr;</div>
-                            </div>
-
-                            <div className="md:col-span-2 space-y-2 text-[11px] leading-relaxed font-serif bg-slate-50 p-3 rounded border border-slate-200">
-                                <p className="bg-emerald-100/70 p-1 rounded">
-                                    It is currently thought that life-long blood cell production is driven by the action of a small number of multipotent haematopoietic stem cells. Evidence supporting this view has been largely acquired through the use of functional assays involving transplantation. <span className="bg-sky-200/80 font-semibold">However, whether these mechanisms also govern native non-transplant haematopoiesis is entirely unclear.</span>
-                                </p>
-                                <p className="bg-pink-100/80 p-1 rounded">
-                                    Here we have established a novel experimental model in mice where cells can be uniquely and genetically labelled in situ to address this question.
-                                </p>
-                                <p className="p-1">
-                                    Using this approach, we have performed longitudinal analyses of clonal dynamics in adult mice that reveal unprecedented features of native haematopoiesis...
-                                </p>
-                            </div>
-
-                            <div className="md:col-span-1 space-y-4 text-left hidden md:block text-slate-600 font-sans italic text-[11px]">
-                                <div>&larr; specific background</div>
-                                <div>&larr; knowledge gap</div>
-                                <div>&larr; results & methodology</div>
-                            </div>
-                        </div>
-
-                        <p className="text-[10px] text-slate-400 text-center pt-2">
-                            All rights reserved by Nature. Reproduced here for educational purposes only.
-                        </p>
-                    </div>
+                <div className="relative w-full max-w-4xl mx-auto aspect-[16/10] rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-white">
+                    <Image
+                        src="/images/research-impact/simplified-abstract-services/v1-simplified-abstract-writing-recreation-image.png"
+                        alt="Simplified Abstract Example by Pubrica"
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 1024px) 100vw, 896px"
+                    />
                 </div>
             </section>
 
@@ -382,8 +308,8 @@ export default function SimplifiedAbstractPage() {
                                         }`}
                                 >
                                     <div className="space-y-3 flex flex-col items-center">
-                                        <div className={isHovered ? 'text-teal-400' : 'text-slate-700'}>
-                                            {step.iconSvg}
+                                        <div className="relative w-8 h-8">
+                                            <Image src={step.iconSrc} alt="" fill className="object-contain" sizes="32px" />
                                         </div>
                                         <h3 className={`text-xs font-bold uppercase tracking-wide leading-snug ${isHovered ? 'text-white' : 'text-slate-900'}`}>
                                             {step.title}
@@ -460,11 +386,13 @@ export default function SimplifiedAbstractPage() {
                     </div>
 
                     {/* Image Placeholder Frame */}
-                    <div className="relative h-64 sm:h-80 w-full rounded-xl overflow-hidden bg-slate-100 border border-slate-200 flex items-center justify-center">
-                        <img
-                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
+                    <div className="relative h-64 sm:h-80 w-full rounded-xl overflow-hidden bg-slate-100 border border-slate-200">
+                        <Image
+                            src="/images/research-impact/simplified-abstract-services/image-4.webp"
                             alt="Researcher analyzing manuscript"
-                            className="w-full h-full object-cover"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                     </div>
                 </div>
@@ -486,13 +414,15 @@ export default function SimplifiedAbstractPage() {
                 </div>
 
                 {/* Publisher Logos Card Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                     {publishers.map((pub, idx) => (
                         <div
                             key={idx}
                             className="bg-white border border-slate-200 rounded-xl p-6 sm:p-8 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow"
                         >
-                            <span className={pub.fontStyle}>{pub.name}</span>
+                            <div className="relative w-full h-16">
+                                <Image src={pub.logoUrl} alt={`${pub.name} logo`} fill className="object-contain" sizes="160px" />
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -503,11 +433,13 @@ export default function SimplifiedAbstractPage() {
                 <div className="bg-[#f2faf6] rounded-2xl border border-emerald-100 p-6 sm:p-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
                     {/* Sample Work Left Image Block */}
-                    <div className="rounded-xl overflow-hidden border border-slate-200 shadow-sm h-64 sm:h-80 bg-white">
-                        <img
-                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
+                    <div className="relative rounded-xl overflow-hidden border border-slate-200 shadow-sm h-64 sm:h-80 bg-white">
+                        <Image
+                            src="/images/research-impact/simplified-abstract-services/Simplified-Abstract-Services-Sample-Work.jpg"
                             alt="Team discussing research report"
-                            className="w-full h-full object-cover"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                     </div>
 

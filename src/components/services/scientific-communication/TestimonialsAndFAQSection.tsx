@@ -15,31 +15,42 @@ interface Testimonial {
   author: string;
   title: string;
   location: string;
-  flagCode: string; // ISO 2-letter country code for flag API (e.g., 'in', 'gb')
+  flagSrc?: string;
 }
 
 const testimonialsData: Testimonial[] = [
   {
     id: "1",
-    journalImageSrc: "/images/journals/jneurosci.jpg",
-    journalImageAlt: "JNeurosci journal cover",
+    journalImageSrc: "/images/scientific-communication/jama-neurology-.webp",
+    journalImageAlt: "JAMA Neurology journal cover",
     quote:
       "Pubrica's scientific communication team helped us transform complex clinical data into clear, publication-ready manuscripts. Their attention to regulatory guidelines and journal requirements ensured smooth submissions and faster approvals.",
     author: "DR. MEERA SHARMA",
     title: "Clinical Research Lead",
     location: "India",
-    flagCode: "in",
+    flagSrc: "/images/editing-and-translation/flag.png",
   },
   {
     id: "2",
-    journalImageSrc: "/images/journals/bmc-health.jpg",
-    journalImageAlt: "BMC Global and Public Health journal cover",
+    journalImageSrc: "/images/editing-and-translation/scientific-editing/testimonials-1.png",
+    journalImageAlt: "Scientific communication testimonial illustration",
     quote:
       "Pubrica's scientific medical communication services helped us convey complex trial results in a way that was both accurate and engaging. Their work strengthened our publications and reinforced our credibility in the field.",
     author: "DR. ROHAN IYER",
     title: "Clinical Trials Manager",
     location: "United Kingdom",
-    flagCode: "gb",
+    flagSrc: "/images/research-services/systematic-review/united-kingdom-.png",
+  },
+  {
+    id: "3",
+    journalImageSrc: "/images/scientific-communication/journal-of-health-economics-1.webp",
+    journalImageAlt: "Journal of Health Economics cover",
+    quote:
+      "The team delivered scientifically accurate communication materials that met our regulatory and publication standards. Their editorial precision and turnaround were outstanding.",
+    author: "DR. KLAUS WEBER",
+    title: "Medical Affairs Director",
+    location: "Germany",
+    flagSrc: "/images/editing-and-translation/book-editing/germany-.png",
   },
 ];
 
@@ -237,14 +248,16 @@ export default function TestimonialsAndFAQSection() {
                       {item.title}, {item.location}
                     </p>
                   </div>
+                  {item.flagSrc ? (
                   <div className="w-6 h-6 relative rounded-full overflow-hidden border border-gray-200 flex-shrink-0">
                     <Image
-                      src={`https://flagcdn.com/w40/${item.flagCode}.png`}
+                      src={item.flagSrc}
                       alt={`${item.location} flag`}
                       fill
                       className="object-cover"
                     />
                   </div>
+                  ) : null}
                 </div>
               </div>
             ))}
@@ -262,10 +275,10 @@ export default function TestimonialsAndFAQSection() {
               }`}
             />
             <button
-              onClick={() => setActiveSlide(1)}
-              aria-label="Slide 2"
+              onClick={() => setActiveSlide(2)}
+              aria-label="Slide 3"
               className={`w-3 h-3 transition-colors duration-200 ${
-                activeSlide === 1
+                activeSlide === 2
                   ? "bg-[#003b42]"
                   : "border border-[#003b42] bg-transparent"
               }`}

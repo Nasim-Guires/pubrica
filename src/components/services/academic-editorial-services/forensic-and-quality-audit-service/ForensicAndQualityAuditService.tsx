@@ -1,6 +1,7 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import Image from 'next/image';
 import React from 'react';
 
 export const metadata = {
@@ -25,32 +26,32 @@ export default function ForensicAndQualityAuditService() {
     {
       title: 'Data Integrity Audit',
       description: 'We verify the consistency, completeness, and authenticity of research data. This includes identifying...',
-      icon: '🗄️',
+      iconSrc: '/images/academic-editorial-services/forensic-and-quality-audit-service/Data-Integrity-Audit.png',
     },
     {
       title: 'Image Forensics and Authenticity Check',
       description: 'Our image experts conduct a thorough forensic review of scientific visuals, including microscopy images, graphs...',
-      icon: '💻',
+      iconSrc: '/images/academic-editorial-services/forensic-and-quality-audit-service/Image-Forensics-and-Authenticity-Check.png',
     },
     {
       title: 'Manuscript Quality and Structural Audit',
       description: 'We evaluate the manuscript’s technical, scientific, and structural integrity, ensuring alignment with journal...',
-      icon: '📋',
+      iconSrc: '/images/academic-editorial-services/forensic-and-quality-audit-service/Manuscript-Quality-and-Structural-Audit.png',
     },
     {
       title: 'Plagiarism and Authorship Verification',
       description: 'Using advanced tools and manual scrutiny, we assess text originality, citation accuracy, reference patterns...',
-      icon: '🔍',
+      iconSrc: '/images/academic-editorial-services/forensic-and-quality-audit-service/Plagiarism-and-Authorship-Verification.png',
     },
     {
       title: 'Methodology and Statistical Quality Check',
       description: 'Our statisticians and subject experts examine the adequacy, transparency, and reproducibility at statistical...',
-      icon: '📊',
+      iconSrc: '/images/academic-editorial-services/forensic-and-quality-audit-service/Methodology-and-Statistical-Quality-Check.png',
     },
     {
       title: 'Compliance and Regulatory Audit',
       description: 'We audit your research content for adherence to global scientific and ethical guidelines...',
-      icon: '📑',
+      iconSrc: '/images/academic-editorial-services/forensic-and-quality-audit-service/Compliance-and-Regulatory-Audit.png',
     },
   ];
 
@@ -105,16 +106,14 @@ export default function ForensicAndQualityAuditService() {
           </div>
 
           {/* Right Side Image Box Mockup container */}
-          <div className="bg-[#0b3b2c] p-4 rounded-xl shadow-lg flex justify-center items-center">
-            <div className="bg-white rounded-lg p-6 shadow-inner w-full flex flex-col items-center justify-center min-h-[280px]">
-              <div className="w-16 h-16 rounded-full bg-emerald-100 text-[#0b3b2c] flex items-center justify-center text-2xl font-bold mb-4 shadow-sm">
-                🔍
-              </div>
-              <h4 className="text-sm font-bold text-gray-900 mb-2">Rigorous Audit & Compliance</h4>
-              <p className="text-xs text-gray-600 text-center max-w-xs leading-relaxed">
-                Ensuring absolute accuracy, scientific integrity, and publication readiness across all research documentation.
-              </p>
-            </div>
+          <div className="bg-[#0b3b2c] p-4 rounded-xl shadow-lg flex justify-center items-center relative min-h-[280px] overflow-hidden">
+            <Image
+              src="/images/academic-editorial-services/forensic-and-quality-audit-service/Forensic-Quality-Audit-Services.webp"
+              alt="Forensic and Quality Audit Services"
+              fill
+              className="object-cover rounded-xl"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
         </div>
       </section>
@@ -134,7 +133,9 @@ export default function ForensicAndQualityAuditService() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             {auditTypes.map((type, idx) => (
               <div key={idx} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm flex flex-col justify-between relative">
-                <div className="absolute top-6 right-6 text-xl">{type.icon}</div>
+                <div className="absolute top-6 right-6 w-10 h-10">
+                  <Image src={type.iconSrc} alt="" fill className="object-contain" />
+                </div>
                 <div>
                   <h3 className="text-sm font-bold text-gray-900 mb-3 pr-8">{type.title}</h3>
                   <p className="text-xs text-gray-600 leading-relaxed">{type.description}</p>

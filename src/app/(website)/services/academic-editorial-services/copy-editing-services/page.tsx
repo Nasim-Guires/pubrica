@@ -3,7 +3,8 @@ import CommonWhoWeServe from '@/components/common/CommonWhoWeServe'
 import CommonFAQ from '@/components/common/FAQ'
 import DevelopmentEditingComprehensive from '@/components/services/academic-editorial-services/copy-editing-services/DevelopmentEditingComprehensive'
 import DevelopmentEditingServicePage from '@/components/services/academic-editorial-services/copy-editing-services/DevelopmentEditingServicePage'
-import { developmentEditingServiceFaqData, developmentEditingServiceTestimonialData, developmentEditingServiceWhoWeServeData } from '@/lib/services/academic-editorial-services/development-editing-service/development-editing-service'
+import { copyEditingServiceTestimonialData, copyEditingServiceWhoWeServeData } from '@/lib/services/academic-editorial-services/copy-editing-services/copy-editing-services'
+import { developmentEditingServiceFaqData } from '@/lib/services/academic-editorial-services/development-editing-service/development-editing-service'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
@@ -11,9 +12,9 @@ const page = () => {
     return (
         <>
             <DevelopmentEditingServicePage />
-            <CommonWhoWeServe {...developmentEditingServiceWhoWeServeData} />
+            <CommonWhoWeServe {...copyEditingServiceWhoWeServeData} />
             <DevelopmentEditingComprehensive />
-            <CommonTestimonial {...developmentEditingServiceTestimonialData} />
+            <CommonTestimonial {...copyEditingServiceTestimonialData} />
             <CommonFAQ {...developmentEditingServiceFaqData} />
             <InsightsSection />
         </>

@@ -51,7 +51,7 @@ const AssessmentAndExamReviewServicesWhyChoose: NextPage = () => {
               <div className="absolute inset-0 bg-[#eaf4ef] rounded-full filter blur-2xl opacity-60"></div>
               <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-md">
                 <Image 
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" 
+                  src="/images/education-editorial-service/assessment-and-exam-review-services/Why-Choose-Pubrica-for-Assessment-and-Exam-Review-Services.webp" 
                   alt="Why Choose Pubrica Assessment and Exam Review" 
                   fill 
                   className="object-cover"

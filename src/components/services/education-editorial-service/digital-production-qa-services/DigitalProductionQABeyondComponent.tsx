@@ -40,15 +40,14 @@ export default function DigitalProductionQABeyondComponent() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
         {/* Left Column: Images */}
         <div className="lg:col-span-5 relative flex flex-col items-center">
-          <div className="relative w-full h-[320px] rounded-2xl overflow-hidden shadow-lg bg-gray-100 mb-[-60px] z-10 mr-12">
-            <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium bg-gray-200">
-              Image Section: Hand writing and reviewing charts
-            </div>
-          </div>
-          <div className="relative w-full h-[280px] rounded-2xl overflow-hidden shadow-xl bg-gray-100 ml-12 z-0">
-            <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium bg-gray-200">
-              Image Section: Globe on top of open books
-            </div>
+          <div className="relative w-full h-[320px] rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/images/education-editorial-service/digital-production-qa-services/Why-Choose-Pubrica-for-Digital-Production-QA.webp"
+              alt="Why Choose Pubrica for Digital Production QA"
+              fill
+              className="object-cover"
+              sizes="(max-width:1024px)100vw,40vw"
+            />
           </div>
         </div>
 
@@ -94,10 +93,14 @@ export default function DigitalProductionQABeyondComponent() {
       {/* Bottom Section: Sample Work & Full Report Download */}
       <div className="max-w-7xl mx-auto bg-[#f4fbf7] rounded-3xl p-8 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left Column: Sample Work Image */}
-        <div className="lg:col-span-5 relative h-[350px] rounded-2xl overflow-hidden shadow-md bg-gray-200">
-          <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium">
-            Image Section: Workspace with multiple monitors displaying mockups
-          </div>
+        <div className="lg:col-span-5 relative h-[350px] rounded-2xl overflow-hidden shadow-md">
+          <Image
+            src="/images/education-editorial-service/digital-production-qa-services/Digital-Production-QA-Services-Sample-Work.webp"
+            alt="Digital Production QA Services Sample Work"
+            fill
+            className="object-cover"
+            sizes="(max-width:1024px)100vw,40vw"
+          />
         </div>
 
         {/* Right Column: Sample Work Content */}

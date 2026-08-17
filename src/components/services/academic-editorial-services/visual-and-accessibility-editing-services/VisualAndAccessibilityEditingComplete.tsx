@@ -1,6 +1,7 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -17,37 +18,43 @@ export default function VisualAndAccessibilityEditingComplete() {
       num: 1,
       title: 'INITIAL ASSESSMENT',
       desc: 'We begin by reviewing your document to understand its purpose, audience, and existing visual and accessibility challenges. This helps us create a tailored editing plan that meets compliance standards and improves overall readability.',
+      iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Initial-Assessment.png',
     },
     {
       num: 2,
       title: 'VISUAL ENHANCEMENT',
       desc: 'Our experts optimize figures, tables, charts, and layout elements to ensure clarity and consistency. This includes adjusting color contrasts, font sizes, spacing, and alignment to make your content visually appealing and easy to navigate.',
+      iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Visual-Enhancement.png',
     },
     {
       num: 3,
       title: 'ACCESSIBILITY CHECK',
       desc: 'We assess your document against accessibility standards (such as WCAG) to ensure it is usable by people with disabilities. This includes evaluating alt text for images, heading structures, keyboard navigation, and screen reader compatibility.',
+      iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Accessibility-Check.png',
     },
     {
       num: 4,
       title: 'CONTENT OPTIMIZATION',
       desc: 'We refine the textual content for clarity, conciseness, and maintaining your original meaning. Our editors ensure that your manuscript is not only accessible but also professionally presented and easy to understand.',
+      iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Content-Optimization.png',
     },
     {
       num: 5,
       title: 'REVIEW & QUALITY ASSURANCE',
       desc: 'Every document undergoes a meticulous quality check to verify that visual and accessibility standards are met. Feedback is incorporated, and final adjustments are made to ensure your content is fully polished and compliant.',
+      iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Review-Quality-Assurance.png',
     },
     {
       num: 6,
       title: 'DELIVERY',
       desc: 'You receive a fully edited, visually optimized, and accessibility-compliant document, ready for publication, presentation, or distribution to a diverse audience.',
+      iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Delivery.png',
     },
   ];
 
   const packages = [
     {
-      badge: 'B',
+      badgeSrc: '/images/editing-and-translation/basic-pacakge.png',
       title: 'Basic Visual Clarity',
       idealFor: 'Researchers, students, and authors needing clean, consistent, and reader-friendly visuals.',
       included: [
@@ -64,7 +71,7 @@ export default function VisualAndAccessibilityEditingComplete() {
       headerBg: 'bg-emerald-50',
     },
     {
-      badge: 'A',
+      badgeSrc: '/images/publication-support/peer-review-pre-submission/advanced.webp',
       title: 'Advanced Accessibility & Visual Enhancement',
       idealFor: 'Authors submitting to journals or Institutions with strict accessibility guidelines.',
       included: [
@@ -83,7 +90,7 @@ export default function VisualAndAccessibilityEditingComplete() {
       headerBg: 'bg-purple-50',
     },
     {
-      badge: 'P',
+      badgeSrc: '/images/editing-and-translation/translation-with-editing/pro.webp',
       title: 'Premium Visual Redesign & Full Accessibility Compliance',
       idealFor: 'Universities, publishers, NGOs, corporates, and large-scale projects requiring high-end visual and accessibility transformation.',
       included: [
@@ -142,10 +149,10 @@ export default function VisualAndAccessibilityEditingComplete() {
                     : 'bg-white text-gray-800 border-gray-200'
                 }`}
               >
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs mb-3 ${
-                  isHovered ? 'bg-white text-[#333333]' : 'bg-[#007791] text-white'
+                <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs mb-3 relative overflow-hidden ${
+                  isHovered ? 'bg-white' : 'bg-[#007791]'
                 }`}>
-                  {step.num}
+                  <Image src={step.iconSrc} alt="" fill className="object-contain p-1" />
                 </div>
                 <h3 className="text-xs font-bold mb-2 text-center">{step.title}</h3>
                 <p className={`text-[10px] leading-relaxed text-center ${isHovered ? 'text-gray-200' : 'text-gray-600'}`}>
@@ -161,12 +168,14 @@ export default function VisualAndAccessibilityEditingComplete() {
       <section className="py-14 px-4 bg-[#f4faf7] text-center" aria-labelledby="sample-heading">
         <div className="max-w-4xl mx-auto bg-white border border-emerald-100 rounded-xl p-8 shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="bg-[#0b3b2c] p-3 rounded-lg shadow-md flex justify-center items-center">
-              <div className="bg-white rounded p-4 w-full h-48 flex flex-col items-center justify-center">
-                <span className="text-3xl mb-2">📊</span>
-                <span className="text-xs font-bold text-gray-800">Visual & Accessibility Sample</span>
-                <span className="text-[10px] text-gray-500 mt-1">WCAG Compliant Layout Preview</span>
-              </div>
+            <div className="bg-[#0b3b2c] p-3 rounded-lg shadow-md flex justify-center items-center relative h-48 overflow-hidden">
+              <Image
+                src="/images/academic-editorial-services/visual-and-accessibility-editing-services/Visual-Accessibility-Editing-Services-sample-work-.webp"
+                alt="Visual and Accessibility Editing Services sample work"
+                fill
+                className="object-cover rounded"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <div className="text-left">
               <h2 id="sample-heading" className="text-base md:text-lg font-bold text-[#0b3b2c] mb-4">
@@ -209,8 +218,8 @@ export default function VisualAndAccessibilityEditingComplete() {
             >
               {/* Card Header */}
               <div className={`${pkg.headerBg} p-6 border-b ${pkg.borderColor} text-center`}>
-                <div className="w-10 h-10 mx-auto rounded-full bg-white font-bold flex items-center justify-center text-sm shadow-sm mb-2 text-gray-900">
-                  {pkg.badge}
+                <div className="relative w-10 h-10 mx-auto rounded-full bg-white shadow-sm mb-2 overflow-hidden">
+                  <Image src={pkg.badgeSrc} alt={`${pkg.title} package`} fill className="object-contain p-1" />
                 </div>
                 <h3 className="text-sm font-bold text-gray-900">{pkg.title}</h3>
               </div>

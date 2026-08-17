@@ -10,7 +10,7 @@ export const thoughtLeadershipContentEditorialDesignWhoWeServeData = {
                 "We help CEOs, CXOs, and senior leaders communicate strategic insights through executive reports, thought leadership articles, ghost writing services, and board-ready publications that influence decisions.",
             ],
             imageUrl:
-                "/images/services/data-analytics-machine-learning/thought-leadership-content-editorial-design/business-leaders-executives.webp",
+                "/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/Business-Leaders-Executives.png",
         },
         {
             title: "Researchers & Industry Experts",
@@ -18,7 +18,7 @@ export const thoughtLeadershipContentEditorialDesignWhoWeServeData = {
                 "We support subject matter experts in translating complex research into impactful white papers, blogs, and authored articles that enhance visibility and credibility in their field.",
             ],
             imageUrl:
-                "/images/services/data-analytics-machine-learning/thought-leadership-content-editorial-design/researchers-industry-experts.webp",
+                "/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/Researchers-Industry-Experts.png",
         },
         {
             title: "Investors & Stakeholders",
@@ -26,7 +26,7 @@ export const thoughtLeadershipContentEditorialDesignWhoWeServeData = {
                 "We craft well-structured, data-driven reports and strategic documents that allow investors and stakeholders to make informed decisions and track industry trends.",
             ],
             imageUrl:
-                "/images/services/data-analytics-machine-learning/thought-leadership-content-editorial-design/investors-stakeholders.webp",
+                "/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/Investors-Stakeholders.png",
         },
         {
             title: "Organizations & Corporations",
@@ -34,7 +34,7 @@ export const thoughtLeadershipContentEditorialDesignWhoWeServeData = {
                 "We partner with corporations to develop branded content, thought leadership series, and editorial materials that position them as industry leaders and innovators.",
             ],
             imageUrl:
-                "/images/services/data-analytics-machine-learning/thought-leadership-content-editorial-design/organizations-corporations.webp",
+                "/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/Organizations-Corporations.png",
         },
         {
             title: "Policy Makers & Advocacy Groups",
@@ -42,7 +42,7 @@ export const thoughtLeadershipContentEditorialDesignWhoWeServeData = {
                 "We produce compelling policy briefs, strategic recommendations, and advocacy content that drive awareness, influence policy, and support organizational goals.",
             ],
             imageUrl:
-                "/images/services/data-analytics-machine-learning/thought-leadership-content-editorial-design/policy-makers-advocacy-groups.webp",
+                "/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/Policy-Makers-Advocacy-Groups.png",
         },
     ],
 };
@@ -56,33 +56,33 @@ export const thoughtLeadershipContentEditorialDesignTestimonialData = {
     testimonials: [
         {
             image:
-                "/images/services/data-analytics-machine-learning/thought-leadership-content-editorial-design/testimonials/nature-scientific-reports.webp",
+                "/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/nature-scientific-reports-journal.png",
             quote:
                 "Pubrica’s thought leadership content helped us articulate complex ideas with clarity and authority. Their editorial design elevated our reports, making them both insightful and visually compelling.",
             name: "Dr. Sarah Thompson",
             designation: "Director of Healthcare Research",
             organization: "UK",
-            flag: "/images/flags/uk.webp",
+            flag: "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
         },
         {
             image:
-                "/images/services/data-analytics-machine-learning/thought-leadership-content-editorial-design/testimonials/rsna-journal.webp",
+                "/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/RSNA-1-1.png",
             quote:
                 "Pubrica’s editorial support was exceptional — from white papers to authored articles, they ensured our content aligned with global standards while maintaining a professional brand voice.",
             name: "Prof. Linda Svensson",
             designation: "Academic Researcher",
             organization: "Sweden",
-            flag: "/images/flags/sweden.webp",
+            flag: "/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/sweden-flag-.png",
         },
         {
             image:
-                "/images/services/data-analytics-machine-learning/thought-leadership-content-editorial-design/testimonials/case-reports-in-paediatrics.webp",
+                "/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/case-reports-in-paediatrics.png",
             quote:
                 "The team transformed our strategic reports into powerful narratives that resonated with stakeholders. Their expertise in blending research with design gave us a competitive edge.",
             name: "Rajesh Mehta",
             designation: "Pharma Marketing Head",
             organization: "India",
-            flag: "/images/flags/india.webp",
+            flag: "/images/editing-and-translation/flag.png",
         },
     ],
 };

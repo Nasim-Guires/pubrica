@@ -9,32 +9,39 @@ import Link from 'next/link';
 type ServiceItem = {
   title: string;
   description: string;
+  icon: string;
 };
 
 const servicesData: ServiceItem[] = [
   {
     title: 'Data Cleaning & Preprocessing',
     description: 'To enhance data quality, we eliminate errors, duplications, inconsistencies, and missing values. Thus, the datasets are refined for optimal AI utilization.',
+    icon: '/images/education-editorial-service/ai-and-data-preparation-services/Data-Cleaning-Preprocessing.webp',
   },
   {
     title: 'Data Annotation & Labelling',
     description: 'We provide highly accurate annotations and label data (both structured as well as unstructured) at the required level of granularity for computer vision and NLP models.',
+    icon: '/images/education-editorial-service/ai-and-data-preparation-services/Data-Annotation-Labelling.webp',
   },
   {
     title: 'Cultural Localisation',
     description: 'We tailor your content to the cultural context of the target audience. This includes adapting examples, idioms, and context for global AI deployment.',
+    icon: '/images/education-editorial-service/ai-and-data-preparation-services/Cultural-Localisation.webp',
   },
   {
     title: 'Data Structuring & Normalisation',
     description: 'We implement structured formats for unstructured data and raw data, making it easier to combine into cohesive pipelines for predictive analytics.',
+    icon: '/images/education-editorial-service/ai-and-data-preparation-services/Data-Structuring-Normalisation.webp',
   },
   {
     title: 'Feature Preparation & Optimization',
     description: 'Our support will allow you to create valuable features based on variable transformation, scaling, and dimensionality reduction for enhanced model accuracy.',
+    icon: '/images/education-editorial-service/ai-and-data-preparation-services/Feature-Preparation-Optimization.webp',
   },
   {
     title: 'Compliance, Ethics & Data Governance',
     description: 'We ensure your data pipelines adhere to strict regulatory frameworks, protecting privacy and mitigating bias across all AI implementations.',
+    icon: '/images/education-editorial-service/ai-and-data-preparation-services/Compliance-Ethics-Data-Governance.webp',
   },
 ];
 
@@ -80,8 +87,8 @@ const AIDataPreparationComprehensiveSection: NextPage = () => {
             <div className="float-right ml-8 mb-6 w-full md:w-[380px] lg:w-[420px] bg-[#1b3b32] p-3 rounded-2xl shadow-lg">
               <div className="relative w-full h-[220px] md:h-[240px] rounded-xl overflow-hidden bg-gray-100">
                 <Image 
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" 
-                  alt="AI and Data Preparation analytics interface" 
+                  src="/images/education-editorial-service/ai-and-data-preparation-services/Prepare-Data.-Power-AI.-Elevate-Research-Intelligence.webp" 
+                  alt="Prepare Data. Power AI. Elevate Research Intelligence." 
                   fill
                   className="object-cover"
                 />
@@ -160,8 +167,8 @@ const AIDataPreparationComprehensiveSection: NextPage = () => {
             {servicesData.map((service, idx) => (
               <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
                 <div>
-                  <div className="w-12 h-12 rounded-lg bg-[#0b3b2c]/10 flex items-center justify-center text-[#0b3b2c] font-bold text-lg mb-4">
-                    0{idx + 1}
+                  <div className="w-12 h-12 relative mb-4">
+                    <Image src={service.icon} alt={service.title} fill className="object-contain" sizes="48px" />
                   </div>
                   <h3 className="font-bold text-gray-900 text-base mb-2">{service.title}</h3>
                   <p className="text-xs md:text-sm text-gray-600 leading-relaxed">{service.description}</p>

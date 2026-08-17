@@ -1,4 +1,5 @@
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import Image from 'next/image';
 import React from 'react';
 
 export const metadata = {
@@ -47,11 +48,15 @@ export default function DevelopmentEditingServicePage() {
           {/* Right Image Section Placeholder */}
           <div className="md:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md">
-              <div className="w-full h-72 md:h-80 bg-slate-200 rounded-2xl border-2 border-dashed border-slate-400 flex flex-col items-center justify-center p-6 text-center shadow-md">
-                <span className="text-lg font-bold text-gray-700">Image Section</span>
-                <span className="text-xs text-gray-500 mt-2">
-                  [ Laptop with manuscript text and books visual ]
-                </span>
+              <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden border-2 border-white shadow-md">
+                <Image
+                  src="/images/academic-editorial-services/copy-editing-services/Refine-Your-Manuscripts-with-Professional-Copy-Editing-Services.webp"
+                  alt="Professional copy editing services"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  priority
+                />
               </div>
               {/* Dark teal accent box under image */}
               <div className="absolute -bottom-3 -right-3 -z-10 w-full h-full bg-[#0b3b2c] rounded-2xl"></div>

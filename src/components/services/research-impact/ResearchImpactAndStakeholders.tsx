@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 // --- Types ---
@@ -84,37 +85,36 @@ const stakeholderCards: StakeholderCard[] = [
     id: 1,
     title: 'Academic Researchers and Principal Investigators',
     imageUrl:
-      'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80',
+      '/images/research-impact/Academic-Researchers-and-Principal-Investigators.png',
   },
   {
     id: 2,
     title: 'PhD Scholars and Early-Career Researchers',
     imageUrl:
-      'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80',
+      '/images/research-impact/PhD-Scholars-and-Early-Career-Researchers.png',
   },
   {
     id: 3,
     title: 'Universities, Research Institutes, and Think Tanks',
     imageUrl:
-      'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80',
+      '/images/research-impact/Universities-Research-Institutes-and-Think-Tanks.png',
   },
   {
     id: 4,
     title: 'Clinician Scientists and Medical Researchers',
     imageUrl:
-      'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80',
+      '/images/research-impact/clinical-scientist-and-medical-reserachers.png',
   },
   {
     id: 5,
     title: 'Grant Applicants and Funding Recipients',
     imageUrl:
-      'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80',
+      '/images/research-impact/Grant-Applicants-and-Funding-Recipients.png',
   },
   {
     id: 6,
     title: 'Publishing Authors',
-    imageUrl:
-      'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '/images/research-impact/Publishing-Authors.png',
   },
 ];
 
@@ -215,11 +215,12 @@ export default function ResearchImpactAndStakeholders(): React.ReactElement {
               key={card.id}
               className="relative rounded-2xl overflow-hidden shadow-md group h-56 sm:h-60 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-              {/* Background Image */}
-              <img
+              <Image
                 src={card.imageUrl}
                 alt={card.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
 
               {/* Dark Gradient Overlay for Contrast */}

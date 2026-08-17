@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { 
   FilePlay, 
   ClipboardList, 
@@ -37,7 +38,7 @@ const examplesData: Record<string, ExampleData> = {
     impactFactor: '16.2',
     articleTitle: 'Persistent Hyperglycemia and Insulin Resistance With the Risk of Worsening Cardiac Damage in Adolescents',
     citation: 'Adapted From: Agbaje AO, Zachariah JP, Barker AR, et al. Persistent hyperglycemia and insulin resistance with the risk of worsening cardiac damage in adolescents: A 7-year longitudinal study of the ALSPAC birth cohort. Diabetes Care. 2025;48(6):896–904. doi:10.2337/dc24-2459',
-    image2D: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80',
+    image2D: '/images/research-impact/graphical-abstract/v1-Persistent-Hyperglycemia-and-Insulin-Resistance-Graphical-abstract-2d.jpg',
     summaryText: 'Persistently high blood glucose levels and insulin resistance were associated with premature and worsening structural and functional cardiac damage in youth, largely explained by excess fat.'
   },
   lifeSciences: {
@@ -48,7 +49,7 @@ const examplesData: Record<string, ExampleData> = {
     impactFactor: '6.1',
     articleTitle: 'Rat Models in Chronic Wound Research: Addressing a Multifactorial Disease',
     citation: 'Adapted From: Ghanbari M, Salkovskiy Y, Carlson MA. The rat as an animal model in chronic wound research: An update. Life Sci. 2024;351(122783):122783. doi:10.1016/j.lfs.2024.122783',
-    image2D: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1000&q=80',
+    image2D: '/images/research-impact/graphical-abstract/v1-Rat-Models-in-Chronic-Wound-Research-graphical-abstract-2d.jpg',
     summaryText: 'Conclusion: A relevant rat model for chronic wound research requires the induction of comorbidities like diabetes, peripheral arterial disease, venous stasis, and prolonged pressure on body areas, mirroring clinical symptoms in humans.'
   }
 };
@@ -63,25 +64,25 @@ export default function ResearchImpactGraphicalAbstract() {
       id: 1,
       title: 'Upload Your Manuscript',
       description: 'Submit your manuscript along with the relevant information for the target journal.',
-      icon: FilePlay,
+      iconSrc: '/images/research-impact/graphical-abstract/Upload-Your-Manuscript.png',
     },
     {
       id: 2,
       title: 'Questionnaire',
       description: 'We will send you a customized questionnaire to align with your vision. This is a key step to ensure that the deliverables meet your expectations.',
-      icon: ClipboardList,
+      iconSrc: '/images/research-impact/graphical-abstract/Questionnaire.png',
     },
     {
       id: 3,
       title: 'Graphical abstract creation – First draft',
       description: 'Our experts will review the manuscript. Our designers will create a visual concept note per journal guidelines and share the first draft with you.',
-      icon: Palette,
+      iconSrc: '/images/research-impact/graphical-abstract/Graphical-abstract-creation-First-draft.png',
     },
     {
       id: 4,
       title: 'Final draft',
       description: 'The production team works on the revisions if any and finalizes the graphical abstract in file formats as required by the journal.',
-      icon: CheckCircle2,
+      iconSrc: '/images/research-impact/graphical-abstract/Final-draft.png',
     },
   ];
 
@@ -119,7 +120,6 @@ export default function ResearchImpactGraphicalAbstract() {
           {/* Left Column: Process Steps List */}
           <div className="lg:col-span-6 space-y-4">
             {processSteps.map((step, index) => {
-              const Icon = step.icon;
               const isSelected = activeStep === index;
               return (
                 <div
@@ -133,11 +133,11 @@ export default function ResearchImpactGraphicalAbstract() {
                 >
                   <div className="flex items-start gap-4">
                     <div
-                      className={`p-2.5 rounded-lg flex-shrink-0 ${
+                      className={`p-2.5 rounded-lg flex-shrink-0 relative w-10 h-10 ${
                         isSelected ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-600'
                       }`}
                     >
-                      <Icon className="w-5 h-5" />
+                      <Image src={step.iconSrc} alt="" fill className="object-contain p-1" sizes="40px" />
                     </div>
                     <div>
                       <h3
@@ -164,8 +164,8 @@ export default function ResearchImpactGraphicalAbstract() {
             </div>
 
             <div className="w-full max-w-sm bg-white rounded-xl shadow-lg border border-slate-200 p-6 text-center space-y-4">
-              <div className="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mx-auto border border-emerald-200 text-emerald-700">
-                {React.createElement(processSteps[activeStep].icon, { className: 'w-8 h-8' })}
+              <div className="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mx-auto border border-emerald-200 text-emerald-700 relative overflow-hidden">
+                <Image src={processSteps[activeStep].iconSrc} alt="" fill className="object-contain p-3" sizes="64px" />
               </div>
               <div>
                 <h4 className="font-bold text-slate-900 text-lg">
@@ -359,10 +359,12 @@ export default function ResearchImpactGraphicalAbstract() {
 
             {/* Illustration Graphic Box */}
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center space-y-4">
-              <div className="relative rounded-lg overflow-hidden border border-slate-200 max-h-80 bg-white flex items-center justify-center">
-                <img
-                  src={currentExample.image2D}
+              <div className={`relative rounded-lg overflow-hidden border border-slate-200 max-h-80 bg-white flex items-center justify-center ${dimensionMode === '3D' && !currentExample.image3D ? 'hidden' : ''}`}>
+                <Image
+                  src={dimensionMode === '3D' && currentExample.image3D ? currentExample.image3D : currentExample.image2D}
                   alt={currentExample.articleTitle}
+                  width={900}
+                  height={256}
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-slate-900/40 flex items-center justify-center p-6">

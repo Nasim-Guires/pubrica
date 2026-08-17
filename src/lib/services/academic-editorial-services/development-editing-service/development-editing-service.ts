@@ -11,7 +11,7 @@ export const developmentEditingServiceWhoWeServeData = {
                 "Our development editors help refine arguments, reorganize content, and highlight key findings to improve publication success.",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/development-editing-service/researchers-scientists.webp",
+                "/images/academic-editorial-services/development-editing-service/Researchers-Scientists-1.png",
         },
         {
             title: "Medical & Healthcare Professionals",
@@ -20,7 +20,7 @@ export const developmentEditingServiceWhoWeServeData = {
                 "We ensure logical presentation, consistency, and compliance with scientific communication standards.",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/development-editing-service/medical-healthcare-professionals.webp",
+                "/images/academic-editorial-services/development-editing-service/Medical-Healthcare-Professionals-1.png",
         },
         {
             title: "Academic Authors & Educators",
@@ -29,7 +29,7 @@ export const developmentEditingServiceWhoWeServeData = {
                 "Our editors help structure content coherently while preserving academic integrity and the author’s unique voice.",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/development-editing-service/academic-authors-educators.webp",
+                "/images/academic-editorial-services/development-editing-service/Academic-Authors-Educators.png",
         },
         {
             title: "Universities, Research Institutes & Teaching Hospitals",
@@ -38,7 +38,7 @@ export const developmentEditingServiceWhoWeServeData = {
                 "We unify document tone, strengthen internal coherence, and streamline complex content for seamless readability.",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/development-editing-service/universities-research-institutes-teaching-hospitals.webp",
+                "/images/academic-editorial-services/development-editing-service/Universities-Research-Institutes-Teaching-Hospitals.png",
         },
         {
             title: "Publishers & Journals",
@@ -47,7 +47,7 @@ export const developmentEditingServiceWhoWeServeData = {
                 "Our editors refine structure, argumentation, and narrative clarity to meet journal expectations.",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/development-editing-service/publishers-journals.webp",
+                "/images/academic-editorial-services/development-editing-service/Publishers-Journals-1.png",
         },
         {
             title: "Non-Native English Authors",
@@ -56,7 +56,7 @@ export const developmentEditingServiceWhoWeServeData = {
                 "Our editors help transform ideas into clearly structured, logically sound manuscripts that align with global publication standard.",
             ],
             imageUrl:
-                "/images/services/academic-editorial-services/development-editing-service/non-native-english-authors.webp",
+                "/images/academic-editorial-services/development-editing-service/Non-Native-English-Authors.png",
         },
     ],
 };
@@ -69,33 +69,33 @@ export const developmentEditingServiceTestimonialData = {
     testimonials: [
         {
             image:
-                "/images/services/academic-editorial-services/development-editing-service/testimonials/case-reports-in-paediatrics.webp",
+                "/images/academic-editorial-services/development-editing-service/case-reports-in-paediatrics.png",
             quote:
                 "Pubrica’s development editors transformed my early-stage manuscript into a clear, logically structured, and compelling narrative. Their suggestions strengthened my research argument, improved flow, and ensured that each section aligned perfectly with journal expectations. I credit their developmental support for helping my paper get accepted in a high-impact journal.",
             name: "Dr. Maria Johnson",
             designation: "Senior Research Scientist",
             organization: "United Kingdom",
-            flag: "/images/flags/united-kingdom.webp",
+            flag: "/images/research-services/systematic-review/united-kingdom-.png",
         },
         {
             image:
-                "/images/services/academic-editorial-services/development-editing-service/testimonials/british-journal-of-clinical-pharmacology.webp",
+                "/images/academic-editorial-services/development-editing-service/british-journal-of-clinical-pharmacology.png",
             quote:
                 "From restructuring major sections to refining conceptual clarity, Pubrica’s development editors delivered exceptional value. Their detailed comments helped sharpen my arguments and produce a concise, readable manuscript. Highly recommended for any researcher preparing for journal submission.",
             name: "Dr. Karthik Menon",
             designation: "Assistant Professor",
             organization: "Singapore",
-            flag: "/images/flags/singapore.webp",
+            flag: "/images/editing-and-translation/scientific-editing/singapore-.png",
         },
         {
             image:
-                "/images/services/academic-editorial-services/development-editing-service/testimonials/plos-one.webp",
+                "/images/academic-editorial-services/development-editing-service/plos-one-.png",
             quote:
                 "I was truly impressed by how thoroughly Pubrica’s editors engaged with my work. They identified gaps in logic, strengthened transitions, and enhanced the overall structure while preserving my academic voice. Their developmental insights significantly elevated the quality of my manuscript.",
             name: "Prof. Elena Martínez",
             designation: "Professor of Molecular Biology",
             organization: "Spain",
-            flag: "/images/flags/spain.webp",
+            flag: "/images/data-analytics-machine-learning/health-economics-outcome-research/spain-.png",
         },
     ],
 };
@@ -163,33 +163,33 @@ export const devEditingTestimonialData = {
   testimonials: [
     {
       image:
-        "/images/services/academic-editorial-services/development-editing-service/testimonials/case-reports-in-paediatrics.webp",
+        "/images/academic-editorial-services/development-editing-service/case-reports-in-paediatrics.png",
       quote:
         "Pubrica’s development editors transformed my early-stage manuscript into a clear, logically structured, and compelling narrative. Their suggestions strengthened my research argument, improved flow, and ensured that each section aligned perfectly with journal expectations. I credit their developmental support for helping my paper get accepted in a high-impact journal.",
       name: "Dr. Maria Johnson",
       designation: "Senior Research Scientist",
       organization: "United Kingdom",
-      flag: "/images/flags/united-kingdom.webp",
+      flag: "/images/research-services/systematic-review/united-kingdom-.png",
     },
     {
       image:
-        "/images/services/academic-editorial-services/development-editing-service/testimonials/british-journal-of-clinical-pharmacology.webp",
+        "/images/academic-editorial-services/development-editing-service/british-journal-of-clinical-pharmacology.png",
       quote:
         "From restructuring major sections to refining conceptual clarity, Pubrica’s development editors delivered exceptional value. Their detailed comments helped sharpen my arguments and produce a concise, readable manuscript. Highly recommended for any researcher preparing for journal submission.",
       name: "Dr. Karthik Menon",
       designation: "Assistant Professor",
       organization: "Singapore",
-      flag: "/images/flags/singapore.webp",
+      flag: "/images/editing-and-translation/scientific-editing/singapore-.png",
     },
     {
       image:
-        "/images/services/academic-editorial-services/development-editing-service/testimonials/plos-one.webp",
+        "/images/academic-editorial-services/development-editing-service/plos-one-.png",
       quote:
         "I was truly impressed by how thoroughly Pubrica’s editors engaged with my work. They identified gaps in logic, strengthened transitions, and enhanced the overall structure while preserving my academic voice. Their developmental insights significantly elevated the quality of my manuscript.",
       name: "Prof. Elena Martínez",
       designation: "Professor of Molecular Biology",
       organization: "Spain",
-      flag: "/images/flags/spain.webp",
+      flag: "/images/data-analytics-machine-learning/health-economics-outcome-research/spain-.png",
     },
   ],
 };

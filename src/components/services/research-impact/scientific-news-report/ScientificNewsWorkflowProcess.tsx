@@ -8,7 +8,7 @@ interface WorkflowStep {
   id: number;
   title: string;
   description: string;
-  iconSvg: React.ReactNode;
+  iconSrc: string;
 }
 
 const workflowSteps: WorkflowStep[] = [
@@ -16,64 +16,48 @@ const workflowSteps: WorkflowStep[] = [
     id: 1,
     title: 'MANUSCRIPT SUBMISSION',
     description: 'Submit your manuscript via our online portal, in formats such as Word or PDF.',
-    iconSvg: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-    ),
+    iconSrc: '/images/research-impact/scientific-news-report/Manuscript-Submission.png',
   },
   {
     id: 2,
     title: 'INTERNAL CONTENT REVIEW',
     description: 'Our internal team will conduct a comprehensive review of your document\'s content and subject matter.',
-    iconSvg: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-      </svg>
-    ),
+    iconSrc: '/images/research-impact/scientific-news-report/Internal-Content-Review.png',
   },
   {
     id: 3,
     title: 'SCIENTIFIC NEWS REPORT DRAFTING',
     description: 'A content specialist will compile a news report, summarizing key highlights and any innovative aspects of your research.',
-    iconSvg: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-      </svg>
-    ),
+    iconSrc: '/images/research-impact/scientific-news-report/Scientific-News-Report-Drafting.png',
   },
   {
     id: 4,
     title: 'FINAL LANGUAGE AND EDITORIAL REVIEW',
     description: 'The Scientific News Report undergoes a final review by a native English language expert before being delivered to you.',
-    iconSvg: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-      </svg>
-    ),
+    iconSrc: '/images/research-impact/scientific-news-report/Final-Language-and-Editorial-Review.png',
   },
 ];
 
 const publishersList = [
   {
     name: 'Taylor & Francis',
-    logoUrl: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=300',
+    logoUrl: '/images/research-impact/scientific-news-report/Taylor-Francis.png',
   },
   {
     name: 'Wiley',
-    logoUrl: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=300',
+    logoUrl: '/images/research-impact/scientific-news-report/wiley.png',
   },
   {
     name: 'Springer Nature',
-    logoUrl: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=300',
+    logoUrl: '/images/publication-support/art-work-preparation/Springer.png',
   },
   {
     name: 'BMJ',
-    logoUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=300',
+    logoUrl: '/images/research-impact/graphical-abstract/bmj-.png',
   },
   {
     name: 'Elsevier',
-    logoUrl: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=300',
+    logoUrl: '/images/research-impact/graphical-abstract/Elsevier-.png',
   },
 ];
 
@@ -143,8 +127,8 @@ export default function ScientificNewsWorkflowProcess() {
                   }`}
                 >
                   <div className="space-y-3">
-                    <div className={`${isHovered ? 'text-teal-400' : 'text-slate-700'} transition-colors`}>
-                      {step.iconSvg}
+                    <div className="relative w-8 h-8">
+                      <Image src={step.iconSrc} alt="" fill className="object-contain" sizes="32px" />
                     </div>
                     <h3 className={`text-xs font-bold uppercase tracking-wider ${isHovered ? 'text-white' : 'text-slate-900'}`}>
                       {step.title}
@@ -199,7 +183,7 @@ export default function ScientificNewsWorkflowProcess() {
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative w-full max-w-sm h-64 bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm">
                 <Image
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800"
+                  src="/images/research-impact/scientific-news-report/Scientific-News-Report-Sample-Work.png"
                   alt="Scientist reviewing research documents"
                   fill
                   sizes="(max-width: 768px) 100vw, 400px"

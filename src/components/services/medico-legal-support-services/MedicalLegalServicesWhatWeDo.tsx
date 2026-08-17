@@ -2,12 +2,13 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export interface ServiceCardItem {
   id: string;
   title: string;
   description: string;
-  iconPlaceholder: string;
+  iconSrc: string;
   linkText?: string;
   linkHref?: string;
 }
@@ -25,112 +26,112 @@ export default function MedicalLegalServicesWhatWeDo({
       title: "Case Screening & Legal Viability Assessment",
       description:
         "We quickly assess the merit and viability of medical cases, including malpractice claims, personal injury, and insurance disputes, through structured medico legal case screening services, helping legal teams determine the potential for success and allocate resources effectively.",
-      iconPlaceholder: "[ Icon: Case Screening ]",
+      iconSrc: "/images/medico-legal-support-services/Medico-legal-support-services-for-healthcare-and-legal-professionals.webp",
     },
     {
       id: "record-review",
       title: "Medical Record Review & Interpretation",
       description:
         "Our specialists provide professional medical record review services, analysing and organising complex medical records, interpreting illegible handwriting, clarifying medical abbreviations, identifying missing or tampered records, and compiling comprehensive chronologies.",
-      iconPlaceholder: "[ Icon: Record Review ]",
+      iconSrc: "/images/medico-legal-support-services/Medical-record-summary-services-simplifying-complex-patient-records.webp",
     },
     {
       id: "strategy-dev",
       title: "Case Strategy Development",
       description:
         "Working closely with legal teams, we help develop a solid medico-legal strategy by identifying the most persuasive medical facts and aligning them with legal standards through structured litigation support services.",
-      iconPlaceholder: "[ Icon: Strategy Development ]",
+      iconSrc: "/images/medico-legal-support-services/Professional-litigation-support-services-for-complex-medical-cases.webp",
     },
     {
       id: "malpractice-eval",
       title: "Medical Malpractice Evaluation",
       description:
         "Our experts evaluate whether healthcare providers breached the duty of care and whether that breach resulted in patient harm. We assist in building strong cases for medical negligence litigation and malpractice insurance claims.",
-      iconPlaceholder: "[ Icon: Malpractice Evaluation ]",
+      iconSrc: "/images/medico-legal-support-services/Medico-legal-case-screening-services-for-early-legal-assessment.webp",
     },
     {
       id: "injury-assessment",
       title: "Personal Injury Assessment",
       description:
         "We provide detailed medical assessments in personal injury and trauma cases, analyzing injury severity, long-term impact, disability levels, and recovery timelines. These assessments strengthen legal compensation claims and insurance settlements.",
-      iconPlaceholder: "[ Icon: Injury Assessment ]",
+      iconSrc: "/images/medico-legal-support-services/Medico-legal-consulting-services-supporting-healthcare-litigation-cases.webp",
     },
     {
       id: "forensic-cases",
       title: "Forensic Medicine and Criminal Cases",
       description:
         "Our forensic medicine specialists assist in criminal cases involving suspicious deaths, assaults, and bodily harm. We offer autopsy reviews, cause-of-death analysis, and other medico legal case screening services for law enforcement and legal teams.",
-      iconPlaceholder: "[ Icon: Forensic Medicine ]",
+      iconSrc: "/images/medico-legal-support-services/Medico-legal-support-services-for-medical-malpractice-cases.webp",
     },
     {
       id: "disability-claims",
       title: "Disability & Insurance Compensation Claims",
       description:
         "We perform independent medical evaluations (IMEs) for disability benefits, workers' compensation, and insurance dispute resolution, providing objective impairment ratings.",
-      iconPlaceholder: "[ Icon: Disability Claims ]",
+      iconSrc: "/images/medico-legal-support-services/Outsource-medico-legal-services-for-law-firms-and-attorneys.webp",
     },
     {
       id: "compliance-support",
       title: "Regulatory Compliance Support",
       description:
         "We assess whether healthcare practices comply with applicable medical laws, clinical standards, and regulatory guidelines. Our reports help during investigations and can substantiate claims or defend providers in healthcare litigation.",
-      iconPlaceholder: "[ Icon: Regulatory Compliance ]",
+      iconSrc: "/images/medico-legal-support-services/Medical-record-review-services-for-insurance-and-legal-disputes.webp",
     },
     {
       id: "ethical-consultation",
       title: "Ethical & Legal Medical Consultation",
       description:
         "Through expert medico legal consulting services, we advise on complex ethical and legal issues such as informed consent, end-of-life care, patient confidentiality, and medical ethics in malpractice cases.",
-      iconPlaceholder: "[ Icon: Ethical Consultation ]",
+      iconSrc: "/images/medico-legal-support-services/Detailed-medical-record-summary-services-for-court-proceedings.webp",
     },
     {
       id: "expert-opinion",
       title: "Medical Expert Consultation & Opinion",
       description:
         "Our consultants offer independent expert opinions, re-examine clinical findings, and revalidate scientific conclusions. This ensures alignment with evidence-based medical literature and legal relevance.",
-      iconPlaceholder: "[ Icon: Expert Opinion ]",
+      iconSrc: "/images/medico-legal-support-services/Medico-legal-support-services-helping-attorneys-analyze-medical-records.webp",
     },
     {
       id: "injury-reports",
       title: "Injury Evaluation & Personal Injury Reports",
       description:
         "We assess physical trauma, long-term impact, and medical prognosis in cases involving road accidents, industrial injuries, disability claims, or workers’ compensation.",
-      iconPlaceholder: "[ Icon: Injury Reports ]",
+      iconSrc: "/images/medico-legal-support-services/Medical-record-summary-services-for-legal-case-documentation.webp",
     },
     {
       id: "literature-review",
       title: "Medical Research & Literature Review",
       description:
         "Our experts conduct in-depth research across medical databases to support case arguments with clinical trial data, systematic reviews, and recognized Level A evidence.",
-      iconPlaceholder: "[ Icon: Literature Review ]",
+      iconSrc: "/images/medico-legal-support-services/Professional-medical-record-review-services-for-legal-teams.webp",
     },
     {
       id: "protocol-identification",
       title: "Standard Protocol Identification",
       description:
         "We determine if medical professionals adhered to accepted standards of care, and where care was substandard, we highlight safer or more effective alternatives.",
-      iconPlaceholder: "[ Icon: Protocol Identification ]",
+      iconSrc: "/images/medico-legal-support-services/Expert-medico-legal-support-services-for-healthcare-litigation-analysis.webp",
     },
     {
       id: "strength-analysis",
       title: "Case Strength Analysis",
       description:
         "We help legal professionals assess the strengths and vulnerabilities of each case, offering insights to guide settlement strategy or trial preparation.",
-      iconPlaceholder: "[ Icon: Case Strength ]",
+      iconSrc: "/images/medico-legal-support-services/Medico-legal-case-screening-services-by-clinical-experts.webp",
     },
     {
       id: "medical-summaries",
       title: "Preparation of Medical Summaries",
       description:
         "Our specialists produce detailed medical record summary services, including injury-based case summaries, diagnostic details, historical medical data, and treatment timelines.",
-      iconPlaceholder: "[ Icon: Medical Summaries ]",
+      iconSrc: "/images/medico-legal-support-services/Litigation-support-services-with-expert-medico-legal-documentation.webp",
     },
     {
       id: "medico-drafting",
       title: "Comprehensive Medico-Legal Drafting",
       description:
         "Our team produces clear, accurate, and court-ready documentation, including reports, chronologies, and summaries. We merge complex medical content with legal language to ensure admissibility and comprehension.",
-      iconPlaceholder: "[ Icon: Drafting Support ]",
+      iconSrc: "/images/medico-legal-support-services/Medical-record-summary-services-for-legal-documentation.webp",
     },
   ];
 
@@ -169,10 +170,8 @@ export default function MedicalLegalServicesWhatWeDo({
             >
               <div>
                 {/* Image / Icon Section Div Placeholder */}
-                <div className="w-12 h-12 mb-4 bg-emerald-50 rounded-lg flex items-center justify-center border border-dashed border-emerald-300">
-                  <span className="text-[10px] text-emerald-800 font-semibold text-center leading-tight">
-                    {service.iconPlaceholder}
-                  </span>
+                <div className="relative w-12 h-12 mb-4">
+                  <Image src={service.iconSrc} alt="" fill className="object-contain" sizes="48px" />
                 </div>
 
                 <h3 className="text-base font-bold text-[#1b2b28] mb-3 leading-snug">
