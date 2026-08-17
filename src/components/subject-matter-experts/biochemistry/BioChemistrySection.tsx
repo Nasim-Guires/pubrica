@@ -1,14 +1,14 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from 'react';
-import { 
-    BookOpen, 
-    Award, 
-    Briefcase, 
-    FileText, 
-    PenTool, 
-    Send, 
-    Image as ImageIcon, 
+import {
+    BookOpen,
+    Award,
+    Briefcase,
+    FileText,
+    PenTool,
+    Send,
+    Image as ImageIcon,
     BookMarked,
     Stethoscope,
     Pill,
@@ -20,22 +20,22 @@ import {
 const serviceIconsData = [
     {
         title: "Scientific Writing",
-            iconSrc: "/images/subject-matter-experts/biochemistry/Molecular-Biology-and-Genetics.webp",
+        iconSrc: "/images/subject-matter-experts/biochemistry/Molecular-Biology-and-Genetics.webp",
         icon: PenTool,
     },
     {
         title: "Journal Submission",
-            iconSrc: "/images/subject-matter-experts/biochemistry/Enzymology-andProtein-Chemistry.webp",
+        iconSrc: "/images/subject-matter-experts/biochemistry/Enzymology-andProtein-Chemistry.webp",
         icon: Send,
     },
     {
         title: "Graphical Abstract",
-            iconSrc: "/images/subject-matter-experts/biochemistry/Metabolism-and-Bioenergetics.webp",
+        iconSrc: "/images/subject-matter-experts/biochemistry/Metabolism-and-Bioenergetics.webp",
         icon: ImageIcon,
     },
     {
         title: "Journal Selection",
-            iconSrc: "/images/subject-matter-experts/biochemistry/Structural-Biology.webp",
+        iconSrc: "/images/subject-matter-experts/biochemistry/Structural-Biology.webp",
         icon: BookMarked,
     }
 ];
@@ -82,31 +82,31 @@ const emergingTrendsData = [
 const realWorldApplications = [
     {
         title: "Disease Diagnosis and Treatment",
-            iconSrc: "/images/subject-matter-experts/biochemistry/Cell-Signalling-and-Molecular-Interactions.webp",
+        iconSrc: "/images/subject-matter-experts/biochemistry/Cell-Signalling-and-Molecular-Interactions.webp",
         description: "Identifying biomarkers for early detection of diseases such as cancer, diabetes, and neurological disorders.",
         icon: Stethoscope
     },
     {
         title: "Pharmaceutical Development",
-            iconSrc: "/images/subject-matter-experts/biochemistry/Biotechnology-and-Applied-Biochemistry.webp",
+        iconSrc: "/images/subject-matter-experts/biochemistry/Biotechnology-and-Applied-Biochemistry.webp",
         description: "Targeting enzymes and receptors to develop novel therapeutics.",
         icon: Pill
     },
     {
         title: "Agricultural Biotechnology",
-            iconSrc: "/images/subject-matter-experts/biochemistry/Biotechnology-and-Applied-Biochemistry.webp",
+        iconSrc: "/images/subject-matter-experts/biochemistry/Biotechnology-and-Applied-Biochemistry.webp",
         description: "Enhancing crop yield, pest resistance, and nutritional value through metabolic engineering.",
         icon: Sprout
     },
     {
         title: "Environmental Monitoring",
-            iconSrc: "/images/subject-matter-experts/biochemistry/Environmental-Monitoring.webp",
+        iconSrc: "/images/subject-matter-experts/biochemistry/Environmental-Monitoring.webp",
         description: "Studying biochemical pathways to assess pollution effects and design remediation strategies.",
         icon: Search
     },
     {
         title: "Education & Research",
-            iconSrc: "/images/subject-matter-experts/biochemistry/Education-Research.webp",
+        iconSrc: "/images/subject-matter-experts/biochemistry/Education-Research.webp",
         description: "Training the next generation of scientists, veterinarians, and animal welfare specialists.",
         icon: GraduationCap
     }
@@ -212,13 +212,15 @@ export default function BioChemistrySection() {
                                 <div key={index} className="flex items-start space-x-4">
                                     <div className="p-2 border border-gray-300 rounded-md shrink-0 text-[#0e3b32] bg-gray-50 mt-1">
                                         {"iconSrc" in app && app.iconSrc ? (
-                                            <Image src={app.iconSrc} alt="" width={20} height={20} className="object-contain w-5 h-5 shrink-0" />
-                                        ) : (
-                                            {(app as { iconSrc?: string }).iconSrc ? (
-                                            <Image src={(app as { iconSrc?: string }).iconSrc!} alt="" width={20} height={20} className="object-contain shrink-0" />
+                                            <Image
+                                                src={app.iconSrc}
+                                                alt=""
+                                                width={20}
+                                                height={20}
+                                                className="object-contain w-5 h-5 shrink-0"
+                                            />
                                         ) : (
                                             <AppIcon className="w-5 h-5" />
-                                        )}
                                         )}
                                     </div>
                                     <div>

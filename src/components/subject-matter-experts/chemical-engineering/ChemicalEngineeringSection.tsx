@@ -28,21 +28,13 @@ const applicationsData = [
     {
         icon: Pill,
         title: "Pharmaceuticals",
-<<<<<<< HEAD
-        iconSrc: "/images/subject-matter-experts/biocatalysts/Pharmaceuticals-1.webp",
-=======
             iconSrc: "/images/subject-matter-experts/chemical-engineering/Reaction-Engineering.webp",
->>>>>>> origin/cursor/subject-matter-experts-images-4621
         description: "developing and manufacturing drug and biopharmaceutical products"
     },
     {
         icon: Zap,
         title: "Energy",
-<<<<<<< HEAD
-        iconSrc: "/images/subject-matter-experts/chemical-engineering/Sustainable_Green-Engineering.webp",
-=======
             iconSrc: "/images/subject-matter-experts/chemical-engineering/Separation-Processes.webp",
->>>>>>> origin/cursor/subject-matter-experts-images-4621
         description: "developing fuel, alternative energy technologies, and storage"
     },
     {

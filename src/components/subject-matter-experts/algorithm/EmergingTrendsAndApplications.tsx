@@ -74,49 +74,49 @@ export default function EmergingTrendsAndApplications() {
   const applications = [
     {
       title: "Software Development",
-            iconSrc: "/images/subject-matter-experts/algorithm/Algorithm-Design-Analysis.webp",
+      iconSrc: "/images/subject-matter-experts/algorithm/Algorithm-Design-Analysis.webp",
       desc: "efficient coding and optimising the system and/or application.",
       icon: Code2,
     },
     {
       title: "Artificial Intelligence",
-            iconSrc: "/images/subject-matter-experts/algorithm/Data-Structure-Optimisation.webp",
+      iconSrc: "/images/subject-matter-experts/algorithm/Data-Structure-Optimisation.webp",
       desc: "developing machine learning and creating \"smart\" computers.",
       icon: Bot,
     },
     {
       title: "Data Science",
-            iconSrc: "/images/subject-matter-experts/algorithm/Computational-Complexity.webp",
+      iconSrc: "/images/subject-matter-experts/algorithm/Computational-Complexity.webp",
       desc: "analysis, statistical modelling, and visualisation of data.",
       icon: LineChart,
     },
     {
       title: "Cybersecurity",
-            iconSrc: "/images/subject-matter-experts/algorithm/Machine-Learning-Algorithms.webp",
+      iconSrc: "/images/subject-matter-experts/algorithm/Machine-Learning-Algorithms.webp",
       desc: "using cryptography and authenticating users to detect security threats.",
       icon: ShieldCheck,
     },
     {
       title: "Financial Markets",
-            iconSrc: "/images/subject-matter-experts/algorithm/Network-Graph-Algorithms.webp",
+      iconSrc: "/images/subject-matter-experts/algorithm/Network-Graph-Algorithms.webp",
       desc: "creating algorithms for trading and risk analysis.",
       icon: BarChart2,
     },
     {
       title: "Healthcare",
-            iconSrc: "/images/subject-matter-experts/algorithm/Parallel-Distributed-Algorithms.webp",
+      iconSrc: "/images/subject-matter-experts/algorithm/Parallel-Distributed-Algorithms.webp",
       desc: "analysing medical data and diagnosing patients.",
       icon: Stethoscope,
     },
     {
       title: "Transportation",
-            iconSrc: "/images/subject-matter-experts/algorithm/Heuristic-and-Metaheuristic-Algorithms.webp",
+      iconSrc: "/images/subject-matter-experts/algorithm/Heuristic-and-Metaheuristic-Algorithms.webp",
       desc: "determining the best route and managing traffic.",
       icon: Navigation,
     },
     {
       title: "E-commerce",
-            iconSrc: "/images/subject-matter-experts/algorithm/Numerical-Algorithm.webp",
+      iconSrc: "/images/subject-matter-experts/algorithm/Numerical-Algorithm.webp",
       desc: "creating recommendation systems and optimising searches.",
       icon: ShoppingCart,
     },
@@ -172,11 +172,10 @@ export default function EmergingTrendsAndApplications() {
                 <button
                   key={trend.id}
                   onClick={() => setActiveTrend(trend)}
-                  className={`py-3 px-2 text-center text-[11px] font-semibold transition-colors duration-150 border ${
-                    isActive
+                  className={`py-3 px-2 text-center text-[11px] font-semibold transition-colors duration-150 border ${isActive
                       ? "bg-[#12433e] text-white border-[#12433e]"
                       : "bg-[#edf0f0] text-gray-800 border-gray-200 hover:bg-gray-200"
-                  }`}
+                    }`}
                 >
                   {trend.title}
                 </button>
@@ -220,13 +219,15 @@ export default function EmergingTrendsAndApplications() {
                 <div key={idx} className="flex items-start gap-2.5">
                   <div className="p-1 bg-gray-100 text-gray-700 shrink-0 rounded">
                     {"iconSrc" in app && app.iconSrc ? (
-                      <Image src={app.iconSrc} alt="" width={24} height={24} className="object-contain w-4 h-4 shrink-0" />
+                      <Image
+                        src={app.iconSrc}
+                        alt=""
+                        width={24}
+                        height={24}
+                        className="object-contain w-4 h-4 shrink-0"
+                      />
                     ) : (
-                      {(app as { iconSrc?: string }).iconSrc ? (
-                                            <Image src={(app as { iconSrc?: string }).iconSrc!} alt="" width={16} height={16} className="object-contain shrink-0" />
-                                        ) : (
-                                            <AppIcon className="w-4 h-4" />
-                                        )}
+                      <AppIcon className="w-4 h-4" />
                     )}
                   </div>
                   <p className="text-xs text-gray-700 leading-snug">
