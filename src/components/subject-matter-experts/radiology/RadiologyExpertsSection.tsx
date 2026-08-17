@@ -208,7 +208,7 @@ export default function RadiologyExpertsSection() {
                     {/* Right Hand Image */}
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/radiology/Radiology.webp"
+                            src="/images/subject-matter-experts/radiology/Radiographs.webp"
                             alt="Radiology medical MRI scanner equipment"
                             className="w-full h-auto object-cover"
                         />
@@ -233,7 +233,7 @@ export default function RadiologyExpertsSection() {
                     {/* Journal Cover */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <img
-                            src="/images/subject-matter-experts/radiology/Diagnostic-Radiology.webp"
+                            src="/images/subject-matter-experts/biomedical-engineering/sample-works-7.webp"
                             alt="Radiology Journal Cover"
                             className="w-full h-auto object-cover"
                         />

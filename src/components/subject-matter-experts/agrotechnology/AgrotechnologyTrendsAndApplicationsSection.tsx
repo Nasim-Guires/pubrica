@@ -174,7 +174,7 @@ export default function AgrotechnologyCompleteSection() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full h-72 md:h-80 rounded-md overflow-hidden shadow-sm border border-gray-200 bg-gray-50">
               <Image
-                src="/images/subject-matter-experts/agrotechnology/Agrotechnology-Advancing-Modern-Agriculture-Through-Science-and-Innovation.webp"
+                src="/images/subject-matter-experts/agrotechnology/Applications-of-Agrotechnology.webp"
                 alt="Hand writing on paper workspace"
                 fill
                 className="object-cover"
@@ -198,7 +198,7 @@ export default function AgrotechnologyCompleteSection() {
         <div className="bg-white border border-gray-200 rounded-md p-6 shadow-sm flex flex-col md:flex-row gap-6 items-center">
           <div className="relative w-40 h-52 shrink-0 border border-gray-200 shadow-sm rounded overflow-hidden bg-gray-50">
             <Image
-              src="/images/subject-matter-experts/agrotechnology/Crop-Science-Management.png"
+              src="/images/subject-matter-experts/agrotechnology/sample-works-2.webp"
               alt="Agronomy Journal Cover"
               fill
               className="object-cover"

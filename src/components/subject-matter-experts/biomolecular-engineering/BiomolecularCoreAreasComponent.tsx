@@ -79,7 +79,11 @@ export default function BiomolecularCoreAreasComponent() {
                       {area.title}
                     </h3>
                     <div className="p-2 bg-gray-50 border border-gray-100 rounded-lg text-gray-700 shrink-0">
-                      <Icon className="w-4 h-4 text-[#0d3630]" />
+                      {(area as { iconSrc?: string }).iconSrc ? (
+                                            <Image src={(area as { iconSrc?: string }).iconSrc!} alt="" width={16} height={16} className="object-contain shrink-0" />
+                                        ) : (
+                                            <Icon className="w-4 h-4 text-[#0d3630]" />
+                                        )}
                     </div>
                   </div>
                   <p className="text-xs text-gray-600 leading-relaxed">

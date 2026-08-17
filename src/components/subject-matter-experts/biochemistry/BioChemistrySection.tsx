@@ -20,21 +20,22 @@ import {
 const serviceIconsData = [
     {
         title: "Scientific Writing",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Molecular-Biology-and-Genetics.webp",
         icon: PenTool,
     },
     {
         title: "Journal Submission",
-            iconSrc: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Enzymology-andProtein-Chemistry.webp",
         icon: Send,
     },
     {
         title: "Graphical Abstract",
-            iconSrc: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Metabolism-and-Bioenergetics.webp",
         icon: ImageIcon,
     },
     {
         title: "Journal Selection",
-            iconSrc: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Structural-Biology.webp",
         icon: BookMarked,
     }
 ];
@@ -81,13 +82,13 @@ const emergingTrendsData = [
 const realWorldApplications = [
     {
         title: "Disease Diagnosis and Treatment",
-            iconSrc: "/images/subject-matter-experts/biochemistry/Disease-Diagnosis-and-Treatment.webp",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Cell-Signalling-and-Molecular-Interactions.webp",
         description: "Identifying biomarkers for early detection of diseases such as cancer, diabetes, and neurological disorders.",
         icon: Stethoscope
     },
     {
         title: "Pharmaceutical Development",
-            iconSrc: "/images/subject-matter-experts/biochemistry/Pharmaceutical-Development.webp",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Biotechnology-and-Applied-Biochemistry.webp",
         description: "Targeting enzymes and receptors to develop novel therapeutics.",
         icon: Pill
     },
@@ -211,11 +212,13 @@ export default function BioChemistrySection() {
                                 <div key={index} className="flex items-start space-x-4">
                                     <div className="p-2 border border-gray-300 rounded-md shrink-0 text-[#0e3b32] bg-gray-50 mt-1">
                                         {"iconSrc" in app && app.iconSrc ? (
-                                            <span className="relative w-5 h-5 block">
-                                                <Image src={app.iconSrc} alt="" fill className="object-contain" />
-                                            </span>
+                                            <Image src={app.iconSrc} alt="" width={20} height={20} className="object-contain w-5 h-5 shrink-0" />
+                                        ) : (
+                                            {(app as { iconSrc?: string }).iconSrc ? (
+                                            <Image src={(app as { iconSrc?: string }).iconSrc!} alt="" width={20} height={20} className="object-contain shrink-0" />
                                         ) : (
                                             <AppIcon className="w-5 h-5" />
+                                        )}
                                         )}
                                     </div>
                                     <div>
@@ -265,7 +268,7 @@ export default function BioChemistrySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/biochemistry/Molecular-Biology-and-Genetics.webp"
+                            src="/images/subject-matter-experts/biochemistry/sample-works-9-1.webp"
                             alt="American Journal of Biochemistry & Biotechnology Cover"
                             className="w-full h-auto object-cover"
                         />

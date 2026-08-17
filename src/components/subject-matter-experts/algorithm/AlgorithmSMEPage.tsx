@@ -266,7 +266,7 @@ export default function AlgorithmSMEPage() {
 
                                     {/* Right Column: Icon & Vertical Arrow / Bar Visual Indicator */}
                                     <div className="flex flex-col items-center justify-between flex-shrink-0 w-8 border-l border-gray-100 pl-2 pointer-events-none">
-                                        {(item as any).iconSrc ? <span className="relative w-6 h-6 shrink-0"><Image src={(item as any).iconSrc} alt="" fill className="object-contain" /></span> : <Icon className="w-5 h-5 text-gray-700 shrink-0" />}
+                                        {(item as any).iconSrc ? <Image src={(item as any).iconSrc} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" /> : <Icon className="w-5 h-5 text-gray-700 shrink-0" />}
 
                                         <div className="flex flex-col items-center justify-between h-24 my-1">
                                             <ChevronUp className="w-3 h-3 text-gray-400" />
@@ -315,7 +315,7 @@ export default function AlgorithmSMEPage() {
 
                                     {/* Center Circle Icon */}
                                     <div className="absolute top-[8.5rem] left-1/2 -translate-x-1/2 z-20 bg-white p-2.5 rounded-full border border-gray-200 shadow-sm transition-transform duration-300 group-hover:scale-105">
-                                        {(card as any).iconSrc ? <span className="relative w-6 h-6"><Image src={(card as any).iconSrc} alt="" fill className="object-contain" /></span> : <CardIcon className="w-5 h-5 text-[#12433e]" />}
+                                        {(card as any).iconSrc ? <Image src={(card as any).iconSrc} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" /> : <CardIcon className="w-5 h-5 text-[#12433e]" />}
                                     </div>
 
                                     {/* Sliding White Panel Overlay */}

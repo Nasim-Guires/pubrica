@@ -56,32 +56,32 @@ export default function BigDataTrendsAndPublishingSection() {
     const applications = [
         {
             title: "Hospital's Information: Diagnosis, Monitoring and Analytics are Based on Data",
-            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Hospitals-Information.webp",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Big-Data-Architecture-Management.webp",
             icon: Building2,
         },
         {
             title: "Banks and Insurance: Fraud Detection, Risk Management and Real-time Analytics",
-            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Banks-and-Insurance.webp",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Data-Analytics-Mining.webp",
             icon: Landmark,
         },
         {
             title: "Retailers: Analysis of Consumer Behaviour and Forecasting Demand",
-            iconSrc: "/images/subject-matter-experts/augmented-reality/Retailers.webp",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/471.webp",
             icon: ShoppingCart,
         },
         {
             title: "Telecoms: Network Optimisation and Use Analytics",
-            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Telecoms.webp",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Real-time-Streaming-Analytics.webp",
             icon: Radio,
         },
         {
             title: "Smart Cities: Traffic Management, Energy Optimisation and Analytics of IoT",
-            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Smart-Cities.webp",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Data-Integration-Warehousing.webp",
             icon: Cpu,
         },
         {
             title: "Manufacturing: Predictive Maintenance and Optimisation of Processes",
-            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Manufacturing.webp",
+            iconSrc: "/images/subject-matter-experts/big-data-hadoop/Big-Data-Security-Governance.webp",
             icon: Factory,
         },
     ];
@@ -173,7 +173,11 @@ export default function BigDataTrendsAndPublishingSection() {
                             return (
                                 <div key={idx} className="flex items-start gap-3.5">
                                     <div className="p-2 bg-[#0d3630]/10 rounded-lg text-[#0d3630] shrink-0 mt-0.5">
-                                        <Icon className="w-4 h-4" />
+                                        {(app as { iconSrc?: string }).iconSrc ? (
+                                            <Image src={(app as { iconSrc?: string }).iconSrc!} alt="" width={16} height={16} className="object-contain shrink-0" />
+                                        ) : (
+                                            <Icon className="w-4 h-4" />
+                                        )}
                                     </div>
                                     <div className="space-y-0.5">
                                         <p className="text-xs md:text-sm font-semibold text-gray-700 leading-relaxed">
@@ -189,7 +193,7 @@ export default function BigDataTrendsAndPublishingSection() {
                     <div className="lg:col-span-5 flex justify-center sticky top-6">
                         <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-md border border-gray-200">
                             <Image
-                                src="/images/subject-matter-experts/big-data-hadoop/Big-Data-Hadoop-.webp"
+                                src="/images/subject-matter-experts/big-data-hadoop/Applications-of-Big-Data-Hadoop-.webp"
                                 alt="Big Data Cloud Analytics"
                                 fill
                                 className="object-cover"
@@ -213,7 +217,7 @@ export default function BigDataTrendsAndPublishingSection() {
                 <div className="bg-white border border-gray-200 rounded-md p-6 shadow-sm flex flex-col md:flex-row gap-6 items-center">
                     <div className="relative w-40 h-52 shrink-0 border border-gray-200 shadow-sm rounded overflow-hidden bg-gray-50">
                         <Image
-                            src="/images/subject-matter-experts/big-data-hadoop/Big-Data-Architecture-Management.webp"
+                            src="/images/subject-matter-experts/big-data-hadoop/sample-works-11-13.webp"
                             alt="Big Data Research Journal Cover"
                             fill
                             className="object-cover"

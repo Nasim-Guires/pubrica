@@ -191,7 +191,7 @@ export default function AnimalScienceContinuedSections() {
             {/* Image */}
             <div className="md:col-span-5 relative h-72 md:h-80 w-full rounded overflow-hidden shadow-sm">
               <Image
-                src="/images/subject-matter-experts/animal-science/Empowering-Research-Excellence-in-Animal-Science-through-Expert-Guidance.png"
+                src="/images/subject-matter-experts/animal-science/Applications-of-Animal-Science.png"
                 alt="Veterinarian examining a rabbit with a stethoscope"
                 fill
                 className="object-cover"
@@ -207,7 +207,7 @@ export default function AnimalScienceContinuedSections() {
           {/* Left Side: Image with Text Overlay */}
           <div className="md:w-5/12 relative min-h-[300px]">
             <Image
-              src="/images/subject-matter-experts/animal-science/Genetics-and-Breeding.png"
+              src="/images/subject-matter-experts/animal-science/Empowering-Research-Excellence-in-Animal-Science-through-Expert-Guidance.png"
               alt="Laboratory research with rabbit"
               fill
               className="object-cover"
@@ -270,7 +270,7 @@ export default function AnimalScienceContinuedSections() {
                <div className="w-full relative h-20">
                  {/* Geometric Cow Image Approximation */}
                  <Image 
-                   src="/images/subject-matter-experts/animal-science/Nutrition-and-Feed-Technology.png" 
+                   src="/images/subject-matter-experts/animal-science/animal.jpg" 
                    alt="Cow abstract" 
                    fill 
                    className="object-cover mix-blend-overlay opacity-50"

@@ -8,26 +8,31 @@ import { Briefcase, FileText, Cpu, BookOpen, Layers, ShieldCheck, Zap } from 'lu
 const emergingTrendsData = [
     {
         title: "Nanomedicine and Targeted Delivery of Drugs",
+            iconSrc: "/images/subject-matter-experts/nanotechnology/Nanomaterials-and-Nanostructures.webp",
         desc: "Using nanoparticle-based systems will enable precise drug delivery, improved therapeutic effectiveness, and fewer adverse effects on patients.",
         icon: Cpu
     },
     {
         title: "Nanoelectronics and Quantum Technology",
+            iconSrc: "/images/subject-matter-experts/nanotechnology/Nanoelectronics-and-Nanophononics.webp",
         desc: "The new generation of nanoscale electronic and quantum technologies is paving the way for advancements in the fields of computing, telecommunications, and sensors.",
         icon: BookOpen
     },
     {
         title: "Nanoengineered Materials Functional Coatings",
+            iconSrc: "/images/subject-matter-experts/nanotechnology/Nanobiotechnology-and-Nanomedicine.webp",
         desc: "Applying engineered nanomaterials will create stronger, lighter, less-costly-to-manufacture materials for use in energy, building, and manufacturing.",
         icon: Layers
     },
     {
         title: "Nano sensors and Diagnostic Devices",
+            iconSrc: "/images/subject-matter-experts/nanotechnology/Computational-and-Theoretical-Nanotechnology.webp",
         desc: "Nanoscale sensors will offer significant advantages in the medical diagnostics, environmental monitoring, and industrial applications by being able to detect small amounts of chemicals with speed and accuracy.",
         icon: FileText
     },
     {
         title: "Sustainable & Environmentally Friendly Nanotechnology",
+            iconSrc: "/images/subject-matter-experts/nanotechnology/Nano-energy-and-Environmental-Nanotechnology.webp",
         desc: "Advancements in nanotechnology will create environmentally sustainable solutions to address pollution, provide purified water or create renewable energy sources that will help provide a cleaner planet.",
         icon: Zap
     }
@@ -123,7 +128,7 @@ export default function NanotechnologySections() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white relative h-[280px]">
                         <Image
-                            src="/images/subject-matter-experts/nanotechnology/Empowering-Research-Excellence-in-Nanotechnology.webp"
+                            src="/images/subject-matter-experts/nanotechnology/sample-works-11-8.webp"
                             alt="Nature Nanotechnology Journal Cover"
                             fill
                             className="object-cover"

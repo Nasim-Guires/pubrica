@@ -182,7 +182,7 @@ export default function EnvironmentalScienceSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/environmental-science/Environmental-Science.webp"
+                            src="/images/subject-matter-experts/environmental-science/Applications-of-Environmental-Science.webp"
                             alt="Environmental Science sprouts in petri dish setup"
                             className="w-full h-auto object-cover"
                         />
@@ -207,7 +207,7 @@ export default function EnvironmentalScienceSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/environmental-science/Ecological.webp"
+                            src="/images/subject-matter-experts/environmental-science/sample-works-11-3.webp"
                             alt="Journal of Environmental Sciences Cover"
                             className="w-full h-auto object-cover"
                         />

@@ -189,7 +189,7 @@ export default function NuclearEngineeringSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <Image
-                            src="/images/subject-matter-experts/nuclear-engineering/Nuclear-Engineering.webp"
+                            src="/images/subject-matter-experts/nuclear-engineering/Applications-of-Nuclear-Engineering.webp"
                             alt="Nuclear engineering cooling towers"
                             width={600}
                             height={450}
@@ -216,7 +216,7 @@ export default function NuclearEngineeringSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white relative h-[280px]">
                         <Image
-                            src="/images/subject-matter-experts/nuclear-engineering/Reactor-Design-Analysis.webp"
+                            src="/images/subject-matter-experts/nuclear-engineering/Nuclear-Engineering-and-Design.webp"
                             alt="Nuclear Engineering and Design Journal Cover"
                             fill
                             className="object-cover"

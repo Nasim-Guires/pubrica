@@ -57,31 +57,37 @@ const applicationsData = [
     {
         icon: Rocket,
         title: "Aerospace and Defense",
+            iconSrc: "/images/subject-matter-experts/cancer-research/Molecular-and-Cellular-Oncology.webp",
         description: "heat resistant components, thermal barrier materials, and lightweight structural components."
     },
     {
         icon: Zap,
         title: "Energy and Power",
+            iconSrc: "/images/subject-matter-experts/cancer-research/Cancer-Genomics-and-Biomarker-Discovery.webp",
         description: "fuel cells, batteries, solar panels, and nuclear reactors."
     },
     {
         icon: Cpu,
         title: "Electrical and Electronics",
+            iconSrc: "/images/subject-matter-experts/cancer-research/Immuno-Oncology-and-Immunotherapy.webp",
         description: "capacitors, insulators, semiconductors, and sensors."
     },
     {
         icon: HeartPulse,
         title: "Health and Biomedical",
+            iconSrc: "/images/subject-matter-experts/cancer-research/Radiation-Surgical-and-Medical-Oncology.webp",
         description: "implants, prosthetics, dental ceramics, and bioactive ceramics."
     },
     {
         icon: Car,
         title: "Automobile and Transportation",
+            iconSrc: "/images/subject-matter-experts/cancer-research/Drug-Development-and-Translational-Oncology.webp",
         description: "engine parts, wear-resistant coatings for brakes."
     },
     {
         icon: Factory,
         title: "Industrial Manufacturing",
+            iconSrc: "/images/subject-matter-experts/cancer-research/Cancer-Epidemiology-Emerging-and-Public-Health.webp",
         description: "cutting tools, select refractory materials, and various chemical processing equipment."
     },
     {
@@ -248,7 +254,7 @@ export default function CancerResearchSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/cancer-research/Molecular-and-Cellular-Oncology.webp"
+                            src="/images/subject-matter-experts/cancer-research/sample-works-9-2.webp"
                             alt="Cancer Research Journal Cover"
                             className="w-full h-auto object-cover"
                         />

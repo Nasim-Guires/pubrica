@@ -23,26 +23,31 @@ export default function NeurologyPage() {
     const disciplines = [
         {
             title: "Functional Foods & Beverages",
+            iconSrc: "/images/subject-matter-experts/neurology/Clinical-Neurology.webp",
             description: "We specialize in scientific writing and review services for functional foods fortified with vitamins, minerals, probiotics, antioxidants, and herbal extracts. Our team understands formulation science, ingredient stability, sensory characteristics, and the health claim substantiation required for global markets. Whether you're publishing clinical findings or preparing a product monograph, our experts ensure clarity, accuracy, and compliance.",
             icon: Search,
         },
         {
             title: "Dietary Supplements & Herbal Products",
+            iconSrc: "/images/subject-matter-experts/neurology/Cognitive-and-Behavioural-Neurology.webp",
             description: "Pubrica provides comprehensive support in dietary supplement research, covering botanicals, phytochemicals, amino acids, proteins, enzymes, and micronutrient formulations. We assist in literature reviews, regulatory documentation, safety assessments, and clinical manuscript development.",
             icon: TrendingUp
         },
         {
             title: "Regulatory Science for Nutraceuticals",
+            iconSrc: "/images/subject-matter-experts/neurology/Neurophysiology.webp",
             description: "We provide guidance on scientific writing aligned with international regulatory frameworks, including FSSAI (India), EFSA (Europe), FDA-DSHEA (US), TGA (Australia), and ASEAN guidelines. From claims substantiation to safety documentation, we help authors prepare regulatory-ready dossiers, compliance-focused manuscripts, risk assessments, and scientific justifications for product approvals.",
             icon: FileText
         },
         {
             title: "Bioactive Compounds & Phytochemistry",
+            iconSrc: "/images/subject-matter-experts/neurology/Neuroimaging-and-Neurodiagnostic.webp",
             description: "Pubrica's specialists cover a wide range of bioactive, including polyphenols, flavonoids, carotenoids, alkaloids, peptides, and plant-derived molecules. We support research interpretation, mechanistic explanation, and data-driven publication support for these compounds.",
             icon: Database
         },
         {
             title: "Nutrigenomics & Personalized Nutrition",
+            iconSrc: "/images/subject-matter-experts/animal-science/Animal-Behavior-and-Welfare.png",
             description: "As personalized health becomes a global trend, our team supports genomic-driven nutraceutical research, including gene–nutrient interactions, microbiome studies, personalized diet strategies, and precision supplement formulations. We help researchers translate advanced omics-based insights into impactful",
             icon: ShieldAlert
         }
@@ -195,9 +200,7 @@ export default function NeurologyPage() {
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
                                                 {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <span className="relative w-6 h-6 shrink-0">
-                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                                </span>
+                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                             ) : (
                                                 <IconComponent className="w-6 h-6" />
                                             )}

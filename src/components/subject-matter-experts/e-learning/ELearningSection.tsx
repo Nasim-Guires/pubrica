@@ -181,7 +181,7 @@ export default function ELearningSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/e-learning/E-Learning.webp"
+                            src="/images/subject-matter-experts/e-learning/sample-works-11-11.webp"
                             alt="E-Learning visual computer setup"
                             className="w-full h-auto object-cover"
                         />
@@ -206,7 +206,7 @@ export default function ELearningSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/e-learning/Curriculum-Development-Instructional-Design.webp"
+                            src="/images/subject-matter-experts/e-learning/sample-works-11-11.webp"
                             alt="Computers & Education Open Book Cover"
                             className="w-full h-auto object-cover"
                         />

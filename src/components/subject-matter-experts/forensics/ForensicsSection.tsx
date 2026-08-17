@@ -212,7 +212,7 @@ import Image from "next/image";
 
                         <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                             <img
-                                src="/images/subject-matter-experts/forensics/Forensic-Pathology.webp"
+                                src="/images/subject-matter-experts/forensics/Applications-of-Forensic.webp"
                                 alt="Forensic laboratory setup"
                                 className="w-full h-auto object-cover"
                             />
@@ -237,7 +237,7 @@ import Image from "next/image";
                         {/* Journal Cover Image */}
                         <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                             <img
-                                src="/images/subject-matter-experts/forensics/Forensic-Toxicology.webp"
+                                src="/images/subject-matter-experts/augmented-reality/sample-works-13-2.webp"
                                 alt="Journal of Forensic and Legal Medicine Cover"
                                 className="w-full h-auto object-cover"
                             />

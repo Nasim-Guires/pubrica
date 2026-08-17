@@ -42,7 +42,7 @@ export default function CeramicEngineeringExpertisePage() {
         },
         {
             title: "Mechanical & Thermal Properties",
-            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Processing-Fabrication-Engineering.webp",
+            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Mechanical-Thermal-Properties.webp",
             description: "Engineering Ceramics engineers examine and improve hardness, toughness, thermal resistance and wear behaviour. There are also studies that show how to engineer high performance and heat-resistant and long-lasting materials through research.",
             icon: ShieldAlert
         },
@@ -204,9 +204,7 @@ export default function CeramicEngineeringExpertisePage() {
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
                                                 {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <span className="relative w-6 h-6 shrink-0">
-                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                                </span>
+                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                             ) : (
                                                 <IconComponent className="w-6 h-6" />
                                             )}

@@ -211,7 +211,7 @@ export default function NeuroscienceTechniquesSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/neuroscience/Molecular-and-Cellular-Neuroscience.webp"
+                            src="/images/subject-matter-experts/neuroscience/sample-works-9.webp"
                             alt="Journal of Neuroscience Research Cover"
                             className="w-full h-auto object-cover"
                         />

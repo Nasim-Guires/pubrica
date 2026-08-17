@@ -246,7 +246,7 @@ export default function FoodScienceSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/food-science/Food-Chemistry.webp"
+                            src="/images/subject-matter-experts/food-science/Applications-of-Food-Science.webp"
                             alt="Food science laboratory setup"
                             className="w-full h-auto object-cover"
                         />
@@ -272,7 +272,7 @@ export default function FoodScienceSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/food-science/Food-Microbiology.webp"
+                            src="/images/subject-matter-experts/food-science/sample-works-9-3.webp"
                             alt="Journal of Food Science Cover"
                             className="w-full h-auto object-cover"
                         />

@@ -186,7 +186,7 @@ export default function LifeSciencesSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/life-sciences/Life-Science.webp"
+                            src="/images/subject-matter-experts/life-sciences/Applications-of-Life-Science.webp"
                             alt="Life science research setup"
                             className="w-full h-auto object-cover"
                         />
@@ -211,7 +211,7 @@ export default function LifeSciencesSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/biochemistry/Molecular-Biology-and-Genetics.webp"
+                            src="/images/subject-matter-experts/life-sciences/sample-works-15.webp"
                             alt="Journal of Biomedical Sciences Cover"
                             className="w-full h-auto object-cover"
                         />

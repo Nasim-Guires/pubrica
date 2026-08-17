@@ -28,6 +28,7 @@ export default function NanotechnologyPage() {
         },
         {
             title: "Nanoelectronics and Nanophonics",
+            iconSrc: "/images/subject-matter-experts/nanotechnology/Nanoelectronics-and-Nanophononics.webp",
             description: "Research related to nanoscale electronic and photonic systems, as well as assistance with fabrication, performance evaluation, and modelling of semiconductor nanodevices, optics and sensors to further the development of new and improved electronic and photonic technologies.",
             icon: TrendingUp
         },
@@ -197,9 +198,7 @@ export default function NanotechnologyPage() {
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
                                                 {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <span className="relative w-6 h-6 shrink-0">
-                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                                </span>
+                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                             ) : (
                                                 <IconComponent className="w-6 h-6" />
                                             )}

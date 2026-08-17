@@ -238,9 +238,7 @@ export default function BiophysicsSciencePage() {
                                         </h3>
                                         <div className="p-2 bg-gray-50 rounded-lg shrink-0">
                                             {"iconSrc" in item && item.iconSrc ? (
-                                                <span className="relative w-6 h-6 block">
-                                                    <Image src={item.iconSrc} alt="" fill className="object-contain" />
-                                                </span>
+                                                <Image src={item.iconSrc} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                             ) : (
                                                 item.icon
                                             )}

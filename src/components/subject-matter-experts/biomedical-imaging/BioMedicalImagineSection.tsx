@@ -127,7 +127,7 @@ export default function BioMedicalImagineSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/biomedical-imaging/Biomedical-Imaging.webp"
+                            src="/images/subject-matter-experts/biomedical-imaging/sample-works-13-6.webp"
                             alt="Advanced Materials Journal Cover"
                             className="w-full h-auto object-cover"
                         />

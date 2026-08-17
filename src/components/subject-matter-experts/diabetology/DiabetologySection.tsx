@@ -166,7 +166,7 @@ export default function DiabetologySection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/diabetology/Molecular-and-Cellular-Diabetes-Research.png"
+                            src="/images/subject-matter-experts/diabetology/Type-1-and-Type-2-Diabetes-Mellitus.png"
                             alt="Our Expertise in Diabetology"
                             className="w-full h-auto object-cover"
                         />
@@ -191,7 +191,7 @@ export default function DiabetologySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/diabetology/Nutrition-and-Lifestyle-Medicine.png"
+                            src="/images/subject-matter-experts/agriculture/sample-works.webp"
                             alt="Diabetology Journal Cover"
                             className="w-full h-auto object-cover"
                         />

@@ -252,7 +252,7 @@ export default function FoodProcessingSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/food-processing/Food-Processing.webp"
+                            src="/images/subject-matter-experts/food-processing/Applications-of-Food-Processing.webp"
                             alt="Food processing facility setup"
                             className="w-full h-auto object-cover"
                         />
@@ -299,7 +299,7 @@ export default function FoodProcessingSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/food-processing/Heat-Transfer-Models.webp"
+                            src="/images/subject-matter-experts/food-processing/sample-works-13.webp"
                             alt="Journal of Food Processing and Preservation Cover"
                             className="w-full h-auto object-cover"
                         />

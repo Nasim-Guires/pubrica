@@ -62,7 +62,7 @@ export default function PublicHealthPage() {
         },
         {
             title: "Epidemiology and Disease Prevention",
-            iconSrc: "/images/subject-matter-experts/public-health/Epidemiology.webp",
+            iconSrc: "/images/subject-matter-experts/public-health/Epidemiology-and-Disease-Prevention.webp",
             description: "Epidemiology and Disease Prevention evaluate the trends in disease and establish systems for the surveillance of diseases, and to develop preventive measures to reduce risk to the population at large.",
             icon: ShieldAlert,
         },
@@ -227,9 +227,7 @@ export default function PublicHealthPage() {
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
                                                 {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <span className="relative w-6 h-6 shrink-0">
-                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                                </span>
+                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                             ) : (
                                                 <IconComponent className="w-6 h-6" />
                                             )}

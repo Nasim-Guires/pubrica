@@ -44,7 +44,7 @@ export default function FoodProcessingPage() {
         },
         {
             title: "Drying Models",
-            iconSrc: "/images/subject-matter-experts/food-processing/Mass-Transfer-Models.webp",
+            iconSrc: "/images/subject-matter-experts/food-processing/Drying-Models.webp",
             description: "Moisture is an important aspect of drying food products, and drying models provide a way to understand how moisture is removed from food products. Thin-layer and diffusion drying models help optimise drying processes while maintaining the texture and nutritional value of the finished product.",
             icon: AlertTriangle
         },
@@ -218,9 +218,7 @@ export default function FoodProcessingPage() {
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
                                                 {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <span className="relative w-6 h-6 shrink-0">
-                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                                </span>
+                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                             ) : (
                                                 <IconComponent className="w-6 h-6" />
                                             )}

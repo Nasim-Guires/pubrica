@@ -130,7 +130,7 @@ export default function MaterialScienceSections() {
           {/* Journal Cover Image */}
           <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
             <img
-              src="/images/subject-matter-experts/material-science/Material-Science-1.webp"
+              src="/images/subject-matter-experts/material-science/sample-works-13-7.webp"
               alt="Advanced Materials Journal Cover"
               className="w-full h-auto object-cover"
             />

@@ -95,7 +95,7 @@ export default function TissueEngineeringSubjectMatterExperts() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-full h-[380px] sm:h-[420px] rounded-xl overflow-hidden shadow-md border border-gray-200 bg-[#a3c9bd]/25">
                             <Image
-                                src="/images/subject-matter-experts/tissue-engineering/Cell-Biology.webp"
+                                src="/images/subject-matter-experts/tissue-engineering/Emerging-Trends-in-Tissue-Engineering-Research.webp"
                                 alt="Tissue Engineering Research Lab"
                                 fill
                                 className="object-cover"
@@ -128,7 +128,7 @@ export default function TissueEngineeringSubjectMatterExperts() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/tissue-engineering/Materials-Science.webp"
+                            src="/images/subject-matter-experts/tissue-engineering/sample-works-11-4.webp"
                             alt="Journal of Tissue Engineering and Regenerative Medicine Cover"
                             className="w-full h-auto object-cover"
                         />

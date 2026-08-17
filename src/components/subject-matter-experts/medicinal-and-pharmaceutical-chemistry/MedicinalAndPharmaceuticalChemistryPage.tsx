@@ -20,51 +20,41 @@ import {
 export default function MedicinalChemistryPage() {
     const disciplines = [
         {
-            title: "Drug Discovery and Lead Identification",
-            iconSrc: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Drug-Discovery.webp",
+            title: "Pharmacogenomics & Personalized Medicine",
+            iconSrc: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Pharmacogenomics-Personalized-Medicine.webp",
             description:
-                'This discipline focuses on identifying and validating potential drugs and our experts are available to help authors with the preparation and writing of manuscripts that fall under the broad headings of "target screening," "HTS," and "Hit-to-Lead Optimization."',
+                "The study of how variations in genes are related to how patients respond differently to specific types of medications. By using this information, personalized medicine strategies have emerged. These strategies will allow physicians to personalize drugs based on an individual patient’s genetic fingerprint.",
             icon: Search,
         },
         {
-            title: "Lead Optimization and Structure-Activity Relationship (SAR) Studies",
-            description: "At this stage of drug discovery, we help authors describe the work that they are doing to refine the potency, selectivity, and pharmacokinetic properties of their compounds through chemical modification and/or SAR study (Lead optimization)",
+            title: "Regulatory Affairs & Compliance",
+            iconSrc: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Regulatory-Affairs-Compliance.webp",
+            description: "Pharmaceutical products must comply with all applicable health authority regulations (i.e., FDA, EMA) and must be successfully navigated through the regulatory environment to obtain market approval.",
             icon: TrendingUp
         },
         {
-            title: "Cheminformatics and molecular docking",
-            description: "Encompassing molecular modelling, docking, and in silico predictions, our team provides editorial and analytical assistance for research involving computational drug design and virtual screening.",
+            title: "Pharmaceutical Manufacturing & Process Optimization",
+            iconSrc: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Pharmaceutical-Manufacturing-Process-Optimization.webp",
+            description: "The focus of this division/organization is to produce drugs on a large scale, with maximized production efficiency, high-quality products at low cost, while being compliant with Good Manufacturing Practices (GMP).",
             icon: FileText
         },
         {
-            title: "Organic and Synthetic Chemistry",
-            description: "Our chemists aid with the writing of manuscripts that detail the Synthetic Pathways of Novel Compounds and their associated Reaction Mechanisms. Additionally, our Chemists have developed and can describe methods that can be used for Scale-Up Synthesis.",
+            title: "Analytical Chemistry & Quality Control",
+            iconSrc: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Analytical-Chemistry-Quality-Control.webp",
+            description: "Drugs must meet safety, efficacy and quality standards by using chromatography and mass spectrometry to determine the drug's identity and purity.",
             icon: Database
         },
         {
-            title: "Pharmacokinetics (ADME) and Pharmacodynamics",
-            description: "Our Pharmacokinetics and Pharmacodynamics team aids authors in preparing their manuscripts that describe, through analytical methods, how their drugs behave in terms of Absorption, Distribution, Metabolism and Excretion (ADME), and their effects on Biological Systems.",
+            title: "Pharmacology & Toxicology",
+            iconSrc: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Pharmacology-Toxicology.webp",
+            description: "Biological effects of drugs are studied to ensure the safety of drugs through both preclinical and clinical pharmacology. Toxicology assesses the safety of drugs by evaluating the potential for harmful (adverse) effects in the patient population.",
             icon: ShieldAlert
         },
         {
-            title: "Bioorganic and Medicinal Biochemistry",
-            description: "Experts assist Authors with their preparation of Studies describing the interaction of Chemical Compounds with Biological Targets. This includes studies related to enzyme inhibition, receptor binding, as well as Biochemical Assays.",
+            title: "Clinical Trials & Development",
+            iconSrc: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Clinical-Trials-Development.webp",
+            description: "Clinical trials are conducted to determine the safety, efficacy, and dosage of new pharmaceutical products before they can be marketed. Conducting these studies is a prerequisite for securing regulatory approval.",
             icon: Layers
-        },
-        {
-            title: "Natural Product Chemistry",
-            description: "We help our authors to prepare manuscripts describing the extraction method, structural identification and biological testing for natural products that have a biological activity.",
-            icon: BookOpen
-        },
-        {
-            title: "Analytical Chemistry for Drug Development",
-            description: "Our editorial support incorporates analytical methods, validation of analytical methods (including chromatography and spectroscopy), and use these methodologies during the development of drug products by providing Editorial Support.",
-            icon: BarChart3
-        },
-        {
-            title: "Preclinical Drug Development",
-            description: "In addition to comprehensive reports, we assist researchers during preparation of their comprehensive preclinical chemistry research and preparation of scientific manuscripts that incorporate pharmacology, toxicity studies, and efficacy evaluations both through in vivo and in vitro methods.",
-            icon: FileSearch
         }
     ];
 
@@ -183,7 +173,7 @@ export default function MedicinalChemistryPage() {
 
                     <div className="text-center max-w-3xl mx-auto mb-12">
                         <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-4">
-                            Our Core Disciplines In Medicinal Chemistry
+                            Our Core Disciplines In Medical and Pharmaceutical Chemistry
                         </h2>
                         <p className="text-gray-600 text-sm leading-relaxed">
                             Our medicinal chemistry division at Pubrica provides professional, comprehensive support at every step of the drug discovery process. The Medicinal Chemistry division works closely with researchers and product developers to create the highest-quality and most effective technical writing, editorial support, and analytical services for both medicinal chemistry research and high-impact publishing.
@@ -205,9 +195,7 @@ export default function MedicinalChemistryPage() {
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
                                                 {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <span className="relative w-6 h-6 shrink-0">
-                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                                </span>
+                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                             ) : (
                                                 <IconComponent className="w-6 h-6" />
                                             )}

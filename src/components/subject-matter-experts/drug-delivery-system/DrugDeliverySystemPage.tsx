@@ -63,7 +63,7 @@ export default function DrugDeliverySystemPage() {
         },
         {
             title: "Pharmacology",
-            iconSrc: "/images/subject-matter-experts/drug-delivery-system/Pharmaceutical-Science.webp",
+            iconSrc: "/images/subject-matter-experts/drug-delivery-system/Pharmacology.webp",
             description: "Pharmacology is the study of how drugs interact with the body and affect biological systems. It focuses on understanding drug actions, their therapeutic effects, side effects, and mechanisms of action to optimize their use in treating diseases.",
             icon: Cpu
         },
@@ -255,7 +255,7 @@ export default function DrugDeliverySystemPage() {
                         <div className="lg:col-span-5 flex justify-center">
                             <div className="relative w-full h-[350px] sm:h-[420px] rounded-lg overflow-hidden shadow-md">
                                 <Image
-                                    src="/images/subject-matter-experts/drug-delivery-system/Pharmaceutical-Science.webp"
+                                    src="/images/subject-matter-experts/drug-delivery-system/Applications-of-Drug-Delivery-System.webp"
                                     alt="Expertise in Drug Delivery System"
                                     fill
                                     className="object-cover"
@@ -328,9 +328,7 @@ export default function DrugDeliverySystemPage() {
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
                                                 {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <span className="relative w-6 h-6 shrink-0">
-                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                                </span>
+                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                             ) : (
                                                 <IconComponent className="w-6 h-6" />
                                             )}

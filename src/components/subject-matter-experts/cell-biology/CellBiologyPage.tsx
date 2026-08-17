@@ -179,7 +179,7 @@ export default function CellBiologyPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="/images/subject-matter-experts/cell-biology/Comprehensive-Research-Writing-and-Publication-Support-in-Cell-Biology.webp"
+                                src="/images/subject-matter-experts/cell-biology/sample-works-6.webp"
                                 alt="Cell biology chromosome and cellular research visual"
                                 fill
                                 priority
@@ -220,9 +220,7 @@ export default function CellBiologyPage() {
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
                                                 {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <span className="relative w-6 h-6 shrink-0">
-                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                                </span>
+                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                             ) : (
                                                 <IconComponent className="w-6 h-6" />
                                             )}

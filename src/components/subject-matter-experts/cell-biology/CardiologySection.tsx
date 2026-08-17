@@ -53,6 +53,7 @@ const conditionsTabs = [
 const applicationsAccordionData = [
     {
         title: "Diagnostic Applications",
+            iconSrc: "/images/subject-matter-experts/cell-biology/Cell-Death-and-Survival-Mechanisms.webp",
         icon: Activity,
         content: (
             <div className="space-y-3">
@@ -70,6 +71,7 @@ const applicationsAccordionData = [
     },
     {
         title: "Interventional and Therapeutic Applications",
+            iconSrc: "/images/subject-matter-experts/cell-biology/Cytoskeleton-and-Cell-Motility.webp",
         icon: HeartPulse,
         content: (
             <div className="space-y-3">
@@ -235,7 +237,7 @@ export default function CardiologySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <Image
-                            src="/images/subject-matter-experts/cell-biology/Comprehensive-Research-Writing-and-Publication-Support-in-Cell-Biology.webp"
+                            src="/images/subject-matter-experts/cell-biology/sample-works-6.webp"
                             alt="Nature Cell Biology Journal Cover"
                             width={224}
                             height={300}

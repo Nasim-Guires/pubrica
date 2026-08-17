@@ -161,7 +161,7 @@ export default function BiomonitoringPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="/images/subject-matter-experts/big-data-hadoop/Big-Data-Hadoop-.webp"
+                                src="/images/subject-matter-experts/big-data-hadoop/sample-works-11-13.webp"
                                 alt="Biomonitoring Laboratory Microscope"
                                 fill
                                 className="object-cover"
@@ -196,7 +196,11 @@ export default function BiomonitoringPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2.5 bg-gray-50 border border-gray-100 rounded-lg text-gray-700 shrink-0">
-                                                <Icon className="w-4 h-4" />
+                                                {(item as { iconSrc?: string }).iconSrc ? (
+                                            <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={16} height={16} className="object-contain shrink-0" />
+                                        ) : (
+                                            <Icon className="w-4 h-4" />
+                                        )}
                                             </div>
                                         </div>
 

@@ -134,7 +134,7 @@ export default function InternetOfThingsSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/internet-of-things/Internet-of-Things-.webp"
+                            src="/images/subject-matter-experts/internet-of-things/Journal-on-Internet-of-Things.webp"
                             alt="Internet of Things Journal Cover"
                             className="w-full h-auto object-cover"
                         />

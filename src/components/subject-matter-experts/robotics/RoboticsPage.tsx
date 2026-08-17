@@ -67,7 +67,7 @@ export default function RoboticsPage() {
         },
         {
             title: "Human-Robot Interaction (HRI)",
-            iconSrc: "/images/subject-matter-experts/robotics/Human-Robot-Interaction-HRI.webp",
+            iconSrc: "/images/subject-matter-experts/robotics/Biomedical-and-Healthcare-Robotics.webp",
             description: "HRI (Human-Robot Interaction) is dedicated to developing intuitive and safe methods for humans to work with robots. HRI emphasizes real-world usability and ethical considerations about how robots are used in people’s daily lives.",
             icon: Users,
         },
@@ -226,9 +226,7 @@ export default function RoboticsPage() {
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
                                                 {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <span className="relative w-6 h-6 shrink-0">
-                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                                </span>
+                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                             ) : (
                                                 <IconComponent className="w-6 h-6" />
                                             )}

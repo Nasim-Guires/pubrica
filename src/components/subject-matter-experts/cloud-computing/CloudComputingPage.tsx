@@ -46,7 +46,7 @@ export default function CloudComputingPage() {
         },
         {
             title: "Cloud Security & Data Privacy",
-            iconSrc: "/images/subject-matter-experts/cloud-computing/Cloud-security-and-privacy.webp",
+            iconSrc: "/images/subject-matter-experts/cloud-computing/Cloud-Security-Data-Privacy.webp",
             description: "Cloud Storage refers to the use of a public cloud to manage, store and retrieve vast amounts of both structured and unstructured information.",
             icon: Database
         },
@@ -230,9 +230,7 @@ export default function CloudComputingPage() {
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
                                                 {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <span className="relative w-6 h-6 shrink-0">
-                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                                </span>
+                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                             ) : (
                                                 <IconComponent className="w-6 h-6" />
                                             )}

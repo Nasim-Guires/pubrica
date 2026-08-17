@@ -186,7 +186,7 @@ export default function PsychiatrySection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/psychiatry/Psychiatry.webp"
+                            src="/images/subject-matter-experts/psychiatry/Applications-of-Psychiatry.webp"
                             alt="Psychiatry consultation and documentation"
                             className="w-full h-auto object-cover"
                         />
@@ -211,7 +211,7 @@ export default function PsychiatrySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/psychiatry/Clinical-Psychiatry-and-Diagnosis.webp"
+                            src="/images/subject-matter-experts/psychiatry/sample-works-14-1.webp"
                             alt="Journal of Psychiatric Research Cover"
                             className="w-full h-auto object-cover"
                         />

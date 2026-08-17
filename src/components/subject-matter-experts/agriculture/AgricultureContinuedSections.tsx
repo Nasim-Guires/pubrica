@@ -97,8 +97,8 @@ export default function AgricultureContinuedSections() {
             {/* Image */}
             <div className="md:col-span-5 relative h-72 md:h-80 w-full rounded overflow-hidden shadow-sm border border-gray-200">
               <Image
-                src="/images/subject-matter-experts/agriculture/Agronomy.png"
-                alt="Smart phone showing smart farming interface"
+                src="/images/subject-matter-experts/agriculture/Emerging-Trends-in-Agriculture.webp"
+                alt="Emerging trends in agriculture"
                 fill
                 className="object-cover"
               />
@@ -129,7 +129,7 @@ export default function AgricultureContinuedSections() {
               </div>
               <div className="relative h-28 w-full">
                 <Image
-                  src="/images/subject-matter-experts/agriculture/Horticulture.png"
+                  src="/images/subject-matter-experts/agriculture/sample-works.webp"
                   alt="Farmer examining field"
                   fill
                   className="object-cover"

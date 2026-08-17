@@ -185,7 +185,7 @@ export default function NanobiotechnologyTechniquesSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/nanobiotechnology/Nano-Biotechnology.webp"
+                            src="/images/subject-matter-experts/nanobiotechnology/Applications-of-Nano-Biotechnology.webp"
                             alt="Nanobiotechnology research setup"
                             className="w-full h-auto object-cover"
                         />
@@ -210,7 +210,7 @@ export default function NanobiotechnologyTechniquesSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/nanobiotechnology/Drug-delivery-and-systems.webp"
+                            src="/images/subject-matter-experts/nanobiotechnology/sample-works-11-6.webp"
                             alt="Nature Nanotechnology Journal Cover"
                             className="w-full h-auto object-cover"
                         />

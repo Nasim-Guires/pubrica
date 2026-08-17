@@ -27,6 +27,7 @@ export default function MedicinalChemistryPage() {
         },
         {
             title: "Lead Optimization and Structure-Activity Relationship (SAR) Studies",
+            iconSrc: "/images/subject-matter-experts/shared/Lead-Optimization-and-Structure-Activity-Relationship-SAR-Studies.webp",
             description: "At this stage of drug discovery, we help authors describe the work that they are doing to refine the potency, selectivity, and pharmacokinetic properties of their compounds through chemical modification and/or SAR study (Lead optimization)",
             icon: TrendingUp
         },
@@ -218,9 +219,7 @@ export default function MedicinalChemistryPage() {
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
                                                 {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <span className="relative w-6 h-6 shrink-0">
-                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                                </span>
+                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                             ) : (
                                                 <IconComponent className="w-6 h-6" />
                                             )}

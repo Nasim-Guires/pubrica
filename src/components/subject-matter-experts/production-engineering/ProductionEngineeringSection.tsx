@@ -176,7 +176,7 @@ export default function ProductionEngineeringSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/production-engineering/Production-Engineering.webp"
+                            src="/images/subject-matter-experts/production-engineering/Applications-of-Production-Engineering.webp"
                             alt="Production Engineering Specialist operating automated machinery"
                             className="w-full h-auto object-cover"
                         />
@@ -205,7 +205,7 @@ export default function ProductionEngineeringSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/production-engineering/Manufacturing-Methods-Technology.webp"
+                            src="/images/subject-matter-experts/production-engineering/sample-works-11-9.webp"
                             alt="Recent Trends in Industrial and Production Engineering Journal Cover"
                             className="w-full h-auto object-cover"
                         />

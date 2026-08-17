@@ -37,7 +37,7 @@ export default function PsychologyPage() {
         },
         {
             title: "Health Psychology",
-            iconSrc: "/images/subject-matter-experts/psychology/Clinical-psychology.webp",
+            iconSrc: "/images/subject-matter-experts/psychology/Health-Psychology.webp",
             description: "It studies how psychological factors affect physical health and illness. It promotes health-enhancing behaviours, such as stress management, exercise, and nutrition. Health psychologists often collaborate with medical professionals to develop patient-centered care models.",
             icon: HeartPulse,
         },
@@ -214,9 +214,7 @@ export default function PsychologyPage() {
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
                                                 {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <span className="relative w-6 h-6 shrink-0">
-                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                                </span>
+                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                             ) : (
                                                 <IconComponent className="w-6 h-6" />
                                             )}

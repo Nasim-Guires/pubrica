@@ -103,9 +103,7 @@ export default function CoreDisciplinesBiomedicalEngineering() {
                                         </h3>
                                         <div className="w-10 h-10 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 group-hover:bg-[#0d3630]/5 group-hover:border-[#0d3630]/20 transition-all">
                                             {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                            <span className="relative w-5 h-5">
-                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                            </span>
+                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={20} height={20} className="object-contain w-5 h-5 shrink-0" />
                                         ) : (
                                             <IconComponent className="w-5 h-5 text-[#0d3630]" />
                                         )}

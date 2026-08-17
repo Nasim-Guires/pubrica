@@ -45,7 +45,7 @@ export default function WhereAuthorsPublishAndEditorsSection() {
         <div className="bg-white border border-gray-200 rounded-md p-6 shadow-sm flex flex-col md:flex-row gap-6 items-center">
           <div className="relative w-40 h-52 shrink-0 border border-gray-200 shadow-sm rounded overflow-hidden bg-gray-50">
             <Image
-              src="/images/subject-matter-experts/biotechnology/Microbiology-and-Immunology.png"
+              src="/images/subject-matter-experts/biotechnology/sample-works-1-1.webp"
               alt="Biotechnology Advances Journal Cover"
               fill
               className="object-cover"

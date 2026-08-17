@@ -115,7 +115,7 @@ export default function PharmaceuticalsSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/pharmaceuticals/Pharmaceutical-chemistry.webp"
+                            src="/images/subject-matter-experts/pharmaceuticals/Emerging-Trends-in-Pharmaceutical-Research.webp"
                             alt="Pharmaceutical Research"
                             className="w-full h-auto object-cover"
                         />
@@ -143,7 +143,7 @@ export default function PharmaceuticalsSection() {
                 <div className="bg-[#fafafa] border border-gray-200 rounded-lg p-6 sm:p-8 shadow-xs max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">                    {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <img
-                            src="/images/subject-matter-experts/pharmaceuticals/Pharmacology-and-Toxicology.webp"
+                            src="/images/subject-matter-experts/pharmaceuticals/sample-works-7-1.webp"
                             alt="Pharmacological Research Journal Cover"
                             className="w-25 h-auto object-cover"
                         />

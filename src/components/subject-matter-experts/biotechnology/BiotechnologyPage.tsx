@@ -242,7 +242,11 @@ export default function BiotechnologyPage() {
                                                 </h3>
                                             </div>
                                             <div className="p-2 bg-[#0d3630]/10 rounded-lg text-[#0d3630] shrink-0">
-                                                <Icon className="w-5 h-5" />
+                                                {(item as { iconSrc?: string }).iconSrc ? (
+                                            <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={20} height={20} className="object-contain shrink-0" />
+                                        ) : (
+                                            <Icon className="w-5 h-5" />
+                                        )}
                                             </div>
                                         </div>
 

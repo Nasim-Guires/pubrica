@@ -273,7 +273,7 @@ export default function MedicinalAndPharmaceuticalChemistrySections() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <img
-                            src="/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Pharmacogenomics-Personalized-Medicine.webp"
+                            src="/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/sample-works-11-16.webp"
                             alt="Journal of Medicinal Chemistry Cover"
                             className="w-full h-auto object-cover"
                         />

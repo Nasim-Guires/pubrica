@@ -53,7 +53,7 @@ export default function AgricultureSMEPage() {
     },
     {
       title: "Soil Science",
-            iconSrc: "/images/subject-matter-experts/agriculture/Agronomy.png",
+            iconSrc: "/images/subject-matter-experts/agriculture/Soil-Science.png",
       desc: "Explores soil properties, classification, fertility, and conservation. Knowledge of soil chemistry, physics, and biology is essential for sustainable crop production and environmental stewardship.",
       icon: FlaskConical,
     },
@@ -290,7 +290,7 @@ export default function AgricultureSMEPage() {
 
                   {/* Indicator bar visual column */}
                   <div className="flex flex-col items-center justify-between flex-shrink-0 w-8 border-l border-gray-100 pl-2 pointer-events-none">
-                    {(item as any).iconSrc ? <span className="relative w-6 h-6 shrink-0"><Image src={(item as any).iconSrc} alt="" fill className="object-contain" /></span> : <Icon className="w-5 h-5 text-gray-700 shrink-0" />}
+                    {(item as any).iconSrc ? <Image src={(item as any).iconSrc} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" /> : <Icon className="w-5 h-5 text-gray-700 shrink-0" />}
 
                     <div className="flex flex-col items-center justify-between h-20 my-1">
                       <ChevronUp className="w-3 h-3 text-gray-400" />

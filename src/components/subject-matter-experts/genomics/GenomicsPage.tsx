@@ -50,7 +50,7 @@ export default function GenomicsPage() {
         },
         {
             title: "Epigenomics",
-            iconSrc: "/images/subject-matter-experts/genomics/Functional-Genomics.webp",
+            iconSrc: "/images/subject-matter-experts/genomics/Epigenomics.webp",
             description: "Focuses on heritable changes in gene expression that do not involve alterations in the DNA sequence, such as DNA methylation, histone modification, and chromatin accessibility. Pubrica supports the clear presentation of these complex regulatory mechanisms, experimental workflows, and functional implications.",
             icon: Layers
         },
@@ -215,9 +215,7 @@ export default function GenomicsPage() {
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
                                                 {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <span className="relative w-6 h-6 shrink-0">
-                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                                </span>
+                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                             ) : (
                                                 <IconComponent className="w-6 h-6" />
                                             )}

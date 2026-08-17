@@ -46,7 +46,7 @@ export default function AuthorPublicationsAndEditors() {
         <div className="bg-white border border-gray-200 rounded-md p-6 shadow-sm flex flex-col md:flex-row gap-6 items-center">
           <div className="relative w-40 h-52 shrink-0 border border-gray-200 shadow-sm rounded overflow-hidden bg-gray-50">
             <Image
-              src="/images/subject-matter-experts/augmented-reality/Augmented-Reality.webp"
+              src="/images/subject-matter-experts/augmented-reality/sample-works-13-2.webp"
               alt="Journal Cover Sample"
               fill
               className="object-cover"

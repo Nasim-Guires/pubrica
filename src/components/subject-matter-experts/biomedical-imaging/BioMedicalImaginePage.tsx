@@ -16,7 +16,7 @@ export default function BioMedicalImaginePage() {
         },
         {
             title: "Computed Tomography (CT)",
-            iconSrc: "/images/subject-matter-experts/biomedical-imaging/X-ray-Imaging.webp",
+            iconSrc: "/images/subject-matter-experts/biomedical-imaging/Computed-Tomography-CT.webp",
             description: "CT combines multiple X-ray images taken from different angles to produce cross-sectional views of the body. This technique allows precise visualization of internal organs, blood vessels, and skeletal structures. Modern CT imaging is critical for trauma assessment, cancer detection, and cardiovascular evaluations.",
             icon: (
                 <svg className="w-6 h-6 text-[#0F393B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -245,9 +245,7 @@ export default function BioMedicalImaginePage() {
                                         </h3>
                                         <div className="p-2 bg-gray-50 rounded-lg shrink-0">
                                             {"iconSrc" in item && item.iconSrc ? (
-                                                <span className="relative w-6 h-6 block">
-                                                    <Image src={item.iconSrc} alt="" fill className="object-contain" />
-                                                </span>
+                                                <Image src={item.iconSrc} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                             ) : (
                                                 item.icon
                                             )}

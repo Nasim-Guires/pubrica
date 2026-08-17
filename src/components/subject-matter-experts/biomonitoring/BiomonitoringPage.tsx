@@ -39,14 +39,14 @@ export default function BiomonitoringPage() {
         },
         {
             title: "Occupational Biomonitoring",
-            iconSrc: "/images/subject-matter-experts/biomonitoring/Human-Feed-Biomonitoring.webp",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Occupational-Health-Management.webp",
             subtitle: "Workplace Exposure",
             desc: "In industrial and workplace settings, biomonitoring evaluates exposure to hazardous substances, including solvents, metals, or industrial chemicals. This information supports risk management, exposure control, and compliance with occupational safety standards.",
             icon: Shield,
         },
         {
             title: "Ecological Biomonitoring",
-            iconSrc: "/images/subject-matter-experts/biomonitoring/Environmental-Biomonitoring.webp",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Ecological-Biomonitoring.webp",
             subtitle: "Bioindicator Species",
             desc: "It uses bioindicator species to assess environmental quality and ecosystem responses to pollutants. Aquatic organisms like mussels, algae, or macroinvertebrates serve as effective indicators for monitoring the health of rivers, lakes, and coastal systems.",
             icon: Activity,
@@ -160,7 +160,7 @@ export default function BiomonitoringPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="/images/subject-matter-experts/biomonitoring/Biomonitoring.webp"
+                                src="/images/subject-matter-experts/biomonitoring/sample-works-7-3.webp"
                                 alt="Biomonitoring Laboratory Microscope"
                                 fill
                                 className="object-cover"
@@ -198,7 +198,11 @@ export default function BiomonitoringPage() {
                                                 </h3>
                                             </div>
                                             <div className="p-2 bg-[#0d3630]/10 rounded-lg text-[#0d3630] shrink-0">
-                                                <Icon className="w-5 h-5" />
+                                                {(item as { iconSrc?: string }).iconSrc ? (
+                                            <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={20} height={20} className="object-contain shrink-0" />
+                                        ) : (
+                                            <Icon className="w-5 h-5" />
+                                        )}
                                             </div>
                                         </div>
 

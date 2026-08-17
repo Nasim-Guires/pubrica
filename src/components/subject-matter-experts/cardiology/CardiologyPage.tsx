@@ -26,6 +26,7 @@ export default function CardiologyPage() {
     const disciplines = [
         {
             title: "Interventional Cardiology",
+            iconSrc: "/images/subject-matter-experts/cardiology/Interventional-Car-diology.png",
             description: "Focused on catheter-based treatments for heart diseases, including angioplasty and stenting, our team provides detailed editorial and research support for studies on minimally invasive procedures and emerging technologies.",
             icon: HeartPulse
         },
@@ -207,9 +208,7 @@ export default function CardiologyPage() {
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
                                                 {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <span className="relative w-6 h-6 shrink-0">
-                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                                </span>
+                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                             ) : (
                                                 <IconComponent className="w-6 h-6" />
                                             )}

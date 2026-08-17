@@ -183,7 +183,7 @@ export default function GlycobiologySection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/glycobiology/Comprehensive-Research-Writing-and-Publication-Support-in-Glycobiology.webp"
+                            src="/images/subject-matter-experts/glycobiology/Biomedical-Research.webp"
                             alt="Glycobiology research setup"
                             className="w-full h-auto object-cover"
                         />
@@ -207,7 +207,7 @@ export default function GlycobiologySection() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                         <div className="lg:col-span-5 rounded-lg overflow-hidden shadow-xl border border-white/10 order-2 lg:order-1">
                             <img
-                                src="/images/subject-matter-experts/glycobiology/Structural-Glycobiology.webp"
+                                src="/images/subject-matter-experts/glycobiology/Applications-of-Glycobiology.webp"
                                 alt="Glycobiology medical setup"
                                 className="w-full h-auto object-cover"
                             />
@@ -246,7 +246,7 @@ export default function GlycobiologySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/glycobiology/Glycomics-and-Pro-teomics-Integration.webp"
+                            src="/images/subject-matter-experts/glycobiology/sample-works-6-1.webp"
                             alt="Glycobiology Journal Cover"
                             className="w-full h-auto object-cover"
                         />
