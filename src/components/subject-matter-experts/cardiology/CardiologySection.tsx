@@ -57,31 +57,37 @@ const applicationsList = [
     {
         icon: Stethoscope,
         title: "Disease Mechanism Elucidation",
+            iconSrc: "/images/subject-matter-experts/cardiology/Interventional-Car-diology.png",
         description: "Understanding how cellular dysfunction leads to diseases such as cancer, neurodegenerative disorders, diabetes, and cardiovascular conditions."
     },
     {
         icon: Microscope,
         title: "Drug Discovery and Development",
+            iconSrc: "/images/subject-matter-experts/cardiology/Electrophysiology.png",
         description: "Utilizing cellular assays and models to identify drug targets, assess efficacy, and predict toxicity."
     },
     {
         icon: Activity,
         title: "Regenerative Medicine",
+            iconSrc: "/images/subject-matter-experts/cardiology/Heart-Failure-and-Transplantation.png",
         description: "Harnessing stem cell biology to regenerate damaged tissues and organs."
     },
     {
         icon: Dna,
         title: "Genetic Engineering",
+            iconSrc: "/images/subject-matter-experts/cardiology/Cardiac-Surgery.png",
         description: "Applying cellular-level insights for gene editing using CRISPR-Cas9 and other molecular tools."
     },
     {
         icon: Syringe,
         title: "Vaccine Development",
+            iconSrc: "/images/subject-matter-experts/cardiology/Paediatric-Cardiology.png",
         description: "Exploring cellular immune responses to design effective vaccines against infectious diseases."
     },
     {
         icon: FlaskConical,
         title: "Tissue Engineering",
+            iconSrc: "/images/subject-matter-experts/cardiology/Cardiovascular-Imaging.png",
         description: "Integrating cell biology with materials science to develop biomimetic scaffolds for tissue reconstruction."
     }
 ];
@@ -110,7 +116,7 @@ const editorsData = [
         experience: '15 years of experience',
         manuscripts: '140+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: '/images/subject-matter-experts/cardiology/Interventional-Car-diology.png'
+        avatar: '/images/subject-matter-experts/cardiology/Dr.-Samuel-Hart.webp'
     }
 ];
 
@@ -193,7 +199,11 @@ export default function SubjectMatterExpertsCellBiology() {
                             return (
                                 <div key={index} className="flex items-start gap-4">
                                     <div className="p-1.5 rounded-md text-[#0e3b32] shrink-0 mt-0.5">
-                                        <IconComponent className="w-6 h-6 stroke-[1.5]" />
+                                        {(item as { iconSrc?: string }).iconSrc ? (
+                                            <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain shrink-0" />
+                                        ) : (
+                                            <IconComponent className="w-6 h-6 stroke-[1.5]" />
+                                        )}
                                     </div>
                                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                                         <strong className="font-bold text-gray-900">{item.title}: </strong>
@@ -208,7 +218,7 @@ export default function SubjectMatterExpertsCellBiology() {
                     <div className="lg:col-span-5 flex justify-center lg:justify-end">
                         <div className="relative w-full max-w-sm rounded-lg overflow-hidden shadow-sm border border-gray-100">
                             <Image
-                                src="/images/subject-matter-experts/cardiology/Electrophysiology.png"
+                                src="/images/subject-matter-experts/cell-biology/Applications-of-Cell-Biology-Research.webp"
                                 alt="Cell Biology Microscopic View"
                                 width={500}
                                 height={600}
@@ -236,7 +246,7 @@ export default function SubjectMatterExpertsCellBiology() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <Image
-                            src="/images/subject-matter-experts/cardiology/Heart-Failure-and-Transplantation.png"
+                            src="/images/subject-matter-experts/cardiology/sample-works-3.webp"
                             alt="Nature Cell Biology Journal Cover"
                             width={224}
                             height={300}

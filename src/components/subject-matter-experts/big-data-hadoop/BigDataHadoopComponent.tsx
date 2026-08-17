@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import SmeCoreAreasGrid from "@/components/subject-matter-experts/SmeCoreAreasGrid";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -20,8 +21,6 @@ import {
 } from "lucide-react";
 
 export default function BiomonitoringPage() {
-    const [expandedCard, setExpandedCard] = useState<number | null>(0);
-
     const coreDisciplines = [
         {
             title: "Big Data Architecture & Management",
@@ -161,7 +160,7 @@ export default function BiomonitoringPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="/images/subject-matter-experts/big-data-hadoop/Big-Data-Hadoop-.webp"
+                                src="/images/subject-matter-experts/big-data-hadoop/sample-works-11-13.webp"
                                 alt="Biomonitoring Laboratory Microscope"
                                 fill
                                 className="object-cover"
@@ -182,42 +181,7 @@ export default function BiomonitoringPage() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {coreDisciplines.map((item, index) => {
-                            const Icon = item.icon;
-                            return (
-                                <div
-                                    key={index}
-                                    className="bg-white border border-gray-200/80 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
-                                >
-                                    <div className="space-y-4">
-                                        <div className="flex justify-between items-start gap-3">
-                                            <h3 className="text-xs md:text-sm font-bold text-[#b81c1c] leading-snug">
-                                                {item.title}
-                                            </h3>
-                                            <div className="p-2.5 bg-gray-50 border border-gray-100 rounded-lg text-gray-700 shrink-0">
-                                                <Icon className="w-4 h-4" />
-                                            </div>
-                                        </div>
-
-                                        <p className="text-xs text-gray-600 leading-relaxed">
-                                            {item.desc}
-                                        </p>
-                                    </div>
-
-                                    <div className="pt-4 mt-6 border-t border-gray-100 flex items-center justify-between">
-
-                                        <button
-                                            className="text-gray-400 hover:text-[#0d3630] transition-colors p-1"
-                                            aria-label="Toggle details"
-                                        >
-                                            <ChevronDown className="w-4 h-4" />
-                                        </button>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
+                    <SmeCoreAreasGrid items={coreDisciplines} />
                 </section>
 
                 {/* EXPERTISE IN BIOMONITORING RESEARCH AND PUBLICATION */}

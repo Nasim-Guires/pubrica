@@ -135,7 +135,7 @@ export default function BiocatalystsSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/biocatalysts/Biocatalysts.webp"
+                            src="/images/subject-matter-experts/biocatalysts/sample-works-7-4.webp"
                             alt="ACS Catalysis Journal Cover"
                             className="w-full h-auto object-cover"
                         />

@@ -160,7 +160,7 @@ export default function CardiovascularBiologySection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/cardiovascular-biology/Atherosclerosis.png"
+                            src="/images/subject-matter-experts/cardiovascular-biology/Applications-of-Cardiovascular-Biology-Research.webp"
                             alt="Applications of Cardiovascular Biology Research"
                             className="w-full h-auto object-cover"
                         />
@@ -185,7 +185,7 @@ export default function CardiovascularBiologySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/cardiovascular-biology/Calcification.png"
+                            src="/images/subject-matter-experts/cell-biology/sample-works-6.webp"
                             alt="Journal of Cardiovascular Development and Disease Cover"
                             className="w-full h-auto object-cover"
                         />

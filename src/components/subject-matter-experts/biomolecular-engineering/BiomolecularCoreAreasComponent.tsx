@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SmeCoreAreasGrid from "@/components/subject-matter-experts/SmeCoreAreasGrid";
 import React from "react";
 import { Dna, Activity, FlaskConical, Microscope, Cpu, Server } from "lucide-react";
 
@@ -65,35 +65,7 @@ export default function BiomolecularCoreAreasComponent() {
         </div>
 
         {/* Grid Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {coreAreas.map((area, idx) => {
-            const Icon = area.icon;
-            return (
-              <div
-                key={idx}
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow"
-              >
-                <div className="space-y-3">
-                  <div className="flex justify-between items-start gap-2">
-                    <h3 className="font-bold text-red-700 text-xs md:text-sm leading-snug">
-                      {area.title}
-                    </h3>
-                    <div className="p-2 bg-gray-50 border border-gray-100 rounded-lg text-gray-700 shrink-0">
-                      <Icon className="w-4 h-4 text-[#0d3630]" />
-                    </div>
-                  </div>
-                  <p className="text-xs text-gray-600 leading-relaxed">
-                    {area.desc}
-                  </p>
-                </div>
-                <div className="pt-4 mt-6 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-[#0d3630]">
-                  <span>{area.subtitle}</span>
-                  <span className="text-gray-400">⌄</span>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <SmeCoreAreasGrid items={coreAreas} />
 
       </div>
     </div>

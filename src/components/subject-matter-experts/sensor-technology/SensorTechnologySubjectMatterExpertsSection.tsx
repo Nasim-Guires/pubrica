@@ -39,31 +39,31 @@ const emergingTrendsData = [
 const clinicalApplicationsData = [
     {
         title: 'Patient Monitoring',
-            iconSrc: "/images/subject-matter-experts/sensor-technology/Patient-Monitoring.webp",
+            iconSrc: "/images/subject-matter-experts/sensor-technology/Design-Development-of-Sensors.webp",
         description: 'Ongoing assessment of vital signs can facilitate the early identification of illness and produce better health results.',
         icon: Activity
     },
     {
         title: 'Wearable and Implantable Devices',
-            iconSrc: "/images/subject-matter-experts/sensor-technology/Wearable-and-Implantable-Devices-1.webp",
+            iconSrc: "/images/subject-matter-experts/sensor-technology/Wearable-Portable-Sensors.webp",
         description: 'Sensors allow for prolonged health monitoring and customized therapy.',
         icon: Watch
     },
     {
         title: 'Diagnostic Support',
-            iconSrc: "/images/subject-matter-experts/sensor-technology/Diagnostic-Support.webp",
+            iconSrc: "/images/subject-matter-experts/sensor-technology/Biosensors-Biomedical-Sensors.webp",
         description: 'Advanced sensors will improve diagnosis of disease and improve the diagnostic image.',
         icon: Stethoscope
     },
     {
         title: 'Remote Healthcare',
-            iconSrc: "/images/subject-matter-experts/sensor-technology/Remote-Healthcare.webp",
+            iconSrc: "/images/subject-matter-experts/sensor-technology/Sensor-Networks-IoT.webp",
         description: 'Sensor based systems support remote medical care and telehealth services.',
         icon: Radio
     },
     {
         title: 'Precision Medicine',
-            iconSrc: "/images/subject-matter-experts/sensor-technology/Precision-medicine.webp",
+            iconSrc: "/images/subject-matter-experts/sensor-technology/Microelectromechanical-Systems-MEMS-Nano-sensors.webp",
         description: 'The use of real-time data will provide tailored treatment and enhance the ability to make better clinical decisions.',
         icon: Cpu
     }
@@ -249,9 +249,7 @@ export default function SensorTechnologySubjectMatterExpertsSection() {
                                 <div key={index} className="flex items-start space-x-4">
                                     <div className="p-2 rounded-lg bg-gray-50 border border-gray-200 text-[#0e3b32] shrink-0 mt-1">
                                         {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                        <span className="relative w-6 h-6">
-                                            <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                        </span>
+                                            <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
                                     ) : (
                                         <IconComponent className="w-6 h-6 stroke-[1.5]" />
                                     )}
@@ -267,7 +265,7 @@ export default function SensorTechnologySubjectMatterExpertsSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/sensor-technology/Design-Development-of-Sensors.webp"
+                            src="/images/subject-matter-experts/sensor-technology/Patient-Monitoring.webp"
                             alt="Clinical Applications of Sensor Technology"
                             className="w-full h-auto object-cover"
                         />
@@ -292,7 +290,7 @@ export default function SensorTechnologySubjectMatterExpertsSection() {
                     {/* Journal Cover */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <img
-                            src="/images/subject-matter-experts/sensor-technology/Wearable-Portable-Sensors.webp"
+                            src="/images/subject-matter-experts/algorithm/sample-works-13-1.webp"
                             alt="Biosensors & Bioelectronics Journal Cover"
                             className="w-full h-auto object-cover"
                         />

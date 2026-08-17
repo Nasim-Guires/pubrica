@@ -180,7 +180,7 @@ export default function ProteinEngineeringSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/protein-engineering/Protein-Engineering.webp"
+                            src="/images/subject-matter-experts/protein-engineering/Applications-of-Protein-Engineering.webp"
                             alt="Protein Engineering Laboratory Analysis"
                             className="w-full h-auto object-cover"
                         />
@@ -205,7 +205,7 @@ export default function ProteinEngineeringSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <img
-                            src="/images/subject-matter-experts/protein-engineering/Directed-Evolution.webp"
+                            src="/images/subject-matter-experts/protein-engineering/sample-works-11-1.webp"
                             alt="Proteins Structure Function Bioinformatics Journal Cover"
                             className="w-full h-auto object-cover"
                         />

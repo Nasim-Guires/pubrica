@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import SmeCoreAreasGrid from "@/components/subject-matter-experts/SmeCoreAreasGrid";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -20,8 +21,6 @@ import {
 } from "lucide-react";
 
 export default function BiomonitoringPage() {
-    const [expandedCard, setExpandedCard] = useState<number | null>(0);
-
     const coreDisciplines = [
         {
             title: "Environmental Biomonitoring",
@@ -39,14 +38,14 @@ export default function BiomonitoringPage() {
         },
         {
             title: "Occupational Biomonitoring",
-            iconSrc: "/images/subject-matter-experts/biomonitoring/Human-Feed-Biomonitoring.webp",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Occupational-Health-Management.webp",
             subtitle: "Workplace Exposure",
             desc: "In industrial and workplace settings, biomonitoring evaluates exposure to hazardous substances, including solvents, metals, or industrial chemicals. This information supports risk management, exposure control, and compliance with occupational safety standards.",
             icon: Shield,
         },
         {
             title: "Ecological Biomonitoring",
-            iconSrc: "/images/subject-matter-experts/biomonitoring/Environmental-Biomonitoring.webp",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Ecological-Biomonitoring.webp",
             subtitle: "Bioindicator Species",
             desc: "It uses bioindicator species to assess environmental quality and ecosystem responses to pollutants. Aquatic organisms like mussels, algae, or macroinvertebrates serve as effective indicators for monitoring the health of rivers, lakes, and coastal systems.",
             icon: Activity,
@@ -160,7 +159,7 @@ export default function BiomonitoringPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="/images/subject-matter-experts/biomonitoring/Biomonitoring.webp"
+                                src="/images/subject-matter-experts/biomonitoring/sample-works-7-3.webp"
                                 alt="Biomonitoring Laboratory Microscope"
                                 fill
                                 className="object-cover"
@@ -181,48 +180,7 @@ export default function BiomonitoringPage() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {coreDisciplines.map((item, index) => {
-                            const Icon = item.icon;
-                            const isExpanded = expandedCard === index;
-                            return (
-                                <div
-                                    key={index}
-                                    className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
-                                >
-                                    <div>
-                                        <div className="flex justify-between items-start gap-3 mb-3">
-                                            <div>
-                                                <h3 className="text-xs font-bold text-[#b81c1c] leading-snug">
-                                                    {item.title}
-                                                </h3>
-                                            </div>
-                                            <div className="p-2 bg-[#0d3630]/10 rounded-lg text-[#0d3630] shrink-0">
-                                                <Icon className="w-5 h-5" />
-                                            </div>
-                                        </div>
-
-                                        <p className="text-[11px] text-gray-600 leading-relaxed mb-4">
-                                            {item.desc}
-                                        </p>
-                                    </div>
-
-                                    <div className="pt-3 border-t border-gray-100 flex items-center justify-between">
-                                        <span className="text-[11px] font-semibold text-[#0d3630]">
-                                            {item.subtitle}
-                                        </span>
-                                        <button
-                                            onClick={() => setExpandedCard(isExpanded ? null : index)}
-                                            className="text-gray-400 hover:text-[#0d3630] transition-colors p-1"
-                                            aria-label="Toggle details"
-                                        >
-                                            {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                                        </button>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
+                    <SmeCoreAreasGrid items={coreDisciplines} />
                 </section>
 
                 {/* EXPERTISE IN BIOMONITORING RESEARCH AND PUBLICATION */}

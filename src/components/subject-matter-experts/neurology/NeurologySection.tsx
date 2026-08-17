@@ -142,7 +142,7 @@ export default function NeurologySection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <Image
-                            src="/images/subject-matter-experts/neurology/Neurophysiology.webp"
+                            src="/images/subject-matter-experts/neurology/Emerging-Trends-in-Neurology-Research.webp"
                             alt="Neurology clinical research"
                             width={600}
                             height={450}
@@ -169,7 +169,7 @@ export default function NeurologySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white relative h-[280px]">
                         <Image
-                            src="/images/subject-matter-experts/neurology/Neuroimaging-and-Neurodiagnostic.webp"
+                            src="/images/subject-matter-experts/neurology/sample-works-6-3.webp"
                             alt="Neurology Journal Cover"
                             fill
                             className="object-cover"

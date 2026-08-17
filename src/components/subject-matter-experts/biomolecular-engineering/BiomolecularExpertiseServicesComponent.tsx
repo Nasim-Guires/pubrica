@@ -33,7 +33,7 @@ export default function BiomolecularExpertiseServicesComponent() {
     {
       title: "Artwork Editing",
       desc: "Professional visuals for your figures, tables, and graphical abstracts",
-      img: "/images/subject-matter-experts/biomolecular-engineering/Genetic-Protein-Engineering.webp",
+      img: "/images/subject-matter-experts/biomolecular-engineering/Industrial-Biotechnology-1.webp",
       icon: Wrench,
     },
     {
@@ -53,7 +53,7 @@ export default function BiomolecularExpertiseServicesComponent() {
     {
       title: "Systematic Reviews",
       desc: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-      img: "/images/subject-matter-experts/biomolecular-engineering/Metabolic-Engineering.webp",
+      img: "/images/subject-matter-experts/biomolecular-engineering/Biomolecular-Engineering.webp",
       icon: BookOpen,
     },
     {

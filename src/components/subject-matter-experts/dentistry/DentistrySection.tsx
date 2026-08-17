@@ -127,7 +127,7 @@ export default function DentistrySection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/dentistry/Comprehensive-Research-Writing-and-Publication-Support-in-Dentistry.webp"
+                            src="/images/subject-matter-experts/dentistry/Applications-of-Dentistry-Research.webp"
                             alt="Applications of Dentistry Research"
                             className="w-full h-auto object-cover"
                         />
@@ -152,7 +152,7 @@ export default function DentistrySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/dentistry/Oral-Pathology-and-Microbiology.png"
+                            src="/images/subject-matter-experts/dentistry/sample-works-5.webp"
                             alt="Journal of Dentistry Book Cover"
                             className="w-full h-auto object-cover"
                         />

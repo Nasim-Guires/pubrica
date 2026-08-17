@@ -1,5 +1,6 @@
 "use client";
 
+import SmeCoreAreasGrid from "@/components/subject-matter-experts/SmeCoreAreasGrid";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -53,7 +54,7 @@ export default function AgricultureSMEPage() {
     },
     {
       title: "Soil Science",
-            iconSrc: "/images/subject-matter-experts/agriculture/Agronomy.png",
+            iconSrc: "/images/subject-matter-experts/agriculture/Soil-Science.png",
       desc: "Explores soil properties, classification, fertility, and conservation. Knowledge of soil chemistry, physics, and biology is essential for sustainable crop production and environmental stewardship.",
       icon: FlaskConical,
     },
@@ -269,41 +270,7 @@ export default function AgricultureSMEPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {coreDisciplines.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-white border border-gray-200/90 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all flex justify-between gap-3 h-44 relative"
-                >
-                  <div className="flex-1 flex flex-col min-w-0">
-                    <h3 className="text-xs font-bold text-gray-900 leading-snug shrink-0 mb-2">
-                      {item.title}
-                    </h3>
-
-                    {/* Scrollable description box */}
-                    <div className="flex-1 overflow-y-auto card-scrollbar pr-2 text-[11px] text-gray-500 leading-relaxed max-h-24">
-                      <p>{item.desc}</p>
-                    </div>
-                  </div>
-
-                  {/* Indicator bar visual column */}
-                  <div className="flex flex-col items-center justify-between flex-shrink-0 w-8 border-l border-gray-100 pl-2 pointer-events-none">
-                    {(item as any).iconSrc ? <span className="relative w-6 h-6 shrink-0"><Image src={(item as any).iconSrc} alt="" fill className="object-contain" /></span> : <Icon className="w-5 h-5 text-gray-700 shrink-0" />}
-
-                    <div className="flex flex-col items-center justify-between h-20 my-1">
-                      <ChevronUp className="w-3 h-3 text-gray-400" />
-                      <div className="w-1 flex-1 my-1 bg-gray-200 rounded-full relative overflow-hidden">
-                        <div className="absolute top-0 w-full h-1/2 bg-[#0d3630] rounded-full" />
-                      </div>
-                      <ChevronDown className="w-3 h-3 text-gray-400" />
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <SmeCoreAreasGrid items={coreDisciplines} />
         </section>
 
         {/* WHY CHOOSE PUBRICA FOR AGRICULTURE RESEARCH */}

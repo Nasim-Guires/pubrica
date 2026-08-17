@@ -184,7 +184,7 @@ export default function DrugDeliverySystemSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/drug-delivery-system/Drug-Delivery-System.webp"
+                            src="/images/subject-matter-experts/drug-delivery-system/Applications-of-Drug-Delivery-System.webp"
                             alt="Applications of Drug Delivery System"
                             className="w-full h-auto object-cover"
                         />
@@ -243,7 +243,7 @@ export default function DrugDeliverySystemSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/drug-delivery-system/Pharmaceutical-Science.webp"
+                            src="/images/subject-matter-experts/drug-delivery-system/sample-works-10-2.webp"
                             alt="Drug Delivery and Translational Research Book Cover"
                             className="w-full h-auto object-cover"
                         />

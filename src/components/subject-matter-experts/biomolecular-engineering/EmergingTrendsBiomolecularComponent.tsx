@@ -44,31 +44,31 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
   const applications = [
     {
       title: "Healthcare",
-            iconSrc: "/images/subject-matter-experts/algorithm/Healthcare.webp",
+            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Genetic-Protein-Engineering.webp",
       desc: "Development of targeted biologics, vaccines, and personalized medicine tools.",
       icon: HeartPulse,
     },
     {
       title: "Industrial Biotechnology",
-            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Industrial-Biotechnology-1.webp",
+            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Metabolic-Engineering.webp",
       desc: "Biosynthesis of chemicals, materials, and environmentally friendly alternatives.",
       icon: Factory,
     },
     {
       title: "Agriculture",
-            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Agriculture.webp",
+            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Synthetic-Biology.webp",
       desc: "Engineering stress-tolerant crops, biosensors for soil health, and microbial inoculants.",
       icon: Sprout,
     },
     {
       title: "Environmental Technologies",
-            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Environmental-Technologies.webp",
+            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Molecular-Diagnostics-and-Therapeutics.webp",
       desc: "Bioremediation, pollutant degradation, and microbial fuel cells.",
       icon: Leaf,
     },
     {
       title: "Energy",
-            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Energy.webp",
+            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Bioprocess-Engineering.webp",
       desc: "Biofuel production, hydrogen generation, and metabolic design for renewable energy pathways.",
       icon: Zap,
     },
@@ -176,7 +176,11 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
                 return (
                   <div key={idx} className="flex items-start gap-3.5">
                     <div className="p-2 bg-[#0d3630]/10 text-[#0d3630] rounded-lg mt-0.5 shrink-0">
-                      <Icon className="w-5 h-5" />
+                      {(app as { iconSrc?: string }).iconSrc ? (
+                                            <Image src={(app as { iconSrc?: string }).iconSrc!} alt="" width={20} height={20} className="object-contain shrink-0" />
+                                        ) : (
+                                            <Icon className="w-5 h-5" />
+                                        )}
                     </div>
                     <div>
                       <h4 className="font-bold text-[#0d3630] text-xs md:text-sm">
@@ -193,7 +197,7 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
 
             <div className="lg:col-span-5 relative h-64 md:h-80 w-full rounded-xl overflow-hidden shadow-md">
               <Image
-                src="/images/subject-matter-experts/biomolecular-engineering/Biomolecular-Engineering.webp"
+                src="/images/subject-matter-experts/biomolecular-engineering/Applications-of-Biomolecular-Engineering.webp"
                 alt="Biomolecular Structure"
                 fill
                 className="object-cover"
@@ -219,14 +223,12 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
 
           <div className="border border-gray-200 rounded-lg p-6 bg-white shadow-sm grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
             <div className="md:col-span-5 relative h-56 w-full rounded-md overflow-hidden bg-rose-900 flex items-center justify-center p-4">
-              <div className="text-white text-center space-y-2">
-                <span className="text-[10px] uppercase tracking-wider bg-black/30 px-2 py-1 rounded">
-                  Journal Showcase
-                </span>
-                <p className="font-serif font-bold text-sm md:text-base leading-snug">
-                  Annual Review of Chemical and Biomolecular Engineering
-                </p>
-              </div>
+              <Image
+                src="/images/subject-matter-experts/biomolecular-engineering/sample-works-8-1.webp"
+                alt="Journal cover"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="md:col-span-7 space-y-3 text-xs md:text-sm">
               <p>

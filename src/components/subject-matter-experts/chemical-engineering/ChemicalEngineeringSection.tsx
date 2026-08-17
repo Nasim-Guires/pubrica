@@ -28,13 +28,21 @@ const applicationsData = [
     {
         icon: Pill,
         title: "Pharmaceuticals",
+<<<<<<< HEAD
         iconSrc: "/images/subject-matter-experts/biocatalysts/Pharmaceuticals-1.webp",
+=======
+            iconSrc: "/images/subject-matter-experts/chemical-engineering/Reaction-Engineering.webp",
+>>>>>>> origin/cursor/subject-matter-experts-images-4621
         description: "developing and manufacturing drug and biopharmaceutical products"
     },
     {
         icon: Zap,
         title: "Energy",
+<<<<<<< HEAD
         iconSrc: "/images/subject-matter-experts/chemical-engineering/Sustainable_Green-Engineering.webp",
+=======
+            iconSrc: "/images/subject-matter-experts/chemical-engineering/Separation-Processes.webp",
+>>>>>>> origin/cursor/subject-matter-experts-images-4621
         description: "developing fuel, alternative energy technologies, and storage"
     },
     {
@@ -193,7 +201,7 @@ export default function ChemicalEngineeringSection() {
                     <div className="lg:col-span-6 flex justify-center">
                         <div className="relative w-full h-[400px] sm:h-[480px] rounded-lg overflow-hidden shadow-md border border-gray-200">
                             <Image
-                                src="/images/subject-matter-experts/chemical-engineering/Chemical-Engineering.webp"
+                                src="/images/subject-matter-experts/chemical-engineering/Applications-of-Chemical-Engineering.webp"
                                 alt="Chemical Engineering Research Laboratory"
                                 fill
                                 className="object-cover"
@@ -222,7 +230,7 @@ export default function ChemicalEngineeringSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <Image
-                            src="/images/subject-matter-experts/chemical-engineering/Reaction-Engineering.webp"
+                            src="/images/subject-matter-experts/chemical-engineering/sample-works-14.webp"
                             alt="Chemical Engineering Journal Cover"
                             width={224}
                             height={300}

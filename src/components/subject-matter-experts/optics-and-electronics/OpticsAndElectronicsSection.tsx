@@ -230,7 +230,7 @@ export default function OpticsAndElectronicsSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/optics-and-electronics/Photonics-and-Optical-Systems.webp"
+                            src="/images/subject-matter-experts/optics-and-electronics/clinical-application.webp"
                             alt="Clinical optics and electronics setup"
                             className="w-full h-auto object-cover"
                         />
@@ -255,7 +255,7 @@ export default function OpticsAndElectronicsSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/optics-and-electronics/Optoelectronics.webp"
+                            src="/images/subject-matter-experts/optics-and-electronics/sample-works-11-10.webp"
                             alt="BMC Medical Imaging Cover"
                             className="w-full h-auto object-cover"
                         />

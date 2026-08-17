@@ -175,7 +175,7 @@ export default function PeptidesSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/peptides/Synthetic-Peptide-Development-and-Engineered-Peptides.webp"
+                            src="/images/subject-matter-experts/peptides/Applications-of-Peptides.webp"
                             alt="Peptide research bottle products"
                             className="w-full h-auto object-cover"
                         />
@@ -200,7 +200,7 @@ export default function PeptidesSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/peptides/Characterization-and-Analysis-of-Peptides.webp"
+                            src="/images/subject-matter-experts/peptides/sample-works-13-5.webp"
                             alt="Journal of Food Composition and Analysis Cover"
                             className="w-full h-auto object-cover"
                         />

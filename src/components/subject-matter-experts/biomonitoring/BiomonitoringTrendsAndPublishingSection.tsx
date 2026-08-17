@@ -57,13 +57,13 @@ export default function BiomonitoringTrendsAndPublishingSection() {
     const applications = [
         {
             title: "Public Health Surveillance",
-            iconSrc: "/images/subject-matter-experts/biomonitoring/Human-Feed-Biomonitoring.webp",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Environmental-Biomonitoring.webp",
             desc: "Used to detect population-level exposure trends, such as blood lead levels or pesticide residues, supporting preventive health policies.",
             icon: Users,
         },
         {
             title: "Environmental Impact Assessment",
-            iconSrc: "/images/subject-matter-experts/biomonitoring/Environmental-Impact-Assessment.webp",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Human-Feed-Biomonitoring.webp",
             desc: "Biomonitoring helps evaluate pollution sources, ecological damage, and recovery following remediation programs.",
             icon: Leaf,
         },
@@ -75,13 +75,13 @@ export default function BiomonitoringTrendsAndPublishingSection() {
         },
         {
             title: "Drug and Chemical Safety Evaluation",
-            iconSrc: "/images/subject-matter-experts/biomonitoring/Drug-and-Chemical-Safety-Evaluation.webp",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Ecological-Biomonitoring.webp",
             desc: "Used in preclinical and post-market studies to assess the bioavailability and potential toxicity of chemicals and pharmaceuticals.",
             icon: FlaskConical,
         },
         {
             title: "Risk Communication and Policy Development",
-            iconSrc: "/images/subject-matter-experts/biomonitoring/Risk-Communication-and-Policy-Development.webp",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Pharmacokinetic-and-Toxicological-Research.webp",
             desc: "Provides evidence for policymakers to establish or revise environmental and occupational standards.",
             icon: FileCheck,
         },
@@ -190,7 +190,11 @@ export default function BiomonitoringTrendsAndPublishingSection() {
                             return (
                                 <div key={idx} className="flex items-start gap-3.5">
                                     <div className="p-2 bg-[#0d3630]/10 rounded-lg text-[#0d3630] shrink-0 mt-0.5">
-                                        <Icon className="w-4 h-4" />
+                                        {(app as { iconSrc?: string }).iconSrc ? (
+                                            <Image src={(app as { iconSrc?: string }).iconSrc!} alt="" width={16} height={16} className="object-contain shrink-0" />
+                                        ) : (
+                                            <Icon className="w-4 h-4" />
+                                        )}
                                     </div>
                                     <div className="space-y-0.5">
                                         <h3 className="text-xs md:text-sm font-bold text-[#0d3630]">
@@ -209,7 +213,7 @@ export default function BiomonitoringTrendsAndPublishingSection() {
                     <div className="lg:col-span-5 flex justify-center sticky top-6">
                         <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-md border border-gray-200">
                             <Image
-                                src="/images/subject-matter-experts/biomonitoring/Environmental-Biomonitoring.webp"
+                                src="/images/subject-matter-experts/biomonitoring/Applications-of-Biomonitoring.webp"
                                 alt="Laboratory Microscope Analysis"
                                 fill
                                 className="object-cover"
@@ -233,7 +237,7 @@ export default function BiomonitoringTrendsAndPublishingSection() {
                 <div className="bg-white border border-gray-200 rounded-md p-6 shadow-sm flex flex-col md:flex-row gap-6 items-center">
                     <div className="relative w-40 h-52 shrink-0 border border-gray-200 shadow-sm rounded overflow-hidden bg-gray-50">
                         <Image
-                            src="/images/subject-matter-experts/biomonitoring/Human-Feed-Biomonitoring.webp"
+                            src="/images/subject-matter-experts/biomonitoring/sample-works-7-3.webp"
                             alt="Atmosphere Journal Cover"
                             fill
                             className="object-cover"

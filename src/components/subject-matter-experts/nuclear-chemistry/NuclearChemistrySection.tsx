@@ -120,7 +120,7 @@ export default function NuclearChemistrySection() {
 
                     <div className="lg:col-span-5 rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/nuclear-chemistry/Nuclear-Chemistry.webp"
+                            src="/images/subject-matter-experts/nuclear-chemistry/Emerging-Trends-in-Nuclear-Chemistry-Research.webp"
                             alt="Nuclear chemistry research setup"
                             className="w-full h-auto object-cover"
                         />
@@ -149,7 +149,7 @@ export default function NuclearChemistrySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/nuclear-chemistry/Radiochemistry-1.webp"
+                            src="/images/subject-matter-experts/nuclear-chemistry/sample-works-11-7.webp"
                             alt="Radiation Physics and Chemistry Journal Cover"
                             className="w-full h-auto object-cover"
                         />

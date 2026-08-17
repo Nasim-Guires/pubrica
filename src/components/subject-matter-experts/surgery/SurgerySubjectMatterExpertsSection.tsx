@@ -34,25 +34,25 @@ const advancesInSurgeryData = [
 const surgicalProcessData = [
     {
         title: 'Preoperative Assessment',
-            iconSrc: "/images/subject-matter-experts/surgery/Preoperative-Assessment.webp",
+            iconSrc: "/images/subject-matter-experts/surgery/General-Surgery.webp",
         description: 'Before surgery, patients undergo thorough evaluations, including medical history review, physical examination, imaging, and laboratory tests. This ensures appropriate risk assessment and surgical planning.',
         icon: ClipboardList
     },
     {
         title: 'Anaesthesia and Preparation',
-            iconSrc: "/images/subject-matter-experts/surgery/Anaesthesia-and-Preparation.webp",
+            iconSrc: "/images/subject-matter-experts/surgery/Cardiothoracic-Surgery.webp",
         description: 'Administered by specialized anaesthesiologists, anaesthesia ensures patient comfort and safety during the procedure. Preoperative preparation also includes sterilization protocols, patient positioning, and equipment readiness.',
         icon: Syringe
     },
     {
         title: 'Surgical Procedure',
-            iconSrc: "/images/subject-matter-experts/surgery/Surgical-Procedure.webp",
+            iconSrc: "/images/subject-matter-experts/surgery/Neurosurgery.webp",
         description: 'Surgeons operate using a variety of techniques, ranging from traditional open surgery to advanced minimally invasive surgery research techniques such as laparoscopy or robotic-assisted surgery.',
         icon: Stethoscope
     },
     {
         title: 'Postoperative Care',
-            iconSrc: "/images/subject-matter-experts/surgery/Postoperative-Care.webp",
+            iconSrc: "/images/subject-matter-experts/surgery/Orthopaedic-Surgery.webp",
         description: 'Recovery begins immediately after surgery with careful monitoring of vital signs, pain management, and prevention of complications. Rehabilitation may include physical therapy, wound care, and lifestyle modifications.',
         icon: HeartPulse
     }
@@ -112,7 +112,11 @@ export default function SurgerySubjectMatterExpertsSection() {
                                 className="relative flex flex-col items-center text-center px-4 py-2 border-b lg:border-b-0 lg:border-r border-gray-200 last:border-r-0 last:border-b-0"
                             >
                                 <div className="mb-4 text-[#0e3b32] p-3 rounded-full bg-gray-50 border border-gray-100">
-                                    <IconComponent className="w-10 h-10 stroke-[1.5]" />
+                                    {(item as { iconSrc?: string }).iconSrc ? (
+                                            <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain shrink-0" />
+                                        ) : (
+                                            <IconComponent className="w-10 h-10 stroke-[1.5]" />
+                                        )}
                                 </div>
                                 <h3 className="text-lg font-bold text-[#0e3b32] mb-2">
                                     {item.title}
@@ -191,7 +195,7 @@ export default function SurgerySubjectMatterExpertsSection() {
                     {/* Journal Cover */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <img
-                            src="/images/subject-matter-experts/surgery/Advancing-Surgical-Science.webp"
+                            src="/images/subject-matter-experts/surgery/sample-works-1.webp"
                             alt="Annals of Surgery Journal Cover"
                             className="w-full h-auto object-cover"
                         />

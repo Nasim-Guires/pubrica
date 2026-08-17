@@ -198,7 +198,7 @@ export default function PublicHealthExpertsSection() {
                             {/* Top Left Image */}
                             <div className="absolute top-0 left-0 w-[62%] h-[180px] rounded-2xl overflow-hidden shadow-md border-2 border-white">
                                 <img
-                                    src="/images/subject-matter-experts/public-health/Biostatistics.webp"
+                                    src="/images/subject-matter-experts/public-health/Emerging-Trends-in-Public-health-Research.webp"
                                     alt="Medical research digital interface"
                                     className="w-full h-full object-cover"
                                 />
@@ -206,7 +206,7 @@ export default function PublicHealthExpertsSection() {
                             {/* Bottom Right Image */}
                             <div className="absolute bottom-0 right-0 w-[62%] h-[180px] rounded-2xl overflow-hidden shadow-lg border-2 border-white">
                                 <img
-                                    src="/images/subject-matter-experts/public-health/Environmental-Health.webp"
+                                    src="/images/subject-matter-experts/public-health/Applications-of-Public-health.webp"
                                     alt="Environmental public health globe"
                                     className="w-full h-full object-cover"
                                 />
@@ -294,7 +294,7 @@ export default function PublicHealthExpertsSection() {
                     {/* Right Hand Image */}
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/public-health/Global-Health.webp"
+                            src="/images/subject-matter-experts/public-health/Applications-of-Public-health.webp"
                             alt="Public health digital analytics tablet"
                             className="w-full h-auto object-cover"
                         />
@@ -377,7 +377,7 @@ export default function PublicHealthExpertsSection() {
                     {/* The Lancet Journal Cover */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <img
-                            src="/images/subject-matter-experts/public-health/Health-Policy-and-Management.webp"
+                            src="/images/subject-matter-experts/public-health/sample-works-13-4.webp"
                             alt="The Lancet Public Health Cover"
                             className="w-full h-auto object-cover"
                         />

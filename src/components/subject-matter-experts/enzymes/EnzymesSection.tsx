@@ -186,7 +186,7 @@ export default function EnzymesSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/enzymes/Enzymes.webp"
+                            src="/images/subject-matter-experts/enzymes/Emerging-Trends-in-Enzymes-Research.webp"
                             alt="Enzyme research molecular setup"
                             className="w-full h-auto object-cover"
                         />
@@ -233,7 +233,7 @@ export default function EnzymesSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/enzymes/Enzyme-Discovery-and-Characterization.webp"
+                            src="/images/subject-matter-experts/agriculture/sample-works.webp"
                             alt="Nature Journal Cover"
                             className="w-full h-auto object-cover"
                         />

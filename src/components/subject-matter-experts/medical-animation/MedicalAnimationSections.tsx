@@ -162,7 +162,7 @@ export default function MedicalAnimationSections() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <img
-                            src="/images/subject-matter-experts/medical-animation/Empowering-Research-Excellence-in-Medical-Animation-through-Expert-Guidance.webp"
+                            src="/images/subject-matter-experts/medical-animation/sample-works-12-1.webp"
                             alt="Medical Science Educator Journal Cover"
                             className="w-full h-auto object-cover"
                         />

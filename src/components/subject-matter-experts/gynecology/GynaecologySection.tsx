@@ -185,7 +185,7 @@ export default function GynecologySection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/gynecology/Comprehensive-Research-Writing-and-Publication-Support-in-Gynaecology.webp"
+                            src="/images/subject-matter-experts/gynecology/PhD-Qualified-Subject-Experts.webp"
                             alt="Gynaecology research setup"
                             className="w-full h-auto object-cover"
                         />
@@ -222,7 +222,7 @@ export default function GynecologySection() {
 
                         <div className="rounded-lg overflow-hidden shadow-xl border border-white/10">
                             <img
-                                src="/images/subject-matter-experts/gynecology/Reproductive-Endocrinology-and-Infertility.webp"
+                                src="/images/subject-matter-experts/gynecology/Comprehensive-Research-Writing-and-Publication-Support-in-Gynaecology.webp"
                                 alt="Gynaecology medical setup"
                                 className="w-full h-auto object-cover"
                             />
@@ -248,7 +248,7 @@ export default function GynecologySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/gynecology/Gynaecologic-Oncology.webp"
+                            src="/images/subject-matter-experts/gynecology/sample-works-8.webp"
                             alt="Journal of Obstetrics and Gynaecology Cover"
                             className="w-full h-auto object-cover"
                         />

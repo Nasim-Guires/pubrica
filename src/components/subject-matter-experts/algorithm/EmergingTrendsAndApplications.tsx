@@ -74,49 +74,49 @@ export default function EmergingTrendsAndApplications() {
   const applications = [
     {
       title: "Software Development",
-            iconSrc: "/images/subject-matter-experts/algorithm/Software-Development.webp",
+            iconSrc: "/images/subject-matter-experts/algorithm/Algorithm-Design-Analysis.webp",
       desc: "efficient coding and optimising the system and/or application.",
       icon: Code2,
     },
     {
       title: "Artificial Intelligence",
-            iconSrc: "/images/subject-matter-experts/algorithm/Artificial-Intelligence.webp",
+            iconSrc: "/images/subject-matter-experts/algorithm/Data-Structure-Optimisation.webp",
       desc: "developing machine learning and creating \"smart\" computers.",
       icon: Bot,
     },
     {
       title: "Data Science",
-            iconSrc: "/images/subject-matter-experts/algorithm/Data-Science.webp",
+            iconSrc: "/images/subject-matter-experts/algorithm/Computational-Complexity.webp",
       desc: "analysis, statistical modelling, and visualisation of data.",
       icon: LineChart,
     },
     {
       title: "Cybersecurity",
-            iconSrc: "/images/subject-matter-experts/algorithm/Cybersecurity-1.webp",
+            iconSrc: "/images/subject-matter-experts/algorithm/Machine-Learning-Algorithms.webp",
       desc: "using cryptography and authenticating users to detect security threats.",
       icon: ShieldCheck,
     },
     {
       title: "Financial Markets",
-            iconSrc: "/images/subject-matter-experts/algorithm/Financial-Markets.webp",
+            iconSrc: "/images/subject-matter-experts/algorithm/Network-Graph-Algorithms.webp",
       desc: "creating algorithms for trading and risk analysis.",
       icon: BarChart2,
     },
     {
       title: "Healthcare",
-            iconSrc: "/images/subject-matter-experts/algorithm/Healthcare.webp",
+            iconSrc: "/images/subject-matter-experts/algorithm/Parallel-Distributed-Algorithms.webp",
       desc: "analysing medical data and diagnosing patients.",
       icon: Stethoscope,
     },
     {
       title: "Transportation",
-            iconSrc: "/images/subject-matter-experts/algorithm/Transportation.webp",
+            iconSrc: "/images/subject-matter-experts/algorithm/Heuristic-and-Metaheuristic-Algorithms.webp",
       desc: "determining the best route and managing traffic.",
       icon: Navigation,
     },
     {
       title: "E-commerce",
-            iconSrc: "/images/subject-matter-experts/algorithm/E-commerce.webp",
+            iconSrc: "/images/subject-matter-experts/algorithm/Numerical-Algorithm.webp",
       desc: "creating recommendation systems and optimising searches.",
       icon: ShoppingCart,
     },
@@ -220,11 +220,13 @@ export default function EmergingTrendsAndApplications() {
                 <div key={idx} className="flex items-start gap-2.5">
                   <div className="p-1 bg-gray-100 text-gray-700 shrink-0 rounded">
                     {"iconSrc" in app && app.iconSrc ? (
-                      <span className="relative w-4 h-4 block">
-                        <Image src={app.iconSrc} alt="" fill className="object-contain" />
-                      </span>
+                      <Image src={app.iconSrc} alt="" width={24} height={24} className="object-contain w-4 h-4 shrink-0" />
                     ) : (
-                      <AppIcon className="w-4 h-4" />
+                      {(app as { iconSrc?: string }).iconSrc ? (
+                                            <Image src={(app as { iconSrc?: string }).iconSrc!} alt="" width={16} height={16} className="object-contain shrink-0" />
+                                        ) : (
+                                            <AppIcon className="w-4 h-4" />
+                                        )}
                     )}
                   </div>
                   <p className="text-xs text-gray-700 leading-snug">
@@ -238,7 +240,7 @@ export default function EmergingTrendsAndApplications() {
           {/* Workspace Image */}
           <div className="md:col-span-5 relative h-72 md:h-80 w-full rounded overflow-hidden border border-gray-200 shadow-sm">
             <Image
-              src="/images/subject-matter-experts/algorithm/Algorithm-1.webp"
+              src="/images/subject-matter-experts/algorithm/Applications-of-Algorithm.webp"
               alt="Developer workstation with code on dual monitors"
               fill
               className="object-cover"
@@ -262,7 +264,7 @@ export default function EmergingTrendsAndApplications() {
         <div className="max-w-3xl mx-auto bg-white border border-gray-200 rounded p-5 shadow-sm text-left grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
           <div className="sm:col-span-4 relative h-56 w-full rounded overflow-hidden shadow">
             <Image
-              src="/images/subject-matter-experts/algorithm/Algorithm-Design-Analysis.webp"
+              src="/images/subject-matter-experts/algorithm/sample-works-13-1.webp"
               alt="Algorithms and Computation Journal Cover"
               fill
               className="object-cover"

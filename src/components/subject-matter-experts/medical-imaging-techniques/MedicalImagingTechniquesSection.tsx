@@ -242,7 +242,7 @@ export default function MedicalImagingTechniquesSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/medical-imaging-techniques/Radiology-and-Diagnostic-Imaging.webp"
+                            src="/images/subject-matter-experts/medical-imaging-techniques/Cardiology.webp"
                             alt="Medical imaging research setup"
                             className="w-full h-auto object-cover"
                         />
@@ -267,7 +267,7 @@ export default function MedicalImagingTechniquesSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/medical-imaging-techniques/Magnetic-Resonance-Imaging-MRI.webp"
+                            src="/images/subject-matter-experts/medical-imaging-techniques/BMC-Medical-Imaging.webp"
                             alt="BMC Medical Imaging Journal Cover"
                             className="w-full h-auto object-cover"
                         />

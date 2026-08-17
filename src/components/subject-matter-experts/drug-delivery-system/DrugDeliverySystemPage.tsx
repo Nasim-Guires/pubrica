@@ -1,4 +1,5 @@
 "use client";
+import SmeCoreAreasGrid from "@/components/subject-matter-experts/SmeCoreAreasGrid";
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -63,7 +64,7 @@ export default function DrugDeliverySystemPage() {
         },
         {
             title: "Pharmacology",
-            iconSrc: "/images/subject-matter-experts/drug-delivery-system/Pharmaceutical-Science.webp",
+            iconSrc: "/images/subject-matter-experts/drug-delivery-system/Pharmacology.webp",
             description: "Pharmacology is the study of how drugs interact with the body and affect biological systems. It focuses on understanding drug actions, their therapeutic effects, side effects, and mechanisms of action to optimize their use in treating diseases.",
             icon: Cpu
         },
@@ -255,7 +256,7 @@ export default function DrugDeliverySystemPage() {
                         <div className="lg:col-span-5 flex justify-center">
                             <div className="relative w-full h-[350px] sm:h-[420px] rounded-lg overflow-hidden shadow-md">
                                 <Image
-                                    src="/images/subject-matter-experts/drug-delivery-system/Pharmaceutical-Science.webp"
+                                    src="/images/subject-matter-experts/drug-delivery-system/Applications-of-Drug-Delivery-System.webp"
                                     alt="Expertise in Drug Delivery System"
                                     fill
                                     className="object-cover"
@@ -313,40 +314,7 @@ export default function DrugDeliverySystemPage() {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {disciplines.map((item, index) => {
-                            const IconComponent = item.icon;
-                            return (
-                                <article
-                                    key={index}
-                                    className="bg-white border border-gray-200/80 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col justify-between group"
-                                >
-                                    <div>
-                                        <div className="flex items-start justify-between mb-4">
-                                            <h3 className="text-base font-bold text-[#9E1B1E] group-hover:text-[#7d1417] transition-colors pr-2">
-                                                {item.title}
-                                            </h3>
-                                            <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
-                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <span className="relative w-6 h-6 shrink-0">
-                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
-                                                </span>
-                                            ) : (
-                                                <IconComponent className="w-6 h-6" />
-                                            )}
-                                            </div>
-                                        </div>
-                                        <p className="text-gray-600 text-xs leading-relaxed mb-6">
-                                            {item.description}
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <ChevronDown className="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors" />
-                                    </div>
-                                </article>
-                            );
-                        })}
-                    </div>
+                    <SmeCoreAreasGrid items={disciplines} />
 
                 </div>
             </section>

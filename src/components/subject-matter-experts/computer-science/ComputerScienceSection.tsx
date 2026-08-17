@@ -173,7 +173,7 @@ export default function ComputerScienceSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/computer-science/Algorithms-and-Data-Structures.webp"
+                            src="/images/subject-matter-experts/computer-science/Applications-of-Computer-Science.webp"
                             alt="Applications of Computer Science"
                             className="w-full h-auto object-cover"
                         />
@@ -187,7 +187,7 @@ export default function ComputerScienceSection() {
                     <div className="lg:w-1/3 space-y-4">
                         <div className="relative">
                             <img
-                                src="/images/subject-matter-experts/computer-science/Artificial-Intelligence-and-Machine-Learning.webp"
+                                src="/images/subject-matter-experts/computer-science/Applications-of-Computer-Science.webp"
                                 alt="Areas of Study Monitor"
                                 className="w-full rounded-lg shadow-lg"
                             />
@@ -237,7 +237,7 @@ export default function ComputerScienceSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/computer-science/Software-Engineering.webp"
+                            src="/images/subject-matter-experts/computer-science/Institute-of-Electrical-and-Electronics-Engineers.webp"
                             alt="IEEE Journal of Electrical and Electronics Engineering Cover"
                             className="w-full h-auto object-cover"
                         />
