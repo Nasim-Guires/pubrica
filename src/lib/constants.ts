@@ -708,7 +708,7 @@ export const NAV_LINKS = [
             label: "CME",
           },
           {
-            href: "/services/data-analytics-machine-learning/thought-leadership-content-editorial-design",
+            href: "/services/thought-leadership-content-editorial-design",
             label: "Leadership Content",
           },
           {
