@@ -61,31 +61,37 @@ export default function TissueEngineeringPage() {
     const disciplines = [
         {
             title: "Cell Biology",
+            iconSrc: "/images/subject-matter-experts/tissue-engineering/Cell-Biology.webp",
             description: "Cell behaviour, proliferation and differentiation are keys to building effective engineered tissues, including the use of stem cells, primary cells, and cell-lines to stimulate the regeneration of tissues.",
             icon: Dna,
         },
         {
             title: "Materials Science",
+            iconSrc: "/images/subject-matter-experts/tissue-engineering/Materials-Science.webp",
             description: "Biomaterials and scaffolds mimicking the structures of the natural extracellular matrix are essential to support cell proliferation and tissue creation; materials science is responsible for creating those scaffolds that are compatible with the body, biodegradable, and have the potential to support tissue function for the long-term.",
             icon: FlaskConical,
         },
         {
             title: "Bioengineering",
+            iconSrc: "/images/subject-matter-experts/tissue-engineering/Bioengineering.webp",
             description: "Integrates the principles of engineering with the creation of functional tissue constructs. Examples of bioengineering advances include the design and optimization of bioreactors; mechanical stimulation systems and the methods used in the integration of engineered tissue.",
             icon: Cpu,
         },
         {
             title: "Genetic Engineering",
+            iconSrc: "/images/subject-matter-experts/cell-biology/Genetic-Engineering.webp",
             description: "Genetic engineering utilizes manipulation techniques to enhance cell function, encourage cellular behaviour, and expedite cellular growth. The includes the utilization of gene editing and genetic therapies to enhance tissue engineering results.",
             icon: Microscope,
         },
         {
             title: "Vascular Biology",
+            iconSrc: "/images/subject-matter-experts/tissue-engineering/Vascular-Biology.webp",
             description: "While the development of engineered tissues may be successful, the vascularization (blood supply) of the tissues being engineered is essential to providing nutrients and oxygen. Research in Vascular Biology addresses problems related to vascularizing engineered tissues.",
             icon: Heart,
         },
         {
             title: "Regenerative Medicine",
+            iconSrc: "/images/subject-matter-experts/cell-biology/Regenerative-Medicine.webp",
             description: "Regenerative Medicine is a medical field that focuses on repairing or replacing damaged tissues and organs through Tissue Engineering. Tissue Engineering emphasizes the clinical application of engineered tissues for therapeutic purposes.",
             icon: Activity,
         }
@@ -95,63 +101,63 @@ export default function TissueEngineeringPage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Formatting.webp",
             icon: BookOpen,
             href: "/services/research-services"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Editing-Proofreading.webp",
             icon: PenTool,
             href: "/services/editing-and-translation"
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Languages,
             href: "/services/editing-and-translation"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
             icon: Layers,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
             icon: Send,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Selection.webp",
             icon: FileSpreadsheet,
             href: "/services/publication-support/journal-selection"
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biotechnology/Data-Collection-for-AI-ML.webp",
             icon: Database,
             href: "/services/medical-data-collection"
         },
         {
             title: "Original Research Article",
             description: "End-to-end writing, statistical analysis, and formatting tailored to journal-specific guidelines.",
-            image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/nuclear-chemistry/Pain-points-in-Writing-Original-Research-Articles.webp",
             icon: FileText,
             href: "/services/physician-writing-services/original-research-article"
         },
         {
             title: "Peer-Reviewing Services",
             description: "Comprehensive review to refine and validate your research pre-submission.",
-            image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: Search,
             href: "/services/publication-support/peer-review-pre-submission"
         }
@@ -204,7 +210,7 @@ export default function TissueEngineeringPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white bg-[#a3c9bd]/30 flex items-center justify-center">
                             <Image
-                                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/cell-biology/Tissue-Engineering.webp"
                                 alt="Tissue Engineering Research"
                                 fill
                                 priority
@@ -245,7 +251,13 @@ export default function TissueEngineeringPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-4">

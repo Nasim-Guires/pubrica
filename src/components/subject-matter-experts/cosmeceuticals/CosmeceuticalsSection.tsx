@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText } from 'lucide-react';
 
@@ -42,7 +43,7 @@ const editorsData = [
         experience: '14 years of experience',
         manuscripts: '110+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/cosmeceuticals/Dr.-Sophia-Martinez-1.webp"
     },
     {
         name: 'Dr. Ananya Verma',
@@ -50,7 +51,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '100+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/material-science/Dr.-Ayesha-Kapoor-2.webp"
     },
     {
         name: 'Dr. Michael Thompson',
@@ -58,7 +59,7 @@ const editorsData = [
         experience: '16 years of experience',
         manuscripts: '130+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/augmented-reality/Dr.-Robert-Klein-1.webp"
     }
 ];
 
@@ -128,7 +129,7 @@ export default function CosmeceuticalsSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/cosmeceuticals/Cosmeceutical-Formulation-Science.webp"
                             alt="International Journal of Cosmetic Science Cover"
                             className="w-full h-auto object-cover"
                         />

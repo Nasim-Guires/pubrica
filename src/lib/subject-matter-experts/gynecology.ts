@@ -9,7 +9,9 @@ export const GYNAECOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Consultant Gynaecologist",
     authorLocation: "United Kingdom",
     avatarLabel: "Portrait of Dr. Emily Watson",
+      avatarSrc: "/images/subject-matter-experts/gynecology/Dr.-Emily-Watson.webp",
     flagLabel: "United Kingdom flag",
+      flagSrc: "/images/research-services/systematic-review/united-kingdom-.png",
   },
   {
     id: "gynaecology-2",
@@ -19,7 +21,9 @@ export const GYNAECOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Professor of Obstetrics and Gynaecology",
     authorLocation: "India",
     avatarLabel: "Portrait of Dr. Ritu Sharma",
+      avatarSrc: "/images/subject-matter-experts/gynecology/Dr.-Sofia-Almeida.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "gynaecology-3",
@@ -29,6 +33,8 @@ export const GYNAECOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Reproductive Health Researcher",
     authorLocation: "Spain",
     avatarLabel: "Portrait of Dr. Laura Martínez",
+      avatarSrc: "/images/subject-matter-experts/biomolecular-engineering/Dr.-Maya-Chen.webp",
     flagLabel: "Spain flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
   },
 ];  

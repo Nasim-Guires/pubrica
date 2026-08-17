@@ -20,41 +20,49 @@ export default function ELearningPage() {
     const disciplines = [
         {
             title: "Curriculum Development & Instructional Design",
+            iconSrc: "/images/subject-matter-experts/e-learning/Curriculum-Development-Instructional-Design.webp",
             description: "Providing a structured and outcome-based framework for the development of educational programmes that are developed to support learners and their professional aspirations.",
             icon: Search
         },
         {
             title: "Digital Content Development",
+            iconSrc: "/images/subject-matter-experts/e-learning/Digital-Content-Development.webp",
             description: "Providing interactive multimedia digital content such as video, simulation, assessment tools, micro-learning modules.",
             icon: TrendingUp
         },
         {
             title: "LMS (Learning Management System)",
+            iconSrc: "/images/subject-matter-experts/e-learning/LMS-Learning-Management-System.webp",
             description: "Developing and managing a Learning Management System to facilitate the seamless delivery of courses, tracking of learner progress, and engagement with learners.",
             icon: FileText
         },
         {
             title: "Corporate & Professional Development Training",
+            iconSrc: "/images/subject-matter-experts/e-learning/Corporate-Professional-Development-Training.webp",
             description: "Providing customised eLearning solutions for organisations to develop their workforce, provide workforce compliance training and/or leadership development training.",
             icon: Database
         },
         {
             title: "Academic E-Learning Support",
+            iconSrc: "/images/subject-matter-experts/e-learning/Academic-E-Learning-Support.webp",
             description: "Providing support to academic institutions by producing online courses, virtual classroom experiences, and providing training and education through blended delivery of courses and /or virtual classrooms.",
             icon: AlertTriangle
         },
         {
             title: "Assessment & Evaluation Tools",
+            iconSrc: "/images/subject-matter-experts/e-learning/Assessment-Evaluation-Tools.webp",
             description: "Creating quizzes, certifications, and educational analytics to Assess and evaluate a learner's progression and success.",
             icon: BarChart3
         },
         {
             title: "Mobile & Adaptable Learning",
+            iconSrc: "/images/subject-matter-experts/e-learning/Mobile-Adaptable-Learning.webp",
             description: "Create responsive and flexible learning experiences based on Individual Learning Styles.",
             icon: FileSearch
         },
         {
             title: "Educational Technology Integration",
+            iconSrc: "/images/subject-matter-experts/e-learning/Educational-Technology-Integration.webp",
             description: "Implementing AI, analytics, and adaptive learning technologies to enhance learner engagement and performance.",
             icon: Layers
         }
@@ -64,56 +72,56 @@ export default function ELearningPage() {
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: Search,
             href: "/services/research-services/literature-review-and-gap/"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/editing-and-translation"
         },
         {
             title: "Peer-Review",
             description: "Comprehensive review to refine and validate your research pre-submission.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
             icon: Cpu,
             href: "/services/publication-support/peer-review-pre-submission"
         },
         {
             title: "Responding to Reviewer",
             description: "Assistance in addressing reviewer comments to enhance your manuscript's chances of acceptance.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Responding-to-Reviewers.webp",
             icon: FileText,
             href: "/services/publication-support/responding-to-reviewers"
         },
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biomolecular-engineering/Research-Services.webp",
             icon: FileSearch,
             href: "/services/research-services"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: FileText,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: PenTool,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: Search,
             href: "/services/publication-support/journal-selection"
         }
@@ -203,7 +211,7 @@ export default function ELearningPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/e-learning/E-Learning.webp"
                                 alt="E-learning computer setup visual"
                                 fill
                                 priority
@@ -243,7 +251,13 @@ export default function ELearningPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

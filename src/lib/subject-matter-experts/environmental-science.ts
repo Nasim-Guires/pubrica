@@ -9,7 +9,9 @@ export const ENVIRONMENTAL_SCIENCE_TESTIMONIALS: Testimonial[] = [
         authorRole: "Environmental Researcher",
         authorLocation: "India",
         avatarLabel: "Profile photo of Dr. Emily Richards",
+      avatarSrc: "/images/subject-matter-experts/biomolecular-engineering/Dr.-Evelyn-Carter.webp",
         flagLabel: "India flag icon",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
         id: "environmental-science-2",
@@ -19,7 +21,9 @@ export const ENVIRONMENTAL_SCIENCE_TESTIMONIALS: Testimonial[] = [
         authorRole: "Agricultural Scientist",
         authorLocation: "USA",
         avatarLabel: "Profile photo of Dr. Jonathan Moore",
+      avatarSrc: "/images/subject-matter-experts/environmental-science/Dr.-Emily-Richards.webp",
         flagLabel: "USA flag icon",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
     {
         id: "environmental-science-3",
@@ -29,6 +33,8 @@ export const ENVIRONMENTAL_SCIENCE_TESTIMONIALS: Testimonial[] = [
         authorRole: "Sustainable Agriculture Specialist",
         authorLocation: "Australia",
         avatarLabel: "Profile photo of Dr. Michael Taylor",
+      avatarSrc: "/images/subject-matter-experts/environmental-science/Dr.-Michael-Taylor.webp",
         flagLabel: "Australia flag icon",
+      flagSrc: "/images/marketing-communication-content-development-service/Australia.webp",
     },
 ];

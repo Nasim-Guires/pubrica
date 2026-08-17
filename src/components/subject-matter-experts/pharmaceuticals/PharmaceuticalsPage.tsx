@@ -43,31 +43,37 @@ export default function PharmaceuticalsPage() {
     const disciplines = [
         {
             title: "Pharmaceutical Chemistry",
+            iconSrc: "/images/subject-matter-experts/pharmaceuticals/Pharmaceutical-chemistry.webp",
             description: "It focuses on the design, synthesis, and development of biologically active compounds. It plays a crucial role in identifying potential drug candidates and optimizing their pharmacological properties. Our experts assist in manuscript development, data presentation, and publication support for studies involving medicinal chemistry, structure-activity relationships (SAR), and analytical characterization of novel compounds.",
             icon: FlaskConical,
         },
         {
             title: "Pharmacology and Toxicology",
+            iconSrc: "/images/subject-matter-experts/pharmaceuticals/Pharmacology-and-Toxicology.webp",
             description: "Understanding drug action and safety is vital for advancing therapeutic innovation. We provide comprehensive support for studies in molecular, cellular, and systems pharmacology, as well as toxicology research assessing drug safety and adverse effects. Our pharmaceutical editing services and scientific writing services help researchers communicate complex mechanisms of action, receptor binding, and dose-response relationships with clarity and precision.",
             icon: Microscope,
         },
         {
             title: "Pharmaceutics and Drug Delivery",
+            iconSrc: "/images/subject-matter-experts/pharmaceuticals/Pharmaceutics-and-Drug-Delivery.webp",
             description: "Innovations in drug delivery systems are transforming the way therapies are administered and absorbed. Our pharmacists specialize in formulation science, nanotechnology-based delivery, controlled-release systems, and bioavailability enhancement. We assist authors in articulating formulation methodologies, stability studies, and in-vitro/in-vivo correlation findings to meet the standards of high-impact pharmaceutical journals.",
             icon: Pill,
         },
         {
             title: "Pharmacokinetics and Pharmacodynamics (PK/PD)",
+            iconSrc: "/images/subject-matter-experts/pharmaceuticals/Pharmacokinetics-and-Pharmacodynamics-PK_PD.webp",
             description: "The quantitative analysis of drug absorption, distribution, metabolism, and excretion is central to rational drug design. Our support extends to PK/PD modeling, bioequivalence studies, and population pharmacokinetic analyses. We ensure that manuscripts accurately present statistical models, validation data, and interpretation aligned with regulatory expectations and scientific rigor.",
             icon: Activity,
         },
         {
             title: "Pharmaceutical Biotechnology",
+            iconSrc: "/images/subject-matter-experts/pharmaceuticals/Pharmaceutical-Biotechnology.webp",
             description: "This discipline merges molecular biology, genetic engineering, and bioprocess technology to develop biologics and biosimilars. We support authors in articulating findings on monoclonal antibodies, recombinant proteins, vaccine design, and gene therapy. Our editors emphasize scientific accuracy, ethical compliance, and regulatory alignment.",
             icon: Dna,
         },
         {
             title: "Regulatory Affairs and Quality Assurance",
+            iconSrc: "/images/subject-matter-experts/pharmaceuticals/Regulatory-Affairs-and-Quality-Assurance.webp",
             description: "Compliance with international regulatory standards is essential for successful drug approval. Our experts assist in preparing regulatory documentation, quality control studies, and validation reports according to FDA, EMA, and ICH guidelines. We also provide support in writing systematic reviews and white papers on regulatory strategies and policy trends.",
             icon: ShieldCheck,
         }
@@ -77,56 +83,56 @@ export default function PharmaceuticalsPage() {
         {
             title: "Peer-Reviewing Services",
             description: "Comprehensive review to refine and validate your research pre-submission.",
-            image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: UserCheck,
             href: "services/publication-support/peer-review-pre-submission"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/medical-data-collection"
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Database,
             href: "/services/medical-data-collection"
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Languages,
             href: "/services/editing-and-translation/"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: Layers,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Send,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Original Research Article",
             description: "End-to-end writing, statistical analysis, and formatting tailored to journal-specific guidelines.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: FileText,
             href: "/services/physician-writing-services/original-research-article"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSpreadsheet,
             href: "/services/publication-support/journal-selection"
         }
@@ -179,7 +185,7 @@ export default function PharmaceuticalsPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white bg-[#a3c9bd]/30 flex items-center justify-center">
                             <Image
-                                src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/pharmaceuticals/Pharmaceuticals.webp"
                                 alt="Pharmaceutical Research Support"
                                 fill
                                 priority
@@ -219,7 +225,13 @@ export default function PharmaceuticalsPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

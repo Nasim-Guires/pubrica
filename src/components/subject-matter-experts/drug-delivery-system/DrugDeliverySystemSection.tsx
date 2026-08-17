@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight } from 'lucide-react';
 
@@ -87,7 +88,7 @@ const editorsData = [
         experience: '7 years of experience',
         manuscripts: '80+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/drug-delivery-system/Dr.-Emma-Clark.webp"
     },
     {
         name: 'Michael Lee',
@@ -95,7 +96,7 @@ const editorsData = [
         experience: '8 years of experience',
         manuscripts: '60+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/ceramic-engineering/Michael-Lee.webp"
     },
     {
         name: 'Dr. Sarah Johnson',
@@ -103,7 +104,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '100+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/drug-delivery-system/Dr.-Sarah-Johnson.webp"
     }
 ];
 
@@ -183,7 +184,7 @@ export default function DrugDeliverySystemSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/drug-delivery-system/Drug-Delivery-System.webp"
                             alt="Applications of Drug Delivery System"
                             className="w-full h-auto object-cover"
                         />
@@ -203,7 +204,7 @@ export default function DrugDeliverySystemSection() {
 
                     {/* Intro text / banner card on the left with grid of study tags on right */}
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                        <div className="lg:col-span-5 rounded-lg overflow-hidden shadow-lg relative min-h-[250px] flex items-end p-6 bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=600')` }}>
+                        <div className="lg:col-span-5 rounded-lg overflow-hidden shadow-lg relative min-h-[250px] flex items-end p-6 bg-cover bg-center" style={{ backgroundImage: `url('/images/subject-matter-experts/drug-delivery-system/Drug-Delivery-System.webp')` }}>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                             <p className="relative z-10 text-white text-sm sm:text-base leading-relaxed">
                                 Pubrica's experts provide comprehensive support for drug delivery system research, ensuring your work is accurate, impactful, and reaches the right audience, from design to clinical application.
@@ -242,7 +243,7 @@ export default function DrugDeliverySystemSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/drug-delivery-system/Pharmaceutical-Science.webp"
                             alt="Drug Delivery and Translational Research Book Cover"
                             className="w-full h-auto object-cover"
                         />

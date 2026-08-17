@@ -9,7 +9,9 @@ export const DENTISTRY_TESTIMONIALS: Testimonial[] = [
     authorRole: "DDS – University of Melbourne",
     authorLocation: "Australia",
     avatarLabel: "Portrait of Dr. Sarah Mitchell",
+      avatarSrc: "/images/subject-matter-experts/cell-biology/Dr.-Sarah-Mitchell.webp",
     flagLabel: "Australia flag",
+      flagSrc: "/images/marketing-communication-content-development-service/Australia.webp",
   },
   {
     id: "dentistry-2",
@@ -19,7 +21,9 @@ export const DENTISTRY_TESTIMONIALS: Testimonial[] = [
     authorRole: "MDS – Oral and Maxillofacial Surgeon",
     authorLocation: "India",
     avatarLabel: "Portrait of Dr. Rajesh Kumar",
+      avatarSrc: "/images/subject-matter-experts/dentistry/Dr.-Rajesh-Kumar.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "dentistry-3",
@@ -29,6 +33,8 @@ export const DENTISTRY_TESTIMONIALS: Testimonial[] = [
     authorRole: "MSc – Periodontology Specialist",
     authorLocation: "Singapore",
     avatarLabel: "Portrait of Dr. Laura Chen",
+      avatarSrc: "/images/subject-matter-experts/dentistry/Dr.-Laura-Chen.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
 ];

@@ -9,7 +9,9 @@ export const MEDICAL_ANIMATIONS_TESTIMONIALS: Testimonial[] = [
     authorRole: "Researcher",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. Sarah Thompson",
+      avatarSrc: "/images/subject-matter-experts/medical-animation/Dr.-Sarah-Thompson-1.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "medical-animations-2",
@@ -19,7 +21,9 @@ export const MEDICAL_ANIMATIONS_TESTIMONIALS: Testimonial[] = [
     authorRole: "Surgeon",
     authorLocation: "United Kingdom",
     avatarLabel: "Portrait of Dr. Michael Johnson",
+      avatarSrc: "/images/subject-matter-experts/medical-animation/Dr.-Michael-Johnson.webp",
     flagLabel: "United Kingdom flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
   },
   {
     id: "medical-animations-3",
@@ -29,6 +33,8 @@ export const MEDICAL_ANIMATIONS_TESTIMONIALS: Testimonial[] = [
     authorRole: "Pharmaceutical Company",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. David Lee",
+      avatarSrc: "/images/subject-matter-experts/chemical-engineering/Dr.-David-Lee.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
 ];

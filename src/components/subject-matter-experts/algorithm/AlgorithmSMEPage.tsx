@@ -34,54 +34,63 @@ export default function AlgorithmSMEPage() {
     const coreAreas = [
         {
             title: "Algorithm Design & Analysis",
+            iconSrc: "/images/subject-matter-experts/algorithm/Algorithm-Design-Analysis.webp",
             highlight: "Algorithm Design &",
             desc: "We create efficient algorithms (computational procedures) to solve complicated computer-based problems through the development and evaluation phases.",
             icon: Cpu,
         },
         {
             title: "Data Structure & Optimisation",
+            iconSrc: "/images/subject-matter-experts/algorithm/Data-Structure-Optimisation.webp",
             highlight: "Data Structure &",
             desc: "For algorithms to work efficiently, we must create efficient methods for retrieving and storing information/data.",
             icon: Database,
         },
         {
             title: "Computational Complexity",
+            iconSrc: "/images/subject-matter-experts/algorithm/Computational-Complexity.webp",
             highlight: "Computational",
             desc: "To determine how efficient algorithms will work, we analyse both time and space complexity.",
             icon: Binary,
         },
         {
             title: "Machine Learning Algorithms",
+            iconSrc: "/images/subject-matter-experts/algorithm/Machine-Learning-Algorithms.webp",
             highlight: "Machine Learning",
             desc: "For developing predictive models and/or intelligent agents, we develop and implement machine learning algorithms.",
             icon: Sparkles,
         },
         {
             title: "Network Graph Algorithms",
+            iconSrc: "/images/subject-matter-experts/algorithm/Network-Graph-Algorithms.webp",
             highlight: "Network Graph",
             desc: "Algorithms that can solve network-related problems (i.e., routing, connectivity and shortest-path routing-related problems) using graphs.",
             icon: Share2,
         },
         {
             title: "Parallel & Distributed Algorithms",
+            iconSrc: "/images/subject-matter-experts/algorithm/Parallel-Distributed-Algorithms.webp",
             highlight: "Parallel & Distributed",
             desc: "Algorithms designed specifically to run on parallel and/or distributed high-performance computing systems.",
             icon: Workflow,
         },
         {
             title: "Heuristic and Metaheuristic Algorithms",
+            iconSrc: "/images/subject-matter-experts/algorithm/Heuristic-and-Metaheuristic-Algorithms.webp",
             highlight: "Heuristic and Metaheuristic",
             desc: "For when no definitive solution can be found to a complicated optimisation problem, we use heuristic/approximate methods to provide the best possible solutions.",
             icon: Layers,
         },
         {
             title: "Numerical Algorithm",
+            iconSrc: "/images/subject-matter-experts/algorithm/Numerical-Algorithm.webp",
             highlight: "Numerical",
             desc: "We develop algorithms and methods for resolving mathematical issues such as equations, simulations, and optimizations of numerical problems.",
             icon: Calculator,
         },
         {
             title: "Big Data Algorithms",
+            iconSrc: "/images/subject-matter-experts/algorithm/Big-Data-Algorithms.webp",
             highlight: "Big Data",
             desc: "We create efficient algorithms for processing and analysing large volumes of data sets.",
             icon: Network,
@@ -94,57 +103,49 @@ export default function AlgorithmSMEPage() {
             title: "Research Services",
             desc: "Expert guidance on project planning, execution, and data analysis.",
             icon: Search,
-            imageUrl:
-                "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800",
+            imageUrl: "/images/subject-matter-experts/algorithm/Research-Services.png",
         },
         {
             title: "Editing & Proofreading",
             desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
             icon: FileText,
-            imageUrl:
-                "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=800",
+            imageUrl: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
         },
         {
             title: "Publication Support",
             desc: "Complete support for publishing in high-impact journals, translating concepts into incisive reports",
             icon: HelpCircle,
-            imageUrl:
-                "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800",
+            imageUrl: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
         },
         {
             title: "Scientific Writing",
             desc: "Crafting clear, precise, and publication-ready research manuscripts.",
             icon: PenTool,
-            imageUrl:
-                "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
+            imageUrl: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
         },
         {
             title: "Artwork Editing",
             desc: "Professional visuals for your figures, tables, and graphical abstracts.",
             icon: ImageIcon,
-            imageUrl:
-                "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=800",
+            imageUrl: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
         },
         {
             title: "Journal Formatting",
             desc: "Tailored manuscript formatting to meet specific journal guidelines.",
             icon: Layout,
-            imageUrl:
-                "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
+            imageUrl: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
         },
         {
             title: "Graphical Abstract",
             desc: "Engaging summaries of your research in a single, informative graphic.",
             icon: BarChart2,
-            imageUrl:
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+            imageUrl: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
         },
         {
             title: "Literature Review and Gap Analysis",
             desc: "Identifying research gaps and providing comprehensive literature reviews.",
             icon: BookOpen,
-            imageUrl:
-                "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80&w=800",
+            imageUrl: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
         },
     ];
 
@@ -220,7 +221,7 @@ export default function AlgorithmSMEPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800"
+                                src="/images/subject-matter-experts/algorithm/Algorithm-1.webp"
                                 alt="Algorithm Research Visualization"
                                 fill
                                 className="object-cover"
@@ -265,7 +266,7 @@ export default function AlgorithmSMEPage() {
 
                                     {/* Right Column: Icon & Vertical Arrow / Bar Visual Indicator */}
                                     <div className="flex flex-col items-center justify-between flex-shrink-0 w-8 border-l border-gray-100 pl-2 pointer-events-none">
-                                        <Icon className="w-5 h-5 text-gray-700 shrink-0" />
+                                        {(item as any).iconSrc ? <span className="relative w-6 h-6 shrink-0"><Image src={(item as any).iconSrc} alt="" fill className="object-contain" /></span> : <Icon className="w-5 h-5 text-gray-700 shrink-0" />}
 
                                         <div className="flex flex-col items-center justify-between h-24 my-1">
                                             <ChevronUp className="w-3 h-3 text-gray-400" />
@@ -314,7 +315,7 @@ export default function AlgorithmSMEPage() {
 
                                     {/* Center Circle Icon */}
                                     <div className="absolute top-[8.5rem] left-1/2 -translate-x-1/2 z-20 bg-white p-2.5 rounded-full border border-gray-200 shadow-sm transition-transform duration-300 group-hover:scale-105">
-                                        <CardIcon className="w-5 h-5 text-[#12433e]" />
+                                        {(card as any).iconSrc ? <span className="relative w-6 h-6"><Image src={(card as any).iconSrc} alt="" fill className="object-contain" /></span> : <CardIcon className="w-5 h-5 text-[#12433e]" />}
                                     </div>
 
                                     {/* Sliding White Panel Overlay */}

@@ -10,7 +10,9 @@ export const DRUG_DELIVERY_SYSTEMS_TESTIMONIALS: Testimonial[] = [
     authorRole: "Senior Researcher in Drug Delivery, XYZ Pharmaceutical",
     authorLocation: "India",
     avatarLabel: "Photo of Dr. Sarah Williams",
+      avatarSrc: "/images/subject-matter-experts/drug-delivery-system/Dr.-Sarah-Williams-1.webp",
     flagLabel: "India flag icon",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "drug-delivery-systems-2",
@@ -20,7 +22,9 @@ export const DRUG_DELIVERY_SYSTEMS_TESTIMONIALS: Testimonial[] = [
     authorRole: "Head of Department, Drug Delivery Research",
     authorLocation: "Spain",
     avatarLabel: "Photo of Prof. Michael Thompson",
+      avatarSrc: "/images/subject-matter-experts/augmented-reality/Dr.-Robert-Klein-1.webp",
     flagLabel: "Spain flag icon",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
   },
   {
     id: "drug-delivery-systems-3",
@@ -30,6 +34,8 @@ export const DRUG_DELIVERY_SYSTEMS_TESTIMONIALS: Testimonial[] = [
     authorRole: "R&D Director, BioMed Solutions",
     authorLocation: "USA",
     avatarLabel: "Photo of Dr. Jennifer Clark",
+      avatarSrc: "/images/subject-matter-experts/ceramic-engineering/Dr.-Jennifer-Clark.webp",
     flagLabel: "USA flag icon",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
 ];

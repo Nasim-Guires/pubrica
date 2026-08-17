@@ -27,46 +27,55 @@ export default function DrugDeliverySystemPage() {
     const disciplines = [
         {
             title: "Pharmaceutical Sciences",
+            iconSrc: "/images/subject-matter-experts/drug-delivery-system/Pharmaceutical-Science.webp",
             description: "Pharmaceutical Sciences focuses on designing, developing, and delivering drugs. It covers areas like pharmacology, medicinal chemistry, and drug formulation to improve drug efficacy, safety, and targeted delivery.",
             icon: Search
         },
         {
             title: "Nanotechnology",
+            iconSrc: "/images/subject-matter-experts/drug-delivery-system/Nanotechnology.webp",
             description: "Nanotechnology involves using tiny materials, typically at the nanoscale, to improve drug delivery. It enhances precision in targeting specific areas of the body, increasing drug efficacy while minimizing side effects.",
             icon: TrendingUp
         },
         {
             title: "Biotechnology",
+            iconSrc: "/images/subject-matter-experts/biotechnology/Biotechnology.webp",
             description: "Biotechnology uses biological systems and techniques to develop innovative drug delivery methods. It focuses on harnessing living organisms or biological processes to create more effective, targeted, and sustainable treatments.",
             icon: FileText
         },
         {
             title: "Molecular Biology",
+            iconSrc: "/images/subject-matter-experts/drug-delivery-system/Molecular-Biology.webp",
             description: "Molecular Biology studies the structure and function of molecules essential for life, such as DNA, RNA, and proteins. It plays a key role in understanding disease mechanisms and developing targeted therapies in drug discovery.",
             icon: Database
         },
         {
             title: "Biopharmaceutics",
+            iconSrc: "/images/subject-matter-experts/drug-delivery-system/Biopharmaceutics.webp",
             description: "Biopharmaceutics is the study of how the physical and chemical properties of drugs affect their absorption, distribution, and overall therapeutic effectiveness in the body. It bridges pharmacology and pharmaceutical sciences to optimize drug delivery and ensure the best clinical outcomes.",
             icon: AlertTriangle
         },
         {
             title: "Regulatory Science",
+            iconSrc: "/images/subject-matter-experts/drug-delivery-system/Regulatory-Science.webp",
             description: "Regulatory Science is the field focused on ensuring that drugs, medical devices, and other health products are safe, effective, and of high quality. It involves developing and implementing regulations, standards, and procedures for the approval, manufacturing, and monitoring of healthcare products.",
             icon: BarChart3
         },
         {
             title: "Pharmacology",
+            iconSrc: "/images/subject-matter-experts/drug-delivery-system/Pharmaceutical-Science.webp",
             description: "Pharmacology is the study of how drugs interact with the body and affect biological systems. It focuses on understanding drug actions, their therapeutic effects, side effects, and mechanisms of action to optimize their use in treating diseases.",
             icon: Cpu
         },
         {
             title: "Toxicology",
+            iconSrc: "/images/subject-matter-experts/drug-delivery-system/Toxicology.webp",
             description: "Toxicology is the study of the harmful effects of substances on living organisms. It focuses on identifying toxic agents, understanding their mechanisms, and assessing their risks to health and the environment.",
             icon: Layers
         },
         {
             title: "Clinical Research",
+            iconSrc: "/images/subject-matter-experts/drug-delivery-system/Clinical-Research.webp",
             description: "Clinical Research involves studying and testing new treatments, drugs, or medical devices in human subjects. It aims to assess their safety, efficacy, and optimal use, contributing to evidence-based medicine and regulatory approvals.",
             icon: FileSearch
         }
@@ -103,56 +112,56 @@ export default function DrugDeliverySystemPage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/drug-delivery-system/Research-Services-1.webp",
             icon: Search,
             href: "/services/research-services"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: PenTool,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biotechnology/Data-Collection-for-AI-ML.webp",
             icon: Cpu,
             href: "/services/medical-data-collection"
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/drug-delivery-system/Translation-Services.webp",
             icon: FileText,
             href: "/services/editing-and-translation"
         },
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: FileSearch,
             href: "//services/research-services/literature-review-and-gap"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
             icon: FileText,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/drug-delivery-system/Graphical-Abstract-1.webp",
             icon: Search,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Selection.webp",
             icon: FileText,
             href: "/services/publication-support/journal-selection"
         }
@@ -225,7 +234,7 @@ export default function DrugDeliverySystemPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/drug-delivery-system/Drug-Delivery-System.webp"
                                 alt="Drug delivery system analysis visual"
                                 fill
                                 priority
@@ -246,7 +255,7 @@ export default function DrugDeliverySystemPage() {
                         <div className="lg:col-span-5 flex justify-center">
                             <div className="relative w-full h-[350px] sm:h-[420px] rounded-lg overflow-hidden shadow-md">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+                                    src="/images/subject-matter-experts/drug-delivery-system/Pharmaceutical-Science.webp"
                                     alt="Expertise in Drug Delivery System"
                                     fill
                                     className="object-cover"
@@ -318,7 +327,13 @@ export default function DrugDeliverySystemPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

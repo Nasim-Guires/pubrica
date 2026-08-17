@@ -47,6 +47,7 @@ export const biomedicalDisciplines: DisciplineData[] = [
   {
     id: "biomechanics",
     title: "Biomechanics",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Biomechanics.webp",
     description:
       "Biomechanics applies mechanical engineering principles to biological systems. It helps analyse movement, tissue mechanics, orthopaedic implant performance, and sports injury prevention.",
     icon: Activity,
@@ -57,6 +58,7 @@ export const biomedicalDisciplines: DisciplineData[] = [
   {
     id: "biomaterials-tissue-engineering",
     title: "Biomaterials and Tissue Engineering",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Biomaterials-and-Tissue-Engineering.webp",
     description:
       "This discipline focuses on biocompatible materials used in implants, prosthetics, regenerative medicine, and drug delivery systems.",
     icon: FlaskConical,
@@ -67,6 +69,7 @@ export const biomedicalDisciplines: DisciplineData[] = [
   {
     id: "biomedical-imaging-instrumentation",
     title: "Biomedical Imaging and Instrumentation",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Biomedical-Imaging-and-Instrumentation.webp",
     description:
       "Innovations in MRI, CT, PET, ultrasound, and optical imaging rely heavily on engineering precision.",
     icon: ScanLine,
@@ -77,6 +80,7 @@ export const biomedicalDisciplines: DisciplineData[] = [
   {
     id: "medical-devices-therapeutic-technologies",
     title: "Medical Devices and Therapeutic Technologies",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Medical-Devices-and-Therapeutic-Technologies.webp",
     description:
       "From ventilators and infusion pumps to surgical robots and neuroprosthetics, medical device innovation demands rigorous documentation and research accuracy.",
     icon: HeartPulse,
@@ -87,6 +91,7 @@ export const biomedicalDisciplines: DisciplineData[] = [
   {
     id: "bioinformatics-computational-biology",
     title: "Bioinformatics and Computational Biology",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Bioinformatics-and-Computational-Biology.webp",
     description:
       "This field involves analysing biological datasets, developing predictive models, and supporting precision medicine.",
     icon: Cpu,
@@ -97,6 +102,7 @@ export const biomedicalDisciplines: DisciplineData[] = [
   {
     id: "rehabilitation-engineering",
     title: "Rehabilitation Engineering",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/RehabilitationEngineering.webp",
     description:
       "It develops technologies such as exoskeletons, prosthetics, communication tools, and therapeutic robots to enhance mobility and independence.",
     icon: Accessibility,
@@ -118,8 +124,7 @@ export const biomedicalEngineeringExpertiseData: ExpertiseSectionData = {
       title: "Research Services",
       description:
         "Expert guidance on project planning, execution, and data analysis.",
-      image:
-        "/images/subject-matter-experts/biomedical-engineering/research-services.webp",
+      image: "/images/subject-matter-experts/algorithm/Research-Services.png",
       icon: FlaskConical,
     },
     {
@@ -127,8 +132,7 @@ export const biomedicalEngineeringExpertiseData: ExpertiseSectionData = {
       title: "Editing & Proofreading",
       description:
         "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-      image:
-        "/images/subject-matter-experts/biomedical-engineering/editing-proofreading.webp",
+      image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
       icon: PenTool,
     },
     {
@@ -136,8 +140,7 @@ export const biomedicalEngineeringExpertiseData: ExpertiseSectionData = {
       title: "Peer-Reviewing Services",
       description:
         "Comprehensive review to refine and validate your research pre-submission.",
-      image:
-        "/images/subject-matter-experts/biomedical-engineering/peer-reviewing.webp",
+      image: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
       icon: BadgeCheck,
     },
     {
@@ -145,8 +148,7 @@ export const biomedicalEngineeringExpertiseData: ExpertiseSectionData = {
       title: "Publication Support",
       description:
         "Complete support for publishing in high-impact journals, translating concepts into incisive reports.",
-      image:
-        "/images/subject-matter-experts/biomedical-engineering/publication-support.webp",
+      image: "/images/subject-matter-experts/biomolecular-engineering/Publication-Support-1.webp",
       icon: BookOpen,
     },
     {
@@ -154,8 +156,7 @@ export const biomedicalEngineeringExpertiseData: ExpertiseSectionData = {
       title: "Scientific Writing",
       description:
         "Crafting clear, precise, and publication-ready research manuscripts.",
-      image:
-        "/images/subject-matter-experts/biomedical-engineering/scientific-writing.webp",
+      image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
       icon: FileSearch,
     },
     {
@@ -163,8 +164,7 @@ export const biomedicalEngineeringExpertiseData: ExpertiseSectionData = {
       title: "Journal Selection",
       description:
         "Strategic journal selection to maximize publication success.",
-      image:
-        "/images/subject-matter-experts/biomedical-engineering/journal-selection.webp",
+      image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
       icon: SearchCheck,
     },
   ],
@@ -180,7 +180,9 @@ export const BIOMEDICAL_ENGINEERING_TESTIMONIALS: Testimonial[] = [
     authorRole: "Tissue Engineering Researcher",
     authorLocation: "India",
     avatarLabel: "Dr. Neeraj S testimonial image",
+      avatarSrc: "/images/subject-matter-experts/biomedical-engineering/Dr.-Neeraj-S.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "biomedical-testimonial-2",
@@ -190,7 +192,9 @@ export const BIOMEDICAL_ENGINEERING_TESTIMONIALS: Testimonial[] = [
     authorRole: "Biomedical Device Innovator",
     authorLocation: "United Kingdom",
     avatarLabel: "Prof. Elena R testimonial image",
+      avatarSrc: "/images/subject-matter-experts/biomedical-engineering/Prof.-Elena-R.webp",
     flagLabel: "United Kingdom flag",
+      flagSrc: "/images/research-services/systematic-review/united-kingdom-.png",
   },
   {
     id: "biomedical-testimonial-3",
@@ -200,6 +204,8 @@ export const BIOMEDICAL_ENGINEERING_TESTIMONIALS: Testimonial[] = [
     authorRole: "Biomechanics Scientist",
     authorLocation: "USA",
     avatarLabel: "Dr. Kai M testimonial image",
+      avatarSrc: "/images/subject-matter-experts/biomedical-engineering/Dr.-Kai-M.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
 ];

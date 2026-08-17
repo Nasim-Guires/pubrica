@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight } from 'lucide-react';
 
@@ -85,7 +86,7 @@ const editorsData = [
         experience: '9 years of experience',
         manuscripts: '95+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/dentistry/Dr.-Rajesh-Kumar.webp"
     },
     {
         name: 'Dr. Neha Gupta',
@@ -93,7 +94,7 @@ const editorsData = [
         experience: '7 years of experience',
         manuscripts: '80+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biochemistry/Dr.-Sophia-Patel.webp"
     },
     {
         name: 'Dr. Maya Desai',
@@ -101,7 +102,7 @@ const editorsData = [
         experience: '11 years of experience',
         manuscripts: '120+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/algorithm/Dr.-Ananya-Iyer-1.webp"
     }
 ];
 
@@ -181,7 +182,7 @@ export default function EnvironmentalScienceSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/environmental-science/Environmental-Science.webp"
                             alt="Environmental Science sprouts in petri dish setup"
                             className="w-full h-auto object-cover"
                         />
@@ -206,7 +207,7 @@ export default function EnvironmentalScienceSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/environmental-science/Ecological.webp"
                             alt="Journal of Environmental Sciences Cover"
                             className="w-full h-auto object-cover"
                         />

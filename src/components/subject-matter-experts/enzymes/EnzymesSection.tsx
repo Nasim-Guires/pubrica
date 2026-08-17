@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight } from 'lucide-react';
 
@@ -90,7 +91,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '120+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/enzymes/Dr.-Ethan-Matthews.webp"
     },
     {
         name: 'Dr. Olivia Harris',
@@ -98,7 +99,7 @@ const editorsData = [
         experience: '14 years of experience',
         manuscripts: '180+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/ceramic-engineering/Dr.-Olivia-Harris.webp"
     },
     {
         name: 'Dr. Lucas Carter',
@@ -106,7 +107,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '150+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/enzymes/Dr.-Lucas-Carter.webp"
     }
 ];
 
@@ -185,7 +186,7 @@ export default function EnzymesSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/enzymes/Enzymes.webp"
                             alt="Enzyme research molecular setup"
                             className="w-full h-auto object-cover"
                         />
@@ -232,7 +233,7 @@ export default function EnzymesSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/enzymes/Enzyme-Discovery-and-Characterization.webp"
                             alt="Nature Journal Cover"
                             className="w-full h-auto object-cover"
                         />

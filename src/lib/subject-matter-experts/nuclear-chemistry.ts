@@ -9,7 +9,9 @@ export const NUCLEAR_CHEMISTRY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Senior Researcher, Nuclear Chemistry Lab",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. Emily Johnson",
+      avatarSrc: "/images/subject-matter-experts/cell-biology/Dr.-Sarah-Mitchell.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/marketing-communication-content-development-service/Australia.webp",
   },
   {
     id: "nuclear-chemistry-2",
@@ -19,7 +21,9 @@ export const NUCLEAR_CHEMISTRY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Head of Radiopharmaceutical Research",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. William Carter",
+      avatarSrc: "/images/subject-matter-experts/big-data-hadoop/Prof.-A.-Williams.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "nuclear-chemistry-3",
@@ -29,6 +33,8 @@ export const NUCLEAR_CHEMISTRY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Director, Environmental Radiation Research",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. Ayesha Malik",
+      avatarSrc: "/images/subject-matter-experts/material-science/Dr.-Ayesha-Kapoor-2.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
 ];

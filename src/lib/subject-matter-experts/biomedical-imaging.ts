@@ -12,7 +12,9 @@ export const biomedicalImagingTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Radiology Researcher",
       authorLocation: "India",
       avatarLabel: "Photo of Dr. Anitha R",
+      avatarSrc: "/images/subject-matter-experts/biomedical-imaging/Dr.-Anitha-R.webp",
       flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
       id: "biomedical-imaging-testimonial-2",
@@ -22,7 +24,9 @@ export const biomedicalImagingTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Biomedical Imaging & AI Research",
       authorLocation: "China",
       avatarLabel: "Photo of Prof. Chen Li",
+      avatarSrc: "/images/subject-matter-experts/biomedical-imaging/Prof.-Chen-Li.webp",
       flagLabel: "China flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/china.png",
     },
     {
       id: "biomedical-imaging-testimonial-3",
@@ -32,7 +36,9 @@ export const biomedicalImagingTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Nuclear Medicine Scientist",
       authorLocation: "Spain",
       avatarLabel: "Photo of Dr. Miguel Torres",
+      avatarSrc: "/images/subject-matter-experts/biomedical-imaging/Dr.-Miguel-Torres.webp",
       flagLabel: "Spain flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
     },
   ],
 };

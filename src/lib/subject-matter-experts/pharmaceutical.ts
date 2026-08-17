@@ -9,7 +9,9 @@ export const pharmaceuticalTestimonials: Testimonial[] = [
         authorRole: "Pharmacologist",
         authorLocation: "India",
         avatarLabel: "Portrait of Dr. Priya Nair",
+      avatarSrc: "/images/subject-matter-experts/biophysics/Dr.-Priya-Ramanathan.webp",
         flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
         id: "pharmaceutical-2",
@@ -19,7 +21,9 @@ export const pharmaceuticalTestimonials: Testimonial[] = [
         authorRole: "Clinical Research Scientist",
         authorLocation: "UK",
         avatarLabel: "Portrait of Dr. Michael Thompson",
+      avatarSrc: "/images/subject-matter-experts/augmented-reality/Dr.-Robert-Klein-1.webp",
         flagLabel: "UK flag",
+      flagSrc: "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
     },
     {
         id: "pharmaceutical-3",
@@ -29,6 +33,8 @@ export const pharmaceuticalTestimonials: Testimonial[] = [
         authorRole: "Medicinal Chemist",
         authorLocation: "Japan",
         avatarLabel: "Portrait of Dr. Kenji Sato",
+      avatarSrc: "/images/subject-matter-experts/biocatalysts/Dr.-Elena-Rodriguez.webp",
         flagLabel: "Japan flag",
+      flagSrc: "/images/editing-and-translation/japan.png",
     },
 ];

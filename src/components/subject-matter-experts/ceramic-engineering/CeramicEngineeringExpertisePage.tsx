@@ -24,31 +24,37 @@ export default function CeramicEngineeringExpertisePage() {
     const disciplines = [
         {
             title: "Materials Design & Development",
+            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Materials-Design-Development.webp",
             description: "The design of materials focuses on developing ceramics that have customized attributes to facilitate their use in specific applications. High-temperature ceramics, bio ceramics, electronic materials, etc. represent innovative materials created from the materials design process and will lead to advancements in the following industries: aerospace, healthcare, energy and manufacturing.",
             icon: Boxes
         },
         {
             title: "Processing & Fabrication Engineering",
+            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Processing-Fabrication-Engineering.webp",
             description: "Processing & Fabrication Engineering provides advanced techniques for manufacturing and forming ceramics including techniques used in powder processing sintering additive manufacturing and coatings to improve their mechanical, thermal, and chemical properties.",
             icon: Factory
         },
         {
             title: "Microstructural analysis and characterization",
+            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Microstructural-analysis-and-characterization.webp",
             description: "Consider the effect of ceramic microstructures on the properties of ceramics. It uses structural characterization (electron microscopy), composition characterization (X-ray diffraction), and physical characterization (spectroscopy, thermal analysis) to create strong, durable, and high-performance ceramics.",
             icon: Microscope
         },
         {
             title: "Mechanical & Thermal Properties",
+            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Processing-Fabrication-Engineering.webp",
             description: "Engineering Ceramics engineers examine and improve hardness, toughness, thermal resistance and wear behaviour. There are also studies that show how to engineer high performance and heat-resistant and long-lasting materials through research.",
             icon: ShieldAlert
         },
         {
             title: "Electrical & Functional Ceramics",
+            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Electrical-Functional-Ceramics.webp",
             description: "Electrical or functional ceramic materials are created or designed to supply electronic, magnetic or physical properties. They can be engineered for various uses including capacitors, superconductors, sensors, energy storage mediums and many others.",
             icon: Zap
         },
         {
             title: "Computational Ceramic Engineering",
+            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Computational-Ceramic-Engineering.webp",
             description: "Molecular Simulations, and Predictive Analytics) to create and refine product concepts in ceramics has increased the speed at which products can reach maturity (and are thus usable by the public) through the reduction of time spent testing prototypes",
             icon: Cpu
         }
@@ -58,49 +64,49 @@ export default function CeramicEngineeringExpertisePage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: SearchCheck
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: FileText
         },
         {
             title: "Artwork Editing",
             description: "Professional visuals for your figures, tables, and graphical abstracts.",
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: Wrench
         },
         {
             title: "Journal Formatting",
             description: "Tailored manuscript formatting to meet specific journal guidelines.",
-            image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: FileSpreadsheet
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: PenTool
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: ImageIcon
         },
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: BookOpen
         },
         {
             title: "Publication Support",
             description: "Providing complete assistance from initial research planning to final manuscript submission ensuring high-quality deliverables throughout the publication process.",
-            image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biomolecular-engineering/Publication-Support-1.webp",
             icon: Send
         }
     ];
@@ -157,7 +163,7 @@ export default function CeramicEngineeringExpertisePage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white bg-[#0e2723]">
                             <Image
-                                src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/ceramic-engineering/Ceramic-Engineering.webp"
                                 alt="Ceramic Engineering Crafting and Research"
                                 fill
                                 priority
@@ -197,7 +203,13 @@ export default function CeramicEngineeringExpertisePage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

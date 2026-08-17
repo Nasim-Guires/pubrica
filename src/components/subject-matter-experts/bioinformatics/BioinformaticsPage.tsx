@@ -24,46 +24,55 @@ export default function BioinformaticsPage() {
     const disciplines = [
         {
             title: "Single-Cell Sequencing Analysis",
+            iconSrc: "/images/subject-matter-experts/bioinformatics/Single-Cell-Data-Analysis.webp",
             description: "Our single-cell RNA sequencing (scRNA-seq) analysis services identify cell types, expression differences, and heterogeneity in biological samples. Using dimension reduction and clustering methods such as UMAP and t-SNE, we assess cellular responses to various conditions or treatments across multiple samples.",
             icon: Activity
         },
         {
             title: "Genomic Data Analysis",
+            iconSrc: "/images/subject-matter-experts/bioinformatics/Genomic-Data-Analysis.webp",
             description: "We specialize in next-generation sequencing (NGS) data analysis, including whole-genome sequencing (WGS), whole-exome sequencing (WES), and targeted sequencing. Our expertise helps identify genetic variations, disease predispositions, and pharmacogenomic responses, driving advances in personalized medicine.",
             icon: Dna
         },
         {
             title: "Proteomic Data Analysis",
+            iconSrc: "/images/subject-matter-experts/bioinformatics/Proteomic-Data-Analysis.webp",
             description: "Our proteomics services cover protein identification, quantification, and post-translational modification (PTM) analysis. These insights are essential for understanding disease mechanisms and discovering novel therapeutic targets.",
             icon: Layers
         },
         {
             title: "Transcriptomic Data Analysis",
+            iconSrc: "/images/subject-matter-experts/bioinformatics/Transcriptomic-Data-Analysis.webp",
             description: "We analyze RNA sequencing (RNA-seq) data to evaluate gene expression under varying conditions, including differential gene expression, isoform detection, and non-coding RNA analysis. This provides a deeper understanding of gene regulation and functional pathways.",
             icon: PieChart
         },
         {
             title: "Microbiome & Metagenomics Analysis",
+            iconSrc: "/images/subject-matter-experts/bioinformatics/Microbiome-Metagenomics-Analysis.webp",
             description: "We provide microbiome sequencing and metagenomics analysis (16S rRNA and shotgun sequencing) to profile microbial diversity and host-microbiota interactions. These insights are crucial in gut health, disease research, and nutrition studies.",
             icon: Microscope
         },
         {
             title: "Metabolomics Data Analysis",
+            iconSrc: "/images/subject-matter-experts/bioinformatics/Metabolomics-Data-Analysis.webp",
             description: "Metabolomics offers a direct snapshot of biochemical processes within cells. Our bioinformatics services connect genetic, environmental, and microbiome influences to disease biomarkers and therapeutic responses through comprehensive metabolite profiling.",
             icon: Activity
         },
         {
             title: "Structural Bioinformatics",
+            iconSrc: "/images/subject-matter-experts/biocomputing/Structural-Bioinformatics.webp",
             description: "We support protein structure prediction, molecular docking, and simulation studies to explore structure–function relationships, protein-ligand interactions, and rational drug design.",
             icon: Layers
         },
         {
             title: "Epigenomics Data Analysis",
+            iconSrc: "/images/subject-matter-experts/bioinformatics/Epigenomics-Data-Analysis.webp",
             description: "Our epigenetics bioinformatics services include DNA methylation profiling, histone modification analysis, and ChIP-seq data interpretation, providing insights into gene regulation, epigenetic markers, and disease associations.",
             icon: Dna
         },
         {
             title: "Clinical & Translational Bioinformatics",
+            iconSrc: "/images/subject-matter-experts/bioinformatics/Clinical-Translational-Bioinformatics.webp",
             description: "We bridge omics research and clinical practice by providing bioinformatics for diagnostics, pharmacogenomics, and clinical decision support. These services accelerate the path from bench to bedside in personalized healthcare.",
             icon: Microscope
         }
@@ -73,49 +82,49 @@ export default function BioinformaticsPage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: Search
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: FileText
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Database
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: PenTool
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/material-science/Systematic-Reviews.webp",
             icon: FileSearch
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Send
         },
         {
             title: "Original Research",
             description: "End-to-end writing, statistical analysis, and formatting tailored to journal-specific guidelines.",
-            image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: FileSpreadsheet
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success",
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: BookMarked
         }
     ];
@@ -192,7 +201,7 @@ export default function BioinformaticsPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/bioinformatics/Bioinformatics.webp"
                                 alt="Bioinformatics and laboratory researchers"
                                 fill
                                 priority
@@ -235,7 +244,13 @@ export default function BioinformaticsPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

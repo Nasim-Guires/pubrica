@@ -31,26 +31,31 @@ export default function CardiologyPage() {
         },
         {
             title: "Electrophysiology",
+            iconSrc: "/images/subject-matter-experts/cardiology/Electrophysiology.png",
             description: "From arrhythmia management to advanced cardiac pacing techniques, we support research in heart rhythm disorders, device therapies, and diagnostic innovations.",
             icon: Zap
         },
         {
             title: "Heart Failure and Transplantation",
+            iconSrc: "/images/subject-matter-experts/cardiology/Heart-Failure-and-Transplantation.png",
             description: "Our specialists assist in research on acute and chronic heart failure, ventricular assist devices, and cardiac transplantation, ensuring clarity and scientific rigor in manuscripts and grant proposals.",
             icon: Activity
         },
         {
             title: "Cardiac Surgery",
+            iconSrc: "/images/subject-matter-experts/cardiology/Cardiac-Surgery.png",
             description: "We assist researchers in cardiac surgical techniques, postoperative outcomes, and innovative surgical interventions, ensuring manuscripts meet international publication standards.",
             icon: Scissors
         },
         {
             title: "Paediatric Cardiology",
+            iconSrc: "/images/subject-matter-experts/cardiology/Paediatric-Cardiology.png",
             description: "Research involving congenital heart defects, paediatric heart surgery, and childhood cardiovascular disorders receives specialized attention to maintain accuracy and readability for diverse audiences.",
             icon: Baby
         },
         {
             title: "Cardiovascular Imaging",
+            iconSrc: "/images/subject-matter-experts/cardiology/Cardiovascular-Imaging.png",
             description: "Our team aids in studies using echocardiography, MRI, CT, and nuclear imaging to advance non-invasive diagnostic techniques, providing precise scientific editing for high-impact publications.",
             icon: Stethoscope
         }
@@ -60,55 +65,55 @@ export default function CardiologyPage() {
         {
             title: "Journal Formatting",
             description: "Tailored manuscript formatting to meet specific journal guidelines.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Formatting.webp",
             icon: FileText
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Editing-Proofreading.webp",
             icon: CheckCircle
         },
         {
             title: "Artwork Editing",
             description: "Professional visuals for your figures, tables, and graphical abstracts.",
-            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biotechnology/Artwork-Editing.webp",
             icon: ImageIcon
         },
         {
             title: "Peer-Review",
             description: "Comprehensive review to refine and validate your research pre-submission.",
-            image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
             icon: UserCheck
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
             icon: Send
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Selection.webp",
             icon: BookOpen
         },
         {
             title: "Responding to Reviewers",
             description: "Assistance in addressing reviewer comments to enhance your manuscript's chances of acceptance.",
-            image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Responding-to-Reviewers.webp",
             icon: MessageSquare
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: PenTool
         },
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: Search
         }
     ];
@@ -161,7 +166,7 @@ export default function CardiologyPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/cardiology/Empowering-Research-Excellence-in-Cardiology-through-Expert-Guidance.webp"
                                 alt="Cardiology medical research anatomical heart model"
                                 fill
                                 priority
@@ -201,7 +206,13 @@ export default function CardiologyPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

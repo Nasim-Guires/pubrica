@@ -23,41 +23,49 @@ export default function NuclearEngineeringPage() {
     const disciplines = [
         {
             title: "Reactor Design & Analysis",
+            iconSrc: "/images/subject-matter-experts/nuclear-engineering/Reactor-Design-Analysis.webp",
             description: "Goals are to design and optimize nuclear reactors for maximum efficiency, safety & sustainability of energy production.",
             icon: Search,
         },
         {
             title: "Radiation Physics & Shielding",
+            iconSrc: "/images/subject-matter-experts/nuclear-engineering/Radiation-Physics-Shielding.webp",
             description: "The study of radiation interactions, shielding materials and their use in both nuclear facilities (industry) and medical applications.",
             icon: TrendingUp
         },
         {
             title: "Nuclear Fuel Cycle Engineering",
+            iconSrc: "/images/subject-matter-experts/nuclear-engineering/Nuclear-Fuel-Cycle-Engineering.webp",
             description: "Evaluating nuclear fuel from the production phase through use, reprocessing, and finally to waste management. This will help to create a sustainable nuclear power system.",
             icon: FileText
         },
         {
             title: "Computational Modelling",
+            iconSrc: "/images/subject-matter-experts/molecular-engineering/Computational-Modelling.webp",
             description: "Provides simulated tools to predict reactor behaviour, neutron transport, thermal-hydraulic behaviour; and hence assists in decision making.",
             icon: Database
         },
         {
             title: "Nuclear Safety and Risk Assessment",
+            iconSrc: "/images/subject-matter-experts/nuclear-engineering/Nuclear-Safety-and-Risk-Assessment.webp",
             description: "Evaluates the reactor safety systems and risk mitigation strategies and ensures compliance with international (global) nuclear safety standards.",
             icon: ShieldAlert
         },
         {
             title: "Thermal Hydraulics",
+            iconSrc: "/images/subject-matter-experts/nuclear-engineering/Thermal-Hydraulics.webp",
             description: "Examining heat transfer & fluid flow in industry; then helps optimise both the reactor cooling and reactor performance.",
             icon: Layers
         },
         {
             title: "Fusion and Advanced Reactor Technologies",
+            iconSrc: "/images/subject-matter-experts/nuclear-engineering/Fusion-and-Advanced-Reactor-Technologies.webp",
             description: "Investigating next-generation nuclear technologies, including fusion reactors & small modular reactors (SMRs).",
             icon: BookOpen
         },
         {
             title: "Material Science in Nuclear Systems",
+            iconSrc: "/images/subject-matter-experts/nuclear-engineering/Material-Science-in-Nuclear-Systems.webp",
             description: "The research and development of materials that are resistant to damage (radiation) for both reactors and structural components.",
             icon: BarChart3
         }
@@ -67,63 +75,63 @@ export default function NuclearEngineeringPage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: Search,
             href: "/services/research-services"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts through our Chemical engineering editing services. ",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: UserCheck,
             href: "/services/editing-and-translation"
         },
         {
             title: "Publication Support",
             description: "Complete support for publishing in high-impact journals, translating concepts into incisive reports.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Cpu,
             href: "/services/publication-support"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: FileText,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Artwork Editing",
             description: "Professional visuals for your figures, tables, and graphical abstracts.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: Wrench,
             href: "/services/publication-support/art-work-preparation"
         },
         {
             title: "Journal Formatting",
             description: "Tailored manuscript formatting to meet specific journal guidelines.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: FileSearch,
             href: "/services/publication-support/journal-manuscript-formatting-services"
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: PenTool,
             href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Layers,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: BookOpen,
             href: "/services/research-services/literature-review-and-gap"
         }
@@ -182,7 +190,7 @@ export default function NuclearEngineeringPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/nuclear-engineering/Nuclear-Engineering.webp"
                                 alt="Nuclear Engineering research visualization"
                                 fill
                                 priority
@@ -222,7 +230,13 @@ export default function NuclearEngineeringPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

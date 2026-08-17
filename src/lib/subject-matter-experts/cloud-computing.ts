@@ -13,6 +13,7 @@ export const cloudComputingTestimonialsData: ClientTestimonialsProps = {
       authorLocation: "Australia",
       avatarLabel: "Portrait of Dr. Rahul Mehta",
       flagLabel: "Australia flag",
+      flagSrc: "/images/marketing-communication-content-development-service/Australia.webp",
     },
     {
       id: "cloud-computing-testimonial-2",
@@ -22,7 +23,9 @@ export const cloudComputingTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Cloud Computing Specialist",
       authorLocation: "India",
       avatarLabel: "Portrait of Dr. Neha Verma",
+      avatarSrc: "/images/subject-matter-experts/agriculture/Dr.-Neha-Verma.webp",
       flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
       id: "cloud-computing-testimonial-3",
@@ -32,7 +35,9 @@ export const cloudComputingTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Data & Cloud Infrastructure Researcher",
       authorLocation: "United States",
       avatarLabel: "Portrait of Dr. Ankit Rao",
+      avatarSrc: "/images/subject-matter-experts/bioinformatics/Dr.-Samuel-DSouza.webp",
       flagLabel: "United States flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
   ],
 };

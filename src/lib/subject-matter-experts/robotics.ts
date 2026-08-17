@@ -9,7 +9,9 @@ export const roboticsTestimonials: Testimonial[] = [
     authorRole: "Associate Professor",
     authorLocation: "Singapore",
     avatarLabel: "Portrait of Dr. L. Chen",
+      avatarSrc: "/images/subject-matter-experts/robotics/Dr.-L.-Chen.webp",
     flagLabel: "Singapore flag",
+      flagSrc: "/images/editing-and-translation/scientific-editing/singapore-.png",
   },
   {
     id: "robotics-2",
@@ -19,7 +21,9 @@ export const roboticsTestimonials: Testimonial[] = [
     authorRole: "Senior Researcher",
     authorLocation: "Spain",
     avatarLabel: "Portrait of Dr. M. Alvarez",
+      avatarSrc: "/images/subject-matter-experts/medical-animation/Dr.-Michael-Johnson.webp",
     flagLabel: "Spain flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
   },
   {
     id: "robotics-3",
@@ -29,6 +33,8 @@ export const roboticsTestimonials: Testimonial[] = [
     authorRole: "Robotics Scientist",
     authorLocation: "Canada",
     avatarLabel: "Portrait of Dr. R. Thompson",
+      avatarSrc: "/images/subject-matter-experts/augmented-reality/Dr.-Robert-Klein-1.webp",
     flagLabel: "Canada flag",
+      flagSrc: "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/canada-flag.png",
   },
 ];

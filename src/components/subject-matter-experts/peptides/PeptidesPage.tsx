@@ -35,31 +35,37 @@ export default function PeptidesPage() {
     const disciplines = [
         {
             title: "Synthetic Peptide Development and Engineered Peptides",
+            iconSrc: "/images/subject-matter-experts/peptides/Synthetic-Peptide-Development-and-Engineered-Peptides.webp",
             description: "We use cutting-edge methods of peptide synthesis and modification to produce very pure and stable synthetic peptides which may be used as therapeutic agents or diagnostic tools.",
             icon: Dna,
         },
         {
             title: "Characterization and Analysis of Peptides",
+            iconSrc: "/images/subject-matter-experts/peptides/Characterization-and-Analysis-of-Peptides.webp",
             description: "We utilize cutting-edge technologies such as mass spectrometry (MS), nuclear magnetic resonance (NMR), and chromatography to characterize peptides to accurately determine their structures as a new peptide drug.",
             icon: Microscope,
         },
         {
             title: "Assessments of the Mechanisms of Action and Bioactivity of Peptides",
+            iconSrc: "/images/subject-matter-experts/peptides/Assessments-of-the-Mechanisms-of-Action-and-Bioactivity-of-Peptides.webp",
             description: "Investigating how the mechanism of action of a peptide interacts with receptors, enzymes and other biological substrates to determine the therapeutic potential and mechanism of action of the peptide.",
             icon: FlaskConical,
         },
         {
             title: "Preclinical/Clinical Study Support",
+            iconSrc: "/images/subject-matter-experts/peptides/Preclinical_Clinical-Study-Support.webp",
             description: "We design and conduct preclinical/clinical studies that examine the safety, efficacy, and pharmacokinetic properties of peptide products.",
             icon: FileSearch,
         },
         {
             title: "Assessment of Immunogenicity and Toxicology",
+            iconSrc: "/images/subject-matter-experts/peptides/Assessment-of-Immunogenicity-and-Toxicology.webp",
             description: "Using comprehensive methods of assessment to predict the potential for an immune or toxic reaction to peptide drugs in humans.",
             icon: ShieldCheck,
         },
         {
             title: "Regulatory/Compliance Support",
+            iconSrc: "/images/subject-matter-experts/peptides/Regulatory_Compliance-Support.webp",
             description: "Providing guidance through the complex regulatory requirements that must be followed for peptide product approval, preparing the documentation necessary for regulatory approvals of peptide products and negotiating compliance with both national and international guidelines and standards.",
             icon: CheckCircle,
         }
@@ -69,56 +75,56 @@ export default function PeptidesPage() {
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: Layers,
             href: "/services/research-services/literature-review-and-gap"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: BookOpen,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Database,
             href: "/services/medical-data-collection"
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: ImageIcon,
             href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biomolecular-engineering/Research-Services.webp",
             icon: Search,
             href: "/services/research-services"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Layers,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: Send,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSpreadsheet,
             href: "/services/publication-support/journal-selection"
         }
@@ -171,7 +177,7 @@ export default function PeptidesPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white bg-[#a3c9bd]/30 flex items-center justify-center">
                             <Image
-                                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/peptides/Peptides.webp"
                                 alt="Peptide research and scientific support"
                                 fill
                                 priority
@@ -211,7 +217,13 @@ export default function PeptidesPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight, Plus, Minus } from 'lucide-react';
 
@@ -79,7 +80,7 @@ const editorsData = [
         experience: '15 years of experience',
         manuscripts: '120+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/machine-learning/Dr.-Aria-Bennett.webp"
     },
     {
         name: 'Dr. Ethan Morales',
@@ -87,7 +88,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '95+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/machine-learning/Dr.-Ethan-Morales.webp"
     },
     {
         name: 'Dr. Priya Nair',
@@ -95,7 +96,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '110+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/cancer-research/Dr.-Meera-Iyer-1.webp"
     }
 ];
 
@@ -185,7 +186,7 @@ export default function NeuroscienceTechniquesSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/neuroscience/Comprehensive-Support-for-Neuroscience-Research-Writing-and-Publication.webp"
                             alt="Neuroscience research setup"
                             className="w-full h-auto object-cover"
                         />
@@ -210,7 +211,7 @@ export default function NeuroscienceTechniquesSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/neuroscience/Molecular-and-Cellular-Neuroscience.webp"
                             alt="Journal of Neuroscience Research Cover"
                             className="w-full h-auto object-cover"
                         />

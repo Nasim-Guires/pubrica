@@ -74,41 +74,49 @@ export default function EmergingTrendsAndApplications() {
   const applications = [
     {
       title: "Software Development",
+            iconSrc: "/images/subject-matter-experts/algorithm/Software-Development.webp",
       desc: "efficient coding and optimising the system and/or application.",
       icon: Code2,
     },
     {
       title: "Artificial Intelligence",
+            iconSrc: "/images/subject-matter-experts/algorithm/Artificial-Intelligence.webp",
       desc: "developing machine learning and creating \"smart\" computers.",
       icon: Bot,
     },
     {
       title: "Data Science",
+            iconSrc: "/images/subject-matter-experts/algorithm/Data-Science.webp",
       desc: "analysis, statistical modelling, and visualisation of data.",
       icon: LineChart,
     },
     {
       title: "Cybersecurity",
+            iconSrc: "/images/subject-matter-experts/algorithm/Cybersecurity-1.webp",
       desc: "using cryptography and authenticating users to detect security threats.",
       icon: ShieldCheck,
     },
     {
       title: "Financial Markets",
+            iconSrc: "/images/subject-matter-experts/algorithm/Financial-Markets.webp",
       desc: "creating algorithms for trading and risk analysis.",
       icon: BarChart2,
     },
     {
       title: "Healthcare",
+            iconSrc: "/images/subject-matter-experts/algorithm/Healthcare.webp",
       desc: "analysing medical data and diagnosing patients.",
       icon: Stethoscope,
     },
     {
       title: "Transportation",
+            iconSrc: "/images/subject-matter-experts/algorithm/Transportation.webp",
       desc: "determining the best route and managing traffic.",
       icon: Navigation,
     },
     {
       title: "E-commerce",
+            iconSrc: "/images/subject-matter-experts/algorithm/E-commerce.webp",
       desc: "creating recommendation systems and optimising searches.",
       icon: ShoppingCart,
     },
@@ -120,8 +128,7 @@ export default function EmergingTrendsAndApplications() {
       name: "Dr. Robert Klein",
       degree: "PhD in Computer Science",
       flag: "🇺🇸",
-      avatar:
-        "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/algorithm/Dr.-Robert-Klein.webp",
       experience: "15 years of experience",
       manuscripts: "200+ manuscripts edited",
     },
@@ -129,8 +136,7 @@ export default function EmergingTrendsAndApplications() {
       name: "Dr. Ananya Iyer",
       degree: "PhD in Data Science",
       flag: "🇺🇸",
-      avatar:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/algorithm/Dr.-Ananya-Iyer-1.webp",
       experience: "12 years of experience",
       manuscripts: "180+ manuscripts edited",
     },
@@ -138,8 +144,7 @@ export default function EmergingTrendsAndApplications() {
       name: "Dr. David Chen",
       degree: "PhD in Computational Engineering",
       flag: "🇺🇸",
-      avatar:
-        "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/algorithm/Dr.-David-Chen.webp",
       experience: "11 years of experience",
       manuscripts: "150+ manuscripts edited",
     },
@@ -214,7 +219,13 @@ export default function EmergingTrendsAndApplications() {
               return (
                 <div key={idx} className="flex items-start gap-2.5">
                   <div className="p-1 bg-gray-100 text-gray-700 shrink-0 rounded">
-                    <AppIcon className="w-4 h-4" />
+                    {"iconSrc" in app && app.iconSrc ? (
+                      <span className="relative w-4 h-4 block">
+                        <Image src={app.iconSrc} alt="" fill className="object-contain" />
+                      </span>
+                    ) : (
+                      <AppIcon className="w-4 h-4" />
+                    )}
                   </div>
                   <p className="text-xs text-gray-700 leading-snug">
                     <span className="font-bold text-gray-900">{app.title}</span> – {app.desc}
@@ -227,7 +238,7 @@ export default function EmergingTrendsAndApplications() {
           {/* Workspace Image */}
           <div className="md:col-span-5 relative h-72 md:h-80 w-full rounded overflow-hidden border border-gray-200 shadow-sm">
             <Image
-              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800"
+              src="/images/subject-matter-experts/algorithm/Algorithm-1.webp"
               alt="Developer workstation with code on dual monitors"
               fill
               className="object-cover"
@@ -251,7 +262,7 @@ export default function EmergingTrendsAndApplications() {
         <div className="max-w-3xl mx-auto bg-white border border-gray-200 rounded p-5 shadow-sm text-left grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
           <div className="sm:col-span-4 relative h-56 w-full rounded overflow-hidden shadow">
             <Image
-              src="https://images.unsplash.com/photo-1532012164546-f43778668b3d?auto=format&fit=crop&q=80&w=600"
+              src="/images/subject-matter-experts/algorithm/Algorithm-Design-Analysis.webp"
               alt="Algorithms and Computation Journal Cover"
               fill
               className="object-cover"

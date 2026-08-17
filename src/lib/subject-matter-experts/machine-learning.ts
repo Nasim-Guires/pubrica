@@ -9,7 +9,9 @@ export const MACHINE_LEARNING_TESTIMONIALS: Testimonial[] = [
     authorRole: "Data Scientist",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. Alex Williams",
+      avatarSrc: "/images/subject-matter-experts/chemical-engineering/Dr-Ahmed-Khan.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "machine-learning-2",
@@ -19,7 +21,9 @@ export const MACHINE_LEARNING_TESTIMONIALS: Testimonial[] = [
     authorRole: "AI Researcher",
     authorLocation: "Spain",
     avatarLabel: "Portrait of Dr. Maria Lopez",
+      avatarSrc: "/images/subject-matter-experts/cancer-research/Dr.-Meera-Iyer-1.webp",
     flagLabel: "Spain flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
   {
     id: "machine-learning-3",
@@ -29,6 +33,8 @@ export const MACHINE_LEARNING_TESTIMONIALS: Testimonial[] = [
     authorRole: "Research Scientist",
     authorLocation: "India",
     avatarLabel: "Portrait of Dr. John Patel",
+      avatarSrc: "/images/subject-matter-experts/bioinformatics/Dr.-Samuel-DSouza.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/marketing-communication-content-development-service/Australia.webp",
   },
 ];

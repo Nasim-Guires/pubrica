@@ -20,46 +20,55 @@ export default function DentistryPage() {
     const disciplines = [
         {
             title: "Oral and Maxillofacial Surgery",
+            iconSrc: "/images/subject-matter-experts/dentistry/Oral-Pathology-and-Microbiology.png",
             description: "This branch focuses on surgical interventions involving the mouth, jaws, and facial structures. Our experts assist in preparing manuscripts and case reports on dental implants, trauma management, reconstructive surgery, orthognathic procedures, and oral pathology.",
             icon: Search
         },
         {
             title: "Prosthodontics",
+            iconSrc: "/images/subject-matter-experts/dentistry/Prosthodontics.png",
             description: "It deals with the restoration and replacement of missing teeth and oral structures. Our specialists offer research and publication support for topics such as implant prosthodontics, maxillofacial prosthetics, occlusion analysis, and aesthetic rehabilitation.",
             icon: TrendingUp
         },
         {
             title: "Endodontics",
+            iconSrc: "/images/subject-matter-experts/dentistry/Endodontics.png",
             description: "It involves the study and treatment of dental pulp and periradicular tissues. We support publications related to root canal therapy, pulp regeneration, periapical diseases, and advances in instrumentation and biomaterials.",
             icon: FileText
         },
         {
             title: "Periodontology",
+            iconSrc: "/images/subject-matter-experts/dentistry/Periodontology.png",
             description: "Explores the prevention, diagnosis, and treatment of periodontal diseases and peri-implant conditions. We help researchers present novel findings on periodontal regeneration, host modulation therapy, and microbiome analysis.",
             icon: Database
         },
         {
             title: "Orthodontics and Dentofacial Orthopaedics",
+            iconSrc: "/images/subject-matter-experts/dentistry/Orthodontics-and-Dentofacial-Orthopaedics.png",
             description: "This discipline focuses on the diagnosis and correction of malocclusion and craniofacial abnormalities. We provide publication assistance in digital orthodontics, clear aligner technology, 3D imaging, growth modification, and biomechanics.",
             icon: AlertTriangle
         },
         {
             title: "Paediatric and Preventive Dentistry",
+            iconSrc: "/images/subject-matter-experts/dentistry/Paediatric-and-Preventive-Dentistry.png",
             description: "Our paediatric dentistry experts specialize in behavioural management, caries prevention, pulp therapy, and special care dentistry for children. We support research on preventive protocols, fluoride therapies, and minimally invasive paediatric interventions, ensuring ethical and methodological accuracy.",
             icon: BarChart3
         },
         {
             title: "Oral Medicine and Radiology",
+            iconSrc: "/images/subject-matter-experts/dentistry/Oral-Medicine-and-Radiology.png",
             description: "This branch deals with the diagnosis and medical management of oral diseases and the interpretation of radiographic findings. Our support includes systematic reviews, case studies, and imaging-based research.",
             icon: FileSearch
         },
         {
             title: "Public Health in Dentistry",
+            iconSrc: "/images/subject-matter-experts/dentistry/Public-Health-in-DentistrY.png",
             description: "It addresses oral health promotion and disease prevention at the community level. Our writers and statisticians assist in epidemiological research, health policy analysis, survey design, and systematic reviews.",
             icon: Layers
         },
         {
             title: "Oral Pathology and Microbiology",
+            iconSrc: "/images/subject-matter-experts/dentistry/Oral-and-Maxillofacial-Surgery.png",
             description: "We support research in oral histopathology, molecular diagnostics, carcinogenesis, and biomarker discovery. Our experts provide analytical and editorial guidance for laboratory-based studies, emphasizing scientific rigor and reproducibility.",
             icon: Cpu
         }
@@ -69,56 +78,56 @@ export default function DentistryPage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: Search,
             href: "/services/research-services"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/research-services/scientific-writing/"
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Cpu,
             href: "/services/medical-data-collection/"
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: FileText,
             href: "/services/editing-and-translation"
         },
         {
             title: "Literature Review and",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: FileSearch,
             href: "/services/research-services/literature-review-and-gap"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: FileText,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: PenTool,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: Search,
             href: "/services/publication-support/journal-selection"
         }
@@ -172,7 +181,7 @@ export default function DentistryPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/dentistry/Comprehensive-Research-Writing-and-Publication-Support-in-Dentistry.webp"
                                 alt="Dentistry clinical examination visual"
                                 fill
                                 priority
@@ -212,7 +221,13 @@ export default function DentistryPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

@@ -20,46 +20,55 @@ export default function EnzymesPage() {
     const disciplines = [
         {
             title: "Enzyme Discovery and Characterization",
+            iconSrc: "/images/subject-matter-experts/enzymes/Enzyme-Discovery-and-Characterization.webp",
             description: "We focus on discovering and analysing novel enzymes, studying their kinetics and mechanisms. Our team aids researchers in manuscript writing, experimental protocols, and systematic reviews. We also support enzyme characterization for industrial and therapeutic applications.",
             icon: Search
         },
         {
             title: "Enzyme Engineering and Optimization",
+            iconSrc: "/images/subject-matter-experts/enzymes/Enzyme-Engineering-and-Optimization-1.webp",
             description: "Enzyme engineering focuses on enhancing enzyme activity, stability, and specificity. We support protein engineering, directed evolution, and genetic modifications for efficient industrial and therapeutic enzymes. Our team helps researchers craft impactful, well-structured publications.",
             icon: TrendingUp
         },
         {
             title: "Industrial Biotechnology and Enzymes",
+            iconSrc: "/images/subject-matter-experts/enzymes/Industrial-Biotechnology-and-Enzymes.webp",
             description: "This discipline explores enzyme applications in biofuels, food production, and waste management. We assist with writing and editing research on sustainable, efficient enzyme-based processes. Our editorial services ensure complex research is accessible and publication ready.",
             icon: FileText
         },
         {
             title: "Enzyme-Based Therapeutics",
+            iconSrc: "/images/subject-matter-experts/enzymes/Enzyme-Based-Therapeutics.webp",
             description: "Enzyme-based therapies are gaining traction for treating deficiencies, metabolic disorders, and cancers. We provide editorial and analytical support for studies on enzyme replacement therapies, inhibitors, and gene therapy. Our team helps communicate the clinical impact and potential of enzyme innovations.",
             icon: Database
         },
         {
             title: "Enzyme Mechanisms and Biochemistry",
+            iconSrc: "/images/subject-matter-experts/enzymes/Enzyme-Mechanisms-and-Biochemistry.webp",
             description: "We study the molecular mechanisms behind enzyme catalysis, including substrate interactions and reaction pathways. Our team supports researchers in presenting their findings clearly for publication in leading scientific journals.",
             icon: AlertTriangle
         },
         {
             title: "Enzyme Production and Purification",
+            iconSrc: "/images/subject-matter-experts/enzymes/Enzyme-Production-and-Purification.webp",
             description: "This discipline focuses on optimizing enzyme production and purification for commercial use. Our team helps design methods, document processes, and ensures clear presentation of technical details in research publications.",
             icon: Layers
         },
         {
             title: "Enzyme Diagnostics",
+            iconSrc: "/images/subject-matter-experts/enzymes/Enzyme-Diagnostics.webp",
             description: "We focus on diagnostic enzymes used in disease detection, including cancer, liver function, and genetic screening. Our experts assist with writing and reviewing research to ensure clear, professional presentation for peer-reviewed journals",
             icon: Cpu
         },
         {
             title: "Enzyme Regulation and Pathways",
+            iconSrc: "/images/subject-matter-experts/enzymes/Enzyme-Regulation-and-Pathways.webp",
             description: "We focus on enzyme regulation in cellular processes, including activity control, feedback mechanisms, and signalling pathways. Our team helps researchers publish clear manuscripts on how enzymes regulate key biological functions, from metabolism to gene expression.",
             icon: BarChart3
         },
         {
             title: "Enzyme Applications in Medicine",
+            iconSrc: "/images/subject-matter-experts/enzymes/Enzyme-Applications-in-Medicine.webp",
             description: "We support research on enzymes in drug design, enzyme replacement therapies, and enzyme inhibitors. Our team helps prepare clinical reports and publication-ready manuscripts that highlight enzymes' role in modern medicine.",
             icon: PenTool
         }
@@ -69,42 +78,42 @@ export default function EnzymesPage() {
         {
             title: "Publication Support",
             description: "Providing complete assistance from initial research planning to final manuscript submission ensuring high-quality deliverables throughout the publication process.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biomolecular-engineering/Publication-Support-1.webp",
             icon: FileText,
             href: "/services/publication-support"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/editing-and-translation"
         },
         {
             title: "Literature Review Services",
             description: "Providing comprehensive literature summaries, systematic reviews, and evidence mapping tailored to enzyme research topics.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Clinical-Literature-Review-Services.jpg",
             icon: FileSearch,
             href: "/services/research-services/literature-review-and-gap"
         },
         {
             title: "Manuscript Writing in Enzyme Research",
             description: "Developing high-quality manuscripts including original research, review articles, and short communications aligned with journal guidelines.",
-            image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: FileText,
             href: "/services/editing-and-translation/manuscript-editing"
         },
         {
             title: "Grant Writing Proposals",
             description: "Crafting scientifically strong enzyme-related grant proposals with clear objectives, methodology, and expected outcomes.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: Cpu,
             href: "/services/research-services/grant-writing"
         },
         {
             title: "Journal Selection & Submission Support",
             description: "Helping authors select high-impact journals related to enzymology and prepare manuscripts, figures, references, and cover letters for submission",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: Layers,
             href: "/services/publication-support/journal-selection"
         }
@@ -186,7 +195,7 @@ export default function EnzymesPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/enzymes/Enzymes.webp"
                                 alt="Enzyme research molecular visualization"
                                 fill
                                 priority
@@ -226,7 +235,13 @@ export default function EnzymesPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

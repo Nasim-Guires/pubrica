@@ -23,38 +23,44 @@ export default function BiomedicalEngineeringCompleteComponent() {
     const coreDisciplines = [
         {
             title: "Biomechanics",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Biomechanics.webp",
             desc: "Biomechanics applies mechanical engineering principles to biological systems. It helps analyse movement, tissue mechanics,",
-            img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600",
+            img: "/images/subject-matter-experts/biomedical-engineering/Biomechanics.webp",
             icon: Activity,
         },
         {
             title: "Biomaterials and Tissue Engineering",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Biomaterials-and-Tissue-Engineering.webp",
             desc: "This discipline focuses on biocompatible materials used in implants, prosthetics, regenerative",
-            img: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=600",
+            img: "/images/subject-matter-experts/biomedical-engineering/Biomaterials-and-Tissue-Engineering.webp",
             icon: FileText,
         },
         {
             title: "Biomedical Imaging and Instrumentation",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Biomedical-Imaging-and-Instrumentation.webp",
             desc: "Innovations in MRI, CT, PET, ultrasound, and optical imaging rely heavily on engineering",
-            img: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600",
+            img: "/images/subject-matter-experts/biomedical-engineering/Biomedical-Imaging-and-Instrumentation.webp",
             icon: Edit3,
         },
         {
             title: "Medical Devices and Therapeutic Technologies",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Medical-Devices-and-Therapeutic-Technologies.webp",
             desc: "From ventilators and infusion pumps to surgical robots and neuroprosthetics, medical device",
-            img: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=600",
+            img: "/images/subject-matter-experts/biomedical-engineering/Medical-Devices-and-Therapeutic-Technologies.webp",
             icon: Cpu,
         },
         {
             title: "Bioinformatics and Computational Biology",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Bioinformatics-and-Computational-Biology.webp",
             desc: "This field involves analysing biological datasets, developing predictive models, and supporting",
-            img: "https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&q=80&w=600",
+            img: "/images/subject-matter-experts/biomedical-engineering/Bioinformatics-and-Computational-Biology.webp",
             icon: Stethoscope,
         },
         {
             title: "Rehabilitation Engineering",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/RehabilitationEngineering.webp",
             desc: "It develops technologies such as exoskeletons, prosthetics, communication tools, and therapeutic robots to enhance",
-            img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=600",
+            img: "/images/subject-matter-experts/biomedical-engineering/Biomedical-Engineering.webp",
             icon: HeartPulse,
         },
     ];
@@ -62,38 +68,44 @@ export default function BiomedicalEngineeringCompleteComponent() {
     const researchServices = [
         {
             title: "Research Services",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Biomechanics.webp",
             desc: "Guidance on project planning, execution, and data analysis.",
-            img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=600",
+            img: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: FileText,
         },
         {
             title: "Editing & Proofreading",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Biomechanics.webp",
             desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600",
+            img: "/images/subject-matter-experts/biomedical-engineering/RehabilitationEngineering.webp",
             icon: Edit3,
         },
         {
             title: "Peer-Reviewing Services",
+            iconSrc: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
             desc: "Comprehensive review to refine and validate your research pre-submission",
-            img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
+            img: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
             icon: CheckCircle2,
         },
         {
             title: "Publication Support",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Medical-Devices-and-Therapeutic-Technologies.webp",
             desc: "Complete support for publishing in high-impact journals, translating concepts into incisive reports.",
-            img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
+            img: "/images/subject-matter-experts/biomolecular-engineering/Publication-Support-1.webp",
             icon: Wrench,
         },
         {
             title: "Scientific Writing",
+            iconSrc: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             desc: "Crafting clear, precise, and publication-ready research manuscripts.",
-            img: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=600",
+            img: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: BookOpen,
         },
         {
             title: "Journal Selection",
+            iconSrc: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             desc: "Strategic journal selection to maximize publication success.",
-            img: "https://images.unsplash.com/photo-1505664186595-dfcb1531e089?auto=format&fit=crop&q=80&w=600",
+            img: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: Activity,
         },
     ];
@@ -128,31 +140,37 @@ export default function BiomedicalEngineeringCompleteComponent() {
     const applications = [
         {
             title: "Diagnostic and Imaging Solutions",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Diagnostic-and-Imaging-Solutions.webp",
             desc: "Biomedical innovations enable accurate diagnostics through imaging systems, biosensors, and point-of-care devices.",
             icon: Activity,
         },
         {
             title: "Therapeutic and Surgical Technologies",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Medical-Devices-and-Therapeutic-Technologies.webp",
             desc: "From implants to sophisticated robotic surgical systems, therapeutic technologies are central to improving clinical outcomes.",
             icon: Cpu,
         },
         {
             title: "Healthcare Technology and Equipment Management",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Healthcare-Technology-and-Equipment-Management.webp",
             desc: "Biomedical engineers ensure safe operation, calibration, and optimisation of hospital equipment.",
             icon: Stethoscope,
         },
         {
             title: "Drug Delivery and Biopharmaceutical Research",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Drug-Delivery-and-Biopharmaceutical-Research.webp",
             desc: "Biomedical engineering supports targeted therapies, controlled drug release systems, and advanced bioprocessing techniques.",
             icon: HeartPulse,
         },
         {
             title: "Assistive and Rehabilitation Technologies",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Assistive-and-Rehabilitation-Technologies.webp",
             desc: "Prosthetics, orthotics, exoskeletons, and brain-computer interfaces significantly enhance patient independence.",
             icon: ShieldCheck,
         },
         {
             title: "Public Health and Predictive Healthcare Tools",
+            iconSrc: "/images/subject-matter-experts/biomedical-engineering/Public-Health-and-Predictive-Healthcare-Tools.webp",
             desc: "Wearables, mobile health apps, and AI-based tools help track health trends and support preventive care.",
             icon: Award,
         },
@@ -164,21 +182,21 @@ export default function BiomedicalEngineeringCompleteComponent() {
             role: "PhD in Biomedical Engineering",
             experience: "12 years of experience",
             manuscripts: "150+ manuscripts edited",
-            img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300",
+            img: "/images/subject-matter-experts/biomedical-engineering/Dr.-Aidan-Matthews-1.webp",
         },
         {
             name: "Dr. Sophia Raman",
             role: "PhD in Biomedical Engineering",
             experience: "10 years of experience",
             manuscripts: "145+ manuscripts edited",
-            img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300",
+            img: "/images/subject-matter-experts/biomedical-engineering/Dr.-Sophia-Raman-1.webp",
         },
         {
             name: "Dr. Ethan Varghese",
             role: "PhD in Biomedical Engineering",
             experience: "13 years of experience",
             manuscripts: "170+ manuscripts edited",
-            img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+            img: "/images/subject-matter-experts/biomedical-engineering/Dr.-Ethan-Varghese-1.webp",
         },
     ];
 
@@ -219,7 +237,7 @@ export default function BiomedicalEngineeringCompleteComponent() {
 
                                     <div className="relative p-5 pt-8 flex-1 flex flex-col items-center text-center bg-white">
                                         <div className="absolute -top-7 bg-white p-3 rounded-full shadow-md border border-gray-100 transition-all duration-300 group-hover:bg-[#0d3630] group-hover:text-white group-hover:border-[#0d3630]">
-                                            <Icon className="w-5 h-5 text-[#0d3630] transition-colors duration-300 group-hover:text-white" />
+                                            {(item as any).iconSrc ? <span className="relative w-6 h-6 shrink-0"><Image src={(item as any).iconSrc} alt="" fill className="object-contain" /></span> : <Icon className="w-5 h-5 text-[#0d3630] transition-colors duration-300 group-hover:text-white" />}
                                         </div>
 
                                         <h3 className="font-bold text-[#0d3630] text-sm mb-1 transition-colors duration-300 group-hover:text-emerald-800">
@@ -313,7 +331,7 @@ export default function BiomedicalEngineeringCompleteComponent() {
 
                         <div className="lg:col-span-5 relative h-64 md:h-80 w-full rounded-xl overflow-hidden shadow-md">
                             <Image
-                                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800"
+                                src="/images/subject-matter-experts/algorithm/Editing-Proofreading.png"
                                 alt="Biomedical Laboratory Research"
                                 fill
                                 className="object-cover"

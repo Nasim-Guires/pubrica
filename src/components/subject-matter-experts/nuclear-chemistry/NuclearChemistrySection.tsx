@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight } from 'lucide-react';
 
@@ -65,7 +66,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '150+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/food-science/Prof.-Daniel-Hughes.webp"
     },
     {
         name: 'Dr. Priya Verma',
@@ -73,7 +74,7 @@ const editorsData = [
         experience: '9 years of experience',
         manuscripts: '120+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/nuclear-chemistry/Dr.-Priya-Verma.webp"
     },
     {
         name: 'Dr. Kevin Thomas',
@@ -81,7 +82,7 @@ const editorsData = [
         experience: '11 years of experience',
         manuscripts: '140+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/nuclear-chemistry/Dr.-Kevin-Thomas.webp"
     }
 ];
 
@@ -119,7 +120,7 @@ export default function NuclearChemistrySection() {
 
                     <div className="lg:col-span-5 rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/nuclear-chemistry/Nuclear-Chemistry.webp"
                             alt="Nuclear chemistry research setup"
                             className="w-full h-auto object-cover"
                         />
@@ -148,7 +149,7 @@ export default function NuclearChemistrySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/nuclear-chemistry/Radiochemistry-1.webp"
                             alt="Radiation Physics and Chemistry Journal Cover"
                             className="w-full h-auto object-cover"
                         />

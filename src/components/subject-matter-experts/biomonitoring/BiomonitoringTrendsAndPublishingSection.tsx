@@ -57,36 +57,43 @@ export default function BiomonitoringTrendsAndPublishingSection() {
     const applications = [
         {
             title: "Public Health Surveillance",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Human-Feed-Biomonitoring.webp",
             desc: "Used to detect population-level exposure trends, such as blood lead levels or pesticide residues, supporting preventive health policies.",
             icon: Users,
         },
         {
             title: "Environmental Impact Assessment",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Environmental-Impact-Assessment.webp",
             desc: "Biomonitoring helps evaluate pollution sources, ecological damage, and recovery following remediation programs.",
             icon: Leaf,
         },
         {
             title: "Occupational Health Management",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Occupational-Health-Management.webp",
             desc: "Regular biomonitoring of workers in industries like mining, agriculture, and manufacturing ensures safety and compliance with exposure limits.",
             icon: ShieldAlert,
         },
         {
             title: "Drug and Chemical Safety Evaluation",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Drug-and-Chemical-Safety-Evaluation.webp",
             desc: "Used in preclinical and post-market studies to assess the bioavailability and potential toxicity of chemicals and pharmaceuticals.",
             icon: FlaskConical,
         },
         {
             title: "Risk Communication and Policy Development",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Risk-Communication-and-Policy-Development.webp",
             desc: "Provides evidence for policymakers to establish or revise environmental and occupational standards.",
             icon: FileCheck,
         },
         {
             title: "Wildlife Conservation and Ecosystem Protection",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Wildlife-Conservation-and-Ecosystem-Protection.webp",
             desc: "Monitoring bioindicators such as fish, amphibians, and lichens helps assess ecosystem health and biodiversity changes due to pollution.",
             icon: Trees,
         },
         {
             title: "Climate and Global Change Studies",
+            iconSrc: "/images/subject-matter-experts/biomonitoring/Climate-and-Global-Change-Studies.webp",
             desc: "Tracks the impact of global environmental changes, such as temperature shifts and pollution transport, on biological systems.",
             icon: Globe2,
         },
@@ -98,21 +105,21 @@ export default function BiomonitoringTrendsAndPublishingSection() {
             role: "PhD in Environmental Toxicology",
             experience: "15 years of experience",
             manuscripts: "200+ manuscripts edited",
-            avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200",
+            avatar: "/images/subject-matter-experts/biomonitoring/Dr.-Emily-Carter-1.webp",
         },
         {
             name: "Dr. Rajesh Nair",
             role: "PhD in Biochemistry",
             experience: "12 years of experience",
             manuscripts: "170+ manuscripts edited",
-            avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+            avatar: "/images/subject-matter-experts/biomonitoring/Dr.-Rajesh-Nair.webp",
         },
         {
             name: "Dr. Laura Mitchell",
             role: "PhD in Environmental Health Sciences",
             experience: "18 years of experience",
             manuscripts: "210+ manuscripts edited",
-            avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200",
+            avatar: "/images/subject-matter-experts/biomonitoring/Dr.-Laura-Fischer.webp",
         },
     ];
 
@@ -202,7 +209,7 @@ export default function BiomonitoringTrendsAndPublishingSection() {
                     <div className="lg:col-span-5 flex justify-center sticky top-6">
                         <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-md border border-gray-200">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=800"
+                                src="/images/subject-matter-experts/biomonitoring/Environmental-Biomonitoring.webp"
                                 alt="Laboratory Microscope Analysis"
                                 fill
                                 className="object-cover"
@@ -226,7 +233,7 @@ export default function BiomonitoringTrendsAndPublishingSection() {
                 <div className="bg-white border border-gray-200 rounded-md p-6 shadow-sm flex flex-col md:flex-row gap-6 items-center">
                     <div className="relative w-40 h-52 shrink-0 border border-gray-200 shadow-sm rounded overflow-hidden bg-gray-50">
                         <Image
-                            src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/biomonitoring/Human-Feed-Biomonitoring.webp"
                             alt="Atmosphere Journal Cover"
                             fill
                             className="object-cover"

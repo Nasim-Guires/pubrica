@@ -22,26 +22,31 @@ export default function BiopolymersPage() {
     const disciplines = [
         {
             title: "Structural  Biopolymers",
+            iconSrc: "/images/subject-matter-experts/biopolymers/Structural-Biopolymers.webp",
             description: "Focused on naturally occurring polymers such as cellulose, chitin, starch, lignin, collagen, keratin, and alginate. We assist researchers in exploring molecular composition, functional properties, chemical modifications, and structural performance for industrial and biomedical applications.",
             icon: Atom
         },
         {
             title: "Functional Biopolymers",
+            iconSrc: "/images/subject-matter-experts/biopolymers/Structural-Biopolymers.webp",
             description: "Covering active biomaterials and polymers tailored for functionality such as antimicrobial activity, drug delivery, biocompatibility, or bioactivity. We assist in studies focusing on surface interactions, molecular engineering, and biological response.",
             icon: Cog
         },
         {
             title: "Biomedical and Biopolymeric Materials",
+            iconSrc: "/images/subject-matter-experts/biopolymers/Biomedical-and-Biopolymeric-Materials.webp",
             description: "Expert writing and research guidance for tissue engineering scaffolds, drug delivery systems, wound dressings, 3D-biopolymer printing, artificial organs, and implant materials, ensuring compliance with biomedical research ethics and scientific standards.",
             icon: Stethoscope
         },
         {
             title: "Biopolymers in Biomedical Engineering",
+            iconSrc: "/images/subject-matter-experts/biopolymers/Biopolymers-in-Biomedical-Engineering.webp",
             description: "A major research area covering hydrogels, scaffolds, tissue engineering materials, wound dressings, nanocomposites, and implant systems. We help researchers align results with safety standards, regulatory requirements, and clinical validation expectations.",
             icon: Activity
         },
         {
             title: "Biopolymer Synthesis and Processing",
+            iconSrc: "/images/subject-matter-experts/biopolymers/Biopolymer-Synthesis-and-Processing.webp",
             description: "Guidance on enzymatic, microbial, and plant-based synthesis of biodegradable polymers. We support detailed assessment of fermentation processes, molecular polymerization methods, and optimization of production for scale-up.",
             icon: TestTube2
         }
@@ -51,49 +56,49 @@ export default function BiopolymersPage() {
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews..",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: FileSearch
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Editing-Proofreading.webp",
             icon: FileText
         },
         {
             title: "Peer-Reviewing Services",
             description: "Comprehensive review to refine and validate your research pre-submission",
-            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
             icon: UserCheck
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Languages
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: PenTool
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
             icon: Send
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biopolymers/Graphical-Abstract.webp",
             icon: ImageIcon
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Selection.webp",
             icon: BookMarked
         }
     ];
@@ -153,7 +158,7 @@ export default function BiopolymersPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/biopolymers/Biopolymers.webp"
                                 alt="Biopolymer molecular model"
                                 fill
                                 priority
@@ -193,7 +198,13 @@ export default function BiopolymersPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

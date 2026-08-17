@@ -10,7 +10,9 @@ export const DIABETOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Endocrinologist",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. Amanda Riley",
+      avatarSrc: "/images/subject-matter-experts/diabetology/Dr.-Amanda-Riley.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
   {
     id: "diabetology-2",
@@ -20,7 +22,9 @@ export const DIABETOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Research Scientist",
     authorLocation: "Spain",
     avatarLabel: "Portrait of Dr. Luis Fernandez",
+      avatarSrc: "/images/subject-matter-experts/diabetology/r.-Luis-Fernandez.webp",
     flagLabel: "Spain flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
   },
   {
     id: "diabetology-3",
@@ -30,6 +34,8 @@ export const DIABETOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Academic Researcher",
     authorLocation: "UK",
     avatarLabel: "Portrait of Ms. Emily Carter",
+      avatarSrc: "/images/subject-matter-experts/cardiology/Dr.-Emily-Carter.webp",
     flagLabel: "UK flag",
+      flagSrc: "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
   },
 ];

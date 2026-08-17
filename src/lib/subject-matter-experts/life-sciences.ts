@@ -9,7 +9,9 @@ export const GENETICS_TESTIMONIALS: Testimonial[] = [
     authorRole: "Geneticist",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. Kevin Lee",
+      avatarSrc: "/images/subject-matter-experts/food-science/Prof.-Daniel-Hughes.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
   {
     id: "genetics-2",
@@ -19,7 +21,9 @@ export const GENETICS_TESTIMONIALS: Testimonial[] = [
     authorRole: "Clinical Researcher",
     authorLocation: "Spain",
     avatarLabel: "Portrait of Dr. Maria Gonzalez",
+      avatarSrc: "/images/subject-matter-experts/biochemistry/Dr.-Sophia-Patel.webp",
     flagLabel: "Spain flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
   },
   {
     id: "genetics-3",
@@ -29,6 +33,8 @@ export const GENETICS_TESTIMONIALS: Testimonial[] = [
     authorRole: "Biotech Researcher",
     authorLocation: "UAE",
     avatarLabel: "Portrait of Prof. Ahmed Khan",
+      avatarSrc: "/images/subject-matter-experts/enzymes/Dr.-Ethan-Matthews.webp",
     flagLabel: "UAE flag",
+      flagSrc: "/images/subject-matter-experts/biocomputing/uae.webp",
   },
 ];

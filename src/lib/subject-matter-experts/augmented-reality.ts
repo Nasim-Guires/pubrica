@@ -12,7 +12,9 @@ export const augmentedRealityTestimonials = {
       authorRole: "AR Researcher",
       authorLocation: "Japan",
       avatarLabel: "Portrait of Dr. Hiroshi Tanaka",
+      avatarSrc: "/images/subject-matter-experts/algorithm/Dr.-Hiroshi-Tanaka-1.webp",
       flagLabel: "Japan flag",
+      flagSrc: "/images/editing-and-translation/japan.png",
     },
     {
       id: "testimonial-2",
@@ -22,7 +24,9 @@ export const augmentedRealityTestimonials = {
       authorRole: "AR Scientist",
       authorLocation: "Russia",
       avatarLabel: "Portrait of Dr. Elena Petrova",
+      avatarSrc: "/images/subject-matter-experts/algorithm/Dr.-Elena-Petrova-1.webp",
       flagLabel: "Russia flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/russsia.webp",
     },
     {
       id: "testimonial-3",
@@ -32,7 +36,9 @@ export const augmentedRealityTestimonials = {
       authorRole: "Digital Systems Researcher",
       authorLocation: "USA",
       avatarLabel: "Portrait of Prof. Michael Anderson",
+      avatarSrc: "/images/subject-matter-experts/algorithm/Prof.-Michael-Anderson.webp",
       flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
   ],
 };

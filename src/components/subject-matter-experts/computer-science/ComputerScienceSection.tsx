@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight } from 'lucide-react';
 
@@ -75,7 +76,7 @@ const editorsData = [
         experience: '14 years of experience',
         manuscripts: '180+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/computer-science/Dr.-Kevin-Marshall.webp"
     },
     {
         name: 'Dr. Ananya Iyer',
@@ -83,7 +84,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '160+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/algorithm/Prof.-Michael-Anderson.webp"
     },
     {
         name: 'Dr. David Kim',
@@ -91,7 +92,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '140+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/animal-science/karrel.png"
     }
 ];
 
@@ -172,7 +173,7 @@ export default function ComputerScienceSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/computer-science/Algorithms-and-Data-Structures.webp"
                             alt="Applications of Computer Science"
                             className="w-full h-auto object-cover"
                         />
@@ -186,7 +187,7 @@ export default function ComputerScienceSection() {
                     <div className="lg:w-1/3 space-y-4">
                         <div className="relative">
                             <img
-                                src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=500"
+                                src="/images/subject-matter-experts/computer-science/Artificial-Intelligence-and-Machine-Learning.webp"
                                 alt="Areas of Study Monitor"
                                 className="w-full rounded-lg shadow-lg"
                             />
@@ -236,7 +237,7 @@ export default function ComputerScienceSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/computer-science/Software-Engineering.webp"
                             alt="IEEE Journal of Electrical and Electronics Engineering Cover"
                             className="w-full h-auto object-cover"
                         />

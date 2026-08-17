@@ -41,7 +41,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '150+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/data-mining/Dr.-Mark-Robinson.webp"
     },
     {
         name: 'Dr. Mark Thompson',
@@ -49,7 +49,7 @@ const editorsData = [
         experience: '9 years of experience',
         manuscripts: '120+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/data-mining/Dr.-Mark-Robinson.webp"
     },
     {
         name: 'Dr. Emily Zhao',
@@ -57,7 +57,7 @@ const editorsData = [
         experience: '7 years of experience',
         manuscripts: '95+ manuscripts edited',
         countryFlag: '🇦🇺',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/neurology/Dr.-Laura-Stein.webp"
     }
 ];
 
@@ -95,7 +95,7 @@ export default function TissueEngineeringSubjectMatterExperts() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-full h-[380px] sm:h-[420px] rounded-xl overflow-hidden shadow-md border border-gray-200 bg-[#a3c9bd]/25">
                             <Image
-                                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/tissue-engineering/Cell-Biology.webp"
                                 alt="Tissue Engineering Research Lab"
                                 fill
                                 className="object-cover"
@@ -128,7 +128,7 @@ export default function TissueEngineeringSubjectMatterExperts() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/tissue-engineering/Materials-Science.webp"
                             alt="Journal of Tissue Engineering and Regenerative Medicine Cover"
                             className="w-full h-auto object-cover"
                         />

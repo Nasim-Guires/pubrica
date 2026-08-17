@@ -12,7 +12,9 @@ export const bioinformaticsTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Assistant Professor",
       authorLocation: "India",
       avatarLabel: "Photo of Dr. Nikhil Sharma",
+      avatarSrc: "/images/subject-matter-experts/biophysics/Dr.-Alexander-Weiss.webp",
       flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
       id: "bioinformatics-testimonial-2",
@@ -22,7 +24,9 @@ export const bioinformaticsTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Senior Researcher",
       authorLocation: "Portugal",
       avatarLabel: "Photo of Dr. Maria Santos",
+      avatarSrc: "/images/subject-matter-experts/biochemistry/Dr.-Sophia-Patel.webp",
       flagLabel: "Portugal flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
     },
     {
       id: "bioinformatics-testimonial-3",
@@ -32,7 +36,9 @@ export const bioinformaticsTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Research Scientist",
       authorLocation: "South Korea",
       avatarLabel: "Photo of Dr. Laura Kim",
+      avatarSrc: "/images/subject-matter-experts/bioinformatics/Dr.-Laura-Kim.webp",
       flagLabel: "South Korea flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
   ],
 };

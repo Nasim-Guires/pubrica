@@ -71,7 +71,7 @@ const editorsData = [
         experience: '14 years of experience',
         manuscripts: '180+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/medicinal-chemistry/Dr.-Rahul-Mehta.webp"
     },
     {
         name: 'Dr. Elena Petrova',
@@ -79,7 +79,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '150+ manuscripts edited',
         countryFlag: '🇪🇸',
-        avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biochemistry/Dr.-Sophia-Patel.webp"
     },
     {
         name: 'Dr. Samuel Ochieng',
@@ -87,7 +87,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '130+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biophysics/Dr.-Alexander-Weiss.webp"
     }
 ];
 
@@ -119,36 +119,43 @@ export default function MedicinalChemistrySections() {
                         {[
                             {
                                 title: "AI and Machine Learning in Drug Design",
+            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/AI-and-Machine-Learning-in-Drug-Design.webp",
                                 desc: "Utilizing predictive algorithms to enable virtual screening of drug leads via lead optimization.",
                                 icon: Cpu
                             },
                             {
                                 title: "Fragment-Based Drug Discovery (FBDD)",
+            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Fragment-Based-Drug-Discovery-FBDD.webp",
                                 desc: "Allows the identification and extended development of chemical compound small fragments to create future therapeutic medications.",
                                 icon: BookOpen
                             },
                             {
                                 title: "Targeted Protein Degradation",
+            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Targeted-Protein-Degradation.webp",
                                 desc: "Development of PROTACs and Adhesive Molecules for Specific Proteins as therapeutic agents.",
                                 icon: Layers
                             },
                             {
                                 title: "Structure-Based Drug Design (SBDD)",
+            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Structure-Based-Drug-Design-SBDD.webp",
                                 desc: "Utilizes structure determination methods such as computer modelling and crystallography to generate ligands.",
                                 icon: FileText
                             },
                             {
                                 title: "Multi-Target Drug Design",
+            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Multi-Target-Drug-Design.webp",
                                 desc: "Multi-Target Design of Compounds that have a biological effect on more than one target Increases efficacy when they are developed into medication.",
                                 icon: Zap
                             },
                             {
                                 title: "Peptide and Macrocycle Therapeutics",
+            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Peptide-and-Macrocycle-Therapeutics.webp",
                                 desc: "Treatment Options for Biological Targets That Present Challenges in Drug Development",
                                 icon: ShieldCheck
                             },
                             {
                                 title: "Green and Sustainable Chemistry",
+            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Green-and-Sustainable-Chemistry.webp",
                                 desc: "Provide New Pathways for Developing Drug Development in an Environmentally Friendly Fashion with decreased use of chemicals",
                                 icon: Briefcase
                             }
@@ -172,7 +179,7 @@ export default function MedicinalChemistrySections() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-full h-[450px] rounded-xl overflow-hidden shadow-lg border border-gray-200">
                             <Image
-                                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800"
+                                src="/images/subject-matter-experts/medicinal-chemistry/Medicinal-Chemistry.webp"
                                 alt="Researchers working with a microscope"
                                 fill
                                 className="object-cover"
@@ -201,7 +208,7 @@ export default function MedicinalChemistrySections() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white relative h-[280px]">
                         <Image
-                            src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/medicinal-chemistry/Drug-Discovery-and-Lead-Identification.webp"
                             alt="RSC Medicinal Chemistry Journal Cover"
                             fill
                             className="object-cover"

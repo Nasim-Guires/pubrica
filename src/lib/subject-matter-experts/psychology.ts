@@ -9,7 +9,9 @@ export const psychologyTestimonials: Testimonial[] = [
     authorRole: "Assistant Professor",
     authorLocation: "India",
     avatarLabel: "Portrait of Dr. Priya Menon",
+      avatarSrc: "/images/subject-matter-experts/agrotechnology/Dr.-Priya-Menon.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "psychology-2",
@@ -19,7 +21,9 @@ export const psychologyTestimonials: Testimonial[] = [
     authorRole: "Neuropsychology Researcher",
     authorLocation: "UAE",
     avatarLabel: "Portrait of Dr. Ahmed Khan",
+      avatarSrc: "/images/subject-matter-experts/psychology/Dr.-Ahmed-Khan.webp",
     flagLabel: "UAE flag",
+      flagSrc: "/images/subject-matter-experts/biocomputing/uae.webp",
   },
   {
     id: "psychology-3",
@@ -29,6 +33,8 @@ export const psychologyTestimonials: Testimonial[] = [
     authorRole: "PhD Student",
     authorLocation: "Spain",
     avatarLabel: "Portrait of Maria Gonzalez",
+      avatarSrc: "/images/subject-matter-experts/psychology/Maria-Gonzalez.webp",
     flagLabel: "Spain flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
   },
 ];

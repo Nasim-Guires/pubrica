@@ -9,7 +9,9 @@ export const GENOMICS_TESTIMONIALS: Testimonial[] = [
     authorRole: "Genetic Research Scientist",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. Karen Mitchell",
+      avatarSrc: "/images/subject-matter-experts/biophysics/Dr.-Alexander-Weiss.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
   {
     id: "genomics-2",
@@ -19,7 +21,9 @@ export const GENOMICS_TESTIMONIALS: Testimonial[] = [
     authorRole: "Bioinformatics Researcher",
     authorLocation: "Brazil",
     avatarLabel: "Portrait of Dr. Maria Oliveira",
+      avatarSrc: "/images/subject-matter-experts/genomics/Dr.-Maria-Oliveira.webp",
     flagLabel: "Brazil flag",
+      flagSrc: "/images/research-services/systematic-review/brazil.png",
   },
   {
     id: "genomics-3",
@@ -29,6 +33,8 @@ export const GENOMICS_TESTIMONIALS: Testimonial[] = [
     authorRole: "Molecular Biologist",
     authorLocation: "Japan",
     avatarLabel: "Portrait of Dr. Hiroshi Tanaka",
+      avatarSrc: "/images/subject-matter-experts/algorithm/Dr.-Robert-Klein.webp",
     flagLabel: "Japan flag",
+      flagSrc: "/images/editing-and-translation/japan.png",
   },
 ];

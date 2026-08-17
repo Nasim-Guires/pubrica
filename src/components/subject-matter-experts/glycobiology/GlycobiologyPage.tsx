@@ -20,31 +20,37 @@ export default function GlycobiologyPage() {
     const disciplines = [
         {
             title: "Structural Glycobiology",
+            iconSrc: "/images/subject-matter-experts/glycobiology/Structural-Glycobiology.webp",
             description: "We specialize in elucidating the three-dimensional architecture of glycoconjugates using advanced analytical tools, including mass spectrometry, NMR spectroscopy, and X-ray crystallography. Understanding glycan structures is fundamental for linking carbohydrate sequences with biological function and for developing innovative therapeutic molecules.",
             icon: Search
         },
         {
             title: "Glycomics and Proteomics Integration",
+            iconSrc: "/images/subject-matter-experts/glycobiology/Glycomics-and-Pro-teomics-Integration.webp",
             description: "Our experts specialize in integrating glycomics with proteomics to understand protein–glycan interactions, post-translational modifications, and cellular communication. This synergy helps reveal molecular pathways critical in immune response, cell signalling, and disease mechanisms.",
             icon: TrendingUp
         },
         {
             title: "Glycoengineering and Synthetic Glycobiology",
+            iconSrc: "/images/subject-matter-experts/glycobiology/Glycoengineering-and-Synthetic-Glycobiology.webp",
             description: "This discipline involves designing and synthesizing glycoconjugates, glycoproteins, and engineered enzymes to enhance therapeutic efficacy. We support research in glycoengineering for vaccine development, antibody design, and biopharmaceutical optimization.",
             icon: FileText
         },
         {
             title: "Disease Glycobiology",
+            iconSrc: "/images/subject-matter-experts/glycobiology/Disease-Glycobiology.webp",
             description: "We explore the role of glycans in various diseases, including cancer, neurodegenerative disorders, infectious diseases, and autoimmune conditions. Our expertise helps researchers identify glycan-based biomarkers and therapeutic targets to advance diagnostic and treatment strategies.",
             icon: Database
         },
         {
             title: "Computational and and Systems Glycobiology",
+            iconSrc: "/images/subject-matter-experts/glycobiology/Computational-and-and-Systems-Glycobiology.webp",
             description: "Using bioinformatics tools and computational modelling, we decode complex glycan networks and simulate molecular interactions. This discipline enables predictive modelling, pathway mapping, and integration of large-scale glycomics datasets for systems-level understanding.",
             icon: AlertTriangle
         },
         {
             title: "Microbial and Plant Glycobiology",
+            iconSrc: "/images/subject-matter-experts/glycobiology/Microbial-and-Plant-Glycobiology.webp",
             description: "We delve into the study of glycan biosynthesis and modification in microorganisms and plants. This includes investigating glycoconjugates in bacterial pathogenesis, host–microbe interactions, and plant cell wall polysaccharides for agricultural and biotechnological applications.",
             icon: Layers
         },
@@ -54,56 +60,56 @@ export default function GlycobiologyPage() {
         {
             title: "Original Research Article",
             description: "End-to-end writing, statistical analysis, and formatting tailored to journal-specific guidelines",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: FileText,
             href: "/services/physician-writing-services/original-research-article"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Peer-Reviewing Services",
             description: "Comprehensive review to refine and validate your research pre-submission.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: FileSearch,
             href: "/services/medical-data-collection"
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Cpu,
             href: "/services/editing-and-translation"
         },
         {
             title: "Literature Review and Systematic Reviews",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Cpu,
             href: "/services/research-services/literature-review-and-gap"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Layers,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BarChart3,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSearch,
             href: "/services/publication-support/journal-selection"
         }
@@ -161,7 +167,7 @@ export default function GlycobiologyPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/glycobiology/Comprehensive-Research-Writing-and-Publication-Support-in-Glycobiology.webp"
                                 alt="Gynaecology research visualization"
                                 fill
                                 priority
@@ -201,7 +207,13 @@ export default function GlycobiologyPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

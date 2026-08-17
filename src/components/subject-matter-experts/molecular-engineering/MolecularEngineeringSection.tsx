@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight } from 'lucide-react';
 
@@ -91,7 +92,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '160+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/medical-animation/John-Miller.webp"
     },
     {
         name: 'Dr. Maya Chen',
@@ -99,7 +100,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '145+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/cancer-research/Dr.-Meera-Iyer-1.webp"
     },
     {
         name: 'Dr. Arjun Mehta',
@@ -107,7 +108,7 @@ const editorsData = [
         experience: '13 years of experience',
         manuscripts: '170+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/environmental-science/Dr.-Michael-Taylor.webp"
     }
 ];
 
@@ -189,7 +190,7 @@ export default function MolecularEngineeringSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/molecular-engineering/Molecular-Design-and-Synthesis.webp"
                             alt="Molecular engineering research setup"
                             className="w-full h-auto object-cover"
                         />
@@ -214,7 +215,7 @@ export default function MolecularEngineeringSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/molecular-engineering/Nanotechnology-1.webp"
                             alt="Journal of Cardiovascular Development and Disease Cover"
                             className="w-full h-auto object-cover"
                         />

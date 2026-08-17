@@ -10,7 +10,9 @@ export const FOOD_TECHNOLOGY_TESTIMONIALS: Testimonial[] = [
         authorLocation: "Italy",
         avatarLabel:
             "Portrait of Dr. Lina Moretti, Food Chemist from Italy",
+      avatarSrc: "/images/subject-matter-experts/food-science/Dr.-Lina-Moretti.webp",
         flagLabel: "Italy flag",
+      flagSrc: "/images/research-services/systematic-review/italy.png",
     },
     {
         id: "food-technology-2",
@@ -21,7 +23,9 @@ export const FOOD_TECHNOLOGY_TESTIMONIALS: Testimonial[] = [
         authorLocation: "Brazil",
         avatarLabel:
             "Portrait of Dr. Miguel Santos, Functional Foods Scientist from Brazil",
+      avatarSrc: "/images/subject-matter-experts/food-science/Dr.-Miguel-Santos-1.webp",
         flagLabel: "Brazil flag",
+      flagSrc: "/images/research-services/systematic-review/brazil.png",
     },
     {
         id: "food-technology-3",
@@ -32,6 +36,8 @@ export const FOOD_TECHNOLOGY_TESTIMONIALS: Testimonial[] = [
         authorLocation: "United Kingdom",
         avatarLabel:
             "Portrait of Professor Daniel Hughes, Food Technology Researcher from the United Kingdom",
+      avatarSrc: "/images/subject-matter-experts/food-science/Prof.-Daniel-Hughes.webp",
         flagLabel: "United Kingdom flag",
+      flagSrc: "/images/research-services/systematic-review/united-kingdom-.png",
     },
 ];

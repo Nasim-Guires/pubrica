@@ -12,7 +12,9 @@ export const biocomputingTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Computational Biologist",
       authorLocation: "Portugal",
       avatarLabel: "Photo of Dr. Sofia Mendes",
+      avatarSrc: "/images/subject-matter-experts/biocomputing/Dr.-Sofia-Mendes.webp",
       flagLabel: "Portugal Flag",
+      flagSrc: "/images/academic-editorial-services/Portugal-.png",
     },
     {
       id: "biocomputing-testimonial-2",
@@ -22,7 +24,9 @@ export const biocomputingTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Bioinformatics Research Scientist",
       authorLocation: "Japan",
       avatarLabel: "Photo of Dr. Kenji Yamamoto",
+      avatarSrc: "/images/subject-matter-experts/algorithm/Dr.-Hiroshi-Tanaka-1.webp",
       flagLabel: "Japan Flag",
+      flagSrc: "/images/editing-and-translation/japan.png",
     },
     {
       id: "biocomputing-testimonial-3",
@@ -32,7 +36,9 @@ export const biocomputingTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Systems Biology Researcher",
       authorLocation: "UAE",
       avatarLabel: "Photo of Dr. Ahmed Al-Faris",
+      avatarSrc: "/images/subject-matter-experts/big-data-hadoop/Prof.-A.-Williams.webp",
       flagLabel: "UAE Flag",
+      flagSrc: "/images/subject-matter-experts/biocomputing/uae.webp",
     },
   ],
 };

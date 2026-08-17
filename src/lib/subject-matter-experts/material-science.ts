@@ -12,7 +12,9 @@ export const clientTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Assistant Professor",
       authorLocation: "India",
       avatarLabel: "Dr. Praveen R profile image",
+      avatarSrc: "/images/subject-matter-experts/material-science/Dr.-Praveen-R-1.webp",
       flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
       id: "testimonial-2",
@@ -22,7 +24,9 @@ export const clientTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Materials Scientist",
       authorLocation: "Japan",
       avatarLabel: "Dr. Hiroko S profile image",
+      avatarSrc: "/images/subject-matter-experts/material-science/Dr.-Hiroko-S-1.webp",
       flagLabel: "Japan flag",
+      flagSrc: "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
     },
     {
       id: "testimonial-3",
@@ -32,7 +36,9 @@ export const clientTestimonialsData: ClientTestimonialsProps = {
       authorRole: "PhD Research Scholar",
       authorLocation: "United Kingdom",
       avatarLabel: "Maria L profile image",
+      avatarSrc: "/images/subject-matter-experts/material-science/Maria-L-1.webp",
       flagLabel: "United Kingdom flag",
+      flagSrc: "/images/editing-and-translation/japan.png",
     },
   ],
 };

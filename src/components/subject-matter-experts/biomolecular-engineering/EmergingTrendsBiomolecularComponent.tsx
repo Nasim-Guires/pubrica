@@ -44,26 +44,31 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
   const applications = [
     {
       title: "Healthcare",
+            iconSrc: "/images/subject-matter-experts/algorithm/Healthcare.webp",
       desc: "Development of targeted biologics, vaccines, and personalized medicine tools.",
       icon: HeartPulse,
     },
     {
       title: "Industrial Biotechnology",
+            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Industrial-Biotechnology-1.webp",
       desc: "Biosynthesis of chemicals, materials, and environmentally friendly alternatives.",
       icon: Factory,
     },
     {
       title: "Agriculture",
+            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Agriculture.webp",
       desc: "Engineering stress-tolerant crops, biosensors for soil health, and microbial inoculants.",
       icon: Sprout,
     },
     {
       title: "Environmental Technologies",
+            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Environmental-Technologies.webp",
       desc: "Bioremediation, pollutant degradation, and microbial fuel cells.",
       icon: Leaf,
     },
     {
       title: "Energy",
+            iconSrc: "/images/subject-matter-experts/biomolecular-engineering/Energy.webp",
       desc: "Biofuel production, hydrogen generation, and metabolic design for renewable energy pathways.",
       icon: Zap,
     },
@@ -75,21 +80,21 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
       role: "PhD in Biomolecular Engineering",
       experience: "12 years of experience",
       manuscripts: "150+ manuscripts edited",
-      img: "https://images.unsplash.com/photo-1594824813578-831d62e15bc9?auto=format&fit=crop&q=80&w=300",
+      img: "/images/subject-matter-experts/biomolecular-engineering/Dr.-Evelyn-Carter.webp",
     },
     {
       name: "Dr. Maya Chen",
       role: "PhD in Chemical & Biomolecular Engineering",
       experience: "10 years of experience",
       manuscripts: "145+ manuscripts edited",
-      img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300",
+      img: "/images/subject-matter-experts/biomolecular-engineering/Dr.-Maya-Chen.webp",
     },
     {
       name: "Dr. Arjun Mehta",
       role: "PhD in Biomolecular Engineering",
       experience: "13 years of experience",
       manuscripts: "170+ manuscripts edited",
-      img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300",
+      img: "/images/subject-matter-experts/biomonitoring/Dr.-Arjun-Mehta-1.webp",
     },
   ];
 
@@ -188,7 +193,7 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
 
             <div className="lg:col-span-5 relative h-64 md:h-80 w-full rounded-xl overflow-hidden shadow-md">
               <Image
-                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=800"
+                src="/images/subject-matter-experts/biomolecular-engineering/Biomolecular-Engineering.webp"
                 alt="Biomolecular Structure"
                 fill
                 className="object-cover"

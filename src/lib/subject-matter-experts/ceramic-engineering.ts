@@ -12,7 +12,9 @@ export const ceramicEngineeringTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Materials Scientist",
       authorLocation: "India",
       avatarLabel: "Portrait of Dr. Ananya Rao",
+      avatarSrc: "/images/subject-matter-experts/ceramic-engineering/Dr.-Jennifer-Clark.webp",
       flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
       id: "ceramic-engineering-testimonial-2",
@@ -22,7 +24,9 @@ export const ceramicEngineeringTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Ceramic Engineering Researcher",
       authorLocation: "Spain",
       avatarLabel: "Portrait of Prof. Michael Zhang",
+      avatarSrc: "/images/subject-matter-experts/ceramic-engineering/Michael-Lee.webp",
       flagLabel: "Spain flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
     },
     {
       id: "ceramic-engineering-testimonial-3",
@@ -32,7 +36,9 @@ export const ceramicEngineeringTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Industrial Research Scientist",
       authorLocation: "United States",
       avatarLabel: "Portrait of Dr. Rajesh Iyer",
+      avatarSrc: "/images/subject-matter-experts/ceramic-engineering/Dr.-Olivia-Harris.webp",
       flagLabel: "United States flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
   ],
 };

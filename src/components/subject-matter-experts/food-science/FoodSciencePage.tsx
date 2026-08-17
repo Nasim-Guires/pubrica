@@ -20,31 +20,37 @@ export default function FoodSciencePage() {
     const disciplines = [
         {
             title: "Food Chemistry",
+            iconSrc: "/images/subject-matter-experts/food-science/Food-Chemistry.webp",
             description: "Understanding the chemical composition, reactions, and interactions of food components is fundamental to food science. Our services cover research on nutrients, additives, flavours, preservatives, and bioactive compounds, ensuring accurate analysis, data interpretation, and manuscript preparation.",
             icon: Search
         },
         {
             title: "Food Microbiology",
+            iconSrc: "/images/subject-matter-experts/food-science/Food-Microbiology.webp",
             description: "Food safety and quality are closely linked to microbial activity. We support research in microbial identification, foodborne pathogens, probiotics, fermentation processes, and the prevention of spoilage. Our experts help ensure that your studies meet global publication standards in microbiological analysis, while offering reliable food microbiology editing services.",
             icon: TrendingUp
         },
         {
             title: "Food Processing and Engineering",
+            iconSrc: "/images/subject-matter-experts/food-science/Food-Processing-and-Engineering.webp",
             description: "Innovation in food processing and engineering is crucial for enhancing shelf life, texture, flavour, and nutritional quality. Our team assists in research related to thermal processing, preservation techniques, packaging, and novel processing technologies, transforming complex experiments into clear, scientifically robust publications.",
             icon: FileText
         },
         {
             title: "Nutrition and Functional Foods",
+            iconSrc: "/images/subject-matter-experts/food-science/Nutrition-and-Functional-Foods.webp",
             description: "Research on dietary impact, bioavailability of nutrients, and functional foods is central to advancing human health. Our team assists in analysing nutritional profiles, functional bioactive compounds, and health claims, ensuring manuscripts are scientifically accurate and publication-ready.",
             icon: Database
         },
         {
             title: "Food Safety and Regulatory Compliance",
+            iconSrc: "/images/subject-matter-experts/food-science/Food-Safety-and-Regulatory-Compliance.webp",
             description: "Compliance with national and international food safety standards is critical. We guide researchers on hazard analysis, risk assessment, food legislation, labelling, and regulatory compliance, helping ensure that your publications meet ethical and legal requirements.",
             icon: AlertTriangle
         },
         {
             title: "Food Biotechnology",
+            iconSrc: "/images/subject-matter-experts/food-science/Food-Biotechnology.webp",
             description: "Emerging technologies in biotechnology are revolutionizing the food industry. We provide guidance in food biotechnology, including genetic engineering, enzyme technology, and fermentation science, helping researchers explore innovative solutions for sustainable and functional food products.",
             icon: Layers
         }
@@ -54,56 +60,56 @@ export default function FoodSciencePage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: FileText,
             href: "/services/research-services"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/editing-and-translation"
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: FileSearch,
             href: "/services/medical-data-collection/"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: Cpu,
             href: "/services/research-services/scientific-writing   "
         },
         {
             title: "Artwork Editing",
             description: "Professional visuals for your figures, tables, and graphical abstracts.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: Cpu,
             href: "/services/publication-support/art-work-preparation"
         },
         {
             title: "Journal Formatting",
             description: "Tailored manuscript formatting to meet specific journal guidelines.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Layers,
             href: "/services/publication-support/journal-manuscript-formatting-services"
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BarChart3,
             href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSearch,
             href: "/services/publication-support/journal-selection"
         }
@@ -156,7 +162,7 @@ export default function FoodSciencePage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/food-science/Food-Science.webp"
                                 alt="Food science research visualization"
                                 fill
                                 priority
@@ -196,7 +202,13 @@ export default function FoodSciencePage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

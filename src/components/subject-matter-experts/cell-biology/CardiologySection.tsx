@@ -93,7 +93,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '120+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/cell-biology/Dr.-Sarah-Mitchell.webp"
     },
     {
         name: 'Dr. Emily Carter',
@@ -101,7 +101,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '95+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1594824813566-78a9c0490b4d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/cardiology/Dr.-Emily-Carter.webp"
     },
     {
         name: 'Dr. Jonathan Reed',
@@ -109,7 +109,7 @@ const editorsData = [
         experience: '15 years of experience',
         manuscripts: '140+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/cell-biology/Dr.-Jonathan-Reed.webp"
     }
 ];
 
@@ -235,7 +235,7 @@ export default function CardiologySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <Image
-                            src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/cell-biology/Comprehensive-Research-Writing-and-Publication-Support-in-Cell-Biology.webp"
                             alt="Nature Cell Biology Journal Cover"
                             width={224}
                             height={300}

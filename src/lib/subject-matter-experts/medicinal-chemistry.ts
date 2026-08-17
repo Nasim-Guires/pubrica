@@ -9,7 +9,9 @@ export const MEDICINAL_CHEMISTRY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Medicinal Chemist",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. Priya Menon",
+      avatarSrc: "/images/subject-matter-experts/agrotechnology/Dr.-Priya-Menon.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
   {
     id: "medicinal-chemistry-2",
@@ -19,7 +21,9 @@ export const MEDICINAL_CHEMISTRY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Drug Discovery Scientist",
     authorLocation: "Japan",
     avatarLabel: "Portrait of Dr. Hiroshi Nakamura",
+      avatarSrc: "/images/subject-matter-experts/medicinal-chemistry/Dr.-Hiroshi-Nakamura.webp",
     flagLabel: "Japan flag",
+      flagSrc: "/images/editing-and-translation/japan.png",
   },
   {
     id: "medicinal-chemistry-3",
@@ -29,6 +33,8 @@ export const MEDICINAL_CHEMISTRY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Computational Chemist",
     authorLocation: "Italy",
     avatarLabel: "Portrait of Dr. Elena Rossi",
+      avatarSrc: "/images/subject-matter-experts/medicinal-chemistry/Dr.-Elena-Rossi.webp",
     flagLabel: "Italy flag",
+      flagSrc: "/images/research-services/systematic-review/italy.png",
   },
 ];

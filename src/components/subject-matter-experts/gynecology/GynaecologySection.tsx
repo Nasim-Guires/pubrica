@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight, Plus, Minus } from 'lucide-react';
 
@@ -81,7 +82,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '95+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/gynecology/Dr.-Alicia-Fernandez.webp"
     },
     {
         name: 'Dr. Meera Krishnan',
@@ -89,7 +90,7 @@ const editorsData = [
         experience: '13 years of experience',
         manuscripts: '120+ manuscripts edited',
         countryFlag: '🇮🇳',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biopolymers/Dr.-Ananya-Krishnan-1.webp"
     },
     {
         name: 'Dr. James Holloway',
@@ -97,7 +98,7 @@ const editorsData = [
         experience: '14 years of experience',
         manuscripts: '130+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/gynecology/Dr.-James-Holloway.webp"
     }
 ];
 
@@ -184,7 +185,7 @@ export default function GynecologySection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/gynecology/Comprehensive-Research-Writing-and-Publication-Support-in-Gynaecology.webp"
                             alt="Gynaecology research setup"
                             className="w-full h-auto object-cover"
                         />
@@ -221,7 +222,7 @@ export default function GynecologySection() {
 
                         <div className="rounded-lg overflow-hidden shadow-xl border border-white/10">
                             <img
-                                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600"
+                                src="/images/subject-matter-experts/gynecology/Reproductive-Endocrinology-and-Infertility.webp"
                                 alt="Gynaecology medical setup"
                                 className="w-full h-auto object-cover"
                             />
@@ -247,7 +248,7 @@ export default function GynecologySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/gynecology/Gynaecologic-Oncology.webp"
                             alt="Journal of Obstetrics and Gynaecology Cover"
                             className="w-full h-auto object-cover"
                         />

@@ -9,7 +9,9 @@ export const COMPUTER_SCIENCE_TESTIMONIALS: Testimonial[] = [
     authorRole: "AI Researcher",
     authorLocation: "India",
     avatarLabel: "Portrait of Dr Rahul Mehta, AI Researcher from India",
+      avatarSrc: "/images/subject-matter-experts/computer-science/Dr-Rahul-Mehta.webp",
     flagLabel: "India country flag icon",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "computer-science-2",
@@ -19,7 +21,9 @@ export const COMPUTER_SCIENCE_TESTIMONIALS: Testimonial[] = [
     authorRole: "Data Scientist",
     authorLocation: "Portugal",
     avatarLabel: "Portrait of Dr Carlos Mendes, Data Scientist from Portugal",
+      avatarSrc: "/images/subject-matter-experts/ceramic-engineering/Dr.-Olivia-Harris.webp",
     flagLabel: "Portugal country flag icon",
+      flagSrc: "/images/academic-editorial-services/Portugal-.png",
   },
   {
     id: "computer-science-3",
@@ -29,6 +33,8 @@ export const COMPUTER_SCIENCE_TESTIMONIALS: Testimonial[] = [
     authorRole: "Software Engineer",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr Emily Carter, Software Engineer from the USA",
+      avatarSrc: "/images/subject-matter-experts/biochemistry/Dr.-Sophia-Patel.webp",
     flagLabel: "United States country flag icon",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
 ];

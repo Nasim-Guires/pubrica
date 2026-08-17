@@ -9,7 +9,9 @@ export const NUTRACEUTICALS_TESTIMONIALS: Testimonial[] = [
     authorRole: "Nutritionist",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. Amanda Collins",
+      avatarSrc: "/images/subject-matter-experts/peptides/Dr.-Emily-Roberts.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
   {
     id: "nutraceuticals-2",
@@ -19,7 +21,9 @@ export const NUTRACEUTICALS_TESTIMONIALS: Testimonial[] = [
     authorRole: "R&D Scientist",
     authorLocation: "India",
     avatarLabel: "Portrait of Mr. Rajesh Kumar",
+      avatarSrc: "/images/subject-matter-experts/environmental-science/Dr.-Michael-Taylor.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "nutraceuticals-3",
@@ -29,6 +33,8 @@ export const NUTRACEUTICALS_TESTIMONIALS: Testimonial[] = [
     authorRole: "Clinical Researcher",
     authorLocation: "Canada",
     avatarLabel: "Portrait of Dr. Samuel Lee",
+      avatarSrc: "/images/subject-matter-experts/nutraceuticals/Dr.-Samuel-Lee.webp",
     flagLabel: "Canada flag",
+      flagSrc: "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/canada-flag.png",
   },
 ];

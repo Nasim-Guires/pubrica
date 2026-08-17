@@ -58,7 +58,7 @@ export default function BiomedicalEngineeringHeroComponent() {
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative h-72 w-72 md:h-80 md:w-80 rounded-full overflow-hidden shadow-lg border-4 border-gray-100">
                 <Image
-                  src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800"
+                  src="/images/subject-matter-experts/biomedical-engineering/Biomedical-Engineering.webp"
                   alt="Biomedical Research and Healthcare Innovation"
                   fill
                   className="object-cover"

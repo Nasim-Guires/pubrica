@@ -9,7 +9,9 @@ export const NANOBIOTECHNOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Researcher, Biotechnology Institute",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. Emma Ross",
+      avatarSrc: "/images/subject-matter-experts/nanobiotechnology/Dr.-Emma-Ross.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
   {
     id: "nanobiotechnology-2",
@@ -19,7 +21,9 @@ export const NANOBIOTECHNOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Senior Scientist, Pharmaceutical Company",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. Noah James",
+      avatarSrc: "/images/subject-matter-experts/nanobiotechnology/Dr.-Noah-James.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
   },
   {
     id: "nanobiotechnology-3",
@@ -29,6 +33,8 @@ export const NANOBIOTECHNOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Principal Investigator, Nano biotech Innovations",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. Michael Liu",
+      avatarSrc: "/images/subject-matter-experts/computer-science/Dr-Rahul-Mehta.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
 ];

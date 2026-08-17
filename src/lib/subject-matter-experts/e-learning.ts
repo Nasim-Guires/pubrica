@@ -10,7 +10,9 @@ export const EMBRYOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Biomedical Researcher",
     authorLocation: "Australia",
     avatarLabel: "Dr. Ananya Mehta profile image",
+      avatarSrc: "/images/subject-matter-experts/cell-biology/Dr.-Sarah-Mitchell.webp",
     flagLabel: "Australia flag icon",
+      flagSrc: "/images/marketing-communication-content-development-service/Australia.webp",
   },
   {
     id: "embryology-2",
@@ -20,7 +22,9 @@ export const EMBRYOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Associate Professor",
     authorLocation: "India",
     avatarLabel: "Dr. Rakesh Kumar profile image",
+      avatarSrc: "/images/subject-matter-experts/dentistry/Dr.-Rajesh-Kumar.webp",
     flagLabel: "India flag icon",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "embryology-3",
@@ -30,6 +34,8 @@ export const EMBRYOLOGY_TESTIMONIALS: Testimonial[] = [
     authorRole: "Clinical Scientist",
     authorLocation: "USA",
     avatarLabel: "Dr. Priya Nair profile image",
+      avatarSrc: "/images/subject-matter-experts/biopolymers/Dr.-Shreya-Nambiar.webp",
     flagLabel: "USA flag icon",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
 ];

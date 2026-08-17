@@ -51,31 +51,37 @@ export default function SensorTechnologyPage() {
     const disciplines = [
         {
             title: "Design & Development of Sensors",
+            iconSrc: "/images/subject-matter-experts/sensor-technology/Design-Development-of-Sensors.webp",
             description: "Using modern techniques in the fabrication of. A TIM. Wireless Technologies. After the sensor is devised, it will be optimised to yield the greatest possible sensitivity and be manufactured using the highest quality of materials to maximise reliability and performance.",
             icon: Cpu,
         },
         {
             title: "Wearable & Portable Sensors",
+            iconSrc: "/images/subject-matter-experts/sensor-technology/Wearable-Portable-Sensors.webp",
             description: "Designing and manufacturing Wearable and Portable devices to be used as sensors for health monitoring, Fitness Tracking and Man-machine interactions. Being able to use these sensor devices will enable us to gather data continuously and instantaneously.",
             icon: Watch,
         },
         {
             title: "Biosensors & Biomedical Sensors",
+            iconSrc: "/images/subject-matter-experts/sensor-technology/Biosensors-Biomedical-Sensors.webp",
             description: "Developing Biosensing Platforms for Medical Diagnosis, Disease Detection, and Health Monitoring. Integrating Bio-recognition elements into the Electronic Signal Processing systems.",
             icon: Activity,
         },
         {
             title: "Sensor Networks & IoT",
+            iconSrc: "/images/subject-matter-experts/sensor-technology/Sensor-Networks-IoT.webp",
             description: "Designing Sensor Networks and Systems that are Connected to the Internet using IoT. Enabling us to establish a connection between various environments for Communication, data acquisition and Remote Monitoring.",
             icon: Radio,
         },
         {
             title: "Microelectromechanical Systems (MEMS) & Nano sensors",
+            iconSrc: "/images/subject-matter-experts/sensor-technology/Microelectromechanical-Systems-MEMS-Nano-sensors.webp",
             description: "Designing & Manufacturing small, very sensitive sensors using MEMS and Nano sensor Technology. This technology is used to develop sensors that can be utilised in applications relating to Health Care, Environmental Sensing, Industrial Automation etc.",
             icon: Settings,
         },
         {
             title: "Calibration Testing & Validation of Sensors",
+            iconSrc: "/images/subject-matter-experts/sensor-technology/Calibration-Testing-Validation-of-Sensors.webp",
             description: "To Ensure that Sensors are Accurate, Reliable, and in Compliance with Standards, They Must be Rigorously Tested, Calibrated, and Performance Evaluated.",
             icon: CheckSquare,
         }
@@ -85,56 +91,56 @@ export default function SensorTechnologyPage() {
         {
             title: "Peer-Reviewing Services",
             description: "Comprehensive review to refine and validate your research pre-submission",
-            image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
             icon: Search,
             href: "/services/publication-support/peer-review-pre-submission"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/editing-and-translation"
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Database,
             href: "/services/medical-data-collection"
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Languages,
             href: "/services/editing-and-translation"
         },
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/biomolecular-engineering/Research-Services.webp",
             icon: BookOpen,
             href: "/services/research-services"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Layers,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: Send,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSpreadsheet,
             href: "/services/publication-support/journal-selection"
         }
@@ -187,7 +193,7 @@ export default function SensorTechnologyPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white bg-[#a3c9bd]/30 flex items-center justify-center">
                             <Image
-                                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/sensor-technology/Sensor-Technology.webp"
                                 alt="Sensor Technology and Healthcare Research"
                                 fill
                                 priority
@@ -227,7 +233,13 @@ export default function SensorTechnologyPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

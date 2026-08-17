@@ -10,7 +10,9 @@ export const publicHealthTestimonials: Testimonial[] = [
     authorRole: "Public Health Policy Researcher",
     authorLocation: "",
     avatarLabel: "Portrait of Dr. Samuel Okoye",
+      avatarSrc: "/images/subject-matter-experts/data-mining/Dr.-Jane-Matthews.webp",
     flagLabel: "Country flag",
+      flagSrc: "/images/marketing-communication-content-development-service/Australia.webp",
   },
   {
     id: "public-health-2",
@@ -20,7 +22,9 @@ export const publicHealthTestimonials: Testimonial[] = [
     authorRole: "Global Health Specialist",
     authorLocation: "",
     avatarLabel: "Portrait of Dr. Ritu Sharma",
+      avatarSrc: "/images/subject-matter-experts/big-data-hadoop/Dr.-Ananya-Verma-1.webp",
     flagLabel: "Country flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
   {
     id: "public-health-3",
@@ -30,6 +34,8 @@ export const publicHealthTestimonials: Testimonial[] = [
     authorRole: "Epidemiologist",
     authorLocation: "",
     avatarLabel: "Portrait of Dr. Michael Thompson",
+      avatarSrc: "/images/subject-matter-experts/dentistry/Dr.-Laura-Chen.webp",
     flagLabel: "Country flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
 ];

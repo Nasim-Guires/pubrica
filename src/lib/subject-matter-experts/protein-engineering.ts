@@ -10,7 +10,9 @@ export const proteinEngineeringTestimonials: Testimonial[] = [
         authorRole: "Professor of Biochemistry",
         authorLocation: "",
         avatarLabel: "Portrait of Dr. Jane Patel",
+      avatarSrc: "/images/subject-matter-experts/biophysics/Dr.-Alexander-Weiss.webp",
         flagLabel: "Country flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
         id: "protein-engineering-2",
@@ -20,7 +22,9 @@ export const proteinEngineeringTestimonials: Testimonial[] = [
         authorRole: "Pharmaceutical Research Lead",
         authorLocation: "",
         avatarLabel: "Portrait of Dr. Samuel Thompson",
+      avatarSrc: "/images/subject-matter-experts/environmental-science/Dr.-Michael-Taylor.webp",
         flagLabel: "Country flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
     {
         id: "protein-engineering-3",
@@ -30,6 +34,8 @@ export const proteinEngineeringTestimonials: Testimonial[] = [
         authorRole: "Clinical Research Scientist",
         authorLocation: "",
         avatarLabel: "Portrait of Dr. Emily Hayes",
+      avatarSrc: "/images/subject-matter-experts/biocatalysts/Dr.-Priya-Kapoor.webp",
         flagLabel: "Country flag",
+      flagSrc: "/images/marketing-communication-content-development-service/Australia.webp",
     },
 ];

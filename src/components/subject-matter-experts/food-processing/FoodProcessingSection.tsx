@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight, Plus, Minus } from 'lucide-react';
 
@@ -98,7 +99,7 @@ const editorsData = [
         experience: '16 years of experience',
         manuscripts: '210+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/food-processing/Dr.-Daniel-Fischer.webp"
     },
     {
         name: 'Dr. Priya Nair',
@@ -106,7 +107,7 @@ const editorsData = [
         experience: '13 years of experience',
         manuscripts: '170+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/cancer-research/Dr.-Meera-Iyer-1.webp"
     },
     {
         name: 'Dr. Michael Chen',
@@ -114,7 +115,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '150+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biomedical-imaging/Dr.-Miguel-Torres.webp"
     }
 ];
 
@@ -251,7 +252,7 @@ export default function FoodProcessingSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/food-processing/Food-Processing.webp"
                             alt="Food processing facility setup"
                             className="w-full h-auto object-cover"
                         />
@@ -298,7 +299,7 @@ export default function FoodProcessingSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/food-processing/Heat-Transfer-Models.webp"
                             alt="Journal of Food Processing and Preservation Cover"
                             className="w-full h-auto object-cover"
                         />

@@ -9,7 +9,9 @@ export const MEDICAL_IMAGING_TESTIMONIALS: Testimonial[] = [
     authorRole: "Radiologist",
     authorLocation: "United Kingdom",
     avatarLabel: "Portrait of Dr. Michael Turner",
+      avatarSrc: "/images/subject-matter-experts/environmental-science/Dr.-Emily-Richards.webp",
     flagLabel: "United Kingdom flag",
+      flagSrc: "/images/research-services/systematic-review/united-kingdom-.png",
   },
   {
     id: "medical-imaging-2",
@@ -19,7 +21,9 @@ export const MEDICAL_IMAGING_TESTIMONIALS: Testimonial[] = [
     authorRole: "Biomedical Imaging Researcher",
     authorLocation: "India",
     avatarLabel: "Portrait of Dr. Priya Nandhakumar",
+      avatarSrc: "/images/subject-matter-experts/cosmeceuticals/Dr.-Laura-Kim-1.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/subject-matter-experts/biomonitoring/india.webp",
   },
   {
     id: "medical-imaging-3",

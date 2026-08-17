@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight, Plus, Minus } from 'lucide-react';
 
@@ -79,7 +80,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '95+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/glycobiology/Dr.-Alicia-Morgan.webp"
     },
     {
         name: 'Dr. Kenji Watanabe',
@@ -87,7 +88,7 @@ const editorsData = [
         experience: '15 years of experience',
         manuscripts: '120+ manuscripts edited',
         countryFlag: '🇯🇵',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/glycobiology/Dr.-Kenji-Watanabe.webp"
     },
     {
         name: 'Dr. Sofia Almeida',
@@ -95,7 +96,7 @@ const editorsData = [
         experience: '13 years of experience',
         manuscripts: '105+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/gynecology/Dr.-Sofia-Almeida.webp"
     }
 ];
 
@@ -182,7 +183,7 @@ export default function GlycobiologySection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/glycobiology/Comprehensive-Research-Writing-and-Publication-Support-in-Glycobiology.webp"
                             alt="Glycobiology research setup"
                             className="w-full h-auto object-cover"
                         />
@@ -206,7 +207,7 @@ export default function GlycobiologySection() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                         <div className="lg:col-span-5 rounded-lg overflow-hidden shadow-xl border border-white/10 order-2 lg:order-1">
                             <img
-                                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600"
+                                src="/images/subject-matter-experts/glycobiology/Structural-Glycobiology.webp"
                                 alt="Glycobiology medical setup"
                                 className="w-full h-auto object-cover"
                             />
@@ -245,7 +246,7 @@ export default function GlycobiologySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/glycobiology/Glycomics-and-Pro-teomics-Integration.webp"
                             alt="Glycobiology Journal Cover"
                             className="w-full h-auto object-cover"
                         />

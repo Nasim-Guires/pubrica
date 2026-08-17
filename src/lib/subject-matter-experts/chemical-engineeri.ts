@@ -12,7 +12,9 @@ export const chemicalEngineeringTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Process Engineer",
       authorLocation: "UAE",
       avatarLabel: "Portrait of Dr Ahmed Khan",
+      avatarSrc: "/images/subject-matter-experts/chemical-engineering/Dr-Ahmed-Khan.webp",
       flagLabel: "UAE flag icon",
+      flagSrc: "/images/subject-matter-experts/biocomputing/uae.webp",
     },
     {
       id: "chemical-engineering-testimonial-2",
@@ -22,7 +24,9 @@ export const chemicalEngineeringTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Chemical Research Scientist",
       authorLocation: "Spain",
       avatarLabel: "Portrait of Dr Maria Lopez",
+      avatarSrc: "/images/subject-matter-experts/algorithm/Dr.-Hiroshi-Tanaka-1.webp",
       flagLabel: "Spain flag icon",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
     },
     {
       id: "chemical-engineering-testimonial-3",
@@ -32,7 +36,9 @@ export const chemicalEngineeringTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Environmental Engineer",
       authorLocation: "USA",
       avatarLabel: "Portrait of Dr James Carter",
+      avatarSrc: "/images/subject-matter-experts/chemical-engineering/Dr-James-Carter.webp",
       flagLabel: "USA flag icon",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
   ],
 };

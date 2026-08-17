@@ -9,7 +9,9 @@ export const ENZYMES_TESTIMONIALS: Testimonial[] = [
     authorRole: "Enzyme Biochemist",
     authorLocation: "USA",
     avatarLabel: "Dr. Emily Johnson profile image",
+      avatarSrc: "/images/subject-matter-experts/drug-delivery-system/Dr.-Sarah-Williams-1.webp",
     flagLabel: "USA flag icon",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
   {
     id: "enzymes-2",
@@ -19,7 +21,9 @@ export const ENZYMES_TESTIMONIALS: Testimonial[] = [
     authorRole: "Clinical Biochemist",
     authorLocation: "UK",
     avatarLabel: "Dr. Mark Thompson profile image",
+      avatarSrc: "/images/subject-matter-experts/data-mining/Dr.-Mark-Robinson.webp",
     flagLabel: "UK flag icon",
+      flagSrc: "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
   },
   {
     id: "enzymes-3",
@@ -29,6 +33,8 @@ export const ENZYMES_TESTIMONIALS: Testimonial[] = [
     authorRole: "Biotechnology Researcher",
     authorLocation: "Australia",
     avatarLabel: "Dr. Sarah Williams profile image",
+      avatarSrc: "/images/subject-matter-experts/cancer-research/Dr.-Meera-Iyer-1.webp",
     flagLabel: "Australia flag icon",
+      flagSrc: "/images/marketing-communication-content-development-service/Australia.webp",
   },
 ];

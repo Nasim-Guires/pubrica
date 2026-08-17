@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { 
     BookOpen, 
@@ -23,14 +24,17 @@ const serviceIconsData = [
     },
     {
         title: "Journal Submission",
+            iconSrc: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
         icon: Send,
     },
     {
         title: "Graphical Abstract",
+            iconSrc: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
         icon: ImageIcon,
     },
     {
         title: "Journal Selection",
+            iconSrc: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
         icon: BookMarked,
     }
 ];
@@ -77,26 +81,31 @@ const emergingTrendsData = [
 const realWorldApplications = [
     {
         title: "Disease Diagnosis and Treatment",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Disease-Diagnosis-and-Treatment.webp",
         description: "Identifying biomarkers for early detection of diseases such as cancer, diabetes, and neurological disorders.",
         icon: Stethoscope
     },
     {
         title: "Pharmaceutical Development",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Pharmaceutical-Development.webp",
         description: "Targeting enzymes and receptors to develop novel therapeutics.",
         icon: Pill
     },
     {
         title: "Agricultural Biotechnology",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Biotechnology-and-Applied-Biochemistry.webp",
         description: "Enhancing crop yield, pest resistance, and nutritional value through metabolic engineering.",
         icon: Sprout
     },
     {
         title: "Environmental Monitoring",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Environmental-Monitoring.webp",
         description: "Studying biochemical pathways to assess pollution effects and design remediation strategies.",
         icon: Search
     },
     {
         title: "Education & Research",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Education-Research.webp",
         description: "Training the next generation of scientists, veterinarians, and animal welfare specialists.",
         icon: GraduationCap
     }
@@ -109,7 +118,7 @@ const editorsData = [
         experience: '14 years of experience',
         manuscripts: '190+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/algorithm/Dr.-Robert-Klein.webp"
     },
     {
         name: 'Dr. Sophia Patel',
@@ -117,7 +126,7 @@ const editorsData = [
         experience: '11 years of experience',
         manuscripts: '160+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1594824813566-88a2264c9470?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biochemistry/Dr.-Sophia-Patel.webp"
     },
     {
         name: 'Dr. Marcus Liu',
@@ -125,7 +134,7 @@ const editorsData = [
         experience: '15 years of experience',
         manuscripts: '200 manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biochemistry/Dr.-Marcus-Liu.webp"
     }
 ];
 
@@ -201,7 +210,13 @@ export default function BioChemistrySection() {
                             return (
                                 <div key={index} className="flex items-start space-x-4">
                                     <div className="p-2 border border-gray-300 rounded-md shrink-0 text-[#0e3b32] bg-gray-50 mt-1">
-                                        <AppIcon className="w-5 h-5" />
+                                        {"iconSrc" in app && app.iconSrc ? (
+                                            <span className="relative w-5 h-5 block">
+                                                <Image src={app.iconSrc} alt="" fill className="object-contain" />
+                                            </span>
+                                        ) : (
+                                            <AppIcon className="w-5 h-5" />
+                                        )}
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-gray-900 text-sm sm:text-base inline">
@@ -220,7 +235,7 @@ export default function BioChemistrySection() {
                     <div className="md:col-span-5 flex justify-center">
                         <div className="rounded-lg overflow-hidden border border-gray-200 shadow-md">
                             <img
-                                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=600"
+                                src="/images/subject-matter-experts/biochemistry/Biochemistry.webp"
                                 alt="Biochemistry Laboratory Applications"
                                 className="w-full h-auto object-cover max-h-[420px]"
                             />
@@ -250,7 +265,7 @@ export default function BioChemistrySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/biochemistry/Molecular-Biology-and-Genetics.webp"
                             alt="American Journal of Biochemistry & Biotechnology Cover"
                             className="w-full h-auto object-cover"
                         />

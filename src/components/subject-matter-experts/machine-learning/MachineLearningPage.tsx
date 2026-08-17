@@ -22,31 +22,37 @@ export default function MachineLearningPage() {
     const disciplines = [
         {
             title: "Molecular and Cellular Machine Learning",
+            iconSrc: "/images/subject-matter-experts/machine-learning/Molecular-and-Cellular-Machine-Learning.webp",
             description: "This field looks at the underlying algorithmic and mathematical frameworks that underlie all machine learning systems. It addresses all the data processing, feature extraction and optimization methods applied during the training and prediction phases of models.",
             icon: Search
         },
         {
             title: "Machine learning systems tools",
+            iconSrc: "/images/subject-matter-experts/machine-learning/Machine-learning-systems-tools.webp",
             description: "They focus on studying different types of machine learning models, including but not limited to all network and deep learning architectures; all algorithms used in a machine-learning environment; and how various algorithms interact or work together during the machine learning process to provide control over results such as decision making, classification and prediction.",
             icon: TrendingUp
         },
         {
             title: "Cognitive and Behavioural Machine Learning",
+            iconSrc: "/images/subject-matter-experts/machine-learning/Cognitive-and-Behavioural-Machine-Learning.webp",
             description: "The study of this branch of how machine learning algorithms can perform human cognitive processes is known as Cognitive and Behavioural Machine Learning. The key cognitive processes in this area are the same as the cognitive processes found in all human beings: pattern recognition, decision-making, and language comprehension.",
             icon: FileText
         },
         {
             title: "Developing Machine Learning",
+            iconSrc: "/images/subject-matter-experts/machine-learning/Developing-Machine-Learning.webp",
             description: "Analyses the evolution of machine learning models through the addition of more data. This encompasses model training, Reinforcement Learning, and Continual Learning, all of which allow the creation of intelligent machines that will continue to adapt to their environment, much like the evolution of human cognition.",
             icon: Database
         },
         {
             title: "Machine Learning Applications in Clinical Practice",
+            iconSrc: "/images/subject-matter-experts/machine-learning/Machine-Learning-Applications-in-Clinical-Practice.webp",
             description: "Clinical ML generally encompasses a broad range of activities, including the creation of classification systems for medical images; prediction models for various diseases; and even predictive models in the areas of genomics and precision medicine.",
             icon: AlertTriangle
         },
         {
             title: "Machine Learning by Computing",
+            iconSrc: "/images/subject-matter-experts/machine-learning/Machine-Learning-by-Computing.webp",
             description: "In machine learning, computational methods are used to model and analyze large amounts of data and find general trends in the data. As a result, machine learning plays a key role in the creation of Artificial Intelligence (AI) applications such as Brain Computer Interfaces (BCI), Autonomous Vehicles (AV), Predictive Analytics,",
             icon: ShieldAlert
         }
@@ -56,56 +62,56 @@ export default function MachineLearningPage() {
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Formatting.webp",
             icon: FileText,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Journal Selection",
             description: "Guidance on selecting the most appropriate journals for your research.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Selection.webp",
             icon: PenTool,
             href: "/services/publication-support/journal-selection"
         },
         {
             title: "Medical Writing",
             description: "Our medical writers create high-quality manuscripts and case reports for dermatology journals.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/machine-learning/Medical-Writing.webp",
             icon: FileSearch,
             href: "/services/research-services/medical-writing"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: Cpu,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BarChart3,
             href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: Layers,
             href: "/services/research-services/literature-review-and-gap"
         },
         {
             title: "Statistical Analysis",
             description: "We provide biostatistical support for data interpretation, ensuring robust and scientifically valid conclusions.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: BarChart3,
             href: "/services/research-services/biostatistics-and-statistical-programming-services"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
             icon: FileSearch,
             href: "/services/publication-support/journal-submission"
         }
@@ -161,7 +167,7 @@ export default function MachineLearningPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/machine-learning/Comprehensive-Support-for-Machine-Learning-Research-Writing-and-Publication.webp"
                                 alt="Machine Learning research visualization"
                                 fill
                                 priority
@@ -201,7 +207,13 @@ export default function MachineLearningPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

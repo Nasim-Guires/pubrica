@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { BookOpen, Award, Briefcase, FileText } from 'lucide-react';
 
@@ -42,7 +43,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '160+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biomedical-imaging/Dr.-Evelyn-Carter-3.webp"
     },
     {
         name: 'Dr. Maya Chen',
@@ -50,7 +51,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '145+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biomedical-imaging/Dr.-Maya-Chen-3.webp"
     },
     {
         name: 'Dr. Arjun Mehta',
@@ -58,7 +59,7 @@ const editorsData = [
         experience: '13 years of experience',
         manuscripts: '170+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/algorithm/Dr.-David-Chen.webp"
     }
 ];
 
@@ -126,7 +127,7 @@ export default function BioMedicalImagineSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/biomedical-imaging/Biomedical-Imaging.webp"
                             alt="Advanced Materials Journal Cover"
                             className="w-full h-auto object-cover"
                         />

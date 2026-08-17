@@ -12,7 +12,9 @@ export const cosmeceuticalsTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Cosmeceutical Research Scientist",
       authorLocation: "India",
       avatarLabel: "Portrait of Dr. Neha Rao",
+      avatarSrc: "/images/subject-matter-experts/biochemistry/Dr.-Sophia-Patel.webp",
       flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
     },
     {
       id: "cosmeceuticals-testimonial-2",
@@ -22,7 +24,9 @@ export const cosmeceuticalsTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Head of Skincare R&D",
       authorLocation: "Spain",
       avatarLabel: "Portrait of Dr. Arjun Mehta",
+      avatarSrc: "/images/subject-matter-experts/algorithm/Dr.-David-Chen.webp",
       flagLabel: "Spain flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
     },
     {
       id: "cosmeceuticals-testimonial-3",
@@ -32,7 +36,9 @@ export const cosmeceuticalsTestimonialsData: ClientTestimonialsProps = {
       authorRole: "Dermatology Researcher",
       authorLocation: "USA",
       avatarLabel: "Portrait of Dr. Laura Kim",
+      avatarSrc: "/images/subject-matter-experts/cosmeceuticals/Dr.-Laura-Kim-1.webp",
       flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
     },
   ],
 };

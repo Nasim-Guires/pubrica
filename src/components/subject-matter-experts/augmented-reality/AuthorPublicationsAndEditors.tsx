@@ -10,21 +10,21 @@ export default function AuthorPublicationsAndEditors() {
       role: "PhD in Computer Vision",
       experience: "15 years of experience",
       manuscripts: "200+ manuscripts edited",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/augmented-reality/Dr.-Robert-Klein-1.webp",
     },
     {
       name: "Dr. Ananya Iyer",
       role: "PhD in Human-Computer Interaction",
       experience: "12 years of experience",
       manuscripts: "160+ manuscripts edited",
-      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/algorithm/Dr.-Ananya-Iyer-1.webp",
     },
     {
       name: "Dr. David Chen",
       role: "PhD in AR Systems Engineering",
       experience: "11 years of experience",
       manuscripts: "150+ manuscripts edited",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/algorithm/Dr.-David-Chen.webp",
     },
   ];
 
@@ -46,7 +46,7 @@ export default function AuthorPublicationsAndEditors() {
         <div className="bg-white border border-gray-200 rounded-md p-6 shadow-sm flex flex-col md:flex-row gap-6 items-center">
           <div className="relative w-40 h-52 shrink-0 border border-gray-200 shadow-sm rounded overflow-hidden bg-gray-50">
             <Image
-              src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400"
+              src="/images/subject-matter-experts/augmented-reality/Augmented-Reality.webp"
               alt="Journal Cover Sample"
               fill
               className="object-cover"

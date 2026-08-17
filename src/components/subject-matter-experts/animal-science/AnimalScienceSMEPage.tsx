@@ -26,36 +26,42 @@ export default function AnimalScienceSMEPage() {
   const coreDisciplines = [
     {
       title: "Genetics and Breeding",
+            iconSrc: "/images/subject-matter-experts/animal-science/Genetics-and-Breeding.png",
       highlight: "Genetics and",
       desc: "Understanding heredity and genetic traits allows scientists and farmers to select animals with desirable characteristics. Techniques such as selective breeding, crossbreeding, and genomic selection optimize performance and health, creating resilient herds.",
       icon: Dna,
     },
     {
       title: "Nutrition and Feed Technology",
+            iconSrc: "/images/subject-matter-experts/animal-science/Nutrition-and-Feed-Technology.png",
       highlight: "Nutrition and",
       desc: "Animals require a balanced diet to grow, reproduce, and stay healthy. Animal nutritionists study feed composition, digestion, and metabolism to develop optimal diets. Specialized feed formulations support growth, lactation, immunity, and reproduction.",
       icon: Wheat,
     },
     {
       title: "Physiology and Health Management",
+            iconSrc: "/images/subject-matter-experts/animal-science/Physiology-and-Health-Management.png",
       highlight: "Physiology and",
       desc: "Physiology explores how animals’ organs and systems function, influencing growth, reproduction, and productivity. Coupled with veterinary science, it ensures disease prevention, early diagnosis, and effective treatment, maintaining herd health.",
       icon: HeartPulse,
     },
     {
       title: "Reproductive Biology",
+            iconSrc: "/images/subject-matter-experts/animal-science/Reproductive-Biology.png",
       highlight: "Reproductive",
       desc: "Reproductive science addresses fertility, artificial insemination, embryo transfer, and assisted reproductive technologies. Optimizing reproduction increases productivity, genetic diversity, and herd sustainability.",
       icon: Baby,
     },
     {
       title: "Animal Behavior and Welfare",
+            iconSrc: "/images/subject-matter-experts/animal-science/Animal-Behavior-and-Welfare.png",
       highlight: "Animal Behavior",
       desc: "Behavioural studies reveal how animals interact with each other and their environment. Proper understanding of behavior enhances welfare, reduces stress, and improves productivity. Ethical treatment and humane practices are central to this discipline.",
       icon: ShieldAlert,
     },
     {
       title: "Biotechnology and Emerging Technologies",
+            iconSrc: "/images/subject-matter-experts/animal-science/Biotechnology-and-Emerging-Technologies.png",
       highlight: "Biotechnology and",
       desc: "Modern animal science integrates biotechnology for genetic improvement, cloning, transgenic animals, and disease-resistant breeds. Advanced diagnostic tools, bioreactors, and molecular biology techniques are transforming livestock production and healthcare.",
       icon: Microscope,
@@ -68,57 +74,49 @@ export default function AnimalScienceSMEPage() {
       title: "Research Services",
       desc: "Expert guidance on project planning, execution, and data analysis.",
       icon: Search,
-      imageUrl:
-        "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800",
+      imageUrl: "/images/subject-matter-experts/algorithm/Research-Services.png",
     },
     {
       title: "Editing & Proofreading",
       desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
       icon: FileText,
-      imageUrl:
-        "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=800",
+      imageUrl: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
     },
     {
       title: "Data Collection for AI & ML",
       desc: "Structured data gathering tailored for artificial intelligence and machine learning.",
       icon: Database,
-      imageUrl:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+      imageUrl: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
     },
     {
       title: "Translation Services",
       desc: "Accurate scientific translations to broaden the reach of your research.",
       icon: Languages,
-      imageUrl:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
+      imageUrl: "/images/subject-matter-experts/animal-science/Translation-Services.png",
     },
     {
       title: "Artwork Editing",
       desc: "Professional visuals for your figures, tables, and graphical abstracts.",
       icon: PenTool,
-      imageUrl:
-        "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=800",
+      imageUrl: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
     },
     {
       title: "Journal Formatting",
       desc: "Tailored manuscript formatting to meet specific journal guidelines.",
       icon: Layout,
-      imageUrl:
-        "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
+      imageUrl: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
     },
     {
       title: "Graphical Abstract",
       desc: "Engaging summaries of your research in a single, informative graphic.",
       icon: BarChart2,
-      imageUrl:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+      imageUrl: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
     },
     {
       title: "Journal Selection",
       desc: "Strategic journal selection to maximize publication success.",
       icon: BookCheck,
-      imageUrl:
-        "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80&w=800",
+      imageUrl: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
     },
   ];
 
@@ -242,7 +240,7 @@ export default function AnimalScienceSMEPage() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white">
               <Image
-                src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800"
+                src="/images/subject-matter-experts/animal-science/Empowering-Research-Excellence-in-Animal-Science-through-Expert-Guidance.png"
                 alt="Animal Science Researcher with Laboratory Animal"
                 fill
                 className="object-cover"
@@ -283,7 +281,7 @@ export default function AnimalScienceSMEPage() {
 
                   {/* Indicator bar visual column */}
                   <div className="flex flex-col items-center justify-between flex-shrink-0 w-8 border-l border-gray-100 pl-2 pointer-events-none">
-                    <Icon className="w-5 h-5 text-gray-700 shrink-0" />
+                    {(item as any).iconSrc ? <span className="relative w-6 h-6 shrink-0"><Image src={(item as any).iconSrc} alt="" fill className="object-contain" /></span> : <Icon className="w-5 h-5 text-gray-700 shrink-0" />}
 
                     <div className="flex flex-col items-center justify-between h-24 my-1">
                       <ChevronUp className="w-3 h-3 text-gray-400" />
@@ -331,7 +329,7 @@ export default function AnimalScienceSMEPage() {
 
                   {/* Center Circular Icon */}
                   <div className="absolute top-[8.5rem] left-1/2 -translate-x-1/2 z-20 bg-white p-2.5 rounded-full border border-gray-200 shadow-sm transition-transform duration-300 group-hover:scale-105">
-                    <CardIcon className="w-5 h-5 text-[#12433e]" />
+                    {(card as any).iconSrc ? <span className="relative w-6 h-6"><Image src={(card as any).iconSrc} alt="" fill className="object-contain" /></span> : <CardIcon className="w-5 h-5 text-[#12433e]" />}
                   </div>
 
                   {/* Sliding Overlay Panel with Hover Effect */}

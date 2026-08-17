@@ -22,46 +22,55 @@ export default function NuclearChemistryPage() {
     const disciplines = [
         {
             title: "Radiochemistry",
+            iconSrc: "/images/subject-matter-experts/nuclear-chemistry/Radiochemistry-1.webp",
             description: "Radiochemistry examines the chemical and physical properties of radioactive elements, particularly how they behave as isotopes and how they are affected by nuclear reactions and radiological phenomena across a variety of environments.",
             icon: Search
         },
         {
             title: "Nuclear Reactions and Fission",
+            iconSrc: "/images/subject-matter-experts/nuclear-chemistry/Nuclear-Reactions-and-Fission.webp",
             description: "Nuclear fission, fusion, and other nuclear reactions are studied to further develop our understanding of how energy is produced and how to maintain nuclear safety.",
             icon: TrendingUp
         },
         {
             title: "Radiopharmaceutical Chemistry",
+            iconSrc: "/images/subject-matter-experts/nuclear-chemistry/Radiopharmaceutical-Chemistry.webp",
             description: "The development of radiolabelled substances for use in diagnostic imaging and as a treatment option in nuclear medicine.",
             icon: FileText
         },
         {
             title: "Isotope Chemistry",
+            iconSrc: "/images/subject-matter-experts/nuclear-chemistry/Isotope-Chemistry.webp",
             description: "The production, isolation, and application of both stable and radioactive isotopes as they relate to the various applications in industrial, medical, and environmental applications.",
             icon: Database
         },
         {
             title: "Radioactive Material and Waste Management",
+            iconSrc: "/images/subject-matter-experts/nuclear-chemistry/Radioactive-Material-and-Waste-Management-1.webp",
             description: "Investigation of methods and techniques for managing and disposing of radioactive waste and contamination to minimize risk to the environment and human health from nuclear technology",
             icon: AlertTriangle
         },
         {
             title: "Nuclear Forensic Science",
+            iconSrc: "/images/subject-matter-experts/nuclear-chemistry/Nuclear-Forensic-Science.webp",
             description: "Identification and tracking nuclear materials for the purpose of aiding in nuclear protection and prevention of the illegal trafficking or misuse of radioactive materials.",
             icon: ShieldAlert
         },
         {
             title: "Environmental Radiochemistry",
+            iconSrc: "/images/subject-matter-experts/nuclear-chemistry/Environmental-Radiochemistry.webp",
             description: "Study of the effects of radioactive materials on the environment and ecosystems, including contamination of soil, water and air, and methods for remediating contamination",
             icon: Cpu
         },
         {
             title: "Medical Physics and Nuclear Imaging",
+            iconSrc: "/images/subject-matter-experts/nuclear-chemistry/Medical-Physics-and-Nuclear-Imaging.webp",
             description: "Use of nuclear chemistry in medical imaging (PET, SPECT, CT) for the improved diagnosis and treatment of diseases such as cancer.",
             icon: Layers
         },
         {
             title: "Radiation Protection and Dosimetry",
+            iconSrc: "/images/subject-matter-experts/nuclear-chemistry/Radiation-Protection-and-Dosimetry.webp",
             description: "Measurement and evaluation of radiation exposure in the workplace and the environment for the purpose of ensuring compliance with safety standards and governmental regulations.",
             icon: BookOpen
         }
@@ -71,56 +80,56 @@ export default function NuclearChemistryPage() {
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: FileText,
             href: "/services/editing-and-translation"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Cpu,
             href: "/services/medical-data-collection"
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: FileSearch,
             href: "/services/editing-and-translation"
         },
         {
             title: "Original Research",
             description: "End-to-end writing, statistical analysis, and formatting tailored to journal-specific guidelines.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/nuclear-chemistry/Pain-points-in-Writing-Original-Research-Articles.webp",
             icon: Layers,
             href: "/services/physician-writing-services/original-research-article"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: BookOpen,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BarChart3,
             href: "/services/publication-support/journal-submission"
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: PenTool,
             href: "/services/publication-support/journal-selection"
         }
@@ -173,7 +182,7 @@ export default function NuclearChemistryPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/nuclear-chemistry/Nuclear-Chemistry.webp"
                                 alt="Nuclear chemistry research visualization"
                                 fill
                                 priority
@@ -213,7 +222,13 @@ export default function NuclearChemistryPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

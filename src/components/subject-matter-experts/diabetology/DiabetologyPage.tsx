@@ -24,26 +24,31 @@ export default function DiabetologyPage() {
     const disciplines = [
         {
             title: "Clinical Diabetology",
+            iconSrc: "/images/subject-matter-experts/diabetology/Clinical-Diabetology.png",
             description: "We provide comprehensive support for studies exploring diabetes pathophysiology, diagnosis, and management. Our expertise includes Type 1 and Type 2 diabetes, gestational diabetes, diabetic ketoacidosis, and comorbid metabolic disorders. Pubrica’s team assists in developing clinical protocols, case reports, and outcome-based studies tailored for top-tier journals in diabetology and endocrinology.",
             icon: Stethoscope
         },
         {
             title: "Molecular and Cellular Diabetes Research",
+            iconSrc: "/images/subject-matter-experts/diabetology/Molecular-and-Cellular-Diabetes-Research.png",
             description: "Our experts assist researchers investigating molecular mechanisms underlying insulin secretion, pancreatic β-cell function, glucose metabolism, and insulin resistance. We provide scientific editing and publication support for research manuscripts in genetics, molecular signalling pathways, and therapeutic targets.",
             icon: Dna
         },
         {
             title: "Nutrition and Lifestyle Medicine",
+            iconSrc: "/images/subject-matter-experts/diabetology/Nutrition-and-Lifestyle-Medicine.png",
             description: "We support research focused on nutritional interventions, physical activity, and behavioural strategies in diabetes prevention and management. Our experts provide evidence synthesis, meta-analyses, and systematic reviews aligned with global guidelines such as ADA, EASD, and WHO recommendations.",
             icon: Apple
         },
         {
             title: "Pharmacological and Therapeutic Research",
+            iconSrc: "/images/subject-matter-experts/diabetology/Pharmacological-and-Therapeutic-Research.png",
             description: "We specialize in diabetes pharmacotherapy, including insulin analogues, GLP-1 receptor agonists, SGLT2 inhibitors, DPP-4 inhibitors, and emerging biologics. Our scientific writers ensure your manuscripts meet regulatory and ethical publication standards while emphasizing translational value and clinical impact.",
             icon: Pill
         },
         {
             title: "Epidemiology and Public Health in Diabetes",
+            iconSrc: "/images/subject-matter-experts/diabetology/Epidemiology-and-Public-Health-in-Diabetes.png",
             description: "Pubrica offers analytical and editorial assistance for population-based studies, disease burden analyses, and health economics research. We help researchers convey the significance of global diabetes trends, screening programs, and policy-driven interventions with scientific precision.",
             icon: Globe
         }
@@ -53,49 +58,49 @@ export default function DiabetologyPage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: Search
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: PenTool
         },
         {
             title: "Data Collection for AI & ML",
             description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Database
         },
         {
             title: "Translation Services",
             description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Languages
         },
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: FileSearch
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
             icon: Send
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: CheckCircle2
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileText
         }
     ];
@@ -152,7 +157,7 @@ export default function DiabetologyPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/diabetology/Comprehensive-Research-Writing-and-Publication-Support-in-Diabetology.webp"
                                 alt="Diabetology blood glucose measurement visual"
                                 fill
                                 priority
@@ -192,7 +197,13 @@ export default function DiabetologyPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

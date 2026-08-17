@@ -9,7 +9,9 @@ export const BIOMOLECULAR_ENGINEERING_TESTIMONIALS: Testimonial[] = [
     authorRole: "Assistant Professor",
     authorLocation: "India",
     avatarLabel: "Portrait of Dr. Ananya Rao",
+      avatarSrc: "/images/subject-matter-experts/biomolecular-engineering/Dr.-Ananya-Rao.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/subject-matter-experts/biomonitoring/india.webp",
   },
   {
     id: "biomolecular-engineering-2",
@@ -19,7 +21,9 @@ export const BIOMOLECULAR_ENGINEERING_TESTIMONIALS: Testimonial[] = [
     authorRole: "Research Scientist",
     authorLocation: "USA",
     avatarLabel: "Portrait of Dr. Michael Turner",
+      avatarSrc: "/images/subject-matter-experts/biomolecular-engineering/Dr.-Michael-Turner.webp",
     flagLabel: "USA flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
   {
     id: "biomolecular-engineering-3",

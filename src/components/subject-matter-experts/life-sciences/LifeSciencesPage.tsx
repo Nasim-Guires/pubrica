@@ -22,46 +22,55 @@ export default function LifeSciencesPage() {
     const disciplines = [
         {
             title: "Molecular Biology and Genetics",
+            iconSrc: "/images/subject-matter-experts/biochemistry/Molecular-Biology-and-Genetics.webp",
             description: "Understanding how genes work and how they affect our biology through techniques such as gene expression analysis, DNA sequencing, pathways, protein structure/function and molecular mechanisms.",
             icon: Search
         },
         {
             title: "Biotechnology And Bioengineering",
+            iconSrc: "/images/subject-matter-experts/life-sciences/Biotechnology-And-Bioengineering.webp",
             description: "Innovative technology development using biology and biological systems in medicine agriculture industry.",
             icon: TrendingUp
         },
         {
             title: "Pharmaceutical Sciences and Drug Development",
+            iconSrc: "/images/subject-matter-experts/life-sciences/Pharmaceutical-Sciences-and-Drug-Development.webp",
             description: "The design, development, and testing of new medicines to cure diseases.",
             icon: FileText
         },
         {
             title: "Bioinformatics And Computational Biology",
+            iconSrc: "/images/subject-matter-experts/life-sciences/Bioinformatics-And-Computational-Biology.webp",
             description: "Using computational tools to analyze biological data like genomic data, proteomic data, and systems biology data.",
             icon: Database
         },
         {
             title: "Clinical Research and Trials Conduct",
+            iconSrc: "/images/subject-matter-experts/life-sciences/Clinical-Research-and-Trials-Conduct.webp",
             description: "clinical trials to evaluate the safety and effectiveness of the treatment of patients with certain diseases.",
             icon: AlertTriangle
         },
         {
             title: "Immunology And Microbiology",
+            iconSrc: "/images/subject-matter-experts/life-sciences/Immunology-And-Microbiology.webp",
             description: "Understanding the immune response to pathogens, infectious diseases, and developing vaccines.",
             icon: ShieldAlert
         },
         {
             title: "Cell And Developmental Biology",
+            iconSrc: "/images/subject-matter-experts/life-sciences/Cell-And-Developmental-Biology.webp",
             description: "Understanding cell and developmental biology is key to advancing medicine, genetics, and biotechnology by explaining tissue formation, disease development, and regenerative therapies.",
             icon: Layers
         },
         {
             title: "Neuroscience And Behavioral Sciences",
+            iconSrc: "/images/subject-matter-experts/life-sciences/Neuroscience-And-Behavioral-Sciences.webp",
             description: "Research to study the nervous system and brain functions related to how to behave normally and in some instances may have to do with neurological disorders.",
             icon: Cpu
         },
         {
             title: "Environmental And Agricultural Life Sciences",
+            iconSrc: "/images/subject-matter-experts/life-sciences/Environmental-And-Agricultural-Life-Sciences.webp",
             description: "Study of the environment for ecological and agricultural purposes, including agriculture with sustained yield, sustainable agriculture and the effect of the environment on organisms that live there.",
             icon: BookOpen
         },
@@ -71,63 +80,63 @@ export default function LifeSciencesPage() {
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: FileText,
             href: "/services/research-services"
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts through our Chemical engineering editing services.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
             href: "/services/editing-and-translation"
         },
         {
             title: "Publication Support",
             description: "Complete support for publishing in high-impact journals, translating concepts into incisive reports.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: FileSearch,
             href: "/services/publication-support"
         },
         {
             title: "Scientific Writing",
             description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: Cpu,
             href: "/services/research-services/scientific-writing"
         },
         {
             title: "Artwork Editing",
             description: "Professional visuals for your figures, tables, and graphical abstracts.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: Cpu,
             href: "/services/publication-support/art-work-preparation"
         },
         {
             title: "Journal Formatting",
             description: "Tailored manuscript formatting to meet specific journal guidelines.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Layers,
             href: "/services/publication-support/journal-manuscript-formatting-services"
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BarChart3,
             href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: FileSearch,
             href: "/services/research-services/systematic-review"
         },
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: FileText,
             href: "/services/research-services/literature-review-and-gap"
         }
@@ -180,7 +189,7 @@ export default function LifeSciencesPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/life-sciences/Life-Science.webp"
                                 alt="Life Sciences research visualization"
                                 fill
                                 priority
@@ -220,7 +229,13 @@ export default function LifeSciencesPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

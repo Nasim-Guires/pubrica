@@ -88,7 +88,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '150+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: '/images/subject-matter-experts/neurology/Neurology.webp'
     },
     {
         name: 'Dr. Priya Mehta',
@@ -96,7 +96,7 @@ const editorsData = [
         experience: '10 years of experience',
         manuscripts: '130+ manuscripts edited',
         countryFlag: '🇮🇳',
-        avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200'
+        avatar: '/images/subject-matter-experts/neurology/Clinical-Neurology.webp'
     },
     {
         name: 'Dr. Ananya Rao',
@@ -104,7 +104,7 @@ const editorsData = [
         experience: '11 years of experience',
         manuscripts: '180+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'
+        avatar: '/images/subject-matter-experts/neurology/Cognitive-and-Behavioural-Neurology.webp'
     }
 ];
 
@@ -142,7 +142,7 @@ export default function NeurologySection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <Image
-                            src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/neurology/Neurophysiology.webp"
                             alt="Neurology clinical research"
                             width={600}
                             height={450}
@@ -169,7 +169,7 @@ export default function NeurologySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white relative h-[280px]">
                         <Image
-                            src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/neurology/Neuroimaging-and-Neurodiagnostic.webp"
                             alt="Neurology Journal Cover"
                             fill
                             className="object-cover"

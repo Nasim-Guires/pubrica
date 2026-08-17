@@ -25,36 +25,43 @@ export default function DermatologyPage() {
     const disciplines = [
         {
             title: "Clinical Dermatology",
+            iconSrc: "/images/subject-matter-experts/dermatology/Clinical-Dermatology.png",
             description: "Focused on diagnosing and managing skin, hair, and nail disorders such as psoriasis, eczema, acne, and dermatitis. Pubrica assists with clinical study design, case report development, and systematic reviews to advance dermatologic care.",
             icon: Stethoscope
         },
         {
             title: "Cosmetic Dermatology",
+            iconSrc: "/images/subject-matter-experts/dermatology/Cosmetic-Dermatology.png",
             description: "Encompassing aesthetic procedures including laser therapy, chemical peels, and anti-aging treatments. We support research manuscripts, white papers, and reviews that explore the safety, efficacy, and innovation of cosmetic interventions.",
             icon: Sparkles
         },
         {
             title: "Surgical Dermatology",
+            iconSrc: "/images/subject-matter-experts/dermatology/490.png",
             description: "Covering dermatologic surgeries such as excisions, Mohs micrographic surgery, and skin cancer management. Our team provides end-to-end writing and editing support for surgical case studies and clinical trials.",
             icon: Scissors
         },
         {
             title: "Pediatric Dermatology",
+            iconSrc: "/images/subject-matter-experts/dermatology/Pediatric-Dermatology.png",
             description: "Addressing skin diseases in infants and children, including genetic and infectious conditions. Pubrica aids in paediatric-focused research, protocol development, and journal submissions.",
             icon: Baby
         },
         {
             title: "Dermatopathology",
+            iconSrc: "/images/subject-matter-experts/dermatology/Dermatopathology.png",
             description: "Integrating dermatology and pathology for microscopic diagnosis of skin diseases. Our subject-matter experts assist with manuscript preparation, image analysis, and histopathological data interpretation.",
             icon: Microscope
         },
         {
             title: "Immunodermatology",
+            iconSrc: "/images/subject-matter-experts/dermatology/Immunodermatology.png",
             description: "Exploring autoimmune and inflammatory skin disorders such as lupus erythematosus, pemphigus, and dermatitis herpetiformis. Pubrica supports original research and review articles in immunopathogenesis and novel therapies.",
             icon: ShieldAlert
         },
         {
             title: "Teledermatology & Digital Dermatology",
+            iconSrc: "/images/subject-matter-experts/dermatology/Teledermatology-Digital-Dermatology.png",
             description: "Advancing the use of AI, imaging, and remote diagnostics in dermatology. We help authors publish cutting-edge work in digital dermatology innovations.",
             icon: Smartphone
         }
@@ -64,55 +71,55 @@ export default function DermatologyPage() {
         {
             title: "Medical Writing",
             description: "Our medical writers create high-quality manuscripts and case reports for dermatology journals.",
-            image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: PenTool
         },
         {
             title: "Research Services",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: Search
         },
         {
             title: "Editing & Proofreading",
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: CheckCircle
         },
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Send
         },
         {
             title: "Journal Formatting",
             description: "Tailored manuscript formatting to meet specific journal guidelines.",
-            image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: BookOpen
         },
         {
             title: "Graphical Abstract",
             description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: PenTool
         },
         {
             title: "Journal Selection",
             description: "Strategic journal selection to maximize publication success.",
-            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileText
         },
         {
             title: "Statistical Analysis",
             description: "Rigorous quantitative and biostatistical analysis tailored for clinical trials and study data.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: BarChart2
         },
         {
             title: "Literature Review and Gap Analysis",
             description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BarChart2
         }
     ];
@@ -165,7 +172,7 @@ export default function DermatologyPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
                             <Image
-                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+                                src="/images/subject-matter-experts/dermatology/Empowering-Dermatology-Research-and-Innovation-through-Expert-Guidance-and-Support.webp"
                                 alt="Dermatology and skin healthcare research visual"
                                 fill
                                 priority
@@ -205,7 +212,13 @@ export default function DermatologyPage() {
                                                 {item.title}
                                             </h3>
                                             <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
+                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
+                                                <span className="relative w-6 h-6 shrink-0">
+                                                    <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" fill className="object-contain" />
+                                                </span>
+                                            ) : (
                                                 <IconComponent className="w-6 h-6" />
+                                            )}
                                             </div>
                                         </div>
                                         <p className="text-gray-600 text-xs leading-relaxed mb-6">

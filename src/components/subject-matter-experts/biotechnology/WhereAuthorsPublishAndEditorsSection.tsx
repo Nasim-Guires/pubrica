@@ -10,21 +10,21 @@ export default function WhereAuthorsPublishAndEditorsSection() {
       role: "PhD in Biotechnology",
       experience: "12 years of experience",
       manuscripts: "100+ manuscripts edited",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/biotechnology/Dr.-Ananya-Singh.webp",
     },
     {
       name: "Dr. Michael Thompson",
       role: "PhD in Molecular Biotechnology",
       experience: "16 years of experience",
       manuscripts: "130+ manuscripts edited",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/animal-science/victor.png",
     },
     {
       name: "Dr. Sofia Martinez",
       role: "PhD in Industrial Biotechnology",
       experience: "14 years of experience",
       manuscripts: "110+ manuscripts edited",
-      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200",
+      avatar: "/images/subject-matter-experts/biotechnology/Dr.-Sofia-Martinez.webp",
     },
   ];
 
@@ -45,7 +45,7 @@ export default function WhereAuthorsPublishAndEditorsSection() {
         <div className="bg-white border border-gray-200 rounded-md p-6 shadow-sm flex flex-col md:flex-row gap-6 items-center">
           <div className="relative w-40 h-52 shrink-0 border border-gray-200 shadow-sm rounded overflow-hidden bg-gray-50">
             <Image
-              src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=400"
+              src="/images/subject-matter-experts/biotechnology/Microbiology-and-Immunology.png"
               alt="Biotechnology Advances Journal Cover"
               fill
               className="object-cover"

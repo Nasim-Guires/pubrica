@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight } from 'lucide-react';
 
@@ -87,7 +88,7 @@ const editorsData = [
         experience: '15 years of experience',
         manuscripts: '200+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/computer-science/Dr.-Kevin-Marshall.webp"
     },
     {
         name: 'Dr. Priya Narayanan',
@@ -95,7 +96,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '180+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/psychiatry/Dr.-Priya-Narayanan.webp"
     },
     {
         name: 'Dr. Daniel Lee',
@@ -103,7 +104,7 @@ const editorsData = [
         experience: '11 years of experience',
         manuscripts: '150+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/chemical-engineering/Dr.-David-Lee.webp"
     }
 ];
 
@@ -185,7 +186,7 @@ export default function PsychiatrySection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/psychiatry/Psychiatry.webp"
                             alt="Psychiatry consultation and documentation"
                             className="w-full h-auto object-cover"
                         />
@@ -210,7 +211,7 @@ export default function PsychiatrySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/psychiatry/Clinical-Psychiatry-and-Diagnosis.webp"
                             alt="Journal of Psychiatric Research Cover"
                             className="w-full h-auto object-cover"
                         />

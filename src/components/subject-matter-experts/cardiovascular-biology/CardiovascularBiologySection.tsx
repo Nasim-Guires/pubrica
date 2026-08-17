@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight } from 'lucide-react';
 
@@ -60,7 +61,7 @@ const editorsData = [
         experience: '14 years of experience',
         manuscripts: '120+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/animal-science/warvien.png"
     },
     {
         name: 'Dr. Rajesh Nair',
@@ -68,7 +69,7 @@ const editorsData = [
         experience: '13 years of experience',
         manuscripts: '110+ manuscripts edited',
         countryFlag: '🇮🇳',
-        avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/animal-science/victor.png"
     },
     {
         name: 'Dr. Emily Carter',
@@ -76,7 +77,7 @@ const editorsData = [
         experience: '11 years of experience',
         manuscripts: '90+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200'
+        avatar: "/images/subject-matter-experts/biomonitoring/Dr.-Emily-Carter-1.webp"
     }
 ];
 
@@ -159,7 +160,7 @@ export default function CardiovascularBiologySection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600"
+                            src="/images/subject-matter-experts/cardiovascular-biology/Atherosclerosis.png"
                             alt="Applications of Cardiovascular Biology Research"
                             className="w-full h-auto object-cover"
                         />
@@ -184,7 +185,7 @@ export default function CardiovascularBiologySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400"
+                            src="/images/subject-matter-experts/cardiovascular-biology/Calcification.png"
                             alt="Journal of Cardiovascular Development and Disease Cover"
                             className="w-full h-auto object-cover"
                         />

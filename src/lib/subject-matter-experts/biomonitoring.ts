@@ -9,7 +9,9 @@ export const biomonitoringTestimonials: Testimonial[] = [
     authorRole: "Environmental Scientist",
     authorLocation: "Spain",
     avatarLabel: "Dr. Maria González profile image",
+      avatarSrc: "/images/subject-matter-experts/biomonitoring/Dr.-Maria-Gonzalez-2.webp",
     flagLabel: "Spain flag",
+      flagSrc: "/images/editing-and-translation/thesis-editing/spain-.png",
   },
   {
     id: "biomonitoring-2",
@@ -19,7 +21,9 @@ export const biomonitoringTestimonials: Testimonial[] = [
     authorRole: "Toxicology Researcher",
     authorLocation: "Germany",
     avatarLabel: "Dr. Laura Fischer profile image",
+      avatarSrc: "/images/subject-matter-experts/biomonitoring/Dr.-Laura-Fischer.webp",
     flagLabel: "Germany flag",
+      flagSrc: "/images/subject-matter-experts/biomonitoring/germany-.webp",
   },
   {
     id: "biomonitoring-3",
@@ -29,6 +33,8 @@ export const biomonitoringTestimonials: Testimonial[] = [
     authorRole: "Public Health Researcher",
     authorLocation: "India",
     avatarLabel: "Dr. Arjun Mehta profile image",
+      avatarSrc: "/images/subject-matter-experts/biomonitoring/Dr.-Arjun-Mehta-1.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/subject-matter-experts/biomonitoring/india.webp",
   },
 ];

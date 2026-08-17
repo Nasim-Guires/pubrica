@@ -11,6 +11,7 @@ export const FORENSIC_SCIENCE_TESTIMONIALS: Testimonial[] = [
     avatarLabel:
       "Portrait of John D, Senior Investigator at National Forensic Agency",
     flagLabel: "United States flag",
+      flagSrc: "/images/subject-matter-experts/algorithm/usa-.png",
   },
   {
     id: "forensic-science-2",
@@ -21,7 +22,9 @@ export const FORENSIC_SCIENCE_TESTIMONIALS: Testimonial[] = [
     authorLocation: "United Kingdom",
     avatarLabel:
       "Portrait of Rachel S, Forensic Toxicologist at State Crime Lab",
+      avatarSrc: "/images/subject-matter-experts/forensics/Rachel-S.webp",
     flagLabel: "United Kingdom flag",
+      flagSrc: "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
   },
   {
     id: "forensic-science-3",
@@ -32,6 +35,8 @@ export const FORENSIC_SCIENCE_TESTIMONIALS: Testimonial[] = [
     authorLocation: "India",
     avatarLabel:
       "Portrait of Mark P, Forensic Biochemist at Private Investigation Firm",
+      avatarSrc: "/images/subject-matter-experts/forensics/Mark-P.webp",
     flagLabel: "India flag",
+      flagSrc: "/images/editing-and-translation/translation-with-editing/india.png",
   },
 ];
