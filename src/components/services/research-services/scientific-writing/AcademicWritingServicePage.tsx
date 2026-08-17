@@ -181,7 +181,7 @@ export default function ScientificWritingPage() {
 
                             <div className="relative h-64 w-full overflow-hidden rounded-md md:col-span-5 md:h-80">
                                 <Image
-                                    src="/images/research-services/scientific-writing/Journal-Selection-Sample-Work.jpg"
+                                    src="/images/research-services/scientific-writing/Journal-Selection-Sample-Work.webp"
                                     alt="Scientific & Academic Writing"
                                     fill
                                     className="object-cover"
