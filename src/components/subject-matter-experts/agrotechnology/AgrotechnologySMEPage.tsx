@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import SmeCoreAreasGrid from "@/components/subject-matter-experts/SmeCoreAreasGrid";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -222,35 +223,7 @@ export default function AgrotechnologySMEPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {coreDisciplines.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-48 relative overflow-hidden group"
-                >
-                  <div className="flex justify-between items-start gap-3">
-                    <div className="flex-1">
-                      <h3 className="text-xs font-bold text-[#b81c1c] leading-snug mb-2">
-                        {item.title}
-                      </h3>
-                      <div className="overflow-y-auto card-scrollbar pr-2 text-[11px] text-gray-600 leading-relaxed max-h-20">
-                        <p>{item.desc}</p>
-                      </div>
-                    </div>
-                    <div className="p-2 bg-[#0d3630]/10 rounded-lg text-[#0d3630] shrink-0 group-hover:bg-[#0d3630] group-hover:text-white transition-colors duration-300">
-                      {(item as { iconSrc?: string }).iconSrc ? (
-                                            <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={20} height={20} className="object-contain shrink-0" />
-                                        ) : (
-                                            <Icon className="w-5 h-5" />
-                                        )}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <SmeCoreAreasGrid items={coreDisciplines} />
         </section>
 
         {/* SECTION: WHY CHOOSE PUBRICA FOR AGROTECHNOLOGY RESEARCH AND PUBLISHING? */}

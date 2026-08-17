@@ -1,21 +1,14 @@
 "use client";
 
-import Image from "next/image";
+import SmeCoreAreasGrid from "@/components/subject-matter-experts/SmeCoreAreasGrid";
 import React from "react";
 import {
     Activity,
     Layers,
     Scan,
     Cpu,
-    Stethoscope,
     HeartPulse,
-    ChevronDown,
-    Settings,
-    Shield,
     Database,
-    LineChart,
-    Network,
-    Leaf,
 } from "lucide-react";
 
 export default function CoreDisciplinesBiomedicalEngineering() {
@@ -84,49 +77,7 @@ export default function CoreDisciplinesBiomedicalEngineering() {
                 </div>
 
                 {/* Disciplines Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {disciplines.map((item, index) => {
-                        const IconComponent = item.icon;
-                        return (
-                            <div
-                                key={index}
-                                className="bg-white rounded-2xl p-7 border border-gray-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] "
-                            >
-                                {/* Top Corner Accent Gradient Line */}
-                                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0d3630] to-[#145347] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                                <div className="space-y-5">
-                                    {/* Header with Title and Icon */}
-                                    <div className="flex items-start justify-between gap-4">
-                                        <h3 className="text-lg font-bold text-[#b91c1c] group-hover:text-[#991b1b] transition-colors leading-snug">
-                                            {item.title}
-                                        </h3>
-                                        <div className="w-10 h-10 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 group-hover:bg-[#0d3630]/5 group-hover:border-[#0d3630]/20 transition-all">
-                                            {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={20} height={20} className="object-contain w-5 h-5 shrink-0" />
-                                        ) : (
-                                            <IconComponent className="w-5 h-5 text-[#0d3630]" />
-                                        )}
-                                        </div>
-                                    </div>
-
-                                    {/* Description */}
-                                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                                        {item.description}
-                                    </p>
-                                </div>
-
-                                {/* Footer category and dropdown indicator */}
-                                <div className="pt-6 mt-6 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-[#0d3630]">
-                                    <span>{item.category}</span>
-                                    <div className="w-6 h-6 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-[#0d3630] group-hover:text-white transition-all">
-                                        <ChevronDown className="w-3.5 h-3.5 text-gray-500 group-hover:text-white transition-colors" />
-                                    </div>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
+                <SmeCoreAreasGrid items={disciplines} />
             </div>
         </section>
     );

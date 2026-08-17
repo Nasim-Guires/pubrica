@@ -1,4 +1,5 @@
 "use client";
+import SmeCoreAreasGrid from "@/components/subject-matter-experts/SmeCoreAreasGrid";
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -212,38 +213,7 @@ export default function PublicHealthPage() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {disciplines.map((item, index) => {
-                            const IconComponent = item.icon;
-                            return (
-                                <article
-                                    key={index}
-                                    className="bg-white border border-gray-200/80 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col justify-between group"
-                                >
-                                    <div>
-                                        <div className="flex items-start justify-between mb-4">
-                                            <h3 className="text-base font-bold text-[#9E1B1E] group-hover:text-[#7d1417] transition-colors pr-2">
-                                                {item.title}
-                                            </h3>
-                                            <div className="p-2 bg-gray-50 rounded-lg shrink-0 text-[#0e3b32]">
-                                                {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                                <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
-                                            ) : (
-                                                <IconComponent className="w-6 h-6" />
-                                            )}
-                                            </div>
-                                        </div>
-                                        <p className="text-gray-600 text-xs leading-relaxed mb-6">
-                                            {item.description}
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <ChevronDown className="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors" />
-                                    </div>
-                                </article>
-                            );
-                        })}
-                    </div>
+                    <SmeCoreAreasGrid items={disciplines} />
 
                 </div>
             </section>

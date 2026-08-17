@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SmeCoreAreasGrid from "@/components/subject-matter-experts/SmeCoreAreasGrid";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -19,8 +20,6 @@ import {
     BookOpen,
     Layout,
     BarChart2,
-    ChevronUp,
-    ChevronDown,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -243,43 +242,7 @@ export default function AlgorithmSMEPage() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {coreAreas.map((item, index) => {
-                            const Icon = item.icon;
-                            return (
-                                <div
-                                    key={index}
-                                    className="bg-white border border-gray-200/90 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all flex justify-between gap-3 h-48 relative"
-                                >
-                                    {/* Left Column: Title & Independently Scrollable Box */}
-                                    <div className="flex-1 flex flex-col min-w-0">
-                                        <h3 className="text-xs font-bold text-gray-900 leading-snug shrink-0 mb-2">
-                                            <span className="text-[#b81c1c]">{item.highlight} </span>
-                                            {item.title.replace(item.highlight, "").trim()}
-                                        </h3>
-
-                                        {/* Scrollable text container */}
-                                        <div className="flex-1 overflow-y-auto card-scrollbar pr-2 text-[11px] text-gray-500 leading-relaxed max-h-28">
-                                            <p>{item.desc}</p>
-                                        </div>
-                                    </div>
-
-                                    {/* Right Column: Icon & Vertical Arrow / Bar Visual Indicator */}
-                                    <div className="flex flex-col items-center justify-between flex-shrink-0 w-8 border-l border-gray-100 pl-2 pointer-events-none">
-                                        {(item as any).iconSrc ? <Image src={(item as any).iconSrc} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" /> : <Icon className="w-5 h-5 text-gray-700 shrink-0" />}
-
-                                        <div className="flex flex-col items-center justify-between h-24 my-1">
-                                            <ChevronUp className="w-3 h-3 text-gray-400" />
-                                            <div className="w-1 flex-1 my-1 bg-gray-200 rounded-full relative overflow-hidden">
-                                                <div className="absolute top-0 w-full h-1/2 bg-gray-800 rounded-full" />
-                                            </div>
-                                            <ChevronDown className="w-3 h-3 text-gray-400" />
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
+                    <SmeCoreAreasGrid items={coreAreas} />
                 </section>
 
                 {/* EXPERTISE GRID WITH HOVER OVERLAY */}

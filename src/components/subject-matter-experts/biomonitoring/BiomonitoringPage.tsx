@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import SmeCoreAreasGrid from "@/components/subject-matter-experts/SmeCoreAreasGrid";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -20,8 +21,6 @@ import {
 } from "lucide-react";
 
 export default function BiomonitoringPage() {
-    const [expandedCard, setExpandedCard] = useState<number | null>(0);
-
     const coreDisciplines = [
         {
             title: "Environmental Biomonitoring",
@@ -181,52 +180,7 @@ export default function BiomonitoringPage() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {coreDisciplines.map((item, index) => {
-                            const Icon = item.icon;
-                            const isExpanded = expandedCard === index;
-                            return (
-                                <div
-                                    key={index}
-                                    className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
-                                >
-                                    <div>
-                                        <div className="flex justify-between items-start gap-3 mb-3">
-                                            <div>
-                                                <h3 className="text-xs font-bold text-[#b81c1c] leading-snug">
-                                                    {item.title}
-                                                </h3>
-                                            </div>
-                                            <div className="p-2 bg-[#0d3630]/10 rounded-lg text-[#0d3630] shrink-0">
-                                                {(item as { iconSrc?: string }).iconSrc ? (
-                                            <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={20} height={20} className="object-contain shrink-0" />
-                                        ) : (
-                                            <Icon className="w-5 h-5" />
-                                        )}
-                                            </div>
-                                        </div>
-
-                                        <p className="text-[11px] text-gray-600 leading-relaxed mb-4">
-                                            {item.desc}
-                                        </p>
-                                    </div>
-
-                                    <div className="pt-3 border-t border-gray-100 flex items-center justify-between">
-                                        <span className="text-[11px] font-semibold text-[#0d3630]">
-                                            {item.subtitle}
-                                        </span>
-                                        <button
-                                            onClick={() => setExpandedCard(isExpanded ? null : index)}
-                                            className="text-gray-400 hover:text-[#0d3630] transition-colors p-1"
-                                            aria-label="Toggle details"
-                                        >
-                                            {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                                        </button>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
+                    <SmeCoreAreasGrid items={coreDisciplines} />
                 </section>
 
                 {/* EXPERTISE IN BIOMONITORING RESEARCH AND PUBLICATION */}
