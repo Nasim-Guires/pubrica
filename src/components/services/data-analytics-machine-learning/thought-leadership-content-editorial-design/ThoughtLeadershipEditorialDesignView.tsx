@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // --- DATA STRUCTURES ---
 
@@ -150,10 +151,12 @@ export default function ThoughtLeadershipEditorialDesignView() {
                         <div className="relative w-full max-w-md">
                             <div className="absolute -inset-2 bg-[#033c2a] rounded-2xl transform -rotate-1 opacity-90" />
                             <div className="relative rounded-xl overflow-hidden border-2 border-white shadow-lg bg-slate-100 aspect-[4/3]">
-                                <img
-                                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
-                                    alt="Team surrounding table discussing strategy"
-                                    className="w-full h-full object-cover"
+                                <Image
+                                    src="/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/Strategic-Content-Engaging-Editorial-Design.webp"
+                                    alt="Thought leadership content and editorial design"
+                                    fill
+                                    className="object-cover"
+                                    priority
                                 />
                             </div>
                         </div>

@@ -15,31 +15,42 @@ interface Testimonial {
   author: string;
   title: string;
   location: string;
-  flagCode: string; // ISO 2-letter country code for flag API (e.g., 'in', 'gb')
+  flagSrc: string;
 }
 
 const testimonialsData: Testimonial[] = [
   {
     id: "1",
-    journalImageSrc: "/images/journals/jneurosci.jpg",
-    journalImageAlt: "JNeurosci journal cover",
+    journalImageSrc: "/images/scientific-communication/jama-neurology-.webp",
+    journalImageAlt: "JAMA Neurology journal cover",
     quote:
       "Pubrica's scientific communication team helped us transform complex clinical data into clear, publication-ready manuscripts. Their attention to regulatory guidelines and journal requirements ensured smooth submissions and faster approvals.",
     author: "DR. MEERA SHARMA",
     title: "Clinical Research Lead",
     location: "India",
-    flagCode: "in",
+    flagSrc: "/images/editing-and-translation/flag.png",
   },
   {
     id: "2",
-    journalImageSrc: "/images/journals/bmc-health.jpg",
-    journalImageAlt: "BMC Global and Public Health journal cover",
+    journalImageSrc: "/images/editing-and-translation/scientific-editing/testimonials-1.png",
+    journalImageAlt: "Journal cover",
     quote:
       "Pubrica's scientific medical communication services helped us convey complex trial results in a way that was both accurate and engaging. Their work strengthened our publications and reinforced our credibility in the field.",
     author: "DR. ROHAN IYER",
     title: "Clinical Trials Manager",
     location: "United Kingdom",
-    flagCode: "gb",
+    flagSrc: "/images/research-services/systematic-review/united-kingdom-.png",
+  },
+  {
+    id: "3",
+    journalImageSrc: "/images/scientific-communication/journal-of-health-economics-1.webp",
+    journalImageAlt: "Journal of Health Economics cover",
+    quote:
+      "The scientific communication services at Pubrica elevated our research presentations. Their precise, well-structured content made it easier for our findings to reach and resonate with the target audience.",
+    author: "PROF. ANIL VERMA",
+    title: "Academic Researcher",
+    location: "Germany",
+    flagSrc: "/images/editing-and-translation/book-editing/germany-.png",
   },
 ];
 
@@ -239,7 +250,7 @@ export default function TestimonialsAndFAQSection() {
                   </div>
                   <div className="w-6 h-6 relative rounded-full overflow-hidden border border-gray-200 flex-shrink-0">
                     <Image
-                      src={`https://flagcdn.com/w40/${item.flagCode}.png`}
+                      src={item.flagSrc}
                       alt={`${item.location} flag`}
                       fill
                       className="object-cover"

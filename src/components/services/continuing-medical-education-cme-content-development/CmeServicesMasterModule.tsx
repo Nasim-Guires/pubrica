@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 // --- DATA STRUCTURES ---
 
@@ -13,7 +14,8 @@ interface WorkflowStep {
 }
 
 interface PackageTier {
-    letter: string;
+    letter?: string;
+    badgeSrc: string;
     badgeBg: string;
     badgeColor: string;
     cardHeaderBg: string;
@@ -32,7 +34,7 @@ const workflowSteps: WorkflowStep[] = [
         title: 'Initial Consultation and Needs Assessment',
         description:
             'The process begins with an initial consultation where our CME experts engage with the client to understand the educational needs of the target audience. This includes identifying the key learning objectives, the specialties to be addressed (such as cardiology, oncology, etc.), and the preferred formats for content delivery.',
-        imageSrc: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+        imageSrc: '/images/continuing-medical-education-cme-content-development/Initial-Consultation-and-Needs-Assessment.png',
     },
     {
         id: 'step-2',
@@ -40,7 +42,7 @@ const workflowSteps: WorkflowStep[] = [
         title: 'Curriculum Design and Content Development',
         description:
             'Based on the outcomes of the initial consultation, our team designs a tailored CME curriculum that includes a variety of educational materials such as evidence-based medical articles, case studies, interactive modules, and more. We then develop the content, ensuring it aligns with the latest clinical guidelines and research.',
-        imageSrc: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&q=80&w=800',
+        imageSrc: '/images/continuing-medical-education-cme-content-development/Curriculum-Design-and-Content-Development.png',
     },
     {
         id: 'step-3',
@@ -48,7 +50,7 @@ const workflowSteps: WorkflowStep[] = [
         title: 'Peer Review and Compliance Checks',
         description:
             'All CME content undergoes a rigorous peer-review process by subject matter experts to ensure accuracy, relevance, and compliance with accreditation standards. This step is crucial for maintaining the educational integrity and scientific rigor of the CME activities.',
-        imageSrc: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=800',
+        imageSrc: '/images/continuing-medical-education-cme-content-development/Peer-Review-and-Compliance-Checks.png',
     },
     {
         id: 'step-4',
@@ -56,7 +58,7 @@ const workflowSteps: WorkflowStep[] = [
         title: 'Multimedia and Interactive Content Production',
         description:
             'Our team employs advanced digital tools to create engaging multimedia and interactive CME content, including video lectures, infographics, and simulation-based activities. This enhances the learning experience and aids in the retention of complex medical information.',
-        imageSrc: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800',
+        imageSrc: '/images/continuing-medical-education-cme-content-development/Multimedia-and-Interactive-Content-Production.png',
     },
     {
         id: 'step-5',
@@ -64,8 +66,7 @@ const workflowSteps: WorkflowStep[] = [
         title: 'Implementation and Distribution',
         description:
             'Once the content is finalized, it is implemented across various platforms as per the client\'s distribution strategy. This could include hosting on dedicated learning management systems (LMS), direct distribution to learners via webinars, or through live conferences and workshops.',
-        imageSrc:
-            'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800',
+        imageSrc: '/images/continuing-medical-education-cme-content-development/Implementation-and-Distribution.png',
     },
     {
         id: 'step-6',
@@ -73,7 +74,7 @@ const workflowSteps: WorkflowStep[] = [
         title: 'Evaluation and Feedback Collection',
         description:
             'We conduct comprehensive evaluations to assess the effectiveness of the CME programs. Feedback is collected from participants to gauge their satisfaction and the impact on their clinical practices, which informs future content updates and revisions.',
-        imageSrc: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800',
+        imageSrc: '/images/continuing-medical-education-cme-content-development/Evaluation-and-Feedback-Collection.png',
     },
     {
         id: 'step-7',
@@ -81,7 +82,7 @@ const workflowSteps: WorkflowStep[] = [
         title: 'Ongoing Updates and Maintenance',
         description:
             'The field of medicine is continually evolving, and our CME content is regularly updated to reflect the latest medical research and clinical best practices. We offer ongoing support and maintenance to ensure that all CME activities remain current and scientifically valid.',
-        imageSrc: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=800',
+        imageSrc: '/images/continuing-medical-education-cme-content-development/Ongoing-Updates-and-Maintenance.png',
     },
     {
         id: 'step-8',
@@ -89,13 +90,14 @@ const workflowSteps: WorkflowStep[] = [
         title: 'Dedicated Project Coordination',
         description:
             'A dedicated project coordinator is assigned to oversee the CME development process from start to finish, ensuring seamless communication and efficient project management. This coordinator acts as the main point of contact for all client interactions and queries',
-        imageSrc: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800',
+        imageSrc: '/images/continuing-medical-education-cme-content-development/Dedicated-Project-Coordination.png',
     },
 ];
 
 const packagesData: PackageTier[] = [
     {
         letter: 'B',
+        badgeSrc: '/images/editing-and-translation/basic-pacakge.png',
         badgeBg: 'bg-amber-100',
         badgeColor: 'text-amber-700 border-amber-300',
         cardHeaderBg: 'bg-[#d8e3e1]',
@@ -111,6 +113,7 @@ const packagesData: PackageTier[] = [
     },
     {
         letter: 'S',
+        badgeSrc: '/images/publication-support/poster-preparation/S.png',
         badgeBg: 'bg-purple-100',
         badgeColor: 'text-purple-700 border-purple-300',
         cardHeaderBg: 'bg-[#e5d8eb]',
@@ -127,6 +130,7 @@ const packagesData: PackageTier[] = [
     },
     {
         letter: 'P',
+        badgeSrc: '/images/editing-and-translation/pro.webp',
         badgeBg: 'bg-red-100',
         badgeColor: 'text-red-700 border-red-300',
         cardHeaderBg: 'bg-[#ebd8bd]',
@@ -195,11 +199,12 @@ export default function CmeServicesMasterModule() {
 
                     {/* Active Tab Card */}
                     <div className="md:col-span-7 space-y-4 bg-white p-2">
-                        <div className="rounded-lg overflow-hidden border border-slate-200 aspect-[16/9] shadow-sm">
-                            <img
+                        <div className="relative rounded-lg overflow-hidden border border-slate-200 aspect-[16/9] shadow-sm">
+                            <Image
                                 src={currentWorkflowStep.imageSrc}
                                 alt={currentWorkflowStep.title}
-                                className="w-full h-full object-cover"
+                                fill
+                                className="object-contain bg-white"
                             />
                         </div>
 
@@ -280,11 +285,12 @@ export default function CmeServicesMasterModule() {
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="bg-[#f2faf5] border border-emerald-100 rounded-xl p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-8 items-center shadow-sm">
                     {/* Image */}
-                    <div className="md:col-span-5 rounded-lg overflow-hidden aspect-[4/3] border border-slate-200">
-                        <img
-                            src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&q=80&w=800"
-                            alt="Medical Research Lab"
-                            className="w-full h-full object-cover"
+                    <div className="relative md:col-span-5 rounded-lg overflow-hidden aspect-[4/3] border border-slate-200">
+                        <Image
+                            src="/images/continuing-medical-education-cme-content-development/Continuing-Medical-Education-Sample-Work.png"
+                            alt="Continuing Medical Education sample work"
+                            fill
+                            className="object-cover"
                         />
                     </div>
 
@@ -336,10 +342,8 @@ export default function CmeServicesMasterModule() {
                             <div>
                                 {/* Header */}
                                 <div className={`${pkg.cardHeaderBg} p-5 relative flex items-center gap-3`}>
-                                    <div
-                                        className={`w-9 h-9 rounded-full ${pkg.badgeBg} ${pkg.badgeColor} border font-extrabold flex items-center justify-center text-sm shadow-sm shrink-0`}
-                                    >
-                                        {pkg.letter}
+                                    <div className="relative w-9 h-9 shrink-0">
+                                        <Image src={pkg.badgeSrc} alt={`${pkg.title} package`} fill className="object-contain" />
                                     </div>
                                     <h3 className="text-sm font-bold text-slate-900 leading-tight">
                                         {pkg.title}

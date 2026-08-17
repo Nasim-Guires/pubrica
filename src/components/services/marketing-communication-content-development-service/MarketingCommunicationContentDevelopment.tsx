@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 export const metadata = {
     title: 'Marketing Communication Content Development Services | Pubrica',
@@ -169,16 +170,18 @@ export default function MarketingCommunicationContentDevelopment() {
                         </p>
                     </div>
 
-                    {/* Right Image Section Placeholder */}
+                    {/* Right image */}
                     <div className="md:col-span-5 flex justify-center">
                         <div className="relative w-full max-w-md">
-                            <div className="w-full h-72 md:h-80 bg-slate-200 rounded-2xl border-2 border-dashed border-slate-400 flex flex-col items-center justify-center p-6 text-center shadow-md">
-                                <span className="text-lg font-bold text-gray-700">Image Section</span>
-                                <span className="text-xs text-gray-500 mt-2">
-                                    [ Team collaborating in office environment visual ]
-                                </span>
+                            <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden border-2 border-white shadow-md">
+                                <Image
+                                    src="/images/marketing-communication-content-development-service/Marketing-Communication-Content-Development.webp"
+                                    alt="Marketing communication content development"
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
                             </div>
-                            {/* Dark teal accent box under image */}
                             <div className="absolute -bottom-3 -right-3 -z-10 w-full h-full bg-[#0b3b2c] rounded-2xl"></div>
                         </div>
                     </div>
@@ -192,13 +195,15 @@ export default function MarketingCommunicationContentDevelopment() {
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-                    {/* Left Image Section Placeholder */}
+                    {/* Left image */}
                     <div className="md:col-span-5 flex justify-center">
-                        <div className="w-full max-w-md h-80 bg-teal-50 rounded-2xl border-2 border-dashed border-teal-300 flex flex-col items-center justify-center p-6 text-center shadow-inner">
-                            <span className="text-lg font-bold text-teal-800">Image Section</span>
-                            <span className="text-xs text-teal-600 mt-2">
-                                [ Healthcare/Medical brochures and print collateral visual ]
-                            </span>
+                        <div className="relative w-full max-w-md h-80 rounded-2xl overflow-hidden border border-teal-200 shadow-inner">
+                            <Image
+                                src="/images/marketing-communication-content-development-service/Our-Services.png"
+                                alt="Marketing communication services collateral"
+                                fill
+                                className="object-cover"
+                            />
                         </div>
                     </div>
 

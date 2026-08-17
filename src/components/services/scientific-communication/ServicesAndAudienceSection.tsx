@@ -50,7 +50,7 @@ const audienceData: AudienceCardData[] = [
   {
     id: "researchers",
     title: "Researchers & Academics",
-    imageSrc: "/images/who-we-serve/researchers.jpg",
+    imageSrc: "/images/scientific-communication/Researchers-Academics.webp",
     imageAlt: "Researchers working with a microscope and scientific data",
     description:
       "Transforming complex data into clear, compliant publications for high-impact journals.",
@@ -58,7 +58,7 @@ const audienceData: AudienceCardData[] = [
   {
     id: "pharma",
     title: "Pharmaceutical & Biotech Companies",
-    imageSrc: "/images/who-we-serve/pharma.jpg",
+    imageSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Pharmaceutical-Biotech-Companies-1.webp",
     imageAlt: "Biotech researcher in lab mask and suit examining samples",
     description:
       "Developing regulatory documents, medical affairs content, and marketing materials.",
@@ -66,7 +66,7 @@ const audienceData: AudienceCardData[] = [
   {
     id: "clinicians",
     title: "Clinicians & Healthcare Professionals",
-    imageSrc: "/images/who-we-serve/clinicians.jpg",
+    imageSrc: "/images/scientific-communication/Clinicians-Healthcare-Professionals.webp",
     imageAlt: "Doctor checking patient blood pressure with stethoscope",
     description:
       "Creating evidence-based CME materials and clinical practice summaries.",
@@ -74,7 +74,7 @@ const audienceData: AudienceCardData[] = [
   {
     id: "med-device",
     title: "Medical Device & Diagnostics Companies",
-    imageSrc: "/images/who-we-serve/med-device.jpg",
+    imageSrc: "/images/scientific-communication/Medical-Device-Diagnostics-Companies.webp",
     imageAlt: "Ultrasound diagnostic medical monitoring device",
     description:
       "Crafting user manuals, regulatory submissions, and white papers.",
@@ -82,7 +82,7 @@ const audienceData: AudienceCardData[] = [
   {
     id: "marketing-teams",
     title: "Healthcare Marketing & Communication Teams",
-    imageSrc: "/images/who-we-serve/healthcare-marketing.jpg",
+    imageSrc: "/images/scientific-communication/Healthcare-Marketing-Communication-Teams.webp",
     imageAlt: "Healthcare team sitting in conference presentation room",
     description:
       "Generating engaging patient education content and multi-channel campaign assets.",
@@ -90,7 +90,7 @@ const audienceData: AudienceCardData[] = [
   {
     id: "regulatory",
     title: "Regulatory Agencies & CROs",
-    imageSrc: "/images/who-we-serve/regulatory.jpg", // Placeholder image path
+    imageSrc: "/images/scientific-communication/Regulatory-Agencies-CROs.webp",
     imageAlt: "Close up of hand signing official medical regulatory documents",
     description:
       "Preparing structured, guideline-compliant clinical study reports, regulatory documentation, and safety narratives.",

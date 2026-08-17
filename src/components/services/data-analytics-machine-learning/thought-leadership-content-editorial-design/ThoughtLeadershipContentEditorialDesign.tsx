@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Thought Leadership Content & Editorial Design | Pubrica',
@@ -11,44 +12,28 @@ export default function ThoughtLeadershipContentEditorialDesign() {
       id: 1,
       title: 'Ideation & Strategic Topic Planning',
       description: 'Collaborate to brainstorm thought-provoking topics aligned with your brand and audience.',
-      icon: (
-        <svg className="w-10 h-10 text-gray-700 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-        </svg>
-      ),
+      iconSrc: '/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/Ideation-Strategic-Topic-Planning.png',
       numPosition: 'top', // circle 1 is above
     },
     {
       id: 2,
       title: 'Tailored Content Development',
       description: 'Develop engaging narratives and insightful content tailored to your objectives and industry dynamics.',
-      icon: (
-        <svg className="w-10 h-10 text-gray-700 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-        </svg>
-      ),
+      iconSrc: '/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/Tailored-Content-Development.png',
       numPosition: 'bottom', // circle 2 is below
     },
     {
       id: 3,
       title: 'Editorial & Visual Design',
       description: 'Design visually appealing layouts that enhance readability and reinforce your brand identity.',
-      icon: (
-        <svg className="w-10 h-10 text-gray-700 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-        </svg>
-      ),
+      iconSrc: '/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/Editorial-Visual-Design.png',
       numPosition: 'top', // circle 3 is above
     },
     {
       id: 4,
       title: 'Review & Quality Assurance',
       description: 'Conduct meticulous reviews and refinements to ensure coherence, clarity, and alignment with strategic objectives before final dissemination.',
-      icon: (
-        <svg className="w-10 h-10 text-gray-700 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      ),
+      iconSrc: '/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/Review-Quality-Assurance.png',
       numPosition: 'bottom', // circle 4 is below
     },
   ];
@@ -103,8 +88,8 @@ export default function ThoughtLeadershipContentEditorialDesign() {
                   {/* Decorative Teal Top Accent Bar */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-[#0088cc] group-hover:bg-[#0088cc]" />
                   
-                  <div className="mb-3">
-                    {step.icon}
+                  <div className="relative w-10 h-10 mb-3">
+                    <Image src={step.iconSrc} alt={step.title} fill className="object-contain" />
                   </div>
                   <h4 className="text-sm font-bold mb-2 text-gray-900 group-hover:text-white transition-colors duration-300">
                     {step.title}
@@ -140,9 +125,13 @@ export default function ThoughtLeadershipContentEditorialDesign() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image Section Placeholder */}
-          <div className="w-full h-80 bg-stone-200 rounded-lg border border-dashed border-gray-400 flex flex-col items-center justify-center p-4 text-center shadow-inner">
-            <span className="text-lg font-bold text-gray-700">Image Section</span>
-            <span className="text-xs text-gray-500 mt-1">[ Guidelines Binder / Document Representation ]</span>
+          <div className="relative w-full h-80 rounded-lg overflow-hidden border border-gray-200 shadow-inner">
+            <Image
+              src="/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/Ethical-Guidelines.png"
+              alt="Thought leadership compliance and ethical guidelines"
+              fill
+              className="object-cover"
+            />
           </div>
 
           {/* Key Standards List */}
@@ -182,9 +171,13 @@ export default function ThoughtLeadershipContentEditorialDesign() {
       <section className="bg-emerald-50/50 py-12 px-4 border-y border-emerald-100">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image Section Placeholder */}
-          <div className="w-full h-80 bg-teal-100/70 rounded-lg border border-dashed border-teal-400 flex flex-col items-center justify-center p-4 text-center shadow-inner">
-            <span className="text-lg font-bold text-teal-800">Image Section</span>
-            <span className="text-xs text-teal-600 mt-1">[ Professional Reading / Sample Report Visual ]</span>
+          <div className="relative w-full h-80 rounded-lg overflow-hidden border border-teal-200 shadow-inner">
+            <Image
+              src="/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/Thought-Leadership-Content-Editorial-Design-Sample-Work.png"
+              alt="Thought Leadership Content and Editorial Design sample work"
+              fill
+              className="object-cover"
+            />
           </div>
 
           <div className="flex flex-col items-start space-y-4">
@@ -219,7 +212,9 @@ export default function ThoughtLeadershipContentEditorialDesign() {
           <div className="bg-[#dbe3e3] rounded-lg p-6 flex flex-col justify-between border border-gray-300">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <span className="w-9 h-9 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-lg border border-blue-300">S</span>
+                <span className="relative w-9 h-9">
+                  <Image src="/images/publication-support/responding-to-reviewers/standard-logo.png" alt="Starter package" fill className="object-contain" />
+                </span>
                 <h3 className="text-base font-bold text-gray-900">Starter</h3>
               </div>
               <ul className="space-y-3 text-xs text-gray-800">
@@ -250,7 +245,9 @@ export default function ThoughtLeadershipContentEditorialDesign() {
           <div className="bg-[#e4d3e8] rounded-lg p-6 flex flex-col justify-between border border-purple-200">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <span className="w-9 h-9 rounded-full bg-purple-100 text-purple-600 font-bold flex items-center justify-center text-lg border border-purple-300">P</span>
+                <span className="relative w-9 h-9">
+                  <Image src="/images/editing-and-translation/pro.webp" alt="Professional package" fill className="object-contain" />
+                </span>
                 <h3 className="text-base font-bold text-purple-900">Professional</h3>
               </div>
               <ul className="space-y-3 text-xs text-gray-800">
@@ -282,7 +279,9 @@ export default function ThoughtLeadershipContentEditorialDesign() {
           <div className="bg-[#e8daaa] rounded-lg p-6 flex flex-col justify-between border border-amber-300">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <span className="w-9 h-9 rounded-full bg-amber-100 text-amber-700 font-bold flex items-center justify-center text-lg border border-amber-400">E</span>
+                <span className="relative w-9 h-9">
+                  <Image src="/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/E-pa-icons.png" alt="Enterprise package" fill className="object-contain" />
+                </span>
                 <h3 className="text-base font-bold text-amber-950">Enterprise</h3>
               </div>
               <ul className="space-y-3 text-xs text-gray-800">

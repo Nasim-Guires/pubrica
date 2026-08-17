@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // --- DATA STRUCTURES ---
 
@@ -189,10 +190,12 @@ export default function CMEContentDevelopmentPage() {
                             <div className="absolute -inset-2 bg-[#033c2a] rounded-2xl transform -rotate-1 opacity-90" />
                             {/* Image Container */}
                             <div className="relative rounded-xl overflow-hidden border-2 border-white shadow-lg bg-slate-100 aspect-[4/3]">
-                                <img
-                                    src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800"
-                                    alt="Doctors reviewing medical notes"
-                                    className="w-full h-full object-cover"
+                                <Image
+                                    src="/images/continuing-medical-education-cme-content-development/Continuing-Medical-Education-Content-.webp"
+                                    alt="Continuing medical education content development"
+                                    fill
+                                    className="object-cover"
+                                    priority
                                 />
                             </div>
                         </div>

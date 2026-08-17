@@ -11,7 +11,7 @@ import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface PackageCard {
   id: string;
-  badge: string; // 'B', 'S', 'P'
+  badgeSrc: string;
   title: string;
   headerColor: string; // Header background/text highlight color
   cardBgColor: string; // Body background color
@@ -23,7 +23,7 @@ interface PackageCard {
 const packagesData: PackageCard[] = [
   {
     id: "basic",
-    badge: "B",
+    badgeSrc: "/images/editing-and-translation/basic-pacakge.png",
     title: "Basic",
     headerColor: "bg-amber-100 text-amber-800 border-amber-300",
     cardBgColor: "bg-[#cfd8d7]", // Soft grayish-teal
@@ -38,7 +38,7 @@ const packagesData: PackageCard[] = [
   },
   {
     id: "standard",
-    badge: "S",
+    badgeSrc: "/images/publication-support/poster-preparation/S.png",
     title: "Standard",
     headerColor: "bg-sky-100 text-sky-800 border-sky-300",
     cardBgColor: "bg-[#d3c2dc]", // Soft purple/lavender
@@ -54,7 +54,7 @@ const packagesData: PackageCard[] = [
   },
   {
     id: "premium",
-    badge: "P",
+    badgeSrc: "/images/editing-and-translation/pro.webp",
     title: "Premium",
     headerColor: "bg-blue-100 text-blue-800 border-blue-300",
     cardBgColor: "bg-[#d8be8d]", // Soft warm gold/khaki
@@ -93,8 +93,8 @@ export default function SampleWorkAndPackagesSection() {
           {/* Left Image Column */}
           <div className="w-full md:w-5/12 relative h-64 md:h-80 rounded-md overflow-hidden shadow-md">
             <Image
-              src="/images/sample-work-researchers.jpg" // Replace with your image path
-              alt="Scientific research team analyzing data on tablet"
+              src="/images/scientific-communication/Scientific-Medical-Communication-Sample-Work.webp"
+              alt="Scientific Medical Communication sample work"
               fill
               className="object-cover"
               priority
@@ -164,10 +164,8 @@ export default function SampleWorkAndPackagesSection() {
               >
                 {/* White Top Header Bar */}
                 <div className="bg-white p-4 flex items-center space-x-3 border-b border-gray-100">
-                  <div
-                    className={`w-9 h-9 rounded-full border-2 flex items-center justify-center font-bold text-sm ${pkg.headerColor}`}
-                  >
-                    {pkg.badge}
+                  <div className="relative w-9 h-9 flex-shrink-0">
+                    <Image src={pkg.badgeSrc} alt={`${pkg.title} package`} fill className="object-contain" />
                   </div>
                   <h3 className="text-lg font-bold text-slate-900">
                     {pkg.title}

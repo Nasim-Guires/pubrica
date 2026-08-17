@@ -136,8 +136,8 @@ export default function ScientificMedicalCommunication() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border-l-8 border-b-8 border-[#133c3f]">
               <Image
-                src="/images/medical-scientists-working.jpg"
-                alt="Medical scientists discussing research results on laptop"
+                src="/images/research-services/experimental-design/Ensure-the-Success-of-Your-Research-with-Pubricas-Experimental-Design-Services.webp"
+                alt="Scientific medical communication"
                 fill
                 className="object-cover"
                 priority
@@ -156,25 +156,13 @@ export default function ScientificMedicalCommunication() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Overlapping Image Container */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md h-[300px] md:h-[340px]">
-              {/* Back Card Image */}
-              <div className="absolute top-0 left-0 w-3/4 h-2/3 rounded-xl overflow-hidden shadow-md z-10 border border-gray-200">
-                <Image
-                  src="/images/compliance-laptop.jpg"
-                  alt="Compliance and regulation guidelines on laptop screen"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              {/* Front Card Image */}
-              <div className="absolute bottom-0 right-0 w-3/4 h-2/3 rounded-xl overflow-hidden shadow-xl z-20 border-2 border-white">
-                <Image
-                  src="/images/data-analytics-dashboard.jpg"
-                  alt="Data analysis charts and graph dashboard"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+            <div className="relative w-full max-w-md aspect-square rounded-xl overflow-hidden shadow-md border border-gray-200">
+              <Image
+                src="/images/scientific-communication/Why-Scientific-Medical-Communication-Matters.webp"
+                alt="Why scientific medical communication matters"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
 
