@@ -36,6 +36,33 @@ const emergingTrendsData = [
     }
 ];
 
+const applicationsData = [
+    {
+        title: "Medical Education",
+        description: "Utilizing the visual demonstration of complex biological processes, anatomy, and medical procedures, provides increased learning opportunities."
+    },
+    {
+        title: "Patient Education",
+        description: "By providing clear and easy-to-understand visuals of diagnoses, treatment options, and surgical procedures, patients can more readily understand their condition."
+    },
+    {
+        title: "Surgical Planning",
+        description: "Surgeons can visualize how to prepare for their next surgery by using visual aids of the anatomy involved as well as how to perform each step."
+    },
+    {
+        title: "Pharmaceutical Marketing",
+        description: "Visually conveying drug mechanism action, clinical trial results, and therapeutic benefits to the public and healthcare professionals."
+    },
+    {
+        title: "Medical Device Demonstration",
+        description: "Presenting how medical devices function, offering healthcare providers and patients with the opportunity to learn about how they work."
+    },
+    {
+        title: "Scientific Communication",
+        description: "A method for researchers to visually communicate the scientific concepts and results of their research in academic papers, conferences, and other publications."
+    }
+];
+
 const areasOfStudyData = [
     { title: 'Molecular Biology' },
     { title: 'Disease Mechanisms' },
@@ -119,6 +146,48 @@ export default function MedicalAnimationSections() {
                         <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
                             {emergingTrendsData[activeTab].description}
                         </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* NEW SECTION: Applications of Medical Animation */}
+            <section className="max-w-6xl mx-auto space-y-8">
+                <div className="space-y-2 text-left">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
+                        Applications of Medical Animation
+                    </h2>
+                    <p className="text-gray-700 text-base font-medium">
+                        Medical Animation is applied in diverse sectors:
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    {/* List Items */}
+                    <div className="lg:col-span-7 space-y-6">
+                        {applicationsData.map((item, index) => (
+                            <div key={index} className="flex items-start space-x-4">
+                                <div className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 mt-1">
+                                    <BookOpen className="w-4 h-4 text-[#0e3b32]" />
+                                </div>
+                                <div className="space-y-1 text-sm sm:text-base leading-relaxed text-gray-700">
+                                    <p>
+                                        <strong className="text-gray-900 font-semibold">{item.title}: </strong>
+                                        {item.description}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Right Column Image */}
+                    <div className="lg:col-span-5 flex justify-center">
+                        <div className="rounded-lg overflow-hidden border border-gray-200 shadow-sm max-w-md w-full">
+                            <img
+                                src="/images/subject-matter-experts/medical-animation/Applications-of-Medical-Animation.webp"
+                                alt="Medical Animation Knee Joint Model"
+                                className="w-full h-auto object-cover"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

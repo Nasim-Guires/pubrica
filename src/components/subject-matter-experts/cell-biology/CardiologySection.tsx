@@ -1,12 +1,15 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { 
-    Briefcase, 
-    FileText, 
-    ChevronDown,
-    Activity,
-    HeartPulse
+import {
+    Briefcase,
+    FileText,
+    Microscope,
+    Dna,
+    Syringe,
+    FlaskConical,
+    Stethoscope,
+    Activity
 } from 'lucide-react';
 
 // Tabbed Data for Emerging Research Trends in Cell Biology
@@ -15,75 +18,77 @@ const conditionsTabs = [
         id: 'single-cell-omics',
         label: 'Single-Cell Omics',
         title: 'Single-Cell Omics',
-        description: 'High throughput sequencing and analysis of individual cells reveal cellular heterogeneity and lineage relationships.'
+        description: 'High-throughput sequencing and analysis of individual cells reveal cellular heterogeneity and lineage relationships.'
     },
     {
         id: 'organoid-technology',
         label: 'Organoid Technology',
         title: 'Organoid Technology',
-        description: '3D organoid cultures model complex organ structures and functions, enhancing disease modeling and drug screening.'
+        description: 'Development of 3D cell cultures that mimic organ structure and function, facilitating disease modeling and drug screening.'
     },
     {
         id: 'systems-cell-biology',
         label: 'Systems Cell Biology',
         title: 'Systems Cell Biology',
-        description: 'Integrating computational modeling and quantitative data to understand complex cellular networks and interactions.'
+        description: 'Integrating computational modeling and bioinformatics to understand complex cellular networks.'
     },
     {
         id: 'cell-mechanics',
         label: 'Cell Mechanics and Biophysics',
         title: 'Cell Mechanics and Biophysics',
-        description: 'Investigating physical forces and mechanical properties that govern cellular behaviors and tissue organization.'
+        description: 'Investigating how physical forces and mechanical properties influence cellular behavior.'
     },
     {
         id: 'ai-cell-imaging',
         label: 'Artificial Intelligence (AI) in Cell Imaging',
         title: 'Artificial Intelligence (AI) in Cell Imaging',
-        description: 'Leveraging deep learning and computer vision to automate, segment, and extract insights from high-resolution cell images.'
+        description: 'Using AI-based algorithms for automated image analysis, pattern recognition, and predictive modeling.'
     },
     {
         id: 'synthetic-biology',
         label: 'Synthetic Biology',
         title: 'Synthetic Biology',
-        description: 'Engineering novel biological components, circuits, and synthetic cells to address biomedical and industrial challenges.'
+        description: 'Engineering cells to perform novel functions for therapeutic and industrial applications.'
     }
 ];
 
-// Accordion Data for Applications of Cell Biology Research
-const applicationsAccordionData = [
+// Applications List Data (2-Column Icon + Text layout matching screenshot)
+const applicationsList = [
     {
-        title: "Diagnostic Applications",
-            iconSrc: "/images/subject-matter-experts/cell-biology/Cell-Death-and-Survival-Mechanisms.webp",
-        icon: Activity,
-        content: (
-            <div className="space-y-3">
-                <p>
-                    Cell Biology research extends across medical, pharmaceutical, and biotechnological industries, powering critical biomedical advancements.
-                </p>
-                <p>
-                    <strong className="font-bold text-gray-900">Disease Mechanism Elucidation:</strong> Understanding how cellular dysfunction leads to diseases such as cancer, neurodegenerative disorders, diabetes, and cardiovascular conditions.<br />
-                    <strong className="font-bold text-gray-900">Drug Discovery and Development:</strong> Utilizing cellular assays and models to identify drug targets, assess efficacy, and predict toxicity.<br />
-                    <strong className="font-bold text-gray-900">Regenerative Medicine:</strong> Harnessing stem cell biology to regenerate damaged tissues and organs.<br />
-                    <strong className="font-bold text-gray-900">Genetic Engineering:</strong> Applying cellular-level insights for gene editing using CRISPR-Cas9 and other molecular tools.
-                </p>
-            </div>
-        )
+        icon: Stethoscope,
+        title: "Disease Mechanism Elucidation",
+        iconSrc: "/images/subject-matter-experts/cardiology/Interventional-Car-diology.png",
+        description: "Understanding how cellular dysfunction leads to diseases such as cancer, neurodegenerative disorders, diabetes, and cardiovascular conditions."
     },
     {
-        title: "Interventional and Therapeutic Applications",
-            iconSrc: "/images/subject-matter-experts/cell-biology/Cytoskeleton-and-Cell-Motility.webp",
-        icon: HeartPulse,
-        content: (
-            <div className="space-y-3">
-                <p>
-                    Modern therapeutic frameworks build upon basic cell mechanics to deliver targeted interventions.
-                </p>
-                <p>
-                    <strong className="font-bold text-gray-900">Vaccine Development:</strong> Exploring cellular immune responses to design effective vaccines against infectious diseases.<br />
-                    <strong className="font-bold text-gray-900">Tissue Engineering:</strong> Integrating cell biology with materials science to develop biomimetic scaffolds for tissue reconstruction.
-                </p>
-            </div>
-        )
+        icon: Microscope,
+        title: "Drug Discovery and Development",
+        iconSrc: "/images/subject-matter-experts/cardiology/Electrophysiology.png",
+        description: "Utilizing cellular assays and models to identify drug targets, assess efficacy, and predict toxicity."
+    },
+    {
+        icon: Activity,
+        title: "Regenerative Medicine",
+        iconSrc: "/images/subject-matter-experts/cardiology/Heart-Failure-and-Transplantation.png",
+        description: "Harnessing stem cell biology to regenerate damaged tissues and organs."
+    },
+    {
+        icon: Dna,
+        title: "Genetic Engineering",
+        iconSrc: "/images/subject-matter-experts/cardiology/Cardiac-Surgery.png",
+        description: "Applying cellular-level insights for gene editing using CRISPR-Cas9 and other molecular tools."
+    },
+    {
+        icon: Syringe,
+        title: "Vaccine Development",
+        iconSrc: "/images/subject-matter-experts/cardiology/Paediatric-Cardiology.png",
+        description: "Exploring cellular immune responses to design effective vaccines against infectious diseases."
+    },
+    {
+        icon: FlaskConical,
+        title: "Tissue Engineering",
+        iconSrc: "/images/subject-matter-experts/cardiology/Cardiovascular-Imaging.png",
+        description: "Integrating cell biology with materials science to develop biomimetic scaffolds for tissue reconstruction."
     }
 ];
 
@@ -95,7 +100,7 @@ const editorsData = [
         experience: '12 years of experience',
         manuscripts: '120+ manuscripts edited',
         countryFlag: '🇬🇧',
-        avatar: "/images/subject-matter-experts/cell-biology/Dr.-Sarah-Mitchell.webp"
+        avatar: '/images/subject-matter-experts/cardiology/Empowering-Research-Excellence-in-Cardiology-through-Expert-Guidance.webp'
     },
     {
         name: 'Dr. Emily Carter',
@@ -111,20 +116,13 @@ const editorsData = [
         experience: '15 years of experience',
         manuscripts: '140+ manuscripts edited',
         countryFlag: '🇺🇸',
-        avatar: "/images/subject-matter-experts/cell-biology/Dr.-Jonathan-Reed.webp"
+        avatar: '/images/subject-matter-experts/cardiology/Dr.-Samuel-Hart.webp'
     }
 ];
 
 export default function CardiologySection() {
     // Active Tab State for Emerging Research Trends in Cell Biology
     const [activeTab, setActiveTab] = useState('single-cell-omics');
-
-    // Accordion State for Applications of Cell Biology Research (Both closed by default)
-    const [openAccordionIdx, setOpenAccordionIdx] = useState<number | null>(null);
-
-    const toggleAccordion = (index: number) => {
-        setOpenAccordionIdx(openAccordionIdx === index ? null : index);
-    };
 
     return (
         <div className="w-full bg-white text-gray-800 font-sans py-12 px-4 sm:px-6 lg:px-8 space-y-20">
@@ -150,11 +148,10 @@ export default function CardiologySection() {
                                 <button
                                     key={tab.id}
                                     onClick={() => setActiveTab(tab.id)}
-                                    className={`py-3.5 px-3 transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center ${
-                                        isActive
+                                    className={`py-3.5 px-3 transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center ${isActive
                                             ? 'bg-[#0e3b32] text-white'
                                             : 'hover:bg-gray-200 text-gray-800'
-                                    }`}
+                                        }`}
                                 >
                                     {tab.label}
                                 </button>
@@ -181,9 +178,9 @@ export default function CardiologySection() {
                 </div>
             </section>
 
-            {/* SECTION 2: Applications of Cell Biology Research */}
+            {/* SECTION 2: Applications of Cell Biology Research (Exact Match Design) */}
             <section className="max-w-6xl mx-auto space-y-6">
-                <div className="space-y-3 text-left">
+                <div className="space-y-2 text-left">
                     <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
                         Applications of Cell Biology Research
                     </h2>
@@ -192,31 +189,42 @@ export default function CardiologySection() {
                     </p>
                 </div>
 
-                {/* Collapsible Accordions for Applications */}
-                <div className="space-y-4">
-                    {applicationsAccordionData.map((item, idx) => {
-                        const isOpen = openAccordionIdx === idx;
-                        return (
-                            <div key={idx} className="border border-gray-200 rounded-md overflow-hidden">
-                                <button
-                                    onClick={() => toggleAccordion(idx)}
-                                    className="w-full bg-[#0e3b32] text-white px-6 py-3.5 flex items-center justify-between font-semibold text-sm sm:text-base transition-colors duration-150 hover:bg-[#0a2f28]"
-                                >
-                                    <div className="flex items-center gap-3">
-                                        <span className="text-xl font-bold">{isOpen ? '−' : '+'}</span>
-                                        <span>{item.title}</span>
+                {/* Grid Layout: Left List + Right Image */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-2">
+                    {/* Left Side: Icon List */}
+                    <div className="lg:col-span-7 space-y-5">
+                        {applicationsList.map((item, index) => {
+                            const IconComponent = item.icon;
+                            return (
+                                <div key={index} className="flex items-start gap-4">
+                                    <div className="p-1.5 rounded-md text-[#0e3b32] shrink-0 mt-0.5">
+                                        {(item as { iconSrc?: string }).iconSrc ? (
+                                            <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain shrink-0" />
+                                        ) : (
+                                            <IconComponent className="w-6 h-6 stroke-[1.5]" />
+                                        )}
                                     </div>
-                                    <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
-                                </button>
+                                    <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                                        <strong className="font-bold text-gray-900">{item.title}: </strong>
+                                        {item.description}
+                                    </p>
+                                </div>
+                            );
+                        })}
+                    </div>
 
-                                {isOpen && (
-                                    <div className="p-6 bg-[#fafafa] border-t border-gray-200 text-xs sm:text-sm text-gray-700 leading-relaxed space-y-3">
-                                        {item.content}
-                                    </div>
-                                )}
-                            </div>
-                        );
-                    })}
+                    {/* Right Side: Featured Cell Image */}
+                    <div className="lg:col-span-5 flex justify-center lg:justify-end">
+                        <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                            <Image
+                                src="/images/subject-matter-experts/cell-biology/Applications-of-Cell-Biology-Research.webp"
+                                alt="Cell Biology Microscopic View"
+                                fill
+                                sizes="(max-width: 768px) 100vw, 320px"
+                                className="object-cover"
+                            />
+                        </div>
+                    </div>
                 </div>
             </section>
 

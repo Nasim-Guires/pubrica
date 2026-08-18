@@ -159,7 +159,7 @@ export default function NeuroscienceTechniquesSection() {
             </section>
 
             {/* SECTION: Clinical Applications of Neuroscience */}
-            <section className="max-w-6xl mx-auto space-y-6">
+            {/* <section className="max-w-6xl mx-auto space-y-6">
                 <div className="space-y-3 text-left">
                     <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
                         Clinical Applications of Neuroscience
@@ -192,7 +192,7 @@ export default function NeuroscienceTechniquesSection() {
                         />
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* SECTION: Where Our Authors Publish */}
             <section className="max-w-6xl mx-auto space-y-6">

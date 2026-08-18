@@ -247,7 +247,7 @@ export default function MedicinalAndPharmaceuticalChemistrySections() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-lg border border-gray-200">
                             <img
-                                src="/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Medical-and-Pharmaceutical-Chemistry.webp"
+                                src="/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Clinical-Applications-of-Medical-and-Pharmaceutical-Chemistry.webp"
                                 alt="Clinical Applications of Medicinal Chemistry"
                                 className="w-full h-full object-cover"
                             />

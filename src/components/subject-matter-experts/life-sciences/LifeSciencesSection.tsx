@@ -134,11 +134,10 @@ export default function LifeSciencesSection() {
                                 <button
                                     key={tab.id}
                                     onClick={() => setActiveTrendTab(idx)}
-                                    className={`px-3 py-3 text-xs sm:text-sm font-semibold transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center text-center ${
-                                        isActive
+                                    className={`px-3 py-3 text-xs sm:text-sm font-semibold transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center text-center ${isActive
                                             ? 'bg-[#0e3b32] text-white shadow-sm'
                                             : 'bg-[#eef2f1] text-gray-700 hover:bg-gray-250'
-                                    }`}
+                                        }`}
                                 >
                                     {tab.title}
                                 </button>
@@ -184,11 +183,11 @@ export default function LifeSciencesSection() {
                         ))}
                     </div>
 
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
+                    <div className="w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
                             src="/images/subject-matter-experts/life-sciences/Applications-of-Life-Science.webp"
                             alt="Life science research setup"
-                            className="w-full h-auto object-cover"
+                            className="w-full h-full object-cover"
                         />
                     </div>
                 </div>

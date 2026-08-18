@@ -28,13 +28,13 @@ const applicationsData = [
     {
         icon: Pill,
         title: "Pharmaceuticals",
-            iconSrc: "/images/subject-matter-experts/chemical-engineering/Reaction-Engineering.webp",
+        iconSrc: "/images/subject-matter-experts/chemical-engineering/Reaction-Engineering.webp",
         description: "developing and manufacturing drug and biopharmaceutical products"
     },
     {
         icon: Zap,
         title: "Energy",
-            iconSrc: "/images/subject-matter-experts/chemical-engineering/Separation-Processes.webp",
+        iconSrc: "/images/subject-matter-experts/chemical-engineering/Separation-Processes.webp",
         description: "developing fuel, alternative energy technologies, and storage"
     },
     {
@@ -191,13 +191,13 @@ export default function ChemicalEngineeringSection() {
 
                     {/* Right Column: Lab Scientist Image */}
                     <div className="lg:col-span-6 flex justify-center">
-                        <div className="relative w-full h-[400px] sm:h-[480px] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                        <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
                             <Image
                                 src="/images/subject-matter-experts/chemical-engineering/Applications-of-Chemical-Engineering.webp"
                                 alt="Chemical Engineering Research Laboratory"
                                 fill
+                                sizes="(max-width: 768px) 100vw, 320px"
                                 className="object-cover"
-                                sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                         </div>
                     </div>

@@ -1,14 +1,14 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { 
-    Briefcase, 
-    FileText, 
-    Microscope, 
-    Dna, 
-    Syringe, 
-    FlaskConical, 
-    Stethoscope, 
+import {
+    Briefcase,
+    FileText,
+    Microscope,
+    Dna,
+    Syringe,
+    FlaskConical,
+    Stethoscope,
     Activity
 } from 'lucide-react';
 
@@ -57,37 +57,37 @@ const applicationsList = [
     {
         icon: Stethoscope,
         title: "Disease Mechanism Elucidation",
-            iconSrc: "/images/subject-matter-experts/cardiology/Interventional-Car-diology.png",
+        iconSrc: "/images/subject-matter-experts/cardiology/Interventional-Car-diology.png",
         description: "Understanding how cellular dysfunction leads to diseases such as cancer, neurodegenerative disorders, diabetes, and cardiovascular conditions."
     },
     {
         icon: Microscope,
         title: "Drug Discovery and Development",
-            iconSrc: "/images/subject-matter-experts/cardiology/Electrophysiology.png",
+        iconSrc: "/images/subject-matter-experts/cardiology/Electrophysiology.png",
         description: "Utilizing cellular assays and models to identify drug targets, assess efficacy, and predict toxicity."
     },
     {
         icon: Activity,
         title: "Regenerative Medicine",
-            iconSrc: "/images/subject-matter-experts/cardiology/Heart-Failure-and-Transplantation.png",
+        iconSrc: "/images/subject-matter-experts/cardiology/Heart-Failure-and-Transplantation.png",
         description: "Harnessing stem cell biology to regenerate damaged tissues and organs."
     },
     {
         icon: Dna,
         title: "Genetic Engineering",
-            iconSrc: "/images/subject-matter-experts/cardiology/Cardiac-Surgery.png",
+        iconSrc: "/images/subject-matter-experts/cardiology/Cardiac-Surgery.png",
         description: "Applying cellular-level insights for gene editing using CRISPR-Cas9 and other molecular tools."
     },
     {
         icon: Syringe,
         title: "Vaccine Development",
-            iconSrc: "/images/subject-matter-experts/cardiology/Paediatric-Cardiology.png",
+        iconSrc: "/images/subject-matter-experts/cardiology/Paediatric-Cardiology.png",
         description: "Exploring cellular immune responses to design effective vaccines against infectious diseases."
     },
     {
         icon: FlaskConical,
         title: "Tissue Engineering",
-            iconSrc: "/images/subject-matter-experts/cardiology/Cardiovascular-Imaging.png",
+        iconSrc: "/images/subject-matter-experts/cardiology/Cardiovascular-Imaging.png",
         description: "Integrating cell biology with materials science to develop biomimetic scaffolds for tissue reconstruction."
     }
 ];
@@ -148,11 +148,10 @@ export default function SubjectMatterExpertsCellBiology() {
                                 <button
                                     key={tab.id}
                                     onClick={() => setActiveTab(tab.id)}
-                                    className={`py-3.5 px-3 transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center ${
-                                        isActive
+                                    className={`py-3.5 px-3 transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center ${isActive
                                             ? 'bg-[#0e3b32] text-white'
                                             : 'hover:bg-gray-200 text-gray-800'
-                                    }`}
+                                        }`}
                                 >
                                     {tab.label}
                                 </button>
@@ -216,13 +215,13 @@ export default function SubjectMatterExpertsCellBiology() {
 
                     {/* Right Side: Featured Cell Image */}
                     <div className="lg:col-span-5 flex justify-center lg:justify-end">
-                        <div className="relative w-full max-w-sm rounded-lg overflow-hidden shadow-sm border border-gray-100">
+                        <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
                             <Image
                                 src="/images/subject-matter-experts/cell-biology/Applications-of-Cell-Biology-Research.webp"
                                 alt="Cell Biology Microscopic View"
-                                width={500}
-                                height={600}
-                                className="w-full h-auto object-cover rounded-md"
+                                fill
+                                sizes="(max-width: 768px) 100vw, 320px"
+                                className="object-cover"
                             />
                         </div>
                     </div>

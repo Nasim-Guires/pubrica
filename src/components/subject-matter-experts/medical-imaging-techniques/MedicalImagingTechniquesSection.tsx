@@ -240,11 +240,11 @@ export default function MedicalImagingTechniquesSection() {
                         ))}
                     </div>
 
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
+                    <div className="w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/medical-imaging-techniques/Cardiology.webp"
+                            src="/images/subject-matter-experts/medical-imaging-techniques/Clinical-Applications-of-Medical-Imaging.webp"
                             alt="Medical imaging research setup"
-                            className="w-full h-auto object-cover"
+                            className="w-full h-full object-cover"
                         />
                     </div>
                 </div>

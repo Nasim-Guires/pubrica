@@ -238,13 +238,15 @@ export default function BioChemistrySection() {
 
                     {/* Side Image (5 Cols) */}
                     <div className="md:col-span-5 flex justify-center">
-                        <div className="rounded-lg overflow-hidden border border-gray-200 shadow-md">
-                            <img
-                                src="/images/subject-matter-experts/biochemistry/Biochemistry.webp"
-                                alt="Biochemistry Laboratory Applications"
-                                className="w-full h-auto object-cover max-h-[420px]"
-                            />
-                        </div>
+                        <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+    <Image
+      src="/images/subject-matter-experts/biochemistry/Biochemistry-in-Real-World-Applications.webp"
+      alt="Biochemistry Laboratory Applications"
+      fill
+      sizes="(max-width: 1024px) 100vw, 360px"
+      className="object-cover"
+    />
+  </div>
                     </div>
                 </div>
 

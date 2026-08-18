@@ -97,7 +97,7 @@ export default function DentistrySection() {
         <div className="w-full bg-white text-gray-800 font-sans py-12 px-4 sm:px-6 lg:px-8 space-y-20">
 
             {/* SECTION 1: Emerging Trends in Dentistry */}
-                 {/* SECTION 2: Applications of Dentistry Research */}
+            {/* SECTION 2: Applications of Dentistry Research */}
             <section className="max-w-6xl mx-auto space-y-6">
                 <div className="space-y-3 text-left">
                     <p className="text-gray-700 text-base sm:text-lg max-w-5xl leading-relaxed">
@@ -125,11 +125,13 @@ export default function DentistrySection() {
                         ))}
                     </div>
 
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
+                    <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                        <Image
                             src="/images/subject-matter-experts/dentistry/Applications-of-Dentistry-Research.webp"
                             alt="Applications of Dentistry Research"
-                            className="w-full h-auto object-cover"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 320px"
+                            className="object-cover"
                         />
                     </div>
                 </div>

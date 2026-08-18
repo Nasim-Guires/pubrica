@@ -228,7 +228,7 @@ export default function CancerResearchSection() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-full max-w-sm h-[300px] sm:h-[350px] rounded-lg overflow-hidden shadow-md border border-gray-200">
                             <img
-                                src="/images/subject-matter-experts/cancer-research/Cancer-Research.webp"
+                                src="/images/subject-matter-experts/cancer-research/Why-Cancer-Research-is-Important-1.webp"
                                 alt="Cancer Research ribbon awareness"
                                 className="w-full h-full object-cover"
                             />

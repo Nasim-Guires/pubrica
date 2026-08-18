@@ -120,8 +120,8 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
                   key={idx}
                   onClick={() => setActiveTab(idx)}
                   className={`py-3 px-2 transition-all border-r border-b sm:border-b-0 border-gray-200 last:border-r-0 ${activeTab === idx
-                      ? "bg-[#0d3630] text-white shadow-inner"
-                      : "text-gray-700 hover:bg-gray-100"
+                    ? "bg-[#0d3630] text-white shadow-inner"
+                    : "text-gray-700 hover:bg-gray-100"
                     }`}
                 >
                   {trend.title}
@@ -133,8 +133,8 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
               <button
                 onClick={() => setActiveTab(5)}
                 className={`w-full py-3 px-4 transition-all ${activeTab === 5
-                    ? "bg-[#0d3630] text-white shadow-inner"
-                    : "text-gray-700 hover:bg-gray-100"
+                  ? "bg-[#0d3630] text-white shadow-inner"
+                  : "text-gray-700 hover:bg-gray-100"
                   }`}
               >
                 {trends[5].title}
@@ -159,32 +159,32 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
         {/* SECTION 2: Applications of Biomolecular Engineering */}
         <div className="space-y-6">
           <div className="space-y-2">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0d3630]">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0d3630]">
               Applications of Biomolecular Engineering
             </h2>
-            <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed">
               Biomolecular engineering has wide-ranging applications that contribute to solutions to major global challenges:
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-7 space-y-4">
+            <div className="lg:col-span-7 space-y-5">
               {applications.map((app, idx) => {
                 const Icon = app.icon;
                 return (
-                  <div key={idx} className="flex items-start gap-3.5">
-                    <div className="p-2 bg-[#0d3630]/10 text-[#0d3630] rounded-lg mt-0.5 shrink-0">
+                  <div key={idx} className="flex items-start gap-4">
+                    <div className="p-2.5 bg-[#0d3630]/10 text-[#0d3630] rounded-lg mt-0.5 shrink-0">
                       {(app as { iconSrc?: string }).iconSrc ? (
-                        <Image src={(app as { iconSrc?: string }).iconSrc!} alt="" width={20} height={20} className="object-contain shrink-0" />
+                        <Image src={(app as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain shrink-0" />
                       ) : (
-                        <Icon className="w-5 h-5" />
+                        <Icon className="w-6 h-6" />
                       )}
                     </div>
                     <div>
-                      <h4 className="font-bold text-[#0d3630] text-xs md:text-sm">
+                      <h4 className="font-bold text-[#0d3630] text-base md:text-lg">
                         {app.title}:
                       </h4>
-                      <p className="text-xs text-gray-600 leading-relaxed">
+                      <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                         {app.desc}
                       </p>
                     </div>
@@ -193,21 +193,24 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
               })}
             </div>
 
-            <div className="lg:col-span-5 relative h-64 md:h-80 w-full rounded-xl overflow-hidden shadow-md">
-              <Image
-                src="/images/subject-matter-experts/biomolecular-engineering/Applications-of-Biomolecular-Engineering.webp"
-                alt="Biomolecular Structure"
-                fill
-                className="object-cover"
-              />
+            {/* Right Column Container */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                <Image
+                  src="/images/subject-matter-experts/biomolecular-engineering/Applications-of-Biomolecular-Engineering.webp"
+                  alt="Biomolecular Structure"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 360px"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
 
-          <p className="text-xs text-gray-500 italic pt-2">
+          <p className="text-sm text-gray-500 italic pt-2">
             These applications reflect the multidisciplinary potential of biomolecular engineering in shaping the future of science and technology.
           </p>
         </div>
-
         {/* SECTION 3: Where Our Authors Publish */}
         <div className="space-y-6">
           <div className="text-center space-y-2">

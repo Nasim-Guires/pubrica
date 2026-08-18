@@ -1,16 +1,16 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from 'react';
-import { 
-    Briefcase, 
-    FileText, 
-    Rocket, 
-    Zap, 
-    Cpu, 
-    HeartPulse, 
-    Car, 
-    Factory, 
-    Leaf 
+import {
+    Briefcase,
+    FileText,
+    Rocket,
+    Zap,
+    Cpu,
+    HeartPulse,
+    Car,
+    Factory,
+    Leaf
 } from 'lucide-react';
 
 const emergingTrendsData = [
@@ -55,43 +55,43 @@ const applicationsData = [
     {
         icon: Rocket,
         title: "Aerospace and Defense",
-            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Materials-Design-Development.webp",
+        iconSrc: "/images/subject-matter-experts/ceramic-engineering/Materials-Design-Development.webp",
         description: "heat resistant components, thermal barrier materials, and lightweight structural components."
     },
     {
         icon: Zap,
         title: "Energy and Power",
-            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Processing-Fabrication-Engineering.webp",
+        iconSrc: "/images/subject-matter-experts/ceramic-engineering/Processing-Fabrication-Engineering.webp",
         description: "fuel cells, batteries, solar panels, and nuclear reactors."
     },
     {
         icon: Cpu,
         title: "Electrical and Electronics",
-            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Microstructural-analysis-and-characterization.webp",
+        iconSrc: "/images/subject-matter-experts/ceramic-engineering/Microstructural-analysis-and-characterization.webp",
         description: "capacitors, insulators, semiconductors, and sensors."
     },
     {
         icon: HeartPulse,
         title: "Health and Biomedical",
-            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Mechanical-Thermal-Properties.webp",
+        iconSrc: "/images/subject-matter-experts/ceramic-engineering/Mechanical-Thermal-Properties.webp",
         description: "implants, prosthetics, dental ceramics, and bioactive ceramics."
     },
     {
         icon: Car,
         title: "Automobile and Transportation",
-            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Electrical-Functional-Ceramics.webp",
+        iconSrc: "/images/subject-matter-experts/ceramic-engineering/Electrical-Functional-Ceramics.webp",
         description: "engine parts, wear-resistant coatings for brakes."
     },
     {
         icon: Factory,
         title: "Industrial Manufacturing",
-            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Computational-Ceramic-Engineering.webp",
+        iconSrc: "/images/subject-matter-experts/ceramic-engineering/Computational-Ceramic-Engineering.webp",
         description: "cutting tools, select refractory materials, and various chemical processing equipment."
     },
     {
         icon: Leaf,
         title: "Environmental and Sustainable Applications",
-            iconSrc: "/images/subject-matter-experts/ceramic-engineering/Environmental-and-Sustainable-Applications.webp",
+        iconSrc: "/images/subject-matter-experts/ceramic-engineering/Environmental-and-Sustainable-Applications.webp",
         description: "ceramic filters, environmental catalysts, and environmental ceramic materials."
     }
 ];
@@ -208,11 +208,13 @@ export default function CeramicEngineeringSection() {
 
                     {/* Right-side Image */}
                     <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-full max-w-md h-[340px] sm:h-[420px] rounded-lg overflow-hidden shadow-md border border-gray-200">
-                            <img
+                        <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                            <Image
                                 src="/images/subject-matter-experts/ceramic-engineering/Applications-of-Ceramic-Engineering.webp"
                                 alt="Pottery and Ceramic Engineering Manufacturing"
-                                className="w-full h-full object-cover"
+                                fill
+                                sizes="(max-width: 768px) 100vw, 320px"
+                                className="object-cover"
                             />
                         </div>
                     </div>

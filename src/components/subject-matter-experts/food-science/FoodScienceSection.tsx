@@ -244,11 +244,13 @@ export default function FoodScienceSection() {
                         ))}
                     </div>
 
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
+                    <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                        <Image
                             src="/images/subject-matter-experts/food-science/Applications-of-Food-Science.webp"
                             alt="Food science laboratory setup"
-                            className="w-full h-auto object-cover"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 320px"
+                            className="object-cover"
                         />
                     </div>
                 </div>

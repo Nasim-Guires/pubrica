@@ -1,7 +1,16 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from 'react';
-import { Briefcase, FileText } from 'lucide-react';
+import {
+    Briefcase,
+    FileText,
+    Dna,
+    Search,
+    Sprout,
+    Network,
+    Cpu,
+    Brain
+} from 'lucide-react';
 
 const emergingTrendsData = [
     {
@@ -39,6 +48,39 @@ const emergingTrendsData = [
         title: 'Cloud-Based Biocomputing Solutions',
         description:
             'Cloud computing allows scalable storage and processing of massive biological datasets, making high-performance computational resources accessible to researchers globally.'
+    }
+];
+
+const applicationsData = [
+    {
+        title: "Genomics and Precision Medicine",
+        description: "Biocomputing tools analyze patient genomes to identify mutations, predict disease risk, and inform personalized treatment strategies.",
+        icon: Dna
+    },
+    {
+        title: "Drug Discovery and Development",
+        description: "Computational simulations, molecular docking, and virtual screening help identify promising drug candidates faster and more cost-effectively than traditional methods.",
+        icon: Search
+    },
+    {
+        title: "Agricultural and Environmental Biotechnology",
+        description: "Biocomputing supports genome editing in crops, predictive modelling of ecosystems, and bioremediation strategies for environmental sustainability.",
+        icon: Sprout
+    },
+    {
+        title: "Systems Pharmacology",
+        description: "Predictive modelling of drug interactions, metabolism, and toxicity ensures safer and more effective therapeutics.",
+        icon: Network
+    },
+    {
+        title: "Synthetic Biology and Bioengineering",
+        description: "Designing synthetic pathways, optimizing metabolic fluxes, and creating artificial biological systems are facilitated by advanced computational frameworks.",
+        icon: Cpu
+    },
+    {
+        title: "Neuroscience and Cognitive Modelling",
+        description: "Computational models simulate neural networks, brain connectivity, and cognitive processes, supporting research in neurodegenerative diseases and mental health.",
+        icon: Brain
     }
 ];
 
@@ -96,8 +138,8 @@ export default function BiocomputingSection() {
                                     key={tab.id}
                                     onClick={() => setActiveTab(idx)}
                                     className={`px-3 py-3 text-xs sm:text-sm font-semibold transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center text-center ${isActive
-                                            ? 'bg-[#0e3b32] text-white shadow-sm'
-                                            : 'bg-[#eef2f1] text-gray-700 hover:bg-gray-200'
+                                        ? 'bg-[#0e3b32] text-white shadow-sm'
+                                        : 'bg-[#eef2f1] text-gray-700 hover:bg-gray-200'
                                         }`}
                                 >
                                     {tab.title}
@@ -114,6 +156,51 @@ export default function BiocomputingSection() {
                         <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
                             {emergingTrendsData[activeTab].description}
                         </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* NEW SECTION: Applications of Biocomputing */}
+            <section className="max-w-6xl mx-auto space-y-8">
+                <div className="space-y-3 text-left">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
+                        Applications of Biocomputing
+                    </h2>
+                    <p className="text-gray-700 text-base sm:text-lg max-w-5xl leading-relaxed">
+                        Biocomputing research has widespread implications across modern science, industry, and healthcare. Major applications include:
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    {/* Left List of Applications */}
+                    <div className="lg:col-span-7 space-y-5">
+                        {applicationsData.map((item, idx) => {
+                            const IconComponent = item.icon;
+                            return (
+                                <div key={idx} className="flex items-start space-x-4">
+                                    <div className="p-2.5 rounded-lg bg-[#eef2f1] text-[#0e3b32] shrink-0 mt-1">
+                                        <IconComponent className="w-5 h-5" />
+                                    </div>
+                                    <div className="text-sm sm:text-base leading-relaxed text-gray-700">
+                                        <span className="font-bold text-gray-900">{item.title}: </span>
+                                        {item.description}
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    {/* Right Image Display */}
+                    <div className="lg:col-span-5 flex justify-center lg:justify-end">
+                        <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                            <Image
+                                src="/images/subject-matter-experts/biocomputing/Applications-of-Biocomputing.webp"
+                                alt="Researcher examining samples with a microscope in laboratory setting"
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 360px"
+                                className="object-cover"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

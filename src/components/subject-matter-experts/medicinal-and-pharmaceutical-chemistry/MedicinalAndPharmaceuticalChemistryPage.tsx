@@ -63,7 +63,7 @@ export default function MedicinalChemistryPage() {
         {
             title: "Literature Review and Gap Analysis",
             description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Medical-and-Pharmaceutical-Chemistry.webp",
+            image: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Research-Services.png",
             icon: FileText,
             href: "/services/research-services"
         },
@@ -84,7 +84,7 @@ export default function MedicinalChemistryPage() {
         {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Regulatory-Affairs-Compliance.webp",
+            image: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/How-Should-Physicians-Choose-the-Right-Journal-for-Submitting-a-Case-Report.webp",
             icon: BookOpen,
             href: "/services/research-impact/graphical-abstract"
         },
@@ -192,12 +192,12 @@ export default function MedicinalChemistryPage() {
                 <div className="text-center max-w-4xl mx-auto mb-12">
                     <div className="flex items-center justify-center gap-4 mb-3">
                         <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
-                            Our Expertise in Medicinal Chemistry Research and Publication
+                            Our Expertise in Medical and Pharmaceutical Chemistry
                         </h2>
                         <div className="hidden sm:block h-[2px] w-24 bg-[#0e3b32] mt-1" />
                     </div>
                     <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                        Publishing in high-impact medicinal chemistry journals does not only require experimental research data but also demands detailed analysis of important chemical properties along with good scientists' communication and a thorough explanation of the research methods. The following are ways that Pubrica can help support Medicinal Chemistry research publishing:
+                        Pubrica provides full services of Medical and Pharmaceutical Chemistry, supporting Drug Delivery Systems, Research services , and Compliance with Regulatory Agencies. We provide the following expertise.
                     </p>
                 </div>
 

@@ -171,11 +171,13 @@ export default function ComputerScienceSection() {
                         ))}
                     </div>
 
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
+                    <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                        <Image
                             src="/images/subject-matter-experts/computer-science/Applications-of-Computer-Science.webp"
                             alt="Applications of Computer Science"
-                            className="w-full h-auto object-cover"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 320px"
+                            className="object-cover"
                         />
                     </div>
                 </div>
@@ -185,16 +187,16 @@ export default function ComputerScienceSection() {
             <section className="w-full bg-[#0e3b32] text-white py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 items-center">
                     <div className="lg:w-1/3 space-y-4">
-                        <div className="relative">
+                        {/* <div className="relative">
                             <img
                                 src="/images/subject-matter-experts/computer-science/Applications-of-Computer-Science.webp"
                                 alt="Areas of Study Monitor"
                                 className="w-full rounded-lg shadow-lg"
                             />
-                        </div>
-                        <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
+                        </div> */}
+                        {/* <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
                             Pubrica's team of experts supports all areas of computer science research:
-                        </p>
+                        </p> */}
                     </div>
 
                     <div className="lg:w-2/3 space-y-6">

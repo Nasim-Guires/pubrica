@@ -187,15 +187,15 @@ export default function NuclearEngineeringSection() {
                         ))}
                     </div>
 
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <Image
-                            src="/images/subject-matter-experts/nuclear-engineering/Applications-of-Nuclear-Engineering.webp"
-                            alt="Nuclear engineering cooling towers"
-                            width={600}
-                            height={450}
-                            className="w-full h-auto object-cover"
-                        />
-                    </div>
+                   <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+    <Image
+      src="/images/subject-matter-experts/nuclear-engineering/Applications-of-Nuclear-Engineering.webp"
+      alt="Nuclear engineering cooling towers"
+      fill
+      sizes="(max-width: 1024px) 100vw, 360px"
+      className="object-cover"
+    />
+  </div>
                 </div>
             </section>
 

@@ -149,40 +149,40 @@ export default function MachineLearningSection() {
             </section>
 
             {/* SECTION: Applications of Machine Learning (Preserving Layout structure) */}
-            <section className="max-w-6xl mx-auto space-y-6">
-                <div className="space-y-3 text-left">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Applications of Machine Learning
-                    </h2>
-                    <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                        Machine learning encompasses an interdisciplinary area of technology that applies algorithmic and computational concepts in a variety of fields. The main applications include:
-                    </p>
-                </div>
+                {/* <section className="max-w-6xl mx-auto space-y-6">
+                    <div className="space-y-3 text-left">
+                        <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
+                            Applications of Machine Learning
+                        </h2>
+                        <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+                            Machine learning encompasses an interdisciplinary area of technology that applies algorithmic and computational concepts in a variety of fields. The main applications include:
+                        </p>
+                    </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div className="space-y-4">
-                        {applicationsOfLifeScienceData.map((item, index) => (
-                            <div key={index} className="flex items-start space-x-3">
-                                <div className="mt-1 text-[#0e3b32]">
-                                    <ChevronRight className="w-5 h-5 shrink-0" />
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div className="space-y-4">
+                            {applicationsOfLifeScienceData.map((item, index) => (
+                                <div key={index} className="flex items-start space-x-3">
+                                    <div className="mt-1 text-[#0e3b32]">
+                                        <ChevronRight className="w-5 h-5 shrink-0" />
+                                    </div>
+                                    <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+                                        <strong className="text-gray-900 font-bold">{item.title} – </strong>
+                                        {item.description}
+                                    </p>
                                 </div>
-                                <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                                    <strong className="text-gray-900 font-bold">{item.title} – </strong>
-                                    {item.description}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
+                            ))}
+                        </div>
 
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
-                            src="/images/subject-matter-experts/machine-learning/Comprehensive-Support-for-Machine-Learning-Research-Writing-and-Publication.webp"
-                            alt="Machine learning research setup"
-                            className="w-full h-auto object-cover"
-                        />
+                        <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
+                            <img
+                                src="/images/subject-matter-experts/machine-learning/Comprehensive-Support-for-Machine-Learning-Research-Writing-and-Publication.webp"
+                                alt="Machine learning research setup"
+                                className="w-full h-auto object-cover"
+                            />
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section> */}
 
             {/* SECTION: Where Our Authors Publish */}
             <section className="max-w-6xl mx-auto space-y-6">

@@ -184,11 +184,13 @@ export default function EnzymesSection() {
                         ))}
                     </div>
 
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
+                    <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                        <Image
                             src="/images/subject-matter-experts/enzymes/Emerging-Trends-in-Enzymes-Research.webp"
                             alt="Enzyme research molecular setup"
-                            className="w-full h-auto object-cover"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 320px"
+                            className="object-cover"
                         />
                     </div>
                 </div>
@@ -233,7 +235,7 @@ export default function EnzymesSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/agriculture/sample-works.webp"
+                            src="/images/subject-matter-experts/enzymes/sample-works.webp"
                             alt="Nature Journal Cover"
                             className="w-full h-auto object-cover"
                         />

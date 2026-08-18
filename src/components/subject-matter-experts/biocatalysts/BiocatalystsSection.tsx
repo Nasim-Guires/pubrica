@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from 'react';
-import { Briefcase, FileText } from 'lucide-react';
+import { Briefcase, FileText, PawPrint, Pill, Utensils, Fuel, Leaf } from 'lucide-react';
 
 const emergingTrendsData = [
     {
@@ -39,6 +39,34 @@ const emergingTrendsData = [
         title: 'Animal Nutrition Applications',
         description:
             'Innovating enzyme formulations to improve feed digestibility, gut health, and nutrient bioavailability.'
+    }
+];
+
+const applicationsData = [
+    {
+        title: "Animal Science",
+        description: "Enzyme supplementation in feed improves nutrient digestibility, promotes animal health, and reduces environmental nitrogen load.",
+        icon: PawPrint
+    },
+    {
+        title: "Pharmaceuticals",
+        description: "Biocatalysts enable stereoselective drug synthesis, lowering costs and minimizing hazardous by-products.",
+        icon: Pill
+    },
+    {
+        title: "Food Industry",
+        description: "Enzymatic processing enhances food quality, flavour, and shelf-life while reducing chemical additives.",
+        icon: Utensils
+    },
+    {
+        title: "Biofuels and Green Chemistry",
+        description: "Microbial and enzymatic catalysis convert biomass into biofuels and fine chemicals, reducing carbon footprints.",
+        icon: Fuel
+    },
+    {
+        title: "Environmental Remediation",
+        description: "Biocatalysts degrade pollutants, detoxify waste streams, and contribute to cleaner ecosystems.",
+        icon: Leaf
     }
 ];
 
@@ -96,8 +124,8 @@ export default function BiocatalystsSection() {
                                     key={tab.id}
                                     onClick={() => setActiveTab(idx)}
                                     className={`px-3 py-3 text-xs sm:text-sm font-semibold transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center text-center ${isActive
-                                            ? 'bg-[#0e3b32] text-white shadow-sm'
-                                            : 'bg-[#eef2f1] text-gray-700 hover:bg-gray-200'
+                                        ? 'bg-[#0e3b32] text-white shadow-sm'
+                                        : 'bg-[#eef2f1] text-gray-700 hover:bg-gray-200'
                                         }`}
                                 >
                                     {tab.title}
@@ -118,7 +146,56 @@ export default function BiocatalystsSection() {
                 </div>
             </section>
 
-            {/* SECTION 2: Where Our Authors Publish */}
+            {/* NEW SECTION: Applications of Biocatalyst Research */}
+            <section className="max-w-6xl mx-auto space-y-8">
+                <div className="space-y-3 text-left">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
+                        Applications of Biocatalyst Research
+                    </h2>
+                    <p className="text-gray-700 text-base sm:text-lg max-w-5xl leading-relaxed">
+                        Biocatalysts impact multiple industries, driving innovation and sustainability:
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    {/* Left List of Applications */}
+                    <div className="lg:col-span-7 space-y-6">
+                        {applicationsData.map((item, idx) => {
+                            const IconComponent = item.icon;
+                            return (
+                                <div key={idx} className="flex items-start space-x-4">
+                                    <div className="p-2.5 rounded-lg bg-[#eef2f1] text-[#0e3b32] shrink-0 mt-1">
+                                        <IconComponent className="w-5 h-5" />
+                                    </div>
+                                    <div className="text-sm sm:text-base leading-relaxed text-gray-700">
+                                        <span className="font-bold text-gray-900">{item.title}: </span>
+                                        {item.description}
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    {/* Right Image Display */}
+                    <div className="lg:col-span-5 flex justify-center">
+                        <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                            <Image
+                                src="/images/subject-matter-experts/biocatalysts/Applications-of-Biocatalyst-Research.webp"
+                                alt="Laboratory Beakers and Biocatalysts"
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 360px"
+                                className="object-cover"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <p className="text-gray-700 text-base sm:text-lg max-w-6xl leading-relaxed mt-4">
+                    By leveraging these applications, Pubrica empowers researchers to produce work that not only advances science but also contributes to sustainable development.
+                </p>
+            </section>
+
+            {/* SECTION 3: Where Our Authors Publish */}
             <section className="max-w-6xl mx-auto space-y-6">
                 <div className="text-center space-y-3">
                     <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
@@ -167,7 +244,7 @@ export default function BiocatalystsSection() {
                 </div>
             </section>
 
-            {/* SECTION 3: Our Expert Biocatalyst Editors */}
+            {/* SECTION 4: Our Expert Biocatalyst Editors */}
             <section className="max-w-6xl mx-auto space-y-8">
                 <div className="text-center space-y-3">
                     <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">

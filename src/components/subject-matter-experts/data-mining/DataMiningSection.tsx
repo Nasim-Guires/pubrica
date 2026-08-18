@@ -171,11 +171,13 @@ export default function DataMiningSection() {
                         ))}
                     </div>
 
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
+                    <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                        <Image
                             src="/images/subject-matter-experts/data-mining/Applications-of-Data-Mining.webp"
                             alt="Applications of Data Mining"
-                            className="w-full h-auto object-cover"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 320px"
+                            className="object-cover"
                         />
                     </div>
                 </div>
@@ -198,7 +200,7 @@ export default function DataMiningSection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/cosmeceuticals/sample-works-11.webp"
+                            src="/images/subject-matter-experts/data-mining/sample-works-11.webp"
                             alt="Data Mining: A Knowledge Discovery Approach Book Cover"
                             className="w-full h-auto object-cover"
                         />

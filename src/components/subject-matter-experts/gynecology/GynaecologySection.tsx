@@ -133,11 +133,10 @@ export default function GynecologySection() {
                                 <button
                                     key={tab.id}
                                     onClick={() => setActiveTrendTab(idx)}
-                                    className={`px-3 py-3 text-xs sm:text-sm font-semibold transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center text-center ${
-                                        isActive
-                                            ? 'bg-[#0e3b32] text-white shadow-sm'
-                                            : 'bg-[#eef2f1] text-gray-700 hover:bg-gray-250'
-                                    }`}
+                                    className={`px-3 py-3 text-xs sm:text-sm font-semibold transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center text-center ${isActive
+                                        ? 'bg-[#0e3b32] text-white shadow-sm'
+                                        : 'bg-[#eef2f1] text-gray-700 hover:bg-gray-250'
+                                        }`}
                                 >
                                     {tab.title}
                                 </button>
@@ -183,11 +182,13 @@ export default function GynecologySection() {
                         ))}
                     </div>
 
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
-                            src="/images/subject-matter-experts/gynecology/PhD-Qualified-Subject-Experts.webp"
+                    <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                        <Image
+                            src="/images/subject-matter-experts/gynecology/sample-works-6-2.webp"
                             alt="Gynaecology research setup"
-                            className="w-full h-auto object-cover"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 320px"
+                            className="object-cover"
                         />
                     </div>
                 </div>
@@ -221,11 +222,11 @@ export default function GynecologySection() {
                         </div>
 
                         <div className="rounded-lg overflow-hidden shadow-xl border border-white/10">
-                            <img
+                            {/* <img
                                 src="/images/subject-matter-experts/gynecology/Comprehensive-Research-Writing-and-Publication-Support-in-Gynaecology.webp"
                                 alt="Gynaecology medical setup"
                                 className="w-full h-auto object-cover"
-                            />
+                            /> */}
                         </div>
                     </div>
                 </div>

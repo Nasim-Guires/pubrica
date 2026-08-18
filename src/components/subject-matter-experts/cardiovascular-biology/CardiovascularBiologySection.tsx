@@ -158,11 +158,13 @@ export default function CardiovascularBiologySection() {
                         </p>
                     </div>
 
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
+                    <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                        <Image
                             src="/images/subject-matter-experts/cardiovascular-biology/Applications-of-Cardiovascular-Biology-Research.webp"
                             alt="Applications of Cardiovascular Biology Research"
-                            className="w-full h-auto object-cover"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 320px"
+                            className="object-cover"
                         />
                     </div>
                 </div>
@@ -185,7 +187,7 @@ export default function CardiovascularBiologySection() {
                     {/* Journal Cover Image */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
                         <img
-                            src="/images/subject-matter-experts/cell-biology/sample-works-6.webp"
+                            src="/images/subject-matter-experts/cardiovascular-biology/sample-works-6.webp"
                             alt="Journal of Cardiovascular Development and Disease Cover"
                             className="w-full h-auto object-cover"
                         />

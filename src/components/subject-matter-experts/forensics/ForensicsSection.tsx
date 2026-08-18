@@ -212,11 +212,14 @@ export default function ForensicsSection() {
                         ))}
                     </div>
 
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
-                            src="/images/subject-matter-experts/forensics/Forensic-Pathology.webp"
+                    <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                        <Image
+                            src="/images/subject-matter-experts/forensics/Applications-of-Forensic.webp"
                             alt="Forensic laboratory setup"
-                            className="w-full h-auto object-cover"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 320px"
+                            className="object-cover"
+                            priority={false}
                         />
                     </div>
                 </div>
@@ -237,11 +240,13 @@ export default function ForensicsSection() {
                 {/* Featured Publication Card */}
                 <div className="bg-[#fafafa] border border-gray-200 rounded-lg p-6 sm:p-8 shadow-xs max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
                     {/* Journal Cover Image */}
-                    <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
-                        <img
-                            src="/images/subject-matter-experts/forensics/Forensic-Toxicology.webp"
+                    <div className="relative w-48 sm:w-56 aspect-[3/4] shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
+                        <Image
+                            src="/images/subject-matter-experts/forensics/sample-works-13-2.webp"
                             alt="Journal of Forensic and Legal Medicine Cover"
-                            className="w-full h-auto object-cover"
+                            fill
+                            sizes="(max-width: 640px) 192px, 224px"
+                            className="object-cover"
                         />
                     </div>
 

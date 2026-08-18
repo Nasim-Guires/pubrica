@@ -5,29 +5,25 @@ import { Briefcase, FileText, ChevronRight, Plus, Minus } from 'lucide-react';
 
 const trustItemsData = [
     {
-        title: 'PhD-Qualified Subject Experts',
-        description: 'Our editors and writers hold advanced degrees in glycobiology, biochemistry, and molecular sciences.'
+        title: '',
+        description: 'Biomedical Research: Understanding glycosylation pathways aids in the development of targeted therapies and diagnostic biomarkers for diseases such as cancer, diabetes, and neurodegenerative disorders.'
     },
     {
-        title: '15+ Years of Experience',
-        description: 'Over a decade of expertise in supporting glycobiology research and publication across international journals.'
+        title: '',
+        description: 'Drug Development: Glycoengineering enhances drug efficacy, bioavailability, and immunogenicity, especially in biologics and vaccines.'
     },
     {
-        title: 'Comprehensive Publication Support',
-        description: 'From study design to peer-review response, we ensure your manuscript meets global publishing standards.'
+        title: '',
+        description: 'Infectious Diseases: Elucidating the role of glycans in pathogen-host interactions has led to novel antiviral and antibacterial strategies.'
     },
     {
-        title: 'Ethical and Compliant Approach',
-        description: 'We strictly adhere to COPE, CONSORT, and ICMJE guidelines for transparency and research integrity.'
+        title: '',
+        description: 'Regenerative Medicine: Glycans are integral to stem cell differentiation, tissue repair, and organ regeneration.'
     },
     {
-        title: 'Global Experience',
-        description: 'Having assisted researchers in over 30 countries, we understand diverse publication expectations and journal scopes.'
+        title: '',
+        description: 'Industrial Biotechnology: Glycobiology facilitates the design of glycan-modified enzymes and biopolymers for sustainable bioengineering solutions.'
     },
-    {
-        title: 'Client-Centric Collaboration',
-        description: 'Every project is handled with confidentiality, quality assurance, and personalized attention.'
-    }
 ];
 
 const emergingTrendsData = [
@@ -159,10 +155,10 @@ export default function GlycobiologySection() {
             <section className="max-w-6xl mx-auto space-y-6">
                 <div className="space-y-3 text-left">
                     <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Why Choose Pubrica for Glycobiology Research and Publishing?
+                       Applications of Glycobiology
                     </h2>
                     <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                        Pubrica stands apart for its scientific expertise, editorial excellence, and global publishing experience. Our value proposition lies in:
+                        The applications of glycobiology are vast and transformative. Research in this domain contributes to several major scientific and clinical advancements:
                     </p>
                 </div>
 
@@ -174,7 +170,7 @@ export default function GlycobiologySection() {
                                     <ChevronRight className="w-5 h-5 shrink-0" />
                                 </div>
                                 <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                                    <strong className="text-gray-900 font-bold">{item.title}: </strong>
+                                    <strong className="text-gray-900 font-bold">{item.title} </strong>
                                     {item.description}
                                 </p>
                             </div>
@@ -183,7 +179,7 @@ export default function GlycobiologySection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/glycobiology/Biomedical-Research.webp"
+                            src="/images/subject-matter-experts/glycobiology/Applications-of-Glycobiology.webp"
                             alt="Glycobiology research setup"
                             className="w-full h-auto object-cover"
                         />
@@ -206,11 +202,7 @@ export default function GlycobiologySection() {
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                         <div className="lg:col-span-5 rounded-lg overflow-hidden shadow-xl border border-white/10 order-2 lg:order-1">
-                            <img
-                                src="/images/subject-matter-experts/glycobiology/Applications-of-Glycobiology.webp"
-                                alt="Glycobiology medical setup"
-                                className="w-full h-auto object-cover"
-                            />
+                          
                         </div>
 
                         <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-3 order-1 lg:order-2">

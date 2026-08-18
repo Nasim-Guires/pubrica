@@ -116,8 +116,8 @@ export default function AgrotechnologyCompleteSection() {
                 key={idx}
                 onClick={() => setActiveTab(idx)}
                 className={`py-3 px-3 text-[11px] md:text-xs font-bold transition-all border-r border-b lg:border-b-0 border-gray-300 last:border-r-0 flex items-center justify-center leading-snug ${isActive
-                    ? "bg-[#0d3630] text-white border-b-2 border-b-[#0d3630]"
-                    : "bg-[#f8f9fa] text-gray-700 hover:bg-gray-100"
+                  ? "bg-[#0d3630] text-white border-b-2 border-b-[#0d3630]"
+                  : "bg-[#f8f9fa] text-gray-700 hover:bg-gray-100"
                   }`}
               >
                 {tab.title}
@@ -171,11 +171,12 @@ export default function AgrotechnologyCompleteSection() {
           </div>
 
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full h-72 md:h-80 rounded-md overflow-hidden shadow-sm border border-gray-200 bg-gray-50">
+            <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
               <Image
                 src="/images/subject-matter-experts/agrotechnology/Applications-of-Agrotechnology.webp"
                 alt="Hand writing on paper workspace"
                 fill
+                sizes="(max-width: 768px) 100vw, 320px"
                 className="object-cover"
               />
             </div>

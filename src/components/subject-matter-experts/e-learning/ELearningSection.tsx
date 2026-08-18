@@ -179,11 +179,13 @@ export default function ELearningSection() {
                         ))}
                     </div>
 
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
-                            src="/images/subject-matter-experts/e-learning/sample-works-11-11.webp"
+                    <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                        <Image
+                            src="/images/subject-matter-experts/e-learning/Dr.-Jane-Matthews.webp"
                             alt="E-Learning visual computer setup"
-                            className="w-full h-auto object-cover"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 320px"
+                            className="object-cover"
                         />
                     </div>
                 </div>

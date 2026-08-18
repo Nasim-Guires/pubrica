@@ -118,12 +118,16 @@ export default function NuclearChemistrySection() {
                         ))}
                     </div>
 
-                    <div className="lg:col-span-5 rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
-                            src="/images/subject-matter-experts/nuclear-chemistry/Emerging-Trends-in-Nuclear-Chemistry-Research.webp"
-                            alt="Nuclear chemistry research setup"
-                            className="w-full h-auto object-cover"
-                        />
+                    <div className="lg:col-span-5 flex justify-center lg:justify-end">
+                        <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                            <Image
+                                src="/images/subject-matter-experts/nuclear-chemistry/Emerging-Trends-in-Nuclear-Chemistry-Research.webp"
+                                alt="Nuclear chemistry research setup"
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 360px"
+                                className="object-cover"
+                            />
+                        </div>
                     </div>
                 </div>
 
