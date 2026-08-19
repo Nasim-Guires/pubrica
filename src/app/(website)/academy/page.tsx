@@ -16,6 +16,7 @@ import {
   TrendingUp,
   Mail,
 } from 'lucide-react';
+import Link from 'next/link';
 
 // =========================================================================
 // DATA STRUCTURES
@@ -25,27 +26,99 @@ const KNOWLEDGE_CATEGORIES = [
   {
     title: 'Research Writing',
     icon: FileSignature,
-    description: 'Explore hundreds of articles, videos, and other resources used by 4 million students every month.',
-    links: ['Manuscript Guidelines', 'Tables, Figures & Equations', 'Referencing Style', 'Grammar'],
+    description:
+      'Explore hundreds of articles, videos, and other resources used by 4 million students every month.',
+    links: [
+      {
+        label: 'Manuscript Guidelines',
+        url: '/academy/manuscript-guidelines',
+      },
+      {
+        label: 'Tables, Figures & Equations',
+        url: '/academy/tables-figures',
+      },
+      {
+        label: 'Referencing Style',
+        url: '/academy/referencing-style',
+      },
+      {
+        label: 'Grammar',
+        url: '/academy/grammer',
+      },
+    ],
   },
   {
     title: 'Research Publication',
     icon: BookOpen,
-    description: 'Explore hundreds of articles, videos, and other resources used by 4 million students every month.',
-    links: ['Journal Selection', 'Manuscript Submission', 'Publication Ethics', 'Peer-reviewing'],
+    description:
+      'Explore hundreds of articles, videos, and other resources used by 4 million students every month.',
+    links: [
+      {
+        label: 'Journal Selection',
+        url: '/academy/articles/journal-selection',
+      },
+      {
+        label: 'Manuscript Submission',
+        url: '/academy/manuscript-submission',
+      },
+      {
+        label: 'Publication Ethics',
+        url: 'academy/publication-ethics',
+      },
+      {
+        label: 'Peer-reviewing',
+        url: '/services/publication-support/peer-review-pre-submission',
+      },
+    ],
   },
   {
     title: 'Research Promotion',
     icon: TrendingUp,
-    description: 'Explore hundreds of articles, videos, and other resources used by 4 million students every month.',
-    links: ['Online media', 'Guide to Social Media', 'Scholar Digital Profile', 'Promoting Research'],
+    description:
+      'Explore hundreds of articles, videos, and other resources used by 4 million students every month.',
+    links: [
+      {
+        label: 'Online Media',
+        url: '/academy/artical/parallel-construction',
+      },
+      {
+        label: 'Guide to Social Media',
+        url: '/academy/artical/phrasing-it-right',
+      },
+      {
+        label: 'Scholar Digital Profile',
+        url: '/academy/artical/be-wordly-wise',
+      },
+      {
+        label: 'Promoting Research',
+        url: '/academy/promoting-research',
+      },
+    ],
   },
   {
     title: 'Get Newsletter',
     icon: Mail,
-    description: 'Explore hundreds of articles, videos, and other resources used by 4 million students every month.',
-    links: ['Industry News', 'QA Forums', 'Free Resources', 'Subscribe Now'],
-  }
+    description:
+      'Explore hundreds of articles, videos, and other resources used by 4 million students every month.',
+    links: [
+      {
+        label: 'Industry News',
+        url: '/academy/industry-news',
+      },
+      {
+        label: 'QA Forums',
+        url: '/academy/qa-forum',
+      },
+      // {
+      //   label: 'Free Resources',
+      //   url: '/dummy/free-resources',
+      // },
+      // {
+      //   label: 'Subscribe Now',
+      //   url: '/dummy/subscribe-now',
+      // },
+    ],
+  },
 ];
 
 const LATEST_ARTICLES = [
@@ -172,6 +245,7 @@ export default function PubricaKnowledgeBase() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {KNOWLEDGE_CATEGORIES.map((category, idx) => {
             const IconComponent = category.icon;
+
             return (
               <div
                 key={idx}
@@ -182,18 +256,26 @@ export default function PubricaKnowledgeBase() {
                     <div className="p-2 border border-gray-200 rounded-sm bg-gray-50 text-gray-700">
                       <IconComponent className="h-5 w-5" />
                     </div>
+
                     <h3 className="text-lg font-bold text-[#0b2825] leading-tight">
                       {category.title}
                     </h3>
                   </div>
+
                   <p className="text-xs text-gray-500 font-light leading-relaxed mb-6">
                     {category.description}
                   </p>
 
                   <ul className="space-y-3 mb-8">
                     {category.links.map((link, linkIdx) => (
-                      <li key={linkIdx} className="text-xs font-semibold text-sky-800 hover:text-emerald-700 cursor-pointer flex items-center gap-1.5 transition-colors">
-                        <span className="text-xs text-gray-400">»</span> {link}
+                      <li key={linkIdx}>
+                        <Link
+                          href={link.url}
+                          className="text-xs font-semibold text-sky-800 hover:text-emerald-700 flex items-center gap-1.5 transition-colors"
+                        >
+                          <span className="text-xs text-gray-400">»</span>
+                          {link.label}
+                        </Link>
                       </li>
                     ))}
                   </ul>
