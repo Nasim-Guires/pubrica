@@ -12,254 +12,201 @@ import {
 } from "react-icons/fa6";
 
 const Page = () => {
-    // Routes configured as requested
+    // Configured navigation routes
     const prevUrl = "/academy/artical/parallel-construction/";
     const nextUrl = "/academy/artical/phrasing-it-right/";
 
     return (
-        <div className="relative min-h-screen bg-white text-gray-700 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="relative min-h-screen bg-white text-[#666666]">
             {/* Main Content Container */}
-            <main className="max-w-4xl mx-auto space-y-6 text-sm leading-relaxed">
-                <article className="space-y-4 text-gray-600">
-                    <div className="space-y-5 text-base sm:text-lg leading-7 sm:leading-8 text-gray-700">
+            <main className="mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
+                <article className="space-y-5 text-[15px] leading-relaxed">
+                    {/* Article Title */}
+                    <h1 className="mb-6 text-3xl font-bold text-[#111111] sm:text-4xl">
+                        Deriving Sense from your Tense
+                    </h1>
+
+                    <p>
+                        The tenses 'past, present and future', might sound very easy but making sense out of tense in writing can prove to be a challenge. Can you blend all three tenses within a written text while ensuring that the reader is not confused? What are the subtle variations between 'simple' and 'perfect tense'? This article intends to shed light on how to effectively use tenses without giving rise to ambiguity or confusion.
+                    </p>
+
+                    <p>
+                        Let us first brush up on tenses with its definitions.
+                    </p>
+
+                    <p>
+                        Within English language, there is the so-called 'simple' and 'perfect' tenses in the past, present as well as the future. A simple tense would simply communicate an action in the time it is being narrated. For instance;
+                    </p>
+
+                    {/* Simple Tense Examples */}
+                    <div className="space-y-3 pt-1">
                         <p>
-                            Whew! Ain’t the English language a tough nut to crack? There are so many
-                            different aspects that need to be kept in mind when writing in English.
-                            With this article, we introduce another intriguing concept of the language
-                            which is parallel construction. So, what does it mean when we say parallel
-                            construction? It essentially means connecting words, phrases, sentences or
-                            dependent clauses which execute the same function with the help of the same
-                            grammatical form. Parallel construction is of much benefit as it offers
-                            rhythm, emphasis and clarity. When sentences built on parallel construction,
-                            it becomes easier for people to remember sentences thus constructed or
-                            quotes that are known to have a parallel structure for instance, ‘I came, I
-                            saw, I conquered’.
+                            <strong className="font-bold text-[#111111]">Past (simple) tense:</strong>{" "}
+                            <span className="italic">Rachel ran to the car.</span>
                         </p>
-
                         <p>
-                            The key issue here is not only about being aware of parallel construction but
-                            it is also about known how to use it appropriately and identify it in case
-                            it has not been done in the right manner. If you write a sentence or read a
-                            sentence that is an exemplification of false or faulty parallel
-                            construction, you are bound to get that
-                            something-does-not-seem-to-be-right-in-this-sentence-but-i-cannot-place-my-finger-on-it,
-                            kind of feeling.
+                            <strong className="font-bold text-[#111111]">Present (simple) tense:</strong>{" "}
+                            <span className="italic">Rachel runs to the car.</span>
                         </p>
-                    </div>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0e3b32] mb-5">
-                        False Parallelism:
-                    </h2>
-                    <div className="space-y-5 text-base sm:text-lg leading-7 sm:leading-8 text-gray-700">
-                        <p>For example.</p>
-
                         <p>
-                            <em>‘That cat is fat, evil and doesn’t smell very good’.</em>
-                        </p>
-
-                        <p>
-                            The above sentence projects false parallelism. In the said sentence, the
-                            first two items are adjectives but the last is an independent clause.
-                        </p>
-
-                        <p>
-                            The correct parallel construction for the above sentence would be:
-                        </p>
-
-                        <p>
-                            <em>‘That cat is fat, evil and smelly’.</em>
-                        </p>
-
-                        <p>
-                            Many a time, it might not be easy to identify false parallelism. For
-                            instance,
-                        </p>
-
-                        <p>
-                            <em>
-                                ‘The old, run-down school brought back memories of climbing the jungle
-                                gym sliding through the halls on jello-covered sneakers and grossly sugar
-                                infested snacks.’
-                            </em>
-                        </p>
-
-                        <p>
-                            In the above sentence, although all the items are nouns, it is an example
-                            of false parallelism.
-                        </p>
-
-                        <p>The correct sentence would be:</p>
-
-                        <p>
-                            <em>
-                                ‘The old, run-down school brought back memories of climbing the jungle
-                                gym, sliding through the halls on jello-covered sneakers and eating
-                                grossly sugar-infused snacks’.
-                            </em>
+                            <strong className="font-bold text-[#111111]">Future (simple) tense:</strong>{" "}
+                            <span className="italic">Rachel will run to the car.</span>
                         </p>
                     </div>
 
-                    <h2 className="text-2xl font-bold text-gray-900 pt-4 pb-2">
-                        Things to Watch Out for in Parallel Construction:                    </h2>
+                    <p className="pt-2">
+                        The perfect tense on the other hand uses diverse types of auxiliary verb 'has' in addition to the main verb to indicate actions that have already occurred or will / might still occur. The same example as above is used to present each tense in its perfect form.
+                    </p>
 
-                    <div className="space-y-5 text-base sm:text-lg leading-7 sm:leading-8 text-gray-700">
+                    {/* Perfect Tense Examples */}
+                    <div className="space-y-3 pt-1">
+                        <p>
+                            <strong className="font-bold text-[#111111]">Past perfect:</strong>{" "}
+                            <span className="italic">Rachel had run to the car.</span>
+                        </p>
+                        <p>
+                            <strong className="font-bold text-[#111111]">Present perfect:</strong>{" "}
+                            <span className="italic">Rachel has run to the car.</span>
+                        </p>
+                        <p>
+                            <strong className="font-bold text-[#111111]">Future perfect:</strong>{" "}
+                            <span className="italic">Rachel will have to run to the car.</span>
+                        </p>
+                    </div>
 
-                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0e3b32]">
-                            Mixing Tenses
+                    <p className="pt-2">
+                        In the above example pertaining to past perfect, Rachel's run is an event that had occurred earlier in a narrative past.
+                    </p>
+
+                    <p className="italic">
+                        Rachel had run to the car several times uneventfully so she wasn't at all prepared for what she saw that morning.
+                    </p>
+
+                    <p>
+                        It is possible to use future perfect tense to indicate that Rachel's plans will not make an impact on another event that could occur even further in the future. For instance;
+                    </p>
+
+                    <p className="italic">
+                        Rachel will have to run to the car before it starts raining so that we can get the groceries inside the house.
+                    </p>
+
+                    <p>
+                        You can also phrase it as <span className="italic">'Rachel will be back from the car before it starts raining so our groceries would be safely inside the house'</span>. This is a convenient option with the use of future tense with the infinitive <span className="italic">'to be'</span>.
+                    </p>
+
+                    <p>
+                        Some tips on how to use tenses when writing a book.
+                    </p>
+
+                    {/* Tip Section */}
+                    <div className="pt-4">
+                        <h2 className="mb-4 text-2xl font-bold text-[#111111] sm:text-3xl">
+                            Tip #1: Decide which tense would work best for your book
                         </h2>
 
-                        <p>
-                            It is necessary that you use the same tense throughout in a parallel
-                            sentence structure. You could either opt to rewrite the entire sentence
-                            to utilize the same tense or you could even separate the sentence as per
-                            the tense.
+                        <p className="mb-4">
+                            The use of simple past tense and third person account is used in a large number of books.
                         </p>
 
-                        <p>For instance;</p>
-
-                        <p>
-                            <em>
-                                ‘The new chocolate factory would <strong>save</strong> money on shipping,
-                                <strong>increase</strong> nut production in the area and <strong>has proved</strong>
-                                its worthiness through its candy-coated business plan’.
-                            </em>
+                        <p className="mb-4 italic">
+                            'She ran to the car with amazing speed, but the sight that met her was gory'.
                         </p>
 
-                        <p>
-                            The above sentence uses a mixture of tenses. The correct parallel structure
-                            would be;
+                        <p className="mb-4">
+                            At the time of writing your book or a scene within a book, it would be wise to ponder about the advantages of every tense. The present tense, for instance has the benefit of;
                         </p>
 
-                        <p>
-                            <em>
-                                ‘The new chocolate factory would <strong>save</strong> money on shipping
-                                and <strong>increase</strong> nut production in the area. The factory has
-                                also proved its worthiness through its candy-coated business plan’.
-                            </em>
-                        </p>
+                        <ul className="mb-4 list-disc space-y-3 pl-6">
+                            <li>
+                                <strong className="font-bold text-[#111111]">Immediacy:</strong>{" "}
+                                The action occurs in the same narrative moment as it is experienced by the reader: (Every action occurs now, there is no temporal distance)
+                            </li>
+                            <li>
+                                <strong className="font-bold text-[#111111]">Simplicity:</strong>{" "}
+                                It cannot be denied that it is comparatively easy to write <span className="italic">'She ran to the car with amazing speed'</span> then to manipulate all kinds of remote times with the use of auxiliary verbs.
+                            </li>
+                        </ul>
 
                         <p>
-                            In the corrected version the tenses have been matched by splitting the
-                            sentence into two parts.
+                            This is not all that is there to tenses. Be patient and wait for the next article to know more about tenses and its finer intricacies.
                         </p>
+                    </div>
 
-                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0e3b32] pt-4">
-                            Mixing Voices
-                        </h2>
-
-                        <p>
-                            Always ensure that you do not mix voices within parallel construction. You
-                            should either use active or passive voice within a series.
-                        </p>
-
-                        <p>For instance;</p>
-
-                        <p>
-                            <em>
-                                ‘Millions were shocked by Pauline’s discovery of the gate to the Land of
-                                Imagine That, and the discovery was the first of its kind’.
-                            </em>
-                        </p>
-
-                        <p>
-                            The above sentence mixes both active and passive voices. This is rectified
-                            in the following sentence.
-                        </p>
-
-                        <p>
-                            <em>
-                                ‘Pauline’s discovery of the new gate to the Land of Imagine That was the
-                                first of its kind and shocked millions’.
-                            </em>
-                        </p>
-
-                        <p>
-                            There is much more to parallel construction and it will be covered in our
-                            forthcoming article.
-                        </p>
-
+                    {/* Social Share Bar */}
+                    <div className="mt-8 flex items-center gap-3 border-t border-gray-100 pt-4 text-xs text-gray-500">
+                        <span>Share</span>
+                        <div className="flex items-center gap-3 text-gray-600">
+                            <button
+                                type="button"
+                                aria-label="Share on Facebook"
+                                className="hover:text-black transition-colors"
+                            >
+                                <FaFacebookF className="h-3 w-3" />
+                            </button>
+                            <button
+                                type="button"
+                                aria-label="Share on X"
+                                className="hover:text-black transition-colors"
+                            >
+                                <FaXTwitter className="h-3 w-3" />
+                            </button>
+                            <button
+                                type="button"
+                                aria-label="Share on LinkedIn"
+                                className="hover:text-black transition-colors"
+                            >
+                                <FaLinkedinIn className="h-3 w-3" />
+                            </button>
+                            <button
+                                type="button"
+                                aria-label="Share on Pinterest"
+                                className="hover:text-black transition-colors"
+                            >
+                                <FaPinterestP className="h-3 w-3" />
+                            </button>
+                        </div>
                     </div>
                 </article>
-
-                {/* Social Share Bar */}
-                <div className="border-t border-gray-200 mt-10 pt-4 flex items-center gap-4 text-sm text-gray-500">
-                    <span>Share</span>
-
-                    <div className="flex gap-3 text-gray-700">
-                        <button
-                            type="button"
-                            aria-label="Share on Facebook"
-                            className="hover:text-blue-600 transition-colors"
-                        >
-                            <FaFacebookF />
-                        </button>
-
-                        <button
-                            type="button"
-                            aria-label="Share on X"
-                            className="hover:text-blue-400 transition-colors"
-                        >
-                            <FaXTwitter />
-                        </button>
-
-                        <button
-                            type="button"
-                            aria-label="Share on LinkedIn"
-                            className="hover:text-blue-700 transition-colors"
-                        >
-                            <FaLinkedinIn />
-                        </button>
-
-                        <button
-                            type="button"
-                            aria-label="Share on Pinterest"
-                            className="hover:text-red-600 transition-colors"
-                        >
-                            <FaPinterestP />
-                        </button>
-                    </div>
-                </div>
             </main>
 
-            {/* Side Navigation Buttons */}
-            {/* Previous Article Button (Bottom Left) */}
+            {/* Side Navigation Controls */}
+            {/* Previous Article Button */}
             <Link
-                aria-label="Previous Article"
                 href={prevUrl}
-                className="fixed bottom-0 left-0 z-40 flex items-center bg-gray-900 text-white group hover:pr-2 transition-all duration-300 shadow-lg overflow-hidden h-14"
+                aria-label="Previous Article"
+                className="group fixed bottom-0 left-0 z-40 flex h-14 items-center overflow-hidden bg-gray-900 text-white shadow-lg transition-all duration-300 hover:pr-2"
             >
-                <div className="bg-blue-600 h-full px-2 flex items-center justify-center">
-                    <ChevronLeft className="w-5 h-5 text-white" />
+                <div className="flex h-full px-2.5 items-center justify-center bg-blue-600 text-white">
+                    <ChevronLeft className="h-5 w-5" />
                 </div>
-
-                <div className="relative w-14 h-full hidden sm:block overflow-hidden">
+                <div className="relative hidden h-full w-14 overflow-hidden sm:block">
                     <Image
-                        alt="Previous Article"
-                        className="object-cover group-hover:scale-110 transition-transform duration-300 opacity-80"
-                        fill
                         src="/images/grammar/parallel-construction.jpg"
+                        alt="Previous Article"
+                        fill
                         sizes="56px"
+                        className="object-cover opacity-80 transition-transform duration-300 group-hover:scale-110"
                     />
                 </div>
             </Link>
 
-            {/* Next Article Button (Bottom Right) */}
+            {/* Next Article Button */}
             <Link
-                aria-label="Next Article"
                 href={nextUrl}
-                className="fixed bottom-0 right-0 z-40 flex items-center bg-gray-900 text-white group hover:pl-2 transition-all duration-300 shadow-lg overflow-hidden h-14"
+                aria-label="Next Article"
+                className="group fixed bottom-0 right-0 z-40 flex h-14 items-center overflow-hidden bg-gray-900 text-white shadow-lg transition-all duration-300 hover:pl-2"
             >
-                <div className="relative w-14 h-full hidden sm:block overflow-hidden">
+                <div className="relative hidden h-full w-14 overflow-hidden sm:block">
                     <Image
-                        alt="Next Article"
-                        className="object-cover group-hover:scale-110 transition-transform duration-300 opacity-80"
-                        fill
                         src="/images/grammar/phrasing-it-right.jpg"
+                        alt="Next Article"
+                        fill
                         sizes="56px"
+                        className="object-cover opacity-80 transition-transform duration-300 group-hover:scale-110"
                     />
                 </div>
-
-                <div className="bg-blue-600 h-full px-2 flex items-center justify-center">
-                    <ChevronRight className="w-5 h-5 text-white" />
+                <div className="flex h-full px-2.5 items-center justify-center bg-blue-600 text-white">
+                    <ChevronRight className="h-5 w-5" />
                 </div>
             </Link>
         </div>
