@@ -211,7 +211,7 @@ export default function TissueEngineeringPage() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white bg-[#a3c9bd]/30 flex items-center justify-center">
                             <Image
-                                src="/images/subject-matter-experts/cell-biology/Tissue-Engineering.webp"
+                                src="/images/subject-matter-experts/tissue-engineering/Tissue-Engineering-480x480.webp"
                                 alt="Tissue Engineering Research"
                                 fill
                                 priority

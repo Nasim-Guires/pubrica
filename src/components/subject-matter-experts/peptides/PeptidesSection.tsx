@@ -125,8 +125,8 @@ export default function PeptidesSection() {
                                     key={tab.id}
                                     onClick={() => setActiveTrendTab(idx)}
                                     className={`px-3 py-3 text-xs sm:text-sm font-semibold transition-colors duration-150 border-r border-b border-gray-200 flex items-center justify-center text-center ${isActive
-                                            ? 'bg-[#0e3b32] text-white shadow-sm'
-                                            : 'bg-[#eef2f1] text-gray-700 hover:bg-gray-200'
+                                        ? 'bg-[#0e3b32] text-white shadow-sm'
+                                        : 'bg-[#eef2f1] text-gray-700 hover:bg-gray-200'
                                         }`}
                                 >
                                     {tab.title}
@@ -173,11 +173,13 @@ export default function PeptidesSection() {
                         ))}
                     </div>
 
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
+                    <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                        <Image
                             src="/images/subject-matter-experts/peptides/Applications-of-Peptides.webp"
                             alt="Peptide research bottle products"
-                            className="w-full h-auto object-cover"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 360px"
+                            className="object-cover"
                         />
                     </div>
                 </div>

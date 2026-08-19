@@ -39,31 +39,31 @@ const emergingTrendsData = [
 const clinicalApplicationsData = [
     {
         title: 'Patient Monitoring',
-            iconSrc: "/images/subject-matter-experts/sensor-technology/Design-Development-of-Sensors.webp",
+        iconSrc: "/images/subject-matter-experts/sensor-technology/Design-Development-of-Sensors.webp",
         description: 'Ongoing assessment of vital signs can facilitate the early identification of illness and produce better health results.',
         icon: Activity
     },
     {
         title: 'Wearable and Implantable Devices',
-            iconSrc: "/images/subject-matter-experts/sensor-technology/Wearable-Portable-Sensors.webp",
+        iconSrc: "/images/subject-matter-experts/sensor-technology/Wearable-Portable-Sensors.webp",
         description: 'Sensors allow for prolonged health monitoring and customized therapy.',
         icon: Watch
     },
     {
         title: 'Diagnostic Support',
-            iconSrc: "/images/subject-matter-experts/sensor-technology/Biosensors-Biomedical-Sensors.webp",
+        iconSrc: "/images/subject-matter-experts/sensor-technology/Biosensors-Biomedical-Sensors.webp",
         description: 'Advanced sensors will improve diagnosis of disease and improve the diagnostic image.',
         icon: Stethoscope
     },
     {
         title: 'Remote Healthcare',
-            iconSrc: "/images/subject-matter-experts/sensor-technology/Sensor-Networks-IoT.webp",
+        iconSrc: "/images/subject-matter-experts/sensor-technology/Sensor-Networks-IoT.webp",
         description: 'Sensor based systems support remote medical care and telehealth services.',
         icon: Radio
     },
     {
         title: 'Precision Medicine',
-            iconSrc: "/images/subject-matter-experts/sensor-technology/Microelectromechanical-Systems-MEMS-Nano-sensors.webp",
+        iconSrc: "/images/subject-matter-experts/sensor-technology/Microelectromechanical-Systems-MEMS-Nano-sensors.webp",
         description: 'The use of real-time data will provide tailored treatment and enhance the ability to make better clinical decisions.',
         icon: Cpu
     }
@@ -177,11 +177,13 @@ export default function SensorTechnologySubjectMatterExpertsSection() {
                             })}
                         </div>
                     </div>
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
-                            src="/images/subject-matter-experts/sensor-technology/Sensor-Technology.webp"
+                    <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                        <Image
+                            src="/images/subject-matter-experts/sensor-technology/Importance-of-Sensor-Technology-and-Healthcare.webp"
                             alt="Importance of Sensor Technology and Healthcare"
-                            className="w-full h-auto object-cover"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 360px"
+                            className="object-cover"
                         />
                     </div>
                 </div>
@@ -250,9 +252,9 @@ export default function SensorTechnologySubjectMatterExpertsSection() {
                                     <div className="p-2 rounded-lg bg-gray-50 border border-gray-200 text-[#0e3b32] shrink-0 mt-1">
                                         {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
                                             <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
-                                    ) : (
-                                        <IconComponent className="w-6 h-6 stroke-[1.5]" />
-                                    )}
+                                        ) : (
+                                            <IconComponent className="w-6 h-6 stroke-[1.5]" />
+                                        )}
                                     </div>
                                     <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">
                                         <strong className="text-gray-900 font-bold">{item.title}: </strong>
@@ -263,11 +265,13 @@ export default function SensorTechnologySubjectMatterExpertsSection() {
                         })}
                     </div>
 
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
-                            src="/images/subject-matter-experts/sensor-technology/Patient-Monitoring.webp"
+                    <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                        <Image
+                            src="/images/subject-matter-experts/sensor-technology/Clinical-Applications-of-Sensor-Technology.webp"
                             alt="Clinical Applications of Sensor Technology"
-                            className="w-full h-auto object-cover"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 360px"
+                            className="object-cover"
                         />
                     </div>
                 </div>
@@ -290,7 +294,7 @@ export default function SensorTechnologySubjectMatterExpertsSection() {
                     {/* Journal Cover */}
                     <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
                         <img
-                            src="/images/subject-matter-experts/algorithm/sample-works-13-1.webp"
+                            src="/images/subject-matter-experts/sensor-technology/sample-works-13-1.webp"
                             alt="Biosensors & Bioelectronics Journal Cover"
                             className="w-full h-auto object-cover"
                         />

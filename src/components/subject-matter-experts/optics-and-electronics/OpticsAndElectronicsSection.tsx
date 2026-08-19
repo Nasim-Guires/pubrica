@@ -150,7 +150,7 @@ export default function OpticsAndElectronicsSection() {
 
                     <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <img
-                            src="/images/subject-matter-experts/optics-and-electronics/Optics-and-Electronics.webp"
+                            src="/images/subject-matter-experts/optics-and-electronics/Minimally-Invasive.webp"
                             alt="Optics and electronics research setup"
                             className="w-full h-auto object-cover"
                         />
@@ -178,11 +178,10 @@ export default function OpticsAndElectronicsSection() {
                                 <button
                                     key={tab.id}
                                     onClick={() => setActiveTrendTab(idx)}
-                                    className={`px-3 py-3 text-xs sm:text-sm font-semibold transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center text-center ${
-                                        isActive
+                                    className={`px-3 py-3 text-xs sm:text-sm font-semibold transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center text-center ${isActive
                                             ? 'bg-[#0e3b32] text-white shadow-sm'
                                             : 'bg-[#eef2f1] text-gray-700 hover:bg-gray-250'
-                                    }`}
+                                        }`}
                                 >
                                     {tab.title}
                                 </button>
@@ -228,11 +227,13 @@ export default function OpticsAndElectronicsSection() {
                         ))}
                     </div>
 
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
+                    <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                        <Image
                             src="/images/subject-matter-experts/optics-and-electronics/clinical-application.webp"
                             alt="Clinical optics and electronics setup"
-                            className="w-full h-auto object-cover"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 360px"
+                            className="object-cover"
                         />
                     </div>
                 </div>

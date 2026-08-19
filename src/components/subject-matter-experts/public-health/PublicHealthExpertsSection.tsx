@@ -159,9 +159,8 @@ export default function PublicHealthExpertsSection() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-4">
-
-                    {/* Left Collapsible Accordion List (Default Closed) */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-4">
+                    {/* Left Collapsible Accordion List */}
                     <div className="lg:col-span-7 space-y-3">
                         {emergingTrendsData.map((item, idx) => {
                             const isOpen = openTrendAccordion === idx;
@@ -192,34 +191,30 @@ export default function PublicHealthExpertsSection() {
                         })}
                     </div>
 
-                    {/* Right Overlapping Images */}
-                    <div className="lg:col-span-5 flex justify-center relative min-h-[300px]">
-                        <div className="relative w-full max-w-[380px] h-[280px]">
-                            {/* Top Left Image */}
-                            <div className="absolute top-0 left-0 w-[62%] h-[180px] rounded-2xl overflow-hidden shadow-md border-2 border-white">
-                                <img
+                    {/* Right Images Container - Adjusted sizing to prevent overflow */}
+                    <div className="lg:col-span-5 flex justify-center">
+                        <div className="relative w-full max-w-[360px]">
+                            <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                                <Image
                                     src="/images/subject-matter-experts/public-health/Emerging-Trends-in-Public-health-Research.webp"
                                     alt="Medical research digital interface"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            {/* Bottom Right Image */}
-                            <div className="absolute bottom-0 right-0 w-[62%] h-[180px] rounded-2xl overflow-hidden shadow-lg border-2 border-white">
-                                <img
-                                    src="/images/subject-matter-experts/public-health/Applications-of-Public-health.webp"
-                                    alt="Environmental public health globe"
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    sizes="(max-width: 1024px) 100vw, 360px"
+                                    className="object-cover"
                                 />
                             </div>
                         </div>
                     </div>
-
                 </div>
 
-                <p className="text-gray-700 text-sm sm:text-base pt-4 leading-relaxed">
-                    These trends highlight the importance of continuous research and knowledge dissemination to drive innovation and improve global health systems.
-                </p>
+                {/* Paragraph explicitly positioned beneath grid with proper spacing */}
+                <div className="pt-6">
+                    <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                        These trends highlight the importance of continuous research and knowledge dissemination to drive innovation and improve global health systems.
+                    </p>
+                </div>
             </section>
+
 
             {/* SECTION 2: Why Public health Researchers Trust Pubrica */}
             <section className="max-w-6xl mx-auto space-y-6">
@@ -292,11 +287,13 @@ export default function PublicHealthExpertsSection() {
                     </div>
 
                     {/* Right Hand Image */}
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
+                    <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                        <Image
                             src="/images/subject-matter-experts/public-health/Applications-of-Public-health.webp"
                             alt="Public health digital analytics tablet"
-                            className="w-full h-auto object-cover"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 360px"
+                            className="object-cover"
                         />
                     </div>
                 </div>
