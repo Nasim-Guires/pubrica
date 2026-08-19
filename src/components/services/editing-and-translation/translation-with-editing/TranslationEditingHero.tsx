@@ -91,16 +91,7 @@ export default function TranslationEditingHero() {
                 />
               </div>
 
-              {/* Bottom/Front Image (Hands writing/reviewing document) */}
-              <div className="absolute bottom-0 right-0 w-[70%] h-[210px] sm:h-[230px] rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-slate-100 z-20">
-                <Image
-                  src="/images/editing-and-translation/translation-with-editing/Translation-with-Editing-Services.png"
-                  alt="Translation with Editing Services"
-                  fill
-                  sizes="(max-width: 640px) 70vw, 400px"
-                  className="object-cover"
-                />
-              </div>
+          
 
               {/* Light Subtle Background Accent Shape */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-slate-100 rounded-full -z-0 opacity-60 filter blur-xl" />

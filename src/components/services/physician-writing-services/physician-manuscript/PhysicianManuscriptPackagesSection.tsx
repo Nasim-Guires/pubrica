@@ -2,47 +2,47 @@ import React from 'react';
 import Link from 'next/link';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
-// Compliance Standards Data
+// Compliance Standards Data with Images and Links
 const complianceStandards = [
     {
-        code: "COPE",
         title: "Committee on Publication Ethics",
-        color: "text-slate-700"
+        imageSrc: "/images/physician-writing-services/physician-manuscript/image-1.png",
+        href: "/compliance/cope"
     },
     {
-        code: "SPIRIT / CONSORT",
         title: "Consolidated Standards of Reporting Trials",
-        color: "text-sky-800"
+        imageSrc: "/images/physician-writing-services/physician-manuscript/image-2.png",
+        href: "/compliance/consort"
     },
     {
-        code: "STROBE",
         title: "Strengthening the Reporting of Observational Studies in Epidemiology",
-        color: "text-rose-700"
+        imageSrc: "/images/physician-writing-services/physician-manuscript/image-3.png",
+        href: "/compliance/strobe"
     },
     {
-        code: "HIPAA",
         title: "Health Insurance Portability and Accountability Act",
-        color: "text-blue-900"
+        imageSrc: "/images/physician-writing-services/physician-manuscript/image-4.png",
+        href: "/compliance/hipaa"
     },
     {
-        code: "CARE",
         title: "Case Report Guidelines",
-        color: "text-amber-800"
+        imageSrc: "/images/physician-writing-services/physician-manuscript/image-5.png",
+        href: "/compliance/care"
     },
     {
-        code: "ICMJE",
         title: "International Committee of Medical Journal Editors",
-        color: "text-blue-700"
+        imageSrc: "/images/physician-writing-services/physician-manuscript/image-6.png",
+        href: "/compliance/icmje"
     },
     {
-        code: "PRISMA",
         title: "Preferred Reporting Items for Systematic Reviews",
-        color: "text-emerald-700"
+        imageSrc: "/images/physician-writing-services/physician-manuscript/image-7.png",
+        href: "/compliance/prisma"
     },
     {
-        code: "TREND",
         title: "Transparent Reporting of Evaluations with Nonrandomized Designs",
-        color: "text-teal-800"
+        imageSrc: "/images/physician-writing-services/physician-manuscript/image-8.png",
+        href: "/compliance/trend"
     }
 ];
 
@@ -122,24 +122,29 @@ export default function PhysicianManuscriptPackagesSection() {
 
             {/* 1. Compliance and Guideline Standards Grid */}
             <section className="py-14 bg-[#f8fafc] border-t border-gray-200">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] text-center mb-10">
                         Our Compliance and Guideline Standards
                     </h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {complianceStandards.map((item, idx) => (
-                            <div
+                            <Link
                                 key={idx}
-                                className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center text-center min-h-[140px]"
+                                href={item.href}
+                                className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col items-center justify-between text-center min-h-[190px] group cursor-pointer"
                             >
-                                <span className={`font-black text-xl sm:text-2xl tracking-wide mb-3 ${item.color}`}>
-                                    {item.code}
-                                </span>
-                                <p className="text-xs text-gray-600 leading-snug">
+                                <div className="flex-1 flex items-center justify-center w-full mb-3">
+                                    <img
+                                        src={item.imageSrc}
+                                        alt={item.title}
+                                        className="max-h-16 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                                    />
+                                </div>
+                                <p className="text-[11px] font-medium text-[#1e40af] leading-tight max-w-[200px]">
                                     {item.title}
                                 </p>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

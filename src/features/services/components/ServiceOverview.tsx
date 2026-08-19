@@ -130,9 +130,9 @@ export default function ServiceOverview() {
         </div>
 
         {/* Action CTAs */}
-        <div className="flex flex-wrap gap-3 mt-8 mb-16">
+        <div className="flex flex-wrap items-center gap-3 mt-8 mb-16">
           <GetFreeQuoteButton />
-          <button className="bg-[#b30000] hover:bg-[#900000] text-white px-6 py-2.5 rounded-full font-semibold transition-colors cursor-pointer">
+          <button className="bg-[#b30000] hover:bg-[#900000] !text-white px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none shadow-sm">
             View Brochure
           </button>
         </div>
@@ -202,9 +202,7 @@ export default function ServiceOverview() {
                   />
                 </div>
                 {/* Foreground Overlapping Image */}
-                <div className="absolute bottom-0 right-0 w-2/3 h-2/3 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
-
-                </div>
+                <div className="absolute bottom-0 right-0 w-2/3 h-2/3 rounded-2xl overflow-hidden shadow-lg border-4 border-white"></div>
               </div>
             </div>
           </div>
@@ -229,14 +227,11 @@ export default function ServiceOverview() {
 
           {/* Single Upload CTA */}
           <div className="pt-4">
-            <button className="bg-[#b30000] hover:bg-[#900000] text-white px-7 py-2.5 rounded-full font-semibold transition-colors cursor-pointer shadow-sm">
+            <button className="bg-[#b30000] hover:bg-[#900000] !text-white px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none shadow-sm">
               Upload Your Manuscript
             </button>
           </div>
         </div>
-
-        {/* Next Section Title */}
-
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ import Image from "next/image";
 const LOCAL_SERVICES_DATA = [
   {
     title: "Editing Service",
-    slug: "editing-service",
+    slug: "/editing-and-translation",
     shortDescription:
       "Substantive, medium, and low—these are the various levels of copyediting we offer. Our in-house translators will do the translation.",
     imageUrl: "/images/services/Editing-Service.jpg",
@@ -26,28 +26,28 @@ const LOCAL_SERVICES_DATA = [
   },
   {
     title: "Research Service",
-    slug: "research-service",
+    slug: "research-services",
     shortDescription:
       "Systematic review, meta-analyses, clinical literature review, evidence based literature review, case study analysis, experimental methodology.",
     imageUrl: "/images/services/Research-Service-1.jpg",
   },
   {
     title: "Physician Writing",
-    slug: "physician-writing",
+    slug: "physician-writing-services",
     shortDescription:
       "Need to do a literature search and present findings, but lack time? You’ve reached the right place; we coordinate with authors, respond to comments, and manage revisions.",
     imageUrl: "/images/services/Physician-Writing.jpg",
   },
   {
     title: "AI & Machine Learning",
-    slug: "ai-machine-learning",
+    slug: "ai-ml-support",
     shortDescription:
       "Pubrica provides Artificial intelligence that allows a machine to simulate human behaviour, although machine learning is a form of AI that allows a machine.",
     imageUrl: "/images/services/AI-Machine-Learning.jpg",
   },
   {
     title: "Bioinformatics Service",
-    slug: "bioinformatics-service",
+    slug: "bioinformatics",
     shortDescription:
       "Pubrica’s Bioinformatics team can offer complete Bioinformatics services for proteomic and genomic data. Also, we can help you model.",
     imageUrl: "/images/services/Bioinformatics-Service.jpg",

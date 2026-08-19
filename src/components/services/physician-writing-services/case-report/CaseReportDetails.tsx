@@ -250,15 +250,7 @@ export default function CaseReportDetails() {
                 />
               </div>
 
-              {/* Front Overlapping Image (Person analyzing charts) */}
-              <div className="absolute bottom-0 left-4 w-3/4 h-52 rounded-xl overflow-hidden shadow-xl border-4 border-white">
-                <Image
-                  src="/images/physician-writing-services/case-report/Structure-of-the-Case-Report.webp" // Replace with actual image path
-                  alt="Doctor reviewing charts"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+             
             </div>
           </div>
         </div>

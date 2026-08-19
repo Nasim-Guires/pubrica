@@ -326,7 +326,7 @@ export default function BioinformaticsServices() {
           <div className="w-full md:w-1/3 flex justify-center">
             <div className="relative w-64 h-64 rounded-md overflow-hidden border border-slate-200 shadow-sm bg-white">
               <Image
-                src="/images/researcher-microscope.jpg"
+                src="/images/services/bio/Transforming-Biological-Data-into-Scientific-Discovery-Sample-Work.png"
                 alt="Bioinformatics Researcher with Microscope"
                 fill
                 className="object-cover"

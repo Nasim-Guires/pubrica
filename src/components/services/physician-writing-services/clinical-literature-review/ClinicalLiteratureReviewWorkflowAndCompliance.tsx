@@ -75,7 +75,7 @@ export default function ClinicalLiteratureReviewWorkflowAndCompliance() {
   return (
     <div className="w-full bg-[#f8fafc] py-12 text-slate-800">
       <div className="max-w-6xl mx-auto px-4 space-y-16">
-        
+
         {/* 1. How Our Clinical Literature Review Service Works */}
         <section className="space-y-10 text-center">
           <div>
@@ -102,9 +102,8 @@ export default function ClinicalLiteratureReviewWorkflowAndCompliance() {
               return (
                 <div
                   key={step.number}
-                  className={`flex flex-col items-center justify-between min-h-[360px] ${
-                    isEven ? "flex-col-reverse" : "flex-col"
-                  }`}
+                  className={`flex flex-col items-center justify-between min-h-[360px] ${isEven ? "flex-col-reverse" : "flex-col"
+                    }`}
                 >
                   {/* Step Number Circle Badge */}
                   <div className="flex flex-col items-center z-10">
@@ -140,17 +139,15 @@ export default function ClinicalLiteratureReviewWorkflowAndCompliance() {
         <section className="bg-[#053826] text-white rounded-lg p-6 md:p-8 shadow-md">
           <div className="flex flex-col md:flex-row items-center gap-6 justify-between">
             <div className="flex items-center gap-5">
-              <div className="w-20 h-20 relative flex-shrink-0">
-                <div className="w-full h-full rounded-full border-2 border-dashed border-sky-300 flex flex-col items-center justify-center text-center p-1 bg-teal-950/40">
-                  <span className="text-[8px] font-bold uppercase tracking-wider text-sky-200">
-                    SATISFACTION
-                  </span>
-                  <span className="text-base font-black text-white leading-tight">
-                    100%
-                  </span>
-                  <span className="text-[7px] font-semibold uppercase text-sky-200 tracking-wider">
-                    GUARANTEE
-                  </span>
+              <div className="flex-shrink-0">
+                <div className="w-32 h-32 rounded-full border-4 shadow-lg p-2 flex items-center justify-center overflow-hidden">
+                  <Image
+                    src="/images/publication-support/journal-selection/Satisfaction_Guarantee.webp"
+                    alt="100% Satisfaction Guarantee"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
               <div className="space-y-1">
@@ -169,7 +166,7 @@ export default function ClinicalLiteratureReviewWorkflowAndCompliance() {
               </div>
             </div>
 
-           <GetFreeQuoteButton/>
+            <GetFreeQuoteButton />
           </div>
         </section>
 

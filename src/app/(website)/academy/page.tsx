@@ -21,13 +21,13 @@ import Link from 'next/link';
 // =========================================================================
 // DATA STRUCTURES
 // =========================================================================
-
 const KNOWLEDGE_CATEGORIES = [
   {
     title: 'Research Writing',
     icon: FileSignature,
     description:
       'Explore hundreds of articles, videos, and other resources used by 4 million students every month.',
+    viewMoreUrl: '/',
     links: [
       {
         label: 'Manuscript Guidelines',
@@ -52,6 +52,7 @@ const KNOWLEDGE_CATEGORIES = [
     icon: BookOpen,
     description:
       'Explore hundreds of articles, videos, and other resources used by 4 million students every month.',
+    viewMoreUrl: '/academy/research-publication/',
     links: [
       {
         label: 'Journal Selection',
@@ -63,7 +64,7 @@ const KNOWLEDGE_CATEGORIES = [
       },
       {
         label: 'Publication Ethics',
-        url: 'academy/publication-ethics',
+        url: '/academy/publication-ethics',
       },
       {
         label: 'Peer-reviewing',
@@ -76,6 +77,7 @@ const KNOWLEDGE_CATEGORIES = [
     icon: TrendingUp,
     description:
       'Explore hundreds of articles, videos, and other resources used by 4 million students every month.',
+    viewMoreUrl: '/academy/research-promotion/',
     links: [
       {
         label: 'Online Media',
@@ -100,6 +102,7 @@ const KNOWLEDGE_CATEGORIES = [
     icon: Mail,
     description:
       'Explore hundreds of articles, videos, and other resources used by 4 million students every month.',
+    viewMoreUrl: '/get-newsletter/',
     links: [
       {
         label: 'Industry News',
@@ -109,14 +112,6 @@ const KNOWLEDGE_CATEGORIES = [
         label: 'QA Forums',
         url: '/academy/qa-forum',
       },
-      // {
-      //   label: 'Free Resources',
-      //   url: '/dummy/free-resources',
-      // },
-      // {
-      //   label: 'Subscribe Now',
-      //   url: '/dummy/subscribe-now',
-      // },
     ],
   },
 ];
@@ -282,9 +277,12 @@ export default function PubricaKnowledgeBase() {
                 </div>
 
                 <div className="pt-4 border-t border-gray-100 mt-auto">
-                  <button className="text-xs font-bold text-[#0b2825] border-b-2 border-[#0b2825] pb-1 hover:text-emerald-600 hover:border-emerald-600 transition-all uppercase tracking-wider">
+                  <Link
+                    href={category.viewMoreUrl}
+                    className="inline-block text-xs font-bold text-[#0b2825] border-b-2 border-[#0b2825] pb-1 hover:text-emerald-600 hover:border-emerald-600 transition-all uppercase tracking-wider"
+                  >
                     View More
-                  </button>
+                  </Link>
                 </div>
               </div>
             );

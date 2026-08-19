@@ -655,15 +655,6 @@ const Page = () => {
                 className="object-contain"
               />
             </div>
-            <div className="relative w-full aspect-[723/1024] overflow-hidden rounded-sm border border-slate-200 shadow-xl mx-auto max-w-md">
-              <Image
-                src="/images/editing-and-translation/Editing-and-Translation-Services-Sample-Work.png"
-                alt="Editing and Translation Services Sample Work"
-                fill
-                sizes="(max-width: 768px) 100vw, 480px"
-                className="object-contain"
-              />
-            </div>
           </div>
         </section>
       </div>

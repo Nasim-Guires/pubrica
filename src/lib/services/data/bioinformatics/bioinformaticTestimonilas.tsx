@@ -6,7 +6,7 @@ export const bioinformaticsWhoWeServe = [
       "Customized data analysis for theses, dissertations, and publications.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1532187643603-ba119ca4109e",
+      "/images/services/bio/Academic-Researchers-Universities-1.png",
   },
   {
     title: "Pharmaceutical & Biotechnology Companies",
@@ -15,7 +15,7 @@ export const bioinformaticsWhoWeServe = [
       "Drug repurposing, clinical trial data analysis, and precision medicine support.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1576086213369-97a306d36557",
+      "/images/services/bio/Pharmaceutical-Biotechnology-Companies-4.png",
   },
   {
     title: "Healthcare & Clinical Research Organizations (CROs)",
@@ -24,7 +24,7 @@ export const bioinformaticsWhoWeServe = [
       "Clinical genomics and personalized treatment insights.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
+  "/images/services/bio/Healthcare-Clinical-Research-Organizations-CROs.png",
   },
   {
     title: "Government & Nonprofit Research Institutes",
@@ -33,7 +33,7 @@ export const bioinformaticsWhoWeServe = [
       "Public health genomics and disease surveillance.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1532094349884-543bc11b234d",
+      "/images/services/bio/Government-Nonprofit-Research-Institutes.png",
   },
   {
     title: "Startups & Life Science Innovators",
@@ -42,7 +42,7 @@ export const bioinformaticsWhoWeServe = [
       "Scalable computational biology support for innovation.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978",
+      "/images/services/bio/Startups-Life-Science-Innovators.png",
   },
   {
     title: "Medical Professionals & Hospitals",
@@ -51,7 +51,7 @@ export const bioinformaticsWhoWeServe = [
       "Precision medicine and genomic-informed therapies.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1516549655169-df83a0774514",
+      "/images/services/bio/Medical-Professionals-Hospitals.png",
   },
   {
     title: "Agriculture & AgriTech Companies",
@@ -60,7 +60,7 @@ export const bioinformaticsWhoWeServe = [
       "Microbiome analysis for sustainable agriculture.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1500937386664-56d1dfef3854",
+      "/images/services/bio/Agriculture-AgriTech-Companies.png",
   },
   {
     title: "Food & Nutrition Companies",
@@ -69,7 +69,7 @@ export const bioinformaticsWhoWeServe = [
       "Support for nutrigenomics and probiotic research.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1498837167922-ddd27525d352",
+      "/images/services/bio/Food-Nutrition-Companies-optional-but-strong-for-microbiome-market.png",
   },
   {
     title: "Diagnostics & Medical Device Companies",
@@ -78,7 +78,7 @@ export const bioinformaticsWhoWeServe = [
       "NGS-driven diagnostic pipeline development.",
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1579154204601-01588f351e67",
+      "/images/services/bio/Diagnostics-Medical-Device-Companies.png",
   },
 ];
 
@@ -86,33 +86,33 @@ export const bioinformaticsWhoWeServe = [
 export const bioinformaticsTestimonials = [
   {
     image:
-      "https://pubrica.com/wp-content/uploads/2024/08/BMC-Genomics.webp",
+      "/images/services/bio/bmc-genomics-journal.png",
     quote:
       "Pubrica’s bioinformatics experts delivered outstanding support for my whole-genome sequencing project. Their precision in genome assembly and annotation enabled me to publish in BMC Genomics without delays. Truly professional!",
     name: "Dr. James Carter",
     designation: "Genomics Researcher",
     organization: "University of Cambridge, UK",
-    flag: "https://flagcdn.com/w80/gb.png",
+    flag: "/images/services/bio/uk-flag.png",
   },
   {
     image:
-      "https://pubrica.com/wp-content/uploads/2024/08/Frontiers-in-Genetics.webp",
+      "/images/services/bio/frontiers-in-genetics-.png",
     quote:
       "Thanks to Pubrica’s team, my RNA-Seq data was analyzed with remarkable accuracy. Their use of advanced tools like HISAT2 and DESeq2 ensured my study’s acceptance in Frontiers in Genetics. Highly recommended!",
     name: "Dr. Priya Nair",
     designation: "Molecular Biologist",
     organization: "Indian Institute of Science, India",
-    flag: "https://flagcdn.com/w80/in.png",
+    flag: "/images/services/bio/IN-flag.png",
   },
   {
     image:
-      "https://pubrica.com/wp-content/uploads/2024/08/Nature-Communications.webp",
+      "/images/services/bio/nature-communication-article-.png",
     quote:
       "Pubrica’s support in protein structure prediction and pathway analysis was invaluable. Their bioinformatics insights accelerated our drug target identification and contributed to our publication in Nature Communications.",
     name: "Dr. Michael Rodriguez",
     designation: "Research Scientist",
     organization: "Pfizer, USA",
-    flag: "https://flagcdn.com/w80/us.png",
+    flag: "/images/services/bio/usa-1-1.png",
   },
 ];
 

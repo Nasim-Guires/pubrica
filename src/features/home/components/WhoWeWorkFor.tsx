@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Landmark, Home, PenTool, User } from "lucide-react";
 import Container from "@/components/common/Container";
+import Link from "next/link";
 
 export default function WhoWeWorkFor() {
   const sectors = [
@@ -56,9 +57,12 @@ export default function WhoWeWorkFor() {
           </div>
 
           <div className="flex-shrink-0 self-start md:self-end">
-            <button className="bg-emerald-950 text-white font-medium text-sm px-6 py-2.5 rounded-full hover:bg-emerald-900 shadow-md transition-all duration-300">
+            <Link
+              href="/Industries"
+              className="bg-emerald-950 text-white font-medium text-sm px-6 py-2.5 rounded-full hover:bg-emerald-900 shadow-md transition-all duration-300 inline-block"
+            >
               Read more
-            </button>
+            </Link>
           </div>
         </div>
 

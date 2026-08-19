@@ -236,16 +236,7 @@ export default function ClinicalReviewScopeAndApproach() {
                 unoptimized
               />
             </div>
-            {/* Bottom Image Card */}
-            <div className="absolute bottom-0 left-0 w-4/5 h-48 rounded-xl overflow-hidden shadow-xl border-2 border-white z-20">
-              <Image
-                src="/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/our-approch-.webp"
-                alt="Data analytics and charts"
-                fill
-                className="object-cover"
-                unoptimized
-              />
-            </div>
+           
           </div>
         </div>
       </div>

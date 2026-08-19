@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Link from "next/link";
 
 export default function PackagesAndPricing() {
   return (
@@ -331,7 +332,7 @@ export default function PackagesAndPricing() {
 
         {/* Global Quote CTA Button */}
         <div className="mt-8 text-center">
-          <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
         </div>
       </section>
 
@@ -373,12 +374,12 @@ export default function PackagesAndPricing() {
         </div>
 
         <div>
-          <button
-            type="button"
-            className="bg-[#0f3c36] hover:bg-[#0a2924] text-white text-xs md:text-sm font-semibold px-8 py-3 rounded-full transition-colors cursor-pointer"
+          <Link
+            href="/order-now/"
+            className="bg-[#0f3c36] hover:bg-[#0a2924] text-white text-xs md:text-sm font-semibold px-8 py-3 rounded-full transition-colors cursor-pointer inline-block"
           >
             Check Pricing &amp; Get a Quote
-          </button>
+          </Link>
         </div>
       </section>
 

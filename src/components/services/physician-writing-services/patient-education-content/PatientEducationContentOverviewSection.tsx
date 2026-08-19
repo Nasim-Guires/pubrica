@@ -257,16 +257,7 @@ export default function PatientEducationContentOverviewSection() {
                 />
               </div>
 
-              {/* Bottom Overlapping Image */}
-              <div className="absolute bottom-0 right-0 w-3/4 h-52 rounded-xl overflow-hidden shadow-xl border-2 border-white z-20">
-                <Image
-                  src="/images/physician-writing-services/patient-education-content/Pubrica-Patient-Education-Content-Format.jpg"
-                  alt="Medical team hands stacked in collaboration"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 30vw"
-                  className="object-cover"
-                />
-              </div>
+             
 
               {/* Decorative Subtle Background Circle */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-slate-100 rounded-full -z-0 opacity-70" />

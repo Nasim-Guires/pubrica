@@ -153,16 +153,6 @@ export default function PlagiarismWhatWeDo() {
                 className="object-cover"
               />
             </div>
-
-            {/* Bottom Right Image */}
-            <div className="absolute bottom-0 right-10 w-3/5 h-[220px] rounded-lg overflow-hidden shadow-lg border-4 border-white z-10">
-              <Image
-                src="/images/publication-support/plagiarism-services/Plagiarism-Check-Service-what-we-do.png"
-                alt="Reviewing physical documents"
-                fill
-                className="object-cover"
-              />
-            </div>
           </div>
 
           {/* Right Side: Accordion */}

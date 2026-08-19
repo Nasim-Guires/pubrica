@@ -46,7 +46,7 @@ export default function ScientificGrantReviewPage() {
 
         {/* Main Content Container */}
         <main className="max-w-5xl mx-auto px-6 py-12 space-y-12">
-          
+
           {/* Introduction Section */}
           <section className="space-y-4">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 text-center">
@@ -59,7 +59,7 @@ export default function ScientificGrantReviewPage() {
 
           {/* Services List and Pricing Card Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-            
+
             {/* Left Column: Services Included */}
             <div className="lg:col-span-2 space-y-6">
               <div className="space-y-4">
@@ -81,7 +81,7 @@ export default function ScientificGrantReviewPage() {
               <div className="border-2 border-gray-200 rounded-lg p-6 bg-white shadow-md text-center space-y-4">
                 <h4 className="text-xl font-bold text-slate-900">Grant Review Editing</h4>
                 <div className="text-3xl font-extrabold text-slate-900">$149</div>
-                
+
                 <div className="bg-black text-white text-xs font-bold py-2 px-4 rounded tracking-wider">
                   5 Days
                 </div>

@@ -1,8 +1,37 @@
-import React from 'react';
+
+"use client"
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Download } from 'lucide-react';
 
 export default function ScientificGrantReviewExtendedPage() {
+  const [activeTab, setActiveTab] = useState(0);
+  const samplesData = [
+    {
+      id: "01",
+      title: "01. Standard Editing",
+      description:
+        "Our integrated DX and CX solutions are focused on building human connections without ever losing sight of what matters most – the value of corporate culture and its impact on engagement and innovation. Our integrated DX and CX solutions are focused on building human connections without ever losing sight of what matters most.",
+      image: "/images/editing-and-translation/proofreading/image-1.webp",
+      alt: "Standard Editing Sample Document",
+    },
+    {
+      id: "02",
+      title: "02. Premium Editing",
+      description:
+        "Our integrated DX and CX solutions are focused on building human connections without ever losing sight of what matters most – the value of corporate culture and its impact on engagement and innovation. Our integrated DX and CX solutions are focused on building human connections without ever losing sight of what matters most – the value of corporate culture and its impact on engagement and innovation.",
+      image: "/images/editing-and-translation/proofreading/image-2.jpg",
+      alt: "Premium Editing Sample Document",
+    },
+    {
+      id: "03",
+      title: "03. Advanced Editing",
+      description:
+        "Our integrated DX and CX solutions are focused on building human connections without ever losing sight of what matters most – the value of corporate culture and its impact on engagement and innovation. Our integrated DX and CX solutions are focused on building human connections without ever losing sight of what matters most.",
+      image: "/images/editing-and-translation/proofreading/image-3.jpg",
+      alt: "Advanced Editing Sample Document",
+    },
+  ];
   return (
     <div className="min-h-screen bg-white text-gray-800 flex flex-col justify-between">
       <div>
@@ -10,7 +39,7 @@ export default function ScientificGrantReviewExtendedPage() {
         <section className="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="relative w-full h-72 rounded-lg overflow-hidden shadow-md">
             <Image
-              src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=800&auto=format&fit=crop"
+              src="/images/editing-and-translation/proofreading/grant.webp"
               alt="Grant Review Services Research Lab"
               fill
               className="object-cover"
@@ -30,39 +59,64 @@ export default function ScientificGrantReviewExtendedPage() {
         </section>
 
         {/* Sample Edits Section */}
-        <section className="bg-gray-100 py-12 px-6">
+        <section className="bg-[#e2dfdf] py-16 px-4 sm:px-6">
           <div className="max-w-5xl mx-auto space-y-8">
-            <div className="text-center space-y-2">
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Sample edits</h2>
-              <p className="text-gray-600 text-sm max-w-2xl mx-auto">
-                Download the provided samples of our editors&apos; process to see the benefits you get from our Grant Review Editing Services.
+            {/* Section Heading */}
+            <div className="text-center space-y-3">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-[#0c3830]">
+                Sample edits
+              </h2>
+              <p className="text-gray-700 text-sm md:text-base max-w-2xl mx-auto font-medium leading-relaxed">
+                Download the provided samples of our editors&apos; process to see
+                the benefits you get from our Grant Review Editing Services.
               </p>
             </div>
 
-            {/* Tabs */}
-            <div className="flex justify-center space-x-2">
-              <span className="bg-slate-900 text-white px-4 py-2 rounded text-sm font-semibold shadow">01. Standard Editing</span>
-              <span className="bg-slate-800 text-gray-300 px-4 py-2 rounded text-sm font-semibold">02. Premium Editing</span>
-              <span className="bg-slate-800 text-gray-300 px-4 py-2 rounded text-sm font-semibold">03. Advanced Editing</span>
+            {/* Tab Navigation */}
+            <div className="flex flex-wrap justify-center gap-3">
+              {samplesData.map((tab, idx) => {
+                const isActive = activeTab === idx;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(idx)}
+                    className={`px-5 py-2.5 text-sm font-bold transition-colors cursor-pointer rounded-xs ${isActive
+                      ? "bg-white text-[#0c3830] shadow-sm"
+                      : "bg-[#0c3830] text-white hover:bg-[#082923]"
+                      }`}
+                  >
+                    {tab.title}
+                  </button>
+                );
+              })}
             </div>
 
-            {/* Sample Box */}
-            <div className="border border-gray-200 rounded-lg bg-white p-6 shadow-sm">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div className="relative w-full h-80 rounded border border-gray-200 overflow-hidden bg-slate-50">
+            {/* Active Sample Card */}
+            <div className="bg-white rounded-md p-6 sm:p-10 shadow-sm border border-gray-100">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                {/* Left Column Image */}
+                <div className="md:col-span-5 relative w-full h-64 sm:h-80 rounded-md overflow-hidden bg-gray-100">
                   <Image
-                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
-                    alt="Standard Editing Sample Document"
+                    src={samplesData[activeTab].image}
+                    alt={samplesData[activeTab].alt}
                     fill
-                    className="object-cover opacity-80"
+                    className="object-cover"
+                    priority
                   />
                 </div>
-                <div className="space-y-4">
-                  <h3 className="text-xl font-bold text-slate-900">01. Standard Editing</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    Our integrated DX and CX solutions are focused on building human connections without ever losing sight of what matters most – the value of corporate culture and its impact on engagement and innovation. Our integrated DX and CX solutions are focused on building human connections without ever losing sight of what matters most.
+
+                {/* Right Column Content */}
+                <div className="md:col-span-7 space-y-5">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
+                    {samplesData[activeTab].title}
+                  </h3>
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                    {samplesData[activeTab].description}
                   </p>
-                  <button className="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold py-2 px-4 rounded transition shadow">
+                  <button
+                    type="button"
+                    className="inline-flex items-center space-x-2 bg-[#0c3830] hover:bg-[#082923] !text-white text-xs font-semibold py-2.5 px-5 rounded-md transition-colors cursor-pointer select-none"
+                  >
                     <Download className="w-4 h-4" />
                     <span>DOWNLOAD SAMPLE</span>
                   </button>
@@ -71,7 +125,6 @@ export default function ScientificGrantReviewExtendedPage() {
             </div>
           </div>
         </section>
-
         {/* Quality, Security & Timely Cards */}
         <section className="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="border border-gray-200 rounded-lg p-6 bg-white shadow-sm space-y-2 border-t-4 border-t-teal-600">
@@ -135,11 +188,11 @@ export default function ScientificGrantReviewExtendedPage() {
         {/* Guarantee Banner & Success Stories */}
         <section className="bg-slate-900 text-white py-12 px-6 mt-12">
           <div className="max-w-5xl mx-auto space-y-12">
-            
+
             <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-slate-800/80 p-8 rounded-lg border border-slate-700 shadow-lg">
               <div className="relative w-28 h-28 flex-shrink-0">
                 <Image
-                  src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=300&auto=format&fit=crop"
+                  src="/images/editing-and-translation/proofreading/Satisfaction_Guarantee_blue2.png"
                   alt="100% Satisfaction Guarantee Seal"
                   fill
                   className="object-contain"
@@ -155,50 +208,40 @@ export default function ScientificGrantReviewExtendedPage() {
 
             <div className="space-y-6">
               <h3 className="text-xl md:text-2xl font-bold text-center tracking-wide">SCRIPTING SUCCESS STORIES</h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="border border-gray-700 rounded-lg p-6 bg-slate-800/60 shadow-md flex flex-col sm:flex-row items-center gap-4">
-                  <div className="relative w-28 h-36 flex-shrink-0">
-                    <Image
-                      src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=300&auto=format&fit=crop"
-                      alt="Clinical Problem-Solving Journal Book Cover"
-                      fill
-                      className="object-cover rounded border border-gray-700"
-                    />
-                  </div>
-                  <div className="space-y-2 text-xs md:text-sm">
-                    <p className="italic text-gray-300">
-                      &ldquo;You get the entire package at Scientific Writing &amp; Publishing. Regulatory writing, clinical report writing, journal writing, biostatistical reports, medical animation, and physician writing. They are easy to work with. What more do you want?&rdquo;
-                    </p>
-                    <div className="pt-2 flex justify-between font-semibold text-gray-200 border-t border-gray-700">
-                      <span>Author Name</span>
-                      <span className="text-teal-400">Impact Factor: 4.236</span>
-                    </div>
-                    <div className="text-xs text-gray-400">Jean-Claude Benaud</div>
-                  </div>
-                </div>
 
-                <div className="border border-gray-700 rounded-lg p-6 bg-slate-800/60 shadow-md flex flex-col sm:flex-row items-center gap-4">
-                  <div className="relative w-28 h-36 flex-shrink-0">
-                    <Image
-                      src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=300&auto=format&fit=crop"
-                      alt="Clinical Practice Journal Book Cover"
-                      fill
-                      className="object-cover rounded border border-gray-700"
-                    />
-                  </div>
-                  <div className="space-y-2 text-xs md:text-sm">
-                    <p className="italic text-gray-300">
-                      &ldquo;You get the entire package at Scientific Writing &amp; Publishing. Regulatory writing, clinical report writing, journal writing, biostatistical reports, medical animation, and physician writing. They are easy to work with. What more do you want?&rdquo;
-                    </p>
-                    <div className="pt-2 flex justify-between font-semibold text-gray-200 border-t border-gray-700">
-                      <span>Author Name</span>
-                      <span className="text-teal-400">Impact Factor: 4.236</span>
+              <section className="bg-[#0b1f1c] py-16 px-4 sm:px-6">
+                <div className="max-w-6xl mx-auto space-y-8">
+                  {/* Section Heading */}
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white text-center tracking-wide uppercase">
+                    Scripting Success Stories
+                  </h2>
+
+                  {/* Images Container */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                    {/* First Card Image */}
+                    <div className="relative w-full aspect-[16/9] sm:aspect-[2/1] rounded-lg overflow-hidden border border-emerald-900/50 shadow-xl">
+                      <Image
+                        src="/images/editing-and-translation/proofreading/scropt-2.png"
+                        alt="Clinical Problem-Solving Scripting Success Story"
+                        fill
+                        className="object-cover object-center"
+                        priority
+                      />
                     </div>
-                    <div className="text-xs text-gray-400">Jean-Claude Benaud</div>
+
+                    {/* Second Card Image */}
+                    <div className="relative w-full aspect-[16/9] sm:aspect-[2/1] rounded-lg overflow-hidden border border-emerald-900/50 shadow-xl">
+                      <Image
+                        src="/images/editing-and-translation/proofreading/book-01.jpg"
+                        alt="Clinical Practice Scripting Success Story"
+                        fill
+                        className="object-cover object-center"
+                        priority
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
+              </section>
             </div>
 
           </div>

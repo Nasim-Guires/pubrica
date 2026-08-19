@@ -5,11 +5,11 @@ import Container from '@/components/common/Container';
 
 export default function SpecialisationsMenu() {
   const categories = [
-    { label: 'Medical Device', href: '#medical-device' },
-    { label: 'Pharmaceutical', href: '#pharmaceutical' },
-    { label: 'Generics', href: '#generics' },
-    { label: 'Genomics', href: '#genomics' },
-    { label: 'View All', href: '#all-services' },
+    { label: 'Medical Device', href: '/Industries/medical-device' },
+    { label: 'Pharmaceutical', href: '/Industries/pharmaceutical' },
+    { label: 'Generics', href: '/Industries/generics' },
+    { label: 'Genomics', href: '/subject-matter-experts/genomics' },
+    { label: 'View All', href: '/Industries' },
   ];
 
   return (

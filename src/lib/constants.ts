@@ -436,7 +436,7 @@ export const NAV_LINKS = [
             label: "Journal Selection",
           },
           {
-            href: "/services/publication-support/pre-submission-peer-review",
+            href: "/services/publication-support/peer-review-pre-submission",
             label: "Pre-Submission Peer Review",
           },
           {
@@ -448,7 +448,7 @@ export const NAV_LINKS = [
             label: "Response To Reviewers",
           },
           {
-            href: "/services/publication-support/Poster-Preparation",
+            href: "/services/publication-support/poster-preparation",
             label: "Poster Creation & Design",
           },
           {

@@ -93,13 +93,7 @@ export default function PhysicianTrainingHeroSection() {
                 </div>
 
                 {/* Image 2 (Bottom Right) */}
-                <div className="absolute bottom-0 right-0 w-3/4 h-56 rounded-xl overflow-hidden border-2 border-white shadow-xl z-20">
-                  <img
-                    src="/images/physician-writing-services/physician-training/Physician-Training-What-We-do.webp"
-                    alt="Doctors discussing medical research"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+               
               </div>
             </div>
 

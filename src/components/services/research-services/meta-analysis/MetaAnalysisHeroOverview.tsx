@@ -57,125 +57,58 @@ export default function MetaAnalysisHeroOverview() {
       </div>
 
       {/* 2. Overview Content Section */}
-      <div
-        style={{
-          backgroundColor: "#ffffff",
-          padding: "60px 20px 80px 20px",
-          color: "#111827",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "1150px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "1fr",
-            gap: "40px",
-          }}
-        >
-          {/* Main Grid: Left Details & Right Featured Card */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr",
-              // Switch to 2 columns on desktop using standard CSS grid layout
-            }}
-            className="md:grid-cols-[1.2fr_0.8fr]"
-          >
-            {/* Left Column Text Content */}
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <h2
-                style={{
-                  fontSize: "1.75rem",
-                  fontWeight: "700",
-                  color: "#0f2c3a",
-                  lineHeight: "1.35",
-                  marginBottom: "20px",
-                }}
-              >
+      <div className="bg-slate-100 py-12 px-4 sm:px-6 lg:px-8 text-slate-900">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            {/* Left Column Content */}
+            <div className="lg:col-span-7 flex flex-col">
+              {/* Main Heading */}
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a2f2c] leading-tight mb-4">
                 Meta-Analysis Services for Life Sciences, Pharma, and Research:
                 Streamlining Your Path to Publication
               </h2>
 
-              <p
-                style={{
-                  fontSize: "1rem",
-                  fontWeight: "600",
-                  color: "#2563eb",
-                  lineHeight: "1.5",
-                  marginBottom: "20px",
-                }}
-              >
-                End-to-end meta-analysis support for publication and expert
-                guidance to submit robust analyses to high-impact journals
+              {/* Subheading */}
+              <p className="text-sm sm:text-base font-semibold text-sky-700 leading-snug mb-4">
+                End-to-end meta-analysis support for publication and expert guidance
+                to submit robust analyses to high-impact journals
               </p>
 
-              <p
-                style={{
-                  fontSize: "0.925rem",
-                  color: "#374151",
-                  lineHeight: "1.65",
-                  marginBottom: "24px",
-                }}
-              >
-                Pubrica’s team of skilled editors and medical writers
-                specializes in conducting thorough,{" "}
+              {/* Introductory Paragraph */}
+              <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-6">
+                Pubrica’s team of skilled editors and medical writers specializes in
+                conducting thorough,{" "}
                 <Link
                   href="/services/research-services/systematic-review"
-                  style={{ color: "#2563eb", textDecoration: "underline" }}
+                  className="text-sky-600 hover:underline font-medium"
                 >
                   systematic reviews
                 </Link>{" "}
                 and{" "}
                 <Link
                   href="/services/research-services/meta-analysis"
-                  style={{ color: "#2563eb", textDecoration: "underline" }}
+                  className="text-sky-600 hover:underline font-medium"
                 >
                   meta-analysis
                 </Link>{" "}
-                (hypothesis-driven), essential for crafting high-quality
-                scientific original research articles. Our experts rigorously
-                summarize peer-reviewed medical literature, use{" "}
+                (hypothesis-driven), essential for crafting high-quality scientific
+                original research articles. Our experts rigorously summarize
+                peer-reviewed medical literature, use{" "}
                 <Link
                   href="/services/research-services/meta-analysis"
-                  style={{ color: "#2563eb", textDecoration: "underline" }}
+                  className="text-sky-600 hover:underline font-medium"
                 >
                   meta-analysis
                 </Link>{" "}
                 statistical services, explain the variability between different
-                studies, and articulate key research gaps, facilitating the
-                creation of impactful publications in the scientific community.
+                studies, and articulate key research gaps, facilitating the creation
+                of impactful publications in the scientific community.
               </p>
 
               {/* Bullet Points */}
-              <ul
-                style={{
-                  listStyle: "none",
-                  padding: 0,
-                  margin: "0 0 32px 0",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "16px",
-                }}
-              >
-                <li
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: "10px",
-                    fontSize: "0.925rem",
-                    color: "#374151",
-                    lineHeight: "1.6",
-                  }}
-                >
-                  <span
-                    style={{
-                      color: "#dc2626",
-                      fontWeight: "bold",
-                      fontSize: "1.2rem",
-                      lineHeight: "1",
-                    }}
-                  >
+              <ul className="space-y-4 mb-8 text-xs sm:text-sm text-gray-700 leading-relaxed">
+                <li className="flex items-start gap-2.5">
+                  <span className="text-red-600 font-bold text-lg leading-none mt-0.5">
                     •
                   </span>
                   <span>
@@ -183,70 +116,36 @@ export default function MetaAnalysisHeroOverview() {
                     comprehensive{" "}
                     <Link
                       href="/services/research-services/meta-analysis"
-                      style={{ color: "#2563eb", textDecoration: "underline" }}
+                      className="text-sky-600 hover:underline font-medium"
                     >
                       meta-analysis
                     </Link>{" "}
-                    report efficiently, ensuring it meets professional and
-                    quality standards while accurately answering your research
-                    question.
+                    report efficiently, ensuring it meets professional and quality
+                    standards while accurately answering your research question.
                   </span>
                 </li>
 
-                <li
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: "10px",
-                    fontSize: "0.925rem",
-                    color: "#374151",
-                    lineHeight: "1.6",
-                  }}
-                >
-                  <span
-                    style={{
-                      color: "#dc2626",
-                      fontWeight: "bold",
-                      fontSize: "1.2rem",
-                      lineHeight: "1",
-                    }}
-                  >
+                <li className="flex items-start gap-2.5">
+                  <span className="text-red-600 font-bold text-lg leading-none mt-0.5">
                     •
                   </span>
                   <span>
-                    Customize your custom meta-analysis reports to align with
-                    your specific requirements and budget, providing a tailored
-                    approach for your unique needs.
+                    Customize your custom meta-analysis reports to align with your
+                    specific requirements and budget, providing a tailored approach
+                    for your unique needs.
                   </span>
                 </li>
 
-                <li
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: "10px",
-                    fontSize: "0.925rem",
-                    color: "#374151",
-                    lineHeight: "1.6",
-                  }}
-                >
-                  <span
-                    style={{
-                      color: "#dc2626",
-                      fontWeight: "bold",
-                      fontSize: "1.2rem",
-                      lineHeight: "1",
-                    }}
-                  >
+                <li className="flex items-start gap-2.5">
+                  <span className="text-red-600 font-bold text-lg leading-none mt-0.5">
                     •
                   </span>
                   <span>
-                    Benefit from meta-analysis writing services by professional
-                    medical experts who assist in identifying relevant
-                    literature, connecting it with your research question
-                    (PCOS), conducting meta-analysis, a statistical procedure
-                    used to numerically summarize the included studies, and
-                    preparing a comprehensive research gap analysis to support
+                    Benefit from meta-analysis writing services by professional medical
+                    experts who assist in identifying relevant literature, connecting it
+                    with your research question (PCOS), conducting meta-analysis, a
+                    statistical procedure used to numerically summarize the included
+                    studies, and preparing a comprehensive research gap analysis to support
                     evidence-based conclusions.
                   </span>
                 </li>
@@ -254,59 +153,25 @@ export default function MetaAnalysisHeroOverview() {
 
               {/* Call to Action Button */}
               <div>
-               <GetFreeQuoteButton/>
+                <GetFreeQuoteButton />
               </div>
             </div>
 
             {/* Right Column Image Frame */}
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                paddingTop: "20px",
-              }}
-            >
-              <div
-                style={{
-                  position: "relative",
-                  width: "100%",
-                  maxWidth: "420px",
-                }}
-              >
-                {/* Dark teal accent card behind image */}
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    backgroundColor: "#0d3b38",
-                    borderRadius: "16px",
-                    transform: "translate(-12px, 12px)",
-                    zIndex: 0,
-                  }}
-                />
-                {/* Main Image */}
-                <div
-                  style={{
-                    position: "relative",
-                    zIndex: 1,
-                    borderRadius: "16px",
-                    overflow: "hidden",
-                    border: "2px solid #e5e7eb",
-                    boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
-                  }}
-                >
+            <div className="lg:col-span-5 flex justify-center items-center pt-4 lg:pt-0">
+              <div className="relative w-full max-w-[380px] aspect-[4/3]">
+                {/* Dark Teal Accent Background Shape */}
+                <div className="absolute inset-0 bg-[#0c3833] rounded-2xl transform -translate-x-4 translate-y-4 z-0" />
+
+                {/* Main Image Container */}
+                <div className="relative z-10 w-full h-full rounded-2xl overflow-hidden border border-gray-200 shadow-md">
                   <Image
                     src="/images/research-services/meta-analysis/Meta-Analysis-Services-for-Life-Sciences-Pharma-and-Research.webp"
                     alt="Meta-Analysis Services for Life Sciences, Pharma, and Research"
-                    width={420}
-                    height={420}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      display: "block",
-                      objectFit: "cover",
-                    }}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 380px"
+                    className="object-cover object-center"
+                    priority
                   />
                 </div>
               </div>

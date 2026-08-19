@@ -169,7 +169,7 @@ export default function PhysicianManuscriptsPage() {
                     sizes="320px"
                   />
                 </div>
-                <div className="absolute bottom-0 right-0 w-3/4 h-3/4 rounded-xl shadow-lg border-2 border-white overflow-hidden">
+                {/* <div className="absolute bottom-0 right-0 w-3/4 h-3/4 rounded-xl shadow-lg border-2 border-white overflow-hidden">
                   <Image
                     src="/images/physician-writing-services/physician-manuscript/video-what-we-do.jpg"
                     alt="Medical presentation and consultation"
@@ -177,7 +177,7 @@ export default function PhysicianManuscriptsPage() {
                     className="object-cover"
                     sizes="320px"
                   />
-                </div>
+                </div> */}
               </div>
             </div>
 

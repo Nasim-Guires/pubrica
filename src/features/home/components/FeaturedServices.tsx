@@ -110,7 +110,7 @@ export default function WhatWeDo() {
 
                       <div className="mt-6 pt-4">
                         <Link
-                          href={`/enquire?service=${sub.slug}`}
+                          href={`/order-now`}
                           className="text-gray-900 font-medium text-xs underline underline-offset-4 decoration-gray-400 hover:text-[#1a4d4a] transition-colors inline-block"
                         >
                           Enquire Now
@@ -128,7 +128,7 @@ export default function WhatWeDo() {
 
             {/* Read More Section Action Trigger */}
             <div className="mt-12 text-left">
-              <Link href="/services">
+              <Link href="/services/research-services/">
                 <Button className="font-bold text-xs uppercase bg-[#0b2927] hover:bg-[#123633] text-white rounded-full px-8 py-3 tracking-wider">
                   READ MORE
                 </Button>

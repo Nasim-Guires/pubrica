@@ -264,7 +264,8 @@ export default function VideoAbstractOverview() {
                 : "text-slate-200 hover:text-white"
             }`}
           >
-            Journal-specific Guideline
+             Clinical and Ethical Compliance
+            
           </button>
           <button
             onClick={() => setActiveTab("clinical")}
@@ -274,7 +275,7 @@ export default function VideoAbstractOverview() {
                 : "text-slate-200 hover:text-white"
             }`}
           >
-            Clinical and Ethical Compliance
+           Journal-specific Guideline
           </button>
         </div>
 

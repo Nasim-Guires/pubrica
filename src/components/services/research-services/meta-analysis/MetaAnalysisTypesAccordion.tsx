@@ -225,34 +225,6 @@ export default function MetaAnalysisTypesAccordion() {
                 }}
               />
             </div>
-
-            {/* Bottom-Right Card (Microscope Image) */}
-            <div
-              style={{
-                position: "absolute",
-                zIndex: 2,
-                bottom: "10px",
-                right: "20px",
-                width: "260px",
-                borderRadius: "16px",
-                overflow: "hidden",
-                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.15)",
-                border: "4px solid #ffffff",
-              }}
-            >
-              <Image
-                src="/images/research-services/meta-analysis/Types-of-Meta-Analysis-That-We-Offer.png"
-                alt="Types of meta-analysis that we offer"
-                width={260}
-                height={190}
-                style={{
-                  width: "100%",
-                  height: "190px",
-                  objectFit: "cover",
-                  display: "block",
-                }}
-              />
-            </div>
           </div>
 
           {/* Right Column: Accordion List */}

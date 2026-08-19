@@ -267,10 +267,10 @@ export default function BioinformaticsServiceContent() {
                     {/* Image Container Block */}
                     <div className="lg:col-span-5 flex justify-center">
                         {/* Image Section Start */}
-                        <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden bg-emerald-950 p-2 shadow-xl">
+                        <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden - p-2 ">
                             <div className="relative w-full h-full rounded-xl overflow-hidden">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800&auto=format&fit=crop"
+                                    src="/images/services/bio/Bioinformatics-Services.webp"
                                     alt="Scientist analyzing medical data on laptop in bioinformatics lab"
                                     fill
                                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -340,7 +340,7 @@ export default function BioinformaticsServiceContent() {
                             {/* Image Section Start */}
                             <div className="relative w-full max-w-xs h-[450px] rounded-lg overflow-hidden shadow-md">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=600&auto=format&fit=crop"
+                                    src="/images/services/bio/Bioinformatics-Services-That-We-Undertake.png"
                                     alt="Scientists conducting laboratory research with microscope"
                                     fill
                                     sizes="(max-width: 1024px) 100vw, 33vw"

@@ -144,11 +144,11 @@ const complianceData: ComplianceItem[] = [
 
 export default function PhysicianTrainingWorkflowSection() {
     // Accordion state initialized to null so all accordions start CLOSED by default
-  const [openCompliance, setOpenCompliance] = useState<string | null>(null);
+    const [openCompliance, setOpenCompliance] = useState<string | null>(null);
 
-const toggleCompliance = (id: string) => {
-    setOpenCompliance(openCompliance === id ? null : id);
-};
+    const toggleCompliance = (id: string) => {
+        setOpenCompliance(openCompliance === id ? null : id);
+    };
     return (
         <div className="w-full bg-white text-slate-800">
 
@@ -200,8 +200,14 @@ const toggleCompliance = (id: string) => {
             <section className="bg-[#122826] text-white py-10 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                     <div className="flex items-center gap-6 flex-col sm:flex-row">
-                        <div className="w-20 h-20 rounded-full border-2 border-dashed border-amber-300 flex items-center justify-center p-2 text-center text-[10px] font-bold uppercase text-amber-200 shrink-0 leading-tight">
-                            100% Satisfaction Guarantee
+                        <div className="w-28 h-28 rounded-full border-2 border-dashed flex items-center justify-center p-2 shrink-0 overflow-hidden">
+                            <Image
+                                src="/images/publication-support/journal-selection/Satisfaction_Guarantee.webp"
+                                alt="100% Satisfaction Guarantee"
+                                width={112}
+                                height={112}
+                                className="w-full h-full object-contain"
+                            />
                         </div>
                         <div>
                             <h3 className="text-xl font-bold mb-1">
@@ -212,7 +218,7 @@ const toggleCompliance = (id: string) => {
                             </p>
                         </div>
                     </div>
-                   <GetFreeQuoteButton/>
+                    <GetFreeQuoteButton />
                 </div>
             </section>
 

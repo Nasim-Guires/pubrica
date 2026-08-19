@@ -9,6 +9,7 @@ import {
   PaperAirplaneIcon,
 } from "@heroicons/react/24/outline";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Image from "next/image";
 
 // --- Next.js SEO Metadata ---
 export const metadata: Metadata = {
@@ -299,9 +300,8 @@ export default function CustomizedWritingGuidelineStandards() {
 
                   {/* Horizontal Line Accent */}
                   <div
-                    className={`w-full h-1 bg-[#0088b2] mb-3 ${
-                      isEven ? "order-2 mt-3 mb-0" : ""
-                    }`}
+                    className={`w-full h-1 bg-[#0088b2] mb-3 ${isEven ? "order-2 mt-3 mb-0" : ""
+                      }`}
                   />
 
                   {/* Step Card with Black Hover Effect */}
@@ -361,12 +361,14 @@ export default function CustomizedWritingGuidelineStandards() {
         <div className="bg-[#03362a] text-white py-10 px-6 sm:px-12 rounded-lg flex flex-col md:flex-row items-center justify-between gap-8 shadow-md">
           {/* Badge */}
           <div className="flex-shrink-0">
-            <div className="w-32 h-32 rounded-full border-4 border-dashed border-sky-300 bg-white text-[#0a2e2b] shadow-lg p-2 text-center flex items-center justify-center">
-              <div className="text-xs font-black uppercase tracking-wider">
-                <span className="block text-base tracking-normal">100%</span>
-                Satisfaction
-                <span className="block text-[9px] text-sky-600">Guarantee</span>
-              </div>
+            <div className="w-32 h-32 rounded-full border-4 border-dashed border-sky-300 bg-white shadow-lg p-2 flex items-center justify-center overflow-hidden">
+              <Image
+                src="/images/publication-support/journal-selection/Satisfaction_Guarantee.webp"
+                alt="100% Satisfaction Guarantee"
+                width={128}
+                height={128}
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
 
@@ -384,7 +386,7 @@ export default function CustomizedWritingGuidelineStandards() {
               standards for submission, compliance, and professional credibility.
             </p>
 
-            <GetFreeQuoteButton/>
+            <GetFreeQuoteButton />
           </div>
         </div>
       </section>

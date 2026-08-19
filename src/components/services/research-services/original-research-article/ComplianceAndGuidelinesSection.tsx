@@ -13,8 +13,7 @@ interface GuidelineItem {
   altText: string;
 }
 
-const IMG =
-  '/images/physician-writing-services/original-research-article';
+const IMG = '/images/physician-writing-services/original-research-article';
 
 const ethicalStandards: GuidelineItem[] = [
   {
@@ -92,7 +91,7 @@ export default function ComplianceAndGuidelinesSection() {
   return (
     <section 
       aria-labelledby="compliance-standards-heading"
-      className="w-full bg-slate-100 py-12 px-4 sm:px-6 lg:px-8 text-slate-800"
+      className="w-full bg-slate-100 py-12 px-4 sm:px-6 lg:px-8 text-slate-800 space-y-12"
     >
       <div className="max-w-7xl mx-auto space-y-6">
         
@@ -125,7 +124,7 @@ export default function ComplianceAndGuidelinesSection() {
               type="button"
               onClick={() => toggleAccordion('ethical')}
               aria-expanded={openAccordion === 'ethical'}
-              className="w-full bg-slate-50 hover:bg-slate-100 px-6 py-4 flex items-center justify-between text-left transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-slate-400"
+              className="w-full bg-slate-50 hover:bg-slate-100 px-6 py-4 flex items-center justify-between text-left transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-slate-400 cursor-pointer"
             >
               <h3 className="text-base sm:text-lg font-bold text-slate-900">
                 Ethical Research and Publication Standards
@@ -170,7 +169,7 @@ export default function ComplianceAndGuidelinesSection() {
               type="button"
               onClick={() => toggleAccordion('reporting')}
               aria-expanded={openAccordion === 'reporting'}
-              className="w-full bg-slate-50 hover:bg-slate-100 px-6 py-4 flex items-center justify-between text-left transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-slate-400"
+              className="w-full bg-slate-50 hover:bg-slate-100 px-6 py-4 flex items-center justify-between text-left transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-slate-400 cursor-pointer"
             >
               <h3 className="text-base sm:text-lg font-bold text-slate-900">
                 Reporting Guidelines Based on Study Type
@@ -220,6 +219,55 @@ export default function ComplianceAndGuidelinesSection() {
             )}
           </div>
 
+        </div>
+      </div>
+
+      {/* Original Research Article Sample Work Banner */}
+      <div className="max-w-5xl mx-auto bg-[#f0fdf4] rounded-xl p-6 sm:p-10 border border-emerald-100 shadow-sm">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          {/* Left Column Image */}
+          <div className="md:col-span-5 relative w-full h-64 sm:h-80 rounded-lg overflow-hidden bg-emerald-50">
+            <Image
+              src="/images/physician-writing-services/research-proposal/sample-fdfddb.jpg"
+              alt="Original Research Article Sample Work"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 40vw"
+            />
+          </div>
+
+          {/* Right Column Content */}
+          <div className="md:col-span-7 space-y-6">
+            <div className="space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
+                Original Research Article Sample Work
+              </h3>
+
+              <button
+                type="button"
+                className="bg-black hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold py-2.5 px-8 rounded-full transition-colors shadow-sm cursor-pointer"
+              >
+                Discover More
+              </button>
+            </div>
+
+            <div className="space-y-4 pt-2">
+              <h4 className="text-lg sm:text-xl font-bold text-sky-600">
+                Download the full Report Now
+              </h4>
+
+              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                Explore our original research article writing samples, carefully designed to conform to the journal formatting, research objectives, and scientific reporting expectations on time and supported by peer-reviewed, validated sources.
+              </p>
+
+              <button
+                type="button"
+                className="bg-black hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold py-2.5 px-8 rounded-full transition-colors shadow-sm cursor-pointer"
+              >
+                Discover More
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
