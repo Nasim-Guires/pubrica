@@ -132,11 +132,13 @@ export default function EducationalContentDevelopmentPage() {
             </ul>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 pt-4">
-              <GetFreeQuoteButton/>
+            <div className="flex flex-wrap items-center gap-4 pt-4">
+              <GetFreeQuoteButton />
               <Link
-                href="/brochure"
-                className="bg-[#b30000] hover:bg-[#8d0000] text-white text-xs sm:text-sm font-bold px-6 py-2.5 rounded-full transition-colors shadow-sm"
+                href="/uploads/Medico-Legal-Support-Services_compressed.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#b30000] hover:bg-[#8d0000] text-white text-xs sm:text-sm font-bold px-6 py-2.5 rounded-full transition-colors shadow-sm inline-flex items-center justify-center"
               >
                 View Brochure
               </Link>

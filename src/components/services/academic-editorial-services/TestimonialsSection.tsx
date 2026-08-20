@@ -44,7 +44,15 @@ const testimonialsData: Testimonial[] = [
 ];
 
 export function TestimonialsSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  // Logic to show 2 cards per slide group
+  const cardsPerPage = 2;
+  const totalSlides = Math.ceil(testimonialsData.length / cardsPerPage);
+  const displayedTestimonials = testimonialsData.slice(
+    activeSlide * cardsPerPage,
+    (activeSlide + 1) * cardsPerPage
+  );
 
   return (
     <section className="w-full bg-[#f8fafc] text-slate-800 font-sans py-16 px-4 sm:px-6 lg:px-8">
@@ -64,45 +72,47 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        {/* Testimonial Cards Grid */}
+        {/* Testimonial Cards Grid (Shows 2 cards per view) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {testimonialsData.map((item) => (
+          {displayedTestimonials.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-lg p-5 shadow-xs border border-slate-200/80 flex flex-col justify-between space-y-6"
+              className="bg-white rounded-xl border border-gray-300 p-6 shadow-sm flex flex-col justify-between space-y-6 relative"
             >
               {/* Top Quote Box with Journal Cover */}
-              <div className="bg-[#d1d5db] rounded-md p-4 flex items-center gap-4 min-h-[140px]">
-                <div className="w-24 h-28 bg-slate-900 rounded overflow-hidden shrink-0 shadow-sm relative">
+              <div className="bg-[#d1d5db] rounded-lg p-5 flex flex-col sm:flex-row gap-5 items-center sm:items-start min-h-[160px]">
+                <div className="relative w-28 h-36 shrink-0 rounded border border-gray-400 overflow-hidden shadow-inner bg-white">
                   <Image
                     src={item.journalCover}
                     alt="Journal Cover"
                     fill
                     className="object-cover"
-                    sizes="96px"
+                    sizes="112px"
                   />
                 </div>
-                <p className="text-xs sm:text-sm text-slate-800 font-medium leading-normal italic">
+                <p className="text-xs sm:text-sm text-slate-800 italic leading-relaxed font-medium">
                   {item.quote}
                 </p>
               </div>
 
               {/* Bottom Author Info */}
-              <div className="flex items-end justify-between pt-1">
-                <div className="space-y-0.5">
-                  <h4 className="text-xs sm:text-sm font-bold text-slate-900">
+              <div className="flex justify-between items-end pt-2">
+                <div>
+                  <h4 className="text-sm font-extrabold text-slate-900 tracking-wide uppercase">
                     {item.author}
                   </h4>
-                  <p className="text-xs text-slate-600 italic">{item.title}</p>
+                  <p className="text-xs text-gray-600 italic">{item.title}</p>
                 </div>
                 {item.flagSrc ? (
-                  <Image
-                    src={item.flagSrc}
-                    alt=""
-                    width={40}
-                    height={28}
-                    className="w-10 h-auto"
-                  />
+                  <div className="relative w-7 h-7 rounded-full overflow-hidden border border-gray-200 shadow-sm shrink-0">
+                    <Image
+                      src={item.flagSrc}
+                      alt="Country flag"
+                      fill
+                      className="object-cover"
+                      sizes="28px"
+                    />
+                  </div>
                 ) : null}
               </div>
             </div>
@@ -110,13 +120,15 @@ export function TestimonialsSection() {
         </div>
 
         {/* Carousel Indicators */}
-        <div className="flex justify-center items-center gap-2 pt-4">
-          {testimonialsData.map((item, index) => (
+        <div className="flex justify-center items-center gap-2 pt-2">
+          {Array.from({ length: totalSlides }).map((_, index) => (
             <button
-              key={item.id}
-              onClick={() => setActiveIndex(index)}
-              className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                activeIndex === index ? "bg-[#0d3b44]" : "bg-slate-300"
+              key={index}
+              onClick={() => setActiveSlide(index)}
+              className={`w-3 h-3 rounded-sm transition-all ${
+                activeSlide === index
+                  ? "bg-[#0d3b44]"
+                  : "border border-[#0d3b44] bg-transparent"
               }`}
               aria-label={`Slide ${index + 1}`}
             />

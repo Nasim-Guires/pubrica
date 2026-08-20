@@ -27,32 +27,32 @@ export default function VisualAndAccessibilityEditingService() {
   const editingTypes = [
     {
       title: 'Document Layout & Formatting',
-      description: 'We refine the overall layout of your documents, including headings, subheadings, tables, and images, to create a consistent structure.',
+      description: 'We refine the overall layout of your documents, including headings, subheadings, tables, and images, to create a visually coherent structure. This ensures better readability and a professional presentation, making it easier for all readers, including those using assistive technologies, to navigate your content.',
       iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Document-Layout-Formatting.png',
     },
     {
       title: 'Color & Contrast Optimization',
-      description: 'Our experts adjust color schemes, contrasts, and highlights to improve visibility and readability for individuals with visual impairments.',
+      description: 'Our experts adjust color schemes, contrasts, and highlights to improve visibility and readability for individuals with visual impairments. This includes creating charts, graphs, and text that are accessible to users with color blindness or low vision.',
       iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Color-Contrast-Optimization.png',
     },
     {
       title: 'Image & Graphics Enhancement',
-      description: 'We enhance figures, images, and diagrams to ensure clarity, correct labelling, and compliance with accessibility guidelines.',
+      description: 'We enhance figures, images, and diagrams to ensure clarity, correct labelling, and compliance with accessibility standards. This includes providing descriptive alt text for images, improving resolution, and optimizing layouts for both digital and print formats.',
       iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Image-Graphics-Enhancement.png',
     },
     {
       title: 'Text Readability & Typography',
-      description: 'We improve font choices, sizes, spacing, and alignment to enhance readability. Our editing ensures that content is accessible across all devices.',
+      description: 'We improve font choices, sizes, spacing, and alignment to enhance readability. Our editing ensures that content is legible, visually balanced, and compliant with accessibility guidelines, thereby reducing strain for all readers.',
       iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Text-Readability-Typography.png',
     },
     {
       title: 'Compliance with Accessibility Standards',
-      description: 'Our team ensures that your content complies with international accessibility guidelines such as WCAG 2.1, Section 508, and ADA.',
+      description: 'Our team ensures that your content complies with international accessibility guidelines such as WCAG 2.1 and ADA standards, making your documents inclusive and universally readable.',
       iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Compliance-with-Accessibility-Standards.png',
     },
     {
       title: 'Interactive & Multimedia Content Accessibility',
-      description: 'For presentations, e-learning modules, or digital publications, we optimize multimedia elements with captions, transcripts, and accessible tags.',
+      description: 'For presentations, e-learning modules, or digital publications, we optimize multimedia elements, including videos, animations, and interactive graphics, ensuring captions, transcripts, and audio descriptions are properly included.',
       iconSrc: '/images/academic-editorial-services/visual-and-accessibility-editing-services/Interactive-Multimedia-Content-Accessibility.png',
     },
   ];

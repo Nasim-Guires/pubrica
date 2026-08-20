@@ -19,26 +19,38 @@ const serviceTypes = [
   {
     title: "Copy Editing",
     iconSrc: "/images/academic-editorial-services/Copy-Editing.png",
+    description:
+      "Our expert editors refine grammar, punctuation, spelling, and style while preserving your academic voice. We ensure consistency, clarity, and compliance with journal or institutional requirements, making your manuscript publication-ready.",
   },
   {
     title: "Development Editing",
     iconSrc: "/images/academic-editorial-services/Development-Editing.png",
+    description:
+      "Pubrica’s development editing focuses on the intellectual structure of your manuscript. We help organize ideas, strengthen arguments, and enhance logical flow, ensuring your research communicates effectively to your target audience.",
   },
   {
     title: "Revisioning and Localisation",
     iconSrc: "/images/academic-editorial-services/Revisioning-and-Localisation.png",
+    description:
+      "Tailored for global accessibility, this service adapts your manuscript linguistically and culturally. Our team ensures your research resonates with international audiences, meeting diverse academic standards.",
   },
   {
     title: "Permission and Metadata Support",
     iconSrc: "/images/academic-editorial-services/Permission-and-Metadata-Support.png",
+    description:
+      "Navigating copyright, references, and metadata can be complex. Pubrica guides you through permissions, proper citation, indexing, and metadata management, safeguarding your work’s compliance and discoverability.",
   },
   {
     title: "Visual and Accessibility Editing",
     iconSrc: "/images/academic-editorial-services/Visual-and-Accessibility-Editing.png",
+    description:
+      "We optimize tables, figures, and graphical content while ensuring accessibility for all readers, including those using assistive technologies. Our editors enhance visual clarity and adhere to accessibility guidelines.",
   },
   {
     title: "Forensic and Quality Audit",
     iconSrc: "/images/academic-editorial-services/Forensic-and-Quality-Audit.png",
+    description:
+      "Pubrica conducts in-depth audits of manuscripts to detect inconsistencies, data errors, and formatting issues. Our quality checks ensure your manuscript meets the highest standards for academic rigor and integrity.",
   },
 ];
 
@@ -73,28 +85,29 @@ const keyFeatures: FeatureItem[] = [
 
 export default function AcademicEditorialServicesSection() {
   return (
-    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto space-y-12">
-        {/* ==========================================
-            HERO HEADER BANNER
-        ========================================== */}
-        <section className="relative bg-[#0d2a2a] text-white rounded-md p-8 sm:p-12 text-center border border-teal-800/40 shadow-xl overflow-hidden">
-          <div className="max-w-4xl mx-auto space-y-4 relative z-10">
-            <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
-              Academic Editorial Services
-            </h1>
-            <p className="text-xs sm:text-sm text-gray-200 leading-relaxed max-w-3xl mx-auto font-light">
-              Elevate the precision, coherence, and scholarly impact of your
-              research manuscripts, journal articles, dissertations, and
-              academic documents with Pubrica's expert academic editorial
-              support.
-            </p>
-          </div>
-        </section>
+    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans">
+      {/* ==========================================
+          FULL-WIDTH HERO BANNER (Attached to Navbar)
+      ========================================== */}
+      <section className="relative w-full bg-[#0d2a2a] text-white py-12 sm:py-16 text-center border-b border-teal-800/40 shadow-xl overflow-hidden mb-12">
+        <div className="max-w-4xl mx-auto space-y-4 relative z-10 px-4">
+          <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
+            Academic Editorial Services
+          </h1>
+          <p className="text-xs sm:text-sm text-gray-200 leading-relaxed max-w-3xl mx-auto font-light">
+            Elevate the precision, coherence, and scholarly impact of your
+            research manuscripts, journal articles, dissertations, and
+            academic documents with Pubrica's expert academic editorial
+            support.
+          </p>
+        </div>
+      </section>
 
-        {/* ==========================================
-            MAIN CONTENT & IMAGE GRID
-        ========================================== */}
+      {/* ==========================================
+          MAIN CONTENT CONTAINER
+      ========================================== */}
+      <div className="max-w-6xl mx-auto space-y-16 px-4 sm:px-6 lg:px-8 pb-16">
+        {/* MAIN CONTENT & IMAGE GRID */}
         <section className="space-y-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Left Content Column */}
@@ -172,7 +185,7 @@ export default function AcademicEditorialServicesSection() {
 
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center gap-4 pt-4">
-                <GetFreeQuoteButton/>
+                <GetFreeQuoteButton />
                 <button className="px-6 py-2.5 bg-[#b30000] hover:bg-[#8e0000] text-white font-bold text-xs sm:text-sm rounded-full transition-all duration-200 shadow-md">
                   View Brochure
                 </button>
@@ -199,23 +212,46 @@ export default function AcademicEditorialServicesSection() {
           </div>
         </section>
 
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {serviceTypes.map((service) => (
-            <div
-              key={service.title}
-              className="bg-white border border-slate-200 rounded-lg p-4 flex items-center gap-3 shadow-sm"
-            >
-              <div className="relative w-10 h-10 shrink-0">
-                <Image
-                  src={service.iconSrc}
-                  alt=""
-                  fill
-                  className="object-contain"
-                />
+        {/* ==========================================
+            SERVICES GRID SECTION
+        ========================================== */}
+        <section className="space-y-6">
+          <div className="space-y-2">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44]">
+              Our Services
+            </h2>
+            <p className="text-xs sm:text-sm text-gray-600 max-w-4xl leading-relaxed">
+              At Pubrica, we help researchers, scholars, and institutions elevate their academic manuscripts to meet international publication standards. Our comprehensive editorial services ensure your work is clear, precise, and impactful, enhancing readability, credibility, and global reach. Our Services Include:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
+            {serviceTypes.map((service) => (
+              <div
+                key={service.title}
+                className="bg-white border border-slate-200/80 rounded-xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="relative w-10 h-10 shrink-0">
+                      <Image
+                        src={service.iconSrc}
+                        alt={service.title}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <h3 className="text-sm sm:text-base font-bold text-[#0d3b44]">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-sm font-bold text-[#0d3b44]">{service.title}</h3>
-            </div>
-          ))}
+            ))}
+          </div>
         </section>
       </div>
     </div>

@@ -58,13 +58,13 @@ export default function CommonTestimonial({
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-14">
-      <h2 className="text-3xl md:text-4xl font-bold text-[#0b3a57]">{title}</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-[#0b3b2c]">{title}</h2>
 
-      <p className="mt-3 text-base md:text-lg max-w-4xl leading-7">
+      <p className="mt-3 text-sm md:text-base text-gray-700 max-w-5xl leading-relaxed">
         {description}
       </p>
 
-      <div className="relative mt-10 overflow-hidden">
+      <div className="relative mt-8 overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
@@ -76,75 +76,79 @@ export default function CommonTestimonial({
               key={index}
               className="w-full md:w-1/2 flex-shrink-0 px-2 md:px-3"
             >
-              <div className="border border-[#0b3a57] rounded-xl shadow-md overflow-hidden bg-white">
-                <div className="bg-gray-200 p-4 flex flex-col sm:flex-row gap-4">
-                  <div className="relative w-28 h-32 mx-auto sm:mx-0 shrink-0">
+              <div className="border border-gray-400 rounded-xl bg-white p-5 shadow-sm min-h-[300px] flex flex-col justify-between">
+                {/* Upper Gray Box */}
+                <div className="bg-[#dcdcdc] rounded-lg p-5 flex flex-col sm:flex-row gap-5 items-center">
+                  <div className="relative w-36 h-28 shrink-0 bg-white p-1 rounded border border-gray-300">
                     <Image
                       src={item.image}
                       alt={item.name}
                       fill
-                      className="object-cover rounded"
-                      sizes="112px"
+                      className="object-contain"
+                      sizes="144px"
                     />
                   </div>
 
-                  <p className="text-sm md:text-base leading-7 text-gray-700">
+                  <p className="text-xs md:text-sm text-gray-800 leading-relaxed font-normal">
                     "{item.quote}"
                   </p>
                 </div>
 
-                <div className="relative p-5 min-h-[120px]">
-                  <h3 className="text-lg md:text-xl uppercase font-semibold">
-                    {item.name}
-                  </h3>
+                {/* Bottom Details Row */}
+                <div className="flex justify-between items-end pt-4 px-1">
+                  <div>
+                    <h3 className="text-sm md:text-base font-semibold text-gray-900 uppercase tracking-wide">
+                      — {item.name}
+                    </h3>
 
-                  <p className="italic text-gray-600 text-sm md:text-base mt-2">
-                    {item.designation}, {item.organization}
-                  </p>
+                    <p className="italic text-xs md:text-sm text-gray-600 mt-0.5">
+                      {item.designation}, {item.organization}
+                    </p>
+                  </div>
 
-                  {item.flag ? (
-                    <Image
-                      src={item.flag}
-                      alt=""
-                      width={40}
-                      height={28}
-                      className="w-10 h-auto absolute right-5 bottom-5"
-                    />
-                  ) : null}
+                  {item.flag && (
+                    <div className="relative w-7 h-7 rounded-full overflow-hidden shrink-0 border border-gray-200">
+                      <Image
+                        src={item.flag}
+                        alt="country flag"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Previous */}
-
+        {/* Previous Button */}
         <button
           onClick={prev}
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-100"
+          aria-label="Previous slide"
+          className="absolute left-1 top-1/2 -translate-y-1/2 bg-white/80 shadow border border-gray-300 rounded-full w-8 h-8 flex items-center justify-center hover:bg-white text-gray-700"
         >
           &#8249;
         </button>
 
-        {/* Next */}
-
+        {/* Next Button */}
         <button
           onClick={next}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-100"
+          aria-label="Next slide"
+          className="absolute right-1 top-1/2 -translate-y-1/2 bg-white/80 shadow border border-gray-300 rounded-full w-8 h-8 flex items-center justify-center hover:bg-white text-gray-700"
         >
           &#8250;
         </button>
       </div>
 
-      {/* Dots */}
-
-      <div className="flex justify-center gap-2 mt-8">
+      {/* Pagination Squares */}
+      <div className="flex justify-center items-center gap-2 mt-8">
         {Array.from({ length: maxSlide + 1 }).map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}
-            className={`h-3 w-3 rounded-full transition-all ${
-              current === index ? "bg-[#0b3a57]" : "bg-gray-300"
+            className={`h-3 w-3 border border-[#0b3b2c] transition-all ${
+              current === index ? "bg-[#0b3b2c]" : "bg-white"
             }`}
           />
         ))}

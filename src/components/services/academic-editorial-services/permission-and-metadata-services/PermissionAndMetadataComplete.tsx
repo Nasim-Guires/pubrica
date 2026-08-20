@@ -62,54 +62,61 @@ export default function PermissionAndMetadataComplete() {
         {
             title: 'Expertise in Copyright & Permissions',
             desc: 'Our team is well-versed in copyright laws, licensing agreements, and intellectual property rights across academic, medical, and scientific publications. We handle all correspondence with copyright holders, ensuring your work complies with legal and ethical standards.',
+            iconSrc: '/images/academic-editorial-services/permission-and-metadata-services/Global-Compliance.png',
         },
         {
             title: 'Tailored Services',
             desc: 'Whether you are a researcher, institution, or publisher, our solutions are customized to meet your unique needs and publication goals.',
+            iconSrc: '/images/academic-editorial-services/permission-and-metadata-services/Make-large-word-count-cuts-without-compromising-clarity-1.png',
         },
     ];
-
     const packages = [
         {
             badgeSrc: '/images/editing-and-translation/basic-pacakge.png',
             title: 'Basic',
+            titleColor: 'text-[#0b3b2c]',
+            cardBg: 'bg-[#cbe0de]',
+            headerBg: 'bg-white',
             idealFor: 'Authors and small research teams with limited permissions needs.',
+            includesHeader: 'Includes:',
             included: [
-                'Manuscript audit to identify copyrighted material',
-                'Permissions assessment for images, tables, and graphs',
-                'Basic metadata structuring',
-                'Guidance on standard licensing options',
+                'Manuscript audit to identify copyrighted material.',
+                'Permissions assessment for images, tables, figures, and charts.',
+                'Guidance on public domain and fair-use items.',
+                'Creation of basic metadata records.',
             ],
-            bgColor: 'bg-emerald-50',
-            borderColor: 'border-emerald-300',
+            turnaround: '5–7 business days.',
         },
         {
             badgeSrc: '/images/publication-support/poster-preparation/S.png',
             title: 'Standard',
+            titleColor: 'text-[#8b5cf6]',
+            cardBg: 'bg-[#d8c5e6]',
+            headerBg: 'bg-white',
             idealFor: 'Researchers, thesis authors, and small publishers.',
+            includesHeader: 'Includes everything in Basic, plus:',
             included: [
-                'Includes everything in Basic, plus:',
-                'Drafting and sending permission requests',
-                'Follow-up and tracking of permissions until approval',
-                'Comprehensive metadata optimization (DOIs, abstracts, keywords)',
-                'Attestation and attribution formatting',
+                'Drafting and sending permission requests to copyright holders.',
+                'Follow-up and tracking of permissions until approval.',
+                'Metadata optimization for indexing and discoverability.',
             ],
-            bgColor: 'bg-purple-50',
-            borderColor: 'border-purple-300',
+            turnaround: '7–10 business days.',
         },
         {
             badgeSrc: '/images/editing-and-translation/translation-with-editing/pro.webp',
             title: 'Premium',
+            titleColor: 'text-[#854d0e]',
+            cardBg: 'bg-[#d8be8a]',
+            headerBg: 'bg-white',
             idealFor: 'Large publishers, journals, and research institutions.',
+            includesHeader: 'Includes everything in Standard, plus:',
             included: [
-                'Includes everything in Standard, plus:',
-                'Comprehensive rights management for complex materials',
-                'Licensing fee negotiations and cost management',
-                'Complete metadata package compliance for major indexing databases (Scopus, PubMed, Crossref)',
-                'Dedicated rights manager and priority support',
+                'Comprehensive rights management for complex materials.',
+                'Licensing fee negotiations and cost tracking.',
+                'Detailed metadata creation with DOI, ORCID, and other identifiers.',
+                'Submission-ready package for journals and publishers.',
             ],
-            bgColor: 'bg-amber-50',
-            borderColor: 'border-amber-300',
+            turnaround: '10–14 business days.',
         },
     ];
 
@@ -181,10 +188,10 @@ export default function PermissionAndMetadataComplete() {
                                     onMouseEnter={() => !isFirstCard && setHoveredCard(idx)}
                                     onMouseLeave={() => !isFirstCard && setHoveredCard(null)}
                                     className={`p-6 rounded-xl border transition-all duration-300 bg-white ${isFirstCard
-                                            ? 'border-gray-200 shadow-sm'
-                                            : isHovered
-                                                ? 'border-[#0b3b2c] shadow-lg scale-105 bg-emerald-50/40'
-                                                : 'border-gray-200 shadow-sm'
+                                        ? 'border-gray-200 shadow-sm'
+                                        : isHovered
+                                            ? 'border-[#0b3b2c] shadow-lg scale-105 bg-emerald-50/40'
+                                            : 'border-gray-200 shadow-sm'
                                         }`}
                                 >
                                     <div className="relative w-10 h-10 rounded-full bg-emerald-100 mb-4 overflow-hidden">
@@ -205,15 +212,19 @@ export default function PermissionAndMetadataComplete() {
             <section className="py-14 px-4 max-w-5xl mx-auto text-center" aria-labelledby="sample-heading">
                 <div className="bg-[#f4faf7] border border-emerald-100 rounded-xl p-8 shadow-sm">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div className="bg-[#0b3b2c] p-3 rounded-lg shadow-md flex justify-center items-center relative h-48 overflow-hidden">
+                        {/* Left Column: Image Box */}
+                        <div className="bg-[#f4faf7] p-2 rounded-lg flex justify-center items-center relative h-80 sm:h-96 w-full overflow-hidden">
                             <Image
                                 src="/images/academic-editorial-services/permission-and-metadata-services/Permission-and-Metadata-Services.png"
                                 alt="Permission and Metadata Services sample work"
                                 fill
-                                className="object-cover rounded"
+                                className="object-contain rounded"
                                 sizes="(max-width: 768px) 100vw, 50vw"
+                                priority
                             />
                         </div>
+
+                        {/* Right Column: Content */}
                         <div className="text-left">
                             <h2 id="sample-heading" className="text-base md:text-lg font-bold text-[#0b3b2c] mb-2">
                                 Academic Editorial Services Sample Work
@@ -246,32 +257,59 @@ export default function PermissionAndMetadataComplete() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
                     {packages.map((pkg, idx) => (
-                        <div key={idx} className={`bg-white border-2 ${pkg.borderColor} rounded-xl shadow-sm overflow-hidden flex flex-col justify-between`}>
-                            <div className={`${pkg.bgColor} p-6 border-b ${pkg.borderColor} text-center`}>
-                                <div className="relative w-10 h-10 mx-auto rounded-full bg-white shadow-sm mb-2 overflow-hidden">
-                                    <Image src={pkg.badgeSrc} alt={`${pkg.title} package`} fill className="object-contain p-1" />
+                        <div key={idx} className={`${pkg.cardBg} rounded-xl shadow-lg overflow-hidden flex flex-col justify-between border border-gray-100`}>
+                            {/* Header Row */}
+                            <div>
+                                <div className="bg-white p-5 flex items-center gap-4 border-b border-gray-100">
+                                    <div className="relative w-12 h-12 shrink-0">
+                                        <Image
+                                            src={pkg.badgeSrc}
+                                            alt={`${pkg.title} package badge`}
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                    <h3 className={`text-xl font-bold ${pkg.titleColor}`}>{pkg.title}</h3>
                                 </div>
-                                <h3 className="text-sm font-bold text-gray-900">{pkg.title}</h3>
+
+                                {/* Card Body */}
+                                <div className="p-6 space-y-5 text-xs md:text-sm text-gray-800">
+                                    {/* Ideal For Section */}
+                                    <div className="flex items-start gap-2.5">
+                                        <span className="text-black font-bold text-base leading-none mt-0.5">➔</span>
+                                        <div>
+                                            <p className="leading-relaxed">
+                                                <span className="font-bold">Ideal For:</span> {pkg.idealFor}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Includes Section */}
+                                    <div className="space-y-3">
+                                        <div className="flex items-start gap-2.5">
+                                            <span className="text-black font-bold text-base leading-none mt-0.5">➔</span>
+                                            <span className="font-bold">{pkg.includesHeader}</span>
+                                        </div>
+                                        <ul className="space-y-2.5 pl-7">
+                                            {pkg.included.map((inc, i) => (
+                                                <li key={i} className="text-gray-800 leading-snug">
+                                                    {inc}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div className="p-6 space-y-4 text-xs">
-                                <div>
-                                    <span className="font-bold text-gray-900 block mb-1">➜ Ideal For:</span>
-                                    <p className="text-gray-600 leading-relaxed">{pkg.idealFor}</p>
-                                </div>
-
-                                <div>
-                                    <span className="font-bold text-gray-900 block mb-2">➜ Includes:</span>
-                                    <ul className="space-y-2">
-                                        {pkg.included.map((inc, i) => (
-                                            <li key={i} className="flex items-start gap-2 text-gray-600">
-                                                <span className="text-emerald-600 font-bold">•</span>
-                                                <span className="leading-relaxed">{inc}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
+                            {/* Turnaround Time (Pinned to Bottom) */}
+                            <div className="px-6 pb-6 pt-2">
+                                <div className="flex items-start gap-2.5 text-xs md:text-sm text-gray-800">
+                                    <span className="text-black font-bold text-base leading-none mt-0.5">➔</span>
+                                    <p>
+                                        <span className="font-bold">Turnaround time:</span> {pkg.turnaround}
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -279,7 +317,7 @@ export default function PermissionAndMetadataComplete() {
                 </div>
 
                 <div className="mt-12 text-center">
-                   <GetFreeQuoteButton/>
+                    <GetFreeQuoteButton />
                 </div>
             </section>
         </article>

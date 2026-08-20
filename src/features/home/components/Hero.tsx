@@ -10,7 +10,11 @@ export default function HomeHeroWithAbout() {
   return (
     <>
       {/* --- HERO SECTION --- */}
-      <section className="relative text-white pt-12 pb-[100px] lg:pt-16 overflow-hidden select-none">
+      {/* 
+        mt-[-190px] (or enough height to pull the hero up behind the navbar) 
+        and pt-[190px] so the background image fills the very top of the screen.
+      */}
+      <section className="relative text-white mt-[-190px] pt-[210px] pb-[100px] lg:pt-[230px] overflow-hidden select-none">
         <Image
           src="/images/home/banner1-min-scaled-8.jpg"
           alt=""
@@ -19,6 +23,7 @@ export default function HomeHeroWithAbout() {
           className="object-cover object-center"
           sizes="100vw"
         />
+        {/* Semi-transparent dark green overlay over the image */}
         <div className="absolute inset-0 bg-[#113839] opacity-[0.84]" />
 
         <Container className="relative z-10 max-w-7xl mx-auto flex flex-col items-center px-4">
@@ -50,13 +55,10 @@ export default function HomeHeroWithAbout() {
             </Link>
           </div>
 
-          {/* 
-            Feature 3D Flipping Cards Grid:
-            mb-[-100px] pushes exactly 40% of this 250px container out of the hero box bounds.
-          */}
+          {/* Feature 3D Flipping Cards Grid */}
           <div className="w-full max-w-6xl mx-auto mt-16 z-20 mb-[-100px]">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-              {/* Card 1: Solutions Card - UPDATED to match Card 2 and 3 style */}
+              {/* Card 1: Solutions Card */}
               <div className="group h-[250px] [perspective:1000px]">
                 <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   {/* Front Side */}

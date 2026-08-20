@@ -22,7 +22,7 @@ export default function TrustedNetwork() {
   ];
 
   return (
-    <section className="bg-white py-20 relative select-none overflow-hidden">
+    <section className="bg-white py-10 relative select-none overflow-hidden">
       <Container className="flex flex-col items-center">
         
         {/* Centralized Global Header Blocks */}

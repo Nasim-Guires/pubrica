@@ -21,115 +21,210 @@ interface Expert {
 export default function AcademicDevelopmentEditingService() {
     const [activeTab, setActiveTab] = useState<'Medicine' | 'Science' | 'Engineering'>('Medicine');
 
-    const keyFeatures = [
+    // State to track which accordion items are open (by index). Default is empty (all closed).
+    const [openWhyChooseIndices, setOpenWhyChooseIndices] = useState<number[]>([]);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const items = [
+        'Citation formatting per journal requirements',
+        'Adherence to the requirements of the concerned journal/publisher or style guide',
+        'Proper use of terminology',
+        'Correct use of capitalization or italics for industry/scientific terms',
+        'Consistency in presentation of data',
+        'Adjustments depending on the topic and journal readership',
+    ];
+    const toggleWhyChooseItem = (idx: number) => {
+        if (openWhyChooseIndices.includes(idx)) {
+            setOpenWhyChooseIndices(openWhyChooseIndices.filter(i => i !== idx));
+        } else {
+            setOpenWhyChooseIndices([...openWhyChooseIndices, idx]);
+        }
+    };
+
+    const whyChooseUsItems = [
         {
-            title: 'Expert Developmental Editors',
-            description: 'A team of 3,000+ experienced developmental editors that focus on delivering an impeccably formatted manuscript, with proper sentence construction and grammar, and in-depth checks for missing structural elements or incomplete sections.',
-            border: 'border-l-4 border-yellow-400',
+            title: 'Expertise in your subject',
+            description: 'Your document will be edited by a native English speaker who is an expert in your subject area.',
+            icon: '/images/academic-editorial-services/copy-editing-services/Expertise-in-your-subject.webp',
         },
         {
-            title: 'Subject Matter Matching',
-            description: 'Expertise across 1,600+ subject areas to match your manuscript with the most suitable experts in your field and ensure a clearly defined narrative and accurate use of technical terminology.',
-            border: 'border-l-4 border-teal-400',
+            title: 'Two pairs of eyes',
+            description: 'Every edited document is reviewed by a senior editor to eliminate errors in grammar and language.',
+            icon: '/images/academic-editorial-services/copy-editing-services/Two-pairs-of-eyes.webp',
         },
         {
-            title: '2-Level Review System',
-            description: 'A comprehensive 2-level editor review system that gets your paper checked by two leading experts in your subject area for excellent quality developmental editing. You can also benefit from free re-editing for over 12 months with our Premium editing and Scientific editing plans.',
-            border: 'border-l-4 border-emerald-400',
+            title: '100% quality guarantee',
+            description: 'We are confident that our work will meet your expectations. If, however, you are not fully satisfied, we will re-edit your paper for free or return its fee, no questions asked.',
+            icon: '/images/academic-editorial-services/copy-editing-services/100-quality-guarantee.webp',
         },
         {
-            title: 'Data Security & Confidentiality',
-            description: 'High standards of data security are maintained to ensure the confidentiality of manuscripts. Our editors honour a strict NDA, and our systems are ISO/IEC 27001:2013 certified, so any files you submit for editing are 100% safe and secure.',
-            border: 'border-l-4 border-blue-500',
-        },
-        {
-            title: 'Plagiarism Prevention',
-            description: 'Additional services, like a plagiarism check to eliminate any chance of accidental duplication in your paper when referring to previously published research articles.',
-            border: 'border-l-4 border-orange-400',
-        },
-        {
-            title: 'Quality & Delivery Guarantee',
-            description: 'Quality and delivery guaranteed with strict adherence to deadlines without compromising on quality.',
-            border: 'border-l-4 border-green-500',
+            title: 'One-stop solution',
+            description: 'We offer a range of publication solutions designed to offer end-to-end support, including translation, responses to peer reviewer comments, typesetting, book editing and design, and more.',
+            icon: '/images/academic-editorial-services/copy-editing-services/One-stop-solution.webp',
         },
     ];
 
     const packages = [
         {
+            letter: 'B',
+            badgeSrc: '/images/publication-support/poster-preparation/B.png',
+            title: 'Basic',
+            headerBg: 'bg-[#d8e2e0]',
+            bodyBg: 'bg-[#e5edeb]',
+            borderColor: 'border-[#cbd6d3]',
+            titleColor: 'text-[#2b4c44]',
+            idealFor: 'Early drafts, non-technical manuscripts',
+            servicesInclude: 'Grammar, spelling, punctuation corrections; minor sentence restructuring',
+            turnaroundTime: '3–5 business days',
+        },
+        {
             letter: 'S',
             badgeSrc: '/images/publication-support/poster-preparation/S.png',
-            title: 'Standard Development',
-            headerBg: 'bg-[#e2ebe8]',
-            badgeColor: 'bg-emerald-200 text-emerald-800',
-            borderColor: 'border-emerald-200',
-            idealFor: 'Early drafts and manuscripts needing structural guidance.',
-            includes: [
-                'Comprehensive review of manuscript structure and organization',
-                'Clarity and flow improvements',
-                'Identification of gaps in argument or logic',
-                'Suggestions for paragraph and sentence-level enhancement',
-                'Feedback on readability and coherence',
-            ],
+            title: 'Standard',
+            headerBg: 'bg-[#e2d6ec]',
+            bodyBg: 'bg-[#ede5f4]',
+            borderColor: 'border-[#d4c2e3]',
+            titleColor: 'text-[#4a2e5d]',
+            idealFor: 'Research papers, scholarly articles',
+            servicesInclude: 'All Basic services + clarity improvements, flow and readability enhancement, adherence to journal style',
+            turnaroundTime: '5–7 business days',
         },
         {
             letter: 'A',
             badgeSrc: '/images/publication-support/peer-review-pre-submission/advanced.webp',
-            title: 'Advanced Development',
-            headerBg: 'bg-[#f0e6f5]',
-            badgeColor: 'bg-purple-200 text-purple-800',
-            borderColor: 'border-purple-200',
-            idealFor: 'Manuscripts with strong content that require detailed refinement.',
-            includes: [
-                'Everything in the Standard package',
-                'In-depth assessment of research methodology and argumentation',
-                'Alignment with journal or publisher guidelines',
-                'Consistency check for terminology and formatting',
-            ],
+            title: 'Advanced',
+            headerBg: 'bg-[#dfcead]',
+            bodyBg: 'bg-[#ebdcb9]',
+            borderColor: 'border-[#d0bc93]',
+            titleColor: 'text-[#5e4414]',
+            idealFor: 'High-impact journals, technical manuscripts',
+            servicesInclude: 'All Standard services + consistency checks, reference formatting, style guide alignment, language refinement for scientific tone',
+            turnaroundTime: '7–10 business days',
         },
         {
             letter: 'P',
             badgeSrc: '/images/editing-and-translation/translation-with-editing/pro.webp',
-            title: 'Premium Development',
-            headerBg: 'bg-[#f5f0e1]',
-            badgeColor: 'bg-amber-200 text-amber-800',
-            borderColor: 'border-amber-200',
-            idealFor: 'Manuscripts intended for high-impact journals or publication.',
-            includes: [
-                'Everything in the Advanced package',
-                'Expert review for content depth, originality, and scientific accuracy',
-                'Integration of feedback from reviewers or advisors',
-                'Detailed suggestions for strengthening conclusions and discussion',
-                'Priority support and consultation with our expert editors',
-            ],
+            title: 'Premium',
+            headerBg: 'bg-[#f7d6d6]',
+            bodyBg: 'bg-[#fce5e5]',
+            borderColor: 'border-[#f0c2c2]',
+            titleColor: 'text-[#7a2828]',
+            idealFor: 'Complex, multidisciplinary manuscripts',
+            servicesInclude: 'All Advanced services + extensive structural editing, cross-checking of data and terminology, detailed feedback for author improvement',
+            turnaroundTime: '10–14 business days',
         },
     ];
 
     const steps = [
         {
             id: 1,
-            title: 'INITIAL ASSESSMENT',
-            description: 'We begin with a thorough evaluation of your manuscript to identify areas requiring improvement, such as inconsistencies, redundancies, or gaps in logic. This initial assessment forms the basis of a customized editing plan.',
+            title: 'REQUIREMENT ANALYSIS & PROJECT SCOPING',
+            description: 'We begin by understanding your manuscript type, target journal or publisher guidelines, discipline-specific requirements, and the level of editing needed. This helps us tailor the editorial approach to your objectives.',
+            icon: (
+                <svg className="w-8 h-8 text-[#0b3b2c] mb-3 stroke-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            )
         },
         {
             id: 2,
-            title: 'CONTENT ENHANCEMENT',
-            description: 'Our editors focus on strengthening the manuscript\'s core message. They restructure sections, clarify hypotheses, and refine arguments to ensure that your research is presented logically and persuasively. Figures, tables, and data presentation are reviewed for accuracy and clarity.',
+            title: 'ASSIGNMENT TO SUBJECT-MATTER EXPERTS',
+            description: 'Your document is assigned to a qualified editor with expertise in your research area, life sciences, medicine, engineering, social sciences, or humanities. This ensures accurate terminology, contextual understanding, and discipline-aligned language.',
+            icon: (
+                <svg className="w-8 h-8 text-[#0b3b2c] mb-3 stroke-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+            )
         },
         {
             id: 3,
-            title: 'LANGUAGE AND STYLE REFINEMENT',
-            description: 'While development editing prioritizes content and structure, language quality is also crucial. Editors polish the manuscript for grammatical accuracy, sentence construction, readability, and adherence to academic style without altering your voice.',
+            title: 'COMPREHENSIVE LANGUAGE & STYLE EDITING',
+            description: 'Our editors refine grammar, syntax, sentence structure, clarity, coherence, tone, and consistency. We ensure adherence to international styles such as AMA, APA, MLA, Chicago, or journal-specific standards.',
+            icon: (
+                <svg className="w-8 h-8 text-[#0b3b2c] mb-3 stroke-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+            )
         },
         {
             id: 4,
-            title: 'DETAILED FEEDBACK AND QUERIES',
-            description: 'Our editors provide a comprehensive report highlighting the changes made, suggestions for improvement, and queries that require your input. This transparent process encourages collaboration and ensures your vision remains central to the manuscript.',
+            title: 'TECHNICAL & STRUCTURAL IMPROVEMENTS',
+            description: 'We check for logical flow, readability, jargon reduction, paragraph transitions, data interpretation clarity, and consistency in terminology, tables, figures, and citations.',
+            icon: (
+                <svg className="w-8 h-8 text-[#0b3b2c] mb-3 stroke-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                </svg>
+            )
         },
         {
             id: 5,
-            title: 'FINAL REVIEW AND APPROVAL',
-            description: 'After addressing the editor\'s feedback, we conduct a final review to ensure the manuscript is coherent, concise, and ready for submission. By the end of this process, your research is transformed into a polished document that communicates your findings effectively and persuasively.',
+            title: 'EDITORIAL QUALITY REVIEW',
+            description: 'A senior editor conducts a second-level review to ensure the manuscript meets Pubrica’s quality benchmarks for accuracy, clarity, formatting, and style consistency.',
+            icon: (
+                <svg className="w-8 h-8 text-[#0b3b2c] mb-3 stroke-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            )
         },
+        {
+            id: 6,
+            title: 'FINAL PROOFREADING & COMPLIANCE CHECK',
+            description: 'We run a final proofreading cycle to correct residual errors. This includes spelling, punctuation, formatting, cross-checks, and journal compliance verification.',
+            icon: (
+                <svg className="w-8 h-8 text-[#0b3b2c] mb-3 stroke-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+            )
+        },
+
+    ];
+
+
+    const publications = [
+        {
+            title: 'International Journal of Pharmacy and Pharmaceutical Sciences',
+            journalTitle: 'International Journal of Pharmacy & Biotechnology',
+            articleTitle: 'Algae Review',
+            author: 'Jinu Medhi',
+            publisher: 'Innovare Academic Sciences',
+            impactFactor: 'NA',
+            image: '/images/placeholder-cover.png',
+            link: '#',
+        },
+        {
+            title: 'Journal of Clinical Dermatology & Therapy',
+            journalTitle: 'Journal of Clinical Dermatology & Therapy',
+            articleTitle: 'Dupilumab Systemic Review',
+            author: 'Piyu Parth Naik',
+            publisher: 'Herald Open Access',
+            impactFactor: '0.68',
+            image: '/images/placeholder-cover.png',
+            link: '#',
+        },
+        {
+            title: 'World Journal of Oncology',
+            journalTitle: 'World Journal of Oncology',
+            articleTitle: 'Cutaneous Malignant Melanoma',
+            author: 'Piyu Parth Naik',
+            publisher: 'Elmer Press Inc.',
+            impactFactor: '2.2',
+            image: '/images/placeholder-cover.png',
+            link: '#',
+        },
+        // Add more publication items here to maintain continuous flow
+    ];
+    const documents = [
+        'Research reports',
+        'Abstracts',
+        'Case studies',
+        'Thesis manuscripts',
+        'Cover letters',
+        'Interviews',
+        'Dissertations',
+        'Case reports',
+        'Technical reports and other academic documents',
+        'Book chapters',
+        'Grant proposals',
     ];
 
     const helpItems = [
@@ -156,147 +251,185 @@ export default function AcademicDevelopmentEditingService() {
 
     const experts: (Expert & { photo: string })[] = [
         {
-            name: 'Dr. Aarav Mehta',
-            qualification: 'PhD in Life Sciences',
-            institution: 'Indian Institute of Technology, India',
-            experience: '10+',
-            papers: '950+',
+            name: 'Dr. Sneha Kapoor',
+            qualification: 'PhD in Molecular Biology',
+            institution: 'Indian Institute of Science, India',
+            experience: '7+',
+            papers: '800+',
             photo: '/images/academic-editorial-services/copy-editing-services/sneha-kapoor-.webp',
         },
         {
-            name: 'Dr. Priya Rangan',
-            qualification: 'PhD in Biochemistry',
-            institution: 'University of Delhi, India',
-            experience: '8+',
-            papers: '740+',
+            name: 'Dr. Rohit Sharma',
+            qualification: 'PhD in Pharmacology',
+            institution: 'All India Institute of Medical Sciences, India',
+            experience: '+6',
+            papers: '650+',
             photo: '/images/academic-editorial-services/copy-editing-services/rohith-sharama.webp',
         },
         {
-            name: 'Dr. Rohan Verma',
+            name: 'Dr. Ananya Reddy',
             qualification: 'PhD in Neuroscience',
-            institution: 'All India Institute of Medical Sciences, India',
-            experience: '9+',
-            papers: '850+',
+            institution: 'National Brain Research Centre, India',
+            experience: '5+',
+            papers: '550+',
             photo: '/images/academic-editorial-services/copy-editing-services/Dr.-ananya-reddy-.webp',
         },
     ];
 
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
-            {/* ------------------- SECTION 1: KEY FEATURES ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto" aria-labelledby="features-heading">
-                <div className="text-center max-w-4xl mx-auto mb-12">
-                    <h2 id="features-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
-                        Pubrica’s Development Editing Services and its Key Features
-                    </h2>
-                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                        Looking for a better way to structure your manuscript? Need help crafting more effective transitions? Want to improve the overall flow of your paper and get high-quality editing and formatting? Pubrica’s Development Editing Services give you access to experienced English editors who help organize and optimize your manuscript’s content according to international journal standards.
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {keyFeatures.map((feat, idx) => (
-                        <div key={idx} className={`bg-white border border-gray-200 rounded-lg p-6 shadow-sm ${feat.border}`}>
-                            <h3 className="text-sm font-bold text-gray-900 mb-2">{feat.title}</h3>
-                            <p className="text-xs text-gray-600 leading-relaxed">{feat.description}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-
 
             {/* ------------------- SECTION 2: STEP-BY-STEP PROCESS (INTERACTIVE TIMELINE) ------------------- */}
-            <section className="py-14 px-4 bg-[#f8faf9] border-y border-gray-100 text-center" aria-labelledby="process-heading">
+            <section className="py-16 px-4 bg-[#f8faf9] border-y border-gray-100 text-center" aria-labelledby="process-heading">
                 <h2 id="process-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-1">
-                    How Our Development Editing Service Works
+                    How Our Copy Editing Service Works
                 </h2>
-                <h3 className="text-sm font-semibold text-gray-600 mb-12">
+                <h3 className="text-sm font-semibold text-gray-600 mb-2">
                     Our Step-by-Step Process
                 </h3>
+                <p className="text-xs md:text-sm text-gray-600 max-w-3xl mx-auto mb-16 leading-relaxed">
+                    Our copy editing workflow is designed to ensure clarity, accuracy, and publication-ready quality at every stage. With a structured, transparent, and research-driven approach, Pubrica guarantees seamless collaboration and superior editorial outcomes.
+                </p>
 
-                <div className="max-w-6xl mx-auto relative">
-                    <div className="hidden md:block absolute top-[28px] left-[10%] right-[10%] h-[4px] bg-[#0088cc] z-0" />
+                <div className="max-w-7xl mx-auto relative px-4">
+                    <div className="hidden md:block absolute top-[50%] left-[5%] right-[5%] h-[4px] bg-[#0088cc] -translate-y-1/2 z-0" />
 
-                    <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-start relative z-10">
-                        {steps.map((step) => (
-                            <div key={step.id} className="flex flex-col items-center group">
-                                <div className="w-8 h-8 rounded-full bg-[#0b3b2c] text-white font-bold flex items-center justify-center text-xs group-hover:bg-[#0088cc] transition-colors shadow-md mb-3 z-10">
-                                    {step.id}
+                    <div className="grid grid-cols-1 md:grid-cols-6 gap-4 items-center relative z-10">
+                        {steps.map((step, index) => {
+                            const isEven = index % 2 === 1;
+                            return (
+                                <div key={step.id} className="flex flex-col items-center group">
+                                    {!isEven ? (
+                                        <>
+                                            <div className="w-full bg-white border border-gray-300 rounded-lg p-4 text-center flex flex-col items-center justify-center min-h-[300px] transition-all duration-300 group-hover:bg-[#1a1a1a] group-hover:text-white shadow-sm group-hover:shadow-xl cursor-pointer mb-6">
+                                                {step.icon}
+                                                <h4 className="text-[11px] font-bold mb-2 text-gray-900 group-hover:text-white transition-colors leading-snug">
+                                                    {step.title}
+                                                </h4>
+                                                <p className="text-[11px] text-gray-600 group-hover:text-gray-200 leading-relaxed transition-colors">
+                                                    {step.description}
+                                                </p>
+                                            </div>
+
+                                            <div className="w-9 h-9 rounded-full bg-[#0b3b2c] text-white font-bold flex items-center justify-center text-xs group-hover:bg-[#0088cc] transition-colors shadow-md z-10">
+                                                {step.id}
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <div className="w-9 h-9 rounded-full bg-[#0b3b2c] text-white font-bold flex items-center justify-center text-xs group-hover:bg-[#0088cc] transition-colors shadow-md z-10 mb-6">
+                                                {step.id}
+                                            </div>
+
+                                            <div className="w-full bg-white border border-gray-300 rounded-lg p-4 text-center flex flex-col items-center justify-center min-h-[300px] transition-all duration-300 group-hover:bg-[#1a1a1a] group-hover:text-white shadow-sm group-hover:shadow-xl cursor-pointer">
+                                                {step.icon}
+                                                <h4 className="text-[11px] font-bold mb-2 text-gray-900 group-hover:text-white transition-colors leading-snug">
+                                                    {step.title}
+                                                </h4>
+                                                <p className="text-[11px] text-gray-600 group-hover:text-gray-200 leading-relaxed transition-colors">
+                                                    {step.description}
+                                                </p>
+                                            </div>
+                                        </>
+                                    )}
                                 </div>
-
-                                <div className="w-full bg-white border border-gray-300 rounded-lg p-5 text-center flex flex-col items-center justify-start min-h-[300px] transition-all duration-300 group-hover:bg-[#3d3d3d] group-hover:text-white shadow-sm group-hover:shadow-xl cursor-pointer">
-                                    <h4 className="text-xs font-bold mb-2 text-gray-900 group-hover:text-white transition-colors">
-                                        {step.title}
-                                    </h4>
-                                    <p className="text-[11px] text-gray-600 group-hover:text-gray-200 leading-relaxed transition-colors">
-                                        {step.description}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </section>
 
-            {/* ------------------- STATS COUNTER BAR ------------------- */}
-            <section className="bg-[#0b3b2c] text-white py-8 px-4">
-                <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-emerald-800">
-                    <div className="py-2">
-                        <div className="text-2xl md:text-3xl font-bold">1,433,495+</div>
-                        <div className="text-xs text-emerald-200 mt-1">Papers edited</div>
-                    </div>
-                    <div className="py-2">
-                        <div className="text-2xl md:text-3xl font-bold">326,583+</div>
-                        <div className="text-xs text-emerald-200 mt-1">Authors served</div>
-                    </div>
-                    <div className="py-2">
-                        <div className="text-2xl md:text-3xl font-bold">15+ years</div>
-                        <div className="text-xs text-emerald-200 mt-1">Editing Experience</div>
-                    </div>
+            {/* ------------------- UPDATED WHY CHOOSE US ACCORDION SECTION ------------------- */}
+            <section className="py-14 px-4 max-w-5xl mx-auto" aria-labelledby="why-choose-us-heading">
+                <h2 id="why-choose-us-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] text-center mb-10">
+                    Why Should You Use Pubrica’s Professional Copy Editing Services?
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {whyChooseUsItems.map((item, idx) => {
+                        const isOpen = openWhyChooseIndices.includes(idx);
+                        return (
+                            <div
+                                key={idx}
+                                className="bg-[#f0f7f4] border border-emerald-100 rounded-lg shadow-sm overflow-hidden flex flex-col transition-all"
+                            >
+                                {/* Accordion Header */}
+                                <button
+                                    onClick={() => toggleWhyChooseItem(idx)}
+                                    className="w-full p-4 flex items-center justify-between text-left focus:outline-none bg-[#e8f2ee]/50 hover:bg-[#e2ece7] transition-colors"
+                                >
+                                    <div className="flex items-center gap-3">
+                                        <div className="relative w-6 h-6 flex-shrink-0">
+                                            <Image
+                                                src={item.icon}
+                                                alt=""
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                        <span className="text-sm font-bold text-[#0b3b2c]">{item.title}</span>
+                                    </div>
+                                    <span className="text-lg font-bold text-[#0b3b2c] w-6 h-6 flex items-center justify-center rounded bg-white border border-emerald-200 shadow-xs">
+                                        {isOpen ? '−' : '+'}
+                                    </span>
+                                </button>
+
+                                {/* Accordion Content Panel (conditionally rendered or animated) */}
+                                {isOpen && (
+                                    <div className="p-4 bg-white border-t border-emerald-100 text-xs text-gray-700 leading-relaxed">
+                                        {item.description}
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
                 </div>
             </section>
 
             {/* ------------------- SECTION 3: HOW OUR EDITORS CAN HELP ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto text-center" aria-labelledby="help-heading">
-                <h2 id="help-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-10">
-                    How Our Editors Can Help You
-                </h2>
-
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                    {helpItems.map((item, idx) => (
-                        <div key={idx} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm flex flex-col items-center justify-center text-center">
-                            <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center mb-4 text-sm border border-purple-200">
-                                ✓
-                            </div>
-                            <p className="text-xs text-gray-700 leading-relaxed">{item}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            {/* ------------------- SECTION 4: TYPES OF DOCUMENTS WE EDIT ------------------- */}
-            <section className="bg-emerald-50/40 py-12 px-4 border-y border-emerald-100" aria-labelledby="docs-heading">
-                <div className="max-w-6xl mx-auto text-center">
-                    <h2 id="docs-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-8">
-                        Types Of Documents We Edit
+            <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-5xl mx-auto text-center">
+                    {/* Header Content */}
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0F3542] tracking-tight">
+                        Explore Sample Work From Our Professional Copy Editing Service
                     </h2>
+                    <p className="mt-3 text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        See how our expert editors refine language, enhance clarity, and ensure your manuscript is polished, publication-ready, and perfectly tailored to your audience.
+                    </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                        {docTypes.map((doc, idx) => (
-                            <div key={idx} className="bg-white border border-gray-200 rounded-md p-4 flex items-center gap-3 shadow-sm text-left">
-                                <span className="text-red-600 font-bold">➔</span>
-                                <span className="text-xs font-semibold text-gray-800">{doc}</span>
+                    {/* Card Container */}
+                    <div className="mt-10 bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8 text-left">
+                        {/* Tab Button */}
+                        <div className="border-b border-gray-200 pb-3">
+                            <button
+                                type="button"
+                                className="px-5 py-2 text-sm font-semibold text-indigo-900 bg-indigo-50 border-b-2 border-indigo-600 rounded-t-md transition-colors"
+                            >
+                                Medicine
+                            </button>
+                        </div>
+
+                        {/* PDF Preview Frame Container */}
+                        <div className="mt-6 p-4 rounded-xl border-2 border-dashed border-indigo-200 bg-indigo-50/20">
+                            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden shadow-md">
+                                <Image
+                                    src="/path-to-your-sample-preview.jpg"
+                                    alt="Sample editing work preview"
+                                    fill
+                                    className="object-cover object-top"
+                                    priority
+                                />
                             </div>
-                        ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
+            {/* ------------------- SECTION 4: TYPES OF DOCUMENTS WE EDIT (WITH IMAGE ICONS) ------------------- */}
+
             {/* ------------------- SECTION 5: EXPERTS & SAMPLE WORK ------------------- */}
             <section className="py-14 px-4 max-w-6xl mx-auto text-center" aria-labelledby="experts-heading">
                 <h2 id="experts-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-10">
-                    Meet Our Development Editing Experts
+                    Meet Our Copy Editing Experts
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
@@ -318,76 +451,160 @@ export default function AcademicDevelopmentEditingService() {
                         </div>
                     ))}
                 </div>
+                <section className="w-full max-w-4xl mx-auto py-6 px-4">
+                    {/* Accordion Header */}
+                    <button
+                        type="button"
+                        onClick={() => setIsOpen(!isOpen)}
+                        className="w-full flex items-center justify-start gap-4 px-6 py-4 bg-[#0A3231] hover:bg-[#072423] text-white text-left font-medium text-lg transition-colors duration-200"
+                        aria-expanded={isOpen}
+                    >
+                        <span className="text-xl font-normal leading-none select-none">
+                            {isOpen ? '−' : '+'}
+                        </span>
+                        <span>Fundamentals of the Copy Editing Process</span>
+                    </button>
 
-                {/* Sample Work Section */}
-                <div className="border border-gray-200 rounded-lg p-6 bg-white shadow-sm">
-                    <h2 className="text-lg md:text-xl font-bold text-[#0b3b2c] mb-2">
-                        Explore Sample Work From Our Professional Development Editing Service
-                    </h2>
-                    <p className="text-xs text-gray-600 mb-6">
-                        See how our expert editors help shape your manuscript's structure, strengthen your arguments, and ensure your content is coherent, compelling, and ready for publication in your target journal.
-                    </p>
+                    {/* Accordion Content */}
+                    {isOpen && (
+                        <div className="bg-white py-6 px-8 border-x border-b border-gray-100 shadow-sm">
+                            <ul className="space-y-3 list-disc pl-5 text-gray-700 text-base leading-relaxed">
+                                {items.map((item, index) => (
+                                    <li key={index} className="pl-1">
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                </section>
 
-                    {/* Sample Viewer Controls Tab */}
-                    <div className="flex justify-center mb-6">
-                        <div className="bg-blue-50 border border-blue-200 rounded-md p-1 flex gap-2">
-                            {(['Medicine', 'Science', 'Engineering'] as const).map((tab) => (
-                                <button
-                                    key={tab}
-                                    onClick={() => setActiveTab(tab)}
-                                    className={`px-4 py-1.5 text-xs font-semibold rounded transition-colors ${activeTab === tab
-                                            ? 'bg-blue-600 text-white shadow-sm'
-                                            : 'text-blue-700 hover:bg-blue-100'
-                                        }`}
-                                >
-                                    {tab}
-                                </button>
+                <section className="w-full bg-[#f2f4f3] py-16 px-4 sm:px-8 lg:px-12">
+                    <div className="max-w-7xl mx-auto text-center">
+                        {/* Title */}
+                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0F3542]">
+                            Copy Editing Services Can Benefit A Range Of Documents
+                        </h2>
+
+                        {/* Subtitle */}
+                        <p className="mt-3 text-sm sm:text-base text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                            Each subject area and associated journals have varying requirements for manuscript format. Pubrica supports every type of manuscript. Here are the most popular manuscript types Pubrica covers.
+                        </p>
+
+                        {/* Document Grid List */}
+                        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-8 text-left">
+                            {documents.map((doc, index) => (
+                                <div key={index} className="flex items-start gap-3">
+                                    <div className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-[#0F3542] flex items-center justify-center text-white">
+                                        <svg
+                                            className="w-3 h-3"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2.5}
+                                                d="M14 5l7 7m0 0l-7 7m7-7H3"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <span className="text-[#0F3542] font-semibold text-sm sm:text-base leading-snug">
+                                        {doc}
+                                    </span>
+                                </div>
                             ))}
                         </div>
                     </div>
+                </section>
 
-                    {/* PDF Viewer Mockup */}
-                    <div className="bg-[#2d2d2d] rounded-lg p-4 text-white">
-                        <div className="flex flex-wrap items-center justify-between bg-[#1e1e1e] px-4 py-2 rounded mb-4 text-xs">
-                            <div className="flex items-center gap-4">
-                                <span>☰</span>
-                                <span>v1-J...</span>
-                                <span>1 / 1</span>
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <button className="px-2 py-0.5 bg-gray-700 rounded">-</button>
-                                <span>48%</span>
-                                <button className="px-2 py-0.5 bg-gray-700 rounded">+</button>
-                            </div>
-                            <div className="flex items-center gap-4 text-gray-300">
-                                <span>🖨️</span>
-                                <span>📥</span>
-                            </div>
-                        </div>
+                <section className="py-14 bg-white overflow-hidden" aria-labelledby="recent-publications-heading">
+                    {/* Embedded styles for the marquee animation */}
+                    <style jsx>{`
+                @keyframes marquee {
+                    0% {
+                        transform: translateX(0%);
+                    }
+                    100% {
+                        transform: translateX(-50%);
+                    }
+                }
+                .animate-marquee {
+                    display: flex;
+                    width: max-content;
+                    animation: marquee 25s linear infinite;
+                }
+                .animate-marquee:hover {
+                    animation-play-state: paused;
+                }
+            `}</style>
 
-                        {/* Document Pages Preview Area */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white text-gray-900 p-6 rounded text-left text-xs">
-                            <div className="border border-gray-300 p-4 rounded bg-slate-50 min-h-[220px] flex flex-col justify-between">
-                                <div>
-                                    <div className="font-bold text-center mb-2 text-sm">PUBRICA</div>
-                                    <p className="text-[10px] text-gray-600 leading-relaxed line-clamp-6">
-                                        Traumatic brain injury (TBI) is among the leading causes of mortality and morbidity worldwide, especially in developing countries [1, 2]. Some patients with head injury die shortly after a period of semi-consciousness...
-                                    </p>
+                    <div className="max-w-6xl mx-auto px-4 mb-10 text-center">
+                        <h2 id="recent-publications-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c]">
+                            Recent Publications
+                        </h2>
+                    </div>
+
+                    {/* Moving Marquee Container */}
+                    <div className="relative w-full overflow-hidden">
+                        <div className="animate-marquee gap-6">
+                            {/* Render list twice to create a seamless infinite loop */}
+                            {[...publications, ...publications].map((pub, idx) => (
+                                <div
+                                    key={idx}
+                                    className="w-[350px] md:w-[380px] bg-white border border-gray-200 rounded-lg p-6 shadow-sm flex flex-col justify-between flex-shrink-0"
+                                >
+                                    <div className="flex gap-4 items-start">
+                                        {/* Journal Cover Image Thumbnail */}
+                                        <div className="relative w-20 h-28 flex-shrink-0 bg-gray-100 rounded border border-gray-200 overflow-hidden">
+                                            <Image
+                                                src={pub.image}
+                                                alt={pub.journalTitle}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
+
+                                        {/* Publication Details */}
+                                        <div className="flex flex-col flex-grow">
+                                            <h3 className="text-xs md:text-sm font-bold text-gray-900 mb-1 line-clamp-2">
+                                                {pub.journalTitle}
+                                            </h3>
+                                            <p className="text-[11px] text-gray-600 mb-0.5">
+                                                <strong className="text-gray-800">Title:</strong> {pub.articleTitle}
+                                            </p>
+                                            <p className="text-[11px] text-gray-600 mb-0.5">
+                                                <strong className="text-gray-800">Author:</strong> {pub.author}
+                                            </p>
+                                            <p className="text-[11px] text-gray-600 mb-0.5">
+                                                <strong className="text-gray-800">Publisher:</strong> {pub.publisher}
+                                            </p>
+                                            <p className="text-[11px] text-gray-600">
+                                                <strong className="text-gray-800">Impact Factor:</strong> {pub.impactFactor}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Visit Button */}
+                                    <div className="mt-6 pt-4 border-t border-gray-100 flex justify-end">
+                                        <a
+                                            href={pub.link}
+                                            className="px-5 py-1.5 bg-[#0b3b2c] hover:bg-[#07261d] text-white text-xs font-semibold rounded transition-colors shadow-sm"
+                                        >
+                                            Visit
+                                        </a>
+                                    </div>
                                 </div>
-                                <div className="text-center text-[10px] text-gray-400 mt-4">1</div>
-                            </div>
-                            <div className="border border-gray-300 p-4 rounded bg-slate-50 min-h-[220px]">
-                                <div className="font-bold text-center mb-2 text-sm">PUBRICA</div>
-                                <p className="text-[10px] text-gray-600 leading-relaxed">
-                                    Traumatic brain injury (TBI) <span className="bg-red-100 text-red-700 line-through">surpasses many medical disorders as one of the leading causes</span> <span className="bg-green-100 text-green-700">is among the leading causes</span> of mortality and morbidity worldwide, especially in developing countries [1, 2]. Some patients with head injury die shortly after a period of semi-consciousness <span className="bg-red-100 text-red-700 line-through">after trauma</span> <span className="bg-green-100 text-green-700">following trauma</span>, suggesting a devastating brain injury. This phenomenon of death after a short lucid period was first described by Reilly et al. in 1975.
-                                </p>
-                                <div className="mt-3 p-2 bg-red-50 border-l-2 border-red-500 text-[9px] text-red-900">
-                                    <strong>Comments:</strong> Simplified phrasing for clarity and conciseness.
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
-                </div>
+                </section>
+
+
+
+                {/* Sample Work Section */}
+
                 {/* ------------------- SECTION 1.5: DEVELOPMENT EDITING SERVICES - PACKAGES ------------------- */}
                 <section className="py-14 px-4 max-w-6xl mx-auto text-center" aria-labelledby="packages-heading">
                     <div className="max-w-4xl mx-auto mb-12">
@@ -399,56 +616,58 @@ export default function AcademicDevelopmentEditingService() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left mb-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left mb-10">
                         {packages.map((pkg, idx) => (
                             <div key={idx} className={`bg-white border ${pkg.borderColor} rounded-lg shadow-sm flex flex-col overflow-hidden`}>
-                                {/* Package Header with Letter Badge & Title */}
+                                {/* Header */}
                                 <div className={`${pkg.headerBg} p-5 border-b ${pkg.borderColor} flex items-center gap-3`}>
-                                    <div className="relative w-10 h-10">
+                                    <div className="relative w-10 h-10 flex-shrink-0">
                                         <Image src={pkg.badgeSrc} alt={`${pkg.title} package`} fill className="object-contain" />
                                     </div>
-                                    <h3 className="text-sm font-bold text-gray-900">{pkg.title}</h3>
+                                    <h3 className={`text-base font-bold ${pkg.titleColor || 'text-gray-900'}`}>{pkg.title}</h3>
                                 </div>
 
-                                {/* Body Content */}
-                                <div className="p-6 flex flex-col justify-between flex-grow">
-                                    <div>
-                                        {/* Ideal For */}
-                                        <div className="mb-4">
-                                            <div className="flex items-center gap-2 text-xs font-bold text-gray-900 mb-1">
-                                                <span>➔</span>
-                                                <span>Ideal For:</span>
-                                            </div>
-                                            <p className="text-xs text-gray-600 pl-4 leading-relaxed">
-                                                {pkg.idealFor}
+                                {/* Body */}
+                                <div className={`${pkg.bodyBg || 'bg-gray-50'} p-6 flex flex-col justify-between flex-grow space-y-4`}>
+                                    {/* Ideal For */}
+                                    <div className="flex items-start gap-2">
+                                        <span className="w-5 h-5 rounded-full bg-black text-white flex items-center justify-center text-[10px] flex-shrink-0 mt-0.5">
+                                            ➔
+                                        </span>
+                                        <p className="text-xs text-gray-800 leading-relaxed">
+                                            <strong className="font-bold text-gray-900">Ideal For:</strong> {pkg.idealFor}
+                                        </p>
+                                    </div>
+
+                                    {/* Services Include / Includes */}
+                                    <div className="flex items-start gap-2">
+                                        <span className="w-5 h-5 rounded-full bg-black text-white flex items-center justify-center text-[10px] flex-shrink-0 mt-0.5">
+                                            ➔
+                                        </span>
+                                        <p className="text-xs text-gray-800 leading-relaxed">
+                                            <strong className="font-bold text-gray-900">Services Include:</strong> {pkg.servicesInclude}                                        </p>
+                                    </div>
+
+                                    {/* Turnaround Time (if applicable) */}
+                                    {pkg.turnaroundTime && (
+                                        <div className="flex items-start gap-2">
+                                            <span className="w-5 h-5 rounded-full bg-black text-white flex items-center justify-center text-[10px] flex-shrink-0 mt-0.5">
+                                                ➔
+                                            </span>
+                                            <p className="text-xs text-gray-800 leading-relaxed">
+                                                <strong className="font-bold text-gray-900">Turnaround Time:</strong> {pkg.turnaroundTime}
                                             </p>
                                         </div>
-
-                                        {/* Includes */}
-                                        <div>
-                                            <div className="flex items-center gap-2 text-xs font-bold text-gray-900 mb-2">
-                                                <span>➔</span>
-                                                <span>Includes:</span>
-                                            </div>
-                                            <ul className="space-y-2 pl-4 text-xs text-gray-600">
-                                                {pkg.includes.map((inc, i) => (
-                                                    <li key={i} className="flex items-start gap-2">
-                                                        <span className="text-gray-400 mt-0.5">•</span>
-                                                        <span className="leading-relaxed">{inc}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    )}
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    {/* Get a Free Quote Button */}
-                    <GetFreeQuoteButton/>
+                    <GetFreeQuoteButton />
                 </section>
             </section>
+
         </article>
     );
 }

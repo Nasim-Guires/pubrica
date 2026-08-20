@@ -184,12 +184,12 @@ export default function ServicesMedicoLegalComplianceAndSamples({
                 <div className="bg-emerald-50/40 border border-emerald-100 rounded-xl p-6 sm:p-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                     {/* Left Image Section Div Placeholder */}
                     <div className="md:col-span-5 flex justify-center">
-                        <div className="relative w-full max-w-xs h-64 rounded-lg overflow-hidden shadow-md">
+                        <div className="relative w-full max-w-xs h-64 bg-gray-100 rounded-lg overflow-hidden shadow-md flex items-center justify-center">
                             <Image
                                 src="/images/medico-legal-support-services/Medico-legal-consulting-services-for-litigation-strategy-support.webp"
                                 alt="Medico-legal consulting services for litigation strategy support"
                                 fill
-                                className="object-cover"
+                                className="object-contain"
                                 sizes="320px"
                             />
                         </div>

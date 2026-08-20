@@ -13,6 +13,50 @@ export const metadata = {
 export default function RevisioningAndLocalisationComplete() {
     const [hoveredStep, setHoveredStep] = useState<number | null>(null);
 
+    const crucialPoints = [
+        'Improved clarity, coherence, and scientific logic',
+        'Alignment with disciplinary standards',
+        'Better readability for a global scholarly audience',
+        'Enhanced chances of acceptance by peer-reviewed journals',
+        'Culturally appropriate terminology',
+        'Adapting units of measurement, citations, and examples',
+        'Ensuring readability in native linguistic styles',
+        'Adjusting tone and references for specific audiences',
+    ];
+
+    const serviceTypes = [
+        {
+            title: 'Content Revisioning',
+            description: 'Enhance clarity, coherence, and readability of your manuscript while preserving the original intent. Pubrica’s...',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Content-Revisioning.png',
+        },
+        {
+            title: 'Linguistic Localisation',
+            description: 'Adapt your manuscript to meet the linguistic expectations of specific regions or global audiences.',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Linguistic-Localisation.png',
+        },
+        {
+            title: 'Cultural Localisation',
+            description: 'We tailor your content to the cultural context of the target audience. This includes adapting examples, idioms...',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Cultural-Localisation.png',
+        },
+        {
+            title: 'Technical Localization',
+            description: 'For specialised scientific, medical, and academic manuscripts, our team ensures domain-specific...',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Technical-Localisation.png',
+        },
+        {
+            title: 'Journal-Specific Revisioning',
+            description: 'Every journal has its own stylistic, structural, and linguistic requirements. Pubrica revises and localises...',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Journal-Specific-Revisioning.png',
+        },
+        {
+            title: 'Translation-Integrated Localisation',
+            description: 'For authors working with translated manuscripts, we refine translated content to ensure fluency, natural...',
+            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Translation-Integrated-Localisation.png',
+        },
+    ];
+
     const processSteps = [
         {
             num: 1,
@@ -124,36 +168,48 @@ export default function RevisioningAndLocalisationComplete() {
                 'Alignment with general academic conventions',
                 'Minor localisation adjustments for the target region',
             ],
-            bgColor: 'bg-emerald-50',
-            borderColor: 'border-emerald-300',
+            turnaround: '3–5 business days',
+            deliverable: 'Clean, error-free manuscript ready for deeper review',
+            bgColor: 'bg-[#d8e3e0]',
+            headerBg: 'bg-white',
+            accentColor: 'text-[#0F3542]',
         },
         {
             badgeSrc: '/images/publication-support/poster-preparation/S.png',
             title: 'Standard',
             subtitle: 'Advanced Revisioning & Localisation',
             idealFor: 'Manuscripts requiring structural clarity and regional adaptation.',
+            includeHeader: 'Includes all Basic Package services, plus',
             included: [
-                'Includes all Basic Package services, plus:',
                 'Sentence-level refinement for flow and coherence',
                 'Terminology alignment with field-specific standards',
-                'Moderate localisation to adapt content to regional norms and journal expectations',
+                'Moderate localisation to adapt content to regional norms and journal requirements',
+                'Consistency checks for style, references, and formatting',
             ],
-            bgColor: 'bg-purple-50',
-            borderColor: 'border-purple-300',
+            turnaround: '5–7 business days',
+            deliverable: 'Polished manuscript ready for journal submission or peer review',
+            bgColor: 'bg-[#d8c3e0]',
+            headerBg: 'bg-white',
+            accentColor: 'text-[#0F3542]',
         },
         {
             badgeSrc: '/images/editing-and-translation/translation-with-editing/pro.webp',
             title: 'Premium',
             subtitle: 'Comprehensive Revisioning & Localisation',
             idealFor: 'High-impact manuscripts aimed at top-tier journals or international audiences.',
+            includeHeader: 'Includes all Standard Package services, plus:',
             included: [
-                'Includes all Standard Package services, plus:',
                 'In-depth structural and conceptual revisioning',
                 'Advanced localisation for cultural and linguistic nuances',
                 'Enhancement of argumentation, clarity, and logical flow',
+                'Subject-matter expert review for accuracy and precision',
+                'Detailed feedback report highlighting improvements and suggestions',
             ],
-            bgColor: 'bg-amber-50',
-            borderColor: 'border-amber-300',
+            turnaround: '7–10 business days',
+            deliverable: 'Manuscript ready for high-stakes submission with enhanced publication potential',
+            bgColor: 'bg-[#ddc39d]',
+            headerBg: 'bg-white',
+            accentColor: 'text-[#0F3542]',
         },
     ];
 
@@ -171,8 +227,81 @@ export default function RevisioningAndLocalisationComplete() {
                 </div>
             </section>
 
-            {/* ------------------- HOW IT WORKS / STEP BY STEP ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto text-center" aria-labelledby="process-heading">
+            {/* ------------------- INTRODUCTION & CRUCIAL POINTS SECTION ------------------- */}
+            <section className="py-14 px-4 max-w-6xl mx-auto">
+                <div className="max-w-4xl mx-auto mb-10 text-left">
+                    <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-4">
+                        Transform Your Research for Global Impact with Pubrica’s Expert Revisioning & Localisation Services
+                    </h2>
+                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-4">
+                        In today’s rapidly globalizing research landscape, the success of your manuscript, scientific communication, or academic content depends not only on the accuracy of information but also on how effectively it resonates with diverse audiences across geographies. Even high-quality research may fail to achieve its intended reach if the writing style, language, cultural context, or technical nuances do not align with the expectations of a target audience or regional publication standards. Pubrica’s revisioning and localisation services are designed to bridge this gap. We help authors, researchers, universities, and scientific organizations reshape, refine, and adapt their content for different linguistic, cultural, and disciplinary standards.
+                    </p>
+                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                        With a global team of subject-matter experts and academic editors, Pubrica provides end-to-end support to make your manuscript ready for international submission, cross-regional dissemination, or localized publication.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start max-w-4xl mx-auto">
+                    <div>
+                        <h3 className="text-sm font-bold text-gray-900 mb-4">
+                            Revisioning and Localisation are especially crucial when:
+                        </h3>
+                        <ul className="space-y-3 mb-8">
+                            {crucialPoints.map((point, idx) => (
+                                <li key={idx} className="flex items-start gap-3">
+                                    <span className="text-red-600 font-bold mt-0.5">▪</span>
+                                    <p className="text-xs text-gray-700 leading-relaxed">{point}</p>
+                                </li>
+                            ))}
+                        </ul>
+
+                        <div>
+                            <GetFreeQuoteButton />
+                        </div>
+                    </div>
+
+                    <div className="bg-[#0b3b2c] p-4 rounded-xl shadow-lg flex justify-center items-center relative min-h-[300px] overflow-hidden mt-2">
+                        <Image
+                            src="/images/academic-editorial-services/revisioning-and-localisation-service/Transform-Your-Research-for-Global-Impact-with-Pubricas-Expert-Revisioning-Localisation-Services.webp"
+                            alt="Revisioning and Localisation Services"
+                            fill
+                            className="object-cover rounded-xl"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* ------------------- TYPES OF REVISIONING & LOCALISATION SERVICES ------------------- */}
+            <section className="py-14 px-4 bg-[#f8faf9] border-y border-gray-100" aria-labelledby="types-heading">
+                <div className="max-w-6xl mx-auto text-center">
+                    <div className="max-w-4xl mx-auto mb-12">
+                        <h2 id="types-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
+                            Types of Revisioning & Localisation Services We Offer
+                        </h2>
+                        <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                            At Pubrica, we deliver comprehensive revisioning and localisation solutions designed to refine, adapt, and elevate your research manuscripts for global audiences. Our services ensure your content communicates clearly, maintains scientific accuracy, and conforms to regional, linguistic, and journal-specific requirements.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                        {serviceTypes.map((type, idx) => (
+                            <div key={idx} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm flex flex-col justify-between relative">
+                                <div className="absolute top-6 right-6 w-10 h-10">
+                                    <Image src={type.iconSrc} alt="" fill className="object-contain" />
+                                </div>
+                                <div>
+                                    <h3 className="text-sm font-bold text-gray-900 mb-3 pr-8">{type.title}</h3>
+                                    <p className="text-xs text-gray-600 leading-relaxed">{type.description}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ------------------- PROCESS SECTION (ZIGZAG LAYOUT) ------------------- */}
+            <section className="py-16 px-4 max-w-6xl mx-auto text-center" aria-labelledby="process-heading">
                 <h2 id="process-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-2">
                     How Our Revisioning & Localisation Service Works
                 </h2>
@@ -181,32 +310,48 @@ export default function RevisioningAndLocalisationComplete() {
                     Pubrica follows a structured, transparent, and quality-driven editorial workflow designed to simplify your publication journey. Our process ensures every manuscript receives subject-expert attention, rigorous quality checks, and end-to-end editorial support aligned with global academic publishing standards. Here’s how our end-to-end editorial process works:
                 </p>
 
-                {/* Steps Grid Layout - No default black card, turns black only on hover */}
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                {/* 6-Column Grid Layout for Zigzag Flow */}
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 items-stretch">
                     {processSteps.map((step) => {
                         const isHovered = hoveredStep === step.num;
+                        const isEven = step.num % 2 === 0; // Steps 2, 4, 6 positioned alternatively
+
                         return (
                             <div
                                 key={step.num}
                                 onMouseEnter={() => setHoveredStep(step.num)}
                                 onMouseLeave={() => setHoveredStep(null)}
-                                className={`p-6 rounded-lg transition-all duration-300 flex flex-col items-center cursor-pointer border text-left ${
-                                    isHovered
-                                        ? 'bg-[#333333] text-white border-[#333333] shadow-lg scale-105 z-10'
-                                        : 'bg-white text-gray-800 border-gray-200'
-                                }`}
-                            >
-                                <div
-                                    className={`relative w-10 h-10 rounded-full overflow-hidden mb-3 ${
-                                        isHovered ? 'bg-white' : 'bg-[#007791]'
+                                className={`flex flex-col justify-between transition-all duration-300 cursor-pointer ${isEven ? 'lg:flex-col-reverse' : 'lg:flex-col'
                                     }`}
-                                >
-                                    <Image src={step.iconSrc} alt="" fill className="object-contain p-1" />
+                            >
+                                {/* Top or Bottom Badge (Alternating per column) */}
+                                <div className={`flex flex-col items-center py-2 ${isEven ? 'order-first lg:order-last' : 'order-first'}`}>
+                                    <div className="w-8 h-8 rounded-full bg-[#007791] text-white flex items-center justify-center font-bold text-xs shadow-md z-10">
+                                        {step.num}
+                                    </div>
+                                    <div className="w-0.5 h-6 bg-[#007791]/40 hidden lg:block"></div>
                                 </div>
-                                <h3 className="text-xs font-bold mb-2 text-center">{step.title}</h3>
-                                <p className={`text-[10px] leading-relaxed whitespace-pre-line ${isHovered ? 'text-gray-200' : 'text-gray-600'}`}>
-                                    {step.desc}
-                                </p>
+
+                                {/* Main Card Box */}
+                                <div
+                                    className={`p-5 rounded-lg transition-all duration-300 flex flex-col items-center border text-left my-auto ${isHovered
+                                        ? 'bg-[#333333] text-white border-[#333333] shadow-xl scale-105 z-20'
+                                        : 'bg-white text-gray-800 border-gray-200 shadow-sm'
+                                        }`}
+                                >
+                                    <div className="relative w-10 h-10 rounded-full overflow-hidden mb-3 bg-gray-50 flex items-center justify-center">
+                                        <Image src={step.iconSrc} alt="" fill className="object-contain p-1" />
+                                    </div>
+                                    <h3 className="text-xs font-bold mb-2 text-center w-full">{step.title}</h3>
+                                    <p className={`text-[10px] leading-relaxed whitespace-pre-line ${isHovered ? 'text-gray-200' : 'text-gray-600'}`}>
+                                        {step.desc}
+                                    </p>
+                                </div>
+
+                                {/* Bottom or Top Badge mirror */}
+                                <div className={`flex flex-col items-center py-2 ${isEven ? 'order-last lg:order-first' : 'order-last'}`}>
+                                    <div className="w-0.5 h-6 bg-[#007791]/40 hidden lg:block"></div>
+                                </div>
                             </div>
                         );
                     })}
@@ -264,17 +409,21 @@ export default function RevisioningAndLocalisationComplete() {
             {/* ------------------- SAMPLE WORK SECTION ------------------- */}
             <section className="py-14 px-4 bg-[#f4faf7] text-center" aria-labelledby="sample-heading">
                 <div className="max-w-4xl mx-auto bg-white border border-emerald-100 rounded-xl p-8 shadow-sm">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div className="bg-[#0b3b2c] p-3 rounded-lg shadow-md flex justify-center items-center relative h-48 overflow-hidden">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                        {/* Image Container matching the screenshot */}
+                        <div className="bg-[#f0f3f1] p-4 rounded-lg flex justify-center items-center relative aspect-[3/4] w-full overflow-hidden">
                             <Image
                                 src="/images/academic-editorial-services/revisioning-and-localisation-service/Revisioning-and-Localisation-Service-Sample-Work.png"
                                 alt="Revisioning and Localisation Service sample work"
                                 fill
-                                className="object-cover rounded"
+                                className="object-cover"
                                 sizes="(max-width: 768px) 100vw, 50vw"
+                                priority
                             />
                         </div>
-                        <div className="text-left">
+
+                        {/* Content */}
+                        <div className="text-left flex flex-col justify-center">
                             <h2 id="sample-heading" className="text-base md:text-lg font-bold text-[#0b3b2c] mb-4">
                                 Revisioning and Localisation Service Sample Work
                             </h2>
@@ -319,51 +468,92 @@ export default function RevisioningAndLocalisationComplete() {
             {/* ------------------- PACKAGES SECTION ------------------- */}
             <section className="py-14 px-4 max-w-6xl mx-auto" aria-labelledby="packages-heading">
                 <div className="text-center max-w-3xl mx-auto mb-12">
-                    <h2 id="packages-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
+                    <h2 id="packages-heading" className="text-xl md:text-2xl font-bold text-[#0F3542] mb-3">
                         Revisioning and Localisation Services – Our Packages
                     </h2>
-                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                    <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
                         At Pubrica, our Revisioning and Localisation Services are designed to help researchers and authors adapt their manuscripts for global audiences while maintaining clarity, precision, and subject-specific accuracy. Whether you are preparing a manuscript for international journals or need regional language refinement, we offer structured packages to meet diverse needs.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
                     {packages.map((pkg, idx) => (
-                        <div key={idx} className={`bg-white border-2 ${pkg.borderColor} rounded-xl shadow-sm overflow-hidden flex flex-col justify-between`}>
-                            <div className={`${pkg.bgColor} p-6 border-b ${pkg.borderColor} text-center`}>
-                                <div className="relative w-10 h-10 mx-auto rounded-full bg-white shadow-sm mb-2 overflow-hidden">
-                                    <Image src={pkg.badgeSrc} alt={`${pkg.title} package`} fill className="object-contain p-1" />
+                        <div
+                            key={idx}
+                            className={`${pkg.bgColor} rounded-lg shadow-md overflow-hidden flex flex-col justify-between border border-gray-200/50`}
+                        >
+                            {/* White Header Top Banner */}
+                            <div className={`${pkg.headerBg} p-4 border-b border-gray-200/60 flex items-center gap-3`}>
+                                <div className="relative w-12 h-12 flex-shrink-0">
+                                    <Image
+                                        src={pkg.badgeSrc}
+                                        alt={`${pkg.title} package`}
+                                        fill
+                                        className="object-contain"
+                                    />
                                 </div>
-                                <h3 className="text-sm font-bold text-gray-900">{pkg.title}</h3>
-                                <span className="text-[11px] text-gray-600">{pkg.subtitle}</span>
+                                <div>
+                                    <h3 className="text-base font-bold text-gray-900 leading-snug">{pkg.title}</h3>
+                                    <span className="text-[11px] text-gray-600 block leading-tight">{pkg.subtitle}</span>
+                                </div>
                             </div>
 
-                            <div className="p-6 space-y-4 text-xs">
-                                <div>
-                                    <span className="font-bold text-gray-900 block mb-1">➜ Ideal For:</span>
-                                    <p className="text-gray-600 leading-relaxed">{pkg.idealFor}</p>
+                            {/* Card Body Content */}
+                            <div className="p-5 flex-1 flex flex-col justify-between space-y-5 text-xs text-gray-800">
+                                <div className="space-y-4">
+                                    {/* Ideal For */}
+                                    <div className="flex items-start gap-2">
+                                        <span className="text-black font-bold text-sm leading-none mt-0.5">➔</span>
+                                        <p className="leading-relaxed">
+                                            <span className="font-bold text-gray-900">Ideal For:</span> {pkg.idealFor}
+                                        </p>
+                                    </div>
+
+                                    {/* Included Services Section */}
+                                    <div className="space-y-2">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-black font-bold text-sm leading-none">➔</span>
+                                            <span className="font-bold text-gray-900">Include:</span>
+                                        </div>
+
+                                        {pkg.includeHeader && (
+                                            <p className="font-bold text-gray-900 pl-6 leading-relaxed">
+                                                {pkg.includeHeader}
+                                            </p>
+                                        )}
+
+                                        <ul className="pl-6 space-y-2">
+                                            {pkg.included.map((inc, i) => (
+                                                <li key={i} className="leading-relaxed text-gray-800">
+                                                    {inc}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
 
-                                <div>
-                                    <span className="font-bold text-gray-900 block mb-2">➜ Include:</span>
-                                    <ul className="space-y-2">
-                                        {pkg.included.map((inc, i) => (
-                                            <li key={i} className="flex items-start gap-2 text-gray-600">
-                                                <span className="text-emerald-600 font-bold">•</span>
-                                                <span className="leading-relaxed">{inc}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                {/* Turnaround & Deliverable Footer Info */}
+                                <div className="space-y-3 pt-3 border-t border-black/10">
+                                    <div className="flex items-start gap-2">
+                                        <span className="text-black font-bold text-sm leading-none mt-0.5">➔</span>
+                                        <p className="leading-relaxed">
+                                            <span className="font-bold text-gray-900">Turnaround :</span> {pkg.turnaround}
+                                        </p>
+                                    </div>
+
+                                    <div className="flex items-start gap-2">
+                                        <span className="text-black font-bold text-sm leading-none mt-0.5">➔</span>
+                                        <p className="leading-relaxed">
+                                            <span className="font-bold text-gray-900">Deliverable :</span> {pkg.deliverable}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
-
-                <div className="mt-12 text-center">
-                   <GetFreeQuoteButton/>
-                </div>
             </section>
+            <GetFreeQuoteButton/>
         </article>
     );
 }

@@ -14,30 +14,31 @@ export default function EducationEditorialServiceHeroSection() {
     // State to handle hover for the "Our Services" grid cards (defaulting to null so none are black by default)
     const [hoveredServiceCard, setHoveredServiceCard] = useState<number | null>(null);
 
+    
     const servicesList = [
         {
             title: 'Accessibility Compliance',
-            desc: 'Ensure your educational content meets global accessibility standards such as WCAG, ADA, and Section 508.',
+            desc: 'Ensure your educational content meets global accessibility standards such as WCAG, ADA, and Section 508. We audit, remediate, and optimize learning materials for diverse learners, including those with visual, auditory, cognitive, and mobility impairments. Our team guarantees equitable access without compromising content clarity or design.',
             icon: '/images/education-editorial-service/Accessibility-Compliance.webp',
         },
         {
             title: 'Learning Design and Pedagogy',
-            desc: 'Transform instructional content with research-backed learning design principles. We refine frameworks to boost student engagement.',
+            desc: 'Transform instructional content with research-backed learning design principles. We refine curriculum frameworks, align learning outcomes, and enhance pedagogical flow to ensure better learner engagement. Our expertise spans K–12, higher education, online courses, and professional development programs.',
             icon: '/images/education-editorial-service/Learning-Design-and-Pedagogy.webp',
         },
         {
             title: 'Assessment and Exam Review',
-            desc: 'We develop, review, validate, and refine assessments with precision and fairness. Our experts ensure question validity and reliable testing outcomes.',
+            desc: 'We develop, review, validate, and refine assessments with precision and fairness. Our experts ensure question quality, alignment with objectives, difficulty-level calibration, bias review, and psychometric reliability. We support formative, summative, standardized exams, and competency-based assessments.',
             icon: '/images/education-editorial-service/Assessment-and-Exam-Review.webp',
         },
         {
             title: 'Digital Production QA',
-            desc: 'Maintain exceptional quality across digital learning products. We conduct meticulous QA checks for interactive media, e-books, and platforms.',
+            desc: 'Maintain exceptional quality across digital learning products. We conduct meticulous QA checks covering functionality, media integrity, formatting, interactivity, LMS compatibility, UI/UX, and browser/device responsiveness. This ensures error-free, smooth learning experiences across platforms.',
             icon: '/images/education-editorial-service/Digital-Production-QA.webp',
         },
         {
             title: 'AI and Data Preparation',
-            desc: 'We prepare, structure, label, and quality-check data for AI-driven educational solutions. Our team supports machine learning models with accurate annotations.',
+            desc: 'We prepare, structure, label, and quality-check data for AI-driven educational solutions. Our team supports taxonomy design, annotation workflows, metadata tagging, and content structuring for adaptive learning systems, EdTech tools, and analytics-driven platforms.',
             icon: '/images/education-editorial-service/AI-and-Data-Preparation.webp',
         },
     ];
@@ -78,23 +79,25 @@ export default function EducationEditorialServiceHeroSection() {
                         </p>
 
                         <div className="pt-4">
-                           <GetFreeQuoteButton/>
+                            <GetFreeQuoteButton />
                         </div>
                     </div>
 
                     {/* Right Column: Featured Image Box */}
                     <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative bg-[#0b3b2c] p-4 rounded-xl shadow-lg w-full max-w-md">
-                            <div className="bg-white rounded-lg overflow-hidden shadow-inner p-2">
-                                <div className="h-64 bg-gray-100 rounded relative overflow-hidden">
-                                    <Image
-                                        src="/images/education-editorial-service/Driving-Academic-Quality-Through-Expert-Education-Editorial-Services.webp"
-                                        alt="Driving Academic Quality Through Expert Education Editorial Services"
-                                        fill
-                                        className="object-cover"
-                                        sizes="(max-width:1024px)100vw,420px"
-                                    />
-                                </div>
+                        <div className="relative w-full max-w-md h-72">
+                            {/* Dark Green Offset Card (Bottom-Left) */}
+                            <div className="absolute -bottom-4 -left-4 w-full h-full bg-[#0b3b2c] rounded-2xl" />
+
+                            {/* Foreground Image Card */}
+                            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-md">
+                                <Image
+                                    src="/images/education-editorial-service/Driving-Academic-Quality-Through-Expert-Education-Editorial-Services.webp"
+                                    alt="Driving Academic Quality Through Expert Education Editorial Services"
+                                    fill
+                                    className="object-cover"
+                                    sizes="(max-width: 1024px) 100vw, 420px"
+                                />
                             </div>
                         </div>
                     </div>
@@ -102,50 +105,77 @@ export default function EducationEditorialServiceHeroSection() {
             </section>
 
             {/* ------------------- OUR SERVICES SECTION ------------------- */}
-            <section className="py-14 px-4 bg-[#f9fafb] border-t border-gray-100" aria-labelledby="services-heading">
-                <div className="max-w-6xl mx-auto text-center">
-                    <h2 id="services-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
-                        Our Services
-                    </h2>
-                    <p className="text-xs md:text-sm text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-                        Pubrica&apos;s Education Editorial Service is designed to support academic institutions, publishers, EdTech providers, and training organisations with end-to-end editorial excellence. Our team ensures quality, accuracy, accessibility, and pedagogical effectiveness across all types of academic and learning content. Below are the specialised services we offer:
-                    </p>
+            <section className="py-14 px-4 bg-white border-t border-gray-100" aria-labelledby="services-heading">
+                <div className="max-w-5xl mx-auto">
+                    {/* Header Text Aligned Left */}
+                    <div className="mb-10 text-left">
+                        <h2 id="services-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
+                            Our Services
+                        </h2>
+                        <p className="text-xs md:text-sm text-gray-700 leading-relaxed max-w-4xl">
+                            Pubrica&apos;s Education Editorial Service is designed to support academic institutions, publishers, EdTech providers, and training organisations with end-to-end editorial excellence. Our team ensures quality, accuracy, accessibility, and pedagogical effectiveness across all types of academic and learning content. Below are the specialised services we offer:
+                        </p>
+                    </div>
 
-                    {/* Services Cards Grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-left">
-                        {servicesList.map((service, idx) => {
-                            const isHovered = hoveredServiceCard === idx;
-                            return (
+                    {/* Services Cards Layout (3 top, 2 bottom) */}
+                    <div className="flex flex-col gap-5">
+                        {/* Top Row: 3 Cards */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                            {servicesList.slice(0, 3).map((service, idx) => (
                                 <div
                                     key={idx}
-                                    onMouseEnter={() => setHoveredServiceCard(idx)}
-                                    onMouseLeave={() => setHoveredServiceCard(null)}
-                                    className={`p-5 rounded-lg border transition-all duration-300 flex flex-col justify-between ${isHovered
-                                            ? 'bg-neutral-900 border-neutral-900 text-white shadow-xl scale-[1.02]'
-                                            : 'bg-white border-gray-200 text-gray-800 shadow-sm'
-                                        }`}
+                                    className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 relative flex items-start gap-4 min-h-[130px]"
                                 >
-                                    <div>
-                                        <div className={`w-10 h-10 rounded-full flex items-center justify-center mb-4 relative overflow-hidden ${isHovered ? 'bg-white' : 'bg-emerald-100'
-                                            }`}>
-                                            <Image
-                                                src={service.icon}
-                                                alt={service.title}
-                                                width={28}
-                                                height={28}
-                                                className="object-contain"
-                                            />
-                                        </div>
-                                        <h3 className={`text-xs font-bold mb-2 uppercase tracking-wide ${isHovered ? 'text-white' : 'text-[#0b3b2c]'}`}>
+                                    <div className="relative w-12 h-12 shrink-0">
+                                        <Image
+                                            src={service.icon}
+                                            alt={service.title}
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                    <div className="flex-1 pr-3 text-left">
+                                        <h3 className="text-xs md:text-sm font-bold text-gray-900 mb-1.5 leading-snug">
                                             {service.title}
                                         </h3>
-                                        <p className={`text-[11px] leading-relaxed ${isHovered ? 'text-gray-300' : 'text-gray-600'}`}>
+                                        <p className="text-[11px] text-gray-600 leading-relaxed line-clamp-3">
                                             {service.desc}
                                         </p>
                                     </div>
+                                    {/* Vertical Green Accent Line */}
+                                    <div className="absolute right-3 top-1/2 -translate-y-1/2 w-[3px] h-10 bg-[#0b3b2c] rounded-full" />
                                 </div>
-                            );
-                        })}
+                            ))}
+                        </div>
+
+                        {/* Bottom Row: 2 Cards */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                            {servicesList.slice(3, 5).map((service, idx) => (
+                                <div
+                                    key={idx + 3}
+                                    className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 relative flex items-start gap-4 min-h-[130px]"
+                                >
+                                    <div className="relative w-12 h-12 shrink-0">
+                                        <Image
+                                            src={service.icon}
+                                            alt={service.title}
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                    <div className="flex-1 pr-3 text-left">
+                                        <h3 className="text-xs md:text-sm font-bold text-gray-900 mb-1.5 leading-snug">
+                                            {service.title}
+                                        </h3>
+                                        <p className="text-[11px] text-gray-600 leading-relaxed line-clamp-3">
+                                            {service.desc}
+                                        </p>
+                                    </div>
+                                    {/* Vertical Green Accent Line */}
+                                    <div className="absolute right-3 top-1/2 -translate-y-1/2 w-[3px] h-10 bg-[#0b3b2c] rounded-full" />
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>

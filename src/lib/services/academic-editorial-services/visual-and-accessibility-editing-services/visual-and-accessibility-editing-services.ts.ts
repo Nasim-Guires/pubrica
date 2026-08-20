@@ -101,33 +101,51 @@ export const visualAndAccessibilityEditingServicesTestimonialData = {
 };
 
 export const visualAndAccessibilityEditingServicesFaqData = {
-  title: "Frequently Asked Questions",
+    title: "Frequently Asked Questions",
 
-  faqs: [
-    {
-      question: "Why do I need Visual & Accessibility Editing for my manuscript?",
-      answer:
-        "Most journals and academic platforms now require authors to submit visually accessible content. Poorly structured visuals, low-contrast figures, missing alt text, or inaccessible tables can lead to delays or rejection. This service ensures your submission is publication-ready, reader-friendly, and compliant.",
-    },
-    {
-      question: "What types of materials do you edit for accessibility?",
-      answer:
-        "We edit a wide range of academic and scientific content, including:\n\n• Research manuscripts\n• Theses and dissertations\n• Figures, diagrams, graphs & data visualisations\n• Tables and infographics\n• Posters, presentations, and supplementary files\n• Educational and technical documents",
-    },
-    {
-      question: "What accessibility standards do you follow?",
-      answer:
-        "We follow internationally recognised guidelines, including:\n\n• WCAG 2.1 & 2.2\n• Section 508 (US)\n• ADA accessibility guidelines\n• European EN 301 549\n• Publisher requirements (Elsevier, Springer, Wiley, Taylor & Francis, IEEE, etc.)",
-    },
-    {
-      question: "Do you provide alt-text writing for images and figures?",
-      answer:
-        "Yes. We create clear, concise, and context-sensitive alt-text for:\n\n• Scientific images\n• Graphs and charts\n• Data-heavy visuals\n• Complex figures",
-    },
-    {
-      question: "Do you ensure publisher compliance for visual and accessibility formatting?",
-      answer:
-        "Yes. We customise your document based on the required publisher or journal guidelines, including formatting, figure styles, accessibility expectations, and layout consistency.",
-    },
-  ],
+    faqs: [
+        {
+            question: "Why do I need Visual & Accessibility Editing for my manuscript?",
+            answer:
+                "Most journals and academic platforms now require authors to submit visually accessible content. Poorly structured visuals, low-contrast figures, missing alt text, or inaccessible tables can lead to delays or rejection. This service ensures your submission is publication-ready, reader-friendly, and compliant.",
+        },
+        {
+            question: "What types of materials do you edit for accessibility?",
+            answer: "We edit a wide range of academic and scientific content, including:",
+            points: [
+                "Research manuscripts",
+                "Theses and dissertations",
+                "Figures, diagrams, graphs & data visualisations",
+                "Tables and infographics",
+                "Posters, presentations, and supplementary files",
+                "Educational and technical documents",
+            ],
+        },
+        {
+            question: "What accessibility standards do you follow?",
+            answer: "We follow internationally recognised guidelines, including:",
+            points: [
+                "WCAG 2.1 & 2.2",
+                "Section 508 (US)",
+                "ADA accessibility guidelines",
+                "European EN 301 549",
+                "Publisher requirements (Elsevier, Springer, Wiley, Taylor & Francis, IEEE, etc.)",
+            ],
+        },
+        {
+            question: "Do you provide alt-text writing for images and figures?",
+            answer: "Yes. We create clear, concise, and context-sensitive alt-text for:",
+            points: [
+                "Scientific images",
+                "Graphs and charts",
+                "Data-heavy visuals",
+                "Complex figures",
+            ],
+        },
+        {
+            question: "Do you ensure publisher compliance for visual and accessibility formatting?",
+            answer:
+                "Yes. We customise your document based on the required publisher or journal guidelines, including formatting, figure styles, accessibility expectations, and layout consistency.",
+        },
+    ],
 };

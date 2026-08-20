@@ -9,9 +9,9 @@ export default function ServicesMedicoLegalSupportServices() {
   // State to handle accordion toggles (null means none are open by default)
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
 
-const toggleAccordion = (index: number) => {
-  setOpenAccordion(openAccordion === index ? null : index);
-};
+  const toggleAccordion = (index: number) => {
+    setOpenAccordion(openAccordion === index ? null : index);
+  };
 
   const accordionItems = [
     {
@@ -65,11 +65,13 @@ const toggleAccordion = (index: number) => {
               to establish the precise, credible, and legal aspects of medical negligence cases. Our team of medical and legal experts offers reliable assistance with complex medical malpractice, personal injury claims, and insurance disputes. Through professional medico legal consulting services, we assist legal professionals, insurers, and healthcare professionals in understanding the intersection of medicine and law in a clear, professional, and precise manner.
             </p>
 
-            <div className="flex flex-wrap gap-4">
-             <GetFreeQuoteButton/>
+            <div className="flex flex-wrap items-center gap-4">
+              <GetFreeQuoteButton />
               <Link
-                href="#brochure"
-                className="bg-[#c82323] hover:bg-[#a71d1d] text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-full transition-colors"
+                href="/uploads/Medico-Legal-Support-Services_compressed.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#c82323] hover:bg-[#a71d1d] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors inline-flex items-center justify-center"
               >
                 View Brochure
               </Link>

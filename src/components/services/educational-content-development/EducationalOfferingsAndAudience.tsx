@@ -18,31 +18,31 @@ const offersData: ServiceOffer[] = [
     id: 1,
     title: "Curriculum Design & Development",
     description:
-      "Designing structured, outcome-based curricula tailored to academic standards, institutional goals, and diverse learner demographics.",
+      "Structuring syllabi and course frameworks for schools, colleges, and training programs.",
   },
   {
     id: 2,
     title: "Instructional Content Creation",
     description:
-      "Developing engaging textbooks, lecture modules, assessment tools, e-learning scripts, and interactive study guides.",
+      "Developing interactive modules, textbooks, e-learning lessons, and assessments.",
   },
   {
     id: 3,
     title: "Multimedia Learning Resources",
     description:
-      "Crafting rich media solutions including instructional videos, infographics, animations, podcasts, and interactive simulations.",
+      "Infographics, animations, and video content to make learning more impactful.",
   },
   {
     id: 4,
     title: "Research-Based Academic Content",
     description:
-      "Synthesizing complex scientific and clinical research into digestible, authoritative educational modules for higher education and healthcare.",
+      "White papers, case studies, and reference materials created by subject-matter experts.",
   },
   {
     id: 5,
     title: "Customized Corporate Training Modules",
     description:
-      "Building scalable continuous professional development (CPD) and workplace training programs aligned with industry competencies.",
+      "Tailored learning programs for professional skill enhancement.",
   },
 ];
 

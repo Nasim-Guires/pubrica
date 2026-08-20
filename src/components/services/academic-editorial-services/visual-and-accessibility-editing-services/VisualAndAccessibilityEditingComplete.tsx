@@ -130,69 +130,104 @@ export default function VisualAndAccessibilityEditingComplete() {
           How Our Visual and Accessibility Editing Service Works
         </h2>
         <p className="text-xs md:text-sm font-semibold text-gray-700 mb-6">Our Step-by-Step Process</p>
-        <p className="text-xs md:text-sm text-gray-600 leading-relaxed max-w-4xl mx-auto mb-12">
+        <p className="text-xs md:text-sm text-gray-600 leading-relaxed max-w-4xl mx-auto mb-16">
           At Pubrica, we ensure that your documents, manuscripts, and publications are visually optimized and fully accessible to all readers. Our meticulous editing process focuses on clarity, readability, and compliance with accessibility standards. Here’s a step-by-step overview of how our service works:
         </p>
 
-        {/* Timeline / Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 relative">
-          {processSteps.map((step, idx) => {
-            const isHovered = activeStep === step.num;
-            return (
-              <div
-                key={idx}
-                onMouseEnter={() => setActiveStep(step.num)}
-                onMouseLeave={() => setActiveStep(null)}
-                className={`p-4 rounded-lg transition-all duration-300 flex flex-col items-center cursor-pointer border ${
-                  isHovered
-                    ? 'bg-[#333333] text-white border-[#333333] shadow-lg scale-105 z-10'
-                    : 'bg-white text-gray-800 border-gray-200'
-                }`}
-              >
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs mb-3 relative overflow-hidden ${
-                  isHovered ? 'bg-white' : 'bg-[#007791]'
-                }`}>
-                  <Image src={step.iconSrc} alt="" fill className="object-contain p-1" />
+        {/* Alternating Zig-Zag Process Layout with Black Hover */}
+        <div className="relative max-w-5xl mx-auto">
+          {/* Horizontal Connecting Timeline Bar */}
+          <div className="hidden lg:block absolute top-[22px] left-12 right-12 h-1 bg-[#007791] z-0"></div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 relative z-10">
+            {processSteps.map((step) => {
+              const isEven = step.num % 2 === 0;
+              const isHovered = activeStep === step.num;
+
+              return (
+                <div
+                  key={step.num}
+                  className="flex flex-col items-center group cursor-pointer"
+                  onMouseEnter={() => setActiveStep(step.num)}
+                  onMouseLeave={() => setActiveStep(null)}
+                >
+                  <div className={`w-full flex flex-col items-center ${isEven ? 'lg:flex-col-reverse' : ''}`}>
+
+                    {/* Content Card Box with Black Hover State */}
+                    <div className={`w-full p-4 rounded transition-all duration-300 shadow-sm text-left flex flex-col justify-between h-[280px] border ${isHovered
+                      ? 'bg-[#333333] text-white border-[#333333] shadow-lg scale-105 z-20'
+                      : 'bg-white text-gray-800 border-gray-200'
+                      }`}>
+                      <div>
+                        <div className={`w-8 h-8 relative mb-3 rounded-full flex items-center justify-center overflow-hidden ${isHovered ? 'bg-white' : ''}`}>
+                          <Image src={step.iconSrc} alt="" fill className={`object-contain ${isHovered ? 'p-1' : ''}`} />
+                        </div>
+                        <h3 className={`text-[11px] font-bold mb-2 leading-snug ${isHovered ? 'text-white' : 'text-gray-900'}`}>
+                          {step.title}
+                        </h3>
+                        <p className={`text-[10px] leading-relaxed line-clamp-6 ${isHovered ? 'text-gray-200' : 'text-gray-600'}`}>
+                          {step.desc}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Number Badge with Line connector */}
+                    <div className="my-4 flex flex-col items-center relative">
+                      <div className={`w-11 h-11 rounded-full flex items-center justify-center font-bold text-sm text-white shadow-sm transition-colors duration-300 z-10 ${isHovered ? 'bg-[#333333]' : 'bg-[#007791]'
+                        }`}>
+                        {step.num}
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
-                <h3 className="text-xs font-bold mb-2 text-center">{step.title}</h3>
-                <p className={`text-[10px] leading-relaxed text-center ${isHovered ? 'text-gray-200' : 'text-gray-600'}`}>
-                  {step.desc}
-                </p>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </section>
 
       {/* ------------------- SAMPLE WORK SECTION ------------------- */}
       <section className="py-14 px-4 bg-[#f4faf7] text-center" aria-labelledby="sample-heading">
         <div className="max-w-4xl mx-auto bg-white border border-emerald-100 rounded-xl p-8 shadow-sm">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="bg-[#0b3b2c] p-3 rounded-lg shadow-md flex justify-center items-center relative h-48 overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            {/* Left Column: Image Container */}
+            <div className="bg-[#f0fdf4] p-4 rounded-lg flex justify-center items-center relative aspect-[3/4] w-full overflow-hidden">
               <Image
                 src="/images/academic-editorial-services/visual-and-accessibility-editing-services/Visual-Accessibility-Editing-Services-sample-work-.webp"
                 alt="Visual and Accessibility Editing Services sample work"
                 fill
-                className="object-cover rounded"
+                className="object-cover rounded-none"
                 sizes="(max-width: 768px) 100vw, 50vw"
+                priority
               />
             </div>
-            <div className="text-left">
-              <h2 id="sample-heading" className="text-base md:text-lg font-bold text-[#0b3b2c] mb-4">
+
+            {/* Right Column: Content */}
+            <div className="text-left flex flex-col justify-center">
+              <h2 id="sample-heading" className="text-lg md:text-xl font-bold text-[#0b3b2c] mb-4">
                 Visual and Accessibility Editing Services Sample Work
               </h2>
-              <div className="space-y-3 mb-6">
-                <button className="w-full bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
+
+              <div className="mb-4">
+                <button className="w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-8 rounded-full transition-colors shadow">
                   Discover More
                 </button>
               </div>
-              <h3 className="text-sm font-bold text-[#0b3b2c] mb-2">Download the full Report Now</h3>
-              <p className="text-[11px] text-gray-600 leading-relaxed mb-6">
+
+              <h3 className="text-sm font-bold text-[#0b3b2c] mb-2">
+                Download the full Report Now
+              </h3>
+
+              <p className="text-xs text-gray-600 leading-relaxed mb-6">
                 Explore our Visual and Accessibility Editing sample work, meticulously refined to meet rigorous scholarly standards, accessibility guidelines, and top-tier journal requirements. We ensure your manuscript is visually clear, universally accessible, and publication-ready, enhancing readability, inclusivity, and global research impact.
               </p>
-              <button className="w-full bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
-                Discover More
-              </button>
+
+              <div>
+                <button className="w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-8 rounded-full transition-colors shadow">
+                  Discover More
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -258,7 +293,7 @@ export default function VisualAndAccessibilityEditingComplete() {
 
         {/* Bottom CTA Button */}
         <div className="mt-12 text-center">
-        <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
         </div>
       </section>
     </article>

@@ -74,102 +74,69 @@ export default function EducationEditorialServicePage() {
         },
     ];
 
+    const packages = [
+        {
+            badge: 'B',
+            title: 'Basic Editorial',
+            theme: {
+                headerText: 'text-[#2C3E50]',
+                badgeBg: 'bg-[#F2D0A9]',
+                cardBg: 'bg-[#C2D3CD]',
+                bodyText: 'text-[#1A2E28]',
+            },
+            idealFor: 'Draft manuscripts, curriculum content, or initial academic documents.',
+            services: [
+                'Grammar, spelling, and punctuation correction',
+                'Clarity and flow improvement',
+                'Basic formatting and style alignment with academic standards',
+                'Feedback on readability and coherence',
+            ],
+            turnaroundTime: '3–5 business days',
+        },
+        {
+            badge: 'S',
+            title: 'Standard Editorial',
+            theme: {
+                headerText: 'text-[#8A4A90]',
+                badgeBg: 'bg-[#F9E2AF]',
+                cardBg: 'bg-[#CDB5D8]',
+                bodyText: 'text-[#3D1A45]',
+            },
+            idealFor: 'Research papers, journal submissions, or developed educational manuscripts.',
+            services: [
+                'Comprehensive language editing (grammar, style, and tone)',
+                'Structural and logical flow enhancement',
+                'Formatting for journal or publisher requirements',
+                'Reference and citation check (APA, MLA, Chicago, or other styles)',
+                'Constructive feedback for content improvement',
+            ],
+            turnaroundTime: '5–7 business days',
+        },
+        {
+            badge: 'P',
+            title: 'Premium Editorial',
+            theme: {
+                headerText: 'text-[#7C4312]',
+                badgeBg: 'bg-[#BCE3ED]',
+                cardBg: 'bg-[#C8AD7F]',
+                bodyText: 'text-[#3B2507]',
+            },
+            idealFor: 'High-impact publications, textbooks, or advanced academic materials.',
+            services: [
+                'All features of the Standard Package',
+                'In-depth subject-matter review by education experts',
+                'Curriculum alignment and pedagogical evaluation',
+                'Plagiarism check and originality assessment',
+                'Detailed feedback report and revision suggestions',
+            ],
+            turnaroundTime: '7–10 business days',
+        },
+    ];
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
-            
+
             {/* ------------------- DRIVING ACADEMIC QUALITY SECTION ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                    {/* Left Column: Text Content */}
-                    <div className="lg:col-span-7 space-y-4 text-left">
-                        <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-4">
-                            Driving Academic Quality Through Expert Education Editorial Services
-                        </h2>
-                        <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-                            From scholarly articles to curriculum documents, our experts refine language, structure, pedagogy-focused clarity, and field-specific terminology, ensuring your education manuscripts are publication-ready, academically sound, and aligned with global educational standards.
-                        </p>
-                        <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                            In the rapidly evolving education landscape, delivering content that is accurate, engaging, and aligned with academic standards is more important than ever. Whether you are a researcher, academic institution, teacher, publisher, curriculum developer, EdTech company, or educational consultant, high-quality editorial support plays a crucial role in ensuring that your work communicates effectively and reflects the highest levels of precision.
-                        </p>
-                        <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                            Our Education Editorial Services is designed to empower authors, educators, and organizations by refining their manuscripts, course materials, research papers, textbooks, digital content, and institutional documents. With a team of subject-matter experts, experienced academic editors, and skilled language specialists, we help transform raw ideas into polished, publication-ready content that meets global educational and academic benchmarks.
-                        </p>
-                        <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                            From grammar and structure to pedagogy and factual accuracy, our editorial solutions enhance clarity, readability, and overall impact, ensuring your work stands out in an increasingly competitive academic and educational marketplace.
-                        </p>
 
-                        <div className="pt-4">
-                          <GetFreeQuoteButton/>
-                        </div>
-                    </div>
-
-                    {/* Right Column: Featured Image Box */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative bg-[#0b3b2c] p-4 rounded-xl shadow-lg w-full max-w-md">
-                            <div className="bg-white rounded-lg overflow-hidden shadow-inner p-2">
-                                <div className="h-64 bg-gray-100 rounded relative overflow-hidden">
-                                    <Image
-                                        src="/images/education-editorial-service/Driving-Academic-Quality-Through-Expert-Education-Editorial-Services.webp"
-                                        alt="Driving Academic Quality Through Expert Education Editorial Services"
-                                        fill
-                                        className="object-cover"
-                                        sizes="(max-width:1024px)100vw,420px"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* ------------------- OUR SERVICES SECTION ------------------- */}
-            <section className="py-14 px-4 bg-[#f9fafb] border-t border-gray-100" aria-labelledby="services-heading">
-                <div className="max-w-6xl mx-auto text-center">
-                    <h2 id="services-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
-                        Our Services
-                    </h2>
-                    <p className="text-xs md:text-sm text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-                        Pubrica&apos;s Education Editorial Service is designed to support academic institutions, publishers, EdTech providers, and training organisations with end-to-end editorial excellence. Our team ensures quality, accuracy, accessibility, and pedagogical effectiveness across all types of academic and learning content. Below are the specialised services we offer:
-                    </p>
-
-                    {/* Services Cards Grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-left">
-                        {servicesList.map((service, idx) => {
-                            const isHovered = hoveredServiceCard === idx;
-                            return (
-                                <div
-                                    key={idx}
-                                    onMouseEnter={() => setHoveredServiceCard(idx)}
-                                    onMouseLeave={() => setHoveredServiceCard(null)}
-                                    className={`p-5 rounded-lg border transition-all duration-300 flex flex-col justify-between ${isHovered
-                                            ? 'bg-neutral-900 border-neutral-900 text-white shadow-xl scale-[1.02]'
-                                            : 'bg-white border-gray-200 text-gray-800 shadow-sm'
-                                        }`}
-                                >
-                                    <div>
-                                        <div className={`w-10 h-10 rounded-full flex items-center justify-center mb-4 relative overflow-hidden ${isHovered ? 'bg-white' : 'bg-emerald-100'
-                                            }`}>
-                                            <Image
-                                                src={service.icon}
-                                                alt={service.title}
-                                                width={28}
-                                                height={28}
-                                                className="object-contain"
-                                            />
-                                        </div>
-                                        <h3 className={`text-xs font-bold mb-2 uppercase tracking-wide ${isHovered ? 'text-white' : 'text-[#0b3b2c]'}`}>
-                                            {service.title}
-                                        </h3>
-                                        <p className={`text-[11px] leading-relaxed ${isHovered ? 'text-gray-300' : 'text-gray-600'}`}>
-                                            {service.desc}
-                                        </p>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-            </section>
 
             {/* ------------------- FULL WIDTH SUB-BANNER ------------------- */}
             <section className="w-full bg-[#0b3b2c] py-12 px-4 text-white text-center">
@@ -251,6 +218,90 @@ export default function EducationEditorialServicePage() {
                     </div>
                 </div>
             </section>
+            <section
+                className="py-16 px-4 bg-white text-gray-800"
+                aria-labelledby="packages-heading"
+            >
+                <div className="max-w-6xl mx-auto">
+                    {/* Header Section */}
+                    <div className="text-center mb-12">
+                        <h2
+                            id="packages-heading"
+                            className="text-2xl md:text-3xl font-bold text-[#0b3b2c] mb-4"
+                        >
+                            Education Editorial Services – Our Packages
+                        </h2>
+                        <p className="text-xs md:text-sm text-gray-600 leading-relaxed max-w-4xl mx-auto">
+                            At Pubrica, we understand that educational content requires precision, clarity, and pedagogical expertise. Our editorial packages are designed to support educators, academic writers, institutions, and curriculum developers in producing high-quality, polished content that meets global standards.
+                        </p>
+                    </div>
+
+                    {/* Cards Container */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+                        {packages.map((pkg, idx) => (
+                            <div
+                                key={idx}
+                                className="flex flex-col rounded-sm overflow-hidden shadow-lg border border-gray-100"
+                            >
+                                {/* Card Header (White Background) */}
+                                <div className="bg-white p-6 flex items-center justify-center gap-4 border-b border-gray-100">
+                                    <div className={`w-12 h-12 rounded-full ${pkg.theme.badgeBg} flex items-center justify-center font-bold text-2xl text-gray-700 shadow-inner shrink-0`}>
+                                        {pkg.badge}
+                                    </div>
+                                    <h3 className={`text-base md:text-lg font-bold ${pkg.theme.headerText}`}>
+                                        {pkg.title}
+                                    </h3>
+                                </div>
+
+                                {/* Card Body (Colored Background) */}
+                                <div className={`flex-1 p-6 ${pkg.theme.cardBg} ${pkg.theme.bodyText} flex flex-col justify-between space-y-6`}>
+                                    <div className="space-y-6 text-xs md:text-sm">
+                                        {/* Ideal For */}
+                                        <div className="flex items-start gap-2.5">
+                                            <span className="shrink-0 mt-0.5">
+                                                <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707a1 1 0 000-1.414l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3z" clipRule="evenodd" />
+                                                </svg>
+                                            </span>
+                                            <p className="leading-snug">
+                                                <strong>Ideal For:</strong> {pkg.idealFor}
+                                            </p>
+                                        </div>
+
+                                        {/* Services List */}
+                                        <div className="space-y-3">
+                                            <div className="flex items-center gap-2.5 font-bold">
+                                                <span className="shrink-0">
+                                                    <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707a1 1 0 000-1.414l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3z" clipRule="evenodd" />
+                                                    </svg>
+                                                </span>
+                                                <span>Services Include:</span>
+                                            </div>
+                                            <ul className="pl-7 space-y-2.5 list-disc leading-snug">
+                                                {pkg.services.map((item, serviceIdx) => (
+                                                    <li key={serviceIdx}>{item}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    {/* Turnaround Time */}
+                                    <div className="pt-4 border-t border-black/10 flex items-center gap-2.5 text-xs md:text-sm font-bold">
+                                        <span className="shrink-0">
+                                            <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707a1 1 0 000-1.414l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3z" clipRule="evenodd" />
+                                            </svg>
+                                        </span>
+                                        <span>Turnaround Time : {pkg.turnaroundTime}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+            <GetFreeQuoteButton/>
         </article>
     );
 }

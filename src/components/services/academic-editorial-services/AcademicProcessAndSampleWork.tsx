@@ -299,12 +299,12 @@ export default function AcademicProcessAndSampleWork() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Image Column */}
             <div className="lg:col-span-5">
-              <div className="rounded-md overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm relative">
+              <div className="rounded-md overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm relative flex items-center justify-center">
                 <Image
                   src="/images/academic-editorial-services/Academic-Editorial-Services-Sample-Work.png"
                   alt="Academic Editorial Services sample work"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   sizes="(max-width: 1024px) 100vw, 40vw"
                 />
               </div>

@@ -11,8 +11,7 @@ export const metadata = {
 };
 
 export default function DevelopmentEditingServiceComplete() {
-    // State to handle hover for the "Why Choose" grid cards (matching the interactive pattern used previously)
-    const [hoveredCard, setHoveredCard] = useState<number | null>(1); // Default card 1 has hover effect
+    const [hoveredCard, setHoveredCard] = useState<number | null>(1);
 
     const processSteps = [
         {
@@ -85,9 +84,10 @@ export default function DevelopmentEditingServiceComplete() {
             </section>
 
             {/* ------------------- MAIN INTRO & KEY ASPECTS SECTION ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto">
-                <div className="text-center max-w-4xl mx-auto mb-10">
-                    <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
+            <section className="py-12 px-4 max-w-6xl mx-auto">
+                {/* Heading & Subtitle */}
+                <div className="text-left max-w-5xl mb-6">
+                    <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3 leading-snug">
                         Enhance Clarity & Improve Your Manuscript with Expert Development Editing Services
                     </h2>
                     <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
@@ -95,57 +95,78 @@ export default function DevelopmentEditingServiceComplete() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-12">
-                    <div className="space-y-4 text-xs md:text-sm text-gray-700 leading-relaxed">
+                {/* Paragraphs and Double-Layer Background Image Container */}
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-8">
+                    <div className="md:col-span-7 space-y-4 text-xs md:text-sm text-gray-700 leading-relaxed">
                         <p>
-                            Development editing, also known as substantive or structural editing, is a comprehensive approach that focuses on the overall content and organization of a manuscript. Unlike copy editing services, which address grammar, punctuation, and formatting, development editing delves deeper into the logic, structure, and presentation of ideas. It ensures that your manuscript tells a clear, coherent story, aligns with the target audience&apos;s expectations, and meets the rigorous standards of scholarly publication.
+                            Development editing, also known as substantive or structural editing, is a comprehensive approach that focuses on the overall content and organization of a manuscript. Unlike <span className="text-[#0b3b2c] underline cursor-pointer">copy editing services</span>, which address grammar, punctuation, and formatting, development editing delves deeper into the logic, structure, and presentation of ideas. It ensures that your manuscript tells a clear, coherent story, aligns with the target audience&apos;s expectations, and meets the rigorous standards of scholarly publication.
                         </p>
                         <p>
                             At Pubrica, we understand that publishing high-quality research requires more than just groundbreaking findings; it demands clear, coherent, and compelling writing. Our development editing service is meticulously designed for researchers, academicians, and scholars who aim to transform their manuscripts into polished, publication-ready documents that resonate with reviewers, readers, and the global scientific community.
                         </p>
                     </div>
 
-                    <div className="bg-[#0b3b2c] p-3 rounded-xl shadow-md flex justify-center items-center relative h-64 overflow-hidden">
-                        <Image
-                            src="/images/academic-editorial-services/development-editing-service/Enhance-Clarity-Improve-Your-Manuscript-with-Expert-Development-Editing-Services.webp"
-                            alt="Development Editing Services"
-                            fill
-                            className="object-cover rounded-lg"
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                        />
+                    {/* Image with 2-Layer Green Overlay Effect */}
+                    <div className="md:col-span-5 relative flex justify-end pl-6 pb-6 pt-2">
+                        <div className="relative w-full max-w-md h-[240px]">
+                            {/* Dark Green Background Box (Extends Left & Down) */}
+                            <div className="absolute top-6 -left-6 right-2 -bottom-4 bg-[#0b3b2c] rounded-2xl z-0" />
+
+                            {/* Main Image Container */}
+                            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-md z-10">
+                                <Image
+                                    src="/images/academic-editorial-services/development-editing-service/Enhance-Clarity-Improve-Your-Manuscript-with-Expert-Development-Editing-Services.webp"
+                                    alt="Development Editing Services"
+                                    fill
+                                    className="object-cover"
+                                    sizes="(max-width: 768px) 100vw, 40vw"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 {/* Key Aspects List */}
-                <div className="bg-[#f9fafb] border border-gray-200 rounded-xl p-8 shadow-sm">
-                    <h3 className="text-sm md:text-base font-bold text-[#0b3b2c] mb-4">
+                <div className="text-left mt-4">
+                    <h3 className="text-sm md:text-base font-bold text-gray-900 mb-4">
                         Key aspects of development editing include:
                     </h3>
-                    <ul className="space-y-3 text-xs md:text-sm text-gray-700">
+                    <ul className="space-y-3 text-xs md:text-sm text-gray-700 max-w-5xl">
                         <li className="flex items-start gap-2">
-                            <span className="text-red-700 font-bold">•</span>
-                            <span><strong className="text-gray-900">Structure and Organization:</strong> Ensuring that your manuscript flows logically, with clear sections, headings, and subheadings that guide the reader.</span>
+                            <span className="text-red-600 font-bold text-xs mt-0.5">•</span>
+                            <span>
+                                <strong className="text-gray-900 font-semibold">Structure and Organization:</strong> Ensuring that your manuscript flows logically, with clear sections, headings, and subheadings that guide the reader.
+                            </span>
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-red-700 font-bold">•</span>
-                            <span><strong className="text-gray-900">Content Clarity:</strong> Refining complex ideas, hypotheses, and arguments to make them understandable without oversimplifying scientific rigor.</span>
+                            <span className="text-red-600 font-bold text-xs mt-0.5">•</span>
+                            <span>
+                                <strong className="text-gray-900 font-semibold">Content Clarity:</strong> Refining complex ideas, hypotheses, and arguments to make them understandable without oversimplifying scientific rigor.
+                            </span>
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-red-700 font-bold">•</span>
-                            <span><strong className="text-gray-900">Consistency:</strong> Maintaining consistent terminology, tone, and presentation of ideas throughout the manuscript.</span>
+                            <span className="text-red-600 font-bold text-xs mt-0.5">•</span>
+                            <span>
+                                <strong className="text-gray-900 font-semibold">Consistency:</strong> Maintaining consistent terminology, tone, and presentation of ideas throughout the manuscript.
+                            </span>
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-red-700 font-bold">•</span>
-                            <span><strong className="text-gray-900">Cohesion and Coherence:</strong> Linking sections and paragraphs seamlessly, so that every part contributes to the overall narrative.</span>
+                            <span className="text-red-600 font-bold text-xs mt-0.5">•</span>
+                            <span>
+                                <strong className="text-gray-900 font-semibold">Cohesion and Coherence:</strong> Linking sections and paragraphs seamlessly, so that every part contributes to the overall narrative.
+                            </span>
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-red-700 font-bold">•</span>
-                            <span><strong className="text-gray-900">Alignment with Publication Standards:</strong> Tailoring your manuscript to meet the expectations of specific journals, funding agencies, or academic institutions.</span>
+                            <span className="text-red-600 font-bold text-xs mt-0.5">•</span>
+                            <span>
+                                <strong className="text-gray-900 font-semibold">Alignment with Publication Standards:</strong> Tailoring your manuscript to meet the expectations of specific journals, funding agencies, or academic institutions.
+                            </span>
                         </li>
                     </ul>
 
+                    {/* CTA Button */}
                     <div className="mt-8 text-left">
-                        <GetFreeQuoteButton/>
+                        <GetFreeQuoteButton />
                     </div>
                 </div>
             </section>

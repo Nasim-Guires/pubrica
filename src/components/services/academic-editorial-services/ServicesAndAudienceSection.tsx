@@ -33,7 +33,7 @@ const audiencesData: AudienceCard[] = [
     id: "healthcare",
     title: "Medical & Healthcare Professionals",
     description:
-      "Our medical editors refine clinical trial reports, systematic reviews, case studies, and healthcare manuscripts to ensure precision and compliance.",
+      "Clinical researchers, healthcare practitioners, and hospital researchers benefit from our services for case reports, clinical trial manuscripts, and healthcare guidelines, tailored for publication in peer-reviewed journals.",
     imageUrl:
       "/images/academic-editorial-services/Medical-Healthcare-Professionals.png",
   },
@@ -41,14 +41,14 @@ const audiencesData: AudienceCard[] = [
     id: "institutions",
     title: "Institutions & Organizations",
     description:
-      "We partner with universities, research centers, and academic societies to deliver high-quality institutional editing and publishing support.",
+      "Universities, research institutes, and educational organizations rely on us for large-scale editorial projects, ensuring consistent quality, compliance with publication standards, and professional presentation of research outputs.",
     imageUrl: "/images/academic-editorial-services/Institutions-Organizations.png",
   },
   {
     id: "international-authors",
     title: "Multilingual & International Authors",
     description:
-      "We empower non-native English scholars to eliminate language barriers and present their findings clearly for top-tier international journals.",
+      "For authors publishing in English as a second language or preparing multilingual manuscripts, we provide specialized language editing, translation, and localization services to ensure global accessibility and clarity.",
     imageUrl:
       "/images/academic-editorial-services/Multilingual-International-Authors.png",
   },
