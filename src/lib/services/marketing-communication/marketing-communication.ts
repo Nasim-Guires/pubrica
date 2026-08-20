@@ -1,48 +1,48 @@
 export const marketingCommunicationWhoWeServeData = {
-    title: "Who We Serve",
-    description:
-        "Our services cater to a wide range of organizations and professionals seeking impactful and compliant marketing communication solutions. We help clients effectively convey their messages, engage their audiences, and enhance brand visibility.",
+  title: "Who We Serve",
+  description:
+    "Our services cater to a wide range of organizations and professionals seeking impactful and compliant marketing communication solutions. We help clients effectively convey their messages, engage their audiences, and enhance brand visibility.",
 
-    data: [
-        {
-            title: "Healthcare & Life Sciences Companies",
-            bullets: ["Communicate complex medical or scientific information clearly to professionals and patients."],
-            imageUrl:
-                "/images/marketing-communication-content-development-service/Healthcare-Life-Sciences-Companies.png",
-        },
-        {
-            title: "Pharmaceutical & Biotech Organizations",
-            bullets: [
-                "Crafting strategic messaging to support product launches, campaigns, and stakeholder engagement.",
-            ],
-            imageUrl:
-                "/images/marketing-communication-content-development-service/Pharmaceutical-Biotech-Organizations.png",
-        },
-        {
-            title: "Medical Device & Diagnostics Firms",
-            bullets: [
-                "Develop content that highlights innovation and product value effectively.",
-            ],
-            imageUrl:
-                "/images/marketing-communication-content-development-service/Medical-Device-Diagnostics-Firms.png",
-        },
-        {
-            title: "Corporate & B2B Organizations",
-            bullets: [
-                "Create marketing materials that strengthen brand positioning and business communication.",
-            ],
-            imageUrl:
-                "/images/marketing-communication-content-development-service/Corporate-B2B-Organizations.png",
-        },
-        {
-            title: "Digital & Marketing Agencies",
-            bullets: [
-                "Supporting content strategy, copywriting, and creative collateral development for diverse clients.",
-            ],
-            imageUrl:
-                "/images/marketing-communication-content-development-service/Digital-Marketing-Agencies.png",
-        },
-    ],
+  data: [
+    {
+      title: "Healthcare & Life Sciences Companies",
+      bullets: ["Communicate complex medical or scientific information clearly to professionals and patients."],
+      imageUrl:
+        "/images/marketing-communication-content-development-service/Healthcare-Life-Sciences-Companies.png",
+    },
+    {
+      title: "Pharmaceutical & Biotech Organizations",
+      bullets: [
+        "Crafting strategic messaging to support product launches, campaigns, and stakeholder engagement.",
+      ],
+      imageUrl:
+        "/images/marketing-communication-content-development-service/Pharmaceutical-Biotech-Organizations.png",
+    },
+    {
+      title: "Medical Device & Diagnostics Firms",
+      bullets: [
+        "Develop content that highlights innovation and product value effectively.",
+      ],
+      imageUrl:
+        "/images/marketing-communication-content-development-service/Medical-Device-Diagnostics-Firms.png",
+    },
+    {
+      title: "Corporate & B2B Organizations",
+      bullets: [
+        "Create marketing materials that strengthen brand positioning and business communication.",
+      ],
+      imageUrl:
+        "/images/marketing-communication-content-development-service/Corporate-B2B-Organizations.png",
+    },
+    {
+      title: "Digital & Marketing Agencies",
+      bullets: [
+        "Supporting content strategy, copywriting, and creative collateral development for diverse clients.",
+      ],
+      imageUrl:
+        "/images/marketing-communication-content-development-service/Digital-Marketing-Agencies.png",
+    },
+  ],
 };
 
 export const marketingCommunicationContentDevelopmentServiceTestimonialData = {
@@ -83,30 +83,42 @@ export const marketingCommunicationContentDevelopmentServiceTestimonialData = {
     },
   ],
 };
-
 export const marketingCommunicationContentDevelopmentServiceFaqData = {
   title: "Frequently Asked Questions – Marketing Communication Content Development Services",
-
   faqs: [
     {
-      question: "What types of marketing communication content do you develop?",
-      answer:
-        "We create a wide range of marketing content tailored to your business goals, including:\n\n• Website content and landing pages\n• Blogs and thought leadership articles\n• Social media posts and campaigns\n• Email marketing campaigns and newsletters\n• Brochures, flyers, and corporate collaterals\n• Video scripts, infographics, and presentations\n\nEach piece is designed to engage your audience, strengthen your brand identity, and drive measurable results.",
+      question: "1. What types of marketing communication content do you develop?",
+      answer: "We create a wide range of marketing content tailored to your business goals, including:",
+      points: [
+        "Website content and landing pages",
+        "Blogs and thought leadership articles",
+        "Social media posts and campaigns",
+        "Email marketing campaigns and newsletters",
+        "Brochures, flyers, and corporate collaterals",
+        "Video scripts, infographics, and presentations"
+      ]
     },
     {
-      question: "How do you ensure the content aligns with our brand voice?",
-      answer:
-        "Before starting, we conduct a brand audit to understand your tone, style, and messaging guidelines. Our content development process includes:\n\n• Customizing content to match your brand voice\n• Using industry-relevant terminology\n• Iterative reviews to ensure consistency and quality",
+      question: "2. How do you ensure the content aligns with our brand voice?",
+      answer: "Before starting, we conduct a brand audit to understand your tone, style, and messaging guidelines. Our content development process includes:",
+      points: [
+        "Customizing content to match your brand voice",
+        "Using industry-relevant terminology",
+        "Iterative reviews to ensure consistency and quality"
+      ]
     },
     {
-      question: "How do you ensure the content aligns with our brand voice?",
-      answer:
-        "Before starting, we conduct a brand audit to understand your tone, style, and messaging guidelines. Our content development process includes:\n\n• Customizing content to match your brand voice\n• Using industry-relevant terminology\n• Iterative reviews to ensure consistency and quality",
+      question: "3. How do you ensure the content aligns with our brand voice?",
+      answer: "Before starting, we conduct a brand audit to understand your tone, style, and messaging guidelines. Our content development process includes:",
+      points: [
+        "Customizing content to match your brand voice",
+        "Using industry-relevant terminology",
+        "Iterative reviews to ensure consistency and quality"
+      ]
     },
     {
-      question: "Can you create multilingual content?",
-      answer:
-        "Yes, we can develop content in multiple languages to help you reach diverse audiences while maintaining your brand’s voice and messaging consistency.",
-    },
-  ],
+      question: "4. Can you create multilingual content?",
+      answer: "Yes, we can develop content in multiple languages to help you reach diverse audiences while maintaining your brand’s voice and messaging consistency."
+    }
+  ]
 };

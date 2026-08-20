@@ -4,8 +4,26 @@ import React, { useState } from "react";
 import Image from "next/image";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
+// Interfaces for type safety
+interface ProcessStep {
+  id: string;
+  title: string;
+  content: string;
+}
+
+interface WhyChooseItem {
+  title: string;
+  iconSrc: string;
+}
+
+interface ComplianceItem {
+  id: string;
+  title: string;
+  content: string;
+}
+
 // Data for "How Do Healthcare Data Collection Services Work?" Accordion
-const processSteps = [
+const processSteps: ProcessStep[] = [
   {
     id: "step-1",
     title: "Understanding Research Objectives",
@@ -45,83 +63,27 @@ const processSteps = [
 ];
 
 // Data for "Why Choose Pubrica?" Cards
-const whyChooseUsData = [
+const whyChooseUsData: WhyChooseItem[] = [
   {
     title: "Domain experts in medical, clinical, and life science research",
-    icon: (
-      <svg
-        className="w-10 h-10 text-[#082e2b]"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/medical-writing/icon-1.png",
   },
   {
     title: "End-to-end data lifecycle support",
-    icon: (
-      <svg
-        className="w-10 h-10 text-[#082e2b]"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/medical-writing/icon-2.png",
   },
   {
     title: "Ethical, compliant, and high-quality data practices",
-    icon: (
-      <svg
-        className="w-10 h-10 text-[#082e2b]"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/medical-writing/icon-3.png",
   },
   {
     title: "Scalable for academic and industry needs",
-    icon: (
-      <svg
-        className="w-10 h-10 text-[#082e2b]"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/medical-writing/icon-4.png",
   },
 ];
 
 // Data for "Our Compliance and Guideline Standards" Grid
-const complianceItems = [
+const complianceItems: ComplianceItem[] = [
   {
     id: "compliance-1",
     title: "Ethical Compliance and Informed Consent",
@@ -149,14 +111,14 @@ const complianceItems = [
 ];
 
 export default function PubricaProcessAndCompliance() {
-  const [openProcess, setOpenProcess] = useState(null);
-  const [openCompliance, setOpenCompliance] = useState(null);
+  const [openProcess, setOpenProcess] = useState<string | null>(null);
+  const [openCompliance, setOpenCompliance] = useState<string | null>(null);
 
-  const toggleProcess = (id) => {
+  const toggleProcess = (id: string) => {
     setOpenProcess((prev) => (prev === id ? null : id));
   };
 
-  const toggleCompliance = (id) => {
+  const toggleCompliance = (id: string) => {
     setOpenCompliance((prev) => (prev === id ? null : id));
   };
 
@@ -197,18 +159,8 @@ export default function PubricaProcessAndCompliance() {
                 {/* Back Image */}
                 <div className="absolute left-0 top-0 w-3/4 h-3/4 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
                   <Image
-                    src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600"
+                    src="/images/medical-writing/What-We-Do-medical-data-collection.webp"
                     alt="Scientist conducting laboratory research with a microscope"
-                    fill
-                    sizes="(max-width: 768px) 70vw, 30vw"
-                    className="object-cover"
-                  />
-                </div>
-                {/* Front Overlapping Image */}
-                <div className="absolute right-0 bottom-0 w-3/4 h-3/4 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                  <Image
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600"
-                    alt="Analytics chart and magnifying glass reviewing research data"
                     fill
                     sizes="(max-width: 768px) 70vw, 30vw"
                     className="object-cover"
@@ -277,7 +229,7 @@ export default function PubricaProcessAndCompliance() {
             regulatory standards with confidence.
           </p>
           <div className="pt-2">
-          <GetFreeQuoteButton/>
+            <GetFreeQuoteButton />
           </div>
         </div>
       </section>
@@ -302,7 +254,15 @@ export default function PubricaProcessAndCompliance() {
               key={index}
               className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center justify-center min-h-[180px]"
             >
-              <div className="mb-4">{item.icon}</div>
+              <div className="mb-4 relative w-12 h-12 flex items-center justify-center">
+                <Image
+                  src={item.iconSrc}
+                  alt={item.title}
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                />
+              </div>
               <h3 className="text-xs sm:text-sm font-medium text-gray-800 leading-snug">
                 {item.title}
               </h3>
@@ -388,14 +348,17 @@ export default function PubricaProcessAndCompliance() {
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center mt-8">
             {/* Left Image */}
-            <div className="md:col-span-5 relative h-64 sm:h-72 w-full rounded-xl overflow-hidden shadow-md">
-              <Image
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600"
-                alt="Medical researcher working on laptop"
-                fill
-                sizes="(max-width: 768px) 100vw, 40vw"
-                className="object-cover"
-              />
+            <div className="md:col-span-5 flex justify-center items-center p-6 bg-[#f4fbf6]">
+              <div className="relative aspect-[3/4] w-full max-w-[360px] rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                <Image
+                  src="/images/medical-writing/Medical-Data-Collection-Sample-Work.webp"
+                  alt="Medical researcher working on laptop"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 360px"
+                  className="object-cover object-center"
+                  priority
+                />
+              </div>
             </div>
 
             {/* Right CTAs */}

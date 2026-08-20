@@ -348,8 +348,13 @@ export default function ScientificWritingPage() {
                 <section className="bg-[#0e3b2e] py-10 text-white">
                     <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 px-4 md:flex-row">
 
-                        <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-4 border-emerald-400 bg-white text-center font-bold text-[#0e3b2e]">
-                            <span className="text-xs">100%<br />GUARANTEE</span>
+                        <div className="relative flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-full border-4 border-emerald-400 bg-white">
+                            <Image
+                                src="/images/research-services/scientific-writing/Satisfaction_Guarantee.webp"
+                                alt="100% Guarantee"
+                                fill
+                                className="object-cover"
+                            />
                         </div>
 
                         <div className="space-y-2 text-center md:text-left">
@@ -377,13 +382,18 @@ export default function ScientificWritingPage() {
                             </p>
                         </div>
 
+
                         <div className="flex justify-center md:col-span-4">
-                            <div className="rounded-md border-2 border-orange-400 bg-orange-500 px-6 py-4 text-center font-bold text-white shadow-md">
-                                <p className="text-sm">★ 100% ★</p>
-                                <p className="text-xs">SATISFACTION</p>
-                                <p className="text-xs">GUARANTEED</p>
+                            <div className="relative h-40 w-48 overflow-hidden rounded-md  ">
+                                <Image
+                                    src="/images/research-services/scientific-writing/download.webp"
+                                    alt="100% Satisfaction Guaranteed"
+                                    fill
+                                    className="object-contain"
+                                />
                             </div>
                         </div>
+
 
                     </div>
 

@@ -459,10 +459,10 @@ export const NAV_LINKS = [
             href: "/services/publication-support/art-work-preparation",
             label: "Artwork Editing Service",
           },
-          {
-            href: "/services/publication-support/peer-review-pre-submission",
-            label: "Pre-Submission Peer Review",
-          },
+          // {
+          //   href: "/services/publication-support/peer-review-pre-submission",
+          //   label: "Pre-Submission Peer Review",
+          // },
           {
             href: "/services/publication-support/plagiarism-services",
             label: "Plagiarism services",

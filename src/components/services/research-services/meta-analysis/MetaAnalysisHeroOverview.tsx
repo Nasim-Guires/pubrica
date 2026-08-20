@@ -159,17 +159,17 @@ export default function MetaAnalysisHeroOverview() {
 
             {/* Right Column Image Frame */}
             <div className="lg:col-span-5 flex justify-center items-center pt-4 lg:pt-0">
-              <div className="relative w-full max-w-[380px] aspect-[4/3]">
-                {/* Dark Teal Accent Background Shape */}
-                <div className="absolute inset-0 bg-[#0c3833] rounded-2xl transform -translate-x-4 translate-y-4 z-0" />
+              <div className="relative w-full max-w-lg">
+                {/* Dark green background accent card (reduced size/offset) */}
+                <div className="absolute -bottom-3 -left-3 top-3 right-3 bg-[#133A36] rounded-2xl -z-10" />
 
-                {/* Main Image Container */}
-                <div className="relative z-10 w-full h-full rounded-2xl overflow-hidden border border-gray-200 shadow-md">
+                {/* Main Image Container (larger presentation) */}
+                <div className="relative z-10 aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-lg">
                   <Image
                     src="/images/research-services/meta-analysis/Meta-Analysis-Services-for-Life-Sciences-Pharma-and-Research.webp"
                     alt="Meta-Analysis Services for Life Sciences, Pharma, and Research"
                     fill
-                    sizes="(max-width: 1024px) 100vw, 380px"
+                    sizes="(max-width: 1024px) 100vw, 500px"
                     className="object-cover object-center"
                     priority
                   />

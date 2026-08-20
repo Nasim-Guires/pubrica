@@ -106,39 +106,56 @@ export const algorithmDevelopmentFAQ = {
   faqs: [
     {
       question: "Who can benefit from this service?",
-      answer:
-        "Our algorithm development services benefit healthcare and life sciences researchers, data scientists and AI developers, tech startups and software companies, and enterprises requiring predictive analytics, automation, or intelligent systems."
+      answer: "Our services are ideal for:",
+      points: [
+        "Healthcare and life sciences researchers",
+        "Data scientists and AI developers",
+        "Tech startups and software companies",
+        "Enterprises requiring predictive analytics, automation, or intelligent systems"
+      ]
     },
     {
       question: "What types of algorithms do you develop?",
-      answer:
-        "We develop a wide range of algorithms, including machine learning algorithms (supervised, unsupervised, and reinforcement learning), predictive and prescriptive analytics models, rules-based and heuristic algorithms, as well as computer vision, natural language processing (NLP), and speech recognition algorithms."
+      answer: "We develop a wide range of algorithms, including:",
+      points: [
+        "Machine learning algorithms (supervised, unsupervised, reinforcement learning)",
+        "Predictive and prescriptive analytics models",
+        "Rules-based and heuristic algorithms",
+        "Computer vision, natural language processing (NLP), and speech recognition algorithms"
+      ]
     },
     {
       question: "How do you ensure the accuracy and reliability of your algorithms?",
-      answer:
-        "We follow a rigorous development process that includes data preprocessing and cleaning, feature selection and engineering, model training with cross-validation, performance evaluation using metrics such as accuracy, precision, recall, and F1-score, along with iterative refinement to optimize speed, scalability, and robustness."
+      answer: "We follow a rigorous development process, including:",
+      points: [
+        "Data preprocessing and cleaning",
+        "Feature selection and engineering",
+        "Model training with cross-validation",
+        "Performance evaluation using metrics such as accuracy, precision, recall, and F1-score",
+        "Iterative refinement to optimize speed, scalability, and robustness"
+      ]
     },
     {
       question: "How long does the algorithm development process take?",
-      answer:
-        "The timeline depends on the complexity and scope of the project. Typical phases include Requirement analysis and design (1–2 weeks), algorithm development and initial testing (3–6 weeks), optimization and validation (2–4 weeks), and final deployment and documentation (1–2 weeks)."
+      answer: "The timeline depends on the complexity and scope of the project. Typical phases include:",
+      points: [
+        "Requirement analysis & design: 1–2 weeks",
+        "Algorithm development & initial testing: 3–6 weeks",
+        "Optimization & validation: 2–4 weeks",
+        "Final deployment & documentation: 1–2 weeks"
+      ]
     },
     {
       question: "Do you provide support after the algorithm is deployed?",
-      answer:
-        "Yes. We offer post-deployment support, including monitoring, updates, and fine-tuning to ensure the algorithm continues to perform effectively under real-world conditions."
+      answer: "Yes, we offer post-deployment support, including monitoring, updates, and fine-tuning to ensure the algorithm continues to perform as expected in real-world conditions."
     },
     {
       question: "How is this service different from traditional software development?",
-      answer:
-        "Unlike traditional software development, algorithm development focuses on learning from data, making predictions, and optimizing decisions rather than only executing predefined instructions. It involves rigorous testing, model training, and continuous improvement to achieve accurate and reliable results."
+      answer: "Unlike traditional software development, algorithm development focuses on learning from data, making predictions, and optimizing decisions, rather than just executing predefined instructions. It involves rigorous testing, model training, and continuous improvement to achieve accurate results."
     },
     {
-      question:
-        "Can you develop algorithms for specialized domains, such as healthcare or finance?",
-      answer:
-        "Absolutely. Our experts have experience handling domain-specific challenges and can customize algorithms for applications such as clinical decision support, financial forecasting, predictive maintenance, and other specialized use cases."
+      question: "Can you develop algorithms for specialized domains, such as healthcare or finance?",
+      answer: "Absolutely. Our experts have experience in domain-specific challenges and can tailor algorithms to meet specific requirements, such as clinical decision support, financial forecasting, or predictive maintenance."
     }
   ]
 };

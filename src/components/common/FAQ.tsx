@@ -5,6 +5,7 @@ import { useState } from "react";
 interface FAQItem {
   question: string;
   answer: string;
+  points?: string[]; // Optional property for bullet points
 }
 
 interface FAQProps {
@@ -77,7 +78,16 @@ export default function CommonFAQ({ title, faqs }: FAQProps) {
               color: "#333",
             }}
           >
-            {faq.answer}
+            <p style={{ margin: "0 0 10px 0" }}>{faq.answer}</p>
+            {faq.points && faq.points.length > 0 && (
+              <ul style={{ margin: "0", paddingLeft: "20px" }}>
+                {faq.points.map((point, idx) => (
+                  <li key={idx} style={{ marginBottom: "6px" }}>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         )}
       </div>

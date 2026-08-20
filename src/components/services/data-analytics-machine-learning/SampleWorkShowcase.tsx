@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export const SampleWorkShowcase: React.FC = () => {
@@ -5,10 +6,15 @@ export const SampleWorkShowcase: React.FC = () => {
     <section className="py-12 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
       <div className="bg-[#f2faf7] border border-emerald-100/50 rounded-lg p-8 md:p-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center text-left">
         {/* Visual Asset Container Left */}
-        <div className="col-span-1 md:col-span-5 w-full aspect-[4/5] bg-white rounded border border-gray-200/80 shadow-sm overflow-hidden relative flex items-center justify-center text-zinc-400 font-mono text-[11px] tracking-widest font-bold">
-          [ANALYTIC VISUAL ASSET]
+        <div className="col-span-1 md:col-span-5 w-full aspect-[4/5] bg-white rounded border border-gray-200/80 shadow-sm overflow-hidden relative">
+          <Image
+            src="/images/data-analytics-machine-learning/Data-Analytics-and-Machine-Learning-Services-Sample-Work-1.webp"
+            alt="Data Analytics and Machine Learning Services Sample Work 1"
+            fill
+            sizes="(max-width: 768px) 100vw, 42vw"
+            className="object-cover"
+          />
         </div>
-
         {/* Action Callouts Right */}
         <div className="col-span-1 md:col-span-7 space-y-8">
           <div className="space-y-3">

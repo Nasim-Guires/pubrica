@@ -1,32 +1,59 @@
-// Change your import line to look exactly like this:
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import { Sequence, Step } from "@/components/common/Sequence";
 import React from "react";
-// import { , Step } from "./component_library"; // Assuming layout library pathways
 
 interface ClientTarget {
   id: number;
   label: string;
-  bgLabel: string;
+  description: string;
+  imageName: string;
 }
 
 interface ApproachItem {
-  id: number;   
+  id: number;
   title: string;
   description: string;
 }
 
 export const DataAnalyticsFinalExtensions: React.FC = () => {
+  const basePath = "/images/data-analytics-machine-learning/";
+
   const targetClients: ClientTarget[] = [
-    { id: 1, label: "Researchers & Academics", bgLabel: "LIBRARY" },
+    {
+      id: 1,
+      label: "Researchers & Academics",
+      imageName: "Researchers-Academics-1.png",
+      description:
+        "Supporting clinical, medical, and life science studies with ML-driven analytics, data visualization, and publication-ready outputs.",
+    },
     {
       id: 2,
       label: "Pharmaceutical & Healthcare Organizations",
-      bgLabel: "PHARMA",
+      imageName: "Pharmaceutical-Healthcare-Organizations.png",
+      description:
+        "Delivering predictive analytics, patient data modeling, and healthcare intelligence for better decision-making.",
     },
-    { id: 3, label: "Business Enterprises & Startups", bgLabel: "ENTERPRISE" },
-    { id: 4, label: "Publishing & Consulting Firms", bgLabel: "LEGAL" },
-    { id: 5, label: "Government & Non-Profit Institutions", bgLabel: "CAMPUS" },
+    {
+      id: 3,
+      label: "Business Enterprises & Startups",
+      imageName: "Business-Enterprises-Startups.png",
+      description:
+        "Providing AI/ML solutions for market research, customer analytics, business intelligence, and white paper development.",
+    },
+    {
+      id: 4,
+      label: "Publishing & Consulting Firms",
+      imageName: "Publishing-Consulting-Firms.png",
+      description:
+        "Offering data-driven insights, visualizations, and content support for reports, research articles, and technical publications.",
+    },
+    {
+      id: 5,
+      label: "Government & Non-Profit Institutions",
+      imageName: "Government-Non-Profit-Institutions.png",
+      description:
+        "Enabling data-backed research, healthcare projects, and policy studies with scalable ML approaches.",
+    },
   ];
 
   const approaches: ApproachItem[] = [
@@ -89,19 +116,32 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
           {targetClients.map((client) => (
             <div
               key={client.id}
-              className="w-full aspect-[16/10] bg-slate-100 rounded border border-gray-200 shadow-sm relative overflow-hidden flex flex-col justify-end p-5 select-none group cursor-pointer"
+              className="w-full aspect-[16/10] bg-slate-100 rounded border border-gray-200 shadow-sm relative overflow-hidden flex flex-col justify-end select-none group cursor-pointer"
             >
-              {/* Image asset container layer mock */}
-              <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/10 to-zinc-900/40 z-0 flex items-center justify-center text-zinc-400 font-mono text-[11px] tracking-widest font-bold">
-                [{client.bgLabel} VISUAL ASSET]
-              </div>
+              {/* Background Image Layer */}
+              <img
+                src={`${basePath}${client.imageName}`}
+                alt={client.label}
+                className="absolute inset-0 w-full h-full object-cover z-0"
+              />
 
-              {/* Bottom Dark Overlay Content Mask */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/60 to-transparent pt-12 pb-5 px-5 z-10" />
+              {/* Default State: Bottom Dark Overlay Gradient */}
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/60 to-transparent pt-12 pb-5 px-5 z-10 transition-opacity duration-300 group-hover:opacity-0" />
 
-              <h3 className="text-white text-xs sm:text-sm font-extrabold tracking-wide relative z-20 group-hover:text-emerald-400 transition-colors">
+              {/* Default State: Visible Bottom Label */}
+              <h3 className="text-white text-xs sm:text-sm font-extrabold tracking-wide relative z-20 p-5 group-hover:opacity-0 transition-opacity duration-300">
                 {client.label}
               </h3>
+
+              {/* Hover State: Full Black Overlay Window with Text */}
+              <div className="absolute inset-0 bg-black z-30 p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out pointer-events-none group-hover:pointer-events-auto">
+                <h3 className="text-white text-sm sm:text-base font-extrabold mb-3 leading-snug">
+                  {client.label}
+                </h3>
+                <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                  {client.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -146,7 +186,7 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
             cutting-edge technological solutions.
           </p>
           <div className="pt-2">
-          <GetFreeQuoteButton/>
+            <GetFreeQuoteButton />
           </div>
         </div>
       </section>
@@ -164,7 +204,6 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
           </div>
 
           <Sequence>
-            {/* Reason: Procedural operational pipeline with strict sequential dependencies for reliable ML delivery. */}
             <Step title="UNDERSTANDING YOUR NEEDS" subtitle="Step 1">
               We start by analysing your research or business objectives to
               define clear project goals.
@@ -176,8 +215,8 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
             </Step>
 
             <Step title="MODEL DEVELOPMENT" subtitle="Step 3">
-              Model Development – Designing and training custom AI/ML models
-              tailored to your research or business problem.
+              Designing and training custom AI/ML models tailored to your
+              research or business problem.
             </Step>
 
             <Step title="VALIDATION & TESTING" subtitle="Step 4">

@@ -102,33 +102,40 @@ export const dataVisualizationReportingFAQ = {
     faqs: [
         {
             question: "Who can benefit from these services?",
-            answer:
-                "Our services are ideal for researchers preparing manuscripts for journals, clinicians and trial sponsors compiling regulatory submissions, academic institutions and students presenting theses or dissertations, and businesses seeking actionable insights from their data."
+            answer: "Our services are ideal for:",
+            points: [
+                "Researchers preparing manuscripts for journals",
+                "Clinicians and trial sponsors compiling regulatory submissions",
+                "Academic institutions and students presenting thesis/dissertations",
+                "Businesses seeking actionable insights from data"
+            ]
         },
         {
             question: "What types of reports do you provide?",
-            answer:
-                "We create journal-ready manuscripts, clinical study reports, white papers, regulatory documents, business reports, and academic submissions, all tailored to the specific guidelines and standards required."
+            answer: "We create journal-ready manuscripts, clinical study reports, white papers, regulatory documents, business reports, and academic submissions, all tailored to the specific guidelines and standards required."
         },
         {
             question: "Do you follow international reporting guidelines?",
-            answer:
-                "Yes. We adhere to internationally recognized reporting guidelines, including CONSORT, PRISMA, STROBE, TRIPOD, ICH, GCP, and journal-specific requirements to ensure accuracy, compliance, and credibility."
+            answer: "Yes. We adhere to widely accepted guidelines, including CONSORT, PRISMA, STROBE, TRIPOD, ICH, GCP, and journal-specific requirements, ensuring accuracy, compliance, and credibility."
         },
         {
             question: "What types of visualisations can I expect?",
-            answer:
-                "We provide a wide range of visual outputs, including basic graphs and tables, comparative charts and trend analyses, heat maps, forest plots, infographics, dashboards, and interactive data visualisations for digital platforms."
+            answer: "We offer a range of visual outputs, including:",
+            points: [
+                "Basic graphs and tables",
+                "Comparative charts and trend analysis",
+                "Heat maps and forest plots",
+                "Infographics and dashboards",
+                "Interactive data visualisations for digital use"
+            ]
         },
         {
-            question: "Can you customize reports and visualisations for my project?",
-            answer:
-                "Yes. Every report and visualisation is customized to your research objectives, dataset, target audience, and publication or regulatory requirements, ensuring clarity, accuracy, and maximum impact."
+            question: "How do you ensure accuracy in interpretation?",
+            answer: "Our team uses validated statistical tools, double-checks results through peer review, and ensures that every conclusion is backed by evidence and aligned with the study objectives."
         },
         {
             question: "How do I get started?",
-            answer:
-                "Simply share your project details, dataset, and reporting requirements. Our team will review your needs and recommend the most suitable reporting and visualisation solution for your project."
+            answer: "Simply share your project details, dataset, and reporting requirements. Our team will assess your needs and recommend the most suitable package."
         }
     ]
 };

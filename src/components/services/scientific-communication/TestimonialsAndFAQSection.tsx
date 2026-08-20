@@ -81,11 +81,17 @@ const faqDataColumn1: FAQItem[] = [
     id: 2,
     question: "2. What types of documents are created through SMC?",
     answer: (
-      <p className="text-xs md:text-sm text-gray-700">
-        We create manuscripts, clinical study reports (CSRs), systematic
-        reviews, abstracts, posters, slide decks, regulatory submissions, and
-        patient education materials.
-      </p>
+      <div className="space-y-2 text-xs md:text-sm text-gray-700">
+        <p>Our SMC services cover:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Manuscripts for peer-reviewed journals</li>
+          <li>Clinical study reports (CSRs)</li>
+          <li>Regulatory submission documents</li>
+          <li>Conference posters and abstracts</li>
+          <li>Educational materials for healthcare professionals</li>
+          <li>Patient education resources</li>
+        </ul>
+      </div>
     ),
   },
   {
@@ -93,9 +99,7 @@ const faqDataColumn1: FAQItem[] = [
     question: "3. How do you ensure scientific accuracy?",
     answer: (
       <p className="text-xs md:text-sm text-gray-700">
-        Our medical writers and subject matter experts verify every data point
-        against primary sources and execute multi-tier peer and editorial
-        reviews.
+        All content is developed by subject-matter experts, including medical writers, statisticians, and clinicians. We follow evidence-based methodologies, source verification, and compliance with industry standards to ensure accuracy and reliability.
       </p>
     ),
   },
@@ -103,11 +107,16 @@ const faqDataColumn1: FAQItem[] = [
     id: 4,
     question: "4. Do you follow specific guidelines?",
     answer: (
-      <p className="text-xs md:text-sm text-gray-700">
-        Yes, we adhere strictly to international standards including ICMJE, GPP,
-        CONSORT, PRISMA, COPE, and region-specific regulatory frameworks (FDA,
-        EMA).
-      </p>
+      <div className="space-y-2 text-xs md:text-sm text-gray-700">
+        <p>Yes, our team adheres to international guidelines, including:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>ICMJE (International Committee of Medical Journal Editors)</li>
+          <li>GPP (Good Publication Practice)</li>
+          <li>CONSORT, PRISMA, and other reporting standards</li>
+          <li>Regulatory authority requirements (FDA, EMA, CDSCO, etc.)</li>
+
+        </ul>
+      </div>
     ),
   },
 ];
@@ -118,10 +127,7 @@ const faqDataColumn2: FAQItem[] = [
     question: "5. How is confidentiality maintained?",
     answer: (
       <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-        We implement strict data security protocols and confidentiality
-        agreements. Client data, unpublished research, and proprietary
-        information are protected at all stages of communication and
-        documentation.
+        We implement strict data security protocols and confidentiality agreements. Client data, unpublished research, and proprietary information are protected at all stages of communication and documentation.
       </p>
     ),
   },
@@ -130,9 +136,7 @@ const faqDataColumn2: FAQItem[] = [
     question: "6. Can you handle multi-disciplinary or international projects?",
     answer: (
       <p className="text-xs md:text-sm text-gray-700">
-        Absolutely. Our global team covers diverse therapeutic areas and
-        coordinates cross-border regulatory and publication requirements
-        efficiently.
+        Absolutely. Our team is experienced in collaborating across different therapeutic areas, languages, and regions, ensuring compliance with local and international standards.
       </p>
     ),
   },
@@ -140,10 +144,16 @@ const faqDataColumn2: FAQItem[] = [
     id: 7,
     question: "7. How do you collaborate with clients during a project?",
     answer: (
-      <p className="text-xs md:text-sm text-gray-700">
-        We assign a dedicated project manager, establish clear milestones, and
-        host regular alignment meetings with iterative review stages.
-      </p>
+      <div className="space-y-2 text-xs md:text-sm text-gray-700">
+        <p>We follow a structured workflow:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Initial consultation to understand project objectives</li>
+          <li>Regular updates and drafts shared for client feedback</li>
+          <li>Revision cycles to refine content</li>
+          <li>Final review and approval before delivery</li>
+
+        </ul>
+      </div>
     ),
   },
   {
@@ -151,9 +161,7 @@ const faqDataColumn2: FAQItem[] = [
     question: "8. What sets your SMC services apart?",
     answer: (
       <p className="text-xs md:text-sm text-gray-700">
-        Our combination of deep domain expertise, strict adherence to global
-        compliance guidelines, and dedicated visual design integration ensures
-        maximum impact.
+        We combine scientific expertise, regulatory knowledge, and communication skills to produce content that is accurate, engaging, and publication-ready. Our focus on clarity, precision, and audience relevance ensures your research and messages have maximum impact.
       </p>
     ),
   },
@@ -249,14 +257,14 @@ export default function TestimonialsAndFAQSection() {
                     </p>
                   </div>
                   {item.flagSrc ? (
-                  <div className="w-6 h-6 relative rounded-full overflow-hidden border border-gray-200 flex-shrink-0">
-                    <Image
-                      src={item.flagSrc}
-                      alt={`${item.location} flag`}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                    <div className="w-6 h-6 relative rounded-full overflow-hidden border border-gray-200 flex-shrink-0">
+                      <Image
+                        src={item.flagSrc}
+                        alt={`${item.location} flag`}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   ) : null}
                 </div>
               </div>
@@ -268,20 +276,18 @@ export default function TestimonialsAndFAQSection() {
             <button
               onClick={() => setActiveSlide(0)}
               aria-label="Slide 1"
-              className={`w-3 h-3 transition-colors duration-200 ${
-                activeSlide === 0
-                  ? "bg-[#003b42]"
-                  : "border border-[#003b42] bg-transparent"
-              }`}
+              className={`w-3 h-3 transition-colors duration-200 ${activeSlide === 0
+                ? "bg-[#003b42]"
+                : "border border-[#003b42] bg-transparent"
+                }`}
             />
             <button
               onClick={() => setActiveSlide(2)}
               aria-label="Slide 3"
-              className={`w-3 h-3 transition-colors duration-200 ${
-                activeSlide === 2
-                  ? "bg-[#003b42]"
-                  : "border border-[#003b42] bg-transparent"
-              }`}
+              className={`w-3 h-3 transition-colors duration-200 ${activeSlide === 2
+                ? "bg-[#003b42]"
+                : "border border-[#003b42] bg-transparent"
+                }`}
             />
           </div>
         </section>

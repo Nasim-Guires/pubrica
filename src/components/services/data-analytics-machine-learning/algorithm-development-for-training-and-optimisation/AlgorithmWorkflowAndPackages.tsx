@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { ArrowRight, ArrowDown, ArrowLeft } from "lucide-react";
 
 export default function AlgorithmWorkflowAndPackages() {
   // Data for 7-Step Workflow Process
@@ -116,7 +117,7 @@ export default function AlgorithmWorkflowAndPackages() {
 
       {/* 2. HOW OUR SERVICE WORKS (PROCESS FLOW SECTION) */}
       <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 md:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-3">
             How Our Algorithm Development for Training and Optimisation Service Works
           </h2>
@@ -125,16 +126,17 @@ export default function AlgorithmWorkflowAndPackages() {
           </p>
         </div>
 
-        {/* Workflow Grid Flow */}
-        <div className="space-y-6">
-          {/* Row 1: Steps 1, 2, 3 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-            {steps.slice(0, 3).map((step) => (
+        {/* Workflow Snake Grid Layout with Dynamic Arrows */}
+        <div className="relative max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-8">
+
+            {/* Row 1: Steps 1 -> 2 -> 3 */}
+            {steps.slice(0, 3).map((step, index) => (
               <div
                 key={step.number}
-                className="bg-white border border-gray-300 rounded-xl p-6 text-center shadow-sm min-h-[220px] flex flex-col justify-center"
+                className="relative flex flex-col items-center text-center p-6 border rounded-xl shadow-sm border-gray-200 bg-white min-h-[220px] justify-center"
               >
-                <div className="w-10 h-10 bg-[#1b3d36] text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-3">
+                <div className="w-10 h-10 bg-[#1b3d36] text-white rounded-full flex items-center justify-center font-bold text-lg -mt-10 mb-4 border-4 border-white">
                   {step.number}
                 </div>
                 <h3 className="font-bold text-[#1b3d36] text-base mb-2">
@@ -143,44 +145,75 @@ export default function AlgorithmWorkflowAndPackages() {
                 <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
                   {step.description}
                 </p>
+
+                {/* Arrow Right (Only on Desktop, except step 3) */}
+                {index < 2 && (
+                  <div className="hidden md:flex absolute top-1/2 -right-6 transform -translate-y-1/2 text-gray-400">
+                    <ArrowRight className="w-6 h-6" />
+                  </div>
+                )}
+
+                {/* Arrow Down (Under Step 3 on Desktop) */}
+                {index === 2 && (
+                  <div className="hidden md:flex absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400">
+                    <ArrowDown className="w-6 h-6" />
+                  </div>
+                )}
               </div>
             ))}
-          </div>
 
-          {/* Downward Connector Arrow (3 -> 4) */}
-          <div className="flex justify-end pr-12 md:pr-[16%]">
-            <span className="text-2xl font-bold text-gray-500">↓</span>
-          </div>
-
-          {/* Row 2: Steps 6, 5, 4 (Reverse Flow Display) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-            {[steps[5], steps[4], steps[3]].map((step) => (
-              <div
-                key={step.number}
-                className="bg-white border border-gray-300 rounded-xl p-6 text-center shadow-sm min-h-[220px] flex flex-col justify-center"
-              >
-                <div className="w-10 h-10 bg-[#1b3d36] text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-3">
-                  {step.number}
-                </div>
-                <h3 className="font-bold text-[#1b3d36] text-base mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                  {step.description}
-                </p>
+            {/* Row 2: Steps 6 <- 5 <- 4 (Reversed grid positioning) */}
+            <div className="relative flex flex-col items-center text-center p-6 border rounded-xl shadow-sm border-gray-200 bg-white min-h-[220px] justify-center md:col-start-3">
+              <div className="w-10 h-10 bg-[#1b3d36] text-white rounded-full flex items-center justify-center font-bold text-lg -mt-10 mb-4 border-4 border-white">
+                {steps[3].number}
               </div>
-            ))}
-          </div>
+              <h3 className="font-bold text-[#1b3d36] text-base mb-2">
+                {steps[3].title}
+              </h3>
+              <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                {steps[3].description}
+              </p>
+              {/* Arrow Left (Pointing to 5) */}
+              <div className="hidden md:flex absolute top-1/2 -left-6 transform -translate-y-1/2 text-gray-400">
+                <ArrowLeft className="w-6 h-6" />
+              </div>
+            </div>
 
-          {/* Downward Connector Arrow (6 -> 7) */}
-          <div className="flex justify-start pl-12 md:pl-[16%]">
-            <span className="text-2xl font-bold text-gray-500">↓</span>
-          </div>
+            <div className="relative flex flex-col items-center text-center p-6 border rounded-xl shadow-sm border-gray-200 bg-white min-h-[220px] justify-center md:col-start-2 md:row-start-2">
+              <div className="w-10 h-10 bg-[#1b3d36] text-white rounded-full flex items-center justify-center font-bold text-lg -mt-10 mb-4 border-4 border-white">
+                {steps[4].number}
+              </div>
+              <h3 className="font-bold text-[#1b3d36] text-base mb-2">
+                {steps[4].title}
+              </h3>
+              <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                {steps[4].description}
+              </p>
+              {/* Arrow Left (Pointing to 6) */}
+              <div className="hidden md:flex absolute top-1/2 -left-6 transform -translate-y-1/2 text-gray-400">
+                <ArrowLeft className="w-6 h-6" />
+              </div>
+            </div>
 
-          {/* Row 3: Step 7 */}
-          <div className="max-w-md mx-auto">
-            <div className="bg-white border border-gray-300 rounded-xl p-6 text-center shadow-sm min-h-[220px] flex flex-col justify-center">
-              <div className="w-10 h-10 bg-[#1b3d36] text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-3">
+            <div className="relative flex flex-col items-center text-center p-6 border rounded-xl shadow-sm border-gray-200 bg-white min-h-[220px] justify-center md:col-start-1 md:row-start-2">
+              <div className="w-10 h-10 bg-[#1b3d36] text-white rounded-full flex items-center justify-center font-bold text-lg -mt-10 mb-4 border-4 border-white">
+                {steps[5].number}
+              </div>
+              <h3 className="font-bold text-[#1b3d36] text-base mb-2">
+                {steps[5].title}
+              </h3>
+              <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                {steps[5].description}
+              </p>
+              {/* Arrow Down (Under Step 6 on Desktop) */}
+              <div className="hidden md:flex absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400">
+                <ArrowDown className="w-6 h-6" />
+              </div>
+            </div>
+
+            {/* Row 3: Step 7 */}
+            <div className="relative flex flex-col items-center text-center p-6 border rounded-xl shadow-sm border-gray-200 bg-white min-h-[220px] justify-center md:col-start-1 md:row-start-3">
+              <div className="w-10 h-10 bg-[#1b3d36] text-white rounded-full flex items-center justify-center font-bold text-lg -mt-10 mb-4 border-4 border-white">
                 {steps[6].number}
               </div>
               <h3 className="font-bold text-[#1b3d36] text-base mb-2">
@@ -190,6 +223,7 @@ export default function AlgorithmWorkflowAndPackages() {
                 {steps[6].description}
               </p>
             </div>
+
           </div>
         </div>
       </section>
@@ -197,10 +231,9 @@ export default function AlgorithmWorkflowAndPackages() {
       {/* 3. SAMPLE WORK & REPORT DOWNLOAD SECTION */}
       <section className="bg-[#f0fbf5] py-12 px-4 sm:px-6 md:px-8 border-y border-gray-200">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          
-          {/* Image Section Replacement Div */}
+
+          {/* Image Section */}
           <div className="md:col-span-5 flex justify-center">
-            {/* Image Section: Hands typing on a laptop screen with algorithm code */}
             <div className="relative w-full max-w-sm h-64 rounded-xl overflow-hidden shadow-md border border-gray-300">
               <Image
                 src="/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Algorithm-Development-for-Training-and-Optimisation-Sample-Work.png"

@@ -87,7 +87,7 @@ export default function ThoughtLeadershipContentEditorialDesign() {
                 <div className="group w-full bg-white border border-gray-200 rounded-sm p-6 text-left flex flex-col justify-start min-h-[220px] transition-all duration-300 hover:bg-[#3d3d3d] hover:text-white shadow-sm hover:shadow-2xl cursor-pointer relative">
                   {/* Decorative Teal Top Accent Bar */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-[#0088cc] group-hover:bg-[#0088cc]" />
-                  
+
                   <div className="relative mb-3 w-10 h-10">
                     <Image src={step.iconSrc} alt="" fill className="object-contain" sizes="40px" />
                   </div>
@@ -125,16 +125,15 @@ export default function ThoughtLeadershipContentEditorialDesign() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image Section Placeholder */}
-          <div className="relative w-full h-80 rounded-lg overflow-hidden">
+          <div className="relative w-full h-80 rounded-lg overflow-hidden bg-white/50 border border-gray-200">
             <Image
               src="/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/Ethical-Guidelines.png"
               alt="Ethical guidelines"
               fill
-              className="object-cover"
+              className="object-contain p-2"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
-
           {/* Key Standards List */}
           <div>
             <h3 className="text-sm font-bold text-gray-900 mb-4">Key Standards We Follow:</h3>
@@ -172,12 +171,12 @@ export default function ThoughtLeadershipContentEditorialDesign() {
       <section className="bg-emerald-50/50 py-12 px-4 border-y border-emerald-100">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image Section Placeholder */}
-          <div className="relative w-full h-80 rounded-lg overflow-hidden">
+          <div className="relative w-full h-80 rounded-lg overflow-hidden bg-white/50 border border-gray-200">
             <Image
               src="/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/Thought-Leadership-Content-Editorial-Design-Sample-Work.png"
               alt="Thought leadership sample work"
               fill
-              className="object-cover"
+              className="object-contain p-2"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>

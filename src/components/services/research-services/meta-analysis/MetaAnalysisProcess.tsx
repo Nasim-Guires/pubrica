@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface Step {
@@ -57,7 +56,7 @@ export default function MetaAnalysisProcess() {
   ];
 
   return (
-    <section className="w-full bg-[#f8fafc] font-sans">
+    <section className="w-full bg-[#f8fafc] font-sans pb-16">
       {/* Dark Green Banner Header CTA */}
       <div className="bg-[#003820] text-white py-12 px-4 text-center">
         <div className="max-w-4xl mx-auto">
@@ -69,32 +68,26 @@ export default function MetaAnalysisProcess() {
             intricate journal submission processes, shielding you from rejection
             and ensuring a faster path to getting your work published.
           </p>
-         <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
         </div>
       </div>
 
       {/* Main Content Area */}
-      <div className="max-w-6xl mx-auto py-16 px-4 md:px-8">
+      <div className="max-w-5xl mx-auto py-12 px-4 md:px-6">
         {/* Section Heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0f2c3a] mb-3">
+        <div className="text-center mb-10">
+          <h2 className="text-xl md:text-2xl font-bold text-[#0c302d] mb-2">
             How Our Meta-Analyses Writing &amp; Rewriting Service Works
           </h2>
-          <h3 className="text-lg md:text-xl font-medium text-[#0f2c3a] mb-4">
+          <h3 className="text-sm md:text-base font-semibold text-[#1a403d]">
             Our Step-by-Step Process for High-Quality Meta-Analysis Support
           </h3>
-          <p className="text-gray-700 text-sm md:text-base max-w-4xl mx-auto leading-relaxed">
-            At Pubrica, we follow a structured and evidence-based approach to
-            deliver precise, transparent, and publication-ready meta-analysis.
-            <br />
-            Here&apos;s how our expert-driven process works:
-          </p>
         </div>
 
-        {/* Process Flow Cards Container */}
-        <div className="flex flex-col items-center gap-8">
-          {/* Row 1: Steps 1 -> 2 -> 3 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full items-stretch">
+        {/* Desktop Process Flow (Matching Image Layout) */}
+        <div className="hidden md:flex flex-col items-center">
+          {/* ROW 1: Step 1 -> Step 2 -> Step 3 */}
+          <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-2 w-full">
             <StepCard step={steps[0]} />
             <ArrowRight />
             <StepCard step={steps[1]} />
@@ -102,132 +95,130 @@ export default function MetaAnalysisProcess() {
             <StepCard step={steps[2]} />
           </div>
 
-          {/* Vertical Arrow Down (Step 3 to Step 4) */}
-          <div className="hidden md:flex justify-end w-full pr-16">
-            <ArrowDown />
+          {/* Vertical Down Arrow from Step 3 to Step 4 */}
+          <div className="grid grid-cols-3 w-full py-3">
+            <div className="col-start-3 flex justify-center">
+              <ArrowDown />
+            </div>
           </div>
 
-          {/* Row 2: Steps 6 <- 5 <- 4 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full items-stretch">
-            <StepCard step={steps[5]} className="order-3 md:order-1" />
-            <ArrowLeft className="order-2" />
-            <StepCard step={steps[4]} className="order-2 md:order-2" />
-            <ArrowLeft className="order-1" />
-            <StepCard step={steps[3]} className="order-1 md:order-3" />
+          {/* ROW 2: Step 6 <- Step 5 <- Step 4 */}
+          <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-2 w-full">
+            <StepCard step={steps[5]} />
+            <ArrowLeft />
+            <StepCard step={steps[4]} />
+            <ArrowLeft />
+            <StepCard step={steps[3]} />
           </div>
 
-          {/* Vertical Arrow Down (Step 6 to Step 7) */}
-          <div className="hidden md:flex justify-start w-full pl-16">
-            <ArrowDown />
+          {/* Vertical Down Arrow from Step 6 to Step 7 */}
+          <div className="grid grid-cols-3 w-full py-3">
+            <div className="col-start-1 flex justify-center">
+              <ArrowDown />
+            </div>
           </div>
 
-          {/* Row 3: Step 7 */}
-          <div className="w-full md:w-1/3">
-            <StepCard step={steps[6]} />
+          {/* ROW 3: Step 7 */}
+          <div className="grid grid-cols-3 w-full">
+            <div className="col-start-1">
+              <StepCard step={steps[6]} />
+            </div>
           </div>
+        </div>
+
+        {/* Mobile View: Vertical Stack */}
+        <div className="flex md:hidden flex-col items-center space-y-4">
+          {steps.map((step, index) => (
+            <React.Fragment key={step.number}>
+              <StepCard step={step} />
+              {index < steps.length - 1 && <ArrowDown />}
+            </React.Fragment>
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-{
-  /* Individual Step Card Component */
-}
-function StepCard({
-  step,
-  className = "",
-}: {
-  step: Step;
-  className?: string;
-}) {
+{/* Individual Step Card Component */}
+function StepCard({ step }: { step: Step }) {
   return (
-    <div
-      className={`bg-white border border-[#1b4332] rounded-xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow ${className}`}
-    >
+    <div className="bg-white border border-[#0c302d] rounded-lg p-5 flex flex-col items-center text-center shadow-xs h-full min-h-[260px] justify-start">
       {/* Circle Number Badge */}
-      <div className="w-12 h-12 rounded-full bg-[#0d2f2d] text-white flex items-center justify-center font-bold text-lg mb-4">
+      <div className="w-8 h-8 rounded-full bg-[#0c302d] text-white flex items-center justify-center font-bold text-sm mb-3 shrink-0">
         {step.number}
       </div>
 
       {/* Title */}
-      <h4 className="text-base font-bold text-[#0f2c3a] mb-3 leading-snug">
+      <h4 className="text-sm font-extrabold text-[#0c302d] mb-2 leading-snug">
         {step.title}
       </h4>
 
       {/* Description */}
-      <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+      <p className="text-[11px] text-gray-700 leading-relaxed font-normal">
         {step.description}
       </p>
     </div>
   );
 }
 
-{
-  /* Horizontal Right Arrow (Desktop) */
-}
+{/* Right Arrow */}
 function ArrowRight() {
   return (
-    <div className="hidden md:flex items-center justify-center text-gray-600">
+    <div className="px-1 text-[#0c302d]">
       <svg
-        className="w-6 h-6"
+        className="w-4 h-4"
         fill="none"
         stroke="currentColor"
+        strokeWidth="2.5"
         viewBox="0 0 24 24"
       >
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth="2"
-          d="M14 5l7 7m0 0l-7 7m7-7H3"
+          d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
         />
       </svg>
     </div>
   );
 }
 
-{
-  /* Horizontal Left Arrow (Desktop) */
-}
-function ArrowLeft({ className = "" }: { className?: string }) {
+{/* Left Arrow */}
+function ArrowLeft() {
   return (
-    <div
-      className={`hidden md:flex items-center justify-center text-gray-600 ${className}`}
-    >
+    <div className="px-1 text-[#0c302d]">
       <svg
-        className="w-6 h-6"
+        className="w-4 h-4"
         fill="none"
         stroke="currentColor"
+        strokeWidth="2.5"
         viewBox="0 0 24 24"
       >
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth="2"
-          d="M10 19l-7-7m0 0l7-7m-7 7h18"
+          d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
         />
       </svg>
     </div>
   );
 }
 
-{
-  /* Vertical Down Arrow */
-}
+{/* Down Arrow */}
 function ArrowDown() {
   return (
-    <div className="flex items-center justify-center text-gray-600 py-2">
+    <div className="text-[#0c302d]">
       <svg
-        className="w-6 h-6"
+        className="w-4 h-4"
         fill="none"
         stroke="currentColor"
+        strokeWidth="2.5"
         viewBox="0 0 24 24"
       >
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth="2"
-          d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          d="M19.5 10.5L12 18m0 0l-7.5-7.5M12 18V3"
         />
       </svg>
     </div>

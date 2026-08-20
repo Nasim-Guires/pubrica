@@ -1,4 +1,5 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Image from "next/image";
 import React from "react";
 
 export const MedicalDataCollection: React.FC = () => {
@@ -50,7 +51,7 @@ export const MedicalDataCollection: React.FC = () => {
 
             {/* CTA Option Buttons (Row 1) */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
-              <GetFreeQuoteButton/>
+              <GetFreeQuoteButton />
               <button className="bg-[#b30000] hover:bg-red-800 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-sm transition-colors duration-150">
                 View Brochure
               </button>
@@ -60,8 +61,15 @@ export const MedicalDataCollection: React.FC = () => {
           {/* Right Visual Frame Placeholder */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <div className="w-full max-w-[420px] aspect-[4/3] bg-emerald-950 rounded-xl relative p-2.5 shadow-md">
-              <div className="w-full h-full bg-zinc-100 rounded-lg overflow-hidden flex items-center justify-center text-xs font-mono text-zinc-400 font-bold text-center p-4">
-                [ Medical / Clinical Research Visual Asset ]
+              <div className="w-full h-full rounded-lg overflow-hidden relative">
+                <Image
+                  src="/images/medical-writing/Medical-Data-Collection.webp"
+                  alt="Medical / Clinical Research Visual Asset - Medical Data Collection"
+                  fill
+                  priority // Consider priority if this is in the initial viewport
+                  className="object-cover object-center"
+                  sizes="(max-width: 420px) 100vw, 420px"
+                />
               </div>
             </div>
           </div>

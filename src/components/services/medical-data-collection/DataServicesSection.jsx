@@ -32,7 +32,7 @@ const clientsData = [
     description:
       "Outsourced data extraction and collection solutions to accelerate clinical trial phases and reporting timelines.",
     image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600",
+      "/images/medical-writing/Contract-Research-Organizations-CROs-1.webp",
     alt: "Researcher reviewing paper clinical data and documents",
   },
   {
@@ -40,7 +40,7 @@ const clientsData = [
     description:
       "Comprehensive data support for drug discovery, safety monitoring, and regulatory compliance submissions.",
     image:
-      "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=600",
+      "/images/medical-writing/Pharmaceutical-Biotech-Companies.webp",
     alt: "Laboratory scientist conducting biotech research",
   },
   {
@@ -48,7 +48,7 @@ const clientsData = [
     description:
       "Rigorous secondary data synthesis and primary survey tools designed to support peer-reviewed publishing.",
     image:
-      "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80&w=600",
+      "/images/medical-writing/Academic-and-Research-Institutions-1.webp",
     alt: "Academic research library with books and literature databases",
   },
   {
@@ -56,7 +56,7 @@ const clientsData = [
     description:
       "Patient outcome data tracking, operational analytics, and clinical workflow evaluation frameworks.",
     image:
-      "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&q=80&w=600",
+      "/images/medical-writing/Healthcare-Providers-Hospitals.webp",
     alt: "Healthcare providers and medical staff collaborating in a hospital",
   },
   {
@@ -64,7 +64,7 @@ const clientsData = [
     description:
       "Collecting regulatory-compliant data for device trials, usability studies, and post-market surveillance.",
     image:
-      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=600",
+      "/images/medical-writing/Medical-Device-Companies-1.webp",
     alt: "Medical device testing and clinical trial equipment",
   },
   {
@@ -72,7 +72,7 @@ const clientsData = [
     description:
       "Epidemiological data mining, community health assessment tools, and global health research support.",
     image:
-      "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=600",
+      "/images/medical-writing/Public-Health-Organizations-NGOs.webp",
     alt: "Clipboard with NGO public health planning documents",
   },
   {
@@ -80,7 +80,7 @@ const clientsData = [
     description:
       "Tailored analytical support, systematic reviews, and targeted data gathering for independent projects.",
     image:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=600",
+      "/images/medical-writing/Independent-Researchers-Consultants.webp",
     alt: "Independent consultant conducting research on a digital tablet",
   },
 ];

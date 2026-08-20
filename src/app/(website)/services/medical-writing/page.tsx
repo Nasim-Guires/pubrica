@@ -6,7 +6,6 @@ import OurPackages from "@/components/services/medical-writing/OurPackages";
 import QualityAndTestimonials from "@/components/services/medical-writing/QualityAndTestimonials";
 import TherapeuticAreasAndWorkflow from "@/components/services/medical-writing/TherapeuticAreasAndWorkflow";
 import WhoWeServeAndServices from "@/components/services/medical-writing/WhoWeServeAndServices";
-import { FAQAndInsightsSection } from "@/components/services/research-services/FAQAndInsightsSection";
 import React from "react";
 
 const page = () => {
@@ -19,7 +18,7 @@ const page = () => {
       <OurPackages />
       <QualityAndTestimonials/>
       <FaqSection/>
-      <FAQAndInsightsSection/>
+      <InsightsSection/>
     </>
   );
 };

@@ -71,14 +71,14 @@ export default function PeerReviewOverviewSection() {
         </div>
 
         {/* Right Column: Clean Frameless Image Showcase */}
-        <div className="lg:col-span-5 relative w-full aspect-[4/5] min-h-[480px]">
+        <div className="lg:col-span-5 relative w-full h-auto min-h-[300px]">
           <Image
             src="/images/publication-support/peer-review-pre-submission/Pre-Submission-Peer-Review-Pubrica-1.jpg"
             alt="Published Journal Covers Showcase"
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 40vw"
-            className="object-cover object-center"
+            className="object-contain object-center"
           />
         </div>
       </div>

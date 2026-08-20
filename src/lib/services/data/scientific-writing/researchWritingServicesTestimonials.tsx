@@ -1,57 +1,57 @@
 export const researchWritingServicesWhoWeServe = {
-    title: "Who We Serve",
-    description:
-        "Our academic writing services are designed to support researchers, scholars, institutions, and professionals at every stage of their academic journey.",
-    data: [
-        {
-            title: "Researchers & PhD Scholars",
-            bullets: [
-                "We support early- and advanced-career researchers to write, edit, and prepare for submission of high-quality manuscripts, theses, and reviews for academic review or publication in journals."
-            ],
-            imageUrl:
-                "/images/research-services/scientific-writing/PhD-Scholars.jpg"
-        },
-        {
-            title: "Universities & Academic Institutions",
-            bullets: [
-                "We partner with universities and academic institutions to assist their faculty, students, and research departments with academic writing, proposal writing, basic thesis editing, training needs, and larger research projects or programs."
-            ],
-            imageUrl:
-                "/images/research-services/scientific-writing/Academic-Institutions-and-Universities.jpg"
-        },
-        {
-            title: "Faculty & Academicians",
-            bullets: [
-                "Our subject-matter experts assist professors, instructors, and postdoctoral researchers in crafting compelling research papers, white papers, and grant proposals aligned with departmental goals, academic values, and publication standards."
-            ],
-            imageUrl:
-                "/images/research-services/scientific-writing/Medical-Professionals-and-Clinicians.jpg"
-        },
-        {
-            title: "Research Labs & Think Tanks",
-            bullets: [
-                "We provide analytical writing, technical writing, and literature review writing for research organizations undertaking institutionally funded or sponsored projects."
-            ],
-            imageUrl:
-                "/images/research-services/scientific-writing/Early-Career-Researchers-1.jpg"
-        },
-        {
-            title: "Independent Authors & Scientists",
-            bullets: [
-                "Independent researchers from academia or industry can rely on our expert writing and formatting support for journal submissions, research dissemination, and professional development."
-            ],
-            imageUrl:
-                "/images/research-services/scientific-writing/Independent-Researchers-1.jpg"
-        },
-        {
-            title: "International Students & Non-Native English Speakers",
-            bullets: [
-                "We provide English editing, thesis writing, and formatting expertise to help non-native English speakers meet international language, academic, and publication standards."
-            ],
-            imageUrl:
-                "/images/research-services/scientific-writing/Academic-Faculty-and-Professors.jpg"
-        }
-    ]
+  title: "Who We Serve",
+  description:
+    "Our academic writing services are designed to support researchers, scholars, institutions, and professionals at every stage of their academic journey.",
+  data: [
+    {
+      title: "Researchers & PhD Scholars",
+      bullets: [
+        "We support early- and advanced-career researchers to write, edit, and prepare for submission of high-quality manuscripts, theses, and reviews for academic review or publication in journals."
+      ],
+      imageUrl:
+        "/images/research-services/scientific-writing/PhD-Scholars.jpg"
+    },
+    {
+      title: "Universities & Academic Institutions",
+      bullets: [
+        "We partner with universities and academic institutions to assist their faculty, students, and research departments with academic writing, proposal writing, basic thesis editing, training needs, and larger research projects or programs."
+      ],
+      imageUrl:
+        "/images/research-services/scientific-writing/Academic-Institutions-and-Universities.jpg"
+    },
+    {
+      title: "Faculty & Academicians",
+      bullets: [
+        "Our subject-matter experts assist professors, instructors, and postdoctoral researchers in crafting compelling research papers, white papers, and grant proposals aligned with departmental goals, academic values, and publication standards."
+      ],
+      imageUrl:
+        "/images/research-services/scientific-writing/Medical-Professionals-and-Clinicians.jpg"
+    },
+    {
+      title: "Research Labs & Think Tanks",
+      bullets: [
+        "We provide analytical writing, technical writing, and literature review writing for research organizations undertaking institutionally funded or sponsored projects."
+      ],
+      imageUrl:
+        "/images/research-services/scientific-writing/Early-Career-Researchers-1.jpg"
+    },
+    {
+      title: "Independent Authors & Scientists",
+      bullets: [
+        "Independent researchers from academia or industry can rely on our expert writing and formatting support for journal submissions, research dissemination, and professional development."
+      ],
+      imageUrl:
+        "/images/research-services/scientific-writing/Independent-Researchers-1.jpg"
+    },
+    {
+      title: "International Students & Non-Native English Speakers",
+      bullets: [
+        "We provide English editing, thesis writing, and formatting expertise to help non-native English speakers meet international language, academic, and publication standards."
+      ],
+      imageUrl:
+        "/images/research-services/scientific-writing/Academic-Faculty-and-Professors.jpg"
+    }
+  ]
 };
 
 export const researchWritingServicesTestimonials = {
@@ -116,17 +116,17 @@ export const researchWritingServicesFAQ = {
     {
       question: "What types of academic documents do you support?",
       answer:
-        "We support a wide range of academic and scientific documents, including research manuscripts, literature reviews, systematic reviews, meta-analyses, theses and dissertations, research proposals, and white papers. Every service is tailored to your document type, discipline, and the specific requirements of your target journal or institution."
+        "We help with a wide variety of academic and scientific document types including, but not limited to, research manuscripts, literature reviews, systematic reviews, meta-analysis, thesis/dissertation, research proposals and white papers. All services are tailored to your document type, discipline, and specific journal or institution requirements."
     },
     {
       question: "Do you guarantee originality and plagiarism-free content?",
       answer:
-        "Yes. Every document we deliver is 100% original. We use licensed plagiarism detection software such as iThenticate and can provide a plagiarism report upon request. All work is prepared by subject-matter experts while maintaining academic integrity and ethical writing practices."
+        "Yes! All documents we provide are 100% original. We use license paid-for plagiarism detection programs (iThenticate for example) and can provide the report if you like. All work is produced solely by professionals and is totally original writing while maintaining academic integrity and ethical practices."
     },
     {
       question: "How do revisions work?",
       answer:
-        "We provide complimentary revisions within a specified revision period (typically 10–15 days after delivery). Revisions cover adjustments based on the original project brief, client feedback, and minor modifications. Significant changes to the project scope or structure may require additional charges, which will always be communicated in advance."
+        "We provide rate-free revisions within a limited scope of time and deadline (typically 10–15 days after delivery). Revisions generally encompass alignment to the required aspects of the original brief, your recommendations, and minor changes. If the changes turn out to be major changes to the structure or scope, we may charge you more for any revisions. We will outline any potential changes in our communication with you."
     },
     {
       question: "What is your typical turnaround time?",
@@ -136,22 +136,22 @@ export const researchWritingServicesFAQ = {
     {
       question: "How do I pay for the services?",
       answer:
-        "We accept payments through credit and debit cards, bank transfers, and PayPal. Every order includes an official invoice. Institutional clients and large projects can also request customized invoicing and flexible payment plans."
+        "When paying for your order, feel free to use credit/debit card, bank transfer, and PayPal. You will receive an official invoice. For institutional clients or bulk projects, we are happy to offer custom invoicing payment plans."
     },
     {
       question: "What happens if I'm not satisfied with the writing?",
       answer:
-        "Client satisfaction is our priority. If you are not fully satisfied with the delivered work, we provide up to two revisions along with editorial support to address your concerns. In exceptional cases, partial or full refunds may be considered according to our quality assurance policy."
+        "Your happiness is our number one priority. If you do not like the content we provided, we offer up to two revisions and included editor support to ensure you are happy with the content. In some rare cases that we may be unable to provide satisfaction; we may provide partial or full refunds at our discretion based on our quality assurance policy."
     },
     {
       question: "Do you follow specific journal or university formatting guidelines?",
       answer:
-        "Yes. We prepare and format manuscripts according to the requirements of target journals such as Elsevier, Springer, and Wiley, as well as university formatting styles including APA, MLA, Chicago, Vancouver, and others."
+        "Yes, we tailor the writing and formatting according to the guidelines from the target journals (e.g., Elsevier, Springer, Wiley) and university guidelines (e.g., APA, MLA, Chicago, Vancouver)."
     },
     {
       question: "Is your service confidential? Will my research be safe?",
       answer:
-        "Absolutely. We follow strict confidentiality policies and GDPR-compliant data handling practices. Your research documents are never shared, reused, or stored unnecessarily. Non-Disclosure Agreements (NDAs) are also available upon request for sensitive projects."
+        "Yes indeed. We adhere to strong confidentiality protocols and GDPR-compliant data handling procedures. Your documents and data expressly will not be shared, unnecessarily saved, or reused. NDAs available on request for sensitive projects."
     },
     {
       question: "How do you support non-native English researchers in scientific publishing?",
@@ -176,7 +176,25 @@ export const researchWritingServicesFAQ = {
     {
       question: "Can I contact someone for project updates or support?",
       answer:
-        "Yes. Every project is assigned a dedicated project coordinator who serves as your primary point of contact. You can receive updates, ask questions, or request assistance through email, phone, or live chat throughout the project lifecycle."
+        "Yes. Each order is assigned a dedicated project coordinator. If you have any questions, want to check on updates, or need help throughout the writing process, you will be able to contact your dedicated project coordinator by email, phone, or live chat."
+    },
+    {
+      question: "Call to Action (CTA)",
+      answer: "Take the next step with your research:",
+      points: [
+        "Upload Your Project",
+        "Schedule a Free Consultation",
+        "Request a Sample Report"
+      ]
+    },
+    {
+      question: "Footer",
+      answer: "Explore more resources and information:",
+      points: [
+        "Easy access links like services, terms, contact",
+        "Trust badges (e.g., GDPR, COPE, ORCID friendly)",
+        "Contact info and links to social media"
+      ]
     }
   ]
 };

@@ -145,10 +145,10 @@ export default function PackagesAndTestimonialsSection() {
           {packagesData.map((pkg) => (
             <div
               key={pkg.id}
-              className={`group flex flex-col rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:bg-black hover:text-white hover:shadow-2xl hover:-translate-y-1 cursor-pointer ${pkg.cardBg}`}
+              className={`flex flex-col rounded-lg overflow-hidden shadow-md ${pkg.cardBg}`}
             >
               {/* Header Box */}
-              <div className="bg-white p-5 border-b border-gray-100 flex items-start space-x-3 transition-colors duration-300">
+              <div className="bg-white p-5 border-b border-gray-100 flex items-start space-x-3">
                 {/* Image Circle Badge */}
                 <div
                   className={`w-12 h-12 rounded-full ${pkg.badgeBg} p-2 flex items-center justify-center shrink-0 shadow-inner relative overflow-hidden`}
@@ -164,7 +164,7 @@ export default function PackagesAndTestimonialsSection() {
 
                 {/* Package Name & Subtitle */}
                 <div>
-                  <h3 className="text-xl font-extrabold text-gray-900 group-hover:text-black transition-colors">
+                  <h3 className="text-xl font-extrabold text-gray-900">
                     {pkg.name}
                   </h3>
                   <p className="text-[10px] sm:text-xs font-semibold text-gray-600 tracking-tight leading-tight mt-0.5">
@@ -181,12 +181,12 @@ export default function PackagesAndTestimonialsSection() {
                 <div className="space-y-4">
                   {/* Ideal For */}
                   <div className="flex items-start space-x-2">
-                    <ArrowIcon className="mt-0.5 shrink-0 group-hover:text-white" />
+                    <ArrowIcon className="mt-0.5 shrink-0" />
                     <div>
-                      <strong className="font-bold text-gray-900 group-hover:text-white">
+                      <strong className="font-bold text-gray-900">
                         Ideal for:
                       </strong>
-                      <p className="text-gray-800 group-hover:text-gray-200 mt-0.5 leading-snug">
+                      <p className="text-gray-800 mt-0.5 leading-snug">
                         {pkg.idealFor}
                       </p>
                     </div>
@@ -194,12 +194,12 @@ export default function PackagesAndTestimonialsSection() {
 
                   {/* Includes */}
                   <div className="flex items-start space-x-2">
-                    <ArrowIcon className="mt-0.5 shrink-0 group-hover:text-white" />
+                    <ArrowIcon className="mt-0.5 shrink-0" />
                     <div className="flex-1">
-                      <strong className="font-bold text-gray-900 group-hover:text-white">
+                      <strong className="font-bold text-gray-900">
                         Includes:
                       </strong>
-                      <ul className="mt-1 space-y-2 text-gray-800 group-hover:text-gray-200 leading-snug">
+                      <ul className="mt-1 space-y-2 text-gray-800 leading-snug">
                         {pkg.includes.map((item, idx) => (
                           <li key={idx}>{item}</li>
                         ))}
@@ -210,12 +210,12 @@ export default function PackagesAndTestimonialsSection() {
                   {/* Optional Add-ons */}
                   {pkg.optionalAddOns && pkg.optionalAddOns.length > 0 && (
                     <div className="flex items-start space-x-2 pt-1">
-                      <ArrowIcon className="mt-0.5 shrink-0 group-hover:text-white" />
+                      <ArrowIcon className="mt-0.5 shrink-0" />
                       <div className="flex-1">
-                        <strong className="font-bold text-gray-900 group-hover:text-white">
+                        <strong className="font-bold text-gray-900">
                           Optional Add-ons:
                         </strong>
-                        <ul className="mt-1 space-y-1.5 text-gray-800 group-hover:text-gray-200 leading-snug">
+                        <ul className="mt-1 space-y-1.5 text-gray-800 leading-snug">
                           {pkg.optionalAddOns.map((addon, idx) => (
                             <li key={idx}>{addon}</li>
                           ))}
@@ -226,13 +226,13 @@ export default function PackagesAndTestimonialsSection() {
                 </div>
 
                 {/* Turnaround Time */}
-                <div className="flex items-start space-x-2 pt-2 border-t border-black/10 group-hover:border-white/20">
-                  <ArrowIcon className="mt-0.5 shrink-0 group-hover:text-white" />
+                <div className="flex items-start space-x-2 pt-2 border-t border-black/10">
+                  <ArrowIcon className="mt-0.5 shrink-0" />
                   <div>
-                    <strong className="font-bold text-gray-900 group-hover:text-white">
+                    <strong className="font-bold text-gray-900">
                       Turnaround:
                     </strong>
-                    <p className="text-gray-900 group-hover:text-gray-100 font-medium mt-0.5">
+                    <p className="text-gray-900 font-medium mt-0.5">
                       {pkg.turnaround}
                     </p>
                   </div>
@@ -247,7 +247,6 @@ export default function PackagesAndTestimonialsSection() {
           <GetFreeQuoteButton />
         </div>
       </section>
-
       {/* ========================================== */}
       {/* SECTION 2: TESTIMONIALS                    */}
       {/* ========================================== */}
@@ -319,9 +318,8 @@ export default function PackagesAndTestimonialsSection() {
               <span
                 key={idx}
                 onClick={() => setActiveTestimonialPage(idx)}
-                className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-colors ${
-                  activeTestimonialPage === idx ? "bg-gray-800" : "bg-gray-300"
-                }`}
+                className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-colors ${activeTestimonialPage === idx ? "bg-gray-800" : "bg-gray-300"
+                  }`}
               />
             ))}
           </div>

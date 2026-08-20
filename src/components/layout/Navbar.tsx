@@ -130,7 +130,6 @@ export default function Navbar() {
                                 >
                                   <Link href={sublink.href} className="w-full flex items-center justify-between">
                                     <span>{sublink.label}</span>
-                                    {/* Chevron icon renders ONLY when sublink has children */}
                                     {hasChildren && (
                                       <ChevronRight className="h-3.5 w-3.5 text-gray-400" />
                                     )}
@@ -178,28 +177,14 @@ export default function Navbar() {
                               </div>
                             </div>
 
-                            {/* Sample Work Box Footer */}
-                            <div className="mt-8 pt-4 border-t border-gray-100 flex items-center justify-between bg-white">
-                              <div className="border border-gray-200 rounded p-1 bg-white shadow-sm w-[180px]">
-                                <div className="bg-[#073632] text-white text-[10px] font-bold px-2 py-1 mb-1 text-center">
-                                  Sample Work
-                                </div>
-                                <div className="h-16 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
-                                  <div className="w-full h-full bg-gradient-to-r from-purple-900 via-teal-800 to-orange-600 opacity-80 flex items-end p-1">
-                                    <div className="w-full bg-black/40 h-3 text-[8px] text-white flex items-center justify-center">Overview & Data</div>
-                                  </div>
-                                </div>
-                                <span className="text-[9px] text-gray-500 font-semibold block text-center mt-1 truncate px-1">
-                                  {selectedSubItem?.label}
-                                </span>
-                              </div>
-
-                              <Link
+                            {/* Footer Action */}
+                            <div className="mt-8 pt-4 border-t border-gray-100 flex justify-end bg-white">
+                              {/* <Link
                                 href={selectedSubItem?.href || "/contact"}
-                                className="bg-[#073632] text-white text-xs font-bold px-4 py-2 rounded hover:bg-[#052623] transition-colors self-end"
+                                className="bg-[#073632] text-white text-xs font-bold px-4 py-2 rounded hover:bg-[#052623] transition-colors"
                               >
                                 Request Sample
-                              </Link>
+                              </Link> */}
                             </div>
 
                           </div>
