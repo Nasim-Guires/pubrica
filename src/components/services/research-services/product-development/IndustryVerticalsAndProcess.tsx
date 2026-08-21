@@ -9,6 +9,7 @@ export interface VerticalItem {
   id: string;
   title: string;
   iconPlaceholder: string;
+  href: string;
 }
 
 export interface IndustryVerticalsAndProcessProps {
@@ -23,46 +24,55 @@ export default function IndustryVerticalsAndProcess({
       id: "pharmaceuticals",
       title: "Pharmaceuticals",
       iconPlaceholder: "/images/product-development/Pharmaceuticals.png",
+      href: "/Industries/pharmaceutical/",
     },
     {
       id: "biotechnology",
       title: "Biotechnology",
       iconPlaceholder: "/images/product-development/Biotechnology.png",
+      href: "/Industries/biotechnology/",
     },
     {
       id: "nutraceuticals",
       title: "Nutraceuticals & Dietary Supplements",
       iconPlaceholder: "/images/product-development/Nutraceuticals-Dietary-Supplements.png",
+      href: "/Industries/",
     },
     {
       id: "herbal-ayush",
       title: "Herbal/AYUSH products",
       iconPlaceholder: "/images/product-development/HerbalAYUSH-products.png",
+      href: "/Industries/",
     },
     {
       id: "functional-foods",
       title: "Functional Foods & Beverages",
       iconPlaceholder: "/images/product-development/Functional-Foods-Beverages.png",
+      href: "/Industries/",
     },
     {
       id: "medical-devices",
       title: "Medical Devices",
       iconPlaceholder: "/images/product-development/Medical-Devices.png",
+      href: "/Industries/medical-device/",
     },
     {
       id: "cosmetics",
       title: "Cosmetics & Cosmeceuticals",
       iconPlaceholder: "/images/product-development/Cosmetics-Cosmeceuticals.png",
+      href: "/Industries/cosmetics/",
     },
     {
       id: "pet-health",
       title: "Pet Health & Pet Food",
       iconPlaceholder: "/images/product-development/Pet-Health-Pet-Food.png",
+      href: "/Industries/",
     },
     {
       id: "life-sciences",
       title: "Life Sciences & Healthcare Research",
       iconPlaceholder: "/images/product-development/Life-Sciences-Healthcare-Research.png",
+      href: "/Industries/",
     },
   ];
 
@@ -86,9 +96,10 @@ export default function IndustryVerticalsAndProcess({
         {/* 3x3 Grid of Verticals */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {verticals.map((item) => (
-            <div
+            <Link
               key={item.id}
-              className="bg-white rounded-xl border border-gray-200/80 p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md transition-shadow group cursor-pointer"
+              href={item.href}
+              className="bg-white rounded-xl border border-gray-200/80 p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md transition-shadow group cursor-pointer no-underline"
             >
               {/* Icon Image Container */}
               <div className="w-12 h-12 sm:w-14 sm:h-14 mb-4 rounded-full bg-emerald-50/60 group-hover:bg-emerald-100/80 flex items-center justify-center border border-emerald-300 relative overflow-hidden transition-colors">
@@ -104,7 +115,7 @@ export default function IndustryVerticalsAndProcess({
               <h3 className="text-xs sm:text-sm font-bold text-[#1b2b28] group-hover:text-emerald-900 transition-colors">
                 {item.title}
               </h3>
-            </div>
+            </Link>
           ))}
         </div>
 

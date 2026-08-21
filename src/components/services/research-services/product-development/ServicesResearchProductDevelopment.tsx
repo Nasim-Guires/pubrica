@@ -32,9 +32,12 @@ export default function ServicesResearchProductDevelopment({
       id: "sme",
       text: (
         <>
-          <span className="font-semibold text-gray-900">
+          <Link
+            href="/subject-matter-experts/"
+            className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+          >
             500+ subject matter experts
-          </span>{" "}
+          </Link>{" "}
           in pharmacology, toxicology, clinical studies, and regulatory affairs
         </>
       ),
@@ -331,7 +334,7 @@ export default function ServicesResearchProductDevelopment({
       </header>
 
       {/* Main Intro & Key Points Section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-8 py-12 md:py-16">
+      <section className="max-w-6xl mx-auto px-2   sm:px-8 py-12 md:py-16">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#1b2b28] mb-2">
           Discovery and Intelligence Research Services for Product Development:
           Transforming Ideas into Market-Ready Solutions
@@ -348,44 +351,47 @@ export default function ServicesResearchProductDevelopment({
               At Pubrica, we offer end-to-end scientific product development
               services driven by deep{" "}
               <Link
-                href="#"
-                className="text-sky-600 underline font-medium"
+                href="/academy/discovery-and-intelligence/discovery-intelligence-drug-development/"
+                className="text-sky-600 font-medium hover:text-sky-700 no-underline"
               >
                 discovery and intelligence
               </Link>{" "}
               research to support{" "}
-              <Link href="#" className="text-sky-600 underline font-medium">
+              <Link
+                href="/Industries/pharmaceutical/"
+                className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+              >
                 pharmaceutical
               </Link>
               ,{" "}
-              <Link href="#" className="text-sky-600 underline font-medium">
+              <Link
+                href="/Industries/biotechnology/"
+                className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+              >
                 biotechnology
               </Link>
               ,{" "}
-              <Link href="#" className="text-sky-600 underline font-medium">
+              <Link
+                href="/Industries/nutraceutical-research/"
+                className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+              >
                 nutraceutical
               </Link>
               ,{" "}
-              <Link href="#" className="text-sky-600 underline font-medium">
+              <Link
+                href="/Industries/medical-device/"
+                className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+              >
                 medical device
               </Link>
               ,{" "}
-              <Link href="#" className="text-sky-600 underline font-medium">
+              <Link
+                href="/Industries/cosmeceutical-research/"
+                className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+              >
                 cosmeceuticals
               </Link>
-              ,{" "}
-              <Link href="#" className="text-sky-600 underline font-medium">
-                herbal
-              </Link>
-              ,{" "}
-              <Link href="#" className="text-sky-600 underline font-medium">
-                pet health
-              </Link>
-              ,{" "}
-              <Link href="#" className="text-sky-600 underline font-medium">
-                life sciences
-              </Link>
-              , and healthcare organizations.
+              , herbal, pet health, life sciences, and healthcare organizations.
             </p>
 
             <p>
@@ -426,14 +432,14 @@ export default function ServicesResearchProductDevelopment({
               ))}
             </ul>
 
-            <p className="pt-2">
+            <p className="pt-1">
               We bring the depth of scientific rigor and cross-functional
               expertise needed to guide your discovery process with precision
               and speed.
             </p>
 
             {/* CTA Button */}
-            <div className="pt-4">
+            <div className="pt-1">
               <GetFreeQuoteButton />
             </div>
           </div>
@@ -454,22 +460,22 @@ export default function ServicesResearchProductDevelopment({
       </section>
 
       {/* What We Do Section */}
-      <section className="w-full bg-slate-50/60 py-16 px-4 sm:px-8 border-t border-gray-200/60">
+      <section className="w-full bg-slate-50/60 pt-6 pb-12 px-4 sm:px-8 border-t border-gray-200/60">
         <div className="max-w-7xl mx-auto">
-          <header className="mb-10 text-left">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#1b2b28] mb-2">
+          <header className="mb-6 text-left">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1b2b28] mb-1.5">
               What We Do
             </h2>
 
-            <h3 className="text-sm sm:text-base font-bold text-[#1b2b28] mb-4">
+            <h3 className="text-sm sm:text-base font-bold text-[#1b2b28] mb-3">
               Our Services – Discovery & Intelligence
             </h3>
 
             <p className="text-xs sm:text-sm text-gray-700 max-w-5xl leading-relaxed">
               At Pubrica, our{" "}
               <Link
-                href="#"
-                className="text-sky-600 underline font-medium"
+                href="/academy/discovery-and-intelligence/discovery-intelligence-drug-development/"
+                className="text-sky-600 font-medium hover:text-sky-700 no-underline"
               >
                 Discovery & Intelligence Services
               </Link>{" "}
@@ -478,8 +484,8 @@ export default function ServicesResearchProductDevelopment({
               devices. We provide a comprehensive service to R&D, regulatory,
               and{" "}
               <Link
-                href="#"
-                className="text-sky-600 underline font-medium"
+                href="/academy/discovery-and-intelligence/pharmaceutical-industry-drug-development-pricing-marketing/"
+                className="text-sky-600 font-medium hover:text-sky-700 no-underline"
               >
                 product development
               </Link>{" "}
@@ -520,7 +526,7 @@ export default function ServicesResearchProductDevelopment({
           </div>
 
           {/* Read More Toggle Button */}
-          <div className="mt-10 text-center">
+          <div className="mt-8 text-center">
             <button
               type="button"
               onClick={() => setShowAllServices(!showAllServices)}

@@ -80,51 +80,91 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
                 return (
                   <div key={link.label} className="grid">
-                    {/* LEVEL 0 MAIN HEADER (e.g., Services) */}
-                    <button
-                      onClick={() => toggleDropdown(link.label)}
-                      className={cn(
-                        'flex items-center justify-between text-left py-2 text-base font-medium text-gray-800 hover:text-primary-800 focus:outline-none cursor-pointer',
-                        isParentOpen && 'text-primary-800 font-semibold'
-                      )}
-                    >
-                      <span>{link.label}</span>
-                      {isParentOpen ? (
-                        <ChevronUp className="h-5 w-5" />
-                      ) : (
-                        <ChevronDown className="h-5 w-5" />
-                      )}
-                    </button>
+                    {/* LEVEL 0 MAIN HEADER */}
+                    <div className="flex items-center justify-between">
+                      {/* Main page link */}
+                      <Link
+                        href={link.href}
+                        onClick={onClose}
+                        className={cn(
+                          'flex-1 text-left py-2 text-base font-medium text-gray-800 hover:text-primary-800 transition-colors',
+                          pathname === link.href &&
+                          'text-primary-800 font-semibold'
+                        )}
+                      >
+                        {link.label}
+                      </Link>
+
+                      {/* Dropdown toggle */}
+                      <button
+                        type="button"
+                        onClick={() => toggleDropdown(link.label)}
+                        aria-label={`Toggle ${link.label} submenu`}
+                        aria-expanded={isParentOpen}
+                        className={cn(
+                          'p-2 text-gray-700 hover:text-primary-800 focus:outline-none cursor-pointer',
+                          isParentOpen && 'text-primary-800'
+                        )}
+                      >
+                        {isParentOpen ? (
+                          <ChevronUp className="h-5 w-5" />
+                        ) : (
+                          <ChevronDown className="h-5 w-5" />
+                        )}
+                      </button>
+                    </div>
 
                     {/* LEVEL 1 SUBMENU CONTAINER */}
                     {isParentOpen && (
                       <div className="grid gap-1 pl-4 mt-1 border-l-2 border-primary-100 py-1">
                         {mainSubItems.map((sublink: any) => {
-                          const level2Items = sublink.dropdown || sublink.items || sublink.children || sublink.submenu;
-                          const hasLevel2 = Array.isArray(level2Items) && level2Items.length > 0;
+                          const level2Items =
+                            sublink.dropdown ||
+                            sublink.items ||
+                            sublink.children ||
+                            sublink.submenu;
+
+                          const hasLevel2 =
+                            Array.isArray(level2Items) && level2Items.length > 0;
+
                           const subKey = sublink.label || sublink.href;
                           const isSubOpen = !!openDropdowns[subKey];
 
                           if (hasLevel2) {
                             return (
                               <div key={subKey} className="grid">
-                                {/* LEVEL 1 ITEM WITH SUBMENU (e.g., Editing & Translation) */}
-                                <button
-                                  onClick={() => toggleDropdown(subKey)}
-                                  className={cn(
-                                    'flex items-center justify-between text-left py-2 text-sm font-medium text-gray-700 hover:text-primary-800 focus:outline-none cursor-pointer',
-                                    isSubOpen && 'text-primary-800 font-semibold'
-                                  )}
-                                >
-                                  <span>{sublink.label}</span>
-                                  {isSubOpen ? (
-                                    <ChevronUp className="h-4 w-4" />
-                                  ) : (
-                                    <ChevronDown className="h-4 w-4" />
-                                  )}
-                                </button>
+                                {/* LEVEL 1 ITEM */}
+                                <div className="flex items-center justify-between">
+                                  {/* Submenu page link */}
+                                  <Link
+                                    href={sublink.href}
+                                    onClick={onClose}
+                                    className={cn(
+                                      'flex-1 text-left py-2 text-sm font-medium text-gray-700 hover:text-primary-800 transition-colors',
+                                      pathname === sublink.href &&
+                                      'text-primary-800 font-semibold'
+                                    )}
+                                  >
+                                    {sublink.label}
+                                  </Link>
 
-                                {/* LEVEL 2 SUBMENU (e.g., Scientific Editing, Manuscript Editing) */}
+                                  {/* Submenu toggle */}
+                                  <button
+                                    type="button"
+                                    onClick={() => toggleDropdown(subKey)}
+                                    aria-label={`Toggle ${sublink.label} submenu`}
+                                    aria-expanded={isSubOpen}
+                                    className="p-2 text-gray-600 hover:text-primary-800 focus:outline-none cursor-pointer"
+                                  >
+                                    {isSubOpen ? (
+                                      <ChevronUp className="h-4 w-4" />
+                                    ) : (
+                                      <ChevronDown className="h-4 w-4" />
+                                    )}
+                                  </button>
+                                </div>
+
+                                {/* LEVEL 2 SUBMENU */}
                                 {isSubOpen && (
                                   <div className="grid gap-1 pl-3 border-l-2 border-gray-200 my-1 ml-1">
                                     {level2Items.map((nestedLink: any) => (
@@ -134,7 +174,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                                         className={cn(
                                           'py-1.5 text-xs text-gray-600 hover:text-primary-800 transition-colors',
                                           pathname === nestedLink.href &&
-                                            'text-primary-800 font-bold'
+                                          'text-primary-800 font-bold'
                                         )}
                                         onClick={onClose}
                                       >
@@ -155,7 +195,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                               className={cn(
                                 'py-2 text-sm text-gray-600 hover:text-primary-800 transition-colors',
                                 pathname === sublink.href &&
-                                  'text-primary-800 font-semibold'
+                                'text-primary-800 font-semibold'
                               )}
                               onClick={onClose}
                             >
@@ -178,7 +218,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   className={cn(
                     'py-2 text-base font-medium text-gray-800 hover:text-primary-800 transition-colors',
                     isActive &&
-                      'text-primary-800 font-bold border-l-4 border-primary-800 pl-2'
+                    'text-primary-800 font-bold border-l-4 border-primary-800 pl-2'
                   )}
                   onClick={onClose}
                 >

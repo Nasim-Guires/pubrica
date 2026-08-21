@@ -14,10 +14,10 @@ export default function WhatWeDo() {
   const selectedCategoryData = SERVICES_CATEGORIES[activeCategory];
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-10 lg:py-12">
       <Container>
         {/* Top Header Information Section */}
-        <div className="max-w-7xl mx-auto mb-12">
+        <div className="max-w-7xl mx-auto mb-6">
           <div className="flex flex-col md:flex-row md:items-center gap-4 mb-6">
             <h2 className="text-3xl font-bold tracking-tight text-[#1a4d4a] font-display whitespace-nowrap">
               What We Do
@@ -62,11 +62,10 @@ export default function WhatWeDo() {
                   <button
                     key={key}
                     onClick={() => setActiveCategory(key as any)}
-                    className={`w-full text-left px-5 py-4 text-sm font-medium border-b border-[#245d5a] transition-all duration-150 ${
-                      isActive
+                    className={`w-full text-left px-5 py-4 text-sm font-medium border-b border-[#245d5a] transition-all duration-150 ${isActive
                         ? "bg-white text-gray-900 border-r-0 font-semibold"
                         : "text-gray-100 hover:bg-[#153e3b]"
-                    }`}
+                      }`}
                   >
                     {category.title}
                   </button>
@@ -89,7 +88,7 @@ export default function WhatWeDo() {
 
               {/* Dynamic Service Grid Cards */}
               {selectedCategoryData?.subServices &&
-              selectedCategoryData.subServices.length > 0 ? (
+                selectedCategoryData.subServices.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {selectedCategoryData.subServices.map((sub, index) => (
                     <div

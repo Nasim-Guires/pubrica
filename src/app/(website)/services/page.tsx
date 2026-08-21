@@ -8,11 +8,11 @@ import CTA from "@/components/shared/CTA";
 import FAQ from "@/components/shared/FAQ";
 import Image from "next/image";
 
-// Static services array matching the text content and structure from the images
+// Corrected services array mapping cleanly to `/services/{slug}`
 const LOCAL_SERVICES_DATA = [
   {
     title: "Editing Service",
-    slug: "/editing-and-translation",
+    slug: "editing-and-translation",
     shortDescription:
       "Substantive, medium, and low—these are the various levels of copyediting we offer. Our in-house translators will do the translation.",
     imageUrl: "/images/services/Editing-Service.jpg",
@@ -54,7 +54,7 @@ const LOCAL_SERVICES_DATA = [
   },
   {
     title: "Statistics Service",
-    slug: "statistics-service",
+    slug: "data-analytics-machine-learning",
     shortDescription:
       "Pubrica statisticians have decades of expertise in the sector, delivering timely and reliable reports, statistical summaries, and efficacy and safety studies.",
     imageUrl: "/images/services/Statistics-Service.jpg",
@@ -82,14 +82,14 @@ const LOCAL_SERVICES_DATA = [
   },
   {
     title: "Education Content",
-    slug: "education-content",
+    slug: "educational-content-development",
     shortDescription:
       "Pubrica offers Educational Content development services for education providers, software developers and leaders worldwide.",
     imageUrl: "/images/services/Education-Content-1.jpg",
   },
   {
     title: "Translation Service",
-    slug: "translation-service",
+    slug: "editing-and-translation",
     shortDescription:
       "Pubrica has a qualified translator with subject-matter experience produces a precise translation. The translation and editing steps include a peer-review procedure.",
     imageUrl: "/images/services/Translation-Service.webp",
@@ -140,9 +140,9 @@ export default function ServicesPage() {
 
           {/* Overlapping Content Box Cards Layout Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14 mt-8">
-            {LOCAL_SERVICES_DATA.map((service) => (
+            {LOCAL_SERVICES_DATA.map((service, index) => (
               <Link
-                key={service.slug}
+                key={`${service.slug}-${index}`}
                 href={`/services/${service.slug}`}
                 className="flex flex-col bg-white border border-gray-100 rounded-lg shadow-sm overflow-hidden border-b-4 border-b-emerald-600 hover:shadow-md transition-all duration-300 group"
               >

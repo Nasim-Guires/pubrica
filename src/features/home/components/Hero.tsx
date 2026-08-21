@@ -10,11 +10,7 @@ export default function HomeHeroWithAbout() {
   return (
     <>
       {/* --- HERO SECTION --- */}
-      {/* 
-        mt-[-190px] (or enough height to pull the hero up behind the navbar) 
-        and pt-[190px] so the background image fills the very top of the screen.
-      */}
-      <section className="relative text-white mt-[-190px] pt-[210px] pb-[100px] lg:pt-[230px] overflow-hidden select-none">
+      <section className="relative text-white mt-[-190px] pt-[210px] pb-[100px] lg:pt-[230px] overflow-visible select-none">
         <Image
           src="/images/home/banner1-min-scaled-8.jpg"
           alt=""
@@ -43,20 +39,32 @@ export default function HomeHeroWithAbout() {
 
           {/* Pill Button CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 w-full sm:w-auto">
-            <Link href="/services/editing" className="w-full sm:w-auto">
-              <button className="w-full sm:w-auto bg-[#042522]/60 hover:bg-[#042522]/90 border border-emerald-950/50 text-white font-semibold px-8 py-3.5 rounded-full text-[15px] tracking-wide transition-all shadow-inner focus:outline-none cursor-pointer">
+            <Link
+              href="/services/editing-and-translation/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <button className="w-full sm:w-auto bg-[#042522] hover:bg-white border border-[#042522] text-white hover:text-[#042522] font-semibold px-8 py-3.5 rounded-full text-[15px] tracking-wide transition-all shadow-inner focus:outline-none cursor-pointer">
                 Editing & Translation
               </button>
             </Link>
-            <Link href="/services/publication" className="w-full sm:w-auto">
-              <button className="w-full sm:w-auto bg-white hover:bg-gray-50 text-[#073632] font-bold px-8 py-3.5 rounded-full text-[15px] tracking-wide transition-all shadow-md focus:outline-none cursor-pointer">
+
+            <Link
+              href="/services/publication-support/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <button className="w-full sm:w-auto bg-white hover:bg-[#042522] border border-[#042522] text-[#073632] hover:text-white font-bold px-8 py-3.5 rounded-full text-[15px] tracking-wide transition-all shadow-md focus:outline-none cursor-pointer">
                 Publication Support
               </button>
             </Link>
           </div>
 
           {/* Feature 3D Flipping Cards Grid */}
-          <div className="w-full max-w-6xl mx-auto mt-16 z-20 mb-[-100px]">
+          {/* Changed -mb to -mb-[180px] so ~70% of the card sits over the white background */}
+          <div className="w-full max-w-6xl mx-auto mt-16 z-20 -mb-[180px]">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
               {/* Card 1: Solutions Card */}
               <div className="group h-[250px] [perspective:1000px]">
@@ -141,48 +149,49 @@ export default function HomeHeroWithAbout() {
       </section>
 
       {/* --- ABOUT US SECTION --- */}
-      <section className="bg-white pt-32 pb-20 lg:pt-40 lg:pb-28">
-        <Container className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Column: Overlapping Lab Images Layout */}
-            <div className="lg:col-span-5 relative w-full aspect-[865/744] min-h-[280px]">
-              <Image
-                src="/images/home/1.webp"
-                alt="Algorithm Development"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 40vw"
-              />
-            </div>
-
-            {/* Right Column: Text Content matching image layout */}
-            <div className="lg:col-span-7 flex flex-col items-start">
-              <span className="text-sky-600 font-bold text-sm tracking-wider uppercase mb-3 font-sans">
-                About Us
-              </span>
-
-              <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-slate-900 tracking-tight leading-[1.3] font-display max-w-2xl">
-                With 20+ years of groundbreaking contributions, we assist
-                researchers in attaining research success with effectiveness and
-                efficiency. We demonstrate proficiency in various fields and
-                subfields of medical science with an extensive track record.
-              </h2>
-
-              <p className="text-gray-600 text-sm sm:text-base font-sans mt-5 leading-relaxed tracking-wide max-w-3xl">
-                Pubrica is your reliable companion that helps you achieve new
-                heights in research. Here, we transform your original ideas into
-                straightforward reports that are supported by empirical
-                evidence.
-              </p>
-              <p className="text-gray-600 text-sm sm:text-base font-sans mt-5 leading-relaxed tracking-wide max-w-3xl">
-                Our versatile team of researchers and editors works in
-                coordination with clinical experts to cross-verify methodologies
-                to ensure accurate findings. Using our strong statistical
-                capabilities, we derive remarkable outcomes each time.
-              </p>
-            </div>
+      {/* Adjusted padding top (pt-52 lg:pt-56) to ensure clear spacing below the cards */}
+      <section className="bg-white pt-28 pb-20 lg:pt-32 lg:pb-8">
+                <Container className="max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Left Column: Image */}
+          <div className="lg:col-span-5 relative w-full aspect-[865/744] min-h-[280px]">
+            <Image
+              src="/images/home/1.webp"
+              alt="Algorithm Development"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+            />
           </div>
-        </Container>
+
+          {/* Right Column: Text Content */}
+          <div className="lg:col-span-7 flex flex-col items-start">
+            <span className="text-sky-600 font-bold text-sm tracking-wider uppercase mb-3 font-sans">
+              About Us
+            </span>
+
+            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-slate-900 tracking-tight leading-[1.3] font-display max-w-2xl">
+              With 20+ years of groundbreaking contributions, we assist
+              researchers in attaining research success with effectiveness and
+              efficiency. We demonstrate proficiency in various fields and
+              subfields of medical science with an extensive track record.
+            </h2>
+
+            <p className="text-gray-600 text-sm sm:text-base font-sans mt-5 leading-relaxed tracking-wide max-w-3xl">
+              Pubrica is your reliable companion that helps you achieve new
+              heights in research. Here, we transform your original ideas into
+              straightforward reports that are supported by empirical evidence.
+            </p>
+
+            <p className="text-gray-600 text-sm sm:text-base font-sans mt-5 leading-relaxed tracking-wide max-w-3xl">
+              Our versatile team of researchers and editors works in coordination
+              with clinical experts to cross-verify methodologies to ensure
+              accurate findings. Using our strong statistical capabilities, we
+              derive remarkable outcomes each time.
+            </p>
+          </div>
+        </div>
+      </Container>
       </section>
     </>
   );

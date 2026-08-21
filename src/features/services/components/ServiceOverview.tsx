@@ -1,20 +1,34 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-// Key phrases dynamically styled as light blue links in the text
+// Key phrases dynamically styled in the text (sorted long-to-short for regex priority)
 const BLUE_LINKS = [
-  "medical device",
+  "pre-submission peer review",
+  "research paper publication services",
+  "scientific journal publication services",
+  "journal publication services",
   "CONSORT, PRISMA, STROBE",
   "COPE, ICMJE, GPP",
-  "peer-review",
-  "research paper publication services",
-  "journal publication services",
+  "medical device",
   "journal submission",
-  "peer review",
   "journal selection",
-  "scientific journal publication services",
+  "peer-review",
+  "Peer Review",
+  "peer review",
 ];
+
+// Mapping specific phrases to actual URL routes
+const ROUTE_MAP: Record<string, string> = {
+  "medical device":
+    "/services/publication-support/poster-preparation/european-society-for-medical-oncology/",
+  "pre-submission peer review":
+    "/academy/peer-review/how-publishers-balance-authors-and-reviewers/",
+  "peer-review": "/services/publication-support/peer-review-pre-submission/",
+  "Peer Review": "/academy/peer-review/peer-review-week-2025-ai-era/",
+  "peer review": "/academy/peer-review/peer-review-week-2025-ai-era/",
+};
 
 const COMPLIANCE_ITEMS = [
   {
@@ -42,16 +56,18 @@ const COMPLIANCE_ITEMS = [
 const overviewHeading =
   "Publication Support Services for Life Sciences, Pharma, and Research: Streamlining Your Path to Publication";
 
+// Content matching the screenshot layout
 const overview = [
   "Transforming high-quality research into publication-ready manuscripts that are compliant with researchers' fields of science and have an impact on science, without compromising scientific integrity and ethical standards.",
-  "In today's competitive, compliance-focused publishing environment, published research outputs must be technically sound, but also ethically/compliant, publication-ready, and targeted for visibility.",
+  "In today's competitive, compliance-focused publishing environment, published research outputs must be technically sound, but also ethically / compliant, publication-ready, and targeted for visibility.",
   "Researchers, pharma teams, and medical device companies increasingly need assistance with:",
   "• Manuscript structure and reporting guidelines (e.g., CONSORT, PRISMA, STROBE)",
-  "• Ethical standards, transparency, and compliance (COPE, ICMJE, GPP)",
+  "• Ethical standards, transparency, and complaint (COPE, ICMJE, GPP)",
   "• Accuracy in formats, references, language, and more technical aspects",
   "• Responding scientifically to peer-review comments and questions",
   "• Submitting and navigating submission portals and pre-submission checks efficiently",
   "However, researchers and pharma teams are hindered by complex formatting rules, ethical requirements, and polished, publication-ready manuscripts. Our research paper publication services and journal publication services have been designed to move you smoothly through the publication process to ensure it is compliant and impactful.",
+  "We provide a comprehensive range of value-added research paper publication services to assist researchers in publishing their manuscripts in international, peer-reviewed English journals.",
 ];
 
 const featureBullets = [
@@ -70,19 +86,43 @@ const authoringParagraphs = [
 
 export default function ServiceOverview() {
   const renderTextWithLinks = (text: string) => {
-    // Escape special regex characters like parentheses
-    const escapedLinks = BLUE_LINKS.map((link) =>
-      link.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+    // Sort keys by length (descending) so multi-word matches take priority
+    const sortedLinks = [...BLUE_LINKS].sort((a, b) => b.length - a.length);
+
+    // Escape special regex characters
+    const escapedLinks = sortedLinks.map((link) =>
+      link.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     );
-    const regex = new RegExp(`(${escapedLinks.join("|")})`, "g");
+    const regex = new RegExp(`(${escapedLinks.join("|")})`, "gi");
     const parts = text.split(regex);
 
     return parts.map((part, index) => {
-      if (BLUE_LINKS.includes(part)) {
+      // Find matching key case-insensitively
+      const matchedKey = BLUE_LINKS.find(
+        (link) => link.toLowerCase() === part.toLowerCase()
+      );
+
+      if (matchedKey) {
+        const href = ROUTE_MAP[matchedKey];
+
+        // Next.js Link without underlines
+        if (href) {
+          return (
+            <Link
+              key={index}
+              href={href}
+              className="text-[#3b82f6] hover:no-underline cursor-pointer font-medium transition-all no-underline inline"
+            >
+              {part}
+            </Link>
+          );
+        }
+
+        // Plain blue text span without underlines
         return (
           <span
             key={index}
-            className="text-[#3b82f6] hover:underline cursor-pointer font-medium transition-all"
+            className="text-[#3b82f6] hover:no-underline cursor-pointer font-medium transition-all no-underline inline"
           >
             {part}
           </span>
@@ -166,13 +206,6 @@ export default function ServiceOverview() {
 
         {/* Value-added Services & Lab Image Section */}
         <div className="pt-4 pb-10">
-          <p className="text-[15px] text-slate-700 leading-relaxed mb-6">
-            We provide a comprehensive range of value-added{" "}
-            {renderTextWithLinks("journal publication services")} to assist
-            researchers in publishing their manuscripts in international,
-            peer-reviewed English journals.
-          </p>
-
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Bullet List */}
             <div className="lg:col-span-7 space-y-3">

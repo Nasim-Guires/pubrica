@@ -35,7 +35,7 @@ export default function WhoWeWorkFor() {
   ];
 
   return (
-    <section className="bg-white py-20 relative select-none">
+    <section className="bg-white py-10 relative select-none">
       <Container className="flex flex-col gap-12">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative">
