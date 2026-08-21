@@ -21,6 +21,8 @@ type PublishedPaper = {
   author: string;
   publisher: string;
   impactFactor: string;
+  image: string;
+  link?: string;
 };
 
 const expertsData: Expert[] = [
@@ -54,30 +56,32 @@ const publishedPapersData: PublishedPaper[] = [
   {
     journal: 'Environmental Science & Technology',
     title: 'Geochemical and Isotopic Fingerprint-Based Identification of Sulfate Source Regional Characteristics and Evolution of Groundwater Impacted by Acid Mine Drainage (AMD) from a Nonferrous Metal Mining Area',
-    author: 'Bing Wang, Lei Ma*, Jiazhong Qian*, Yunhai Fang, Wei Xie, Dan Ding, Yang Long, Huan Zhou',
+    author: 'Bing Wang Lei Ma*Jiazhong Qian* Yunhai Fang Wei Xie Dan Ding Yang Long Huan Zhou',
     publisher: 'American Chemical Society',
     impactFactor: '11.7',
+    image: '/images/education-editorial-service/accessibility-compliance/JOURNAL-TEMPLATE-COVER-IMAGE-2.png',
   },
   {
     journal: 'AI & Society',
-    title: 'Title: Leveraging LLMs for interpreting historical sources: a case study of the Apple Lisa through critical code studies',
-    author: 'Author: Kauffmann, T. Leveraging',
-    publisher: 'Publisher: springer nature',
+    title: 'Leveraging LLMs for interpreting historical source code: a case study of the Apple Lisa through critical code studies',
+    author: 'Kauffmann, T. Leveraging',
+    publisher: 'springer nature',
     impactFactor: '4.7',
+    image: '/images/education-editorial-service/accessibility-compliance/JOURNAL-TEMPLATE-COVER-IMAGE-3.png',
   },
   {
     journal: 'Nature Biotechnology',
-    title: 'Title: A DNA language model for genome-wide variant alignment predicts functional effects',
-    author: 'Author: Benegas, G.',
-    publisher: 'Publisher: Nature Publishing Group',
+    title: 'A DNA language model based on multispecies alignment predicts the effects of genome-wide variants',
+    author: 'Benegas, G., Albors, C., Aw, A.J. et al.',
+    publisher: 'Nature Portfolio',
     impactFactor: '41.7',
+    image: '/images/education-editorial-service/accessibility-compliance/JOURNAL-TEMPLATE-COVER-IMAGE-.png',
   },
 ];
 
 const AccessibilityComplianceComprehensiveSection: NextPage = () => {
   const [isProcessOpen, setIsProcessOpen] = useState<boolean>(false);
-  
-  // Independent card state: grid items are independent, but we also ensure no spillover/shared indexing bugs
+  const marqueeItems = [...publishedPapersData, ...publishedPapersData];
   const [openWhyIndices, setOpenWhyIndices] = useState<{ [key: number]: boolean }>({});
 
   const toggleWhyAccordion = (index: number) => {
@@ -91,18 +95,18 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
     <>
       <Head>
         <title>Comprehensive Accessibility Compliance Services | Pubrica</title>
-        <meta 
-          name="description" 
-          content="Explore Pubrica's comprehensive accessibility compliance services for research articles, theses, textbooks, and academic manuscripts featuring expert verification and sample work." 
+        <meta
+          name="description"
+          content="Explore Pubrica's comprehensive accessibility compliance services for research articles, theses, textbooks, and academic manuscripts featuring expert verification and sample work."
         />
-        <link 
-          rel="canonical" 
-          href="https://pubrica.com/services/education-editorial-service/accessibility-compliance/" 
+        <link
+          rel="canonical"
+          href="https://pubrica.com/services/education-editorial-service/accessibility-compliance/"
         />
       </Head>
 
       <div className="w-full bg-white text-gray-800 py-12 px-4 md:px-8 space-y-20">
-        
+
         {/* SECTION 1: Accessibility Compliance Can Benefit A Range Of Documents & Experts */}
         <section className="max-w-6xl mx-auto space-y-12">
           <div className="text-center">
@@ -190,7 +194,7 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
         {/* SECTION 2: Fundamentals of the Accessibility Compliance Process (Accordion) */}
         <section className="max-w-5xl mx-auto">
           <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
-            <button 
+            <button
               onClick={() => setIsProcessOpen(!isProcessOpen)}
               className="w-full bg-[#0b3b2c] text-white p-4 text-left font-semibold flex justify-between items-center transition-colors"
             >
@@ -199,7 +203,7 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
                 <span>Fundamentals of the Accessibility Compliance Process</span>
               </span>
             </button>
-            
+
             {isProcessOpen && (
               <div className="bg-white p-6 md:p-8 space-y-4 text-gray-700 text-sm md:text-base border-t border-gray-200">
                 <ul className="space-y-3 list-disc pl-5">
@@ -256,7 +260,7 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
               const isOpen = !!openWhyIndices[idx];
               return (
                 <div key={idx} className="bg-[#f0f7f4] border border-[#d2e8de] rounded-lg overflow-hidden transition-all h-fit">
-                  <button 
+                  <button
                     onClick={() => toggleWhyAccordion(idx)}
                     className="w-full p-4 text-left font-bold text-[#0b3b2c] flex justify-between items-center text-base"
                   >
@@ -280,41 +284,138 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
         </section>
 
         {/* SECTION 4: Our Successfully Published Papers & Sample Work */}
-        <section className="max-w-6xl mx-auto space-y-12 pt-6">
-          <div className="text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0b3b2c] mb-2">
+        <section className="w-full py-12 bg-white">
+          <style jsx>{`
+            @keyframes marqueeScroll {
+              0% {
+                transform: translateX(0%);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+            .marquee-track {
+              display: flex;
+              width: max-content;
+              animation: marqueeScroll 25s linear infinite;
+            }
+            .marquee-track:hover {
+              animation-play-state: paused;
+            }
+            .pdf-scroll-container::-webkit-scrollbar {
+              width: 12px;
+              height: 12px;
+            }
+            .pdf-scroll-container::-webkit-scrollbar-track {
+              background: #e2e8f0;
+              border-radius: 6px;
+            }
+            .pdf-scroll-container::-webkit-scrollbar-thumb {
+              background: #94a3b8;
+              border-radius: 6px;
+              border: 2px solid #e2e8f0;
+            }
+            .pdf-scroll-container::-webkit-scrollbar-thumb:hover {
+              background: #64748b;
+            }
+          `}</style>
+
+          {/* Title Header */}
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#0b3b2c]">
               Our Successfully Published Papers
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {publishedPapersData.map((paper, idx) => (
-              <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                <div>
-                  <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">{paper.journal}</span>
-                  <h3 className="font-bold text-gray-900 text-sm mt-1 mb-2 line-clamp-3">{paper.title}</h3>
-                  <p className="text-xs text-gray-600 mb-1">{paper.author}</p>
-                  <p className="text-xs text-gray-500">Publisher: {paper.publisher}</p>
-                  <p className="text-xs font-semibold text-gray-700 mt-1">Impact Factor: {paper.impactFactor}</p>
+          {/* Marquee Wrapper Constrained to Max-Width */}
+          <div className="max-w-6xl mx-auto px-4 overflow-hidden relative">
+            <div className="marquee-track gap-5">
+              {marqueeItems.map((paper, idx) => (
+                <div
+                  key={idx}
+                  className="w-[360px] md:w-[420px] shrink-0 bg-white border border-gray-200 rounded-xl p-4 shadow-sm flex gap-3 text-left"
+                >
+                  <div className="relative w-24 h-36 shrink-0 rounded overflow-hidden border border-gray-100 bg-gray-50">
+                    <Image
+                      src={paper.image}
+                      alt={paper.journal}
+                      fill
+                      className="object-cover"
+                      sizes="96px"
+                    />
+                  </div>
+
+                  <div className="flex flex-col justify-between flex-grow min-w-0">
+                    <div className="space-y-1">
+                      <h3 className="font-bold text-gray-900 text-sm leading-snug truncate">
+                        {paper.journal}
+                      </h3>
+                      <p className="text-[11px] text-gray-700 line-clamp-3 leading-tight">
+                        <span className="font-semibold text-gray-900">Title: </span>
+                        {paper.title}
+                      </p>
+                      <p className="text-[11px] text-gray-700 truncate">
+                        <span className="font-semibold text-gray-900">Author: </span>
+                        {paper.author}
+                      </p>
+                      <p className="text-[11px] text-gray-700 truncate">
+                        <span className="font-semibold text-gray-900">Publisher: </span>
+                        {paper.publisher}
+                      </p>
+                      <p className="text-[11px] text-gray-700">
+                        <span className="font-semibold text-gray-900">Impact Factor: </span>
+                        {paper.impactFactor}
+                      </p>
+                    </div>
+
+                    <div className="mt-2">
+                      <Link
+                        href={paper.link || '#'}
+                        className="inline-block bg-[#111847] hover:bg-[#0c1236] text-white text-[11px] font-semibold py-1.5 px-5 rounded transition-colors"
+                      >
+                        Visit
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-6">
-                  <Link href="#" className="inline-block bg-[#0b3b2c] text-white text-xs font-bold py-2 px-6 rounded hover:bg-[#07281d] transition-colors">
-                    Visit
-                  </Link>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           {/* Sample Work Viewer Section */}
-            <div className="text-center pt-10 space-y-6">
-            <div>
-              <h3 className="text-2xl font-bold text-[#0b3b2c] mb-2">
+          {/* Sample Work Viewer Section */}
+          <div className="text-center pt-12 max-w-5xl mx-auto px-4 space-y-6">
+            {/* Section Header */}
+            <div className="space-y-3">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#0b3b2c]">
                 Explore Sample Work From Our Professional Accessibility Compliance
               </h3>
-              <p className="text-sm text-gray-600 max-w-2xl mx-auto">
+              <p className="text-sm text-gray-600 leading-relaxed max-w-3xl mx-auto">
                 Professional Accessibility Compliance Services, showcasing how we ensure academic and research manuscripts meet global accessibility standards. Our expert team enhances readability and usability for diverse audiences, ensuring your work is fully accessible across all digital platforms.
               </p>
+            </div>
+
+            {/* Card Outer Container */}
+            <div className="bg-[#f8fafc] border border-gray-100 rounded-2xl p-4 md:p-6 shadow-sm max-w-4xl mx-auto text-left space-y-3">
+              {/* Tab Button */}
+              <div>
+                <span className="inline-block bg-[#3b82f6] text-white text-xs md:text-sm font-semibold px-4 py-1.5 rounded-sm">
+                  Academic Manuscript
+                </span>
+                <hr className="border-gray-200 mt-2" />
+              </div>
+
+              {/* Dashed Border Container */}
+              <div className="border-2 border-dashed border-[#93c5fd] rounded-xl p-2 md:p-3 bg-white">
+                {/* Scrollable Viewport Container - Compact Box Height */}
+                <div className="pdf-scroll-container w-full h-[360px] md:h-[380px] overflow-auto rounded-lg bg-[#2a2a2e] relative shadow-inner">
+                  <iframe
+                    src="/images/education-editorial-service/accessibility-compliance/Accessibility-Compliance.pdf#toolbar=1&navpanes=1&zoom=36"
+                    className="w-[1000px] h-[650px] border-none"
+                    title="Sample Work - Accessibility Compliance PDF"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>

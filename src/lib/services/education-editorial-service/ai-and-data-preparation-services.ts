@@ -228,29 +228,43 @@ export const aiAndDataTestimonials = {
 };
 
 
-
 export const educationEditorialAiAndDataPreparationFaq = {
   title: "Frequently Asked Questions",
   faqs: [
     {
       question: "Why do I need AI & Data Preparation services?",
-      answer: "Poor-quality or unstructured data can severely impact AI model performance. Proper preparation ensures accuracy, reliability, and meaningful outcomes.",
+      answer:
+        "Poor-quality or unstructured data can severely impact AI model performance. Proper preparation ensures accuracy, reliability, and meaningful outcomes.",
     },
     {
       question: "What types of data do you prepare?",
-      answer: "Text, tabular, image, audio, and video data\nResearch and experimental datasets\nSurvey, clinical, and observational data\nAI training and validation datasets",
+      answer: "We support a wide variety of data formats and research types, including:",
+      points: [
+        "Text, tabular, image, audio, and video data",
+        "Research and experimental datasets",
+        "Survey, clinical, and observational data",
+        "AI training and validation datasets",
+      ],
     },
     {
       question: "What standards and best practices do you follow?",
-      answer: "AI and ML data preparation best practices\nEthical AI and responsible data principles\nInstitutional and research data standards\nPublisher and funding body requirements",
+      answer: "Our processes align with industry leading standards:",
+      points: [
+        "AI and ML data preparation best practices",
+        "Ethical AI and responsible data principles",
+        "Institutional and research data standards",
+        "Publisher and funding body requirements",
+      ],
     },
     {
       question: "Do you provide data annotation and labelling?",
-      answer: "Yes. We provide precise, context-aware annotation tailored to your AI or research objectives.",
+      answer:
+        "Yes. We provide precise, context-aware annotation tailored to your AI or research objectives.",
     },
     {
       question: "Do you customise data preparation for specific AI models?",
-      answer: "Yes. We tailor preprocessing, annotation, and structuring based on your AI model type, domain, and application.",
+      answer:
+        "Yes. We tailor preprocessing, annotation, and structuring based on your AI model type, domain, and application.",
     },
   ],
 };

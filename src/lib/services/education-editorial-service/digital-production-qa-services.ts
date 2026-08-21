@@ -199,7 +199,14 @@ export const educationEditorialDigitalProductionQaFaq = {
     },
     {
       question: "Who can benefit from these services?",
-      answer: "Academic publishers\nJournal editorial teams\nAuthors and researchers\nUniversities and research institutions\nProduction vendors",
+      answer: "Our QA services are designed to support a range of publishing stakeholders:",
+      points: [
+        "Academic publishers",
+        "Journal editorial teams",
+        "Authors and researchers",
+        "Universities and research institutions",
+        "Production vendors",
+      ],
     },
     {
       question: "What if major production errors are found?",

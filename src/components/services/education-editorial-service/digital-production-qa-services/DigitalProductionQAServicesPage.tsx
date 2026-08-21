@@ -2,20 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import type { FC } from "react";
 
-/**
- * Path: /education-editorial-service/digital-production-qa-services
- * Component: DigitalProductionQaServices
- *
- * Fully reusable, typed, SEO-friendly section for the
- * "Digital Production QA Services" page.
- *
- * Images use live Pubrica assets via next/image.
- */
-
 export interface QaServiceItem {
   id: string;
   title: string;
-  description: string;
+  description?: string;
+  points?: string[];
   iconSrc: string;
   iconLabel: string;
 }
@@ -53,48 +44,60 @@ const DEFAULT_OFFER_ITEMS: QaServiceItem[] = [
     id: "content-layout-qa",
     title: "Content & Layout QA",
     description:
-      "All digital formats have been checked for accuracy of text, format, page numbers, headings, tables, figures, and overall layout consistency across every output format.",
-    iconSrc: "/images/education-editorial-service/digital-production-qa-services/Content-Layout-QA.webp",
+      "All digital formats have been checked for accuracy of text, format, page numbers, headings, tables, figures, references, and captions.",
+    iconSrc:
+      "/images/education-editorial-service/digital-production-qa-services/Content-Layout-QA.webp",
     iconLabel: "Content and layout QA icon",
   },
   {
     id: "xml-metadata-qa",
     title: "XML & Metadata QA",
     description:
-      "The XML structure, tags, and metadata of an article must be validated by our staff. They do this through various automated and manual checks to ensure indexing accuracy.",
-    iconSrc: "/images/education-editorial-service/digital-production-qa-services/XML-Metadata-QA.webp",
+      "The XML structure, tags, and metadata of an article must be validated by our staff. They do this through various methods, which include checking that the XML is proper by the standards set out in the DTD, or JATS, so that it is easy to index and find.",
+    iconSrc:
+      "/images/education-editorial-service/digital-production-qa-services/XML-Metadata-QA.webp",
     iconLabel: "XML and metadata QA icon",
   },
   {
     id: "proofreading-typesetting-qa",
     title: "Proofreading & Typesetting QA",
     description:
-      "An examination of typeset proofs to find typographical errors, improper formatting, incorrect fonts, improper spacing, and other presentation issues before final release.",
-    iconSrc: "/images/education-editorial-service/digital-production-qa-services/Proofreading-Typesetting-QA.webp",
+      "An examination of typeset proofs to find typographical errors, improper formatting, incorrect fonts, improper spacing, and incorrect alignment.",
+    iconSrc:
+      "/images/education-editorial-service/digital-production-qa-services/Proofreading-Typesetting-QA.webp",
     iconLabel: "Proofreading and typesetting QA icon",
   },
   {
     id: "accessibility-compliance-qa",
     title: "Accessibility & Compliance QA",
     description:
-      "We guarantee that we comply with Current Good Practices (CGP) for Accessibility according to global accessibility standards and publisher-specific requirements.",
-    iconSrc: "/images/education-editorial-service/digital-production-qa-services/Accessibility-Compliance-QA.webp",
+      "We guarantee that we comply with Current Good Practices (CGP) for Accessibility according to both formal and personal Publisher Specific CGP guidelines.",
+    iconSrc:
+      "/images/education-editorial-service/digital-production-qa-services/Accessibility-Compliance-QA.webp",
     iconLabel: "Accessibility and compliance QA icon",
   },
   {
     id: "post-publication-qa",
     title: "Post-Publication QA",
     description:
-      "Post-publication audits are conducted to identify any errors and make necessary corrections of errors on all published platforms and distribution channels.",
-    iconSrc: "/images/education-editorial-service/digital-production-qa-services/Post-Publication-QA.webp",
+      "Post-publication audits are conducted to identify any errors and make necessary corrections of errors on ALL live content in ALL journal and other repository platforms.",
+    iconSrc:
+      "/images/education-editorial-service/digital-production-qa-services/Post-Publication-QA.webp",
     iconLabel: "Post publication QA icon",
   },
   {
     id: "compliance-regulatory-audit",
     title: "Compliance and Regulatory Audit",
-    description:
-      "We audit your research content for adherence to global scientific and ethical guidelines, ensuring every publication meets regulatory and journal-specific standards.",
-    iconSrc: "/images/education-editorial-service/digital-production-qa-services/Compliance-and-Regulatory-Audit.webp",
+    points: [
+      "COPE (Publication Ethics)",
+      "ICMJE (Authorship & Manuscript Requirements)",
+      "CONSORT (Clinical Trials Reporting)",
+      "PRISMA (Systematic Reviews)",
+      "ARRIVE (Animal Research)",
+      "GCP, GLP, and IRB requirements",
+    ],
+    iconSrc:
+      "/images/education-editorial-service/digital-production-qa-services/Compliance-and-Regulatory-Audit.webp",
     iconLabel: "Compliance and regulatory audit icon",
   },
 ];
@@ -116,121 +119,139 @@ const DigitalProductionQaServices: FC<DigitalProductionQaServicesProps> = ({
   return (
     <section
       aria-labelledby="digital-production-qa-heading"
-      className="w-full bg-white"
+      className="w-full bg-white text-gray-800"
     >
-      {/* Hero */}
-      <div className="w-full bg-gradient-to-b from-[#0b3b3c] to-[#123a3a] py-14 px-4 sm:px-8">
-        <div className="mx-auto max-w-5xl rounded-md border border-white/20 px-6 py-10 text-center sm:px-12">
+      {/* HERO BANNER SECTION */}
+      <div className="w-full bg-[#1b3b32] py-12 px-4 sm:px-8">
+        <div className="mx-auto max-w-5xl rounded-lg border border-[#2b5447] bg-[#1b3b32] px-6 py-10 text-center text-white sm:px-12">
           <h1
             id="digital-production-qa-heading"
-            className="text-2xl font-bold text-white sm:text-3xl md:text-4xl"
+            className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl"
           >
             {heroTitle}
           </h1>
-          <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-white/90 sm:text-base">
+          <p className="mx-auto mt-3 max-w-3xl text-xs leading-relaxed text-gray-200 sm:text-sm">
             {heroDescription}
           </p>
         </div>
       </div>
 
-      {/* Intro + services help */}
-      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-8">
-        <h2 className="text-2xl font-bold text-[#0b3b3c] sm:text-3xl">
+      {/* INTRO & OFFSET FLOATING IMAGE SECTION */}
+      <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 md:px-8">
+        <h2 className="text-xl font-bold text-[#0b3b2c] sm:text-2xl md:text-3xl">
           {introHeading}
         </h2>
 
-        <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-start">
-          <div>
+        <div className="mt-6 grid grid-cols-1 items-start gap-8 md:grid-cols-12">
+          <div className="space-y-4 md:col-span-7">
             {introParagraphs.map((paragraph, index) => (
               <p
                 key={`intro-paragraph-${index}`}
-                className="mt-4 text-sm leading-relaxed text-gray-700 first:mt-0 sm:text-base"
+                className="text-xs leading-relaxed text-gray-700 sm:text-sm md:text-base"
               >
                 {paragraph}
               </p>
             ))}
+
+            <div className="pt-2">
+              <h3 className="text-sm font-bold text-gray-900 sm:text-base">
+                {servicesHelpHeading}
+              </h3>
+              <ul className="mt-3 space-y-2 text-xs sm:text-sm text-gray-700">
+                {servicesHelpList.map((item, index) => (
+                  <li
+                    key={`services-help-${index}`}
+                    className="flex items-start space-x-2"
+                  >
+                    <span className="mt-0.5 text-xs text-[#c5221f]">▪</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="pt-5">
+                <Link
+                  href={ctaHref}
+                  className="inline-block rounded-full bg-[#c5221f] px-6 py-2.5 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-[#a31a18] sm:text-sm"
+                >
+                  {ctaLabel}
+                </Link>
+              </div>
+            </div>
           </div>
 
-          <div className="relative h-72 w-full rounded-md bg-[#0b3b3c] p-3 sm:h-80 lg:h-full lg:min-h-[320px]">
-            <div className="relative h-full w-full overflow-hidden rounded-sm">
-              <Image
-                src="/images/education-editorial-service/digital-production-qa-services/Digital-Production-QA-Services.webp"
-                alt={heroImageLabel}
-                fill
-                className="object-cover"
-                sizes="(max-width:1024px)100vw,40vw"
-              />
+          <div className="relative mt-2 flex justify-center md:col-span-5 md:mt-0 md:justify-end">
+            <div className="relative h-[210px] w-full max-w-[360px] sm:h-[230px]">
+              <div className="absolute -bottom-4 -left-4 -z-10 h-full w-full rounded-2xl bg-[#1b3b32]" />
+              <div className="relative h-full w-full overflow-hidden rounded-2xl bg-gray-100 shadow-md">
+                <Image
+                  src="/images/education-editorial-service/digital-production-qa-services/Digital-Production-QA-Services.webp"
+                  alt={heroImageLabel}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 360px"
+                />
+              </div>
             </div>
           </div>
         </div>
-
-        {/* Our services help you */}
-        <div className="mt-10">
-          <h3 className="text-lg font-bold text-gray-900 sm:text-xl">
-            {servicesHelpHeading}
-          </h3>
-          <ul className="mt-4 space-y-3">
-            {servicesHelpList.map((item, index) => (
-              <li
-                key={`services-help-${index}`}
-                className="flex items-start gap-3 text-sm leading-relaxed text-gray-700 sm:text-base"
-              >
-                <span
-                  aria-hidden="true"
-                  className="mt-2 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-red-600"
-                />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-
-          <Link
-            href={ctaHref}
-            className="mt-8 inline-block rounded-md bg-red-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-red-700 sm:text-base"
-          >
-            {ctaLabel}
-          </Link>
-        </div>
       </div>
 
-      {/* Types of services we offer */}
-      <div className="mx-auto max-w-6xl px-4 pb-16 sm:px-8">
-        <h2 className="text-2xl font-bold text-[#0b3b3c] sm:text-3xl">
-          {offerHeading}
-        </h2>
-        <p className="mt-4 max-w-4xl text-sm leading-relaxed text-gray-700 sm:text-base">
-          {offerDescription}
-        </p>
+      {/* TYPES OF QA SERVICES WE OFFER SECTION */}
+      <div className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 md:px-8">
+        <div className="space-y-3">
+          <h2 className="text-xl font-bold text-[#0b3b2c] sm:text-2xl md:text-3xl">
+            {offerHeading}
+          </h2>
+          <p className="max-w-4xl text-xs leading-relaxed text-gray-700 sm:text-sm">
+            {offerDescription}
+          </p>
+        </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {offerItems.map((service) => (
-            <article
+            <div
               key={service.id}
-              className="relative flex gap-4 rounded-md border border-gray-200 bg-white p-5 shadow-sm"
+              className="relative flex items-start space-x-4 overflow-hidden rounded-2xl border border-gray-100 bg-white p-5 shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-shadow hover:shadow-md min-h-[160px]"
             >
-              <span
-                aria-hidden="true"
-                className="absolute right-0 top-5 h-10 w-1 rounded-l bg-red-600"
-              />
-              <div className="relative h-11 w-11 flex-shrink-0">
+              {/* Left Side Icon */}
+              <div className="relative h-10 w-10 shrink-0">
                 <Image
                   src={service.iconSrc}
                   alt={service.iconLabel}
                   fill
                   className="object-contain"
-                  sizes="44px"
+                  sizes="40px"
                 />
               </div>
 
-              <div>
-                <h3 className="text-base font-bold text-gray-900">
+              {/* Right Side Content */}
+              <div className="relative flex-1 space-y-1 pr-3">
+                <div className="absolute right-0 top-1 bottom-1 w-[2px] rounded-full bg-gray-800" />
+
+                <h3 className="text-xs font-bold leading-snug text-gray-900 md:text-sm">
                   {service.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                  {service.description}
-                </p>
+
+                {/* Paragraph Description */}
+                {service.description && (
+                  <p className="line-clamp-4 text-[11px] leading-relaxed text-gray-600 md:text-xs">
+                    {service.description}
+                  </p>
+                )}
+
+                {/* Bulleted Points List matching screenshot */}
+                {service.points && service.points.length > 0 && (
+                  <ul className="mt-1 space-y-0.5 list-disc list-inside text-[11px] text-gray-600 md:text-xs">
+                    {service.points.map((pt, pIdx) => (
+                      <li key={pIdx} className="leading-snug">
+                        {pt}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
-            </article>
+            </div>
           ))}
         </div>
       </div>
