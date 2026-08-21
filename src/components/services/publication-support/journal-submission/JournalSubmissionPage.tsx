@@ -17,7 +17,7 @@ const accordionData = [
       <span>
         Language polishing and scientific editing for clarity and precision (
         <Link
-          href="/academy/manuscript-editing/from-research-to-final-draft-best-practices-in-manuscript-editing/"
+          href="academy/manuscript-editing/from-research-to-final-draft-best-practices-in-manuscript-editing"
           className="text-[#0082a6] hover:underline font-medium"
         >
           academic manuscript editing
@@ -47,7 +47,7 @@ const accordionData = [
         </Link>{" "}
         and{" "}
         <Link
-          href="/services/prisma-flow-diagrams"
+          href="https://static1.squarespace.com/static/65b880e13b6ca75573dfe217/t/67ad313f1c80aa5235fce0d0/1739403584136/PRISMA_2020_checklist.pdf"
           className="text-[#0082a6] hover:underline font-medium"
         >
           PRISMA
@@ -99,7 +99,7 @@ const accordionData = [
       <span>
         Improve the{" "}
         <Link
-          href="/services/publication-support/peer-review-pre-submission/"
+          href="/services/publication-support/peer-review-pre-submission"
           className="text-[#0082a6] hover:underline font-medium"
         >
           peer review
@@ -125,7 +125,7 @@ const accordionData = [
       <span>
         Composing authors' direct{" "}
         <Link
-          href="/services/publication-support/responding-to-reviewers/"
+          href="/services/publication-support/responding-to-reviewers"
           className="text-[#0082a6] hover:underline font-medium"
         >
           response to reviewers
@@ -350,7 +350,7 @@ export default function JournalSubmissionPage() {
           <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-8 max-w-4xl">
             At Pubrica, we provide an end-to-end{" "}
             <Link
-              href="/services/academic-journals-submission-service"
+              href="/insights/sample-work/journal-submission-report-sample"
               className="text-[#0082a6] hover:underline font-medium"
             >
               academic journals submission service

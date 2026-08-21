@@ -5,7 +5,7 @@ interface ServiceCard {
   description: string;
   linkText?: string;
   iconUrl: string;
-  slug: string;
+  url: string;
 }
 
 const SERVICES_GRID_DATA: ServiceCard[] = [
@@ -15,21 +15,21 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
       "Enhance your manuscript's publication prospects with Pubrica's",
     linkText: "Journal Selection.",
     iconUrl: "/images/publication-support/journal-selection.png",
-    slug: "journal-selection",
+    url: "/services/publication-support/journal-selection",
   },
   {
     title: "Pre-Submission Peer Review",
     description:
       "Optimize your manuscript's quality with Pubrica's Pre-Submission.",
     iconUrl: "/images/publication-support/Pre-Submission.png",
-    slug: "pre-submission-peer-review",
+    url: "/services/publication-support/peer-review-pre-submission",
   },
   {
     title: "Journal Submission",
     description:
       "Maximize your manuscript's potential with Pubrica's Journal Submission.",
     iconUrl: "/images/publication-support/Journal-Submission-480x480.png",
-    slug: "journal-submission",
+    url: "/services/publication-support/journal-submission",
   },
   {
     title: "Response To Reviewers",
@@ -37,7 +37,7 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
       "Refine your manuscript with Pubrica's Response to Reviewers Service.",
     iconUrl:
       "/images/publication-support/Response-To-Reviewers-480x480.png",
-    slug: "response-to-reviewers",
+    url: "/services/publication-support/responding-to-reviewers",
   },
   {
     title: "Poster Presentation",
@@ -45,7 +45,7 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
       "Enhance your presentation with Pubrica's Poster Creation & Design Service.",
     iconUrl:
       "/images/publication-support/Poster-Creation-480x480.png",
-    slug: "poster-presentation",
+    url: "/services/publication-support/poster-preparation",
   },
   {
     title: "Formatting Service",
@@ -53,7 +53,7 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
       "Ensure your manuscript meets standards with Pubrica's precise Formatting Service.",
     iconUrl:
       "/images/publication-support/Formatting-Service-480x480.png",
-    slug: "formatting-service",
+    url: "/services/publication-support/journal-manuscript-formatting-services",
   },
   {
     title: "Artwork Editing Service",
@@ -61,7 +61,7 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
       "Improve your artwork with Pubrica's expert Artwork Editing Service.",
     iconUrl:
       "/images/publication-support/Artwork-Editing-Service-480x480.png",
-    slug: "artwork-editing-service",
+    url: "/services/publication-support/art-work-preparation",
   },
   {
     title: "Plagiarism service",
@@ -69,7 +69,7 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
       "Improve your chances of publication with Pubrica's Plagiarism Service.",
     iconUrl:
       "/images/publication-support/Plagiarism-service-480x480.png",
-    slug: "plagiarism-service",
+    url: "/services/publication-support/plagiarism-services",
   },
   {
     title: "Video Abstract",
@@ -77,7 +77,7 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
       "Transform your draft into a compelling Video Abstract with Pubrica's expert Service.",
     iconUrl:
       "/images/publication-support/Video-Abstract--480x480.png",
-    slug: "video-abstract",
+    url: "/services/publication-support/video-abstract",
   },
   {
     title: "Manuscript Writing",
@@ -85,7 +85,7 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
       "Enhance your publication with Pubrica's Manuscript Writing Service.",
     iconUrl:
       "/images/publication-support/Manuscript-Writing--480x480.png",
-    slug: "manuscript-writing",
+    url: "/services",
   },
   {
     title: "Audio Abstract",
@@ -93,7 +93,7 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
       "Transform your draft into a compelling Audio Abstract with Pubrica's expert Service.",
     iconUrl:
       "/images/publication-support/audio-Abstract--480x480.png",
-    slug: "audio-abstract",
+    url: "/services",
   },
   {
     title: "Infographic Abstract",
@@ -101,7 +101,7 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
       "Make complex data easy to understand through Pubrica's Infographic Abstract Service.",
     iconUrl:
       "/images/publication-support/Infographic-Abstract-480x480.png",
-    slug: "infographic-abstract",
+    url: "/services",
   },
   {
     title: "Slide Abstract / Slide Deck",
@@ -109,7 +109,7 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
       "Effectively showcase key findings with Pubrica's Slide Abstract and Slide Deck Service.",
     iconUrl:
       "/images/publication-support/Slide-Abstract-Slide-Deck-480x480.png",
-    slug: "slide-abstract-slide-deck",
+    url: "/services",
   },
   {
     title: "Interactive Abstract",
@@ -117,14 +117,14 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
       "Create dynamic content with Pubrica's Interactive Abstract Service.",
     iconUrl:
       "/images/publication-support/Interactive-Abstract-480x480.png",
-    slug: "interactive-abstract",
+    url: "/services",
   },
   {
     title: "Data Service",
     description: "Increase Impact with Pubrica's Data Service.",
     iconUrl:
       "/images/publication-support/data-service--480x480.png",
-    slug: "data-service",
+    url: "/services",
   },
   {
     title: "Post-Acceptance Service",
@@ -132,7 +132,7 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
       "Avoid publication delays with Pubrica's Post-Acceptance Service.",
     iconUrl:
       "/images/publication-support/Post-Acceptance-Service-480x480.png",
-    slug: "post-acceptance-service",
+    url: "/services",
   },
   {
     title: "Systematic review",
@@ -140,7 +140,7 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
       "Improve evidence synthesis through Pubrica's Systematic Review.",
     iconUrl:
       "/images/publication-support/Systematic-review-480x480.png",
-    slug: "systematic-review",
+    url: "/services/research-services/systematic-review",
   },
   {
     title: "Manuscript Editing",
@@ -148,7 +148,7 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
       "Enhance your publication with Pubrica's Manuscript Editing Service.",
     iconUrl:
       "/images/publication-support/Manuscript-Editing-480x480.png",
-    slug: "manuscript-editing",
+    url: "/services/editing-and-translation/manuscript-editing",
   },
   {
     title: "Graphical abstract",
@@ -156,7 +156,7 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
       "Summarize your findings visually using Pubrica's Graphical Abstract service.",
     iconUrl:
       "/images/publication-support/Graphical-abstract--480x480.png",
-    slug: "graphical-abstract",
+    url: "/services/research-impact/graphical-abstract",
   },
 ];
 
@@ -183,12 +183,11 @@ export default function PublicationServicesGrid() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {SERVICES_GRID_DATA.map((service, index) => {
             const isHighlighted = service.title === "Post-Acceptance Service";
-            const targetUrl = `/services/publication-support/${service.slug}`;
 
             return (
               <a
                 key={index}
-                href={targetUrl}
+                href={service.url}
                 className={`flex gap-3.5 p-4 rounded-lg border border-slate-200/80 shadow-sm transition-all duration-300 hover:shadow-md hover:translate-y-[-2px] group block ${
                   isHighlighted ? "bg-[#e3eff4]" : "bg-white"
                 }`}

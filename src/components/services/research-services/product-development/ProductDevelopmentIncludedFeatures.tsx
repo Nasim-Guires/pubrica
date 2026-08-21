@@ -33,33 +33,18 @@ export default function ProductDevelopmentIncludedFeatures({
   ];
 
   return (
-    <section
-      className={`w-full bg-slate-50/70 py-12 text-slate-800 font-sans ${className}`}
-    >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className={`w-full bg-white pt-0 pb-0 -mt-6 text-slate-800 font-sans ${className}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Header */}
-        <header className="text-center mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#1b2b28] mb-3">
-            All Packages Include
-          </h2>
+        <h2 className="text-xl sm:text-2xl font-bold text-[#0b3b2c] mt-0 mb-3">
+          All Packages Include:
+        </h2>
 
-          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed max-w-xl mx-auto">
-            Every product development solution is backed by our full suite of
-            expert resources, regulatory oversight, and clinical-grade
-            evidence.
-          </p>
-        </header>
-
-        {/* Text Only List */}
-        <ul className="space-y-4 mb-10 max-w-2xl mx-auto">
+        {/* Bullet List */}
+        <ul className="list-disc pl-5 space-y-2 mb-8 max-w-4xl text-gray-800">
           {features.map((item) => (
-            <li
-              key={item.id}
-              className="bg-white p-4 rounded-lg border border-gray-200/80 shadow-sm"
-            >
-              <p className="text-xs sm:text-sm font-semibold text-[#1b2b28] leading-relaxed">
-                {item.title}
-              </p>
+            <li key={item.id} className="text-sm sm:text-base leading-snug font-normal">
+              {item.title}
             </li>
           ))}
         </ul>

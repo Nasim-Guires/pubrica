@@ -42,7 +42,7 @@ export default function PeerReviewOverviewSection() {
                 The feedback from our peer reviewers is an opportunity to improve your manuscript by
                 improving clarity, structure, and academic strength. It allows you to address weaknesses
                 before submitting for journal peer review. We also offer complete{" "}
-                <a href="#" className="text-blue-600 font-medium hover:underline">
+                <a href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 font-medium hover:underline">
                   manuscript editing
                 </a>{" "}
                 that brings your manuscript up to journal standards.
@@ -97,11 +97,11 @@ export default function PeerReviewOverviewSection() {
               community&apos;s standards and expectations and produce a high-quality publication. The
               pre-submission review protects the quality control of the research—whether it&apos;s an
               original research article,{" "}
-              <a href="#" className="text-blue-600 font-medium hover:underline">
+              <a href="/services/research-services/systematic-review" className="text-blue-600 font-medium hover:underline">
                 systematic review
               </a>
               , or{" "}
-              <a href="#" className="text-blue-600 font-medium hover:underline">
+              <a href="/services/research-services/meta-analysis" className="text-blue-600 font-medium hover:underline">
                 meta-analysis
               </a>
               , we ensure it meets rigorous academic standards.
@@ -119,11 +119,11 @@ export default function PeerReviewOverviewSection() {
               successful journal submission through our academic editing. This service helps ensure that
               personal views or flawed data do not hinder the acceptance of your work. Our integrated
               approach, including{" "}
-              <a href="#" className="text-blue-600 font-medium hover:underline">
+              <a href="/services/physician-writing-services/case-report" className="text-blue-600 font-medium hover:underline">
                 case report writing
               </a>{" "}
               and{" "}
-              <a href="#" className="text-blue-600 font-medium hover:underline">
+              <a href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 font-medium hover:underline">
                 manuscript editing
               </a>
               , ensures your manuscript is submission-ready.

@@ -140,7 +140,7 @@ const criteriaTabs: CriteriaTab[] = [
     id: "quality",
     label: "By Journal Quality",
     cards: [
-     {
+      {
         title: "Medical Sciences",
         iconUrl: `${CRITERIA_IMAGE_BASE_PATH}/Medical-Science.png`,
       },
@@ -170,7 +170,7 @@ const criteriaTabs: CriteriaTab[] = [
         title: "Scopus",
         iconUrl: `${CRITERIA_IMAGE_BASE_PATH}/Scopus.png`,
       },
-       {
+      {
         title: "Web of Science",
         iconUrl: `${CRITERIA_IMAGE_BASE_PATH}/Web-of-Science.png`,
       },
@@ -178,7 +178,7 @@ const criteriaTabs: CriteriaTab[] = [
         title: "DOAJ",
         iconUrl: `${CRITERIA_IMAGE_BASE_PATH}/DOAJ.png`,
       },
-      
+
     ],
   },
   {
@@ -186,12 +186,20 @@ const criteriaTabs: CriteriaTab[] = [
     label: "By Special Criteria",
     cards: [
       {
-        title: "Fast Track Publication",
-        iconUrl: `${CRITERIA_IMAGE_BASE_PATH}/fast-track.webp`,
+        title: "Rapid Review",
+        iconUrl: `${CRITERIA_IMAGE_BASE_PATH}/Rapid-Review.png`,
       },
       {
-        title: "Open Access / Low APC",
-        iconUrl: `${CRITERIA_IMAGE_BASE_PATH}/open-access.webp`,
+        title: "Low APCs",
+        iconUrl: `${CRITERIA_IMAGE_BASE_PATH}/Low-APCs.png`,
+      },
+      {
+        title: "Multilingual Support",
+        iconUrl: `${CRITERIA_IMAGE_BASE_PATH}/Multilingual-Support.png`,
+      },
+      {
+        title: "Regional Journals",
+        iconUrl: `${CRITERIA_IMAGE_BASE_PATH}/Regional-Journals.png`,
       },
     ],
   },
@@ -260,48 +268,66 @@ export default function JournalSelectionFullPage() {
 
         {/* Process Flow Container */}
         <div className="relative py-10">
-          {/* Main Horizontal Timeline Bar */}
+          {/* Main Horizontal Timeline Bar (Desktop Only) */}
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-2 bg-[#008ba3] -translate-y-1/2 z-0" />
 
           {/* Grid of Steps */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-4 relative z-10">
-            {stepsList.map((step) => (
-              <div
-                key={step.id}
-                className="flex flex-col items-center justify-between min-h-[420px]"
-              >
-                {/* TOP SLOT */}
-                <div className="w-full flex flex-col items-center justify-end min-h-[200px] pb-4">
-                  {step.position === "top" ? (
-                    <StepCard step={step} />
-                  ) : (
-                    <StepNumberCircle number={step.id} />
-                  )}
-                </div>
+            {stepsList.map((step) => {
+              const isTopOnDesktop = step.position === "top";
 
-                {/* MIDDLE CONNECTOR (Desktop Line Connector) */}
-                <div className="hidden lg:block h-8 w-0.5 bg-[#008ba3]" />
+              return (
+                <div
+                  key={step.id}
+                  className="flex flex-col items-center justify-between lg:min-h-[420px] space-y-4 lg:space-y-0"
+                >
+                  {/* TOP SLOT (Mobile: Always Circle, Desktop: Alternates based on position) */}
+                  <div className="w-full flex flex-col items-center lg:justify-end lg:min-h-[200px] lg:pb-4">
+                    {/* Mobile & Tablet layout view */}
+                    <div className="block lg:hidden">
+                      <StepNumberCircle number={step.id} />
+                    </div>
+                    {/* Desktop layout view */}
+                    <div className="hidden lg:block w-full">
+                      {isTopOnDesktop ? (
+                        <StepCard step={step} />
+                      ) : (
+                        <StepNumberCircle number={step.id} />
+                      )}
+                    </div>
+                  </div>
 
-                {/* BOTTOM SLOT */}
-                <div className="w-full flex flex-col items-center justify-start min-h-[200px] pt-4">
-                  {step.position === "bottom" ? (
-                    <StepCard step={step} />
-                  ) : (
-                    <StepNumberCircle number={step.id} />
-                  )}
+                  {/* MIDDLE CONNECTOR (Desktop Line Connector) */}
+                  <div className="hidden lg:block h-8 w-0.5 bg-[#008ba3]" />
+
+                  {/* BOTTOM SLOT (Mobile: Always Card, Desktop: Alternates based on position) */}
+                  <div className="w-full flex flex-col items-center lg:justify-start lg:min-h-[200px] lg:pt-4">
+                    {/* Mobile & Tablet layout view */}
+                    <div className="block lg:hidden w-full">
+                      <StepCard step={step} />
+                    </div>
+                    {/* Desktop layout view */}
+                    <div className="hidden lg:block w-full">
+                      {isTopOnDesktop ? (
+                        <StepNumberCircle number={step.id} />
+                      ) : (
+                        <StepCard step={step} />
+                      )}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* ---------------------------------------------------- */}
-      {/* SECTION 3: JOURNAL SELECTION BY CRITERIA            */}
+      {/* SECTION 3: JOURNAL SELECTION BY CRITERIA             */}
       {/* ---------------------------------------------------- */}
-      <section className="max-w-6xl mx-auto space-y-8">
+      <section className="max-w-6xl mx-auto space-y-8 px-4 sm:px-6">
         {/* Heading */}
-        <div className="space-y-1">
+        <div className="space-y-1 text-center sm:text-left">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44]">
             Journal Selection by Criteria
           </h2>
@@ -310,19 +336,18 @@ export default function JournalSelectionFullPage() {
           </p>
         </div>
 
-        {/* Tab Pills Bar */}
-        <div className="bg-[#0f4c5c] p-1.5 rounded-full flex flex-wrap items-center justify-between gap-1 max-w-4xl mx-auto shadow-inner">
+        {/* Tab Pills Bar - 2x2 Grid on Mobile / Full Row Pill on Desktop */}
+        <div className="bg-[#0f4c5c] p-2 rounded-2xl md:rounded-full grid grid-cols-2 md:grid-cols-4 gap-2 max-w-4xl mx-auto shadow-inner">
           {criteriaTabs.map((tab) => {
             const isActive = tab.id === activeTab;
             return (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex-1 min-w-[140px] py-2.5 px-4 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 text-center ${
-                  isActive
-                    ? "bg-[#062c35] text-white shadow-md"
-                    : "text-slate-200 hover:text-white hover:bg-white/10"
-                }`}
+                className={`w-full py-2.5 px-3 sm:px-4 rounded-xl md:rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 text-center leading-tight flex items-center justify-center ${isActive
+                  ? "bg-[#062c35] text-white shadow-md"
+                  : "text-slate-200 hover:text-white hover:bg-white/10"
+                  }`}
               >
                 {tab.label}
               </button>
@@ -331,14 +356,14 @@ export default function JournalSelectionFullPage() {
         </div>
 
         {/* Cards Grid for Selected Tab */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pt-2 sm:pt-4">
           {currentTabObj.cards.map((card, idx) => (
             <div
               key={idx}
-              className="bg-white border border-slate-200 rounded-xl p-6 shadow-xs hover:shadow-md transition-shadow flex flex-col items-center text-center space-y-4 min-h-[180px] justify-center"
+              className="bg-white border border-slate-200 rounded-xl p-5 sm:p-6 shadow-xs hover:shadow-md transition-shadow flex flex-col items-center text-center space-y-3 sm:space-y-4 min-h-[160px] sm:min-h-[180px] justify-center"
             >
               {/* Image Icon Slot */}
-              <div className="w-12 h-12 flex items-center justify-center">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
                 <img
                   src={card.iconUrl}
                   alt={card.title}

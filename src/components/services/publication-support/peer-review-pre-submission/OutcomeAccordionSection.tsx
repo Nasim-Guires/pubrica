@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 
 interface TableRow {
   issueCategory: string;
@@ -288,7 +289,7 @@ function CategoryTable({ rows }: { rows: TableRow[] }) {
 }
 
 export default function OutcomeAccordionSection() {
-  const [openSection, setOpenSection] = useState<string | null>("Engineering");
+  const [openSection, setOpenSection] = useState<string | null>("Pre submission Peer review");
 
   const toggleSection = (section: string) => {
     setOpenSection((prev) => (prev === section ? null : section));
@@ -311,18 +312,26 @@ export default function OutcomeAccordionSection() {
 
   return (
     <section className="w-full max-w-5xl mx-auto px-4 py-8 font-sans">
-      <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547]">
+      <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-4">
         Outcome of Pre-submission Peer Review
       </h2>
-      <p className="text-base text-gray-700 leading-relaxed">
+      <p className="text-base text-gray-700 leading-relaxed mb-6">
         At Pubrica, we go further than simply peer reviewing your document. The
         goal of our{" "}
-        <span className="text-cyan-700 font-medium">
+        <Link
+          href="/academy/peer-review/pre-submission-peer-review-pre-submission-peer-review-for-researchers"
+          className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+        >
           pre-submission peer review
-        </span>{" "}
+        </Link>{" "}
         process is to improve the manuscript based on the extensive feedback
         from expert reviewers. We will use a{" "}
-        <span className="text-cyan-700 font-medium">double-blind review</span>{" "}
+        <Link
+          href="/services/publication-support/double-blind-peer-review-definition-process"
+          className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+        >
+          double-blind review
+        </Link>{" "}
         model, where the peer review is conducted by professional editors who
         only work for Pubrica. The corrections and improvements are then made by
         independent subject matter experts separate from the reviewers,

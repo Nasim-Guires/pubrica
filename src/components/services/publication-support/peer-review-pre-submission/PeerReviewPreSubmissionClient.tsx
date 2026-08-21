@@ -63,18 +63,44 @@ export default function PeerReviewPreSubmissionClient() {
                   {item.includes("CONSORT") ? (
                     <>
                       Follow ethical and reporting requirements (
-                      <span className="text-cyan-700 font-medium">
-                        CONSORT, PRISMA, STROBE
-                      </span>
+                      <Link
+                        href="https://www.consort-spirit.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+                      >
+                        CONSORT
+                      </Link>
+                      {", "}
+                      <Link
+                        href="https://static1.squarespace.com/static/65b880e13b6ca75573dfe217/t/67ad313f1c80aa5235fce0d0/1739403584136/PRISMA_2020_checklist.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+                      >
+                        PRISMA
+                      </Link>
+                      {", "}
+                      <Link
+                        href="https://www.equator-network.org/wp-content/uploads/2015/10/STROBE_checklist_v4_combined.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+                      >
+                        STROBE
+                      </Link>
                       )
                     </>
-                  ) : item.includes("peer review") ? (
+                  ) : item.includes("methodological or statistical flaws") ? (
                     <>
                       Identify and resolve methodological or statistical flaws
                       before the journal’s{" "}
-                      <span className="text-cyan-700 font-medium">
+                      <Link
+                        href="/academy/peer-review/peer-review-week-2025-ai-era"
+                        className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+                      >
                         peer review
-                      </span>
+                      </Link>
                     </>
                   ) : (
                     item
@@ -91,7 +117,12 @@ export default function PeerReviewPreSubmissionClient() {
             However, many authors are challenged by planning for reviewer
             expectations or understanding complex journal criteria. Pubrica’s
             Pre-Submission{" "}
-            <span className="text-cyan-700 font-medium">Peer Review</span>{" "}
+            <Link
+              href="/academy/peer-review/journal-peer-review-process-after-submission"
+              className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+            >
+              Peer Review
+            </Link>{" "}
             Service offers:
           </p>
 
@@ -114,16 +145,19 @@ export default function PeerReviewPreSubmissionClient() {
 
           <p className="text-base text-gray-700 leading-relaxed pt-2">
             Our{" "}
-            <span className="text-cyan-700 font-medium">
+            <Link
+              href="/academy/peer-review/how-publishers-balance-authors-and-reviewers"
+              className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+            >
               pre-submission peer review
-            </span>{" "}
+            </Link>{" "}
             service includes language editing, formatting support, and
             assistance with journal-specific submission guidelines, but also
             ensures that your manuscript is both scientifically solid and
             professionally presented.
           </p>
 
-          {/* Action Buttons (FIXED STYLING HERE) */}
+          {/* Action Buttons */}
           <div className="flex flex-wrap items-center gap-4 pt-4">
             <GetFreeQuoteButton />
             <Link
@@ -209,20 +243,24 @@ export default function PeerReviewPreSubmissionClient() {
           <p className="text-base text-gray-700 leading-relaxed max-w-5xl">
             At Pubrica, we appreciate that obtaining meaningful feedback before
             submitting your manuscript is essential. Our{" "}
-            <span className="text-cyan-700 font-medium">peer review</span>{" "}
+            <Link
+              href="/academy/peer-review/ai-and-peer-review-collaborative-intelligence"
+              className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+            >
+              peer review
+            </Link>{" "}
             pre-submission service provides impartial, comprehensive, and
             structured evaluation by experts in your discipline. Regardless of
             whether your discipline is medical sciences, engineering, life
             sciences, or social sciences, we provide meaningful recommendations
             with actionable improvements based on current peer review standards
             of{" "}
-            <span className="text-cyan-700 font-medium">high-impact</span>{" "}
+            <span className="">high-impact</span>{" "}
             journals.
           </p>
 
           {/* Grid Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-            {/* Card 1 */}
             <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md flex flex-col justify-between">
               <div className="space-y-4">
                 <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
@@ -241,7 +279,6 @@ export default function PeerReviewPreSubmissionClient() {
               </div>
             </div>
 
-            {/* Card 2 */}
             <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md flex flex-col justify-between">
               <div className="space-y-4">
                 <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
@@ -260,7 +297,6 @@ export default function PeerReviewPreSubmissionClient() {
               </div>
             </div>
 
-            {/* Card 3 */}
             <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md flex flex-col justify-between">
               <div className="space-y-4">
                 <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
@@ -281,7 +317,6 @@ export default function PeerReviewPreSubmissionClient() {
               </div>
             </div>
 
-            {/* Card 4 */}
             <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md flex flex-col justify-between">
               <div className="space-y-4">
                 <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
@@ -305,7 +340,6 @@ export default function PeerReviewPreSubmissionClient() {
               </div>
             </div>
 
-            {/* Card 5 */}
             <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md flex flex-col justify-between">
               <div className="space-y-4">
                 <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
@@ -324,7 +358,6 @@ export default function PeerReviewPreSubmissionClient() {
               </div>
             </div>
 
-            {/* Card 6 */}
             <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md flex flex-col justify-between">
               <div className="space-y-4">
                 <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">

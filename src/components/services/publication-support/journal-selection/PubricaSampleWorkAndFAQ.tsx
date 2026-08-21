@@ -157,7 +157,7 @@ export default function PubricaSampleWorkAndFAQ() {
           journal for the health care practitioner focused on increasing
           knowledge, stimulating research, and promoting better management of
           people with{" "}
-          <a href="#" className="text-cyan-600 hover:underline">
+          <a href="/academy/journals-templates/journal-of-diabetes-research" className="text-cyan-600 hover:underline">
             diabetes
           </a>
           . To foster these objectives, the journal publishes original research

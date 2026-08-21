@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 // ==========================================
@@ -12,6 +13,7 @@ interface ComplianceCard {
   logoUrl?: string;
   title: string;
   image: string;
+  url: string;
 }
 
 const complianceStandards: ComplianceCard[] = [
@@ -19,21 +21,25 @@ const complianceStandards: ComplianceCard[] = [
     id: "cope",
     image: "/images/publication-support/journal-selection/COPE_thumb.png",
     title: "Committee on Publication Ethics",
+    url: "https://publicationethics.org/",
   },
   {
     id: "wame",
     image: "/images/publication-support/journal-selection/WAME.webp",
     title: "World Association of Medical Editors",
+    url: "https://www.wame.org/",
   },
   {
     id: "icmje",
     image: "/images/publication-support/journal-selection/ICMJE.webp",
     title: "International Committee of Medical Journal Editors",
+    url: "https://www.icmje.org/",
   },
   {
     id: "spirit-consort",
     image: "/images/publication-support/journal-selection/Consort-Logo.webp",
     title: "Consolidated Standards of Reporting Trials",
+    url: "https://www.consort-spirit.org/",
   },
 ];
 
@@ -46,7 +52,7 @@ export default function ComplianceAndFeaturesSection() {
     <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-16">
         {/* ---------------------------------------------------- */}
-        {/* SECTION 1: COMPLIANCE AND GUIDELINE STANDARDS       */}
+        {/* SECTION 1: COMPLIANCE AND GUIDELINE STANDARDS        */}
         {/* ---------------------------------------------------- */}
         <section className="space-y-8">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] text-center">
@@ -55,9 +61,12 @@ export default function ComplianceAndFeaturesSection() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {complianceStandards.map((item) => (
-              <div
+              <a
                 key={item.id}
-                className="bg-white rounded-lg p-6 shadow-sm border border-slate-200/80 flex flex-col items-center justify-between text-center min-h-[180px] hover:shadow-md transition-shadow"
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-lg p-6 shadow-sm border border-slate-200/80 flex flex-col items-center justify-between text-center min-h-[180px] hover:shadow-md transition-shadow group"
               >
                 {/* Logo / Image Display */}
                 <div className="h-16 flex items-center justify-center">
@@ -69,10 +78,10 @@ export default function ComplianceAndFeaturesSection() {
                 </div>
 
                 {/* Standard Title */}
-                <p className="text-xs sm:text-sm font-bold text-slate-800 leading-snug">
+                <p className="text-xs sm:text-sm font-bold text-slate-800 leading-snug group-hover:text-cyan-600 transition-colors">
                   {item.title}
                 </p>
-              </div>
+              </a>
             ))}
           </div>
         </section>
@@ -94,25 +103,37 @@ export default function ComplianceAndFeaturesSection() {
                     Strategic Journal Evaluation:{" "}
                   </span>
                   As part of our academic{" "}
-                  <a href="#" className="text-cyan-600 hover:underline">
+                  <Link
+                    href="/services/publication-support/journal-selection/journal-selection-alcoholic-liver-disease/"
+                    className="text-cyan-600 hover:underline"
+                  >
                     journal selection
-                  </a>{" "}
+                  </Link>{" "}
                   process, we begin with a purposeful consideration of potential
                   journals. We will consider journals based upon the following
                   factors: topical relevancy, scope fit, peer review process,
                   language,{" "}
-                  <a href="#" className="text-cyan-600 hover:underline">
+                  <Link
+                    href="/services/publication-support/journal-selection/journal-citation-reports-impact-metrics-guide/"
+                    className="text-cyan-600 hover:underline"
+                  >
                     citations
-                  </a>
+                  </Link>
                   , indexing, and international readership. This data-driven
                   approach, rooted in our{" "}
-                  <a href="#" className="text-cyan-600 hover:underline">
+                  <Link
+                    href="/services/publication-support/"
+                    className="text-cyan-600 hover:underline"
+                  >
                     Publication Support
-                  </a>
+                  </Link>
                   , ensures your research paper’s{" "}
-                  <a href="#" className="text-cyan-600 hover:underline">
+                  <Link
+                    href="/insights/sample-work/stroke-diet-global-burden-inequalities/"
+                    className="text-cyan-600 hover:underline"
+                  >
                     journal selection
-                  </a>{" "}
+                  </Link>{" "}
                   reflects your academic objectives.
                 </div>
               </li>
@@ -127,21 +148,30 @@ export default function ComplianceAndFeaturesSection() {
                     Minimize Rejection Risks:{" "}
                   </span>
                   Leveraging our experience in{" "}
-                  <a href="#" className="text-cyan-600 hover:underline">
+                  <Link
+                    href="/services/publication-support/peer-review-pre-submission/"
+                    className="text-cyan-600 hover:underline"
+                  >
                     Pre-Submission Peer Review
-                  </a>{" "}
+                  </Link>{" "}
                   and{" "}
-                  <a href="#" className="text-cyan-600 hover:underline">
+                  <Link
+                    href="/services/publication-support/journal-submission/"
+                    className="text-cyan-600 hover:underline"
+                  >
                     Journal Submission
-                  </a>{" "}
+                  </Link>{" "}
                   services, we help you avoid common rejection missteps by
                   identifying journals that precisely fit your research scope,
                   methodology, and audience. This process of identifying target
                   journals minimizes desk rejection risk and maximizes total
                   peer review success, enhancing your chances when preparing to{" "}
-                  <a href="#" className="text-cyan-600 hover:underline">
+                  <Link
+                    href="/services/editing-and-translation/scientific-editing/"
+                    className="text-cyan-600 hover:underline"
+                  >
                     write a scientific paper
-                  </a>
+                  </Link>
                   .
                 </div>
               </li>
@@ -156,26 +186,38 @@ export default function ComplianceAndFeaturesSection() {
                     Enhanced Research Visibility:{" "}
                   </span>
                   Our{" "}
-                  <a href="#" className="text-cyan-600 hover:underline">
+                  <Link
+                    href="/academy/scientific-editing/scientific-vs-language-editing-high-quality-publications/"
+                    className="text-cyan-600 hover:underline"
+                  >
                     editing scientific papers
-                  </a>{" "}
+                  </Link>{" "}
                   and{" "}
-                  <a href="#" className="text-cyan-600 hover:underline">
+                  <Link
+                    href="/services/publication-support/plagiarism-services/"
+                    className="text-cyan-600 hover:underline"
+                  >
                     Plagiarism Check
-                  </a>{" "}
+                  </Link>{" "}
                   services complement our{" "}
-                  <a href="#" className="text-cyan-600 hover:underline">
+                  <Link
+                    href="/academy/journal-selection/difference-between-scopus-indexed-and-non-indexed-journals/"
+                    className="text-cyan-600 hover:underline"
+                  >
                     journal selection
-                  </a>{" "}
+                  </Link>{" "}
                   efforts by ensuring your manuscript adheres to journal
                   standards, increasing the likelihood that your work will reach
                   the appropriate academic audience, receive citations, and gain
                   worldwide visibility. The right journal will help solidify
                   your research credibility and will also enhance your academic
                   through improved{" "}
-                  <a href="#" className="text-cyan-600 hover:underline">
+                  <Link
+                    href="/insights/sample-work/the-impact-of-drinking-water-sources-on-gut-microbial-diversity-in-canines-peer-review/"
+                    className="text-cyan-600 hover:underline"
+                  >
                     research paper publication
-                  </a>{" "}
+                  </Link>{" "}
                   outcomes.
                 </div>
               </li>
@@ -192,14 +234,14 @@ export default function ComplianceAndFeaturesSection() {
                   From advising on the appropriateness of your selected journal
                   to understanding its specific instructions for authors, our
                   team will support you throughout the{" "}
-                  <a href="#" className="text-cyan-600 hover:underline">
+                  <Link
+                    href="/insights/sample-work/tuberculosis-journal-selection-india-global/"
+                    className="text-cyan-600 hover:underline"
+                  >
                     journal selection
-                  </a>{" "}
-                  process, helping you determine the best{" "}
-                  <a href="#" className="text-cyan-600 hover:underline">
-                    journal to publish research paper
-                  </a>
-                  .
+                  </Link>{" "}
+                  process, helping you determine the best journal to publish
+                  research paper.
                 </div>
               </li>
             </ul>
@@ -207,9 +249,12 @@ export default function ComplianceAndFeaturesSection() {
             {/* Closing Note */}
             <p className="pt-2">
               Select Pubrica’s{" "}
-              <a href="#" className="text-cyan-600 hover:underline">
+              <Link
+                href="/services/publication-support/journal-selection/journal-selection-alcoholic-liver-disease/"
+                className="text-cyan-600 hover:underline"
+              >
                 journal selection
-              </a>{" "}
+              </Link>{" "}
               services to explore the challenges of publication with peace of
               mind. We will assist you in identifying a journal that accurately
               reflects your valuable research results. Please get in touch to

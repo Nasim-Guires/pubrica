@@ -204,7 +204,7 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
             </h2>
             <p className="text-xs sm:text-sm text-gray-200 leading-relaxed max-w-3xl">
               Accelerate your path to publication with Pubrica’s comprehensive{" "}
-              <a href="/insights/sample-work/prevalence-thyroid-disorders-tertiary-care-north-india/" className="text-[#38bdf8] hover:underline">
+              <a href="/insights/sample-work/prevalence-thyroid-disorders-tertiary-care-north-india" className="text-[#38bdf8] hover:underline">
                 journal submission
               </a>{" "}
               support service. Gain expert assistance to navigate submission

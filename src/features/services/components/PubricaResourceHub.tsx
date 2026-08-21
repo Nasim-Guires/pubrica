@@ -13,6 +13,7 @@ import {
   Quote,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function PubricaResourceHub() {
 
@@ -241,9 +242,12 @@ export default function PubricaResourceHub() {
                 </h3>
                 <p className="text-slate-600 text-sm max-w-xl leading-relaxed">
                   Explore our{" "}
-                  <span className="text-sky-600 font-semibold underline cursor-pointer hover:text-sky-700">
+                  <Link
+                    href="/services/publication-support/journal-selection/journal-selection-alcoholic-liver-disease/"
+                    className="text-sky-600 font-semibold cursor-pointer hover:text-sky-700"
+                  >
                     Publication Support
-                  </span>{" "}
+                  </Link>
                   Services sample work tailored to your manuscript's scope,
                   indexing requirements, and impact factor goals.
                 </p>

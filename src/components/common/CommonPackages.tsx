@@ -12,8 +12,8 @@ interface PackageItem {
   includes: string[];
   turnaround?: string;
   bestFor?: string;
-  cardBgColor?: string; // Made optional
-  titleColor?: string;  // Made optional
+  cardBgColor?: string;
+  titleColor?: string;
 }
 
 interface PackagesProps {
@@ -27,51 +27,68 @@ interface PackagesProps {
 
 const defaultPackages: PackageItem[] = [
   {
-    icon: "/icons/basic-b.svg", // Replace with your B badge icon path
-    title: "Basic Assessment Review",
-    idealFor: "Individual educators and small academic programs",
+    icon: "/icons/basic-b.svg",
+    title: "Starter",
+    subtitle: "For Early Discovery & Feasibility",
+    idealFor: "Startups, pre-formulation R&D, early-stage evaluations",
     includes: [
-      "Review of question clarity and structure",
-      "Alignment check with learning objectives",
-      "Difficulty-level assessment",
-      "Summary review report",
+      "PubMed literature review (efficacy/safety)",
+      "Basic clinical trial mapping (relevant to compound/indication)",
+      "Ingredient/compound background report",
+      "1 therapeutic area overview",
+      "Preliminary regulatory guidance (FSSAI, FDA, EMA, etc.)",
     ],
-    turnaround: "3–5 business days",
-    bestFor: "Quizzes, short exams, assignments",
-    cardBgColor: "#cbd8d6", // Light slate-teal
+    cardBgColor: "#cbd8d6",
     titleColor: "#004b5a",
   },
   {
-    icon: "/icons/advanced-a.svg", // Replace with your A badge icon path
-    title: "Advanced Assessment Validation",
-    idealFor: "Universities and professional training programs",
+    icon: "/icons/advanced-a.svg",
+    title: "Advanced",
+    subtitle: "For Validation & Strategy Development",
+    idealFor: "Teams preparing for formulation, R&D strategy, or investor discussions",
     includes: [
-      "All features from the Basic Package",
-      "Rubric and marking scheme validation",
-      "Bias and fairness review",
-      "Cognitive level mapping (Bloom's taxonomy)",
-      "Detailed improvement recommendations",
+      "Includes everything in Starter, plus:",
+      "Patent landscape & novelty/prior art search",
+      "Safety, pharmacological & toxicological profile",
+      "Mechanism-of-action evidence mapping",
+      "Disease association & therapeutic positioning",
+      "Regulatory classification (GRAS, AYUSH, 510(k), etc.)",
     ],
-    turnaround: "5–7 business days",
-    bestFor: "Course exams, certifications",
-    cardBgColor: "#d8c4e2", // Light soft purple
+    cardBgColor: "#d8c4e2",
     titleColor: "#6b2d82",
   },
   {
-    icon: "/icons/premium-p.svg", // Replace with your P badge icon path
-    title: "Premium Assessment Quality Assurance",
-    idealFor: "Accrediting bodies, large institutions, and high-stakes examinations",
+    icon: "/icons/premium-p.svg",
+    title: "Comprehensive",
+    subtitle: "For Regulatory & Market-Ready Preparation",
+    idealFor: "Teams near preclinical, market entry, or submission phase",
     includes: [
-      "Everything in the Advanced Package",
-      "Full assessment framework review",
-      "Accreditation and compliance alignment",
-      "Cross-course consistency checks",
-      "Expert QA review and validation report",
+      "Includes everything in Advanced, plus:",
+      "Full biomarker & pathway linkage analysis",
+      "Competitive product benchmarking",
+      "Regulatory landscape & dossier readiness report",
+      "Claims substantiation matrix",
+      "Drafting of white papers or regulatory briefs",
+      "Optional: Biocompatibility literature review (for medical devices)",
     ],
-    turnaround: "7–10 business days",
-    bestFor: "Standardized tests, large-scale assessments",
-    cardBgColor: "#d5bc8d", // Warm beige tone
+    cardBgColor: "#d5bc8d",
     titleColor: "#805826",
+  },
+  {
+    icon: "/icons/custom-c.svg",
+    title: "Custom",
+    subtitle: "Tailored Research & Intelligence Solutions",
+    idealFor: "Clients with unique compound types, niche indications, or global compliance needs",
+    includes: [
+      "Veterinary or pet food ingredient analysis",
+      "Cosmeceutical ingredient toxicity & INCI alignment",
+      "Combination product (drug-device) compatibility studies",
+      "Delivery system innovation mapping",
+      "Sustainability & sourcing intelligence",
+      "Post-market literature surveillance",
+    ],
+    cardBgColor: "#f3c299",
+    titleColor: "#9a4300",
   },
 ];
 
@@ -83,6 +100,14 @@ export default function CommonPackages({
   buttonText = "Get a Free Quote",
   onButtonClick,
 }: PackagesProps) {
+  // Dynamically set grid columns depending on how many packages are passed
+  const getGridColsClass = (count: number) => {
+    if (count === 4) return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4";
+    if (count === 3) return "grid-cols-1 md:grid-cols-3";
+    if (count === 2) return "grid-cols-1 md:grid-cols-2";
+    return "grid-cols-1";
+  };
+
   return (
     <section className="py-16 px-4 md:px-8 bg-white w-full text-left font-sans">
       {/* Header Section */}
@@ -104,38 +129,45 @@ export default function CommonPackages({
 
       {/* Packages Container */}
       <div className="relative max-w-7xl mx-auto pb-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        <div className={`grid ${getGridColsClass(packages.length)} gap-4 items-stretch`}>
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className="flex flex-col rounded-t-xl overflow-hidden shadow-lg border border-gray-200"
+              className="flex flex-col rounded-xl overflow-hidden shadow-md border border-gray-200 transition-all hover:shadow-lg"
               style={{ backgroundColor: pkg.cardBgColor }}
             >
               {/* White Header Bar */}
-              <div className="bg-white p-5 flex items-center gap-4 border-b border-gray-100 min-h-[90px]">
-                <div className="w-12 h-12 relative flex-shrink-0 flex items-center justify-center">
+              <div className="bg-white p-4 flex items-center gap-3 border-b border-gray-100 min-h-[85px]">
+                <div className="w-10 h-10 relative flex-shrink-0 flex items-center justify-center">
                   <Image
                     src={pkg.icon}
                     alt={pkg.title}
-                    width={48}
-                    height={48}
+                    width={40}
+                    height={40}
                     className="object-contain"
                   />
                 </div>
-                <h3
-                  className="font-bold text-lg md:text-xl leading-snug"
-                  style={{ color: pkg.titleColor }}
-                >
-                  {pkg.title}
-                </h3>
+                <div>
+                  <h3
+                    className="font-bold text-base md:text-lg leading-tight"
+                    style={{ color: pkg.titleColor }}
+                  >
+                    {pkg.title}
+                  </h3>
+                  {pkg.subtitle && (
+                    <p className="text-xs text-gray-500 font-medium leading-tight mt-0.5">
+                      {pkg.subtitle}
+                    </p>
+                  )}
+                </div>
               </div>
 
               {/* Package Content */}
-              <div className="p-6 flex flex-col flex-grow text-gray-900 text-sm md:text-base">
+              <div className="p-5 flex flex-col flex-grow text-gray-900 text-xs md:text-sm">
                 {/* Ideal For */}
-                <div className="mb-6">
-                  <div className="font-bold mb-1 flex items-start gap-2">
-                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-black text-white text-xs shrink-0 mt-0.5">
+                <div className="mb-4">
+                  <div className="font-bold mb-1 flex items-start gap-1.5 text-gray-900">
+                    <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-black text-white text-[10px] shrink-0 mt-0.5">
                       ➔
                     </span>
                     <span>
@@ -145,15 +177,15 @@ export default function CommonPackages({
                   </div>
                 </div>
 
-                {/* What's Included */}
-                <div className="mb-6 flex-grow">
-                  <div className="font-bold mb-3 flex items-center gap-2">
-                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-black text-white text-xs shrink-0">
+                {/* Services / What's Included */}
+                <div className="mb-4 flex-grow">
+                  <div className="font-bold mb-2 flex items-center gap-1.5 text-gray-900">
+                    <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-black text-white text-[10px] shrink-0">
                       ➔
                     </span>
-                    <span>What&apos;s Included:</span>
+                    <span>Services Included:</span>
                   </div>
-                  <ul className="pl-7 space-y-2.5 list-disc marker:text-gray-800">
+                  <ul className="pl-6 space-y-2 list-disc marker:text-gray-800">
                     {pkg.includes.map((item, i) => (
                       <li key={i} className="leading-snug text-gray-900">
                         {item}
@@ -164,9 +196,9 @@ export default function CommonPackages({
 
                 {/* Turnaround Time */}
                 {pkg.turnaround && (
-                  <div className="mb-4">
-                    <div className="font-bold flex items-start gap-2">
-                      <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-black text-white text-xs shrink-0 mt-0.5">
+                  <div className="mb-3">
+                    <div className="font-bold flex items-start gap-1.5">
+                      <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-black text-white text-[10px] shrink-0 mt-0.5">
                         ➔
                       </span>
                       <span>
@@ -180,8 +212,8 @@ export default function CommonPackages({
                 {/* Best For */}
                 {pkg.bestFor && (
                   <div>
-                    <div className="font-bold flex items-start gap-2">
-                      <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-black text-white text-xs shrink-0 mt-0.5">
+                    <div className="font-bold flex items-start gap-1.5">
+                      <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-black text-white text-[10px] shrink-0 mt-0.5">
                         ➔
                       </span>
                       <span>
@@ -198,12 +230,12 @@ export default function CommonPackages({
 
         {/* Floating Centered CTA Button */}
         <div className="mt-8 text-center">
-          <button
+          {/* <button
             onClick={onButtonClick}
             className="bg-[#b30000] hover:bg-[#8e0000] text-white font-bold py-3.5 px-12 rounded-full text-base transition-all shadow-md active:scale-95"
           >
             {buttonText}
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

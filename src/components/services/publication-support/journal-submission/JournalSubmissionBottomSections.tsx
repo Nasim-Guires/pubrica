@@ -207,7 +207,7 @@ export default function JournalSubmissionBottomSections() {
               <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-4">
                 Explore our{" "}
                 <a
-                  href="#"
+                  href="/academy/journal-submission/journal-submission-service-help-you-get-published"
                   className="text-[#0082a6] hover:underline font-medium"
                 >
                   Journal Submission

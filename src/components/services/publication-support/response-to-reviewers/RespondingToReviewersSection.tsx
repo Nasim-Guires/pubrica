@@ -2,20 +2,24 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 const complianceStandards = [
   {
     title: "Committee on Publication Ethics (COPE)",
     logo: "/images/publication-support/responding-to-reviewers/COPE_thumb.png",
+    url: "https://publicationethics.org/",
   },
   {
     title: "International Committee of Medical Journal Editors (ICMJE)",
     logo: "/images/publication-support/responding-to-reviewers/ICMJE-1_thumb-2.png",
+    url: "https://www.icmje.org/",
   },
   {
     title: "Consolidated Standards of Reporting Trials (CONSORT)",
     logo: "/images/publication-support/responding-to-reviewers/Consort-Logo.webp",
+    url: "https://www.consort-spirit.org/",
   },
 ];
 
@@ -64,13 +68,19 @@ export default function RespondingToReviewersSection() {
 
           <p>
             At Pubrica, we offer extensive{" "}
-            <a href="#" className="text-[#2563eb] hover:underline">
+            <Link
+              href="/academy/response-to-reviewer/responding-to-reviewer-comments-revise-research-paper"
+              className="text-[#2563eb] hover:underline"
+            >
               Response to Reviewer
-            </a>{" "}
+            </Link>{" "}
             Comments and{" "}
-            <a href="#" className="text-[#2563eb] hover:underline">
+            <Link
+              href="/services/publication-support/responding-to-reviewers/rebuttal-preparation-peer-review-strategy"
+              className="text-[#2563eb] hover:underline"
+            >
               Rebuttal Preparation Services
-            </a>{" "}
+            </Link>{" "}
             to help you revise and resubmit your manuscript to peer-reviewed
             journals. Pubrica can assist and support you if your manuscript has
             been rejected or accepted with major or minor revisions. Even if
@@ -125,7 +135,7 @@ export default function RespondingToReviewersSection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-wrap items-center gap-4 mt-8">
-          <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
           <a
             href="#brochure"
             className="bg-[#b80000] hover:bg-black text-white font-bold text-xs py-3 px-6 rounded-full transition-colors shadow-sm"
@@ -152,22 +162,25 @@ export default function RespondingToReviewersSection() {
         {/* 3 Standard Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {complianceStandards.map((item, index) => (
-            <div
+            <Link
               key={index}
-              className="border border-gray-200 rounded-lg p-6 flex flex-col items-center justify-between min-h-[180px] text-center bg-white shadow-xs hover:shadow-md transition-shadow"
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-gray-200 rounded-lg p-6 flex flex-col items-center justify-between min-h-[180px] text-center bg-white shadow-xs hover:shadow-md transition-shadow group"
             >
               <div className="relative w-full h-20 mb-4 flex items-center justify-center">
                 <Image
                   src={item.logo}
                   alt={item.title}
                   fill
-                  className="object-contain"
+                  className="object-contain transition-transform group-hover:scale-105"
                 />
               </div>
-              <p className="text-xs font-bold text-[#0c3547] leading-tight px-2">
+              <p className="text-xs font-bold text-[#0c3547] leading-tight px-2 group-hover:text-[#2563eb] transition-colors">
                 {item.title}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

@@ -132,7 +132,7 @@ export default function JournalSubmissionProcessSection() {
               to communicate science and develop an academic career. At Pubrica,
               we understand the challenges of{" "}
               <a
-                href="#"
+                href="/services/publication-support"
                 className="text-[#0082a6] hover:underline font-medium"
               >
                 publication support

@@ -1,17 +1,15 @@
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 import {
   CheckCircle,
   ArrowRight,
   Sparkles,
-  Check,
   ShieldCheck,
-  FileText,
   Users,
   Zap,
-  Globe,
 } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
-import Image from "next/image";
 
 export default function PublicationServices() {
   const complianceFrameworks = [
@@ -118,8 +116,15 @@ export default function PublicationServices() {
     },
   ];
 
+  const ROUTE_MAP: Record<string, string> = {
+    "best publication support services":
+      "/insights/sample-work/incidence-cardiovascular-diseases-india-global/",
+    "Medical Journal":
+      "/services/publication-support/journal-submission/complete-guide-to-writing-cover-letter-for-medical-journals/",
+  };
+
   return (
-    <section className="bg-slate-50 py-16 px-4 sm:px-6 lg:px-8 font-sans text-slate-800">
+    <section className="bg-slate-50 py-16 px-4 sm:px-6 lg:px-4 font-sans text-slate-800">
       <div className="max-w-7xl mx-auto">
         {/* ================= COMPLIANCE SECTION ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
@@ -129,9 +134,12 @@ export default function PublicationServices() {
             </h2>
             <p className="text-slate-600 leading-relaxed text-base">
               At Pubrica, we provide{" "}
-              <span className="text-sky-600 font-semibold underline cursor-pointer hover:text-sky-700">
+              <Link
+                href={ROUTE_MAP["best publication support services"]}
+                className="text-sky-600 font-semibold no-underline hover:no-underline cursor-pointer hover:text-sky-700 inline transition-colors"
+              >
                 best publication support services
-              </span>{" "}
+              </Link>{" "}
               that meet the highest international standards of scientific
               writing, manuscript preparation, and editorial assistance. Our
               professional team and stringent processes comply with
@@ -146,21 +154,39 @@ export default function PublicationServices() {
                 Regulatory frameworks we comply with
               </h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {complianceFrameworks.map((framework, index) => (
-                  <li key={index} className="flex items-start gap-2.5 group">
-                    <span className="text-[#e11d48] mt-1 shrink-0">●</span>
-                    <div>
-                      <span className="font-semibold text-slate-800 group-hover:text-sky-600 transition-colors">
-                        {framework.name.split(" (")[0]}
-                      </span>
-                      {framework.name.includes("(") && (
-                        <span className="text-slate-500 text-sm">
-                          {" (" + framework.name.split(" (")[1]}
+                {complianceFrameworks.map((framework, index) => {
+                  const firstNamePart = framework.name.split(" (")[0];
+                  const isMedicalJournal = firstNamePart.includes("Medical Journal");
+
+                  return (
+                    <li key={index} className="flex items-start gap-2.5">
+                      <span className="text-[#e11d48] mt-1 shrink-0">●</span>
+                      <div>
+                        <span className="font-semibold text-slate-800 no-underline">
+                          {isMedicalJournal ? (
+                            <>
+                              {firstNamePart.split("Medical Journal")[0]}
+                              <Link
+                                href={ROUTE_MAP["Medical Journal"]}
+                                className="text-sky-600 no-underline hover:no-underline hover:text-sky-700 font-semibold inline transition-colors"
+                              >
+                                Medical Journal
+                              </Link>
+                              {firstNamePart.split("Medical Journal")[1]}
+                            </>
+                          ) : (
+                            firstNamePart
+                          )}
                         </span>
-                      )}
-                    </div>
-                  </li>
-                ))}
+                        {framework.name.includes("(") && (
+                          <span className="text-slate-500 text-sm no-underline">
+                            {" (" + framework.name.split(" (")[1]}
+                          </span>
+                        )}
+                      </div>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
@@ -169,9 +195,7 @@ export default function PublicationServices() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md aspect-video rounded-xl overflow-hidden shadow-2xl group">
               <div className="absolute inset-0 bg-gradient-to-tr from-cyan-950/80 to-slate-900/40 z-10 flex flex-col justify-end p-6 text-white">
-                <div className="w-12 h-12 rounded-full bg-cyan-400/20 backdrop-blur-md flex items-center justify-center border border-cyan-300/40 mb-3 animate-pulse">
-                </div>
-  
+                <div className="w-12 h-12 rounded-full bg-cyan-400/20 backdrop-blur-md flex items-center justify-center border border-cyan-300/40 mb-3 animate-pulse"></div>
               </div>
               <div className="relative w-full h-full overflow-hidden">
                 <Image
@@ -297,10 +321,7 @@ export default function PublicationServices() {
         {/* ================= GLOBAL CALL TO ACTION ================= */}
         <div className="text-center">
           <GetFreeQuoteButton />
-          <p className="text-xs text-slate-400 mt-3">
-            No obligation. Confidentiality agreements (NDAs) signed instantly
-            prior to file uploads.
-          </p>
+          
         </div>
       </div>
     </section>

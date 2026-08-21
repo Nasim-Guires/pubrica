@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function JournalSelectionBenefits() {
@@ -15,13 +16,14 @@ export default function JournalSelectionBenefits() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12">
 
           {/* Satisfaction Guarantee Image */}
-          <div className="shrink-0">
+          <div className="shrink-0 flex items-center justify-center min-w-[144px] min-h-[144px]">
             <Image
-              src="/images/publication-support/journal-selection/Satisfaction_Guarantee.webp"
+              src="/images/publication-support/Satisfaction_Guarantee.webp"
               alt="100% Satisfaction Guarantee"
               width={160}
               height={160}
-              className="w-36 h-36 sm:w-40 sm:h-40 object-contain"
+              className="w-36 h-36 sm:w-40 sm:h-40 object-contain block"
+              priority
             />
           </div>
 
@@ -33,9 +35,12 @@ export default function JournalSelectionBenefits() {
 
             <p className="text-slate-200 text-xs sm:text-sm leading-relaxed">
               Improve your publication journey with Pubrica’s{" "}
-              <a href="#" className="text-cyan-300 hover:underline">
+              <Link
+                href="/services/publication-support/journal-selection/right-journal-for-your-research/"
+                className="text-cyan-300 hover:underline"
+              >
                 journal selection
-              </a>{" "}
+              </Link>{" "}
               support service. We will speed up the acceptance of your
               manuscript with customized support and expertise related to
               journal requirements.
@@ -81,13 +86,13 @@ export default function JournalSelectionBenefits() {
                     Bring decades of knowledge from experience.
                   </strong>{" "}
                   Tap into Pubrica’s 20+ years of{" "}
-                  <a href="#" className="text-cyan-600 hover:underline">
+                  <a href="/services/publication-support/journal-selection/journal-selection-manuscript-optimization" className="text-cyan-600 hover:underline">
                     academic publishing experience
                   </a>
                   . Our experienced team has helped over 800,000 researchers
                   publish in high-impact-factor journals. In addition, with
                   experience from more than 800,000 publications, our{" "}
-                  <a href="#" className="text-cyan-600 hover:underline">
+                  <a href="/insights/sample-work/addressing-barriers-to-copd-care-three-innovative-evidence" className="text-cyan-600 hover:underline">
                     journal selection service
                   </a>{" "}
                   makes the process easier and increases the likelihood of your
@@ -103,7 +108,7 @@ export default function JournalSelectionBenefits() {
                   </strong>{" "}
                   At Pubrica, we appreciate the struggles of selecting
                   peer-reviewed journals amongst the predatory ones. Our{" "}
-                  <a href="#" className="text-cyan-600 hover:underline">
+                  <a href="/insights/sample-work/journal-selection-gastroenterology-workforce" className="text-cyan-600 hover:underline">
                     journal selection
                   </a>{" "}
                   service guarantees you in credible, peer-reviewed journals.
@@ -118,7 +123,7 @@ export default function JournalSelectionBenefits() {
                 <p>
                   <strong className="text-slate-900">
                     Choosing Pubrica’s professional{" "}
-                    <a href="#" className="text-cyan-600 hover:underline">
+                    <a href="/insights/sample-work/addressing-barriers-to-copd-care-three-innovative-evidence" className="text-cyan-600 hover:underline">
                       journal selection service
                     </a>
                   </strong>{" "}

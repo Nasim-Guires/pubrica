@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // 1. Who We Serve Cards Data
 const whoWeServeData = [
@@ -18,20 +19,23 @@ const standards = [
   {
     title: "CONSORT",
     subtitle: "Consolidated Standards of Reporting Trials (CONSORT)",
-    imageSrc: "/images/publication-support/peer-review-pre-submission/Consort-Logo.webp", // Update path to your image
+    imageSrc: "/images/publication-support/peer-review-pre-submission/Consort-Logo.webp",
     alt: "SPIRIT CONSORT",
+    url: "https://www.consort-spirit.org/",
   },
   {
     title: "PRISMA",
     subtitle: "Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA)",
-    imageSrc: "/images/publication-support/peer-review-pre-submission/prisma_logo.png", // Update path to your image
+    imageSrc: "/images/publication-support/peer-review-pre-submission/prisma_logo.png",
     alt: "PRISMA",
+    url: "https://www.prisma-statement.org/",
   },
   {
     title: "STROBE",
     subtitle: "Strengthening the Reporting of Observational Studies in Epidemiology (STROBE)",
-    imageSrc: "/images/publication-support/peer-review-pre-submission/Strengthening-the-Reporting-of-Observational-Studies-in-Epidemiology.png", // Update path to your image
+    imageSrc: "/images/publication-support/peer-review-pre-submission/Strengthening-the-Reporting-of-Observational-Studies-in-Epidemiology.png",
     alt: "STROBE",
+    url: "https://www.strobe-statement.org/",
   },
 ];
 
@@ -223,9 +227,12 @@ export default function ReviewerProcessSection() {
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {standards.map((standard, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex flex-col items-center text-center justify-between transition-all hover:shadow-md"
+                href={standard.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex flex-col items-center text-center justify-between transition-all hover:shadow-md hover:border-gray-200 group"
               >
                 {/* Logo Graphic Container */}
                 <div className="w-full h-24 relative mb-4 flex items-center justify-center">
@@ -233,15 +240,15 @@ export default function ReviewerProcessSection() {
                     src={standard.imageSrc}
                     alt={standard.alt}
                     fill
-                    className="object-contain"
+                    className="object-contain transition-transform group-hover:scale-105"
                   />
                 </div>
 
                 {/* Card Subtitle/Description */}
-                <p className="text-xs text-gray-600 font-medium leading-snug mt-2">
+                <p className="text-xs text-gray-600 font-medium leading-snug mt-2 group-hover:text-gray-900">
                   {standard.subtitle}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -218,7 +218,7 @@ export default function ComplianceAndSamplesProductDevelopment({
                 <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                     {/* Left Image Section Div Placeholder */}
                     <div className="md:col-span-5 flex justify-center">
-                        <div className="w-full max-w-sm h-64 bg-slate-200 rounded-lg border-2 border-dashed border-gray-400 flex items-center justify-center p-4 shadow-sm relative overflow-hidden">
+                        <div className="w-64 h-[420px] relative border border-slate-600 shadow-md overflow-hidden">
                             <Image
                                 src="/images/product-development/image-2.webp"
                                 alt="Industrial Laboratory Robotic Equipment"

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const PAGE_IMAGES = "/images/publication-support/responding-to-reviewers";
@@ -306,8 +307,17 @@ export default function PublicationSupportSections() {
             </div>
           ))}
         </div>
-      </section>
 
+        {/* Centered Button Wrapper */}
+        <div className="mt-8 flex justify-center">
+          <Link
+            href="/subject-matter-experts"
+            className="inline-flex items-center justify-center bg-[#0d3b38] hover:bg-[#082a28] text-white font-bold px-8 py-3 rounded-full shadow-sm transition-colors duration-200"
+          >
+            View More
+          </Link>
+        </div>
+      </section>
       {/* ================= SECTION 3: STAGGERED TIMELINE WORKFLOW ================= */}
       <section className="overflow-x-auto py-6">
         <div className="min-w-[850px]">
