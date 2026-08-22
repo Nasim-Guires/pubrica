@@ -26,27 +26,38 @@ const accordionData: AccordionItem[] = [
     id: "clinical-researchers",
     title: "Clinical Researchers & Healthcare Professionals",
     content: [
-      "Tailored clinical trial summaries and medical case presentation posters",
-      "High-impact visual data transformation for clinical study results",
-      "Compliance check with healthcare and medical conference guidelines",
+      "Poster creation for medical and clinical conferences",
+      "Visualizing case studies, clinical trials, and treatment pathways",
+      "Integration of figures, charts, and other data from their clinical research",
+      "Follow specialty-specific design guidelines (i.e., oncology, cardiology, etc.)",
+      "Poster creation for medical and clinical conferences",
+      "Visualizing case studies, clinical trials, and treatment pathways",
+      "Integration of figures, charts, and other data from their clinical research",
+      "Follow specialty-specific design guidelines (i.e., oncology, cardiology, etc.)",
     ],
   },
   {
     id: "academic-faculties",
     title: "Academic Faculties & Research Institutes",
     content: [
-      "Institutional template standardization and poster design branding",
-      "Multi-author research compilation for university symposiums",
-      "Print-ready high-resolution export for large-format displays",
+      "Professional poster preparation for research grants and funding bodies",
+      "Collaborating with multi-author institutional projects",
+      "Custom branding with institutional logos and uniform colour schemes",
+      "Designing bilingual or multilingual posters for international events",
+      "Professional poster preparation for research grants and funding bodies",
+      "Collaborating with multi-author institutional projects",
+      "Custom branding with institutional logos and uniform colour schemes",
+      "Designing bilingual or multilingual posters for international events",
     ],
   },
   {
     id: "pharma-industry",
     title: "Life Sciences & Pharma Industry Researchers",
     content: [
-      "Commercial and R&D scientific presentation development",
-      "Infographics and custom diagrams for complex molecular processes",
-      "Rigorous accuracy checks aligned with industry regulatory standards",
+      "Poster construction for regulatory submissions, product R&D, and industry exhibits",
+      "Data visualization for preclinical and translational research",
+      "Design integration of drug discovery pipelines and trial findings",
+      "Support poster construction from white papers or technical reports",
     ],
   },
 ];
@@ -70,7 +81,7 @@ export default function WhoWeServeSection() {
         <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-8 max-w-5xl">
           Our academic and{" "}
           <Link
-            href="/publication-support/poster-preparation/"
+            href="/academy/poster-preparation/maximize-research-impact-professional-poster-preparation-services"
             className="text-blue-600 hover:underline"
           >
             scientific poster design and creation service

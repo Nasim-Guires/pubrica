@@ -43,7 +43,7 @@ export default function VideoAbstractHero() {
               key message of a research output in an audiovisual format. With
               thousands of research papers being published every day, a powerful{" "}
               <Link
-                href="#video-abstract"
+                href="/services/publication-support/video-abstract/create-perfect-video-abstract-research-paper"
                 className="text-sky-600 hover:underline"
               >
                 video abstract

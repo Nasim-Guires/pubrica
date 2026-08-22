@@ -126,7 +126,7 @@ export default function WhatWeDo() {
         </h2>
         <p className="text-sm md:text-base text-slate-700 leading-relaxed max-w-5xl mb-10">
           Utilizing Pubrica&apos;s{" "}
-          <Link href="#services" className="text-sky-600 hover:underline">
+          <Link href="/services/publication-support/video-abstract/graphical-vs-video-abstracts-scientific-communication" className="text-sky-600 hover:underline">
             video abstract services
           </Link>{" "}
           will increase the visibility and the impact of your research. Our

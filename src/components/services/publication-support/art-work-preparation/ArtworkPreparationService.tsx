@@ -157,15 +157,15 @@ export default function ArtworkPreparationService() {
                   meet specific journal requirements (resolution, size, colour
                   mode, font styles, and file formats.) This is especially
                   useful for{" "}
-                  <a href="#" className="text-blue-600 hover:underline">
+                  <a href="/services/physician-writing-services/original-research-article" className="text-blue-600 hover:underline">
                     Original Research Article
                   </a>
                   ,{" "}
-                  <a href="#" className="text-blue-600 hover:underline">
+                  <a href="/services/research-services/systematic-review" className="text-blue-600 hover:underline">
                     Systematic Review
                   </a>
                   , and{" "}
-                  <a href="#" className="text-blue-600 hover:underline">
+                  <a href="/services/physician-writing-services/case-report" className="text-blue-600 hover:underline">
                     Case Report
                   </a>{" "}
                   Writing submissions.
@@ -197,7 +197,7 @@ export default function ArtworkPreparationService() {
                   Checking that all labels, legends, scales, and annotations are
                   clear, consistent and in accordance with the content of your
                   manuscript. This services complements our{" "}
-                  <a href="#" className="text-blue-600 hover:underline">
+                  <a href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 hover:underline">
                     manuscript editing services
                   </a>{" "}
                   in terms of figure accuracy and clarity.
@@ -214,7 +214,7 @@ export default function ArtworkPreparationService() {
                   </strong>{" "}
                   Creating brief visual summaries to illustrate key research
                   findings or complex data, usually requested in addition to{" "}
-                  <a href="#" className="text-blue-600 hover:underline">
+                  <a href="/services/research-impact/graphical-abstract" className="text-blue-600 hover:underline">
                     graphical abstract
                   </a>{" "}
                   creation.

@@ -105,7 +105,7 @@ export default function ProcessAndBenefitsSections() {
             Our step-by-Step Process
           </h3>
           <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-            <a href="#" className="text-[#3b82f6] hover:underline">
+            <a href="/services/publication-support/journal-submission" className="text-[#3b82f6] hover:underline">
               Journal Submission
             </a>{" "}
             Formatting and Research Paper Typesetting Services allow us to

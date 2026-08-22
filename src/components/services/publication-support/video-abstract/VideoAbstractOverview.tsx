@@ -9,6 +9,7 @@ const PAGE_IMAGES = "/images/publication-support/video-abstract";
 interface ComplianceCard {
   title: string;
   logoSrc: string;
+  url?: string;
 }
 
 interface ComplianceData {
@@ -22,33 +23,44 @@ const complianceData: ComplianceData = {
     {
       title: "Elsevier",
       logoSrc: `${PAGE_IMAGES}/elsevier-.png`,
+      url: "https://www.elsevier.com/",
     },
     {
       title: "Springer",
       logoSrc: `${PAGE_IMAGES}/Springer.png`,
+      url: "https://www.springer.com/",
     },
-    { title: "Wiley", logoSrc: `${PAGE_IMAGES}/Wiley.png` },
+    {
+      title: "Wiley",
+      logoSrc: `${PAGE_IMAGES}/Wiley.png`,
+      url: "https://www.wiley.com/",
+    },
     {
       title: "New England Journal of Medicine",
       logoSrc: `${PAGE_IMAGES}/New-England-Journal-of-Medicine.png`,
+      url: "https://www.nejm.org/",
     },
   ],
   clinicalEthical: [
     {
       title: "Committee on Publication Ethics (COPE)",
       logoSrc: "/images/publication-support/COPE_thumb.png",
+      url: "https://publicationethics.org/",
     },
     {
       title: "Consolidated Standards of Reporting Trials (CONSORT)",
       logoSrc: `${PAGE_IMAGES}/consort-logo-.png`,
+      url: "https://www.consort-statement.org/",
     },
     {
       title: "World Association of Medical Editors (WAME)",
       logoSrc: `${PAGE_IMAGES}/wame-logo.png`,
+      url: "https://wame.org/",
     },
     {
       title: "International Committee of Medical Journal Editors (ICMJE)",
       logoSrc: "/images/publication-support/ICMJE.webp",
+      url: "https://www.icmje.org/",
     },
   ],
 };
@@ -258,24 +270,21 @@ export default function VideoAbstractOverview() {
         <div className="w-full bg-[#135a5a] rounded-full p-1 max-w-4xl mx-auto mb-10 flex items-center">
           <button
             onClick={() => setActiveTab("journal")}
-            className={`flex-1 py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 ${
-              activeTab === "journal"
+            className={`flex-1 py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 ${activeTab === "journal"
                 ? "bg-[#0b3c3d] text-white shadow-md"
                 : "text-slate-200 hover:text-white"
-            }`}
+              }`}
           >
-             Clinical and Ethical Compliance
-            
+            Clinical and Ethical Compliance
           </button>
           <button
             onClick={() => setActiveTab("clinical")}
-            className={`flex-1 py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 ${
-              activeTab === "clinical"
+            className={`flex-1 py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 ${activeTab === "clinical"
                 ? "bg-[#0b3c3d] text-white shadow-md"
                 : "text-slate-200 hover:text-white"
-            }`}
+              }`}
           >
-           Journal-specific Guideline
+            Journal-specific Guideline
           </button>
         </div>
 
@@ -285,9 +294,12 @@ export default function VideoAbstractOverview() {
             ? complianceData.journalGuidelines
             : complianceData.clinicalEthical
           ).map((item, idx) => (
-            <div
+            <a
               key={idx}
-              className="border border-slate-200 rounded-sm p-6 bg-white flex flex-col items-center justify-between h-[200px] shadow-sm hover:shadow-md transition-shadow duration-300"
+              href={item.url || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group border border-slate-200 rounded-sm p-6 bg-white flex flex-col items-center justify-between h-[200px] shadow-sm hover:shadow-md transition-all duration-300"
             >
               <div className="relative w-full h-24 flex items-center justify-center">
                 <Image
@@ -298,10 +310,10 @@ export default function VideoAbstractOverview() {
                   className="object-contain max-h-20"
                 />
               </div>
-              <h4 className="text-center font-bold text-xs text-slate-800 leading-snug mt-2">
+              <h4 className="text-center font-bold text-xs text-slate-800 group-hover:text-sky-600 transition-colors leading-snug mt-2">
                 {item.title}
               </h4>
-            </div>
+            </a>
           ))}
         </div>
       </section>

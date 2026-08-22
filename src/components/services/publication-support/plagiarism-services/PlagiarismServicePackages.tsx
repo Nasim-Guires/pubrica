@@ -117,7 +117,7 @@ export default function PlagiarismServicePackages() {
               <li className="pl-1">
                 It provides fast and thorough{" "}
                 <Link
-                  href="#plagiarism-checking"
+                  href="/services/publication-support/plagiarism-services/plagiarism-checking-in-publication"
                   className="text-sky-600 hover:underline"
                 >
                   plagiarism checking
@@ -304,13 +304,13 @@ export default function PlagiarismServicePackages() {
         </div>
 
         {/* CTA Bar below packages */}
-        <div className="mt-8">
+        <div className="mt-3">
         <GetFreeQuoteButton/>
         </div>
       </section>
 
       {/* SECTION 3: Delivery and Pricing */}
-      <section className="w-full pb-16 px-4 md:px-8 max-w-5xl mx-auto">
+      <section className="w-full pb-9 px-1 md:px-8 max-w-5xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-[#0c373b] mb-6">
           Delivery and Pricing
         </h2>

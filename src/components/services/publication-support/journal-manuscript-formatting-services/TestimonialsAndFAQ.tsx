@@ -48,14 +48,15 @@ const testimonialsData: Testimonial[] = [
 interface FAQItem {
   id: number;
   question: string;
-  answer?: string;
+  answer: string;
 }
 
 const faqData: FAQItem[] = [
   {
     id: 1,
-    question:
-      "1. What are the formatting requirements for academic journal manuscripts?",
+    question: "1. What are the formatting requirements for academic journal manuscripts?",
+    answer:
+      "The formatting requirements usually include sections, word count, referencing, font requirements, figure requirements, and reference requirements, as well as the journal’s author instructions.",
   },
   {
     id: 2,
@@ -65,29 +66,32 @@ const faqData: FAQItem[] = [
   },
   {
     id: 3,
-    question:
-      "3. What is the difference between APA, Vancouver, and Harvard reference styles?",
+    question: "3. What is the difference between APA, Vancouver, and Harvard reference styles?",
+    answer:
+      "The APA referencing style uses the author-date referencing system, Vancouver uses the numbered referencing system, and the Harvard referencing style uses the author-date referencing system.",
   },
   {
     id: 4,
-    question:
-      "4. What file formats do journals require for manuscript submission?",
+    question: "4. What file formats do journals require for manuscript submission?",
+    answer:
+      "Most journals require authors to submit the manuscript in Word format, i.e., .doc or .docx, in addition to separate files for the figures, tables, and supplementary materials as per the journal’s guidelines.",
   },
   {
     id: 5,
-    question:
-      "5. What is the correct format for tables and figures in research papers?",
+    question: "5. What is the correct format for tables and figures in research papers?",
+    answer:
+      "Tables and figures need to be clearly labeled, numbered consecutively, have titles, meet the journal’s requirements, be of high resolution, and be cited correctly in the manuscript.",
   },
   {
     id: 6,
-    question:
-      "6. Why do journals reject or return manuscripts for formatting corrections?",
+    question: "6. Why do journals reject or return manuscripts for formatting corrections?",
+    answer:
+      "Journals may reject manuscripts due to poor formatting, failure to comply with guidelines, incorrect citations, missing information, poor quality figures, or failure to follow instructions for submission.",
   },
 ];
 
 export default function TestimonialsAndFAQ() {
   const [activeSlide, setActiveSlide] = useState(0);
-  // Toggle FAQ accordion state (defaults to item 2 expanded as shown in screenshot)
   const [openFaq, setOpenFaq] = useState<number | null>(2);
 
   const toggleFaq = (id: number) => {
@@ -102,16 +106,17 @@ export default function TestimonialsAndFAQ() {
 
   return (
     <div className="w-full bg-[#f8fafc] font-sans text-gray-800 py-12 space-y-20 antialiased">
-      {/* ============================================================ */}
-      {/* TESTIMONIALS SECTION                                         */}
-      {/* ============================================================ */}
+      {/* TESTIMONIALS SECTION */}
       <section className="max-w-6xl mx-auto px-4 md:px-8">
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-3">
           Testimonials
         </h2>
         <p className="text-xs md:text-sm text-gray-700 leading-relaxed max-w-4xl mb-8">
           Learn how Pubrica’s{" "}
-          <a href="#" className="text-[#3b82f6] hover:underline">
+          <a
+            href="/insights/sample-work/citation-styles-apa-ama-mla-vancouver-chicago"
+            className="text-[#3b82f6] hover:underline"
+          >
             manuscript formatting service
           </a>{" "}
           has helped researchers meet strict publisher standards and complete a
@@ -136,17 +141,14 @@ export default function TestimonialsAndFAQ() {
               type="button"
               onClick={() => setActiveSlide(index)}
               aria-label={`Slide ${index + 1}`}
-              className={`w-3 h-3 border border-[#1e3e35] ${
-                activeSlide === index ? "bg-white" : "bg-[#1e3e35]"
-              }`}
+              className={`w-3 h-3 border border-[#1e3e35] ${activeSlide === index ? "bg-white" : "bg-[#1e3e35]"
+                }`}
             />
           ))}
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* FAQ SECTION                                                  */}
-      {/* ============================================================ */}
+      {/* FAQ SECTION */}
       <section className="max-w-5xl mx-auto px-4 md:px-8">
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] text-center mb-10">
           Frequently Asked Questions – Manuscript Formatting Service
@@ -173,16 +175,9 @@ export default function TestimonialsAndFAQ() {
                   </span>
                 </button>
 
-                {/* Expanded Content */}
                 {isOpen && (
-                  <div className="px-6 pb-5 pt-1 text-xs md:text-sm text-gray-600 leading-relaxed bg-white">
-                    {item.answer || (
-                      <p>
-                        Our experts review your target journal guidelines to
-                        format structure, citation style, references, tables,
-                        and figures precisely to meet publisher standards.
-                      </p>
-                    )}
+                  <div className="px-6 pb-4 pt-1 text-xs md:text-sm text-gray-600 leading-relaxed border-t border-gray-100">
+                    <p>{item.answer}</p>
                   </div>
                 )}
               </div>

@@ -50,7 +50,7 @@ export default function PlagiarismHeroAndOverview() {
               <p>
                 Our{" "}
                 <Link
-                  href="#plagiarism"
+                  href="/academy/plagiarism-service/common-types-of-plagiarism"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   plagiarism
@@ -60,7 +60,7 @@ export default function PlagiarismHeroAndOverview() {
                 accidental plagiarism. We thoroughly check your manuscript for
                 potential{" "}
                 <Link
-                  href="#plagiarism"
+                  href="/academy/plagiarism-service/academic-paraphrasing-and-plagiarism-prevention"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   plagiarism
@@ -76,7 +76,7 @@ export default function PlagiarismHeroAndOverview() {
                   <span>
                     A complete{" "}
                     <Link
-                      href="#plagiarism-check"
+                      href="/academy/plagiarism-service/researchers-avoid-plagiarism-originality"
                       className="text-sky-600 hover:underline font-medium"
                     >
                       plagiarism check

@@ -81,7 +81,11 @@ const packages: PackageCardProps[] = [
 ];
 
 export default function PosterServicePackagesSection() {
-  const [isAccordionOpen, setIsAccordionOpen] = useState<boolean>(true);
+  const [openAccordion, setOpenAccordion] = useState<number | null>(1);
+
+  const toggleAccordion = (index: number) => {
+    setOpenAccordion(openAccordion === index ? null : index);
+  };
 
   return (
     <section className="w-full bg-[#fdfbf7] py-12 px-4 md:px-8 font-sans text-gray-800">
@@ -230,9 +234,9 @@ export default function PosterServicePackagesSection() {
           ))}
         </div>
 
-        {/* Red CTA Button */}
+        {/* CTA Button */}
         <div className="mb-10 text-center">
-         <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
         </div>
 
         {/* Accordions Section */}
@@ -241,7 +245,7 @@ export default function PosterServicePackagesSection() {
           <div className="border-b border-gray-200">
             <button
               type="button"
-              onClick={() => setIsAccordionOpen(!isAccordionOpen)}
+              onClick={() => toggleAccordion(1)}
               className="w-full flex items-center justify-between p-4 bg-white text-left text-sm md:text-base font-bold text-gray-900 hover:bg-gray-50 transition-colors"
             >
               <span>
@@ -249,12 +253,12 @@ export default function PosterServicePackagesSection() {
                 High-Impact Posters
               </span>
               <span className="text-xl font-bold ml-2">
-                {isAccordionOpen ? "−" : "+"}
+                {openAccordion === 1 ? "−" : "+"}
               </span>
             </button>
 
-            {isAccordionOpen && (
-              <div className="p-4 bg-white">
+            {openAccordion === 1 && (
+              <div className="p-4 bg-white border-t border-gray-100">
                 <div className="overflow-x-auto border border-gray-300 rounded-sm">
                   <table className="w-full text-left text-xs text-gray-800 border-collapse">
                     <thead>
@@ -352,11 +356,60 @@ export default function PosterServicePackagesSection() {
           <div>
             <button
               type="button"
+              onClick={() => toggleAccordion(2)}
               className="w-full flex items-center justify-between p-4 bg-white text-left text-sm md:text-base font-bold text-gray-900 hover:bg-gray-50 transition-colors"
             >
               <span>Pricing and Turnaround Time</span>
-              <span className="text-xl font-bold ml-2">+</span>
+              <span className="text-xl font-bold ml-2">
+                {openAccordion === 2 ? "−" : "+"}
+              </span>
             </button>
+
+            {openAccordion === 2 && (
+              <div className="p-6 bg-white border-t border-gray-100 flex flex-col items-center">
+                {/* Pricing Cards Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-8">
+                  {/* Card 1 */}
+                  <div className="bg-[#d2d6d6] rounded-xl p-6 flex flex-col items-center justify-center text-center shadow-xs min-h-[160px]">
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">
+                      Starting Price
+                    </h4>
+                    <p className="text-sm text-gray-800 font-medium">
+                      $ 80 (Basic Poster)
+                    </p>
+                  </div>
+
+                  {/* Card 2 */}
+                  <div className="bg-[#d2d6d6] rounded-xl p-6 flex flex-col items-center justify-center text-center shadow-xs min-h-[160px]">
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">
+                      Standard Delivery
+                    </h4>
+                    <p className="text-sm text-gray-800 font-medium">
+                      $ 250 (Advanced Scientific Poster with Illustrations and
+                      Infographics )
+                    </p>
+                  </div>
+
+                  {/* Card 3 */}
+                  <div className="bg-[#d2d6d6] rounded-xl p-6 flex flex-col items-center justify-center text-center shadow-xs min-h-[160px]">
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">
+                      Express Delivery
+                    </h4>
+                    <p className="text-sm text-gray-800 font-medium">
+                      3 Days – 10 Days (Depending upon Complexity)
+                    </p>
+                  </div>
+                </div>
+
+                {/* Bottom CTA Button */}
+                <Link
+                  href="/services/publication-support/poster-preparation"
+                  className="bg-[#0b2b23] hover:bg-[#124e43] text-white text-sm font-semibold py-3 px-8 rounded-full transition-colors inline-block"
+                >
+                  Check Pricing &amp; Get a Quote
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>

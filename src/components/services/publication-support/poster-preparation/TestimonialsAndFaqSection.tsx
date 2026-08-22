@@ -65,31 +65,31 @@ const leftFaqs: FAQItem[] = [
     id: 2,
     question: "2. What should be included in a research poster presentation?",
     answer:
-      "Key elements include the title, author affiliations, abstract/introduction, methodology, key findings with high-resolution figures or graphs, summary conclusions, and references or acknowledgments.",
+      "A research poster should have an appropriate title, author details, background, objectives, methods, key results, conclusions, references, acknowledgment, and figures or charts to present research in an effective manner.",
   },
   {
     id: 3,
     question: "3. What is the best format for an academic conference poster?",
     answer:
-      "Most conferences prefer PDF format for digital submission or printing. Standard dimensions are usually 36x48 inches (landscape or portrait) or A0 size, depending on guidelines.",
+      "The best academic conference poster design is a well-structured layout with a logical flow (top-to-bottom or left-to-right), concise text, strong visuals, legible typography, and adequate use of space",
   },
   {
     id: 4,
     question: "4. How to create an effective research poster layout?",
     answer:
-      "Use a 3-column or 4-column layout with a natural left-to-right flow, generous whitespace, high-contrast headings, and short bullet points rather than dense walls of text.",
+      "Designing an effective research poster layout involves structuring your content with a logical flow, using section headers, emphasizing visuals over text, using consistent design, and ensuring legibility even from a distance.",
   },
   {
     id: 5,
     question: "5. How do I convert my research paper into a conference poster?",
     answer:
-      "Condense your paper text by up to 60-70%, focus on key data visualizations, emphasize your conclusions, and let domain experts format it for visual clarity.",
+      "To turn your research paper into a conference poster, you can summarize your paper, focus on your main findings, use visuals instead of lengthy text, use simple language, and design your content with a logical flow, concise layout, etc",
   },
   {
     id: 6,
     question: "6. How can I make my scientific poster visually appealing?",
     answer:
-      "Use professional color palettes, clean vector icons, high-resolution charts, clear font hierarchy, and structured container blocks to guide viewer attention.",
+      "Design an eye-catching scientific poster using a clean design, color scheme, font styles, quality images, proper white space, and simple design elements that effectively highlight important scientific findings in a professional manner.",
   },
 ];
 
@@ -105,34 +105,34 @@ const rightFaqs: FAQItem[] = [
     question:
       "8. What font size and formatting should be used in a research poster?",
     answer:
-      "Headings should be 40–70pt for visibility from a distance, body text between 22–28pt, and line spacing set to 1.2–1.5 for effortless readability.",
+      "Use large font styles for scientific posters, ranging from 60 to 90 points for title fonts, 36 to 44 points for headings, and 24 to 32 points for text fonts, with proper formatting for easy reading.",
   },
   {
     id: 9,
     question:
       "9. What are the key elements of a professional scientific poster?",
     answer:
-      "Structured logical sections, concise text, vector charts, institutional/sponsor logos, clear contact information, and compliant layout sizing.",
+      "A professional scientific poster will have a title, author information, background information, objectives, methods, results, conclusion, references, acknowledgments, and well-designed visual content in a clean and logical design.",
   },
   {
     id: 10,
     question:
       "10. Can professional poster design services improve conference presentation quality?",
     answer:
-      "Yes, expert designers ensure adherence to formatting guidelines, improve scientific visual communication, and allow you to focus entirely on your presentation.",
+      "Yes, professional poster design services will be helpful in improving the quality of conference presentations by improving the layout, visual content, readability, and design of the conference presentations.",
   },
   {
     id: 11,
     question: "11. What are the standard dimensions for conference posters?",
     answer:
-      'Common standard dimensions include 48" x 36" (121.9 x 91.4 cm), 36" x 24", and standard international A0 size (84.1 x 118.9 cm).',
+      'The most commonly used poster sizes in conferences are 36” x 48” in a landscape orientation or A0 size, which is 841 x 1189 mm',
   },
   {
     id: 12,
     question:
       "12. What are the common mistakes to avoid in research poster design?",
     answer:
-      "Avoid overcrowded text, low-resolution pixelated images, inconsistent font choices, poor color contrast, and missing conference formatting guidelines.",
+      "Some of the common mistakes that can occur while designing a poster include too much text, poor layout structure, low-quality images, small font, poor formatting, poor visuals, and poor emphasis of key results.",
   },
 ];
 
@@ -196,9 +196,8 @@ export default function TestimonialsAndFaqSection() {
                 type="button"
                 onClick={() => setActiveSlide(index)}
                 aria-label={`Slide ${index + 1}`}
-                className={`w-3 h-3 border border-[#104e43] ${
-                  activeSlide === index ? "bg-white" : "bg-[#104e43]"
-                }`}
+                className={`w-3 h-3 border border-[#104e43] ${activeSlide === index ? "bg-white" : "bg-[#104e43]"
+                  }`}
               ></button>
             ))}
           </div>
@@ -273,8 +272,8 @@ export default function TestimonialsAndFaqSection() {
             <div className="md:col-span-5 flex justify-center">
               <div className="relative w-full max-w-md h-64 sm:h-72 rounded-sm overflow-hidden shadow-sm border border-gray-200">
                 <Image
-                src="/images/publication-support/poster-preparation/Poster-Preparation-Service-Unique.jpg"
-                alt="Hands typing on laptop displaying creative designs"
+                  src="/images/publication-support/poster-preparation/Poster-Preparation-Service-Unique.jpg"
+                  alt="Hands typing on laptop displaying creative designs"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 40vw"

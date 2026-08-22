@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const PAGE_IMAGES =
   "/images/publication-support/journal-manuscript-formatting-services";
@@ -74,7 +75,7 @@ export default function ManuscriptFormattingService() {
                 </span>
                 <span>
                   <a
-                    href="#"
+                    href="/services/publication-support/journal-manuscript-formatting-services/citation-management-tools-formatting-referencing"
                     className="text-[#2563eb] hover:underline font-medium"
                   >
                     Citation and reference formatting
@@ -115,7 +116,7 @@ export default function ManuscriptFormattingService() {
                 <span>
                   Cross-checking of in-text{" "}
                   <a
-                    href="#"
+                    href="/services/publication-support/journal-manuscript-formatting-services/citation-styles-apa-ama-mla-vancouver-guide"
                     className="text-[#2563eb] hover:underline font-medium"
                   >
                     citations
@@ -144,12 +145,12 @@ export default function ManuscriptFormattingService() {
 
             {/* Call To Action Button */}
             <div className="pt-4">
-              <button
-                type="button"
-                className="bg-[#b91c1c] hover:bg-[#991b1b] text-white text-xs md:text-sm font-semibold px-6 py-2.5 rounded-full shadow-sm transition-colors cursor-pointer"
+              <Link
+                href="/order-now/"
+                className="bg-[#b91c1c] hover:bg-[#991b1b] text-white text-xs md:text-sm font-semibold px-6 py-2.5 rounded-full shadow-sm transition-colors cursor-pointer inline-block"
               >
                 Upload Your Manuscript
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -186,7 +187,12 @@ export default function ManuscriptFormattingService() {
         {/* 4 Standards Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Card 1: CONSORT */}
-          <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-2xs flex flex-col items-center text-center justify-between hover:shadow-md transition-shadow">
+          <a
+            href="https://www.consort-spirit.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white rounded-lg p-6 border border-gray-200 shadow-2xs flex flex-col items-center text-center justify-between hover:shadow-md transition-shadow group"
+          >
             <div className="h-20 flex items-center justify-center mb-4">
               <Image
                 src="/images/publication-support/Consort-Logo.webp"
@@ -196,13 +202,18 @@ export default function ManuscriptFormattingService() {
                 className="object-contain max-h-16"
               />
             </div>
-            <p className="text-xs font-bold text-gray-800 leading-snug">
+            <p className="text-xs font-bold text-gray-800 leading-snug group-hover:text-blue-600 transition-colors">
               Consolidated Standards of Reporting Trials (CONSORT)
             </p>
-          </div>
+          </a>
 
           {/* Card 2: PRISMA */}
-          <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-2xs flex flex-col items-center text-center justify-between hover:shadow-md transition-shadow">
+          <a
+            href="https://static1.squarespace.com/static/65b880e13b6ca75573dfe217/t/67ad313f1c80aa5235fce0d0/1739403584136/PRISMA_2020_checklist.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white rounded-lg p-6 border border-gray-200 shadow-2xs flex flex-col items-center text-center justify-between hover:shadow-md transition-shadow group"
+          >
             <div className="h-20 flex items-center justify-center mb-4">
               <Image
                 src="/images/publication-support/peer-review-pre-submission/prisma_logo.png"
@@ -212,14 +223,19 @@ export default function ManuscriptFormattingService() {
                 className="object-contain max-h-16"
               />
             </div>
-            <p className="text-xs font-bold text-gray-800 leading-snug">
+            <p className="text-xs font-bold text-gray-800 leading-snug group-hover:text-blue-600 transition-colors">
               Preferred Reporting Items for Systematic Reviews and Meta-Analyses
               (PRISMA)
             </p>
-          </div>
+          </a>
 
           {/* Card 3: STROBE */}
-          <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-2xs flex flex-col items-center text-center justify-between hover:shadow-md transition-shadow">
+          <a
+            href="https://www.strobe-statement.org/checklists"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white rounded-lg p-6 border border-gray-200 shadow-2xs flex flex-col items-center text-center justify-between hover:shadow-md transition-shadow group"
+          >
             <div className="h-20 flex items-center justify-center mb-4">
               <Image
                 src="/images/publication-support/peer-review-pre-submission/Strengthening-the-Reporting-of-Observational-Studies-in-Epidemiology.png"
@@ -229,14 +245,19 @@ export default function ManuscriptFormattingService() {
                 className="object-contain max-h-16"
               />
             </div>
-            <p className="text-xs font-bold text-gray-800 leading-snug">
+            <p className="text-xs font-bold text-gray-800 leading-snug group-hover:text-blue-600 transition-colors">
               Strengthening the Reporting of Observational Studies in
               Epidemiology (STROBE)
             </p>
-          </div>
+          </a>
 
           {/* Card 4: ICMJE */}
-          <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-2xs flex flex-col items-center text-center justify-between hover:shadow-md transition-shadow">
+          <a
+            href="https://www.icmje.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white rounded-lg p-6 border border-gray-200 shadow-2xs flex flex-col items-center text-center justify-between hover:shadow-md transition-shadow group"
+          >
             <div className="h-20 flex items-center justify-center mb-4">
               <Image
                 src="/images/publication-support/journal-submission/ICMJE-1_thumb-2.png"
@@ -246,10 +267,10 @@ export default function ManuscriptFormattingService() {
                 className="object-contain max-h-16"
               />
             </div>
-            <p className="text-xs font-bold text-gray-800 leading-snug">
+            <p className="text-xs font-bold text-gray-800 leading-snug group-hover:text-blue-600 transition-colors">
               International Committee of Medical Journal Editors (ICMJE)
             </p>
-          </div>
+          </a>
         </div>
       </section>
     </div>

@@ -15,6 +15,7 @@ interface ComplianceItem {
   id: string;
   name: string;
   imageSrc: string;
+  url?: string;
 }
 
 const PAGE_IMAGES = "/images/publication-support/art-work-preparation";
@@ -44,24 +45,21 @@ const steps: ProcessStep[] = [
 ];
 
 const clinicalItems: ComplianceItem[] = [
-  { id: "cope", name: "Committee on Publication Ethics (COPE)", imageSrc: "/images/publication-support/responding-to-reviewers/COPE_thumb.png" },
-  { id: "consort", name: "Consolidated Standards of Reporting Trials (CONSORT)", imageSrc: "/images/publication-support/poster-preparation/consort-logo-.png" },
-  { id: "hipaa", name: "Health Insurance Portability and Accountability Act", imageSrc: "/images/publication-support/poster-preparation/HIPAA-COMPILANCE-.png" },
-  { id: "icmje", name: "International Committee of Medical Journal Editors (ICMJE)", imageSrc: "/images/publication-support/ICMJE.webp" },
+  { id: "cope", name: "Committee on Publication Ethics (COPE)", imageSrc: "/images/publication-support/responding-to-reviewers/COPE_thumb.png", url: "https://publicationethics.org/" },
+  { id: "consort", name: "Consolidated Standards of Reporting Trials (CONSORT)", imageSrc: "/images/publication-support/poster-preparation/consort-logo-.png", url: "https://www.consort-spirit.org/" },
+  { id: "hipaa", name: "Health Insurance Portability and Accountability Act", imageSrc: "/images/publication-support/poster-preparation/HIPAA-COMPILANCE-.png", url: "/services/publication-support/hipaa-compliance-complete-overview" },
+  { id: "icmje", name: "International Committee of Medical Journal Editors (ICMJE)", imageSrc: "/images/publication-support/ICMJE.webp", url: "https://www.icmje.org" },
 ];
 
 const journalItems: ComplianceItem[] = [
-  { id: "elsevier", name: "Elsevier", imageSrc: `${PAGE_IMAGES}/elsevier-.png` },
-  { id: "springer", name: "Springer", imageSrc: `${PAGE_IMAGES}/Springer.png` },
-  { id: "wiley", name: "Wiley", imageSrc: `${PAGE_IMAGES}/Wiley.png` },
-  { id: "nejm", name: "New England Journal of Medicine", imageSrc: `${PAGE_IMAGES}/New-England-Journal-of-Medicine.png` },
+  { id: "elsevier", name: "Elsevier", imageSrc: `${PAGE_IMAGES}/elsevier-.png`, url: "https://www.elsevier.com" },
+  { id: "springer", name: "Springer", imageSrc: `${PAGE_IMAGES}/Springer.png`, url: "https://www.springer.com/" },
+  { id: "wiley", name: "Wiley", imageSrc: `${PAGE_IMAGES}/Wiley.png`, url: "http://wiley.com/en-in/" },
+  { id: "nejm", name: "New England Journal of Medicine", imageSrc: `${PAGE_IMAGES}/New-England-Journal-of-Medicine.png`, url: "https://www.nejm.org/" },
 ];
 
 export default function ArtworkPreparationDetails() {
-  // State for Step Cards Hover (Defaults to step 1 as active black)
   const [hoveredCard, setHoveredCard] = useState<number | null>(1);
-  
-  // State for Compliance Tab Switch
   const [activeTab, setActiveTab] = useState<"clinical" | "journal">("clinical");
 
   const activeItems = activeTab === "clinical" ? clinicalItems : journalItems;
@@ -85,16 +83,14 @@ export default function ArtworkPreparationDetails() {
           </p>
 
           <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-            {/* Horizontal Connecting Teal Line */}
             <div className="hidden md:block absolute top-[52px] left-[16%] right-[16%] h-2 bg-[#0a7a94] z-0" />
 
             {steps.map((step, idx) => {
-              const isTop = idx % 2 === 0; // Steps 1 and 3 render badge on top, Step 2 on bottom
+              const isTop = idx % 2 === 0;
               const isHovered = hoveredCard === step.number;
 
               return (
                 <div key={step.number} className="relative z-10 flex flex-col items-center">
-                  {/* Number Badge */}
                   <div
                     className={`w-10 h-10 rounded-full bg-[#0a7a94] text-white font-bold text-lg flex items-center justify-center mb-3 shadow-md ${
                       isTop ? "order-1" : "order-3"
@@ -103,10 +99,8 @@ export default function ArtworkPreparationDetails() {
                     {step.number}
                   </div>
 
-                  {/* Vertical Connector */}
                   <div className="w-0.5 h-8 bg-[#0a7a94] order-2" />
 
-                  {/* Card Container */}
                   <div
                     onMouseEnter={() => setHoveredCard(step.number)}
                     className={`w-full p-6 text-left border border-gray-200 transition-all duration-300 cursor-pointer min-h-[220px] shadow-sm ${
@@ -195,12 +189,15 @@ export default function ArtworkPreparationDetails() {
             </div>
           </div>
 
-          {/* Logo Cards Grid */}
+          {/* Logo Cards Grid with Navigation */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {activeItems.map((item) => (
-              <div
+              <a
                 key={item.id}
-                className="border border-slate-200 rounded-lg p-6 flex flex-col items-center justify-between text-center bg-white shadow-sm hover:shadow-md transition-shadow h-[220px]"
+                href={item.url || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group border border-slate-200 rounded-lg p-6 flex flex-col items-center justify-between text-center bg-white shadow-sm hover:shadow-md transition-all h-[220px]"
               >
                 <div className="relative w-full h-24 my-auto flex items-center justify-center">
                   <Image
@@ -211,10 +208,10 @@ export default function ArtworkPreparationDetails() {
                     className="object-contain max-h-20"
                   />
                 </div>
-                <p className="text-xs md:text-sm font-bold text-[#0c373b] mt-4">
+                <p className="text-xs md:text-sm font-bold text-[#0c373b] mt-4 group-hover:text-blue-600 transition-colors">
                   {item.name}
                 </p>
-              </div>
+              </a>
             ))}
           </div>
         </div>

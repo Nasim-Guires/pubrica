@@ -8,6 +8,7 @@ interface ComplianceOrg {
   name: string;
   acronym: string;
   logo: string;
+  url: string;
 }
 
 const PAGE_IMAGES = "/images/publication-support/poster-preparation";
@@ -17,31 +18,37 @@ const conferenceOrgs: ComplianceOrg[] = [
     name: "American Society of Clinical Oncology",
     acronym: "ASCO",
     logo: `${PAGE_IMAGES}/ASCO-.png`,
+    url: "https://www.asco.org/",
   },
   {
     name: "American Heart Association",
     acronym: "AHA",
     logo: `${PAGE_IMAGES}/American-Heart-Association-1.png`,
+    url: "https://www.heart.org/",
   },
   {
     name: "American Diabetes Association",
     acronym: "ADA",
     logo: `${PAGE_IMAGES}/American-Diabetes-Association-1.png`,
+    url: "https://www.diabetes.org/",
   },
   {
     name: "European Society for Medical Oncology",
     acronym: "ESMO",
     logo: `${PAGE_IMAGES}/ESMO-.png`,
+    url: "https://www.esmo.org/",
   },
   {
     name: "World Health Organization",
     acronym: "WHO",
     logo: `${PAGE_IMAGES}/World-Health-Organization-2.png`,
+    url: "https://www.who.int/",
   },
   {
     name: "Indian Council of Medical Research",
     acronym: "ICMR",
     logo: `${PAGE_IMAGES}/Indian-Council-of-Medical-Research-1.png`,
+    url: "https://pubrica.com/",
   },
 ];
 
@@ -50,21 +57,25 @@ const clinicalOrgs: ComplianceOrg[] = [
     name: "Consolidated Standards of Reporting Trials",
     acronym: "CONSORT",
     logo: `${PAGE_IMAGES}/consort-logo-.png`,
+    url: "https://www.consort-spirit.org/",
   },
   {
     name: "International Committee of Medical Journal Editors",
     acronym: "ICMJE",
     logo: `${PAGE_IMAGES}/ICMJE.png`,
+    url: "https://www.icmje.org/",
   },
   {
     name: "Health Insurance Portability and Accountability Act",
     acronym: "HIPAA",
     logo: `${PAGE_IMAGES}/HIPAA-COMPILANCE-.png`,
+    url: "https://www.hhs.gov/hipaa/index.html",
   },
   {
     name: "General Data Protection Regulation",
     acronym: "GDPR",
     logo: `${PAGE_IMAGES}/GDPR.png`,
+    url: "https://gdpr.eu/",
   },
 ];
 
@@ -119,24 +130,27 @@ export default function ComplianceAndSampleSections() {
         {/* Organizations Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {(activeTab === "conference" ? conferenceOrgs : clinicalOrgs).map(
-            (org, index) => (
-            <div
-              key={org.acronym}
-              className="bg-white border border-gray-200 rounded-xl p-6 h-44 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-between"
-            >
-              <div className="relative flex-1 w-full max-w-[140px] h-20">
-                <Image
-                  src={org.logo}
-                  alt={`${org.acronym} Logo`}
-                  fill
-                  sizes="140px"
-                  className="object-contain"
-                />
-              </div>
-              <p className="font-bold text-xs text-gray-800 text-center leading-snug">
-                {org.name}
-              </p>
-            </div>
+            (org) => (
+              <a
+                key={org.acronym}
+                href={org.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white border border-gray-200 rounded-xl p-6 h-44 shadow-sm hover:shadow-md hover:border-[#124e43] transition-all flex flex-col items-center justify-between group"
+              >
+                <div className="relative flex-1 w-full max-w-[140px] h-20">
+                  <Image
+                    src={org.logo}
+                    alt={`${org.acronym} Logo`}
+                    fill
+                    sizes="140px"
+                    className="object-contain"
+                  />
+                </div>
+                <p className="font-bold text-xs text-gray-800 text-center leading-snug group-hover:text-[#124e43]">
+                  {org.name}
+                </p>
+              </a>
             ),
           )}
         </div>
