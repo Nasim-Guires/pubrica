@@ -151,47 +151,50 @@ export default function HomeHeroWithAbout() {
       {/* --- ABOUT US SECTION --- */}
       {/* Adjusted padding top (pt-52 lg:pt-56) to ensure clear spacing below the cards */}
       <section className="bg-white pt-28 pb-20 lg:pt-32 lg:pb-8">
-                <Container className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Column: Image */}
-          <div className="lg:col-span-5 relative w-full aspect-[865/744] min-h-[280px]">
-            <Image
-              src="/images/home/1.webp"
-              alt="Algorithm Development"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 40vw"
-            />
+        <Container className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left Column: Image */}
+            <div className="lg:col-span-5 relative w-full aspect-[865/744] min-h-[280px]">
+              <Image
+                src="/images/home/1.webp"
+                alt="Algorithm Development"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+            </div>
+
+            {/* Right Column: Text Content */}
+            <div className="lg:col-span-7 flex flex-col items-start">
+              <Link
+                href="/about-us/"
+                className="text-sky-600 font-bold text-sm tracking-wider uppercase mb-3 font-sans underline underline-offset-4"
+              >
+                About Us
+              </Link>
+
+              <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-slate-900 tracking-tight leading-[1.3] font-display max-w-2xl">
+                With 20+ years of groundbreaking contributions, we assist
+                researchers in attaining research success with effectiveness and
+                efficiency. We demonstrate proficiency in various fields and
+                subfields of medical science with an extensive track record.
+              </h2>
+
+              <p className="text-gray-600 text-sm sm:text-base font-sans mt-5 leading-relaxed tracking-wide max-w-3xl">
+                Pubrica is your reliable companion that helps you achieve new
+                heights in research. Here, we transform your original ideas into
+                straightforward reports that are supported by empirical evidence.
+              </p>
+
+              <p className="text-gray-600 text-sm sm:text-base font-sans mt-5 leading-relaxed tracking-wide max-w-3xl">
+                Our versatile team of researchers and editors works in coordination
+                with clinical experts to cross-verify methodologies to ensure
+                accurate findings. Using our strong statistical capabilities, we
+                derive remarkable outcomes each time.
+              </p>
+            </div>
           </div>
-
-          {/* Right Column: Text Content */}
-          <div className="lg:col-span-7 flex flex-col items-start">
-            <span className="text-sky-600 font-bold text-sm tracking-wider uppercase mb-3 font-sans">
-              About Us
-            </span>
-
-            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-slate-900 tracking-tight leading-[1.3] font-display max-w-2xl">
-              With 20+ years of groundbreaking contributions, we assist
-              researchers in attaining research success with effectiveness and
-              efficiency. We demonstrate proficiency in various fields and
-              subfields of medical science with an extensive track record.
-            </h2>
-
-            <p className="text-gray-600 text-sm sm:text-base font-sans mt-5 leading-relaxed tracking-wide max-w-3xl">
-              Pubrica is your reliable companion that helps you achieve new
-              heights in research. Here, we transform your original ideas into
-              straightforward reports that are supported by empirical evidence.
-            </p>
-
-            <p className="text-gray-600 text-sm sm:text-base font-sans mt-5 leading-relaxed tracking-wide max-w-3xl">
-              Our versatile team of researchers and editors works in coordination
-              with clinical experts to cross-verify methodologies to ensure
-              accurate findings. Using our strong statistical capabilities, we
-              derive remarkable outcomes each time.
-            </p>
-          </div>
-        </div>
-      </Container>
+        </Container>
       </section>
     </>
   );

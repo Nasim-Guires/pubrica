@@ -26,6 +26,9 @@ interface Expert {
 
 export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
   () => {
+    // State to track which "Why Choose" accordion card is open (null = all closed by default)
+    const [openId, setOpenId] = useState<string | null>(null);
+
     const [activeTab, setActiveTab] = useState<
       "manuscript" | "table" | "figure"
     >("manuscript");
@@ -48,7 +51,7 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
       },
     };
 
-    // Data for "Why Choose" section with hover cards
+    // Data for "Why Choose" section
     const whyChooseData: WhyChooseItem[] = [
       {
         id: "expert-editing",
@@ -58,8 +61,8 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
             Highly trained and native English-speaking editors can offer
             extensive{" "}
             <Link
-              href="/services/editing-and-translation/manuscript-editing"
-              className="text-sky-600 hover:underline group-hover:text-sky-300"
+              href="/subject-matter-experts"
+              className="text-sky-600 font-medium hover:underline"
             >
               subject-matter expertise
             </Link>{" "}
@@ -140,6 +143,10 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
       },
     ];
 
+    const toggleAccordion = (id: string) => {
+      setOpenId((prev) => (prev === id ? null : id));
+    };
+
     return (
       <div className="w-full bg-slate-50 py-12 sm:py-16 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
@@ -151,8 +158,8 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
             <p className="text-base text-slate-700 mb-8 max-w-4xl">
               At Pubrica, we provide best{" "}
               <Link
-                href="/services/editing-and-translation/manuscript-editing"
-                className="text-sky-600 hover:underline font-medium"
+                href="/services/editing-and-translation/manuscript-editing/top-benefits-of-manuscript-editing-services"
+                className="text-sky-600 font-medium"
               >
                 manuscript editing services
               </Link>{" "}
@@ -160,37 +167,46 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
               successful publication outcomes.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {whyChooseData.map((item) => (
-                <div
-                  key={item.id}
-                  className="group border border-slate-200 rounded-lg overflow-hidden bg-white shadow-sm transition-all duration-300 hover:bg-black hover:border-black cursor-pointer"
-                >
-                  {/* Card Header Top Box */}
-                  <div className="bg-emerald-50/70 p-4 border-b border-slate-100 flex items-center justify-between transition-colors duration-300 group-hover:bg-slate-900 group-hover:border-slate-800">
-                    <div className="flex items-center gap-3">
-                      <Image
-                        src={item.iconSrc}
-                        alt={item.iconAlt}
-                        width={35}
-                        height={35}
-                        className="w-6 h-6 object-contain"
-                      />
-                      <h3 className="font-bold text-slate-900 text-base sm:text-lg transition-colors duration-300 group-hover:text-white">
-                        {item.title}
-                      </h3>
-                    </div>
-                    <span className="text-slate-400 group-hover:text-slate-200 font-medium text-lg">
-                      —
-                    </span>
-                  </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {whyChooseData.map((item) => {
+                const isOpen = openId === item.id;
+                return (
+                  <div
+                    key={item.id}
+                    className="rounded-lg overflow-hidden border border-emerald-100 bg-[#f1fcf6] transition-all duration-300"
+                  >
+                    {/* Compact Header Pill */}
+                    <button
+                      type="button"
+                      onClick={() => toggleAccordion(item.id)}
+                      className="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-[#e4f7ed] transition-colors focus:outline-none"
+                    >
+                      <div className="flex items-center gap-3">
+                        <Image
+                          src={item.iconSrc}
+                          alt={item.iconAlt}
+                          width={28}
+                          height={28}
+                          className="w-7 h-7 object-contain flex-shrink-0"
+                        />
+                        <h3 className="font-semibold text-emerald-950 text-sm sm:text-base leading-tight">
+                          {item.title}
+                        </h3>
+                      </div>
+                      <span className="text-emerald-900 font-bold text-lg leading-none ml-2">
+                        {isOpen ? "−" : "+"}
+                      </span>
+                    </button>
 
-                  {/* Card Text Content */}
-                  <div className="p-5 text-sm sm:text-base text-slate-600 leading-relaxed transition-colors duration-300 group-hover:text-slate-200">
-                    {item.description}
+                    {/* Expandable Body */}
+                    {isOpen && (
+                      <div className="px-4 pb-4 pt-1 text-xs sm:text-sm text-slate-700 leading-relaxed border-t border-emerald-200/50">
+                        {item.description}
+                      </div>
+                    )}
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </section>
 
@@ -210,31 +226,28 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
               <div className="flex justify-center border-b border-slate-200 mb-6 gap-2 sm:gap-4">
                 <button
                   onClick={() => setActiveTab("manuscript")}
-                  className={`py-2 px-4 font-semibold text-sm sm:text-base transition-colors rounded-t-md ${
-                    activeTab === "manuscript"
+                  className={`py-2 px-4 font-semibold text-sm sm:text-base transition-colors rounded-t-md ${activeTab === "manuscript"
                       ? "bg-blue-100 text-blue-700 border-b-2 border-blue-600"
                       : "text-slate-600 hover:text-slate-900"
-                  }`}
+                    }`}
                 >
                   Manuscript Format
                 </button>
                 <button
                   onClick={() => setActiveTab("table")}
-                  className={`py-2 px-4 font-semibold text-sm sm:text-base transition-colors rounded-t-md ${
-                    activeTab === "table"
+                  className={`py-2 px-4 font-semibold text-sm sm:text-base transition-colors rounded-t-md ${activeTab === "table"
                       ? "bg-blue-100 text-blue-700 border-b-2 border-blue-600"
                       : "text-slate-600 hover:text-slate-900"
-                  }`}
+                    }`}
                 >
                   Table Format
                 </button>
                 <button
                   onClick={() => setActiveTab("figure")}
-                  className={`py-2 px-4 font-semibold text-sm sm:text-base transition-colors rounded-t-md ${
-                    activeTab === "figure"
+                  className={`py-2 px-4 font-semibold text-sm sm:text-base transition-colors rounded-t-md ${activeTab === "figure"
                       ? "bg-blue-100 text-blue-700 border-b-2 border-blue-600"
                       : "text-slate-600 hover:text-slate-900"
-                  }`}
+                    }`}
                 >
                   Figure Format
                 </button>

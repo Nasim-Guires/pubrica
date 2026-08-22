@@ -16,6 +16,7 @@ import {
   insightsData,
 } from "@/lib/services/editing-and-translation";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const Page = () => {
@@ -135,11 +136,11 @@ const Page = () => {
           {/* Paragraph */}
           <p className="text-[17px] leading-8 text-slate-700">
             Pubrica provides{" "}
-            <a href="#" className="text-[#4180A8]">
+            <a href="/academy/editing-and-translation/importance-of-editing-proofreading-manuscript-submission" className="text-[#4180A8]">
               manuscript editing
             </a>{" "}
             and academic translation services tailored for healthcare,
-            <a href="#" className="text-[#4180A8]">
+            <a href="/subject-matter-experts/life-sciences" className="text-[#4180A8]">
               {" "}
               life sciences
             </a>
@@ -174,14 +175,23 @@ const Page = () => {
           </p>
 
           {/* Buttons */}
-          <div className="mt-10 flex gap-5">
-            <GetFreeQuoteButton />
+          <div className="mt-10 flex flex-wrap items-center gap-5">
+            <Link
+              href="/order-now/"
+              className="rounded-full bg-[#BA0000] px-6 py-2.5 text-sm text-white font-semibold hover:bg-[#980000] transition-colors"
+            >
+              Get a Free Quote
+            </Link>
 
+            <Link
+              href="https://pubrica.com/wp-content/uploads/2026/05/Editing-and-Translation-Services.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-[#BA0000] px-6 py-2.5 text-sm text-white font-semibold hover:bg-[#980000] transition-colors"
+            >
+              View Brochure
+            </Link>
           </div>
-
-          <button className="rounded-full bg-[#BA0000] px-4 py-1.5 text-sm text-white font-semibold hover:bg-[#980000] transition-colors">
-            View Brochure
-          </button>
         </div>
       </section>
       <hr className="border-slate-100" />
@@ -194,7 +204,7 @@ const Page = () => {
           </h2>
           <p className="text-[14px] text-slate-600 max-w-5xl mb-12 leading-relaxed">
             At Pubrica, we provide end-to-end{" "}
-            <a href="#" className="text-[#4080A8] hover:underline font-normal">
+            <a href="/academy/editing-and-translation/manuscript-editing-process-steps" className="text-[#4080A8] hover:underline font-normal">
               Editing and Translation Services
             </a>{" "}
             designed to refine, enhance, and globalize your content. From
@@ -282,38 +292,38 @@ const Page = () => {
           </p>
         </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-  {audienceList.map((audience, index) => (
-    <div
-      key={index}
-      className="group relative h-64 bg-black rounded-none overflow-hidden cursor-pointer"
-    >
-      {/* Background Image (fades out on hover) */}
-      <img
-        src={audience.bgImage}
-        alt={audience.title}
-        className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
-      />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {audienceList.map((audience, index) => (
+            <div
+              key={index}
+              className="group relative h-64 bg-black rounded-none overflow-hidden cursor-pointer"
+            >
+              {/* Background Image (fades out on hover) */}
+              <img
+                src={audience.bgImage}
+                alt={audience.title}
+                className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+              />
 
-      {/* Default Overlay & Title (bottom-aligned, hides on hover) */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 group-hover:opacity-0 transition-opacity duration-300">
-        <h3 className="text-white font-bold text-lg leading-snug">
-          {audience.title}
-        </h3>
-      </div>
+              {/* Default Overlay & Title (bottom-aligned, hides on hover) */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 group-hover:opacity-0 transition-opacity duration-300">
+                <h3 className="text-white font-bold text-lg leading-snug">
+                  {audience.title}
+                </h3>
+              </div>
 
-      {/* Hover Content (solid black background with title + description, shows on hover) */}
-      <div className="absolute inset-0 p-6 flex flex-col justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black text-white">
-        <h3 className="font-bold text-lg leading-snug mb-3">
-          {audience.title}
-        </h3>
-        <p className="text-xs leading-relaxed text-gray-300">
-          {audience.description}
-        </p>
-      </div>
-    </div>
-  ))}
-</div>
+              {/* Hover Content (solid black background with title + description, shows on hover) */}
+              <div className="absolute inset-0 p-6 flex flex-col justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black text-white">
+                <h3 className="font-bold text-lg leading-snug mb-3">
+                  {audience.title}
+                </h3>
+                <p className="text-xs leading-relaxed text-gray-300">
+                  {audience.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
       {/* SECTION 4: TYPES OF EDITING SERVICES */}
       <section className="py-12 bg-white px-6 max-w-7xl mx-auto font-sans">
@@ -612,21 +622,39 @@ const Page = () => {
           </ul>
 
           {/* Brand/Journal Partner Grid */}
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-4 items-center bg-slate-50/50 p-4 rounded-md border border-slate-100">
-            {trustPartners.map((partner, index) => (
-              <div
-                key={index}
-                className="relative h-12 w-full grayscale contrast-125 hover:grayscale-0 transition-all duration-200"
-              >
-                <Image
-                  src={partner.logo}
-                  alt={partner.name}
-                  fill
-                  sizes="(max-w-758px) 33vw, 120px"
-                  className="object-contain"
-                />
-              </div>
-            ))}
+          <div className="overflow-hidden bg-slate-50/50 p-4 rounded-md border border-slate-100">
+            <div
+              className="flex w-max items-center gap-8 animate-[marquee_25s_linear_infinite]"
+              style={{
+                animationName: "marquee",
+              }}
+            >
+              {[...trustPartners, ...trustPartners].map((partner, index) => (
+                <div
+                  key={`${partner.name}-${index}`}
+                  className="relative h-14 w-32 flex-shrink-0"
+                >
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    fill
+                    sizes="128px"
+                    className="object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <style jsx>{`
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  `}</style>
           </div>
         </section>
 
@@ -645,14 +673,15 @@ const Page = () => {
             impact for academic, clinical, and professional research.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="w-full max-w-4xl mx-auto px-4">
             <div className="relative w-full aspect-[1379/776] overflow-hidden rounded-sm border border-slate-200 shadow-xl">
               <Image
                 src="/images/editing-and-translation/Editing-and-Translation-Services.png"
                 alt="Editing and Translation Services sample work"
                 fill
-                sizes="(max-width: 768px) 100vw, 640px"
+                sizes="(max-width: 1024px) 100vw, 896px"
                 className="object-contain"
+                priority
               />
             </div>
           </div>

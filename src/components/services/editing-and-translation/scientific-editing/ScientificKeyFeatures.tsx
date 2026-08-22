@@ -45,7 +45,7 @@ const featuresData: FeatureCard[] = [
         Powered by iThenticate, it provides a detailed report to help you
         prevent unintentional{" "}
         <Link
-          href="/services/publication-support/plagiarism-check"
+          href="/services/publication-support/plagiarism-services"
           className="text-cyan-700 hover:underline"
         >
           plagiarism
@@ -83,7 +83,7 @@ const featuresData: FeatureCard[] = [
     content: (
       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
         <Link
-          href="/services/publication-support/formatting"
+          href="/services/publication-support/journal-manuscript-formatting-services"
           className="text-cyan-700 hover:underline"
         >
           Journal Formatting

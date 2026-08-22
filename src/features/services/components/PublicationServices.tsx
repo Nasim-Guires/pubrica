@@ -5,7 +5,6 @@ import {
   CheckCircle,
   ArrowRight,
   Sparkles,
-  ShieldCheck,
   Users,
   Zap,
 } from "lucide-react";
@@ -14,22 +13,30 @@ import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 export default function PublicationServices() {
   const complianceFrameworks = [
     {
-      name: "ICMJE Recommendations",
-      desc: "International Committee of Medical Journal Editors",
-    },
-    { name: "COPE Guidelines", desc: "Committee on Publication Ethics" },
-    {
-      name: "Good Publication Practice (GPP) Guidelines",
-      desc: "Standardizing publication plans",
-    },
-    { name: "GDPR", desc: "General Data Protection Regulation compliant" },
-    {
-      name: "HIPAA",
-      desc: "Health Insurance Portability and Accountability Act",
+      prefix: "ICMJE (International Committee of ",
+      linkText: "Medical Journal",
+      suffix: " Editors) Recommendations",
     },
     {
-      name: "World Association of Medical Editors (WAME) Policies",
-      desc: "Ethical medical editing",
+      prefix: "COPE (",
+      boldText: "Committee on Publication Ethics",
+      suffix: ") Guidelines",
+    },
+    {
+      prefix: "Good Publication Practice (GPP) Guidelines",
+    },
+    {
+      prefix: "GDPR (",
+      boldText: "General Data Protection Regulation",
+      suffix: ")",
+    },
+    {
+      prefix: "HIPAA (",
+      boldText: "Health Insurance Portability and Accountability Act",
+      suffix: ")",
+    },
+    {
+      prefix: "World Association of Medical Editors (WAME) Policies",
     },
   ];
 
@@ -124,19 +131,19 @@ export default function PublicationServices() {
   };
 
   return (
-    <section className="bg-slate-50 py-16 px-4 sm:px-6 lg:px-4 font-sans text-slate-800">
+    <section className="bg-[#f2f4f3] py-16 px-4 sm:px-6 lg:px-8 font-sans text-slate-800">
       <div className="max-w-7xl mx-auto">
         {/* ================= COMPLIANCE SECTION ================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
-          <div className="lg:col-span-7 space-y-6">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0d4f60] leading-tight">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-24">
+          <div className="lg:col-span-7 space-y-5">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a3847] leading-snug">
               Certified Excellence. Global Compliance. Trusted Integrity
             </h2>
-            <p className="text-slate-600 leading-relaxed text-base">
+            <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
               At Pubrica, we provide{" "}
               <Link
                 href={ROUTE_MAP["best publication support services"]}
-                className="text-sky-600 font-semibold no-underline hover:no-underline cursor-pointer hover:text-sky-700 inline transition-colors"
+                className="text-sky-600 font-normal no-underline hover:underline cursor-pointer inline"
               >
                 best publication support services
               </Link>{" "}
@@ -148,63 +155,46 @@ export default function PublicationServices() {
               publication-ready in reputable journals worldwide.
             </p>
 
-            <div className="pt-4">
-              <h3 className="text-xl font-bold text-[#0d4f60] mb-4 flex items-center gap-2">
-                <ShieldCheck className="w-6 h-6 text-[#10b981]" />
-                Regulatory frameworks we comply with
+            <div className="pt-2">
+              <h3 className="text-xl font-bold text-[#0a3847] mb-4">
+                Regulatory frameworks we comply With
               </h3>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {complianceFrameworks.map((framework, index) => {
-                  const firstNamePart = framework.name.split(" (")[0];
-                  const isMedicalJournal = firstNamePart.includes("Medical Journal");
-
-                  return (
-                    <li key={index} className="flex items-start gap-2.5">
-                      <span className="text-[#e11d48] mt-1 shrink-0">●</span>
-                      <div>
-                        <span className="font-semibold text-slate-800 no-underline">
-                          {isMedicalJournal ? (
-                            <>
-                              {firstNamePart.split("Medical Journal")[0]}
-                              <Link
-                                href={ROUTE_MAP["Medical Journal"]}
-                                className="text-sky-600 no-underline hover:no-underline hover:text-sky-700 font-semibold inline transition-colors"
-                              >
-                                Medical Journal
-                              </Link>
-                              {firstNamePart.split("Medical Journal")[1]}
-                            </>
-                          ) : (
-                            firstNamePart
-                          )}
+              <ul className="flex flex-col space-y-2.5">
+                {complianceFrameworks.map((item, index) => (
+                  <li key={index} className="flex items-start gap-2.5 text-sm sm:text-base leading-snug">
+                    <span className="text-[#e11d48] mt-1 shrink-0 text-xs">●</span>
+                    <div className="text-slate-800">
+                      <span>{item.prefix}</span>
+                      {item.linkText && (
+                        <Link
+                          href={ROUTE_MAP[item.linkText]}
+                          className="text-sky-600 hover:underline inline"
+                        >
+                          {item.linkText}
+                        </Link>
+                      )}
+                      {item.boldText && (
+                        <span className="font-semibold text-slate-900">
+                          {item.boldText}
                         </span>
-                        {framework.name.includes("(") && (
-                          <span className="text-slate-500 text-sm no-underline">
-                            {" (" + framework.name.split(" (")[1]}
-                          </span>
-                        )}
-                      </div>
-                    </li>
-                  );
-                })}
+                      )}
+                      {item.suffix && <span>{item.suffix}</span>}
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
 
           {/* Compliance Graphic */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md aspect-video rounded-xl overflow-hidden shadow-2xl group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-950/80 to-slate-900/40 z-10 flex flex-col justify-end p-6 text-white">
-                <div className="w-12 h-12 rounded-full bg-cyan-400/20 backdrop-blur-md flex items-center justify-center border border-cyan-300/40 mb-3 animate-pulse"></div>
-              </div>
-              <div className="relative w-full h-full overflow-hidden">
-                <Image
-                  src="/images/publication-support/Regulatory-frameworks-we-comply-With.jpg"
-                  alt="Scientists and data analysts collaborating over scientific compliance checklists"
-                  fill
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition duration-700"
-                />
-              </div>
+            <div className="relative w-full max-w-md aspect-[4/3] rounded-sm overflow-hidden shadow-md border border-gray-200">
+              <Image
+                src="/images/publication-support/Regulatory-frameworks-we-comply-With.jpg"
+                alt="Scientists and data analysts collaborating over scientific compliance checklists"
+                fill
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -223,96 +213,58 @@ export default function PublicationServices() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch w-full max-w-7xl mx-auto p-4 font-sans">
           {packages.map((pkg, idx) => (
             <div
               key={idx}
-              className={`flex flex-col rounded-2xl overflow-hidden shadow-lg border-t-8 ${pkg.accentBorder} ${pkg.bgColor} transition-all duration-300 hover:shadow-2xl hover:-translate-y-1`}
+              className="flex flex-col rounded-sm overflow-hidden shadow-md bg-white text-[#2d2d2d]"
             >
-              {/* Card Header Banner */}
-              <div className="p-6 bg-white flex items-center justify-between border-b border-slate-100">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center font-bold text-xl border shadow-inner">
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-indigo-600 font-black">
-                      {pkg.letter}
-                    </span>
-                  </div>
-                  <div>
-                    <h3 className="font-extrabold text-2xl text-slate-800">
-                      {pkg.name}
-                    </h3>
-                    {pkg.popular && (
-                      <span className="inline-flex items-center gap-1 text-xs bg-amber-100 text-amber-800 font-semibold px-2 py-0.5 rounded-full mt-0.5">
-                        <Sparkles className="w-3 h-3 text-amber-600 fill-amber-500" />{" "}
-                        Best Value
+              {/* Top White Header Section */}
+              <div className="py-6 px-4 bg-white flex items-center justify-center gap-3 border-b border-gray-100">
+                <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg ${pkg.badgeBg}`}>
+                  {pkg.letter}
+                </div>
+                <h3 className={`font-bold text-xl ${pkg.colorClass.includes('purple') ? 'text-[#6b21a8]' : pkg.colorClass.includes('amber') ? 'text-[#78350f]' : 'text-[#1e3a8a]'}`}>
+                  {pkg.name}
+                </h3>
+              </div>
+
+              {/* Colored Content Body */}
+              <div className={`p-6 flex-1 flex flex-col justify-between ${pkg.bgColor}`}>
+                <div className="space-y-4">
+                  {/* Ideal For */}
+                  {pkg.idealFor && (
+                    <div className="text-xs md:text-sm leading-relaxed">
+                      <span className="font-bold inline-flex items-center gap-1 mr-1">
+                        <span className="text-[10px]">➔</span> Ideal For:
                       </span>
-                    )}
+                      <span>{pkg.idealFor}</span>
+                    </div>
+                  )}
+
+                  {/* Services Include */}
+                  {pkg.includes && pkg.includes.length > 0 && (
+                    <div className="text-xs md:text-sm">
+                      <div className="font-bold mb-2 flex items-center gap-1">
+                        <span className="text-[10px]">➔</span> Services Include:
+                      </div>
+                      <ul className="list-disc list-inside space-y-1.5 pl-1 opacity-95">
+                        {pkg.includes.map((item, i) => (
+                          <li key={i} className="leading-snug">
+                            <span className="-ml-1">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+
+                {/* Bottom Turnaround Section */}
+                {pkg.turnaround && (
+                  <div className="mt-8 pt-4 border-t border-black/10 text-xs md:text-sm font-bold flex items-center gap-1">
+                    <span className="text-[10px]">➔</span> Turnaround Time : {pkg.turnaround}
                   </div>
-                </div>
-              </div>
-
-              {/* Package Details Area */}
-              <div className="p-6 flex-1 flex flex-col space-y-6">
-                {/* Section: Ideal For */}
-                <div>
-                  <h4 className="text-xs uppercase font-bold tracking-wider text-slate-700 flex items-center gap-1.5 mb-2">
-                    <Users className="w-4 h-4 opacity-75" /> Ideal for:
-                  </h4>
-                  <p className="text-slate-700 text-sm leading-relaxed font-medium bg-white/40 p-3 rounded-lg border border-white/50">
-                    {pkg.idealFor}
-                  </p>
-                </div>
-
-                {/* Section: Includes */}
-                <div>
-                  <h4 className="text-xs uppercase font-bold tracking-wider text-slate-700 flex items-center gap-1.5 mb-3">
-                    <CheckCircle className="w-4 h-4 opacity-75" /> Includes:
-                  </h4>
-                  <ul className="space-y-2.5">
-                    {pkg.includes.map((item, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 text-slate-700 text-sm leading-relaxed"
-                      >
-                        <ArrowRight className="w-4 h-4 text-slate-800 shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Section: Add-ons */}
-                <div className="pt-2 border-t border-slate-600/10 mt-auto">
-                  <h4 className="text-xs uppercase font-bold tracking-wider text-slate-700 flex items-center gap-1.5 mb-3">
-                    <Zap className="w-4 h-4 opacity-75" /> Optional Add-ons:
-                  </h4>
-                  <ul className="space-y-2">
-                    {pkg.addons.map((addon, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 text-slate-600 text-sm"
-                      >
-                        <ArrowRight className="w-3.5 h-3.5 text-slate-500 shrink-0 mt-0.5" />
-                        <span>{addon}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* Package Footer details */}
-              <div className="p-6 bg-black/5 border-t border-black/5 flex flex-col justify-between items-center sm:flex-row gap-4">
-                <div className="text-center sm:text-left">
-                  <span className="text-xs font-bold text-slate-500 block uppercase tracking-wide">
-                    Turnaround
-                  </span>
-                  <span className="text-sm font-black text-slate-800">
-                    {pkg.turnaround}
-                  </span>
-                </div>
-                <button className="w-full sm:w-auto px-5 py-2.5 bg-slate-900 text-white rounded-lg text-sm font-semibold hover:bg-slate-800 active:scale-95 transition-all shadow-md">
-                  Select {pkg.name}
-                </button>
+                )}
               </div>
             </div>
           ))}
@@ -321,7 +273,6 @@ export default function PublicationServices() {
         {/* ================= GLOBAL CALL TO ACTION ================= */}
         <div className="text-center">
           <GetFreeQuoteButton />
-          
         </div>
       </div>
     </section>

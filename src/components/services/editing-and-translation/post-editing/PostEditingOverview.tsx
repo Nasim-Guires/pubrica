@@ -66,14 +66,14 @@ export const PostEditingOverview: React.FC = () => {
         <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-8">
           Pubrica’s{" "}
           <Link
-            href="/services/editing-and-translation/post-editing"
+            href="/services/editing-and-translation/manuscript-editing"
             className="text-blue-600 hover:underline"
           >
             Post-Editing Services
           </Link>{" "}
           are designed to refine and enhance your revised{" "}
           <Link
-            href="/services/editing-and-translation"
+            href="/services/editing-and-translation/manuscript-editing"
             className="text-blue-600 hover:underline"
           >
             manuscripts

@@ -41,9 +41,9 @@ export const EditingTranslationBookEditingHero: React.FC = () => {
             At Pubrica, we understand the complexity and demands of editing
             scientific academic books, which are often extensive, technically
             dense, and subject to tight publication deadlines. Our book editing
-            services are designed to address every aspect of{" "}
-            <Link href="#" className="text-sky-600 hover:underline">
-              book publication
+            services are designed to address every aspect of book{" "}
+            <Link href="/services/publication-support" className="text-sky-600 hover:underline">
+               publication
             </Link>
             , from initial drafts to final proofs, ensuring compliance with the
             stringent formatting and content standards set by publishers.
@@ -88,7 +88,7 @@ export const EditingTranslationBookEditingHero: React.FC = () => {
                   Adherence to Publishing Standards:
                 </strong>{" "}
                 Our editors are well-versed in the{" "}
-                <Link href="#" className="text-sky-600 hover:underline">
+                <Link href="/services/publication-support/journal-manuscript-formatting-services" className="text-sky-600 hover:underline">
                   formatting
                 </Link>{" "}
                 guidelines of major publishers. We ensure that your book not
@@ -101,7 +101,7 @@ export const EditingTranslationBookEditingHero: React.FC = () => {
                 </strong>{" "}
                 Recognizing the importance of meeting publication deadlines, we
                 are committed to delivering high-quality{" "}
-                <Link href="#" className="text-sky-600 hover:underline">
+                <Link href="/services/editing-and-translation" className="text-sky-600 hover:underline">
                   editing services
                 </Link>{" "}
                 quickly and efficiently, ensuring that your project remains on

@@ -168,8 +168,8 @@ export default function TherapeuticAndWorkflow() {
                     {/* Card Container */}
                     <div
                       className={`w-full min-h-[260px] p-4 flex flex-col items-center text-center transition-all duration-300 group rounded-md ${isSelected
-                          ? "bg-[#4a555a] text-white shadow-xl scale-105 z-20"
-                          : "bg-white text-gray-700 shadow-sm hover:shadow-md hover:bg-black hover:text-white"
+                        ? "bg-[#4a555a] text-white shadow-xl scale-105 z-20"
+                        : "bg-white text-gray-700 shadow-sm hover:shadow-md hover:bg-black hover:text-white"
                         }`}
                     >
                       <div className="mb-3">
@@ -223,8 +223,8 @@ export default function TherapeuticAndWorkflow() {
                   key={step.stepNumber}
                   onClick={() => setActiveStep(step.stepNumber)}
                   className={`flex flex-col p-5 rounded-lg transition-all duration-300 cursor-pointer group ${isSelected
-                      ? "bg-[#4a555a] text-white shadow-md"
-                      : "bg-white text-gray-700 shadow-sm border border-gray-100 hover:bg-black hover:text-white"
+                    ? "bg-[#4a555a] text-white shadow-md"
+                    : "bg-white text-gray-700 shadow-sm border border-gray-100 hover:bg-black hover:text-white"
                     }`}
                 >
                   <div className="flex items-center gap-3 mb-2">
@@ -265,7 +265,7 @@ export default function TherapeuticAndWorkflow() {
             <img
               src="/images/publication-support/Satisfaction_Guarantee.webp"
               alt="100% Satisfaction Guarantee"
-              className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain"
             />
           </div>
 

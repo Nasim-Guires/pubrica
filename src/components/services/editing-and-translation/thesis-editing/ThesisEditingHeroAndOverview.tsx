@@ -61,7 +61,7 @@ export const ThesisEditingHeroAndOverview: React.FC = () => {
               manuscript meets all academic requirements and is in flawless
               language. Get your thesis edited by{" "}
               <a
-                href="#subject-matter-experts"
+                href="/subject-matter-experts"
                 className="text-cyan-600 hover:underline font-medium"
               >
                 subject matter experts

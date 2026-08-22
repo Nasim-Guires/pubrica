@@ -21,7 +21,7 @@ const audiences: AudienceCard[] = [
     description: (
       <>
         Individual scholars, early-career researchers, and senior academics seeking to refine manuscripts, theses, or dissertations for{" "}
-        <Link href="/services/journal-submission" className="text-cyan-400 underline hover:text-cyan-300">
+        <Link href="/services/publication-support/journal-submission" className="text-cyan-400 underline hover:text-cyan-300">
           journal submission
         </Link>{" "}
         or academic recognition.
@@ -45,7 +45,7 @@ const audiences: AudienceCard[] = [
     description: (
       <>
         Clinicians, surgeons, and healthcare practitioners aiming to publish clinical research, case studies, and{" "}
-        <Link href="/services/systematic-reviews" className="text-cyan-400 underline hover:text-cyan-300">
+        <Link href="/services/research-services/systematic-review" className="text-cyan-400 underline hover:text-cyan-300">
           systematic reviews
         </Link>{" "}
         in leading journals.
@@ -98,8 +98,8 @@ export default function ScientificWhoWeServe() {
         <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
           At Pubrica, our{" "}
           <Link
-            href="/services/scientific-research-paper-editing"
-            className="text-cyan-700 underline hover:text-cyan-800 font-medium"
+            href="/academy/scientific-editing/scientific-vs-language-editing-high-quality-publications"
+            className="text-blue-700  hover:text-cyan-800 font-medium"
           >
             scientific research paper editing services
           </Link>{" "}
@@ -158,8 +158,8 @@ export default function ScientificWhoWeServe() {
         <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
           Our services also extend to{" "}
           <Link
-            href="/services/academic-writing-and-editing"
-            className="text-cyan-700 underline hover:text-cyan-800 font-medium"
+            href="/services/editing-and-translation/manuscript-editing"
+            className="text-blue-700  hover:text-cyan-800 font-medium"
           >
             academic writing and editing
           </Link>

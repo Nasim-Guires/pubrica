@@ -51,8 +51,8 @@ export const EditingTranslationManuscriptEditingWhatWeDo: React.FC = () => {
           We provide tailored editing solutions, ranging from complete language
           and grammar editing to full manuscript rewriting and{" "}
           <Link
-            href="/services/editing-and-translation/translation"
-            className="text-sky-600 hover:underline"
+            href="/services/editing-and-translation"
+            className="text-sky-600"
           >
             professional translation for research
           </Link>
@@ -107,7 +107,7 @@ export const EditingTranslationManuscriptEditingWhatWeDo: React.FC = () => {
               manuscripts that clearly and coherently present your findings. Our
               comprehensive prepublication services include editing,{" "}
               <Link
-                href="/services/editing-and-translation/proofreading"
+                href="/insights/proof-reading/"
                 className="text-sky-600 hover:underline"
               >
                 proofreading

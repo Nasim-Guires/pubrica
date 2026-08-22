@@ -35,8 +35,8 @@ interface PackageFeature {
 
 export const EditingTranslationManuscriptEditingTypesAndPackages: React.FC =
   () => {
-    // Accordion open/close state for green top banner
-    const [isAccordionOpen, setIsAccordionOpen] = useState<boolean>(true);
+    // Set initial state to false so it is closed by default
+    const [isAccordionOpen, setIsAccordionOpen] = useState<boolean>(false);
 
     // Data for Manuscript Types
     const manuscriptTypes: ManuscriptType[] = [
@@ -380,67 +380,87 @@ export const EditingTranslationManuscriptEditingTypesAndPackages: React.FC =
           </section>
 
           {/* SECTION 4: Recent Publications */}
-          <section className="text-center pt-4">
+          <section className="text-center pt-4 overflow-hidden">
             <h2 className="text-xl sm:text-2xl font-bold text-[#0d3b36] mb-8">
               Recent Publications
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {recentPublications.map((pub) => (
-                <div
-                  key={pub.id}
-                  className="bg-white border border-slate-200 rounded-lg p-5 shadow-sm flex flex-col justify-between text-left hover:shadow-md transition-shadow"
-                >
-                  <div>
-                    <h3 className="font-bold text-slate-900 text-sm sm:text-base mb-3 leading-snug">
-                      {pub.journalTitle}
-                    </h3>
+            <div className="overflow-hidden w-full">
+              <div className="flex w-max animate-[publicationMarquee_30s_linear_infinite]">
+                {[...recentPublications, ...recentPublications].map((pub, index) => (
+                  <div
+                    key={`${pub.id}-${index}`}
+                    className="w-screen max-w-3xl px-4 flex-shrink-0"
+                  >
+                    <div className="bg-white border border-slate-200 rounded-lg p-5 shadow-sm flex flex-col justify-between text-left hover:shadow-md transition-shadow">
+                      <div>
+                        <h3 className="font-bold text-slate-900 text-sm sm:text-base mb-3 leading-snug">
+                          {pub.journalTitle}
+                        </h3>
 
-                    <div className="flex gap-4 mb-4 items-start">
-                      {/* Publication Journal Cover */}
-                      <div className="w-20 h-28 relative flex-shrink-0 border border-slate-200 bg-slate-100 rounded overflow-hidden">
-                        <Image
-                          src={pub.coverImage}
-                          alt={pub.journalTitle}
-                          fill
-                          className="object-cover"
-                        />
+                        <div className="flex gap-4 mb-4 items-start">
+                          {/* Publication Journal Cover */}
+                          <div className="w-20 h-28 relative flex-shrink-0 border border-slate-200 bg-slate-100 rounded overflow-hidden">
+                            <Image
+                              src={pub.coverImage}
+                              alt={pub.journalTitle}
+                              fill
+                              className="object-cover"
+                            />
+                          </div>
+
+                          {/* Metadata details */}
+                          <div className="text-xs space-y-1.5 text-slate-600">
+                            <p>
+                              <strong className="text-slate-800">Title:</strong>{" "}
+                              {pub.paperTitle}
+                            </p>
+
+                            <p>
+                              <strong className="text-slate-800">Author:</strong>{" "}
+                              {pub.author}
+                            </p>
+
+                            <p>
+                              <strong className="text-slate-800">Publisher:</strong>{" "}
+                              {pub.publisher}
+                            </p>
+
+                            <p>
+                              <strong className="text-slate-800">
+                                Impact Factor:
+                              </strong>{" "}
+                              {pub.impactFactor}
+                            </p>
+                          </div>
+                        </div>
                       </div>
 
-                      {/* Metadata details */}
-                      <div className="text-xs space-y-1.5 text-slate-600">
-                        <p>
-                          <strong className="text-slate-800">Title:</strong>{" "}
-                          {pub.paperTitle}
-                        </p>
-                        <p>
-                          <strong className="text-slate-800">Author:</strong>{" "}
-                          {pub.author}
-                        </p>
-                        <p>
-                          <strong className="text-slate-800">Publisher:</strong>{" "}
-                          {pub.publisher}
-                        </p>
-                        <p>
-                          <strong className="text-slate-800">
-                            Impact Factor:
-                          </strong>{" "}
-                          {pub.impactFactor}
-                        </p>
-                      </div>
+                      {/* Visit Link Button */}
+                      <Link
+                        href={pub.linkUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 inline-block w-fit px-6 py-1.5 bg-[#121c4e] text-white font-medium text-xs rounded hover:bg-[#0a1236] transition-colors text-center"
+                      >
+                        Visit
+                      </Link>
                     </div>
                   </div>
-
-                  {/* Visit Link Button */}
-                  <Link
-                    href={pub.linkUrl}
-                    className="mt-2 inline-block w-fit px-6 py-1.5 bg-[#121c4e] text-white font-medium text-xs rounded hover:bg-[#0a1236] transition-colors text-center"
-                  >
-                    Visit
-                  </Link>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
+
+            <style>{`
+    @keyframes publicationMarquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  `}</style>
           </section>
 
           {/* SECTION 5: Manuscript Editing Support Packages */}
@@ -515,9 +535,8 @@ export const EditingTranslationManuscriptEditingTypesAndPackages: React.FC =
                   {packageFeatures.map((row, idx) => (
                     <tr
                       key={idx}
-                      className={`border-b border-slate-200 ${
-                        idx % 2 === 0 ? "bg-white" : "bg-slate-50/50"
-                      }`}
+                      className={`border-b border-slate-200 ${idx % 2 === 0 ? "bg-white" : "bg-slate-50/50"
+                        }`}
                     >
                       <td className="p-3.5 text-xs sm:text-sm font-medium text-slate-700">
                         {row.featureName}
@@ -539,7 +558,7 @@ export const EditingTranslationManuscriptEditingTypesAndPackages: React.FC =
 
             {/* Call-to-Action Action Button */}
             <div className="mt-8">
-            <GetFreeQuoteButton/>
+              <GetFreeQuoteButton />
             </div>
           </section>
         </div>

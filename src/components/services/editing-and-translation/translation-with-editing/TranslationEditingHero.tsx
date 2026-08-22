@@ -49,7 +49,7 @@ export default function TranslationEditingHero() {
                 <span>
                   Language Translations done by a bilingual{" "}
                   <a
-                    href="#"
+                    href="/subject-matter-experts"
                     className="text-[#0056B3] hover:underline font-semibold"
                   >
                     subject matter expert

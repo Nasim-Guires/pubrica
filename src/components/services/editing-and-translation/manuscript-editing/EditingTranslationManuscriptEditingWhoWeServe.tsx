@@ -111,7 +111,7 @@ export const EditingTranslationManuscriptEditingWhoWeServe: React.FC = () => {
         <p className="text-base sm:text-lg text-slate-700 max-w-4xl mb-10 leading-relaxed">
           Our{" "}
           <Link
-            href="/services/editing-and-translation/manuscript-editing"
+            href="/academy/manuscript-editing/from-research-to-final-draft-best-practices-in-manuscript-editing"
             className="text-sky-600 hover:underline"
           >
             manuscript editing services

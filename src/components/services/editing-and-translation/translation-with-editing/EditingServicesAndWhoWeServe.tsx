@@ -75,7 +75,7 @@ const audienceData: AudienceCard[] = [
       <>
         Trusted scientific translation and editing services for educational
         materials,{" "}
-        <a href="#" className="text-sky-400 hover:underline">
+        <a href="/services/physician-writing-services/research-proposal" className="text-sky-400 hover:underline">
           research proposals
         </a>
         , and multilingual content to support global collaboration.
@@ -90,7 +90,7 @@ const audienceData: AudienceCard[] = [
     description: (
       <>
         Professional{" "}
-        <a href="#" className="text-sky-400 hover:underline">
+        <a href="/services/publication-support/" className="text-sky-400 hover:underline">
           journal publication support
         </a>{" "}
         with precise scientific paper translation and editing that meet
@@ -114,7 +114,7 @@ const audienceData: AudienceCard[] = [
     description: (
       <>
         Specialized medical translation services and scientific{" "}
-        <a href="#" className="text-sky-400 hover:underline">
+        <a href="/services/editing-and-translation/manuscript-editing" className="text-sky-400 hover:underline">
           manuscript editing
         </a>{" "}
         to expand the global impact of textbooks, case studies, and research

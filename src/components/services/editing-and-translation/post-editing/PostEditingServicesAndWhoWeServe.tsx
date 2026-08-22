@@ -98,7 +98,7 @@ export const PostEditingServicesAndWhoWeServe: React.FC = () => {
               performed by a computer application or online{" "}
               <Link
                 href="/services/editing-and-translation"
-                className="text-blue-600 hover:underline font-medium"
+                className="text-blue-600  font-medium"
               >
                 translation services
               </Link>

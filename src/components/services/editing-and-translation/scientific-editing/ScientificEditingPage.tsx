@@ -148,7 +148,7 @@ export default function ScientificEditingPage() {
                 <span className="text-red-500 font-bold mr-2 text-base">•</span>
                 <span>
                   <Link
-                    href="/services/editing-and-translation/developmental-editing"
+                    href="/services/editing-and-translation/scientific-editing/scientific-developmental-editing-high-impact-journals"
                     className="text-cyan-700 hover:underline font-medium"
                   >
                     Scientific developmental editing
@@ -171,7 +171,7 @@ export default function ScientificEditingPage() {
                 <span>
                   A simulated{" "}
                   <Link
-                    href="/services/publication-support/peer-review"
+                    href="/services/publication-support/peer-review-pre-submission"
                     className="text-cyan-700 hover:underline font-medium"
                   >
                     peer review
@@ -184,7 +184,7 @@ export default function ScientificEditingPage() {
                 <span>
                   Submission-ready:{" "}
                   <Link
-                    href="/services/publication-support/plagiarism-check"
+                    href="/services/publication-support/plagiarism-services"
                     className="text-cyan-700 hover:underline font-medium"
                   >
                     Plagiarism
@@ -237,7 +237,7 @@ export default function ScientificEditingPage() {
             <p className="text-xs md:text-sm text-slate-600 leading-relaxed mb-4">
               Pubrica provides{" "}
               <Link
-                href="/services/editing-and-translation/scientific-editing"
+                href="/insights/sample-work/skeletal-muscle-mass-index-versus-bioelectrical-impedance-analysis"
                 className="text-cyan-700 hover:underline font-medium"
               >
                 scientific editing services
@@ -252,7 +252,7 @@ export default function ScientificEditingPage() {
             <p className="text-xs md:text-sm text-slate-600 leading-relaxed mb-6">
               We also integrate{" "}
               <Link
-                href="/services/editing-and-translation"
+                href="/services/publication-support"
                 className="text-cyan-700 hover:underline font-medium"
               >
                 translation and publication support
@@ -404,7 +404,7 @@ export default function ScientificEditingPage() {
         <p className="text-xs md:text-sm text-slate-600 leading-relaxed text-left max-w-5xl">
           Pubrica’s commitment to providing high-quality{" "}
           <Link
-            href="/services/editing-and-translation/scientific-editing"
+            href="/insights/sample-work/phenotypic-variations-of-atopic-dermatitis-a-systemic-review-of-dupilumab-efficacy-and-safety"
             className="text-cyan-700 hover:underline font-medium"
           >
             research paper editing services

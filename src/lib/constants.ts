@@ -494,10 +494,10 @@ export const NAV_LINKS = [
             href: "/services/editing-and-translation/post-editing",
             label: "Post Editing",
           },
-          {
-            href: "/services/editing-and-translation/scientific-grant-review",
-            label: "Proofreading",
-          },
+          // {
+          //   href: "/services/editing-and-translation/scientific-grant-review",
+          //   label: "Proofreading",
+          // },
           {
             href: "/services/editing-and-translation/thesis-editing",
             label: "Thesis Editing",

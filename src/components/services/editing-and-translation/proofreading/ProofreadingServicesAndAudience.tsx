@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // ==========================================
 // 1. DATA TYPES & DATA FOR "OUR SERVICES"
@@ -12,6 +13,7 @@ interface ServiceCard {
   title: string;
   description: string;
   highlightText?: string;
+  linkUrl?: string;
   afterHighlight?: string;
 }
 
@@ -22,15 +24,17 @@ const servicesData: ServiceCard[] = [
       "/images/editing-and-translation/proofreading/Scientific-Editing.webp",
     title: "Scientific Editing",
     description:
-      "Enhance your academic documents with our journal manuscript proofreading and editing expertise,",
+      "Enhance your academic documents with our journal manuscript proofreading and editing expertise, ensuring clarity and submission readiness. Trusted by researchers worldwide to meet the standards of high-impact journals.",
   },
   {
     id: "manuscript-editing",
     iconSrc:
       "/images/editing-and-translation/proofreading/Manuscript-Editing.webp",
     title: "Manuscript Editing",
-    description: "Enhance your academic and ",
+    description:
+      "Enhance your academic and scientific manuscripts with Pubrica’s professional Editing Service—clear, concise, and submission-ready. Ideal for ESL authors aiming for clarity, precision, and global recognition.",
     highlightText: "manuscripts",
+    linkUrl: "/services/editing-and-translation/manuscript-editing", // Replace with specific URL
     afterHighlight: " with Pubrica's professional Editing",
   },
   {
@@ -38,8 +42,9 @@ const servicesData: ServiceCard[] = [
     iconSrc: "/images/editing-and-translation/proofreading/Book-Editing.webp",
     title: "Book Editing",
     description:
-      "Perfect your academic or professional book manuscript with Pubrica's ",
+      "Perfect your academic or professional book manuscript with Pubrica’s Book Editing Service, tailored to achieve excellence and readability. Designed for authors who want engaging, error-free, and publisher-ready books.",
     highlightText: "Book Editing",
+    linkUrl: "/services/editing-and-translation/book-editing", // Replace with specific URL
     afterHighlight: " Service,",
   },
   {
@@ -47,16 +52,19 @@ const servicesData: ServiceCard[] = [
     iconSrc: "/images/editing-and-translation/proofreading/Post-Editing.webp",
     title: "Post Editing",
     description:
-      "Refine and polish machine-translated documents with Pubrica's ",
+      "Refine and polish machine-translated documents with Pubrica’s Post-Editing Service, ensuring fluency, accuracy, and natural readability. Preferred by institutions and corporates for flawless, human-quality translations.",
     highlightText: "Post-Editing",
+    linkUrl: "/services/editing-and-translation/book-editing", // Replace with specific URL
     afterHighlight: " Service, ensuring fluency,",
   },
   {
     id: "thesis-editing",
     iconSrc: "/images/editing-and-translation/proofreading/Thesis-Editing.webp",
     title: "Thesis Editing",
-    description: "Specialised ",
+    description:
+      "Specialised thesis proofreading service to meet academic excellence and global standards. Perfect for graduate and doctoral students aiming for top academic standards.",
     highlightText: "thesis proofreading service",
+    linkUrl: "/services/editing-and-translation/thesis-editing", // Replace with specific URL
     afterHighlight: " to meet academic excellence and global standards.",
   },
   {
@@ -65,8 +73,9 @@ const servicesData: ServiceCard[] = [
       "/images/editing-and-translation/proofreading/Translation-with-Editing.webp",
     title: "Translation with Editing",
     description:
-      "Achieve accurate, culturally adapted translations with Pubrica's ",
+      "Achieve accurate, culturally adapted translations with Pubrica’s Translation + Editing Services, where precision meets publication quality. Ensuring your research is understood, accepted, and impactful across languages.",
     highlightText: "Translation + Editing Services",
+    linkUrl: "/services/editing-and-translation/translation-with-editing", // Replace with specific URL
     afterHighlight: ", where",
   },
   {
@@ -75,7 +84,7 @@ const servicesData: ServiceCard[] = [
       "/images/editing-and-translation/proofreading/Grant-Business-Document-Editing.webp",
     title: "Grant & Business Document Editing",
     description:
-      "Clear and persuasive communication using professional proofreading services.",
+      "Tailoring and polishing CVs, resumes, and application letters to make a strong professional impression.",
   },
   {
     id: "resume-cv-editing",
@@ -199,11 +208,14 @@ export default function PubricaServicesAndAudience() {
                 {/* Description with Vertical Accent Line */}
                 <div className="relative pl-3 border-l-2 border-slate-800 text-xs text-slate-600 leading-relaxed min-h-[60px]">
                   <span>{service.description}</span>
-                  {service.highlightText && (
-                    <span className="text-sky-600 font-medium hover:underline cursor-pointer">
+                  {service.highlightText && service.linkUrl && (
+                    <Link
+                      href={service.linkUrl}
+                      className="text-sky-600 font-medium hover:underline cursor-pointer inline"
+                    >
                       {" "}
                       {service.highlightText}
-                    </span>
+                    </Link>
                   )}
                   {service.afterHighlight && (
                     <span>{service.afterHighlight}</span>

@@ -134,11 +134,14 @@ const guarantees: GuaranteeItem[] = [
 ];
 
 export default function ServicePricingSection() {
-  // Accordion state management for guarantee blocks
-  const [openSection, setOpenSection] = useState<string | null>("quality");
+  // 1. Updated State: Closed by default ({}) and tracks individual open/close state per card
+  const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
 
   const toggleSection = (id: string) => {
-    setOpenSection((prev) => (prev === id ? null : id));
+    setOpenSections((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
   };
 
   return (
@@ -238,10 +241,11 @@ export default function ServicePricingSection() {
         Starts from $ 180 for 1000 Words
       </div>
 
-      {/* Accordions / Feature Cards Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+      {/* 2. Accordions / Feature Cards Section */}
+      {/* items-start prevents adjacent row cards from expanding/stretching */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 items-start">
         {guarantees.map((item) => {
-          const isOpen = openSection === item.id;
+          const isOpen = !!openSections[item.id];
           return (
             <div
               key={item.id}
@@ -250,7 +254,7 @@ export default function ServicePricingSection() {
               <button
                 type="button"
                 onClick={() => toggleSection(item.id)}
-                className="w-full bg-[#0E3B3E] text-white p-4 font-bold text-sm sm:text-base flex items-center justify-between transition-colors hover:bg-[#0a2e30]"
+                className="w-full bg-[#0E3B3E] text-white p-4 font-bold text-sm sm:text-base flex items-center justify-between transition-colors hover:bg-[#0a2e30] cursor-pointer"
               >
                 <span>{item.title}</span>
                 {isOpen ? (
@@ -261,7 +265,7 @@ export default function ServicePricingSection() {
               </button>
 
               {isOpen && (
-                <div className="p-5 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-3 bg-white flex-1">
+                <div className="p-5 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-3 bg-white">
                   {item.content.map((paragraph, pIdx) => (
                     <p key={pIdx}>{paragraph}</p>
                   ))}

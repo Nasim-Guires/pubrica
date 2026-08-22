@@ -173,32 +173,32 @@ export default function ProofreadingHeroSection() {
               <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
                 Our professional{" "}
                 <a
-                  href="#"
-                  className="text-sky-600 underline hover:text-sky-800"
+                  href="/services/editing-and-translation/proofreading"
+                  className="text-sky-600  hover:text-sky-800"
                 >
                   proofreading services
                 </a>{" "}
                 are designed for quality-specific authors who need a thorough
                 language check of their manuscripts.{" "}
                 <a
-                  href="#"
-                  className="text-sky-600 underline hover:text-sky-800"
+                  href="/services/publication-support/journal-submission"
+                  className="text-sky-600  hover:text-sky-800"
                 >
                   Papers submitted
                 </a>{" "}
                 for proofreading service are returned to authors after an
                 exhaustive check.{" "}
                 <a
-                  href="#"
-                  className="text-sky-600 underline hover:text-sky-800"
+                  href="/subject-matter-experts"
+                  className="text-sky-600 hover:text-sky-800"
                 >
                   Language and subject specialists
                 </a>{" "}
                 scan the material for spelling, grammar, punctuation, and
                 jargon.{" "}
                 <a
-                  href="#"
-                  className="text-sky-600 underline hover:text-sky-800"
+                  href="/"
+                  className="text-sky-600  hover:text-sky-800"
                 >
                   Pubrica proofreading
                 </a>{" "}

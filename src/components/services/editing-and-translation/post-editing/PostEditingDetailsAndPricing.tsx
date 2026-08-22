@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface FeatureCard {
   id: string;
@@ -25,16 +26,8 @@ interface PackageTier {
 }
 
 export const PostEditingDetailsAndPricing: React.FC = () => {
-  // State for collapsible cards in "Why Choose Our Post Editing Services?"
-  // Pre-populating with all card IDs so they start expanded by default (matching the design),
-  // but users can click to close/open individual cards.
-  const [openCards, setOpenCards] = useState<string[]>([
-    "expert-editors",
-    "enhanced-quality",
-    "guideline-compliance",
-    "time-efficient",
-    "personalized-support",
-  ]);
+  // Initialized to an empty array so cards start closed by default
+  const [openCards, setOpenCards] = useState<string[]>([]);
 
   const toggleCard = (id: string) => {
     setOpenCards((prev) =>
@@ -205,11 +198,10 @@ export const PostEditingDetailsAndPricing: React.FC = () => {
 
                 {/* Card Body - Collapsible Content */}
                 <div
-                  className={`transition-all duration-300 overflow-hidden ${
-                    isOpen
-                      ? "max-h-48 opacity-100 p-5"
-                      : "max-h-0 opacity-0 p-0"
-                  }`}
+                  className={`transition-all duration-300 overflow-hidden ${isOpen
+                    ? "max-h-48 opacity-100 p-5"
+                    : "max-h-0 opacity-0 p-0"
+                    }`}
                 >
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                     {feature.description}
@@ -358,9 +350,12 @@ export const PostEditingDetailsAndPricing: React.FC = () => {
         </div>
 
         {/* Bottom Pricing Banner */}
-        <div className="w-full bg-[#b80000] text-white py-4 px-6 rounded-xl text-center font-bold text-base sm:text-lg shadow-md tracking-wide">
+        <Link
+          href="/order-now/"
+          className="block w-full bg-[#b80000] text-white py-4 px-6 rounded-xl text-center font-bold text-base sm:text-lg shadow-md tracking-wide hover:bg-[#980000] transition-colors cursor-pointer"
+        >
           Starts from $ 200 for 1000 Words
-        </div>
+        </Link>
       </section>
     </div>
   );

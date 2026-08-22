@@ -22,17 +22,8 @@ interface ProcessStep {
 const HIGHLIGHT_BASE = "/images/editing-and-translation/thesis-editing/";
 
 export const ThesisServiceWorkflow: React.FC = () => {
-  // State for toggling individual highlight cards open/closed
-  const [openHighlights, setOpenHighlights] = useState<Record<string, boolean>>(
-    {
-      sme: true,
-      "track-revisions": true,
-      "qa-editor": true,
-      formatting: true,
-      "multi-tier": true,
-      "deadline-guarantee": true,
-    },
-  );
+  // All cards closed by default; supports opening multiple independent cards
+  const [openHighlights, setOpenHighlights] = useState<Record<string, boolean>>({});
 
   const toggleHighlight = (id: string) => {
     setOpenHighlights((prev) => ({
@@ -125,50 +116,51 @@ export const ThesisServiceWorkflow: React.FC = () => {
   return (
     <div className="w-full bg-white text-slate-800 font-sans">
       {/* ============================================================= */}
-      {/* SECTION 1: OUR SERVICE HIGHLIGHTS (OPENABLE & CLOSABLE CARDS) */}
+      {/* SECTION 1: OUR SERVICE HIGHLIGHTS                             */}
       {/* ============================================================= */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-8">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-6">
           Our Service Highlights
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Note: items-start keeps each card's height independent */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-start">
           {serviceHighlights.map((item) => {
             const isOpen = !!openHighlights[item.id];
             return (
               <div
                 key={item.id}
-                className="border border-slate-200 rounded-sm overflow-hidden bg-white shadow-sm transition-all"
+                className="border border-slate-200/80 rounded-lg overflow-hidden bg-white shadow-xs transition-all"
               >
-                {/* Header Bar (Click to toggle) */}
+                {/* Header Bar */}
                 <button
                   type="button"
                   onClick={() => toggleHighlight(item.id)}
-                  className="w-full bg-[#ebfef5] hover:bg-[#dff9ec] p-3.5 flex items-center justify-between text-left focus:outline-none transition-colors"
+                  className="w-full bg-[#eefbf4] hover:bg-[#e2f7eb] px-4 py-3 flex items-center justify-between text-left focus:outline-none transition-colors cursor-pointer"
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-center space-x-3">
-                    <div className="relative w-8 h-8 shrink-0">
+                    <div className="relative w-5 h-5 shrink-0">
                       <Image
                         src={item.iconSrc}
                         alt={item.iconAlt}
                         fill
-                        sizes="32px"
+                        sizes="20px"
                         className="object-contain"
                       />
                     </div>
-                    <span className="font-bold text-slate-800 text-sm sm:text-base">
+                    <span className="font-semibold text-slate-800 text-sm">
                       {item.title}
                     </span>
                   </div>
-                  <span className="text-slate-700 font-extrabold text-xl leading-none ml-2 select-none">
+                  <span className="text-slate-700 font-medium text-lg leading-none ml-2 select-none">
                     {isOpen ? "−" : "+"}
                   </span>
                 </button>
 
                 {/* Collapsible Body Content */}
                 {isOpen && (
-                  <div className="p-4 bg-white border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed min-h-[100px]">
+                  <div className="p-4 bg-white border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
                     {item.description}
                   </div>
                 )}
@@ -180,7 +172,6 @@ export const ThesisServiceWorkflow: React.FC = () => {
 
       {/* ============================================================= */}
       {/* SECTION 2: HOW OUR THESIS EDITING SERVICE WORKS               */}
-      {/* CARD HOVERS TO DARK CHARCOAL / BLACK WITH WHITE TEXT           */}
       {/* ============================================================= */}
       <section className="w-full bg-[#f4f6f8] py-12 border-t border-slate-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -228,7 +219,7 @@ export const ThesisServiceWorkflow: React.FC = () => {
                 {/* Blue Connecting Line Indicator */}
                 <div className="w-full h-1.5 bg-[#0080a0] mb-4" />
 
-                {/* Card Container: Default state white -> Hover state dark charcoal/black (#424242 / #333333) with white text */}
+                {/* Card Container */}
                 <div className="w-full bg-white border border-slate-200 rounded-sm p-6 min-h-[320px] flex flex-col transition-all duration-300 shadow-sm hover:bg-[#424242] hover:text-white hover:border-[#424242] hover:shadow-xl cursor-pointer">
                   {/* Step Icon */}
                   <div className="relative w-10 h-10 mb-4">
