@@ -32,8 +32,8 @@ export default function MetaAnalysisTypesAccordion() {
         <span>
           Uses{" "}
           <Link
-            href="/services/research-services/meta-analysis"
-            style={{ color: "#2563eb", textDecoration: "underline" }}
+            href="/services/research-services/meta-analysis/introduction-to-bayesian-statistics"
+            style={{ color: "#2563eb", textDecoration: "" }}
           >
             Bayesian statistical
           </Link>{" "}
@@ -55,8 +55,8 @@ export default function MetaAnalysisTypesAccordion() {
         <span>
           The{" "}
           <Link
-            href="/services/research-services/meta-analysis"
-            style={{ color: "#2563eb", textDecoration: "underline" }}
+            href="/services/research-services/meta-analysis/individual-participant-data-meta-analysis"
+            style={{ color: "#2563eb", textDecoration: "" }}
           >
             Individual Participant Data Meta-Analysis
           </Link>{" "}
@@ -146,8 +146,8 @@ export default function MetaAnalysisTypesAccordion() {
         >
           At Pubrica, we specialize in{" "}
           <Link
-            href="/services/research-services/meta-analysis"
-            style={{ color: "#2563eb", textDecoration: "underline" }}
+            href="/services/research-services/meta-analysis/meta-analysis-role-evidence-based-research"
+            style={{ color: "#2563eb", textDecoration: "" }}
           >
             meta-analysis
           </Link>{" "}
@@ -157,8 +157,8 @@ export default function MetaAnalysisTypesAccordion() {
           publication-ready documentation. Whether you need support for grant
           applications or journal submissions, our meta-analysis{" "}
           <Link
-            href="/services/research-services/meta-analysis"
-            style={{ color: "#2563eb", textDecoration: "underline" }}
+            href="/services/publication-support"
+            style={{ color: "#2563eb", textDecoration: "" }}
           >
             publication support
           </Link>{" "}

@@ -1,6 +1,6 @@
 import CommonPackages from '@/components/common/CommonPackages'
 import CommonTestimonial from '@/components/common/CommonTestimonials'
-import CommonWhoWeServe from '@/components/common/CommonWhoWeServe'
+// import CommonWhoWeServe from '@/components/common/CommonWhoWeServe'
 import { EditorialWorkflowSection } from '@/components/common/EditorialWorkflowSection'
 import CommonFAQ from '@/components/common/FAQ'
 import ComplianceAndSamplesProductDevelopment from '@/components/services/research-services/product-development/ComplianceAndSamplesProductDevelopment'
@@ -10,18 +10,20 @@ import ServicesResearchProductDevelopment from '@/components/services/research-s
 import { productDevelopmentFaqs, productDevelopmentPackages, productDevelopmentTestimonials, productDevelopmentWhoWeServe, productDevelopmentWorkflow } from '@/lib/services/data/research-services/product-development'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import IndustryVerticals from '@/components/services/research-services/product-development/IndustryVerticals'
 
 const page = () => {
   return (
 
     <>
       <ServicesResearchProductDevelopment />
-      <CommonWhoWeServe
+      {/* <CommonWhoWeServe
         title={productDevelopmentWhoWeServe.title}
         description={productDevelopmentWhoWeServe.description}
         data={productDevelopmentWhoWeServe.data}
-      />
+      /> */}
       <IndustryVerticalsAndProcess />
+      <IndustryVerticals />
       <EditorialWorkflowSection
         heading={productDevelopmentWorkflow.heading}
         subheading={productDevelopmentWorkflow.subheading}

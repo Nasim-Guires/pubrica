@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface TabContent {
   id: string;
@@ -117,11 +118,10 @@ export const ClinicalResearchProcessTabs: React.FC = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`w-full text-left py-3 px-4 font-bold text-sm md:text-[15px] transition-all duration-200 border-b border-gray-100 ${
-                  isActive
+                className={`w-full text-left py-3 px-4 font-bold text-sm md:text-[15px] transition-all duration-200 border-b border-gray-100 ${isActive
                     ? "border-2 border-black rounded-lg text-[#083c4c] bg-white shadow-sm"
                     : "text-gray-800 hover:text-[#083c4c] border-b-gray-200"
-                }`}
+                  }`}
               >
                 {tab.tabLabel}
               </button>
@@ -168,9 +168,12 @@ export const ClinicalResearchProcessTabs: React.FC = () => {
             )}
 
             <div className="pt-2">
-              <button className="bg-[#083c4c] hover:bg-[#052833] text-white font-bold text-xs uppercase tracking-widest px-6 py-3.5 rounded-none transition-colors">
+              <Link
+                href="/order-now"
+                className="bg-[#083c4c] hover:bg-[#052833] text-white font-bold text-xs uppercase tracking-widest px-6 py-3.5 rounded-none transition-colors inline-block"
+              >
                 REQUEST A QUOTE
-              </button>
+              </Link>
             </div>
           </div>
         </div>

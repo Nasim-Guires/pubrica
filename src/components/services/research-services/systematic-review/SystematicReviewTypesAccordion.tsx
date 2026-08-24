@@ -109,7 +109,7 @@ export default function SystematicReviewTypesAccordion() {
         <p style={{ fontSize: "1rem", color: "#374151", lineHeight: "1.6" }}>
           Pubrica provides a comprehensive range of{" "}
           <Link
-            href="/services/research-services/systematic-review"
+            href="/insights/sample-work/immunopet-imaging-of-human-ca6"
             style={{ color: "#2563eb", textDecoration: "none" }}
           >
             end-to-end systematic review writing services

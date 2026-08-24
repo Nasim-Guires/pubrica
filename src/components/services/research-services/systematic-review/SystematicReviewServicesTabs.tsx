@@ -166,34 +166,36 @@ const servicesData: TabData[] = [
       "/images/research-services/systematic-review/Publication-Support.png",
     imageAlt: "Publication Support and Journal Advisory Services",
     content: (
-      <ul
-        style={{
-          paddingLeft: "20px",
-          margin: "16px 0",
-          lineHeight: "1.7",
-          color: "#374151",
-        }}
-      >
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Journal Selection</strong> – Recommend suitable high-impact
-          journals for your topic.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Pre-Submission Peer Review</strong> – Internal expert review
-          to ensure methodological and editorial readiness.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Journal Submission</strong> – End-to-End Submission Assistance
-          – From cover letter preparation to follow-up with editorial teams
-          until acceptance.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Response to Reviewer</strong> – Comments addressing your
-          submitted systematic review manuscript, resubmission of your
-          manuscript, follow-up with editorial teams, and support up to the
-          point of publication.
-        </li>
-      </ul>
+      <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
+        <Link
+          href="/services/publication-support/journal-selection"
+          style={{ color: "#2563eb", textDecoration: "none", fontWeight: "700" }}
+        >
+          Journal Selection
+        </Link>{" "}
+        – Recommend suitable high-impact journals for your topic.<br /><br />
+        <Link
+          href="/services/publication-support/peer-review-pre-submission"
+          style={{ color: "#2563eb", textDecoration: "none", fontWeight: "700" }}
+        >
+          Pre-Submission Peer Review
+        </Link>{" "}
+        – Internal expert review to ensure methodological and editorial readiness.<br /><br />
+        <Link
+          href="/services/publication-support/journal-submission"
+          style={{ color: "#2563eb", textDecoration: "none", fontWeight: "700" }}
+        >
+          Journal Submission
+        </Link>{" "}
+        – End-to-End Submission Assistance – From cover letter preparation to follow-up with editorial teams until acceptance.<br /><br />
+        <Link
+          href="/services/publication-support/responding-to-reviewers"
+          style={{ color: "#2563eb", textDecoration: "none", fontWeight: "700" }}
+        >
+          Response to Reviewer
+        </Link>{" "}
+        – Comments addressing your submitted systematic review manuscript, resubmission of your manuscript, follow-up with editorial teams, and support up to the point of publication.
+      </p>
     ),
   },
   {
@@ -233,7 +235,7 @@ const servicesData: TabData[] = [
         development of PRISMA flow diagrams to document study selection. Our
         team enriches your report using{" "}
         <Link
-          href="/services/research-services/literature-review"
+          href="/academy/research-services/literature-review-tips-introduction-discussion-sections"
           style={{ color: "#2563eb", textDecoration: "underline" }}
         >
           literature review services
@@ -260,8 +262,13 @@ const servicesData: TabData[] = [
         }}
       >
         <li style={{ marginBottom: "12px" }}>
-          <strong>Plagiarism &amp; AI Content Analysis</strong> – Detailed
-          plagiarism reports ensuring originality and confirming no ChatGPT or
+          <Link
+            href="/services/publication-support/plagiarism-services"
+            style={{ color: "#2563eb", textDecoration: "none", fontWeight: "700" }}
+          >
+            Plagiarism &amp; AI Content Analysis
+          </Link>{" "}
+          – Detailed plagiarism reports ensuring originality and confirming no ChatGPT or
           AI-generated text.
         </li>
         <li style={{ marginBottom: "12px" }}>

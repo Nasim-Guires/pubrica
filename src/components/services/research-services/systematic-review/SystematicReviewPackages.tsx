@@ -223,7 +223,7 @@ export default function SystematicReviewPackages() {
             >
               Explore our{" "}
               <Link
-                href="/services/research-services/systematic-review"
+                href="/services/research-services/systematic-review/systematic-reviews-guide"
                 style={{ color: "#2563eb", textDecoration: "underline" }}
               >
                 systematic review

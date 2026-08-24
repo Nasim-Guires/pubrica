@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { ArrowRightCircle, Plus, Minus } from "lucide-react";
+import { EditorialWorkflowSection } from "@/components/common/EditorialWorkflowSection";
 
 // --- Step Process Data ---
 interface StepItem {
@@ -99,86 +100,14 @@ export default function HowItWorksAndLanguages() {
         {/* SECTION 1: HOW IT WORKS (STEP-BY-STEP)  */}
         {/* ======================================= */}
         <section className="text-center space-y-10">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#003B46] mb-2">
-              How Our Translation with Editing Service Works
-            </h2>
-            <h3 className="text-lg font-semibold text-[#003B46] mb-3">
-              Our Step-by-Step Process
-            </h3>
-            <p className="text-slate-600 text-sm sm:text-base max-w-3xl mx-auto">
-              We don&apos;t just translate. We transform your document into a
-              submission-ready manuscript in four comprehensive steps:
-            </p>
-          </div>
 
           {/* Steps Timeline Grid */}
-          <div className="relative pt-6 pb-6">
-            {/* Center Connecting Horizontal Line (Desktop) */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-2 bg-[#008099] -translate-y-1/2 z-0" />
-
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative z-10">
-              {stepsData.map((step) => (
-                <div
-                  key={step.stepNumber}
-                  className="flex flex-col items-center justify-between min-h-[300px]"
-                >
-                  {/* TOP POSITION CARD */}
-                  {step.position === "top" ? (
-                    <div className="group w-full bg-white border border-slate-200 rounded-lg p-5 shadow-sm text-left hover:bg-[#525252] transition-colors duration-200 cursor-pointer mb-4 min-h-[170px] flex flex-col justify-start">
-                      <div className="mb-2 relative w-10 h-10">
-                        <Image
-                          src={step.iconSrc}
-                          alt={step.iconAlt}
-                          fill
-                          sizes="40px"
-                          className="object-contain"
-                        />
-                      </div>
-                      <h4 className="font-bold text-slate-900 group-hover:text-white text-base mb-1 transition-colors">
-                        {step.title}
-                      </h4>
-                      <p className="text-xs text-slate-600 group-hover:text-slate-300 leading-relaxed transition-colors">
-                        {step.description}
-                      </p>
-                    </div>
-                  ) : (
-                    <div className="hidden md:block min-h-[170px] w-full" />
-                  )}
-
-                  {/* STEP NUMBER CIRCLE & CONNECTOR LINE */}
-                  <div className="relative flex flex-col items-center my-2">
-                    <div className="w-10 h-10 rounded-full bg-[#008099] text-white font-bold flex items-center justify-center text-base shadow-md z-10 border-2 border-white">
-                      {step.stepNumber}
-                    </div>
-                  </div>
-
-                  {/* BOTTOM POSITION CARD */}
-                  {step.position === "bottom" ? (
-                    <div className="group w-full bg-white border border-slate-200 rounded-lg p-5 shadow-sm text-left hover:bg-[#525252] transition-colors duration-200 cursor-pointer mt-4 min-h-[170px] flex flex-col justify-start">
-                      <div className="mb-2 relative w-10 h-10">
-                        <Image
-                          src={step.iconSrc}
-                          alt={step.iconAlt}
-                          fill
-                          sizes="40px"
-                          className="object-contain"
-                        />
-                      </div>
-                      <h4 className="font-bold text-slate-900 group-hover:text-white text-base mb-1 transition-colors">
-                        {step.title}
-                      </h4>
-                      <p className="text-xs text-slate-600 group-hover:text-slate-300 leading-relaxed transition-colors">
-                        {step.description}
-                      </p>
-                    </div>
-                  ) : (
-                    <div className="hidden md:block min-h-[170px] w-full" />
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
+          <EditorialWorkflowSection
+                 heading="How Our Translation with Editing Service Works"
+                 subheading="Our Step-by-Step Process"
+                 description="We don’t just translate. We transform your document into a submission-ready manuscript in four comprehensive steps:"
+                 steps={stepsData}
+               />
         </section>
 
         {/* ======================================= */}

@@ -223,17 +223,8 @@ const purposeData: ReviewPurposeItem[] = [
 ];
 
 export default function SystematicReviewsByPurpose() {
-  // Store expanded item IDs (multiple cards can be expanded simultaneously)
-  const [expandedIds, setExpandedIds] = useState<string[]>([
-    "nutrition-functional-food",
-    "environmental-occupational-health",
-    "economic-evaluation-cost-effectiveness",
-    "diagnostic-test-accuracy",
-    "living-systematic-reviews",
-    "etiology-risk-reviews",
-    "effectiveness-intervention-reviews",
-    "psychometric-reviews",
-  ]);
+  // Initial state set to an empty array so all cards are collapsed by default
+  const [expandedIds, setExpandedIds] = useState<string[]>([]);
 
   const toggleCard = (id: string) => {
     setExpandedIds((prev) =>
@@ -277,7 +268,7 @@ export default function SystematicReviewsByPurpose() {
           >
             At Pubrica, we deliver{" "}
             <Link
-              href="/services/research-services/systematic-review"
+              href="/services/research-services/systematic-review-definition"
               style={{ color: "#2563eb", textDecoration: "none" }}
             >
               systematic reviews
@@ -285,7 +276,7 @@ export default function SystematicReviewsByPurpose() {
             designed to meet diverse research objectives, aligned with PRISMA,
             Cochrane, JBI, and PROSPERO standards. We integrate{" "}
             <Link
-              href="/services/research-services/systematic-review"
+              href="/services/publication-support"
               style={{ color: "#2563eb", textDecoration: "none" }}
             >
               systematic review publication help
@@ -329,7 +320,7 @@ export default function SystematicReviewsByPurpose() {
                     alignItems: "center",
                     justifyContent: "space-between",
                     padding: "16px",
-                    backgroundColor: "#f0fdf4", // Light mint background
+                    backgroundColor: "#f0fdf4",
                     border: "none",
                     cursor: "pointer",
                     textAlign: "left",
@@ -399,7 +390,7 @@ export default function SystematicReviewsByPurpose() {
       <section
         style={{
           width: "100%",
-          backgroundColor: "#022c22", // Deep dark green
+          backgroundColor: "#022c22",
           color: "#ffffff",
           padding: "60px 20px",
           textAlign: "center",
@@ -429,7 +420,7 @@ export default function SystematicReviewsByPurpose() {
             intricate journal submission processes, shielding you from rejection
             and ensuring a faster path to getting your work published.
           </p>
-          <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
         </div>
       </section>
     </>

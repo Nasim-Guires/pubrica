@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { EditorialWorkflowSection } from "@/components/common/EditorialWorkflowSection";
 
 // ==========================================
 // 1. TYPES OF PROOFREADING DATA & TYPES
@@ -136,17 +137,11 @@ const processSteps: ProcessStep[] = [
 // 3. MAIN COMPONENT
 // ==========================================
 export default function ProofreadingProcessAndTypes() {
-  // State for active expanded accordion in "Types of Proofreading"
   const [activeType, setActiveType] = useState<string | null>("final");
-
-  // State for hover-active step card in "How Our Proofreading Service Works"
-  const [activeStep, setActiveStep] = useState<number>(4); // Default Step 4 active as seen in screenshot
 
   return (
     <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-12 space-y-16">
-      {/* ======================================= */}
-      {/* SECTION 1: TYPES OF PROOFREADING        */}
-      {/* ======================================= */}
+      {/* SECTION 1: TYPES OF PROOFREADING */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#003B46] mb-8">
           Types of Proofreading Services We Provide
@@ -167,11 +162,10 @@ export default function ProofreadingProcessAndTypes() {
                 <button
                   type="button"
                   onClick={() => setActiveType(isOpen ? null : item.id)}
-                  className={`w-full flex items-center justify-between p-4 text-left font-bold text-sm sm:text-base transition-colors ${
-                    isOpen
+                  className={`w-full flex items-center justify-between p-4 text-left font-bold text-sm sm:text-base transition-colors ${isOpen
                       ? "bg-[#f0fdf4] text-slate-900"
                       : "bg-[#f0fdf4]/60 hover:bg-[#f0fdf4] text-slate-800"
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center space-x-3">
                     <div className="p-1.5 bg-white rounded-md border border-emerald-100 shadow-2xs">
@@ -202,9 +196,7 @@ export default function ProofreadingProcessAndTypes() {
         </div>
       </section>
 
-      {/* ======================================= */}
-      {/* BANNER: SATISFACTION GUARANTEE          */}
-      {/* ======================================= */}
+      {/* BANNER: SATISFACTION GUARANTEE */}
       <section className="w-full bg-[#003B46] text-white py-8 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-center sm:text-left">
           {/* Badge Graphic */}
@@ -232,114 +224,13 @@ export default function ProofreadingProcessAndTypes() {
         </div>
       </section>
 
-      {/* ======================================= */}
-      {/* SECTION 2: HOW OUR SERVICE WORKS       */}
-      {/* ======================================= */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 space-y-12">
-        <div className="text-center space-y-2">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#003B46]">
-            How Our Proofreading Service Works
-          </h2>
-          <p className="text-slate-600 text-sm">Our Step-by-Step Process</p>
-        </div>
-
-        {/* Timeline Desktop Grid */}
-        <div className="relative grid grid-cols-1 md:grid-cols-6 gap-4 items-center pt-8 pb-12">
-          {/* Horizontal Teal Connecting Line (Hidden on mobile) */}
-          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-2 bg-[#008099] -translate-y-1/2 z-0" />
-
-          {processSteps.map((step) => {
-            const isHovered = activeStep === step.stepNumber;
-
-            return (
-              <div
-                key={step.stepNumber}
-                onMouseEnter={() => setActiveStep(step.stepNumber)}
-                className="relative z-10 flex flex-col items-center cursor-pointer group"
-              >
-                {/* Top Positioned Card */}
-                {step.position === "top" && (
-                  <div
-                    className={`w-full p-4 rounded-xs border transition-all duration-300 mb-6 min-h-[180px] flex flex-col justify-between text-center ${
-                      isHovered
-                        ? "bg-[#4a4e51] text-white border-slate-700 shadow-lg"
-                        : "bg-white text-slate-800 border-slate-200 shadow-2xs"
-                    }`}
-                  >
-                    <div className="flex justify-center mb-2">
-                      <Image
-                        src={step.iconSrc}
-                        alt={step.title}
-                        width={32}
-                        height={32}
-                        className={`w-8 h-8 object-contain transition-all duration-300 ${
-                          isHovered ? "invert brightness-200" : ""
-                        }`}
-                      />
-                    </div>
-                    <div>
-                      <h4
-                        className={`font-bold text-xs uppercase mb-2 ${isHovered ? "text-white" : "text-slate-800"}`}
-                      >
-                        {step.title}
-                      </h4>
-                      <p
-                        className={`text-[11px] leading-relaxed ${isHovered ? "text-slate-200" : "text-slate-500"}`}
-                      >
-                        {step.description}
-                      </p>
-                    </div>
-                  </div>
-                )}
-
-                {/* Step Circle Number Indicator */}
-                <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm text-white shadow-md transition-transform duration-300 ${
-                    isHovered ? "scale-110 bg-[#00667e]" : "bg-[#008099]"
-                  }`}
-                >
-                  {step.stepNumber}
-                </div>
-
-                {/* Bottom Positioned Card */}
-                {step.position === "bottom" && (
-                  <div
-                    className={`w-full p-4 rounded-xs border transition-all duration-300 mt-6 min-h-[180px] flex flex-col justify-between text-center ${
-                      isHovered
-                        ? "bg-[#4a4e51] text-white border-slate-700 shadow-lg"
-                        : "bg-white text-slate-800 border-slate-200 shadow-2xs"
-                    }`}
-                  >
-                    <div className="flex justify-center mb-2">
-                      <Image
-                        src={step.iconSrc}
-                        alt={step.title}
-                        width={32}
-                        height={32}
-                        className={`w-8 h-8 object-contain transition-all duration-300 ${
-                          isHovered ? "invert brightness-200" : ""
-                        }`}
-                      />
-                    </div>
-                    <div>
-                      <h4
-                        className={`font-bold text-xs uppercase mb-2 ${isHovered ? "text-white" : "text-slate-800"}`}
-                      >
-                        {step.title}
-                      </h4>
-                      <p
-                        className={`text-[11px] leading-relaxed ${isHovered ? "text-slate-200" : "text-slate-500"}`}
-                      >
-                        {step.description}
-                      </p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      {/* SECTION 2: HOW OUR SERVICE WORKS */}
+      <EditorialWorkflowSection
+        heading="How Our Proofreading Service Works"
+        subheading="Our Step-by-Step Process"
+        description=""
+        steps={processSteps}
+      />
     </div>
   );
 }

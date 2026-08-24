@@ -15,7 +15,7 @@ interface TabData {
 
 const servicesData: TabData[] = [
   {
-    id: "meta-analysis guidelines compliance",
+    id: "meta-analysis-guidelines-compliance",
     label: "Meta-Analysis Guidelines Compliance",
     title: "Meta-Analysis Guidelines Compliance",
     imageSrc:
@@ -52,120 +52,6 @@ const servicesData: TabData[] = [
     ),
   },
   {
-    id: "data-extraction",
-    label: "Data Extraction & Analysis",
-    title: "Data Extraction & Analysis",
-    imageSrc:
-      "/images/research-services/systematic-review/Data-Extraction-Analysis.png",
-    imageAlt: "Data Extraction and Analysis Charts",
-    content: (
-      <ul
-        style={{
-          paddingLeft: "20px",
-          margin: "16px 0",
-          lineHeight: "1.7",
-          color: "#374151",
-        }}
-      >
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Structured Data Extraction</strong> – Use standardized
-          templates for consistent, high-quality{" "}
-          <Link
-            href="/services/research-services/data-collection"
-            style={{ color: "#2563eb", textDecoration: "underline" }}
-          >
-            systematic review data collection support
-          </Link>
-          .
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Risk of Bias Assessment</strong> – Apply Cochrane Risk of Bias
-          Tool, Newcastle-Ottawa Scale (NOS), or JBI Critical Appraisal Tool;
-          prepare detailed bias tables for appendices.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Data Analysis &amp; Synthesis</strong> – Quantitative,
-          qualitative, and mixed-method meta-analysis with presentation-ready
-          tables, charts, and figures.
-        </li>
-      </ul>
-    ),
-  },
-  {
-    id: "writing-formatting",
-    label: "Writing & Formatting",
-    title: "Writing & Formatting",
-    imageSrc:
-      "/images/research-services/systematic-review/Writing-Formatting.png",
-    imageAlt: "Writing and Formatting Academic Journal Manuscripts",
-    content: (
-      <ul
-        style={{
-          paddingLeft: "20px",
-          margin: "16px 0",
-          lineHeight: "1.7",
-          color: "#374151",
-        }}
-      >
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Full Manuscript Development</strong> – Write the introduction,
-          methodology, results, discussion, and conclusion in compliance with
-          the target journal's specifications.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Abstract Preparation</strong> – Develop PRISMA 2020-compliant
-          abstracts including objectives, methods, results, and conclusions.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Referencing &amp; Citation Management</strong> – Accurate
-          referencing in APA, AMA, or journal-specific formats.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Formatting</strong> – Align the manuscript with the target
-          journal's author guidelines.
-        </li>
-      </ul>
-    ),
-  },
-  {
-    id: "publication-support",
-    label: "Publication Support",
-    title: "Publication Support",
-    imageSrc:
-      "/images/research-services/meta-analysis/Publication-Support-Services.png",
-    imageAlt: "Publication Support and Journal Advisory Services",
-    content: (
-      <ul
-        style={{
-          paddingLeft: "20px",
-          margin: "16px 0",
-          lineHeight: "1.7",
-          color: "#374151",
-        }}
-      >
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Journal Selection</strong> – Recommend suitable high-impact
-          journals for your topic.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Pre-Submission Peer Review</strong> – Internal expert review
-          to ensure methodological and editorial readiness.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Journal Submission</strong> – End-to-End Submission Assistance
-          – From cover letter preparation to follow-up with editorial teams
-          until acceptance.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Response to Reviewer</strong> – Comments addressing your
-          submitted systematic review manuscript, resubmission of your
-          manuscript, follow-up with editorial teams, and support up to the
-          point of publication.
-        </li>
-      </ul>
-    ),
-  },
-  {
     id: "documentation-templates",
     label: "Documentation Templates",
     title: "Documentation Templates",
@@ -196,9 +82,27 @@ const servicesData: TabData[] = [
     imageAlt: "Enhancement Services and Research Editing",
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
-        Comprehensive support encompassing journal selection, submission
-        process, cover letter framing, resubmission, follow-up with editorial
-        teams, and support up to the point of publication.
+        Assistance with sourcing of literature, editing review, and characterizing the evidence to enrich your meta-analyses review report.
+      </p>
+    ),
+  },
+  {
+    id: "publication-support-services",
+    label: "Publication Support Services",
+    title: "Publication Support Services",
+    imageSrc:
+      "/images/research-services/meta-analysis/Publication-Support-Services.png",
+    imageAlt: "Publication Support and Journal Advisory Services",
+    content: (
+      <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
+        Comprehensive support encompassing{" "}
+        <Link
+          href="/services/publication-support/journal-selection"
+          style={{ color: "#2563eb", textDecoration: "" }}
+        >
+          journal selection
+        </Link>
+        , submission process, cover letter framing, resubmission, follow-up with editorial teams, and support up to the point of publication.
       </p>
     ),
   },
@@ -211,8 +115,15 @@ const servicesData: TabData[] = [
     imageAlt: "Plagiarism Analysis",
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
-        Detailed plagiarism reports identifying sources and references, ensuring
-        the high quality and originality of the article being written.
+        Detailed{" "}
+        <Link
+          href="/services/publication-support/plagiarism-services"
+          style={{ color: "#2563eb", textDecoration: "" }}
+        >
+          plagiarism
+        </Link>{" "}
+        reports identifying sources and references, ensuring the high quality and
+        originality of the article being written.
       </p>
     ),
   },
@@ -234,7 +145,7 @@ const servicesData: TabData[] = [
 
 export default function MetaAnalysisServicesTabSection() {
   const [activeTabId, setActiveTabId] = useState<string>(
-    "meta-analysis guidelines compliance",
+    "meta-analysis-guidelines-compliance"
   );
   const [isMobile, setIsMobile] = useState(false);
 
@@ -248,6 +159,7 @@ export default function MetaAnalysisServicesTabSection() {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   const activeTab =
     servicesData.find((tab) => tab.id === activeTabId) || servicesData[0];
 
@@ -263,7 +175,7 @@ export default function MetaAnalysisServicesTabSection() {
         boxSizing: "border-box",
       }}
     >
-      {/* Heading */}
+      {/* Top Heading Section */}
       <div style={{ textAlign: "left", marginBottom: "32px" }}>
         <h2
           id="services-section-heading"
@@ -275,8 +187,7 @@ export default function MetaAnalysisServicesTabSection() {
             lineHeight: 1.3,
           }}
         >
-          Our Comprehensive Systematic Review Writing &amp; Rewriting Services –
-          Methodology &amp; Support
+          Our Comprehensive Meta-Analysis: Identification, Reanalyses, and Analysis Services & Solutions
         </h2>
         <p
           style={{
@@ -285,34 +196,11 @@ export default function MetaAnalysisServicesTabSection() {
             lineHeight: 1.7,
           }}
         >
-          Pubrica provides end-to-end{" "}
-          <Link
-            href="/services/research-services/systematic-review"
-            style={{
-              color: "#2563eb",
-              textDecoration: "underline",
-            }}
-          >
-            systematic review writing services
-          </Link>{" "}
-          for researchers and clinicians, ensuring compliance with the{" "}
-          <Link
-            href="/guidelines/prisma-checklist-2020"
-            style={{
-              color: "#2563eb",
-              textDecoration: "underline",
-            }}
-          >
-            PRISMA checklist 2020
-          </Link>
-          , Cochrane guidelines, and journal specifications. Our medical and
-          scientific professionals provide publication-ready manuscripts with
-          the most rigorous methodology and evidence, including full project
-          management.
+         Pubrica’s advanced meta-analysis services provide specialized support to researchers and clinicians, ensuring your research meets the medical publication standards of various journals.
         </p>
       </div>
 
-      {/* Layout */}
+      {/* Main Grid Layout */}
       <div
         style={{
           display: "grid",
@@ -321,7 +209,7 @@ export default function MetaAnalysisServicesTabSection() {
           alignItems: "start",
         }}
       >
-        {/* Navigation */}
+        {/* Navigation Sidebar */}
         <nav aria-label="Services Navigation">
           <ul
             style={{
@@ -332,15 +220,22 @@ export default function MetaAnalysisServicesTabSection() {
               flexDirection: isMobile ? "row" : "column",
               overflowX: isMobile ? "auto" : "visible",
               whiteSpace: "nowrap",
-              gap: "8px",
+              gap: "0",
               scrollbarWidth: "none",
+              borderTop: isMobile ? "none" : "1px solid #e5e7eb",
             }}
           >
             {servicesData.map((tab) => {
               const isActive = tab.id === activeTabId;
 
               return (
-                <li key={tab.id} style={{ flexShrink: 0 }}>
+                <li
+                  key={tab.id}
+                  style={{
+                    flexShrink: 0,
+                    borderBottom: isMobile ? "none" : "1px solid #e5e7eb",
+                  }}
+                >
                   <button
                     type="button"
                     onClick={() => setActiveTabId(tab.id)}
@@ -352,13 +247,11 @@ export default function MetaAnalysisServicesTabSection() {
                       fontSize: isMobile ? "0.9rem" : "0.95rem",
                       fontWeight: isActive ? "700" : "500",
                       color: isActive ? "#0e3838" : "#374151",
-                      backgroundColor: isActive ? "#ffffff" : "#f9fafb",
-                      border: isActive
-                        ? "2px solid #0e3838"
-                        : "1px solid #e5e7eb",
-                      borderRadius: "4px",
-                      marginBottom: isMobile ? 0 : "8px",
+                      backgroundColor: "transparent",
+                      border: isActive ? "2px solid #0e3838" : "none",
+                      borderRadius: "0",
                       cursor: "pointer",
+                      boxSizing: "border-box",
                     }}
                   >
                     {tab.label}
@@ -369,15 +262,15 @@ export default function MetaAnalysisServicesTabSection() {
           </ul>
         </nav>
 
-        {/* Content */}
+        {/* Tab Content Panel */}
         <div>
-          {/* Image */}
+          {/* Active Image */}
           <div
             style={{
               position: "relative",
               width: "100%",
               height: isMobile ? "180px" : "220px",
-              borderRadius: "8px",
+              borderRadius: "4px",
               overflow: "hidden",
               background: "#f3f4f6",
             }}
@@ -394,13 +287,13 @@ export default function MetaAnalysisServicesTabSection() {
             />
           </div>
 
-          {/* Body */}
+          {/* Active Text Block */}
           <div style={{ paddingTop: "24px" }}>
             <h3
               style={{
                 fontSize: isMobile ? "1.3rem" : "1.5rem",
                 fontWeight: 700,
-                color: "#000",
+                color: "#0e3838",
                 marginBottom: "16px",
               }}
             >
@@ -409,11 +302,8 @@ export default function MetaAnalysisServicesTabSection() {
 
             {activeTab.content}
 
-            <div
-              style={{
-                marginTop: "28px",
-              }}
-            >
+            {/* CTA Button */}
+            <div style={{ marginTop: "28px" }}>
               <Link
                 href="/request-quote"
                 style={{
@@ -421,7 +311,7 @@ export default function MetaAnalysisServicesTabSection() {
                   background: "#0e3838",
                   color: "#fff",
                   padding: isMobile ? "12px 20px" : "12px 24px",
-                  borderRadius: "6px",
+                  borderRadius: "4px",
                   fontWeight: 700,
                   fontSize: "0.9rem",
                   textDecoration: "none",
@@ -434,6 +324,7 @@ export default function MetaAnalysisServicesTabSection() {
         </div>
       </div>
 
+      {/* Bottom Footer Description */}
       <p
         style={{
           marginTop: "35px",
@@ -453,4 +344,4 @@ export default function MetaAnalysisServicesTabSection() {
       </p>
     </section>
   );
-}
+} 

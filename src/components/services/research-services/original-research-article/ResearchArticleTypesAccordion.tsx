@@ -78,13 +78,13 @@ const categories: ArticleTypeCategory[] = [
 ];
 
 export default function ResearchArticleTypesAccordion() {
-  // All cards open by default as shown in the layout screenshot
+  // All cards set to false by default (closed state)
   const [openCards, setOpenCards] = useState<Record<string, boolean>>({
-    physicians: true,
-    surgeons: true,
-    academics: true,
-    pharma: true,
-    "public-health": true,
+    physicians: false,
+    surgeons: false,
+    academics: false,
+    pharma: false,
+    "public-health": false,
   });
 
   const toggleCard = (id: string) => {
@@ -111,36 +111,36 @@ export default function ResearchArticleTypesAccordion() {
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
             We support a variety of{" "}
             <Link
-              href="/services/physician-writing-services/original-research-article"
-              className="text-sky-600 hover:underline font-medium"
+              href="/academy/original-research-article/digital-health-interventions-patient-outcomes/"
+              className="text-sky-600 font-medium"
             >
               original research article writing services
             </Link>
             , including randomized trials, observational studies, epidemiology
             research, and other empirical investigations. Manuscripts adhere to{" "}
             <Link
-              href="/guidelines/consort"
-              className="text-sky-600 hover:underline"
+              href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
+              className="text-sky-600"
             >
               CONSORT
             </Link>
             ,{" "}
             <Link
-              href="/guidelines/strobe"
-              className="text-sky-600 hover:underline"
+              href="https://www.equator-network.org/wp-content/uploads/2015/10/STROBE_checklist_v4_combined.pdf"
+              className="text-sky-600"
             >
               STROBE
             </Link>
             ,{" "}
             <Link
-              href="/guidelines/prisma"
-              className="text-sky-600 hover:underline"
+              href="https://www.prisma-statement.org/prisma-2020-checklist"
+              className="text-sky-600"
             >
               PRISMA
             </Link>
             , and{" "}
             <Link
-              href="/guidelines/arrive"
+              href="https://arriveguidelines.org/sites/arrive/files/documents/Author%20Checklist%20-%20Full.pdf"
               className="text-sky-600 hover:underline"
             >
               ARRIVE

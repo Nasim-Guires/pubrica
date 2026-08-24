@@ -42,7 +42,7 @@ export default function OriginalResearchArticle() {
             <div className="text-slate-700 leading-relaxed space-y-4 text-sm sm:text-base">
               <p>
                 <Link
-                  href="/original-research-articles"
+                  href="/academy/original-research-article/tidier-sr-reporting-research/"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   Original research articles
@@ -74,14 +74,14 @@ export default function OriginalResearchArticle() {
                 <li>
                   Compliance with{" "}
                   <Link
-                    href="/guidelines/icmje"
+                    href="https://www.icmje.org/"
                     className="text-sky-600 hover:underline"
                   >
                     ICMJE
                   </Link>
                   ,{" "}
                   <Link
-                    href="/guidelines/consort"
+                    href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
                     className="text-sky-600 hover:underline"
                   >
                     CONSORT
@@ -94,7 +94,7 @@ export default function OriginalResearchArticle() {
                 </li>
                 <li>
                   <Link
-                    href="/services/plagiarism-free"
+                    href="/services/publication-support/plagiarism-services/"
                     className="text-sky-600 hover:underline"
                   >
                     Plagiarism-free
@@ -114,8 +114,8 @@ export default function OriginalResearchArticle() {
 
           {/* Right Column: Infographic Image with Frame Background */}
           <aside className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-lg bg-emerald-950 rounded-2xl p-4 sm:p-6 shadow-xl">
-              <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden bg-white shadow-inner">
+            <div className="relative w-full max-w-lg  rounded-2xl p-4 sm:p-6 ">
+              <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden">
                 <Image
                   src="/images/physician-writing-services/original-research-article/original-research-article-writing-services.webp"
                   alt="Original Research Article Writing workflow diagram covering Abstract, Keywords, Introduction, Methods, Results, Discussion, Conclusion, and References"

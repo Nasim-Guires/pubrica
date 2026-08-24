@@ -36,28 +36,28 @@ const offerings: ServiceOffering[] = [
         (Introduction, Methods, Results, and Discussion), tailored to your
         target journal&apos;s style and scientific focus.{" "}
         <Link
-          href="/journals/nejm"
+          href="https://www.nejm.org/"
           className="text-sky-600 hover:underline font-medium"
         >
           NEJM
         </Link>
         ,{" "}
         <Link
-          href="/journals/jama"
+          href="https://jamanetwork.com/journals/jama"
           className="text-sky-600 hover:underline font-medium"
         >
           JAMA
         </Link>
         ,{" "}
         <Link
-          href="/journals/the-lancet"
+          href="https://www.thelancet.com/"
           className="text-sky-600 hover:underline font-medium"
         >
           The Lancet
         </Link>
         ,{" "}
         <Link
-          href="/journals/bmj"
+          href="https://www.bmj.com/"
           className="text-sky-600 hover:underline font-medium"
         >
           BMJ
@@ -72,28 +72,28 @@ const offerings: ServiceOffering[] = [
       <>
         Strictly adhere to{" "}
         <Link
-          href="/guidelines/icmje"
+          href="https://www.icmje.org/"
           className="text-sky-600 hover:underline font-medium"
         >
           ICMJE
         </Link>
         ,{" "}
         <Link
-          href="/guidelines/consort"
+          href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
           className="text-sky-600 hover:underline font-medium"
         >
           CONSORT
         </Link>
         ,{" "}
         <Link
-          href="/guidelines/strobe"
+          href="https://www.equator-network.org/wp-content/uploads/2015/10/STROBE_checklist_v4_combined.pdf"
           className="text-sky-600 hover:underline font-medium"
         >
           STROBE
         </Link>
         ,{" "}
         <Link
-          href="/guidelines/prisma"
+          href="https://www.prisma-statement.org/prisma-2020-checklist"
           className="text-sky-600 hover:underline font-medium"
         >
           PRISMA
@@ -110,7 +110,7 @@ const offerings: ServiceOffering[] = [
       <>
         All documents are{" "}
         <Link
-          href="/services/plagiarism-check"
+          href="/services/publication-support/plagiarism-services/"
           className="text-sky-600 hover:underline font-medium"
         >
           plagiarism

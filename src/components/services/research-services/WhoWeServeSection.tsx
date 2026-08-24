@@ -4,7 +4,7 @@ import Image from "next/image";
 interface SectorItem {
   title: string;
   imageUrl?: string;
-  description: string;
+  description: React.ReactNode; // Updated to allow React nodes / JSX elements
 }
 
 interface WhoWeServeProps {
@@ -47,16 +47,32 @@ const DEFAULT_SECTORS: SectorItem[] = [
     title: "CROs (Contract Research Organizations)",
     imageUrl:
       "/images/research-services/CROs-Contract-Research-Organizations.png",
-    description:
-      "Offering end-to-end clinical research support, including protocol writing, statistical analysis plans (SAP), systematic reviews, regulatory writing, and journal submission assistance.",
+    description: (
+      <>
+        Offering end-to-end clinical research support, including protocol writing,
+        statistical analysis plans (SAP), systematic reviews, regulatory writing,
+        and{" "}
+        <a href="/services/publication-support/journal-submission" className="text-sky-500">
+          journal submission
+        </a>{" "}
+        assistance.
+      </>
+    ),
   },
   {
     title:
       "Non-Governmental Organizations (NGOs) & Global Health Organizations",
     imageUrl:
       "/images/research-services/Non-Governmental-Organizations-NGOs-Global-Health-Organizations.png",
-    description:
-      "Enhancing research capacity, monitoring & evaluation, and scientific communication for health, nutrition, and development programs.",
+    description: (
+      <>
+        Enhancing research capacity, monitoring &amp; evaluation, and{" "}
+        <a href="/services/scientific-communication" className="text-sky-500 hover:underline">
+          scientific communication
+        </a>{" "}
+        for health, nutrition, and development programs.
+      </>
+    ),
   },
   {
     title: "Medical Device Companies",
@@ -79,8 +95,8 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
     <>
       Our academic research assistance and clinical{" "}
       <a
-        href="/services/research-support"
-        className="text-[#3b82f6] hover:underline"
+        href="/academy/research-services/pilot-study-importance-research"
+        className="text-[#3b82f6]"
       >
         research support services
       </a>{" "}
@@ -140,9 +156,9 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
                 <h3 className="text-white text-base font-bold mb-3 leading-snug tracking-wide">
                   {sector.title}
                 </h3>
-                <p className="text-gray-300 text-xs md:text-sm leading-relaxed">
+                <div className="text-gray-300 text-xs md:text-sm leading-relaxed">
                   {sector.description}
-                </p>
+                </div>
               </div>
             </div>
           ))}

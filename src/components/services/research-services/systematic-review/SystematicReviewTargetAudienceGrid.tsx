@@ -110,8 +110,8 @@ export default function SystematicReviewTargetAudienceGrid() {
           services are trusted by a diverse global clientele. We customize our
           PRISMA,{" "}
           <Link
-            href="/services/research-services/systematic-review"
-            style={{ color: "#2563eb", textDecoration: "underline" }}
+            href="/academy/systematic-review/cochrane-methodology-systematic-reviews"
+            style={{ color: "#2563eb", textDecoration: "" }}
           >
             Cochrane
           </Link>

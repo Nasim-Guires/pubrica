@@ -65,11 +65,11 @@ export default function MetaAnalysisHeroOverview() {
               {/* Main Heading */}
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a2f2c] leading-tight mb-4">
                 Meta-Analysis Services for Life Sciences, Pharma, and Research:
-                Streamlining Your Path to Publication
+                Streamlining Your Path to Publication 
               </h2>
 
               {/* Subheading */}
-              <p className="text-sm sm:text-base font-semibold text-sky-700 leading-snug mb-4">
+              <p className="text-sm sm:text-base font-semibold text-black-700 leading-snug mb-4">
                 End-to-end meta-analysis support for publication and expert guidance
                 to submit robust analyses to high-impact journals
               </p>
@@ -95,7 +95,7 @@ export default function MetaAnalysisHeroOverview() {
                 original research articles. Our experts rigorously summarize
                 peer-reviewed medical literature, use{" "}
                 <Link
-                  href="/services/research-services/meta-analysis"
+                  href="/academy/meta-analysis/meta-analysis-statistical-considerations"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   meta-analysis
@@ -115,7 +115,7 @@ export default function MetaAnalysisHeroOverview() {
                     Get an expert to identify, analyse, and structure your
                     comprehensive{" "}
                     <Link
-                      href="/services/research-services/meta-analysis"
+                      href="/academy/meta-analysis/meta-analysis-services-for-clinical-and-healthcare-research"
                       className="text-sky-600 hover:underline font-medium"
                     >
                       meta-analysis
@@ -161,10 +161,10 @@ export default function MetaAnalysisHeroOverview() {
             <div className="lg:col-span-5 flex justify-center items-center pt-4 lg:pt-0">
               <div className="relative w-full max-w-lg">
                 {/* Dark green background accent card (reduced size/offset) */}
-                <div className="absolute -bottom-3 -left-3 top-3 right-3 bg-[#133A36] rounded-2xl -z-10" />
+                <div className="absolute -bottom-3 -left-3 top-3 right-3 rounded-2xl -z-10" />
 
                 {/* Main Image Container (larger presentation) */}
-                <div className="relative z-10 aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-lg">
+                <div className="relative z-10 aspect-[4/3] w-full rounded-2xl overflow-hidden ">
                   <Image
                     src="/images/research-services/meta-analysis/Meta-Analysis-Services-for-Life-Sciences-Pharma-and-Research.webp"
                     alt="Meta-Analysis Services for Life Sciences, Pharma, and Research"

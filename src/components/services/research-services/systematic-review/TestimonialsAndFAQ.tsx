@@ -295,8 +295,8 @@ export default function TestimonialsAndFAQ() {
           >
             Learn how Pubrica’s{" "}
             <Link
-              href="/services/research-services/systematic-review"
-              style={{ color: "#2563eb", textDecoration: "underline" }}
+              href="/services/research-services/systematic-review/how-to-conduct-a-systematic-review"
+              style={{ color: "#2563eb", textDecoration: "" }}
             >
               systematic review
             </Link>{" "}

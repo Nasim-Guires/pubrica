@@ -6,6 +6,7 @@ interface AudienceCard {
   title: string;
   description: React.ReactNode;
   imageSrc: string;
+  href?: string;
 }
 
 const IMG =
@@ -16,6 +17,7 @@ const audiences: AudienceCard[] = [
     id: "physicians",
     title: "Physicians & Clinicians",
     imageSrc: `${IMG}/Physicians-Clinicians.png`,
+    href: "/services/publication-support/journal-selection/",
     description: (
       <>
         Busy medical practitioners conducting clinical audits, case series, or
@@ -28,6 +30,7 @@ const audiences: AudienceCard[] = [
     id: "surgeons",
     title: "Surgeons & Surgical Researchers",
     imageSrc: `${IMG}/Surgeons-Surgical-Researchers.png`,
+    href: "/services/publication-support/peer-review-pre-submission/",
     description: (
       <>
         Specialists working on procedural innovations, surgical outcomes, and
@@ -40,6 +43,7 @@ const audiences: AudienceCard[] = [
     id: "medical-researchers",
     title: "Medical Researchers & Academicians",
     imageSrc: `${IMG}/Medical-Researchers-Academicians.png`,
+    href: "/services/publication-support/journal-submission/",
     description: (
       <>
         Researchers in academic institutions, teaching hospitals, or independent
@@ -51,6 +55,7 @@ const audiences: AudienceCard[] = [
     id: "pharma-scientists",
     title: "Pharmaceutical & Biotech Scientists",
     imageSrc: `${IMG}/Pharmaceutical-Biotech-Scientists.png`,
+    href: "/services/publication-support/poster-preparation/",
     description: (
       <>
         Industry professionals developing drug efficacy primary research
@@ -64,6 +69,7 @@ const audiences: AudienceCard[] = [
     id: "postgrad-candidates",
     title: "Postgraduate and doctoral candidates",
     imageSrc: `${IMG}/Postgraduate-and-doctoral-candidates.png`,
+    href: "/services/",
     description: (
       <>
         We assist doctoral candidates in drafting original research manuscripts
@@ -76,6 +82,7 @@ const audiences: AudienceCard[] = [
     id: "public-health",
     title: "Public Health & Epidemiology Experts",
     imageSrc: `${IMG}/Public-Health-Epidemiology-Experts.png`,
+    href: "/services/publication-support/art-work-preparation/",
     description: (
       <>
         Researchers engaged in community health survey-based research or
@@ -87,6 +94,7 @@ const audiences: AudienceCard[] = [
     id: "med-comm",
     title: "Medical Communication & Regulatory Teams",
     imageSrc: `${IMG}/Medical-Communication-Regulatory-Teams.png`,
+    href: "/services/publication-support/video-abstract/",
     description: (
       <>
         Organizations or teams needing writing support for medical device study
@@ -103,7 +111,7 @@ const audiences: AudienceCard[] = [
         Pubrica helps academic researchers with the entire article development
         process, from hypothesis framing to peer-reviewed{" "}
         <Link
-          href="/services/journal-submission"
+          href="/services/publication-support/journal-submission/"
           className="text-sky-600 hover:underline"
         >
           journal submission
@@ -117,6 +125,7 @@ const audiences: AudienceCard[] = [
     id: "med-clinical-researchers",
     title: "Medical and Clinical Researchers",
     imageSrc: `${IMG}/Medical-and-Clinical-Researchers.png`,
+    href: "/services/",
     description: (
       <>
         We provide manuscript writing support for clinicians and healthcare
@@ -130,6 +139,7 @@ const audiences: AudienceCard[] = [
     id: "professors",
     title: "Academic Faculty and Professors",
     imageSrc: `${IMG}/Academic-Faculty-and-Professors.png`,
+    href: "/services/publication-support/video-abstract/",
     description: (
       <>
         We help academicians document funded or departmental research into
@@ -142,6 +152,7 @@ const audiences: AudienceCard[] = [
     id: "industry-scientists",
     title: "Industry Scientists and R&D Professionals",
     imageSrc: `${IMG}/Industry-Scientists-and-RD-Professionals.png`,
+    href: "/services/",
     description: (
       <>
         We collaborate with corporate researchers in life sciences, pharma, and
@@ -154,6 +165,7 @@ const audiences: AudienceCard[] = [
     id: "independent-researchers",
     title: "Independent Researchers",
     imageSrc: `${IMG}/Independent-Researchers.png`,
+    href: "/services/",
     description: (
       <>
         We enable individual researchers to translate raw data into structured
@@ -181,7 +193,7 @@ export default function PhysicianWhoWeServeSection() {
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
             Pubrica&apos;s{" "}
             <Link
-              href="/services/physician-writing-services/original-research-article"
+              href="/services/physician-writing-services/original-research-article/young-researchers-guide-original-research-article/"
               className="text-sky-600 hover:underline font-medium"
             >
               original research article writing service
@@ -213,7 +225,13 @@ export default function PhysicianWhoWeServeSection() {
 
                   <div className="space-y-2">
                     <h3 className="text-base font-bold text-slate-900 leading-snug group-hover:text-sky-950 transition-colors duration-200">
-                      {card.title}
+                      {card.href ? (
+                        <Link href={card.href} className="hover:underline">
+                          {card.title}
+                        </Link>
+                      ) : (
+                        card.title
+                      )}
                     </h3>
                     <div className="text-sm text-slate-600 leading-relaxed group-hover:text-slate-800 transition-colors duration-200">
                       {card.description}

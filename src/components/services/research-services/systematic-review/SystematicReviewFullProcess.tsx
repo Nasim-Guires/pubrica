@@ -15,6 +15,7 @@ interface ComplianceCardData {
   id: string;
   title: string;
   description: React.ReactNode;
+  link: string;
 }
 
 const tableRows: TableRowData[] = [
@@ -146,7 +147,7 @@ const tableRows: TableRowData[] = [
   },
   {
     id: "row-9",
-    whatYouProvide: null, // Empty cell in screenshot
+    whatYouProvide: null,
     whatWeProvide: (
       <>
         <strong>Quality Checks</strong> – Proofreading, plagiarism &amp; AI
@@ -156,7 +157,7 @@ const tableRows: TableRowData[] = [
   },
   {
     id: "row-10",
-    whatYouProvide: null, // Empty cell in screenshot
+    whatYouProvide: null,
     whatWeProvide: (
       <>
         <strong>Pre-Submission Peer Review</strong> – Internal expert review to
@@ -166,7 +167,7 @@ const tableRows: TableRowData[] = [
   },
   {
     id: "row-11",
-    whatYouProvide: null, // Empty cell in screenshot
+    whatYouProvide: null,
     whatWeProvide: (
       <>
         <strong>Journal Submission &amp; Editorial Support</strong> – Assist
@@ -181,11 +182,12 @@ const complianceCards: ComplianceCardData[] = [
   {
     id: "prisma-2020",
     title: "PRISMA 2020 Statement",
+    link: "/services/research-services/medical-writing/",
     description: (
       <>
         Preferred Reporting Items for{" "}
         <Link
-          href="/services/research-services/systematic-review"
+          href="/academy/systematic-review/cochrane-methodology-systematic-reviews"
           style={{ color: "#2563eb", textDecoration: "underline" }}
         >
           Systematic Reviews
@@ -198,17 +200,19 @@ const complianceCards: ComplianceCardData[] = [
   {
     id: "cochrane-handbook",
     title: "Cochrane Handbook for Systematic Reviews",
+    link: "/services/research-services/scientific-writing/",
     description:
       "Rigorous methodology for literature search, selection, bias assessment, and synthesis.",
   },
   {
     id: "prospero-registration",
     title: "PROSPERO Registration",
+    link: "/services/research-services/systematic-review/",
     description: (
       <>
         International Prospective Register of{" "}
         <Link
-          href="/services/research-services/systematic-review"
+          href="/academy/systematic-review/synthesis-without-meta-analysis-swim"
           style={{ color: "#2563eb", textDecoration: "underline" }}
         >
           Systematic Reviews
@@ -220,58 +224,68 @@ const complianceCards: ComplianceCardData[] = [
   {
     id: "grade",
     title: "GRADE",
+    link: "/services/research-services/meta-analysis/",
     description:
       "Grading Recommendations Assessment, Development and Evaluation for quality and strength of evidence.",
   },
   {
     id: "icmje",
     title: "ICMJE",
+    link: "/services/research-services/medical-writing/",
     description:
       "International Committee of Medical Journal Editors' recommendations for ethical and publication standards.",
   },
   {
     id: "jbi-appraisal",
     title: "JBI Critical Appraisal Tools",
+    link: "/services/research-services/scientific-writing/",
     description:
       "Joanna Briggs Institute methodology for qualitative, quantitative, and mixed-method reviews.",
   },
   {
     id: "nos-scale",
     title: "Newcastle–Ottawa Scale (NOS)",
+    link: "/services/research-services/systematic-review/",
     description:
       "Standardized tool for assessing non-randomized studies in meta-analyses.",
   },
   {
     id: "amstar-2",
     title: "AMSTAR 2",
+    link: "/services/research-services/meta-analysis/",
     description:
       "Measurement tool to assess the methodological quality of systematic reviews.",
   },
   {
     id: "pico-spider",
     title: "PICO / SPIDER Frameworks",
+    link: "/services/research-services/medical-writing/",
     description: "Structured approach to formulating research questions.",
   },
   {
     id: "moose-guidelines",
     title: "MOOSE Guidelines",
+    link: "/services/research-services/scientific-writing/",
     description:
       "Standards for meta-analyses of observational studies in epidemiology.",
   },
   {
     id: "rob-tools",
     title: "Risk of Bias Tools",
+    link: "/services/research-services/systematic-review/",
     description:
       "Cochrane RoB tool, ROBINS-I, and other recognized bias assessment frameworks.",
   },
   {
     id: "prisma-scr",
     title: "PRISMA-ScR",
+    link: "/services/research-services/meta-analysis/",
     description: "PRISMA extension for scoping reviews.",
   },
   {
     id: "srdr-repository",
     title: "SRDR (Systematic Review Data Repository)",
+    link: "/services/research-services/medical-writing/",
     description: "Used for data storage and transparency in some projects.",
   },
 ];
@@ -321,7 +335,7 @@ export default function SystematicReviewFullProcess() {
             style={{
               width: "100%",
               borderCollapse: "collapse",
-              backgroundColor: "#0d3b38", // Dark teal header
+              backgroundColor: "#0d3b38",
               color: "#ffffff",
               fontSize: "0.95rem",
               fontWeight: "700",
@@ -412,7 +426,7 @@ export default function SystematicReviewFullProcess() {
       <section
         style={{
           width: "100%",
-          backgroundColor: "#ede8f5", // Light lavender/blue background from screenshot
+          backgroundColor: "#ede8f5",
           padding: "60px 20px",
         }}
       >
@@ -440,7 +454,7 @@ export default function SystematicReviewFullProcess() {
               At Pubrica, we adhere to internationally recognized compliance
               frameworks and methodological standards to ensure that every{" "}
               <Link
-                href="/services/research-services/systematic-review"
+                href="/services/research-services/systematic-review/swim-synthesis-without-meta-analysis-systematic-reviews"
                 style={{ color: "#2563eb", textDecoration: "underline" }}
               >
                 systematic review
@@ -474,14 +488,22 @@ export default function SystematicReviewFullProcess() {
                   style={{
                     fontSize: "0.95rem",
                     fontWeight: "700",
-                    color: "#000000",
                     marginBottom: "10px",
                     lineHeight: "1.4",
+                    margin: "0 0 10px 0",
                   }}
                 >
-                  {card.title}
+                  <Link
+                    href={card.link}
+                    style={{
+                      color: "#0f2c3a",
+                      textDecoration: "none",
+                    }}
+                  >
+                    {card.title}
+                  </Link>
                 </h3>
-                <p
+                <div
                   style={{
                     fontSize: "0.85rem",
                     color: "#4b5563",
@@ -490,7 +512,7 @@ export default function SystematicReviewFullProcess() {
                   }}
                 >
                   {card.description}
-                </p>
+                </div>
               </div>
             ))}
           </div>

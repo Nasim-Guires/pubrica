@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function EmpiricalFeaturesAccordion() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section
