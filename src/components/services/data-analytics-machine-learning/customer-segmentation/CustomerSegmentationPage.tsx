@@ -85,7 +85,7 @@ export default function CustomerSegmentationPage() {
           </div>
 
           {/* Section Image using Next.js Image Tag */}
-          <div className="relative w-full h-[320px] md:h-[400px] rounded-lg overflow-hidden shadow-md">
+          <div className="relative w-full h-[320px] md:h-[400px] rounded-lg overflow-hidden">
             <Image
               src="/images/data-analytics-machine-learning/customer-segmentation/Tailored-Insights-for-Targeted-Research-Marketing-and-Publication-Strategies.webp"
               alt="Healthcare data analytics and dashboard report visualization"

@@ -149,8 +149,8 @@ export default function ThoughtLeadershipEditorialDesignView() {
                     {/* Right Column: Hero Graphic Image */}
                     <div className="lg:col-span-5 flex justify-center lg:justify-end pt-2 lg:pt-0">
                         <div className="relative w-full max-w-md">
-                            <div className="absolute -inset-2 bg-[#033c2a] rounded-2xl transform -rotate-1 opacity-90" />
-                            <div className="relative rounded-xl overflow-hidden border-2 border-white shadow-lg bg-slate-100 aspect-[4/3]">
+                            <div className="absolute -inset-2 rounded-2xl transform -rotate-1 " />
+                            <div className="relative  overflow-hidden    bg-slate-100 aspect-[4/3]">
                                 <Image
                                     src="/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/Strategic-Content-Engaging-Editorial-Design.webp"
                                     alt="Team surrounding table discussing strategy"

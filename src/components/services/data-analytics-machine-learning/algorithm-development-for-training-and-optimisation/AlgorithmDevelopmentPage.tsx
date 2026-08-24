@@ -201,7 +201,7 @@ export default function AlgorithmDevelopmentService() {
 
                     {/* Right Section Image */}
                     <div className="lg:col-span-5 relative flex justify-center">
-                        <div className="bg-[#1b3d36] p-2 rounded-2xl w-full max-w-md">
+                        <div className="p-2 rounded-2xl w-full max-w-md">
                             <div className="relative w-full h-[280px] sm:h-[320px] rounded-xl overflow-hidden">
                                 <Image
                                     src="/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Algorithm-Development-for-Training-and-Optimisation.webp"
