@@ -38,36 +38,36 @@ export const literatureReviewFAQ = [
     question:
       "How can I structure a literature review to support my research effectively?",
     answer:
-      "Structure your literature review by organizing topics logically, summarizing relevant studies, identifying research gaps, synthesizing existing evidence, and linking the findings to your research objectives and study framework.",
+      "Plan a literature review by logically structuring the theme, summarizing studies, identifying gaps, synthesizing, and linking them with the objectives of the study.",
   },
   {
     question:
       "What strategies help in selecting and organizing relevant studies efficiently?",
     answer:
-      "Use clear inclusion and exclusion criteria, perform comprehensive database and keyword searches, apply citation tracking, organize studies thematically, and manage references using tools such as EndNote, Mendeley, or Zotero.",
+      "Apply clear inclusion criteria, database search, keyword search, citation search, tools, thematic group, and reference management software for efficient organization of studies.",
   },
   {
     question:
       "How do I critically analyze and synthesize research from multiple sources?",
     answer:
-      "Critically evaluate each study by examining its methodology, quality, strengths, limitations, and findings. Synthesize the evidence by identifying common themes, patterns, agreements, contradictions, and research gaps across the literature.",
+      "Analyze studies by critically examining the methodology, quality, strengths, weaknesses, and results, and synthesize them by identifying patterns, themes, agreements, contradictions, and gaps.",
   },
   {
     question:
       "How can professional support help identify gaps and improve the quality of my literature review?",
     answer:
-      "Professional literature review support enhances the quality of your manuscript by conducting comprehensive literature searches, selecting relevant studies, performing critical evaluations, identifying research gaps, organizing content logically, and maintaining academic integrity.",
+      "Professional assistance helps to improve literature review writing by ensuring thoroughness in the search process, selection of literature, critical evaluation, thematic synthesis, identification of gaps, structuring, and academic integrity.",
   },
   {
     question:
       "What are common mistakes in literature reviews and how can they be avoided?",
     answer:
-      "Avoid common mistakes such as lack of focus, poor organization, reliance on outdated literature, insufficient critical analysis, excessive summarization, inaccurate referencing, and weak connections between the literature and your research objectives.",
+      "Common blunders to avoid in literature review writing involve a lack of focus, disorganization, outdated literature, insufficient critical evaluation, overuse of summarizing, inadequate referencing, and ineffective linkage to research goals.",
   },
   {
     question:
       "How can expert editing and guidance enhance clarity, coherence, and readability of a literature review?",
     answer:
-      "Expert editing improves clarity, coherence, readability, and academic quality by refining language, enhancing logical flow, strengthening transitions, reducing redundancy, standardizing terminology, improving structure, and ensuring compliance with academic writing standards.",
+      "Expert editing services enhance literature reviews through improvements in clarity by refining language, logical flow, transitions, reduction of redundancy, standardization of terms, structure, coherence, readability, and academic standards.",
   },
 ];

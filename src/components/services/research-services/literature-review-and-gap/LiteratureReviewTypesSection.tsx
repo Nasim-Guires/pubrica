@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ReviewTypeItem {
   id: string;
@@ -136,13 +137,19 @@ export default function LiteratureReviewTypesSection() {
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-5xl">
             At Pubrica, we provide a wide range of{" "}
-            <span className="text-sky-600 font-medium">
+            <Link
+              href="/academy/literature-review/importance-of-literature-review-in-research/"
+              className="text-sky-600 font-medium"
+            >
               literature review service
-            </span>{" "}
+            </Link>{" "}
             and{" "}
-            <span className="text-sky-600 font-medium">
+            <Link
+              href="/services/research-services/literature-review-and-gap/literature-review-and-gap-literature-review-support-chronological-vs-thematic/"
+              className="text-sky-600 font-medium"
+            >
               research gap analysis service
-            </span>{" "}
+            </Link>{" "}
             formats tailored to meet the unique objectives of researchers,
             clinicians, and academic writers. Our experts are skilled in
             producing both qualitative and quantitative reviews across multiple

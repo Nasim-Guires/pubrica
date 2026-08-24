@@ -52,8 +52,8 @@ export default function LiteratureReviewHeroAndIntroSection() {
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                 At Pubrica, we deliver in-depth, methodologically sound{" "}
                 <Link
-                  href="/services/research-services/literature-review-and-gap-analysis"
-                  className="text-sky-600 hover:underline font-medium"
+                  href="/academy/research-services/literature-review-tips-introduction-discussion-sections"
+                  className="text-sky-600  font-medium"
                 >
                   literature review writing service
                 </Link>{" "}
@@ -61,14 +61,14 @@ export default function LiteratureReviewHeroAndIntroSection() {
                 proposals, scholarly publications,{" "}
                 <Link
                   href="/services/research-services/systematic-review"
-                  className="text-sky-600 hover:underline font-medium"
+                  className="text-sky-600 font-medium"
                 >
                   systematic reviews
                 </Link>
                 , clinical trial planning, and academic theses. Our team of
                 experienced researchers and{" "}
                 <Link
-                  href="/about/subject-matter-experts"
+                  href="/subject-matter-experts/"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   subject-matter experts
@@ -85,13 +85,13 @@ export default function LiteratureReviewHeroAndIntroSection() {
               </p>
 
               <div className="pt-2">
-                <GetFreeQuoteButton/>
+                <GetFreeQuoteButton />
               </div>
             </div>
 
             {/* Right Image Block */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-md h-72 sm:h-80 lg:h-96 rounded-3xl overflow-hidden bg-[#0d2a2a] p-3 shadow-lg">
+              <div className="relative w-full max-w-md h-72 sm:h-80 lg:h-96 rounded-3xl overflow-hidden  p-3 ">
                 <div className="relative w-full h-full rounded-2xl overflow-hidden">
                   <Image
                     src="/images/research-services/literature-review-and-gap/Literature-Reviews-and-Gap-Analyses-for-Research.webp"
@@ -113,19 +113,32 @@ export default function LiteratureReviewHeroAndIntroSection() {
             </h2>
 
             <h3 className="text-lg sm:text-xl font-semibold text-slate-700">
-              A scientific literature review service for Publication Support
-              Services
+              A scientific literature review service for Publication Support Services
             </h3>
 
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
               Pubrica&apos;s team of skilled editors and writers specializes in
-              conducting thorough literature review writing service for PhD
-              thesis,{" "}
-              <span className="text-sky-600">literature review experts</span>,
-              and research gap analysis service, essential for crafting{" "}
-              <span className="text-sky-600">
+              conducting thorough literature review writing service for PhD thesis,{" "}
+              <Link
+                href="/academy/literature-review/guides-write-research-literature-review/"
+                className="text-sky-600"
+              >
+                literature review experts
+              </Link>
+              , and{" "}
+              <Link
+                href="/services/research-services/literature-review-and-gap/literature-review-research-gap-services/"
+                className="text-sky-600"
+              >
+                research gap analysis service
+              </Link>
+              , essential for crafting{" "}
+              <Link
+                href="/services/research-services/literature-review-and-gap/open-access-research-impact/"
+                className="text-sky-600"
+              >
                 high-quality scientific research
-              </span>{" "}
+              </Link>{" "}
               articles.
             </p>
 
@@ -135,11 +148,10 @@ export default function LiteratureReviewHeroAndIntroSection() {
                   •
                 </span>
                 <p>
-                  Get an expert to identify, write, and structure your
-                  comprehensive academic literature review writing service and
-                  gap analyses report efficiently, ensuring it meets
-                  professional and quality standards while accurately conveying
-                  your case study.
+                  Get an expert to identify, write, and structure your comprehensive
+                  academic literature review writing service and gap analyses report
+                  efficiently, ensuring it meets professional and quality standards while
+                  accurately conveying your case study.
                 </p>
               </li>
 
@@ -149,12 +161,14 @@ export default function LiteratureReviewHeroAndIntroSection() {
                 </span>
                 <p>
                   Customize your{" "}
-                  <span className="text-sky-600 hover:underline">
+                  <Link
+                    href="/academy/literature-review/literature-review-in-research-methodology/"
+                    className="text-sky-600"
+                  >
                     professional literature review service
-                  </span>{" "}
-                  report&apos;s scope to align with your specific requirements
-                  and budget, providing a tailored approach for your unique
-                  needs.
+                  </Link>{" "}
+                  report&apos;s scope to align with your specific requirements and
+                  budget, providing a tailored approach for your unique needs.
                 </p>
               </li>
 
@@ -164,15 +178,21 @@ export default function LiteratureReviewHeroAndIntroSection() {
                 </span>
                 <p>
                   Benefit from{" "}
-                  <span className="text-sky-600 hover:underline">
+                  <Link
+                    href="/academy/literature-review/importance-of-literature-review-in-research/"
+                    className="text-sky-600"
+                  >
                     literature review consulting service
-                  </span>{" "}
-                  by a professional medical expert who assists in identifying
-                  relevant literature and connects with your research question
-                  (PCOS), leveraging our{" "}
-                  <span className="text-sky-600 hover:underline">
+                  </Link>{" "}
+                  by a professional medical expert who assists in identifying relevant
+                  literature and connects with your research question (PCOS), leveraging
+                  our{" "}
+                  <Link
+                    href="/services/research-services/systematic-review/"
+                    className="text-sky-600"
+                  >
                     systematic review consulting
-                  </span>{" "}
+                  </Link>{" "}
                   services.
                 </p>
               </li>
