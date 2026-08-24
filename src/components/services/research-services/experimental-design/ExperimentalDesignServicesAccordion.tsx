@@ -12,15 +12,13 @@ interface AccordionItem {
 }
 
 export default function ExperimentalDesignServicesAccordion() {
-  // State to manage open/close accordion items (Multiple can be opened or controlled)
-  const [openItems, setOpenItems] = useState<Record<string, boolean>>({
-    rct: true, // Opened by default as shown in the screenshot
-  });
+  // State initialized as empty so all accordion items are closed by default
+  const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
 
   const toggleAccordion = (id: string) => {
     setOpenItems((prev) => ({
       ...prev,
-      [id]: !prev[id],
+      [id]: !prev[id], // Toggles individual state, allowing multiple items to be open simultaneously
     }));
   };
 
@@ -30,9 +28,7 @@ export default function ExperimentalDesignServicesAccordion() {
       title: "Optimal Methodology Development",
       content: (
         <p>
-          We assist in formulating precise research hypotheses, determining
-          sample sizes, and selecting the most appropriate experimental design
-          tailored to your specific field of study and research objectives.
+          We provide customized experimental study design assistance aligned with your study’s objectives and outcome measures. Our approach carefully addresses threats to internal validity (bias, confounding) and external validity (generalizability), ensuring your scientific research design is both accurate and reproducible.
         </p>
       ),
     },
@@ -41,11 +37,7 @@ export default function ExperimentalDesignServicesAccordion() {
       title: "Randomized Clinical Trials (RCT)",
       content: (
         <p>
-          For studies in diagnostics, screening tests, prevention, and
-          therapeutic interventions, Pubrica designs randomized controlled
-          trials (RCTs)—the gold standard for minimizing bias and confounding
-          variables. Our controlled experiment designs ensure precision,
-          reliability, and regulatory compliance.
+          For studies in diagnostics, screening tests, prevention, and therapeutic interventions, Pubrica designs randomized controlled trials (RCTs)—the gold standard for minimizing bias and confounding variables. Our controlled experiment designs ensure precision, reliability, and regulatory compliance.
         </p>
       ),
     },
@@ -56,8 +48,8 @@ export default function ExperimentalDesignServicesAccordion() {
         <p>
           When true{" "}
           <Link
-            href="/research-services/experimental-design/"
-            className="text-sky-600 hover:underline font-medium"
+            href="/academy/experimental-design/types-of-pre-experimental-research-design"
+            className="text-sky-600 font-medium"
           >
             experimental designs
           </Link>{" "}
@@ -104,8 +96,8 @@ export default function ExperimentalDesignServicesAccordion() {
           <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed">
             Pubrica’s{" "}
             <Link
-              href="/research-services/experimental-design/"
-              className="text-sky-600 hover:underline font-medium"
+              href="/academy/experimental-design/quasi-experimental-design-definition-types-examples"
+              className="text-sky-600 font-medium"
             >
               experimental design
             </Link>{" "}
@@ -184,8 +176,8 @@ export default function ExperimentalDesignServicesAccordion() {
           <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed">
             Choose Pubrica’s{" "}
             <Link
-              href="/research-services/experimental-design/"
-              className="text-sky-600 hover:underline font-medium"
+              href="/academy/journals-templates/nature-peer-reviewed-medical-research-journal"
+              className="text-sky-600 font-medium"
             >
               experimental design
             </Link>{" "}

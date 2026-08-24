@@ -47,7 +47,7 @@ export const experimentalDesignFAQ = [
     question:
       "How do I choose the right experimental design for my research objectives?",
     answer:
-      "Select an experimental design based on your research objectives, hypothesis, study variables, target population, available resources, and feasibility. Depending on the study, you may choose an experimental, quasi-experimental, or observational design to achieve reliable and meaningful outcomes.",
+      "The design should be based on the objectives of the experiment, hypothesis, variables, population, resources, and feasibility, and the design could be experimental, quasi-experimental, or observational to obtain high validity and reliability outcomes.",
   },
   {
     question:

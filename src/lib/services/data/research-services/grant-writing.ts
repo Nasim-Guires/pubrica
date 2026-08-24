@@ -38,28 +38,28 @@ export const grantWritingFAQ = [
     question:
       "How can I structure a grant proposal to increase funding success?",
     answer:
-      "Develop a well-structured grant proposal that includes a title, executive summary, background, problem statement, objectives, methodology, project timeline, budget plan, expected outcomes, research impact, and all supporting documents required by the funding agency.",
+      "Develop a grant proposal with sections including title, executive summary, background, problem statement, objectives, methodology, timeline, budget plan, expected outcomes, impact, and supporting documents.",
   },
   {
     question: "What are the key components of a compelling grant application?",
     answer:
-      "A successful grant application clearly defines the research problem, objectives, methodology, expected outcomes, budget justification, project timeline, anticipated impact, and demonstrates strong alignment with the funding organization's priorities and evaluation criteria.",
+      "A compelling grant application includes the problem statement, objectives, methodology, outcomes, budget plan, timeline, impact, and alignment with the funding priorities.",
   },
   {
     question:
       "How do professional grant writing services help improve proposal quality?",
     answer:
-      "Professional grant writing services improve proposal quality by enhancing clarity, organization, alignment with funding priorities, budget planning, project impact, and overall persuasiveness, increasing the proposal's competitiveness for funding opportunities.",
+      "Grant writing services improve the grant proposal in terms of clarity, structure, alignment with the funding priorities, budget plan, impact, and persuasiveness, thereby improving the competitiveness of the grant proposal.",
   },
   {
     question: "What common mistakes should be avoided in grant proposals?",
     answer:
-      "Avoid common mistakes such as unclear objectives, weak problem justification, unrealistic timelines, poorly prepared budgets, lack of alignment with funder priorities, insufficient supporting evidence, formatting errors, and inadequate explanation of the project's impact.",
+      "Common mistakes are those related to objectives, problem justification, timelines, budgets, alignment with funder priorities, evidence, format, and impact explanations.",
   },
   {
     question:
       "How can expert guidance help align research goals with funding requirements?",
     answer:
-      "Expert guidance helps align research objectives with funding agency priorities by strengthening the problem statement, refining the methodology, improving feasibility, ensuring compliance with grant guidelines, and presenting the project's impact clearly and effectively.",
+      "Seeking expert advice will help ensure that research objectives align with funder priorities, improve problem justification, methodology, and feasibility, and also enhance clarity, impact, and compliance.",
   },
 ];

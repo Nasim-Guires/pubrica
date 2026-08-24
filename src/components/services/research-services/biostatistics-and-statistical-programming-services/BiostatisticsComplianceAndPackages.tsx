@@ -21,7 +21,7 @@ const complianceItems: ComplianceCard[] = [
     id: "cdisc",
     title: "CDISC Standards",
     iconSrc: `${IMG}CDISC-Standards.png`,
-    defaultOpen: true, // Card 1: OPEN by default
+    defaultOpen: false, // Closed by default
     content: [
       "SDTM (Study Data Tabulation Model) – Organizing and formatting collected clinical trial data for submission.",
       "ADaM (Analysis Data Model) – Structuring analysis datasets to align with the statistical analysis plan.",
@@ -31,7 +31,7 @@ const complianceItems: ComplianceCard[] = [
     id: "regulatory",
     title: "Regulatory Authority Guidelines",
     iconSrc: `${IMG}Regulatory-Authority-Guidelines.png`,
-    defaultOpen: false, // Card 2: CLOSED by default
+    defaultOpen: false, // Closed by default
     content: [
       "FDA (Food and Drug Administration – USA) submission standards.",
       "EMA (European Medicines Agency) data submission guidelines.",
@@ -42,7 +42,7 @@ const complianceItems: ComplianceCard[] = [
     id: "ich",
     title: "ICH Guidelines",
     iconSrc: `${IMG}ICH-Guidelines.png`,
-    defaultOpen: false, // Card 3: CLOSED by default
+    defaultOpen: false, // Closed by default
     content: [
       "ICH E9 – Statistical principles for clinical trials.",
       "ICH E3 – Structure and content of clinical study reports.",
@@ -52,7 +52,7 @@ const complianceItems: ComplianceCard[] = [
     id: "data-privacy",
     title: "Data Privacy & Security Compliance",
     iconSrc: `${IMG}Data-Privacy-Security-Compliance.png`,
-    defaultOpen: true, // Card 4: OPEN by default
+    defaultOpen: false, // Closed by default
     content: [
       "HIPAA (Health Insurance Portability and Accountability Act – USA).",
       "GDPR (General Data Protection Regulation – EU).",
@@ -62,7 +62,7 @@ const complianceItems: ComplianceCard[] = [
     id: "software-validation",
     title: "Software & Validation Standards",
     iconSrc: `${IMG}Software-Validation-Standards.png`,
-    defaultOpen: true, // Card 5: OPEN by default
+    defaultOpen: false, // Closed by default
     content: [
       "SAS-compliant programming workflows with rigorous quality control (QC) and validation processes.",
       "Double programming and code review to minimize errors.",
@@ -150,11 +150,11 @@ const packageCards: PackageCard[] = [
 ];
 
 export default function BiostatisticsComplianceAndPackages() {
-  // Manage state for open/close state of compliance cards
+  // Manage state for open/close state of compliance cards (all false by default)
   const [openCards, setOpenCards] = useState<Record<string, boolean>>(() => {
     const initialState: Record<string, boolean> = {};
     complianceItems.forEach((item) => {
-      initialState[item.id] = item.defaultOpen;
+      initialState[item.id] = false;
     });
     return initialState;
   });
@@ -244,7 +244,7 @@ export default function BiostatisticsComplianceAndPackages() {
           By integrating these compliance and guideline standards, we ensure
           that our clinical trial statistical programming, pharmaceutical{" "}
           <a
-            href="#biostatistics"
+            href="/services/research-services/biostatistics-and-statistical-programming-services"
             className="text-sky-600 hover:underline font-medium"
           >
             biostatistics
@@ -394,7 +394,7 @@ export default function BiostatisticsComplianceAndPackages() {
 
         {/* Global CTA Button */}
         <div className="pt-10 flex justify-center">
-          <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
         </div>
       </section>
     </div>

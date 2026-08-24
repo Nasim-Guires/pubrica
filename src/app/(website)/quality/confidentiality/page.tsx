@@ -39,7 +39,7 @@ export default function ResearchConfidentialityPage() {
             <div className="flex justify-center">
               <div className="relative w-72 h-64">
                 <Image
-                  src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400"
+                  src="/images/Manuscript-Editng-1024x917.png"
                   alt="Research Journals and Publication Covers"
                   fill
                   className="object-contain"

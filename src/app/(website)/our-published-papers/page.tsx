@@ -87,44 +87,26 @@ export default function PublishedPapersPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Success Story Card 1 */}
-              <div className="bg-[#1f3330] p-6 border border-gray-600 flex flex-col justify-between">
-                <div className="flex flex-col sm:flex-row gap-4 items-center mb-6">
-                  <div className="relative w-36 h-48 flex-shrink-0">
-                    <Image
-                      src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=300"
-                      alt="Clinical Problem Solving Journal Cover"
-                      fill
-                      className="object-cover border border-gray-500"
-                    />
-                  </div>
-                  <p className="text-xs text-gray-200 text-left leading-relaxed">
-                    You get the entire package at Scientific Writing & Publishing. Regulatory writing, clinical report writing, journal writing, biostatistical reports, medical animation, and physician writing. They are so easy to work with. What more do you want?
-                  </p>
-                </div>
-                <div className="flex justify-between items-center text-xs border-t border-gray-700 pt-4">
-                  <span className="text-green-400 font-semibold">Author Name<br /><span className="text-white">Jean-Claude Benaud</span></span>
-                  <span className="text-green-400 font-semibold">Impact Factor<br /><span className="text-white">4.236</span></span>
+              <div className="bg-[#1f3330] border border-gray-600 overflow-hidden">
+                <div className="relative w-full h-80">
+                  <Image
+                    src="/images/scropt-2.png"
+                    alt="Clinical Problem Solving Journal Cover"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
 
               {/* Success Story Card 2 */}
-              <div className="bg-[#1f3330] p-6 border border-gray-600 flex flex-col justify-between">
-                <div className="flex flex-col sm:flex-row gap-4 items-center mb-6">
-                  <div className="relative w-36 h-48 flex-shrink-0">
-                    <Image
-                      src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=300"
-                      alt="Clinical Practice Journal Cover"
-                      fill
-                      className="object-cover border border-gray-500"
-                    />
-                  </div>
-                  <p className="text-xs text-gray-200 text-left leading-relaxed">
-                    You get the entire package at Scientific Writing & Publishing. Regulatory writing, clinical report writing, journal writing, biostatistical reports, medical animation, and physician writing. They are so easy to work with. What more do you want?
-                  </p>
-                </div>
-                <div className="flex justify-between items-center text-xs border-t border-gray-700 pt-4">
-                  <span className="text-green-400 font-semibold">Author Name<br /><span className="text-white">Jean-Claude Benaud</span></span>
-                  <span className="text-green-400 font-semibold">Impact Factor<br /><span className="text-white">4.236</span></span>
+              <div className="bg-[#1f3330] border border-gray-600 overflow-hidden">
+                <div className="relative w-full h-80">
+                  <Image
+                    src="/images/book-01.jpg"
+                    alt="Clinical Practice Journal Cover"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>

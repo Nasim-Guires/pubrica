@@ -80,7 +80,7 @@ export default function BiostatisticsExpertiseAndWhoWeServe() {
             We provide our researchers and clinical trials investigators with
             the information, data management, analysis, and{" "}
             <a
-              href="#statistical-interpretations"
+              href="/services/research-services/statistical-vs-contextual-interpretation-research"
               className="text-sky-600 hover:underline font-medium"
             >
               statistical interpretations
@@ -207,7 +207,7 @@ export default function BiostatisticsExpertiseAndWhoWeServe() {
               Our biostatistical programming services cater to a diverse range
               of clients in the medical,{" "}
               <a
-                href="#pharmaceutical"
+                href="/Industries/pharmaceutical/"
                 className="text-sky-600 hover:underline font-medium"
               >
                 pharmaceutical

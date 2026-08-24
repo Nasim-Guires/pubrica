@@ -1,10 +1,12 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface Specialty {
   name: string;
   iconSrc: string;
+  url: string;
 }
 
 interface StandardItem {
@@ -39,22 +41,22 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
   // Mapped list of 16 therapeutic areas explicitly matching the table rows
   const IMG = "/images/physician-writing-services";
   const specialties: Specialty[] = [
-    { name: "Oncology", iconSrc: `${IMG}/Oncology-1-1.png` },
-    { name: "Cardiology", iconSrc: `${IMG}/Cardiology-1.png` },
-    { name: "Neurology", iconSrc: `${IMG}/Neurology-1.png` },
-    { name: "Psychiatry", iconSrc: `${IMG}/Psychiatry-1.png` },
-    { name: "Pulmonology", iconSrc: `${IMG}/Pulmonology-1.png` },
-    { name: "Nephrology", iconSrc: `${IMG}/Nephrology-1.png` },
-    { name: "Psychology", iconSrc: `${IMG}/Psychology.png` },
-    { name: "Haematology", iconSrc: `${IMG}/Haematology-1.png` },
-    { name: "Gastroenterology", iconSrc: `${IMG}/Gastroenterology.png` },
-    { name: "Obstetrics & Gynaecology", iconSrc: `${IMG}/Obstetrics-Gynaecology-1.png` },
-    { name: "Paediatrics", iconSrc: `${IMG}/Paediatrics-1.png` },
-    { name: "Urology", iconSrc: `${IMG}/Urology-1.png` },
-    { name: "General Medicine", iconSrc: `${IMG}/General-Medicine-1-1.png` },
-    { name: "Rheumatology", iconSrc: `${IMG}/Rheumatology-1.png` },
-    { name: "Dermatology", iconSrc: `${IMG}/Dermatology.png` },
-    { name: "Orthopaedics", iconSrc: `${IMG}/Orthopaedics.png` },
+    { name: "Oncology", iconSrc: `${IMG}/Oncology-1-1.png`, url: "/subject-matter-experts/" },
+    { name: "Cardiology", iconSrc: `${IMG}/Cardiology-1.png`, url: "/subject-matter-experts/cardiology/" },
+    { name: "Neurology", iconSrc: `${IMG}/Neurology-1.png`, url: "/subject-matter-experts/neurology/" },
+    { name: "Psychiatry", iconSrc: `${IMG}/Psychiatry-1.png`, url: "/subject-matter-experts/" },
+    { name: "Pulmonology", iconSrc: `${IMG}/Pulmonology-1.png`, url: "/subject-matter-experts/" },
+    { name: "Nephrology", iconSrc: `${IMG}/Nephrology-1.png`, url: "/subject-matter-experts/" },
+    { name: "Psychology", iconSrc: `${IMG}/Psychology.png`, url: "/subject-matter-experts/" },
+    { name: "Haematology", iconSrc: `${IMG}/Haematology-1.png`, url: "/subject-matter-experts/" },
+    { name: "Gastroenterology", iconSrc: `${IMG}/Gastroenterology.png`, url: "/subject-matter-experts/" },
+    { name: "Obstetrics & Gynaecology", iconSrc: `${IMG}/Obstetrics-Gynaecology-1.png`, url: "/subject-matter-experts/" },
+    { name: "Paediatrics", iconSrc: `${IMG}/Paediatrics-1.png`, url: "/subject-matter-experts/" },
+    { name: "Urology", iconSrc: `${IMG}/Urology-1.png`, url: "/subject-matter-experts/" },
+    { name: "General Medicine", iconSrc: `${IMG}/General-Medicine-1-1.png`, url: "/subject-matter-experts/" },
+    { name: "Rheumatology", iconSrc: `${IMG}/Rheumatology-1.png`, url: "/subject-matter-experts/" },
+    { name: "Dermatology", iconSrc: `${IMG}/Dermatology.png`, url: "/subject-matter-experts/" },
+    { name: "Orthopaedics", iconSrc: `${IMG}/Orthopaedics.png`, url: "/subject-matter-experts/" },
   ];
 
   const standards: StandardItem[] = [
@@ -189,33 +191,28 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 border-t border-l border-gray-100">
-          {specialties.map((specialty, index) => {
-            const isNephrology = specialty.name === "Nephrology";
-            return (
-              <div
-                key={index}
-                className={`flex flex-col items-center justify-center p-6 text-center border-b border-r border-gray-100 transition-colors ${
-                  isNephrology ? "bg-[#f4faf8]" : "bg-white hover:bg-gray-50/50"
-                }`}
-              >
-                <div className="relative w-16 h-16 mb-3.5">
-                  <Image
-                    src={specialty.iconSrc}
-                    alt={specialty.name}
-                    fill
-                    className="object-contain"
-                    sizes="64px"
-                  />
-                </div>
-                <h3 className="text-[#0f172a] text-sm md:text-[15px] font-semibold tracking-wide">
-                  {specialty.name}
-                </h3>
+          {specialties.map((specialty, index) => (
+            <Link
+              key={index}
+              href={specialty.url}
+              className="flex flex-col items-center justify-center p-6 text-center border-b border-r border-gray-100 transition-colors bg-white hover:bg-gray-50/50"
+            >
+              <div className="relative w-16 h-16 mb-3.5">
+                <Image
+                  src={specialty.iconSrc}
+                  alt={specialty.name}
+                  fill
+                  className="object-contain"
+                  sizes="64px"
+                />
               </div>
-            );
-          })}
+              <h3 className="text-[#0f172a] text-sm md:text-[15px] font-semibold tracking-wide">
+                {specialty.name}
+              </h3>
+            </Link>
+          ))}
         </div>
       </section>
-
       {/* --- Section 2: Compliance Guidelines Showcase Banner --- */}
       <section className="bg-[#f8f9fa] border-t border-gray-200/60 py-14 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto">
@@ -226,7 +223,7 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
           <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed mb-12 max-w-6xl">
             At Pubrica, our physician writing service guarantees that any
             clinical manuscript,{" "}
-            <a href="#" className="text-[#3b82f6] hover:underline">
+            <a href="/services/physician-writing-services/case-report" className="text-[#3b82f6] hover:underline">
               case report
             </a>
             , or regulatory document we provide complies with international
@@ -286,7 +283,7 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
               impactful scientific publications.
             </p>
             <div className="pt-2">
-              <GetFreeQuoteButton/>
+              <GetFreeQuoteButton />
             </div>
           </div>
         </div>

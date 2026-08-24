@@ -57,7 +57,7 @@ export default function ExperimentalDesignHero() {
             <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed">
               At Pubrica, we specialize in{" "}
               <Link
-                href="/research-services/experimental-design/"
+                href="/academy/experimental-design/how-to-choose-right-experimental-design-for-research"
                 className="text-sky-600 hover:underline font-medium"
               >
                 experimental study design
@@ -67,7 +67,7 @@ export default function ExperimentalDesignHero() {
               research methodology specialists has successfully crafted over
               5,000 experimental research designs, including true experimental,{" "}
               <Link
-                href="/research-services/experimental-design/#quasi-experimental"
+                href="/academy/experimental-design/quasi-experimental-design-definition-types-examples"
                 className="text-sky-600 hover:underline font-medium"
               >
                 quasi-experimental
@@ -79,7 +79,7 @@ export default function ExperimentalDesignHero() {
             <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed">
               We know that a well-structured{" "}
               <Link
-                href="/research-services/experimental-design/"
+                href="/academy/experimental-design/types-of-pre-experimental-research-design"
                 className="text-sky-600 hover:underline font-medium"
               >
                 experimental research design

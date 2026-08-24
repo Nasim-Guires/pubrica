@@ -14,7 +14,7 @@ const expertiseList: ExpertisePoint[] = [
     id: "exp-years",
     text: "20+ years of experience in academic and ",
     highlightText: "scientific writing",
-    highlightUrl: "#scientific-writing",
+    highlightUrl: "/services/research-services/scientific-writing",
   },
   {
     id: "exp-domain",
@@ -99,7 +99,7 @@ export default function GrantWritingOverviewSection() {
                       {item.highlightText && item.highlightUrl && (
                         <a
                           href={item.highlightUrl}
-                          className="text-sky-600 hover:underline font-medium"
+                          className="text-sky-600  font-medium"
                         >
                           {item.highlightText}
                         </a>
@@ -126,10 +126,10 @@ export default function GrantWritingOverviewSection() {
           <div className="lg:col-span-5 flex justify-center lg:justify-end pt-4 lg:pt-0">
             <div className="relative w-full max-w-md aspect-[4/3] sm:aspect-[16/11]">
               {/* Back Dark Teal Backdrop Card */}
-              <div className="absolute top-6 left-0 right-6 bottom-0 bg-[#0e3b38] rounded-xl z-0" />
+              <div className="absolute top-6 left-0 right-6 bottom-0 rounded-xl z-0" />
 
               {/* Foreground Image Card */}
-              <div className="absolute top-0 left-6 right-0 bottom-6 rounded-2xl overflow-hidden shadow-xl z-10 border border-slate-100">
+              <div className="absolute top-0 left-6 right-0 bottom-6 rounded-2xl overflow-hidden z-10 border border-slate-100">
                 <Image
                   src="/images/research-services/grant-writing/Professional-Research-Grant-Writing-Services.webp"
                   alt="Researcher working on grant proposal draft with laptop and notebook"

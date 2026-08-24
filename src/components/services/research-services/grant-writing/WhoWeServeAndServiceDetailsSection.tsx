@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
@@ -14,6 +14,11 @@ interface AudienceCard {
   linkUrl?: string;
 }
 
+interface StepItem {
+  step: number;
+  text: string;
+}
+
 interface FeatureCard {
   id: string;
   title: string;
@@ -22,6 +27,7 @@ interface FeatureCard {
   highlightText?: string;
   needFromYou: string[];
   youllGet: string[];
+  howItWorksSteps: StepItem[];
 }
 
 const GW_IMG = "/images/research-services/grant-writing";
@@ -33,7 +39,7 @@ const audienceCards: AudienceCard[] = [
     description:
       "Faculty, postdoctoral researchers, and universities seeking national or international funding benefit from our ",
     linkText: "research proposal writing service.",
-    linkUrl: "#research-proposal-writing",
+    linkUrl: "/academy/grant-writing/confidentiality-in-grant-writing-proposals",
     imageSrc: `${GW_IMG}/Academic-Researchers-and-Institutions.png`,
     altText: "Researcher working on computer in university office",
   },
@@ -73,7 +79,7 @@ const audienceCards: AudienceCard[] = [
     description:
       "Freelancers and individuals receive personalised support from experienced grant writing consultants.",
     linkText: "grant writing consultants.",
-    linkUrl: "#consultant-support",
+    linkUrl: "/academy/grant-writing/communicating-research-impact-grant-applications/",
     imageSrc: `${GW_IMG}/Independent-Consultants-Grant-Seekers.png`,
     altText: "Independent consultant with headset working at desk",
   },
@@ -107,6 +113,24 @@ const serviceDetails: FeatureCard[] = [
       "A grant writing summary and expert feedback from your writer",
       "Detailed annotations and commentary on your submitted materials for transparency and learning",
     ],
+    howItWorksSteps: [
+      {
+        step: 1,
+        text: "You send us the proposal outline and related documents; complete our detailed questionnaire.",
+      },
+      {
+        step: 2,
+        text: "Meet with our grant writing expert and project manager to decide the outline and direction of your proposal.",
+      },
+      {
+        step: 3,
+        text: "Our grant writing expert drafts a proposal tailored to your target funding body.",
+      },
+      {
+        step: 4,
+        text: "Review and refine the draft with our grant writing expert to finalize your proposal.",
+      },
+    ],
   },
   {
     id: "review",
@@ -123,6 +147,24 @@ const serviceDetails: FeatureCard[] = [
     youllGet: [
       "A detailed grant proposal review report & reviewer's message",
       "Detailed feedback on the relevance of the documents you’ve sent us, if any",
+    ],
+    howItWorksSteps: [
+      {
+        step: 1,
+        text: "Send us your materials and complete our detailed questionnaire.",
+      },
+      {
+        step: 2,
+        text: "Our grant expert reviews your proposal and supplies detailed comments.",
+      },
+      {
+        step: 3,
+        text: "Receive a report with analysis of strengths and weaknesses and actionable suggestions.",
+      },
+      {
+        step: 4,
+        text: "After-sales support: We will help you address the feedback from the grant review board.",
+      },
     ],
   },
   {
@@ -142,10 +184,34 @@ const serviceDetails: FeatureCard[] = [
       "Grant editing summary & editor's report",
       "Detailed feedback on the relevance of the documents you’ve sent us, if any",
     ],
+    howItWorksSteps: [
+      {
+        step: 1,
+        text: "Send us your draft grant proposal and complete our detailed questionnaire.",
+      },
+      {
+        step: 2,
+        text: "Our grant editing expert revises your proposal for clarity and impact.",
+      },
+      {
+        step: 3,
+        text: "Revision rounds: The editor incorporates your feedback after review.",
+      },
+      {
+        step: 4,
+        text: "Receive the final grant proposal with comments and suggestions for improvement.",
+      },
+    ],
   },
 ];
 
 export default function WhoWeServeAndServiceDetailsSection() {
+  const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>(null);
+
+  const toggleHowItWorks = (id: string) => {
+    setActiveHowItWorksId((prev) => (prev === id ? null : id));
+  };
+
   return (
     <div className="w-full text-slate-800">
       {/* ========================================================= */}
@@ -167,8 +233,8 @@ export default function WhoWeServeAndServiceDetailsSection() {
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-5xl">
               At Pubrica, we offer tailored research{" "}
               <a
-                href="#grant-writing"
-                className="text-sky-600 hover:underline font-medium"
+                href="services/research-services/grant-writing/research-grant-proposal-writing-guide"
+                className="text-sky-600 font-medium"
               >
                 grant writing services
               </a>{" "}
@@ -177,14 +243,14 @@ export default function WhoWeServeAndServiceDetailsSection() {
             </p>
           </header>
 
-          {/* 6-Card Grid with Full-Black Hover Effect */}
+          {/* 6-Card Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {audienceCards.map((card) => (
               <div
                 key={card.id}
                 className="group relative h-64 sm:h-72 rounded-sm overflow-hidden shadow-md cursor-pointer bg-black"
               >
-                {/* 1. Base Image (Visible Default State) */}
+                {/* 1. Base Image */}
                 <Image
                   src={card.imageSrc}
                   alt={card.altText}
@@ -193,14 +259,14 @@ export default function WhoWeServeAndServiceDetailsSection() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
 
-                {/* 2. Default Bottom Gradient Bar (Shows Title Only) */}
+                {/* 2. Default Bottom Gradient Bar */}
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent p-5 z-10 transition-opacity duration-300 group-hover:opacity-0">
                   <h3 className="text-base sm:text-lg font-bold text-white leading-tight">
                     {card.title}
                   </h3>
                 </div>
 
-                {/* 3. Full Black Hover Overlay (Shows Title + Text on Hover) */}
+                {/* 3. Full Black Hover Overlay */}
                 <div className="absolute inset-0 bg-black p-6 flex flex-col justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 text-white space-y-4">
                   <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
                     {card.title}
@@ -210,7 +276,7 @@ export default function WhoWeServeAndServiceDetailsSection() {
                     {card.linkText && (
                       <a
                         href={card.linkUrl || "#"}
-                        className="text-sky-400 hover:underline font-normal inline"
+                        className="text-sky-400 font-normal inline"
                         onClick={(e) => e.stopPropagation()}
                       >
                         {card.linkText}
@@ -239,7 +305,7 @@ export default function WhoWeServeAndServiceDetailsSection() {
             of the funding bodies.
           </p>
           <div>
-          <GetFreeQuoteButton/>
+            <GetFreeQuoteButton />
           </div>
         </div>
       </section>
@@ -249,86 +315,128 @@ export default function WhoWeServeAndServiceDetailsSection() {
       {/* ========================================================= */}
       <section className="w-full bg-slate-50 py-14 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-10">
-          {serviceDetails.map((service) => (
-            <div
-              key={service.id}
-              className="bg-[#e6f7ff]/70 border border-sky-100 rounded-2xl p-6 sm:p-8 md:p-10 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative group"
-            >
-              {/* Left Side: Icon and Service Title */}
-              <div className="md:col-span-4 flex flex-col items-center justify-center text-center space-y-4 md:border-r md:border-sky-200/80 md:pr-6 h-full">
-                <div className="p-3 bg-white/80 rounded-2xl shadow-sm group-hover:scale-110 transition-transform duration-300">
-                  <Image
-                    src={service.iconSrc}
-                    alt=""
-                    width={80}
-                    height={80}
-                    className="object-contain w-20 h-20"
-                  />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-[#0e3b38] leading-tight">
-                  {service.title}
-                </h3>
-              </div>
+          {serviceDetails.map((service) => {
+            const isOpen = activeHowItWorksId === service.id;
 
-              {/* Right Side: Description and Need/Get Grids */}
-              <div className="md:col-span-8 space-y-6">
-                {/* Description */}
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                  {service.description}
-                </p>
-
-                {/* Two Column Grid: What We Need & What You'll Get */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-                  {/* Column 1: What we need from you */}
-                  <div className="space-y-3">
-                    <h4 className="text-sm sm:text-base font-bold text-slate-900">
-                      What we need from you
-                    </h4>
-                    <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
-                      {service.needFromYou.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <span className="text-red-600 font-bold text-base leading-none mt-0.5">
-                            •
-                          </span>
-                          <span className="leading-relaxed">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+            return (
+              <div
+                key={service.id}
+                className="bg-[#e6f7ff]/70 border border-sky-100 rounded-2xl p-6 sm:p-8 md:p-10 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group flex flex-col space-y-6"
+              >
+                {/* Main Card Content Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                  {/* Left Side: Icon and Service Title */}
+                  <div className="md:col-span-4 flex flex-col items-center justify-center text-center space-y-4 md:border-r md:border-sky-200/80 md:pr-6 h-full">
+                    <div className="p-3 bg-white/80 rounded-2xl shadow-sm group-hover:scale-110 transition-transform duration-300">
+                      <Image
+                        src={service.iconSrc}
+                        alt=""
+                        width={80}
+                        height={80}
+                        className="object-contain w-20 h-20"
+                      />
+                    </div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-[#0e3b38] leading-tight">
+                      {service.title}
+                    </h3>
                   </div>
 
-                  {/* Column 2: What you'll get */}
-                  <div className="space-y-3">
-                    <h4 className="text-sm sm:text-base font-bold text-slate-900">
-                      What you'll get
-                    </h4>
-                    <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
-                      {service.youllGet.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <span className="text-red-600 font-bold text-base leading-none mt-0.5">
-                            •
-                          </span>
-                          <span className="leading-relaxed">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  {/* Right Side: Description and Need/Get Grids */}
+                  <div className="md:col-span-8 space-y-6">
+                    {/* Description */}
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      {service.description}
+                    </p>
+
+                    {/* Two Column Grid: What We Need & What You'll Get */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
+                      {/* Column 1: What we need from you */}
+                      <div className="space-y-3">
+                        <h4 className="text-sm sm:text-base font-bold text-slate-900">
+                          What we need from you
+                        </h4>
+                        <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
+                          {service.needFromYou.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="text-red-600 font-bold text-base leading-none mt-0.5">
+                                •
+                              </span>
+                              <span className="leading-relaxed">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Column 2: What you'll get */}
+                      <div className="space-y-3">
+                        <h4 className="text-sm sm:text-base font-bold text-slate-900">
+                          What you'll get
+                        </h4>
+                        <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
+                          {service.youllGet.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="text-red-600 font-bold text-base leading-none mt-0.5">
+                                •
+                              </span>
+                              <span className="leading-relaxed">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* Interactive Action Links */}
+                    <div className="pt-4 flex flex-col items-end gap-1">
+                      <button
+                        type="button"
+                        onClick={() => toggleHowItWorks(service.id)}
+                        className="inline-flex items-center text-xs sm:text-sm font-semibold text-sky-600 hover:text-sky-800 transition-colors duration-200 hover:underline gap-1 group/link cursor-pointer"
+                      >
+                        <span>See How It Works</span>
+                        <span className="transition-transform duration-200 group-hover/link:translate-x-1">
+                          →
+                        </span>
+                      </button>
+
+                      {isOpen && (
+                        <button
+                          type="button"
+                          onClick={() => setActiveHowItWorksId(null)}
+                          className="text-xs font-medium text-sky-600 hover:text-sky-800 transition-colors cursor-pointer"
+                        >
+                          Close X
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </div>
 
-                {/* Interactive Action Link */}
-                <div className="pt-4 flex justify-end">
-                  <a
-                    href={`#how-it-works-${service.id}`}
-                    className="inline-flex items-center text-xs sm:text-sm font-semibold text-sky-600 hover:text-sky-800 transition-colors duration-200 hover:underline gap-1 group/link"
-                  >
-                    <span>See How It Works</span>
-                    <span className="transition-transform duration-200 group-hover/link:translate-x-1">
-                      →
-                    </span>
-                  </a>
-                </div>
+                {/* Expanded "How It Works!" Section */}
+                {isOpen && (
+                  <div className="pt-6 border-t border-sky-200/60 transition-all duration-300 space-y-6">
+                    <h3 className="text-center text-xl sm:text-2xl font-bold text-slate-800">
+                      How It Works!
+                    </h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                      {service.howItWorksSteps.map((stepObj) => (
+                        <div
+                          key={stepObj.step}
+                          className="bg-white rounded-xl p-5 shadow-sm text-center flex flex-col items-center justify-start space-y-3"
+                        >
+                          <div className="w-8 h-8 rounded-full bg-red-500 text-white font-bold flex items-center justify-center text-sm shadow">
+                            {stepObj.step}
+                          </div>
+                          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                            {stepObj.text}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
     </div>

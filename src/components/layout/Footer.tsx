@@ -6,34 +6,34 @@ import Container from "@/components/common/Container";
 
 export default function Footer() {
   const serviceLinks = [
-    { label: "Research Services", href: "#research" },
-    { label: "Physician Writing", href: "#physician" },
-    { label: "Publication Support", href: "#support" },
-    { label: "Scientific Communication", href: "#scientific" },
-    { label: "Editing and Translation", href: "#editing" },
-    { label: "Data Analytics", href: "#analytics" },
-    { label: "Education Content", href: "#education" },
-    { label: "Medical Data Collection", href: "#medical" },
+    { label: "Research Services", href: "/services/research-services/" },
+    { label: "Physician Writing", href: "/services/physician-writing-services/" },
+    { label: "Publication Support", href: "/services/publication-support/" },
+    { label: "Scientific Communication", href: "/services/scientific-communication/" },
+    { label: "Editing and Translation", href: "/services/editing-and-translation/" },
+    { label: "Data Analytics", href: "/services/data-analytics-machine-learning/" },
+    { label: "Education Content", href: "/services/educational-content-development/" },
+    { label: "Medical Data Collection", href: "/services/medical-data-collection/" },
   ];
 
   const aboutLinks = [
-    { label: "Meet the Team", href: "#team" },
-    { label: "Subject areas", href: "#subjects" },
-    { label: "Therapeutic Expertise", href: "#therapeutic" },
-    { label: "Strategic Partnership", href: "#strategic" },
-    { label: "Contact us", href: "#contact" },
-    { label: "Careers", href: "#careers" },
+    { label: "Meet the Team", href: "/scientific-editor-profile/" },
+    { label: "Subject areas", href: "/subject-matter-experts/" },
+    { label: "Therapeutic Expertise", href: "/therapeutic-expertise/" },
+    { label: "Strategic Partnership", href: "/strategic-partnerships-memberships/" },
+    { label: "Contact us", href: "/contact-us/" },
+    { label: "Careers", href: "/careers/" },
   ];
 
   const moreLinks = [
-    { label: "Subjects", href: "#more-subjects" },
-    { label: "Industries", href: "#industries" },
-    { label: "Global Partner Program", href: "#partner" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Testimonials", href: "#testimonials" },
-    { label: "Academy", href: "#academy" },
-    { label: "Our SampleWork", href: "#samplework" },
-    { label: "Blog", href: "#blog" },
+    { label: "Subjects", href: "/subject-matter-experts/" },
+    { label: "Industries", href: "/Industries/" },
+    { label: "Global Partner Program", href: "/global-partner-program/" },
+    { label: "FAQ", href: "/faq/" },
+    { label: "Testimonials", href: "/testimonial/" },
+    { label: "Academy", href: "/academy/" },
+    { label: "Our SampleWork", href: "/insights/sample-work/" },
+    { label: "Blog", href: "/blog/" },
   ];
 
   const quickLinks = [
@@ -113,13 +113,13 @@ export default function Footer() {
             <ul className="space-y-2.5 pl-0 list-none">
               {serviceLinks.map((link, idx) => (
                 <li key={idx}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-[11px] text-gray-400 hover:text-white flex items-center gap-1.5 transition-colors group"
                   >
                     <ArrowRight className="h-3 w-3 text-gray-400 group-hover:text-white transition-colors" />
                     <span>{link.label}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -133,13 +133,13 @@ export default function Footer() {
             <ul className="space-y-2.5 pl-0 list-none">
               {aboutLinks.map((link, idx) => (
                 <li key={idx}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-[11px] text-gray-400 hover:text-white flex items-center gap-1.5 transition-colors group"
                   >
                     <ArrowRight className="h-3 w-3 text-gray-400 group-hover:text-white transition-colors" />
                     <span>{link.label}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -153,13 +153,13 @@ export default function Footer() {
             <ul className="space-y-2.5 pl-0 list-none">
               {moreLinks.map((link, idx) => (
                 <li key={idx}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-[11px] text-gray-400 hover:text-white flex items-center gap-1.5 transition-colors group"
                   >
                     <ArrowRight className="h-3 w-3 text-gray-400 group-hover:text-white transition-colors" />
                     <span>{link.label}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -268,7 +268,7 @@ export default function Footer() {
             <a
               href="#youtube"
               aria-label="YouTube"
-              className="w-7 h-7 rounded-full bg-white text-[#031d18] flex items-center justify-center hover:bg-gray-200 transition-colors"
+              className="w-7 h-7 rounded-full bg-[#031d18] flex items-center justify-center hover:bg-gray-200 transition-colors"
             >
               <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />

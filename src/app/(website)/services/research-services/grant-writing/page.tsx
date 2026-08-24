@@ -1,4 +1,4 @@
-import CommonTestimonial from "@/components/common/CommonTestimonials";
+// import CommonTestimonial from "@/components/common/CommonTestimonials";
 import CommonFAQ from "@/components/common/FAQ";
 import ComplianceAndPackagesSection from "@/components/services/research-services/grant-writing/ComplianceAndPackagesSection";
 import GrantWritingOverviewSection from "@/components/services/research-services/grant-writing/GrantWritingOverviewSection";
@@ -19,11 +19,11 @@ const page = () => {
       <GrantWritingServicesOfferedSection />
       <WhoWeServeAndServiceDetailsSection />
       <ComplianceAndPackagesSection />
-      <CommonTestimonial
+      {/* <CommonTestimonial
         title="Testimonials"
         description="Learn how Pubrica's grant writing service has empowered researchers and institutions to secure competitive funding by delivering well-structured, compelling proposals that meet agency standards and advance impactful research. Here is what our clients say:"
         testimonials={grantWritingTestimonials}
-      />
+      /> */}
       <CommonFAQ
         title="Frequently Asked Questions – Grant Writing Service"
         faqs={grantWritingFAQ}

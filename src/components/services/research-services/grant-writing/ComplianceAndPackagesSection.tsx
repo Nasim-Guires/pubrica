@@ -1,8 +1,43 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+
+// Image Paths
+const GW_IMG = "/images/research-services/grant-writing";
+
+// Testimonials Data
+export const grantWritingTestimonials = [
+  {
+    image: `${GW_IMG}/Indian-council-of-medical-research.png`,
+    quote:
+      "With Pubrica's guidance, we successfully submitted our proposal to the Indian Council of Medical Research (ICMR). Their knowledge of the Indian funding landscape and medical writing standards ensured our grant stood out among hundreds of applicants.",
+    name: "Dr. Nishant Reddy",
+    designation: "Director",
+    organization: "Biomedical Research Lab – India",
+    flag: "/images/editing-and-translation/flag.png",
+  },
+  {
+    image: `${GW_IMG}/horizon-grant-application-journal.png`,
+    quote:
+      "We collaborated with Pubrica on a complex Horizon Europe grant application. Their writers demonstrated a strong grasp of EU requirements and delivered a thoroughly compliant, reviewer-ready document.",
+    name: "Dr. Elena Petrova",
+    designation: "EU Research Coordinator",
+    organization: "Germany",
+    flag: "/images/editing-and-translation/germany-1-1.png",
+  },
+  {
+    image: `${GW_IMG}/national-institute-of-health-journal.png`,
+    quote:
+      "Pubrica's grant writing support was instrumental in helping us secure funding through the NIH (National Institutes of Health). Their clarity in writing, adherence to US federal guidelines, and ability to present our research impact convincingly were outstanding.",
+    name: "Dr. Aarti Menon",
+    designation: "Principal Investigator",
+    organization: "Clinical Research Institute – USA",
+    flag: `${GW_IMG}/usa-1-1.png`,
+  },
+];
 
 // Types
 interface ComplianceItem {
@@ -24,11 +59,46 @@ interface PackageItem {
 }
 
 export default function ComplianceAndPackagesSection() {
-  // State for Accordion Cards (null = all closed by default)
+  // Accordion State
   const [openCardId, setOpenCardId] = useState<string | null>(null);
+
+  // Testimonials Carousel State
+  const [current, setCurrent] = useState(0);
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const toggleCard = (id: string) => {
     setOpenCardId((prevId) => (prevId === id ? null : id));
+  };
+
+  const maxSlide = mobile
+    ? grantWritingTestimonials.length - 1
+    : grantWritingTestimonials.length - 2;
+
+  const next = () => {
+    if (current >= maxSlide) {
+      setCurrent(0);
+    } else {
+      setCurrent((prev) => prev + 1);
+    }
+  };
+
+  const prev = () => {
+    if (current === 0) {
+      setCurrent(maxSlide);
+    } else {
+      setCurrent((prev) => prev - 1);
+    }
   };
 
   // 1. Compliance Data
@@ -36,8 +106,7 @@ export default function ComplianceAndPackagesSection() {
     {
       id: "funding",
       title: "Funding Agency Guidelines",
-      iconSrc:
-        "/images/research-services/grant-writing/Funding-Agency-Guidelines.png",
+      iconSrc: `${GW_IMG}/Funding-Agency-Guidelines.png`,
       content: (
         <div className="space-y-3 text-xs sm:text-sm text-slate-700">
           <p>
@@ -48,16 +117,47 @@ export default function ComplianceAndPackagesSection() {
             <li className="flex items-start gap-2">
               <span className="text-red-500 font-bold">•</span>
               <span>
-                <strong className="text-sky-600">NIH</strong>, NSF, DBT, DST,{" "}
-                <strong className="text-sky-600">ICMR</strong>,{" "}
-                <strong className="text-sky-600">BIRAC</strong>, CSIR
+                <Link
+                  href="https://www.nih.gov/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sky-600 font-bold"
+                >
+                  NIH
+                </Link>
+                , NSF, DBT, DST,{" "}
+                <Link
+                  href="https://www.icmr.gov.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sky-600 font-bold"
+                >
+                  ICMR
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://www.birac.nic.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sky-600 font-bold"
+                >
+                  BIRAC
+                </Link>
+                , CSIR
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-red-500 font-bold">•</span>
               <span>
-                <strong className="text-sky-600">WHO</strong>, UNDP, Gates
-                Foundation, Horizon Europe
+                <Link
+                  href="https://www.who.int/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sky-600 font-bold"
+                >
+                  WHO
+                </Link>
+                , UNDP, Gates Foundation, Horizon Europe
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -77,19 +177,28 @@ export default function ComplianceAndPackagesSection() {
     {
       id: "ethics",
       title: "Ethical and Scientific Integrity",
-      iconSrc:
-        "/images/research-services/grant-writing/Ethical-and-Scientific-Integrity.png",
+      iconSrc: `${GW_IMG}/Ethical-and-Scientific-Integrity.png`,
       content: (
         <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
           Our writing complies with ethical standards in research proposal
           development, such as{" "}
-          <a href="#icmje" className="text-sky-600 hover:underline">
+          <Link
+            href="https://www.icmje.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sky-600 hover:underline"
+          >
             ICMJE
-          </a>{" "}
+          </Link>{" "}
           and{" "}
-          <a href="#cope" className="text-sky-600 hover:underline">
+          <Link
+            href="https://publicationethics.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sky-600 hover:underline"
+          >
             COPE
-          </a>{" "}
+          </Link>{" "}
           guidelines.
         </p>
       ),
@@ -97,8 +206,7 @@ export default function ComplianceAndPackagesSection() {
     {
       id: "budget",
       title: "Budgetary and Financial Accuracy",
-      iconSrc:
-        "/images/research-services/grant-writing/Budgetary-and-Financial-Accuracy.png",
+      iconSrc: `${GW_IMG}/Budgetary-and-Financial-Accuracy.png`,
       content: (
         <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
           Adhere to Uniform Guidance (21 CFR 200) for U.S. federal grants and
@@ -170,7 +278,6 @@ export default function ComplianceAndPackagesSection() {
       {/* SECTION 1: COMPLIANCE AND GUIDELINE STANDARDS             */}
       {/* ========================================================= */}
       <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-8">
-        {/* Section Header */}
         <div className="space-y-3">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
             Our Compliance and Guideline Standards
@@ -182,7 +289,6 @@ export default function ComplianceAndPackagesSection() {
           </p>
         </div>
 
-        {/* 3 Collapsible Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
           {complianceData.map((item) => {
             const isOpen = openCardId === item.id;
@@ -191,7 +297,6 @@ export default function ComplianceAndPackagesSection() {
                 key={item.id}
                 className="border border-slate-200 rounded-md overflow-hidden bg-white shadow-sm transition-all duration-300"
               >
-                {/* Clickable Header Bar */}
                 <button
                   type="button"
                   onClick={() => toggleCard(item.id)}
@@ -216,7 +321,6 @@ export default function ComplianceAndPackagesSection() {
                   </span>
                 </button>
 
-                {/* Collapsible Content Area */}
                 {isOpen && (
                   <div className="p-5 border-t border-slate-200 bg-white animate-fadeIn">
                     {item.content}
@@ -233,17 +337,15 @@ export default function ComplianceAndPackagesSection() {
       {/* ========================================================= */}
       <section className="max-w-7xl mx-auto my-8 px-4 sm:px-6 lg:px-8">
         <div className="bg-[#edf9f5] rounded-lg p-6 sm:p-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center border border-emerald-100 shadow-xs">
-          {/* Left Image Column */}
           <div className="md:col-span-5 relative h-64 sm:h-80 w-full rounded-md overflow-hidden shadow-sm">
             <Image
-              src="/images/research-services/grant-writing/Grant-Writing-Services-Sample-Work.png"
+              src={`${GW_IMG}/Grant-Writing-Services-Sample-Work.png`}
               alt="Hand holding fountain pen writing grant proposal"
               fill
               className="object-cover"
             />
           </div>
 
-          {/* Right Content Column */}
           <div className="md:col-span-7 space-y-6">
             <div>
               <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4">
@@ -282,17 +384,16 @@ export default function ComplianceAndPackagesSection() {
       </section>
 
       {/* ========================================================= */}
-      {/* SECTION 3: OUR PACKAGES SECTION                            */}
+      {/* SECTION 3: OUR PACKAGES SECTION                           */}
       {/* ========================================================= */}
       <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-8">
-        {/* Header */}
         <div className="space-y-3">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
             Grant Writing Service – Our Packages
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-5xl">
             At Pubrica, we offer flexible and customizable{" "}
-            <a href="#grant-writing" className="text-sky-600 hover:underline">
+            <a href="/academy/grant-writing/communicating-research-impact-grant-applications" className="text-sky-600 hover:underline">
               grant writing
             </a>{" "}
             packages tailored to meet the needs of academic researchers,
@@ -302,7 +403,6 @@ export default function ComplianceAndPackagesSection() {
           </p>
         </div>
 
-        {/* 3 Tiered Package Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {packageData.map((pkg) => (
             <div
@@ -310,7 +410,6 @@ export default function ComplianceAndPackagesSection() {
               className={`${pkg.bgColor} border ${pkg.borderColor} rounded-md overflow-hidden flex flex-col justify-between shadow-xs`}
             >
               <div>
-                {/* White Top Header Banner */}
                 <div className="bg-white p-5 border-b border-slate-200/60 flex items-center gap-4">
                   <div className="relative w-10 h-10 flex-shrink-0">
                     <Image
@@ -331,7 +430,6 @@ export default function ComplianceAndPackagesSection() {
                   </div>
                 </div>
 
-                {/* Card Body */}
                 <div className="p-6 space-y-6">
                   <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
                     {pkg.description}
@@ -360,9 +458,120 @@ export default function ComplianceAndPackagesSection() {
           ))}
         </div>
 
-        {/* Floating CTA Button */}
         <div className="pt-6 flex justify-center">
-         <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
+        </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* SECTION 4: TESTIMONIALS SLIDER                            */}
+      {/* ========================================================= */}
+      <section className="max-w-7xl mx-auto px-4 py-14">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#0b3b2c]">
+          Testimonials
+        </h2>
+
+        <p className="mt-3 text-sm md:text-base text-gray-700 max-w-5xl leading-relaxed">
+          Learn how Pubrica's{" "}
+          <Link
+            href="/academy/grant-writing/confidentiality-in-grant-writing-proposals/"
+            className="text-sky-600 hover:underline"
+          >
+            grant writing service
+          </Link>{" "}
+          has empowered researchers and institutions to secure competitive
+          funding by delivering well-structured, compelling proposals that meet
+          agency standards and advance impactful research. Here is what our
+          clients say:
+        </p>
+
+        <div className="relative mt-8 overflow-hidden">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{
+              transform: `translateX(-${current * (mobile ? 100 : 50)}%)`,
+            }}
+          >
+            {grantWritingTestimonials.map((item, index) => (
+              <div
+                key={index}
+                className="w-full md:w-1/2 flex-shrink-0 px-2 md:px-3"
+              >
+                <div className="border border-gray-400 rounded-xl bg-white p-5 shadow-sm min-h-[300px] flex flex-col justify-between">
+                  {/* Upper Gray Box */}
+                  <div className="bg-[#dcdcdc] rounded-lg p-5 flex flex-col sm:flex-row gap-5 items-center">
+                    <div className="relative w-36 h-28 shrink-0 bg-white p-1 rounded border border-gray-300">
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        fill
+                        className="object-contain"
+                        sizes="144px"
+                      />
+                    </div>
+
+                    <p className="text-xs md:text-sm text-gray-800 leading-relaxed font-normal">
+                      "{item.quote}"
+                    </p>
+                  </div>
+
+                  {/* Bottom Details Row */}
+                  <div className="flex justify-between items-end pt-4 px-1">
+                    <div>
+                      <h3 className="text-sm md:text-base font-semibold text-gray-900 uppercase tracking-wide">
+                        — {item.name}
+                      </h3>
+
+                      <p className="italic text-xs md:text-sm text-gray-600 mt-0.5">
+                        {item.designation}, {item.organization}
+                      </p>
+                    </div>
+
+                    {item.flag && (
+                      <div className="relative w-7 h-7 rounded-full overflow-hidden shrink-0 border border-gray-200">
+                        <Image
+                          src={item.flag}
+                          alt="country flag"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Previous Button */}
+          <button
+            onClick={prev}
+            aria-label="Previous slide"
+            className="absolute left-1 top-1/2 -translate-y-1/2 bg-white/80 shadow border border-gray-300 rounded-full w-8 h-8 flex items-center justify-center hover:bg-white text-gray-700"
+          >
+            &#8249;
+          </button>
+
+          {/* Next Button */}
+          <button
+            onClick={next}
+            aria-label="Next slide"
+            className="absolute right-1 top-1/2 -translate-y-1/2 bg-white/80 shadow border border-gray-300 rounded-full w-8 h-8 flex items-center justify-center hover:bg-white text-gray-700"
+          >
+            &#8250;
+          </button>
+        </div>
+
+        {/* Pagination Squares */}
+        <div className="flex justify-center items-center gap-2 mt-8">
+          {Array.from({ length: maxSlide + 1 }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrent(index)}
+              className={`h-3 w-3 border border-[#0b3b2c] transition-all ${current === index ? "bg-[#0b3b2c]" : "bg-white"
+                }`}
+            />
+          ))}
         </div>
       </section>
     </div>

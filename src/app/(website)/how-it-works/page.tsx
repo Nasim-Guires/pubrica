@@ -85,7 +85,7 @@ export default function HowItWorksPage() {
                     <div className="w-full md:w-1/2 md:pl-12 flex justify-center">
                       <div className="relative w-72 h-64">
                         <Image
-                          src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400"
+                          src="/images/Publicationsupport-300x282.png"
                           alt={step.title}
                           fill
                           className="object-contain"
@@ -99,7 +99,7 @@ export default function HowItWorksPage() {
                     <div className="w-full md:w-1/2 md:pr-12 flex justify-center order-2 md:order-1 mb-8 md:mb-0">
                       <div className="relative w-72 h-64">
                         <Image
-                          src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400"
+                          src="/images/Publicationsupport-300x282.png"
                           alt={step.title}
                           fill
                           className="object-contain"

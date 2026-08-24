@@ -36,19 +36,19 @@ export const biostatisticalProgrammingFAQ = [
     question:
       "How can biostatistical programming help streamline complex clinical or research data analysis?",
     answer:
-      "Biostatistical programming streamlines data analysis by automating data cleaning, applying advanced statistical models, ensuring reproducibility, generating accurate outputs, and efficiently handling complex clinical and research datasets.",
+      "Biostatistical programming facilitates the analysis process through the automation of data cleaning, the application of complex statistical models, ensuring reproducibility, accurate output generation, and efficiency in dealing with complex clinical data.",
   },
   {
     question:
       "What are the best practices for ensuring accuracy and consistency in statistical programming?",
     answer:
-      "Best practices include thorough data validation, reproducible workflows, version control, standardized programming scripts, comprehensive documentation, peer review, quality control, and the consistent application of appropriate statistical methods.",
+      "The best practices in biostatistical programming involve validation, reproducibility, version control, standard scripts, proper documentation, data validation, peer review, and standard application of statistics.",
   },
   {
     question:
       "How do expert biostatisticians handle large datasets and reproducible workflows?",
     answer:
-      "Experienced biostatisticians manage large and complex datasets through efficient programming, systematic data cleaning, robust validation, version control, reproducible workflows, and detailed documentation to ensure reliable and regulatory-compliant results.",
+      "Biostatisticians, being experts in the field, effectively manage complex data sets through efficient programming, data cleaning, version control, and reproducibility, including thorough documentation and validation.",
   },
   {
     question:

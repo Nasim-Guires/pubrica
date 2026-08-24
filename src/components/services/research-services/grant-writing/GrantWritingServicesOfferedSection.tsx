@@ -92,7 +92,7 @@ export default function GrantWritingServicesOfferedSection() {
             persuasive, compliant proposals, Pubrica’s experts provide
             comprehensive{" "}
             <a
-              href="#grant-writing-services"
+              href="/services/research-services/grant-writing/guide-to-grant-writing-strategies-success"
               className="text-sky-600 hover:underline font-medium"
             >
               grant writing services

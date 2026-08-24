@@ -80,7 +80,7 @@ export default function ExperimentalDesignsAndPackages() {
                 <span>
                   An{" "}
                   <Link
-                    href="/research-services/experimental-design/"
+                    href="/academy/journals-templates/oncology-journal-publication-process"
                     className="text-sky-600 hover:underline"
                   >
                     Experimental Design
@@ -439,7 +439,7 @@ export default function ExperimentalDesignsAndPackages() {
             At Pubrica, we adhere to globally recognized compliance frameworks
             and ethical guidelines to ensure that every{" "}
             <Link
-              href="/research-services/experimental-design/"
+              href="/academy/experimental-design/experimental-research-design"
               className="text-sky-600 hover:underline"
             >
               experimental design
@@ -619,7 +619,7 @@ export default function ExperimentalDesignsAndPackages() {
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
                 Explore our{" "}
                 <Link
-                  href="/research-services/experimental-design/"
+                  href="/services/research-services/experimental-design/benefits-of-experimental-plan-in-research-and-design"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   experimental design

@@ -73,14 +73,14 @@ export default function BiostatisticsHeroAndIntroSection() {
               <p>
                 Pubrica delivers accurate, compliant, and publication-ready{" "}
                 <a
-                  href="#biostatistical-programming"
+                  href="/services/research-services/biostatistics-and-statistical-programming-services/biostatistical-programming-framework-regulatory-research"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   biostatistical programming
                 </a>{" "}
                 for medical,{" "}
                 <a
-                  href="#life-science"
+                  href="/subject-matter-experts/life-sciences"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   life science
@@ -105,8 +105,8 @@ export default function BiostatisticsHeroAndIntroSection() {
           {/* Image Box */}
           <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md aspect-[4/3]">
-              <div className="absolute -inset-2 bg-[#0e2c28] rounded-2xl transform translate-x-3 translate-y-3" />
-              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg">
+              <div className="absolute -inset-2  rounded-2xl transform translate-x-3 translate-y-3" />
+              <div className="relative w-full h-full rounded-2xl overflow-hidden ">
                 <Image
                   src="/images/research-services/biostatistics-and-statistical-programming-service/ENSURE_1-1.webp"
                   alt="Biostatisticians analyzing clinical data"

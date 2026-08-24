@@ -2,19 +2,20 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const IMG =
   "/images/research-services/biostatistics-and-statistical-programming-service/";
 
-interface Step {
-  stepNumber: number;
+export interface WorkflowStep {
+  stepNumber: string | number;
   title: string;
   description: string;
   iconSrc: string;
   position: "top" | "bottom";
 }
 
-const steps: Step[] = [
+const steps: WorkflowStep[] = [
   {
     stepNumber: 1,
     title: "REQUIREMENT GATHERING & PROJECT SCOPING",
@@ -69,7 +70,7 @@ export default function BiostatisticsProcessAndTools() {
   return (
     <div className="w-full font-sans text-slate-800 bg-white">
       {/* ========================================================= */}
-      {/* 1. TOOLS WE USE SECTION                                  */}
+      {/* 1. TOOLS WE USE SECTION                                   */}
       {/* ========================================================= */}
       <section className="max-w-7xl mx-auto pt-12 pb-8 px-4 sm:px-6 lg:px-8">
         <h2 className="text-xl sm:text-2xl font-bold text-[#0e3b38] mb-4">
@@ -125,78 +126,175 @@ export default function BiostatisticsProcessAndTools() {
       </section>
 
       {/* ========================================================= */}
-      {/* 2. HOW OUR BIOSTATISTICAL PROGRAMMING SERVICE WORKS       */}
+      {/* 2. PROCESS SECTION (Matching EditorialWorkflowSection Design) */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 overflow-x-auto">
-        <div className="text-center space-y-2 mb-16">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
-            How Our Biostatistical Programming Service Works
-          </h2>
-          <p className="text-sm sm:text-base text-slate-600 font-medium">
-            Our Step-by-step Process
-          </p>
+      <section className="py-12 md:py-16 px-4 md:px-8 bg-[#EAEAEA] w-full text-center font-sans overflow-hidden">
+        {/* Header */}
+        <h2 className="text-2xl md:text-3xl font-bold text-[#0B353D] mb-2">
+          How Our Biostatistical Programming Service Works
+        </h2>
+
+        <h3 className="text-lg md:text-xl font-medium text-[#2C4951] mb-4">
+          Our Step-by-step Process
+        </h3>
+
+        {/* Hyperlinked Description */}
+ 
+
+        {/* ============================================================ */}
+        {/* MOBILE LAYOUT (< md screens): Vertical Alternating Timeline  */}
+        {/* ============================================================ */}
+        <div className="flex md:hidden flex-col items-center w-full max-w-sm mx-auto space-y-6">
+          {steps.map((step, index) => {
+            const isEven = index % 2 === 0;
+
+            return (
+              <div
+                key={index}
+                className="relative flex items-center w-full min-h-[160px]"
+              >
+                {/* Connecting Vertical Line */}
+                {index !== steps.length - 1 && (
+                  <div
+                    className={`absolute top-8 bottom-0 w-[2px] bg-[#0081A7] z-0 ${isEven ? "left-4" : "right-4"
+                      }`}
+                  />
+                )}
+
+                {/* Step Number Badge */}
+                <div
+                  className={`absolute z-10 w-9 h-9 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm shadow-sm ${isEven ? "left-0" : "right-0"
+                    }`}
+                >
+                  {step.stepNumber}
+                </div>
+
+                {/* Step Card Container */}
+                <div
+                  className={`w-full flex ${isEven ? "pl-10 pr-2" : "pr-10 pl-2"
+                    }`}
+                >
+                  <div className="bg-[#F8F9FA] border border-[#E2E8F0] rounded-sm shadow-xs p-4 flex flex-col items-center text-center w-full z-10">
+                    <div className="w-10 h-10 relative mb-3 flex items-center justify-center">
+                      <Image
+                        src={step.iconSrc}
+                        alt={step.title}
+                        width={36}
+                        height={36}
+                        className="object-contain"
+                      />
+                    </div>
+
+                    <h4 className="font-bold text-[#0F172A] text-xs mb-2 leading-snug">
+                      {step.title}
+                    </h4>
+
+                    <p className="text-[#64748B] text-[11px] leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
-        {/* Process Timeline Grid */}
-        <div className="min-w-[900px] grid grid-cols-6 gap-3 relative py-8">
-          {/* Horizontal Connecting Blue Bar Across Center */}
-          <div className="absolute top-1/2 left-0 right-0 h-2 bg-[#008ba3] -translate-y-1/2 z-0" />
-
-          {steps.map((step) => {
+        {/* ============================================================ */}
+        {/* DESKTOP LAYOUT (>= md screens): Dynamic Flow Layout          */}
+        {/* ============================================================ */}
+        <div
+          className="hidden md:grid gap-2 lg:gap-4 items-stretch justify-center w-full max-w-7xl mx-auto relative my-8"
+          style={{
+            gridTemplateColumns: `repeat(${steps.length}, minmax(0, 1fr))`,
+          }}
+        >
+          {steps.map((step, index) => {
             const isTop = step.position === "top";
 
             return (
               <div
-                key={step.stepNumber}
-                className="relative z-10 flex flex-col items-center"
+                key={index}
+                className="flex flex-col items-center justify-between group w-full relative min-h-[500px]"
               >
-                {/* --- TOP BADGE / STEP NUMBER --- */}
-                {isTop && (
-                  <div className="flex flex-col items-center mb-4">
-                    <div className="w-10 h-10 rounded-full bg-[#008ba3] text-white font-bold flex items-center justify-center text-sm shadow-md">
-                      {step.stepNumber}
+                {/* UPPER SECTION */}
+                <div className="w-full flex flex-col items-center justify-end flex-1 pb-0">
+                  {!isTop ? (
+                    /* Card placed at Top */
+                    <div className="bg-[#F8F9FA] border border-[#E2E8F0] shadow-xs p-3 lg:p-4 flex flex-col items-center text-center w-full h-full justify-start z-20 transition-all duration-300 group-hover:bg-black group-hover:border-black rounded-xs">
+                      <div className="w-10 h-10 lg:w-11 lg:h-11 relative mb-3 flex items-center justify-center shrink-0">
+                        <Image
+                          src={step.iconSrc}
+                          alt={step.title}
+                          width={38}
+                          height={38}
+                          className="object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                        />
+                      </div>
+
+                      <h4 className="font-bold text-[#0F172A] text-xs lg:text-sm mb-2 leading-snug transition-colors duration-300 group-hover:text-white">
+                        {step.title}
+                      </h4>
+
+                      <p className="text-[#64748B] text-[11px] lg:text-xs leading-relaxed transition-colors duration-300 group-hover:text-gray-300">
+                        {step.description}
+                      </p>
                     </div>
-                    <div className="w-0.5 h-6 bg-pink-600 mt-1" />
-                  </div>
-                )}
-
-                {/* --- HOVERABLE CARD (DARK SLATE HOVER EFFECT FOR ALL CARDS) --- */}
-                <div
-                  tabIndex={0}
-                  className={`group w-full min-h-[300px] rounded-sm p-4 border border-slate-200 shadow-sm transition-all duration-300 cursor-pointer flex flex-col justify-start space-y-3
-                    bg-slate-50 hover:bg-[#3d3d3d] focus:bg-[#3d3d3d] text-slate-800 hover:text-white focus:text-white hover:shadow-xl hover:scale-[1.02]`}
-                >
-                  {/* Icon */}
-                  <div className="flex justify-center pt-2">
-                    <Image
-                      src={step.iconSrc}
-                      alt=""
-                      width={40}
-                      height={40}
-                      className="w-10 h-10 object-contain group-hover:invert group-focus:invert transition duration-200"
-                    />
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xs font-bold text-center tracking-tight leading-tight text-slate-900 group-hover:text-white group-focus:text-white uppercase transition-colors duration-200">
-                    {step.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-[11px] leading-relaxed text-slate-600 group-hover:text-slate-200 group-focus:text-slate-200 text-left transition-colors duration-200">
-                    {step.description}
-                  </p>
+                  ) : (
+                    /* Badge + Vertical Connector Line */
+                    <div className="flex flex-col items-center justify-end w-full">
+                      <div className="w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm lg:text-base shadow-sm z-20 transition-colors duration-300 group-hover:bg-black shrink-0 mb-3">
+                        {step.stepNumber}
+                      </div>
+                      <div className="w-[2px] h-10 bg-[#0081A7] transition-colors duration-300 group-hover:bg-black" />
+                    </div>
+                  )}
                 </div>
 
-                {/* --- BOTTOM BADGE / STEP NUMBER --- */}
-                {!isTop && (
-                  <div className="flex flex-col items-center mt-4">
-                    <div className="w-0.5 h-6 bg-pink-600 mb-1" />
-                    <div className="w-10 h-10 rounded-full bg-[#008ba3] text-white font-bold flex items-center justify-center text-sm shadow-md">
-                      {step.stepNumber}
+                {/* CENTER HORIZONTAL LINE SEGMENT */}
+                <div className="w-full h-[8px] relative my-0 shrink-0">
+                  <div
+                    className={`h-full bg-[#0081A7] w-full transition-colors duration-300 group-hover:bg-black ${index === 0
+                        ? "rounded-l-sm"
+                        : index === steps.length - 1
+                          ? "rounded-r-sm"
+                          : ""
+                      }`}
+                  />
+                </div>
+
+                {/* LOWER SECTION */}
+                <div className="w-full flex flex-col items-center justify-start flex-1 pt-0">
+                  {isTop ? (
+                    /* Card placed at Bottom */
+                    <div className="bg-[#F8F9FA] border border-[#E2E8F0] shadow-xs p-3 lg:p-4 flex flex-col items-center text-center w-full h-full justify-start z-20 transition-all duration-300 group-hover:bg-black group-hover:border-black rounded-xs">
+                      <div className="w-10 h-10 lg:w-11 lg:h-11 relative mb-3 flex items-center justify-center shrink-0">
+                        <Image
+                          src={step.iconSrc}
+                          alt={step.title}
+                          width={38}
+                          height={38}
+                          className="object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                        />
+                      </div>
+
+                      <h4 className="font-bold text-[#0F172A] text-xs lg:text-sm mb-2 leading-snug transition-colors duration-300 group-hover:text-white">
+                        {step.title}
+                      </h4>
+
+                      <p className="text-[#64748B] text-[11px] lg:text-xs leading-relaxed transition-colors duration-300 group-hover:text-gray-300">
+                        {step.description}
+                      </p>
                     </div>
-                  </div>
-                )}
+                  ) : (
+                    /* Vertical Connector Line + Badge */
+                    <div className="flex flex-col items-center justify-start w-full">
+                      <div className="w-[2px] h-10 bg-[#0081A7] transition-colors duration-300 group-hover:bg-black" />
+                      <div className="w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm lg:text-base shadow-sm z-20 transition-colors duration-300 group-hover:bg-black shrink-0 mt-3">
+                        {step.stepNumber}
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             );
           })}
@@ -204,7 +302,7 @@ export default function BiostatisticsProcessAndTools() {
       </section>
 
       {/* ========================================================= */}
-      {/* 3. HOW WE HELP SECTION                                     */}
+      {/* 3. HOW WE HELP SECTION                                    */}
       {/* ========================================================= */}
       <section className="max-w-7xl mx-auto pt-6 pb-16 px-4 sm:px-6 lg:px-8">
         <h2 className="text-xl sm:text-2xl font-bold text-[#0e3b38] mb-4">
