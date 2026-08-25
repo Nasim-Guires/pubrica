@@ -13,7 +13,7 @@ export interface BulletPointItem {
 export interface ServiceCardItem {
   id: string;
   title: string;
-  description: string | React.ReactNode;
+  description: React.ReactNode;
   iconPlaceholder: string;
 }
 
@@ -47,7 +47,7 @@ export default function ServicesResearchProductDevelopment({
       text: (
         <>
           Experience in{" "}
-          <span className="font-semibold text-gray-900">
+          <span className="">
             ingredient/compound intelligence
           </span>
           , material compatibility, digital health platforms, biomarker
@@ -73,8 +73,20 @@ export default function ServicesResearchProductDevelopment({
     {
       id: "identification-compounds",
       title: "Identification of Novel Compounds & Ingredients",
-      description:
-        "Discovery of bioactive components, APIs, and natural actives using structured literature reviews, databases, and structure-activity relationship (SAR) analysis.",
+      description: (
+        <>
+          Discovery of bioactive components, APIs, and natural actives using
+          structured literature reviews, databases, and structure-activity
+          relationship (
+          <Link
+            href="/services/research-services/product-development/sar-analysis-medical-statistics-guide/"
+            className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+          >
+            SAR
+          </Link>
+          ) analysis.
+        </>
+      ),
       iconPlaceholder: "/images/product-development/Identification-of-Novel-Compounds-Ingredients.png",
     },
     {
@@ -318,24 +330,24 @@ export default function ServicesResearchProductDevelopment({
       className={`w-full text-slate-800 bg-white font-sans leading-relaxed ${className}`}
     >
       {/* Header Banner Section */}
-      <header className="w-full bg-[#1b2b28] text-white py-12 px-4 sm:px-8 text-center">
-        <div className="max-w-5xl mx-auto border border-gray-400/40 p-8 rounded-sm">
+      <header className="w-full bg-gradient-to-r from-[#1d2325] via-[#2a3c39] to-[#1d2325] text-white py-12 px-4 sm:px-8 text-center">
+        <div className="max-w-5xl mx-auto border border-gray-400/30 p-8 rounded-sm">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-            Discovery & Intelligence Services – Product Development Service
+            Discovery &amp; Intelligence Services – Product Development Service
           </h1>
 
           <p className="text-xs sm:text-sm md:text-base max-w-4xl mx-auto text-gray-200 leading-relaxed">
             Whether you&apos;re discovering novel bioactive compounds,
             validating ingredients, evaluating therapeutic pipelines, analyzing
             medical device materials, or entering new health markets,
-            Pubrica&apos;s Core Discovery & Intelligence Services transform
+            Pubrica&apos;s Core Discovery &amp; Intelligence Services transform
             scientific data into actionable insights.
           </p>
         </div>
       </header>
 
       {/* Main Intro & Key Points Section */}
-      <section className="max-w-6xl mx-auto px-2   sm:px-8 py-12 md:py-16">
+      <section className="max-w-6xl mx-auto px-2 sm:px-8 py-12 md:py-16">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#1b2b28] mb-2">
           Discovery and Intelligence Research Services for Product Development:
           Transforming Ideas into Market-Ready Solutions
@@ -392,7 +404,7 @@ export default function ServicesResearchProductDevelopment({
               >
                 cosmeceuticals
               </Link>
-              , herbal, pet health, life sciences, and healthcare organizations.
+              , herbal, pet health,<Link href="/subject-matter-experts/life-sciences/" className="text-sky-600 font-medium hover:text-sky-700 no-underline"> life sciences</Link>, and healthcare organizations.
             </p>
 
             <p>
@@ -447,7 +459,7 @@ export default function ServicesResearchProductDevelopment({
 
           {/* Right Image */}
           <div className="md:col-span-5 flex justify-center">
-            <div className="w-full max-w-md h-72 sm:h-80 rounded-xl overflow-hidden border border-gray-200 shadow-sm relative">
+            <div className="w-full max-w-md h-72 sm:h-80 rounded-xl overflow-hidden  relative">
               <Image
                 src="/images/product-development/Discovery-and-Intelligence-Research-Services-for-Product-Development.png"
                 alt="Discovery and Intelligence Research Services for Product Development"

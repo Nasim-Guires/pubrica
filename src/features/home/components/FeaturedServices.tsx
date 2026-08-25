@@ -6,12 +6,26 @@ import Container from "@/components/common/Container";
 import Button from "@/components/common/Button";
 import { SERVICES_CATEGORIES } from "@/lib/data-whatwedo";
 
+// Mapping category keys to their specific path targets
+const CATEGORY_ROUTES: Record<keyof typeof SERVICES_CATEGORIES, string> = {
+  "research-services": "/services/research-services/",
+  "manuscript-editing": "/services/research-services/",
+  "publication-journal": "/services/publication-support/",
+  "physician-writing": "/services/physician-writing-services/",
+  "infographics-illustrations": "/services/research-impact/",
+  "data-science": "/services/ai-ml-support/",
+  "other-services": "/services/",
+};
+
 export default function WhatWeDo() {
   // Defaulting to 'physician-writing' to mirror your screenshot state
   const [activeCategory, setActiveCategory] =
     useState<keyof typeof SERVICES_CATEGORIES>("physician-writing");
 
   const selectedCategoryData = SERVICES_CATEGORIES[activeCategory];
+
+  // Dynamic fallback route resolution
+  const readMoreHref = CATEGORY_ROUTES[activeCategory] || "/services/";
 
   return (
     <section className="bg-white py-10 lg:py-12">
@@ -63,8 +77,8 @@ export default function WhatWeDo() {
                     key={key}
                     onClick={() => setActiveCategory(key as any)}
                     className={`w-full text-left px-5 py-4 text-sm font-medium border-b border-[#245d5a] transition-all duration-150 ${isActive
-                        ? "bg-white text-gray-900 border-r-0 font-semibold"
-                        : "text-gray-100 hover:bg-[#153e3b]"
+                      ? "bg-white text-gray-900 border-r-0 font-semibold"
+                      : "text-gray-100 hover:bg-[#153e3b]"
                       }`}
                   >
                     {category.title}
@@ -127,7 +141,7 @@ export default function WhatWeDo() {
 
             {/* Read More Section Action Trigger */}
             <div className="mt-12 text-left">
-              <Link href="/services/research-services/">
+              <Link href={readMoreHref}>
                 <Button className="font-bold text-xs uppercase bg-[#0b2927] hover:bg-[#123633] text-white rounded-full px-8 py-3 tracking-wider">
                   READ MORE
                 </Button>
