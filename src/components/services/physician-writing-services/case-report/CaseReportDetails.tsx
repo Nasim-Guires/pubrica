@@ -220,7 +220,7 @@ export default function CaseReportDetails() {
 
         <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-8">
           The case report is the initial method of{" "}
-          <Link href="/services/scientific-communication" className="text-sky-600 ">
+          <Link href="/services/scientific-communication" className="text-sky-600 hover:underline">
             medical communication
           </Link>
           . It is a way of developing new knowledge through clinical practices.
@@ -271,12 +271,12 @@ export default function CaseReportDetails() {
         <div className="mt-12 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
           <p>
             At Pubrica, our expert professionals create clinical{" "}
-            <Link href="/academy/case-report/radiology-case-report-guide" className="text-sky-600 ">
+            <Link href="/services/physician-writing-services/case-report" className="text-sky-600 hover:underline">
               case reports
             </Link>{" "}
             in a well-organised manner, following a standard format. Our
             experienced{" "}
-            <Link href="/services/research-services/medical-writing" className="text-sky-600 ">
+            <Link href="/services/medical-writing" className="text-sky-600 hover:underline">
               medical writing
             </Link>{" "}
             team accurately categorizes your case and designs a study according to

@@ -52,6 +52,120 @@ const servicesData: TabData[] = [
     ),
   },
   {
+    id: "data-extraction",
+    label: "Data Extraction & Analysis",
+    title: "Data Extraction & Analysis",
+    imageSrc:
+      "/images/research-services/systematic-review/Data-Extraction-Analysis.png",
+    imageAlt: "Data Extraction and Analysis Charts",
+    content: (
+      <ul
+        style={{
+          paddingLeft: "20px",
+          margin: "16px 0",
+          lineHeight: "1.7",
+          color: "#374151",
+        }}
+      >
+        <li style={{ marginBottom: "12px" }}>
+          <strong>Structured Data Extraction</strong> – Use standardized
+          templates for consistent, high-quality{" "}
+          <Link
+            href="/services/medical-data-collection"
+            style={{ color: "#2563eb", textDecoration: "underline" }}
+          >
+            systematic review data collection support
+          </Link>
+          .
+        </li>
+        <li style={{ marginBottom: "12px" }}>
+          <strong>Risk of Bias Assessment</strong> – Apply Cochrane Risk of Bias
+          Tool, Newcastle-Ottawa Scale (NOS), or JBI Critical Appraisal Tool;
+          prepare detailed bias tables for appendices.
+        </li>
+        <li style={{ marginBottom: "12px" }}>
+          <strong>Data Analysis &amp; Synthesis</strong> – Quantitative,
+          qualitative, and mixed-method meta-analysis with presentation-ready
+          tables, charts, and figures.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    id: "writing-formatting",
+    label: "Writing & Formatting",
+    title: "Writing & Formatting",
+    imageSrc:
+      "/images/research-services/systematic-review/Writing-Formatting.png",
+    imageAlt: "Writing and Formatting Academic Journal Manuscripts",
+    content: (
+      <ul
+        style={{
+          paddingLeft: "20px",
+          margin: "16px 0",
+          lineHeight: "1.7",
+          color: "#374151",
+        }}
+      >
+        <li style={{ marginBottom: "12px" }}>
+          <strong>Full Manuscript Development</strong> – Write the introduction,
+          methodology, results, discussion, and conclusion in compliance with
+          the target journal's specifications.
+        </li>
+        <li style={{ marginBottom: "12px" }}>
+          <strong>Abstract Preparation</strong> – Develop PRISMA 2020-compliant
+          abstracts including objectives, methods, results, and conclusions.
+        </li>
+        <li style={{ marginBottom: "12px" }}>
+          <strong>Referencing &amp; Citation Management</strong> – Accurate
+          referencing in APA, AMA, or journal-specific formats.
+        </li>
+        <li style={{ marginBottom: "12px" }}>
+          <strong>Formatting</strong> – Align the manuscript with the target
+          journal's author guidelines.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    id: "publication-support",
+    label: "Publication Support",
+    title: "Publication Support",
+    imageSrc:
+      "/images/research-services/meta-analysis/Publication-Support-Services.png",
+    imageAlt: "Publication Support and Journal Advisory Services",
+    content: (
+      <ul
+        style={{
+          paddingLeft: "20px",
+          margin: "16px 0",
+          lineHeight: "1.7",
+          color: "#374151",
+        }}
+      >
+        <li style={{ marginBottom: "12px" }}>
+          <strong>Journal Selection</strong> – Recommend suitable high-impact
+          journals for your topic.
+        </li>
+        <li style={{ marginBottom: "12px" }}>
+          <strong>Pre-Submission Peer Review</strong> – Internal expert review
+          to ensure methodological and editorial readiness.
+        </li>
+        <li style={{ marginBottom: "12px" }}>
+          <strong>Journal Submission</strong> – End-to-End Submission Assistance
+          – From cover letter preparation to follow-up with editorial teams
+          until acceptance.
+        </li>
+        <li style={{ marginBottom: "12px" }}>
+          <strong>Response to Reviewer</strong> – Comments addressing your
+          submitted systematic review manuscript, resubmission of your
+          manuscript, follow-up with editorial teams, and support up to the
+          point of publication.
+        </li>
+      </ul>
+    ),
+  },
+  {
     id: "documentation-templates",
     label: "Documentation Templates",
     title: "Documentation Templates",
@@ -196,7 +310,32 @@ export default function MetaAnalysisServicesTabSection() {
             lineHeight: 1.7,
           }}
         >
-         Pubrica’s advanced meta-analysis services provide specialized support to researchers and clinicians, ensuring your research meets the medical publication standards of various journals.
+          Pubrica provides end-to-end{" "}
+          <Link
+            href="/services/research-services/systematic-review"
+            style={{
+              color: "#2563eb",
+              textDecoration: "underline",
+            }}
+          >
+            systematic review writing services
+          </Link>{" "}
+          for researchers and clinicians, ensuring compliance with the{" "}
+          <a
+            href="https://www.prisma-statement.org/prisma-2020-checklist"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "#2563eb",
+              textDecoration: "underline",
+            }}
+          >
+            PRISMA checklist 2020
+          </a>
+          , Cochrane guidelines, and journal specifications. Our medical and
+          scientific professionals provide publication-ready manuscripts with
+          the most rigorous methodology and evidence, including full project
+          management.
         </p>
       </div>
 
@@ -305,7 +444,7 @@ export default function MetaAnalysisServicesTabSection() {
             {/* CTA Button */}
             <div style={{ marginTop: "28px" }}>
               <Link
-                href="/request-quote"
+                href="/order-now"
                 style={{
                   display: "inline-block",
                   background: "#0e3838",

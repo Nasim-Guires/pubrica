@@ -174,7 +174,7 @@ export default function PatientEducationContentOverviewSection() {
               engaging educational content that promotes patient understanding
               and engagement. Here’s how we support{" "}
               <Link
-                href="/insights/sample-work/insomnia/"
+                href="/services/patient-education-content"
                 className="text-[#0a66bc] hover:underline font-medium"
               >
                 patient education
@@ -199,7 +199,7 @@ export default function PatientEducationContentOverviewSection() {
                 </strong>{" "}
                 We tailor our{" "}
                 <Link
-                  href="/insights/sample-work/insomnia/"
+                  href="/services/patient-education-content"
                   className="text-[#0a66bc] hover:underline font-medium"
                 >
                   patient education

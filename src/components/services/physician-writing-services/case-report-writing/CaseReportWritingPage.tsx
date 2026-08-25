@@ -104,7 +104,7 @@ export default function CaseReportWritingPage() {
                 </div>
 
                 <Link
-                  href="/get-started"
+                  href="/order-now"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-2.5 rounded transition shadow"

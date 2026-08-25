@@ -22,7 +22,7 @@ export default function GraphicalVsVideoAbstractsPage() {
             {/* Top Banner / Hero */}
             <div className="relative w-full h-44 md:h-56 bg-slate-900 text-white flex items-center justify-center">
                 <Image
-                    src="/images/graphical-vs-video-banner.jpg"
+                    src="https://pubrica.com/wp-content/uploads/2026/06/v1-Graphical-vs.-Video-Abstracts-Tools-for-Clear-and-Engaging-Scientific-Communication-Recreation-image-.webp"
                     alt="Graphical vs. Video Abstracts Banner"
                     fill
                     priority
@@ -129,14 +129,14 @@ export default function GraphicalVsVideoAbstractsPage() {
                             Interesting topics
                         </h3>
                         <ul className="space-y-2 text-xs md:text-sm text-blue-600 font-medium">
-                            <li><Link href="#" className="hover:underline">Manuscript Editing</Link></li>
-                            <li><Link href="#" className="hover:underline">Manuscript Guidelines</Link></li>
-                            <li><Link href="#" className="hover:underline">Manuscript Writing</Link></li>
-                            <li><Link href="#" className="hover:underline">Manuscript Preparation guidelines</Link></li>
-                            <li><Link href="#" className="hover:underline">Manuscript Submission Guidelines</Link></li>
-                            <li><Link href="#" className="hover:underline">Manuscript Editing Services</Link></li>
-                            <li><Link href="#" className="hover:underline">Study Guides</Link></li>
-                            <li><Link href="#" className="hover:underline">Scientific Writing</Link></li>
+                            <li><Link href="/services/editing-and-translation/manuscript-editing" className="hover:underline">Manuscript Editing</Link></li>
+                            <li><Link href="/academy/manuscript-guidelines" className="hover:underline">Manuscript Guidelines</Link></li>
+                            <li><Link href="/services/physician-writing-services/physician-manuscript" className="hover:underline">Manuscript Writing</Link></li>
+                            <li><Link href="/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission" className="hover:underline">Manuscript Preparation guidelines</Link></li>
+                            <li><Link href="/academy/manuscript-submission" className="hover:underline">Manuscript Submission Guidelines</Link></li>
+                            <li><Link href="/services/editing-and-translation/manuscript-editing" className="hover:underline">Manuscript Editing Services</Link></li>
+                            <li><Link href="/academy" className="hover:underline">Study Guides</Link></li>
+                            <li><Link href="/services/research-services/scientific-writing" className="hover:underline">Scientific Writing</Link></li>
                         </ul>
                     </div>
                 </aside>
@@ -285,7 +285,7 @@ export default function GraphicalVsVideoAbstractsPage() {
                         {/* Infographic Image Placeholder */}
                         <div className="relative w-full h-80 my-6 bg-gray-50 border border-gray-200 rounded flex flex-col items-center justify-center p-4">
                             <Image
-                                src="/images/elements-of-good-video-abstract.png"
+                                src="https://pubrica.com/wp-content/uploads/2026/06/v1-Graphical-vs.-Video-Abstracts-Tools-for-Clear-and-Engaging-Scientific-Communication-Recreation-image-2.webp"
                                 alt="Elements of a good video abstract"
                                 width={600}
                                 height={300}
@@ -332,7 +332,7 @@ export default function GraphicalVsVideoAbstractsPage() {
                         {/* Comparison Infographic Placeholder */}
                         <div className="relative w-full h-96 my-6 bg-gray-50 border border-gray-200 rounded flex items-center justify-center p-4">
                             <Image
-                                src="/images/graphical-vs-video-infographic.png"
+                                src="https://pubrica.com/wp-content/uploads/2026/06/v1-Graphical-vs.-Video-Abstracts-Tools-for-Clear-and-Engaging-Scientific-Communication-Recreation-image-.webp"
                                 alt="Graphical Abstracts vs Video Abstracts Best Practices"
                                 width={650}
                                 height={350}
@@ -362,12 +362,6 @@ export default function GraphicalVsVideoAbstractsPage() {
 
             {/* Full-Width CTA Section */}
             <div className="relative w-full h-56 md:h-64 my-10 bg-slate-900 text-white flex items-center justify-center text-center px-4">
-                <Image
-                    src="/images/cta-banner-bg.jpg"
-                    alt="Contact Us CTA Background"
-                    fill
-                    className="object-cover opacity-40"
-                />
                 <div className="relative z-10 max-w-xl mx-auto space-y-4">
                     <p className="text-white text-base md:text-lg font-medium leading-snug">
                         Connect with us to explore how we can support you in maintaining academic integrity and enhancing the visibility of your research across the world!

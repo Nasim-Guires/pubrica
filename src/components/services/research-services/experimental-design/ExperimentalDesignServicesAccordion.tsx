@@ -48,8 +48,8 @@ export default function ExperimentalDesignServicesAccordion() {
         <p>
           When true{" "}
           <Link
-            href="/academy/experimental-design/types-of-pre-experimental-research-design"
-            className="text-sky-600 font-medium"
+            href="/services/research-services/experimental-design"
+            className="text-sky-600 hover:underline font-medium"
           >
             experimental designs
           </Link>{" "}
@@ -96,8 +96,8 @@ export default function ExperimentalDesignServicesAccordion() {
           <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed">
             Pubrica’s{" "}
             <Link
-              href="/academy/experimental-design/quasi-experimental-design-definition-types-examples"
-              className="text-sky-600 font-medium"
+              href="/services/research-services/experimental-design"
+              className="text-sky-600 hover:underline font-medium"
             >
               experimental design
             </Link>{" "}
@@ -176,8 +176,8 @@ export default function ExperimentalDesignServicesAccordion() {
           <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed">
             Choose Pubrica’s{" "}
             <Link
-              href="/academy/journals-templates/nature-peer-reviewed-medical-research-journal"
-              className="text-sky-600 font-medium"
+              href="/services/research-services/experimental-design"
+              className="text-sky-600 hover:underline font-medium"
             >
               experimental design
             </Link>{" "}

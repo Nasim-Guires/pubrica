@@ -169,13 +169,13 @@ export default function CaseReportWorkflowAndDisciplines() {
         </h2>
         <p className="text-sm sm:text-base text-slate-700 max-w-5xl leading-relaxed mb-8">
           Our{" "}
-          <Link href="/insights/sample-work/dyskeratosis-congenita-rare-case-report" className="text-sky-600 ">
+          <Link href="/services/physician-writing-services/case-report" className="text-sky-600 hover:underline">
             case report writing services
           </Link>{" "}
           are designed for clinicians, researchers, and academic institutions
           aiming to publish rare or significant clinical cases. We can help you
           with the{" "}
-          <Link href="/services/publication-support/journal-submission" className="text-sky-600">
+          <Link href="/services/publication-support/journal-submission" className="text-sky-600 hover:underline">
             journal submission
           </Link>{" "}
           process, whether you are a physician, postgraduate, or medical
@@ -213,85 +213,23 @@ export default function CaseReportWorkflowAndDisciplines() {
       {/* ========================================================= */}
       {/* 2. HOW THE CASE REPORT WRITING SERVICE WORKS             */}
       {/* ========================================================= */}
-      <section className="py-12 md:py-16 px-4 md:px-8 bg-[#EAEAEA] w-full text-center font-sans overflow-hidden">
-        {/* Header Section */}
-        <h2 className="text-2xl md:text-3xl font-bold text-[#0B353D] mb-2">
-          How the Case Report Writing Service Works
-        </h2>
-
-        <h3 className="text-lg md:text-xl font-medium text-[#2C4951] mb-4">
-          Our step-by-Step Process
-        </h3>
-
-        <p className="max-w-4xl mx-auto text-[#4B5563] text-xs md:text-sm leading-relaxed mb-12 md:mb-16">
-          With Pubrica's{" "}
-          <Link
-            href="/insights/sample-work/leigh-syndrome-infant-case-report"
-            className="text-sky-600 hover:underline"
-          >
-            case report writing service
-          </Link>
-          , our clinical experts and scientific writers collaborate to craft
-          ethically sound, guideline-compliant case reports that align with
-          journal-specific formatting and publication standards.
-        </p>
-
-        {/* MOBILE LAYOUT (< md screens): Vertical Alternating Timeline */}
-        <div className="flex md:hidden flex-col items-center w-full max-w-sm mx-auto space-y-6">
-          {processSteps.map((step, index) => {
-            const isEven = index % 2 === 0;
-
-            return (
-              <div
-                key={step.stepNumber}
-                className="relative flex items-center w-full min-h-[160px]"
-              >
-                {/* Connecting Vertical Line */}
-                {index !== processSteps.length - 1 && (
-                  <div
-                    className={`absolute top-8 bottom-0 w-[2px] bg-[#0081A7] z-0 ${isEven ? "left-4" : "right-4"
-                      }`}
-                  />
-                )}
-
-                {/* Step Number Badge */}
-                <div
-                  className={`absolute z-10 w-9 h-9 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm shadow-sm ${isEven ? "left-0" : "right-0"
-                    }`}
-                >
-                  {step.stepNumber}
-                </div>
-
-                {/* Step Card Container */}
-                <div
-                  className={`w-full flex ${isEven ? "pl-10 pr-2" : "pr-10 pl-2"
-                    }`}
-                >
-                  <div className="bg-[#F8F9FA] border border-[#E2E8F0] rounded-xs shadow-xs p-4 flex flex-col items-center text-center w-full z-10">
-                    {step.iconSrc && (
-                      <div className="w-10 h-10 relative mb-3 flex items-center justify-center">
-                        <Image
-                          src={step.iconSrc}
-                          alt={step.title}
-                          width={36}
-                          height={36}
-                          className="object-contain"
-                        />
-                      </div>
-                    )}
-
-                    <h4 className="font-bold text-[#0F172A] text-xs mb-2 leading-snug">
-                      {step.title}
-                    </h4>
-
-                    <p className="text-[#64748B] text-[11px] leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+      <section className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38] mb-2">
+            How the Case Report Writing Service Works
+          </h2>
+          <h3 className="text-lg sm:text-xl font-medium text-slate-700 mb-4">
+            Our step-by-Step Process
+          </h3>
+          <p className="text-sm sm:text-base text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            With Pubrica's{" "}
+            <Link href="/services/physician-writing-services/case-report" className="text-sky-600 hover:underline">
+              case report writing service
+            </Link>
+            , our clinical experts and scientific writers collaborate to craft
+            ethically sound, guideline-compliant case reports that align with
+            journal-specific formatting and publication standards.
+          </p>
         </div>
 
         {/* DESKTOP LAYOUT (>= md screens): Dynamic Flow Layout */}

@@ -129,7 +129,7 @@ export default function ComplianceAndFeaturesSection() {
                   </Link>
                   , ensures your research paper’s{" "}
                   <Link
-                    href="/insights/sample-work/stroke-diet-global-burden-inequalities/"
+                    href="/insights/stroke-diet-global-burden-inequalities"
                     className="text-cyan-600 hover:underline"
                   >
                     journal selection
@@ -213,7 +213,7 @@ export default function ComplianceAndFeaturesSection() {
                   your research credibility and will also enhance your academic
                   through improved{" "}
                   <Link
-                    href="/insights/sample-work/the-impact-of-drinking-water-sources-on-gut-microbial-diversity-in-canines-peer-review/"
+                    href="/insights/the-impact-of-drinking-water-sources-on-gut-microbial-diversity-in-canines-peer-review"
                     className="text-cyan-600 hover:underline"
                   >
                     research paper publication
@@ -235,7 +235,7 @@ export default function ComplianceAndFeaturesSection() {
                   to understanding its specific instructions for authors, our
                   team will support you throughout the{" "}
                   <Link
-                    href="/insights/sample-work/tuberculosis-journal-selection-india-global/"
+                    href="/insights/tuberculosis-journal-selection-india-global"
                     className="text-cyan-600 hover:underline"
                   >
                     journal selection

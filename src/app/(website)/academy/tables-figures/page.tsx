@@ -13,7 +13,7 @@ const tablesFiguresData = [
         date: "November 2, 2018",
         title: "Visually Brief your Audience with Graphical Abstracts",
         slug: "visually-brief-your-audience-with-graphical-abstracts",
-        image: "/images/tables-figures/graphical-abstracts.jpg",
+        image: "https://pubrica.com/wp-content/uploads/2018/11/graphical-abstract-01-1.png",
         page: 1,
     },
     {
@@ -21,7 +21,7 @@ const tablesFiguresData = [
         date: "November 2, 2018",
         title: "Artworks that work for your Manuscripts",
         slug: "artworks-that-work-for-your-manuscripts",
-        image: "/images/tables-figures/artworks-for-manuscripts.jpg",
+        image: "https://pubrica.com/wp-content/uploads/2018/11/Artwork-01.png",
         page: 1,
     },
     {
@@ -29,7 +29,7 @@ const tablesFiguresData = [
         date: "November 2, 2018",
         title: "Presentation Matters; Effective Table Formatting Tips",
         slug: "presentation-matters-effective-table-formatting-tips",
-        image: "/images/tables-figures/table-formatting-tips.jpg",
+        image: "https://pubrica.com/wp-content/uploads/2018/11/Formatting-table-01-01.png",
         page: 1,
     },
     {
@@ -37,7 +37,7 @@ const tablesFiguresData = [
         date: "November 2, 2018",
         title: "Data Visualization Made Easy",
         slug: "data-visualization-made-easy",
-        image: "/images/tables-figures/data-visualization-made-easy.jpg",
+        image: "https://pubrica.com/wp-content/uploads/2018/11/data-visualization-01-01.png",
         page: 1,
     },
     // Slide / Page 2
@@ -46,7 +46,7 @@ const tablesFiguresData = [
         date: "November 2, 2018",
         title: "Make an Impact with your Scientific Illustrations",
         slug: "make-an-impact-with-your-scientific-illustrations",
-        image: "/images/tables-figures/scientific-illustrations.jpg",
+        image: "https://pubrica.com/wp-content/uploads/2018/11/template-01.png",
         page: 2,
     },
 ];

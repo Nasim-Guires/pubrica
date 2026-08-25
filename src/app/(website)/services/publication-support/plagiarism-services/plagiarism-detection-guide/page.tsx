@@ -45,13 +45,6 @@ export default function PlagiarismGuidePage() {
     <div className="min-h-screen bg-white text-gray-800 font-sans">
       {/* Top Banner (Edge to Edge / Full Width) */}
       <div className="relative w-full h-48 md:h-64 bg-slate-900 text-white flex items-center justify-center">
-        <Image
-          src="/images/plagiarism-banner-bg.jpg"
-          alt="Plagiarism Detection Guide Banner"
-          fill
-          priority
-          className="object-cover opacity-30"
-        />
         <h1 className="relative z-10 text-xl md:text-3xl font-bold text-center px-4 max-w-5xl">
           Plagiarism Detection: A Complete Guide for Researchers
         </h1>
@@ -147,14 +140,14 @@ export default function PlagiarismGuidePage() {
               Interesting topics
             </h3>
             <ul className="space-y-2 text-xs md:text-sm text-blue-600 font-medium">
-              <li><Link href="#" className="hover:underline">Manuscript Editing</Link></li>
-              <li><Link href="#" className="hover:underline">Manuscript Guidelines</Link></li>
-              <li><Link href="#" className="hover:underline">Manuscript Writing</Link></li>
-              <li><Link href="#" className="hover:underline">Manuscript Preparation guidelines</Link></li>
-              <li><Link href="#" className="hover:underline">Manuscript Submission Guidelines</Link></li>
-              <li><Link href="#" className="hover:underline">Manuscript Editing Services</Link></li>
-              <li><Link href="#" className="hover:underline">Study Guides</Link></li>
-              <li><Link href="#" className="hover:underline">Scientific Writing</Link></li>
+              <li><Link href="/services/editing-and-translation/manuscript-editing" className="hover:underline">Manuscript Editing</Link></li>
+              <li><Link href="/academy/manuscript-guidelines" className="hover:underline">Manuscript Guidelines</Link></li>
+              <li><Link href="/services/physician-writing-services/physician-manuscript" className="hover:underline">Manuscript Writing</Link></li>
+              <li><Link href="/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission" className="hover:underline">Manuscript Preparation guidelines</Link></li>
+              <li><Link href="/academy/manuscript-submission" className="hover:underline">Manuscript Submission Guidelines</Link></li>
+              <li><Link href="/services/editing-and-translation/manuscript-editing" className="hover:underline">Manuscript Editing Services</Link></li>
+              <li><Link href="/academy" className="hover:underline">Study Guides</Link></li>
+              <li><Link href="/services/research-services/scientific-writing" className="hover:underline">Scientific Writing</Link></li>
             </ul>
           </div>
         </aside>

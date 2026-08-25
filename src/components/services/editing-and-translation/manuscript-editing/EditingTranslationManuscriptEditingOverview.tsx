@@ -138,7 +138,7 @@ export const EditingTranslationManuscriptEditingOverview: React.FC = () => {
             <div className="flex flex-wrap items-center gap-4 pt-6">
               <GetFreeQuoteButton />
               <Link
-                href="/brochure"
+                href="/meta-data-collection-brochures"
                 className="bg-[#b30000] hover:bg-[#900000] !text-white font-semibold py-2.5 px-6 rounded-md transition-colors duration-200 text-sm sm:text-base shadow-sm inline-flex items-center justify-center select-none"
               >
                 View Brochure

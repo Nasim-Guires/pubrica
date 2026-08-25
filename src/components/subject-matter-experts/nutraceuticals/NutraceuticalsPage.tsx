@@ -24,31 +24,35 @@ export default function NutraceuticalsPage() {
     const disciplines = [
         {
             title: "Functional Foods & Bioactive Compounds",
-            iconSrc: "/images/subject-matter-experts/nutraceuticals/Functional-Foods.webp",
+            iconSrc: "https://pubrica.com/wp-content/uploads/2026/04/Functional-Foods-Beverages.webp",
             description: "Understanding functional characteristics and the health claim substantiation required for global markets. Whether you are publishing clinical findings or preparing a product monograph, our experts ensure clarity, accuracy, and compliance.",
             icon: Search,
         },
         {
             title: "Dietary Supplements & Herbal Products",
-            iconSrc: "/images/subject-matter-experts/nutraceuticals/Dietary-Supplements.webp",
+            iconSrc:
+                "https://pubrica.com/wp-content/uploads/2026/04/Dietary-Supplements-Herbal-Products.webp",
             description: "Pubrica provides comprehensive support in dietary supplement research, covering botanicals, vitamins, and bioactive formulations.",
             icon: TrendingUp
         },
         {
             title: "Regulatory Science for Nutraceuticals",
-            iconSrc: "/images/subject-matter-experts/nutraceuticals/Regulatory-Science.webp",
+            iconSrc:
+                "https://pubrica.com/wp-content/uploads/2026/04/Regulatory-Science-for-Nutraceuticals.webp",
             description: "We provide guidance on scientific writing aligned with international regulatory frameworks, including novel food submissions and safety dossiers.",
             icon: FileText
         },
         {
             title: "Bioactive Compounds & Phytochemistry",
-            iconSrc: "/images/subject-matter-experts/nutraceuticals/Bioactive-Compounds.webp",
+            iconSrc:
+                "https://pubrica.com/wp-content/uploads/2026/04/Bioactive-Compounds-Phytochemistry.webp",
             description: "Pubrica's specialists cover a wide range of bioactive research, including polyphenols, flavonoids, plant extracts, and natural active ingredients.",
             icon: Database
         },
         {
             title: "Nutrigenomics & Personalized Nutrition",
-            iconSrc: "/images/subject-matter-experts/nutraceuticals/Nutrigenomics.webp",
+            iconSrc:
+                "https://pubrica.com/wp-content/uploads/2026/04/Nutrigenomics-Personalized-Nutrition.webp",
             description: "As personalized health becomes a global trend, our team supports genomic-driven nutraceutical research and clinical publications.",
             icon: ShieldAlert
         }

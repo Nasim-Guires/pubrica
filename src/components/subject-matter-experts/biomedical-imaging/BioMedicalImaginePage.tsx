@@ -250,7 +250,7 @@ export default function BioMedicalImaginePage() {
                     </div>
                     <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                         At Pubrica, we specialize in advancing biomedical imaging research by offering comprehensive support across all stages of study design, data interpretation, and scholarly publication. Our team of experts combines scientific rigor with technical proficiency to ensure that your research is presented clearly, accurately, and in alignment with the highest standards of the field.{" "}
-                        <Link href="#" className="text-sky-600 hover:underline">
+                        <Link href="/subject-matter-experts" className="text-sky-600 hover:underline">
                             subject matter experts
                         </Link>
                         , and publication strategists with deep domain expertise in material science, nanotechnology, chemical engineering, and applied physics. Our services include:

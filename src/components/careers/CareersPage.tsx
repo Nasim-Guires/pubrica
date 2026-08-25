@@ -2,46 +2,14 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Metadata } from "next";
+import type { PayloadPost } from "@/lib/payload/types";
 
-// SEO Metadata for Next.js App Router
-export const metadata: Metadata = {
-  title: "Careers in Publishing & Editing | Pubrica",
-  description:
-    "Scale up your career with Pubrica—a place to learn, grow, and change. Explore job opportunities in academic editing, scientific writing, and research publishing.",
-  keywords: [
-    "Careers in Publishing",
-    "Scientific Writing Jobs",
-    "Academic Editing Jobs",
-    "Medical Editor Openings",
-    "Pubrica Careers",
-  ],
-  openGraph: {
-    title: "Careers in Publishing | Pubrica",
-    description:
-      "Join an elite team of scientists, professors, and editors at Pubrica. Check our current job openings.",
-    type: "website",
-  },
-};
-
-export default function CareersPage() {
+export default function CareersPage({ jobs }: { jobs: PayloadPost[] }) {
   const stats = [
     { value: "15", label: "Years in scientific research" },
     { value: "200", label: "Experts in various specializations" },
     { value: "100", label: "Academic writing projects completed" },
     { value: "110", label: "Research projects done" },
-  ];
-
-  const currentOpenings = [
-    "Associate editor",
-    "Full-time regulatory writer",
-    "Production manager",
-    "Technical illustrator",
-    "Editor-in-Chief",
-    "Scientific editor",
-    "Freelance regulatory writer",
-    "Clinical Research Associates (CRAs)",
-    "Statistician",
   ];
 
   return (
@@ -254,16 +222,30 @@ export default function CareersPage() {
             Currently, positions are open for the following:
           </h4>
 
-          <ul className="space-y-2">
-            {currentOpenings.map((position, idx) => (
-              <li key={idx} className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700">
-                <span className="w-4 h-4 rounded-full bg-[#1b2b28] text-white flex items-center justify-center text-[10px] font-bold">
-                  ➔
-                </span>
-                <span>{position}</span>
+          <ul className="grid sm:grid-cols-2 gap-2">
+            {jobs.slice(0, 12).map((job) => (
+              <li key={job.id}>
+                <Link
+                  href={`/careers/${job.urlPath}`}
+                  className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700 hover:text-[#1b2b28] hover:underline"
+                >
+                  <span className="w-4 h-4 rounded-full bg-[#1b2b28] text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0">
+                    ➔
+                  </span>
+                  <span>{job.title}</span>
+                </Link>
               </li>
             ))}
           </ul>
+
+          <div className="pt-4">
+            <Link
+              href="/careers/job-posting"
+              className="inline-block bg-[#1b2b28] hover:bg-[#121f1d] text-white text-xs sm:text-sm font-bold px-6 py-2.5 rounded transition-colors"
+            >
+              View all openings &rarr;
+            </Link>
+          </div>
         </div>
       </section>
     </main>

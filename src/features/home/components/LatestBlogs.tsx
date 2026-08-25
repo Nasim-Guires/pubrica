@@ -2,9 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import Container from '@/components/common/Container';
-import { BLOGS_DATA } from '@/lib/constants';
+import { getBlogs } from '@/lib/api';
 
-export default function LatestBlogs() {
+export default async function LatestBlogs() {
+  const blogs = await getBlogs(3);
+
   return (
     <section className="bg-white py-20 border-t border-gray-100">
       <Container>
@@ -19,7 +21,7 @@ export default function LatestBlogs() {
             </h2>
           </div>
           <Link
-            href="/blogs"
+            href="/blog"
             className="text-primary-800 hover:text-primary-600 font-bold text-sm flex items-center gap-1.5 shrink-0 group hover:translate-x-1 duration-150 transform transition-transform"
           >
             <span>View All Articles</span>
@@ -29,7 +31,7 @@ export default function LatestBlogs() {
 
         {/* Article Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 font-sans">
-          {BLOGS_DATA.slice(0, 3).map((blog) => (
+          {blogs.map((blog) => (
             <article
               key={blog.slug}
               className="flex flex-col border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-all group bg-white"
@@ -59,7 +61,7 @@ export default function LatestBlogs() {
                   </div>
 
                   <h3 className="font-bold text-gray-900 text-base leading-snug group-hover:text-primary-800 transition-colors">
-                    <Link href={`/blogs/${blog.slug}`}>{blog.title}</Link>
+                    <Link href={`/blog/${blog.slug}`}>{blog.title}</Link>
                   </h3>
 
                   <p className="text-xs text-gray-500 leading-relaxed mt-2 line-clamp-3">
@@ -72,7 +74,7 @@ export default function LatestBlogs() {
                     By {blog.author.name}
                   </span>
                   <Link
-                    href={`/blogs/${blog.slug}`}
+                    href={`/blog/${blog.slug}`}
                     className="text-primary-800 hover:text-primary-600 font-bold text-xs flex items-center gap-1"
                   >
                     <span>Read Article</span>

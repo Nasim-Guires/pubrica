@@ -15,7 +15,7 @@ export default function ServicesSection() {
 
         <p className="text-[14px] text-slate-600 max-w-5xl mb-12 leading-relaxed">
           At Pubrica, we provide end-to-end{" "}
-          <a href="#" className="text-[#4080A8] hover:underline font-normal">
+          <a href="/services/editing-and-translation" className="text-[#4080A8] hover:underline font-normal">
             Editing and Translation Services
           </a>{" "}
           designed to refine, enhance, and globalize your content. From

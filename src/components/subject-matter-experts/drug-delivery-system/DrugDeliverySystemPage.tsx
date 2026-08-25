@@ -143,7 +143,7 @@ export default function DrugDeliverySystemPage() {
             description: "Identifying research gaps and providing comprehensive literature reviews.",
             image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: FileSearch,
-            href: "//services/research-services/literature-review-and-gap"
+            href: "/services/research-services/literature-review-and-gap"
         },
         {
             title: "Journal Submission",

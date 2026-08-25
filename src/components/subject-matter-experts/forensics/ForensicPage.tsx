@@ -77,14 +77,14 @@ export default function ForensicPage() {
             description: "Accurate scientific translations to broaden the reach of your research.",
             image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: FileSearch,
-            href: "/services/editing-and-translation/translation"
+            href: "/services/editing-and-translation/translation-with-editing"
         },
         {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
             image: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
             icon: Cpu,
-            href: "/services/research-services/systematic-reviews"
+            href: "/services/research-services/systematic-review"
         },
         {
             title: "Journal Submission",
@@ -112,14 +112,14 @@ export default function ForensicPage() {
             description: "Comprehensive review to refine and validate your research pre-submission.",
             image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: FileSearch,
-            href: "/services/research-services/peer-review"
+            href: "/services/publication-support/peer-review-pre-submission"
         },
         {
             title: "Case Report Writing Service",
             description: "Detailed description of a rare or unusual disease, symptom, or treatment outcome.",
             image: "/images/subject-matter-experts/forensics/DNA-forensic-science.webp",
             icon: FileText,
-            href: "/services/research-services/case-report"
+            href: "/services/physician-writing-services/case-report"
         }
     ];
 

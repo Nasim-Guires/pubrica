@@ -22,7 +22,7 @@ export default function VideoAbstractGuidePage() {
             {/* Top Hero / Banner */}
             <div className="relative w-full h-44 md:h-56 bg-slate-900 text-white flex items-center justify-center">
                 <Image
-                    src="/images/video-abstract-banner.jpg"
+                    src="https://pubrica.com/wp-content/uploads/2024/06/pubrica-service-and-sample-work-1024x644.webp"
                     alt="Video Abstract Banner"
                     fill
                     priority
@@ -37,9 +37,9 @@ export default function VideoAbstractGuidePage() {
             <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 text-xs text-gray-500 border-b border-gray-100 flex items-center space-x-2">
                 <Link href="/" className="hover:underline">Home</Link>
                 <span>&gt;</span>
-                <Link href="#" className="hover:underline">Publication Support</Link>
+                <Link href="/services/publication-support" className="hover:underline">Publication Support</Link>
                 <span>&gt;</span>
-                <Link href="#" className="hover:underline">Journal Selection</Link>
+                <Link href="/services/publication-support/journal-selection" className="hover:underline">Journal Selection</Link>
                 <span>&gt;</span>
                 <span className="text-gray-700 font-medium truncate">
                     Top 6 Tips to Create a Perfect Video Abstract for Your Research Paper
@@ -102,22 +102,22 @@ export default function VideoAbstractGuidePage() {
                             Interesting topics
                         </h3>
                         <ul className="space-y-2 text-xs md:text-sm text-blue-600 font-medium">
-                            <li><Link href="#" className="hover:underline">Medical Writing</Link></li>
-                            <li><Link href="#" className="hover:underline">Scientific Writing</Link></li>
-                            <li><Link href="#" className="hover:underline">Systematic Review Writing</Link></li>
-                            <li><Link href="#" className="hover:underline">Meta-Analysis</Link></li>
-                            <li><Link href="#" className="hover:underline">Original Research Article Writing Service</Link></li>
-                            <li><Link href="#" className="hover:underline">Literature Review</Link></li>
-                            <li><Link href="#" className="hover:underline">Grant Writing Services</Link></li>
-                            <li><Link href="#" className="hover:underline">Biostatistical Programming</Link></li>
-                            <li><Link href="#" className="hover:underline">Experimental Design</Link></li>
+                            <li><Link href="/services/medical-writing" className="hover:underline">Medical Writing</Link></li>
+                            <li><Link href="/services/research-services/scientific-writing" className="hover:underline">Scientific Writing</Link></li>
+                            <li><Link href="/services/research-services/systematic-review" className="hover:underline">Systematic Review Writing</Link></li>
+                            <li><Link href="/services/research-services/meta-analysis" className="hover:underline">Meta-Analysis</Link></li>
+                            <li><Link href="/services/physician-writing-services/original-research-article" className="hover:underline">Original Research Article Writing Service</Link></li>
+                            <li><Link href="/services/research-services/literature-review-and-gap" className="hover:underline">Literature Review</Link></li>
+                            <li><Link href="/services/research-services/grant-writing" className="hover:underline">Grant Writing Services</Link></li>
+                            <li><Link href="/services/research-services/biostatistics-and-statistical-programming-services" className="hover:underline">Biostatistical Programming</Link></li>
+                            <li><Link href="/services/research-services/experimental-design" className="hover:underline">Experimental Design</Link></li>
                         </ul>
                     </div>
 
                     {/* Sidebar Image Banner */}
                     <div className="relative w-full h-48 rounded overflow-hidden shadow-sm">
                         <Image
-                            src="/images/sidebar-card.jpg"
+                            src="https://pubrica.com/wp-content/uploads/2021/04/research-publication.jpg"
                             alt="Research Consulting"
                             fill
                             className="object-cover"

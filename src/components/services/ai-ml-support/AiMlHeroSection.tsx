@@ -41,7 +41,7 @@ export default function AiMlHeroSection() {
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               At Pubrica, we provide essential AI support services for crafting
               high-quality{" "}
-              <Link href="#" className="text-sky-600 hover:underline">
+              <Link href="/services/physician-writing-services/original-research-article" className="text-sky-600 hover:underline">
                 original research articles
               </Link>{" "}
               by rigorously applying cutting-edge AI and ML methods, ensuring
@@ -52,7 +52,7 @@ export default function AiMlHeroSection() {
 
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               We design, implement, and optimize{" "}
-              <Link href="#" className="text-sky-600 hover:underline">
+              <Link href="/services/ai-ml-support" className="text-sky-600 hover:underline">
                 AI and ML modeling services
               </Link>{" "}
               that solve real-world problems and yield measurable results.

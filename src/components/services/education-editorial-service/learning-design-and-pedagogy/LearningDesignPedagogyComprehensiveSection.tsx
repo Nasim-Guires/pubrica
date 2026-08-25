@@ -61,7 +61,7 @@ const LearningDesignPedagogyComprehensiveSection: NextPage = () => {
         />
         <link
           rel="canonical"
-          href="https://pubrica.com/services/education-editorial-service/learning-design-and-pedagogy/"
+          href="/services/education-editorial-service/learning-design-and-pedagogy"
         />
       </Head>
 

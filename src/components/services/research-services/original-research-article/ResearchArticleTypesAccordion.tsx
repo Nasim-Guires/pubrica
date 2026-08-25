@@ -118,33 +118,41 @@ export default function ResearchArticleTypesAccordion() {
             </Link>
             , including randomized trials, observational studies, epidemiology
             research, and other empirical investigations. Manuscripts adhere to{" "}
-            <Link
-              href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
-              className="text-sky-600"
+            <a
+              href="https://www.consort-statement.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-600 hover:underline"
             >
               CONSORT
-            </Link>
+            </a>
             ,{" "}
-            <Link
-              href="https://www.equator-network.org/wp-content/uploads/2015/10/STROBE_checklist_v4_combined.pdf"
-              className="text-sky-600"
+            <a
+              href="https://www.strobe-statement.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-600 hover:underline"
             >
               STROBE
-            </Link>
+            </a>
             ,{" "}
-            <Link
-              href="https://www.prisma-statement.org/prisma-2020-checklist"
-              className="text-sky-600"
+            <a
+              href="https://www.prisma-statement.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-600 hover:underline"
             >
               PRISMA
-            </Link>
+            </a>
             , and{" "}
-            <Link
-              href="https://arriveguidelines.org/sites/arrive/files/documents/Author%20Checklist%20-%20Full.pdf"
+            <a
+              href="https://arriveguidelines.org/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sky-600 hover:underline"
             >
               ARRIVE
-            </Link>{" "}
+            </a>{" "}
             standards depending on your research domain. Our services also
             include APA, AMA, or MLA formatting for primary research.
           </p>

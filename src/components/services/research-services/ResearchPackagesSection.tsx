@@ -104,7 +104,7 @@ export const ResearchPackagesSection: React.FC<ResearchPackagesProps> = ({
           </h2>
           <p className="text-gray-700 text-[15px] leading-relaxed max-w-5xl mx-auto">
             {description.split("research service")[0]}
-            <a href="#" className="text-[#3b82f6] hover:underline">
+            <a href="/services/research-services" className="text-[#3b82f6] hover:underline">
               research service
             </a>
             {description.split("research service")[1]}

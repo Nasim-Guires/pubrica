@@ -137,11 +137,11 @@ export default function CaseReportPackagesAndSamples() {
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
                   Explore our{" "}
-                  <Link href="/insights/sample-work/neurosyphilis-anti-nmdar-antibody-case-report" className="text-sky-600">
+                  <Link href="/services/physician-writing-services/case-report" className="text-sky-600 hover:underline">
                     case report writing samples
                   </Link>
                   , meticulously crafted to align with{" "}
-                  <Link href="/services/publication-support/journal-submission" className="text-sky-600">
+                  <Link href="/services/publication-support/journal-submission" className="text-sky-600 hover:underline">
                     journal submission
                   </Link>{" "}
                   criteria, clinical accuracy standards, and expedited publication

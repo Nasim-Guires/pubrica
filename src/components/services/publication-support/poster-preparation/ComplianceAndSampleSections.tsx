@@ -182,7 +182,7 @@ export default function ComplianceAndSampleSections() {
                 Poster Preparation Sample Work
               </h3>
               <Link
-                href="/samples"
+                href="/insights/sample-work"
                 className="inline-block text-center bg-black hover:bg-gray-800 text-white font-medium text-xs md:text-sm py-2.5 px-10 rounded-full transition-colors w-full sm:w-auto"
               >
                 Discover More
@@ -200,7 +200,7 @@ export default function ComplianceAndSampleSections() {
                 presentation deadlines.
               </p>
               <Link
-                href="/report-download"
+                href="/insights/sample-work"
                 className="inline-block text-center bg-black hover:bg-gray-800 text-white font-medium text-xs md:text-sm py-2.5 px-10 rounded-full transition-colors w-full sm:w-auto"
               >
                 Discover More

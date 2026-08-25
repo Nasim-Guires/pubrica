@@ -112,7 +112,7 @@ export const TestimonialsSection: React.FC<TestimonialsProps> = ({
           </h2>
           <p className="text-gray-700 text-[15px] leading-relaxed max-w-5xl">
             {description.split("research services")[0]}
-            <a href="/academy/research-services/correlational-research-design-in-research-methodology" className="text-[#3b82f6] ">
+            <a href="/services/research-services" className="text-[#3b82f6] hover:underline">
               research services
             </a>
             {description.split("research services")[1]}

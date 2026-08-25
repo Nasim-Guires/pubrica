@@ -39,9 +39,9 @@ const audienceData: AudienceItem[] = [
       (
         <>
           Adherence to guidelines like{' '}
-          <a href="#" className="text-[#3b82f6] hover:underline">CONSORT</a>,{' '}
-          <a href="#" className="text-[#3b82f6] hover:underline">PRISMA</a>, or{' '}
-          <a href="#" className="text-[#3b82f6] hover:underline">ICMJE</a>.
+          <a href="https://www.consort-statement.org/" target="_blank" rel="noopener noreferrer" className="text-[#3b82f6] hover:underline">CONSORT</a>,{' '}
+          <a href="https://www.prisma-statement.org/" target="_blank" rel="noopener noreferrer" className="text-[#3b82f6] hover:underline">PRISMA</a>, or{' '}
+          <a href="https://www.icmje.org/" target="_blank" rel="noopener noreferrer" className="text-[#3b82f6] hover:underline">ICMJE</a>.
         </>
       ),
       'Formatting of complex tables, figures, and supplementary materials.',

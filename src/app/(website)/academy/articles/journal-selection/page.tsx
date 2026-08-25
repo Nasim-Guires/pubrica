@@ -14,7 +14,8 @@ const journalSelectionData = [
     title:
       "How to Choose the Right Journal: Scope, Quartile, Indexing & Predatory-Journal Checks",
     slug: "how-to-choose-the-right-journal-scope-quartile-indexing-predatory-journal-checks",
-    image: "/images/journal-selection/choose-right-journal.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2026/08/How-to-Choose-the-Right-Journal-Scope-Quartile-Indexing-Predatory-Journal-Checks.webp",
     page: 1,
   },
   {
@@ -23,7 +24,8 @@ const journalSelectionData = [
     title:
       "How to Get Accepted in Q1 Journals: A Pre-Submission Strategy to Beat Desk Rejection",
     slug: "how-to-get-accepted-in-q1-journals-pre-submission-strategy",
-    image: "/images/journal-selection/q1-journals-accepted.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2026/08/v1-How-to-Get-Accepted-in-Q1-Journals-A-Pre-Submission-Strategy-to-Beat-Desk-Rejection.webp",
     page: 1,
   },
   {
@@ -32,7 +34,8 @@ const journalSelectionData = [
     title:
       "Why Good Research Gets Rejected: Proven Publication Strategies to Improve Journal Acceptance",
     slug: "why-good-research-gets-rejected-publication-strategies",
-    image: "/images/journal-selection/why-good-research-gets-rejected.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2026/07/v1-Why-Good-Research-Gets-Rejected-Proven-Publication-Strategies-to-Improve-Journal-Acceptance.webp",
     page: 1,
   },
   {
@@ -41,7 +44,8 @@ const journalSelectionData = [
     title:
       "Digital Strategies to Find the Right Journal for Publishing Your Research Study",
     slug: "digital-strategies-to-find-right-journal",
-    image: "/images/journal-selection/digital-strategies-journal.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2026/06/v1-Digital-Strategies-to-Find-the-Right-Journal-for-Publishing-Your-Research-Study.webp",
     page: 1,
   },
 
@@ -52,7 +56,8 @@ const journalSelectionData = [
     title:
       "Publishing With Impact: How Authors Should Select the Right Journal",
     slug: "publishing-with-impact-how-authors-select-right-journal",
-    image: "/images/journal-selection/publishing-with-impact.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2026/05/V1-Publishing-With-Impact-How-Authors-Should-Select-the-Right-Journal.webp",
     page: 2,
   },
   {
@@ -61,7 +66,8 @@ const journalSelectionData = [
     title:
       "Journal Quartiles Explained (Q1–Q4): How to Choose the Right Journal for Your Research",
     slug: "journal-quartiles-explained-q1-q4-choose-right-journal",
-    image: "/images/journal-selection/journal-quartiles-explained.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2026/03/v1-Journal-Quartiles-Explained-Q1GCoQ4-How-to-Choose-the-Right-Journal-for-Your-Research.webp",
     page: 2,
   },
   {
@@ -69,7 +75,8 @@ const journalSelectionData = [
     date: "February 13, 2026",
     title: "Tips for High-Impact Journals",
     slug: "tips-for-high-impact-journals",
-    image: "/images/journal-selection/tips-for-high-impact-journals.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2026/02/v1-How-to-Write-a-Medical-Paper-Tips-for-High-Impact-Journals.webp",
     page: 2,
   },
   {
@@ -78,7 +85,8 @@ const journalSelectionData = [
     title:
       "What is the difference between Scopus-indexed and non-indexed journals?",
     slug: "difference-between-scopus-indexed-and-non-indexed-journals",
-    image: "/images/journal-selection/scopus-indexed-vs-non-indexed.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2026/02/v1-What-is-the-difference-between-Scopus-indexed-and-non-indexed-journals.webp",
     page: 2,
   },
 
@@ -89,7 +97,8 @@ const journalSelectionData = [
     title:
       "How to Identify the Best Journal for Your Manuscript Submission",
     slug: "how-to-identify-best-journal-for-manuscript-submission",
-    image: "/images/journal-selection/identify-best-journal.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2025/10/v1-How-to-Identify-the-Best-Journal-for-Your-Manuscript-Submission.png",
     page: 3,
   },
   {
@@ -98,7 +107,7 @@ const journalSelectionData = [
     title:
       "A Detailed Guide to Journal Selection in Academic Publishing",
     slug: "detailed-guide-to-journal-selection-academic-publishing",
-    image: "/images/journal-selection/detailed-guide-journal-selection.jpg",
+    image: "https://pubrica.com/wp-content/uploads/2025/11/open-access-publishing.webp",
     page: 3,
   },
   {
@@ -107,7 +116,8 @@ const journalSelectionData = [
     title:
       "How to Minimize Rejection Risks Through Strategic Journal Selection",
     slug: "how-to-minimize-rejection-risks-strategic-journal-selection",
-    image: "/images/journal-selection/minimize-rejection-risks.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2026/08/v1-How-to-Get-Accepted-in-Q1-Journals-A-Pre-Submission-Strategy-to-Beat-Desk-Rejection.webp",
     page: 3,
   },
   {
@@ -116,7 +126,8 @@ const journalSelectionData = [
     title:
       "How to Align Your Manuscript with Journal Requirements: A Step-by-Step Guide",
     slug: "how-to-align-manuscript-with-journal-requirements",
-    image: "/images/journal-selection/align-manuscript-journal-requirements.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2026/08/How-to-Choose-the-Right-Journal-Scope-Quartile-Indexing-Predatory-Journal-Checks.webp",
     page: 3,
   },
 
@@ -127,7 +138,8 @@ const journalSelectionData = [
     title:
       "Important Factors Affecting Journal Selection Decisions By Researchers",
     slug: "important-factors-affecting-journal-selection-decisions",
-    image: "/images/journal-selection/factors-affecting-journal-selection.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2023/04/Important-Factors-Affecting-Journal-Selection-Decisions-By-Researchers.webp",
     page: 4,
   },
   {
@@ -136,7 +148,8 @@ const journalSelectionData = [
     title:
       "How to Choose PubMed Journals to Publish Generic Drug Papers?",
     slug: "how-to-choose-pubmed-journals-generic-drug-papers",
-    image: "/images/journal-selection/choose-pubmed-journals.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2023/04/How-to-Choose-PubMed-Journals-to-Publish-Generic-Drug-Papers.webp",
     page: 4,
   },
   {
@@ -145,7 +158,8 @@ const journalSelectionData = [
     title:
       "A comparison of medical and social science journal selection factors in an open-access environment",
     slug: "comparison-medical-social-science-journal-selection",
-    image: "/images/journal-selection/medical-vs-social-science-selection.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2023/04/A-comparison-of-medical-and-social-science-journal-selection-factors-in-an-open-access-environment.webp",
     page: 4,
   },
   {
@@ -153,7 +167,7 @@ const journalSelectionData = [
     date: "October 12, 2021",
     title: "What Does If My Paper Is Rejected in Peer Review?",
     slug: "what-does-if-my-paper-is-rejected-in-peer-review",
-    image: "/images/journal-selection/paper-rejected-peer-review.jpg",
+    image: "https://pubrica.com/wp-content/uploads/2021/10/Promotional-image.jpg",
     page: 4,
   },
 
@@ -164,7 +178,8 @@ const journalSelectionData = [
     title:
       "Critical checklists to support you on your scientific publication journey at each point",
     slug: "critical-checklists-to-support-you-on-your-scientific-publication-journey-at-each-poi",
-    image: "/images/journal-selection/critical-checklists.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2021/07/Critical-checklists-to-support-you-on-your-scientific-publication-journey-at-each-point.webp",
     page: 5,
   },
   {
@@ -173,7 +188,8 @@ const journalSelectionData = [
     title:
       "What is scientific writing? How is it significant to radiology and list out the types of scientific paper in healthcare industries? Research service",
     slug: "what-is-scientific-writing-radiology-healthcare",
-    image: "/images/journal-selection/scientific-writing-radiology.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2021/02/What-is-scientific-writing_-How-is-it-significant-to-radiology-and-list-out-the-types-of-scientific-paper-in-healthcare-industries_Research-service.webp",
     page: 5,
   },
   {
@@ -182,7 +198,8 @@ const journalSelectionData = [
     title:
       "What is Publication support services? What is the need for Publication support services?",
     slug: "what-is-publication-support-services-need",
-    image: "/images/journal-selection/publication-support-services.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2021/02/What-is-Publication-support-services_-What-is-the-need-for-Publication-support-services.webp",
     page: 5,
   },
   {
@@ -191,7 +208,8 @@ const journalSelectionData = [
     title:
       "List out the theoretical approaches and peer-review policies for writing a psychology journal manuscript",
     slug: "theoretical-approaches-peer-review-policies-psychology",
-    image: "/images/journal-selection/psychology-journal-manuscript.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2020/09/Pub-Promotional-image-List-out-the-theoretical-approaches-and-peer-review-policies-for-writing-a-psychology-journal-manuscri.jpg",
     page: 5,
   },
 ];

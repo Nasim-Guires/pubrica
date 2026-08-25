@@ -119,7 +119,7 @@ export default function PosterProcessExactDesign() {
         <p className="text-gray-600 text-xs md:text-sm max-w-4xl mx-auto mb-16 leading-relaxed">
           Our{' '}
           <Link
-            href="/publication-support/poster-preparation/"
+            href="/services/publication-support/poster-preparation"
             className="text-[#0284c7] hover:underline font-medium"
           >
             poster preparation

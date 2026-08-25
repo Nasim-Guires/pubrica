@@ -207,7 +207,7 @@ export default function SimplifiedAbstractTypesAndWorkflow() {
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
             Our{' '}
-            <Link href="#" className="text-sky-600 hover:underline font-medium">
+            <Link href="/services/research-impact/simplified-abstract-services" className="text-sky-600 hover:underline font-medium">
               simplified abstract
             </Link>{' '}
             writing services are tailored to diverse academic, clinical, policy, and public communication needs. Whether you're preparing a journal-ready abstract, a grant submission, or a lay summary, our professional abstract writers ensure clarity, structure, and impact across formats.
@@ -269,11 +269,11 @@ export default function SimplifiedAbstractTypesAndWorkflow() {
           </p>
           <p className="text-xs sm:text-sm text-slate-600 max-w-4xl mx-auto leading-relaxed">
             Pubrica's{' '}
-            <Link href="#" className="text-sky-600 hover:underline">
+            <Link href="/services/research-impact/simplified-abstract-services" className="text-sky-600 hover:underline">
               simplified abstract writing service
             </Link>{' '}
             is designed to be structured, expert-led, and process-driven. Each step ensures scientific clarity, accuracy, and full compliance with{' '}
-            <Link href="#" className="text-sky-600 hover:underline">
+            <Link href="/services/publication-support/journal-submission" className="text-sky-600 hover:underline">
               journal submission
             </Link>{' '}
             requirements. Our goal is to convert your detailed manuscript into a concise, professional, and journal-ready abstract.

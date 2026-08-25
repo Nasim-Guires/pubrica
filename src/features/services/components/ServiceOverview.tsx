@@ -47,7 +47,7 @@ const ROUTE_MAP: Record<string, string> = {
     "/services/publication-support/icmje-guidelines-medical-research-compliance",
   GPP: "/services/publication-support/how-to-implement-gpp-medical-research/",
   "research paper publication services":
-    "/insights/sample-work/journal-submission-report-sample/",
+    "/insights/journal-submission-report-sample",
   "journal publication services":
     "/services/publication-support/peer-review-pre-submission",
 };

@@ -161,7 +161,7 @@ export default function PeerReviewPreSubmissionClient() {
           <div className="flex flex-wrap items-center gap-4 pt-4">
             <GetFreeQuoteButton />
             <Link
-              href="/brochure"
+              href="/research-services-brochures"
               className="inline-flex items-center justify-center px-6 py-2.5 bg-[#b30000] hover:bg-[#8e0000] text-white font-semibold rounded-md text-sm transition-colors duration-200 shadow-sm h-[42px]"
             >
               View Brochure

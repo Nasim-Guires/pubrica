@@ -1,3 +1,4 @@
+import { WorkflowStep } from "@/components/common/EditorialWorkflowSection";
 import { Testimonial } from "@/components/common/WhatClientsSays";
 
 export const medicalDeviceClinicalEvaluationReportWorkflow = {
@@ -33,7 +34,7 @@ export const medicalDeviceClinicalEvaluationReportWorkflow = {
       iconSrc: "/images/industries/medical-device/Demonstrate-Clinical-Evidence-Sufficiency.png",
       position: "top",
     },
-  ],
+  ] satisfies WorkflowStep[],
 };
 
 

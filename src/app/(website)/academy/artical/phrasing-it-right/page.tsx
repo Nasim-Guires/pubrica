@@ -144,7 +144,7 @@ const Page = () => {
                         className="object-cover group-hover:scale-110 transition-transform duration-300 opacity-80"
                         fill
                         sizes="56px"
-                        src="/images/grammar/tense.jpg"
+                        src="https://pubrica-blog.vercel.app/api/media/file/tenses-01.png"
                     />
                 </div>
             </Link>
@@ -161,7 +161,7 @@ const Page = () => {
                         className="object-cover group-hover:scale-110 transition-transform duration-300 opacity-80"
                         fill
                         sizes="56px"
-                        src="/images/grammar/written-content.jpg"
+                        src="https://pubrica-blog.vercel.app/api/media/file/Manuscript-preparation-guidelines-01-01.png"
                     />
                 </div>
 

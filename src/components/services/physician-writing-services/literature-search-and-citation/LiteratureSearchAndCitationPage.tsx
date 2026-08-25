@@ -40,7 +40,7 @@ export default function LiteratureSearchAndCitationPage() {
 
             <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
               For PhD scholars, researchers, authors, or product developers, industry-affiliated scientists preparing a manuscript, thesis, or systematic review, a comprehensive scientific literature search is essential. Our expert{' '}
-              <Link href="/academy/literature-search-citation/literature-search-research-planning" className="text-sky-600">
+              <Link href="/services/physician-writing-services/literature-search-and-citation" className="text-sky-600 hover:underline">
                 literature search and citation
               </Link>{' '}
               service is designed to locate relevant, credible, and recent peer-reviewed, high-impact studies for a variety of needs, from academic publishing to product formulation and ingredient validation that directly support your research or product objectives. We offer:
@@ -59,9 +59,9 @@ export default function LiteratureSearchAndCitationPage() {
                 <span className="text-red-600 mr-2 font-bold">•</span>
                 <span>
                   Regulatory-backed evidence gathering for product claims (e.g.,{' '}
-                  <Link href="https://www.fda.gov/" className="text-sky-600 ">FDA</Link>,{' '}
-                  <Link href="https://www.efsa.europa.eu/en" className="text-sky-600 ">EFSA</Link>,{' '}
-                  <Link href="https://ayush.gov.in/#!/" className="text-sky-600 ">AYUSH</Link>)
+                  <a href="https://www.fda.gov/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">FDA</a>,{' '}
+                  <a href="https://www.efsa.europa.eu/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">EFSA</a>,{' '}
+                  <a href="https://www.ayush.gov.in/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">AYUSH</a>)
                 </span>
               </li>
               <li className="flex items-start">
@@ -131,7 +131,7 @@ export default function LiteratureSearchAndCitationPage() {
                     scientific writing
                   </Link>{' '}
                   and{' '}
-                  <Link href="/services/research-services/medical-writing" className="text-sky-600 hover:underline">
+                  <Link href="/services/medical-writing" className="text-sky-600 hover:underline">
                     medical writing
                   </Link>{' '}
                   services to support evidence-based production of content.
@@ -153,7 +153,7 @@ export default function LiteratureSearchAndCitationPage() {
                 <span className="text-red-600 mr-2 font-bold">•</span>
                 <div>
                   <strong>Reviewer Management:</strong> We offer accurate contact details to help recommend or exclude reviewers to improve the peer review process. Our{' '}
-                  <Link href="#" className="text-sky-600 hover:underline">
+                  <Link href="/services/publication-support/plagiarism-services" className="text-sky-600 hover:underline">
                     plagiarism
                   </Link>{' '}
                   check service also helps ensure the integrity of each manuscript during the reviewer evaluation process.

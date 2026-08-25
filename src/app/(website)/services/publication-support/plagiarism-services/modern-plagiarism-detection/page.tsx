@@ -6,11 +6,7 @@ export default function PlagiarismDetectionPage() {
     return (
         <div className="min-h-screen bg-white text-gray-800 font-sans">
             {/* Top Banner */}
-            <div
-                className="relative w-full h-48 md:h-64 bg-cover bg-center flex items-center justify-center text-white"
-                style={{ backgroundImage: "url('/images/plagiarism-banner-bg.jpg')" }}
-            >
-                <div className="absolute inset-0 bg-black/50" />
+            <div className="relative w-full h-48 md:h-64 bg-[#0b2825] flex items-center justify-center text-white">
                 <h1 className="relative z-10 text-xl md:text-3xl font-bold text-center px-4 max-w-4xl">
                     Modern Plagiarism Detection: From Keyword Matching to AI Phrase Analysis
                 </h1>
@@ -23,7 +19,7 @@ export default function PlagiarismDetectionPage() {
                     <span>»</span>
                     <Link href="/academy" className="hover:underline">Academy</Link>
                     <span>»</span>
-                    <Link href="/research-impact" className="hover:underline">Research Impact</Link>
+                    <Link href="/services/research-impact" className="hover:underline">Research Impact</Link>
                     <span>»</span>
                     <span className="text-gray-500">
                         Modern Plagiarism Detection: From Keyword Matching to AI Phrase Analysis
@@ -115,14 +111,14 @@ export default function PlagiarismDetectionPage() {
                             Interesting topics
                         </h3>
                         <ul className="space-y-2 text-xs md:text-sm text-blue-600 font-medium">
-                            <li><Link href="#" className="hover:underline">Manuscript Editing</Link></li>
-                            <li><Link href="#" className="hover:underline">Manuscript Guidelines</Link></li>
-                            <li><Link href="#" className="hover:underline">Manuscript Writing</Link></li>
-                            <li><Link href="#" className="hover:underline">Manuscript Preparation guidelines</Link></li>
-                            <li><Link href="#" className="hover:underline">Manuscript Submission Guidelines</Link></li>
-                            <li><Link href="#" className="hover:underline">Manuscript Editing Services</Link></li>
-                            <li><Link href="#" className="hover:underline">Study Guides</Link></li>
-                            <li><Link href="#" className="hover:underline">Scientific Writing</Link></li>
+                            <li><Link href="/services/editing-and-translation/manuscript-editing" className="hover:underline">Manuscript Editing</Link></li>
+                            <li><Link href="/academy/manuscript-guidelines" className="hover:underline">Manuscript Guidelines</Link></li>
+                            <li><Link href="/services/physician-writing-services/physician-manuscript" className="hover:underline">Manuscript Writing</Link></li>
+                            <li><Link href="/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission" className="hover:underline">Manuscript Preparation guidelines</Link></li>
+                            <li><Link href="/academy/manuscript-submission" className="hover:underline">Manuscript Submission Guidelines</Link></li>
+                            <li><Link href="/services/editing-and-translation/manuscript-editing" className="hover:underline">Manuscript Editing Services</Link></li>
+                            <li><Link href="/academy" className="hover:underline">Study Guides</Link></li>
+                            <li><Link href="/services/research-services/scientific-writing" className="hover:underline">Scientific Writing</Link></li>
                         </ul>
                     </div>
                 </aside>
@@ -321,7 +317,7 @@ export default function PlagiarismDetectionPage() {
                     {/* CTA Image Banner */}
                     <div className="relative w-full h-56 md:h-64 my-10 rounded-md overflow-hidden flex items-center justify-center text-center px-4">
                         <Image
-                            src="/images/cta-banner-bg.jpg"
+                            src="https://pubrica.com/wp-content/uploads/2024/06/pubrica-service-and-sample-work-1024x644.webp"
                             alt="Medical Professionals Working"
                             fill
                             className="object-cover"

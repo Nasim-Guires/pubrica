@@ -181,7 +181,7 @@ const Page = () => {
                 </div>
                 <div className="relative hidden h-full w-14 overflow-hidden sm:block">
                     <Image
-                        src="/images/grammar/parallel-construction.jpg"
+                        src="https://pubrica-blog.vercel.app/api/media/file/parrallel-construction-01.png"
                         alt="Previous Article"
                         fill
                         sizes="56px"
@@ -198,7 +198,7 @@ const Page = () => {
             >
                 <div className="relative hidden h-full w-14 overflow-hidden sm:block">
                     <Image
-                        src="/images/grammar/phrasing-it-right.jpg"
+                        src="https://pubrica-blog.vercel.app/api/media/file/paraphrashing-01.png"
                         alt="Next Article"
                         fill
                         sizes="56px"

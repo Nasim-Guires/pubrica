@@ -138,11 +138,11 @@ export default function CancerResearchPage() {
                         </h2>
 
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            <Link href="#" className="text-sky-600 hover:underline">Cancer research</Link> aims to understand, prevent, diagnose, treat, and cure cancer by studying its causes and biology. This field encompasses many disciplines, from molecular science to clinical trials, and has led to significant advances, such as improved treatments, early detection methods, and preventative strategies.
+                            <Link href="/subject-matter-experts/cancer-research" className="text-sky-600 hover:underline">Cancer research</Link> aims to understand, prevent, diagnose, treat, and cure cancer by studying its causes and biology. This field encompasses many disciplines, from molecular science to clinical trials, and has led to significant advances, such as improved treatments, early detection methods, and preventative strategies.
                         </p>
 
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            Key areas of research include developing new therapies like immunotherapies, using AI to predict treatment response, and identifying genetic risk factors. As the global burden of cancer continues to increase, high-quality, reproducible, and clinically relevant research has never been more important. Pubrica supports researchers, oncologists, academicians, and <Link href="#" className="text-sky-600 hover:underline">biotechnology</Link> organizations by offering end-to-end research development and <Link href="#" className="text-sky-600 hover:underline">publication services</Link> that bring scientific ideas to life.
+                            Key areas of research include developing new therapies like immunotherapies, using AI to predict treatment response, and identifying genetic risk factors. As the global burden of cancer continues to increase, high-quality, reproducible, and clinically relevant research has never been more important. Pubrica supports researchers, oncologists, academicians, and <Link href="/subject-matter-experts/biotechnology" className="text-sky-600 hover:underline">biotechnology</Link> organizations by offering end-to-end research development and <Link href="/services/publication-support" className="text-sky-600 hover:underline">publication services</Link> that bring scientific ideas to life.
                         </p>
 
                         <p className="text-gray-600 text-sm leading-relaxed">

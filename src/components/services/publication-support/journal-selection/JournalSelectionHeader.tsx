@@ -54,7 +54,7 @@ export default function JournalSelectionHeader() {
         {/* Intro Paragraphs */}
         <p className="text-xs sm:text-sm leading-relaxed">
           Our expert{' '}
-          <a href="/insights/sample-work/incidence-cardiovascular-diseases-india-global/" className="text-cyan-600 ">
+          <a href="/insights/incidence-cardiovascular-diseases-india-global" className="text-cyan-600 ">
             journal selection
           </a>{' '}
           service can help ensure your research is delivered to the target audience with clarity, compliance, and credibility, while maximizing publication potential.
@@ -99,7 +99,7 @@ export default function JournalSelectionHeader() {
             journal selection
           </a>{' '}
           for your research paper. You can depend on our devoted team of specialists to help guide you through the elaborate process of{' '}
-          <a href="/insights/sample-work/journal-selection-cervical-spondylosis-mechanical-neck-pain" className="text-cyan-600 hover:underline">
+          <a href="/insights/journal-selection-cervical-spondylosis-mechanical-neck-pain" className="text-cyan-600 hover:underline">
             journal selection
           </a>{' '}
           and offer continuous support to assist your manuscript in complying with the highest standards of your intended publication.

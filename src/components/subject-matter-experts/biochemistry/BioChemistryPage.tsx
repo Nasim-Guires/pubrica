@@ -181,7 +181,7 @@ export default function BioChemistryPage() {
 
                         <p className="text-gray-600 text-sm leading-relaxed">
                             In the contemporary scientific landscape, biochemistry plays a pivotal role in translational research, drug discovery, diagnostics, and{" "}
-                            <Link href="#" className="text-sky-600 hover:underline">
+                            <Link href="/subject-matter-experts/biotechnology" className="text-sky-600 hover:underline">
                                 biotechnology
                             </Link>
                             . From unravelling the intricacies of enzyme catalysis to understanding genetic regulation and signal transduction, biochemistry provides the tools and knowledge essential for scientific innovation.
@@ -189,7 +189,7 @@ export default function BioChemistryPage() {
 
                         <p className="text-gray-600 text-sm leading-relaxed">
                             At Pubrica, we specialize in providing extensive biochemistry support, guiding researchers, students, and professionals through every stage of the research and publication process. Whether it's{" "}
-                            <Link href="#" className="text-sky-600 hover:underline">
+                            <Link href="/services/editing-and-translation/manuscript-editing" className="text-sky-600 hover:underline">
                                 manuscript editing
                             </Link>
                             , research methodology consultation, or data interpretation, our services ensure that biochemistry research is communicated with clarity, accuracy, and scientific rigor.
@@ -253,7 +253,7 @@ export default function BioChemistryPage() {
                     </div>
                     <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                         At Pubrica, we specialize in advancing biomedical imaging research by offering comprehensive support across all stages of study design, data interpretation, and scholarly publication. Our team of experts combines scientific rigor with technical proficiency to ensure that your research is presented clearly, accurately, and in alignment with the highest standards of the field.{" "}
-                        <Link href="#" className="text-sky-600 hover:underline">
+                        <Link href="/subject-matter-experts" className="text-sky-600 hover:underline">
                             subject matter experts
                         </Link>
                         , and publication strategists with deep domain expertise in material science, nanotechnology, chemical engineering, and applied physics. Our services include:

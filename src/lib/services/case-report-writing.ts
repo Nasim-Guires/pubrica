@@ -8,7 +8,6 @@ export const editorialWorkflowData = {
       title: "Provide Your Requirements",
       description:
         "Provide your requirements and select Standard or Premium Editing services with tailored turnaround times.",
-      iconSrc: "/images/workflow/step-1.svg",
       position: "top",
     },
     {
@@ -16,7 +15,6 @@ export const editorialWorkflowData = {
       title: "Editing and Quality Control",
       description:
         "Native editors refine your case report, ensuring it meets quality standards and journal guidelines. Reviewers and algorithms ensure stringent quality control.",
-      iconSrc: "/images/workflow/step-2.svg",
       position: "bottom",
     },
     {
@@ -24,7 +22,6 @@ export const editorialWorkflowData = {
       title: "Receive Final Files",
       description:
         "Payment for final files with track changes. Ask unlimited questions to your editor or customer service. Collaborate for re-edits based on your plan.",
-      iconSrc: "/images/workflow/step-3.svg",
       position: "top",
     },
   ],

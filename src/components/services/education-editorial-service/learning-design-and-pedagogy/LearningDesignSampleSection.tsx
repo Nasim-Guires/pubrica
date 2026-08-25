@@ -37,7 +37,7 @@ const LearningDesignSampleSection: NextPage = () => {
               </h2>
               <div>
                 <Link 
-                  href="#" 
+                  href="/insights/sample-work" 
                   className="inline-block bg-black text-white text-xs md:text-sm font-semibold py-2.5 px-6 rounded-full hover:bg-gray-800 transition-colors shadow"
                 >
                   Discover More
@@ -57,7 +57,7 @@ const LearningDesignSampleSection: NextPage = () => {
               </p>
               <div>
                 <Link 
-                  href="#" 
+                  href="/insights/sample-work" 
                   className="inline-block bg-black text-white text-xs md:text-sm font-semibold py-2.5 px-6 rounded-full hover:bg-gray-800 transition-colors shadow"
                 >
                   Discover More

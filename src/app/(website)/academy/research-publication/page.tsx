@@ -26,7 +26,8 @@ const publicationArticles: PublicationArticle[] = [
         title:
             "Selecting material (e.g. excipient, active pharmaceutical ingredient, packaging material) for drug development",
         slug: "/academy/research/selecting-material-for-drug-development/",
-        image: "/images/research/drug-development-materials.jpg",
+        image:
+            "https://pubrica.com/wp-content/uploads/2021/07/Selecting-material-e.g.-excipient-active-pharmaceutical-ingredient-packaging-material-for-drug-development.webp",
     },
     {
         id: 3,
@@ -39,7 +40,7 @@ const publicationArticles: PublicationArticle[] = [
         date: "April 8, 2021",
         title: "Epidemiology designs for clinical trials",
         slug: "/academy/research/epidemiology-designs-for-clinical-trials/",
-        image: "/images/research/epidemiology-designs.jpg",
+        image: "https://pubrica.com/wp-content/uploads/2021/07/Epidemiology-designs-for-clinical-trials.webp",
     },
     {
         id: 5,
@@ -47,7 +48,8 @@ const publicationArticles: PublicationArticle[] = [
         title:
             "Uses of gene therapy in clinical research organization. List out few examples",
         slug: "/academy/research/uses-of-gene-therapy-in-clinical-research/",
-        image: "/images/research/gene-therapy-uses.jpg",
+        image:
+            "https://pubrica.com/wp-content/uploads/2021/07/Uses-of-gene-therapy-in-clinical-research-organization.-List-out-few-examples.webp",
     },
 ];
 
@@ -69,7 +71,7 @@ const Page = () => {
             {/* Hero Banner Header */}
             <div className="relative h-48 w-full overflow-hidden bg-gray-900 sm:h-64 md:h-72">
                 <Image
-                    src="/images/research/banner-book.jpg"
+                    src="https://pubrica.com/wp-content/uploads/2021/04/research-publication.jpg"
                     alt="Research Publication Banner"
                     fill
                     priority

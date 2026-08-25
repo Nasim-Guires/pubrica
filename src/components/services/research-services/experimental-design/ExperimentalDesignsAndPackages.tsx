@@ -80,7 +80,7 @@ export default function ExperimentalDesignsAndPackages() {
                 <span>
                   An{" "}
                   <Link
-                    href="/academy/journals-templates/oncology-journal-publication-process"
+                    href="/services/research-services/experimental-design"
                     className="text-sky-600 hover:underline"
                   >
                     Experimental Design
@@ -439,7 +439,7 @@ export default function ExperimentalDesignsAndPackages() {
             At Pubrica, we adhere to globally recognized compliance frameworks
             and ethical guidelines to ensure that every{" "}
             <Link
-              href="/academy/experimental-design/experimental-research-design"
+              href="/services/research-services/experimental-design"
               className="text-sky-600 hover:underline"
             >
               experimental design
@@ -457,7 +457,7 @@ export default function ExperimentalDesignsAndPackages() {
             <div className="h-16 relative w-32 flex items-center justify-center">
               <Image
                 src={
-                  "/images/research-services/experimental-design/International-Council-for-Harmonisation-\u2013-Good-Clinical-Practice-1.png"
+                  "https://pubrica.com/wp-content/uploads/2025/09/International-Council-for-Harmonisation-\u2013-Good-Clinical-Practice-1.png"
                 }
                 alt="ICH GCP Logo"
                 fill
@@ -522,7 +522,7 @@ export default function ExperimentalDesignsAndPackages() {
             <div className="h-16 relative w-28 flex items-center justify-center">
               <Image
                 src={
-                  "/images/research-services/experimental-design/Animal-Research-Reporting-of-In-Vivo-Experiments-\u2013-ARRIVE.png"
+                  "https://pubrica.com/wp-content/uploads/2025/09/Animal-Research-Reporting-of-In-Vivo-Experiments-\u2013-ARRIVE.png"
                 }
                 alt="ARRIVE Logo"
                 fill
@@ -604,7 +604,7 @@ export default function ExperimentalDesignsAndPackages() {
               </h3>
               <div>
                 <Link
-                  href="/sample-work"
+                  href="/insights/sample-work"
                   className="inline-block bg-black text-white text-xs font-semibold px-8 py-2.5 rounded-full hover:bg-slate-800 transition-colors"
                 >
                   Discover More
@@ -619,7 +619,7 @@ export default function ExperimentalDesignsAndPackages() {
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
                 Explore our{" "}
                 <Link
-                  href="/services/research-services/experimental-design/benefits-of-experimental-plan-in-research-and-design"
+                  href="/services/research-services/experimental-design"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   experimental design
@@ -631,7 +631,7 @@ export default function ExperimentalDesignsAndPackages() {
               </p>
               <div>
                 <Link
-                  href="/download-report"
+                  href="/insights/sample-work"
                   className="inline-block bg-black text-white text-xs font-semibold px-8 py-2.5 rounded-full hover:bg-slate-800 transition-colors"
                 >
                   Discover More

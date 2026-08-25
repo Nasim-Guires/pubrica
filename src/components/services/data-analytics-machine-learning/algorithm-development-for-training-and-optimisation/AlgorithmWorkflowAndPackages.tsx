@@ -279,7 +279,7 @@ export default function AlgorithmWorkflowAndPackages() {
           </h2>
           <p className="text-gray-700 text-sm md:text-base leading-relaxed">
             At Pubrica, we provide comprehensive{" "}
-            <a href="#" className="text-teal-700 underline font-medium">
+            <a href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-teal-700 underline font-medium">
               Algorithm Development Services
             </a>{" "}
             tailored to meet the unique needs of researchers, healthcare professionals, and technology developers. Our packages are designed to ensure high-performance, scalable, and publication-ready algorithm solutions.

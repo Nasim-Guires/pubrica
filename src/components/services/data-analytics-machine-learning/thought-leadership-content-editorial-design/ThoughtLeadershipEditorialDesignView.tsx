@@ -77,7 +77,7 @@ export default function ThoughtLeadershipEditorialDesignView() {
 
                         <p>
                             Our{' '}
-                            <Link href="#" className="text-sky-600 hover:underline font-medium">
+                            <Link href="/subject-matter-experts" className="text-sky-600 hover:underline font-medium">
                                 subject matter experts
                             </Link>{' '}
                             create curated editorial content creation services to translate rich insights into concrete growth. Our experts create unique content based on the audience. Our thought leadership content support includes:
@@ -135,11 +135,11 @@ export default function ThoughtLeadershipEditorialDesignView() {
 
                         <p className="pt-3">
                             At Pubrica, our{' '}
-                            <Link href="#" className="text-sky-600 hover:underline font-medium">
+                            <Link href="/services/medical-writing" className="text-sky-600 hover:underline font-medium">
                                 medical writing
                             </Link>{' '}
                             associates engage in conferences and forums, offering fresh insights on clinical, medical, and regulatory topics. We provide support for both secondary desk-based{' '}
-                            <Link href="#" className="text-sky-600 hover:underline font-medium">
+                            <Link href="/services/research-services/literature-review-and-gap" className="text-sky-600 hover:underline font-medium">
                                 literature reviews
                             </Link>{' '}
                             and white papers derived from primary sources like interviews and surveys. Our experienced team aids in all stages of report development, from storyboard creation to editorial design and promotion.

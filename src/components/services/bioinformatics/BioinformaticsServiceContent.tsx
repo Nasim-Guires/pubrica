@@ -97,7 +97,7 @@ const rightServicesData: ServiceItem[] = [
         content: (
             <>
                 Our{" "}
-                <Link href="#" className="text-sky-600 hover:underline">
+                <Link href="/services/bioinformatics/epigenetics-bioinformatics-biostatistical-methods" className="text-sky-600 hover:underline">
                     epigenetics bioinformatics services
                 </Link>{" "}
                 include DNA methylation profiling, histone modification analysis, and
@@ -211,7 +211,7 @@ export default function BioinformaticsServiceContent() {
 
                         <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
                             Pubrica provides end-to-end{" "}
-                            <Link href="#" className="text-sky-600 hover:underline">
+                            <Link href="/services/bioinformatics" className="text-sky-600 hover:underline">
                                 bioinformatics
                             </Link>{" "}
                             consulting services for genomics, proteomics, transcriptomics,
@@ -296,7 +296,7 @@ export default function BioinformaticsServiceContent() {
                         <p className="text-slate-600 text-sm sm:text-base max-w-5xl leading-relaxed mb-2">
                             Pubrica offers a comprehensive suite of bioinformatics services
                             tailored to the{" "}
-                            <Link href="#" className="text-sky-600 hover:underline">
+                            <Link href="/about-us/life-sciences" className="text-sky-600 hover:underline">
                                 life sciences
                             </Link>
                             , healthcare, and medical research sectors, supporting researchers

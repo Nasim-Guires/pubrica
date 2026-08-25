@@ -350,7 +350,7 @@ export default function JournalSubmissionPage() {
           <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-8 max-w-4xl">
             At Pubrica, we provide an end-to-end{" "}
             <Link
-              href="/insights/sample-work/journal-submission-report-sample"
+              href="/insights/journal-submission-report-sample"
               className="text-[#0082a6] hover:underline font-medium"
             >
               academic journals submission service

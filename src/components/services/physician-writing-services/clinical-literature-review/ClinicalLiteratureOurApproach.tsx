@@ -234,10 +234,7 @@ export default function ClinicalReviewScopeAndApproach() {
           Pubrica offers systematic, detailed, and methodologically sound
           clinical literature reviews to facilitate evidence-based
           decision-making in healthcare. Our services integrate{" "}
-          <a
-            href="/academy/systematic-review/ai-systematic-review-services-pubrica"
-            className="text-sky-600 hover:text-sky-800"
-          >
+          <a href="/services/research-services/systematic-review" className="text-sky-600 underline hover:text-sky-800">
             Systematic Review Support
           </a>{" "}
           to objectively appraise and synthesize the latest clinical evidence,
@@ -267,32 +264,9 @@ export default function ClinicalReviewScopeAndApproach() {
                 <span className="text-red-600 font-bold">•</span>
                 <span>
                   Utilize evidence-based processes like{" "}
-                  <Link
-                    href="https://static1.squarespace.com/static/65b880e13b6ca75573dfe217/t/67ad313f1c80aa5235fce0d0/1739403584136/PRISMA_2020_checklist.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sky-600 hover:text-sky-800"
-                  >
-                    PRISMA
-                  </Link>
-                  ,{" "}
-                  <Link
-                    href="https://legacyfileshare.elsevier.com/promis_misc/ISSM_MOOSE_Checklist.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sky-600 hover:text-sky-800"
-                  >
-                    MOOSE
-                  </Link>
-                  , and{" "}
-                  <Link
-                    href="https://www.bmj.com/content/bmj/suppl/2017/09/21/bmj.j4008.DC1/sheb036104.wf1.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sky-600 hover:text-sky-800"
-                  >
-                    AMSTAR 2
-                  </Link>{" "}
+                  <a href="https://www.prisma-statement.org/" target="_blank" rel="noopener noreferrer" className="text-sky-600 underline">
+                    PRISMA, MOOSE, and AMSTAR 2
+                  </a>{" "}
                   processes for systematic and scoping reviews
                 </span>
               </li>
@@ -326,10 +300,7 @@ export default function ClinicalReviewScopeAndApproach() {
 
             <p className="text-xs text-slate-600 pt-3">
               Our{" "}
-              <Link
-                href="/insights/sample-work/effect-of-educational-intervention-on-operating-theatre-nurses/"
-                className="text-sky-600 hover:text-sky-800"
-              >
+              <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-sky-600 underline">
                 EBM literature review
               </Link>{" "}
               is compliant with{" "}

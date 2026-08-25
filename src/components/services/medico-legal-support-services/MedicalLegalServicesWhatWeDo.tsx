@@ -146,14 +146,14 @@ export default function MedicalLegalServicesWhatWeDo({
           <div className="space-y-4 text-sm sm:text-base text-gray-700 max-w-5xl leading-relaxed">
             <p>
               At Pubrica, we provide a complete expert{" "}
-              <Link href="#" className="text-sky-600 underline font-medium">
+              <Link href="/services/medico-legal-support-services" className="text-sky-600 underline font-medium">
                 medico legal consulting services
               </Link>{" "}
               framework for law firms, insurers, healthcare professional teams, and legal professionals involved in disputes requiring expert medical opinions. We focus on medico-legal cases in the areas of medical negligence, personal injury assessment, insurance claims disputes, and forensic medical analysis.
             </p>
             <p>
               Our approach involves methodical medical case analysis,{" "}
-              <Link href="#" className="text-sky-600 underline font-medium">
+              <Link href="/services/medico-legal-support-services" className="text-sky-600 underline font-medium">
                 medical record summary services
               </Link>
               , record evaluation, standards-of-care comparison, and regulatory consultation, ensuring that each case is handled with diligence, accuracy, and legal credibility. We draw upon clinical guidelines, standard protocols, and graded levels of evidence to build robust legal strategies and defensible reports.

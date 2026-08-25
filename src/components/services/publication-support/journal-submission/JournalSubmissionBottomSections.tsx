@@ -128,7 +128,7 @@ export default function JournalSubmissionBottomSections() {
             <p className="text-xs sm:text-sm text-gray-600 max-w-3xl mx-auto leading-relaxed">
               At Pubrica, we recognize that navigating the{" "}
               <a
-                href="#"
+                href="/services/publication-support/journal-submission"
                 className="text-[#0082a6] hover:underline font-medium"
               >
                 journal submission

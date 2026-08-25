@@ -185,15 +185,15 @@ export default function MaterialSciencePage() {
 
                         <p className="text-gray-600 text-sm leading-relaxed">
                             At Pubrica, we provide specialised{" "}
-                            <Link href="#" className="text-sky-600 hover:underline">
+                            <Link href="/subject-matter-experts/material-science" className="text-sky-600 hover:underline">
                                 material science research services
                             </Link>
                             ,{" "}
-                            <Link href="#" className="text-sky-600 hover:underline">
+                            <Link href="/services/editing-and-translation/scientific-editing" className="text-sky-600 hover:underline">
                                 material science editing support
                             </Link>
                             , and{" "}
-                            <Link href="#" className="text-sky-600 hover:underline">
+                            <Link href="/services/publication-support" className="text-sky-600 hover:underline">
                                 publication support for material science
                             </Link>{" "}
                             tailored for scientists, scholars, academicians, and industry professionals working in diverse branches of Material Science. With a team of subject-matter experts, experienced PhD editors, and scientific consultants, we empower researchers to publish high-quality manuscripts in top-tier journals with confidence.
@@ -256,7 +256,7 @@ export default function MaterialSciencePage() {
                     </div>
                     <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                         As a trusted global research partner, Pubrica delivers structured scientific support tailored to researchers at all stages, from concept development to final publication. Our team includes experienced scientists, PhDs,{" "}
-                        <Link href="#" className="text-sky-600 hover:underline">
+                        <Link href="/subject-matter-experts" className="text-sky-600 hover:underline">
                             subject matter experts
                         </Link>
                         , and publication strategists with deep domain expertise in material science, nanotechnology, chemical engineering, and applied physics. Our services include:

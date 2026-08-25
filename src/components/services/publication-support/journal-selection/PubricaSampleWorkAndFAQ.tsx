@@ -208,10 +208,10 @@ export default function PubricaSampleWorkAndFAQ() {
 
             {/* Quick Links */}
             <div className="flex gap-8 mt-4 text-xs font-semibold">
-              <a href="#" className="text-red-700 hover:underline">
+              <a href="https://diabetescare.diabetesjournals.org/" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:underline">
                 Submit your Report
               </a>
-              <a href="#" className="text-red-700 hover:underline">
+              <a href="https://diabetesjournals.org/care/pages/instructions-for-authors" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:underline">
                 Guide for author
               </a>
             </div>

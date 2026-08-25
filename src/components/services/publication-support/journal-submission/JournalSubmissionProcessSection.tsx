@@ -76,7 +76,7 @@ export default function JournalSubmissionProcessSection() {
           </h2>
           <p className="text-xs sm:text-sm text-gray-600 leading-relaxed max-w-5xl">
             Our{" "}
-            <a href="#" className="text-[#0082a6] hover:underline font-medium">
+            <a href="/services/publication-support/journal-submission" className="text-[#0082a6] hover:underline font-medium">
               journal submission service
             </a>{" "}
             ensures a seamless and compliant submission process that meets the

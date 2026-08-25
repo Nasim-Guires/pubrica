@@ -18,7 +18,7 @@ const Page = () => {
     const interestingTopics = [
         { title: "Manuscript Editing", href: "/services/editing-and-translation/manuscript-editing" },
         { title: "Manuscript Guidelines", href: "/academy/manuscript-guidelines" },
-        { title: "Manuscript Writing", href: "/insights/medical-journey/manuscript-writing-journey" },
+        { title: "Manuscript Writing", href: "/insights/manuscript-writing-journey" },
         { title: "Manuscript Preparation guidelines", href: "/academy/manuscript-guidelines/strobe-guidelines-entail" },
         { title: "Manuscript Submission Guidelines", href: "/academy/manuscript-guidelines/scientific-writing" },
         { title: "Manuscript Editing Services", href: "/services/editing-and-translation/manuscript-editing" },
@@ -324,7 +324,7 @@ const Page = () => {
 
                 <div className="relative hidden h-full w-12 overflow-hidden sm:block sm:w-14">
                     <Image
-                        src="/images/grammar/written-content.jpg"
+                        src="https://pubrica-blog.vercel.app/api/media/file/Manuscript-preparation-guidelines-01-01.png"
                         alt="Previous Article"
                         fill
                         sizes="56px"
@@ -341,7 +341,7 @@ const Page = () => {
             >
                 <div className="relative hidden h-full w-12 overflow-hidden sm:block sm:w-14">
                     <Image
-                        src="/images/grammar/collaborative-process.jpg"
+                        src="https://pubrica-blog.vercel.app/api/media/file/template-01.png"
                         alt="Next Article"
                         fill
                         sizes="56px"

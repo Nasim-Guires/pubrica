@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 // --- Types ---
@@ -192,12 +193,12 @@ export default function TherapeuticComplianceAndSamples(): React.ReactElement {
                   Research Impact Sample Work
                 </h2>
                 <div>
-                  <a
-                    href="https://pubrica.com/insights/sample-work/"
+                  <Link
+                    href="/insights/sample-work"
                     className="inline-block bg-black hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold py-2.5 px-8 rounded-full transition-colors shadow-sm"
                   >
                     Discover More
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -210,12 +211,12 @@ export default function TherapeuticComplianceAndSamples(): React.ReactElement {
                   Explore our research impact sample work, expertly developed to align with stakeholder expectations, institutional impact frameworks, and global dissemination standards.
                 </p>
                 <div>
-                  <a
-                    href="https://pubrica.com/insights/sample-work/"
+                  <Link
+                    href="/insights/sample-work"
                     className="inline-block bg-black hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold py-2.5 px-8 rounded-full transition-colors shadow-sm"
                   >
                     Discover More
-                  </a>
+                  </Link>
                 </div>
               </div>
 

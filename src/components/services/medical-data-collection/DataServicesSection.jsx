@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // Data structure for accordion services
 const servicesData = [
@@ -159,13 +160,13 @@ export default function DataServicesSection() {
           </h2>
           <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
             At Pubrica, our medical{" "}
-            <a
-              href="#"
+            <Link
+              href="/services/medical-data-collection"
               title="Learn more about Pubrica medical data collection services"
               className="text-cyan-700 hover:underline font-medium decoration-cyan-700"
             >
               data collection services
-            </a>{" "}
+            </Link>{" "}
             cater to a wide spectrum of stakeholders in the clinical and
             healthcare research ecosystem, including:
           </p>

@@ -65,7 +65,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
           <div className="space-y-4 mb-8 max-w-6xl">
             <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed text-justify">
               We offer specialized{" "}
-              <a href="#" className="">
+              <a href="/services/physician-writing-services" className="text-[#3b82f6] hover:underline">
                 physician writing services
               </a>{" "}
               {leadParagraph.split("physician writing services")[1]}
@@ -84,7 +84,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
               </h3>
               <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed text-justify">
                 Pubrica's{" "}
-                <a href="/" className="text-[#3b82f6] ">
+                <a href="/services/physician-writing-services" className="text-[#3b82f6] hover:underline">
                   Physician Writing Services
                 </a>{" "}
                 {
@@ -92,7 +92,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                     .split("Physician Writing Services")[1]
                     .split("medical writing")[0]
                 }
-                <a href="/services/research-services/medical-writing" className="text-[#3b82f6]">
+                <a href="/services/medical-writing" className="text-[#3b82f6] hover:underline">
                   medical writing
                 </a>
                 {
@@ -158,7 +158,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                 } else if (bullet.includes("Plagiarism and AI-generated")) {
                   renderedText = (
                     <span>
-                      <a href="/services/publication-support/plagiarism-services/" className="text-[#3b82f6] hover:underline">
+                      <a href="/services/publication-support/plagiarism-services" className="text-[#3b82f6] hover:underline">
                         Plagiarism
                       </a>{" "}
                       and AI-generated article screening with a comprehensive
@@ -168,7 +168,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                 } else if (bullet.includes("Literature review")) {
                   renderedText = (
                     <span>
-                      <a href="/services/research-services/literature-review-and-gap/" className="text-[#3b82f6] hover:underline">
+                      <a href="/services/research-services/literature-review-and-gap" className="text-[#3b82f6] hover:underline">
                         Literature review
                       </a>{" "}
                       from PubMed, Embase,{" "}
