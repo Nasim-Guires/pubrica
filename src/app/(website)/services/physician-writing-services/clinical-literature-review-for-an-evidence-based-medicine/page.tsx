@@ -11,11 +11,11 @@ const page = () => {
         <>
             <ClinicalLiteratureReviewHero />
             <ClinicalReviewScopeAndApproach />
-            <CommonWhoWeServe
+            {/* <CommonWhoWeServe
                 title="Who We Serve"
                 description="Pubrica provides comprehensive literature search, evidence synthesis, and citation support for healthcare, life sciences, academia, regulatory organizations, and industry professionals seeking high-quality, publication-ready research."
                 data={literatureSearchWhoWeServe}
-            />
+            /> */}
             <ClinicalLiteratureReviewWorkflowAndCompliance />
             <ClinicalLiteratureReviewPackages />
             <CommonTestimonial

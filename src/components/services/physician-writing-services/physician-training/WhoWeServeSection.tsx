@@ -23,36 +23,36 @@ const whoWeServeData = [
   {
     title: "Hospitals, Health Systems & Medical Institutions",
     bullets: [
-      "Standardized clinical training modules for medical residents and fellows",
-      "Continuing medical education (CME) resources for hospital medical staff",
-      "Institutional guidelines and protocol implementation materials"
+      "Department or specialty-specific in-house clinical education content",
+      "Resources for residency programs, continuing professional development, and guideline updates",
+      "Dedicated customized resources to facilitate simulation-based or case-based learning"
     ],
     imageUrl: "/images/physician-writing-services/physician-training/Hospitals-Health-Systems-Medical-Institutions.jpg"
   },
   {
     title: "Academic & Research Institutions",
     bullets: [
-      "Manuscript writing and publication process training decks",
-      "Clinical research methodology and biostatistics workshop content",
-      "Grant writing and evidence synthesis instructional resources"
+      "Research methodology and publication training materials",
+      "Slide decks and learning guides for workshops and academic lectures",
+      "Support for grant-funded training programs and conference content"
     ],
     imageUrl: "/images/physician-writing-services/physician-training/Academic-Research-Institutions.jpg"
   },
   {
     title: "Healthcare Communication & CME Providers",
     bullets: [
-      "Accreditation-aligned slide decks, post-test questions, and syllabus development",
-      "Interactive case studies for online and in-person CME events",
-      "End-to-end educational content for medical education agencies"
+      "Co-branded or white-labelled educational content for physicians",
+      "CME-accredited module content aligned with global standards",
+      "Case studies, clinical guideline interpretation, and EBM workshops"
     ],
     imageUrl: "/images/physician-writing-services/physician-training/Healthcare-Communication-CME-Providers.jpg"
   },
   {
     title: "Nutraceutical & Life Sciences Companies",
     bullets: [
-      "Evidence-based education on dietary supplements and nutraceuticals",
-      "Mechanisms of action (MoA) visual decks for clinician education",
-      "Safety and clinical study summary training materials"
+      "Clinician education materials on supplements, formulations, and clinical research evidence",
+      "Slide decks on therapeutic benefits, pharmacokinetics, and safety",
+      "Literature-based content for integrative and functional medicine training"
     ],
     imageUrl: "/images/physician-writing-services/physician-training/Nutraceutical-Life-Sciences-Companies.jpg"
   }

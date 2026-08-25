@@ -97,10 +97,10 @@ export default function ClinicalLiteratureReviewHero() {
     };
 
     return (
-        <main className="min-h-screen bg-white py-8 text-slate-800">
-            <div className="max-w-6xl mx-auto px-4 space-y-12">
-                {/* 1. Hero Header */}
-                <section className="bg-[#1b3d39] text-white py-10 px-6 text-center rounded-lg shadow-md">
+        <main className="min-h-screen bg-white text-slate-800">
+            {/* 1. Full-Width Hero Banner */}
+            <section className="bg-[#1b3d39] text-white py-10 px-6 text-center w-full">
+                <div className="max-w-6xl mx-auto">
                     <h1 className="text-2xl md:text-3xl font-bold mb-3">
                         Clinical Literature Review for an Evidence-based Medicine
                     </h1>
@@ -108,8 +108,10 @@ export default function ClinicalLiteratureReviewHero() {
                         Systematically analyze and synthesize clinical research to support
                         evidence-based decision-making and improve patient care outcomes.
                     </p>
-                </section>
+                </div>
+            </section>
 
+            <div className="max-w-6xl mx-auto px-4 space-y-12 py-8">
                 {/* 2. Overview Section */}
                 <section className="space-y-4">
                     <h2 className="text-xl md:text-2xl font-bold text-slate-900 leading-tight">
@@ -135,15 +137,15 @@ export default function ClinicalLiteratureReviewHero() {
                                 medical device companies, by providing reliable, scientifically
                                 validated insights through{" "}
                                 <a
-                                    href="#"
-                                    className="text-sky-600 underline hover:text-sky-800"
+                                    href="/services/research-services/systematic-review/"
+                                    className="text-sky-600 hover:text-sky-800"
                                 >
                                     systematic review writing
                                 </a>{" "}
                                 and{" "}
                                 <a
-                                    href="#"
-                                    className="text-sky-600 underline hover:text-sky-800"
+                                    href="/services/research-services/medical-writing/"
+                                    className="text-sky-600 hover:text-sky-800"
                                 >
                                     high-quality medical writing
                                 </a>
@@ -169,7 +171,7 @@ export default function ClinicalLiteratureReviewHero() {
                                     <span className="text-red-500 font-bold">•</span>
                                     <span>
                                         Shaping health technology assessments (
-                                        <a href="#" className="text-sky-600 underline">
+                                        <a href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/health-technology-assessment-hta-overview/" className="text-sky-600">
                                             HTA
                                         </a>
                                         ) and regulatory submissions.
@@ -202,14 +204,14 @@ export default function ClinicalLiteratureReviewHero() {
                                 Using Pubrica’s multidisciplinary team consisting of clinical
                                 researchers, epidemiologists, biostatisticians, and content
                                 experts, we can ensure the{" "}
-                                <a href="#" className="text-sky-600 underline">
+                                <a href="/academy/research-services/literature-review-tips-introduction-discussion-sections/" className="text-sky-600">
                                     medical literature review
                                 </a>{" "}
                                 is accurate, methodologically robust, and clinically valid.
                             </p>
 
                             <div className="pt-4">
-                              <GetFreeQuoteButton/>
+                                <GetFreeQuoteButton />
                             </div>
                         </div>
 
@@ -233,7 +235,7 @@ export default function ClinicalLiteratureReviewHero() {
                     </h2>
                     <p className="text-xs md:text-sm text-slate-600 mb-8">
                         Pubrica provides end-to-end support for a{" "}
-                        <a href="#" className="text-sky-600 underline">
+                        <a href="/services/research-services/literature-review-and-gap" className="text-sky-600">
                             comprehensive literature review
                         </a>{" "}
                         to advance clinical research, product development, and regulatory

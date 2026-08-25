@@ -5,7 +5,7 @@ import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 export default function PhysicianTrainingHeroSection() {
   return (
     <div className="w-full bg-white text-slate-800">
-      
+
       {/* 1. Dark Top Banner / Header Card */}
       <section className="bg-[#122826] text-white py-12 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto border border-gray-500/40 p-6 sm:p-10 rounded-sm">
@@ -22,7 +22,7 @@ export default function PhysicianTrainingHeroSection() {
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            
+
             {/* Left Content Area */}
             <div className="lg:col-span-7 space-y-4">
               <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] leading-tight">
@@ -43,13 +43,13 @@ export default function PhysicianTrainingHeroSection() {
               </div>
 
               <div className="pt-2">
-                <GetFreeQuoteButton/>
+                <GetFreeQuoteButton />
               </div>
             </div>
 
             {/* Right Image Container with Accent Border */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="relative p-2 bg-[#122826] rounded-2xl shadow-xl">
+              <div className="relative p-2 rounded-2xl ">
                 <img
                   src="/images/physician-writing-services/physician-training/Physician-Training-Content-Development.webp"
                   alt="Medical team reviewing clinical training materials"
@@ -65,7 +65,7 @@ export default function PhysicianTrainingHeroSection() {
       {/* 3. "What We Do" & Services Covered List */}
       <section className="py-12 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] mb-3">
               What We do
@@ -76,13 +76,13 @@ export default function PhysicianTrainingHeroSection() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center pt-4">
-            
+
             {/* Left Overlapping Images Graphic */}
             <div className="lg:col-span-5 flex justify-center relative">
               <div className="relative w-full max-w-md h-[340px]">
                 {/* Background Shape / Backdrop */}
                 <div className="absolute inset-0 bg-[#e3f0ed] rounded-full blur-2xl opacity-60 -z-10" />
-                
+
                 {/* Image 1 (Top Left) */}
                 <div className="absolute top-0 left-0 w-3/5 h-48 rounded-xl overflow-hidden border-2 border-white shadow-lg z-10">
                   <img
@@ -93,7 +93,7 @@ export default function PhysicianTrainingHeroSection() {
                 </div>
 
                 {/* Image 2 (Bottom Right) */}
-               
+
               </div>
             </div>
 
@@ -107,7 +107,9 @@ export default function PhysicianTrainingHeroSection() {
                 <li className="flex items-start gap-2">
                   <span className="text-[#b31217] font-extrabold text-base leading-none mt-0.5">•</span>
                   <div>
-                    <span className="font-bold text-gray-900">Specialty-Specific Clinical Training Modules:</span> Created for General Medicine, Cardiology, Neurology, Oncology, Paediatrics, etc.
+                    <span className="font-bold text-gray-900">Specialty-Specific Clinical Training Modules:</span> Created for General Medicine,{" "}
+                    <a href="/subject-matter-experts/cardiology/" className="text-sky-600 ">Cardiology</a>,{" "}
+                    <a href="/subject-matter-experts/neurology/" className="text-sky-600 ">Neurology</a>, Oncology, Paediatrics, etc.
                   </div>
                 </li>
 
@@ -128,7 +130,11 @@ export default function PhysicianTrainingHeroSection() {
                 <li className="flex items-start gap-2">
                   <span className="text-[#b31217] font-extrabold text-base leading-none mt-0.5">•</span>
                   <div>
-                    <span className="font-bold text-gray-900">Guided Clinical Guidelines Interpretation:</span> Content announcing AHA, ADA, ESMO, NICE, and other evidence-based standards for standardized delivery of care.
+                    <span className="font-bold text-gray-900">Guided Clinical Guidelines Interpretation:</span> Content announcing{" "}
+                    <a href="https://www.heart.org/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">AHA</a>,{" "}
+                    <a href="https://diabetes.org/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">ADA</a>,{" "}
+                    <a href="https://www.esmo.org/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">ESMO</a>,{" "}
+                    <a href="https://www.nice.org.uk/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">NICE</a>, and other evidence-based standards for standardized delivery of care.
                   </div>
                 </li>
 

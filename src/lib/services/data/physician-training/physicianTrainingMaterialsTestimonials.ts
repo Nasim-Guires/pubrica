@@ -32,27 +32,27 @@ export const physicianTrainingMaterialsFaqs = [
   {
     question: "How can I create effective physician training and medical education content?",
     answer:
-      "Effective physician training content should be evidence-based, clinically relevant, and designed around clear learning objectives. It should incorporate interactive elements, case studies, current clinical guidelines, assessments, and sound instructional design principles to maximize learner engagement and knowledge retention.",
+      "Develop evidence-based and clinically relevant content with learning objectives, interactivity, case studies, guidelines, assessments, and instructional design principles.",
   },
   {
     question: "What are the best practices for developing CME and clinical training materials?",
     answer:
-      "Best practices include aligning content with accreditation standards, defining measurable learning objectives, using the latest evidence-based clinical information, incorporating interactive assessments and case-based learning, and regularly updating materials to reflect current medical guidelines and research.",
+      "The best practices for these purposes include meeting accreditation standards, setting clear objectives, using evidence-based content, including assessments, being interactive, and updating content.",
   },
   {
     question: "Which services provide physician training content development for healthcare organizations?",
     answer:
-      "Healthcare organizations can partner with professional medical writing services, medical education providers, clinical training consultants, CME development companies, and medical communications agencies to create high-quality physician training materials tailored to their educational objectives.",
+      "Services offered include professional medical writing services, health education services, clinical training consultants, CME development companies, and medical communication companies.",
   },
   {
     question: "How can hospitals and pharmaceutical companies outsource medical education content creation?",
     answer:
-      "Hospitals and pharmaceutical companies can outsource medical education content by collaborating with experienced medical education agencies, clearly defining project scope and objectives, ensuring regulatory and scientific compliance, establishing realistic timelines, and implementing robust quality assurance processes.",
+      "They can outsource by collaborating with seasoned medical education agencies, establishing the project scope, ensuring compliance, establishing timelines, and checking quality standards.",
   },
   {
     question: "What formats are commonly used for physician training modules and clinical education programs?",
     answer:
-      "Physician training content is commonly delivered through e-learning modules, webinars, instructor-led workshops, simulation-based training, interactive presentations, clinical manuals, case studies, educational videos, and Continuing Medical Education (CME) programs.",
+      "Formats in which medical education content is created include e-learning, webinars, workshops, simulation, interactive presentations, clinical manuals, case studies, videos, and CME programs",
   },
 ];
 

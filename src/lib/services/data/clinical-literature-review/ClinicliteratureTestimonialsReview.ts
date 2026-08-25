@@ -126,42 +126,42 @@ export const clinicalLiteratureReviewFaqs = [
     question:
       "How can I conduct a clinical literature review for evidence-based medicine?",
     answer:
-      "Conduct a clinical literature review by performing a structured search in medical databases, applying predefined inclusion and exclusion criteria, critically appraising the available evidence, and synthesizing findings using evidence-based medicine principles to support clinical decision-making.",
+      "Performing a structured search in medical databases, applying inclusion criteria, critically evaluating the evidence, and using evidence-based guidelines to draw reliable conclusions in practice.",
   },
   {
     question:
       "What is the process of performing a systematic review in clinical research?",
     answer:
-      "A systematic review involves developing a research protocol, defining a focused research question, conducting a comprehensive literature search, screening studies, assessing study quality, extracting data, synthesizing evidence, and reporting the findings according to PRISMA guidelines.",
+      "Establishing a protocol, developing a research question, performing a structured search, screening sources, evaluating sources, extracting findings, synthesizing findings, and reporting using PRISMA guidelines.",
   },
   {
     question:
       "What are the common challenges in evidence-based literature reviews?",
     answer:
-      "Common challenges include limited access to relevant literature, publication bias, heterogeneous study designs, inconsistent methodologies, time-consuming screening, critical appraisal difficulties, and maintaining objectivity throughout the review process.",
+      "The challenges that may be encountered include limited access to sources, heterogeneity, publication bias, time constraints, inconsistency in methodologies, screening sources, and subjectivity during critical evaluation.",
   },
   {
     question:
       "Which tools are used for screening and selecting research studies?",
     answer:
-      "Researchers commonly use tools such as Rayyan, Covidence, EndNote, Zotero, and PRISMA-based workflows to manage references, screen studies, remove duplicates, and document the systematic review process efficiently.",
+      "Various software, such as Rayyan, Covidence, EndNote, Zotero, and PRISMA, are used for efficient screening, management, and selecting studies for inclusion in the systematic review.",
   },
   {
     question:
       "How can I formulate a research question for a clinical literature review?",
     answer:
-      "Develop a focused research question using frameworks such as PICO (Population, Intervention, Comparison, Outcome) to create a structured, searchable, and clinically relevant question for evidence synthesis.",
+      "Formulate research questions using tools such as PICO, which stand for population, intervention, comparison, and outcomes, for structured and searchable clinical review questions.",
   },
   {
     question:
       "What are the steps involved in conducting an evidence-based review?",
     answer:
-      "An evidence-based review includes defining the research question, developing a review protocol, conducting a systematic literature search, screening studies, assessing methodological quality, extracting relevant data, synthesizing evidence, and reporting findings transparently.",
+      "The steps in the process are as follows: defining the question, developing a protocol, conducting a search, screening studies, quality assessment, data extraction, and synthesis and reporting",
   },
   {
     question:
       "What is the difference between a systematic review and a clinical literature review?",
     answer:
-      "A systematic review follows a predefined protocol, comprehensive search strategy, and standardized methodology to minimize bias, whereas a clinical literature review is generally broader, narrative in nature, and may not follow a formal systematic process.",
+      "A systematic review is conducted with a structured methodology, a protocol, and is pre-defined, while a clinical literature review is not necessarily structured, narrative, and even broad in scope.",
   },
 ];

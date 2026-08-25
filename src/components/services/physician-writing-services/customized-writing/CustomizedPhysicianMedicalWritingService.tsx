@@ -17,6 +17,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Link from "next/link";
 
 interface OfferCard {
   id: number;
@@ -155,13 +156,13 @@ export default function CustomizedPhysicianMedicalWritingService() {
                 <li className="flex items-start gap-2">
                   <span className="text-red-600 font-bold">•</span>
                   <span>
-                    Authored by domain-specific <span className="text-sky-700 font-medium">subject matter experts</span> with a clinical background
+                    Authored by domain-specific <Link href="/subject-matter-experts" className="text-sky-700 font-medium">subject matter experts</Link> with a clinical background
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-red-600 font-bold">•</span>
                   <span>
-                    Adheres to <span className="text-sky-700 font-medium">ICMJE</span>, GPP3, and target journal formatting standards
+                    Adheres to <Link href="https://www.icmje.org/" className="text-sky-700 font-medium">ICMJE</Link>, GPP3, and target journal formatting standards
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -193,10 +194,10 @@ export default function CustomizedPhysicianMedicalWritingService() {
           <div className="lg:col-span-5 relative pt-4">
             <div className="relative">
               {/* Dark Green Offset Backdrop */}
-              <div className="absolute inset-0 bg-[#0e211e] rounded-xl transform translate-x-3 translate-y-3 -z-0"></div>
+              <div className="absolute inset-0 rounded-xl transform translate-x-3 translate-y-3 -z-0"></div>
               
               {/* Foreground Image */}
-              <div className="relative z-10 rounded-xl overflow-hidden shadow-lg border border-slate-200">
+              <div className="relative z-10 rounded-xl overflow-hidden  border-slate-200">
                 <Image
                   src="/images/physician-writing-services/customized-writing/Customized-Medical-Writing-Services-Exclusively-for-Physicians.webp"
                   alt="Physicians reviewing clinical documents"

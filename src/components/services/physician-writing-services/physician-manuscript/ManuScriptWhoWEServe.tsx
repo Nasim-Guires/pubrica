@@ -399,7 +399,7 @@ export default function PhysicianManuscriptWorkflowSection() {
                         Our packages are designed for flexibility depending on your needs, whether your request involves end-to-end publication assistance or specific individual components of publication.
                     </p>
                     <p className="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
-                        For details on the packages and pricing, you may contact us or view our <Link href="#" className="text-sky-600 underline hover:text-sky-800">Physician Manuscript Service Plans</Link>.
+                        For details on the packages and pricing, you may contact us or view ourPhysician Manuscript Service Plans.
                     </p>
                 </div>
             </section>

@@ -22,7 +22,7 @@ export const physicianManuscriptWritingTestimonials = [
         quote:
             "My experience with Pubrica’s physician manuscript writing team exceeded expectations. They transformed complex clinical data into a well-organized article for BMJ Neurology Open. The statistical reporting was accurate and fully compliant with journal standards.",
         name: "Dr. H. Al-Falahi",
-        designation: "Neurologist",
+        designation: "Neurologist", 
         organization: "UAE",
         flag: "/images/physician-writing-services/literature-search-and-citation/united-arab-emirates.png",
     },
@@ -32,22 +32,22 @@ export const physicianManuscriptWritingFaqs = [
   {
     question: "What should be included in a physician-authored research manuscript?",
     answer:
-      "A physician-authored research manuscript should include a structured abstract, introduction, methodology, results, discussion, conclusion, ethical approval, patient consent (where applicable), references, and compliance with the target journal’s author guidelines.",
+      "It includes the structured abstract, introduction, methodology, results, discussion, conclusion, ethical approval, patient consent, references, and journal guideline compliance.",
   },
   {
     question: "What are the different types of medical manuscripts for journal publication?",
     answer:
-      "Common types of medical manuscripts include original research articles, systematic reviews, meta-analyses, case reports, clinical trial reports, narrative reviews, brief reports, editorials, and letters to the editor. The appropriate format depends on the study design and journal requirements.",
+      "The different types of articles are original research articles, systematic review articles, meta-analysis articles, case reports, clinical trial articles, review articles, brief reports, editorials, and letters to the editor.",
   },
   {
     question: "How can research teams standardize manuscript writing workflows?",
     answer:
-      "Research teams can standardize manuscript writing by using predefined templates, clearly assigning author roles and responsibilities, following reporting guidelines, implementing version control systems, utilizing reference management tools, and conducting structured internal reviews before submission.",
+      "It can be standardized by using templates, author roles and responsibilities, reporting guidelines, version control systems, reference management tools, and internal review processes.",
   },
   {
     question: "What are the authorship criteria for physician research publications?",
     answer:
-      "Authorship should be based on substantial contributions to the study, drafting or critically revising the manuscript, approving the final version for publication, and accepting responsibility for the accuracy, integrity, and accountability of the research.",
+      "Authorship criteria include substantial contribution, drafting or revising the manuscript, approval, and being accountable for all aspects of the study, integrity, and accuracy.",
   },
 ];
 
