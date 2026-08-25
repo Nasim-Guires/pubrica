@@ -8,7 +8,6 @@ export const scientificGrantReviewWorkflowData = {
       title: "Upload Your Grant Proposal",
       description:
         "Upload your grant proposal to Pubrica's platform, detailing your requirements.",
-      iconSrc: "/images/workflow/step-1.svg",
       position: "top",
     },
     {
@@ -16,7 +15,6 @@ export const scientificGrantReviewWorkflowData = {
       title: "Expert Editor Assignment",
       description:
         "An expert editor is assigned based on your field and project needs.",
-      iconSrc: "/images/workflow/step-2.svg",
       position: "bottom",
     },
     {
@@ -24,7 +22,6 @@ export const scientificGrantReviewWorkflowData = {
       title: "Meticulous Review",
       description:
         "Your proposal undergoes meticulous review, refining language, structure, and clarity.",
-      iconSrc: "/images/workflow/step-3.svg",
       position: "top",
     },
     {
@@ -32,7 +29,6 @@ export const scientificGrantReviewWorkflowData = {
       title: "Receive Your Polished Proposal",
       description:
         "Receive your polished grant proposal within the agreed timeframe, optimized for impact and success.",
-      iconSrc: "/images/workflow/step-4.svg",
       position: "bottom",
     },
   ],

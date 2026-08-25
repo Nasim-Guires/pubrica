@@ -35,33 +35,41 @@ const offerings: ServiceOffering[] = [
         Development of complete original research articles in IMRAD format
         (Introduction, Methods, Results, and Discussion), tailored to your
         target journal&apos;s style and scientific focus.{" "}
-        <Link
-          href="/journals/nejm"
+        <a
+          href="https://www.nejm.org/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-sky-600 hover:underline font-medium"
         >
           NEJM
-        </Link>
+        </a>
         ,{" "}
-        <Link
-          href="/journals/jama"
+        <a
+          href="https://jamanetwork.com/journals/jama"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-sky-600 hover:underline font-medium"
         >
           JAMA
-        </Link>
+        </a>
         ,{" "}
-        <Link
-          href="/journals/the-lancet"
+        <a
+          href="https://www.thelancet.com/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-sky-600 hover:underline font-medium"
         >
           The Lancet
-        </Link>
+        </a>
         ,{" "}
-        <Link
-          href="/journals/bmj"
+        <a
+          href="https://www.bmj.com/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-sky-600 hover:underline font-medium"
         >
           BMJ
-        </Link>
+        </a>
         , Elsevier, Springer, and others.
       </>
     ),
@@ -71,33 +79,41 @@ const offerings: ServiceOffering[] = [
     description: (
       <>
         Strictly adhere to{" "}
-        <Link
-          href="/guidelines/icmje"
+        <a
+          href="https://www.icmje.org/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-sky-600 hover:underline font-medium"
         >
           ICMJE
-        </Link>
+        </a>
         ,{" "}
-        <Link
-          href="/guidelines/consort"
+        <a
+          href="https://www.consort-statement.org/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-sky-600 hover:underline font-medium"
         >
           CONSORT
-        </Link>
+        </a>
         ,{" "}
-        <Link
-          href="/guidelines/strobe"
+        <a
+          href="https://www.strobe-statement.org/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-sky-600 hover:underline font-medium"
         >
           STROBE
-        </Link>
+        </a>
         ,{" "}
-        <Link
-          href="/guidelines/prisma"
+        <a
+          href="https://www.prisma-statement.org/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-sky-600 hover:underline font-medium"
         >
           PRISMA
-        </Link>
+        </a>
         , and EQUATOR guidelines. We support IRB approvals and clinical trial
         registration (CTRI/ClinicalTrials.gov), and ethical disclosures for
         human and animal research.
@@ -110,7 +126,7 @@ const offerings: ServiceOffering[] = [
       <>
         All documents are{" "}
         <Link
-          href="/services/plagiarism-check"
+          href="/services/publication-support/plagiarism-services"
           className="text-sky-600 hover:underline font-medium"
         >
           plagiarism

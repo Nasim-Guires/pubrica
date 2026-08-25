@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function UniversityPartnershipPage() {
     return (
@@ -210,19 +211,19 @@ export default function UniversityPartnershipPage() {
                 <h3 className="font-bold text-lg text-[#26373b] mb-4">The latest from Pubrica</h3>
                 <ul className="space-y-2 text-xs text-blue-800">
                     <li>
-                        <a href="#" className="hover:underline flex items-center gap-2">
+                        <Link href="/academy/industry-news" className="hover:underline flex items-center gap-2">
                             <span>▶</span> COASP Meeting 2016: Pubrica Report in Science Editor
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#" className="hover:underline flex items-center gap-2">
+                        <Link href="/academy/industry-news" className="hover:underline flex items-center gap-2">
                             <span>▶</span> Council of Science Editors (CSE) Annual Meeting 2016:Pubrica Report in CSE
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#" className="hover:underline flex items-center gap-2">
+                        <Link href="/academy/industry-news" className="hover:underline flex items-center gap-2">
                             <span>▶</span> Open Access Publishing Decoded at the 8th COASP Meeting
-                        </a>
+                        </Link>
                     </li>
                 </ul>
                 <div className="mt-4">

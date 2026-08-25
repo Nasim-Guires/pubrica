@@ -146,7 +146,7 @@ const AIDataPreparationSections: NextPage = () => {
                                 </div>
                             </div>
 
-                            <Link href="#" className="w-full text-center py-2 border border-gray-200 rounded-lg text-xs font-bold text-gray-800 hover:bg-gray-50 transition-colors">
+                            <Link href="/about-us/our-editors" className="w-full text-center py-2 border border-gray-200 rounded-lg text-xs font-bold text-gray-800 hover:bg-gray-50 transition-colors">
                                 Read More
                             </Link>
                         </div>
@@ -171,7 +171,7 @@ const AIDataPreparationSections: NextPage = () => {
                             AI and Data Preparation Services Sample Work
                         </h2>
                         <div>
-                            <Link href="#" className="inline-block bg-black text-white font-bold text-xs py-3 px-8 rounded-full hover:bg-gray-800 transition-colors shadow">
+                            <Link href="/insights/sample-work" className="inline-block bg-black text-white font-bold text-xs py-3 px-8 rounded-full hover:bg-gray-800 transition-colors shadow">
                                 Discover More
                             </Link>
                         </div>
@@ -184,7 +184,7 @@ const AIDataPreparationSections: NextPage = () => {
                                 Discover our AI and Data Preparation Sample Work created by professionals to meet Research Standards, to fulfil AI Readiness Saved art, and to provide you with quality data that will yield consistent and meaningful results.
                             </p>
                             <div className="pt-2">
-                                <Link href="#" className="inline-block bg-black text-white font-bold text-xs py-3 px-8 rounded-full hover:bg-gray-800 transition-colors shadow">
+                                <Link href="/insights/sample-work" className="inline-block bg-black text-white font-bold text-xs py-3 px-8 rounded-full hover:bg-gray-800 transition-colors shadow">
                                     Discover More
                                 </Link>
                             </div>

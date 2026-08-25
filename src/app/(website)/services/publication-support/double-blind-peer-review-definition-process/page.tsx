@@ -61,7 +61,7 @@ export default function PeerReviewPage() {
             {/* Banner / Header Image Section */}
             <div className="relative w-full h-64 md:h-80 bg-slate-800 flex items-center justify-center overflow-hidden">
                 <Image
-                    src="/images/banner-analytics.jpg" // Place your banner image in public/images/
+                    src="https://pubrica.com/wp-content/uploads/2024/06/pubrica-service-and-sample-work-1024x644.webp"
                     alt="Double-Blind Peer Review Background Header"
                     fill
                     priority

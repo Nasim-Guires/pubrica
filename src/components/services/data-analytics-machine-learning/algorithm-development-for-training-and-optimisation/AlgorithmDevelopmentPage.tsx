@@ -143,7 +143,7 @@ export default function AlgorithmDevelopmentService() {
                             handling vast, complex datasets, ensuring privacy and regulatory
                             compliance, and converting raw information into actionable
                             insights. At Pubrica, we specialize in custom{" "}
-                            <a href="#" className="text-teal-700 underline font-medium">
+                            <a href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-teal-700 underline font-medium">
                                 algorithm development
                             </a>{" "}
                             for scientific, healthcare, pharma, medical device, food, and
@@ -178,7 +178,7 @@ export default function AlgorithmDevelopmentService() {
                                         Proven experience:
                                     </strong>{" "}
                                     Over 350+{" "}
-                                    <a href="#" className="text-teal-700 underline">
+                                    <a href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-teal-700 underline">
                                         algorithms
                                     </a>{" "}
                                     developed and optimized for global clients.

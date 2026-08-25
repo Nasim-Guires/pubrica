@@ -146,7 +146,7 @@ export default function CeramicEngineeringExpertisePage() {
                         </p>
 
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            At Pubrica, we provide targeted Ceramic Engineering Solutions, targeted <Link href="/services/research-support" className="text-blue-600 hover:underline">Research Support</Link> for those involved in Research in this area, and overall Academic Solutions specifically for Researchers, Scholars, and Industry Professionals conducting research or working within the domain of Ceramic Engineering. By doing so, we are striving to support increases in the overall Quality, Technical Accuracy, and Global Reach of Research Outputs produced within the field of Ceramic Engineering.
+                            At Pubrica, we provide targeted Ceramic Engineering Solutions, targeted <Link href="/services/research-services" className="text-blue-600 hover:underline">Research Support</Link> for those involved in Research in this area, and overall Academic Solutions specifically for Researchers, Scholars, and Industry Professionals conducting research or working within the domain of Ceramic Engineering. By doing so, we are striving to support increases in the overall Quality, Technical Accuracy, and Global Reach of Research Outputs produced within the field of Ceramic Engineering.
                         </p>
 
                         {/* CTA Button */}

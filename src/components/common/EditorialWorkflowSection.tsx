@@ -5,7 +5,7 @@ export interface WorkflowStep {
   stepNumber: string | number;
   title: string;
   description: string;
-  iconSrc: string;
+  iconSrc?: string;
   position: string;
 }
 
@@ -71,15 +71,17 @@ export const EditorialWorkflowSection: React.FC<
                 }`}
               >
                 <div className="bg-white border border-gray-100 rounded-lg shadow-sm p-4 flex flex-col items-center text-center w-full z-10">
-                  <div className="w-10 h-10 relative mb-2 flex items-center justify-center">
-                    <Image
-                      src={step.iconSrc}
-                      alt={step.title}
-                      width={32}
-                      height={32}
-                      className="object-contain"
-                    />
-                  </div>
+                  {step.iconSrc && (
+                    <div className="w-10 h-10 relative mb-2 flex items-center justify-center">
+                      <Image
+                        src={step.iconSrc}
+                        alt={step.title}
+                        width={32}
+                        height={32}
+                        className="object-contain"
+                      />
+                    </div>
+                  )}
 
                   <h4 className="font-bold text-slate-900 text-xs uppercase tracking-wider mb-2">
                     {step.title}
@@ -121,15 +123,17 @@ export const EditorialWorkflowSection: React.FC<
 
               {/* Card */}
               <div className="bg-white border border-gray-200 shadow-sm p-4 lg:p-6 flex flex-col items-center text-center w-full flex-grow transition-all duration-300 group-hover:bg-black group-hover:border-black">
-                <div className="w-10 h-10 lg:w-12 lg:h-12 relative mb-3 lg:mb-4 flex items-center justify-center">
-                  <Image
-                    src={step.iconSrc}
-                    alt={step.title}
-                    width={36}
-                    height={36}
-                    className="object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
-                  />
-                </div>
+                {step.iconSrc && (
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 relative mb-3 lg:mb-4 flex items-center justify-center">
+                    <Image
+                      src={step.iconSrc}
+                      alt={step.title}
+                      width={36}
+                      height={36}
+                      className="object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                    />
+                  </div>
+                )}
 
                 <h4 className="font-bold text-slate-900 text-xs md:text-sm lg:text-base mb-2 lg:mb-3 leading-snug transition-colors duration-300 group-hover:text-white">
                   {step.title}

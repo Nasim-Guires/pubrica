@@ -111,7 +111,7 @@ export default function PatientEducationPackagesAndPricing() {
               </h2>
               <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
                 For Pubrica&apos;s{" "}
-                <Link href="#" className="text-sky-300 hover:underline">
+                <Link href="/services/physician-writing-services/patient-education-content" className="text-sky-300 hover:underline">
                   patient education content
                 </Link>{" "}
                 development services: Acquire personalized assistance navigating
@@ -140,7 +140,7 @@ export default function PatientEducationPackagesAndPricing() {
             </h2>
             <p className="text-slate-700 text-base sm:text-lg leading-relaxed max-w-5xl">
               Pubrica offers medically accurate, guideline-compliant{" "}
-              <Link href="#" className="text-[#0a66bc] hover:underline">
+              <Link href="/services/physician-writing-services/patient-education-content" className="text-[#0a66bc] hover:underline">
                 patient education content
               </Link>{" "}
               developed by healthcare experts, optimized for comprehension, and
@@ -252,7 +252,7 @@ export default function PatientEducationPackagesAndPricing() {
               </h3>
               <div>
                 <Link
-                  href="/samples"
+                  href="/insights/sample-work"
                   className="inline-block bg-black hover:bg-neutral-800 text-white font-semibold px-8 py-3 rounded-full transition-colors text-sm sm:text-base shadow-sm"
                 >
                   Discover More
@@ -266,7 +266,7 @@ export default function PatientEducationPackagesAndPricing() {
               </h3>
               <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
                 Explore our{" "}
-                <Link href="#" className="text-[#0a66bc] hover:underline">
+                <Link href="/services/physician-writing-services/patient-education-content" className="text-[#0a66bc] hover:underline">
                   patient education content samples
                 </Link>
                 , designed for clinical accuracy, health literacy, and ready use
@@ -274,7 +274,7 @@ export default function PatientEducationPackagesAndPricing() {
               </p>
               <div>
                 <Link
-                  href="/download-report"
+                  href="/insights/sample-work"
                   className="inline-block bg-black hover:bg-neutral-800 text-white font-semibold px-8 py-3 rounded-full transition-colors text-sm sm:text-base shadow-sm"
                 >
                   Discover More

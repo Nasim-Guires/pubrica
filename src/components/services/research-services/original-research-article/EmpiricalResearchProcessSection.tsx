@@ -18,7 +18,7 @@ const processSteps: ProcessStep[] = [
         understand their research question, methodology, target journal, and
         audience. Then we assign{" "}
         <Link
-          href="/about/subject-matter-experts"
+          href="/subject-matter-experts"
           className="text-sky-600 hover:underline"
         >
           subject-matter experts

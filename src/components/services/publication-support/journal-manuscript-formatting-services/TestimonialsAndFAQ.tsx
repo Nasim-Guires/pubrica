@@ -114,7 +114,7 @@ export default function TestimonialsAndFAQ() {
         <p className="text-xs md:text-sm text-gray-700 leading-relaxed max-w-4xl mb-8">
           Learn how Pubrica’s{" "}
           <a
-            href="/insights/sample-work/citation-styles-apa-ama-mla-vancouver-chicago"
+            href="/insights/citation-styles-apa-ama-mla-vancouver-chicago"
             className="text-[#3b82f6] hover:underline"
           >
             manuscript formatting service

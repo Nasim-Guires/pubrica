@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Scientific Developmental Editing for High-Impact Journal Publishing | Pubrica',
@@ -119,42 +120,42 @@ export default function Page() {
             </h3>
             <ul className="space-y-2 text-xs text-gray-700">
               <li>
-                <a href="#" className="hover:text-blue-600">
+                <a href="/services/editing-and-translation/manuscript-editing" className="hover:text-blue-600">
                   Manuscript Editing
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-600">
+                <Link href="/academy/manuscript-guidelines" className="hover:text-blue-600">
                   Manuscript Guidelines
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-600">
+                <a href="/services/physician-writing-services/physician-manuscript" className="hover:text-blue-600">
                   Manuscript Writing
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-600">
+                <a href="/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission" className="hover:text-blue-600">
                   Manuscript Preparation guidelines
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-600">
+                <Link href="/academy/manuscript-submission" className="hover:text-blue-600">
                   Manuscript Submission Guidelines
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-600">
+                <a href="/services/editing-and-translation/manuscript-editing" className="hover:text-blue-600">
                   Manuscript Editing Services
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-600">
+                <Link href="/academy" className="hover:text-blue-600">
                   Study Guides
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-600">
+                <a href="/services/research-services/scientific-writing" className="hover:text-blue-600">
                   Scientific Writing
                 </a>
               </li>
@@ -172,7 +173,7 @@ export default function Page() {
             Scientific developmental editing is a high-level, substantive review that refines a
             manuscript&apos;s logic, structure, data presentation, and argumentative flow to meet the
             rigorous standards of high-impact journals (e.g., <em>Nature</em>, <em>Lancet</em>).{' '}
-            <a href="#" className="text-[#2b7bb9] hover:underline">
+            <a href="/services/editing-and-translation/scientific-editing" className="text-[#2b7bb9] hover:underline">
               Scientific Manuscript Editing Services
             </a>{' '}
             contribute to this process by improving structural coherence and strengthening scholarly
@@ -183,7 +184,7 @@ export default function Page() {
           <p>
             Publishing in high-impact journals does not just require strong data; it also requires clarity,
             coherence, good methodological practices, and an effective position of your work. Through{' '}
-            <a href="#" className="text-[#2b7bb9] hover:underline">
+            <a href="/services/editing-and-translation/scientific-editing/scientific-developmental-editing-high-impact-journals" className="text-[#2b7bb9] hover:underline">
               High Impact Journal Manuscript Editing
             </a>
             , authors can strategically position their research for competitive peer review. Scientific
@@ -316,7 +317,7 @@ export default function Page() {
             </ul>
             <p>
               These principles form the foundation of{' '}
-              <a href="#" className="text-[#2b7bb9] hover:underline">
+              <a href="/services/editing-and-translation/scientific-editing/scientific-developmental-editing-high-impact-journals" className="text-[#2b7bb9] hover:underline">
                 scientific developmental editing services
               </a>
               .
@@ -390,7 +391,7 @@ export default function Page() {
             <p>
               Developmental editing helps to ensure submissions meet these high standards before being
               sent for review, thus greatly enhancing their chances of being reviewed favourably.{' '}
-              <a href="#" className="text-[#2b7bb9] hover:underline">
+              <a href="/services/editing-and-translation/scientific-editing/scientific-developmental-editing-high-impact-journals" className="text-[#2b7bb9] hover:underline">
                 Developmental Editing for Academic Journals
               </a>{' '}
               ensures that manuscripts are carefully refined to meet these expectations.
@@ -427,7 +428,7 @@ export default function Page() {
               must provide published materials that are clear, rigorous, transparent and therefore
               successful in the current publishing environment, where computational academic publishing
               and other forms of scholarly communication exist. With{' '}
-              <a href="#" className="text-[#2b7bb9] hover:underline">
+              <a href="/services/academic-editorial-services" className="text-[#2b7bb9] hover:underline">
                 Professional Academic Editing Services
               </a>
               , authors can confidently prepare manuscripts that meet international publication
@@ -438,11 +439,11 @@ export default function Page() {
               <span className="text-[#2b7bb9] hover:underline cursor-pointer">Pubrica&apos;s</span> expert
               scientific developmental editors to refine your manuscript&apos;s structure, strengthen
               methodology, and align with high-impact journal standards.{' '}
-              <a href="#" className="text-[#2b7bb9] hover:underline">
+              <a href="/contact-us" className="text-[#2b7bb9] hover:underline">
                 [Get Expert Publishing Support]
               </a>{' '}
               or{' '}
-              <a href="#" className="text-[#2b7bb9] hover:underline">
+              <a href="/contact-us" className="text-[#2b7bb9] hover:underline">
                 [Schedule a Free Consultation]
               </a>
             </p>

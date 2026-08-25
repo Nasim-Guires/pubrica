@@ -15,7 +15,7 @@ const MedicalDeviceIndustryPage: NextPage = () => {
         />
         <link 
           rel="canonical" 
-          href="https://pubrica.com/industries/medical-device/" 
+          href="/Industries/medical-device" 
         />
       </Head>
 

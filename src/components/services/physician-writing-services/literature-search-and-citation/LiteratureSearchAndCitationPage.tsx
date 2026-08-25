@@ -40,7 +40,7 @@ export default function LiteratureSearchAndCitationPage() {
 
             <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
               For PhD scholars, researchers, authors, or product developers, industry-affiliated scientists preparing a manuscript, thesis, or systematic review, a comprehensive scientific literature search is essential. Our expert{' '}
-              <Link href="#" className="text-sky-600 hover:underline">
+              <Link href="/services/physician-writing-services/literature-search-and-citation" className="text-sky-600 hover:underline">
                 literature search and citation
               </Link>{' '}
               service is designed to locate relevant, credible, and recent peer-reviewed, high-impact studies for a variety of needs, from academic publishing to product formulation and ingredient validation that directly support your research or product objectives. We offer:
@@ -59,9 +59,9 @@ export default function LiteratureSearchAndCitationPage() {
                 <span className="text-red-600 mr-2 font-bold">•</span>
                 <span>
                   Regulatory-backed evidence gathering for product claims (e.g.,{' '}
-                  <Link href="#" className="text-sky-600 hover:underline">FDA</Link>,{' '}
-                  <Link href="#" className="text-sky-600 hover:underline">EFSA</Link>,{' '}
-                  <Link href="#" className="text-sky-600 hover:underline">AYUSH</Link>)
+                  <a href="https://www.fda.gov/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">FDA</a>,{' '}
+                  <a href="https://www.efsa.europa.eu/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">EFSA</a>,{' '}
+                  <a href="https://www.ayush.gov.in/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">AYUSH</a>)
                 </span>
               </li>
               <li className="flex items-start">
@@ -84,7 +84,7 @@ export default function LiteratureSearchAndCitationPage() {
 
             <p className="text-gray-700 leading-relaxed text-sm sm:text-base pt-2">
               Our team of domain-specific experts dives deep into PubMed, Scopus, Web of Science, Google Scholar, and regulatory databases to find high-quality studies. We provide well-organized evidence libraries, annotated bibliographies, and summary notes to support your research, innovation, or publication. With our literature search and citation service,{' '}
-              <Link href="#" className="text-sky-600 hover:underline">
+              <Link href="/subject-matter-experts" className="text-sky-600 hover:underline">
                 subject matter experts
               </Link>{' '}
               search, filter, and cite credible scientific papers to enhance your manuscript or project.
@@ -127,11 +127,11 @@ export default function LiteratureSearchAndCitationPage() {
                 <span className="text-red-600 mr-2 font-bold">•</span>
                 <div>
                   <strong>Comprehensive Literature Review:</strong> We carefully conduct a literature review to identify and summarise the most common and relevant papers to support your manuscript and align with your research topic. This offers you one more element of Pubrica&apos;s{' '}
-                  <Link href="#" className="text-sky-600 hover:underline">
+                  <Link href="/services/research-services/scientific-writing" className="text-sky-600 hover:underline">
                     scientific writing
                   </Link>{' '}
                   and{' '}
-                  <Link href="#" className="text-sky-600 hover:underline">
+                  <Link href="/services/medical-writing" className="text-sky-600 hover:underline">
                     medical writing
                   </Link>{' '}
                   services to support evidence-based production of content.
@@ -142,7 +142,7 @@ export default function LiteratureSearchAndCitationPage() {
                 <span className="text-red-600 mr-2 font-bold">•</span>
                 <div>
                   <strong>Accurate Citation Management:</strong> We make sure all references are accurately cited in your manuscript within the formatting requirements of your intended journal. This is complemented by our{' '}
-                  <Link href="#" className="text-sky-600 hover:underline">
+                  <Link href="/services/publication-support/journal-selection" className="text-sky-600 hover:underline">
                     journal selection
                   </Link>{' '}
                   service, which tailors your manuscript citations to be consistent with the scope and formatting requirements of a selected group of high-impact journals.
@@ -153,7 +153,7 @@ export default function LiteratureSearchAndCitationPage() {
                 <span className="text-red-600 mr-2 font-bold">•</span>
                 <div>
                   <strong>Reviewer Management:</strong> We offer accurate contact details to help recommend or exclude reviewers to improve the peer review process. Our{' '}
-                  <Link href="#" className="text-sky-600 hover:underline">
+                  <Link href="/services/publication-support/plagiarism-services" className="text-sky-600 hover:underline">
                     plagiarism
                   </Link>{' '}
                   check service also helps ensure the integrity of each manuscript during the reviewer evaluation process.

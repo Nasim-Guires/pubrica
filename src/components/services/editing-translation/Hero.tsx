@@ -43,11 +43,11 @@ export default function Hero() {
         {/* Description */}
         <p className="text-[17px] leading-8 text-slate-700">
           Pubrica provides{" "}
-          <a href="#" className="text-[#4180A8]">
+          <a href="/services/editing-and-translation/manuscript-editing" className="text-[#4180A8]">
             manuscript editing
           </a>{" "}
           and academic translation services tailored for healthcare,
-          <a href="#" className="text-[#4180A8]">
+          <a href="/subject-matter-experts/life-sciences" className="text-[#4180A8]">
             {" "}
             life sciences
           </a>

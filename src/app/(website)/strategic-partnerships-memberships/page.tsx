@@ -101,8 +101,8 @@ const partners: Partner[] = [
 ];
 
 const sidebarLinks: { label: string; href: string }[] = [
-  { label: "Meet the Experts", href: "/meet-the-experts/" },
-  { label: "Subject Area", href: "/subject-area/" },
+  { label: "Meet the Experts", href: "/subject-matter-experts" },
+  { label: "Subject Area", href: "/subject-matter-experts" },
   { label: "Therapeutic Expertise", href: "/therapeutic-expertise/" },
   { label: "Global Partners and Membership", href: "/strategic-partnerships-memberships/" },
   { label: "Contact Us", href: "/contact-us/" },

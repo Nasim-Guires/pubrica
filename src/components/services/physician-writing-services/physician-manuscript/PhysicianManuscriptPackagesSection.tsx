@@ -7,42 +7,42 @@ const complianceStandards = [
     {
         title: "Committee on Publication Ethics",
         imageSrc: "/images/physician-writing-services/physician-manuscript/image-1.png",
-        href: "/compliance/cope"
+        href: "https://publicationethics.org/"
     },
     {
         title: "Consolidated Standards of Reporting Trials",
         imageSrc: "/images/physician-writing-services/physician-manuscript/image-2.png",
-        href: "/compliance/consort"
+        href: "https://www.consort-statement.org/"
     },
     {
         title: "Strengthening the Reporting of Observational Studies in Epidemiology",
         imageSrc: "/images/physician-writing-services/physician-manuscript/image-3.png",
-        href: "/compliance/strobe"
+        href: "https://www.strobe-statement.org/"
     },
     {
         title: "Health Insurance Portability and Accountability Act",
-        imageSrc: "/images/physician-writing-services/physician-manuscript/image-4.png",
-        href: "/compliance/hipaa"
+        imageSrc: "https://pubrica.com/wp-content/uploads/2025/06/HIPAA-COMPILANCE-.png",
+        href: "https://www.hhs.gov/hipaa/"
     },
     {
         title: "Case Report Guidelines",
         imageSrc: "/images/physician-writing-services/physician-manuscript/image-5.png",
-        href: "/compliance/care"
+        href: "https://www.care-statement.org/"
     },
     {
         title: "International Committee of Medical Journal Editors",
         imageSrc: "/images/physician-writing-services/physician-manuscript/image-6.png",
-        href: "/compliance/icmje"
+        href: "https://www.icmje.org/"
     },
     {
         title: "Preferred Reporting Items for Systematic Reviews",
         imageSrc: "/images/physician-writing-services/physician-manuscript/image-7.png",
-        href: "/compliance/prisma"
+        href: "https://www.prisma-statement.org/"
     },
     {
         title: "Transparent Reporting of Evaluations with Nonrandomized Designs",
         imageSrc: "/images/physician-writing-services/physician-manuscript/image-8.png",
-        href: "/compliance/trend"
+        href: "https://www.cdc.gov/trendstatement/"
     }
 ];
 
@@ -129,9 +129,11 @@ export default function PhysicianManuscriptPackagesSection() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {complianceStandards.map((item, idx) => (
-                            <Link
+                            <a
                                 key={idx}
                                 href={item.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col items-center justify-between text-center min-h-[190px] group cursor-pointer"
                             >
                                 <div className="flex-1 flex items-center justify-center w-full mb-3">
@@ -144,7 +146,7 @@ export default function PhysicianManuscriptPackagesSection() {
                                 <p className="text-[11px] font-medium text-[#1e40af] leading-tight max-w-[200px]">
                                     {item.title}
                                 </p>
-                            </Link>
+                            </a>
                         ))}
                     </div>
                 </div>
@@ -172,7 +174,7 @@ export default function PhysicianManuscriptPackagesSection() {
                                     Physician Manuscript Service Sample Work
                                 </h3>
                                 <Link
-                                    href="/samples"
+                                    href="/insights/sample-work"
                                     className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold px-8 py-2.5 rounded-full transition-colors"
                                 >
                                     Discover More
@@ -187,7 +189,7 @@ export default function PhysicianManuscriptPackagesSection() {
                                     Explore our physician manuscript samples, crafted for clinical precision, scientific rigor, and ready submission to peer-reviewed medical journals.
                                 </p>
                                 <Link
-                                    href="/download-report"
+                                    href="/insights/sample-work"
                                     className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold px-8 py-2.5 rounded-full transition-colors"
                                 >
                                     Discover More

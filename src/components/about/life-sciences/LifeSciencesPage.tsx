@@ -24,8 +24,8 @@ const accordionData: AccordionSection[] = [
     title: 'MEET THE EXPERTS',
     items: [
       { label: 'OUR EDITORS', href: '/about-us/our-editors' },
-      { label: 'EDITOR PROFILE', href: '/about-us/editor-profile' },
-      { label: 'EDITOR SPEAK', href: '/about-us/editor-speak' },
+      { label: 'EDITOR PROFILE', href: '/scientific-editor-profile' },
+      { label: 'EDITOR SPEAK', href: '/editor-speak' },
     ],
   },
   {
@@ -128,6 +128,18 @@ const sampleLinks = [
   'Substantial editing',
   'Systematic review',
 ];
+
+const sampleLinkHrefs: Record<string, string> = {
+  'Manuscript': '/services/editing-and-translation/manuscript-editing',
+  'Peer review': '/services/publication-support/peer-review-pre-submission',
+  'Research proposal': '/services/physician-writing-services/research-proposal',
+  'Technical editing': '/services/editing-and-translation',
+  'Meta-analysis': '/services/research-services/meta-analysis',
+  'Experimental design': '/services/research-services/experimental-design',
+  'Stats dissertation': '/services/research-services/biostatistics-and-statistical-programming-services',
+  'Substantial editing': '/services/academic-editorial-services/development-editing-service',
+  'Systematic review': '/services/research-services/systematic-review',
+};
 
 const qualificationsList = [
   'In Nuclear Physics',
@@ -397,7 +409,7 @@ export default function LifeSciencesPage() {
                   <ul className="space-y-2">
                     {sampleLinks.map((sample, idx) => (
                       <li key={idx}>
-                        <Link href="#" className="text-xs text-blue-600 hover:underline font-medium">
+                        <Link href={sampleLinkHrefs[sample] || '/services'} className="text-xs text-blue-600 hover:underline font-medium">
                           {sample}
                         </Link>
                       </li>

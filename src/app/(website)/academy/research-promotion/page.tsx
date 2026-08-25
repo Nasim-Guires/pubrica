@@ -19,35 +19,40 @@ const researchArticles: ResearchArticle[] = [
     date: "August 19, 2026",
     title: "How to Choose the Right Journal: Scope, Quartile, Indexing & Predatory-Journal Checks",
     slug: "/academy/research-promotion/how-to-choose-the-right-journal/",
-    image: "/images/research-promotion/choose-right-journal.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2026/08/How-to-Choose-the-Right-Journal-Scope-Quartile-Indexing-Predatory-Journal-Checks.webp",
   },
   {
     id: 2,
     date: "August 1, 2026",
     title: "How to Get Accepted in Q1 Journals: A Pre-Submission Strategy to Beat Desk Rejection",
     slug: "/academy/research-promotion/how-to-get-accepted-in-q1-journals/",
-    image: "/images/research-promotion/get-accepted-q1-journals.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2026/08/v1-How-to-Get-Accepted-in-Q1-Journals-A-Pre-Submission-Strategy-to-Beat-Desk-Rejection.webp",
   },
   {
     id: 3,
     date: "July 24, 2026",
     title: "Why Good Research Gets Rejected: Proven Publication Strategies to Improve Journal Acceptance",
     slug: "/academy/research-promotion/why-good-research-gets-rejected/",
-    image: "/images/research-promotion/why-good-research-gets-rejected.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2026/07/v1-Why-Good-Research-Gets-Rejected-Proven-Publication-Strategies-to-Improve-Journal-Acceptance.webp",
   },
   {
     id: 4,
     date: "June 10, 2026",
     title: "Digital Strategies to Find the Right Journal for Publishing Your Research Study",
     slug: "/academy/research-promotion/digital-strategies-to-find-the-right-journal/",
-    image: "/images/research-promotion/digital-strategies-find-right-journal.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2026/06/v1-Digital-Strategies-to-Find-the-Right-Journal-for-Publishing-Your-Research-Study.webp",
   },
   {
     id: 5,
     date: "May 8, 2026",
     title: "Publishing With Impact: How Authors Should Select the Right Journal",
     slug: "/academy/research-promotion/publishing-with-impact-how-authors-should-select-journal/",
-    image: "/images/research-promotion/publishing-with-impact.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2026/05/V1-Publishing-With-Impact-How-Authors-Should-Select-the-Right-Journal.webp",
   },
 ];
 
@@ -69,7 +74,7 @@ const Page = () => {
       {/* Full Width Hero Banner Cover */}
       <div className="relative h-48 w-full overflow-hidden bg-gray-900 sm:h-64 md:h-72">
         <Image
-          src="/images/research-promotion/banner-book.jpg"
+          src="https://pubrica.com/wp-content/uploads/2021/04/research-publication.jpg"
           alt="Research Promotion Banner"
           fill
           priority

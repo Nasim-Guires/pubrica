@@ -19,7 +19,7 @@ const newsData: IndustryNewsArticle[] = [
     date: "April 1, 2021",
     title: "Use of GPP3 for ethical guidance",
     slug: "/academy/industry-news/use-of-gpp3-for-ethical-guidance/",
-    image: "/images/news/gpp3-ethical-guidance.jpg",
+    image: "https://pubrica.com/wp-content/uploads/2021/07/Use-of-GPP3-for-ethical-guidance.webp",
   },
   {
     id: 2,
@@ -27,7 +27,8 @@ const newsData: IndustryNewsArticle[] = [
     title:
       "Surgical Management in Patients with Cardiovascular Complications: Exemplary Introduction section of your Literature Review.",
     slug: "/academy/industry-news/surgical-management-in-patients-with-cardiovascular-complications/",
-    image: "/images/news/cardiovascular-management.jpg",
+    image:
+      "https://pubrica.com/wp-content/uploads/2020/04/Surgical-Management-in-Patients-with-Cardiovascular-Complications-Exemplary-Introduction-section-of.jpg",
   },
   {
     id: 3,
@@ -35,7 +36,7 @@ const newsData: IndustryNewsArticle[] = [
     title:
       "Pre-or post-publication Peer review of Scientific Manuscripts: Thoughts on Pros and Cons",
     slug: "/academy/industry-news/pre-or-post-publication-peer-review-of-scientific-manuscripts/",
-    image: "/images/news/peer-review-pros-cons.jpg",
+    image: "https://pubrica.com/wp-content/uploads/2019/10/pre-or-post-publication-facebook.png",
   },
   {
     id: 4,
@@ -43,7 +44,7 @@ const newsData: IndustryNewsArticle[] = [
     title:
       "The Process of a scientific manuscript evaluation in a high-impact Journal - What Matter's for Editors & Peer reviewers",
     slug: "/academy/industry-news/process-of-a-scientific-manuscript-evaluation-in-a-high-impact-journal/",
-    image: "/images/news/manuscript-evaluation-process.jpg",
+    image: "https://pubrica.com/wp-content/uploads/2019/10/pub_01-10.png",
   },
 ];
 
@@ -65,7 +66,7 @@ const Page = () => {
       {/* Hero Banner with Full Width Image Cover */}
       <div className="relative h-48 w-full overflow-hidden bg-gray-900 sm:h-64 md:h-72">
         <Image
-          src="/images/news/banner-book.jpg"
+          src="https://pubrica.com/wp-content/uploads/2021/04/research-publication.jpg"
           alt="Industry News Header Banner"
           fill
           priority

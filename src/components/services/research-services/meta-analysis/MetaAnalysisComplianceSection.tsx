@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const accordionData = [
   {
@@ -199,8 +200,8 @@ export default function MetaAnalysisComplianceSection() {
             Meta-Analysis Service Sample Work
           </h2>
 
-          <a
-            href="#"
+          <Link
+            href="/insights/sample-work"
             style={{
               display: "inline-block",
               background: "#000",
@@ -213,7 +214,7 @@ export default function MetaAnalysisComplianceSection() {
             }}
           >
             Discover More
-          </a>
+          </Link>
 
           <h3
             style={{
@@ -237,8 +238,8 @@ export default function MetaAnalysisComplianceSection() {
             clinical publication.
           </p>
 
-          <a
-            href="#"
+          <Link
+            href="/insights/sample-work"
             style={{
               display: "inline-block",
               background: "#000",
@@ -250,7 +251,7 @@ export default function MetaAnalysisComplianceSection() {
             }}
           >
             Discover More
-          </a>
+          </Link>
         </div>
       </div>
     </section>

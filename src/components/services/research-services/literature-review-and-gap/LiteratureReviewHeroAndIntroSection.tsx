@@ -52,7 +52,7 @@ export default function LiteratureReviewHeroAndIntroSection() {
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                 At Pubrica, we deliver in-depth, methodologically sound{" "}
                 <Link
-                  href="/services/research-services/literature-review-and-gap-analysis"
+                  href="/services/research-services/literature-review-and-gap"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   literature review writing service
@@ -68,7 +68,7 @@ export default function LiteratureReviewHeroAndIntroSection() {
                 , clinical trial planning, and academic theses. Our team of
                 experienced researchers and{" "}
                 <Link
-                  href="/about/subject-matter-experts"
+                  href="/subject-matter-experts"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   subject-matter experts

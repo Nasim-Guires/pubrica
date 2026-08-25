@@ -69,6 +69,30 @@ export const blogPosts: BlogPostItem[] = [
       "Lotoski, L., O'Brien, J., & D'Eon, M. F. (2025). Reviewers' views on the editorial review processes of the Canadian Medical Education Journal. Canadian medical education journal, 16(1), 128-140.",
     ],
   },
+  {
+    id: "publication-support-services-canada",
+    slug: "publication-support-services-canada",
+    title: "How Do Publication Support Services Help with Manuscript Editing and Formatting in Canada?",
+    date: "May 26, 2026",
+    desc: "Publication support services help researchers refine manuscripts through professional editing, formatting, and compliance with journal standards.",
+    img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+    bannerImage:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
+    introParagraphs: [],
+    sections: [],
+  },
+  {
+    id: "original-research-article-writing-service-canada",
+    slug: "original-research-article-writing-service-canada",
+    title: "Original Research Article Writing Service with Plagiarism Check in Canada",
+    date: "May 23, 2026",
+    desc: "Professional original research article writing paired with rigorous plagiarism checks to ensure authenticity and publication readiness.",
+    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+    bannerImage:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+    introParagraphs: [],
+    sections: [],
+  },
 ];
 
 export const newsCategories = [

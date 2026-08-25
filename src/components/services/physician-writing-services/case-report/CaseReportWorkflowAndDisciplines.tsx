@@ -127,13 +127,13 @@ export default function CaseReportWorkflowAndDisciplines() {
         </h2>
         <p className="text-sm sm:text-base text-slate-700 max-w-5xl leading-relaxed mb-8">
           Our{" "}
-          <Link href="#" className="text-sky-600 hover:underline">
+          <Link href="/services/physician-writing-services/case-report" className="text-sky-600 hover:underline">
             case report writing services
           </Link>{" "}
           are designed for clinicians, researchers, and academic institutions
           aiming to publish rare or significant clinical cases. We can help you
           with the{" "}
-          <Link href="#" className="text-sky-600 hover:underline">
+          <Link href="/services/publication-support/journal-submission" className="text-sky-600 hover:underline">
             journal submission
           </Link>{" "}
           process, whether you are a physician, postgraduate, or medical
@@ -181,7 +181,7 @@ export default function CaseReportWorkflowAndDisciplines() {
           </h3>
           <p className="text-sm sm:text-base text-slate-600 max-w-4xl mx-auto leading-relaxed">
             With Pubrica's{" "}
-            <Link href="#" className="text-sky-600 hover:underline">
+            <Link href="/services/physician-writing-services/case-report" className="text-sky-600 hover:underline">
               case report writing service
             </Link>
             , our clinical experts and scientific writers collaborate to craft

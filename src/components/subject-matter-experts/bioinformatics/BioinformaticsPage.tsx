@@ -156,11 +156,11 @@ export default function BioinformaticsPage() {
                         </h2>
 
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            Bioinformatics is an interdisciplinary field that combines biology, <Link href="#" className="text-sky-600 hover:underline">computer science</Link>, mathematics, and statistics to interpret and analyze biological data. With the rapid growth of high-throughput technologies such as next-generation sequencing (NGS), proteomics, metabolomics, and structural biology, bioinformatics has become the backbone of modern life sciences research. From decoding genetic variations to predicting protein structures and facilitating personalized medicine, bioinformatics provides computational frameworks and algorithms that transform complex biological information into actionable insights.
+                            Bioinformatics is an interdisciplinary field that combines biology, <Link href="/subject-matter-experts/computer-science" className="text-sky-600 hover:underline">computer science</Link>, mathematics, and statistics to interpret and analyze biological data. With the rapid growth of high-throughput technologies such as next-generation sequencing (NGS), proteomics, metabolomics, and structural biology, bioinformatics has become the backbone of modern life sciences research. From decoding genetic variations to predicting protein structures and facilitating personalized medicine, bioinformatics provides computational frameworks and algorithms that transform complex biological information into actionable insights.
                         </p>
 
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            As life sciences move toward data-intensive research, the demand for robust bioinformatics methodologies and analytical precision continues to grow. At Pubrica, we offer comprehensive research, writing, editing, and <Link href="#" className="text-sky-600 hover:underline">publication support</Link> for scholars, clinicians, and scientists working across all domains of bioinformatics.
+                            As life sciences move toward data-intensive research, the demand for robust bioinformatics methodologies and analytical precision continues to grow. At Pubrica, we offer comprehensive research, writing, editing, and <Link href="/services/publication-support" className="text-sky-600 hover:underline">publication support</Link> for scholars, clinicians, and scientists working across all domains of bioinformatics.
                         </p>
 
                         <div className="pt-2">
@@ -224,7 +224,7 @@ export default function BioinformaticsPage() {
                             Our Core Disciplines In Bioinformatics
                         </h2>
                         <p className="text-gray-600 text-sm leading-relaxed mb-2">
-                            Pubrica offers a comprehensive suite of <Link href="#" className="text-sky-600 hover:underline">bioinformatics services</Link> tailored to the <Link href="#" className="text-sky-600 hover:underline">life sciences</Link>, healthcare, and medical research sectors, supporting researchers in unraveling complex biological data and advancing scientific discoveries.
+                            Pubrica offers a comprehensive suite of <Link href="/subject-matter-experts/bioinformatics" className="text-sky-600 hover:underline">bioinformatics services</Link> tailored to the <Link href="/subject-matter-experts/life-sciences" className="text-sky-600 hover:underline">life sciences</Link>, healthcare, and medical research sectors, supporting researchers in unraveling complex biological data and advancing scientific discoveries.
                         </p>
                         <p className="text-gray-600 text-sm leading-relaxed">
                             We provide specialized services across pre-clinical, translational, and clinical development, enabling researchers to transform raw data into meaningful insights, biomarker discovery, and publication-ready results.

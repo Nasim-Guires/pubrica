@@ -11,7 +11,7 @@ export const developmentEditingServiceWhoWeServeData = {
         "Our development editors help refine arguments, reorganize content, and highlight key findings to improve publication success.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/development-editing-service/researchers-and-scientists.webp",
+        "https://pubrica.com/wp-content/uploads/2025/12/Researchers-Scientists-1.png",
     },
     {
       title: "Medical & Healthcare Professionals",
@@ -20,7 +20,7 @@ export const developmentEditingServiceWhoWeServeData = {
         "We ensure logical presentation, consistency, and compliance with scientific communication standards.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/development-editing-service/medical-and-healthcare-professionals.webp",
+        "https://pubrica.com/wp-content/uploads/2025/12/Medical-Healthcare-Professionals-1.png",
     },
     {
       title: "Academic Authors & Educators",
@@ -29,7 +29,7 @@ export const developmentEditingServiceWhoWeServeData = {
         "Our editors help structure content coherently while preserving academic integrity and the author’s unique voice.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/development-editing-service/academic-authors-and-educators.webp",
+        "https://pubrica.com/wp-content/uploads/2025/12/Academic-Authors-Educators.png",
     },
     {
       title: "Universities, Research Institutes & Teaching Hospitals",
@@ -38,7 +38,7 @@ export const developmentEditingServiceWhoWeServeData = {
         "We unify document tone, strengthen internal coherence, and streamline complex content for seamless readability.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/development-editing-service/universities-research-institutes-and-teaching-hospitals.webp",
+        "https://pubrica.com/wp-content/uploads/2025/12/Universities-Research-Institutes-Teaching-Hospitals.png",
     },
     {
       title: "Publishers & Journals",
@@ -47,7 +47,7 @@ export const developmentEditingServiceWhoWeServeData = {
         "Our editors refine structure, argumentation, and narrative clarity to meet journal expectations.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/development-editing-service/publishers-and-journals.webp",
+        "https://pubrica.com/wp-content/uploads/2025/12/Publishers-Journals-1.png",
     },
     {
       title: "Non-Native English Authors",
@@ -56,7 +56,7 @@ export const developmentEditingServiceWhoWeServeData = {
         "Our editors help transform ideas into clearly structured, logically sound manuscripts that align with global publication standards.",
       ],
       imageUrl:
-        "/images/services/academic-editorial-services/development-editing-service/non-native-english-authors.webp",
+        "https://pubrica.com/wp-content/uploads/2025/12/Non-Native-English-Authors.png",
     },
   ],
 };

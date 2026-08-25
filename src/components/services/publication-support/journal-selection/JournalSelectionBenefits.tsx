@@ -92,7 +92,7 @@ export default function JournalSelectionBenefits() {
                   . Our experienced team has helped over 800,000 researchers
                   publish in high-impact-factor journals. In addition, with
                   experience from more than 800,000 publications, our{" "}
-                  <a href="/insights/sample-work/addressing-barriers-to-copd-care-three-innovative-evidence" className="text-cyan-600 hover:underline">
+                  <a href="/insights/addressing-barriers-to-copd-care-three-innovative-evidence" className="text-cyan-600 hover:underline">
                     journal selection service
                   </a>{" "}
                   makes the process easier and increases the likelihood of your
@@ -108,7 +108,7 @@ export default function JournalSelectionBenefits() {
                   </strong>{" "}
                   At Pubrica, we appreciate the struggles of selecting
                   peer-reviewed journals amongst the predatory ones. Our{" "}
-                  <a href="/insights/sample-work/journal-selection-gastroenterology-workforce" className="text-cyan-600 hover:underline">
+                  <a href="/insights/journal-selection-gastroenterology-workforce" className="text-cyan-600 hover:underline">
                     journal selection
                   </a>{" "}
                   service guarantees you in credible, peer-reviewed journals.
@@ -123,7 +123,7 @@ export default function JournalSelectionBenefits() {
                 <p>
                   <strong className="text-slate-900">
                     Choosing Pubrica’s professional{" "}
-                    <a href="/insights/sample-work/addressing-barriers-to-copd-care-three-innovative-evidence" className="text-cyan-600 hover:underline">
+                    <a href="/insights/addressing-barriers-to-copd-care-three-innovative-evidence" className="text-cyan-600 hover:underline">
                       journal selection service
                     </a>
                   </strong>{" "}

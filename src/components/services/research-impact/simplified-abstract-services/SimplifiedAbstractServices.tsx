@@ -84,11 +84,11 @@ export default function SimplifiedAbstractServices() {
 
                         <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                             That's where Pubrica's{' '}
-                            <Link href="#" className="text-emerald-700 font-medium hover:underline">
+                            <Link href="/services/research-impact/simplified-abstract-services" className="text-emerald-700 font-medium hover:underline">
                                 Simplified Abstract
                             </Link>{' '}
                             Writing Service comes in. Our team of domain experts provides custom abstract writing and scientific summary services designed specifically for academic publishing. We convert your full manuscript into a structured, publication-ready abstract that meets{' '}
-                            <Link href="#" className="text-emerald-700 font-medium hover:underline">
+                            <Link href="/services/publication-support/journal-submission" className="text-emerald-700 font-medium hover:underline">
                                 journal submission
                             </Link>{' '}
                             standards, without compromising on scientific accuracy or depth.
@@ -125,7 +125,7 @@ export default function SimplifiedAbstractServices() {
                     </h2>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
                         Pubrica's{' '}
-                        <Link href="#" className="text-emerald-700 font-medium hover:underline">
+                        <Link href="/services/research-impact/simplified-abstract-services" className="text-emerald-700 font-medium hover:underline">
                             simplified abstract
                         </Link>{' '}
                         writing services provide a one-stop solution for researchers who need assistance in converting complex manuscripts into precise, succinct, and publishable abstracts. We help to make your research accessible to a broader academic audience, including interdisciplinary scientists, journal editors, and grant reviewers.
@@ -184,7 +184,7 @@ export default function SimplifiedAbstractServices() {
                 {/* Footer Callout Paragraph */}
                 <p className="mt-10 text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
                     Choose Pubrica for academic abstract writing services that ensure your research is clear, credible, and publication-ready. Contact us today to learn how our{' '}
-                    <Link href="#" className="text-emerald-700 font-medium hover:underline">
+                    <Link href="/services/publication-support" className="text-emerald-700 font-medium hover:underline">
                         publication support services
                     </Link>{' '}
                     can elevate your manuscript.

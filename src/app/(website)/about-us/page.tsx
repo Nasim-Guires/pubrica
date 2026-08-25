@@ -497,7 +497,7 @@ export default function AboutPage() {
   return (
     <>
       <header aria-label="Breadcrumb Navigation" className="bg-white py-2">
-        <Breadcrumb items={[{ label: 'About Us', href: '/about' }]} />
+        <Breadcrumb items={[{ label: 'About Us', href: '/about-us' }]} />
       </header>
 
       <main className="bg-white min-h-screen text-gray-800 antialiased selection:bg-emerald-600 selection:text-white">
@@ -642,9 +642,9 @@ export default function AboutPage() {
 
                 <div className="mt-10 text-center lg:text-left text-xs font-medium tracking-wide">
                   To know more about purica research services{' '}
-                  <a href="#contact" className="text-sky-400 underline hover:text-sky-300 transition-colors ml-1">
+                  <Link href="/contact" className="text-sky-400 underline hover:text-sky-300 transition-colors ml-1">
                     Reach Us
-                  </a>
+                  </Link>
                 </div>
               </div>
 

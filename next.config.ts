@@ -32,6 +32,11 @@ const nextConfig: NextConfig = {
         hostname: 'pubrica.com',
         pathname: '/wp-content/uploads/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'pubrica-blog.vercel.app',
+        pathname: '/api/media/**',
+      },
     ],
   },
 };

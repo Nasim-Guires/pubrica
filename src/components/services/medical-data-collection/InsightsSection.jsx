@@ -14,7 +14,7 @@ const insightsData = [
     image:
       "/images/editing-and-translation/How-to-Structure-Case-Reports-and-Review-Articles-for-Medical-Journals.jpg",
     alt: "Doctor holding a clipboard",
-    link: "#",
+    link: "/services/physician-writing-services/case-report",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const insightsData = [
     image:
       "/images/editing-and-translation/How-Should-Physicians-Choose-the-Right-Journal-for-Submitting-a-Case-Report.jpg",
     alt: "Physician working on laptop with documents",
-    link: "#",
+    link: "/services/publication-support/journal-selection",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const insightsData = [
     image:
       "/images/editing-and-translation/How-Physicians-Can-Write-Clear-and-Impactful-Patient-Education-Materials.jpg",
     alt: "Doctor discussing with a patient",
-    link: "#",
+    link: "/services/patient-education-content",
   },
 ];
 

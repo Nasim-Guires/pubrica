@@ -61,7 +61,7 @@ const AssessmentExamReviewPage: NextPage = () => {
         />
         <link
           rel="canonical"
-          href="https://pubrica.com/services/education-editorial-service/assessment-and-exam-review-services/"
+          href="/services/education-editorial-service/assessment-and-exam-review-services"
         />
       </Head>
 

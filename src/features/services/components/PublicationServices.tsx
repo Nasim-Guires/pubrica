@@ -125,7 +125,7 @@ export default function PublicationServices() {
 
   const ROUTE_MAP: Record<string, string> = {
     "best publication support services":
-      "/insights/sample-work/incidence-cardiovascular-diseases-india-global/",
+      "/insights/incidence-cardiovascular-diseases-india-global",
     "Medical Journal":
       "/services/publication-support/journal-submission/complete-guide-to-writing-cover-letter-for-medical-journals/",
   };

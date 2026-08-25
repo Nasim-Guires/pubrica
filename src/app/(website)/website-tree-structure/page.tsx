@@ -32,44 +32,69 @@ export default function WebsiteTreeStructurePage() {
         { label: 'Publication Support Services', href: '/services/publication-support' },
         { label: 'Editing & Translation', href: '/services/editing-and-translation' },
         { label: 'Research Services', href: '/services/research-services' },
-        { label: 'Physician Writing', href: '/services/physician-writing' },
-        { label: 'Statistical Analyses', href: '/services/statistical-analyses' },
-        { label: 'Data Collection', href: '/services/data-collection' },
-        { label: 'AI and ML Services', href: '/services/data-analytics-machine-learning' },
+        { label: 'Physician Writing', href: '/services/physician-writing-services' },
+        { label: 'Statistical Analyses', href: '/services/data-analytics-machine-learning' },
+        { label: 'Data Collection', href: '/services/medical-data-collection' },
+        { label: 'AI and ML Services', href: '/services/ai-ml-support' },
         { label: 'Medical Writing', href: '/services/medical-writing' },
         { label: 'Research Impact', href: '/services/research-impact' },
-        { label: 'Medical & Scientific Communication', href: '/services/medical-scientific-communication' },
-        { label: 'Medico Legal Services', href: '/services/medico-legal-services' },
-        { label: 'Educational Content', href: '/services/educational-content' },
+        { label: 'Medical & Scientific Communication', href: '/services/scientific-communication' },
+        { label: 'Medico Legal Services', href: '/services/medico-legal-support-services' },
+        { label: 'Educational Content', href: '/services/educational-content-development' },
         { label: 'Academic Editorial Services', href: '/services/academic-editorial-services' },
-        { label: 'Educational Editorial Service', href: '/services/educational-editorial-service' },
+        { label: 'Educational Editorial Service', href: '/services/education-editorial-service' },
       ],
     },
     {
       title: 'Industries',
-      items: [],
+      items: [
+        { label: 'Pharmaceutical', href: '/Industries/pharmaceutical' },
+        { label: 'Biotechnology', href: '/Industries/biotechnology' },
+        { label: 'Medical Device', href: '/Industries/medical-device' },
+        { label: 'Generics', href: '/Industries/generics' },
+        { label: 'Biosimilar', href: '/Industries/biosimilar' },
+        { label: 'Cosmetics', href: '/Industries/cosmetics' },
+        { label: 'Foods & Nutraceuticals', href: '/Industries/foods-nutraceuticals' },
+        { label: 'Cosmeceutical Research', href: '/Industries/cosmeceutical-research' },
+        { label: 'Nutraceutical Research', href: '/Industries/nutraceutical-research' },
+      ],
     },
     {
       title: 'Subjects',
-      items: [],
+      items: [
+        { label: 'Subject Matter Experts', href: '/subject-matter-experts' },
+      ],
     },
     {
       title: 'About Us',
       items: [
-        { label: 'Our Quality', href: '/about/our-quality' },
+        { label: 'About Us', href: '/about-us' },
+        { label: 'Our Quality', href: '/quality' },
+        { label: 'Meet the Team', href: '/about-us/our-editors' },
+        { label: 'Therapeutic Expertise', href: '/therapeutic-expertise' },
+        { label: 'Strategic Partnerships', href: '/strategic-partnerships-memberships' },
       ],
     },
     {
       title: 'Academy',
-      items: [],
+      items: [
+        { label: 'Academy', href: '/academy' },
+        { label: 'Q&A Forum', href: '/academy/qa-forum' },
+        { label: 'Flow Diagram', href: '/academy/flow-diagram' },
+      ],
     },
     {
       title: 'Insights',
-      items: [],
+      items: [
+        { label: 'Insights', href: '/insights' },
+        { label: 'Sample Work', href: '/insights/sample-work' },
+      ],
     },
     {
       title: 'Contact Us',
-      items: [],
+      items: [
+        { label: 'Contact Us', href: '/contact' },
+      ],
     },
   ];
 
@@ -121,7 +146,7 @@ export default function WebsiteTreeStructurePage() {
               </svg>
             </div>
             <Link
-              href="/get-expert-help"
+              href="/order-now"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-slate-900 font-semibold px-4 py-1.5 rounded shadow hover:bg-gray-100 transition"
@@ -142,13 +167,13 @@ export default function WebsiteTreeStructurePage() {
               <Link href="/services" target="_blank" rel="noopener noreferrer" className="hover:text-teal-600 flex items-center gap-1">
                 Services <ChevronDown className="w-3 h-3" />
               </Link>
-              <Link href="/industries" target="_blank" rel="noopener noreferrer" className="hover:text-teal-600">
+              <Link href="/Industries" target="_blank" rel="noopener noreferrer" className="hover:text-teal-600">
                 Industries
               </Link>
-              <Link href="/subjects" target="_blank" rel="noopener noreferrer" className="hover:text-teal-600">
+              <Link href="/subject-matter-experts" target="_blank" rel="noopener noreferrer" className="hover:text-teal-600">
                 Subjects
               </Link>
-              <Link href="/about" target="_blank" rel="noopener noreferrer" className="hover:text-teal-600 flex items-center gap-1">
+              <Link href="/about-us" target="_blank" rel="noopener noreferrer" className="hover:text-teal-600 flex items-center gap-1">
                 About Us <ChevronDown className="w-3 h-3" />
               </Link>
               <Link href="/academy" target="_blank" rel="noopener noreferrer" className="hover:text-teal-600">
@@ -225,7 +250,7 @@ export default function WebsiteTreeStructurePage() {
             Whether you’re stuck or just want some tips on where to start, hit up our experts anytime.
           </h2>
           <Link
-            href="/get-free-quote"
+            href="/order-now"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-slate-900 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition whitespace-nowrap"

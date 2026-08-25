@@ -28,7 +28,7 @@ const AssessmentAndExamReviewServicesSample: NextPage = () => {
               </h3>
               <div className="pt-1">
                 <Link 
-                  href="#" 
+                  href="/insights/sample-work" 
                   className="inline-block bg-black text-white font-medium text-sm py-3 px-8 rounded-full hover:bg-gray-800 transition-colors shadow-sm"
                 >
                   Discover More
@@ -48,7 +48,7 @@ const AssessmentAndExamReviewServicesSample: NextPage = () => {
               </p>
               <div className="pt-2">
                 <Link 
-                  href="#" 
+                  href="/insights/sample-work" 
                   className="inline-block bg-black text-white font-medium text-sm py-3 px-8 rounded-full hover:bg-gray-800 transition-colors shadow-sm"
                 >
                   Discover More

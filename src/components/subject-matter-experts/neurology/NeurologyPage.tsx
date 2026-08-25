@@ -81,7 +81,7 @@ export default function NeurologyPage() {
             description: "Engaging summaries of your research in a single, informative graphic.",
             image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: PenTool,
-            href: "/services/research-impact/graphical-abstractt"
+            href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Systematic Reviews",

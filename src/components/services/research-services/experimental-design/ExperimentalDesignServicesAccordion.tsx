@@ -56,7 +56,7 @@ export default function ExperimentalDesignServicesAccordion() {
         <p>
           When true{" "}
           <Link
-            href="/research-services/experimental-design/"
+            href="/services/research-services/experimental-design"
             className="text-sky-600 hover:underline font-medium"
           >
             experimental designs
@@ -104,7 +104,7 @@ export default function ExperimentalDesignServicesAccordion() {
           <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed">
             Pubrica’s{" "}
             <Link
-              href="/research-services/experimental-design/"
+              href="/services/research-services/experimental-design"
               className="text-sky-600 hover:underline font-medium"
             >
               experimental design
@@ -184,7 +184,7 @@ export default function ExperimentalDesignServicesAccordion() {
           <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed">
             Choose Pubrica’s{" "}
             <Link
-              href="/research-services/experimental-design/"
+              href="/services/research-services/experimental-design"
               className="text-sky-600 hover:underline font-medium"
             >
               experimental design

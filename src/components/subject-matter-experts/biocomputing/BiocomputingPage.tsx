@@ -137,7 +137,7 @@ export default function BiocomputingPage() {
                         </h2>
 
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            Biocomputing, also known as biological computing or bioinformatics-driven computation, is an interdisciplinary field that converges biology, <Link href="#" className="text-sky-600 hover:underline">computer science</Link>, and mathematics. As biological data expands at an unprecedented pace, computational biology and biocomputing have become crucial in unlocking hidden patterns, optimizing research efficiency, and designing novel biological solutions.
+                            Biocomputing, also known as biological computing or bioinformatics-driven computation, is an interdisciplinary field that converges biology, <Link href="/subject-matter-experts/computer-science" className="text-sky-600 hover:underline">computer science</Link>, and mathematics. As biological data expands at an unprecedented pace, computational biology and biocomputing have become crucial in unlocking hidden patterns, optimizing research efficiency, and designing novel biological solutions.
                         </p>
 
                         <p className="text-gray-600 text-sm leading-relaxed">
@@ -145,7 +145,7 @@ export default function BiocomputingPage() {
                         </p>
 
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            At Pubrica, we specialize in offering end-to-end <Link href="#" className="text-sky-600 hover:underline">biocomputing research support</Link>, scientific manuscript writing, <Link href="#" className="text-sky-600 hover:underline">bioinformatics data analytics</Link>, and publication assistance. With subject-matter experts, data scientists, scientific writers, and domain editors, we ensure your research achieves clarity, accuracy, scientific integrity, and global publishing standards, allowing researchers to focus on discovery while we support the technical and editorial complexities.
+                            At Pubrica, we specialize in offering end-to-end <Link href="/subject-matter-experts/biocomputing" className="text-sky-600 hover:underline">biocomputing research support</Link>, scientific manuscript writing, <Link href="/subject-matter-experts/bioinformatics" className="text-sky-600 hover:underline">bioinformatics data analytics</Link>, and publication assistance. With subject-matter experts, data scientists, scientific writers, and domain editors, we ensure your research achieves clarity, accuracy, scientific integrity, and global publishing standards, allowing researchers to focus on discovery while we support the technical and editorial complexities.
                         </p>
 
                         {/* CTA Button */}

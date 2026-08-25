@@ -2,7 +2,7 @@ import { blogPosts } from "@/lib/blog";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function BlogSection() {
+export default function BlogSection() {
 
     return (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
@@ -24,7 +24,7 @@ export default async function BlogSection() {
             </div>
 
             <p className="text-xs text-slate-500 mb-6">
-                Stay updated with Pubrica's latest insights, tips, and expert advice
+                Stay updated with Pubrica&apos;s latest insights, tips, and expert advice
                 on publishing guidelines and procedures.
             </p>
 

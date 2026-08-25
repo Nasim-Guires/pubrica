@@ -71,7 +71,7 @@ export default function PosterPreparationPage() {
           <div className="lg:col-span-7 text-gray-700 space-y-4">
             <p className="leading-relaxed">
               At Pubrica, our{' '}
-              <Link href="/insights/sample-work/maternal-gdm-infant-gut-microbiome-vertical-transmission/" className="text-blue-600 ">
+              <Link href="/insights/maternal-gdm-infant-gut-microbiome-vertical-transmission" className="text-blue-600 ">
                 poster preparation services
               </Link>{' '}
               can help researchers transform manuscript findings or current research into a
@@ -92,7 +92,7 @@ export default function PosterPreparationPage() {
                 <Link href="https://www.aacr.org/wp-content/uploads/2021/09/AACR22_Abstract-Guidelines.pdf" className="text-blue-600 ">AACR</Link>,{' '}
                 <Link href="/services/publication-support/poster-preparation/european-society-for-medical-oncology" className="text-blue-600 ">ESMO</Link>,{' '}
                 <Link href="https://www.asco.org/annual-meeting/abstracts-presentations/poster-presenter-guidelines" className="text-blue-600 ">ASCO</Link>,{' '}
-                <Link href="#" >ISSCR</Link>)
+                <a href="https://www.isscr.org/guidelines" target="_blank" rel="noopener noreferrer">ISSCR</a>)
               </li>
               <li>
                 <Link href="/services/publication-support/poster-preparation/why-scientific-design-and-visualization-matter-in-poster-preparation/" className="text-blue-600 hover:underline font-semibold">
@@ -254,7 +254,7 @@ export default function PosterPreparationPage() {
           <div className="pt-4">
             <p className="text-gray-800 text-sm md:text-base leading-relaxed">
               Choose Pubrica&apos;s{' '}
-              <Link href="/insights/sample-work/microbiota-supportive-diet-lipid-profile/" className="text-blue-600 hover:underline font-medium">
+              <Link href="/insights/microbiota-supportive-diet-lipid-profile" className="text-blue-600 hover:underline font-medium">
                 Poster Preparation Services
               </Link>{' '}
               to turn your research into a professionally designed poster that conveys your study

@@ -12,7 +12,7 @@ const AccessibilityComplianceBannerPage: NextPage = () => {
         />
         <link 
           rel="canonical" 
-          href="https://pubrica.com/services/education-editorial-service/accessibility-compliance/" 
+          href="/services/education-editorial-service/accessibility-compliance" 
         />
       </Head>
 

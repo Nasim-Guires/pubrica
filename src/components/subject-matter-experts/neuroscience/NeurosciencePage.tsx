@@ -65,7 +65,7 @@ export default function NeurosciencePage() {
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
             image: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: FileText,
-            href: "/ervices/research-services/systematic-review"
+            href: "/services/research-services/systematic-review"
         },
         {
             title: "Scientific Writing",

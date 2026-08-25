@@ -173,15 +173,15 @@ export default function BiophysicsSciencePage() {
 
                         <p className="text-gray-600 text-sm leading-relaxed">
                             At Pubrica, we understand that the complexities of biophysical research demand clarity, precision, and scientifically rigorous presentation. Our services are designed to support students, researchers, healthcare practitioners, and{" "}
-                            <Link href="#" className="text-sky-600 hover:underline">
+                            <Link href="/university-support" className="text-sky-600 hover:underline">
                                 academic institutions
                             </Link>{" "}
                             in producing impactful publications and research outputs that meet the highest global editorial standards. With a team of{" "}
-                            <Link href="#" className="text-sky-600 hover:underline">
+                            <Link href="/subject-matter-experts" className="text-sky-600 hover:underline">
                                 subject-matter experts
                             </Link>
                             , professional editors, and research specialists, Pubrica delivers end-to-end support throughout the research cycle, from proposal development to{" "}
-                            <Link href="#" className="text-sky-600 hover:underline">
+                            <Link href="/services/publication-support/journal-submission" className="text-sky-600 hover:underline">
                                 journal submission
                             </Link>
                             .
@@ -243,7 +243,7 @@ export default function BiophysicsSciencePage() {
                     </div>
                     <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                         As a trusted global research partner, Pubrica delivers structured scientific support tailored to researchers at all stages, from concept development to final publication. Our team includes experienced scientists, PhDs,{" "}
-                        <Link href="#" className="text-sky-600 hover:underline">
+                        <Link href="/subject-matter-experts" className="text-sky-600 hover:underline">
                             subject matter experts
                         </Link>
                         , and publication strategists with deep domain expertise in material science, nanotechnology, chemical engineering, and applied physics. Our services include:

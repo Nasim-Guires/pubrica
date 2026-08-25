@@ -1,63 +1,35 @@
-"use client";
-
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   newsCategories,
   infographics,
   storyboards,
   sampleWorks,
   factSheets,
-  checklists,
 } from "@/lib/data-insight";
-import BlogSection from "../blog/page";
+import { getPosts, mediaUrl, getDescription } from "@/lib/payload";
+import CategoriesCarousel from "@/components/insight/CategoriesCarousel";
+import ImageLightboxGrid from "@/components/insight/ImageLightboxGrid";
 
+export const revalidate = 300;
 
-const InsightsPage = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+function formatDate(iso?: string) {
+  if (!iso) return "";
+  return new Date(iso).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+}
 
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const autoPlay = setInterval(() => {
-      if (isDragging) return;
-      const firstItem = container.firstElementChild as HTMLElement | null;
-      if (!firstItem) return;
-
-      const itemWidth = firstItem.offsetWidth + 16;
-      const maxScrollLeft = container.scrollWidth - container.clientWidth;
-
-      if (container.scrollLeft >= maxScrollLeft - 5) {
-        container.scrollTo({ left: 0, behavior: "smooth" });
-      } else {
-        container.scrollBy({ left: itemWidth, behavior: "smooth" });
-      }
-    }, 3000);
-
-    return () => clearInterval(autoPlay);
-  }, [isDragging]);
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!containerRef.current) return;
-    setIsDragging(true);
-    setStartX(e.pageX - containerRef.current.offsetLeft);
-    setScrollLeft(containerRef.current.scrollLeft);
-  };
-
-  const handleMouseLeave = () => setIsDragging(false);
-  const handleMouseUp = () => setIsDragging(false);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !containerRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    containerRef.current.scrollLeft = scrollLeft - walk;
-  };
+const InsightsPage = async () => {
+  const { docs: blogPosts } = await getPosts({ source: "blog", limit: 3 });
+  const { docs: checklistPosts } = await getPosts({
+    source: "insights",
+    urlPathPrefix: "checklist/",
+    limit: 4,
+  });
 
   return (
     <div className="bg-[#f8f9fa] min-h-screen text-slate-800 font-sans pb-24">
@@ -97,38 +69,65 @@ const InsightsPage = () => {
           <div className="h-[1px] w-full bg-slate-200"></div>
         </div>
 
-        <div
-          ref={containerRef}
-          onMouseDown={handleMouseDown}
-          onMouseLeave={handleMouseLeave}
-          onMouseUp={handleMouseUp}
-          onMouseMove={handleMouseMove}
-          className={`flex gap-4 overflow-x-auto select-none scroll-smooth ${
-            isDragging ? "cursor-grabbing" : "cursor-grab"
-          }`}
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          {newsCategories.map((cat, i) => (
-            <button
-              key={i}
-              className="flex-shrink-0 w-[calc(50%-12px)] sm:w-[calc(33.333%-12px)] md:w-[calc(20%-13px)] flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-200 hover:border-[#004d40] hover:shadow-sm transition-all text-left group pointer-events-auto"
-              onClick={(e) => {
-                if (isDragging) e.preventDefault();
-              }}
-            >
-              <span className="text-xl bg-slate-50 p-2 rounded-lg group-hover:bg-[#e0f2f1] transition-colors flex-shrink-0">
-                {cat.icon}
-              </span>
-              <span className="text-xs md:text-sm font-semibold text-slate-700 group-hover:text-[#004d40] truncate">
-                {cat.title}
-              </span>
-            </button>
-          ))}
-        </div>
+        <CategoriesCarousel categories={newsCategories} />
       </section>
 
-      {/* 3. BLOG SECTION COMPONENT */}
-      <BlogSection />
+      {/* 3. BLOG SECTION (live from Payload — always reflects the latest posts) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="flex justify-between items-center mb-2">
+          <div className="flex items-center gap-4 w-full">
+            <h2 className="text-xl font-bold text-slate-900">Blog</h2>
+            <div className="h-[1px] flex-grow bg-slate-200" />
+          </div>
+          <Link
+            href="/blog"
+            className="ml-4 bg-[#004d40] text-white px-4 py-1.5 rounded text-xs font-semibold whitespace-nowrap hover:bg-[#00332a] transition-colors flex items-center gap-1"
+          >
+            Explore More &rarr;
+          </Link>
+        </div>
+
+        <p className="text-xs text-slate-500 mb-6">
+          Stay updated with Pubrica&apos;s latest insights, tips, and expert advice on
+          publishing guidelines and procedures.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-6 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+          {blogPosts.map((post) => {
+            const image = mediaUrl(post.heroImage) || "/images/blog/default.webp";
+            const desc = getDescription(post);
+
+            return (
+              <Link
+                key={post.id}
+                href={`/blog/${post.slug}`}
+                className="group flex flex-col border border-slate-100 rounded-xl overflow-hidden hover:shadow-md transition-shadow bg-slate-50"
+              >
+                <div className="h-44 overflow-hidden relative">
+                  <Image
+                    src={image}
+                    alt={post.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 flex flex-col flex-grow justify-between space-y-3">
+                  <div className="space-y-2">
+                    <h3 className="text-sm font-bold text-slate-800 line-clamp-2 group-hover:text-[#004d40]">
+                      {post.title}
+                    </h3>
+                    <span className="text-[11px] text-slate-400 block">
+                      📅 {formatDate(post.publishing?.publishedAt)}
+                    </span>
+                    <p className="text-xs text-slate-500 line-clamp-2">{desc}</p>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
 
       {/* 4. STORYBOARDS SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
@@ -137,37 +136,18 @@ const InsightsPage = () => {
             <h2 className="text-xl font-bold text-[#004d40]">Storyboards</h2>
             <div className="h-[1px] flex-grow bg-slate-200"></div>
           </div>
-          <button className="ml-4 bg-[#004d40] text-white px-4 py-1.5 rounded text-xs font-semibold whitespace-nowrap hover:bg-[#00332a] transition-colors">
+          <Link
+            href="/insights/storyboard"
+            className="ml-4 bg-[#004d40] text-white px-4 py-1.5 rounded text-xs font-semibold whitespace-nowrap hover:bg-[#00332a] transition-colors"
+          >
             Explore More &rarr;
-          </button>
+          </Link>
         </div>
         <p className="text-xs text-slate-500 mb-6">
           Storyboarding is how we dialogue with you; we want to communicate news, views, trends, and technology via storyboarding.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {storyboards.map((board, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200 flex flex-col hover:shadow-md transition-all"
-            >
-              <div className="aspect-[4/3] bg-slate-100 relative border-b border-slate-100 overflow-hidden">
-                <Image
-                  src={board.img}
-                  alt={board.title}
-                  fill
-                  sizes="(max-w-7xl) 25vw, 300px"
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-3 bg-[#0d2e27] text-white text-center flex-grow flex items-center justify-center">
-                <span className="text-xs font-semibold tracking-wide line-clamp-2">
-                  {board.title}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
+        <ImageLightboxGrid items={storyboards} />
       </section>
 
       {/* 5. SAMPLE WORKS SECTION */}
@@ -177,9 +157,12 @@ const InsightsPage = () => {
             <h2 className="text-xl font-bold text-[#004d40]">Sample Works</h2>
             <div className="h-[1px] flex-grow bg-slate-200"></div>
           </div>
-          <button className="ml-4 bg-[#004d40] text-white px-4 py-1.5 rounded text-xs font-semibold whitespace-nowrap hover:bg-[#00332a] transition-colors">
+          <Link
+            href="/insights/sample-work"
+            className="ml-4 bg-[#004d40] text-white px-4 py-1.5 rounded text-xs font-semibold whitespace-nowrap hover:bg-[#00332a] transition-colors"
+          >
             Explore More &rarr;
-          </button>
+          </Link>
         </div>
         <p className="text-xs text-slate-500 mb-6">
           We take pride in the high quality of our work. To learn more, take a look at some of our samples created by Pubrica writers.
@@ -227,35 +210,18 @@ const InsightsPage = () => {
             <h2 className="text-xl font-bold text-slate-900">Infographics</h2>
             <div className="h-[1px] flex-grow bg-slate-200"></div>
           </div>
-          <button className="ml-4 bg-[#004d40] text-white px-4 py-1.5 rounded text-xs font-semibold whitespace-nowrap hover:bg-[#00332a] transition-colors">
+          <Link
+            href="/insights/infographics"
+            className="ml-4 bg-[#004d40] text-white px-4 py-1.5 rounded text-xs font-semibold whitespace-nowrap hover:bg-[#00332a] transition-colors"
+          >
             Explore More &rarr;
-          </button>
+          </Link>
         </div>
         <p className="text-xs text-slate-500 mb-6">
           Infographics are the way to go when it comes to presenting new or trending topics of interest.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {infographics.map((info, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200 flex flex-col group hover:shadow-md transition-all"
-            >
-              <div className="aspect-[4/5] bg-slate-100 flex items-center justify-center border-b border-slate-100 p-4">
-                <div className="w-full h-full rounded border-2 border-dashed border-slate-300 flex flex-col items-center justify-center p-2 text-center bg-gradient-to-br from-teal-50 to-amber-50">
-                  <span className="text-2xl mb-1">📊</span>
-                  <div className="w-12 h-2 bg-[#004d40]/20 rounded mb-1"></div>
-                  <div className="w-8 h-2 bg-amber-500/20 rounded"></div>
-                </div>
-              </div>
-              <div className="p-3 bg-[#0d2e27] text-white text-center flex-grow flex items-center justify-center">
-                <span className="text-xs font-medium tracking-wide line-clamp-2">
-                  {info.title}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
+        <ImageLightboxGrid items={infographics.slice(0, 4)} />
       </section>
 
       {/* 7. FACT SHEETS */}
@@ -265,41 +231,18 @@ const InsightsPage = () => {
             <h2 className="text-xl font-bold text-slate-900">Fact sheet</h2>
             <div className="h-[1px] flex-grow bg-slate-200"></div>
           </div>
-          <button className="ml-4 bg-[#004d40] text-white px-4 py-1.5 rounded text-xs font-semibold whitespace-nowrap hover:bg-[#00332a] transition-colors">
+          <Link
+            href="/insights/fact-sheet"
+            className="ml-4 bg-[#004d40] text-white px-4 py-1.5 rounded text-xs font-semibold whitespace-nowrap hover:bg-[#00332a] transition-colors"
+          >
             Explore More &rarr;
-          </button>
+          </Link>
         </div>
         <p className="text-xs text-slate-500 mb-6">
           Our factsheets are designed to help you enhance your knowledge across subjects.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6">
-          {factSheets.map((sheet, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-xl shadow-sm border border-slate-200 p-4 flex flex-col justify-between items-center text-center space-y-4 hover:shadow-md transition-shadow"
-            >
-              <div className="w-full aspect-[4/3] rounded-lg overflow-hidden relative">
-                <Image
-                  src={sheet.img}
-                  alt={sheet.title}
-                  fill
-                  sizes="(max-w-7xl) 25vw, 300px"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-slate-950/40 flex items-center justify-center text-white text-xs p-2 font-semibold z-10">
-                  {sheet.title.split(" ").slice(0, 4).join(" ")}...
-                </div>
-              </div>
-              <h4 className="text-xs font-bold text-slate-800 line-clamp-2 min-h-[2rem] leading-relaxed">
-                {sheet.title}
-              </h4>
-              <button className="w-full py-1.5 bg-[#004d40] hover:bg-[#00332a] text-white text-xs font-medium rounded-md transition-colors shadow-sm">
-                View Sheet
-              </button>
-            </div>
-          ))}
-        </div>
+        <ImageLightboxGrid items={factSheets} />
       </section>
 
       {/* 8. CHECKLISTS SECTION */}
@@ -309,39 +252,43 @@ const InsightsPage = () => {
             <h2 className="text-xl font-bold text-[#004d40]">Checklist</h2>
             <div className="h-[1px] flex-grow bg-slate-200"></div>
           </div>
-          <button className="ml-4 bg-[#004d40] text-white px-4 py-1.5 rounded text-xs font-semibold whitespace-nowrap hover:bg-[#00332a] transition-colors">
+          <Link
+            href="/insights/checklist"
+            className="ml-4 bg-[#004d40] text-white px-4 py-1.5 rounded text-xs font-semibold whitespace-nowrap hover:bg-[#00332a] transition-colors"
+          >
             Explore More &rarr;
-          </button>
+          </Link>
         </div>
         <p className="text-xs text-slate-500 mb-6">
           Our collection of checklists is designed to support you throughout your research process.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6">
-          {checklists.map((item, i) => (
-            <div
-              key={i}
+          {checklistPosts.map((post) => (
+            <Link
+              key={post.id}
+              href={`/insights/${post.slug}`}
               className="bg-white rounded-xl shadow-sm border border-slate-200 p-4 flex flex-col justify-between items-center text-center space-y-4 hover:shadow-md transition-shadow"
             >
               <div className="w-full aspect-[4/3] rounded-lg overflow-hidden relative">
                 <Image
-                  src={item.img}
-                  alt={item.title}
+                  src={mediaUrl(post.heroImage) || "/images/blog/default.webp"}
+                  alt={post.title}
                   fill
                   sizes="(max-w-7xl) 25vw, 300px"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-slate-950/40 flex items-center justify-center text-white text-[10px] p-2 uppercase tracking-wider font-bold z-10">
-                  {item.title.split(" ").slice(0, 3).join(" ")}...
+                  {post.title.split(" ").slice(0, 3).join(" ")}...
                 </div>
               </div>
               <h4 className="text-xs font-bold text-slate-800 line-clamp-2 min-h-[2rem] leading-relaxed">
-                {item.title}
+                {post.title}
               </h4>
-              <button className="w-full py-1.5 bg-[#004d40] hover:bg-[#00332a] text-white text-xs font-medium rounded-md transition-colors shadow-sm">
+              <span className="block w-full py-1.5 bg-[#004d40] hover:bg-[#00332a] text-white text-xs font-medium rounded-md transition-colors shadow-sm">
                 View Checklist
-              </button>
-            </div>
+              </span>
+            </Link>
           ))}
         </div>
       </section>

@@ -57,7 +57,7 @@ export const PhysicianWhoWeServe: React.FC = () => {
         <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed mb-8 max-w-6xl">
           Pubrica's physician writing service supports clinicians from clinical
           content development to{" "}
-          <a href="#" className="text-[#3b82f6] hover:underline">
+          <a href="/services/publication-support/journal-submission" className="text-[#3b82f6] hover:underline">
             journal submission
           </a>
           , while providing medically accurate, compliant, and publication-ready

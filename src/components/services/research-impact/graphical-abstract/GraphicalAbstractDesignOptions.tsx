@@ -262,7 +262,7 @@ export default function GraphicalAbstractDesignOptions() {
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Explore our{' '}
-                <Link href="#" className="text-sky-600 hover:underline">
+                <Link href="/services/research-impact/graphical-abstract" className="text-sky-600 hover:underline">
                   graphical abstract samples
                 </Link>
                 , professionally designed to align with your target journal's formatting guidelines, scientific accuracy standards, and visual impact expectations.

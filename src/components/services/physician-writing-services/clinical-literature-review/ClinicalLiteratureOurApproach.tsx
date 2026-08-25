@@ -149,7 +149,7 @@ export default function ClinicalReviewScopeAndApproach() {
           Pubrica offers systematic, detailed, and methodologically sound
           clinical literature reviews to facilitate evidence-based
           decision-making in healthcare. Our services integrate{" "}
-          <a href="#" className="text-sky-600 underline hover:text-sky-800">
+          <a href="/services/research-services/systematic-review" className="text-sky-600 underline hover:text-sky-800">
             Systematic Review Support
           </a>{" "}
           to objectively appraise and synthesize the latest clinical evidence,
@@ -179,7 +179,7 @@ export default function ClinicalReviewScopeAndApproach() {
                 <span className="text-red-600 font-bold">•</span>
                 <span>
                   Utilize evidence-based processes like{" "}
-                  <a href="#" className="text-sky-600 underline">
+                  <a href="https://www.prisma-statement.org/" target="_blank" rel="noopener noreferrer" className="text-sky-600 underline">
                     PRISMA, MOOSE, and AMSTAR 2
                   </a>{" "}
                   processes for systematic and scoping reviews
@@ -215,7 +215,7 @@ export default function ClinicalReviewScopeAndApproach() {
 
             <p className="text-xs text-slate-600 pt-3">
               Our{" "}
-              <a href="#" className="text-sky-600 underline">
+              <a href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-sky-600 underline">
                 EBM literature review
               </a>{" "}
               is compliant with ICMJE, CONSORT, and EQUATOR standards, enhancing

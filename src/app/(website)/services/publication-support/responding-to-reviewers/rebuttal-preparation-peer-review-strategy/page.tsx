@@ -77,7 +77,7 @@ export default function RebuttalPreparationPage() {
             <span>»</span>
             <Link href="/academy" className="hover:underline">Academy</Link>
             <span>»</span>
-            <Link href="/research-impact" className="hover:underline">Research Impact</Link>
+            <Link href="/services/research-impact" className="hover:underline">Research Impact</Link>
             <span>»</span>
             <span className="text-gray-700 font-medium truncate">Rebuttal Preparation: Strategic Planning for Successful Peer Review Outcomes</span>
           </nav>
@@ -144,14 +144,14 @@ export default function RebuttalPreparationPage() {
               </p>
 
               <p>
-                <Link href="#" className="text-sky-600 hover:underline">Peer review rebuttal strategies</Link> and how to respond to reviewer comments form the foundation of an effective academic revision process, guiding authors through structured <Link href="#" className="text-sky-600 hover:underline">peer review response preparation</Link>. The act of answering peer reviewer comments is not simply a procedural requirement; it represents a deliberate professional/or academic practice and can sway the outcome of whether a manuscript will be accepted, further revised, or rejected as a submission. Successfully addressing the critiques creates an opportunity to utilize the author&apos;s academic knowledge, diplomatic communication skills, and professional editorial judgement. Within the broader academic peer review process, a clear <Link href="#" className="text-sky-600 hover:underline">response to reviewer comments</Link> is essential for ensuring transparency, rigor, and editorial confidence.
+                <Link href="/services/publication-support/responding-to-reviewers" className="text-sky-600 hover:underline">Peer review rebuttal strategies</Link> and how to respond to reviewer comments form the foundation of an effective academic revision process, guiding authors through structured <Link href="/services/publication-support/responding-to-reviewers" className="text-sky-600 hover:underline">peer review response preparation</Link>. The act of answering peer reviewer comments is not simply a procedural requirement; it represents a deliberate professional/or academic practice and can sway the outcome of whether a manuscript will be accepted, further revised, or rejected as a submission. Successfully addressing the critiques creates an opportunity to utilize the author&apos;s academic knowledge, diplomatic communication skills, and professional editorial judgement. Within the broader academic peer review process, a clear <Link href="/academy/response-to-reviewer/responding-to-reviewer-comments-revise-research-paper" className="text-sky-600 hover:underline">response to reviewer comments</Link> is essential for ensuring transparency, rigor, and editorial confidence.
               </p>
 
               {/* Section 1 */}
               <section id="section-1" className="space-y-3 pt-4">
                 <h3 className="text-lg font-bold text-gray-900">1. Why Rebuttal Strategy Matters in Peer Review</h3>
                 <p>
-                  Strengthening scientific validity, transparency, and impact are goals of peer review; however, the presence of poorly organized rebuttals continues to be one of the leading causes of post-review rejection even when supported by a strong data precedent <span className="text-sky-600">[1,2]</span>. Manuscript revision after peer review depends heavily on effectively <Link href="#" className="text-sky-600 hover:underline">addressing reviewer feedback</Link> in a manner aligned with journal expectations. A well thought out rebuttal will provide authors with an opportunity to:
+                  Strengthening scientific validity, transparency, and impact are goals of peer review; however, the presence of poorly organized rebuttals continues to be one of the leading causes of post-review rejection even when supported by a strong data precedent <span className="text-sky-600">[1,2]</span>. Manuscript revision after peer review depends heavily on effectively <Link href="/services/publication-support/responding-to-reviewers" className="text-sky-600 hover:underline">addressing reviewer feedback</Link> in a manner aligned with journal expectations. A well thought out rebuttal will provide authors with an opportunity to:
                 </p>
                 <ul className="list-disc pl-5 space-y-2">
                   <li>Exhibit scientific maturity and open-mindedness to critiques</li>
@@ -170,7 +170,7 @@ export default function RebuttalPreparationPage() {
                   <li><strong>Structural Clarity:</strong> Using a point-by-point list promotes transparency as well as increases editing management efficiency</li>
                 </ul>
                 <p>
-                  A well-structured <Link href="#" className="text-sky-600 hover:underline">rebuttal letter for journal submission</Link> reflects both scholarly rigor and professional communication standards.<span className="text-sky-600">[4,5]</span>
+                  A well-structured <Link href="/services/publication-support/journal-submission" className="text-sky-600 hover:underline">rebuttal letter for journal submission</Link> reflects both scholarly rigor and professional communication standards.<span className="text-sky-600">[4,5]</span>
                 </p>
               </section>
 
@@ -233,7 +233,7 @@ export default function RebuttalPreparationPage() {
                     <tbody className="divide-y divide-gray-200">
                       <tr>
                         <td className="p-3 border-r border-gray-200">Methodology unclear</td>
-                        <td className="p-3">Add schematic, <Link href="#" className="text-sky-600 hover:underline">provide citations for justification of design</Link></td>
+                        <td className="p-3">Add schematic, <Link href="/services/research-services/literature-review-and-gap" className="text-sky-600 hover:underline">provide citations for justification of design</Link></td>
                       </tr>
                       <tr>
                         <td className="p-3 border-r border-gray-200">Sample size questioned</td>
@@ -241,18 +241,18 @@ export default function RebuttalPreparationPage() {
                       </tr>
                       <tr>
                         <td className="p-3 border-r border-gray-200">Novelty concerns</td>
-                        <td className="p-3">Strengthen your discussion and provide additional <Link href="#" className="text-sky-600 hover:underline">comparative literature</Link></td>
+                        <td className="p-3">Strengthen your discussion and provide additional <Link href="/services/research-services/literature-review-and-gap" className="text-sky-600 hover:underline">comparative literature</Link></td>
                       </tr>
                       <tr>
                         <td className="p-3 border-r border-gray-200">Language issues</td>
-                        <td className="p-3">Provide professional <Link href="#" className="text-sky-600 hover:underline">language editing</Link> acknowledgment</td>
+                        <td className="p-3">Provide professional <Link href="/services/editing-and-translation" className="text-sky-600 hover:underline">language editing</Link> acknowledgment</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
 
                 <p>
-                  <Link href="#" className="text-sky-600 hover:underline">Peer review response writing service</Link> models often rely on these standardized patterns to ensure comprehensive rebuttal development.
+                  <Link href="/services/publication-support/responding-to-reviewers" className="text-sky-600 hover:underline">Peer review response writing service</Link> models often rely on these standardized patterns to ensure comprehensive rebuttal development.
                 </p>
               </section>
 
@@ -274,7 +274,7 @@ export default function RebuttalPreparationPage() {
                 </div>
 
                 <p>
-                  Professional <Link href="#" className="text-sky-600 hover:underline">rebuttal letter editing service</Link> support can help authors navigate sensitive disagreements while preserving academic credibility.
+                  Professional <Link href="/services/publication-support/responding-to-reviewers/rebuttal-preparation-peer-review-strategy" className="text-sky-600 hover:underline">rebuttal letter editing service</Link> support can help authors navigate sensitive disagreements while preserving academic credibility.
                 </p>
               </section>
 
@@ -366,7 +366,7 @@ export default function RebuttalPreparationPage() {
               <section className="space-y-3 pt-4 border-t border-gray-200">
                 <h3 className="text-lg font-bold text-gray-900">Conclusion</h3>
                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                  During <Link href="#" className="text-sky-600 hover:underline">rebuttal preparation</Link>, you should think of your rebuttal as part of a strategic discussion with the scientific community rather than a simple response. By using structured planning, courteous communication and revising your manuscript based on evidence, authors can greatly increase their chances of receiving better results from the peer review process and having their manuscript accepted for publication. <Link href="#" className="text-sky-600 hover:underline">Academic publishing consulting services</Link> often integrate <Link href="#" className="text-sky-600 hover:underline">peer review response preparation</Link> and strategic rebuttal planning to support authors throughout the publication lifecycle.
+                  During <Link href="/services/publication-support/responding-to-reviewers/rebuttal-preparation-peer-review-strategy" className="text-sky-600 hover:underline">rebuttal preparation</Link>, you should think of your rebuttal as part of a strategic discussion with the scientific community rather than a simple response. By using structured planning, courteous communication and revising your manuscript based on evidence, authors can greatly increase their chances of receiving better results from the peer review process and having their manuscript accepted for publication. <Link href="/services/academic-editorial-services" className="text-sky-600 hover:underline">Academic publishing consulting services</Link> often integrate <Link href="/services/publication-support/responding-to-reviewers" className="text-sky-600 hover:underline">peer review response preparation</Link> and strategic rebuttal planning to support authors throughout the publication lifecycle.
                 </p>
                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed italic">
                   Need expert help with your rebuttal letter or post-peer review revision? Pubrica supports you with peer review response preparation and editing to improve acceptance outcomes. [Get Expert Publishing Support] or [Schedule a Free Consultation].

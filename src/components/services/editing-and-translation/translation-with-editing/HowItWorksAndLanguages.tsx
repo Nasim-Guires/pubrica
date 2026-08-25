@@ -234,7 +234,7 @@ export default function HowItWorksAndLanguages() {
                     does the editing. To guarantee 100% quality, the translation
                     and editing phases each have a{" "}
                     <a
-                      href="#"
+                      href="/services/publication-support/peer-review-pre-submission"
                       className="text-[#0056B3] hover:underline font-medium"
                     >
                       peer-review

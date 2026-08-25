@@ -164,7 +164,7 @@ export default function RespondingToReviewersPage() {
         <p className="text-base md:text-lg leading-relaxed mb-8 text-slate-700">
           With our{" "}
           <Link
-            href="/insights/news/educational-resources-workshops-learning-development"
+            href="/insights/educational-resources-workshops-learning-development"
             className="text-blue-700 font-medium hover:text-blue-900 transition-colors"
           >
             response to reviewer
@@ -405,7 +405,7 @@ export default function RespondingToReviewersPage() {
           Navigating reviewer feedback can be difficult for authors across all
           academic disciplines. Our{" "}
           <Link
-            href="/publication-support/responding-to-reviewers"
+            href="/services/publication-support/responding-to-reviewers"
             className="text-blue-700 font-medium hover:text-blue-900 transition-colors"
           >
             response to reviewer

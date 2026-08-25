@@ -17,8 +17,8 @@ export default async function JournalSlugPage({ params }: JournalSlugProps) {
     <>
       <Breadcrumb
         items={[
-          { label: 'industries', href: '/industries' },
-          { label: journalTitle, href: `/industries/${slug}` },
+          { label: 'industries', href: '/Industries' },
+          { label: journalTitle, href: `/Industries/${slug}` },
         ]}
       />
       <div className="bg-white py-20 text-center font-sans">

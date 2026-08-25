@@ -415,11 +415,6 @@ export const GENERAL_FAQS = [
 // ];
 export const NAV_LINKS = [
   {
-    href: "/",
-    label: "Home",
-  },
-
-  {
     href: "/services",
     label: "Services",
     dropdown: [
@@ -827,17 +822,17 @@ export const NAV_LINKS = [
 export const FOOTER_LINKS = {
   services: [
     { href: "/services/medical-writing", label: "Medical Writing" },
-    { href: "/services/systematic-review", label: "Systematic Review" },
-    { href: "/services/meta-analysis", label: "Meta-Analysis" },
+    { href: "/services/research-services/systematic-review", label: "Systematic Review" },
+    { href: "/services/research-services/meta-analysis", label: "Meta-Analysis" },
     { href: "/services/publication-support", label: "Publication Support" },
-    { href: "/services/book-editing", label: "Book Editing" },
+    { href: "/services/editing-and-translation/book-editing", label: "Book Editing" },
   ],
   company: [
-    { href: "/about", label: "About Us" },
+    { href: "/about-us", label: "About Us" },
     { href: "/contact", label: "Contact Us" },
-    { href: "/blogs", label: "Latest Blogs" },
+    { href: "/blog", label: "Latest Blogs" },
     { href: "/subjects", label: "Free Resources" },
-    { href: "/industries", label: "Featured Journals" },
+    { href: "/Industries", label: "Featured Journals" },
   ],
   legal: [
     { href: "/privacy-policy", label: "Privacy Policy" },
@@ -847,11 +842,19 @@ export const FOOTER_LINKS = {
 };
 
 export const CONTACT_INFO = {
-  phone: "+1 (773) 302-8629",
-  email: "support@pubrica.com",
+  phone: "+91 9884350006",
+  email: "sales@pubrica.com",
   address:
     "Pubrica Inc., 100 Church Street, 8th Floor, New York, NY 10007, USA",
   hours: "Mon - Fri: 9:00 AM - 6:00 PM EST",
+};
+
+export const SOCIAL_LINKS = {
+  facebook: "https://www.facebook.com/pubricamedicalwritingservices/",
+  youtube: "https://www.youtube.com/channel/UCDUT3JFoRJ4RF4lA7ZmdUjA",
+  linkedin: "https://www.linkedin.com/company/pubrica-scientific-medical-writing/",
+  instagram: "https://www.instagram.com/pubrica/",
+  twitter: "https://x.com/Pub_rica",
 };
 
 export const CLIENT_LOGOS = [

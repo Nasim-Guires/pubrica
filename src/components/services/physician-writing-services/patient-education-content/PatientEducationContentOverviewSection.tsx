@@ -54,7 +54,7 @@ export default function PatientEducationContentOverviewSection() {
               and medical device manufacturers seeking to improve patient
               understanding and engagement. Our content meets{" "}
               <Link
-                href="/services/medical-communication"
+                href="/services/scientific-communication"
                 className="text-[#0a66bc] hover:underline font-medium"
               >
                 medical communication
@@ -159,7 +159,7 @@ export default function PatientEducationContentOverviewSection() {
               engaging educational content that promotes patient understanding
               and engagement. Here’s how we support{" "}
               <Link
-                href="/services/patient-education"
+                href="/services/patient-education-content"
                 className="text-[#0a66bc] hover:underline font-medium"
               >
                 patient education
@@ -184,7 +184,7 @@ export default function PatientEducationContentOverviewSection() {
                 </strong>{" "}
                 We tailor our{" "}
                 <Link
-                  href="/services/patient-education"
+                  href="/services/patient-education-content"
                   className="text-[#0a66bc] hover:underline font-medium"
                 >
                   patient education

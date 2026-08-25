@@ -146,15 +146,15 @@ export default function GenomicsPage() {
                         </p>
                         <p className="text-gray-600 text-sm leading-relaxed">
                             At Pubrica, we provide end-to-end{' '}
-                            <Link href="/services/genomics-publication-support" className="text-[#0056b3] hover:underline">
+                            <Link href="/services/publication-support" className="text-[#0056b3] hover:underline">
                                 genomics publication support
                             </Link>
                             , empowering researchers, clinicians, and industry scientists to publish high-impact{' '}
-                            <Link href="/services/genomics-research" className="text-[#0056b3] hover:underline">
+                            <Link href="/services/research-services" className="text-[#0056b3] hover:underline">
                                 genomics research
                             </Link>{' '}
                             in leading international journals. Our expert-driven editorial and scientific services ensure that your{' '}
-                            <Link href="/services/genomics-manuscripts" className="text-[#0056b3] hover:underline">
+                            <Link href="/services/medical-writing" className="text-[#0056b3] hover:underline">
                                 genomics manuscripts
                             </Link>{' '}
                             meet the highest standards of technical rigor, ethical compliance, and scholarly excellence.

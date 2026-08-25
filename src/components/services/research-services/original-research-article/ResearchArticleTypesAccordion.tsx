@@ -118,33 +118,41 @@ export default function ResearchArticleTypesAccordion() {
             </Link>
             , including randomized trials, observational studies, epidemiology
             research, and other empirical investigations. Manuscripts adhere to{" "}
-            <Link
-              href="/guidelines/consort"
+            <a
+              href="https://www.consort-statement.org/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sky-600 hover:underline"
             >
               CONSORT
-            </Link>
+            </a>
             ,{" "}
-            <Link
-              href="/guidelines/strobe"
+            <a
+              href="https://www.strobe-statement.org/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sky-600 hover:underline"
             >
               STROBE
-            </Link>
+            </a>
             ,{" "}
-            <Link
-              href="/guidelines/prisma"
+            <a
+              href="https://www.prisma-statement.org/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sky-600 hover:underline"
             >
               PRISMA
-            </Link>
+            </a>
             , and{" "}
-            <Link
-              href="/guidelines/arrive"
+            <a
+              href="https://arriveguidelines.org/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sky-600 hover:underline"
             >
               ARRIVE
-            </Link>{" "}
+            </a>{" "}
             standards depending on your research domain. Our services also
             include APA, AMA, or MLA formatting for primary research.
           </p>

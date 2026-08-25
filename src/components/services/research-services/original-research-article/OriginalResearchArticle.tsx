@@ -42,7 +42,7 @@ export default function OriginalResearchArticle() {
             <div className="text-slate-700 leading-relaxed space-y-4 text-sm sm:text-base">
               <p>
                 <Link
-                  href="/original-research-articles"
+                  href="/services/physician-writing-services/original-research-article"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   Original research articles
@@ -73,19 +73,23 @@ export default function OriginalResearchArticle() {
                 </li>
                 <li>
                   Compliance with{" "}
-                  <Link
-                    href="/guidelines/icmje"
+                  <a
+                    href="https://www.icmje.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-sky-600 hover:underline"
                   >
                     ICMJE
-                  </Link>
+                  </a>
                   ,{" "}
-                  <Link
-                    href="/guidelines/consort"
+                  <a
+                    href="https://www.consort-statement.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-sky-600 hover:underline"
                   >
                     CONSORT
-                  </Link>
+                  </a>
                   , and GCP guidelines
                 </li>
                 <li>
@@ -94,7 +98,7 @@ export default function OriginalResearchArticle() {
                 </li>
                 <li>
                   <Link
-                    href="/services/plagiarism-free"
+                    href="/services/publication-support/plagiarism-services"
                     className="text-sky-600 hover:underline"
                   >
                     Plagiarism-free

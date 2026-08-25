@@ -101,7 +101,7 @@ export default function PosterServicePackagesSection() {
             Whether you need a quick design adjustment or you need assistance
             organizing and designing all of your content, Pubrica has custom{" "}
             <Link
-              href="/publication-support/poster-preparation/"
+              href="/services/publication-support/poster-preparation"
               className="text-[#0284c7] hover:underline font-medium"
             >
               poster preparation

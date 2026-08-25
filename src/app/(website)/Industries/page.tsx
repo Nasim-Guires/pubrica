@@ -74,7 +74,7 @@ export default function IndustryPage() {
   return (
     <>
       <header aria-label="Breadcrumb Navigation" className="bg-white py-2">
-        <Breadcrumb items={[{ label: "Industries", href: "/industries" }]} />
+        <Breadcrumb items={[{ label: "Industries", href: "/Industries" }]} />
       </header>
 
       <main className="bg-gray-100 min-h-screen pb-24">

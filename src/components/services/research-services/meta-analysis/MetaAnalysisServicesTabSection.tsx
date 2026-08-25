@@ -71,7 +71,7 @@ const servicesData: TabData[] = [
           <strong>Structured Data Extraction</strong> – Use standardized
           templates for consistent, high-quality{" "}
           <Link
-            href="/services/research-services/data-collection"
+            href="/services/medical-data-collection"
             style={{ color: "#2563eb", textDecoration: "underline" }}
           >
             systematic review data collection support
@@ -296,15 +296,17 @@ export default function MetaAnalysisServicesTabSection() {
             systematic review writing services
           </Link>{" "}
           for researchers and clinicians, ensuring compliance with the{" "}
-          <Link
-            href="/guidelines/prisma-checklist-2020"
+          <a
+            href="https://www.prisma-statement.org/prisma-2020-checklist"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               color: "#2563eb",
               textDecoration: "underline",
             }}
           >
             PRISMA checklist 2020
-          </Link>
+          </a>
           , Cochrane guidelines, and journal specifications. Our medical and
           scientific professionals provide publication-ready manuscripts with
           the most rigorous methodology and evidence, including full project
@@ -415,7 +417,7 @@ export default function MetaAnalysisServicesTabSection() {
               }}
             >
               <Link
-                href="/request-quote"
+                href="/order-now"
                 style={{
                   display: "inline-block",
                   background: "#0e3838",

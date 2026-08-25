@@ -55,7 +55,7 @@ const AIDataPreparationComprehensiveSection: NextPage = () => {
         />
         <link
           rel="canonical"
-          href="https://pubrica.com/services/education-editorial-service/ai-and-data-preparation-services/"
+          href="/services/education-editorial-service/ai-and-data-preparation-services"
         />
       </Head>
 

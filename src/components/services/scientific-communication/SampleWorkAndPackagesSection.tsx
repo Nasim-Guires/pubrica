@@ -112,7 +112,7 @@ export default function SampleWorkAndPackagesSection() {
                 Scientific Medical Communication Sample Work
               </h2>
               <Link
-                href="/sample-work"
+                href="/insights/sample-work"
                 className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs md:text-sm py-2 px-6 rounded-full transition-colors duration-200"
               >
                 Discover More
@@ -131,7 +131,7 @@ export default function SampleWorkAndPackagesSection() {
                 enhances academic, clinical, and medical research impact.
               </p>
               <Link
-                href="/download-report"
+                href="/insights/sample-work"
                 className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs md:text-sm py-2 px-6 rounded-full transition-colors duration-200"
               >
                 Discover More

@@ -79,7 +79,7 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
     <>
       Our academic research assistance and clinical{" "}
       <a
-        href="/services/research-support"
+        href="/services/research-services"
         className="text-[#3b82f6] hover:underline"
       >
         research support services

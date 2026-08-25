@@ -102,7 +102,7 @@ const servicesData: TabData[] = [
           <strong>Structured Data Extraction</strong> – Use standardized
           templates for consistent, high-quality{" "}
           <Link
-            href="/services/research-services/data-collection"
+            href="/services/medical-data-collection"
             style={{ color: "#2563eb", textDecoration: "underline" }}
           >
             systematic review data collection support
@@ -233,7 +233,7 @@ const servicesData: TabData[] = [
         development of PRISMA flow diagrams to document study selection. Our
         team enriches your report using{" "}
         <Link
-          href="/services/research-services/literature-review"
+          href="/services/research-services/literature-review-and-gap"
           style={{ color: "#2563eb", textDecoration: "underline" }}
         >
           literature review services
@@ -341,12 +341,14 @@ export default function SystematicReviewServicesTabs() {
             systematic review writing services
           </Link>{" "}
           for researchers and clinicians, ensuring compliance with the{" "}
-          <Link
-            href="/guidelines/prisma-checklist-2020"
+          <a
+            href="https://www.prisma-statement.org/prisma-2020-checklist"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{ color: "#2563eb", textDecoration: "underline" }}
           >
             PRISMA checklist 2020
-          </Link>
+          </a>
           , Cochrane guidelines, and journal specifications. Our medical and
           scientific professionals provide publication-ready manuscripts with
           the most rigorous methodology and evidence, including full project
@@ -450,7 +452,7 @@ export default function SystematicReviewServicesTabs() {
             {/* Request A Quote Button */}
             <div style={{ marginTop: "24px" }}>
               <Link
-                href="/request-quote"
+                href="/order-now"
                 style={{
                   display: "inline-block",
                   backgroundColor: "#0e3838", // Matching dark teal theme button

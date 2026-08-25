@@ -267,7 +267,7 @@ const Page = () => {
             alt="Previous Article"
             className="object-cover opacity-80 transition-transform duration-300 group-hover:scale-110"
             fill
-            src="/images/grammar/phrasing-it-right.jpg"
+            src="https://pubrica-blog.vercel.app/api/media/file/paraphrashing-01.png"
             sizes="56px"
           />
         </div>
@@ -284,7 +284,7 @@ const Page = () => {
             alt="Next Article"
             className="object-cover opacity-80 transition-transform duration-300 group-hover:scale-110"
             fill
-            src="/images/grammar/tense.jpg"
+            src="https://pubrica-blog.vercel.app/api/media/file/tenses-01.png"
             sizes="56px"
           />
         </div>

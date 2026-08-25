@@ -104,7 +104,7 @@ export default function DevelopmentEditingServicePagePackage() {
         />
         <link
           rel="canonical"
-          href="https://pubrica.com/services/academic-editorial-services/development-editing-service"
+          href="/services/academic-editorial-services/development-editing-service"
         />
       </Head>
 

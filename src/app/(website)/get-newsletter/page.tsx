@@ -15,33 +15,33 @@ const newsletters: NewsletterItem[] = [
   {
     id: 1,
     title: "Manuscript Editing Service",
-    image: "/images/newsletter/manuscript-editing.jpg",
+    image: "https://pubrica.com/wp-content/uploads/2022/05/PUBRICA-NEWSLETTER-min.jpg",
   },
   {
     id: 2,
     title: "Meta Analysis Service",
-    image: "/images/newsletter/meta-analysis.jpg",
+    image: "https://pubrica.com/wp-content/uploads/2022/05/Meta-analysis-services.jpg",
   },
   {
     id: 3,
     title: "Journal Selection Service",
-    image: "/images/newsletter/journal-selection.jpg",
+    image: "https://pubrica.com/wp-content/uploads/2022/05/Journal-selection-services.jpg",
   },
   {
     id: 4,
     title: "Scientific Grant Review",
-    image: "/images/newsletter/scientific-grant.jpg",
+    image: "https://pubrica.com/wp-content/uploads/2022/05/scientific-grant-review.jpg",
     buttonText: "Read More",
   },
   {
     id: 5,
     title: "Scientific Literature Review",
-    image: "/images/newsletter/literature-review.jpg",
+    image: "https://pubrica.com/wp-content/uploads/2022/05/scientific-literature-review.jpg",
   },
   {
     id: 6,
     title: "Journal Submission",
-    image: "/images/newsletter/journal-submission.jpg",
+    image: "https://pubrica.com/wp-content/uploads/2022/05/Journal-submission.jpg",
   },
 ];
 
@@ -54,7 +54,7 @@ const Page = () => {
       {/* Full Width Hero Banner */}
       <div className="relative h-48 w-full overflow-hidden bg-gray-900 sm:h-64 md:h-72">
         <Image
-          src="/images/newsletter/banner-newspaper.jpg"
+          src="https://pubrica.com/wp-content/uploads/2022/05/PUBRICA-NEWSLETTER-min.jpg"
           alt="Newsletter Header Banner"
           fill
           priority

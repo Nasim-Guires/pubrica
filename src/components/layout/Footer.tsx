@@ -3,53 +3,54 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Container from "@/components/common/Container";
+import { SOCIAL_LINKS } from "@/lib/constants";
 
 export default function Footer() {
   const serviceLinks = [
-    { label: "Research Services", href: "#research" },
-    { label: "Physician Writing", href: "#physician" },
-    { label: "Publication Support", href: "#support" },
-    { label: "Scientific Communication", href: "#scientific" },
-    { label: "Editing and Translation", href: "#editing" },
-    { label: "Data Analytics", href: "#analytics" },
-    { label: "Education Content", href: "#education" },
-    { label: "Medical Data Collection", href: "#medical" },
+    { label: "Research Services", href: "/services/research-services" },
+    { label: "Physician Writing", href: "/services/physician-writing-services" },
+    { label: "Publication Support", href: "/services/publication-support" },
+    { label: "Scientific Communication", href: "/services/scientific-communication" },
+    { label: "Editing and Translation", href: "/services/editing-and-translation" },
+    { label: "Data Analytics", href: "/services/data-analytics-machine-learning" },
+    { label: "Education Content", href: "/services/educational-content-development" },
+    { label: "Medical Data Collection", href: "/services/medical-data-collection" },
   ];
 
   const aboutLinks = [
-    { label: "Meet the Team", href: "#team" },
-    { label: "Subject areas", href: "#subjects" },
-    { label: "Therapeutic Expertise", href: "#therapeutic" },
-    { label: "Strategic Partnership", href: "#strategic" },
-    { label: "Contact us", href: "#contact" },
-    { label: "Careers", href: "#careers" },
+    { label: "Meet the Team", href: "/about-us/our-editors" },
+    { label: "Subject areas", href: "/subject-matter-experts" },
+    { label: "Therapeutic Expertise", href: "/therapeutic-expertise" },
+    { label: "Strategic Partnership", href: "/strategic-partnerships-memberships" },
+    { label: "Contact us", href: "/contact" },
+    { label: "Careers", href: "/careers" },
   ];
 
-  const moreLinks = [
-    { label: "Subjects", href: "#more-subjects" },
-    { label: "Industries", href: "#industries" },
-    { label: "Global Partner Program", href: "#partner" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Testimonials", href: "#testimonials" },
-    { label: "Academy", href: "#academy" },
-    { label: "Our SampleWork", href: "#samplework" },
-    { label: "Blog", href: "#blog" },
+  const moreLinks: { label: string; href: string | null }[] = [
+    { label: "Subjects", href: "/subject-matter-experts" },
+    { label: "Industries", href: "/Industries" },
+    { label: "Global Partner Program", href: null },
+    { label: "FAQ", href: "/faq" },
+    { label: "Testimonials", href: "/#testimonials" },
+    { label: "Academy", href: "/academy" },
+    { label: "Our SampleWork", href: "/insights/sample-work" },
+    { label: "Blog", href: "/blog" },
   ];
 
-  const quickLinks = [
-    { label: "About Us", href: "#about" },
-    { label: "Quality Process", href: "#quality" },
-    { label: "Journal", href: "#journal" },
-    { label: "Publications", href: "#publications" },
-    { label: "Subject Areas", href: "#subject-areas" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Partnership Solutions", href: "#partnership" },
-    { label: "Ethics", href: "#ethics" },
-    { label: "Cookie Policy", href: "#cookies" },
-    { label: "Do not sell any Information", href: "#privacy-opt-out" },
-    { label: "Quality Standards", href: "#standards" },
-    { label: "Privacy Policy", href: "#privacy" },
-    { label: "Terms & Condition", href: "#terms" },
+  const quickLinks: { label: string; href: string | null }[] = [
+    { label: "About Us", href: "/about-us" },
+    { label: "Quality Process", href: "/quality" },
+    { label: "Journal", href: "/academy/journal-templates" },
+    { label: "Publications", href: "/our-published-papers" },
+    { label: "Subject Areas", href: "/subject-matter-experts" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Partnership Solutions", href: "/strategic-partnerships-memberships" },
+    { label: "Ethics", href: null },
+    { label: "Cookie Policy", href: null },
+    { label: "Do not sell any Information", href: null },
+    { label: "Quality Standards", href: "/quality/quality-assurance" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms & Condition", href: "/terms-and-condition" },
   ];
 
   return (
@@ -68,7 +69,7 @@ export default function Footer() {
           {/* Action Button */}
           <div>
             <Link
-              href="#quote"
+              href="/order-now"
               className="bg-white text-gray-900 hover:bg-gray-100 font-semibold text-xs sm:text-sm px-6 py-3 rounded-md transition-colors shadow-sm inline-block"
             >
               Get a Free Quote
@@ -113,13 +114,13 @@ export default function Footer() {
             <ul className="space-y-2.5 pl-0 list-none">
               {serviceLinks.map((link, idx) => (
                 <li key={idx}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-[11px] text-gray-400 hover:text-white flex items-center gap-1.5 transition-colors group"
                   >
                     <ArrowRight className="h-3 w-3 text-gray-400 group-hover:text-white transition-colors" />
                     <span>{link.label}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -133,13 +134,13 @@ export default function Footer() {
             <ul className="space-y-2.5 pl-0 list-none">
               {aboutLinks.map((link, idx) => (
                 <li key={idx}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-[11px] text-gray-400 hover:text-white flex items-center gap-1.5 transition-colors group"
                   >
                     <ArrowRight className="h-3 w-3 text-gray-400 group-hover:text-white transition-colors" />
                     <span>{link.label}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -153,13 +154,20 @@ export default function Footer() {
             <ul className="space-y-2.5 pl-0 list-none">
               {moreLinks.map((link, idx) => (
                 <li key={idx}>
-                  <a
-                    href={link.href}
-                    className="text-[11px] text-gray-400 hover:text-white flex items-center gap-1.5 transition-colors group"
-                  >
-                    <ArrowRight className="h-3 w-3 text-gray-400 group-hover:text-white transition-colors" />
-                    <span>{link.label}</span>
-                  </a>
+                  {link.href ? (
+                    <Link
+                      href={link.href}
+                      className="text-[11px] text-gray-400 hover:text-white flex items-center gap-1.5 transition-colors group"
+                    >
+                      <ArrowRight className="h-3 w-3 text-gray-400 group-hover:text-white transition-colors" />
+                      <span>{link.label}</span>
+                    </Link>
+                  ) : (
+                    <span className="text-[11px] text-gray-500 flex items-center gap-1.5">
+                      <ArrowRight className="h-3 w-3 text-gray-600" />
+                      <span>{link.label}</span>
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -246,9 +254,13 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] text-gray-400">
             {quickLinks.map((link, idx) => (
               <React.Fragment key={idx}>
-                <a href={link.href} className="hover:text-white transition-colors">
-                  {link.label}
-                </a>
+                {link.href ? (
+                  <Link href={link.href} className="hover:text-white transition-colors">
+                    {link.label}
+                  </Link>
+                ) : (
+                  <span className="text-gray-500">{link.label}</span>
+                )}
                 {idx < quickLinks.length - 1 && <span className="text-gray-600">|</span>}
               </React.Fragment>
             ))}
@@ -257,7 +269,9 @@ export default function Footer() {
           {/* Social Icons (Inline SVGs) */}
           <div className="flex items-center gap-3 mt-2">
             <a
-              href="#facebook"
+              href={SOCIAL_LINKS.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
               className="w-7 h-7 rounded-full bg-white text-[#031d18] flex items-center justify-center hover:bg-gray-200 transition-colors"
             >
@@ -266,7 +280,9 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="#youtube"
+              href={SOCIAL_LINKS.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="YouTube"
               className="w-7 h-7 rounded-full bg-white text-[#031d18] flex items-center justify-center hover:bg-gray-200 transition-colors"
             >
@@ -275,7 +291,9 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="#linkedin"
+              href={SOCIAL_LINKS.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="w-7 h-7 rounded-full bg-white text-[#031d18] flex items-center justify-center hover:bg-gray-200 transition-colors"
             >
@@ -284,7 +302,9 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="#instagram"
+              href={SOCIAL_LINKS.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="w-7 h-7 rounded-full bg-white text-[#031d18] flex items-center justify-center hover:bg-gray-200 transition-colors"
             >
@@ -293,7 +313,9 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="#twitter"
+              href={SOCIAL_LINKS.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="X"
               className="w-7 h-7 rounded-full bg-white text-[#031d18] flex items-center justify-center hover:bg-gray-200 transition-colors"
             >

@@ -1,4 +1,7 @@
-import { SERVICES_DATA, BLOGS_DATA, TESTIMONIALS_DATA, Service, Blog, Testimonial } from './constants';
+import { SERVICES_DATA, TESTIMONIALS_DATA, Service, Blog, Testimonial } from './constants';
+import { getPosts, getPostBySlug, mediaUrl } from './payload/client';
+import { extractExcerpt, getDescription } from './payload/lexical';
+import type { PayloadPost } from './payload/types';
 
 /**
  * Synchronous mock fetches for Pubrica data to prevent unhandled promise hangs in Next.js Server Components.
@@ -14,14 +17,43 @@ export function getServiceBySlug(slug: string): Service | null {
   return service;
 }
 
-export function getBlogs(): Blog[] {
-  return BLOGS_DATA;
+function estimateReadTime(post: PayloadPost): string {
+  const text = extractExcerpt(post.content, 100000, post.title);
+  const words = text.split(/\s+/).filter(Boolean).length;
+  return `${Math.max(1, Math.round(words / 200))} min read`;
 }
 
-export function getBlogBySlug(slug: string): Blog | null {
-  const blog = BLOGS_DATA.find((b) => b.slug === slug);
-  if (!blog) return null;
-  return blog;
+function toBlog(post: PayloadPost): Blog {
+  return {
+    slug: post.slug,
+    title: post.title,
+    excerpt: getDescription(post),
+    content: extractExcerpt(post.content, 100000, post.title),
+    date: post.publishing?.publishedAt
+      ? new Date(post.publishing.publishedAt).toLocaleDateString("en-US", {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+        })
+      : "",
+    readTime: estimateReadTime(post),
+    category: post.categories?.[0]?.name || "Blog",
+    image: mediaUrl(post.heroImage) || "/images/blog/default.webp",
+    author: {
+      name: post.author || "Pubrica",
+      role: "Editorial Team",
+    },
+  };
+}
+
+export async function getBlogs(limit = 6): Promise<Blog[]> {
+  const { docs } = await getPosts({ source: "blog", limit });
+  return docs.map(toBlog);
+}
+
+export async function getBlogBySlug(slug: string): Promise<Blog | null> {
+  const post = await getPostBySlug(slug, "blog");
+  return post ? toBlog(post) : null;
 }
 
 export function getTestimonials(): Testimonial[] {

@@ -72,7 +72,7 @@ export default function MedicalImagingTechniquesPage() {
             description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
             image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
-            href: "/services/editing-and-proofreading"
+            href: "/services/editing-and-translation/proofreading"
         },
         {
             title: "Data Collection for AI & ML",

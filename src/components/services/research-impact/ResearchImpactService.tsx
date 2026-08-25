@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function ResearchImpactService(): React.ReactElement {
@@ -43,12 +44,12 @@ export default function ResearchImpactService(): React.ReactElement {
               Publishing your research is only the first step. To truly drive
               research promotion, your work must reach the right stakeholders.
               Pubrica’s{" "}
-              <a
-                href="https://pubrica.com/academy"
+              <Link
+                href="/academy"
                 className="text-[#008ba3] underline underline-offset-2 hover:text-[#09322e] transition-colors"
               >
                 Research Impact Services
-              </a>{" "}
+              </Link>{" "}
               optimize scientific communication, ensuring your research is seen,
               read, cited, and referenced. As a result, you’ll achieve:
             </p>

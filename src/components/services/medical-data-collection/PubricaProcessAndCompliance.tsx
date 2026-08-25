@@ -141,7 +141,7 @@ export default function PubricaProcessAndCompliance() {
             <p className="text-sm sm:text-base text-gray-700 leading-relaxed max-w-5xl">
               At Pubrica, our healthcare, medical, and life sciences{" "}
               <a
-                href="#"
+                href="/services/medical-data-collection"
                 className="text-cyan-700 hover:underline font-medium decoration-cyan-700"
               >
                 data collection and extraction services

@@ -281,7 +281,8 @@ export default function ServicesResearchProductDevelopment({
           </ul>
         </>
       ),
-      iconPlaceholder: "/images/product-development/Device-Drug-Interaction-Intelligence.png",
+      iconPlaceholder:
+        "https://pubrica.com/wp-content/uploads/2025/08/Device-Drug-Interaction-Intelligence-for-Combination-Products.png",
     },
     {
       id: "regulatory-classification",

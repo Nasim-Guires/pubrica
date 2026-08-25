@@ -87,7 +87,7 @@ export default function ScientificMedicalCommunication() {
               At Pubrica, we bridge the gap between complex scientific research
               and clear, impactful communication. Our scientific{" "}
               <Link
-                href="/services/medical-communication"
+                href="/services/scientific-communication"
                 className="text-sky-600 hover:underline font-medium"
               >
                 medical communication services
@@ -124,7 +124,7 @@ export default function ScientificMedicalCommunication() {
             <div className="flex flex-wrap items-center gap-4 pt-2">
              <GetFreeQuoteButton/>
               <Link
-                href="/brochure"
+                href="/scientific-communication-brochures"
                 className="bg-[#c00000] hover:bg-[#a00000] text-white font-bold text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
               >
                 View Brochure

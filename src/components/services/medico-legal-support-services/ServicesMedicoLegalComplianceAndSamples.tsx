@@ -34,10 +34,10 @@ export default function ServicesMedicoLegalComplianceAndSamples({
                     <ul className="list-disc pl-5 space-y-1">
                         <li>
                             <span className="font-semibold">National and International Guidelines:</span>{" "}
-                            <Link href="#" className="text-sky-600 underline font-medium">NICE</Link> (UK),{" "}
-                            <Link href="#" className="text-sky-600 underline font-medium">AHRQ</Link> (USA),{" "}
-                            <Link href="#" className="text-sky-600 underline font-medium">ICMR</Link> (India),{" "}
-                            <Link href="#" className="text-sky-600 underline font-medium">WHO</Link>
+                            <a href="https://www.nice.org.uk/" target="_blank" rel="noopener noreferrer" className="text-sky-600 underline font-medium">NICE</a> (UK),{" "}
+                            <a href="https://www.ahrq.gov/" target="_blank" rel="noopener noreferrer" className="text-sky-600 underline font-medium">AHRQ</a> (USA),{" "}
+                            <a href="https://www.icmr.gov.in/" target="_blank" rel="noopener noreferrer" className="text-sky-600 underline font-medium">ICMR</a> (India),{" "}
+                            <a href="https://www.who.int/" target="_blank" rel="noopener noreferrer" className="text-sky-600 underline font-medium">WHO</a>
                         </li>
                         <li>
                             <span className="font-semibold">Evidence Hierarchies:</span> Level A evidence, including RCTs and systematic reviews

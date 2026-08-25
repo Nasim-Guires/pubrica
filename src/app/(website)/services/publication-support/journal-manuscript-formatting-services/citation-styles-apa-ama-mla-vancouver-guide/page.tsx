@@ -20,7 +20,7 @@ export default function CitationStylesPage() {
                     <span>»</span>
                     <Link href="/insights" className="hover:underline">Insights</Link>
                     <span>»</span>
-                    <Link href="/news" className="hover:underline">News</Link>
+                    <Link href="/academy/industry-news" className="hover:underline">News</Link>
                     <span>»</span>
                     <span className="text-gray-500">Introducing the Journal of the Academy of Public Health & New Era in Scientific Publishing</span>
                 </div>
@@ -34,36 +34,36 @@ export default function CitationStylesPage() {
                     <div>
                         <h3 className="text-lg font-bold text-gray-900 border-b pb-2 mb-4">An Academy Guide</h3>
                         <ul className="space-y-2 text-xs md:text-sm text-blue-600">
-                            <li><Link href="#" className="hover:underline">» High-Impact Academic Journal</Link></li>
-                            <li><Link href="#" className="hover:underline">» Impact Factor Is Calculated</Link></li>
-                            <li><Link href="#" className="hover:underline">» Types of High Impact Academic Journals</Link></li>
-                            <li><Link href="#" className="hover:underline">» High-Impact Journals by Discipline</Link></li>
-                            <li><Link href="#" className="hover:underline">» Publish in High-Impact Journals</Link></li>
-                            <li><Link href="#" className="hover:underline">» Publishing in High-Impact Journals</Link></li>
-                            <li><Link href="#" className="hover:underline">» Top Indexing Databases</Link></li>
-                            <li><Link href="#" className="hover:underline">» Major Indexing Databases</Link></li>
-                            <li><Link href="#" className="hover:underline">» Frequently Asked Questions</Link></li>
+                            <li><Link href="/services/publication-support/journal-selection/high-impact-academic-journals-guide#what-is-a-high-impact-academic-journal" className="hover:underline">» High-Impact Academic Journal</Link></li>
+                            <li><Link href="/services/publication-support/journal-selection/high-impact-academic-journals-guide#how-impact-factor-is-calculated-simplified-formula" className="hover:underline">» Impact Factor Is Calculated</Link></li>
+                            <li><Link href="/services/publication-support/journal-selection/high-impact-academic-journals-guide#types-of-high-impact-academic-journals" className="hover:underline">» Types of High Impact Academic Journals</Link></li>
+                            <li><Link href="/services/publication-support/journal-selection/high-impact-academic-journals-guide#high-impact-journals-by-discipline" className="hover:underline">» High-Impact Journals by Discipline</Link></li>
+                            <li><Link href="/services/publication-support/journal-selection/high-impact-academic-journals-guide#how-to-publish-in-high-impact-journals" className="hover:underline">» Publish in High-Impact Journals</Link></li>
+                            <li><Link href="/services/publication-support/journal-selection/high-impact-academic-journals-guide#benefits-of-publishing-in-high-impact-journals" className="hover:underline">» Publishing in High-Impact Journals</Link></li>
+                            <li><Link href="/services/publication-support/journal-selection/high-impact-academic-journals-guide#top-indexing-databases" className="hover:underline">» Top Indexing Databases</Link></li>
+                            <li><Link href="/services/publication-support/journal-selection/high-impact-academic-journals-guide#comparison-of-major-indexing-databases" className="hover:underline">» Major Indexing Databases</Link></li>
+                            <li><Link href="/services/publication-support/journal-selection/high-impact-academic-journals-guide#frequently-asked-questions-faqs" className="hover:underline">» Frequently Asked Questions</Link></li>
                         </ul>
                     </div>
 
                     <div>
                         <h3 className="text-lg font-bold text-gray-900 border-b pb-2 mb-4">Interesting topics</h3>
                         <ul className="space-y-2 text-xs md:text-sm text-blue-600">
-                            <li><Link href="#" className="hover:underline">Medical writing</Link></li>
-                            <li><Link href="#" className="hover:underline">Scientific writing</Link></li>
-                            <li><Link href="#" className="hover:underline">Systematic Review Writing</Link></li>
-                            <li><Link href="#" className="hover:underline">Meta-Analysis</Link></li>
-                            <li><Link href="#" className="hover:underline">Original Research Article Writing Service</Link></li>
-                            <li><Link href="#" className="hover:underline">Literature Review</Link></li>
-                            <li><Link href="#" className="hover:underline">Grant Writing Services</Link></li>
-                            <li><Link href="#" className="hover:underline">Biostatistical Programming</Link></li>
-                            <li><Link href="#" className="hover:underline">Experimental Design</Link></li>
+                            <li><Link href="/services/medical-writing" className="hover:underline">Medical writing</Link></li>
+                            <li><Link href="/services/research-services/scientific-writing" className="hover:underline">Scientific writing</Link></li>
+                            <li><Link href="/services/research-services/systematic-review" className="hover:underline">Systematic Review Writing</Link></li>
+                            <li><Link href="/services/research-services/meta-analysis" className="hover:underline">Meta-Analysis</Link></li>
+                            <li><Link href="/services/physician-writing-services/original-research-article" className="hover:underline">Original Research Article Writing Service</Link></li>
+                            <li><Link href="/services/research-services/literature-review-and-gap" className="hover:underline">Literature Review</Link></li>
+                            <li><Link href="/services/research-services/grant-writing" className="hover:underline">Grant Writing Services</Link></li>
+                            <li><Link href="/services/research-services/biostatistics-and-statistical-programming-services" className="hover:underline">Biostatistical Programming</Link></li>
+                            <li><Link href="/services/research-services/experimental-design" className="hover:underline">Experimental Design</Link></li>
                         </ul>
                     </div>
 
                     <div className="relative w-full h-48 rounded overflow-hidden shadow-sm">
                         <Image
-                            src="/images/sidebar-banner.jpg"
+                            src="https://pubrica.com/wp-content/uploads/2024/06/pubrica-service-and-sample-work-1024x644.webp"
                             alt="Interesting Topics"
                             fill
                             className="object-cover"

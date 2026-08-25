@@ -103,7 +103,7 @@ const audiences: AudienceCard[] = [
         Pubrica helps academic researchers with the entire article development
         process, from hypothesis framing to peer-reviewed{" "}
         <Link
-          href="/services/journal-submission"
+          href="/services/publication-support/journal-submission"
           className="text-sky-600 hover:underline"
         >
           journal submission
