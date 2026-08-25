@@ -44,7 +44,7 @@ export default function PatientEducationContentOverviewSection() {
             <p className="text-base text-slate-700 leading-relaxed">
               Our{" "}
               <Link
-                href="/services/patient-education-content"
+                href="/academy/patient-education/effective-patient-education-content-guide/"
                 className="text-[#0a66bc] hover:underline font-medium"
               >
                 patient education content
@@ -54,7 +54,7 @@ export default function PatientEducationContentOverviewSection() {
               and medical device manufacturers seeking to improve patient
               understanding and engagement. Our content meets{" "}
               <Link
-                href="/services/medical-communication"
+                href="/services/scientific-communication"
                 className="text-[#0a66bc] hover:underline font-medium"
               >
                 medical communication
@@ -74,10 +74,23 @@ export default function PatientEducationContentOverviewSection() {
                     Evidence-Based Information:
                   </strong>{" "}
                   Content based on trusted international and national clinical
-                  guidelines such as <span className="text-[#0a66bc]">WHO</span>
-                  , <span className="text-[#0a66bc]">NICE</span>,{" "}
-                  <span className="text-[#0a66bc]">CDC</span>, and{" "}
-                  <span className="text-[#0a66bc]">ICMR</span>, ensuring
+
+                  guidelines such as   <Link href="https://www.who.int/" className="text-[#0a66bc] ">
+                    WHO
+                  </Link>
+                  ,
+                  <Link href="https://www.nice.org.uk/process/pmg6/resources/the-guidelines-manual-pdf-2007970804933" className="text-[#0a66bc] ">
+                    NICE
+                  </Link>
+                  ,{" "}
+                  <Link href="/https://www.cdc.gov/index.html" className="text-[#0a66bc] ">
+                    CDC
+                  </Link>
+                  , and{" "}
+                  <Link href="https://www.icmr.gov.in/" className="text-[#0a66bc]">
+                    ICMR
+                  </Link>
+                  , ensuring
                   clinical accuracy and consistency.
                 </li>
                 <li className="text-slate-700 leading-relaxed">
@@ -98,7 +111,9 @@ export default function PatientEducationContentOverviewSection() {
                     Regulatory Standards:
                   </strong>{" "}
                   Complies with HIPAA,{" "}
-                  <span className="text-[#0a66bc]">FDA</span>, and EU MDR
+                  <Link href="https://www.fda.gov/" className="text-[#0a66bc] hover:underline">
+                    FDA
+                  </Link>, and EU MDR
                   standards for patient communications.
                 </li>
                 <li className="text-slate-700 leading-relaxed">
@@ -119,14 +134,14 @@ export default function PatientEducationContentOverviewSection() {
             </div>
 
             <div className="pt-4">
-              <GetFreeQuoteButton/>
+              <GetFreeQuoteButton />
             </div>
           </div>
 
           {/* Right Image Container with Accent Frame */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end pt-4 lg:pt-0">
-            <div className="relative p-3 bg-[#0d211d] rounded-2xl shadow-xl max-w-md w-full">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-white">
+            <div className="relative p-3  rounded-2xl  max-w-md w-full">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
                 <Image
                   src="/images/physician-writing-services/patient-education-content/Patient-Education-Content-Service.webp"
                   alt="Doctor explaining medical treatment using visual aids to a patient"
@@ -148,7 +163,7 @@ export default function PatientEducationContentOverviewSection() {
             <p className="text-base text-slate-700 leading-relaxed">
               At Pubrica, we create{" "}
               <Link
-                href="/services/patient-education-content"
+                href="/services/patient-education-content/breast-cancer-treatment"
                 className="text-[#0a66bc] hover:underline font-medium"
               >
                 patient education content
@@ -159,7 +174,7 @@ export default function PatientEducationContentOverviewSection() {
               engaging educational content that promotes patient understanding
               and engagement. Here’s how we support{" "}
               <Link
-                href="/services/patient-education"
+                href="/insights/sample-work/insomnia/"
                 className="text-[#0a66bc] hover:underline font-medium"
               >
                 patient education
@@ -184,7 +199,7 @@ export default function PatientEducationContentOverviewSection() {
                 </strong>{" "}
                 We tailor our{" "}
                 <Link
-                  href="/services/patient-education"
+                  href="/insights/sample-work/insomnia/"
                   className="text-[#0a66bc] hover:underline font-medium"
                 >
                   patient education
@@ -257,7 +272,7 @@ export default function PatientEducationContentOverviewSection() {
                 />
               </div>
 
-             
+
 
               {/* Decorative Subtle Background Circle */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-slate-100 rounded-full -z-0 opacity-70" />

@@ -18,6 +18,21 @@ import {
 } from "lucide-react";
 
 // ==========================================
+// TYPES
+// ==========================================
+interface ComplianceCard {
+  title: string;
+  logo: string;
+  url?: string;
+}
+
+interface ComplianceAccordionItem {
+  id: string;
+  title: string;
+  cards: ComplianceCard[];
+}
+
+// ==========================================
 // DATA: WHO WE SERVE
 // ==========================================
 const whoWeServeCards = [
@@ -161,7 +176,7 @@ const whyChooseItems = [
 // ==========================================
 // DATA: COMPLIANCE ACCORDIONS
 // ==========================================
-const complianceAccordionData = [
+const complianceAccordionData: ComplianceAccordionItem[] = [
   {
     id: "clinical",
     title: "Clinical and Ethical Compliance",
@@ -169,14 +184,17 @@ const complianceAccordionData = [
       {
         title: "Case Report Guidelines (CARE)",
         logo: "/images/physician-writing-services/case-report/CARE-.png",
+        url: "https://www.care-statement.org/checklist",
       },
       {
         title: "International Committee of Medical Journal Editors (ICMJE)",
         logo: "/images/physician-writing-services/case-report/icmje-vydfghj.png",
+        url: "https://www.icmje.org/",
       },
       {
         title: "Health Insurance Portability and Accountability Act",
         logo: "/images/publication-support/poster-preparation/HIPAA-COMPILANCE-.png",
+        url: "https://www.cdc.gov/phlp/php/resources/health-insurance-portability-and-accountability-act-of-1996-hipaa.html",
       },
     ],
   },
@@ -187,24 +205,28 @@ const complianceAccordionData = [
       {
         title: "Editorial Manager",
         logo: "/images/physician-writing-services/case-report/em-logo-.png",
+        url: "/services/physician-writing-services/case-report/",
       },
       {
         title: "Wiley",
         logo: "/images/publication-support/art-work-preparation/Wiley.png",
+        url: "https://www.wiley.com/en-in/",
       },
       {
         title: "Springer",
         logo: "/images/publication-support/art-work-preparation/Springer.png",
+        url: "https://www.springer.com/in?srsltid=AfmBOopjcT77RneVMLufNx6lFOIfvEoUxAXuOwUrvTaeWGRMfnV8P5DD",
       },
       {
         title: "Elsevier Portals",
         logo: "/images/publication-support/art-work-preparation/elsevier-.png",
+        url: "https://www.elsevier.com/en-in",
       },
     ],
   },
   {
-    id: "social",
-    title: "Social Sciences",
+    id: "journals-list",
+    title: "Target Case Report Journals",
     cards: [
       {
         title: "International Journal of Surgery Case Reports",
@@ -227,28 +249,25 @@ const complianceAccordionData = [
 ];
 
 export default function CaseReportServicesAndCompliance() {
-  const [openWhyChoose, setOpenWhyChoose] = useState<string | null>("expertise");
-  const [openCompliance, setOpenCompliance] = useState<string | null>("clinical");
+  // Array state initializes as empty [], meaning all accordion items are closed by default.
+  // It allows multiple accordions to be open at the same time.
+  const [openWhyChoose, setOpenWhyChoose] = useState<string[]>([]);
+  const [openCompliance, setOpenCompliance] = useState<string[]>([]);
 
   const toggleWhyChoose = (id: string) => {
-    setOpenWhyChoose(openWhyChoose === id ? null : id);
+    setOpenWhyChoose((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
   };
 
   const toggleCompliance = (id: string) => {
-    setOpenCompliance(openCompliance === id ? null : id);
+    setOpenCompliance((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
   };
 
   return (
     <div className="w-full bg-[#f8f9fa] text-slate-800 font-sans">
-      {/* 1. WHO WE SERVE SECTION */}
- 
-      {/* 2. HOW THE CASE REPORT WRITING SERVICE WORKS */}
-   
-      {/* 3. CTA BANNER */}
-  
-
-      {/* 4. DISCIPLINES WE SUPPORT */}
-   
       {/* 5. WHY CHOOSE OUR CASE REPORT SERVICE? */}
       <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38] mb-3">
@@ -263,7 +282,7 @@ export default function CaseReportServicesAndCompliance() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {whyChooseItems.map((item) => {
-            const isOpen = openWhyChoose === item.id;
+            const isOpen = openWhyChoose.includes(item.id);
             return (
               <div key={item.id} className="flex flex-col">
                 <button
@@ -302,7 +321,7 @@ export default function CaseReportServicesAndCompliance() {
 
         <div className="space-y-2">
           {complianceAccordionData.map((acc) => {
-            const isOpen = openCompliance === acc.id;
+            const isOpen = openCompliance.includes(acc.id);
             return (
               <div key={acc.id} className="w-full overflow-hidden rounded-xs">
                 <button
@@ -320,24 +339,37 @@ export default function CaseReportServicesAndCompliance() {
                 {isOpen && (
                   <div className="p-6 bg-[#f0f4f4] border-x border-b border-slate-200">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                      {acc.cards.map((card, cIdx) => (
-                        <div
-                          key={cIdx}
-                          className="bg-white p-6 rounded-md shadow-sm border border-slate-200 flex flex-col items-center justify-between text-center min-h-[180px] hover:shadow-md transition-shadow"
-                        >
-                          <div className="relative w-full h-20 flex items-center justify-center mb-4">
-                            <Image
-                              src={card.logo}
-                              alt={card.title}
-                              fill
-                              className="object-contain max-h-full"
-                            />
+                      {acc.cards.map((card, cIdx) => {
+                        const CardContent = (
+                          <div className="bg-white p-6 rounded-md shadow-sm border border-slate-200 flex flex-col items-center justify-between text-center min-h-[180px] hover:shadow-md transition-shadow h-full">
+                            <div className="relative w-full h-20 flex items-center justify-center mb-4">
+                              <Image
+                                src={card.logo}
+                                alt={card.title}
+                                fill
+                                className="object-contain max-h-full"
+                              />
+                            </div>
+                            <span className="text-xs sm:text-sm font-semibold text-slate-700 leading-snug">
+                              {card.title}
+                            </span>
                           </div>
-                          <span className="text-xs sm:text-sm font-semibold text-slate-700 leading-snug">
-                            {card.title}
-                          </span>
-                        </div>
-                      ))}
+                        );
+
+                        return card.url ? (
+                          <Link
+                            key={cIdx}
+                            href={card.url}
+                            target={card.url.startsWith("http") ? "_blank" : "_self"}
+                            rel={card.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                            className="block"
+                          >
+                            {CardContent}
+                          </Link>
+                        ) : (
+                          <div key={cIdx}>{CardContent}</div>
+                        );
+                      })}
                     </div>
                   </div>
                 )}

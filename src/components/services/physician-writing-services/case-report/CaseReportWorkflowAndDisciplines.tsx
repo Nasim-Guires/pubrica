@@ -56,7 +56,8 @@ const processSteps = [
     description:
       "We start by having in-depth discussions to clarify the clinical case, objectives, and target journal. Our experts review the novelty of the case, ethics approvals, and patient consent",
     isDark: false,
-    position: "top", // Number circle position (top/bottom) matching screenshot
+    position: "top",
+    iconSrc: "/images/icons/step1.png", // Add icon path here
   },
   {
     stepNumber: 2,
@@ -65,6 +66,7 @@ const processSteps = [
       "We collect all relevant patient data, diagnostic reports, imaging, and treatment records. A focused literature review is conducted to place the case in the context of current clinical knowledge",
     isDark: true,
     position: "bottom",
+    iconSrc: "/images/icons/step-2.png",
   },
   {
     stepNumber: 3,
@@ -73,6 +75,7 @@ const processSteps = [
       "Our medical writers create a structured draft following the CARE/SCARE guidelines, which includes an Abstract, Introduction, Case Presentation, Discussion, and Conclusion",
     isDark: false,
     position: "top",
+    iconSrc: "/images/icons/step-3.png",
   },
   {
     stepNumber: 4,
@@ -81,6 +84,7 @@ const processSteps = [
       "The report is scientifically peer reviewed for clarity, accuracy, and technical depth. We format the manuscript following the journal submission criteria",
     isDark: false,
     position: "bottom",
+    iconSrc: "/images/icons/step-4.png",
   },
   {
     stepNumber: 5,
@@ -89,6 +93,7 @@ const processSteps = [
       "We create high-resolution images, clinical graphs, and charts with the correct annotations to improve the visual clarity of the diagnosis and outcomes",
     isDark: true,
     position: "top",
+    iconSrc: "/images/icons/step-5.png",
   },
   {
     stepNumber: 6,
@@ -97,6 +102,7 @@ const processSteps = [
       "We perform a comprehensive quality check, plagiarism scan, and language polishing. Optional submission assistance is offered, including a cover letter and author guidelines",
     isDark: false,
     position: "bottom",
+    iconSrc: "/images/icons/step-6.png",
   },
 ];
 
@@ -104,15 +110,51 @@ const processSteps = [
 // DATA: DISCIPLINES WE SUPPORT
 // ==========================================
 const disciplines = [
-  { title: "Oncology", icon: Ribbon },
-  { title: "Clinical Medicine & Surgery", icon: Scissors },
-  { title: "Neurology", icon: Brain },
-  { title: "Dermatology", icon: Sparkles },
-  { title: "Psychiatry", icon: Smile },
-  { title: "Paediatrics & Neonatology", icon: Baby },
-  { title: "Rare Genetic & Metabolic Disorders", icon: Dna },
-  { title: "Radiology", icon: Scan },
-  { title: "Dentistry & Oral Pathology", icon: CheckCircle2 },
+  {
+    title: "Oncology",
+    icon: Ribbon,
+    url: "/subject-matter-experts/",
+  },
+  {
+    title: "Clinical Medicine & Surgery",
+    icon: Scissors,
+    url: "/subject-matter-experts/",
+  },
+  {
+    title: "Neurology",
+    icon: Brain,
+    url: "/subject-matter-experts/neurology",
+  },
+  {
+    title: "Dermatology",
+    icon: Sparkles,
+    url: "/subject-matter-experts/dermatology",
+  },
+  {
+    title: "Psychiatry",
+    icon: Smile,
+    url: "/subject-matter-experts/psychiatry",
+  },
+  {
+    title: "Paediatrics & Neonatology",
+    icon: Baby,
+    url: "/subject-matter-experts/",
+  },
+  {
+    title: "Rare Genetic & Metabolic Disorders",
+    icon: Dna,
+    url: "/subject-matter-experts/",
+  },
+  {
+    title: "Radiology",
+    icon: Scan,
+    url: "/subject-matter-experts/radiology",
+  },
+  {
+    title: "Dentistry & Oral Pathology",
+    icon: CheckCircle2,
+    url: "/subject-matter-experts/",
+  },
 ];
 
 export default function CaseReportWorkflowAndDisciplines() {
@@ -127,13 +169,13 @@ export default function CaseReportWorkflowAndDisciplines() {
         </h2>
         <p className="text-sm sm:text-base text-slate-700 max-w-5xl leading-relaxed mb-8">
           Our{" "}
-          <Link href="#" className="text-sky-600 hover:underline">
+          <Link href="/insights/sample-work/dyskeratosis-congenita-rare-case-report" className="text-sky-600 ">
             case report writing services
           </Link>{" "}
           are designed for clinicians, researchers, and academic institutions
           aiming to publish rare or significant clinical cases. We can help you
           with the{" "}
-          <Link href="#" className="text-sky-600 hover:underline">
+          <Link href="/services/publication-support/journal-submission" className="text-sky-600">
             journal submission
           </Link>{" "}
           process, whether you are a physician, postgraduate, or medical
@@ -171,71 +213,190 @@ export default function CaseReportWorkflowAndDisciplines() {
       {/* ========================================================= */}
       {/* 2. HOW THE CASE REPORT WRITING SERVICE WORKS             */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38] mb-2">
-            How the Case Report Writing Service Works
-          </h2>
-          <h3 className="text-lg sm:text-xl font-medium text-slate-700 mb-4">
-            Our step-by-Step Process
-          </h3>
-          <p className="text-sm sm:text-base text-slate-600 max-w-4xl mx-auto leading-relaxed">
-            With Pubrica's{" "}
-            <Link href="#" className="text-sky-600 hover:underline">
-              case report writing service
-            </Link>
-            , our clinical experts and scientific writers collaborate to craft
-            ethically sound, guideline-compliant case reports that align with
-            journal-specific formatting and publication standards.
-          </p>
+      <section className="py-12 md:py-16 px-4 md:px-8 bg-[#EAEAEA] w-full text-center font-sans overflow-hidden">
+        {/* Header Section */}
+        <h2 className="text-2xl md:text-3xl font-bold text-[#0B353D] mb-2">
+          How the Case Report Writing Service Works
+        </h2>
+
+        <h3 className="text-lg md:text-xl font-medium text-[#2C4951] mb-4">
+          Our step-by-Step Process
+        </h3>
+
+        <p className="max-w-4xl mx-auto text-[#4B5563] text-xs md:text-sm leading-relaxed mb-12 md:mb-16">
+          With Pubrica's{" "}
+          <Link
+            href="/insights/sample-work/leigh-syndrome-infant-case-report"
+            className="text-sky-600 hover:underline"
+          >
+            case report writing service
+          </Link>
+          , our clinical experts and scientific writers collaborate to craft
+          ethically sound, guideline-compliant case reports that align with
+          journal-specific formatting and publication standards.
+        </p>
+
+        {/* MOBILE LAYOUT (< md screens): Vertical Alternating Timeline */}
+        <div className="flex md:hidden flex-col items-center w-full max-w-sm mx-auto space-y-6">
+          {processSteps.map((step, index) => {
+            const isEven = index % 2 === 0;
+
+            return (
+              <div
+                key={step.stepNumber}
+                className="relative flex items-center w-full min-h-[160px]"
+              >
+                {/* Connecting Vertical Line */}
+                {index !== processSteps.length - 1 && (
+                  <div
+                    className={`absolute top-8 bottom-0 w-[2px] bg-[#0081A7] z-0 ${isEven ? "left-4" : "right-4"
+                      }`}
+                  />
+                )}
+
+                {/* Step Number Badge */}
+                <div
+                  className={`absolute z-10 w-9 h-9 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm shadow-sm ${isEven ? "left-0" : "right-0"
+                    }`}
+                >
+                  {step.stepNumber}
+                </div>
+
+                {/* Step Card Container */}
+                <div
+                  className={`w-full flex ${isEven ? "pl-10 pr-2" : "pr-10 pl-2"
+                    }`}
+                >
+                  <div className="bg-[#F8F9FA] border border-[#E2E8F0] rounded-xs shadow-xs p-4 flex flex-col items-center text-center w-full z-10">
+                    {step.iconSrc && (
+                      <div className="w-10 h-10 relative mb-3 flex items-center justify-center">
+                        <Image
+                          src={step.iconSrc}
+                          alt={step.title}
+                          width={36}
+                          height={36}
+                          className="object-contain"
+                        />
+                      </div>
+                    )}
+
+                    <h4 className="font-bold text-[#0F172A] text-xs mb-2 leading-snug">
+                      {step.title}
+                    </h4>
+
+                    <p className="text-[#64748B] text-[11px] leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
-        {/* Process Timeline Flow */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 relative pt-6">
-          {processSteps.map((step) => (
-            <div
-              key={step.stepNumber}
-              className="flex flex-col items-center relative group"
-            >
-              {/* Top Number Circle */}
-              {step.position === "top" && (
-                <div className="w-10 h-10 rounded-full bg-[#008ba3] text-white font-bold flex items-center justify-center text-base mb-4 shadow-sm z-10 transition-transform duration-200 group-hover:scale-110">
-                  {step.stepNumber}
-                </div>
-              )}
+        {/* DESKTOP LAYOUT (>= md screens): Dynamic Flow Layout */}
+        <div
+          className="hidden md:grid gap-2 lg:gap-4 items-stretch justify-center w-full max-w-7xl mx-auto relative my-8"
+          style={{
+            gridTemplateColumns: `repeat(${processSteps.length}, minmax(0, 1fr))`,
+          }}
+        >
+          {processSteps.map((step, index) => {
+            const isTop = step.position === "top";
 
-              {/* Step Card (Turns Black on Hover) */}
+            return (
               <div
-                className={`w-full h-full p-5 flex flex-col rounded-sm border cursor-pointer transition-all duration-300 shadow-sm ${step.isDark
-                    ? "bg-white text-slate-800 border-slate-200"
-                    : "bg-white text-slate-800 border-slate-200"
-                  } hover:bg-black hover:text-white hover:border-black hover:shadow-xl`}
+                key={step.stepNumber}
+                className="flex flex-col items-center justify-between group w-full relative min-h-[500px]"
               >
-                <h4
-                  className={`font-bold text-xs sm:text-sm uppercase mb-3 leading-snug tracking-tight transition-colors duration-300 ${step.isDark ? "text-[#0e3b38]" : "text-[#0e3b38]"
-                    } group-hover:text-white`}
-                >
-                  {step.title}
-                </h4>
-                <p
-                  className={`text-xs leading-relaxed transition-colors duration-300 ${step.isDark ? "text-[#0e3b38]" : "text-slate-600"
-                    } group-hover:text-slate-200`}
-                >
-                  {step.description}
-                </p>
-              </div>
+                {/* UPPER SECTION */}
+                <div className="w-full flex flex-col items-center justify-end flex-1 pb-0">
+                  {!isTop ? (
+                    /* Card placed at Top */
+                    <div className="bg-[#F8F9FA] border border-[#E2E8F0] shadow-xs p-3 lg:p-4 flex flex-col items-center text-center w-full h-full justify-start z-20 transition-all duration-300 group-hover:bg-black group-hover:border-black rounded-xs">
+                      {step.iconSrc && (
+                        <div className="w-10 h-10 lg:w-11 lg:h-11 relative mb-3 flex items-center justify-center shrink-0">
+                          <Image
+                            src={step.iconSrc}
+                            alt={step.title}
+                            width={38}
+                            height={38}
+                            className="object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                          />
+                        </div>
+                      )}
 
-              {/* Bottom Number Circle */}
-              {step.position === "bottom" && (
-                <div className="w-10 h-10 rounded-full bg-[#008ba3] text-white font-bold flex items-center justify-center text-base mt-4 shadow-sm z-10 transition-transform duration-200 group-hover:scale-110">
-                  {step.stepNumber}
+                      <h4 className="font-bold text-[#0F172A] text-xs lg:text-sm mb-2 leading-snug transition-colors duration-300 group-hover:text-white">
+                        {step.title}
+                      </h4>
+
+                      <p className="text-[#64748B] text-[11px] lg:text-xs leading-relaxed transition-colors duration-300 group-hover:text-gray-300">
+                        {step.description}
+                      </p>
+                    </div>
+                  ) : (
+                    /* Badge + Vertical Connector Line */
+                    <div className="flex flex-col items-center justify-end w-full">
+                      <div className="w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm lg:text-base shadow-sm z-20 transition-colors duration-300 group-hover:bg-black shrink-0 mb-3">
+                        {step.stepNumber}
+                      </div>
+                      <div className="w-[2px] h-10 bg-[#0081A7] transition-colors duration-300 group-hover:bg-black" />
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
-          ))}
+
+                {/* CENTER HORIZONTAL LINE SEGMENT */}
+                <div className="w-full h-[8px] relative my-0 shrink-0">
+                  <div
+                    className={`h-full bg-[#0081A7] w-full transition-colors duration-300 group-hover:bg-black ${index === 0
+                      ? "rounded-l-sm"
+                      : index === processSteps.length - 1
+                        ? "rounded-r-sm"
+                        : ""
+                      }`}
+                  />
+                </div>
+
+                {/* LOWER SECTION */}
+                <div className="w-full flex flex-col items-center justify-start flex-1 pt-0">
+                  {isTop ? (
+                    /* Card placed at Bottom */
+                    <div className="bg-[#F8F9FA] border border-[#E2E8F0] shadow-xs p-3 lg:p-4 flex flex-col items-center text-center w-full h-full justify-start z-20 transition-all duration-300 group-hover:bg-black group-hover:border-black rounded-xs">
+                      {step.iconSrc && (
+                        <div className="w-10 h-10 lg:w-11 lg:h-11 relative mb-3 flex items-center justify-center shrink-0">
+                          <Image
+                            src={step.iconSrc}
+                            alt={step.title}
+                            width={38}
+                            height={38}
+                            className="object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                          />
+                        </div>
+                      )}
+
+                      <h4 className="font-bold text-[#0F172A] text-xs lg:text-sm mb-2 leading-snug transition-colors duration-300 group-hover:text-white">
+                        {step.title}
+                      </h4>
+
+                      <p className="text-[#64748B] text-[11px] lg:text-xs leading-relaxed transition-colors duration-300 group-hover:text-gray-300">
+                        {step.description}
+                      </p>
+                    </div>
+                  ) : (
+                    /* Vertical Connector Line + Badge */
+                    <div className="flex flex-col items-center justify-start w-full">
+                      <div className="w-[2px] h-10 bg-[#0081A7] transition-colors duration-300 group-hover:bg-black" />
+                      <div className="w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm lg:text-base shadow-sm z-20 transition-colors duration-300 group-hover:bg-black shrink-0 mt-3">
+                        {step.stepNumber}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
-
       {/* ========================================================= */}
       {/* 3. SPEED UP YOUR CASE REPORT / CALL TO ACTION BANNER     */}
       {/* ========================================================= */}
@@ -243,17 +404,13 @@ export default function CaseReportWorkflowAndDisciplines() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Satisfaction Badge */}
           <div className="shrink-0 flex items-center justify-center">
-            <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-dashed border-sky-200 bg-[#164e49] flex flex-col items-center justify-center text-center p-2 shadow-inner">
-              <span className="text-[10px] tracking-wider uppercase font-semibold">
-                SATISFACTION
-              </span>
-              <span className="text-2xl font-black text-white my-0.5">
-                100%
-              </span>
-              <span className="text-[9px] tracking-wider uppercase font-semibold">
-                GUARANTEE
-              </span>
-            </div>
+            <Image
+              src="/images/Satisfaction_Guarantee.webp"
+              alt="100% Satisfaction Guarantee"
+              width={128}
+              height={128}
+              className="w-28 h-28 sm:w-32 sm:h-32 object-contain"
+            />
           </div>
 
           {/* Text & Action */}
@@ -288,17 +445,18 @@ export default function CaseReportWorkflowAndDisciplines() {
           {disciplines.map((item, idx) => {
             const IconComponent = item.icon;
             return (
-              <div
+              <Link
                 key={idx}
-                className="p-8 flex flex-col items-center justify-center text-center hover:bg-slate-50 transition-colors border-b md:border-b border-slate-100"
+                href={item.url}
+                className="p-8 flex flex-col items-center justify-center text-center hover:bg-slate-50 transition-colors border-b md:border-b border-slate-100 cursor-pointer group"
               >
-                <div className="w-16 h-16 rounded-full bg-[#0e3b38] text-white flex items-center justify-center mb-4 shadow-sm">
+                <div className="w-16 h-16 rounded-full bg-[#0e3b38] text-white flex items-center justify-center mb-4 shadow-sm group-hover:scale-105 transition-transform">
                   <IconComponent className="w-8 h-8 stroke-[1.5]" />
                 </div>
                 <h4 className="font-bold text-[#0e3b38] text-sm sm:text-base">
                   {item.title}
                 </h4>
-              </div>
+              </Link>
             );
           })}
         </div>

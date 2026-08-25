@@ -12,6 +12,7 @@ interface Specialty {
 interface StandardItem {
   name: string;
   logoSrc: string;
+  url:string;
 }
 
 interface PackageFeatureBlock {
@@ -60,22 +61,30 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
   ];
 
   const standards: StandardItem[] = [
-    { name: "Good Pharmacy Practice", logoSrc: `${IMG}/GPP.png` },
+    {
+      name: "Good Pharmacy Practice",
+      logoSrc: `${IMG}/GPP.png`,
+      url: "https://ipapharma.org/wp-content/uploads/2019/02/gpp-manua-1.pdf",
+    },
     {
       name: "Consolidated Standards of Reporting Trials",
       logoSrc: `${IMG}/Consolidated-Standards-of-Reporting-Trials.png`,
+      url: "https://www.consort-spirit.org/",
     },
     {
       name: "International Council for Harmonisation",
       logoSrc: `${IMG}/International-Council-for-Harmonisation.png`,
+      url: "https://www.ich.org/",
     },
     {
       name: "Food and Drug Administration",
       logoSrc: `${IMG}/FDA-.png`,
+      url: "https://www.fda.gov/",
     },
     {
       name: "International Committee of Medical Journal Editors",
       logoSrc: "/images/publication-support/journal-selection/ICMJE.webp",
+      url: "https://www.icmje.org/",
     },
   ];
 
@@ -223,7 +232,10 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
           <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed mb-12 max-w-6xl">
             At Pubrica, our physician writing service guarantees that any
             clinical manuscript,{" "}
-            <a href="/services/physician-writing-services/case-report" className="text-[#3b82f6] hover:underline">
+            <a
+              href="/services/physician-writing-services/case-report"
+              className="text-[#3b82f6] hover:underline"
+            >
               case report
             </a>
             , or regulatory document we provide complies with international
@@ -233,9 +245,12 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
 
           <div className="flex flex-wrap lg:flex-nowrap items-stretch justify-center gap-y-8 lg:gap-y-0 text-center">
             {standards.map((standard, idx) => (
-              <div
+              <a
                 key={idx}
-                className="w-1/2 sm:w-1/3 lg:w-1/5 px-4 flex flex-col items-center justify-between border-l border-gray-300 first:border-l-0"
+                href={standard.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-1/2 sm:w-1/3 lg:w-1/5 px-4 flex flex-col items-center justify-between border-l border-gray-300 first:border-l-0 hover:opacity-80 transition-opacity"
               >
                 <div className="h-16 flex items-center justify-center mb-4 px-2">
                   <div className="relative w-14 h-14">
@@ -251,7 +266,7 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
                 <p className="text-[#083c4c] text-xs md:text-sm font-bold leading-snug tracking-wide max-w-[160px] mt-auto">
                   {standard.name}
                 </p>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -386,7 +401,9 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
                       </p>
                     </div>
                   </div>
+                  
                 </div>
+                
 
                 {/* Includes Segment */}
                 <div className="space-y-2">
@@ -434,8 +451,9 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
                       </ul>
                     </div>
                   </div>
+                  
                 </div>
-
+                      
                 {/* Turnaround Time Flag - Pushed to structural bottom */}
                 <div className="mt-auto pt-4 border-t border-gray-300/40">
                   <div className="flex items-center gap-2.5">
@@ -450,9 +468,12 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
                 </div>
               </div>
             </div>
+            
           ))}
         </div>
+         
       </section>
+       <GetFreeQuoteButton/>
     </div>
   );
 };

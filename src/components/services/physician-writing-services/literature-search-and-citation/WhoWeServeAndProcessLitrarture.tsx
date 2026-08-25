@@ -5,8 +5,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
+
+
+
+export interface WorkflowStep {
+    stepNumber: string | number;
+    title: string;
+    description: string;
+    iconSrc: string;
+    position: "top" | "bottom";
+}
 export default function WhoWeServeAndProcessLiterature() {
     /* ------------------- DATA ARRAYS ------------------- */
+
 
     const whoWeServeCards = [
         {
@@ -23,9 +34,9 @@ export default function WhoWeServeAndProcessLiterature() {
             id: 2,
             title: 'Clinical & Healthcare Professionals',
             bullets: [
-                'Evidence summaries for clinical decision making',
-                'Literature support for medical research & guidelines',
-                'Publication-ready citation formatting',
+                'Evidence mapping for treatment protocols',
+                'Literature support for case studies, audits, or clinical guidelines',
+                'Identification of peer-reviewed clinical outcomes',
             ],
             imageUrl: '/images/physician-writing-services/literature-search-and-citation/Clinical-Healthcare-Professionals.jpg',
         },
@@ -33,9 +44,9 @@ export default function WhoWeServeAndProcessLiterature() {
             id: 3,
             title: 'Product Development & R&D Teams',
             bullets: [
-                'Scientific validation for product claims',
-                'Technology and competitor research reviews',
-                'Patent & safety literature sourcing',
+                'Literature support for nutraceutical, food, pharma, ayurveda, and biotech products',
+                'Ingredient intelligence backed by clinical and preclinical studies',
+                'Research insights for product positioning and regulatory compliance',
             ],
             imageUrl: '/images/physician-writing-services/literature-search-and-citation/Product-Development-RD-Teams.jpg',
         },
@@ -43,9 +54,8 @@ export default function WhoWeServeAndProcessLiterature() {
             id: 4,
             title: 'Universities & Institutions',
             bullets: [
-                'Institutional research database support',
-                'Faculty publication assistance',
-                'Curriculum reference research',
+                'Citation and literature services for faculty-led research and grant proposals',
+                'Support for research centres and ethics submissions',
             ],
             imageUrl: '/images/physician-writing-services/literature-search-and-citation/Universities-Institutions.jpg',
         },
@@ -53,32 +63,50 @@ export default function WhoWeServeAndProcessLiterature() {
             id: 5,
             title: 'Global Scholars & International Students',
             bullets: [
-                'Cross-language reference compilation',
-                'Academic integrity & anti-plagiarism checks',
-                'Formatting according to APA, Vancouver, IEEE, etc.',
+                'Region-specific literature sourcing (e.g., UK, US, EU, India, Australia)',
+                'Citation formatting to match institutional styles (APA, MLA, Vancouver, etc.)',
+                'Research support for scholars writing in English as a second language',
             ],
             imageUrl: '/images/physician-writing-services/literature-search-and-citation/Global-Scholars-International-Students.jpg',
         },
     ];
 
-    const processSteps = [
+    const heading = "How a Patient Education Content Development Service Works";
+    const subheading = "Our Step-by-Step Process";
+    const description = (
+        <>
+            With Pubrica&apos;s patient education content service, our medical experts and{" "}
+            <Link href="/services/scientific-writing" className="text-[#0081A7] underline">
+                scientific writing
+            </Link>{" "}
+            team work together to develop clear, accurate, and guideline-compliant educational materials that are tailored to specific patient needs and aligned with healthcare communication standards.
+        </>
+    );
+
+    const steps: WorkflowStep[] = [
         {
-            step: 1,
-            title: 'LITERATURE SEARCH',
-            desc: 'The specialist will search databases to discover relevant references and craft concise summaries.',
-            badgePosition: 'top',
+            stepNumber: 1,
+            title: "Needs Assessment & Briefing",
+            description:
+                "We begin by understanding your target patient demographic, health literacy goals, language requirements, and preferred formats (leaflets, digital, video).",
+            iconSrc: "/images/icons/Literature-Search.png",
+            position: "bottom",
         },
         {
-            step: 2,
-            title: 'REFERENCE CITATION',
-            desc: 'The professional will make slight adjustments to the manuscript to incorporate pertinent in-text citations.',
-            badgePosition: 'bottom',
+            stepNumber: 2,
+            title: "Medical Writing & Simplification",
+            description:
+                "Our medical writers draft evidence-based content using plain language, optimizing for low health literacy (SMOG/Flesch-Kincaid) without losing clinical accuracy.",
+            iconSrc: "/images/icons/reference-and-citation.png",
+            position: "top",
         },
         {
-            step: 3,
-            title: 'AFTER-SALES SUPPORT',
-            desc: 'At Pubrica, we provide support for two revision rounds and can allow an additional five revisions upon request.',
-            badgePosition: 'top',
+            stepNumber: 3,
+            title: "Review, Design & Delivery",
+            description:
+                "Content undergoes clinical accuracy review, visual formatting/illustration, and final quality checks before delivering print- or digital-ready files.",
+            iconSrc: "/images/icons/After-sales-support.png",
+            position: "bottom",
         },
     ];
 
@@ -161,28 +189,28 @@ export default function WhoWeServeAndProcessLiterature() {
         },
     ];
 
-    const valueDeliverables = [
-        {
-            id: 1,
-            title: 'A screened list of 50 published articles from validated databases',
-            iconDesc: 'Database Network',
-        },
-        {
-            id: 2,
-            title: 'Best-suited subject area experts to help identify the most relevant literature for your study',
-            iconDesc: 'Subject Experts',
-        },
-        {
-            id: 3,
-            title: 'Expert views regarding the novelty of your research from published authors with advanced degrees',
-            iconDesc: 'Expert Review',
-        },
-        {
-            id: 4,
-            title: 'Supporting rationale by experts on how the curated literature will strengthen your research',
-            iconDesc: 'Research Rationale',
-        },
-    ];
+   const valueDeliverables = [
+  {
+    id: 1,
+    title: 'A screened list of 50 published articles from validated databases',
+    iconUrl: '/images/icons/data-base.png',
+  },
+  {
+    id: 2,
+    title: 'Best-suited subject area experts to help identify the most relevant literature for your study',
+    iconUrl: '/images/icons/literature-for-your-study.png',
+  },
+  {
+    id: 3,
+    title: 'Expert views regarding the novelty of your research from published authors with advanced degrees',
+    iconUrl: '/images/icons/published-authors-.png',
+  },
+  {
+    id: 4,
+    title: 'Supporting rationale by experts on how the curated literature will strengthen your research',
+    iconUrl: '/images/icons/Supporting-rationale.png',
+  },
+];
 
     return (
         <div className="w-full bg-white text-gray-800 font-sans antialiased overflow-x-hidden">
@@ -234,110 +262,194 @@ export default function WhoWeServeAndProcessLiterature() {
             </section>
 
             {/* ---------------- SECTION 2: HOW IT WORKS ---------------- */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 text-center">
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#143234] mb-2">
-                    How a Patient Education Content Development Service Works
+            <section className="py-12 md:py-16 px-4 md:px-8 bg-[#EAEAEA] w-full text-center font-sans overflow-hidden">
+                {/* Header */}
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0B353D] mb-2">
+                    {heading}
                 </h2>
-                <p className="text-base sm:text-lg font-semibold text-[#1c4d50] mb-3">
-                    Our step-by-Step Process
-                </p>
-                <p className="text-sm sm:text-base text-gray-600 mb-10 sm:mb-16 max-w-4xl mx-auto leading-relaxed">
-                    With Pubrica&apos;s patient education content service, our medical experts and{' '}
-                    <span className="text-cyan-600 underline">scientific writing</span> team work together to develop clear,
-                    accurate, and guideline-compliant educational materials that are tailored to specific patient needs and aligned with healthcare communication standards.
-                </p>
 
-                {/* Process Flow Timeline Container */}
-                <div className="relative max-w-5xl mx-auto min-h-[320px] flex flex-col justify-center">
+                <h3 className="text-lg md:text-xl font-medium text-[#2C4951] mb-4">
+                    {subheading}
+                </h3>
 
-                    {/* Continuous Teal Horizontal Line in Background (Desktop Only) */}
-                    <div className="absolute top-1/2 left-0 right-0 h-2 bg-[#008ba3] -translate-y-1/2 z-0 hidden md:block" />
+                {description && (
+                    <p className="max-w-4xl mx-auto text-[#4B5563] text-xs md:text-sm leading-relaxed mb-12 md:mb-16">
+                        {description}
+                    </p>
+                )}
 
-                    {/* 3 Step Cards Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 relative z-10 items-stretch md:items-center">
+                {/* ============================================================ */}
+                {/* MOBILE LAYOUT (< md screens): Vertical Alternating Timeline */}
+                {/* ============================================================ */}
+                <div className="flex md:hidden flex-col items-center w-full max-w-sm mx-auto space-y-6">
+                    {steps.map((step, index) => {
+                        const isEven = index % 2 === 0;
 
-                        {/* STEP 1 */}
-                        <div className="flex flex-col items-center">
-                            <div className="w-10 h-10 rounded-full bg-[#008ba3] text-white font-bold flex items-center justify-center text-lg shadow-md mb-2">
-                                1
-                            </div>
-                            <div className="w-0.5 h-6 bg-[#008ba3] mb-1 hidden md:block" />
+                        return (
+                            <div
+                                key={index}
+                                className="relative flex items-center w-full min-h-[160px]"
+                            >
+                                {/* Connecting Vertical Line */}
+                                {index !== steps.length - 1 && (
+                                    <div
+                                        className={`absolute top-8 bottom-0 w-[2px] bg-[#0081A7] z-0 ${isEven ? "left-4" : "right-4"
+                                            }`}
+                                    />
+                                )}
 
-                            <div className="w-full bg-[#f9f9f9] hover:bg-[#525252] text-gray-800 hover:text-white p-6 rounded shadow-md border border-gray-200 transition-colors duration-300 min-h-[220px] flex flex-col items-center justify-center text-center group cursor-pointer">
-                                <div className="mb-3 text-gray-600 group-hover:text-gray-300 transition-colors">
-                                    <svg className="w-10 h-10 sm:w-12 sm:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                    </svg>
+                                {/* Step Number Badge */}
+                                <div
+                                    className={`absolute z-10 w-9 h-9 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm shadow-sm ${isEven ? "left-0" : "right-0"
+                                        }`}
+                                >
+                                    {step.stepNumber}
                                 </div>
-                                <h3 className="text-base font-bold uppercase tracking-wider mb-2 text-[#143234] group-hover:text-white transition-colors">
-                                    {processSteps[0].title}
-                                </h3>
-                                <p className="text-xs sm:text-sm text-gray-600 group-hover:text-gray-200 leading-relaxed transition-colors">
-                                    {processSteps[0].desc}
-                                </p>
-                            </div>
-                        </div>
 
-                        {/* STEP 2 */}
-                        <div className="flex flex-col items-center md:flex-col-reverse">
-                            <div className="w-full bg-[#f9f9f9] hover:bg-[#525252] text-gray-800 hover:text-white p-6 rounded shadow-md border border-gray-200 transition-colors duration-300 min-h-[220px] flex flex-col items-center justify-center text-center group cursor-pointer">
-                                <div className="mb-3 text-gray-600 group-hover:text-gray-300 transition-colors">
-                                    <svg className="w-10 h-10 sm:w-12 sm:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                    </svg>
+                                {/* Step Card Container */}
+                                <div
+                                    className={`w-full flex ${isEven ? "pl-10 pr-2" : "pr-10 pl-2"
+                                        }`}
+                                >
+                                    <div className="bg-[#F8F9FA] border border-[#E2E8F0] rounded-sm shadow-xs p-4 flex flex-col items-center text-center w-full z-10">
+                                        <div className="w-10 h-10 relative mb-3 flex items-center justify-center">
+                                            <Image
+                                                src={step.iconSrc}
+                                                alt={step.title}
+                                                width={36}
+                                                height={36}
+                                                className="object-contain"
+                                            />
+                                        </div>
+
+                                        <h4 className="font-bold text-[#0F172A] text-xs mb-2 leading-snug">
+                                            {step.title}
+                                        </h4>
+
+                                        <p className="text-[#64748B] text-[11px] leading-relaxed">
+                                            {step.description}
+                                        </p>
+                                    </div>
                                 </div>
-                                <h3 className="text-base font-bold uppercase tracking-wider mb-2 text-[#143234] group-hover:text-white transition-colors">
-                                    {processSteps[1].title}
-                                </h3>
-                                <p className="text-xs sm:text-sm text-gray-600 group-hover:text-gray-200 leading-relaxed transition-colors">
-                                    {processSteps[1].desc}
-                                </p>
                             </div>
+                        );
+                    })}
+                </div>
 
-                            <div className="w-0.5 h-6 bg-[#008ba3] mt-1 hidden md:block" />
-                            <div className="w-10 h-10 rounded-full bg-[#008ba3] text-white font-bold flex items-center justify-center text-lg shadow-md mt-2 md:mt-2 mb-2 md:mb-0 order-first md:order-last">
-                                2
-                            </div>
-                        </div>
+                {/* ============================================================ */}
+                {/* DESKTOP LAYOUT (>= md screens): Dynamic Flow Layout          */}
+                {/* ============================================================ */}
+                <div
+                    className="hidden md:grid gap-2 lg:gap-4 items-stretch justify-center w-full max-w-7xl mx-auto relative my-8"
+                    style={{
+                        gridTemplateColumns: `repeat(${steps.length}, minmax(0, 1fr))`,
+                    }}
+                >
+                    {steps.map((step, index) => {
+                        const isTop = step.position === "top";
 
-                        {/* STEP 3 */}
-                        <div className="flex flex-col items-center">
-                            <div className="w-10 h-10 rounded-full bg-[#008ba3] text-white font-bold flex items-center justify-center text-lg shadow-md mb-2">
-                                3
-                            </div>
-                            <div className="w-0.5 h-6 bg-[#008ba3] mb-1 hidden md:block" />
+                        return (
+                            <div
+                                key={index}
+                                className="flex flex-col items-center justify-between group w-full relative min-h-[500px]"
+                            >
+                                {/* UPPER SECTION */}
+                                <div className="w-full flex flex-col items-center justify-end flex-1 pb-0">
+                                    {!isTop ? (
+                                        /* Card placed at Top */
+                                        <div className="bg-[#F8F9FA] border border-[#E2E8F0] shadow-xs p-3 lg:p-4 flex flex-col items-center text-center w-full h-full justify-start z-20 transition-all duration-300 group-hover:bg-black group-hover:border-black rounded-xs">
+                                            <div className="w-10 h-10 lg:w-11 lg:h-11 relative mb-3 flex items-center justify-center shrink-0">
+                                                <Image
+                                                    src={step.iconSrc}
+                                                    alt={step.title}
+                                                    width={38}
+                                                    height={38}
+                                                    className="object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                                                />
+                                            </div>
 
-                            <div className="w-full bg-[#f9f9f9] hover:bg-[#525252] text-gray-800 hover:text-white p-6 rounded shadow-md border border-gray-200 transition-colors duration-300 min-h-[220px] flex flex-col items-center justify-center text-center group cursor-pointer">
-                                <div className="mb-3 text-gray-600 group-hover:text-gray-300 transition-colors">
-                                    <svg className="w-10 h-10 sm:w-12 sm:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a5 5 0 010-7.072m0 0l2.829 2.829m-4.243-2.829L3 3m0 0l2.829 2.829" />
-                                    </svg>
+                                            <h4 className="font-bold text-[#0F172A] text-xs lg:text-sm mb-2 leading-snug transition-colors duration-300 group-hover:text-white">
+                                                {step.title}
+                                            </h4>
+
+                                            <p className="text-[#64748B] text-[11px] lg:text-xs leading-relaxed transition-colors duration-300 group-hover:text-gray-300">
+                                                {step.description}
+                                            </p>
+                                        </div>
+                                    ) : (
+                                        /* Badge + Vertical Connector Line */
+                                        <div className="flex flex-col items-center justify-end w-full">
+                                            <div className="w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm lg:text-base shadow-sm z-20 transition-colors duration-300 group-hover:bg-black shrink-0 mb-3">
+                                                {step.stepNumber}
+                                            </div>
+                                            <div className="w-[2px] h-10 bg-[#0081A7] transition-colors duration-300 group-hover:bg-black" />
+                                        </div>
+                                    )}
                                 </div>
-                                <h3 className="text-base font-bold uppercase tracking-wider mb-2 text-[#143234] group-hover:text-white transition-colors">
-                                    {processSteps[2].title}
-                                </h3>
-                                <p className="text-xs sm:text-sm text-gray-600 group-hover:text-gray-200 leading-relaxed transition-colors">
-                                    {processSteps[2].desc}
-                                </p>
-                            </div>
-                        </div>
 
-                    </div>
+                                {/* CENTER HORIZONTAL LINE SEGMENT */}
+                                <div className="w-full h-[8px] relative my-0 shrink-0">
+                                    <div
+                                        className={`h-full bg-[#0081A7] w-full transition-colors duration-300 group-hover:bg-black ${index === 0
+                                            ? "rounded-l-sm"
+                                            : index === steps.length - 1
+                                                ? "rounded-r-sm"
+                                                : ""
+                                            }`}
+                                    />
+                                </div>
+
+                                {/* LOWER SECTION */}
+                                <div className="w-full flex flex-col items-center justify-start flex-1 pt-0">
+                                    {isTop ? (
+                                        /* Card placed at Bottom */
+                                        <div className="bg-[#F8F9FA] border border-[#E2E8F0] shadow-xs p-3 lg:p-4 flex flex-col items-center text-center w-full h-full justify-start z-20 transition-all duration-300 group-hover:bg-black group-hover:border-black rounded-xs">
+                                            <div className="w-10 h-10 lg:w-11 lg:h-11 relative mb-3 flex items-center justify-center shrink-0">
+                                                <Image
+                                                    src={step.iconSrc}
+                                                    alt={step.title}
+                                                    width={38}
+                                                    height={38}
+                                                    className="object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                                                />
+                                            </div>
+
+                                            <h4 className="font-bold text-[#0F172A] text-xs lg:text-sm mb-2 leading-snug transition-colors duration-300 group-hover:text-white">
+                                                {step.title}
+                                            </h4>
+
+                                            <p className="text-[#64748B] text-[11px] lg:text-xs leading-relaxed transition-colors duration-300 group-hover:text-gray-300">
+                                                {step.description}
+                                            </p>
+                                        </div>
+                                    ) : (
+                                        /* Vertical Connector Line + Badge */
+                                        <div className="flex flex-col items-center justify-start w-full">
+                                            <div className="w-[2px] h-10 bg-[#0081A7] transition-colors duration-300 group-hover:bg-black" />
+                                            <div className="w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm lg:text-base shadow-sm z-20 transition-colors duration-300 group-hover:bg-black shrink-0 mt-3">
+                                                {step.stepNumber}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </section>
-
             {/* ---------------- SECTION 3: GREEN BANNER CTA ---------------- */}
             <section className="bg-[#0b3c2d] text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8 my-8">
                 <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
 
                     <div className="flex-shrink-0">
-                        <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-dashed border-emerald-400 bg-[#07281e] flex flex-col items-center justify-center text-center p-2">
-                            <span className="text-[10px] font-bold text-emerald-300 leading-tight uppercase">
-                                100% Satisfaction Guarantee
-                            </span>
-                        </div>
+                        <Image
+                            src="/images/icons/Satisfaction_Guarantee.webp"
+                            alt="100% Satisfaction Guarantee"
+                            width={112}
+                            height={112}
+                            className="w-24 h-24 sm:w-28 sm:h-28 object-contain"
+                        />
                     </div>
-
                     <div className="flex-1 space-y-2">
                         <h2 className="text-xl sm:text-2xl font-bold text-white">
                             Speed up your Literature Review and Citation with Pubrica
@@ -348,7 +460,7 @@ export default function WhoWeServeAndProcessLiterature() {
                     </div>
 
                     <div className="w-full md:w-auto">
-                        <GetFreeQuoteButton/>
+                        <GetFreeQuoteButton />
                     </div>
                 </div>
             </section>
@@ -367,10 +479,14 @@ export default function WhoWeServeAndProcessLiterature() {
                             key={item.id}
                             className="group p-5 sm:p-6 rounded-xl border border-gray-200 bg-slate-50 hover:bg-black hover:text-white transition-all duration-300 flex items-start gap-4 shadow-sm hover:shadow-lg cursor-pointer"
                         >
-                            <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 bg-slate-200 group-hover:bg-slate-800 rounded-lg border border-dashed border-gray-400 flex items-center justify-center p-1 transition-colors">
-                                <span className="text-[10px] text-gray-600 group-hover:text-gray-300 text-center font-medium">
-                                    {item.iconDesc}
-                                </span>
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 bg-white group-hover:bg-slate-800 rounded-lg border border-gray-200 flex items-center justify-center p-2 transition-colors relative">
+                                <Image
+                                    src={item.iconUrl}
+                                    alt={item.title}
+                                    width={40}
+                                    height={40}
+                                    className="object-contain w-full h-full group-hover:brightness-0 group-hover:invert transition-all"
+                                />
                             </div>
 
                             <p className="text-xs sm:text-sm font-medium text-gray-800 group-hover:text-gray-100 transition-colors leading-relaxed pt-1">
@@ -380,7 +496,6 @@ export default function WhoWeServeAndProcessLiterature() {
                     ))}
                 </div>
             </section>
-
             {/* ---------------- SECTION 6: SAMPLE WORK ---------------- */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
                 <div className="bg-[#f0faf6] rounded-2xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-emerald-100">

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // --- Types ---
 interface AccordionItem {
@@ -28,93 +29,101 @@ export default function PatientEducationApplicationsAndSources() {
     {
       id: 1,
       title: "Hospital discharge instructions",
-      image: "/images/physician-writing-services/patient-education-content/hospital-discharge-instruction-.png",
+      image:
+        "/images/physician-writing-services/patient-education-content/hospital-discharge-instruction-.png",
     },
     {
       id: 2,
       title: "Chronic disease management guides",
-      image: "/images/physician-writing-services/patient-education-content/Chronic-disease-management-guides.jpg",
+      image:
+        "/images/physician-writing-services/patient-education-content/Chronic-disease-management-guides.jpg",
     },
     {
       id: 3,
       title: "Medication adherence tools",
-      image: "/images/physician-writing-services/patient-education-content/Medication-adherence-tools.jpg",
+      image:
+        "/images/physician-writing-services/patient-education-content/Medication-adherence-tools.jpg",
     },
     {
       id: 4,
       title: "Pre- and post-operative patient materials",
-      image: "/images/physician-writing-services/patient-education-content/Pre-and-post-operative-patient-materials.jpg",
+      image:
+        "/images/physician-writing-services/patient-education-content/Pre-and-post-operative-patient-materials.jpg",
     },
     {
       id: 5,
       title: "Clinical trial patient information sheets",
-      image: "/images/physician-writing-services/patient-education-content/Clinical-trial-patient-information-sheets.jpg",
+      image:
+        "/images/physician-writing-services/patient-education-content/Clinical-trial-patient-information-sheets.jpg",
     },
     {
       id: 6,
       title: "Medical device usage tutorials",
-      image: "/images/physician-writing-services/patient-education-content/Medical-device-usage-tutorials.jpg",
+      image:
+        "/images/physician-writing-services/patient-education-content/Medical-device-usage-tutorials.jpg",
     },
   ];
 
   const therapeuticAreas = [
     {
       name: "Radiology",
-      iconPath:
-        "M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z M12 6a6 6 0 1 0 6 6 6 6 0 0 0-6-6zm0 10a4 4 0 1 1 4-4 4 4 0 0 1-4 4z",
+      icon: "/images/icons/radiology.png",
+      href: "/subject-matter-experts/radiology/",
     },
     {
       name: "Nuclear Medicine",
-      iconPath:
-        "M7 3h10v3H7zM5 8h14v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zM9 13h6M12 10v6",
+      icon: "/images/icons/nuclear-medicine.png",
+      href: "/subject-matter-experts",
     },
     {
       name: "Emergency medicine",
-      iconPath:
-        "M20 6h-4V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zM10 4h4v2h-4zM11 11h2v3h3v2h-3v3h-2v-3H8v-2h3z",
+      icon: "/images/icons/emergency-medicine.png",
+      href: "/subject-matter-experts",
     },
     {
       name: "Internal medicine",
-      iconPath: "M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm-7 16a7 7 0 0 1 14 0H5z",
+      icon: "/images/icons/internal-medicine.png",
+      href: "/subject-matter-experts",
     },
     {
       name: "Oncology",
-      iconPath:
-        "M12 22s-7-5.5-7-10a7 7 0 0 1 14 0c0 4.5-7 10-7 10zm-2-10h4m-2-2v4",
+      icon: "/images/icons/Oncology-1-1.png",
+      href: "/subject-matter-experts",
     },
     {
       name: "Cardiology",
-      iconPath:
-        "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z",
+      icon: "/images/icons/Cardiology-1.png",
+      href: "/subject-matter-experts/cardiology/",
     },
     {
       name: "Neurology",
-      iconPath:
-        "M12 2a9 9 0 0 0-9 9c0 3.32 1.8 6.22 4.5 7.82V22h9v-3.18C19.2 17.22 21 14.32 21 11a9 9 0 0 0-9-9zm0 16a7 7 0 1 1 7-7 7 7 0 0 1-7 7z M12 6c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z",
+      icon: "/images/icons/Neurology-1.png",
+      href: "/subject-matter-experts//neurology",
     },
     {
       name: "Otolaryngology",
-      iconPath:
-        "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z",
+      icon: "/images/icons/otolaryngology.png",
+      href: "/subject-matter-experts",
     },
     {
       name: "Obstetrics & Gynaecology",
-      iconPath:
-        "M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm1-11a3 3 0 1 0-3 3v2h2v-2a3 3 0 0 0 1-3z",
+      icon: "/images/icons/Obstetrics-Gynaecology-1.png",
+      href: "/subject-matter-experts",
     },
     {
       name: "Orthopaedics",
-      iconPath: "M7 4v2h10V4h2v16h-2v-2H7v2H5V4z M7 8v8h10V8H7z",
+      icon: "/images/icons/Orthopaedics-1.png",
+      href: "/subject-matter-experts",
     },
     {
       name: "Gastroenterology",
-      iconPath:
-        "M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-1 14h-2v-4h2zm4 0h-2V8h2zm-4-6h-2V8h2z",
+      icon: "/images/icons/gastroenterology.png",
+      href: "/subject-matter-experts",
     },
     {
       name: "Paediatrics",
-      iconPath:
-        "M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z",
+      icon: "/images/icons/Paediatrics-1.png",
+      href: "/subject-matter-experts",
     },
   ];
 
@@ -248,24 +257,26 @@ export default function PatientEducationApplicationsAndSources() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-6 gap-y-10">
             {therapeuticAreas.map((area, idx) => (
-              <div
+              <Link
                 key={idx}
-                className="flex flex-col items-center text-center space-y-4"
+                href={area.href}
+                className="group flex flex-col items-center text-center space-y-4 focus:outline-none"
               >
-                {/* Simulated Icon Circle */}
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-[#0c2e3a] flex items-center justify-center p-3 text-[#0c2e3a]">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-8 h-8 sm:w-10 sm:h-10"
-                  >
-                    <path d={area.iconPath} />
-                  </svg>
+                {/* Icon Container */}
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-[#0c2e3a] flex items-center justify-center p-3 transition-transform duration-300 group-hover:scale-105 group-hover:bg-slate-50">
+                  <div className="relative w-8 h-8 sm:w-10 sm:h-10">
+                    <Image
+                      src={area.icon}
+                      alt={`${area.name} icon`}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 leading-tight">
+                <h3 className="text-sm sm:text-base font-bold text-slate-900 leading-tight group-hover:text-[#0c2e3a] transition-colors">
                   {area.name}
                 </h3>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

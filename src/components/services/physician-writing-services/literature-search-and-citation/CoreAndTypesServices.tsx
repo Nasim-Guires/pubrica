@@ -1,14 +1,14 @@
-
 'use client';
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Type definitions for service data
 interface CoreService {
   id: string;
   title: string;
-  items: string[];
+  items: (string | React.ReactNode)[];
 }
 
 export default function CoreAndTypesServices() {
@@ -49,7 +49,54 @@ export default function CoreAndTypesServices() {
       items: [
         'Literature for ingredient validation, therapeutic efficacy, and mechanism of action',
         'Clinical study support for Ayurvedic, Nutraceuticals, Herbal, Pharma, and Biotech products',
-        'Regulatory and guideline alignment (FDA, EMA, EFSA, CDSCO, ISO standards)',
+        <span key="regulatory-links">
+          Regulatory and guideline alignment (
+          <Link
+            href="https://www.fda.gov/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sky-600 hover:underline"
+          >
+            FDA
+          </Link>
+          ,{' '}
+          <Link
+            href="https://www.ema.europa.eu/en/homepage"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sky-600 hover:underline"
+          >
+            EMA
+          </Link>
+          ,{' '}
+          <Link
+            href="https://www.efsa.europa.eu/en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sky-600 hover:underline"
+          >
+            EFSA
+          </Link>
+          ,{' '}
+          <Link
+            href="https://cdsco.gov.in/opencms/opencms/en/Home/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sky-600 hover:underline"
+          >
+            CDSCO
+          </Link>
+          ,{' '}
+          <Link
+            href="https://www.iso.org/home.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sky-600 hover:underline"
+          >
+            ISO standards
+          </Link>
+          )
+        </span>,
         'Regulatory compliant literature for safety, efficacy, and claims',
         'Summary of findings to drive formulation decisions, supporting white papers or evidence dossiers.',
       ],

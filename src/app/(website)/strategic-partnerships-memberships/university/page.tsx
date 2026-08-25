@@ -15,9 +15,17 @@ export default function UniversityPartnershipPage() {
 
             {/* Intro Description & Badge */}
             <section className="py-12 px-4 text-center max-w-3xl mx-auto">
-                <div className="flex justify-center mb-6">
-                    <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-md border-4 border-blue-200">
-                        100% SATISFACTION
+                <div className=" text-white p-6 rounded flex flex-col justify-between">
+                    <div className="flex justify-center mb-6">
+                        <div className="w-24 h-24 relative flex items-center justify-center">
+                            <Image
+                                src="/images/RESIZEDSG-01-150x150.png"
+                                alt="100% Satisfaction Guarantee"
+                                width={96}
+                                height={96}
+                                className="object-contain"
+                            />
+                        </div>
                     </div>
                 </div>
                 <p className="text-sm md:text-base text-gray-600 leading-relaxed">
@@ -32,8 +40,22 @@ export default function UniversityPartnershipPage() {
                     {/* Card 1 */}
                     <div className="bg-[#3192c3] text-white p-6 rounded shadow-md flex flex-col justify-between">
                         <div>
-                            <div className="flex justify-center mb-4">
-                                <span className="text-4xl">📚</span>
+                            <div className="bg-[#3192c3] text-white p-6 rounded shadow-md flex flex-col justify-between">
+                                <div>
+                                    <div className="flex justify-center mb-4">
+                                        <Image
+                                            src="/images/icons8-course-assign-80.png"
+                                            alt="Icon"
+                                            width={36}
+                                            height={36}
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                    <h3 className="text-lg font-bold text-center mb-3">Enhance success of publication</h3>
+                                    <p className="text-xs md:text-sm text-center leading-relaxed">
+                                        Enhance publication acceptance rate by up to 75% through Pubrica experts.
+                                    </p>
+                                </div>
                             </div>
                             <h3 className="text-lg font-bold text-center mb-3">Enhance success of manuscript</h3>
                             <p className="text-xs md:text-sm text-center leading-relaxed">
@@ -46,7 +68,13 @@ export default function UniversityPartnershipPage() {
                     <div className="bg-[#8b2b91] text-white p-6 rounded shadow-md flex flex-col justify-between">
                         <div>
                             <div className="flex justify-center mb-4">
-                                <span className="text-4xl">📖</span>
+                                <Image
+                                    src="/images/icons8-course-assign-80.png"
+                                    alt="Icon"
+                                    width={36}
+                                    height={36}
+                                    className="object-contain"
+                                />
                             </div>
                             <h3 className="text-lg font-bold text-center mb-3">Enhance international research work</h3>
                             <p className="text-xs md:text-sm text-center leading-relaxed">
@@ -59,7 +87,13 @@ export default function UniversityPartnershipPage() {
                     <div className="bg-[#6c64af] text-white p-6 rounded shadow-md flex flex-col justify-between">
                         <div>
                             <div className="flex justify-center mb-4">
-                                <span className="text-4xl">📘</span>
+                                <Image
+                                    src="/images/icons8-course-assign-80.png"
+                                    alt="Icon"
+                                    width={36}
+                                    height={36}
+                                    className="object-contain"
+                                />
                             </div>
                             <h3 className="text-lg font-bold text-center mb-3">Achieve global research goals</h3>
                             <p className="text-xs md:text-sm text-center leading-relaxed">
@@ -132,17 +166,22 @@ export default function UniversityPartnershipPage() {
             </section>
 
             {/* Workflow Section */}
+
+
             <section className="py-12 bg-gray-50 text-center">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#26373b] mb-8">Workflow</h2>
-                <div className="flex justify-center">
-                    <div className="relative w-64 h-64 flex flex-col items-center justify-center space-y-4">
-                        {/* Visual Workflow Mock Representation */}
-                        <div className="w-12 h-12 bg-[#3192c3] rounded-full flex items-center text-white text-xs justify-center shadow">Step 1</div>
-                        <div className="w-0.5 h-6 bg-gray-400"></div>
-                        <div className="w-12 h-12 bg-[#3192c3] rounded-full flex items-center text-white text-xs justify-center shadow">Step 2</div>
-                        <div className="w-0.5 h-6 bg-gray-400"></div>
-                        <div className="w-12 h-12 bg-[#3192c3] rounded-full flex items-center text-white text-xs justify-center shadow">Step 3</div>
-                    </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#26373b] mb-8">
+                    Workflow
+                </h2>
+
+                <div className="w-full flex justify-center px-4">
+                    <Image
+                        src="/images/pbrica-workflow.webp"
+                        alt="Pubrica Workflow"
+                        width={400}
+                        height={580}
+                        className="w-auto h-auto max-w-xs md:max-w-sm object-contain"
+                        priority
+                    />
                 </div>
             </section>
 

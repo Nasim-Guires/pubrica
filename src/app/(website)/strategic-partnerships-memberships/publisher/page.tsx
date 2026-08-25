@@ -17,9 +17,13 @@ export default function PublisherPartnershipPage() {
             <section className="py-12 px-4 text-center max-w-3xl mx-auto">
                 <div className="flex justify-center mb-6">
                     <div className="w-24 h-24 relative flex items-center justify-center">
-                        <div className="w-20 h-20 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-md border-4 border-amber-200">
-                            100% SATISFACTION
-                        </div>
+                        <Image
+                            src="/images/RESIZEDSG-01-150x150.png"
+                            alt="100% Satisfaction Guarantee"
+                            width={96}
+                            height={96}
+                            className="object-contain"
+                        />
                     </div>
                 </div>
                 <p className="text-sm md:text-base text-gray-600 leading-relaxed">
@@ -34,7 +38,15 @@ export default function PublisherPartnershipPage() {
                     {/* Card 1 */}
                     <div className="bg-[#3192c3] text-white p-6 rounded shadow-md flex flex-col justify-between">
                         <div>
-                            <div className="flex justify-center mb-4 text-4xl">📚</div>
+                            <div className="flex justify-center mb-4">
+                                <Image
+                                    src="/images/icons8-course-assign-80.png"
+                                    alt="Icon"
+                                    width={36}
+                                    height={36}
+                                    className="object-contain"
+                                />
+                            </div>
                             <h3 className="text-lg font-bold text-center mb-3">Enhance success of publication</h3>
                             <p className="text-xs md:text-sm text-center leading-relaxed">
                                 Enhance publication acceptance rate by up to 75% through Pubrica experts.
@@ -45,7 +57,15 @@ export default function PublisherPartnershipPage() {
                     {/* Card 2 */}
                     <div className="bg-[#8b2b91] text-white p-6 rounded shadow-md flex flex-col justify-between">
                         <div>
-                            <div className="flex justify-center mb-4 text-4xl">📖</div>
+                             <div className="flex justify-center mb-4">
+                                <Image
+                                    src="/images/icons8-course-assign-80.png"
+                                    alt="Icon"
+                                    width={36}
+                                    height={36}
+                                    className="object-contain"
+                                />
+                            </div>
                             <h3 className="text-lg font-bold text-center mb-3">Enhance international journal publication</h3>
                             <p className="text-xs md:text-sm text-center leading-relaxed">
                                 Enhance publication chances in high-impact factor journals.
@@ -56,7 +76,15 @@ export default function PublisherPartnershipPage() {
                     {/* Card 3 */}
                     <div className="bg-[#6c64af] text-white p-6 rounded shadow-md flex flex-col justify-between">
                         <div>
-                            <div className="flex justify-center mb-4 text-4xl">📘</div>
+                             <div className="flex justify-center mb-4">
+                                <Image
+                                    src="/images/icons8-course-assign-80.png"
+                                    alt="Icon"
+                                    width={36}
+                                    height={36}
+                                    className="object-contain"
+                                />
+                            </div>
                             <h3 className="text-lg font-bold text-center mb-3">Achieve global research goals</h3>
                             <p className="text-xs md:text-sm text-center leading-relaxed">
                                 Enhance high-impact publications and foster international research collaborations.

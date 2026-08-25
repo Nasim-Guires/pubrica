@@ -33,31 +33,31 @@ export const patientEducationTestimonials = [
 export const patientEducationFaqs = [
   {
     question:
-      "How can I create effective patient education materials for clinical use?",
+      "How to create effective patient education materials for clinical use?",
     answer:
-      "Effective patient education materials should use simple language, clear organization, evidence-based information, culturally appropriate content, engaging visuals, and health communication best practices to improve patient understanding and outcomes.",
+      "Develop patient education materials that are written in simple language, well-organized, well-designed, evidence-based, culturally appropriate, effective, and follow the guidelines of health communication.",
   },
   {
     question:
-      "Where can healthcare providers obtain professionally developed patient education content?",
+      "Where can healthcare providers get patient education content developed?",
     answer:
-      "Healthcare providers can obtain patient education materials from professional medical writers, healthcare communication specialists, clinical research support organizations, and medical content development services that create accurate, patient-friendly resources.",
+      "Healthcare providers may seek patient education resources from professional medical writers, healthcare communication companies, clinical research support services, and healthcare content development companies.",
+  },
+  {
+    question:
+      "What should be included in patient education materials for better understanding?",
+    answer:
+      "The patient education materials may contain information on conditions, symptoms, treatment options, medication, lifestyle, safety, visuals, FAQs, contact information, etc., written in simple language that patients can easily understand.",
   },
   {
     question:
       "What are the best formats for patient education materials in healthcare?",
     answer:
-      "Common formats include brochures, pamphlets, fact sheets, infographics, posters, videos, digital PDFs, presentation slides, and other patient-friendly resources designed for both print and digital distribution.",
+      "The effective formats may include brochures, pamphlets, fact sheets, infographics, videos, posters, digital PDFs, and other patient education resources that are easily accessible.",
   },
   {
-    question:
-      "How can healthcare organizations improve patient engagement through educational materials?",
+    question: "How can healthcare organizations improve patient engagement through education materials?",
     answer:
-      "Organizations can improve patient engagement by using plain language, culturally appropriate messaging, visual aids, multilingual content, digital accessibility, evidence-based information, and regular patient feedback to enhance understanding and participation.",
-  },
-  {
-    question: "Why is plain language important in patient education materials?",
-    answer:
-      "Plain language helps patients understand medical information more easily, improves health literacy, supports informed decision-making, reduces misunderstandings, and encourages better adherence to treatment plans.",
+      "The healthcare organizations may improve patient engagement by using simple language, culturally appropriate content, visuals, digital formats, feedback, and evidence-based information.",
   },
 ];

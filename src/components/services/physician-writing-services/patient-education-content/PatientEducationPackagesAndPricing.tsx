@@ -8,15 +8,11 @@ import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 export default function PatientEducationPackagesAndPricing() {
   const packages = [
     {
-      name: "Basic",
+      icon: "/images/icons/Basic.webp",
+      title: "Basic",
       subtitle: "Ideal For First-Time Authors",
-      badgeColor: "bg-[#e2e8f0] text-[#0c2e3a]",
-      headerBg: "bg-[#d8e2e2]",
-      cardBg: "bg-[#e8efef]",
-      textColor: "text-slate-800",
-      idealFor: [
+      idealFor:
         "Clinics, diagnostic centres, and small healthcare providers needing essential patient education materials.",
-      ],
       includes: [
         "1 condition-specific educational leaflet (up to 500 words)",
         "Basic medication usage guide",
@@ -31,17 +27,15 @@ export default function PatientEducationPackagesAndPricing() {
         "Branding with the clinic logo",
       ],
       turnaround: "3–5 business days",
+      cardBgColor: "#cbd8d6",
+      titleColor: "#004b5a",
     },
     {
-      name: "Standard",
+      icon: "/images/icons/S.png",
+      title: "Standard",
       subtitle: "For Mid-Tier Or Indexed Journals",
-      badgeColor: "bg-[#d1c4e9] text-[#4a148c]",
-      headerBg: "bg-[#d1c4e9]/60",
-      cardBg: "bg-[#e9e3f4]",
-      textColor: "text-slate-800",
-      idealFor: [
+      idealFor:
         "Hospitals, specialty care providers, and wellness centres delivering moderate patient volumes.",
-      ],
       includes: [
         "Up to 3 patient education materials (conditions/procedures/medications)",
         "Treatment and discharge instruction content",
@@ -56,17 +50,15 @@ export default function PatientEducationPackagesAndPricing() {
         "Video storyboard (non-animated)",
       ],
       turnaround: "5–7 business days",
+      cardBgColor: "#d8c4e2",
+      titleColor: "#6b2d82",
     },
     {
-      name: "Premium",
+      icon: "/images/icons/pa-icons-.png",
+      title: "Premium",
       subtitle: "Comprehensive & Premium",
-      badgeColor: "bg-[#d4b996] text-[#3e2723]",
-      headerBg: "bg-[#d4b996]/60",
-      cardBg: "bg-[#ebdcd0]",
-      textColor: "text-slate-800",
-      idealFor: [
+      idealFor:
         "Multispecialty hospitals, pharma companies, public health organizations, and healthcare startups focused on scalable, high-impact patient communication.",
-      ],
       includes: [
         "Up to 6 tailored patient education content units (condition, treatment, medication, lifestyle)",
         "Multilingual delivery (up to 3 languages)",
@@ -83,6 +75,8 @@ export default function PatientEducationPackagesAndPricing() {
         "App integration support",
       ],
       turnaround: "7–10 business days",
+      cardBgColor: "#d5bc8d",
+      titleColor: "#805826",
     },
   ];
 
@@ -111,7 +105,10 @@ export default function PatientEducationPackagesAndPricing() {
               </h2>
               <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
                 For Pubrica&apos;s{" "}
-                <Link href="#" className="text-sky-300 hover:underline">
+                <Link
+                  href="/academy/patient-education/improve-health-literacy-medical-communications"
+                  className="text-sky-300 hover:underline"
+                >
                   patient education content
                 </Link>{" "}
                 development services: Acquire personalized assistance navigating
@@ -123,7 +120,7 @@ export default function PatientEducationPackagesAndPricing() {
 
           {/* Right Button */}
           <div className="shrink-0">
-            <GetFreeQuoteButton/>
+            <GetFreeQuoteButton />
           </div>
         </div>
       </section>
@@ -140,7 +137,10 @@ export default function PatientEducationPackagesAndPricing() {
             </h2>
             <p className="text-slate-700 text-base sm:text-lg leading-relaxed max-w-5xl">
               Pubrica offers medically accurate, guideline-compliant{" "}
-              <Link href="#" className="text-[#0a66bc] hover:underline">
+              <Link
+                href="/insights/sample-work/diabetic-foot-ulcer"
+                className="text-[#0a66bc] hover:underline"
+              >
                 patient education content
               </Link>{" "}
               developed by healthcare experts, optimized for comprehension, and
@@ -196,8 +196,25 @@ export default function PatientEducationPackagesAndPricing() {
                   Regulatory-Ready:
                 </h3>
                 <p className="text-slate-700 text-sm sm:text-base leading-relaxed pl-4">
-                  Content structured to comply with US FDA, EMA, MHRA, or Indian
-                  CDSCO standards for patient-facing information.
+                  Content structured to comply with US FDA,{" "}
+                  <Link
+                    href="https://www.ema.europa.eu/en/homepage"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sky-600 no-underline"
+                  >
+                    EMA
+                  </Link>
+                  , MHRA, or Indian{" "}
+                  <Link
+                    href="https://cdsco.gov.in/opencms/opencms/en/Home/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sky-600 no-underline"
+                  >
+                    CDSCO
+                  </Link>{" "}
+                  standards for patient-facing information.
                 </p>
               </div>
 
@@ -266,7 +283,10 @@ export default function PatientEducationPackagesAndPricing() {
               </h3>
               <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
                 Explore our{" "}
-                <Link href="#" className="text-[#0a66bc] hover:underline">
+                <Link
+                  href="/insights/sample-work/sleep-apnea"
+                  className="text-[#0a66bc] hover:underline"
+                >
                   patient education content samples
                 </Link>
                 , designed for clinical accuracy, health literacy, and ready use
@@ -288,14 +308,14 @@ export default function PatientEducationPackagesAndPricing() {
       {/* --- Section 4: Patient Education Packages (Pricing Table) --- */}
       <section
         aria-label="Patient Education Packages"
-        className="bg-white py-16 px-4 sm:px-6 lg:px-8"
+        className="bg-white py-16 px-4 md:px-8 w-full text-left font-sans"
       >
         <div className="max-w-7xl mx-auto space-y-10">
-          <div className="text-center space-y-3 max-w-4xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0c2e3a]">
+          <div className="text-left space-y-3 max-w-5xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0b3b2c] mb-3">
               Patient Education Content Packages
             </h2>
-            <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
               With a comprehensive package of services, healthcare professionals
               can be assisted with developing patient educational materials that
               are clinically accurate, culturally appropriate, and aligned with
@@ -304,88 +324,114 @@ export default function PatientEducationPackagesAndPricing() {
           </div>
 
           {/* 3-Column Package Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-            {packages.map((pkg, idx) => (
-              <div
-                key={idx}
-                className={`flex flex-col rounded-sm border border-slate-300 shadow-sm overflow-hidden ${pkg.cardBg}`}
-              >
-                {/* Header Block */}
+          <div className="relative max-w-7xl mx-auto pb-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
+              {packages.map((pkg, idx) => (
                 <div
-                  className={`p-6 border-b border-slate-300 ${pkg.headerBg} space-y-3`}
+                  key={idx}
+                  className="flex flex-col rounded-xl overflow-hidden shadow-md border border-gray-200 transition-all hover:shadow-lg"
+                  style={{ backgroundColor: pkg.cardBgColor }}
                 >
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-2xl font-bold text-[#0c2e3a]">
-                      {pkg.name}
-                    </h3>
-                    <span
-                      className={`text-xs font-bold px-3 py-1 rounded-full ${pkg.badgeColor}`}
-                    >
-                      {pkg.name}
-                    </span>
+                  {/* White Header Bar */}
+                  <div className="bg-white p-4 flex items-center gap-3 border-b border-gray-100 min-h-[85px]">
+                    <div className="w-10 h-10 relative flex-shrink-0 flex items-center justify-center">
+                      <Image
+                        src={pkg.icon}
+                        alt={pkg.title}
+                        width={40}
+                        height={40}
+                        className="object-contain"
+                      />
+                    </div>
+                    <div>
+                      <h3
+                        className="font-bold text-base md:text-lg leading-tight"
+                        style={{ color: pkg.titleColor }}
+                      >
+                        {pkg.title}
+                      </h3>
+                      {pkg.subtitle && (
+                        <p className="text-xs text-gray-500 font-medium leading-tight mt-0.5">
+                          {pkg.subtitle}
+                        </p>
+                      )}
+                    </div>
                   </div>
-                  <p className="text-xs sm:text-sm font-semibold text-slate-700">
-                    {pkg.subtitle}
-                  </p>
-                </div>
 
-                {/* Content Body */}
-                <div className="p-6 flex-1 flex flex-col justify-between space-y-6 text-sm text-slate-800">
-                  <div className="space-y-6">
+                  {/* Package Content */}
+                  <div className="p-5 flex flex-col flex-grow text-gray-900 text-xs md:text-sm">
                     {/* Ideal For */}
-                    <div className="space-y-2">
-                      <p className="font-bold text-[#0c2e3a] flex items-center gap-2">
-                        <span>➔</span> Ideal for:
-                      </p>
-                      <ul className="space-y-1 pl-5 list-disc text-slate-700">
-                        {pkg.idealFor.map((item, i) => (
-                          <li key={i}>{item}</li>
-                        ))}
-                      </ul>
+                    <div className="mb-4">
+                      <div className="font-bold mb-1 flex items-start gap-1.5 text-gray-900">
+                        <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-black text-white text-[10px] shrink-0 mt-0.5">
+                          ➔
+                        </span>
+                        <span>
+                          Ideal For:{" "}
+                          <span className="font-normal">{pkg.idealFor}</span>
+                        </span>
+                      </div>
                     </div>
 
                     {/* Includes */}
-                    <div className="space-y-2">
-                      <p className="font-bold text-[#0c2e3a] flex items-center gap-2">
-                        <span>➔</span> Includes:
-                      </p>
-                      <ul className="space-y-1.5 pl-5 list-disc text-slate-700">
+                    <div className="mb-4 flex-grow">
+                      <div className="font-bold mb-2 flex items-center gap-1.5 text-gray-900">
+                        <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-black text-white text-[10px] shrink-0">
+                          ➔
+                        </span>
+                        <span>Includes:</span>
+                      </div>
+                      <ul className="pl-6 space-y-2 list-disc marker:text-gray-800">
                         {pkg.includes.map((item, i) => (
-                          <li key={i}>{item}</li>
+                          <li key={i} className="leading-snug text-gray-900">
+                            {item}
+                          </li>
                         ))}
                       </ul>
                     </div>
 
                     {/* Optional Add-ons */}
-                    <div className="space-y-2">
-                      <p className="font-bold text-[#0c2e3a] flex items-center gap-2">
-                        <span>➔</span> Optional Add-ons:
-                      </p>
-                      <ul className="space-y-1.5 pl-5 list-disc text-slate-700">
-                        {pkg.optionalAddOns.map((item, i) => (
-                          <li key={i}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+                    {pkg.optionalAddOns && pkg.optionalAddOns.length > 0 && (
+                      <div className="mb-4">
+                        <div className="font-bold mb-2 flex items-center gap-1.5 text-gray-900">
+                          <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-black text-white text-[10px] shrink-0">
+                            ➔
+                          </span>
+                          <span>Optional Add-ons:</span>
+                        </div>
+                        <ul className="pl-6 space-y-1.5 list-disc marker:text-gray-800">
+                          {pkg.optionalAddOns.map((item, i) => (
+                            <li key={i} className="leading-snug text-gray-900">
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
 
-                  {/* Turnaround Footer */}
-                  <div className="pt-4 border-t border-slate-300/60">
-                    <p className="font-bold text-[#0c2e3a] flex items-center gap-2">
-                      <span>➔</span> Turnaround:
-                    </p>
-                    <p className="pl-5 text-slate-700 font-medium pt-1">
-                      {pkg.turnaround}
-                    </p>
+                    {/* Turnaround Time */}
+                    {pkg.turnaround && (
+                      <div className="mb-3">
+                        <div className="font-bold flex items-start gap-1.5">
+                          <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-black text-white text-[10px] shrink-0 mt-0.5">
+                            ➔
+                          </span>
+                          <span>
+                            Turnaround Time:{" "}
+                            <span className="font-normal">{pkg.turnaround}</span>
+                          </span>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          {/* Bottom Get a Free Quote Button */}
-          <div className="flex justify-center pt-6">
-            <GetFreeQuoteButton/>
+            {/* Floating Centered CTA Button */}
+            <div className="mt-8 text-center">
+              <GetFreeQuoteButton />
+            </div>
           </div>
         </div>
       </section>

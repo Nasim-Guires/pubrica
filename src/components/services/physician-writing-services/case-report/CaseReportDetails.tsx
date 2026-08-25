@@ -28,6 +28,7 @@ const caseReportTypes = [
     description:
       "Detailed description of a rare or unusual disease, symptom, or treatment outcome.",
     icon: FileText,
+    url: "/services/publication-support/journal-selection/",
   },
   {
     id: "vignettes",
@@ -35,6 +36,7 @@ const caseReportTypes = [
     description:
       "Short, focused narratives emphasizing a unique clinical presentation or diagnostic challenge.",
     icon: Activity,
+    url: "/services/publication-support/journal-selection/",
   },
   {
     id: "series",
@@ -42,6 +44,7 @@ const caseReportTypes = [
     description:
       "Reports of multiple similar clinical cases, highlighting a pattern or trend.",
     icon: UserPlus,
+    url: "/services/publication-support/journal-submission/",
   },
   {
     id: "rare-disease",
@@ -49,6 +52,7 @@ const caseReportTypes = [
     description:
       "Case descriptions of uncommon genetic, infectious, or systemic diseases to inform medical literature.",
     icon: FileCheck,
+    url: "/services/publication-support/poster-preparation/",
   },
   {
     id: "surgical",
@@ -56,6 +60,7 @@ const caseReportTypes = [
     description:
       "Covers novel techniques, unexpected intraoperative findings, or innovative post-operative care strategies.",
     icon: Stethoscope,
+    url: "/services/",
   },
   {
     id: "novel-treatment",
@@ -63,6 +68,7 @@ const caseReportTypes = [
     description:
       "Documentation of a new therapeutic approach, device use, or surgical method with outcome assessment.",
     icon: PlusSquare,
+    url: "/services/publication-support/peer-review-pre-submission/",
   },
   {
     id: "diagnostic",
@@ -70,6 +76,7 @@ const caseReportTypes = [
     description:
       "Focused on complex or misleading diagnostic pathways and final resolution.",
     icon: ClipboardList,
+    url: "/services/publication-support/journal-manuscript-formatting-services/",
   },
   {
     id: "adverse-event",
@@ -77,6 +84,7 @@ const caseReportTypes = [
     description:
       "Accounts of side effects, complications, or unexpected responses to treatment.",
     icon: AlertTriangle,
+    url: "/services/publication-support/art-work-preparation/",
   },
   {
     id: "complication",
@@ -84,6 +92,7 @@ const caseReportTypes = [
     description:
       "Unexpected or atypical complications arising during diagnosis, treatment, or recovery.",
     icon: HelpCircle,
+    url: "/services/publication-support/plagiarism-services/",
   },
   {
     id: "ethics",
@@ -91,6 +100,7 @@ const caseReportTypes = [
     description:
       "Case-based discussion involving ethical dilemmas or medico-legal issues in clinical practice.",
     icon: Scale,
+    url: "/services/publication-support/video-abstract/",
   },
   {
     id: "multidisciplinary",
@@ -98,6 +108,7 @@ const caseReportTypes = [
     description:
       "Reports involving collaboration across specialties (e.g., oncology and radiology), showing cross-disciplinary value.",
     icon: GitFork,
+    url: "/services/",
   },
   {
     id: "educational",
@@ -105,6 +116,7 @@ const caseReportTypes = [
     description:
       "Designed to illustrate best practices, reinforce clinical guidelines, or teach a principle in evidence-based medicine.",
     icon: BookOpen,
+    url: "/services/",
   },
   {
     id: "rehabilitation",
@@ -112,6 +124,7 @@ const caseReportTypes = [
     description:
       "Tracks patient progress in physical therapy, neurorehabilitation, or long-term recovery plans.",
     icon: HeartPulse,
+    url: "/services/",
   },
   {
     id: "preventive",
@@ -119,6 +132,7 @@ const caseReportTypes = [
     description:
       "Highlighting early detection, vaccination impact, or public health interventions on individual cases.",
     icon: ShieldCheck,
+    url: "/services/",
   },
 ];
 
@@ -170,14 +184,14 @@ export default function CaseReportDetails() {
             const isSelected = activeCard === item.id;
 
             return (
-              <div
+              <Link
                 key={item.id}
+                href={item.url}
                 onClick={() => setActiveCard(item.id)}
-                className={`p-6 rounded-lg transition-all duration-200 cursor-pointer flex flex-col ${
-                  isSelected
+                className={`p-6 rounded-lg transition-all duration-200 cursor-pointer flex flex-col ${isSelected
                     ? "bg-[#e2edf3] border border-sky-200 shadow-sm"
                     : "bg-white border border-slate-100 hover:shadow-md"
-                }`}
+                  }`}
               >
                 <div className="flex items-start gap-3 mb-3">
                   <div className="w-10 h-10 rounded-full bg-[#fef3c7] flex items-center justify-center shrink-0">
@@ -190,7 +204,7 @@ export default function CaseReportDetails() {
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-13">
                   {item.description}
                 </p>
-              </div>
+              </Link>
             );
           })}
         </div>
@@ -206,7 +220,7 @@ export default function CaseReportDetails() {
 
         <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-8">
           The case report is the initial method of{" "}
-          <Link href="#" className="text-sky-600 hover:underline">
+          <Link href="/services/scientific-communication" className="text-sky-600 ">
             medical communication
           </Link>
           . It is a way of developing new knowledge through clinical practices.
@@ -249,8 +263,6 @@ export default function CaseReportDetails() {
                   className="object-cover"
                 />
               </div>
-
-             
             </div>
           </div>
         </div>
@@ -259,12 +271,12 @@ export default function CaseReportDetails() {
         <div className="mt-12 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
           <p>
             At Pubrica, our expert professionals create clinical{" "}
-            <Link href="#" className="text-sky-600 hover:underline">
+            <Link href="/academy/case-report/radiology-case-report-guide" className="text-sky-600 ">
               case reports
             </Link>{" "}
             in a well-organised manner, following a standard format. Our
             experienced{" "}
-            <Link href="#" className="text-sky-600 hover:underline">
+            <Link href="/services/research-services/medical-writing" className="text-sky-600 ">
               medical writing
             </Link>{" "}
             team accurately categorizes your case and designs a study according to

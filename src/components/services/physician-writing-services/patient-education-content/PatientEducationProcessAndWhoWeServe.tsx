@@ -4,11 +4,19 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+interface StepItem {
+  number: number;
+  title?: string;
+  icon: React.ReactNode;
+  description: string;
+}
+
 export default function PatientEducationProcessAndWhoWeServe() {
   // Step-by-step process data
-  const steps = [
+  const steps: StepItem[] = [
     {
       number: 1,
+      title: "Requirement Analysis",
       icon: (
         <svg
           className="w-10 h-10 text-slate-700 group-hover:text-white transition-colors duration-300"
@@ -29,6 +37,7 @@ export default function PatientEducationProcessAndWhoWeServe() {
     },
     {
       number: 2,
+      title: "Content Research & Drafting",
       icon: (
         <svg
           className="w-10 h-10 text-slate-700 group-hover:text-white transition-colors duration-300"
@@ -49,6 +58,7 @@ export default function PatientEducationProcessAndWhoWeServe() {
     },
     {
       number: 3,
+      title: "Review & Refinement",
       icon: (
         <svg
           className="w-10 h-10 text-slate-700 group-hover:text-white transition-colors duration-300"
@@ -69,6 +79,7 @@ export default function PatientEducationProcessAndWhoWeServe() {
     },
     {
       number: 4,
+      title: "Final Delivery & Support",
       icon: (
         <svg
           className="w-10 h-10 text-slate-700 group-hover:text-white transition-colors duration-300"
@@ -138,7 +149,7 @@ export default function PatientEducationProcessAndWhoWeServe() {
         </h2>
         <p className="text-slate-700 text-base sm:text-lg leading-relaxed mb-8">
           Pubrica&apos;s{" "}
-          <Link href="#" className="text-[#0a66bc] hover:underline">
+          <Link href="/insights/sample-work/psoriasis" className="text-[#0a66bc] hover:underline">
             patient education content
           </Link>{" "}
           service delivers medically accurate, reader-friendly educational
@@ -185,11 +196,11 @@ export default function PatientEducationProcessAndWhoWeServe() {
           </p>
           <p className="text-slate-700 text-sm sm:text-base max-w-4xl mx-auto pt-2 leading-relaxed">
             With Pubrica&apos;s{" "}
-            <Link href="#" className="text-[#0a66bc] hover:underline">
+            <Link href="/insights/sample-work/parkinsons-disease" className="text-[#0a66bc] hover:underline">
               patient education content
             </Link>{" "}
             service, our medical experts and{" "}
-            <Link href="#" className="text-[#0a66bc] hover:underline">
+            <Link href="/services/research-services/scientific-writing" className="text-[#0a66bc] hover:underline">
               scientific writing
             </Link>{" "}
             team work together to develop clear, accurate, and
@@ -200,53 +211,153 @@ export default function PatientEducationProcessAndWhoWeServe() {
         </div>
 
         {/* Timeline Grid (4 Steps) */}
-        <div className="relative grid grid-cols-1 md:grid-cols-4 gap-6 pt-8">
-          {/* Connector Line (Desktop Only) */}
-          <div className="hidden md:block absolute top-[110px] left-0 right-0 h-1 bg-[#008ba3] z-0" />
+        <div className="w-full">
+          {/* ============================================================ */}
+          {/* MOBILE LAYOUT (< md screens): Vertical Alternating Timeline */}
+          {/* ============================================================ */}
+          <div className="flex md:hidden flex-col items-center w-full max-w-sm mx-auto space-y-6 pt-6">
+            {steps.map((step, index) => {
+              const isEven = index % 2 === 0;
 
-          {steps.map((step) => (
-            <div
-              key={step.number}
-              className="relative flex flex-col items-center z-10"
-            >
-              {/* Step Card 1 & 3: Card Top, Number Bottom | Step Card 2 & 4: Number Top, Card Bottom */}
-              {step.number % 2 !== 0 ? (
-                <>
-                  {/* Card with Black Hover Effect */}
-                  <div className="group w-full min-h-[220px] bg-white hover:bg-[#525252] border border-slate-200 p-6 rounded-sm shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-start space-y-3 cursor-pointer">
-                    <div className="p-2 bg-slate-50 group-hover:bg-transparent rounded-sm transition-colors duration-300">
-                      {step.icon}
-                    </div>
-                    <p className="text-slate-700 group-hover:text-white text-xs sm:text-sm leading-relaxed transition-colors duration-300">
-                      {step.description}
-                    </p>
-                  </div>
+              return (
+                <div
+                  key={step.number}
+                  className="relative flex items-center w-full min-h-[160px]"
+                >
+                  {/* Connecting Vertical Line */}
+                  {index !== steps.length - 1 && (
+                    <div
+                      className={`absolute top-8 bottom-0 w-[2px] bg-[#0081A7] z-0 ${isEven ? "left-4" : "right-4"
+                        }`}
+                    />
+                  )}
 
-                  {/* Step Number Circle */}
-                  <div className="w-10 h-10 rounded-full bg-[#008ba3] text-white font-bold flex items-center justify-center text-base shadow-md mt-6">
-                    {step.number}
-                  </div>
-                </>
-              ) : (
-                <>
-                  {/* Step Number Circle */}
-                  <div className="w-10 h-10 rounded-full bg-[#008ba3] text-white font-bold flex items-center justify-center text-base shadow-md mb-6">
+                  {/* Step Number Badge */}
+                  <div
+                    className={`absolute z-10 w-9 h-9 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm shadow-sm ${isEven ? "left-0" : "right-0"
+                      }`}
+                  >
                     {step.number}
                   </div>
 
-                  {/* Card with Black Hover Effect */}
-                  <div className="group w-full min-h-[220px] bg-white hover:bg-[#525252] border border-slate-200 p-6 rounded-sm shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-start space-y-3 cursor-pointer">
-                    <div className="p-2 bg-slate-50 group-hover:bg-transparent rounded-sm transition-colors duration-300">
-                      {step.icon}
+                  {/* Step Card Container */}
+                  <div
+                    className={`w-full flex ${isEven ? "pl-10 pr-2" : "pr-10 pl-2"
+                      }`}
+                  >
+                    <div className="bg-[#F8F9FA] border border-[#E2E8F0] rounded-xs shadow-xs p-4 flex flex-col items-center text-center w-full z-10">
+                      <div className="w-10 h-10 relative mb-3 flex items-center justify-center text-[#0081A7]">
+                        {step.icon}
+                      </div>
+
+                      {step.title && (
+                        <h4 className="font-bold text-[#0F172A] text-xs mb-2 leading-snug">
+                          {step.title}
+                        </h4>
+                      )}
+
+                      <p className="text-[#64748B] text-[11px] leading-relaxed">
+                        {step.description}
+                      </p>
                     </div>
-                    <p className="text-slate-700 group-hover:text-white text-xs sm:text-sm leading-relaxed transition-colors duration-300">
-                      {step.description}
-                    </p>
                   </div>
-                </>
-              )}
-            </div>
-          ))}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* ============================================================ */}
+          {/* DESKTOP LAYOUT (>= md screens): Dynamic Flow Layout          */}
+          {/* ============================================================ */}
+          <div
+            className="hidden md:grid gap-2 lg:gap-4 items-stretch justify-center w-full max-w-7xl mx-auto relative my-8"
+            style={{
+              gridTemplateColumns: `repeat(${steps.length}, minmax(0, 1fr))`,
+            }}
+          >
+            {steps.map((step, index) => {
+              const isCardTop = step.number % 2 !== 0;
+
+              return (
+                <div
+                  key={step.number}
+                  className="flex flex-col items-center justify-between group w-full relative min-h-[500px]"
+                >
+                  {/* UPPER SECTION */}
+                  <div className="w-full flex flex-col items-center justify-end flex-1 pb-0">
+                    {isCardTop ? (
+                      /* Card placed at Top */
+                      <div className="bg-[#F8F9FA] border border-[#E2E8F0] shadow-xs p-3 lg:p-4 flex flex-col items-center text-center w-full h-full justify-start z-20 transition-all duration-300 group-hover:bg-black group-hover:border-black rounded-xs cursor-pointer">
+                        <div className="w-10 h-10 lg:w-11 lg:h-11 relative mb-3 flex items-center justify-center shrink-0 text-[#0081A7] transition-all duration-300 group-hover:text-white">
+                          {step.icon}
+                        </div>
+
+                        {step.title && (
+                          <h4 className="font-bold text-[#0F172A] text-xs lg:text-sm mb-2 leading-snug transition-colors duration-300 group-hover:text-white">
+                            {step.title}
+                          </h4>
+                        )}
+
+                        <p className="text-[#64748B] text-[11px] lg:text-xs leading-relaxed transition-colors duration-300 group-hover:text-gray-300">
+                          {step.description}
+                        </p>
+                      </div>
+                    ) : (
+                      /* Badge + Vertical Connector Line */
+                      <div className="flex flex-col items-center justify-end w-full">
+                        <div className="w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm lg:text-base shadow-sm z-20 transition-colors duration-300 group-hover:bg-black shrink-0 mb-3">
+                          {step.number}
+                        </div>
+                        <div className="w-[2px] h-10 bg-[#0081A7] transition-colors duration-300 group-hover:bg-black" />
+                      </div>
+                    )}
+                  </div>
+
+                  {/* CENTER HORIZONTAL LINE SEGMENT */}
+                  <div className="w-full h-[8px] relative my-0 shrink-0">
+                    <div
+                      className={`h-full bg-[#0081A7] w-full transition-colors duration-300 group-hover:bg-black ${index === 0
+                          ? "rounded-l-sm"
+                          : index === steps.length - 1
+                            ? "rounded-r-sm"
+                            : ""
+                        }`}
+                    />
+                  </div>
+
+                  {/* LOWER SECTION */}
+                  <div className="w-full flex flex-col items-center justify-start flex-1 pt-0">
+                    {!isCardTop ? (
+                      /* Card placed at Bottom */
+                      <div className="bg-[#F8F9FA] border border-[#E2E8F0] shadow-xs p-3 lg:p-4 flex flex-col items-center text-center w-full h-full justify-start z-20 transition-all duration-300 group-hover:bg-black group-hover:border-black rounded-xs cursor-pointer">
+                        <div className="w-10 h-10 lg:w-11 lg:h-11 relative mb-3 flex items-center justify-center shrink-0 text-[#0081A7] transition-all duration-300 group-hover:text-white">
+                          {step.icon}
+                        </div>
+
+                        {step.title && (
+                          <h4 className="font-bold text-[#0F172A] text-xs lg:text-sm mb-2 leading-snug transition-colors duration-300 group-hover:text-white">
+                            {step.title}
+                          </h4>
+                        )}
+
+                        <p className="text-[#64748B] text-[11px] lg:text-xs leading-relaxed transition-colors duration-300 group-hover:text-gray-300">
+                          {step.description}
+                        </p>
+                      </div>
+                    ) : (
+                      /* Vertical Connector Line + Badge */
+                      <div className="flex flex-col items-center justify-start w-full">
+                        <div className="w-[2px] h-10 bg-[#0081A7] transition-colors duration-300 group-hover:bg-black" />
+                        <div className="w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm lg:text-base shadow-sm z-20 transition-colors duration-300 group-hover:bg-black shrink-0 mt-3">
+                          {step.number}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
     </div>

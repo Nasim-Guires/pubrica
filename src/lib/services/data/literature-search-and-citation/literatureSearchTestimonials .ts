@@ -32,17 +32,17 @@ export const literatureSearchFaqs = [
   {
     question: "What databases should I use for an academic literature search?",
     answer:
-      "For a comprehensive and reliable literature search, use authoritative databases such as PubMed, Scopus, Web of Science, Cochrane Library, Embase, and Google Scholar, depending on your research discipline and objectives.",
+      "For comprehensive and accurate literature search, it is advisable to use authoritative sources such as PubMed, Scopus, Web of Science, and Cochrane Library.",
   },
   {
     question: "How can I organize and manage references for a research paper?",
     answer:
-      "Organize references using structured folders, consistent citation styles, and reference management software such as EndNote, Zotero, Mendeley, or RefWorks. These tools simplify citation management and bibliography creation.",
+      "Use structured folders, citation styles, and reference management tools such as EndNote and Zotero to accurately and consistently organize references.",
   },
   {
     question: "What are the best tools for citation management in research?",
     answer:
-      "Popular citation management tools include EndNote, Zotero, Mendeley, and RefWorks. These applications help researchers collect references, generate in-text citations, format bibliographies, and collaborate efficiently.",
+      "Top citation management tools include EndNote, Zotero, Mendeley, and RefWorks for efficient referencing and academic citation formatting.",
   },
   {
     question: "How can I ensure accurate citations and references in academic writing?",
@@ -52,11 +52,11 @@ export const literatureSearchFaqs = [
   {
     question: "How do I perform a systematic literature search step by step?",
     answer:
-      "Begin by defining your research question, identifying keywords, selecting appropriate databases, applying Boolean operators and filters, documenting your search strategy, screening studies, and following PRISMA guidelines for transparent reporting.",
+      "Systematically search the literature with research questions, selecting keywords, selecting databases, using Boolean search, documenting the search, and using PRISMA guidelines.",
   },
   {
     question: "How can I manage references using EndNote or Mendeley?",
     answer:
-      "Import references directly from databases, organize them into folders or collections, insert citations while writing, automatically generate bibliographies, and synchronize your library across devices using EndNote or Mendeley.",
+      "Manage sources using EndNote and Mendeley with features such as importing sources, libraries, in-text citations, and bibliographies with consistent academic formats.",
   },
 ];  
