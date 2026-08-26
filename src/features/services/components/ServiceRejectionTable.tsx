@@ -136,7 +136,7 @@ export default function ServiceRejectionTable({
   const tableData = FULL_REJECTION_TABLE_DATA;
 
   return (
-    <div className="w-full max-w-5xl mx-auto py-12 px-4 sm:px-6 font-sans">
+    <div className="w-full max-w-5xl mx-auto py-8 px-4 sm:px-6 font-sans">
       {/* Heading Group */}
       <div className="mb-8">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#083a50] mb-4">
@@ -145,9 +145,9 @@ export default function ServiceRejectionTable({
         <p className="text-[14px] sm:text-[15px] text-slate-600 leading-relaxed">
           Usually, the most prominent, well-drafted, and outstanding articles
           would be the ones that clear the rigorous{" "}
-          <span className="text-[#3b82f6]  cursor-pointer">
+          <Link href="/services/publication-support/journal-selection/ckd-journal-selection-review/" className="text-[#3b82f6]  cursor-pointer">
             review
-          </span>{" "}
+          </Link>{" "}
           process, but there are several that get rejected for simple reasons
           like formatting, referencing, language, and editing errors.
         </p>

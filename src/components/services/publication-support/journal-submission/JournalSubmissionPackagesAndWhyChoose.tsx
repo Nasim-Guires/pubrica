@@ -187,7 +187,7 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
           {/* Satisfaction Badge */}
           <div className="shrink-0">
-            <div className="w-28 h-28 relative">
+            <div className="w-40 h-40 relative">
               <Image
                 src="/images/publication-support/journal-submission/Satisfaction_Guarantee.webp"
                 alt="100% Satisfaction Guarantee"

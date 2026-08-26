@@ -39,18 +39,24 @@ export default function WhoWeWorkFor() {
       <Container className="flex flex-col gap-12">
         {/* Header Section */}
         <div className="flex flex-col gap-4 relative">
-          {/* Top Row: Heading + Line + Button */}
-          <div className="flex items-center justify-between gap-6 w-full">
-            <h2 className="text-3xl font-bold tracking-tight text-[#0a2f2d] font-display whitespace-nowrap">
+          {/* Top Row: Heading + Line (Desktop Button stays inline, Mobile Button moves below line) */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6 w-full">
+            <h2 className="text-3xl font-bold tracking-tight text-[#0a2f2d] font-display whitespace-nowrap text-left">
               Who We Work For
             </h2>
-            <div className="hidden sm:block flex-1 h-[2px] bg-black" />
-            <Link
-              href="/industries"
-              className="bg-emerald-950 text-white font-medium text-sm px-6 py-2.5 rounded-full hover:bg-emerald-900 shadow-md transition-all duration-300 inline-block"
-            >
-              Read more
-            </Link>
+
+            {/* Full-width Divider Line on Mobile, Flex Line on Desktop */}
+            <div className="w-full sm:flex-1 h-[2px] bg-black" />
+
+            {/* Read More Button: Centered on mobile, aligned right on desktop */}
+            <div className="flex justify-center sm:justify-end my-2 sm:my-0">
+              <Link
+                href="/industries"
+                className="bg-[#0a2f2d] text-white font-medium text-sm px-8 py-3 rounded-full hover:bg-emerald-900 shadow-lg shadow-[#0a2f2d]/20 transition-all duration-300 inline-block text-center min-w-[140px]"
+              >
+                Read more
+              </Link>
+            </div>
           </div>
 
           {/* Subheading Description */}
@@ -74,13 +80,7 @@ export default function WhoWeWorkFor() {
                 key={idx}
                 className="bg-white border border-gray-200 shadow-sm flex flex-col h-[380px] transition-all duration-500 ease-in-out hover:shadow-xl hover:border-b-4 hover:border-b-[#0a2f2d] group cursor-pointer"
               >
-                {/* 
-                  Wrapper Section: NO overflow-hidden here! 
-                  This allows the badge to hang over the edge perfectly.
-                */}
                 <div className="relative h-[65%] w-full transition-all duration-500 ease-in-out group-hover:h-[50%]">
-
-                  {/* Image Background - Overflow Hidden applied ONLY to the image to prevent clipping the badge */}
                   <div className="absolute inset-0 overflow-hidden bg-gray-100">
                     <Image
                       src={sec.image}
@@ -91,11 +91,6 @@ export default function WhoWeWorkFor() {
                     />
                   </div>
 
-                  {/* 
-                    Overlapping Floating Icon Badge 
-                    'bottom-0' aligns to the very bottom edge of the image.
-                    'translate-y-1/2' pushes it exactly 50% down, creating the perfect split.
-                  */}
                   <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-20">
                     <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-[#0a2f2d] shadow-md transition-transform duration-300 group-hover:scale-105">
                       <Icon className="h-7 w-7 stroke-[2]" />
@@ -103,13 +98,11 @@ export default function WhoWeWorkFor() {
                   </div>
                 </div>
 
-                {/* Content Panel */}
                 <div className="h-[35%] w-full pt-12 pb-6 px-5 bg-white flex flex-col items-center justify-start flex-grow transition-all duration-500 ease-in-out group-hover:h-[50%] relative z-10">
                   <h3 className="font-bold text-gray-900 text-sm tracking-wide text-center font-display transition-colors duration-300">
                     {sec.title}
                   </h3>
 
-                  {/* Revealable Description Text Block */}
                   <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-in-out group-hover:grid-rows-[1fr] group-hover:opacity-100 group-hover:mt-3">
                     <div className="overflow-hidden">
                       <p className="text-xs text-gray-400 text-center leading-relaxed font-medium">

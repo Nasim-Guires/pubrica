@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import CommonFAQ from "@/components/common/FAQ";
 
 // Common path prefix for journal images
 const COMMON_IMAGE_PATH = "/images/publication-support/journal-submission/";
@@ -44,28 +45,28 @@ const faqs = [
     id: 2,
     question: "2. How to submit a manuscript to an academic journal?",
     answer:
-      "Submitting to an academic journal involves creating an account on the journal’s online submission portal (such as Editorial Manager or ScholarOne), uploading formatted manuscript files, entering co-author and metadata details, and attaching required disclosure statements.",
+      "The submission process involves selecting the right journal, preparing the manuscript in the right format, preparing the documents, writing the cover letter, and finally submitting the manuscript through the journal’s portal.",
   },
   {
     id: 3,
     question:
       "3. What documents are required for journal manuscript submission?",
     answer:
-      "Typically required documents include the main manuscript file, cover letter, title page with author affiliations, high-resolution figures, tables, conflict of interest forms, and ethical approval certificates.",
+      "The documents include a manuscript file, a cover letter, a title page, figures, tables, ethical clearance (when applicable), a conflict of interest statement, and any other relevant supplementary material as may be required by the journal.",
   },
   {
     id: 4,
     question:
       "4. What should I check before submitting a research paper to a journal?",
     answer:
-      "Before submission, verify that your manuscript strictly follows the target journal’s author guidelines regarding word count, reference style, formatting, figure resolution, and ethical statements.",
+      "Prior to submission, it is advisable to check for journal guidelines, formatting, word count, references, ethical clearances, author information, figure quality, plagiarism, and overall clarity.",
   },
   {
     id: 5,
     question:
       "5. How do I track the status of my manuscript after journal submission?",
     answer:
-      'You can track your manuscript by logging into the journal submission portal where the status will update periodically (e.g., "Under Review", "Awaiting Decision"). Our team also actively monitors this status on your behalf.',
+      'The status of the manuscript can be easily tracked through the online submission system of the journal, where the status of the manuscript is updated with messages such as “under review,” “revision required,” “decision made,” etc.',
   },
 ];
 
@@ -146,11 +147,10 @@ export default function TestimonialsAndFAQSections() {
                 key={index}
                 onClick={() => setActiveSlide(index)}
                 aria-label={`Go to slide ${index + 1}`}
-                className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                  activeSlide === index
-                    ? "w-6 bg-[#1c3e38]"
-                    : "w-2.5 bg-gray-400 hover:bg-gray-600"
-                }`}
+                className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${activeSlide === index
+                  ? "w-6 bg-[#1c3e38]"
+                  : "w-2.5 bg-gray-400 hover:bg-gray-600"
+                  }`}
               />
             ))}
           </div>
@@ -160,42 +160,10 @@ export default function TestimonialsAndFAQSections() {
       {/* ========================================== */}
       {/* SECTION 2: FREQUENTLY ASKED QUESTIONS      */}
       {/* ========================================== */}
-      <section className="py-14 px-4 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-xl sm:text-2xl font-bold text-[#0c3547] mb-8">
-            Frequently Asked Questions – Journal Submission Services
-          </h2>
-
-          {/* Accordion Container */}
-          <div className="border border-gray-200 divide-y divide-gray-200 rounded-sm">
-            {faqs.map((faq) => {
-              const isOpen = openFaq === faq.id;
-
-              return (
-                <div key={faq.id} className="bg-white">
-                  <button
-                    onClick={() => toggleFaq(faq.id)}
-                    className="w-full py-4 px-5 flex items-center justify-between text-left focus:outline-none hover:bg-gray-50 transition-colors"
-                  >
-                    <span className="font-bold text-xs sm:text-sm text-[#0c3547] pr-4">
-                      {faq.question}
-                    </span>
-                    <span className="text-base text-black shrink-0 font-semibold">
-                      {isOpen ? "−" : "+"}
-                    </span>
-                  </button>
-
-                  {isOpen && (
-                    <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-gray-700 leading-relaxed border-t border-gray-100">
-                      {faq.answer}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <CommonFAQ
+        title="Frequently Asked Questions – Journal Submission Services"
+        faqs={faqs}
+      />
     </div>
   );
 }

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 // Accordion Data with React JSX node support for embedded links
 const accordionData = [
@@ -191,18 +192,11 @@ export default function JournalSubmissionPage() {
       {/* ========================================== */}
       {/* SECTION 1: HERO BANNER                    */}
       {/* ========================================== */}
-      <section className="bg-[#1a2c2a] py-16 px-4 text-center">
-        <div className="max-w-4xl mx-auto border border-white/60 p-8 sm:p-10 rounded-sm">
-          <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
-            Journal Submission Service
-          </h1>
-          <p className="text-sm sm:text-base text-gray-200 max-w-2xl mx-auto leading-relaxed">
-            Simplify your journal submission with Pubrica’s expert services –
-            your assistant to manage complex requirements and ensure timely,
-            stress-free publishing.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Journal Submission Service"
+        description="Simplify your journal submission with Pubrica’s expert services – your assistant to manage complex requirements and ensure timely, stress-free publishing."
+        headingAs="h1"
+      />
 
       {/* ========================================== */}
       {/* SECTION 2: OVERVIEW & BULLETS             */}
@@ -330,12 +324,6 @@ export default function JournalSubmissionPage() {
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center gap-4">
           <GetFreeQuoteButton />
-          <a
-            href="#brochure"
-            className="inline-flex items-center justify-center bg-[#b80000] hover:bg-black text-white text-xs sm:text-sm font-semibold px-5 py-2 rounded-md shadow-sm transition-colors duration-300"
-          >
-            View Brochure
-          </a>
         </div>
       </section>
 

@@ -14,6 +14,7 @@ const BLUE_LINKS = [
   "journal submission",
   "journal selection",
   "medical device",
+  "peer review",
   "CONSORT",
   "PRISMA",
   "STROBE",
@@ -27,6 +28,8 @@ const ROUTE_MAP: Record<string, string> = {
     "/services/publication-support/poster-preparation/european-society-for-medical-oncology/",
   "pre-submission peer review":
     "/academy/peer-review/how-publishers-balance-authors-and-reviewers/",
+  "peer review":
+    "/services/publication-support/double-blind-peer-review-definition-process/",
   "journal submission": "/services/publication-support/journal-submission/",
   "journal selection": "/services/publication-support/journal-selection/",
   "scientific journal publication services":
@@ -197,11 +200,14 @@ export default function ServiceOverview() {
         </div>
 
         {/* Action CTAs */}
-        <div className="flex flex-wrap items-center gap-3 mt-6 mb-10">
+        <div className="flex flex-wrap items-center gap-8 mt-6 mb-10">
           <GetFreeQuoteButton />
-          <button className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
+          <Link
+            href="/uploads/publication-support-services_compressed.pdf"
+            className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
+          >
             View Brochure
-          </button>
+          </Link>
         </div>
 
         {/* Compliance and Guidelines Section */}

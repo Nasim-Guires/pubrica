@@ -9,7 +9,7 @@ import { SERVICES_CATEGORIES } from "@/lib/data-whatwedo";
 // Mapping category keys to their specific path targets
 const CATEGORY_ROUTES: Record<keyof typeof SERVICES_CATEGORIES, string> = {
   "research-services": "/services/research-services/",
-  "manuscript-editing": "/services/research-services/",
+  "manuscript-editing": "/services/editing-and-translation",
   "publication-journal": "/services/publication-support/",
   "physician-writing": "/services/physician-writing-services/",
   "infographics-illustrations": "/services/research-impact/",

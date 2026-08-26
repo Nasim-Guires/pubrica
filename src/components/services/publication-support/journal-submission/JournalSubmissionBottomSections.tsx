@@ -192,7 +192,7 @@ export default function JournalSubmissionBottomSections() {
                 Journal Submission Sample Work
               </h3>
               <a
-                href="#discover-sample"
+                href="/insights/sample-work/journal-submission-report-sample"
                 className="inline-block w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-bold px-10 py-2.5 rounded-full text-center transition-colors shadow-sm"
               >
                 Discover More
@@ -216,7 +216,7 @@ export default function JournalSubmissionBottomSections() {
                 ethical guidelines, and target publication timelines.
               </p>
               <a
-                href="#discover-report"
+                href="/insights/sample-work"
                 className="inline-block w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-bold px-10 py-2.5 rounded-full text-center transition-colors shadow-sm"
               >
                 Discover More
