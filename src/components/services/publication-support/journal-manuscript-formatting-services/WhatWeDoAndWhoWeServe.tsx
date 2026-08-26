@@ -60,12 +60,12 @@ const audienceData: AudienceItem[] = [
 ];
 
 export default function WhatWeDoAndWhoWeServe() {
-  // Track open state for each tab independently (defaults to all open like the screenshot)
+  // Track open state for each tab independently (collapsed by default)
   const [openState, setOpenState] = useState<Record<number, boolean>>({
-    1: true,
-    2: true,
-    3: true,
-    4: true,
+    1: false,
+    2: false,
+    3: false,
+    4: false,
   });
 
   const toggleTab = (id: number) => {
@@ -76,17 +76,17 @@ export default function WhatWeDoAndWhoWeServe() {
   };
 
   return (
-    <section className="w-full bg-white py-12 font-sans text-gray-800 antialiased">
-      <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-16">
-        
+    <section className="w-full bg-white py-8 font-sans text-gray-800 antialiased">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-8">
+
         {/* ============================================================ */}
-        {/* SECTION 1: WHAT WE DO                                       */}
+        {/* SECTION 1: WHAT WE DO                                        */}
         {/* ============================================================ */}
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-2">
             What We Do
           </h2>
-          <p className="text-xs md:text-sm text-gray-700 leading-relaxed max-w-4xl mb-6">
+          <p className="text-xs md:text-sm text-gray-700 leading-relaxed max-w-4xl mb-4">
             With Pubrica&apos;s Academic{' '}
             <a href="/academy/formatting-service/ama-journal-article-formatting-guide" className="text-[#3b82f6] hover:underline">
               Formatting Service
@@ -94,15 +94,15 @@ export default function WhatWeDoAndWhoWeServe() {
             , we will ensure that your manuscript meets the journal&apos;s specifications. Our services are designed to enhance the presentation by following the published standards of academic and scientific publication.
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             {/* Left Column: Bullet Points */}
-            <div className="lg:col-span-7 space-y-4">
-              <ul className="space-y-3 text-xs md:text-sm text-gray-700 leading-relaxed">
+            <div className="lg:col-span-7 space-y-3">
+              <ul className="space-y-2.5 text-xs md:text-sm text-gray-700 leading-relaxed">
                 <li className="flex items-start">
                   <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">•</span>
                   <span>
                     <strong className="font-bold text-gray-900">research paper layout design</strong> Our experts carefully prepare your manuscript to meet the formatting guidelines of your intended journal. This involves reviewing references, lists, tables, graphics, and images to make sure all formatting is correct. This is especially beneficial for{' '}
-                    <a href="/services/physician-writing-services/physician-manuscripts" className="text-[#3b82f6] ">
+                    <a href="/services/physician-writing-services/physician-manuscripts" className="text-[#3b82f6]">
                       physician manuscripts
                     </a>{' '}
                     that require compliance with clinical publication protocols.
@@ -113,7 +113,7 @@ export default function WhatWeDoAndWhoWeServe() {
                   <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">•</span>
                   <span>
                     <strong className="font-bold text-gray-900">Expertise in Citation Styles:</strong> With expertise in many different citation styles (including Harvard, APA, MLA, and Chicago), our experienced editors will ensure your manuscript follows the relevant academic conventions and style guides. This is particularly important for discovering and managing potential{' '}
-                    <a href="/services/publication-support/plagiarism-services" className="text-[#3b82f6] ">
+                    <a href="/services/publication-support/plagiarism-services" className="text-[#3b82f6]">
                       plagiarism
                     </a>{' '}
                     risks concerning incorrect citations or paraphrasing.
@@ -154,22 +154,22 @@ export default function WhatWeDoAndWhoWeServe() {
                 </li>
               </ul>
 
-              <p className="text-xs md:text-sm text-gray-700 leading-relaxed pt-2">
+              <p className="text-xs md:text-sm text-gray-700 leading-relaxed pt-1">
                 Select Pubrica&apos;s Customized{' '}
-                <a href="/academy/formatting-service/how-to-write-research-paper-in-apa-format" className="text-[#3b82f6] ">
+                <a href="/academy/formatting-service/how-to-write-research-paper-in-apa-format" className="text-[#3b82f6]">
                   manuscript formatting
                 </a>{' '}
                 solutions to present your manuscript in a clean, professional manner according to journal guidelines and optimize the chances of acceptance for publication. Contact us today to assist you with formatting your manuscript to ensure that it is formatted correctly and ready for submission.
               </p>
 
               {/* Call to Action Button */}
-              <div className="pt-2">
-                <GetFreeQuoteButton/>
+              <div className="pt-3">
+                <GetFreeQuoteButton />
               </div>
             </div>
 
             {/* Right Column: Graphic */}
-            <div className="lg:col-span-5 flex justify-center relative py-4">
+            <div className="lg:col-span-5 flex justify-center relative py-2">
               <div className="relative w-full max-w-sm h-72 sm:h-80">
                 <div className="absolute inset-0 bg-[#e2e8f0]/60 rounded-full transform -rotate-12 scale-90 -z-0"></div>
                 <div className="absolute top-0 left-0 w-3/4 h-48 rounded-xl overflow-hidden shadow-md border-2 border-white z-10">
@@ -189,11 +189,11 @@ export default function WhatWeDoAndWhoWeServe() {
         {/* ============================================================ */}
         {/* SECTION 2: WHO WE SERVE (INDEPENDENT ACCORDION COLUMNS)      */}
         {/* ============================================================ */}
-        <div className="pt-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-2">
+        <div className="pt-2">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-1.5">
             Who We Serve
           </h2>
-          <p className="text-xs md:text-sm text-gray-700 leading-relaxed mb-6">
+          <p className="text-xs md:text-sm text-gray-700 leading-relaxed mb-4">
             Our Research paper{' '}
             <a href="/academy/formatting-service/s-v-o-structure-academic-writing-conciseness" className="text-[#3b82f6] hover:underline">
               formatting service
@@ -202,17 +202,17 @@ export default function WhatWeDoAndWhoWeServe() {
           </p>
 
           {/* 4-Column Accordion Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-start">
             {audienceData.map((item) => {
               const isOpen = openState[item.id] ?? false;
 
               return (
-                <div key={item.id} className="flex flex-col space-y-4">
+                <div key={item.id} className="flex flex-col space-y-2">
                   {/* Accordion Toggle Header */}
                   <button
                     type="button"
                     onClick={() => toggleTab(item.id)}
-                    className="w-full flex items-center justify-between p-3.5 bg-[#f0fdf4] text-[#065f46] text-xs md:text-sm font-semibold rounded-xs border border-[#e6f4ea] hover:bg-[#e6f7ec] transition-colors cursor-pointer text-left h-full"
+                    className="w-full flex items-center justify-between p-3 bg-[#f0fdf4] text-[#065f46] text-xs md:text-sm font-semibold rounded-xs border border-[#e6f4ea] hover:bg-[#e6f7ec] transition-colors cursor-pointer text-left"
                   >
                     <span className="pr-2">{item.title}</span>
                     <span className="text-base font-bold shrink-0">
@@ -222,7 +222,7 @@ export default function WhatWeDoAndWhoWeServe() {
 
                   {/* Accordion Content Panel */}
                   {isOpen && (
-                    <ul className="space-y-3 text-xs md:text-sm text-gray-700 pl-1 leading-relaxed">
+                    <ul className="space-y-2 text-xs md:text-sm text-gray-700 pl-1 leading-relaxed pt-1">
                       {item.points.map((point, idx) => (
                         <li key={idx} className="flex items-start">
                           <span className="text-gray-800 mr-2 font-bold">•</span>
@@ -234,7 +234,7 @@ export default function WhatWeDoAndWhoWeServe() {
                 </div>
               );
             })}
-          </div>
+          </div>  
         </div>
 
       </div>

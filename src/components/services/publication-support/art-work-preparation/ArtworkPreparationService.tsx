@@ -2,6 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
+import HeroBanner from "@/components/common/HeroBanner";
+import Link from "next/link";
 
 export default function ArtworkPreparationService() {
   return (
@@ -9,18 +11,11 @@ export default function ArtworkPreparationService() {
       {/* ============================================================ */}
       {/* HERO SECTION                                                 */}
       {/* ============================================================ */}
-      <section className="bg-gradient-to-b from-[#182a27] via-[#213a36] to-[#2a4a45] text-white py-16 px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-5xl mx-auto border border-gray-300/60 p-8 sm:p-12 rounded-sm shadow-xs">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-6 text-white">
-            Artwork Preparation Service: High-quality, Publication-Ready Images
-          </h1>
-          <p className="text-xs sm:text-sm lg:text-base font-normal text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Navigating diverse journal artwork preparation is complex;
-            Pubrica&apos;s specialists expertly prepare and format figures to
-            meet all technical and aesthetic requirements.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Artwork Preparation Service: High-quality, Publication-Ready Images"
+        description="Navigating diverse journal artwork preparation is complex; Pubrica's specialists expertly prepare and format figures to meet all technical and aesthetic requirements."
+        headingAs="h1"
+      />
 
       {/* ============================================================ */}
       {/* MAIN CONTENT SECTION                                         */}
@@ -98,19 +93,19 @@ export default function ArtworkPreparationService() {
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4 pt-4">
-              <button
+            <div className="flex flex-wrap gap-8 pt-4">
+              <Link href="/order-now/"
                 type="button"
-                className="bg-[#b30000] hover:bg-[#900000] !text-white text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-md transition-colors shadow-2xs cursor-pointer inline-flex items-center justify-center select-none"
+                className="bg-red-600 hover:bg-white hover:text-black text-white text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-md transition-colors shadow-2xs cursor-pointer inline-flex items-center justify-center select-none"
               >
                 Upload Your Manuscript
-              </button>
-              <button
+              </Link>
+              <Link href="/uploads/Artwork-Preparation-Matters.pdf"
                 type="button"
-                className="bg-[#b30000] hover:bg-[#900000] !text-white text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-md transition-colors shadow-2xs cursor-pointer inline-flex items-center justify-center select-none"
+                className="bg-red-600 hover:bg-white hover:text-black text-white   text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-md transition-colors shadow-2xs cursor-pointer inline-flex items-center justify-center select-none"
               >
                 View Brochure
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -157,15 +152,15 @@ export default function ArtworkPreparationService() {
                   meet specific journal requirements (resolution, size, colour
                   mode, font styles, and file formats.) This is especially
                   useful for{" "}
-                  <a href="/services/physician-writing-services/original-research-article" className="text-blue-600 hover:underline">
+                  <a href="/services/physician-writing-services/original-research-article" className="text-blue-600 ">
                     Original Research Article
                   </a>
                   ,{" "}
-                  <a href="/services/research-services/systematic-review" className="text-blue-600 hover:underline">
+                  <a href="/services/research-services/systematic-review" className="text-blue-600 ">
                     Systematic Review
                   </a>
                   , and{" "}
-                  <a href="/services/physician-writing-services/case-report" className="text-blue-600 hover:underline">
+                  <a href="/services/physician-writing-services/case-report" className="text-blue-600">
                     Case Report
                   </a>{" "}
                   Writing submissions.
@@ -197,7 +192,7 @@ export default function ArtworkPreparationService() {
                   Checking that all labels, legends, scales, and annotations are
                   clear, consistent and in accordance with the content of your
                   manuscript. This services complements our{" "}
-                  <a href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 hover:underline">
+                  <a href="/services/editing-and-translation/manuscript-editing" className="text-blue-600">
                     manuscript editing services
                   </a>{" "}
                   in terms of figure accuracy and clarity.
@@ -214,7 +209,7 @@ export default function ArtworkPreparationService() {
                   </strong>{" "}
                   Creating brief visual summaries to illustrate key research
                   findings or complex data, usually requested in addition to{" "}
-                  <a href="/services/research-impact/graphical-abstract" className="text-blue-600 hover:underline">
+                  <a href="/services/research-impact/graphical-abstract" className="text-blue-600">
                     graphical abstract
                   </a>{" "}
                   creation.

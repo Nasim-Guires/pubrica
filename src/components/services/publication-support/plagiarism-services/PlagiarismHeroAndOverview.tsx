@@ -3,28 +3,17 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function PlagiarismHeroAndOverview() {
   return (
     <div className="w-full font-sans bg-white">
       {/* ---------------- HERO / BANNER SECTION ---------------- */}
-      <section className="w-full bg-[#132c2a] text-white py-14 px-4 md:px-8 border-b border-teal-900">
-        <div className="mx-auto max-w-5xl">
-          <div className="border border-white/60 p-6 md:p-10 text-center rounded-sm">
-            <h1 className="text-2xl md:text-3xl font-bold tracking-wide mb-4">
-              Plagiarism Check Service: Accurate, Reliable, and Comprehensive
-              Originality Reports
-            </h1>
-            <p className="text-xs md:text-sm text-gray-200 leading-relaxed max-w-4xl mx-auto font-light">
-              Pubrica&apos;s academic paper plagiarism checker detects potential
-              accidental plagiarism in your research manuscript to ensure
-              journal compliance. Using trusted academic software, we provide a
-              detailed report with highlighted sections and expert
-              recommendations.
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroBanner
+        title="Plagiarism Check Service: Accurate, Reliable, and Comprehensive Originality Reports"
+        description="Pubrica's academic paper plagiarism checker detects potential accidental plagiarism in your research manuscript to ensure journal compliance. Using trusted academic software, we provide a detailed report with highlighted sections and expert recommendations."
+        headingAs="h1"
+      />
 
       {/* ---------------- MAIN CONTENT SECTION ---------------- */}
       <section className="w-full py-12 md:py-16 px-4 md:px-8">
@@ -100,7 +89,7 @@ export default function PlagiarismHeroAndOverview() {
 
             {/* Right Image Column */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-md h-[240px] sm:h-[280px] rounded-lg overflow-hidden shadow-lg border-b-8 border-r-8 border-[#11312d]">
+              <div className="relative w-full max-w-md h-[240px] sm:h-[280px] overflow-hidden">
                 <Image
                   src="/images/publication-support/plagiarism-services/Plagiarism-Check-Service.webp"
                   alt="Academic editorial review and manuscript inspection"
@@ -124,8 +113,8 @@ export default function PlagiarismHeroAndOverview() {
           {/* Call to Action Button */}
           <div className="pt-2">
             <Link
-              href="#upload"
-              className="inline-block bg-[#b80000] hover:bg-[#960000] text-white font-bold text-sm md:text-base py-3 px-8 rounded-full transition-colors shadow-sm"
+              href="/order-now/"
+              className="inline-block bg-red-600 hover:text-black hover:bg-white text-white font-bold text-sm md:text-base py-3 px-8 rounded-full transition-colors shadow-sm"
             >
               Upload Your Manuscript
             </Link>

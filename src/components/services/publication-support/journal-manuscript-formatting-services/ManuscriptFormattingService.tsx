@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import HeroBanner from "@/components/common/HeroBanner";
 
 const PAGE_IMAGES =
   "/images/publication-support/journal-manuscript-formatting-services";
@@ -13,18 +14,11 @@ export default function ManuscriptFormattingService() {
       {/* ============================================================ */}
       {/* 1. TOP HERO BANNER                                           */}
       {/* ============================================================ */}
-      <section className="w-full bg-gradient-to-b from-[#092b23] to-[#0d3b31] text-white py-12 px-4">
-        <div className="max-w-5xl mx-auto border border-[#3b7063] p-8 md:p-10 text-center rounded-xs shadow-lg">
-          <h1 className="text-2xl md:text-4xl font-bold tracking-tight mb-3">
-            Scientific and Academic Manuscript Formatting Service
-          </h1>
-          <p className="text-xs md:text-sm text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Get your manuscript professionally formatted to meet your target
-            journal&apos;s guidelines — in 2 days. We take care of every detail
-            so you can save hours and submit with confidence.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Scientific and Academic Manuscript Formatting Service"
+        description="Get your manuscript professionally formatted to meet your target journal's guidelines — in 2 days. We take care of every detail so you can save hours and submit with confidence."
+        headingAs="h1"
+      />
 
       {/* ============================================================ */}
       {/* 2. MAIN DESCRIPTION & FEATURE LIST                            */}

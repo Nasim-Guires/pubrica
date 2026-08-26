@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import CommonFAQ from "@/components/common/FAQ";
 
 // --- Types & Data ---
 
@@ -15,9 +16,9 @@ interface Testimonial {
 }
 
 interface FAQItem {
-  id: number;
   question: string;
   answer: string;
+  points?: string[];
 }
 
 const testimonialsData: Testimonial[] = [
@@ -54,30 +55,22 @@ const testimonialsData: Testimonial[] = [
 
 const faqData: FAQItem[] = [
   {
-    id: 1,
-    question:
-      "1. How do I prepare high-resolution figures for a research manuscript?",
+    question: "1. How do I prepare high-resolution figures for a research manuscript?",
     answer:
       "Prepare your figures at a high resolution by utilizing a vector image, maintaining a minimum of 300 DPI for images, and adhering to journal requirements and conventions for clarity and labeling of the images.",
   },
   {
-    id: 2,
-    question:
-      "2. What file formats are accepted for artwork in academic journals?",
+    question: "2. What file formats are accepted for artwork in academic journals?",
     answer:
       "The most commonly used image formats for the journal are typically in TIFF, JPEG, EPS, and PDF formats, depending on the journal's requirements and the image's resolution and quality.",
   },
   {
-    id: 3,
-    question:
-      "3. How can I convert low-resolution images into publication-ready figures?",
+    question: "3. How can I convert low-resolution images into publication-ready figures?",
     answer:
       "To convert low-resolution images, one should recreate the images in a vector image, utilizing design software, maintaining a minimum of 300 DPI, and ensuring clarity and journal requirements.",
   },
   {
-    id: 4,
-    question:
-      "4. How can artwork editing improve the clarity of research figures?",
+    question: "4. How can artwork editing improve the clarity of research figures?",
     answer:
       "Artwork editing increases clarity by adjusting resolution, contrast, and labels; it also simplifies and standardizes images in accordance with journal requirements and standards.",
   },
@@ -86,13 +79,6 @@ const faqData: FAQItem[] = [
 export default function ArtworkTestimonialsAndFAQ() {
   // State for active testimonial pagination dot
   const [activeTestimonialPage, setActiveTestimonialPage] = useState(0);
-
-  // State for Accordion FAQ (Defaults to Question 1 open)
-  const [openFaqId, setOpenFaqId] = useState<number | null>(1);
-
-  const toggleFaq = (id: number) => {
-    setOpenFaqId((prev) => (prev === id ? null : id));
-  };
 
   const mobileItem = testimonialsData[activeTestimonialPage];
   const desktopItems = [
@@ -134,11 +120,10 @@ export default function ArtworkTestimonialsAndFAQ() {
                 type="button"
                 onClick={() => setActiveTestimonialPage(index)}
                 aria-label={`Slide ${index + 1}`}
-                className={`w-2.5 h-2.5 transition-all ${
-                  activeTestimonialPage === index
-                    ? "bg-white border border-[#0c373b]"
-                    : "bg-[#0c373b]"
-                }`}
+                className={`w-2.5 h-2.5 transition-all ${activeTestimonialPage === index
+                  ? "bg-white border border-[#0c373b]"
+                  : "bg-[#0c373b]"
+                  }`}
               />
             ))}
           </div>
@@ -210,40 +195,11 @@ export default function ArtworkTestimonialsAndFAQ() {
         </div>
       </section>
 
-      {/* ---------------- 3. FAQ ACCORDION SECTION ---------------- */}
-      <section className="w-full py-12 px-4 md:px-8 bg-white border-t border-gray-100">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-8">
-            Frequently Asked Questions – Artwork Preparation Service
-          </h2>
-
-          <div className="border border-slate-200 rounded-sm divide-y divide-slate-200 max-w-5xl">
-            {faqData.map((faq) => {
-              const isOpen = openFaqId === faq.id;
-              return (
-                <div key={faq.id} className="transition-colors">
-                  <button
-                    type="button"
-                    onClick={() => toggleFaq(faq.id)}
-                    className="w-full text-left p-4 md:p-5 flex items-center justify-between gap-4 font-bold text-sm md:text-base text-[#0c373b] hover:bg-slate-50 transition-colors"
-                  >
-                    <span>{faq.question}</span>
-                    <span className="text-lg font-bold text-slate-700 shrink-0">
-                      {isOpen ? "−" : "+"}
-                    </span>
-                  </button>
-
-                  {isOpen && (
-                    <div className="px-4 pb-5 md:px-5 md:pb-6 pt-1 text-xs md:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
-                      {faq.answer}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      {/* ---------------- 3. REPLACED FAQ SECTION ---------------- */}
+      <CommonFAQ
+        title="Frequently Asked Questions – Artwork Preparation Service"
+        faqs={faqData}
+      />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import CommonFAQ from "@/components/common/FAQ";
 
 interface Testimonial {
   id: number;
@@ -45,45 +46,33 @@ const testimonialsData: Testimonial[] = [
   },
 ];
 
-interface FAQItem {
-  id: number;
-  question: string;
-  answer: string;
-}
-
-const faqData: FAQItem[] = [
+const faqData = [
   {
-    id: 1,
     question: "1. What are the formatting requirements for academic journal manuscripts?",
     answer:
       "The formatting requirements usually include sections, word count, referencing, font requirements, figure requirements, and reference requirements, as well as the journal’s author instructions.",
   },
   {
-    id: 2,
     question: "2. Which citation and reference styles do journals require?",
     answer:
       "The most common referencing requirements for journals include APA, MLA, Chicago, Harvard, and Vancouver referencing, depending on the journal’s author instructions.",
   },
   {
-    id: 3,
     question: "3. What is the difference between APA, Vancouver, and Harvard reference styles?",
     answer:
       "The APA referencing style uses the author-date referencing system, Vancouver uses the numbered referencing system, and the Harvard referencing style uses the author-date referencing system.",
   },
   {
-    id: 4,
     question: "4. What file formats do journals require for manuscript submission?",
     answer:
       "Most journals require authors to submit the manuscript in Word format, i.e., .doc or .docx, in addition to separate files for the figures, tables, and supplementary materials as per the journal’s guidelines.",
   },
   {
-    id: 5,
     question: "5. What is the correct format for tables and figures in research papers?",
     answer:
       "Tables and figures need to be clearly labeled, numbered consecutively, have titles, meet the journal’s requirements, be of high resolution, and be cited correctly in the manuscript.",
   },
   {
-    id: 6,
     question: "6. Why do journals reject or return manuscripts for formatting corrections?",
     answer:
       "Journals may reject manuscripts due to poor formatting, failure to comply with guidelines, incorrect citations, missing information, poor quality figures, or failure to follow instructions for submission.",
@@ -92,11 +81,6 @@ const faqData: FAQItem[] = [
 
 export default function TestimonialsAndFAQ() {
   const [activeSlide, setActiveSlide] = useState(0);
-  const [openFaq, setOpenFaq] = useState<number | null>(2);
-
-  const toggleFaq = (id: number) => {
-    setOpenFaq((prev) => (prev === id ? null : id));
-  };
 
   const mobileItem = testimonialsData[activeSlide];
   const desktopItems = [
@@ -148,43 +132,11 @@ export default function TestimonialsAndFAQ() {
         </div>
       </section>
 
-      {/* FAQ SECTION */}
-      <section className="max-w-5xl mx-auto px-4 md:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] text-center mb-10">
-          Frequently Asked Questions – Manuscript Formatting Service
-        </h2>
-
-        {/* Accordion Container */}
-        <div className="bg-white border border-gray-200 rounded-md divide-y divide-gray-200 shadow-2xs">
-          {faqData.map((item) => {
-            const isOpen = openFaq === item.id;
-            return (
-              <div key={item.id} className="transition-colors">
-                <button
-                  type="button"
-                  onClick={() => toggleFaq(item.id)}
-                  className="w-full flex justify-between items-center px-6 py-4 text-left font-bold text-xs md:text-sm text-gray-900 hover:bg-gray-50/80 transition-colors cursor-pointer"
-                >
-                  <span
-                    className={isOpen ? "border-b-2 border-black pb-0.5" : ""}
-                  >
-                    {item.question}
-                  </span>
-                  <span className="text-base text-gray-700 ml-4 font-bold shrink-0">
-                    {isOpen ? "−" : "+"}
-                  </span>
-                </button>
-
-                {isOpen && (
-                  <div className="px-6 pb-4 pt-1 text-xs md:text-sm text-gray-600 leading-relaxed border-t border-gray-100">
-                    <p>{item.answer}</p>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      {/* REPLACED FAQ SECTION */}
+      <CommonFAQ
+        title="Frequently Asked Questions – Manuscript Formatting Service"
+        faqs={faqData}
+      />
     </div>
   );
 }

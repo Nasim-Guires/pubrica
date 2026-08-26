@@ -152,11 +152,11 @@ export default function PeerReviewPreSubmissionClient() {
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap items-center gap-3 mt-6 mb-10">
+          <div className="flex flex-wrap items-center gap-8 mt-6 mb-10">
             <GetFreeQuoteButton />
-            <button className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
+            <Link href="/uploads/publication-support/peer-review-pre-submission/Pre-Submission-Peer-Review-Matters.pdf" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
               View Brochure
-            </button>
+            </Link>
           </div>
         </div>
 

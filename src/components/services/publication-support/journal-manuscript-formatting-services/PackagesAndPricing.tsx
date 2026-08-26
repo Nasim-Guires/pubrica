@@ -4,337 +4,147 @@ import React from "react";
 import Image from "next/image";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Link from "next/link";
+import CommonPackages from "@/components/common/CommonPackages";
 
 export default function PackagesAndPricing() {
+  const manuscriptPackages = [
+    {
+      icon: "/images/publication-support/poster-preparation/S.png",
+      title: "Standard",
+      subtitle: "HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW",
+      idealFor:
+        "Early-stage researchers, Master's students, or first-time journal authors needing basic journal submission formatting for submission.",
+      includes: [
+        "Journal-specific formatting (structure, layout, headings) with professional manuscript layout",
+        "Reference style formatting (APA, MLA, Vancouver, etc.)",
+        "Basic figure/table alignment",
+        "Formatting of in-text citations",
+        "Font, margin, and spacing adjustments",
+        "File delivery in DOCX & PDF",
+      ],
+      addOns: [
+        "Plagiarism check (Turnitin)",
+        "Word count reduction",
+        "Journal selection assistance",
+      ],
+      turnaround: "5–7 working days",
+      cardBgColor: "#d1dcd6",
+      titleColor: "#0c3830",
+    },
+    {
+      icon: "/images/publication-support/journal-selection/advanced.webp",
+      title: "ADVANCED",
+      subtitle: "HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW",
+      idealFor:
+        "PhD scholars, postdoctoral researchers, or authors preparing manuscripts for Scopus/SCI-indexed journals.",
+      includes: [
+        "Everything in the Standard Package, plus:",
+        "Advanced reference correction (cross-checking DOIs)",
+        "Formatting of supplementary files (appendices, annexures)",
+        "Table and figure re-labelling as per journal template",
+        "Formatting for online submission portals",
+        "Author affiliation structuring",
+        "Consistency checks (abbreviations, units, styles)",
+      ],
+      addOns: [
+        "Journal resubmission formatting",
+        "Response to editor formatting updates",
+        "Cover letter formatting",
+      ],
+      turnaround: "3–5 working days",
+      cardBgColor: "#d8c4e2",
+      titleColor: "#6d28d9",
+    },
+    {
+      icon: "/images/publication-support/responding-to-reviewers/pa-icons-.png",
+      title: "Premium",
+      subtitle: "HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW",
+      idealFor:
+        "Faculty members, medical writers, senior researchers publishing in high-impact journals (SCI/SSCI/Scopus/Web of Science).",
+      includes: [
+        "Everything in the Advanced Package, plus:",
+        "Reformatting across multiple journal targets",
+        "Figure resolution enhancement (300 dpi, TIFF/JPEG conversion)",
+        "Language editing (light copyediting for grammar/clarity)",
+        "Formatting for preprints and repositories (e.g., arXiv, medRxiv)",
+        "Final quality check by senior academic editor",
+        "Submission-ready version for each journal",
+      ],
+      addOns: [
+        "Graphical abstract formatting",
+        "Slide deck formatting for conference submission",
+        "Compliance check with ethical standards and declarations",
+      ],
+      turnaround: "2–4 working days (express delivery available)",
+      cardBgColor: "#d1b993",
+      titleColor: "#78350f",
+    },
+  ];
   return (
     <div className="w-full bg-[#f8fafc] font-sans text-gray-800 py-12 space-y-16 antialiased">
       {/* ============================================================ */}
       {/* SECTION 1: SAMPLE WORK / REPORT DOWNLOAD BANNER               */}
       {/* ============================================================ */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8">
-        <div className="bg-[#f0fdf4] rounded-2xl p-6 md:p-10 border border-[#e6f4ea] grid grid-cols-1 md:grid-cols-12 gap-8 items-center shadow-xs">
-          {/* Left Image */}
-          <div className="md:col-span-5 relative h-56 md:h-64 rounded-xl overflow-hidden shadow-sm">
-            <Image
-              src="/images/publication-support/journal-manuscript-formatting-services/Manuscript-Formatting-Sample-Work.jpg"
-              alt="Manuscript Formatting Sample Work"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 40vw"
-            />
-          </div>
-
-          {/* Right Content */}
-          <div className="md:col-span-7 space-y-6">
-            <div>
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
-                Manuscript Formatting Sample Work
-              </h3>
-              <button
-                type="button"
-                className="w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
-              >
-                Discover More
-              </button>
-            </div>
-
-            <div className="pt-2">
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
-                Download the full Report Now
-              </h3>
-              <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-4">
-                Explore our manuscript formatting sample work designed to meet
-                your target journal&apos;s formatting guidelines, technical
-                standards, and submission deadlines.
-              </p>
-              <button
-                type="button"
-                className="w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
-              >
-                Discover More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================ */}
-      {/* SECTION 2: SERVICE PACKAGES COMPARISON                        */}
-      {/* ============================================================ */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-3">
-          Manuscript Formatting Service Packages
-        </h2>
-        <p className="text-xs md:text-sm text-gray-700 leading-relaxed max-w-5xl mb-8">
-          Selecting the right package ensures your manuscript will be
-          professionally formatted to meet{" "}
-          <a href="/services/publication-support/journal-submission" className="text-[#3b82f6] hover:underline">
-            journal submission
-          </a>{" "}
-          requirements and academic publishing standards. Whether you require
-          minor manuscript editing and formatting or a complete research paper
-          layout design, Pubrica provides customized{" "}
-          <a href="/academy/formatting-service/life-science-manuscript-formatting-faster-publication" className="text-[#3b82f6] hover:underline">
-            manuscript formatting
-          </a>{" "}
-          solutions for every level of editorial complexity and journal
-          guidelines compliance.
-        </p>
-
-        {/* 3 Package Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-          {/* CARD 1: STANDARD */}
-          <div className="bg-white rounded-t-xl overflow-hidden border border-gray-200/80 shadow-xs flex flex-col transition-all duration-300 hover:shadow-lg">
-            {/* Header */}
-            <div className="p-5 border-t-4 border-[#0c3830] border-b border-gray-100 flex items-center space-x-4 bg-white">
+      <div className="space-y-12">
+        {/* Sample Work Section */}
+        <section className="max-w-6xl mx-auto px-4 md:px-8">
+          <div className="bg-[#f0fdf4] rounded-2xl p-6 md:p-10 border border-[#e6f4ea] grid grid-cols-1 md:grid-cols-12 gap-8 items-center shadow-xs">
+            {/* Left Image */}
+            <div className="md:col-span-5 relative h-56 md:h-64 rounded-xl overflow-hidden shadow-sm">
               <Image
-                src="/images/publication-support/poster-preparation/S.png"
-                alt="Standard package"
-                width={48}
-                height={48}
-                className="w-12 h-12 object-contain shrink-0"
+                src="/images/publication-support/journal-manuscript-formatting-services/Manuscript-Formatting-Sample-Work.jpg"
+                alt="Manuscript Formatting Sample Work"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 40vw"
               />
-              <div>
-                <h3 className="text-xl font-extrabold text-[#0c3830]">
-                  Standard
-                </h3>
-                <p className="text-[10px] font-bold text-gray-500 tracking-wider uppercase">
-                  HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW
-                </p>
-              </div>
             </div>
 
-            {/* Content Body */}
-            <div className="p-5 bg-[#d1dcd6]/60 flex-1 space-y-5 text-xs text-gray-800 leading-relaxed">
+            {/* Right Content */}
+            <div className="md:col-span-7 space-y-6">
               <div>
-                <div className="flex items-start mb-1 font-bold text-gray-900">
-                  <span className="mr-1.5 text-xs">➔</span>
-                  <span>Ideal for:</span>
-                </div>
-                <p className="pl-4 text-gray-700">
-                  Early-stage researchers, Master&apos;s students, or first-time
-                  journal authors needing basic journal submission formatting
-                  for submission.
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
+                  Manuscript Formatting Sample Work
+                </h3>
+                <Link
+                  href="/insights/sample-work/citation-and-formatting/"
+                  type="button"
+                  className="w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
+                >
+                  Discover More
+                </Link>
+              </div>
+
+              <div className="pt-2">
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
+                  Download the full Report Now
+                </h3>
+                <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-4">
+                  Explore our manuscript formatting sample work designed to meet
+                  your target journal&apos;s formatting guidelines, technical
+                  standards, and submission deadlines.
                 </p>
-              </div>
-
-              <div>
-                <div className="flex items-start mb-1 font-bold text-gray-900">
-                  <span className="mr-1.5 text-xs">➔</span>
-                  <span>Includes:</span>
-                </div>
-                <ul className="pl-4 space-y-2.5 text-gray-700">
-                  <li>
-                    • Journal-specific formatting (structure, layout, headings)
-                    with professional manuscript layout
-                  </li>
-                  <li>
-                    • Reference style formatting (APA, MLA, Vancouver, etc.)
-                  </li>
-                  <li>• Basic figure/table alignment</li>
-                  <li>• Formatting of in-text citations</li>
-                  <li>• Font, margin, and spacing adjustments</li>
-                  <li>• File delivery in DOCX & PDF</li>
-                </ul>
-              </div>
-
-              <div>
-                <div className="flex items-start mb-1 font-bold text-gray-900">
-                  <span className="mr-1.5 text-xs">➔</span>
-                  <span>Optional Add-ons:</span>
-                </div>
-                <ul className="pl-4 space-y-1.5 text-gray-700">
-                  <li>Plagiarism check (Turnitin)</li>
-                  <li>Word count reduction</li>
-                  <li>Journal selection assistance</li>
-                </ul>
-              </div>
-
-              <div className="pt-2 border-t border-gray-300/60">
-                <div className="flex items-start font-bold text-gray-900">
-                  <span className="mr-1.5 text-xs">➔</span>
-                  <span>Turnaround:</span>
-                </div>
-                <p className="pl-4 text-gray-700 font-semibold">
-                  5–7 working days
-                </p>
+                <Link
+                  href="/insights/sample-work/citation-and-formatting/"
+                  type="button"
+                  className="w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
+                >
+                  Discover More
+                </Link>
               </div>
             </div>
           </div>
+        </section>
 
-          {/* CARD 2: ADVANCED */}
-          <div className="bg-white rounded-t-xl overflow-hidden border border-gray-200/80 shadow-xs flex flex-col transition-all duration-300 hover:shadow-lg">
-            {/* Header */}
-            <div className="p-5 border-t-4 border-[#8b5cf6] border-b border-gray-100 flex items-center space-x-4 bg-white">
-              <Image
-                src="/images/publication-support/journal-selection/advanced.webp"
-                alt="Advanced package"
-                width={48}
-                height={48}
-                className="w-12 h-12 object-contain shrink-0"
-              />
-              <div>
-                <h3 className="text-xl font-extrabold text-[#6d28d9]">
-                  ADVANCED
-                </h3>
-                <p className="text-[10px] font-bold text-gray-500 tracking-wider uppercase">
-                  HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW
-                </p>
-              </div>
-            </div>
-
-            {/* Content Body */}
-            <div className="p-5 bg-[#d8c4e2]/60 flex-1 space-y-5 text-xs text-gray-800 leading-relaxed">
-              <div>
-                <div className="flex items-start mb-1 font-bold text-gray-900">
-                  <span className="mr-1.5 text-xs">➔</span>
-                  <span>Ideal for:</span>
-                </div>
-                <p className="pl-4 text-gray-700">
-                  PhD scholars, postdoctoral researchers, or authors preparing
-                  manuscripts for Scopus/SCI-indexed journals.
-                </p>
-              </div>
-
-              <div>
-                <div className="flex items-start mb-1 font-bold text-gray-900">
-                  <span className="mr-1.5 text-xs">➔</span>
-                  <span>Includes:</span>
-                </div>
-                <p className="pl-4 mb-2 text-gray-800 font-medium">
-                  Everything in the Standard Package, plus:
-                </p>
-                <ul className="pl-4 space-y-2.5 text-gray-700">
-                  <li>• Advanced reference correction (cross-checking DOIs)</li>
-                  <li>
-                    • Formatting of supplementary files (appendices, annexures)
-                  </li>
-                  <li>
-                    • Table and figure re-labelling as per journal template
-                  </li>
-                  <li>• Formatting for online submission portals</li>
-                  <li>• Author affiliation structuring</li>
-                  <li>• Consistency checks (abbreviations, units, styles)</li>
-                </ul>
-              </div>
-
-              <div>
-                <div className="flex items-start mb-1 font-bold text-gray-900">
-                  <span className="mr-1.5 text-xs">➔</span>
-                  <span>Optional Add-ons:</span>
-                </div>
-                <ul className="pl-4 space-y-1.5 text-gray-700">
-                  <li>Journal resubmission formatting</li>
-                  <li>Response to editor formatting updates</li>
-                  <li>Cover letter formatting</li>
-                </ul>
-              </div>
-
-              <div className="pt-2 border-t border-purple-300/60">
-                <div className="flex items-start font-bold text-gray-900">
-                  <span className="mr-1.5 text-xs">➔</span>
-                  <span>Turnaround:</span>
-                </div>
-                <p className="pl-4 text-gray-700 font-semibold">
-                  3–5 working days
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* CARD 3: PREMIUM */}
-          <div className="bg-white rounded-t-xl overflow-hidden border border-gray-200/80 shadow-xs flex flex-col transition-all duration-300 hover:shadow-lg">
-            {/* Header */}
-            <div className="p-5 border-t-4 border-[#b45309] border-b border-gray-100 flex items-center space-x-4 bg-white">
-              <Image
-                src="/images/publication-support/responding-to-reviewers/pa-icons-.png"
-                alt="Premium package"
-                width={48}
-                height={48}
-                className="w-12 h-12 object-contain shrink-0"
-              />
-              <div>
-                <h3 className="text-xl font-extrabold text-[#78350f]">
-                  Premium
-                </h3>
-                <p className="text-[10px] font-bold text-gray-500 tracking-wider uppercase">
-                  HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW
-                </p>
-              </div>
-            </div>
-
-            {/* Content Body */}
-            <div className="p-5 bg-[#d1b993]/60 flex-1 space-y-5 text-xs text-gray-800 leading-relaxed">
-              <div>
-                <div className="flex items-start mb-1 font-bold text-gray-900">
-                  <span className="mr-1.5 text-xs">➔</span>
-                  <span>Ideal for:</span>
-                </div>
-                <p className="pl-4 text-gray-700">
-                  Faculty members, medical writers, senior researchers
-                  publishing in high-impact journals (SCI/SSCI/Scopus/Web of
-                  Science).
-                </p>
-              </div>
-
-              <div>
-                <div className="flex items-start mb-1 font-bold text-gray-900">
-                  <span className="mr-1.5 text-xs">➔</span>
-                  <span>Includes:</span>
-                </div>
-                <p className="pl-4 mb-2 text-gray-800 font-medium">
-                  Everything in the Advanced Package, plus:
-                </p>
-                <ul className="pl-4 space-y-2.5 text-gray-700">
-                  <li>• Reformatting across multiple journal targets</li>
-                  <li>
-                    • Figure resolution enhancement (300 dpi, TIFF/JPEG
-                    conversion)
-                  </li>
-                  <li>
-                    • Language editing (light copyediting for grammar/clarity)
-                  </li>
-                  <li>
-                    • Formatting for preprints and repositories (e.g., arXiv,
-                    medRxiv)
-                  </li>
-                  <li>• Final quality check by senior academic editor</li>
-                  <li>• Submission-ready version for each journal</li>
-                </ul>
-              </div>
-
-              <div>
-                <div className="flex items-start mb-1 font-bold text-gray-900">
-                  <span className="mr-1.5 text-xs">➔</span>
-                  <span>Optional Add-ons:</span>
-                </div>
-                <ul className="pl-4 space-y-1.5 text-gray-700">
-                  <li>Graphical abstract formatting</li>
-                  <li>Slide deck formatting for conference submission</li>
-                  <li>
-                    Compliance check with ethical standards and declarations
-                  </li>
-                </ul>
-              </div>
-
-              <div className="pt-2 border-t border-amber-300/60">
-                <div className="flex items-start font-bold text-gray-900">
-                  <span className="mr-1.5 text-xs">➔</span>
-                  <span>Turnaround:</span>
-                </div>
-                <p className="pl-4 text-gray-700 font-semibold">
-                  2–4 working days (express delivery available)
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Global Quote CTA Button */}
-        <div className="mt-8 text-center">
-          <GetFreeQuoteButton />
-        </div>
-      </section>
+        {/* Replaced Packages Section */}
+        <CommonPackages
+          title="Manuscript Formatting Service Packages"
+          description="Selecting the right package ensures your manuscript will be professionally formatted to meet journal submission requirements and academic publishing standards. Whether you require minor manuscript editing and formatting or a complete research paper layout design, Pubrica provides customized manuscript formatting solutions for every level of editorial complexity and journal guidelines compliance."
+          packages={manuscriptPackages}
+          buttonText="Get a Free Quote"
+        />
+        <GetFreeQuoteButton/>
+      </div>
 
       {/* ============================================================ */}
       {/* SECTION 3: DELIVERY AND PRICING                               */}

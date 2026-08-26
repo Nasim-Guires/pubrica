@@ -135,11 +135,11 @@ export const EditingTranslationManuscriptEditingOverview: React.FC = () => {
             </ul>
 
             {/* Call to Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-6">
+            <div className="flex flex-wrap items-center gap-8 pt-6">
               <GetFreeQuoteButton />
               <Link
-                href="/meta-data-collection-brochures"
-                className="bg-[#b30000] hover:bg-[#900000] !text-white font-semibold py-2.5 px-6 rounded-md transition-colors duration-200 text-sm sm:text-base shadow-sm inline-flex items-center justify-center select-none"
+                href="/uploads/editing-and-translation/manuscript-editing/Journal-Manuscript-Formatting.pdf"
+                className="bg-red-600 hover:bg-white hover:text-black text-white font-semibold py-2.5 px-6 rounded-md transition-colors duration-200 text-sm sm:text-base shadow-sm inline-flex items-center justify-center select-none"
               >
                 View Brochure
               </Link>

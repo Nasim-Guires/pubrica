@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { heroBulletPoints } from "@/lib/services/editing-and-translation";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -76,12 +77,12 @@ export default function Hero() {
         </p>
 
         {/* Buttons */}
-        <div className="mt-10 flex gap-5">
+        <div className="mt-10 flex gap-8">
          <GetFreeQuoteButton/>
 
-          <button className="rounded-full bg-[#BA0000] px-8 py-3 text-white font-semibold hover:bg-[#980000]">
+          <Link href="/uploads/editing-and-translation/Editing-and-Translation-Services.pdf" className="rounded-full bg-[#BA0000] px-8 py-3 text-white font-semibold hover:bg-[#980000]">
             View Brochure
-          </button>
+          </Link>
         </div>
       </div>
     </section>
