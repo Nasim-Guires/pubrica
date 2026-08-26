@@ -107,9 +107,9 @@ export default function AlgorithmWorkflowAndPackages() {
     <main className="w-full bg-[#f8fbf9] text-[#222222] font-sans pb-16">
       {/* 1. HERO TITLE BANNER */}
       <section className="bg-[#1b3d36] text-white py-10 px-4 text-center">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2">
+        <h2 className="text-2xl md:text-3xl font-bold mb-2">
           Algorithm Development for Training & Optimization
-        </h1>
+        </h2>
         <p className="text-sm md:text-base text-gray-200">
           From analysis to refinement, Pubrica delivers accurate, efficient, and real-world-ready algorithms.
         </p>

@@ -6,7 +6,13 @@ import PermissionAndMetadataServices from '@/components/services/academic-editor
 import { permissionAndMetadataServicesFaqData, permissionAndMetadataServicesTestimonialData, permissionAndMetadataServicesWhoWeServeData } from '@/lib/services/academic-editorial-services/permission-and-metadata-services/permission-and-metadata-services'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
 
+export const metadata = constructMetadata({
+    title: 'Expert Permission & Metadata Services | Pubrica',
+    description: "Ensure copyright compliance, secure permissions, and optimize metadata with Pubrica’s expert academic editorial support.",
+    slug: '/services/academic-editorial-services/permission-and-metadata-services',
+})
 
 const page = () => {
     return (

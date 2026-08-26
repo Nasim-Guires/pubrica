@@ -5,6 +5,15 @@ import { cardiologyTestimonialsData } from '@/lib/subject-matter-experts/cardiol
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: "Empowering Cardiology Research & Clinical Excellence",
+  description: "Expert guidance in cardiology research, diagnostics, and publication for clinicians, researchers, and academics.",
+  keywords: ["Cardiology"],
+  slug: "/subject-matter-experts/cardiology",
+});
+
 
 const page = () => {
     return (

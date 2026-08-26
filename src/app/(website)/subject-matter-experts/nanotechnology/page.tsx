@@ -4,6 +4,14 @@ import NanotechnologySections from '@/components/subject-matter-experts/nanotech
 import { NANOTECHNOLOGY_TESTIMONIALS } from '@/lib/subject-matter-experts/nanotechnology'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+  title: 'Nanotechnology Research & Publishing Services | Pubrica',
+  description: 'Expert nanotechnology research, editing, and publishing support for advanced scientific innovation and global impact.',
+  keywords: ['nanotechnology research'],
+  slug: '/subject-matter-experts/nanotechnology',
+})
 
 const page = () => {
     return (

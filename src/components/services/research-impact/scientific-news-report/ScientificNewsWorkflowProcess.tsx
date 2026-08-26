@@ -71,9 +71,9 @@ export default function ScientificNewsWorkflowProcess() {
       {/* 1. Header Banner */}
       <section className="w-full bg-[#033c2a] text-white py-14 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto space-y-3">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
             Fast-Track Your Scientific News Reporting with Pubrica
-          </h1>
+          </h2>
           <p className="text-xs sm:text-sm text-emerald-100 leading-relaxed max-w-3xl mx-auto">
             Deliver cutting-edge scientific news faster with Pubrica’s expert editorial team and efficient workflow solutions. Our specialized support ensures accuracy, clarity, and timely publication—helping you break scientific stories with confidence and speed.
           </p>

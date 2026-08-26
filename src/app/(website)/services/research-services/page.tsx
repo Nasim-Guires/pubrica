@@ -9,6 +9,14 @@ import { TestimonialsSection } from '@/components/services/research-services/Tes
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 import CommonFAQ from '@/components/common/FAQ'
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+  title: 'Clinical Research Paper Writing Services help in the UK and USA.',
+  description: "Research services by Pubrica's team of experts create scientific and medical articles valuable to practitioners and authors.",
+  keywords: ['Research services', 'scientific research writing services', 'medical thesis dissertation writing services', 'medical research paper writing service', 'Clinical research writing service'],
+  slug: '/services/research-services',
+})
 
 export const professionalResearchFAQ = {
   title: "Frequently Asked Questions – Professional Research Services",

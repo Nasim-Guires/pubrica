@@ -157,9 +157,9 @@ export default function PlagiarismGuidePage() {
           
           {/* Header & Introduction */}
           <section>
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               Plagiarism Detection: A Complete Guide for Researchers
-            </h1>
+            </h2>
             <p className="mb-4">
               It is imperative to note that <span className="text-blue-600">plagiarism detection</span> is an integral part of the research and publication cycle. This tool enables the researcher to authenticate his work, identify any similarities and uphold his integrity prior to submitting the article to journals, conferences, universities and funding agencies. With the increase in research articles being written around the world, it is important for the publisher/institution to have a plagiarism detector to ensure that the publication of any scholarly work upholds integrity. A reliable <span className="text-blue-600">Plagiarism Checker for Researchers</span> and advanced <span className="text-blue-600">Digital Plagiarism Tools</span> help maintain originality and ethical research practices.
             </p>

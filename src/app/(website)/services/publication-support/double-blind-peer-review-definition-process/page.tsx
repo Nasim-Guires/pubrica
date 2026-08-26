@@ -135,9 +135,9 @@ export default function PeerReviewPage() {
                 <article className="md:col-span-8 lg:col-span-9 bg-white p-6 md:p-10 rounded-md border border-slate-200 space-y-8">
 
                     <header>
-                        <h1 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
                             Double-Blind Peer Review: Definition, Process, and Implications for Researchers
-                        </h1>
+                        </h2>
                         <p className="text-sm md:text-base text-slate-600">
                             In the context of academic publishing, the term <span className="text-blue-600 hover:underline cursor-pointer">peer review</span> refers to a manuscript's critical analysis by independent experts in a field. The double-blind peer review model is one of the more frequently used peer review models and refers specifically to anonymity for both the author and the reviewers. The potential benefits of the double-blind peer review model include reduction of bias, equality of experiences, and professionalism of the academic publishing process. <a href="#ref-1" className="text-blue-600 hover:underline">[1]</a>
                         </p>

@@ -10,8 +10,16 @@ import {
   patientEducationTestimonials,
 } from "@/lib/services/data/research-services/patientEducationTestimonials";
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from "@/lib/metadata";
 
 import React from "react";
+
+export const metadata = constructMetadata({
+  title: "Healthcare Patient Education Content Services by Experts",
+  description: "Engage your patients with expert healthcare content—brochures, videos, and digital tools designed to educate, empower, and improve patient outcomes.",
+  keywords: ["Patient Education", "healthcare content", "medical writing", "patient information", "health communication"],
+  slug: "/services/physician-writing-services/patient-education-content",
+});
 
 const page = () => {
   return (

@@ -28,7 +28,7 @@ export default function Footer() {
 
   const moreLinks: { label: string; href: string | null }[] = [
     { label: "Subjects", href: "/subject-matter-experts" },
-    { label: "Industries", href: "/Industries" },
+    { label: "Industries", href: "/industries" },
     { label: "Global Partner Program", href: null },
     { label: "FAQ", href: "/faq" },
     { label: "Testimonials", href: "/#testimonials" },

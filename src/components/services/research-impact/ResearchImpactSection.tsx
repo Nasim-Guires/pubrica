@@ -137,9 +137,9 @@ export default function ResearchImpactSection() {
 
       {/* Main Heading */}
       <div className="text-center max-w-4xl mx-auto mb-10">
-        <h1 className="text-2xl md:text-3xl font-extrabold text-[#0d3b44] tracking-tight mb-4">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-[#0d3b44] tracking-tight mb-4">
           With You on Your Research Impact Journey
-        </h1>
+        </h2>
         <p className="text-sm md:text-base text-gray-600 leading-relaxed font-normal">
           Explore our tiered research impact service packages that cater to a
           variety of needs from individual researchers to larger institutions,

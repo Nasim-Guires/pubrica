@@ -58,9 +58,9 @@ export default function MarketingCommunicationProcessAndPackages() {
       {/* ------------------- BANNER ------------------- */}
       <header className="bg-[#0b3b2c] text-white py-10 px-4 text-center">
         <div className="max-w-5xl mx-auto border border-gray-400/40 p-6 rounded-sm bg-[#0b3b2c]/80">
-          <h1 className="text-xl md:text-2xl font-bold mb-3 tracking-wide text-white">
+          <h2 className="text-xl md:text-2xl font-bold mb-3 tracking-wide text-white">
             Speed up your journey of Marketing Communication with Pubrica
-          </h1>
+          </h2>
           <p className="text-xs md:text-sm max-w-3xl mx-auto text-gray-200 leading-relaxed">
             Pubrica’s Marketing Communication Content Development services create engaging, brand-aligned content and campaigns that boost visibility, drive audience engagement, and deliver measurable business results.
           </p>

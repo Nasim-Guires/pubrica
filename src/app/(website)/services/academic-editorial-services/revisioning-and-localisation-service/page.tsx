@@ -6,6 +6,13 @@ import RevisioningAndLocalisationService from '@/components/services/academic-ed
 import { revisioningAndLocalisationServiceFaqData, revisioningAndLocalisationServiceTestimonialData, revisioningAndLocalisationServiceWhoWeServeData } from '@/lib/services/academic-editorial-services/revisioning-and-localisation-service/revisioning-and-localisation-service'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+    title: 'Expert Revisioning & Localisation Services | Pubrica',
+    description: "Transform your research for global impact with Pubrica’s expert revisioning and localisation services for journals worldwide.",
+    slug: '/services/academic-editorial-services/revisioning-and-localisation-service',
+})
 
 const page = () => {
     return (

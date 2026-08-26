@@ -114,9 +114,9 @@ export default function DevelopmentEditingServicePagePackage() {
             SECTION 1: Pubrica's Development Editing Services and its Key Features
             ========================================================= */}
         <section className="py-12 px-4 max-w-7xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#1b3b36] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1b3b36] mb-4">
             Pubrica's Development Editing Services and its Key Features
-          </h1>
+          </h2>
           <p className="max-w-4xl mx-auto text-gray-600 mb-10 text-sm md:text-base leading-relaxed">
             Looking for a better way to structure your manuscript? Need help crafting more effective transitions? Want to improve the overall flow of your paper and get high-quality editing and formatting? Pubrica's Development Editing Services give you access to experienced English editors who help organize and optimize your manuscript's content according to international journal standards.
           </p>

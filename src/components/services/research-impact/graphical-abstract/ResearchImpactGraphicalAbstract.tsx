@@ -93,9 +93,9 @@ export default function ResearchImpactGraphicalAbstract() {
       {/* 1. Hero Banner */}
       <section className="w-full bg-[#033c2a] text-white py-16 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-5xl mx-auto space-y-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
             Graphical Abstract Services at Pubrica
-          </h1>
+          </h2>
           <p className="text-base sm:text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
             Our experts design visually engaging, scientifically accurate graphical abstracts that distill your research into a clear and compelling visual summary.
           </p>

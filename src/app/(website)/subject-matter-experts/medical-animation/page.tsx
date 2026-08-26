@@ -5,7 +5,14 @@ import { MEDICAL_ANIMATIONS_TESTIMONIALS } from '@/lib/subject-matter-experts/me
 import React from 'react'
 
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
 
+export const metadata = constructMetadata({
+  title: 'Expert Medical Animation Services for Healthcare & Education',
+  description: 'Pubrica offers high-quality medical animations for education, research, and patient care, ensuring clarity and engagement',
+  keywords: ['Medical Animation'],
+  slug: '/subject-matter-experts/medical-animation',
+})
 
 const page = () => {
     return (

@@ -11,7 +11,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
 
   // Top-level sections
   { path: "/services", priority: 0.9, changeFrequency: "weekly" },
-  { path: "/Industries", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/industries", priority: 0.9, changeFrequency: "weekly" },
   { path: "/subject-matter-experts", priority: 0.9, changeFrequency: "weekly" },
   { path: "/about-us", priority: 0.8, changeFrequency: "monthly" },
   { path: "/academy", priority: 0.8, changeFrequency: "weekly" },
@@ -22,15 +22,15 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: "/contact", priority: 0.7, changeFrequency: "monthly" },
 
   // Industries
-  { path: "/Industries/biosimilar", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/Industries/biotechnology", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/Industries/cosmeceutical-research", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/Industries/cosmetics", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/Industries/foods-nutraceuticals", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/Industries/generics", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/Industries/medical-device", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/Industries/nutraceutical-research", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/Industries/pharmaceutical", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/industries/biosimilar", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/industries/biotechnology", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/industries/cosmeceutical-research", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/industries/cosmetics", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/industries/functional-foods-and-nutraceuticals", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/industries/generics", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/industries/medical-device", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/industries/nutraceutical-research", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/industries/pharmaceutical", priority: 0.7, changeFrequency: "monthly" },
 
   // About Us
   { path: "/about-us/life-science", priority: 0.6, changeFrequency: "monthly" },
@@ -384,8 +384,19 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
 
 async function safePosts(source: "academy" | "insights" | "blog" | "career" | "call-for-papers") {
   try {
-    const { docs } = await getPosts({ source, limit: 1000 });
-    return docs;
+    const allDocs = [];
+    let page = 1;
+    let hasNextPage = true;
+    // Paginate rather than trust a single fixed limit — a source's post count can grow
+    // past any hardcoded number over time and silently drop the oldest posts from the
+    // sitemap (this happened: academy passed 1000 posts and ~70 fell out silently).
+    while (hasNextPage) {
+      const result = await getPosts({ source, page, limit: 1000 });
+      allDocs.push(...result.docs);
+      hasNextPage = result.hasNextPage;
+      page += 1;
+    }
+    return allDocs;
   } catch {
     return [];
   }

@@ -1,6 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { constructMetadata } from "@/lib/metadata";
+
+export const metadata = constructMetadata({
+  title: "Top Citation Styles: APA, AMA, MLA & Vancouver Explained",
+  description: "Learn APA, AMA, MLA, and Vancouver citation styles for research papers in medicine, science, and humanities",
+  keywords: ["citation"],
+  slug: "/services/publication-support/journal-manuscript-formatting-services/citation-styles-apa-ama-mla-vancouver-guide",
+});
 
 export default function CitationStylesPage() {
     return (
@@ -75,9 +83,9 @@ export default function CitationStylesPage() {
                 <main className="lg:col-span-9 space-y-8 text-sm md:text-base leading-relaxed text-gray-700">
 
                     <section>
-                        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                             Top Citation Styles for Research Papers: APA, AMA, MLA, and Vancouver
-                        </h1>
+                        </h2>
                         <p className="mb-4">
                             Citing sources is an important part of academic and <strong className="text-blue-600">scientific writing</strong>. It demonstrates intellectual honesty, supports your position, and gives readers a way to find the <strong className="text-blue-600">original research</strong>. Creating a citation style is a sticky point in academic writing and a very important point in the submission of manuscripts for journals or academic institutions.
                         </p>

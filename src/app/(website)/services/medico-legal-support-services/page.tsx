@@ -11,6 +11,14 @@ import ServicesMedicoLegalSupportServices from "@/components/services/medico-leg
 import { medicoLegalSupportFaqs, medicoLegalSupportPackages, medicoLegalSupportTestimonials, medicoLegalSupportWhoWeServe, medicoLegalSupportWorkflow } from "@/lib/services/medico-legal-support-services";
 import React from "react";
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from "@/lib/metadata";
+
+export const metadata = constructMetadata({
+  title: "Medico Legal Support Services | Pubrica Experts",
+  description: "Outsource medico legal support services to Pubrica. Experts medical record review, litigation support & case screening for pharma, CROs & hospitals.",
+  keywords: ["Medico Legal Support Services", "medical record review services", "litigation support services", "medico-legal case screening services", "medico legal services"],
+  slug: "/services/medico-legal-support-services",
+});
 
 const page = () => {
   return (

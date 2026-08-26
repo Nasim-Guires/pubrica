@@ -5,6 +5,15 @@ import { COMPUTER_SCIENCE_TESTIMONIALS } from '@/lib/subject-matter-experts/comp
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: "Computer Science Editing & Publication Support Services | Pubrica",
+  description: "Expert computer science editing, AI research support, and publication services to improve clarity, quality, and impact.",
+  keywords: ["computer science"],
+  slug: "/subject-matter-experts/computer-science",
+});
+
 
 const page = () => {
     return (

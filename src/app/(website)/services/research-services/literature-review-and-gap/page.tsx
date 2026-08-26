@@ -12,6 +12,14 @@ import {
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
 import React from "react";
+import { constructMetadata } from "@/lib/metadata";
+
+export const metadata = constructMetadata({
+  title: "Literature Review Writing and Gap Analysis Service",
+  description: "Enhance research outcomes through comprehensive evidence assessment, expert guidance, and publication-focused support for stronger research impact.",
+  keywords: ["Literature Review Gap", "Literature review services", "Professional literature review", "Research gap analysis services", "Systematic review consulting"],
+  slug: "/services/research-services/literature-review-and-gap",
+});
 
 const page = () => {
   return (

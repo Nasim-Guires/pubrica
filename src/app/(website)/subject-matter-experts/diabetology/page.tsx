@@ -5,6 +5,15 @@ import { DIABETOLOGY_TESTIMONIALS } from '@/lib/subject-matter-experts/diabetolo
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: "Comprehensive Diabetology Research & Publication Support",
+  description: "Pubrica offers expert research, writing, and publishing support in diabetology to advance global diabetes care.",
+  keywords: ["Comprehensive Diabetology"],
+  slug: "/subject-matter-experts/diabetology",
+});
+
 const page = () => {
     return (
         <>

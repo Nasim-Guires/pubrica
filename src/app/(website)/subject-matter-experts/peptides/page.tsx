@@ -4,7 +4,14 @@ import PeptidesSection from '@/components/subject-matter-experts/peptides/Peptid
 import { peptideTestimonials } from '@/lib/subject-matter-experts/peptide'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
 
+export const metadata = constructMetadata({
+  title: 'Peptide Research & Therapeutics - Innovation in Medicine | Pubrica',
+  description: 'Explore peptide-based innovations in therapeutics, vaccines, diagnostics, and drug delivery to advance modern healthcare.',
+  keywords: ['Peptide Research'],
+  slug: '/subject-matter-experts/peptides',
+})
 
 const page = () => {
     return (

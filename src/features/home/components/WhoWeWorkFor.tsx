@@ -46,8 +46,8 @@ export default function WhoWeWorkFor() {
             </h2>
             <div className="hidden sm:block flex-1 h-[2px] bg-black" />
             <Link
-              href="/Industries"
-              className="bg-[#0c312d] text-white font-medium text-sm px-8 py-3 rounded-full hover:bg-[#123e3a] shadow-lg transition-all duration-300 whitespace-nowrap shrink-0"
+              href="/industries"
+              className="bg-emerald-950 text-white font-medium text-sm px-6 py-2.5 rounded-full hover:bg-emerald-900 shadow-md transition-all duration-300 inline-block"
             >
               Read more
             </Link>

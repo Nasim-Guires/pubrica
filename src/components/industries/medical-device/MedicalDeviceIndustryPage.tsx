@@ -1,24 +1,11 @@
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import type { NextPage } from 'next';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const MedicalDeviceIndustryPage: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Medical Devices | Pubrica</title>
-        <meta 
-          name="description" 
-          content="Ensure your medical device meets regulatory standards with our expert Clinical Evaluation Reports (CER) services. We provide comprehensive support from data collection to evidence appraisal." 
-        />
-        <link 
-          rel="canonical" 
-          href="/Industries/medical-device" 
-        />
-      </Head>
-
       {/* BANNER SECTION */}
       <div className="w-full bg-[#343a40] py-16 px-4 md:px-12 flex justify-center mb-12">
         <div className="w-full max-w-5xl border border-gray-600 bg-[#343a40] text-white py-10 px-6 md:px-16 text-center space-y-3 shadow-md">

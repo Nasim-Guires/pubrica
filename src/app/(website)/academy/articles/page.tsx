@@ -2,6 +2,15 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { getPosts, mediaUrl, getDescription } from "@/lib/payload";
+import { constructMetadata } from "@/lib/metadata";
+
+// Live pubrica.com page at this URL has no meta description tag, so the description
+// below is written from this page's own real content (its hero subheading).
+export const metadata = constructMetadata({
+  title: "Articles - Pubrica",
+  description: "Guides, explainers, and research-writing resources from the Pubrica Academy.",
+  slug: "/academy/articles",
+});
 
 export const revalidate = 300;
 

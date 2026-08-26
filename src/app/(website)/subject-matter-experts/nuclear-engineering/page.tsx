@@ -4,6 +4,14 @@ import NuclearEngineeringSections from '@/components/subject-matter-experts/nucl
 import { NUCLEAR_ENGINEERING_TESTIMONIALS } from '@/lib/subject-matter-experts/nuclear-engineering'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+  title: 'Nuclear Engineering Consulting for Reactor Design & Safety',
+  description: 'Advanced nuclear engineering services for reactor design, safety, modelling, and sustainable energy solutions.',
+  keywords: ['nuclear engineering'],
+  slug: '/subject-matter-experts/nuclear-engineering',
+})
 
 const page = () => {
     return (

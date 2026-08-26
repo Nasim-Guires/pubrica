@@ -10,6 +10,13 @@ import AiMlPackagesSection from "@/components/services/ai-ml-support/AiMlPackage
 import TestimonialsSection from "@/components/services/ai-ml-support/TestimonialsSection";
 import FaqSection from "@/components/services/ai-ml-support/FaqSection";
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: 'Top-tier AI & ML support services to boost your business efficiency.',
+  description: 'Discover expert AI & ML support services for advanced data analysis, innovative solutions, and improved project efficiency.',
+  slug: '/services/ai-ml-support',
+});
 
 const page = () => {
   return (

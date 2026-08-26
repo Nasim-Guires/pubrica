@@ -1,6 +1,13 @@
 import React from 'react';
 import Container from '@/components/common/Container';
 import Breadcrumb from '@/components/seo/Breadcrumb';
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: 'Privacy Policy - Pubrica',
+  description: '2.1 Identity & Contact',
+  slug: '/privacy-policy',
+});
 
 export default function PrivacyPolicyPage() {
   return (

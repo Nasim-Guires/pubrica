@@ -406,7 +406,7 @@ export const GENERAL_FAQS = [
 //       },
 //     ],
 //   },
-//   { href: "/Industries", label: "industries" },
+//   { href: "/industries", label: "industries" },
 //   { href: "/subjects", label: "Subjects" },
 //   { href: "/about", label: "About Us" },
 //   { href: "/academy", label: "Academy" },
@@ -784,7 +784,7 @@ export const NAV_LINKS = [
   },
 //here now
   {
-    href: "/Industries",
+    href: "/industries",
     label: "Industries",
   },
 
@@ -832,7 +832,7 @@ export const FOOTER_LINKS = {
     { href: "/contact", label: "Contact Us" },
     { href: "/blog", label: "Latest Blogs" },
     { href: "/subjects", label: "Free Resources" },
-    { href: "/Industries", label: "Featured Journals" },
+    { href: "/industries", label: "Featured Journals" },
   ],
   legal: [
     { href: "/privacy-policy", label: "Privacy Policy" },

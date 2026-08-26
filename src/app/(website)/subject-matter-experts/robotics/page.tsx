@@ -4,6 +4,14 @@ import RoboticsSubjectMatterExperts from '@/components/subject-matter-experts/ro
 import { roboticsTestimonials } from '@/lib/subject-matter-experts/robotics'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+  title: 'Robotics Research & Publication Services | Pubrica',
+  description: 'Expert robotics research, editing, and publication support for high-impact scientific and engineering journals worldwide.',
+  keywords: ['Robotics'],
+  slug: '/subject-matter-experts/robotics',
+})
 
 const page = () => {
     return (

@@ -7,6 +7,13 @@ import ReportingPackagesSection from '@/components/services/data-analytics-machi
 import { dataVisualizationReportingFAQ, dataVisualizationReportingTestimonials, dataVisualizationReportingWhoWeServe } from '@/lib/services/data/interpretation-reporting-and-visualisation/dataVisualizationReportingTestimonials'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+    title: 'Interpretation, Reporting and Visualisation - Pubrica',
+    description: 'Pubrica data science experts, along with researchers, help to visualize the data and interpret it in a meaningful manner.',
+    slug: '/services/data-analytics-machine-learning/interpretation-reporting-and-visualisation',
+})
 
 
 const page = () => {

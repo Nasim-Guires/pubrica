@@ -1,6 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: 'University - Pubrica',
+  description: 'Enhance manuscript acceptance rate by up to 75% through Pubrica experts.',
+  slug: '/strategic-partnerships-memberships/university',
+});
 
 export default function UniversityPartnershipPage() {
     return (

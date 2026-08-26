@@ -8,9 +8,14 @@ import LearningDesignSampleSection from '@/components/services/education-editori
 import { learningDesignAndPedagogyPackages, learningDesignAndPedagogyTestimonials, learningDesignAndPedagogyWhoWeServe, learningDesignAndPedagogyWorkflow } from '@/lib/services/education-editorial-service/learning-design-and-pedagogy/learning-design-and-pedagogy'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
 
-
-
+export const metadata = constructMetadata({
+    title: 'Learning Design & Pedagogy Services | Pubrica',
+    description: 'Strengthen learning outcomes with expert learning design and pedagogical development services for academic, and digital education content.',
+    keywords: ['Learning Design & Pedagogy', 'Learning Design and Pedagogy', 'Instructional design services', 'Pedagogical framework development', 'Curriculum design services'],
+    slug: '/services/education-editorial-service/learning-design-and-pedagogy',
+})
 
 const page = () => {
     return (

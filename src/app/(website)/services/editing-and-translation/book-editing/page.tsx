@@ -7,6 +7,13 @@ import { EditingTranslationBookEditingWhoWeServe } from "@/components/services/e
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
 import React from "react";
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: 'Book Editing Services for Scientific and Academic Papers',
+  description: 'Our professional book editing service Provides you with scientific, academic, and medical papers by experts to bring the best in your writings',
+  slug: '/services/editing-and-translation/book-editing',
+});
 
 const page = () => {
   return (

@@ -1,6 +1,17 @@
 import React from 'react';
 import Container from '@/components/common/Container';
 import Breadcrumb from '@/components/seo/Breadcrumb';
+import { constructMetadata } from '@/lib/metadata';
+
+// /terms/ 404s directly on live pubrica.com; the sitemap's closest topical match is
+// /terms-and-conditions/ (this page's real Terms & Conditions content matches that
+// live page's topic, unlike the empty /terms-and-condition stub — see that route).
+export const metadata = constructMetadata({
+  title: 'Terms & Condition - Pubrica',
+  description:
+    'Welcome to Pubrica - a global contract research, analytics, and editorial services organization. These Terms and Conditions outline the rules and regulations',
+  slug: '/terms',
+});
 
 export default function TermsPage() {
   return (

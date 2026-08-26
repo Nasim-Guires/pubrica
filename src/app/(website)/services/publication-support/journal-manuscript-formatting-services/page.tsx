@@ -5,6 +5,14 @@ import WhatWeDoAndWhoWeServe from "@/components/services/publication-support/jou
 import TestimonialsAndFAQSections from "@/components/services/publication-support/journal-manuscript-formatting-services/TestimonialsAndFAQ";
 import React from "react";
 import InsightsSection from "@/components/services/editing-translation/Insights/InsightsSection";
+import { constructMetadata } from "@/lib/metadata";
+
+export const metadata = constructMetadata({
+  title: "Manuscript Formatting Service for Scholars & Researchers",
+  description: "Professional manuscript formatting ensures research papers are structured, polished, and submission-ready with consistent style and clear layout.",
+  keywords: ["Professional document formatting services", "online formatting services uk", "phd thesis formatting service", "formatting services for thesis", "Scientific and Academic Manuscript Formatting Service"],
+  slug: "/services/publication-support/journal-manuscript-formatting-services",
+});
 
 const page = () => {
   return (

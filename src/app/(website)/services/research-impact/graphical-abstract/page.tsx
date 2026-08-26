@@ -7,6 +7,14 @@ import ResearchImpactGraphicalAbstract from '@/components/services/research-impa
 import { graphicalAbstractFaqData, graphicalAbstractTestimonialData, graphicalAbstractWhoWeServeData } from '@/lib/services/data/research-impact/graphical-abstract'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+  title: 'Graphical Abstract Services for Research Authors',
+  description: 'Transform research into engaging graphical abstracts with expert design support to improve visibility and meet journal publication standards.',
+  keywords: ['graphical abstracts', 'graphical abstract service', 'graphical abstract for review paper'],
+  slug: '/services/research-impact/graphical-abstract',
+})
 
 const page = () => {
     return (

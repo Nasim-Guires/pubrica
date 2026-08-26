@@ -9,7 +9,14 @@ import DigitalProductionQaServices from '@/components/services/education-editori
 import { educationEditorialDigitalProductionQaFaq, educationEditorialDigitalProductionQaPackages, educationEditorialDigitalProductionQaTestimonials, educationEditorialDigitalProductionQaWhoWeServe, educationEditorialDigitalProductionQaWorkflow } from '@/lib/services/education-editorial-service/digital-production-qa-services'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
 
+export const metadata = constructMetadata({
+    title: 'Expert Digital Production QA Services | Pubrica',
+    description: "Ensure accuracy, consistency, and quality across digital academic outputs with Pubrica’s expert Digital Production QA services.",
+    keywords: ['Digital Production QA', 'academic production quality assurance', 'XML QA services', 'typesetting QA', 'digital publishing quality control'],
+    slug: '/services/education-editorial-service/digital-production-qa-services',
+})
 
 const page = () => {
     return (

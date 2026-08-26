@@ -43,9 +43,9 @@ export default function ThoughtLeadershipContentEditorialDesign() {
       {/* ------------------- HERO BANNER ------------------- */}
       <header className="bg-[#0b3b2c] text-white py-12 px-4 text-center">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-2xl md:text-3xl font-bold mb-4 tracking-wide">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 tracking-wide">
             Thought Leadership Content & Editorial Design
-          </h1>
+          </h2>
           <p className="text-sm md:text-base max-w-4xl mx-auto text-gray-200 leading-relaxed">
             Pubrica excels in developing insightful thought leadership content and innovative editorial designs, creating engaging narratives and visually striking layouts that amplify your brand and resonate with your audience.
           </p>

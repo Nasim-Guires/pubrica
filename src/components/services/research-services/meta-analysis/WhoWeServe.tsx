@@ -89,7 +89,7 @@ export default function WhoWeServe() {
           </Link>{" "}
           cater to a diverse range of clients in the academic, clinical, and{" "}
           <Link
-            href="/Industries/pharmaceutical"
+            href="/industries/pharmaceutical"
             className="text-blue-600 underline hover:text-blue-800 transition-colors"
           >
             pharmaceutical

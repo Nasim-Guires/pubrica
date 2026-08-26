@@ -115,9 +115,9 @@ export default function VisualAndAccessibilityEditingComplete() {
       {/* ------------------- HERO BANNER ------------------- */}
       <section className="bg-[#0b3b2c] py-16 px-4 text-white text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
             Visual & Accessibility Editing Services at Pubrica
-          </h1>
+          </h2>
           <p className="text-xs md:text-sm text-emerald-100 leading-relaxed max-w-3xl mx-auto">
             Our expert editors meticulously refine your manuscript’s visual elements and accessibility features, ensuring clarity, inclusivity, and compliance with accessibility standards, so your content is reader-friendly and publication-ready.
           </p>

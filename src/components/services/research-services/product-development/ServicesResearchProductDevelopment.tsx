@@ -362,35 +362,35 @@ export default function ServicesResearchProductDevelopment({
               </Link>{" "}
               research to support{" "}
               <Link
-                href="/Industries/pharmaceutical/"
+                href="/industries/pharmaceutical/"
                 className="text-sky-600 font-medium hover:text-sky-700 no-underline"
               >
                 pharmaceutical
               </Link>
               ,{" "}
               <Link
-                href="/Industries/biotechnology/"
+                href="/industries/biotechnology/"
                 className="text-sky-600 font-medium hover:text-sky-700 no-underline"
               >
                 biotechnology
               </Link>
               ,{" "}
               <Link
-                href="/Industries/nutraceutical-research/"
+                href="/industries/nutraceutical-research/"
                 className="text-sky-600 font-medium hover:text-sky-700 no-underline"
               >
                 nutraceutical
               </Link>
               ,{" "}
               <Link
-                href="/Industries/medical-device/"
+                href="/industries/medical-device/"
                 className="text-sky-600 font-medium hover:text-sky-700 no-underline"
               >
                 medical device
               </Link>
               ,{" "}
               <Link
-                href="/Industries/cosmeceutical-research/"
+                href="/industries/cosmeceutical-research/"
                 className="text-sky-600 font-medium hover:text-sky-700 no-underline"
               >
                 cosmeceuticals

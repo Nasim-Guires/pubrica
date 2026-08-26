@@ -1,5 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: 'Publisher - Pubrica',
+  description: 'Top Publishers',
+  slug: '/strategic-partnerships-memberships/publisher',
+});
 
 export default function PublisherPartnershipPage() {
     return (

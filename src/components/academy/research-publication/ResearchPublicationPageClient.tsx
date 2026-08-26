@@ -1,0 +1,180 @@
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { ChevronLeft, ChevronRight, Grid } from "lucide-react";
+
+interface PublicationArticle {
+    id: number;
+    date: string;
+    title: string;
+    slug: string;
+    image?: string;
+}
+
+const publicationArticles: PublicationArticle[] = [
+    {
+        id: 1,
+        date: "June 23, 2021",
+        title: "Statistical analyses of case-control studies",
+        slug: "/academy/research/statistical-analyses-of-case-control-studies/",
+    },
+    {
+        id: 2,
+        date: "May 1, 2021",
+        title:
+            "Selecting material (e.g. excipient, active pharmaceutical ingredient, packaging material) for drug development",
+        slug: "/academy/research/selecting-material-for-drug-development/",
+        image:
+            "https://pubrica.com/wp-content/uploads/2021/07/Selecting-material-e.g.-excipient-active-pharmaceutical-ingredient-packaging-material-for-drug-development.webp",
+    },
+    {
+        id: 3,
+        date: "April 8, 2021",
+        title: "Health economics in clinical trials",
+        slug: "/academy/research/health-economics-in-clinical-trials/",
+    },
+    {
+        id: 4,
+        date: "April 8, 2021",
+        title: "Epidemiology designs for clinical trials",
+        slug: "/academy/research/epidemiology-designs-for-clinical-trials/",
+        image: "https://pubrica.com/wp-content/uploads/2021/07/Epidemiology-designs-for-clinical-trials.webp",
+    },
+    {
+        id: 5,
+        date: "March 18, 2021",
+        title:
+            "Uses of gene therapy in clinical research organization. List out few examples",
+        slug: "/academy/research/uses-of-gene-therapy-in-clinical-research/",
+        image:
+            "https://pubrica.com/wp-content/uploads/2021/07/Uses-of-gene-therapy-in-clinical-research-organization.-List-out-few-examples.webp",
+    },
+];
+
+const Page = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const prevSlide = () => {
+        setCurrentIndex((prev) => (prev === 0 ? 0 : prev - 1));
+    };
+
+    const nextSlide = () => {
+        setCurrentIndex((prev) =>
+            prev >= publicationArticles.length - 4 ? prev : prev + 1
+        );
+    };
+
+    return (
+        <div className="w-full bg-white">
+            {/* Hero Banner Header */}
+            <div className="relative h-48 w-full overflow-hidden bg-gray-900 sm:h-64 md:h-72">
+                <Image
+                    src="https://pubrica.com/wp-content/uploads/2021/04/research-publication.jpg"
+                    alt="Research Publication Banner"
+                    fill
+                    priority
+                    className="object-cover opacity-60"
+                />
+                <div className="absolute inset-0 flex items-center bg-black/30 px-6 sm:px-12 md:px-20">
+                    <h1 className="text-2xl font-bold text-white sm:text-3xl md:text-4xl">
+                        Research Publication
+                    </h1>
+                </div>
+            </div>
+
+            {/* Main Grid & Slider Section */}
+            <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+                {/* Navigation Control Buttons */}
+                <div className="mb-6 flex justify-end gap-1">
+                    <button
+                        onClick={prevSlide}
+                        disabled={currentIndex === 0}
+                        aria-label="Previous items"
+                        className="flex h-9 w-9 items-center justify-center bg-gray-200 text-gray-600 transition-colors hover:bg-gray-300 disabled:opacity-40"
+                    >
+                        <ChevronLeft className="h-5 w-5" />
+                    </button>
+                    <button
+                        onClick={nextSlide}
+                        disabled={currentIndex >= publicationArticles.length - 4}
+                        aria-label="Next items"
+                        className="flex h-9 w-9 items-center justify-center bg-gray-200 text-gray-600 transition-colors hover:bg-gray-300 disabled:opacity-40"
+                    >
+                        <ChevronRight className="h-5 w-5" />
+                    </button>
+                </div>
+
+                {/* Dynamic Cards Grid */}
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                    {publicationArticles
+                        .slice(currentIndex, currentIndex + 4)
+                        .map((item) => (
+                            <div
+                                key={item.id}
+                                className="flex flex-col justify-between space-y-4"
+                            >
+                                <div className="space-y-3">
+                                    {/* Article Thumbnail Image (if available) */}
+                                    {item.image && (
+                                        <Link href={item.slug} className="block">
+                                            <div className="relative h-44 w-full overflow-hidden rounded bg-gray-100">
+                                                <Image
+                                                    src={item.image}
+                                                    alt={item.title}
+                                                    fill
+                                                    className="object-cover transition-transform duration-300 hover:scale-105"
+                                                />
+                                            </div>
+                                        </Link>
+                                    )}
+
+                                    {/* Article Date */}
+                                    <span className="block text-xs text-gray-400">
+                                        {item.date}
+                                    </span>
+
+                                    {/* Article Title Routing Link */}
+                                    <Link href={item.slug} className="group block">
+                                        <h2 className="text-sm font-semibold leading-snug text-gray-800 transition-colors group-hover:text-blue-600">
+                                            {item.title}
+                                        </h2>
+                                    </Link>
+                                </div>
+
+                                {/* Read More Action Button Routing Link */}
+                                <div>
+                                    <Link
+                                        href={item.slug}
+                                        className="inline-flex items-center gap-1.5 bg-gray-200 px-3 py-1.5 text-xs text-gray-700 transition-colors hover:bg-gray-300"
+                                    >
+                                        <Grid className="h-3 w-3 text-gray-500" />
+                                        Read more
+                                    </Link>
+                                </div>
+                            </div>
+                        ))}
+                </div>
+
+                {/* Pagination Dots */}
+                <div className="mt-12 flex items-center justify-center gap-2">
+                    <button
+                        onClick={() => setCurrentIndex(0)}
+                        className={`h-2.5 w-2.5 rounded-full transition-all ${currentIndex === 0 ? "h-3 w-3 bg-blue-600" : "bg-gray-300"
+                            }`}
+                        aria-label="Go to slide group 1"
+                    />
+                    <button
+                        onClick={() => setCurrentIndex(1)}
+                        className={`h-2.5 w-2.5 rounded-full transition-all ${currentIndex > 0 ? "h-3 w-3 bg-blue-600" : "bg-gray-300"
+                            }`}
+                        aria-label="Go to slide group 2"
+                    />
+                </div>
+            </main>
+        </div>
+    );
+};
+
+export default Page;

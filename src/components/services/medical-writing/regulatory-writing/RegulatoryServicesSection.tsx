@@ -180,9 +180,9 @@ export default function RegulatoryWritingPage() {
 
             {/* HEADER SECTION */}
             <div className="max-w-5xl mx-auto pt-12 px-4 text-center">
-                <h1 className="text-2xl md:text-3xl font-bold text-[#0B3C3D] mb-3">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0B3C3D] mb-3">
                     Our Regulatory Writing Services
-                </h1>
+                </h2>
                 <p className="text-xs md:text-sm text-gray-600 max-w-3xl mx-auto leading-relaxed">
                     We appreciate the value of regulatory writing in obtaining product approval and market access, and for ongoing compliance. Our services can assist life science companies at every stage of product development—from early-stage clinical documentation to post-marketing commitments.
                 </p>

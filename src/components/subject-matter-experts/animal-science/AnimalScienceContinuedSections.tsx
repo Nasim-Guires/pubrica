@@ -268,7 +268,7 @@ export default function AnimalScienceContinuedSections() {
                 <p className="text-[8px] uppercase tracking-widest font-semibold">Journal of</p>
                 <p className="text-[10px] uppercase font-bold">Animal Science</p>
               </div>
-              <h1 className="text-5xl font-black text-white/90">JAS</h1>
+              <h2 className="text-5xl font-black text-white/90">JAS</h2>
               <div className="w-full h-20 overflow-hidden">
                 <Image
                   src="/images/subject-matter-experts/animal-science/animal.jpg"

@@ -1,6 +1,5 @@
 "use client"
 import type { NextPage } from 'next';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -60,30 +59,8 @@ const MedicalDeviceIndustry: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>Medical Devices | Pubrica</title>
-        <meta 
-          name="description" 
-          content="Ensure your medical device meets regulatory standards with our expert Clinical Evaluation Reports (CER) services. We provide comprehensive support from data collection to evidence appraisal." 
-        />
-        <link 
-          rel="canonical" 
-          href="/Industries/medical-device" 
-        />
-      </Head>
-
-      {/* BANNER SECTION */}
-      <div className="w-full bg-[#343a40] py-16 px-4 md:px-12 flex justify-center mb-12">
-        <div className="w-full max-w-5xl border border-gray-600 bg-[#343a40] text-white py-10 px-6 md:px-16 text-center space-y-3 shadow-md">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
-            Medical Devices
-          </h1>
-          <p className="text-xs md:text-sm text-gray-200 max-w-4xl mx-auto leading-relaxed">
-            Ensure your medical device meets regulatory standards with our expert Clinical Evaluation Reports (CER) services. We provide comprehensive support from data collection to evidence appraisal, helping you achieve compliance efficiently.
-          </p>
-        </div>
-      </div>
-
+      {/* No banner here — MedicalDeviceIndustryPage (rendered earlier on this route) already
+          shows the "Medical Devices" hero; this component picks up with its own content below. */}
       <div className="w-full bg-white text-gray-800 pb-16 px-4 md:px-8 space-y-20">
                 {/* SECTION: CLASSES OF CLINICAL EVALUATION REPORT FOR MEDICAL DEVICES */}
         <section className="max-w-6xl mx-auto space-y-10 pt-16">

@@ -2,6 +2,14 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { getPosts, mediaUrl, getDescription } from "@/lib/payload";
+import { constructMetadata } from "@/lib/metadata";
+
+export const metadata = constructMetadata({
+  title: "Tips for Research, Writing & Publication | Pubrica Blog",
+  description:
+    "Explore Pubrica Blog for expert tips, guides, and insights on research, writing, and publication to boost your academic and scientific success.",
+  slug: "/blog",
+});
 
 export const revalidate = 300;
 

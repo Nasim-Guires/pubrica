@@ -266,9 +266,9 @@ export default function CustomizedWritingGuidelineStandards() {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-14">
-            <h1 className="text-2xl sm:text-3xl font-bold text-[#0a2e2b] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#0a2e2b] tracking-tight">
               How Our Customized Medical Writing Services Work
-            </h1>
+            </h2>
             <p className="mt-2 text-base font-semibold text-[#1a4a45]">
               Step-by-Step Process Designed for Physicians
             </p>

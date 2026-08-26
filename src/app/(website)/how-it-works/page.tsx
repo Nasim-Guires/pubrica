@@ -1,6 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: 'How it Works - Pubrica',
+  description: 'ASSIGNING',
+  slug: '/how-it-works',
+});
 
 const steps = [
   {

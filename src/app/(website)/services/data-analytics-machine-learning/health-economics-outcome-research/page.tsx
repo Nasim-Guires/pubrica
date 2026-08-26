@@ -7,6 +7,13 @@ import OurApproachSectionHealthEconomicsOutcomeResearch from '@/components/servi
 import { HealthEconomicsOutcomeFaqs, HealthEconomicsOutcomeResearchWhoWeServe, HealthEconomicsOutcomeTestimonials } from '@/lib/services/data/data-analytics-machine-learning/HealthEconomicsOutcomeResearchTestimonials'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+    title: 'Health Economics and Outcome Research | Pubrica',
+    description: 'Expert health economics & outcomes research: PROs, cost-effectiveness, market access & data-driven insights',
+    slug: '/services/data-analytics-machine-learning/health-economics-outcome-research',
+})
 
 
 const page = () => {

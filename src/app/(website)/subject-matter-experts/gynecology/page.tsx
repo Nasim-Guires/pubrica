@@ -5,6 +5,14 @@ import { GYNAECOLOGY_TESTIMONIALS } from '@/lib/subject-matter-experts/gynecolog
 // import GynaecologySection from '@/components/subject-matter-experts/gynecology/GynaecologySection'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+  title: 'Comprehensive Gynaecology Research & Publication Support',
+  description: 'Pubrica offers expert research, writing, and publication support in gynaecology, empowering global women’s health research.',
+  keywords: ['Gynaecology Research'],
+  slug: '/subject-matter-experts/gynecology',
+})
 
 const page = () => {
     return (

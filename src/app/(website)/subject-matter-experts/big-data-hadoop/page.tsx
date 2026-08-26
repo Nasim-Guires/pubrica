@@ -5,6 +5,15 @@ import { bigDataAnalyticsTestimonials } from '@/lib/subject-matter-experts/big-d
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: "Big Data & Hadoop Research and Analytics Solutions | Pubrica",
+  description: "Expert Big Data and Hadoop research support for analytics, data processing, and publication success worldwide.",
+  keywords: ["Big Data & Hadoop"],
+  slug: "/subject-matter-experts/big-data-hadoop",
+});
+
 const page = () => {
     return (
         <>

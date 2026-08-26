@@ -7,6 +7,13 @@ import PredictiveAnalyticsSection from '@/components/services/data-analytics-mac
 import { predictiveAnalyticsFAQ, predictiveAnalyticsTestimonials, predictiveAnalyticsWhoWeServe } from '@/lib/services/data/predictive-analytics/predictiveAnalyticsTestimonials'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+    title: 'Best Artificial Intelligence & Machine Learning Support Service',
+    description: 'Explore our AI & ML support services for advanced data analysis and innovative solutions. Enhance your projects with our experts.',
+    slug: '/services/data-analytics-machine-learning/predictive-analytics',
+})
 
 
 const page = () => {

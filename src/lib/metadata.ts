@@ -7,6 +7,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://pubrica.com';
 interface MetadataProps {
   title?: string;
   description?: string;
+  keywords?: string[];
   slug?: string;
   image?: string;
   noIndex?: boolean;
@@ -14,22 +15,33 @@ interface MetadataProps {
 
 /**
  * Reusable helper to generate standard metadata objects for Next.js pages.
+ *
+ * Note: `keywords` has no effect on Google ranking or snippets (Google has
+ * publicly ignored this tag since 2009) — it's included only because some
+ * other crawlers/tools still read it, not as a real SEO lever.
  */
 export function constructMetadata({
   title,
   description,
+  keywords,
   slug = '',
   image = '/images/og-image.jpg',
   noIndex = false,
 }: MetadataProps = {}): Metadata {
-  const pageTitle = title ? `${title} | Pubrica` : DEFAULT_TITLE;
+  // Used verbatim, with no automatic suffixing — real pubrica.com titles are copied
+  // exactly (some already end in "| Pubrica", some don't), so this helper must never
+  // rewrite what's passed in. Only the true fallback case uses DEFAULT_TITLE.
+  const pageTitle = title || DEFAULT_TITLE;
   const pageDesc = description || DEFAULT_DESCRIPTION;
   const canonicalUrl = `${SITE_URL}${slug.startsWith('/') ? slug : `/${slug}`}`;
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: pageTitle,
+    // `absolute` bypasses the root layout's `title.template`, which would otherwise
+    // append " | Pubrica" a second time on top of the branding already applied here.
+    title: { absolute: pageTitle },
     description: pageDesc,
+    ...(keywords && keywords.length > 0 ? { keywords } : {}),
     alternates: {
       canonical: canonicalUrl,
     },

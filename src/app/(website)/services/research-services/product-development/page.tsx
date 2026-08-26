@@ -10,7 +10,15 @@ import ServicesResearchProductDevelopment from '@/components/services/research-s
 import { productDevelopmentFaqs, productDevelopmentPackages, productDevelopmentTestimonials, productDevelopmentWhoWeServe, productDevelopmentWorkflow } from '@/lib/services/data/research-services/product-development'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
 import IndustryVerticals from '@/components/services/research-services/product-development/IndustryVerticals'
+
+export const metadata = constructMetadata({
+  title: 'Core Discovery & Intelligence Services for Pharma & Biotech',
+  description: 'Pubrica provides evidence-based discovery and intelligence for pharma, nutra, biotech & devices, covering ingredients & patents.',
+  keywords: ['discovery&intelligence', 'prior art search report', 'novelty search report', 'validity search report', 'patent invalidity search report'],
+  slug: '/services/research-services/product-development',
+})
 
 const page = () => {
   return (

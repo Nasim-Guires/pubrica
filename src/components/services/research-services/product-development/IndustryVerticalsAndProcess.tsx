@@ -16,10 +16,73 @@ export interface IndustryVerticalsAndProcessProps {
   className?: string;
 }
 
+interface VerticalItem {
+  id: string;
+  title: string;
+  iconPlaceholder: string;
+  href: string;
+}
+
 export default function IndustryVerticalsAndProcess({
   className = "",
 }: IndustryVerticalsAndProcessProps) {
-  // Move data inside component using useMemo so React compiles <Link> components properly
+  const verticals: VerticalItem[] = [
+    {
+      id: "pharmaceuticals",
+      title: "Pharmaceuticals",
+      iconPlaceholder: "/images/product-development/Pharmaceuticals.png",
+      href: "/industries/pharmaceutical/",
+    },
+    {
+      id: "biotechnology",
+      title: "Biotechnology",
+      iconPlaceholder: "/images/product-development/Biotechnology.png",
+      href: "/industries/biotechnology/",
+    },
+    {
+      id: "nutraceuticals",
+      title: "Nutraceuticals & Dietary Supplements",
+      iconPlaceholder: "/images/product-development/Nutraceuticals-Dietary-Supplements.png",
+      href: "/industries/",
+    },
+    {
+      id: "herbal-ayush",
+      title: "Herbal/AYUSH products",
+      iconPlaceholder: "/images/product-development/HerbalAYUSH-products.png",
+      href: "/industries/",
+    },
+    {
+      id: "functional-foods",
+      title: "Functional Foods & Beverages",
+      iconPlaceholder: "/images/product-development/Functional-Foods-Beverages.png",
+      href: "/industries/",
+    },
+    {
+      id: "medical-devices",
+      title: "Medical Devices",
+      iconPlaceholder: "/images/product-development/Medical-Devices.png",
+      href: "/industries/medical-device/",
+    },
+    {
+      id: "cosmetics",
+      title: "Cosmetics & Cosmeceuticals",
+      iconPlaceholder: "/images/product-development/Cosmetics-Cosmeceuticals.png",
+      href: "/industries/cosmetics/",
+    },
+    {
+      id: "pet-health",
+      title: "Pet Health & Pet Food",
+      iconPlaceholder: "/images/product-development/Pet-Health-Pet-Food.png",
+      href: "/industries/",
+    },
+    {
+      id: "life-sciences",
+      title: "Life Sciences & Healthcare Research",
+      iconPlaceholder: "/images/product-development/Life-Sciences-Healthcare-Research.png",
+      href: "/industries/",
+    },
+  ];
+
   const whoWeServeData: WhoWeServeItem[] = useMemo(
     () => [
       {
@@ -32,14 +95,14 @@ export default function IndustryVerticalsAndProcess({
             identification, and scientific validation aligned with{" "}
             <Link
               href="https://www.fda.gov"
-              className="text-[#38bdf8] font-semibold  hover:text-sky-300 relative z-30 cursor-pointer"
+              className="text-[#38bdf8] font-semibold hover:text-sky-300 relative z-30 cursor-pointer"
             >
               FDA
             </Link>
             ,{" "}
             <Link
               href="https://www.ema.europa.eu/en/homepage"
-              className="text-[#38bdf8] font-semibold  hover:text-sky-300 relative z-30 cursor-pointer"
+              className="text-[#38bdf8] font-semibold hover:text-sky-300 relative z-30 cursor-pointer"
             >
               EMA
             </Link>
@@ -58,14 +121,14 @@ export default function IndustryVerticalsAndProcess({
             ingredient sourcing, and compliance with{" "}
             <Link
               href="https://fssai.gov.in"
-              className="text-[#38bdf8] font-semibold  hover:text-sky-300 relative z-30 cursor-pointer"
+              className="text-[#38bdf8] font-semibold hover:text-sky-300 relative z-30 cursor-pointer"
             >
               FSSAI
             </Link>
             , FDA, and{" "}
             <Link
               href="https://www.efsa.europa.eu/en"
-              className="text-[#38bdf8] font-semibold  hover:text-sky-300 relative z-30 cursor-pointer"
+              className="text-[#38bdf8] font-semibold hover:text-sky-300 relative z-30 cursor-pointer"
             >
               EFSA
             </Link>{" "}
@@ -221,7 +284,7 @@ export default function IndustryVerticalsAndProcess({
               </div>
             </div>
           ))}
-        </div>     
+        </div>
       </div>
     </section>
   );

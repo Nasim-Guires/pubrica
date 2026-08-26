@@ -2,6 +2,14 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+  title: 'Respond to Reviewer Comments and Revise Your Research Paper',
+  description: 'A step-by-step guide helping authors respond to reviewer comments, revise manuscripts effectively, and improve publication success.',
+  keywords: ['Reviewer comments'],
+  slug: '/academy/response-to-reviewer/responding-to-reviewer-comments-revise-research-paper',
+})
 
 export default function RespondToReviewerCommentsPage() {
     const interestedTopics = [

@@ -5,6 +5,15 @@ import { chemicalEngineeringTestimonialsData } from '@/lib/subject-matter-expert
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: "Chemical Engineering Consulting for Process Optimization",
+  description: "Expert chemical engineering services for process design, optimization, sustainability, and publication support.",
+  keywords: ["chemical engineering"],
+  slug: "/subject-matter-experts/chemical-engineering",
+});
+
 const page = () => {
     return (
         <>

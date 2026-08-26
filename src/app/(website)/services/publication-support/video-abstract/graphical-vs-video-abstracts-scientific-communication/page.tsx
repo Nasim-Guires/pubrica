@@ -145,9 +145,9 @@ export default function GraphicalVsVideoAbstractsPage() {
                 <main className="lg:col-span-8 space-y-8 text-sm md:text-base leading-relaxed text-gray-700">
 
                     <section>
-                        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                             Graphical vs. Video Abstracts: Tools for Clear and Engaging Scientific Communication
-                        </h1>
+                        </h2>
                         <p className="mb-4">
                             Scientific communication has developed from basic text-only abstracts to visual and media formats that increase access to research and create interest. An example of new formats in communicating complex research to many different audiences are <span className="text-blue-600">graphical abstracts</span> and <span className="text-blue-600">video abstracts</span>. Both formats are intended to enhance the visibility and understanding of research but differ in how the information is presented, how the audience engages with the information, and the resources needed to produce each format. The choice of the format for communicating research can have a significant impact on how research is shared, interpreted, and referenced. [1]
                         </p>

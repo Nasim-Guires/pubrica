@@ -210,9 +210,9 @@ export default function EditorialProcessAndCompliance() {
 
             {/* 1. TOP GREEN BANNER */}
             <section className="bg-[#052C28] text-white py-8 px-4 text-center">
-                <h1 className="text-xl md:text-2xl font-bold mb-2">
+                <h2 className="text-xl md:text-2xl font-bold mb-2">
                     Enhance Your Editorial and Quality Standards with Pubrica
-                </h1>
+                </h2>
                 <p className="text-xs md:text-sm text-gray-200">
                     Partner with our expert editorial team to deliver publication-ready, scientifically accurate, and journal-compliant manuscripts.
                 </p>

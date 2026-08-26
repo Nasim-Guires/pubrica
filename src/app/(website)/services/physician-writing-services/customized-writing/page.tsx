@@ -8,6 +8,14 @@ import PhysicianSpecialtiesAndAddons from '@/components/services/physician-writi
 import { customizedMedicalWritingFaqs, customizedMedicalWritingTestimonials, physicianWritingWhoWeServe } from '@/lib/services/data/customized-writing/CustomizedWritingTestimonials'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+    title: 'Customized Clinical and Medical Writing for Physicians | Pubrica',
+    description: "Physician-focused writing support for manuscripts, grants, regulatory, CME & thesis work—expert, submission-ready documents by Pubrica.",
+    keywords: ['customized writing', 'Customized medical writing for physicians', 'Clinical manuscript writing services', 'Regulatory document writing for doctors', 'Physician-focused academic writing'],
+    slug: '/services/physician-writing-services/customized-writing',
+})
 
 const page = () => {
     return (

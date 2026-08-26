@@ -7,6 +7,13 @@ import { copyEditingServiceTestimonialData, copyEditingServiceWhoWeServeData } f
 import { developmentEditingServiceFaqData } from '@/lib/services/academic-editorial-services/development-editing-service/development-editing-service'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+    title: 'Expert Manuscript Copy Editing Services | Pubrica',
+    description: "Improve manuscript quality with Pubrica’s Expert Copy Editing Services, ensuring clarity, precision, and adherence to journal guidelines.",
+    slug: '/services/academic-editorial-services/copy-editing-services',
+})
 
 const page = () => {
     return (

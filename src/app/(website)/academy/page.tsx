@@ -15,6 +15,25 @@ import {
   Mail,
 } from 'lucide-react';
 import { getPosts, mediaUrl, getDescription } from '@/lib/payload';
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: 'Home - Academy',
+  description: 'Pubrica Academy delivers expert guidance on research paper publication, clinical trials, and academic publishing support.',
+  keywords: [
+    'pubrica academy',
+    'publication support',
+    'research paper publication',
+    'clinical trials',
+    'academic papers',
+    'scientific research',
+    'biostatistical experts',
+    'subject matter experts',
+    'publication support services',
+    'research support',
+  ],
+  slug: '/academy',
+});
 
 export const revalidate = 300;
 

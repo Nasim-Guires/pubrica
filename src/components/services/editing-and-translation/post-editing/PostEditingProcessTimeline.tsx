@@ -69,9 +69,9 @@ export const PostEditingProcessTimeline: React.FC = () => {
       {/* ------------------------------------------------------------- */}
       <section className="w-full bg-[#03231a] py-10 px-4 sm:px-6 text-center text-white">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-3 tracking-wide">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 tracking-wide">
             Post Editing Services at Pubrica
-          </h1>
+          </h2>
           <p className="text-xs sm:text-sm text-slate-200 leading-relaxed max-w-3xl mx-auto font-light">
             Pubrica’s Post Editing Services refine your document, ensuring
             clarity and accuracy. Our expert editors meticulously review
