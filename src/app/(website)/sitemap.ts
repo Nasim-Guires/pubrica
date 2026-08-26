@@ -418,13 +418,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       .map((p) => ({ path: `/academy/${p.urlPath}`, priority: 0.5, changeFrequency: "monthly" as const })),
 
     // Insights: route is flat-only (/insights/[slug]) regardless of urlPath nesting.
+    // Filtered on urlPath (not slug) to drop each source's empty-urlPath hub/placeholder
+    // doc — that doc's slug equals the source name, which would otherwise generate a
+    // spurious self-referential /insights/insights entry.
     ...insightsPosts
-      .filter((p) => p.slug)
+      .filter((p) => p.urlPath)
       .map((p) => ({ path: `/insights/${p.slug}`, priority: 0.5, changeFrequency: "monthly" as const })),
 
-    // Blog: flat route, Payload-backed.
+    // Blog: flat route, Payload-backed. See insights comment above re: the urlPath filter.
     ...blogPosts
-      .filter((p) => p.slug)
+      .filter((p) => p.urlPath)
       .map((p) => ({ path: `/blog/${p.slug}`, priority: 0.6, changeFrequency: "weekly" as const })),
 
     // Careers: urlPath encodes "job-posting/slug" for postings, bare slug otherwise.
@@ -432,9 +435,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       .filter((p) => p.urlPath)
       .map((p) => ({ path: `/careers/${p.urlPath}`, priority: 0.5, changeFrequency: "weekly" as const })),
 
-    // Call for papers: flat route.
+    // Call for papers: flat route. See insights comment above re: the urlPath filter.
     ...cfpPosts
-      .filter((p) => p.slug)
+      .filter((p) => p.urlPath)
       .map((p) => ({ path: `/call-for-papers/${p.slug}`, priority: 0.5, changeFrequency: "weekly" as const })),
   ];
 
