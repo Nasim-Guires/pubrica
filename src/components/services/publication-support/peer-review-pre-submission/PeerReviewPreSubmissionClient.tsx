@@ -1,4 +1,5 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,18 +7,11 @@ export default function PeerReviewPreSubmissionClient() {
   return (
     <main className="w-full bg-white text-[#1a202c] font-sans antialiased">
       {/* Hero Section */}
-      <section className="w-full bg-[#0d1e1c] text-white py-16 px-4 sm:px-6 lg:px-8 text-center border-b border-teal-800">
-        <div className="max-w-5xl mx-auto space-y-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight">
-            Pre-Submission Peer Review Service for Research Manuscript
-          </h1>
-          <p className="text-sm sm:text-base md:text-lg text-teal-100 font-medium max-w-3xl mx-auto leading-relaxed">
-            Receive Expert Feedback from Domain-Specific Reviewers Before
-            Journal Submission: Constructive Feedback from the Subject-Specific
-            Experts
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Pre-Submission Peer Review Service for Research Manuscript"
+        description="Receive Expert Feedback from Domain-Specific Reviewers Before Journal Submission: Constructive Feedback from the Subject-Specific Experts"
+        headingAs="h1"
+      />
 
       {/* Main Content Area */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
@@ -158,14 +152,11 @@ export default function PeerReviewPreSubmissionClient() {
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap items-center gap-4 pt-4">
+          <div className="flex flex-wrap items-center gap-3 mt-6 mb-10">
             <GetFreeQuoteButton />
-            <Link
-              href="/research-services-brochures"
-              className="inline-flex items-center justify-center px-6 py-2.5 bg-[#b30000] hover:bg-[#8e0000] text-white font-semibold rounded-md text-sm transition-colors duration-200 shadow-sm h-[42px]"
-            >
+            <button className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
               View Brochure
-            </Link>
+            </button>
           </div>
         </div>
 

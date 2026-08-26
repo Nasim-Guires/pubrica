@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { EditorialWorkflowSection } from '@/components/common/EditorialWorkflowSection';
 
 // 1. Who We Serve Cards Data
 const whoWeServeData = [
@@ -42,36 +43,40 @@ const standards = [
 // 2. Process Steps Data
 const processSteps = [
   {
-    number: '1',
-    title: 'UPLOAD YOUR MANUSCRIPT',
+    stepNumber: 1,
+    title: "UPLOAD YOUR MANUSCRIPT",
     description:
-      'The process begins by submitting your manuscript and any specific guidelines for the journal or instructions from your institution. This helps us align our review with your publication objectives.',
-    icon: '/images/publication-support/peer-review-pre-submission/scopeofthejournal.webp',
-    position: 'bottom', // Card rendered below horizontal timeline bar
+      "The process begins by submitting your manuscript and any specific guidelines for the journal or instructions from your institution. This helps us align our review with your publication objectives.",
+    iconSrc:
+      "/images/publication-support/peer-review-pre-submission/scopeofthejournal.webp",
+    position: "bottom" as const,
   },
   {
-    number: '2',
-    title: 'TECHNICAL REVIEW',
+    stepNumber: 2,
+    title: "TECHNICAL REVIEW",
     description:
       "Pubrica's peer review pre-submission service raises the impact and compliance of your research with industry publication expectations.",
-    icon: '/images/publication-support/peer-review-pre-submission/target-readership.webp',
-    position: 'top', // Card rendered above horizontal timeline bar
+    iconSrc:
+      "/images/publication-support/peer-review-pre-submission/target-readership.webp",
+    position: "top" as const,
   },
   {
-    number: '3',
-    title: 'EXPERT SCIENTIFIC FEEDBACK',
+    stepNumber: 3,
+    title: "EXPERT SCIENTIFIC FEEDBACK",
     description:
       "Following a comprehensive technical review, Pubrica's editors highlight gaps and provide feedback on the most important elements, ensuring ethical compliance.",
-    icon: '/images/publication-support/peer-review-pre-submission/timecost.webp',
-    position: 'bottom', // Card rendered below horizontal timeline bar
+    iconSrc:
+      "/images/publication-support/peer-review-pre-submission/timecost.webp",
+    position: "bottom" as const,
   },
   {
-    number: '4',
-    title: 'MULTIPLE ROUNDS OF REVIEW',
+    stepNumber: 4,
+    title: "MULTIPLE ROUNDS OF REVIEW",
     description:
-      'Following your revisions, Pubrica provides one complimentary re-review by a subject matter expert to ensure that the revision reflects the original recommendations and the journal\'s expectations.',
-    icon: '/images/publication-support/peer-review-pre-submission/visibilityquality.webp',
-    position: 'top', // Card rendered above horizontal timeline bar
+      "Following your revisions, Pubrica provides one complimentary re-review by a subject matter expert to ensure that the revision reflects the original recommendations and the journal's expectations.",
+    iconSrc:
+      "/images/publication-support/peer-review-pre-submission/visibilityquality.webp",
+    position: "top" as const,
   },
 ];
 
@@ -143,51 +148,11 @@ export default function ReviewerProcessSection() {
       {/* ========================================== */}
       {/* SECTION 2: OUR REVIEWER COMMENTS PROCESS  */}
       {/* ========================================== */}
-      <section className="bg-[#eeefef] py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#0c3547] mb-14">
-            Our Reviewer Comments Process
-          </h2>
-
-          {/* Process Grid with Alternating Staggered Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
-            {processSteps.map((step, idx) => {
-              const isTop = step.position === 'top';
-
-              return (
-                <div key={idx} className="flex flex-col items-center w-full">
-                  {/* UPPER LEVEL: Circle badge for odd steps OR Card for even steps */}
-                  {!isTop ? (
-                    <div className="flex flex-col items-center mb-3">
-                      <div className="w-10 h-10 rounded-full bg-[#0082a6] text-white flex items-center justify-center font-bold text-lg shadow-sm">
-                        {step.number}
-                      </div>
-                      <div className="w-0.5 h-6 bg-red-300 my-1" />
-                    </div>
-                  ) : (
-                    <ProcessCard step={step} />
-                  )}
-
-                  {/* MIDDLE LEVEL: Horizontal Connecting Teal Bar */}
-                  <div className="w-full h-3 bg-[#0082a6] my-2 rounded-full hidden lg:block" />
-
-                  {/* LOWER LEVEL: Card for odd steps OR Circle badge for even steps */}
-                  {!isTop ? (
-                    <ProcessCard step={step} />
-                  ) : (
-                    <div className="flex flex-col items-center mt-3">
-                      <div className="w-0.5 h-6 bg-red-300 my-1" />
-                      <div className="w-10 h-10 rounded-full bg-[#0082a6] text-white flex items-center justify-center font-bold text-lg shadow-sm">
-                        {step.number}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <EditorialWorkflowSection
+        heading="Our Reviewer Comments Process"
+        subheading=''
+        steps={processSteps}
+      />
 
       {/* ========================================== */}
       {/* SECTION 3: SATISFACTION BANNER             */}
@@ -264,7 +229,7 @@ function ProcessCard({ step }: { step: (typeof processSteps)[0] }) {
       {/* Icon with white invert on hover */}
       <div className="w-12 h-12 relative mb-4 transition-all group-hover:brightness-0 group-hover:invert">
         <Image
-          src={step.icon}
+          src={step.iconSrc}
           alt={step.title}
           fill
           className="object-contain"

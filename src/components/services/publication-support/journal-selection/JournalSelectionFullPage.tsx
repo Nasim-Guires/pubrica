@@ -1,5 +1,6 @@
 "use client";
 
+import { EditorialWorkflowSection } from "@/components/common/EditorialWorkflowSection";
 import React, { useState } from "react";
 
 // ==========================================
@@ -61,54 +62,54 @@ const audienceList: AudienceCard[] = [
 ];
 
 // 2. Step-by-Step Data
-const stepsList: StepItem[] = [
+const stepsList = [
   {
-    id: 1,
+    stepNumber: 1,
     title: "IDENTIFY JOURNAL SCOPE AND OBJECTIVES",
     description:
       "We start by understanding your manuscript and matching it with journals that align with your research domain and objectives.",
+    iconSrc: "/images/publication-support/journal-selection/scopeofthejournal.webp",
     position: "bottom",
-    iconUrl: "/images/publication-support/journal-selection/scopeofthejournal.webp",
   },
   {
-    id: 2,
+    stepNumber: 2,
     title: "REVIEW PREVIOUSLY PUBLISHED ARTICLES",
     description:
       "We evaluate journals that have published similar topics to ensure your work aligns with their editorial interests.",
+    iconSrc: "/images/publication-support/journal-selection/target-readership.webp",
     position: "top",
-    iconUrl: "/images/publication-support/journal-selection/target-readership.webp",
   },
   {
-    id: 3,
+    stepNumber: 3,
     title: "EVALUATE JOURNAL POLICIES & GUIDELINES",
     description:
       "Our team checks submission criteria, manuscript formatting, and open access policies to ensure compliance.",
+    iconSrc: "/images/publication-support/journal-selection/scopeofthejournal.webp",
     position: "bottom",
-    iconUrl: "/images/publication-support/journal-selection/scopeofthejournal.webp",
   },
   {
-    id: 4,
+    stepNumber: 4,
     title: "ANALYZE JOURNAL IMPACT & REPUTATION",
     description:
       "We assess metrics like Journal Impact Factor (JIF), Scopus rankings, and indexing databases.",
+    iconSrc: "/images/publication-support/journal-selection/visibilityquality.webp",
     position: "top",
-    iconUrl: "/images/publication-support/journal-selection/visibilityquality.webp",
   },
   {
-    id: 5,
+    stepNumber: 5,
     title: "ASSESS JOURNAL VISIBILITY AND REACH",
     description:
       "Choosing journals with wide readership and high discoverability improves your research visibility.",
+    iconSrc: "/images/publication-support/journal-selection/target-readership.webp",
     position: "bottom",
-    iconUrl: "/images/publication-support/journal-selection/target-readership.webp",
   },
   {
-    id: 6,
+    stepNumber: 6,
     title: "CONSIDER TIMEFRAMES AND COST FACTORS",
     description:
       "We provide insights into submission-to-publication timelines and APCs (if any), helping you plan effectively.",
+    iconSrc: "/images/publication-support/journal-selection/scopeofthejournal.webp",
     position: "top",
-    iconUrl: "/images/publication-support/journal-selection/scopeofthejournal.webp",
   },
 ];
 
@@ -255,72 +256,11 @@ export default function JournalSelectionFullPage() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 2: HOW JOURNAL SELECTION WORKS (STEP-BY-STEP)*/}
       {/* ---------------------------------------------------- */}
-      <section className="max-w-7xl mx-auto space-y-12 py-6">
-        {/* Header */}
-        <div className="text-center space-y-2">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44]">
-            How a Journal Selection: Writing and Rewriting Works
-          </h2>
-          <p className="text-sm sm:text-base font-semibold text-slate-700">
-            Our step-by-Step Process
-          </p>
-        </div>
-
-        {/* Process Flow Container */}
-        <div className="relative py-10">
-          {/* Main Horizontal Timeline Bar (Desktop Only) */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-2 bg-[#008ba3] -translate-y-1/2 z-0" />
-
-          {/* Grid of Steps */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-4 relative z-10">
-            {stepsList.map((step) => {
-              const isTopOnDesktop = step.position === "top";
-
-              return (
-                <div
-                  key={step.id}
-                  className="flex flex-col items-center justify-between lg:min-h-[420px] space-y-4 lg:space-y-0"
-                >
-                  {/* TOP SLOT (Mobile: Always Circle, Desktop: Alternates based on position) */}
-                  <div className="w-full flex flex-col items-center lg:justify-end lg:min-h-[200px] lg:pb-4">
-                    {/* Mobile & Tablet layout view */}
-                    <div className="block lg:hidden">
-                      <StepNumberCircle number={step.id} />
-                    </div>
-                    {/* Desktop layout view */}
-                    <div className="hidden lg:block w-full">
-                      {isTopOnDesktop ? (
-                        <StepCard step={step} />
-                      ) : (
-                        <StepNumberCircle number={step.id} />
-                      )}
-                    </div>
-                  </div>
-
-                  {/* MIDDLE CONNECTOR (Desktop Line Connector) */}
-                  <div className="hidden lg:block h-8 w-0.5 bg-[#008ba3]" />
-
-                  {/* BOTTOM SLOT (Mobile: Always Card, Desktop: Alternates based on position) */}
-                  <div className="w-full flex flex-col items-center lg:justify-start lg:min-h-[200px] lg:pt-4">
-                    {/* Mobile & Tablet layout view */}
-                    <div className="block lg:hidden w-full">
-                      <StepCard step={step} />
-                    </div>
-                    {/* Desktop layout view */}
-                    <div className="hidden lg:block w-full">
-                      {isTopOnDesktop ? (
-                        <StepNumberCircle number={step.id} />
-                      ) : (
-                        <StepCard step={step} />
-                      )}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <EditorialWorkflowSection
+        heading="How a Journal Selection: Writing and Rewriting Works"
+        subheading="Our Step-by-Step Process"
+        steps={stepsList}
+      />
 
       {/* ---------------------------------------------------- */}
       {/* SECTION 3: JOURNAL SELECTION BY CRITERIA             */}

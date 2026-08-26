@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import CommonPackages from "@/components/common/CommonPackages";
 
 // Base image path for package badge icons
 const BASE_IMAGE_PATH = "/images/publication-support/peer-review-pre-submission";
@@ -10,58 +11,47 @@ const BASE_IMAGE_PATH = "/images/publication-support/peer-review-pre-submission"
 // 1. Package Cards Data
 const packagesData = [
   {
-    id: "basic",
-    badgeImage: `${BASE_IMAGE_PATH}/Basic-480x480.webp`,
-    name: "Basic",
+    icon: `${BASE_IMAGE_PATH}/Basic-480x480.webp`,
+    title: "Basic",
     subtitle: "HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW",
-    badgeBg: "bg-[#f4d17b]", // Soft yellow badge
-    headerBg: "bg-[#0f3d3a]", // Dark teal header line
-    cardBg: "bg-[#c6d7d6]", // Light sage/teal body
-    idealFor:
-      "Authors seeking a scientific review to find gaps before submission.",
+    idealFor: "Authors seeking a scientific review to find gaps before submission.",
     includes: [
       "Feedback from subject-matter experts.",
       "Report with structured feedback on research quality, clarity, structure, and scientific validity.",
       "Simulated reviewer comments that align with the expectations of journal peer reviews.",
     ],
-    optionalAddOns: [
+    addOns: [
       "Follow-up clarification call with the reviewer",
       "Guidance on formatting for a specific journal",
     ],
     turnaround: "5 working days.",
+    cardBgColor: "#c6d7d6",
+    titleColor: "#0f3d3a",
   },
   {
-    id: "advanced",
-    badgeImage: `${BASE_IMAGE_PATH}/advanced.webp`,
-    name: "ADVANCED",
+    icon: `${BASE_IMAGE_PATH}/advanced.webp`,
+    title: "ADVANCED",
     subtitle: "HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW",
-    badgeBg: "bg-[#98cf82]", // Light green badge
-    headerBg: "bg-[#7c4d93]", // Dark purple header line
-    cardBg: "bg-[#d2b8d9]", // Light lavender body
-    idealFor:
-      "Authors needing both expert review plus checks on submission readiness.",
+    idealFor: "Authors needing both expert review plus checks on submission readiness.",
     includes: [
       "All features of the Basic Package",
       "Formatting as per the author's target journal's submission guidelines",
       "Pre-submission compliance checklist (covering ethics, references, figures, disclosures, etc.)",
       "Assessment of the author's manuscript against the journal's scope",
     ],
-    optionalAddOns: [
+    addOns: [
       "Adaptation of reference style (APA, AMA, Vancouver, etc.)",
       "Formatting of the authors' information and metadata.",
     ],
     turnaround: "7 working days.",
+    cardBgColor: "#d2b8d9",
+    titleColor: "#7c4d93",
   },
   {
-    id: "comprehensive",
-    badgeImage: `${BASE_IMAGE_PATH}/Comprehensive-480x480.webp`,
-    name: "Comprehensive",
+    icon: `${BASE_IMAGE_PATH}/Comprehensive-480x480.webp`,
+    title: "Comprehensive",
     subtitle: "HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW",
-    badgeBg: "bg-[#f57c7c]", // Soft red/coral badge
-    headerBg: "bg-[#7a3e1d]", // Dark brown header line
-    cardBg: "bg-[#d8be91]", // Light tan/gold body
-    idealFor:
-      "Authors aiming to submit to high-impact journals and requiring full editing support.",
+    idealFor: "Authors aiming to submit to high-impact journals and requiring full editing support.",
     includes: [
       "All features in the Advanced Package",
       "Support with critical revisions to address feedback",
@@ -69,11 +59,13 @@ const packagesData = [
       "Check for plagiarism and provide a similarity report (Turnitin or iThenticate)",
       "Final review from an editor for flow, coherence, and whether the manuscript fits the journal",
     ],
-    optionalAddOns: [
+    addOns: [
       "Drafting of a response letter for journal reviewers",
       "Language editing and technical proofreading",
     ],
     turnaround: "10 working days.",
+    cardBgColor: "#d8be91",
+    titleColor: "#7a3e1d",
   },
 ];
 
@@ -141,106 +133,7 @@ export default function PackagesAndTestimonialsSection() {
         </h2>
 
         {/* Package Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-10">
-          {packagesData.map((pkg) => (
-            <div
-              key={pkg.id}
-              className={`flex flex-col rounded-lg overflow-hidden shadow-md ${pkg.cardBg}`}
-            >
-              {/* Header Box */}
-              <div className="bg-white p-5 border-b border-gray-100 flex items-start space-x-3">
-                {/* Image Circle Badge */}
-                <div
-                  className={`w-12 h-12 rounded-full ${pkg.badgeBg} p-2 flex items-center justify-center shrink-0 shadow-inner relative overflow-hidden`}
-                >
-                  <Image
-                    src={pkg.badgeImage}
-                    alt={`${pkg.name} Package Icon`}
-                    fill
-                    sizes="48px"
-                    className="object-contain p-1.5"
-                  />
-                </div>
-
-                {/* Package Name & Subtitle */}
-                <div>
-                  <h3 className="text-xl font-extrabold text-gray-900">
-                    {pkg.name}
-                  </h3>
-                  <p className="text-[10px] sm:text-xs font-semibold text-gray-600 tracking-tight leading-tight mt-0.5">
-                    {pkg.subtitle}
-                  </p>
-                </div>
-              </div>
-
-              {/* Decorative Header Bar */}
-              <div className={`h-2 ${pkg.headerBg}`} />
-
-              {/* Package Content */}
-              <div className="p-5 flex-1 flex flex-col justify-between space-y-5 text-xs sm:text-sm">
-                <div className="space-y-4">
-                  {/* Ideal For */}
-                  <div className="flex items-start space-x-2">
-                    <ArrowIcon className="mt-0.5 shrink-0" />
-                    <div>
-                      <strong className="font-bold text-gray-900">
-                        Ideal for:
-                      </strong>
-                      <p className="text-gray-800 mt-0.5 leading-snug">
-                        {pkg.idealFor}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Includes */}
-                  <div className="flex items-start space-x-2">
-                    <ArrowIcon className="mt-0.5 shrink-0" />
-                    <div className="flex-1">
-                      <strong className="font-bold text-gray-900">
-                        Includes:
-                      </strong>
-                      <ul className="mt-1 space-y-2 text-gray-800 leading-snug">
-                        {pkg.includes.map((item, idx) => (
-                          <li key={idx}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  {/* Optional Add-ons */}
-                  {pkg.optionalAddOns && pkg.optionalAddOns.length > 0 && (
-                    <div className="flex items-start space-x-2 pt-1">
-                      <ArrowIcon className="mt-0.5 shrink-0" />
-                      <div className="flex-1">
-                        <strong className="font-bold text-gray-900">
-                          Optional Add-ons:
-                        </strong>
-                        <ul className="mt-1 space-y-1.5 text-gray-800 leading-snug">
-                          {pkg.optionalAddOns.map((addon, idx) => (
-                            <li key={idx}>{addon}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                {/* Turnaround Time */}
-                <div className="flex items-start space-x-2 pt-2 border-t border-black/10">
-                  <ArrowIcon className="mt-0.5 shrink-0" />
-                  <div>
-                    <strong className="font-bold text-gray-900">
-                      Turnaround:
-                    </strong>
-                    <p className="text-gray-900 font-medium mt-0.5">
-                      {pkg.turnaround}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <CommonPackages packages={packagesData} />
 
         {/* Full-width "Get a Free Quote" Button */}
         <div className="w-full text-center">

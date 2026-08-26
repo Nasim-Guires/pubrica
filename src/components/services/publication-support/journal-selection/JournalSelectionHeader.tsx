@@ -1,6 +1,8 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
+import Link from 'next/link';
 import React from 'react';
 
 export default function JournalSelectionHeader() {
@@ -10,16 +12,11 @@ export default function JournalSelectionHeader() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 1: TOP BANNER (DARK HERO BOX)              */}
       {/* ---------------------------------------------------- */}
-      <section className="w-full bg-[#0d2a2d] py-10 px-4 sm:px-6 lg:px-8 text-center text-white">
-        <div className="max-w-4xl mx-auto border border-white/20 p-6 sm:p-8 rounded-sm bg-[#13363a]/40">
-          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3">
-            Journal Selection Service
-          </h1>
-          <p className="text-xs sm:text-sm text-slate-200 leading-relaxed max-w-2xl mx-auto">
-            About 20% of manuscript rejections occur due to scope mismatch with the journal. Our expert will review your research and suggest 3–5 journals that best fit your publication goals.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Journal Selection Service"
+        description="About 20% of manuscript rejections occur due to scope mismatch with the journal. Our expert will review your research and suggest 3–5 journals that best fit your publication goals."
+        headingAs="h1"
+      />
 
       {/* ---------------------------------------------------- */}
       {/* SECTION 2: RECOMMENDATIONS BANNER & CTA              */}
@@ -35,9 +32,7 @@ export default function JournalSelectionHeader() {
         </div>
 
         <div>
-          <button className="px-6 py-2.5 bg-[#a80000] hover:bg-[#830000] text-white font-semibold text-xs sm:text-sm rounded-md transition-colors shadow-sm">
-            Request a Quote
-          </button>
+          <GetFreeQuoteButton />
         </div>
       </section>
 
@@ -73,10 +68,10 @@ export default function JournalSelectionHeader() {
           <li>Align their manuscript with the appropriate journal scopes</li>
           <li>
             Comply with ethical publication standards (
-            <a href="/services/publication-support/journal-selection/understanding-cope-publication-ethics" className="text-cyan-600 hover:underline">
+            <a href="/services/publication-support/journal-selection/understanding-cope-publication-ethics" className="text-cyan-600 ">
               COPE
             </a>
-            , ICMJE, GPP)
+            , <Link href="/services/publication-support/poster-preparation/scientific-poster-design-presentation/" className="text-cyan-600">ICMJE</Link>, GPP)
           </li>
           <li>
             Avoid the risk of{' '}
@@ -126,13 +121,12 @@ export default function JournalSelectionHeader() {
         </p>
 
         {/* Action Buttons */}
-        <div className="flex flex-wrap items-center gap-4 pt-4">
+        <div className="flex flex-wrap items-center gap-3 mt-6 mb-10">
           <GetFreeQuoteButton />
-          <button className="px-6 py-2.5 bg-[#a80000] hover:bg-[#830000] text-white font-bold text-xs sm:text-sm rounded-md transition-colors shadow-sm">
+          <button className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
             View Brochure
           </button>
         </div>
-
       </section>
 
     </div>

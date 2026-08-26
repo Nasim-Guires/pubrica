@@ -1,5 +1,6 @@
 "use client";
 
+import CommonFAQ from "@/components/common/FAQ";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -14,77 +15,65 @@ export default function PubricaSampleWorkAndFAQ() {
 
   const faqs = [
     {
-      id: 1,
-      question: "1. How do I choose the right journal for my research paper?",
+      question: "How do I choose the right journal for my research paper?",
       answer:
         "Choose the right journal by matching your manuscript's scope, audience, and methodology with the journal's aims, reviewing recent articles, checking indexing status, and following submission guidelines carefully.",
     },
     {
-      id: 2,
-      question: "2. How do I know if my manuscript fits a journal's scope?",
+      question: "How do I know if my manuscript fits a journal's scope?",
       answer:
         "Examine the journal’s aims and scope, peruse recently published articles, compare your topic and methods with similar studies, and ensure your research is appropriate for the journal’s scope.",
     },
     {
-      id: 3,
       question:
-        "3. What tools can help researchers find suitable journals for their manuscripts?",
+        "What tools can help researchers find suitable journals for their manuscripts?",
       answer:
         "Researchers can use journal finder tools, database search engines such as Scopus and Web of Science, and citation analysis tools to find a proper journal for submission.",
     },
     {
-      id: 4,
       question:
-        "4. What factors should I consider when selecting a journal for publication?",
+        "What factors should I consider when selecting a journal for publication?",
       answer:
         "When selecting a journal for publication, it is important to take into account the journal’s scope, audience, whether it is indexed or not, its impact and reputation, its peer-review process, publication time, and requirements.",
     },
     {
-      id: 5,
       question:
-        "5. How can I ensure my manuscript meets a journal's submission requirements?",
+        "How can I ensure my manuscript meets a journal's submission requirements?",
       answer:
         "Carefully read and adhere to author guidelines provided by the journal, format requirements, and then structure your work in a similar manner. Also, be mindful of word counts and references.",
     },
     {
-      id: 6,
       question:
-        "6. How can researchers identify reputable journals in their field?",
+        "How can researchers identify reputable journals in their field?",
       answer:
         "Researchers may identify reliable journals by checking database indexing, publisher reputation, editorial boards, transparency in peer review processes, and journal evaluation lists provided by reputable sources.",
     },
     {
-      id: 7,
       question:
-        "7. Can journal selection services help improve manuscript acceptance chances?",
+        "Can journal selection services help improve manuscript acceptance chances?",
       answer:
         "Journal selection services can help by matching your manuscript with appropriate journals, thus increasing alignment and minimizing the risk of rejection due to poor journal fit.",
     },
     {
-      id: 8,
-      question:
-        "8. How to verify the credibility of a journal before submission?",
+      question: "How to verify the credibility of a journal before submission?",
       answer:
         "Verify the journal’s credibility by checking the databases in which the journal is indexed, the reputation of the publisher, the journal’s editorial board, the journal’s peer review policy, and the journal’s ethical policies.",
     },
     {
-      id: 9,
       question:
-        "9. What criteria do journals use to evaluate whether a manuscript fits their scope?",
+        "What criteria do journals use to evaluate whether a manuscript fits their scope?",
       answer:
         "Journals use various parameters to determine whether your manuscript is a good fit, such as relevance, alignment with their aims, quality of methods, originality, importance, and contribution to the field.",
     },
     {
-      id: 10,
       question:
-        "10. Why is selecting the right journal important for research publication success?",
+        "Why is selecting the right journal important for research publication success?",
       answer:
         "Choosing the appropriate journal boosts your chances of getting published, reaches your intended audience, maximizes your paper’s visibility, boosts your citations, and maximizes alignment with the journal’s scope.",
     },
     {
-      id: 11,
       question:
-        "11. When should researchers decide on the target journal during the research process?",
+        "When should researchers decide on the target journal during the research process?",
       answer:
         "A choice should be made about the target journal early in the research process—in fact, as early as possible in the design phase.",
     },
@@ -116,9 +105,9 @@ export default function PubricaSampleWorkAndFAQ() {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] mb-3">
                 Journal Selection Sample Work
               </h2>
-              <button className="bg-black text-white hover:bg-slate-800 text-xs font-bold py-2.5 px-8 rounded-full transition-all">
+              <Link href="/insights/sample-work/anesthetic-management-in-pregnant-woman/" className="bg-black text-white hover:bg-slate-800 text-xs font-bold py-2.5 px-8 rounded-full transition-all">
                 Discover More
-              </button>
+              </Link>
             </div>
 
             <div className="pt-2 border-t border-emerald-100">
@@ -136,9 +125,9 @@ export default function PubricaSampleWorkAndFAQ() {
                 sample work tailored to your manuscript’s scope, indexing
                 requirements, and impact factor goals.
               </p>
-              <button className="bg-black text-white hover:bg-slate-800 text-xs font-bold py-2.5 px-8 rounded-full transition-all">
+              <Link href="/insights/sample-work" className="bg-black text-white hover:bg-slate-800 text-xs font-bold py-2.5 px-8 rounded-full transition-all">
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -222,65 +211,10 @@ export default function PubricaSampleWorkAndFAQ() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 3: FREQUENTLY ASKED QUESTIONS (FAQ)          */}
       {/* ---------------------------------------------------- */}
-      <section className="py-12 px-6 sm:px-12 lg:px-16 max-w-7xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] mb-8">
-          Frequently Asked Questions – Journal Selection Services
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 items-start">
-          {/* Left Column FAQs (1 to 6) */}
-          <div className="space-y-4">
-            {faqs.slice(0, 6).map((faq) => (
-              <div
-                key={faq.id}
-                className="border border-slate-300 rounded-sm overflow-hidden transition-all duration-200 bg-white"
-              >
-                <button
-                  onClick={() => toggleFaq(faq.id)}
-                  className="w-full text-left px-4 py-3.5 flex justify-between items-center font-bold text-xs sm:text-sm text-slate-800 hover:bg-slate-50 transition-colors"
-                >
-                  <span className="pr-2">{faq.question}</span>
-                  <span className="text-base font-bold text-slate-600 shrink-0">
-                    {openFaq === faq.id ? "−" : "+"}
-                  </span>
-                </button>
-
-                {openFaq === faq.id && (
-                  <div className="px-4 pb-4 pt-1 text-xs sm:text-sm text-slate-600 border-t border-slate-100 leading-relaxed bg-slate-50/50">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Right Column FAQs (7 to 11) */}
-          <div className="space-y-4">
-            {faqs.slice(6, 11).map((faq) => (
-              <div
-                key={faq.id}
-                className="border border-slate-300 rounded-sm overflow-hidden transition-all duration-200 bg-white"
-              >
-                <button
-                  onClick={() => toggleFaq(faq.id)}
-                  className="w-full text-left px-4 py-3.5 flex justify-between items-center font-bold text-xs sm:text-sm text-slate-800 hover:bg-slate-50 transition-colors"
-                >
-                  <span className="pr-2">{faq.question}</span>
-                  <span className="text-base font-bold text-slate-600 shrink-0">
-                    {openFaq === faq.id ? "−" : "+"}
-                  </span>
-                </button>
-
-                {openFaq === faq.id && (
-                  <div className="px-4 pb-4 pt-1 text-xs sm:text-sm text-slate-600 border-t border-slate-100 leading-relaxed bg-slate-50/50">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CommonFAQ
+        title="Frequently Asked Questions – Journal Selection Services"
+        faqs={faqs}
+      />
     </div>
   );
 }
