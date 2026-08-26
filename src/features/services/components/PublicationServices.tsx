@@ -9,6 +9,31 @@ import {
   Zap,
 } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import CommonPackages from "@/components/common/CommonPackages";
+
+export interface PackageItem {
+  // --- Standard Header & Icon Properties ---
+  title: string;
+  subtitle?: string;
+  icon: string; // Path to image icon (e.g., "/icons/standard-s.svg")
+  letter?: string; // Optional letter badge fallback (e.g., "S", "A", "E")
+
+  // --- Core Package Information ---
+  idealFor: string;
+  includes: string[];
+  addons?: string[];
+  turnaround?: string;
+  bestFor?: string;
+  popular?: boolean;
+
+  // --- Dynamic Color & Styling Properties ---
+  cardBgColor?: string; // Hex color string (e.g., "#e2ebea")
+  titleColor?: string; // Hex color string (e.g., "#1e3a8a")
+  badgeBg?: string; // Tailwind class for letter badge (e.g., "bg-slate-200 text-slate-800")
+  colorClass?: string; // Tailwind gradient/text classes
+  accentBorder?: string; // Tailwind accent border classes
+  iconColor?: string; // Tailwind icon color classes
+}
 
 export default function PublicationServices() {
   const complianceFrameworks = [
@@ -31,24 +56,21 @@ export default function PublicationServices() {
       suffix: ")",
     },
     {
-      prefix: "HIPAA (",
+      linkText: "HIPAA",
+      suffix: " (",
       boldText: "Health Insurance Portability and Accountability Act",
-      suffix: ")",
+      tailSuffix: ")",
     },
     {
       prefix: "World Association of Medical Editors (WAME) Policies",
     },
   ];
 
-  const packages = [
+  const publishingPackages: PackageItem[] = [
     {
-      name: "Standard",
-      letter: "S",
-      colorClass: "from-slate-100 to-slate-200 border-slate-300 text-slate-700",
-      badgeBg: "bg-slate-200 text-slate-800",
-      accentBorder: "border-t-slate-400",
-      iconColor: "text-slate-600",
-      bgColor: "bg-[#e2ebea]", // Matching the muted grey-teal background
+      icon: "/images/icons/S.png",
+      title: "Standard",
+      subtitle: "Baseline Support for Journal Submission",
       idealFor:
         "Early-career researchers, postgraduate students, or first-time authors needing baseline support for journal submission.",
       includes: [
@@ -58,23 +80,14 @@ export default function PublicationServices() {
         "Plagiarism check and summary report.",
         "Draft cover letter as per the journal editor's requirements.",
       ],
-      addons: [
-        "Journal submission support (single submission)",
-        "Draft the response to reviewer comments (one response cycle)",
-        "Language editing (basic grammar and clarity)",
-        "Establishment of ORCID iD and author profile.",
-      ],
       turnaround: "7 - 10 business days.",
+      cardBgColor: "#e2ebea",
+      titleColor: "#1e3a8a",
     },
     {
-      name: "Advanced",
-      letter: "A",
-      colorClass:
-        "from-purple-100 to-purple-200 border-purple-300 text-purple-700",
-      badgeBg: "bg-purple-200 text-purple-800",
-      accentBorder: "border-t-purple-400",
-      iconColor: "text-purple-600",
-      bgColor: "bg-[#dfd1e3]", // Matching the muted lavender background
+      icon: "/images/icons/advanced.webp",
+      title: "Advanced",
+      subtitle: "Moderate Support for Scopus/PubMed Journals",
       idealFor:
         "Researchers targeting Scopus or PubMed-indexed journals with a moderate level of editorial and submission support.",
       includes: [
@@ -84,23 +97,14 @@ export default function PublicationServices() {
         "Comprehensive plagiarism review and limited rewriting, Peer-review readiness assessment (scope match, coherence, scientific merit).",
         "Formatting of figures and tables (up to 3 items).",
       ],
-      addons: [
-        "Reviewer comment drafting (up to 2 response cycles).",
-        "Minor manuscript revisions and updates.",
-        "Submission to an alternative journal after rejection.",
-        "Pre-submission inquiry to journal editor.",
-      ],
       turnaround: "10 - 15 business days.",
+      cardBgColor: "#dfd1e3",
+      titleColor: "#6b21a8",
     },
     {
-      name: "Elite",
-      letter: "E",
-      colorClass: "from-amber-100 to-amber-200 border-amber-300 text-amber-700",
-      badgeBg: "bg-amber-200 text-amber-800",
-      accentBorder: "border-t-amber-400",
-      iconColor: "text-amber-700",
-      bgColor: "bg-[#d4c097]", // Matching the muted gold/tan background
-      popular: true,
+      icon: "/images/icons/elite.webp",
+      title: "Elite",
+      subtitle: "End-to-End Support for High-Impact Journals",
       idealFor:
         "Researching for SCI, SCIE, or Q1 journals seeking comprehensive end-to-end publishing support.",
       includes: [
@@ -113,13 +117,9 @@ export default function PublicationServices() {
         "Compliance review with COPE, ICMJE, and journal-specific policies.",
         "Complete journal submission package.",
       ],
-      addons: [
-        "End-to-end support until full acceptance.",
-        "Scientific editing with a senior PhD expert consultation.",
-        "Outreach material: press release or plain-language summary.",
-        "Journal cover page design recommendations and artwork.",
-      ],
       turnaround: "15 - 20 business days.",
+      cardBgColor: "#d4c097",
+      titleColor: "#78350f",
     },
   ];
 
@@ -128,10 +128,12 @@ export default function PublicationServices() {
       "/insights/incidence-cardiovascular-diseases-india-global",
     "Medical Journal":
       "/services/publication-support/journal-submission/complete-guide-to-writing-cover-letter-for-medical-journals/",
+    "HIPAA":
+      "/services/publication-support/hipaa-compliance-complete-overview/",
   };
 
   return (
-    <section className="bg-[#f2f4f3] py-16 px-4 sm:px-6 lg:px-8 font-sans text-slate-800">
+    <section className="bg-[#f2f4f3] py-16 px-4 sm:px-6 lg:px-8 font-sans text-slate-800 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* ================= COMPLIANCE SECTION ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-24">
@@ -143,7 +145,7 @@ export default function PublicationServices() {
               At Pubrica, we provide{" "}
               <Link
                 href={ROUTE_MAP["best publication support services"]}
-                className="text-sky-600 font-normal no-underline hover:underline cursor-pointer inline"
+                className="text-sky-600 font-normal no-underline cursor-pointer inline"
               >
                 best publication support services
               </Link>{" "}
@@ -164,21 +166,22 @@ export default function PublicationServices() {
                   <li key={index} className="flex items-start gap-2.5 text-sm sm:text-base leading-snug">
                     <span className="text-[#e11d48] mt-1 shrink-0 text-xs">●</span>
                     <div className="text-slate-800">
-                      <span>{item.prefix}</span>
+                      {item.prefix && <span>{item.prefix}</span>}
                       {item.linkText && (
                         <Link
                           href={ROUTE_MAP[item.linkText]}
-                          className="text-sky-600 hover:underline inline"
+                          className="text-sky-600 no-underline inline"
                         >
                           {item.linkText}
                         </Link>
                       )}
+                      {item.suffix && <span>{item.suffix}</span>}
                       {item.boldText && (
                         <span className="font-semibold text-slate-900">
                           {item.boldText}
                         </span>
                       )}
-                      {item.suffix && <span>{item.suffix}</span>}
+                      {item.tailSuffix && <span>{item.tailSuffix}</span>}
                     </div>
                   </li>
                 ))}
@@ -198,81 +201,24 @@ export default function PublicationServices() {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* ================= PRICING & PACKAGES SECTION ================= */}
-        <div className="text-center mb-12">
-          <span className="text-sm font-bold uppercase tracking-widest text-sky-600 bg-sky-50 px-3 py-1 rounded-full">
-            Pricing Plans
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-black text-[#0d4f60] mt-3">
+      {/* ================= PRICING & PACKAGES SECTION (FULL-WIDTH WHITE BG) ================= */}
+      <div className="w-full bg-white py-3 -mx-4 sm:-mx-6 lg:-mx-8 px-2 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-5xl font-black text-[#0d4f60] mb-1">
             Our Packages
           </h2>
-          <p className="text-slate-500 mt-2 max-w-xl mx-auto text-sm">
-            Tailored editorial programs engineered to guide your work from raw
-            draft to final published journal index.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch w-full max-w-7xl mx-auto p-4 font-sans">
-          {packages.map((pkg, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col rounded-sm overflow-hidden shadow-md bg-white text-[#2d2d2d]"
-            >
-              {/* Top White Header Section */}
-              <div className="py-6 px-4 bg-white flex items-center justify-center gap-3 border-b border-gray-100">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg ${pkg.badgeBg}`}>
-                  {pkg.letter}
-                </div>
-                <h3 className={`font-bold text-xl ${pkg.colorClass.includes('purple') ? 'text-[#6b21a8]' : pkg.colorClass.includes('amber') ? 'text-[#78350f]' : 'text-[#1e3a8a]'}`}>
-                  {pkg.name}
-                </h3>
-              </div>
-
-              {/* Colored Content Body */}
-              <div className={`p-6 flex-1 flex flex-col justify-between ${pkg.bgColor}`}>
-                <div className="space-y-4">
-                  {/* Ideal For */}
-                  {pkg.idealFor && (
-                    <div className="text-xs md:text-sm leading-relaxed">
-                      <span className="font-bold inline-flex items-center gap-1 mr-1">
-                        <span className="text-[10px]">➔</span> Ideal For:
-                      </span>
-                      <span>{pkg.idealFor}</span>
-                    </div>
-                  )}
-
-                  {/* Services Include */}
-                  {pkg.includes && pkg.includes.length > 0 && (
-                    <div className="text-xs md:text-sm">
-                      <div className="font-bold mb-2 flex items-center gap-1">
-                        <span className="text-[10px]">➔</span> Services Include:
-                      </div>
-                      <ul className="list-disc list-inside space-y-1.5 pl-1 opacity-95">
-                        {pkg.includes.map((item, i) => (
-                          <li key={i} className="leading-snug">
-                            <span className="-ml-1">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </div>
-
-                {/* Bottom Turnaround Section */}
-                {pkg.turnaround && (
-                  <div className="mt-8 pt-4 border-t border-black/10 text-xs md:text-sm font-bold flex items-center gap-1">
-                    <span className="text-[10px]">➔</span> Turnaround Time : {pkg.turnaround}
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* ================= GLOBAL CALL TO ACTION ================= */}
-        <div className="text-center">
-          <GetFreeQuoteButton />
+          <CommonPackages
+            title=""
+            subtitle=""
+            description=""
+            packages={publishingPackages}
+            buttonText="Request Package Info"
+          />
+          <div className="text-center mt-1">
+            <GetFreeQuoteButton />
+          </div>
         </div>
       </div>
     </section>

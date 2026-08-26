@@ -126,12 +126,12 @@ export default function ServiceArticleRenderer({ blocks }: { blocks: ArticleBloc
                 </table>
               </div>
             );
-          case 'img':
-            return (
-              <span key={key} className="block relative my-6 rounded-lg overflow-hidden aspect-[16/9]">
-                <Image src={b.src} alt={b.alt || ''} fill className="object-cover" sizes="(max-width: 768px) 100vw, 800px" />
-              </span>
-            );
+          // case 'img':
+          //   return (
+          //     <span key={key} className="block relative my-6 rounded-lg overflow-hidden aspect-[16/9]">
+          //       <Image src={b.src} alt={b.alt || ''} fill className="object-cover" sizes="(max-width: 768px) 100vw, 800px" />
+          //     </span>
+          //   );
           case 'faq':
             return (
               <div key={key} className="space-y-3 mb-4">

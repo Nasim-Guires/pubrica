@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export interface BulletPointItem {
   id: string;
@@ -330,21 +331,11 @@ export default function ServicesResearchProductDevelopment({
       className={`w-full text-slate-800 bg-white font-sans leading-relaxed ${className}`}
     >
       {/* Header Banner Section */}
-      <header className="w-full bg-gradient-to-r from-[#1d2325] via-[#2a3c39] to-[#1d2325] text-white py-12 px-4 sm:px-8 text-center">
-        <div className="max-w-5xl mx-auto border border-gray-400/30 p-8 rounded-sm">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-            Discovery &amp; Intelligence Services – Product Development Service
-          </h1>
-
-          <p className="text-xs sm:text-sm md:text-base max-w-4xl mx-auto text-gray-200 leading-relaxed">
-            Whether you&apos;re discovering novel bioactive compounds,
-            validating ingredients, evaluating therapeutic pipelines, analyzing
-            medical device materials, or entering new health markets,
-            Pubrica&apos;s Core Discovery &amp; Intelligence Services transform
-            scientific data into actionable insights.
-          </p>
-        </div>
-      </header>
+      <HeroBanner
+        headingAs="h1"
+        title="Discovery & Intelligence Services – Product Development Service"
+        description="Whether you're discovering novel bioactive compounds, validating ingredients, evaluating therapeutic pipelines, analyzing medical device materials, or entering new health markets, Pubrica's Core Discovery & Intelligence Services transform scientific data into actionable insights."
+      />
 
       {/* Main Intro & Key Points Section */}
       <section className="max-w-6xl mx-auto px-2 sm:px-8 py-12 md:py-16">

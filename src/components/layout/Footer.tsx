@@ -54,29 +54,32 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-[#031d18] text-gray-300 font-sans select-none relative pt-10 pb-8">
-      <Container className="w-full max-w-7xl flex flex-col">
-        {/* 1. TOP PORTION: Floating Speech-Bubble Call to Action */}
-        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6 mb-12 mt-2">
-          {/* Asymmetric Rounded Banner Box */}
-          <div className="bg-white text-gray-900 px-8 py-6 rounded-tr-[36px] rounded-bl-[36px] rounded-tl-sm rounded-br-sm max-w-2xl flex-grow shadow-md">
-            <h3 className="text-base sm:text-lg md:text-xl font-bold tracking-tight leading-snug">
-              Whether you're stuck or just want some tips on where to start, hit
-              up our experts anytime.
+    <footer className="w-full bg-[#031d18] text-gray-300 font-sans select-none relative pb-8">
+      {/* 1. TOP PORTION: Speech-Bubble CTA Banner */}
+      <div className="w-full bg-[#0e2723] py-14 px-4 mb-12">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
+
+          {/* Text Box Container */}
+          <div className="bg-white text-[#0e2723] px-8 py-6 rounded-tl-[32px] rounded-br-[32px] rounded-tr-none rounded-bl-none max-w-2xl shadow-lg">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight leading-snug">
+              Whether you’re stuck or just want some tips on where to start, hit up our experts anytime.
             </h3>
           </div>
 
           {/* Action Button */}
-          <div>
+          <div className="flex-shrink-0">
             <Link
               href="/order-now"
-              className="bg-white text-gray-900 hover:bg-gray-100 font-semibold text-xs sm:text-sm px-6 py-3 rounded-md transition-colors shadow-sm inline-block"
+              className="bg-white text-[#0e2723] hover:bg-gray-100 font-bold text-xs sm:text-sm px-6 py-3.5 rounded-tl-[16px] rounded-br-[16px] rounded-tr-none rounded-bl-none transition-colors shadow-md inline-block text-center"
             >
               Get a Free Quote
             </Link>
           </div>
-        </div>
 
+        </div>
+      </div>
+
+      <Container className="w-full max-w-7xl flex flex-col">
         {/* 2. MIDDLE PORTION: Directory Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 border-b border-gray-700/40 pb-10">
           {/* Brand & Description Column */}

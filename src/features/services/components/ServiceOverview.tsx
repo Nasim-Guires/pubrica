@@ -14,9 +14,6 @@ const BLUE_LINKS = [
   "journal submission",
   "journal selection",
   "medical device",
-  "peer-review",
-  "Peer Review",
-  "peer review",
   "CONSORT",
   "PRISMA",
   "STROBE",
@@ -30,26 +27,22 @@ const ROUTE_MAP: Record<string, string> = {
     "/services/publication-support/poster-preparation/european-society-for-medical-oncology/",
   "pre-submission peer review":
     "/academy/peer-review/how-publishers-balance-authors-and-reviewers/",
-  "peer-review": "/services/publication-support/peer-review-pre-submission/",
-  "Peer Review":
-    "/services/publication-support/double-blind-peer-review-definition-process/",
-  "peer review": "/academy/peer-review/peer-review-week-2025-ai-era/",
   "journal submission": "/services/publication-support/journal-submission/",
   "journal selection": "/services/publication-support/journal-selection/",
   "scientific journal publication services":
-    "/services/publication-support/journal-publication-services/",
+    "/services/publication-support",
   CONSORT: "/services/publication-support/consort-guidelines-reporting-trials/",
   PRISMA:
-    "/static/65b880e13b6ca75573dfe217/t/67ad313f1c80aa5235fce0d0/1739403584136/PRISMA_2020_checklist.pdf",
+    "https://static1.squarespace.com/static/65b880e13b6ca75573dfe217/t/67ad313f1c80aa5235fce0d0/1739403584136/PRISMA_2020_checklist.pdf",
   STROBE:
     "https://www.equator-network.org/wp-content/uploads/2015/10/STROBE_checklist_v4_combined.pdf",
   ICMJE:
     "/services/publication-support/icmje-guidelines-medical-research-compliance",
   GPP: "/services/publication-support/how-to-implement-gpp-medical-research/",
   "research paper publication services":
-    "/insights/journal-submission-report-sample",
+    "/academy/publication-support/challenges-in-research-paper-writing-and-strategies-to-overcome-them",
   "journal publication services":
-    "/services/publication-support/peer-review-pre-submission",
+    "/services/publication-support/peer-review-pre-submission/",
 };
 
 const COMPLIANCE_ITEMS = [
@@ -93,6 +86,7 @@ const overview = [
   "• Responding scientifically to peer-review comments and questions",
   "• Submitting and navigating submission portals and pre-submission checks efficiently",
   "However, researchers and pharma teams are hindered by complex formatting rules, ethical requirements, and polished, publication-ready manuscripts. Our research paper publication services and journal publication services have been designed to move you smoothly through the publication process to ensure it is compliant and impactful.",
+  "We provide a comprehensive range of value-added research paper publication services to assist researchers in publishing their manuscripts in international, peer-reviewed English journals.",
 ];
 
 // Intro paragraph right before feature bullets
@@ -122,7 +116,8 @@ export default function ServiceOverview() {
     const escapedLinks = sortedLinks.map((link) =>
       link.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     );
-    const regex = new RegExp(`(${escapedLinks.join("|")})`, "gi");
+    // Added word boundary anchors \b to avoid accidental partial matches
+    const regex = new RegExp(`\\b(${escapedLinks.join("|")})\\b`, "gi");
     const parts = text.split(regex);
 
     return parts.map((part, index) => {
@@ -204,7 +199,7 @@ export default function ServiceOverview() {
         {/* Action CTAs */}
         <div className="flex flex-wrap items-center gap-3 mt-6 mb-10">
           <GetFreeQuoteButton />
-          <button className="bg-[#b30000] hover:bg-[#900000] !text-white px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none shadow-sm">
+          <button className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
             View Brochure
           </button>
         </div>
@@ -299,9 +294,12 @@ export default function ServiceOverview() {
 
           {/* Single Upload CTA */}
           <div className="pt-2">
-            <button className="bg-[#b30000] hover:bg-[#900000] !text-white px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none shadow-sm">
+            <Link
+              href="/order-now/"
+              className="bg-red-600 text-white px-5 py-2.5 rounded-md font-semibold cursor-pointer inline-flex items-center justify-center select-none hover:bg-white hover:text-black"
+            >
               Upload Your Manuscript
-            </button>
+            </Link>
           </div>
         </div>
       </div>

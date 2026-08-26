@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import CommonFAQ from "@/components/common/FAQ";
 
 export default function PubricaResourceHub() {
 
@@ -62,81 +63,64 @@ export default function PubricaResourceHub() {
     testimonials.slice(2, 3),
   ];
   // --- FAQ DATA ---
-  const initialFaqs = [
+  const faqData = [
     {
-      id: 1,
       question:
         "How can I increase the chances of getting my research paper published in a high-impact journal?",
       answer:
         "Improve your chances of getting published by selecting an appropriate journal, complying with authors’ requirements, having robust methodologies, offering clear results, and revising your paper through thorough editing.",
-      isOpen: true,
     },
     {
-      id: 2,
       question: "Why do research papers get rejected by journals?",
       answer:
         "Research papers face high chances of rejection if there is poor study design, a lack of originality, poor methodology, ambiguity, mismatch with journal scope, or failure to comply with author guidelines.",
-      isOpen: false,
     },
     {
-      id: 3,
       question:
         "How can I avoid submitting my manuscript to predatory journals?",
       answer:
         "To avoid predatory journals, researchers can use tools such as indexing databases (Scopus, Web of Science, etc.), evaluating the publisher’s legitimacy, reviewing editorial boards, peer review processes, and consulting reputable sources or experts.",
-      isOpen: false,
     },
     {
-      id: 4,
       question:
         "How long does the academic journal publication process take?",
       answer:
         "The process of publishing a research paper in academic journals takes approximately 3 to 12 months, depending upon various factors such as peer review, revisions, etc.",
-      isOpen: true,
     },
     {
-      id: 5,
       question:
         "How can research teams improve publication success across multiple projects?",
       answer:
         "Researchers can increase their publication success rate by standardizing the publication process, conducting robust research design, fostering effective collaboration, delivering quality writing, and planning for journal targeting early in the research process.",
-      isOpen: true,
     },
     {
-      id: 6,
       question:
         "What are the benefits of using professional publication support services?",
       answer:
-        "Professional publication support services help improve the quality, clarity, and structure of manuscripts. It also helps with journal guideline adherence and submission readiness",
-      isOpen: false,
+        "Professional publication support services help improve the quality, clarity, and structure of manuscripts. It also helps with journal guideline adherence and submission readiness.",
     },
     {
-      id: 7,
       question:
-        ". What are the key factors journals consider before accepting a manuscript?",
+        "What are the key factors journals consider before accepting a manuscript?",
       answer:
         "The journal checks the originality of the research, its relevance to the journal’s scope, methodology, clarity of the writing, significance of the research findings, ethical issues, and adherence to journal submission guidelines.",
-      isOpen: false,
     },
     {
-      id: 8,
       question:
-        ".What are the best strategies to publish research in indexed journals?",
+        "What are the best strategies to publish research in indexed journals?",
       answer:
         "Publish in indexed journals by selecting the right journal for your work, following author guidelines, using robust methodology, providing clear results, writing well, and revising your work based on feedback from peers.",
-      isOpen: false,
     },
   ];
 
-  const [faqs, setFaqs] = useState(initialFaqs);
 
-  const toggleFaq = (id: number) => {
-    setFaqs(
-      faqs.map((faq) =>
-        faq.id === id ? { ...faq, isOpen: !faq.isOpen } : faq,
-      ),
-    );
-  };
+  // const toggleFaq = (id: number) => {
+  //   setFaqs(
+  //     faqs.map((faq) =>
+  //       faq.id === id ? { ...faq, isOpen: !faq.isOpen } : faq,
+  //     ),
+  //   );
+  // };
 
   // --- INSIGHTS DATA ---
   const categories = ["Article", "How to Article", "News"];
@@ -231,9 +215,12 @@ export default function PubricaResourceHub() {
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0d4f60]">
                   Publication Support Sample Work
                 </h3>
-                <button className="mt-3 px-8 py-2.5 bg-black hover:bg-slate-900 active:scale-95 text-white font-bold text-xs tracking-wider uppercase rounded-full transition-all">
+                <Link
+                  href="/insights/sample-work/the-impact-of-drinking-water-sources-on-gut-microbial-diversity-in-canines-peer-review/"
+                  className="mt-3 px-8 py-2.5 bg-black hover:bg-slate-900 active:scale-95 text-white font-bold text-xs tracking-wider uppercase rounded-full transition-all inline-flex items-center justify-center"
+                >
                   Discover More
-                </button>
+                </Link>
               </div>
 
               <div className="border-t border-emerald-200/60 pt-5">
@@ -251,10 +238,12 @@ export default function PubricaResourceHub() {
                   Services sample work tailored to your manuscript's scope,
                   indexing requirements, and impact factor goals.
                 </p>
-                <button className="mt-4 px-8 py-2.5 bg-black hover:bg-slate-900 active:scale-95 text-white font-bold text-xs tracking-wider uppercase rounded-full inline-flex items-center gap-2 transition-all">
-                  <Download className="w-3.5 h-3.5" />
+                <Link
+                  href="/insights/sample-work/"
+                  className="mt-4 px-8 py-2.5 bg-black hover:bg-slate-900 active:scale-95 text-white font-bold text-xs tracking-wider uppercase rounded-full inline-flex items-center gap-2 transition-all"
+                >
                   Discover More
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -359,75 +348,10 @@ export default function PubricaResourceHub() {
           </div>
 
           {/* FAQ SUBSECTION */}
-          <div className="pt-8 border-t border-slate-100">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d4f60] mb-8 text-center sm:text-left">
-              Frequently Asked Questions – Publication Support Services
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-              {/* Column 1 */}
-              <div className="space-y-4">
-                {faqs
-                  .filter((f) => f.id <= 4)
-                  .map((faq) => (
-                    <div
-                      key={faq.id}
-                      className="border border-slate-200 rounded-lg overflow-hidden bg-slate-50/50"
-                    >
-                      <button
-                        onClick={() => toggleFaq(faq.id)}
-                        className="w-full flex items-center justify-between p-4 text-left font-bold text-sm sm:text-base text-[#0d4f60] hover:bg-slate-100/50 transition-colors"
-                      >
-                        <span>
-                          {faq.id}. {faq.question}
-                        </span>
-                        {faq.isOpen ? (
-                          <Minus className="w-4 h-4 shrink-0 ml-2" />
-                        ) : (
-                          <Plus className="w-4 h-4 shrink-0 ml-2" />
-                        )}
-                      </button>
-                      {faq.isOpen && (
-                        <div className="px-4 pb-4 pt-1 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
-                          {faq.answer}
-                        </div>
-                      )}
-                    </div>
-                  ))}
-              </div>
-
-              {/* Column 2 */}
-              <div className="space-y-4">
-                {faqs
-                  .filter((f) => f.id > 4)
-                  .map((faq) => (
-                    <div
-                      key={faq.id}
-                      className="border border-slate-200 rounded-lg overflow-hidden bg-slate-50/50"
-                    >
-                      <button
-                        onClick={() => toggleFaq(faq.id)}
-                        className="w-full flex items-center justify-between p-4 text-left font-bold text-sm sm:text-base text-[#0d4f60] hover:bg-slate-100/50 transition-colors"
-                      >
-                        <span>
-                          {faq.id}. {faq.question}
-                        </span>
-                        {faq.isOpen ? (
-                          <Minus className="w-4 h-4 shrink-0 ml-2" />
-                        ) : (
-                          <Plus className="w-4 h-4 shrink-0 ml-2" />
-                        )}
-                      </button>
-                      {faq.isOpen && (
-                        <div className="px-4 pb-4 pt-1 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
-                          {faq.answer}
-                        </div>
-                      )}
-                    </div>
-                  ))}
-              </div>
-            </div>
-          </div>
+          <CommonFAQ
+            title="Frequently Asked Questions"
+            faqs={faqData}
+          />
         </div>
       </section>
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export interface RejectionTableRow {
@@ -5,6 +6,7 @@ export interface RejectionTableRow {
   reason: string;
   solution: string;
   pubricaSolution: string;
+  url?: string;
 }
 
 export interface Service {
@@ -15,7 +17,7 @@ interface ServiceRejectionTableProps {
   service?: Service;
 }
 
-// Complete dataset extracted directly from the image (11 rows total)
+// Complete dataset with exact URL mappings
 export const FULL_REJECTION_TABLE_DATA: RejectionTableRow[] = [
   {
     reasonBoldPrefix: "",
@@ -23,6 +25,7 @@ export const FULL_REJECTION_TABLE_DATA: RejectionTableRow[] = [
     solution:
       "We provide time-saving expert editing services to make your original manuscript more likely to be accepted based on journal guidelines and clarity. Further, inclusion of comprehensive feedback and plagiarism checks from experienced teams can enhance research impact.",
     pubricaSolution: "Journal submission",
+    url: "/services/publication-support/journal-submission/",
   },
   {
     reasonBoldPrefix: "Inappropriate or incomplete statistics: ",
@@ -30,6 +33,7 @@ export const FULL_REJECTION_TABLE_DATA: RejectionTableRow[] = [
     solution:
       "Our experts will thoroughly understand the scope of the journal & ensure the topic of the manuscript fulfils the journal requirement",
     pubricaSolution: "Journal Selection",
+    url: "/services/publication-support/journal-selection/",
   },
   {
     reasonBoldPrefix: "Improper rationale: ",
@@ -37,6 +41,7 @@ export const FULL_REJECTION_TABLE_DATA: RejectionTableRow[] = [
     solution:
       "Identify the clear purpose of the research, advances made, research ethics, a title that is not descriptive, lack of up-to-date references or references containing a high proportion of self-citations, design and methodology, data analysis, results & discussion.",
     pubricaSolution: "Pre-submission Peer Review",
+    url: "/services/publication-support/peer-review-pre-submission/",
   },
   {
     reasonBoldPrefix: "Inappropriate or incomplete statistics: ",
@@ -51,6 +56,7 @@ export const FULL_REJECTION_TABLE_DATA: RejectionTableRow[] = [
     solution:
       "Redraw tables & figures as per the journal requirement & standards.",
     pubricaSolution: "Artwork formatting",
+    url: "/services/publication-support/art-work-preparation/",
   },
   {
     reasonBoldPrefix: "Editing: ",
@@ -73,6 +79,7 @@ export const FULL_REJECTION_TABLE_DATA: RejectionTableRow[] = [
     solution:
       "Rewrite or paraphrase the paper by retaining its context and properly cite sources for credibility",
     pubricaSolution: "Plagiarism correction Services",
+    url: "/services/publication-support/plagiarism-services/",
   },
   {
     reasonBoldPrefix: "",
@@ -100,13 +107,11 @@ export const FULL_REJECTION_TABLE_DATA: RejectionTableRow[] = [
 const WHO_WE_SERVE_CARDS = [
   {
     title: "PhD Scholars",
-    image:
-      "/images/publication-support/PhD-Scholars.jpg",
+    image: "/images/publication-support/PhD-Scholars.jpg",
   },
   {
     title: "Early Career Researchers",
-    image:
-      "/images/publication-support/Early-Career-Researchers.jpg",
+    image: "/images/publication-support/Early-Career-Researchers.jpg",
   },
   {
     title: "Medical Professionals and Clinicians",
@@ -128,8 +133,6 @@ const WHO_WE_SERVE_CARDS = [
 export default function ServiceRejectionTable({
   service,
 }: ServiceRejectionTableProps) {
-  // Always use FULL_REJECTION_TABLE_DATA to ensure all 11 rows are rendered,
-  // ignoring any truncated or filtered `service.rejectionTable` prop data.
   const tableData = FULL_REJECTION_TABLE_DATA;
 
   return (
@@ -142,7 +145,7 @@ export default function ServiceRejectionTable({
         <p className="text-[14px] sm:text-[15px] text-slate-600 leading-relaxed">
           Usually, the most prominent, well-drafted, and outstanding articles
           would be the ones that clear the rigorous{" "}
-          <span className="text-[#3b82f6] hover:underline cursor-pointer">
+          <span className="text-[#3b82f6]  cursor-pointer">
             review
           </span>{" "}
           process, but there are several that get rejected for simple reasons
@@ -174,9 +177,8 @@ export default function ServiceRejectionTable({
                 return (
                   <tr
                     key={index}
-                    className={`${
-                      isEven ? "bg-white" : "bg-[#e6f2f7]"
-                    } transition-colors hover:bg-slate-100/70`}
+                    className={`${isEven ? "bg-white" : "bg-[#e6f2f7]"
+                      } transition-colors hover:bg-slate-100/70`}
                   >
                     {/* Reason Column */}
                     <td className="py-4 px-6 text-[13.5px] text-slate-800 leading-relaxed border-r border-slate-200">
@@ -194,8 +196,19 @@ export default function ServiceRejectionTable({
                     </td>
 
                     {/* Pubrica Link Column */}
-                    <td className="py-4 px-6 text-[13px] font-medium text-[#3b82f6] hover:underline cursor-pointer text-center">
-                      {row.pubricaSolution}
+                    <td className="py-4 px-6 text-[13px] font-medium text-center">
+                      {row.url ? (
+                        <a
+                          href={row.url}
+                          className="text-[#3b82f6]  cursor-pointer"
+                        >
+                          {row.pubricaSolution}
+                        </a>
+                      ) : (
+                        <span className="text-slate-800 cursor-default">
+                          {row.pubricaSolution}
+                        </span>
+                      )}
                     </td>
                   </tr>
                 );
@@ -212,9 +225,8 @@ export default function ServiceRejectionTable({
             return (
               <div
                 key={index}
-                className={`p-5 flex flex-col gap-3 ${
-                  isEven ? "bg-white" : "bg-[#e6f2f7]"
-                }`}
+                className={`p-5 flex flex-col gap-3 ${isEven ? "bg-white" : "bg-[#e6f2f7]"
+                  }`}
               >
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-[#0b2b30] block mb-1">
@@ -243,9 +255,18 @@ export default function ServiceRejectionTable({
                   <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-1">
                     Pubrica Solution
                   </span>
-                  <span className="text-[13px] font-bold text-[#3b82f6] hover:underline cursor-pointer">
-                    {row.pubricaSolution}
-                  </span>
+                  {row.url ? (
+                    <a
+                      href={row.url}
+                      className="text-[13px] font-bold text-[#3b82f6] cursor-pointer"
+                    >
+                      {row.pubricaSolution}
+                    </a>
+                  ) : (
+                    <span className="text-[13px] font-medium text-slate-800 cursor-default">
+                      {row.pubricaSolution}
+                    </span>
+                  )}
                 </div>
               </div>
             );
@@ -260,13 +281,13 @@ export default function ServiceRejectionTable({
         </h2>
         <p className="text-[14px] sm:text-[15px] text-slate-600 leading-relaxed mb-8">
           At Pubrica, we offer complete{" "}
-          <span className="text-[#3b82f6] hover:underline cursor-pointer font-medium">
+          <Link href="/academy/publication-support/challenges-in-research-paper-writing-and-strategies-to-overcome-them" className="text-[#3b82f6]  cursor-pointer font-medium">
             publication support services
-          </span>{" "}
+          </Link>{" "}
           by aiding researchers from the process of{" "}
-          <span className="text-[#3b82f6] hover:underline cursor-pointer font-medium">
+          <Link href="/services/publication-support/journal-selection" className="text-[#3b82f6]  cursor-pointer font-medium">
             journal selection
-          </span>
+          </Link>
           , manuscript preparation, and submission to ensure publications are
           high-quality, compliant, and impactful.
         </p>
@@ -276,7 +297,7 @@ export default function ServiceRejectionTable({
           {WHO_WE_SERVE_CARDS.map((card, idx) => (
             <div
               key={idx}
-              className="relative h-64 rounded-lg overflow-hidden group cursor-pointer shadow-md"
+              className="relative h-64 rounded-lg overflow-hidden group  shadow-md"
             >
               <img
                 src={card.image}
