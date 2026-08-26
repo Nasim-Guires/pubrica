@@ -445,7 +445,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];
 
   for (const { path, priority, changeFrequency } of [...STATIC_ROUTES, ...dynamicEntries]) {
-    const url = `${SITE_URL}${path}`;
+    // Every real pubrica.com URL ends in "/" — match that convention exactly.
+    const url = `${SITE_URL}${path}/`.replace(/\/+$/, "/");
     if (seen.has(url)) continue;
     seen.add(url);
     entries.push({ url, lastModified: new Date(), changeFrequency, priority });

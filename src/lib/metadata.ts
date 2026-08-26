@@ -33,7 +33,9 @@ export function constructMetadata({
   // rewrite what's passed in. Only the true fallback case uses DEFAULT_TITLE.
   const pageTitle = title || DEFAULT_TITLE;
   const pageDesc = description || DEFAULT_DESCRIPTION;
-  const canonicalUrl = `${SITE_URL}${slug.startsWith('/') ? slug : `/${slug}`}`;
+  // Every real pubrica.com URL ends in "/" — match that convention exactly.
+  const canonicalPath = slug.startsWith('/') ? slug : `/${slug}`;
+  const canonicalUrl = `${SITE_URL}${canonicalPath}/`.replace(/\/+$/, '/');
 
   return {
     metadataBase: new URL(SITE_URL),
