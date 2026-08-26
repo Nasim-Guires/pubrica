@@ -10,6 +10,14 @@ import AIDataPreparationSections from '@/components/services/education-editorial
 import { aiAndDataPreparationServicesPackages, aiAndDataPreparationServicesWhoWeServe, aiAndDataPreparationServicesWorkflow, aiAndDataTestimonials, educationEditorialAiAndDataPreparationFaq } from '@/lib/services/education-editorial-service/ai-and-data-preparation-services'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+    title: 'AI & Data Preparation Services | Pubrica',
+    description: "Prepare, structure, and optimise datasets for AI, machine learning, and analytics with Pubrica’s expert AI and data preparation services.",
+    keywords: ['AI & Data Preparation', 'AI and Data Preparation', 'Data preprocessing services', 'Machine learning data preparation', 'Research data curation'],
+    slug: '/services/education-editorial-service/ai-and-data-preparation-services',
+})
 
 const page = () => {
     return (

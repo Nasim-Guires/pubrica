@@ -6,6 +6,15 @@ import { augmentedRealityTestimonials } from '@/lib/subject-matter-experts/augme
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: "Augmented Reality Research Services | Pubrica Experts",
+  description: "Advanced AR research support, 3D modeling, app development, and publication services for immersive solutions.",
+  keywords: ["augmented reality"],
+  slug: "/subject-matter-experts/augmented-reality",
+});
+
 const page = () => {
     return (
         <>

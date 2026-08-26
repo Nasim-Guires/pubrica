@@ -5,6 +5,15 @@ import { biochemistryTestimonialsData } from '@/lib/subject-matter-experts/bioch
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: "Advanced Biochemistry Research & Publication Support | Pubrica",
+  description: "Expert biochemistry editing, research guidance, and publication support for high-impact scientific journals.",
+  keywords: ["Advanced Biochemistry Research"],
+  slug: "/subject-matter-experts/biochemistry",
+});
+
 const page = () => {
     return (
         <>

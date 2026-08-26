@@ -158,9 +158,9 @@ export default function RespondingToReviewersPage() {
     <main className="max-w-6xl mx-auto px-4 py-10 text-slate-800 font-sans">
       {/* ================= WHAT WE DO SECTION ================= */}
       <section className="mb-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-[#083b3a] mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#083b3a] mb-4">
           What We do
-        </h1>
+        </h2>
         <p className="text-base md:text-lg leading-relaxed mb-8 text-slate-700">
           With our{" "}
           <Link

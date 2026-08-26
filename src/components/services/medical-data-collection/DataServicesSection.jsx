@@ -97,10 +97,10 @@ export default function DataServicesSection() {
     <main className="w-full bg-white text-slate-800 py-12 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto font-sans">
       {/* Semantic Header Section */}
       <header className="mb-10">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#082e2b] mb-4 tracking-tight leading-snug">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#082e2b] mb-4 tracking-tight leading-snug">
           Comprehensive Data Collection and Extraction Services for Healthcare,
           Medical, and Life Science Research by Pubrica
-        </h1>
+        </h2>
         <p className="text-sm sm:text-base text-gray-700 leading-relaxed max-w-5xl">
           Pubrica’s team of experts excels in the systematic collection and
           extraction of diverse data types for healthcare, medical, and life

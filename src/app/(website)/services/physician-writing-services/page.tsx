@@ -6,6 +6,14 @@ import { PhysicianWritingHero } from "@/components/services/physician-writing-se
 import { TherapeuticAndComplianceSpecialties } from "@/components/services/physician-writing-services/TherapeuticAndComplianceSpecialties";
 import { physicianWritingHubTestimonials } from "@/lib/services/data/physician-writing-services/physicianWritingHubTestimonials";
 import React from "react";
+import { constructMetadata } from "@/lib/metadata";
+
+export const metadata = constructMetadata({
+  title: "Physician Writing Services for Clinical Research Success",
+  description: "Enhance your clinical research with expert Physician Writing Services, including manuscript drafting, grants, and regulatory documents.",
+  keywords: ["Physician Writing", "Professional Manuscript Scientific Medical Writing Help For Article", "Regulatory", "Case Report", "Biostatistics"],
+  slug: "/services/physician-writing-services",
+});
 
 const page = () => {
   return (

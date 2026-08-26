@@ -1,6 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { constructMetadata } from "@/lib/metadata";
+
+export const metadata = constructMetadata({
+  title: "Modern Plagiarism Detection: AI & Semantic Analysis MLs",
+  description: "AI-powered plagiarism detection by Pubrica identifies semantic similarity, paraphrasing, and AI-generated text for journals teams.",
+  keywords: ["Plagiarism Service"],
+  slug: "/services/publication-support/plagiarism-services/modern-plagiarism-detection",
+});
 
 export default function PlagiarismDetectionPage() {
     return (
@@ -128,9 +136,9 @@ export default function PlagiarismDetectionPage() {
 
                     {/* Header Title */}
                     <section>
-                        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                             Modern Plagiarism Detection: From Keyword Matching to AI Phrase Analysis
-                        </h1>
+                        </h2>
                         <p className="mb-4">
                             Modern <span className="text-blue-600">plagiarism detection</span> has moved beyond simple copy-paste verification, evolving into a sophisticated, AI-driven process that analyses semantic meaning, context, and authorship rather than just matching exact phrases. This shift from keyword matching to AI-based analysis is essential to counter the rise of automated paraphrasing tools and AI-generated content.
                         </p>

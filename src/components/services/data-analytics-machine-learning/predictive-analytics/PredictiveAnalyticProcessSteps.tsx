@@ -117,9 +117,9 @@ export default function PredictiveAnalyticProcessSteps() {
         <div className="w-full bg-white font-sans text-slate-800">
             {/* Top Banner */}
             <div className="bg-[#05382b] text-white text-center py-8 px-4">
-                <h1 className="text-xl md:text-2xl font-semibold max-w-4xl mx-auto">
+                <h2 className="text-xl md:text-2xl font-semibold max-w-4xl mx-auto">
                     Speed up your Predictive Analytics with Pubrica
-                </h1>
+                </h2>
                 <p className="text-xs md:text-sm text-emerald-100/80 mt-2 max-w-3xl mx-auto leading-relaxed">
                     Receive tailored support in applying advanced predictive models, ensuring accuracy, foresight, and clarity in transforming complex data into actionable insights that drive impactful decisions.
                 </p>

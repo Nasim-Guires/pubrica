@@ -4,7 +4,14 @@ import PsychologySection from '@/components/subject-matter-experts/psychology/Ps
 import { psychologyTestimonials } from '@/lib/subject-matter-experts/psychology'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
 
+export const metadata = constructMetadata({
+  title: 'Expert Psychology Research & Editing Support',
+  description: 'Get expert psychology research and editing support with accurate formatting, clear revisions, detailed feedback, and reliable assistance for publications.',
+  keywords: ['psychology research & editing'],
+  slug: '/subject-matter-experts/psychology',
+})
 
 const page = () => {
     return (

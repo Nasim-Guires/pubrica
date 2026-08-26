@@ -94,9 +94,9 @@ export default function ScientificWritingPage() {
 
                         {/* Left Content Column */}
                         <article className="md:col-span-7">
-                            <h1 className="mb-4 text-2xl font-bold tracking-tight text-[#1a3c34] sm:text-3xl">
+                            <h2 className="mb-4 text-2xl font-bold tracking-tight text-[#1a3c34] sm:text-3xl">
                                 Writing by Academic Need / Type
-                            </h1>
+                            </h2>
 
                             <p className="mb-4 text-sm leading-relaxed text-gray-600">
                                 Choose the service that aligns with your research stage, document type, or journal preferences.

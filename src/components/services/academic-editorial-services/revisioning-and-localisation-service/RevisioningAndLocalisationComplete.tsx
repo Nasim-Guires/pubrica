@@ -218,9 +218,9 @@ export default function RevisioningAndLocalisationComplete() {
             {/* ------------------- HERO BANNER ------------------- */}
             <section className="bg-[#0b3b2c] py-16 px-4 text-white text-center">
                 <div className="max-w-4xl mx-auto">
-                    <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
                         Revisioning & Localisation Services at Pubrica
-                    </h1>
+                    </h2>
                     <p className="text-xs md:text-sm text-emerald-100 leading-relaxed max-w-3xl mx-auto">
                         Our specialist editors meticulously revise and localise your manuscript for clarity, cultural relevance, and journal compliance, ensuring it is publication-ready and resonates with your target audience.
                     </p>

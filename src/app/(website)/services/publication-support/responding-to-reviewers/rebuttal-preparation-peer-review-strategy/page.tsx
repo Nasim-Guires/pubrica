@@ -2,6 +2,13 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+  title: 'Peer Review Rebuttal Strategies for Journal Acceptance',
+  description: 'Expert guidance on peer review rebuttal strategies to address reviewer comments, improve manuscripts, and increase journal acceptance.',
+  slug: '/services/publication-support/responding-to-reviewers/rebuttal-preparation-peer-review-strategy',
+})
 
 export default function RebuttalPreparationPage() {
   const interestedTopics = [

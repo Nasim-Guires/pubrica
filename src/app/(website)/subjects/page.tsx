@@ -3,6 +3,21 @@ import Link from "next/link";
 import { ArrowRightCircle } from "lucide-react";
 import Container from "@/components/common/Container";
 import Breadcrumb from "@/components/seo/Breadcrumb";
+import { constructMetadata } from "@/lib/metadata";
+
+// This route duplicates the subject listing already served (with real links and its
+// own metadata) at /subject-matter-experts — it renders the same subject list as plain
+// text with no working links. No equivalent exists on live pubrica.com (only
+// /subject-matter-experts/ and its per-subject pages do). Kept out of the index and
+// given its own distinct, accurate title/description rather than the canonical page's
+// metadata, to avoid a duplicate-title/duplicate-content conflict with that page.
+export const metadata = constructMetadata({
+  title: "Subjects | Pubrica",
+  description:
+    "Browse the full list of scientific and medical subjects Pubrica supports. See /subject-matter-experts for each subject's dedicated page.",
+  slug: "/subjects",
+  noIndex: true,
+});
 
 const SUBJECTS = [
   // Column 1

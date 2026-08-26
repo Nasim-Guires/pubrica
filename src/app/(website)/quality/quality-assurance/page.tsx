@@ -2,6 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Lock } from 'lucide-react';
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: 'Quality Assurance - Pubrica',
+  description: 'ISO',
+  slug: '/quality/quality-assurance',
+});
 
 export default function QualityAssurancePage() {
   return (

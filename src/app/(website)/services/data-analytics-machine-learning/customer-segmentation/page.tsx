@@ -7,6 +7,13 @@ import CustomerSegmentationSections from '@/components/services/data-analytics-m
 import { customerSegmentationFaqs, customerSegmentationTestimonials, customerSegmentationWhoWeServe } from '@/lib/services/data/data-analytics-machine-learning/CustomerSegmentationTestimonials'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+    title: 'Customer Segmentation Research - Pubrica',
+    description: 'Pubrica enables data-driven customer segmentation for pharma, biotech, hospitals, and medical devices using AI & analytics.',
+    slug: '/services/data-analytics-machine-learning/customer-segmentation',
+})
 
 
 const page = () => {

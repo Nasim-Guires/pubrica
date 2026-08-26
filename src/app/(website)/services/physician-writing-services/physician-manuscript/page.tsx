@@ -6,7 +6,14 @@ import PhysicianManuscriptsPage from '@/components/services/physician-writing-se
 import { physicianManuscriptWritingFaqs, physicianManuscriptWritingTestimonials } from '@/lib/services/data/physician-manuscript/physicianManuscriptWritingTestimonials '
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
 
+export const metadata = constructMetadata({
+    title: 'Physician Manuscript Writing Service | Pubrica',
+    description: 'Specialized manuscript support for physicians including writing, editing, and publication help for clinical studies, case reports & journals.',
+    keywords: ['Physician manuscript', 'Physician manuscript writing service', 'medical manuscript writing services', 'clinical research writing support', 'manuscript writing for doctors'],
+    slug: '/services/physician-writing-services/physician-manuscript',
+})
 
 const page = () => {
     return (

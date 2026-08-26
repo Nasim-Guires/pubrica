@@ -87,9 +87,9 @@ export default function ThesisPhdEditingService() {
       
       {/* Header Section */}
       <section className="mb-12">
-        <h1 className="text-3xl sm:text-4xl font-bold text-[#003B46] mb-4 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#003B46] mb-4 tracking-tight">
           Professional PhD Thesis Editing And Proofreading Services
-        </h1>
+        </h2>
         <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
           Pubrica thesis editing experts understand your particular requirements as a student. 
           Your thesis will be carefully proofread, and we will correct all errors in grammar, 

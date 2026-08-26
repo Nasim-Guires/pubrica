@@ -141,7 +141,7 @@ export default function InternetOfThingsPage() {
 
                         <p className="text-gray-600 text-sm leading-relaxed">
                             IoT is concerned with the communication and operation of smart environments (via the use of hardware, software, and network connections), as well as the development of smart systems within a business,{" "}
-                            <Link href="/Industries" className="text-sky-600 hover:underline">healthcare industry</Link>,{" "}
+                            <Link href="/industries" className="text-sky-600 hover:underline">healthcare industry</Link>,{" "}
                             <Link href="/subject-matter-experts/agriculture" className="text-sky-600 hover:underline">agricultural</Link>, and energy sectors.
                         </p>
 

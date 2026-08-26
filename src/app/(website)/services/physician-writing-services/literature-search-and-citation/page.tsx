@@ -5,6 +5,14 @@ import LiteratureSearchAndCitationPage from '@/components/services/physician-wri
 import WhoWeServeAndProcessLitrarture from '@/components/services/physician-writing-services/literature-search-and-citation/WhoWeServeAndProcessLitrarture'
 import { literatureSearchFaqs, literatureSearchTestimonials } from '@/lib/services/data/literature-search-and-citation/literatureSearchTestimonials '
 import React from 'react'
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+    title: 'Literature Search & Citation Support by Academic Experts',
+    description: "Pubrica's literature search and citation service ensures thorough research and precise referencing for your academic work, maintaining rigorous standards.",
+    keywords: ['Literature search service', 'citation management', 'scientific literature review', 'medical research citations', 'academic reference support'],
+    slug: '/services/physician-writing-services/literature-search-and-citation',
+})
 
 const page = () => {
     return (

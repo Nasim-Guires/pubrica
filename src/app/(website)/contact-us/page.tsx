@@ -1,10 +1,11 @@
-import type { Metadata } from 'next';
 import ContactPage from '../contact/page';
+import { constructMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Contact Us - Pubrica',
-  description: 'Experts are ready to collaborate with you. Reach Pubrica in the UK, US, or India.',
-};
+export const metadata = constructMetadata({
+  title: 'contact us - Pubrica',
+  description: 'Experts are ready to collaborate with you.',
+  slug: '/contact',
+});
 
 export default function ContactUsPage() {
   return <ContactPage />;

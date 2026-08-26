@@ -4,6 +4,14 @@ import MedicinalAndPharmaceuticalChemistrySections from '@/components/subject-ma
 import { PHARMACEUTICAL_TESTIMONIALS } from '@/lib/subject-matter-experts/medicinal-and-pharmaceutical-chemistry'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+  title: 'Medical & Pharmaceutical Chemistry Services | Pubrica Experts',
+  description: 'Pubrica offers expert services in drug discovery, formulation, regulatory compliance & personalized medicine to enhance healthcare.',
+  keywords: ['Medical & Pharmaceutical Chemistry'],
+  slug: '/subject-matter-experts/medicinal-and-pharmaceutical-chemistry',
+})
 
 const page = () => {
     return (

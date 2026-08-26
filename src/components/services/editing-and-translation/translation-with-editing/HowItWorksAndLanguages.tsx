@@ -84,9 +84,9 @@ export default function HowItWorksAndLanguages() {
     <div className="w-full bg-[#f4f6f8] text-slate-800 font-sans pb-16">
       {/* Top Dark Green Banner Header */}
       <div className="w-full bg-[#083329] text-white py-8 px-4 text-center mb-12">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-2">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-2">
           Translation with Editing Services at Pubrica
-        </h1>
+        </h2>
         <p className="text-sm sm:text-base text-slate-200 max-w-3xl mx-auto">
           Pubrica offers Translation with Editing Services, ensuring your
           content is accurately translated and meticulously polished for

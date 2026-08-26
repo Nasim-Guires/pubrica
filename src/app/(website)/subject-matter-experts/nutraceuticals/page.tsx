@@ -4,6 +4,14 @@ import NutraceuticalsSection from '@/components/subject-matter-experts/nutraceut
 import { NUTRACEUTICALS_TESTIMONIALS } from '@/lib/subject-matter-experts/nutraceuticals'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+  title: 'Nutraceuticals Research & Publication Services | Pubrica',
+  description: 'Expert nutraceutical research, writing, and publication support for functional foods, supplements, and personalized nutrition',
+  keywords: ['nutraceuticals'],
+  slug: '/subject-matter-experts/nutraceuticals',
+})
 
 const page = () => {
     return (

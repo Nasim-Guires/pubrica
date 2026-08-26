@@ -5,6 +5,15 @@ import { animalScienceTestimonials } from '@/lib/subject-matter-experts/animal-s
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: "Animal Science Research, Data Science & Publishing Support | Pubrica",
+  description: "Pubrica's Animal Science experts provide guidance on studies on animal care, production, advanced research, and its applications in research",
+  keywords: ["Animal Science Research"],
+  slug: "/subject-matter-experts/animal-science",
+});
+
 const page = () => {
     return (
         <>

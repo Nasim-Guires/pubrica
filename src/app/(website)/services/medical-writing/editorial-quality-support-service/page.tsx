@@ -7,7 +7,14 @@ import { editorialQualitySupportFAQs, editorialQualitySupportWhoWeServe, editori
 import { regulatoryWritingTestimonials } from '@/lib/services/data/regulatory-writing/regulatoryWritingTestimonials'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
 
+export const metadata = constructMetadata({
+    title: 'Editorial & Quality Support Service | Pubrica',
+    description: "Enhance clarity, compliance & impact of scientific documents with Pubrica’s expert editorial support.",
+    keywords: ['editorial', 'Editorial support', 'scientific editing', 'journal formatting', 'quality check'],
+    slug: '/services/medical-writing/editorial-quality-support-service',
+})
 
 const page = () => {
     return (

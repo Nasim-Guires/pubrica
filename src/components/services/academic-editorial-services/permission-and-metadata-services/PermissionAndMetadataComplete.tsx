@@ -125,9 +125,9 @@ export default function PermissionAndMetadataComplete() {
             {/* ------------------- HERO BANNER ------------------- */}
             <section className="bg-[#0b3b2c] py-16 px-4 text-white text-center">
                 <div className="max-w-4xl mx-auto">
-                    <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
                         Permission & Metadata Services at Pubrica
-                    </h1>
+                    </h2>
                     <p className="text-xs md:text-sm text-emerald-100 leading-relaxed max-w-3xl mx-auto">
                         Our experts ensure your manuscript meets all copyright, licensing, and metadata standards by securing required permissions and creating accurate, optimized metadata, making your submission fully compliant and seamlessly publication-ready.
                     </p>

@@ -15,10 +15,11 @@ import FAQAccordion from "@/features/home/components/FAQAccordion";
 import LatestNews from "@/features/home/components/LatestNews";
 
 export const metadata = constructMetadata({
-  title:
-    "Pubrica | Medical Writing, Systematic Review & Meta-Analysis Services",
+  title: "Achieve Research Success with Pubrica’s Support Services",
   description:
-    "Expert medical writing, biostatistics modeling, Cochrane systematic reviews, meta-analysis, and journal publication support. Free quotes within 24 hours.",
+    "Pubrica provides professional medical writing, research assistance, and publication support to help researchers produce high-quality work.",
+  keywords: ["Pubrica", "medical writing services", "scientific editing", "publication support", "research assistance"],
+  slug: "/",
 });
 
 export default function HomePage() {

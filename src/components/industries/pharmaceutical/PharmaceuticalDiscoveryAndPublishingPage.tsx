@@ -95,7 +95,7 @@ const experts = [
     experience: "10 years of experience",
     manuscripts: "100+ manuscripts edited",
     photo: {
-      src: "/images/industries/foods-nutraceuticals/Dr.-Raghav-Varma.webp",
+      src: "/images/industries/functional-foods-and-nutraceuticals/Dr.-Raghav-Varma.webp",
       alt: "Portrait of Dr. Michelle, PhD in Pharmaceutical Research",
     },
   },
@@ -110,9 +110,9 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
     <main className="max-w-6xl mx-auto px-4 py-12">
       {/* Hero / Intro */}
       <section className="mb-16">
-        <h1 className="text-3xl md:text-4xl font-bold text-teal-800 mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-teal-800 mb-8">
           Drug Discovery And Development Process
-        </h1>
+        </h2>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <Image

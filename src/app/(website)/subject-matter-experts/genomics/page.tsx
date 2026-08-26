@@ -4,6 +4,14 @@ import GenomicsSection from '@/components/subject-matter-experts/genomics/Genomi
 import { GENOMICS_TESTIMONIALS } from '@/lib/subject-matter-experts/genomics'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+  title: 'Genomics Publication & Editing Services | Pubrica',
+  description: 'Pubrica empowers genomic research with expert editing, publication support, and high-impact journal guidance',
+  keywords: ['Genomics Publication'],
+  slug: '/subject-matter-experts/genomics',
+})
 
 const page = () => {
     return (

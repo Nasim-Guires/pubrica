@@ -1,4 +1,12 @@
 import React from "react";
+import { constructMetadata } from "@/lib/metadata";
+
+export const metadata = constructMetadata({
+  title: "Our Guarantee - Pubrica",
+  description:
+    "Our GuaranteePubrica team of experts has immense knowledge in the field of study and understand the importance of publications. The vast experience of our",
+  slug: "/our-guarantee",
+});
 
 const Page = () => {
   return (

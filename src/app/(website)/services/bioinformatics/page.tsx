@@ -8,6 +8,13 @@ import TherapeuticAreasAndTools from '@/components/services/bioinformatics/Thera
 import { bioinformaticsFaqs, bioinformaticsTestimonials, bioinformaticsWhoWeServe } from '@/lib/services/data/bioinformatics/bioinformaticTestimonilas'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+    title: 'Bioinformatics Services | Genomic, Proteomic & NGS Analysis',
+    description: 'Pubrica delivers expert bioinformatics services for genomics, transcriptomics, proteomics, metabolomics & NGS with global compliance.',
+    slug: '/services/bioinformatics',
+})
 
 
 const page = () => {

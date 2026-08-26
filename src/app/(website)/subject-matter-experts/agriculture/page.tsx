@@ -5,6 +5,15 @@ import { agricultureTestimonials } from '@/lib/subject-matter-experts/agricultur
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: "Empowering Agriculture Research & Sustainable Innovation",
+  description: "Expert support for research, publishing, and innovative solutions advancing sustainable agriculture worldwide.",
+  keywords: ["agriculture"],
+  slug: "/subject-matter-experts/agriculture",
+});
+
 const page = () => {
     return (
         <>

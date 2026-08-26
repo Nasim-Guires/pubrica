@@ -3,6 +3,13 @@ import { Phone, Mail, Clock, MapPin, Search } from 'lucide-react';
 import Container from '@/components/common/Container';
 import ContactForm from '@/components/shared/ContactForm';
 import { CONTACT_INFO } from '@/lib/constants';
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: 'contact us - Pubrica',
+  description: 'Experts are ready to collaborate with you.',
+  slug: '/contact',
+});
 
 export default function ContactPage() {
   return (

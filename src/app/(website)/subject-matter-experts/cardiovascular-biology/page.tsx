@@ -5,6 +5,15 @@ import { CARDIOVASCULAR_BIOLOGY_TESTIMONIALS } from '@/lib/subject-matter-expert
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: "Comprehensive Cardiovascular Biology Research Support",
+  description: "Expert research, writing, and publication support in cardiovascular biology to advance heart and vascular science.",
+  keywords: ["Cardiovascular Biology"],
+  slug: "/subject-matter-experts/cardiovascular-biology",
+});
+
 
 const page = () => {
     return (

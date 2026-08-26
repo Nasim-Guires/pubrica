@@ -11,6 +11,14 @@ import {
 import { getPosts, mediaUrl, getDescription } from "@/lib/payload";
 import CategoriesCarousel from "@/components/insight/CategoriesCarousel";
 import ImageLightboxGrid from "@/components/insight/ImageLightboxGrid";
+import { constructMetadata } from "@/lib/metadata";
+
+export const metadata = constructMetadata({
+  title: "Insights - Pubrica",
+  description:
+    "Pubrica Insights offers a range of services under Patient Journey & Insights – Machine Learning Services, including Data Extraction, data analytics, and",
+  slug: "/insights",
+});
 
 export const revalidate = 300;
 

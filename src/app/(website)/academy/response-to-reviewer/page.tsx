@@ -2,6 +2,19 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import { constructMetadata } from '@/lib/metadata'
+
+// No live pubrica.com page corresponds to this exact URL: /academy/response-to-reviewer/
+// 301-redirects to /insights/sample-work/response-to-reviewer/, an unrelated sample
+// (a nurses'-safety-culture case study) that shares no topical overlap with this page's
+// actual sample reviewer-response-letter content. Metadata below is written from this
+// page's own real content (matching the title/description already used in its legacy
+// <Head> tag below) rather than copying that mismatched live page.
+export const metadata = constructMetadata({
+  title: 'Response to Reviewer | Pubrica',
+  description: 'Sample letter and guidelines for responding to reviewer comments for publication in academic journals.',
+  slug: '/academy/response-to-reviewer',
+})
 
 export default function ResponseToReviewerPage() {
     const jsonLd = {

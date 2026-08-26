@@ -185,9 +185,9 @@ export default function SimplifiedAbstractPage() {
             {/* 1. HERO BANNER */}
             <section className="bg-[#033c2a] text-white py-14 px-4 sm:px-6 lg:px-8 text-center">
                 <div className="max-w-5xl mx-auto space-y-4">
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight">
                         Accelerate Your Research with Pubrica's SIMPLIFIED ABSTRACT SERVICE
-                    </h1>
+                    </h2>
                     <p className="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed max-w-4xl mx-auto">
                         Get tailored assistance in crafting a clear, concise abstract that effectively summarizes your research. Our service ensures clarity and accuracy while making your manuscript easily understandable to diverse academic audiences, helping you meet journal submission standards efficiently.
                     </p>

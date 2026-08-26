@@ -1,6 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: 'Confidentiality - Pubrica',
+  description:
+    'Research Confidentiality 100% data privacy Confidentiality and privacyPubrica has a high regard and respects for the confidentiality in research work; our',
+  slug: '/quality/confidentiality',
+});
 
 export default function ResearchConfidentialityPage() {
   return (

@@ -4,6 +4,13 @@ import CaseReportSectionsPage from '@/components/services/physician-writing-serv
 import CaseReportWritingPage from '@/components/services/physician-writing-services/case-report-writing/CaseReportWritingPage'
 import { caseReportFAQData, editorialWorkflowData } from '@/lib/services/case-report-writing'
 import React from 'react'
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+    title: 'Case Report Writing Services | Pubrica',
+    description: 'Get expert help writing clear, structured medical case reports that meet journal guidelines and improve publication success.',
+    slug: '/services/physician-writing-services/case-report-writing',
+})
 
 const page = () => {
     return (

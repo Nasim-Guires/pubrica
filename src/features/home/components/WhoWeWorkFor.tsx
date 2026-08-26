@@ -58,7 +58,7 @@ export default function WhoWeWorkFor() {
 
           <div className="flex-shrink-0 self-start md:self-end">
             <Link
-              href="/Industries"
+              href="/industries"
               className="bg-emerald-950 text-white font-medium text-sm px-6 py-2.5 rounded-full hover:bg-emerald-900 shadow-md transition-all duration-300 inline-block"
             >
               Read more

@@ -4,6 +4,14 @@ import ProteinEngineeringSection from '@/components/subject-matter-experts/prote
 import { proteinEngineeringTestimonials } from '@/lib/subject-matter-experts/protein-engineering'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+  title: 'Protein Engineering Solutions for Research & Healthcare | Pubrica',
+  description: 'Advanced protein engineering services for drug development, diagnostics, and industrial applications at Pubrica.',
+  keywords: ['Protein Engineering Solutions'],
+  slug: '/subject-matter-experts/protein-engineering',
+})
 
 const page = () => {
     return (

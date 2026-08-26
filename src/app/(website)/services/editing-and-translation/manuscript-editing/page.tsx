@@ -9,6 +9,13 @@ import { EditingTranslationManuscriptEditingWhyChooseAndSamples } from "@/compon
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
 import React from "react";
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: 'Professional Manuscript Editing Service for Research Papers',
+  description: 'Elevate your research paper with expert manuscript editing that improves readability, accuracy, and overall scientific rigor for journals.',
+  slug: '/services/editing-and-translation/manuscript-editing',
+});
 
 const page = () => {
   return (

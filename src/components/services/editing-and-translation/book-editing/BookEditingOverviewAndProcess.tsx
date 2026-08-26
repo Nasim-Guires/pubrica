@@ -98,9 +98,9 @@ export const BookEditingOverviewAndProcess: React.FC = () => {
       {/* 1. Dark Green Banner Header */}
       <section className="w-full bg-[#03231a] py-10 px-4 sm:px-6 text-center text-white">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 tracking-wide">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 tracking-wide">
             Book Editing Services at Pubrica
-          </h1>
+          </h2>
           <p className="text-xs sm:text-sm md:text-base text-slate-200 max-w-3xl mx-auto leading-relaxed">
             Our editors ensure that your book manuscript is polished, engaging,
             and publication-ready through meticulous editing and professional

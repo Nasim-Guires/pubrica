@@ -8,6 +8,13 @@ import ScientificSampleWork from "@/components/services/editing-and-translation/
 import TypesOfEditing from "@/components/services/editing-and-translation/scientific-editing/TypesOfEditing";
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 import React from "react";
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: 'Scientific Editing Services to Strengthen Research Papers',
+  description: 'Professional scientific editing services refine manuscripts to improve quality, accuracy, and readiness for successful journal submission and publication.',
+  slug: '/services/editing-and-translation/scientific-editing',
+});
 
 const page = () => {
   return (

@@ -129,9 +129,9 @@ export default function VideoAbstractGuidePage() {
                 <main className="lg:col-span-8 space-y-8 text-sm md:text-base leading-relaxed text-gray-700">
 
                     <section>
-                        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                             Top 6 Tips to Create a Perfect Video Abstract for Your Research Paper
-                        </h1>
+                        </h2>
                     </section>
 
                     {/* Section 1 */}

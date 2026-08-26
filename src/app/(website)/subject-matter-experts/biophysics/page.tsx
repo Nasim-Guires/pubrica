@@ -5,6 +5,15 @@ import { biophysicsTestimonialsData } from '@/lib/subject-matter-experts/biophys
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
+import { constructMetadata } from '@/lib/metadata';
+
+export const metadata = constructMetadata({
+  title: "Biophysics Research & Publication Support | Pubrica",
+  description: "Expert biophysics editing, research guidance, and journal support for high-impact publications at Pubrica.",
+  keywords: ["Biophysics Research"],
+  slug: "/subject-matter-experts/biophysics",
+});
+
 const page = () => {
     return (
         <>

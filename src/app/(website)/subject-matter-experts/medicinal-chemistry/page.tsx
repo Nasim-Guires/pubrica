@@ -5,7 +5,14 @@ import MedicinalChemistrySections from '@/components/subject-matter-experts/medi
 import { MEDICINAL_CHEMISTRY_TESTIMONIALS } from '@/lib/subject-matter-experts/medicinal-chemistry'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
 
+export const metadata = constructMetadata({
+  title: 'End-to-End Medicinal Chemistry Research & Publication | Pubrica',
+  description: 'Expert support for drug discovery, manuscript writing, and high-impact journal publication.',
+  keywords: ['medicinal chemistry'],
+  slug: '/subject-matter-experts/medicinal-chemistry',
+})
 
 const page = () => {
     return (

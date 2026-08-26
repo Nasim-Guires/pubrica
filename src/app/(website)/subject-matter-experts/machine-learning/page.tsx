@@ -4,6 +4,14 @@ import MachineLearningSection from '@/components/subject-matter-experts/machine-
 import { MACHINE_LEARNING_TESTIMONIALS } from '@/lib/subject-matter-experts/machine-learning'
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from '@/lib/metadata'
+
+export const metadata = constructMetadata({
+  title: 'Machine Learning Research, Development & Publication Support',
+  description: 'Pubrica offers complete support for machine learning research, from algorithm development to manuscript writing and publication.',
+  keywords: ['Machine Learning'],
+  slug: '/subject-matter-experts/machine-learning',
+})
 
 const page = () => {
     return (
