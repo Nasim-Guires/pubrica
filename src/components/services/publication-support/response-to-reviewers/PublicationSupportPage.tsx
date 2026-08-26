@@ -1,5 +1,7 @@
+import CommonPackages from "@/components/common/CommonPackages";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 // ================= TYPES OF RESPONSES DATA =================
@@ -225,13 +227,13 @@ interface PackageInfo {
   turnaround: string;
 }
 
-const PACKAGES: PackageInfo[] = [
+const PACKAGES = [
   {
     icon: "/images/publication-support/responding-to-reviewers/standard-logo.png",
-    name: "Standard",
+    title: "Standard",
     subtitle: "HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW",
-    bgColor: "bg-[#d6e3e2]",
-    borderColor: "border-[#083b3a]",
+    cardBgColor: "#d6e3e2",
+    titleColor: "#083b3a",
     idealFor:
       "Authors with minor reviewer comments requiring straightforward responses and light manuscript edits.",
     includes: [
@@ -239,7 +241,7 @@ const PACKAGES: PackageInfo[] = [
       "Minor manuscript revisions (language polishing, formatting corrections)",
       "Highlighted changes using Track Changes",
     ],
-    optionalAddons: [
+    addOns: [
       "Impact Factor & Indexing.",
       "Additional rounds of minor revisions",
       "Language editing and proofreading",
@@ -248,10 +250,10 @@ const PACKAGES: PackageInfo[] = [
   },
   {
     icon: "/images/publication-support/journal-selection/advanced.webp",
-    name: "ADVANCED",
+    title: "ADVANCED",
     subtitle: "HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW",
-    bgColor: "bg-[#d6c1db]",
-    borderColor: "border-[#703081]",
+    cardBgColor: "#d6c1db",
+    titleColor: "#703081",
     idealFor:
       "Manuscripts requiring substantial content changes, data clarifications, or methodology updates, along with a formal cover letter.",
     includes: [
@@ -260,7 +262,7 @@ const PACKAGES: PackageInfo[] = [
       "Preparation of a cover letter for resubmission",
       "Highlighted revisions in the manuscript",
     ],
-    optionalAddons: [
+    addOns: [
       "Statistical data review",
       "Plagiarism check",
       "Formatting as per journal guidelines",
@@ -269,10 +271,10 @@ const PACKAGES: PackageInfo[] = [
   },
   {
     icon: "/images/publication-support/responding-to-reviewers/pa-icons-.png",
-    name: "Premium",
+    title: "Premium",
     subtitle: "HIGH-END PUBLICATION SUPPORT + RAPID TECHNICAL REVIEW",
-    bgColor: "bg-[#d8c39d]",
-    borderColor: "border-[#69421c]",
+    cardBgColor: "#d8c39d",
+    titleColor: "#69421c",
     idealFor:
       "Researchers needing end-to-end support for resubmission, including strategic rebuttal and manuscript reformatting to meet strict journal requirements.",
     includes: [
@@ -281,7 +283,7 @@ const PACKAGES: PackageInfo[] = [
       "Manuscript formatting and journal compliance check",
       "Unlimited revisions within the scope of the initial reviewer comments",
     ],
-    optionalAddons: [
+    addOns: [
       "Extended consultation for subsequent revision rounds",
       "English language enhancement for non-native speakers",
       "Submission support and follow-up communication with journal editors",
@@ -293,26 +295,26 @@ const PACKAGES: PackageInfo[] = [
 export default function PublicationSupportPage() {
   return (
     <div className="w-full font-sans bg-white text-slate-800">
-      <div className="max-w-6xl mx-auto px-4 py-12 space-y-16">
+      <div className="">
         {/* ================= SECTION 1: TYPES OF RESPONSES ================= */}
-    
+
         {/* ================= SECTION 2: SUBJECTS ================= */}
-       
+
 
         {/* ================= SECTION 3: STAGGERED TIMELINE WORKFLOW ================= */}
 
       </div>
 
       {/* ================= SECTION 4: GUARANTEE BANNER ================= */}
-      <section className="bg-[#032d1f] text-white py-8 px-6 my-10">
+      <section className="bg-[#032d1f] text-white py-8 px-6 w-full">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-6">
           <div className="flex-shrink-0">
-            <div className="relative w-28 h-28">
+            <div className="relative w-40 h-40">
               <Image
                 src="/images/publication-support/Satisfaction_Guarantee.webp"
                 alt="Satisfaction Guarantee"
                 fill
-                sizes="112px"
+                sizes="160px"
                 className="object-contain"
               />
             </div>
@@ -352,9 +354,9 @@ export default function PublicationSupportPage() {
               <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-3">
                 Response to Reviewer Sample Work
               </h3>
-              <button className="bg-black hover:bg-slate-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors">
+              <Link href="/insights/sample-work/sample-response-to-reviewers-comments/" className="bg-black hover:bg-slate-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors">
                 Discover More
-              </button>
+              </Link>
             </div>
 
             <div>
@@ -366,9 +368,9 @@ export default function PublicationSupportPage() {
                 addresses reviewer feedback and enhances manuscript quality for
                 successful publication.
               </p>
-              <button className="bg-black hover:bg-slate-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors">
+              <Link href="/insights/sample-work/response-to-review-comments/" className="bg-black hover:bg-slate-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors">
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -387,94 +389,11 @@ export default function PublicationSupportPage() {
         </p>
 
         {/* 3 Package Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-          {PACKAGES.map((pkg, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col border border-slate-200 rounded-sm overflow-hidden shadow-sm bg-white"
-            >
-              {/* Header Badge & Name */}
-              <div
-                className={`p-4 border-t-4 ${pkg.borderColor} flex items-start gap-3 bg-white border-b border-slate-200`}
-              >
-                <div className="relative w-10 h-10 flex-shrink-0">
-                  <Image
-                    src={pkg.icon}
-                    alt={`${pkg.name} package icon`}
-                    fill
-                    sizes="40px"
-                    className="object-contain"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-800 leading-none">
-                    {pkg.name}
-                  </h3>
-                  <p className="text-[10px] font-semibold text-slate-500 uppercase mt-1 leading-tight">
-                    {pkg.subtitle}
-                  </p>
-                </div>
-              </div>
-
-              {/* Package Content Box */}
-              <div
-                className={`p-5 flex-1 flex flex-col ${pkg.bgColor} space-y-5 text-slate-800 text-xs md:text-sm`}
-              >
-                {/* Ideal For */}
-                <div>
-                  <div className="flex items-start gap-2 font-bold mb-1">
-                    <span className="inline-block mt-0.5">➔</span>
-                    <span>Ideal for:</span>
-                  </div>
-                  <p className="text-slate-700 pl-5 text-xs leading-relaxed">
-                    {pkg.idealFor}
-                  </p>
-                </div>
-
-                {/* Includes */}
-                <div>
-                  <div className="flex items-start gap-2 font-bold mb-1">
-                    <span className="inline-block mt-0.5">➔</span>
-                    <span>Includes:</span>
-                  </div>
-                  <ul className="space-y-2 pl-5 text-xs text-slate-700">
-                    {pkg.includes.map((inc, iIdx) => (
-                      <li key={iIdx}>{inc}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Optional Add-ons */}
-                <div>
-                  <div className="flex items-start gap-2 font-bold mb-1">
-                    <span className="inline-block mt-0.5">➔</span>
-                    <span>Optional Add-ons:</span>
-                  </div>
-                  <ul className="space-y-1.5 pl-5 text-xs text-slate-700">
-                    {pkg.optionalAddons.map((addon, aIdx) => (
-                      <li key={aIdx}>{addon}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Turnaround */}
-                <div className="mt-auto pt-2">
-                  <div className="flex items-center gap-2 font-bold">
-                    <span>➔</span>
-                    <span>Turnaround:</span>
-                  </div>
-                  <p className="pl-5 text-xs text-slate-800 font-semibold mt-0.5">
-                    {pkg.turnaround}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <CommonPackages packages={PACKAGES} />
 
         {/* Global CTA Button */}
         <div className="mt-12 text-center">
-          <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
         </div>
       </section>
     </div>

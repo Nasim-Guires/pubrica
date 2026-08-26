@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
 
 // Exportable SEO Metadata for Next.js App Router (page.tsx)
 export const metadata: Metadata = {
@@ -30,18 +31,11 @@ export default function PosterPreparationPage() {
       {/* ------------------------------------------------------------- */}
       {/* 1. HERO BANNER SECTION                                       */}
       {/* ------------------------------------------------------------- */}
-      <section className="bg-[#1a2d29] text-white py-12 px-4 md:px-8 text-center">
-        <div className="max-w-5xl mx-auto border border-gray-400/30 p-8 rounded-sm">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-            Conference Presentation &amp; Scientific Poster Preparation Service
-          </h1>
-          <p className="text-gray-300 text-base md:text-lg max-w-3xl mx-auto">
-            Pubrica&apos;s poster preparation service provides professional design and content
-            development for academic and scientific posters to maximize the impact of your
-            presentation.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Conference Presentation & Scientific Poster Preparation Service"
+        description="Pubrica's poster preparation service provides professional design and content development for academic and scientific posters to maximize the impact of your presentation."
+        headingAs="h1"
+      />
 
       {/* ------------------------------------------------------------- */}
       {/* 2. MAIN CONTENT SECTION                                      */}
@@ -121,8 +115,8 @@ export default function PosterPreparationPage() {
 
           {/* Right Column: Next.js Optimized Image */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="bg-[#487a68] p-3 rounded-2xl shadow-md max-w-md w-full">
-              <div className="bg-white rounded-xl overflow-hidden p-2 relative">
+            <div className="p-3 rounded-2xl max-w-md w-full">
+              <div className="rounded-xl overflow-hidden p-2 relative">
                 <Image
                   src="/images/publication-support/poster-preparation/poster-presentation-PUB-min.webp"
                   alt="Scientific poster design preview on a laptop"
@@ -147,17 +141,14 @@ export default function PosterPreparationPage() {
           partner, delivering a poster that represents the quality of your research and its clarity.
         </p>
         {/* Action Buttons */}
-        <div className="flex flex-wrap gap-4 items-center pt-2">
+        <div className="flex flex-wrap items-center gap-8 mt-6 mb-10">
           <GetFreeQuoteButton />
-          <Link
-            href="/uploads/Medico-Legal-Support-Services_compressed.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#b31217] hover:bg-[#8f0d11] text-white font-medium py-2.5 px-6 rounded-full transition-colors inline-block"
-          >
+          <Link href="/uploads/Poster-Preparation-Services-_compressed.pdf" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
             View Brochure
           </Link>
         </div>
+
+
       </section>
 
       {/* ------------------------------------------------------------- */}

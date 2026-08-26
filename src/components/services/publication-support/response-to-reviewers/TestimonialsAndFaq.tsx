@@ -1,4 +1,5 @@
 "use client"
+import CommonFAQ from "@/components/common/FAQ";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -53,56 +54,41 @@ const TESTIMONIALS: Testimonial[] = [
   },
 ];
 
-const FAQS_COL_1: FAQItem[] = [
+const faqsData = [
   {
-    id: 1,
-    question:
-      "1. How do I respond to peer review comments from journal reviewers?",
+    question: "1. How do I respond to peer review comments from journal reviewers?",
     answer:
       "Respond to peer review comments by addressing each comment carefully, revising the paper if necessary, providing a detailed response letter explaining all the changes made, and maintaining a respectful tone in the response.",
   },
   {
-    id: 2,
-    question:
-      "2. What is the correct format for responding to reviewers' comments?",
+    question: "2. What is the correct format for responding to reviewers' comments?",
     answer:
-      "Use a point-by-point format. Quote each reviewer comment directly, follow it with your detailed response, and state clearly where changes were made in the revised manuscript (including line or page numbers).",
+      "The correct format of the response letter is one in which each comment of the reviewer is quoted and explained in detail, indicating the changes made in the paper.",
   },
   {
-    id: 3,
     question: "3. How to write a response letter to journal reviewers?",
     answer:
-      "Start with a respectful opening thanking the editor and reviewers for their constructive feedback. Present each comment followed by a clear, evidence-based response detailing the corresponding manuscript revisions.",
+      "Write a response letter by acknowledging the comments received, carefully attending to each comment received, providing clear explanations for the responses given, and using a respectful tone in the response letter.",
   },
   {
-    id: 4,
-    question:
-      "4. What happens after submitting revised manuscripts and reviewer responses?",
+    question: "4. What happens after submitting revised manuscripts and reviewer responses?",
     answer:
-      "The journal editor reviews your resubmission and may accept it directly or send it back to the original reviewers for a second round of evaluation before making a final publication decision.",
+      "Once the revised paper and response letter are received, the editor may choose to send the paper back for re-evaluation, make a final decision, request further revisions, or accept the paper.",
   },
-];
-
-const FAQS_COL_2: FAQItem[] = [
   {
-    id: 5,
-    question:
-      "5. How can researchers improve their manuscript while responding to reviewer feedback?",
+    question: "5. How can researchers improve their manuscript while responding to reviewer feedback?",
     answer:
       "Researchers can improve the quality of their paper by addressing all the points raised, clarifying the paper, enhancing the methodology, improving the structure, language, and content, ensuring all revisions enhance overall quality and clarity.",
   },
   {
-    id: 6,
     question: "6. How to address critical reviewer comments effectively?",
     answer:
-      "Acknowledge critical feedback objectively without becoming defensive. Provide clear scientific justification, additional data, or references to support your position, or make the requested revisions where valid.",
+      "Address critical reviewer comments professionally by responding respectfully, providing clear explanations, making necessary revisions, supporting your arguments with evidence, and acknowledging valid concerns in a structured point-by-point reply.",
   },
   {
-    id: 7,
-    question:
-      "7. What strategies help authors handle major revision requests from journals?",
+    question: "7. What strategies help authors handle major revision requests from journals?",
     answer:
-      "Break down complex comments into actionable sub-tasks, prioritize methodology/data updates first, maintain a transparent change log, and seek professional revision support when required.",
+      "When dealing with major revisions, it is important to thoughtfully consider all the feedback received, prioritize key concerns, and respond to them in detail.",
   },
 ];
 
@@ -127,10 +113,6 @@ export default function TestimonialsAndFaq() {
     <div className="w-full bg-[#f6f8f8] font-sans text-slate-800">
       {/* ================= TESTIMONIALS SECTION ================= */}
       <section className="pt-10 pb-12 px-4 max-w-6xl mx-auto">
-        {/* Top Button */}
-        <div className="text-center mb-6">
-         <GetFreeQuoteButton/>
-        </div>
 
         {/* Heading & Intro */}
         <div className="max-w-4xl mx-auto text-left mb-8">
@@ -163,11 +145,10 @@ export default function TestimonialsAndFaq() {
               type="button"
               aria-label={`Show testimonial ${index + 1}`}
               onClick={() => setActiveIndex(index)}
-              className={`w-2.5 h-2.5 rounded-xs cursor-pointer ${
-                activeIndex === index
-                  ? "bg-[#1e4a42]"
-                  : "border border-[#1e4a42] bg-white"
-              }`}
+              className={`w-2.5 h-2.5 rounded-xs cursor-pointer ${activeIndex === index
+                ? "bg-[#1e4a42]"
+                : "border border-[#1e4a42] bg-white"
+                }`}
             />
           ))}
         </div>
@@ -180,67 +161,10 @@ export default function TestimonialsAndFaq() {
         </h2>
 
         {/* 2-Column Accordion Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start max-w-5xl mx-auto">
-          {/* Column 1 */}
-          <div className="space-y-4">
-            {FAQS_COL_1.map((faq) => {
-              const isOpen = openFaqs.includes(faq.id);
-              return (
-                <div
-                  key={faq.id}
-                  className="border border-slate-200 bg-white rounded-sm overflow-hidden shadow-2xs"
-                >
-                  <button
-                    onClick={() => toggleFaq(faq.id)}
-                    className="w-full p-4 text-left flex justify-between items-start gap-3 hover:bg-slate-50/80 transition-colors"
-                  >
-                    <span className="text-xs md:text-sm font-bold text-slate-800 leading-snug">
-                      {faq.question}
-                    </span>
-                    <span className="text-base font-bold text-slate-700 flex-shrink-0 leading-none">
-                      {isOpen ? "−" : "+"}
-                    </span>
-                  </button>
-                  {isOpen && (
-                    <div className="px-4 pb-4 pt-1 border-t border-slate-100 text-xs text-slate-600 leading-relaxed">
-                      {faq.answer}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Column 2 */}
-          <div className="space-y-4">
-            {FAQS_COL_2.map((faq) => {
-              const isOpen = openFaqs.includes(faq.id);
-              return (
-                <div
-                  key={faq.id}
-                  className="border border-slate-200 bg-white rounded-sm overflow-hidden shadow-2xs"
-                >
-                  <button
-                    onClick={() => toggleFaq(faq.id)}
-                    className="w-full p-4 text-left flex justify-between items-start gap-3 hover:bg-slate-50/80 transition-colors"
-                  >
-                    <span className="text-xs md:text-sm font-bold text-slate-800 leading-snug">
-                      {faq.question}
-                    </span>
-                    <span className="text-base font-bold text-slate-700 flex-shrink-0 leading-none">
-                      {isOpen ? "−" : "+"}
-                    </span>
-                  </button>
-                  {isOpen && (
-                    <div className="px-4 pb-4 pt-1 border-t border-slate-100 text-xs text-slate-600 leading-relaxed">
-                      {faq.answer}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        <CommonFAQ
+          title="Frequently Asked Questions"
+          faqs={faqsData}
+        />
       </section>
 
       {/* Dark Footer Strip */}

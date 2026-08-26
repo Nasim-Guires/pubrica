@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 const complianceStandards = [
   {
@@ -29,19 +30,11 @@ export default function RespondingToReviewersSection() {
       {/* ========================================== */}
       {/* SECTION 1: HERO BANNER                    */}
       {/* ========================================== */}
-      <section className="bg-gradient-to-r from-[#172722] via-[#1a332d] to-[#172722] py-12 px-4 sm:px-8 text-white text-center">
-        <div className="max-w-4xl mx-auto border border-white/70 p-6 sm:p-10 rounded-xs">
-          <h1 className="text-xl sm:text-3xl font-bold leading-snug tracking-wide mb-4">
-            Response to Reviewer Comments Addressal Services with Rebuttal
-            Preparation for Manuscript Re-Submissions
-          </h1>
-          <p className="text-xs sm:text-sm text-gray-200 max-w-2xl mx-auto font-light leading-relaxed">
-            Our subject-matter experts will revise your manuscript and provide
-            detailed, point-by-point responses to reviewer comments, ensuring it
-            meets your journal’s requirements and scientific standards.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Response to Reviewer Comments Addressal Services with Rebuttal Preparation for Manuscript Re-Submissions"
+        description="Our subject-matter experts will revise your manuscript and provide detailed, point-by-point responses to reviewer comments, ensuring it meets your journal’s requirements and scientific standards."
+        headingAs="h1"
+      />
 
       {/* ========================================== */}
       {/* SECTION 2: SERVICE OVERVIEW CONTENT       */}
@@ -134,15 +127,13 @@ export default function RespondingToReviewersSection() {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-wrap items-center gap-4 mt-8">
+        <div className="flex flex-wrap items-center gap-8 mt-6 mb-10">
           <GetFreeQuoteButton />
-          <a
-            href="#brochure"
-            className="bg-[#b80000] hover:bg-black text-white font-bold text-xs py-3 px-6 rounded-full transition-colors shadow-sm"
-          >
+          <button className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
             View Brochure
-          </a>
+          </button>
         </div>
+
       </section>
 
       {/* ========================================== */}

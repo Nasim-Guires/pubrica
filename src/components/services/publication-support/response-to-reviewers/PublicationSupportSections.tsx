@@ -1,3 +1,4 @@
+import { EditorialWorkflowSection } from "@/components/common/EditorialWorkflowSection";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -169,19 +170,11 @@ const SUBJECT_CATEGORIES: SubjectCategory[] = [
 ];
 
 // ================= WORKFLOW TIMELINE STEPS =================
-interface ProcessStep {
-  stepNumber: number;
-  title: string;
-  description: string;
-  icon: string;
-  position: "bottom" | "top"; // Alternates layout position
-}
-
-const WORKFLOW_STEPS: ProcessStep[] = [
+const WORKFLOW_STEPS = [
   {
     stepNumber: 1,
     title: "COMPREHENSIVE REVIEWER COMMENT ANALYSIS",
-    icon: "/images/publication-support/scopeofthejournal.webp",
+    iconSrc: "/images/publication-support/scopeofthejournal.webp",
     description:
       "Our subject matter expert team systematically reviews all feedback and suggestions also provided by the journal reviewers or editors. We evaluate critical points, reviewer clarifications, and determine the most appropriate way to respond to reviewer comments.",
     position: "bottom",
@@ -189,7 +182,7 @@ const WORKFLOW_STEPS: ProcessStep[] = [
   {
     stepNumber: 2,
     title: "STRATEGIC POINT-BY-POINT RESPONSE DRAFTING",
-    icon: `${PAGE_IMAGES}/Strategic-Point-by-Point-Response-Drafting.png`,
+    iconSrc: `${PAGE_IMAGES}/Strategic-Point-by-Point-Response-Drafting.png`,
     description:
       "We write focused, concise, and respectful responses to each reviewer's comment. Our responses may include scientific reasoning, data justification, or references to clarify that your position is communicated clearly and appropriately.",
     position: "top",
@@ -197,7 +190,7 @@ const WORKFLOW_STEPS: ProcessStep[] = [
   {
     stepNumber: 3,
     title: "MANUSCRIPT REVISION AND EDITING",
-    icon: `${PAGE_IMAGES}/Manuscript-Revision-and-Editing.png`,
+    iconSrc: `${PAGE_IMAGES}/Manuscript-Revision-and-Editing.png`,
     description:
       "On the basis of reviewer feedback, our editors have edited the manuscript to add the required changes. We indicate each change using Track Changes or whatever method is necessary for your target journal to present our transparency.",
     position: "bottom",
@@ -205,7 +198,7 @@ const WORKFLOW_STEPS: ProcessStep[] = [
   {
     stepNumber: 4,
     title: "CONSISTENCY AND COMPLIANCE CHECK",
-    icon: `${PAGE_IMAGES}/Consistency-and-Compliance-Check.png`,
+    iconSrc: `${PAGE_IMAGES}/Consistency-and-Compliance-Check.png`,
     description:
       "We assure you that the responses and manuscript revisions are consistent with the journal's formatting guidelines and editorial policies, upholding an exceptionally high standard of academic professionalism.",
     position: "top",
@@ -213,7 +206,7 @@ const WORKFLOW_STEPS: ProcessStep[] = [
   {
     stepNumber: 5,
     title: "FINAL REVIEW AND QUALITY ASSURANCE",
-    icon: `${PAGE_IMAGES}/Final-Review-and-Quality-Assurance.png`,
+    iconSrc: `${PAGE_IMAGES}/Final-Review-and-Quality-Assurance.png`,
     description:
       "Before delivery, the team in charge of quality control checks the response document and revised manuscript for clarity, tone, grammar, and accuracy.",
     position: "bottom",
@@ -221,7 +214,7 @@ const WORKFLOW_STEPS: ProcessStep[] = [
   {
     stepNumber: 6,
     title: "SUPPORT FOR RESUBMISSION",
-    icon: `${PAGE_IMAGES}/Support-for-Resubmission.png`,
+    iconSrc: `${PAGE_IMAGES}/Support-for-Resubmission.png`,
     description:
       "We help you with resubmission documentation, including cover letters and any additional materials the medical and life science journal may require. For subsequent revisions, we will continue to support you with addressing any new reviewer comments.",
     position: "top",
@@ -230,181 +223,107 @@ const WORKFLOW_STEPS: ProcessStep[] = [
 
 export default function PublicationSupportSections() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12 text-slate-800 font-sans space-y-16">
-      {/* ================= SECTION 1: TYPES OF RESPONSES ================= */}
-      <section>
-        <h2 className="text-2xl md:text-3xl font-bold text-[#083b3a] mb-8 text-center md:text-left">
-          Types of Responses and Documents We Support
-        </h2>
+    <div className="w-full">
+      {/* CONTAINED SECTIONS (Section 1 & 2) */}
+      <div className="max-w-6xl mx-auto px-4 py-12 text-slate-800 font-sans space-y-16">
+        {/* ================= SECTION 1: TYPES OF RESPONSES ================= */}
+        <section>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#083b3a] mb-8 text-center md:text-left">
+            Types of Responses and Documents We Support
+          </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {SUPPORT_TYPES.map((card, idx) => (
-            <div
-              key={idx}
-              className="group bg-white border border-slate-200 rounded-sm p-6 shadow-sm border-t-4 border-t-[#083b3a] transition-all duration-300 hover:bg-[#555555] hover:text-white cursor-pointer"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="relative w-10 h-10 rounded-full bg-[#fcf4d9] group-hover:bg-[#666666] flex-shrink-0 overflow-hidden">
-                  <Image
-                    src={card.icon}
-                    alt={card.title}
-                    fill
-                    sizes="40px"
-                    className="object-contain"
-                  />
-                </div>
-                <h3 className="text-base font-bold text-[#083b3a] group-hover:text-white transition-colors leading-snug">
-                  {card.title}
-                </h3>
-              </div>
-
-              <ul className="space-y-2 text-xs md:text-sm text-slate-700 group-hover:text-slate-100 transition-colors">
-                {card.items.map((item, itemIdx) => (
-                  <li key={itemIdx} className="flex items-start gap-2">
-                    <span className="text-[#083b3a] group-hover:text-amber-400 font-bold">
-                      •
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ================= SECTION 2: SUBJECTS ================= */}
-      <section>
-        <h2 className="text-2xl md:text-3xl font-bold text-[#083b3a] mb-3">
-          Subjects
-        </h2>
-        <p className="text-sm md:text-base text-slate-700 leading-relaxed mb-8">
-          Pubrica&apos;s Response to Reviewer Comments service helps researchers
-          in all disciplines to produce accurate, point-by-point responses to
-          peer review feedback. The service ensures accuracy scientifically,
-          clarity, and alignment with journal requirements for a successful
-          manuscript.
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {SUBJECT_CATEGORIES.map((cat, idx) => (
-            <div
-              key={idx}
-              className="group bg-[#f0faf7] border border-emerald-100 rounded-sm p-4 border-t-4 border-t-[#083b3a] shadow-sm transition-all duration-300 hover:bg-[#555555] hover:text-white cursor-pointer"
-            >
-              <h3 className="text-sm font-bold text-[#083b3a] group-hover:text-white mb-4 pb-2 border-b border-emerald-200/50 group-hover:border-slate-600 transition-colors leading-snug">
-                {cat.title}
-              </h3>
-
-              <ul className="space-y-2 text-xs text-slate-700 group-hover:text-slate-100 transition-colors">
-                {cat.topics.map((topic, topicIdx) => (
-                  <li key={topicIdx} className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full border border-red-600 bg-red-500 group-hover:border-amber-400 group-hover:bg-amber-400 flex-shrink-0 transition-colors" />
-                    <span>{topic}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        {/* Centered Button Wrapper */}
-        <div className="mt-8 flex justify-center">
-          <Link
-            href="/subject-matter-experts"
-            className="inline-flex items-center justify-center bg-[#0d3b38] hover:bg-[#082a28] text-white font-bold px-8 py-3 rounded-full shadow-sm transition-colors duration-200"
-          >
-            View More
-          </Link>
-        </div>
-      </section>
-      {/* ================= SECTION 3: STAGGERED TIMELINE WORKFLOW ================= */}
-      <section className="overflow-x-auto py-6">
-        <div className="min-w-[850px]">
-          {/* Horizontal Teal Connecting Bar Across Timeline */}
-          <div className="relative w-full">
-            <div className="grid grid-cols-6 gap-3 items-stretch">
-              {WORKFLOW_STEPS.map((step) => {
-                const isBottom = step.position === "bottom";
-
-                return (
-                  <div
-                    key={step.stepNumber}
-                    className="flex flex-col items-center justify-between h-[480px]"
-                  >
-                    {/* TOP HALF: Circle (if bottom card) OR Card (if top card) */}
-                    <div className="w-full flex-1 flex flex-col justify-end items-center pb-2">
-                      {!isBottom ? (
-                        /* Top Card Block */
-                        <div className="group w-full bg-white border border-slate-200 rounded-sm p-4 shadow-sm transition-colors duration-300 hover:bg-[#555555] hover:text-white cursor-pointer">
-                          <div className="relative w-8 h-8 mb-2">
-                            <Image
-                              src={step.icon}
-                              alt={step.title}
-                              fill
-                              sizes="32px"
-                              className="object-contain"
-                            />
-                          </div>
-                          <h3 className="text-xs font-bold text-slate-800 group-hover:text-white mb-2 leading-tight uppercase transition-colors">
-                            {step.title}
-                          </h3>
-                          <p className="text-[11px] text-slate-500 group-hover:text-slate-200 leading-snug transition-colors">
-                            {step.description}
-                          </p>
-                        </div>
-                      ) : (
-                        /* Numbered Circle for Bottom Card */
-                        <div className="flex flex-col items-center">
-                          <div className="w-9 h-9 rounded-full bg-[#008ba3] text-white font-bold text-sm flex items-center justify-center shadow-sm">
-                            {step.stepNumber}
-                          </div>
-                          <div className="w-0.5 h-6 bg-red-400" />
-                        </div>
-                      )}
-                    </div>
-
-                    {/* CENTER HORIZONTAL CONNECTING LINE */}
-                    <div className="w-full h-2.5 bg-[#008ba3] my-1" />
-
-                    {/* BOTTOM HALF: Card (if bottom card) OR Circle (if top card) */}
-                    <div className="w-full flex-1 flex flex-col justify-start items-center pt-2">
-                      {isBottom ? (
-                        /* Bottom Card Block */
-                        <div className="group w-full bg-white border border-slate-200 rounded-sm p-4 shadow-sm transition-colors duration-300 hover:bg-[#555555] hover:text-white cursor-pointer">
-                          <div className="relative w-8 h-8 mb-2">
-                            <Image
-                              src={step.icon}
-                              alt={step.title}
-                              fill
-                              sizes="32px"
-                              className="object-contain"
-                            />
-                          </div>
-                          <h3 className="text-xs font-bold text-slate-800 group-hover:text-white mb-2 leading-tight uppercase transition-colors">
-                            {step.title}
-                          </h3>
-                          <p className="text-[11px] text-slate-500 group-hover:text-slate-200 leading-snug transition-colors">
-                            {step.description}
-                          </p>
-                        </div>
-                      ) : (
-                        /* Numbered Circle for Top Card */
-                        <div className="flex flex-col items-center">
-                          <div className="w-0.5 h-6 bg-red-400" />
-                          <div className="w-9 h-9 rounded-full bg-[#008ba3] text-white font-bold text-sm flex items-center justify-center shadow-sm">
-                            {step.stepNumber}
-                          </div>
-                        </div>
-                      )}
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {SUPPORT_TYPES.map((card, idx) => (
+              <div
+                key={idx}
+                className="group bg-white border border-slate-200 rounded-sm p-6 shadow-sm border-t-4 border-t-[#083b3a] transition-all duration-300 hover:bg-[#555555] hover:text-white cursor-pointer"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="relative w-10 h-10 rounded-full bg-[#fcf4d9] group-hover:bg-[#666666] flex-shrink-0 overflow-hidden">
+                    <Image
+                      src={card.icon}
+                      alt={card.title}
+                      fill
+                      sizes="40px"
+                      className="object-contain"
+                    />
                   </div>
-                );
-              })}
-            </div>
+                  <h3 className="text-base font-bold text-[#083b3a] group-hover:text-white transition-colors leading-snug">
+                    {card.title}
+                  </h3>
+                </div>
+
+                <ul className="space-y-2 text-xs md:text-sm text-slate-700 group-hover:text-slate-100 transition-colors">
+                  {card.items.map((item, itemIdx) => (
+                    <li key={itemIdx} className="flex items-start gap-2">
+                      <span className="text-[#083b3a] group-hover:text-amber-400 font-bold">
+                        •
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* ================= SECTION 2: SUBJECTS ================= */}
+        <section>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#083b3a] mb-3">
+            Subjects
+          </h2>
+          <p className="text-sm md:text-base text-slate-700 leading-relaxed mb-8">
+            Pubrica&apos;s Response to Reviewer Comments service helps researchers
+            in all disciplines to produce accurate, point-by-point responses to
+            peer review feedback. The service ensures accuracy scientifically,
+            clarity, and alignment with journal requirements for a successful
+            manuscript.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {SUBJECT_CATEGORIES.map((cat, idx) => (
+              <div
+                key={idx}
+                className="group bg-[#f0faf7] border border-emerald-100 rounded-sm p-4 border-t-4 border-t-[#083b3a] shadow-sm transition-all duration-300 hover:bg-[#555555] hover:text-white cursor-pointer"
+              >
+                <h3 className="text-sm font-bold text-[#083b3a] group-hover:text-white mb-4 pb-2 border-b border-emerald-200/50 group-hover:border-slate-600 transition-colors leading-snug">
+                  {cat.title}
+                </h3>
+
+                <ul className="space-y-2 text-xs text-slate-700 group-hover:text-slate-100 transition-colors">
+                  {cat.topics.map((topic, topicIdx) => (
+                    <li key={topicIdx} className="flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full border border-red-600 bg-red-500 group-hover:border-amber-400 group-hover:bg-amber-400 flex-shrink-0 transition-colors" />
+                      <span>{topic}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Centered Button Wrapper */}
+          <div className="mt-8 flex justify-center">
+            <Link
+              href="/subject-matter-experts"
+              className="inline-flex items-center justify-center bg-[#0d3b38] hover:bg-[#082a28] text-white font-bold px-8 py-3 rounded-full shadow-sm transition-colors duration-200"
+            >
+              View More
+            </Link>
+          </div>
+        </section>
+      </div>
+
+      {/* ================= SECTION 3: FULL WIDTH WORKFLOW ================= */}
+      <div className="w-full">
+        <EditorialWorkflowSection
+          heading="EDITORIAL WORKFLOW"
+          subheading="Our Step-by-Step Manuscript Revision Process"
+          description="We guide your manuscript through a rigorous, multi-stage review and revision process to maximize your acceptance chances."
+          steps={WORKFLOW_STEPS}
+        />
+      </div>
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import CommonFAQ from "@/components/common/FAQ";
 
 // ----------------------------------------------------------------------
 // DATA TYPES & CONSTANTS
@@ -54,7 +55,7 @@ interface FAQItem {
   answer: string;
 }
 
-const leftFaqs: FAQItem[] = [
+const posterFaqs: FAQItem[] = [
   {
     id: 1,
     question: "1. How to design a scientific poster for a conference?",
@@ -71,7 +72,7 @@ const leftFaqs: FAQItem[] = [
     id: 3,
     question: "3. What is the best format for an academic conference poster?",
     answer:
-      "The best academic conference poster design is a well-structured layout with a logical flow (top-to-bottom or left-to-right), concise text, strong visuals, legible typography, and adequate use of space",
+      "The best academic conference poster design is a well-structured layout with a logical flow (top-to-bottom or left-to-right), concise text, strong visuals, legible typography, and adequate use of space.",
   },
   {
     id: 4,
@@ -83,7 +84,7 @@ const leftFaqs: FAQItem[] = [
     id: 5,
     question: "5. How do I convert my research paper into a conference poster?",
     answer:
-      "To turn your research paper into a conference poster, you can summarize your paper, focus on your main findings, use visuals instead of lengthy text, use simple language, and design your content with a logical flow, concise layout, etc",
+      "To turn your research paper into a conference poster, you can summarize your paper, focus on your main findings, use visuals instead of lengthy text, use simple language, and design your content with a logical flow, concise layout, etc.",
   },
   {
     id: 6,
@@ -91,9 +92,6 @@ const leftFaqs: FAQItem[] = [
     answer:
       "Design an eye-catching scientific poster using a clean design, color scheme, font styles, quality images, proper white space, and simple design elements that effectively highlight important scientific findings in a professional manner.",
   },
-];
-
-const rightFaqs: FAQItem[] = [
   {
     id: 7,
     question: "7. Which tools can be used to design a scientific poster?",
@@ -125,7 +123,7 @@ const rightFaqs: FAQItem[] = [
     id: 11,
     question: "11. What are the standard dimensions for conference posters?",
     answer:
-      'The most commonly used poster sizes in conferences are 36” x 48” in a landscape orientation or A0 size, which is 841 x 1189 mm',
+      'The most commonly used poster sizes in conferences are 36” x 48” in a landscape orientation or A0 size, which is 841 x 1189 mm.',
   },
   {
     id: 12,
@@ -286,65 +284,10 @@ export default function TestimonialsAndFaqSection() {
         {/* ============================================================ */}
         {/* SECTION 3: FREQUENTLY ASKED QUESTIONS GRID                   */}
         {/* ============================================================ */}
-        <div className="pt-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-6">
-            Frequently Asked Questions – Poster Preparation Service
-          </h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
-            {/* Left Column (Q1 - Q6) */}
-            <div className="border border-gray-300 rounded-sm bg-white divide-y divide-gray-300">
-              {leftFaqs.map((faq) => {
-                const isOpen = openFaqId === faq.id;
-                return (
-                  <div key={faq.id} className="transition-colors">
-                    <button
-                      type="button"
-                      onClick={() => toggleLeftFaq(faq.id)}
-                      className="w-full flex items-center justify-between p-4 text-left font-bold text-xs md:text-sm text-gray-900 hover:bg-gray-50 transition-colors"
-                    >
-                      <span className="pr-2">{faq.question}</span>
-                      <span className="text-lg font-bold shrink-0">
-                        {isOpen ? "−" : "+"}
-                      </span>
-                    </button>
-                    {isOpen && (
-                      <div className="px-4 pb-4 pt-1 text-xs md:text-sm text-gray-600 leading-relaxed border-t border-gray-100 bg-gray-50/50">
-                        {faq.answer}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Right Column (Q7 - Q12) */}
-            <div className="border border-gray-300 rounded-sm bg-white divide-y divide-gray-300">
-              {rightFaqs.map((faq) => {
-                const isOpen = openRightFaqId === faq.id;
-                return (
-                  <div key={faq.id} className="transition-colors">
-                    <button
-                      type="button"
-                      onClick={() => toggleRightFaq(faq.id)}
-                      className="w-full flex items-center justify-between p-4 text-left font-bold text-xs md:text-sm text-gray-900 hover:bg-gray-50 transition-colors"
-                    >
-                      <span className="pr-2">{faq.question}</span>
-                      <span className="text-lg font-bold shrink-0">
-                        {isOpen ? "−" : "+"}
-                      </span>
-                    </button>
-                    {isOpen && (
-                      <div className="px-4 pb-4 pt-1 text-xs md:text-sm text-gray-600 leading-relaxed border-t border-gray-100 bg-gray-50/50">
-                        {faq.answer}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
+        <CommonFAQ
+          title="Frequently Asked Questions – Poster Preparation Service"
+          faqs={posterFaqs}
+        />
       </div>
     </section>
   );

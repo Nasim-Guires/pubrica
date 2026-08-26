@@ -815,8 +815,8 @@ export const NAV_LINKS = [
   },
 
   {
-    href: "/contact",
-    label: "Contact",
+    href: "/contact-us",
+    label: "Contact Us",
   },
 ];
 export const FOOTER_LINKS = {
