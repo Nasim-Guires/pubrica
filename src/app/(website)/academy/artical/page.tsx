@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Academy Articles - Pubrica",
   description: "Writing and grammar guidance for researchers — parallel construction, tense, phrasing, and more from Pubrica Academy.",
   alternates: {
-    canonical: "https://pubrica.com/academy/artical",
+    canonical: "https://pubrica.com/academy/artical/",
   },
 };
 

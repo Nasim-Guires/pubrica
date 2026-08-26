@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   // Renders the same content as /academy/artical (its primary URL) — canonicalized there
   // rather than to itself, since this page has no distinct content of its own.
   alternates: {
-    canonical: "https://pubrica.com/academy/artical",
+    canonical: "https://pubrica.com/academy/artical/",
   },
 };
 

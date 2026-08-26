@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Matches pubrica.com's own URL convention (every real page there ends in "/").
+  // Also makes Next.js redirect a no-slash request to the slashed version automatically.
+  trailingSlash: true,
   images: {
     remotePatterns: [
       {

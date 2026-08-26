@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Manuscript Guidelines - Pubrica Academy",
   description: "Guidance on manuscript preparation — copyediting, peer review, rejection reasons, reporting guidelines, and submission best practices.",
   alternates: {
-    canonical: "https://pubrica.com/academy/manuscript-guidelines",
+    canonical: "https://pubrica.com/academy/manuscript-guidelines/",
   },
 };
 
