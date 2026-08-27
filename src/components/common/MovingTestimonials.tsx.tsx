@@ -22,57 +22,58 @@ export const MovingTestimonials: React.FC<MovingTestimonialsProps> = ({
     data,
     autoSlideInterval = 5000,
 }) => {
-    // Group testimonials into pairs for desktop view, or use individual items.
-    // To make mobile (1 item) and desktop (2 items) work cleanly with a sliding track, 
-    // we create slides where each slide can hold either 1 item (mobile) or 2 items (desktop).
     const [currentSlide, setCurrentSlide] = useState<number>(0);
+    const [isDesktop, setIsDesktop] = useState<boolean>(false);
 
-    // Create chunks of 2 items for desktop, but we can also map per item if we want 1 item per slide globally.
-    // Let's make each slide contain 1 item for mobile, or group them efficiently. 
-    // Actually, the cleanest way to support 1-per-screen on mobile and 2-per-screen on desktop 
-    // is to have each slide represent a group of 2, but on mobile use CSS grid/flex wrapping or separate arrays.
-    // Alternative: Let's create single-item slides or pair slides based on screen size, 
-    // or use Tailwind's responsive grid inside each slide track element.
-    
-    // Let's group items into pairs for desktop slides: [[item1, item2], [item3, item4], ...]
-    const desktopSlides = data.reduce<TestimonialItem[][]>((acc, curr, index) => {
-        if (index % 2 === 0) {
-            acc.push(data.slice(index, index + 2));
-        }
-        return acc;
+    // Track viewport breakpoint (md = 768px)
+    useEffect(() => {
+        const checkDesktop = () => setIsDesktop(window.innerWidth >= 768);
+        checkDesktop();
+        window.addEventListener("resize", checkDesktop);
+        return () => window.removeEventListener("resize", checkDesktop);
     }, []);
 
-    // If you want 1 per slide on mobile AND 2 per slide on desktop using the same slider track, 
-    // an even simpler approach is to treat EVERY item as its own slide on mobile, 
-    // or use Tailwind to handle the layout. Let's map over individual items as slides, 
-    // but show them cleanly.
-    
-    // Let's use individual items as slides so mobile shows 1 at a time perfectly:
+    // Reset slide index if view mode changes to prevent out-of-bounds state
     useEffect(() => {
-        if (data.length <= 1) return;
+        setCurrentSlide(0);
+    }, [isDesktop]);
+
+    // Total possible slide steps
+    // Desktop: 2 visible, shifts 1 by 1 -> data.length - 1 steps
+    // Mobile: 1 visible, shifts 1 by 1 -> data.length steps
+    const maxSlides = isDesktop ? Math.max(1, data.length - 1) : data.length;
+
+    // Auto-slide effect every 5 seconds
+    useEffect(() => {
+        if (maxSlides <= 1) return;
 
         const interval = setInterval(() => {
-            setCurrentSlide((prev) => (prev + 1) % data.length);
+            setCurrentSlide((prev) => (prev + 1) % maxSlides);
         }, autoSlideInterval);
 
         return () => clearInterval(interval);
-    }, [data.length, autoSlideInterval]);
+    }, [maxSlides, autoSlideInterval]);
 
     if (!data || data.length === 0) return null;
+
+    // Calculate percentage offset: 50% shift per step on Desktop, 100% on Mobile
+    const translatePercentage = isDesktop
+        ? currentSlide * 50
+        : currentSlide * 100;
 
     return (
         <div className="max-w-6xl mx-auto px-4 py-8 overflow-hidden">
             {/* Sliding Track Wrapper */}
             <div
                 className="flex transition-transform duration-700 ease-in-out w-full"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                style={{ transform: `translateX(-${translatePercentage}%)` }}
             >
                 {data.map((test, index) => (
                     <div
-                        key={index}
-                        className="w-full shrink-0 px-2 box-border flex justify-center"
+                        key={test.id || index}
+                        className="w-full md:w-1/2 shrink-0 px-3 box-border flex justify-center"
                     >
-                        <div className="bg-[#185348] text-white rounded-lg shadow-xl relative overflow-hidden flex flex-col sm:flex-row justify-between w-full max-w-xl min-h-[190px]">
+                        <div className="bg-[#185348] text-white rounded-lg shadow-xl relative overflow-hidden flex flex-col sm:flex-row justify-between w-full min-h-[190px]">
                             {/* Content Container */}
                             <div className="flex-1 p-6 flex flex-col justify-between z-10 order-2 sm:order-1">
                                 <p className="text-slate-100 text-[14px] leading-relaxed font-normal">
@@ -104,19 +105,18 @@ export const MovingTestimonials: React.FC<MovingTestimonialsProps> = ({
                 ))}
             </div>
 
-            {/* Pagination Square Indicators */}
-            {data.length > 1 && (
+            {/* Pagination Indicators */}
+            {maxSlides > 1 && (
                 <div className="flex justify-center items-center gap-2 mt-6">
-                    {data.map((_, index) => (
+                    {Array.from({ length: maxSlides }).map((_, index) => (
                         <button
                             key={index}
                             onClick={() => setCurrentSlide(index)}
                             aria-label={`Go to slide ${index + 1}`}
-                            className={`w-3 h-3 transition-all duration-300 ${
-                                currentSlide === index
+                            className={`w-3 h-3 transition-all duration-300 ${currentSlide === index
                                     ? "bg-[#185348] border-2 border-[#185348]"
                                     : "bg-white border-2 border-slate-400"
-                            }`}
+                                }`}
                         />
                     ))}
                 </div>

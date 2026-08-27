@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import CommonPackages from "@/components/common/CommonPackages";
+import { MovingTestimonials, TestimonialItem } from "@/components/common/MovingTestimonials.tsx";
 
 // Base image path for package badge icons
 const BASE_IMAGE_PATH = "/images/publication-support/peer-review-pre-submission";
@@ -70,32 +71,32 @@ const packagesData = [
 ];
 
 // 2. Testimonials Data
-const testimonialsData = [
+const testimonialsData: TestimonialItem[] = [
   {
     id: 1,
     quote:
-      '" The peer-review report I received from Pubrica was more detailed than expected. It helped me fix gaps in my discussion section before submitting to a Scopus-indexed journal. "',
+      "The peer-review report I received from Pubrica was more detailed than expected. It helped me fix gaps in my discussion section before submitting to a Scopus-indexed journal.",
     author: "DR. KAVITHA M",
     role: "Biotech Researcher",
-    journalCover:
+    image:
       "/images/publication-support/peer-review-pre-submission/book-01.jpg",
   },
   {
     id: 2,
     quote:
-      '"I was very impressed with the thorough peer review I received. They even pointed out statistical flaws in my results section. The feedback improved the clarity and impact of my manuscript."',
+      "I was very impressed with the thorough peer review I received. They even pointed out statistical flaws in my results section. The feedback improved the clarity and impact of my manuscript.",
     author: "DR. RAMESH NAIR",
     role: "Clinical Epidemiologist",
-    journalCover:
+    image:
       "/images/publication-support/peer-review-pre-submission/scropt-2.jpg",
   },
   {
     id: 3,
     quote:
-      '"I was very impressed with the thorough peer review I received. They even pointed out statistical flaws in my results section. The feedback improved the clarity and impact of my manuscript."',
+      "I was very impressed with the thorough peer review I received. They even pointed out statistical flaws in my results section. The feedback improved the clarity and impact of my manuscript.",
     author: "DR. RAMESH NAIR",
     role: "Clinical Epidemiologist",
-    journalCover:
+    image:
       "/images/publication-support/peer-review-pre-submission/book-01.jpg",
   },
 ];
@@ -143,81 +144,10 @@ export default function PackagesAndTestimonialsSection() {
       {/* ========================================== */}
       {/* SECTION 2: TESTIMONIALS                    */}
       {/* ========================================== */}
-      <section className="bg-[#f2f4f5] py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-10">
-            Testimonials
-          </h2>
-
-          <div className="relative flex items-center justify-between gap-4">
-            {/* Left Chevron Button */}
-            <button
-              onClick={handlePrev}
-              className="w-8 h-8 rounded-full bg-white text-gray-700 flex items-center justify-center shadow hover:bg-black hover:text-white transition-colors shrink-0"
-              aria-label="Previous testimonial"
-            >
-              &#10094;
-            </button>
-
-            {/* Testimonials Cards Grid (Renders max 2 active items) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1 min-h-[180px]">
-              {currentTestimonials.map((item) => (
-                <div
-                  key={item.id}
-                  className="group bg-[#2a4d3e] rounded-xl p-5 border-2 border-[#1c382d] shadow-lg flex items-center space-x-4 transition-all duration-300 hover:bg-black hover:border-black hover:text-white hover:shadow-2xl hover:-translate-y-1 cursor-pointer"
-                >
-                  {/* Journal Cover Image */}
-                  <div className="w-28 h-36 relative shrink-0 rounded overflow-hidden shadow-md">
-                    <Image
-                      src={item.journalCover}
-                      alt={item.author}
-                      fill
-                      sizes="112px"
-                      className="object-cover"
-                    />
-                  </div>
-
-                  {/* Quote & Author Info */}
-                  <div className="space-y-3 text-white">
-                    <p className="text-xs sm:text-sm leading-relaxed italic group-hover:text-gray-200">
-                      {item.quote}
-                    </p>
-                    <div>
-                      <h4 className="font-extrabold text-sm tracking-wide text-white">
-                        {item.author}
-                      </h4>
-                      <p className="text-xs text-gray-300 italic group-hover:text-gray-400">
-                        {item.role}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Right Chevron Button */}
-            <button
-              onClick={handleNext}
-              className="w-8 h-8 rounded-full bg-white text-gray-700 flex items-center justify-center shadow hover:bg-black hover:text-white transition-colors shrink-0"
-              aria-label="Next testimonial"
-            >
-              &#10095;
-            </button>
-          </div>
-
-          {/* Dynamic Carousel Pagination Dots */}
-          <div className="flex justify-center items-center space-x-2 mt-8">
-            {Array.from({ length: totalPages }).map((_, idx) => (
-              <span
-                key={idx}
-                onClick={() => setActiveTestimonialPage(idx)}
-                className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-colors ${activeTestimonialPage === idx ? "bg-gray-800" : "bg-gray-300"
-                  }`}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      <MovingTestimonials
+        data={testimonialsData}
+        autoSlideInterval={5000}
+      />
     </div>
   );
 }

@@ -230,7 +230,7 @@ export default function JournalSelectionFullPage() {
           {audienceList.map((card) => (
             <div
               key={card.id}
-              className="group relative h-56 rounded-sm overflow-hidden shadow-sm cursor-pointer border border-slate-200"
+              className="group relative h-56 rounded-sm overflow-hidden shadow-sm  border border-slate-200"
             >
               {/* Background Image */}
               <img
@@ -265,44 +265,45 @@ export default function JournalSelectionFullPage() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 3: JOURNAL SELECTION BY CRITERIA             */}
       {/* ---------------------------------------------------- */}
-      <section className="max-w-6xl mx-auto space-y-8 px-4 sm:px-6">
+      <section className="max-w-6xl mx-auto space-y-6 px-4 sm:px-6 font-poppins">
         {/* Heading */}
         <div className="space-y-1 text-center sm:text-left">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44]">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b44]">
             Journal Selection by Criteria
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600">
+          <p className="text-base text-slate-600">
             Organize journal matching by different decision-making filters:
           </p>
         </div>
 
-        {/* Tab Pills Bar - 2x2 Grid on Mobile / Full Row Pill on Desktop */}
-        <div className="bg-[#0f4c5c] p-2 rounded-2xl md:rounded-full grid grid-cols-2 md:grid-cols-4 gap-2 max-w-4xl mx-auto shadow-inner">
-          {criteriaTabs.map((tab) => {
-            const isActive = tab.id === activeTab;
-            return (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`w-full py-2.5 px-3 sm:px-4 rounded-xl md:rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 text-center leading-tight flex items-center justify-center ${isActive
-                  ? "bg-[#062c35] text-white shadow-md"
-                  : "text-slate-200 hover:text-white hover:bg-white/10"
-                  }`}
-              >
-                {tab.label}
-              </button>
-            );
-          })}
+        {/* Tab Bar Option 1: Underline Nav */}
+        <div className="border-b border-slate-200">
+          <div className="flex overflow-x-auto gap-4 sm:gap-8 no-scrollbar pb-px">
+            {criteriaTabs.map((tab) => {
+              const isActive = tab.id === activeTab;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`py-3 text-base font-bold whitespace-nowrap transition-colors relative border-b-2 -mb-px ${isActive
+                      ? "border-[#0f4c5c] text-[#0f4c5c]"
+                      : "border-transparent text-slate-500 hover:text-slate-800"
+                    }`}
+                >
+                  {tab.label}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
-        {/* Cards Grid for Selected Tab */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pt-2 sm:pt-4">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pt-2">
           {currentTabObj.cards.map((card, idx) => (
             <div
               key={idx}
-              className="bg-white border border-slate-200 rounded-xl p-5 sm:p-6 shadow-xs hover:shadow-md transition-shadow flex flex-col items-center text-center space-y-3 sm:space-y-4 min-h-[160px] sm:min-h-[180px] justify-center"
+              className="bg-white border border-slate-200 rounded-xl p-5 sm:p-6 shadow-xs hover:shadow-md transition-shadow flex flex-col items-center text-center space-y-3 min-h-[160px] sm:min-h-[180px] justify-center"
             >
-              {/* Image Icon Slot */}
               <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
                 <img
                   src={card.iconUrl}
@@ -310,8 +311,7 @@ export default function JournalSelectionFullPage() {
                   className="max-w-full max-h-full object-contain"
                 />
               </div>
-
-              <h3 className="text-xs sm:text-sm font-bold text-slate-800 leading-snug">
+              <h3 className="text-base font-bold text-slate-800 leading-snug">
                 {card.title}
               </h3>
             </div>

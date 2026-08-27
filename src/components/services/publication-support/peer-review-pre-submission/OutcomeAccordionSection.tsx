@@ -165,31 +165,43 @@ const socialSciencesData: TableRow[] = [
     issueCategory: "Grammar & Language",
     revisionType: "Minor Revision",
     expert: "Language Editor",
-    action: "Refine academic tone, grammar, and sentence structure",
+    action: "Improve readability, academic tone, and coherence",
   },
   {
-    issueCategory: "Questionnaire Design",
+    issueCategory: "Survey/Questionnaire Design",
     revisionType: "Major Revision",
     expert: "Survey Specialist",
-    action: "Validate scale items, survey logic, and response categories",
+    action: "Review survey logic, clarity, and bias",
+  },
+  {
+    issueCategory: "Methodology Design",
+    revisionType: "Major Revision",
+    expert: "Social Science Methodologist",
+    action: "Ensure a valid qualitative or quantitative design",
   },
   {
     issueCategory: "Data Analysis",
     revisionType: "Major Revision",
-    expert: "Qualitative/Quantitative Analyst",
-    action: "Re-run thematic or statistical analyses (SPSS, NVivo)",
-  },
-  {
-    issueCategory: "Ethical Aspects",
-    revisionType: "Critical Revision",
-    expert: "Ethics Advisor",
-    action: "Ensure IRB, consent forms, and privacy guidelines are met",
+    expert: "Statistician",
+    action: "Recalculate or re-interpret statistical/social data",
   },
   {
     issueCategory: "Referencing & Citations",
     revisionType: "Minor Revision",
-    expert: "Reference Specialist",
-    action: "Align citations to APA, Chicago, or target journal style",
+    expert: "Citation Expert",
+    action: "Align with APA/MLA or journal style",
+  },
+  {
+    issueCategory: "Plagiarism Detection",
+    revisionType: "Critical Revision",
+    expert: "Plagiarism Analyst",
+    action: "Detect overlap and rewrite duplicative text",
+  },
+  {
+    issueCategory: "Journal Formatting",
+    revisionType: "Minor Revision",
+    expert: "Formatting Expert",
+    action: "Format as per social science journal requirements",
   },
 ];
 
@@ -242,7 +254,7 @@ const engineeringData: TableRow[] = [
 // Reusable Compact Table Component
 function CategoryTable({ rows }: { rows: TableRow[] }) {
   return (
-    <div className="py-6 px-2 sm:px-8 bg-[#f8f9fa] flex justify-center">
+    <div className="py-6 px-2 sm:px-8 bg-[#f8f9fa] flex justify-center font-poppins">
       <div className="w-full max-w-4xl bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-center border-collapse text-xs sm:text-sm">
@@ -289,7 +301,9 @@ function CategoryTable({ rows }: { rows: TableRow[] }) {
 }
 
 export default function OutcomeAccordionSection() {
-  const [openSection, setOpenSection] = useState<string | null>("Pre submission Peer review");
+  const [openSection, setOpenSection] = useState<string | null>(
+    "Pre submission Peer review"
+  );
 
   const toggleSection = (section: string) => {
     setOpenSection((prev) => (prev === section ? null : section));
@@ -311,7 +325,7 @@ export default function OutcomeAccordionSection() {
   ];
 
   return (
-    <section className="w-full max-w-5xl mx-auto px-4 py-8 font-sans">
+    <section className="w-full max-w-5xl mx-auto px-4 py-8 font-poppins">
       <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-4">
         Outcome of Pre-submission Peer Review
       </h2>
@@ -320,7 +334,7 @@ export default function OutcomeAccordionSection() {
         goal of our{" "}
         <Link
           href="/academy/peer-review/pre-submission-peer-review-pre-submission-peer-review-for-researchers"
-          className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+          className="text-blue-600 font-medium no-underline hover:text-blue-700"
         >
           pre-submission peer review
         </Link>{" "}
@@ -328,7 +342,7 @@ export default function OutcomeAccordionSection() {
         from expert reviewers. We will use a{" "}
         <Link
           href="/services/publication-support/double-blind-peer-review-definition-process"
-          className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+          className="text-blue-600 font-medium no-underline hover:text-blue-700"
         >
           double-blind review
         </Link>{" "}
@@ -347,7 +361,7 @@ export default function OutcomeAccordionSection() {
                 onClick={() => toggleSection(section.id)}
                 className="w-full flex items-center justify-between py-3.5 px-2 text-left font-bold text-[#123938] hover:text-black transition-colors"
               >
-                <span className="text-base sm:text-lg">{section.title}</span>
+                <span className="text-lg sm:text-xl">{section.title}</span>
                 <span className="text-xl sm:text-2xl font-bold leading-none select-none">
                   {isOpen ? "−" : "+"}
                 </span>

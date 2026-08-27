@@ -19,7 +19,7 @@ const accordionData = [
         Language polishing and scientific editing for clarity and precision (
         <Link
           href="academy/manuscript-editing/from-research-to-final-draft-best-practices-in-manuscript-editing"
-          className="text-[#0082a6] hover:underline font-medium"
+          className="text-blue-600 font-medium"
         >
           academic manuscript editing
         </Link>
@@ -38,18 +38,18 @@ const accordionData = [
       "Funding and acknowledgements",
     ],
     extraContent: (
-      <p className="mt-2 text-xs sm:text-sm text-gray-800">
+      <p className="mt-1 text-base text-gray-800">
         For{" "}
         <Link
           href="/services/research-services/systematic-review/"
-          className="text-[#0082a6] hover:underline font-medium"
+          className="text-blue-600 font-medium"
         >
           systematic review
         </Link>{" "}
         and{" "}
         <Link
           href="https://static1.squarespace.com/static/65b880e13b6ca75573dfe217/t/67ad313f1c80aa5235fce0d0/1739403584136/PRISMA_2020_checklist.pdf"
-          className="text-[#0082a6] hover:underline font-medium"
+          className="text-blue-600 font-medium"
         >
           PRISMA
         </Link>{" "}
@@ -71,21 +71,21 @@ const accordionData = [
       <span>
         <Link
           href="https://publicationethics.org/"
-          className="text-[#0082a6] hover:underline font-medium"
+          className="text-blue-600 font-medium"
         >
           COPE
         </Link>
         ,{" "}
         <Link
           href="https://www.icmje.org/"
-          className="text-[#0082a6] hover:underline font-medium"
+          className="text-blue-600 font-medium"
         >
           ICMJE
         </Link>
         , and{" "}
         <Link
           href="https://www.consort-spirit.org/"
-          className="text-[#0082a6] hover:underline font-medium"
+          className="text-blue-600 font-medium"
         >
           CONSORT
         </Link>{" "}
@@ -101,7 +101,7 @@ const accordionData = [
         Improve the{" "}
         <Link
           href="/services/publication-support/peer-review-pre-submission"
-          className="text-[#0082a6] hover:underline font-medium"
+          className="text-blue-600 font-medium"
         >
           peer review
         </Link>{" "}
@@ -127,7 +127,7 @@ const accordionData = [
         Composing authors' direct{" "}
         <Link
           href="/services/publication-support/responding-to-reviewers"
-          className="text-[#0082a6] hover:underline font-medium"
+          className="text-blue-600 font-medium"
         >
           response to reviewers
         </Link>
@@ -188,7 +188,7 @@ export default function JournalSubmissionPage() {
   };
 
   return (
-    <div className="w-full font-sans text-gray-800 bg-white">
+    <div className="w-full font-poppins text-gray-800 bg-white">
       {/* ========================================== */}
       {/* SECTION 1: HERO BANNER                    */}
       {/* ========================================== */}
@@ -201,29 +201,29 @@ export default function JournalSubmissionPage() {
       {/* ========================================== */}
       {/* SECTION 2: OVERVIEW & BULLETS             */}
       {/* ========================================== */}
-      <section className="max-w-5xl mx-auto px-4 py-12">
-        <h2 className="text-xl sm:text-2xl font-bold text-[#0c3547] mb-3 leading-snug">
+      <section className="max-w-5xl mx-auto px-4 py-8">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-2 leading-snug">
           Journal Submission Services for Life Sciences, Pharma, and Research:
           Simplifying the Path to Publication
         </h2>
 
-        <p className="text-xs sm:text-sm font-semibold text-gray-600 mb-4">
+        <p className="text-lg font-semibold text-gray-600 mb-3">
           Complete Administrative Support After Your Manuscript is Ready
         </p>
 
-        <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-4">
+        <p className="text-base text-gray-700 leading-relaxed mb-3">
           Publishing in peer-reviewed, high-impact journals is essential for
           advancing scientific knowledge and building a strong academic or
           professional reputation.
         </p>
 
-        <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-6">
+        <p className="text-base text-gray-700 leading-relaxed mb-4">
           Many face challenges with multiple submission procedures, varied
           documentation, and strict timelines. Our service allows these to be
           simple while providing a compliant and timely{" "}
           <Link
             href="/academy/journal-submission/choosing-right-journal-for-manuscript-type-guide"
-            className="text-[#0082a6] hover:underline font-medium"
+            className="text-blue-600 font-medium"
           >
             journal manuscript submission service
           </Link>{" "}
@@ -231,7 +231,7 @@ export default function JournalSubmissionPage() {
           can take care of all the administrative tasks that can make the{" "}
           <Link
             href="/academy/journal-selection/how-to-identify-best-journal-for-manuscript-submission"
-            className="text-[#0082a6] hover:underline font-medium"
+            className="text-blue-600 font-medium"
           >
             manuscript submission process
           </Link>{" "}
@@ -241,7 +241,7 @@ export default function JournalSubmissionPage() {
         </p>
 
         {/* Bullet List */}
-        <ul className="space-y-2.5 text-xs sm:text-sm text-gray-800 mb-8 pl-1">
+        <ul className="space-y-1.5 text-base text-gray-800 mb-5 pl-1">
           <li className="flex items-start space-x-2">
             <span className="text-[#b80000] font-bold text-lg leading-none mt-0.5">
               •
@@ -258,7 +258,7 @@ export default function JournalSubmissionPage() {
               Uploading all of the files (
               <Link
                 href="/services/publication-support/journal-submission/complete-guide-to-writing-cover-letter-for-medical-journals"
-                className="text-[#0082a6] hover:underline"
+                className="text-blue-600"
               >
                 cover letter
               </Link>
@@ -288,7 +288,7 @@ export default function JournalSubmissionPage() {
               Tracking the submission status throughout the editorial and{" "}
               <Link
                 href="/services/publication-support/journal-submission/guide-to-peer-review-types"
-                className="text-[#0082a6] hover:underline"
+                className="text-blue-600"
               >
                 peer-review
               </Link>{" "}
@@ -314,7 +314,7 @@ export default function JournalSubmissionPage() {
           </li>
         </ul>
 
-        <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-8">
+        <p className="text-base text-gray-700 leading-relaxed mb-5">
           Pubrica enables researchers to remain concentrated on science while
           they deal with all administration-related tasks like journal
           communication, formatting, uploads, and documentation, smoothly
@@ -330,16 +330,16 @@ export default function JournalSubmissionPage() {
       {/* ========================================== */}
       {/* SECTION 3: COMPREHENSIVE SERVICE ACCORDION */}
       {/* ========================================== */}
-      <section className="bg-[#f9fafb] py-12 px-4 border-t border-gray-100">
+      <section className="bg-[#f9fafb] py-8 px-4 border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-xl sm:text-2xl font-bold text-[#0c3547] mb-3">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-2">
             Our Comprehensive Journal Submission Service Include
           </h2>
-          <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-8 max-w-4xl">
+          <p className="text-base text-gray-700 leading-relaxed mb-5 max-w-4xl">
             At Pubrica, we provide an end-to-end{" "}
             <Link
               href="/insights/journal-submission-report-sample"
-              className="text-[#0082a6] hover:underline font-medium"
+              className="text-blue-600 font-medium"
             >
               academic journals submission service
             </Link>{" "}
@@ -350,7 +350,7 @@ export default function JournalSubmissionPage() {
           </p>
 
           {/* Grid Layout: Accordion on Left, Image on Right */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             {/* Left Accordion Column */}
             <div className="lg:col-span-7 border-t border-gray-200 divide-y divide-gray-200">
               {accordionData.map((item) => {
@@ -361,22 +361,22 @@ export default function JournalSubmissionPage() {
                     {/* Header Bar */}
                     <button
                       onClick={() => toggleAccordion(item.id)}
-                      className="w-full py-3.5 px-2 flex items-center justify-between text-left focus:outline-none group"
+                      className="w-full py-2 px-2 flex items-center justify-between text-left focus:outline-none"
                     >
-                      <span className="font-bold text-xs sm:text-sm text-[#0c3547] group-hover:text-[#0082a6] transition-colors">
+                      <span className="font-bold text-lg text-[#0c3547]">
                         {item.title}
                       </span>
-                      <span className="text-xs text-[#0c3547] shrink-0 ml-2">
+                      <span className="text-sm text-[#0c3547] shrink-0 ml-2">
                         {isOpen ? "▲" : "▼"}
                       </span>
                     </button>
 
                     {/* Open Panel Body */}
                     {isOpen && (
-                      <div className="bg-[#f0f9f6] p-4 sm:p-5 rounded-sm mb-2 text-xs sm:text-sm text-gray-800 space-y-3">
+                      <div className="bg-[#f0f9f6] p-3 sm:p-4 rounded-sm mb-1 text-base text-gray-800 space-y-2">
                         <div className="leading-relaxed">{item.intro}</div>
 
-                        <ul className="space-y-2 pl-1">
+                        <ul className="space-y-1.5 pl-1">
                           {item.bullets.map((bullet, idx) => (
                             <li
                               key={idx}
@@ -393,7 +393,7 @@ export default function JournalSubmissionPage() {
                         {item.extraContent && item.extraContent}
 
                         {item.subBullets && (
-                          <ul className="space-y-2 pl-1 mt-2">
+                          <ul className="space-y-1.5 pl-1 mt-1.5">
                             {item.subBullets.map((sBullet, sIdx) => (
                               <li
                                 key={sIdx}
@@ -418,7 +418,7 @@ export default function JournalSubmissionPage() {
 
             {/* Right Side Image */}
             <div className="lg:col-span-5 sticky top-8">
-              <div className="relative w-full h-[380px] sm:h-[450px] rounded-lg overflow-hidden shadow-md">
+              <div className="relative w-full h-[350px] sm:h-[400px] rounded-lg overflow-hidden shadow-md">
                 <Image
                   src="/images/publication-support/journal-submission/Our-Comprehensive-Journal-Submission.webp"
                   alt="Researcher typing journal submission on laptop"

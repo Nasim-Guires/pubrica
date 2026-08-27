@@ -1,6 +1,7 @@
 "use client";
 
 import CommonFAQ from "@/components/common/FAQ";
+import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -80,59 +81,49 @@ export default function PubricaSampleWorkAndFAQ() {
   ];
 
   return (
-    <div className="w-full font-sans bg-white text-slate-800">
+    <div className="w-full font-poppins bg-white text-slate-800">
       {/* ---------------------------------------------------- */}
       {/* SECTION 1: SAMPLE WORK & BANNER                      */}
       {/* ---------------------------------------------------- */}
-      <section className="bg-[#f0faf4] py-12 px-6 sm:px-12 lg:px-16 my-8 rounded-xl max-w-7xl mx-auto shadow-sm">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          {/* Left Column Graphic / Stock Image Placeholder */}
-          <div className="md:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-sm h-64 rounded-lg overflow-hidden shadow-md border border-slate-300">
-              <Image
-                src="/images/publication-support/journal-selection/Journal-Selection-Sample-Work.jpg"
-                alt="Sample Journal Report and Manuscript Preparation"
-                width={600}
-                height={400}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Right Column Content */}
-          <div className="md:col-span-7 space-y-6">
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] mb-3">
-                Journal Selection Sample Work
-              </h2>
-              <Link href="/insights/sample-work/anesthetic-management-in-pregnant-woman/" className="bg-black text-white hover:bg-slate-800 text-xs font-bold py-2.5 px-8 rounded-full transition-all">
-                Discover More
-              </Link>
-            </div>
-
-            <div className="pt-2 border-t border-emerald-100">
-              <h3 className="text-xl font-bold text-slate-900 mb-2">
-                Download the full Report Now
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-                Explore our{" "}
-                <Link
-                  href="/services/publication-support/journal-selection/identify-predatory-journals-2026/"
-                  className="text-cyan-600 font-medium hover:underline"
-                >
-                  Journal Selection
-                </Link>
-                sample work tailored to your manuscript’s scope, indexing
-                requirements, and impact factor goals.
-              </p>
-              <Link href="/insights/sample-work" className="bg-black text-white hover:bg-slate-800 text-xs font-bold py-2.5 px-8 rounded-full transition-all">
-                Discover More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <PubricaSampleWorkCard
+        bookCoverImage={{
+          src: "/images/publication-support/journal-selection/Journal-Selection-Sample-Work.jpg",
+          alt: "Sample Journal Report and Manuscript Preparation",
+          width: 600,
+          height: 400,
+        }}
+        sections={[
+          {
+            heading: "Journal Selection Sample Work",
+            headingTag: "h2",
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work/anesthetic-management-in-pregnant-woman/",
+            },
+          },
+          {
+            heading: "Download the full Report Now",
+            headingTag: "h3",
+            descriptionSegments: [
+              {
+                text: "Explore our ",
+              },
+              {
+                text: "Journal Selection",
+                url: "/services/publication-support/journal-selection/identify-predatory-journals-2026/",
+              },
+              {
+                text: " sample work tailored to your manuscript’s scope, indexing requirements, and impact factor goals.",
+              },
+            ],
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work",
+            },
+          },
+        ]}
+        footerDisclaimerSegments={[]}
+      />
       {/* ---------------------------------------------------- */}
       {/* SECTION 2: JOURNAL SPOTLIGHT (DIABETES CARE)        */}
       {/* ---------------------------------------------------- */}
@@ -141,14 +132,14 @@ export default function PubricaSampleWorkAndFAQ() {
           Diabetes Care
         </h2>
 
-        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-5xl mb-8">
+        <p className="text-base text-slate-600 leading-relaxed max-w-5xl mb-8">
           <span className="italic font-semibold">Diabetes Care</span> is a
           journal for the health care practitioner focused on increasing
           knowledge, stimulating research, and promoting better management of
           people with{" "}
-          <a href="/academy/journals-templates/journal-of-diabetes-research" className="text-cyan-600 hover:underline">
+          <Link href="/academy/journals-templates/journal-of-diabetes-research" className="text-blue-600">
             diabetes
-          </a>
+          </Link>
           . To foster these objectives, the journal publishes original research
           in the areas of Clinical Care/Education/Nutrition/Psychosocial
           Research, Epidemiology/Health Services Research, Emerging Treatments
@@ -172,7 +163,7 @@ export default function PubricaSampleWorkAndFAQ() {
 
           {/* Key Metrics Table */}
           <div className="md:col-span-9 overflow-x-auto">
-            <table className="w-full text-left border-b border-slate-300 text-xs sm:text-sm">
+            <table className="w-full text-left border-b border-slate-300 text-base">
               <thead>
                 <tr className="text-slate-500 font-medium border-b border-slate-200 pb-2">
                   <th className="pb-2 font-normal">Impact Factor</th>
@@ -185,7 +176,7 @@ export default function PubricaSampleWorkAndFAQ() {
                 </tr>
               </thead>
               <tbody>
-                <tr className="font-bold text-slate-800 text-sm sm:text-base">
+                <tr className="font-bold text-slate-800 text-lg">
                   <td className="py-3">16.2</td>
                   <td className="py-3">27.7</td>
                   <td className="py-3">Approximately 11.06%</td>
@@ -196,13 +187,13 @@ export default function PubricaSampleWorkAndFAQ() {
             </table>
 
             {/* Quick Links */}
-            <div className="flex gap-8 mt-4 text-xs font-semibold">
-              <a href="https://diabetescare.diabetesjournals.org/" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:underline">
+            <div className="flex gap-8 mt-4 text-base font-semibold">
+              <Link href="/order-now/" className="text-red-600">
                 Submit your Report
-              </a>
-              <a href="https://diabetesjournals.org/care/pages/instructions-for-authors" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:underline">
+              </Link>
+              <Link href="/contact-us/" className="text-red-600">
                 Guide for author
-              </a>
+              </Link>
             </div>
           </div>
         </div>

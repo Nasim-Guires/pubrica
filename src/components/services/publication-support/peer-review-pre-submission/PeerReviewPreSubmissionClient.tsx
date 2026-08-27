@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function PeerReviewPreSubmissionClient() {
   return (
-    <main className="w-full bg-white text-[#1a202c] font-sans antialiased">
+    <main className="w-full bg-white text-[#1a202c] font-poppins antialiased">
       {/* Hero Section */}
       <HeroBanner
         title="Pre-Submission Peer Review Service for Research Manuscript"
@@ -61,7 +61,7 @@ export default function PeerReviewPreSubmissionClient() {
                         href="https://www.consort-spirit.org/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+                        className="text-blue-600 font-medium no-underline hover:text-blue-700"
                       >
                         CONSORT
                       </Link>
@@ -70,7 +70,7 @@ export default function PeerReviewPreSubmissionClient() {
                         href="https://static1.squarespace.com/static/65b880e13b6ca75573dfe217/t/67ad313f1c80aa5235fce0d0/1739403584136/PRISMA_2020_checklist.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+                        className="text-blue-600 font-medium no-underline hover:text-blue-700"
                       >
                         PRISMA
                       </Link>
@@ -79,7 +79,7 @@ export default function PeerReviewPreSubmissionClient() {
                         href="https://www.equator-network.org/wp-content/uploads/2015/10/STROBE_checklist_v4_combined.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+                        className="text-blue-600 font-medium no-underline hover:text-blue-700"
                       >
                         STROBE
                       </Link>
@@ -91,7 +91,7 @@ export default function PeerReviewPreSubmissionClient() {
                       before the journal’s{" "}
                       <Link
                         href="/academy/peer-review/peer-review-week-2025-ai-era"
-                        className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+                        className="text-blue-600 font-medium no-underline hover:text-blue-700"
                       >
                         peer review
                       </Link>
@@ -113,7 +113,7 @@ export default function PeerReviewPreSubmissionClient() {
             Pre-Submission{" "}
             <Link
               href="/academy/peer-review/journal-peer-review-process-after-submission"
-              className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+              className="text-blue-600 font-medium no-underline hover:text-blue-700"
             >
               Peer Review
             </Link>{" "}
@@ -141,7 +141,7 @@ export default function PeerReviewPreSubmissionClient() {
             Our{" "}
             <Link
               href="/academy/peer-review/how-publishers-balance-authors-and-reviewers"
-              className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+              className="text-blue-600 font-medium no-underline hover:text-blue-700"
             >
               pre-submission peer review
             </Link>{" "}
@@ -154,7 +154,10 @@ export default function PeerReviewPreSubmissionClient() {
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center gap-8 mt-6 mb-10">
             <GetFreeQuoteButton />
-            <Link href="/uploads/publication-support/peer-review-pre-submission/Pre-Submission-Peer-Review-Matters.pdf" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
+            <Link
+              href="/uploads/publication-support/peer-review-pre-submission/Pre-Submission-Peer-Review-Matters.pdf"
+              className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none no-underline"
+            >
               View Brochure
             </Link>
           </div>
@@ -236,7 +239,7 @@ export default function PeerReviewPreSubmissionClient() {
             submitting your manuscript is essential. Our{" "}
             <Link
               href="/academy/peer-review/ai-and-peer-review-collaborative-intelligence"
-              className="text-cyan-700 font-medium no-underline hover:text-cyan-800"
+              className="text-blue-600 font-medium no-underline hover:text-blue-700"
             >
               peer review
             </Link>{" "}
@@ -245,9 +248,7 @@ export default function PeerReviewPreSubmissionClient() {
             whether your discipline is medical sciences, engineering, life
             sciences, or social sciences, we provide meaningful recommendations
             with actionable improvements based on current peer review standards
-            of{" "}
-            <span className="">high-impact</span>{" "}
-            journals.
+            of high-impact journals.
           </p>
 
           {/* Grid Cards */}
@@ -257,7 +258,7 @@ export default function PeerReviewPreSubmissionClient() {
                 <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
                   1. Scientific/Technical Quality
                 </h3>
-                <ul className="space-y-3 text-sm text-gray-600">
+                <ul className="space-y-3 text-base text-gray-600">
                   <li className="flex items-start gap-2">
                     <span className="text-gray-800 font-bold">&#8226;</span>
                     <span>Are the methods sound and appropriate?</span>
@@ -275,7 +276,7 @@ export default function PeerReviewPreSubmissionClient() {
                 <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
                   2. Originality and Novelty
                 </h3>
-                <ul className="space-y-3 text-sm text-gray-600">
+                <ul className="space-y-3 text-base text-gray-600">
                   <li className="flex items-start gap-2">
                     <span className="text-gray-800 font-bold">&#8226;</span>
                     <span>Is this a new contribution to the field?</span>
@@ -288,12 +289,12 @@ export default function PeerReviewPreSubmissionClient() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md flex flex-col justify-between">
+            <div className="bg-[#f8fafc] p-6 rounded-lg border border-gray-200 shadow-md flex flex-col justify-between">
               <div className="space-y-4">
                 <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
                   3. Clarity and Organization
                 </h3>
-                <ul className="space-y-3 text-sm text-gray-600">
+                <ul className="space-y-3 text-base text-gray-600">
                   <li className="flex items-start gap-2">
                     <span className="text-gray-800 font-bold">&#8226;</span>
                     <span>Logical, and well-structured?</span>
@@ -313,7 +314,7 @@ export default function PeerReviewPreSubmissionClient() {
                 <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
                   4. Relevance and Significance
                 </h3>
-                <ul className="space-y-3 text-sm text-gray-600">
+                <ul className="space-y-3 text-base text-gray-600">
                   <li className="flex items-start gap-2">
                     <span className="text-gray-800 font-bold">&#8226;</span>
                     <span>
@@ -336,7 +337,7 @@ export default function PeerReviewPreSubmissionClient() {
                 <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
                   5. References and Citations
                 </h3>
-                <ul className="space-y-3 text-sm text-gray-600">
+                <ul className="space-y-3 text-base text-gray-600">
                   <li className="flex items-start gap-2">
                     <span className="text-gray-800 font-bold">&#8226;</span>
                     <span>Are sources current and appropriate?</span>
@@ -354,7 +355,7 @@ export default function PeerReviewPreSubmissionClient() {
                 <h3 className="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">
                   6. Ethical and Legal Aspects
                 </h3>
-                <ul className="space-y-3 text-sm text-gray-600">
+                <ul className="space-y-3 text-base text-gray-600">
                   <li className="flex items-start gap-2">
                     <span className="text-gray-800 font-bold">&#8226;</span>
                     <span>
@@ -371,6 +372,9 @@ export default function PeerReviewPreSubmissionClient() {
             </div>
           </div>
         </div>
+
+        {/* Social Sciences Section (Rendered directly as Image graphic) */}
+        
       </section>
     </main>
   );

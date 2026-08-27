@@ -7,7 +7,7 @@ import React from 'react';
 
 export default function JournalSelectionHeader() {
   return (
-    <div className="w-full bg-white text-slate-800 font-sans">
+    <div className="w-full bg-white text-slate-800 font-poppins">
 
       {/* ---------------------------------------------------- */}
       {/* SECTION 1: TOP BANNER (DARK HERO BOX)              */}
@@ -21,17 +21,17 @@ export default function JournalSelectionHeader() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 2: RECOMMENDATIONS BANNER & CTA              */}
       {/* ---------------------------------------------------- */}
-      <section className="py-10 px-4 sm:px-6 lg:px-8 text-center bg-white space-y-4">
-        <div className="max-w-3xl mx-auto space-y-2">
+      <section className="py-4 px-4 sm:px-6 lg:px-8 text-center bg-white space-y-2">
+        <div className="max-w-3xl mx-auto space-y-1">
           <h2 className="text-xl sm:text-2xl font-bold text-[#0d3b44]">
             More than 1 Million Researchers are Already Using Pubrica’s Recommendations
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600">
+          <p className="text-base text-slate-600">
             Our free Recommendations service uses machine learning and your online activity to suggest research tailored to your needs
           </p>
         </div>
 
-        <div>
+        <div className="pt-1">
           <GetFreeQuoteButton />
         </div>
       </section>
@@ -39,7 +39,7 @@ export default function JournalSelectionHeader() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 3: DETAILED SERVICE OVERVIEW                 */}
       {/* ---------------------------------------------------- */}
-      <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-6 text-slate-800">
+      <section className="py-4 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-3 text-slate-800">
 
         {/* Main Heading */}
         <h2 className="text-xl sm:text-2xl font-extrabold text-[#0d3b44] leading-snug">
@@ -47,7 +47,7 @@ export default function JournalSelectionHeader() {
         </h2>
 
         {/* Intro Paragraphs */}
-        <p className="text-xs sm:text-sm leading-relaxed">
+        <p className="text-base leading-snug">
           Our expert{' '}
           <a href="/insights/incidence-cardiovascular-diseases-india-global" className="text-cyan-600 ">
             journal selection
@@ -55,7 +55,7 @@ export default function JournalSelectionHeader() {
           service can help ensure your research is delivered to the target audience with clarity, compliance, and credibility, while maximizing publication potential.
         </p>
 
-        <p className="text-xs sm:text-sm leading-relaxed">
+        <p className="text-base leading-snug">
           Selecting the right journal in today’s competitive research environment is critical. Researchers, pharma teams, and medical device firms often need to{' '}
           <a href="/services/publication-support/" className="text-cyan-600 hover:underline">
             submit a manuscript for publication
@@ -64,7 +64,7 @@ export default function JournalSelectionHeader() {
         </p>
 
         {/* Bullet Points */}
-        <ul className="list-disc pl-6 text-xs sm:text-sm space-y-2 text-slate-800">
+        <ul className="list-disc pl-6 text-base space-y-1 text-slate-800">
           <li>Align their manuscript with the appropriate journal scopes</li>
           <li>
             Comply with ethical publication standards (
@@ -84,11 +84,11 @@ export default function JournalSelectionHeader() {
         </ul>
 
         {/* Body Paragraphs */}
-        <p className="text-xs sm:text-sm leading-relaxed">
+        <p className="text-base leading-snug">
           Yet, many encounter difficulties due to evolving journal scopes, complex submission requirements, and limited insights into optimal journal choices.
         </p>
 
-        <p className="text-xs sm:text-sm leading-relaxed">
+        <p className="text-base leading-snug">
           At Pubrica, we appreciate the enormous significance of the appropriate{' '}
           <a href="/academy/journals-templates/journals-high-impact-springer-medical-journal" className="text-cyan-600 hover:underline">
             journal selection
@@ -100,7 +100,7 @@ export default function JournalSelectionHeader() {
           and offer continuous support to assist your manuscript in complying with the highest standards of your intended publication.
         </p>
 
-        <p className="text-xs sm:text-sm leading-relaxed">
+        <p className="text-base leading-snug">
           Selecting a journal plays a vital role in the success of your research publication. Pubrica provides professional{' '}
           <a href="/services/publication-support/journal-selection/ckd-journal-selection-review" className="text-cyan-600 hover:underline">
             journal selection
@@ -121,9 +121,9 @@ export default function JournalSelectionHeader() {
         </p>
 
         {/* Action Buttons */}
-        <div className="flex flex-wrap items-center gap-8 mt-6 mb-10">
+        <div className="flex flex-wrap items-center gap-8 mt-3 mb-4">
           <GetFreeQuoteButton />
-          <Link href="/uploads/publication-support/journal-selection/Journal-Selection-Matters.pdf" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
+          <Link href="/uploads/publication-support/journal-selection/Journal-Selection-Matters.pdf" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none text-base">
             View Brochure
           </Link>
         </div>

@@ -37,30 +37,30 @@ export default function JournalSelectionBenefits() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 2: BENEFITS OF OUR JOURNAL SELECTION PROCESS */}
       {/* ---------------------------------------------------- */}
-      <section className="bg-white py-14 px-6 sm:px-12 lg:px-16 text-slate-800">
+      <section className="bg-white py-14 px-6 sm:px-12 lg:px-16 text-slate-800 font-poppins">
         <div className="max-w-6xl mx-auto space-y-8">
           {/* Section Heading */}
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] text-left">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b44] text-left">
             Benefits of Our Journal Selection Process
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Left Content (Detailed Points) */}
-            <div className="lg:col-span-7 space-y-5 text-xs sm:text-sm leading-relaxed text-slate-700">
+            <div className="lg:col-span-7 space-y-5 text-base leading-relaxed text-slate-700">
               <div className="flex items-start gap-3">
-                <span className="h-2 w-2 rounded-full bg-red-500 mt-1.5 shrink-0" />
+                <span className="h-2 w-2 rounded-full bg-red-500 mt-2 shrink-0" />
                 <p>
-                  <strong className="text-slate-900">
+                  <strong className="text-slate-900 font-bold">
                     Bring decades of knowledge from experience.
                   </strong>{" "}
                   Tap into Pubrica’s 20+ years of{" "}
-                  <a href="/services/publication-support/journal-selection/journal-selection-manuscript-optimization" className="text-cyan-600 hover:underline">
+                  <a href="/services/publication-support/journal-selection/journal-selection-manuscript-optimization" className="text-blue-600 no-underline">
                     academic publishing experience
                   </a>
                   . Our experienced team has helped over 800,000 researchers
                   publish in high-impact-factor journals. In addition, with
                   experience from more than 800,000 publications, our{" "}
-                  <a href="/insights/addressing-barriers-to-copd-care-three-innovative-evidence" className="text-cyan-600 hover:underline">
+                  <a href="/insights/addressing-barriers-to-copd-care-three-innovative-evidence" className="text-blue-600 no-underline">
                     journal selection service
                   </a>{" "}
                   makes the process easier and increases the likelihood of your
@@ -69,14 +69,14 @@ export default function JournalSelectionBenefits() {
               </div>
 
               <div className="flex items-start gap-3">
-                <span className="h-2 w-2 rounded-full bg-red-500 mt-1.5 shrink-0" />
+                <span className="h-2 w-2 rounded-full bg-red-500 mt-2 shrink-0" />
                 <p>
-                  <strong className="text-slate-900">
+                  <strong className="text-slate-900 font-bold">
                     Journal selection by publication experts:
                   </strong>{" "}
                   At Pubrica, we appreciate the struggles of selecting
                   peer-reviewed journals amongst the predatory ones. Our{" "}
-                  <a href="/insights/journal-selection-gastroenterology-workforce" className="text-cyan-600 hover:underline">
+                  <a href="/insights/journal-selection-gastroenterology-workforce" className="text-blue-600 no-underline">
                     journal selection
                   </a>{" "}
                   service guarantees you in credible, peer-reviewed journals.
@@ -87,14 +87,15 @@ export default function JournalSelectionBenefits() {
               </div>
 
               <div className="flex items-start gap-3">
-                <span className="h-2 w-2 rounded-full bg-red-500 mt-1.5 shrink-0" />
+                <span className="h-2 w-2 rounded-full bg-red-500 mt-2 shrink-0" />
                 <p>
-                  <strong className="text-slate-900">
+                  <strong className="text-slate-900 font-bold">
                     Choosing Pubrica’s professional{" "}
-                    <a href="/insights/addressing-barriers-to-copd-care-three-innovative-evidence" className="text-cyan-600 hover:underline">
-                      journal selection service
-                    </a>
+
                   </strong>{" "}
+                  <a href="/insights/addressing-barriers-to-copd-care-three-innovative-evidence" className="text-blue-600 no-underline">
+                    journal selection service{" "}
+                  </a>
                   will decrease scope-based rejections from your target
                   journals. We will also help you identify other reasons for
                   rejection, such as research design not meeting requirements,

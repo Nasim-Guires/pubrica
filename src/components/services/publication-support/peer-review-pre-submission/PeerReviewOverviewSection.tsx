@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import CommonUploadButton from "@/components/common/CommonUploadButton";
 
 export default function PeerReviewOverviewSection() {
   return (
@@ -140,14 +141,7 @@ export default function PeerReviewOverviewSection() {
         </p>
 
         {/* CTA Button */}
-        <div className="pt-2">
-          <a
-            href="#upload"
-            className="inline-block bg-[#b80000] hover:bg-black text-white font-semibold text-sm sm:text-base px-6 py-3 rounded-full shadow-md transition-colors duration-300"
-          >
-            Upload Your Manuscript
-          </a>
-        </div>
+        <CommonUploadButton />
       </div>
     </section>
   );

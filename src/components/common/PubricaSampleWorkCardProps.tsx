@@ -36,13 +36,13 @@ export const PubricaSampleWorkCard: React.FC<PubricaSampleWorkCardProps> = ({
     footerDisclaimerSegments,
 }) => {
     return (
-        <section className="py-12 px-4 sm:px-6 lg:px-8 font-poppins">
-            <div className="max-w-6xl mx-auto bg-[#effcf4] border border-emerald-100/40 rounded-2xl p-6 sm:p-10 shadow-sm">
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <section className="py-8 sm:py-10 px-4 sm:px-6 lg:px-8 font-poppins">
+            <div className="max-w-6xl mx-auto bg-[#effcf4] border border-emerald-100/40 rounded-2xl p-5 sm:p-8 shadow-sm">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
 
                     {/* Left Cover Book Graphic */}
                     <div className="md:col-span-4 flex justify-center">
-                        <div className="relative group w-full max-w-[240px] shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden rounded-md">
+                        <div className="relative group w-full max-w-[220px] shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden rounded-md">
                             <Image
                                 src={bookCoverImage.src}
                                 alt={bookCoverImage.alt}
@@ -57,19 +57,19 @@ export const PubricaSampleWorkCard: React.FC<PubricaSampleWorkCardProps> = ({
                     {/* Right Download Information */}
                     <div className="md:col-span-8 space-y-6">
                         {sections.map((section, idx) => (
-                            <div key={idx} className={`${idx > 0 ? 'pt-2' : ''} flex flex-col items-center sm:items-start text-center sm:text-left`}>
-                                <h3 className={`${idx === 0 ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl'} font-bold font-poppins text-black tracking-tight ${section.descriptionSegments ? 'mb-3' : ''}`}>
+                            <div key={idx} className={`${idx > 0 ? 'pt-4 border-t border-emerald-100/60' : ''} flex flex-col items-center sm:items-start text-center sm:text-left`}>
+                                <h3 className={`${idx === 0 ? 'text-3xl sm:text-4xl' : 'text-2xl sm:text-3xl'} font-bold font-poppins text-black tracking-tight leading-relaxed ${section.descriptionSegments ? 'mb-4' : 'mb-3'}`}>
                                     {section.heading}
                                 </h3>
 
                                 {section.descriptionSegments && (
-                                    <p className="text-[#222222] font-poppins text-[16px] font-normal max-w-xl leading-[1.6]">
+                                    <p className="text-[#222222] font-poppins text-base font-normal max-w-xl leading-relaxed mb-2">
                                         {section.descriptionSegments.map((segment, sIdx) =>
                                             segment.url ? (
                                                 <Link
                                                     key={sIdx}
                                                     href={segment.url}
-                                                    className="text-[#64a2c7] font-normal cursor-pointer hover:underline"
+                                                    className="text-blue-600 font-normal cursor-pointer no-underline hover:text-blue-700"
                                                 >
                                                     {segment.text}
                                                 </Link>
@@ -82,7 +82,7 @@ export const PubricaSampleWorkCard: React.FC<PubricaSampleWorkCardProps> = ({
 
                                 <Link
                                     href={section.button.url}
-                                    className={`${idx === 0 ? 'mt-4' : 'mt-5'} w-full sm:w-auto min-w-[320px] py-2 bg-black hover:bg-slate-900 active:scale-95 text-white font-medium text-[16px] font-poppins rounded-full transition-all inline-flex items-center justify-center text-center`}
+                                    className={`${idx === 0 ? 'mt-4' : 'mt-5'} w-full sm:w-auto min-w-[300px] py-2 bg-black hover:bg-slate-900 active:scale-95 text-white font-medium text-base font-poppins rounded-full transition-all inline-flex items-center justify-center text-center`}
                                 >
                                     {section.button.label}
                                 </Link>
@@ -92,13 +92,13 @@ export const PubricaSampleWorkCard: React.FC<PubricaSampleWorkCardProps> = ({
                 </div>
 
                 {/* Footer Quality Statement */}
-                <p className="mt-10 pt-6 border-t border-emerald-200/40 font-poppins text-[16px] font-normal text-[#111111] leading-[1.7] text-center sm:text-left">
+                <p className="mt-8 pt-5 border-t border-emerald-200/40 font-poppins text-base font-normal text-[#111111] leading-relaxed text-center sm:text-left">
                     {footerDisclaimerSegments.map((segment, idx) =>
                         segment.url ? (
                             <Link
                                 key={idx}
                                 href={segment.url}
-                                className="text-[#64a2c7] font-normal cursor-pointer hover:underline"
+                                className="text-blue-600 font-normal cursor-pointer no-underline hover:text-blue-700"
                             >
                                 {segment.text}
                             </Link>
