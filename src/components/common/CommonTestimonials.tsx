@@ -32,29 +32,32 @@ export default function CommonTestimonial({
     };
 
     handleResize();
-
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const maxSlide = mobile ? testimonials.length - 1 : testimonials.length - 2;
+  // Total slides / max index configuration
+  // Mobile: 1 item per view -> max index is testimonials.length - 1 (5 dots for 5 items)
+  // Desktop: 2 items per view -> exactly 3 dots (indices 0, 1, 2 representing groupings)
+  const maxSlide = mobile ? testimonials.length - 1 : Math.max(0, testimonials.length - 2);
 
   const next = () => {
-    if (current >= maxSlide) {
-      setCurrent(0);
-    } else {
-      setCurrent((prev) => prev + 1);
-    }
+    setCurrent((prev) => (prev >= maxSlide ? 0 : prev + 1));
   };
 
   const prev = () => {
-    if (current === 0) {
-      setCurrent(maxSlide);
-    } else {
-      setCurrent((prev) => prev - 1);
-    }
+    setCurrent((prev) => (prev === 0 ? maxSlide : prev - 1));
   };
+
+  // Autoplay functionality: moves automatically every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      next();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [maxSlide]);
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-14 min-w-0 w-full overflow-x-hidden">
@@ -90,7 +93,7 @@ export default function CommonTestimonial({
                   </div>
 
                   <p className="text-xs md:text-sm text-gray-800 leading-relaxed font-normal">
-                    "{item.quote}"
+                    &quot;{item.quote}&quot;
                   </p>
                 </div>
 
@@ -126,7 +129,7 @@ export default function CommonTestimonial({
         <button
           onClick={prev}
           aria-label="Previous slide"
-          className="absolute left-1 top-1/2 -translate-y-1/2 bg-white/80 shadow border border-gray-300 rounded-full w-8 h-8 flex items-center justify-center hover:bg-white text-gray-700"
+          className="absolute left-1 top-1/2 -translate-y-1/2 bg-white/80 shadow border border-gray-300 rounded-full w-8 h-8 flex items-center justify-center hover:bg-white text-gray-700 z-10"
         >
           &#8249;
         </button>
@@ -135,18 +138,19 @@ export default function CommonTestimonial({
         <button
           onClick={next}
           aria-label="Next slide"
-          className="absolute right-1 top-1/2 -translate-y-1/2 bg-white/80 shadow border border-gray-300 rounded-full w-8 h-8 flex items-center justify-center hover:bg-white text-gray-700"
+          className="absolute right-1 top-1/2 -translate-y-1/2 bg-white/80 shadow border border-gray-300 rounded-full w-8 h-8 flex items-center justify-center hover:bg-white text-gray-700 z-10"
         >
           &#8250;
         </button>
       </div>
 
-      {/* Pagination Squares */}
+      {/* Pagination Squares / Dots */}
       <div className="flex justify-center items-center gap-2 mt-8">
-        {Array.from({ length: maxSlide + 1 }).map((_, index) => (
+        {Array.from({ length: mobile ? testimonials.length : 3 }).map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}
+            aria-label={`Go to slide ${index + 1}`}
             className={`h-3 w-3 border border-[#0b3b2c] transition-all ${
               current === index ? "bg-[#0b3b2c]" : "bg-white"
             }`}

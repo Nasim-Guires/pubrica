@@ -11,7 +11,6 @@ const BLUE_LINKS = [
   "research paper publication services",
   "journal publication services",
   "pre-submission peer review",
-  "managing peer review",
   "journal submission",
   "journal selection",
   "medical device",
@@ -29,8 +28,6 @@ const ROUTE_MAP: Record<string, string> = {
     "/services/publication-support/poster-preparation/european-society-for-medical-oncology/",
   "pre-submission peer review":
     "/academy/peer-review/how-publishers-balance-authors-and-reviewers/",
-  "managing peer review":
-    "/services/publication-support/double-blind-peer-review-definition-process/",
   "peer review":
     "/services/publication-support/double-blind-peer-review-definition-process/",
   "journal submission": "/services/publication-support/journal-submission/",
@@ -167,7 +164,7 @@ export default function ServiceOverview() {
   };
 
   return (
-    <div className="w-full font-poppins font-[family-name:var(--font-poppins)] bg-white text-slate-800 antialiased pt-0 mt-0">
+    <div className="w-full font-sans bg-white text-slate-800 antialiased pt-0 mt-0">
       <div className="max-w-6xl mx-auto pt-0 pb-10 px-4 sm:px-6">
         {/* Main Section Heading */}
         <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-[#0c3830] leading-tight mb-4 mt-0 pt-0">
@@ -184,7 +181,7 @@ export default function ServiceOverview() {
               return (
                 <div key={index} className="flex items-start gap-2.5 pl-2">
                   <span className="text-[#c00000] text-lg mt-0.5">•</span>
-                  <p className="text-[16px] text-slate-700 leading-relaxed">
+                  <p className="text-[15px] text-slate-700 leading-relaxed">
                     {renderTextWithLinks(cleanText)}
                   </p>
                 </div>
@@ -194,7 +191,7 @@ export default function ServiceOverview() {
             return (
               <p
                 key={index}
-                className="text-[16px] text-slate-700 leading-relaxed"
+                className="text-[15px] text-slate-700 leading-relaxed"
               >
                 {renderTextWithLinks(paragraph)}
               </p>
@@ -207,7 +204,7 @@ export default function ServiceOverview() {
           <GetFreeQuoteButton />
           <Link
             href="/uploads/publication-support-services_compressed.pdf"
-            className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold text-[16px] transition-colors cursor-pointer inline-flex items-center justify-center select-none"
+            className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
           >
             View Brochure
           </Link>
@@ -235,7 +232,7 @@ export default function ServiceOverview() {
                     className="max-h-16 max-w-full object-contain"
                   />
                 </div>
-                <p className="text-[16px] font-bold text-[#0c3830] leading-snug">
+                <p className="text-sm font-bold text-[#0c3830] leading-snug">
                   {item.title}
                 </p>
               </a>
@@ -248,7 +245,7 @@ export default function ServiceOverview() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Left Bullet List */}
             <div className="lg:col-span-7 space-y-3">
-              <p className="text-[16px] text-slate-700 leading-relaxed mb-3">
+              <p className="text-[15px] text-slate-700 leading-relaxed mb-3">
                 {renderTextWithLinks(sectionIntroText)}
               </p>
 
@@ -257,7 +254,7 @@ export default function ServiceOverview() {
                   <span className="text-[#dc2626] font-bold text-base leading-none mt-1">
                     •
                   </span>
-                  <p className="text-[16px] text-slate-700 leading-relaxed">
+                  <p className="text-[15px] text-slate-700 leading-relaxed">
                     {renderTextWithLinks(bullet)}
                   </p>
                 </div>
@@ -295,17 +292,17 @@ export default function ServiceOverview() {
               <span className="text-[#dc2626] font-bold text-base leading-none mt-1.5">
                 •
               </span>
-              <p className="text-[16px] text-slate-700 leading-relaxed">
+              <p className="text-[15px] text-slate-700 leading-relaxed">
                 {renderTextWithLinks(paragraph)}
               </p>
             </div>
           ))}
 
           {/* Single Upload CTA */}
-          <div className="pt-2">
+          <div className="pt-2 flex justify-center sm:justify-start">
             <Link
               href="/order-now/"
-              className="bg-red-600 text-white px-5 py-2.5 rounded-md font-semibold text-[16px] cursor-pointer inline-flex items-center justify-center select-none hover:bg-white hover:text-black"
+              className="bg-red-600 text-white px-5 py-2.5 rounded-md font-semibold cursor-pointer inline-flex items-center justify-center select-none hover:bg-white hover:text-black"
             >
               Upload Your Manuscript
             </Link>

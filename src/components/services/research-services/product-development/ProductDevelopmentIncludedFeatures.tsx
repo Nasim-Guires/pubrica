@@ -33,7 +33,7 @@ export default function ProductDevelopmentIncludedFeatures({
   ];
 
   return (
-    <section className={`w-full bg-white pt-0 pb-0 -mt-6 text-slate-800 font-sans ${className}`}>
+    <section className={`w-full bg-white pt-0 pb-0 mt-6 text-slate-800 font-sans ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Header */}
         <h2 className="text-xl sm:text-2xl font-bold text-[#0b3b2c] mt-0 mb-3">

@@ -44,21 +44,23 @@ export default function PubricaResourceHub() {
     },
   ];
 
-  const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0);
-  const [testimonialSlide, setTestimonialSlide] = useState(0);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const testimonialSlides = [
+  const [mobileSlide, setMobileSlide] = useState(0);
+  const [desktopSlide, setDesktopSlide] = useState(0);
+
+  const desktopSlides = [
     [testimonials[0], testimonials[1]],
     [testimonials[1], testimonials[2]],
   ];
 
+  // Independent automatic interval ensuring mobile loops through all 3 items, and desktop loops through 2 pairs
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % testimonialSlides.length);
+      setMobileSlide((prev) => (prev + 1) % testimonials.length); // Loops 0 -> 1 -> 2 -> 0
+      setDesktopSlide((prev) => (prev + 1) % desktopSlides.length); // Loops 0 -> 1 -> 0
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [testimonialSlides.length]);
+  }, [testimonials.length, desktopSlides.length]);
 
   // --- FAQ DATA ---
   const faqData = [
@@ -237,7 +239,7 @@ export default function PubricaResourceHub() {
             </div>
           </div>
 
-          {/* Footer Quality Statement - Matches exact image typography & color */}
+          {/* Footer Quality Statement */}
           <p className="mt-10 pt-6 border-t border-emerald-200/40 font-poppins text-[16px] font-normal text-[#111111] leading-[1.7] text-left">
             Pubrica meets crest standards and protocols of journal publishing
             ethics in every single phase of services and processes. Pubrica
@@ -270,28 +272,65 @@ export default function PubricaResourceHub() {
             <div className="relative">
               {/* Testimonial Slides */}
               <div className="max-w-6xl mx-auto px-4 py-8 overflow-hidden">
-                {/* Sliding Track Wrapper */}
+                {/* MOBILE VIEW: 3 slides sliding track (3 dots) */}
                 <div
-                  className="flex transition-transform duration-700 ease-in-out"
-                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                  className="flex transition-transform duration-700 ease-in-out md:hidden"
+                  style={{ transform: `translateX(-${mobileSlide * 100}%)` }}
                 >
-                  {testimonialSlides.map((slide, slideIndex) => (
+                  {testimonials.map((test) => (
+                    <div key={test.id} className="w-full shrink-0 px-1">
+                      <div className="bg-[#185348] text-white rounded-lg shadow-xl relative overflow-hidden flex flex-col justify-between h-full min-h-[170px]">
+                        <div className="flex h-full">
+                          <div className="flex-1 p-6 flex flex-col justify-between z-10">
+                            <p className="text-slate-100 text-[14px] leading-relaxed font-normal">
+                              &quot;{test.quote}&quot;
+                            </p>
+                            <div className="mt-4">
+                              <h4 className="font-bold tracking-wider text-white text-[13px] uppercase">
+                                {test.author}
+                              </h4>
+                              <p className="text-[12px] text-slate-300 italic mt-0.5">
+                                {test.role}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="w-[140px] shrink-0 relative flex items-center justify-center p-2">
+                            <Image
+                              src={test.image}
+                              alt={test.author}
+                              width={160}
+                              height={190}
+                              className="object-contain max-h-[150px] drop-shadow-md"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* DESKTOP VIEW: 2 paired slides shifting incrementally (2 dots) */}
+                <div
+                  className="hidden md:flex transition-transform duration-700 ease-in-out"
+                  style={{
+                    transform: `translateX(-${desktopSlide * (100 / 2)}%)`,
+                  }}
+                >
+                  {desktopSlides.map((slidePair, slideIndex) => (
                     <div
                       key={slideIndex}
-                      className="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-6 px-1"
+                      className="w-full shrink-0 grid grid-cols-2 gap-6 px-1"
                     >
-                      {slide.map((test, index) => (
+                      {slidePair.map((test, idx) => (
                         <div
-                          key={`${slideIndex}-${test.id}-${index}`}
+                          key={`${slideIndex}-${test.id}-${idx}`}
                           className="bg-[#185348] text-white rounded-lg shadow-xl relative overflow-hidden flex flex-col justify-between h-full min-h-[170px]"
                         >
                           <div className="flex h-full">
-                            {/* Left Content */}
                             <div className="flex-1 p-6 flex flex-col justify-between z-10">
                               <p className="text-slate-100 text-[14px] leading-relaxed font-normal">
                                 &quot;{test.quote}&quot;
                               </p>
-
                               <div className="mt-4">
                                 <h4 className="font-bold tracking-wider text-white text-[13px] uppercase">
                                   {test.author}
@@ -301,9 +340,7 @@ export default function PubricaResourceHub() {
                                 </p>
                               </div>
                             </div>
-
-                            {/* Right Image Container */}
-                            <div className="w-[140px] sm:w-[160px] shrink-0 relative flex items-center justify-center p-2">
+                            <div className="w-[160px] shrink-0 relative flex items-center justify-center p-2">
                               <Image
                                 src={test.image}
                                 alt={test.author}
@@ -319,37 +356,41 @@ export default function PubricaResourceHub() {
                   ))}
                 </div>
 
-                {/* Navigation Indicators */}
+                {/* Navigation Indicators - Responsive dot counts */}
                 <div className="flex justify-center items-center gap-2 mt-6">
-                  {testimonialSlides.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentSlide(index)}
-                      aria-label={`Go to slide ${index + 1}`}
-                      className={`w-3 h-3 transition-all duration-300 ${currentSlide === index
-                          ? "bg-[#185348] border-2 border-[#185348]"
-                          : "bg-white border-2 border-slate-400"
+                  {/* Mobile Dots (3 dots) */}
+                  <div className="flex md:hidden gap-2">
+                    {testimonials.map((_, index) => (
+                      <button
+                        key={`mob-${index}`}
+                        onClick={() => setMobileSlide(index)}
+                        aria-label={`Go to slide ${index + 1}`}
+                        className={`w-3 h-3 transition-all duration-300 rounded-full ${
+                          mobileSlide === index
+                            ? "bg-[#185348] border-2 border-[#185348]"
+                            : "bg-white border-2 border-slate-400"
                         }`}
-                    />
-                  ))}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Desktop Dots (2 dots) */}
+                  <div className="hidden md:flex gap-2">
+                    {desktopSlides.map((_, index) => (
+                      <button
+                        key={`desk-${index}`}
+                        onClick={() => setDesktopSlide(index)}
+                        aria-label={`Go to slide ${index + 1}`}
+                        className={`w-3 h-3 transition-all duration-300 rounded-full ${
+                          desktopSlide === index
+                            ? "bg-[#185348] border-2 border-[#185348]"
+                            : "bg-white border-2 border-slate-400"
+                        }`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
-
-              {/* Slider Dots */}
-              {/* <div className="flex justify-center items-center gap-2 mt-6">
-                {testimonialSlides.map((_, index) => (
-                  <button
-                    key={index}
-                    type="button"
-                    onClick={() => setTestimonialSlide(index)}
-                    aria-label={`Show testimonial slide ${index + 1}`}
-                    className={`transition-all duration-300 rounded-full ${testimonialSlide === index
-                      ? "w-2.5 h-2.5 bg-emerald-600"
-                      : "w-2.5 h-2.5 bg-slate-300"
-                      }`}
-                  />
-                ))}
-              </div> */}
             </div>
           </div>
 
@@ -379,10 +420,11 @@ export default function PubricaResourceHub() {
               <button
                 key={tab}
                 onClick={() => setSelectedCategory(tab)}
-                className={`flex-1 text-center py-2 px-4 rounded-full text-[16px] font-bold tracking-wide font-poppins transition-all duration-300 ${selectedCategory === tab
-                  ? "bg-[#10b981] text-white shadow-md scale-105"
-                  : "text-slate-300 hover:text-white"
-                  }`}
+                className={`flex-1 text-center py-2 px-4 rounded-full text-[16px] font-bold tracking-wide font-poppins transition-all duration-300 ${
+                  selectedCategory === tab
+                    ? "bg-[#10b981] text-white shadow-md scale-105"
+                    : "text-slate-300 hover:text-white"
+                }`}
               >
                 {tab}
               </button>

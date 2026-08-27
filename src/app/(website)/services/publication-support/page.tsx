@@ -18,12 +18,6 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <Breadcrumb
-        items={[
-          { label: "Services", href: "/services" },
-        ]}
-      />
-
       <ServiceHero service={service} />
 
       <ServiceOverview />

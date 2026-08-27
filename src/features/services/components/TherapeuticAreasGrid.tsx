@@ -232,26 +232,30 @@ export default function TherapeuticAndWorkflow() {
       </section>
 
       {/* SECTION 3: FOOTER ACCELERATION BAR */}
-      <div className="w-full bg-[#022e1b] py-8 px-4 text-white font-['Poppins',sans-serif]">
-        <div className="max-w-6xl mx-auto flex flex-row items-center justify-center gap-8 md:gap-12">
+      <div className="w-full bg-[#022e1b] py-4 px-4 text-white font-['Poppins',sans-serif]">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+
+          {/* Image Container */}
           <div className="flex-shrink-0 flex items-center justify-center">
             <img
               src="/images/publication-support/Satisfaction_Guarantee.webp"
               alt="100% Satisfaction Guarantee"
-              className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 object-contain"
+              className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 object-contain mx-auto"
             />
           </div>
 
-          <div className="flex-1 text-left max-w-2xl">
+          {/* Text Container */}
+          <div className="flex-1 text-center md:text-left max-w-2xl">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2.5 leading-tight">
               Speed up your journey to publication with Pubrica
             </h3>
-            <p className="text-slate-200 text-base leading-relaxed font-normal">
+            <p className="text-slate-200 text-[16px] leading-relaxed font-normal">
               Gain access to your assistant who will expertly guide you through
               intricate journal submission processes, shielding you from rejection
               and ensuring a faster path to getting your work published.
             </p>
           </div>
+
         </div>
       </div>
     </div>

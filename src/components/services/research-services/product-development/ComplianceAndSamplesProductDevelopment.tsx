@@ -229,29 +229,32 @@ export default function ComplianceAndSamplesProductDevelopment({
                     </div>
 
                     {/* Right Text & CTA Buttons */}
-                    <div className="md:col-span-7 space-y-6">
+                    <div className="md:col-span-7 space-y-6 font-['Poppins']">
                         {/* Upper CTA */}
                         <div>
-                            <h3 className="text-base sm:text-lg font-bold text-[#1b2b28] mb-3">
+                            <h3 className="text-xl font-bold text-[#1b2b28] mb-3">
                                 Discovery & Intelligence Services Sample Work
                             </h3>
-                            <Link
-                                href="/insights/sample-work/"
-                                className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold px-8 py-2.5 rounded-full transition-colors"
-                            >
-                                Discover More
-                            </Link>
+                            <div className="flex justify-center md:block">
+                                <Link
+                                    href="/insights/sample-work/"
+                                    className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold px-8 py-2.5 rounded-full transition-colors"
+                                >
+                                    Discover More
+                                </Link>
+                            </div>
                         </div>
 
                         {/* Lower CTA */}
-                        <div className="space-y-2">
-                            <h3 className="text-base sm:text-lg font-bold text-[#1b2b28]">
+                        <div className="space-y-3">
+                            <h3 className="text-xl font-bold text-[#1b2b28]">
                                 Download the full Report Now
                             </h3>
-                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                            {/* Set to 16px (text-base) */}
+                            <p className="text-base text-gray-600 leading-relaxed">
                                 Explore our Product Development service sample work, accurately designed to meet industry standards, comply with regulatory requirements, and deliver innovative, high-quality solutions that drive market success.
                             </p>
-                            <div className="pt-2">
+                            <div className="pt-2 flex justify-center md:block">
                                 <Link
                                     href="/insights/sample-work/"
                                     className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold px-8 py-2.5 rounded-full transition-colors"
