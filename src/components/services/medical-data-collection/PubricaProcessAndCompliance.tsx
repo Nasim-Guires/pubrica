@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // Interfaces for type safety
@@ -367,12 +368,12 @@ export default function PubricaProcessAndCompliance() {
                 <h3 className="text-lg font-bold text-[#082e2b] mb-3">
                   Medical Data Collection Sample Work
                 </h3>
-                <a
-                  href="#sample"
+                <Link
+                  href="/insights/medical-data-collection-on-interstitial-cysts-and-drug-uracysts"
                   className="inline-block bg-black hover:bg-gray-800 text-white font-medium text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors"
                 >
                   Discover More
-                </a>
+                </Link>
               </div>
 
               <div>
@@ -385,12 +386,12 @@ export default function PubricaProcessAndCompliance() {
                   standards, and deliver accurate, validated data for impactful
                   clinical and academic research outcomes.
                 </p>
-                <a
-                  href="#report"
+                <Link
+                  href="/insights/sample-work"
                   className="inline-block bg-black hover:bg-gray-800 text-white font-medium text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors"
                 >
                   Discover More
-                </a>
+                </Link>
               </div>
             </div>
           </div>

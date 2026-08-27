@@ -2,6 +2,7 @@
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -189,7 +190,7 @@ export default function AcademicDevelopmentEditingService() {
             publisher: 'Innovare Academic Sciences',
             impactFactor: 'NA',
             image: '/images/placeholder-cover.png',
-            link: '#',
+            link: 'https://journals.innovareacademics.in/index.php/ijpps/article/view/39739',
         },
         {
             title: 'Journal of Clinical Dermatology & Therapy',
@@ -199,7 +200,7 @@ export default function AcademicDevelopmentEditingService() {
             publisher: 'Herald Open Access',
             impactFactor: '0.68',
             image: '/images/placeholder-cover.png',
-            link: '#',
+            link: 'https://www.heraldopenaccess.us/openaccess/a-systemic-review-of-dupilumab-efficacy-and-safety-by-phenotypic-variations-of-atopic-dermatitis',
         },
         {
             title: 'World Journal of Oncology',
@@ -209,7 +210,7 @@ export default function AcademicDevelopmentEditingService() {
             publisher: 'Elmer Press Inc.',
             impactFactor: '2.2',
             image: '/images/placeholder-cover.png',
-            link: '#',
+            link: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7935621/',
         },
         // Add more publication items here to maintain continuous flow
     ];
@@ -445,9 +446,9 @@ export default function AcademicDevelopmentEditingService() {
                                 <span>{exp.experience} Years Experience</span>
                                 <span>{exp.papers} Papers Edited</span>
                             </div>
-                            <button className="mt-4 text-xs font-bold text-[#0b3b2c] hover:underline">
+                            <Link href="/about-us/our-editors" className="mt-4 text-xs font-bold text-[#0b3b2c] hover:underline">
                                 Read More
-                            </button>
+                            </Link>
                         </div>
                     ))}
                 </div>
@@ -590,6 +591,8 @@ export default function AcademicDevelopmentEditingService() {
                                     <div className="mt-6 pt-4 border-t border-gray-100 flex justify-end">
                                         <a
                                             href={pub.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="px-5 py-1.5 bg-[#0b3b2c] hover:bg-[#07261d] text-white text-xs font-semibold rounded transition-colors shadow-sm"
                                         >
                                             Visit

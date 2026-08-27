@@ -141,9 +141,9 @@ export default function PosterPreparationPage() {
           Pubrica provides researchers with the ability to create conference-ready posters without the
           hassle of design problems, formatting issues, or compliance gaps. From conceptualization
           to final delivery, we become your{" "}
-          <a href="/services/publication-support/poster-preparation/how-to-design-a-research-poster/" className="text-blue-600 hover:underline font-medium">
+          <Link href="/services/publication-support/poster-preparation/how-to-design-a-research-poster/" className="text-blue-600 hover:underline font-medium">
             scientific design
-          </a>{" "}
+          </Link>{" "}
           partner, delivering a poster that represents the quality of your research and its clarity.
         </p>
         {/* Action Buttons */}

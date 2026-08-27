@@ -4,6 +4,7 @@ import { EditorialWorkflowSection } from '@/components/common/EditorialWorkflowS
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import { workflowData, workflowSectionData } from '@/lib/education-editorial-service/education-editorial-service';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -198,9 +199,12 @@ export default function EducationEditorialServicePage() {
                                 Education Editorial Services Sample Work
                             </h2>
                             <div className="pt-1">
-                                <button className="bg-black hover:bg-neutral-800 text-white text-xs font-bold px-6 py-2.5 rounded-full shadow transition-colors">
+                                <Link
+                                    href="/insights/individual-patient-data-from-randomized-trials"
+                                    className="inline-block bg-black hover:bg-neutral-800 text-white text-xs font-bold px-6 py-2.5 rounded-full shadow transition-colors"
+                                >
                                     Discover More
-                                </button>
+                                </Link>
                             </div>
                         </div>
 
@@ -211,9 +215,12 @@ export default function EducationEditorialServicePage() {
                             <p className="text-xs text-gray-600 leading-relaxed mb-3">
                                 Explore our education editorial sample work, crafted to meet high academic standards, curriculum-aligned frameworks, and publisher-specific guidelines. We deliver accurate, polished, and publication-ready educational content that enhances teaching, learning, and research outcomes.
                             </p>
-                            <button className="bg-black hover:bg-neutral-800 text-white text-xs font-bold px-6 py-2.5 rounded-full shadow transition-colors">
+                            <Link
+                                href="/insights/sample-work"
+                                className="inline-block bg-black hover:bg-neutral-800 text-white text-xs font-bold px-6 py-2.5 rounded-full shadow transition-colors"
+                            >
                                 Discover More
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

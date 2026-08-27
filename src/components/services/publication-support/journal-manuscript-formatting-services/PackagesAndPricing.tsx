@@ -30,12 +30,12 @@ export default function PackagesAndPricing() {
               <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
                 Manuscript Formatting Sample Work
               </h3>
-              <button
-                type="button"
-                className="w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
+              <Link
+                href="/insights/sample-work"
+                className="inline-block w-full sm:w-auto text-center bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
               >
                 Discover More
-              </button>
+              </Link>
             </div>
 
             <div className="pt-2">
@@ -47,12 +47,12 @@ export default function PackagesAndPricing() {
                 your target journal&apos;s formatting guidelines, technical
                 standards, and submission deadlines.
               </p>
-              <button
-                type="button"
-                className="w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
+              <Link
+                href="/insights/sample-work"
+                className="inline-block w-full sm:w-auto text-center bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
               >
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -68,15 +68,15 @@ export default function PackagesAndPricing() {
         <p className="text-xs md:text-sm text-gray-700 leading-relaxed max-w-5xl mb-8">
           Selecting the right package ensures your manuscript will be
           professionally formatted to meet{" "}
-          <a href="/services/publication-support/journal-submission" className="text-[#3b82f6] hover:underline">
+          <Link href="/services/publication-support/journal-submission" className="text-[#3b82f6] hover:underline">
             journal submission
-          </a>{" "}
+          </Link>{" "}
           requirements and academic publishing standards. Whether you require
           minor manuscript editing and formatting or a complete research paper
           layout design, Pubrica provides customized{" "}
-          <a href="/academy/formatting-service/life-science-manuscript-formatting-faster-publication" className="text-[#3b82f6] hover:underline">
+          <Link href="/academy/formatting-service/life-science-manuscript-formatting-faster-publication" className="text-[#3b82f6] hover:underline">
             manuscript formatting
-          </a>{" "}
+          </Link>{" "}
           solutions for every level of editorial complexity and journal
           guidelines compliance.
         </p>

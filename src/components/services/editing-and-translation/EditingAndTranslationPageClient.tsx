@@ -136,14 +136,14 @@ const EditingAndTranslationPageClient = () => {
           {/* Paragraph */}
           <p className="text-[17px] leading-8 text-slate-700">
             Pubrica provides{" "}
-            <a href="/academy/editing-and-translation/importance-of-editing-proofreading-manuscript-submission" className="text-[#4180A8]">
+            <Link href="/academy/editing-and-translation/importance-of-editing-proofreading-manuscript-submission" className="text-[#4180A8]">
               manuscript editing
-            </a>{" "}
+            </Link>{" "}
             and academic translation services tailored for healthcare,
-            <a href="/subject-matter-experts/life-sciences" className="text-[#4180A8]">
+            <Link href="/subject-matter-experts/life-sciences" className="text-[#4180A8]">
               {" "}
               life sciences
-            </a>
+            </Link>
             , and multidisciplinary research. From scientific manuscripts,
             theses, and clinical reports to multilingual translations, our
             experts ensure clarity, accuracy, and journal compliance. We help
@@ -184,7 +184,7 @@ const EditingAndTranslationPageClient = () => {
             </Link>
 
             <Link
-              href="https://pubrica.com/wp-content/uploads/2026/05/Editing-and-Translation-Services.pdf"
+              href="/brochures/editing-and-translation-services.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full bg-[#BA0000] px-6 py-2.5 text-sm text-white font-semibold hover:bg-[#980000] transition-colors"
@@ -204,9 +204,9 @@ const EditingAndTranslationPageClient = () => {
           </h2>
           <p className="text-[14px] text-slate-600 max-w-5xl mb-12 leading-relaxed">
             At Pubrica, we provide end-to-end{" "}
-            <a href="/academy/editing-and-translation/manuscript-editing-process-steps" className="text-[#4080A8] hover:underline font-normal">
+            <Link href="/academy/editing-and-translation/manuscript-editing-process-steps" className="text-[#4080A8] hover:underline font-normal">
               Editing and Translation Services
-            </a>{" "}
+            </Link>{" "}
             designed to refine, enhance, and globalize your content. From
             manuscripts and theses to books and multilingual translations, our
             expert team ensures clarity, precision, and publication-ready
@@ -428,9 +428,9 @@ const EditingAndTranslationPageClient = () => {
             Pubrica delivers professional academic and scientific translation
             services designed to ensure accuracy, cultural adaptation, and
             publication-ready quality. Our translators are{" "}
-            <span className="text-teal-600 font-medium underline">
+            <Link href="/subject-matter-experts" className="text-teal-600 font-medium underline">
               subject-matter experts
-            </span>{" "}
+            </Link>{" "}
             who refine content to meet the standards of international journals,
             institutions, and global markets.
           </p>
@@ -597,9 +597,9 @@ const EditingAndTranslationPageClient = () => {
                 </strong>{" "}
                 Our team has helped over 800,000 researchers succeed in renowned
                 journals. With our{" "}
-                <span className="text-sky-500 underline cursor-pointer hover:text-sky-600">
+                <Link href="/services/publication-support/journal-selection" className="text-sky-500 underline hover:text-sky-600">
                   journal selection service
-                </span>
+                </Link>
                 , we streamline the process, enhancing your paper&apos;s
                 publication prospects.
               </div>

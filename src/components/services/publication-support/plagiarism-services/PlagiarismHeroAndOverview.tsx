@@ -124,7 +124,7 @@ export default function PlagiarismHeroAndOverview() {
           {/* Call to Action Button */}
           <div className="pt-2">
             <Link
-              href="#upload"
+              href="/order-now"
               className="inline-block bg-[#b80000] hover:bg-[#960000] text-white font-bold text-sm md:text-base py-3 px-8 rounded-full transition-colors shadow-sm"
             >
               Upload Your Manuscript

@@ -1,4 +1,5 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Link from "next/link";
 import React from "react";
 
 export default function MedicalWritingSection(): React.ReactElement {
@@ -51,12 +52,12 @@ export default function MedicalWritingSection(): React.ReactElement {
               </span>
               <span>
                 Comply with rigorous global regulations (SFDA, FDA, EMA, MDR,{" "}
-                <a
-                  href="#ich-guidelines"
+                <Link
+                  href="/services/medical-writing/ich-guidelines-clinical-trials-drug-development"
                   className="text-sky-600 hover:underline"
                 >
                   ICH guidelines
-                </a>
+                </Link>
                 )
               </span>
             </li>
@@ -82,9 +83,9 @@ export default function MedicalWritingSection(): React.ReactElement {
             Many face an incomplete internal resource, intricate regulations,
             article rejection, or variable quality of content. At Pubrica, we
             can provide clinical writing and{" "}
-            <a href="#medical-writing" className="text-sky-600 hover:underline">
+            <Link href="/academy/medical-writing/differences-between-scientific-and-medical-writing" className="text-sky-600 hover:underline">
               medical writing
-            </a>{" "}
+            </Link>{" "}
             that turn medical language into content that engages, entertains and
             delivers high quality. Each of our medical writers is trained to
             combine scientific expertise, legal requirements, and accuracy of
@@ -92,12 +93,12 @@ export default function MedicalWritingSection(): React.ReactElement {
             submitting to regulatory bodies, publishing in journals, introducing
             a new therapy, or educating patients, our team of medical experts at
             Pubrica will provide comprehensive medical and{" "}
-            <a
-              href="#scientific-writing"
+            <Link
+              href="/services/research-services/scientific-writing"
               className="text-sky-600 hover:underline"
             >
               scientific writing services
-            </a>{" "}
+            </Link>{" "}
             during each stage of the product lifecycle, including early-stage
             research, regulatory submission, and patient communication.
           </p>
@@ -115,12 +116,14 @@ export default function MedicalWritingSection(): React.ReactElement {
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center gap-4 pt-4">
            <GetFreeQuoteButton/>
-            <button
-              type="button"
+            <Link
+              href="/brochures/medical-writing.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#b30000] hover:bg-[#8e0000] text-white text-xs sm:text-sm font-bold py-2.5 px-6 rounded-full transition-colors duration-200 shadow-sm cursor-pointer"
             >
               View Brochure
-            </button>
+            </Link>
           </div>
         </div>
       </section>

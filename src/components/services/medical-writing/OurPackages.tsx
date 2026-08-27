@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 
 interface PackageItem {
@@ -133,12 +134,12 @@ export default function OurPackages(): React.ReactElement {
             Whether you require a clinical literature review, research
             peer-reviewed manuscript, regulatory documents, or patient-facing
             educational content, we deliver high-quality, thoroughly reviewed{" "}
-            <a
-              href="#medical-writing"
+            <Link
+              href="/academy/medical-writing/parallel-structure-medical-writing"
               className="text-[#008ba3] underline underline-offset-2 hover:text-[#09322e] transition-colors"
             >
               medical writing
-            </a>
+            </Link>
             . We offer a range of service packages (A to F) to support your end
             goals—whether it's academic manuscript submission, regulatory
             narrative development, product launch support, or interactive
@@ -162,12 +163,12 @@ export default function OurPackages(): React.ReactElement {
 
         {/* CTA Banner Button */}
         <div className="pt-6 text-center max-w-2xl mx-auto">
-          <a
-            href="#pricing"
+          <Link
+            href="/order-now"
             className="inline-block w-full py-3.5 px-8 bg-[#ba0000] hover:bg-[#990000] text-white font-bold text-base rounded-md transition-colors shadow-md text-center"
           >
             Starts From $ 130
-          </a>
+          </Link>
         </div>
       </div>
     </section>

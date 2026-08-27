@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 // ==========================================
@@ -69,9 +70,9 @@ export default function WhoWeServeSection() {
           </h2>
           <p className="text-xs sm:text-sm text-gray-700 max-w-5xl leading-relaxed">
             At Pubrica, our{" "}
-            <a href="/services/academic-editorial-services" className="text-sky-600 hover:underline font-medium">
+            <Link href="/services/academic-editorial-services" className="text-sky-600 hover:underline font-medium">
               Academic Editorial Services
-            </a>{" "}
+            </Link>{" "}
             cater to a diverse spectrum of researchers, educators, and
             institutions, ensuring clarity, precision, and publication readiness
             for every manuscript. We serve:

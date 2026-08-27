@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface PackageTier {
     id: string;
@@ -172,12 +173,12 @@ export default function ScientificNewsReportPackages() {
                             </div>
                         </div>
 
-                        <button
-                            type="button"
-                            className="w-full sm:w-auto px-6 py-2.5 bg-[#0e3b2e] text-white text-xs font-bold rounded-lg hover:bg-emerald-900 transition-colors shadow-sm"
+                        <Link
+                            href="/order-now"
+                            className="inline-block text-center w-full sm:w-auto px-6 py-2.5 bg-[#0e3b2e] text-white text-xs font-bold rounded-lg hover:bg-emerald-900 transition-colors shadow-sm"
                         >
                             Check Pricing & Get a Quote
-                        </button>
+                        </Link>
                     </div>
 
                 </div>

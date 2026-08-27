@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const PAGE_IMAGES = "/images/publication-support/video-abstract";
 
@@ -337,9 +338,12 @@ export default function VideoAbstractOverview() {
               <h4 className="text-lg md:text-xl font-bold text-[#0c373b] mb-3">
                 Video Abstract Sample Work
               </h4>
-              <button className="bg-black hover:bg-slate-800 text-white font-medium text-xs md:text-sm px-8 py-2.5 rounded-full transition-colors duration-300">
+              <Link
+                href="/insights/sample-work"
+                className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs md:text-sm px-8 py-2.5 rounded-full transition-colors duration-300"
+              >
                 Discover More
-              </button>
+              </Link>
             </div>
 
             <div className="pt-2">
@@ -351,9 +355,12 @@ export default function VideoAbstractOverview() {
                 your journal’s submission guidelines, visual quality
                 requirements, and publication timeframes.
               </p>
-              <button className="bg-black hover:bg-slate-800 text-white font-medium text-xs md:text-sm px-8 py-2.5 rounded-full transition-colors duration-300">
+              <Link
+                href="/insights/sample-work"
+                className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs md:text-sm px-8 py-2.5 rounded-full transition-colors duration-300"
+              >
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

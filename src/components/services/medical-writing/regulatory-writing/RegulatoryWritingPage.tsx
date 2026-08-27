@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const RW = '/images/medical-writing/regulatory-writing';
 
@@ -65,7 +66,7 @@ const RegulatoryWritingPage = () => {
                         </li>
                         <li>
                             To help you comply with international regulatory regulations (ICH, FDA, EMA, PMDA,{' '}
-                            <a href="#ctd" className="text-blue-600 underline">CTD</a>).
+                            <Link href="/services/medical-writing/regulatory-writing/ctd-structure-overview-modules" className="text-blue-600 underline">CTD</Link>).
                         </li>
                         <li>
                             To avoid delays and rejections caused by insufficient documentation, formatting errors, or non-compliance.
@@ -74,9 +75,9 @@ const RegulatoryWritingPage = () => {
 
                     <p className="pt-2">
                         Our experienced regulatory writers and experts in clinical{' '}
-                        <a href="#regulatory-writing" className="text-blue-5 text-blue-600 underline">
+                        <Link href="/academy/regulatory-writing/regulatory-documentation-medical-writing-devices" className="text-blue-5 text-blue-600 underline">
                             regulatory writing
-                        </a>{' '}
+                        </Link>{' '}
                         understand that and provide services to help you develop your data into organized, compliant documents ready for regulatory submission.
                     </p>
 
@@ -87,9 +88,14 @@ const RegulatoryWritingPage = () => {
 
                 {/* View Brochure Button */}
                 <div className="mt-8">
-                    <button className="bg-[#b90000] hover:bg-red-800 text-white font-medium px-6 py-2.5 rounded-full transition duration-300 shadow-sm">
+                    <Link
+                        href="/brochures/regulatory-writing-support.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#b90000] hover:bg-red-800 text-white font-medium px-6 py-2.5 rounded-full transition duration-300 shadow-sm"
+                    >
                         View Brochure
-                    </button>
+                    </Link>
                 </div>
             </section>
 
@@ -102,13 +108,13 @@ const RegulatoryWritingPage = () => {
 
                     <p className="text-gray-600 text-sm md:text-base max-w-4xl mb-10 leading-relaxed">
                         We simplify the{' '}
-                        <a href="#process" className="text-blue-600 underline">
+                        <Link href="/academy/regulatory-writing/understanding-regulatory-writing" className="text-blue-600 underline">
                             regulatory writing process
-                        </a>
+                        </Link>
                         —from data compilation to submission—helping you meet global compliance standards. Accelerate your approval timelines with Pubrica’s expert{' '}
-                        <a href="#support" className="text-blue-600 underline">
+                        <Link href="/academy/regulatory-writing/understanding-regulatory-writing" className="text-blue-600 underline">
                             regulatory writing support
-                        </a>
+                        </Link>
                         , delivering clarity, consistency, and compliance in every document.
                     </p>
 
@@ -128,9 +134,12 @@ const RegulatoryWritingPage = () => {
 
                     {/* Consultation Button */}
                     <div className="text-center">
-                        <button className="bg-[#b90000] hover:bg-red-800 text-white font-medium px-8 py-3 rounded-full transition duration-300 shadow-md">
+                        <Link
+                            href="/order-now"
+                            className="inline-block bg-[#b90000] hover:bg-red-800 text-white font-medium px-8 py-3 rounded-full transition duration-300 shadow-md"
+                        >
                             Request Free Consultation
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>

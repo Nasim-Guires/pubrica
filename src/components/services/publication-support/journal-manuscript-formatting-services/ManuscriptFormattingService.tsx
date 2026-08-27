@@ -74,12 +74,12 @@ export default function ManuscriptFormattingService() {
                   •
                 </span>
                 <span>
-                  <a
+                  <Link
                     href="/services/publication-support/journal-manuscript-formatting-services/citation-management-tools-formatting-referencing"
                     className="text-[#2563eb] hover:underline font-medium"
                   >
                     Citation and reference formatting
-                  </a>{" "}
+                  </Link>{" "}
                   (Vancouver, APA, MLA, AMA, etc)
                 </span>
               </li>
@@ -115,12 +115,12 @@ export default function ManuscriptFormattingService() {
                 </span>
                 <span>
                   Cross-checking of in-text{" "}
-                  <a
+                  <Link
                     href="/services/publication-support/journal-manuscript-formatting-services/citation-styles-apa-ama-mla-vancouver-guide"
                     className="text-[#2563eb] hover:underline font-medium"
                   >
                     citations
-                  </a>{" "}
+                  </Link>{" "}
                   matches the reference list
                 </span>
               </li>

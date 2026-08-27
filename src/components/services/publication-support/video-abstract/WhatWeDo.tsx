@@ -44,19 +44,19 @@ export default function WhatWeDo() {
           your study, but also demonstrate the importance and impact of the
           findings. Our creative scientific experts can also help you with
           careful{" "}
-          <Link href="#grant-writing" className="text-sky-600 hover:underline">
+          <Link href="/services/research-services/grant-writing" className="text-sky-600 hover:underline">
             grant writing
           </Link>
           ,{" "}
           <Link
-            href="#experimental-design"
+            href="/services/research-services/experimental-design"
             className="text-sky-600 hover:underline"
           >
             experimental design
           </Link>
           , and{" "}
           <Link
-            href="#systematic-review"
+            href="/services/research-services/systematic-review"
             className="text-sky-600 hover:underline"
           >
             systematic review
@@ -89,13 +89,13 @@ export default function WhatWeDo() {
           from other researchers, potential collaborators, and sponsors/funders,
           giving you more chances for citations and support. The combination of{" "}
           <Link
-            href="#manuscript-editing"
+            href="/services/editing-and-translation/manuscript-editing"
             className="text-sky-600 hover:underline"
           >
             manuscript editing
           </Link>{" "}
           and{" "}
-          <Link href="#grant-writing" className="text-sky-600 hover:underline">
+          <Link href="/services/research-services/grant-writing" className="text-sky-600 hover:underline">
             grant writing
           </Link>{" "}
           will enhance the overall academic value.

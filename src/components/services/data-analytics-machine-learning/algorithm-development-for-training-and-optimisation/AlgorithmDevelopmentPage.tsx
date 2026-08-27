@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AlgorithmDevelopmentService() {
     // Accordion state for "How We Do" section (null = all closed by default)
@@ -143,9 +144,9 @@ export default function AlgorithmDevelopmentService() {
                             handling vast, complex datasets, ensuring privacy and regulatory
                             compliance, and converting raw information into actionable
                             insights. At Pubrica, we specialize in custom{" "}
-                            <a href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-teal-700 underline font-medium">
+                            <Link href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-teal-700 underline font-medium">
                                 algorithm development
-                            </a>{" "}
+                            </Link>{" "}
                             for scientific, healthcare, pharma, medical device, food, and
                             nutraceutical applications.
                         </p>
@@ -178,9 +179,9 @@ export default function AlgorithmDevelopmentService() {
                                         Proven experience:
                                     </strong>{" "}
                                     Over 350+{" "}
-                                    <a href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-teal-700 underline">
+                                    <Link href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-teal-700 underline">
                                         algorithms
-                                    </a>{" "}
+                                    </Link>{" "}
                                     developed and optimized for global clients.
                                 </li>
                                 <li>

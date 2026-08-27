@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 
 interface ServiceCard {
   id: string;
@@ -91,12 +92,12 @@ export default function GrantWritingServicesOfferedSection() {
             From identifying the right funding opportunities to delivering
             persuasive, compliant proposals, Pubrica’s experts provide
             comprehensive{" "}
-            <a
-              href="#grant-writing-services"
+            <Link
+              href="/services/research-services/grant-writing/guide-to-grant-writing-strategies-success"
               className="text-sky-600 hover:underline font-medium"
             >
               grant writing services
-            </a>{" "}
+            </Link>{" "}
             at every stage, maximising your success while saving valuable time.
           </p>
         </header>

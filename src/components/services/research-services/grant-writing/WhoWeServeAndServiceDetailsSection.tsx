@@ -1,7 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface AudienceCard {
@@ -22,6 +23,7 @@ interface FeatureCard {
   highlightText?: string;
   needFromYou: string[];
   youllGet: string[];
+  howItWorks: string[];
 }
 
 const GW_IMG = "/images/research-services/grant-writing";
@@ -33,7 +35,7 @@ const audienceCards: AudienceCard[] = [
     description:
       "Faculty, postdoctoral researchers, and universities seeking national or international funding benefit from our ",
     linkText: "research proposal writing service.",
-    linkUrl: "#research-proposal-writing",
+    linkUrl: "/academy/grant-writing/confidentiality-in-grant-writing-proposals",
     imageSrc: `${GW_IMG}/Academic-Researchers-and-Institutions.png`,
     altText: "Researcher working on computer in university office",
   },
@@ -41,9 +43,7 @@ const audienceCards: AudienceCard[] = [
     id: "healthcare",
     title: "Healthcare Professionals and Clinical Researchers",
     description:
-      "Hospitals and clinicians rely on our clinical research grant writing expertise for grants supporting ",
-    linkText: "trials and public health initiatives.",
-    linkUrl: "#clinical-trials",
+      "Hospitals and clinicians rely on our clinical research grant writing expertise for grants supporting trials and public health initiatives.",
     imageSrc: `${GW_IMG}/Healthcare-Professionals-and-Clinical-Researchers.png`,
     altText: "Healthcare professional reviewing medical data on laptop",
   },
@@ -52,8 +52,6 @@ const audienceCards: AudienceCard[] = [
     title: "Nonprofit Organizations and NGOs",
     description:
       "Charitable, advocacy, and development-focused organizations are applying for government or private foundation grants to fund projects and community initiatives.",
-    linkText: "community programs.",
-    linkUrl: "#nonprofit-grants",
     imageSrc: `${GW_IMG}/Nonprofit-Organizations-and-NGOs.png`,
     altText: "Non-profit notepad with financial documents and calculator",
   },
@@ -62,8 +60,6 @@ const audienceCards: AudienceCard[] = [
     title: "Biotech, Pharma, and Industry Partners",
     description:
       "Startups and established companies are applying for R&D grants, SBIR/STTR programs, or public-private partnerships to advance innovation and product development.",
-    linkText: "SBIR/STTR funding requests.",
-    linkUrl: "#industry-grants",
     imageSrc: `${GW_IMG}/Biotech-Pharma-and-Industry-Partners.png`,
     altText: "Lab scientists working in modern research laboratory",
   },
@@ -71,9 +67,9 @@ const audienceCards: AudienceCard[] = [
     id: "independent",
     title: "Independent Consultants & Grant Seekers",
     description:
-      "Freelancers and individuals receive personalised support from experienced grant writing consultants.",
+      "Freelancers and individuals receive personalised support from experienced ",
     linkText: "grant writing consultants.",
-    linkUrl: "#consultant-support",
+    linkUrl: "/academy/grant-writing/communicating-research-impact-grant-applications",
     imageSrc: `${GW_IMG}/Independent-Consultants-Grant-Seekers.png`,
     altText: "Independent consultant with headset working at desk",
   },
@@ -82,8 +78,6 @@ const audienceCards: AudienceCard[] = [
     title: "Government & Public Sector Bodies",
     description:
       "We collaborate with local, regional, and national government bodies to craft impactful proposals that align with funding agency priorities and public policy goals.",
-    linkText: "grant documentation.",
-    linkUrl: "#public-sector-grants",
     imageSrc: `${GW_IMG}/Government-Public-Sector-Bodies.png`,
     altText: "Public sector team presenting data on large monitor screen",
   },
@@ -107,6 +101,12 @@ const serviceDetails: FeatureCard[] = [
       "A grant writing summary and expert feedback from your writer",
       "Detailed annotations and commentary on your submitted materials for transparency and learning",
     ],
+    howItWorks: [
+      "You send us the proposal outline and related documents; complete our detailed questionnaire.",
+      "Meet with our grant writing expert and project manager to decide the outline and direction of your proposal.",
+      "Our grant writing expert drafts a proposal tailored to your target funding body.",
+      "Review and refine the draft with our grant writing expert to finalize your proposal.",
+    ],
   },
   {
     id: "review",
@@ -123,6 +123,12 @@ const serviceDetails: FeatureCard[] = [
     youllGet: [
       "A detailed grant proposal review report & reviewer's message",
       "Detailed feedback on the relevance of the documents you’ve sent us, if any",
+    ],
+    howItWorks: [
+      "Send us your materials and complete our detailed questionnaire.",
+      "Our grant expert reviews your proposal and supplies detailed comments.",
+      "Receive a report with analysis of strengths and weaknesses and actionable suggestions.",
+      "After-sales support: We will help you address the feedback from the grant review board.",
     ],
   },
   {
@@ -142,10 +148,18 @@ const serviceDetails: FeatureCard[] = [
       "Grant editing summary & editor's report",
       "Detailed feedback on the relevance of the documents you’ve sent us, if any",
     ],
+    howItWorks: [
+      "Send us your draft grant proposal and complete our detailed questionnaire.",
+      "Our grant editing expert revises your proposal for clarity and impact.",
+      "Revision rounds: The editor incorporates your feedback after review.",
+      "Receive the final grant proposal with comments and suggestions for improvement.",
+    ],
   },
 ];
 
 export default function WhoWeServeAndServiceDetailsSection() {
+  const [openHowItWorks, setOpenHowItWorks] = useState<string | null>(null);
+
   return (
     <div className="w-full text-slate-800">
       {/* ========================================================= */}
@@ -166,12 +180,12 @@ export default function WhoWeServeAndServiceDetailsSection() {
             </h2>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-5xl">
               At Pubrica, we offer tailored research{" "}
-              <a
-                href="#grant-writing"
+              <Link
+                href="/services/research-services/grant-writing/research-grant-proposal-writing-guide"
                 className="text-sky-600 hover:underline font-medium"
               >
                 grant writing services
-              </a>{" "}
+              </Link>{" "}
               to a diverse range of clients across academic, clinical,
               nonprofit, and industry sectors.
             </p>
@@ -207,14 +221,14 @@ export default function WhoWeServeAndServiceDetailsSection() {
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
                     {card.description}
-                    {card.linkText && (
-                      <a
-                        href={card.linkUrl || "#"}
+                    {card.linkText && card.linkUrl && (
+                      <Link
+                        href={card.linkUrl}
                         className="text-sky-400 hover:underline font-normal inline"
                         onClick={(e) => e.stopPropagation()}
                       >
                         {card.linkText}
-                      </a>
+                      </Link>
                     )}
                   </p>
                 </div>
@@ -314,18 +328,46 @@ export default function WhoWeServeAndServiceDetailsSection() {
                   </div>
                 </div>
 
-                {/* Interactive Action Link */}
+                {/* Interactive Action Toggle */}
                 <div className="pt-4 flex justify-end">
-                  <a
-                    href={`#how-it-works-${service.id}`}
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setOpenHowItWorks((prev) => (prev === service.id ? null : service.id))
+                    }
+                    aria-expanded={openHowItWorks === service.id}
                     className="inline-flex items-center text-xs sm:text-sm font-semibold text-sky-600 hover:text-sky-800 transition-colors duration-200 hover:underline gap-1 group/link"
                   >
-                    <span>See How It Works</span>
-                    <span className="transition-transform duration-200 group-hover/link:translate-x-1">
+                    <span>{openHowItWorks === service.id ? "Hide How It Works" : "See How It Works"}</span>
+                    <span
+                      className={`transition-transform duration-200 ${
+                        openHowItWorks === service.id ? "rotate-90" : "group-hover/link:translate-x-1"
+                      }`}
+                    >
                       →
                     </span>
-                  </a>
+                  </button>
                 </div>
+
+                {openHowItWorks === service.id && (
+                  <div className="mt-2 rounded-xl bg-white border border-sky-100 p-5 sm:p-6">
+                    <h4 className="text-sm sm:text-base font-bold text-slate-900 mb-4">
+                      How It Works
+                    </h4>
+                    <ol className="space-y-3">
+                      {service.howItWorks.map((step, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#0e3b38] text-white text-xs font-bold flex items-center justify-center">
+                            {idx + 1}
+                          </span>
+                          <span className="text-xs sm:text-sm text-slate-700 leading-relaxed pt-0.5">
+                            {step}
+                          </span>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                )}
               </div>
             </div>
           ))}

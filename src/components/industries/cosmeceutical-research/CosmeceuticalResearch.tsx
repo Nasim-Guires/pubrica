@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface SegmentItem {
   title: string;
@@ -129,9 +130,12 @@ export default function CosmeceuticalResearch({
               <p key={index}>{paragraph}</p>
             ))}
             <div className="pt-4">
-              <button className="bg-[#cc0000] hover:bg-[#b30000] text-white font-semibold py-3 px-8 rounded-full shadow-md transition-colors text-sm sm:text-base">
+              <Link
+                href="/order-now"
+                className="inline-block bg-[#cc0000] hover:bg-[#b30000] text-white font-semibold py-3 px-8 rounded-full shadow-md transition-colors text-sm sm:text-base"
+              >
                 {ctaText}
-              </button>
+              </Link>
             </div>
           </div>
 

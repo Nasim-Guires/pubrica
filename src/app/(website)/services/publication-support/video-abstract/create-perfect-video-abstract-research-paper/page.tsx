@@ -39,7 +39,7 @@ export default function VideoAbstractGuidePage() {
                 <span>&gt;</span>
                 <Link href="/services/publication-support" className="hover:underline">Publication Support</Link>
                 <span>&gt;</span>
-                <Link href="/services/publication-support/journal-selection" className="hover:underline">Journal Selection</Link>
+                <Link href="/services/publication-support/video-abstract" className="hover:underline">Video Abstract</Link>
                 <span>&gt;</span>
                 <span className="text-gray-700 font-medium truncate">
                     Top 6 Tips to Create a Perfect Video Abstract for Your Research Paper

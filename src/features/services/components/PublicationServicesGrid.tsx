@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 interface ServiceCard {
   title: string;
@@ -185,7 +186,7 @@ export default function PublicationServicesGrid() {
             const isHighlighted = service.title === "Post-Acceptance Service";
 
             return (
-              <a
+              <Link
                 key={index}
                 href={service.url}
                 className={`flex gap-3.5 p-4 rounded-lg border border-slate-200/80 shadow-sm transition-all duration-300 hover:shadow-md hover:translate-y-[-2px] group block ${
@@ -217,7 +218,7 @@ export default function PublicationServicesGrid() {
                     )}
                   </p>
                 </div>
-              </a>
+              </Link>
             );
           })}
         </div>

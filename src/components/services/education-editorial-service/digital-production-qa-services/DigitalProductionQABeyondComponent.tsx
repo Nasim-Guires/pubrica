@@ -2,6 +2,7 @@
 "use client"
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface AccordionItem {
   title: string;
@@ -109,9 +110,12 @@ export default function DigitalProductionQABeyondComponent() {
             Digital Production QA Services Sample Work
           </h3>
           <div>
-            <button className="bg-black hover:bg-gray-800 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200 shadow-md">
+            <Link
+              href="/insights/individual-patient-data-from-randomized-trials"
+              className="inline-block bg-black hover:bg-gray-800 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200 shadow-md"
+            >
               Discover More
-            </button>
+            </Link>
           </div>
 
           <div className="pt-4 space-y-3">

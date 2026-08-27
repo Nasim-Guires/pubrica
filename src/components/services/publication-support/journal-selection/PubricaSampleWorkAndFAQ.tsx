@@ -116,9 +116,12 @@ export default function PubricaSampleWorkAndFAQ() {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] mb-3">
                 Journal Selection Sample Work
               </h2>
-              <button className="bg-black text-white hover:bg-slate-800 text-xs font-bold py-2.5 px-8 rounded-full transition-all">
+              <Link
+                href="/insights/sample-work"
+                className="inline-block bg-black text-white hover:bg-slate-800 text-xs font-bold py-2.5 px-8 rounded-full transition-all"
+              >
                 Discover More
-              </button>
+              </Link>
             </div>
 
             <div className="pt-2 border-t border-emerald-100">
@@ -136,9 +139,12 @@ export default function PubricaSampleWorkAndFAQ() {
                 sample work tailored to your manuscript’s scope, indexing
                 requirements, and impact factor goals.
               </p>
-              <button className="bg-black text-white hover:bg-slate-800 text-xs font-bold py-2.5 px-8 rounded-full transition-all">
+              <Link
+                href="/insights/sample-work"
+                className="inline-block bg-black text-white hover:bg-slate-800 text-xs font-bold py-2.5 px-8 rounded-full transition-all"
+              >
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -157,9 +163,9 @@ export default function PubricaSampleWorkAndFAQ() {
           journal for the health care practitioner focused on increasing
           knowledge, stimulating research, and promoting better management of
           people with{" "}
-          <a href="/academy/journals-templates/journal-of-diabetes-research" className="text-cyan-600 hover:underline">
+          <Link href="/academy/journals-templates/journal-of-diabetes-research" className="text-cyan-600 hover:underline">
             diabetes
-          </a>
+          </Link>
           . To foster these objectives, the journal publishes original research
           in the areas of Clinical Care/Education/Nutrition/Psychosocial
           Research, Epidemiology/Health Services Research, Emerging Treatments

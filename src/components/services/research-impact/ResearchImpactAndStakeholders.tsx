@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 // --- Types ---
@@ -145,12 +146,12 @@ export default function ResearchImpactAndStakeholders(): React.ReactElement {
             </h3>
             <p className="text-xs sm:text-sm text-slate-700 leading-relaxed pt-2">
               Pubrica offers a range of{' '}
-              <a
-                href="#services"
+              <Link
+                href="/services/research-impact"
                 className="text-[#008ba3] underline underline-offset-2 hover:text-[#09322e] transition-colors"
               >
                 research impact services
-              </a>{' '}
+              </Link>{' '}
               that enhance visibility, engagement, and scholarly impact. All services are provided to meet the rigorous standards of peer-reviewed journals, academic institutions, and global research funders. Our research impact services are tailored to help researchers boost citations, improve knowledge dissemination, and ensure research accessibility.
             </p>
           </div>

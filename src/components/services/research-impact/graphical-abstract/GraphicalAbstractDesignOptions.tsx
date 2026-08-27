@@ -152,12 +152,12 @@ export default function GraphicalAbstractDesignOptions() {
                 <div className="text-2xl font-bold text-[#0a231c]">
                   {option.price}
                 </div>
-                <button
-                  type="button"
-                  className={`w-32 py-2.5 px-4 text-sm font-semibold text-white rounded-md transition-colors ${option.buttonBg}`}
+                <Link
+                  href="/order-now"
+                  className={`inline-block w-32 text-center py-2.5 px-4 text-sm font-semibold text-white rounded-md transition-colors ${option.buttonBg}`}
                 >
                   Place Order
-                </button>
+                </Link>
               </div>
             </div>
           ))}
@@ -248,12 +248,12 @@ export default function GraphicalAbstractDesignOptions() {
               <h3 className="text-lg font-bold text-[#0a231c]">
                 Graphical Abstract Service Sample Work
               </h3>
-              <button
-                type="button"
-                className="px-6 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-colors"
+              <Link
+                href="/insights/sample-work"
+                className="inline-block px-6 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-colors"
               >
                 Discover More
-              </button>
+              </Link>
             </div>
 
             <div className="space-y-2 pt-4 border-t border-emerald-200/60">
@@ -267,12 +267,12 @@ export default function GraphicalAbstractDesignOptions() {
                 </Link>
                 , professionally designed to align with your target journal's formatting guidelines, scientific accuracy standards, and visual impact expectations.
               </p>
-              <button
-                type="button"
-                className="mt-2 px-6 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-colors"
+              <Link
+                href="/insights/sample-work"
+                className="inline-block mt-2 px-6 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-colors"
               >
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
 

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface TabContent {
   id: string;
@@ -168,9 +169,12 @@ export const ClinicalResearchProcessTabs: React.FC = () => {
             )}
 
             <div className="pt-2">
-              <button className="bg-[#083c4c] hover:bg-[#052833] text-white font-bold text-xs uppercase tracking-widest px-6 py-3.5 rounded-none transition-colors">
+              <Link
+                href="/order-now"
+                className="inline-block bg-[#083c4c] hover:bg-[#052833] text-white font-bold text-xs uppercase tracking-widest px-6 py-3.5 rounded-none transition-colors"
+              >
                 REQUEST A QUOTE
-              </button>
+              </Link>
             </div>
           </div>
         </div>

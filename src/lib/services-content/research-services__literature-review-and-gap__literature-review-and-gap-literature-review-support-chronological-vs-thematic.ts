@@ -27,7 +27,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Chronological literature reviews arrange studies chronologically, illustrating the progression of knowledge. This type of review is particularly helpful when using this method to demonstrate progress within the field of clinical research concerning evolving regulatory standards, diagnostic criteria, or treatment interventions.[[2](https://www.thedegreedoctor.com/blog/thematic-literature-reviews-and-chronological-literature-reviews-whats-the-different-and-which-one-should-you-choose-for-your-phd-literature-review)][Chronological literature review support services](https://pubrica.com/insights/sample-work/patient-safety-culture-among-operating-theatre-nurses-in-operating-room/) are useful for synthesising academic sources and demonstrating the chronological evolution of a topic."
+    "text": "Chronological literature reviews arrange studies chronologically, illustrating the progression of knowledge. This type of review is particularly helpful when using this method to demonstrate progress within the field of clinical research concerning evolving regulatory standards, diagnostic criteria, or treatment interventions.[[2](https://www.thedegreedoctor.com/blog/thematic-literature-reviews-and-chronological-literature-reviews-whats-the-different-and-which-one-should-you-choose-for-your-phd-literature-review)][Chronological literature review support services](https://pubrica.com/insights/patient-safety-culture-among-operating-theatre-nurses-in-operating-room/) are useful for synthesising academic sources and demonstrating the chronological evolution of a topic."
   },
   {
     "type": "p",

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 /* ==========================================================================
    DATA STRUCTURES
@@ -339,9 +340,9 @@ export default function BioinformaticsServices() {
               <h3 className="text-xl font-bold text-[#0b2b26]">
                 Bioinformatics Sample Works
               </h3>
-              <button className="bg-black hover:bg-slate-800 text-white font-medium px-6 py-2 rounded-full text-xs sm:text-sm shadow transition-colors">
+              <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-slate-800 text-white font-medium px-6 py-2 rounded-full text-xs sm:text-sm shadow transition-colors">
                 Discover More
-              </button>
+              </Link>
             </div>
 
             <div className="space-y-3 pt-2">
@@ -351,9 +352,9 @@ export default function BioinformaticsServices() {
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Explore our bioinformatics sample work, carefully designed to meet journal-specific guidelines, computational precision (e.g., Transcriptomics, proteomics), and research timelines, ensuring impactful academic or clinical publication.
               </p>
-              <button className="bg-black hover:bg-slate-800 text-white font-medium px-6 py-2 rounded-full text-xs sm:text-sm shadow transition-colors">
+              <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-slate-800 text-white font-medium px-6 py-2 rounded-full text-xs sm:text-sm shadow transition-colors">
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

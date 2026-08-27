@@ -198,12 +198,12 @@ export default function ScientificNewsWorkflowProcess() {
                 <h3 className="text-lg font-bold text-[#033c2a]">
                   Scientific News Report Sample Work
                 </h3>
-                <button
-                  type="button"
-                  className="px-6 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-colors"
+                <Link
+                  href="/insights/sample-work"
+                  className="inline-block px-6 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-colors"
                 >
                   Discover More
-                </button>
+                </Link>
               </div>
 
               <div className="space-y-3 pt-4 border-t border-emerald-200/60">
@@ -217,12 +217,12 @@ export default function ScientificNewsWorkflowProcess() {
                   </Link>
                   , professionally crafted to meet your target audience's comprehension level, research significance, and science communication standards.
                 </p>
-                <button
-                  type="button"
-                  className="px-6 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-colors"
+                <Link
+                  href="/insights/sample-work"
+                  className="inline-block px-6 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-colors"
                 >
                   Discover More
-                </button>
+                </Link>
               </div>
             </div>
 

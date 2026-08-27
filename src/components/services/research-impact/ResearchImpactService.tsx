@@ -79,7 +79,9 @@ export default function ResearchImpactService(): React.ReactElement {
             {/* CTA Button */}
             <div className="pt-2">
               <a
-                href="#brochure"
+                href="/brochures/research-impact-services.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-[#123835] hover:bg-[#09322e] text-white text-xs sm:text-sm font-semibold py-3 px-6 rounded-full transition-colors shadow-sm"
               >
                 View brochure

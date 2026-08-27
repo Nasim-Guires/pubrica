@@ -128,9 +128,9 @@ export const DataAnalyticsServicesExtension: React.FC = () => {
         </h2>
         <p className="text-gray-600 text-xs sm:text-sm md:text-[14px] leading-relaxed mb-10 max-w-4xl text-justify">
           We offer comprehensive{" "}
-          <a href="/services/research-services/biostatistics-and-statistical-programming-services" className="text-blue-600 hover:underline">
+          <Link href="/services/research-services/biostatistics-and-statistical-programming-services" className="text-blue-600 hover:underline">
             statistical analysis services
-          </a>
+          </Link>
           , from data cleaning and descriptive statistics to advanced modelling
           and hypothesis testing. Our experts ensure your research findings are
           accurate, robust, and publication-ready.

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Metadata } from "next";
 import {
   ClipboardDocumentCheckIcon,
@@ -464,12 +465,12 @@ export default function CustomizedWritingGuidelineStandards() {
                 <h3 className="text-base sm:text-lg font-bold text-[#0a2e2b] mb-3">
                   Customized Medical Writing Service Sample Work
                 </h3>
-                <a
-                  href="#discover-samples"
+                <Link
+                  href="/insights/sample-work"
                   className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold py-2.5 px-8 rounded-full transition-colors duration-200"
                 >
                   Discover More
-                </a>
+                </Link>
               </div>
 
               <div>
@@ -482,12 +483,12 @@ export default function CustomizedWritingGuidelineStandards() {
                   and academic or regulatory requirements, delivered within
                   defined timelines and backed by verified literature.
                 </p>
-                <a
-                  href="#download-report"
+                <Link
+                  href="/insights/sample-work"
                   className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold py-2.5 px-8 rounded-full transition-colors duration-200"
                 >
                   Discover More
-                </a>
+                </Link>
               </div>
             </div>
           </div>

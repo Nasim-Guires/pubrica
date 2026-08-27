@@ -2,6 +2,7 @@
 
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
+import Link from "next/link";
 
 interface DiseaseCard {
   id: string;
@@ -295,12 +296,12 @@ export default function DiseaseBasedAndComplianceSection() {
               <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
                 Literature Review and Gap Analyses Sample Work
               </h3>
-              <a
-                href="#sample-work"
+              <Link
+                href="/insights/patient-safety-culture-among-operating-theatre-nurses-in-operating-room"
                 className="inline-block bg-black hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200"
               >
                 Discover More
-              </a>
+              </Link>
             </div>
 
             {/* Bottom Subsection */}
@@ -315,12 +316,12 @@ export default function DiseaseBasedAndComplianceSection() {
                 submission timelines for successful academic or clinical
                 publication.
               </p>
-              <a
-                href="#download-report"
+              <Link
+                href="/insights/sample-work"
                 className="inline-block bg-black hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200"
               >
                 Discover More
-              </a>
+              </Link>
             </div>
           </div>
         </div>

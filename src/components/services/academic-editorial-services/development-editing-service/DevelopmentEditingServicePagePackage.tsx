@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 export default function DevelopmentEditingServicePagePackage() {
@@ -342,9 +343,9 @@ export default function DevelopmentEditingServicePagePackage() {
                 <div className="text-xs font-semibold text-gray-700 border-t pt-3 mb-4">
                   {expert.exp} | {expert.papers}
                 </div>
-                <button className="text-xs text-[#008080] font-bold hover:underline">
+                <Link href="/about-us/our-editors" className="text-xs text-[#008080] font-bold hover:underline">
                   Read More
-                </button>
+                </Link>
               </div>
             ))}
           </div>

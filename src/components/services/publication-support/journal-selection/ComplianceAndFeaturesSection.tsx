@@ -264,9 +264,12 @@ export default function ComplianceAndFeaturesSection() {
 
             {/* Upload Button */}
             <div className="pt-4">
-              <button className="px-6 py-2.5 bg-[#a80000] hover:bg-[#830000] text-white font-bold text-xs sm:text-sm rounded-md transition-colors shadow-sm">
+              <Link
+                href="/order-now"
+                className="inline-block px-6 py-2.5 bg-[#a80000] hover:bg-[#830000] text-white font-bold text-xs sm:text-sm rounded-md transition-colors shadow-sm"
+              >
                 Upload Your Manuscript
-              </button>
+              </Link>
             </div>
           </div>
 

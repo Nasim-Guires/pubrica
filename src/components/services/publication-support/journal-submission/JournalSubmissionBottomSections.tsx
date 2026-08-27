@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // Deliverables Data (5 Cards)
 const deliverablesData = [
@@ -191,12 +192,12 @@ export default function JournalSubmissionBottomSections() {
               <h3 className="text-lg sm:text-xl font-bold text-[#0c3547] mb-3">
                 Journal Submission Sample Work
               </h3>
-              <a
-                href="#discover-sample"
+              <Link
+                href="/insights/sample-work"
                 className="inline-block w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-bold px-10 py-2.5 rounded-full text-center transition-colors shadow-sm"
               >
                 Discover More
-              </a>
+              </Link>
             </div>
 
             {/* Block 2 */}
@@ -206,21 +207,21 @@ export default function JournalSubmissionBottomSections() {
               </h3>
               <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-4">
                 Explore our{" "}
-                <a
-                  href="/academy/journal-submission/journal-submission-service-help-you-get-published"
+                <Link
+                  href="/services/publication-support/journal-submission"
                   className="text-[#0082a6] hover:underline font-medium"
                 >
                   Journal Submission
-                </a>{" "}
+                </Link>{" "}
                 sample work aligned with your manuscript’s formatting standards,
                 ethical guidelines, and target publication timelines.
               </p>
-              <a
-                href="#discover-report"
+              <Link
+                href="/insights/sample-work"
                 className="inline-block w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-bold px-10 py-2.5 rounded-full text-center transition-colors shadow-sm"
               >
                 Discover More
-              </a>
+              </Link>
             </div>
           </div>
         </div>

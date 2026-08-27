@@ -55,7 +55,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Technical accuracy is necessary in case studies but so is engaging. The editorial services give an edge in a better-flowing document, which means that a well-written document uses correct technical data and is interesting to read. Through services like [scholarly manuscript editing](https://pubrica.com/insights/sample-work/management-of-neurogenic-shock-outside-of-the-hospital/) and research paper editing, editorial experts will improve the transition from sentence to sentence, ensuring the flow of the document is smooth and the reader stays engaged. Using journal editorial services, it makes sure that all the sentences are in the right order and not written passively; they will improve the transition from sentence to sentence and ensure that there is no passive voice in the writing of the document. The enhanced readability improves the reader’s engagement, so they will stay engaged with the rest of the study. Ultimately, this enhances the study’s overall effectiveness.[[6](https://masterclasses.nature.com/writing-for-greater-impact/50732650)]"
+    "text": "Technical accuracy is necessary in case studies but so is engaging. The editorial services give an edge in a better-flowing document, which means that a well-written document uses correct technical data and is interesting to read. Through services like [scholarly manuscript editing](https://pubrica.com/insights/sample-work/) and research paper editing, editorial experts will improve the transition from sentence to sentence, ensuring the flow of the document is smooth and the reader stays engaged. Using journal editorial services, it makes sure that all the sentences are in the right order and not written passively; they will improve the transition from sentence to sentence and ensure that there is no passive voice in the writing of the document. The enhanced readability improves the reader’s engagement, so they will stay engaged with the rest of the study. Ultimately, this enhances the study’s overall effectiveness.[[6](https://masterclasses.nature.com/writing-for-greater-impact/50732650)]"
   },
   {
     "type": "h2",
@@ -85,7 +85,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
       [
         "Clarity and Precision",
         "Effectively conveyed information will help the reader better understand. [[7](https://doi.org/10.5688/ajpe7124)]",
-        "[Academic Editing and manuscript editing services](https://pubrica.com/insights/sample-work/phenotypic-variations-of-atopic-dermatitis-a-systemic-review-of-dupilumab-efficacy-and-safety/) ensures your case study is polished, concise, and communicates your research clearly."
+        "[Academic Editing and manuscript editing services](https://pubrica.com/insights/sample-work/) ensures your case study is polished, concise, and communicates your research clearly."
       ],
       [
         "Consistency and Structure",
@@ -100,7 +100,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
       [
         "Error-Free Writing",
         "Polished writing that removes errors, boosting professionalism.",
-        "[Copy Editing and academic Proofreading](https://pubrica.com/insights/sample-work/skeletal-muscle-mass-index-versus-bioelectrical-impedance-analysis/) ensure your case study is free from errors, enhancing readability and professionalism."
+        "[Copy Editing and academic Proofreading](https://pubrica.com/insights/sample-work/) ensure your case study is free from errors, enhancing readability and professionalism."
       ],
       [
         "Improved Engagement",

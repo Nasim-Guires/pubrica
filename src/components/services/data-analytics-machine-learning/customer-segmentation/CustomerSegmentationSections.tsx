@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Step {
   id: number;
@@ -198,9 +199,9 @@ export default function CustomerSegmentationSections() {
               <h3 className="text-xl font-bold text-slate-900 mb-2">
                 Customer Segmentation Sample Work
               </h3>
-              <button className="w-full bg-black hover:bg-neutral-800 text-white font-medium py-2.5 px-6 rounded-full transition-colors text-sm">
+              <Link href="/insights/sample-work" className="block w-full text-center bg-black hover:bg-neutral-800 text-white font-medium py-2.5 px-6 rounded-full transition-colors text-sm">
                 Discover More
-              </button>
+              </Link>
             </div>
 
             <div>
@@ -210,9 +211,9 @@ export default function CustomerSegmentationSections() {
               <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-3">
                 Explore our customer segmentation sample work, crafted to meet rigorous analytical standards, industry specific requirements, and project timelines. We deliver precise, actionable, and insight-driven results that enhance marketing strategies, business growth, and customer engagement outcomes.
               </p>
-              <button className="w-full bg-black hover:bg-neutral-800 text-white font-medium py-2.5 px-6 rounded-full transition-colors text-sm">
+              <Link href="/insights/sample-work" className="block w-full text-center bg-black hover:bg-neutral-800 text-white font-medium py-2.5 px-6 rounded-full transition-colors text-sm">
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

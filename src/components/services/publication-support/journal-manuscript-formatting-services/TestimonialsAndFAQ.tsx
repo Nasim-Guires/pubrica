@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Testimonial {
   id: number;
@@ -113,12 +114,12 @@ export default function TestimonialsAndFAQ() {
         </h2>
         <p className="text-xs md:text-sm text-gray-700 leading-relaxed max-w-4xl mb-8">
           Learn how Pubrica’s{" "}
-          <a
+          <Link
             href="/insights/citation-styles-apa-ama-mla-vancouver-chicago"
             className="text-[#3b82f6] hover:underline"
           >
             manuscript formatting service
-          </a>{" "}
+          </Link>{" "}
           has helped researchers meet strict publisher standards and complete a
           smooth submission. Here is what our clients say:
         </p>

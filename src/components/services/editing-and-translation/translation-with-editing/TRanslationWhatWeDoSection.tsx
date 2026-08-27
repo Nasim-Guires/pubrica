@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Plus, Minus } from "lucide-react";
 
 interface AccordionItem {
@@ -73,13 +74,13 @@ const accordionData: AccordionItem[] = [
     content: (
       <p>
         Whether it&apos;s academic papers,{" "}
-        <a href="/services/physician-writing-services/original-research-article" className="text-[#0056B3] hover:underline">
+        <Link href="/services/physician-writing-services/original-research-article" className="text-[#0056B3] hover:underline">
           research articles
-        </a>
+        </Link>
         ,{" "}
-        <a href="/services/physician-writing-services/case-report-writing" className="text-[#0056B3] hover:underline">
+        <Link href="/services/physician-writing-services/case-report-writing" className="text-[#0056B3] hover:underline">
           clinical reports
-        </a>
+        </Link>
         , or any other scientific or professional document, Pubrica&apos;s
         Translation with Editing Services are tailored to provide exceptional
         results across various content types.

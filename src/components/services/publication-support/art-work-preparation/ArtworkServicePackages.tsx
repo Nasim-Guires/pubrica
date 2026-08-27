@@ -3,6 +3,7 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface PackageCardProps {
   icon: string;
@@ -274,12 +275,12 @@ export default function ArtworkServicePackages() {
           </div>
 
           {/* Secondary CTA Button */}
-          <a
-            href="#pricing"
+          <Link
+            href="/order-now"
             className="inline-block bg-[#113b3b] hover:bg-[#092222] text-white font-bold text-sm md:text-base py-3 px-8 rounded-full transition-colors shadow-md"
           >
             Check Pricing & Get a Quote
-          </a>
+          </Link>
         </div>
       </div>
     </section>

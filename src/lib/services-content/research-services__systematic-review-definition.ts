@@ -3,7 +3,7 @@ import type { ArticleBlock } from '@/components/services/ServiceArticleRenderer'
 export const ARTICLE_BLOCKS: ArticleBlock[] = [
   {
     "type": "p",
-    "text": "A [systematic review](https://pubrica.com/services/research-services/systematic-review/) is a rigorous research method that uses explicit and reproducible steps to identify, appraise, and synthesize all available high-quality evidence on a specific topic or research question. Unlike a traditional literature review, it is a formal, structured process designed to minimize bias and provide a reliable summary of existing knowledge to inform decision-making. The [systematic review methodology](https://pubrica.com/insights/sample-work/a-systematic-review-on-the-efficacy-of-wearable-medical-devices-in-monitoring-blood-glucose-levels-in-diabetic-patients/) ensures a comprehensive, objective, and transparent approach, making it the highest level of evidence in evidence-based research.[[1](https://www.ncbi.nlm.nih.gov/books/NBK44088/)]"
+    "text": "A [systematic review](https://pubrica.com/services/research-services/systematic-review/) is a rigorous research method that uses explicit and reproducible steps to identify, appraise, and synthesize all available high-quality evidence on a specific topic or research question. Unlike a traditional literature review, it is a formal, structured process designed to minimize bias and provide a reliable summary of existing knowledge to inform decision-making. The [systematic review methodology](https://pubrica.com/insights/a-systematic-review-on-the-efficacy-of-wearable-medical-devices-in-monitoring-blood-glucose-levels-in-diabetic-patients/) ensures a comprehensive, objective, and transparent approach, making it the highest level of evidence in evidence-based research.[[1](https://www.ncbi.nlm.nih.gov/books/NBK44088/)]"
   },
   {
     "type": "h2",
@@ -88,7 +88,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
       "Decrease researcher bias: Following a rigorous, structured approach allows lasting less bias in the researcher in the reporting of research",
       "Improve evidence-based practice: Alongside the rigor, it can also be used to support evidence-based research, supporting decision-making in healthcare, policy, and education",
       "Evaluate the quality of studies: One must evaluate the studies’ reports on reliability and validity",
-      "Establish research gaps: One of the most valuable tasks that the [systematic review process](https://pubrica.com/insights/sample-work/immunopet-imaging-of-human-ca6/) can do is to identify research gaps or even a need to engage in grant submissions."
+      "Establish research gaps: One of the most valuable tasks that the [systematic review process](https://pubrica.com/insights/immunopet-imaging-of-human-ca6/) can do is to identify research gaps or even a need to engage in grant submissions."
     ]
   },
   {

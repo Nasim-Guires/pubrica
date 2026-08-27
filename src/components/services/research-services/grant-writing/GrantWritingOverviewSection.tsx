@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 interface ExpertisePoint {
   id: string;
@@ -14,7 +15,7 @@ const expertiseList: ExpertisePoint[] = [
     id: "exp-years",
     text: "20+ years of experience in academic and ",
     highlightText: "scientific writing",
-    highlightUrl: "#scientific-writing",
+    highlightUrl: "/services/research-services/scientific-writing",
   },
   {
     id: "exp-domain",
@@ -97,12 +98,12 @@ export default function GrantWritingOverviewSection() {
                     <span>
                       {item.text}
                       {item.highlightText && item.highlightUrl && (
-                        <a
+                        <Link
                           href={item.highlightUrl}
                           className="text-sky-600 hover:underline font-medium"
                         >
                           {item.highlightText}
-                        </a>
+                        </Link>
                       )}
                       {item.text.endsWith(".") ? "" : "."}
                     </span>
@@ -114,7 +115,9 @@ export default function GrantWritingOverviewSection() {
             {/* CTA Button */}
             <div className="pt-4">
               <a
-                href="#view-brochure"
+                href="/brochures/grant-writing.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-[#b30000] hover:bg-[#8e0000] text-white font-bold text-xs sm:text-sm px-8 py-3 rounded-full transition-colors duration-200 shadow-md"
               >
                 View Brochure

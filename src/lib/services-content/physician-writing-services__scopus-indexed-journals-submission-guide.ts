@@ -167,7 +167,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Results: Manuscript accepted after [peer review](#), cited within 6 months, enhancing researcher visibility."
+    "text": "Results: Manuscript accepted after [peer review](https://pubrica.com/services/publication-support/peer-review-pre-submission/), cited within 6 months, enhancing researcher visibility."
   },
   {
     "type": "h2",

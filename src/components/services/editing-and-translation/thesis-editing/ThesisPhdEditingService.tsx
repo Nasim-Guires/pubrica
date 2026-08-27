@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ArrowRightCircle } from 'lucide-react';
 
 interface Expert {
@@ -194,12 +195,12 @@ export default function ThesisPhdEditingService() {
                   <span className="text-slate-300">|</span>
                   <span>{expert.papersEdited}</span>
                 </div>
-                <button
-                  type="button"
+                <Link
+                  href="/about-us/our-editors"
                   className="text-xs font-bold text-slate-800 hover:text-cyan-700 transition-colors"
                 >
                   Read More
-                </button>
+                </Link>
               </div>
             </div>
           ))}

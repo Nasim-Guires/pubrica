@@ -320,9 +320,9 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
                   </p>
 
                   {/* Read More Link */}
-                  <button className="text-sm font-bold text-slate-900 hover:text-sky-600 transition-colors mt-auto">
+                  <Link href="/about-us/our-editors" className="text-sm font-bold text-slate-900 hover:text-sky-600 transition-colors mt-auto">
                     Read More
-                  </button>
+                  </Link>
                 </div>
               ))}
             </div>

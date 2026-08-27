@@ -137,7 +137,9 @@ export default function RespondingToReviewersSection() {
         <div className="flex flex-wrap items-center gap-4 mt-8">
           <GetFreeQuoteButton />
           <a
-            href="#brochure"
+            href="/brochures/responding-to-reviewers.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#b80000] hover:bg-black text-white font-bold text-xs py-3 px-6 rounded-full transition-colors shadow-sm"
           >
             View Brochure

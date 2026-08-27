@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function PhysicianResearchProposalService() {
     const [isAccordionOpen, setIsAccordionOpen] = useState(false);
@@ -69,13 +70,13 @@ export default function PhysicianResearchProposalService() {
                         <article className="lg:col-span-7 space-y-4 text-sm sm:text-base leading-relaxed text-gray-700">
                             <p>
                                 For busy <strong className="text-gray-900 font-semibold">physicians and surgeons</strong>, developing a{' '}
-                                <a href="#research-protocol" className="text-[#2b6cb0] hover:underline">
+                                <Link href="/academy/research-proposal/how-to-write-a-research-proposal-a-complete-guide" className="text-[#2b6cb0] hover:underline">
                                     research protocol or proposal
-                                </a>{' '}
+                                </Link>{' '}
                                 often competes with demanding clinical schedules. Navigating ethical approvals,{' '}
-                                <a href="#research-design" className="text-[#2b6cb0] hover:underline">
+                                <Link href="/services/physician-writing-services/research-proposal/research-design-types-methods-best-practices" className="text-[#2b6cb0] hover:underline">
                                     research design
-                                </a>
+                                </Link>
                                 , and funding formats is time-consuming and requires expertise that extends beyond clinical practice. That's where Pubrica steps in.
                             </p>
 
@@ -191,14 +192,14 @@ export default function PhysicianResearchProposalService() {
                                             <span className="text-[#c5281c] font-bold mr-2 text-base leading-none">&bull;</span>
                                             <div>
                                                 <strong className="text-gray-900">Hypothesis &amp; Objective Formulation:</strong> We create measurable objectives and hypotheses based on a critical{' '}
-                                                <a href="#literature-review" className="text-[#2b6cb0] hover:underline">literature review</a> and research gaps.
+                                                <Link href="/services/research-services/literature-review-and-gap" className="text-[#2b6cb0] hover:underline">literature review</Link> and research gaps.
                                             </div>
                                         </li>
                                         <li className="flex items-start">
                                             <span className="text-[#c5281c] font-bold mr-2 text-base leading-none">&bull;</span>
                                             <div>
                                                 <strong className="text-gray-900">Literature Review &amp; Scientific Justification:</strong> Inclusion of recent peer-reviewed references, synthesized using{' '}
-                                                <a href="#prisma" className="text-[#2b6cb0] hover:underline">PRISMA</a> or domain-specific frameworks, supports the rationale and need for your clinical study.
+                                                <a href="https://www.prisma-statement.org/prisma-2020-checklist" target="_blank" rel="noopener noreferrer" className="text-[#2b6cb0] hover:underline">PRISMA</a> or domain-specific frameworks, supports the rationale and need for your clinical study.
                                             </div>
                                         </li>
                                         <li className="flex items-start">

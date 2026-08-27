@@ -203,7 +203,7 @@ export default function ServicesMedicoLegalComplianceAndSamples({
                                 Medico-Legal Support Services Sample Work
                             </h3>
                             <Link
-                                href="#sample-work"
+                                href="/insights/sample-work"
                                 className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold px-8 py-2.5 rounded-full transition-colors"
                             >
                                 Discover More
@@ -220,7 +220,7 @@ export default function ServicesMedicoLegalComplianceAndSamples({
                             </p>
                             <div className="pt-2">
                                 <Link
-                                    href="#download-report"
+                                    href="/insights/sample-work"
                                     className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold px-8 py-2.5 rounded-full transition-colors"
                                 >
                                     Discover More

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 /* ============================================================ */
 /* SECTION 1 DATA: STEP PROCESS                                */
@@ -105,9 +106,9 @@ export default function ProcessAndBenefitsSections() {
             Our step-by-Step Process
           </h3>
           <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-            <a href="/services/publication-support/journal-submission" className="text-[#3b82f6] hover:underline">
+            <Link href="/services/publication-support/journal-submission" className="text-[#3b82f6] hover:underline">
               Journal Submission
-            </a>{" "}
+            </Link>{" "}
             Formatting and Research Paper Typesetting Services allow us to
             synthesize detailed research into a professional, Publication-Ready
             Manuscript. The process includes steps that guarantee Journal

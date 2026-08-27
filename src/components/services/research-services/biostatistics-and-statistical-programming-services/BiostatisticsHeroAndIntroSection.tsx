@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface ServiceCard {
@@ -72,19 +73,19 @@ export default function BiostatisticsHeroAndIntroSection() {
             <div className="space-y-4 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
               <p>
                 Pubrica delivers accurate, compliant, and publication-ready{" "}
-                <a
-                  href="#biostatistical-programming"
+                <Link
+                  href="/services/research-services/biostatistics-and-statistical-programming-services/biostatistical-programming-framework-regulatory-research"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   biostatistical programming
-                </a>{" "}
+                </Link>{" "}
                 for medical,{" "}
-                <a
-                  href="#life-science"
+                <Link
+                  href="/subject-matter-experts/life-sciences"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   life science
-                </a>
+                </Link>
                 , and healthcare research. With a team of certified SAS
                 programmers and experienced biostatisticians, we have completed
                 150+ projects across therapeutic areas.
@@ -137,19 +138,19 @@ export default function BiostatisticsHeroAndIntroSection() {
               drug development program. Even groundbreaking therapies can be
               compromised by flawed study design or execution. At Pubrica, our
               expert biostatistical consulting team delivers meticulous{" "}
-              <a
-                href="#data-collection"
+              <Link
+                href="/services/medical-data-collection"
                 className="text-sky-600 hover:underline font-medium"
               >
                 data collection
-              </a>
+              </Link>
               , validation, and analysis to ensure your{" "}
-              <a
-                href="#research"
+              <Link
+                href="/services/research-services/biostatistics-and-statistical-programming-service"
                 className="text-sky-600 hover:underline font-medium"
               >
                 research
-              </a>{" "}
+              </Link>{" "}
               meets the highest standards. By providing end-to-end statistical
               support across every stage of drug development, we help you design
               efficient, cost-effective trials that minimize risk, optimize

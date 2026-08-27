@@ -150,6 +150,7 @@ export default function PubricaResourceHub() {
         "In brief A search word (or search query) has a simple definition. A search term is a single word or phrase used to retrieve relevant information.",
       image:
         "/images/publication-support/Examples-of-Search-Terms-from-Published-Studies.webp",
+      url: "/academy/publication-support/examples-of-search-terms-from-published-studies",
     },
     {
       title: "How to Combine Search Terms for Research paper publication?",
@@ -158,6 +159,7 @@ export default function PubricaResourceHub() {
         "In brief Quick searches with only one search term sometimes provide many irrelevant results. Combining terms improves accuracy.",
       image:
         "/images/publication-support/How-to-Combine-Search-Terms-for-Research-paper-publication.webp",
+      url: "/academy/publication-support/how-to-combine-search-terms-for-research-paper-publication",
     },
     {
       title: "How to Develop a search strategy for a systematic review",
@@ -166,6 +168,7 @@ export default function PubricaResourceHub() {
         "In brief A search strategy is a structured set of keywords used to search databases efficiently during systematic reviews.",
       image:
         "/images/publication-support/How-to-Develop-a-search-strategy-for-a-systematic-review.webp",
+      url: "/academy/publication-support/how-to-develop-a-search-strategy-for-a-systematic-review",
     },
     {
       title: "The Leading Journals Shaping Medical Understanding",
@@ -174,6 +177,7 @@ export default function PubricaResourceHub() {
         "The Leading Journals Shaping Medical Understanding Home Blog High Impact Medical Journals Contact Us…",
       image:
         "/images/publication-support/Journal-Shaping-Medical-Understanding-768x478.webp",
+      url: "/academy/publication-support/high-impact-medical-journals",
     },
     {
       title: "Examples of Search Terms from Published Studies",
@@ -182,6 +186,7 @@ export default function PubricaResourceHub() {
         "In brief A search word (or search query) has a simple definition. A search term is a single word or phrase used to retrieve relevant information.",
       image:
         "/images/publication-support/Examples-of-Search-Terms-from-Published-Studies.webp",
+      url: "/academy/publication-support/examples-of-search-terms-from-published-studies",
     },
     {
       title: "How to Combine Search Terms for Research paper publication?",
@@ -190,6 +195,7 @@ export default function PubricaResourceHub() {
         "In brief Quick searches with only one search term sometimes provide many irrelevant results. Combining terms improves accuracy.",
       image:
         "/images/publication-support/How-to-Combine-Search-Terms-for-Research-paper-publication.webp",
+      url: "/academy/publication-support/how-to-combine-search-terms-for-research-paper-publication",
     },
     {
       title: "How to Develop a search strategy for a systematic review",
@@ -198,6 +204,7 @@ export default function PubricaResourceHub() {
         "In brief A search strategy is a structured set of keywords used to search databases efficiently during systematic reviews.",
       image:
         "/images/publication-support/How-to-Develop-a-search-strategy-for-a-systematic-review.webp",
+      url: "/academy/publication-support/how-to-develop-a-search-strategy-for-a-systematic-review",
     }, ,
   ];
 
@@ -231,9 +238,12 @@ export default function PubricaResourceHub() {
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0d4f60]">
                   Publication Support Sample Work
                 </h3>
-                <button className="mt-3 px-8 py-2.5 bg-black hover:bg-slate-900 active:scale-95 text-white font-bold text-xs tracking-wider uppercase rounded-full transition-all">
+                <Link
+                  href="/insights/sample-work"
+                  className="mt-3 inline-block px-8 py-2.5 bg-black hover:bg-slate-900 active:scale-95 text-white font-bold text-xs tracking-wider uppercase rounded-full transition-all"
+                >
                   Discover More
-                </button>
+                </Link>
               </div>
 
               <div className="border-t border-emerald-200/60 pt-5">
@@ -251,10 +261,13 @@ export default function PubricaResourceHub() {
                   Services sample work tailored to your manuscript's scope,
                   indexing requirements, and impact factor goals.
                 </p>
-                <button className="mt-4 px-8 py-2.5 bg-black hover:bg-slate-900 active:scale-95 text-white font-bold text-xs tracking-wider uppercase rounded-full inline-flex items-center gap-2 transition-all">
+                <Link
+                  href="/insights/sample-work"
+                  className="mt-4 px-8 py-2.5 bg-black hover:bg-slate-900 active:scale-95 text-white font-bold text-xs tracking-wider uppercase rounded-full inline-flex items-center gap-2 transition-all"
+                >
                   <Download className="w-3.5 h-3.5" />
                   Discover More
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -460,8 +473,9 @@ export default function PubricaResourceHub() {
           {/* Cards Dynamic Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {filteredInsights.map((card, i) => (
-              <div
+              <Link
                 key={i}
+                href={card.url}
                 className="bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
               >
                 <div>
@@ -494,7 +508,7 @@ export default function PubricaResourceHub() {
                     <ArrowRight className="w-4 h-4" />
                   </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

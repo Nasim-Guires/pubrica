@@ -345,9 +345,12 @@ export default function PlagiarismGuidePage() {
           <p className="text-white text-base md:text-lg font-medium leading-snug">
             Connect with us to explore how we can support you in maintaining academic integrity and enhancing the visibility of your research across the world!
           </p>
-          <button className="bg-white text-gray-900 text-xs md:text-sm font-bold py-2 px-6 rounded shadow hover:bg-gray-100 transition">
+          <Link
+            href="/contact-us/"
+            className="inline-block bg-white text-gray-900 text-xs md:text-sm font-bold py-2 px-6 rounded shadow hover:bg-gray-100 transition"
+          >
             Contact Us
-          </button>
+          </Link>
         </div>
       </div>
 

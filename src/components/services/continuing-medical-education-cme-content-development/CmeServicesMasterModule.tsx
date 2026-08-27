@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // --- DATA STRUCTURES ---
 
@@ -218,9 +219,9 @@ export default function CmeServicesMasterModule() {
                             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                                 {currentWorkflowStep.description}
                             </p>
-                            <button className="bg-[#033c2a] hover:bg-[#02281c] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-sm transition-colors shadow-sm">
+                            <Link href="/order-now" className="inline-block bg-[#033c2a] hover:bg-[#02281c] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-sm transition-colors shadow-sm">
                                 REQUEST A QUOTE
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -304,9 +305,9 @@ export default function CmeServicesMasterModule() {
                             <h3 className="text-base sm:text-lg font-bold text-slate-900">
                                 Continuing Medical Education Sample Work
                             </h3>
-                            <button className="bg-black hover:bg-slate-800 text-white text-xs font-bold py-2.5 px-6 rounded-full transition-colors shadow-sm">
+                            <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-slate-800 text-white text-xs font-bold py-2.5 px-6 rounded-full transition-colors shadow-sm">
                                 Discover More
-                            </button>
+                            </Link>
                         </div>
 
                         <div className="space-y-3 border-t border-slate-200/80 pt-4">
@@ -316,9 +317,9 @@ export default function CmeServicesMasterModule() {
                             <p className="text-xs text-slate-600 leading-relaxed">
                                 Explore our Continuing Medical Education (CME) samples, designed to demonstrate evidence-based curriculum development, high-quality content creation, and alignment with accreditation and regulatory standards, delivering impactful, engaging, and compliant educational experiences for healthcare professionals and institutions.
                             </p>
-                            <button className="bg-black hover:bg-slate-800 text-white text-xs font-bold py-2.5 px-6 rounded-full transition-colors shadow-sm">
+                            <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-slate-800 text-white text-xs font-bold py-2.5 px-6 rounded-full transition-colors shadow-sm">
                                 Discover More
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

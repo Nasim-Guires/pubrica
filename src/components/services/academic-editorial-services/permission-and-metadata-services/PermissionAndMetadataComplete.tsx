@@ -2,6 +2,7 @@
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -230,17 +231,17 @@ export default function PermissionAndMetadataComplete() {
                                 Academic Editorial Services Sample Work
                             </h2>
                             <div className="mb-4">
-                                <button className="bg-black hover:bg-gray-800 text-white text-xs font-bold py-2 px-6 rounded-full transition-colors shadow">
+                                <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-bold py-2 px-6 rounded-full transition-colors shadow">
                                     Discover More
-                                </button>
+                                </Link>
                             </div>
                             <h3 className="text-xs font-bold text-[#0b3b2c] mb-2">Download the full Report Now</h3>
                             <p className="text-[11px] text-gray-600 leading-relaxed mb-4">
                                 Explore our Permission & Metadata Services sample work, meticulously managed to ensure full copyright compliance, accurate rights documentation, and adherence to journal-specific requirements. We ensure your manuscript is legally cleared, properly attributed, and publication-ready, enhancing credibility, compliance, and seamless acceptance by top-tier journals.
                             </p>
-                            <button className="bg-black hover:bg-gray-800 text-white text-xs font-bold py-2 px-6 rounded-full transition-colors shadow">
+                            <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-bold py-2 px-6 rounded-full transition-colors shadow">
                                 Discover More
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

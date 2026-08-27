@@ -365,7 +365,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Discover More"
+    "text": "[Discover More](/insights/sample-work)"
   },
   {
     "type": "h3",
@@ -377,7 +377,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Discover More"
+    "text": "[Discover More](/insights/sample-work)"
   },
   {
     "type": "p",

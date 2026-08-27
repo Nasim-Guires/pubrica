@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface JourneyPhase {
   title: string;
@@ -103,9 +104,12 @@ export const ResearchJourneyPhases: React.FC = () => {
           <h3 className="text-[#083c4c] text-xl font-bold mb-4">
             Research Service Sample Work
           </h3>
-          <button className="bg-black text-white px-6 py-2.5 rounded font-semibold text-sm hover:bg-gray-800 transition-colors mb-8">
+          <Link
+            href="/insights/sample-work"
+            className="inline-block bg-black text-white px-6 py-2.5 rounded font-semibold text-sm hover:bg-gray-800 transition-colors mb-8"
+          >
             Discover More
-          </button>
+          </Link>
 
           <h3 className="text-[#083c4c] text-xl font-bold mb-2">
             Download the full Report Now
@@ -115,9 +119,12 @@ export const ResearchJourneyPhases: React.FC = () => {
             support robust methodologies, institutional compliance, and
             impactful scientific outcomes.
           </p>
-          <button className="bg-black text-white px-6 py-2.5 rounded font-semibold text-sm hover:bg-gray-800 transition-colors">
+          <Link
+            href="/insights/sample-work"
+            className="inline-block bg-black text-white px-6 py-2.5 rounded font-semibold text-sm hover:bg-gray-800 transition-colors"
+          >
             Discover More
-          </button>
+          </Link>
         </div>
       </div>
     </section>

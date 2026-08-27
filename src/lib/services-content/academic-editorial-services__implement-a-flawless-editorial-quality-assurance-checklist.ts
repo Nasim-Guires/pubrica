@@ -35,7 +35,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "While most researchers focus on writing quality content, several factors besides content matter in the review process. First, [peer review journals receive](https://pubrica.com/academy/peer-review/how-publishers-balance-authors-and-reviewers/) large volumes of content; therefore, any submitted manuscripts not following [journal submission](https://pubrica.com/insights/sample-work/journal-submission-report-sample/) requirements are often missed or delayed due to high volumes of submissions. The [submission process](https://pubrica.com/services/publication-support/journal-submission/) involves more than just submitting a document. Properly formatted manuscripts reduce the chance of rejection and streamline the process, enabling quicker review and acceptance.[[5](https://doi.org/10.36518/2689-0216.1715)] Adhering to the correct [manuscript formatting guidelines](https://pubrica.com/academy/formatting-service/how-to-write-research-paper-in-apa-format/), including the Standard IMRaD format (Introduction, Methods, Results, and Discussion) will reduce the chances of delays and ensure smoother processing."
+    "text": "While most researchers focus on writing quality content, several factors besides content matter in the review process. First, [peer review journals receive](https://pubrica.com/academy/peer-review/how-publishers-balance-authors-and-reviewers/) large volumes of content; therefore, any submitted manuscripts not following [journal submission](https://pubrica.com/insights/sample-work/) requirements are often missed or delayed due to high volumes of submissions. The [submission process](https://pubrica.com/services/publication-support/journal-submission/) involves more than just submitting a document. Properly formatted manuscripts reduce the chance of rejection and streamline the process, enabling quicker review and acceptance.[[5](https://doi.org/10.36518/2689-0216.1715)] Adhering to the correct [manuscript formatting guidelines](https://pubrica.com/academy/formatting-service/how-to-write-research-paper-in-apa-format/), including the Standard IMRaD format (Introduction, Methods, Results, and Discussion) will reduce the chances of delays and ensure smoother processing."
   },
   {
     "type": "table",
@@ -68,7 +68,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "A thorough editorial QA checklist ensures every content piece meets the required quality standards and fits the publication’s brand identity. Incorporating an editorial checklist for content review is crucial of [manuscript editing](https://pubrica.com/services/editing-and-translation/manuscript-editing/manuscript-editing-importance-guide/) in delivering [publication-ready manuscripts](https://pubrica.com/insights/sample-work/phenotypic-variations-of-atopic-dermatitis-a-systemic-review-of-dupilumab-efficacy-and-safety/) that meet editorial guidelines and publication standards."
+    "text": "A thorough editorial QA checklist ensures every content piece meets the required quality standards and fits the publication’s brand identity. Incorporating an editorial checklist for content review is crucial of [manuscript editing](https://pubrica.com/services/editing-and-translation/manuscript-editing/manuscript-editing-importance-guide/) in delivering [publication-ready manuscripts](https://pubrica.com/insights/sample-work/) that meet editorial guidelines and publication standards."
   },
   {
     "type": "h2",

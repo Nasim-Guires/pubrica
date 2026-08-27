@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // --- Data for Types of Editing Services ---
 interface EditingService {
@@ -75,9 +76,9 @@ const audienceData: AudienceCard[] = [
       <>
         Trusted scientific translation and editing services for educational
         materials,{" "}
-        <a href="/services/physician-writing-services/research-proposal" className="text-sky-400 hover:underline">
+        <Link href="/services/physician-writing-services/research-proposal" className="text-sky-400 hover:underline">
           research proposals
-        </a>
+        </Link>
         , and multilingual content to support global collaboration.
       </>
     ),
@@ -90,9 +91,9 @@ const audienceData: AudienceCard[] = [
     description: (
       <>
         Professional{" "}
-        <a href="/services/publication-support/" className="text-sky-400 hover:underline">
+        <Link href="/services/publication-support" className="text-sky-400 hover:underline">
           journal publication support
-        </a>{" "}
+        </Link>{" "}
         with precise scientific paper translation and editing that meet
         international publishing standards.
       </>
@@ -114,9 +115,9 @@ const audienceData: AudienceCard[] = [
     description: (
       <>
         Specialized medical translation services and scientific{" "}
-        <a href="/services/editing-and-translation/manuscript-editing" className="text-sky-400 hover:underline">
+        <Link href="/services/editing-and-translation/manuscript-editing" className="text-sky-400 hover:underline">
           manuscript editing
-        </a>{" "}
+        </Link>{" "}
         to expand the global impact of textbooks, case studies, and research
         findings.
       </>

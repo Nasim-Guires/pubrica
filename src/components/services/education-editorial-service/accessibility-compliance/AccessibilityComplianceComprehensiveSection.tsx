@@ -60,6 +60,7 @@ const publishedPapersData: PublishedPaper[] = [
     publisher: 'American Chemical Society',
     impactFactor: '11.7',
     image: '/images/education-editorial-service/accessibility-compliance/JOURNAL-TEMPLATE-COVER-IMAGE-2.png',
+    link: 'https://pubs.acs.org/doi/10.1021/acs.est.5c09899',
   },
   {
     journal: 'AI & Society',
@@ -68,6 +69,7 @@ const publishedPapersData: PublishedPaper[] = [
     publisher: 'springer nature',
     impactFactor: '4.7',
     image: '/images/education-editorial-service/accessibility-compliance/JOURNAL-TEMPLATE-COVER-IMAGE-3.png',
+    link: 'https://link.springer.com/article/10.1007/s00146-025-02786-w',
   },
   {
     journal: 'Nature Biotechnology',
@@ -76,6 +78,7 @@ const publishedPapersData: PublishedPaper[] = [
     publisher: 'Nature Portfolio',
     impactFactor: '41.7',
     image: '/images/education-editorial-service/accessibility-compliance/JOURNAL-TEMPLATE-COVER-IMAGE-.png',
+    link: 'https://www.nature.com/articles/s41587-024-02511-w',
   },
 ];
 
@@ -371,6 +374,8 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
                     <div className="mt-2">
                       <Link
                         href={paper.link || '#'}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-block bg-[#111847] hover:bg-[#0c1236] text-white text-[11px] font-semibold py-1.5 px-5 rounded transition-colors"
                       >
                         Visit

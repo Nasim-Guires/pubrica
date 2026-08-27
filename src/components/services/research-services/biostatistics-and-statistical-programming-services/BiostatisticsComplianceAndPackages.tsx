@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Plus, Minus, ArrowRightCircle } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
@@ -243,12 +244,12 @@ export default function BiostatisticsComplianceAndPackages() {
         <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mt-8">
           By integrating these compliance and guideline standards, we ensure
           that our clinical trial statistical programming, pharmaceutical{" "}
-          <a
-            href="#biostatistics"
+          <Link
+            href="/services/research-services/biostatistics-and-statistical-programming-service"
             className="text-sky-600 hover:underline font-medium"
           >
             biostatistics
-          </a>{" "}
+          </Link>{" "}
           services, and regulatory submission programming services meet the
           highest level of quality and integrity, enabling faster and smoother
           regulatory approvals.
@@ -277,12 +278,12 @@ export default function BiostatisticsComplianceAndPackages() {
                 Biostatistics and Statistical Programming Services Sample Work
               </h3>
               <div className="pt-1">
-                <a
-                  href="#discover-sample-1"
+                <Link
+                  href="/insights/sample-work"
                   className="inline-block bg-black hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm px-6 py-2.5 rounded-full transition-colors"
                 >
                   Discover More
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -298,12 +299,12 @@ export default function BiostatisticsComplianceAndPackages() {
                 academic, clinical, and pharmaceutical research.
               </p>
               <div className="pt-2">
-                <a
-                  href="#discover-sample-2"
+                <Link
+                  href="/insights/sample-work"
                   className="inline-block bg-black hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm px-6 py-2.5 rounded-full transition-colors"
                 >
                   Discover More
-                </a>
+                </Link>
               </div>
             </div>
           </div>

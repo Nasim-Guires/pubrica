@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRightCircle } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
@@ -135,12 +136,12 @@ export default function ProofreadingHeroSection() {
 
               {/* Get Started Button */}
               <div>
-                <button
-                  type="button"
-                  className="w-full bg-[#b81d1d] hover:bg-[#961515] text-white font-bold py-2.5 px-4 rounded-md text-sm transition-colors"
+                <Link
+                  href="/order-now"
+                  className="block w-full text-center bg-[#b81d1d] hover:bg-[#961515] text-white font-bold py-2.5 px-4 rounded-md text-sm transition-colors"
                 >
                   Get Started
-                </button>
+                </Link>
               </div>
 
               {/* Packs availability */}
@@ -172,36 +173,36 @@ export default function ProofreadingHeroSection() {
 
               <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
                 Our professional{" "}
-                <a
+                <Link
                   href="/services/editing-and-translation/proofreading"
                   className="text-sky-600  hover:text-sky-800"
                 >
                   proofreading services
-                </a>{" "}
+                </Link>{" "}
                 are designed for quality-specific authors who need a thorough
                 language check of their manuscripts.{" "}
-                <a
+                <Link
                   href="/services/publication-support/journal-submission"
                   className="text-sky-600  hover:text-sky-800"
                 >
                   Papers submitted
-                </a>{" "}
+                </Link>{" "}
                 for proofreading service are returned to authors after an
                 exhaustive check.{" "}
-                <a
+                <Link
                   href="/subject-matter-experts"
                   className="text-sky-600 hover:text-sky-800"
                 >
                   Language and subject specialists
-                </a>{" "}
+                </Link>{" "}
                 scan the material for spelling, grammar, punctuation, and
                 jargon.{" "}
-                <a
+                <Link
                   href="/"
                   className="text-sky-600  hover:text-sky-800"
                 >
                   Pubrica proofreading
-                </a>{" "}
+                </Link>{" "}
                 services are negligible in contrast to substantive editing. Talk
                 to us today.
               </p>

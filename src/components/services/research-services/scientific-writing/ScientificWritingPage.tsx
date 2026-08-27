@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface FeatureItem {
     id: number;
@@ -55,12 +56,14 @@ export const ScientificWritingPage: React.FC = () => {
                     Our free Recommendations service uses machine learning and your online activity to suggest research tailored to your needs.
                 </p>
                 <div className="pt-2">
-                    <button
-                        type="button"
+                    <Link
+                        href="/brochures/scientific-writing.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="bg-[#c81e1e] hover:bg-[#a61717] text-white text-xs font-semibold px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
                     >
                         View Brochure
-                    </button>
+                    </Link>
                 </div>
             </section>
 
@@ -111,12 +114,12 @@ export const ScientificWritingPage: React.FC = () => {
                 </p>
 
                 <div className="pt-4">
-                    <button
-                        type="button"
-                        className="bg-[#c81e1e] hover:bg-[#a61717] text-white text-xs font-semibold px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
+                    <Link
+                        href="/order-now"
+                        className="inline-block bg-[#c81e1e] hover:bg-[#a61717] text-white text-xs font-semibold px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
                     >
                         Request Free Consultation
-                    </button>
+                    </Link>
                 </div>
             </section>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 interface StandardCard {
@@ -116,12 +117,12 @@ export default function ComplianceAndStandards(): React.ReactElement {
             </h2>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
               At Pubrica, we adhere to the highest global standards in{" "}
-              <a
-                href="#medical-writing"
+              <Link
+                href="/academy/medical-writing/avoiding-sentence-fragments-academic-writing"
                 className="text-[#008ba3] underline underline-offset-2 hover:text-[#09322e] transition-colors"
               >
                 medical writing
-              </a>
+              </Link>
               , regulatory documentation, and scientific communication. Our
               processes, team, and deliverables are aligned with international
               regulatory requirements and industry best practices—ensuring your

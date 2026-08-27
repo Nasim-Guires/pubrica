@@ -60,7 +60,7 @@ export default function VideoAbstractHero() {
             <p>
               With our{" "}
               <Link
-                href="#service-details"
+                href="/services/publication-support/video-abstract"
                 className="text-sky-600 hover:underline"
               >
                 video abstract service
@@ -104,7 +104,7 @@ export default function VideoAbstractHero() {
         {/* CTA Button */}
         <div className="pt-2">
           <Link
-            href="#upload"
+            href="/order-now"
             className="inline-block bg-[#b30000] hover:bg-[#8d0000] text-white font-bold px-8 py-3 rounded-full transition-colors text-sm shadow-sm"
           >
             Upload Your Manuscript

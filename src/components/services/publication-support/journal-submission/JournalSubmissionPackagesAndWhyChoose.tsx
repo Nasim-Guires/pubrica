@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // Common path prefix for package icons
@@ -204,9 +205,9 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
             </h2>
             <p className="text-xs sm:text-sm text-gray-200 leading-relaxed max-w-3xl">
               Accelerate your path to publication with Pubrica’s comprehensive{" "}
-              <a href="/insights/prevalence-thyroid-disorders-tertiary-care-north-india" className="text-[#38bdf8] hover:underline">
+              <Link href="/insights/prevalence-thyroid-disorders-tertiary-care-north-india" className="text-[#38bdf8] hover:underline">
                 journal submission
-              </a>{" "}
+              </Link>{" "}
               support service. Gain expert assistance to navigate submission
               guidelines and enhance your chances of acceptance.
             </p>

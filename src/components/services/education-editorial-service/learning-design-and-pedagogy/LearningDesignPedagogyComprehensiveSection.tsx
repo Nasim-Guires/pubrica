@@ -4,6 +4,7 @@ import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type ServiceItem = {
   title: string;
@@ -156,9 +157,12 @@ const LearningDesignPedagogyComprehensiveSection: NextPage = () => {
               </ul>
 
               <div className="pt-4 text-left">
-                <button className="bg-[#c5221f] hover:bg-[#a31a18] text-white font-semibold text-sm px-6 py-2 rounded-full transition-colors shadow-sm">
+                <Link
+                  href="/order-now"
+                  className="inline-block bg-[#c5221f] hover:bg-[#a31a18] text-white font-semibold text-sm px-6 py-2 rounded-full transition-colors shadow-sm"
+                >
                   Get a Free Quote
-                </button>
+                </Link>
               </div>
             </div>
           </div>

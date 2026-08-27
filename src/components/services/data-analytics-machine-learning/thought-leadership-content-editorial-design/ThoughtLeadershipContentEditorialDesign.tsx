@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Thought Leadership Content & Editorial Design | Pubrica',
@@ -185,9 +186,9 @@ export default function ThoughtLeadershipContentEditorialDesign() {
             <h2 className="text-xl md:text-2xl font-bold text-gray-900 leading-snug">
               Thought Leadership Content & Editorial Design Sample Work
             </h2>
-            <button className="bg-black hover:bg-gray-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors">
+            <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors">
               Discover More
-            </button>
+            </Link>
             <h3 className="text-base font-bold text-[#0b3b2c] pt-2">
               Download the full Report Now
             </h3>

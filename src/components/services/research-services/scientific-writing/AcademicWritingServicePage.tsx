@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Script from "next/script";
 import Image from "next/image";
+import Link from "next/link";
 
 // ==========================================
 // TYPES & ACCORDION DATA
@@ -193,9 +194,12 @@ export default function ScientificWritingPage() {
                                     <h3 className="mb-3 text-xl font-bold text-[#1a3c34]">
                                         Scientific & Academic Medical Writing Sample Work
                                     </h3>
-                                    <button className="rounded-full bg-black px-8 py-2.5 text-xs font-medium text-white transition hover:bg-gray-800">
+                                    <Link
+                                        href="/insights/journal-submission-report-sample"
+                                        className="inline-block rounded-full bg-black px-8 py-2.5 text-xs font-medium text-white transition hover:bg-gray-800"
+                                    >
                                         Discover More
-                                    </button>
+                                    </Link>
                                 </div>
 
                                 <div>
@@ -205,9 +209,12 @@ export default function ScientificWritingPage() {
                                     <p className="mb-3 text-xs leading-relaxed text-gray-600">
                                         Explore our Scientific & Academic Medical Writing sample work aligned with your manuscript's formatting standards, ethical guidelines, and target publication timelines.
                                     </p>
-                                    <button className="rounded-full bg-black px-8 py-2.5 text-xs font-medium text-white transition hover:bg-gray-800">
+                                    <Link
+                                        href="/insights/sample-work"
+                                        className="inline-block rounded-full bg-black px-8 py-2.5 text-xs font-medium text-white transition hover:bg-gray-800"
+                                    >
                                         Discover More
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
 

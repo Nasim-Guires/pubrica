@@ -331,7 +331,9 @@ export default function JournalSubmissionPage() {
         <div className="flex flex-wrap items-center gap-4">
           <GetFreeQuoteButton />
           <a
-            href="#brochure"
+            href="/brochures/publication-support-services.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-[#b80000] hover:bg-black text-white text-xs sm:text-sm font-semibold px-5 py-2 rounded-md shadow-sm transition-colors duration-300"
           >
             View Brochure

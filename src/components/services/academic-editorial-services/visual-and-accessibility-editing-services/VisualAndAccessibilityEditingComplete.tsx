@@ -2,6 +2,7 @@
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -210,9 +211,9 @@ export default function VisualAndAccessibilityEditingComplete() {
               </h2>
 
               <div className="mb-4">
-                <button className="w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-8 rounded-full transition-colors shadow">
+                <Link href="/insights/sample-work" className="inline-block w-full sm:w-auto text-center bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-8 rounded-full transition-colors shadow">
                   Discover More
-                </button>
+                </Link>
               </div>
 
               <h3 className="text-sm font-bold text-[#0b3b2c] mb-2">
@@ -224,9 +225,9 @@ export default function VisualAndAccessibilityEditingComplete() {
               </p>
 
               <div>
-                <button className="w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-8 rounded-full transition-colors shadow">
+                <Link href="/insights/sample-work" className="inline-block w-full sm:w-auto text-center bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-8 rounded-full transition-colors shadow">
                   Discover More
-                </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 export default function PhysicianResearchProposalProcessWorkflow() {
@@ -416,12 +417,12 @@ export default function PhysicianResearchProposalProcessWorkflow() {
                                 <h3 className="text-base sm:text-lg font-bold text-[#022227] leading-snug">
                                     Medical Research Protocol &amp; Proposal Writing Sample Work
                                 </h3>
-                                <a
-                                    href="#discover-samples"
+                                <Link
+                                    href="/insights/sample-work"
                                     className="inline-block mt-2 w-full text-center bg-black hover:bg-gray-800 text-white text-xs font-semibold py-2 px-4 rounded-full transition-colors"
                                 >
                                     Discover More
-                                </a>
+                                </Link>
                             </div>
 
                             <div>
@@ -431,12 +432,12 @@ export default function PhysicianResearchProposalProcessWorkflow() {
                                 <p className="text-xs text-gray-600 mt-1 leading-relaxed">
                                     Explore our original research protocol &amp; proposal writing samples, meticulously developed to align with university or funding body guidelines, research aims, and methodological rigor delivered on time and supported by current, peer-reviewed scientific literature.
                                 </p>
-                                <a
-                                    href="#download-report"
+                                <Link
+                                    href="/insights/sample-work"
                                     className="inline-block mt-3 w-full text-center bg-black hover:bg-gray-800 text-white text-xs font-semibold py-2 px-4 rounded-full transition-colors"
                                 >
                                     Discover More
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

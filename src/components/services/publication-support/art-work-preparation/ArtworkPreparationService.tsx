@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ArtworkPreparationService() {
   return (
@@ -99,18 +100,20 @@ export default function ArtworkPreparationService() {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
-              <button
-                type="button"
+              <Link
+                href="/order-now"
                 className="bg-[#b30000] hover:bg-[#900000] !text-white text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-md transition-colors shadow-2xs cursor-pointer inline-flex items-center justify-center select-none"
               >
                 Upload Your Manuscript
-              </button>
-              <button
-                type="button"
+              </Link>
+              <Link
+                href="/brochures/artwork-preparation.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#b30000] hover:bg-[#900000] !text-white text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-md transition-colors shadow-2xs cursor-pointer inline-flex items-center justify-center select-none"
               >
                 View Brochure
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -157,17 +160,17 @@ export default function ArtworkPreparationService() {
                   meet specific journal requirements (resolution, size, colour
                   mode, font styles, and file formats.) This is especially
                   useful for{" "}
-                  <a href="/services/physician-writing-services/original-research-article" className="text-blue-600 hover:underline">
+                  <Link href="/services/physician-writing-services/original-research-article" className="text-blue-600 hover:underline">
                     Original Research Article
-                  </a>
+                  </Link>
                   ,{" "}
-                  <a href="/services/research-services/systematic-review" className="text-blue-600 hover:underline">
+                  <Link href="/services/research-services/systematic-review" className="text-blue-600 hover:underline">
                     Systematic Review
-                  </a>
+                  </Link>
                   , and{" "}
-                  <a href="/services/physician-writing-services/case-report" className="text-blue-600 hover:underline">
+                  <Link href="/services/physician-writing-services/case-report" className="text-blue-600 hover:underline">
                     Case Report
-                  </a>{" "}
+                  </Link>{" "}
                   Writing submissions.
                 </p>
               </div>
@@ -197,9 +200,9 @@ export default function ArtworkPreparationService() {
                   Checking that all labels, legends, scales, and annotations are
                   clear, consistent and in accordance with the content of your
                   manuscript. This services complements our{" "}
-                  <a href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 hover:underline">
+                  <Link href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 hover:underline">
                     manuscript editing services
-                  </a>{" "}
+                  </Link>{" "}
                   in terms of figure accuracy and clarity.
                 </p>
               </div>
@@ -214,9 +217,9 @@ export default function ArtworkPreparationService() {
                   </strong>{" "}
                   Creating brief visual summaries to illustrate key research
                   findings or complex data, usually requested in addition to{" "}
-                  <a href="/services/research-impact/graphical-abstract" className="text-blue-600 hover:underline">
+                  <Link href="/services/research-impact/graphical-abstract" className="text-blue-600 hover:underline">
                     graphical abstract
-                  </a>{" "}
+                  </Link>{" "}
                   creation.
                 </p>
               </div>

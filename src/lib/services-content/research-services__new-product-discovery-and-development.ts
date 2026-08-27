@@ -19,7 +19,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "⮚ Benefit from meta-analyses manuscript writing from [professional medical expert](https://pubrica.com/insights/research-services/professional-medical-writing-support/) who assists in identifying relevant literature, connects with your research question (PCOS), conduct meta-analysis, a statistical procedure used to numerically summarize the included studies and prepares a comprehensive research gap about the problem and its evidence."
+    "text": "⮚ Benefit from meta-analyses manuscript writing from [professional medical expert](https://pubrica.com/insights/professional-medical-writing-support/) who assists in identifying relevant literature, connects with your research question (PCOS), conduct meta-analysis, a statistical procedure used to numerically summarize the included studies and prepares a comprehensive research gap about the problem and its evidence."
   },
   {
     "type": "h3",

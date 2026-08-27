@@ -12,14 +12,14 @@ export const metadata = constructMetadata({
 
 export default function RebuttalPreparationPage() {
   const interestedTopics = [
-    { name: 'Manuscript Editing', href: '/manuscript-editing' },
-    { name: 'Manuscript Guidelines', href: '/manuscript-guidelines' },
-    { name: 'Manuscript Writing', href: '/manuscript-writing' },
-    { name: 'Manuscript Preparation guidelines', href: '/manuscript-preparation-guidelines' },
-    { name: 'Manuscript Submission Guidelines', href: '/manuscript-submission-guidelines' },
-    { name: 'Manuscript Editing Services', href: '/manuscript-editing-services' },
-    { name: 'Study Guides', href: '/study-guides' },
-    { name: 'Scientific Writing', href: '/scientific-writing' },
+    { name: 'Manuscript Editing', href: '/services/editing-and-translation/manuscript-editing' },
+    { name: 'Manuscript Guidelines', href: '/academy/manuscript-guidelines' },
+    { name: 'Manuscript Writing', href: '/services/physician-writing-services/physician-manuscript' },
+    { name: 'Manuscript Preparation guidelines', href: '/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission' },
+    { name: 'Manuscript Submission Guidelines', href: '/academy/manuscript-submission' },
+    { name: 'Manuscript Editing Services', href: '/services/editing-and-translation/manuscript-editing' },
+    { name: 'Study Guides', href: '/academy' },
+    { name: 'Scientific Writing', href: '/services/research-services/scientific-writing' },
   ]
 
   const highImpactJournals = [
@@ -82,9 +82,9 @@ export default function RebuttalPreparationPage() {
           <nav className="max-w-7xl mx-auto flex text-xs sm:text-sm text-gray-500 space-x-2">
             <Link href="/" className="hover:underline">Home</Link>
             <span>»</span>
-            <Link href="/academy" className="hover:underline">Academy</Link>
+            <Link href="/services/publication-support" className="hover:underline">Publication Support</Link>
             <span>»</span>
-            <Link href="/services/research-impact" className="hover:underline">Research Impact</Link>
+            <Link href="/services/publication-support/responding-to-reviewers" className="hover:underline">Responding to Reviewers</Link>
             <span>»</span>
             <span className="text-gray-700 font-medium truncate">Rebuttal Preparation: Strategic Planning for Successful Peer Review Outcomes</span>
           </nav>

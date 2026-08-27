@@ -170,7 +170,7 @@ export default function PlagiarismServicePackages() {
                 Plagiarism Check Service Sample Work
               </h3>
               <Link
-                href="#sample-work"
+                href="/insights/sample-work"
                 className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs px-8 py-2.5 rounded-full transition-colors"
               >
                 Discover More
@@ -187,7 +187,7 @@ export default function PlagiarismServicePackages() {
                 guidelines, and submission deadlines.
               </p>
               <Link
-                href="#download-report"
+                href="/insights/sample-work"
                 className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs px-8 py-2.5 rounded-full transition-colors"
               >
                 Discover More
@@ -345,7 +345,7 @@ export default function PlagiarismServicePackages() {
         {/* Final CTA Button */}
         <div className="text-center">
           <Link
-            href="#check-pricing"
+            href="/order-now"
             className="inline-block bg-[#0f3d3e] hover:bg-[#092627] text-white font-bold px-8 py-3 rounded-full text-sm transition-colors shadow-md"
           >
             Check Pricing &amp; Get a Quote

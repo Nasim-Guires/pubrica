@@ -1,5 +1,6 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 // ================= TYPES OF RESPONSES DATA =================
@@ -352,9 +353,12 @@ export default function PublicationSupportPage() {
               <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-3">
                 Response to Reviewer Sample Work
               </h3>
-              <button className="bg-black hover:bg-slate-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors">
+              <Link
+                href="/insights/sample-work"
+                className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors"
+              >
                 Discover More
-              </button>
+              </Link>
             </div>
 
             <div>
@@ -366,9 +370,12 @@ export default function PublicationSupportPage() {
                 addresses reviewer feedback and enhances manuscript quality for
                 successful publication.
               </p>
-              <button className="bg-black hover:bg-slate-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors">
+              <Link
+                href="/insights/sample-work"
+                className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors"
+              >
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

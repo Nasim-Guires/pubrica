@@ -80,7 +80,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "The above criteria ensure the reproducibility of the study and make critical appraisal easier for reviewers conducting a [systematic literature review](https://pubrica.com/insights/sample-work/immunopet-imaging-of-human-ca6/)."
+    "text": "The above criteria ensure the reproducibility of the study and make critical appraisal easier for reviewers conducting a [systematic literature review](https://pubrica.com/insights/immunopet-imaging-of-human-ca6/)."
   },
   {
     "type": "h2",

@@ -2,6 +2,7 @@
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -428,17 +429,17 @@ export default function RevisioningAndLocalisationComplete() {
                                 Revisioning and Localisation Service Sample Work
                             </h2>
                             <div className="space-y-3 mb-6">
-                                <button className="w-full bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
+                                <Link href="/insights/sample-work" className="block w-full text-center bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
                                     Discover More
-                                </button>
+                                </Link>
                             </div>
                             <h3 className="text-sm font-bold text-[#0b3b2c] mb-2">Download the full Report Now</h3>
                             <p className="text-[11px] text-gray-600 leading-relaxed mb-6">
                                 Explore our revisioning and localisation sample work, carefully adapted to meet stringent scholarly standards, region-specific conventions, and top-tier journal requirements. Ensure your manuscript is precise, culturally appropriate, and publication-ready, enhancing clarity, credibility, and global research impact.
                             </p>
-                            <button className="w-full bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
+                            <Link href="/insights/sample-work" className="block w-full text-center bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
                                 Discover More
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

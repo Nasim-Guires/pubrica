@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ServiceBullet {
   title: string;
@@ -115,9 +116,9 @@ export const ThesisEditingPage: React.FC = () => {
 
         <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-8 max-w-5xl">
           Pubrica offers specialized{" "}
-          <a href="/insights/proof-reading" className="text-cyan-600 ">
+          <Link href="/insights/thesis-poster-example-for-students" className="text-cyan-600 ">
             thesis editing services
-          </a>{" "}
+          </Link>{" "}
           tailored for both native English speakers and those for whom English
           is a second language (ESL). Our services are designed to enhance the
           quality of your thesis, ensuring it meets the high standards required

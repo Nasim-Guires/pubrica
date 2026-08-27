@@ -65,12 +65,14 @@ export default function AiMlHeroSection() {
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <GetFreeQuoteButton />
-              <button
-                type="button"
+              <Link
+                href="/brochures/ai-ml-support-services.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#b80e0e] hover:bg-[#960b0b] text-white text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
               >
                 View Brochure
-              </button>
+              </Link>
             </div>
           </div>
 

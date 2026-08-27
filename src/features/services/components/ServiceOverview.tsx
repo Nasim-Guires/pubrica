@@ -37,10 +37,10 @@ const ROUTE_MAP: Record<string, string> = {
   "journal submission": "/services/publication-support/journal-submission/",
   "journal selection": "/services/publication-support/journal-selection/",
   "scientific journal publication services":
-    "/services/publication-support/journal-publication-services/",
+    "/academy/journal-submission/open-access-publishing-guide/",
   CONSORT: "/services/publication-support/consort-guidelines-reporting-trials/",
   PRISMA:
-    "/static/65b880e13b6ca75573dfe217/t/67ad313f1c80aa5235fce0d0/1739403584136/PRISMA_2020_checklist.pdf",
+    "https://static1.squarespace.com/static/65b880e13b6ca75573dfe217/t/67ad313f1c80aa5235fce0d0/1739403584136/PRISMA_2020_checklist.pdf",
   STROBE:
     "https://www.equator-network.org/wp-content/uploads/2015/10/STROBE_checklist_v4_combined.pdf",
   ICMJE:
@@ -204,9 +204,14 @@ export default function ServiceOverview() {
         {/* Action CTAs */}
         <div className="flex flex-wrap items-center gap-3 mt-6 mb-10">
           <GetFreeQuoteButton />
-          <button className="bg-[#b30000] hover:bg-[#900000] !text-white px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none shadow-sm">
+          <a
+            href="/brochures/publication-support-services.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#b30000] hover:bg-[#900000] !text-white px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none shadow-sm"
+          >
             View Brochure
-          </button>
+          </a>
         </div>
 
         {/* Compliance and Guidelines Section */}
@@ -299,9 +304,12 @@ export default function ServiceOverview() {
 
           {/* Single Upload CTA */}
           <div className="pt-2">
-            <button className="bg-[#b30000] hover:bg-[#900000] !text-white px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none shadow-sm">
+            <Link
+              href="/order-now"
+              className="bg-[#b30000] hover:bg-[#900000] !text-white px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none shadow-sm"
+            >
               Upload Your Manuscript
-            </button>
+            </Link>
           </div>
         </div>
       </div>

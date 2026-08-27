@@ -2,6 +2,7 @@
 
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 // ==========================================
@@ -125,12 +126,12 @@ export default function AcademicEditorialServicesSection() {
 
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                 Pubrica offers comprehensive{" "}
-                <a
+                <Link
                   href="/services/academic-editorial-services"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   academic editorial services
-                </a>{" "}
+                </Link>{" "}
                 tailored for healthcare, life sciences, and multidisciplinary
                 research. From research papers, theses, and textbooks to
                 curriculum documents, our specialists ensure clarity, accuracy,
@@ -161,12 +162,12 @@ export default function AcademicEditorialServicesSection() {
                               {feature.title}
                             </span>
                             {feature.description}
-                            <a
+                            <Link
                               href="/services/publication-support"
                               className="text-sky-600 hover:underline font-medium"
                             >
                               {feature.linkText}
-                            </a>
+                            </Link>
                             {feature.afterLinkText}
                           </>
                         ) : (
@@ -186,9 +187,14 @@ export default function AcademicEditorialServicesSection() {
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center gap-4 pt-4">
                 <GetFreeQuoteButton />
-                <button className="px-6 py-2.5 bg-[#b30000] hover:bg-[#8e0000] text-white font-bold text-xs sm:text-sm rounded-full transition-all duration-200 shadow-md">
+                <Link
+                  href="/brochures/academic-editorial-services.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-2.5 bg-[#b30000] hover:bg-[#8e0000] text-white font-bold text-xs sm:text-sm rounded-full transition-all duration-200 shadow-md"
+                >
                   View Brochure
-                </button>
+                </Link>
               </div>
             </div>
 

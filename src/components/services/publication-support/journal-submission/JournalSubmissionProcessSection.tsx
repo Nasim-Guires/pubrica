@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // 1. Who We Serve Cards Data (5 Cards for this page layout)
 const whoWeServeData = [
@@ -76,9 +77,9 @@ export default function JournalSubmissionProcessSection() {
           </h2>
           <p className="text-xs sm:text-sm text-gray-600 leading-relaxed max-w-5xl">
             Our{" "}
-            <a href="/services/publication-support/journal-submission" className="text-[#0082a6] hover:underline font-medium">
+            <Link href="/services/publication-support/journal-submission" className="text-[#0082a6] hover:underline font-medium">
               journal submission service
-            </a>{" "}
+            </Link>{" "}
             ensures a seamless and compliant submission process that meets the
             technical and editorial guidelines of your selected journals. This
             service is available to researchers, clinicians, and academic

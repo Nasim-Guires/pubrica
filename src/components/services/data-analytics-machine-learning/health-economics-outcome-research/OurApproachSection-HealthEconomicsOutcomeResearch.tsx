@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
     Plus,
     Minus,
@@ -338,9 +339,9 @@ export default function OurApproachSectionHealthEconomicsOutcomeResearch() {
                             <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
                                 Health Economics & Outcome Research Sample Work
                             </h3>
-                            <button className="bg-black hover:bg-gray-800 text-white font-medium text-sm px-6 py-2.5 rounded-full transition-colors duration-200">
+                            <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white font-medium text-sm px-6 py-2.5 rounded-full transition-colors duration-200">
                                 Discover More
-                            </button>
+                            </Link>
                         </div>
 
                         <div className="pt-2">
@@ -350,9 +351,9 @@ export default function OurApproachSectionHealthEconomicsOutcomeResearch() {
                             <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
                                 Explore our Health Economics & Outcome Research samples, designed to showcase evidence-based models, rigorous data analysis, and alignment with scientific and regulatory standards, delivering meaningful, decision-ready insights for publications and healthcare value assessment.
                             </p>
-                            <button className="bg-black hover:bg-gray-800 text-white font-medium text-sm px-6 py-2.5 rounded-full transition-colors duration-200">
+                            <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white font-medium text-sm px-6 py-2.5 rounded-full transition-colors duration-200">
                                 Discover More
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

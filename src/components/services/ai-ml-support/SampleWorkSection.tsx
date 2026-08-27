@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SampleWorkSection() {
   return (
@@ -31,12 +32,12 @@ export default function SampleWorkSection() {
                 Artificial Intelligence and Machine Learning Services Sample
                 Work
               </h2>
-              <button
-                type="button"
-                className="w-full sm:w-auto bg-black hover:bg-slate-800 text-white font-medium text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200"
+              <Link
+                href="/insights/sample-work"
+                className="inline-block w-full sm:w-auto text-center bg-black hover:bg-slate-800 text-white font-medium text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200"
               >
                 Discover More
-              </button>
+              </Link>
             </div>
 
             {/* Bottom Block: Download Report */}
@@ -50,12 +51,12 @@ export default function SampleWorkSection() {
                 to scientific and regulatory standards, yielding impactful,
                 publication-ready outcomes.
               </p>
-              <button
-                type="button"
-                className="w-full sm:w-auto bg-black hover:bg-slate-800 text-white font-medium text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200"
+              <Link
+                href="/insights/sample-work"
+                className="inline-block w-full sm:w-auto text-center bg-black hover:bg-slate-800 text-white font-medium text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200"
               >
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

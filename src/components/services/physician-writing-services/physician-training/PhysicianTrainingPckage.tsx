@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface PackageCardProps {
@@ -90,9 +91,9 @@ export default function PhysicianTrainingPackage() {
                                 <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-3">
                                     Physician Training Content Development Sample Work
                                 </h3>
-                                <button className="bg-black hover:bg-slate-800 text-white font-medium px-8 py-2 rounded-full text-sm transition">
+                                <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-slate-800 text-white font-medium px-8 py-2 rounded-full text-sm transition">
                                     Discover More
-                                </button>
+                                </Link>
                             </div>
 
                             {/* Box 2 */}
@@ -103,9 +104,9 @@ export default function PhysicianTrainingPackage() {
                                 <p className="text-xs md:text-sm text-slate-600 max-w-lg mx-auto mb-4 leading-relaxed">
                                     Look at our samples of physician training modules, designed with clinical accuracy, evidence-based standards, and aligned to specialty-specific guidelines. All our modules are also designed to be implementable in a real practice setting and compliant with CME.
                                 </p>
-                                <button className="bg-black hover:bg-slate-800 text-white font-medium px-8 py-2 rounded-full text-sm transition">
+                                <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-slate-800 text-white font-medium px-8 py-2 rounded-full text-sm transition">
                                     Discover More
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

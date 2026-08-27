@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // --- Types & Data ---
 interface ProcessStep {
@@ -236,12 +237,12 @@ export default function ArtworkPreparationDetails() {
               <h3 className="text-xl md:text-2xl font-bold text-black mb-3">
                 Artwork Preparation Sample Work
               </h3>
-              <a
-                href="#discover-sample"
+              <Link
+                href="/insights/sample-work"
                 className="inline-block w-full sm:w-auto text-center bg-black hover:bg-slate-800 text-white font-medium text-sm py-3 px-12 rounded-full transition-colors"
               >
                 Discover More
-              </a>
+              </Link>
             </div>
 
             <div className="pt-2">
@@ -253,12 +254,12 @@ export default function ArtworkPreparationDetails() {
                 conference's formatting requirements, visual standards, and
                 presentation deadlines.
               </p>
-              <a
-                href="#download-report"
+              <Link
+                href="/insights/sample-work"
                 className="inline-block w-full sm:w-auto text-center bg-black hover:bg-slate-800 text-white font-medium text-sm py-3 px-12 rounded-full transition-colors"
               >
                 Discover More
-              </a>
+              </Link>
             </div>
           </div>
         </div>

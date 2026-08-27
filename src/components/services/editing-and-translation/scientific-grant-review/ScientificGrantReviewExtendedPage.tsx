@@ -2,6 +2,7 @@
 "use client"
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Download } from 'lucide-react';
 
 export default function ScientificGrantReviewExtendedPage() {
@@ -113,13 +114,13 @@ export default function ScientificGrantReviewExtendedPage() {
                   <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                     {samplesData[activeTab].description}
                   </p>
-                  <button
-                    type="button"
+                  <Link
+                    href="/insights/sample-work"
                     className="inline-flex items-center space-x-2 bg-[#0c3830] hover:bg-[#082923] !text-white text-xs font-semibold py-2.5 px-5 rounded-md transition-colors cursor-pointer select-none"
                   >
                     <Download className="w-4 h-4" />
                     <span>DOWNLOAD SAMPLE</span>
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

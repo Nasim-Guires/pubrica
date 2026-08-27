@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export const SampleWorkShowcase: React.FC = () => {
@@ -21,9 +22,9 @@ export const SampleWorkShowcase: React.FC = () => {
             <h3 className="text-gray-900 font-extrabold text-lg md:text-xl tracking-tight leading-snug">
               Data Analytics and Machine Learning Services Sample Work
             </h3>
-            <button className="w-full sm:w-auto bg-black text-white text-xs font-bold tracking-wider px-8 py-2.5 rounded hover:bg-neutral-800 transition-colors uppercase">
+            <Link href="/insights/sample-work" className="inline-block w-full sm:w-auto text-center bg-black text-white text-xs font-bold tracking-wider px-8 py-2.5 rounded hover:bg-neutral-800 transition-colors uppercase">
               Discover More
-            </button>
+            </Link>
           </div>
 
           <div className="space-y-4">
@@ -39,9 +40,9 @@ export const SampleWorkShowcase: React.FC = () => {
                 strengthen academic, clinical, and business research outcomes.
               </p>
             </div>
-            <button className="w-full sm:w-auto bg-black text-white text-xs font-bold tracking-wider px-8 py-2.5 rounded hover:bg-neutral-800 transition-colors uppercase">
+            <Link href="/insights/sample-work" className="inline-block w-full sm:w-auto text-center bg-black text-white text-xs font-bold tracking-wider px-8 py-2.5 rounded hover:bg-neutral-800 transition-colors uppercase">
               Discover More
-            </button>
+            </Link>
           </div>
         </div>
       </div>

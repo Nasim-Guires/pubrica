@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   FiCheck,
   FiPlus,
@@ -208,9 +209,12 @@ export default function VideoAbstractFooterSections() {
             </div>
 
             {/* CTA Button */}
-            <button className="w-full sm:w-auto bg-[#0b3c3d] hover:bg-[#072829] text-white font-bold text-xs md:text-sm px-10 py-3 rounded-full transition-colors duration-300 shadow-sm">
+            <Link
+              href="/order-now"
+              className="inline-block w-full sm:w-auto text-center bg-[#0b3c3d] hover:bg-[#072829] text-white font-bold text-xs md:text-sm px-10 py-3 rounded-full transition-colors duration-300 shadow-sm"
+            >
               GET STARTED
-            </button>
+            </Link>
           </div>
         </div>
       </section>

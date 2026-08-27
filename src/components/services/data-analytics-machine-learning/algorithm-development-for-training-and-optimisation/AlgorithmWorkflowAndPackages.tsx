@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, ArrowDown, ArrowLeft } from "lucide-react";
 
 export default function AlgorithmWorkflowAndPackages() {
@@ -251,9 +252,9 @@ export default function AlgorithmWorkflowAndPackages() {
               <h3 className="text-lg md:text-xl font-bold text-[#1b3d36] mb-3">
                 Algorithm Development for Training and Optimisation Sample Work
               </h3>
-              <button className="bg-black hover:bg-gray-800 text-white text-xs font-semibold py-2.5 px-8 rounded-full transition-colors">
+              <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold py-2.5 px-8 rounded-full transition-colors">
                 Discover More
-              </button>
+              </Link>
             </div>
 
             <div>
@@ -263,9 +264,9 @@ export default function AlgorithmWorkflowAndPackages() {
               <p className="text-xs md:text-sm text-gray-700 leading-relaxed mb-4">
                 Explore our algorithm development sample work, meticulously designed to align with project-specific objectives, domain standards (e.g., ISO/IEC, GDPR, HIPAA), and research timelines, ensuring robust, ethical, and publication-ready outcomes.
               </p>
-              <button className="bg-black hover:bg-gray-800 text-white text-xs font-semibold py-2.5 px-8 rounded-full transition-colors">
+              <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold py-2.5 px-8 rounded-full transition-colors">
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -279,9 +280,9 @@ export default function AlgorithmWorkflowAndPackages() {
           </h2>
           <p className="text-gray-700 text-sm md:text-base leading-relaxed">
             At Pubrica, we provide comprehensive{" "}
-            <a href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-teal-700 underline font-medium">
+            <Link href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-teal-700 underline font-medium">
               Algorithm Development Services
-            </a>{" "}
+            </Link>{" "}
             tailored to meet the unique needs of researchers, healthcare professionals, and technology developers. Our packages are designed to ensure high-performance, scalable, and publication-ready algorithm solutions.
           </p>
         </div>

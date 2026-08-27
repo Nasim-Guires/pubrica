@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface PackageColumn {
   title: string;
@@ -104,9 +105,9 @@ export const ResearchPackagesSection: React.FC<ResearchPackagesProps> = ({
           </h2>
           <p className="text-gray-700 text-[15px] leading-relaxed max-w-5xl mx-auto">
             {description.split("research service")[0]}
-            <a href="/services/research-services" className="text-[#3b82f6] hover:underline">
+            <Link href="/services/research-services" className="text-[#3b82f6] hover:underline">
               research service
-            </a>
+            </Link>
             {description.split("research service")[1]}
           </p>
         </div>

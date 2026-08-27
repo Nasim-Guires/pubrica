@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // --- Interface Definitions ---
 interface StepItem {
@@ -315,12 +316,12 @@ export const ProcessAndComplianceSection: React.FC = () => {
                 <h3 className="text-xl font-bold text-slate-800">
                   Interpretation, Reporting and Visualisation Sample Work
                 </h3>
-                <button 
-                  type="button"
-                  className="px-8 py-2.5 bg-black hover:bg-slate-800 text-white font-medium text-xs rounded-full transition-colors duration-200"
+                <Link
+                  href="/insights/sample-work"
+                  className="inline-block px-8 py-2.5 bg-black hover:bg-slate-800 text-white font-medium text-xs rounded-full transition-colors duration-200"
                 >
                   Discover More
-                </button>
+                </Link>
               </div>
 
               <div className="space-y-3 pt-2">
@@ -331,12 +332,12 @@ export const ProcessAndComplianceSection: React.FC = () => {
                   Explore our interpretation, reporting, and visualisation sample work, meticulously crafted to adhere to journal-specific formatting guidelines, robust methodological standards (e.g., PRISMA, CONSORT, STROBE), and project timelines, ensuring accurate, publication-ready, and visually compelling insights for research, clinical, or business applications.
                 </p>
                 <div className="pt-1">
-                  <button 
-                    type="button"
-                    className="px-8 py-2.5 bg-black hover:bg-slate-800 text-white font-medium text-xs rounded-full transition-colors duration-200"
+                  <Link
+                    href="/insights/sample-work"
+                    className="inline-block px-8 py-2.5 bg-black hover:bg-slate-800 text-white font-medium text-xs rounded-full transition-colors duration-200"
                   >
                     Discover More
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

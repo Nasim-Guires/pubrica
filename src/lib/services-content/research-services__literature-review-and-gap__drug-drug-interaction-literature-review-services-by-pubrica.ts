@@ -34,9 +34,9 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   {
     "type": "ul",
     "items": [
-      "[01. Standard Editing](javascript:void(0);)",
-      "[02. Premium Editing](javascript:void(0);)",
-      "[03. Advanced Editing](javascript:void(0);)"
+      "01. Standard Editing",
+      "02. Premium Editing",
+      "03. Advanced Editing"
     ]
   },
   {
