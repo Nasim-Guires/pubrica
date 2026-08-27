@@ -4,11 +4,8 @@ import * as Icons from "lucide-react";
 import { constructMetadata } from "@/lib/metadata";
 import Container from "@/components/common/Container";
 import Breadcrumb from "@/components/seo/Breadcrumb";
-import CTA from "@/components/shared/CTA";
-import FAQ from "@/components/shared/FAQ";
 import Image from "next/image";
 
-// Corrected services array mapping cleanly to `/services/{slug}`
 const LOCAL_SERVICES_DATA = [
   {
     title: "Editing Service",
@@ -106,31 +103,30 @@ export const metadata = constructMetadata({
 export default function ServicesPage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Services", href: "/services" }]} />
 
       {/* Hero Banner Section */}
       <section
-        className="relative bg-gray-900 text-white py-20 bg-cover bg-center bg-no-repeat"
+        className="relative bg-gray-900 text-white py-24 bg-cover bg-center bg-no-repeat font-poppins"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80')`,
         }}
       >
         <Container className="max-w-7xl text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-wide text-white font-display">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white font-poppins">
             Our Research Solutions
           </h1>
         </Container>
       </section>
 
       {/* Main Content & Services Section */}
-      <section className="bg-[#fcfcfc] py-16">
-        <Container>
+      <section className="bg-white py-16 font-poppins">
+        <Container className="max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Section Introduction Header */}
-          <div className="max-w-5xl mb-14">
-            <h2 className="text-xl sm:text-2xl font-bold text-gray-800 font-display">
+          <div className="max-w-4xl mb-12">
+            <h2 className="text-[22px] sm:text-[24px] font-bold text-[#1f2937] font-poppins leading-tight">
               Gamut of services: writing, editing, publishing and more…
             </h2>
-            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-sans mt-4 max-w-5xl">
+            <p className="text-[16px] text-[#4b5563] leading-relaxed font-poppins mt-4">
               We offer an array of services, including scientific and medical
               writing, editing, peer-reviewing, and data collection and analysis
               services that cover academic, scientific, regulatory business,
@@ -138,40 +134,40 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          {/* Overlapping Content Box Cards Layout Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14 mt-8">
+          {/* Service Cards Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {LOCAL_SERVICES_DATA.map((service, index) => (
               <Link
                 key={`${service.slug}-${index}`}
                 href={`/services/${service.slug}`}
-                className="flex flex-col bg-white border border-gray-100 rounded-lg shadow-sm overflow-hidden border-b-4 border-b-emerald-600 hover:shadow-md transition-all duration-300 group"
+                className="flex flex-col bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 group"
               >
                 {/* Visual Header Thumbnail */}
-                <div className="h-44 w-full overflow-hidden bg-gray-100">
+                <div className="h-56 w-full overflow-hidden bg-gray-100 relative">
                   <Image
                     src={service.imageUrl}
                     alt={service.title}
                     width={400}
-                    height={176}
+                    height={224}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
 
-                {/* Overlapping White Label Card */}
-                <div className="relative -mt-6 mx-4 bg-white rounded-t-xl pt-5 px-4 pb-6 flex-1 flex flex-col justify-between">
+                {/* Overlapping White Content Card */}
+                <div className="relative -mt-12 mx-3 bg-white rounded-t-lg pt-5 px-5 pb-6 flex-1 flex flex-col justify-between border-b-2 border-emerald-600 shadow-sm">
                   <div>
                     {/* Circle Icon and Title Row */}
-                    <div className="flex items-center gap-2 text-[#1a4f6e] group-hover:text-emerald-700 transition-colors duration-200">
-                      <div className="bg-[#1a4f6e] group-hover:bg-emerald-700 p-0.5 rounded-full flex items-center justify-center transition-colors duration-200">
-                        <Icons.ChevronRight className="h-3 w-3 text-white stroke-[3]" />
+                    <div className="flex items-center gap-2.5">
+                      <div className="bg-[#1f4e5b] text-white p-0.5 rounded-full flex items-center justify-center shrink-0">
+                        <Icons.ChevronRight className="h-4 w-4 stroke-[3]" />
                       </div>
-                      <h3 className="text-sm font-bold tracking-tight font-display">
+                      <h3 className="text-[18px] font-bold text-[#1f4e5b] font-poppins tracking-tight">
                         {service.title}
                       </h3>
                     </div>
 
-                    {/* Excerpt Copy */}
-                    <p className="text-xs text-gray-500 leading-relaxed font-sans mt-3">
+                    {/* Excerpt Copy (Explicitly set to 16px font size) */}
+                    <p className="text-[16px] text-[#4b5563] leading-relaxed font-poppins mt-4">
                       {service.shortDescription}
                     </p>
                   </div>

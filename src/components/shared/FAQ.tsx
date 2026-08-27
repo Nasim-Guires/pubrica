@@ -22,18 +22,20 @@ export default function FAQ({
   }));
 
   return (
-    <section className="bg-white py-20 border-t border-gray-100">
-      <Container className="max-w-4xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 font-display">
+    <section className="bg-white py-12 sm:py-20 border-t border-gray-100 font-poppins">
+      <Container className="max-w-4xl px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 font-poppins break-words">
             {title}
           </h2>
-          <p className="text-base text-gray-600 leading-relaxed font-sans max-w-xl mx-auto mt-3">
+          <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-poppins max-w-xl mx-auto mt-3 break-words">
             {description}
           </p>
         </div>
 
-        <Accordion items={accordionItems} />
+        <div className="w-full overflow-hidden break-words font-poppins">
+          <Accordion items={accordionItems} />
+        </div>
       </Container>
     </section>
   );

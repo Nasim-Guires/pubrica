@@ -232,21 +232,21 @@ export default function TherapeuticAndWorkflow() {
       </section>
 
       {/* SECTION 3: FOOTER ACCELERATION BAR */}
-      <div className="w-full bg-[#022e1b] py-6 px-4 text-white">
-        <div className="max-w-5xl mx-auto flex flex-row items-center justify-center gap-8 md:gap-10">
+      <div className="w-full bg-[#022e1b] py-8 px-4 text-white font-['Poppins',sans-serif]">
+        <div className="max-w-6xl mx-auto flex flex-row items-center justify-center gap-8 md:gap-12">
           <div className="flex-shrink-0 flex items-center justify-center">
             <img
               src="/images/publication-support/Satisfaction_Guarantee.webp"
               alt="100% Satisfaction Guarantee"
-              className="w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 object-contain"
+              className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 object-contain"
             />
           </div>
 
-          <div className="flex-1 text-left max-w-xl">
-            <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1.5 leading-tight">
+          <div className="flex-1 text-left max-w-2xl">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2.5 leading-tight">
               Speed up your journey to publication with Pubrica
             </h3>
-            <p className="text-slate-200 text-xs sm:text-sm leading-relaxed font-normal">
+            <p className="text-slate-200 text-base leading-relaxed font-normal">
               Gain access to your assistant who will expertly guide you through
               intricate journal submission processes, shielding you from rejection
               and ensuring a faster path to getting your work published.

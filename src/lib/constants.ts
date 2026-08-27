@@ -413,192 +413,599 @@ export const GENERAL_FAQS = [
 //   { href: "/insights", label: "Insights" },
 //   { href: "/contact", label: "Contact" },
 // ];
+// export const NAV_LINKS = [
+//   {
+//     href: "/services",
+//     label: "Services",
+//     dropdown: [
+//       {
+//         href: "/services/research-services/product-development",
+//         label: "Discovery & Intelligence Service",
+//       },
+//       {
+//         href: "/services/publication-support",
+//         label: "Publication Support",
+//         children: [
+//           {
+//             href: "/services/publication-support/journal-selection",
+//             label: "Journal Selection",
+//           },
+//           {
+//             href: "/services/publication-support/peer-review-pre-submission",
+//             label: "Pre-Submission Peer Review",
+//           },
+//           {
+//             href: "/services/publication-support/journal-submission",
+//             label: "Journal Submission",
+//           },
+//           {
+//             href: "/services/publication-support/responding-to-reviewers",
+//             label: "Response To Reviewers",
+//           },
+//           {
+//             href: "/services/publication-support/poster-preparation",
+//             label: "Poster Creation & Design",
+//           },
+//           {
+//             href: "/services/publication-support/journal-manuscript-formatting-services",
+//             label: "Formatting Service",
+//           },
+//           {
+//             href: "/services/publication-support/art-work-preparation",
+//             label: "Artwork Editing Service",
+//           },
+//           // {
+//           //   href: "/services/publication-support/peer-review-pre-submission",
+//           //   label: "Pre-Submission Peer Review",
+//           // },
+//           {
+//             href: "/services/publication-support/plagiarism-services",
+//             label: "Plagiarism services",
+//           },
+//           {
+//             href: "/services/publication-support/video-abstract",
+//             label: "Video Abstract",
+//           },
+//         ],
+//       },
+
+//       {
+//         href: "/services/editing-and-translation",
+//         label: "Editing & Translation",
+//         children: [
+//           {
+//             href: "/services/editing-and-translation/scientific-editing",
+//             label: "Scientific Editing",
+//           },
+//           {
+//             href: "/services/editing-and-translation/manuscript-editing",
+//             label: "Manuscript Editing",
+//           },
+//           {
+//             href: "/services/editing-and-translation/book-editing",
+//             label: "Book Editing",
+//           },
+//           {
+//             href: "/services/editing-and-translation/post-editing",
+//             label: "Post Editing",
+//           },
+//           // {
+//           //   href: "/services/editing-and-translation/scientific-grant-review",
+//           //   label: "Proofreading",
+//           // },
+//           {
+//             href: "/services/editing-and-translation/thesis-editing",
+//             label: "Thesis Editing",
+//           },
+//           {
+//             href: "/services/editing-and-translation/translation-with-editing",
+//             label: "Translation with Editing",
+//           },
+//           {
+//             href: "/services/editing-and-translation/proofreading",
+//             label: "Proofreading",
+//           },
+//         ],
+//       },
+
+//       {
+//         href: "/services/research-services",
+//         label: "Research Services",
+//         children: [
+//           {
+//             href: "/services/research-services/systematic-review",
+//             label: "Systematic Review",
+//           },
+//           {
+//             href: "/services/research-services/meta-analysis",
+//             label: "Meta Analysis",
+//           },
+//           {
+//             href: "/services/physician-writing-services/original-research-article",
+//             label: "Original Research Article",
+//           },
+//           {
+//             href: "/services/research-services/literature-review-and-gap",
+//             label: "Literature Review",
+//           },
+//           {
+//             href: "/services/research-services/grant-writing",
+//             label: "Grant writing services",
+//           },
+//           {
+//             href: "/services/research-services/biostatistics-and-statistical-programming-service",
+//             label: " Biostatistical Programming",
+//           },
+//           {
+//             href: "/services/research-services/experimental-design",
+//             label: "Experimental Design",
+//           },
+//         ],
+//       },
+//       {
+//         href: "/services/physician-writing-services",
+//         label: "Physician Writing",
+//         children: [
+//           {
+//             href: "/services/physician-writing-services/case-report",
+//             label: "Case Report",
+//           },
+//           {
+//             href: "/services/physician-writing-services/patient-education-content",
+//             label: "Patient Education Materials",
+//           },
+//           {
+//             href: "/services/physician-writing-services/literature-search-and-citation",
+//             label: "Literature Search & Citation",
+//           },
+//           {
+//             href: "/services/physician-writing-services/physician-manuscript",
+//             label: "Physician Manuscript",
+//           },
+//           {
+//             href: "/services/physician-writing-services/physician-training",
+//             label: "Physician Training",
+//           },
+//           {
+//             href: "/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine",
+//             label: "Clinical Literature Review",
+//           },
+//           {
+//             href: "/services/physician-writing-services/customized-writing",
+//             label: "Customized Writing",
+//           },
+//           {
+//             href: "/services/physician-writing-services/original-research-article",
+//             label: "Original Research Article",
+//           },
+//           {
+//             href: "/services/physician-writing-services/research-proposal",
+//             label: "Research Proposal",
+//           },
+//           // {
+//           //   href: "/services/physician-writing-services/patient-education-content",
+//           //   label: "Patient Education Content",
+//           // },
+//           // {
+//           //   href: "/services/physician-writing-services/patient-education-content",
+//           //   label: "Patient Education Content",
+//           // },
+//         ],
+//       },
+
+//       {
+//         href: "/services/data-analytics-machine-learning",
+//         label: "Statistical Analyses",
+//         children: [
+//           {
+//             href: "/services/research-services/biostatistics-and-statistical-programming-service",
+//             label: " Biostatistics",
+//           },
+//           {
+//             href: "/services/research-services/meta-analysis/",
+//             label: "Meta-analyses",
+//           },
+//           {
+//             href: "/services/bioinformatics",
+//             label: "Bioinformatics",
+//           },
+//         ]
+//       },
+
+//       {
+//         href: "/services/medical-data-collection",
+//         label: "Data Collection",
+//       },
+
+//       {
+//         href: "/services/ai-ml-support",
+//         label: "AI and ML Services",
+//         children: [
+//           {
+//             href: "/services/data-analytics-machine-learning/health-economics-outcome-research",
+//             label: "Health Economics",
+//           },
+//           {
+//             href: "/services/data-analytics-machine-learning/patient-journey-insights-machine-learning/",
+//             label: "Patient journey & Insights -ML",
+//           },
+//           {
+//             href: "/services/data-analytics-machine-learning/customer-segmentation",
+//             label: "Segmentation",
+//           },
+//           {
+//             href: "/services/data-analytics-machine-learning/predictive-analytics",
+//             label: "Predictive Analysis",
+//           },
+//           {
+//             href: "/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation",
+//             label: "Algorithm Development",
+//           },
+//           {
+//             href: "/services/data-analytics-machine-learning/interpretation-reporting-and-visualisation",
+//             label: "Interpretation & Visualisation",
+//           },
+//         ]
+//       },
+
+//       {
+//         href: "/services/medical-writing",
+//         label: "Medical Writing",
+//         children: [
+//           {
+//             href: "/services/research-services/scientific-writing",
+//             label: " Scientific Writing",
+//           },
+//           {
+//             href: "/services/medical-writing/regulatory-writing",
+//             label: "  Regulatory Writing",
+//           },
+//           {
+//             href: "/services/medical-writing/editorial-quality-support-service",
+//             label: " Editorial Quality Support Services",
+//           },
+//         ]
+//       },
+
+//       {
+//         href: "/services/research-impact",
+//         label: "Research Impact",
+//         children: [
+//           {
+//             href: "/services/publication-support/video-abstract",
+//             label: " Video Abstract",
+//           },
+//           {
+//             href: "/services/research-impact/graphical-abstract",
+//             label: " Graphical Abstract",
+//           },
+//           {
+//             href: "/services/publication-support/poster-preparation",
+//             label: " Poster Presentation",
+//           },
+//           {
+//             href: "/services/research-impact/scientific-news-report",
+//             label: " Scientific News Report",
+//           },
+//           {
+//             href: "/services/research-impact/simplified-abstract-services",
+//             label: " Simplified Abstract",
+//           },
+//         ]
+//       },
+
+//       {
+//         href: "/services/scientific-communication",
+//         label: "Medical & Scientific Communication",
+//         children: [
+//           {
+//             href: "/services/continuing-medical-education-cme-content-development",
+//             label: "CME",
+//           },
+//           {
+//             href: "/services/data-analytics-machine-learning/thought-leadership-content-editorial-design",
+//             label: "Leadership Content",
+//           },
+//           {
+//             href: "/services/marketing-communication-content-development-service",
+//             label: "Marketing Communication",
+//           },
+//         ]
+//       },
+
+//       {
+//         href: "/services/medico-legal-support-services",
+//         label: "Medico Legal Services",
+//       },
+
+//       {
+//         href: "/services/educational-content-development",
+//         label: "Educational Content",
+//       },
+
+//       {
+//         href: "/services/academic-editorial-services",
+//         label: "Academic Editorial Services",
+//         children: [
+//           {
+//             href: "/services/academic-editorial-services/copy-editing-services",
+//             label: " Copy Editing Service",
+//           },
+//           {
+//             href: "/services/academic-editorial-services/visual-and-accessibility-editing-services",
+//             label: " Visual & Accessibility Editing",
+//           },
+//           {
+//             href: "/services/academic-editorial-services/forensic-and-quality-audit-service",
+//             label: " Forensic & Quality Audit",
+//           },
+//           {
+//             href: "/services/academic-editorial-services/revisioning-and-localisation-service",
+//             label: "Revisioning and Localisation",
+//           },
+//           {
+//             href: "/services/academic-editorial-services/permission-and-metadata-services",
+//             label: "Permission and Metadata",
+//           },
+//           {
+//             href: "/services/academic-editorial-services/development-editing-service",
+//             label: "Development Editing Services",
+//           },
+//         ]
+//       },
+//       {
+//         href: "/services/education-editorial-service",
+//         label: "Educational Editorial Service",
+//         children: [
+//           {
+//             href: "/services/education-editorial-service/accessibility-compliance",
+//             label: " Accessibility Compliance",
+//           },
+//           {
+//             href: "/services/education-editorial-service/learning-design-and-pedagogy",
+//             label: " Learning Design and Pedagogy",
+//           },
+//           {
+//             href: "/services/education-editorial-service/ai-and-data-preparation-services",
+//             label: " AI and Data Preparation",
+//           },
+//           {
+//             href: "/services/education-editorial-service/digital-production-qa-services",
+//             label: " Digital Production QA Services",
+//           },
+//           {
+//             href: "/services/education-editorial-service/assessment-and-exam-review-services",
+//             label: " Assessment and Exam Review",
+//           },
+//         ]
+//       },
+
+//     ],
+//   },
+// //here now
+//   {
+//     href: "/industries",
+//     label: "Industries",
+//   },
+
+//   {
+//     href: "/subject-matter-experts",
+//     label: "Subjects",
+//   },
+
+//   {
+//     href: "/about-us",
+//     label: "About Us",
+//     dropdown: [
+//       {
+//         href: "/quality",
+//         label: "Our Quality",
+//       },
+//     ]
+//   },
+
+//   {
+//     href: "/academy",
+//     label: "Academy",
+//   },
+
+//   {
+//     href: "/insights",
+//     label: "Insights",
+//   },
+
+//   {
+//     href: "/contact-us",
+//     label: "Contact Us",
+//   },
+// ];
+
 export const NAV_LINKS = [
   {
-    href: "/services",
+    href: "/services/",
     label: "Services",
     dropdown: [
       {
-        href: "/services/research-services/product-development",
+        href: "/services/research-services/product-development/",
         label: "Discovery & Intelligence Service",
       },
       {
-        href: "/services/publication-support",
+        href: "/services/publication-support/",
         label: "Publication Support",
         children: [
           {
-            href: "/services/publication-support/journal-selection",
+            href: "/services/publication-support/journal-selection/",
             label: "Journal Selection",
           },
           {
-            href: "/services/publication-support/peer-review-pre-submission",
+            href: "/services/publication-support/peer-review-pre-submission/",
             label: "Pre-Submission Peer Review",
           },
           {
-            href: "/services/publication-support/journal-submission",
+            href: "/services/publication-support/journal-submission/",
             label: "Journal Submission",
           },
           {
-            href: "/services/publication-support/responding-to-reviewers",
+            href: "/services/publication-support/responding-to-reviewers/",
             label: "Response To Reviewers",
           },
           {
-            href: "/services/publication-support/poster-preparation",
+            href: "/services/publication-support/poster-preparation/",
             label: "Poster Creation & Design",
           },
           {
-            href: "/services/publication-support/journal-manuscript-formatting-services",
+            href: "/services/publication-support/journal-manuscript-formatting-services/",
             label: "Formatting Service",
           },
           {
-            href: "/services/publication-support/art-work-preparation",
+            href: "/services/publication-support/art-work-preparation/",
             label: "Artwork Editing Service",
           },
           // {
-          //   href: "/services/publication-support/peer-review-pre-submission",
+          //   href: "/services/publication-support/peer-review-pre-submission/",
           //   label: "Pre-Submission Peer Review",
           // },
           {
-            href: "/services/publication-support/plagiarism-services",
+            href: "/services/publication-support/plagiarism-services/",
             label: "Plagiarism services",
           },
           {
-            href: "/services/publication-support/video-abstract",
+            href: "/services/publication-support/video-abstract/",
             label: "Video Abstract",
           },
         ],
       },
 
       {
-        href: "/services/editing-and-translation",
+        href: "/services/editing-and-translation/",
         label: "Editing & Translation",
         children: [
           {
-            href: "/services/editing-and-translation/scientific-editing",
+            href: "/services/editing-and-translation/scientific-editing/",
             label: "Scientific Editing",
           },
           {
-            href: "/services/editing-and-translation/manuscript-editing",
+            href: "/services/editing-and-translation/manuscript-editing/",
             label: "Manuscript Editing",
           },
           {
-            href: "/services/editing-and-translation/book-editing",
+            href: "/services/editing-and-translation/book-editing/",
             label: "Book Editing",
           },
           {
-            href: "/services/editing-and-translation/post-editing",
+            href: "/services/editing-and-translation/post-editing/",
             label: "Post Editing",
           },
           // {
-          //   href: "/services/editing-and-translation/scientific-grant-review",
+          //   href: "/services/editing-and-translation/scientific-grant-review/",
           //   label: "Proofreading",
           // },
           {
-            href: "/services/editing-and-translation/thesis-editing",
+            href: "/services/editing-and-translation/thesis-editing/",
             label: "Thesis Editing",
           },
           {
-            href: "/services/editing-and-translation/translation-with-editing",
+            href: "/services/editing-and-translation/translation-with-editing/",
             label: "Translation with Editing",
           },
           {
-            href: "/services/editing-and-translation/proofreading",
+            href: "/services/editing-and-translation/proofreading/",
             label: "Proofreading",
           },
         ],
       },
 
       {
-        href: "/services/research-services",
+        href: "/services/research-services/",
         label: "Research Services",
         children: [
           {
-            href: "/services/research-services/systematic-review",
+            href: "/services/research-services/systematic-review/",
             label: "Systematic Review",
           },
           {
-            href: "/services/research-services/meta-analysis",
+            href: "/services/research-services/meta-analysis/",
             label: "Meta Analysis",
           },
           {
-            href: "/services/physician-writing-services/original-research-article",
+            href: "/services/physician-writing-services/original-research-article/",
             label: "Original Research Article",
           },
           {
-            href: "/services/research-services/literature-review-and-gap",
+            href: "/services/research-services/literature-review-and-gap/",
             label: "Literature Review",
           },
           {
-            href: "/services/research-services/grant-writing",
+            href: "/services/research-services/grant-writing/",
             label: "Grant writing services",
           },
           {
-            href: "/services/research-services/biostatistics-and-statistical-programming-service",
+            href: "/services/research-services/biostatistics-and-statistical-programming-service/",
             label: " Biostatistical Programming",
           },
           {
-            href: "/services/research-services/experimental-design",
+            href: "/services/research-services/experimental-design/",
             label: "Experimental Design",
           },
         ],
       },
       {
-        href: "/services/physician-writing-services",
+        href: "/services/physician-writing-services/",
         label: "Physician Writing",
         children: [
           {
-            href: "/services/physician-writing-services/case-report",
+            href: "/services/physician-writing-services/case-report/",
             label: "Case Report",
           },
           {
-            href: "/services/physician-writing-services/patient-education-content",
+            href: "/services/physician-writing-services/patient-education-content/",
             label: "Patient Education Materials",
           },
           {
-            href: "/services/physician-writing-services/literature-search-and-citation",
+            href: "/services/physician-writing-services/literature-search-and-citation/",
             label: "Literature Search & Citation",
           },
           {
-            href: "/services/physician-writing-services/physician-manuscript",
+            href: "/services/physician-writing-services/physician-manuscript/",
             label: "Physician Manuscript",
           },
           {
-            href: "/services/physician-writing-services/physician-training",
+            href: "/services/physician-writing-services/physician-training/",
             label: "Physician Training",
           },
           {
-            href: "/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine",
+            href: "/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/",
             label: "Clinical Literature Review",
           },
           {
-            href: "/services/physician-writing-services/customized-writing",
+            href: "/services/physician-writing-services/customized-writing/",
             label: "Customized Writing",
           },
           {
-            href: "/services/physician-writing-services/original-research-article",
+            href: "/services/physician-writing-services/original-research-article/",
             label: "Original Research Article",
           },
           {
-            href: "/services/physician-writing-services/research-proposal",
+            href: "/services/physician-writing-services/research-proposal/",
             label: "Research Proposal",
           },
           // {
-          //   href: "/services/physician-writing-services/patient-education-content",
+          //   href: "/services/physician-writing-services/patient-education-content/",
           //   label: "Patient Education Content",
           // },
           // {
-          //   href: "/services/physician-writing-services/patient-education-content",
+          //   href: "/services/physician-writing-services/patient-education-content/",
           //   label: "Patient Education Content",
           // },
         ],
       },
 
       {
-        href: "/services/data-analytics-machine-learning",
+        href: "/services/data-analytics-machine-learning/",
         label: "Statistical Analyses",
         children: [
           {
-            href: "/services/research-services/biostatistics-and-statistical-programming-service",
+            href: "/services/research-services/biostatistics-and-statistical-programming-service/",
             label: " Biostatistics",
           },
           {
@@ -606,23 +1013,23 @@ export const NAV_LINKS = [
             label: "Meta-analyses",
           },
           {
-            href: "/services/bioinformatics",
+            href: "/services/bioinformatics/",
             label: "Bioinformatics",
           },
-        ]
+        ],
       },
 
       {
-        href: "/services/medical-data-collection",
+        href: "/services/medical-data-collection/",
         label: "Data Collection",
       },
 
       {
-        href: "/services/ai-ml-support",
+        href: "/services/ai-ml-support/",
         label: "AI and ML Services",
         children: [
           {
-            href: "/services/data-analytics-machine-learning/health-economics-outcome-research",
+            href: "/services/data-analytics-machine-learning/health-economics-outcome-research/",
             label: "Health Economics",
           },
           {
@@ -630,195 +1037,194 @@ export const NAV_LINKS = [
             label: "Patient journey & Insights -ML",
           },
           {
-            href: "/services/data-analytics-machine-learning/customer-segmentation",
+            href: "/services/data-analytics-machine-learning/customer-segmentation/",
             label: "Segmentation",
           },
           {
-            href: "/services/data-analytics-machine-learning/predictive-analytics",
+            href: "/services/data-analytics-machine-learning/predictive-analytics/",
             label: "Predictive Analysis",
           },
           {
-            href: "/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation",
+            href: "/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/",
             label: "Algorithm Development",
           },
           {
-            href: "/services/data-analytics-machine-learning/interpretation-reporting-and-visualisation",
+            href: "/services/data-analytics-machine-learning/interpretation-reporting-and-visualisation/",
             label: "Interpretation & Visualisation",
           },
-        ]
+        ],
       },
 
       {
-        href: "/services/medical-writing",
+        href: "/services/medical-writing/",
         label: "Medical Writing",
         children: [
           {
-            href: "/services/research-services/scientific-writing",
+            href: "/services/research-services/scientific-writing/",
             label: " Scientific Writing",
           },
           {
-            href: "/services/medical-writing/regulatory-writing",
+            href: "/services/medical-writing/regulatory-writing/",
             label: "  Regulatory Writing",
           },
           {
-            href: "/services/medical-writing/editorial-quality-support-service",
+            href: "/services/medical-writing/editorial-quality-support-service/",
             label: " Editorial Quality Support Services",
           },
-        ]
+        ],
       },
 
       {
-        href: "/services/research-impact",
+        href: "/services/research-impact/",
         label: "Research Impact",
         children: [
           {
-            href: "/services/publication-support/video-abstract",
+            href: "/services/publication-support/video-abstract/",
             label: " Video Abstract",
           },
           {
-            href: "/services/research-impact/graphical-abstract",
+            href: "/services/research-impact/graphical-abstract/",
             label: " Graphical Abstract",
           },
           {
-            href: "/services/publication-support/poster-preparation",
+            href: "/services/publication-support/poster-preparation/",
             label: " Poster Presentation",
           },
           {
-            href: "/services/research-impact/scientific-news-report",
+            href: "/services/research-impact/scientific-news-report/",
             label: " Scientific News Report",
           },
           {
-            href: "/services/research-impact/simplified-abstract-services",
+            href: "/services/research-impact/simplified-abstract-services/",
             label: " Simplified Abstract",
           },
-        ]
+        ],
       },
 
       {
-        href: "/services/scientific-communication",
+        href: "/services/scientific-communication/",
         label: "Medical & Scientific Communication",
         children: [
           {
-            href: "/services/continuing-medical-education-cme-content-development",
+            href: "/services/continuing-medical-education-cme-content-development/",
             label: "CME",
           },
           {
-            href: "/services/data-analytics-machine-learning/thought-leadership-content-editorial-design",
+            href: "/services/data-analytics-machine-learning/thought-leadership-content-editorial-design/",
             label: "Leadership Content",
           },
           {
-            href: "/services/marketing-communication-content-development-service",
+            href: "/services/marketing-communication-content-development-service/",
             label: "Marketing Communication",
           },
-        ]
+        ],
       },
 
       {
-        href: "/services/medico-legal-support-services",
+        href: "/services/medico-legal-support-services/",
         label: "Medico Legal Services",
       },
 
       {
-        href: "/services/educational-content-development",
+        href: "/services/educational-content-development/",
         label: "Educational Content",
       },
 
       {
-        href: "/services/academic-editorial-services",
+        href: "/services/academic-editorial-services/",
         label: "Academic Editorial Services",
         children: [
           {
-            href: "/services/academic-editorial-services/copy-editing-services",
+            href: "/services/academic-editorial-services/copy-editing-services/",
             label: " Copy Editing Service",
           },
           {
-            href: "/services/academic-editorial-services/visual-and-accessibility-editing-services",
+            href: "/services/academic-editorial-services/visual-and-accessibility-editing-services/",
             label: " Visual & Accessibility Editing",
           },
           {
-            href: "/services/academic-editorial-services/forensic-and-quality-audit-service",
+            href: "/services/academic-editorial-services/forensic-and-quality-audit-service/",
             label: " Forensic & Quality Audit",
           },
           {
-            href: "/services/academic-editorial-services/revisioning-and-localisation-service",
+            href: "/services/academic-editorial-services/revisioning-and-localisation-service/",
             label: "Revisioning and Localisation",
           },
           {
-            href: "/services/academic-editorial-services/permission-and-metadata-services",
+            href: "/services/academic-editorial-services/permission-and-metadata-services/",
             label: "Permission and Metadata",
           },
           {
-            href: "/services/academic-editorial-services/development-editing-service",
+            href: "/services/academic-editorial-services/development-editing-service/",
             label: "Development Editing Services",
           },
-        ]
+        ],
       },
       {
-        href: "/services/education-editorial-service",
+        href: "/services/education-editorial-service/",
         label: "Educational Editorial Service",
         children: [
           {
-            href: "/services/education-editorial-service/accessibility-compliance",
+            href: "/services/education-editorial-service/accessibility-compliance/",
             label: " Accessibility Compliance",
           },
           {
-            href: "/services/education-editorial-service/learning-design-and-pedagogy",
+            href: "/services/education-editorial-service/learning-design-and-pedagogy/",
             label: " Learning Design and Pedagogy",
           },
           {
-            href: "/services/education-editorial-service/ai-and-data-preparation-services",
+            href: "/services/education-editorial-service/ai-and-data-preparation-services/",
             label: " AI and Data Preparation",
           },
           {
-            href: "/services/education-editorial-service/digital-production-qa-services",
+            href: "/services/education-editorial-service/digital-production-qa-services/",
             label: " Digital Production QA Services",
           },
           {
-            href: "/services/education-editorial-service/assessment-and-exam-review-services",
+            href: "/services/education-editorial-service/assessment-and-exam-review-services/",
             label: " Assessment and Exam Review",
           },
-        ]
+        ],
       },
-
     ],
   },
-//here now
   {
-    href: "/industries",
+    href: "/industries/",
     label: "Industries",
   },
 
   {
-    href: "/subject-matter-experts",
+    href: "/subject-matter-experts/",
     label: "Subjects",
   },
 
   {
-    href: "/about-us",
+    href: "/about-us/",
     label: "About Us",
     dropdown: [
       {
-        href: "/quality",
+        href: "/quality/",
         label: "Our Quality",
       },
-    ]
+    ],
   },
 
   {
-    href: "/academy",
+    href: "/academy/",
     label: "Academy",
   },
 
   {
-    href: "/insights",
+    href: "/insights/",
     label: "Insights",
   },
 
   {
-    href: "/contact-us",
+    href: "/contact-us/",
     label: "Contact Us",
   },
 ];
+
 export const FOOTER_LINKS = {
   services: [
     { href: "/services/medical-writing", label: "Medical Writing" },

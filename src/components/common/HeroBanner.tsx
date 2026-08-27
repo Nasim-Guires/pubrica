@@ -1,4 +1,11 @@
 import React from 'react';
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700'],
+    variable: '--font-poppins',
+});
 
 interface BannerProps {
     title?: string;
@@ -20,16 +27,18 @@ export const HeroBanner: React.FC<BannerProps> = ({
     return (
         <section
             aria-label={title || 'Section Banner'}
-            className={`w-full bg-gradient-to-r from-[#1b2526] via-[#2c3d3e] to-[#1b2526] py-16 px-4 md:px-8 text-white ${className}`}
+            className={`w-full bg-gradient-to-r from-[#1b2526] via-[#2c3d3e] to-[#1b2526] py-16 px-4 md:px-8 text-white ${poppins.className} ${className}`}
         >
             <div className="max-w-6xl mx-auto border border-white/60 p-8 md:p-12 text-center shadow-lg">
                 {title && (
+                    /* Heading: 24px on mobile, 30px on tablet, 36px on desktop (all > 16px) */
                     <HeadingElement className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide mb-4 text-white">
                         {title}
                     </HeadingElement>
                 )}
                 {description && (
-                    <p className="text-sm md:text-base lg:text-lg leading-relaxed text-gray-200 max-w-5xl mx-auto">
+                    /* Description: Exactly 16px across all screens */
+                    <p className="text-base leading-relaxed text-gray-200 max-w-5xl mx-auto font-normal">
                         {description}
                     </p>
                 )}

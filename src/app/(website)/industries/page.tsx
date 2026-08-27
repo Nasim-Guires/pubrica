@@ -1,9 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Poppins } from "next/font/google";
 import Container from "@/components/common/Container";
 import Breadcrumb from "@/components/seo/Breadcrumb";
 import { constructMetadata } from "@/lib/metadata";
+import HeroBanner from "@/components/common/HeroBanner";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
 
 export const metadata = constructMetadata({
   title: "Industries | Medical Research, Writing, Editing & Publishing",
@@ -81,59 +89,48 @@ const INDUSTRIES = [
 
 export default function IndustryPage() {
   return (
-    <>
-      <header aria-label="Breadcrumb Navigation" className="bg-white py-2">
-        <Breadcrumb items={[{ label: "Industries", href: "/industries" }]} />
-      </header>
-
-      <main className="bg-gray-100 min-h-screen pb-24">
-        <section
-          className="bg-gradient-to-r from-[#172b26] via-[#1f3831] to-[#172b26] py-16 px-4 border-b border-emerald-900/20"
-          aria-labelledby="hero-heading"
-        >
-          <div className="max-w-5xl mx-auto border border-gray-400/40 p-8 text-center rounded-sm backdrop-blur-xs">
-            <h1
-              id="hero-heading"
-              className="text-white text-2xl md:text-3xl font-bold tracking-wide mb-3 font-display"
-            >
-              End-to-end scientific &amp; medical Industries
-            </h1>
-            <p className="text-gray-300 text-sm md:text-base font-medium font-sans">
-              Gamut of services: Medical Device, Nutraceuticals, Pharmaceutical
-              and more...
-            </p>
-          </div>
-        </section>
+    <div className={poppins.className}>
+      <main className="bg-[#f2f4f7] min-h-screen pb-24 font-sans">
+        <HeroBanner
+          title="End-to-end scientific & medical Industries"
+          description="Gamut of services: Medical Device, Nutraceuticals, Pharmaceutical and more..."
+          headingAs="h1"
+        />
 
         <section className="mt-12" aria-label="Our Core Industries">
           <Container className="max-w-6xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {INDUSTRIES.map((industry) => {
                 return (
                   <article
                     key={industry.title}
-                    className="bg-white rounded-md p-8 shadow-xs border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:shadow-md group"
+                    className="bg-white rounded-lg p-8 shadow-sm flex flex-col items-center text-center transition-all duration-300 hover:shadow-md group border border-transparent hover:border-gray-200"
                   >
-                    <div className="w-20 h-20 rounded-full border-2 border-gray-500/60 flex items-center justify-center p-4 mb-5 group-hover:border-emerald-600 transition-colors relative overflow-hidden">
+                    {/* Clean Icon Container with NO border classes */}
+                    <div className="w-24 h-24 flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-105">
                       <Image
                         src={industry.iconSrc}
                         alt={`${industry.title} icon`}
-                        width={48}
-                        height={48}
-                        className="object-contain"
+                        width={96}
+                        height={96}
+                        className="object-contain w-full h-full"
                       />
                     </div>
 
-                    <h2 className="text-gray-900 font-bold text-lg mb-3 tracking-tight font-display">
+                    {/* Heading (> 16px) */}
+                    <h2 className="text-black font-bold text-xl mb-3 tracking-tight">
                       {industry.title}
                     </h2>
-                    <p className="text-gray-500 text-sm leading-relaxed mb-6 font-sans flex-grow">
+
+                    {/* Description (Exactly 16px) */}
+                    <p className="text-[#666666] text-base leading-relaxed mb-8 flex-grow max-w-xs font-normal">
                       {industry.description}
                     </p>
 
+                    {/* Action Link */}
                     <Link
                       href={industry.href}
-                      className="text-gray-900 font-bold text-sm tracking-wide border-b-2 border-transparent hover:border-emerald-600 transition-all font-sans"
+                      className="text-black font-bold text-base hover:text-emerald-700 transition-colors inline-block"
                     >
                       Read More
                     </Link>
@@ -144,6 +141,6 @@ export default function IndustryPage() {
           </Container>
         </section>
       </main>
-    </>
+    </div>
   );
 }

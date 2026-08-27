@@ -1,7 +1,6 @@
-"use client"
+"use client";
 
-
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ChevronLeft,
   ChevronRight,
@@ -17,7 +16,6 @@ import Link from "next/link";
 import CommonFAQ from "@/components/common/FAQ";
 
 export default function PubricaResourceHub() {
-
   // --- TESTIMONIALS DATA ---
   const testimonials = [
     {
@@ -26,10 +24,7 @@ export default function PubricaResourceHub() {
         "I was overwhelmed with reviewer comments, but Pubrica's scientific experts helped draft precise, evidence-backed responses that led to final acceptance.",
       author: "DR. R. PATEL",
       role: "Postdoctoral Fellow, Pharmacology",
-      journalName: "CLINICAL PROBLEM-SOLVING",
-      journalSub: "The New England Journal of Medicine",
-      image:
-        "/images/publication-support/scropt-2.jpg",
+      image: "/images/publication-support/scropt-2.jpg",
     },
     {
       id: 2,
@@ -37,10 +32,7 @@ export default function PubricaResourceHub() {
         "From the login to uploading a file and entering metadata, Pubrica handled the submission process seamlessly. Their support was timely and accurate.",
       author: "DR. M. THOMAS",
       role: "Research Scientist, Public Health",
-      journalName: "CLINICAL PRACTICE",
-      journalSub: "The New England Journal of Medicine",
-      image:
-        "/images/publication-support/book-01.jpg",
+      image: "/images/publication-support/book-01.jpg",
     },
     {
       id: 3,
@@ -48,20 +40,26 @@ export default function PubricaResourceHub() {
         "Pubrica helped me shortlist the most suitable journals aligned with my manuscript's scope. Their detailed recommendations saved me weeks of research.",
       author: "DR. ANANYA RAO",
       role: "Assistant Professor, Life Sciences",
-      journalName: "JOURNAL SELECTION",
-      journalSub: "Pubrica Publication Support",
-      image:
-        "/images/publication-support/book-01.jpg",
+      image: "/images/publication-support/book-01.jpg",
     },
   ];
 
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0);
   const [testimonialSlide, setTestimonialSlide] = useState(0);
-
+  const [currentSlide, setCurrentSlide] = useState(0);
   const testimonialSlides = [
-    testimonials.slice(0, 2),
-    testimonials.slice(2, 3),
+    [testimonials[0], testimonials[1]],
+    [testimonials[1], testimonials[2]],
   ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % testimonialSlides.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [testimonialSlides.length]);
+
   // --- FAQ DATA ---
   const faqData = [
     {
@@ -112,15 +110,6 @@ export default function PubricaResourceHub() {
         "Publish in indexed journals by selecting the right journal for your work, following author guidelines, using robust methodology, providing clear results, writing well, and revising your work based on feedback from peers.",
     },
   ];
-
-
-  // const toggleFaq = (id: number) => {
-  //   setFaqs(
-  //     faqs.map((faq) =>
-  //       faq.id === id ? { ...faq, isOpen: !faq.isOpen } : faq,
-  //     ),
-  //   );
-  // };
 
   // --- INSIGHTS DATA ---
   const categories = ["Article", "How to Article", "News"];
@@ -182,7 +171,7 @@ export default function PubricaResourceHub() {
         "In brief A search strategy is a structured set of keywords used to search databases efficiently during systematic reviews.",
       image:
         "/images/publication-support/How-to-Develop-a-search-strategy-for-a-systematic-review.webp",
-    }, ,
+    },
   ];
 
   const filteredInsights = insights.filter(
@@ -191,10 +180,10 @@ export default function PubricaResourceHub() {
   );
 
   return (
-    <div className="bg-slate-50 text-[#1e293b] font-sans antialiased">
+    <div className="bg-slate-50 text-[#1e293b] font-poppins antialiased text-[16px]">
       {/* ================= SECTION 1: SAMPLE WORK BANNER ================= */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto bg-[#effcf4] border border-emerald-100 rounded-2xl p-6 sm:p-10 shadow-sm">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 font-poppins">
+        <div className="max-w-6xl mx-auto bg-[#effcf4] border border-emerald-100/40 rounded-2xl p-6 sm:p-10 shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Left Cover Book Graphic */}
             <div className="md:col-span-4 flex justify-center">
@@ -211,36 +200,36 @@ export default function PubricaResourceHub() {
             </div>
             {/* Right Download Information */}
             <div className="md:col-span-8 space-y-6">
-              <div>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0d4f60]">
+              <div className="flex flex-col items-start text-left">
+                <h3 className="text-2xl sm:text-3xl font-bold font-poppins text-black tracking-tight">
                   Publication Support Sample Work
                 </h3>
                 <Link
                   href="/insights/sample-work/the-impact-of-drinking-water-sources-on-gut-microbial-diversity-in-canines-peer-review/"
-                  className="mt-3 px-8 py-2.5 bg-black hover:bg-slate-900 active:scale-95 text-white font-bold text-xs tracking-wider uppercase rounded-full transition-all inline-flex items-center justify-center"
+                  className="mt-4 w-full sm:w-auto min-w-[320px] py-2 bg-black hover:bg-slate-900 active:scale-95 text-white font-medium text-[16px] font-poppins rounded-full transition-all inline-flex items-center justify-center text-center"
                 >
                   Discover More
                 </Link>
               </div>
 
-              <div className="border-t border-emerald-200/60 pt-5">
-                <h3 className="text-xl sm:text-2xl font-extrabold text-[#0d4f60] mb-2">
+              <div className="pt-2 flex flex-col items-start text-left">
+                <h3 className="text-xl sm:text-2xl font-bold font-poppins text-black tracking-tight mb-3">
                   Download the full Report Now
                 </h3>
-                <p className="text-slate-600 text-sm max-w-xl leading-relaxed">
+                <p className="text-[#222222] font-poppins text-[16px] font-normal max-w-xl leading-[1.6]">
                   Explore our{" "}
                   <Link
                     href="/services/publication-support/journal-selection/journal-selection-alcoholic-liver-disease/"
-                    className="text-sky-600 font-semibold cursor-pointer hover:text-sky-700"
+                    className="text-[#64a2c7] font-normal cursor-pointer hover:underline"
                   >
                     Publication Support
-                  </Link>
+                  </Link>{" "}
                   Services sample work tailored to your manuscript's scope,
                   indexing requirements, and impact factor goals.
                 </p>
                 <Link
                   href="/insights/sample-work/"
-                  className="mt-4 px-8 py-2.5 bg-black hover:bg-slate-900 active:scale-95 text-white font-bold text-xs tracking-wider uppercase rounded-full inline-flex items-center gap-2 transition-all"
+                  className="mt-5 w-full sm:w-auto min-w-[320px] py-2 bg-black hover:bg-slate-900 active:scale-95 text-white font-medium text-[16px] font-poppins rounded-full inline-flex items-center justify-center text-center transition-all"
                 >
                   Discover More
                 </Link>
@@ -248,89 +237,106 @@ export default function PubricaResourceHub() {
             </div>
           </div>
 
-          {/* Footer Quality Statement */}
-          <p className="mt-8 pt-6 border-t border-emerald-200/60 text-xs sm:text-sm text-slate-600 leading-relaxed text-center sm:text-left">
+          {/* Footer Quality Statement - Matches exact image typography & color */}
+          <p className="mt-10 pt-6 border-t border-emerald-200/40 font-poppins text-[16px] font-normal text-[#111111] leading-[1.7] text-left">
             Pubrica meets crest standards and protocols of journal publishing
             ethics in every single phase of services and processes. Pubrica
             adheres to authorship guidelines drafted by the International
-            Council of Medical Journal Editors (ICMJE), and the scope for
-            services will be routinely updated as per the Committee on
-            Publication Ethics (COPE) and International Society of Medical
-            Publication Professionals guidelines (ISMPP).
+            Council of Medical{" "}
+            <Link
+              href="/services/publication-support/journal-selection/journal-citation-reports-impact-metrics-guide/"
+              className="text-[#64a2c7] font-normal cursor-pointer hover:underline"
+            >
+              Journal
+            </Link>{" "}
+            Editors (ICMJE), and the scope for services will be routinely
+            updated as per the Committee on Publication Ethics (COPE) and
+            International Society of Medical Publication Professionals guidelines
+            (ISMPP).
           </p>
         </div>
       </section>
 
       {/* ================= SECTION 2: TESTIMONIALS & FAQ ================= */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white border-y border-slate-100">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white border-y border-slate-100 font-poppins">
         <div className="max-w-6xl mx-auto space-y-16">
           {/* TESTIMONIALS SUBSECTION */}
           <div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d4f60] mb-8 text-center sm:text-left">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d4f60] mb-8 text-center sm:text-left font-poppins">
               Testimonials
             </h2>
 
             {/* Horizontal slider container */}
             <div className="relative">
               {/* Testimonial Slides */}
-
-              <div className="overflow-hidden">
-                {testimonialSlides.map((slide, slideIndex) => (
-                  <div
-                    key={slideIndex}
-                    className={`grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-500 ${testimonialSlide === slideIndex
-                      ? "block"
-                      : "hidden"
-                      }`}
-                  >
-                    {slide.map((test) => (
-                      <div
-                        key={test.id}
-                        className="bg-[#0f443b] text-white rounded-lg shadow-lg relative overflow-hidden transition-all duration-300 hover:shadow-xl"
-                      >
-                        <div className="flex min-h-[140px]">
-                          {/* Testimonial Content */}
-                          <div className="flex-1 p-5 sm:p-6 flex flex-col justify-between min-w-0">
-                            <div className="relative">
-                              <Quote className="absolute top-0 right-0 w-8 h-8 text-[#115e51] opacity-50" />
-
-                              <p className="text-slate-200 text-xs sm:text-sm leading-relaxed italic pr-6">
-                                "{test.quote}"
+              <div className="max-w-6xl mx-auto px-4 py-8 overflow-hidden">
+                {/* Sliding Track Wrapper */}
+                <div
+                  className="flex transition-transform duration-700 ease-in-out"
+                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                >
+                  {testimonialSlides.map((slide, slideIndex) => (
+                    <div
+                      key={slideIndex}
+                      className="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-6 px-1"
+                    >
+                      {slide.map((test, index) => (
+                        <div
+                          key={`${slideIndex}-${test.id}-${index}`}
+                          className="bg-[#185348] text-white rounded-lg shadow-xl relative overflow-hidden flex flex-col justify-between h-full min-h-[170px]"
+                        >
+                          <div className="flex h-full">
+                            {/* Left Content */}
+                            <div className="flex-1 p-6 flex flex-col justify-between z-10">
+                              <p className="text-slate-100 text-[14px] leading-relaxed font-normal">
+                                &quot;{test.quote}&quot;
                               </p>
+
+                              <div className="mt-4">
+                                <h4 className="font-bold tracking-wider text-white text-[13px] uppercase">
+                                  {test.author}
+                                </h4>
+                                <p className="text-[12px] text-slate-300 italic mt-0.5">
+                                  {test.role}
+                                </p>
+                              </div>
                             </div>
 
-                            <div className="mt-4">
-                              <h4 className="font-bold tracking-wide text-[#10b981] text-xs sm:text-sm">
-                                {test.author}
-                              </h4>
-
-                              <p className="text-[10px] sm:text-xs text-slate-300 italic mt-1">
-                                {test.role}
-                              </p>
-                            </div>
-                          </div>
-
-                          {/* Journal / Book Image */}
-                          <div className="w-[105px] sm:w-[120px] shrink-0 bg-white flex items-center justify-center p-2">
-                            <div className="w-[105px] sm:w-[120px] shrink-0 bg-white flex items-center justify-center p-2">
+                            {/* Right Image Container */}
+                            <div className="w-[140px] sm:w-[160px] shrink-0 relative flex items-center justify-center p-2">
                               <Image
                                 src={test.image}
                                 alt={test.author}
-                                width={120}
-                                height={150}
-                                className="w-full h-auto max-h-[125px] object-contain"
+                                width={160}
+                                height={190}
+                                className="object-contain max-h-[150px] drop-shadow-md"
                               />
                             </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                ))}
+                      ))}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Navigation Indicators */}
+                <div className="flex justify-center items-center gap-2 mt-6">
+                  {testimonialSlides.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentSlide(index)}
+                      aria-label={`Go to slide ${index + 1}`}
+                      className={`w-3 h-3 transition-all duration-300 ${currentSlide === index
+                          ? "bg-[#185348] border-2 border-[#185348]"
+                          : "bg-white border-2 border-slate-400"
+                        }`}
+                    />
+                  ))}
+                </div>
               </div>
 
               {/* Slider Dots */}
-              <div className="flex justify-center items-center gap-2 mt-6">
+              {/* <div className="flex justify-center items-center gap-2 mt-6">
                 {testimonialSlides.map((_, index) => (
                   <button
                     key={index}
@@ -343,23 +349,25 @@ export default function PubricaResourceHub() {
                       }`}
                   />
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
 
-          {/* FAQ SUBSECTION */}
-          <CommonFAQ
-            title="Frequently Asked Questions"
-            faqs={faqData}
-          />
+          {/* FAQ SUBSECTION - MOBILE FRIENDLY & POPPINS AT 16PX */}
+          <div className="w-full overflow-hidden break-words font-poppins text-[16px]">
+            <CommonFAQ
+              title="Frequently Asked Questions"
+              faqs={faqData}
+            />
+          </div>
         </div>
       </section>
 
       {/* ================= SECTION 3: INSIGHTS SECTION ================= */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 font-poppins text-[16px]">
         <div className="max-w-6xl mx-auto space-y-8">
           <div>
-            <h2 className="text-3xl font-extrabold text-[#0d4f60] mb-2 text-center sm:text-left">
+            <h2 className="text-3xl font-extrabold text-[#0d4f60] mb-2 text-center sm:text-left font-poppins">
               Insights
             </h2>
             <div className="h-1 w-12 bg-emerald-500 rounded mx-auto sm:mx-0" />
@@ -371,7 +379,7 @@ export default function PubricaResourceHub() {
               <button
                 key={tab}
                 onClick={() => setSelectedCategory(tab)}
-                className={`flex-1 text-center py-2 px-4 rounded-full text-xs sm:text-sm font-bold tracking-wide transition-all duration-300 ${selectedCategory === tab
+                className={`flex-1 text-center py-2 px-4 rounded-full text-[16px] font-bold tracking-wide font-poppins transition-all duration-300 ${selectedCategory === tab
                   ? "bg-[#10b981] text-white shadow-md scale-105"
                   : "text-slate-300 hover:text-white"
                   }`}
@@ -386,7 +394,7 @@ export default function PubricaResourceHub() {
             {filteredInsights.map((card, i) => (
               <div
                 key={i}
-                className="bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
+                className="bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group font-poppins"
               >
                 <div>
                   {/* Card Cover Image */}
@@ -396,17 +404,17 @@ export default function PubricaResourceHub() {
                       alt={card.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-2 left-2 bg-[#0e4b4d] text-white text-[10px] font-bold px-2.5 py-1 rounded-full">
+                    <div className="absolute top-2 left-2 bg-[#0e4b4d] text-white text-[16px] font-bold px-2.5 py-1 rounded-full font-poppins">
                       {card.category}
                     </div>
                   </div>
 
                   {/* Text Details Area */}
                   <div className="p-5 space-y-3">
-                    <h3 className="font-extrabold text-slate-800 group-hover:text-sky-600 transition-colors text-base sm:text-lg leading-snug">
+                    <h3 className="font-extrabold text-slate-800 group-hover:text-sky-600 transition-colors text-[16px] leading-snug font-poppins">
                       {card.title}
                     </h3>
-                    <p className="text-slate-500 text-xs sm:text-sm leading-relaxed line-clamp-3">
+                    <p className="text-slate-500 text-[16px] leading-relaxed line-clamp-3 font-poppins">
                       {card.snippet}
                     </p>
                   </div>

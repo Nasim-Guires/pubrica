@@ -1,3 +1,4 @@
+import HeroBanner from "@/components/common/HeroBanner";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -7,7 +8,6 @@ export const metadata: Metadata = {
     "Explore our subject matter experts in medical and scientific writing across life sciences, engineering, technology, and therapeutic disciplines.",
 };
 
-// Define structure for subject items
 interface SubjectItem {
   title: string;
   slug: string;
@@ -69,11 +69,17 @@ export default function SubjectMatterExpertsPage() {
       { title: "Life Sciences", slug: "life-sciences" },
       { title: "Machine Learning", slug: "machine-learning" },
       { title: "Medical Animation", slug: "medical-animation" },
-      { title: "Medicinal and Pharmaceutical Chemistry", slug: "medicinal-and-pharmaceutical-chemistry" },
+      {
+        title: "Medicinal and Pharmaceutical Chemistry",
+        slug: "medicinal-and-pharmaceutical-chemistry",
+      },
       { title: "Material science", slug: "material-science" },
       { title: "Medicinal chemistry", slug: "medicinal-chemistry" },
       { title: "Molecular engineering", slug: "molecular-engineering" },
-      { title: "Medical Imaging Techniques", slug: "medical-imaging-techniques" },
+      {
+        title: "Medical Imaging Techniques",
+        slug: "medical-imaging-techniques",
+      },
       { title: "Neuroscience", slug: "neuroscience" },
       { title: "Nanobiotechnology", slug: "nanobiotechnology" },
     ],
@@ -101,78 +107,69 @@ export default function SubjectMatterExpertsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-gray-800">
-      {/* Hero Section */}
-      <header className="w-full bg-[#1e2e2b] text-white py-14 px-4 text-center">
-        <div className="max-w-4xl mx-auto border border-gray-500/60 py-10 px-6">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-wide">
-            Subject Matter Experts
+    <div className="min-h-screen bg-white text-[#10243e] font-[Poppins]">
+      <HeroBanner
+        title="Subject Matter Experts"
+        description="Across all disciplines"
+        headingAs="h1"
+      />
+      <main className="mx-auto max-w-[1280px] px-6 py-12 md:px-8 lg:px-10 lg:py-14">
+        {/* Introduction */}
+        <section className="mb-12">
+          <h1 className="mb-5 text-[26px] font-semibold leading-tight tracking-[-0.3px] text-[#10243e] md:text-[30px] lg:text-[32px]">
+            All types of medical and scientific writing
           </h1>
 
-          <p className="text-sm md:text-base text-gray-300 mt-3">
-            Across all disciplines
-          </p>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Introduction */}
-        <section className="max-w-5xl mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-5">
-            All types of medical and scientific writing
-          </h2>
-
-          <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+          <p className="max-w-[1180px] text-[16px] font-normal leading-[1.8] text-[#10243e]">
             An array of writing services that cover medical and non-medical
             subjects. Regulatory writing, Clinical Report Forms (CRF),
             biostatistics, manuscripts, business writing, physician reports,
             thesis, medical writing and more. We assist medical doctors,
             students, hospitals, pharma and device manufacturers in their quest
-            for a credible writing partner.
-          </p>
-
-          <p className="text-sm md:text-base text-gray-600 leading-relaxed mt-4">
-            Certified writers are available across life science, computer
-            science, medicine and technology. Our subject matter experts with
-            niche therapeutic expertise provide scientific support for every
-            stage of research and publication.
+            for a credible writing partner. Certified writers available across
+            life science, computer science, medicine and technology; pundits
+            with niche therapeutic repertoire are with you at every stage of the
+            process. Scientific Writing & Publishing team is your
+            aide—publishing in a journal or getting a regulatory drug approval
+            is now easy. Save time and money; circumvent encumbrances while we
+            pen your reports.
           </p>
         </section>
 
         {/* Subject Areas */}
         <section>
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">
-            Subject Areas
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-x-12 gap-y-2 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-16">
             {columns.map((column, columnIndex) => (
-              <div key={columnIndex} className="space-y-3">
-                {column.map((subject) => (
-                  <Link
-                    key={subject.title}
-                    href={
-                      subject.title === "Bioengineering"
-                        ? "/subject-matter-experts/biomedical-engineering"
-                        : `/subject-matter-experts/${subject.slug}`
-                    }
-                    className="group flex items-center gap-2 text-sm text-gray-700 hover:text-[#1a4a42] transition-colors duration-150 py-1"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 512 512"
-                      fill="currentColor"
-                      className="w-4 h-4 text-[#1a4a42] flex-shrink-0 group-hover:translate-x-0.5 transition-transform"
-                      aria-hidden="true"
+              <div key={columnIndex} className="flex flex-col">
+                {column.map((subject) => {
+                  const href =
+                    subject.title === "Bioengineering"
+                      ? "/subject-matter-experts/biomedical-engineering"
+                      : `/subject-matter-experts/${subject.slug}`;
+
+                  return (
+                    <Link
+                      key={subject.title}
+                      href={href}
+                      className="group flex min-h-[36px] items-center gap-3 py-[4px] text-[16px] font-normal leading-[1.45] text-[#10243e] no-underline transition-colors duration-150 hover:text-[#174b45] hover:no-underline"
                     >
-                      <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z" />
-                    </svg>
-                    <span className="group-hover:underline underline-offset-2">
-                      {subject.title}
-                    </span>
-                  </Link>
-                ))}
+                      {/* Circular Arrow Icon */}
+                      <span className="flex h-[19px] w-[19px] shrink-0 items-center justify-center rounded-full bg-[#174b45]">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 512 512"
+                          fill="white"
+                          className="h-[11px] w-[11px]"
+                          aria-hidden="true"
+                        >
+                          <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z" />
+                        </svg>
+                      </span>
+
+                      <span>{subject.title}</span>
+                    </Link>
+                  );
+                })}
               </div>
             ))}
           </div>

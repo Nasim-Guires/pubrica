@@ -5,7 +5,7 @@ import { useState } from "react";
 interface FAQItem {
   question: string;
   answer: string;
-  points?: string[]; // Optional property for bullet points
+  points?: string[];
 }
 
 interface FAQProps {
@@ -17,7 +17,6 @@ export default function CommonFAQ({ title, faqs }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const useTwoColumns = faqs.length > 6;
-
   const mid = Math.ceil(faqs.length / 2);
   const leftFaqs = faqs.slice(0, mid);
   const rightFaqs = faqs.slice(mid);
@@ -28,130 +27,77 @@ export default function CommonFAQ({ title, faqs }: FAQProps) {
     return (
       <div
         key={originalIndex}
-        style={{
-          borderBottom: !isLast ? "1px solid #ddd" : "none",
-        }}
+        className={`border-b border-gray-200 transition-colors duration-200 ${
+          isLast ? "border-b-0" : ""
+        }`}
       >
         <button
           onClick={() => setOpenIndex(isOpen ? null : originalIndex)}
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "18px 20px",
-            border: "none",
-            background: "#fff",
-            cursor: "pointer",
-            textAlign: "left",
-          }}
+          className="w-full flex justify-between items-center p-4 sm:p-5 bg-white hover:bg-slate-50 cursor-pointer text-left transition-colors font-poppins outline-none"
+          aria-expanded={isOpen}
         >
-          <span
-            style={{
-              fontSize: "20px",
-              fontWeight: 600,
-              color: "#0b3a57",
-              paddingRight: "20px",
-            }}
-          >
+          <span className="text-[17px] sm:text-[18px] font-bold text-[#0b3a57] pr-4 break-words leading-snug font-poppins">
             {faq.question}
           </span>
 
-          <span
-            style={{
-              fontSize: "28px",
-              fontWeight: 700,
-              color: "#0b3a57",
-              flexShrink: 0,
-            }}
-          >
+          <span className="text-xl sm:text-2xl font-bold text-[#0b3a57] shrink-0 font-poppins leading-none select-none">
             {isOpen ? "−" : "+"}
           </span>
         </button>
 
-        {isOpen && (
-          <div
-            style={{
-              padding: "0 20px 20px",
-              fontSize: "17px",
-              lineHeight: "28px",
-              color: "#333",
-            }}
-          >
-            <p style={{ margin: "0 0 10px 0" }}>{faq.answer}</p>
-            {faq.points && faq.points.length > 0 && (
-              <ul style={{ margin: "0", paddingLeft: "20px" }}>
-                {faq.points.map((point, idx) => (
-                  <li key={idx} style={{ marginBottom: "6px" }}>
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            )}
+        {/* CSS-based smooth accordion container with fixed max height constraint */}
+        <div
+          className={`grid transition-[grid-template-rows,padding] duration-300 ease-in-out ${
+            isOpen
+              ? "grid-rows-[1fr] px-4 pb-5 sm:px-5 sm:pb-6 opacity-100"
+              : "grid-rows-[0fr] px-4 pb-0 sm:px-5 opacity-0"
+          }`}
+        >
+          <div className="overflow-hidden">
+            {/* Scrollable container for long content so the outer wrapper remains fixed */}
+            <div className="max-h-[300px] overflow-y-auto pr-2 text-[15px] sm:text-[16px] leading-[1.7] text-[#333] break-words font-poppins scrollbar-thin">
+              <p className="m-0 mb-2.5 text-[15px] sm:text-[16px] font-poppins">
+                {faq.answer}
+              </p>
+              {faq.points && faq.points.length > 0 && (
+                <ul className="m-0 pl-5 list-disc text-[15px] sm:text-[16px] font-poppins space-y-1">
+                  {faq.points.map((point, idx) => (
+                    <li key={idx} className="font-poppins">
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </div>
-        )}
+        </div>
       </div>
     );
   };
 
   return (
-    <section
-      style={{
-        maxWidth: "1200px",
-        margin: "50px auto",
-        padding: "0 20px",
-        fontFamily: "Arial, sans-serif",
-      }}
-    >
-      <h2
-        style={{
-          fontSize: "38px",
-          fontWeight: 700,
-          color: "#0b3a57",
-          marginBottom: "25px",
-        }}
-      >
+    <section className="max-w-[1200px] my-8 sm:my-12 mx-auto px-4 sm:px-6 font-poppins text-[16px]">
+      <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0b3a57] mb-6 sm:mb-8 tracking-tight font-poppins break-words">
         {title}
       </h2>
 
       {useTwoColumns ? (
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(450px,1fr))",
-            gap: "18px",
-          }}
-        >
-          <div
-            style={{
-              border: "1px solid #ddd",
-            }}
-          >
+        /* Fixed desktop container height with auto-scrolling for long lists */
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 w-full font-poppins items-start">
+          <div className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm max-h-[600px] overflow-y-auto">
             {leftFaqs.map((faq, i) =>
               renderFAQ(faq, i, i === leftFaqs.length - 1)
             )}
           </div>
 
-          <div
-            style={{
-              border: "1px solid #ddd",
-            }}
-          >
+          <div className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm max-h-[600px] overflow-y-auto">
             {rightFaqs.map((faq, i) =>
-              renderFAQ(
-                faq,
-                i + mid,
-                i === rightFaqs.length - 1
-              )
+              renderFAQ(faq, i + mid, i === rightFaqs.length - 1)
             )}
           </div>
         </div>
       ) : (
-        <div
-          style={{
-            border: "1px solid #ddd",
-          }}
-        >
+        <div className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm w-full font-poppins max-h-[600px] overflow-y-auto">
           {faqs.map((faq, i) =>
             renderFAQ(faq, i, i === faqs.length - 1)
           )}
