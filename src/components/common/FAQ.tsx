@@ -27,9 +27,8 @@ export default function CommonFAQ({ title, faqs }: FAQProps) {
     return (
       <div
         key={originalIndex}
-        className={`border-b border-gray-200 transition-colors duration-200 ${
-          isLast ? "border-b-0" : ""
-        }`}
+        className={`border-b border-gray-200 transition-colors duration-200 ${isLast ? "border-b-0" : ""
+          }`}
       >
         <button
           onClick={() => setOpenIndex(isOpen ? null : originalIndex)}
@@ -45,17 +44,15 @@ export default function CommonFAQ({ title, faqs }: FAQProps) {
           </span>
         </button>
 
-        {/* CSS-based smooth accordion container with fixed max height constraint */}
+        {/* CSS-based smooth accordion container expanding to natural height */}
         <div
-          className={`grid transition-[grid-template-rows,padding] duration-300 ease-in-out ${
-            isOpen
+          className={`grid transition-[grid-template-rows,padding] duration-300 ease-in-out ${isOpen
               ? "grid-rows-[1fr] px-4 pb-5 sm:px-5 sm:pb-6 opacity-100"
               : "grid-rows-[0fr] px-4 pb-0 sm:px-5 opacity-0"
-          }`}
+            }`}
         >
           <div className="overflow-hidden">
-            {/* Scrollable container for long content so the outer wrapper remains fixed */}
-            <div className="max-h-[300px] overflow-y-auto pr-2 text-[15px] sm:text-[16px] leading-[1.7] text-[#333] break-words font-poppins scrollbar-thin">
+            <div className="text-[15px] sm:text-[16px] leading-[1.7] text-[#333] break-words font-poppins">
               <p className="m-0 mb-2.5 text-[15px] sm:text-[16px] font-poppins">
                 {faq.answer}
               </p>
@@ -82,22 +79,21 @@ export default function CommonFAQ({ title, faqs }: FAQProps) {
       </h2>
 
       {useTwoColumns ? (
-        /* Fixed desktop container height with auto-scrolling for long lists */
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 w-full font-poppins items-start">
-          <div className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm max-h-[600px] overflow-y-auto">
+          <div className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
             {leftFaqs.map((faq, i) =>
               renderFAQ(faq, i, i === leftFaqs.length - 1)
             )}
           </div>
 
-          <div className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm max-h-[600px] overflow-y-auto">
+          <div className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
             {rightFaqs.map((faq, i) =>
               renderFAQ(faq, i + mid, i === rightFaqs.length - 1)
             )}
           </div>
         </div>
       ) : (
-        <div className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm w-full font-poppins max-h-[600px] overflow-y-auto">
+        <div className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm w-full font-poppins">
           {faqs.map((faq, i) =>
             renderFAQ(faq, i, i === faqs.length - 1)
           )}

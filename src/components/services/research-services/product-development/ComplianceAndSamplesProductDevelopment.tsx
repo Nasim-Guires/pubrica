@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
 
 export interface AccordionCard {
     id: string;
@@ -25,6 +26,39 @@ export default function ComplianceAndSamplesProductDevelopment({
         setOpenCardIds((prev) =>
             prev.includes(id) ? prev.filter((cardId) => cardId !== id) : [...prev, id]
         );
+    };
+
+    const componentData = {
+        bookCoverImage: {
+            src: '/images/product-development/image-2.webp',
+            alt: 'Industrial Laboratory Robotic Equipment',
+            width: 723,
+            height: 1024,
+        },
+        sections: [
+            {
+                heading: 'Discovery & Intelligence Services Sample Work',
+                button: {
+                    label: 'Discover More',
+                    url: '/insights/sample-work/',
+                },
+            },
+            {
+                heading: 'Download the full Report Now',
+                descriptionSegments: [
+                    { text: 'Explore our ' },
+                    { text: 'our Product Development', },
+                    { text: ' service sample work, accurately designed to meet industry standards, comply with regulatory requirements, and deliver innovative, high-quality solutions that drive market success.' },
+                ],
+                button: {
+                    label: 'Discover More',
+                    url: '/insights/sample-work/',
+                },
+            },
+        ],
+        footerDisclaimerSegments: [
+            { text: 'Pubrica meets crest standards and protocols of journal publishing ethics in every single phase of services and processes. Pubrica adheres to authorship guidelines.' },
+        ],
     };
 
     const accordionCards: AccordionCard[] = [
@@ -214,58 +248,7 @@ export default function ComplianceAndSamplesProductDevelopment({
             </div>
 
             {/* Sample Work & Downloads Section */}
-            <div className="w-full bg-[#f2f9f6] py-12 px-4 sm:px-8 border-t border-emerald-100/60">
-                <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                    {/* Left Image Section Div Placeholder */}
-                    <div className="md:col-span-5 flex justify-center">
-                        <div className="w-64 h-[420px] relative border border-slate-600 shadow-md overflow-hidden">
-                            <Image
-                                src="/images/product-development/image-2.webp"
-                                alt="Industrial Laboratory Robotic Equipment"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                    </div>
-
-                    {/* Right Text & CTA Buttons */}
-                    <div className="md:col-span-7 space-y-6 font-['Poppins']">
-                        {/* Upper CTA */}
-                        <div>
-                            <h3 className="text-xl font-bold text-[#1b2b28] mb-3">
-                                Discovery & Intelligence Services Sample Work
-                            </h3>
-                            <div className="flex justify-center md:block">
-                                <Link
-                                    href="/insights/sample-work/"
-                                    className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold px-8 py-2.5 rounded-full transition-colors"
-                                >
-                                    Discover More
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* Lower CTA */}
-                        <div className="space-y-3">
-                            <h3 className="text-xl font-bold text-[#1b2b28]">
-                                Download the full Report Now
-                            </h3>
-                            {/* Set to 16px (text-base) */}
-                            <p className="text-base text-gray-600 leading-relaxed">
-                                Explore our Product Development service sample work, accurately designed to meet industry standards, comply with regulatory requirements, and deliver innovative, high-quality solutions that drive market success.
-                            </p>
-                            <div className="pt-2 flex justify-center md:block">
-                                <Link
-                                    href="/insights/sample-work/"
-                                    className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold px-8 py-2.5 rounded-full transition-colors"
-                                >
-                                    Discover More
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <PubricaSampleWorkCard {...componentData} />
         </section>
     );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import ServiceBanner from "@/components/common/ServiceBanner";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -12,60 +13,27 @@ export default function JournalSelectionBenefits() {
       {/* ---------------------------------------------------- */}
 
 
-      <section className="bg-[#052b1e] text-white py-12 px-6 sm:px-12 lg:px-16">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12">
-
-          {/* Satisfaction Guarantee Image */}
-          <div className="shrink-0 flex items-center justify-center min-w-[144px] min-h-[144px]">
-            <Image
-              src="/images/publication-support/Satisfaction_Guarantee.webp"
-              alt="100% Satisfaction Guarantee"
-              width={160}
-              height={160}
-              className="w-36 h-36 sm:w-40 sm:h-40 object-contain block"
-              priority
-            />
-          </div>
-
-          {/* Text Content */}
-          <div className="space-y-4 max-w-3xl">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight">
-              Speed up your Journey to Journal Selection with Pubrica
-            </h2>
-
-            <p className="text-slate-200 text-xs sm:text-sm leading-relaxed">
-              Improve your publication journey with Pubrica’s{" "}
-              <Link
-                href="/services/publication-support/journal-selection/right-journal-for-your-research/"
-                className="text-cyan-300 hover:underline"
-              >
-                journal selection
-              </Link>{" "}
-              support service. We will speed up the acceptance of your
-              manuscript with customized support and expertise related to
-              journal requirements.
-            </p>
-
-            <ul className="space-y-2 pt-1 text-xs sm:text-sm">
-              <li className="flex items-center gap-2 font-semibold text-slate-100">
-                <span className="h-1.5 w-1.5 rounded-full bg-red-500 inline-block shrink-0" />
-                GDPR & Data Privacy
-              </li>
-
-              <li className="flex items-center gap-2 font-semibold text-slate-100">
-                <span className="h-1.5 w-1.5 rounded-full bg-red-500 inline-block shrink-0" />
-                No Predatory Journals Guarantee
-              </li>
-
-              <li className="flex items-center gap-2 font-semibold text-slate-100">
-                <span className="h-1.5 w-1.5 rounded-full bg-red-500 inline-block shrink-0" />
-                Ethical Journal Practices
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
+      <ServiceBanner
+        heading="Speed up your Journey to Journal Selection with Pubrica"
+        description={
+          <>
+            Improve your publication journey with Pubrica’s{" "}
+            <Link
+              href="/services/publication-support/journal-selection/right-journal-for-your-research/"
+              className="text-cyan-300 hover:underline"
+            >
+              journal selection
+            </Link>{" "}
+            support service. We will speed up the acceptance of your manuscript
+            with customized support and expertise related to journal requirements.
+          </>
+        }
+        bulletPoints={[
+          "GDPR & Data Privacy",
+          "No Predatory Journals Guarantee",
+          "Ethical Journal Practices",
+        ]}
+      />
       {/* ---------------------------------------------------- */}
       {/* SECTION 2: BENEFITS OF OUR JOURNAL SELECTION PROCESS */}
       {/* ---------------------------------------------------- */}

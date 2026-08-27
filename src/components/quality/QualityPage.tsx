@@ -13,6 +13,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import Image from "next/image";
+import HeroBanner from "../common/HeroBanner";
 
 export interface QualityFeature {
   id: string;
@@ -112,7 +113,7 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       description:
         "We have a team of 200+ professional, experienced editors in Science, Technology, and Management who work on 170 specializations. Ensure your content is succinct, structured, cohesive, and collated. We help you through the entire lifecycle for academic, scientific, and medical content. We help you with selection, review, preparation, artwork, review, and submission.",
       ctaText: "Contact us",
-      ctaLink: "/contact",
+      ctaLink: "/contact-us",
     },
     {
       id: "swift-response",
@@ -121,7 +122,7 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       description:
         "Every project is vetted by couple of experts in language and the core subject. And we have a team of editors and reviewers who check quality of content; moreover, our knowledge at the publication process means your work has a higher chance of being published.",
       ctaText: "Contact us",
-      ctaLink: "/contact",
+      ctaLink: "/contact-us",
     },
     {
       id: "privacy-confidentiality",
@@ -130,7 +131,7 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       description:
         "Your data, work, concepts, ideas, creative—these are all kept confidential and we guarantee you privacy of your information; you will be have a project coordinator who will work with you every day of the project.",
       ctaText: "Contact us",
-      ctaLink: "/contact",
+      ctaLink: "/contact-us",
     },
     {
       id: "all-genres",
@@ -139,34 +140,32 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       description:
         "We can help you in all types of writing projects—Science, Technology, Engineering and Mathematics (STEM). Certified writing experts available in academic, scientific, medical, fiction, and non-fiction. Let us know your requirements today.",
       ctaText: "Contact us",
-      ctaLink: "/contact",
+      ctaLink: "/contact-us",
     },
   ];
 
   return (
-    <main className={`w-full bg-[#fcfcfd] font-sans text-slate-800 ${className}`}>
+    <main
+      className={`w-full bg-[#fcfcfd] text-slate-800 ${className}`}
+      style={{ fontFamily: "'Poppins', sans-serif" }}
+    >
       {/* 1. Top Banner Section */}
-      <section className="w-full bg-[#1b2b28] text-white py-14 sm:py-16 px-4">
-        <div className="max-w-4xl mx-auto border border-[#2d4842] p-8 sm:p-10 rounded-sm bg-[#162422]/60 text-center shadow-inner">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
-            Quality of Publications
-          </h1>
-          <p className="text-sm sm:text-base text-emerald-100 font-medium">
-            100% quality assurance at every stage
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Quality of Publications"
+        description="100% quality assurance at every stage"
+        headingAs="h1"
+      />
 
       {/* 2. ISO Certification Banner */}
       <section className="w-full bg-white border-b border-slate-100 py-12 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#1b2b28] mb-2">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1b2b28] mb-2">
             Quality Assurance
           </h2>
-          <p className="text-base font-semibold text-[#146e56] mb-4">
+          <p className="text-lg font-semibold text-[#146e56] mb-4">
             100% quality assured
           </p>
-          <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+          <p className="text-base text-slate-600 font-medium leading-relaxed">
             We are <span className="font-bold text-slate-800">ISO 9001:2015</span> certified organization. | Quality assurance in every phase of the project.
           </p>
         </div>
@@ -175,10 +174,10 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       {/* 3. Main Intro & Dark Cards Grid */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#1b2b28] mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1b2b28] mb-4">
             Pubrica academic and scientific publishing.
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          <p className="text-base text-slate-600 leading-relaxed">
             Pubrica is a leading academic and scientific publishing platform, offering comprehensive editorial services and global dissemination for researchers and scholars worldwide. With a commitment to quality and innovation, Pubrica facilitates the publication of cutting-edge research across diverse disciplines.
           </p>
         </div>
@@ -194,10 +193,10 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
                 <BookOpen className="w-10 h-10 stroke-[1.5]" />
               </div>
               <div className="space-y-1">
-                <h3 className="text-sm sm:text-base font-bold text-white leading-snug">
+                <h3 className="text-lg font-bold text-white leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-xs text-emerald-100/80 leading-relaxed font-light">
+                <p className="text-base text-emerald-100/80 leading-relaxed font-light">
                   {item.description}
                 </p>
               </div>
@@ -215,10 +214,10 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
                 {stat.icon}
               </div>
               <div className="text-left">
-                <p className="text-xl sm:text-2xl font-black text-[#1b2b28]">
+                <p className="text-2xl sm:text-3xl font-black text-[#1b2b28]">
                   {stat.value}
                 </p>
-                <p className="text-xs text-slate-500 font-medium capitalize">
+                <p className="text-sm text-slate-500 font-medium capitalize">
                   {stat.label}
                 </p>
               </div>
@@ -230,7 +229,6 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       {/* 5. Editorial & Tag Cloud Section */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm">
-
           {/* Word Art Image Column */}
           <div className="md:col-span-5 flex justify-center">
             <div className="relative w-full max-w-sm aspect-square">
@@ -247,28 +245,27 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
 
           {/* Description Text */}
           <div className="md:col-span-7 space-y-4">
-            <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            <p className="text-base text-slate-700 leading-relaxed">
               We have a team of 200+ professional, experienced editors in Science, Technology, and Management who work on 170 specializations. Ensure your content is succinct, structured, cohesive, and collated. We guide you through the entire lifecycle for academic, scientific, and medical content. We help you with selection, review, preparation, artwork, review, and submission.
             </p>
-            <p className="text-xs sm:text-sm font-semibold text-[#1b2b28]">
+            <p className="text-base font-semibold text-[#1b2b28]">
               Partner with us today to publish your paper; contact us through{" "}
               <a href="tel:+919884350005" className="text-[#1b8c6e] hover:underline font-bold">
-                +91 9884350005
+                +91 9884350006.
               </a>
               .
             </p>
           </div>
-
         </div>
       </section>
 
       {/* 6. Guarantee Section */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#1b2b28] mb-3">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1b2b28] mb-3">
             We guarantee
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          <p className="text-base text-slate-600 leading-relaxed">
             Pubrica assures academic and scientific publishing excellence, delivering unparalleled support and satisfaction to researchers globally. Trust us for your scholarly journey.
           </p>
         </div>
@@ -285,13 +282,13 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
                   <Laptop className="w-6 h-6 text-[#0b3328]" />
                 </div>
 
-                <h3 className="text-sm font-bold text-[#1b2b28] tracking-wider uppercase mb-1">
+                <h3 className="text-lg font-bold text-[#1b2b28] tracking-wider uppercase mb-1">
                   {item.title}
                 </h3>
-                <p className="text-xs font-medium text-slate-500 mb-4">
+                <p className="text-sm font-medium text-slate-500 mb-4">
                   {item.subtitle}
                 </p>
-                <p className="text-xs text-slate-600 leading-relaxed mb-6">
+                <p className="text-base text-slate-600 leading-relaxed mb-6">
                   {item.description}
                 </p>
               </div>
@@ -299,7 +296,7 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
               {/* Action Button */}
               <Link
                 href={item.ctaLink}
-                className="text-xs font-bold text-slate-800 hover:text-[#1b8c6e] border border-slate-300 hover:border-[#1b8c6e] px-6 py-2 rounded-md transition-colors inline-block"
+                className="text-sm font-bold text-slate-800 hover:text-[#1b8c6e] border border-slate-300 hover:border-[#1b8c6e] px-6 py-2 rounded-md transition-colors inline-block"
               >
                 {item.ctaText}
               </Link>
@@ -313,30 +310,30 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
         <div className="max-w-4xl mx-auto space-y-10 text-left">
           {/* Quality of your work */}
           <div className="space-y-2">
-            <h3 className="text-lg sm:text-xl font-bold text-[#1b2b28]">
+            <h3 className="text-xl sm:text-2xl font-bold text-[#1b2b28]">
               Quality of your work
             </h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p className="text-base text-slate-600 leading-relaxed">
               We are ISO 9001:2015 certified organization; 100% quality assurance in every phase of the project. This is our commitment.
             </p>
           </div>
 
           {/* Your delight is ours too—always */}
           <div className="space-y-2">
-            <h3 className="text-lg sm:text-xl font-bold text-[#1b2b28]">
+            <h3 className="text-xl sm:text-2xl font-bold text-[#1b2b28]">
               Your delight is ours too—always
             </h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p className="text-base text-slate-600 leading-relaxed">
               Your work will be on par with international standards and we publish in acclaimed journals and renowned publications. Scientific Writing & Publishing circumvents rejection through a pool of experts who vet your work before sending to the publisher.
             </p>
           </div>
 
           {/* We value your time */}
           <div className="space-y-2">
-            <h3 className="text-lg sm:text-xl font-bold text-[#1b2b28]">
+            <h3 className="text-xl sm:text-2xl font-bold text-[#1b2b28]">
               We value your time
             </h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p className="text-base text-slate-600 leading-relaxed">
               You may be in the midst of some important work and may not have the time to write that novel or paper. We understand this and help you complete your writing project.
             </p>
           </div>

@@ -203,10 +203,10 @@ export default function PublicationServices() {
         </div>
       </div>
 
-      {/* ================= PRICING & PACKAGES SECTION (FULL-WIDTH WHITE BG) ================= */}
-      <div className="w-full bg-white py-3 -mx-4 sm:-mx-6 lg:-mx-8 px-2 sm:px-6 lg:px-8">
+      {/* ================= PRICING & PACKAGES SECTION ================= */}
+      <div className="w-full bg-transparent py-6 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-5xl font-black text-[#0d4f60] mb-1">
+          <h2 className="text-3xl sm:text-5xl font-black text-[#0d4f60] mb-6">
             Our Packages
           </h2>
           <CommonPackages
@@ -216,7 +216,7 @@ export default function PublicationServices() {
             packages={publishingPackages}
             buttonText="Request Package Info"
           />
-          <div className="text-center mt-1">
+          <div className="text-center mt-6">
             <GetFreeQuoteButton />
           </div>
         </div>
