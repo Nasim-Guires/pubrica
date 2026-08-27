@@ -120,13 +120,13 @@ const EditingAndTranslationPageClient = () => {
 
 
               {/* Image box container */}
-              <div className="relative z-10 bg-white p-2">
+              <div className="relative z-10 p-2">
                 <Image
                   src="/images/editing-and-translation/Precision-Editing-Translation-Services-for-Researchers-and-Academics.webp"
                   alt="Editing Service"
                   width={380}
                   height={260}
-                  className="rounded-xl object-cover shadow-lg w-full h-[260px]"
+                  className="rounded-xl object-cover  w-full h-[260px]"
                   priority
                 />
               </div>
@@ -175,19 +175,14 @@ const EditingAndTranslationPageClient = () => {
           </p>
 
           {/* Buttons */}
-          <div className="mt-10 flex flex-wrap items-center gap-5">
-            <Link
-              href="/order-now/"
-              className="rounded-full bg-[#BA0000] px-6 py-2.5 text-sm text-white font-semibold hover:bg-[#980000] transition-colors"
-            >
-              Get a Free Quote
-            </Link>
+          <div className="mt-10 flex flex-wrap items-center gap-8">
+           <GetFreeQuoteButton/>
 
             <Link
-              href="https://pubrica.com/wp-content/uploads/2026/05/Editing-and-Translation-Services.pdf"
+              href="/uploads/editing-and-translation/Editing-and-Translation-Services.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-[#BA0000] px-6 py-2.5 text-sm text-white font-semibold hover:bg-[#980000] transition-colors"
+              className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
             >
               View Brochure
             </Link>
