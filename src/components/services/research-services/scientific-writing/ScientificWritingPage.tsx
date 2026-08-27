@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import CommonConsultationButton from '@/components/common/CommonConsultationButton';
 
 interface FeatureItem {
     id: number;
@@ -55,12 +57,11 @@ export const ScientificWritingPage: React.FC = () => {
                     Our free Recommendations service uses machine learning and your online activity to suggest research tailored to your needs.
                 </p>
                 <div className="pt-2">
-                    <button
-                        type="button"
-                        className="bg-[#c81e1e] hover:bg-[#a61717] text-white text-xs font-semibold px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
-                    >
+                    <Link
+                        href="/uploads/research-services/scientific-writing/24-03-2026-SCIENTIFIC-WRITING-THAT-DRIVES-PUBLICATION-SUCCESS.pdf"
+                        className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"                    >
                         View Brochure
-                    </button>
+                    </Link>
                 </div>
             </section>
 
@@ -111,12 +112,7 @@ export const ScientificWritingPage: React.FC = () => {
                 </p>
 
                 <div className="pt-4">
-                    <button
-                        type="button"
-                        className="bg-[#c81e1e] hover:bg-[#a61717] text-white text-xs font-semibold px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
-                    >
-                        Request Free Consultation
-                    </button>
+                    <CommonConsultationButton />
                 </div>
             </section>
 

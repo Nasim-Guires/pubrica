@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import CommonUploadButton from "@/components/common/CommonUploadButton";
 
 export default function VideoAbstractHero() {
   return (
@@ -103,12 +104,7 @@ export default function VideoAbstractHero() {
 
         {/* CTA Button */}
         <div className="pt-2">
-          <Link
-            href="#upload"
-            className="inline-block bg-[#b30000] hover:bg-[#8d0000] text-white font-bold px-8 py-3 rounded-full transition-colors text-sm shadow-sm"
-          >
-            Upload Your Manuscript
-          </Link>
+          <CommonUploadButton />
         </div>
       </section>
     </div>

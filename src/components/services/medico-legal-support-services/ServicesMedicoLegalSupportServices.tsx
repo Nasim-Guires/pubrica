@@ -65,13 +65,13 @@ export default function ServicesMedicoLegalSupportServices() {
               to establish the precise, credible, and legal aspects of medical negligence cases. Our team of medical and legal experts offers reliable assistance with complex medical malpractice, personal injury claims, and insurance disputes. Through professional medico legal consulting services, we assist legal professionals, insurers, and healthcare professionals in understanding the intersection of medicine and law in a clear, professional, and precise manner.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-8">
               <GetFreeQuoteButton />
               <Link
                 href="/uploads/Medico-Legal-Support-Services_compressed.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#c82323] hover:bg-[#a71d1d] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors inline-flex items-center justify-center"
+                className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
               >
                 View Brochure
               </Link>
@@ -80,7 +80,7 @@ export default function ServicesMedicoLegalSupportServices() {
 
           {/* Image Section Placeholder */}
           <div className="relative flex justify-center items-center">
-            <div className="relative w-full max-w-md h-64 sm:h-80 rounded-xl overflow-hidden shadow-md">
+            <div className="relative w-full max-w-md h-64 sm:h-80 rounded-xl overflow-hidden">
               <Image
                 src="/images/medico-legal-support-services/Medico-Legal-Services-Bridging-Medicine-and-Law-with-Expertise-and-Precision.webp"
                 alt="Medico-legal services bridging medicine and law"

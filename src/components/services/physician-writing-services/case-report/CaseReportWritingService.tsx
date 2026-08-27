@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Plus, Minus } from "lucide-react";
+import CommonUploadButton from "@/components/common/CommonUploadButton";
 
 // Data structure for the "What We do" accordion based on screenshots
 const whatWeDoServices = [
@@ -262,9 +263,7 @@ export default function CaseReportWritingService() {
             </p>
 
             <div className="pt-4">
-              <button className="bg-[#b30000] hover:bg-[#8e0000] text-white font-semibold text-sm px-8 py-3 rounded-full transition-colors shadow-sm">
-                Upload Your Manuscript
-              </button>
+              <CommonUploadButton />
             </div>
           </div>
 

@@ -45,8 +45,8 @@ export default function ResearchImpactService(): React.ReactElement {
               research promotion, your work must reach the right stakeholders.
               Pubrica’s{" "}
               <Link
-                href="/academy"
-                className="text-[#008ba3] underline underline-offset-2 hover:text-[#09322e] transition-colors"
+                href="/insights/industry-trends-forecasts-academic-publishing"
+                className="text-blue-600 transition-colors cursor-pointer"
               >
                 Research Impact Services
               </Link>{" "}
@@ -79,7 +79,7 @@ export default function ResearchImpactService(): React.ReactElement {
             {/* CTA Button */}
             <div className="pt-2">
               <a
-                href="#brochure"
+                href="/uploads/research-impact/Research-Impact-Services_compressed.pdf"
                 className="inline-block bg-[#123835] hover:bg-[#09322e] text-white text-xs sm:text-sm font-semibold py-3 px-6 rounded-full transition-colors shadow-sm"
               >
                 View brochure
@@ -91,10 +91,10 @@ export default function ResearchImpactService(): React.ReactElement {
           <div className="lg:col-span-5 relative flex justify-center lg:justify-end mt-4 lg:mt-0">
             <div className="relative w-full max-w-md">
               {/* Dark Green Backing Block */}
-              <div className="absolute inset-0 bg-[#0e2c29] rounded-2xl transform translate-x-3 translate-y-3 -z-10" />
+              <div className="absolute inset-0 rounded-2xl transform translate-x-3 translate-y-3 -z-10" />
 
               {/* Foreground Image */}
-              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white aspect-[4/3]">
+              <div className="relative rounded-2xl overflow-hidden  aspect-[4/3]">
                 <Image
                   src="/images/research-impact/Our-Research-Impact-Expertise-Includes.webp"
                   alt="Team reviewing research documents"

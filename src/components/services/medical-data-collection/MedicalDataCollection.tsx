@@ -1,5 +1,6 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export const MedicalDataCollection: React.FC = () => {
@@ -52,15 +53,15 @@ export const MedicalDataCollection: React.FC = () => {
             {/* CTA Option Buttons (Row 1) */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <GetFreeQuoteButton />
-              <button className="bg-[#b30000] hover:bg-red-800 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-sm transition-colors duration-150">
+              <Link href="/uploads/medical-data-collection/Data-Analytics-Machine-Learning-service.pdf" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
                 View Brochure
-              </button>
+              </Link>
             </div>
           </div>
 
           {/* Right Visual Frame Placeholder */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="w-full max-w-[420px] aspect-[4/3] bg-emerald-950 rounded-xl relative p-2.5 shadow-md">
+            <div className="w-full max-w-[420px] aspect-[4/3] rounded-xl relative p-2.5">
               <div className="w-full h-full rounded-lg overflow-hidden relative">
                 <Image
                   src="/images/medical-writing/Medical-Data-Collection.webp"

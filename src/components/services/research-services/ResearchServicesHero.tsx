@@ -49,7 +49,7 @@ export const ResearchServicesHero: React.FC<ResearchHeroProps> = ({
       text: <>Commitment to originality with <a href="/services/publication-support/plagiarism-services" className="text-sky-600 hover:underline">plagiarism</a> and AI-content checks, ensuring authenticity and academic integrity.</>
     }
   ],
-  brochureUrl = "#"
+  brochureUrl = "/uploads/research-services/03-03-2026-RESEARCH-SERVICES-1.pdf"
 }) => {
 
   const renderFeatureText = (item: FeatureItem) => {
@@ -131,7 +131,7 @@ export const ResearchServicesHero: React.FC<ResearchHeroProps> = ({
           <div className="mt-8">
             <a
               href={brochureUrl}
-              className="inline-block bg-[#b00000] hover:bg-[#900000] text-white font-semibold px-7 py-3 rounded-full shadow-md transition-colors duration-200 text-sm tracking-wide"
+              className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
             >
               View Brochure
             </a>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const RW = '/images/medical-writing/regulatory-writing';
 
@@ -65,7 +66,7 @@ const RegulatoryWritingPage = () => {
                         </li>
                         <li>
                             To help you comply with international regulatory regulations (ICH, FDA, EMA, PMDA,{' '}
-                            <a href="#ctd" className="text-blue-600 underline">CTD</a>).
+                            <a href="#ctd" className="text-blue-600 ">CTD</a>).
                         </li>
                         <li>
                             To avoid delays and rejections caused by insufficient documentation, formatting errors, or non-compliance.
@@ -74,7 +75,7 @@ const RegulatoryWritingPage = () => {
 
                     <p className="pt-2">
                         Our experienced regulatory writers and experts in clinical{' '}
-                        <a href="#regulatory-writing" className="text-blue-5 text-blue-600 underline">
+                        <a href="#regulatory-writing" className="text-blue-5 text-blue-600">
                             regulatory writing
                         </a>{' '}
                         understand that and provide services to help you develop your data into organized, compliant documents ready for regulatory submission.
@@ -87,9 +88,9 @@ const RegulatoryWritingPage = () => {
 
                 {/* View Brochure Button */}
                 <div className="mt-8">
-                    <button className="bg-[#b90000] hover:bg-red-800 text-white font-medium px-6 py-2.5 rounded-full transition duration-300 shadow-sm">
+                    <Link href="/uploads/medical-writing/regulatory-writing/17-03-2026-REGULATORY-WRITING-SUPPORT-.pdf" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
                         View Brochure
-                    </button>
+                    </Link>
                 </div>
             </section>
 
@@ -102,11 +103,11 @@ const RegulatoryWritingPage = () => {
 
                     <p className="text-gray-600 text-sm md:text-base max-w-4xl mb-10 leading-relaxed">
                         We simplify the{' '}
-                        <a href="#process" className="text-blue-600 underline">
+                        <a href="#process" className="text-blue-600 ">
                             regulatory writing process
                         </a>
                         —from data compilation to submission—helping you meet global compliance standards. Accelerate your approval timelines with Pubrica’s expert{' '}
-                        <a href="#support" className="text-blue-600 underline">
+                        <a href="#support" className="text-blue-600 ">
                             regulatory writing support
                         </a>
                         , delivering clarity, consistency, and compliance in every document.
@@ -115,14 +116,14 @@ const RegulatoryWritingPage = () => {
                     {/* Feature Cards Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                         {whyChoose.map((item) => (
-                        <div key={item.title} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col items-center text-center justify-between min-h-[200px]">
-                            <div className="mb-4 relative w-12 h-12">
-                                <Image src={item.icon} alt="" fill className="object-contain" sizes="48px" />
+                            <div key={item.title} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col items-center text-center justify-between min-h-[200px]">
+                                <div className="mb-4 relative w-12 h-12">
+                                    <Image src={item.icon} alt="" fill className="object-contain" sizes="48px" />
+                                </div>
+                                <p className="font-semibold text-gray-800 text-sm">
+                                    {item.title}
+                                </p>
                             </div>
-                            <p className="font-semibold text-gray-800 text-sm">
-                                {item.title}
-                            </p>
-                        </div>
                         ))}
                     </div>
 

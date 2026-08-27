@@ -198,13 +198,13 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
           </div>
 
           {/* Bottom CTA Action Row */}
-          <div className="flex flex-wrap items-center gap-4">
-            <button className="bg-[#a80000] text-white text-xs md:text-sm font-bold tracking-wide px-6 py-3 rounded-full hover:bg-[#880000] transition-colors shadow-sm cursor-pointer">
+          <div className="flex flex-wrap items-center gap-8">
+            <Link href="/order-now/" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
               Upload Your Manuscript
-            </button>
-            <button className="bg-[#a80000] text-white text-xs md:text-sm font-bold tracking-wide px-8 py-3 rounded-full hover:bg-[#880000] transition-colors shadow-sm cursor-pointer">
+            </Link>
+            <Link href="/uploads/physician-writing-services/Physician-Writing-services_compressed.pdf" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
               View brochure
-            </button>
+            </Link>
           </div>
         </div>
       </section>

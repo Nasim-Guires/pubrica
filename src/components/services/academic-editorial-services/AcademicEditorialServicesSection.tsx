@@ -2,6 +2,7 @@
 
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 // ==========================================
@@ -184,11 +185,12 @@ export default function AcademicEditorialServicesSection() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-wrap items-center gap-4 pt-4">
+              <div className="flex flex-wrap items-center gap-8 pt-4">
                 <GetFreeQuoteButton />
-                <button className="px-6 py-2.5 bg-[#b30000] hover:bg-[#8e0000] text-white font-bold text-xs sm:text-sm rounded-full transition-all duration-200 shadow-md">
+                <Link href="/uploads/academic-editorial-services/Academic-Editorial-Services.pdf" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
                   View Brochure
-                </button>
+                </Link>
+
               </div>
             </div>
 

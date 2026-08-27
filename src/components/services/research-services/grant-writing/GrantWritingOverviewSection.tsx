@@ -114,9 +114,8 @@ export default function GrantWritingOverviewSection() {
             {/* CTA Button */}
             <div className="pt-4">
               <a
-                href="#view-brochure"
-                className="inline-block bg-[#b30000] hover:bg-[#8e0000] text-white font-bold text-xs sm:text-sm px-8 py-3 rounded-full transition-colors duration-200 shadow-md"
-              >
+                href="/uploads/research-services/grant-writing/10-03-2026-GRANT-WRITING-BROCHURE.pdf"
+                className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"              >
                 View Brochure
               </a>
             </div>

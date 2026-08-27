@@ -132,14 +132,13 @@ export default function EducationalContentDevelopmentPage() {
             </ul>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-4">
+            <div className="flex flex-wrap items-center gap-8 pt-4">
               <GetFreeQuoteButton />
               <Link
-                href="/uploads/Medico-Legal-Support-Services_compressed.pdf"
+                href="/uploads/educational-content-development/Educational-Content-Development.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#b30000] hover:bg-[#8d0000] text-white text-xs sm:text-sm font-bold px-6 py-2.5 rounded-full transition-colors shadow-sm inline-flex items-center justify-center"
-              >
+                className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"              >
                 View Brochure
               </Link>
             </div>
@@ -149,10 +148,10 @@ export default function EducationalContentDevelopmentPage() {
           <div className="lg:col-span-5 flex justify-center lg:justify-end pt-4 lg:pt-0">
             <div className="relative w-full max-w-md">
               {/* Dark offset background backdrop */}
-              <div className="absolute inset-0 bg-[#0d3b44] rounded-2xl transform -translate-x-3 translate-y-3" />
+              <div className="absolute inset-0  rounded-2xl transform -translate-x-3 translate-y-3" />
 
               {/* Image Container */}
-              <div className="relative z-10 rounded-2xl overflow-hidden border-2 border-white shadow-md bg-white">
+              <div className="relative z-10  overflow-hidden">
                 <Image
                   src="/images/educational-content-development/poster-presentation.webp"
                   alt="Educational content development"

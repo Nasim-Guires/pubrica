@@ -121,11 +121,11 @@ export default function ScientificMedicalCommunication() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
-             <GetFreeQuoteButton/>
+            <div className="flex flex-wrap items-center gap-8 pt-2">
+              <GetFreeQuoteButton />
               <Link
-                href="/scientific-communication-brochures"
-                className="bg-[#c00000] hover:bg-[#a00000] text-white font-bold text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
+                href="/uploads/scientific-communication/Scientific-Communication-Services_compressed.pdf"
+                className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
               >
                 View Brochure
               </Link>
@@ -134,7 +134,7 @@ export default function ScientificMedicalCommunication() {
 
           {/* Side Visual/Image */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border-l-8 border-b-8 border-[#133c3f]">
+            <div className="relative w-full max-w-md aspect-[4/3] overflow-hidden">
               <Image
                 src="/images/research-services/experimental-design/Ensure-the-Success-of-Your-Research-with-Pubricas-Experimental-Design-Services.webp"
                 alt="Medical scientists discussing research results on laptop"
