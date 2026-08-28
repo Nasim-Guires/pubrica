@@ -61,7 +61,7 @@ export const DisciplineCard = ({
       <div className="space-y-4">
         {/* Header */}
         <div className="flex items-start justify-between gap-3">
-          <h3 className="text-xs font-bold leading-snug text-[#b81c1c] md:text-sm">
+          <h3 className="min-w-0 flex-1 text-xs font-bold leading-snug text-[#b81c1c] md:text-sm">
             {title}
           </h3>
 
@@ -78,14 +78,14 @@ export const DisciplineCard = ({
 
       {/* Expandable */}
       <div className="mt-6 flex items-center justify-between border-t border-gray-100 pt-4">
-        <span className="text-xs font-semibold text-[#0d3630]">
+        <span className="min-w-0 flex-1 text-xs font-semibold text-[#0d3630]">
           {expandableTitle}
         </span>
 
         <button
           type="button"
           onClick={() => setIsExpanded((prev) => !prev)}
-          className="p-1 text-gray-400 transition-colors hover:text-[#0d3630]"
+          className="shrink-0 p-1 text-gray-400 transition-colors hover:text-[#0d3630]"
           aria-expanded={isExpanded}
           aria-label="Toggle details"
         >
