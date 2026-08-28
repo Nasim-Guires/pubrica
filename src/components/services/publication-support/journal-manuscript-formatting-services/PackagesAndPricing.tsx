@@ -155,66 +155,13 @@ export default function PackagesAndPricing() {
           guidelines compliance.
         </p>
 
-        {/* 3 Package Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-          {/* CARD 1: STANDARD */}
-          <div className="bg-white rounded-t-xl overflow-hidden border border-gray-200/80 shadow-xs flex flex-col transition-all duration-300 hover:shadow-lg">
-            {/* Header */}
-            <div className="p-5 border-t-4 border-[#0c3830] border-b border-gray-100 flex items-center space-x-4 bg-white">
-              <Image
-                src="/images/publication-support/journal-manuscript-formatting-services/Manuscript-Formatting-Sample-Work.jpg"
-                alt="Manuscript Formatting Sample Work"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 40vw"
-              />
-            </div>
+        {/* Package Cards */}
+        <CommonPackages packages={manuscriptPackages} buttonText="Get a Free Quote" />
 
-            {/* Right Content */}
-            <div className="md:col-span-7 space-y-6">
-              <div>
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
-                  Manuscript Formatting Sample Work
-                </h3>
-                <Link
-                  href="/insights/sample-work/citation-and-formatting/"
-                  type="button"
-                  className="w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
-                >
-                  Discover More
-                </Link>
-              </div>
-
-              <div className="pt-2">
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
-                  Download the full Report Now
-                </h3>
-                <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-4">
-                  Explore our manuscript formatting sample work designed to meet
-                  your target journal&apos;s formatting guidelines, technical
-                  standards, and submission deadlines.
-                </p>
-                <Link
-                  href="/insights/sample-work/citation-and-formatting/"
-                  type="button"
-                  className="w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
-                >
-                  Discover More
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Replaced Packages Section */}
-        <CommonPackages
-          title="Manuscript Formatting Service Packages"
-          description="Selecting the right package ensures your manuscript will be professionally formatted to meet journal submission requirements and academic publishing standards. Whether you require minor manuscript editing and formatting or a complete research paper layout design, Pubrica provides customized manuscript formatting solutions for every level of editorial complexity and journal guidelines compliance."
-          packages={manuscriptPackages}
-          buttonText="Get a Free Quote"
-        />
-        <GetFreeQuoteButton/>
-      </div>
+        <div className="pt-2">
+          <GetFreeQuoteButton />
+        </div>
+      </section>
 
       {/* ============================================================ */}
       {/* SECTION 3: DELIVERY AND PRICING                               */}

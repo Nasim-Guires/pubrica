@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import ServiceBanner from "@/components/common/ServiceBanner";
-import Link from "next/link";
 
 // Common path prefix for package icons
 const COMMON_IMAGE_PATH = "/images/publication-support/journal-submission/";
