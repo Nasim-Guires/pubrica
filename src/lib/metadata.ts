@@ -41,6 +41,7 @@ export function constructMetadata({
   // Every real pubrica.com URL ends in "/" — match that convention exactly.
   const canonicalPath = slug.startsWith('/') ? slug : `/${slug}`;
   const canonicalUrl = `${SITE_URL}${canonicalPath}/`.replace(/\/+$/, '/');
+  const shouldNoIndex = noIndex || SITE_WIDE_NOINDEX;
 
   return {
     metadataBase: new URL(SITE_URL),

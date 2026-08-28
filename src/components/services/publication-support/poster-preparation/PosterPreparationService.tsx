@@ -140,8 +140,7 @@ export default function PosterPreparationPage() {
           Pubrica provides researchers with the ability to create conference-ready posters without the
           hassle of design problems, formatting issues, or compliance gaps. From conceptualization
           to final delivery, we become your{" "}
-          <Lgit add .
-ink href="/services/publication-support/poster-preparation/how-to-design-a-research-poster/" className="text-blue-600 ">
+          <Link href="/services/publication-support/poster-preparation/how-to-design-a-research-poster/" className="text-blue-600 ">
             scientific design
           </Link>{" "}
           partner, delivering a poster that represents the quality of your research and its clarity.
@@ -260,11 +259,7 @@ ink href="/services/publication-support/poster-preparation/how-to-design-a-resea
                 href="https://pubrica.com/insights/sample-work/microbiota-supportive-diet-lipid-profile/"
                 target="_blank"
                 rel="noopener noreferrer"
-<<<<<<< HEAD
-                className="text-blue-600 hover:underline font-medium"
-=======
                 className="text-blue-700"
->>>>>>> 852a314 (fixed few errors)
               >
                 Poster Preparation Services
               </a>{' '}

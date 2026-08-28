@@ -108,52 +108,56 @@ export default function PackagesAndPricing() {
       {/* ============================================================ */}
       {/* SECTION 1: SAMPLE WORK / REPORT DOWNLOAD BANNER               */}
       {/* ============================================================ */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8">
-        <div className="bg-[#f0fdf4] rounded-2xl p-6 md:p-10 border border-[#e6f4ea] grid grid-cols-1 md:grid-cols-12 gap-8 items-center shadow-xs">
-          {/* Left Image */}
-          <div className="md:col-span-5 relative h-56 md:h-64 rounded-xl overflow-hidden shadow-sm">
-            <Image
-              src="/images/publication-support/journal-manuscript-formatting-services/Manuscript-Formatting-Sample-Work.jpg"
-              alt="Manuscript Formatting Sample Work"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 40vw"
-            />
-          </div>
-
-          {/* Right Content */}
-          <div className="md:col-span-7 space-y-6">
-            <div>
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
-                Manuscript Formatting Sample Work
-              </h3>
-              <Link
-                href="/insights/sample-work"
-                className="inline-block w-full sm:w-auto text-center bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
-              >
-                Discover More
-              </Link>
+      <div className="space-y-12">
+        {/* Sample Work Section */}
+        <section className="max-w-6xl mx-auto px-4 md:px-8">
+          <div className="bg-[#f0fdf4] rounded-2xl p-6 md:p-10 border border-[#e6f4ea] grid grid-cols-1 md:grid-cols-12 gap-8 items-center shadow-xs">
+            {/* Left Image */}
+            <div className="md:col-span-5 relative h-56 md:h-64 rounded-xl overflow-hidden shadow-sm">
+              <Image
+                src="/images/publication-support/journal-manuscript-formatting-services/Manuscript-Formatting-Sample-Work.jpg"
+                alt="Manuscript Formatting Sample Work"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 40vw"
+              />
             </div>
 
-            <div className="pt-2">
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
-                Download the full Report Now
-              </h3>
-              <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-4">
-                Explore our manuscript formatting sample work designed to meet
-                your target journal&apos;s formatting guidelines, technical
-                standards, and submission deadlines.
-              </p>
-              <Link
-                href="/insights/sample-work"
-                className="inline-block w-full sm:w-auto text-center bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
-              >
-                Discover More
-              </Link>
+            {/* Right Content */}
+            <div className="md:col-span-7 space-y-6">
+              <div>
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
+                  Manuscript Formatting Sample Work
+                </h3>
+                <Link
+                  href="/insights/sample-work/citation-and-formatting/"
+                  type="button"
+                  className="w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
+                >
+                  Discover More
+                </Link>
+              </div>
+
+              <div className="pt-2">
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
+                  Download the full Report Now
+                </h3>
+                <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-4">
+                  Explore our manuscript formatting sample work designed to meet
+                  your target journal&apos;s formatting guidelines, technical
+                  standards, and submission deadlines.
+                </p>
+                <Link
+                  href="/insights/sample-work/citation-and-formatting/"
+                  type="button"
+                  className="w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
+                >
+                  Discover More
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
         {/* Replaced Packages Section */}
         <CommonPackages
