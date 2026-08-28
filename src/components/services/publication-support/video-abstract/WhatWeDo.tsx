@@ -124,7 +124,7 @@ export default function WhatWeDo() {
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-4">
           What We do
         </h2>
-        <p className="text-sm md:text-base text-slate-700 leading-relaxed max-w-5xl mb-10">
+        <p className="text-sm md:text-base text-slate-700 leading-relaxed max-w-5xl mb-8 md:mb-10">
           Utilizing Pubrica&apos;s{" "}
           <Link href="/services/publication-support/video-abstract/graphical-vs-video-abstracts-scientific-communication" className="text-sky-600 hover:underline">
             video abstract services
@@ -135,15 +135,15 @@ export default function WhatWeDo() {
           differentiating you from other similar publications.
         </p>
 
-        {/* Main Content Grid: Overlapping Images + Interactive Accordion */}
+        {/* Main Content Grid: Centered Image + Interactive Accordion */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-10">
-          {/* Left Column: Overlapping Visual Images */}
-          <div className="lg:col-span-5 relative flex justify-center items-center min-h-[320px] md:min-h-[380px]">
+          {/* Left Column: Mobile-Centered Image Container */}
+          <div className="lg:col-span-5 relative flex justify-center items-center h-64 sm:h-72 md:h-[380px] w-full mx-auto">
             {/* Background Light Circle Graphic */}
-            <div className="absolute w-64 h-64 md:w-80 md:h-80 bg-white/60 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-0" />
+            <div className="absolute w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 bg-white/60 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-0" />
 
-            {/* Top Left Image Card (Videographer) */}
-            <div className="absolute top-0 left-4 md:left-8 w-44 sm:w-52 md:w-56 h-56 sm:h-64 rounded-2xl overflow-hidden shadow-md z-10">
+            {/* Featured Image Card */}
+            <div className="relative w-52 sm:w-60 md:w-56 h-full max-h-[300px] md:max-h-none rounded-2xl overflow-hidden z-10">
               <Image
                 src="/images/publication-support/video-abstract/What-We-Do-1.png"
                 alt="Videographer recording research pitch"
@@ -151,9 +151,6 @@ export default function WhatWeDo() {
                 className="object-cover"
               />
             </div>
-
-            {/* Live Pubrica shows a single What We Do collage image */}
-            <div className="absolute bottom-0 right-4 md:right-8 w-48 sm:w-56 md:w-60 h-44 sm:h-52 rounded-2xl overflow-hidden shadow-lg border-2 border-white z-20 hidden" aria-hidden="true" />
           </div>
 
           {/* Right Column: Interactive Accordion List */}
@@ -176,7 +173,7 @@ export default function WhatWeDo() {
 
                     {/* Content Panel */}
                     {isOpen && (
-                      <div className="px-6 py-4 pt-0 text-xs md:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-white">
+                      <div className="px-5 md:px-6 py-4 pt-0 text-xs md:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-white">
                         {item.content}
                       </div>
                     )}

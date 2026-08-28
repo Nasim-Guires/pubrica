@@ -162,14 +162,14 @@ export default function VideoAbstractOverview() {
             </div>
           </div>
 
-          {/* Overlapping Image Collage */}
-          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
-            <div className="relative w-[320px] sm:w-[380px] h-[320px] sm:h-[380px]">
+          {/* Mobile-Centered Image Container */}
+          <div className="lg:col-span-5 relative flex justify-center lg:justify-end w-full">
+            <div className="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-[380px] h-[240px] sm:h-[290px] md:h-[320px] mx-auto lg:mx-0">
               {/* Back Soft Background Blob */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-100/60 rounded-full blur-xl -z-10" />
+              <div className="absolute inset-0 w-full h-full bg-emerald-100/60 rounded-full blur-xl -z-10" />
 
-              {/* Top Left Image */}
-              <div className="absolute top-0 left-0 w-56 h-48 sm:w-64 sm:h-52 rounded-xl overflow-hidden shadow-lg border-2 border-white">
+              {/* Centered Image Card */}
+              <div className="relative w-full h-full rounded-xl overflow-hidden shadow-lg">
                 <Image
                   src={`${PAGE_IMAGES}/video-abstracts-services.png`}
                   alt="Video Abstract Editing"
@@ -178,13 +178,12 @@ export default function VideoAbstractOverview() {
                 />
               </div>
 
-              {/* Live Pubrica shows a single video-abstracts-services image */}
+              {/* Live Pubrica secondary placeholder (hidden) */}
               <div className="absolute bottom-2 right-0 w-56 h-48 sm:w-64 sm:h-52 rounded-xl overflow-hidden shadow-2xl border-4 border-white hidden" aria-hidden="true" />
             </div>
           </div>
         </div>
       </section>
-
       {/* ==================== 3. KEY FEATURES ==================== */}
       <section className="max-w-6xl mx-auto py-8 px-4 md:px-8">
         <h3 className="text-xl md:text-2xl font-bold text-[#0c373b] mb-6">
