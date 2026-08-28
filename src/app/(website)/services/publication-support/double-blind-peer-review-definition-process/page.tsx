@@ -234,7 +234,7 @@ export default function PeerReviewPage() {
                             The basis of double-blind peer review is still used in academic publishing, ensuring objectivity and academic integrity. There are certainly problems resulting from the double-blind peer review process, but it has created a fairer space to assess scientific work. By recognizing and following the principles of the double-blind peer review process, researchers can increase their chances of getting published while also helping to create a more open and fairer academic world.
                         </p>
                         <p className="text-sm md:text-base italic pt-2">
-                            Double-Blind Peer Review: Definition, Process, and Implications for Researchers? Our academic consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]
+                            Double-Blind Peer Review: Definition, Process, and Implications for Researchers? Our academic consultants are here to guide you. <Link href="/order-now" className="text-sky-600 hover:underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-sky-600 hover:underline">[Schedule a Free Consultation]</Link>
                         </p>
                     </section>
 

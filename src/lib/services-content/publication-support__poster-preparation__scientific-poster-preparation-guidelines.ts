@@ -228,7 +228,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Scientific Poster Preparation: Guidelines for Clear Research Communication. Our [Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "Scientific Poster Preparation: Guidelines for Clear Research Communication. Our [Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h2",

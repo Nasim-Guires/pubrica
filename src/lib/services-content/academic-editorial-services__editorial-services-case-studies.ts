@@ -119,7 +119,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Ready to elevate your case study to the next level? Contact Pubrica today for expert editorial services that ensure clarity, accuracy, and publication-ready content. [Get Expert Publishing Support] or [Schedule a Free Consultation]."
+    "text": "Ready to elevate your case study to the next level? Contact Pubrica today for expert editorial services that ensure clarity, accuracy, and publication-ready content. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

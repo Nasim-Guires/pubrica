@@ -353,7 +353,7 @@ export default function PlagiarismDetectionPage() {
                             The use of <span className="text-blue-600">artificial intelligence</span> (AI) for <span className="text-blue-600">detecting plagiarism</span> is now based upon the meaning of content instead of the specific words used. AI allows for more accurate identification of paraphrased or translated sources, providing protection for academic integrity and intellectual property as well as fostering an ethical and original approach to content creation. This will be beneficial across multiple industries.
                         </p>
                         <p className="italic">
-                            Ensure content originality, academic integrity, and enterprise compliance with Pubrica&apos;s AI-powered plagiarism detection expertise. [Get Expert Publishing Support] or [Schedule a Free Consultation].
+                            Ensure content originality, academic integrity, and enterprise compliance with Pubrica&apos;s AI-powered plagiarism detection expertise. <Link href="/order-now" className="text-sky-600 hover:underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-sky-600 hover:underline">[Schedule a Free Consultation]</Link>.
                         </p>
                     </section>
 

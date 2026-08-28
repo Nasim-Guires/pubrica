@@ -161,7 +161,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Partner with Pubrica to design, accredit, and deliver high-impact CME programs that enhance clinical practice, compliance, and patient outcomes. [Get Expert Publishing Support] or [Schedule Free Consultation]."
+    "text": "Partner with Pubrica to design, accredit, and deliver high-impact CME programs that enhance clinical practice, compliance, and patient outcomes. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule Free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

@@ -206,7 +206,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Need expert support for SWiM-compliant systematic reviews? Partner with Pubrica for transparent, publication-ready evidence synthesis without meta-analysis. [Get Expert Publishing Support] or [Schedule a free consultation}"
+    "text": "Need expert support for SWiM-compliant systematic reviews? Partner with Pubrica for transparent, publication-ready evidence synthesis without meta-analysis. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a free consultation}"
   },
   {
     "type": "h2",

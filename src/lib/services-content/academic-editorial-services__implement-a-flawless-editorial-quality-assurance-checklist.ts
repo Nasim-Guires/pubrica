@@ -186,7 +186,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Contact Pubrica Editorial Services for academic editing, scholarly manuscript editing, and journal submission support. Let us help you create publication-ready manuscripts! [Get Expert Publishing Support] or [Schedule Free Consultation]."
+    "text": "Contact Pubrica Editorial Services for academic editing, scholarly manuscript editing, and journal submission support. Let us help you create publication-ready manuscripts! [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule Free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

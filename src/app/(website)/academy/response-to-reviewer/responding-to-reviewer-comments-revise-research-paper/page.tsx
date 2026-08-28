@@ -371,7 +371,7 @@ export default function RespondToReviewerCommentsPage() {
                                     The process of replying to reviewer comments requires patience, planning, and professionalism. By categorising comments, developing point-by-point responses, and documenting revision changes, authors maximize the quality of the manuscript and the chances for publication. In the end, constructive engagement with reviewers is simply part of the process of enhancing <Link href="/services/scientific-communication" className="text-sky-600 hover:underline">scientific communication</Link>.
                                 </p>
                                 <p className="italic">
-                                    How to Respond to Reviewer Comments and Revise Your Research Paper? Our Pubrica consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]!
+                                    How to Respond to Reviewer Comments and Revise Your Research Paper? Our Pubrica consultants are here to guide you. <Link href="/order-now" className="text-sky-600 hover:underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-sky-600 hover:underline">[Schedule a Free Consultation]</Link>!
                                 </p>
                             </section>
 

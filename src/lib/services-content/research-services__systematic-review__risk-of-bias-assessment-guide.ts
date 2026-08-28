@@ -132,7 +132,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "From protocol development to structured RoB assessment, Pubrica delivers end-to-end systematic review support tailored for publication success. [ Get Expert Publishing Support] or [Schedule a Free Consultation]."
+    "text": "From protocol development to structured RoB assessment, Pubrica delivers end-to-end systematic review support tailored for publication success. [ Get Expert Publishing Support] or [Schedule a Free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

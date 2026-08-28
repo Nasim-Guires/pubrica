@@ -204,7 +204,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Turn complex treatment comparisons into high-impact research. Pubrica provides end-to-end support for systematic reviews and network meta-analysis.{Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "Turn complex treatment comparisons into high-impact research. Pubrica provides end-to-end support for systematic reviews and network meta-analysis.{Get Expert Publishing Support] or [Schedule a Free Consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h2",

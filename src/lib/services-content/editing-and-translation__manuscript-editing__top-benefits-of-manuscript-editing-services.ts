@@ -300,7 +300,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Top 7 Benefits of Professional Manuscript Editing Services for Researchers. Our [Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "Top 7 Benefits of Professional Manuscript Editing Services for Researchers. Our [Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h2",

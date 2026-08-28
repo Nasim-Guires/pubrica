@@ -389,7 +389,7 @@ export default function GraphicalVsVideoAbstractsPage() {
                                 It is worth mentioning that graphical abstracts and <span className="text-blue-600">video abstracts</span> have recently emerged as important means that help make scientific communication more efficient. The use of graphical abstracts is an effective way of creating concise visual summaries that will facilitate the process of discovering and comprehending information. Video abstracts are used to provide a more detailed explanation of the study results.
                             </p>
                             <p className="italic text-gray-800">
-                                Graphical vs. Video Abstracts: Tools for Clear and Engaging Scientific Communication: Our <span className="text-blue-600">Pubrica</span> consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]
+                                Graphical vs. Video Abstracts: Tools for Clear and Engaging Scientific Communication: Our <span className="text-blue-600">Pubrica</span> consultants are here to guide you. <Link href="/order-now" className="text-sky-600 hover:underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-sky-600 hover:underline">[Schedule a Free Consultation]</Link>
                             </p>
                         </section>
 

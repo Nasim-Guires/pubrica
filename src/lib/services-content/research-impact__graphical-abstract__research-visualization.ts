@@ -205,7 +205,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Let Pubrica help you communicate complex science effectively through professionally designed research visualizations and graphical abstracts. [Get Expert Publishing Support] or [Schedule a free Consultation]."
+    "text": "Let Pubrica help you communicate complex science effectively through professionally designed research visualizations and graphical abstracts. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

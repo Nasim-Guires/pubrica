@@ -153,7 +153,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Unlock smarter, data-driven patient care with Pubrica. Leverage our healthcare analytics and patient segmentation expertise to improve outcomes, optimize resources, and support value-based care. [Get Expert Publishing Support] or [Schedule a Free Consultation]."
+    "text": "Unlock smarter, data-driven patient care with Pubrica. Leverage our healthcare analytics and patient segmentation expertise to improve outcomes, optimize resources, and support value-based care. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

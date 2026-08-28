@@ -131,7 +131,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "A Comprehensive Guide to Grant Writing: Strategies, Structure, and Success Factors for Securing Funding? Our Pubrica consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "A Comprehensive Guide to Grant Writing: Strategies, Structure, and Success Factors for Securing Funding? Our Pubrica consultants are here to guide you. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h2",

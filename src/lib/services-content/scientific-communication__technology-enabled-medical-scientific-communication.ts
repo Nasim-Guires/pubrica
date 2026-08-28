@@ -209,7 +209,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Communicate science with confidence. Choose Pubrica where expertise and technology come together to elevate your research.[Get Expert Publishing Support] or [Schedule a Free Consultation]."
+    "text": "Communicate science with confidence. Choose Pubrica where expertise and technology come together to elevate your research.[Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

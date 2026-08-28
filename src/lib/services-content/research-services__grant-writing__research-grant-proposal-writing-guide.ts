@@ -191,7 +191,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Publishing with Impact: How Authors Should Select the Right Journal. Our [Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "Publishing with Impact: How Authors Should Select the Right Journal. Our [Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h2",

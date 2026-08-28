@@ -131,7 +131,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Strengthen your regulatory submissions with expert biostatistical programming support from Pubrica. Partner with our specialists to ensure compliant, accurate, and review-ready clinical data analyses. [Get Expert Publishing Support] or [Schedule a Free Consultation]."
+    "text": "Strengthen your regulatory submissions with expert biostatistical programming support from Pubrica. Partner with our specialists to ensure compliant, accurate, and review-ready clinical data analyses. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

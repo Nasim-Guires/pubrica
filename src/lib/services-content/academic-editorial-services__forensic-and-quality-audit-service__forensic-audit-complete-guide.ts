@@ -170,7 +170,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Ensure transparency, accountability, and strong governance across corporate and research operations with Pubrica’s investigative expertise. [Partner with Pubrica](https://pubrica.com/services/academic-editorial-services/forensic-and-quality-audit-service/) for trusted forensic audit guidance. [Schedule a Free consultation]."
+    "text": "Ensure transparency, accountability, and strong governance across corporate and research operations with Pubrica’s investigative expertise. [Partner with Pubrica](https://pubrica.com/services/academic-editorial-services/forensic-and-quality-audit-service/) for trusted forensic audit guidance. [Schedule a Free consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

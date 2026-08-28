@@ -134,7 +134,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Unlock the full potential of your research with our professional meta-analysis services. Contact Pubrica today for expert assistance in conducting publication-ready meta-analyses and reporting. [Get Expert Publishing Support] or [Schedule a Free Consultation]."
+    "text": "Unlock the full potential of your research with our professional meta-analysis services. Contact Pubrica today for expert assistance in conducting publication-ready meta-analyses and reporting. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

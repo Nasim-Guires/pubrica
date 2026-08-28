@@ -181,7 +181,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Strengthen your literature review with Pubrica’s expert support in chronological, thematic, and hybrid structuring.We help transform complex evidence into clear, critical, and publication-ready narratives.Partner with Pubrica to enhance rigor, clarity, and impact in academic and clinical research.[Get expert publishing support] or [Schedule a free consultation]."
+    "text": "Strengthen your literature review with Pubrica’s expert support in chronological, thematic, and hybrid structuring.We help transform complex evidence into clear, critical, and publication-ready narratives.Partner with Pubrica to enhance rigor, clarity, and impact in academic and clinical research.[Get expert publishing support] or [Schedule a free consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

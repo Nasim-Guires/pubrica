@@ -220,7 +220,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Complete Guide to Writing a Cover Letter for Medical Journals? Our academic consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "Complete Guide to Writing a Cover Letter for Medical Journals? Our academic consultants are here to guide you. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h2",

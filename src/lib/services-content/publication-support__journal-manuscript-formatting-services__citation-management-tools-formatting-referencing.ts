@@ -178,7 +178,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Ensure flawless formatting and referencing for your manuscript. Partner with Pubrica for expert citation and formatting support. [Get Expert Publishing Support] or [Schedule a Free Consultation]."
+    "text": "Ensure flawless formatting and referencing for your manuscript. Partner with Pubrica for expert citation and formatting support. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",
