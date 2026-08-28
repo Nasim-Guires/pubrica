@@ -210,7 +210,7 @@ export default function Navbar() {
                                   />
                                 </div>
                                 <p className="mt-2 text-[11px] font-semibold text-gray-700 text-center leading-snug">
-                                  {selectedSubItem.label}
+                                  {selectedSubItem.sampleWorkCaption ?? selectedSubItem.label}
                                 </p>
                               </Link>
                             </div>
