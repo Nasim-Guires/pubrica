@@ -131,7 +131,7 @@ export default function LiteratureSearchAndCitationPage() {
                     scientific writing
                   </Link>{' '}
                   and{' '}
-                  <Link href="/services/medical-writing" className="text-sky-600 hover:underline">
+                  <Link href="/services/research-services/medical-writing" className="text-sky-600 hover:underline">
                     medical writing
                   </Link>{' '}
                   services to support evidence-based production of content.

@@ -10,11 +10,13 @@ const manuscriptTypes = [
     title: "Original Research Article",
     description: "Presents findings from prospective or retrospective clinical studies, including hypothesis, methodology, results, and discussion.",
     iconSrc: `${MS}/Original-Research-Article.png`,
+    href: "/services/physician-writing-services/original-research-article",
   },
   {
     title: "Case Report",
     description: "Describes rare or unusual clinical cases with diagnostic challenges, treatment outcomes, or novel management approaches.",
     iconSrc: `${MS}/Case-Report.png`,
+    href: "/services/physician-writing-services/case-report",
   },
   {
     title: "Case Series",
@@ -25,11 +27,13 @@ const manuscriptTypes = [
     title: "Systematic Review",
     description: "Follows a defined (PRISMA or Cochrane guidelines) protocol to critically appraise and compile all relevant studies addressing a specific clinical question.",
     iconSrc: `${MS}/Systematic-Review.png`,
+    href: "/services/research-services/systematic-review",
   },
   {
     title: "Meta-analysis",
     description: "Combines data from multiple studies statistically to derive pooled estimates and strengthen evidence for clinical practice.",
     iconSrc: `${MS}/Meta-analysis.png`,
+    href: "/services/research-services/meta-analysis",
   },
   {
     title: "Brief Communication / Short Report",
@@ -236,11 +240,10 @@ export default function PhysicianManuscriptsPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {manuscriptTypes.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl p-6 shadow-sm border border-transparent hover:border-sky-300 hover:bg-[#ebf4fa] transition-all duration-300 flex flex-col items-start group cursor-pointer"
-                >
+              const cardClassName =
+                "bg-white rounded-xl p-6 shadow-sm border border-transparent hover:border-sky-300 hover:bg-[#ebf4fa] transition-all duration-300 flex flex-col items-start group cursor-pointer";
+              const cardContent = (
+                <>
                   <div className="relative w-12 h-12 mb-4">
                     <Image
                       src={item.iconSrc}
@@ -250,14 +253,24 @@ export default function PhysicianManuscriptsPage() {
                       sizes="48px"
                     />
                   </div>
-                  
+
                   <h3 className="font-bold text-gray-900 group-hover:text-sky-900 text-base mb-2 transition-colors">
                     {item.title}
                   </h3>
-                  
+
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                     {item.description}
                   </p>
+                </>
+              );
+
+              return item.href ? (
+                <Link key={index} href={item.href} className={cardClassName}>
+                  {cardContent}
+                </Link>
+              ) : (
+                <div key={index} className={cardClassName}>
+                  {cardContent}
                 </div>
               );
             })}

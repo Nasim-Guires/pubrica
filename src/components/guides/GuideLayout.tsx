@@ -14,7 +14,7 @@ const INTERESTING_TOPICS = [
   { label: 'Original Research Article Writing Service', href: '/services/physician-writing-services/original-research-article' },
   { label: 'Literature Review', href: '/services/research-services/literature-review-and-gap' },
   { label: 'Grant Writing Services', href: '/services/research-services/grant-writing' },
-  { label: 'Biostatistical Programming', href: '/services/research-services/biostatistics-and-statistical-programming-service' },
+  { label: 'Biostatistical Programming', href: '/services/research-services/biostatistics-and-statistical-programming-services' },
   { label: 'Experimental Design', href: '/services/research-services/experimental-design' },
 ];
 

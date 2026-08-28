@@ -401,9 +401,9 @@ export default function WhoWeServeAndProcessLiterature() {
                             <h2 className="text-xl sm:text-2xl font-bold text-[#143234] mb-3">
                                 Literature Search and Citation Service Sample Work
                             </h2>
-                            <button className="bg-black hover:bg-gray-800 text-white font-medium px-8 py-2.5 rounded-full text-sm transition-colors shadow">
+                            <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white font-medium px-8 py-2.5 rounded-full text-sm transition-colors shadow">
                                 Discover More
-                            </button>
+                            </Link>
                         </div>
 
                         <div className="pt-2">
@@ -413,9 +413,9 @@ export default function WhoWeServeAndProcessLiterature() {
                             <p className="text-xs sm:text-sm text-gray-600 mb-4 leading-relaxed max-w-xl mx-auto lg:mx-0">
                                 Check out our literature search and citation samples created specifically to show domain relevance, accurate referencing styles, and adherence to journal submission formats.
                             </p>
-                            <button className="bg-black hover:bg-gray-800 text-white font-medium px-8 py-2.5 rounded-full text-sm transition-colors shadow">
+                            <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white font-medium px-8 py-2.5 rounded-full text-sm transition-colors shadow">
                                 Discover More
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

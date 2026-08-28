@@ -1,5 +1,6 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface AudienceCard {
@@ -57,9 +58,9 @@ export const PhysicianWhoWeServe: React.FC = () => {
         <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed mb-8 max-w-6xl">
           Pubrica's physician writing service supports clinicians from clinical
           content development to{" "}
-          <a href="/services/publication-support/journal-submission" className="text-[#3b82f6] hover:underline">
+          <Link href="/services/publication-support/journal-submission" className="text-[#3b82f6] hover:underline">
             journal submission
-          </a>
+          </Link>
           , while providing medically accurate, compliant, and publication-ready
           manuscripts.
         </p>

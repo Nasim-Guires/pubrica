@@ -189,7 +189,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Strategic Journal Selection and Manuscript Optimisation for Academic Publishing. Our [Pubrica](https://pubrica.com) consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "Strategic Journal Selection and Manuscript Optimisation for Academic Publishing. Our [Pubrica](https://pubrica.com) consultants are here to guide you. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h2",

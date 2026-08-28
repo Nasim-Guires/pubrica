@@ -179,7 +179,7 @@ export default function PhysicianResearchProposalService() {
                                         <li className="flex items-start">
                                             <span className="text-[#c5281c] font-bold mr-2 text-base leading-none">&bull;</span>
                                             <div>
-                                                <strong className="text-gray-900">Study Design &amp; Methodology Consulting:</strong> Our team outlines the most appropriate research methodology (RCT, Cohort, Cross-sectional, etc.), including study type, population, sampling, data collection instruments, statistical tests, sample size justification, endpoint definitions, and ethical considerations, tailored for clinical, experimental, or qualitative research.
+                                                <strong className="text-gray-900">Study Design &amp; Methodology Consulting:</strong> Our team outlines the most appropriate research methodology (RCT, Cohort, Cross-sectional, etc.), including study type, population, sampling, <Link href="/services/medical-data-collection" className="text-[#2b6cb0] hover:underline">data collection</Link> instruments, statistical tests, sample size justification, endpoint definitions, and ethical considerations, tailored for clinical, experimental, or qualitative research.
                                             </div>
                                         </li>
                                         <li className="flex items-start">
@@ -223,7 +223,7 @@ export default function PhysicianResearchProposalService() {
                                         <li className="flex items-start">
                                             <span className="text-[#c5281c] font-bold mr-2 text-base leading-none">&bull;</span>
                                             <div>
-                                                <strong className="text-gray-900">Revisions &amp; Expert Review:</strong> Post-submission, you receive structured peer-level feedback, reviewer responses, and iterative support.
+                                                <strong className="text-gray-900">Revisions &amp; Expert Review:</strong> Post-submission, you receive structured peer-level feedback, <Link href="/services/publication-support/responding-to-reviewers" className="text-[#2b6cb0] hover:underline">reviewer responses</Link>, and iterative support.
                                             </div>
                                         </li>
                                         <li className="flex items-start">

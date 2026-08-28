@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface PhysicianHeroProps {
@@ -64,9 +65,9 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
           <div className="space-y-4 mb-8 max-w-6xl">
             <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed text-justify">
               We offer specialized{" "}
-              <a href="/services/physician-writing-services" className="text-[#3b82f6] hover:underline">
+              <Link href="/services/physician-writing-services" className="text-[#3b82f6] hover:underline">
                 physician writing services
-              </a>{" "}
+              </Link>{" "}
               {leadParagraph.split("physician writing services")[1]}
             </p>
             <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed font-medium">
@@ -83,17 +84,17 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
               </h3>
               <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed text-justify">
                 Pubrica's{" "}
-                <a href="/services/physician-writing-services" className="text-[#3b82f6] hover:underline">
+                <Link href="/services/physician-writing-services" className="text-[#3b82f6] hover:underline">
                   Physician Writing Services
-                </a>{" "}
+                </Link>{" "}
                 {
                   bodyText1
                     .split("Physician Writing Services")[1]
                     .split("medical writing")[0]
                 }
-                <a href="/services/medical-writing" className="text-[#3b82f6] hover:underline">
+                <Link href="/services/research-services/medical-writing" className="text-[#3b82f6] hover:underline">
                   medical writing
-                </a>
+                </Link>
                 {
                   bodyText1
                     .split("Physician Writing Services")[1]
@@ -143,9 +144,9 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                 } else if (bullet.includes("Plagiarism and AI-generated")) {
                   renderedText = (
                     <span>
-                      <a href="/services/publication-support/plagiarism-services" className="text-[#3b82f6] hover:underline">
+                      <Link href="/services/publication-support/plagiarism-services" className="text-[#3b82f6] hover:underline">
                         Plagiarism
-                      </a>{" "}
+                      </Link>{" "}
                       and AI-generated article screening with a comprehensive
                       report
                     </span>
@@ -153,9 +154,9 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                 } else if (bullet.includes("Literature review")) {
                   renderedText = (
                     <span>
-                      <a href="/services/research-services/literature-review-and-gap" className="text-[#3b82f6] hover:underline">
+                      <Link href="/services/research-services/literature-review-and-gap" className="text-[#3b82f6] hover:underline">
                         Literature review
-                      </a>{" "}
+                      </Link>{" "}
                       from PubMed, Embase,{" "}
                       <span className="text-[#3b82f6]">Scopus</span>, and Cochrane
                     </span>

@@ -1,5 +1,6 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface Specialty {
@@ -226,9 +227,9 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
           <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed mb-12 max-w-6xl">
             At Pubrica, our physician writing service guarantees that any
             clinical manuscript,{" "}
-            <a href="/services/physician-writing-services/case-report" className="text-[#3b82f6] hover:underline">
+            <Link href="/services/physician-writing-services/case-report" className="text-[#3b82f6] hover:underline">
               case report
-            </a>
+            </Link>
             , or regulatory document we provide complies with international
             medical writing standards and the guidelines for a target journal or
             institution.
@@ -310,9 +311,9 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
               <h3 className="text-black text-lg md:text-xl font-bold tracking-tight mb-2">
                 Physician Writing Service Sample Work
               </h3>
-              <button className="w-full max-w-lg bg-black text-white text-xs md:text-sm font-semibold py-2.5 px-4 rounded hover:bg-zinc-800 transition-colors tracking-wide text-center">
+              <Link href="/insights/sample-work" className="w-full max-w-lg bg-black text-white text-xs md:text-sm font-semibold py-2.5 px-4 rounded hover:bg-zinc-800 transition-colors tracking-wide text-center inline-block">
                 Discover More
-              </button>
+              </Link>
             </div>
 
             <div className="space-y-3 pt-2">
@@ -325,9 +326,9 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
                 decks, clinical summaries, CME content, and more—crafted by
                 medical experts for accuracy, clarity, and publication success.
               </p>
-              <button className="w-full max-w-lg bg-black text-white text-xs md:text-sm font-semibold py-2.5 px-4 rounded hover:bg-zinc-800 transition-colors tracking-wide text-center">
+              <Link href="/insights/sample-work" className="w-full max-w-lg bg-black text-white text-xs md:text-sm font-semibold py-2.5 px-4 rounded hover:bg-zinc-800 transition-colors tracking-wide text-center inline-block">
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>
