@@ -96,7 +96,7 @@ export const BookEditingOverviewAndProcess: React.FC = () => {
   return (
     <div className="w-full bg-[#f8fafc] text-slate-800">
       {/* 1. Dark Green Banner Header */}
-      <section className="w-full bg-[#03231a] py-10 px-4 sm:px-6 text-center text-white">
+      <section className="w-full bg-[#03231a] py-5 px-4 sm:px-6 text-center text-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 tracking-wide">
             Book Editing Services at Pubrica
@@ -110,7 +110,7 @@ export const BookEditingOverviewAndProcess: React.FC = () => {
       </section>
 
       {/* 2. Overview & Support Services Section */}
-      <section className="w-full py-12 px-4 sm:px-6 max-w-6xl mx-auto">
+      <section className="w-full py-6 px-4 sm:px-6 max-w-6xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-2">
           Book Editing and Peer-reviewing Support Services
         </h2>
@@ -150,7 +150,7 @@ export const BookEditingOverviewAndProcess: React.FC = () => {
       </section>
 
       {/* 3. "How Our Book Editing Service Works" Horizontal Tabs Section */}
-      <section className="w-full py-12 px-4 sm:px-6 max-w-6xl mx-auto">
+      <section className="w-full py-6 px-4 sm:px-6 max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-3">
             How Our Book Editing Service Works

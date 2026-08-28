@@ -13,7 +13,7 @@ export default function PublisherPartnershipPage() {
         <div className="min-h-screen bg-white text-gray-800 font-sans">
 
             {/* Hero Section */}
-            <section className="bg-[#26373b] py-16 px-4 text-center text-white">
+            <section className="bg-[#26373b] py-7 px-4 text-center text-white">
                 <div className="max-w-4xl mx-auto border-2 border-gray-400 p-8 rounded-sm shadow-sm">
                     <h1 className="text-3xl md:text-4xl font-bold mb-2">Enhancing Research Initiatives</h1>
                     <p className="text-gray-300 text-sm md:text-base uppercase tracking-wider">Top Publishers</p>
@@ -21,7 +21,7 @@ export default function PublisherPartnershipPage() {
             </section>
 
             {/* Intro Description & Badge */}
-            <section className="py-12 px-4 text-center max-w-3xl mx-auto">
+            <section className="py-6 px-4 text-center max-w-3xl mx-auto">
                 <div className="flex justify-center mb-6">
                     <div className="w-24 h-24 relative flex items-center justify-center">
                         <Image
@@ -40,7 +40,7 @@ export default function PublisherPartnershipPage() {
             </section>
 
             {/* 3 Colored Cards Section */}
-            <section className="pb-16 px-4 max-w-5xl mx-auto">
+            <section className="pb-7 px-4 max-w-5xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* Card 1 */}
                     <div className="bg-[#3192c3] text-white p-6 rounded shadow-md flex flex-col justify-between">
@@ -107,7 +107,7 @@ export default function PublisherPartnershipPage() {
             </section>
 
             {/* 4 White Columns Authoring Services */}
-            <section className="py-12 px-4 max-w-6xl mx-auto">
+            <section className="py-6 px-4 max-w-6xl mx-auto">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
                     {/* Column 1 */}
@@ -185,7 +185,7 @@ export default function PublisherPartnershipPage() {
             </section>
 
             {/* Collaboration Model Section */}
-            <section className="py-12 px-4 max-w-5xl mx-auto">
+            <section className="py-6 px-4 max-w-5xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#26373b] text-center mb-8">Collaboration Model</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 

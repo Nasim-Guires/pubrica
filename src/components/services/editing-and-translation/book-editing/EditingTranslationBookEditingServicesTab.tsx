@@ -97,7 +97,7 @@ export const EditingTranslationBookEditingServicesTab: React.FC = () => {
     servicesData.find((s) => s.id === activeTab) || servicesData[0];
 
   return (
-    <section className="w-full bg-[#f8fafc] py-12 text-slate-800">
+    <section className="w-full bg-[#f8fafc] py-6 text-slate-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-3">

@@ -60,7 +60,7 @@ const whoWeServeData = [
 
 export default function WhoWeServeSection() {
   return (
-    <section className="py-16 bg-white border-t border-gray-100">
+    <section className="py-7 bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-10">

@@ -2,7 +2,7 @@ import PackageList from "./PackageList";
 
 export default function PackagesSection() {
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto font-sans">
+    <section className="py-7 px-4 max-w-7xl mx-auto font-sans">
       {/* Header */}
       <div className="text-left mb-12">
         <h2 className="text-2xl font-bold text-[#0A4D5C] mb-4">

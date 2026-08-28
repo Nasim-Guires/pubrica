@@ -80,7 +80,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "The above criteria ensure the reproducibility of the study and make critical appraisal easier for reviewers conducting a [systematic literature review](https://pubrica.com/insights/sample-work/immunopet-imaging-of-human-ca6/)."
+    "text": "The above criteria ensure the reproducibility of the study and make critical appraisal easier for reviewers conducting a [systematic literature review](https://pubrica.com/insights/immunopet-imaging-of-human-ca6/)."
   },
   {
     "type": "h2",
@@ -160,7 +160,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Meta-Analysis of RCTs, Observational & Diagnostic Accuracy Studies: A PRISMA 2020 Guide. Our [Pubrica](https://pubrica.com) consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "Meta-Analysis of RCTs, Observational & Diagnostic Accuracy Studies: A PRISMA 2020 Guide. Our [Pubrica](https://pubrica.com) consultants are here to guide you. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h2",

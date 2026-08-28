@@ -110,7 +110,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "While WCAG provides the technical foundation, countries adopt and enforce accessibility through legal frameworks. [[5](https://doi.org/10.3109/938178)] Key International Accessibility Requirements are as follows:"
+    "text": "While WCAG provides the technical foundation, countries adopt and enforce accessibility through legal frameworks. [[5](https://doi.org/10.3109/09638288.2014.938178)] Key International Accessibility Requirements are as follows:"
   },
   {
     "type": "img",
@@ -240,7 +240,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Achieve Global Accessibility Compliance at Scale!From WCAG 2.2 alignment to international regulatory readiness, Pubrica supports end-to-end digital accessibility transformation. [Explore Pubrica’s Accessibility Services] or [Schedule a Free Consultation]."
+    "text": "Achieve Global Accessibility Compliance at Scale!From WCAG 2.2 alignment to international regulatory readiness, Pubrica supports end-to-end digital accessibility transformation. [Explore Pubrica’s Accessibility Services](/services/education-editorial-service/accessibility-compliance) or [Schedule a Free Consultation](/order-now)."
   },
   {
     "type": "h2",

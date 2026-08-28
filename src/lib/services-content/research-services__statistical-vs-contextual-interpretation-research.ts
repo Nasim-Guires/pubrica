@@ -214,7 +214,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Turn your research findings into powerful, publishable insights. Get expert support to enhance your data interpretation, statistical accuracy, and real-world relevance with Pubrica. [Get Expert Publishing Support] or [Schedule a Free consultation]"
+    "text": "Turn your research findings into powerful, publishable insights. Get expert support to enhance your data interpretation, statistical accuracy, and real-world relevance with Pubrica. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h2",

@@ -45,7 +45,7 @@ export default function DevelopmentEditingServicePage() {
   return (
     <article className="w-full bg-white text-gray-800 font-sans">
       {/* ------------------- HERO BANNER ------------------- */}
-      <header className="bg-[#0b3b2c] text-white py-12 px-4 text-center">
+      <header className="bg-[#0b3b2c] text-white py-6 px-4 text-center">
         <div className="max-w-5xl mx-auto border border-gray-400/40 p-8 rounded-sm bg-[#0b3b2c]/80 backdrop-blur-sm">
           <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide text-white">
             Copy Editing Services
@@ -56,7 +56,7 @@ export default function DevelopmentEditingServicePage() {
       </header>
 
       {/* ------------------- FIRST CONTENT SECTION (Matching Reference 2) ------------------- */}
-      <section className="py-14 px-4 max-w-6xl mx-auto" aria-labelledby="main-heading">
+      <section className="py-6 px-4 max-w-6xl mx-auto" aria-labelledby="main-heading">
         <h2 id="main-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-8">
           Refine Your Manuscripts with Professional Copy Editing Services
         </h2>
@@ -129,7 +129,7 @@ export default function DevelopmentEditingServicePage() {
       </section>
 
       {/* ------------------- TYPES OF COPY EDITING SERVICES (Matching Reference 1) ------------------- */}
-      <section className="py-14 px-4 max-w-6xl mx-auto border-t border-gray-100">
+      <section className="py-6 px-4 max-w-6xl mx-auto border-t border-gray-100">
         <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] text-center mb-10">
           Types of Copy Editing Services We Offer
         </h2>

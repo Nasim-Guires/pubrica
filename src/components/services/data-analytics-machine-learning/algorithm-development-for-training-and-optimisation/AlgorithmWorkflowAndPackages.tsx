@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, ArrowDown, ArrowLeft } from "lucide-react";
 
 export default function AlgorithmWorkflowAndPackages() {
@@ -104,9 +105,9 @@ export default function AlgorithmWorkflowAndPackages() {
   ];
 
   return (
-    <main className="w-full bg-[#f8fbf9] text-[#222222] font-sans pb-16">
+    <main className="w-full bg-[#f8fbf9] text-[#222222] font-sans pb-7">
       {/* 1. HERO TITLE BANNER */}
-      <section className="bg-[#1b3d36] text-white py-10 px-4 text-center">
+      <section className="bg-[#1b3d36] text-white py-5 px-4 text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-2">
           Algorithm Development for Training & Optimization
         </h2>
@@ -116,7 +117,7 @@ export default function AlgorithmWorkflowAndPackages() {
       </section>
 
       {/* 2. HOW OUR SERVICE WORKS (PROCESS FLOW SECTION) */}
-      <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 md:px-8">
+      <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 md:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-3">
             How Our Algorithm Development for Training and Optimisation Service Works
@@ -229,7 +230,7 @@ export default function AlgorithmWorkflowAndPackages() {
       </section>
 
       {/* 3. SAMPLE WORK & REPORT DOWNLOAD SECTION */}
-      <section className="bg-[#f0fbf5] py-12 px-4 sm:px-6 md:px-8 border-y border-gray-200">
+      <section className="bg-[#f0fbf5] py-6 px-4 sm:px-6 md:px-8 border-y border-gray-200">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
 
           {/* Image Section */}
@@ -251,9 +252,9 @@ export default function AlgorithmWorkflowAndPackages() {
               <h3 className="text-lg md:text-xl font-bold text-[#1b3d36] mb-3">
                 Algorithm Development for Training and Optimisation Sample Work
               </h3>
-              <button className="bg-black hover:bg-gray-800 text-white text-xs font-semibold py-2.5 px-8 rounded-full transition-colors">
+              <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold py-2.5 px-8 rounded-full transition-colors">
                 Discover More
-              </button>
+              </Link>
             </div>
 
             <div>
@@ -263,25 +264,25 @@ export default function AlgorithmWorkflowAndPackages() {
               <p className="text-xs md:text-sm text-gray-700 leading-relaxed mb-4">
                 Explore our algorithm development sample work, meticulously designed to align with project-specific objectives, domain standards (e.g., ISO/IEC, GDPR, HIPAA), and research timelines, ensuring robust, ethical, and publication-ready outcomes.
               </p>
-              <button className="bg-black hover:bg-gray-800 text-white text-xs font-semibold py-2.5 px-8 rounded-full transition-colors">
+              <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold py-2.5 px-8 rounded-full transition-colors">
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* 4. OUR PACKAGES SECTION */}
-      <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 md:px-8">
+      <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 md:px-8">
         <div className="text-center max-w-4xl mx-auto mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-3">
             Algorithm Development Service – Our Packages
           </h2>
           <p className="text-gray-700 text-sm md:text-base leading-relaxed">
             At Pubrica, we provide comprehensive{" "}
-            <a href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-teal-700 underline font-medium">
+            <Link href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-teal-700 underline font-medium">
               Algorithm Development Services
-            </a>{" "}
+            </Link>{" "}
             tailored to meet the unique needs of researchers, healthcare professionals, and technology developers. Our packages are designed to ensure high-performance, scalable, and publication-ready algorithm solutions.
           </p>
         </div>

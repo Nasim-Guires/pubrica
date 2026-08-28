@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Step interface for Section 1
 interface Step {
@@ -128,7 +129,7 @@ export default function PredictiveAnalyticProcessSteps() {
             {/* ========================================================= */}
             {/* SECTION 1: Step-by-Step Process                           */}
             {/* ========================================================= */}
-            <section className="py-16 px-4 max-w-7xl mx-auto text-center">
+            <section className="py-7 px-4 max-w-7xl mx-auto text-center">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1a3832] mb-1">
                     How Our Predictive Analytics Service Works
                 </h2>
@@ -193,7 +194,7 @@ export default function PredictiveAnalyticProcessSteps() {
             {/* ========================================================= */}
             {/* SECTION 2: Benefits Of Using Our Predictive Analytics    */}
             {/* ========================================================= */}
-            <section className="py-16 px-4 bg-slate-50/60 border-t border-slate-100">
+            <section className="py-7 px-4 bg-slate-50/60 border-t border-slate-100">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-2xl md:text-3xl font-bold text-[#1a3832] mb-10">
                         Benefits Of Using Our Predictive Analytics
@@ -243,7 +244,7 @@ export default function PredictiveAnalyticProcessSteps() {
             {/* ========================================================= */}
             {/* SECTION 3: Compliance & Guideline Standards & Sample Work */}
             {/* ========================================================= */}
-            <section className="py-16 px-4 bg-white">
+            <section className="py-7 px-4 bg-white">
                 <div className="max-w-5xl mx-auto">
                     {/* Header */}
                     <h2 className="text-2xl md:text-3xl font-bold text-[#1a3832] mb-3">
@@ -302,9 +303,9 @@ export default function PredictiveAnalyticProcessSteps() {
                                     <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2">
                                         Predictive Analytics Sample Work
                                     </h3>
-                                    <button className="w-full bg-black hover:bg-neutral-800 text-white font-medium py-2 px-6 rounded-full transition-colors text-xs md:text-sm">
+                                    <Link href="/insights/sample-work" className="block w-full text-center bg-black hover:bg-neutral-800 text-white font-medium py-2 px-6 rounded-full transition-colors text-xs md:text-sm">
                                         Discover More
-                                    </button>
+                                    </Link>
                                 </div>
 
                                 <div>
@@ -314,9 +315,9 @@ export default function PredictiveAnalyticProcessSteps() {
                                     <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-3">
                                         Explore our predictive analytics sample work, meticulously developed to meet journal-specific formatting requirements, rigorous methodological standards (e.g., TRIPOD, CONSORT), and project timelines, ensuring accurate, publication-ready, and actionable insights for research or business applications.
                                     </p>
-                                    <button className="w-full bg-black hover:bg-neutral-800 text-white font-medium py-2 px-6 rounded-full transition-colors text-xs md:text-sm">
+                                    <Link href="/insights/sample-work" className="block w-full text-center bg-black hover:bg-neutral-800 text-white font-medium py-2 px-6 rounded-full transition-colors text-xs md:text-sm">
                                         Discover More
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

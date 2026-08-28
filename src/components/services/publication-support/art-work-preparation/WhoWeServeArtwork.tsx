@@ -81,7 +81,7 @@ export default function WhoWeServeArtwork() {
   };
 
   return (
-    <section className="w-full bg-white py-12 px-4 md:px-8 font-sans text-[#1a1a1a]">
+    <section className="w-full bg-white py-6 px-4 md:px-8 font-sans text-[#1a1a1a]">
       <div className="mx-auto max-w-6xl">
         {/* Section Heading & Intro */}
         <div className="mb-10">

@@ -172,7 +172,7 @@ export default function ClinicalReviewScopeAndApproach() {
   };
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-10 space-y-12 text-slate-800">
+    <section className="max-w-6xl mx-auto px-4 py-5 space-y-12 text-slate-800">
       {/* 1. What We Review Section */}
       <div className="space-y-6">
         <div className="space-y-2">
@@ -234,9 +234,9 @@ export default function ClinicalReviewScopeAndApproach() {
           Pubrica offers systematic, detailed, and methodologically sound
           clinical literature reviews to facilitate evidence-based
           decision-making in healthcare. Our services integrate{" "}
-          <a href="/services/research-services/systematic-review" className="text-sky-600 underline hover:text-sky-800">
+          <Link href="/services/research-services/systematic-review" className="text-sky-600 underline hover:text-sky-800">
             Systematic Review Support
-          </a>{" "}
+          </Link>{" "}
           to objectively appraise and synthesize the latest clinical evidence,
           enabling the client to incorporate vetted research findings into
           clinical, procedural, policy documents, grant proposals, and the

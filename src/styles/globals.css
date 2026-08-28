@@ -26,8 +26,9 @@
   --color-accent-600: #d9631a;
   --color-accent-700: #b44b10;
 
-  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-display: 'Outfit', var(--font-sans);
+  /* Overridden by next/font (Poppins, pubrica.com's real typeface) on <body>; this is only the pre-hydration/no-JS fallback stack. */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-display: var(--font-sans);
 }
 
 :root {
@@ -40,6 +41,9 @@ body {
   color: var(--foreground);
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   scroll-behavior: smooth;
+  /* Keep font-display's value a live reference to the Poppins variable next/font
+     sets on this element; declaring this inside @theme gets frozen at build time. */
+  --font-display: var(--font-sans);
 }
 
 /* Glassmorphism Utilities */

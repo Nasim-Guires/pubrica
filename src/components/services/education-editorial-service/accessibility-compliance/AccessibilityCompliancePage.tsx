@@ -60,7 +60,7 @@ const AccessibilityCompliancePage: NextPage = () => {
 
             <div className="min-h-screen bg-white text-gray-800">
                 {/* Header Section - Dark Banner */}
-                <header className="bg-[#1a3a3a] text-white py-16">
+                <header className="bg-[#1a3a3a] text-white py-7">
                     <div className="container mx-auto px-4 text-center">
                         <h1 className="text-4xl md:text-5xl font-bold mb-4">Accessibility Compliance</h1>
                         <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
@@ -70,7 +70,7 @@ const AccessibilityCompliancePage: NextPage = () => {
                 </header>
 
                 {/* Main Content */}
-                <main className="container mx-auto px-4 py-12 md:py-16 max-w-7xl">
+                <main className="container mx-auto px-4 py-6 md:py-7 max-w-7xl">
                     {/* Refine Your Manuscripts Section */}
                     <section className="mb-20">
                         <h2 className="text-3xl md:text-4xl font-bold text-[#1a3a3a] mb-6 leading-tight">

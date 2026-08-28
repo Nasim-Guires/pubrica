@@ -1,19 +1,11 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Plus,
-  Minus,
-  BookOpen,
-  ArrowRight,
-  Download,
-  Quote,
-} from "lucide-react";
+import { Plus, Minus, Download, Quote } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import CommonFAQ from "@/components/common/FAQ";
+import DynamicInsightsSection from "@/components/services/DynamicInsightsSection";
 
 export default function PubricaResourceHub() {
   // --- TESTIMONIALS DATA ---
@@ -113,78 +105,11 @@ export default function PubricaResourceHub() {
     },
   ];
 
-  // --- INSIGHTS DATA ---
-  const categories = ["Article", "How to Article", "News"];
-  const [selectedCategory, setSelectedCategory] = useState("Article");
-
-  const insights = [
-    {
-      title: "Examples of Search Terms from Published Studies",
-      category: "Article",
-      snippet:
-        "In brief A search word (or search query) has a simple definition. A search term is a single word or phrase used to retrieve relevant information.",
-      image:
-        "/images/publication-support/Examples-of-Search-Terms-from-Published-Studies.webp",
-    },
-    {
-      title: "How to Combine Search Terms for Research paper publication?",
-      category: "Article",
-      snippet:
-        "In brief Quick searches with only one search term sometimes provide many irrelevant results. Combining terms improves accuracy.",
-      image:
-        "/images/publication-support/How-to-Combine-Search-Terms-for-Research-paper-publication.webp",
-    },
-    {
-      title: "How to Develop a search strategy for a systematic review",
-      category: "Article",
-      snippet:
-        "In brief A search strategy is a structured set of keywords used to search databases efficiently during systematic reviews.",
-      image:
-        "/images/publication-support/How-to-Develop-a-search-strategy-for-a-systematic-review.webp",
-    },
-    {
-      title: "The Leading Journals Shaping Medical Understanding",
-      category: "How to Article",
-      snippet:
-        "The Leading Journals Shaping Medical Understanding Home Blog High Impact Medical Journals Contact Us…",
-      image:
-        "/images/publication-support/Journal-Shaping-Medical-Understanding-768x478.webp",
-    },
-    {
-      title: "Examples of Search Terms from Published Studies",
-      category: "News",
-      snippet:
-        "In brief A search word (or search query) has a simple definition. A search term is a single word or phrase used to retrieve relevant information.",
-      image:
-        "/images/publication-support/Examples-of-Search-Terms-from-Published-Studies.webp",
-    },
-    {
-      title: "How to Combine Search Terms for Research paper publication?",
-      category: "News",
-      snippet:
-        "In brief Quick searches with only one search term sometimes provide many irrelevant results. Combining terms improves accuracy.",
-      image:
-        "/images/publication-support/How-to-Combine-Search-Terms-for-Research-paper-publication.webp",
-    },
-    {
-      title: "How to Develop a search strategy for a systematic review",
-      category: "News",
-      snippet:
-        "In brief A search strategy is a structured set of keywords used to search databases efficiently during systematic reviews.",
-      image:
-        "/images/publication-support/How-to-Develop-a-search-strategy-for-a-systematic-review.webp",
-    },
-  ];
-
-  const filteredInsights = insights.filter(
-    (item): item is NonNullable<typeof item> =>
-      item !== undefined && item.category === selectedCategory,
-  );
 
   return (
     <div className="bg-slate-50 text-[#1e293b] font-poppins antialiased text-[16px]">
       {/* ================= SECTION 1: SAMPLE WORK BANNER ================= */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 font-poppins">
+      <section className="py-6 px-4 sm:px-6 lg:px-8 font-poppins">
         <div className="max-w-6xl mx-auto bg-[#effcf4] border border-emerald-100/40 rounded-2xl p-6 sm:p-10 shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Left Cover Book Graphic */}
@@ -233,6 +158,7 @@ export default function PubricaResourceHub() {
                   href="/insights/sample-work/"
                   className="mt-5 w-full sm:w-auto min-w-[320px] py-2 bg-black hover:bg-slate-900 active:scale-95 text-white font-medium text-[16px] font-poppins rounded-full inline-flex items-center justify-center text-center transition-all"
                 >
+                  <Download className="w-3.5 h-3.5" />
                   Discover More
                 </Link>
               </div>
@@ -260,7 +186,7 @@ export default function PubricaResourceHub() {
       </section>
 
       {/* ================= SECTION 2: TESTIMONIALS & FAQ ================= */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white border-y border-slate-100 font-poppins">
+      <section className="py-7 px-4 sm:px-6 lg:px-8 bg-white border-y border-slate-100 font-poppins">
         <div className="max-w-6xl mx-auto space-y-16">
           {/* TESTIMONIALS SUBSECTION */}
           <div>
@@ -404,75 +330,12 @@ export default function PubricaResourceHub() {
         </div>
       </section>
 
-      {/* ================= SECTION 3: INSIGHTS SECTION ================= */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 font-poppins text-[16px]">
-        <div className="max-w-6xl mx-auto space-y-8">
-          <div>
-            <h2 className="text-3xl font-extrabold text-[#0d4f60] mb-2 text-center sm:text-left font-poppins">
-              Insights
-            </h2>
-            <div className="h-1 w-12 bg-emerald-500 rounded mx-auto sm:mx-0" />
-          </div>
-
-          {/* Interactive Navigation Filter Tab Bar */}
-          <div className="bg-[#0e4b4d] rounded-full p-1.5 max-w-lg mx-auto sm:mx-0 flex items-center justify-between shadow-inner">
-            {categories.map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setSelectedCategory(tab)}
-                className={`flex-1 text-center py-2 px-4 rounded-full text-[16px] font-bold tracking-wide font-poppins transition-all duration-300 ${
-                  selectedCategory === tab
-                    ? "bg-[#10b981] text-white shadow-md scale-105"
-                    : "text-slate-300 hover:text-white"
-                }`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
-
-          {/* Cards Dynamic Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {filteredInsights.map((card, i) => (
-              <div
-                key={i}
-                className="bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group font-poppins"
-              >
-                <div>
-                  {/* Card Cover Image */}
-                  <div className="relative aspect-video w-full overflow-hidden">
-                    <img
-                      src={card.image}
-                      alt={card.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute top-2 left-2 bg-[#0e4b4d] text-white text-[16px] font-bold px-2.5 py-1 rounded-full font-poppins">
-                      {card.category}
-                    </div>
-                  </div>
-
-                  {/* Text Details Area */}
-                  <div className="p-5 space-y-3">
-                    <h3 className="font-extrabold text-slate-800 group-hover:text-sky-600 transition-colors text-[16px] leading-snug font-poppins">
-                      {card.title}
-                    </h3>
-                    <p className="text-slate-500 text-[16px] leading-relaxed line-clamp-3 font-poppins">
-                      {card.snippet}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Bottom link element */}
-                <div className="p-5 pt-0 flex justify-end">
-                  <span className="p-1.5 rounded-full bg-slate-100 group-hover:bg-sky-50 group-hover:text-sky-600 text-slate-400 transition-colors">
-                    <ArrowRight className="w-4 h-4" />
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ================= SECTION 3: INSIGHTS SECTION (live from Academy) ================= */}
+      <DynamicInsightsSection
+        categorySlug="publication-support"
+        limit={6}
+        className="py-7 px-4 sm:px-6 lg:px-8 bg-slate-50"
+      />
     </div>
   );
 }

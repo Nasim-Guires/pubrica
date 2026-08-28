@@ -47,7 +47,7 @@ export default function FaqSection(): React.ReactElement {
   };
 
   return (
-    <section className="w-full bg-[#f8f9f9] py-16 px-4 sm:px-6 lg:px-12 font-sans text-slate-800">
+    <section className="w-full bg-[#f8f9f9] py-7 px-4 sm:px-6 lg:px-12 font-sans text-slate-800">
       <div className="max-w-4xl mx-auto">
         {/* Section Heading */}
         <h2 className="text-2xl sm:text-3xl font-bold text-[#09322e] mb-8">

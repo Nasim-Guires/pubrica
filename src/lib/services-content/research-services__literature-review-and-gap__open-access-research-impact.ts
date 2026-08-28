@@ -161,7 +161,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Ready to amplify your research with expert publishing support? Let Pubrica help you navigate open access publishing, journal selection, and manuscript preparation to maximize your research visibility and impact. [Get Expert Publishing Support] or [Schedule a Free Consultation]."
+    "text": "Ready to amplify your research with expert publishing support? Let Pubrica help you navigate open access publishing, journal selection, and manuscript preparation to maximize your research visibility and impact. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

@@ -147,7 +147,7 @@ export default function ScientificSampleWork() {
       {/* ========================================================== */}
       {/* SECTION 1: SAMPLE WORK SHOWCASE                            */}
       {/* ========================================================== */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6">
         <div className="text-center max-w-3xl mx-auto mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c373b] tracking-tight mb-3">
             Scientific Editing Services Sample Work
@@ -202,7 +202,7 @@ export default function ScientificSampleWork() {
       {/* ========================================================== */}
       {/* SECTION 2: TOP-TIER JOURNALS (MOVING AUTO-SCROLL CAROUSEL)  */}
       {/* ========================================================== */}
-      <section className="py-12 bg-white overflow-hidden border-t border-slate-100">
+      <section className="py-6 bg-white overflow-hidden border-t border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-8">
           <h2 className="text-xl sm:text-2xl font-bold text-[#0c373b] mb-2 tracking-tight">
             Pubrica Have Been Published in Top-Tier Journals
@@ -236,7 +236,7 @@ export default function ScientificSampleWork() {
       {/* ========================================================== */}
       {/* SECTION 3: COMPLIANCE & GUIDELINE STANDARDS (ACCORDIONS)   */}
       {/* ========================================================== */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 border-t border-slate-100">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-slate-100">
         <div className="mb-8">
           <h2 className="text-xl sm:text-2xl font-bold text-[#0c373b] mb-3 tracking-tight">
             Our Compliance and Guideline Standards for Scientific Editing Services

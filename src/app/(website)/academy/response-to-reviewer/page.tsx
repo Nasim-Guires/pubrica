@@ -42,9 +42,9 @@ export default function ResponseToReviewerPage() {
                 />
             </Head>
 
-            <main className="min-h-screen bg-gray-100 text-gray-800 font-sans pb-12">
+            <main className="min-h-screen bg-gray-100 text-gray-800 font-sans pb-6">
                 {/* Header Hero Banner with Border Box */}
-                <div className="bg-[#112222] text-white py-12 px-4 text-center">
+                <div className="bg-[#112222] text-white py-6 px-4 text-center">
                     <div className="max-w-xl mx-auto border border-gray-400 py-3 px-6">
                         <h1 className="text-xl sm:text-2xl font-bold tracking-wide">
                             Response to Reviewer
@@ -53,7 +53,7 @@ export default function ResponseToReviewerPage() {
                 </div>
 
                 {/* Main Content Area */}
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-5">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
                         {/* Left Column: Sample Response Content & PDF Viewer Frame */}

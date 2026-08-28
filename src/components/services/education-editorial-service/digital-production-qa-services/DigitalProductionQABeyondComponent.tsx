@@ -2,6 +2,7 @@
 "use client"
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface AccordionItem {
   title: string;
@@ -35,7 +36,7 @@ export default function DigitalProductionQABeyondComponent() {
   ];
 
   return (
-    <section className="w-full bg-white py-16 px-4 md:px-8 lg:px-16 font-sans">
+    <section className="w-full bg-white py-7 px-4 md:px-8 lg:px-16 font-sans">
       {/* Top Section: Why Choose Pubrica for Digital Production QA */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
         {/* Left Column: Images */}
@@ -109,9 +110,12 @@ export default function DigitalProductionQABeyondComponent() {
             Digital Production QA Services Sample Work
           </h3>
           <div>
-            <button className="bg-black hover:bg-gray-800 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200 shadow-md">
+            <Link
+              href="/insights/individual-patient-data-from-randomized-trials"
+              className="inline-block bg-black hover:bg-gray-800 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200 shadow-md"
+            >
               Discover More
-            </button>
+            </Link>
           </div>
 
           <div className="pt-4 space-y-3">

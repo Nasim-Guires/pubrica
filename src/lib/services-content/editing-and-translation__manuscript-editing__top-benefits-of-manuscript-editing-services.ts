@@ -53,7 +53,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "As an example, [manuscript editing](https://pubrica.com/insights/sample-work/phenotypic-variations-of-atopic-dermatitis-a-systemic-review-of-dupilumab-efficacy-and-safety/) assists writers in providing reader-friendly explanations of technical material instead of long, dense, technical descriptions of technical concepts to improve understanding."
+    "text": "As an example, [manuscript editing](https://pubrica.com/insights/sample-work/) assists writers in providing reader-friendly explanations of technical material instead of long, dense, technical descriptions of technical concepts to improve understanding."
   },
   {
     "type": "h2",
@@ -296,11 +296,11 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Investing in [professional manuscript editing](https://pubrica.com/insights/sample-work/alcohol-related-liver-disease-management/) positively impacts research success. As well as correcting grammatical and formatting issues, the use of editing services produces clearer, improved, more academically accurate texts that meet the requirements imposed by the publisher and improve the presentation of scientific research. In an increasingly competitive publication environment, professionally edited manuscripts have a greater chance of obtaining the interest of reviewers and successfully passing through the peer-review process without delay or difficulty. For researchers wanting to increase the overall impact of their research, the provision of professional manuscript proofreading service and research paper editing service during all stages of publishing will help them realize their goals."
+    "text": "Investing in [professional manuscript editing](https://pubrica.com/insights/sample-work/) positively impacts research success. As well as correcting grammatical and formatting issues, the use of editing services produces clearer, improved, more academically accurate texts that meet the requirements imposed by the publisher and improve the presentation of scientific research. In an increasingly competitive publication environment, professionally edited manuscripts have a greater chance of obtaining the interest of reviewers and successfully passing through the peer-review process without delay or difficulty. For researchers wanting to increase the overall impact of their research, the provision of professional manuscript proofreading service and research paper editing service during all stages of publishing will help them realize their goals."
   },
   {
     "type": "p",
-    "text": "Top 7 Benefits of Professional Manuscript Editing Services for Researchers. Our [Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "Top 7 Benefits of Professional Manuscript Editing Services for Researchers. Our [Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h2",

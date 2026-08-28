@@ -14,13 +14,13 @@ export default function CookiePolicyPage() {
     <>
       <Breadcrumb items={[{ label: 'Cookie Policy', href: '/cookie-policy' }]} />
 
-      <section className="bg-[#1b2e2b] text-white py-16 px-4 text-center">
+      <section className="bg-[#1b2e2b] text-white py-7 px-4 text-center">
         <div className="max-w-4xl mx-auto border border-gray-600 p-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">Cookie Policy</h1>
         </div>
       </section>
 
-      <div className="bg-white py-16 font-sans">
+      <div className="bg-white py-7 font-sans">
         <Container className="max-w-4xl prose prose-primary">
           <p className="text-gray-600 leading-relaxed text-sm mb-8">
             Pubrica &amp; Company, along with its subsidiaries and affiliates, recognizes the significance of your privacy and is dedicated to providing transparency regarding the technologies it employs. This Cookie Policy elucidates the storage and access of cookies, web beacons, pixels, clear gifs, and other comparable technologies (collectively referred to as &ldquo;Cookies and Other Tracking Technologies&rdquo;) on your device when you utilize or visit any website or app containing a link to this Policy (collectively referred to as &ldquo;the Sites&rdquo;). It is advisable to review this Cookie Policy in conjunction with our <Link href="/privacy-policy" className="text-[#004d40] underline">Privacy Policy</Link> for a comprehensive understanding.

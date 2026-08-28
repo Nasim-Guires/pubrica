@@ -21,7 +21,7 @@ export default async function ReferencingStylePage() {
   const articles = docs.filter((post) => post.heroImage);
 
   return (
-    <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-6 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8">Referencing Style</h1>
 
@@ -58,7 +58,7 @@ export default async function ReferencingStylePage() {
         </div>
 
         {articles.length === 0 && (
-          <p className="text-sm text-slate-500 text-center py-12">No articles found.</p>
+          <p className="text-sm text-slate-500 text-center py-6">No articles found.</p>
         )}
       </div>
     </section>

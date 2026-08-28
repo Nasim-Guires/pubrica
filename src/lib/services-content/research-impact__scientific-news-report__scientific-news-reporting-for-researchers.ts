@@ -135,7 +135,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Communicate Science Effectively!. From journals to news articles, Pubrica ensures your research is accurately reported and widely understood.[GetExpert Publishing Support] or [Schedule Free Consultation]"
+    "text": "Communicate Science Effectively!. From journals to news articles, Pubrica ensures your research is accurately reported and widely understood.[GetExpert Publishing Support] or [Schedule Free Consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h2",

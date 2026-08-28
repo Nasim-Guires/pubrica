@@ -90,7 +90,7 @@ export default function AcademicEditorialServicesSection() {
       {/* ==========================================
           FULL-WIDTH HERO BANNER (Attached to Navbar)
       ========================================== */}
-      <section className="relative w-full bg-[#0d2a2a] text-white py-12 sm:py-16 text-center border-b border-teal-800/40 shadow-xl overflow-hidden mb-12">
+      <section className="relative w-full bg-[#0d2a2a] text-white py-6 sm:py-7 text-center border-b border-teal-800/40 shadow-xl overflow-hidden mb-12">
         <div className="max-w-4xl mx-auto space-y-4 relative z-10 px-4">
           <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
             Academic Editorial Services
@@ -107,7 +107,7 @@ export default function AcademicEditorialServicesSection() {
       {/* ==========================================
           MAIN CONTENT CONTAINER
       ========================================== */}
-      <div className="max-w-6xl mx-auto space-y-16 px-4 sm:px-6 lg:px-8 pb-16">
+      <div className="max-w-6xl mx-auto space-y-16 px-4 sm:px-6 lg:px-8 pb-7">
         {/* MAIN CONTENT & IMAGE GRID */}
         <section className="space-y-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -126,12 +126,12 @@ export default function AcademicEditorialServicesSection() {
 
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                 Pubrica offers comprehensive{" "}
-                <a
+                <Link
                   href="/services/academic-editorial-services"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   academic editorial services
-                </a>{" "}
+                </Link>{" "}
                 tailored for healthcare, life sciences, and multidisciplinary
                 research. From research papers, theses, and textbooks to
                 curriculum documents, our specialists ensure clarity, accuracy,
@@ -162,12 +162,12 @@ export default function AcademicEditorialServicesSection() {
                               {feature.title}
                             </span>
                             {feature.description}
-                            <a
+                            <Link
                               href="/services/publication-support"
                               className="text-sky-600 hover:underline font-medium"
                             >
                               {feature.linkText}
-                            </a>
+                            </Link>
                             {feature.afterLinkText}
                           </>
                         ) : (
@@ -187,10 +187,14 @@ export default function AcademicEditorialServicesSection() {
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center gap-8 pt-4">
                 <GetFreeQuoteButton />
-                <Link href="/uploads/academic-editorial-services/Academic-Editorial-Services.pdf" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
+                <Link
+                  href="/uploads/academic-editorial-services/Academic-Editorial-Services.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-2.5 bg-[#b30000] hover:bg-[#8e0000] text-white font-bold text-xs sm:text-sm rounded-full transition-all duration-200 shadow-md"
+                >
                   View Brochure
                 </Link>
-
               </div>
             </div>
 

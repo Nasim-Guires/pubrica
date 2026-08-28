@@ -220,7 +220,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Strengthen Your Meta-Analysis with Expert Reporting Support! Ensure MARS compliance and journal readiness with Pubrica’s expert meta-analysis review and publication support. [Get Expert Publishing Support] or [Schedule a Free Consultation]."
+    "text": "Strengthen Your Meta-Analysis with Expert Reporting Support! Ensure MARS compliance and journal readiness with Pubrica’s expert meta-analysis review and publication support. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ServiceBullet {
   title: string;
@@ -48,7 +49,7 @@ export const ThesisEditingPage: React.FC = () => {
       description:
         "Our thesis editing and proofreading services prepare your document for presentation to your dissertation committee, boosting your confidence and increasing your chances of approval.",
       linkText: "proofreading",
-      linkHref: "#proofreading",
+      linkHref: "/services/editing-and-translation/proofreading",
     },
     {
       title: "Navigating the Thesis Journey",
@@ -108,16 +109,16 @@ export const ThesisEditingPage: React.FC = () => {
       {/* ============================================================= */}
       {/* 3. WHAT WE DO SECTION                                          */}
       {/* ============================================================= */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10 border-t border-slate-100">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-5 border-t border-slate-100">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-4">
           What We Do
         </h2>
 
         <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-8 max-w-5xl">
           Pubrica offers specialized{" "}
-          <a href="/insights/proof-reading" className="text-cyan-600 ">
+          <Link href="/insights/thesis-poster-example-for-students" className="text-cyan-600 ">
             thesis editing services
-          </a>{" "}
+          </Link>{" "}
           tailored for both native English speakers and those for whom English
           is a second language (ESL). Our services are designed to enhance the
           quality of your thesis, ensuring it meets the high standards required
@@ -171,12 +172,12 @@ export const ThesisEditingPage: React.FC = () => {
                 {item.title === "Preparation for Dissertation Committee" ? (
                   <>
                     Our thesis editing and{" "}
-                    <a
-                      href={item.linkHref}
+                    <Link
+                      href={item.linkHref!}
                       className="text-cyan-600 hover:underline"
                     >
                       {item.linkText}
-                    </a>{" "}
+                    </Link>{" "}
                     services prepare your document for presentation to your
                     dissertation committee, boosting your confidence and
                     increasing your chances of approval.
@@ -201,7 +202,7 @@ export const ThesisEditingPage: React.FC = () => {
       {/* ============================================================= */}
       {/* 4. WHO WE SERVE SECTION                                        */}
       {/* ============================================================= */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 border-t border-slate-100">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-slate-100">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-3">
           Who We Serve
         </h2>

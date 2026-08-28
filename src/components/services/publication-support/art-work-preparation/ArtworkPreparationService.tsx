@@ -20,7 +20,7 @@ export default function ArtworkPreparationService() {
       {/* ============================================================ */}
       {/* MAIN CONTENT SECTION                                         */}
       {/* ============================================================ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-7">
         {/* Title & Subheading */}
         <div className="max-w-4xl mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3830] leading-snug mb-3">
@@ -101,6 +101,8 @@ export default function ArtworkPreparationService() {
                 Upload Your Manuscript
               </Link>
               <Link href="/uploads/Artwork-Preparation-Matters.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 type="button"
                 className="bg-red-600 hover:bg-white hover:text-black text-white   text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-md transition-colors shadow-2xs cursor-pointer inline-flex items-center justify-center select-none"
               >
@@ -152,17 +154,17 @@ export default function ArtworkPreparationService() {
                   meet specific journal requirements (resolution, size, colour
                   mode, font styles, and file formats.) This is especially
                   useful for{" "}
-                  <a href="/services/physician-writing-services/original-research-article" className="text-blue-600 ">
+                  <Link href="/services/physician-writing-services/original-research-article" className="text-blue-600 hover:underline">
                     Original Research Article
-                  </a>
+                  </Link>
                   ,{" "}
-                  <a href="/services/research-services/systematic-review" className="text-blue-600 ">
+                  <Link href="/services/research-services/systematic-review" className="text-blue-600 hover:underline">
                     Systematic Review
-                  </a>
+                  </Link>
                   , and{" "}
-                  <a href="/services/physician-writing-services/case-report" className="text-blue-600">
+                  <Link href="/services/physician-writing-services/case-report" className="text-blue-600 hover:underline">
                     Case Report
-                  </a>{" "}
+                  </Link>{" "}
                   Writing submissions.
                 </p>
               </div>
@@ -192,9 +194,9 @@ export default function ArtworkPreparationService() {
                   Checking that all labels, legends, scales, and annotations are
                   clear, consistent and in accordance with the content of your
                   manuscript. This services complements our{" "}
-                  <a href="/services/editing-and-translation/manuscript-editing" className="text-blue-600">
+                  <Link href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 hover:underline">
                     manuscript editing services
-                  </a>{" "}
+                  </Link>{" "}
                   in terms of figure accuracy and clarity.
                 </p>
               </div>
@@ -209,9 +211,9 @@ export default function ArtworkPreparationService() {
                   </strong>{" "}
                   Creating brief visual summaries to illustrate key research
                   findings or complex data, usually requested in addition to{" "}
-                  <a href="/services/research-impact/graphical-abstract" className="text-blue-600">
+                  <Link href="/services/research-impact/graphical-abstract" className="text-blue-600 hover:underline">
                     graphical abstract
-                  </a>{" "}
+                  </Link>{" "}
                   creation.
                 </p>
               </div>

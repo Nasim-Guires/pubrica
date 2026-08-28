@@ -7,7 +7,7 @@ export const EditingTranslationManuscriptEditingProcessAndFeatures: React.FC = (
   return (
     <div className="w-full bg-slate-50 text-slate-800">
       {/* SECTION 1: Step-by-Step Process with Hover Effects */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-6 sm:py-7 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Headers */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
@@ -113,7 +113,7 @@ export const EditingTranslationManuscriptEditingProcessAndFeatures: React.FC = (
       </section>
 
       {/* SECTION 2: Dark Emerald Banner */}
-      <section className="w-full bg-emerald-950 text-white py-10 px-4 sm:px-6 lg:px-8 text-center">
+      <section className="w-full bg-emerald-950 text-white py-5 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-5xl mx-auto space-y-3">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-wide">
             Manuscript Editing Services at Pubrica
@@ -125,7 +125,7 @@ export const EditingTranslationManuscriptEditingProcessAndFeatures: React.FC = (
       </section>
 
       {/* SECTION 3: Features & Recommended Journals */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-white">
+      <section className="py-6 sm:py-7 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-white">
         <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
           Features Of Our Research Paper Manuscript Editing Services
         </h2>

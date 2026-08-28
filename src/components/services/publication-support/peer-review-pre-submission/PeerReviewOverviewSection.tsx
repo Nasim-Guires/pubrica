@@ -3,10 +3,11 @@
 import React from "react";
 import Image from "next/image";
 import CommonUploadButton from "@/components/common/CommonUploadButton";
+import Link from "next/link";
 
 export default function PeerReviewOverviewSection() {
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 py-10 font-sans text-gray-800">
+    <section className="w-full max-w-6xl mx-auto px-4 py-5 font-sans text-gray-800">
       {/* 2-Column Section: Text (Left) & Image Showcase (Right) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-6">
         {/* Left Column: Intro + First 3 Bullets */}
@@ -43,9 +44,9 @@ export default function PeerReviewOverviewSection() {
                 The feedback from our peer reviewers is an opportunity to improve your manuscript by
                 improving clarity, structure, and academic strength. It allows you to address weaknesses
                 before submitting for journal peer review. We also offer complete{" "}
-                <a href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 font-medium hover:underline">
+                <Link href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 font-medium hover:underline">
                   manuscript editing
-                </a>{" "}
+                </Link>{" "}
                 that brings your manuscript up to journal standards.
               </div>
             </li>
@@ -98,13 +99,13 @@ export default function PeerReviewOverviewSection() {
               community&apos;s standards and expectations and produce a high-quality publication. The
               pre-submission review protects the quality control of the research—whether it&apos;s an
               original research article,{" "}
-              <a href="/services/research-services/systematic-review" className="text-blue-600 font-medium hover:underline">
+              <Link href="/services/research-services/systematic-review" className="text-blue-600 font-medium hover:underline">
                 systematic review
-              </a>
+              </Link>
               , or{" "}
-              <a href="/services/research-services/meta-analysis" className="text-blue-600 font-medium hover:underline">
+              <Link href="/services/research-services/meta-analysis" className="text-blue-600 font-medium hover:underline">
                 meta-analysis
-              </a>
+              </Link>
               , we ensure it meets rigorous academic standards.
             </div>
           </li>
@@ -120,13 +121,13 @@ export default function PeerReviewOverviewSection() {
               successful journal submission through our academic editing. This service helps ensure that
               personal views or flawed data do not hinder the acceptance of your work. Our integrated
               approach, including{" "}
-              <a href="/services/physician-writing-services/case-report" className="text-blue-600 font-medium hover:underline">
+              <Link href="/services/physician-writing-services/case-report" className="text-blue-600 font-medium hover:underline">
                 case report writing
-              </a>{" "}
+              </Link>{" "}
               and{" "}
-              <a href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 font-medium hover:underline">
+              <Link href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 font-medium hover:underline">
                 manuscript editing
-              </a>
+              </Link>
               , ensures your manuscript is submission-ready.
             </div>
           </li>

@@ -87,7 +87,7 @@ const packagesData: PackageTier[] = [
 
 export default function AbstractServicePackages() {
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 space-y-8 bg-slate-50">
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8 bg-slate-50">
       
       {/* Header Info */}
       <div className="text-center space-y-3">
@@ -175,9 +175,12 @@ export default function AbstractServicePackages() {
         </div>
 
         {/* Action Button */}
-        <button className="bg-[#033c2a] text-white hover:bg-[#02281c] font-bold text-xs sm:text-sm py-3 px-8 rounded-full transition-colors shadow-md">
+        <Link
+          href="/order-now"
+          className="inline-block bg-[#033c2a] text-white hover:bg-[#02281c] font-bold text-xs sm:text-sm py-3 px-8 rounded-full transition-colors shadow-md"
+        >
           Check Pricing & Get a Quote
-        </button>
+        </Link>
       </div>
 
     </section>

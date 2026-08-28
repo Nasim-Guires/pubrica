@@ -64,9 +64,9 @@ export default function InterpretationReportingVisualisation() {
     ];
 
     return (
-        <main className="w-full bg-[#f8fbf9] text-[#222222] font-sans pb-16">
+        <main className="w-full bg-[#f8fbf9] text-[#222222] font-sans pb-7">
             {/* 1. HERO HEADER BANNER */}
-            <section className="bg-[#1b3d36] text-white py-12 px-4 sm:px-8 text-center">
+            <section className="bg-[#1b3d36] text-white py-6 px-4 sm:px-8 text-center">
                 <div className="max-w-5xl mx-auto border border-[#3b6058] p-8 rounded-lg bg-[#193832]">
                     <h1 className="text-2xl md:text-4xl font-bold tracking-wide mb-4">
                         Interpretation, Reporting and Visualisation
@@ -78,7 +78,7 @@ export default function InterpretationReportingVisualisation() {
             </section>
 
             {/* 2. OVERVIEW / INTRO SECTION WITH CTA */}
-            <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 md:px-8">
+            <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 md:px-8">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-6 leading-tight">
                     Turn your complex research data into clear, compelling, and publication-ready insights with Pubrica’s expert Interpretation, Reporting, and Visualisation services.
                 </h2>
@@ -118,7 +118,7 @@ export default function InterpretationReportingVisualisation() {
             </section>
 
             {/* 3. WHAT WE DO CARDS */}
-            <section className="max-w-6xl mx-auto py-10 px-4 sm:px-6 md:px-8 border-t border-gray-200">
+            <section className="max-w-6xl mx-auto py-5 px-4 sm:px-6 md:px-8 border-t border-gray-200">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-2">
                     What We Do
                 </h2>
@@ -168,7 +168,7 @@ export default function InterpretationReportingVisualisation() {
             </section>
 
             {/* 4. WHY MATTERS BULLET SECTION */}
-            <section className="max-w-6xl mx-auto py-10 px-4 sm:px-6 md:px-8 border-t border-gray-200">
+            <section className="max-w-6xl mx-auto py-5 px-4 sm:px-6 md:px-8 border-t border-gray-200">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-6">
                     Why Interpretation, Reporting, and Visualisation Matter
                 </h2>
@@ -206,7 +206,7 @@ export default function InterpretationReportingVisualisation() {
             </section>
 
             {/* 5. TYPES WE OFFER GRID SECTION (ACCORDION CLOSED BY DEFAULT) */}
-            <section className="max-w-6xl mx-auto py-10 px-4 sm:px-6 md:px-8 border-t border-gray-200">
+            <section className="max-w-6xl mx-auto py-5 px-4 sm:px-6 md:px-8 border-t border-gray-200">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-3">
                     Types of Interpretation, Reporting, and Visualisation We Offer
                 </h2>

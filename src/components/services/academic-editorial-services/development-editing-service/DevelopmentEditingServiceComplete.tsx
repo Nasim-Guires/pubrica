@@ -2,6 +2,7 @@
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -72,7 +73,7 @@ export default function DevelopmentEditingServiceComplete() {
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
             {/* ------------------- HERO BANNER ------------------- */}
-            <section className="bg-[#0b3b2c] py-16 px-4 text-white text-center">
+            <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
                 <div className="max-w-4xl mx-auto">
                     <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
                         Development Editing Services
@@ -84,7 +85,7 @@ export default function DevelopmentEditingServiceComplete() {
             </section>
 
             {/* ------------------- MAIN INTRO & KEY ASPECTS SECTION ------------------- */}
-            <section className="py-12 px-4 max-w-6xl mx-auto">
+            <section className="py-6 px-4 max-w-6xl mx-auto">
                 {/* Heading & Subtitle */}
                 <div className="text-left max-w-5xl mb-6">
                     <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3 leading-snug">
@@ -99,7 +100,7 @@ export default function DevelopmentEditingServiceComplete() {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-8">
                     <div className="md:col-span-7 space-y-4 text-xs md:text-sm text-gray-700 leading-relaxed">
                         <p>
-                            Development editing, also known as substantive or structural editing, is a comprehensive approach that focuses on the overall content and organization of a manuscript. Unlike <span className="text-[#0b3b2c] underline cursor-pointer">copy editing services</span>, which address grammar, punctuation, and formatting, development editing delves deeper into the logic, structure, and presentation of ideas. It ensures that your manuscript tells a clear, coherent story, aligns with the target audience&apos;s expectations, and meets the rigorous standards of scholarly publication.
+                            Development editing, also known as substantive or structural editing, is a comprehensive approach that focuses on the overall content and organization of a manuscript. Unlike <Link href="/services/academic-editorial-services/copy-editing-services" className="text-[#0b3b2c] underline">copy editing services</Link>, which address grammar, punctuation, and formatting, development editing delves deeper into the logic, structure, and presentation of ideas. It ensures that your manuscript tells a clear, coherent story, aligns with the target audience&apos;s expectations, and meets the rigorous standards of scholarly publication.
                         </p>
                         <p>
                             At Pubrica, we understand that publishing high-quality research requires more than just groundbreaking findings; it demands clear, coherent, and compelling writing. Our development editing service is meticulously designed for researchers, academicians, and scholars who aim to transform their manuscripts into polished, publication-ready documents that resonate with reviewers, readers, and the global scientific community.

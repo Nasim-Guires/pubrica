@@ -96,7 +96,7 @@ export default function AnimalScienceContinuedSections() {
 
   return (
     <div className="w-full bg-[#fcfcfc] font-sans text-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-20">
 
         {/* SECTION 1: EMERGING TRENDS */}
         <section className="max-w-5xl space-y-6">
@@ -247,7 +247,7 @@ export default function AnimalScienceContinuedSections() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7 space-y-20">
         {/* SECTION 4: WHERE OUR AUTHORS PUBLISH */}
         <section className="space-y-6 text-center max-w-4xl mx-auto">
           <div className="space-y-2">

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 
 interface ServiceCard {
   id: string;
@@ -76,7 +77,7 @@ export default function GrantWritingServicesOfferedSection() {
   return (
     <section
       aria-labelledby="grant-services-heading"
-      className="w-full bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 text-slate-800"
+      className="w-full bg-white py-6 sm:py-7 px-4 sm:px-6 lg:px-8 text-slate-800"
     >
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Section Header */}
@@ -91,12 +92,12 @@ export default function GrantWritingServicesOfferedSection() {
             From identifying the right funding opportunities to delivering
             persuasive, compliant proposals, Pubrica’s experts provide
             comprehensive{" "}
-            <a
+            <Link
               href="/services/research-services/grant-writing/guide-to-grant-writing-strategies-success"
               className="text-sky-600 hover:underline font-medium"
             >
               grant writing services
-            </a>{" "}
+            </Link>{" "}
             at every stage, maximising your success while saving valuable time.
           </p>
         </header>

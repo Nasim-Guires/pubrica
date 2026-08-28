@@ -46,7 +46,7 @@ export default function PatientJourneySteps() {
         <div className="w-full bg-slate-50 font-sans text-slate-800">
 
             {/* SECTION 1: Step-by-Step Process (Image 1) */}
-            <section className="py-16 px-4 max-w-7xl mx-auto">
+            <section className="py-7 px-4 max-w-7xl mx-auto">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#003B2B] mb-3">
                         How Our Patient Journey & Insights – Machine Learning Service Works
@@ -105,7 +105,7 @@ export default function PatientJourneySteps() {
             </section>
 
             {/* Banner Section */}
-            <section className="bg-[#003B2B] text-white py-12 px-4 text-center">
+            <section className="bg-[#003B2B] text-white py-6 px-4 text-center">
                 <div className="max-w-4xl mx-auto">
                     <h3 className="text-2xl md:text-3xl font-bold mb-4">
                         Speed up your Patient Journey & Insights with Pubrica
@@ -117,7 +117,7 @@ export default function PatientJourneySteps() {
             </section>
 
             {/* SECTION 2: Sample Work Container with Google Images (Image 2) */}
-            <section className="py-16 px-4 max-w-6xl mx-auto text-center">
+            <section className="py-7 px-4 max-w-6xl mx-auto text-center">
                 <h2 className="text-3xl font-bold text-[#003B2B] mb-2">
                     Patient Journey & Insights Sample Work By Pubrica
                 </h2>
@@ -159,7 +159,7 @@ export default function PatientJourneySteps() {
             </section>
 
             {/* SECTION 3: Getting Started & Lists (Image 3) */}
-            <section className="py-12 px-4 max-w-5xl mx-auto">
+            <section className="py-6 px-4 max-w-5xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#003B2B] mb-4">
                     Getting Started With This Service Is Easy!
                 </h2>
@@ -217,7 +217,7 @@ export default function PatientJourneySteps() {
             </section>
 
             {/* SECTION 4: Compliance & Guidelines (Image 4) */}
-            <section className="py-12 px-4 max-w-5xl mx-auto text-center">
+            <section className="py-6 px-4 max-w-5xl mx-auto text-center">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#003B2B] mb-3">
                     Our Compliance And Guideline Standards
                 </h2>

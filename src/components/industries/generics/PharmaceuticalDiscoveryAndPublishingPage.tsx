@@ -151,7 +151,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
       <main className="min-h-screen bg-white text-[#0f2824]">
 
         {/* Are Generic Drugs As Good As Brand Names Section */}
-        <section className="py-20 px-6 max-w-7xl mx-auto">
+        <section className="py-8 px-6 max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Are Generic Drugs As Good As Brand Names?</h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
@@ -207,7 +207,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
         </section>
 
         {/* Generic Drugs Must Meet the Same High Standards Section */}
-        <section className="py-16 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <section className="py-7 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="relative w-full h-[400px] flex justify-center items-center">
             <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl">
               <Image 
@@ -252,7 +252,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
         </section>
 
         {/* Where Our Authors Publish Section */}
-        <section className="py-16 px-6 max-w-7xl mx-auto">
+        <section className="py-7 px-6 max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Where Our Authors Publish</h2>
             <p className="text-gray-600 max-w-3xl mx-auto text-sm md:text-base">
@@ -283,7 +283,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
         </section>
 
         {/* Our Expert Medical Editors Section */}
-        <section className="py-16 px-6 max-w-7xl mx-auto">
+        <section className="py-7 px-6 max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Expert Medical Editors</h2>
             <p className="text-gray-600 max-w-3xl mx-auto text-sm md:text-base">

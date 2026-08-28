@@ -166,7 +166,7 @@ export const BookEditingPackagesTestimonialsAndFAQ: React.FC = () => {
   ];
 
   return (
-    <div className="w-full bg-[#f8fafc] text-slate-800 py-12">
+    <div className="w-full bg-[#f8fafc] text-slate-800 py-6">
       {/* ------------------------------------------------------------- */}
       {/* 1. BOOK EDITING SERVICES - OUR PACKAGES SECTION */}
       {/* ------------------------------------------------------------- */}

@@ -133,13 +133,13 @@ export default function TestimonialsAndFAQSection() {
   };
 
   return (
-    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-16 px-4 sm:px-6 lg:px-8 space-y-20">
+    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-7 px-4 sm:px-6 lg:px-8 space-y-20">
       <div className="max-w-6xl mx-auto space-y-20">
 
         {/* ==========================================
             SECTION 1: TESTIMONIALS
         ========================================== */}
-        <section className="space-y-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <section className="space-y-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="space-y-3">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44]">
               Testimonials

@@ -24,7 +24,7 @@ export default function ResearchConfidentialityPage() {
 
       <main className="min-h-screen bg-white text-gray-800">
         {/* Top Banner Section */}
-        <section className="bg-[#2d4642] text-white py-16 px-4 text-center">
+        <section className="bg-[#2d4642] text-white py-7 px-4 text-center">
           <div className="max-w-4xl mx-auto border border-gray-500 p-8">
             <h1 className="text-3xl md:text-4xl font-bold mb-3">Research Confidentiality</h1>
             <p className="text-sm md:text-base text-gray-200">100% data privacy</p>
@@ -32,7 +32,7 @@ export default function ResearchConfidentialityPage() {
         </section>
 
         {/* Confidentiality and Privacy Section */}
-        <section className="max-w-6xl mx-auto py-16 px-4">
+        <section className="max-w-6xl mx-auto py-7 px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             <div className="lg:col-span-2">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Confidentiality and privacy</h2>
@@ -58,7 +58,7 @@ export default function ResearchConfidentialityPage() {
         </section>
 
         {/* Pubrica Information Security Policies Section */}
-        <section className="max-w-6xl mx-auto pb-16 px-4">
+        <section className="max-w-6xl mx-auto pb-7 px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Pubrica Information Security Policies</h2>
           
           <ul className="space-y-4 text-sm text-gray-700">
@@ -86,7 +86,7 @@ export default function ResearchConfidentialityPage() {
         </section>
 
         {/* Bottom CTA Section */}
-        <section className="py-16 px-4 text-center bg-gray-100 border-t border-gray-200">
+        <section className="py-7 px-4 text-center bg-gray-100 border-t border-gray-200">
           <h3 className="text-xl font-bold text-gray-900 mb-6">Work with us to publish your paper in high-impact factor journals.</h3>
           <button 
             type="button" 

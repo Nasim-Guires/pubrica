@@ -81,16 +81,86 @@ export default function PackagesAndPricing() {
     },
   ];
   return (
-    <div className="w-full bg-[#f8fafc] font-sans text-gray-800 py-12 space-y-16 antialiased">
+    <div className="w-full bg-[#f8fafc] font-sans text-gray-800 py-6 space-y-16 antialiased">
       {/* ============================================================ */}
       {/* SECTION 1: SAMPLE WORK / REPORT DOWNLOAD BANNER               */}
       {/* ============================================================ */}
-      <div className="space-y-12">
-        {/* Sample Work Section */}
-        <section className="max-w-6xl mx-auto px-4 md:px-8">
-          <div className="bg-[#f0fdf4] rounded-2xl p-6 md:p-10 border border-[#e6f4ea] grid grid-cols-1 md:grid-cols-12 gap-8 items-center shadow-xs">
-            {/* Left Image */}
-            <div className="md:col-span-5 relative h-56 md:h-64 rounded-xl overflow-hidden shadow-sm">
+      <section className="max-w-6xl mx-auto px-4 md:px-8">
+        <div className="bg-[#f0fdf4] rounded-2xl p-6 md:p-10 border border-[#e6f4ea] grid grid-cols-1 md:grid-cols-12 gap-8 items-center shadow-xs">
+          {/* Left Image */}
+          <div className="md:col-span-5 relative h-56 md:h-64 rounded-xl overflow-hidden shadow-sm">
+            <Image
+              src="/images/publication-support/journal-manuscript-formatting-services/Manuscript-Formatting-Sample-Work.jpg"
+              alt="Manuscript Formatting Sample Work"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 40vw"
+            />
+          </div>
+
+          {/* Right Content */}
+          <div className="md:col-span-7 space-y-6">
+            <div>
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
+                Manuscript Formatting Sample Work
+              </h3>
+              <Link
+                href="/insights/sample-work"
+                className="inline-block w-full sm:w-auto text-center bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
+              >
+                Discover More
+              </Link>
+            </div>
+
+            <div className="pt-2">
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
+                Download the full Report Now
+              </h3>
+              <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-4">
+                Explore our manuscript formatting sample work designed to meet
+                your target journal&apos;s formatting guidelines, technical
+                standards, and submission deadlines.
+              </p>
+              <Link
+                href="/insights/sample-work"
+                className="inline-block w-full sm:w-auto text-center bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
+              >
+                Discover More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* SECTION 2: SERVICE PACKAGES COMPARISON                        */}
+      {/* ============================================================ */}
+      <section className="max-w-6xl mx-auto px-4 md:px-8">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-3">
+          Manuscript Formatting Service Packages
+        </h2>
+        <p className="text-xs md:text-sm text-gray-700 leading-relaxed max-w-5xl mb-8">
+          Selecting the right package ensures your manuscript will be
+          professionally formatted to meet{" "}
+          <Link href="/services/publication-support/journal-submission" className="text-[#3b82f6] hover:underline">
+            journal submission
+          </Link>{" "}
+          requirements and academic publishing standards. Whether you require
+          minor manuscript editing and formatting or a complete research paper
+          layout design, Pubrica provides customized{" "}
+          <Link href="/academy/formatting-service/life-science-manuscript-formatting-faster-publication" className="text-[#3b82f6] hover:underline">
+            manuscript formatting
+          </Link>{" "}
+          solutions for every level of editorial complexity and journal
+          guidelines compliance.
+        </p>
+
+        {/* 3 Package Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          {/* CARD 1: STANDARD */}
+          <div className="bg-white rounded-t-xl overflow-hidden border border-gray-200/80 shadow-xs flex flex-col transition-all duration-300 hover:shadow-lg">
+            {/* Header */}
+            <div className="p-5 border-t-4 border-[#0c3830] border-b border-gray-100 flex items-center space-x-4 bg-white">
               <Image
                 src="/images/publication-support/journal-manuscript-formatting-services/Manuscript-Formatting-Sample-Work.jpg"
                 alt="Manuscript Formatting Sample Work"

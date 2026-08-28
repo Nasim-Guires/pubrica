@@ -105,7 +105,7 @@ export default function MedicalAnimationSections() {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <div className="w-full bg-white text-gray-800 font-sans py-12 px-4 sm:px-6 lg:px-8 space-y-20">
+        <div className="w-full bg-white text-gray-800 font-sans py-6 px-4 sm:px-6 lg:px-8 space-y-20">
 
             {/* SECTION 1: Emerging Trends in Medical Animation */}
             <section className="max-w-6xl mx-auto space-y-6">
@@ -193,7 +193,7 @@ export default function MedicalAnimationSections() {
             </section>
 
             {/* SECTION 2: Areas of Study */}
-            <section className="bg-[#0e2723] text-white py-16 px-6 sm:px-12 rounded-xl max-w-6xl mx-auto space-y-8">
+            <section className="bg-[#0e2723] text-white py-7 px-6 sm:px-12 rounded-xl max-w-6xl mx-auto space-y-8">
                 <div className="text-center space-y-3">
                     <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
                         Areas of Study

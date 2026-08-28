@@ -56,7 +56,7 @@ export default function GraphicalAbstractPage() {
     return (
         <main className="w-full min-h-screen bg-white text-slate-800 font-sans">
             {/* Header Banner Section */}
-            <section className="w-full bg-[#122828] text-white py-12 px-4 sm:px-6 lg:px-8 text-center">
+            <section className="w-full bg-[#122828] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
                 <div className="max-w-5xl mx-auto border border-slate-600 p-8 rounded-sm">
                     <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">
                         Graphical Abstract Service
@@ -68,7 +68,7 @@ export default function GraphicalAbstractPage() {
             </section>
 
             {/* Main Content & Feature Section */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
                     {/* Left Text Block */}

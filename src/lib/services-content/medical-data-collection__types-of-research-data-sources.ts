@@ -168,7 +168,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Understanding Different Types of Research Data Sources. Our Pubrica consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "Understanding Different Types of Research Data Sources. Our Pubrica consultants are here to guide you. [Get Expert Publishing Support](/order-now) or [Schedule a Free Consultation](/order-now)"
   },
   {
     "type": "h2",

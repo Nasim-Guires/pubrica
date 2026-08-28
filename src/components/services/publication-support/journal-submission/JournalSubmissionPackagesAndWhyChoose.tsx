@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import ServiceBanner from "@/components/common/ServiceBanner";
 import Link from "next/link";
@@ -83,7 +84,7 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
       {/* ========================================== */}
       {/* SECTION 1: SUPPORT PACKAGES                */}
       {/* ========================================== */}
-      <section className="py-8 px-4 max-w-6xl mx-auto">
+      <section className="py-6 px-4 max-w-6xl mx-auto">
         <div className="text-center mb-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-2">
             Journal Submission Support Packages
@@ -183,7 +184,7 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
       {/* ========================================== */}
       {/* SECTION 3: WHY LEADING RESEARCHERS CHOOSE  */}
       {/* ========================================== */}
-      <section className="bg-[#f0f2f2] py-8 px-4">
+      <section className="bg-[#f0f2f2] py-6 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-6">
             Why Leading Researchers Choose Pubrica for Journal Submission

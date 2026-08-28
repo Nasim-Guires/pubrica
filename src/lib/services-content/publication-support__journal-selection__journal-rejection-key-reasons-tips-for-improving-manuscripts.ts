@@ -222,7 +222,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Journal Rejection, Key Reasons, and Tips for Improving Your Manuscripts? Our academic consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "Journal Rejection, Key Reasons, and Tips for Improving Your Manuscripts? Our academic consultants are here to guide you. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h3",

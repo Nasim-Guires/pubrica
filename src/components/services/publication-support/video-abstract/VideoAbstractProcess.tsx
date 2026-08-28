@@ -66,7 +66,7 @@ const stepsData: ProcessStep[] = [
 
 export default function VideoAbstractProcess() {
   return (
-    <section className="w-full bg-[#f2f4f4] py-12 md:py-16 px-4 md:px-8 font-sans text-slate-800">
+    <section className="w-full bg-[#f2f4f4] py-6 md:py-7 px-4 md:px-8 font-sans text-slate-800">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">

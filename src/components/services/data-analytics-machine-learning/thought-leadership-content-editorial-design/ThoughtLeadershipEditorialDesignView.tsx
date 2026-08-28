@@ -46,10 +46,10 @@ const offerCardsData: OfferCard[] = [
 
 export default function ThoughtLeadershipEditorialDesignView() {
     return (
-        <main className="w-full bg-white text-slate-800 font-sans pb-24">
+        <main className="w-full bg-white text-slate-800 font-sans pb-10">
 
             {/* ==================== 1. HERO BANNER ==================== */}
-            <section className="bg-[#033c2a] text-white py-12 px-4 sm:px-6 lg:px-8 text-center">
+            <section className="bg-[#033c2a] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
                 <div className="max-w-5xl mx-auto border border-slate-300/40 p-8 sm:p-12 rounded-sm space-y-4">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
                         Thought Leadership Content &amp; Editorial Design
@@ -62,7 +62,7 @@ export default function ThoughtLeadershipEditorialDesignView() {
 
 
             {/* ==================== 2. OVERVIEW & FEATURED LIST SECTION ==================== */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-8">
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a] leading-tight">
                     Position Your Brand as an Industry Leader with Strategic Content &amp; Engaging Editorial Design
                 </h2>
@@ -167,7 +167,7 @@ export default function ThoughtLeadershipEditorialDesignView() {
 
 
             {/* ==================== 3. WHAT WE OFFER CARDS SECTION ==================== */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-6">
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 space-y-6">
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a]">
                     What We Offer
                 </h2>

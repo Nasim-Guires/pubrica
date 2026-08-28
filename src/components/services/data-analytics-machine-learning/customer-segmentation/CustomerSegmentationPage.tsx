@@ -51,7 +51,7 @@ export default function CustomerSegmentationPage() {
 
       <main className="min-h-screen bg-white text-gray-800">
         {/* Banner Section */}
-        <section className="bg-slate-900 text-white py-12 px-6 text-center">
+        <section className="bg-slate-900 text-white py-6 px-6 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">
               Customer Segmentation
@@ -63,7 +63,7 @@ export default function CustomerSegmentationPage() {
         </section>
 
         {/* Tailored Insights Section */}
-        <section className="max-w-6xl mx-auto py-12 px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <section className="max-w-6xl mx-auto py-6 px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-4">
               Tailored Insights for Targeted Research, Marketing, and Publication Strategies
@@ -98,7 +98,7 @@ export default function CustomerSegmentationPage() {
         </section>
 
         {/* Expertise & Approach Section */}
-        <section className="max-w-6xl mx-auto py-12 px-6 border-t border-gray-100">
+        <section className="max-w-6xl mx-auto py-6 px-6 border-t border-gray-100">
           <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-2">
             Pubrica's Customer Segmentation Expertise
           </h2>

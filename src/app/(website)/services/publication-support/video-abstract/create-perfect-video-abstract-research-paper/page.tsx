@@ -39,7 +39,7 @@ export default function VideoAbstractGuidePage() {
                 <span>&gt;</span>
                 <Link href="/services/publication-support" className="hover:underline">Publication Support</Link>
                 <span>&gt;</span>
-                <Link href="/services/publication-support/journal-selection" className="hover:underline">Journal Selection</Link>
+                <Link href="/services/publication-support/video-abstract" className="hover:underline">Video Abstract</Link>
                 <span>&gt;</span>
                 <span className="text-gray-700 font-medium truncate">
                     Top 6 Tips to Create a Perfect Video Abstract for Your Research Paper
@@ -47,7 +47,7 @@ export default function VideoAbstractGuidePage() {
             </div>
 
             {/* Main Layout */}
-            <div className="max-w-7xl mx-auto px-4 md:px-8 py-10 grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <div className="max-w-7xl mx-auto px-4 md:px-8 py-5 grid grid-cols-1 lg:grid-cols-12 gap-10">
 
                 {/* Left Sidebar */}
                 <aside className="lg:col-span-4 space-y-8">
@@ -353,7 +353,7 @@ export default function VideoAbstractGuidePage() {
                             A well-produced video abstract can effectively increase the visibility, engagement, and accessibility of your research. With the right scripting, visuals, and communication strategies, you can create a video that is seen by a wider audience (both academic and non-academic). A video abstract can serve to complement your written work and will also increase your discoverability on digital platforms. If you spend time planning and follow what is discussed in the previous few sections, a video abstract could be valuable to the success and reach of your research.
                         </p>
                         <p className="italic text-gray-800">
-                            Top 6 Tips to Create a Perfect Video Abstract for Your Research Paper? Our Pubrica medical consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]
+                            Top 6 Tips to Create a Perfect Video Abstract for Your Research Paper? Our Pubrica medical consultants are here to guide you. <Link href="/order-now" className="text-sky-600 hover:underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-sky-600 hover:underline">[Schedule a Free Consultation]</Link>
                         </p>
                     </section>
 

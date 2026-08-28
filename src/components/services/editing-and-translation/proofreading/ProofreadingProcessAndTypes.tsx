@@ -140,8 +140,10 @@ export default function ProofreadingProcessAndTypes() {
   const [activeType, setActiveType] = useState<string | null>("final");
 
   return (
-    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-12 space-y-16">
-      {/* SECTION 1: TYPES OF PROOFREADING */}
+    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-6 space-y-16">
+      {/* ======================================= */}
+      {/* SECTION 1: TYPES OF PROOFREADING        */}
+      {/* ======================================= */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#003B46] mb-8">
           Types of Proofreading Services We Provide

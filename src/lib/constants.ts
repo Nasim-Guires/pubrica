@@ -820,7 +820,26 @@ export const GENERAL_FAQS = [
 //   },
 // ];
 
-export const NAV_LINKS = [
+interface NavDropdownChild {
+  href: string;
+  label: string;
+}
+
+interface NavDropdownItem {
+  href: string;
+  label: string;
+  sampleWork?: string;
+  sampleWorkCaption?: string;
+  children?: NavDropdownChild[];
+}
+
+interface NavLink {
+  href: string;
+  label: string;
+  dropdown?: NavDropdownItem[];
+}
+
+export const NAV_LINKS: NavLink[] = [
   {
     href: "/services/",
     label: "Services",
@@ -832,6 +851,8 @@ export const NAV_LINKS = [
       {
         href: "/services/publication-support/",
         label: "Publication Support",
+        sampleWork: "/images/nav-mega-menu/publication-support.webp",
+        sampleWorkCaption: "Publication Support Service",
         children: [
           {
             href: "/services/publication-support/journal-selection/",
@@ -879,6 +900,8 @@ export const NAV_LINKS = [
       {
         href: "/services/editing-and-translation/",
         label: "Editing & Translation",
+        sampleWork: "/images/nav-mega-menu/editing-and-translation.webp",
+        sampleWorkCaption: "Editing and Translation Service",
         children: [
           {
             href: "/services/editing-and-translation/scientific-editing/",
@@ -918,6 +941,8 @@ export const NAV_LINKS = [
       {
         href: "/services/research-services/",
         label: "Research Services",
+        sampleWork: "/images/nav-mega-menu/research-services.webp",
+        sampleWorkCaption: "Research Services",
         children: [
           {
             href: "/services/research-services/systematic-review/",
@@ -952,6 +977,8 @@ export const NAV_LINKS = [
       {
         href: "/services/physician-writing-services/",
         label: "Physician Writing",
+        sampleWork: "/images/nav-mega-menu/physician-writing.webp",
+        sampleWorkCaption: "Physician Writing Service",
         children: [
           {
             href: "/services/physician-writing-services/case-report/",
@@ -1003,6 +1030,8 @@ export const NAV_LINKS = [
       {
         href: "/services/data-analytics-machine-learning/",
         label: "Statistical Analyses",
+        sampleWork: "/images/nav-mega-menu/statistical-analyses.webp",
+        sampleWorkCaption: "Statistical Analyses",
         children: [
           {
             href: "/services/research-services/biostatistics-and-statistical-programming-service/",
@@ -1027,6 +1056,8 @@ export const NAV_LINKS = [
       {
         href: "/services/ai-ml-support/",
         label: "AI and ML Services",
+        sampleWork: "/images/nav-mega-menu/ai-ml-services.webp",
+        sampleWorkCaption: "AI and ML Services",
         children: [
           {
             href: "/services/data-analytics-machine-learning/health-economics-outcome-research/",
@@ -1058,6 +1089,8 @@ export const NAV_LINKS = [
       {
         href: "/services/medical-writing/",
         label: "Medical Writing",
+        sampleWork: "/images/nav-mega-menu/research-services.webp",
+        sampleWorkCaption: "Medical Writing",
         children: [
           {
             href: "/services/research-services/scientific-writing/",
@@ -1077,6 +1110,8 @@ export const NAV_LINKS = [
       {
         href: "/services/research-impact/",
         label: "Research Impact",
+        sampleWork: "/images/nav-mega-menu/research-impact.webp",
+        sampleWorkCaption: "Research Impact",
         children: [
           {
             href: "/services/publication-support/video-abstract/",
@@ -1104,6 +1139,8 @@ export const NAV_LINKS = [
       {
         href: "/services/scientific-communication/",
         label: "Medical & Scientific Communication",
+        sampleWork: "/images/nav-mega-menu/generic-scientific-chemistry.svg",
+        sampleWorkCaption: "Medical & Scientific Communication",
         children: [
           {
             href: "/services/continuing-medical-education-cme-content-development/",
@@ -1133,6 +1170,8 @@ export const NAV_LINKS = [
       {
         href: "/services/academic-editorial-services/",
         label: "Academic Editorial Services",
+        sampleWork: "/images/nav-mega-menu/generic-scientific-chemistry.svg",
+        sampleWorkCaption: "Academic Editorial Services",
         children: [
           {
             href: "/services/academic-editorial-services/copy-editing-services/",
@@ -1163,6 +1202,8 @@ export const NAV_LINKS = [
       {
         href: "/services/education-editorial-service/",
         label: "Educational Editorial Service",
+        sampleWork: "/images/nav-mega-menu/generic-scientific-chemistry.svg",
+        sampleWorkCaption: "Education Editorial Services",
         children: [
           {
             href: "/services/education-editorial-service/accessibility-compliance/",

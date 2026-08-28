@@ -17,15 +17,15 @@ const HIGHLIGHTS = [
 
 export default function EditorialPanelPage() {
   return (
-    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24">
-      <section className="bg-[#0b2825] text-white py-16 px-4 text-center">
+    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
+      <section className="bg-[#0b2825] text-white py-7 px-4 text-center">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Editorial Panel</h1>
         <p className="text-gray-300 text-sm max-w-2xl mx-auto">
           Native Subject-Matter Experts (SMEs) guide you in every phase of the publication process.
         </p>
       </section>
 
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
         <div className="bg-white p-6 md:p-10 rounded-2xl border border-slate-100 shadow-sm mb-10">
           <p className="text-sm text-slate-600 leading-relaxed">
             Scientists, doctors, technocrats, researchers, and therapeutic practitioners are part of our editorial board. PhD, MPharm, MD, DSc, and MS &mdash; these are the qualifications of our editors; they are acquainted with all style guides (AMA, MLA, CMOS, APA, etc.) and journals&rsquo; requirements. Science, Technology, Engineering, and Medicine (STEM) &mdash; these are the fields we publish journals in; besides, they serve as full-time professionals in R&amp;D labs, universities and institutes. Pubrica Scientific Writing &amp; Publication&rsquo;s SMEs publish research findings in peer-reviewed journals, and this includes journals with impact factors more than 20.0 &mdash; NEJM, The Lancet, Annals of Internal Medicine, and JAMA, to name a few; our papers are also published in Science Direct Top 25 articles.

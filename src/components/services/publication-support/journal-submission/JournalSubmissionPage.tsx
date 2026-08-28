@@ -201,8 +201,8 @@ export default function JournalSubmissionPage() {
       {/* ========================================== */}
       {/* SECTION 2: OVERVIEW & BULLETS             */}
       {/* ========================================== */}
-      <section className="max-w-5xl mx-auto px-4 py-8">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-2 leading-snug">
+      <section className="max-w-5xl mx-auto px-4 py-6">
+        <h2 className="text-xl sm:text-2xl font-bold text-[#0c3547] mb-3 leading-snug">
           Journal Submission Services for Life Sciences, Pharma, and Research:
           Simplifying the Path to Publication
         </h2>
@@ -324,13 +324,21 @@ export default function JournalSubmissionPage() {
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center gap-4">
           <GetFreeQuoteButton />
+          <a
+            href="/uploads/publication-support-services_compressed.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-[#b80000] hover:bg-black text-white text-xs sm:text-sm font-semibold px-5 py-2 rounded-md shadow-sm transition-colors duration-300"
+          >
+            View Brochure
+          </a>
         </div>
       </section>
 
       {/* ========================================== */}
       {/* SECTION 3: COMPREHENSIVE SERVICE ACCORDION */}
       {/* ========================================== */}
-      <section className="bg-[#f9fafb] py-8 px-4 border-t border-gray-100">
+      <section className="bg-[#f9fafb] py-6 px-4 border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-2">
             Our Comprehensive Journal Submission Service Include

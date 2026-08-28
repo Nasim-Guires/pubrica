@@ -14,7 +14,7 @@ const INTERESTING_TOPICS = [
   { label: 'Original Research Article Writing Service', href: '/services/physician-writing-services/original-research-article' },
   { label: 'Literature Review', href: '/services/research-services/literature-review-and-gap' },
   { label: 'Grant Writing Services', href: '/services/research-services/grant-writing' },
-  { label: 'Biostatistical Programming', href: '/services/research-services/biostatistics-and-statistical-programming-service' },
+  { label: 'Biostatistical Programming', href: '/services/research-services/biostatistics-and-statistical-programming-services' },
   { label: 'Experimental Design', href: '/services/research-services/experimental-design' },
 ];
 
@@ -30,13 +30,13 @@ export default function GuideLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24">
-      <section className="bg-[#0b2825] text-white py-14 px-4 text-center">
+    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
+      <section className="bg-[#0b2825] text-white py-6 px-4 text-center">
         {eyebrow && <p className="text-xs uppercase tracking-wide text-gray-400 mb-2">{eyebrow}</p>}
         <h1 className="text-2xl md:text-4xl font-bold tracking-tight max-w-4xl mx-auto">{title}</h1>
       </section>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           <main className="lg:col-span-8 bg-white p-6 md:p-10 rounded-2xl border border-slate-100 shadow-sm">
             {children}

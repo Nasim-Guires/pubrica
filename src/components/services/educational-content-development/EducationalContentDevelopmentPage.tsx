@@ -11,7 +11,7 @@ export default function EducationalContentDevelopmentPage() {
       {/* ==========================================
           1. HERO HEADER BANNER
       ========================================== */}
-      <section className="bg-[#0b2427] text-white py-12 px-4 sm:px-6 lg:px-8 border-b-2 border-[#163a3f]">
+      <section className="bg-[#0b2427] text-white py-6 px-4 sm:px-6 lg:px-8 border-b-2 border-[#163a3f]">
         <div className="max-w-5xl mx-auto border border-gray-400/40 p-8 text-center rounded-sm bg-[#0b2427]/80 shadow-inner">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3">
             Educational Content Development
@@ -27,7 +27,7 @@ export default function EducationalContentDevelopmentPage() {
       {/* ==========================================
           2. MAIN CONTENT SECTION
       ========================================== */}
-      <main className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <main className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         {/* Main Section Header */}
         <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#0d3b44] mb-4">
           Educational Content Development Services – Engaging Learning,

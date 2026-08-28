@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 interface AudienceCard {
   id: string;
@@ -50,9 +52,9 @@ const audienceCards: AudienceCard[] = [
     description: (
       <>
         For dissertation development, thesis writing, systematic review, topic mapping,{" "}
-        <a href="services/research-services/literature-review-and-gap" className="text-sky-500 hover:underline">
+        <Link href="/services/research-services/literature-review-and-gap" className="text-sky-500 hover:underline">
           research consultancy
-        </a>
+        </Link>
         , gap analysis, and peer-reviewed journal publications, requiring methodologically sound and publication-ready literature review is required.
       </>
     ),
@@ -135,9 +137,9 @@ const processSteps: StepItem[] = [
     description: (
       <>
         Our experts analyse the evidence to identify gaps in knowledge, under-researched areas, inconsistencies, or methodological limitations, helping to shape future research questions and{" "}
-        <a href="/services/research-services/literature-review-and-gap/literature-review-and-gap-literature-review-support-chronological-vs-thematic" className="text-sky-500 ">
+        <Link href="/services/research-services/literature-review-and-gap/literature-review-and-gap-literature-review-support-chronological-vs-thematic" className="text-sky-500 ">
           research gap analysis service
-        </a>{" "}
+        </Link>{" "}
         reports.
       </>
     ),
@@ -164,7 +166,7 @@ export default function WhoWeServeAndProcessSection() {
       {/* ========================================================= */}
       <section
         aria-labelledby="who-we-serve-heading"
-        className="w-full bg-white py-14 px-4 sm:px-6 lg:px-8 text-slate-800"
+        className="w-full bg-white py-6 px-4 sm:px-6 lg:px-8 text-slate-800"
       >
         <div className="max-w-7xl mx-auto space-y-8">
           <header className="space-y-3">
@@ -176,9 +178,9 @@ export default function WhoWeServeAndProcessSection() {
             </h2>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-5xl">
               At Pubrica, our{" "}
-              <a href="/academy/research-services/literature-review-tips-introduction-discussion-sections" className="text-sky-500 ">
+              <Link href="/academy/research-services/literature-review-tips-introduction-discussion-sections" className="text-sky-500 ">
                 literature review experts
-              </a>{" "}
+              </Link>{" "}
               are trusted by a diverse global clientele, each with distinct
               research goals and evidence needs. We tailor our methodology and
               deliverables to meet the expectations of:
@@ -223,7 +225,7 @@ export default function WhoWeServeAndProcessSection() {
       {/* ========================================================= */}
       <section
         aria-labelledby="how-it-works-heading"
-        className="w-full bg-[#f4f7f6] py-16 px-4 sm:px-6 lg:px-8 text-slate-800 border-t border-slate-200"
+        className="w-full bg-[#e2e8f0]/40 py-7 px-4 sm:px-6 lg:px-8 text-slate-800 border-t border-slate-200"
       >
         <div className="max-w-6xl mx-auto space-y-10">
           {/* Header */}
@@ -237,12 +239,16 @@ export default function WhoWeServeAndProcessSection() {
             <h3 className="text-lg sm:text-xl font-semibold text-[#0e3b38]">
               Our Step-By-Step Process
             </h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pt-2">
-              At Pubrica, we follow a structured, evidence-based literature review writing service and{" "}
-              <a href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-sky-500 hover:underline">
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+              At Pubrica, we follow a structured, evidence-based literature
+              review writing service and{" "}
+              <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-sky-500 hover:underline">
                 research gap analysis service
-              </a>{" "}
-              approach. Our step-by-step process ensures scientific accuracy, clarity, and alignment with your research objectives, whether for academic
+              </Link>{" "}
+              approach. Our step-by-step process ensures scientific accuracy,
+              clarity, and alignment with your research objectives, whether for
+              academic publication, clinical development, or regulatory
+              submissions.
             </p>
           </header>
 

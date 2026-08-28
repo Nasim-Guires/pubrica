@@ -58,7 +58,7 @@ export default function RevisioningAndLocalisationService() {
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
             {/* ------------------- HERO BANNER SECTION ------------------- */}
-            <section className="bg-[#0b3b2c] py-16 px-4 text-white text-center">
+            <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
                 <div className="max-w-4xl mx-auto">
                     <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
                         Revisioning and Localisation Services
@@ -70,7 +70,7 @@ export default function RevisioningAndLocalisationService() {
             </section>
 
             {/* ------------------- INTRODUCTION & CRUCIAL POINTS SECTION ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto">
+            <section className="py-6 px-4 max-w-6xl mx-auto">
                 {/* Full-width introductory text block */}
                 <div className="max-w-4xl mx-auto mb-10 text-left">
                     <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-4">
@@ -118,7 +118,7 @@ export default function RevisioningAndLocalisationService() {
             </section>
 
             {/* ------------------- TYPES OF REVISIONING & LOCALISATION SERVICES ------------------- */}
-            <section className="py-14 px-4 bg-[#f8faf9] border-y border-gray-100" aria-labelledby="types-heading">
+            <section className="py-6 px-4 bg-[#f8faf9] border-y border-gray-100" aria-labelledby="types-heading">
                 <div className="max-w-6xl mx-auto text-center">
                     <div className="max-w-4xl mx-auto mb-12">
                         <h2 id="types-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">

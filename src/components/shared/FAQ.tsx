@@ -22,7 +22,7 @@ export default function FAQ({
   }));
 
   return (
-    <section className="bg-white py-12 sm:py-20 border-t border-gray-100 font-poppins">
+    <section className="bg-white py-8 border-t border-gray-100 font-poppins">
       <Container className="max-w-4xl px-4 sm:px-6">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 font-poppins break-words">

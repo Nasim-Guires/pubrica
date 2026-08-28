@@ -12,7 +12,7 @@ const Page = () => {
   return (
     <div className="w-full min-h-screen bg-white text-gray-800 font-sans">
       {/* Hero Header Section */}
-      <div className="w-full bg-gradient-to-b from-[#113832] to-[#1a4d43] py-16 px-4 sm:px-6 lg:px-8 text-center text-white">
+      <div className="w-full bg-gradient-to-b from-[#113832] to-[#1a4d43] py-7 px-4 sm:px-6 lg:px-8 text-center text-white">
         <div className="max-w-4xl mx-auto border-2 border-white/40 p-8 sm:p-12 rounded-lg backdrop-blur-xs">
           <h1 className="text-3xl sm:text-5xl font-bold tracking-wide mb-4">
             Our Guarantee
@@ -27,7 +27,7 @@ const Page = () => {
       </div>
 
       {/* Content Section */}
-      <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-10">
+      <div className="max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8 space-y-10">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
           Our services are all supported by our quality guarantee:
         </h2>

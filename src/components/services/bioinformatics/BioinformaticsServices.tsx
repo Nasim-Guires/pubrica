@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 /* ==========================================================================
    DATA STRUCTURES
@@ -266,7 +267,7 @@ export default function BioinformaticsServices() {
   };
 
   return (
-    <section className="w-full bg-slate-50 py-12 text-slate-800 font-sans">
+    <section className="w-full bg-slate-50 py-6 text-slate-800 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
         {/* ------------------------------------------------------------------
@@ -339,9 +340,9 @@ export default function BioinformaticsServices() {
               <h3 className="text-xl font-bold text-[#0b2b26]">
                 Bioinformatics Sample Works
               </h3>
-              <button className="bg-black hover:bg-slate-800 text-white font-medium px-6 py-2 rounded-full text-xs sm:text-sm shadow transition-colors">
+              <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-slate-800 text-white font-medium px-6 py-2 rounded-full text-xs sm:text-sm shadow transition-colors">
                 Discover More
-              </button>
+              </Link>
             </div>
 
             <div className="space-y-3 pt-2">
@@ -351,9 +352,9 @@ export default function BioinformaticsServices() {
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Explore our bioinformatics sample work, carefully designed to meet journal-specific guidelines, computational precision (e.g., Transcriptomics, proteomics), and research timelines, ensuring impactful academic or clinical publication.
               </p>
-              <button className="bg-black hover:bg-slate-800 text-white font-medium px-6 py-2 rounded-full text-xs sm:text-sm shadow transition-colors">
+              <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-slate-800 text-white font-medium px-6 py-2 rounded-full text-xs sm:text-sm shadow transition-colors">
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

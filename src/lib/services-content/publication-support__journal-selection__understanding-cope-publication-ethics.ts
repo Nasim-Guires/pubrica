@@ -147,6 +147,6 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "[Talk to a Publication Ethics Specialist] or [Request Ethical Review Support]"
+    "text": "[Talk to a Publication Ethics Specialist](https://pubrica.com/order-now/) or [Request Ethical Review Support](https://pubrica.com/order-now/)"
   }
 ];

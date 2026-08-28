@@ -67,7 +67,7 @@ export const PostEditingProcessTimeline: React.FC = () => {
       {/* ------------------------------------------------------------- */}
       {/* 1. TOP HERO BANNER SECTION                                   */}
       {/* ------------------------------------------------------------- */}
-      <section className="w-full bg-[#03231a] py-10 px-4 sm:px-6 text-center text-white">
+      <section className="w-full bg-[#03231a] py-5 px-4 sm:px-6 text-center text-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 tracking-wide">
             Post Editing Services at Pubrica
@@ -84,7 +84,7 @@ export const PostEditingProcessTimeline: React.FC = () => {
       {/* ------------------------------------------------------------- */}
       {/* 2. HOW OUR POST EDITING SERVICES WORKS SECTION               */}
       {/* ------------------------------------------------------------- */}
-      <section className="w-full py-12 px-4 sm:px-6 max-w-7xl mx-auto">
+      <section className="w-full py-6 px-4 sm:px-6 max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-2">
             How Our Post Editing Services Works

@@ -46,8 +46,8 @@ export default async function AcademyFlatArticlePage({ params }: AcademyFlatArti
   }
 
   return (
-    <div className="bg-[#f9fbfb] min-h-screen text-gray-800 font-sans pb-24">
-      <section className="bg-[#0b2825] text-white py-14 px-4 text-center">
+    <div className="bg-[#f9fbfb] min-h-screen text-gray-800 font-sans pb-10">
+      <section className="bg-[#0b2825] text-white py-6 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <span className="text-xs font-bold tracking-wider text-emerald-400 uppercase">
             {post.categories?.[0]?.name || "Academy"}
@@ -56,7 +56,7 @@ export default async function AcademyFlatArticlePage({ params }: AcademyFlatArti
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
         <main className="bg-white p-6 md:p-10 rounded-md border border-gray-200/80 shadow-xs">
           <Link
             href="/academy/qa-forum"

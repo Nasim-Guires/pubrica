@@ -31,7 +31,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "1.4. AMSTAR 2 (Systematic Reviews): The AMSTAR 2 tool provides critical appraisal of systematic reviews ensuring that risks of bias are considered before drawing any inference from the conclusions of a systematic review.[7] These instruments also complement [broader critical appraisal and quality checklists](https://pubrica.com/insights/check-list/) used in systematic evaluation processes."
+    "text": "1.4. AMSTAR 2 (Systematic Reviews): The AMSTAR 2 tool provides critical appraisal of systematic reviews ensuring that risks of bias are considered before drawing any inference from the conclusions of a systematic review.[7] These instruments also complement [broader critical appraisal and quality checklists](https://pubrica.com/insights/checklist/) used in systematic evaluation processes."
   },
   {
     "type": "table",
@@ -132,7 +132,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "From protocol development to structured RoB assessment, Pubrica delivers end-to-end systematic review support tailored for publication success. [ Get Expert Publishing Support] or [Schedule a Free Consultation]."
+    "text": "From protocol development to structured RoB assessment, Pubrica delivers end-to-end systematic review support tailored for publication success. [ Get Expert Publishing Support] or [Schedule a Free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

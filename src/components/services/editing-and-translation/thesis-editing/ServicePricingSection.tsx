@@ -145,7 +145,7 @@ export default function ServicePricingSection() {
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-12 text-slate-800 font-sans">
+    <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 text-slate-800 font-sans">
       {/* Title & Subtitle */}
       <div className="mb-10">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#003B46] mb-3">

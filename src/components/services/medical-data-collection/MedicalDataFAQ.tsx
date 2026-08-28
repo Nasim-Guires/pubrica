@@ -53,7 +53,7 @@ const toggleAccordion = (id: number) => {
 };
 
   return (
-    <section className="w-full bg-white py-12 px-4 sm:px-6 lg:px-12 font-sans text-slate-800">
+    <section className="w-full bg-white py-6 px-4 sm:px-6 lg:px-12 font-sans text-slate-800">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#09322e] mb-8 text-center sm:text-left">
           Frequently Asked Questions – Medical Data Collection

@@ -61,9 +61,9 @@ const MedicalDeviceIndustry: NextPage = () => {
     <>
       {/* No banner here — MedicalDeviceIndustryPage (rendered earlier on this route) already
           shows the "Medical Devices" hero; this component picks up with its own content below. */}
-      <div className="w-full bg-white text-gray-800 pb-16 px-4 md:px-8 space-y-20">
+      <div className="w-full bg-white text-gray-800 pb-7 px-4 md:px-8 space-y-20">
                 {/* SECTION: CLASSES OF CLINICAL EVALUATION REPORT FOR MEDICAL DEVICES */}
-        <section className="max-w-6xl mx-auto space-y-10 pt-16">
+        <section className="max-w-6xl mx-auto space-y-10 pt-7">
           <div className="text-center space-y-3">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32]">
               Classes of Clinical Evaluation Report for Medical Devices
@@ -116,7 +116,7 @@ const MedicalDeviceIndustry: NextPage = () => {
         </section>
 
         {/* SECTION: WHAT IS THE IMPORTANCE OF POST-MARKET SURVEILLANCE FOR MEDICAL DEVICES? */}
-        <section className="max-w-6xl mx-auto space-y-10 pt-16">
+        <section className="max-w-6xl mx-auto space-y-10 pt-7">
           <div className="text-center space-y-3">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32]">
               What Is The Importance Of Post-Market Surveillance For Medical Devices?
@@ -150,7 +150,7 @@ const MedicalDeviceIndustry: NextPage = () => {
         </section>
 
         {/* SECTION: WHAT POST-MARKET SURVEILLANCE GUIDELINES SHOULD THE MEDICAL DEVICE INDUSTRY CONSIDER? */}
-        <section className="max-w-6xl mx-auto space-y-10 pt-16">
+        <section className="max-w-6xl mx-auto space-y-10 pt-7">
           <div className="text-center space-y-3">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32]">
               What Post-Market Surveillance Guidelines Should The Medical Device Industry Consider?

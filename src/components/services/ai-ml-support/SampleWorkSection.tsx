@@ -2,10 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SampleWorkSection() {
   return (
-    <section className="w-full bg-[#f8f9f9] py-12 px-4 sm:px-6 lg:px-12 font-sans">
+    <section className="w-full bg-[#f8f9f9] py-6 px-4 sm:px-6 lg:px-12 font-sans">
       <div className="max-w-5xl mx-auto bg-[#f0fbf5] border border-emerald-100 rounded-xl p-6 sm:p-10 shadow-sm">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           {/* Left Column: Image Card with Cyber Overlay */}
@@ -31,12 +32,12 @@ export default function SampleWorkSection() {
                 Artificial Intelligence and Machine Learning Services Sample
                 Work
               </h2>
-              <button
-                type="button"
-                className="w-full sm:w-auto bg-black hover:bg-slate-800 text-white font-medium text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200"
+              <Link
+                href="/insights/sample-work"
+                className="inline-block w-full sm:w-auto text-center bg-black hover:bg-slate-800 text-white font-medium text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200"
               >
                 Discover More
-              </button>
+              </Link>
             </div>
 
             {/* Bottom Block: Download Report */}
@@ -50,12 +51,12 @@ export default function SampleWorkSection() {
                 to scientific and regulatory standards, yielding impactful,
                 publication-ready outcomes.
               </p>
-              <button
-                type="button"
-                className="w-full sm:w-auto bg-black hover:bg-slate-800 text-white font-medium text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200"
+              <Link
+                href="/insights/sample-work"
+                className="inline-block w-full sm:w-auto text-center bg-black hover:bg-slate-800 text-white font-medium text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200"
               >
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

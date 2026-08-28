@@ -60,6 +60,7 @@ const publishedPapersData: PublishedPaper[] = [
     publisher: 'American Chemical Society',
     impactFactor: '11.7',
     image: '/images/education-editorial-service/accessibility-compliance/JOURNAL-TEMPLATE-COVER-IMAGE-2.png',
+    link: 'https://pubs.acs.org/doi/10.1021/acs.est.5c09899',
   },
   {
     journal: 'AI & Society',
@@ -68,6 +69,7 @@ const publishedPapersData: PublishedPaper[] = [
     publisher: 'springer nature',
     impactFactor: '4.7',
     image: '/images/education-editorial-service/accessibility-compliance/JOURNAL-TEMPLATE-COVER-IMAGE-3.png',
+    link: 'https://link.springer.com/article/10.1007/s00146-025-02786-w',
   },
   {
     journal: 'Nature Biotechnology',
@@ -76,6 +78,7 @@ const publishedPapersData: PublishedPaper[] = [
     publisher: 'Nature Portfolio',
     impactFactor: '41.7',
     image: '/images/education-editorial-service/accessibility-compliance/JOURNAL-TEMPLATE-COVER-IMAGE-.png',
+    link: 'https://www.nature.com/articles/s41587-024-02511-w',
   },
 ];
 
@@ -105,7 +108,7 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
         />
       </Head>
 
-      <div className="w-full bg-white text-gray-800 py-12 px-4 md:px-8 space-y-20">
+      <div className="w-full bg-white text-gray-800 py-6 px-4 md:px-8 space-y-20">
 
         {/* SECTION 1: Accessibility Compliance Can Benefit A Range Of Documents & Experts */}
         <section className="max-w-6xl mx-auto space-y-12">
@@ -284,7 +287,7 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
         </section>
 
         {/* SECTION 4: Our Successfully Published Papers & Sample Work */}
-        <section className="w-full py-12 bg-white">
+        <section className="w-full py-6 bg-white">
           <style jsx>{`
             @keyframes marqueeScroll {
               0% {
@@ -371,6 +374,8 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
                     <div className="mt-2">
                       <Link
                         href={paper.link || '#'}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-block bg-[#111847] hover:bg-[#0c1236] text-white text-[11px] font-semibold py-1.5 px-5 rounded transition-colors"
                       >
                         Visit
@@ -384,7 +389,7 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
 
           {/* Sample Work Viewer Section */}
           {/* Sample Work Viewer Section */}
-          <div className="text-center pt-12 max-w-5xl mx-auto px-4 space-y-6">
+          <div className="text-center pt-6 max-w-5xl mx-auto px-4 space-y-6">
             {/* Section Header */}
             <div className="space-y-3">
               <h3 className="text-2xl md:text-3xl font-bold text-[#0b3b2c]">

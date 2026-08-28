@@ -66,13 +66,13 @@ export default async function InsightRoutePage({ params, searchParams }: Insight
     });
 
     return (
-      <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24">
-        <section className="bg-[#0b2825] text-white py-14 px-4 text-center">
+      <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
+        <section className="bg-[#0b2825] text-white py-6 px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">{hub.label}</h1>
           <p className="text-gray-300 text-sm max-w-xl mx-auto">{hub.description}</p>
         </section>
 
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="mb-6">
             <Link href="/insights" className="text-xs font-semibold text-slate-500 hover:text-[#004d40]">
               &larr; Back to Insights
@@ -115,7 +115,7 @@ export default async function InsightRoutePage({ params, searchParams }: Insight
           </div>
 
           {posts.length === 0 && (
-            <p className="text-sm text-slate-500 text-center py-12">No entries found in this section yet.</p>
+            <p className="text-sm text-slate-500 text-center py-6">No entries found in this section yet.</p>
           )}
 
           {(hasPrevPage || hasNextPage) && (
@@ -151,13 +151,13 @@ export default async function InsightRoutePage({ params, searchParams }: Insight
   if (staticHub) {
     const items = STATIC_HUB_ITEMS[staticHub.slug] ?? [];
     return (
-      <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24">
-        <section className="bg-[#0b2825] text-white py-14 px-4 text-center">
+      <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
+        <section className="bg-[#0b2825] text-white py-6 px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">{staticHub.label}</h1>
           <p className="text-gray-300 text-sm max-w-xl mx-auto">{staticHub.description}</p>
         </section>
 
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="mb-6">
             <Link href="/insights" className="text-xs font-semibold text-slate-500 hover:text-[#004d40]">
               &larr; Back to Insights
@@ -179,7 +179,7 @@ export default async function InsightRoutePage({ params, searchParams }: Insight
   const bannerImage = mediaUrl(post.heroImage) || "/images/blog/default.webp";
 
   return (
-    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24">
+    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
       {/* Banner Header */}
       <div className="relative h-64 md:h-80 w-full bg-slate-900">
         <Image src={bannerImage} alt={post.title} fill className="object-cover opacity-35" priority />
@@ -191,7 +191,7 @@ export default async function InsightRoutePage({ params, searchParams }: Insight
       </div>
 
       {/* Main Content */}
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-10">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-5">
         <main className="bg-white p-6 md:p-10 rounded-2xl border border-slate-100 shadow-sm">
           <h1 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-2 leading-snug">
             {post.title}

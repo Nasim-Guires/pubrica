@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import Breadcrumb from '@/components/seo/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Scientific Developmental Editing for High-Impact Journal Publishing | Pubrica',
@@ -18,7 +19,7 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-white text-[#333333] font-sans antialiased">
       {/* Top Banner Header with Next.js Image Background */}
-      <header className="relative w-full bg-slate-900 text-white py-14 text-center overflow-hidden shadow-inner">
+      <header className="relative w-full bg-slate-900 text-white py-6 text-center overflow-hidden shadow-inner">
         <Image
           src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1600&auto=format&fit=crop"
           alt="Scientific Publishing Header Background"
@@ -34,17 +35,13 @@ export default function Page() {
       </header>
 
       {/* Breadcrumb Navigation */}
-      <div className="max-w-6xl mx-auto px-4 py-3 text-xs text-gray-400 flex items-center gap-1 border-b border-gray-100">
-        <span className="cursor-pointer hover:underline">&gt; Home</span>
-        <span>&gt;</span>
-        <span className="cursor-pointer hover:underline">Academy</span>
-        <span>&gt;</span>
-        <span className="cursor-pointer hover:underline">Research Impact</span>
-        <span>&gt;</span>
-        <span className="text-gray-500 font-normal">
-          Scientific Developmental Editing for High-Impact Journal Publishing
-        </span>
-      </div>
+      <Breadcrumb
+        items={[
+          { label: 'Editing & Translation', href: '/services/editing-and-translation' },
+          { label: 'Scientific Editing', href: '/services/editing-and-translation/scientific-editing' },
+          { label: 'Scientific Developmental Editing for High-Impact Journal Publishing' },
+        ]}
+      />
 
       {/* Main Container */}
       <main className="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -120,9 +117,9 @@ export default function Page() {
             </h3>
             <ul className="space-y-2 text-xs text-gray-700">
               <li>
-                <a href="/services/editing-and-translation/manuscript-editing" className="hover:text-blue-600">
+                <Link href="/services/editing-and-translation/manuscript-editing" className="hover:text-blue-600">
                   Manuscript Editing
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/academy/manuscript-guidelines" className="hover:text-blue-600">
@@ -130,14 +127,14 @@ export default function Page() {
                 </Link>
               </li>
               <li>
-                <a href="/services/physician-writing-services/physician-manuscript" className="hover:text-blue-600">
+                <Link href="/services/physician-writing-services/physician-manuscript" className="hover:text-blue-600">
                   Manuscript Writing
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission" className="hover:text-blue-600">
+                <Link href="/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission" className="hover:text-blue-600">
                   Manuscript Preparation guidelines
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/academy/manuscript-submission" className="hover:text-blue-600">
@@ -145,9 +142,9 @@ export default function Page() {
                 </Link>
               </li>
               <li>
-                <a href="/services/editing-and-translation/manuscript-editing" className="hover:text-blue-600">
+                <Link href="/services/editing-and-translation/manuscript-editing" className="hover:text-blue-600">
                   Manuscript Editing Services
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/academy" className="hover:text-blue-600">
@@ -155,9 +152,9 @@ export default function Page() {
                 </Link>
               </li>
               <li>
-                <a href="/services/research-services/scientific-writing" className="hover:text-blue-600">
+                <Link href="/services/research-services/scientific-writing" className="hover:text-blue-600">
                   Scientific Writing
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -173,9 +170,9 @@ export default function Page() {
             Scientific developmental editing is a high-level, substantive review that refines a
             manuscript&apos;s logic, structure, data presentation, and argumentative flow to meet the
             rigorous standards of high-impact journals (e.g., <em>Nature</em>, <em>Lancet</em>).{' '}
-            <a href="/services/editing-and-translation/scientific-editing" className="text-[#2b7bb9] hover:underline">
+            <Link href="/services/editing-and-translation/scientific-editing" className="text-[#2b7bb9] hover:underline">
               Scientific Manuscript Editing Services
-            </a>{' '}
+            </Link>{' '}
             contribute to this process by improving structural coherence and strengthening scholarly
             communication. Unlike copyediting, this process strengthens the core narrative, ensures
             scientific rigour, and aligns research significance with target journal expectations.
@@ -184,9 +181,9 @@ export default function Page() {
           <p>
             Publishing in high-impact journals does not just require strong data; it also requires clarity,
             coherence, good methodological practices, and an effective position of your work. Through{' '}
-            <a href="/services/editing-and-translation/scientific-editing/scientific-developmental-editing-high-impact-journals" className="text-[#2b7bb9] hover:underline">
+            <Link href="/services/editing-and-translation/scientific-editing/scientific-developmental-editing-high-impact-journals" className="text-[#2b7bb9] hover:underline">
               High Impact Journal Manuscript Editing
-            </a>
+            </Link>
             , authors can strategically position their research for competitive peer review. Scientific
             developmental editing helps develop the link between your strong research and a successful
             publication by enhancing your argumentation, clarifying structure, and making your
@@ -317,9 +314,9 @@ export default function Page() {
             </ul>
             <p>
               These principles form the foundation of{' '}
-              <a href="/services/editing-and-translation/scientific-editing/scientific-developmental-editing-high-impact-journals" className="text-[#2b7bb9] hover:underline">
+              <Link href="/services/editing-and-translation/scientific-editing/scientific-developmental-editing-high-impact-journals" className="text-[#2b7bb9] hover:underline">
                 scientific developmental editing services
-              </a>
+              </Link>
               .
             </p>
           </section>
@@ -391,9 +388,9 @@ export default function Page() {
             <p>
               Developmental editing helps to ensure submissions meet these high standards before being
               sent for review, thus greatly enhancing their chances of being reviewed favourably.{' '}
-              <a href="/services/editing-and-translation/scientific-editing/scientific-developmental-editing-high-impact-journals" className="text-[#2b7bb9] hover:underline">
+              <Link href="/services/editing-and-translation/scientific-editing/scientific-developmental-editing-high-impact-journals" className="text-[#2b7bb9] hover:underline">
                 Developmental Editing for Academic Journals
-              </a>{' '}
+              </Link>{' '}
               ensures that manuscripts are carefully refined to meet these expectations.
             </p>
           </section>
@@ -411,9 +408,12 @@ export default function Page() {
                 Connect with us to explore how we can support you in maintaining academic integrity
                 and enhancing the visibility of your research across the world!
               </h3>
-              <button className="bg-white text-gray-900 text-xs font-semibold px-4 py-2 rounded shadow hover:bg-gray-100 transition">
+              <Link
+                href="/contact-us"
+                className="inline-block bg-white text-gray-900 text-xs font-semibold px-4 py-2 rounded shadow hover:bg-gray-100 transition"
+              >
                 Contact Us
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -428,24 +428,24 @@ export default function Page() {
               must provide published materials that are clear, rigorous, transparent and therefore
               successful in the current publishing environment, where computational academic publishing
               and other forms of scholarly communication exist. With{' '}
-              <a href="/services/academic-editorial-services" className="text-[#2b7bb9] hover:underline">
+              <Link href="/services/academic-editorial-services" className="text-[#2b7bb9] hover:underline">
                 Professional Academic Editing Services
-              </a>
+              </Link>
               , authors can confidently prepare manuscripts that meet international publication
               standards.
             </p>
             <p className="text-xs leading-relaxed text-gray-600 italic">
               Ready to publish in leading journals? Partner with{' '}
-              <span className="text-[#2b7bb9] hover:underline cursor-pointer">Pubrica&apos;s</span> expert
+              <Link href="/services/academic-editorial-services/development-editing-service" className="text-[#2b7bb9] hover:underline">Pubrica&apos;s</Link> expert
               scientific developmental editors to refine your manuscript&apos;s structure, strengthen
               methodology, and align with high-impact journal standards.{' '}
-              <a href="/contact-us" className="text-[#2b7bb9] hover:underline">
+              <Link href="/contact-us" className="text-[#2b7bb9] hover:underline">
                 [Get Expert Publishing Support]
-              </a>{' '}
+              </Link>{' '}
               or{' '}
-              <a href="/contact-us" className="text-[#2b7bb9] hover:underline">
+              <Link href="/contact-us" className="text-[#2b7bb9] hover:underline">
                 [Schedule a Free Consultation]
-              </a>
+              </Link>
             </p>
           </section>
 
@@ -457,12 +457,12 @@ export default function Page() {
                 Ioannidis, J. P. A. (2022). Correction: Why most published research findings are false.{' '}
                 <em>PLoS Medicine</em>, 19(8), e1004085.{' '}
                 <a
-                  href="https://doi.org/10.1371/journal.pmed"
+                  href="https://doi.org/10.1371/journal.pmed.1004085"
                   target="_blank"
                   rel="noreferrer"
                   className="text-[#2b7bb9] hover:underline break-all"
                 >
-                  https://doi.org/10.1371/journal.pmed
+                  https://doi.org/10.1371/journal.pmed.1004085
                 </a>
               </li>
               <li id="ref-2">
@@ -472,12 +472,12 @@ export default function Page() {
                 M., Ishiyama, J., ... Yarkoni, T. (2015). SCIENTIFIC STANDARDS. Promoting an open
                 research culture. <em>Science (New York, N.Y.)</em>, 348(6242), 1422–1425.{' '}
                 <a
-                  href="https://doi.org/10.1126/science.aab23"
+                  href="https://doi.org/10.1126/science.aab2374"
                   target="_blank"
                   rel="noreferrer"
                   className="text-[#2b7bb9] hover:underline break-all"
                 >
-                  https://doi.org/10.1126/science.aab23
+                  https://doi.org/10.1126/science.aab2374
                 </a>
               </li>
               <li id="ref-3">
@@ -515,12 +515,12 @@ export default function Page() {
                 quality of evidence and strength of recommendations.{' '}
                 <em>BMJ (Clinical research ed.)</em>, 336(7650), 924–926.{' '}
                 <a
-                  href="https://doi.org/10.1136/bmj.39489.470"
+                  href="https://doi.org/10.1136/bmj.39489.470347.AD"
                   target="_blank"
                   rel="noreferrer"
                   className="text-[#2b7bb9] hover:underline break-all"
                 >
-                  https://doi.org/10.1136/bmj.39489.470
+                  https://doi.org/10.1136/bmj.39489.470347.AD
                 </a>
               </li>
               <li id="ref-6">
@@ -544,7 +544,7 @@ export default function Page() {
 
       {/* WhatsApp Fixed Widget with Next Image Option or Inline SVG */}
       <a
-        href="https://wa.me/"
+        href="https://wa.me/919884350006"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contact us on WhatsApp"

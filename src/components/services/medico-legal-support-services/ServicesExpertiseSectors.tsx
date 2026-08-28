@@ -37,7 +37,7 @@ export default function ServicesExpertiseSectors({
   ];
 
   return (
-    <section className={`w-full bg-white py-16 text-slate-800 ${className}`}>
+    <section className={`w-full bg-white py-7 text-slate-800 ${className}`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <header className="text-center mb-12">

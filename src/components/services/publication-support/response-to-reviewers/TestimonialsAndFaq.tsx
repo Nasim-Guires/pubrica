@@ -112,7 +112,11 @@ export default function TestimonialsAndFaq() {
   return (
     <div className="w-full bg-[#f6f8f8] font-sans text-slate-800">
       {/* ================= TESTIMONIALS SECTION ================= */}
-      <section className="pt-10 pb-12 px-4 max-w-6xl mx-auto">
+      <section className="pt-5 pb-6 px-4 max-w-6xl mx-auto">
+        {/* Top Button */}
+        <div className="text-center mb-6">
+         <GetFreeQuoteButton/>
+        </div>
 
         {/* Heading & Intro */}
         <div className="max-w-4xl mx-auto text-left mb-8">
@@ -155,7 +159,7 @@ export default function TestimonialsAndFaq() {
       </section>
 
       {/* ================= FAQ ACCORDION SECTION ================= */}
-      <section className="py-12 px-4 max-w-6xl mx-auto border-t border-slate-200/60">
+      <section className="py-6 px-4 max-w-6xl mx-auto border-t border-slate-200/60">
         <h2 className="text-xl md:text-2xl font-bold text-[#1e4a42] text-center mb-10">
           Frequently Asked Questions Response to Reviewer Comments Services
         </h2>

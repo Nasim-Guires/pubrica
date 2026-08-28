@@ -172,7 +172,7 @@ export const PhysicianServicesList: React.FC<PhysicianServicesListProps> = ({
   ];
 
   return (
-    <section className="w-full bg-white py-12 px-6 md:px-12 lg:px-24 font-sans text-left">
+    <section className="w-full bg-white py-6 px-6 md:px-12 lg:px-24 font-sans text-left">
       <div className="max-w-7xl mx-auto">
         {/* Main Content Title Header */}
         <h2 className="text-[#083c4c] text-xl md:text-2xl lg:text-[26px] font-extrabold leading-tight tracking-tight mb-6">

@@ -107,7 +107,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
 
       <main className="min-h-screen bg-white text-[#0f2824]">
         {/* Hero Banner Section */}
-        <section className="bg-[#0f2824] text-white py-16 px-6 text-center">
+        <section className="bg-[#0f2824] text-white py-7 px-6 text-center">
           <div className="max-w-4xl mx-auto border border-white/20 p-8 rounded-lg">
             <h1 className="text-4xl font-bold mb-4">{heroTitle}</h1>
             <p className="text-lg text-gray-200 leading-relaxed">{heroSubtitle}</p>
@@ -115,7 +115,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
         </section>
 
         {/* Introduction Section */}
-        <section className="max-w-7xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <section className="max-w-7xl mx-auto py-7 px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug">{mainHeading}</h2>
             <p className="text-gray-700 mb-4 leading-relaxed text-sm md:text-base">{mainDescription}</p>
@@ -142,7 +142,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
         </section>
 
         {/* First Expertise Layout: Floating Cards & Central Doctor Image */}
-        <section className="py-20 px-4 bg-white text-[#0f2824] overflow-hidden">
+        <section className="py-8 px-4 bg-white text-[#0f2824] overflow-hidden">
           <div className="max-w-7xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               {expertiseHeading}
@@ -203,7 +203,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
         </section>
 
         {/* Generic Drug Segments We Serve Section */}
-        <section className="py-16 px-6 max-w-7xl mx-auto my-12">
+        <section className="py-7 px-6 max-w-7xl mx-auto my-12">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Generic Drug Segments We Serve</h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">

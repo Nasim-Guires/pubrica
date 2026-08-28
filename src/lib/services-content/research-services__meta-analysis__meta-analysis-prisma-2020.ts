@@ -262,7 +262,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Meta-Analysis of RCTs, Observational & Diagnostic-Accuracy Studies (PRISMA 2020) . Our[Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "Meta-Analysis of RCTs, Observational & Diagnostic-Accuracy Studies (PRISMA 2020) . Our[Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h2",

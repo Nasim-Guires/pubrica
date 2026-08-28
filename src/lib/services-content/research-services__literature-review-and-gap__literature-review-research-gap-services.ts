@@ -85,7 +85,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Selecting the appropriate review methodology improves research quality and ensures alignment with study objectives. Researchers often seek [systematic literature review service](https://pubrica.com/insights/sample-work/immunopet-imaging-of-human-ca6/) or systematic review methodology help to ensure methodological accuracy."
+    "text": "Selecting the appropriate review methodology improves research quality and ensures alignment with study objectives. Researchers often seek [systematic literature review service](https://pubrica.com/insights/immunopet-imaging-of-human-ca6/) or systematic review methodology help to ensure methodological accuracy."
   },
   {
     "type": "h2",
@@ -180,11 +180,11 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Scientists who utilize literature review methodologies create solid scientific grounds and open new areas for research. Professional [systematic literature review service](https://pubrica.com/academy/research-services/literature-review-tips-introduction-discussion-sections/), scoping review writing service, narrative review service, evidence synthesis support, systematic review methodology help, and [case report journal selection](https://pubrica.com/insights/sample-work/clinical-spectrum-depression-anxiety-psychiatric-patients/) assistance can further enhance the quality, transparency, and publication readiness of research."
+    "text": "Scientists who utilize literature review methodologies create solid scientific grounds and open new areas for research. Professional [systematic literature review service](https://pubrica.com/academy/research-services/literature-review-tips-introduction-discussion-sections/), scoping review writing service, narrative review service, evidence synthesis support, systematic review methodology help, and [case report journal selection](https://pubrica.com/insights/clinical-spectrum-depression-anxiety-psychiatric-patients/) assistance can further enhance the quality, transparency, and publication readiness of research."
   },
   {
     "type": "p",
-    "text": "Literature Review & Research Gap Services: Systematic, Scoping & Narrative Reviews (PRISMA 2020). Our [Pubrica](https://pubrica.com) consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "Literature Review & Research Gap Services: Systematic, Scoping & Narrative Reviews (PRISMA 2020). Our [Pubrica](https://pubrica.com) consultants are here to guide you. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h2",

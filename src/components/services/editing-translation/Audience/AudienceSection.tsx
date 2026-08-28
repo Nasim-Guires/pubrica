@@ -3,7 +3,7 @@ import AudienceCard from "./AudienceCard";
 
 export default function AudienceSection() {
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto">
+    <section className="py-7 px-4 max-w-7xl mx-auto">
       {/* Heading */}
       <div className="mb-12">
         <h2 className="text-3xl font-bold text-[#004D40] mb-2">Who We Serve</h2>

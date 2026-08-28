@@ -44,19 +44,19 @@ export default function WhatWeDo() {
           your study, but also demonstrate the importance and impact of the
           findings. Our creative scientific experts can also help you with
           careful{" "}
-          <Link href="#grant-writing" className="text-sky-600 hover:underline">
+          <Link href="/services/research-services/grant-writing" className="text-sky-600 hover:underline">
             grant writing
           </Link>
           ,{" "}
           <Link
-            href="#experimental-design"
+            href="/services/research-services/experimental-design"
             className="text-sky-600 hover:underline"
           >
             experimental design
           </Link>
           , and{" "}
           <Link
-            href="#systematic-review"
+            href="/services/research-services/systematic-review"
             className="text-sky-600 hover:underline"
           >
             systematic review
@@ -89,13 +89,13 @@ export default function WhatWeDo() {
           from other researchers, potential collaborators, and sponsors/funders,
           giving you more chances for citations and support. The combination of{" "}
           <Link
-            href="#manuscript-editing"
+            href="/services/editing-and-translation/manuscript-editing"
             className="text-sky-600 hover:underline"
           >
             manuscript editing
           </Link>{" "}
           and{" "}
-          <Link href="#grant-writing" className="text-sky-600 hover:underline">
+          <Link href="/services/research-services/grant-writing" className="text-sky-600 hover:underline">
             grant writing
           </Link>{" "}
           will enhance the overall academic value.
@@ -118,7 +118,7 @@ export default function WhatWeDo() {
   ];
 
   return (
-    <section className="w-full bg-[#f2f4f4] py-12 md:py-16 px-4 md:px-8 font-sans text-slate-800">
+    <section className="w-full bg-[#f2f4f4] py-6 md:py-7 px-4 md:px-8 font-sans text-slate-800">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-4">

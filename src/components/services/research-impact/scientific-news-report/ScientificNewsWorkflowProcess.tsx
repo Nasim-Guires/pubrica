@@ -66,10 +66,10 @@ export default function ScientificNewsWorkflowProcess() {
   const [activeStep, setActiveStep] = useState<number | null>(null);
 
   return (
-    <div className="w-full bg-slate-50 text-slate-800 font-sans py-12 space-y-16">
+    <div className="w-full bg-slate-50 text-slate-800 font-sans py-6 space-y-16">
       
       {/* 1. Header Banner */}
-      <section className="w-full bg-[#033c2a] text-white py-14 px-4 sm:px-6 lg:px-8 text-center">
+      <section className="w-full bg-[#033c2a] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto space-y-3">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
             Fast-Track Your Scientific News Reporting with Pubrica
@@ -95,7 +95,7 @@ export default function ScientificNewsWorkflowProcess() {
         </div>
 
         {/* Workflow Steps Grid with Connecting Line */}
-        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-10">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-5">
           
           {/* Horizontal Connecting Bar (Visible on desktop) */}
           <div className="hidden lg:block absolute top-[5.2rem] left-8 right-8 h-1.5 bg-teal-600 z-0" />
@@ -198,12 +198,12 @@ export default function ScientificNewsWorkflowProcess() {
                 <h3 className="text-lg font-bold text-[#033c2a]">
                   Scientific News Report Sample Work
                 </h3>
-                <button
-                  type="button"
-                  className="px-6 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-colors"
+                <Link
+                  href="/insights/sample-work"
+                  className="inline-block px-6 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-colors"
                 >
                   Discover More
-                </button>
+                </Link>
               </div>
 
               <div className="space-y-3 pt-4 border-t border-emerald-200/60">
@@ -217,12 +217,12 @@ export default function ScientificNewsWorkflowProcess() {
                   </Link>
                   , professionally crafted to meet your target audience's comprehension level, research significance, and science communication standards.
                 </p>
-                <button
-                  type="button"
-                  className="px-6 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-colors"
+                <Link
+                  href="/insights/sample-work"
+                  className="inline-block px-6 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-colors"
                 >
                   Discover More
-                </button>
+                </Link>
               </div>
             </div>
 

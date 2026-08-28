@@ -94,7 +94,7 @@ export default function AgrotechnologyCompleteSection() {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12 bg-white font-sans text-gray-800 space-y-16">
+    <div className="max-w-5xl mx-auto px-4 py-6 bg-white font-sans text-gray-800 space-y-16">
 
       {/* SECTION 1: EMERGING TRENDS IN AGROTECHNOLOGY */}
       <section className="space-y-4">

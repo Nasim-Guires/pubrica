@@ -71,8 +71,8 @@ export default function WhoWeServeSection() {
   };
 
   return (
-    <section className="w-full font-sans text-gray-800 bg-white pt-12">
-      <div className="max-w-6xl mx-auto px-4 md:px-8 pb-16">
+    <section className="w-full font-sans text-gray-800 bg-white pt-6">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 pb-7">
         {/* Section Header */}
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-4">
           Who We Serve
@@ -146,7 +146,7 @@ export default function WhoWeServeSection() {
       </div>
 
       {/* Bottom Dark Banner */}
-      <div className="bg-[#05231c] text-white py-10 px-4 text-center">
+      <div className="bg-[#05231c] text-white py-5 px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-3">
           <h3 className="text-xl md:text-2xl font-bold tracking-tight">
             Focus on Your Research — We&apos;ll Handle the Poster

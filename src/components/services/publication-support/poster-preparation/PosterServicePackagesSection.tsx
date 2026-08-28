@@ -74,7 +74,7 @@ export default function PosterServicePackagesSection() {
   ];
 
   return (
-    <section className="w-full py-12 px-4 md:px-8 font-sans text-gray-800">
+    <section className="w-full bg-[#fdfbf7] py-6 px-4 md:px-8 font-sans text-gray-800">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-10">
@@ -86,12 +86,14 @@ export default function PosterServicePackagesSection() {
             poster is professionally formatted and ready for presentation.
             Whether you need a quick design adjustment or you need assistance
             organizing and designing all of your content, Pubrica has custom{" "}
-            <Link
-              href="/services/publication-support/poster-preparation"
+            <a
+              href="https://pubrica.com/academy/poster-preparation/slide-deck-preparation-for-conference-presentations/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[#0284c7] hover:underline font-medium"
             >
               poster preparation
-            </Link>{" "}
+            </a>{" "}
             packages based on different levels of complexity and conference
             requirements.
           </p>

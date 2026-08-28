@@ -82,16 +82,16 @@ export default function JournalSubmissionProcessSection() {
       {/* ========================================== */}
       {/* SECTION 1: WHO WE SERVE                    */}
       {/* ========================================== */}
-      <section className="max-w-6xl mx-auto px-4 py-8">
-        <div className="mb-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-2">
+      <section className="max-w-6xl mx-auto px-4 py-6">
+        <div className="mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-3">
             Who We Serve
           </h2>
           <p className="text-base text-gray-600 leading-relaxed max-w-5xl">
             Our{" "}
-            <a href="/services/publication-support/journal-submission" className="text-blue-600 font-medium">
+            <Link href="/services/publication-support/journal-submission" className="text-[#0082a6] hover:underline font-medium">
               journal submission service
-            </a>{" "}
+            </Link>{" "}
             ensures a seamless and compliant submission process that meets the
             technical and editorial guidelines of your selected journals. This
             service is available to researchers, clinicians, and academic

@@ -34,7 +34,7 @@ export default function GraphicalVsVideoAbstractsPage() {
             </div>
 
             {/* Main Container */}
-            <div className="max-w-7xl mx-auto px-4 md:px-8 py-10 grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <div className="max-w-7xl mx-auto px-4 md:px-8 py-5 grid grid-cols-1 lg:grid-cols-12 gap-10">
 
                 {/* Left Sidebar */}
                 <aside className="lg:col-span-4 space-y-8">
@@ -366,9 +366,12 @@ export default function GraphicalVsVideoAbstractsPage() {
                     <p className="text-white text-base md:text-lg font-medium leading-snug">
                         Connect with us to explore how we can support you in maintaining academic integrity and enhancing the visibility of your research across the world!
                     </p>
-                    <button className="bg-white text-gray-900 text-xs md:text-sm font-bold py-2 px-6 rounded shadow hover:bg-gray-100 transition">
+                    <Link
+                        href="/contact-us/"
+                        className="inline-block bg-white text-gray-900 text-xs md:text-sm font-bold py-2 px-6 rounded shadow hover:bg-gray-100 transition"
+                    >
                         Contact Us
-                    </button>
+                    </Link>
                 </div>
             </div>
 
@@ -386,7 +389,7 @@ export default function GraphicalVsVideoAbstractsPage() {
                                 It is worth mentioning that graphical abstracts and <span className="text-blue-600">video abstracts</span> have recently emerged as important means that help make scientific communication more efficient. The use of graphical abstracts is an effective way of creating concise visual summaries that will facilitate the process of discovering and comprehending information. Video abstracts are used to provide a more detailed explanation of the study results.
                             </p>
                             <p className="italic text-gray-800">
-                                Graphical vs. Video Abstracts: Tools for Clear and Engaging Scientific Communication: Our <span className="text-blue-600">Pubrica</span> consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]
+                                Graphical vs. Video Abstracts: Tools for Clear and Engaging Scientific Communication: Our <span className="text-blue-600">Pubrica</span> consultants are here to guide you. <Link href="/order-now" className="text-sky-600 hover:underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-sky-600 hover:underline">[Schedule a Free Consultation]</Link>
                             </p>
                         </section>
 

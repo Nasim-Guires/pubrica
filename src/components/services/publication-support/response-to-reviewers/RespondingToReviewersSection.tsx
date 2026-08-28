@@ -39,7 +39,7 @@ export default function RespondingToReviewersSection() {
       {/* ========================================== */}
       {/* SECTION 2: SERVICE OVERVIEW CONTENT       */}
       {/* ========================================== */}
-      <section className="py-12 px-4 sm:px-8 max-w-5xl mx-auto text-gray-800">
+      <section className="py-6 px-4 sm:px-8 max-w-5xl mx-auto text-gray-800">
         <h2 className="text-xl sm:text-2xl font-bold text-[#0c3547] mb-3 leading-snug">
           Response to Reviewer Comments Service for Life Sciences, Pharma, and
           Research: Strengthen Your Manuscript with Expert Revisions
@@ -129,7 +129,12 @@ export default function RespondingToReviewersSection() {
         {/* CTA Buttons */}
         <div className="flex flex-wrap items-center gap-8 mt-6 mb-10">
           <GetFreeQuoteButton />
-          <Link href="/uploads/publication-support/responding-to-reviewers/Responding-to-Reviewers-_compressed.pdf" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
+          <Link
+            href="/uploads/publication-support/responding-to-reviewers/Responding-to-Reviewers-_compressed.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
+          >
             View Brochure
           </Link>
         </div>
@@ -139,7 +144,7 @@ export default function RespondingToReviewersSection() {
       {/* ========================================== */}
       {/* SECTION 3: COMPLIANCE AND GUIDELINES      */}
       {/* ========================================== */}
-      <section className="py-10 px-4 sm:px-8 max-w-5xl mx-auto">
+      <section className="py-5 px-4 sm:px-8 max-w-5xl mx-auto">
         <h2 className="text-xl sm:text-2xl font-bold text-[#0c3547] mb-2">
           Our Compliance and guideline Standards
         </h2>

@@ -387,7 +387,7 @@ export default function ScientificPackageDetails() {
       {/* ========================================================== */}
       {/* SECTION 1: SAMPLE WORK SHOWCASE                            */}
       {/* ========================================================== */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6">
         <div className="text-center max-w-3xl mx-auto mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c373b] tracking-tight mb-3">
             Scientific Editing Services Sample Work
@@ -447,7 +447,7 @@ export default function ScientificPackageDetails() {
       {/* ========================================================== */}
       {/* SECTION 2: TOP-TIER JOURNALS (INFINITE CAROUSEL)           */}
       {/* ========================================================== */}
-      <section className="py-12 bg-white overflow-hidden border-t border-slate-100">
+      <section className="py-6 bg-white overflow-hidden border-t border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-8">
           <h2 className="text-xl sm:text-2xl font-bold text-[#0c373b] mb-2 tracking-tight">
             Pubrica Have Been Published in Top-Tier Journals
@@ -486,7 +486,7 @@ export default function ScientificPackageDetails() {
       {/* ========================================================== */}
       {/* SECTION 3: COMPLIANCE & GUIDELINE STANDARDS               */}
       {/* ========================================================== */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 border-t border-slate-100">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-slate-100">
         <div className="mb-8">
           <h2 className="text-xl sm:text-2xl font-bold text-[#0c373b] mb-3 tracking-tight">
             Our Compliance and Guideline Standards for Scientific Editing
@@ -553,7 +553,7 @@ export default function ScientificPackageDetails() {
       {/* ========================================================== */}
       {/* SECTION 4: WHAT TYPES OF DOCUMENTS DO WE EDIT?             */}
       {/* ========================================================== */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 border-t border-slate-100">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-slate-100">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0c373b] text-center mb-10 tracking-tight">
           What Types of Documents Do We Edit?
         </h2>
@@ -584,7 +584,7 @@ export default function ScientificPackageDetails() {
       {/* ========================================================== */}
       {/* SECTION 5: OUR PACKAGES                                   */}
       {/* ========================================================== */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 border-t border-slate-100">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-slate-100">
         <div className="max-w-4xl mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c373b] mb-3 tracking-tight">
             Scientific Editing Services – Our Packages
@@ -671,7 +671,7 @@ export default function ScientificPackageDetails() {
       {/* ========================================================== */}
       {/* SECTION 6: TESTIMONIALS                                    */}
       {/* ========================================================== */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 border-t border-slate-100">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-slate-100">
         <div className="mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c373b] mb-3 tracking-tight">
             Testimonials
@@ -715,7 +715,7 @@ export default function ScientificPackageDetails() {
       {/* ========================================================== */}
       {/* SECTION 7: FREQUENTLY ASKED QUESTIONS (FAQ)               */}
       {/* ========================================================== */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 border-t border-slate-100">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-slate-100">
         <h2 className="text-xl sm:text-2xl font-bold text-[#0c373b] mb-6 tracking-tight">
           Frequently Asked Questions – Scientific Editing Services
         </h2>

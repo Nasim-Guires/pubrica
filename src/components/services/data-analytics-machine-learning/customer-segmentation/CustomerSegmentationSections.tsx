@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Step {
   id: number;
@@ -49,7 +50,7 @@ export default function CustomerSegmentationSections() {
       {/* ========================================================= */}
       {/* SECTION 1: Step by Step Process                           */}
       {/* ========================================================= */}
-      <section className="py-16 px-4 max-w-7xl mx-auto text-center">
+      <section className="py-7 px-4 max-w-7xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-1">
           How Our Customer Segmentation Service Works
         </h2>
@@ -114,7 +115,7 @@ export default function CustomerSegmentationSections() {
       {/* ========================================================= */}
       {/* SECTION 2: Customer Segmentation Example (Interactive)    */}
       {/* ========================================================= */}
-      <section className="py-16 px-4 bg-slate-50">
+      <section className="py-7 px-4 bg-slate-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-8">
             Customer Segmentation Example by Pubrica
@@ -179,7 +180,7 @@ export default function CustomerSegmentationSections() {
       {/* ========================================================= */}
       {/* SECTION 3: Sample Work & Report Download Callout           */}
       {/* ========================================================= */}
-      <section className="py-12 px-4 bg-emerald-50/50">
+      <section className="py-6 px-4 bg-emerald-50/50">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Representative Image */}
           <div className="relative w-full h-[280px] md:h-[350px] rounded-lg overflow-hidden shadow-md">
@@ -198,9 +199,9 @@ export default function CustomerSegmentationSections() {
               <h3 className="text-xl font-bold text-slate-900 mb-2">
                 Customer Segmentation Sample Work
               </h3>
-              <button className="w-full bg-black hover:bg-neutral-800 text-white font-medium py-2.5 px-6 rounded-full transition-colors text-sm">
+              <Link href="/insights/sample-work" className="block w-full text-center bg-black hover:bg-neutral-800 text-white font-medium py-2.5 px-6 rounded-full transition-colors text-sm">
                 Discover More
-              </button>
+              </Link>
             </div>
 
             <div>
@@ -210,9 +211,9 @@ export default function CustomerSegmentationSections() {
               <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-3">
                 Explore our customer segmentation sample work, crafted to meet rigorous analytical standards, industry specific requirements, and project timelines. We deliver precise, actionable, and insight-driven results that enhance marketing strategies, business growth, and customer engagement outcomes.
               </p>
-              <button className="w-full bg-black hover:bg-neutral-800 text-white font-medium py-2.5 px-6 rounded-full transition-colors text-sm">
+              <Link href="/insights/sample-work" className="block w-full text-center bg-black hover:bg-neutral-800 text-white font-medium py-2.5 px-6 rounded-full transition-colors text-sm">
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

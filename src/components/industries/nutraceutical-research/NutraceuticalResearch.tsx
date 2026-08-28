@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface ExpertiseItem {
   title: string;
@@ -105,7 +106,7 @@ export default function NutraceuticalResearch({
     <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden">
       
       {/* Hero Banner Section */}
-      <section className="bg-[#0f2824] py-16 px-6 text-center text-white">
+      <section className="bg-[#0f2824] py-7 px-6 text-center text-white">
         <div className="max-w-4xl mx-auto border border-emerald-800/60 rounded-xl p-8 sm:p-12 shadow-inner">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 tracking-tight">{heroTitle}</h1>
           <p className="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
@@ -115,7 +116,7 @@ export default function NutraceuticalResearch({
       </section>
 
       {/* Transforming Health Section */}
-      <section className="max-w-6xl mx-auto py-16 px-6">
+      <section className="max-w-6xl mx-auto py-7 px-6">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-[#0f2824]">
             {transformTitle}
@@ -131,9 +132,12 @@ export default function NutraceuticalResearch({
               <p key={index}>{paragraph}</p>
             ))}
             <div className="pt-4">
-              <button className="bg-[#cc0000] hover:bg-[#b30000] text-white font-semibold py-3 px-8 rounded-full shadow-md transition-colors text-sm sm:text-base">
+              <Link
+                href="/order-now"
+                className="inline-block bg-[#cc0000] hover:bg-[#b30000] text-white font-semibold py-3 px-8 rounded-full shadow-md transition-colors text-sm sm:text-base"
+              >
                 {ctaText}
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -152,7 +156,7 @@ export default function NutraceuticalResearch({
       </section>
 
       {/* Expertise in Nutraceutical Development Section */}
-      <section className="bg-gray-50/50 py-20 px-6 border-t border-b border-gray-100">
+      <section className="bg-gray-50/50 py-8 px-6 border-t border-b border-gray-100">
         <div className="max-w-6xl mx-auto text-center mb-16">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{expertiseTitle}</h2>
           <p className="text-gray-600 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
@@ -198,7 +202,7 @@ export default function NutraceuticalResearch({
       </section>
 
       {/* Key Segments Of The Nutraceutical Industry Section */}
-      <section className="max-w-6xl mx-auto py-20 px-6 text-center">
+      <section className="max-w-6xl mx-auto py-8 px-6 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{segmentsTitle}</h2>
         <p className="text-gray-600 text-sm sm:text-base max-w-4xl mx-auto leading-relaxed mb-14">
           {segmentsSubtitle}

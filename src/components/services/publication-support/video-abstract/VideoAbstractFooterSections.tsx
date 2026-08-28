@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   FiCheck,
   FiPlus,
@@ -110,7 +111,7 @@ export default function VideoAbstractFooterSections() {
   return (
     <div className="w-full font-sans text-slate-800 bg-white">
       {/* ==================== 1. QUICK PRICING SECTION ==================== */}
-      <section className="max-w-6xl mx-auto py-12 px-4 md:px-8">
+      <section className="max-w-6xl mx-auto py-6 px-4 md:px-8">
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-2">
           Quick Pricing
         </h2>
@@ -208,15 +209,18 @@ export default function VideoAbstractFooterSections() {
             </div>
 
             {/* CTA Button */}
-            <button className="w-full sm:w-auto bg-[#0b3c3d] hover:bg-[#072829] text-white font-bold text-xs md:text-sm px-10 py-3 rounded-full transition-colors duration-300 shadow-sm">
+            <Link
+              href="/order-now"
+              className="inline-block w-full sm:w-auto text-center bg-[#0b3c3d] hover:bg-[#072829] text-white font-bold text-xs md:text-sm px-10 py-3 rounded-full transition-colors duration-300 shadow-sm"
+            >
               GET STARTED
-            </button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* ==================== 2. TESTIMONIALS SECTION ==================== */}
-      <section className="bg-[#f8faf9] py-12 px-4 md:px-8">
+      <section className="bg-[#f8faf9] py-6 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-8">
             Testimonials
@@ -304,7 +308,7 @@ export default function VideoAbstractFooterSections() {
       </section>
 
       {/* ==================== 3. FAQ ACCORDION SECTION ==================== */}
-      <section className="max-w-5xl mx-auto py-12 md:py-16 px-4 md:px-8">
+      <section className="max-w-5xl mx-auto py-6 md:py-7 px-4 md:px-8">
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-8">
           Frequently Asked Questions – Video Abstract Service
         </h2>

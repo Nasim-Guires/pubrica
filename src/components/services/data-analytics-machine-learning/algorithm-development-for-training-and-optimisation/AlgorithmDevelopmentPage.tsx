@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AlgorithmDevelopmentService() {
     // Accordion state for "How We Do" section (null = all closed by default)
@@ -110,7 +111,7 @@ export default function AlgorithmDevelopmentService() {
     return (
         <main className="w-full bg-[#f8fbf9] text-[#222222] font-sans">
             {/* 1. HERO HEADER BANNER SECTION */}
-            <section className="bg-[#1b3d36] text-white py-12 px-4 sm:px-8 text-center">
+            <section className="bg-[#1b3d36] text-white py-6 px-4 sm:px-8 text-center">
                 <div className="max-w-5xl mx-auto border border-[#3b6058] p-8 rounded-lg bg-[#193832]">
                     <h1 className="text-2xl md:text-4xl font-bold tracking-wide mb-4">
                         Algorithm Development for Training and Optimisation
@@ -125,7 +126,7 @@ export default function AlgorithmDevelopmentService() {
             </section>
 
             {/* 2. OVERVIEW & INTRO SECTION */}
-            <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 md:px-8">
+            <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 md:px-8">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-4">
                     Custom Algorithm Development for Healthcare, Life Sciences & Beyond
                 </h2>
@@ -143,9 +144,9 @@ export default function AlgorithmDevelopmentService() {
                             handling vast, complex datasets, ensuring privacy and regulatory
                             compliance, and converting raw information into actionable
                             insights. At Pubrica, we specialize in custom{" "}
-                            <a href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-teal-700 underline font-medium">
+                            <Link href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-teal-700 underline font-medium">
                                 algorithm development
-                            </a>{" "}
+                            </Link>{" "}
                             for scientific, healthcare, pharma, medical device, food, and
                             nutraceutical applications.
                         </p>
@@ -178,9 +179,9 @@ export default function AlgorithmDevelopmentService() {
                                         Proven experience:
                                     </strong>{" "}
                                     Over 350+{" "}
-                                    <a href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-teal-700 underline">
+                                    <Link href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-teal-700 underline">
                                         algorithms
-                                    </a>{" "}
+                                    </Link>{" "}
                                     developed and optimized for global clients.
                                 </li>
                                 <li>
@@ -218,7 +219,7 @@ export default function AlgorithmDevelopmentService() {
             </section>
 
             {/* 3. "HOW WE DO" ACCORDION SECTION */}
-            <section className="max-w-6xl mx-auto py-10 px-4 sm:px-6 md:px-8 border-t border-gray-200">
+            <section className="max-w-6xl mx-auto py-5 px-4 sm:px-6 md:px-8 border-t border-gray-200">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-2">
                     How We Do
                 </h2>
@@ -288,7 +289,7 @@ export default function AlgorithmDevelopmentService() {
             </section>
 
             {/* 4. OUR EXPERTISE IN CUSTOM ALGORITHM DEVELOPMENT GRID */}
-            <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 md:px-8 border-t border-gray-200">
+            <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 md:px-8 border-t border-gray-200">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-3">
                     Our Expertise in Custom Algorithm Development
                 </h2>

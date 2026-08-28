@@ -120,7 +120,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Health Technology Assessment (HTA): A Comprehensive Overview? Our Pubrica consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "Health Technology Assessment (HTA): A Comprehensive Overview? Our Pubrica consultants are here to guide you. [Get Expert Publishing Support](/order-now) or [Schedule a Free Consultation](/order-now)"
   },
   {
     "type": "h2",

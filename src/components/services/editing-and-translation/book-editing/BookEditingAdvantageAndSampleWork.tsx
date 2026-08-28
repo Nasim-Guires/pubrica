@@ -49,7 +49,7 @@ export const BookEditingAdvantageAndSampleWork: React.FC = () => {
   ];
 
   return (
-    <div className="w-full bg-[#f8fafc] text-slate-800 py-12">
+    <div className="w-full bg-[#f8fafc] text-slate-800 py-6">
       {/* 1. Advantage Accordion Section */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 mb-16">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-8">

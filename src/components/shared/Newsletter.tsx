@@ -28,7 +28,7 @@ export default function Newsletter() {
   };
 
   return (
-    <div className="bg-primary-900 border-b border-primary-950/45 py-12 relative overflow-hidden">
+    <div className="bg-primary-900 border-b border-primary-950/45 py-6 relative overflow-hidden">
       {/* Decorative radial blur */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-secondary-500/10 rounded-full blur-3xl pointer-events-none" />
 

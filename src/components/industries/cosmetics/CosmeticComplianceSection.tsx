@@ -126,7 +126,7 @@ export default function CosmeticsAuthorsAndCompliance({
         <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden">
 
             {/* Compliance And Guidelines Section */}
-            <section className="py-16 px-6 max-w-6xl mx-auto">
+            <section className="py-7 px-6 max-w-6xl mx-auto">
                 <div className="text-center max-w-3xl mx-auto mb-12">
                     <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{sectionTitle}</h2>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
@@ -179,7 +179,7 @@ export default function CosmeticsAuthorsAndCompliance({
             </section>
 
             {/* Where Our Authors Publish Section */}
-            <section className="py-16 px-6 max-w-6xl mx-auto border-t border-gray-100">
+            <section className="py-7 px-6 max-w-6xl mx-auto border-t border-gray-100">
                 <div className="text-center max-w-3xl mx-auto mb-10">
                     <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-[#0f2824]">{authorsSectionTitle}</h2>
                     <div className="w-12 h-1 bg-[#0f2824] mx-auto mb-4"></div>
@@ -223,7 +223,7 @@ export default function CosmeticsAuthorsAndCompliance({
             </section>
 
             {/* Our Expert Cosmetic Editors Section */}
-            <section className="py-16 px-6 max-w-6xl mx-auto border-t border-gray-100">
+            <section className="py-7 px-6 max-w-6xl mx-auto border-t border-gray-100">
                 <div className="text-center max-w-3xl mx-auto mb-12">
                     <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{editorsSectionTitle}</h2>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed">

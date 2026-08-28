@@ -6,7 +6,7 @@ export default function OriginalResearchArticle() {
   return (
     <section className="w-full font-sans text-slate-800 bg-slate-100">
       {/* --- Top Dark Banner --- */}
-      <div className="bg-gradient-to-r from-slate-900 via-emerald-950 to-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 text-center">
+      <div className="bg-gradient-to-r from-slate-900 via-emerald-950 to-slate-900 text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-5xl mx-auto border border-slate-600/60 rounded-sm p-6 sm:p-10 backdrop-blur-sm bg-slate-900/30">
           {/* Main H1 Title for Strong SEO Heading Hierarchy */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4 text-white">
@@ -24,7 +24,7 @@ export default function OriginalResearchArticle() {
       </div>
 
       {/* --- Main Content Section --- */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-7">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Left Column: Text & Features */}
           <article className="lg:col-span-7 space-y-6">

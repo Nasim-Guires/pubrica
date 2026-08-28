@@ -1,5 +1,6 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface AudienceCard {
@@ -47,7 +48,7 @@ export const PhysicianWhoWeServe: React.FC = () => {
   return (
     <div className="w-full bg-white font-sans text-left">
       {/* --- Section: Who We Serve --- */}
-      <section className="py-12 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+      <section className="py-6 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
         {/* Title Header */}
         <h2 className="text-[#083c4c] text-xl md:text-2xl lg:text-[26px] font-extrabold leading-tight tracking-tight mb-4">
           Who We Serve
@@ -57,9 +58,9 @@ export const PhysicianWhoWeServe: React.FC = () => {
         <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed mb-8 max-w-6xl">
           Pubrica's physician writing service supports clinicians from clinical
           content development to{" "}
-          <a href="/services/publication-support/journal-submission" className="text-[#3b82f6] hover:underline">
+          <Link href="/services/publication-support/journal-submission" className="text-[#3b82f6] hover:underline">
             journal submission
-          </a>
+          </Link>
           , while providing medically accurate, compliant, and publication-ready
           manuscripts.
         </p>
@@ -94,7 +95,7 @@ export const PhysicianWhoWeServe: React.FC = () => {
       </section>
 
       {/* --- Section: Dark Green CTA Banner --- */}
-      <section className="w-full bg-[#05261e] py-12 px-6 text-center">
+      <section className="w-full bg-[#05261e] py-6 px-6 text-center">
         <div className="max-w-4xl mx-auto space-y-5">
           {/* Main Display Headline */}
           <h2 className="text-white text-lg md:text-xl lg:text-2xl font-bold tracking-tight">

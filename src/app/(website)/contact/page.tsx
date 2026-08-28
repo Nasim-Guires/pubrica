@@ -27,8 +27,9 @@ export default function ContactPage() {
       />
 
       {/* 2. SUB-HEADER */}
-      <section className="text-center pt-16 pb-8 space-y-2">
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 uppercase tracking-wider">
+      <section className="text-center pt-7 pb-8 space-y-2">
+        <h2 className="text-xl font-extrabold text-slate-900 uppercase tracking-wider">
+
           SAVE TIME AND MONEY
         </h2>
         <p className="text-slate-500 text-base font-medium">
@@ -37,7 +38,7 @@ export default function ContactPage() {
       </section>
 
       {/* 3. FORM & ADDRESS CONTENT GRID */}
-      <section className="max-w-6xl mx-auto px-4 pb-20">
+      <section className="max-w-6xl mx-auto px-4 pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
           {/* Left Column: Form Wrapper */}

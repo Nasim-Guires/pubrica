@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const PAGE_IMAGES = "/images/publication-support/video-abstract";
 
@@ -71,7 +72,7 @@ export default function VideoAbstractOverview() {
   return (
     <div className="w-full font-sans text-slate-800 bg-white">
       {/* ==================== 1. DARK BANNER ==================== */}
-      <section className="w-full bg-[#032b21] text-white py-10 px-4 md:px-8 text-center">
+      <section className="w-full bg-[#032b21] text-white py-5 px-4 md:px-8 text-center">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-xl md:text-2xl font-bold mb-3 tracking-wide">
             Focus on Your Research — We’ll Present It Visually
@@ -85,7 +86,7 @@ export default function VideoAbstractOverview() {
       </section>
 
       {/* ==================== 2. WHO USES & SERVICES OFFERED ==================== */}
-      <section className="max-w-6xl mx-auto py-12 md:py-16 px-4 md:px-8">
+      <section className="max-w-6xl mx-auto py-6 md:py-7 px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Text Content */}
           <div className="lg:col-span-7 space-y-8">
@@ -257,7 +258,7 @@ export default function VideoAbstractOverview() {
       </section>
 
       {/* ==================== 4. COMPLIANCE & STANDARDS ==================== */}
-      <section className="max-w-6xl mx-auto py-12 px-4 md:px-8">
+      <section className="max-w-6xl mx-auto py-6 px-4 md:px-8">
         <h3 className="text-xl md:text-2xl font-bold text-[#0c373b] mb-2">
           Our Compliance and Guideline Standards
         </h3>
@@ -319,7 +320,7 @@ export default function VideoAbstractOverview() {
       </section>
 
       {/* ==================== 5. SAMPLE WORK CALLOUT ==================== */}
-      <section className="max-w-6xl mx-auto pb-16 px-4 md:px-8">
+      <section className="max-w-6xl mx-auto pb-7 px-4 md:px-8">
         <div className="bg-[#f0faf5] rounded-sm p-6 md:p-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           {/* Left Column Image */}
           <div className="md:col-span-5 relative h-64 md:h-80 rounded-sm overflow-hidden shadow-sm">
@@ -337,9 +338,12 @@ export default function VideoAbstractOverview() {
               <h4 className="text-lg md:text-xl font-bold text-[#0c373b] mb-3">
                 Video Abstract Sample Work
               </h4>
-              <button className="bg-black hover:bg-slate-800 text-white font-medium text-xs md:text-sm px-8 py-2.5 rounded-full transition-colors duration-300">
+              <Link
+                href="/insights/sample-work"
+                className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs md:text-sm px-8 py-2.5 rounded-full transition-colors duration-300"
+              >
                 Discover More
-              </button>
+              </Link>
             </div>
 
             <div className="pt-2">
@@ -351,9 +355,12 @@ export default function VideoAbstractOverview() {
                 your journal’s submission guidelines, visual quality
                 requirements, and publication timeframes.
               </p>
-              <button className="bg-black hover:bg-slate-800 text-white font-medium text-xs md:text-sm px-8 py-2.5 rounded-full transition-colors duration-300">
+              <Link
+                href="/insights/sample-work"
+                className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs md:text-sm px-8 py-2.5 rounded-full transition-colors duration-300"
+              >
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

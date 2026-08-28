@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 interface AudienceItem {
@@ -76,9 +77,8 @@ export default function WhatWeDoAndWhoWeServe() {
   };
 
   return (
-    <section className="w-full bg-white py-8 font-sans text-gray-800 antialiased">
-      <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-8">
-
+    <section className="w-full bg-white py-6 font-sans text-gray-800 antialiased">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-16">
         {/* ============================================================ */}
         {/* SECTION 1: WHAT WE DO                                        */}
         {/* ============================================================ */}
@@ -88,9 +88,9 @@ export default function WhatWeDoAndWhoWeServe() {
           </h2>
           <p className="text-xs md:text-sm text-gray-700 leading-relaxed max-w-4xl mb-4">
             With Pubrica&apos;s Academic{' '}
-            <a href="/academy/formatting-service/ama-journal-article-formatting-guide" className="text-[#3b82f6] hover:underline">
+            <Link href="/academy/formatting-service/ama-journal-article-formatting-guide" className="text-[#3b82f6] hover:underline">
               Formatting Service
-            </a>
+            </Link>
             , we will ensure that your manuscript meets the journal&apos;s specifications. Our services are designed to enhance the presentation by following the published standards of academic and scientific publication.
           </p>
 
@@ -102,9 +102,9 @@ export default function WhatWeDoAndWhoWeServe() {
                   <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">•</span>
                   <span>
                     <strong className="font-bold text-gray-900">research paper layout design</strong> Our experts carefully prepare your manuscript to meet the formatting guidelines of your intended journal. This involves reviewing references, lists, tables, graphics, and images to make sure all formatting is correct. This is especially beneficial for{' '}
-                    <a href="/services/physician-writing-services/physician-manuscripts" className="text-[#3b82f6]">
+                    <Link href="/services/physician-writing-services/physician-manuscripts" className="text-[#3b82f6] ">
                       physician manuscripts
-                    </a>{' '}
+                    </Link>{' '}
                     that require compliance with clinical publication protocols.
                   </span>
                 </li>
@@ -113,9 +113,9 @@ export default function WhatWeDoAndWhoWeServe() {
                   <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">•</span>
                   <span>
                     <strong className="font-bold text-gray-900">Expertise in Citation Styles:</strong> With expertise in many different citation styles (including Harvard, APA, MLA, and Chicago), our experienced editors will ensure your manuscript follows the relevant academic conventions and style guides. This is particularly important for discovering and managing potential{' '}
-                    <a href="/services/publication-support/plagiarism-services" className="text-[#3b82f6]">
+                    <Link href="/services/publication-support/plagiarism-services" className="text-[#3b82f6] ">
                       plagiarism
-                    </a>{' '}
+                    </Link>{' '}
                     risks concerning incorrect citations or paraphrasing.
                   </span>
                 </li>
@@ -124,9 +124,9 @@ export default function WhatWeDoAndWhoWeServe() {
                   <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">•</span>
                   <span>
                     <strong className="font-bold text-gray-900">Adherence to Journal Guidelines:</strong> We adhere to the journal&apos;s &quot;instructions to authors&quot; to ensure that even the most minute details (font size, heading style) are aligned with the journal&apos;s expectations, which is important for{' '}
-                    <a href="/services/research-services/grant-writing" className="text-[#3b82f6]">
+                    <Link href="/services/research-services/grant-writing" className="text-[#3b82f6]">
                       grant writing
-                    </a>{' '}
+                    </Link>{' '}
                     when submission accuracy can impact funding decisions.
                   </span>
                 </li>
@@ -135,9 +135,9 @@ export default function WhatWeDoAndWhoWeServe() {
                   <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">•</span>
                   <span>
                     <strong className="font-bold text-gray-900">Error Elimination:</strong> By removing formatting errors and inconsistencies, we improve the readability and professionalism of your document, and in turn, increase the chances of acceptance. We also provide services for{' '}
-                    <a href="/services/physician-writing-services/physician-training" className="text-[#3b82f6]">
+                    <Link href="/services/physician-writing-services/physician-training" className="text-[#3b82f6]">
                       physician training
-                    </a>{' '}
+                    </Link>{' '}
                     documents, which assist authors in displaying the educational content with clarity and consistency.
                   </span>
                 </li>
@@ -146,9 +146,9 @@ export default function WhatWeDoAndWhoWeServe() {
                   <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">•</span>
                   <span>
                     <strong className="font-bold text-gray-900">Tailored Formatting Solutions:</strong> Whether you are preparing to submit a research paper, dissertation, or article, our{' '}
-                    <a href="/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission" className="text-[#3b82f6] hover:underline">
+                    <Link href="/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission" className="text-[#3b82f6] hover:underline">
                       formatting services
-                    </a>{' '}
+                    </Link>{' '}
                     are specific to the requirements of your document.
                   </span>
                 </li>
@@ -156,9 +156,9 @@ export default function WhatWeDoAndWhoWeServe() {
 
               <p className="text-xs md:text-sm text-gray-700 leading-relaxed pt-1">
                 Select Pubrica&apos;s Customized{' '}
-                <a href="/academy/formatting-service/how-to-write-research-paper-in-apa-format" className="text-[#3b82f6]">
+                <Link href="/academy/formatting-service/how-to-write-research-paper-in-apa-format" className="text-[#3b82f6] ">
                   manuscript formatting
-                </a>{' '}
+                </Link>{' '}
                 solutions to present your manuscript in a clean, professional manner according to journal guidelines and optimize the chances of acceptance for publication. Contact us today to assist you with formatting your manuscript to ensure that it is formatted correctly and ready for submission.
               </p>
 
@@ -195,9 +195,9 @@ export default function WhatWeDoAndWhoWeServe() {
           </h2>
           <p className="text-xs md:text-sm text-gray-700 leading-relaxed mb-4">
             Our Research paper{' '}
-            <a href="/academy/formatting-service/s-v-o-structure-academic-writing-conciseness" className="text-[#3b82f6] hover:underline">
+            <Link href="/academy/formatting-service/s-v-o-structure-academic-writing-conciseness" className="text-[#3b82f6] hover:underline">
               formatting service
-            </a>{' '}
+            </Link>{' '}
             is designed to assist researchers, authors, and manufacturers in aligning their manuscripts with the precise guidelines of target journals, facilitating smoother submission processes and improving the chances of acceptance in Academic Researchers and Scholars.
           </p>
 

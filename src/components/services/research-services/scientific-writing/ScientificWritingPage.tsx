@@ -34,11 +34,11 @@ const WHY_CHOOSE_ITEMS: FeatureItem[] = [
 
 export const ScientificWritingPage: React.FC = () => {
     return (
-        <div className="w-full bg-slate-50 min-h-screen py-10 font-sans text-slate-800">
+        <div className="w-full bg-slate-50 min-h-screen py-5 font-sans text-slate-800">
 
             {/* ================= 1. HERO BANNER ================= */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6">
-                <div className="bg-[#112a28] text-white py-12 px-6 sm:px-12 rounded-xs border border-teal-500/30 text-center shadow-md">
+                <div className="bg-[#112a28] text-white py-6 px-6 sm:px-12 rounded-xs border border-teal-500/30 text-center shadow-md">
                     <h1 className="text-2xl sm:text-4xl font-extrabold tracking-wide mb-4">
                         Scientific & Academic Medical Writing
                     </h1>
@@ -49,7 +49,7 @@ export const ScientificWritingPage: React.FC = () => {
             </section>
 
             {/* ================= 2. RECOMMENDATIONS CALLOUT BANNER ================= */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10 text-center space-y-4">
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 py-5 text-center space-y-4">
                 <h2 className="text-xl sm:text-2xl font-bold text-[#0b3b36]">
                     More than 1 Million Researchers are Already Using Pubrica’s Recommendations
                 </h2>
@@ -59,7 +59,10 @@ export const ScientificWritingPage: React.FC = () => {
                 <div className="pt-2">
                     <Link
                         href="/uploads/research-services/scientific-writing/24-03-2026-SCIENTIFIC-WRITING-THAT-DRIVES-PUBLICATION-SUCCESS.pdf"
-                        className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"                    >
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
+                    >
                         View Brochure
                     </Link>
                 </div>
@@ -117,7 +120,7 @@ export const ScientificWritingPage: React.FC = () => {
             </section>
 
             {/* ================= 4. WHY CHOOSE PUBRICA ================= */}
-            <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 space-y-8">
+            <section className="max-w-5xl mx-auto px-4 sm:px-6 py-6 space-y-8">
                 <div className="space-y-2">
                     <h2 className="text-2xl font-bold text-[#0b3b36]">
                         Why Choose Pubrica

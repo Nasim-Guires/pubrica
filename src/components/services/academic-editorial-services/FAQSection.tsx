@@ -62,7 +62,7 @@ export function FAQSection() {
   };
 
   return (
-    <section className="w-full bg-white text-slate-800 font-sans py-16 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-white text-slate-800 font-sans py-7 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Title */}
         <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44]">

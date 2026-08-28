@@ -186,8 +186,10 @@ export default function SystematicReviewPackages() {
             </h2>
 
             <div style={{ marginBottom: "24px" }}>
-              <button
+              <Link
+                href="/insights/sample-work"
                 style={{
+                  display: "inline-block",
                   backgroundColor: "#000000",
                   color: "#ffffff",
                   padding: "10px 32px",
@@ -195,11 +197,12 @@ export default function SystematicReviewPackages() {
                   fontWeight: "600",
                   fontSize: "0.875rem",
                   border: "none",
+                  textDecoration: "none",
                   cursor: "pointer",
                 }}
               >
                 Discover More
-              </button>
+              </Link>
             </div>
 
             <h3
@@ -235,8 +238,10 @@ export default function SystematicReviewPackages() {
             </p>
 
             <div>
-              <button
+              <Link
+                href="/insights/sample-work"
                 style={{
+                  display: "inline-block",
                   backgroundColor: "#000000",
                   color: "#ffffff",
                   padding: "10px 32px",
@@ -244,11 +249,12 @@ export default function SystematicReviewPackages() {
                   fontWeight: "600",
                   fontSize: "0.875rem",
                   border: "none",
+                  textDecoration: "none",
                   cursor: "pointer",
                 }}
               >
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

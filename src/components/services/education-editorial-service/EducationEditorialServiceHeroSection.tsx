@@ -46,7 +46,7 @@ export default function EducationEditorialServiceHeroSection() {
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
             {/* ------------------- HERO BANNER ------------------- */}
-            <section className="bg-[#0b3b2c] py-16 px-4 text-white text-center">
+            <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
                 <div className="max-w-4xl mx-auto border border-emerald-700/60 p-8 rounded-lg bg-[#0b3b2c]/80 shadow-inner">
                     <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
                         Education Editorial Services
@@ -58,7 +58,7 @@ export default function EducationEditorialServiceHeroSection() {
             </section>
 
             {/* ------------------- DRIVING ACADEMIC QUALITY SECTION ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto">
+            <section className="py-6 px-4 max-w-6xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                     {/* Left Column: Text Content */}
                     <div className="lg:col-span-7 space-y-4 text-left">
@@ -105,7 +105,7 @@ export default function EducationEditorialServiceHeroSection() {
             </section>
 
             {/* ------------------- OUR SERVICES SECTION ------------------- */}
-            <section className="py-14 px-4 bg-white border-t border-gray-100" aria-labelledby="services-heading">
+            <section className="py-6 px-4 bg-white border-t border-gray-100" aria-labelledby="services-heading">
                 <div className="max-w-5xl mx-auto">
                     {/* Header Text Aligned Left */}
                     <div className="mb-10 text-left">

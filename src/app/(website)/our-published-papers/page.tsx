@@ -38,7 +38,7 @@ export default function PublishedPapersPage() {
 
       <main className="min-h-screen bg-gray-50 text-gray-800">
         {/* Top Banner Section */}
-        <section className="bg-[#415a55] text-white py-16 px-4 text-center">
+        <section className="bg-[#415a55] text-white py-7 px-4 text-center">
           <div className="max-w-4xl mx-auto border border-gray-400 p-8">
             <h1 className="text-4xl font-bold mb-4">Publish research in top journals</h1>
             <p className="text-sm md:text-base text-gray-200">High impact factor</p>
@@ -46,7 +46,7 @@ export default function PublishedPapersPage() {
         </section>
 
         {/* Papers Published Section */}
-        <section className="max-w-6xl mx-auto py-12 px-4">
+        <section className="max-w-6xl mx-auto py-6 px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Papers Published</h2>
             <p className="text-sm text-gray-600">
@@ -88,7 +88,7 @@ export default function PublishedPapersPage() {
         </section>
 
         {/* Scripting Success Stories Section */}
-        <section className="bg-[#2d4642] text-white py-16 px-4">
+        <section className="bg-[#2d4642] text-white py-7 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-2xl font-bold tracking-wide mb-12">SCRIPTING SUCCESS STORIES</h2>
 
@@ -121,7 +121,7 @@ export default function PublishedPapersPage() {
         </section>
 
         {/* Footer CTA Section */}
-        <section className="py-16 px-4 text-center bg-gray-50">
+        <section className="py-7 px-4 text-center bg-gray-50">
           <h3 className="text-xl font-bold text-gray-900 mb-2">Start your publication journey now</h3>
           <p className="text-xs text-gray-600 mb-6">All our editing plans come with 100% confidentiality and quality guarantee.</p>
           <button type="button" className="bg-[#2d4642] text-white text-xs uppercase tracking-wider font-semibold py-3 px-8 hover:bg-[#415a55] transition-colors cursor-pointer">

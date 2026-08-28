@@ -40,7 +40,7 @@ export default function PosterPreparationPage() {
       {/* ------------------------------------------------------------- */}
       {/* 2. MAIN CONTENT SECTION                                      */}
       {/* ------------------------------------------------------------- */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8 py-12">
+      <section className="max-w-6xl mx-auto px-4 md:px-8 py-6">
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-6 leading-snug">
           Professional Scientific and Academic Poster Presentation Service: Visually Communicate Your
           High-Impact Research Presentation with Scientific Precision
@@ -65,9 +65,14 @@ export default function PosterPreparationPage() {
           <div className="lg:col-span-7 text-gray-700 space-y-4">
             <p className="leading-relaxed">
               At Pubrica, our{' '}
-              <Link href="/insights/maternal-gdm-infant-gut-microbiome-vertical-transmission" className="text-blue-600 ">
+              <a
+                href="https://pubrica.com/insights/sample-work/maternal-gdm-infant-gut-microbiome-vertical-transmission/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 "
+              >
                 poster preparation services
-              </Link>{' '}
+              </a>{' '}
               can help researchers transform manuscript findings or current research into a
               scientifically valid, visually structured, presentation-ready academic poster. We
               take care of everything required for a print-ready or digital poster, customized to
@@ -83,9 +88,9 @@ export default function PosterPreparationPage() {
               <li>
                 <span className="font-semibold">Structuring poster layout</span> according to conference
                 guidelines (e.g.,{' '}
-                <Link href="https://www.aacr.org/wp-content/uploads/2021/09/AACR22_Abstract-Guidelines.pdf" className="text-blue-600 ">AACR</Link>,{' '}
+                <a href="https://www.aacr.org/wp-content/uploads/2021/09/AACR22_Abstract-Guidelines.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 ">AACR</a>,{' '}
                 <Link href="/services/publication-support/poster-preparation/european-society-for-medical-oncology" className="text-blue-600 ">ESMO</Link>,{' '}
-                <Link href="https://www.asco.org/annual-meeting/abstracts-presentations/poster-presenter-guidelines" className="text-blue-600 ">ASCO</Link>,{' '}
+                <a href="https://www.asco.org/annual-meeting/abstracts-presentations/poster-presenter-guidelines" target="_blank" rel="noopener noreferrer" className="text-blue-600 ">ASCO</a>,{' '}
                 <a href="https://www.isscr.org/guidelines" target="_blank" rel="noopener noreferrer">ISSCR</a>)
               </li>
               <li>
@@ -135,17 +140,22 @@ export default function PosterPreparationPage() {
           Pubrica provides researchers with the ability to create conference-ready posters without the
           hassle of design problems, formatting issues, or compliance gaps. From conceptualization
           to final delivery, we become your{" "}
-          <a href="/services/publication-support/poster-preparation/how-to-design-a-research-poster/" className="text-blue-600 hover:underline font-medium">
+          <Link href="/services/publication-support/poster-preparation/how-to-design-a-research-poster/" className="text-blue-600 hover:underline font-medium">
             scientific design
-          </a>{" "}
+          </Link>{" "}
           partner, delivering a poster that represents the quality of your research and its clarity.
         </p>
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center gap-8 mt-6 mb-10">
           <GetFreeQuoteButton />
-          <Link href="/uploads/Poster-Preparation-Services-_compressed.pdf" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
+          <a
+            href="/uploads/Poster-Preparation-Services-_compressed.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
+          >
             View Brochure
-          </Link>
+          </a>
         </div>
 
 
@@ -154,7 +164,7 @@ export default function PosterPreparationPage() {
       {/* ------------------------------------------------------------- */}
       {/* 3. "WHAT WE DO" FEATURE CARDS SECTION                         */}
       {/* ------------------------------------------------------------- */}
-      <section className="w-full bg-[#dcf4e6] py-16 px-4 md:px-8">
+      <section className="w-full bg-[#dcf4e6] py-7 px-4 md:px-8">
         <div className="max-w-6xl mx-auto space-y-8">
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -209,7 +219,7 @@ export default function PosterPreparationPage() {
               <p className="text-gray-600 text-sm leading-relaxed">
                 Creating an academic poster is the process of synthesizing substantive research,
                 which can include a clinical trial,{' '}
-                <Link href="/services/publication-support/poster-preparation" className="text-blue-500 ">meta-analysis</Link>, or large
+                <Link href="/services/research-services/meta-analysis" className="text-blue-500 ">meta-analysis</Link>, or large
                 data set, into a format that is easy to consume. Our team works with you to
                 highlight key points and data, making your poster both informative and engaging.
               </p>
@@ -245,9 +255,14 @@ export default function PosterPreparationPage() {
           <div className="pt-4">
             <p className="text-gray-800 text-sm md:text-base leading-relaxed">
               Choose Pubrica&apos;s{' '}
-              <Link href="/insights/microbiota-supportive-diet-lipid-profile" className="text-blue-600 hover:underline font-medium">
+              <a
+                href="https://pubrica.com/insights/sample-work/microbiota-supportive-diet-lipid-profile/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline font-medium"
+              >
                 Poster Preparation Services
-              </Link>{' '}
+              </a>{' '}
               to turn your research into a professionally designed poster that conveys your study
               findings and increases your evidence at conferences! Contact us to discover how
               our tailored solutions can help you make a lasting impact.

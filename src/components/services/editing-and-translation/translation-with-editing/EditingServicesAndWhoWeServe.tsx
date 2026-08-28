@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // --- Data for Types of Editing Services ---
 interface EditingService {
@@ -75,9 +76,9 @@ const audienceData: AudienceCard[] = [
       <>
         Trusted scientific translation and editing services for educational
         materials,{" "}
-        <a href="/services/physician-writing-services/research-proposal" className="text-sky-400 hover:underline">
+        <Link href="/services/physician-writing-services/research-proposal" className="text-sky-400 hover:underline">
           research proposals
-        </a>
+        </Link>
         , and multilingual content to support global collaboration.
       </>
     ),
@@ -90,9 +91,9 @@ const audienceData: AudienceCard[] = [
     description: (
       <>
         Professional{" "}
-        <a href="/services/publication-support/" className="text-sky-400 hover:underline">
+        <Link href="/services/publication-support" className="text-sky-400 hover:underline">
           journal publication support
-        </a>{" "}
+        </Link>{" "}
         with precise scientific paper translation and editing that meet
         international publishing standards.
       </>
@@ -114,9 +115,9 @@ const audienceData: AudienceCard[] = [
     description: (
       <>
         Specialized medical translation services and scientific{" "}
-        <a href="/services/editing-and-translation/manuscript-editing" className="text-sky-400 hover:underline">
+        <Link href="/services/editing-and-translation/manuscript-editing" className="text-sky-400 hover:underline">
           manuscript editing
-        </a>{" "}
+        </Link>{" "}
         to expand the global impact of textbooks, case studies, and research
         findings.
       </>
@@ -134,7 +135,7 @@ const audienceData: AudienceCard[] = [
 
 export default function EditingServicesAndWhoWeServe() {
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-12 text-slate-800 font-sans space-y-16">
+    <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 text-slate-800 font-sans space-y-16">
       {/* ======================================= */}
       {/* SECTION 1: TYPES OF EDITING SERVICES    */}
       {/* ======================================= */}
@@ -208,7 +209,7 @@ export default function EditingServicesAndWhoWeServe() {
                   className="object-cover"
                 />
                 {/* Dark Bottom Gradient Banner */}
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-4 pt-10">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-4 pt-5">
                   <h3 className="text-sm font-bold text-white tracking-wide">
                     {card.title}
                   </h3>

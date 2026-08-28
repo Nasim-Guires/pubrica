@@ -148,7 +148,7 @@ export default function TestimonialsAndFAQ() {
   ];
 
   return (
-    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-12 px-4 sm:px-6">
+    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-6 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto space-y-20">
         {/* ======================================= */}
         {/* SECTION 1: TESTIMONIALS                 */}

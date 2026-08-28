@@ -1,6 +1,6 @@
 export default function CTASection() {
   return (
-    <section className="bg-[#00332c] text-white py-12 px-4 text-center">
+    <section className="bg-[#00332c] text-white py-6 px-4 text-center">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl lg:text-3xl font-bold mb-3">
           Speed up your Editing and Translation with Pubrica

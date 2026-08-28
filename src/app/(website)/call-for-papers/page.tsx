@@ -20,15 +20,15 @@ export default async function CallForPapersPage() {
   const topics = docs.filter((post) => post.slug !== INDEX_SLUG);
 
   return (
-    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24">
-      <section className="bg-[#0b2825] text-white py-14 px-4 text-center">
+    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
+      <section className="bg-[#0b2825] text-white py-6 px-4 text-center">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">Call for Papers</h1>
         <p className="text-gray-300 text-sm max-w-xl mx-auto">
           Explore Pubrica&apos;s open calls for papers across therapeutic areas and research fields.
         </p>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {topics.map((post) => {
             const image = mediaUrl(post.heroImage) || "/images/blog/default.webp";
@@ -59,7 +59,7 @@ export default async function CallForPapersPage() {
         </div>
 
         {topics.length === 0 && (
-          <p className="text-sm text-slate-500 text-center py-12">No open calls for papers right now.</p>
+          <p className="text-sm text-slate-500 text-center py-6">No open calls for papers right now.</p>
         )}
       </section>
     </div>

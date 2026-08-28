@@ -23,7 +23,7 @@ export default function ManuscriptFormattingService() {
       {/* ============================================================ */}
       {/* 2. MAIN DESCRIPTION & FEATURE LIST                            */}
       {/* ============================================================ */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8 py-12">
+      <section className="max-w-6xl mx-auto px-4 md:px-8 py-6">
         <div className="space-y-4 mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] leading-snug">
             Scientific and Academic Manuscript Formatting Service: Submit Your
@@ -68,12 +68,12 @@ export default function ManuscriptFormattingService() {
                   •
                 </span>
                 <span>
-                  <a
+                  <Link
                     href="/services/publication-support/journal-manuscript-formatting-services/citation-management-tools-formatting-referencing"
                     className="text-[#2563eb] hover:underline font-medium"
                   >
                     Citation and reference formatting
-                  </a>{" "}
+                  </Link>{" "}
                   (Vancouver, APA, MLA, AMA, etc)
                 </span>
               </li>
@@ -109,12 +109,12 @@ export default function ManuscriptFormattingService() {
                 </span>
                 <span>
                   Cross-checking of in-text{" "}
-                  <a
+                  <Link
                     href="/services/publication-support/journal-manuscript-formatting-services/citation-styles-apa-ama-mla-vancouver-guide"
                     className="text-[#2563eb] hover:underline font-medium"
                   >
                     citations
-                  </a>{" "}
+                  </Link>{" "}
                   matches the reference list
                 </span>
               </li>
@@ -166,7 +166,7 @@ export default function ManuscriptFormattingService() {
       {/* ============================================================ */}
       {/* 3. COMPLIANCE & GUIDELINE STANDARDS CARDS                    */}
       {/* ============================================================ */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8 pb-16">
+      <section className="max-w-6xl mx-auto px-4 md:px-8 pb-7">
         <div className="mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-2">
             Our Compliance and Guideline Standards

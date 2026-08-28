@@ -285,7 +285,7 @@ export default function PeerReviewSection() {
   };
 
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 space-y-12">
       {/* 1. What We Peer Review Section */}
       <div className="space-y-6">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547]">

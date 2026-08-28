@@ -169,7 +169,7 @@ export default function CaseReportDetails() {
   const [activeCard, setActiveCard] = useState<string>("classical");
 
   return (
-    <div className="w-full bg-[#f8f9fa] py-12 text-slate-800 font-sans">
+    <div className="w-full bg-[#f8f9fa] py-6 text-slate-800 font-sans">
       {/* ========================================================= */}
       {/* 1. TYPES OF CASE REPORTS WE HANDLE                        */}
       {/* ========================================================= */}

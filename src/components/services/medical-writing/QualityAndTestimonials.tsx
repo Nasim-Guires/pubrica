@@ -55,7 +55,7 @@ export default function QualityAndTestimonials(): React.ReactElement {
 
   return (
     <div className="w-full font-sans text-slate-800">
-      <section className="bg-[#f0f9f6] py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-[#f0f9f6] py-7 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div className="space-y-4 pr-0 md:pr-4">
@@ -127,7 +127,7 @@ export default function QualityAndTestimonials(): React.ReactElement {
         </div>
       </section>
 
-      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-7 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#09322e] text-center">
             Testimonials

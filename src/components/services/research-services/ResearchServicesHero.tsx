@@ -1,8 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface FeatureItem {
-  text: React.ReactNode; // Updated to accept JSX elements/links
+  text: React.ReactNode;
+  highlightWords?: string[]; // Optional words to color blue or bold
 }
 
 interface ResearchHeroProps {
@@ -10,7 +12,7 @@ interface ResearchHeroProps {
   bannerSubtitle?: string;
   title?: string;
   subtitle?: string;
-  paragraphs?: React.ReactNode[]; // Updated to accept JSX elements/links
+  paragraphs?: React.ReactNode[];
   imageUrl?: string;
   features?: FeatureItem[];
   brochureUrl?: string;
@@ -23,30 +25,30 @@ export const ResearchServicesHero: React.FC<ResearchHeroProps> = ({
   subtitle = "Delivering end-to-end scientific research support solutions that combine methodological excellence, domain expertise, and global compliance standards to drive impactful, high-quality outcomes.",
   paragraphs = [
     <>
-      Selecting the proper <a href="/academy/research-services/different-types-of-scientific-research-guide" className="text-sky-600 ">research</a> partner establishes whether your work meets publication standards, regulatory compliance, and global credibility. At Pubrica, we combine scientific rigor, methodological integrity, and domain expertise to deliver outputs that are accurate, reproducible, and impactful.
+      Selecting the proper <Link href="/academy/research-services/different-types-of-scientific-research-guide" className="text-sky-600 ">research</Link> partner establishes whether your work meets publication standards, regulatory compliance, and global credibility. At Pubrica, we combine scientific rigor, methodological integrity, and domain expertise to deliver outputs that are accurate, reproducible, and impactful.
     </>,
     <>
-      Our team of PhD-qualified medical writers, biostatisticians, data scientists, and subject matter experts, every project will utilize either PRISMA, Cochrane, PROSPERO, JBI, or any other globally recognized framework. We have extensive experience from academic research, <a href="/academy/research-services/pilot-study-guide" className="text-sky-600 ">clinical trials</a>, bioinformatics, healthcare, pharma, and biotech, ensuring we can help you go from concept to published with confidence.
+      Our team of PhD-qualified medical writers, biostatisticians, data scientists, and subject matter experts, every project will utilize either PRISMA, Cochrane, PROSPERO, JBI, or any other globally recognized framework. We have extensive experience from academic research, <Link href="/academy/research-services/pilot-study-guide" className="text-sky-600 ">clinical trials</Link>, bioinformatics, healthcare, pharma, and biotech, ensuring we can help you go from concept to published with confidence.
     </>
   ],
   imageUrl = "/images/research-services/Research-Services.webp",
   features = [
     { text: "15+ years of global experience in delivering high-quality academic, clinical, and healthcare research solutions." },
     {
-      text: <>5,000+ completed projects including <a href="/academy/research-services/gramms-guidelines-reporting-mixed-methods-research" className="text-sky-600">systematic reviews</a>, meta-analyses, bioinformatics studies, and clinical trial analyses.</>
+      text: <>5,000+ completed projects including <Link href="/academy/research-services/gramms-guidelines-reporting-mixed-methods-research" className="text-sky-600">systematic reviews</Link>, meta-analyses, bioinformatics studies, and clinical trial analyses.</>
     },
     {
-      text: <>Team of 30+ PhD-qualified experts in <a href="/services/research-services/medical-writing/" className="text-sky-600">medical writing</a>, <a href="/academy/research-services/role-of-biostatistics-in-clinical-research-programs/" className="text-sky-600">biostatistics</a>, AI & ML research, epidemiology, and clinical sciences.</>
+      text: <>Team of 30+ PhD-qualified experts in <Link href="/services/research-services/medical-writing/" className="text-sky-600">medical writing</Link>, <Link href="/academy/research-services/role-of-biostatistics-in-clinical-research-programs/" className="text-sky-600">biostatistics</Link>, AI & ML research, epidemiology, and clinical sciences.</>
     },
     { text: "Proven track record in working with top universities, global CROs, pharma, biotech, and medical device companies." },
     {
-      text: <>End-to-end support from novelty & gap identification to data sourcing, protocol development, manuscript writing, peer review, and <a href="/services/publication-support/journal-submission" className="text-sky-600">journal submission</a>.</>
+      text: <>End-to-end support from novelty & gap identification to data sourcing, protocol development, manuscript writing, peer review, and <Link href="/services/publication-support/journal-submission" className="text-sky-600">journal submission</Link>.</>
     },
     { text: "Advanced capabilities in statistical programming (SAS, R, SPSS), AI-driven data analysis, and bioinformatics for proteomics and genomics research." },
     { text: "Publication success assistance in high-impact factor journals, ensuring methodological accuracy, compliance, and transparency." },
     { text: "Dedicated project coordinators for personalized support and seamless communication throughout the project." },
     {
-      text: <>Commitment to originality with <a href="/services/publication-support/plagiarism-services" className="text-sky-600 hover:underline">plagiarism</a> and AI-content checks, ensuring authenticity and academic integrity.</>
+      text: <>Commitment to originality with <Link href="/services/publication-support/plagiarism-services" className="text-sky-600 hover:underline">plagiarism</Link> and AI-content checks, ensuring authenticity and academic integrity.</>
     }
   ],
   brochureUrl = "/uploads/research-services/03-03-2026-RESEARCH-SERVICES-1.pdf"
@@ -59,7 +61,7 @@ export const ResearchServicesHero: React.FC<ResearchHeroProps> = ({
   return (
     <div className="w-full">
       {/* Top Hero Banner */}
-      <section className="w-full bg-[#0b2b30] text-white py-12 px-4 sm:px-6 md:px-8">
+      <section className="w-full bg-[#0b2b30] text-white py-6 px-4 sm:px-6 md:px-8">
         <div className="max-w-4xl mx-auto border border-white/70 rounded-sm p-6 sm:p-8 md:p-10 text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
             {bannerTitle}
@@ -71,7 +73,7 @@ export const ResearchServicesHero: React.FC<ResearchHeroProps> = ({
       </section>
 
       {/* Main Content Section */}
-      <section className="w-full  py-12 px-6 md:px-12 lg:px-24 font-sans selection:bg-blue-100">
+      <section className="w-full bg-[#f4f9fc] py-6 px-6 md:px-12 lg:px-24 font-sans selection:bg-blue-100">
         <div className="max-w-7xl mx-auto">
 
           {/* Headings */}
@@ -131,6 +133,8 @@ export const ResearchServicesHero: React.FC<ResearchHeroProps> = ({
           <div className="mt-8">
             <a
               href={brochureUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
             >
               View Brochure

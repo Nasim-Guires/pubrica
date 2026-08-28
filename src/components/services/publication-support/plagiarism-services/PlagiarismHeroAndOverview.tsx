@@ -16,7 +16,7 @@ export default function PlagiarismHeroAndOverview() {
       />
 
       {/* ---------------- MAIN CONTENT SECTION ---------------- */}
-      <section className="w-full py-12 md:py-16 px-4 md:px-8">
+      <section className="w-full py-6 md:py-7 px-4 md:px-8">
         <div className="mx-auto max-w-6xl">
           {/* Main Title */}
           <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] leading-snug mb-4 max-w-5xl">

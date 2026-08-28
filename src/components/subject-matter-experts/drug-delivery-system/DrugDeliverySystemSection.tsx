@@ -115,7 +115,7 @@ export default function DrugDeliverySystemSection() {
         <div className="w-full bg-white text-gray-800 font-sans space-y-20">
 
             {/* SECTION 1: Emerging Trends in Drug Delivery System */}
-            <section className="max-w-6xl mx-auto pt-12 px-4 sm:px-6 lg:px-8 space-y-6">
+            <section className="max-w-6xl mx-auto pt-6 px-4 sm:px-6 lg:px-8 space-y-6">
                 <div className="space-y-3 text-left">
                     <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
                         Emerging Trends in Drug Delivery System
@@ -195,7 +195,7 @@ export default function DrugDeliverySystemSection() {
             </section>
 
             {/* SECTION 3: Areas of Study (Full-Width Dark Green Background) */}
-            <section className="w-full bg-[#0a2923] py-16 px-4 sm:px-6 lg:px-8">
+            <section className="w-full bg-[#0a2923] py-7 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto space-y-10">
                     {/* Section Header */}
                     <div className="text-center space-y-3">
@@ -291,7 +291,7 @@ export default function DrugDeliverySystemSection() {
             </section>
 
             {/* SECTION 5: Our Expert Editors In Drug Delivery Systems */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 space-y-8">
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 space-y-8">
                 <div className="text-center space-y-3">
                     <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
                         Our Expert Editors In Drug Delivery Systems

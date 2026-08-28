@@ -12,14 +12,14 @@ export const metadata = constructMetadata({
 
 export default function RebuttalPreparationPage() {
   const interestedTopics = [
-    { name: 'Manuscript Editing', href: '/manuscript-editing' },
-    { name: 'Manuscript Guidelines', href: '/manuscript-guidelines' },
-    { name: 'Manuscript Writing', href: '/manuscript-writing' },
-    { name: 'Manuscript Preparation guidelines', href: '/manuscript-preparation-guidelines' },
-    { name: 'Manuscript Submission Guidelines', href: '/manuscript-submission-guidelines' },
-    { name: 'Manuscript Editing Services', href: '/manuscript-editing-services' },
-    { name: 'Study Guides', href: '/study-guides' },
-    { name: 'Scientific Writing', href: '/scientific-writing' },
+    { name: 'Manuscript Editing', href: '/services/editing-and-translation/manuscript-editing' },
+    { name: 'Manuscript Guidelines', href: '/academy/manuscript-guidelines' },
+    { name: 'Manuscript Writing', href: '/services/physician-writing-services/physician-manuscript' },
+    { name: 'Manuscript Preparation guidelines', href: '/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission' },
+    { name: 'Manuscript Submission Guidelines', href: '/academy/manuscript-submission' },
+    { name: 'Manuscript Editing Services', href: '/services/editing-and-translation/manuscript-editing' },
+    { name: 'Study Guides', href: '/academy' },
+    { name: 'Scientific Writing', href: '/services/research-services/scientific-writing' },
   ]
 
   const highImpactJournals = [
@@ -71,7 +71,7 @@ export default function RebuttalPreparationPage() {
 
       <main className="min-h-screen bg-white text-gray-800 font-sans overflow-x-hidden">
         {/* Header Hero Banner */}
-        <div className="relative bg-neutral-900 text-white py-16 px-4 sm:px-6 lg:px-8 text-center bg-cover bg-center" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/hero-bg.jpg')" }}>
+        <div className="relative bg-neutral-900 text-white py-7 px-4 sm:px-6 lg:px-8 text-center bg-cover bg-center" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/hero-bg.jpg')" }}>
           <h1 className="max-w-5xl mx-auto text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
             Rebuttal Preparation: Strategic Planning for Successful Peer Review Outcomes
           </h1>
@@ -82,16 +82,16 @@ export default function RebuttalPreparationPage() {
           <nav className="max-w-7xl mx-auto flex text-xs sm:text-sm text-gray-500 space-x-2">
             <Link href="/" className="hover:underline">Home</Link>
             <span>»</span>
-            <Link href="/academy" className="hover:underline">Academy</Link>
+            <Link href="/services/publication-support" className="hover:underline">Publication Support</Link>
             <span>»</span>
-            <Link href="/services/research-impact" className="hover:underline">Research Impact</Link>
+            <Link href="/services/publication-support/responding-to-reviewers" className="hover:underline">Responding to Reviewers</Link>
             <span>»</span>
             <span className="text-gray-700 font-medium truncate">Rebuttal Preparation: Strategic Planning for Successful Peer Review Outcomes</span>
           </nav>
         </div>
 
         {/* Top Content Body Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
             {/* Sidebar Column */}
@@ -335,7 +335,7 @@ export default function RebuttalPreparationPage() {
         </div>
 
         {/* FULL-BLEED BANNER (Positioned outside restricted grid so it touches both screen edges) */}
-        <div className="relative w-full my-10 py-14 md:py-20 overflow-hidden">
+        <div className="relative w-full my-10 py-6 md:py-8 overflow-hidden">
           {/* 1. Next.js Background Image (Base Layer: z-0) */}
           <Image
             src="/images/Physician-Assistants-Banner-Image.webp"
@@ -365,7 +365,7 @@ export default function RebuttalPreparationPage() {
           </div>
         </div>
         {/* Bottom Content Body Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-5">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             <div className="hidden lg:block lg:col-span-4"></div>
             <article className="lg:col-span-8 text-gray-700 text-sm leading-relaxed space-y-6">
@@ -376,7 +376,7 @@ export default function RebuttalPreparationPage() {
                   During <Link href="/services/publication-support/responding-to-reviewers/rebuttal-preparation-peer-review-strategy" className="text-sky-600 hover:underline">rebuttal preparation</Link>, you should think of your rebuttal as part of a strategic discussion with the scientific community rather than a simple response. By using structured planning, courteous communication and revising your manuscript based on evidence, authors can greatly increase their chances of receiving better results from the peer review process and having their manuscript accepted for publication. <Link href="/services/academic-editorial-services" className="text-sky-600 hover:underline">Academic publishing consulting services</Link> often integrate <Link href="/services/publication-support/responding-to-reviewers" className="text-sky-600 hover:underline">peer review response preparation</Link> and strategic rebuttal planning to support authors throughout the publication lifecycle.
                 </p>
                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed italic">
-                  Need expert help with your rebuttal letter or post-peer review revision? Pubrica supports you with peer review response preparation and editing to improve acceptance outcomes. [Get Expert Publishing Support] or [Schedule a Free Consultation].
+                  Need expert help with your rebuttal letter or post-peer review revision? Pubrica supports you with peer review response preparation and editing to improve acceptance outcomes. <Link href="/order-now" className="text-sky-600 hover:underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-sky-600 hover:underline">[Schedule a Free Consultation]</Link>.
                 </p>
               </section>
 

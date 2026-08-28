@@ -2,6 +2,7 @@
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -101,7 +102,7 @@ export default function ForensicAndQualityAuditComplete() {
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
             {/* ------------------- HERO BANNER ------------------- */}
-            <section className="bg-[#0b3b2c] py-16 px-4 text-white text-center">
+            <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
                         Forensic and Quality Audit Services at Pubrica
@@ -113,7 +114,7 @@ export default function ForensicAndQualityAuditComplete() {
             </section>
 
             {/* ------------------- STEP-BY-STEP PROCESS ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto text-center" aria-labelledby="process-heading">
+            <section className="py-6 px-4 max-w-6xl mx-auto text-center" aria-labelledby="process-heading">
                 <h2 id="process-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-2">
                     How Our Forensic and Quality Audit Service Works
                 </h2>
@@ -151,7 +152,7 @@ export default function ForensicAndQualityAuditComplete() {
             </section>
 
             {/* ------------------- SAMPLE WORK SECTION ------------------- */}
-            <section className="py-14 px-4 bg-[#f4faf7] text-center" aria-labelledby="sample-heading">
+            <section className="py-6 px-4 bg-[#f4faf7] text-center" aria-labelledby="sample-heading">
                 <div className="max-w-4xl mx-auto bg-white border border-emerald-100 rounded-xl p-8 shadow-sm">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div className="bg-[#0b3b2c] p-3 rounded-lg shadow-md flex justify-center items-center relative h-48 overflow-hidden">
@@ -168,24 +169,24 @@ export default function ForensicAndQualityAuditComplete() {
                                 Forensic and Quality Audit Service Sample Work
                             </h2>
                             <div className="space-y-3 mb-6">
-                                <button className="w-full bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
+                                <Link href="/insights/sample-work" className="block w-full text-center bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
                                     Discover More
-                                </button>
+                                </Link>
                             </div>
                             <h3 className="text-sm font-bold text-[#0b3b2c] mb-2">Download the full Report Now</h3>
                             <p className="text-[11px] text-gray-600 leading-relaxed mb-6">
                                 Explore our forensic and quality audit sample work, designed to deliver accurate insights, ensure regulatory compliance, and strengthen your organization’s operational integrity.
                             </p>
-                            <button className="w-full bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
+                            <Link href="/insights/sample-work" className="block w-full text-center bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
                                 Discover More
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* ------------------- PACKAGES SECTION ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto" aria-labelledby="packages-heading">
+            <section className="py-6 px-4 max-w-6xl mx-auto" aria-labelledby="packages-heading">
                 <div className="text-center max-w-3xl mx-auto mb-12">
                     <h2 id="packages-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
                         Forensic and Quality Audit Service – Our Packages

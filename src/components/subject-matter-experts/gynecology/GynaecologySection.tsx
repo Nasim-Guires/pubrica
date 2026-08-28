@@ -111,7 +111,7 @@ export default function GynecologySection() {
     };
 
     return (
-        <div className="w-full bg-white text-gray-800 font-sans py-12 px-4 sm:px-6 lg:px-8 space-y-20">
+        <div className="w-full bg-white text-gray-800 font-sans py-6 px-4 sm:px-6 lg:px-8 space-y-20">
 
             {/* SECTION: Emerging Trends in Gynaecology */}
             <section className="max-w-6xl mx-auto space-y-6">
@@ -195,7 +195,7 @@ export default function GynecologySection() {
             </section>
 
             {/* SECTION: Areas of Study (Dark Theme Container matched with reference image) */}
-            <section className="w-full bg-[#092c25] py-16 px-4 sm:px-6 lg:px-8">
+            <section className="w-full bg-[#092c25] py-7 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto space-y-10">
                     <div className="text-center space-y-3">
                         <h2 className="text-3xl sm:text-4xl font-bold text-white">

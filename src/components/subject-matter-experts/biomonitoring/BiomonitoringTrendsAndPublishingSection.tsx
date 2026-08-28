@@ -124,7 +124,7 @@ export default function BiomonitoringTrendsAndPublishingSection() {
     ];
 
     return (
-        <div className="max-w-6xl mx-auto px-4 py-12 bg-white font-sans text-gray-800 space-y-16">
+        <div className="max-w-6xl mx-auto px-4 py-6 bg-white font-sans text-gray-800 space-y-16">
 
             {/* SECTION 1: EMERGING TRENDS IN BIOMONITORING */}
             <section className="space-y-6">

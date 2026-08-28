@@ -72,7 +72,7 @@ export default function BiostatisticsProcessAndTools() {
       {/* ========================================================= */}
       {/* 1. TOOLS WE USE SECTION                                   */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto pt-12 pb-8 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto pt-6 pb-8 px-4 sm:px-6 lg:px-8">
         <h2 className="text-xl sm:text-2xl font-bold text-[#0e3b38] mb-4">
           Tools We Use
         </h2>
@@ -137,9 +137,6 @@ export default function BiostatisticsProcessAndTools() {
         <h3 className="text-lg md:text-xl font-medium text-[#2C4951] mb-4">
           Our Step-by-step Process
         </h3>
-
-        {/* Hyperlinked Description */}
- 
 
         {/* ============================================================ */}
         {/* MOBILE LAYOUT (< md screens): Vertical Alternating Timeline  */}
@@ -304,7 +301,7 @@ export default function BiostatisticsProcessAndTools() {
       {/* ========================================================= */}
       {/* 3. HOW WE HELP SECTION                                    */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto pt-6 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto pt-6 pb-7 px-4 sm:px-6 lg:px-8">
         <h2 className="text-xl sm:text-2xl font-bold text-[#0e3b38] mb-4">
           How We Help
         </h2>

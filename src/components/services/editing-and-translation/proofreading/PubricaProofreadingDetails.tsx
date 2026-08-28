@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRightCircle } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
@@ -96,7 +97,7 @@ export default function PubricaProofreadingDetails() {
   const [reasonsOpen, setReasonsOpen] = useState(true);
 
   return (
-    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-12 space-y-16">
+    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-6 space-y-16">
       {/* ======================================= */}
       {/* SECTION 1: REASONS WHY AUTHORS CHOOSE   */}
       {/* ======================================= */}
@@ -154,12 +155,12 @@ export default function PubricaProofreadingDetails() {
             <h3 className="text-lg sm:text-xl font-bold text-[#003B46]">
               A sample of our Proofreading services
             </h3>
-            <button
-              type="button"
+            <Link
+              href="/insights/sample-work"
               className="bg-[#b80000] hover:bg-[#9e0000] text-white font-bold px-5 py-2 rounded-md text-xs sm:text-sm transition-colors shadow-2xs"
             >
               View More
-            </button>
+            </Link>
           </div>
 
           {/* Sample Document Body Area */}

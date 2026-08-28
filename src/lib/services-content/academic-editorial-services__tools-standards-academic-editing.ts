@@ -15,7 +15,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Scholarly Communication is now underpinned by Editorial Standards, which govern ethical and structural aspects. By setting the editorial and authorial expectations for transparency, accountability, and reproducibility for all types of research output, Editorial Standards provide the framework upon which editors and authors rely to achieve their goals.[[3](https://lis.academy/technical-writing/understanding-editorial-standards-guide/)]. [Scholarly manuscript editing](https://pubrica.com/insights/sample-work/management-of-neurogenic-shock-outside-of-the-hospital/) relies on internationally recognised editorial standards to ensure [ethical compliance](https://pubrica.com/academy/research-services/ethical-considerations-research-design/) and reporting integrity in academic publishing."
+    "text": "Scholarly Communication is now underpinned by Editorial Standards, which govern ethical and structural aspects. By setting the editorial and authorial expectations for transparency, accountability, and reproducibility for all types of research output, Editorial Standards provide the framework upon which editors and authors rely to achieve their goals.[[3](https://lis.academy/technical-writing/understanding-editorial-standards-guide/)]. [Scholarly manuscript editing](https://pubrica.com/insights/sample-work/) relies on internationally recognised editorial standards to ensure [ethical compliance](https://pubrica.com/academy/research-services/ethical-considerations-research-design/) and reporting integrity in academic publishing."
   },
   {
     "type": "p",

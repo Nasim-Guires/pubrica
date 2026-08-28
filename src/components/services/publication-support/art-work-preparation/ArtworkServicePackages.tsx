@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-import CommonPackages from "@/components/common/CommonPackages"; // Adjust import path as needed
+import CommonPackages from "@/components/common/CommonPackages";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import Link from "next/link";
 
 const artworkPackages = [
   {
@@ -63,7 +64,7 @@ const artworkPackages = [
 
 export default function ArtworkServicePackages() {
   return (
-    <section className="w-full bg-white py-12 font-sans">
+    <section className="w-full bg-white py-6 font-sans">
       <div className="mx-auto max-w-7xl">
         {/* Main Packages Section via CommonPackages */}
         <CommonPackages
@@ -118,12 +119,12 @@ export default function ArtworkServicePackages() {
           </div>
 
           {/* Secondary CTA Button */}
-          <a
-            href="#pricing"
+          <Link
+            href="/order-now"
             className="inline-block bg-[#113b3b] hover:bg-[#092222] text-white font-bold text-sm md:text-base py-3 px-8 rounded-full transition-colors shadow-md"
           >
             Check Pricing & Get a Quote
-          </a>
+          </Link>
         </div>
       </div>
     </section>

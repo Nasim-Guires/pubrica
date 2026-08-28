@@ -8,7 +8,7 @@ export default async function LatestBlogs() {
   const blogs = await getBlogs(3);
 
   return (
-    <section className="bg-white py-20 border-t border-gray-100">
+    <section className="bg-white py-8 border-t border-gray-100">
       <Container>
         {/* Section Heading */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16">

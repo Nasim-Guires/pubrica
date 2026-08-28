@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface AudienceCard {
   id: string;
@@ -71,7 +72,7 @@ export default function BiostatisticsExpertiseAndWhoWeServe() {
       {/* ========================================================= */}
       {/* 1. OUR BIOSTATISTICAL EXPERTISE INCLUDES                  */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <div className="space-y-4 mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38] tracking-tight">
             Our Biostatistical Expertise Includes
@@ -79,12 +80,12 @@ export default function BiostatisticsExpertiseAndWhoWeServe() {
           <p className="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
             We provide our researchers and clinical trials investigators with
             the information, data management, analysis, and{" "}
-            <a
+            <Link
               href="/services/research-services/statistical-vs-contextual-interpretation-research"
               className="text-sky-600 hover:underline font-medium"
             >
               statistical interpretations
-            </a>{" "}
+            </Link>{" "}
             they require:
           </p>
         </div>
@@ -196,7 +197,7 @@ export default function BiostatisticsExpertiseAndWhoWeServe() {
       {/* ========================================================= */}
       {/* 2. WHO WE SERVE SECTION (WITH BLACK HOVER EFFECT)         */}
       {/* ========================================================= */}
-      <section className="bg-slate-50 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-100">
+      <section className="bg-slate-50 py-6 sm:py-7 px-4 sm:px-6 lg:px-8 border-t border-slate-100">
         <div className="max-w-7xl mx-auto space-y-8">
           {/* Header Copy */}
           <div className="space-y-3 max-w-5xl">
@@ -206,12 +207,12 @@ export default function BiostatisticsExpertiseAndWhoWeServe() {
             <p className="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
               Our biostatistical programming services cater to a diverse range
               of clients in the medical,{" "}
-              <a
-                href="/Industries/pharmaceutical/"
+              <Link
+                href="/industries/pharmaceutical/"
                 className="text-sky-600 hover:underline font-medium"
               >
                 pharmaceutical
-              </a>
+              </Link>
               , and life science sectors, providing tailored solutions to meet
               their unique research and regulatory needs.
             </p>

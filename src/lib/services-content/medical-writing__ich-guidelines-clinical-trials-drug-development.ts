@@ -384,7 +384,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "ICH Guidelines for Clinical Trials and Drug Development? Our [Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "ICH Guidelines for Clinical Trials and Drug Development? Our [Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support](/order-now) or [Schedule a Free Consultation](/order-now)"
   },
   {
     "type": "h2",

@@ -35,7 +35,7 @@ export default function CitationStylesPage() {
             </div>
 
             {/* Main Container */}
-            <div className="max-w-7xl mx-auto px-4 md:px-8 py-10 grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <div className="max-w-7xl mx-auto px-4 md:px-8 py-5 grid grid-cols-1 lg:grid-cols-12 gap-10">
 
                 {/* Left Sidebar */}
                 <aside className="lg:col-span-3 space-y-8">

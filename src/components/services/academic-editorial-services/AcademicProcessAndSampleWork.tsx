@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRight,
   ArrowDown,
@@ -82,7 +83,7 @@ const documentTypes = [
 
 export default function AcademicProcessAndSampleWork() {
   return (
-    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans pb-16">
+    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans pb-7">
       {/* ==========================================
           1. TOP HIGHLIGHT BANNER
       ========================================== */}
@@ -94,16 +95,16 @@ export default function AcademicProcessAndSampleWork() {
           <p className="text-xs sm:text-sm text-emerald-100 font-light leading-relaxed">
             Strengthen the clarity, coherence, and scholarly impact of your
             research with Pubrica’s professional{" "}
-            <a href="/services/academic-editorial-services" className="text-sky-400 hover:underline">
+            <Link href="/services/academic-editorial-services" className="text-sky-400 hover:underline">
               academic editorial services
-            </a>
+            </Link>
             . We enhance language, structure, academic tone, and compliance to
             help you publish with confidence.
           </p>
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 space-y-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 space-y-16">
         {/* ==========================================
             2. STEP-BY-STEP PROCESS
         ========================================== */}
@@ -317,9 +318,12 @@ export default function AcademicProcessAndSampleWork() {
                 <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
                   Academic Editorial Services Sample Work
                 </h3>
-                <button className="px-8 py-2.5 bg-black hover:bg-slate-800 text-white font-medium text-xs sm:text-sm rounded-full transition-colors shadow-sm">
+                <Link
+                  href="/insights/sample-work"
+                  className="inline-block px-8 py-2.5 bg-black hover:bg-slate-800 text-white font-medium text-xs sm:text-sm rounded-full transition-colors shadow-sm text-center"
+                >
                   Discover More
-                </button>
+                </Link>
               </div>
 
               {/* Bottom Block */}
@@ -336,9 +340,12 @@ export default function AcademicProcessAndSampleWork() {
                   credibility, and research impact.
                 </p>
                 <div className="pt-2">
-                  <button className="px-8 py-2.5 bg-black hover:bg-slate-800 text-white font-medium text-xs sm:text-sm rounded-full transition-colors shadow-sm">
+                  <Link
+                    href="/insights/sample-work"
+                    className="inline-block px-8 py-2.5 bg-black hover:bg-slate-800 text-white font-medium text-xs sm:text-sm rounded-full transition-colors shadow-sm text-center"
+                  >
                     Discover More
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

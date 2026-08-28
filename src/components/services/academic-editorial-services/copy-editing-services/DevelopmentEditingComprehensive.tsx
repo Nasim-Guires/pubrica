@@ -2,6 +2,7 @@
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -189,7 +190,7 @@ export default function AcademicDevelopmentEditingService() {
             publisher: 'Innovare Academic Sciences',
             impactFactor: 'NA',
             image: '/images/placeholder-cover.png',
-            link: '#',
+            link: 'https://journals.innovareacademics.in/index.php/ijpps/article/view/39739',
         },
         {
             title: 'Journal of Clinical Dermatology & Therapy',
@@ -199,7 +200,7 @@ export default function AcademicDevelopmentEditingService() {
             publisher: 'Herald Open Access',
             impactFactor: '0.68',
             image: '/images/placeholder-cover.png',
-            link: '#',
+            link: 'https://www.heraldopenaccess.us/openaccess/a-systemic-review-of-dupilumab-efficacy-and-safety-by-phenotypic-variations-of-atopic-dermatitis',
         },
         {
             title: 'World Journal of Oncology',
@@ -209,7 +210,7 @@ export default function AcademicDevelopmentEditingService() {
             publisher: 'Elmer Press Inc.',
             impactFactor: '2.2',
             image: '/images/placeholder-cover.png',
-            link: '#',
+            link: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7935621/',
         },
         // Add more publication items here to maintain continuous flow
     ];
@@ -280,7 +281,7 @@ export default function AcademicDevelopmentEditingService() {
         <article className="w-full bg-white text-gray-800 font-sans">
 
             {/* ------------------- SECTION 2: STEP-BY-STEP PROCESS (INTERACTIVE TIMELINE) ------------------- */}
-            <section className="py-16 px-4 bg-[#f8faf9] border-y border-gray-100 text-center" aria-labelledby="process-heading">
+            <section className="py-7 px-4 bg-[#f8faf9] border-y border-gray-100 text-center" aria-labelledby="process-heading">
                 <h2 id="process-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-1">
                     How Our Copy Editing Service Works
                 </h2>
@@ -340,7 +341,7 @@ export default function AcademicDevelopmentEditingService() {
             </section>
 
             {/* ------------------- UPDATED WHY CHOOSE US ACCORDION SECTION ------------------- */}
-            <section className="py-14 px-4 max-w-5xl mx-auto" aria-labelledby="why-choose-us-heading">
+            <section className="py-6 px-4 max-w-5xl mx-auto" aria-labelledby="why-choose-us-heading">
                 <h2 id="why-choose-us-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] text-center mb-10">
                     Why Should You Use Pubrica’s Professional Copy Editing Services?
                 </h2>
@@ -386,7 +387,7 @@ export default function AcademicDevelopmentEditingService() {
             </section>
 
             {/* ------------------- SECTION 3: HOW OUR EDITORS CAN HELP ------------------- */}
-            <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-5xl mx-auto text-center">
                     {/* Header Content */}
                     <h2 className="text-2xl sm:text-3xl font-bold text-[#0F3542] tracking-tight">
@@ -427,7 +428,7 @@ export default function AcademicDevelopmentEditingService() {
             {/* ------------------- SECTION 4: TYPES OF DOCUMENTS WE EDIT (WITH IMAGE ICONS) ------------------- */}
 
             {/* ------------------- SECTION 5: EXPERTS & SAMPLE WORK ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto text-center" aria-labelledby="experts-heading">
+            <section className="py-6 px-4 max-w-6xl mx-auto text-center" aria-labelledby="experts-heading">
                 <h2 id="experts-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-10">
                     Meet Our Copy Editing Experts
                 </h2>
@@ -445,9 +446,9 @@ export default function AcademicDevelopmentEditingService() {
                                 <span>{exp.experience} Years Experience</span>
                                 <span>{exp.papers} Papers Edited</span>
                             </div>
-                            <button className="mt-4 text-xs font-bold text-[#0b3b2c] hover:underline">
+                            <Link href="/about-us/our-editors" className="mt-4 text-xs font-bold text-[#0b3b2c] hover:underline">
                                 Read More
-                            </button>
+                            </Link>
                         </div>
                     ))}
                 </div>
@@ -479,7 +480,7 @@ export default function AcademicDevelopmentEditingService() {
                     )}
                 </section>
 
-                <section className="w-full bg-[#f2f4f3] py-16 px-4 sm:px-8 lg:px-12">
+                <section className="w-full bg-[#f2f4f3] py-7 px-4 sm:px-8 lg:px-12">
                     <div className="max-w-7xl mx-auto text-center">
                         {/* Title */}
                         <h2 className="text-2xl sm:text-3xl font-bold text-[#0F3542]">
@@ -519,7 +520,7 @@ export default function AcademicDevelopmentEditingService() {
                     </div>
                 </section>
 
-                <section className="py-14 bg-white overflow-hidden" aria-labelledby="recent-publications-heading">
+                <section className="py-6 bg-white overflow-hidden" aria-labelledby="recent-publications-heading">
                     {/* Embedded styles for the marquee animation */}
                     <style jsx>{`
                 @keyframes marquee {
@@ -590,6 +591,8 @@ export default function AcademicDevelopmentEditingService() {
                                     <div className="mt-6 pt-4 border-t border-gray-100 flex justify-end">
                                         <a
                                             href={pub.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="px-5 py-1.5 bg-[#0b3b2c] hover:bg-[#07261d] text-white text-xs font-semibold rounded transition-colors shadow-sm"
                                         >
                                             Visit
@@ -606,7 +609,7 @@ export default function AcademicDevelopmentEditingService() {
                 {/* Sample Work Section */}
 
                 {/* ------------------- SECTION 1.5: DEVELOPMENT EDITING SERVICES - PACKAGES ------------------- */}
-                <section className="py-14 px-4 max-w-6xl mx-auto text-center" aria-labelledby="packages-heading">
+                <section className="py-6 px-4 max-w-6xl mx-auto text-center" aria-labelledby="packages-heading">
                     <div className="max-w-4xl mx-auto mb-12">
                         <h2 id="packages-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
                             Development Editing Services – Our Packages

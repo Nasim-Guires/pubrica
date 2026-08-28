@@ -66,7 +66,7 @@ export default function ForensicAndQualityAuditService() {
   return (
     <article className="w-full bg-white text-gray-800 font-sans">
       {/* ------------------- HERO BANNER SECTION ------------------- */}
-      <section className="bg-[#0b3b2c] py-16 px-4 text-white text-center">
+      <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
         <div className="max-w-4xl mx-auto border border-white/20 p-8 rounded">
           <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
             Forensic & Quality Audit Services
@@ -78,7 +78,7 @@ export default function ForensicAndQualityAuditService() {
       </section>
 
       {/* ------------------- INTRODUCTION & AUDIT FUNCTIONS SECTION ------------------- */}
-      <section className="py-14 px-4 max-w-6xl mx-auto">
+      <section className="py-6 px-4 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Side: Headings, Descriptive Paragraphs, Bullet Points, and Button */}
           <div className="text-left">
@@ -129,7 +129,7 @@ export default function ForensicAndQualityAuditService() {
       </section>
 
       {/* ------------------- TYPES OF FORENSIC AND QUALITY AUDIT SERVICES WE OFFER ------------------- */}
-      <section className="py-14 px-4 bg-[#f8faf9] border-y border-gray-100" aria-labelledby="types-heading">
+      <section className="py-6 px-4 bg-[#f8faf9] border-y border-gray-100" aria-labelledby="types-heading">
         <div className="max-w-6xl mx-auto text-center">
           <div className="max-w-4xl mx-auto mb-12">
             <h2 id="types-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">

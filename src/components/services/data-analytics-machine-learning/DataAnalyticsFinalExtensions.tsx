@@ -1,5 +1,6 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import { Sequence, Step } from "@/components/common/Sequence";
+import Link from "next/link";
 import React from "react";
 
 interface ClientTarget {
@@ -98,15 +99,15 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
   return (
     <div className="w-full bg-white font-sans text-left text-gray-800">
       {/* --- Section 1: Who We Serve Image Grid --- */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+      <section className="py-7 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
         <h2 className="text-[#0c313a] text-xl md:text-2xl font-black mb-3 tracking-tight">
           Who We Serve
         </h2>
         <p className="text-gray-600 text-xs sm:text-sm md:text-[14px] leading-relaxed mb-10 max-w-5xl text-justify">
           At Pubrica, our{" "}
-          <a href="/services/research-services/biostatistics-and-statistical-programming-services" className="text-blue-600 hover:underline">
+          <Link href="/services/research-services/biostatistics-and-statistical-programming-services" className="text-blue-600 hover:underline">
             statistical analysis services
-          </a>{" "}
+          </Link>{" "}
           cater to a diverse range of clients across research, industry, and
           healthcare. We work closely with:
         </p>
@@ -126,7 +127,7 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
               />
 
               {/* Default State: Bottom Dark Overlay Gradient */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/60 to-transparent pt-12 pb-5 px-5 z-10 transition-opacity duration-300 group-hover:opacity-0" />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/60 to-transparent pt-6 pb-5 px-5 z-10 transition-opacity duration-300 group-hover:opacity-0" />
 
               {/* Default State: Visible Bottom Label */}
               <h3 className="text-white text-xs sm:text-sm font-extrabold tracking-wide relative z-20 p-5 group-hover:opacity-0 transition-opacity duration-300">
@@ -148,7 +149,7 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
       </section>
 
       {/* --- Section 2: Our Approach List Container --- */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-100">
+      <section className="py-7 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-100">
         <h2 className="text-[#0c313a] text-xl md:text-2xl font-black mb-1 tracking-tight">
           Our Approach
         </h2>
@@ -175,7 +176,7 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
       </section>
 
       {/* --- Section 3: Deep Green Inline CTA Strip --- */}
-      <section className="w-full bg-[#072c22] py-14 px-6 md:px-12 text-center text-white border-b border-emerald-950/20">
+      <section className="w-full bg-[#072c22] py-6 px-6 md:px-12 text-center text-white border-b border-emerald-950/20">
         <div className="max-w-4xl mx-auto space-y-6">
           <h2 className="text-xl sm:text-2xl md:text-[27px] font-extrabold tracking-tight">
             Speed up your Data Analytics and Machine Learning with Pubrica
@@ -192,7 +193,7 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
       </section>
 
       {/* --- Section 4: Workflow Step-by-Step Sequence Frame --- */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 bg-[#f8fafc]">
+      <section className="py-7 px-6 md:px-12 lg:px-24 bg-[#f8fafc]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 space-y-2">
             <h2 className="text-[#0c313a] text-xl md:text-2xl lg:text-[25px] font-black tracking-tight">

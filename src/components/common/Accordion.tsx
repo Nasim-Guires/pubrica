@@ -31,7 +31,7 @@ export default function Accordion({ items, className, allowMultiple = false }: A
   };
 
   return (
-    <div className={cn('divide-y divide-gray-200 border-t border-b border-gray-200', className)}>
+    <div className={cn('w-full min-w-0 divide-y divide-gray-200 border-t border-b border-gray-200', className)}>
       {items.map((item) => {
         const itemId = String(item.id);
         const isOpen = !!openItems[itemId];
@@ -40,13 +40,13 @@ export default function Accordion({ items, className, allowMultiple = false }: A
           <div key={itemId} className="py-4">
             <button
               onClick={() => toggleItem(itemId)}
-              className="flex w-full items-start justify-between text-left focus:outline-none group cursor-pointer"
+              className="flex w-full min-w-0 items-start justify-between text-left focus:outline-none group cursor-pointer"
               aria-expanded={isOpen}
             >
-              <span className="text-base font-semibold text-gray-900 group-hover:text-primary-800 transition-colors pr-4">
+              <span className="min-w-0 flex-1 text-base font-semibold text-gray-900 group-hover:text-primary-800 transition-colors pr-4">
                 {item.title}
               </span>
-              <span className="ml-6 flex h-7 items-center">
+              <span className="ml-6 flex h-7 shrink-0 items-center">
                 <ChevronDown
                   className={cn(
                     'h-5 w-5 transform text-gray-500 transition-transform duration-200 ease-in-out group-hover:text-primary-800',

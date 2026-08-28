@@ -68,7 +68,7 @@ const pricingData = [
 
 export default function HealthEconomicsPackages() {
   return (
-    <section className="w-full bg-white py-12 px-4 sm:px-6 lg:px-8 font-sans">
+    <section className="w-full bg-white py-6 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-6xl mx-auto text-center mb-10">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3835] mb-3">
           Health Economics & Outcome Research – Our Packages

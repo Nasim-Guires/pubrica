@@ -163,11 +163,11 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Systematic reviews are some of the best methodologies used to synthesise evidence scientifically and base decision-making on scientific evidence. Performing a systematic review involves asking clear research questions, performing extensive searches, selecting appropriate studies, data extraction, and evaluating the quality of the selected studies, among others. Using methodological frameworks such as the [PRISMA 2020 guidelines](https://www.prisma-statement.org/), researchers can generate valid, reproducible, and publishable systematic reviews. Understanding how to conduct a systematic review, applying a rigorous [systematic review methodology](https://pubrica.com/insights/sample-work/systematic-review-of-depression-anxiety-screening/), following a structured literature review process, conducting effective evidence synthesis, and using a meta-analysis guide where appropriate all contribute to producing high-quality research."
+    "text": "Systematic reviews are some of the best methodologies used to synthesise evidence scientifically and base decision-making on scientific evidence. Performing a systematic review involves asking clear research questions, performing extensive searches, selecting appropriate studies, data extraction, and evaluating the quality of the selected studies, among others. Using methodological frameworks such as the [PRISMA 2020 guidelines](https://www.prisma-statement.org/), researchers can generate valid, reproducible, and publishable systematic reviews. Understanding how to conduct a systematic review, applying a rigorous [systematic review methodology](https://pubrica.com/insights/systematic-review-of-depression-anxiety-screening/), following a structured literature review process, conducting effective evidence synthesis, and using a meta-analysis guide where appropriate all contribute to producing high-quality research."
   },
   {
     "type": "p",
-    "text": "How to Conduct a Systematic Review and Write It Up. Our [Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "How to Conduct a Systematic Review and Write It Up. Our [Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h2",

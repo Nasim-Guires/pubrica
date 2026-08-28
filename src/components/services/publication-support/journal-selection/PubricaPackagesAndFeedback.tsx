@@ -101,7 +101,7 @@ export default function PubricaPackagesAndFeedback() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 1: OUR PACKAGES                              */}
       {/* ---------------------------------------------------- */}
-      <section className="py-2 px-4 sm:px-8 lg:px-12 max-w-7xl mx-auto bg-white">
+      <section className="py-6 px-4 sm:px-8 lg:px-12 max-w-7xl mx-auto bg-white">
         <h2 className="text-3xl font-extrabold text-[#0d3b44] text-center mb-6">
           Our Packages
         </h2>
@@ -118,7 +118,7 @@ export default function PubricaPackagesAndFeedback() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 2: TESTIMONIALS                              */}
       {/* ---------------------------------------------------- */}
-      <section className="py-14 px-4 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+      <section className="py-6 px-4 sm:px-8 lg:px-12 max-w-7xl mx-auto">
         <h2 className="text-3xl font-extrabold text-[#0d3b44] text-left mb-8">
           Testimonials
         </h2>

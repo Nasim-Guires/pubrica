@@ -15,7 +15,7 @@ export default function CareersPage({ jobs }: { jobs: PayloadPost[] }) {
   return (
     <main className="w-full bg-white font-sans text-slate-800 min-h-screen">
       {/* 1. Dark Hero Banner Section */}
-      <section className="w-full bg-[#1b2b28] text-white py-14 px-4 text-center">
+      <section className="w-full bg-[#1b2b28] text-white py-6 px-4 text-center">
         <div className="max-w-4xl mx-auto border border-[#2d4842] p-8 sm:p-10 rounded-sm bg-[#162422]/60 shadow-inner">
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
             Careers in publishing
@@ -27,7 +27,7 @@ export default function CareersPage({ jobs }: { jobs: PayloadPost[] }) {
       </section>
 
       {/* 2. Intro Section: Academic and scientific writing */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-16 text-center space-y-4">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 md:py-7 text-center space-y-4">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#1b2b28]">
           Academic and scientific writing
         </h2>
@@ -62,7 +62,7 @@ export default function CareersPage({ jobs }: { jobs: PayloadPost[] }) {
         </div>
 
         {/* Word Cloud & Text Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-left pt-10 border-t border-slate-100">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-left pt-5 border-t border-slate-100">
           <div className="flex justify-center items-center bg-slate-50 p-6 rounded-lg border border-slate-100">
             {/* Word Cloud Visual Placeholder / Illustration */}
             <div className="text-center font-bold space-y-2 text-[#1b2b28]">
@@ -101,7 +101,7 @@ export default function CareersPage({ jobs }: { jobs: PayloadPost[] }) {
       </section>
 
       {/* 3. Statistics Section */}
-      <section className="w-full bg-[#f8faf9] border-y border-slate-200 py-12">
+      <section className="w-full bg-[#f8faf9] border-y border-slate-200 py-6">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {stats.map((stat, idx) => (
@@ -128,7 +128,7 @@ export default function CareersPage({ jobs }: { jobs: PayloadPost[] }) {
       </section>
 
       {/* 4. Latest Job Postings Callout Banner */}
-      <section className="max-w-4xl mx-auto px-4 py-12 text-center space-y-4">
+      <section className="max-w-4xl mx-auto px-4 py-6 text-center space-y-4">
         <h3 className="text-xl sm:text-2xl font-bold text-[#1b2b28]">
           Latest Job Postings
         </h3>
@@ -207,7 +207,7 @@ export default function CareersPage({ jobs }: { jobs: PayloadPost[] }) {
       </section>
 
       {/* 6. Current Openings List Section */}
-      <section id="openings" className="max-w-4xl mx-auto px-4 sm:px-6 py-12 space-y-6">
+      <section id="openings" className="max-w-4xl mx-auto px-4 sm:px-6 py-6 space-y-6">
         <header className="space-y-2">
           <h3 className="text-2xl sm:text-3xl font-bold text-[#1b2b28]">
             Current Openings

@@ -26,7 +26,7 @@ const page = () => {
       <OurPackages />
       <QualityAndTestimonials/>
       <FaqSection/>
-      <InsightsSection/>
+      <InsightsSection categorySlug="medical-writing" />
     </>
   );
 };

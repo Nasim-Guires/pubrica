@@ -120,7 +120,7 @@ export default function JournalSubmissionBottomSections() {
       {/* ========================================== */}
       {/* SECTION 2: COMPLIANCE & GUIDELINE STANDARDS*/}
       {/* ========================================== */}
-      <section className="bg-[#f8faf9] py-8 px-4 border-t border-gray-100">
+      <section className="bg-[#f8faf9] py-6 px-4 border-t border-gray-100">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-6">
             <h2 className="text-xl sm:text-2xl font-bold text-[#0c3547] mb-2">

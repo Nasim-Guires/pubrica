@@ -24,7 +24,7 @@ export default async function ManuscriptGuidelinesPage() {
   const articles = docs.filter((post) => post.urlPath !== "manuscript-guidelines" && post.heroImage);
 
   return (
-    <section className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <section className="bg-gray-50 py-6 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-2xl sm:text-3xl font-bold text-center text-slate-900 mb-8">
           Manuscript Guidelines
@@ -63,7 +63,7 @@ export default async function ManuscriptGuidelinesPage() {
         </div>
 
         {articles.length === 0 && (
-          <p className="text-sm text-slate-500 text-center py-12">No manuscript guideline articles found.</p>
+          <p className="text-sm text-slate-500 text-center py-6">No manuscript guideline articles found.</p>
         )}
       </div>
     </section>

@@ -56,7 +56,7 @@ export default function ScientificNewsReportServices() {
         <div className="w-full bg-white text-slate-800 font-sans">
 
             {/* 1. Top Hero Header */}
-            <section className="w-full bg-[#033c2a] text-white py-14 px-4 sm:px-6 lg:px-8 text-center">
+            <section className="w-full bg-[#033c2a] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
                 <div className="max-w-4xl mx-auto space-y-3">
                     <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
                         Scientific News Report
@@ -70,7 +70,7 @@ export default function ScientificNewsReportServices() {
             </section>
 
             {/* 2. Intro Section */}
-            <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
                     <div className="lg:col-span-7 space-y-4">

@@ -13,7 +13,7 @@ const LearningDesignBanner: NextPage = () => {
       </Head>
 
       {/* FULL WIDTH BANNER SECTION */}
-      <div className="w-full bg-[#0b3b2c] text-white py-16 px-4 md:px-12 border-y border-[#164e3d]">
+      <div className="w-full bg-[#0b3b2c] text-white py-7 px-4 md:px-12 border-y border-[#164e3d]">
         <div className="max-w-5xl mx-auto text-center space-y-4">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
             Learning Design and Pedagogy Service at Pubrica

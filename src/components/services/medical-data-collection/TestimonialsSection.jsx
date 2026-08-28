@@ -43,7 +43,7 @@ export default function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section aria-labelledby="testimonials-heading" className="w-full bg-[#f4f6f6] py-16 px-4 sm:px-6 lg:px-12 font-sans">
+    <section aria-labelledby="testimonials-heading" className="w-full bg-[#f4f6f6] py-7 px-4 sm:px-6 lg:px-12 font-sans">
       <div className="max-w-6xl mx-auto">
         {/* Semantic Header */}
         <header className="mb-10">

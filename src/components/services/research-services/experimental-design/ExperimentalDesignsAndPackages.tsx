@@ -26,7 +26,7 @@ export default function ExperimentalDesignsAndPackages() {
       {/* ========================================================= */}
       {/* 1. EXPERIMENTAL DESIGNS THAT WE UNDERTAKE                */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <div className="space-y-3 mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
             Experimental Designs That We Undertake
@@ -140,7 +140,7 @@ export default function ExperimentalDesignsAndPackages() {
       {/* ========================================================= */}
       {/* 2. HOW TO GET STARTED WITH OUR EXPERIMENTAL DESIGN       */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38] mb-8">
           How to Get Started with Our Experimental Design
         </h2>
@@ -430,7 +430,7 @@ export default function ExperimentalDesignsAndPackages() {
       {/* ========================================================= */}
       {/* 3. COMPLIANCE AND GUIDELINE STANDARDS                     */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-8">
+      <section className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="space-y-3">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
             Our Compliance and Guideline Standards
@@ -586,7 +586,7 @@ export default function ExperimentalDesignsAndPackages() {
       {/* ========================================================= */}
       {/* 4. SAMPLE WORK & REPORT BANNER                            */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#f0fbf5] py-12 px-4 sm:px-6 lg:px-8 my-8">
+      <section className="w-full bg-[#f0fbf5] py-6 px-4 sm:px-6 lg:px-8 my-8">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-4 relative h-64 md:h-80 w-full rounded-md overflow-hidden shadow-xs">
             <Image
@@ -645,7 +645,7 @@ export default function ExperimentalDesignsAndPackages() {
       {/* ========================================================= */}
       {/* 5. EXPERIMENTAL DESIGN SERVICE - OUR PACKAGES              */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 pb-24 relative">
+      <section className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 pb-10 relative">
         <div className="text-center space-y-3 mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
             Experimental Design Service – Our Packages

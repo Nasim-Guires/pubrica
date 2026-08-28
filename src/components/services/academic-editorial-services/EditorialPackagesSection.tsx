@@ -101,7 +101,7 @@ const packagesData: PackageTier[] = [
 
 export default function EditorialPackagesSection() {
   return (
-    <section className="w-full bg-white text-slate-800 font-sans py-16 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-white text-slate-800 font-sans py-7 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-10">
         {/* Section Header */}
         <div className="text-center space-y-3">
@@ -118,7 +118,7 @@ export default function EditorialPackagesSection() {
         </div>
 
         {/* Pricing Cards Container */}
-        <div className="relative pb-10">
+        <div className="relative pb-5">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
             {packagesData.map((pkg) => (
               <div

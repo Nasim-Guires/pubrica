@@ -171,7 +171,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Boost your chances of acceptance—partner with Pubrica for expert manuscript editing, formatting, and submission support. [Get Expert Publishing Support] or [Schedule a Free Consultation]."
+    "text": "Boost your chances of acceptance—partner with Pubrica for expert manuscript editing, formatting, and submission support. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

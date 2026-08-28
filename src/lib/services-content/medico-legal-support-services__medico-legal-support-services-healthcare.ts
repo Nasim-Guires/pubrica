@@ -113,7 +113,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Comprehensive Overview of Medico-Legal Support in Healthcare. Our[Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "Comprehensive Overview of Medico-Legal Support in Healthcare. Our[Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support](/order-now) or [Schedule a Free Consultation](/order-now)"
   },
   {
     "type": "h2",

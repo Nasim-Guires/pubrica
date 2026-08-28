@@ -53,7 +53,7 @@ export default function HowItWorksPage() {
 
       <main className="min-h-screen bg-white text-gray-800">
         {/* Top Banner Section */}
-        <section className="bg-[#1b2e2b] text-white py-16 px-4 text-center">
+        <section className="bg-[#1b2e2b] text-white py-7 px-4 text-center">
           <div className="max-w-4xl mx-auto border border-gray-600 p-8">
             <h1 className="text-3xl md:text-4xl font-bold mb-2">How It Works</h1>
             <p className="text-sm md:text-base text-gray-300">Scientific journal editing phases</p>
@@ -61,12 +61,12 @@ export default function HowItWorksPage() {
         </section>
 
         {/* Main Title */}
-        <section className="max-w-6xl mx-auto pt-16 pb-12 px-4 text-center">
+        <section className="max-w-6xl mx-auto pt-7 pb-6 px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900">How to publish in a scientific journal?</h2>
         </section>
 
         {/* Timeline Section */}
-        <section className="max-w-6xl mx-auto pb-24 px-4 relative">
+        <section className="max-w-6xl mx-auto pb-10 px-4 relative">
           {/* Vertical Center Line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#1b2e2b] -translate-x-1/2 hidden md:block" />
 

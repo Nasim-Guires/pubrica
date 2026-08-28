@@ -86,7 +86,7 @@ export default function ExperimentalDesignServicesAccordion() {
   ];
 
   return (
-    <section className="w-full bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 font-sans text-slate-800">
+    <section className="w-full bg-white py-6 sm:py-7 px-4 sm:px-6 lg:px-8 font-sans text-slate-800">
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header Section */}
         <div className="space-y-4 max-w-5xl">

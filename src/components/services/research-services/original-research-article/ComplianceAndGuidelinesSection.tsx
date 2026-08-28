@@ -91,7 +91,7 @@ export default function ComplianceAndGuidelinesSection() {
   return (
     <section 
       aria-labelledby="compliance-standards-heading"
-      className="w-full bg-slate-100 py-12 px-4 sm:px-6 lg:px-8 text-slate-800 space-y-12"
+      className="w-full bg-slate-100 py-6 px-4 sm:px-6 lg:px-8 text-slate-800 space-y-12"
     >
       <div className="max-w-7xl mx-auto space-y-6">
         

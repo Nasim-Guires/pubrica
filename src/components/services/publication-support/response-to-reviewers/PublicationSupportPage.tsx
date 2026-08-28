@@ -295,7 +295,7 @@ const PACKAGES = [
 export default function PublicationSupportPage() {
   return (
     <div className="w-full font-sans bg-white text-slate-800">
-      <div className="">
+      <div className="max-w-6xl mx-auto px-4 py-6 space-y-16">
         {/* ================= SECTION 1: TYPES OF RESPONSES ================= */}
 
         {/* ================= SECTION 2: SUBJECTS ================= */}
@@ -354,7 +354,10 @@ export default function PublicationSupportPage() {
               <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-3">
                 Response to Reviewer Sample Work
               </h3>
-              <Link href="/insights/sample-work/sample-response-to-reviewers-comments/" className="bg-black hover:bg-slate-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors">
+              <Link
+                href="/insights/sample-work/sample-response-to-reviewers-comments/"
+                className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors"
+              >
                 Discover More
               </Link>
             </div>
@@ -368,7 +371,10 @@ export default function PublicationSupportPage() {
                 addresses reviewer feedback and enhances manuscript quality for
                 successful publication.
               </p>
-              <Link href="/insights/sample-work/response-to-review-comments/" className="bg-black hover:bg-slate-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors">
+              <Link
+                href="/insights/sample-work/response-to-review-comments/"
+                className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors"
+              >
                 Discover More
               </Link>
             </div>

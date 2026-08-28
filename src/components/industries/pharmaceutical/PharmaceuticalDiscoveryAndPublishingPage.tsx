@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const discoverySteps = [
   {
@@ -107,7 +108,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
     discoverySteps.find((step) => step.id === activeId) ?? discoverySteps[0];
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-12">
+    <main className="max-w-6xl mx-auto px-4 py-6">
       {/* Hero / Intro */}
       <section className="mb-16">
         <h2 className="text-3xl md:text-4xl font-bold text-teal-800 mb-8">
@@ -198,12 +199,12 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
               </p>
             ))}
 
-            <button
-              type="button"
-              className="bg-teal-900 text-white uppercase text-sm font-semibold tracking-wide px-6 py-3 hover:bg-teal-800 transition-colors"
+            <Link
+              href="/order-now"
+              className="inline-block bg-teal-900 text-white uppercase text-sm font-semibold tracking-wide px-6 py-3 hover:bg-teal-800 transition-colors"
             >
               Request A Quote
-            </button>
+            </Link>
           </div>
         </div>
       </section>

@@ -51,7 +51,7 @@ export default function PredictiveAnalyticsSection() {
             {/* ========================================================= */}
             {/* HERO BANNER SECTION                                       */}
             {/* ========================================================= */}
-            <section className="bg-[#0b2b26] text-white py-12 px-4">
+            <section className="bg-[#0b2b26] text-white py-6 px-4">
                 <div className="max-w-5xl mx-auto border border-emerald-100/30 rounded-xs p-8 text-center bg-black/10 backdrop-blur-xs">
                     <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-white">
                         Predictive Analytics
@@ -65,7 +65,7 @@ export default function PredictiveAnalyticsSection() {
             {/* ========================================================= */}
             {/* MAIN OVERVIEW & KEY APPLICATIONS                          */}
             {/* ========================================================= */}
-            <section className="py-16 px-4 max-w-6xl mx-auto">
+            <section className="py-7 px-4 max-w-6xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1a3832] mb-2 leading-tight">
                     Expert Predictive Analytics Services for Research, Clinical, and Business Insights
                 </h2>
@@ -152,7 +152,7 @@ export default function PredictiveAnalyticsSection() {
             {/* ========================================================= */}
             {/* SECTION: WHY IS PREDICTIVE ANALYTICS IMPORTANT?           */}
             {/* ========================================================= */}
-            <section className="py-16 px-4 bg-slate-50/50 border-t border-slate-100">
+            <section className="py-7 px-4 bg-slate-50/50 border-t border-slate-100">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-2xl md:text-3xl font-bold text-[#1a3832] mb-1">
                         Why is Predictive Analytics Important?

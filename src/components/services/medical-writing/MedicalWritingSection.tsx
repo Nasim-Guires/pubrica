@@ -6,7 +6,7 @@ export default function MedicalWritingSection(): React.ReactElement {
   return (
     <div className="w-full font-sans text-slate-800">
       {/* Dark Hero Banner */}
-      <section className="w-full bg-gradient-to-b from-[#112220] to-[#1a3330] py-16 px-4 sm:px-6 lg:px-12 text-white flex justify-center items-center">
+      <section className="w-full bg-gradient-to-b from-[#112220] to-[#1a3330] py-7 px-4 sm:px-6 lg:px-12 text-white flex justify-center items-center">
         <div className="max-w-4xl w-full border border-slate-300/40 rounded-sm p-8 sm:p-10 text-center bg-black/10 backdrop-blur-sm shadow-inner">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 tracking-tight">
             Medical Writing
@@ -20,7 +20,7 @@ export default function MedicalWritingSection(): React.ReactElement {
       </section>
 
       {/* Main Content Section */}
-      <section className="w-full bg-[#f8f9f9] py-12 px-4 sm:px-6 lg:px-12">
+      <section className="w-full bg-[#f8f9f9] py-6 px-4 sm:px-6 lg:px-12">
         <div className="max-w-5xl mx-auto space-y-6">
           {/* Main Title */}
           <h2 className="text-2xl sm:text-3xl font-bold text-[#09322e] leading-snug">
@@ -52,12 +52,12 @@ export default function MedicalWritingSection(): React.ReactElement {
               </span>
               <span>
                 Comply with rigorous global regulations (SFDA, FDA, EMA, MDR,{" "}
-                <a
-                  href="#ich-guidelines"
+                <Link
+                  href="/services/medical-writing/ich-guidelines-clinical-trials-drug-development"
                   className="text-sky-600 hover:underline"
                 >
                   ICH guidelines
-                </a>
+                </Link>
                 )
               </span>
             </li>
@@ -83,9 +83,9 @@ export default function MedicalWritingSection(): React.ReactElement {
             Many face an incomplete internal resource, intricate regulations,
             article rejection, or variable quality of content. At Pubrica, we
             can provide clinical writing and{" "}
-            <a href="#medical-writing" className="text-sky-600 hover:underline">
+            <Link href="/academy/medical-writing/differences-between-scientific-and-medical-writing" className="text-sky-600 hover:underline">
               medical writing
-            </a>{" "}
+            </Link>{" "}
             that turn medical language into content that engages, entertains and
             delivers high quality. Each of our medical writers is trained to
             combine scientific expertise, legal requirements, and accuracy of
@@ -93,12 +93,12 @@ export default function MedicalWritingSection(): React.ReactElement {
             submitting to regulatory bodies, publishing in journals, introducing
             a new therapy, or educating patients, our team of medical experts at
             Pubrica will provide comprehensive medical and{" "}
-            <a
-              href="#scientific-writing"
+            <Link
+              href="/services/research-services/scientific-writing"
               className="text-sky-600 hover:underline"
             >
               scientific writing services
-            </a>{" "}
+            </Link>{" "}
             during each stage of the product lifecycle, including early-stage
             research, regulatory submission, and patient communication.
           </p>
@@ -114,11 +114,14 @@ export default function MedicalWritingSection(): React.ReactElement {
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap items-center gap-8 pt-4">
-            <GetFreeQuoteButton />
+          <div className="flex flex-wrap items-center gap-4 pt-4">
+           <GetFreeQuoteButton/>
             <Link
               href="/uploads/medical-writing/Medical-Writing_compressed.pdf"
-              className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"            >
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#b30000] hover:bg-[#8e0000] text-white text-xs sm:text-sm font-bold py-2.5 px-6 rounded-full transition-colors duration-200 shadow-sm cursor-pointer"
+            >
               View Brochure
             </Link>
           </div>

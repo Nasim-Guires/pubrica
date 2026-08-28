@@ -137,7 +137,7 @@ export default function FAQPage() {
 
             <main className="min-h-screen bg-gray-50 text-gray-800">
                 {/* Top Banner Section */}
-                <section className="bg-[#415a55] text-white py-16 px-4 text-center">
+                <section className="bg-[#415a55] text-white py-7 px-4 text-center">
                     <div className="max-w-4xl mx-auto border border-gray-400 p-8">
                         <h1 className="text-4xl font-bold mb-4">FAQ</h1>
                         <p className="text-sm md:text-base text-gray-200">
@@ -147,7 +147,7 @@ export default function FAQPage() {
                 </section>
 
                 {/* Content Section */}
-                <section className="max-w-5xl mx-auto py-12 px-4">
+                <section className="max-w-5xl mx-auto py-6 px-4">
                     <div className="text-center mb-10">
                         <h2 className="text-xl font-bold uppercase tracking-wide text-gray-900 mb-4">
                             FREQUENTLY ASKED QUESTIONS (FAQ)

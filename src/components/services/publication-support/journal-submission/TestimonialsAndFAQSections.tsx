@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-import Image from "next/image";
+import React from "react";
 import CommonFAQ from "@/components/common/FAQ";
 import { MovingTestimonials, TestimonialItem } from "@/components/common/MovingTestimonials.tsx";
 
@@ -75,19 +74,6 @@ const faqs = [
 ];
 
 export default function TestimonialsAndFAQSections() {
-  // Carousel State (Shows 2 items per view on desktop)
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  // FAQ accordion state (Item 1 open by default)
-  const [openFaq, setOpenFaq] = useState<number | null>(1);
-
-  const toggleFaq = (id: number) => {
-    setOpenFaq((prev) => (prev === id ? null : id));
-  };
-
-  // Logic to show 2 items starting from current index
-
-
   return (
     <div className="w-full font-sans text-gray-800 bg-white">
       {/* ========================================== */}

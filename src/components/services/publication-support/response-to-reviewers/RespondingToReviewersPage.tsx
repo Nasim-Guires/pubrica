@@ -155,7 +155,7 @@ export default function RespondingToReviewersPage() {
   };
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-10 text-slate-800 font-sans">
+    <main className="max-w-6xl mx-auto px-4 py-5 text-slate-800 font-sans">
       {/* ================= WHAT WE DO SECTION ================= */}
       <section className="mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-[#083b3a] mb-4">

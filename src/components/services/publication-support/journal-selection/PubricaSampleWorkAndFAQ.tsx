@@ -4,16 +4,9 @@ import CommonFAQ from "@/components/common/FAQ";
 import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 
 export default function PubricaSampleWorkAndFAQ() {
-  // FAQ accordion state handler
-  const [openFaq, setOpenFaq] = useState<number | null>(1); // Default open first question
-
-  const toggleFaq = (index: number) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
-
   const faqs = [
     {
       question: "How do I choose the right journal for my research paper?",
@@ -127,7 +120,7 @@ export default function PubricaSampleWorkAndFAQ() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 2: JOURNAL SPOTLIGHT (DIABETES CARE)        */}
       {/* ---------------------------------------------------- */}
-      <section className="py-10 px-6 sm:px-12 lg:px-16 max-w-7xl mx-auto">
+      <section className="py-5 px-6 sm:px-12 lg:px-16 max-w-7xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] mb-4">
           Diabetes Care
         </h2>
@@ -137,7 +130,7 @@ export default function PubricaSampleWorkAndFAQ() {
           journal for the health care practitioner focused on increasing
           knowledge, stimulating research, and promoting better management of
           people with{" "}
-          <Link href="/academy/journals-templates/journal-of-diabetes-research" className="text-blue-600">
+          <Link href="/academy/journals-templates/journal-of-diabetes-research" className="text-cyan-600 hover:underline">
             diabetes
           </Link>
           . To foster these objectives, the journal publishes original research

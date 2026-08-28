@@ -80,7 +80,7 @@ export default function BiomolecularExpertiseServicesComponent() {
   ];
 
   return (
-    <div className="font-sans text-gray-800 bg-white py-12 px-4">
+    <div className="font-sans text-gray-800 bg-white py-6 px-4">
       <div className="max-w-6xl mx-auto space-y-10">
 
         {/* Header Section */}

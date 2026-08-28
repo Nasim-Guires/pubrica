@@ -129,7 +129,7 @@ export const PostEditingTestimonialsAndFaq: React.FC = () => {
   ];
 
   return (
-    <div className="w-full bg-[#f8fafc] text-slate-800 py-12 space-y-16">
+    <div className="w-full bg-[#f8fafc] text-slate-800 py-6 space-y-16">
       {/* ------------------------------------------------------------- */}
       {/* 1. TESTIMONIALS SECTION                                       */}
       {/* ------------------------------------------------------------- */}

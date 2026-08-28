@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 interface FAQData {
@@ -13,6 +14,7 @@ interface InsightCard {
   title: string;
   excerpt: string;
   image: string;
+  link: string;
 }
 
 export const PhysicianWritingExtensions: React.FC = () => {
@@ -65,6 +67,7 @@ export const PhysicianWritingExtensions: React.FC = () => {
         "Journals expect a clear structure for case reports and review articles, featuring precise objectives, rigorous timeline analysis...",
       image:
         "/images/editing-and-translation/How-to-Structure-Case-Reports-and-Review-Articles-for-Medical-Journals.jpg",
+      link: "/services/physician-writing-services/case-report",
     },
     {
       id: 2,
@@ -74,6 +77,7 @@ export const PhysicianWritingExtensions: React.FC = () => {
         "Publishing a case report involves more than clinical knowledge; it also demands strategic journal targeting, matching visibility metrics...",
       image:
         "/images/editing-and-translation/How-Should-Physicians-Choose-the-Right-Journal-for-Submitting-a-Case-Report.jpg",
+      link: "/services/publication-support/journal-selection",
     },
     {
       id: 3,
@@ -83,13 +87,14 @@ export const PhysicianWritingExtensions: React.FC = () => {
         "Effective patient education materials (PEMs) are crucial for promoting health literacy, enhancing compliance, and bridging care delivery gaps...",
       image:
         "/images/editing-and-translation/How-Physicians-Can-Write-Clear-and-Impactful-Patient-Education-Materials.jpg",
+      link: "/services/patient-education-content",
     },
   ];
 
   return (
     <div className="w-full bg-[#f8f9fa] font-sans text-left text-gray-800">
       {/* --- FAQ Accordion Structure --- */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-200/60">
+      <section className="py-7 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-200/60">
         <h2 className="text-black text-xl md:text-2xl lg:text-[26px] font-bold tracking-tight mb-8">
           Frequently Asked Questions – Physician Writing Service
         </h2>
@@ -134,15 +139,16 @@ export const PhysicianWritingExtensions: React.FC = () => {
       </section>
 
       {/* --- Section 3: Insights Grid Cards --- */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-200/60">
+      <section className="py-7 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-200/60">
         <h2 className="text-[#083c4c] text-xl md:text-2xl lg:text-[26px] font-extrabold tracking-tight mb-8">
           Insights
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {insights.map((card) => (
-            <div
+            <Link
               key={card.id}
+              href={card.link}
               className="bg-white rounded border border-gray-200/80 shadow-sm overflow-hidden flex flex-col group cursor-pointer hover:shadow-md transition-shadow"
             >
               {/* Graphic Banner Top Area */}
@@ -165,7 +171,7 @@ export const PhysicianWritingExtensions: React.FC = () => {
                   {card.excerpt}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

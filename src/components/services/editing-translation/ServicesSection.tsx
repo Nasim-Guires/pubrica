@@ -8,7 +8,7 @@ export default function ServicesSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="py-12 bg-white px-6 max-w-7xl mx-auto font-sans">
+    <section className="py-6 bg-white px-6 max-w-7xl mx-auto font-sans">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <h2 className="text-2xl font-bold text-[#0A4D4A] mb-3">Our Services</h2>

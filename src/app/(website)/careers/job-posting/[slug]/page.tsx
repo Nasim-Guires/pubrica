@@ -31,8 +31,8 @@ export default async function JobPostingPage({ params }: JobPostingPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24">
-      <section className="bg-slate-900 text-white py-14 px-4 text-center">
+    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
+      <section className="bg-slate-900 text-white py-6 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           {post.jobType && post.jobType.length > 0 && (
             <span className="text-xs font-bold tracking-wider text-emerald-400 uppercase">
@@ -43,7 +43,7 @@ export default async function JobPostingPage({ params }: JobPostingPageProps) {
         </div>
       </section>
 
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-10">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-5">
         <main className="bg-white p-6 md:p-10 rounded-2xl border border-slate-100 shadow-sm">
           <Link
             href="/careers/job-posting"

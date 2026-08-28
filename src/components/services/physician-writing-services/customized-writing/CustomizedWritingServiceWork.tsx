@@ -87,7 +87,7 @@ const PROCESS_STEPS: StepData[] = [
 
 export default function CustomizedWritingServiceWork() {
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 w-full overflow-hidden">
+    <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 w-full overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Heading */}

@@ -44,7 +44,7 @@ const targetAudiences = [
 
 export default function WhoWeServeSection() {
   return (
-    <section className="w-full bg-white py-14 px-4 sm:px-6 lg:px-12 font-sans text-slate-800">
+    <section className="w-full bg-white py-6 px-4 sm:px-6 lg:px-12 font-sans text-slate-800">
       <div className="max-w-6xl mx-auto">
         {/* Header Content */}
         <div className="mb-10 max-w-4xl">

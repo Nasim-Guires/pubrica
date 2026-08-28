@@ -277,7 +277,8 @@ export default function ComplianceAndPackagesSection() {
       {/* ========================================================= */}
       {/* SECTION 1: COMPLIANCE AND GUIDELINE STANDARDS             */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-8">
+      <section className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 space-y-8">
+        {/* Section Header */}
         <div className="space-y-3">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
             Our Compliance and Guideline Standards
@@ -351,12 +352,12 @@ export default function ComplianceAndPackagesSection() {
               <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4">
                 Grant Writing Services Sample Work
               </h3>
-              <a
-                href="#discover-more"
+              <Link
+                href="/insights/sample-work"
                 className="inline-block bg-black hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200"
               >
                 Discover More
-              </a>
+              </Link>
             </div>
 
             <div className="space-y-3 pt-2">
@@ -371,12 +372,12 @@ export default function ComplianceAndPackagesSection() {
                 nonprofit projects.
               </p>
               <div className="pt-2">
-                <a
-                  href="#download-report"
+                <Link
+                  href="/insights/sample-work"
                   className="inline-block bg-black hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200"
                 >
                   Discover More
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -386,16 +387,20 @@ export default function ComplianceAndPackagesSection() {
       {/* ========================================================= */}
       {/* SECTION 3: OUR PACKAGES SECTION                           */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-8">
+      <section className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 space-y-8">
+        {/* Header */}
         <div className="space-y-3">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
             Grant Writing Service – Our Packages
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-5xl">
             At Pubrica, we offer flexible and customizable{" "}
-            <a href="/academy/grant-writing/communicating-research-impact-grant-applications" className="text-sky-600 hover:underline">
+            <Link
+              href="/academy/grant-writing/communicating-research-impact-grant-applications"
+              className="text-sky-600 hover:underline"
+            >
               grant writing
-            </a>{" "}
+            </Link>{" "}
             packages tailored to meet the needs of academic researchers,
             healthcare professionals, nonprofits, and institutions seeking
             funding. Each package is designed to align with funder-specific

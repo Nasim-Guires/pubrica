@@ -39,7 +39,7 @@ export default function JournalSelectionHeader() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 3: DETAILED SERVICE OVERVIEW                 */}
       {/* ---------------------------------------------------- */}
-      <section className="py-4 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-3 text-slate-800">
+      <section className="py-5 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-6 text-slate-800">
 
         {/* Main Heading */}
         <h2 className="text-xl sm:text-2xl font-extrabold text-[#0d3b44] leading-snug">
@@ -49,17 +49,17 @@ export default function JournalSelectionHeader() {
         {/* Intro Paragraphs */}
         <p className="text-base leading-snug">
           Our expert{' '}
-          <a href="/insights/incidence-cardiovascular-diseases-india-global" className="text-cyan-600 ">
+          <Link href="/insights/incidence-cardiovascular-diseases-india-global" className="text-cyan-600 ">
             journal selection
-          </a>{' '}
+          </Link>{' '}
           service can help ensure your research is delivered to the target audience with clarity, compliance, and credibility, while maximizing publication potential.
         </p>
 
         <p className="text-base leading-snug">
           Selecting the right journal in today’s competitive research environment is critical. Researchers, pharma teams, and medical device firms often need to{' '}
-          <a href="/services/publication-support/" className="text-cyan-600 hover:underline">
+          <Link href="/services/publication-support/" className="text-cyan-600 hover:underline">
             submit a manuscript for publication
-          </a>
+          </Link>
           :
         </p>
 
@@ -68,16 +68,16 @@ export default function JournalSelectionHeader() {
           <li>Align their manuscript with the appropriate journal scopes</li>
           <li>
             Comply with ethical publication standards (
-            <a href="/services/publication-support/journal-selection/understanding-cope-publication-ethics" className="text-cyan-600 ">
+            <Link href="/services/publication-support/journal-selection/understanding-cope-publication-ethics" className="text-cyan-600 hover:underline">
               COPE
-            </a>
-            , <Link href="/services/publication-support/poster-preparation/scientific-poster-design-presentation/" className="text-cyan-600">ICMJE</Link>, GPP)
+            </Link>
+            , <a href="https://www.icmje.org/" target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:underline">ICMJE</a>, GPP)
           </li>
           <li>
             Avoid the risk of{' '}
-            <a href="/services/publication-support/journal-selection/journal-rejection-key-reasons-tips-for-improving-manuscripts/" className="text-cyan-600 hover:underline">
+            <Link href="/services/publication-support/journal-selection/journal-rejection-key-reasons-tips-for-improving-manuscripts/" className="text-cyan-600 hover:underline">
               rejection
-            </a>{' '}
+            </Link>{' '}
             by accurately matching their work with their target journal
           </li>
           <li>Disseminate results in journals with high visibility and impact</li>
@@ -90,40 +90,45 @@ export default function JournalSelectionHeader() {
 
         <p className="text-base leading-snug">
           At Pubrica, we appreciate the enormous significance of the appropriate{' '}
-          <a href="/academy/journals-templates/journals-high-impact-springer-medical-journal" className="text-cyan-600 hover:underline">
+          <Link href="/academy/journals-templates/journals-high-impact-springer-medical-journal" className="text-cyan-600 hover:underline">
             journal selection
-          </a>{' '}
+          </Link>{' '}
           for your research paper. You can depend on our devoted team of specialists to help guide you through the elaborate process of{' '}
-          <a href="/insights/journal-selection-cervical-spondylosis-mechanical-neck-pain" className="text-cyan-600 hover:underline">
+          <Link href="/insights/journal-selection-cervical-spondylosis-mechanical-neck-pain" className="text-cyan-600 hover:underline">
             journal selection
-          </a>{' '}
+          </Link>{' '}
           and offer continuous support to assist your manuscript in complying with the highest standards of your intended publication.
         </p>
 
         <p className="text-base leading-snug">
           Selecting a journal plays a vital role in the success of your research publication. Pubrica provides professional{' '}
-          <a href="/services/publication-support/journal-selection/ckd-journal-selection-review" className="text-cyan-600 hover:underline">
+          <Link href="/services/publication-support/journal-selection/ckd-journal-selection-review" className="text-cyan-600 hover:underline">
             journal selection
-          </a>{' '}
+          </Link>{' '}
           services that will set up your{' '}
-          <a href="/academy/journal-selection/how-to-identify-best-journal-for-manuscript-submission" className="text-cyan-600 hover:underline">
+          <Link href="/academy/journal-selection/how-to-identify-best-journal-for-manuscript-submission" className="text-cyan-600 hover:underline">
             manuscript’s submission
-          </a>{' '}
+          </Link>{' '}
           to the most relevant,{' '}
-          <a href="/services/publication-support/journal-selection/high-impact-academic-journals-guide" className="text-cyan-600 hover:underline">
+          <Link href="/services/publication-support/journal-selection/high-impact-academic-journals-guide" className="text-cyan-600 hover:underline">
             high-impact academic journal
-          </a>
+          </Link>
           . Our team of experts improves the chances that your paper will be accepted and seen by aligning your research with the correct journal for its publication, ensuring your{' '}
-          <a href="/academy/journal-selection/how-to-identify-best-journal-for-manuscript-submission" className="text-cyan-600 hover:underline">
+          <Link href="/academy/journal-selection/how-to-identify-best-journal-for-manuscript-submission" className="text-cyan-600 hover:underline">
             journal paper publication
-          </a>{' '}
+          </Link>{' '}
           is optimized.
         </p>
 
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center gap-8 mt-3 mb-4">
           <GetFreeQuoteButton />
-          <Link href="/uploads/publication-support/journal-selection/Journal-Selection-Matters.pdf" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none text-base">
+          <Link
+            href="/uploads/publication-support/journal-selection/Journal-Selection-Matters.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none text-base"
+          >
             View Brochure
           </Link>
         </div>

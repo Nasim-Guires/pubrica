@@ -88,7 +88,7 @@ export default function PeerReviewPage() {
             </div>
 
             {/* Main Content Layout */}
-            <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div className="max-w-7xl mx-auto px-4 py-5 grid grid-cols-1 md:grid-cols-12 gap-8">
 
                 {/* Sidebar Navigation */}
                 <aside className="md:col-span-4 lg:col-span-3 space-y-8">
@@ -139,7 +139,7 @@ export default function PeerReviewPage() {
                             Double-Blind Peer Review: Definition, Process, and Implications for Researchers
                         </h2>
                         <p className="text-sm md:text-base text-slate-600">
-                            In the context of academic publishing, the term <span className="text-blue-600 hover:underline cursor-pointer">peer review</span> refers to a manuscript's critical analysis by independent experts in a field. The double-blind peer review model is one of the more frequently used peer review models and refers specifically to anonymity for both the author and the reviewers. The potential benefits of the double-blind peer review model include reduction of bias, equality of experiences, and professionalism of the academic publishing process. <a href="#ref-1" className="text-blue-600 hover:underline">[1]</a>
+                            In the context of academic publishing, the term <Link href="/services/publication-support/peer-review-pre-submission" className="text-blue-600 hover:underline">peer review</Link> refers to a manuscript's critical analysis by independent experts in a field. The double-blind peer review model is one of the more frequently used peer review models and refers specifically to anonymity for both the author and the reviewers. The potential benefits of the double-blind peer review model include reduction of bias, equality of experiences, and professionalism of the academic publishing process. <a href="#ref-1" className="text-blue-600 hover:underline">[1]</a>
                         </p>
                     </header>
 
@@ -234,7 +234,7 @@ export default function PeerReviewPage() {
                             The basis of double-blind peer review is still used in academic publishing, ensuring objectivity and academic integrity. There are certainly problems resulting from the double-blind peer review process, but it has created a fairer space to assess scientific work. By recognizing and following the principles of the double-blind peer review process, researchers can increase their chances of getting published while also helping to create a more open and fairer academic world.
                         </p>
                         <p className="text-sm md:text-base italic pt-2">
-                            Double-Blind Peer Review: Definition, Process, and Implications for Researchers? Our academic consultants are here to guide you. [<span className="text-blue-600 hover:underline cursor-pointer">Get Expert Publishing Support</span>] or [<span className="text-blue-600 hover:underline cursor-pointer">Schedule a Free Consultation</span>]
+                            Double-Blind Peer Review: Definition, Process, and Implications for Researchers? Our academic consultants are here to guide you. <Link href="/order-now" className="text-sky-600 hover:underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-sky-600 hover:underline">[Schedule a Free Consultation]</Link>
                         </p>
                     </section>
 

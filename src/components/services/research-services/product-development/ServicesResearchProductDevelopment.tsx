@@ -338,7 +338,7 @@ export default function ServicesResearchProductDevelopment({
       />
 
       {/* Main Intro & Key Points Section */}
-      <section className="max-w-6xl mx-auto px-2 sm:px-8 py-12 md:py-16">
+      <section className="max-w-6xl mx-auto px-2 sm:px-8 py-6 md:py-7">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#1b2b28] mb-2">
           Discovery and Intelligence Research Services for Product Development:
           Transforming Ideas into Market-Ready Solutions
@@ -464,7 +464,7 @@ export default function ServicesResearchProductDevelopment({
       </section>
 
       {/* What We Do Section */}
-      <section className="w-full bg-slate-50/60 pt-6 pb-12 px-4 sm:px-8 border-t border-gray-200/60">
+      <section className="w-full bg-slate-50/60 pt-6 pb-6 px-4 sm:px-8 border-t border-gray-200/60">
         <div className="max-w-7xl mx-auto">
           <header className="mb-6 text-left">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#1b2b28] mb-1.5">

@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface SectorItem {
   title: string;
   imageUrl?: string;
-  description: React.ReactNode; // Updated to allow React nodes / JSX elements
+  description: React.ReactNode;
 }
 
 interface WhoWeServeProps {
@@ -52,9 +53,9 @@ const DEFAULT_SECTORS: SectorItem[] = [
         Offering end-to-end clinical research support, including protocol writing,
         statistical analysis plans (SAP), systematic reviews, regulatory writing,
         and{" "}
-        <a href="/services/publication-support/journal-submission" className="text-sky-500">
+        <Link href="/services/publication-support/journal-submission" className="text-sky-500">
           journal submission
-        </a>{" "}
+        </Link>{" "}
         assistance.
       </>
     ),
@@ -67,9 +68,9 @@ const DEFAULT_SECTORS: SectorItem[] = [
     description: (
       <>
         Enhancing research capacity, monitoring &amp; evaluation, and{" "}
-        <a href="/services/scientific-communication" className="text-sky-500 hover:underline">
+        <Link href="/services/scientific-communication" className="text-sky-500 hover:underline">
           scientific communication
-        </a>{" "}
+        </Link>{" "}
         for health, nutrition, and development programs.
       </>
     ),
@@ -94,12 +95,12 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
   subtitle = (
     <>
       Our academic research assistance and clinical{" "}
-      <a
+      <Link
         href="/services/research-services"
         className="text-[#3b82f6] hover:underline"
       >
         research support services
-      </a>{" "}
+      </Link>{" "}
       cater to a diverse spectrum of professionals and organizations across the
       academic, clinical, and industrial landscape. We provide customized
       support to meet the specific research goals and regulatory needs of each
@@ -112,7 +113,7 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
 }) => {
   return (
     <section className="w-full bg-white font-sans text-[#111827]">
-      <div className="max-w-7xl mx-auto py-12 px-6 md:px-12 lg:px-16">
+      <div className="max-w-7xl mx-auto py-6 px-6 md:px-12 lg:px-16">
         {/* Header */}
         <div className="mb-10 max-w-4xl">
           <h2 className="text-[#083c4c] text-2xl md:text-3xl font-bold tracking-tight mb-3">
@@ -166,7 +167,7 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
       </div>
 
       {/* Call-To-Action Banner */}
-      <div className="w-full bg-[#032b1d] text-white py-12 px-6 text-center">
+      <div className="w-full bg-[#032b1d] text-white py-6 px-6 text-center">
         <div className="max-w-4xl mx-auto space-y-3">
           <h3 className="text-xl md:text-2xl font-bold tracking-wide">
             {bannerTitle}

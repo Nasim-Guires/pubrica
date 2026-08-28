@@ -240,7 +240,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "At Pubrica, we specialize in professional manuscript formatting services that ensure your research meets journal submission standards. Let our experts handle the details, so you can focus on your research! [Get Expert Publishing Support] or [Schedule a Free Consultation]."
+    "text": "At Pubrica, we specialize in professional manuscript formatting services that ensure your research meets journal submission standards. Let our experts handle the details, so you can focus on your research! [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

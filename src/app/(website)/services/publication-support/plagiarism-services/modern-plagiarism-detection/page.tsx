@@ -25,9 +25,9 @@ export default function PlagiarismDetectionPage() {
                 <div className="max-w-7xl mx-auto flex items-center space-x-2 flex-wrap">
                     <Link href="/" className="hover:underline">Home</Link>
                     <span>»</span>
-                    <Link href="/academy" className="hover:underline">Academy</Link>
+                    <Link href="/services/publication-support" className="hover:underline">Publication Support</Link>
                     <span>»</span>
-                    <Link href="/services/research-impact" className="hover:underline">Research Impact</Link>
+                    <Link href="/services/publication-support/plagiarism-services" className="hover:underline">Plagiarism Services</Link>
                     <span>»</span>
                     <span className="text-gray-500">
                         Modern Plagiarism Detection: From Keyword Matching to AI Phrase Analysis
@@ -36,7 +36,7 @@ export default function PlagiarismDetectionPage() {
             </div>
 
             {/* Main Container */}
-            <div className="max-w-7xl mx-auto px-4 md:px-8 py-10 grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <div className="max-w-7xl mx-auto px-4 md:px-8 py-5 grid grid-cols-1 lg:grid-cols-12 gap-10">
 
                 {/* Left Sidebar */}
                 <aside className="lg:col-span-4 space-y-8">
@@ -335,9 +335,12 @@ export default function PlagiarismDetectionPage() {
                             <p className="text-white text-base md:text-lg font-medium leading-snug">
                                 Connect with us to explore how we can support you in maintaining academic integrity and enhancing the visibility of your research across the world!
                             </p>
-                            <button className="bg-white text-gray-900 text-xs md:text-sm font-bold py-2 px-6 rounded shadow hover:bg-gray-100 transition">
+                            <Link
+                                href="/contact-us/"
+                                className="inline-block bg-white text-gray-900 text-xs md:text-sm font-bold py-2 px-6 rounded shadow hover:bg-gray-100 transition"
+                            >
                                 Contact Us
-                            </button>
+                            </Link>
                         </div>
                     </div>
 
@@ -350,7 +353,7 @@ export default function PlagiarismDetectionPage() {
                             The use of <span className="text-blue-600">artificial intelligence</span> (AI) for <span className="text-blue-600">detecting plagiarism</span> is now based upon the meaning of content instead of the specific words used. AI allows for more accurate identification of paraphrased or translated sources, providing protection for academic integrity and intellectual property as well as fostering an ethical and original approach to content creation. This will be beneficial across multiple industries.
                         </p>
                         <p className="italic">
-                            Ensure content originality, academic integrity, and enterprise compliance with Pubrica&apos;s AI-powered plagiarism detection expertise. [Get Expert Publishing Support] or [Schedule a Free Consultation].
+                            Ensure content originality, academic integrity, and enterprise compliance with Pubrica&apos;s AI-powered plagiarism detection expertise. <Link href="/order-now" className="text-sky-600 hover:underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-sky-600 hover:underline">[Schedule a Free Consultation]</Link>.
                         </p>
                     </section>
 

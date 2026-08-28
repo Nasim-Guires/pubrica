@@ -41,13 +41,13 @@ export default function EthicsPage() {
     <>
       <Breadcrumb items={[{ label: 'Ethics', href: '/ethics' }]} />
 
-      <section className="bg-[#1b2e2b] text-white py-16 px-4 text-center">
+      <section className="bg-[#1b2e2b] text-white py-7 px-4 text-center">
         <div className="max-w-4xl mx-auto border border-gray-600 p-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">Ethical Principles Governing Pubrica</h1>
         </div>
       </section>
 
-      <div className="bg-white py-16 font-sans">
+      <div className="bg-white py-7 font-sans">
         <Container className="max-w-4xl prose prose-primary">
           <p className="text-gray-600 leading-relaxed text-sm mb-8">
             At Pubrica, ethical practices are the cornerstone of our operations, spanning both our business and research domains. We steadfastly uphold ethical standards, safeguarding personal and professional integrity in all our services. Through stringent policies against unethical conduct, we are fervently committed to educating and championing ethical norms in research.

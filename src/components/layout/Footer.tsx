@@ -29,7 +29,7 @@ export default function Footer() {
   const moreLinks: { label: string; href: string | null }[] = [
     { label: "Subjects", href: "/subject-matter-experts" },
     { label: "Industries", href: "/industries" },
-    { label: "Global Partner Program", href: null },
+    { label: "Global Partner Program", href: "/global-partner-program" },
     { label: "FAQ", href: "/faq" },
     { label: "Testimonials", href: "/#testimonials" },
     { label: "Academy", href: "/academy" },
@@ -45,9 +45,9 @@ export default function Footer() {
     { label: "Subject Areas", href: "/subject-matter-experts" },
     { label: "FAQ", href: "/faq" },
     { label: "Partnership Solutions", href: "/strategic-partnerships-memberships" },
-    { label: "Ethics", href: null },
-    { label: "Cookie Policy", href: null },
-    { label: "Do not sell any Information", href: null },
+    { label: "Ethics", href: "/ethics" },
+    { label: "Cookie Policy", href: "/cookie-policy" },
+    { label: "Do not sell any Information", href: "/do-not-sell-any-information" },
     { label: "Quality Standards", href: "/quality/quality-assurance" },
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms & Condition", href: "/terms-and-condition" },
@@ -62,7 +62,7 @@ export default function Footer() {
           {/* Text Box Container */}
           <div className="bg-white text-[#0e2723] px-8 py-6 rounded-tl-[32px] rounded-br-[32px] rounded-tr-none rounded-bl-none max-w-2xl shadow-lg">
             <h3 className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight leading-snug">
-              Whether you’re stuck or just want some tips on where to start, hit up our experts anytime.
+              Whether you're stuck or just want some tips on where to start, hit up our experts anytime.
             </h3>
           </div>
 
@@ -81,7 +81,7 @@ export default function Footer() {
 
       <Container className="w-full max-w-7xl flex flex-col">
         {/* 2. MIDDLE PORTION: Directory Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 border-b border-gray-700/40 pb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 border-b border-gray-700/40 pb-5">
           {/* Brand & Description Column */}
           <div className="lg:col-span-4 flex flex-col items-start">
             <div className="mb-4">

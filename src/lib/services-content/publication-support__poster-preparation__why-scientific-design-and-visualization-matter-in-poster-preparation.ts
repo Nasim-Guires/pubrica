@@ -219,7 +219,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Bring Your Research to Life with Pubrica! Transform your data into clear, impactful scientific posters with Pubrica’s expert design and visualization services. [Get Expert Publishing Support] or [Schedule a Free Consultation]."
+    "text": "Bring Your Research to Life with Pubrica! Transform your data into clear, impactful scientific posters with Pubrica’s expert design and visualization services. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

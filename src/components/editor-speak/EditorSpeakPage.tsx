@@ -176,7 +176,7 @@ export default function EditorSpeakPage() {
   return (
     <div className="min-h-screen bg-white text-gray-800">
       {/* Hero */}
-      <header className="bg-[#1e2e2b] text-white py-12 px-4 text-center">
+      <header className="bg-[#1e2e2b] text-white py-6 px-4 text-center">
         <div className="max-w-3xl mx-auto border border-gray-500/60 py-8 px-4">
           <h1 className="text-3xl md:text-4xl font-bold tracking-wide">
             Editors have their say
@@ -186,7 +186,7 @@ export default function EditorSpeakPage() {
       </header>
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 py-10 flex flex-col md:flex-row gap-10">
+      <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row gap-10">
         {/* Sidebar */}
         <aside className="w-full md:w-64">
           <div className="flex items-center gap-2 text-[#1a4a42] font-semibold text-lg mb-4">
@@ -228,7 +228,7 @@ export default function EditorSpeakPage() {
             <article
               key={expert.name}
               className={`space-y-6 ${
-                index !== 0 ? "border-t pt-10" : ""
+                index !== 0 ? "border-t pt-5" : ""
               }`}
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">

@@ -94,7 +94,7 @@ export default function DentistrySection() {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <div className="w-full bg-white text-gray-800 font-sans py-12 px-4 sm:px-6 lg:px-8 space-y-20">
+        <div className="w-full bg-white text-gray-800 font-sans py-6 px-4 sm:px-6 lg:px-8 space-y-20">
 
             {/* SECTION 1: Emerging Trends in Dentistry */}
             {/* SECTION 2: Applications of Dentistry Research */}

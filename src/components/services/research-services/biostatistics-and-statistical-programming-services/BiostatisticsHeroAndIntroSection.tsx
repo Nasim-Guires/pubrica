@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface ServiceCard {
@@ -41,7 +42,7 @@ export default function BiostatisticsHeroAndIntroSection() {
       {/* ========================================================= */}
       {/* 1. HERO BANNER SECTION                                    */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#112320] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-[#112320] py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto border border-white/80 p-6 sm:p-10 md:p-12 text-center space-y-4">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight leading-snug">
             Biostatistics and Statistical Programming Services
@@ -58,7 +59,7 @@ export default function BiostatisticsHeroAndIntroSection() {
       {/* ========================================================= */}
       {/* 2. INTRO SECTION (Ensure Accurate Study Outcomes)          */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Text Content */}
           <div className="lg:col-span-7 space-y-6">
@@ -72,19 +73,19 @@ export default function BiostatisticsHeroAndIntroSection() {
             <div className="space-y-4 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
               <p>
                 Pubrica delivers accurate, compliant, and publication-ready{" "}
-                <a
+                <Link
                   href="/services/research-services/biostatistics-and-statistical-programming-services/biostatistical-programming-framework-regulatory-research"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   biostatistical programming
-                </a>{" "}
+                </Link>{" "}
                 for medical,{" "}
-                <a
+                <Link
                   href="/subject-matter-experts/life-sciences"
                   className="text-sky-600 hover:underline font-medium"
                 >
                   life science
-                </a>
+                </Link>
                 , and healthcare research. With a team of certified SAS
                 programmers and experienced biostatisticians, we have completed
                 150+ projects across therapeutic areas.
@@ -123,7 +124,7 @@ export default function BiostatisticsHeroAndIntroSection() {
       {/* ========================================================= */}
       {/* 3. ADVANCED BIOSTATISTICS & CDISC SECTION                */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto pb-7 px-4 sm:px-6 lg:px-8">
         <div className="space-y-8">
           {/* Header Copy */}
           <div className="space-y-4 max-w-6xl">
@@ -137,19 +138,19 @@ export default function BiostatisticsHeroAndIntroSection() {
               drug development program. Even groundbreaking therapies can be
               compromised by flawed study design or execution. At Pubrica, our
               expert biostatistical consulting team delivers meticulous{" "}
-              <a
-                href="#data-collection"
+              <Link
+                href="/services/medical-data-collection"
                 className="text-sky-600 hover:underline font-medium"
               >
                 data collection
-              </a>
+              </Link>
               , validation, and analysis to ensure your{" "}
-              <a
-                href="#research"
+              <Link
+                href="/academy/biostatistics/biostatistics-in-clinical-research-guide"
                 className="text-sky-600 hover:underline font-medium"
               >
                 research
-              </a>{" "}
+              </Link>{" "}
               meets the highest standards. By providing end-to-end statistical
               support across every stage of drug development, we help you design
               efficient, cost-effective trials that minimize risk, optimize

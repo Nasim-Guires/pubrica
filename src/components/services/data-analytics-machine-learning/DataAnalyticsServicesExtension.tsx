@@ -122,15 +122,15 @@ export const DataAnalyticsServicesExtension: React.FC = () => {
   return (
     <div className="w-full bg-white font-sans text-left text-gray-800">
       {/* --- Section 1: Our Services 3-Column Grid Layout --- */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+      <section className="py-7 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
         <h2 className="text-[#0c313a] text-xl md:text-2xl font-black mb-3 tracking-tight">
           Our Services
         </h2>
         <p className="text-gray-600 text-xs sm:text-sm md:text-[14px] leading-relaxed mb-10 max-w-4xl text-justify">
           We offer comprehensive{" "}
-          <a href="/services/research-services/biostatistics-and-statistical-programming-services" className="text-blue-600 hover:underline">
+          <Link href="/services/research-services/biostatistics-and-statistical-programming-services" className="text-blue-600 hover:underline">
             statistical analysis services
-          </a>
+          </Link>
           , from data cleaning and descriptive statistics to advanced modelling
           and hypothesis testing. Our experts ensure your research findings are
           accurate, robust, and publication-ready.
@@ -172,7 +172,7 @@ export const DataAnalyticsServicesExtension: React.FC = () => {
       </section>
 
       {/* --- Section 2: Techniques Split Layout with Accordion Framework --- */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 bg-[#f4f6fa]">
+      <section className="py-7 px-6 md:px-12 lg:px-24 bg-[#f4f6fa]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-[#0c313a] text-2xl md:text-3xl font-bold mb-12 text-center tracking-tight">
             We Also Use a Variety of Statistical Methods and Techniques

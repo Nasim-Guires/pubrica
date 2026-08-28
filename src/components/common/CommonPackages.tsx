@@ -115,7 +115,7 @@ export default function CommonPackages({
   const hasHeaderContent = title || subtitle || description;
 
   return (
-    <section className="py-0 px-4 md:px-8 bg-white w-full text-left font-sans">
+    <section className="py-7 px-4 md:px-8 bg-white w-full text-left font-sans">
       {/* Header Section (Renders only if title, subtitle, or description exist) */}
       {hasHeaderContent && (
         <div className="max-w-7xl mx-auto mb-4">
@@ -138,7 +138,8 @@ export default function CommonPackages({
       )}
 
       {/* Packages Container */}
-      <div className="relative max-w-7xl mx-auto pb-0">
+      <div className="relative max-w-7xl mx-auto pb-5">
+
         <div className={`grid ${getGridColsClass(packages.length)} gap-4 items-stretch`}>
           {packages.map((pkg, index) => (
             <div

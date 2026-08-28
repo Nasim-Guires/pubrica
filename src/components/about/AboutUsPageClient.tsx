@@ -1017,7 +1017,7 @@ export default function AboutPage() {
         {/* ========================================================================= */}
         {/* SECTION 4: FULL EXPANDABLE ACCORDIONS WITH RICH TEXT CONTENT              */}
         {/* ========================================================================= */}
-        <section className="bg-gray-50 py-16 font-sans border-t border-gray-100" aria-label="Outsourcing Domains">
+        <section className="bg-gray-50 py-7 font-sans border-t border-gray-100" aria-label="Outsourcing Domains">
           <Container className="max-w-6xl px-4">
             <div className="mb-8">
               <h2 className="text-xl font-bold text-[#11231f] font-display">

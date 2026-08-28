@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 // --- Types ---
@@ -132,7 +133,7 @@ export default function ResearchImpactAndStakeholders(): React.ReactElement {
       {/* ========================================================================= */}
       {/* SECTION 1: RESEARCH IMPACT EXPERTISE INCLUDES                            */}
       {/* ========================================================================= */}
-      <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-6xl mx-auto py-7 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           
           {/* Left Column: Heading & Paragraph */}
@@ -145,12 +146,12 @@ export default function ResearchImpactAndStakeholders(): React.ReactElement {
             </h3>
             <p className="text-xs sm:text-sm text-slate-700 leading-relaxed pt-2">
               Pubrica offers a range of{' '}
-              <a
-                href="#services"
+              <Link
+                href="/academy/research-impactt/how-to-select-target-journal-research-impact"
                 className="text-[#008ba3] underline underline-offset-2 hover:text-[#09322e] transition-colors"
               >
                 research impact services
-              </a>{' '}
+              </Link>{' '}
               that enhance visibility, engagement, and scholarly impact. All services are provided to meet the rigorous standards of peer-reviewed journals, academic institutions, and global research funders. Our research impact services are tailored to help researchers boost citations, improve knowledge dissemination, and ensure research accessibility.
             </p>
           </div>
@@ -193,7 +194,7 @@ export default function ResearchImpactAndStakeholders(): React.ReactElement {
       {/* ========================================================================= */}
       {/* SECTION 2: WHO WE SERVE                                                 */}
       {/* ========================================================================= */}
-      <section className="max-w-6xl mx-auto pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-6xl mx-auto pb-8 px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
         <div className="space-y-2 mb-8">

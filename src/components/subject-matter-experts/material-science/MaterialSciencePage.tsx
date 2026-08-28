@@ -154,8 +154,8 @@ export default function MaterialSciencePage() {
         <main className="w-full bg-[#FAFAFA] font-sans antialiased text-gray-800">
 
             {/* SECTION 1: Banner */}
-            <header className="bg-[#1C2C2E] text-white py-12 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-5xl mx-auto border border-gray-500/50 py-10 px-6 sm:px-12 text-center">
+            <header className="bg-[#1C2C2E] text-white py-6 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-5xl mx-auto border border-gray-500/50 py-5 px-6 sm:px-12 text-center">
                     <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
                         Material Science
                     </h1>
@@ -166,7 +166,7 @@ export default function MaterialSciencePage() {
             </header>
 
             {/* SECTION 2: Hero Intro Content */}
-            <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <section className="max-w-6xl mx-auto py-7 px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
                     {/* Left Text Content */}
@@ -227,7 +227,7 @@ export default function MaterialSciencePage() {
             </section>
 
             {/* SECTION 3: Core Disciplines Grid */}
-            <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
                 <div className="max-w-6xl mx-auto">
 
                     <div className="text-center max-w-3xl mx-auto mb-12">
@@ -245,7 +245,7 @@ export default function MaterialSciencePage() {
             </section>
 
             {/* SECTION 4: Expertise Grid with Hover Slide Overlay */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+            <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 
                 <div className="text-center max-w-4xl mx-auto mb-12">
                     <div className="flex items-center justify-center gap-4 mb-3">

@@ -122,8 +122,8 @@ const DigitalProductionQaServices: FC<DigitalProductionQaServicesProps> = ({
       className="w-full bg-white text-gray-800"
     >
       {/* HERO BANNER SECTION */}
-      <div className="w-full bg-[#1b3b32] py-12 px-4 sm:px-8">
-        <div className="mx-auto max-w-5xl rounded-lg border border-[#2b5447] bg-[#1b3b32] px-6 py-10 text-center text-white sm:px-12">
+      <div className="w-full bg-[#1b3b32] py-6 px-4 sm:px-8">
+        <div className="mx-auto max-w-5xl rounded-lg border border-[#2b5447] bg-[#1b3b32] px-6 py-5 text-center text-white sm:px-12">
           <h1
             id="digital-production-qa-heading"
             className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl"
@@ -137,7 +137,7 @@ const DigitalProductionQaServices: FC<DigitalProductionQaServicesProps> = ({
       </div>
 
       {/* INTRO & OFFSET FLOATING IMAGE SECTION */}
-      <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 md:px-8">
+      <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6 md:px-8">
         <h2 className="text-xl font-bold text-[#0b3b2c] sm:text-2xl md:text-3xl">
           {introHeading}
         </h2>
@@ -198,7 +198,7 @@ const DigitalProductionQaServices: FC<DigitalProductionQaServicesProps> = ({
       </div>
 
       {/* TYPES OF QA SERVICES WE OFFER SECTION */}
-      <div className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 md:px-8">
+      <div className="mx-auto max-w-5xl px-4 pb-7 sm:px-6 md:px-8">
         <div className="space-y-3">
           <h2 className="text-xl font-bold text-[#0b3b2c] sm:text-2xl md:text-3xl">
             {offerHeading}

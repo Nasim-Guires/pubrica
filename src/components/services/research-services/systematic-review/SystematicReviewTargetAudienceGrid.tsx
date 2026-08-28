@@ -70,8 +70,114 @@ const audienceData: AudienceCard[] = [
   },
 ];
 
+const additionalAudienceData: AudienceCard[] = [
+  {
+    id: "nutrition-functional-food-companies",
+    title: "Nutrition & Functional Food Companies",
+    description:
+      "Systematic reviews and meta-analyses to validate nutraceutical efficacy claims and functional ingredient safety.",
+    imageUrl:
+      "https://pubrica.com/wp-content/uploads/2025/09/Nutrition-Functional-Food-Companies.png",
+    imageAlt: "Nutrition and functional food company research",
+  },
+  {
+    id: "ai-machine-learning-research-teams",
+    title: "AI & Machine Learning Research Teams",
+    description:
+      "Evidence synthesis for emerging technology applications in healthcare, public health, and biomedical research.",
+    imageUrl:
+      "https://pubrica.com/wp-content/uploads/2025/09/AI-Machine-Learning-Research-Teams.png",
+    imageAlt: "AI and machine learning research team",
+  },
+  {
+    id: "academic-researchers-scholars",
+    title: "Academic Researchers & Scholars",
+    description:
+      "End-to-end support for theses, dissertations, and high-impact journal submissions using systematic reviews, meta-analyses, and risk of bias assessment.",
+    imageUrl:
+      "https://pubrica.com/wp-content/uploads/2025/09/Academic-Researchers-Scholars.png",
+    imageAlt: "Academic researcher and scholar working on manuscript",
+  },
+  {
+    id: "public-health-research-institutions",
+    title: "Public Health Research Institutions",
+    description:
+      "Systematic reviews and epidemiological meta-analyses for disease prevention, health promotion, and surveillance.",
+    imageUrl:
+      "https://pubrica.com/wp-content/uploads/2025/09/Public-Health-Research-Institutions.png",
+    imageAlt: "Public health research institution staff",
+  },
+  {
+    id: "regulatory-bodies-compliance-firms",
+    title: "Regulatory Bodies & Compliance Firms",
+    description:
+      "Evidence reviews for food safety, nutraceutical regulation, and pharmaceutical compliance.",
+    imageUrl:
+      "https://pubrica.com/wp-content/uploads/2025/09/Regulatory-Bodies-Compliance-Firms.png",
+    imageAlt: "Regulatory and compliance firm reviewing documents",
+  },
+  {
+    id: "environmental-climate-research-organizations",
+    title: "Environmental & Climate Research Organizations",
+    description:
+      "Literature synthesis for environmental risk assessment, sustainability policy, and climate change health impacts.",
+    imageUrl:
+      "https://pubrica.com/wp-content/uploads/2025/09/Environmental-Climate-Research-Organizations.png",
+    imageAlt: "Environmental and climate research organization",
+  },
+  {
+    id: "education-social-sciences-researchers",
+    title: "Education & Social Sciences Researchers",
+    description:
+      "Systematic reviews and meta-analyses for education policy, social work research, and behavioural science.",
+    imageUrl:
+      "https://pubrica.com/wp-content/uploads/2025/09/Education-Social-Sciences-Researchers.png",
+    imageAlt: "Education and social sciences researcher",
+  },
+  {
+    id: "financial-economic-policy-think-tanks",
+    title: "Financial & Economic Policy Think Tanks",
+    description:
+      "Economic evaluation reviews, cost-benefit analysis, and literature synthesis for financial policy research.",
+    imageUrl:
+      "https://pubrica.com/wp-content/uploads/2025/09/Financial-Economic-Policy-Think-Tanks.png",
+    imageAlt: "Financial and economic policy think tank",
+  },
+  {
+    id: "legal-forensic-consulting-firms",
+    title: "Legal & Forensic Consulting Firms",
+    description:
+      "Medico-legal systematic reviews and evidence synthesis for litigation, regulatory hearings, and compliance disputes.",
+    imageUrl:
+      "https://pubrica.com/wp-content/uploads/2025/09/Legal-Forensic-Consulting-Firms.png",
+    imageAlt: "Legal and forensic consulting firm",
+  },
+  {
+    id: "veterinary-animal-health-companies",
+    title: "Veterinary & Animal Health Companies",
+    description:
+      "Systematic reviews for pet nutrition, animal health products, and veterinary intervention efficacy.",
+    imageUrl:
+      "https://pubrica.com/wp-content/uploads/2025/09/Veterinary-Animal-Health-Companies.png",
+    imageAlt: "Veterinary and animal health company research",
+  },
+  {
+    id: "functional-ingredient-manufacturers-suppliers",
+    title: "Functional Ingredient Manufacturers & Suppliers",
+    description:
+      "Evidence-based reviews to support marketing, regulatory dossiers, and B2B partnerships for functional and bioactive ingredients.",
+    imageUrl:
+      "https://pubrica.com/wp-content/uploads/2025/09/Functional-Ingredient-Manufacturers-Suppliers.png",
+    imageAlt: "Functional ingredient manufacturer and supplier",
+  },
+];
+
 export default function SystematicReviewTargetAudienceGrid() {
   const [hoveredCardId, setHoveredCardId] = useState<string | null>(null);
+  const [showAll, setShowAll] = useState(false);
+  const visibleAudienceData = showAll
+    ? [...audienceData, ...additionalAudienceData]
+    : audienceData;
 
   return (
     <section
@@ -111,7 +217,7 @@ export default function SystematicReviewTargetAudienceGrid() {
           PRISMA,{" "}
           <Link
             href="/academy/systematic-review/cochrane-methodology-systematic-reviews"
-            style={{ color: "#2563eb", textDecoration: "" }}
+            style={{ color: "#2563eb", textDecoration: "underline" }}
           >
             Cochrane
           </Link>
@@ -128,7 +234,7 @@ export default function SystematicReviewTargetAudienceGrid() {
           marginBottom: "40px",
         }}
       >
-        {audienceData.map((card) => {
+        {visibleAudienceData.map((card) => {
           const isHovered = hoveredCardId === card.id;
 
           return (
@@ -226,8 +332,9 @@ export default function SystematicReviewTargetAudienceGrid() {
 
       {/* "View More" CTA Button */}
       <div style={{ textAlign: "center" }}>
-        <a
-          href="/services/research-services/systematic-review#audience"
+        <button
+          type="button"
+          onClick={() => setShowAll((prev) => !prev)}
           style={{
             display: "inline-block",
             backgroundColor: "#0f2c3a",
@@ -236,7 +343,8 @@ export default function SystematicReviewTargetAudienceGrid() {
             borderRadius: "4px",
             fontWeight: "600",
             fontSize: "0.95rem",
-            textDecoration: "none",
+            border: "none",
+            cursor: "pointer",
             transition: "background-color 0.2s ease",
           }}
           onMouseOver={(e) =>
@@ -246,8 +354,8 @@ export default function SystematicReviewTargetAudienceGrid() {
             (e.currentTarget.style.backgroundColor = "#0f2c3a")
           }
         >
-          View More
-        </a>
+          {showAll ? "View Less" : "View More"}
+        </button>
       </div>
     </section>
   );

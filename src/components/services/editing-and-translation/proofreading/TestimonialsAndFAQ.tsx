@@ -119,7 +119,7 @@ export default function TestimonialsAndFAQ() {
   ];
 
   return (
-    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-12 space-y-16">
+    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-6 space-y-16">
       {/* ======================================= */}
       {/* SECTION 1: TESTIMONIALS                 */}
       {/* ======================================= */}

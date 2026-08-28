@@ -151,7 +151,7 @@ export const PostEditingDetailsAndPricing: React.FC = () => {
   ];
 
   return (
-    <div className="w-full bg-[#f8fafc] text-slate-800 py-12 space-y-20">
+    <div className="w-full bg-[#f8fafc] text-slate-800 py-6 space-y-20">
       {/* ------------------------------------------------------------- */}
       {/* 1. WHY CHOOSE OUR POST EDITING SERVICES SECTION               */}
       {/* ------------------------------------------------------------- */}

@@ -193,14 +193,14 @@ export default function WebsiteTreeStructurePage() {
         </header>
 
         {/* Hero Title Section */}
-        <section className="bg-slate-900 text-white py-16 text-center">
+        <section className="bg-slate-900 text-white py-7 text-center">
           <div className="max-w-4xl mx-auto border-2 border-slate-700 py-8 px-6 bg-slate-800/50 shadow-lg">
             <h1 className="text-3xl md:text-4xl font-bold tracking-wide">Website Tree Structure</h1>
           </div>
         </section>
 
         {/* Website Tree Content Section */}
-        <main className="max-w-4xl mx-auto px-6 py-12">
+        <main className="max-w-4xl mx-auto px-6 py-6">
           <div className="space-y-6">
             {treeData.map((section) => {
               const isOpen = openSections[section.title] || false;
@@ -244,7 +244,7 @@ export default function WebsiteTreeStructurePage() {
       </div>
 
       {/* Bottom CTA Banner */}
-      <section className="bg-slate-900 text-white py-12 px-6 mt-16">
+      <section className="bg-slate-900 text-white py-6 px-6 mt-16">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between bg-slate-800 border border-slate-700 p-8 rounded-lg shadow-xl gap-6">
           <h2 className="text-xl md:text-2xl font-semibold text-center md:text-left">
             Whether you’re stuck or just want some tips on where to start, hit up our experts anytime.

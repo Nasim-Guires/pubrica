@@ -124,7 +124,7 @@ export default function FunctionalFoodsPage({
     <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden">
       
       {/* Hero Section */}
-      <section className="bg-[#0b221f] py-16 px-6 text-white text-center">
+      <section className="bg-[#0b221f] py-7 px-6 text-white text-center">
         <div className="max-w-4xl mx-auto border border-emerald-800/60 rounded-xl p-8 bg-gradient-to-b from-[#0b221f] to-[#061614] shadow-lg">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4 tracking-tight">{heroTitle}</h1>
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
@@ -134,7 +134,7 @@ export default function FunctionalFoodsPage({
       </section>
 
       {/* Intro & Transformation Section */}
-      <section className="py-16 px-6 max-w-6xl mx-auto">
+      <section className="py-7 px-6 max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="flex-1 space-y-6 text-left">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#0f2824] leading-snug">
@@ -169,7 +169,7 @@ export default function FunctionalFoodsPage({
       </section>
 
       {/* Food Label Review Section */}
-      <section className="py-16 px-6 max-w-6xl mx-auto border-t border-gray-100">
+      <section className="py-7 px-6 max-w-6xl mx-auto border-t border-gray-100">
         <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-[#0f2824]">{labelReviewTitle}</h2>
           <div className="w-12 h-1 bg-[#0f2824] mx-auto mb-4"></div>
@@ -195,7 +195,7 @@ export default function FunctionalFoodsPage({
       </section>
 
       {/* Our Expertise in Functional Foods & Nutraceuticals Includes (Exact Orbit / Around Central Image Layout matching the reference screenshot) */}
-      <section className="py-20 px-6 max-w-7xl mx-auto border-t border-gray-100 relative">
+      <section className="py-8 px-6 max-w-7xl mx-auto border-t border-gray-100 relative">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{expertiseTitle}</h2>
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
@@ -258,7 +258,7 @@ export default function FunctionalFoodsPage({
       </section>
 
       {/* Foods & Nutraceuticals Segments We Serve (Accordion style with individual control) */}
-      <section className="py-16 px-6 max-w-6xl mx-auto border-t border-gray-100">
+      <section className="py-7 px-6 max-w-6xl mx-auto border-t border-gray-100">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{segmentsTitle}</h2>
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed">

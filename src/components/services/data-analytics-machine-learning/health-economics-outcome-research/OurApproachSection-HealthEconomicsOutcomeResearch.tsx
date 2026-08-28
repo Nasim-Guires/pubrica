@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
     Plus,
     Minus,
@@ -130,7 +131,7 @@ export default function OurApproachSectionHealthEconomicsOutcomeResearch() {
             {/* =========================================
             SECTION 1: OUR APPROACH
       ========================================= */}
-            <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <section className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                 <div className="text-center mb-10">
                     <h2 className="text-3xl font-bold text-[#0A322C] mb-4">
                         Our Approach
@@ -181,7 +182,7 @@ export default function OurApproachSectionHealthEconomicsOutcomeResearch() {
             {/* =========================================
             SECTION 2: PROCESS FLOWCHART
       ========================================= */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-2xl font-bold text-[#0A322C] mb-2 uppercase tracking-wide">
                         How Our Health Economics & Outcome Research Service Works
@@ -274,7 +275,7 @@ export default function OurApproachSectionHealthEconomicsOutcomeResearch() {
             {/* =========================================
             SECTION 3: GREEN BANNER
       ========================================= */}
-            <section className="bg-[#0A322C] text-white py-14 px-4 sm:px-6 lg:px-8">
+            <section className="bg-[#0A322C] text-white py-6 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto text-center">
                     <h2 className="text-2xl sm:text-3xl font-bold mb-6">
                         Accelerate Your Health Economics & Outcome Research Modeling with Pubrica
@@ -288,7 +289,7 @@ export default function OurApproachSectionHealthEconomicsOutcomeResearch() {
             {/* =========================================
             SECTION 4: COMPLIANCE STANDARDS
       ========================================= */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-50/50">
+            <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-50/50">
                 <div className="text-center mb-12">
                     <h2 className="text-2xl sm:text-3xl font-bold text-[#0A322C] mb-4">
                         Our Compliance And Guideline Standards
@@ -320,7 +321,7 @@ export default function OurApproachSectionHealthEconomicsOutcomeResearch() {
             {/* =========================================
             SECTION 5: SAMPLE WORK / REPORT DOWNLOAD
       ========================================= */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                 <div className="bg-[#EBF7F2] rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 lg:gap-12">
                     {/* Left Column: Image */}
                     <div className="w-full md:w-5/12 relative aspect-[4/3] rounded-xl overflow-hidden shadow-md">
@@ -338,9 +339,9 @@ export default function OurApproachSectionHealthEconomicsOutcomeResearch() {
                             <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
                                 Health Economics & Outcome Research Sample Work
                             </h3>
-                            <button className="bg-black hover:bg-gray-800 text-white font-medium text-sm px-6 py-2.5 rounded-full transition-colors duration-200">
+                            <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white font-medium text-sm px-6 py-2.5 rounded-full transition-colors duration-200">
                                 Discover More
-                            </button>
+                            </Link>
                         </div>
 
                         <div className="pt-2">
@@ -350,9 +351,9 @@ export default function OurApproachSectionHealthEconomicsOutcomeResearch() {
                             <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
                                 Explore our Health Economics & Outcome Research samples, designed to showcase evidence-based models, rigorous data analysis, and alignment with scientific and regulatory standards, delivering meaningful, decision-ready insights for publications and healthcare value assessment.
                             </p>
-                            <button className="bg-black hover:bg-gray-800 text-white font-medium text-sm px-6 py-2.5 rounded-full transition-colors duration-200">
+                            <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white font-medium text-sm px-6 py-2.5 rounded-full transition-colors duration-200">
                                 Discover More
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

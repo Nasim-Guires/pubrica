@@ -8,7 +8,7 @@ export default function TranslationEditingHero() {
   return (
     <section className="w-full bg-white font-sans text-slate-800">
       {/* Top Dark Banner Header */}
-      <div className="w-full bg-[#182528] py-12 px-4 sm:px-6">
+      <div className="w-full bg-[#182528] py-6 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto border border-white/80 py-8 px-6 text-center text-white">
           <h1 className="text-3xl sm:text-4xl font-bold mb-3 tracking-tight">
             Translation with Editing Service
@@ -22,7 +22,7 @@ export default function TranslationEditingHero() {
       </div>
 
       {/* Main Content & Visual Section */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 lg:py-7">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Text Column */}
           <div className="lg:col-span-7 space-y-6">

@@ -136,7 +136,7 @@ export default function EducationalOfferingsAndAudience() {
   };
 
   return (
-    <div className="w-full bg-[#f8f9fa] text-slate-800 font-sans py-16 px-4 sm:px-6 lg:px-8">
+    <div className="w-full bg-[#f8f9fa] text-slate-800 font-sans py-7 px-4 sm:px-6 lg:px-8">
       {/* SEO Structured Data */}
       <script
         type="application/ld+json"
@@ -262,7 +262,7 @@ export default function EducationalOfferingsAndAudience() {
       {/* ==========================================
           SECTION 3: FULL-WIDTH CTA BANNER
       ========================================== */}
-      <section className="w-full bg-[#051f18] text-white py-14 px-4 sm:px-6 lg:px-8 mt-20 border-t border-emerald-950">
+      <section className="w-full bg-[#051f18] text-white py-6 px-4 sm:px-6 lg:px-8 mt-20 border-t border-emerald-950">
         <div className="max-w-5xl mx-auto text-center space-y-4">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
             Speed up your Educational Content Development with Pubrica

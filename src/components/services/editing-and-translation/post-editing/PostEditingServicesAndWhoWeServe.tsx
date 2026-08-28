@@ -59,7 +59,7 @@ export const PostEditingServicesAndWhoWeServe: React.FC = () => {
   ];
 
   return (
-    <div className="w-full bg-white text-slate-800 py-12">
+    <div className="w-full bg-white text-slate-800 py-6">
       {/* ------------------------------------------------------------- */}
       {/* 1. OUR POST EDITING SERVICES SECTION                           */}
       {/* ------------------------------------------------------------- */}

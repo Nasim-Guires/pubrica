@@ -30,7 +30,7 @@ export default function ReusableWhyChooseSection({
   };
 
   return (
-    <section className="w-full bg-white py-16 px-4 md:px-8">
+    <section className="w-full bg-white py-7 px-4 md:px-8">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
@@ -71,11 +71,11 @@ export default function ReusableWhyChooseSection({
                     onClick={() => toggleAccordion(idx)}
                   >
                     <div className="flex items-center justify-between text-gray-900 font-bold text-sm md:text-base">
-                      <span className="flex items-center space-x-2">
-                        <span className="text-[#0b3b2c] font-black">—</span>
-                        <span>{item.title}</span>
+                      <span className="flex min-w-0 flex-1 items-center space-x-2">
+                        <span className="shrink-0 text-[#0b3b2c] font-black">—</span>
+                        <span className="min-w-0">{item.title}</span>
                       </span>
-                      <span className="text-gray-500 font-bold text-lg select-none">
+                      <span className="shrink-0 text-gray-500 font-bold text-lg select-none">
                         {isOpen ? '−' : '+'}
                       </span>
                     </div>

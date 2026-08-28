@@ -1,17 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Poppins } from "next/font/google";
 import Container from "@/components/common/Container";
 import Breadcrumb from "@/components/seo/Breadcrumb";
 import { constructMetadata } from "@/lib/metadata";
 import HeroBanner from "@/components/common/HeroBanner";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
-});
 
 export const metadata = constructMetadata({
   title: "Industries | Medical Research, Writing, Editing & Publishing",
@@ -89,8 +82,12 @@ const INDUSTRIES = [
 
 export default function IndustryPage() {
   return (
-    <div className={poppins.className}>
-      <main className="bg-[#f2f4f7] min-h-screen pb-24 font-sans">
+    <>
+      <header aria-label="Breadcrumb Navigation" className="bg-white py-2">
+        <Breadcrumb items={[{ label: "Industries", href: "/industries" }]} />
+      </header>
+
+      <main className="bg-gray-100 min-h-screen pb-10">
         <HeroBanner
           title="End-to-end scientific & medical Industries"
           description="Gamut of services: Medical Device, Nutraceuticals, Pharmaceutical and more..."
@@ -141,6 +138,6 @@ export default function IndustryPage() {
           </Container>
         </section>
       </main>
-    </div>
+    </>
   );
 }

@@ -78,7 +78,7 @@ const techStackData = [
 
 export default function AiMlTechStackSection() {
   return (
-    <section className="w-full bg-[#f8f9f9] py-16 px-4 sm:px-6 lg:px-12 font-sans text-slate-800">
+    <section className="w-full bg-[#f8f9f9] py-7 px-4 sm:px-6 lg:px-12 font-sans text-slate-800">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-10 max-w-4xl">

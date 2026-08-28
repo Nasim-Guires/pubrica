@@ -69,7 +69,7 @@ const Page = () => {
     );
 
     return (
-        <section className="bg-white py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <section className="bg-white py-6 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
             {/* Header & Arrow Controls */}
             <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-100">

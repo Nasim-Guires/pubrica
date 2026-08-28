@@ -223,7 +223,7 @@ export default function PatientEducationContentFormatsAccordionSection() {
   return (
     <section
       aria-label="Pubrica Patient Education Content Formats"
-      className="w-full bg-white text-slate-800 font-sans py-12 px-4 sm:px-6 lg:px-8"
+      className="w-full bg-white text-slate-800 font-sans py-6 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header Block */}

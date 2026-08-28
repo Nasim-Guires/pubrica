@@ -13,8 +13,8 @@ import {
   trustPartners,
   testimonialsData,
   faqData,
-  insightsData,
 } from "@/lib/services/editing-and-translation";
+import DynamicInsightsSection from "@/components/services/DynamicInsightsSection";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -79,7 +79,7 @@ const EditingAndTranslationPageClient = () => {
   const rightColumnFaqs = faqData.filter((item) => item.id > 5);
   return (
     <div className="font-sans text-slate-800 bg-white selection:bg-teal-500 selection:text-white">
-      <section className="w-full bg-[#0b2b30] text-white py-12 px-4 sm:px-6 md:px-8">
+      <section className="w-full bg-[#0b2b30] text-white py-6 px-4 sm:px-6 md:px-8">
         <div className="max-w-4xl mx-auto border border-white/70 rounded-sm p-6 sm:p-8 md:p-10 text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
             Editing and Translation Services
@@ -92,7 +92,7 @@ const EditingAndTranslationPageClient = () => {
         </div>
       </section>
       {/* SECTION 1: HERO / PRECISION SERVICES */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-10 font-sans">
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-5 font-sans">
         {/* Heading */}
         <div className="mb-8">
           <h2 className="text-[40px] font-bold leading-tight text-[#083B3A]">
@@ -136,14 +136,14 @@ const EditingAndTranslationPageClient = () => {
           {/* Paragraph */}
           <p className="text-[17px] leading-8 text-slate-700">
             Pubrica provides{" "}
-            <a href="/academy/editing-and-translation/importance-of-editing-proofreading-manuscript-submission" className="text-[#4180A8]">
+            <Link href="/academy/editing-and-translation/importance-of-editing-proofreading-manuscript-submission" className="text-[#4180A8]">
               manuscript editing
-            </a>{" "}
+            </Link>{" "}
             and academic translation services tailored for healthcare,
-            <a href="/subject-matter-experts/life-sciences" className="text-[#4180A8]">
+            <Link href="/subject-matter-experts/life-sciences" className="text-[#4180A8]">
               {" "}
               life sciences
-            </a>
+            </Link>
             , and multidisciplinary research. From scientific manuscripts,
             theses, and clinical reports to multilingual translations, our
             experts ensure clarity, accuracy, and journal compliance. We help
@@ -191,7 +191,7 @@ const EditingAndTranslationPageClient = () => {
       </section>
       <hr className="border-slate-100" />
       {/* SECTION 2: OUR SERVICES */}
-      <section className="py-12 bg-white px-6 max-w-7xl mx-auto font-sans">
+      <section className="py-6 bg-white px-6 max-w-7xl mx-auto font-sans">
         <div className="max-w-7xl mx-auto">
           {/* Title elements */}
           <h2 className="text-2xl font-bold text-[#0A4D4A] mb-3">
@@ -199,9 +199,9 @@ const EditingAndTranslationPageClient = () => {
           </h2>
           <p className="text-[14px] text-slate-600 max-w-5xl mb-12 leading-relaxed">
             At Pubrica, we provide end-to-end{" "}
-            <a href="/academy/editing-and-translation/manuscript-editing-process-steps" className="text-[#4080A8] hover:underline font-normal">
+            <Link href="/academy/editing-and-translation/manuscript-editing-process-steps" className="text-[#4080A8] hover:underline font-normal">
               Editing and Translation Services
-            </a>{" "}
+            </Link>{" "}
             designed to refine, enhance, and globalize your content. From
             manuscripts and theses to books and multilingual translations, our
             expert team ensures clarity, precision, and publication-ready
@@ -275,7 +275,7 @@ const EditingAndTranslationPageClient = () => {
         </div>
       </section>
       {/* SECTION 3: WHO WE SERVE */}
-      <section className="py-16 px-4 max-w-7xl mx-auto">
+      <section className="py-7 px-4 max-w-7xl mx-auto">
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-[#004D40] mb-2">
             Who We Serve
@@ -321,7 +321,7 @@ const EditingAndTranslationPageClient = () => {
         </div>
       </section>
       {/* SECTION 4: TYPES OF EDITING SERVICES */}
-      <section className="py-12 bg-white px-6 max-w-7xl mx-auto font-sans">
+      <section className="py-6 bg-white px-6 max-w-7xl mx-auto font-sans">
         <div className="max-w-7xl mx-auto">
           {/* Header Content */}
           <div className="mb-8 text-left">
@@ -414,7 +414,7 @@ const EditingAndTranslationPageClient = () => {
         `}</style>
       </section>
       {/* SECTION 5: TRANSLATION SERVICES */}
-      <section className="py-16 px-4 max-w-7xl mx-auto">
+      <section className="py-7 px-4 max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#004D40] mb-2">
             Our Comprehensive Translation Services
@@ -423,9 +423,9 @@ const EditingAndTranslationPageClient = () => {
             Pubrica delivers professional academic and scientific translation
             services designed to ensure accuracy, cultural adaptation, and
             publication-ready quality. Our translators are{" "}
-            <span className="text-teal-600 font-medium underline">
+            <Link href="/subject-matter-experts" className="text-teal-600 font-medium underline">
               subject-matter experts
-            </span>{" "}
+            </Link>{" "}
             who refine content to meet the standards of international journals,
             institutions, and global markets.
           </p>
@@ -457,7 +457,7 @@ const EditingAndTranslationPageClient = () => {
         </div>
       </section>
       {/* MID-BANNER CACHE LINE */}
-      <section className="bg-[#00332c] text-white py-12 px-4 text-center">
+      <section className="bg-[#00332c] text-white py-6 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-2xl lg:text-3xl font-bold mb-3">
             Speed up your Editing and Translation with Pubrica
@@ -471,7 +471,7 @@ const EditingAndTranslationPageClient = () => {
         </div>
       </section>
       {/* SECTION 6: HOW IT WORKS STEP-BY-STEP */}
-      <section className="py-16 bg-[#F4F6F6] px-6 font-sans overflow-x-auto selection:bg-teal-100/50">
+      <section className="py-7 bg-[#F4F6F6] px-6 font-sans overflow-x-auto selection:bg-teal-100/50">
         <div className="max-w-7xl mx-auto min-w-[1000px] lg:min-w-0">
           {/* Header Block */}
           <div className="text-center mb-16">
@@ -569,7 +569,7 @@ const EditingAndTranslationPageClient = () => {
       {/* ========================================================================= */}
       {/* SECTION NAME: WHY AUTHORS CHOOSE PUBRICA                                  */}
       {/* ========================================================================= */}
-      <div className="bg-white py-12 px-4 md:px-8 font-sans max-w-7xl mx-auto selection:bg-teal-100/60">
+      <div className="bg-white py-6 px-4 md:px-8 font-sans max-w-7xl mx-auto selection:bg-teal-100/60">
         {/* ========================================================================= */}
         {/* SECTION NAME: WHY AUTHORS CHOOSE PUBRICA                                  */}
         {/* ========================================================================= */}
@@ -592,9 +592,9 @@ const EditingAndTranslationPageClient = () => {
                 </strong>{" "}
                 Our team has helped over 800,000 researchers succeed in renowned
                 journals. With our{" "}
-                <span className="text-sky-500 underline cursor-pointer hover:text-sky-600">
+                <Link href="/services/publication-support/journal-selection" className="text-sky-500 underline hover:text-sky-600">
                   journal selection service
-                </span>
+                </Link>
                 , we streamline the process, enhancing your paper&apos;s
                 publication prospects.
               </div>
@@ -656,7 +656,7 @@ const EditingAndTranslationPageClient = () => {
         {/* ========================================================================= */}
         {/* SECTION NAME: EDITING & TRANSLATION SERVICE SAMPLE WORK                  */}
         {/* ========================================================================= */}
-        <section className="border-t border-slate-100 pt-12">
+        <section className="border-t border-slate-100 pt-6">
           <h2 className="text-xl md:text-2xl font-bold text-[#0A4D5C] mb-4 tracking-tight">
             Editing And Translation Services Sample Work
           </h2>
@@ -688,7 +688,7 @@ const EditingAndTranslationPageClient = () => {
       {/* ========================================================================= */}
 
       {/* SECTION 7: PACKAGES & PRICING */}
-      <section className="py-16 px-4 max-w-7xl mx-auto font-sans selection:bg-teal-100/60">
+      <section className="py-7 px-4 max-w-7xl mx-auto font-sans selection:bg-teal-100/60">
         {/* Header Block */}
         <div className="text-left mb-12">
           <h2 className="text-2xl font-bold text-[#0A4D5C] mb-4 tracking-tight">
@@ -790,7 +790,7 @@ const EditingAndTranslationPageClient = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-white py-16 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100">
+      <section className="bg-white py-7 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100">
         <div className="max-w-7xl mx-auto">
           {/* Header Block */}
           <h2 className="text-2xl font-bold text-[#0A4D4A] mb-4">
@@ -869,7 +869,7 @@ const EditingAndTranslationPageClient = () => {
         </div>
       </section>
       {/* Frequently Asked Questions Section */}
-      <section className="bg-white py-16 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100/60">
+      <section className="bg-white py-7 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100/60">
         <div className="max-w-7xl mx-auto">
           {/* Title */}
           <h2 className="text-2xl font-bold text-[#0A4D4A] mb-8 tracking-tight">
@@ -964,41 +964,12 @@ const EditingAndTranslationPageClient = () => {
         `}</style>
       </section>
 
-      {/* Insights Section inserted cleanly right below FAQ */}
-      <section className="bg-white py-12 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100/60">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#0A4D4A] mb-8 tracking-tight">
-            Insights
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {insightsData.map((card) => (
-              <div
-                key={card.id}
-                className="bg-white rounded-sm border border-slate-200/60 overflow-hidden shadow-sm flex flex-col group cursor-pointer hover:shadow-md transition-shadow duration-200"
-              >
-                <div className="relative w-full h-[210px] bg-slate-100">
-                  <img
-                    src={card.imageUrl}
-                    alt={card.title}
-                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-350"
-                    loading="lazy"
-                  />
-                </div>
-
-                <div className="p-5 flex flex-col flex-grow">
-                  <h3 className="text-[15px] font-bold text-[#0A4D4A] leading-snug mb-3 tracking-normal line-clamp-2 group-hover:text-teal-700 transition-colors">
-                    {card.title}
-                  </h3>
-                  <p className="text-[12.5px] text-slate-600 leading-relaxed font-normal line-clamp-3 mt-auto">
-                    {card.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Insights Section inserted cleanly right below FAQ (live from Academy) */}
+      <DynamicInsightsSection
+        categorySlug="editing-and-translation"
+        limit={6}
+        className="bg-white py-6 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100/60"
+      />
     </div>
   );
 };

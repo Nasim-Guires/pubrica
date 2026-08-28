@@ -365,7 +365,7 @@ export default function PhysicianTrainingWorkflowSection() {
             </section>
 
             {/* 3. Satisfaction Banner */}
-            <section className="bg-[#122826] text-white py-10 px-4 sm:px-6 lg:px-8">
+            <section className="bg-[#122826] text-white py-5 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                     <div className="flex items-center gap-6 flex-col sm:flex-row">
                         <div className="w-36 h-36 sm:w-40 sm:h-40 flex items-center justify-center shrink-0 overflow-hidden">
@@ -398,7 +398,7 @@ export default function PhysicianTrainingWorkflowSection() {
             </section>
             <GetFreeQuoteButton />
             {/* 4. Our Compliance and Guideline Standards (Closed Accordions by Default) */}
-            <section className="py-16 bg-white">
+            <section className="py-7 bg-white">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-10">
                         <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] mb-3">

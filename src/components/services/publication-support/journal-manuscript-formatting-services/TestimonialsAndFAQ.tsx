@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import CommonFAQ from "@/components/common/FAQ";
+import Link from "next/link";
 
 interface Testimonial {
   id: number;
@@ -89,7 +90,7 @@ export default function TestimonialsAndFAQ() {
   ];
 
   return (
-    <div className="w-full bg-[#f8fafc] font-sans text-gray-800 py-12 space-y-20 antialiased">
+    <div className="w-full bg-[#f8fafc] font-sans text-gray-800 py-6 space-y-20 antialiased">
       {/* TESTIMONIALS SECTION */}
       <section className="max-w-6xl mx-auto px-4 md:px-8">
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-3">
@@ -97,12 +98,12 @@ export default function TestimonialsAndFAQ() {
         </h2>
         <p className="text-xs md:text-sm text-gray-700 leading-relaxed max-w-4xl mb-8">
           Learn how Pubrica’s{" "}
-          <a
+          <Link
             href="/insights/citation-styles-apa-ama-mla-vancouver-chicago"
             className="text-[#3b82f6] hover:underline"
           >
             manuscript formatting service
-          </a>{" "}
+          </Link>{" "}
           has helped researchers meet strict publisher standards and complete a
           smooth submission. Here is what our clients say:
         </p>

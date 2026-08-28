@@ -34,7 +34,7 @@ const manuscriptTypes = [
     title: "Meta-analysis",
     description: "Combines data from multiple studies statistically to derive pooled estimates and strengthen evidence for clinical practice.",
     iconSrc: `${MS}/Meta-analysis.png`,
-    href: "/services/research-services/systematic-review/",
+    href: "/services/research-services/meta-analysis/",
   },
   {
     title: "Brief Communication / Short Report",
@@ -131,7 +131,7 @@ export default function PhysicianManuscriptsPage() {
   return (
     <div className="w-full text-slate-800 bg-white">
       {/* 1. Hero Banner */}
-      <section className="bg-[#0b1f28] text-white py-16 px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-[#0b1f28] text-white py-7 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-5xl mx-auto border border-gray-600/50 p-8 sm:p-12 rounded-sm bg-[#0e2530]">
           <h1 className="text-2xl sm:text-4xl font-bold tracking-tight mb-4">
             Physician Manuscript Service: Transform Clinical Expertise into Published Research
@@ -143,7 +143,7 @@ export default function PhysicianManuscriptsPage() {
       </section>
 
       {/* 2. Professional Physician Manuscript Service */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] mb-6">
           Professional Physician Manuscript Service: Your Partner in Seamless Publishing, Credibility, and Compliance
         </h2>
@@ -195,7 +195,7 @@ export default function PhysicianManuscriptsPage() {
       </section>
 
       {/* 3. What We Do */}
-      <section className="bg-gray-50 py-16 border-t border-gray-100">
+      <section className="bg-gray-50 py-7 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] mb-4">What We Do</h2>
           <p className="text-gray-700 max-w-5xl leading-relaxed text-sm sm:text-base mb-3">
@@ -287,7 +287,7 @@ export default function PhysicianManuscriptsPage() {
       </section>
 
       {/* 4. Types of Physician Manuscripts We Offer */}
-      <section className="py-16 bg-slate-100">
+      <section className="py-7 bg-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] mb-4">

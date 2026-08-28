@@ -67,7 +67,7 @@ const plansData: PlanCard[] = [
 
 export default function TranslationPlansSection() {
   return (
-    <section className="w-full bg-white font-sans py-12 px-4 sm:px-6">
+    <section className="w-full bg-white font-sans py-6 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto space-y-10">
         {/* Header Section */}
         <div className="text-center max-w-4xl mx-auto space-y-4">

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Plus, Minus } from "lucide-react";
 
 interface AccordionItem {
@@ -73,13 +74,13 @@ const accordionData: AccordionItem[] = [
     content: (
       <p>
         Whether it&apos;s academic papers,{" "}
-        <a href="/services/physician-writing-services/original-research-article" className="text-[#0056B3] hover:underline">
+        <Link href="/services/physician-writing-services/original-research-article" className="text-[#0056B3] hover:underline">
           research articles
-        </a>
+        </Link>
         ,{" "}
-        <a href="/services/physician-writing-services/case-report-writing" className="text-[#0056B3] hover:underline">
+        <Link href="/services/physician-writing-services/case-report-writing" className="text-[#0056B3] hover:underline">
           clinical reports
-        </a>
+        </Link>
         , or any other scientific or professional document, Pubrica&apos;s
         Translation with Editing Services are tailored to provide exceptional
         results across various content types.
@@ -101,7 +102,7 @@ export default function WhatWeDoSection() {
   };
 
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-2 pb-8 sm:pb-12 text-slate-800 font-sans">
+    <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-2 pb-8 sm:pb-6 text-slate-800 font-sans">
       {/* Title and Intro Paragraph - Reduced vertical margins */}
       <div className="mb-6">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#003B46] mb-2">

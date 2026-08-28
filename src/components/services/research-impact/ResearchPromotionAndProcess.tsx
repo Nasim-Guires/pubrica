@@ -93,7 +93,7 @@ export default function ResearchPromotionAndProcess(): React.ReactElement {
       {/* ========================================================================= */}
       {/* SECTION 1: WHY SHOULD YOU PROMOTE YOUR RESEARCH?                           */}
       {/* ========================================================================= */}
-      <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-6xl mx-auto py-7 px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#09322e] mb-8">
           Why Should You Promote Your Research?
         </h2>
@@ -157,7 +157,7 @@ export default function ResearchPromotionAndProcess(): React.ReactElement {
       {/* ========================================================================= */}
       {/* SECTION 2: HOW OUR RESEARCH IMPACT SERVICE WORKS (PROCESS)               */}
       {/* ========================================================================= */}
-      <section className="bg-[#f2f3f5] py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-[#f2f3f5] py-7 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center space-y-2 mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#09322e]">
             How Our Research Impact Service Works

@@ -97,7 +97,7 @@ export default function ResearchArticleTypesAccordion() {
   return (
     <section
       aria-labelledby="article-types-heading"
-      className="w-full bg-slate-50 py-16 px-4 sm:px-6 lg:px-8 text-slate-800"
+      className="w-full bg-slate-50 py-7 px-4 sm:px-6 lg:px-8 text-slate-800"
     >
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header Block */}

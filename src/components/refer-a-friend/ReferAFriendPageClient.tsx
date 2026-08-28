@@ -8,14 +8,14 @@ export default function ReferAFriendPage() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24">
-      <section className="bg-[#0b2825] text-white py-16 px-4 text-center">
+    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
+      <section className="bg-[#0b2825] text-white py-7 px-4 text-center">
         <Gift className="h-10 w-10 mx-auto mb-4 text-emerald-300" />
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">Refer a Friend</h1>
         <p className="text-gray-300 text-sm max-w-xl mx-auto">Unlock your referral rewards now!</p>
       </section>
 
-      <section className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <section className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 py-7 text-center">
         <h2 className="text-xl font-bold text-slate-900 mb-3">Refer your friends &amp; earn exciting rewards</h2>
         <p className="text-sm text-slate-600 leading-relaxed mb-2">
           Refer a fellow researcher to Pubrica. They will receive a 10% discount on Pubrica services. You will receive coupons worth $30 to use for Pubrica services.

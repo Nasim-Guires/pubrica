@@ -28,7 +28,7 @@ const RegulatoryWritingPage = () => {
         <div className="w-full bg-white text-gray-800 font-sans">
 
             {/* 1. Hero / Header Banner Section */}
-            <section className="bg-[#122b2b] text-white py-16 px-4 md:px-8 text-center">
+            <section className="bg-[#122b2b] text-white py-7 px-4 md:px-8 text-center">
                 <div className="max-w-4xl mx-auto border border-white/40 p-8 rounded-sm">
                     <h1 className="text-3xl md:text-4xl font-bold mb-4 tracking-wide">
                         Regulatory Writing
@@ -40,7 +40,7 @@ const RegulatoryWritingPage = () => {
             </section>
 
             {/* 2. Main Content Section */}
-            <section className="max-w-5xl mx-auto px-6 py-12 md:py-16">
+            <section className="max-w-5xl mx-auto px-6 py-6 md:py-7">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#122b2b] mb-6">
                     Regulatory Writing for Life Sciences, Pharma and Research <br className="hidden md:inline" />
                     Full Compliance, Clarity, and Accuracy in Scientific Data Submission
@@ -66,7 +66,7 @@ const RegulatoryWritingPage = () => {
                         </li>
                         <li>
                             To help you comply with international regulatory regulations (ICH, FDA, EMA, PMDA,{' '}
-                            <a href="#ctd" className="text-blue-600 ">CTD</a>).
+                            <Link href="/services/medical-writing/regulatory-writing/ctd-structure-overview-modules" className="text-blue-600 underline">CTD</Link>).
                         </li>
                         <li>
                             To avoid delays and rejections caused by insufficient documentation, formatting errors, or non-compliance.
@@ -75,9 +75,9 @@ const RegulatoryWritingPage = () => {
 
                     <p className="pt-2">
                         Our experienced regulatory writers and experts in clinical{' '}
-                        <a href="#regulatory-writing" className="text-blue-5 text-blue-600">
+                        <Link href="/academy/regulatory-writing/regulatory-documentation-medical-writing-devices" className="text-blue-5 text-blue-600 underline">
                             regulatory writing
-                        </a>{' '}
+                        </Link>{' '}
                         understand that and provide services to help you develop your data into organized, compliant documents ready for regulatory submission.
                     </p>
 
@@ -88,14 +88,19 @@ const RegulatoryWritingPage = () => {
 
                 {/* View Brochure Button */}
                 <div className="mt-8">
-                    <Link href="/uploads/medical-writing/regulatory-writing/17-03-2026-REGULATORY-WRITING-SUPPORT-.pdf" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
+                    <Link
+                        href="/uploads/medical-writing/regulatory-writing/17-03-2026-REGULATORY-WRITING-SUPPORT-.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
+                    >
                         View Brochure
                     </Link>
                 </div>
             </section>
 
             {/* 3. Why Choose Pubrica Section */}
-            <section className="bg-gray-50 py-14 px-6 md:px-8 border-t border-gray-100">
+            <section className="bg-gray-50 py-6 px-6 md:px-8 border-t border-gray-100">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-2xl md:text-3xl font-bold text-[#122b2b] mb-4">
                         Why Choose Pubrica
@@ -103,13 +108,13 @@ const RegulatoryWritingPage = () => {
 
                     <p className="text-gray-600 text-sm md:text-base max-w-4xl mb-10 leading-relaxed">
                         We simplify the{' '}
-                        <a href="#process" className="text-blue-600 ">
+                        <Link href="/academy/regulatory-writing/understanding-regulatory-writing" className="text-blue-600 underline">
                             regulatory writing process
-                        </a>
+                        </Link>
                         —from data compilation to submission—helping you meet global compliance standards. Accelerate your approval timelines with Pubrica’s expert{' '}
-                        <a href="#support" className="text-blue-600 ">
+                        <Link href="/academy/regulatory-writing/understanding-regulatory-writing" className="text-blue-600 underline">
                             regulatory writing support
-                        </a>
+                        </Link>
                         , delivering clarity, consistency, and compliance in every document.
                     </p>
 
@@ -129,9 +134,12 @@ const RegulatoryWritingPage = () => {
 
                     {/* Consultation Button */}
                     <div className="text-center">
-                        <button className="bg-[#b90000] hover:bg-red-800 text-white font-medium px-8 py-3 rounded-full transition duration-300 shadow-md">
+                        <Link
+                            href="/order-now"
+                            className="inline-block bg-[#b90000] hover:bg-red-800 text-white font-medium px-8 py-3 rounded-full transition duration-300 shadow-md"
+                        >
                             Request Free Consultation
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>

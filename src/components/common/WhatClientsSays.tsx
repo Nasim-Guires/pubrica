@@ -44,7 +44,7 @@ const WhatClientsSays: FC<ClientTestimonialsProps> = ({
   return (
     <section
       aria-labelledby="client-testimonials-heading"
-      className="w-full bg-white py-14 px-4 sm:px-8"
+      className="w-full bg-white py-6 px-4 sm:px-8"
     >
       <h2
         id="client-testimonials-heading"

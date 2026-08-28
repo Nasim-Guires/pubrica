@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // Interfaces for type safety
@@ -127,7 +128,7 @@ export default function PubricaProcessAndCompliance() {
       {/* SECTION 1: How Services Work */}
       <section
         aria-labelledby="process-heading"
-        className="bg-[#f2f4f4] py-16 px-4 sm:px-6 lg:px-12"
+        className="bg-[#f2f4f4] py-7 px-4 sm:px-6 lg:px-12"
       >
         <div className="max-w-6xl mx-auto">
           <header className="mb-10">
@@ -214,7 +215,7 @@ export default function PubricaProcessAndCompliance() {
       {/* SECTION 2: End-to-End Banner Callout */}
       <section
         aria-labelledby="cta-heading"
-        className="bg-[#082e2b] text-white py-12 px-4 sm:px-6 text-center"
+        className="bg-[#082e2b] text-white py-6 px-4 sm:px-6 text-center"
       >
         <div className="max-w-4xl mx-auto space-y-4">
           <h2
@@ -237,7 +238,7 @@ export default function PubricaProcessAndCompliance() {
       {/* SECTION 3: Why Choose Pubrica? */}
       <section
         aria-labelledby="why-choose-heading"
-        className="py-16 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto"
+        className="py-7 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto"
       >
         <header className="mb-10">
           <h2
@@ -274,7 +275,7 @@ export default function PubricaProcessAndCompliance() {
       {/* SECTION 4: Compliance & Guidelines */}
       <section
         aria-labelledby="compliance-heading"
-        className="py-12 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto"
+        className="py-6 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto"
       >
         <header className="mb-8">
           <h2
@@ -367,12 +368,12 @@ export default function PubricaProcessAndCompliance() {
                 <h3 className="text-lg font-bold text-[#082e2b] mb-3">
                   Medical Data Collection Sample Work
                 </h3>
-                <a
-                  href="#sample"
+                <Link
+                  href="/insights/medical-data-collection-on-interstitial-cysts-and-drug-uracysts"
                   className="inline-block bg-black hover:bg-gray-800 text-white font-medium text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors"
                 >
                   Discover More
-                </a>
+                </Link>
               </div>
 
               <div>
@@ -385,12 +386,12 @@ export default function PubricaProcessAndCompliance() {
                   standards, and deliver accurate, validated data for impactful
                   clinical and academic research outcomes.
                 </p>
-                <a
-                  href="#report"
+                <Link
+                  href="/insights/sample-work"
                   className="inline-block bg-black hover:bg-gray-800 text-white font-medium text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors"
                 >
                   Discover More
-                </a>
+                </Link>
               </div>
             </div>
           </div>

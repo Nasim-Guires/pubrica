@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
 
@@ -176,7 +175,7 @@ export default function ComplianceAndSamplesProductDevelopment({
     return (
         <section className={`w-full text-slate-800 bg-white font-sans ${className}`}>
             {/* Top Hero Banner */}
-            <div className="w-full bg-[#032d1f] text-white py-10 px-4 sm:px-8 text-center">
+            <div className="w-full bg-[#032d1f] text-white py-5 px-4 sm:px-8 text-center">
                 <div className="max-w-4xl mx-auto space-y-3">
                     <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">
                         Speed up your Product development with Pubrica
@@ -188,7 +187,7 @@ export default function ComplianceAndSamplesProductDevelopment({
             </div>
 
             {/* Main Compliance Section */}
-            <div className="max-w-6xl mx-auto px-4 sm:px-8 py-12 md:py-16">
+            <div className="max-w-6xl mx-auto px-4 sm:px-8 py-6 md:py-7">
                 <header className="mb-8">
                     <h2 className="text-xl sm:text-2xl font-bold text-[#1b2b28] mb-3">
                         Our Compliance and Guideline Standards

@@ -81,7 +81,7 @@ const featuresData: FeatureItem[] = [
 
 const AIDataPreparationSections: NextPage = () => {
     return (
-        <div className="w-full bg-white text-gray-800 space-y-20 pb-16">
+        <div className="w-full bg-white text-gray-800 space-y-20 pb-7">
 
             {/* TYPES OF DOCUMENTS WE SUPPORT */}
             <section className="max-w-6xl mx-auto px-4 md:px-8 space-y-8">
@@ -155,7 +155,7 @@ const AIDataPreparationSections: NextPage = () => {
             </section>
 
             {/* AI AND DATA PREPARATION SERVICES SAMPLE WORK BANNER */}
-            <section className="w-full bg-[#eaf4ef] py-16 px-4 md:px-8">
+            <section className="w-full bg-[#eaf4ef] py-7 px-4 md:px-8">
                 <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div className="relative w-full h-[280px] md:h-[320px] rounded-2xl overflow-hidden shadow-md bg-white">
                         <Image

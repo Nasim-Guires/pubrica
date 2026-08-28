@@ -147,7 +147,7 @@ export default function ScientificEditingServices() {
       {/* ========================================================== */}
       {/* SECTION 1: WHAT TYPES OF DOCUMENTS DO WE EDIT?             */}
       {/* ========================================================== */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0c373b] text-center mb-10 tracking-tight">
           What Types of Documents Do We Edit?
         </h2>
@@ -178,7 +178,7 @@ export default function ScientificEditingServices() {
       {/* ========================================================== */}
       {/* SECTION 2: OUR PACKAGES                                   */}
       {/* ========================================================== */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 border-t border-slate-100">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-slate-100">
         <div className="max-w-4xl mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c373b] mb-3 tracking-tight">
             Scientific Editing Services – Our Packages

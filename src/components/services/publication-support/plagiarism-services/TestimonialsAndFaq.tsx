@@ -98,7 +98,7 @@ export default function TestimonialsAndFaq() {
   return (
     <div className="w-full font-sans bg-white text-slate-800">
       {/* SECTION 1: Testimonials */}
-      <section className="w-full py-12 md:py-16 px-4 md:px-8 max-w-6xl mx-auto">
+      <section className="w-full py-6 md:py-7 px-4 md:px-8 max-w-6xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-3">
           Testimonials
         </h2>
@@ -203,7 +203,7 @@ export default function TestimonialsAndFaq() {
       </section>
 
       {/* SECTION 2: Frequently Asked Questions */}
-      <section className="w-full py-12 md:py-16 px-4 md:px-8 max-w-5xl mx-auto">
+      <section className="w-full py-6 md:py-7 px-4 md:px-8 max-w-5xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-8">
           Frequently Asked Questions – Plagiarism Check Service
         </h2>

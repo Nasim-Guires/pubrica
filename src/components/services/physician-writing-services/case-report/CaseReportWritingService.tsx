@@ -186,7 +186,7 @@ export default function CaseReportWritingService() {
       {/* ========================================================= */}
       {/* 1. HERO BANNER                                            */}
       {/* ========================================================= */}
-      <section className="w-full bg-gradient-to-r from-[#1b2f2d] via-[#153a35] to-[#0a1e1b] py-16 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-gradient-to-r from-[#1b2f2d] via-[#153a35] to-[#0a1e1b] py-7 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto border border-white/30 p-8 sm:p-12 text-center shadow-lg">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
             Case Report Writing Service for Journal Publication
@@ -203,7 +203,7 @@ export default function CaseReportWritingService() {
       {/* ========================================================= */}
       {/* 2. MAIN INTRO SECTION                                     */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <div className="mb-10 space-y-3">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38] leading-tight">
             Professional Journal-ready Case Report Writing Service: Clinically
@@ -286,7 +286,7 @@ export default function CaseReportWritingService() {
       {/* ========================================================= */}
       {/* 3. WHAT WE DO SECTION                                     */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <div className="mb-10 space-y-2">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
             What We do

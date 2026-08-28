@@ -112,7 +112,7 @@ export default function ResourcesPage() {
       <main className="bg-white min-h-screen">
         {/* Dark Hero Gradient Banner Frame */}
         <section
-          className="bg-gradient-to-r from-[#11231f] via-[#162e29] to-[#11231f] py-14 px-4"
+          className="bg-gradient-to-r from-[#11231f] via-[#162e29] to-[#11231f] py-6 px-4"
           aria-labelledby="page-title"
         >
           <div className="max-w-5xl mx-auto border border-gray-500/30 p-8 text-center">
@@ -130,7 +130,7 @@ export default function ResourcesPage() {
 
         {/* Content & Comprehensive 4-Column Subject Matrix */}
         <section
-          className="py-16"
+          className="py-7"
           aria-label="Scientific and Medical Disciplines"
         >
           <Container className="max-w-7xl px-4 md:px-8">

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface JourneyPhase {
   title: string;
@@ -47,7 +48,7 @@ export const ResearchJourneyPhases: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-[#f4f9fc] py-16 px-6 md:px-12 lg:px-24 font-sans">
+    <section className="w-full bg-[#f4f9fc] py-7 px-6 md:px-12 lg:px-24 font-sans">
       {/* 1. Existing Grid Section */}
       <div className="max-w-7xl mx-auto mb-16">
         <h2 className="text-[#083c4c] text-2xl md:text-3xl font-bold tracking-tight mb-3">
@@ -103,9 +104,12 @@ export const ResearchJourneyPhases: React.FC = () => {
           <h3 className="text-[#083c4c] text-xl font-bold mb-4">
             Research Service Sample Work
           </h3>
-          <button className="bg-black text-white px-6 py-2.5 rounded font-semibold text-sm hover:bg-gray-800 transition-colors mb-8">
+          <Link
+            href="/insights/sample-work"
+            className="inline-block bg-black text-white px-6 py-2.5 rounded font-semibold text-sm hover:bg-gray-800 transition-colors mb-8"
+          >
             Discover More
-          </button>
+          </Link>
 
           <h3 className="text-[#083c4c] text-xl font-bold mb-2">
             Download the full Report Now
@@ -115,9 +119,14 @@ export const ResearchJourneyPhases: React.FC = () => {
             support robust methodologies, institutional compliance, and
             impactful scientific outcomes.
           </p>
-          <button className="bg-black text-white px-6 py-2.5 rounded font-semibold text-sm hover:bg-gray-800 transition-colors">
+          <a
+            href="/uploads/research-services/03-03-2026-RESEARCH-SERVICES-1.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-black text-white px-6 py-2.5 rounded font-semibold text-sm hover:bg-gray-800 transition-colors"
+          >
             Discover More
-          </button>
+          </a>
         </div>
       </div>
     </section>

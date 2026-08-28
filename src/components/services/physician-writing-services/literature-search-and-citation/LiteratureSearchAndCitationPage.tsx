@@ -13,7 +13,7 @@ export default function LiteratureSearchAndCitationPage() {
     <main className="min-h-screen bg-white text-gray-800 font-sans">
       
       {/* Hero Banner Section */}
-      <section className="bg-gradient-to-r from-[#111e1f] via-[#1a2d2e] to-[#111e1f] text-white py-14 px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-[#111e1f] via-[#1a2d2e] to-[#111e1f] text-white py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto border border-gray-600/40 rounded-lg p-6 sm:p-10 text-center bg-black/20 backdrop-blur-sm">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
             Literature Search and Citation Service
@@ -25,7 +25,7 @@ export default function LiteratureSearchAndCitationPage() {
       </section>
 
       {/* Main Content Section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         
         {/* Section 1: Expert Literature Search and Citation Service */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
@@ -131,7 +131,7 @@ export default function LiteratureSearchAndCitationPage() {
                     scientific writing
                   </Link>{' '}
                   and{' '}
-                  <Link href="/services/medical-writing" className="text-sky-600 hover:underline">
+                  <Link href="/services/research-services/medical-writing" className="text-sky-600 hover:underline">
                     medical writing
                   </Link>{' '}
                   services to support evidence-based production of content.

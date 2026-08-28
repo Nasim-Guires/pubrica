@@ -7,7 +7,7 @@ export default function PhysicianTrainingHeroSection() {
     <div className="w-full bg-white text-slate-800">
 
       {/* 1. Dark Top Banner / Header Card */}
-      <section className="bg-[#122826] text-white py-12 px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-[#122826] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto border border-gray-500/40 p-6 sm:p-10 rounded-sm">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
             Physician Training Content Development: Equip Clinical Professionals with High-Quality Educational Material
@@ -19,7 +19,7 @@ export default function PhysicianTrainingHeroSection() {
       </section>
 
       {/* 2. Main Hero / Introductory Overview Section */}
-      <section className="py-12 sm:py-16 bg-white">
+      <section className="py-6 sm:py-7 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 
@@ -63,7 +63,7 @@ export default function PhysicianTrainingHeroSection() {
       </section>
 
       {/* 3. "What We Do" & Services Covered List */}
-      <section className="py-12 bg-white border-t border-gray-100">
+      <section className="py-6 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="mb-8">
@@ -108,8 +108,8 @@ export default function PhysicianTrainingHeroSection() {
                   <span className="text-[#b31217] font-extrabold text-base leading-none mt-0.5">•</span>
                   <div>
                     <span className="font-bold text-gray-900">Specialty-Specific Clinical Training Modules:</span> Created for General Medicine,{" "}
-                    <a href="/subject-matter-experts/cardiology/" className="text-sky-600 ">Cardiology</a>,{" "}
-                    <a href="/subject-matter-experts/neurology/" className="text-sky-600 ">Neurology</a>, Oncology, Paediatrics, etc.
+                    <Link href="/subject-matter-experts/cardiology" className="text-sky-600 ">Cardiology</Link>,{" "}
+                    <Link href="/subject-matter-experts/neurology" className="text-sky-600 ">Neurology</Link>, Oncology, Paediatrics, etc.
                   </div>
                 </li>
 

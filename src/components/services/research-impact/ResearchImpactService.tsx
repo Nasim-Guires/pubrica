@@ -8,7 +8,7 @@ export default function ResearchImpactService(): React.ReactElement {
   return (
     <div className="w-full font-sans text-slate-800 bg-[#f9fbfb]">
       {/* ---------------- HERO BANNER ---------------- */}
-      <section className="bg-[#122826] text-white py-12 px-4 sm:px-6 lg:px-8 text-center border-b border-emerald-950">
+      <section className="bg-[#122826] text-white py-6 px-4 sm:px-6 lg:px-8 text-center border-b border-emerald-950">
         <div className="max-w-4xl mx-auto border border-emerald-700/50 p-6 sm:p-8 rounded-sm bg-[#122826]/80 shadow-inner">
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-3">
             Research Impact Service
@@ -23,7 +23,7 @@ export default function ResearchImpactService(): React.ReactElement {
       </section>
 
       {/* ---------------- MAIN CONTENT SECTION ---------------- */}
-      <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column: Text & List */}
           <div className="lg:col-span-7 space-y-6">
@@ -80,6 +80,8 @@ export default function ResearchImpactService(): React.ReactElement {
             <div className="pt-2">
               <a
                 href="/uploads/research-impact/Research-Impact-Services_compressed.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-[#123835] hover:bg-[#09322e] text-white text-xs sm:text-sm font-semibold py-3 px-6 rounded-full transition-colors shadow-sm"
               >
                 View brochure

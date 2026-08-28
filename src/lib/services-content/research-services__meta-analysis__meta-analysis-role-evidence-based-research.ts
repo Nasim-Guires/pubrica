@@ -80,7 +80,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
     "items": [
       "A key source of these challenges is the publication bias; studies that report statistically significant results are generally more likely to be published compared to those that yield null findings. [[4](https://doi.org/10.1002/0470870168.ch1),[5](https://doi.org/10.1016/s0140-6736(09)60329-9)]",
       "Another concern with meta-analyses is the fact that the studies being reviewed often differ significantly from one another in terms of multi-faceted characteristics, including design, populations, interventions, and outcomes.",
-      "A high level of heterogeneity will likely result in a lesser degree of confidence in the pooled estimate derived from the meta-analysis and necessitate the application of complex [statistical techniques](https://pubrica.com/academy/statistical-analysis/null-hypothesis-importance-research/) such as random-effects models.[[6](https://doi.org/10.1136/bmj.d4002)]"
+      "A high level of heterogeneity will likely result in a lesser degree of confidence in the pooled estimate derived from the meta-analysis and necessitate the application of complex [statistical techniques](https://pubrica.com/academy/statistical-analysis/null-hypothesis-importance-in-research/) such as random-effects models.[[6](https://doi.org/10.1136/bmj.d4002)]"
     ]
   },
   {
@@ -134,7 +134,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Unlock the full potential of your research with our professional meta-analysis services. Contact Pubrica today for expert assistance in conducting publication-ready meta-analyses and reporting. [Get Expert Publishing Support] or [Schedule a Free Consultation]."
+    "text": "Unlock the full potential of your research with our professional meta-analysis services. Contact Pubrica today for expert assistance in conducting publication-ready meta-analyses and reporting. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)."
   },
   {
     "type": "h2",

@@ -5,7 +5,7 @@ export default function BiomolecularEngineeringPage() {
         <section>
 
             {/* Hero Banner */}
-            <div className="bg-[#062526] py-10">
+            <div className="bg-[#062526] py-5">
                 <div className="max-w-5xl mx-auto border border-white/40 px-6 py-8 text-center">
 
                     <h1 className="text-white text-4xl font-bold mb-4">
@@ -24,7 +24,7 @@ export default function BiomolecularEngineeringPage() {
 
 
             {/* Main Content */}
-            <div className="bg-[#f8f8f8] py-16">
+            <div className="bg-[#f8f8f8] py-7">
 
                 <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 

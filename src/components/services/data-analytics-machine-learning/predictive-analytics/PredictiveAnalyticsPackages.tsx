@@ -97,7 +97,7 @@ const packagesData: PackageItem[] = [
 
 export default function PredictiveAnalyticsPackages() {
     return (
-        <section className="py-16 px-4 bg-white font-sans">
+        <section className="py-7 px-4 bg-white font-sans">
             <div className="max-w-6xl mx-auto">
                 {/* Section Heading */}
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1a3832] mb-3">

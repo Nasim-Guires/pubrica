@@ -94,7 +94,7 @@ export default function DataServicesSection() {
   };
 
   return (
-    <main className="w-full bg-white text-slate-800 py-12 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto font-sans">
+    <main className="w-full bg-white text-slate-800 py-6 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto font-sans">
       {/* Semantic Header Section */}
       <header className="mb-10">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#082e2b] mb-4 tracking-tight leading-snug">

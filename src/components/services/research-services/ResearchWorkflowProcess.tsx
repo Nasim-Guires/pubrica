@@ -71,9 +71,8 @@ export const ResearchWorkflowProcess: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-[#f4f9fc] py-12 md:py-16 px-4 md:px-8 font-sans overflow-hidden">
-      {/* Header */}
-      <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
+    <section className="w-full bg-[#f4f9fc] py-7 px-6 font-sans">
+      <div className="max-w-7xl mx-auto text-center mb-16">
         <h2 className="text-[#083c4c] text-2xl md:text-3xl font-bold tracking-tight mb-2">
           How Our Research Service works
         </h2>

@@ -14,7 +14,7 @@ const LearningDesignSampleSection: NextPage = () => {
         />
       </Head>
 
-      <section className="w-full bg-[#f4faf7] py-12 px-4 md:px-8">
+      <section className="w-full bg-[#f4faf7] py-6 px-4 md:px-8">
         <div className="max-w-5xl mx-auto bg-white border border-[#d2e8de] rounded-2xl p-6 md:p-10 shadow-sm flex flex-col md:flex-row items-center gap-8">
           
           {/* Left Image Column */}

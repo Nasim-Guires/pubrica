@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const IMG = "/images/medical-writing";
@@ -40,9 +41,9 @@ const serviceDataRow1: ServiceCard[] = [
     description: (
       <>
         We provide{" "}
-        <a href="#medical-writing" className="text-sky-600 hover:underline">
+        <Link href="/academy/medical-writing/transform-pharma-biotech-challenges-into-publishable-manuscripts" className="text-sky-600 hover:underline">
           medical writing
-        </a>{" "}
+        </Link>{" "}
         for researchers and institutions: manuscripts, reviews, thesis
         assistance, CME/CPD writing, and case reports.
       </>
@@ -114,7 +115,7 @@ function ServiceCardView({ service }: { service: ServiceCard }) {
 
 export default function WhoWeServeAndServices(): React.ReactElement {
   return (
-    <div className="w-full font-sans text-slate-800 bg-[#f8f9f9] py-12 px-4 sm:px-6 lg:px-12 space-y-16">
+    <div className="w-full font-sans text-slate-800 bg-[#f8f9f9] py-6 px-4 sm:px-6 lg:px-12 space-y-16">
       <section className="max-w-6xl mx-auto space-y-6">
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold text-[#09322e] mb-3">
@@ -122,12 +123,12 @@ export default function WhoWeServeAndServices(): React.ReactElement {
           </h2>
           <p className="text-xs sm:text-sm text-slate-700 leading-relaxed max-w-4xl">
             At Pubrica, we provide specialized{" "}
-            <a
-              href="#medical-writing-services"
+            <Link
+              href="/academy/medical-writing/medical-writing-approaches"
               className="text-sky-600 hover:underline"
             >
               medical writing services
-            </a>{" "}
+            </Link>{" "}
             to a diverse range of audiences across all stages of the product and
             research lifecycle, ensuring that each group receives high-quality,
             accurate, and tailored content.

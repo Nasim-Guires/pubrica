@@ -126,7 +126,7 @@ export default function Navbar() {
                         </Link>
 
                         {/* Mega Menu Container: below lg it anchors to the full nav bar (nearest positioned ancestor) so it can never overflow past the viewport regardless of trigger position; at lg+ it reverts to centering under the trigger itself, matching the original desktop design. */}
-                        <div className="absolute left-6 right-6 lg:left-1/2 lg:right-auto lg:-translate-x-1/2 top-full mt-1 w-auto lg:w-[750px] rounded-md bg-white shadow-2xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-[100] flex">
+                        <div className="absolute left-6 right-6 lg:left-1/2 lg:right-auto lg:-translate-x-1/2 top-full mt-1 w-auto lg:w-[950px] rounded-md bg-white shadow-2xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-[100] flex">
                           {/* Left Column: Vertical Sub-links list */}
                           <div className="w-[340px] py-2 border-r border-gray-200 max-h-[420px] overflow-y-auto">
                             {link.dropdown.map((sublink) => {
@@ -192,6 +192,29 @@ export default function Navbar() {
                               </div>
                             </div>
                           </div>
+
+                          {/* Third Column: Sample Work Promo Tile */}
+                          {selectedSubItem?.sampleWork && (
+                            <div className="hidden lg:block w-[220px] p-4 border-l border-gray-200 bg-white">
+                              <Link href="/insights/sample-work" className="block group">
+                                <div className="bg-[#073632] text-white text-xs font-bold text-center py-2 rounded-t-md">
+                                  Sample Work
+                                </div>
+                                <div className="relative w-full h-[130px] border border-t-0 border-gray-200 rounded-b-md overflow-hidden">
+                                  <Image
+                                    src={selectedSubItem.sampleWork}
+                                    alt={`${selectedSubItem.label} sample work`}
+                                    fill
+                                    sizes="220px"
+                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                  />
+                                </div>
+                                <p className="mt-2 text-[11px] font-semibold text-gray-700 text-center leading-snug">
+                                  {selectedSubItem.sampleWorkCaption ?? selectedSubItem.label}
+                                </p>
+                              </Link>
+                            </div>
+                          )}
                         </div>
                       </div>
                     );

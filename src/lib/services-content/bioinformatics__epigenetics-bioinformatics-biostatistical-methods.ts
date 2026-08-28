@@ -223,7 +223,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "From NGS epigenetic analysis to integrative multi-omics modeling, Pubrica delivers statistically robust, end-to-end epigenomic research analysis solutions tailored to your study goals.[Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "From NGS epigenetic analysis to integrative multi-omics modeling, Pubrica delivers statistically robust, end-to-end epigenomic research analysis solutions tailored to your study goals.[Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h2",

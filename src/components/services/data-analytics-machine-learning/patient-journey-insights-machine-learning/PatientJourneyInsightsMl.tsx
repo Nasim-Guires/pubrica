@@ -56,7 +56,7 @@ export default function PatientJourneyInsightsMl() {
     return (
         <div className="w-full bg-white font-sans text-gray-800">
             {/* 1. TOP HERO BANNER */}
-            <section className="bg-[#102a28] text-white py-12 px-4 sm:px-6 lg:px-8 text-center">
+            <section className="bg-[#102a28] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
                 <div className="max-w-5xl mx-auto border border-gray-600 p-8 rounded-lg bg-[#143330]">
                     <h1 className="text-3xl sm:text-4xl font-bold mb-4">
                         Patient Journey & Insights – Machine Learning
@@ -68,7 +68,7 @@ export default function PatientJourneyInsightsMl() {
             </section>
 
             {/* 2. OVERVIEW SECTION WITH IMAGE */}
-            <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3835] mb-4">
                     Transform complex patient data into actionable insights with AI-powered journey mapping and predictive analytics
                 </h2>
@@ -127,7 +127,7 @@ export default function PatientJourneyInsightsMl() {
             </section>
 
             {/* 3. OUR SERVICES (COLLAPSIBLE ACCORDION SECTION) */}
-            <section className="max-w-6xl mx-auto py-10 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+            <section className="max-w-6xl mx-auto py-5 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
                 <h2 className="text-2xl font-bold text-[#1a3835] mb-2">Our Services</h2>
                 <p className="text-sm text-gray-600 mb-8 max-w-4xl">
                     At Pubrica, we utilize advanced machine learning techniques to decipher complex patient data, identify treatment pathways, and derive actionable insights that inform evidence-driven healthcare decisions.

@@ -131,7 +131,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "CARE Guidelines for Case Reports: Framework Tools and Clinical Applications? Our Pubrica consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "CARE Guidelines for Case Reports: Framework Tools and Clinical Applications? Our Pubrica consultants are here to guide you. [Get Expert Publishing Support](/order-now) or [Schedule a Free Consultation](/order-now)"
   },
   {
     "type": "h2",

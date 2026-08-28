@@ -33,7 +33,7 @@ export default async function CallForPaperPage({ params }: CallForPaperPageProps
   const bannerImage = mediaUrl(post.heroImage);
 
   return (
-    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24">
+    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
       <div className="relative h-56 md:h-72 w-full bg-[#0b2825]">
         {bannerImage && (
           <Image src={bannerImage} alt={post.title} fill className="object-cover opacity-35" priority />
@@ -45,7 +45,7 @@ export default async function CallForPaperPage({ params }: CallForPaperPageProps
         </div>
       </div>
 
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-10">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-5">
         <main className="bg-white p-6 md:p-10 rounded-2xl border border-slate-100 shadow-sm">
           <Link
             href="/call-for-papers"

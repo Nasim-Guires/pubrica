@@ -42,7 +42,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
   return (
     <div className="w-full font-sans">
       {/* Top Gradient Hero Banner Section */}
-      <section className="w-full bg-gradient-to-r from-[#192b2d] via-[#213a3e] to-[#122325] py-14 px-6 md:px-12 lg:px-24 text-center text-white">
+      <section className="w-full bg-gradient-to-r from-[#192b2d] via-[#213a3e] to-[#122325] py-6 px-6 md:px-12 lg:px-24 text-center text-white">
         <div className="max-w-5xl mx-auto border border-white/80 p-8 md:p-10 rounded-sm bg-black/10 backdrop-blur-xs">
           <h1 className="text-xl md:text-2xl lg:text-[28px] font-bold tracking-wide leading-snug mb-4">
             {bannerTitle}
@@ -54,7 +54,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
       </section>
 
       {/* Main Content Section */}
-      <section className="w-full bg-white py-12 px-6 md:px-12 lg:px-24 text-left">
+      <section className="w-full bg-white py-6 px-6 md:px-12 lg:px-24 text-left">
         <div className="max-w-7xl mx-auto">
           {/* Section Sub-heading Title */}
           <h2 className="text-[#083c4c] text-2xl md:text-3xl lg:text-[32px] font-extrabold leading-tight tracking-tight mb-6 max-w-6xl">
@@ -65,9 +65,9 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
           <div className="space-y-4 mb-8 max-w-6xl">
             <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed text-justify">
               We offer specialized{" "}
-              <a href="/services/physician-writing-services" className="text-[#3b82f6] hover:underline">
+              <Link href="/services/physician-writing-services" className="text-[#3b82f6] hover:underline">
                 physician writing services
-              </a>{" "}
+              </Link>{" "}
               {leadParagraph.split("physician writing services")[1]}
             </p>
             <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed font-medium">
@@ -84,17 +84,17 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
               </h3>
               <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed text-justify">
                 Pubrica's{" "}
-                <a href="/services/physician-writing-services" className="text-[#3b82f6] hover:underline">
+                <Link href="/services/physician-writing-services" className="text-[#3b82f6] hover:underline">
                   Physician Writing Services
-                </a>{" "}
+                </Link>{" "}
                 {
                   bodyText1
                     .split("Physician Writing Services")[1]
                     .split("medical writing")[0]
                 }
-                <a href="/services/medical-writing" className="text-[#3b82f6] hover:underline">
+                <Link href="/services/research-services/medical-writing" className="text-[#3b82f6] hover:underline">
                   medical writing
-                </a>
+                </Link>
                 {
                   bodyText1
                     .split("Physician Writing Services")[1]
@@ -158,9 +158,9 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                 } else if (bullet.includes("Plagiarism and AI-generated")) {
                   renderedText = (
                     <span>
-                      <a href="/services/publication-support/plagiarism-services" className="text-[#3b82f6] hover:underline">
+                      <Link href="/services/publication-support/plagiarism-services" className="text-[#3b82f6] hover:underline">
                         Plagiarism
-                      </a>{" "}
+                      </Link>{" "}
                       and AI-generated article screening with a comprehensive
                       report
                     </span>
@@ -168,9 +168,9 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                 } else if (bullet.includes("Literature review")) {
                   renderedText = (
                     <span>
-                      <a href="/services/research-services/literature-review-and-gap" className="text-[#3b82f6] hover:underline">
+                      <Link href="/services/research-services/literature-review-and-gap" className="text-[#3b82f6] hover:underline">
                         Literature review
-                      </a>{" "}
+                      </Link>{" "}
                       from PubMed, Embase,{" "}
                       <Link
                         href="/services/physician-writing-services/scopus-indexed-journals-submission-guide/"

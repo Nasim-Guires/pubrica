@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface PackageItem {
@@ -84,8 +85,8 @@ export default function PhysicianTrainingPackage() {
     };
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-800 pb-16">
-            <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 space-y-12">
+        <div className="min-h-screen bg-white font-sans text-slate-800 pb-7">
+            <div className="max-w-6xl mx-auto px-4 py-8 space-y-12">
                 {/* Top Feature / Banner Section */}
                 <section className="bg-[#f2faf5] rounded-xl p-6 md:p-8 border border-slate-100 shadow-sm">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
@@ -106,9 +107,9 @@ export default function PhysicianTrainingPackage() {
                                 <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-3">
                                     Physician Training Content Development Sample Work
                                 </h3>
-                                <button className="bg-black hover:bg-slate-800 text-white font-medium px-8 py-2 rounded-full text-sm transition">
+                                <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-slate-800 text-white font-medium px-8 py-2 rounded-full text-sm transition">
                                     Discover More
-                                </button>
+                                </Link>
                             </div>
 
                             {/* Box 2 */}
@@ -123,9 +124,9 @@ export default function PhysicianTrainingPackage() {
                                     designed to be implementable in a real practice setting and
                                     compliant with CME.
                                 </p>
-                                <button className="bg-black hover:bg-slate-800 text-white font-medium px-8 py-2 rounded-full text-sm transition">
+                                <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-slate-800 text-white font-medium px-8 py-2 rounded-full text-sm transition">
                                     Discover More
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

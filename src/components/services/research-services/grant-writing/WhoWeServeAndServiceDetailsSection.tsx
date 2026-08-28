@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface AudienceCard {
@@ -47,9 +48,7 @@ const audienceCards: AudienceCard[] = [
     id: "healthcare",
     title: "Healthcare Professionals and Clinical Researchers",
     description:
-      "Hospitals and clinicians rely on our clinical research grant writing expertise for grants supporting ",
-    linkText: "trials and public health initiatives.",
-    linkUrl: "#clinical-trials",
+      "Hospitals and clinicians rely on our clinical research grant writing expertise for grants supporting trials and public health initiatives.",
     imageSrc: `${GW_IMG}/Healthcare-Professionals-and-Clinical-Researchers.png`,
     altText: "Healthcare professional reviewing medical data on laptop",
   },
@@ -58,8 +57,6 @@ const audienceCards: AudienceCard[] = [
     title: "Nonprofit Organizations and NGOs",
     description:
       "Charitable, advocacy, and development-focused organizations are applying for government or private foundation grants to fund projects and community initiatives.",
-    linkText: "community programs.",
-    linkUrl: "#nonprofit-grants",
     imageSrc: `${GW_IMG}/Nonprofit-Organizations-and-NGOs.png`,
     altText: "Non-profit notepad with financial documents and calculator",
   },
@@ -68,8 +65,6 @@ const audienceCards: AudienceCard[] = [
     title: "Biotech, Pharma, and Industry Partners",
     description:
       "Startups and established companies are applying for R&D grants, SBIR/STTR programs, or public-private partnerships to advance innovation and product development.",
-    linkText: "SBIR/STTR funding requests.",
-    linkUrl: "#industry-grants",
     imageSrc: `${GW_IMG}/Biotech-Pharma-and-Industry-Partners.png`,
     altText: "Lab scientists working in modern research laboratory",
   },
@@ -77,7 +72,7 @@ const audienceCards: AudienceCard[] = [
     id: "independent",
     title: "Independent Consultants & Grant Seekers",
     description:
-      "Freelancers and individuals receive personalised support from experienced grant writing consultants.",
+      "Freelancers and individuals receive personalised support from experienced ",
     linkText: "grant writing consultants.",
     linkUrl: "/academy/grant-writing/communicating-research-impact-grant-applications/",
     imageSrc: `${GW_IMG}/Independent-Consultants-Grant-Seekers.png`,
@@ -88,8 +83,6 @@ const audienceCards: AudienceCard[] = [
     title: "Government & Public Sector Bodies",
     description:
       "We collaborate with local, regional, and national government bodies to craft impactful proposals that align with funding agency priorities and public policy goals.",
-    linkText: "grant documentation.",
-    linkUrl: "#public-sector-grants",
     imageSrc: `${GW_IMG}/Government-Public-Sector-Bodies.png`,
     altText: "Public sector team presenting data on large monitor screen",
   },
@@ -219,7 +212,7 @@ export default function WhoWeServeAndServiceDetailsSection() {
       {/* ========================================================= */}
       <section
         aria-labelledby="who-we-serve-heading"
-        className="w-full bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8"
+        className="w-full bg-white py-6 sm:py-7 px-4 sm:px-6 lg:px-8"
       >
         <div className="max-w-7xl mx-auto space-y-8">
           {/* Header */}
@@ -232,12 +225,12 @@ export default function WhoWeServeAndServiceDetailsSection() {
             </h2>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-5xl">
               At Pubrica, we offer tailored research{" "}
-              <a
-                href="services/research-services/grant-writing/research-grant-proposal-writing-guide"
-                className="text-sky-600 font-medium"
+              <Link
+                href="/services/research-services/grant-writing/research-grant-proposal-writing-guide"
+                className="text-sky-600 hover:underline font-medium"
               >
                 grant writing services
-              </a>{" "}
+              </Link>{" "}
               to a diverse range of clients across academic, clinical,
               nonprofit, and industry sectors.
             </p>
@@ -273,14 +266,14 @@ export default function WhoWeServeAndServiceDetailsSection() {
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
                     {card.description}
-                    {card.linkText && (
-                      <a
-                        href={card.linkUrl || "#"}
-                        className="text-sky-400 font-normal inline"
+                    {card.linkText && card.linkUrl && (
+                      <Link
+                        href={card.linkUrl}
+                        className="text-sky-400 hover:underline font-normal inline"
                         onClick={(e) => e.stopPropagation()}
                       >
                         {card.linkText}
-                      </a>
+                      </Link>
                     )}
                   </p>
                 </div>
@@ -293,7 +286,7 @@ export default function WhoWeServeAndServiceDetailsSection() {
       {/* ========================================================= */}
       {/* 2. ACCELERATE GRANT WRITING CTA BANNER                    */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#03281e] py-12 px-4 sm:px-6 lg:px-8 text-center text-white">
+      <section className="w-full bg-[#03281e] py-6 px-4 sm:px-6 lg:px-8 text-center text-white">
         <div className="max-w-5xl mx-auto space-y-6">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
             Accelerate your Grant Writing Service with Pubrica
@@ -313,7 +306,7 @@ export default function WhoWeServeAndServiceDetailsSection() {
       {/* ========================================================= */}
       {/* 3. DETAILED SERVICE BREAKDOWN CARDS                       */}
       {/* ========================================================= */}
-      <section className="w-full bg-slate-50 py-14 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-slate-50 py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-10">
           {serviceDetails.map((service) => {
             const isOpen = activeHowItWorksId === service.id;

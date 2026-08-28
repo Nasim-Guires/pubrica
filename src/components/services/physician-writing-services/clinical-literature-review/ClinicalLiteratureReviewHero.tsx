@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface ServiceItem {
@@ -171,9 +172,9 @@ export default function ClinicalLiteratureReviewHero() {
                                     <span className="text-red-500 font-bold">•</span>
                                     <span>
                                         Shaping health technology assessments (
-                                        <a href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/health-technology-assessment-hta-overview" className="text-sky-600 underline">
+                                        <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/health-technology-assessment-hta-overview" className="text-sky-600 underline">
                                             HTA
-                                        </a>
+                                        </Link>
                                         ) and regulatory submissions.
                                     </span>
                                 </li>
@@ -204,9 +205,9 @@ export default function ClinicalLiteratureReviewHero() {
                                 Using Pubrica’s multidisciplinary team consisting of clinical
                                 researchers, epidemiologists, biostatisticians, and content
                                 experts, we can ensure the{" "}
-                                <a href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-sky-600 underline">
+                                <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-sky-600 underline">
                                     medical literature review
-                                </a>{" "}
+                                </Link>{" "}
                                 is accurate, methodologically robust, and clinically valid.
                             </p>
 
@@ -235,9 +236,9 @@ export default function ClinicalLiteratureReviewHero() {
                     </h2>
                     <p className="text-xs md:text-sm text-slate-600 mb-8">
                         Pubrica provides end-to-end support for a{" "}
-                        <a href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-sky-600 underline">
+                        <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-sky-600 underline">
                             comprehensive literature review
-                        </a>{" "}
+                        </Link>{" "}
                         to advance clinical research, product development, and regulatory
                         strategy. Our services include:
                     </p>

@@ -114,7 +114,7 @@ function ArrowIcon() {
 
 export default function AiMlPackagesSection() {
   return (
-    <section className="w-full bg-white py-16 px-4 sm:px-6 lg:px-12 font-sans text-slate-800">
+    <section className="w-full bg-white py-7 px-4 sm:px-6 lg:px-12 font-sans text-slate-800">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="mb-12 max-w-4xl">

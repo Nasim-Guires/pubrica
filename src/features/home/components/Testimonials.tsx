@@ -24,7 +24,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="w-full py-16 bg-[#f0f4f8] select-none font-sans">
+    <section id="testimonials" className="w-full py-7 bg-[#f0f4f8] select-none font-sans">
       <Container className="flex flex-col items-center">
         
         {/* Centered Heading */}

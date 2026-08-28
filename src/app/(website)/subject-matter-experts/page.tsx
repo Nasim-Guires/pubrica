@@ -116,11 +116,12 @@ export default function SubjectMatterExpertsPage() {
       <main className="mx-auto max-w-[1280px] px-6 py-12 md:px-8 lg:px-10 lg:py-14">
         {/* Introduction */}
         <section className="mb-12">
-          <h1 className="mb-5 text-[26px] font-semibold leading-tight tracking-[-0.3px] text-[#10243e] md:text-[30px] lg:text-[32px]">
+          <h2 className="mb-5 text-[26px] font-semibold leading-tight tracking-[-0.3px] text-[#10243e] md:text-[30px] lg:text-[32px]">
             All types of medical and scientific writing
-          </h1>
+          </h2>
 
           <p className="max-w-[1180px] text-[16px] font-normal leading-[1.8] text-[#10243e]">
+
             An array of writing services that cover medical and non-medical
             subjects. Regulatory writing, Clinical Report Forms (CRF),
             biostatistics, manuscripts, business writing, physician reports,

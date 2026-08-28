@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { EditorialWorkflowSection } from "../journal-manuscript-formatting-services/ProcessAndBenefitsSections";
+import Link from "next/link";
 
 // --- Types & Data ---
 interface ComplianceItem {
@@ -72,7 +73,7 @@ export default function ArtworkPreparationDetails() {
       />
 
       {/* ---------------- SECTION 2: DARK CTA BANNER ---------------- */}
-      <section className="w-full bg-[#032d1f] text-white py-10 px-4 text-center">
+      <section className="w-full bg-[#032d1f] text-white py-5 px-4 text-center">
         <div className="mx-auto max-w-5xl">
           <h3 className="text-xl md:text-2xl font-bold mb-3">
             Focus on Your Research — We’ll Handle the Artwork
@@ -86,7 +87,7 @@ export default function ArtworkPreparationDetails() {
       </section>
 
       {/* ---------------- SECTION 3: COMPLIANCE STANDARDS ---------------- */}
-      <section className="w-full bg-white py-16 px-4 md:px-8">
+      <section className="w-full bg-white py-7 px-4 md:px-8">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-3">
             Our Compliance and Guideline Standards
@@ -153,7 +154,7 @@ export default function ArtworkPreparationDetails() {
       </section>
 
       {/* ---------------- SECTION 4: SAMPLE REPORT DOWNLOAD ---------------- */}
-      <section className="w-full bg-[#f0fbf5] py-12 px-4 md:px-8">
+      <section className="w-full bg-[#f0fbf5] py-6 px-4 md:px-8">
         <div className="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-4 flex justify-center">
             <div className="relative w-[220px] h-[300px] border border-gray-200 shadow-md rounded-sm overflow-hidden bg-white">
@@ -171,12 +172,12 @@ export default function ArtworkPreparationDetails() {
               <h3 className="text-xl md:text-2xl font-bold text-black mb-3">
                 Artwork Preparation Sample Work
               </h3>
-              <a
+              <Link
                 href="/insights/sample-work/citation-and-formatting/"
                 className="inline-block w-full sm:w-auto text-center bg-black hover:bg-slate-800 text-white font-medium text-sm py-3 px-12 rounded-full transition-colors"
               >
                 Discover More
-              </a>
+              </Link>
             </div>
 
             <div className="pt-2">
@@ -188,12 +189,12 @@ export default function ArtworkPreparationDetails() {
                 conference's formatting requirements, visual standards, and
                 presentation deadlines.
               </p>
-              <a
+              <Link
                 href="/insights/sample-work/citation-and-formatting/"
                 className="inline-block w-full sm:w-auto text-center bg-black hover:bg-slate-800 text-white font-medium text-sm py-3 px-12 rounded-full transition-colors"
               >
                 Discover More
-              </a>
+              </Link>
             </div>
           </div>
         </div>

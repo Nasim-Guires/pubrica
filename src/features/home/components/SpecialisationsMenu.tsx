@@ -16,7 +16,7 @@ export default function SpecialisationsMenu() {
     <div className="w-full bg-white select-none">
       
       {/* Featured Services banner */}
-      <section className="relative w-full py-20 overflow-hidden">
+      <section className="relative w-full py-8 overflow-hidden">
         <Image
           src="/images/home/bg-5.jpg"
           alt=""
@@ -75,7 +75,7 @@ export default function SpecialisationsMenu() {
       </section>
 
       {/* 2. BOTTOM PORTION: Exact Layout & Styling Match to Image */}
-      <section className="py-20 bg-white">
+      <section className="py-8 bg-white">
         <Container className="w-full max-w-6xl text-left font-sans">
           
           {/* Header Area with Flat Accent Rule */}

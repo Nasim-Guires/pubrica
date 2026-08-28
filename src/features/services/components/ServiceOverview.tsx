@@ -33,7 +33,7 @@ const ROUTE_MAP: Record<string, string> = {
   "journal submission": "/services/publication-support/journal-submission/",
   "journal selection": "/services/publication-support/journal-selection/",
   "scientific journal publication services":
-    "/services/publication-support",
+    "/academy/journal-submission/open-access-publishing-guide/",
   CONSORT: "/services/publication-support/consort-guidelines-reporting-trials/",
   PRISMA:
     "https://static1.squarespace.com/static/65b880e13b6ca75573dfe217/t/67ad313f1c80aa5235fce0d0/1739403584136/PRISMA_2020_checklist.pdf",
@@ -71,7 +71,7 @@ const COMPLIANCE_ITEMS = [
     logo: "/images/publication-support/Consort-Logo.webp",
     alt: "SPIRIT CONSORT Logo",
     title: "Consolidated Standards of Reporting Trials",
-    url: "https://www.consort-spirit.org/",
+    url: "https://www.consort-statement.org/",
   },
 ];
 
@@ -165,7 +165,7 @@ export default function ServiceOverview() {
 
   return (
     <div className="w-full font-sans bg-white text-slate-800 antialiased pt-0 mt-0">
-      <div className="max-w-6xl mx-auto pt-0 pb-10 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto pt-0 pb-5 px-4 sm:px-6">
         {/* Main Section Heading */}
         <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-[#0c3830] leading-tight mb-4 mt-0 pt-0">
           {overviewHeading}
@@ -202,12 +202,14 @@ export default function ServiceOverview() {
         {/* Action CTAs */}
         <div className="flex flex-wrap items-center gap-8 mt-6 mb-10">
           <GetFreeQuoteButton />
-          <Link
+          <a
             href="/uploads/publication-support-services_compressed.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
           >
             View Brochure
-          </Link>
+          </a>
         </div>
 
         {/* Compliance and Guidelines Section */}

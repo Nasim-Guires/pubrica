@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Link from "next/link";
 
 export interface RejectionTableRow {
   reasonBoldPrefix?: string;
@@ -136,7 +137,7 @@ export default function ServiceRejectionTable({
   const tableData = FULL_REJECTION_TABLE_DATA;
 
   return (
-    <div className="w-full max-w-5xl mx-auto py-8 px-4 sm:px-6 font-sans">
+    <div className="w-full max-w-5xl mx-auto py-6 px-4 sm:px-6 font-sans">
       {/* Heading Group */}
       <div className="mb-8">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#083a50] mb-4">
@@ -281,7 +282,10 @@ export default function ServiceRejectionTable({
         </h2>
         <p className="text-[14px] sm:text-[15px] text-slate-600 leading-relaxed mb-8">
           At Pubrica, we offer complete{" "}
-          <Link href="/academy/publication-support/challenges-in-research-paper-writing-and-strategies-to-overcome-them" className="text-[#3b82f6]  cursor-pointer font-medium">
+          <Link
+            href="/academy/publication-support/challenges-in-research-paper-writing-and-strategies-to-overcome-them"
+            className="text-[#3b82f6] hover:underline cursor-pointer font-medium"
+          >
             publication support services
           </Link>{" "}
           by aiding researchers from the process of{" "}

@@ -48,7 +48,7 @@ export default function CaseReportWritingPage() {
     <div className="min-h-screen bg-white text-gray-800 flex flex-col justify-between">
       <div>
         {/* Hero Banner Section */}
-        <section className="bg-slate-900 text-white py-16 text-center">
+        <section className="bg-slate-900 text-white py-7 text-center">
           <div className="max-w-4xl mx-auto border-2 border-slate-700 py-8 px-6 bg-slate-800/50 shadow-lg">
             <h1 className="text-3xl md:text-4xl font-bold tracking-wide">Clinical Case Report writing</h1>
             <p className="text-gray-300 text-sm md:text-base mt-2">
@@ -58,7 +58,7 @@ export default function CaseReportWritingPage() {
         </section>
 
         {/* Main Content Container */}
-        <main className="max-w-5xl mx-auto px-6 py-12 space-y-12">
+        <main className="max-w-5xl mx-auto px-6 py-6 space-y-12">
           
           {/* Introduction Section */}
           <section className="space-y-4">

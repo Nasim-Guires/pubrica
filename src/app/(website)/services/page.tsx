@@ -106,7 +106,7 @@ export default function ServicesPage() {
 
       {/* Hero Banner Section */}
       <section
-        className="relative bg-gray-900 text-white py-24 bg-cover bg-center bg-no-repeat font-poppins"
+        className="relative bg-gray-900 text-white py-8 bg-cover bg-center bg-no-repeat font-poppins"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80')`,
         }}
@@ -119,7 +119,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Main Content & Services Section */}
-      <section className="bg-white py-16 font-poppins">
+      <section className="bg-[#fcfcfc] py-7 font-poppins">
         <Container className="max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Section Introduction Header */}
           <div className="max-w-4xl mb-12">

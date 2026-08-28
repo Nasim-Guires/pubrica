@@ -3,7 +3,7 @@ import type { ArticleBlock } from '@/components/services/ServiceArticleRenderer'
 export const ARTICLE_BLOCKS: ArticleBlock[] = [
   {
     "type": "p",
-    "text": "Table of Contents[1. What is a Case Report?](#1)[2. The Role of Case Reports](#2)[3. Structuring a Case Report](#3)[4. Step-By-Step Example: Writing Your Case Report](#4)[5. Addressing Challenges in Case Report Writing](#5)[6. Writing an Outstanding Case Report](#6)[7. How Pubrica Can Help](#7)[8. Conclusion](#conclusion)"
+    "text": "Table of Contents[1. What is a Case Report?](#1-what-is-a-case-report)[2. The Role of Case Reports](#2-the-role-of-case-reports)[3. Structuring a Case Report](#3-structuring-a-case-report)[4. Step-By-Step Example: Writing Your Case Report](#4-step-by-step-example-writing-your-case-report)[5. Addressing Challenges in Case Report Writing](#5-addressing-challenges-in-case-report-writing)[6. Writing an Outstanding Case Report](#6-writing-an-outstanding-case-report)[7. How Pubrica Can Help](#7-how-pubrica-can-help)[8. Conclusion](#conclusion)"
   },
   {
     "type": "h2",
@@ -90,7 +90,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "When formulating a case report, it is important to have clear organization. The following is the universally accepted [structure of a case report](https://pubrica.com/insights/sample-work/box-pulmonary-vein-isolation-pectus-excavatum/) and follows the academic writing structure:"
+    "text": "When formulating a case report, it is important to have clear organization. The following is the universally accepted [structure of a case report](/insights/box-pulmonary-vein-isolation-pectus-excavatum) and follows the academic writing structure:"
   },
   {
     "type": "h2",
@@ -280,7 +280,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "How to Increase Health Literacy in Patient Outcomes with Medical Communications. Our [Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "How to Increase Health Literacy in Patient Outcomes with Medical Communications. Our [Pubrica](https://pubrica.com/) consultants are here to guide you. [Get Expert Publishing Support](/order-now) or [Schedule a Free Consultation](/order-now)"
   },
   {
     "type": "h2",

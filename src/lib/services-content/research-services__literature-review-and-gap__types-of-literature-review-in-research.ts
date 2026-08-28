@@ -181,7 +181,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Turn your literature review into a publication-ready manuscript. Pubrica provides end-to-end literature review and evidence synthesis support, helping researchers identify gaps, strengthen arguments, and meet journal reporting standards. [Get Expert Publishing Support] or [Schedule a Free Consultation]"
+    "text": "Turn your literature review into a publication-ready manuscript. Pubrica provides end-to-end literature review and evidence synthesis support, helping researchers identify gaps, strengthen arguments, and meet journal reporting standards. [Get Expert Publishing Support](https://pubrica.com/order-now/) or [Schedule a Free Consultation](https://pubrica.com/order-now/)"
   },
   {
     "type": "h2",

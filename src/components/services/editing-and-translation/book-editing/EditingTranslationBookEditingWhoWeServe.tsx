@@ -66,7 +66,7 @@ export const EditingTranslationBookEditingWhoWeServe: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-12 text-slate-800">
+    <section className="w-full bg-white py-6 text-slate-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-3">

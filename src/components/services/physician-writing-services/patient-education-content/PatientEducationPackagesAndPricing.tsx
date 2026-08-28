@@ -85,7 +85,7 @@ export default function PatientEducationPackagesAndPricing() {
       {/* --- Section 1: Hero Banner --- */}
       <section
         aria-label="Speed up your Patient Education Content Development"
-        className="bg-[#0c2e3a] py-12 px-4 sm:px-6 lg:px-8 text-white"
+        className="bg-[#0c2e3a] py-6 px-4 sm:px-6 lg:px-8 text-white"
       >
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Left Badge / Icon */}
@@ -125,7 +125,7 @@ export default function PatientEducationPackagesAndPricing() {
       {/* --- Section 2: Why Choose Pubrica --- */}
       <section
         aria-label="Why Choose Pubrica for Patient Education Content Service"
-        className="bg-white py-14 px-4 sm:px-6 lg:px-8"
+        className="bg-white py-6 px-4 sm:px-6 lg:px-8"
       >
         <div className="max-w-6xl mx-auto space-y-8">
           <div className="space-y-3">
@@ -243,7 +243,7 @@ export default function PatientEducationPackagesAndPricing() {
       {/* --- Section 3: Sample Work & Report Download Callout --- */}
       <section
         aria-label="Patient Education Content Service Sample Work"
-        className="bg-[#f2fcf7] py-12 px-4 sm:px-6 lg:px-8 border-y border-slate-200"
+        className="bg-[#f2fcf7] py-6 px-4 sm:px-6 lg:px-8 border-y border-slate-200"
       >
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-5 relative w-full aspect-[4/3] rounded-sm overflow-hidden shadow-sm bg-slate-100">
@@ -299,7 +299,7 @@ export default function PatientEducationPackagesAndPricing() {
       {/* --- Section 4: Patient Education Packages (Pricing Table) --- */}
       <section
         aria-label="Patient Education Packages"
-        className="bg-white py-16 px-4 md:px-8 w-full text-left font-sans"
+        className="bg-white py-7 px-4 sm:px-6 lg:px-8"
       >
         <div className="max-w-7xl mx-auto space-y-10">
           <div className="text-left space-y-3 max-w-5xl">

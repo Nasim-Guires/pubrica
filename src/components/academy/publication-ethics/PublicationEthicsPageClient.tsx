@@ -115,7 +115,7 @@ export default function PublicationEthicsSection() {
   );
 
   return (
-    <section className="py-16 px-4 bg-white min-h-screen">
+    <section className="py-7 px-4 bg-white min-h-screen">
       <div className="max-w-7xl mx-auto">
         {/* Navigation Arrows */}
         <div className="flex justify-end gap-2 mb-6">

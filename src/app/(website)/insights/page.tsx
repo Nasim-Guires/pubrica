@@ -40,9 +40,9 @@ const InsightsPage = async () => {
   });
 
   return (
-    <div className="bg-[#f8f9fa] min-h-screen text-slate-800 font-sans pb-24">
+    <div className="bg-[#f8f9fa] min-h-screen text-slate-800 font-sans pb-10">
       {/* 1. HERO BANNER SECTION */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-7">
         <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-slate-100 grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-4">
             <span className="text-xs font-bold tracking-wider text-[#004d40] uppercase border-b-2 border-[#004d40] pb-1 inline-block">

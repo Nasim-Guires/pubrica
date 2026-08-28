@@ -124,7 +124,7 @@ export default function BiosimilarAdditionalComponents({
     <div className="bg-white text-[#0f2824] w-full font-sans">
       
       {/* 1. Feature Cards Grid (Complexity, Development, Regulatory) */}
-      <section className="py-12 px-6 max-w-7xl mx-auto">
+      <section className="py-6 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {featureCards.map((card, idx) => (
             <div key={idx} className="bg-white border border-gray-100 rounded-2xl p-6 shadow-[0_4px_20px_rgb(0,0,0,0.05)] relative flex flex-col justify-between">
@@ -143,7 +143,7 @@ export default function BiosimilarAdditionalComponents({
       </section>
 
       {/* 2. Where Our Authors Publish Section */}
-      <section className="py-16 px-6 max-w-5xl mx-auto text-center">
+      <section className="py-7 px-6 max-w-5xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4 text-[#0f2824]">{authorSectionTitle}</h2>
         <p className="text-gray-600 text-sm md:text-base max-w-3xl mx-auto mb-12 leading-relaxed">
           {authorSectionSubtitle}
@@ -183,7 +183,7 @@ export default function BiosimilarAdditionalComponents({
       </section>
 
       {/* 3. FDA-Approved Biosimilar Products Table Section */}
-      <section className="py-16 px-6 max-w-6xl mx-auto">
+      <section className="py-7 px-6 max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold mb-4 text-[#0f2824]">{fdaSectionTitle}</h2>
           <p className="text-gray-600 text-sm md:text-base max-w-3xl mx-auto leading-relaxed">
@@ -216,7 +216,7 @@ export default function BiosimilarAdditionalComponents({
       </section>
 
       {/* 4. Our Expert Medical Editors Section */}
-      <section className="py-16 px-6 max-w-6xl mx-auto">
+      <section className="py-7 px-6 max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4 text-[#0f2824]">{editorsSectionTitle}</h2>
           <p className="text-gray-600 text-sm md:text-base max-w-3xl mx-auto leading-relaxed">

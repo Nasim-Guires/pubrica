@@ -225,7 +225,7 @@ export default function PublicationSupportSections() {
   return (
     <div className="w-full">
       {/* CONTAINED SECTIONS (Section 1 & 2) */}
-      <div className="max-w-6xl mx-auto px-4 py-12 text-slate-800 font-sans space-y-16">
+      <div className="max-w-6xl mx-auto px-4 py-6 text-slate-800 font-sans space-y-16">
         {/* ================= SECTION 1: TYPES OF RESPONSES ================= */}
         <section>
           <h2 className="text-2xl md:text-3xl font-bold text-[#083b3a] mb-8 text-center md:text-left">

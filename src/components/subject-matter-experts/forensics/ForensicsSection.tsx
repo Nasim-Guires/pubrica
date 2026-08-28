@@ -135,7 +135,7 @@ export default function ForensicsSection() {
     };
 
     return (
-        <div className="w-full bg-white text-gray-800 font-sans py-12 px-4 sm:px-6 lg:px-8 space-y-20">
+        <div className="w-full bg-white text-gray-800 font-sans py-6 px-4 sm:px-6 lg:px-8 space-y-20">
 
 
 
