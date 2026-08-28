@@ -35,7 +35,7 @@ export default function DynamicInsightsSection({
     const params = new URLSearchParams({ limit: String(limit) });
     if (categorySlug) params.set("categorySlug", categorySlug);
 
-    fetch(`/api/insights?${params.toString()}`)
+    fetch(`/api/insights/?${params.toString()}`)
       .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
       .then((data: { items?: InsightItem[] }) => {
         if (!cancelled) setItems(data.items ?? []);
