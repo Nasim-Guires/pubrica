@@ -318,9 +318,9 @@ export default function PublicationSupportSections() {
       {/* ================= SECTION 3: FULL WIDTH WORKFLOW ================= */}
       <div className="w-full">
         <EditorialWorkflowSection
-          heading="EDITORIAL WORKFLOW"
-          subheading="Our Step-by-Step Manuscript Revision Process"
-          description="We guide your manuscript through a rigorous, multi-stage review and revision process to maximize your acceptance chances."
+          heading="How the Response to Reviewers Comments Service Works"
+          subheading="Our step-by-Step Process"
+          description="Pubrica’s domain-expert manuscript review and response to reviewer comments service strictly follows a disciplined and transparent procedure to ensure that every reviewer comment is answered accurately and professionally. This journal’s re-submission support is the best route to improve the quality of your manuscript and increase the likelihood of acceptance with an effectively executed manuscript revision plan"
           steps={WORKFLOW_STEPS}
         />
       </div>

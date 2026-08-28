@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import CommonFAQ from "@/components/common/FAQ";
 import Link from "next/link";
 

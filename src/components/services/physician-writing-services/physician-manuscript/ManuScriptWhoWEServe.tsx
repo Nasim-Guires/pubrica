@@ -89,12 +89,19 @@ export default function PhysicianManuscriptWorkflowSection() {
 
     return (
         <div className="w-full bg-white text-slate-800">
-            {/* 1. How Our Physician Manuscript Service Works (Re-designed Workflow Section) */}
-            <section className="py-12 md:py-16 px-4 md:px-8 bg-[#EAEAEA] w-full text-center font-sans overflow-hidden">
-                {/* Header */}
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0B353D] mb-2">
-                    How Our Physician Manuscript Service Works
-                </h2>
+            {/* 1. How Our Physician Manuscript Service Works */}
+            <section className="py-7 bg-[#f7f9fa] border-t border-gray-200">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] mb-3">
+                            How Our Physician Manuscript Service Works
+                        </h2>
+                        <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                            Our Step-by-Step Process for Structured, Ethical, and High-Impact Publication
+                        </h3>
+                        <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                            At Pubrica, our medical writers, scientific editors, and clinical researchers work with you to ensure you develop publication-ready manuscripts that reflect your clinical work. We guarantee each manuscript is compliant with international journal standards, ethical publishing practices, and the correct audience of medical professionals. Our process includes:
+                        </p>
+                    </div>
 
                 <h3 className="text-lg md:text-xl font-medium text-[#2C4951] mb-4">
                     Our Step-by-Step Process for Structured, Ethical, and High-Impact Publication

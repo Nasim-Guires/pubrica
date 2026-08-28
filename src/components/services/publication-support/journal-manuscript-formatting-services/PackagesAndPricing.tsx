@@ -80,6 +80,29 @@ export default function PackagesAndPricing() {
       titleColor: "#78350f",
     },
   ];
+
+  const manuscriptFormattingDescription = (
+    <>
+      Selecting the right package ensures your manuscript will be professionally
+      formatted to meet{" "}
+      <Link
+        href="/pubrica.com/services/publication-support/journal-submission/"
+        className="text-blue-700"
+      >
+        journal submission
+      </Link>{" "}
+      requirements and academic publishing standards. Whether you require minor{" "}
+      <Link
+        href="/academy/formatting-service/life-science-manuscript-formatting-faster-publication/"
+        className="text-blue-700"
+      >
+        manuscript formatting
+      </Link>{" "}
+      or a complete research paper layout design, Pubrica provides customized
+      manuscript formatting solutions for every level of editorial complexity
+      and journal guidelines compliance.
+    </>
+  );
   return (
     <div className="w-full bg-[#f8fafc] font-sans text-gray-800 py-6 space-y-16 antialiased">
       {/* ============================================================ */}
@@ -132,36 +155,15 @@ export default function PackagesAndPricing() {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* SECTION 2: SERVICE PACKAGES COMPARISON                        */}
-      {/* ============================================================ */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-3">
-          Manuscript Formatting Service Packages
-        </h2>
-        <p className="text-xs md:text-sm text-gray-700 leading-relaxed max-w-5xl mb-8">
-          Selecting the right package ensures your manuscript will be
-          professionally formatted to meet{" "}
-          <Link href="/services/publication-support/journal-submission" className="text-[#3b82f6] hover:underline">
-            journal submission
-          </Link>{" "}
-          requirements and academic publishing standards. Whether you require
-          minor manuscript editing and formatting or a complete research paper
-          layout design, Pubrica provides customized{" "}
-          <Link href="/academy/formatting-service/life-science-manuscript-formatting-faster-publication" className="text-[#3b82f6] hover:underline">
-            manuscript formatting
-          </Link>{" "}
-          solutions for every level of editorial complexity and journal
-          guidelines compliance.
-        </p>
-
-        {/* Package Cards */}
-        <CommonPackages packages={manuscriptPackages} buttonText="Get a Free Quote" />
-
-        <div className="pt-2">
-          <GetFreeQuoteButton />
-        </div>
-      </section>
+        {/* Replaced Packages Section */}
+        <CommonPackages
+          title="Manuscript Formatting Service Packages"
+          description={manuscriptFormattingDescription}
+          packages={manuscriptPackages}
+          buttonText="Get a Free Quote"
+        />
+        <GetFreeQuoteButton />
+      </div>
 
       {/* ============================================================ */}
       {/* SECTION 3: DELIVERY AND PRICING                               */}

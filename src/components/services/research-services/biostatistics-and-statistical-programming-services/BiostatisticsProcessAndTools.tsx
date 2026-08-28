@@ -128,72 +128,14 @@ export default function BiostatisticsProcessAndTools() {
       {/* ========================================================= */}
       {/* 2. PROCESS SECTION (Matching EditorialWorkflowSection Design) */}
       {/* ========================================================= */}
-      <section className="py-12 md:py-16 px-4 md:px-8 bg-[#EAEAEA] w-full text-center font-sans overflow-hidden">
-        {/* Header */}
-        <h2 className="text-2xl md:text-3xl font-bold text-[#0B353D] mb-2">
-          How Our Biostatistical Programming Service Works
-        </h2>
-
-        <h3 className="text-lg md:text-xl font-medium text-[#2C4951] mb-4">
-          Our Step-by-step Process
-        </h3>
-
-        {/* ============================================================ */}
-        {/* MOBILE LAYOUT (< md screens): Vertical Alternating Timeline  */}
-        {/* ============================================================ */}
-        <div className="flex md:hidden flex-col items-center w-full max-w-sm mx-auto space-y-6">
-          {steps.map((step, index) => {
-            const isEven = index % 2 === 0;
-
-            return (
-              <div
-                key={index}
-                className="relative flex items-center w-full min-h-[160px]"
-              >
-                {/* Connecting Vertical Line */}
-                {index !== steps.length - 1 && (
-                  <div
-                    className={`absolute top-8 bottom-0 w-[2px] bg-[#0081A7] z-0 ${isEven ? "left-4" : "right-4"
-                      }`}
-                  />
-                )}
-
-                {/* Step Number Badge */}
-                <div
-                  className={`absolute z-10 w-9 h-9 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm shadow-sm ${isEven ? "left-0" : "right-0"
-                    }`}
-                >
-                  {step.stepNumber}
-                </div>
-
-                {/* Step Card Container */}
-                <div
-                  className={`w-full flex ${isEven ? "pl-10 pr-2" : "pr-10 pl-2"
-                    }`}
-                >
-                  <div className="bg-[#F8F9FA] border border-[#E2E8F0] rounded-sm shadow-xs p-4 flex flex-col items-center text-center w-full z-10">
-                    <div className="w-10 h-10 relative mb-3 flex items-center justify-center">
-                      <Image
-                        src={step.iconSrc}
-                        alt={step.title}
-                        width={36}
-                        height={36}
-                        className="object-contain"
-                      />
-                    </div>
-
-                    <h4 className="font-bold text-[#0F172A] text-xs mb-2 leading-snug">
-                      {step.title}
-                    </h4>
-
-                    <p className="text-[#64748B] text-[11px] leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+      <section className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 overflow-x-auto">
+        <div className="text-center space-y-2 mb-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
+            How Our Biostatistical Programming Service Works
+          </h2>
+          <p className="text-sm sm:text-base text-slate-600 font-medium">
+            Our Step-by-step Process
+          </p>
         </div>
 
         {/* ============================================================ */}

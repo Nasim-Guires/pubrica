@@ -245,7 +245,7 @@ export default function BiostatisticsComplianceAndPackages() {
           By integrating these compliance and guideline standards, we ensure
           that our clinical trial statistical programming, pharmaceutical{" "}
           <Link
-            href="/services/research-services/biostatistics-and-statistical-programming-services"
+            href="/services/research-services/biostatistics-and-statistical-programming-service"
             className="text-sky-600 hover:underline font-medium"
           >
             biostatistics

@@ -79,6 +79,7 @@ export default function WhatWeDoAndWhoWeServe() {
   return (
     <section className="w-full bg-white py-6 font-sans text-gray-800 antialiased">
       <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-16">
+        
         {/* ============================================================ */}
         {/* SECTION 1: WHAT WE DO                                        */}
         {/* ============================================================ */}

@@ -262,10 +262,9 @@ export default function WhoWeServeAndProcessLiterature() {
             </section>
 
             {/* ---------------- SECTION 2: HOW IT WORKS ---------------- */}
-            <section className="py-12 md:py-16 px-4 md:px-8 bg-[#EAEAEA] w-full text-center font-sans overflow-hidden">
-                {/* Header */}
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0B353D] mb-2">
-                    {heading}
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-7 text-center">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#143234] mb-2">
+                    How a Patient Education Content Development Service Works
                 </h2>
 
                 <h3 className="text-lg md:text-xl font-medium text-[#2C4951] mb-4">
