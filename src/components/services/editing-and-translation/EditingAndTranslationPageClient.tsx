@@ -13,8 +13,8 @@ import {
   trustPartners,
   testimonialsData,
   faqData,
-  insightsData,
 } from "@/lib/services/editing-and-translation";
+import DynamicInsightsSection from "@/components/services/DynamicInsightsSection";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -969,41 +969,12 @@ const EditingAndTranslationPageClient = () => {
         `}</style>
       </section>
 
-      {/* Insights Section inserted cleanly right below FAQ */}
-      <section className="bg-white py-12 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100/60">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#0A4D4A] mb-8 tracking-tight">
-            Insights
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {insightsData.map((card) => (
-              <div
-                key={card.id}
-                className="bg-white rounded-sm border border-slate-200/60 overflow-hidden shadow-sm flex flex-col group cursor-pointer hover:shadow-md transition-shadow duration-200"
-              >
-                <div className="relative w-full h-[210px] bg-slate-100">
-                  <img
-                    src={card.imageUrl}
-                    alt={card.title}
-                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-350"
-                    loading="lazy"
-                  />
-                </div>
-
-                <div className="p-5 flex flex-col flex-grow">
-                  <h3 className="text-[15px] font-bold text-[#0A4D4A] leading-snug mb-3 tracking-normal line-clamp-2 group-hover:text-teal-700 transition-colors">
-                    {card.title}
-                  </h3>
-                  <p className="text-[12.5px] text-slate-600 leading-relaxed font-normal line-clamp-3 mt-auto">
-                    {card.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Insights Section inserted cleanly right below FAQ (live from Academy) */}
+      <DynamicInsightsSection
+        categorySlug="editing-and-translation"
+        limit={6}
+        className="bg-white py-12 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100/60"
+      />
     </div>
   );
 };
