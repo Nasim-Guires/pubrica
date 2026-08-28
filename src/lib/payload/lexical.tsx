@@ -431,6 +431,35 @@ function renderNode(node: LexicalNode, key: number): React.ReactNode {
       );
     }
 
+    case "table":
+      return (
+        <div key={key} className="my-6 overflow-x-auto rounded-lg border border-slate-200">
+          <table className="w-full border-collapse text-sm md:text-base">
+            <tbody>{renderChildren(node.children)}</tbody>
+          </table>
+        </div>
+      );
+
+    case "tablerow":
+      return <tr key={key}>{renderChildren(node.children)}</tr>;
+
+    case "tablecell": {
+      const isHeader = Number(node.headerState ?? 0) !== 0;
+      const Tag = isHeader ? "th" : "td";
+      return (
+        <Tag
+          key={key}
+          colSpan={node.colSpan && node.colSpan > 1 ? node.colSpan : undefined}
+          rowSpan={node.rowSpan && node.rowSpan > 1 ? node.rowSpan : undefined}
+          className={`border border-slate-200 px-4 py-2.5 align-top text-slate-700 ${
+            isHeader ? "bg-slate-50 font-semibold text-left" : ""
+          }`}
+        >
+          {renderChildren(node.children)}
+        </Tag>
+      );
+    }
+
     case "quote":
       return (
         <blockquote

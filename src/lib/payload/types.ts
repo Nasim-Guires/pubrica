@@ -50,6 +50,10 @@ export interface LexicalNode {
     pairs: { key: string; value: string }[];
   };
   images?: PayloadMedia[];
+  /** Table cell layout (Lexical's native table/tablerow/tablecell nodes). */
+  colSpan?: number;
+  rowSpan?: number;
+  headerState?: number;
 }
 
 export interface LexicalContent {
