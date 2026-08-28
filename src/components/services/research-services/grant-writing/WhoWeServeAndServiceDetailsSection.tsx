@@ -226,8 +226,8 @@ export default function WhoWeServeAndServiceDetailsSection() {
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-5xl">
               At Pubrica, we offer tailored research{" "}
               <Link
-                href="/services/research-services/grant-writing/research-grant-proposal-writing-guide"
-                className="text-sky-600 hover:underline font-medium"
+                href="services/research-services/grant-writing/research-grant-proposal-writing-guide"
+                className="text-sky-600 font-medium"
               >
                 grant writing services
               </Link>{" "}
@@ -266,10 +266,10 @@ export default function WhoWeServeAndServiceDetailsSection() {
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
                     {card.description}
-                    {card.linkText && card.linkUrl && (
+                    {card.linkText && (
                       <Link
-                        href={card.linkUrl}
-                        className="text-sky-400 hover:underline font-normal inline"
+                        href={card.linkUrl || "#"}
+                        className="text-sky-400 font-normal inline"
                         onClick={(e) => e.stopPropagation()}
                       >
                         {card.linkText}

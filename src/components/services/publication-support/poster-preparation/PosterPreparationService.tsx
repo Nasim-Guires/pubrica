@@ -94,7 +94,7 @@ export default function PosterPreparationPage() {
                 <a href="https://www.isscr.org/guidelines" target="_blank" rel="noopener noreferrer">ISSCR</a>)
               </li>
               <li>
-                <Link href="/services/publication-support/poster-preparation/why-scientific-design-and-visualization-matter-in-poster-preparation/" className="text-blue-600 hover:underline font-semibold">
+                <Link href="/services/publication-support/poster-preparation/why-scientific-design-and-visualization-matter-in-poster-preparation/" className="text-blue-700">
                   Scientific design &amp; visualization
                 </Link>{' '}
                 with infographics, graphs, charts, and visuals appropriate to your area of research
@@ -140,7 +140,7 @@ export default function PosterPreparationPage() {
           Pubrica provides researchers with the ability to create conference-ready posters without the
           hassle of design problems, formatting issues, or compliance gaps. From conceptualization
           to final delivery, we become your{" "}
-          <Link href="/services/publication-support/poster-preparation/how-to-design-a-research-poster/" className="text-blue-600 hover:underline font-medium">
+          <Link href="/services/publication-support/poster-preparation/how-to-design-a-research-poster/" className="text-blue-600 ">
             scientific design
           </Link>{" "}
           partner, delivering a poster that represents the quality of your research and its clarity.
@@ -259,7 +259,7 @@ export default function PosterPreparationPage() {
                 href="https://pubrica.com/insights/sample-work/microbiota-supportive-diet-lipid-profile/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline font-medium"
+                className="text-blue-700"
               >
                 Poster Preparation Services
               </a>{' '}

@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import CommonFAQ from "@/components/common/FAQ";
 import Link from "next/link";
+import CommonFAQ from "@/components/common/FAQ";
 
 interface Testimonial {
   id: number;

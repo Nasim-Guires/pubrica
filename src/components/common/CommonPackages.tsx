@@ -23,8 +23,7 @@ interface PackageItem {
 interface PackagesProps {
   title?: string;
   subtitle?: string;
-  description?: string;
-  packages?: PackageItem[];
+  description?: React.ReactNode; packages?: PackageItem[];
   buttonText?: string;
   onButtonClick?: () => void;
 }

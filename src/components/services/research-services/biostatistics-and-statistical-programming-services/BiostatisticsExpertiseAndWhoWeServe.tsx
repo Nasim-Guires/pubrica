@@ -208,7 +208,7 @@ export default function BiostatisticsExpertiseAndWhoWeServe() {
               Our biostatistical programming services cater to a diverse range
               of clients in the medical,{" "}
               <Link
-                href="/industries/pharmaceutical/"
+                href="/industries/pharmaceutical"
                 className="text-sky-600 hover:underline font-medium"
               >
                 pharmaceutical

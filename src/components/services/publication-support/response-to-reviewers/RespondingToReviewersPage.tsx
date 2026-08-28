@@ -188,9 +188,8 @@ export default function RespondingToReviewersPage() {
               >
                 <span>Comprehensive Feedback Analysis</span>
                 <span
-                  className={`text-xs transition-transform duration-200 ${
-                    openAccordion === "acc1" ? "rotate-180" : ""
-                  }`}
+                  className={`text-xs transition-transform duration-200 ${openAccordion === "acc1" ? "rotate-180" : ""
+                    }`}
                 >
                   ▼
                 </span>
@@ -201,9 +200,14 @@ export default function RespondingToReviewersPage() {
                   editors thoroughly analyze reviewer comments, identifying all
                   issues raised, including unrealistic targets, poor paper
                   construction, inadequate research design, and a lack of
-                  novelty. This includes identifying potential gaps in
-                  biostatistics or data interpretation that will require
-                  additional clarification or development.
+                  novelty. This includes identifying potential gaps in{" "}
+                  <Link
+                    href="/services/research-services/biostatistics-and-statistical-programming-services/"
+                    className="text-blue-700 font-medium hover:text-blue-900 transition-colors"
+                  >
+                    biostatistics
+                  </Link>{" "}
+                  or data interpretation that will require additional clarification or development.
                 </div>
               )}
             </div>
@@ -217,9 +221,8 @@ export default function RespondingToReviewersPage() {
               >
                 <span>Guided Response Strategy</span>
                 <span
-                  className={`text-xs transition-transform duration-200 ${
-                    openAccordion === "acc2" ? "rotate-180" : ""
-                  }`}
+                  className={`text-xs transition-transform duration-200 ${openAccordion === "acc2" ? "rotate-180" : ""
+                    }`}
                 >
                   ▼
                 </span>
@@ -266,9 +269,8 @@ export default function RespondingToReviewersPage() {
                   Polishing)
                 </span>
                 <span
-                  className={`text-xs transition-transform duration-200 ${
-                    openAccordion === "acc3" ? "rotate-180" : ""
-                  }`}
+                  className={`text-xs transition-transform duration-200 ${openAccordion === "acc3" ? "rotate-180" : ""
+                    }`}
                 >
                   ▼
                 </span>
@@ -305,9 +307,8 @@ export default function RespondingToReviewersPage() {
               >
                 <span>End-to-End Support</span>
                 <span
-                  className={`text-xs transition-transform duration-200 ${
-                    openAccordion === "acc4" ? "rotate-180" : ""
-                  }`}
+                  className={`text-xs transition-transform duration-200 ${openAccordion === "acc4" ? "rotate-180" : ""
+                    }`}
                 >
                   ▼
                 </span>
@@ -376,9 +377,8 @@ export default function RespondingToReviewersPage() {
           >
             <span>How do our experts address the reviewer comments?</span>
             <span
-              className={`text-xl transition-transform duration-200 ${
-                openAccordion === "processBar" ? "rotate-45" : ""
-              }`}
+              className={`text-xl transition-transform duration-200 ${openAccordion === "processBar" ? "rotate-45" : ""
+                }`}
             >
               +
             </span>
@@ -495,9 +495,8 @@ function InteractiveCard({
           {item.title}
         </span>
         <span
-          className={`text-slate-600 font-semibold text-base ml-2 flex-shrink-0 transition-transform duration-200 ${
-            isOpen ? "rotate-45 text-red-600" : ""
-          }`}
+          className={`text-slate-600 font-semibold text-base ml-2 flex-shrink-0 transition-transform duration-200 ${isOpen ? "rotate-45 text-red-600" : ""
+            }`}
         >
           -
         </span>

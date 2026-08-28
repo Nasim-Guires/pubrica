@@ -113,7 +113,7 @@ export default function Navbar() {
                     const selectedSubItem = link.dropdown.find((item) => item.label === activeSubcategory) || link.dropdown[0];
 
                     return (
-                      <div key={link.label} className="group px-2 py-1.5 static">
+                      <div key={link.label} className="group px-2 py-1.5">
                         <Link
                           href={link.href}
                           className={cn(
@@ -125,8 +125,8 @@ export default function Navbar() {
                           <ChevronDown className="h-4 w-4 text-gray-400 transition-transform duration-200 group-hover:rotate-180" />
                         </Link>
 
-                        {/* Mega Menu Container: anchors to the full nav bar (nearest positioned ancestor, since this trigger wrapper stays `static` at every breakpoint) instead of the trigger's own position — a fixed-width box centered *under the trigger* would overflow the viewport whenever the trigger sits near an edge (e.g. "Services", the leftmost item, pushed it off-screen on 1366px-wide laptops). left-6/right-6 + mx-auto + max-w-[950px] makes it hug the full nav width until 950px is available, then center within that nav-relative span — so it can never exceed the navbar's own (always-in-viewport) bounds. */}
-                        <div className="absolute left-6 right-6 mx-auto max-w-[950px] top-full mt-1 rounded-md bg-white shadow-2xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-[100] flex">
+                        {/* Mega Menu Container: centered relative to the main navbar container */}
+                        <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[90vw] max-w-[950px] rounded-md bg-white shadow-2xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-[100] flex">
                           {/* Left Column: Vertical Sub-links list */}
                           <div className="w-[340px] py-2 border-r border-gray-200 max-h-[420px] overflow-y-auto">
                             {link.dropdown.map((sublink) => {
