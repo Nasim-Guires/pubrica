@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
 
 const PAGE_IMAGES = "/images/publication-support/video-abstract";
 
@@ -272,8 +273,8 @@ export default function VideoAbstractOverview() {
           <button
             onClick={() => setActiveTab("journal")}
             className={`flex-1 py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 ${activeTab === "journal"
-                ? "bg-[#0b3c3d] text-white shadow-md"
-                : "text-slate-200 hover:text-white"
+              ? "bg-[#0b3c3d] text-white shadow-md"
+              : "text-slate-200 hover:text-white"
               }`}
           >
             Clinical and Ethical Compliance
@@ -281,8 +282,8 @@ export default function VideoAbstractOverview() {
           <button
             onClick={() => setActiveTab("clinical")}
             className={`flex-1 py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 ${activeTab === "clinical"
-                ? "bg-[#0b3c3d] text-white shadow-md"
-                : "text-slate-200 hover:text-white"
+              ? "bg-[#0b3c3d] text-white shadow-md"
+              : "text-slate-200 hover:text-white"
               }`}
           >
             Journal-specific Guideline
@@ -320,51 +321,36 @@ export default function VideoAbstractOverview() {
       </section>
 
       {/* ==================== 5. SAMPLE WORK CALLOUT ==================== */}
-      <section className="max-w-6xl mx-auto pb-7 px-4 md:px-8">
-        <div className="bg-[#f0faf5] rounded-sm p-6 md:p-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          {/* Left Column Image */}
-          <div className="md:col-span-5 relative h-64 md:h-80 rounded-sm overflow-hidden shadow-sm">
-            <Image
-              src={`${PAGE_IMAGES}/Video-Abstract-Sample-Work.jpg`}
-              alt="Video Abstract Sample Work"
-              fill
-              className="object-cover"
-            />
-          </div>
-
-          {/* Right Column Details */}
-          <div className="md:col-span-7 flex flex-col justify-center space-y-6">
-            <div>
-              <h4 className="text-lg md:text-xl font-bold text-[#0c373b] mb-3">
-                Video Abstract Sample Work
-              </h4>
-              <Link
-                href="/insights/sample-work"
-                className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs md:text-sm px-8 py-2.5 rounded-full transition-colors duration-300"
-              >
-                Discover More
-              </Link>
-            </div>
-
-            <div className="pt-2">
-              <h4 className="text-lg md:text-xl font-bold text-[#0c373b] mb-2">
-                Download the full Report Now
-              </h4>
-              <p className="text-xs md:text-sm text-slate-600 leading-relaxed mb-4 max-w-xl">
-                Check out our video abstract samples, expertly produced to meet
-                your journal’s submission guidelines, visual quality
-                requirements, and publication timeframes.
-              </p>
-              <Link
-                href="/insights/sample-work"
-                className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs md:text-sm px-8 py-2.5 rounded-full transition-colors duration-300"
-              >
-                Discover More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PubricaSampleWorkCard
+        bookCoverImage={{
+          src: `${PAGE_IMAGES}/Video-Abstract-Sample-Work.jpg`,
+          alt: "Video Abstract Sample Work",
+          width: 600,
+          height: 400,
+        }}
+        sections={[
+          {
+            heading: "Video Abstract Sample Work",
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work/citation-and-formatting/",
+            },
+          },
+          {
+            heading: "Download the full Report Now",
+            descriptionSegments: [
+              {
+                text: "Check out our video abstract samples, expertly produced to meet your journal’s submission guidelines, visual quality requirements, and publication timeframes.",
+              },
+            ],
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work/citation-and-formatting/",
+            },
+          },
+        ]}
+        footerDisclaimerSegments={[]}
+      />
     </div>
   );
 }

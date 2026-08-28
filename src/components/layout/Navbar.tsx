@@ -113,7 +113,7 @@ export default function Navbar() {
                     const selectedSubItem = link.dropdown.find((item) => item.label === activeSubcategory) || link.dropdown[0];
 
                     return (
-                      <div key={link.label} className="group px-2 py-1.5 static lg:relative">
+                      <div key={link.label} className="group px-2 py-1.5">
                         <Link
                           href={link.href}
                           className={cn(
@@ -125,8 +125,8 @@ export default function Navbar() {
                           <ChevronDown className="h-4 w-4 text-gray-400 transition-transform duration-200 group-hover:rotate-180" />
                         </Link>
 
-                        {/* Mega Menu Container: below lg it anchors to the full nav bar (nearest positioned ancestor) so it can never overflow past the viewport regardless of trigger position; at lg+ it reverts to centering under the trigger itself, matching the original desktop design. */}
-                        <div className="absolute left-6 right-6 lg:left-1/2 lg:right-auto lg:-translate-x-1/2 top-full mt-1 w-auto lg:w-[950px] rounded-md bg-white shadow-2xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-[100] flex">
+                        {/* Mega Menu Container: centered relative to the main navbar container */}
+                        <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[90vw] max-w-[950px] rounded-md bg-white shadow-2xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-[100] flex">
                           {/* Left Column: Vertical Sub-links list */}
                           <div className="w-[340px] py-2 border-r border-gray-200 max-h-[420px] overflow-y-auto">
                             {link.dropdown.map((sublink) => {

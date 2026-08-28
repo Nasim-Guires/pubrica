@@ -4,24 +4,17 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import CommonUploadButton from "@/components/common/CommonUploadButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function VideoAbstractHero() {
   return (
     <div className="w-full font-sans text-slate-800 bg-white">
       {/* Dark Hero Banner */}
-      <section className="w-full bg-[#0a1e1c] text-white py-6 md:py-7 px-4 md:px-8">
-        <div className="max-w-5xl mx-auto border border-slate-600 rounded-sm p-8 md:p-12 text-center bg-[#0d2523]/60 shadow-lg">
-          <h1 className="text-2xl md:text-4xl font-bold tracking-tight mb-4 leading-tight">
-            Video Abstract Service: Professionally Crafted, Journal-Compliant
-            Visual Summaries
-          </h1>
-          <p className="text-sm md:text-base text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Turn your research article into an attractive video abstract that is
-            very appealing, explains the research, generates visibility and
-            reach, and is sustainable for sharing across different platforms.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Video Abstract Service: Professionally Crafted, Journal-Compliant Visual Summaries"
+        description="Turn your research article into an attractive video abstract that is very appealing, explains the research, generates visibility and reach, and is sustainable for sharing across different platforms."
+        headingAs="h1"
+      />
 
       {/* Intro & Overview Section */}
       <section className="w-full py-6 md:py-7 px-4 md:px-8 max-w-6xl mx-auto">
@@ -45,7 +38,7 @@ export default function VideoAbstractHero() {
               thousands of research papers being published every day, a powerful{" "}
               <Link
                 href="/services/publication-support/video-abstract/create-perfect-video-abstract-research-paper"
-                className="text-sky-600 hover:underline"
+                className="text-sky-600"
               >
                 video abstract
               </Link>{" "}
@@ -62,7 +55,7 @@ export default function VideoAbstractHero() {
               With our{" "}
               <Link
                 href="/academy/video-abstract/how-to-create-video-abstract"
-                className="text-sky-600 hover:underline"
+                className="text-sky-600 "
               >
                 video abstract service
               </Link>
@@ -76,11 +69,14 @@ export default function VideoAbstractHero() {
             </p>
 
             <p className="pt-2">
-              Pubrica converts research into short, engaging video abstracts
-              with journal specifications. Our experts create concise, clear
-              video summaries, video abstract services for scientific research
-              that are intended to promote your research successfully, enhancing
-              visibility and engagement with your research.
+              Pubrica converts research into short, engaging video abstracts with journal specifications. Our experts create concise, clear video summaries,{' '}
+              <Link
+                href="/services/publication-support/video-abstract/video-abstracts-enhancing-research-impact/"
+                className="text-sky-600 no-underline"
+              >
+                video abstract
+              </Link>{' '}
+              services for scientific research that are intended to promote your research successfully, enhancing visibility and engagement with your research.
             </p>
           </div>
 
@@ -88,9 +84,9 @@ export default function VideoAbstractHero() {
           <div className="lg:col-span-5 flex justify-center pt-2">
             <div className="relative w-full max-w-md h-[260px] sm:h-[320px]">
               {/* Dark Green Background Accent Box */}
-              <div className="absolute top-3 left-0 w-[95%] h-[95%] bg-[#0c373b] rounded-lg -z-0" />
+              <div className="absolute top-3 left-0 w-[95%] h-[95%]  rounded-lg -z-0" />
               {/* Foreground Image */}
-              <div className="absolute top-0 right-0 w-[95%] h-[95%] rounded-lg overflow-hidden shadow-lg z-10">
+              <div className="absolute top-0 right-0 w-[95%] h-[95%] rounded-lg overflow-hidden  z-10">
                 <Image
                   src="/images/publication-support/video-abstract/Video-Abstract-Service.webp"
                   alt="Video Abstract Editing Workspace"

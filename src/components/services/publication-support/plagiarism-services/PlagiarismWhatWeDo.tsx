@@ -26,13 +26,13 @@ export default function PlagiarismWhatWeDo() {
         <p>
           We use advanced in-house software tools and thoughtfully evaluate your
           manuscript,{" "}
-          <Link href="/services/physician-writing-services/case-report" className="text-sky-600 hover:underline">
+          <Link href="/services/physician-writing-services/case-report" className="text-sky-600 ">
             case report
           </Link>
           , or{" "}
           <Link
             href="/services/physician-writing-services/original-research-article"
-            className="text-sky-600 hover:underline"
+            className="text-sky-600 "
           >
             original research article
           </Link>{" "}
@@ -53,21 +53,21 @@ export default function PlagiarismWhatWeDo() {
             material. Whether it is a{" "}
             <Link
               href="/services/research-services/systematic-review"
-              className="text-sky-600 hover:underline"
+              className="text-sky-600 "
             >
               systematic review
             </Link>
             ,{" "}
             <Link
               href="/services/research-services/meta-analysis"
-              className="text-sky-600 hover:underline"
+              className="text-sky-600 "
             >
               meta-analysis
             </Link>
             , or complex{" "}
             <Link
               href="/services/research-services/medical-writing"
-              className="text-sky-600 hover:underline"
+              className="text-sky-600"
             >
               medical writing
             </Link>
@@ -100,12 +100,12 @@ export default function PlagiarismWhatWeDo() {
           By ensuring your{" "}
           <Link
             href="/services/research-services/systematic-review"
-            className="text-sky-600 hover:underline"
+            className="text-sky-600"
           >
             systematic review
           </Link>
           ,{" "}
-          <Link href="/services/research-services/meta-analysis" className="text-sky-600 hover:underline">
+          <Link href="/services/research-services/meta-analysis" className="text-sky-600">
             meta-analysis
           </Link>{" "}
           are completely free from plagiarism, we protect your academic
@@ -125,7 +125,7 @@ export default function PlagiarismWhatWeDo() {
         </h2>
         <p className="text-sm md:text-base text-slate-700 leading-relaxed mb-6 max-w-5xl">
           Pubrica&apos;s services for detecting{" "}
-          <Link href="/academy/plagiarism-service/academic-paraphrasing-and-plagiarism-prevention" className="text-sky-600 hover:underline">
+          <Link href="/academy/plagiarism-service/academic-paraphrasing-and-plagiarism-prevention" className="text-sky-600">
             plagiarism
           </Link>{" "}
           and assessing AI-generated content are vital to assuring the
@@ -195,7 +195,7 @@ export default function PlagiarismWhatWeDo() {
           Choose Pubrica&apos;s{" "}
           <Link
             href="/services/publication-support/plagiarism-services/modern-plagiarism-detection"
-            className="text-sky-600 hover:underline"
+            className="text-sky-600"
           >
             Plagiarism detection
           </Link>{" "}
