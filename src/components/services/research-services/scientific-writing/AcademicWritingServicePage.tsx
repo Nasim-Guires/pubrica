@@ -209,12 +209,14 @@ export default function ScientificWritingPage() {
                                     <p className="mb-3 text-xs leading-relaxed text-gray-600">
                                         Explore our Scientific & Academic Medical Writing sample work aligned with your manuscript's formatting standards, ethical guidelines, and target publication timelines.
                                     </p>
-                                    <Link
-                                        href="/insights/sample-work"
+                                    <a
+                                        href="/uploads/research-services/scientific-writing/24-03-2026-SCIENTIFIC-WRITING-THAT-DRIVES-PUBLICATION-SUCCESS.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="inline-block rounded-full bg-black px-8 py-2.5 text-xs font-medium text-white transition hover:bg-gray-800"
                                     >
                                         Discover More
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
 

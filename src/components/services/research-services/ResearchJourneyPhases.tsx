@@ -119,12 +119,14 @@ export const ResearchJourneyPhases: React.FC = () => {
             support robust methodologies, institutional compliance, and
             impactful scientific outcomes.
           </p>
-          <Link
-            href="/insights/sample-work"
+          <a
+            href="/uploads/research-services/03-03-2026-RESEARCH-SERVICES-1.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-black text-white px-6 py-2.5 rounded font-semibold text-sm hover:bg-gray-800 transition-colors"
           >
             Discover More
-          </Link>
+          </a>
         </div>
       </div>
     </section>

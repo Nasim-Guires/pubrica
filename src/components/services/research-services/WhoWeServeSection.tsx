@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface SectorItem {
   title: string;
   imageUrl?: string;
-  description: string;
+  description: React.ReactNode;
 }
 
 interface WhoWeServeProps {
@@ -47,16 +48,32 @@ const DEFAULT_SECTORS: SectorItem[] = [
     title: "CROs (Contract Research Organizations)",
     imageUrl:
       "/images/research-services/CROs-Contract-Research-Organizations.png",
-    description:
-      "Offering end-to-end clinical research support, including protocol writing, statistical analysis plans (SAP), systematic reviews, regulatory writing, and journal submission assistance.",
+    description: (
+      <>
+        Offering end-to-end clinical research support, including protocol writing,
+        statistical analysis plans (SAP), systematic reviews, regulatory writing,
+        and{" "}
+        <Link href="/services/publication-support/journal-submission" className="text-sky-500">
+          journal submission
+        </Link>{" "}
+        assistance.
+      </>
+    ),
   },
   {
     title:
       "Non-Governmental Organizations (NGOs) & Global Health Organizations",
     imageUrl:
       "/images/research-services/Non-Governmental-Organizations-NGOs-Global-Health-Organizations.png",
-    description:
-      "Enhancing research capacity, monitoring & evaluation, and scientific communication for health, nutrition, and development programs.",
+    description: (
+      <>
+        Enhancing research capacity, monitoring &amp; evaluation, and{" "}
+        <Link href="/services/scientific-communication" className="text-sky-500 hover:underline">
+          scientific communication
+        </Link>{" "}
+        for health, nutrition, and development programs.
+      </>
+    ),
   },
   {
     title: "Medical Device Companies",
@@ -78,12 +95,12 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
   subtitle = (
     <>
       Our academic research assistance and clinical{" "}
-      <a
+      <Link
         href="/services/research-services"
         className="text-[#3b82f6] hover:underline"
       >
         research support services
-      </a>{" "}
+      </Link>{" "}
       cater to a diverse spectrum of professionals and organizations across the
       academic, clinical, and industrial landscape. We provide customized
       support to meet the specific research goals and regulatory needs of each

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // ==========================================
 // TYPE DEFINITIONS
@@ -68,8 +69,11 @@ export const ResearchServicesSections: React.FC = () => {
             <strong className="text-gray-900 font-semibold">
               Protocol Development:
             </strong>{" "}
-            PICO/SPIDER framework design for clinical, academic, and policy
-            research.
+            PICO/
+            <Link href="/academy/research-services/spider-framework-research-design-guide" className="text-sky-600 hover:underline">
+              SPIDER framework
+            </Link>{" "}
+            design for clinical, academic, and policy research.
           </p>
           <p>
             <strong className="text-gray-900 font-semibold">

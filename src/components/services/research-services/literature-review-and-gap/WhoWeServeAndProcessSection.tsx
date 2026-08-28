@@ -1,11 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 interface AudienceCard {
   id: string;
   title: string;
-  description: string;
+  description: React.ReactNode;
   imageSrc: string;
   altText: string;
 }
@@ -13,7 +15,7 @@ interface AudienceCard {
 interface StepItem {
   number: number;
   title: string;
-  description: string;
+  description: React.ReactNode;
 }
 
 const audienceCards: AudienceCard[] = [
@@ -47,8 +49,15 @@ const audienceCards: AudienceCard[] = [
   {
     id: "academic-institutions",
     title: "Academic and Research Institutions",
-    description:
-      "For dissertation development, thesis writing, systematic review, topic mapping, research consultancy, gap analysis, and peer-reviewed journal publications, requiring methodologically sound and publication-ready literature review is required.",
+    description: (
+      <>
+        For dissertation development, thesis writing, systematic review, topic mapping,{" "}
+        <Link href="/services/research-services/literature-review-and-gap" className="text-sky-500 hover:underline">
+          research consultancy
+        </Link>
+        , gap analysis, and peer-reviewed journal publications, requiring methodologically sound and publication-ready literature review is required.
+      </>
+    ),
     imageSrc:
       "/images/research-services/literature-review-and-gap/Academic-and-Research-Institutions.png",
     altText: "Academic researcher reading open books with stationery",
@@ -125,8 +134,15 @@ const processSteps: StepItem[] = [
   {
     number: 6,
     title: "Gap Analysis & Insight Generation",
-    description:
-      "Our experts analyse the evidence to identify gaps in knowledge, under-researched areas, inconsistencies, or methodological limitations, helping to shape future research questions and research gap analysis service reports.",
+    description: (
+      <>
+        Our experts analyse the evidence to identify gaps in knowledge, under-researched areas, inconsistencies, or methodological limitations, helping to shape future research questions and{" "}
+        <Link href="/services/research-services/literature-review-and-gap/literature-review-and-gap-literature-review-support-chronological-vs-thematic" className="text-sky-500 ">
+          research gap analysis service
+        </Link>{" "}
+        reports.
+      </>
+    ),
   },
   {
     number: 7,
@@ -163,9 +179,9 @@ export default function WhoWeServeAndProcessSection() {
             </h2>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-5xl">
               At Pubrica, our{" "}
-              <span className="text-sky-600 font-medium">
+              <Link href="/academy/research-services/literature-review-tips-introduction-discussion-sections" className="text-sky-500 ">
                 literature review experts
-              </span>{" "}
+              </Link>{" "}
               are trusted by a diverse global clientele, each with distinct
               research goals and evidence needs. We tailor our methodology and
               deliverables to meet the expectations of:
@@ -235,9 +251,9 @@ export default function WhoWeServeAndProcessSection() {
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
               At Pubrica, we follow a structured, evidence-based literature
               review writing service and{" "}
-              <span className="text-sky-600 font-medium">
+              <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-sky-500 hover:underline">
                 research gap analysis service
-              </span>{" "}
+              </Link>{" "}
               approach. Our step-by-step process ensures scientific accuracy,
               clarity, and alignment with your research objectives, whether for
               academic publication, clinical development, or regulatory

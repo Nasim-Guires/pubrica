@@ -197,6 +197,7 @@ export default function SystematicReviewPackages() {
                   fontWeight: "600",
                   fontSize: "0.875rem",
                   border: "none",
+                  textDecoration: "none",
                   cursor: "pointer",
                 }}
               >
@@ -248,6 +249,7 @@ export default function SystematicReviewPackages() {
                   fontWeight: "600",
                   fontSize: "0.875rem",
                   border: "none",
+                  textDecoration: "none",
                   cursor: "pointer",
                 }}
               >

@@ -298,7 +298,7 @@ export default function DiseaseBasedAndComplianceSection() {
               </h3>
               <Link
                 href="/insights/patient-safety-culture-among-operating-theatre-nurses-in-operating-room"
-                className="inline-block bg-black hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200"
+                className="inline-block bg-black hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200 no-underline"
               >
                 Discover More
               </Link>
@@ -318,7 +318,7 @@ export default function DiseaseBasedAndComplianceSection() {
               </p>
               <Link
                 href="/insights/sample-work"
-                className="inline-block bg-black hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200"
+                className="inline-block bg-black hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200 no-underline"
               >
                 Discover More
               </Link>

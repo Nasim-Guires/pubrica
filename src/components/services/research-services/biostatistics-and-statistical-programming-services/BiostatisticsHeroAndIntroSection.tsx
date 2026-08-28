@@ -146,7 +146,7 @@ export default function BiostatisticsHeroAndIntroSection() {
               </Link>
               , validation, and analysis to ensure your{" "}
               <Link
-                href="/services/research-services/biostatistics-and-statistical-programming-service"
+                href="/academy/biostatistics/biostatistics-in-clinical-research-guide"
                 className="text-sky-600 hover:underline font-medium"
               >
                 research
