@@ -4,6 +4,11 @@ const DEFAULT_TITLE = 'Pubrica | Scientific & Medical Writing & Publication Supp
 const DEFAULT_DESCRIPTION = 'Pubrica provides expert medical writing, systematic review, meta-analysis, biostatistics, and journal publication support services for clinical and academic researchers globally.';
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://pubrica.com';
 
+// This rebuild isn't the live pubrica.com yet — keep every page out of search
+// engines until launch. Flip NEXT_PUBLIC_ALLOW_INDEXING=true (no code change
+// needed) once this deployment actually becomes the production site.
+const SITE_WIDE_NOINDEX = process.env.NEXT_PUBLIC_ALLOW_INDEXING !== 'true';
+
 interface MetadataProps {
   title?: string;
   description?: string;
@@ -36,6 +41,7 @@ export function constructMetadata({
   // Every real pubrica.com URL ends in "/" — match that convention exactly.
   const canonicalPath = slug.startsWith('/') ? slug : `/${slug}`;
   const canonicalUrl = `${SITE_URL}${canonicalPath}/`.replace(/\/+$/, '/');
+  const shouldNoIndex = noIndex || SITE_WIDE_NOINDEX;
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -71,11 +77,11 @@ export function constructMetadata({
       creator: '@pubrica',
     },
     robots: {
-      index: !noIndex,
-      follow: !noIndex,
+      index: !shouldNoIndex,
+      follow: !shouldNoIndex,
       googleBot: {
-        index: !noIndex,
-        follow: !noIndex,
+        index: !shouldNoIndex,
+        follow: !shouldNoIndex,
         'max-video-preview': -1,
         'max-image-preview': 'large',
         'max-snippet': -1,

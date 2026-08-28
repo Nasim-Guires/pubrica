@@ -32,6 +32,13 @@ export const metadata: Metadata = {
   },
   description:
     "Expert medical writing, biostatistics modeling, systematic reviews, and journal publication support services.",
+  // Safety net: constructMetadata() already applies the real site-wide
+  // noindex,nofollow (see src/lib/metadata.ts), but any page that skips it
+  // still inherits this base metadata, so keep it consistent here too.
+  robots:
+    process.env.NEXT_PUBLIC_ALLOW_INDEXING === "true"
+      ? { index: true, follow: true }
+      : { index: false, follow: false },
 };
 
 export default function RootLayout({
