@@ -413,7 +413,25 @@ export const GENERAL_FAQS = [
 //   { href: "/insights", label: "Insights" },
 //   { href: "/contact", label: "Contact" },
 // ];
-export const NAV_LINKS = [
+interface NavDropdownChild {
+  href: string;
+  label: string;
+}
+
+interface NavDropdownItem {
+  href: string;
+  label: string;
+  sampleWork?: string;
+  children?: NavDropdownChild[];
+}
+
+interface NavLink {
+  href: string;
+  label: string;
+  dropdown?: NavDropdownItem[];
+}
+
+export const NAV_LINKS: NavLink[] = [
   {
     href: "/services",
     label: "Services",
@@ -421,10 +439,12 @@ export const NAV_LINKS = [
       {
         href: "/services/research-services/product-development",
         label: "Discovery & Intelligence Service",
+        sampleWork: "/images/services/bio/Transforming-Biological-Data-into-Scientific-Discovery-Sample-Work.png",
       },
       {
         href: "/services/publication-support",
         label: "Publication Support",
+        sampleWork: "/images/publication-support/art-work-preparation/Artwork-Preparation-Sample-Work.jpg",
         children: [
           {
             href: "/services/publication-support/journal-selection",
@@ -472,6 +492,7 @@ export const NAV_LINKS = [
       {
         href: "/services/editing-and-translation",
         label: "Editing & Translation",
+        sampleWork: "/images/editing-and-translation/Editing-and-Translation-Services-Sample-Work.png",
         children: [
           {
             href: "/services/editing-and-translation/scientific-editing",
@@ -511,6 +532,7 @@ export const NAV_LINKS = [
       {
         href: "/services/research-services",
         label: "Research Services",
+        sampleWork: "/images/research-services/grant-writing/Grant-Writing-Services-Sample-Work.png",
         children: [
           {
             href: "/services/research-services/systematic-review",
@@ -545,6 +567,7 @@ export const NAV_LINKS = [
       {
         href: "/services/physician-writing-services",
         label: "Physician Writing",
+        sampleWork: "/images/physician-writing-services/Physician-Writing-Service-Sample-Work.jpg",
         children: [
           {
             href: "/services/physician-writing-services/case-report",
@@ -596,6 +619,7 @@ export const NAV_LINKS = [
       {
         href: "/services/data-analytics-machine-learning",
         label: "Statistical Analyses",
+        sampleWork: "/images/data-analytics-machine-learning/Data-Analytics-and-Machine-Learning-Services-Sample-Work-1.webp",
         children: [
           {
             href: "/services/research-services/biostatistics-and-statistical-programming-service",
@@ -615,11 +639,13 @@ export const NAV_LINKS = [
       {
         href: "/services/medical-data-collection",
         label: "Data Collection",
+        sampleWork: "/images/medical-writing/Medical-Data-Collection-Sample-Work.webp",
       },
 
       {
         href: "/services/ai-ml-support",
         label: "AI and ML Services",
+        sampleWork: "/images/ai-ml-support/Artificial-Intelligence-and-Machine-Learning-Services-Sample-Work.webp",
         children: [
           {
             href: "/services/data-analytics-machine-learning/health-economics-outcome-research",
@@ -651,6 +677,7 @@ export const NAV_LINKS = [
       {
         href: "/services/medical-writing",
         label: "Medical Writing",
+        sampleWork: "/images/medical-writing/Medical-Writing-Development.png",
         children: [
           {
             href: "/services/research-services/scientific-writing",
@@ -670,6 +697,7 @@ export const NAV_LINKS = [
       {
         href: "/services/research-impact",
         label: "Research Impact",
+        sampleWork: "/images/research-impact/graphical-abstract/Graphical-Abstract-Service-Sample-Work.png",
         children: [
           {
             href: "/services/publication-support/video-abstract",
@@ -697,6 +725,7 @@ export const NAV_LINKS = [
       {
         href: "/services/scientific-communication",
         label: "Medical & Scientific Communication",
+        sampleWork: "/images/scientific-communication/Scientific-Medical-Communication-Sample-Work.webp",
         children: [
           {
             href: "/services/continuing-medical-education-cme-content-development",
@@ -716,16 +745,19 @@ export const NAV_LINKS = [
       {
         href: "/services/medico-legal-support-services",
         label: "Medico Legal Services",
+        sampleWork: "/images/medico-legal-support-services/Comprehensive-medico-legal-support-services-for-complex-healthcare-cases.webp",
       },
 
       {
         href: "/services/educational-content-development",
         label: "Educational Content",
+        sampleWork: "/images/educational-content-development/Educational-Content-Development-Service.webp",
       },
 
       {
         href: "/services/academic-editorial-services",
         label: "Academic Editorial Services",
+        sampleWork: "/images/academic-editorial-services/Academic-Editorial-Services-Sample-Work.png",
         children: [
           {
             href: "/services/academic-editorial-services/copy-editing-services",
@@ -756,6 +788,7 @@ export const NAV_LINKS = [
       {
         href: "/services/education-editorial-service",
         label: "Educational Editorial Service",
+        sampleWork: "/images/education-editorial-service/Education-Editorial-Services-Sample-Work.webp",
         children: [
           {
             href: "/services/education-editorial-service/accessibility-compliance",
