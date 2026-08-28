@@ -3,11 +3,11 @@ import type { ArticleBlock } from '@/components/services/ServiceArticleRenderer'
 export const ARTICLE_BLOCKS: ArticleBlock[] = [
   {
     "type": "p",
-    "text": "The Independent Medical Examination (IME) refers to an objective examination done by independent medical professionals, who are not directly associated with the care of the particular patient. This type of medical evaluation is often applied in insurance cases, disabilities, workplace injuries, legal purposes, and even clinical research and [scientific research](https://pubrica.com/services/research-services/scientific-writing/) studies. The main aim of conducting such an examination is to obtain an objective medical assessment of the individual’s health condition, diagnosis, prognosis, limitations, and results of the treatment."
+    "text": "The Independent Medical Examination (IME) refers to an objective examination done by independent medical professionals, who are not directly associated with the care of the particular patient. This type of medical evaluation is often applied in insurance cases, disabilities, workplace injuries, legal purposes, and even clinical research and [scientific research](/services/research-services/scientific-writing) studies. The main aim of conducting such an examination is to obtain an objective medical assessment of the individual’s health condition, diagnosis, prognosis, limitations, and results of the treatment."
   },
   {
     "type": "p",
-    "text": "In scientific research, expert assessments play a crucial role in providing reliable and accurate study findings. As an essential component of healthcare research, IMEs contribute to research quality assurance, [patient safety](https://pubrica.com/services/patient-education-content/), and evidence-based decision-making. [[1](https://doi.org/10.3344/kjp.2010.23.1.28)]"
+    "text": "In scientific research, expert assessments play a crucial role in providing reliable and accurate study findings. As an essential component of healthcare research, IMEs contribute to research quality assurance, [patient safety](/services/patient-education-content), and evidence-based decision-making. [[1](https://doi.org/10.3344/kjp.2010.23.1.28)]"
   },
   {
     "type": "h2",
@@ -19,7 +19,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "IMEs can be used in clinical trials to estimate treatment efficacy, evaluate side effects, and analyze patient outcomes. Moreover, they support research compliance, [regulatory compliance](https://pubrica.com/services/medical-writing/regulatory-writing/), and adherence to ethical standards throughout the research process.[[2](https://doi.org/10.3390/bioengineering11040337)]"
+    "text": "IMEs can be used in clinical trials to estimate treatment efficacy, evaluate side effects, and analyze patient outcomes. Moreover, they support research compliance, [regulatory compliance](/services/medical-writing/regulatory-writing), and adherence to ethical standards throughout the research process.[[2](https://doi.org/10.3390/bioengineering11040337)]"
   },
   {
     "type": "h2",
@@ -70,7 +70,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Furthermore, expert assessments generate evidence-based medicine data that can support healthcare practices, policy-making decisions, and future [medical research services](https://pubrica.com/services/research-services/). [[3](https://doi.org/10.1186/s41512-025-00195-7)]"
+    "text": "Furthermore, expert assessments generate evidence-based medicine data that can support healthcare practices, policy-making decisions, and future [medical research services](/services/research-services). [[3](https://doi.org/10.1186/s41512-025-00195-7)]"
   },
   {
     "type": "h2",
@@ -106,7 +106,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Independent Medical Examinations, expert assessments, and medical evaluations are important elements of modern [clinical research](https://pubrica.com/services/research-services/) and healthcare research. By providing objective and unbiased opinions, they improve data quality, strengthen patient safety, support outcome validation, and enhance the credibility of research findings. Their role is particularly important in clinical trials, observational studies, and health outcomes research, where accurate assessments are essential for evidence-based healthcare decision-making."
+    "text": "Independent Medical Examinations, expert assessments, and medical evaluations are important elements of modern [clinical research](/services/research-services) and healthcare research. By providing objective and unbiased opinions, they improve data quality, strengthen patient safety, support outcome validation, and enhance the credibility of research findings. Their role is particularly important in clinical trials, observational studies, and health outcomes research, where accurate assessments are essential for evidence-based healthcare decision-making."
   },
   {
     "type": "h2",

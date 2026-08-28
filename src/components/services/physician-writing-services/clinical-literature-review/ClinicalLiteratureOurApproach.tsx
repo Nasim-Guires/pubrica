@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface CategoryItem {
   id: string;
@@ -149,9 +150,9 @@ export default function ClinicalReviewScopeAndApproach() {
           Pubrica offers systematic, detailed, and methodologically sound
           clinical literature reviews to facilitate evidence-based
           decision-making in healthcare. Our services integrate{" "}
-          <a href="/services/research-services/systematic-review" className="text-sky-600 underline hover:text-sky-800">
+          <Link href="/services/research-services/systematic-review" className="text-sky-600 underline hover:text-sky-800">
             Systematic Review Support
-          </a>{" "}
+          </Link>{" "}
           to objectively appraise and synthesize the latest clinical evidence,
           enabling the client to incorporate vetted research findings into
           clinical, procedural, policy documents, grant proposals, and the

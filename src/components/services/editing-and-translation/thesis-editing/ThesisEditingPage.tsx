@@ -49,7 +49,7 @@ export const ThesisEditingPage: React.FC = () => {
       description:
         "Our thesis editing and proofreading services prepare your document for presentation to your dissertation committee, boosting your confidence and increasing your chances of approval.",
       linkText: "proofreading",
-      linkHref: "#proofreading",
+      linkHref: "/services/editing-and-translation/proofreading",
     },
     {
       title: "Navigating the Thesis Journey",
@@ -172,12 +172,12 @@ export const ThesisEditingPage: React.FC = () => {
                 {item.title === "Preparation for Dissertation Committee" ? (
                   <>
                     Our thesis editing and{" "}
-                    <a
-                      href={item.linkHref}
+                    <Link
+                      href={item.linkHref!}
                       className="text-cyan-600 hover:underline"
                     >
                       {item.linkText}
-                    </a>{" "}
+                    </Link>{" "}
                     services prepare your document for presentation to your
                     dissertation committee, boosting your confidence and
                     increasing your chances of approval.

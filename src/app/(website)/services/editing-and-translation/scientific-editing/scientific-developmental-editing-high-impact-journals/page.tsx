@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import Breadcrumb from '@/components/seo/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Scientific Developmental Editing for High-Impact Journal Publishing | Pubrica',
@@ -34,17 +35,13 @@ export default function Page() {
       </header>
 
       {/* Breadcrumb Navigation */}
-      <div className="max-w-6xl mx-auto px-4 py-3 text-xs text-gray-400 flex items-center gap-1 border-b border-gray-100">
-        <Link href="/" className="hover:underline">Home</Link>
-        <span>&gt;</span>
-        <Link href="/services/editing-and-translation" className="hover:underline">Editing and Translation</Link>
-        <span>&gt;</span>
-        <Link href="/services/editing-and-translation/scientific-editing" className="hover:underline">Scientific Editing</Link>
-        <span>&gt;</span>
-        <span className="text-gray-500 font-normal">
-          Scientific Developmental Editing for High-Impact Journal Publishing
-        </span>
-      </div>
+      <Breadcrumb
+        items={[
+          { label: 'Editing & Translation', href: '/services/editing-and-translation' },
+          { label: 'Scientific Editing', href: '/services/editing-and-translation/scientific-editing' },
+          { label: 'Scientific Developmental Editing for High-Impact Journal Publishing' },
+        ]}
+      />
 
       {/* Main Container */}
       <main className="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -413,7 +410,7 @@ export default function Page() {
               </h3>
               <Link
                 href="/contact-us"
-                className="bg-white text-gray-900 text-xs font-semibold px-4 py-2 rounded shadow hover:bg-gray-100 transition"
+                className="inline-block bg-white text-gray-900 text-xs font-semibold px-4 py-2 rounded shadow hover:bg-gray-100 transition"
               >
                 Contact Us
               </Link>
@@ -460,12 +457,12 @@ export default function Page() {
                 Ioannidis, J. P. A. (2022). Correction: Why most published research findings are false.{' '}
                 <em>PLoS Medicine</em>, 19(8), e1004085.{' '}
                 <a
-                  href="https://doi.org/10.1371/journal.pmed"
+                  href="https://doi.org/10.1371/journal.pmed.1004085"
                   target="_blank"
                   rel="noreferrer"
                   className="text-[#2b7bb9] hover:underline break-all"
                 >
-                  https://doi.org/10.1371/journal.pmed
+                  https://doi.org/10.1371/journal.pmed.1004085
                 </a>
               </li>
               <li id="ref-2">
@@ -475,12 +472,12 @@ export default function Page() {
                 M., Ishiyama, J., ... Yarkoni, T. (2015). SCIENTIFIC STANDARDS. Promoting an open
                 research culture. <em>Science (New York, N.Y.)</em>, 348(6242), 1422–1425.{' '}
                 <a
-                  href="https://doi.org/10.1126/science.aab23"
+                  href="https://doi.org/10.1126/science.aab2374"
                   target="_blank"
                   rel="noreferrer"
                   className="text-[#2b7bb9] hover:underline break-all"
                 >
-                  https://doi.org/10.1126/science.aab23
+                  https://doi.org/10.1126/science.aab2374
                 </a>
               </li>
               <li id="ref-3">
@@ -518,12 +515,12 @@ export default function Page() {
                 quality of evidence and strength of recommendations.{' '}
                 <em>BMJ (Clinical research ed.)</em>, 336(7650), 924–926.{' '}
                 <a
-                  href="https://doi.org/10.1136/bmj.39489.470"
+                  href="https://doi.org/10.1136/bmj.39489.470347.AD"
                   target="_blank"
                   rel="noreferrer"
                   className="text-[#2b7bb9] hover:underline break-all"
                 >
-                  https://doi.org/10.1136/bmj.39489.470
+                  https://doi.org/10.1136/bmj.39489.470347.AD
                 </a>
               </li>
               <li id="ref-6">
