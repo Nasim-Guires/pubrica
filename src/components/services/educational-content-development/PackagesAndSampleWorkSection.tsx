@@ -98,7 +98,7 @@ const packagesData: PackageData[] = [
 
 export default function PackagesAndSampleWorkSection() {
   return (
-    <div className="w-full bg-white text-slate-800 font-sans py-16 px-4 sm:px-6 lg:px-8">
+    <div className="w-full bg-white text-slate-800 font-sans py-7 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-20">
         {/* ==========================================
             SECTION 1: EDUCATIONAL PACKAGES

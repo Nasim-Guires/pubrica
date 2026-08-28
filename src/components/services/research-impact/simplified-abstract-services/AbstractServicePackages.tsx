@@ -87,7 +87,7 @@ const packagesData: PackageTier[] = [
 
 export default function AbstractServicePackages() {
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 space-y-8 bg-slate-50">
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8 bg-slate-50">
       
       {/* Header Info */}
       <div className="text-center space-y-3">

@@ -115,7 +115,7 @@ export default function BiotechAdditionalSections({
     <div className="bg-white text-[#0f2824] w-full font-sans">
       
       {/* 1. Why Pubrica For Biotechnology Section (Accordion Style) */}
-      <section className="py-16 px-6 max-w-5xl mx-auto text-center">
+      <section className="py-7 px-6 max-w-5xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-10 text-[#0f2824]">{whyTitle}</h2>
         <div className="flex flex-col gap-4 max-w-3xl mx-auto">
           {whyItems.map((item, index) => {
@@ -157,7 +157,7 @@ export default function BiotechAdditionalSections({
       </section>
 
       {/* 2. Where Our Authors Publish Section */}
-      <section className="py-16 px-6 max-w-5xl mx-auto text-center border-t border-gray-100">
+      <section className="py-7 px-6 max-w-5xl mx-auto text-center border-t border-gray-100">
         <h2 className="text-3xl font-bold mb-4 text-[#0f2824]">{authorSectionTitle}</h2>
         <p className="text-gray-600 text-sm md:text-base max-w-3xl mx-auto mb-12 leading-relaxed">
           {authorSectionSubtitle}
@@ -194,7 +194,7 @@ export default function BiotechAdditionalSections({
       </section>
 
       {/* 3. Our Expert Biotechnology Editors Section */}
-      <section className="py-16 px-6 max-w-6xl mx-auto border-t border-gray-100">
+      <section className="py-7 px-6 max-w-6xl mx-auto border-t border-gray-100">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4 text-[#0f2824]">{editorsSectionTitle}</h2>
           <p className="text-gray-600 text-sm md:text-base max-w-3xl mx-auto leading-relaxed">

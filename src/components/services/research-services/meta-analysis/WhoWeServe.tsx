@@ -73,7 +73,7 @@ export default function WhoWeServe() {
   ];
 
   return (
-    <section className="w-full bg-white py-16 px-4 md:px-8 lg:px-12 font-sans">
+    <section className="w-full bg-white py-7 px-4 md:px-8 lg:px-12 font-sans">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-[#0f2c3a] mb-4">
           Who We Serve

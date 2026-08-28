@@ -76,7 +76,7 @@ const PACKAGES_DATA: PackagePlan[] = [
 // --- Main Component ---
 export const ReportingPackagesSection: React.FC = () => {
     return (
-        <section className="w-full bg-white py-16 px-4 sm:px-6 lg:px-8 font-sans">
+        <section className="w-full bg-white py-7 px-4 sm:px-6 lg:px-8 font-sans">
             <div className="max-w-6xl mx-auto space-y-10">
 
                 {/* Section Header */}

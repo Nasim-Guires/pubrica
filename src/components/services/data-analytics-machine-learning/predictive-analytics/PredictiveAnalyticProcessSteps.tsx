@@ -129,7 +129,7 @@ export default function PredictiveAnalyticProcessSteps() {
             {/* ========================================================= */}
             {/* SECTION 1: Step-by-Step Process                           */}
             {/* ========================================================= */}
-            <section className="py-16 px-4 max-w-7xl mx-auto text-center">
+            <section className="py-7 px-4 max-w-7xl mx-auto text-center">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1a3832] mb-1">
                     How Our Predictive Analytics Service Works
                 </h2>
@@ -194,7 +194,7 @@ export default function PredictiveAnalyticProcessSteps() {
             {/* ========================================================= */}
             {/* SECTION 2: Benefits Of Using Our Predictive Analytics    */}
             {/* ========================================================= */}
-            <section className="py-16 px-4 bg-slate-50/60 border-t border-slate-100">
+            <section className="py-7 px-4 bg-slate-50/60 border-t border-slate-100">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-2xl md:text-3xl font-bold text-[#1a3832] mb-10">
                         Benefits Of Using Our Predictive Analytics
@@ -244,7 +244,7 @@ export default function PredictiveAnalyticProcessSteps() {
             {/* ========================================================= */}
             {/* SECTION 3: Compliance & Guideline Standards & Sample Work */}
             {/* ========================================================= */}
-            <section className="py-16 px-4 bg-white">
+            <section className="py-7 px-4 bg-white">
                 <div className="max-w-5xl mx-auto">
                     {/* Header */}
                     <h2 className="text-2xl md:text-3xl font-bold text-[#1a3832] mb-3">

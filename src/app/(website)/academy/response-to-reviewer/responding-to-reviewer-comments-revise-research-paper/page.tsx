@@ -65,7 +65,7 @@ export default function RespondToReviewerCommentsPage() {
 
             <main className="min-h-screen bg-white text-gray-800 font-sans overflow-x-hidden">
                 {/* Header Hero Banner */}
-                <div className="bg-neutral-600 text-white py-12 px-4 sm:px-6 lg:px-8 text-center">
+                <div className="bg-neutral-600 text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="max-w-5xl mx-auto text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">
                         How to Respond to Reviewer Comments and Revise Your Research Paper
                     </h1>
@@ -85,7 +85,7 @@ export default function RespondToReviewerCommentsPage() {
                 </div>
 
                 {/* Top Content Body Section */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
                         {/* Sidebar Column */}
@@ -329,7 +329,7 @@ export default function RespondToReviewerCommentsPage() {
                 </div>
 
                 {/* FULL-BLEED BANNER */}
-                <div className="relative w-full my-10 py-14 md:py-20 overflow-hidden">
+                <div className="relative w-full my-10 py-6 md:py-8 overflow-hidden">
                     {/* Background Image */}
                     <Image
                         src="/images/Physician-Assistants-Banner-Image.webp"
@@ -360,7 +360,7 @@ export default function RespondToReviewerCommentsPage() {
                 </div>
 
                 {/* Bottom Content Body Section */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-5">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
                         <div className="hidden lg:block lg:col-span-4"></div>
                         <article className="lg:col-span-8 text-gray-700 text-sm leading-relaxed space-y-6">

@@ -75,7 +75,7 @@ export default function CoreAndTypesServices() {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-gray-800 font-sans">
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-gray-800 font-sans">
       
       {/* SECTION 1: OUR CORE SERVICES */}
       <div className="mb-20">

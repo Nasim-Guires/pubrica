@@ -57,7 +57,7 @@ export default function CommonTestimonial({
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-14 min-w-0 w-full overflow-x-hidden">
+    <section className="max-w-7xl mx-auto px-4 py-6 min-w-0 w-full overflow-x-hidden">
       <h2 className="text-3xl md:text-4xl font-bold text-[#0b3b2c]">{title}</h2>
 
       <p className="mt-3 text-sm md:text-base text-gray-700 max-w-5xl leading-relaxed">

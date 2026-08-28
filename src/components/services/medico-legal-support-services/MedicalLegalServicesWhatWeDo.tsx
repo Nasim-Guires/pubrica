@@ -136,7 +136,7 @@ export default function MedicalLegalServicesWhatWeDo({
   ];
 
   return (
-    <section className={`w-full bg-slate-50 py-16 text-slate-800 ${className}`}>
+    <section className={`w-full bg-slate-50 py-7 text-slate-800 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <header className="mb-12 text-left">

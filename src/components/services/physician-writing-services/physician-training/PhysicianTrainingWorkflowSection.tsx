@@ -156,7 +156,7 @@ export default function PhysicianTrainingWorkflowSection() {
             <WhoWeServeSection />
 
             {/* 2. How Our Physician Training Service Works Section */}
-            <section className="py-16 bg-[#f7f9fa] border-t border-gray-200">
+            <section className="py-7 bg-[#f7f9fa] border-t border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-4xl mx-auto mb-12">
                         <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] mb-2">
@@ -197,7 +197,7 @@ export default function PhysicianTrainingWorkflowSection() {
             </section>
 
             {/* 3. Satisfaction Banner */}
-            <section className="bg-[#122826] text-white py-10 px-4 sm:px-6 lg:px-8">
+            <section className="bg-[#122826] text-white py-5 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                     <div className="flex items-center gap-6 flex-col sm:flex-row">
                         <div className="w-28 h-28 rounded-full border-2 border-dashed flex items-center justify-center p-2 shrink-0 overflow-hidden">
@@ -223,7 +223,7 @@ export default function PhysicianTrainingWorkflowSection() {
             </section>
 
             {/* 4. Our Compliance and Guideline Standards (Closed Accordions by Default) */}
-            <section className="py-16 bg-white">
+            <section className="py-7 bg-white">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-10">
                         <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] mb-3">

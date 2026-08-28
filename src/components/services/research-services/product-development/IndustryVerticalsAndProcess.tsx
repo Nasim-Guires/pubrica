@@ -77,7 +77,7 @@ export default function IndustryVerticalsAndProcess({
   ];
 
   return (
-    <section className={`w-full bg-slate-50/50 py-12 text-slate-800 font-sans ${className}`}>
+    <section className={`w-full bg-slate-50/50 py-6 text-slate-800 font-sans ${className}`}>
       {/* Top Tagline Sub-header */}
       <div className="max-w-4xl mx-auto px-4 text-center mb-10">
         <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-medium">

@@ -8,7 +8,7 @@ export default function VideoAbstractHero() {
   return (
     <div className="w-full font-sans text-slate-800 bg-white">
       {/* Dark Hero Banner */}
-      <section className="w-full bg-[#0a1e1c] text-white py-12 md:py-16 px-4 md:px-8">
+      <section className="w-full bg-[#0a1e1c] text-white py-6 md:py-7 px-4 md:px-8">
         <div className="max-w-5xl mx-auto border border-slate-600 rounded-sm p-8 md:p-12 text-center bg-[#0d2523]/60 shadow-lg">
           <h1 className="text-2xl md:text-4xl font-bold tracking-tight mb-4 leading-tight">
             Video Abstract Service: Professionally Crafted, Journal-Compliant
@@ -23,7 +23,7 @@ export default function VideoAbstractHero() {
       </section>
 
       {/* Intro & Overview Section */}
-      <section className="w-full py-12 md:py-16 px-4 md:px-8 max-w-6xl mx-auto">
+      <section className="w-full py-6 md:py-7 px-4 md:px-8 max-w-6xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-4 leading-tight">
           Professional Scientific and Academic Video Abstract Service: Visually
           Present Your Research with Precision and Clarity

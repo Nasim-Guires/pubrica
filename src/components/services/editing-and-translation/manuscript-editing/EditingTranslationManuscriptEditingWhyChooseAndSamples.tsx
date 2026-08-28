@@ -148,7 +148,7 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
     };
 
     return (
-      <div className="w-full bg-slate-50 py-12 sm:py-16 text-slate-800">
+      <div className="w-full bg-slate-50 py-6 sm:py-7 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
           {/* SECTION 1: Why Choose Pubrica's Manuscript Editing Services */}
           <section>

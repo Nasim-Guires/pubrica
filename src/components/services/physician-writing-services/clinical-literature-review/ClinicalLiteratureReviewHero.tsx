@@ -101,7 +101,7 @@ export default function ClinicalLiteratureReviewHero() {
         <main className="min-h-screen bg-white py-8 text-slate-800">
             <div className="max-w-6xl mx-auto px-4 space-y-12">
                 {/* 1. Hero Header */}
-                <section className="bg-[#1b3d39] text-white py-10 px-6 text-center rounded-lg shadow-md">
+                <section className="bg-[#1b3d39] text-white py-5 px-6 text-center rounded-lg shadow-md">
                     <h1 className="text-2xl md:text-3xl font-bold mb-3">
                         Clinical Literature Review for an Evidence-based Medicine
                     </h1>

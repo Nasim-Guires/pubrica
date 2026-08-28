@@ -159,7 +159,7 @@ export default function TestimonialsAndFaqSection() {
   ];
 
   return (
-    <section className="w-full bg-[#f8fafc] py-12 font-sans text-gray-800">
+    <section className="w-full bg-[#f8fafc] py-6 font-sans text-gray-800">
       <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-16">
         {/* ============================================================ */}
         {/* SECTION 1: TESTIMONIALS                                      */}

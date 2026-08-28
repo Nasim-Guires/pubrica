@@ -167,7 +167,7 @@ export default function ServiceOverview() {
 
   return (
     <div className="w-full font-sans bg-white text-slate-800 antialiased pt-0 mt-0">
-      <div className="max-w-6xl mx-auto pt-0 pb-10 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto pt-0 pb-5 px-4 sm:px-6">
         {/* Main Section Heading */}
         <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-[#0c3830] leading-tight mb-4 mt-0 pt-0">
           {overviewHeading}

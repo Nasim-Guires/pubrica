@@ -76,15 +76,15 @@ const FAQS = [
 
 export default function PublicationPackPage({ packName }: { packName: string }) {
   return (
-    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24">
-      <section className="bg-[#0b2825] text-white py-16 px-4 text-center">
+    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
+      <section className="bg-[#0b2825] text-white py-7 px-4 text-center">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">{packName}</h1>
         <p className="text-gray-300 text-sm max-w-2xl mx-auto">
           Our {packName.toLowerCase()} bundles five publication support services to help you maximise your chances of getting published.
         </p>
       </section>
 
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <h2 className="text-lg font-bold text-slate-900 mb-6 text-center">5 services bundled in this pack</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
           {BUNDLED_SERVICES.map((s) => (

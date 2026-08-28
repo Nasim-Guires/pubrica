@@ -83,7 +83,7 @@ const documentTypes = [
 
 export default function AcademicProcessAndSampleWork() {
   return (
-    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans pb-16">
+    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans pb-7">
       {/* ==========================================
           1. TOP HIGHLIGHT BANNER
       ========================================== */}
@@ -104,7 +104,7 @@ export default function AcademicProcessAndSampleWork() {
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 space-y-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 space-y-16">
         {/* ==========================================
             2. STEP-BY-STEP PROCESS
         ========================================== */}

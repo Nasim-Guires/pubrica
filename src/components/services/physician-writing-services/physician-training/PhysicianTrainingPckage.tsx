@@ -69,7 +69,7 @@ const packages: PackageCardProps[] = [
 
 export default function PhysicianTrainingPackage() {
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-800 pb-16">
+        <div className="min-h-screen bg-white font-sans text-slate-800 pb-7">
             <div className="max-w-6xl mx-auto px-4 py-8 space-y-12">
                 {/* Top Feature / Banner Section */}
                 <section className="bg-[#f2faf5] rounded-xl p-6 md:p-8 border border-slate-100 shadow-sm">

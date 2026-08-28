@@ -7,7 +7,7 @@ export const DataAnalyticsAndMachineLearning: React.FC = () => {
     <div className="w-full bg-white font-sans text-left text-gray-850 selection:bg-emerald-100">
 
       {/* --- Section 1: Dark Header Hero Banner --- */}
-      <section className="w-full bg-gradient-to-b from-[#1c2e2a] via-[#121f1c] to-[#0b1412] py-14 px-4 sm:px-6 md:px-12 lg:px-24 border-b border-emerald-950/20 text-center">
+      <section className="w-full bg-gradient-to-b from-[#1c2e2a] via-[#121f1c] to-[#0b1412] py-6 px-4 sm:px-6 md:px-12 lg:px-24 border-b border-emerald-950/20 text-center">
         <div className="max-w-6xl mx-auto border border-gray-400/30 rounded-none p-6 md:p-10 my-2 backdrop-blur-sm bg-black/5">
           <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-extrabold tracking-tight mb-4">
             Data Analytics and Machine Learning Services
@@ -19,7 +19,7 @@ export const DataAnalyticsAndMachineLearning: React.FC = () => {
       </section>
 
       {/* --- Section 2: Core Offerings & Split Dashboard Showcase --- */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+      <section className="py-7 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-16">
 
           {/* Left Text and Features Side */}

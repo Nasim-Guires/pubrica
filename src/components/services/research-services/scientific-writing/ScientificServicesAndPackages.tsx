@@ -335,7 +335,7 @@ export const ScientificServicesAndPackages: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'publication' | 'university'>('publication');
 
   return (
-    <div className="w-full bg-slate-50 min-h-screen py-16 px-4 sm:px-6 lg:px-8 font-sans text-slate-800">
+    <div className="w-full bg-slate-50 min-h-screen py-7 px-4 sm:px-6 lg:px-8 font-sans text-slate-800">
       <div className="max-w-7xl mx-auto space-y-20">
 
         {/* ================= SECTION 1: RESEARCH & ACADEMIC SERVICES ================= */}

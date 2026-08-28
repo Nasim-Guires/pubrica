@@ -73,7 +73,7 @@ export default function DevelopmentEditingServiceComplete() {
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
             {/* ------------------- HERO BANNER ------------------- */}
-            <section className="bg-[#0b3b2c] py-16 px-4 text-white text-center">
+            <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
                 <div className="max-w-4xl mx-auto">
                     <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
                         Development Editing Services
@@ -85,7 +85,7 @@ export default function DevelopmentEditingServiceComplete() {
             </section>
 
             {/* ------------------- MAIN INTRO & KEY ASPECTS SECTION ------------------- */}
-            <section className="py-12 px-4 max-w-6xl mx-auto">
+            <section className="py-6 px-4 max-w-6xl mx-auto">
                 {/* Heading & Subtitle */}
                 <div className="text-left max-w-5xl mb-6">
                     <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3 leading-snug">

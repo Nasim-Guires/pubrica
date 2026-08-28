@@ -39,7 +39,7 @@ export default function ServicesMedicoLegalSupportServices() {
   return (
     <main className="w-full text-slate-800 bg-white font-sans leading-relaxed">
       {/* Hero Banner Section */}
-      <header className="w-full bg-[#1b2b28] text-white py-12 px-4 sm:px-8 text-center">
+      <header className="w-full bg-[#1b2b28] text-white py-6 px-4 sm:px-8 text-center">
         <div className="max-w-5xl mx-auto border border-gray-400/40 p-8 rounded-sm">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
             Medico-Legal Support Services
@@ -51,7 +51,7 @@ export default function ServicesMedicoLegalSupportServices() {
       </header>
 
       {/* Intro Section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-8 py-12 md:py-16">
+      <section className="max-w-6xl mx-auto px-4 sm:px-8 py-6 md:py-7">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b2b28] mb-4">
@@ -95,7 +95,7 @@ export default function ServicesMedicoLegalSupportServices() {
       </section>
 
       {/* Main Content & Accordion Section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-8 pb-16">
+      <section className="max-w-6xl mx-auto px-4 sm:px-8 pb-7">
         <div className="mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1b2b28] mb-3">
             Expert Medico-Legal Services for Medical Negligence & Insurance Dispute Claims

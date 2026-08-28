@@ -73,7 +73,7 @@ export default function ClinicalLiteratureReviewWorkflowAndCompliance() {
   };
 
   return (
-    <div className="w-full bg-[#f8fafc] py-12 text-slate-800">
+    <div className="w-full bg-[#f8fafc] py-6 text-slate-800">
       <div className="max-w-6xl mx-auto px-4 space-y-16">
 
         {/* 1. How Our Clinical Literature Review Service Works */}

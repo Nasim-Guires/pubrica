@@ -80,7 +80,7 @@ export default function DiseaseBasedAndComplianceSection() {
       {/* ========================================================= */}
       {/* 1. TOP CTA BANNER                                          */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#062c21] py-12 px-4 sm:px-6 lg:px-8 text-center text-white">
+      <section className="w-full bg-[#062c21] py-6 px-4 sm:px-6 lg:px-8 text-center text-white">
         <div className="max-w-5xl mx-auto space-y-6">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
             Accelerate your Literature Review & Gap Analyses with Pubrica
@@ -100,7 +100,7 @@ export default function DiseaseBasedAndComplianceSection() {
       {/* ========================================================= */}
       {/* 2. DISEASE-BASED LITERATURE REVIEW SERVICES                */}
       {/* ========================================================= */}
-      <section className="w-full bg-white py-14 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-white py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-8">
           {/* Header */}
           <div className="space-y-3">
@@ -159,7 +159,7 @@ export default function DiseaseBasedAndComplianceSection() {
       {/* ========================================================= */}
       {/* 3. OUR APPROACH                                           */}
       {/* ========================================================= */}
-      <section className="w-full bg-slate-50 py-12 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-slate-50 py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
             Our Approach
@@ -235,7 +235,7 @@ export default function DiseaseBasedAndComplianceSection() {
       {/* ========================================================= */}
       {/* 4. OUR COMPLIANCE AND GUIDELINE STANDARDS                */}
       {/* ========================================================= */}
-      <section className="w-full bg-white py-12 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-white py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-8">
           <div className="space-y-3">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
@@ -274,7 +274,7 @@ export default function DiseaseBasedAndComplianceSection() {
       {/* ========================================================= */}
       {/* 5. SAMPLE WORK & DOWNLOAD REPORT BANNER                   */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#f0fdf4] py-12 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-[#f0fdf4] py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           {/* Left Column: Image */}
           <div className="md:col-span-5 flex justify-center">

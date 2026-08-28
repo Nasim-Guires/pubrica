@@ -4,7 +4,7 @@ import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function Hero() {
   return (
-    <section className="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+    <section className="max-w-7xl mx-auto px-6 lg:px-8 py-5">
       {/* Heading */}
       <div className="mb-8">
         <h1 className="text-[40px] font-bold leading-tight text-[#083B3A]">

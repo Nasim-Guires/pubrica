@@ -123,7 +123,7 @@ export default function OurPackages(): React.ReactElement {
   const bottomPackages = packagesData.slice(3, 5);
 
   return (
-    <section className="w-full bg-white font-sans text-slate-800 py-16 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-white font-sans text-slate-800 py-7 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Header Section */}
         <div className="text-center max-w-4xl mx-auto space-y-4">

@@ -87,7 +87,7 @@ export default function TherapeuticAndWorkflow() {
   return (
     <div className="w-full bg-[#f4f7f6] font-sans antialiased">
       {/* SECTION 1: THERAPEUTIC AREAS */}
-      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-100">
+      <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-b border-slate-100">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#083a50]">
@@ -118,7 +118,7 @@ export default function TherapeuticAndWorkflow() {
       </section>
 
       {/* SECTION 2: OUR WORKFLOW PROCESS */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f5f8f9]">
+      <section className="py-7 px-4 sm:px-6 lg:px-8 bg-[#f5f8f9]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-4xl mx-auto mb-12">
             <h2 className="text-3xl font-bold text-[#083a50] mb-2">

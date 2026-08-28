@@ -105,7 +105,7 @@ export const TestimonialsSection: React.FC<TestimonialsProps> = ({
   );
 
   return (
-    <section className="w-full bg-[#f4f9fc] py-16 px-6 md:px-12 lg:px-24 font-sans">
+    <section className="w-full bg-[#f4f9fc] py-7 px-6 md:px-12 lg:px-24 font-sans">
       <div className="max-w-7xl mx-auto">
         <div className="mb-10">
           <h2 className="text-[#083c4c] text-2xl md:text-3xl font-bold tracking-tight mb-4">

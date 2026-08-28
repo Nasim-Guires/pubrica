@@ -9,15 +9,15 @@ export const metadata: Metadata = {
 
 export default function TestimonialPage() {
   return (
-    <div className="min-h-screen bg-[#f0f4f8] text-slate-800 font-sans pb-24">
-      <section className="bg-[#0b2825] text-white py-16 px-4 text-center">
+    <div className="min-h-screen bg-[#f0f4f8] text-slate-800 font-sans pb-10">
+      <section className="bg-[#0b2825] text-white py-7 px-4 text-center">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Testimonials</h1>
         <p className="text-gray-300 text-sm max-w-xl mx-auto">
           Our clients reminisce their success stories. Here&rsquo;s what they say&hellip;
         </p>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
           {TESTIMONIALS.map((item, idx) => (
             <div key={idx} className="break-inside-avoid mb-6 flex flex-col items-start w-full">

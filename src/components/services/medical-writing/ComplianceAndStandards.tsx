@@ -62,7 +62,7 @@ export default function ComplianceAndStandards(): React.ReactElement {
   const [activeCard, setActiveCard] = useState<string>("wame");
 
   return (
-    <section className="w-full bg-white font-sans text-slate-800 py-16 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-white font-sans text-slate-800 py-7 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-16">
         {/* ---------------- 1. COMPLIANCE & GUIDELINE CARDS ---------------- */}
         <div>

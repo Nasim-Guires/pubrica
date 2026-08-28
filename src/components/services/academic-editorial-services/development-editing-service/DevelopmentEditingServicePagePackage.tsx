@@ -114,7 +114,7 @@ export default function DevelopmentEditingServicePagePackage() {
         {/* =========================================================
             SECTION 1: Pubrica's Development Editing Services and its Key Features
             ========================================================= */}
-        <section className="py-12 px-4 max-w-7xl mx-auto text-center">
+        <section className="py-6 px-4 max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1b3b36] mb-4">
             Pubrica's Development Editing Services and its Key Features
           </h2>
@@ -173,7 +173,7 @@ export default function DevelopmentEditingServicePagePackage() {
         {/* =========================================================
             SECTION 2: How Our Development Editing Service Works (Step-by-Step)
             ========================================================= */}
-        <section className="py-12 px-4 max-w-7xl mx-auto text-center bg-gray-50/50">
+        <section className="py-6 px-4 max-w-7xl mx-auto text-center bg-gray-50/50">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b36] mb-2">
             How Our Development Editing Service Works
           </h2>
@@ -242,7 +242,7 @@ export default function DevelopmentEditingServicePagePackage() {
           </div>
 
           {/* ------------------- MAIN CONTENT & CARDS GRID ------------------- */}
-          <div className="py-16 px-4 max-w-7xl mx-auto text-center">
+          <div className="py-7 px-4 max-w-7xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-[#0b3b2c] mb-10">
               How Our Editors Can Help You
             </h2>
@@ -275,7 +275,7 @@ export default function DevelopmentEditingServicePagePackage() {
         {/* =========================================================
             SECTION 4: Types Of Documents We Edit
             ========================================================= */}
-        <section className="py-10 px-4 max-w-7xl mx-auto text-center bg-gray-50/50">
+        <section className="py-5 px-4 max-w-7xl mx-auto text-center bg-gray-50/50">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b36] mb-8">
             Types Of Documents We Edit
           </h2>
@@ -301,7 +301,7 @@ export default function DevelopmentEditingServicePagePackage() {
         {/* =========================================================
             SECTION 5: Meet Our Development Editing Experts
             ========================================================= */}
-        <section className="py-12 px-4 max-w-7xl mx-auto text-center">
+        <section className="py-6 px-4 max-w-7xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b36] mb-8">
             Meet Our Development Editing Experts
           </h2>
@@ -354,7 +354,7 @@ export default function DevelopmentEditingServicePagePackage() {
         {/* =========================================================
             SECTION 6: Explore Sample Work & Packages
             ========================================================= */}
-        <section className="py-12 px-4 max-w-7xl mx-auto text-center">
+        <section className="py-6 px-4 max-w-7xl mx-auto text-center">
           {/* Header Titles */}
           <h3 className="text-2xl md:text-3xl font-bold text-[#1b3b36] mb-3">
             Development Editing Services – Our Packages

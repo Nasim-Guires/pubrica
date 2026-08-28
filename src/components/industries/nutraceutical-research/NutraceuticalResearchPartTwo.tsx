@@ -164,7 +164,7 @@ export default function NutraceuticalResearchPartTwo({
     <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden">
       
       {/* Research And Development In Nutraceuticals */}
-      <section className="max-w-6xl mx-auto py-16 px-6">
+      <section className="max-w-6xl mx-auto py-7 px-6">
         <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#0f2824]">{rdTitle}</h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -200,7 +200,7 @@ export default function NutraceuticalResearchPartTwo({
       </section>
 
       {/* Quality And Regulatory Standards */}
-      <section className="bg-gray-50/50 py-16 px-6 border-t border-b border-gray-100">
+      <section className="bg-gray-50/50 py-7 px-6 border-t border-b border-gray-100">
         <div className="max-w-6xl mx-auto text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{standardsTitle}</h2>
           <p className="text-gray-600 text-sm sm:text-base max-w-4xl mx-auto leading-relaxed">
@@ -242,7 +242,7 @@ export default function NutraceuticalResearchPartTwo({
       </section>
 
       {/* Our Commitment To The Nutraceutical Industry */}
-      <section className="max-w-6xl mx-auto py-16 px-6">
+      <section className="max-w-6xl mx-auto py-7 px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#0f2824]">{commitmentTitle}</h2>
@@ -277,7 +277,7 @@ export default function NutraceuticalResearchPartTwo({
       </section>
 
       {/* Where Our Authors Publish */}
-      <section className="bg-gray-50/50 py-16 px-6 border-t border-gray-100 text-center">
+      <section className="bg-gray-50/50 py-7 px-6 border-t border-gray-100 text-center">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-[#0f2824]">{authorsPublishTitle}</h2>
           <div className="w-12 h-1 bg-[#0f2824] mx-auto mb-6"></div>
@@ -319,7 +319,7 @@ export default function NutraceuticalResearchPartTwo({
       </section>
 
       {/* Our Expert Nutraceutical Editors */}
-      <section className="max-w-6xl mx-auto py-20 px-6 text-center">
+      <section className="max-w-6xl mx-auto py-8 px-6 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{editorsTitle}</h2>
         <p className="text-gray-600 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed mb-12">
           {editorsDescription}

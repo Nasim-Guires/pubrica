@@ -54,7 +54,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-[#031d18] text-gray-300 font-sans select-none relative pt-10 pb-8">
+    <footer className="w-full bg-[#031d18] text-gray-300 font-sans select-none relative pt-5 pb-8">
       <Container className="w-full max-w-7xl flex flex-col">
         {/* 1. TOP PORTION: Floating Speech-Bubble Call to Action */}
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6 mb-12 mt-2">
@@ -78,7 +78,7 @@ export default function Footer() {
         </div>
 
         {/* 2. MIDDLE PORTION: Directory Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 border-b border-gray-700/40 pb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 border-b border-gray-700/40 pb-5">
           {/* Brand & Description Column */}
           <div className="lg:col-span-4 flex flex-col items-start">
             <div className="mb-4">

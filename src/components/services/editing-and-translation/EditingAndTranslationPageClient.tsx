@@ -79,7 +79,7 @@ const EditingAndTranslationPageClient = () => {
   const rightColumnFaqs = faqData.filter((item) => item.id > 5);
   return (
     <div className="font-sans text-slate-800 bg-white selection:bg-teal-500 selection:text-white">
-      <section className="w-full bg-[#0b2b30] text-white py-12 px-4 sm:px-6 md:px-8">
+      <section className="w-full bg-[#0b2b30] text-white py-6 px-4 sm:px-6 md:px-8">
         <div className="max-w-4xl mx-auto border border-white/70 rounded-sm p-6 sm:p-8 md:p-10 text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
             Editing and Translation Services
@@ -92,7 +92,7 @@ const EditingAndTranslationPageClient = () => {
         </div>
       </section>
       {/* SECTION 1: HERO / PRECISION SERVICES */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-10 font-sans">
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-5 font-sans">
         {/* Heading */}
         <div className="mb-8">
           <h2 className="text-[40px] font-bold leading-tight text-[#083B3A]">
@@ -196,7 +196,7 @@ const EditingAndTranslationPageClient = () => {
       </section>
       <hr className="border-slate-100" />
       {/* SECTION 2: OUR SERVICES */}
-      <section className="py-12 bg-white px-6 max-w-7xl mx-auto font-sans">
+      <section className="py-6 bg-white px-6 max-w-7xl mx-auto font-sans">
         <div className="max-w-7xl mx-auto">
           {/* Title elements */}
           <h2 className="text-2xl font-bold text-[#0A4D4A] mb-3">
@@ -280,7 +280,7 @@ const EditingAndTranslationPageClient = () => {
         </div>
       </section>
       {/* SECTION 3: WHO WE SERVE */}
-      <section className="py-16 px-4 max-w-7xl mx-auto">
+      <section className="py-7 px-4 max-w-7xl mx-auto">
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-[#004D40] mb-2">
             Who We Serve
@@ -326,7 +326,7 @@ const EditingAndTranslationPageClient = () => {
         </div>
       </section>
       {/* SECTION 4: TYPES OF EDITING SERVICES */}
-      <section className="py-12 bg-white px-6 max-w-7xl mx-auto font-sans">
+      <section className="py-6 bg-white px-6 max-w-7xl mx-auto font-sans">
         <div className="max-w-7xl mx-auto">
           {/* Header Content */}
           <div className="mb-8 text-left">
@@ -419,7 +419,7 @@ const EditingAndTranslationPageClient = () => {
         `}</style>
       </section>
       {/* SECTION 5: TRANSLATION SERVICES */}
-      <section className="py-16 px-4 max-w-7xl mx-auto">
+      <section className="py-7 px-4 max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#004D40] mb-2">
             Our Comprehensive Translation Services
@@ -462,7 +462,7 @@ const EditingAndTranslationPageClient = () => {
         </div>
       </section>
       {/* MID-BANNER CACHE LINE */}
-      <section className="bg-[#00332c] text-white py-12 px-4 text-center">
+      <section className="bg-[#00332c] text-white py-6 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-2xl lg:text-3xl font-bold mb-3">
             Speed up your Editing and Translation with Pubrica
@@ -476,7 +476,7 @@ const EditingAndTranslationPageClient = () => {
         </div>
       </section>
       {/* SECTION 6: HOW IT WORKS STEP-BY-STEP */}
-      <section className="py-16 bg-[#F4F6F6] px-6 font-sans overflow-x-auto selection:bg-teal-100/50">
+      <section className="py-7 bg-[#F4F6F6] px-6 font-sans overflow-x-auto selection:bg-teal-100/50">
         <div className="max-w-7xl mx-auto min-w-[1000px] lg:min-w-0">
           {/* Header Block */}
           <div className="text-center mb-16">
@@ -574,7 +574,7 @@ const EditingAndTranslationPageClient = () => {
       {/* ========================================================================= */}
       {/* SECTION NAME: WHY AUTHORS CHOOSE PUBRICA                                  */}
       {/* ========================================================================= */}
-      <div className="bg-white py-12 px-4 md:px-8 font-sans max-w-7xl mx-auto selection:bg-teal-100/60">
+      <div className="bg-white py-6 px-4 md:px-8 font-sans max-w-7xl mx-auto selection:bg-teal-100/60">
         {/* ========================================================================= */}
         {/* SECTION NAME: WHY AUTHORS CHOOSE PUBRICA                                  */}
         {/* ========================================================================= */}
@@ -661,7 +661,7 @@ const EditingAndTranslationPageClient = () => {
         {/* ========================================================================= */}
         {/* SECTION NAME: EDITING & TRANSLATION SERVICE SAMPLE WORK                  */}
         {/* ========================================================================= */}
-        <section className="border-t border-slate-100 pt-12">
+        <section className="border-t border-slate-100 pt-6">
           <h2 className="text-xl md:text-2xl font-bold text-[#0A4D5C] mb-4 tracking-tight">
             Editing And Translation Services Sample Work
           </h2>
@@ -693,7 +693,7 @@ const EditingAndTranslationPageClient = () => {
       {/* ========================================================================= */}
 
       {/* SECTION 7: PACKAGES & PRICING */}
-      <section className="py-16 px-4 max-w-7xl mx-auto font-sans selection:bg-teal-100/60">
+      <section className="py-7 px-4 max-w-7xl mx-auto font-sans selection:bg-teal-100/60">
         {/* Header Block */}
         <div className="text-left mb-12">
           <h2 className="text-2xl font-bold text-[#0A4D5C] mb-4 tracking-tight">
@@ -795,7 +795,7 @@ const EditingAndTranslationPageClient = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-white py-16 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100">
+      <section className="bg-white py-7 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100">
         <div className="max-w-7xl mx-auto">
           {/* Header Block */}
           <h2 className="text-2xl font-bold text-[#0A4D4A] mb-4">
@@ -874,7 +874,7 @@ const EditingAndTranslationPageClient = () => {
         </div>
       </section>
       {/* Frequently Asked Questions Section */}
-      <section className="bg-white py-16 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100/60">
+      <section className="bg-white py-7 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100/60">
         <div className="max-w-7xl mx-auto">
           {/* Title */}
           <h2 className="text-2xl font-bold text-[#0A4D4A] mb-8 tracking-tight">
@@ -973,7 +973,7 @@ const EditingAndTranslationPageClient = () => {
       <DynamicInsightsSection
         categorySlug="editing-and-translation"
         limit={6}
-        className="bg-white py-12 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100/60"
+        className="bg-white py-6 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100/60"
       />
     </div>
   );

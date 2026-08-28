@@ -33,15 +33,15 @@ const PARTNER_LOGOS = [
 
 export default function GlobalPartnerProgramPage() {
   return (
-    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24">
-      <section className="bg-[#0b2825] text-white py-16 px-4 text-center">
+    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
+      <section className="bg-[#0b2825] text-white py-7 px-4 text-center">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Global Partner Program</h1>
         <p className="text-gray-300 text-sm max-w-2xl mx-auto">
           Publishers, universities, research groups can get special discounts on all end-to-end editorial and journal publication services. Partner with us.
         </p>
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {CATEGORIES.map((cat) => (
             <div key={cat.title} className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">

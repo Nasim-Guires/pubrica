@@ -250,7 +250,7 @@ export default function CaseReportServicesAndCompliance() {
       {/* 4. DISCIPLINES WE SUPPORT */}
    
       {/* 5. WHY CHOOSE OUR CASE REPORT SERVICE? */}
-      <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38] mb-3">
           Why Choose Our Case Report Service?
         </h2>
@@ -290,7 +290,7 @@ export default function CaseReportServicesAndCompliance() {
       </section>
 
       {/* 6. OUR COMPLIANCE AND GUIDELINE STANDARDS */}
-      <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 mb-12">
+      <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8 mb-12">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38] mb-3">
           Our Compliance and Guideline Standards
         </h2>

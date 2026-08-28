@@ -42,7 +42,7 @@ export default function AgricultureContinuedSections() {
 
   return (
     <div className="w-full bg-[#fcfcfc] font-sans text-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-20">
 
         {/* SECTION 1: EMERGING TRENDS IN AGRICULTURE */}
         <section className="space-y-6">

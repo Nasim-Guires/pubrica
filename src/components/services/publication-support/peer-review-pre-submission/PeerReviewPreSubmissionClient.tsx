@@ -6,7 +6,7 @@ export default function PeerReviewPreSubmissionClient() {
   return (
     <main className="w-full bg-white text-[#1a202c] font-sans antialiased">
       {/* Hero Section */}
-      <section className="w-full bg-[#0d1e1c] text-white py-16 px-4 sm:px-6 lg:px-8 text-center border-b border-teal-800">
+      <section className="w-full bg-[#0d1e1c] text-white py-7 px-4 sm:px-6 lg:px-8 text-center border-b border-teal-800">
         <div className="max-w-5xl mx-auto space-y-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight">
             Pre-Submission Peer Review Service for Research Manuscript
@@ -20,7 +20,7 @@ export default function PeerReviewPreSubmissionClient() {
       </section>
 
       {/* Main Content Area */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-10">
         {/* Intro Header & Paragraphs */}
         <div className="space-y-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] leading-tight">
@@ -235,7 +235,7 @@ export default function PeerReviewPreSubmissionClient() {
         </div>
 
         {/* What We Peer Review Section */}
-        <div className="pt-10 space-y-6">
+        <div className="pt-5 space-y-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547]">
             What We Peer Review
           </h2>

@@ -267,7 +267,7 @@ export default function BioinformaticsServices() {
   };
 
   return (
-    <section className="w-full bg-slate-50 py-12 text-slate-800 font-sans">
+    <section className="w-full bg-slate-50 py-6 text-slate-800 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
         {/* ------------------------------------------------------------------

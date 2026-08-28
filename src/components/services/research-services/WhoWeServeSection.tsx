@@ -113,7 +113,7 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
 }) => {
   return (
     <section className="w-full bg-white font-sans text-[#111827]">
-      <div className="max-w-7xl mx-auto py-12 px-6 md:px-12 lg:px-16">
+      <div className="max-w-7xl mx-auto py-6 px-6 md:px-12 lg:px-16">
         {/* Header */}
         <div className="mb-10 max-w-4xl">
           <h2 className="text-[#083c4c] text-2xl md:text-3xl font-bold tracking-tight mb-3">
@@ -167,7 +167,7 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
       </div>
 
       {/* Call-To-Action Banner */}
-      <div className="w-full bg-[#032b1d] text-white py-12 px-6 text-center">
+      <div className="w-full bg-[#032b1d] text-white py-6 px-6 text-center">
         <div className="max-w-4xl mx-auto space-y-3">
           <h3 className="text-xl md:text-2xl font-bold tracking-wide">
             {bannerTitle}

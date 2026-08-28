@@ -121,7 +121,7 @@ export default function CaseReportWorkflowAndDisciplines() {
       {/* ========================================================= */}
       {/* 1. WHO WE SERVE SECTION                                   */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38] mb-3">
           Who We Serve
         </h2>
@@ -171,7 +171,7 @@ export default function CaseReportWorkflowAndDisciplines() {
       {/* ========================================================= */}
       {/* 2. HOW THE CASE REPORT WRITING SERVICE WORKS             */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38] mb-2">
             How the Case Report Writing Service Works
@@ -239,7 +239,7 @@ export default function CaseReportWorkflowAndDisciplines() {
       {/* ========================================================= */}
       {/* 3. SPEED UP YOUR CASE REPORT / CALL TO ACTION BANNER     */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#0a2e2b] py-12 px-4 sm:px-6 lg:px-8 my-8 text-white">
+      <section className="w-full bg-[#0a2e2b] py-6 px-4 sm:px-6 lg:px-8 my-8 text-white">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Satisfaction Badge */}
           <div className="shrink-0 flex items-center justify-center">
@@ -278,7 +278,7 @@ export default function CaseReportWorkflowAndDisciplines() {
       {/* ========================================================= */}
       {/* 4. DISCIPLINES WE SUPPORT                                 */}
       {/* ========================================================= */}
-      <section className="max-w-5xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-5xl mx-auto py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38] text-center mb-10">
           Disciplines We Support
         </h2>

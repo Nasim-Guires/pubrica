@@ -107,7 +107,7 @@ const steps: StepItem[] = [
 
 export default function PosterProcessExactDesign() {
   return (
-    <section className="w-full bg-[#f3f4f6] py-16 px-4 md:px-8 font-sans text-gray-800">
+    <section className="w-full bg-[#f3f4f6] py-7 px-4 md:px-8 font-sans text-gray-800">
       <div className="max-w-6xl mx-auto text-center">
         {/* Main Title */}
         <h2 className="text-2xl md:text-3xl font-bold text-[#0f172a] mb-2">

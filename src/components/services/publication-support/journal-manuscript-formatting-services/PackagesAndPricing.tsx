@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function PackagesAndPricing() {
   return (
-    <div className="w-full bg-[#f8fafc] font-sans text-gray-800 py-12 space-y-16 antialiased">
+    <div className="w-full bg-[#f8fafc] font-sans text-gray-800 py-6 space-y-16 antialiased">
       {/* ============================================================ */}
       {/* SECTION 1: SAMPLE WORK / REPORT DOWNLOAD BANNER               */}
       {/* ============================================================ */}

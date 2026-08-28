@@ -8,7 +8,7 @@ export default async function LatestNews() {
   const blogs = await getBlogs(3);
 
   return (
-    <section className="w-full py-16 bg-white select-none font-sans text-gray-800">
+    <section className="w-full py-7 bg-white select-none font-sans text-gray-800">
       <Container className="flex flex-col items-center">
         {/* Section Header with Horizontal Lines */}
         <div className="flex items-center justify-center gap-4 w-full max-w-xl mb-3">

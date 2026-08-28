@@ -37,7 +37,7 @@ export default function ScientificGrantReviewExtendedPage() {
     <div className="min-h-screen bg-white text-gray-800 flex flex-col justify-between">
       <div>
         {/* Top Intro Section */}
-        <section className="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <section className="max-w-5xl mx-auto px-6 py-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="relative w-full h-72 rounded-lg overflow-hidden shadow-md">
             <Image
               src="/images/editing-and-translation/proofreading/grant.webp"
@@ -60,7 +60,7 @@ export default function ScientificGrantReviewExtendedPage() {
         </section>
 
         {/* Sample Edits Section */}
-        <section className="bg-[#e2dfdf] py-16 px-4 sm:px-6">
+        <section className="bg-[#e2dfdf] py-7 px-4 sm:px-6">
           <div className="max-w-5xl mx-auto space-y-8">
             {/* Section Heading */}
             <div className="text-center space-y-3">
@@ -127,7 +127,7 @@ export default function ScientificGrantReviewExtendedPage() {
           </div>
         </section>
         {/* Quality, Security & Timely Cards */}
-        <section className="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <section className="max-w-5xl mx-auto px-6 py-6 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="border border-gray-200 rounded-lg p-6 bg-white shadow-sm space-y-2 border-t-4 border-t-teal-600">
             <h4 className="font-bold text-slate-900 text-lg">Guaranteed Quality</h4>
             <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
@@ -187,7 +187,7 @@ export default function ScientificGrantReviewExtendedPage() {
         </section>
 
         {/* Guarantee Banner & Success Stories */}
-        <section className="bg-slate-900 text-white py-12 px-6 mt-12">
+        <section className="bg-slate-900 text-white py-6 px-6 mt-12">
           <div className="max-w-5xl mx-auto space-y-12">
 
             <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-slate-800/80 p-8 rounded-lg border border-slate-700 shadow-lg">
@@ -210,7 +210,7 @@ export default function ScientificGrantReviewExtendedPage() {
             <div className="space-y-6">
               <h3 className="text-xl md:text-2xl font-bold text-center tracking-wide">SCRIPTING SUCCESS STORIES</h3>
 
-              <section className="bg-[#0b1f1c] py-16 px-4 sm:px-6">
+              <section className="bg-[#0b1f1c] py-7 px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto space-y-8">
                   {/* Section Heading */}
                   <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white text-center tracking-wide uppercase">

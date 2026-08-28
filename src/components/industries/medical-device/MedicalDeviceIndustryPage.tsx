@@ -7,8 +7,8 @@ const MedicalDeviceIndustryPage: NextPage = () => {
   return (
     <>
       {/* BANNER SECTION */}
-      <div className="w-full bg-[#343a40] py-16 px-4 md:px-12 flex justify-center mb-12">
-        <div className="w-full max-w-5xl border border-gray-600 bg-[#343a40] text-white py-10 px-6 md:px-16 text-center space-y-3 shadow-md">
+      <div className="w-full bg-[#343a40] py-7 px-4 md:px-12 flex justify-center mb-12">
+        <div className="w-full max-w-5xl border border-gray-600 bg-[#343a40] text-white py-5 px-6 md:px-16 text-center space-y-3 shadow-md">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
             Medical Devices
           </h1>
@@ -18,7 +18,7 @@ const MedicalDeviceIndustryPage: NextPage = () => {
         </div>
       </div>
 
-      <div className="w-full bg-white text-gray-800 pb-16 px-4 md:px-8 space-y-20">
+      <div className="w-full bg-white text-gray-800 pb-7 px-4 md:px-8 space-y-20">
         
         {/* SECTION 1: ENHANCING COMPLIANCE & MARKET READINESS */}
         <section className="max-w-5xl mx-auto space-y-8">
@@ -180,7 +180,7 @@ const MedicalDeviceIndustryPage: NextPage = () => {
         </section>
 
         {/* SECTION 3: MEDICAL DEVICE SEGMENTS WE SERVE */}
-        <section className="max-w-6xl mx-auto space-y-10 pt-16">
+        <section className="max-w-6xl mx-auto space-y-10 pt-7">
           <div className="text-center space-y-3">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32]">
               Medical Device Segments We Serve

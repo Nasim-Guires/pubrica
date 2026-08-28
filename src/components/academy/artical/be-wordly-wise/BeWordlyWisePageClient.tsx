@@ -29,10 +29,10 @@ const Page = () => {
     return (
         <div className="min-h-screen bg-white text-gray-700">
             {/* Page Content */}
-            <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+            <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-5 lg:px-8 lg:py-6">
 
                 {/* Page Header */}
-                <div className="mx-auto mb-8 w-full max-w-5xl rounded-sm bg-[#0e3b32] px-5 py-8 text-center text-white shadow-md sm:mb-10 sm:px-8 sm:py-10">
+                <div className="mx-auto mb-8 w-full max-w-5xl rounded-sm bg-[#0e3b32] px-5 py-8 text-center text-white shadow-md sm:mb-10 sm:px-8 sm:py-5">
                     <h1 className="text-2xl font-extrabold tracking-wide sm:text-3xl md:text-4xl">
                         Be Word(ly) Wise
                     </h1>
@@ -257,7 +257,7 @@ const Page = () => {
                 </main>
 
                 {/* Call to Action */}
-                <section className="mx-auto mt-12 w-full max-w-6xl rounded-lg bg-[#0e3b32] px-5 py-8 text-center text-white shadow-md sm:mt-16 sm:px-8 sm:py-10 md:px-12 md:py-12">
+                <section className="mx-auto mt-12 w-full max-w-6xl rounded-lg bg-[#0e3b32] px-5 py-8 text-center text-white shadow-md sm:mt-16 sm:px-8 sm:py-5 md:px-12 md:py-6">
                     <h3 className="mx-auto max-w-3xl text-xl font-bold leading-snug sm:text-2xl md:text-3xl">
                         Connect with us to explore how we can support you in
                         maintaining academic integrity and enhancing the

@@ -135,7 +135,7 @@ const audienceData: AudienceCard[] = [
 
 export default function EditingServicesAndWhoWeServe() {
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-12 text-slate-800 font-sans space-y-16">
+    <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 text-slate-800 font-sans space-y-16">
       {/* ======================================= */}
       {/* SECTION 1: TYPES OF EDITING SERVICES    */}
       {/* ======================================= */}
@@ -209,7 +209,7 @@ export default function EditingServicesAndWhoWeServe() {
                   className="object-cover"
                 />
                 {/* Dark Bottom Gradient Banner */}
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-4 pt-10">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-4 pt-5">
                   <h3 className="text-sm font-bold text-white tracking-wide">
                     {card.title}
                   </h3>

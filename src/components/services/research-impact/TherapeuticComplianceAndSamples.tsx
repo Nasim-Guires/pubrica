@@ -77,7 +77,7 @@ export default function TherapeuticComplianceAndSamples(): React.ReactElement {
       {/* ========================================================================= */}
       {/* SECTION 1: OUR THERAPEUTIC AREAS: WE COVER                                */}
       {/* ========================================================================= */}
-      <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-6xl mx-auto py-7 px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="space-y-3 mb-12">
@@ -123,7 +123,7 @@ export default function TherapeuticComplianceAndSamples(): React.ReactElement {
       {/* ========================================================================= */}
       {/* SECTION 2: OUR COMPLIANCE AND GUIDELINE STANDARDS                        */}
       {/* ========================================================================= */}
-      <section className="bg-[#f5f7f7] py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-[#f5f7f7] py-7 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           
           {/* Section Heading */}
@@ -167,7 +167,7 @@ export default function TherapeuticComplianceAndSamples(): React.ReactElement {
       {/* ========================================================================= */}
       {/* SECTION 3: RESEARCH IMPACT SAMPLE WORK                                   */}
       {/* ========================================================================= */}
-      <section className="bg-[#eefbf4] py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-[#eefbf4] py-7 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             

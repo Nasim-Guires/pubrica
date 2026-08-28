@@ -94,7 +94,7 @@ export default function TestimonialsAndFAQSections() {
       {/* ========================================== */}
       {/* SECTION 1: TESTIMONIALS                    */}
       {/* ========================================== */}
-      <section className="bg-[#f0f2f2] py-14 px-4">
+      <section className="bg-[#f0f2f2] py-6 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-8">
             Testimonials
@@ -160,7 +160,7 @@ export default function TestimonialsAndFAQSections() {
       {/* ========================================== */}
       {/* SECTION 2: FREQUENTLY ASKED QUESTIONS      */}
       {/* ========================================== */}
-      <section className="py-14 px-4 bg-white">
+      <section className="py-6 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-xl sm:text-2xl font-bold text-[#0c3547] mb-8">
             Frequently Asked Questions – Journal Submission Services

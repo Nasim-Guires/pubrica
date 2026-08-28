@@ -143,8 +143,8 @@ export default function StrategicPartnershipsMembershipsPage() {
 
       <main className="min-h-screen bg-white">
         {/* Hero */}
-        <section className="relative flex items-center justify-center bg-gradient-to-b from-[#0e1a17] to-[#132420] py-20 px-4 text-center">
-          <div className="w-full max-w-xl border border-white/25 px-8 py-10">
+        <section className="relative flex items-center justify-center bg-gradient-to-b from-[#0e1a17] to-[#132420] py-8 px-4 text-center">
+          <div className="w-full max-w-xl border border-white/25 px-8 py-5">
             <h1 className="text-3xl md:text-4xl font-bold tracking-wide text-white">
               Strategic Alliances
             </h1>
@@ -154,7 +154,7 @@ export default function StrategicPartnershipsMembershipsPage() {
           </div>
         </section>
 
-        <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-12 md:flex-row">
+        <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-6 md:flex-row">
           {/* Sidebar */}
           <aside className="md:w-72 shrink-0">
             <div className="mb-4 flex items-center gap-2">
@@ -251,7 +251,7 @@ export default function StrategicPartnershipsMembershipsPage() {
             </div>
 
             {/* CTA */}
-            <section className="mt-10 bg-slate-100 px-6 py-12 text-center">
+            <section className="mt-10 bg-slate-100 px-6 py-6 text-center">
               <h2 className="text-2xl font-bold text-emerald-800">
                 With Pubrica, your paper is in safe hands
               </h2>

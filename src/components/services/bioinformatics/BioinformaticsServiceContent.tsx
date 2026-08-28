@@ -180,7 +180,7 @@ export default function BioinformaticsServiceContent() {
             {/* --------------------------------------------------------------------
          1. HERO SECTION
          -------------------------------------------------------------------- */}
-            <section className="bg-[#0b2b26] text-white py-12 px-4 sm:px-6 lg:px-8 text-center">
+            <section className="bg-[#0b2b26] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
                 <div className="max-w-5xl mx-auto border border-emerald-500/30 p-8 sm:p-12 rounded-lg bg-emerald-950/20 backdrop-blur-sm">
                     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
                         Transforming Biological Data into Scientific Discovery
@@ -196,7 +196,7 @@ export default function BioinformaticsServiceContent() {
             {/* --------------------------------------------------------------------
          2. OVERVIEW SECTION
          -------------------------------------------------------------------- */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     {/* Text Content Block */}
                     <div className="lg:col-span-7 space-y-6">
@@ -287,7 +287,7 @@ export default function BioinformaticsServiceContent() {
             {/* --------------------------------------------------------------------
          3. SERVICES UNDERTAKEN SECTION
          -------------------------------------------------------------------- */}
-            <section className="py-16 bg-slate-50 border-t border-slate-100">
+            <section className="py-7 bg-slate-50 border-t border-slate-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="mb-10 text-left">
                         <h2 className="text-3xl font-bold text-[#0b2b26] mb-3">

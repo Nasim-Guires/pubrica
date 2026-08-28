@@ -9,7 +9,7 @@ export default function AiMlHeroSection() {
   return (
     <div className="w-full font-sans text-slate-800">
       {/* 1. Dark Top Hero Banner */}
-      <section className="w-full bg-[#0a1a18] text-white py-14 px-4 sm:px-6 lg:px-12 text-center">
+      <section className="w-full bg-[#0a1a18] text-white py-6 px-4 sm:px-6 lg:px-12 text-center">
         <div className="max-w-4xl mx-auto border border-slate-600/60 rounded-sm p-8 sm:p-10 bg-black/20 backdrop-blur-sm">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4 text-white">
             Artificial Intelligence and Machine Learning Services
@@ -23,7 +23,7 @@ export default function AiMlHeroSection() {
       </section>
 
       {/* 2. Main Intro Content Section */}
-      <section className="w-full bg-[#f8f9f9] py-16 px-4 sm:px-6 lg:px-12">
+      <section className="w-full bg-[#f8f9f9] py-7 px-4 sm:px-6 lg:px-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Text Column */}
           <div className="lg:col-span-7 space-y-5">

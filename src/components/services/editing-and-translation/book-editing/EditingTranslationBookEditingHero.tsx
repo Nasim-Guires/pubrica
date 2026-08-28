@@ -9,7 +9,7 @@ export const EditingTranslationBookEditingHero: React.FC = () => {
   return (
     <div className="w-full bg-[#f8fafc] text-slate-800">
       {/* Dark Hero Box Header */}
-      <div className="w-full bg-[#122e2b] py-10 px-4 sm:px-6 text-center text-white">
+      <div className="w-full bg-[#122e2b] py-5 px-4 sm:px-6 text-center text-white">
         <div className="max-w-4xl mx-auto border border-slate-300/40 rounded-lg p-6 sm:p-8 bg-[#122e2b]">
           <h1 className="text-2xl sm:text-3xl font-bold mb-3 tracking-wide">
             Book Editing Service
@@ -24,7 +24,7 @@ export const EditingTranslationBookEditingHero: React.FC = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6">
         {/* Main Heading */}
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-6">
           Polish Your Pages to Perfection With Pubrica’s Book Editing Service

@@ -93,7 +93,7 @@ export default function ProcessAndBenefitsSections() {
   const [activeStep, setActiveStep] = useState<number>(2);
 
   return (
-    <div className="w-full bg-[#f8fafc] font-sans text-gray-800 py-16 space-y-24 antialiased">
+    <div className="w-full bg-[#f8fafc] font-sans text-gray-800 py-7 space-y-24 antialiased">
       {/* ============================================================ */}
       {/* SECTION 1: HOW THE SCIENTIFIC DOCUMENT FORMATTING WORKS       */}
       {/* ============================================================ */}
@@ -118,7 +118,7 @@ export default function ProcessAndBenefitsSections() {
         </div>
 
         {/* Desktop Process Flow */}
-        <div className="relative pt-8 pb-12">
+        <div className="relative pt-8 pb-6">
           {/* Horizontal Connecting Blue Line */}
           <div className="hidden lg:block absolute top-[92px] left-[5%] right-[5%] h-2 bg-[#0082a6] -z-0"></div>
 

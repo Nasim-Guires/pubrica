@@ -132,8 +132,8 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
   const topicQuery = (t?: string) => (t ? `?topic=${encodeURIComponent(t)}` : "");
 
   return (
-    <div className="bg-[#f8f9fa] min-h-screen text-slate-800 font-sans pb-24">
-      <section className="bg-[#0b2825] text-white py-14 px-4 text-center">
+    <div className="bg-[#f8f9fa] min-h-screen text-slate-800 font-sans pb-10">
+      <section className="bg-[#0b2825] text-white py-6 px-4 text-center">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">Researchers Q &amp; A</h1>
         <p className="text-gray-300 text-sm max-w-2xl mx-auto">
           Get all your inquiries about research writing and publishing addressed by experienced researchers and
@@ -141,7 +141,7 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
         </p>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
         <aside className="lg:col-span-3 flex flex-col gap-6">
           <div className="bg-white p-5 rounded-md border border-gray-200/80 shadow-xs">
             <h4 className="text-sm font-bold text-[#0b2825] mb-3">Q &amp; A Topics</h4>
@@ -203,7 +203,7 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
           ))}
 
           {pageEntries.length === 0 && (
-            <p className="text-sm text-slate-500 text-center py-12">No questions found in this topic yet.</p>
+            <p className="text-sm text-slate-500 text-center py-6">No questions found in this topic yet.</p>
           )}
 
           {totalPages > 1 && (

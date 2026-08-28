@@ -44,7 +44,7 @@ export default function PermissionAndMetadataServices() {
     return (
         <article className="w-full bg-[#f4f5f5] text-gray-800 font-sans">
             {/* ------------------- HERO BANNER ------------------- */}
-            <section className="bg-[#0b3b2c] py-12 px-4 text-white text-center">
+            <section className="bg-[#0b3b2c] py-6 px-4 text-white text-center">
                 <div className="max-w-4xl mx-auto">
                     <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
                         Permission and Metadata Services
@@ -56,7 +56,7 @@ export default function PermissionAndMetadataServices() {
             </section>
 
             {/* ------------------- MAIN INTRO & DETAILS ------------------- */}
-            <section className="py-12 px-4 max-w-6xl mx-auto">
+            <section className="py-6 px-4 max-w-6xl mx-auto">
                 <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-6 max-w-2xl">
                     Ensure Seamless Publishing Compliance with Pubrica’s Expert Permission & Metadata Services
                 </h2>
@@ -110,7 +110,7 @@ export default function PermissionAndMetadataServices() {
             </section>
 
             {/* ------------------- TYPES OF PERMISSION AND METADATA SERVICES ------------------- */}
-            <section className="py-14 px-4 bg-white border-t border-gray-100" aria-labelledby="types-heading">
+            <section className="py-6 px-4 bg-white border-t border-gray-100" aria-labelledby="types-heading">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-10">
                         <h2 id="types-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">

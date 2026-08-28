@@ -191,7 +191,7 @@ export default function JournalSubmissionPage() {
       {/* ========================================== */}
       {/* SECTION 1: HERO BANNER                    */}
       {/* ========================================== */}
-      <section className="bg-[#1a2c2a] py-16 px-4 text-center">
+      <section className="bg-[#1a2c2a] py-7 px-4 text-center">
         <div className="max-w-4xl mx-auto border border-white/60 p-8 sm:p-10 rounded-sm">
           <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
             Journal Submission Service
@@ -207,7 +207,7 @@ export default function JournalSubmissionPage() {
       {/* ========================================== */}
       {/* SECTION 2: OVERVIEW & BULLETS             */}
       {/* ========================================== */}
-      <section className="max-w-5xl mx-auto px-4 py-12">
+      <section className="max-w-5xl mx-auto px-4 py-6">
         <h2 className="text-xl sm:text-2xl font-bold text-[#0c3547] mb-3 leading-snug">
           Journal Submission Services for Life Sciences, Pharma, and Research:
           Simplifying the Path to Publication
@@ -344,7 +344,7 @@ export default function JournalSubmissionPage() {
       {/* ========================================== */}
       {/* SECTION 3: COMPREHENSIVE SERVICE ACCORDION */}
       {/* ========================================== */}
-      <section className="bg-[#f9fafb] py-12 px-4 border-t border-gray-100">
+      <section className="bg-[#f9fafb] py-6 px-4 border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-xl sm:text-2xl font-bold text-[#0c3547] mb-3">
             Our Comprehensive Journal Submission Service Include

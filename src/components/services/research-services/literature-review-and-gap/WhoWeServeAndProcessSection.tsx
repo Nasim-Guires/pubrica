@@ -166,7 +166,7 @@ export default function WhoWeServeAndProcessSection() {
       {/* ========================================================= */}
       <section
         aria-labelledby="who-we-serve-heading"
-        className="w-full bg-white py-14 px-4 sm:px-6 lg:px-8 text-slate-800"
+        className="w-full bg-white py-6 px-4 sm:px-6 lg:px-8 text-slate-800"
       >
         <div className="max-w-7xl mx-auto space-y-8">
           {/* Header */}
@@ -234,7 +234,7 @@ export default function WhoWeServeAndProcessSection() {
       {/* ========================================================= */}
       <section
         aria-labelledby="how-it-works-heading"
-        className="w-full bg-[#e2e8f0]/40 py-16 px-4 sm:px-6 lg:px-8 text-slate-800 border-t border-slate-200"
+        className="w-full bg-[#e2e8f0]/40 py-7 px-4 sm:px-6 lg:px-8 text-slate-800 border-t border-slate-200"
       >
         <div className="max-w-7xl mx-auto space-y-12">
           {/* Header */}

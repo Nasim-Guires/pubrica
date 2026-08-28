@@ -28,7 +28,7 @@ const RegulatoryWritingPage = () => {
         <div className="w-full bg-white text-gray-800 font-sans">
 
             {/* 1. Hero / Header Banner Section */}
-            <section className="bg-[#122b2b] text-white py-16 px-4 md:px-8 text-center">
+            <section className="bg-[#122b2b] text-white py-7 px-4 md:px-8 text-center">
                 <div className="max-w-4xl mx-auto border border-white/40 p-8 rounded-sm">
                     <h1 className="text-3xl md:text-4xl font-bold mb-4 tracking-wide">
                         Regulatory Writing
@@ -40,7 +40,7 @@ const RegulatoryWritingPage = () => {
             </section>
 
             {/* 2. Main Content Section */}
-            <section className="max-w-5xl mx-auto px-6 py-12 md:py-16">
+            <section className="max-w-5xl mx-auto px-6 py-6 md:py-7">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#122b2b] mb-6">
                     Regulatory Writing for Life Sciences, Pharma and Research <br className="hidden md:inline" />
                     Full Compliance, Clarity, and Accuracy in Scientific Data Submission
@@ -100,7 +100,7 @@ const RegulatoryWritingPage = () => {
             </section>
 
             {/* 3. Why Choose Pubrica Section */}
-            <section className="bg-gray-50 py-14 px-6 md:px-8 border-t border-gray-100">
+            <section className="bg-gray-50 py-6 px-6 md:px-8 border-t border-gray-100">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-2xl md:text-3xl font-bold text-[#122b2b] mb-4">
                         Why Choose Pubrica

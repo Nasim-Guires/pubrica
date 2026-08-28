@@ -98,7 +98,7 @@ export const AnalyticsFooterSections: React.FC = () => {
       {/* ==========================================================
           SECTION 1: TESTIMONIALS
           ========================================================== */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+      <section className="py-7 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
         <h2 className="text-[#082a32] text-2xl md:text-3xl font-extrabold tracking-tight mb-4">
           Testimonials
         </h2>

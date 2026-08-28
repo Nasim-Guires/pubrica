@@ -8,7 +8,7 @@ export default function LiteratureReviewHeroAndIntroSection() {
       {/* --- 1. HERO BANNER --- */}
       <section
         aria-labelledby="hero-heading"
-        className="w-full bg-[#0d2a2a] text-white py-14 px-4 sm:px-6 lg:px-8 border-b border-emerald-950"
+        className="w-full bg-[#0d2a2a] text-white py-6 px-4 sm:px-6 lg:px-8 border-b border-emerald-950"
       >
         <div className="max-w-5xl mx-auto text-center">
           <div className="border border-white/80 rounded-lg p-6 sm:p-10 bg-white/5 backdrop-blur-sm shadow-xl">
@@ -31,7 +31,7 @@ export default function LiteratureReviewHeroAndIntroSection() {
       {/* --- 2. INTRODUCTION BLOCK (DECISION MAKING) --- */}
       <section
         aria-labelledby="intro-decision-heading"
-        className="w-full bg-slate-100 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 text-slate-800"
+        className="w-full bg-slate-100 py-6 sm:py-7 px-4 sm:px-6 lg:px-8 text-slate-800"
       >
         <div className="max-w-7xl mx-auto space-y-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">

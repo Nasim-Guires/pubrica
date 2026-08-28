@@ -172,7 +172,7 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
   return (
     <div className="w-full bg-white font-sans text-left text-gray-800">
       {/* --- Section 1: Therapeutic Areas Cover Grid --- */}
-      <section className="py-12 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+      <section className="py-6 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
         <h2 className="text-[#083c4c] text-xl md:text-2xl lg:text-[26px] font-extrabold leading-tight tracking-tight mb-4">
           Our Therapeutic Area We Cover
         </h2>
@@ -218,7 +218,7 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
       </section>
 
       {/* --- Section 2: Compliance Guidelines Showcase Banner --- */}
-      <section className="bg-[#f8f9fa] border-t border-gray-200/60 py-14 px-6 md:px-12 lg:px-24">
+      <section className="bg-[#f8f9fa] border-t border-gray-200/60 py-6 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-[#083c4c] text-xl md:text-2xl lg:text-[26px] font-extrabold leading-tight tracking-tight mb-4">
             Our Compliance and Guideline Standards
@@ -262,7 +262,7 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
       </section>
 
       {/* --- Section 3: Deep Green Satisfaction & Empowering Banner --- */}
-      <section className="w-full bg-[#05261e] py-10 px-6 md:px-12 lg:px-24 border-t border-b border-emerald-950">
+      <section className="w-full bg-[#05261e] py-5 px-6 md:px-12 lg:px-24 border-t border-b border-emerald-950">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 lg:gap-12">
           <div className="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 relative">
             <Image
@@ -294,7 +294,7 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
       </section>
 
       {/* --- Section 4: Physician Writing Service Sample Work Block --- */}
-      <section className="bg-[#f3faf7] py-14 px-6 md:px-12 lg:px-24">
+      <section className="bg-[#f3faf7] py-6 px-6 md:px-12 lg:px-24">
         <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-sm border border-emerald-100/40 p-6 md:p-8 flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="relative w-full md:w-[260px] aspect-[4/5] bg-gray-50 rounded border border-gray-100 overflow-hidden flex-shrink-0 shadow-sm">
             <Image
@@ -335,7 +335,7 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
       </section>
 
       {/* --- Section 5: NEW - Physician Writing Service Packages --- */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-100">
+      <section className="py-7 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-100">
         <h2 className="text-black text-xl md:text-2xl lg:text-[26px] font-bold leading-tight tracking-tight mb-3">
           Physician Writing Service Packages
         </h2>

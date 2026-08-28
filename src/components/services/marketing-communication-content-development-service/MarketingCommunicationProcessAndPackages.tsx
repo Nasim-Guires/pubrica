@@ -56,7 +56,7 @@ export default function MarketingCommunicationProcessAndPackages() {
   return (
     <article className="w-full bg-white text-gray-800 font-sans">
       {/* ------------------- BANNER ------------------- */}
-      <header className="bg-[#0b3b2c] text-white py-10 px-4 text-center">
+      <header className="bg-[#0b3b2c] text-white py-5 px-4 text-center">
         <div className="max-w-5xl mx-auto border border-gray-400/40 p-6 rounded-sm bg-[#0b3b2c]/80">
           <h2 className="text-xl md:text-2xl font-bold mb-3 tracking-wide text-white">
             Speed up your journey of Marketing Communication with Pubrica
@@ -68,7 +68,7 @@ export default function MarketingCommunicationProcessAndPackages() {
       </header>
 
       {/* ------------------- STEP-BY-STEP PROCESS ------------------- */}
-      <section className="py-14 px-4 max-w-6xl mx-auto text-center" aria-labelledby="process-heading">
+      <section className="py-6 px-4 max-w-6xl mx-auto text-center" aria-labelledby="process-heading">
         <h2 id="process-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-1">
           How Do Marketing Communication Content Development Services Work at Pubrica?
         </h2>
@@ -144,7 +144,7 @@ export default function MarketingCommunicationProcessAndPackages() {
       </section>
 
       {/* ------------------- SAMPLE WORK SECTION ------------------- */}
-      <section className="bg-emerald-50/50 py-12 px-4 border-y border-emerald-100">
+      <section className="bg-emerald-50/50 py-6 px-4 border-y border-emerald-100">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image Placeholder */}
           <div className="relative w-full h-80 rounded-lg overflow-hidden">
@@ -178,7 +178,7 @@ export default function MarketingCommunicationProcessAndPackages() {
       </section>
 
       {/* ------------------- OUR PACKAGES ------------------- */}
-      <section className="py-12 px-4 max-w-6xl mx-auto" aria-labelledby="packages-heading">
+      <section className="py-6 px-4 max-w-6xl mx-auto" aria-labelledby="packages-heading">
         <h2 id="packages-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
           Marketing Communication Content Development Services – Our Packages
         </h2>

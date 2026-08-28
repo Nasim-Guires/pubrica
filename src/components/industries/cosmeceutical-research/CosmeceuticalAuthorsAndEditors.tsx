@@ -69,7 +69,7 @@ export default function CosmeceuticalAuthorsAndEditors({
     editors = defaultEditors
 }: CosmeceuticalAuthorsAndEditorsProps) {
     return (
-        <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden py-16 px-6">
+        <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden py-7 px-6">
 
             {/* Where Our Authors Publish Section */}
             <section className="max-w-5xl mx-auto mb-20 text-center">
@@ -112,7 +112,7 @@ export default function CosmeceuticalAuthorsAndEditors({
             </section>
 
             {/* Our Expert Cosmeceutical Editors Section */}
-            <section className="max-w-6xl mx-auto text-center border-t border-gray-100 pt-16">
+            <section className="max-w-6xl mx-auto text-center border-t border-gray-100 pt-7">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{editorsTitle}</h2>
                 <p className="text-gray-600 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed mb-12">
                     {editorsDescription}

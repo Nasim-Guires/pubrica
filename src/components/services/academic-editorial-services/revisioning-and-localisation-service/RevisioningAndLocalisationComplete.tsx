@@ -217,7 +217,7 @@ export default function RevisioningAndLocalisationComplete() {
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
             {/* ------------------- HERO BANNER ------------------- */}
-            <section className="bg-[#0b3b2c] py-16 px-4 text-white text-center">
+            <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
                         Revisioning & Localisation Services at Pubrica
@@ -229,7 +229,7 @@ export default function RevisioningAndLocalisationComplete() {
             </section>
 
             {/* ------------------- INTRODUCTION & CRUCIAL POINTS SECTION ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto">
+            <section className="py-6 px-4 max-w-6xl mx-auto">
                 <div className="max-w-4xl mx-auto mb-10 text-left">
                     <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-4">
                         Transform Your Research for Global Impact with Pubrica’s Expert Revisioning & Localisation Services
@@ -274,7 +274,7 @@ export default function RevisioningAndLocalisationComplete() {
             </section>
 
             {/* ------------------- TYPES OF REVISIONING & LOCALISATION SERVICES ------------------- */}
-            <section className="py-14 px-4 bg-[#f8faf9] border-y border-gray-100" aria-labelledby="types-heading">
+            <section className="py-6 px-4 bg-[#f8faf9] border-y border-gray-100" aria-labelledby="types-heading">
                 <div className="max-w-6xl mx-auto text-center">
                     <div className="max-w-4xl mx-auto mb-12">
                         <h2 id="types-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
@@ -302,7 +302,7 @@ export default function RevisioningAndLocalisationComplete() {
             </section>
 
             {/* ------------------- PROCESS SECTION (ZIGZAG LAYOUT) ------------------- */}
-            <section className="py-16 px-4 max-w-6xl mx-auto text-center" aria-labelledby="process-heading">
+            <section className="py-7 px-4 max-w-6xl mx-auto text-center" aria-labelledby="process-heading">
                 <h2 id="process-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-2">
                     How Our Revisioning & Localisation Service Works
                 </h2>
@@ -360,7 +360,7 @@ export default function RevisioningAndLocalisationComplete() {
             </section>
 
             {/* ------------------- TYPES OF DOCUMENTS WE SUPPORT ------------------- */}
-            <section className="py-12 px-4 bg-[#f9fafb] border-y border-gray-100" aria-labelledby="docs-heading">
+            <section className="py-6 px-4 bg-[#f9fafb] border-y border-gray-100" aria-labelledby="docs-heading">
                 <div className="max-w-5xl mx-auto text-center">
                     <h2 id="docs-heading" className="text-lg md:text-xl font-bold text-[#0b3b2c] mb-8">
                         Types Of Documents We Support
@@ -377,7 +377,7 @@ export default function RevisioningAndLocalisationComplete() {
             </section>
 
             {/* ------------------- MEET OUR EXPERTS ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto text-center" aria-labelledby="experts-heading">
+            <section className="py-6 px-4 max-w-6xl mx-auto text-center" aria-labelledby="experts-heading">
                 <h2 id="experts-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-10">
                     Meet Our Revisioning and Localisation Experts
                 </h2>
@@ -408,7 +408,7 @@ export default function RevisioningAndLocalisationComplete() {
             </section>
 
             {/* ------------------- SAMPLE WORK SECTION ------------------- */}
-            <section className="py-14 px-4 bg-[#f4faf7] text-center" aria-labelledby="sample-heading">
+            <section className="py-6 px-4 bg-[#f4faf7] text-center" aria-labelledby="sample-heading">
                 <div className="max-w-4xl mx-auto bg-white border border-emerald-100 rounded-xl p-8 shadow-sm">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                         {/* Image Container matching the screenshot */}
@@ -446,7 +446,7 @@ export default function RevisioningAndLocalisationComplete() {
             </section>
 
             {/* ------------------- WHY CHOOSE PUBRICA ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto text-center" aria-labelledby="why-heading">
+            <section className="py-6 px-4 max-w-6xl mx-auto text-center" aria-labelledby="why-heading">
                 <h2 id="why-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
                     Why Choose Pubrica for Revisioning and Localisation?
                 </h2>
@@ -467,7 +467,7 @@ export default function RevisioningAndLocalisationComplete() {
             </section>
 
             {/* ------------------- PACKAGES SECTION ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto" aria-labelledby="packages-heading">
+            <section className="py-6 px-4 max-w-6xl mx-auto" aria-labelledby="packages-heading">
                 <div className="text-center max-w-3xl mx-auto mb-12">
                     <h2 id="packages-heading" className="text-xl md:text-2xl font-bold text-[#0F3542] mb-3">
                         Revisioning and Localisation Services – Our Packages

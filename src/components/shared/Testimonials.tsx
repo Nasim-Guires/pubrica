@@ -24,7 +24,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="bg-primary-50/50 py-20 relative overflow-hidden select-none">
+    <section className="bg-primary-50/50 py-8 relative overflow-hidden select-none">
       {/* Visual backdrop grid */}
       <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
 

@@ -63,7 +63,7 @@ const editorsData = [
 
 export default function TissueEngineeringSubjectMatterExperts() {
     return (
-        <div className="w-full bg-white text-gray-800 font-sans py-12 px-4 sm:px-6 lg:px-8 space-y-20">
+        <div className="w-full bg-white text-gray-800 font-sans py-6 px-4 sm:px-6 lg:px-8 space-y-20">
 
             {/* SECTION: Emerging Trends in Tissue Engineering Research (Exact Image Layout) */}
             <section className="max-w-6xl mx-auto space-y-6">

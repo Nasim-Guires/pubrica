@@ -118,7 +118,7 @@ export const ThesisServiceWorkflow: React.FC = () => {
       {/* ============================================================= */}
       {/* SECTION 1: OUR SERVICE HIGHLIGHTS                             */}
       {/* ============================================================= */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-5">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-6">
           Our Service Highlights
         </h2>
@@ -173,7 +173,7 @@ export const ThesisServiceWorkflow: React.FC = () => {
       {/* ============================================================= */}
       {/* SECTION 2: HOW OUR THESIS EDITING SERVICE WORKS               */}
       {/* ============================================================= */}
-      <section className="w-full bg-[#f4f6f8] py-12 border-t border-slate-200">
+      <section className="w-full bg-[#f4f6f8] py-6 border-t border-slate-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           {/* Top Banner */}
           <div className="bg-[#042825] text-white rounded-sm p-6 text-center mb-10 shadow-md">

@@ -76,7 +76,7 @@ export default function PatientJourneyPackagesSection() {
   ];
 
   return (
-    <section className="w-full bg-white py-16 px-4">
+    <section className="w-full bg-white py-7 px-4">
       <div className="max-w-6xl mx-auto">
         
         {/* Header Section */}

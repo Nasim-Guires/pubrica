@@ -128,7 +128,7 @@ export default function CancerResearchSection() {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <div className="w-full bg-white text-gray-800 font-sans py-12 px-4 sm:px-6 lg:px-8 space-y-20">
+        <div className="w-full bg-white text-gray-800 font-sans py-6 px-4 sm:px-6 lg:px-8 space-y-20">
 
             {/* SECTION 1: Emerging Trends in Cancer Research */}
             <section className="max-w-6xl mx-auto space-y-6">
@@ -174,7 +174,7 @@ export default function CancerResearchSection() {
             </section>
 
             {/* SECTION 2: Types of Cancer Research We Cover (MISSING FROM PREVIOUS CODE) */}
-            <section className="w-full bg-[#0e3b32] text-white py-12 px-6 rounded-xl overflow-hidden shadow-lg">
+            <section className="w-full bg-[#0e3b32] text-white py-6 px-6 rounded-xl overflow-hidden shadow-lg">
                 <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     
                     {/* Left Text Overlay Column */}

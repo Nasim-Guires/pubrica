@@ -91,7 +91,7 @@ export default function ResearchImpactGraphicalAbstract() {
   return (
     <div className="w-full bg-slate-50 text-slate-800 font-sans">
       {/* 1. Hero Banner */}
-      <section className="w-full bg-[#033c2a] text-white py-16 px-4 sm:px-6 lg:px-8 text-center">
+      <section className="w-full bg-[#033c2a] text-white py-7 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-5xl mx-auto space-y-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
             Graphical Abstract Services at Pubrica
@@ -103,7 +103,7 @@ export default function ResearchImpactGraphicalAbstract() {
       </section>
 
       {/* 2. Process Section */}
-      <section className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto py-7 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
             How The Graphical Abstract Service Works
@@ -194,7 +194,7 @@ export default function ResearchImpactGraphicalAbstract() {
       </section>
 
       {/* 3. Complete Graphical Illustration Section */}
-      <section className="bg-white border-y border-slate-200 py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-white border-y border-slate-200 py-7 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-10">
           <div className="space-y-3">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
@@ -280,7 +280,7 @@ export default function ResearchImpactGraphicalAbstract() {
       </section>
 
       {/* 4. Graphical Abstract Examples by Pubrica */}
-      <section className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto py-7 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
             Graphical Abstract Examples by Pubrica

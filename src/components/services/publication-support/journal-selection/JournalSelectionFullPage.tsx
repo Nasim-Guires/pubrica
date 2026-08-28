@@ -216,7 +216,7 @@ export default function JournalSelectionFullPage() {
     criteriaTabs.find((t) => t.id === activeTab) || criteriaTabs[0];
 
   return (
-    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-12 px-4 sm:px-6 lg:px-8 space-y-20">
+    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-6 px-4 sm:px-6 lg:px-8 space-y-20">
       {/* ---------------------------------------------------- */}
       {/* SECTION 1: WHO WE SERVE                              */}
       {/* ---------------------------------------------------- */}
@@ -267,7 +267,7 @@ export default function JournalSelectionFullPage() {
         </div>
 
         {/* Process Flow Container */}
-        <div className="relative py-10">
+        <div className="relative py-5">
           {/* Main Horizontal Timeline Bar (Desktop Only) */}
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-2 bg-[#008ba3] -translate-y-1/2 z-0" />
 

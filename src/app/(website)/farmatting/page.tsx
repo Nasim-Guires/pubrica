@@ -23,13 +23,13 @@ const SOLUTIONS = [
 
 export default function ClinicalTrialAuditPage() {
   return (
-    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24">
-      <section className="bg-[#0b2825] text-white py-16 px-4 text-center">
+    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
+      <section className="bg-[#0b2825] text-white py-7 px-4 text-center">
         <p className="text-xs uppercase tracking-wide text-gray-400 mb-2">Clinical Trial Audit and Monitoring Services</p>
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Good Clinical Practice (GCP) Guaranteed</h1>
       </section>
 
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-14">
           <div className="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm">
             <p className="text-sm text-slate-600 leading-relaxed mb-4">

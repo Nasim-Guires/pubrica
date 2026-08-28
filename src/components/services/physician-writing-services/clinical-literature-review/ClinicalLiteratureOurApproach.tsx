@@ -88,7 +88,7 @@ export default function ClinicalReviewScopeAndApproach() {
   };
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-10 space-y-12 text-slate-800">
+    <section className="max-w-6xl mx-auto px-4 py-5 space-y-12 text-slate-800">
       {/* 1. What We Review Section */}
       <div className="space-y-6">
         <div className="space-y-2">

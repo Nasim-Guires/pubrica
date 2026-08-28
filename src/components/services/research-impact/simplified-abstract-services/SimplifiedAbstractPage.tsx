@@ -180,10 +180,10 @@ export default function SimplifiedAbstractPage() {
     const [activeStep, setActiveStep] = useState<number | null>(null);
 
     return (
-        <main className="w-full bg-slate-50 text-slate-800 font-sans pb-20">
+        <main className="w-full bg-slate-50 text-slate-800 font-sans pb-8">
 
             {/* 1. HERO BANNER */}
-            <section className="bg-[#033c2a] text-white py-14 px-4 sm:px-6 lg:px-8 text-center">
+            <section className="bg-[#033c2a] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
                 <div className="max-w-5xl mx-auto space-y-4">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight">
                         Accelerate Your Research with Pubrica's SIMPLIFIED ABSTRACT SERVICE
@@ -195,7 +195,7 @@ export default function SimplifiedAbstractPage() {
             </section>
 
             {/* 2. SIMPLIFIED ABSTRACT EXAMPLE */}
-            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 text-center space-y-6">
+            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-7 text-center space-y-6">
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a]">
                     Simplified Abstract Example by Pubrica
                 </h2>
@@ -212,7 +212,7 @@ export default function SimplifiedAbstractPage() {
             </section>
 
             {/* 3. TYPES OF SERVICES TABLE */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 space-y-8">
                 <div className="space-y-3">
                     <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a]">
                         Types of Simplified Abstract Services We Offer
@@ -261,7 +261,7 @@ export default function SimplifiedAbstractPage() {
             </section>
 
             {/* 4. WORKFLOW PROCESS (INTERACTIVE - LACK CARDS BY DEFAULT) */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-12">
                 <div className="text-center space-y-3">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#033c2a]">
                         How Our Simplified Abstract Service Works
@@ -326,7 +326,7 @@ export default function SimplifiedAbstractPage() {
             </section>
 
             {/* 5. GETTING STARTED WITH THIS SERVICE IS EASY */}
-            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
+            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8">
                 <div className="text-center space-y-3">
                     <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a]">
                         Getting Started With This Service is Easy!
@@ -367,7 +367,7 @@ export default function SimplifiedAbstractPage() {
             </section>
 
             {/* 6. YOUR FINAL ABSTRACT WILL INCLUDE */}
-            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
                     <div className="space-y-4">
                         <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a]">
@@ -399,7 +399,7 @@ export default function SimplifiedAbstractPage() {
             </section>
 
             {/* 7. TRUSTED BY TOP PUBLISHERS */}
-            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center space-y-8">
+            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center space-y-8">
                 <div className="space-y-3">
                     <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a]">
                         Trusted by Top Publishers

@@ -12,7 +12,7 @@ export default function ExperimentalDesignHero() {
       {/* 1. HERO HEADER BANNER                                      */}
       {/* ========================================================= */}
       <section
-        className="w-full py-16 px-4 sm:px-8 md:px-12 font-sans"
+        className="w-full py-7 px-4 sm:px-8 md:px-12 font-sans"
         style={{
           background:
             "linear-gradient(to right, #243534, #121c1b, #0d1514, #131e1d, #253635)",
@@ -45,7 +45,7 @@ export default function ExperimentalDesignHero() {
       {/* ========================================================= */}
       {/* 2. OVERVIEW & INTRO SECTION                               */}
       {/* ========================================================= */}
-      <div className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Left Text Content */}
           <div className="lg:col-span-7 space-y-6">

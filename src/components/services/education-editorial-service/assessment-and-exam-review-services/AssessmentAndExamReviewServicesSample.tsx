@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const AssessmentAndExamReviewServicesSample: NextPage = () => {
   return (
-    <section className="w-full bg-[#f2f7f5] py-16 px-4 md:px-8">
+    <section className="w-full bg-[#f2f7f5] py-7 px-4 md:px-8">
       <div className="max-w-5xl mx-auto bg-white border border-[#d5e4de] rounded-3xl p-6 md:p-12 shadow-sm">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           

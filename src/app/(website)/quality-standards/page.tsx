@@ -13,7 +13,7 @@ export default function QualityStandardsPage() {
     <>
       <Breadcrumb items={[{ label: 'Quality Standards', href: '/quality-standards' }]} />
 
-      <section className="bg-[#1b2e2b] text-white py-16 px-4 text-center">
+      <section className="bg-[#1b2e2b] text-white py-7 px-4 text-center">
         <div className="max-w-4xl mx-auto border border-gray-600 p-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">Quality and Ethical Standards</h1>
           <p className="text-sm md:text-base text-gray-300">
@@ -22,7 +22,7 @@ export default function QualityStandardsPage() {
         </div>
       </section>
 
-      <div className="bg-white py-16 font-sans">
+      <div className="bg-white py-7 font-sans">
         <Container className="max-w-4xl prose prose-primary">
           <h2 className="text-xl font-bold text-gray-900 font-display mt-0 mb-4">Introduction and Objectives</h2>
           <p className="text-gray-600 leading-relaxed text-sm mb-6">

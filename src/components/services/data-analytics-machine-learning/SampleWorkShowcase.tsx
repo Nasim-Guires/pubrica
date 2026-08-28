@@ -4,7 +4,7 @@ import React from "react";
 
 export const SampleWorkShowcase: React.FC = () => {
   return (
-    <section className="py-12 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+    <section className="py-6 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
       <div className="bg-[#f2faf7] border border-emerald-100/50 rounded-lg p-8 md:p-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center text-left">
         {/* Visual Asset Container Left */}
         <div className="col-span-1 md:col-span-5 w-full aspect-[4/5] bg-white rounded border border-gray-200/80 shadow-sm overflow-hidden relative">

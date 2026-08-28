@@ -105,9 +105,9 @@ export default function AlgorithmWorkflowAndPackages() {
   ];
 
   return (
-    <main className="w-full bg-[#f8fbf9] text-[#222222] font-sans pb-16">
+    <main className="w-full bg-[#f8fbf9] text-[#222222] font-sans pb-7">
       {/* 1. HERO TITLE BANNER */}
-      <section className="bg-[#1b3d36] text-white py-10 px-4 text-center">
+      <section className="bg-[#1b3d36] text-white py-5 px-4 text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-2">
           Algorithm Development for Training & Optimization
         </h2>
@@ -117,7 +117,7 @@ export default function AlgorithmWorkflowAndPackages() {
       </section>
 
       {/* 2. HOW OUR SERVICE WORKS (PROCESS FLOW SECTION) */}
-      <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 md:px-8">
+      <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 md:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-3">
             How Our Algorithm Development for Training and Optimisation Service Works
@@ -230,7 +230,7 @@ export default function AlgorithmWorkflowAndPackages() {
       </section>
 
       {/* 3. SAMPLE WORK & REPORT DOWNLOAD SECTION */}
-      <section className="bg-[#f0fbf5] py-12 px-4 sm:px-6 md:px-8 border-y border-gray-200">
+      <section className="bg-[#f0fbf5] py-6 px-4 sm:px-6 md:px-8 border-y border-gray-200">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
 
           {/* Image Section */}
@@ -273,7 +273,7 @@ export default function AlgorithmWorkflowAndPackages() {
       </section>
 
       {/* 4. OUR PACKAGES SECTION */}
-      <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 md:px-8">
+      <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 md:px-8">
         <div className="text-center max-w-4xl mx-auto mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-3">
             Algorithm Development Service – Our Packages

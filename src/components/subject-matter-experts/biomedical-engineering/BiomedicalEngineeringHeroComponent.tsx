@@ -5,11 +5,11 @@ import Image from "next/image";
 
 export default function BiomedicalEngineeringHeroComponent() {
   return (
-    <div className="font-sans text-gray-800 bg-white py-12 px-4 space-y-12">
+    <div className="font-sans text-gray-800 bg-white py-6 px-4 space-y-12">
       <div className="max-w-5xl mx-auto space-y-12">
 
         {/* Top Dark Banner */}
-        <div className="w-full bg-[#0d3630] rounded-lg px-8 py-10 text-center text-white shadow-md">
+        <div className="w-full bg-[#0d3630] rounded-lg px-8 py-5 text-center text-white shadow-md">
           <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight">
             Biomedical Engineering
           </h1>

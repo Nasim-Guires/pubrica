@@ -169,7 +169,7 @@ export default function AlgorithmSMEPage() {
       `}</style>
 
             {/* HERO BANNER SECTION */}
-            <header className="w-full bg-[#1e2e2b] text-white py-12 px-4 text-center">
+            <header className="w-full bg-[#1e2e2b] text-white py-6 px-4 text-center">
                 <div className="max-w-4xl mx-auto border border-gray-500/50 py-8 px-6 bg-[#1a2825]/40 backdrop-blur-sm rounded-sm">
                     <h1 className="text-3xl md:text-4xl font-bold tracking-wide mb-3">
                         Algorithm
@@ -184,7 +184,7 @@ export default function AlgorithmSMEPage() {
             </header>
 
             {/* MAIN CONTAINER */}
-            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
                 {/* INTRO SECTION */}
                 <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     <div className="lg:col-span-7 space-y-4">
@@ -283,7 +283,7 @@ export default function AlgorithmSMEPage() {
                                     </div>
 
                                     {/* Sliding White Panel Overlay */}
-                                    <div className="absolute inset-x-0 bottom-0 top-36 z-10 bg-white pt-7 pb-3 px-3 flex flex-col items-center justify-start text-center transition-all duration-300 ease-in-out group-hover:top-0 group-hover:pt-20 group-hover:justify-center">
+                                    <div className="absolute inset-x-0 bottom-0 top-36 z-10 bg-white pt-7 pb-3 px-3 flex flex-col items-center justify-start text-center transition-all duration-300 ease-in-out group-hover:top-0 group-hover:pt-8 group-hover:justify-center">
                                         <h3 className="text-xs font-bold text-gray-900 group-hover:text-white group-hover:bg-[#12433e] group-hover:px-4 group-hover:py-1.5 group-hover:rounded-sm transition-all duration-300">
                                             {card.title}
                                         </h3>

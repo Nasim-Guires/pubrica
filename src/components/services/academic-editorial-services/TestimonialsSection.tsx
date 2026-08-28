@@ -55,7 +55,7 @@ export function TestimonialsSection() {
   );
 
   return (
-    <section className="w-full bg-[#f8fafc] text-slate-800 font-sans py-16 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-[#f8fafc] text-slate-800 font-sans py-7 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto space-y-8">
         {/* Section Header */}
         <div className="space-y-3">

@@ -6,7 +6,7 @@ export default function MedicalWritingSection(): React.ReactElement {
   return (
     <div className="w-full font-sans text-slate-800">
       {/* Dark Hero Banner */}
-      <section className="w-full bg-gradient-to-b from-[#112220] to-[#1a3330] py-16 px-4 sm:px-6 lg:px-12 text-white flex justify-center items-center">
+      <section className="w-full bg-gradient-to-b from-[#112220] to-[#1a3330] py-7 px-4 sm:px-6 lg:px-12 text-white flex justify-center items-center">
         <div className="max-w-4xl w-full border border-slate-300/40 rounded-sm p-8 sm:p-10 text-center bg-black/10 backdrop-blur-sm shadow-inner">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 tracking-tight">
             Medical Writing
@@ -20,7 +20,7 @@ export default function MedicalWritingSection(): React.ReactElement {
       </section>
 
       {/* Main Content Section */}
-      <section className="w-full bg-[#f8f9f9] py-12 px-4 sm:px-6 lg:px-12">
+      <section className="w-full bg-[#f8f9f9] py-6 px-4 sm:px-6 lg:px-12">
         <div className="max-w-5xl mx-auto space-y-6">
           {/* Main Title */}
           <h2 className="text-2xl sm:text-3xl font-bold text-[#09322e] leading-snug">

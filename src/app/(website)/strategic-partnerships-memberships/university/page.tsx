@@ -14,7 +14,7 @@ export default function UniversityPartnershipPage() {
         <div className="min-h-screen bg-white text-gray-800 font-sans">
 
             {/* Hero Section */}
-            <section className="bg-[#26373b] py-16 px-4 text-center text-white">
+            <section className="bg-[#26373b] py-7 px-4 text-center text-white">
                 <div className="max-w-4xl mx-auto border-2 border-gray-400 p-8 rounded-sm shadow-sm">
                     <h1 className="text-3xl md:text-4xl font-bold mb-2">Enhancing Research Initiatives</h1>
                     <p className="text-gray-300 text-sm md:text-base uppercase tracking-wider">Top universities</p>
@@ -22,7 +22,7 @@ export default function UniversityPartnershipPage() {
             </section>
 
             {/* Intro Description & Badge */}
-            <section className="py-12 px-4 text-center max-w-3xl mx-auto">
+            <section className="py-6 px-4 text-center max-w-3xl mx-auto">
                 <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-md border-4 border-blue-200">
                         100% SATISFACTION
@@ -35,7 +35,7 @@ export default function UniversityPartnershipPage() {
             </section>
 
             {/* 3 Colored Cards Section */}
-            <section className="pb-16 px-4 max-w-5xl mx-auto">
+            <section className="pb-7 px-4 max-w-5xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* Card 1 */}
                     <div className="bg-[#3192c3] text-white p-6 rounded shadow-md flex flex-col justify-between">
@@ -84,7 +84,7 @@ export default function UniversityPartnershipPage() {
             </section>
 
             {/* 4 White Columns Authoring Services */}
-            <section className="py-12 px-4 max-w-6xl mx-auto">
+            <section className="py-6 px-4 max-w-6xl mx-auto">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {/* Column 1 */}
                     <div className="bg-white border border-gray-200 p-6 rounded shadow-sm text-center flex flex-col justify-between">
@@ -140,7 +140,7 @@ export default function UniversityPartnershipPage() {
             </section>
 
             {/* Workflow Section */}
-            <section className="py-12 bg-gray-50 text-center">
+            <section className="py-6 bg-gray-50 text-center">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#26373b] mb-8">Workflow</h2>
                 <div className="flex justify-center">
                     <div className="relative w-64 h-64 flex flex-col items-center justify-center space-y-4">
@@ -155,7 +155,7 @@ export default function UniversityPartnershipPage() {
             </section>
 
             {/* Collaboration Model Section */}
-            <section className="py-12 px-4 max-w-5xl mx-auto">
+            <section className="py-6 px-4 max-w-5xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#26373b] text-center mb-8">Collaboration Model</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Dark Box */}
@@ -190,7 +190,7 @@ export default function UniversityPartnershipPage() {
             </section>
 
             {/* Knowledge Sharing Section */}
-            <section className="py-12 px-4 bg-gray-50 text-center">
+            <section className="py-6 px-4 bg-gray-50 text-center">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#26373b] mb-2">Learn and Grow with Pubrica Academy, your Educational Community for Knowledge Sharing</h2>
                 <p className="text-xs md:text-sm text-gray-600 max-w-2xl mx-auto mb-8">
                     Pubrica Academy is a forum for active discussion and knowledge sharing. It offers comprehensive and up-to-date resources for researchers, publishers, editors, and students to learn and share their experience about research and publishing.
@@ -214,7 +214,7 @@ export default function UniversityPartnershipPage() {
             </section>
 
             {/* Latest from Pubrica Section */}
-            <section className="py-10 px-4 max-w-4xl mx-auto">
+            <section className="py-5 px-4 max-w-4xl mx-auto">
                 <h3 className="font-bold text-lg text-[#26373b] mb-4">The latest from Pubrica</h3>
                 <ul className="space-y-2 text-xs text-blue-800">
                     <li>

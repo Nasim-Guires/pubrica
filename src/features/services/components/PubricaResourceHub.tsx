@@ -133,7 +133,7 @@ export default function PubricaResourceHub() {
   return (
     <div className="bg-slate-50 text-[#1e293b] font-sans antialiased">
       {/* ================= SECTION 1: SAMPLE WORK BANNER ================= */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto bg-[#effcf4] border border-emerald-100 rounded-2xl p-6 sm:p-10 shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Left Cover Book Graphic */}
@@ -203,7 +203,7 @@ export default function PubricaResourceHub() {
       </section>
 
       {/* ================= SECTION 2: TESTIMONIALS & FAQ ================= */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white border-y border-slate-100">
+      <section className="py-7 px-4 sm:px-6 lg:px-8 bg-white border-y border-slate-100">
         <div className="max-w-6xl mx-auto space-y-16">
           {/* TESTIMONIALS SUBSECTION */}
           <div>
@@ -365,7 +365,7 @@ export default function PubricaResourceHub() {
       <DynamicInsightsSection
         categorySlug="publication-support"
         limit={6}
-        className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50"
+        className="py-7 px-4 sm:px-6 lg:px-8 bg-slate-50"
       />
     </div>
   );

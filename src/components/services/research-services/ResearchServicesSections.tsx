@@ -301,7 +301,7 @@ export const ResearchServicesSections: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<string | null>("1");
 
   return (
-    <div className="w-full bg-[#f4f9fc] py-16 px-6 md:px-12 lg:px-24 font-sans selection:bg-blue-100 space-y-20">
+    <div className="w-full bg-[#f4f9fc] py-7 px-6 md:px-12 lg:px-24 font-sans selection:bg-blue-100 space-y-20">
       {/* SECTION 1: OUR SERVICES ACCORDION LAYOUT */}
       <section className="max-w-7xl mx-auto">
         <header className="mb-10">
@@ -370,7 +370,7 @@ export const ResearchServicesSections: React.FC = () => {
       </section>
 
       {/* SECTION 2: MEDICAL WRITING HIGHLIGHT CARDS */}
-      <section className="max-w-7xl mx-auto border-t border-gray-200 pt-16">
+      <section className="max-w-7xl mx-auto border-t border-gray-200 pt-7">
         <header className="text-center mb-12">
           <h2 className="text-[#083c4c] text-xl md:text-2xl font-bold tracking-tight mb-2">
             Pubrica Medical Writers Follow Best Practices for Research and

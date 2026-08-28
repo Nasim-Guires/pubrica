@@ -123,7 +123,7 @@ export default function LiteratureReviewTypesSection() {
   return (
     <section
       aria-labelledby="types-review-heading"
-      className="w-full bg-slate-50 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 text-slate-800"
+      className="w-full bg-slate-50 py-6 sm:py-7 px-4 sm:px-6 lg:px-8 text-slate-800"
     >
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header Section */}

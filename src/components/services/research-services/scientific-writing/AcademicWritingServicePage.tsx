@@ -90,7 +90,7 @@ export default function ScientificWritingPage() {
             <div className="w-full bg-white font-sans text-gray-800">
 
                 {/* SECTION 1: Academic Needs & Accordion (Closed by default) */}
-                <section className="mx-auto max-w-6xl px-4 py-12">
+                <section className="mx-auto max-w-6xl px-4 py-6">
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-start">
 
                         {/* Left Content Column */}
@@ -176,7 +176,7 @@ export default function ScientificWritingPage() {
                 </section>
 
                 {/* SECTION 2: Sample Work & Report Banner */}
-                <section className="bg-[#f2f9f5] py-12">
+                <section className="bg-[#f2f9f5] py-6">
                     <div className="mx-auto max-w-6xl px-4">
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-center">
 
@@ -225,7 +225,7 @@ export default function ScientificWritingPage() {
                 </section>
 
                 {/* SECTION 3: Why Choose Features */}
-                <section className="mx-auto max-w-6xl px-4 py-16 text-center">
+                <section className="mx-auto max-w-6xl px-4 py-7 text-center">
                     <h2 className="mb-2 text-2xl font-bold text-[#1a3c34]">
                         Why Choose Scientific and Academic Writing?
                     </h2>
@@ -275,7 +275,7 @@ export default function ScientificWritingPage() {
                 </section>
 
                 {/* SECTION 4: Packages & Pricing Table */}
-                <section className="mx-auto max-w-6xl px-4 py-12">
+                <section className="mx-auto max-w-6xl px-4 py-6">
                     <h2 className="mb-6 text-xl font-bold text-[#1a3c34]">
                         Packages & Pricing
                     </h2>
@@ -354,7 +354,7 @@ export default function ScientificWritingPage() {
                 </section>
 
                 {/* SECTION 5: Satisfaction Banner */}
-                <section className="bg-[#0e3b2e] py-10 text-white">
+                <section className="bg-[#0e3b2e] py-5 text-white">
                     <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 px-4 md:flex-row">
 
                         <div className="relative flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-full border-4 border-emerald-400 bg-white">
@@ -379,7 +379,7 @@ export default function ScientificWritingPage() {
                 </section>
 
                 {/* SECTION 6: Guarantee & Cards Section */}
-                <section className="mx-auto max-w-6xl px-4 py-16">
+                <section className="mx-auto max-w-6xl px-4 py-7">
                     <div className="mb-12 grid grid-cols-1 items-center gap-8 md:grid-cols-12">
 
                         <div className="space-y-3 md:col-span-8">

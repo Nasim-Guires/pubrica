@@ -269,7 +269,7 @@ export const EditingTranslationManuscriptEditingTypesAndPackages: React.FC =
     ];
 
     return (
-      <div className="w-full bg-slate-50 py-8 sm:py-12 text-slate-800">
+      <div className="w-full bg-slate-50 py-8 sm:py-6 text-slate-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-16">
           {/* SECTION 1: Collapsible Green Expectation Accordion */}
           <section className="w-full">

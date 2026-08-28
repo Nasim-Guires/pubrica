@@ -59,7 +59,7 @@ const AIDataPreparationComprehensiveSection: NextPage = () => {
         />
       </Head>
 
-      <div className="w-full bg-white text-gray-800 py-8 md:py-16 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
+      <div className="w-full bg-white text-gray-800 py-8 md:py-7 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
         {/* MAIN HERO / OVERVIEW SECTION */}
         <section className="max-w-5xl mx-auto space-y-6">
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0b3b2c] tracking-tight leading-snug">
@@ -127,7 +127,7 @@ const AIDataPreparationComprehensiveSection: NextPage = () => {
         </section>
 
         {/* SERVICES CARDS SECTION */}
-        <section className="max-w-5xl mx-auto pt-12 md:pt-16 space-y-6 md:space-y-8">
+        <section className="max-w-5xl mx-auto pt-6 md:pt-7 space-y-6 md:space-y-8">
           <div className="space-y-2 sm:space-y-3">
             <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-[#0b3b2c]">
               Types of AI and Data Preparation Services We Offer

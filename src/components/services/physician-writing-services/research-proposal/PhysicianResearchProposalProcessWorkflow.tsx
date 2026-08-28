@@ -164,10 +164,10 @@ export default function PhysicianResearchProposalProcessWorkflow() {
                 />
             </Head>
 
-            <div className="w-full bg-[#f4f7f6] text-gray-800 font-sans antialiased pb-12">
+            <div className="w-full bg-[#f4f7f6] text-gray-800 font-sans antialiased pb-6">
 
                 {/* SECTION 1: HOW IT WORKS STEP-BY-STEP WORKFLOW (EXACT MATCH TO IMAGE) */}
-                <section className="max-w-7xl mx-auto px-4 pt-12 pb-16">
+                <section className="max-w-7xl mx-auto px-4 pt-6 pb-7">
                     <div className="text-center max-w-4xl mx-auto mb-16">
                         <h2 className="text-2xl sm:text-3xl font-extrabold text-[#022227] tracking-tight">
                             How Our Clinical Research Protocol &amp; Proposal Writing Service Works
@@ -267,7 +267,7 @@ export default function PhysicianResearchProposalProcessWorkflow() {
                 </section>
 
                 {/* SECTION 3: USE CASES GRID */}
-                <section className="w-full bg-[#9bbdb0] py-12 px-4">
+                <section className="w-full bg-[#9bbdb0] py-6 px-4">
                     <div className="max-w-6xl mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {/* Left Intro Text Column */}
@@ -303,7 +303,7 @@ export default function PhysicianResearchProposalProcessWorkflow() {
                 </section>
 
                 {/* SECTION 4: COMPLIANCE ACCORDIONS AND LOGO CARDS */}
-                <section className="max-w-6xl mx-auto px-4 py-12">
+                <section className="max-w-6xl mx-auto px-4 py-6">
                     <h2 className="text-xl font-bold text-[#022227] text-center mb-2">
                         Our Compliance and Guideline Standards
                     </h2>
@@ -397,7 +397,7 @@ export default function PhysicianResearchProposalProcessWorkflow() {
                 </section>
 
                 {/* SECTION 5: SAMPLE WORK & DOWNLOAD REPORT BANNER */}
-                <section className="w-full bg-[#ebf5f0] py-10 px-4">
+                <section className="w-full bg-[#ebf5f0] py-5 px-4">
                     <div className="max-w-5xl mx-auto bg-[#e1efe8] rounded-xl p-6 sm:p-8 flex flex-col md:flex-row items-center gap-8 shadow-xs">
                         {/* Image using Next.js Image Tag */}
                         <div className="w-full md:w-1/2 h-56 sm:h-64 relative rounded-lg overflow-hidden shadow-sm">

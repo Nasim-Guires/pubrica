@@ -64,7 +64,7 @@ export default function CoreDisciplinesBiomedicalEngineering() {
     ];
 
     return (
-        <section className="py-16 px-4 bg-white font-sans">
+        <section className="py-7 px-4 bg-white font-sans">
             <div className="max-w-7xl mx-auto space-y-12">
                 {/* Section Header */}
                 <div className="text-center space-y-4 max-w-3xl mx-auto">

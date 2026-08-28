@@ -110,7 +110,7 @@ export default function MarketingCommunicationContentDevelopment() {
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
             {/* ------------------- HERO BANNER ------------------- */}
-            <header className="bg-[#0b3b2c] text-white py-12 px-4 text-center">
+            <header className="bg-[#0b3b2c] text-white py-6 px-4 text-center">
                 <div className="max-w-5xl mx-auto border border-gray-400/40 p-8 rounded-sm bg-[#0b3b2c]/80 backdrop-blur-sm">
                     <h1 className="text-2xl md:text-3xl font-bold mb-4 tracking-wide text-white">
                         Marketing Communication Content Development Services
@@ -122,7 +122,7 @@ export default function MarketingCommunicationContentDevelopment() {
             </header>
 
             {/* ------------------- MAIN SECTION ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto" aria-labelledby="main-heading">
+            <section className="py-6 px-4 max-w-6xl mx-auto" aria-labelledby="main-heading">
                 <h2 id="main-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-2">
                     Marketing Communication Content Development – Crafting Impactful Messages for Your Brand
                 </h2>
@@ -189,7 +189,7 @@ export default function MarketingCommunicationContentDevelopment() {
             </section>
 
             {/* ------------------- OUR SERVICES SECTION ------------------- */}
-            <section className="py-10 px-4 max-w-6xl mx-auto border-t border-gray-100" aria-labelledby="services-heading">
+            <section className="py-5 px-4 max-w-6xl mx-auto border-t border-gray-100" aria-labelledby="services-heading">
                 <h2 id="services-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-6">
                     Our Services
                 </h2>

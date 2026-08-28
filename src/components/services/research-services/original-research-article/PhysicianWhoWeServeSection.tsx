@@ -168,7 +168,7 @@ export default function PhysicianWhoWeServeSection() {
   return (
     <section
       aria-labelledby="who-we-serve-heading"
-      className="w-full bg-slate-100 py-16 px-4 sm:px-6 lg:px-8 text-slate-800"
+      className="w-full bg-slate-100 py-7 px-4 sm:px-6 lg:px-8 text-slate-800"
     >
       <div className="max-w-7xl mx-auto space-y-8">
         <header className="max-w-4xl space-y-3">

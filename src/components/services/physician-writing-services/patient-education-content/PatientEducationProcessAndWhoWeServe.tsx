@@ -112,7 +112,7 @@ export default function PatientEducationProcessAndWhoWeServe() {
   ];
 
   return (
-    <div className="w-full bg-[#f8fcfb] text-slate-800 font-sans py-12">
+    <div className="w-full bg-[#f8fcfb] text-slate-800 font-sans py-6">
       {/* --- Section 1: Commitment to Accuracy & Trust --- */}
       <section
         aria-label="Commitment to Accuracy & Trust"

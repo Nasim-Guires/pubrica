@@ -87,7 +87,7 @@ const packagesData = [
 
 export default function CaseReportPackagesAndSamples() {
   return (
-    <div className="w-full bg-[#f8f9fa] text-slate-800 font-sans py-12 px-4 sm:px-6 lg:px-8">
+    <div className="w-full bg-[#f8f9fa] text-slate-800 font-sans py-6 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-16">
         
         {/* ==========================================

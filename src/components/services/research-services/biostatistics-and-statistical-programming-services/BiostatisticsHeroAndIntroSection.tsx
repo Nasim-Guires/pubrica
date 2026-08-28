@@ -42,7 +42,7 @@ export default function BiostatisticsHeroAndIntroSection() {
       {/* ========================================================= */}
       {/* 1. HERO BANNER SECTION                                    */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#112320] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-[#112320] py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto border border-white/80 p-6 sm:p-10 md:p-12 text-center space-y-4">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight leading-snug">
             Biostatistics and Statistical Programming Services
@@ -59,7 +59,7 @@ export default function BiostatisticsHeroAndIntroSection() {
       {/* ========================================================= */}
       {/* 2. INTRO SECTION (Ensure Accurate Study Outcomes)          */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Text Content */}
           <div className="lg:col-span-7 space-y-6">
@@ -124,7 +124,7 @@ export default function BiostatisticsHeroAndIntroSection() {
       {/* ========================================================= */}
       {/* 3. ADVANCED BIOSTATISTICS & CDISC SECTION                */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto pb-7 px-4 sm:px-6 lg:px-8">
         <div className="space-y-8">
           {/* Header Copy */}
           <div className="space-y-4 max-w-6xl">

@@ -172,7 +172,7 @@ export default function IndustriesEmpoweredSection() {
   return (
     <div className="w-full font-sans text-slate-800">
       {/* 1. Dark Top Banner */}
-      <section className="w-full bg-[#08221c] text-white py-12 px-4 sm:px-6 lg:px-12 text-center">
+      <section className="w-full bg-[#08221c] text-white py-6 px-4 sm:px-6 lg:px-12 text-center">
         <div className="max-w-4xl mx-auto space-y-3">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-white">
             Accelerate Your AI and ML Modeling with Pubrica
@@ -186,7 +186,7 @@ export default function IndustriesEmpoweredSection() {
       </section>
 
       {/* 2. Industries Accordion Section */}
-      <section className="w-full bg-[#f8f9f9] py-16 px-4 sm:px-6 lg:px-12">
+      <section className="w-full bg-[#f8f9f9] py-7 px-4 sm:px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
           {/* Section Heading */}
           <div className="mb-10">

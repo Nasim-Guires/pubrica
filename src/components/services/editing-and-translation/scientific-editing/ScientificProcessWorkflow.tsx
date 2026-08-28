@@ -53,7 +53,7 @@ export default function ScientificProcessWorkflow() {
   const [activeStep, setActiveStep] = useState<number | null>(null);
 
   return (
-    <section className="bg-slate-50 py-12 md:py-20 px-4 sm:px-6 lg:px-8 font-sans border-t border-slate-200">
+    <section className="bg-slate-50 py-6 md:py-8 px-4 sm:px-6 lg:px-8 font-sans border-t border-slate-200">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0c373b] mb-2 tracking-tight">
           How Our Scientific Editing Service Works

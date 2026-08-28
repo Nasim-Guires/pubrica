@@ -7,7 +7,7 @@ export default function TestimonialsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   return (
-    <section className="bg-white py-16 px-6 max-w-7xl mx-auto">
+    <section className="bg-white py-7 px-6 max-w-7xl mx-auto">
       {/* Heading */}
       <h2 className="text-2xl font-bold text-[#0A4D4A] mb-4">Testimonials</h2>
 

@@ -15,14 +15,14 @@ export default function QualityAssurancePage() {
     <div className="min-h-screen bg-white text-gray-800 flex flex-col justify-between">
       <div>
         {/* Header / Hero Title Section */}
-        <section className="bg-slate-900 text-white py-16 text-center">
+        <section className="bg-slate-900 text-white py-7 text-center">
           <div className="max-w-4xl mx-auto border-2 border-slate-700 py-8 px-6 bg-slate-800/50 shadow-lg">
             <h1 className="text-3xl md:text-4xl font-bold tracking-wide">Quality Assurance</h1>
           </div>
         </section>
 
         {/* Main Content Container */}
-        <main className="max-w-4xl mx-auto px-6 py-12 space-y-10">
+        <main className="max-w-4xl mx-auto px-6 py-6 space-y-10">
           
           {/* ISO Section */}
           <section className="space-y-4">
@@ -151,7 +151,7 @@ export default function QualityAssurancePage() {
       </div>
 
       {/* Bottom CTA Banner */}
-      <section className="bg-slate-900 text-white py-12 px-6 mt-16">
+      <section className="bg-slate-900 text-white py-6 px-6 mt-16">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between bg-slate-800 border border-slate-700 p-8 rounded-lg shadow-xl gap-6 text-center md:text-left">
           <div>
             <h3 className="text-xl md:text-2xl font-semibold">Pubrica experts are with you at every stage...</h3>

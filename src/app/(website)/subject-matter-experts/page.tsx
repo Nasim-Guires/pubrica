@@ -103,8 +103,8 @@ export default function SubjectMatterExpertsPage() {
   return (
     <div className="min-h-screen bg-white text-gray-800">
       {/* Hero Section */}
-      <header className="w-full bg-[#1e2e2b] text-white py-14 px-4 text-center">
-        <div className="max-w-4xl mx-auto border border-gray-500/60 py-10 px-6">
+      <header className="w-full bg-[#1e2e2b] text-white py-6 px-4 text-center">
+        <div className="max-w-4xl mx-auto border border-gray-500/60 py-5 px-6">
           <h1 className="text-3xl md:text-4xl font-bold tracking-wide">
             Subject Matter Experts
           </h1>
@@ -116,7 +116,7 @@ export default function SubjectMatterExpertsPage() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {/* Introduction */}
         <section className="max-w-5xl mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-5">

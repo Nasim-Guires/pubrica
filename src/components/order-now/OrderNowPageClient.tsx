@@ -61,7 +61,7 @@ export default function OrderNowForm({ className = "" }: OrderNowFormProps) {
   return (
     <main className={`w-full bg-slate-50 min-h-screen font-sans ${className}`}>
       {/* Top Banner Section */}
-      <header className="w-full bg-[#1b2b28] text-white py-12 px-4 sm:px-8 text-center">
+      <header className="w-full bg-[#1b2b28] text-white py-6 px-4 sm:px-8 text-center">
         <div className="max-w-4xl mx-auto border border-emerald-500/30 p-8 rounded-lg bg-emerald-950/20 shadow-sm">
           <h1 className="text-3xl sm:text-4xl font-bold mb-3 tracking-tight">
             Enquiry Now
@@ -73,7 +73,7 @@ export default function OrderNowForm({ className = "" }: OrderNowFormProps) {
       </header>
 
       {/* Main Content Form Section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-7">
         <div className="bg-white rounded-2xl shadow-xl border border-slate-200/80 overflow-hidden grid grid-cols-1 lg:grid-cols-12">
           
           {/* Left Column: Value Proposition & Contact Info */}

@@ -59,8 +59,8 @@ const FAQS = [
 
 export default function LigandIdentificationPage() {
   return (
-    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24">
-      <section className="bg-[#0b2825] text-white py-14 px-4 text-center">
+    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
+      <section className="bg-[#0b2825] text-white py-6 px-4 text-center">
         <p className="text-xs uppercase tracking-wide text-gray-400 mb-2">Bioinformatics &middot; Macromolecular Service</p>
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">Ligand Identification</h1>
         <p className="text-gray-300 text-sm max-w-2xl mx-auto">
@@ -68,7 +68,7 @@ export default function LigandIdentificationPage() {
         </p>
       </section>
 
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="bg-white p-6 md:p-10 rounded-2xl border border-slate-100 shadow-sm mb-12">
           <p className="text-sm text-slate-600 leading-relaxed">
             Computational tools have been used in the drug designing process. The initial molecular modelling methodologies focused on a rigid depiction of the ligand-target binding process due to the small processing capabilities that were then available. The progression of hardware technology has made it possible to simulate the dynamic character of the critical event throughout time. We offer an overview of the advancement of structure-based drug discovery methodologies in investigating the ligand-target recognition phenomena, from inert molecular docking to improved molecular docking approaches. In the absence of 3D information about the receptor, ligand-based drug design depends on knowledge of compounds that bind to the biological target of interest. The most essential and extensively used techniques in ligand-based drug design are 3D quantitative structure-activity relationships (3D QSAR) and pharmacophore modelling. They can generate prediction models that can be used to identify and optimise leads.

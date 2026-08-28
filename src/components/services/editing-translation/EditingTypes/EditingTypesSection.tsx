@@ -18,7 +18,7 @@ export default function EditingTypesSection() {
   };
 
   return (
-    <section className="py-12 bg-white px-6 max-w-7xl mx-auto font-sans">
+    <section className="py-6 bg-white px-6 max-w-7xl mx-auto font-sans">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <div className="mb-8">

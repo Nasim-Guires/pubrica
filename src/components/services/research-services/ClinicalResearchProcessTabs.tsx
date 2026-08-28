@@ -96,7 +96,7 @@ export const ClinicalResearchProcessTabs: React.FC = () => {
   const currentData = tabsData.find((t) => t.id === activeTab) || tabsData[0];
 
   return (
-    <section className="w-full bg-white py-16 px-6 md:px-12 lg:px-24 font-sans text-[#111827]">
+    <section className="w-full bg-white py-7 px-6 md:px-12 lg:px-24 font-sans text-[#111827]">
       {/* Header */}
       <div className="max-w-7xl mx-auto text-center mb-12">
         <h2 className="text-[#083c4c] text-2xl md:text-3xl font-bold tracking-tight mb-3">

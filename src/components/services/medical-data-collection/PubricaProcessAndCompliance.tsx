@@ -128,7 +128,7 @@ export default function PubricaProcessAndCompliance() {
       {/* SECTION 1: How Services Work */}
       <section
         aria-labelledby="process-heading"
-        className="bg-[#f2f4f4] py-16 px-4 sm:px-6 lg:px-12"
+        className="bg-[#f2f4f4] py-7 px-4 sm:px-6 lg:px-12"
       >
         <div className="max-w-6xl mx-auto">
           <header className="mb-10">
@@ -215,7 +215,7 @@ export default function PubricaProcessAndCompliance() {
       {/* SECTION 2: End-to-End Banner Callout */}
       <section
         aria-labelledby="cta-heading"
-        className="bg-[#082e2b] text-white py-12 px-4 sm:px-6 text-center"
+        className="bg-[#082e2b] text-white py-6 px-4 sm:px-6 text-center"
       >
         <div className="max-w-4xl mx-auto space-y-4">
           <h2
@@ -238,7 +238,7 @@ export default function PubricaProcessAndCompliance() {
       {/* SECTION 3: Why Choose Pubrica? */}
       <section
         aria-labelledby="why-choose-heading"
-        className="py-16 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto"
+        className="py-7 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto"
       >
         <header className="mb-10">
           <h2
@@ -275,7 +275,7 @@ export default function PubricaProcessAndCompliance() {
       {/* SECTION 4: Compliance & Guidelines */}
       <section
         aria-labelledby="compliance-heading"
-        className="py-12 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto"
+        className="py-6 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto"
       >
         <header className="mb-8">
           <h2

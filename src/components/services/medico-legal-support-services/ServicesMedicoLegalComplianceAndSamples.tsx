@@ -98,7 +98,7 @@ export default function ServicesMedicoLegalComplianceAndSamples({
     return (
         <section className={`w-full text-slate-800 bg-white font-sans ${className}`}>
             {/* Top Guarantee Banner Section */}
-            <div className="w-full bg-[#053526] text-white py-10 px-4 sm:px-8">
+            <div className="w-full bg-[#053526] text-white py-5 px-4 sm:px-8">
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-10">
                     {/* Badge Image Section Placeholder */}
                     <div className="flex-shrink-0">
@@ -126,7 +126,7 @@ export default function ServicesMedicoLegalComplianceAndSamples({
             </div>
 
             {/* Compliance & Guidelines Accordion Section */}
-            <div className="w-full bg-slate-100/70 py-16 px-4 sm:px-8">
+            <div className="w-full bg-slate-100/70 py-7 px-4 sm:px-8">
                 <div className="max-w-4xl mx-auto">
                     <header className="text-center mb-10">
                         <h2 className="text-2xl sm:text-3xl font-bold text-[#1b2b28] mb-3">
@@ -180,7 +180,7 @@ export default function ServicesMedicoLegalComplianceAndSamples({
             </div>
 
             {/* Sample Work & Downloads CTA Card Section */}
-            <div className="max-w-5xl mx-auto px-4 sm:px-8 py-16">
+            <div className="max-w-5xl mx-auto px-4 sm:px-8 py-7">
                 <div className="bg-emerald-50/40 border border-emerald-100 rounded-xl p-6 sm:p-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                     {/* Left Image Section Div Placeholder */}
                     <div className="md:col-span-5 flex justify-center">

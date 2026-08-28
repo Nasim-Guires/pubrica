@@ -150,7 +150,7 @@ export default function HomeHeroWithAbout() {
 
       {/* --- ABOUT US SECTION --- */}
       {/* Adjusted padding top (pt-52 lg:pt-56) to ensure clear spacing below the cards */}
-      <section className="bg-white pt-28 pb-20 lg:pt-32 lg:pb-8">
+      <section className="bg-white pt-10 pb-8 lg:pt-32 lg:pb-8">
         <Container className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Column: Image */}

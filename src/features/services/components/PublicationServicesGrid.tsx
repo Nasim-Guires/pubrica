@@ -163,7 +163,7 @@ const SERVICES_GRID_DATA: ServiceCard[] = [
 
 export default function PublicationServicesGrid() {
   return (
-    <section className="w-full bg-[#f1f5f7] py-16 px-4 sm:px-6 lg:px-8 font-sans">
+    <section className="w-full bg-[#f1f5f7] py-7 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-6xl mx-auto">
         {/* Title and Intro */}
         <div className="mb-12">

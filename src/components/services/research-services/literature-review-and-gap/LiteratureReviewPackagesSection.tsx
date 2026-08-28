@@ -75,7 +75,7 @@ export default function LiteratureReviewPackagesSection() {
   return (
     <section
       aria-labelledby="packages-heading"
-      className="w-full bg-white py-14 px-4 sm:px-6 lg:px-8 text-slate-800"
+      className="w-full bg-white py-6 px-4 sm:px-6 lg:px-8 text-slate-800"
     >
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Section Header */}

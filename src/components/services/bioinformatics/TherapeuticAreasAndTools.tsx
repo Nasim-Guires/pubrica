@@ -155,13 +155,13 @@ export default function TherapeuticAreasAndTools() {
   };
 
   return (
-    <section className="w-full bg-[#f8fafc] py-16 text-slate-800 font-sans">
+    <section className="w-full bg-[#f8fafc] py-7 text-slate-800 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
 
         {/* ------------------------------------------------------------------
            1. ACCELERATE CALLOUT BANNER
            ------------------------------------------------------------------ */}
-        <div className="bg-[#0b2b26] text-white py-12 px-6 rounded-lg text-center shadow-lg">
+        <div className="bg-[#0b2b26] text-white py-6 px-6 rounded-lg text-center shadow-lg">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3">
             Accelerate Your Bioinformatics Journey with Pubrica
           </h2>

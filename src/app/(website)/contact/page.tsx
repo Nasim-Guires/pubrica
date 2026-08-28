@@ -16,7 +16,7 @@ export default function ContactPage() {
     <div className="bg-white min-h-screen text-slate-800 font-sans">
       
       {/* 1. HERO TITLE BANNER */}
-      <section className="bg-[#2d3737] text-white py-12 border-t-4 border-[#004d40]">
+      <section className="bg-[#2d3737] text-white py-6 border-t-4 border-[#004d40]">
         <div className="max-w-7xl mx-auto px-4 text-center space-y-3">
           <h1 className="text-3xl font-bold tracking-wide">Contact Us</h1>
           <p className="text-slate-300 text-sm font-medium">
@@ -26,7 +26,7 @@ export default function ContactPage() {
       </section>
 
       {/* 2. SUB-HEADER */}
-      <section className="text-center pt-16 pb-8 space-y-2">
+      <section className="text-center pt-7 pb-8 space-y-2">
         <h2 className="text-xl font-extrabold text-slate-900 uppercase tracking-wider">
           SAVE TIME AND MONEY
         </h2>
@@ -36,7 +36,7 @@ export default function ContactPage() {
       </section>
 
       {/* 3. FORM & ADDRESS CONTENT GRID */}
-      <section className="max-w-6xl mx-auto px-4 pb-20">
+      <section className="max-w-6xl mx-auto px-4 pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Left Column: Form Wrapper */}

@@ -21,7 +21,7 @@ export default function ProofreadingHeroSection() {
       {/* ======================================= */}
       {/* 1. TOP HERO BANNER                      */}
       {/* ======================================= */}
-      <section className="w-full bg-[#1b2b2d] text-white py-12 px-4 sm:px-6">
+      <section className="w-full bg-[#1b2b2d] text-white py-6 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto border border-slate-400/50 p-8 sm:p-10 text-center space-y-4 rounded-xs">
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
             Proofreading
@@ -37,7 +37,7 @@ export default function ProofreadingHeroSection() {
       {/* ======================================= */}
       {/* 2. OVERVIEW & PRICING CARD SECTION     */}
       {/* ======================================= */}
-      <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6">
+      <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Column: Description & Bullet points */}
           <div className="lg:col-span-8 space-y-6">
@@ -161,7 +161,7 @@ export default function ProofreadingHeroSection() {
       {/* ======================================= */}
       {/* 3. PROOFREADING YOUR COPY SECTION       */}
       {/* ======================================= */}
-      <section className="bg-slate-100/70 py-12 px-4 sm:px-6 border-t border-slate-200">
+      <section className="bg-slate-100/70 py-6 px-4 sm:px-6 border-t border-slate-200">
         <div className="max-w-6xl mx-auto space-y-10">
           {/* Content & Overlapping Images Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">

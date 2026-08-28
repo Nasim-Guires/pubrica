@@ -117,7 +117,7 @@ export default function CustomizedPhysicianMedicalWritingService() {
     <div className="w-full bg-[#f8fafc] text-slate-800">
       
       {/* 1. Full-Width Dark Banner matching exact site design */}
-      <section className="w-full bg-gradient-to-b from-[#0e211e] via-[#122b27] to-[#0e211e] text-white py-12 md:py-16 px-4">
+      <section className="w-full bg-gradient-to-b from-[#0e211e] via-[#122b27] to-[#0e211e] text-white py-6 md:py-7 px-4">
         <div className="max-w-5xl mx-auto border border-slate-400/40 p-6 md:p-10 text-center">
           <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-tight">
             Customized Medical Writing Service for Physicians
@@ -129,7 +129,7 @@ export default function CustomizedPhysicianMedicalWritingService() {
       </section>
 
       {/* Main Page Content Wrapper */}
-      <div className="max-w-6xl mx-auto px-4 py-12 space-y-16">
+      <div className="max-w-6xl mx-auto px-4 py-6 space-y-16">
         
         {/* 2. Overview Section with Image Block */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">

@@ -121,7 +121,7 @@ export default function PhysicianSpecialtiesAndAddons() {
     };
 
     return (
-        <div className="w-full bg-white py-12 text-slate-800">
+        <div className="w-full bg-white py-6 text-slate-800">
             <div className="max-w-6xl mx-auto px-4 space-y-16">
 
                 {/* SECTION 1: Supporting Physicians Across Specialties */}

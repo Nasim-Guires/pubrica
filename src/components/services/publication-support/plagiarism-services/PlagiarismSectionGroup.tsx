@@ -164,7 +164,7 @@ export default function PlagiarismSectionGroup() {
       </section>
 
       {/* SECTION 2: Process Steps with Black Hover Effect */}
-      <section className="w-full bg-[#f8fafc] py-8 md:py-12 px-4 md:px-8">
+      <section className="w-full bg-[#f8fafc] py-8 md:py-6 px-4 md:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-2">
@@ -282,7 +282,7 @@ export default function PlagiarismSectionGroup() {
       </section>
 
       {/* SECTION 4: Compliance & Guidelines */}
-      <section className="w-full bg-[#f8fafc] py-8 md:py-12 px-4 md:px-8">
+      <section className="w-full bg-[#f8fafc] py-8 md:py-6 px-4 md:px-8">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-3">
             Our Compliance and Guideline Standards

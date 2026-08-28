@@ -109,7 +109,7 @@ export const ThesisEditingPage: React.FC = () => {
       {/* ============================================================= */}
       {/* 3. WHAT WE DO SECTION                                          */}
       {/* ============================================================= */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10 border-t border-slate-100">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-5 border-t border-slate-100">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-4">
           What We Do
         </h2>
@@ -202,7 +202,7 @@ export const ThesisEditingPage: React.FC = () => {
       {/* ============================================================= */}
       {/* 4. WHO WE SERVE SECTION                                        */}
       {/* ============================================================= */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 border-t border-slate-100">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-slate-100">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-3">
           Who We Serve
         </h2>

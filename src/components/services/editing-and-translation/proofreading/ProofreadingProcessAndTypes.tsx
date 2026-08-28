@@ -143,7 +143,7 @@ export default function ProofreadingProcessAndTypes() {
   const [activeStep, setActiveStep] = useState<number>(4); // Default Step 4 active as seen in screenshot
 
   return (
-    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-12 space-y-16">
+    <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-6 space-y-16">
       {/* ======================================= */}
       {/* SECTION 1: TYPES OF PROOFREADING        */}
       {/* ======================================= */}
@@ -244,7 +244,7 @@ export default function ProofreadingProcessAndTypes() {
         </div>
 
         {/* Timeline Desktop Grid */}
-        <div className="relative grid grid-cols-1 md:grid-cols-6 gap-4 items-center pt-8 pb-12">
+        <div className="relative grid grid-cols-1 md:grid-cols-6 gap-4 items-center pt-8 pb-6">
           {/* Horizontal Teal Connecting Line (Hidden on mobile) */}
           <div className="hidden md:block absolute top-1/2 left-0 right-0 h-2 bg-[#008099] -translate-y-1/2 z-0" />
 

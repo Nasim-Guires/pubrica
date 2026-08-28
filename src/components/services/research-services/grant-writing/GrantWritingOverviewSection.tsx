@@ -37,7 +37,7 @@ export default function GrantWritingOverviewSection() {
       {/* ========================================================= */}
       {/* 1. TOP HIGHLIGHT BANNER                                   */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#0d2a25] py-12 px-4 sm:px-6 lg:px-8 text-center text-white">
+      <section className="w-full bg-[#0d2a25] py-6 px-4 sm:px-6 lg:px-8 text-center text-white">
         <div className="max-w-5xl mx-auto border border-white/60 p-6 sm:p-8 rounded-sm space-y-3">
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight">
             Turn Grant Challenges into Funding Success
@@ -53,7 +53,7 @@ export default function GrantWritingOverviewSection() {
       {/* ========================================================= */}
       {/* 2. MAIN CONTENT SECTION                                   */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#f8fafc] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-[#f8fafc] py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* Left Column: Text & Content */}
           <div className="lg:col-span-7 space-y-6">

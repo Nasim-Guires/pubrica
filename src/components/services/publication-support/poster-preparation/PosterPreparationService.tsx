@@ -30,7 +30,7 @@ export default function PosterPreparationPage() {
       {/* ------------------------------------------------------------- */}
       {/* 1. HERO BANNER SECTION                                       */}
       {/* ------------------------------------------------------------- */}
-      <section className="bg-[#1a2d29] text-white py-12 px-4 md:px-8 text-center">
+      <section className="bg-[#1a2d29] text-white py-6 px-4 md:px-8 text-center">
         <div className="max-w-5xl mx-auto border border-gray-400/30 p-8 rounded-sm">
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
             Conference Presentation &amp; Scientific Poster Preparation Service
@@ -46,7 +46,7 @@ export default function PosterPreparationPage() {
       {/* ------------------------------------------------------------- */}
       {/* 2. MAIN CONTENT SECTION                                      */}
       {/* ------------------------------------------------------------- */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8 py-12">
+      <section className="max-w-6xl mx-auto px-4 md:px-8 py-6">
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-6 leading-snug">
           Professional Scientific and Academic Poster Presentation Service: Visually Communicate Your
           High-Impact Research Presentation with Scientific Precision
@@ -168,7 +168,7 @@ export default function PosterPreparationPage() {
       {/* ------------------------------------------------------------- */}
       {/* 3. "WHAT WE DO" FEATURE CARDS SECTION                         */}
       {/* ------------------------------------------------------------- */}
-      <section className="w-full bg-[#dcf4e6] py-16 px-4 md:px-8">
+      <section className="w-full bg-[#dcf4e6] py-7 px-4 md:px-8">
         <div className="max-w-6xl mx-auto space-y-8">
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

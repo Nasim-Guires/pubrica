@@ -8,7 +8,7 @@ export default function PlagiarismHeroAndOverview() {
   return (
     <div className="w-full font-sans bg-white">
       {/* ---------------- HERO / BANNER SECTION ---------------- */}
-      <section className="w-full bg-[#132c2a] text-white py-14 px-4 md:px-8 border-b border-teal-900">
+      <section className="w-full bg-[#132c2a] text-white py-6 px-4 md:px-8 border-b border-teal-900">
         <div className="mx-auto max-w-5xl">
           <div className="border border-white/60 p-6 md:p-10 text-center rounded-sm">
             <h1 className="text-2xl md:text-3xl font-bold tracking-wide mb-4">
@@ -27,7 +27,7 @@ export default function PlagiarismHeroAndOverview() {
       </section>
 
       {/* ---------------- MAIN CONTENT SECTION ---------------- */}
-      <section className="w-full py-12 md:py-16 px-4 md:px-8">
+      <section className="w-full py-6 md:py-7 px-4 md:px-8">
         <div className="mx-auto max-w-6xl">
           {/* Main Title */}
           <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] leading-snug mb-4 max-w-5xl">

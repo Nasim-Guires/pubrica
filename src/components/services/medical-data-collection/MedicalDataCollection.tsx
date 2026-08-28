@@ -9,7 +9,7 @@ export const MedicalDataCollection: React.FC = () => {
       {/* ==========================================================
           HEADER HERO BLOCK (Dark Banner)
           ========================================================== */}
-      <div className="w-full bg-[#112529] text-white py-12 px-6 md:px-12 lg:px-24">
+      <div className="w-full bg-[#112529] text-white py-6 px-6 md:px-12 lg:px-24">
         <div className="max-w-6xl mx-auto border border-gray-400/30 rounded-none p-6 md:p-8 text-center space-y-3 bg-black/10">
           <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
             Medical Data Collection
@@ -25,7 +25,7 @@ export const MedicalDataCollection: React.FC = () => {
       {/* ==========================================================
           MAIN INTRODUCTION & IMAGE LAYOUT
           ========================================================== */}
-      <section className="pt-16 pb-12 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+      <section className="pt-7 pb-6 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Narrative Content Block */}
           <div className="lg:col-span-7 space-y-4">
@@ -85,7 +85,7 @@ export const MedicalDataCollection: React.FC = () => {
       {/* ==========================================================
           DETAILED SERVICES & BULLET ATTRIBUTES SECTION
           ========================================================== */}
-      <section className="py-12 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-100">
+      <section className="py-6 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-100">
         <div className="space-y-6">
           {/* Subheading Header */}
           <h3 className="text-[#082a32] text-xl md:text-2xl font-black tracking-tight leading-snug">

@@ -107,7 +107,7 @@ export default function EmpiricalResearchProcessSection() {
       className="w-full bg-slate-100 text-slate-800"
     >
       {/* --- Main Step-by-Step Flow --- */}
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 space-y-12">
+      <div className="max-w-7xl mx-auto py-7 px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
         <header className="text-center max-w-4xl mx-auto space-y-3">
           <h2
@@ -219,7 +219,7 @@ export default function EmpiricalResearchProcessSection() {
       </div>
 
       {/* --- Bottom Guarantee Banner --- */}
-      <div className="bg-[#052e16] text-white py-10 px-4 sm:px-6 lg:px-8 border-t border-emerald-900">
+      <div className="bg-[#052e16] text-white py-5 px-4 sm:px-6 lg:px-8 border-t border-emerald-900">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
             {/* Guarantee Badge Graphic */}

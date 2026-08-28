@@ -95,7 +95,7 @@ export default function PubricaSampleWorkAndFAQ() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 1: SAMPLE WORK & BANNER                      */}
       {/* ---------------------------------------------------- */}
-      <section className="bg-[#f0faf4] py-12 px-6 sm:px-12 lg:px-16 my-8 rounded-xl max-w-7xl mx-auto shadow-sm">
+      <section className="bg-[#f0faf4] py-6 px-6 sm:px-12 lg:px-16 my-8 rounded-xl max-w-7xl mx-auto shadow-sm">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           {/* Left Column Graphic / Stock Image Placeholder */}
           <div className="md:col-span-5 flex justify-center">
@@ -153,7 +153,7 @@ export default function PubricaSampleWorkAndFAQ() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 2: JOURNAL SPOTLIGHT (DIABETES CARE)        */}
       {/* ---------------------------------------------------- */}
-      <section className="py-10 px-6 sm:px-12 lg:px-16 max-w-7xl mx-auto">
+      <section className="py-5 px-6 sm:px-12 lg:px-16 max-w-7xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] mb-4">
           Diabetes Care
         </h2>
@@ -228,7 +228,7 @@ export default function PubricaSampleWorkAndFAQ() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 3: FREQUENTLY ASKED QUESTIONS (FAQ)          */}
       {/* ---------------------------------------------------- */}
-      <section className="py-12 px-6 sm:px-12 lg:px-16 max-w-7xl mx-auto">
+      <section className="py-6 px-6 sm:px-12 lg:px-16 max-w-7xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] mb-8">
           Frequently Asked Questions – Journal Selection Services
         </h2>

@@ -29,7 +29,7 @@ export default function RespondingToReviewersSection() {
       {/* ========================================== */}
       {/* SECTION 1: HERO BANNER                    */}
       {/* ========================================== */}
-      <section className="bg-gradient-to-r from-[#172722] via-[#1a332d] to-[#172722] py-12 px-4 sm:px-8 text-white text-center">
+      <section className="bg-gradient-to-r from-[#172722] via-[#1a332d] to-[#172722] py-6 px-4 sm:px-8 text-white text-center">
         <div className="max-w-4xl mx-auto border border-white/70 p-6 sm:p-10 rounded-xs">
           <h1 className="text-xl sm:text-3xl font-bold leading-snug tracking-wide mb-4">
             Response to Reviewer Comments Addressal Services with Rebuttal
@@ -46,7 +46,7 @@ export default function RespondingToReviewersSection() {
       {/* ========================================== */}
       {/* SECTION 2: SERVICE OVERVIEW CONTENT       */}
       {/* ========================================== */}
-      <section className="py-12 px-4 sm:px-8 max-w-5xl mx-auto text-gray-800">
+      <section className="py-6 px-4 sm:px-8 max-w-5xl mx-auto text-gray-800">
         <h2 className="text-xl sm:text-2xl font-bold text-[#0c3547] mb-3 leading-snug">
           Response to Reviewer Comments Service for Life Sciences, Pharma, and
           Research: Strengthen Your Manuscript with Expert Revisions
@@ -150,7 +150,7 @@ export default function RespondingToReviewersSection() {
       {/* ========================================== */}
       {/* SECTION 3: COMPLIANCE AND GUIDELINES      */}
       {/* ========================================== */}
-      <section className="py-10 px-4 sm:px-8 max-w-5xl mx-auto">
+      <section className="py-5 px-4 sm:px-8 max-w-5xl mx-auto">
         <h2 className="text-xl sm:text-2xl font-bold text-[#0c3547] mb-2">
           Our Compliance and guideline Standards
         </h2>

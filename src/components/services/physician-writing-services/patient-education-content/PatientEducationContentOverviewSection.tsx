@@ -10,7 +10,7 @@ export default function PatientEducationContentOverviewSection() {
       className="w-full bg-white text-slate-800 font-sans"
     >
       {/* Top Banner Header */}
-      <div className="w-full bg-gradient-to-r from-[#0d211d] via-[#12302a] to-[#0d211d] text-white py-12 px-4 sm:px-6 lg:px-8 text-center">
+      <div className="w-full bg-gradient-to-r from-[#0d211d] via-[#12302a] to-[#0d211d] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-5xl mx-auto border border-white/40 p-6 sm:p-10 rounded-sm">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4 leading-snug">
             Patient Education Content Service: Bridging Clinical Knowledge and
@@ -25,7 +25,7 @@ export default function PatientEducationContentOverviewSection() {
       </div>
 
       {/* Main Content Body */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
         {/* Section 1: Service Overview */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <div className="lg:col-span-7 space-y-5">

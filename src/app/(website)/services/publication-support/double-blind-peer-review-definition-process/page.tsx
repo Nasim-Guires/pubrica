@@ -88,7 +88,7 @@ export default function PeerReviewPage() {
             </div>
 
             {/* Main Content Layout */}
-            <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div className="max-w-7xl mx-auto px-4 py-5 grid grid-cols-1 md:grid-cols-12 gap-8">
 
                 {/* Sidebar Navigation */}
                 <aside className="md:col-span-4 lg:col-span-3 space-y-8">

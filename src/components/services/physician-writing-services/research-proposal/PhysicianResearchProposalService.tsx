@@ -55,7 +55,7 @@ export default function PhysicianResearchProposalService() {
                 </section>
 
                 {/* Main Content Section */}
-                <section className="max-w-6xl mx-auto px-4 py-10 md:py-14">
+                <section className="max-w-6xl mx-auto px-4 py-5 md:py-6">
                     {/* Subheading */}
                     <h2 className="text-xl sm:text-2xl font-bold text-[#1a2e2b] leading-snug">
                         Expert Scientific, Clinical &amp; Medical Research Protocol &amp; Proposal Writing for Physicians and Surgeons &ndash; Structured, Scholarly, and Clinically Aligned

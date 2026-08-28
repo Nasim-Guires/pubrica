@@ -102,7 +102,7 @@ export default function ForensicAndQualityAuditComplete() {
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
             {/* ------------------- HERO BANNER ------------------- */}
-            <section className="bg-[#0b3b2c] py-16 px-4 text-white text-center">
+            <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
                         Forensic and Quality Audit Services at Pubrica
@@ -114,7 +114,7 @@ export default function ForensicAndQualityAuditComplete() {
             </section>
 
             {/* ------------------- STEP-BY-STEP PROCESS ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto text-center" aria-labelledby="process-heading">
+            <section className="py-6 px-4 max-w-6xl mx-auto text-center" aria-labelledby="process-heading">
                 <h2 id="process-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-2">
                     How Our Forensic and Quality Audit Service Works
                 </h2>
@@ -152,7 +152,7 @@ export default function ForensicAndQualityAuditComplete() {
             </section>
 
             {/* ------------------- SAMPLE WORK SECTION ------------------- */}
-            <section className="py-14 px-4 bg-[#f4faf7] text-center" aria-labelledby="sample-heading">
+            <section className="py-6 px-4 bg-[#f4faf7] text-center" aria-labelledby="sample-heading">
                 <div className="max-w-4xl mx-auto bg-white border border-emerald-100 rounded-xl p-8 shadow-sm">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div className="bg-[#0b3b2c] p-3 rounded-lg shadow-md flex justify-center items-center relative h-48 overflow-hidden">
@@ -186,7 +186,7 @@ export default function ForensicAndQualityAuditComplete() {
             </section>
 
             {/* ------------------- PACKAGES SECTION ------------------- */}
-            <section className="py-14 px-4 max-w-6xl mx-auto" aria-labelledby="packages-heading">
+            <section className="py-6 px-4 max-w-6xl mx-auto" aria-labelledby="packages-heading">
                 <div className="text-center max-w-3xl mx-auto mb-12">
                     <h2 id="packages-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
                         Forensic and Quality Audit Service – Our Packages

@@ -106,7 +106,7 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
       {/* ========================================== */}
       {/* SECTION 1: SUPPORT PACKAGES                */}
       {/* ========================================== */}
-      <section className="py-14 px-4 max-w-6xl mx-auto">
+      <section className="py-6 px-4 max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-3">
             Journal Submission Support Packages
@@ -184,7 +184,7 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
       {/* ========================================== */}
       {/* SECTION 2: SPEED UP YOUR JOURNEY BANNER    */}
       {/* ========================================== */}
-      <section className="bg-[#042d22] text-white py-10 px-4">
+      <section className="bg-[#042d22] text-white py-5 px-4">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
           {/* Satisfaction Badge */}
           <div className="shrink-0">
@@ -218,7 +218,7 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
       {/* ========================================== */}
       {/* SECTION 3: WHY LEADING RESEARCHERS CHOOSE  */}
       {/* ========================================== */}
-      <section className="bg-[#f0f2f2] py-14 px-4">
+      <section className="bg-[#f0f2f2] py-6 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-xl sm:text-2xl font-bold text-[#0c3547] mb-8">
             Why Leading Researchers Choose Pubrica for Journal Submission

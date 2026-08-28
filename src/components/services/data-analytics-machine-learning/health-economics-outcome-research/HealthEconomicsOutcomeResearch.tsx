@@ -80,13 +80,13 @@ export default function HealthEconomicsOutcomeResearch() {
     };
 
     return (
-        <section className="w-full bg-slate-50 py-12 text-slate-800 font-sans">
+        <section className="w-full bg-slate-50 py-6 text-slate-800 font-sans">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
                 {/* ------------------------------------------------------------------
            1. HERO BANNER
            ------------------------------------------------------------------ */}
-                <div className="bg-[#0b2b26] text-white py-12 px-8 rounded-lg text-center border border-emerald-900 shadow-md">
+                <div className="bg-[#0b2b26] text-white py-6 px-8 rounded-lg text-center border border-emerald-900 shadow-md">
                     <div className="border border-white/30 p-6 rounded max-w-4xl mx-auto">
                         <h1 className="text-2xl sm:text-4xl font-bold mb-4 tracking-tight">
                             Health Economics & Outcome Research

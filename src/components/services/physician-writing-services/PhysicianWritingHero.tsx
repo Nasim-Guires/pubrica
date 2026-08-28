@@ -42,7 +42,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
   return (
     <div className="w-full font-sans">
       {/* Top Gradient Hero Banner Section */}
-      <section className="w-full bg-gradient-to-r from-[#192b2d] via-[#213a3e] to-[#122325] py-14 px-6 md:px-12 lg:px-24 text-center text-white">
+      <section className="w-full bg-gradient-to-r from-[#192b2d] via-[#213a3e] to-[#122325] py-6 px-6 md:px-12 lg:px-24 text-center text-white">
         <div className="max-w-5xl mx-auto border border-white/80 p-8 md:p-10 rounded-sm bg-black/10 backdrop-blur-xs">
           <h1 className="text-xl md:text-2xl lg:text-[28px] font-bold tracking-wide leading-snug mb-4">
             {bannerTitle}
@@ -54,7 +54,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
       </section>
 
       {/* Main Content Section */}
-      <section className="w-full bg-white py-12 px-6 md:px-12 lg:px-24 text-left">
+      <section className="w-full bg-white py-6 px-6 md:px-12 lg:px-24 text-left">
         <div className="max-w-7xl mx-auto">
           {/* Section Sub-heading Title */}
           <h2 className="text-[#083c4c] text-2xl md:text-3xl lg:text-[32px] font-extrabold leading-tight tracking-tight mb-6 max-w-6xl">

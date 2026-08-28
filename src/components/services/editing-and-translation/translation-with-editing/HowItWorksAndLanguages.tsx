@@ -81,7 +81,7 @@ export default function HowItWorksAndLanguages() {
   const [isGuaranteeOpen, setIsGuaranteeOpen] = useState<boolean>(true);
 
   return (
-    <div className="w-full bg-[#f4f6f8] text-slate-800 font-sans pb-16">
+    <div className="w-full bg-[#f4f6f8] text-slate-800 font-sans pb-7">
       {/* Top Dark Green Banner Header */}
       <div className="w-full bg-[#083329] text-white py-8 px-4 text-center mb-12">
         <h2 className="text-2xl sm:text-3xl font-bold mb-2">

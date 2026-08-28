@@ -20,7 +20,7 @@ export const EditorialWorkflowSection: React.FC<
   EditorialWorkflowSectionProps
 > = ({ heading, subheading, description, steps }) => {
   return (
-    <section className="py-12 md:py-16 px-4 md:px-8 bg-gray-50 w-full text-center font-sans overflow-hidden">
+    <section className="py-6 md:py-7 px-4 md:px-8 bg-gray-50 w-full text-center font-sans overflow-hidden">
       {/* Header */}
       <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
         {heading}

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function PeerReviewOverviewSection() {
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 py-10 font-sans text-gray-800">
+    <section className="w-full max-w-6xl mx-auto px-4 py-5 font-sans text-gray-800">
       {/* 2-Column Section: Text (Left) & Image Showcase (Right) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-6">
         {/* Left Column: Intro + First 3 Bullets */}

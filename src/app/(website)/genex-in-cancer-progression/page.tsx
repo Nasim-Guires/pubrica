@@ -24,14 +24,14 @@ const INCLUDES = [
 
 export default function GenexInCancerProgressionPage() {
   return (
-    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24">
-      <section className="bg-[#0b2825] text-white py-14 px-4 text-center">
+    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
+      <section className="bg-[#0b2825] text-white py-6 px-4 text-center">
         <h1 className="text-2xl md:text-3xl font-bold tracking-tight max-w-3xl mx-auto">
           Gene X in Cancer Progression: Revised Manuscript Ready for Publication
         </h1>
       </section>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           <main className="lg:col-span-8 bg-white p-6 md:p-10 rounded-2xl border border-slate-100 shadow-sm">
             <p className="text-sm text-slate-600 leading-relaxed mb-6">

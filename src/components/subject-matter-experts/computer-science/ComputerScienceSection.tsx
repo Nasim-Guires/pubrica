@@ -100,7 +100,7 @@ export default function ComputerScienceSection() {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <div className="w-full bg-white text-gray-800 font-sans py-12 px-4 sm:px-6 lg:px-8 space-y-20">
+        <div className="w-full bg-white text-gray-800 font-sans py-6 px-4 sm:px-6 lg:px-8 space-y-20">
 
             {/* SECTION 1: Emerging Trends in Computer Science */}
             <section className="max-w-6xl mx-auto space-y-6">
@@ -184,7 +184,7 @@ export default function ComputerScienceSection() {
             </section>
 
             {/* SECTION 3: Areas of Study */}
-            <section className="w-full bg-[#0e3b32] text-white py-12 px-4 sm:px-6 lg:px-8">
+            <section className="w-full bg-[#0e3b32] text-white py-6 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 items-center">
                     <div className="lg:w-1/3 space-y-4">
                         {/* <div className="relative">

@@ -131,7 +131,7 @@ export default function PublicationServices() {
   };
 
   return (
-    <section className="bg-[#f2f4f3] py-16 px-4 sm:px-6 lg:px-8 font-sans text-slate-800">
+    <section className="bg-[#f2f4f3] py-7 px-4 sm:px-6 lg:px-8 font-sans text-slate-800">
       <div className="max-w-7xl mx-auto">
         {/* ================= COMPLIANCE SECTION ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-24">

@@ -8,7 +8,7 @@ interface ServiceHeroProps {
 
 export default function ServiceHero({ service }: ServiceHeroProps) {
   return (
-    <section className="bg-gradient-to-r from-zinc-900 via-slate-800 to-zinc-900 text-white py-8 sm:py-12 select-none">
+    <section className="bg-gradient-to-r from-zinc-900 via-slate-800 to-zinc-900 text-white py-8 sm:py-6 select-none">
       <Container className="max-w-5xl px-4">
         <div className="border border-white/60 px-6 py-6 sm:py-8 text-center max-w-4xl mx-auto">
           <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-wide">

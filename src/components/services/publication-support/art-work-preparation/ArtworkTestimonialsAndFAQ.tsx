@@ -103,7 +103,7 @@ export default function ArtworkTestimonialsAndFAQ() {
   return (
     <div className="w-full font-sans text-slate-800 bg-white">
       {/* ---------------- 1. TESTIMONIALS SECTION ---------------- */}
-      <section className="w-full bg-[#f8faf9] py-16 px-4 md:px-8">
+      <section className="w-full bg-[#f8faf9] py-7 px-4 md:px-8">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-3">
             Testimonials
@@ -146,7 +146,7 @@ export default function ArtworkTestimonialsAndFAQ() {
       </section>
 
       {/* ---------------- 2. ASSIST YOU FEATURE SECTION ---------------- */}
-      <section className="w-full py-16 px-4 md:px-8">
+      <section className="w-full py-7 px-4 md:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Text & Bullets Side */}
@@ -211,7 +211,7 @@ export default function ArtworkTestimonialsAndFAQ() {
       </section>
 
       {/* ---------------- 3. FAQ ACCORDION SECTION ---------------- */}
-      <section className="w-full py-12 px-4 md:px-8 bg-white border-t border-gray-100">
+      <section className="w-full py-6 px-4 md:px-8 bg-white border-t border-gray-100">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-8">
             Frequently Asked Questions – Artwork Preparation Service

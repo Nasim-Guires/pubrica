@@ -37,7 +37,7 @@ export const PostEditingOverview: React.FC = () => {
   return (
     <div className="w-full bg-[#f8fafc] text-slate-800">
       {/* 1. Dark Banner Header */}
-      <section className="w-full bg-[#03231a] py-12 px-4 sm:px-6 text-center text-white">
+      <section className="w-full bg-[#03231a] py-6 px-4 sm:px-6 text-center text-white">
         <div className="max-w-4xl mx-auto border border-slate-600/60 rounded-sm p-6 sm:p-8 bg-[#03231a]">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 tracking-wide">
             Post Editing Service
@@ -52,7 +52,7 @@ export const PostEditingOverview: React.FC = () => {
       </section>
 
       {/* 2. Overview Section with Image Grid */}
-      <section className="w-full py-12 px-4 sm:px-6 max-w-6xl mx-auto">
+      <section className="w-full py-6 px-4 sm:px-6 max-w-6xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-4">
           Perfect Your Manuscript With Pubrica’s Post Editing Service
         </h2>

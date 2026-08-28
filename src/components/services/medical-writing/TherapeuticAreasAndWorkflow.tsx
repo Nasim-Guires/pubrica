@@ -81,7 +81,7 @@ export default function TherapeuticAreasAndWorkflow(): React.ReactElement {
   return (
     <div className="w-full font-sans text-slate-800 bg-[#f8f9f9]">
       {/* ---------------- SECTION 1: THERAPEUTIC AREAS ---------------- */}
-      <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-6xl mx-auto py-7 px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#09322e] mb-12 text-center sm:text-left">
           Our Therapeutic Area We Cover
         </h2>
@@ -111,7 +111,7 @@ export default function TherapeuticAreasAndWorkflow(): React.ReactElement {
       </section>
 
       {/* ---------------- SECTION 2: WORKFLOW PROCESS ---------------- */}
-      <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-6xl mx-auto py-7 px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto mb-16 space-y-3">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#09322e]">
             Our Workflow Process

@@ -58,7 +58,7 @@ export default function JournalSubmissionBottomSections() {
       {/* ========================================== */}
       {/* SECTION 1: GLOBAL REACH & WHAT YOU'LL RECEIVE */}
       {/* ========================================== */}
-      <section className="py-12 px-4 bg-white">
+      <section className="py-6 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           {/* Global Reach Header Banner */}
           <div className="bg-[#f2fbf7] p-6 rounded-sm text-center mb-12 border border-[#e0f5ed]">
@@ -120,7 +120,7 @@ export default function JournalSubmissionBottomSections() {
       {/* ========================================== */}
       {/* SECTION 2: COMPLIANCE & GUIDELINE STANDARDS*/}
       {/* ========================================== */}
-      <section className="bg-[#f8faf9] py-14 px-4 border-t border-gray-100">
+      <section className="bg-[#f8faf9] py-6 px-4 border-t border-gray-100">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-xl sm:text-2xl font-bold text-[#0c3547] mb-3">
@@ -170,7 +170,7 @@ export default function JournalSubmissionBottomSections() {
       {/* ========================================== */}
       {/* SECTION 3: SAMPLE WORK / DOWNLOAD REPORT  */}
       {/* ========================================== */}
-      <section className="bg-[#eefaf4] py-12 px-4">
+      <section className="bg-[#eefaf4] py-6 px-4">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           {/* Left Image Column */}
           <div className="md:col-span-5 flex justify-center">

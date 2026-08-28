@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function SampleWorkSection() {
   return (
-    <section className="w-full bg-[#f8f9f9] py-12 px-4 sm:px-6 lg:px-12 font-sans">
+    <section className="w-full bg-[#f8f9f9] py-6 px-4 sm:px-6 lg:px-12 font-sans">
       <div className="max-w-5xl mx-auto bg-[#f0fbf5] border border-emerald-100 rounded-xl p-6 sm:p-10 shadow-sm">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           {/* Left Column: Image Card with Cyber Overlay */}

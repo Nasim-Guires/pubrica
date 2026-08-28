@@ -193,7 +193,7 @@ export default async function PubricaKnowledgeBase() {
       {/* ========================================================================= */}
       {/* SECTION 1: KNOWLEDGE BASE SEARCH HERO                                      */}
       {/* ========================================================================= */}
-      <section className="bg-[#0b2825] text-white pt-16 pb-32 text-center px-4 relative">
+      <section className="bg-[#0b2825] text-white pt-7 pb-32 text-center px-4 relative">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
             Pubrica Knowledge Base
@@ -273,7 +273,7 @@ export default async function PubricaKnowledgeBase() {
       {/* ========================================================================= */}
       {/* SECTION 3: LATEST ARTICLES (live from Payload — always current)           */}
       {/* ========================================================================= */}
-      <section className="max-w-7xl mx-auto px-4 py-16">
+      <section className="max-w-7xl mx-auto px-4 py-7">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-2xl font-bold text-[#0b2825]">Latest Articles</h2>
           <Link
@@ -325,7 +325,7 @@ export default async function PubricaKnowledgeBase() {
       {/* ========================================================================= */}
       {/* SECTION 4: EXPLORE BY CONTENT TYPE (GRID LAYOUT)                          */}
       {/* ========================================================================= */}
-      <section className="bg-white py-16 border-t border-b border-gray-100">
+      <section className="bg-white py-7 border-t border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-center text-[#0b2825] mb-12 tracking-tight">
             Explore by Content Type
@@ -365,7 +365,7 @@ export default async function PubricaKnowledgeBase() {
       {/* SECTION 5: TOP ARTICLES SPLIT NARRATIVE SECTION (live from Payload)      */}
       {/* ========================================================================= */}
       {topArticles.length > 0 && (
-        <section className="max-w-7xl mx-auto px-4 py-16">
+        <section className="max-w-7xl mx-auto px-4 py-7">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-bold text-[#0b2825]">Top Articles</h2>
             <Link
@@ -437,7 +437,7 @@ export default async function PubricaKnowledgeBase() {
       {/* ========================================================================= */}
       {/* SECTION 6: Q & A COMPONENT LIST                                          */}
       {/* ========================================================================= */}
-      <section className="bg-[#f0f5f5] py-16 border-t border-gray-200/60">
+      <section className="bg-[#f0f5f5] py-7 border-t border-gray-200/60">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between mb-10">
             <h2 className="text-2xl font-bold text-[#0b2825]">Q &amp; A</h2>

@@ -77,7 +77,7 @@ const toggleAccordion = (id: string) => {
     return (
         <div className="w-full bg-white text-slate-800">
             {/* 1. How Our Physician Manuscript Service Works */}
-            <section className="py-16 bg-[#f7f9fa] border-t border-gray-200">
+            <section className="py-7 bg-[#f7f9fa] border-t border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-4xl mx-auto mb-12">
                         <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] mb-3">
@@ -118,7 +118,7 @@ const toggleAccordion = (id: string) => {
             </section>
 
             {/* 2. Guarantee Banner */}
-            <section className="bg-[#0f3d2e] text-white py-10 px-4 sm:px-6 lg:px-8">
+            <section className="bg-[#0f3d2e] text-white py-5 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                     <div className="flex items-center gap-6 flex-col sm:flex-row">
                         <div className="relative w-20 h-20 shrink-0">
@@ -144,7 +144,7 @@ const toggleAccordion = (id: string) => {
             </section>
 
             {/* 3. Why Physicians Trust Pubrica */}
-            <section className="py-16 bg-[#d9e8df]">
+            <section className="py-7 bg-[#d9e8df]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                         <div className="lg:col-span-4 space-y-4">
@@ -177,7 +177,7 @@ const toggleAccordion = (id: string) => {
             </section>
 
             {/* 4. Getting Started & Accordion Section */}
-            <section className="py-16 bg-white">
+            <section className="py-7 bg-white">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] text-center mb-4">
                         Getting Started with Pubrica's Physician Manuscript Service is Easy

@@ -86,9 +86,9 @@ export default function IndustryPage() {
         <Breadcrumb items={[{ label: "Industries", href: "/industries" }]} />
       </header>
 
-      <main className="bg-gray-100 min-h-screen pb-24">
+      <main className="bg-gray-100 min-h-screen pb-10">
         <section
-          className="bg-gradient-to-r from-[#172b26] via-[#1f3831] to-[#172b26] py-16 px-4 border-b border-emerald-900/20"
+          className="bg-gradient-to-r from-[#172b26] via-[#1f3831] to-[#172b26] py-7 px-4 border-b border-emerald-900/20"
           aria-labelledby="hero-heading"
         >
           <div className="max-w-5xl mx-auto border border-gray-400/40 p-8 text-center rounded-sm backdrop-blur-xs">

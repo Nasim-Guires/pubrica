@@ -135,7 +135,7 @@ export default function PackagesAndTestimonialsSection() {
       {/* ========================================== */}
       {/* SECTION 1: OUR PACKAGES                   */}
       {/* ========================================== */}
-      <section className="max-w-6xl mx-auto px-4 py-12">
+      <section className="max-w-6xl mx-auto px-4 py-6">
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#0c3547] mb-10">
           Our Packages
         </h2>
@@ -250,7 +250,7 @@ export default function PackagesAndTestimonialsSection() {
       {/* ========================================== */}
       {/* SECTION 2: TESTIMONIALS                    */}
       {/* ========================================== */}
-      <section className="bg-[#f2f4f5] py-16 px-4">
+      <section className="bg-[#f2f4f5] py-7 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-10">
             Testimonials

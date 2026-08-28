@@ -38,7 +38,7 @@ export default function TherapeuticExpertisePage() {
 
 
       {/* Hero Banner */}
-      <header className="w-full bg-[#1e2e2b] text-white py-12 px-4 text-center">
+      <header className="w-full bg-[#1e2e2b] text-white py-6 px-4 text-center">
 
         <div className="max-w-3xl mx-auto border border-gray-500/60 py-8 px-4">
 
@@ -59,7 +59,7 @@ export default function TherapeuticExpertisePage() {
 
 
       {/* Main Layout */}
-      <div className="max-w-7xl mx-auto px-4 py-10 flex flex-col md:flex-row gap-8">
+      <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row gap-8">
 
 
 

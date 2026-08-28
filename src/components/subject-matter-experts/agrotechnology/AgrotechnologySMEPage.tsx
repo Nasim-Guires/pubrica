@@ -139,7 +139,7 @@ export default function AgrotechnologySMEPage() {
       `}</style>
 
       {/* HEADER HERO BANNER */}
-      <header className="w-full bg-[#0d3630] text-white py-10 px-4 text-center">
+      <header className="w-full bg-[#0d3630] text-white py-5 px-4 text-center">
         <div className="max-w-4xl mx-auto border border-gray-500/40 py-8 px-6 bg-[#0a2c27]/40 backdrop-blur-sm rounded-sm">
           <h1 className="text-3xl md:text-4xl font-bold tracking-wide mb-3">
             Agrotechnology
@@ -151,7 +151,7 @@ export default function AgrotechnologySMEPage() {
       </header>
 
       {/* MAIN CONTENT CONTAINER */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
         
         {/* INTRO SECTION */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">

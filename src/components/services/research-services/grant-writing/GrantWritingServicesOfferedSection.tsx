@@ -77,7 +77,7 @@ export default function GrantWritingServicesOfferedSection() {
   return (
     <section
       aria-labelledby="grant-services-heading"
-      className="w-full bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 text-slate-800"
+      className="w-full bg-white py-6 sm:py-7 px-4 sm:px-6 lg:px-8 text-slate-800"
     >
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Section Header */}

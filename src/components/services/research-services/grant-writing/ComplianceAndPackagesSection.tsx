@@ -180,7 +180,7 @@ export default function ComplianceAndPackagesSection() {
       {/* ========================================================= */}
       {/* SECTION 1: COMPLIANCE AND GUIDELINE STANDARDS             */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-8">
+      <section className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Section Header */}
         <div className="space-y-3">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
@@ -295,7 +295,7 @@ export default function ComplianceAndPackagesSection() {
       {/* ========================================================= */}
       {/* SECTION 3: OUR PACKAGES SECTION                            */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-8">
+      <section className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Header */}
         <div className="space-y-3">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">

@@ -36,7 +36,7 @@ export default async function JournalSlugPage({ params }: JournalSlugProps) {
           { label: journalTitle, href: `/industries/${slug}` },
         ]}
       />
-      <div className="bg-white py-20 text-center font-sans">
+      <div className="bg-white py-8 text-center font-sans">
         <Container className="max-w-xl">
           <BookOpen className="h-16 w-16 text-primary-800 mx-auto mb-6" />
           <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 font-display">

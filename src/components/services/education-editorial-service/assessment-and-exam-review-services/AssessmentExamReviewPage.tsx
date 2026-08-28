@@ -66,8 +66,8 @@ const AssessmentExamReviewPage: NextPage = () => {
       </Head>
 
       {/* TOP HERO BANNER */}
-      <div className="w-full bg-[#1b3b32] py-12 px-4 sm:px-8 flex justify-center">
-        <div className="w-full max-w-5xl border border-[#2b5447] bg-[#1b3b32] text-white py-10 px-6 sm:px-12 text-center space-y-3 rounded-lg">
+      <div className="w-full bg-[#1b3b32] py-6 px-4 sm:px-8 flex justify-center">
+        <div className="w-full max-w-5xl border border-[#2b5447] bg-[#1b3b32] text-white py-5 px-6 sm:px-12 text-center space-y-3 rounded-lg">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
             Assessment and Exam Review Services
           </h1>
@@ -77,7 +77,7 @@ const AssessmentExamReviewPage: NextPage = () => {
         </div>
       </div>
 
-      <div className="w-full bg-white text-gray-800 py-12 px-4 sm:px-6 md:px-8">
+      <div className="w-full bg-white text-gray-800 py-6 px-4 sm:px-6 md:px-8">
         {/* MAIN SECTION: INTRO & OFFSET FLOATING IMAGE */}
         <section className="max-w-5xl mx-auto">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0b3b2c] mb-6">
@@ -155,7 +155,7 @@ const AssessmentExamReviewPage: NextPage = () => {
         </section>
 
         {/* SERVICES OFFERED GRID SECTION */}
-        <section className="max-w-5xl mx-auto mt-16 pb-16">
+        <section className="max-w-5xl mx-auto mt-16 pb-7">
           <div className="space-y-3 mb-8">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0b3b2c]">
               Types of Assessment and Exam Review Services We Offer

@@ -162,7 +162,7 @@ export default function PhysicianResearchOfferingsSection() {
   return (
     <section
       aria-labelledby="what-we-offer-heading"
-      className="w-full bg-gradient-to-b from-[#d5e7d4] via-[#c3dcc2] to-[#a8c9a7] py-16 px-4 sm:px-6 lg:px-8 text-slate-800"
+      className="w-full bg-gradient-to-b from-[#d5e7d4] via-[#c3dcc2] to-[#a8c9a7] py-7 px-4 sm:px-6 lg:px-8 text-slate-800"
     >
       <div className="max-w-7xl mx-auto space-y-10">
         {/* --- Header Section --- */}

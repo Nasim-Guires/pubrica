@@ -166,7 +166,7 @@ export default function PubricaServicesAndAudience() {
     useState<string>("researchers");
 
   return (
-    <div className="w-full bg-slate-50 text-slate-800 font-sans py-12 px-4 sm:px-6 lg:px-8 space-y-20">
+    <div className="w-full bg-slate-50 text-slate-800 font-sans py-6 px-4 sm:px-6 lg:px-8 space-y-20">
       {/* SECTION 1: OUR SERVICES */}
       <section className="max-w-6xl mx-auto space-y-6">
         <div className="space-y-2">

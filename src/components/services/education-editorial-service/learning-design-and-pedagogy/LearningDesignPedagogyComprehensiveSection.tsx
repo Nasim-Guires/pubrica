@@ -67,7 +67,7 @@ const LearningDesignPedagogyComprehensiveSection: NextPage = () => {
       </Head>
 
       {/* FULL WIDTH HERO BANNER */}
-      <div className="w-full bg-[#1b3b32] text-white py-16 px-4 md:px-12 mb-12 border-y border-[#274d42]">
+      <div className="w-full bg-[#1b3b32] text-white py-7 px-4 md:px-12 mb-12 border-y border-[#274d42]">
         <div className="max-w-6xl mx-auto text-center space-y-4">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
             Learning Design and Pedagogy
@@ -78,7 +78,7 @@ const LearningDesignPedagogyComprehensiveSection: NextPage = () => {
         </div>
       </div>
 
-      <div className="w-full bg-white text-gray-800 pb-16 px-4 md:px-8 space-y-16">
+      <div className="w-full bg-white text-gray-800 pb-7 px-4 md:px-8 space-y-16">
 
         {/* MAIN CONTENT SECTION WITH EMBEDDED FLOATING IMAGE ON THE RIGHT */}
         <section className="max-w-5xl mx-auto space-y-6">

@@ -167,7 +167,7 @@ export default function WhoWeServeAndServiceDetailsSection() {
       {/* ========================================================= */}
       <section
         aria-labelledby="who-we-serve-heading"
-        className="w-full bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8"
+        className="w-full bg-white py-6 sm:py-7 px-4 sm:px-6 lg:px-8"
       >
         <div className="max-w-7xl mx-auto space-y-8">
           {/* Header */}
@@ -241,7 +241,7 @@ export default function WhoWeServeAndServiceDetailsSection() {
       {/* ========================================================= */}
       {/* 2. ACCELERATE GRANT WRITING CTA BANNER                    */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#03281e] py-12 px-4 sm:px-6 lg:px-8 text-center text-white">
+      <section className="w-full bg-[#03281e] py-6 px-4 sm:px-6 lg:px-8 text-center text-white">
         <div className="max-w-5xl mx-auto space-y-6">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
             Accelerate your Grant Writing Service with Pubrica
@@ -261,7 +261,7 @@ export default function WhoWeServeAndServiceDetailsSection() {
       {/* ========================================================= */}
       {/* 3. DETAILED SERVICE BREAKDOWN CARDS                       */}
       {/* ========================================================= */}
-      <section className="w-full bg-slate-50 py-14 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-slate-50 py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-10">
           {serviceDetails.map((service) => (
             <div

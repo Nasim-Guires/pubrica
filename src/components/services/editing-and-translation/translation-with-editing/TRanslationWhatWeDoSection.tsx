@@ -102,7 +102,7 @@ export default function WhatWeDoSection() {
   };
 
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-2 pb-8 sm:pb-12 text-slate-800 font-sans">
+    <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-2 pb-8 sm:pb-6 text-slate-800 font-sans">
       {/* Title and Intro Paragraph - Reduced vertical margins */}
       <div className="mb-6">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#003B46] mb-2">

@@ -128,7 +128,7 @@ export default function ResearchImpactSection() {
   };
 
   return (
-    <section className="w-full bg-white text-slate-800 font-sans py-12 px-4 md:px-8 max-w-6xl mx-auto">
+    <section className="w-full bg-white text-slate-800 font-sans py-6 px-4 md:px-8 max-w-6xl mx-auto">
       {/* Schema.org FAQ SEO Injection */}
       <script
         type="application/ld+json"

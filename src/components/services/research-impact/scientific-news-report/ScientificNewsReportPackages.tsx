@@ -86,7 +86,7 @@ const packagesData: PackageTier[] = [
 
 export default function ScientificNewsReportPackages() {
     return (
-        <section className="w-full bg-slate-50 text-slate-800 font-sans py-14 px-4 sm:px-6 lg:px-8">
+        <section className="w-full bg-slate-50 text-slate-800 font-sans py-6 px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto space-y-10">
 
                 {/* Section Header */}

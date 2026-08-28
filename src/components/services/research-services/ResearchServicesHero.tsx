@@ -62,7 +62,7 @@ export const ResearchServicesHero: React.FC<ResearchHeroProps> = ({
   return (
     <div className="w-full">
       {/* Top Hero Banner */}
-      <section className="w-full bg-[#0b2b30] text-white py-12 px-4 sm:px-6 md:px-8">
+      <section className="w-full bg-[#0b2b30] text-white py-6 px-4 sm:px-6 md:px-8">
         <div className="max-w-4xl mx-auto border border-white/70 rounded-sm p-6 sm:p-8 md:p-10 text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
             {bannerTitle}
@@ -74,7 +74,7 @@ export const ResearchServicesHero: React.FC<ResearchHeroProps> = ({
       </section>
 
       {/* Main Content Section */}
-      <section className="w-full bg-[#f4f9fc] py-12 px-6 md:px-12 lg:px-24 font-sans selection:bg-blue-100">
+      <section className="w-full bg-[#f4f9fc] py-6 px-6 md:px-12 lg:px-24 font-sans selection:bg-blue-100">
         <div className="max-w-7xl mx-auto">
           
           {/* Headings */}

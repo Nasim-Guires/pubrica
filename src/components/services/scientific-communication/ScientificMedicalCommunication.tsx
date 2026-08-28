@@ -56,7 +56,7 @@ export default function ScientificMedicalCommunication() {
       />
 
       {/* Hero Banner Section */}
-      <section className="w-full bg-gradient-to-b from-[#101b1b] via-[#152828] to-[#122323] text-white py-14 px-4 sm:px-6 md:px-8">
+      <section className="w-full bg-gradient-to-b from-[#101b1b] via-[#152828] to-[#122323] text-white py-6 px-4 sm:px-6 md:px-8">
         <div className="max-w-5xl mx-auto text-center border border-slate-600/60 rounded-sm p-6 md:p-10 bg-slate-900/30 backdrop-blur-sm">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 text-white">
             Scientific Medical Communication
@@ -72,7 +72,7 @@ export default function ScientificMedicalCommunication() {
       </section>
 
       {/* Main Content Section 1 */}
-      <section className="py-12 md:py-16 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
+      <section className="py-6 md:py-7 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Text Content */}
           <div className="lg:col-span-7 space-y-5">
@@ -148,7 +148,7 @@ export default function ScientificMedicalCommunication() {
       </section>
 
       {/* Main Content Section 2: Why It Matters */}
-      <section className="py-12 md:py-16 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto border-t border-gray-100">
+      <section className="py-6 md:py-7 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto border-t border-gray-100">
         <h2 className="text-2xl md:text-3xl font-extrabold text-[#0d3b44] mb-8">
           Why Scientific Medical Communication Matters
         </h2>

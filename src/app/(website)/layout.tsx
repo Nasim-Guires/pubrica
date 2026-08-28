@@ -40,9 +40,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body
-        className={`${poppins.variable} min-h-screen flex flex-col font-sans bg-white text-gray-900`}
+        className={`${poppins.variable} min-h-screen flex flex-col overflow-x-hidden font-sans bg-white text-gray-900`}
       >
         <Header />
         <Navbar />

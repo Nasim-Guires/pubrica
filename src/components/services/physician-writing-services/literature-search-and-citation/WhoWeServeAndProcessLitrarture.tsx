@@ -188,7 +188,7 @@ export default function WhoWeServeAndProcessLiterature() {
         <div className="w-full bg-white text-gray-800 font-sans antialiased overflow-x-hidden">
 
             {/* ---------------- SECTION 1: WHO WE SERVE ---------------- */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-6">
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#0b3c36] mb-3">
                     Who We Serve
                 </h2>
@@ -234,7 +234,7 @@ export default function WhoWeServeAndProcessLiterature() {
             </section>
 
             {/* ---------------- SECTION 2: HOW IT WORKS ---------------- */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 text-center">
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-7 text-center">
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#143234] mb-2">
                     How a Patient Education Content Development Service Works
                 </h2>
@@ -327,7 +327,7 @@ export default function WhoWeServeAndProcessLiterature() {
             </section>
 
             {/* ---------------- SECTION 3: GREEN BANNER CTA ---------------- */}
-            <section className="bg-[#0b3c2d] text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8 my-8">
+            <section className="bg-[#0b3c2d] text-white py-8 sm:py-6 px-4 sm:px-6 lg:px-8 my-8">
                 <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
 
                     <div className="flex-shrink-0">
@@ -356,7 +356,7 @@ export default function WhoWeServeAndProcessLiterature() {
 
 
             {/* ---------------- SECTION 5: WHAT YOU GET ---------------- */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6">
                 <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#143234] text-center mb-8 sm:mb-10">
                     What You Get with Pubrica&apos;s Scientific Literature Search Service
                 </h2>
@@ -382,7 +382,7 @@ export default function WhoWeServeAndProcessLiterature() {
             </section>
 
             {/* ---------------- SECTION 6: SAMPLE WORK ---------------- */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-6">
                 <div className="bg-[#f0faf6] rounded-2xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-emerald-100">
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-full max-w-xs sm:max-w-sm aspect-[4/5] rounded-xl overflow-hidden shadow-inner">
@@ -421,7 +421,7 @@ export default function WhoWeServeAndProcessLiterature() {
                 </div>
             </section>
             {/* ---------------- SECTION 4: PACKAGES SECTION ---------------- */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-7">
                 <div className="text-center mb-10">
                     <h2 className="text-2xl sm:text-3xl font-bold text-[#143234] mb-2">
                         Literature Search and Citation Packages

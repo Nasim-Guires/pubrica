@@ -195,7 +195,7 @@ export default function SimplifiedAbstractTypesAndWorkflow() {
   const [activeStep, setActiveStep] = useState<number | null>(null);
 
   return (
-    <div className="w-full bg-slate-50 text-slate-800 font-sans py-14 space-y-20">
+    <div className="w-full bg-slate-50 text-slate-800 font-sans py-6 space-y-20">
       
       {/* SECTION 1: Types of Simplified Abstract Services We Offer */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
@@ -257,7 +257,7 @@ export default function SimplifiedAbstractTypesAndWorkflow() {
       </section>
 
       {/* SECTION 2: How Our Simplified Abstract Service Works */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 border-t border-slate-200/80 pt-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 border-t border-slate-200/80 pt-7">
         
         {/* Header */}
         <div className="text-center space-y-3">

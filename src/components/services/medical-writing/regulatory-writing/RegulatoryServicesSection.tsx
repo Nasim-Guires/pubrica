@@ -179,7 +179,7 @@ export default function RegulatoryWritingPage() {
         <div className="min-h-screen bg-[#f7faf9] text-[#2c3e50] font-sans">
 
             {/* HEADER SECTION */}
-            <div className="max-w-5xl mx-auto pt-12 px-4 text-center">
+            <div className="max-w-5xl mx-auto pt-6 px-4 text-center">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#0B3C3D] mb-3">
                     Our Regulatory Writing Services
                 </h2>

@@ -85,7 +85,7 @@ export default function ComplianceAndSampleSections() {
   );
 
   return (
-    <section className="w-full bg-white font-sans pt-12 pb-16">
+    <section className="w-full bg-white font-sans pt-6 pb-7">
       {/* ------------------------------------------------------------------ */}
       {/* 1. OUR COMPLIANCE AND GUIDELINE STANDARDS                          */}
       {/* ------------------------------------------------------------------ */}
@@ -159,7 +159,7 @@ export default function ComplianceAndSampleSections() {
       {/* ------------------------------------------------------------------ */}
       {/* 2. POSTER PREPARATION SAMPLE WORK & DOWNLOAD BANNER                */}
       {/* ------------------------------------------------------------------ */}
-      <div className="bg-[#effbf5] py-12 px-4 md:px-8">
+      <div className="bg-[#effbf5] py-6 px-4 md:px-8">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           {/* Left Column: Image */}
           <div className="md:col-span-5 flex justify-center">

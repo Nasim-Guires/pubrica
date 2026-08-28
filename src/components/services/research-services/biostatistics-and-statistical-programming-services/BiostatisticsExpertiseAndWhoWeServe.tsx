@@ -72,7 +72,7 @@ export default function BiostatisticsExpertiseAndWhoWeServe() {
       {/* ========================================================= */}
       {/* 1. OUR BIOSTATISTICAL EXPERTISE INCLUDES                  */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <div className="space-y-4 mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38] tracking-tight">
             Our Biostatistical Expertise Includes
@@ -197,7 +197,7 @@ export default function BiostatisticsExpertiseAndWhoWeServe() {
       {/* ========================================================= */}
       {/* 2. WHO WE SERVE SECTION (WITH BLACK HOVER EFFECT)         */}
       {/* ========================================================= */}
-      <section className="bg-slate-50 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-100">
+      <section className="bg-slate-50 py-6 sm:py-7 px-4 sm:px-6 lg:px-8 border-t border-slate-100">
         <div className="max-w-7xl mx-auto space-y-8">
           {/* Header Copy */}
           <div className="space-y-3 max-w-5xl">

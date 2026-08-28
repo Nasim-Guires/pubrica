@@ -104,10 +104,10 @@ export default function CMEContentDevelopmentPage() {
     };
 
     return (
-        <main className="w-full bg-white text-slate-800 font-sans pb-20">
+        <main className="w-full bg-white text-slate-800 font-sans pb-8">
 
             {/* 1. HERO BANNER */}
-            <section className="bg-[#033c2a] text-white py-12 px-4 sm:px-6 lg:px-8 text-center">
+            <section className="bg-[#033c2a] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
                 <div className="max-w-5xl mx-auto border border-slate-300/40 p-8 sm:p-12 rounded-sm space-y-4">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
                         Continuing Medical Education
@@ -119,7 +119,7 @@ export default function CMEContentDevelopmentPage() {
             </section>
 
             {/* 2. OVERVIEW SECTION WITH IMAGE */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-8">
                 <div className="space-y-4">
                     <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a]">
                         Continuing Medical Education Content Creation and Support for Healthcare Professionals
@@ -204,7 +204,7 @@ export default function CMEContentDevelopmentPage() {
             </section>
 
             {/* 3. OUR SERVICES (ACCORDION SECTION) */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-6">
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 space-y-6">
                 <div className="space-y-3">
                     <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a]">
                         Our Services

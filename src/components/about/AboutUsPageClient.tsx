@@ -505,7 +505,7 @@ export default function AboutPage() {
         {/* ========================================================================= */}
         {/* SECTION 1: CORE PROFILE HERO SPLIT LAYOUT                                 */}
         {/* ========================================================================= */}
-        <section className="py-16 bg-white font-sans" aria-label="Company Overview">
+        <section className="py-7 bg-white font-sans" aria-label="Company Overview">
           <Container className="max-w-6xl px-4">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
 
@@ -565,7 +565,7 @@ export default function AboutPage() {
         {/* ========================================================================= */}
         {/* SECTION 2: WHY CHOOSE PUBRICA MATRICES (DEEP EMERALD BLOCK)               */}
         {/* ========================================================================= */}
-        <section className="bg-[#11231f] py-16 text-white font-sans" aria-label="Key Capabilities">
+        <section className="bg-[#11231f] py-7 text-white font-sans" aria-label="Key Capabilities">
           <Container className="max-w-7xl px-4">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
@@ -655,7 +655,7 @@ export default function AboutPage() {
         {/* ========================================================================= */}
         {/* SECTION 3: STREAMLINED STEPPING WORKFLOW (SOFT BLUE BLOCK)                */}
         {/* ========================================================================= */}
-        <section className="bg-[#ebf8f6] py-16 font-sans text-[#11231f]" aria-label="Our Operational Process">
+        <section className="bg-[#ebf8f6] py-7 font-sans text-[#11231f]" aria-label="Our Operational Process">
           <Container className="max-w-7xl px-4 text-center">
             <h2 className="text-2xl font-extrabold font-display">Our Working Process</h2>
             <p className="text-xs md:text-sm text-gray-600 mt-2 font-light">
@@ -719,7 +719,7 @@ export default function AboutPage() {
         {/* ========================================================================= */}
         {/* SECTION: WHY CHOOSE PUBRICA (IMAGE & COMPLIANCE FEATURES SPLIT)          */}
         {/* ========================================================================= */}
-        <section className="bg-white py-16 font-sans text-gray-800 border-t border-gray-100" aria-label="Why Choose Pubrica Details">
+        <section className="bg-white py-7 font-sans text-gray-800 border-t border-gray-100" aria-label="Why Choose Pubrica Details">
           <Container className="max-w-7xl px-4">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
@@ -831,7 +831,7 @@ export default function AboutPage() {
         {/* ========================================================================= */}
         {/* SECTION 4: FULL EXPANDABLE ACCORDIONS WITH RICH TEXT CONTENT              */}
         {/* ========================================================================= */}
-        <section className="bg-gray-50 py-16 font-sans border-t border-gray-100" aria-label="Outsourcing Domains">
+        <section className="bg-gray-50 py-7 font-sans border-t border-gray-100" aria-label="Outsourcing Domains">
           <Container className="max-w-6xl px-4">
             <div className="mb-8">
               <h2 className="text-xl font-bold text-[#11231f] font-display">
@@ -925,7 +925,7 @@ export default function AboutPage() {
         {/* ========================================================================= */}
         {/* SECTION 5: INDUSTRIES SERVED BY PUBRICA (GRID CARD LAYOUT)                 */}
         {/* ========================================================================= */}
-        <section className="bg-white py-16 font-sans border-t border-gray-100" aria-label="Industries Served">
+        <section className="bg-white py-7 font-sans border-t border-gray-100" aria-label="Industries Served">
           <Container className="max-w-7xl px-4">
             <div className="text-center mb-10 max-w-3xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-extrabold text-[#11231f] font-display">

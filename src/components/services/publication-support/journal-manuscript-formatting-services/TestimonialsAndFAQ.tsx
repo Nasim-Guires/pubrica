@@ -106,7 +106,7 @@ export default function TestimonialsAndFAQ() {
   ];
 
   return (
-    <div className="w-full bg-[#f8fafc] font-sans text-gray-800 py-12 space-y-20 antialiased">
+    <div className="w-full bg-[#f8fafc] font-sans text-gray-800 py-6 space-y-20 antialiased">
       {/* TESTIMONIALS SECTION */}
       <section className="max-w-6xl mx-auto px-4 md:px-8">
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-3">
@@ -164,10 +164,10 @@ export default function TestimonialsAndFAQ() {
                 <button
                   type="button"
                   onClick={() => toggleFaq(item.id)}
-                  className="w-full flex justify-between items-center px-6 py-4 text-left font-bold text-xs md:text-sm text-gray-900 hover:bg-gray-50/80 transition-colors cursor-pointer"
+                  className="w-full min-w-0 flex justify-between items-center px-6 py-4 text-left font-bold text-xs md:text-sm text-gray-900 hover:bg-gray-50/80 transition-colors cursor-pointer"
                 >
                   <span
-                    className={isOpen ? "border-b-2 border-black pb-0.5" : ""}
+                    className={`min-w-0 ${isOpen ? "border-b-2 border-black pb-0.5" : ""}`}
                   >
                     {item.question}
                   </span>

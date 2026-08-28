@@ -96,7 +96,7 @@ export const ResearchPackagesSection: React.FC<ResearchPackagesProps> = ({
   ],
 }) => {
   return (
-    <section className="w-full bg-white py-16 px-6 md:px-12 lg:px-24 font-sans">
+    <section className="w-full bg-white py-7 px-6 md:px-12 lg:px-24 font-sans">
       <div className="max-w-7xl mx-auto">
         {/* Header Block */}
         <div className="text-center mb-12 space-y-4">

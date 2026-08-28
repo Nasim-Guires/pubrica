@@ -89,7 +89,7 @@ export default function ScientificWhoWeServe() {
   const [hoveredId, setHoveredId] = useState<string | null>("researchers");
 
   return (
-    <section className="max-w-7xl mx-auto py-12 md:py-16 px-4 sm:px-6 lg:px-8 font-sans">
+    <section className="max-w-7xl mx-auto py-6 md:py-7 px-4 sm:px-6 lg:px-8 font-sans">
       {/* Header */}
       <div className="max-w-5xl mb-10">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0c373b] tracking-tight mb-3">

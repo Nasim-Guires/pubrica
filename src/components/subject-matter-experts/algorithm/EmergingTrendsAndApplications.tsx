@@ -151,7 +151,7 @@ export default function EmergingTrendsAndApplications() {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12 space-y-16 bg-white font-sans text-gray-800">
+    <section className="max-w-6xl mx-auto px-4 py-6 space-y-16 bg-white font-sans text-gray-800">
       {/* SECTION 1: EMERGING TRENDS IN ALGORITHM */}
       <div className="space-y-6">
         <div className="space-y-1">

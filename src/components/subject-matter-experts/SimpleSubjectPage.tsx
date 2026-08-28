@@ -21,13 +21,13 @@ export default function SimpleSubjectPage({
   servicesExpertise?: ServiceExpertiseItem[];
 }) {
   return (
-    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24">
-      <section className="bg-[#0b2825] text-white py-14 px-4 text-center">
+    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
+      <section className="bg-[#0b2825] text-white py-6 px-4 text-center">
         <p className="text-xs uppercase tracking-wide text-gray-400 mb-2">Subject Matter Experts</p>
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight">{title}</h1>
       </section>
 
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {heroImage && (
           <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
             <Image src={heroImage.src} alt={heroImage.alt} fill className="object-cover" priority />

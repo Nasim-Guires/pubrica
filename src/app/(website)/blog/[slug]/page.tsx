@@ -44,7 +44,7 @@ export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) 
   const bannerImage = mediaUrl(post.heroImage) || "/images/blog/default.webp";
 
   return (
-    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24">
+    <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
       {/* Banner Header */}
       <div className="relative h-64 md:h-80 w-full bg-slate-900">
         <Image src={bannerImage} alt={post.title} fill className="object-cover opacity-35" priority />
@@ -56,7 +56,7 @@ export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) 
       </div>
 
       {/* Main Grid Section */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Main Content Area */}
           <main className="lg:col-span-8 bg-white p-6 md:p-10 rounded-2xl border border-slate-100 shadow-sm">

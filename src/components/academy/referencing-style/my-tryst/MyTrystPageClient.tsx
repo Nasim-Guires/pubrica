@@ -16,7 +16,7 @@ const Page = () => {
     const nextUrl = "/academy/referencing-style/business-sources/";
 
     return (
-        <div className="relative min-h-screen bg-white text-gray-700 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="relative min-h-screen bg-white text-gray-700 py-6 px-4 sm:px-6 lg:px-8">
             {/* Main Content Container */}
             <main className="max-w-4xl mx-auto space-y-6 text-sm leading-relaxed">
                 <article className="space-y-6 text-gray-600">

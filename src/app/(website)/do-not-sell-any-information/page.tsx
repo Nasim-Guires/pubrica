@@ -13,13 +13,13 @@ export default function DoNotSellPage() {
     <>
       <Breadcrumb items={[{ label: 'Do Not Sell Any Information', href: '/do-not-sell-any-information' }]} />
 
-      <section className="bg-[#1b2e2b] text-white py-16 px-4 text-center">
+      <section className="bg-[#1b2e2b] text-white py-7 px-4 text-center">
         <div className="max-w-4xl mx-auto border border-gray-600 p-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">Do Not Sell Any Information</h1>
         </div>
       </section>
 
-      <div className="bg-white py-16 font-sans">
+      <div className="bg-white py-7 font-sans">
         <Container className="max-w-4xl prose prose-primary">
           <p className="text-gray-600 leading-relaxed text-sm mb-6">
             For California residents using www.pubrica.com, which is managed by 1341 W Mockingbird Lane, Suite 600W, Dallas, Texas, 75247, the California Consumer Privacy Act (CCPA) grants specific rights concerning their personal information. These rights include access, deletion, and the ability to opt out of the sale of personal information. It&rsquo;s important to clarify that Pubrica does not partake in selling your data for monetary gain or compensation.

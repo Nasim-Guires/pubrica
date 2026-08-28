@@ -83,7 +83,7 @@ export const ServiceMatrix: React.FC = () => {
   return (
     <div className="w-full bg-white">
       {/* Intro Heading Section */}
-      <section className="pt-16 pb-8 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto text-left space-y-3">
+      <section className="pt-7 pb-8 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto text-left space-y-3">
         <h2 className="text-[#0c313a] text-xl md:text-2xl font-black tracking-tight max-w-5xl leading-tight">
           Struggling with Data Analytics and Machine Learning for Your Research
           or Business? Let Us Help You
@@ -96,7 +96,7 @@ export const ServiceMatrix: React.FC = () => {
       </section>
 
       {/* Grid Configuration Layout */}
-      <section className="pb-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto space-y-6">
+      <section className="pb-10 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch text-left">
           <MatrixCard
             letter="M"

@@ -14,7 +14,7 @@ export default function WhatWeDo() {
   const selectedCategoryData = SERVICES_CATEGORIES[activeCategory];
 
   return (
-    <section className="bg-white py-10 lg:py-12">
+    <section className="bg-white py-5 lg:py-6">
       <Container>
         {/* Top Header Information Section */}
         <div className="max-w-7xl mx-auto mb-6">

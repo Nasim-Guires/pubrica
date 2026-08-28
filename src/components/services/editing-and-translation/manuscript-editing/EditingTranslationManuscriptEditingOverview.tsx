@@ -5,7 +5,7 @@ import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export const EditingTranslationManuscriptEditingOverview: React.FC = () => {
   return (
-    <section className="w-full bg-slate-50 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 text-gray-800">
+    <section className="w-full bg-slate-50 py-6 sm:py-7 px-4 sm:px-6 lg:px-8 text-gray-800">
       <div className="max-w-7xl mx-auto">
         {/* Main Heading */}
         <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">

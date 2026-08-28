@@ -72,7 +72,7 @@ const packagesData: PackageCardProps[] = [
 
 export default function ArtworkServicePackages() {
   return (
-    <section className="w-full bg-white py-12 px-4 md:px-8 font-sans">
+    <section className="w-full bg-white py-6 px-4 md:px-8 font-sans">
       <div className="mx-auto max-w-6xl">
         {/* Header Section */}
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-3">

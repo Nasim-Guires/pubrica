@@ -63,7 +63,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ payload, onFormSubmit }) => 
             </div>
 
             {/* Main Content Area */}
-            <div className="mx-auto max-w-7xl px-4 py-8 md:py-12">
+            <div className="mx-auto max-w-7xl px-4 py-8 md:py-6">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
                     {/* Main Article Content */}

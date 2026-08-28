@@ -244,7 +244,7 @@ export default function OurEditorsPage() {
   return (
     <main className="w-full bg-[#fcfcfd] font-sans text-slate-800 min-h-screen">
       {/* 1. Header Banner */}
-      <section className="w-full bg-[#1b2b28] text-white py-14 px-4 text-center">
+      <section className="w-full bg-[#1b2b28] text-white py-6 px-4 text-center">
         <div className="max-w-4xl mx-auto border border-[#2d4842] p-8 sm:p-10 rounded-sm bg-[#162422]/60 shadow-inner">
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
             Our Editors
@@ -256,7 +256,7 @@ export default function OurEditorsPage() {
       </section>
 
       {/* 2. Main Layout Container */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-7">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
           {/* Left Sidebar Navigation */}

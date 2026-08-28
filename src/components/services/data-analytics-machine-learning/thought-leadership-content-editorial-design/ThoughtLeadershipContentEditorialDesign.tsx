@@ -42,7 +42,7 @@ export default function ThoughtLeadershipContentEditorialDesign() {
   return (
     <article className="w-full bg-white text-gray-800 font-sans">
       {/* ------------------- HERO BANNER ------------------- */}
-      <header className="bg-[#0b3b2c] text-white py-12 px-4 text-center">
+      <header className="bg-[#0b3b2c] text-white py-6 px-4 text-center">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 tracking-wide">
             Thought Leadership Content & Editorial Design
@@ -54,7 +54,7 @@ export default function ThoughtLeadershipContentEditorialDesign() {
       </header>
 
       {/* ------------------- SECTION 1: HOW IT WORKS ------------------- */}
-      <section className="py-14 px-4 max-w-6xl mx-auto text-center" aria-labelledby="process-heading">
+      <section className="py-6 px-4 max-w-6xl mx-auto text-center" aria-labelledby="process-heading">
         <h2 id="process-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-1">
           How Our Thought Leadership Content & Editorial Design Service Works
         </h2>
@@ -72,7 +72,7 @@ export default function ThoughtLeadershipContentEditorialDesign() {
             return (
               <div
                 key={step.id}
-                className={`flex flex-col items-center ${isTop ? 'md:pt-12' : 'md:pb-12'}`}
+                className={`flex flex-col items-center ${isTop ? 'md:pt-6' : 'md:pb-6'}`}
               >
                 {/* TOP CIRCLE NUMBER */}
                 {isTop && (
@@ -116,7 +116,7 @@ export default function ThoughtLeadershipContentEditorialDesign() {
       </section>
 
       {/* ------------------- SECTION 2: COMPLIANCE STANDARDS ------------------- */}
-      <section className="py-12 px-4 max-w-6xl mx-auto" aria-labelledby="compliance-heading">
+      <section className="py-6 px-4 max-w-6xl mx-auto" aria-labelledby="compliance-heading">
         <h2 id="compliance-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
           Our Compliance and Guideline Standards
         </h2>
@@ -169,7 +169,7 @@ export default function ThoughtLeadershipContentEditorialDesign() {
       </section>
 
       {/* ------------------- SECTION 3: SAMPLE WORK / REPORT ------------------- */}
-      <section className="bg-emerald-50/50 py-12 px-4 border-y border-emerald-100">
+      <section className="bg-emerald-50/50 py-6 px-4 border-y border-emerald-100">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image Section Placeholder */}
           <div className="relative w-full h-80 rounded-lg overflow-hidden bg-white/50 border border-gray-200">
@@ -200,7 +200,7 @@ export default function ThoughtLeadershipContentEditorialDesign() {
       </section>
 
       {/* ------------------- SECTION 4: PACKAGES ------------------- */}
-      <section className="py-12 px-4 max-w-6xl mx-auto" aria-labelledby="packages-heading">
+      <section className="py-6 px-4 max-w-6xl mx-auto" aria-labelledby="packages-heading">
         <h2 id="packages-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
           Thought Leadership Content & Editorial Design – Our Packages
         </h2>

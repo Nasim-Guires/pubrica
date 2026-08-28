@@ -109,7 +109,7 @@ export default function CommonPackages({
   };
 
   return (
-    <section className="py-16 px-4 md:px-8 bg-white w-full text-left font-sans">
+    <section className="py-7 px-4 md:px-8 bg-white w-full text-left font-sans">
       {/* Header Section */}
       <div className="max-w-7xl mx-auto mb-10">
         <h2 className="text-3xl md:text-4xl font-bold text-[#0b3b2c] mb-3">
@@ -128,7 +128,7 @@ export default function CommonPackages({
       </div>
 
       {/* Packages Container */}
-      <div className="relative max-w-7xl mx-auto pb-10">
+      <div className="relative max-w-7xl mx-auto pb-5">
         <div className={`grid ${getGridColsClass(packages.length)} gap-4 items-stretch`}>
           {packages.map((pkg, index) => (
             <div

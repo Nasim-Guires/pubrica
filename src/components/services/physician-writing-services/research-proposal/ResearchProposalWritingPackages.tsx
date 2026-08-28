@@ -117,7 +117,7 @@ export default function ResearchProposalWritingPackages() {
   ];
 
   return (
-    <section className="w-full bg-white py-12 px-4 sm:px-6 lg:px-8 font-sans antialiased text-gray-800">
+    <section className="w-full bg-white py-6 px-4 sm:px-6 lg:px-8 font-sans antialiased text-gray-800">
       <div className="max-w-6xl mx-auto space-y-12">
         
         {/* ---------------- SECTION 1: PACKAGES ---------------- */}

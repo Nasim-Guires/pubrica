@@ -118,7 +118,7 @@ export default function WhatWeDo() {
   ];
 
   return (
-    <section className="w-full bg-[#f2f4f4] py-12 md:py-16 px-4 md:px-8 font-sans text-slate-800">
+    <section className="w-full bg-[#f2f4f4] py-6 md:py-7 px-4 md:px-8 font-sans text-slate-800">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-4">

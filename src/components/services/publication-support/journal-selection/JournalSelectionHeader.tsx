@@ -11,7 +11,7 @@ export default function JournalSelectionHeader() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 1: TOP BANNER (DARK HERO BOX)              */}
       {/* ---------------------------------------------------- */}
-      <section className="w-full bg-[#0d2a2d] py-10 px-4 sm:px-6 lg:px-8 text-center text-white">
+      <section className="w-full bg-[#0d2a2d] py-5 px-4 sm:px-6 lg:px-8 text-center text-white">
         <div className="max-w-4xl mx-auto border border-white/20 p-6 sm:p-8 rounded-sm bg-[#13363a]/40">
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3">
             Journal Selection Service
@@ -25,7 +25,7 @@ export default function JournalSelectionHeader() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 2: RECOMMENDATIONS BANNER & CTA              */}
       {/* ---------------------------------------------------- */}
-      <section className="py-10 px-4 sm:px-6 lg:px-8 text-center bg-white space-y-4">
+      <section className="py-5 px-4 sm:px-6 lg:px-8 text-center bg-white space-y-4">
         <div className="max-w-3xl mx-auto space-y-2">
           <h2 className="text-xl sm:text-2xl font-bold text-[#0d3b44]">
             More than 1 Million Researchers are Already Using Pubrica’s Recommendations
@@ -48,7 +48,7 @@ export default function JournalSelectionHeader() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 3: DETAILED SERVICE OVERVIEW                 */}
       {/* ---------------------------------------------------- */}
-      <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-6 text-slate-800">
+      <section className="py-5 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-6 text-slate-800">
 
         {/* Main Heading */}
         <h2 className="text-xl sm:text-2xl font-extrabold text-[#0d3b44] leading-snug">

@@ -43,7 +43,7 @@ const WhereOurAuthorsPublishAndEditors: NextPage = () => {
   ];
 
   return (
-    <div className="w-full bg-white text-gray-800 py-16 px-4 md:px-8 space-y-20">
+    <div className="w-full bg-white text-gray-800 py-7 px-4 md:px-8 space-y-20">
       
       {/* WHERE OUR AUTHORS PUBLISH SECTION */}
       <section className="max-w-5xl mx-auto space-y-10">
@@ -99,7 +99,7 @@ const WhereOurAuthorsPublishAndEditors: NextPage = () => {
       </section>
 
       {/* OUR EXPERT MEDICAL EDITORS SECTION */}
-      <section className="max-w-6xl mx-auto space-y-10 pt-10">
+      <section className="max-w-6xl mx-auto space-y-10 pt-5">
         <div className="text-center space-y-3">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32]">
             Our Expert Medical Editors

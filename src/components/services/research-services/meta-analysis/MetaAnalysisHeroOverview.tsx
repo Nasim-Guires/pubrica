@@ -57,7 +57,7 @@ export default function MetaAnalysisHeroOverview() {
       </div>
 
       {/* 2. Overview Content Section */}
-      <div className="bg-slate-100 py-12 px-4 sm:px-6 lg:px-8 text-slate-900">
+      <div className="bg-slate-100 py-6 px-4 sm:px-6 lg:px-8 text-slate-900">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             {/* Left Column Content */}

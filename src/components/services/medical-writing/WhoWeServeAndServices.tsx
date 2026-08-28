@@ -115,7 +115,7 @@ function ServiceCardView({ service }: { service: ServiceCard }) {
 
 export default function WhoWeServeAndServices(): React.ReactElement {
   return (
-    <div className="w-full font-sans text-slate-800 bg-[#f8f9f9] py-12 px-4 sm:px-6 lg:px-12 space-y-16">
+    <div className="w-full font-sans text-slate-800 bg-[#f8f9f9] py-6 px-4 sm:px-6 lg:px-12 space-y-16">
       <section className="max-w-6xl mx-auto space-y-6">
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold text-[#09322e] mb-3">

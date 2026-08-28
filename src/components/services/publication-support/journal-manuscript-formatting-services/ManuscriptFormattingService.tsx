@@ -13,7 +13,7 @@ export default function ManuscriptFormattingService() {
       {/* ============================================================ */}
       {/* 1. TOP HERO BANNER                                           */}
       {/* ============================================================ */}
-      <section className="w-full bg-gradient-to-b from-[#092b23] to-[#0d3b31] text-white py-12 px-4">
+      <section className="w-full bg-gradient-to-b from-[#092b23] to-[#0d3b31] text-white py-6 px-4">
         <div className="max-w-5xl mx-auto border border-[#3b7063] p-8 md:p-10 text-center rounded-xs shadow-lg">
           <h1 className="text-2xl md:text-4xl font-bold tracking-tight mb-3">
             Scientific and Academic Manuscript Formatting Service
@@ -29,7 +29,7 @@ export default function ManuscriptFormattingService() {
       {/* ============================================================ */}
       {/* 2. MAIN DESCRIPTION & FEATURE LIST                            */}
       {/* ============================================================ */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8 py-12">
+      <section className="max-w-6xl mx-auto px-4 md:px-8 py-6">
         <div className="space-y-4 mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] leading-snug">
             Scientific and Academic Manuscript Formatting Service: Submit Your
@@ -172,7 +172,7 @@ export default function ManuscriptFormattingService() {
       {/* ============================================================ */}
       {/* 3. COMPLIANCE & GUIDELINE STANDARDS CARDS                    */}
       {/* ============================================================ */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8 pb-16">
+      <section className="max-w-6xl mx-auto px-4 md:px-8 pb-7">
         <div className="mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-2">
             Our Compliance and Guideline Standards

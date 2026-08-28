@@ -84,7 +84,7 @@ const experts: Expert[] = [
 
 export default function ThesisPhdEditingService() {
   return (
-    <div className="min-h-screen bg-white text-slate-800 py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto font-sans">
+    <div className="min-h-screen bg-white text-slate-800 py-6 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto font-sans">
       
       {/* Header Section */}
       <section className="mb-12">

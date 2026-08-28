@@ -172,7 +172,7 @@ export default function WhoWeServeAndProcess() {
       {/* ========================================================= */}
       {/* 1. WHO WE SERVE SECTION WITH HOVER CARD EFFECT             */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <div className="space-y-3 mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
             Who We Serve
@@ -238,7 +238,7 @@ export default function WhoWeServeAndProcess() {
       {/* ========================================================= */}
       {/* 2. SPEED UP RESEARCH CALLOUT BANNER                        */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#03281d] text-white py-12 px-4 sm:px-6 lg:px-8 text-center my-8">
+      <section className="w-full bg-[#03281d] text-white py-6 px-4 sm:px-6 lg:px-8 text-center my-8">
         <div className="max-w-4xl mx-auto space-y-4">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">
             Speed up your research journey with Pubrica’s Experimental Design
@@ -258,7 +258,7 @@ export default function WhoWeServeAndProcess() {
       {/* ========================================================= */}
       {/* 3. STEP-BY-STEP PROCESS SECTION                            */}
       {/* ========================================================= */}
-      <section className="w-full bg-slate-50/60 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-slate-50/60 py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-10">
           {/* Header */}
           <div className="text-center space-y-3 max-w-4xl mx-auto">

@@ -81,7 +81,7 @@ export default function ReviewerProcessSection() {
       {/* ========================================== */}
       {/* SECTION 1: WHO WE SERVE                   */}
       {/* ========================================== */}
-      <section className="max-w-6xl mx-auto px-4 py-12">
+      <section className="max-w-6xl mx-auto px-4 py-6">
         <div className="mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-3">
             Who We Serve
@@ -143,7 +143,7 @@ export default function ReviewerProcessSection() {
       {/* ========================================== */}
       {/* SECTION 2: OUR REVIEWER COMMENTS PROCESS  */}
       {/* ========================================== */}
-      <section className="bg-[#eeefef] py-16 px-4">
+      <section className="bg-[#eeefef] py-7 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#0c3547] mb-14">
             Our Reviewer Comments Process
@@ -217,7 +217,7 @@ export default function ReviewerProcessSection() {
         </div>
       </section>
       {/* Compliance Standards Section */}
-      <section className="w-full bg-gray-50/50 py-12 px-4">
+      <section className="w-full bg-gray-50/50 py-6 px-4">
         <div className="max-w-5xl mx-auto">
           {/* Section Heading */}
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center mb-8">

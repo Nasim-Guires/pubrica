@@ -121,7 +121,7 @@ export default function PhysicianManuscriptPackagesSection() {
         <div className="w-full bg-white text-slate-800">
 
             {/* 1. Compliance and Guideline Standards Grid */}
-            <section className="py-14 bg-[#f8fafc] border-t border-gray-200">
+            <section className="py-6 bg-[#f8fafc] border-t border-gray-200">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] text-center mb-10">
                         Our Compliance and Guideline Standards
@@ -153,7 +153,7 @@ export default function PhysicianManuscriptPackagesSection() {
             </section>
 
             {/* 2. Sample Work & Report Download Section */}
-            <section className="py-12 bg-white">
+            <section className="py-6 bg-white">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-[#eff8f4] border border-[#d2ebd9] rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center gap-8 shadow-sm">
                         {/* Left Image Box */}
@@ -201,7 +201,7 @@ export default function PhysicianManuscriptPackagesSection() {
             </section>
 
             {/* 3. Physician Manuscript Writing Packages */}
-            <section className="py-14 bg-white">
+            <section className="py-6 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Section Heading */}
                     <div className="text-center max-w-4xl mx-auto mb-10">

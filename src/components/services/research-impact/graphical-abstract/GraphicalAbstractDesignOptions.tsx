@@ -98,7 +98,7 @@ const whyChoosePoints = [
 
 export default function GraphicalAbstractDesignOptions() {
   return (
-    <section className="w-full bg-white text-slate-800 font-sans py-12 px-4 sm:px-6 lg:px-8 space-y-16">
+    <section className="w-full bg-white text-slate-800 font-sans py-6 px-4 sm:px-6 lg:px-8 space-y-16">
       
       {/* 1. Choose Design Options Section */}
       <div className="max-w-6xl mx-auto">

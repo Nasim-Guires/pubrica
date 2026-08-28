@@ -102,7 +102,7 @@ const packageData: PackageTier[] = [
 
 export default function ClinicalLiteratureReviewPackages() {
     return (
-        <section className="w-full bg-white py-12 text-slate-800">
+        <section className="w-full bg-white py-6 text-slate-800">
             <div className="max-w-6xl mx-auto px-4 space-y-10">
 
                 {/* Header Section */}

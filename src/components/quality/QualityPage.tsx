@@ -146,7 +146,7 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
   return (
     <main className={`w-full bg-[#fcfcfd] font-sans text-slate-800 ${className}`}>
       {/* 1. Top Banner Section */}
-      <section className="w-full bg-[#1b2b28] text-white py-14 sm:py-16 px-4">
+      <section className="w-full bg-[#1b2b28] text-white py-6 sm:py-7 px-4">
         <div className="max-w-4xl mx-auto border border-[#2d4842] p-8 sm:p-10 rounded-sm bg-[#162422]/60 text-center shadow-inner">
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
             Quality of Publications
@@ -158,7 +158,7 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       </section>
 
       {/* 2. ISO Certification Banner */}
-      <section className="w-full bg-white border-b border-slate-100 py-12 px-4 sm:px-6 lg:px-8 text-center">
+      <section className="w-full bg-white border-b border-slate-100 py-6 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#1b2b28] mb-2">
             Quality Assurance
@@ -173,7 +173,7 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       </section>
 
       {/* 3. Main Intro & Dark Cards Grid */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#1b2b28] mb-4">
             Pubrica academic and scientific publishing.
@@ -207,7 +207,7 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       </section>
 
       {/* 4. Stats Banner */}
-      <section className="w-full bg-white border-y border-slate-200/60 py-12 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-white border-y border-slate-200/60 py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-around gap-8 text-center">
           {metrics.map((stat) => (
             <div key={stat.id} className="flex items-center gap-3">
@@ -228,7 +228,7 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       </section>
 
       {/* 5. Editorial & Tag Cloud Section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm">
 
           {/* Word Art Image Column */}
@@ -263,7 +263,7 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       </section>
 
       {/* 6. Guarantee Section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-7">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#1b2b28] mb-3">
             We guarantee
@@ -309,7 +309,7 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       </section>
 
       {/* 7. Added Section: Quality Commitment & Values */}
-      <section className="w-full bg-slate-50/70 border-t border-slate-200/80 py-16 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-slate-50/70 border-t border-slate-200/80 py-7 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-10 text-left">
           {/* Quality of your work */}
           <div className="space-y-2">

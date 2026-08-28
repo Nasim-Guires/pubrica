@@ -113,7 +113,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="w-full bg-white py-16 px-4 font-sans">
+    <section className="w-full bg-white py-7 px-4 font-sans">
       <div className="max-w-6xl mx-auto">
         {/* Section Heading */}
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-10 text-center">

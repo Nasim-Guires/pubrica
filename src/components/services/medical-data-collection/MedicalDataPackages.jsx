@@ -97,7 +97,7 @@ const addOns = [
 
 export default function MedicalDataPackages() {
   return (
-    <section className="w-full bg-white py-12 px-4 sm:px-6 lg:px-12 font-sans text-slate-800">
+    <section className="w-full bg-white py-6 px-4 sm:px-6 lg:px-12 font-sans text-slate-800">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <header className="mb-10 text-left">

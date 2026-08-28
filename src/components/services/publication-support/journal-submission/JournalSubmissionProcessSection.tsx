@@ -70,7 +70,7 @@ export default function JournalSubmissionProcessSection() {
       {/* ========================================== */}
       {/* SECTION 1: WHO WE SERVE                   */}
       {/* ========================================== */}
-      <section className="max-w-6xl mx-auto px-4 py-12">
+      <section className="max-w-6xl mx-auto px-4 py-6">
         <div className="mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3547] mb-3">
             Who We Serve
@@ -118,7 +118,7 @@ export default function JournalSubmissionProcessSection() {
       {/* ========================================== */}
       {/* SECTION 2: HOW OUR SERVICE WORKS           */}
       {/* ========================================== */}
-      <section className="bg-[#f0f2f2] py-16 px-4">
+      <section className="bg-[#f0f2f2] py-7 px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Titles */}
           <div className="text-center mb-12">

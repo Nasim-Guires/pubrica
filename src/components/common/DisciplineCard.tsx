@@ -112,7 +112,7 @@ const DisciplinesSection = ({
   disciplines,
 }: DisciplinesSectionProps) => {
   return (
-    <section className="mx-auto w-full max-w-7xl space-y-10 px-4 py-12 sm:px-6 lg:px-8">
+    <section className="mx-auto w-full max-w-7xl space-y-10 px-4 py-6 sm:px-6 lg:px-8">
       {/* Header */}
       <div className="mx-auto max-w-3xl space-y-3 text-center">
         <h2 className="text-2xl font-bold text-[#0d3630] md:text-3xl">

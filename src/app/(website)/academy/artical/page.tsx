@@ -25,7 +25,7 @@ export default async function ArticalIndexPage() {
   const articles = docs.filter((post) => post.heroImage && !post.slug.includes("‐"));
 
   return (
-    <section className="bg-white py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <section className="bg-white py-6 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
       <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8">Articles</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -61,7 +61,7 @@ export default async function ArticalIndexPage() {
       </div>
 
       {articles.length === 0 && (
-        <p className="text-sm text-slate-500 text-center py-12">No articles found.</p>
+        <p className="text-sm text-slate-500 text-center py-6">No articles found.</p>
       )}
     </section>
   );

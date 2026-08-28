@@ -145,7 +145,7 @@ export const ProcessAndComplianceSection: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-slate-50 min-h-screen py-16 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className="w-full bg-slate-50 min-h-screen py-7 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto space-y-20">
         
         {/* ================= 1. STEP-BY-STEP PROCESS ================= */}

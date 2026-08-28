@@ -17,7 +17,7 @@ export default function TermsPage() {
   return (
     <>
       <Breadcrumb items={[{ label: 'Terms & Conditions', href: '/terms' }]} />
-      <div className="bg-white py-16 font-sans">
+      <div className="bg-white py-7 font-sans">
         <Container className="max-w-3xl prose prose-primary">
           <h1 className="text-3xl font-extrabold text-gray-900 font-display mb-6">
             Terms & Conditions

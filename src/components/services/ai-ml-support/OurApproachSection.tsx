@@ -68,7 +68,7 @@ export default function OurApproachSection() {
   };
 
   return (
-    <section className="w-full bg-[#f8f9f9] py-16 px-4 sm:px-6 lg:px-12 font-sans">
+    <section className="w-full bg-[#f8f9f9] py-7 px-4 sm:px-6 lg:px-12 font-sans">
       <div className="max-w-6xl mx-auto">
         {/* Section Title & Subheading */}
         <div className="mb-12 max-w-4xl">

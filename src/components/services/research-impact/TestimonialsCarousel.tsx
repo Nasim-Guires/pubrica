@@ -59,7 +59,7 @@ export default function TestimonialsCarousel(): React.ReactElement {
   const [activeSlide, setActiveSlide] = useState<number>(0);
 
   return (
-    <div className="w-full font-sans bg-[#f5f7f7] text-slate-800 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="w-full font-sans bg-[#f5f7f7] text-slate-800 py-7 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Header Block */}
         <div className="space-y-4 mb-10">

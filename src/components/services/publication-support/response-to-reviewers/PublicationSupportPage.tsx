@@ -294,7 +294,7 @@ const PACKAGES: PackageInfo[] = [
 export default function PublicationSupportPage() {
   return (
     <div className="w-full font-sans bg-white text-slate-800">
-      <div className="max-w-6xl mx-auto px-4 py-12 space-y-16">
+      <div className="max-w-6xl mx-auto px-4 py-6 space-y-16">
         {/* ================= SECTION 1: TYPES OF RESPONSES ================= */}
     
         {/* ================= SECTION 2: SUBJECTS ================= */}

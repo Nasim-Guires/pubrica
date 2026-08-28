@@ -35,7 +35,7 @@ export default function WhoWeWorkFor() {
   ];
 
   return (
-    <section className="bg-white py-10 relative select-none">
+    <section className="bg-white py-5 relative select-none">
       <Container className="flex flex-col gap-12">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative">
@@ -95,7 +95,7 @@ export default function WhoWeWorkFor() {
                 </div>
 
                 {/* Content Panel - slides and expands upwards on hover */}
-                <div className="h-1/3 w-full pt-10 pb-6 px-5 bg-white flex flex-col items-center justify-start flex-grow transition-all duration-500 ease-in-out group-hover:h-1/2">
+                <div className="h-1/3 w-full pt-5 pb-6 px-5 bg-white flex flex-col items-center justify-start flex-grow transition-all duration-500 ease-in-out group-hover:h-1/2">
                   <h3 className="font-bold text-gray-900 text-sm tracking-wide text-center font-display transition-colors duration-300">
                     {sec.title}
                   </h3>

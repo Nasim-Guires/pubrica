@@ -254,7 +254,7 @@ export default function ScientificEditorProfile() {
   return (
     <main className="min-h-screen bg-white text-gray-800">
       {/* Banner Header */}
-      <header className="bg-[#0f3434] py-12 px-4 text-center text-white">
+      <header className="bg-[#0f3434] py-6 px-4 text-center text-white">
         <div className="max-w-4xl mx-auto border border-white/30 p-8 rounded-sm">
           <h1 className="text-3xl md:text-4xl font-bold tracking-wide">
             Editors' Profile
@@ -266,7 +266,7 @@ export default function ScientificEditorProfile() {
       </header>
 
       {/* Main Content Area */}
-      <section className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <section className="max-w-7xl mx-auto px-4 py-5 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Sidebar */}
         <aside className="md:col-span-1 space-y-2">
           <div className="flex items-center gap-2 mb-6 text-[#0f3434] font-bold text-lg">
@@ -346,7 +346,7 @@ export default function ScientificEditorProfile() {
       </section>
 
       {/* Editors List */}
-      <section className="max-w-4xl mx-auto px-4 pb-16 space-y-12">
+      <section className="max-w-4xl mx-auto px-4 pb-7 space-y-12">
         {filteredEditors.map((editor) => (
           <div
             key={editor.id}

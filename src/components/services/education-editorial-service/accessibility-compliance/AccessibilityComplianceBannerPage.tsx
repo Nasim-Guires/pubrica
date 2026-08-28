@@ -18,7 +18,7 @@ const AccessibilityComplianceBannerPage: NextPage = () => {
 
       <div className="w-full bg-white">
         {/* Banner Section */}
-        <section className="w-full bg-[#0b3b2c] py-12 px-4 md:px-8 text-center text-white">
+        <section className="w-full bg-[#0b3b2c] py-6 px-4 md:px-8 text-center text-white">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-3 tracking-wide">
               Accessibility Compliance at Pubrica

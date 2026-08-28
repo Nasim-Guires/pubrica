@@ -30,7 +30,7 @@ export const ToolsUsed: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-100">
+    <section className="py-7 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-100">
       <h2 className="text-[#0c313a] text-xl md:text-2xl font-black mb-6 tracking-tight text-left">
         Tools We Use
       </h2>

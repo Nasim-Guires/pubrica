@@ -148,7 +148,7 @@ const packagesData: PackageCard[] = [
 
 export default function RegulatoryWritingPackages() {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12 font-sans bg-[#f7faf9]">
+    <section className="max-w-6xl mx-auto px-4 py-6 font-sans bg-[#f7faf9]">
       {/* Section Title */}
       <h2 className="text-2xl font-bold text-[#0B3C3D] mb-8">Our Packages</h2>
 

@@ -14,7 +14,7 @@ export default function CTA({
   description = 'Join thousands of clinicians, professors, and pharmaceutical companies who rely on Pubrica to compile clinical reports, systematic reviews, and publication-ready research.',
 }: CTAProps) {
   return (
-    <section className="bg-primary-950 text-white py-20 relative overflow-hidden select-none">
+    <section className="bg-primary-950 text-white py-8 relative overflow-hidden select-none">
       {/* Background visual accents */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary-800/20 rounded-full blur-3xl translate-x-12 -translate-y-12 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary-500/10 rounded-full blur-3xl -translate-x-12 translate-y-12 pointer-events-none" />

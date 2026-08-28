@@ -201,7 +201,7 @@ export default function TestimonialsAndFAQSection() {
   };
 
   return (
-    <div className="w-full bg-[#f8f9fa] text-slate-800 font-sans py-16 px-4 sm:px-6 lg:px-8">
+    <div className="w-full bg-[#f8f9fa] text-slate-800 font-sans py-7 px-4 sm:px-6 lg:px-8">
       {/* SEO Schema Injection */}
       <script
         type="application/ld+json"

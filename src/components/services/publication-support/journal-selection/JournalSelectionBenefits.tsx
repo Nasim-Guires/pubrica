@@ -12,7 +12,7 @@ export default function JournalSelectionBenefits() {
       {/* ---------------------------------------------------- */}
 
 
-      <section className="bg-[#052b1e] text-white py-12 px-6 sm:px-12 lg:px-16">
+      <section className="bg-[#052b1e] text-white py-6 px-6 sm:px-12 lg:px-16">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12">
 
           {/* Satisfaction Guarantee Image */}
@@ -69,7 +69,7 @@ export default function JournalSelectionBenefits() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 2: BENEFITS OF OUR JOURNAL SELECTION PROCESS */}
       {/* ---------------------------------------------------- */}
-      <section className="bg-white py-14 px-6 sm:px-12 lg:px-16 text-slate-800">
+      <section className="bg-white py-6 px-6 sm:px-12 lg:px-16 text-slate-800">
         <div className="max-w-6xl mx-auto space-y-8">
           {/* Section Heading */}
           <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] text-left">

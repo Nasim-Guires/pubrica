@@ -84,7 +84,7 @@ const packagesData: PackageItem[] = [
 
 export default function CustomerSegmentationPackages() {
     return (
-        <section className="w-full bg-white py-16 px-4 font-sans text-slate-800">
+        <section className="w-full bg-white py-7 px-4 font-sans text-slate-800">
             <div className="max-w-6xl mx-auto">
                 {/* Header Section */}
                 <div className="text-center mb-12">

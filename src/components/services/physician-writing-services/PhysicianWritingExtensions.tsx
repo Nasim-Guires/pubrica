@@ -94,7 +94,7 @@ export const PhysicianWritingExtensions: React.FC = () => {
   return (
     <div className="w-full bg-[#f8f9fa] font-sans text-left text-gray-800">
       {/* --- FAQ Accordion Structure --- */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-200/60">
+      <section className="py-7 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-200/60">
         <h2 className="text-black text-xl md:text-2xl lg:text-[26px] font-bold tracking-tight mb-8">
           Frequently Asked Questions – Physician Writing Service
         </h2>
@@ -139,7 +139,7 @@ export const PhysicianWritingExtensions: React.FC = () => {
       </section>
 
       {/* --- Section 3: Insights Grid Cards --- */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-200/60">
+      <section className="py-7 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-t border-gray-200/60">
         <h2 className="text-[#083c4c] text-xl md:text-2xl lg:text-[26px] font-extrabold tracking-tight mb-8">
           Insights
         </h2>

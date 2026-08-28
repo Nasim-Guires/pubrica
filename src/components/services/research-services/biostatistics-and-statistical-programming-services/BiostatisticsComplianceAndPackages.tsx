@@ -172,7 +172,7 @@ export default function BiostatisticsComplianceAndPackages() {
       {/* ========================================================= */}
       {/* 1. COMPLIANCE AND GUIDELINE STANDARDS                     */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <div className="space-y-3 mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
             Our Compliance and Guideline Standards
@@ -314,7 +314,7 @@ export default function BiostatisticsComplianceAndPackages() {
       {/* ========================================================= */}
       {/* 3. BIOSTATISTICAL PROGRAMMING SERVICE - OUR PACKAGES       */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
         <div className="space-y-3 mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
             Biostatistical Programming Service – Our Packages
@@ -394,7 +394,7 @@ export default function BiostatisticsComplianceAndPackages() {
         </div>
 
         {/* Global CTA Button */}
-        <div className="pt-10 flex justify-center">
+        <div className="pt-5 flex justify-center">
           <GetFreeQuoteButton/>
         </div>
       </section>

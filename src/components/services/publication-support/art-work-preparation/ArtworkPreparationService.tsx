@@ -10,7 +10,7 @@ export default function ArtworkPreparationService() {
       {/* ============================================================ */}
       {/* HERO SECTION                                                 */}
       {/* ============================================================ */}
-      <section className="bg-gradient-to-b from-[#182a27] via-[#213a36] to-[#2a4a45] text-white py-16 px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-gradient-to-b from-[#182a27] via-[#213a36] to-[#2a4a45] text-white py-7 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-5xl mx-auto border border-gray-300/60 p-8 sm:p-12 rounded-sm shadow-xs">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-6 text-white">
             Artwork Preparation Service: High-quality, Publication-Ready Images
@@ -26,7 +26,7 @@ export default function ArtworkPreparationService() {
       {/* ============================================================ */}
       {/* MAIN CONTENT SECTION                                         */}
       {/* ============================================================ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-7">
         {/* Title & Subheading */}
         <div className="max-w-4xl mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c3830] leading-snug mb-3">

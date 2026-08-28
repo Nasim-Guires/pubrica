@@ -90,7 +90,7 @@ export default function AcademicEditorialServicesSection() {
       {/* ==========================================
           FULL-WIDTH HERO BANNER (Attached to Navbar)
       ========================================== */}
-      <section className="relative w-full bg-[#0d2a2a] text-white py-12 sm:py-16 text-center border-b border-teal-800/40 shadow-xl overflow-hidden mb-12">
+      <section className="relative w-full bg-[#0d2a2a] text-white py-6 sm:py-7 text-center border-b border-teal-800/40 shadow-xl overflow-hidden mb-12">
         <div className="max-w-4xl mx-auto space-y-4 relative z-10 px-4">
           <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
             Academic Editorial Services
@@ -107,7 +107,7 @@ export default function AcademicEditorialServicesSection() {
       {/* ==========================================
           MAIN CONTENT CONTAINER
       ========================================== */}
-      <div className="max-w-6xl mx-auto space-y-16 px-4 sm:px-6 lg:px-8 pb-16">
+      <div className="max-w-6xl mx-auto space-y-16 px-4 sm:px-6 lg:px-8 pb-7">
         {/* MAIN CONTENT & IMAGE GRID */}
         <section className="space-y-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">

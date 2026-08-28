@@ -165,7 +165,7 @@ export default function PhysicalSciencesPage() {
   return (
     <main className="w-full bg-white min-h-screen text-slate-800 font-sans">
       {/* Hero Header Banner */}
-      <section className="w-full bg-[#182d30] py-12 px-4 text-center text-white">
+      <section className="w-full bg-[#182d30] py-6 px-4 text-center text-white">
         <div className="max-w-4xl mx-auto border border-slate-400 py-8 px-6">
           <h1 className="text-3xl md:text-4xl font-semibold mb-2">Physical Science</h1>
           <p className="text-sm md:text-base text-slate-300">All domains</p>
@@ -173,7 +173,7 @@ export default function PhysicalSciencesPage() {
       </section>
 
       {/* Main Grid Content */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-10 flex flex-col md:flex-row gap-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-5 flex flex-col md:flex-row gap-8">
         
         {/* Left Sidebar */}
         <aside className="w-full md:w-1/4 shrink-0" aria-label="Sidebar Navigation">

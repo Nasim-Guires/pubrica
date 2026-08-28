@@ -140,7 +140,7 @@ export default function EducationEditorialServicePage() {
 
 
             {/* ------------------- FULL WIDTH SUB-BANNER ------------------- */}
-            <section className="w-full bg-[#0b3b2c] py-12 px-4 text-white text-center">
+            <section className="w-full bg-[#0b3b2c] py-6 px-4 text-white text-center">
                 <div className="max-w-4xl mx-auto px-4">
                     <h2 className="text-xl md:text-2xl font-bold mb-3 tracking-wide">
                         Enhance Your Educational Content with Pubrica
@@ -152,7 +152,7 @@ export default function EducationEditorialServicePage() {
             </section>
 
             {/* ------------------- HOW OUR EDUCATION EDITORIAL SERVICE WORKS ------------------- */}
-            <section className="py-14 px-4 bg-white border-b border-gray-100" aria-labelledby="workflow-heading">
+            <section className="py-6 px-4 bg-white border-b border-gray-100" aria-labelledby="workflow-heading">
                 <div className="max-w-6xl mx-auto text-center">
                     <h2 id="workflow-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-2">
                         How Our Education Editorial Service Works
@@ -175,7 +175,7 @@ export default function EducationEditorialServicePage() {
             </section>
 
             {/* ------------------- EDUCATION EDITORIAL SERVICES SAMPLE WORK ------------------- */}
-            <section className="py-14 px-4 bg-[#f0fdf4]" aria-labelledby="sample-work-heading">
+            <section className="py-6 px-4 bg-[#f0fdf4]" aria-labelledby="sample-work-heading">
                 <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                     {/* Left: Image / Mockup */}
                     <div className="md:col-span-5 flex justify-center">
@@ -226,7 +226,7 @@ export default function EducationEditorialServicePage() {
                 </div>
             </section>
             <section
-                className="py-16 px-4 bg-white text-gray-800"
+                className="py-7 px-4 bg-white text-gray-800"
                 aria-labelledby="packages-heading"
             >
                 <div className="max-w-6xl mx-auto">

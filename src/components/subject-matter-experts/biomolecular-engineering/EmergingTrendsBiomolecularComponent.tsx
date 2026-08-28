@@ -99,7 +99,7 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
   ];
 
   return (
-    <div className="font-sans text-gray-800 bg-white py-12 px-4 space-y-16">
+    <div className="font-sans text-gray-800 bg-white py-6 px-4 space-y-16">
       <div className="max-w-5xl mx-auto space-y-16">
 
         {/* SECTION 1: Emerging Trends */}

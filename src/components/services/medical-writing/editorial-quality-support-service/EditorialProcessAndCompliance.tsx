@@ -206,7 +206,7 @@ export default function EditorialProcessAndCompliance() {
     };
 
     return (
-        <div className="w-full bg-white font-sans text-gray-800 pb-20">
+        <div className="w-full bg-white font-sans text-gray-800 pb-8">
 
             {/* 1. TOP GREEN BANNER */}
             <section className="bg-[#052C28] text-white py-8 px-4 text-center">
@@ -219,7 +219,7 @@ export default function EditorialProcessAndCompliance() {
             </section>
 
             {/* 2. STEP-BY-STEP PROCESS SECTION */}
-            <section className="max-w-6xl mx-auto px-4 py-16">
+            <section className="max-w-6xl mx-auto px-4 py-7">
                 <div className="text-center mb-12">
                     <h2 className="text-lg md:text-xl font-bold text-[#0F3836] mb-2">
                         How The Editorial & Quality Support Service Works

@@ -127,7 +127,7 @@ export default function ServicesAndAudienceSection() {
   };
 
   return (
-    <section className="w-full bg-white text-slate-800 font-sans py-12 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
+    <section className="w-full bg-white text-slate-800 font-sans py-6 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
       {/* Schema.org Injection for Search Engines */}
       <script
         type="application/ld+json"
@@ -222,7 +222,7 @@ export default function ServicesAndAudienceSection() {
       </div>
 
       {/* SECTION 3: CALL TO ACTION BANNER */}
-      <div className="w-full bg-[#052b22] text-white rounded-sm py-10 px-6 text-center shadow-lg transition-transform duration-300 hover:scale-[1.01]">
+      <div className="w-full bg-[#052b22] text-white rounded-sm py-5 px-6 text-center shadow-lg transition-transform duration-300 hover:scale-[1.01]">
         <h2 className="text-xl md:text-2xl font-extrabold tracking-tight mb-3 text-white">
           Accelerate Your Scientific Medical Communication with Pubrica
         </h2>

@@ -15,7 +15,7 @@ export default function PharmaceuticalIndustryPage() {
   return (
     <main className="min-h-screen bg-white text-gray-800">
       {/* Hero Section */}
-      <header className="bg-gradient-to-b from-emerald-950 to-emerald-900 text-white py-16 px-4 text-center">
+      <header className="bg-gradient-to-b from-emerald-950 to-emerald-900 text-white py-7 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
             Empowering Pharmaceutical Innovations with Expertise and Compliance
@@ -27,7 +27,7 @@ export default function PharmaceuticalIndustryPage() {
       </header>
 
       {/* Main Content & Overview Section */}
-      <section className="py-12 px-4 md:px-8 max-w-6xl mx-auto">
+      <section className="py-6 px-4 md:px-8 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-snug">
@@ -57,7 +57,7 @@ export default function PharmaceuticalIndustryPage() {
       </section>
 
       {/* Expertise Section */}
-      <section className="py-16 bg-gray-50 px-4 md:px-8">
+      <section className="py-7 bg-gray-50 px-4 md:px-8">
         <div className="max-w-6xl mx-auto text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             Our Expertise in the Pharmaceutical Industry Includes
@@ -128,7 +128,7 @@ export default function PharmaceuticalIndustryPage() {
       </section>
 
       {/* Pharmaceutical Segments We Serve */}
-      <section className="py-16 px-4 md:px-8 max-w-6xl mx-auto">
+      <section className="py-7 px-4 md:px-8 max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             Pharmaceutical Segments We Serve

@@ -15,14 +15,14 @@ export default function PrivacyPolicyPage() {
       <Breadcrumb items={[{ label: 'Privacy Policy', href: '/privacy-policy' }]} />
       
       {/* Top Banner Section */}
-      <section className="bg-[#1b2e2b] text-white py-16 px-4 text-center">
+      <section className="bg-[#1b2e2b] text-white py-7 px-4 text-center">
         <div className="max-w-4xl mx-auto border border-gray-600 p-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">Privacy Policy</h1>
           <p className="text-sm md:text-base text-gray-300">100% data privacy</p>
         </div>
       </section>
 
-      <div className="bg-white py-16 font-sans">
+      <div className="bg-white py-7 font-sans">
         <Container className="max-w-4xl prose prose-primary">
           <p className="text-gray-600 leading-relaxed text-sm mb-8">
             At Pubrica, we take data privacy and research confidentiality seriously. This policy outlines how we handle and protect personal information, draft manuscripts, clinical trial datasets, and other records.

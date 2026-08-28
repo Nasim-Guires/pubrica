@@ -99,7 +99,7 @@ export default function PlagiarismServicePackages() {
   return (
     <div className="w-full font-sans text-slate-800 bg-white">
       {/* SECTION 1: Why Pubrica's Plagiarism Checker Report Service? */}
-      <section className="w-full py-12 md:py-16 px-4 md:px-8 max-w-6xl mx-auto">
+      <section className="w-full py-6 md:py-7 px-4 md:px-8 max-w-6xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-4">
           Why Pubrica&apos;s Plagiarism Checker Report Service?
         </h2>
@@ -198,7 +198,7 @@ export default function PlagiarismServicePackages() {
       </section>
 
       {/* SECTION 2: Packages Section */}
-      <section className="w-full py-12 md:py-16 px-4 md:px-8 max-w-6xl mx-auto">
+      <section className="w-full py-6 md:py-7 px-4 md:px-8 max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-4">
             Plagiarism Check and Algorithm-generated text detection Service
@@ -310,7 +310,7 @@ export default function PlagiarismServicePackages() {
       </section>
 
       {/* SECTION 3: Delivery and Pricing */}
-      <section className="w-full pb-9 px-1 md:px-8 max-w-5xl mx-auto">
+      <section className="w-full pb-5 px-1 md:px-8 max-w-5xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-[#0c373b] mb-6">
           Delivery and Pricing
         </h2>

@@ -19,7 +19,7 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-white text-[#333333] font-sans antialiased">
       {/* Top Banner Header with Next.js Image Background */}
-      <header className="relative w-full bg-slate-900 text-white py-14 text-center overflow-hidden shadow-inner">
+      <header className="relative w-full bg-slate-900 text-white py-6 text-center overflow-hidden shadow-inner">
         <Image
           src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1600&auto=format&fit=crop"
           alt="Scientific Publishing Header Background"

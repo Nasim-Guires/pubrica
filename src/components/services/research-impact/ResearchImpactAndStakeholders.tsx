@@ -133,7 +133,7 @@ export default function ResearchImpactAndStakeholders(): React.ReactElement {
       {/* ========================================================================= */}
       {/* SECTION 1: RESEARCH IMPACT EXPERTISE INCLUDES                            */}
       {/* ========================================================================= */}
-      <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-6xl mx-auto py-7 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           
           {/* Left Column: Heading & Paragraph */}
@@ -194,7 +194,7 @@ export default function ResearchImpactAndStakeholders(): React.ReactElement {
       {/* ========================================================================= */}
       {/* SECTION 2: WHO WE SERVE                                                 */}
       {/* ========================================================================= */}
-      <section className="max-w-6xl mx-auto pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-6xl mx-auto pb-8 px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
         <div className="space-y-2 mb-8">

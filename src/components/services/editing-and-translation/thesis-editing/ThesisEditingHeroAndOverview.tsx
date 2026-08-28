@@ -17,7 +17,7 @@ export const ThesisEditingHeroAndOverview: React.FC = () => {
       {/* ------------------------------------------------------------- */}
       {/* 1. TOP BANNER / HERO SECTION                                  */}
       {/* ------------------------------------------------------------- */}
-      <section className="w-full bg-[#0d2222] text-white py-12 px-4 sm:px-6">
+      <section className="w-full bg-[#0d2222] text-white py-6 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto border border-slate-400/50 rounded-lg p-6 sm:p-8 text-center bg-[#0d2222]/80 backdrop-blur-sm">
           <h1 className="text-2xl sm:text-4xl font-bold tracking-tight mb-4">
             Thesis Editing &amp; Proofreading Service
@@ -35,7 +35,7 @@ export const ThesisEditingHeroAndOverview: React.FC = () => {
       {/* ------------------------------------------------------------- */}
       {/* 2. OVERVIEW & INTRO SECTION                                    */}
       {/* ------------------------------------------------------------- */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-7">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Text Column */}
           <div className="lg:col-span-7 space-y-6">

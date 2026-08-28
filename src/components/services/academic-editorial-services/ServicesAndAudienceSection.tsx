@@ -61,7 +61,7 @@ const audiencesData: AudienceCard[] = [
 
 export default function WhoWeServeSection() {
   return (
-    <section className="w-full bg-[#f8fafc] text-slate-800 font-sans py-12 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-[#f8fafc] text-slate-800 font-sans py-6 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-8">
         {/* Section Header */}
         <div className="space-y-3">

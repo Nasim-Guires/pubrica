@@ -110,7 +110,7 @@ export default function CosmeticsIndustryPage({
     <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden">
       
       {/* Hero Banner */}
-      <section className="bg-[#0f2824] py-16 px-6 text-center text-white">
+      <section className="bg-[#0f2824] py-7 px-6 text-center text-white">
         <div className="max-w-4xl mx-auto border border-white/20 rounded-xl p-8 sm:p-12 shadow-sm bg-[#0f2824]">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4">{heroTitle}</h1>
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
@@ -120,7 +120,7 @@ export default function CosmeticsIndustryPage({
       </section>
 
       {/* Transforming Ideas into Market-Ready Cosmetic Innovations */}
-      <section className="py-16 px-6 max-w-6xl mx-auto">
+      <section className="py-7 px-6 max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="flex-1 space-y-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#0f2824] leading-snug">
@@ -159,7 +159,7 @@ export default function CosmeticsIndustryPage({
       </section>
 
       {/* Our Expertise in the Cosmetics Industry Includes (Exact Radial/Orbit Layout matching reference) */}
-      <section className="py-20 px-4 max-w-7xl mx-auto border-t border-gray-100 text-center">
+      <section className="py-8 px-4 max-w-7xl mx-auto border-t border-gray-100 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{expertiseTitle}</h2>
         <p className="text-gray-600 text-sm sm:text-base max-w-3xl mx-auto mb-16 leading-relaxed">
           {expertiseSubtitle}
@@ -228,7 +228,7 @@ export default function CosmeticsIndustryPage({
       </section>
 
       {/* Cosmetic Segments We Serve */}
-      <section className="py-20 px-6 max-w-6xl mx-auto border-t border-gray-100 text-center">
+      <section className="py-8 px-6 max-w-6xl mx-auto border-t border-gray-100 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{segmentsTitle}</h2>
         <p className="text-gray-600 text-sm sm:text-base max-w-4xl mx-auto mb-12 leading-relaxed">
           {segmentsSubtitle}

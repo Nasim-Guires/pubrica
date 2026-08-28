@@ -8,7 +8,7 @@ export default function EmpiricalFeaturesAccordion() {
   return (
     <section
       aria-labelledby="empirical-features-heading"
-      className="w-full bg-slate-50 py-12 px-4 sm:px-6 lg:px-8 text-slate-800"
+      className="w-full bg-slate-50 py-6 px-4 sm:px-6 lg:px-8 text-slate-800"
     >
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Main Section Header */}

@@ -56,9 +56,9 @@ export default function MetaAnalysisProcess() {
   ];
 
   return (
-    <section className="w-full bg-[#f8fafc] font-sans pb-16">
+    <section className="w-full bg-[#f8fafc] font-sans pb-7">
       {/* Dark Green Banner Header CTA */}
-      <div className="bg-[#003820] text-white py-12 px-4 text-center">
+      <div className="bg-[#003820] text-white py-6 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Accelerate Your Meta-Analysis Journey with Pubrica
@@ -73,7 +73,7 @@ export default function MetaAnalysisProcess() {
       </div>
 
       {/* Main Content Area */}
-      <div className="max-w-5xl mx-auto py-12 px-4 md:px-6">
+      <div className="max-w-5xl mx-auto py-6 px-4 md:px-6">
         {/* Section Heading */}
         <div className="text-center mb-10">
           <h2 className="text-xl md:text-2xl font-bold text-[#0c302d] mb-2">

@@ -112,7 +112,7 @@ export default function ScientificEditingPage() {
   return (
     <main className="w-full font-sans text-slate-800 bg-white">
       {/* ==================== 1. HEADER BANNER ==================== */}
-      <section className="w-full bg-[#032b21] text-white py-10 px-4 md:px-8 text-center border-b border-emerald-900/30">
+      <section className="w-full bg-[#032b21] text-white py-5 px-4 md:px-8 text-center border-b border-emerald-900/30">
         <div className="max-w-4xl mx-auto border border-slate-300/40 p-6 rounded-sm">
           <h1 className="text-2xl md:text-4xl font-bold mb-3 tracking-wide">
             Scientific Editing Services
@@ -125,7 +125,7 @@ export default function ScientificEditingPage() {
       </section>
 
       {/* ==================== 2. HERO & KEY HIGHLIGHTS ==================== */}
-      <section className="max-w-6xl mx-auto py-12 md:py-16 px-4 md:px-8">
+      <section className="max-w-6xl mx-auto py-6 md:py-7 px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Text Content */}
           <div className="lg:col-span-7 space-y-6">
@@ -228,7 +228,7 @@ export default function ScientificEditingPage() {
       </section>
 
       {/* ==================== 3. OVERVIEW & SERVICE CARDS GRID ==================== */}
-      <section className="bg-slate-50/60 py-12 md:py-16 px-4 md:px-8 border-t border-slate-100">
+      <section className="bg-slate-50/60 py-6 md:py-7 px-4 md:px-8 border-t border-slate-100">
         <div className="max-w-6xl mx-auto space-y-8">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-4">
@@ -400,7 +400,7 @@ export default function ScientificEditingPage() {
       </section>
 
       {/* ==================== 4. STATS COUNTER CARDS ==================== */}
-      <section className="max-w-6xl mx-auto py-12 md:py-16 px-4 md:px-8 space-y-10">
+      <section className="max-w-6xl mx-auto py-6 md:py-7 px-4 md:px-8 space-y-10">
         <p className="text-xs md:text-sm text-slate-600 leading-relaxed text-left max-w-5xl">
           Pubrica’s commitment to providing high-quality{" "}
           <Link

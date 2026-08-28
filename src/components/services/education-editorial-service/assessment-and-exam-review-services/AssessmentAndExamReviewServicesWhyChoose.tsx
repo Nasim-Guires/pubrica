@@ -40,7 +40,7 @@ const AssessmentAndExamReviewServicesWhyChoose: NextPage = () => {
   };
 
   return (
-    <section className="w-full bg-white py-16 px-4 md:px-8">
+    <section className="w-full bg-white py-7 px-4 md:px-8">
       <div className="max-w-6xl mx-auto space-y-12">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

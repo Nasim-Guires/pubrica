@@ -203,7 +203,7 @@ export default function PatientEducationApplicationsAndSources() {
       {/* --- Section 1: Applications --- */}
       <section
         aria-label="Applications"
-        className="bg-[#f8fcfb] py-12 px-4 sm:px-6 lg:px-8"
+        className="bg-[#f8fcfb] py-6 px-4 sm:px-6 lg:px-8"
       >
         <div className="max-w-6xl mx-auto space-y-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c2e3a] mb-6">
@@ -239,7 +239,7 @@ export default function PatientEducationApplicationsAndSources() {
       {/* --- Section 2: Therapeutic Areas --- */}
       <section
         aria-label="Our Therapeutic Areas"
-        className="bg-white py-12 px-4 sm:px-6 lg:px-8"
+        className="bg-white py-6 px-4 sm:px-6 lg:px-8"
       >
         <div className="max-w-5xl mx-auto space-y-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c2e3a] mb-8">
@@ -274,7 +274,7 @@ export default function PatientEducationApplicationsAndSources() {
       {/* --- Section 3: Publications Regularly Reviewed --- */}
       <section
         aria-label="Publications for Content Development"
-        className="bg-[#f8f9fa] py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-200"
+        className="bg-[#f8f9fa] py-6 px-4 sm:px-6 lg:px-8 border-t border-slate-200"
       >
         <div className="max-w-6xl mx-auto space-y-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0c2e3a]">

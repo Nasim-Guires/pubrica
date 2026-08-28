@@ -74,10 +74,10 @@ export default function EditorialQualitySupportPage() {
     };
 
     return (
-        <div className="min-h-screen bg-[#f8faf9] text-[#2c3e50] font-sans pb-20">
+        <div className="min-h-screen bg-[#f8faf9] text-[#2c3e50] font-sans pb-8">
 
             {/* 1. HERO BANNER */}
-            <section className="w-full bg-[#072421] text-white py-12 px-4">
+            <section className="w-full bg-[#072421] text-white py-6 px-4">
                 <div className="max-w-4xl mx-auto text-center border border-gray-700/60 rounded-sm p-8 bg-[#0a2e2b]/50 shadow-inner">
                     <h1 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">
                         Editorial & Quality Support Service

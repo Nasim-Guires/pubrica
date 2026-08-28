@@ -263,7 +263,7 @@ export default function CustomizedWritingGuidelineStandards() {
       {/* ========================================================= */}
       {/* 1. PROCESS SECTION: HOW OUR SERVICES WORK                 */}
       {/* ========================================================= */}
-      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 w-full">
+      <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-14">
@@ -359,7 +359,7 @@ export default function CustomizedWritingGuidelineStandards() {
       {/* 2. CTA BANNER SECTION                                     */}
       {/* ========================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
-        <div className="bg-[#03362a] text-white py-10 px-6 sm:px-12 rounded-lg flex flex-col md:flex-row items-center justify-between gap-8 shadow-md">
+        <div className="bg-[#03362a] text-white py-5 px-6 sm:px-12 rounded-lg flex flex-col md:flex-row items-center justify-between gap-8 shadow-md">
           {/* Badge */}
           <div className="flex-shrink-0">
             <div className="w-32 h-32 rounded-full border-4 border-dashed border-sky-300 bg-white shadow-lg p-2 flex items-center justify-center overflow-hidden">
@@ -395,7 +395,7 @@ export default function CustomizedWritingGuidelineStandards() {
       {/* ========================================================= */}
       {/* 3. COMPLIANCE & GUIDELINE STANDARDS SECTION                */}
       {/* ========================================================= */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0a2e2b] tracking-tight">
             Our Compliance and Guideline Standards
@@ -446,7 +446,7 @@ export default function CustomizedWritingGuidelineStandards() {
       {/* 4. SAMPLE WORK & REPORT DOWNLOAD CTA                     */}
       {/* ========================================================= */}
       <section className="max-w-5xl mx-auto px-4 my-12">
-        <div className="bg-[#f2faf7] py-10 px-6 sm:px-12 rounded-xl border border-emerald-100 shadow-sm">
+        <div className="bg-[#f2faf7] py-5 px-6 sm:px-12 rounded-xl border border-emerald-100 shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Left Image */}
             <div className="md:col-span-5 flex justify-center">
@@ -498,7 +498,7 @@ export default function CustomizedWritingGuidelineStandards() {
       {/* ========================================================= */}
       {/* 5. PACKAGES & ADD-ONS TABLE SECTION                       */}
       {/* ========================================================= */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0a2e2b]">
             Customized Clinical and Medical Writing Packages

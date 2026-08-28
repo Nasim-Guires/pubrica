@@ -71,7 +71,7 @@ export default function BiostatisticsProcessAndTools() {
       {/* ========================================================= */}
       {/* 1. TOOLS WE USE SECTION                                  */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto pt-12 pb-8 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto pt-6 pb-8 px-4 sm:px-6 lg:px-8">
         <h2 className="text-xl sm:text-2xl font-bold text-[#0e3b38] mb-4">
           Tools We Use
         </h2>
@@ -127,7 +127,7 @@ export default function BiostatisticsProcessAndTools() {
       {/* ========================================================= */}
       {/* 2. HOW OUR BIOSTATISTICAL PROGRAMMING SERVICE WORKS       */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 overflow-x-auto">
+      <section className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 overflow-x-auto">
         <div className="text-center space-y-2 mb-16">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
             How Our Biostatistical Programming Service Works
@@ -206,7 +206,7 @@ export default function BiostatisticsProcessAndTools() {
       {/* ========================================================= */}
       {/* 3. HOW WE HELP SECTION                                     */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto pt-6 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto pt-6 pb-7 px-4 sm:px-6 lg:px-8">
         <h2 className="text-xl sm:text-2xl font-bold text-[#0e3b38] mb-4">
           How We Help
         </h2>
