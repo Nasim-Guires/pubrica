@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export interface RejectionTableRow {
   reasonBoldPrefix?: string;
@@ -260,9 +261,12 @@ export default function ServiceRejectionTable({
         </h2>
         <p className="text-[14px] sm:text-[15px] text-slate-600 leading-relaxed mb-8">
           At Pubrica, we offer complete{" "}
-          <span className="text-[#3b82f6] hover:underline cursor-pointer font-medium">
+          <Link
+            href="/academy/publication-support/challenges-in-research-paper-writing-and-strategies-to-overcome-them"
+            className="text-[#3b82f6] hover:underline cursor-pointer font-medium"
+          >
             publication support services
-          </span>{" "}
+          </Link>{" "}
           by aiding researchers from the process of{" "}
           <span className="text-[#3b82f6] hover:underline cursor-pointer font-medium">
             journal selection

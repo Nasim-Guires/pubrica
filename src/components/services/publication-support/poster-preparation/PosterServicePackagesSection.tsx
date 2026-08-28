@@ -100,12 +100,14 @@ export default function PosterServicePackagesSection() {
             poster is professionally formatted and ready for presentation.
             Whether you need a quick design adjustment or you need assistance
             organizing and designing all of your content, Pubrica has custom{" "}
-            <Link
-              href="/services/publication-support/poster-preparation"
+            <a
+              href="https://pubrica.com/academy/poster-preparation/slide-deck-preparation-for-conference-presentations/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[#0284c7] hover:underline font-medium"
             >
               poster preparation
-            </Link>{" "}
+            </a>{" "}
             packages based on different levels of complexity and conference
             requirements.
           </p>

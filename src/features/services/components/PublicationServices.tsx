@@ -125,7 +125,7 @@ export default function PublicationServices() {
 
   const ROUTE_MAP: Record<string, string> = {
     "best publication support services":
-      "/insights/incidence-cardiovascular-diseases-india-global",
+      "https://pubrica.com/services/publication-support/journal-selection/incidence-cardiovascular-diseases-india-global/",
     "Medical Journal":
       "/services/publication-support/journal-submission/complete-guide-to-writing-cover-letter-for-medical-journals/",
   };
@@ -141,12 +141,12 @@ export default function PublicationServices() {
             </h2>
             <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
               At Pubrica, we provide{" "}
-              <Link
+              <a
                 href={ROUTE_MAP["best publication support services"]}
                 className="text-sky-600 font-normal no-underline hover:underline cursor-pointer inline"
               >
                 best publication support services
-              </Link>{" "}
+              </a>{" "}
               that meet the highest international standards of scientific
               writing, manuscript preparation, and editorial assistance. Our
               professional team and stringent processes comply with

@@ -57,7 +57,7 @@ const clinicalOrgs: ComplianceOrg[] = [
     name: "Consolidated Standards of Reporting Trials",
     acronym: "CONSORT",
     logo: `${PAGE_IMAGES}/consort-logo-.png`,
-    url: "https://www.consort-spirit.org/",
+    url: "https://www.consort-statement.org/",
   },
   {
     name: "International Committee of Medical Journal Editors",

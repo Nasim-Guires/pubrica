@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 
 // ==========================================
 // TYPES & DATA DEFINITIONS
@@ -127,7 +128,13 @@ export default function TherapeuticAndWorkflow() {
               Comprehensive. Research-Aligned. Compliance-Focused.
             </p>
             <p className="text-gray-600 text-[14px] sm:text-[15px] leading-relaxed">
-              At Pubrica, our academic scientific journal publication services
+              At Pubrica, our academic{" "}
+              <Link
+                href="/academy/journal-submission/open-access-publishing-guide"
+                className="text-blue-600 hover:text-blue-800"
+              >
+                scientific journal publication services
+              </Link>{" "}
               are designed to ensure your manuscript is prepared to maximize the
               chance of a successful publication by making sure every submission
               component requested meets each journal's requirements. Our robust,

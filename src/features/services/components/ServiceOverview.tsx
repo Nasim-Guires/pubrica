@@ -47,7 +47,7 @@ const ROUTE_MAP: Record<string, string> = {
     "/services/publication-support/icmje-guidelines-medical-research-compliance",
   GPP: "/services/publication-support/how-to-implement-gpp-medical-research/",
   "research paper publication services":
-    "/insights/journal-submission-report-sample",
+    "/academy/publication-support/challenges-in-research-paper-writing-and-strategies-to-overcome-them",
   "journal publication services":
     "/services/publication-support/peer-review-pre-submission",
 };
@@ -75,7 +75,7 @@ const COMPLIANCE_ITEMS = [
     logo: "/images/publication-support/Consort-Logo.webp",
     alt: "SPIRIT CONSORT Logo",
     title: "Consolidated Standards of Reporting Trials",
-    url: "https://www.consort-spirit.org/",
+    url: "https://www.consort-statement.org/",
   },
 ];
 

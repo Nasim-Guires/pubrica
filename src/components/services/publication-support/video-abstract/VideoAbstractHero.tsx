@@ -60,7 +60,7 @@ export default function VideoAbstractHero() {
             <p>
               With our{" "}
               <Link
-                href="/services/publication-support/video-abstract"
+                href="/academy/video-abstract/how-to-create-video-abstract"
                 className="text-sky-600 hover:underline"
               >
                 video abstract service
