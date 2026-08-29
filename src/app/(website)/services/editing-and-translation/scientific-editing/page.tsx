@@ -26,7 +26,7 @@ const page = () => {
       <ScientificProcessWorkflow />
       <ScientificSampleWork />
       <ScientificEditingServices />
-      <ScientificPackageDetails />
+      {/* <ScientificPackageDetails /> */}
       <InsightsSection/>
     </>
   );

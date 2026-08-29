@@ -1,3 +1,5 @@
+import { PackageItem } from "@/components/common/CommonPackages";
+
 interface FAQItem {
   id: number;
   question: string;
@@ -347,15 +349,11 @@ export const workflowSteps = [
   },
 ];
 
-export const packagesList = [
+export const packages: PackageItem[] = [
   {
-    name: "Basic",
-    tagline: "Language Clarity",
-    badge: "B",
-    badgeIcon: "/images/editing-and-translation/basic-pacakge.png",
-    // Match the exact muted greenish-gray tone
-    cardBg: "bg-[#CAD6D5]",
-    badgeTextColor: "text-[#B9A682]",
+    icon: "/images/editing-and-translation/basic-pacakge.png",
+    title: "Basic",
+    subtitle: "Language Clarity",
     idealFor:
       "Early drafts, academic assignments, internal reports, general business content",
     includes: [
@@ -363,17 +361,15 @@ export const packagesList = [
       "Sentence-level restructuring for clarity",
       "Consistency in basic terminology and style",
     ],
-    addons: ["Plagiarism check", "Certificate of editing"],
+    addOns: ["Plagiarism check", "Certificate of editing"],
     turnaround: "3–5 business days",
+    cardBgColor: "#CAD6D5",
+    titleColor: "#B9A682",
   },
   {
-    name: "Standard",
-    tagline: "Enhanced Quality",
-    badge: "S",
-    badgeIcon: "/images/publication-support/poster-preparation/S.png",
-    // Match the exact soft lavender-purple shade
-    cardBg: "bg-[#D5BEDC]",
-    badgeTextColor: "text-[#B9A682]",
+    icon: "/images/publication-support/poster-preparation/S.png",
+    title: "Standard",
+    subtitle: "Enhanced Quality",
     idealFor:
       "Journal manuscripts, technical reports, dissertations, business proposals",
     includes: [
@@ -382,21 +378,19 @@ export const packagesList = [
       "Improved logical flow and coherence",
       "Alignment with domain-specific terminology",
     ],
-    addons: [
+    addOns: [
       "Reference and citation formatting",
       "Word count reduction (without altering meaning)",
       "Cover letter drafting (for journal submissions)",
     ],
     turnaround: "4–7 business days",
+    cardBgColor: "#D5BEDC",
+    titleColor: "#B9A682",
   },
   {
-    name: "Premium",
-    tagline: "Publication Ready",
-    badge: "P",
-    badgeIcon: "/images/editing-and-translation/pro.webp",
-    // Match the exact golden ochre/tan background shade
-    cardBg: "bg-[#CCA673]",
-    badgeTextColor: "text-[#5597AC]",
+    icon: "/images/editing-and-translation/pro.webp",
+    title: "Premium",
+    subtitle: "Publication Ready",
     idealFor:
       "High-impact journals, regulatory submissions, clinical/medical content, funding proposals",
     includes: [
@@ -405,12 +399,14 @@ export const packagesList = [
       "Formatting per journal/publisher guidelines",
       "Advanced editing/translation with cultural and linguistic sensitivity",
     ],
-    addons: [
+    addOns: [
       "Multiple-round editing & revision support",
       "Journal selection and submission assistance",
       "Reviewer response editing support",
     ],
     turnaround: "7–10 business days (priority delivery available)",
+    cardBgColor: "#CCA673",
+    titleColor: "#5597AC",
   },
 ];
 export const mainServicesData = [

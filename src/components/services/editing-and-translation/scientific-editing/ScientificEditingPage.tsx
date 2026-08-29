@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 const IMG = "/images/editing-and-translation/scientific-editing";
 
@@ -112,17 +113,11 @@ export default function ScientificEditingPage() {
   return (
     <main className="w-full font-sans text-slate-800 bg-white">
       {/* ==================== 1. HEADER BANNER ==================== */}
-      <section className="w-full bg-[#032b21] text-white py-5 px-4 md:px-8 text-center border-b border-emerald-900/30">
-        <div className="max-w-4xl mx-auto border border-slate-300/40 p-6 rounded-sm">
-          <h1 className="text-2xl md:text-4xl font-bold mb-3 tracking-wide">
-            Scientific Editing Services
-          </h1>
-          <p className="text-xs md:text-sm text-emerald-100/90 leading-relaxed font-light">
-            Improve Your Chances of Publication with our Pubrica’s Scientific
-            Editing Service
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Scientific Editing Services"
+        description="Improve Your Chances of Publication with our Pubrica’s Scientific Editing Service"
+        headingAs="h1"
+      />
 
       {/* ==================== 2. HERO & KEY HIGHLIGHTS ==================== */}
       <section className="max-w-6xl mx-auto py-6 md:py-7 px-4 md:px-8">
@@ -202,7 +197,7 @@ export default function ScientificEditingPage() {
             </ul>
 
             <div className="pt-4">
-             <GetFreeQuoteButton/>
+              <GetFreeQuoteButton />
             </div>
           </div>
 
@@ -213,7 +208,7 @@ export default function ScientificEditingPage() {
               <div className="absolute inset-0 bg-[#0c373b] rounded-2xl transform -translate-x-3 translate-y-3 -z-10" />
 
               {/* Main Image */}
-              <div className="relative w-full h-full rounded-xl overflow-hidden shadow-xl border-2 border-white">
+              <div className="relative w-full h-full rounded-xl overflow-hidden">
                 <Image
                   src={`${IMG}/Scientific-Editing.webp`}
                   alt="Scientific Editing Microscope Analysis"
@@ -238,7 +233,7 @@ export default function ScientificEditingPage() {
               Pubrica provides{" "}
               <Link
                 href="/insights/skeletal-muscle-mass-index-versus-bioelectrical-impedance-analysis"
-                className="text-cyan-700 hover:underline font-medium"
+                className="text-blue-700 font-medium"
               >
                 scientific editing services
               </Link>{" "}
@@ -253,7 +248,7 @@ export default function ScientificEditingPage() {
               We also integrate{" "}
               <Link
                 href="/services/publication-support"
-                className="text-cyan-700 hover:underline font-medium"
+                className="text-blue-700 font-medium"
               >
                 translation and publication support
               </Link>{" "}
@@ -270,12 +265,12 @@ export default function ScientificEditingPage() {
             {/* Card 1 */}
             <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300">
+                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300 shrink-0">
                   <Image
                     src={`${IMG}/Advanced-Data-Management.png`}
                     alt="Advanced Data Management"
-                    width={24}
-                    height={24}
+                    width={48}
+                    height={48}
                     className="object-contain"
                   />
                 </div>
@@ -284,8 +279,7 @@ export default function ScientificEditingPage() {
                     Advanced Data Management
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    Our team specializes in organizing and structuring large,
-                    complex datasets, ensuring that they are...
+                    Our team specializes in organizing and structuring large, complex datasets, ensuring that they are clean, consistent, and formatted to suit analysis. This level of careful data preparation is crucial for methodically addressing complex scientific questions.
                   </p>
                 </div>
               </div>
@@ -295,12 +289,12 @@ export default function ScientificEditingPage() {
             {/* Card 2 */}
             <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300">
+                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300 shrink-0">
                   <Image
                     src={`${IMG}/Customized-Editing-Strategies.png`}
                     alt="Customized Editing Strategies"
-                    width={24}
-                    height={24}
+                    width={48}
+                    height={48}
                     className="object-contain"
                   />
                 </div>
@@ -309,8 +303,13 @@ export default function ScientificEditingPage() {
                     Customized Editing Strategies
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    We tailor our editing techniques to meet the specific needs
-                    of your research, considering both...
+                    We tailor our editing techniques to meet the specific needs of your research, considering both the scientific requirements and budget constraints. This personalized approach enhances the relevance and depth of your{" "}
+                    <Link
+                      href="/services/scientific-communication/"
+                      className="text-blue-700 font-medium"
+                    >
+                      scientific communication.
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -320,12 +319,12 @@ export default function ScientificEditingPage() {
             {/* Card 3 */}
             <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300">
+                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300 shrink-0">
                   <Image
                     src={`${IMG}/In-depth-Scientific-Assessment.png`}
                     alt="In-depth Scientific Assessment"
-                    width={24}
-                    height={24}
+                    width={48}
+                    height={48}
                     className="object-contain"
                   />
                 </div>
@@ -336,10 +335,13 @@ export default function ScientificEditingPage() {
                   <p className="text-xs text-slate-600 leading-relaxed">
                     Beyond basic editing, we delve into fundamental aspects of
                     your research, such as{" "}
-                    <span className="text-cyan-700 font-medium">
-                      experimental
-                    </span>{" "}
-                    design...
+                    <Link
+                      href="/services/research-services/experimental-design/"
+                      className="text-blue-700 font-medium"
+                    >
+                      experimental design,
+                    </Link>{" "}
+                    replication adequacy, and statistical validity. Our goal is to identify and rectify any substantial flaws that could hinder the acceptance of your paper.
                   </p>
                 </div>
               </div>
@@ -349,12 +351,12 @@ export default function ScientificEditingPage() {
             {/* Card 4 */}
             <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300">
+                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300 shrink-0">
                   <Image
                     src={`${IMG}/Comprehensive-Statistical-Analysis.png`}
                     alt="Comprehensive Statistical Analysis"
-                    width={24}
-                    height={24}
+                    width={48}
+                    height={48}
                     className="object-contain"
                   />
                 </div>
@@ -363,8 +365,7 @@ export default function ScientificEditingPage() {
                     Comprehensive Statistical Analysis
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    Our experts leverage both traditional and innovative machine
-                    learning algorithms to conduct...
+                    Our experts leverage both traditional and innovative machine learning algorithms to conduct detailed statistical evaluations. This advanced analysis helps transform complex data into clear, understandable, and visually engaging formats, such as tables and figures, facilitating informed scientific discussions.
                   </p>
                 </div>
               </div>
@@ -374,12 +375,12 @@ export default function ScientificEditingPage() {
             {/* Card 5 */}
             <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group md:col-span-2 lg:col-span-1">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300">
+                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300 shrink-0">
                   <Image
                     src={`${IMG}/Publication-Support.png`}
                     alt="Publication Support"
-                    width={24}
-                    height={24}
+                    width={48}
+                    height={48}
                     className="object-contain"
                   />
                 </div>
@@ -388,8 +389,7 @@ export default function ScientificEditingPage() {
                     Publication Support
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    With Pubrica, you gain a partner that supports you through
-                    all phases of the publication process. From...
+                    With Pubrica, you gain a partner that supports you through all phases of the publication process. From drafting and revising to submitting your manuscript, we ensure that your research is scientifically sound and ready for scholarly review.
                   </p>
                 </div>
               </div>
@@ -405,7 +405,7 @@ export default function ScientificEditingPage() {
           Pubrica’s commitment to providing high-quality{" "}
           <Link
             href="/insights/phenotypic-variations-of-atopic-dermatitis-a-systemic-review-of-dupilumab-efficacy-and-safety"
-            className="text-cyan-700 hover:underline font-medium"
+            className="text-blue-700 "
           >
             research paper editing services
           </Link>{" "}

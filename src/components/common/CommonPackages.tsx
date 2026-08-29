@@ -6,7 +6,7 @@
 import React from "react";
 import Image from "next/image";
 
-interface PackageItem {
+export interface PackageItem {
   icon: string;
   title: string;
   subtitle?: string;

@@ -8,7 +8,7 @@ import {
   editingTypesList,
   translationServicesList,
   workflowSteps,
-  packagesList,
+  packages,
   mainServicesData,
   trustPartners,
   testimonialsData,
@@ -18,6 +18,12 @@ import DynamicInsightsSection from "@/components/services/DynamicInsightsSection
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { EditorialWorkflowSection } from "@/components/common/EditorialWorkflowSection";
+import CommonPackages from "@/components/common/CommonPackages";
+import CommonTestimonial from "@/components/common/CommonTestimonials";
+import CommonFAQ from "@/components/common/FAQ";
+import HeroBanner from "@/components/common/HeroBanner";
+import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
 const EditingAndTranslationPageClient = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -41,6 +47,39 @@ const EditingAndTranslationPageClient = () => {
       [id]: !prev[id],
     }));
   };
+
+  const testimonials = [
+    {
+      image:
+        "/images/editing-and-translation/asian-journal-of-psychiatry-1.png",
+      quote:
+        "Pubrica's editing and translation support helped me publish my manuscript in a high-impact journal. Their attention to language, grammar, and formatting ensured my research was communicated clearly and professionally.",
+      name: "DR. MARIA SCHNEIDER",
+      designation: "Academic Researcher",
+      organization: "Germany",
+      flag: "/images/editing-and-translation/germany-1-1.png",
+    },
+    {
+      image:
+        "/images/editing-and-translation/jama-oncology-journal-5.png",
+      quote:
+        "I had my clinical study translated from Japanese to English, and the team maintained both accuracy and medical terminology integrity. The reviewers appreciated the clarity, and my paper was accepted without major revisions.",
+      name: "DR. HIROSHI TANAKA",
+      designation: "Clinical Practitioner",
+      organization: "Japan",
+      flag: "/images/editing-and-translation/japan.png",
+    },
+    {
+      image:
+        "/images/editing-and-translation/british-journal-of-clinical-pharmacology.png",
+      quote:
+        "The editorial team not only refined my writing but also ensured consistency in style and tone across my thesis. Their guidance improved readability and strengthened my arguments significantly.",
+      name: "ANANYA RAO",
+      designation: "PhD Scholar",
+      organization: "India",
+      flag: "/images/editing-and-translation/flag.png",
+    },
+  ];
 
   // Store an object tracking open/close state for each FAQ ID independently
   const [openStates, setOpenStates] = useState<Record<number, boolean>>({
@@ -74,23 +113,73 @@ const EditingAndTranslationPageClient = () => {
     },
   ];
 
+  const faqs = [
+    {
+      question:
+        "1. How to translate a research paper into English for journal submission?",
+      answer:
+        "Use professional translation with academic translation tools, maintain terminology, consider context, follow journal requirements, and post-edit the translation with utmost accuracy before submitting.",
+    },
+    {
+      question:
+        "2. What is the difference between academic translation and language editing?",
+      answer:
+        "Academic translation is the translation of content from one language to another with utmost accuracy, whereas language editing is the improvement of grammar, content, writing style, and readability of already written content.",
+    },
+    {
+      question:
+        "3. Can a translated research manuscript be edited for journal publication?",
+      answer:
+        "Yes, translated manuscripts may be edited professionally with regard to language accuracy, clarity, terminology, formatting, etc., for the purpose of publication in a journal.",
+    },
+    {
+      question:
+        "4. Why is professional editing important after translating a research paper?",
+      answer:
+        "Professional editing ensures that translated papers are not only accurate, contextually appropriate, grammatically polished, and terminologically precise but also perfectly aligned with journal requirements before they are submitted for publication.",
+    },
+    {
+      question:
+        "5. Where to find reliable academic translation and editing services?",
+      answer:
+        "Trustworthy academic translation and editing services can be accessed through university writing centers, professional language service firms, research support firms, and individual freelance academic editors.",
+    },
+    {
+      question:
+        "6. How does translation and editing improve the quality of research manuscripts?",
+      answer:
+        "Translation and editing of an academic manuscript enhance it by ensuring linguistic accuracy, clarity, consistency, structure, and presentation, and conformity to academic and journal standards.",
+    },
+    {
+      question:
+        "7. Do journals accept manuscripts translated from other languages?",
+      answer:
+        "Yes, they accept translated manuscripts as long as they are original, ethical, well-translated, well-edited, and completely compliant with the submission guidelines of the journal.",
+    },
+    {
+      question:
+        "8. What are the common language issues in translated research papers?",
+      answer:
+        "Grammatical errors, unnatural wording, terminology, literal translation, unclear sentence structure, poor readability, and contextual errors are some of the common problems that may occur.",
+    },
+    {
+      question:
+        "9. How can non-native English researchers prepare manuscripts for international journals?",
+      answer:
+        "Non-native authors may improve their manuscripts by engaging professional language services, proofreading, following the submission guidelines, using clear language, avoiding ambiguity, and ensuring the manuscript is of good quality before submission.",
+    },
+  ];
+
   // Split items evenly into two clean layout lists for desktop grids
   const leftColumnFaqs = faqData.filter((item) => item.id <= 5);
   const rightColumnFaqs = faqData.filter((item) => item.id > 5);
   return (
     <div className="font-sans text-slate-800 bg-white selection:bg-teal-500 selection:text-white">
-      <section className="w-full bg-[#0b2b30] text-white py-6 px-4 sm:px-6 md:px-8">
-        <div className="max-w-4xl mx-auto border border-white/70 rounded-sm p-6 sm:p-8 md:p-10 text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
-            Editing and Translation Services
-          </h1>
-          <p className="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed max-w-3xl mx-auto font-light">
-            Pubrica offers comprehensive academic editing and professional
-            translation services, ensuring clarity, precision, and compliance
-            with international publishing standards.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Editing and Translation Services"
+        description="Pubrica offers comprehensive academic editing and professional translation services, ensuring clarity, precision, and compliance with international publishing standards."
+        headingAs="h1"
+      />
       {/* SECTION 1: HERO / PRECISION SERVICES */}
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-5 font-sans">
         {/* Heading */}
@@ -176,7 +265,7 @@ const EditingAndTranslationPageClient = () => {
 
           {/* Buttons */}
           <div className="mt-10 flex flex-wrap items-center gap-8">
-           <GetFreeQuoteButton/>
+            <GetFreeQuoteButton />
 
             <Link
               href="/uploads/editing-and-translation/Editing-and-Translation-Services.pdf"
@@ -471,101 +560,77 @@ const EditingAndTranslationPageClient = () => {
         </div>
       </section>
       {/* SECTION 6: HOW IT WORKS STEP-BY-STEP */}
-      <section className="py-7 bg-[#F4F6F6] px-6 font-sans overflow-x-auto selection:bg-teal-100/50">
-        <div className="max-w-7xl mx-auto min-w-[1000px] lg:min-w-0">
-          {/* Header Block */}
-          <div className="text-center mb-16">
-            <h2 className="text-2xl font-bold text-[#0A4D4A] mb-3">
-              Our Step-by-Step Process
-            </h2>
-            <p className="text-[13.5px] text-slate-600 max-w-4xl mx-auto leading-relaxed">
-              At Pubrica, we follow a clear, step-by-step process to ensure your
-              documents are accurate, polished, and publication-ready.
-            </p>
-          </div>
 
-          {/* Connected Process Grid */}
-          <div className="relative grid grid-cols-6 gap-3 pt-6 pb-6">
-            {/* Continuous baseline timeline connector layout bar */}
-            <div className="absolute top-[124px] left-0 right-0 h-3 bg-[#0A7E8C] -z-10 rounded-full"></div>
 
-            {workflowSteps.map((item, index) => {
-              const isOdd = index % 2 === 0; // Steps 1, 3, 5 hang below the timeline line
+      {/* Connected Process Grid */}
+      <EditorialWorkflowSection
+        heading="How Our Editing and Translation Service Works"
+        subheading="Our Step-by-Step Process"
+        description="At Pubrica, we follow a clear, step-by-step process to ensure your documents are accurate, polished, and publication-ready."
+        steps={[
+          {
+            stepNumber: 1,
+            title: "PROJECT CONSULTATION & REQUIREMENT ANALYSIS",
+            description:
+              "We begin by understanding your project goals, target audience, document type, language preferences, and formatting needs.",
+            iconSrc: "/images/publication-support/video-abstract/Send-Materials.png",
+            position: "top",
+          },
+          {
+            stepNumber: 2,
+            title: "CONTENT ASSESSMENT",
+            description:
+              "Our team reviews your materials to define the scope of work, evaluating language quality, structure, clarity, and technical terminology.",
+            iconSrc:
+              "/images/publication-support/video-abstract/Script-Content-Development.png",
+            position: "bottom",
+          },
+          {
+            stepNumber: 3,
+            title: "EXPERT EDITING & TRANSLATION",
+            description: (
+              <>
+                Your document is refined by subject-matter experts:
+                <br />
+                • Editing → grammar, punctuation, style, readability, and journal
+                compliance.
+                <br />• Translation → linguistic accuracy, cultural adaptation, and
+                technical precision.
+              </>
+            ),
+            iconSrc:
+              "/images/publication-support/video-abstract/Video-Development.png",
+            position: "top",
+          },
+          {
+            stepNumber: 4,
+            title: "QUALITY ASSURANCE REVIEW",
+            description:
+              "Every document undergoes multi-level checks by senior editors to ensure consistency, accuracy, and adherence to international standards.",
+            iconSrc: "/images/publication-support/video-abstract/Author-Feedback.png",
+            position: "bottom",
+          },
+          {
+            stepNumber: 5,
+            title: "CLIENT FEEDBACK & REVISIONS",
+            description:
+              "You review the refined document. We incorporate your feedback and provide unlimited revisions until you are fully satisfied.",
+            iconSrc:
+              "/images/publication-support/video-abstract/Add-Captions-and-Subtitles.png",
+            position: "top",
+          },
+          {
+            stepNumber: 6,
+            title: "FINAL DELIVERY",
+            description:
+              "Your polished, publication-ready document is delivered in the preferred format, ready for submission, publication, or professional use.",
+            iconSrc:
+              "/images/publication-support/video-abstract/Author-Accepts-the-Video-and-Abstract.png",
+            position: "bottom",
+          },
+        ]}
+      />
 
-              return (
-                <div
-                  key={index}
-                  className="flex flex-col items-center relative"
-                >
-                  {/* Condition A: EVEN STEPS (2, 4, 6) Render content block at the TOP */}
-                  {!isOdd && (
-                    <>
-                      {/* Content Card Panel with dynamic group-hover color inversion */}
-                      <div className="group w-full bg-white border border-slate-200/80 rounded-sm p-4 shadow-sm min-h-[240px] flex flex-col items-start text-left mb-6 relative transition-all duration-200 hover:bg-[#4D4D4D] hover:border-[#4D4D4D]">
-                        <div className="relative w-8 h-8 mb-3 opacity-80 group-hover:opacity-100 group-hover:invert group-hover:brightness-200 transition-all">
-                          <Image
-                            src={item.icon}
-                            alt={item.title}
-                            fill
-                            sizes="32px"
-                            className="object-contain filter grayscale contrast-125"
-                          />
-                        </div>
-                        <h3 className="text-[12.5px] font-bold text-slate-800 tracking-wide mb-2 leading-tight uppercase group-hover:text-white transition-colors">
-                          {item.title}
-                        </h3>
-                        <div className="text-slate-600 text-[11.5px] leading-relaxed whitespace-pre-line group-hover:text-slate-200 transition-colors">
-                          {item.description}
-                        </div>
-                      </div>
-
-                      {/* Vertical connecting line vector */}
-                      <div className="w-[1px] h-10 bg-slate-300 absolute top-[240px]"></div>
-
-                      {/* Timeline Number Bubble */}
-                      <div className="w-10 h-10 rounded-full bg-[#0A7E8C] text-white flex items-center justify-center font-semibold text-sm shadow-md mt-11 z-20">
-                        {item.step}
-                      </div>
-                    </>
-                  )}
-
-                  {/* Condition B: ODD STEPS (1, 3, 5) Render number bubble at the TOP */}
-                  {isOdd && (
-                    <>
-                      {/* Timeline Number Bubble */}
-                      <div className="w-10 h-10 rounded-full bg-[#0A7E8C] text-white flex items-center justify-center font-semibold text-sm shadow-md mb-11 z-20">
-                        {item.step}
-                      </div>
-
-                      {/* Vertical connecting line vector */}
-                      <div className="w-[1px] h-10 bg-slate-300 absolute top-[40px]"></div>
-
-                      {/* Content Card Panel with dynamic group-hover color inversion */}
-                      <div className="group w-full bg-white border border-slate-200/80 rounded-sm p-4 shadow-sm min-h-[240px] flex flex-col items-start text-left mt-6 relative transition-all duration-200 hover:bg-[#4D4D4D] hover:border-[#4D4D4D]">
-                        <div className="relative w-8 h-8 mb-3 opacity-80 group-hover:opacity-100 group-hover:invert group-hover:brightness-200 transition-all">
-                          <Image
-                            src={item.icon}
-                            alt={item.title}
-                            fill
-                            sizes="32px"
-                            className="object-contain filter grayscale contrast-125"
-                          />
-                        </div>
-                        <h3 className="text-[12.5px] font-bold text-slate-800 tracking-wide mb-2 leading-tight uppercase group-hover:text-white transition-colors">
-                          {item.title}
-                        </h3>
-                        <div className="text-slate-600 text-[11.5px] leading-relaxed whitespace-pre-line group-hover:text-slate-200 transition-colors">
-                          {item.description}
-                        </div>
-                      </div>
-                    </>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
       {/* ========================================================================= */}
       {/* SECTION NAME: WHY AUTHORS CHOOSE PUBRICA                                  */}
       {/* ========================================================================= */}
@@ -688,288 +753,25 @@ const EditingAndTranslationPageClient = () => {
       {/* ========================================================================= */}
 
       {/* SECTION 7: PACKAGES & PRICING */}
-      <section className="py-7 px-4 max-w-7xl mx-auto font-sans selection:bg-teal-100/60">
-        {/* Header Block */}
-        <div className="text-left mb-12">
-          <h2 className="text-2xl font-bold text-[#0A4D5C] mb-4 tracking-tight">
-            Editing and Translation Services – Our Packages
-          </h2>
-          <p className="text-slate-700 max-w-6xl text-[13.5px] leading-relaxed">
-            At Pubrica, we understand that every manuscript, report, or document
-            has unique requirements. That&apos;s why we offer flexible and
-            tailored editing and translation packages designed to meet the needs
-            of researchers, publishers, businesses, and healthcare
-            professionals.
-          </p>
-        </div>
-
-        {/* Packages Grid - Loops Exactly Once */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-          {packagesList.map((pkg, index) => (
-            <div
-              key={index}
-              className={`${pkg.cardBg} rounded-md p-5 shadow-[0_4px_12px_rgba(0,0,0,0.12)] border border-black/5 flex flex-col justify-between transition hover:shadow-[0_6px_16px_rgba(0,0,0,0.16)]`}
-            >
-              <div>
-                {/* Header White Card Area */}
-                <div className="bg-white rounded-sm p-4 mb-6 flex items-center gap-4 border border-slate-100 shadow-sm">
-                  <Image
-                    src={pkg.badgeIcon}
-                    alt={`${pkg.name} package`}
-                    width={56}
-                    height={56}
-                    className="w-14 h-14 object-contain shrink-0"
-                  />
-                  <div>
-                    <h3 className="text-xl font-bold text-slate-800 leading-tight">
-                      {pkg.name}
-                    </h3>
-                    <p className="text-xs text-slate-500 font-medium tracking-wide">
-                      {pkg.tagline}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Package Content Attributes */}
-                <div className="space-y-6 px-1">
-                  {/* Ideal For */}
-                  <div className="text-slate-900 text-[13px] leading-relaxed">
-                    <span className="font-bold inline-flex items-center gap-2 mr-1">
-                      <span className="text-black text-sm">&#10144;</span> Ideal
-                      For:
-                    </span>
-                    {pkg.idealFor}
-                  </div>
-
-                  {/* Inclusions */}
-                  <div>
-                    <span className="text-[13px] font-bold text-slate-900 inline-flex items-center gap-2 mb-3">
-                      <span className="text-black text-sm">&#10144;</span>{" "}
-                      Includeds:
-                    </span>
-                    <ul className="space-y-3 pl-8 text-[12.5px] text-slate-800 leading-relaxed list-none relative">
-                      {pkg.includes.map((inc, i) => (
-                        <li key={i} className="relative">
-                          <span className="text-red-600 font-bold text-lg absolute -left-5 -top-[3px]">
-                            &bull;
-                          </span>
-                          {inc}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Add-ons */}
-                  <div className="pt-2">
-                    <span className="text-[13px] font-bold text-slate-900 inline-flex items-center gap-2 mb-3">
-                      <span className="text-black text-sm">&#10144;</span>{" "}
-                      Add-ons:
-                    </span>
-                    <ul className="space-y-2 pl-8 text-[12.5px] text-slate-800 font-normal">
-                      {pkg.addons.map((add, i) => (
-                        <li key={i} className="list-none">
-                          {add}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              {/* Turnaround Footer Section */}
-              <div className="mt-8 pt-4 border-t border-black/10 text-[13px] text-slate-900 px-1">
-                <span className="font-bold inline-flex items-center gap-2">
-                  <span className="text-black text-sm">&#10144;</span>{" "}
-                  Turnaround Time:
-                </span>{" "}
-                <span className="font-medium">{pkg.turnaround}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <CommonPackages
+        title="Our Editing & Translation Packages"
+        packages={packages}
+      />
 
       {/* Testimonials */}
-      <section className="bg-white py-7 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100">
-        <div className="max-w-7xl mx-auto">
-          {/* Header Block */}
-          <h2 className="text-2xl font-bold text-[#0A4D4A] mb-4">
-            Testimonials
-          </h2>
-          <p className="text-[14px] text-slate-600 max-w-6xl mb-10 leading-relaxed font-normal">
-            Learn how Pubrica’s expert editing and translation services have
-            helped researchers and businesses deliver clear, publication-ready
-            manuscripts that enhance credibility, ensure accuracy, and increase
-            global visibility. Here’s what our clients say:
-          </p>
-
-          {/* Testimonials Window Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-300">
-            {visibleItems.map((item, idx) => (
-              <div
-                key={idx}
-                className="border border-[#0A4D4A]/20 rounded-2xl p-6 bg-white shadow-sm flex flex-col justify-between min-h-[280px]"
-              >
-                {/* Gray Inner Bubble Box */}
-                <div className="bg-[#D9D9D9]/50 rounded-xl p-5 flex flex-col sm:flex-row gap-5 items-start flex-grow">
-                  {/* Visual Journal Cover Mockup Thumbnail */}
-                  <div className="relative w-32 h-24 rounded border border-slate-200 shadow-sm overflow-hidden bg-white shrink-0">
-                    <Image
-                      src={item.image}
-                      alt={item.journalTitle}
-                      fill
-                      sizes="128px"
-                      className="object-contain"
-                    />
-                  </div>
-
-                  {/* Quote Text */}
-                  <p className="text-[13px] text-slate-700 leading-relaxed font-normal italic">
-                    &ldquo;{item.quote}&rdquo;
-                  </p>
-                </div>
-
-                {/* Author & Flag Info Row */}
-                <div className="mt-4 pt-2 flex justify-between items-center px-2">
-                  <div>
-                    <h4 className="font-bold text-slate-900 text-[13.5px] tracking-wide">
-                      &mdash; {item.name}
-                    </h4>
-                    <p className="text-xs text-slate-500 italic mt-0.5">
-                      {item.role}
-                    </p>
-                  </div>
-                  {/* Rounded Country Flag Badge */}
-                  <div className="relative w-6 h-6 rounded-full overflow-hidden border border-slate-100 shadow-sm shrink-0">
-                    <img
-                      src={item.flagSrc}
-                      alt={item.role}
-                      className="w-full h-full object-cover scale-110"
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Navigation Indicator Slider Dots */}
-          <div className="flex justify-center items-center gap-2.5 mt-8">
-            {[...Array(totalSlides)].map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${currentSlide === index
-                  ? "bg-[#0A7E8C] scale-110"
-                  : "bg-slate-300 hover:bg-slate-400"
-                  }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      <CommonTestimonial
+        title="Testimonials"
+        description="Learn how Pubrica’s expert editing and translation services have helped researchers and businesses deliver clear, publication-ready manuscripts that enhance credibility, ensure accuracy, and increase global visibility. Here’s what our clients say:"
+        testimonials={testimonials}
+      />
       {/* Frequently Asked Questions Section */}
-      <section className="bg-white py-7 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100/60">
-        <div className="max-w-7xl mx-auto">
-          {/* Title */}
-          <h2 className="text-2xl font-bold text-[#0A4D4A] mb-8 tracking-tight">
-            Frequently Asked Questions
-          </h2>
-
-          {/* Two Column Grid Wrapper */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-0 items-start">
-            {/* Left Column (Items 1 to 5) */}
-            <div className="border border-slate-200 divide-y divide-slate-200 rounded-sm">
-              {leftColumnFaqs.map((item) => {
-                const isOpen = !!openStates[item.id];
-                return (
-                  <div
-                    key={item.id}
-                    className="w-full bg-white transition-colors"
-                  >
-                    <button
-                      onClick={() => toggleFAQ(item.id)}
-                      className="w-full px-5 py-4 flex justify-between items-center text-left focus:outline-none select-none group"
-                    >
-                      <span className="text-[13.5px] font-bold text-slate-800 leading-snug tracking-normal pr-4 group-hover:text-[#0A4D4A] transition-colors">
-                        {item.question}
-                      </span>
-                      <span className="text-slate-700 font-black text-base shrink-0 w-4 text-center">
-                        {isOpen ? "−" : "+"}
-                      </span>
-                    </button>
-
-                    {isOpen && (
-                      <div className="px-5 pb-5 pt-1 border-t border-slate-100 bg-white animate-fadeIn">
-                        <p className="text-[13px] text-slate-700 leading-relaxed font-normal text-justify">
-                          {item.answer}
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Right Column (Items 6 to 9) */}
-            <div className="border border-slate-200 divide-y divide-slate-200 rounded-sm mt-6 lg:mt-0">
-              {rightColumnFaqs.map((item) => {
-                const isOpen = !!openStates[item.id];
-                return (
-                  <div
-                    key={item.id}
-                    className="w-full bg-white transition-colors"
-                  >
-                    <button
-                      onClick={() => toggleFAQ(item.id)}
-                      className="w-full px-5 py-4 flex justify-between items-center text-left focus:outline-none select-none group"
-                    >
-                      <span className="text-[13.5px] font-bold text-slate-800 leading-snug tracking-normal pr-4 group-hover:text-[#0A4D4A] transition-colors">
-                        {item.question}
-                      </span>
-                      <span className="text-slate-700 font-black text-base shrink-0 w-4 text-center">
-                        {isOpen ? "−" : "+"}
-                      </span>
-                    </button>
-
-                    {isOpen && (
-                      <div className="px-5 pb-5 pt-1 border-t border-slate-100 bg-white animate-fadeIn">
-                        <p className="text-[13px] text-slate-700 leading-relaxed font-normal text-justify">
-                          {item.answer}
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-
-        {/* Embedded Component Scope Animation Styling */}
-        <style jsx>{`
-          @keyframes fadeInFAQ {
-            from {
-              opacity: 0;
-              transform: translateY(-2px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-          .animate-fadeIn {
-            animation: fadeInFAQ 0.18s ease-out forwards;
-          }
-        `}</style>
-      </section>
+      <CommonFAQ
+        title="Frequently Asked Questions"
+        faqs={faqs}
+      />
 
       {/* Insights Section inserted cleanly right below FAQ (live from Academy) */}
-      <DynamicInsightsSection
-        categorySlug="editing-and-translation"
-        limit={6}
-        className="bg-white py-6 px-6 max-w-7xl mx-auto font-sans selection:bg-teal-100/60"
-      />
+      <InsightsSection/>
     </div>
   );
 };

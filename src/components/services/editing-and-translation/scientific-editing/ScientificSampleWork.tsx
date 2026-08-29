@@ -143,7 +143,7 @@ export default function ScientificSampleWork() {
 
   return (
     <div className="w-full bg-white font-sans text-slate-800">
-      
+
       {/* ========================================================== */}
       {/* SECTION 1: SAMPLE WORK SHOWCASE                            */}
       {/* ========================================================== */}
@@ -166,11 +166,10 @@ export default function ScientificSampleWork() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-5 py-2.5 text-xs sm:text-sm font-semibold rounded-t-md transition-all duration-200 ${
-                    isActive
+                  className={`px-5 py-2.5 text-xs sm:text-sm font-semibold rounded-t-md transition-all duration-200 ${isActive
                       ? "bg-indigo-100/70 text-indigo-900 border-b-2 border-indigo-600 shadow-xs"
                       : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
-                  }`}
+                    }`}
                 >
                   {tab.tabLabel}
                 </button>
@@ -202,33 +201,42 @@ export default function ScientificSampleWork() {
       {/* ========================================================== */}
       {/* SECTION 2: TOP-TIER JOURNALS (MOVING AUTO-SCROLL CAROUSEL)  */}
       {/* ========================================================== */}
-      <section className="py-6 bg-white overflow-hidden border-t border-slate-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-8">
-          <h2 className="text-xl sm:text-2xl font-bold text-[#0c373b] mb-2 tracking-tight">
-            Pubrica Have Been Published in Top-Tier Journals
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
-            Publishing your manuscripts in peer-reviewed journals such as PLOS, Wiley, Elsevier, etc., may be a daunting task; however, with the help of Pubrica's scientific editing services, you not only improve the quality of your work but also have a higher chance of publishing your manuscript.
-          </p>
-        </div>
+      <section className="py-6 sm:py-8 bg-white border-t border-slate-100 my-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="max-w-5xl mb-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-[#0c373b] mb-2 tracking-tight">
+              Pubrica Have Been Published in Top-Tier Journals
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Publishing your manuscripts in peer-reviewed journals such as PLOS, Wiley, Elsevier, etc., may be a daunting task; however, with the help of Pubrica's scientific editing services, you not only improve the quality of your work but also have a higher chance of publishing your manuscript.
+            </p>
+          </div>
 
-        {/* CSS Infinite Moving Carousel */}
-        <div className="relative w-full overflow-hidden group">
-          {/* Duplicate loop array to create seamless infinite scrolling */}
-          <div className="flex space-x-6 animate-marquee whitespace-nowrap group-hover:[animation-play-state:paused]">
-            {[...journalCovers, ...journalCovers, ...journalCovers].map((journal, idx) => (
-              <div
-                key={`${journal.id}-${idx}`}
-                className="flex-none w-40 sm:w-48 h-56 sm:h-64 relative rounded-xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition-transform duration-300 transform hover:-translate-y-1"
-              >
-                <Image
-                  src={journal.imageSrc}
-                  alt={journal.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            ))}
+          {/* Entire Carousel Container Clip-Path Curve */}
+          <div
+            className="relative w-full overflow-hidden group py-8"
+            style={{
+              /* Creates the curved top & bottom arch across the whole section */
+              clipPath: "ellipse(75% 100% at 50% 50%)",
+            }}
+          >
+            {/* Moving Marquee Track */}
+            <div className="flex space-x-6 sm:space-x-8 animate-marquee whitespace-nowrap group-hover:[animation-play-state:paused] py-2">
+              {[...journalCovers, ...journalCovers, ...journalCovers].map((journal, idx) => (
+                <div
+                  key={`${journal.id}-${idx}`}
+                  className="flex-none w-48 sm:w-56 h-64 sm:h-72 relative rounded-2xl overflow-hidden shadow-md transition-transform duration-300 transform hover:scale-105"
+                >
+                  <Image
+                    src={journal.imageSrc}
+                    alt={journal.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
