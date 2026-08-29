@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import CommonPackages, { PackageItem } from "@/components/common/CommonPackages";
 
 interface FeatureCard {
   id: string;
@@ -82,37 +83,29 @@ export const PostEditingDetailsAndPricing: React.FC = () => {
   ];
 
   // Pricing Packages Data
-  const packages: PackageTier[] = [
+  const packages: PackageItem[] = [
     {
-      id: "standard",
-      letter: "S",
-      name: "Standard",
-      iconSrc:
-        "/images/publication-support/responding-to-reviewers/standard-logo.png",
-      headerBg: "bg-[#d8e3e2]",
-      badgeBg: "bg-[#b2c8c6] text-[#0d3b36]",
-      cardBg: "bg-[#cfdedd]",
-      idealFor:
-        "Early-stage manuscripts, short articles, or conference papers.",
-      included: [
+      icon: "/images/publication-support/responding-to-reviewers/standard-logo.png",
+      title: "Standard",
+      subtitle: "Standard Post-Editing",
+      idealFor: "Early-stage manuscripts, short articles, or conference papers.",
+      includes: [
         "Language and grammar correction",
         "Clarity and readability improvements",
         "Basic formatting per journal/publisher guidelines",
       ],
       addOns: ["Reference checking and formatting", "Plagiarism check"],
       turnaround: "3–5 business days",
+      cardBgColor: "#cfdedd",
+      titleColor: "#0d3b36",
     },
     {
-      id: "advanced",
-      letter: "A",
-      name: "Advanced",
-      iconSrc: "/images/publication-support/journal-selection/advanced.webp",
-      headerBg: "bg-[#e2d5e8]",
-      badgeBg: "bg-[#c9b3d4] text-[#4a235a]",
-      cardBg: "bg-[#d8c3e2]",
+      icon: "/images/publication-support/journal-selection/advanced.webp",
+      title: "Advanced",
+      subtitle: "Advanced Post-Editing",
       idealFor:
         "Journal submissions, book chapters, and research articles requiring detailed refinement.",
-      included: [
+      includes: [
         "All Standard Post-Editing features",
         "Structural improvements and logical flow enhancement",
         "Terminology and technical accuracy check",
@@ -124,18 +117,16 @@ export const PostEditingDetailsAndPricing: React.FC = () => {
         "Plagiarism report",
       ],
       turnaround: "5–7 business days",
+      cardBgColor: "#d8c3e2",
+      titleColor: "#4a235a",
     },
     {
-      id: "premium",
-      letter: "P",
-      name: "Premium",
-      iconSrc: "/images/editing-and-translation/pro.webp",
-      headerBg: "bg-[#e8dec7]",
-      badgeBg: "bg-[#d6c299] text-[#5c4314]",
-      cardBg: "bg-[#decfae]",
+      icon: "/images/editing-and-translation/pro.webp",
+      title: "Premium",
+      subtitle: "Premium Post-Editing",
       idealFor:
         "High-impact journal submissions, academic books, and manuscripts targeting international publications.",
-      included: [
+      includes: [
         "All Advanced Post-Editing features",
         "In-depth language polishing and stylistic improvements",
         "Comprehensive formatting and reference alignment",
@@ -147,6 +138,8 @@ export const PostEditingDetailsAndPricing: React.FC = () => {
         "Additional rounds of editing",
       ],
       turnaround: "7–10 business days",
+      cardBgColor: "#decfae",
+      titleColor: "#5c4314",
     },
   ];
 
@@ -249,114 +242,11 @@ export const PostEditingDetailsAndPricing: React.FC = () => {
       {/* ------------------------------------------------------------- */}
       {/* 3. OUR PACKAGES SECTION                                       */}
       {/* ------------------------------------------------------------- */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-3">
-            Post Editing Services – Our Packages
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            We offer flexible post-editing packages designed to meet the diverse
-            needs of authors, researchers, and academicians. Each package
-            ensures high-quality editing, compliance with publication standards,
-            and timely delivery.
-          </p>
-        </div>
-
-        {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-8">
-          {packages.map((pkg) => (
-            <div
-              key={pkg.id}
-              className="rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 flex flex-col"
-            >
-              {/* Header Box */}
-              <div
-                className={`${pkg.headerBg} p-6 flex items-center justify-center space-x-3`}
-              >
-                <div
-                  className={`w-10 h-10 rounded-full ${pkg.badgeBg} flex items-center justify-center font-bold text-lg shadow-sm overflow-hidden`}
-                >
-                  <Image
-                    src={pkg.iconSrc}
-                    alt={`${pkg.name} package`}
-                    width={40}
-                    height={40}
-                    className="w-10 h-10 object-contain"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900">{pkg.name}</h3>
-              </div>
-
-              {/* Package Content */}
-              <div
-                className={`${pkg.cardBg} p-6 flex-1 flex flex-col justify-between text-xs sm:text-sm text-slate-800 space-y-6`}
-              >
-                <div className="space-y-5">
-                  {/* Ideal For */}
-                  <div className="flex items-start space-x-2">
-                    <span className="font-bold text-slate-900 shrink-0">➔</span>
-                    <p className="leading-snug">
-                      <strong className="font-bold text-slate-900">
-                        Ideal For:
-                      </strong>{" "}
-                      {pkg.idealFor}
-                    </p>
-                  </div>
-
-                  {/* Included Items */}
-                  <div>
-                    <div className="flex items-center space-x-2 font-bold text-slate-900 mb-2">
-                      <span>➔</span>
-                      <span>Included:</span>
-                    </div>
-                    <ul className="space-y-2 pl-6 list-disc marker:text-slate-700">
-                      {pkg.included.map((item, idx) => (
-                        <li key={idx} className="leading-relaxed">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Optional Add-Ons */}
-                  <div>
-                    <div className="flex items-center space-x-2 font-bold text-slate-900 mb-2">
-                      <span>➔</span>
-                      <span>Optional Add-Ons:</span>
-                    </div>
-                    <ul className="space-y-2 pl-6 list-disc marker:text-slate-700">
-                      {pkg.addOns.map((item, idx) => (
-                        <li key={idx} className="leading-relaxed">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Turnaround Time */}
-                <div className="pt-4 border-t border-slate-400/30 flex items-start space-x-2">
-                  <span className="font-bold text-slate-900 shrink-0">➔</span>
-                  <p>
-                    <strong className="font-bold text-slate-900">
-                      Turnaround Time:
-                    </strong>{" "}
-                    {pkg.turnaround}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom Pricing Banner */}
-        <Link
-          href="/order-now/"
-          className="block w-full bg-[#b80000] text-white py-4 px-6 rounded-xl text-center font-bold text-base sm:text-lg shadow-md tracking-wide hover:bg-[#980000] transition-colors cursor-pointer"
-        >
-          Starts from $ 200 for 1000 Words
-        </Link>
-      </section>
+      <CommonPackages
+        title="Post Editing Services – Our Packages"
+        description="We offer flexible post-editing packages designed to meet the diverse needs of authors, researchers, and academicians. Each package ensures high-quality editing, compliance with publication standards, and timely delivery."
+        packages={packages}
+      />
     </div>
   );
 };

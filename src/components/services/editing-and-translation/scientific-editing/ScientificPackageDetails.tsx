@@ -410,11 +410,10 @@ export default function ScientificPackageDetails() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-5 py-2.5 text-xs sm:text-sm font-semibold rounded-t-md transition-all duration-200 ${
-                    isActive
-                      ? "bg-indigo-100/70 text-indigo-900 border-b-2 border-indigo-600 shadow-xs"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
-                  }`}
+                  className={`px-5 py-2.5 text-xs sm:text-sm font-semibold rounded-t-md transition-all duration-200 ${isActive
+                    ? "bg-indigo-100/70 text-indigo-900 border-b-2 border-indigo-600 shadow-xs"
+                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
+                    }`}
                 >
                   {tab.tabLabel}
                 </button>
@@ -562,9 +561,9 @@ export default function ScientificPackageDetails() {
           {documentTypes.map((doc) => (
             <div
               key={doc.id}
-              className="bg-white border border-slate-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col items-center justify-center text-center group cursor-pointer"
+              className="bg-white border border-slate-100 rounded-xl p-6 shadow-sm flex flex-col items-center justify-center text-center pointer-events-none select-none"
             >
-              <div className="mb-4 transform group-hover:scale-110 transition-transform duration-200">
+              <div className="mb-4">
                 <Image
                   src={doc.iconSrc}
                   alt={doc.title}
@@ -573,7 +572,7 @@ export default function ScientificPackageDetails() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-xs sm:text-sm font-semibold text-slate-700 group-hover:text-[#0c373b] transition-colors leading-snug">
+              <p className="text-xs sm:text-sm font-semibold text-slate-700 leading-snug">
                 {doc.title}
               </p>
             </div>
@@ -664,7 +663,7 @@ export default function ScientificPackageDetails() {
 
         {/* Free Quote Button */}
         <div className="w-full flex justify-center">
-        <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
         </div>
       </section>
 
@@ -703,9 +702,8 @@ export default function ScientificPackageDetails() {
               key={item.id}
               type="button"
               onClick={() => setActiveIndex(idx)}
-              className={`w-3 h-3 transition-all duration-200 border border-[#0c373b] ${
-                activeIndex === idx ? "bg-[#0c373b]" : "bg-white"
-              }`}
+              className={`w-3 h-3 transition-all duration-200 border border-[#0c373b] ${activeIndex === idx ? "bg-[#0c373b]" : "bg-white"
+                }`}
               aria-label={`Show testimonial ${idx + 1}`}
             />
           ))}

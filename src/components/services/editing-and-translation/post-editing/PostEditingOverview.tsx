@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export const PostEditingOverview: React.FC = () => {
   const bulletPoints = [
@@ -37,19 +38,11 @@ export const PostEditingOverview: React.FC = () => {
   return (
     <div className="w-full bg-[#f8fafc] text-slate-800">
       {/* 1. Dark Banner Header */}
-      <section className="w-full bg-[#03231a] py-6 px-4 sm:px-6 text-center text-white">
-        <div className="max-w-4xl mx-auto border border-slate-600/60 rounded-sm p-6 sm:p-8 bg-[#03231a]">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 tracking-wide">
-            Post Editing Service
-          </h1>
-          <p className="text-xs sm:text-sm md:text-base text-slate-200 max-w-3xl mx-auto leading-relaxed">
-            Pubrica’s Post Editing Service ensures polished, error-free content,
-            enhancing clarity and coherence. From academic papers to business
-            documents, our expert editors refine your work for professional
-            presentation.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Post Editing Service"
+        description="Pubrica’s Post Editing Service ensures polished, error-free content, enhancing clarity and coherence. From academic papers to business documents, our expert editors refine your work for professional presentation."
+        headingAs="h1"
+      />
 
       {/* 2. Overview Section with Image Grid */}
       <section className="w-full py-6 px-4 sm:px-6 max-w-6xl mx-auto">
@@ -67,14 +60,14 @@ export const PostEditingOverview: React.FC = () => {
           Pubrica’s{" "}
           <Link
             href="/services/editing-and-translation/manuscript-editing"
-            className="text-blue-600 hover:underline"
+            className="text-blue-600"
           >
             Post-Editing Services
           </Link>{" "}
           are designed to refine and enhance your revised{" "}
           <Link
             href="/services/editing-and-translation/manuscript-editing"
-            className="text-blue-600 hover:underline"
+            className="text-blue-600"
           >
             manuscripts
           </Link>
@@ -109,8 +102,8 @@ export const PostEditingOverview: React.FC = () => {
 
           {/* Right Column: Editing Preview Image */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border-4 border-[#03231a] bg-[#03231a] p-2">
-              <div className="relative w-full h-full rounded-xl overflow-hidden bg-white">
+            <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden p-2">
+              <div className="relative w-full h-full rounded-xl overflow-hidden">
                 <Image
                   src="/images/editing-and-translation/post-editing/Perfect-Your-Manuscript-With-Pubricas-Post-Editing-Service.webp"
                   alt="Perfect your manuscript with Pubrica’s post-editing service"
@@ -135,7 +128,7 @@ export const PostEditingOverview: React.FC = () => {
           </p>
 
           <div>
-           <GetFreeQuoteButton/>
+            <GetFreeQuoteButton />
           </div>
         </div>
       </section>

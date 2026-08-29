@@ -2,6 +2,9 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import CommonPackages, { PackageItem } from "@/components/common/CommonPackages";
+import CommonTestimonial from "@/components/common/CommonTestimonials";
+import CommonFAQ from "@/components/common/FAQ";
 
 // --- Interfaces ---
 interface PackageCard {
@@ -37,15 +40,12 @@ export const BookEditingPackagesTestimonialsAndFAQ: React.FC = () => {
   };
 
   // --- Data Definitions ---
-  const packages: PackageCard[] = [
+  const packages: PackageItem[] = [
     {
-      iconSrc: "/images/editing-and-translation/book-editing/E-pa-icons-1.png",
-      iconAlt: "End-to-End Book Publication Pack",
-      cardHeaderBg: "bg-[#cfdcdb]",
+      icon: "/images/editing-and-translation/book-editing/E-pa-icons-1.png",
       title: "End-to-End Book Publication Pack",
-      description:
-        "Our publication experts and project manager work together to boost your chances of book publication by ensuring superior quality and experienced support at every step.",
-      features: [
+      idealFor: "Authors looking for complete book publication support from editing to submission",
+      includes: [
         "Book editing to suit your needs",
         "Showcase chapter preparation",
         "Publisher selection",
@@ -53,279 +53,140 @@ export const BookEditingPackagesTestimonialsAndFAQ: React.FC = () => {
         "Book proposal preparation",
         "Free Q&A with language editors",
       ],
+      cardBgColor: "#cfdcdb",
+      titleColor: "#0d3b36",
     },
     {
-      iconSrc: "/images/publication-support/journal-selection/advanced.webp",
-      iconAlt: "Advanced package",
-      cardHeaderBg: "bg-[#d8c5e2]",
+      icon: "/images/publication-support/journal-selection/advanced.webp",
       title: "Advanced",
-      description:
-        "A language editor from your subject area improves the clarity and readability of your book, so that it is easy to understand and free of language errors.",
-      features: [
+      idealFor: "Authors seeking professional language editing and improved book readability",
+      includes: [
         "Sentence structure and word choice correction, spelling proofreading, and grammar improvement",
         "Free formatting for consistency or to match publisher requirements",
         "Accuracy of terminology",
         "Unlimited free chat with your editor",
       ],
+      cardBgColor: "#d8c5e2",
+      titleColor: "#6b2d82",
     },
     {
-      iconSrc: "/images/editing-and-translation/pro.webp",
-      iconAlt: "Premium package",
-      cardHeaderBg: "bg-[#d2b887]",
+      icon: "/images/editing-and-translation/pro.webp",
       title: "Premium",
-      description:
-        "A superior English editor from your subject area makes substantial improvements to bring out the best in your book by correcting the logic, structure, and language where necessary.",
-      features: [
+      idealFor: "Authors seeking comprehensive editing to improve the structure, logic, language, and overall appeal of their book",
+      includes: [
         "Includes all the features of advanced book editing",
         "Improvements in chapter structure, flow, & presentation",
         "Review of core concept and content to improve appeal for academic books and review of plot, pacing, and characters for fiction, biographies, etc.",
       ],
+      cardBgColor: "#d2b887",
+      titleColor: "#805826",
     },
   ];
 
-  const testimonials: Testimonial[] = [
+  const testimonialsData = [
     {
-      journalImage:
+      image:
         "/images/editing-and-translation/book-editing/testimonials-2.png",
       quote:
         "Pubrica’s editors transformed my manuscript into a polished, professional book while preserving my unique voice. Their attention to detail and insightful feedback made all the difference.",
-      authorName: "DR. SARAH MITCHELL",
-      authorTitle: "Historian & Author, USA",
-      flagImage: "/images/editing-and-translation/book-editing/usa-.png",
-      flagAlt: "USA Flag",
+      name: "DR. SARAH MITCHELL",
+      designation: "Historian & Author",
+      organization: "USA",
+      flag: "/images/editing-and-translation/book-editing/usa-.png",
     },
     {
-      journalImage:
+      image:
         "/images/editing-and-translation/book-editing/journal-of-clinical-epidemiology-1.png",
       quote:
         "Working with Pubrica’s book editing service was a game-changer. They elevated my writing, corrected inconsistencies, and helped me make a stronger connection with readers.",
-      authorName: "CARLOS MENDOZA",
-      authorTitle: "Academic & Author, Mexico",
-      flagImage: "/images/editing-and-translation/book-editing/flag.png",
-      flagAlt: "Mexico Flag",
+      name: "CARLOS MENDOZA",
+      designation: "Academic & Author",
+      organization: "Mexico",
+      flag: "/images/editing-and-translation/book-editing/flag.png",
     },
     {
-      journalImage:
+      image:
         "/images/editing-and-translation/book-editing/international-journal-of-cardialogy-.png",
       quote:
         "Their expertise in language and formatting elevated my scientific book to a professional level. The editors were thorough and supportive throughout.",
-      authorName: "DR. THOMAS MULLER",
-      authorTitle: "Scientific Author, Germany",
-      flagImage: "/images/editing-and-translation/book-editing/germany-.png",
-      flagAlt: "Germany Flag",
+      name: "DR. THOMAS MULLER",
+      designation: "Scientific Author",
+      organization: "Germany",
+      flag: "/images/editing-and-translation/book-editing/germany-.png",
     },
   ];
 
-  const faqList: FAQItem[] = [
+  const faqs = [
     {
-      id: 1,
       question: "1. What does professional book editing include?",
       answer:
         "Professional book editing involves structural editing, content refinement, language editing, consistency checks, formatting, grammar editing, and overall improvement to make it more comprehensible, readable, and publishable.",
     },
     {
-      id: 2,
       question:
         "2. What is the difference between developmental editing, copyediting, and proofreading?",
       answer:
         "Developmental editing improves book structure and content, copy editing improves language and content consistency, while proofreading corrects grammar, spelling, punctuation, and formatting errors prior to publication.",
     },
     {
-      id: 3,
       question:
         "3. Why is professional editing important before publishing a book?",
       answer:
         "Professional editing improves book structure, comprehensibility, consistency, language quality, and overall readability to make it publishable and credible as a final manuscript product.",
     },
     {
-      id: 4,
       question:
         "4. How can professional book editing improve the quality of a manuscript?",
       answer:
         "Professional book editing improves structure, enhances content flow, corrects grammar and language errors, ensures consistency, improves readability, and enhances overall presentation for higher quality publication and audience engagement.",
     },
     {
-      id: 5,
       question:
         "5. When should an author hire a book editor during the writing process?",
       answer:
         "Authors should seek the services of a professional book editor after completing a full draft to allow for overall structural improvements, refinement of language, consistency checks, and overall improvements.",
     },
     {
-      id: 6,
       question: "6. How to choose the right book editing service?",
       answer:
         "When choosing a book editing service, look for one that is run by competent editors, has appropriate subject matter expertise, transparent pricing, process, reviews, confidentiality, and appropriate turnaround time.",
     },
   ];
 
-  const mobileItem = testimonials[activeIndex];
-  const desktopItems = [
-    testimonials[activeIndex],
-    testimonials[(activeIndex + 1) % testimonials.length],
-  ];
+  // const mobileItem = testimonials[activeIndex];
+  // const desktopItems = [
+  //   testimonials[activeIndex],
+  //   testimonials[(activeIndex + 1) % testimonials.length],
+  // ];
 
   return (
     <div className="w-full bg-[#f8fafc] text-slate-800 py-6">
       {/* ------------------------------------------------------------- */}
       {/* 1. BOOK EDITING SERVICES - OUR PACKAGES SECTION */}
       {/* ------------------------------------------------------------- */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 mb-20">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-2">
-            Book Editing Services – Our Packages
-          </h2>
-          <h3 className="text-base sm:text-lg font-medium text-[#0d3b36] mb-3">
-            Take the Complete Pack or Simply Get Your Book Edited
-          </h3>
-          <p className="text-xs sm:text-sm text-slate-600 max-w-4xl mx-auto leading-relaxed">
-            We offer a range of book editing packages designed to meet the
-            unique needs of authors, from first-time writers to seasoned
-            professionals. Each package is tailored to ensure your manuscript is
-            polished, coherent, and ready for publication while preserving your
-            unique voice and style.
-          </p>
-        </div>
-
-        {/* 3 Columns Grid for Packages */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-          {packages.map((pkg, index) => (
-            <div
-              key={index}
-              className="flex flex-col bg-[#eef3f3] rounded-xl overflow-hidden border border-slate-200/80 shadow-md transition-transform duration-300 hover:-translate-y-1"
-            >
-              {/* Header Box */}
-              <div
-                className={`${pkg.cardHeaderBg} p-6 border-b border-slate-200/50`}
-              >
-                <div className="flex items-center space-x-3 mb-3">
-                  <Image
-                    src={pkg.iconSrc}
-                    alt={pkg.iconAlt}
-                    width={36}
-                    height={36}
-                    className="w-9 h-9 object-contain rounded-full"
-                  />
-                  <h4 className="text-base sm:text-lg font-bold text-slate-900 leading-tight">
-                    {pkg.title}
-                  </h4>
-                </div>
-              </div>
-
-              {/* Body Box */}
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-6 font-medium">
-                    {pkg.description}
-                  </p>
-
-                  <ul className="space-y-3">
-                    {pkg.features.map((feature, fIdx) => (
-                      <li
-                        key={fIdx}
-                        className="flex items-start text-xs sm:text-sm text-slate-700"
-                      >
-                        <span className="text-slate-800 font-bold mr-2 text-base leading-none">
-                          •
-                        </span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <CommonPackages
+        title="Book Editing Services – Our Packages"
+        subtitle="Take the Complete Pack or Simply Get Your Book Edited"
+        description="We offer a range of book editing packages designed to meet the unique needs of authors, from first-time writers to seasoned professionals. Each package is tailored to ensure your manuscript is polished, coherent, and ready for publication while preserving your unique voice and style."
+        packages={packages}
+      />
 
       {/* ------------------------------------------------------------- */}
       {/* 2. TESTIMONIALS SECTION */}
       {/* ------------------------------------------------------------- */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 mb-20">
-        <div className="mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-3">
-            Testimonials
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-600 max-w-5xl leading-relaxed">
-            Learn how Pubrica’s Book Editing Services have helped authors and
-            writers refine their manuscripts, enhance clarity, and meet
-            publishing standards. Our expert editors improve readability,
-            preserve your unique voice, and strengthen the overall impact of
-            your work, making it publication-ready for publishers and readers
-            alike. Here is what our clients say:
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 gap-6 md:hidden">
-          <BookTestimonialCard item={mobileItem} />
-        </div>
-        <div className="hidden md:grid grid-cols-2 gap-6">
-          {desktopItems.map((item) => (
-            <BookTestimonialCard
-              key={`${activeIndex}-${item.authorName}`}
-              item={item}
-            />
-          ))}
-        </div>
-
-        <div className="flex items-center justify-center space-x-2 mt-6">
-          {testimonials.map((item, index) => (
-            <button
-              key={item.authorName}
-              type="button"
-              aria-label={`Show testimonial ${index + 1}`}
-              onClick={() => setActiveIndex(index)}
-              className={`w-3 h-3 rounded-sm inline-block ${
-                activeIndex === index
-                  ? "bg-[#0d3b36]"
-                  : "border border-[#0d3b36] bg-white"
-              }`}
-            />
-          ))}
-        </div>
-      </section>
+      <CommonTestimonial
+        title="Testimonials"
+        description="Learn how Pubrica’s Book Editing Services have helped authors and writers refine their manuscripts, enhance clarity, and meet publishing standards. Our expert editors improve readability, preserve your unique voice, and strengthen the overall impact of your work, making it publication-ready for publishers and readers alike. Here is what our clients say:"
+        testimonials={testimonialsData}
+      />
 
       {/* ------------------------------------------------------------- */}
       {/* 3. FREQUENTLY ASKED QUESTIONS (FAQ) SECTION */}
       {/* ------------------------------------------------------------- */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-8">
-          Frequently Asked Questions
-        </h2>
-
-        <div className="border-t border-slate-200 bg-white shadow-sm rounded-lg overflow-hidden">
-          {faqList.map((faq) => {
-            const isOpen = openFaq === faq.id;
-
-            return (
-              <div key={faq.id} className="border-b border-slate-200">
-                {/* Accordion Question Header */}
-                <button
-                  onClick={() => toggleFaq(faq.id)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left transition-colors hover:bg-slate-50"
-                >
-                  <span className="text-xs sm:text-sm font-bold text-slate-900 pr-4">
-                    {faq.question}
-                  </span>
-                  <span className="text-lg font-bold text-slate-700 select-none">
-                    {isOpen ? "–" : "+"}
-                  </span>
-                </button>
-
-                {/* Accordion Answer Content */}
-                {isOpen && (
-                  <div className="px-6 pb-5 pt-1 bg-white">
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed border-t border-slate-100 pt-3">
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      <CommonFAQ
+        title="Frequently Asked Questions"
+        faqs={faqs}
+      />
     </div>
   );
 };

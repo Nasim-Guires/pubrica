@@ -1,6 +1,7 @@
 "use client";
 
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 import Image from "next/image";
 import React from "react";
 
@@ -8,18 +9,11 @@ export default function TranslationEditingHero() {
   return (
     <section className="w-full bg-white font-sans text-slate-800">
       {/* Top Dark Banner Header */}
-      <div className="w-full bg-[#182528] py-6 px-4 sm:px-6">
-        <div className="max-w-5xl mx-auto border border-white/80 py-8 px-6 text-center text-white">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-3 tracking-tight">
-            Translation with Editing Service
-          </h1>
-          <p className="text-sm sm:text-base text-slate-200 max-w-2xl mx-auto leading-relaxed">
-            Our experts help you overcome any language barriers. Translate your
-            manuscript into English from Spanish, Japanese, Chinese, or Vice
-            versa
-          </p>
-        </div>
-      </div>
+      <HeroBanner
+        title="Translation with Editing Service"
+        description="Our experts help you overcome any language barriers. Translate your manuscript into English from Spanish, Japanese, Chinese, or Vice versa"
+        headingAs="h1"
+      />
 
       {/* Main Content & Visual Section */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 lg:py-7">
@@ -50,7 +44,7 @@ export default function TranslationEditingHero() {
                   Language Translations done by a bilingual{" "}
                   <a
                     href="/subject-matter-experts"
-                    className="text-[#0056B3] hover:underline font-semibold"
+                    className="text-blue-700"
                   >
                     subject matter expert
                   </a>
@@ -72,7 +66,7 @@ export default function TranslationEditingHero() {
 
             {/* CTA Button */}
             <div className="pt-4">
-             <GetFreeQuoteButton/>
+              <GetFreeQuoteButton />
             </div>
           </div>
 
@@ -91,7 +85,7 @@ export default function TranslationEditingHero() {
                 />
               </div>
 
-          
+
 
               {/* Light Subtle Background Accent Shape */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-slate-100 rounded-full -z-0 opacity-60 filter blur-xl" />

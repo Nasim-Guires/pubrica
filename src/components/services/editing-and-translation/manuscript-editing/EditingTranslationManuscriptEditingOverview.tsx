@@ -148,8 +148,8 @@ export const EditingTranslationManuscriptEditingOverview: React.FC = () => {
 
           {/* Right Column: Journal Covers Image Showcase */}
           <div className="lg:col-span-5 relative mt-6 lg:mt-0">
-            <div className="bg-emerald-950/80 rounded-2xl p-6 shadow-xl">
-              <div className="relative w-full h-[320px] sm:h-[380px] rounded-lg overflow-hidden">
+            <div className=" rounded-2xl p-6 ">
+              <div className="relative w-full h-[320px] sm:h-[380px] overflow-hidden">
                 <Image
                   src="/images/editing-and-translation/manuscript-editing/Get-Manuscript-Published-with-Confidence-Expert-Manuscript-Editing-Services.webp"
                   alt="Get Manuscript Published with Confidence — Expert Manuscript Editing Services"

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { ArrowRightCircle, Minus, Plus } from "lucide-react";
+import CommonPackages, { PackageItem } from "@/components/common/CommonPackages";
 
 interface PricingTier {
   title: string;
@@ -18,85 +19,47 @@ interface PricingTier {
   addons: string[];
 }
 
-const pricingData: PricingTier[] = [
+const packages: PackageItem[] = [
   {
+    icon: "/images/editing-and-translation/thesis-editing/t-icons.png",
     title: "Thesis Essentials",
     subtitle: "Make Your Thesis Error-Free And Submission-Ready",
-    iconSrc: "/images/editing-and-translation/thesis-editing/t-icons.png",
-    iconAlt: "Thesis Essentials",
-    bgColor: "bg-[#CFD8DC]", // Soft slate gray
-    description:
-      "Suitable for writers who need editing and proofreading to eliminate grammar and spelling mistakes in their thesis and ensure stylistic consistency.",
+    idealFor:
+      "Writers who need editing and proofreading to eliminate grammar and spelling mistakes in their thesis and ensure stylistic consistency.",
     includes: [
-      {
-        category: "Grammar and Punctuation",
-        items: [
-          "Correction of spelling errors",
-          "Grammatical accuracy",
-          "Precise punctuation",
-        ],
-      },
-      {
-        category: "Academic Style",
-        items: [
-          "Stylistic consistency",
-          "US/UK English style",
-          "Style guide adherence (APA, MLA, CMOS)",
-        ],
-      },
-      {
-        category: "Expert Commentary",
-        items: ["Expert tips on academic style and conventions"],
-      },
+      "Grammar and Punctuation: Correction of spelling errors, grammatical accuracy, precise punctuation",
+      "Academic Style: Stylistic consistency, US/UK English style, style guide adherence (APA, MLA, CMOS)",
+      "Expert Commentary: Expert tips on academic style and conventions",
     ],
-    addons: [
+    addOns: [
       "One Round of Revision",
       "Reference Formatting",
       "Thesis Formatting",
       "iThenticate Plag-Check",
     ],
+    cardBgColor: "#CFD8DC",
+    titleColor: "#003B46",
   },
   {
+    icon: "/images/editing-and-translation/thesis-editing/t-icons.png",
     title: "Thesis Pro",
     subtitle: "Improve The Overall Presentation Of Your Thesis",
-    iconSrc: "/images/editing-and-translation/thesis-editing/t-icons.png",
-    iconAlt: "Thesis Pro",
-    bgColor: "bg-[#D1C4E9]", // Soft purple
-    description:
-      "A thorough thesis editing with a deeper intervention to improve clarity and coherence. Recommended for writers who need help enhancing their writing.",
+    idealFor:
+      "Writers who need deeper thesis editing to improve clarity, coherence, and the overall quality of their academic writing.",
     includes: [
-      {
-        category: "Everything in Thesis Essentials +",
-      },
-      {
-        category: "Clarity Check",
-        items: [
-          "Accurate word/phrase choice",
-          "Paraphrasing for clarity and concision",
-          "Smooth transition at paragraph and section levels",
-        ],
-      },
-      {
-        category: "Structure Check",
-        items: [
-          "Smooth transitions at sentence and paragraph levels",
-          "Elimination of redundancy",
-        ],
-      },
-      {
-        category: "Advanced Commentary",
-        items: [
-          "Advanced tips on content, style, and conventions",
-          "Commentary on content placement, transition, and logical consistency",
-        ],
-      },
+      "Everything in Thesis Essentials +",
+      "Clarity Check: Accurate word/phrase choice, paraphrasing for clarity and concision, smooth transition at paragraph and section levels",
+      "Structure Check: Smooth transitions at sentence and paragraph levels, elimination of redundancy",
+      "Advanced Commentary: Advanced tips on content, style, and conventions; commentary on content placement, transition, and logical consistency",
     ],
-    addons: [
+    addOns: [
       "One Round of Revision",
       "Reference Formatting",
       "Thesis Formatting",
       "iThenticate Plag-Check",
     ],
+    cardBgColor: "#D1C4E9",
+    titleColor: "#5E3A8C",
   },
 ];
 
@@ -145,97 +108,13 @@ export default function ServicePricingSection() {
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 text-slate-800 font-sans">
+    <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 text-slate-800 ">
       {/* Title & Subtitle */}
-      <div className="mb-10">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#003B46] mb-3">
-          Choose the Thesis Editing Service You Need
-        </h2>
-        <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-          Take a pick based on your unique requirements, including the level of
-          editor intervention your manuscript requires, your thesis submission
-          deadline, and other details.
-        </p>
-      </div>
-
-      {/* Pricing Cards Comparison Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 items-stretch">
-        {pricingData.map((plan, idx) => (
-          <div
-            key={idx}
-            className={`${plan.bgColor} rounded-xl shadow-md p-6 flex flex-col justify-between transition-shadow duration-300 hover:shadow-lg`}
-          >
-            <div>
-              {/* Header Badge */}
-              <div className="bg-white rounded-lg p-4 shadow-sm flex items-center space-x-4 mb-6">
-                <div className="relative w-12 h-12 shrink-0">
-                  <Image
-                    src={plan.iconSrc}
-                    alt={plan.iconAlt}
-                    fill
-                    sizes="48px"
-                    className="object-contain"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900">
-                    {plan.title}
-                  </h3>
-                  <p className="text-xs font-semibold text-slate-600">
-                    {plan.subtitle}
-                  </p>
-                </div>
-              </div>
-
-              {/* Description */}
-              <p className="text-sm text-slate-700 leading-relaxed mb-6 font-medium">
-                {plan.description}
-              </p>
-
-              {/* Includes List */}
-              <div className="mb-6">
-                <div className="flex items-center space-x-2 text-slate-900 font-bold mb-3">
-                  <ArrowRightCircle className="w-5 h-5 shrink-0" />
-                  <span className="text-base">Includeds:</span>
-                </div>
-
-                <ul className="space-y-4 pl-3 text-xs sm:text-sm text-slate-800">
-                  {plan.includes.map((inc, iIdx) => (
-                    <li key={iIdx} className="space-y-1">
-                      {inc.category && (
-                        <div className="font-bold list-disc list-inside">
-                          {inc.category}
-                        </div>
-                      )}
-                      {inc.items && (
-                        <ul className="pl-6 space-y-1 list-disc">
-                          {inc.items.map((item, itemIdx) => (
-                            <li key={itemIdx}>{item}</li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Add-ons List */}
-              <div className="mb-6">
-                <div className="flex items-center space-x-2 text-slate-900 font-bold mb-3">
-                  <ArrowRightCircle className="w-5 h-5 shrink-0" />
-                  <span className="text-base">Add-ons:</span>
-                </div>
-                <ul className="pl-6 space-y-2 list-disc text-xs sm:text-sm text-slate-800 font-medium">
-                  {plan.addons.map((addon, aIdx) => (
-                    <li key={aIdx}>{addon}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
+      <CommonPackages
+        title="Choose the Thesis Editing Service You Need"
+        description="Take a pick based on your unique requirements, including the level of editor intervention your manuscript requires, your thesis submission deadline, and other details."
+        packages={packages}
+      />
       {/* CTA Banner Bar */}
       <div className="w-full bg-[#B70000] text-white font-bold text-center py-3.5 px-4 rounded-lg shadow-md mb-12 text-sm sm:text-base tracking-wide">
         Starts from $ 180 for 1000 Words
@@ -277,7 +156,7 @@ export default function ServicePricingSection() {
       </div>
 
       {/* Testimonials Header Placeholder */}
-      <section className="pt-8 border-t border-slate-200">
+      {/* <section className="pt-8 border-t border-slate-200">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#003B46] mb-3">
           Testimonials
         </h2>
@@ -289,7 +168,7 @@ export default function ServicePricingSection() {
           impact of your thesis, making it submission-ready and academically
           sound. Here is what our clients say:
         </p>
-      </section>
+      </section> */}
     </div>
   );
 }

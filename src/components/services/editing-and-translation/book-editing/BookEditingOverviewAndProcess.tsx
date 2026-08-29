@@ -96,18 +96,18 @@ export const BookEditingOverviewAndProcess: React.FC = () => {
   return (
     <div className="w-full bg-[#f8fafc] text-slate-800">
       {/* 1. Dark Green Banner Header */}
-      <section className="w-full bg-[#03231a] py-5 px-4 sm:px-6 text-center text-white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 tracking-wide">
-            Book Editing Services at Pubrica
-          </h2>
-          <p className="text-xs sm:text-sm md:text-base text-slate-200 max-w-3xl mx-auto leading-relaxed">
-            Our editors ensure that your book manuscript is polished, engaging,
-            and publication-ready through meticulous editing and professional
-            guidance.
-          </p>
-        </div>
-      </section>
+        <section className="w-full bg-[#03231a] py-5 px-4 sm:px-6 text-center text-white">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 tracking-wide">
+              Book Editing Services at Pubrica
+            </h2>
+            <p className="text-xs sm:text-sm md:text-base text-slate-200 max-w-3xl mx-auto leading-relaxed">
+              Our editors ensure that your book manuscript is polished, engaging,
+              and publication-ready through meticulous editing and professional
+              guidance.
+            </p>
+          </div>
+        </section>
 
       {/* 2. Overview & Support Services Section */}
       <section className="w-full py-6 px-4 sm:px-6 max-w-6xl mx-auto">

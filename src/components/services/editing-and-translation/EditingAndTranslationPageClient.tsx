@@ -5,7 +5,7 @@ import {
   heroBulletPoints,
   mainServicesList,
   audienceList,
-  editingTypesList,
+
   translationServicesList,
   workflowSteps,
   packages,
@@ -29,10 +29,7 @@ const EditingAndTranslationPageClient = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   type CardId = "proofreading" | "manuscript";
 
-  const [openCards, setOpenCards] = useState<Record<string, boolean>>({
-    proofreading: true,
-    manuscript: true,
-  });
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = 2; // Since we show 2 cards per view (Slide 0: Items 0 & 1, Slide 1: Items 1 & 2)
 
@@ -41,46 +38,163 @@ const EditingAndTranslationPageClient = () => {
     currentSlide === 0
       ? [testimonialsData[0], testimonialsData[1]]
       : [testimonialsData[1], testimonialsData[2]];
+  const [openCards, setOpenCards] = useState<Record<string, boolean>>({});
+
   const toggleCard = (id: string) => {
     setOpenCards((prev) => ({
       ...prev,
       [id]: !prev[id],
     }));
   };
+    const testimonials = [
+      {
+        image:
+          "/images/editing-and-translation/asian-journal-of-psychiatry-1.png",
+        quote:
+          "Pubrica's editing and translation support helped me publish my manuscript in a high-impact journal. Their attention to language, grammar, and formatting ensured my research was communicated clearly and professionally.",
+        name: "DR. MARIA SCHNEIDER",
+        designation: "Academic Researcher",
+        organization: "Germany",
+        flag: "/images/editing-and-translation/germany-1-1.png",
+      },
+      {
+        image:
+          "/images/editing-and-translation/jama-oncology-journal-5.png",
+        quote:
+          "I had my clinical study translated from Japanese to English, and the team maintained both accuracy and medical terminology integrity. The reviewers appreciated the clarity, and my paper was accepted without major revisions.",
+        name: "DR. HIROSHI TANAKA",
+        designation: "Clinical Practitioner",
+        organization: "Japan",
+        flag: "/images/editing-and-translation/japan.png",
+      },
+      {
+        image:
+          "/images/editing-and-translation/british-journal-of-clinical-pharmacology.png",
+        quote:
+          "The editorial team not only refined my writing but also ensured consistency in style and tone across my thesis. Their guidance improved readability and strengthened my arguments significantly.",
+        name: "ANANYA RAO",
+        designation: "PhD Scholar",
+        organization: "India",
+        flag: "/images/editing-and-translation/flag.png",
+      },
+    ];
 
-  const testimonials = [
+
+  const editingTypesList = [
     {
-      image:
-        "/images/editing-and-translation/asian-journal-of-psychiatry-1.png",
-      quote:
-        "Pubrica's editing and translation support helped me publish my manuscript in a high-impact journal. Their attention to language, grammar, and formatting ensured my research was communicated clearly and professionally.",
-      name: "DR. MARIA SCHNEIDER",
-      designation: "Academic Researcher",
-      organization: "Germany",
-      flag: "/images/editing-and-translation/germany-1-1.png",
+      id: "proofreading",
+      title: "Proofreading",
+      icon: "/images/editing-and-translation/Proofreading.png",
+      description:
+        "The final review stage focuses on catching surface errors such as misspellings, typographical mistakes, and basic grammar issues. Proofreading is the last step before submission or publication.",
     },
     {
-      image:
-        "/images/editing-and-translation/jama-oncology-journal-5.png",
-      quote:
-        "I had my clinical study translated from Japanese to English, and the team maintained both accuracy and medical terminology integrity. The reviewers appreciated the clarity, and my paper was accepted without major revisions.",
-      name: "DR. HIROSHI TANAKA",
-      designation: "Clinical Practitioner",
-      organization: "Japan",
-      flag: "/images/editing-and-translation/japan.png",
+      id: "substantive",
+      title: "Substantive Editing",
+      icon: "/images/editing-and-translation/Substantive-Editing.png",
+      description:
+        "A deep editing process involving extensive revisions, including rewriting, reordering, and suggestions for additional content. It ensures the manuscript meets journal expectations and significantly enhances readability.",
     },
     {
-      image:
-        "/images/editing-and-translation/british-journal-of-clinical-pharmacology.png",
-      quote:
-        "The editorial team not only refined my writing but also ensured consistency in style and tone across my thesis. Their guidance improved readability and strengthened my arguments significantly.",
-      name: "ANANYA RAO",
-      designation: "PhD Scholar",
-      organization: "India",
-      flag: "/images/editing-and-translation/flag.png",
+      id: "line",
+      title: "Line Editing",
+      icon: "/images/editing-and-translation/Line-Editing.png",
+      description:
+        "Concentrates on sentence- and paragraph-level clarity, enhancing tone, readability, and logical flow. It involves eliminating jargon, refining word choice, and smoothing language usage without a complete rewrite.",
+    },
+    {
+      id: "copyediting",
+      title: "Copyediting",
+      icon: "/images/editing-and-translation/Copyediting.png",
+      description:
+        "Ensures correctness, consistency, and accuracy in grammar, vocabulary, punctuation, and syntax. Copyediting also involves checking for style guide compliance (APA, AMA, Chicago, Vancouver, etc.) and maintaining uniform terminology.",
+    },
+    {
+      id: "content",
+      title: "Content Editing",
+      icon: "/images/editing-and-translation/Content-Editing.png",
+      description:
+        "Examines the accuracy, consistency, and relevance of content, ensuring the document fulfills its purpose. May include fact-checking, refining arguments, and restructuring for better readability and impact.",
+    },
+    {
+      id: "technical",
+      title: "Technical Editing",
+      icon: "/images/editing-and-translation/Technical-Editing.png",
+      description:
+        "Reviews documents for technical accuracy, completeness, and adherence to industry or scientific standards. Ensures terminology, data, and references meet field-specific requirements.",
+    },
+    {
+      id: "manuscript",
+      title: "Manuscript Editing",
+      icon: "/images/editing-and-translation/Manuscript-Editing.png",
+      description:
+        "Tailored for academic authors submitting to journals or book publishers, focusing on both language use and publisher guidelines. Helps improve acceptance chances in high-impact journals.",
+    },
+    {
+      id: "structural",
+      title: "Structural Editing",
+      icon: "/images/editing-and-translation/Structural-Editing.png",
+      description:
+        "Assesses and reshapes the document structure, ensuring that ideas are logically organized and presented in a coherent way. May involve reordering chapters, sections, or arguments for maximum impact.",
+    },
+    {
+      id: "formatting",
+      title: "Formatting & Style Editing",
+      icon: "/images/editing-and-translation/Formatting-Style-Editing.png",
+      description: (
+        <>
+          Ensures journal-specific{" "}
+          <Link
+            href="/services/publication-support/journal-manuscript-formatting-services/"
+            className="text-blue-700 no-underline hover:text-blue-800"
+          >
+            formatting
+          </Link>{" "}
+          (references, tables, figures, word limits) and style guide compliance
+          (APA, AMA, Vancouver, MLA, Chicago).
+        </>
+      ),
+    },
+    {
+      id: "reviewer",
+      title: "Reviewer Response Editing",
+      icon: "/images/editing-and-translation/Reviewer-Response-Editing.png",
+      description:
+        "Helps authors refine and polish responses to peer reviewer comments. Improves clarity, professionalism, and alignment with journal requirements.",
+    },
+    {
+      id: "plagiarism",
+      title: "Plagiarism Check & Ethical Editing",
+      icon: "/images/editing-and-translation/Plagiarism-Check-Ethical-Editing.png",
+      description: (
+        <>
+          Provides{" "}
+          <Link
+            href="/services/publication-support/plagiarism-services/"
+            className="text-blue-700 no-underline hover:text-blue-800"
+          >
+            plagiarism
+          </Link>{" "}
+          screening and ensures manuscripts meet ethical publishing standards by
+          improving originality, paraphrasing, and citation accuracy.
+        </>
+      ),
+    },
+    {
+      id: "developmental",
+      title: "Developmental Editing",
+      icon: "/images/editing-and-translation/Developmental-Editing.png",
+      description:
+        "Focuses on the structure and content of a document, helping authors develop their manuscript from initial concept to complete draft. This type of editing addresses big-picture aspects such as organization, coherence, research argument strength, and overall narrative flow.",
+    },
+    {
+      id: "language",
+      title: "Language Polishing (ESL Support)",
+      icon: "/images/editing-and-translation/Language-Polishing-ESL-Support.png",
+      description:
+        "Specialized service for non-native English authors, improving clarity, grammar, and flow while retaining author intent.",
     },
   ];
-
   // Store an object tracking open/close state for each FAQ ID independently
   const [openStates, setOpenStates] = useState<Record<number, boolean>>({
     1: true, // Default open as shown in your image mockup
@@ -170,6 +284,7 @@ const EditingAndTranslationPageClient = () => {
     },
   ];
 
+
   // Split items evenly into two clean layout lists for desktop grids
   const leftColumnFaqs = faqData.filter((item) => item.id <= 5);
   const rightColumnFaqs = faqData.filter((item) => item.id > 5);
@@ -225,11 +340,11 @@ const EditingAndTranslationPageClient = () => {
           {/* Paragraph */}
           <p className="text-[17px] leading-8 text-slate-700">
             Pubrica provides{" "}
-            <Link href="/academy/editing-and-translation/importance-of-editing-proofreading-manuscript-submission" className="text-[#4180A8]">
+            <Link href="/academy/editing-and-translation/importance-of-editing-proofreading-manuscript-submission" className="text-blue-700">
               manuscript editing
             </Link>{" "}
             and academic translation services tailored for healthcare,
-            <Link href="/subject-matter-experts/life-sciences" className="text-[#4180A8]">
+            <Link href="/subject-matter-experts/life-sciences" className="text-blue-700">
               {" "}
               life sciences
             </Link>
@@ -248,7 +363,7 @@ const EditingAndTranslationPageClient = () => {
                 <span className="mr-4 mt-2 text-red-600 text-lg">•</span>
 
                 <p className="text-[17px] leading-8 text-slate-700">
-                  <strong>{item.title}:</strong> {item.text}
+                  {item.title}: {item.text}
                 </p>
               </li>
             ))}
@@ -288,7 +403,7 @@ const EditingAndTranslationPageClient = () => {
           </h2>
           <p className="text-[14px] text-slate-600 max-w-5xl mb-12 leading-relaxed">
             At Pubrica, we provide end-to-end{" "}
-            <Link href="/academy/editing-and-translation/manuscript-editing-process-steps" className="text-[#4080A8] hover:underline font-normal">
+            <Link href="/academy/editing-and-translation/manuscript-editing-process-steps" className="text-blue-700  font-normal">
               Editing and Translation Services
             </Link>{" "}
             designed to refine, enhance, and globalize your content. From
@@ -421,13 +536,13 @@ const EditingAndTranslationPageClient = () => {
               Each type of editing serves a unique purpose and is suited to
               different stages of the writing and publication process. By
               selecting the appropriate kind of editing, authors can
-              significantly enhance the quality of their manuscripts and
-              increase their chances of achieving their publication, research
-              visibility, and communication objectives.
+              significantly enhance the quality of their manuscripts and increase
+              their chances of achieving their publication, research visibility,
+              and communication objectives.
             </p>
           </div>
 
-          {/* 4-Column Card Grid Component with internal drop alignment items */}
+          {/* 4-Column Card Grid Component */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-start">
             {editingTypesList.map((type) => {
               const isOpen = !!openCards[type.id];
@@ -469,9 +584,9 @@ const EditingAndTranslationPageClient = () => {
                   {/* Dynamic Interior Accordion Text Block */}
                   {isOpen && (
                     <div className="p-4 bg-white animate-fadeIn">
-                      <p className="text-[13px] text-slate-700 leading-relaxed font-normal">
+                      <div className="text-[13px] text-slate-700 leading-relaxed font-normal">
                         {type.description}
-                      </p>
+                      </div>
                     </div>
                   )}
                 </div>
@@ -481,26 +596,26 @@ const EditingAndTranslationPageClient = () => {
         </div>
 
         <style jsx>{`
-          .truncate-two-lines {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
+        .truncate-two-lines {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-2px);
           }
-          @keyframes fadeIn {
-            from {
-              opacity: 0;
-              transform: translateY(-2px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
+          to {
+            opacity: 1;
+            transform: translateY(0);
           }
-          .animate-fadeIn {
-            animation: fadeIn 0.2s ease-out forwards;
-          }
-        `}</style>
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.2s ease-out forwards;
+        }
+      `}</style>
       </section>
       {/* SECTION 5: TRANSLATION SERVICES */}
       <section className="py-7 px-4 max-w-7xl mx-auto">
@@ -512,7 +627,7 @@ const EditingAndTranslationPageClient = () => {
             Pubrica delivers professional academic and scientific translation
             services designed to ensure accuracy, cultural adaptation, and
             publication-ready quality. Our translators are{" "}
-            <Link href="/subject-matter-experts" className="text-teal-600 font-medium underline">
+            <Link href="/subject-matter-experts" className="text-blue-700 font-medium ">
               subject-matter experts
             </Link>{" "}
             who refine content to meet the standards of international journals,
@@ -771,7 +886,7 @@ const EditingAndTranslationPageClient = () => {
       />
 
       {/* Insights Section inserted cleanly right below FAQ (live from Academy) */}
-      <InsightsSection/>
+      <InsightsSection />
     </div>
   );
 };
