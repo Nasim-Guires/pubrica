@@ -181,17 +181,12 @@ export default function CaseReportDetails() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {caseReportTypes.map((item) => {
             const Icon = item.icon;
-            const isSelected = activeCard === item.id;
 
             return (
               <Link
                 key={item.id}
                 href={item.url}
-                onClick={() => setActiveCard(item.id)}
-                className={`p-6 rounded-lg transition-all duration-200 cursor-pointer flex flex-col ${isSelected
-                    ? "bg-[#e2edf3] border border-sky-200 shadow-sm"
-                    : "bg-white border border-slate-100 hover:shadow-md"
-                  }`}
+                className="p-6 rounded-lg transition-all duration-200 cursor-pointer flex flex-col bg-white border border-slate-100 hover:bg-[#e2edf3] hover:border-sky-200 hover:shadow-md"
               >
                 <div className="flex items-start gap-3 mb-3">
                   <div className="w-10 h-10 rounded-full bg-[#fef3c7] flex items-center justify-center shrink-0">
@@ -220,7 +215,7 @@ export default function CaseReportDetails() {
 
         <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-8">
           The case report is the initial method of{" "}
-          <Link href="/services/scientific-communication" className="text-sky-600 hover:underline">
+          <Link href="/services/scientific-communication/" className="text-blue-600">
             medical communication
           </Link>
           . It is a way of developing new knowledge through clinical practices.
@@ -271,12 +266,12 @@ export default function CaseReportDetails() {
         <div className="mt-12 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
           <p>
             At Pubrica, our expert professionals create clinical{" "}
-            <Link href="/services/physician-writing-services/case-report" className="text-sky-600 hover:underline">
+            <Link href="/academy/case-report/radiology-case-report-guide/" className="text-blue-600">
               case reports
             </Link>{" "}
             in a well-organised manner, following a standard format. Our
             experienced{" "}
-            <Link href="/services/medical-writing" className="text-sky-600 hover:underline">
+            <Link href="/services/research-services/medical-writing/" className="text-blue-600">
               medical writing
             </Link>{" "}
             team accurately categorizes your case and designs a study according to

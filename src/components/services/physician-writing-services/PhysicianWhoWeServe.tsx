@@ -9,6 +9,7 @@ interface AudienceCard {
 }
 
 export const PhysicianWhoWeServe: React.FC = () => {
+  
   const IMG = "/images/physician-writing-services";
   const audiences: AudienceCard[] = [
     {
@@ -58,7 +59,7 @@ export const PhysicianWhoWeServe: React.FC = () => {
         <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed mb-8 max-w-6xl">
           Pubrica's physician writing service supports clinicians from clinical
           content development to{" "}
-          <Link href="/services/publication-support/journal-submission" className="text-[#3b82f6] hover:underline">
+          <Link href="/services/publication-support/journal-submission" className="text-blue-600">
             journal submission
           </Link>
           , while providing medically accurate, compliant, and publication-ready

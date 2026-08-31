@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Plus, Minus } from "lucide-react";
 import CommonUploadButton from "@/components/common/CommonUploadButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 // Data structure for the "What We do" accordion based on screenshots
 const whatWeDoServices = [
@@ -186,19 +187,11 @@ export default function CaseReportWritingService() {
       {/* ========================================================= */}
       {/* 1. HERO BANNER                                            */}
       {/* ========================================================= */}
-      <section className="w-full bg-gradient-to-r from-[#1b2f2d] via-[#153a35] to-[#0a1e1b] py-7 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto border border-white/30 p-8 sm:p-12 text-center shadow-lg">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-            Case Report Writing Service for Journal Publication
-          </h1>
-          <p className="text-sm sm:text-base text-white/90 leading-relaxed max-w-4xl mx-auto">
-            Crafting case reports that meet journal-specific standards is
-            intricate. Pubrica's case report writing service ensures clinically
-            relevant, well-structured manuscripts aligned with CARE guidelines
-            and editorial expectations.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Case Report Writing Service for Journal Publication"
+        description="Crafting case reports that meet journal-specific standards is intricate. Pubrica's case report writing service ensures clinically relevant, well-structured manuscripts aligned with CARE guidelines and editorial expectations."
+        headingAs="h1"
+      />
 
       {/* ========================================================= */}
       {/* 2. MAIN INTRO SECTION                                     */}
@@ -220,21 +213,21 @@ export default function CaseReportWritingService() {
           <div className="lg:col-span-7 space-y-6 text-sm sm:text-base text-slate-700 leading-relaxed">
             <p>
               Transform unique clinical encounters into structured,{" "}
-              <Link href="/services/physician-writing-services/case-report" className="text-sky-600 hover:underline">
+              <Link href="/insights/sample-work/epilepsy-after-subarachnoid-hemorrhage-case-report/" className="text-blue-600">
                 high-impact case reports
               </Link>
               . Enhance your publication profile with ethically prepared,
               journal- compliant case reports based on rare, educational, or
               challenging clinical experiences. Our{" "}
-              <Link href="/services/physician-writing-services/case-report" className="text-sky-600 hover:underline">
+              <Link href="/services/research-services/medical-writing/" className="text-blue-600 ">
                 medical case report writing
               </Link>{" "}
               team ensures your case conforms to{" "}
-              <a href="https://www.care-statement.org/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">
+              <a href="https://www.care-statement.org/checklist" target="_blank" rel="noopener noreferrer" className="text-blue-600 ">
                 CARE
               </a>
               ,{" "}
-              <a href="https://www.icmje.org/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">
+              <a href="https://www.icmje.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 ">
                 ICMJE
               </a>
               , and target journal guidelines, while emphasising diagnostic
@@ -243,7 +236,7 @@ export default function CaseReportWritingService() {
 
             <p>
               With a focus on clarity, structure, and compliance, our{" "}
-              <Link href="/services/physician-writing-services/case-report" className="text-sky-600 hover:underline">
+              <Link href="/insights/sample-work/box-pulmonary-vein-isolation-pectus-excavatum/" className="text-blue-600 ">
                 clinical case report writing service
               </Link>{" "}
               helps clinicians and researchers convert patient encounters into
@@ -253,7 +246,7 @@ export default function CaseReportWritingService() {
 
             <p>
               At Pubrica, we provide{" "}
-              <Link href="/services/physician-writing-services/case-report" className="text-sky-600 hover:underline">
+              <Link href="/services/physician-writing-services/case-report-writing/how-to-write-a-case-report/" className="text-blue-600">
                 case report writing for journal publication
               </Link>{" "}
               to help researchers and healthcare professionals document and
@@ -303,23 +296,23 @@ export default function CaseReportWritingService() {
             <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
               We provide dedicated research assistant services to help
               clinicians, researchers, and scholars prepare high-quality{" "}
-              <Link href="/services/physician-writing-services/case-report" className="text-sky-600 hover:underline">
+              <Link href="/insights/sample-work/paliperidone-lai-induced-parkinsonism-case-report/" className="text-blue-600 ">
                 case reports
               </Link>{" "}
               for{" "}
-              <Link href="/services/publication-support/journal-submission" className="text-sky-600 hover:underline">
+              <Link href="/services/publication-support/journal-submission/" className="text-blue-600 ">
                 journal submission
               </Link>{" "}
               and academic purposes. Our clinical{" "}
-              <Link href="/services/physician-writing-services/case-report" className="text-sky-600 hover:underline">
+              <Link href="/services/physician-writing-services/case-report/" className="text-blue-600 ">
                 case report
               </Link>{" "}
               writers assist with{" "}
-              <Link href="/services/physician-writing-services/literature-search-and-citation" className="text-sky-600 hover:underline">
+              <Link href="/services/physician-writing-services/literature-search-and-citation/" className="text-blue-600 ">
                 literature search
               </Link>
               , reference collection, data validation, structuring the report,{" "}
-              <Link href="/services/research-services/scientific-writing" className="text-sky-600 hover:underline">
+              <Link href="/services/research-services/scientific-writing/" className="text-blue-600 ">
                 scientific writing
               </Link>
               , editing, formatting, and aligning with specific journal

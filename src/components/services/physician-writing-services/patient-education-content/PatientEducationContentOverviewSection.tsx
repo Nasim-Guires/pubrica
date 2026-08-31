@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function PatientEducationContentOverviewSection() {
   return (
@@ -10,19 +11,11 @@ export default function PatientEducationContentOverviewSection() {
       className="w-full bg-white text-slate-800 font-sans"
     >
       {/* Top Banner Header */}
-      <div className="w-full bg-gradient-to-r from-[#0d211d] via-[#12302a] to-[#0d211d] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-5xl mx-auto border border-white/40 p-6 sm:p-10 rounded-sm">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4 leading-snug">
-            Patient Education Content Service: Bridging Clinical Knowledge and
-            Patient Understanding
-          </h1>
-          <p className="text-sm sm:text-base md:text-lg text-slate-200 font-normal max-w-4xl mx-auto leading-relaxed">
-            Simplify complex medical information into patient-centred content
-            that boosts understanding, decision-making, and engagement across
-            all platforms.
-          </p>
-        </div>
-      </div>
+      <HeroBanner
+        title="Patient Education Content Service: Bridging Clinical Knowledge and Patient Understanding"
+        description="Simplify complex medical information into patient-centred content that boosts understanding, decision-making, and engagement across all platforms."
+        headingAs="h1"
+      />
 
       {/* Main Content Body */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
@@ -45,7 +38,7 @@ export default function PatientEducationContentOverviewSection() {
               Our{" "}
               <Link
                 href="/academy/patient-education/effective-patient-education-content-guide/"
-                className="text-[#0a66bc] hover:underline font-medium"
+                className="text-blue-600"
               >
                 patient education content
               </Link>{" "}
@@ -54,8 +47,8 @@ export default function PatientEducationContentOverviewSection() {
               and medical device manufacturers seeking to improve patient
               understanding and engagement. Our content meets{" "}
               <Link
-                href="/services/scientific-communication"
-                className="text-[#0a66bc] hover:underline font-medium"
+                href="/services/scientific-communication/"
+                className="text-blue-600"
               >
                 medical communication
               </Link>{" "}
@@ -75,19 +68,19 @@ export default function PatientEducationContentOverviewSection() {
                   </strong>{" "}
                   Content based on trusted international and national clinical
 
-                  guidelines such as   <Link href="https://www.who.int/" className="text-[#0a66bc] ">
+                  guidelines such as   <Link href="https://www.who.int/" className="text-blue-600">
                     WHO
                   </Link>
                   ,
-                  <Link href="https://www.nice.org.uk/process/pmg6/resources/the-guidelines-manual-pdf-2007970804933" className="text-[#0a66bc] ">
+                  <Link href="https://www.nice.org.uk/process/pmg6/resources/the-guidelines-manual-pdf-2007970804933" className="text-blue-600">
                     NICE
                   </Link>
                   ,{" "}
-                  <Link href="/https://www.cdc.gov/index.html" className="text-[#0a66bc] ">
+                  <Link href="/https://www.cdc.gov/index.html" className="text-blue-600">
                     CDC
                   </Link>
                   , and{" "}
-                  <Link href="https://www.icmr.gov.in/" className="text-[#0a66bc]">
+                  <Link href="https://www.icmr.gov.in/" className="text-blue-600">
                     ICMR
                   </Link>
                   , ensuring
@@ -111,7 +104,7 @@ export default function PatientEducationContentOverviewSection() {
                     Regulatory Standards:
                   </strong>{" "}
                   Complies with HIPAA,{" "}
-                  <Link href="https://www.fda.gov/" className="text-[#0a66bc] hover:underline">
+                  <Link href="https://www.fda.gov/" className="text-blue-600">
                     FDA
                   </Link>, and EU MDR
                   standards for patient communications.
@@ -163,8 +156,8 @@ export default function PatientEducationContentOverviewSection() {
             <p className="text-base text-slate-700 leading-relaxed">
               At Pubrica, we create{" "}
               <Link
-                href="/services/patient-education-content/breast-cancer-treatment"
-                className="text-[#0a66bc] hover:underline font-medium"
+                href="/services/patient-education-content/breast-cancer-treatment/"
+                className="text-blue-600"
               >
                 patient education content
               </Link>{" "}
@@ -174,8 +167,8 @@ export default function PatientEducationContentOverviewSection() {
               engaging educational content that promotes patient understanding
               and engagement. Here’s how we support{" "}
               <Link
-                href="/services/patient-education-content"
-                className="text-[#0a66bc] hover:underline font-medium"
+                href="/services/patient-education-content/"
+                className="text-blue-600"
               >
                 patient education
               </Link>
@@ -199,8 +192,8 @@ export default function PatientEducationContentOverviewSection() {
                 </strong>{" "}
                 We tailor our{" "}
                 <Link
-                  href="/services/patient-education-content"
-                  className="text-[#0a66bc] hover:underline font-medium"
+                  href="/insights/sample-work/insomnia/"
+                  className="text-blue-600"
                 >
                   patient education
                 </Link>{" "}

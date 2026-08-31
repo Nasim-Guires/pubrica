@@ -286,13 +286,13 @@ export const PhysicianServicesList: React.FC<PhysicianServicesListProps> = ({
         </div>
 
         {/* Segment Closing Summary Footnote Paragraph */}
-        <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed text-justify max-w-6xl mt-6 border-t border-gray-100 pt-6">
+        {/* <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed text-justify max-w-6xl mt-6 border-t border-gray-100 pt-6">
           Pubrica's physician writing support services are designed to enhance
           the efficiency and impact of medical research and publication efforts,
           ensuring that healthcare professionals can focus on their primary
           responsibilities while we handle the complexities of research
           documentation and dissemination.
-        </p>
+        </p> */}
       </div>
     </section>
   );
