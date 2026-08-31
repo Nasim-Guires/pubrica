@@ -70,7 +70,7 @@ export const ResearchServicesSections: React.FC = () => {
               Protocol Development:
             </strong>{" "}
             PICO/
-            <Link href="/academy/research-services/spider-framework-research-design-guide" className="text-sky-600 hover:underline">
+            <Link href="/academy/research-services/spider-framework-research-design-guide" className="text-blue-600">
               SPIDER framework
             </Link>{" "}
             design for clinical, academic, and policy research.

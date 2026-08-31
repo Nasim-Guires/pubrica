@@ -44,8 +44,8 @@ export default function CommonTestimonial({
 
   // Pagination count calculation
   const dotCount = mobile
-    ? Math.min(3, testimonials.length)
-    : Math.ceil(testimonials.length / 2);
+    ? testimonials.length
+    : Math.max(1, testimonials.length - 1);
 
   const next = () => {
     setCurrent((prev) => (prev >= maxSlide ? 0 : prev + 1));
@@ -55,13 +55,13 @@ export default function CommonTestimonial({
     setCurrent((prev) => (prev === 0 ? maxSlide : prev - 1));
   };
 
-  // Autoplay timer handling
+  // Autoplay timer set to 6 seconds (6000ms)
   useEffect(() => {
     if (testimonials.length <= 1) return;
 
     const interval = setInterval(() => {
       setCurrent((prev) => (prev >= maxSlide ? 0 : prev + 1));
-    }, 5000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [maxSlide, testimonials.length]);
@@ -154,19 +154,13 @@ export default function CommonTestimonial({
       {/* Pagination Squares / Dots */}
       <div className="flex justify-center items-center gap-2 mt-8">
         {Array.from({ length: dotCount }).map((_, index) => {
-          const isActive = mobile
-            ? Math.floor((current / maxSlide) * (dotCount - 1)) === index
-            : Math.floor(current / 2) === index;
+          // Direct 1:1 mapping ensures the dot index always updates precisely when `current` changes
+          const isActive = current === index;
 
           return (
             <button
               key={index}
-              onClick={() => {
-                const targetSlide = mobile
-                  ? Math.round((index / (dotCount - 1)) * maxSlide)
-                  : index * 2;
-                setCurrent(Math.min(targetSlide, maxSlide));
-              }}
+              onClick={() => setCurrent(index)}
               aria-label={`Go to slide page ${index + 1}`}
               className={`h-3 w-3 border border-[#0b3b2c] transition-all ${
                 isActive ? "bg-[#0b3b2c]" : "bg-white"

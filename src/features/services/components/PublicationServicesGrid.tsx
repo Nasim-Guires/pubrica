@@ -182,45 +182,39 @@ export default function PublicationServicesGrid() {
 
         {/* Dynamic Card Grid Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {SERVICES_GRID_DATA.map((service, index) => {
-            const isHighlighted = service.title === "Post-Acceptance Service";
-
-            return (
-              <Link
-                key={index}
-                href={service.url}
-                className={`flex gap-3.5 p-4 rounded-lg border border-slate-200/80 shadow-sm transition-all duration-300 hover:shadow-md hover:translate-y-[-2px] group block ${
-                  isHighlighted ? "bg-[#e3eff4]" : "bg-white"
-                }`}
-              >
-                {/* Visual Icon Container matched to reference layout */}
-                <div className="flex-shrink-0 pt-0.5">
-                  <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-[#fef5d9] shadow-sm overflow-hidden">
-                    <img
-                      src={service.iconUrl}
-                      alt={service.title}
-                      className="w-6 h-6 object-contain"
-                    />
-                  </div>
+          {SERVICES_GRID_DATA.map((service, index) => (
+            <Link
+              key={index}
+              href={service.url}
+              className="flex gap-3.5 p-4 rounded-lg bg-white border border-slate-200/80 shadow-sm transition-all duration-300 hover:bg-[#e3eff4] hover:shadow-md hover:translate-y-[-2px] group block"
+            >
+              {/* Visual Icon Container matched to reference layout */}
+              <div className="flex-shrink-0 pt-0.5">
+                <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-[#fef5d9] shadow-sm overflow-hidden">
+                  <img
+                    src={service.iconUrl}
+                    alt={service.title}
+                    className="w-6 h-6 object-contain"
+                  />
                 </div>
+              </div>
 
-                {/* Content Block */}
-                <div className="flex flex-col justify-start">
-                  <h3 className="text-[14px] font-bold text-[#083a50] group-hover:text-[#3b82f6] transition-colors leading-snug mb-1">
-                    {service.title}
-                  </h3>
-                  <p className="text-[12px] text-slate-600 leading-relaxed">
-                    {service.description}{" "}
-                    {service.linkText && (
-                      <span className="text-[#3b82f6] group-hover:underline font-medium">
-                        {service.linkText}
-                      </span>
-                    )}
-                  </p>
-                </div>
-              </Link>
-            );
-          })}
+              {/* Content Block */}
+              <div className="flex flex-col justify-start">
+                <h3 className="text-[14px] font-bold text-[#083a50] group-hover:text-[#3b82f6] transition-colors leading-snug mb-1">
+                  {service.title}
+                </h3>
+                <p className="text-[12px] text-slate-600 leading-relaxed">
+                  {service.description}{" "}
+                  {service.linkText && (
+                    <span className="text-blue-700">
+                      {service.linkText}
+                    </span>
+                  )}
+                </p>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

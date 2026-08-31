@@ -122,7 +122,7 @@ export default function ResearchArticleTypesAccordion() {
               href="https://www.consort-statement.org/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sky-600 hover:underline"
+              className="text-blue-600"
             >
               CONSORT
             </a>
@@ -131,7 +131,7 @@ export default function ResearchArticleTypesAccordion() {
               href="https://www.strobe-statement.org/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sky-600 hover:underline"
+              className="text-blue-600"
             >
               STROBE
             </a>
@@ -140,7 +140,7 @@ export default function ResearchArticleTypesAccordion() {
               href="https://www.prisma-statement.org/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sky-600 hover:underline"
+              className="text-blue-600"
             >
               PRISMA
             </a>
@@ -149,7 +149,7 @@ export default function ResearchArticleTypesAccordion() {
               href="https://arriveguidelines.org/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sky-600 hover:underline"
+              className="text-blue-600 "
             >
               ARRIVE
             </a>{" "}

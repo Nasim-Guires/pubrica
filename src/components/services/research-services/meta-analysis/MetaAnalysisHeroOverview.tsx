@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function MetaAnalysisHeroOverview() {
   return (
@@ -11,50 +12,11 @@ export default function MetaAnalysisHeroOverview() {
       style={{ width: "100%", fontFamily: "Arial, Helvetica, sans-serif" }}
     >
       {/* 1. Hero Banner */}
-      <div
-        style={{
-          backgroundColor: "#16282b", // Dark teal banner background
-          padding: "50px 20px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "1000px",
-            width: "100%",
-            border: "1px solid rgba(255, 255, 255, 0.8)",
-            padding: "36px 24px",
-            textAlign: "center",
-            boxSizing: "border-box",
-          }}
-        >
-          <h1
-            style={{
-              color: "#ffffff",
-              fontSize: "2.25rem",
-              fontWeight: "700",
-              margin: "0 0 16px 0",
-              letterSpacing: "0.5px",
-            }}
-          >
-            Meta-Analysis Service
-          </h1>
-          <p
-            style={{
-              color: "#ffffff",
-              fontSize: "1.05rem",
-              lineHeight: "1.5",
-              margin: 0,
-              fontWeight: "400",
-            }}
-          >
-            Pubrica’s expert team helps busy researchers craft precise
-            meta-analysis with statistical accuracy and expert review.
-          </p>
-        </div>
-      </div>
+      <HeroBanner
+        title="Meta-Analysis Service"
+        description="Pubrica’s expert team helps busy researchers craft precise meta-analysis with statistical accuracy and expert review."
+        headingAs="h1"
+      />
 
       {/* 2. Overview Content Section */}
       <div className="bg-slate-100 py-6 px-4 sm:px-6 lg:px-8 text-slate-900">
@@ -65,7 +27,7 @@ export default function MetaAnalysisHeroOverview() {
               {/* Main Heading */}
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a2f2c] leading-tight mb-4">
                 Meta-Analysis Services for Life Sciences, Pharma, and Research:
-                Streamlining Your Path to Publication 
+                Streamlining Your Path to Publication
               </h2>
 
               {/* Subheading */}
@@ -80,14 +42,14 @@ export default function MetaAnalysisHeroOverview() {
                 conducting thorough,{" "}
                 <Link
                   href="/services/research-services/systematic-review"
-                  className="text-sky-600 hover:underline font-medium"
+                  className="text-blue-600"
                 >
                   systematic reviews
                 </Link>{" "}
                 and{" "}
                 <Link
                   href="/services/research-services/meta-analysis"
-                  className="text-sky-600 hover:underline font-medium"
+                  className="text-blue-600"
                 >
                   meta-analysis
                 </Link>{" "}
@@ -96,7 +58,7 @@ export default function MetaAnalysisHeroOverview() {
                 peer-reviewed medical literature, use{" "}
                 <Link
                   href="/academy/meta-analysis/meta-analysis-statistical-considerations"
-                  className="text-sky-600 hover:underline font-medium"
+                  className="text-blue-600"
                 >
                   meta-analysis
                 </Link>{" "}
@@ -116,7 +78,7 @@ export default function MetaAnalysisHeroOverview() {
                     comprehensive{" "}
                     <Link
                       href="/academy/meta-analysis/meta-analysis-services-for-clinical-and-healthcare-research"
-                      className="text-sky-600 hover:underline font-medium"
+                      className="text-blue-600"
                     >
                       meta-analysis
                     </Link>{" "}

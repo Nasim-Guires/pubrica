@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Poppins } from "next/font/google";
 
+
 // Initialize Poppins font
 const poppins = Poppins({
     subsets: ["latin"],
@@ -17,6 +18,7 @@ export interface BannerProps {
     description: React.ReactNode;
     bulletPoints?: string[];
     ctaLink?: string;
+    showQuoteButton?: boolean; // <-- Make sure this line is saved
 }
 
 export default function ServiceBanner({
@@ -42,7 +44,6 @@ export default function ServiceBanner({
                         priority
                     />
                 </div>
-
                 {/* Dynamic Text Content */}
                 <div className="space-y-4 max-w-3xl flex flex-col items-center md:items-start">
                     {/* Heading (> 16px across all screens) */}

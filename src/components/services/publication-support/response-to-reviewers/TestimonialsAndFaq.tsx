@@ -1,4 +1,5 @@
 "use client"
+import CommonTestimonial from "@/components/common/CommonTestimonials";
 import CommonFAQ from "@/components/common/FAQ";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
@@ -21,36 +22,33 @@ interface FAQItem {
 }
 
 // ================= MOCK DATA =================
-const TESTIMONIALS: Testimonial[] = [
+const testimonialsData = [
   {
-    id: 1,
-    quote:
-      '"Pubrica\'s reviewer response service saved my article. The experts reworded my explanations and helped me defend my methodology convincingly. My paper is now accepted in the Journal of Clinical Oncology (Scopus-indexed)."',
-    author: "DR. MEENA R.,",
-    role: "Oncology Researcher",
-    journal: "Journal of Clinical Oncology",
-    journalImage:
+    image:
       "/images/publication-support/responding-to-reviewers/journal-of-clinical-oncology.jpg",
+    quote:
+      "Pubrica's reviewer response service saved my article. The experts reworded my explanations and helped me defend my methodology convincingly. My paper is now accepted in the Journal of Clinical Oncology (Scopus-indexed).",
+    name: "DR. MEENA R.",
+    designation: "Oncology Researcher",
+    organization: "Journal of Clinical Oncology",
   },
   {
-    id: 2,
-    quote:
-      "\"The reviewer comments were overwhelming. Pubrica's team simplified the entire process of revision. Their scientific justification and formatting skills were impressive. I'm happy to say my paper was successfully published in The Lancet Infectious Diseases. \"",
-    author: "ARUN J., PHD",
-    role: "Scholar in Biotechnology",
-    journal: "The Lancet Infectious Diseases",
-    journalImage:
+    image:
       "/images/publication-support/responding-to-reviewers/the-lancet-of-infectious-disease.jpg",
+    quote:
+      "The reviewer comments were overwhelming. Pubrica's team simplified the entire process of revision. Their scientific justification and formatting skills were impressive. I'm happy to say my paper was successfully published in The Lancet Infectious Diseases.",
+    name: "ARUN J., PHD",
+    designation: "Scholar in Biotechnology",
+    organization: "The Lancet Infectious Diseases",
   },
   {
-    id: 3,
-    quote:
-      '"Our clinical manuscript had multiple reviewer rounds, but Pubrica supported us through each revision. The manuscript is now published in the Indian Journal of Ophthalmology."',
-    author: "DR. NIRMAL A.,",
-    role: "Senior Consultant Ophthalmologist",
-    journal: "Indian Journal of Ophthalmology",
-    journalImage:
+    image:
       "/images/publication-support/responding-to-reviewers/v1-indian-journal-of-ophthalmology_thumb.jpg",
+    quote:
+      "Our clinical manuscript had multiple reviewer rounds, but Pubrica supported us through each revision. The manuscript is now published in the Indian Journal of Ophthalmology.",
+    name: "DR. NIRMAL A.",
+    designation: "Senior Consultant Ophthalmologist",
+    organization: "Indian Journal of Ophthalmology",
   },
 ];
 
@@ -103,60 +101,15 @@ export default function TestimonialsAndFaq() {
     );
   };
 
-  const mobileItem = TESTIMONIALS[activeIndex];
-  const desktopItems = [
-    TESTIMONIALS[activeIndex],
-    TESTIMONIALS[(activeIndex + 1) % TESTIMONIALS.length],
-  ];
 
   return (
     <div className="w-full bg-[#f6f8f8] font-sans text-slate-800">
       {/* ================= TESTIMONIALS SECTION ================= */}
-      <section className="pt-5 pb-6 px-4 max-w-6xl mx-auto">
-        {/* Top Button */}
-        <div className="text-center mb-6">
-         <GetFreeQuoteButton/>
-        </div>
-
-        {/* Heading & Intro */}
-        <div className="max-w-4xl mx-auto text-left mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1e4a42] mb-3">
-            Testimonials
-          </h2>
-          <p className="text-xs md:text-sm text-slate-700 leading-relaxed">
-            Discover how Pubrica&apos;s response to reviewer comments service
-            has helped researchers successfully navigate reviewer feedback and
-            secure publication in top-tier journals. Here&apos;s what our
-            clients say:
-          </p>
-        </div>
-
-        {/* Testimonial Cards Container */}
-        <div className="grid grid-cols-1 gap-6 max-w-5xl mx-auto mb-6 md:hidden">
-          <TestimonialCard item={mobileItem} />
-        </div>
-        <div className="hidden md:grid grid-cols-2 gap-6 max-w-5xl mx-auto mb-6">
-          {desktopItems.map((item) => (
-            <TestimonialCard key={`${activeIndex}-${item.id}`} item={item} />
-          ))}
-        </div>
-
-        {/* Carousel Indicator Square Dots */}
-        <div className="flex justify-center items-center gap-2 pt-2">
-          {TESTIMONIALS.map((item, index) => (
-            <button
-              key={item.id}
-              type="button"
-              aria-label={`Show testimonial ${index + 1}`}
-              onClick={() => setActiveIndex(index)}
-              className={`w-2.5 h-2.5 rounded-xs cursor-pointer ${activeIndex === index
-                ? "bg-[#1e4a42]"
-                : "border border-[#1e4a42] bg-white"
-                }`}
-            />
-          ))}
-        </div>
-      </section>
+      <CommonTestimonial
+        title="Testimonials"
+        description="Discover how Pubrica's response to reviewer comments service has helped researchers successfully navigate reviewer feedback and secure publication in top-tier journals. Here's what our clients say:"
+        testimonials={testimonialsData}
+      />
 
       {/* ================= FAQ ACCORDION SECTION ================= */}
       <section className="py-6 px-4 max-w-6xl mx-auto border-t border-slate-200/60">

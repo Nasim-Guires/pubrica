@@ -194,7 +194,7 @@ export default function PhysicianWhoWeServeSection() {
             Pubrica&apos;s{" "}
             <Link
               href="/services/physician-writing-services/original-research-article/young-researchers-guide-original-research-article/"
-              className="text-sky-600 hover:underline font-medium"
+              className="text-blue-600"
             >
               original research article writing service
             </Link>{" "}
