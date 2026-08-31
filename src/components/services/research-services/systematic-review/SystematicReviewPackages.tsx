@@ -155,8 +155,8 @@ export default function SystematicReviewPackages() {
           <>
             At Pubrica, we offer comprehensive and customizable{" "}
             <Link
-              href="/services/research-services/systematic-review"
-              className="text-blue-600 underline"
+              href="/academy/systematic-review/prospero-protocol-registration-guide/"
+              className="text-blue-600"
             >
               Systematic Review
             </Link>{" "}
@@ -164,8 +164,8 @@ export default function SystematicReviewPackages() {
             researchers, academicians, clinicians, and institutions. Our expert team
             ensures your{" "}
             <Link
-              href="/services/research-services/systematic-review"
-              className="text-blue-600 underline"
+              href="/academy/systematic-review/qualitative-data-analysis-using-maxqda-guide/"
+              className="text-blue-600"
             >
               systematic review
             </Link>{" "}
@@ -174,7 +174,7 @@ export default function SystematicReviewPackages() {
         }
         packages={packages}
       />
-   
+
 
       {/* SECTION 4: CTA Button */}
       <div style={{ textAlign: "center", marginBottom: "50px" }}>
@@ -182,36 +182,14 @@ export default function SystematicReviewPackages() {
       </div>
 
       {/* SECTION 5: Add-on Services */}
-      <section
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "0 20px",
-        }}
-      >
-        <h3
-          style={{
-            fontSize: "1.25rem",
-            fontWeight: "700",
-            color: "#0f2c3a",
-            marginBottom: "16px",
-          }}
-        >
+      <section className="mx-auto max-w-[1100px] px-5 py-2">
+        <h3 className="mb-2 text-xl font-bold text-[#0f2c3a]">
           Add-on Services:
         </h3>
 
-        <ul
-          style={{
-            margin: "0 0 0 20px",
-            padding: 0,
-            listStyleType: "disc",
-            lineHeight: "1.8",
-            color: "#374151",
-            fontSize: "0.925rem",
-          }}
-        >
+        <ul className="ml-5 list-disc text-[0.925rem] leading-snug text-gray-700">
           {addOnServices.map((service, index) => (
-            <li key={index} style={{ marginBottom: "6px" }}>
+            <li key={index} className="mb-1">
               {service}
             </li>
           ))}

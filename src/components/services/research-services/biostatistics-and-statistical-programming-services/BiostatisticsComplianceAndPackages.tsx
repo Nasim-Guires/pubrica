@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Plus, Minus, ArrowRightCircle } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
+import CommonPackages, { PackageItem } from "@/components/common/CommonPackages";
 
 const IMG =
   "/images/research-services/biostatistics-and-statistical-programming-service/";
@@ -82,29 +84,27 @@ interface PackageCard {
   turnaroundTime: string;
 }
 
-const packageCards: PackageCard[] = [
+const packages: PackageItem[] = [
   {
-    id: "basic",
-    iconSrc: "/images/editing-and-translation/basic-pacakge.png",
+    icon: "/images/editing-and-translation/basic-pacakge.png",
     title: "Basic",
     subtitle: "Data Preparation & Cleaning",
-    bgColor: "bg-[#e2ece9]",
-    targetAudience: "Ideal for early-stage studies and exploratory research.",
+    idealFor: "Ideal for early-stage studies and exploratory research.",
     includes: [
       "Data import, cleaning, and transformation",
       "Basic descriptive statistical analysis",
       "Dataset structuring to CDISC SDTM format",
       "Data validation and QC checks",
     ],
-    turnaroundTime: "5–10 business days",
+    turnaround: "5–10 business days",
+    cardBgColor: "#e2ece9",
+    titleColor: "#0e3b38",
   },
   {
-    id: "standard",
-    iconSrc: "/images/publication-support/art-work-preparation/S.png",
+    icon: "/images/publication-support/art-work-preparation/S.png",
     title: "Standard",
     subtitle: "Statistical Programming & Analysis",
-    bgColor: "bg-[#d8c3df]",
-    targetAudience:
+    idealFor:
       "Best for Phase I–III clinical trials and academic research projects.",
     includes: [
       "SDTM and ADaM dataset creation",
@@ -113,16 +113,15 @@ const packageCards: PackageCard[] = [
       "Quality control and double programming",
       "Regulatory-compliant reporting",
     ],
-    turnaroundTime: "10–20 business days",
+    turnaround: "10–20 business days",
+    cardBgColor: "#d8c3df",
+    titleColor: "#6b2d82",
   },
   {
-    id: "premium",
-    iconSrc: "/images/editing-and-translation/pro.webp",
+    icon: "/images/editing-and-translation/pro.webp",
     title: "Premium",
     subtitle: "End-To-End Biostatistical Support",
-    bgColor: "bg-[#e2c7a0]",
-    targetAudience:
-      "Comprehensive package for regulatory submission readiness.",
+    idealFor: "Comprehensive package for regulatory submission readiness.",
     includes: [
       "Complete data management & programming lifecycle",
       "SDTM, ADaM, Define.xml generation",
@@ -130,15 +129,15 @@ const packageCards: PackageCard[] = [
       "Submission-ready outputs for FDA, EMA, PMDA",
       "Continuous support until regulatory feedback is addressed",
     ],
-    turnaroundTime: "Based on project scope",
+    turnaround: "Based on project scope",
+    cardBgColor: "#e2c7a0",
+    titleColor: "#805826",
   },
   {
-    id: "custom",
-    iconSrc: `${IMG}c-box-icons.png`,
+    icon: `${IMG}c-box-icons.png`,
     title: "Custom",
     subtitle: "Tailored Solutions",
-    bgColor: "bg-[#fcd2d1]",
-    targetAudience:
+    idealFor:
       "Designed for specialized projects or multi-country clinical trials.",
     includes: [
       "Customized programming scripts and algorithms",
@@ -146,7 +145,9 @@ const packageCards: PackageCard[] = [
       "Therapeutic area-specific statistical methods",
       "On-demand reporting and visualization",
     ],
-    turnaroundTime: "Based on project scope",
+    turnaround: "Based on project scope",
+    cardBgColor: "#fcd2d1",
+    titleColor: "#9a4300",
   },
 ];
 
@@ -259,143 +260,52 @@ export default function BiostatisticsComplianceAndPackages() {
       {/* ========================================================= */}
       {/* 2. SAMPLE WORK BANNER                                     */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#edf8f5] rounded-xl p-6 sm:p-8 md:p-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center border border-emerald-100 shadow-xs">
-          {/* Left Sample Image */}
-          <div className="md:col-span-5 relative w-full h-64 sm:h-72 rounded-lg overflow-hidden shadow-md">
-            <Image
-              src={`${IMG}Biostatistics-and-Statistical-Programming-Services-Sample-Work.png`}
-              alt="Biostatistics sample work document review"
-              fill
-              className="object-contain bg-white"
-            />
-          </div>
-
-          {/* Right Copy and Action Buttons */}
-          <div className="md:col-span-7 space-y-6">
-            <div className="space-y-3">
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 leading-snug">
-                Biostatistics and Statistical Programming Services Sample Work
-              </h3>
-              <div className="pt-1">
-                <Link
-                  href="/insights/sample-work"
-                  className="inline-block bg-black hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm px-6 py-2.5 rounded-full transition-colors"
-                >
-                  Discover More
-                </Link>
-              </div>
-            </div>
-
-            <div className="space-y-3 pt-2">
-              <h4 className="text-lg sm:text-xl font-bold text-slate-900">
-                Download the full Report Now
-              </h4>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Explore our biostatistical programming sample work, meticulously
-                developed to comply with regulatory standards (e.g., FDA, EMA,
-                PMDA), CDISC guidelines (SDTM, ADaM), and clinical trial
-                timelines, ensuring accurate, submission-ready outputs for
-                academic, clinical, and pharmaceutical research.
-              </p>
-              <div className="pt-2">
-                <Link
-                  href="/insights/sample-work"
-                  className="inline-block bg-black hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm px-6 py-2.5 rounded-full transition-colors"
-                >
-                  Discover More
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <PubricaSampleWorkCard
+        bookCoverImage={{
+          src: `${IMG}Biostatistics-and-Statistical-Programming-Services-Sample-Work.png`,
+          alt: "Biostatistics sample work document review",
+          width: 600,
+          height: 400,
+        }}
+        sections={[
+          {
+            heading:
+              "Biostatistics and Statistical Programming Services Sample Work",
+            headingTag: "h3",
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work/assessing-evidence-based-practice-in-physical-therapy/",
+            },
+          },
+          {
+            heading: "Download the full Report Now",
+            headingTag: "h3",
+            descriptionSegments: [
+              {
+                text: "Explore our biostatistical programming sample work, meticulously developed to comply with regulatory standards (e.g., FDA, EMA, PMDA), CDISC guidelines (SDTM, ADaM), and clinical trial timelines, ensuring accurate, submission-ready outputs for academic, clinical, and pharmaceutical research.",
+              },
+            ],
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work",
+            },
+          },
+        ]}
+        footerDisclaimerSegments={[]}
+      />
       {/* ========================================================= */}
       {/* 3. BIOSTATISTICAL PROGRAMMING SERVICE - OUR PACKAGES       */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
-        <div className="space-y-3 mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
-            Biostatistical Programming Service – Our Packages
-          </h2>
-          <p className="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
-            At Pubrica, we offer flexible and scalable biostatistical
-            programming packages designed to meet the diverse needs of
-            pharmaceutical companies, CROs, academic researchers, and life
-            science organizations. Our packages are tailored to support projects
-            at every stage of the clinical research lifecycle, from study design
-            to regulatory submission.
-          </p>
-        </div>
-
-        {/* 4 Pastel Package Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {packageCards.map((pkg) => (
-            <div
-              key={pkg.id}
-              className={`${pkg.bgColor} rounded-sm p-6 shadow-sm flex flex-col justify-between border border-black/5 hover:shadow-md transition-shadow duration-300`}
-            >
-              <div className="space-y-5">
-                {/* Header Badge & Title */}
-                <div className="flex items-start gap-3">
-                  <div className="relative w-10 h-10 shrink-0">
-                    <Image
-                      src={pkg.iconSrc}
-                      alt={`${pkg.title} package`}
-                      width={40}
-                      height={40}
-                      className="w-10 h-10 object-contain"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg text-slate-900 leading-tight">
-                      {pkg.title}
-                    </h3>
-                    <p className="text-xs text-slate-700 font-medium leading-tight mt-0.5">
-                      {pkg.subtitle}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Target Audience */}
-                <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal">
-                  {pkg.targetAudience}
-                </p>
-
-                {/* Includes List */}
-                <div className="space-y-3 pt-2">
-                  <div className="flex items-center gap-2 font-bold text-xs sm:text-sm text-slate-900">
-                    <ArrowRightCircle className="w-4 h-4 shrink-0 text-slate-800" />
-                    <span>Includes:</span>
-                  </div>
-
-                  <ul className="space-y-2 text-xs text-slate-800">
-                    {pkg.includes.map((inc, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="font-bold">•</span>
-                        <span className="leading-snug">{inc}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* Turnaround Time Footer */}
-              <div className="pt-6 mt-6 border-t border-black/10 flex items-start gap-2 text-xs sm:text-sm font-bold text-slate-900">
-                <ArrowRightCircle className="w-4 h-4 shrink-0 mt-0.5 text-slate-800" />
-                <span>
-                  Turnaround Time:{" "}
-                  <span className="font-semibold">{pkg.turnaroundTime}</span>
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Global CTA Button */}
-        <div className="pt-5 flex justify-center">
-          <GetFreeQuoteButton />
+      <section className=" sm:px-8 w-full bg-white">
+        <div className="max-w-5xl mx-auto flex flex-col ">
+          <CommonPackages
+            title="Biostatistical Programming Service – Our Packages"
+            description="At Pubrica, we offer flexible and scalable biostatistical programming packages designed to meet the diverse needs of pharmaceutical companies, CROs, academic researchers, and life science organizations. Our packages are tailored to support projects at every stage of the clinical research lifecycle, from study design to regulatory submission."
+            packages={packages}
+          />
+          <div className="mt-0">
+            <GetFreeQuoteButton />
+          </div>
         </div>
       </section>
     </div>

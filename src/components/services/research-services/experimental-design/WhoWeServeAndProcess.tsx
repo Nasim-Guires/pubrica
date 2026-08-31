@@ -180,8 +180,8 @@ export default function WhoWeServeAndProcess() {
           <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed max-w-5xl">
             At Pubrica, our{" "}
             <Link
-              href="/services/research-services/experimental-design"
-              className="text-sky-600 hover:underline font-medium"
+              href="/academy/experimental-design/experimental-research-design/"
+              className="text-blue-600"
             >
               experimental design
             </Link>{" "}
@@ -272,8 +272,8 @@ export default function WhoWeServeAndProcess() {
             <p className="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
               At Pubrica, we believe a strong{" "}
               <Link
-                href="/services/research-services/experimental-design"
-                className="text-sky-600 hover:underline font-medium"
+                href="/services/research-services/experimental-design/benefits-of-experimental-plan-in-research-and-design/"
+                className="text-blue-600"
               >
                 experimental plan
               </Link>{" "}

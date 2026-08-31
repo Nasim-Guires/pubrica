@@ -1,5 +1,6 @@
 "use client";
 
+import HeroBanner from "@/components/common/HeroBanner";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -37,18 +38,11 @@ export default function GrantWritingOverviewSection() {
       {/* ========================================================= */}
       {/* 1. TOP HIGHLIGHT BANNER                                   */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#0d2a25] py-6 px-4 sm:px-6 lg:px-8 text-center text-white">
-        <div className="max-w-5xl mx-auto border border-white/60 p-6 sm:p-8 rounded-sm space-y-3">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight">
-            Turn Grant Challenges into Funding Success
-          </h2>
-          <p className="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed max-w-4xl mx-auto font-light">
-            Low success rates, tough compliance rules, and high competition make
-            grant writing difficult. Pubrica’s expert team helps you win with
-            clear, persuasive, and agency-aligned proposals.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Turn Grant Challenges into Funding Success"
+        description="Low success rates, tough compliance rules, and high competition make grant writing difficult. Pubrica’s expert team helps you win with clear, persuasive, and agency-aligned proposals."
+        headingAs="h2"
+      />
 
       {/* ========================================================= */}
       {/* 2. MAIN CONTENT SECTION                                   */}
@@ -100,7 +94,7 @@ export default function GrantWritingOverviewSection() {
                       {item.highlightText && item.highlightUrl && (
                         <Link
                           href={item.highlightUrl}
-                          className="text-sky-600  font-medium"
+                          className="text-blue-600"
                         >
                           {item.highlightText}
                         </Link>

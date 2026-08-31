@@ -33,7 +33,7 @@ export default function OriginalResearchArticle() {
             <div className="text-slate-700 leading-relaxed space-y-4 text-sm sm:text-base">
               <p>
                 <Link
-                  href="/services/physician-writing-services/original-research-article"
+                  href="/academy/original-research-article/tidier-sr-reporting-research/"
                   className="text-blue-600 "
                 >
                   Original research articles

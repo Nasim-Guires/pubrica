@@ -26,11 +26,6 @@ const page = () => {
       <ExperimentalDesignServicesAccordion />
       <WhoWeServeAndProcess />
       <ExperimentalDesignsAndPackages />
-      <CommonTestimonial
-        title="Testimonials"
-        description="Learn how Pubrica's experimental design service has empowered researchers to develop methodologically sound, ethically compliant, and publication-ready studies that advance scientific knowledge and boost their academic impact. Here is what our clients say:"
-        testimonials={experimentalDesignTestimonials}
-      />
       <CommonFAQ
         title="Frequently Asked Questions – Experimental Design Service"
         faqs={experimentalDesignFAQ}

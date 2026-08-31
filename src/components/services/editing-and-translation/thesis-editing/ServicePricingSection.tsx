@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { ArrowRightCircle, Minus, Plus } from "lucide-react";
 import CommonPackages, { PackageItem } from "@/components/common/CommonPackages";
+import Link from "next/link";
 
 interface PricingTier {
   title: string;
@@ -116,9 +117,9 @@ export default function ServicePricingSection() {
         packages={packages}
       />
       {/* CTA Banner Bar */}
-      <div className="w-full bg-[#B70000] text-white font-bold text-center py-3.5 px-4 rounded-lg shadow-md mb-12 text-sm sm:text-base tracking-wide">
+      <Link href="/order-now/" className="w-full bg-[#B70000] text-white font-bold text-center py-3.5 px-4 rounded-lg shadow-md mb-12 text-sm sm:text-base tracking-wide">
         Starts from $ 180 for 1000 Words
-      </div>
+      </Link>
 
       {/* 2. Accordions / Feature Cards Section */}
       {/* items-start prevents adjacent row cards from expanding/stretching */}

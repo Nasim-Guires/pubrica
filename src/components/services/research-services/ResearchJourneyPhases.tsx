@@ -110,12 +110,19 @@ export const ResearchJourneyPhases: React.FC = () => {
             heading: "Download the full Report Now",
             descriptionSegments: [
               {
-                text: "Discover our research service sample work, expertly developed to support robust methodologies, institutional compliance, and impactful scientific outcomes.",
+                text: "Discover our ",
+              },
+              {
+                text: "research service",
+                url: "/academy/research-services/how-to-use-and-assess-qualitative-research-methods/",
+              },
+              {
+                text: " sample work, expertly developed to support robust methodologies, institutional compliance, and impactful scientific outcomes.",
               },
             ],
             button: {
               label: "Discover More",
-              url: "/uploads/research-services/03-03-2026-RESEARCH-SERVICES-1.pdf",
+              url: "/insights/sample-work/",
             },
           },
         ]}

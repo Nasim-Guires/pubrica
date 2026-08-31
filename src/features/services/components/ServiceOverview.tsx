@@ -277,7 +277,6 @@ export default function ServiceOverview() {
                   />
                 </div>
                 {/* Foreground Overlapping Image */}
-                <div className="absolute bottom-0 right-0 w-2/3 h-2/3 rounded-2xl overflow-hidden shadow-lg border-4 border-white"></div>
               </div>
             </div>
           </div>

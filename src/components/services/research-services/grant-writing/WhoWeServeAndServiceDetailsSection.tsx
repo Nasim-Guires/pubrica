@@ -24,11 +24,11 @@ interface FeatureCard {
   id: string;
   title: string;
   iconSrc: string;
-  description: string;
+  description: React.ReactNode;
   highlightText?: string;
   needFromYou: string[];
   youllGet: string[];
-  howItWorksSteps: StepItem[];
+  howItWorksSteps: { step: number; text: string }[];
 }
 
 const GW_IMG = "/images/research-services/grant-writing";
@@ -93,8 +93,24 @@ const serviceDetails: FeatureCard[] = [
     id: "writing-dev",
     title: "Grant Proposal Writing and Development",
     iconSrc: `${GW_IMG}/Grant-Proposal-Writing-and-Development.png`,
-    description:
-      "Our grant proposal writing services are tailored to meet the specific needs of your research project. We craft compelling proposals that clearly articulate novelty, significance, and impact while aligning with funder priorities.",
+    description: (
+      <>
+        Our grant proposal writing services are tailored to meet the specific
+        needs of your research project. We craft compelling proposals that
+        clearly articulate novelty, significance, and impact while aligning with
+        funder priorities.{" "}
+        <Link
+          href="/academy/grant-writing/communicating-research-impact-grant-applications/"
+          className="text-blue-600"
+        >
+          grant writing
+        </Link>{" "}
+        specialists work closely with you and your supervisors to shape and
+        refine your proposal. If you already have a specific grant call in mind,
+        we adapt the proposal to meet the selection criteria and compliance
+        requirements.
+      </>
+    ),
     highlightText: "grant writing",
     needFromYou: [
       "A grant proposal outline",
@@ -160,12 +176,22 @@ const serviceDetails: FeatureCard[] = [
       },
     ],
   },
-  {
+ {
     id: "editing",
     title: "Grant Proposal Editing",
     iconSrc: `${GW_IMG}/Grant-Proposal-Editing.png`,
-    description:
-      "Our grant proposal editing experts improve clarity, coherence, and persuasiveness while ensuring alignment with funder priorities. This service is ideal for researchers seeking research grant proposal writing and editing support before submission.",
+    description: (
+      <>
+        Our grant proposal editing experts improve clarity, coherence, and persuasiveness while ensuring alignment with funder priorities. This service is ideal for researchers seeking{" "}
+        <Link
+          href="/academy/grant-writing/confidentiality-in-grant-writing-proposals/"
+          className="text-blue-600"
+        >
+          research grant proposal writing and editing
+        </Link>{" "}
+        support before submission.
+      </>
+    ),
     needFromYou: [
       "Your draft grant proposal",
       "Any reference materials (e.g., research papers or manuscripts)",
@@ -227,7 +253,7 @@ export default function WhoWeServeAndServiceDetailsSection() {
               At Pubrica, we offer tailored research{" "}
               <Link
                 href="services/research-services/grant-writing/research-grant-proposal-writing-guide"
-                className="text-sky-600 font-medium"
+                className="text-blue-600"
               >
                 grant writing services
               </Link>{" "}
@@ -383,7 +409,7 @@ export default function WhoWeServeAndServiceDetailsSection() {
                       <button
                         type="button"
                         onClick={() => toggleHowItWorks(service.id)}
-                        className="inline-flex items-center text-xs sm:text-sm font-semibold text-sky-600 hover:text-sky-800 transition-colors duration-200 hover:underline gap-1 group/link cursor-pointer"
+                        className="inline-flex items-center text-xs sm:text-sm font-semibold text-sky-600 hover:text-sky-800 transition-colors duration-200  gap-1 group/link cursor-pointer"
                       >
                         <span>See How It Works</span>
                         <span className="transition-transform duration-200 group-hover/link:translate-x-1">

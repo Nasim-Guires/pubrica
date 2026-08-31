@@ -8,7 +8,7 @@ import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCard
 interface AccordionItem {
   title: string;
   description: string;
-  link: string;
+  link?: string;
   separator?: string;
 }
 
@@ -27,7 +27,6 @@ const accordionData: AccordionSection[] = [
         title: "PRISMA",
         description:
           "(Preferred Reporting Items for Systematic Reviews and Meta-Analyses)",
-        link: "https://www.prisma-statement.org/",
       },
       {
         title: "MARS",
@@ -38,7 +37,6 @@ const accordionData: AccordionSection[] = [
         title: "MOOSE",
         description:
           "(Meta-analysis of Observational Studies in Epidemiology)",
-        link: "#",
       },
     ],
   },
@@ -50,19 +48,16 @@ const accordionData: AccordionSection[] = [
         title: "Conflict of Interest (COI) Declarations",
         description:
           "Transparent disclosure of financial or professional interests.",
-        link: "#",
       },
       {
         title: "Data Transparency & Traceability",
         description:
           "All data sources, statistical methods, and analysis tools are cited and reproducible.",
-        link: "#",
       },
       {
         title: "Journal-Specific Compliance",
         description:
           "Manuscripts are tailored to meet the formatting and ethical standards of your targeted journal (e.g., ICMJE, Elsevier, Springer).",
-        link: "#",
       },
     ],
   },
@@ -74,19 +69,16 @@ const accordionData: AccordionSection[] = [
         title: "RevMan, STATA, R (meta, metafor packages)",
         description: "for statistical accuracy",
         separator: " – ",
-        link: "#",
       },
       {
         title: "Covidence, Rayyan",
         description: "for systematic screening",
         separator: " – ",
-        link: "#",
       },
       {
         title: "GRADEpro GDT",
         description: "for evaluating the strength of evidence",
         separator: " – ",
-        link: "#",
       },
     ],
   },
@@ -97,42 +89,16 @@ export default function MetaAnalysisComplianceSection() {
   const [openIndex, setOpenIndex] = useState(-1);
 
   return (
-    <section
-      style={{
-        maxWidth: "1100px",
-        margin: "60px auto",
-        padding: "0 20px",
-        fontFamily: "Arial, sans-serif",
-      }}
-    >
-      <h2
-        style={{
-          fontSize: "2rem",
-          fontWeight: 700,
-          color: "#163D44",
-          marginBottom: "10px",
-        }}
-      >
+    <section className="max-w-[1100px] my-4 mx-auto px-5 font-sans">
+      <h2 className="text-3xl font-bold text-[#163D44] mb-1">
         Our Compliance and Guideline Standards
       </h2>
 
-      <h3
-        style={{
-          fontSize: "1.25rem",
-          color: "#163D44",
-          marginBottom: "18px",
-        }}
-      >
+      <h3 className="text-xl text-[#163D44] mb-2">
         Ensuring Scientific Integrity and Global Publication Readiness
       </h3>
 
-      <p
-        style={{
-          color: "#374151",
-          lineHeight: 1.8,
-          marginBottom: "30px",
-        }}
-      >
+      <p className="text-gray-700 leading-relaxed mb-4">
         At Pubrica, we strictly adhere to internationally recognized
         meta-analysis guidelines and ethical standards to ensure your research
         meets the highest levels of scientific accuracy, transparency, and
@@ -141,25 +107,13 @@ export default function MetaAnalysisComplianceSection() {
       </p>
 
       {accordionData.map((section, index) => (
-        <div key={section.title} style={{ marginBottom: "20px" }}>
+        <div key={section.title} className="mb-2.5">
           {/* Accordion Header Bar */}
           <button
             onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
-            style={{
-              width: "100%",
-              background: "#0d3133",
-              color: "#fff",
-              border: "none",
-              padding: "16px 20px",
-              fontSize: "18px",
-              fontWeight: 600,
-              cursor: "pointer",
-              display: "flex",
-              alignItems: "center",
-              textAlign: "left",
-            }}
+            className="w-full bg-[#0d3133] text-white border-none py-3 px-5 text-lg font-semibold cursor-pointer flex items-center text-left"
           >
-            <span style={{ marginRight: 16, fontSize: "20px", fontWeight: "bold" }}>
+            <span className="mr-4 text-xl font-bold">
               {openIndex === index ? "−" : "+"}
             </span>
             {section.title}
@@ -167,84 +121,57 @@ export default function MetaAnalysisComplianceSection() {
 
           {/* Accordion Content */}
           {openIndex === index && (
-            <div style={{ padding: "24px 0", background: "#fff" }}>
+            <div className="py-4 bg-white">
               {/* Card View Layout for Ethical Guidelines */}
               {section.type === "cards" ? (
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                    gap: "20px",
-                  }}
-                >
-                  {section.items.map((item) => (
-                    <a
-                      key={item.title}
-                      href={item.link}
-                      style={{
-                        border: "1px solid #111",
-                        borderRadius: "8px",
-                        padding: "24px 16px",
-                        textAlign: "center",
-                        textDecoration: "none",
-                        color: "inherit",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <strong
-                        style={{
-                          fontSize: "18px",
-                          marginBottom: "12px",
-                          display: "block",
-                          color: "#000",
-                        }}
+                <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-4">
+                  {section.items.map((item) => {
+                    const isMars = item.title === "MARS" && item.link;
+
+                    const CardContent = (
+                      <>
+                        <strong className="text-lg mb-2 block text-black">
+                          {item.title}
+                        </strong>
+                        <span
+                          className={`text-sm leading-snug ${isMars
+                              ? "text-blue-600"
+                              : "text-gray-600"
+                            }`}
+                        >
+                          {item.description}
+                        </span>
+                      </>
+                    );
+
+                    return isMars ? (
+                      <Link
+                        key={item.title}
+                        href={item.link!}
+                        className="group border border-black rounded-lg p-4 text-center no-underline text-inherit flex flex-col justify-center items-center hover:border-blue-600 hover:shadow-md transition-all duration-200"
                       >
-                        {item.title}
-                      </strong>
-                      <span
-                        style={{
-                          fontSize: "14px",
-                          color: item.title === "MARS" ? "#2563eb" : "#4b5563",
-                          lineHeight: 1.4,
-                        }}
+                        {CardContent}
+                      </Link>
+                    ) : (
+                      <div
+                        key={item.title}
+                        className="border border-black rounded-lg p-4 text-center flex flex-col justify-center items-center"
                       >
-                        {item.description}
-                      </span>
-                    </a>
-                  ))}
+                        {CardContent}
+                      </div>
+                    );
+                  })}
                 </div>
               ) : (
                 /* Bulleted List Layout for other sections */
-                <ul
-                  style={{
-                    margin: 0,
-                    paddingLeft: "20px",
-                    lineHeight: 2,
-                    listStyleType: "disc",
-                  }}
-                >
+                <ul className="m-0 pl-5 leading-normal list-disc">
                   {section.items.map((item) => (
-                    <li
-                      key={item.title}
-                      style={{
-                        marginBottom: "10px",
-                        color: "#cc0000", // Red color for bullets
-                      }}
-                    >
-                      <a
-                        href={item.link}
-                        style={{
-                          textDecoration: "none",
-                          color: "#1f2937",
-                        }}
-                      >
-                        <strong style={{ color: "#000" }}>{item.title}</strong>
+                    <li key={item.title} className="mb-2 text-red-600">
+                      <div className="text-gray-800 inline">
+                        <strong className="text-black">{item.title}</strong>
                         {item.separator || ": "}
                         <span>{item.description}</span>
-                      </a>
+                      </div>
                     </li>
                   ))}
                 </ul>
@@ -255,41 +182,45 @@ export default function MetaAnalysisComplianceSection() {
       ))}
 
       {/* Sample Work Section */}
-      <PubricaSampleWorkCard
-        bookCoverImage={{
-          src: "/images/research-services/meta-analysis/Meta-Analysis-Service-Sample-Work.png",
-          alt: "Meta-analysis sample work",
-          width: 320,
-          height: 320,
-        }}
-        sections={[
-          {
-            heading: "Meta-Analysis Service Sample Work",
-            button: {
-              label: "Discover More",
-              url: "/insights/sample-work",
-            },
-          },
-          {
-            heading: "Download the full Report Now",
-            descriptionSegments: [
-              { text: "Explore our meta-analysis sample work, meticulously crafted to align with journal-specific formatting, methodological rigor (e.g. " },
-              {
-                text: "PRISMA",
-                url: "https://www.prisma-statement.org/prisma-2020-checklist",
+      <div className="mt-4">
+        <PubricaSampleWorkCard
+          bookCoverImage={{
+            src: "/images/research-services/meta-analysis/Meta-Analysis-Service-Sample-Work.png",
+            alt: "Meta-analysis sample work",
+            width: 320,
+            height: 320,
+          }}
+          sections={[
+            {
+              heading: "Meta-Analysis Service Sample Work",
+              button: {
+                label: "Discover More",
+                url: "/insights/sample-work/individual-patient-data-from-randomized-trials/",
               },
-              {
-                text: ", MARS), and submission deadlines, ensuring successful academic or clinical publication.",
-              },
-            ],
-            button: {
-              label: "Discover More",
-              url: "/insights/sample-work",
             },
-          },
-        ]}
-        footerDisclaimerSegments={[]}
-      />
+            {
+              heading: "Download the full Report Now",
+              descriptionSegments: [
+                {
+                  text: "Explore our meta-analysis sample work, meticulously crafted to align with journal-specific formatting, methodological rigor (e.g. ",
+                },
+                {
+                  text: "PRISMA",
+                  url: "https://www.prisma-statement.org/prisma-2020-checklist",
+                },
+                {
+                  text: ", MARS), and submission deadlines, ensuring successful academic or clinical publication.",
+                },
+              ],
+              button: {
+                label: "Discover More",
+                url: "/insights/sample-work",
+              },
+            },
+          ]}
+          footerDisclaimerSegments={[]}
+        />
+      </div>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,27 +7,12 @@ export default function LiteratureReviewHeroAndIntroSection() {
   return (
     <div className="w-full">
       {/* --- 1. HERO BANNER --- */}
-      <section
-        aria-labelledby="hero-heading"
-        className="w-full bg-[#0d2a2a] text-white py-6 px-4 sm:px-6 lg:px-8 border-b border-emerald-950"
-      >
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="border border-white/80 rounded-lg p-6 sm:p-10 bg-white/5 backdrop-blur-sm shadow-xl">
-            <h1
-              id="hero-heading"
-              className="text-2xl sm:text-4xl font-bold tracking-tight text-white mb-4"
-            >
-              Literature Review and Gap Analyses
-            </h1>
-            <p className="text-sm sm:text-base md:text-lg text-emerald-100/90 leading-relaxed max-w-3xl mx-auto">
-              Researchers and clinicians often struggle to craft literature
-              reviews due to time constraints. Pubrica&apos;s expert team helps
-              overcome this with a thorough literature review service and
-              research gap analysis service.
-            </p>
-          </div>
-        </div>
-      </section>
+
+      <HeroBanner
+        title="Literature Review and Gap Analyses"
+        description="Researchers and clinicians often struggle to craft literature reviews due to time constraints. Pubrica's expert team helps overcome this with a thorough literature review service and research gap analysis service."
+        headingAs="h1"
+      />
 
       {/* --- 2. INTRODUCTION BLOCK (DECISION MAKING) --- */}
       <section
@@ -52,16 +38,16 @@ export default function LiteratureReviewHeroAndIntroSection() {
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                 At Pubrica, we deliver in-depth, methodologically sound{" "}
                 <Link
-                  href="/services/research-services/literature-review-and-gap"
-                  className="text-sky-600 hover:underline font-medium"
+                  href="/academy/research-services/literature-review-tips-introduction-discussion-sections/"
+                  className="text-blue-600"
                 >
                   literature review writing service
                 </Link>{" "}
                 and research gap analysis to support the development of research
                 proposals, scholarly publications,{" "}
                 <Link
-                  href="/services/research-services/systematic-review"
-                  className="text-sky-600 font-medium"
+                  href="/services/research-services/systematic-review/"
+                  className="text-blue-600"
                 >
                   systematic reviews
                 </Link>
@@ -69,7 +55,7 @@ export default function LiteratureReviewHeroAndIntroSection() {
                 experienced researchers and{" "}
                 <Link
                   href="/subject-matter-experts"
-                  className="text-sky-600 hover:underline font-medium"
+                  className="text-blue-600"
                 >
                   subject-matter experts
                 </Link>{" "}

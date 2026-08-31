@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 interface ServiceCard {
   id: string;
@@ -42,19 +43,11 @@ export default function BiostatisticsHeroAndIntroSection() {
       {/* ========================================================= */}
       {/* 1. HERO BANNER SECTION                                    */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#112320] py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto border border-white/80 p-6 sm:p-10 md:p-12 text-center space-y-4">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight leading-snug">
-            Biostatistics and Statistical Programming Services
-          </h1>
-          <p className="text-xs sm:text-sm md:text-base text-slate-200 max-w-4xl mx-auto leading-relaxed font-light">
-            Pubrica’s biostatistical programming service delivers precise data
-            analysis, advanced statistical modelling, and publication-ready
-            outputs to ensure the accuracy, reliability, and scientific
-            integrity of your research findings.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Biostatistics and Statistical Programming Services"
+        description="Pubrica’s biostatistical programming service delivers precise data analysis, advanced statistical modelling, and publication-ready outputs to ensure the accuracy, reliability, and scientific integrity of your research findings."
+        headingAs="h1"
+      />
 
       {/* ========================================================= */}
       {/* 2. INTRO SECTION (Ensure Accurate Study Outcomes)          */}
@@ -75,14 +68,14 @@ export default function BiostatisticsHeroAndIntroSection() {
                 Pubrica delivers accurate, compliant, and publication-ready{" "}
                 <Link
                   href="/services/research-services/biostatistics-and-statistical-programming-services/biostatistical-programming-framework-regulatory-research"
-                  className="text-sky-600 hover:underline font-medium"
+                  className="text-blue-600"
                 >
                   biostatistical programming
                 </Link>{" "}
                 for medical,{" "}
                 <Link
                   href="/subject-matter-experts/life-sciences"
-                  className="text-sky-600 hover:underline font-medium"
+                  className="text-blue-600"
                 >
                   life science
                 </Link>
@@ -99,7 +92,7 @@ export default function BiostatisticsHeroAndIntroSection() {
             </div>
 
             <div className="pt-2">
-             <GetFreeQuoteButton/>
+              <GetFreeQuoteButton />
             </div>
           </div>
 
@@ -140,14 +133,14 @@ export default function BiostatisticsHeroAndIntroSection() {
               expert biostatistical consulting team delivers meticulous{" "}
               <Link
                 href="/services/medical-data-collection"
-                className="text-sky-600 hover:underline font-medium"
+                className="text-blue-600"
               >
                 data collection
               </Link>
               , validation, and analysis to ensure your{" "}
               <Link
                 href="/academy/biostatistics/biostatistics-in-clinical-research-guide"
-                className="text-sky-600 hover:underline font-medium"
+                className="text-blue-600"
               >
                 research
               </Link>{" "}
