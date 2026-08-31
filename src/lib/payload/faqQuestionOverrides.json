@@ -1,0 +1,343 @@
+{
+  "publication-support/importance-of-publication-support-research": [
+    "1. What is publication support?",
+    "2. Why do researchers need publication support?",
+    "3. Who can benefit from publication support?",
+    "4. How does publication support improve journal acceptance?",
+    "5. What additional advantages does publication support provide?"
+  ],
+  "research-services/integrative-review-evidence-synthesis-research-methods": [
+    "1. What is an integrative review in research?",
+    "2. How is an integrative review different from a systematic review?",
+    "3. Why is an integrative review important for interdisciplinary research?",
+    "4. What methods are commonly used for data synthesis in an integrative review?",
+    "5. How does an integrative review help identify research gaps?"
+  ],
+  "systematic-review/prisma-guidelines-systematic-reviews-meta-analyses": [
+    "1. What does PRISMA stand for?",
+    "2. What is the main purpose of PRISMA guidelines?",
+    "3. What are the key components of the PRISMA checklist?",
+    "4. Why is PRISMA important in systematic reviews?",
+    "5. What is the difference between PRISMA 2009 and PRISMA 2020?"
+  ],
+  "grant-writing/data-management-plan-research-grant": [
+    "1. What is a Data Management Plan (DMP)?",
+    "2. Why is a DMP important in a research grant application?",
+    "3. What are the key components of a DMP?",
+    "4. What should be included in data collection planning?",
+    "5. How does a DMP support research quality and compliance?"
+  ],
+  "manuscript-editing/expert-editing-academic-publishing-manuscripts": [
+    "1. What is expert editing in academic publishing?",
+    "2. Why do researchers need expert editors?",
+    "3. What is the difference between proofreading and expert editing?",
+    "4. How does expert editing improve publication chances?",
+    "5. Do non-native English researchers need expert editing more?"
+  ],
+  "literature-review/research-keywords-google-scholar-guide": [
+    "1. What are research keywords in academic writing?",
+    "2. Why is Google Scholar used for finding research keywords?",
+    "3. How do keywords improve literature search quality?",
+    "4. What is Boolean searching in Google Scholar?",
+    "5. How can researchers identify better keywords from Google Scholar?"
+  ],
+  "literature-review/how-to-write-a-complete-literature-review-for-thesis-dissertation": [
+    "1. What is a literature review in a thesis or dissertation?",
+    "2. Why is a literature review important in academic research?",
+    "3. How do I start writing a literature review?",
+    "4. What are the main components of a literature review?",
+    "5. How many references should be included in a literature review?",
+    "6. What is the difference between a literature review and a systematic review?"
+  ],
+  "literature-review/biomedical-literature-review-reporting-guidelines": [
+    "1. What is a biomedical literature review?",
+    "2. Why are reporting guidelines important in literature reviews?",
+    "3. What is PRISMA used for?",
+    "4. What is the purpose of SANRA?",
+    "5. What does MOOSE stand for?",
+    "6. What are inclusion and exclusion criteria?",
+    "7. What is bias in a literature review?",
+    "8. What is evidence synthesis?"
+  ],
+  "systematic-review/systematic-review-vs-meta-analysis-evidence-synthesis": [
+    "1. What is the difference between a systematic review and a meta-analysis?",
+    "2. Can a systematic review be conducted without a meta-analysis?",
+    "3. Why is meta-analysis considered a high level of evidence?",
+    "4. What are the key steps involved in a systematic literature review?",
+    "5. What statistical measures are commonly used in meta-analysis?",
+    "6. What is heterogeneity in meta-analysis?",
+    "7. How does a systematic review reduce bias?"
+  ],
+  "ai-and-ml-services/systematic-review-artificial-intelligence-applications-healthcare": [
+    "1. What is Artificial Intelligence (AI) in healthcare?",
+    "2. What are the major applications of AI in healthcare?",
+    "3. How does AI improve diagnostic accuracy?",
+    "4. What is the role of machine learning in healthcare?",
+    "5. How is AI used in drug discovery?",
+    "6. What are the benefits of AI in healthcare?",
+    "7. What challenges does AI face in healthcare?",
+    "9. Can AI replace healthcare professionals?",
+    "10. What is the future of Artificial Intelligence in healthcare?"
+  ],
+  "meta-analysis/systematic-review-meta-analysis-guide-methodology": [
+    "1. What is a systematic review?",
+    "2. What is a meta-analysis?",
+    "3. Why are systematic reviews and meta-analyses important?",
+    "4. What is PRISMA in systematic reviews?",
+    "5. What is the PICO framework?",
+    "6. What databases are commonly used for literature search?",
+    "7. What is the purpose of study selection in a systematic review?"
+  ],
+  "peer-review/peer-reviewed-journals-literature-review": [
+    "1. What is a peer-reviewed journal?",
+    "2. Why are peer-reviewed journals important in a literature review?",
+    "3. How can I find peer-reviewed journal articles?",
+    "4. How do I evaluate the quality of a peer-reviewed article?",
+    "5. What is the difference between summarizing and synthesizing literature?",
+    "6. What are the common challenges when using peer-reviewed journals?",
+    "7. What are the best databases for peer-reviewed literature?"
+  ],
+  "graphical-abstract/graphic-abstracts-literature-review": [
+    "1. What is a graphic abstract?",
+    "2. Why are graphic abstracts important in scientific communication?",
+    "3. How does a graphic abstract differ from a traditional abstract?",
+    "4. What are the essential components of an effective graphic abstract?",
+    "5. Which academic disciplines commonly use graphic abstracts?",
+    "6. What are the benefits of using graphic abstracts?"
+  ],
+  "manuscript-editing/prepare-manuscript-for-scientific-editing": [
+    "1. What is manuscript preparation for scientific editing?",
+    "2. What should I check before scientific editing?",
+    "3. Why is research manuscript preparation important?",
+    "4. Can scientific editors correct scientific errors?",
+    "5. Should I follow journal guidelines before scientific editing?",
+    "6. What ethical information should be included in a manuscript?",
+    "7. How can I improve my manuscript before submitting it for editing?"
+  ],
+  "grant-writing/machine-learning-research-grant-proposals": [
+    "1. How is machine learning used in research grant proposal writing?",
+    "2. Can AI or machine learning write a complete grant proposal?",
+    "3. How does machine learning identify research gaps?",
+    "4. Can machine learning predict whether a grant proposal will be funded?",
+    "5. What are the ethical concerns of using AI in grant proposal preparation?",
+    "6. What are the benefits of using machine learning for grant proposal development?"
+  ],
+  "research-services/overcoming-academic-writing-challenges": [
+    "1. What are the biggest challenges in academic writing?",
+    "2. How is writing a research article different from writing a grant application?",
+    "3. How can researchers improve the quality of their academic writing?",
+    "4. Why is academic integrity important in research writing?",
+    "5. What role does technology play in academic writing?",
+    "6. What makes a successful grant application?",
+    "7. How can researchers overcome common academic writing challenges?"
+  ],
+  "publication-support/how-publication-support-helps-researchers": [
+    "1. What is publication support?",
+    "2. Why is manuscript preparation important in research?",
+    "3. How does publication support improve research impact?",
+    "4. What does academic publishing support include?",
+    "5. Who can benefit from publication support?"
+  ],
+  "publication-support/journal-selection-clinical-biomedical-research": [
+    "1. Why is journal selection important for research publication?",
+    "2. How do I choose the right biomedical research journal?",
+    "3. Why should I publish in an indexed journal?",
+    "4. What are the common reasons for journal rejection?",
+    "5. Which factors should researchers consider before selecting a journal?"
+  ],
+  "literature-review/literature-review-introduction-discussion": [
+    "1. What is the importance of an introduction in a literature review?",
+    "2. What is the purpose of the discussion section in a literature review?",
+    "3. What are the key elements of a good literature review introduction?",
+    "4. How can researchers improve the discussion section of a literature review?",
+    "5. What common mistakes should be avoided when writing literature review sections?"
+  ],
+  "original-research-article/publication-support-for-researchers-and-clinicians": [
+    "1. What is an original research article?",
+    "2. What is the difference between an original research article and a review article?",
+    "3. What is the standard structure of an original research article?",
+    "4. Which reporting guidelines should researchers follow when writing original research articles?",
+    "5. What are the key factors that improve the chances of publishing an original research article?"
+  ],
+  "medico-legal/medico-legal-principles-and-applications": [
+    "1. What is medico-legal practice?",
+    "2. What are medico-legal services in clinical practice?",
+    "3. Why are medico-legal reports important?",
+    "4. What is the role of forensic medicine in clinical practice?",
+    "5. Who can benefit from clinical medico-legal services?",
+    "6. What is the future of medico-legal services in healthcare?"
+  ],
+  "journal-submission/cover-letter-for-article-submission-healthcare": [
+    "1. What is the purpose of a cover letter in journal submission?",
+    "2. What information should be included in a healthcare journal cover letter?",
+    "3. How can a cover letter improve the chances of manuscript acceptance?",
+    "4. What emerging trends are influencing healthcare manuscript submission?",
+    "5. What are the common mistakes to avoid when writing a cover letter?"
+  ],
+  "grant-writing/comprehensive-grant-writing-solutions-for-researchers": [
+    "1. What are grant writing services for researchers?",
+    "2. How can professional grant writing improve funding opportunities?",
+    "3. What does a successful research grant proposal include?",
+    "4. Can Pubrica help with biomedical and healthcare research grants?",
+    "5. Why should researchers choose professional grant writing support?"
+  ],
+  "publication-support/struggling-to-publish-research": [
+    "1. Why is research publication important for researchers?",
+    "2. What are the common challenges researchers face during the publication process?",
+    "3. How can publication support services help researchers?",
+    "4. What are manuscript editing services, and why are they needed?",
+    "5. How does choosing the right journal affect research publication success?",
+    "6. What is end-to-end publication support?"
+  ],
+  "journal-selection/why-research-gets-rejected-improve-journal-acceptance": [
+    "1. Why do good research papers get rejected by journals?",
+    "2. What are the common reasons for research paper rejection?",
+    "3. How can researchers improve their chances of journal acceptance?",
+    "4. How does journal selection affect manuscript acceptance?",
+    "5. What are publication support strategies for researchers?"
+  ],
+  "systematic-review/emerging-trends-precision-medicine-systematic-review": [
+    "1. What is precision medicine?",
+    "2. What technologies are used in precision medicine?",
+    "3. What are the major clinical applications of precision medicine?",
+    "4. How does artificial intelligence support precision medicine?",
+    "5. What are the main challenges of implementing precision medicine?",
+    "6. What is the future of precision medicine?"
+  ],
+  "research-services/research-challenges-to-breakthroughs-support-solutions": [
+    "1. What are integrated research support solutions?",
+    "2. How can research consulting services help researchers and organisations?",
+    "3. Why is research methodology support important?",
+    "4. What is the role of systematic review support in research?",
+    "5. How can integrated research solutions improve research outcomes?",
+    "6. What is research project planning and execution support?",
+    "7. Who can benefit from integrated research support services?"
+  ],
+  "meta-analysis/artificial-intelligence-healthcare-systematic-review-meta-analysis": [
+    "1. What is artificial intelligence in healthcare?",
+    "2. Why are systematic reviews and meta-analyses important in AI healthcare research?",
+    "3. What are the main applications of AI in healthcare?",
+    "4. What are the benefits of using AI in healthcare?",
+    "5. What challenges limit the adoption of AI in healthcare?",
+    "6. What is the future of artificial intelligence in healthcare?"
+  ],
+  "meta-analysis/how-to-conduct-meta-analysis-prisma-2020": [
+    "1. What is a meta-analysis and why is it important in 2026?",
+    "2. What is the difference between a systematic review and a meta-analysis?",
+    "3. What are the main steps involved in conducting a meta-analysis?",
+    "4. What is the role of PRISMA 2020 in meta-analysis?",
+    "5. What is effect size calculation in meta-analysis?",
+    "6. What is a forest plot in meta-analysis?"
+  ],
+  "journal-selection/get-accepted-q1-journals-avoid-desk-rejection": [
+    "1. What is a desk rejection in journal publishing?",
+    "2. Why do Q1 journals have a high rate of desk rejection?",
+    "3. What are the most common reasons for manuscript desk rejection?",
+    "4. How can researchers improve their chances of getting accepted in Q1 journals?",
+    "5. How important is journal selection for avoiding desk rejection?"
+  ],
+  "systematic-review/meta-analysis-grade-certainty-heterogeneity-reproducibility": [
+    "1. What is a meta-analysis, and why is it important?",
+    "2. What is the GRADE approach in meta-analysis?",
+    "3. What is heterogeneity in a meta-analysis?",
+    "4. Why is reproducibility important in meta-analysis?",
+    "5. How can researchers improve the quality of a meta-analysis?",
+    "6. What are the common challenges in conducting a meta-analysis?"
+  ],
+  "publication-support/outsourced-research-support-protocol-to-publication": [
+    "1. What is outsourced research support?",
+    "2. Who can benefit from outsourced research support services?",
+    "3. What research services are commonly outsourced?",
+    "4. How does outsourced research support improve publication success?",
+    "5. How do pharmaceutical companies benefit from outsourced research support?",
+    "6. Why do CROs use outsourced research services?",
+    "7. Which technologies are used in modern research support?"
+  ],
+  "case-report/where-to-submit-case-report": [
+    "1. How do I choose the right journal for my case report?",
+    "2. Why is journal indexing important for publishing a case report?",
+    "3. Do acceptance rates matter when selecting a journal?",
+    "4. What are the most common reasons case reports are rejected?",
+    "5. What should I compare before submitting my case report to a journal?",
+    "6. How can I improve the chances of my case report being accepted?"
+  ],
+  "manuscript-editing/ophthalmology-manuscript-support": [
+    "1. What does ophthalmology manuscript support include?",
+    "2. How can manuscript support improve the publication of retina and glaucoma research?",
+    "3. Which imaging techniques are commonly included in ophthalmology research manuscripts?",
+    "4. What statistical methods are commonly used in ophthalmology studies?",
+    "5. Which reporting guidelines should ophthalmology manuscripts follow?",
+    "6. What support is available after peer review?"
+  ],
+  "peer-review/pre-submission-peer-review-service": [
+    "1. What is a pre-submission peer review service?",
+    "2. How does a mock peer review before journal submission help authors?",
+    "3. Can a pre-submission review help with desk rejection prevention?",
+    "4. What is included in an independent expert manuscript review?",
+    "5. What is a journal readiness check, and why is it important?"
+  ],
+  "case-report/case-report-submission-package-care-checklist-consent": [
+    "1. What is the CARE checklist for case reports?",
+    "2. Is informed consent required for publishing a case report?",
+    "3. How should patient information be de-identified in a case report?",
+    "4. What should be included in a case report timeline?",
+    "5. What should a case report cover letter contain?",
+    "6. What should be checked before submitting a case report?"
+  ],
+  "manuscript-editing/clinical-trial-manuscript-support": [
+    "1. What is the CONSORT Statement, and why is it important?",
+    "2. What are the ICMJE recommendations for clinical trial publications?",
+    "3. Why is CONSORT compliance required for journal submission?",
+    "4. What are the common challenges in preparing a clinical trial manuscript?",
+    "5. How can professional manuscript support improve journal acceptance?",
+    "6. What should authors check before submitting a clinical trial manuscript?"
+  ],
+  "physician-writing/ai-clinical-practice-diagnostic-accuracy-bias": [
+    "1. What is artificial intelligence (AI) in clinical practice?",
+    "2. How is the diagnostic accuracy of AI evaluated?",
+    "3. What are the main sources of bias in clinical AI?",
+    "4. Why is high-quality evidence important before implementing AI in healthcare?",
+    "5. What are the biggest challenges to adopting AI in clinical practice?",
+    "6. Which reporting guidelines support high-quality AI research in healthcare?"
+  ],
+  "peer-review/ai-in-peer-review-icmje-2026": [
+    "1. What are the ICMJE 2026 AI recommendations?",
+    "2. Can peer reviewers use AI to review manuscripts?",
+    "3. Why is confidentiality important when using AI for peer review?",
+    "4. Do authors need to disclose their use of AI?",
+    "5. Can AI replace human peer reviewers?",
+    "6. What should authors do before submitting a manuscript?"
+  ],
+  "journal-selection/choose-right-journal-predatory-checks": [
+    "1. How do I choose the right journal for my research?",
+    "2. What does Q1 mean in journal rankings?",
+    "3. How can I check whether a journal is indexed in Scopus or Web of Science?",
+    "4. How can I identify a predatory journal?",
+    "5. Is a Q1 journal always the best choice for my research?",
+    "6. What factors should I compare before submitting a manuscript?"
+  ],
+  "manuscript-editing/icmje-2026-recommendations-author-checklist": [
+    "1.\tWhat are the ICMJE 2026 Recommendations?",
+    "2.\tWhat are the major changes in the ICMJE 2026 author guidelines?",
+    "3.\tWhat do the ICMJE AI publishing guidelines say about using AI?",
+    "4.\tWhat are the ICMJE data access requirements?",
+    "5.\tWhat is ICMJE conflict of interest disclosure?",
+    "6.\tDo authors need to disclose AI use in a manuscript?",
+    "7.\tCan AI-generated content be used as a reference?"
+  ],
+  "scientific-writing-academy/ai-disclosure-research-publisher-policy-guide": [
+    "1. Why is AI disclosure important in academic publishing?",
+    "2. Where should AI use be disclosed in a manuscript?",
+    "3. Does AI-assisted language editing need to be disclosed?",
+    "4. Can AI tools be listed as authors of a research paper?",
+    "5. How should AI-generated images be disclosed?",
+    "6. Can peer reviewers upload manuscripts to generative AI tools?"
+  ],
+  "systematic-review/retracted-studies-systematic-review-screening": [
+    "1. What are retracted studies in a systematic review?",
+    "2. Why should researchers screen systematic reviews for retracted studies?",
+    "3. What is the Retraction Watch Database?",
+    "4. When should researchers check for retractions?",
+    "5. What should researchers do if a study included in a meta-analysis is retracted?"
+  ]
+}

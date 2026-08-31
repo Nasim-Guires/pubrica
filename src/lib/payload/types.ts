@@ -54,6 +54,16 @@ export interface LexicalNode {
   colSpan?: number;
   rowSpan?: number;
   headerState?: number;
+  /**
+   * Synthetic field used only by the renderer's FAQ-recovery pass. Some
+   * migrated posts lost their FAQ question text, keeping only the answer
+   * paragraphs — see faqQuestionOverrides.json. When a recovered question
+   * list is supplied and its length matches the answer-paragraph run, that
+   * run is collapsed into one of these nodes instead of rendering as a wall
+   * of unlabeled paragraphs.
+   */
+  faqTitle?: string;
+  faqItems?: { question: string; answerNodes: LexicalNode[] }[];
 }
 
 export interface LexicalContent {

@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { LexicalContent, LexicalNode, PayloadMedia, PayloadPost } from "./types";
 import { mediaUrl } from "./client";
 import ImageLightboxGrid from "@/components/insight/ImageLightboxGrid";
+import FAQAccordion from "@/components/insight/FAQAccordion";
 
 const FORMAT_BOLD = 1;
 const FORMAT_ITALIC = 2;
@@ -460,6 +461,20 @@ function renderNode(node: LexicalNode, key: number): React.ReactNode {
       );
     }
 
+    case "faqAccordionFixed": {
+      if (!node.faqItems || node.faqItems.length === 0) return null;
+      return (
+        <FAQAccordion
+          key={key}
+          title={node.faqTitle || "Frequently Asked Questions"}
+          items={node.faqItems.map((item) => ({
+            question: item.question,
+            answer: <>{item.answerNodes.map((n, i) => renderNode(n, i))}</>,
+          }))}
+        />
+      );
+    }
+
     case "quote":
       return (
         <blockquote
@@ -535,8 +550,64 @@ function getBodyChildren(content?: LexicalContent | null, title?: string): Lexic
   return children;
 }
 
-export function LexicalRenderer({ content, title }: { content?: LexicalContent | null; title?: string }) {
-  const children = getBodyChildren(content, title);
+/**
+ * Some migrated posts lost their FAQ question text during the WordPress →
+ * Payload migration (their original questions apparently lived in an
+ * Elementor accordion widget's attributes, not the rich-text stream that got
+ * carried over) — the content is left as a "Frequently Asked Questions"
+ * heading followed by a run of unlabeled answer paragraphs. `faqQuestions`,
+ * when supplied, is the same-order question list recovered from the live
+ * pubrica.com page (see faqQuestionOverrides.json) — real text, not
+ * generated. Only applied when the counts line up exactly and the section
+ * doesn't already have real per-question headings, so a mismatched or
+ * already-fine post is left untouched. Runs once at the top level only: this
+ * heading never appears nested inside a paragraph/list in practice.
+ */
+function fixBrokenFaqSection(children: LexicalNode[], faqQuestions?: string[]): LexicalNode[] {
+  if (!faqQuestions || faqQuestions.length === 0) return children;
+
+  const idx = children.findIndex(
+    (n) => n.type === "heading" && /frequently asked|^faq/i.test(headingText(n))
+  );
+  if (idx === -1) return children;
+
+  let end = children.length;
+  for (let i = idx + 1; i < children.length; i++) {
+    if (children[i].type === "heading" && children[i].tag === "h2") {
+      end = i;
+      break;
+    }
+  }
+
+  const section = children.slice(idx + 1, end);
+  if (section.some((n) => n.type === "heading")) return children; // already has real questions
+
+  const answers = section.filter((n) => n.type === "paragraph");
+  if (answers.length !== faqQuestions.length) return children; // recovered list doesn't line up — leave as-is
+
+  const faqNode: LexicalNode = {
+    type: "faqAccordionFixed",
+    faqTitle: headingText(children[idx]),
+    faqItems: faqQuestions.map((question, i) => ({
+      question,
+      answerNodes: [answers[i]],
+    })),
+  };
+
+  return [...children.slice(0, idx), faqNode, ...children.slice(end)];
+}
+
+export function LexicalRenderer({
+  content,
+  title,
+  faqQuestions,
+}: {
+  content?: LexicalContent | null;
+  title?: string;
+  /** Recovered FAQ question text for posts whose migrated content is missing it — see fixBrokenFaqSection. */
+  faqQuestions?: string[];
+}) {
+  const children = fixBrokenFaqSection(getBodyChildren(content, title), faqQuestions);
   if (children.length === 0) return null;
   return <div>{renderChildren(children)}</div>;
 }
