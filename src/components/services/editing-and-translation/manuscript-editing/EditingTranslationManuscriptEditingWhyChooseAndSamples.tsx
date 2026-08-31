@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import ExpertsSection, { Expert } from "@/components/common/ExpertsSection";
 
 interface WhyChooseItem {
   id: string;
@@ -12,17 +13,17 @@ interface WhyChooseItem {
   iconAlt: string;
 }
 
-interface Expert {
-  id: string;
-  name: string;
-  degree: string;
-  institution: string;
-  experience: string;
-  papersEdited: string;
-  avatarSrc: string;
-  flagSrc: string;
-  flagAlt: string;
-}
+// interface Expert {
+//   id: string;
+//   name: string;
+//   degree: string;
+//   institution: string;
+//   experience: string;
+//   papersEdited: string;
+//   avatarSrc: string;
+//   flagSrc: string;
+//   flagAlt: string;
+// }
 
 export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
   () => {
@@ -107,39 +108,41 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
       {
         id: "dr-arjun-mehta",
         name: "Dr. Arjun Mehta",
-        degree: "PhD in Clinical Research",
+        title: "PhD in Clinical Research",
         institution: "All India Institute of Medical Sciences, India",
         experience: "5+ Years of Experience",
         papersEdited: "600+ Papers Edited",
-        avatarSrc:
-          "/images/editing-and-translation/manuscript-editing/Dr-arjun-mehta.png",
-        flagSrc: "/images/editing-and-translation/manuscript-editing/india.png",
-        flagAlt: "India Flag",
+        avatarUrl: "/images/editing-and-translation/manuscript-editing/Dr-arjun-mehta.png",
+        flagUrl: "/images/editing-and-translation/manuscript-editing/india.png",
+        bio: "Dr. Mehta has 5+ years of experience providing professional manuscript editing for clinical research manuscripts, improving readability, scientific accuracy, and journal compliance.",
+        expertise: "Clinical trials, cardiology, oncology, patient-reported outcomes",
+        journals: "The Lancet, JAMA, BMJ, Clinical Trials",
       },
       {
         id: "dr-kavita-reddy",
         name: "Dr. Kavita Reddy",
-        degree: "PhD in Biomedical Sciences",
+        title: "PhD in Biomedical Sciences",
         institution: "University of Cambridge, UK",
         experience: "6+ Years of Experience",
         papersEdited: "750+ Papers Edited",
-        avatarSrc:
-          "/images/editing-and-translation/manuscript-editing/kavita-reddy-.png",
-        flagSrc:
-          "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
-        flagAlt: "UK Flag",
+        avatarUrl: "/images/editing-and-translation/manuscript-editing/kavita-reddy-.png",
+        flagUrl: "/images/editing-and-translation/manuscript-editing/uk-flag-.png",
+        bio: "Dr. Reddy specializes in biomedical manuscript editing, assisting authors in presenting complex research clearly while maintaining scientific integrity and meeting high-impact journal standards.",
+        expertise: "Molecular biology, immunology, genetics, translational medicine",
+        journals: "Nature Communications, Cell, PLOS Biology, Journal of Experimental Medicine",
       },
       {
         id: "dr-sarah-thompson",
         name: "Dr. Sarah Thompson",
-        degree: "Master's in Molecular Biology",
+        title: "Master's in Molecular Biology",
         institution: "Harvard University, USA",
         experience: "4+ Years of Experience",
         papersEdited: "550+ Papers Edited",
-        avatarSrc:
-          "/images/editing-and-translation/manuscript-editing/Dr.-Sarah-Thompson.png",
-        flagSrc: "/images/editing-and-translation/scientific-editing/usa-.png",
-        flagAlt: "USA Flag",
+        avatarUrl: "/images/editing-and-translation/manuscript-editing/Dr.-Sarah-Thompson.png",
+        flagUrl: "/images/editing-and-translation/scientific-editing/usa-.png",
+        bio: "Dr. Thompson focuses on manuscript editing for molecular biology research, helping authors enhance precision, clarity, and overall manuscript quality for peer-reviewed publications.",
+        expertise: "Molecular biology, genetics, protein biochemistry, cell signalling",
+        journals: "Molecular Cell, EMBO Journal, Journal of Molecular Biology, Scientific Reports",
       },
     ];
 
@@ -159,7 +162,7 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
               At Pubrica, we provide best{" "}
               <Link
                 href="/services/editing-and-translation/manuscript-editing/top-benefits-of-manuscript-editing-services"
-                className="text-sky-600 font-medium"
+                className="text-blue-600"
               >
                 manuscript editing services
               </Link>{" "}
@@ -227,8 +230,8 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
                 <button
                   onClick={() => setActiveTab("manuscript")}
                   className={`py-2 px-4 font-semibold text-sm sm:text-base transition-colors rounded-t-md ${activeTab === "manuscript"
-                      ? "bg-blue-100 text-blue-700 border-b-2 border-blue-600"
-                      : "text-slate-600 hover:text-slate-900"
+                    ? "bg-blue-100 text-blue-700 border-b-2 border-blue-600"
+                    : "text-slate-600 hover:text-slate-900"
                     }`}
                 >
                   Manuscript Format
@@ -236,8 +239,8 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
                 <button
                   onClick={() => setActiveTab("table")}
                   className={`py-2 px-4 font-semibold text-sm sm:text-base transition-colors rounded-t-md ${activeTab === "table"
-                      ? "bg-blue-100 text-blue-700 border-b-2 border-blue-600"
-                      : "text-slate-600 hover:text-slate-900"
+                    ? "bg-blue-100 text-blue-700 border-b-2 border-blue-600"
+                    : "text-slate-600 hover:text-slate-900"
                     }`}
                 >
                   Table Format
@@ -245,8 +248,8 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
                 <button
                   onClick={() => setActiveTab("figure")}
                   className={`py-2 px-4 font-semibold text-sm sm:text-base transition-colors rounded-t-md ${activeTab === "figure"
-                      ? "bg-blue-100 text-blue-700 border-b-2 border-blue-600"
-                      : "text-slate-600 hover:text-slate-900"
+                    ? "bg-blue-100 text-blue-700 border-b-2 border-blue-600"
+                    : "text-slate-600 hover:text-slate-900"
                     }`}
                 >
                   Figure Format
@@ -269,64 +272,11 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
           </section>
 
           {/* SECTION 3: Meet Our Manuscript Editing Experts */}
-          <section className="text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-10">
-              Meet Our Manuscript Editing Experts
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {experts.map((expert) => (
-                <div
-                  key={expert.id}
-                  className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center"
-                >
-                  {/* Avatar with Country Flag Badge */}
-                  <div className="relative mb-4">
-                    <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-slate-200 relative">
-                      <Image
-                        src={expert.avatarSrc}
-                        alt={expert.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="absolute bottom-0 right-0 w-6 h-6 rounded-full overflow-hidden border border-white shadow-sm">
-                      <Image
-                        src={expert.flagSrc}
-                        alt={expert.flagAlt}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Details */}
-                  <h3 className="font-bold text-slate-900 text-lg mb-1">
-                    {expert.name}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 font-medium">
-                    {expert.degree}
-                  </p>
-                  <p className="text-xs text-slate-500 mb-4">
-                    {expert.institution}
-                  </p>
-
-                  <div className="w-full border-t border-slate-100 my-3" />
-
-                  {/* Stats */}
-                  <p className="text-xs sm:text-sm font-semibold text-slate-700 mb-4">
-                    <span>{expert.experience}</span> •{" "}
-                    <span>{expert.papersEdited}</span>
-                  </p>
-
-                  {/* Read More Link */}
-                  <Link href="/about-us/our-editors" className="text-sm font-bold text-slate-900 hover:text-sky-600 transition-colors mt-auto">
-                    Read More
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </section>
+          <ExpertsSection
+            heading="Meet Our Manuscript Editing Experts"
+            subheading=""
+            experts={experts}
+          />
         </div>
       </div>
     );

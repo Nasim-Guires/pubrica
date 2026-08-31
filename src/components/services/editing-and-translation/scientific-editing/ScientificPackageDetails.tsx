@@ -8,6 +8,9 @@ import {
   FiMinus,
 } from "react-icons/fi";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import CommonPackages, { PackageItem } from "@/components/common/CommonPackages";
+import { MovingTestimonials, TestimonialItem } from "@/components/common/MovingTestimonials.tsx";
+import CommonFAQ from "@/components/common/FAQ";
 
 const IMG = "/images/editing-and-translation/scientific-editing";
 
@@ -202,28 +205,24 @@ const documentTypes = [
 ];
 
 // Packages
-const packages = [
+const packages: PackageItem[] = [
   {
-    id: "standard",
-    badgeImage:
+    icon:
       "/images/publication-support/responding-to-reviewers/standard-logo.png",
-    name: "Standard",
-    bgColor: "bg-slate-200/80 border-slate-300",
-    headerBadgeBg: "bg-amber-100 text-amber-700 border-amber-300",
+    title: "Standard",
     idealFor: "Early-stage manuscripts, pre-submission refinement.",
     includes: [
       "Grammar, punctuation, and spelling corrections",
       "Sentence restructuring for clarity and readability",
       "Basic adherence to journal formatting",
     ],
-    turnaroundTime: "5–7 business days",
+    turnaround: "5–7 business days",
+    cardBgColor: "#e2e8f0",
+    titleColor: "#b45309",
   },
   {
-    id: "advanced",
-    badgeImage: "/images/publication-support/journal-selection/advanced.webp",
-    name: "Advanced",
-    bgColor: "bg-purple-100/70 border-purple-200",
-    headerBadgeBg: "bg-emerald-100 text-emerald-700 border-emerald-300",
+    icon: "/images/publication-support/journal-selection/advanced.webp",
+    title: "Advanced",
     idealFor: "Manuscripts requiring in-depth scientific review.",
     includes: [
       "All features of the Standard Package",
@@ -231,14 +230,13 @@ const packages = [
       "Compliance with journal-specific guidelines and formatting",
       "Reference formatting and consistency checks",
     ],
-    turnaroundTime: "7–10 business days",
+    turnaround: "7–10 business days",
+    cardBgColor: "#f3e8ff",
+    titleColor: "#047857",
   },
   {
-    id: "premium",
-    badgeImage: "/images/editing-and-translation/pro.webp",
-    name: "Premium/Publication-Ready",
-    bgColor: "bg-amber-100/60 border-amber-200",
-    headerBadgeBg: "bg-sky-100 text-sky-700 border-sky-300",
+    icon: "/images/editing-and-translation/pro.webp",
+    title: "Premium/Publication-Ready",
     idealFor: "High-impact journals and rigorous peer-review submissions.",
     includes: [
       "All features of the Advanced Package",
@@ -247,7 +245,9 @@ const packages = [
       "Formatting for figures, tables, and references per journal requirements",
       "Response-to-reviewer support (optional add-on)",
     ],
-    turnaroundTime: "10–14 business days",
+    turnaround: "10–14 business days",
+    cardBgColor: "#fef3c7",
+    titleColor: "#0369a1",
   },
 ];
 
@@ -263,85 +263,72 @@ interface Testimonial {
   flagSrc: string;
 }
 
-const testimonials: Testimonial[] = [
+const testimonialsData: TestimonialItem[] = [
   {
-    id: "1",
+    id: 1,
     quote:
       "Pubrica's scientific editing team transformed my manuscript. Their attention to detail and adherence to journal guidelines made the submission process seamless. I highly recommend their services to anyone aiming for high-impact publications.",
     author: "DR. PRIYA MENON",
-    field: "Oncology Researcher",
-    country: "India",
-    journalImage: `${IMG}/testimonials-2.png`,
-    journalAlt: "Oncology scientific editing testimonial",
-    flagSrc: `${IMG}/flag.png`,
+    role: "Oncology Researcher",
+    image: `${IMG}/testimonials-2.png`,
   },
   {
-    id: "2",
+    id: 2,
     quote:
       "Pubrica's scientific editing service exceeded my expectations. From compliance with journal standards to meticulous proofreading, every aspect was handled professionally.",
     author: "DR. MICHAEL TAN",
-    field: "Neuroscience",
-    country: "Singapore",
-    journalImage: `${IMG}/testimonials-1.png`,
-    journalAlt: "Neuroscience scientific editing testimonial",
-    flagSrc: `${IMG}/singapore-.png`,
+    role: "Neuroscience",
+    image: `${IMG}/testimonials-1.png`,
   },
   {
-    id: "3",
+    id: 3,
     quote:
       "The editors improved clarity and flow of my paper. Their understanding of scientific nuances is exceptional. My paper was accepted in a top-tier journal within weeks.",
     author: "PROF. JAMES REYNOLDS",
-    field: "Biochemistry",
-    country: "USA",
-    journalImage: `${IMG}/testimonials-3.png`,
-    journalAlt: "Biochemistry scientific editing testimonial",
-    flagSrc: `${IMG}/usa-.png`,
+    role: "Biochemistry",
+    image: `${IMG}/testimonials-3.png`,
   },
 ];
 
 // FAQ Items Data
-interface FAQItem {
-  id: number;
-  question: string;
-  answer: string;
-}
 
-const faqList: FAQItem[] = [
+
+const faqs = [
   {
-    id: 1,
     question: "What is scientific editing for research manuscripts?",
     answer:
       "Scientific editing is a process that refines research manuscripts by enhancing clarity, structure, language, consistency, format, and overall presentation of research manuscripts to fit journal requirements.",
   },
   {
-    id: 2,
     question:
       "What is the difference between scientific editing and proofreading?",
     answer:
       "Scientific editing involves improvements in structure, clarity, and flow of the research, as well as the quality of the content. On the other hand, proofreading involves the correction of grammatical errors and minor formatting issues.",
   },
   {
-    id: 3,
     question:
       "How does language editing help increase journal acceptance chances?",
     answer:
       "Language editing improves clarity, readability, grammar, and overall flow of the text, making it easy for the reviewer to comprehend the research without any difficulties or misunderstandings.",
   },
   {
-    id: 4,
     question:
       "What types of editing are required before submitting a research paper?",
     answer:
       "Before submission, it is necessary that the manuscript undergoes structural editing, language editing, formatting checks, reference correction, technical editing, and finally proofreading.",
   },
   {
-    id: 5,
     question: "What is included in a scientific manuscript editing service?",
     answer:
       "A scientific editing service involves language refinement, structural refinement, grammatical correction, formatting, reference checking, clarity improvement, and optimization of quality for journal submission.",
   },
 ];
 
+interface FAQItem {
+  id: number;
+  question: string;
+  answer: string;
+}
 // ==========================================
 // 2. MAIN COMPONENT DEFINITION
 // ==========================================
@@ -376,11 +363,11 @@ export default function ScientificPackageDetails() {
   const activeSample =
     sampleWorks.find((s) => s.id === activeTab) || sampleWorks[0];
 
-  const mobileItem = testimonials[activeIndex];
-  const desktopItems = [
-    testimonials[activeIndex],
-    testimonials[(activeIndex + 1) % testimonials.length],
-  ];
+  // const mobileItem = testimonials[activeIndex];
+  // const desktopItems = [
+  //   testimonials[activeIndex],
+  //   testimonials[(activeIndex + 1) % testimonials.length],
+  // ];
 
   return (
     <div className="w-full bg-white font-sans text-slate-800">
@@ -552,18 +539,18 @@ export default function ScientificPackageDetails() {
       {/* ========================================================== */}
       {/* SECTION 4: WHAT TYPES OF DOCUMENTS DO WE EDIT?             */}
       {/* ========================================================== */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-slate-100">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#0c373b] text-center mb-10 tracking-tight">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-slate-100 cursor-default">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#0c373b] text-center mb-10 tracking-tight cursor-default">
           What Types of Documents Do We Edit?
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 cursor-default">
           {documentTypes.map((doc) => (
             <div
               key={doc.id}
-              className="bg-white border border-slate-100 rounded-xl p-6 shadow-sm flex flex-col items-center justify-center text-center pointer-events-none select-none"
+              className="bg-white border border-slate-100 rounded-xl p-6 shadow-sm flex flex-col items-center justify-center text-center select-none cursor-default hover:cursor-default"
             >
-              <div className="mb-4">
+              <div className="mb-4 pointer-events-none">
                 <Image
                   src={doc.iconSrc}
                   alt={doc.title}
@@ -572,183 +559,53 @@ export default function ScientificPackageDetails() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-xs sm:text-sm font-semibold text-slate-700 leading-snug">
+
+              <p className="text-xs sm:text-sm font-semibold text-slate-700 leading-snug cursor-default">
                 {doc.title}
               </p>
             </div>
           ))}
         </div>
       </section>
-
       {/* ========================================================== */}
       {/* SECTION 5: OUR PACKAGES                                   */}
       {/* ========================================================== */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-slate-100">
-        <div className="max-w-4xl mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0c373b] mb-3 tracking-tight">
-            Scientific Editing Services – Our Packages
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            At Pubrica, we offer comprehensive scientific editing packages
-            designed to enhance the clarity, accuracy, and impact of your
-            manuscript. Whether you are preparing for submission to a
-            high-impact journal or refining a thesis, our expert editors ensure
-            your work meets international standards.
-          </p>
-        </div>
-
-        {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-12">
-          {packages.map((pkg) => (
-            <div
-              key={pkg.id}
-              className={`rounded-lg border p-6 flex flex-col justify-between shadow-xs transition-shadow duration-300 hover:shadow-md ${pkg.bgColor}`}
-            >
-              <div>
-                <div className="bg-white rounded-md p-3 mb-6 shadow-xs flex items-center space-x-3 border border-slate-200">
-                  <div
-                    className={`w-9 h-9 rounded-full font-extrabold flex items-center justify-center text-lg border overflow-hidden relative ${pkg.headerBadgeBg}`}
-                  >
-                    <Image
-                      src={pkg.badgeImage}
-                      alt={`${pkg.name} package`}
-                      width={36}
-                      height={36}
-                      className="object-contain"
-                    />
-                  </div>
-                  <h3 className="font-bold text-base sm:text-lg text-slate-900">
-                    {pkg.name}
-                  </h3>
-                </div>
-
-                <div className="mb-6 flex items-start space-x-2">
-                  <FiArrowRightCircle className="w-5 h-5 text-slate-800 shrink-0 mt-0.5" />
-                  <p className="text-xs sm:text-sm text-slate-800 leading-snug">
-                    <strong className="font-bold">Ideal For:</strong>{" "}
-                    {pkg.idealFor}
-                  </p>
-                </div>
-
-                <div className="mb-6">
-                  <div className="flex items-center space-x-2 mb-3">
-                    <FiArrowRightCircle className="w-5 h-5 text-slate-800 shrink-0" />
-                    <span className="font-bold text-xs sm:text-sm text-slate-900">
-                      Includes:
-                    </span>
-                  </div>
-                  <ul className="space-y-2.5 pl-7">
-                    {pkg.includes.map((item, idx) => (
-                      <li
-                        key={idx}
-                        className="text-xs sm:text-sm text-slate-700 leading-snug list-disc"
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="pt-4 border-t border-slate-300/60 flex items-start space-x-2">
-                <FiArrowRightCircle className="w-5 h-5 text-slate-800 shrink-0 mt-0.5" />
-                <p className="text-xs sm:text-sm text-slate-900">
-                  <strong className="font-bold">Turnaround Time:</strong>{" "}
-                  {pkg.turnaroundTime}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Free Quote Button */}
-        <div className="w-full flex justify-center">
-          <GetFreeQuoteButton />
-        </div>
-      </section>
+      <CommonPackages
+        title="Scientific Editing Services – Our Packages"
+        description="At Pubrica, we offer comprehensive scientific editing packages designed to enhance the clarity, accuracy, and impact of your manuscript. Whether you are preparing for submission to a high-impact journal or refining a thesis, our expert editors ensure your work meets international standards."
+        packages={packages}
+      />
 
       {/* ========================================================== */}
       {/* SECTION 6: TESTIMONIALS                                    */}
       {/* ========================================================== */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-slate-100">
-        <div className="mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0c373b] mb-3 tracking-tight">
-            Testimonials
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
-            Learn how Pubrica's Scientific Editing Services have empowered
-            researchers and authors to refine their manuscripts, enhance
-            clarity, and meet journal-specific standards. Our expert editors
-            help improve readability, ensure precision, and strengthen the
-            impact of research, increasing the chances of publication in
-            high-impact journals. Here is what our clients say:
-          </p>
-        </div>
+      <div className="mb-8">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#0c373b] mb-3 tracking-tight">
+          Testimonials
+        </h2>
 
-        {/* Testimonials Cards Grid */}
-        <div className="grid grid-cols-1 gap-6 mb-8 md:hidden">
-          <TestimonialCard item={mobileItem} />
-        </div>
-        <div className="hidden md:grid grid-cols-2 gap-6 mb-8">
-          {desktopItems.map((item) => (
-            <TestimonialCard key={`${activeIndex}-${item.id}`} item={item} />
-          ))}
-        </div>
+        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
+          Learn how Pubrica&apos;s Scientific Editing Services have empowered
+          researchers and authors to refine their manuscripts, enhance clarity, and
+          meet journal-specific standards. Our expert editors help improve
+          readability, ensure precision, and strengthen the impact of research,
+          increasing the chances of publication in high-impact journals. Here is
+          what our clients say:
+        </p>
+      </div>
 
-        {/* Carousel Slide Indicators */}
-        <div className="flex justify-center items-center space-x-2">
-          {testimonials.map((item, idx) => (
-            <button
-              key={item.id}
-              type="button"
-              onClick={() => setActiveIndex(idx)}
-              className={`w-3 h-3 transition-all duration-200 border border-[#0c373b] ${activeIndex === idx ? "bg-[#0c373b]" : "bg-white"
-                }`}
-              aria-label={`Show testimonial ${idx + 1}`}
-            />
-          ))}
-        </div>
-      </section>
+      <MovingTestimonials
+        data={testimonialsData}
+        autoSlideInterval={5000}
+      />
 
       {/* ========================================================== */}
       {/* SECTION 7: FREQUENTLY ASKED QUESTIONS (FAQ)               */}
       {/* ========================================================== */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-bold text-[#0c373b] mb-6 tracking-tight">
-          Frequently Asked Questions – Scientific Editing Services
-        </h2>
-
-        <div className="border border-slate-200 rounded-sm divide-y divide-slate-200 bg-white shadow-2xs">
-          {faqList.map((faq) => {
-            const isOpen = openFaq === faq.id;
-            return (
-              <div key={faq.id} className="transition-colors">
-                <button
-                  onClick={() => toggleFaq(faq.id)}
-                  className="w-full px-5 py-3.5 flex items-center justify-between text-left hover:bg-slate-50/80 transition-colors"
-                >
-                  <span className="font-bold text-xs sm:text-sm text-slate-900 pr-4 leading-snug">
-                    {faq.id}. {faq.question}
-                  </span>
-                  <span className="text-slate-700 shrink-0 font-bold text-base">
-                    {isOpen ? (
-                      <FiMinus className="w-4 h-4" />
-                    ) : (
-                      <FiPlus className="w-4 h-4" />
-                    )}
-                  </span>
-                </button>
-
-                {isOpen && (
-                  <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-700 leading-relaxed border-t border-slate-100 bg-slate-50/40">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      <CommonFAQ
+        title="Frequently Asked Questions"
+        faqs={faqs}
+      />
 
       {/* Tailwind Infinite Marquee & Animation CSS Rules */}
       <style jsx global>{`

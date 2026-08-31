@@ -144,7 +144,7 @@ export default function ScientificEditingPage() {
                 <span>
                   <Link
                     href="/services/editing-and-translation/scientific-editing/scientific-developmental-editing-high-impact-journals"
-                    className="text-cyan-700 hover:underline font-medium"
+                    className="text-blue-700"
                   >
                     Scientific developmental editing
                   </Link>{" "}
@@ -167,7 +167,7 @@ export default function ScientificEditingPage() {
                   A simulated{" "}
                   <Link
                     href="/services/publication-support/peer-review-pre-submission"
-                    className="text-cyan-700 hover:underline font-medium"
+                    className="text-blue-700"
                   >
                     peer review
                   </Link>{" "}
@@ -180,7 +180,7 @@ export default function ScientificEditingPage() {
                   Submission-ready:{" "}
                   <Link
                     href="/services/publication-support/plagiarism-services"
-                    className="text-cyan-700 hover:underline font-medium"
+                    className="text-blue-700"
                   >
                     Plagiarism
                   </Link>{" "}

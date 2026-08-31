@@ -23,7 +23,7 @@ const audiences: AudienceCard[] = [
         Individual scholars, early-career researchers, and senior academics seeking to refine manuscripts, theses, or dissertations for{" "}
         <Link
           href="/services/publication-support/journal-submission"
-          className="text-blue-700 no-underline hover:text-cyan-800 font-medium"
+          className="text-blue-700 "
         >
           journal submission
         </Link>{" "}
@@ -50,7 +50,7 @@ const audiences: AudienceCard[] = [
         Clinicians, surgeons, and healthcare practitioners aiming to publish clinical research, case studies, and{" "}
         <Link
           href="/services/research-services/systematic-review"
-          className="text-blue-700 no-underline hover:text-cyan-800 font-medium"
+          className="text-blue-700 "
         >
           systematic reviews
         </Link>{" "}
@@ -102,7 +102,7 @@ export default function ScientificWhoWeServe() {
           At Pubrica, our{" "}
           <Link
             href="/academy/scientific-editing/scientific-vs-language-editing-high-quality-publications"
-            className="text-blue-700 hover:text-cyan-800 font-medium no-underline"
+            className="text-blue-700 "
           >
             scientific research paper editing services
           </Link>{" "}
@@ -115,7 +115,8 @@ export default function ScientificWhoWeServe() {
         {audiences.map((item) => (
           <div
             key={item.id}
-            className="group relative h-64 sm:h-72 rounded-sm overflow-hidden shadow-sm cursor-pointer w-full"
+            tabIndex={0}
+            className="group relative h-64 sm:h-72 rounded-sm overflow-hidden shadow-sm cursor-pointer w-full focus:outline-none"
           >
             {/* Normal State (Image) */}
             <div className="absolute inset-0 w-full h-full">
@@ -136,8 +137,8 @@ export default function ScientificWhoWeServe() {
               </div>
             </div>
 
-            {/* Hovered State (Black Card View Overlay) */}
-            <div className="absolute inset-0 w-full h-full bg-black text-white p-6 flex flex-col justify-start space-y-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
+            {/* Hovered/Tapped State */}
+            <div className="absolute inset-0 w-full h-full bg-black text-white p-6 flex flex-col justify-start space-y-4 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 transition-opacity duration-300 ease-in-out z-10">
               <h3 className="text-base sm:text-lg font-bold tracking-wide text-white">
                 {item.title}
               </h3>
@@ -148,14 +149,13 @@ export default function ScientificWhoWeServe() {
           </div>
         ))}
       </div>
-
       {/* Footer Text */}
       <div className="mt-10 max-w-5xl">
         <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
           Our services also extend to{" "}
           <Link
             href="/services/editing-and-translation/manuscript-editing"
-            className="text-blue-700 hover:text-cyan-800 font-medium no-underline"
+            className="text-blue-700 "
           >
             academic writing and editing
           </Link>

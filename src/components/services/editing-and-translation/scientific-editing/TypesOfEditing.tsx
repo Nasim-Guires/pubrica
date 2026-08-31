@@ -120,7 +120,7 @@ const rightServices: AccordionItem[] = [
         Provides{" "}
         <Link
           href="/services/publication-support/plagiarism-services"
-          className="text-cyan-700"
+          className="text-blue-700"
         >
           plagiarism
         </Link>{" "}
@@ -172,7 +172,7 @@ export default function TypesOfEditing() {
           your research manuscripts. We offer a range of{" "}
           <Link
             href="/academy/editing-and-translation/scientific-editing-complete-research-guide"
-            className="text-blue-700 font-medium"
+            className="text-blue-700"
           >
             science editing services for academics
           </Link>{" "}

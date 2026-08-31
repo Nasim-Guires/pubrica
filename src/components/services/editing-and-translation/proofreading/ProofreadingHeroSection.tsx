@@ -169,7 +169,7 @@ export default function ProofreadingHeroSection() {
           Our professional{" "}
           <Link
             href="/services/editing-and-translation/proofreading"
-            className="text-blue-700 hover:underline"
+            className="text-blue-700"
           >
             proofreading services
           </Link>{" "}
@@ -177,7 +177,7 @@ export default function ProofreadingHeroSection() {
           language check of their manuscripts.{" "}
           <Link
             href="/services/publication-support/journal-submission"
-            className="text-blue-700 hover:underline"
+            className="text-blue-700"
           >
             Papers submitted
           </Link>{" "}
@@ -185,7 +185,7 @@ export default function ProofreadingHeroSection() {
           exhaustive check.{" "}
           <Link
             href="/subject-matter-experts"
-            className="text-blue-700 hover:underline"
+            className="text-blue-700"
           >
             Language and subject specialists
           </Link>{" "}
@@ -193,7 +193,7 @@ export default function ProofreadingHeroSection() {
           jargon.{" "}
           <Link
             href="/"
-            className="text-blue-700 hover:underline"
+            className="text-blue-700"
           >
             Pubrica proofreading
           </Link>{" "}

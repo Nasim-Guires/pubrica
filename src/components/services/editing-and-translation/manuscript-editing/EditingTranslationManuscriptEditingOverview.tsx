@@ -27,7 +27,7 @@ export const EditingTranslationManuscriptEditingOverview: React.FC = () => {
               Pubrica offers the most prestigious{" "}
               <Link
                 href="/services/editing-and-translation/translation-with-editing"
-                className="text-sky-600 hover:underline font-medium"
+                className="text-blue-600 "
               >
                 manuscript editing services
               </Link>{" "}
@@ -62,7 +62,7 @@ export const EditingTranslationManuscriptEditingOverview: React.FC = () => {
                   Provide academic{" "}
                   <Link
                     href="sights/sample-work/phenotypic-variations-of-atopic-dermatitis-a-systemic-review-of-dupilumab-efficacy-and-safety"
-                    className="text-sky-600 hover:underline"
+                    className="text-blue-600 "
                   >
                     medical manuscript editing
                   </Link>{" "}

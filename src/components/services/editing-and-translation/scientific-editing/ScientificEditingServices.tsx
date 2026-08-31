@@ -2,8 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
-import { FiArrowRightCircle } from "react-icons/fi";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import CommonPackages, { PackageItem } from "@/components/common/CommonPackages";
+import { MovingTestimonials, TestimonialItem } from "@/components/common/MovingTestimonials.tsx";
+import CommonFAQ from "@/components/common/FAQ";
+import CommonTestimonial from "@/components/common/CommonTestimonials";
 
 const IMG = "/images/editing-and-translation/scientific-editing";
 
@@ -11,7 +14,61 @@ const IMG = "/images/editing-and-translation/scientific-editing";
 // DATA DEFINITIONS
 // ==========================================
 
-// 1. Document Types Grid
+const testimonials = [
+  {
+    image: `${IMG}/testimonials-2.png`,
+    quote:
+      "Pubrica's scientific editing team transformed my manuscript. Their attention to detail and adherence to journal guidelines made the submission process seamless. I highly recommend their services to anyone aiming for high-impact publications.",
+    name: "DR. PRIYA MENON",
+    designation: "Oncology Researcher",
+    organization: "Pubrica",
+  },
+  {
+    image: `${IMG}/testimonials-1.png`,
+    quote:
+      "Pubrica's scientific editing service exceeded my expectations. From compliance with journal standards to meticulous proofreading, every aspect was handled professionally.",
+    name: "DR. MICHAEL TAN",
+    designation: "Neuroscience",
+    organization: "Pubrica",
+  },
+  {
+    image: `${IMG}/testimonials-3.png`,
+    quote:
+      "The editors improved clarity and flow of my paper. Their understanding of scientific nuances is exceptional. My paper was accepted in a top-tier journal within weeks.",
+    name: "PROF. JAMES REYNOLDS",
+    designation: "Biochemistry",
+    organization: "Pubrica",
+  },
+];
+
+const faqs = [
+  {
+    question: "What is scientific editing for research manuscripts?",
+    answer:
+      "Scientific editing is a process that refines research manuscripts by enhancing clarity, structure, language, consistency, format, and overall presentation of research manuscripts to fit journal requirements.",
+  },
+  {
+    question: "What is the difference between scientific editing and proofreading?",
+    answer:
+      "Scientific editing involves improvements in structure, clarity, and flow of the research, as well as the quality of the content. On the other hand, proofreading involves the correction of grammatical errors and minor formatting issues.",
+  },
+  {
+    question: "How does language editing help increase journal acceptance chances?",
+    answer:
+      "Language editing improves clarity, readability, grammar, and overall flow of the text, making it easy for the reviewer to comprehend the research without any difficulties or misunderstandings.",
+  },
+  {
+    question: "What types of editing are required before submitting a research paper?",
+    answer:
+      "Before submission, it is necessary that the manuscript undergoes structural editing, language editing, formatting checks, reference correction, technical editing, and finally proofreading.",
+  },
+  {
+    question: "What is included in a scientific manuscript editing service?",
+    answer:
+      "A scientific editing service involves language refinement, structural refinement, grammatical correction, formatting, reference checking, clarity improvement, and optimization of quality for journal submission.",
+  },
+];
+
 interface DocumentType {
   id: string;
   title: string;
@@ -19,97 +76,36 @@ interface DocumentType {
 }
 
 const documentTypes: DocumentType[] = [
-  {
-    id: "journal-manuscripts",
-    title: "Journal manuscripts",
-    iconSrc: `${IMG}/Journal-manuscripts.png`,
-  },
-  {
-    id: "grants",
-    title: "Grants/NIH, NSF, and private foundation grants/grant revisions",
-    iconSrc: `${IMG}/GrantsNIH-NSF-and-private-foundation-grantsgrant-revisions.png`,
-  },
-  {
-    id: "proposals",
-    title: "Proposals",
-    iconSrc: `${IMG}/Proposals.png`,
-  },
-  {
-    id: "ppt-slides",
-    title: "PowerPoint slides",
-    iconSrc: `${IMG}/PowerPoint-slides.png`,
-  },
-  {
-    id: "theses",
-    title: "Theses",
-    iconSrc: `${IMG}/Theses.png`,
-  },
-  {
-    id: "technical-docs",
-    title: "Technical documents",
-    iconSrc: `${IMG}/Technical-documents.png`,
-  },
-  {
-    id: "abstracts",
-    title: "Abstracts",
-    iconSrc: `${IMG}/Abstracts.png`,
-  },
-  {
-    id: "book-chapters",
-    title: "Book chapters",
-    iconSrc: `${IMG}/Book-chapters.png`,
-  },
-  {
-    id: "medical-editing",
-    title: "Medical editing",
-    iconSrc: `${IMG}/Medical-editing.png`,
-  },
-  {
-    id: "medical-proofreading",
-    title: "Medical manuscript proofreading",
-    iconSrc: `${IMG}/Medical-manuscript-proofreading.png`,
-  },
-  {
-    id: "conference-posters",
-    title: "Conference posters",
-    iconSrc: `${IMG}/Conference-posters.png`,
-  },
+  { id: "journal-manuscripts", title: "Journal manuscripts", iconSrc: `${IMG}/Journal-manuscripts.png` },
+  { id: "grants", title: "Grants/NIH, NSF, and private foundation grants/grant revisions", iconSrc: `${IMG}/GrantsNIH-NSF-and-private-foundation-grantsgrant-revisions.png` },
+  { id: "proposals", title: "Proposals", iconSrc: `${IMG}/Proposals.png` },
+  { id: "ppt-slides", title: "PowerPoint slides", iconSrc: `${IMG}/PowerPoint-slides.png` },
+  { id: "theses", title: "Theses", iconSrc: `${IMG}/Theses.png` },
+  { id: "technical-docs", title: "Technical documents", iconSrc: `${IMG}/Technical-documents.png` },
+  { id: "abstracts", title: "Abstracts", iconSrc: `${IMG}/Abstracts.png` },
+  { id: "book-chapters", title: "Book chapters", iconSrc: `${IMG}/Book-chapters.png` },
+  { id: "medical-editing", title: "Medical editing", iconSrc: `${IMG}/Medical-editing.png` },
+  { id: "medical-proofreading", title: "Medical manuscript proofreading", iconSrc: `${IMG}/Medical-manuscript-proofreading.png` },
+  { id: "conference-posters", title: "Conference posters", iconSrc: `${IMG}/Conference-posters.png` },
 ];
 
-// 2. Packages Pricing Tiers
-interface PricingPackage {
-  id: string;
-  badgeImage: string;
-  name: string;
-  bgColor: string;
-  headerBadgeBg: string;
-  idealFor: string;
-  includes: string[];
-  turnaroundTime: string;
-}
-
-const packages: PricingPackage[] = [
+const packages: PackageItem[] = [
   {
-    id: "standard",
-    badgeImage:
-      "/images/publication-support/responding-to-reviewers/standard-logo.png",
-    name: "Standard",
-    bgColor: "bg-slate-200/80 border-slate-300",
-    headerBadgeBg: "bg-amber-100 text-amber-700 border-amber-300",
+    icon: "/images/publication-support/responding-to-reviewers/standard-logo.png",
+    title: "Standard",
     idealFor: "Early-stage manuscripts, pre-submission refinement.",
     includes: [
       "Grammar, punctuation, and spelling corrections",
       "Sentence restructuring for clarity and readability",
       "Basic adherence to journal formatting",
     ],
-    turnaroundTime: "5–7 business days",
+    turnaround: "5–7 business days",
+    cardBgColor: "#e2e8f0",
+    titleColor: "#b45309",
   },
   {
-    id: "advanced",
-    badgeImage: "/images/publication-support/journal-selection/advanced.webp",
-    name: "Advanced",
-    bgColor: "bg-purple-100/70 border-purple-200",
-    headerBadgeBg: "bg-emerald-100 text-emerald-700 border-emerald-300",
+    icon: "/images/publication-support/journal-selection/advanced.webp",
+    title: "Advanced",
     idealFor: "Manuscripts requiring in-depth scientific review.",
     includes: [
       "All features of the Standard Package",
@@ -117,14 +113,13 @@ const packages: PricingPackage[] = [
       "Compliance with journal-specific guidelines and formatting",
       "Reference formatting and consistency checks",
     ],
-    turnaroundTime: "7–10 business days",
+    turnaround: "7–10 business days",
+    cardBgColor: "#f3e8ff",
+    titleColor: "#047857",
   },
   {
-    id: "premium",
-    badgeImage: "/images/editing-and-translation/pro.webp",
-    name: "Premium/Publication-Ready",
-    bgColor: "bg-amber-100/60 border-amber-200",
-    headerBadgeBg: "bg-sky-100 text-sky-700 border-sky-300",
+    icon: "/images/editing-and-translation/pro.webp",
+    title: "Premium/Publication-Ready",
     idealFor: "High-impact journals and rigorous peer-review submissions.",
     includes: [
       "All features of the Advanced Package",
@@ -133,7 +128,9 @@ const packages: PricingPackage[] = [
       "Formatting for figures, tables, and references per journal requirements",
       "Response-to-reviewer support (optional add-on)",
     ],
-    turnaroundTime: "10–14 business days",
+    turnaround: "10–14 business days",
+    cardBgColor: "#fef3c7",
+    titleColor: "#0369a1",
   },
 ];
 
@@ -143,11 +140,9 @@ const packages: PricingPackage[] = [
 
 export default function ScientificEditingServices() {
   return (
-    <div className="w-full bg-white font-sans text-slate-800">
-      {/* ========================================================== */}
-      {/* SECTION 1: WHAT TYPES OF DOCUMENTS DO WE EDIT?             */}
-      {/* ========================================================== */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6">
+    <div className="w-full bg-white font-sans text-slate-800 overflow-x-hidden">
+      {/* SECTION 1: DOCUMENTS */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0c373b] text-center mb-10 tracking-tight">
           What Types of Documents Do We Edit?
         </h2>
@@ -156,7 +151,7 @@ export default function ScientificEditingServices() {
           {documentTypes.map((doc) => (
             <div
               key={doc.id}
-              className="bg-white border border-slate-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col items-center justify-center text-center group cursor-pointer"
+              className="bg-white border border-slate-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col items-center justify-center text-center group"
             >
               <div className="mb-4 transform group-hover:scale-110 transition-transform duration-200">
                 <Image
@@ -175,96 +170,37 @@ export default function ScientificEditingServices() {
         </div>
       </section>
 
-      {/* ========================================================== */}
-      {/* SECTION 2: OUR PACKAGES                                   */}
-      {/* ========================================================== */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-slate-100">
-        <div className="max-w-4xl mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0c373b] mb-3 tracking-tight">
-            Scientific Editing Services – Our Packages
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            At Pubrica, we offer comprehensive scientific editing packages
-            designed to enhance the clarity, accuracy, and impact of your
-            manuscript. Whether you are preparing for submission to a
-            high-impact journal or refining a thesis, our expert editors ensure
-            your work meets international standards.
-          </p>
-        </div>
+      {/* SECTION 2: PACKAGES & QUOTE BUTTON */}
+      <CommonPackages
+        title="Scientific Editing Services – Our Packages"
+        description="At Pubrica, we offer comprehensive scientific editing packages designed to enhance the clarity, accuracy, and impact of your manuscript. Whether you are preparing for submission to a high-impact journal or refining a thesis, our expert editors ensure your work meets international standards."
+        packages={packages}
+      />
 
-        {/* Packages Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-12">
-          {packages.map((pkg) => (
-            <div
-              key={pkg.id}
-              className={`rounded-lg border p-6 flex flex-col justify-between shadow-xs transition-shadow duration-300 hover:shadow-md ${pkg.bgColor}`}
-            >
-              <div>
-                {/* Header Badge & Title */}
-                <div className="bg-white rounded-md p-3 mb-6 shadow-xs flex items-center space-x-3 border border-slate-200">
-                  <div
-                    className={`w-9 h-9 rounded-full font-extrabold flex items-center justify-center text-lg border overflow-hidden relative ${pkg.headerBadgeBg}`}
-                  >
-                    <Image
-                      src={pkg.badgeImage}
-                      alt={`${pkg.name} package`}
-                      width={36}
-                      height={36}
-                      className="object-contain"
-                    />
-                  </div>
-                  <h3 className="font-bold text-base sm:text-lg text-slate-900">
-                    {pkg.name}
-                  </h3>
-                </div>
+      <div className="my-1 flex justify-center w-full px-1">
+        <GetFreeQuoteButton />
+      </div>
 
-                {/* Ideal For Section */}
-                <div className="mb-6 flex items-start space-x-2">
-                  <FiArrowRightCircle className="w-5 h-5 text-slate-800 shrink-0 mt-0.5" />
-                  <p className="text-xs sm:text-sm text-slate-800 leading-snug">
-                    <strong className="font-bold">Ideal For:</strong>{" "}
-                    {pkg.idealFor}
-                  </p>
-                </div>
+      {/* SECTION 3: TESTIMONIALS & FAQ CONTAINER */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 space-y-12">
+        {/* Testimonials */}
+      
+          <div className="w-full overflow-hidden">
+            <CommonTestimonial
+              title="Testimonials"
+              description="Learn how Pubrica's Scientific Editing Services have empowered researchers and authors to refine their manuscripts, enhance clarity, and meet journal-specific standards. Our expert editors help improve readability, ensure precision, and strengthen the impact of research, increasing the chances of publication in high-impact journals. Here is what our clients say:"
+              testimonials={testimonials}
+            />          </div>
+       
 
-                {/* Included Points */}
-                <div className="mb-6">
-                  <div className="flex items-center space-x-2 mb-3">
-                    <FiArrowRightCircle className="w-5 h-5 text-slate-800 shrink-0" />
-                    <span className="font-bold text-xs sm:text-sm text-slate-900">
-                      Includes:
-                    </span>
-                  </div>
-                  <ul className="space-y-2.5 pl-7">
-                    {pkg.includes.map((item, idx) => (
-                      <li
-                        key={idx}
-                        className="text-xs sm:text-sm text-slate-700 leading-snug list-disc"
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* Turnaround Time */}
-              <div className="pt-4 border-t border-slate-300/60 flex items-start space-x-2">
-                <FiArrowRightCircle className="w-5 h-5 text-slate-800 shrink-0 mt-0.5" />
-                <p className="text-xs sm:text-sm text-slate-900">
-                  <strong className="font-bold">Turnaround Time:</strong>{" "}
-                  {pkg.turnaroundTime}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom CTA Banner */}
-        <div className="w-full flex justify-center">
-         <GetFreeQuoteButton/>
-        </div>
-      </section>
+        {/* FAQ Section */}
+        <section className="w-full">
+          <CommonFAQ
+            title="Frequently Asked Questions"
+            faqs={faqs}
+          />
+        </section>
+      </div>
     </div>
   );
 }

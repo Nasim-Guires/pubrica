@@ -242,11 +242,21 @@ export const PostEditingDetailsAndPricing: React.FC = () => {
       {/* ------------------------------------------------------------- */}
       {/* 3. OUR PACKAGES SECTION                                       */}
       {/* ------------------------------------------------------------- */}
-      <CommonPackages
-        title="Post Editing Services – Our Packages"
-        description="We offer flexible post-editing packages designed to meet the diverse needs of authors, researchers, and academicians. Each package ensures high-quality editing, compliance with publication standards, and timely delivery."
-        packages={packages}
-      />
+      <section className="bg-white py-8 px-4">
+        <CommonPackages
+          title="Post Editing Services – Our Packages"
+          description="We offer flexible post-editing packages designed to meet the diverse needs of authors, researchers, and academicians. Each package ensures high-quality editing, compliance with publication standards, and timely delivery."
+          packages={packages}
+        />
+        <div className="flex justify-center items-center mt-4">
+          <Link
+            href="/order-now/"
+            className="inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold text-white bg-red-600 rounded-full shadow-lg hover:bg-red-700 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 ease-in-out focus:outline-none focus:ring-4 focus:ring-red-600/30"
+          >
+            Starts from $ 200 for 1000 Words
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };

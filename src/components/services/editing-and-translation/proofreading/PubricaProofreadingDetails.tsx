@@ -75,7 +75,26 @@ const packages: PackageItem[] = [
 // ==========================================
 export default function PubricaProofreadingDetails() {
   const [reasonsOpen, setReasonsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
+  const sampleLinks = [
+    {
+      title: "Sample Work 1",
+      href: "/insights/sample-work/alcohol-related-liver-disease-management/",
+    },
+    {
+      title: "Sample Work 2",
+      href: "/insights/sample-work/management-of-neurogenic-shock-outside-of-the-hospital/",
+    },
+    {
+      title: "Sample Work 3",
+      href: "/insights/sample-work/phenotypic-variations-of-atopic-dermatitis-a-systemic-review-of-dupilumab-efficacy-and-safety/",
+    },
+    {
+      title: "Sample Work 4",
+      href: "/insights/sample-work/skeletal-muscle-mass-index-versus-bioelectrical-impedance-analysis/",
+    },
+  ];
   return (
     <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-6 space-y-16">
       {/* ======================================= */}
@@ -135,12 +154,37 @@ export default function PubricaProofreadingDetails() {
             <h3 className="text-lg sm:text-xl font-bold text-[#003B46]">
               A sample of our Proofreading services
             </h3>
-            <Link
-              href="/insights/sample-work"
-              className="bg-[#b80000] hover:bg-[#9e0000] text-white font-bold px-5 py-2 rounded-md text-xs sm:text-sm transition-colors shadow-sm inline-block"
+
+            {/* Hover Menu Trigger Container */}
+            <div
+              className="relative py-2"
+              onMouseEnter={() => setIsOpen(true)}
+              onMouseLeave={() => setIsOpen(false)}
             >
-              View More
-            </Link>
+              <button className="bg-[#003B46] hover:bg-[#002B33] text-white font-semibold px-6 py-2 rounded-full text-xs sm:text-sm transition-colors shadow-md inline-flex items-center gap-1 cursor-pointer focus:outline-none">
+                View More
+              </button>
+
+              {/* Dropdown Box matching screenshot style */}
+              {isOpen && (
+                <div className="absolute right-0 top-full mt-1 w-56 sm:w-64 bg-slate-100/95 backdrop-blur-sm border border-slate-200 rounded-xl shadow-2xl p-3 z-50">
+                  {/* Arrow Pointer */}
+                  <div className="absolute -top-2 right-6 w-4 h-4 bg-slate-100/95 border-t border-l border-slate-200 rotate-45"></div>
+
+                  <div className="relative space-y-2 z-10">
+                    {sampleLinks.map((item, index) => (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        className="block text-center py-2.5 px-3 rounded-lg bg-white/80 hover:bg-white text-slate-700 hover:text-[#003B46] text-xs sm:text-sm font-medium transition-all shadow-sm border border-slate-200/50 hover:shadow"
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Sample Document Body Area */}
@@ -163,7 +207,6 @@ export default function PubricaProofreadingDetails() {
           </div>
         </div>
       </section>
-
       {/* ======================================= */}
       {/* SECTION 3: OUR PACKAGES                */}
       {/* ======================================= */}
