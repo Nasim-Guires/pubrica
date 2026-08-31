@@ -386,7 +386,8 @@ export const EditingTranslationManuscriptEditingTypesAndPackages: React.FC =
             </h2>
 
             <div className="overflow-hidden w-full">
-              <div className="flex w-max animate-[publicationMarquee_30s_linear_infinite]">
+              {/* Added 'hover:[animation-play-state:paused]' and changed '30s' to '60s' */}
+              <div className="flex w-max animate-[publicationMarquee_60s_linear_infinite] hover:[animation-play-state:paused]">
                 {[...recentPublications, ...recentPublications].map((pub, index) => (
                   <div
                     key={`${pub.id}-${index}`}

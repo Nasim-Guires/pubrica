@@ -53,7 +53,7 @@ const DEFAULT_SECTORS: SectorItem[] = [
         Offering end-to-end clinical research support, including protocol writing,
         statistical analysis plans (SAP), systematic reviews, regulatory writing,
         and{" "}
-        <Link href="/services/publication-support/journal-submission" className="text-sky-500">
+        <Link href="/services/publication-support/journal-submission" className="text-blue-500">
           journal submission
         </Link>{" "}
         assistance.
@@ -68,7 +68,7 @@ const DEFAULT_SECTORS: SectorItem[] = [
     description: (
       <>
         Enhancing research capacity, monitoring &amp; evaluation, and{" "}
-        <Link href="/services/scientific-communication" className="text-sky-500 hover:underline">
+        <Link href="/services/scientific-communication" className="text-blue-700">
           scientific communication
         </Link>{" "}
         for health, nutrition, and development programs.
@@ -97,7 +97,7 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
       Our academic research assistance and clinical{" "}
       <Link
         href="/services/research-services"
-        className="text-[#3b82f6] hover:underline"
+        className="text-blue-700"
       >
         research support services
       </Link>{" "}

@@ -343,7 +343,7 @@ export default function SystematicReviewServicesTabs() {
           Pubrica provides end-to-end{" "}
           <Link
             href="/services/research-services/systematic-review"
-            style={{ color: "#2563eb", textDecoration: "underline" }}
+            className="text-blue-600"
           >
             systematic review writing services
           </Link>{" "}
@@ -352,7 +352,7 @@ export default function SystematicReviewServicesTabs() {
             href="https://www.prisma-statement.org/prisma-2020-checklist"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#2563eb", textDecoration: "underline" }}
+            className="text-blue-600"
           >
             PRISMA checklist 2020
           </a>

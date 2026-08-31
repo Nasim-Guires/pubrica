@@ -1,4 +1,5 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import ServiceBanner from "@/components/common/ServiceBanner";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,7 +20,7 @@ const processSteps: ProcessStep[] = [
         audience. Then we assign{" "}
         <Link
           href="/subject-matter-experts"
-          className="text-sky-600 hover:underline"
+          className="text-blue-600"
         >
           subject-matter experts
         </Link>{" "}
@@ -219,42 +220,22 @@ export default function EmpiricalResearchProcessSection() {
       </div>
 
       {/* --- Bottom Guarantee Banner --- */}
-      <div className="bg-[#052e16] text-white py-5 px-4 sm:px-6 lg:px-8 border-t border-emerald-900">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
-            {/* Guarantee Badge Graphic */}
-            <div className="relative w-28 h-28 flex-shrink-0">
-              <Image
-                src="/images/publication-support/Satisfaction_Guarantee.webp"
-                alt="100% Satisfaction Guarantee"
-                fill
-                className="object-contain"
-                sizes="112px"
-              />
-            </div>
-
-            {/* Banner Text */}
-            <div className="space-y-2 max-w-2xl">
-              <h3 className="text-xl sm:text-2xl font-bold text-white">
-                Speed up Your Original Research Article Development with Pubrica
-              </h3>
-              <p className="text-sm sm:text-base text-emerald-100/90 leading-relaxed">
-                Speed up your manuscript development with Pubrica&apos;s{" "}
-                <strong className="text-white font-semibold">
-                  ICMJE-compliant manuscript writing
-                </strong>{" "}
-                and experience scientifically rigorous, methodologically sound,
-                and publication-ready outputs.
-              </p>
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <div className="flex-shrink-0">
-            <GetFreeQuoteButton/>
-          </div>
-        </div>
-      </div>
+      <ServiceBanner
+        imageSrc="/images/publication-support/Satisfaction_Guarantee.webp"
+        imageAlt="100% Satisfaction Guarantee"
+        heading="Speed up Your Original Research Article Development with Pubrica"
+        showQuoteButton={true}
+        description={
+          <>
+            Speed up your manuscript development with Pubrica&apos;s{" "}
+            <strong className="text-white font-semibold">
+              ICMJE-compliant manuscript writing
+            </strong>{" "}
+            and experience scientifically rigorous, methodologically sound, and
+            publication-ready outputs.
+          </>
+        }
+      />
     </section>
   );
 }

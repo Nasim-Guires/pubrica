@@ -283,7 +283,7 @@ export default function ServiceRejectionTable({
           At Pubrica, we offer complete{" "}
           <Link
             href="/academy/publication-support/challenges-in-research-paper-writing-and-strategies-to-overcome-them"
-            className="text-[#3b82f6] hover:underline cursor-pointer font-medium"
+            className="text-blue-600 cursor-pointer"
           >
             publication support services
           </Link>{" "}

@@ -1,4 +1,5 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,22 +7,12 @@ export default function OriginalResearchArticle() {
   return (
     <section className="w-full font-sans text-slate-800 bg-slate-100">
       {/* --- Top Dark Banner --- */}
-      <div className="bg-gradient-to-r from-slate-900 via-emerald-950 to-slate-900 text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-5xl mx-auto border border-slate-600/60 rounded-sm p-6 sm:p-10 backdrop-blur-sm bg-slate-900/30">
-          {/* Main H1 Title for Strong SEO Heading Hierarchy */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4 text-white">
-            Publish with Precision: Expert Original Research Article Writing
-          </h1>
-          <p className="text-sm sm:text-base text-slate-300 max-w-4xl mx-auto leading-relaxed">
-            From clinical trials to epidemiological studies, Pubrica develops
-            high-impact manuscripts that are ready for journal submission. We
-            develop sound methodologies, validated surveys, and statistically
-            rigorous results – all following ICMJE, GCP, and journal guidelines.
-            We are trusted by researchers across medicine, pharma, and life
-            sciences.
-          </p>
-        </div>
-      </div>
+    
+        <HeroBanner
+          title="Publish with Precision: Expert Original Research Article Writing"
+          description="From clinical trials to epidemiological studies, Pubrica develops high-impact manuscripts that are ready for journal submission. We develop sound methodologies, validated surveys, and statistically rigorous results – all following ICMJE, GCP, and journal guidelines. We are trusted by researchers across medicine, pharma, and life sciences."
+          headingAs="h1"
+        />
 
       {/* --- Main Content Section --- */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-7">
@@ -43,7 +34,7 @@ export default function OriginalResearchArticle() {
               <p>
                 <Link
                   href="/services/physician-writing-services/original-research-article"
-                  className="text-sky-600 hover:underline font-medium"
+                  className="text-blue-600 "
                 >
                   Original research articles
                 </Link>{" "}
@@ -77,7 +68,7 @@ export default function OriginalResearchArticle() {
                     href="https://www.icmje.org/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sky-600 hover:underline"
+                    className="text-blue-600"
                   >
                     ICMJE
                   </a>
@@ -86,7 +77,7 @@ export default function OriginalResearchArticle() {
                     href="https://www.consort-statement.org/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sky-600 hover:underline"
+                    className="text-blue-600"
                   >
                     CONSORT
                   </a>
@@ -99,7 +90,7 @@ export default function OriginalResearchArticle() {
                 <li>
                   <Link
                     href="/services/publication-support/plagiarism-services"
-                    className="text-sky-600 hover:underline"
+                    className="text-blue-600"
                   >
                     Plagiarism-free
                   </Link>{" "}
@@ -112,7 +103,7 @@ export default function OriginalResearchArticle() {
 
             {/* CTA Button */}
             <div className="pt-4">
-             <GetFreeQuoteButton/>
+              <GetFreeQuoteButton />
             </div>
           </article>
 

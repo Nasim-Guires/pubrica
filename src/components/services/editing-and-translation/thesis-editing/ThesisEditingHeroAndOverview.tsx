@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export const ThesisEditingHeroAndOverview: React.FC = () => {
   const keyPoints = [
@@ -17,20 +18,11 @@ export const ThesisEditingHeroAndOverview: React.FC = () => {
       {/* ------------------------------------------------------------- */}
       {/* 1. TOP BANNER / HERO SECTION                                  */}
       {/* ------------------------------------------------------------- */}
-      <section className="w-full bg-[#0d2222] text-white py-6 px-4 sm:px-6">
-        <div className="max-w-5xl mx-auto border border-slate-400/50 rounded-lg p-6 sm:p-8 text-center bg-[#0d2222]/80 backdrop-blur-sm">
-          <h1 className="text-2xl sm:text-4xl font-bold tracking-tight mb-4">
-            Thesis Editing &amp; Proofreading Service
-          </h1>
-          <p className="text-xs sm:text-base text-slate-200 max-w-3xl mx-auto leading-relaxed">
-            Crafting a compelling and meticulously written thesis stands as a
-            crucial milestone for Master’s and PhD students, particularly for
-            eventual thesis publication. Yet, navigating the immense scope of
-            research, meeting deadlines, and conducting thorough proofreading
-            across numerous drafts can pose significant challenges.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Thesis Editing & Proofreading Service"
+        description="Crafting a compelling and meticulously written thesis stands as a crucial milestone for Master’s and PhD students, particularly for eventual thesis publication. Yet, navigating the immense scope of research, meeting deadlines, and conducting thorough proofreading across numerous drafts can pose significant challenges."
+        headingAs="h1"
+      />
 
       {/* ------------------------------------------------------------- */}
       {/* 2. OVERVIEW & INTRO SECTION                                    */}
@@ -62,7 +54,7 @@ export const ThesisEditingHeroAndOverview: React.FC = () => {
               language. Get your thesis edited by{" "}
               <a
                 href="/subject-matter-experts"
-                className="text-cyan-600 hover:underline font-medium"
+                className="text-blue-600 font-medium"
               >
                 subject matter experts
               </a>{" "}
@@ -85,7 +77,7 @@ export const ThesisEditingHeroAndOverview: React.FC = () => {
 
             {/* Call to Action Button */}
             <div className="pt-4">
-              <GetFreeQuoteButton/>
+              <GetFreeQuoteButton />
             </div>
           </div>
 

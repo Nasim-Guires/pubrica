@@ -37,10 +37,15 @@ export default function CommonTestimonial({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Total slides / max index configuration
-  // Mobile: 1 item per view -> max index is testimonials.length - 1 (5 dots for 5 items)
-  // Desktop: 2 items per view -> exactly 3 dots (indices 0, 1, 2 representing groupings)
-  const maxSlide = mobile ? testimonials.length - 1 : Math.max(0, testimonials.length - 2);
+  // Calculate slide limits dynamically based on device setup
+  const maxSlide = mobile
+    ? Math.max(0, testimonials.length - 1)
+    : Math.max(0, testimonials.length - 2);
+
+  // Pagination count calculation
+  const dotCount = mobile
+    ? testimonials.length
+    : Math.max(1, testimonials.length - 1);
 
   const next = () => {
     setCurrent((prev) => (prev >= maxSlide ? 0 : prev + 1));
@@ -50,14 +55,16 @@ export default function CommonTestimonial({
     setCurrent((prev) => (prev === 0 ? maxSlide : prev - 1));
   };
 
-  // Autoplay functionality: moves automatically every 5 seconds
+  // Autoplay timer set to 6 seconds (6000ms)
   useEffect(() => {
+    if (testimonials.length <= 1) return;
+
     const interval = setInterval(() => {
-      next();
-    }, 5000);
+      setCurrent((prev) => (prev >= maxSlide ? 0 : prev + 1));
+    }, 6000);
 
     return () => clearInterval(interval);
-  }, [maxSlide]);
+  }, [maxSlide, testimonials.length]);
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-6 min-w-0 w-full overflow-x-hidden">
@@ -146,16 +153,21 @@ export default function CommonTestimonial({
 
       {/* Pagination Squares / Dots */}
       <div className="flex justify-center items-center gap-2 mt-8">
-        {Array.from({ length: mobile ? testimonials.length : 3 }).map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrent(index)}
-            aria-label={`Go to slide ${index + 1}`}
-            className={`h-3 w-3 border border-[#0b3b2c] transition-all ${
-              current === index ? "bg-[#0b3b2c]" : "bg-white"
-            }`}
-          />
-        ))}
+        {Array.from({ length: dotCount }).map((_, index) => {
+          // Direct 1:1 mapping ensures the dot index always updates precisely when `current` changes
+          const isActive = current === index;
+
+          return (
+            <button
+              key={index}
+              onClick={() => setCurrent(index)}
+              aria-label={`Go to slide page ${index + 1}`}
+              className={`h-3 w-3 border border-[#0b3b2c] transition-all ${
+                isActive ? "bg-[#0b3b2c]" : "bg-white"
+              }`}
+            />
+          );
+        })}
       </div>
     </section>
   );

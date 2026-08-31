@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import CommonTestimonial from "@/components/common/CommonTestimonials";
+import CommonFAQ from "@/components/common/FAQ";
 
 interface Testimonial {
   id: string;
@@ -28,90 +30,79 @@ export const EditingTranslationManuscriptEditingTestimonialsAndFaq: React.FC =
     const [openFaqId, setOpenFaqId] = useState<number | null>(1);
 
     // All testimonials data
-    const testimonials: Testimonial[] = [
+    const testimonialsData = [
       {
-        id: "test-1",
-        quote:
-          '"Pubrica\'s manuscript editing service transformed my draft into a polished paper that met all the requirements of my target journal, Journal of Neuroscience. The attention to detail was outstanding."',
-        authorName: "DR. EMILY CARTER",
-        authorTitle: "Associate Professor of Neuroscience, USA",
-        journalCoverSrc:
+        image:
           "/images/editing-and-translation/manuscript-editing/european-journal-of-internal-medicine.png",
-        flagSrc:
+        quote:
+          "Pubrica's manuscript editing service transformed my draft into a polished paper that met all the requirements of my target journal, Journal of Neuroscience. The attention to detail was outstanding.",
+        name: "DR. EMILY CARTER",
+        designation: "Associate Professor of Neuroscience",
+        organization: "USA",
+        flag:
           "/images/editing-and-translation/manuscript-editing/germany-1-1.png",
-        flagAlt: "Germany Flag",
       },
       {
-        id: "test-2",
-        quote:
-          '"The editors not only corrected grammar and formatting but also improved the overall clarity and flow of my article. Thanks to Pubrica, my manuscript was accepted in The Lancet without major revisions."',
-        authorName: "PROF. RAJESH NAIR",
-        authorTitle: "Department of Cardiology, India",
-        journalCoverSrc:
+        image:
           "/images/editing-and-translation/manuscript-editing/journal-of-clinical-and-diagnostic-research.png",
-        flagSrc: "/images/editing-and-translation/manuscript-editing/flag.png",
-        flagAlt: "India Flag",
+        quote:
+          "The editors not only corrected grammar and formatting but also improved the overall clarity and flow of my article. Thanks to Pubrica, my manuscript was accepted in The Lancet without major revisions.",
+        name: "PROF. RAJESH NAIR",
+        designation: "Department of Cardiology",
+        organization: "India",
+        flag: "/images/editing-and-translation/manuscript-editing/flag.png",
       },
       {
-        id: "test-3",
-        quote:
-          '"I truly appreciate the expertise of Pubrica\'s editors. Their guidance on journal-specific formatting and language refinement helped me successfully submit to Nature Communications."',
-        authorName: "DR. ANNA MÜLLER",
-        authorTitle:
-          "Senior Research Scientist in Molecular Biology, Germany",
-        journalCoverSrc:
+        image:
           "/images/editing-and-translation/manuscript-editing/journal-of-neuroscience-.png",
-        flagSrc: "/images/editing-and-translation/manuscript-editing/spain.png",
-        flagAlt: "Spain Flag",
+        quote:
+          "I truly appreciate the expertise of Pubrica's editors. Their guidance on journal-specific formatting and language refinement helped me successfully submit to Nature Communications.",
+        name: "DR. ANNA MÜLLER",
+        designation: "Senior Research Scientist in Molecular Biology",
+        organization: "Germany",
+        flag: "/images/editing-and-translation/manuscript-editing/spain.png",
       },
     ];
 
     // All FAQ items with exact text extracted from screenshots
-    const faqList: FaqItem[] = [
+    const faqs = [
       {
-        id: 1,
         question:
           "1. What does manuscript editing include for research papers?",
         answer:
           "Editing of a manuscript involves language correction, structural correction, clarity improvement, format correction, reference verification, and refinement of the manuscript according to journal requirements and improvement of the quality of presentation.",
       },
       {
-        id: 2,
         question:
           "2. How can manuscript editing improve the chances of journal acceptance?",
         answer:
           "Manuscript editing improves clarity, structure, professionalism, reduces language errors, ensures compliance, and readability, thus increasing the chances of evaluation and acceptance by reviewers.",
       },
       {
-        id: 3,
         question:
           "3. When should a research paper be edited before journal submission?",
         answer:
           "A research paper is to be edited after completing the final draft, which is to be submitted to a journal, thus ensuring clarity, structure, compliance, accurate references, and manuscript refinement.",
       },
       {
-        id: 4,
         question:
           "4. What are the common writing issues corrected during manuscript editing?",
         answer:
           "Common issues may include grammatical errors, unclear writing, poor structure, use of incorrect terminology, poor flow, incorrect formatting, citation errors, and a lack of clarity in results and discussion sections.",
       },
       {
-        id: 5,
         question:
           "5. Do journals recommend professional editing for non-native English authors?",
         answer:
           "Many journals advise non-native English-speaking authors to seek professional language editing to enhance clarity and submission standards, although this does not guarantee publication.",
       },
       {
-        id: 6,
         question:
           "6. What is the difference between manuscript editing and proofreading?",
         answer:
           "Editing a manuscript will enhance structure, clarity, flow, and content quality, and proofreading will correct grammatical errors, spelling mistakes, punctuation errors, and minor formatting errors.",
       },
       {
-        id: 7,
         question:
           "7. How do authors choose the right manuscript editing service for journal submission?",
         answer:
@@ -123,11 +114,11 @@ export const EditingTranslationManuscriptEditingTestimonialsAndFaq: React.FC =
       setOpenFaqId(openFaqId === id ? null : id);
     };
 
-    const mobileItem = testimonials[activeIndex];
-    const desktopItems = [
-      testimonials[activeIndex],
-      testimonials[(activeIndex + 1) % testimonials.length],
-    ];
+    // const mobileItem = testimonials[activeIndex];
+    // const desktopItems = [
+    //   testimonials[activeIndex],
+    //   testimonials[(activeIndex + 1) % testimonials.length],
+    // ];
 
     const renderCard = (item: Testimonial, key: string) => (
       <div
@@ -172,79 +163,17 @@ export const EditingTranslationManuscriptEditingTestimonialsAndFaq: React.FC =
       <div className="w-full bg-slate-50 py-6 sm:py-7 text-slate-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-16">
           {/* SECTION 1: Testimonials */}
-          <section>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-3">
-              Testimonials
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600 max-w-4xl mb-8 leading-relaxed">
-              Learn how Pubrica’s Manuscript Editing Services have supported
-              researchers and scholars in preparing well-structured, error-free,
-              and publication-ready manuscripts. Our experienced editors refine
-              language, improve organization, and ensure adherence to journal
-              formatting requirements, thereby enhancing the quality and
-              acceptance potential of your work. Here is what our clients say:
-            </p>
-
-            <div className="grid grid-cols-1 gap-6 mb-6 md:hidden">
-              {renderCard(mobileItem, `mobile-${mobileItem.id}`)}
-            </div>
-            <div className="hidden md:grid grid-cols-2 gap-6 mb-6">
-              {desktopItems.map((item) =>
-                renderCard(item, `${activeIndex}-${item.id}`),
-              )}
-            </div>
-
-            <div className="flex justify-center items-center gap-2">
-              {testimonials.map((item, index) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  aria-label={`Show testimonial ${index + 1}`}
-                  onClick={() => setActiveIndex(index)}
-                  className={`w-3 h-3 rounded-none transition-colors ${
-                    activeIndex === index
-                      ? "bg-[#0d3b36]"
-                      : "border border-[#0d3b36] bg-transparent"
-                  }`}
-                />
-              ))}
-            </div>
-          </section>
+          <CommonTestimonial
+            title="What Our Clients Say"
+            description="Our manuscript editing service has helped researchers improve the clarity, quality, and journal-readiness of their manuscripts."
+            testimonials={testimonialsData}
+          />
 
           {/* SECTION 2: Frequently Asked Questions Accordion */}
-          <section className="pt-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-6">
-              Frequently Asked Questions
-            </h2>
-
-            <div className="border border-slate-200 rounded-md bg-white shadow-sm overflow-hidden divide-y divide-slate-200">
-              {faqList.map((faq) => {
-                const isOpen = openFaqId === faq.id;
-                return (
-                  <div key={faq.id} className="transition-colors">
-                    {/* Question Header */}
-                    <button
-                      onClick={() => toggleFaq(faq.id)}
-                      className="w-full text-left p-4 sm:px-6 sm:py-4 flex items-center justify-between font-semibold text-slate-900 text-xs sm:text-sm hover:bg-slate-50 focus:outline-none transition-colors"
-                      aria-expanded={isOpen}
-                    >
-                      <span className="pr-4">{faq.question}</span>
-                      <span className="text-lg font-mono font-bold leading-none text-slate-800 flex-shrink-0">
-                        {isOpen ? "−" : "+"}
-                      </span>
-                    </button>
-
-                    {/* Expandable Answer */}
-                    {isOpen && (
-                      <div className="p-4 sm:px-6 sm:pb-5 pt-0 text-xs sm:text-sm text-slate-700 leading-relaxed border-t border-slate-100 bg-slate-50/50">
-                        {faq.answer}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </section>
+          <CommonFAQ
+            title="Frequently Asked Questions"
+            faqs={faqs}
+          />
         </div>
       </div>
     );

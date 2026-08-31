@@ -123,7 +123,7 @@ export default function HowItWorksAndLanguages() {
             {languagesList.map((lang, index) => (
               <div
                 key={index}
-                className="flex items-center space-x-2.5 text-slate-800 text-xs sm:text-sm font-semibold hover:text-[#008099] cursor-pointer transition-colors"
+                className="flex items-center space-x-2.5 text-slate-800 text-xs sm:text-sm font-semibold transition-colors"
               >
                 <ArrowRightCircle className="w-4 h-4 text-slate-900 shrink-0" />
                 <span>{lang}</span>
@@ -164,7 +164,7 @@ export default function HowItWorksAndLanguages() {
                     and editing phases each have a{" "}
                     <a
                       href="/services/publication-support/peer-review-pre-submission"
-                      className="text-[#0056B3] hover:underline font-medium"
+                      className="text-blue-700"
                     >
                       peer-review
                     </a>{" "}

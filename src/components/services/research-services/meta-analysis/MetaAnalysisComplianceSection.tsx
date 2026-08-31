@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
 
 interface AccordionItem {
   title: string;
@@ -254,96 +255,41 @@ export default function MetaAnalysisComplianceSection() {
       ))}
 
       {/* Sample Work Section */}
-      <div
-        style={{
-          marginTop: "45px",
-          background: "#F1FBF6",
-          padding: "35px",
-          borderRadius: "10px",
-          display: "grid",
-          gridTemplateColumns: "320px 1fr",
-          gap: "40px",
-          alignItems: "center",
+      <PubricaSampleWorkCard
+        bookCoverImage={{
+          src: "/images/research-services/meta-analysis/Meta-Analysis-Service-Sample-Work.png",
+          alt: "Meta-analysis sample work",
+          width: 320,
+          height: 320,
         }}
-      >
-        <Image
-          src="/images/research-services/meta-analysis/Meta-Analysis-Service-Sample-Work.png"
-          alt="Meta-analysis sample work"
-          width={320}
-          height={320}
-          style={{
-            width: "100%",
-            height: "auto",
-            borderRadius: "6px",
-            objectFit: "cover",
-          }}
-        />
-
-        <div>
-          <h2
-            style={{
-              fontSize: "2rem",
-              fontWeight: 700,
-              marginBottom: "20px",
-            }}
-          >
-            Meta-Analysis Service Sample Work
-          </h2>
-
-          <Link
-            href="/insights/sample-work"
-            style={{
-              display: "inline-block",
-              background: "#000",
-              color: "#fff",
-              padding: "14px 40px",
-              borderRadius: "999px",
-              textDecoration: "none",
-              marginBottom: "30px",
-              fontWeight: 600,
-            }}
-          >
-            Discover More
-          </Link>
-
-          <h3
-            style={{
-              fontSize: "1.8rem",
-              marginBottom: "16px",
-            }}
-          >
-            Download the full Report Now
-          </h3>
-
-          <p
-            style={{
-              color: "#374151",
-              lineHeight: 1.8,
-              marginBottom: "28px",
-            }}
-          >
-            Explore our meta-analysis sample work, meticulously crafted to align
-            with journal-specific formatting, methodological rigor (e.g. PRISMA,
-            MARS), and submission deadlines, ensuring successful academic or
-            clinical publication.
-          </p>
-
-          <Link
-            href="/insights/sample-work"
-            style={{
-              display: "inline-block",
-              background: "#000",
-              color: "#fff",
-              padding: "14px 40px",
-              borderRadius: "999px",
-              textDecoration: "none",
-              fontWeight: 600,
-            }}
-          >
-            Discover More
-          </Link>
-        </div>
-      </div>
+        sections={[
+          {
+            heading: "Meta-Analysis Service Sample Work",
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work",
+            },
+          },
+          {
+            heading: "Download the full Report Now",
+            descriptionSegments: [
+              { text: "Explore our meta-analysis sample work, meticulously crafted to align with journal-specific formatting, methodological rigor (e.g. " },
+              {
+                text: "PRISMA",
+                url: "https://www.prisma-statement.org/prisma-2020-checklist",
+              },
+              {
+                text: ", MARS), and submission deadlines, ensuring successful academic or clinical publication.",
+              },
+            ],
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work",
+            },
+          },
+        ]}
+        footerDisclaimerSegments={[]}
+      />
     </section>
   );
 }

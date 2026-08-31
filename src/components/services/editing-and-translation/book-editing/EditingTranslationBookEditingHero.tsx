@@ -4,24 +4,17 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export const EditingTranslationBookEditingHero: React.FC = () => {
   return (
     <div className="w-full bg-[#f8fafc] text-slate-800">
       {/* Dark Hero Box Header */}
-      <div className="w-full bg-[#122e2b] py-5 px-4 sm:px-6 text-center text-white">
-        <div className="max-w-4xl mx-auto border border-slate-300/40 rounded-lg p-6 sm:p-8 bg-[#122e2b]">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-3 tracking-wide">
-            Book Editing Service
-          </h1>
-          <p className="text-xs sm:text-sm text-slate-200 leading-relaxed max-w-3xl mx-auto">
-            Pubrica’s Book editing service enhances your book’s appeal with
-            compelling content and captivating design. Our editing experts
-            refine your language and assist in shaping your ideas, plot, and
-            characters for maximum reader engagement.
-          </p>
-        </div>
-      </div>
+      <HeroBanner
+        title="Book Editing Service"
+        description="Pubrica’s Book editing service enhances your book’s appeal with compelling content and captivating design. Our editing experts refine your language and assist in shaping your ideas, plot, and characters for maximum reader engagement."
+        headingAs="h1"
+      />
 
       {/* Main Content Area */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6">
@@ -42,8 +35,8 @@ export const EditingTranslationBookEditingHero: React.FC = () => {
             scientific academic books, which are often extensive, technically
             dense, and subject to tight publication deadlines. Our book editing
             services are designed to address every aspect of book{" "}
-            <Link href="/services/publication-support" className="text-sky-600 hover:underline">
-               publication
+            <Link href="/services/publication-support" className="text-blue-600">
+              publication
             </Link>
             , from initial drafts to final proofs, ensuring compliance with the
             stringent formatting and content standards set by publishers.
@@ -88,7 +81,7 @@ export const EditingTranslationBookEditingHero: React.FC = () => {
                   Adherence to Publishing Standards:
                 </strong>{" "}
                 Our editors are well-versed in the{" "}
-                <Link href="/services/publication-support/journal-manuscript-formatting-services" className="text-sky-600 hover:underline">
+                <Link href="/services/publication-support/journal-manuscript-formatting-services" className="text-blue-600 ">
                   formatting
                 </Link>{" "}
                 guidelines of major publishers. We ensure that your book not
@@ -101,7 +94,7 @@ export const EditingTranslationBookEditingHero: React.FC = () => {
                 </strong>{" "}
                 Recognizing the importance of meeting publication deadlines, we
                 are committed to delivering high-quality{" "}
-                <Link href="/services/editing-and-translation" className="text-sky-600 hover:underline">
+                <Link href="/services/editing-and-translation" className="text-blue-600 ">
                   editing services
                 </Link>{" "}
                 quickly and efficiently, ensuring that your project remains on
@@ -120,7 +113,7 @@ export const EditingTranslationBookEditingHero: React.FC = () => {
 
           {/* Right Image Container */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md bg-[#0d3b36] p-3 rounded-2xl shadow-md">
+            <div className="relative w-full max-w-md  p-3 rounded-2xl">
               <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden">
                 <Image
                   src="/images/editing-and-translation/book-editing/Polish-Your-Pages-to-Perfection-With-Pubricas-Book-Editing-Service-1.webp"
@@ -145,7 +138,7 @@ export const EditingTranslationBookEditingHero: React.FC = () => {
           </p>
 
           <div>
-           <GetFreeQuoteButton/>
+            <GetFreeQuoteButton />
           </div>
         </div>
       </div>

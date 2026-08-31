@@ -1,3 +1,5 @@
+import { PackageItem } from "@/components/common/CommonPackages";
+
 interface FAQItem {
   id: number;
   question: string;
@@ -9,6 +11,8 @@ interface InsightCard {
   description: string;
   imageUrl: string;
 }
+
+
 
 export const insightsData: InsightCard[] = [
   {
@@ -39,6 +43,8 @@ export const insightsData: InsightCard[] = [
       "/images/editing-and-translation/How-Physicians-Can-Write-Clear-and-Impactful-Patient-Education-Materials.jpg",
   },
 ];
+
+
 
 export const faqData: FAQItem[] = [
   {
@@ -181,99 +187,7 @@ export const audienceList = [
   },
 ];
 
-export const editingTypesList = [
-  {
-    id: "proofreading",
-    title: "Proofreading",
-    icon: "/images/editing-and-translation/Proofreading.png",
-    description:
-      "The final review stage focuses on catching surface errors such as misspellings, typographical mistakes, and basic grammar issues. Proofreading is the last step before submission or publication.",
-  },
-  {
-    id: "substantive",
-    title: "Substantive Editing",
-    icon: "/images/editing-and-translation/Substantive-Editing.png",
-    description:
-      "A deep editing process involving extensive revisions, including rewriting, reordering, and suggestions for additional content. It ensures the manuscript meets journal expectations and significantly enhances readability.",
-  },
-  {
-    id: "line",
-    title: "Line Editing",
-    icon: "/images/editing-and-translation/Line-Editing.png",
-    description:
-      "Concentrates on sentence- and paragraph-level clarity, enhancing tone, readability, and logical flow. It involves eliminating jargon, refining word choice, and smoothing language usage without a complete rewrite.",
-  },
-  {
-    id: "copyediting",
-    title: "Copyediting",
-    icon: "/images/editing-and-translation/Copyediting.png",
-    description:
-      "Ensures correctness, consistency, and accuracy in grammar, vocabulary, punctuation, and syntax. Copyediting also involves checking for style guide compliance (APA, AMA, Chicago, Vancouver, etc.) and maintaining uniform terminology.",
-  },
-  {
-    id: "content",
-    title: "Content Editing",
-    icon: "/images/editing-and-translation/Content-Editing.png",
-    description:
-      "Examines the accuracy, consistency, and relevance of content, ensuring the document fulfills its purpose. May include fact-checking, refining arguments, and restructuring for better readability and impact.",
-  },
-  {
-    id: "technical",
-    title: "Technical Editing",
-    icon: "/images/editing-and-translation/Technical-Editing.png",
-    description:
-      "Reviews documents for technical accuracy, completeness, and adherence to industry or scientific standards. Ensures terminology, data, and references meet field-specific requirements.",
-  },
-  {
-    id: "manuscript",
-    title: "Manuscript Editing",
-    icon: "/images/editing-and-translation/Manuscript-Editing.png",
-    description:
-      "Tailored for academic authors submitting to journals or book publishers, focusing on both language use and publisher guidelines. Helps improve acceptance chances in high-impact journals.",
-  },
-  {
-    id: "structural",
-    title: "Structural Editing",
-    icon: "/images/editing-and-translation/Structural-Editing.png",
-    description:
-      "Assesses and reshapes the document structure, ensuring that ideas are logically organized and presented in a coherent way. May involve reordering chapters, sections, or arguments for maximum impact.",
-  },
-  {
-    id: "formatting",
-    title: "Formatting & Style Editing",
-    icon: "/images/editing-and-translation/Formatting-Style-Editing.png",
-    description:
-      "Ensures journal-specific formatting (references, tables, figures, word limits) and style guide compliance (APA, AMA, Vancouver, MLA, Chicago).",
-  },
-  {
-    id: "reviewer",
-    title: "Reviewer Response Editing",
-    icon: "/images/editing-and-translation/Reviewer-Response-Editing.png",
-    description:
-      "Helps authors refine and polish responses to peer reviewer comments. Improves clarity, professionalism, and alignment with journal requirements.",
-  },
-  {
-    id: "plagiarism",
-    title: "Plagiarism Check & Ethical Editing",
-    icon: "/images/editing-and-translation/Plagiarism-Check-Ethical-Editing.png",
-    description:
-      "Provides plagiarism screening and ensures manuscripts meet ethical publishing standards by improving originality, paraphrasing, and citation accuracy.",
-  },
-  {
-    id: "developmental",
-    title: "Developmental Editing",
-    icon: "/images/editing-and-translation/Developmental-Editing.png",
-    description:
-      "Focuses on the structure and content of a document, helping authors develop their manuscript from initial concept to complete draft. This type of editing addresses big-picture aspects such as organization, coherence, research argument strength, and overall narrative flow.",
-  },
-  {
-    id: "language",
-    title: "Language Polishing (ESL Support)",
-    icon: "/images/editing-and-translation/Language-Polishing-ESL-Support.png",
-    description:
-      "Specialized service for non-native English authors, improving clarity, grammar, and flow while retaining author intent.",
-  },
-];
+
 
 export const translationServicesList = [
   {
@@ -347,15 +261,11 @@ export const workflowSteps = [
   },
 ];
 
-export const packagesList = [
+export const packages: PackageItem[] = [
   {
-    name: "Basic",
-    tagline: "Language Clarity",
-    badge: "B",
-    badgeIcon: "/images/editing-and-translation/basic-pacakge.png",
-    // Match the exact muted greenish-gray tone
-    cardBg: "bg-[#CAD6D5]",
-    badgeTextColor: "text-[#B9A682]",
+    icon: "/images/editing-and-translation/basic-pacakge.png",
+    title: "Basic",
+    subtitle: "Language Clarity",
     idealFor:
       "Early drafts, academic assignments, internal reports, general business content",
     includes: [
@@ -363,17 +273,15 @@ export const packagesList = [
       "Sentence-level restructuring for clarity",
       "Consistency in basic terminology and style",
     ],
-    addons: ["Plagiarism check", "Certificate of editing"],
+    addOns: ["Plagiarism check", "Certificate of editing"],
     turnaround: "3–5 business days",
+    cardBgColor: "#CAD6D5",
+    titleColor: "#B9A682",
   },
   {
-    name: "Standard",
-    tagline: "Enhanced Quality",
-    badge: "S",
-    badgeIcon: "/images/publication-support/poster-preparation/S.png",
-    // Match the exact soft lavender-purple shade
-    cardBg: "bg-[#D5BEDC]",
-    badgeTextColor: "text-[#B9A682]",
+    icon: "/images/publication-support/poster-preparation/S.png",
+    title: "Standard",
+    subtitle: "Enhanced Quality",
     idealFor:
       "Journal manuscripts, technical reports, dissertations, business proposals",
     includes: [
@@ -382,21 +290,19 @@ export const packagesList = [
       "Improved logical flow and coherence",
       "Alignment with domain-specific terminology",
     ],
-    addons: [
+    addOns: [
       "Reference and citation formatting",
       "Word count reduction (without altering meaning)",
       "Cover letter drafting (for journal submissions)",
     ],
     turnaround: "4–7 business days",
+    cardBgColor: "#D5BEDC",
+    titleColor: "#B9A682",
   },
   {
-    name: "Premium",
-    tagline: "Publication Ready",
-    badge: "P",
-    badgeIcon: "/images/editing-and-translation/pro.webp",
-    // Match the exact golden ochre/tan background shade
-    cardBg: "bg-[#CCA673]",
-    badgeTextColor: "text-[#5597AC]",
+    icon: "/images/editing-and-translation/pro.webp",
+    title: "Premium",
+    subtitle: "Publication Ready",
     idealFor:
       "High-impact journals, regulatory submissions, clinical/medical content, funding proposals",
     includes: [
@@ -405,12 +311,14 @@ export const packagesList = [
       "Formatting per journal/publisher guidelines",
       "Advanced editing/translation with cultural and linguistic sensitivity",
     ],
-    addons: [
+    addOns: [
       "Multiple-round editing & revision support",
       "Journal selection and submission assistance",
       "Reviewer response editing support",
     ],
     turnaround: "7–10 business days (priority delivery available)",
+    cardBgColor: "#CCA673",
+    titleColor: "#5597AC",
   },
 ];
 export const mainServicesData = [

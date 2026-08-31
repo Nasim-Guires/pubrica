@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { EditorialWorkflowSection } from "@/components/common/EditorialWorkflowSection";
+import ServiceBanner from "@/components/common/ServiceBanner";
 
 // ==========================================
 // 1. TYPES OF PROOFREADING DATA & TYPES
@@ -138,7 +139,7 @@ const processSteps: ProcessStep[] = [
 // ==========================================
 export default function ProofreadingProcessAndTypes() {
   const [activeType, setActiveType] = useState<string | null>("final");
-
+  const [activeTypes, setActiveTypes] = useState<string[]>([]);
   return (
     <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-6 space-y-16">
       {/* ======================================= */}
@@ -152,25 +153,43 @@ export default function ProofreadingProcessAndTypes() {
         {/* 3 Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
           {proofreadingTypes.map((item) => {
-            const isOpen = activeType === item.id;
+            // Check if current card ID exists in activeTypes array
+            const isOpen = activeTypes.includes(item.id);
+
+            const toggleCard = () => {
+              if (isOpen) {
+                // Remove ID to close this card
+                setActiveTypes(activeTypes.filter((id) => id !== item.id));
+              } else {
+                // Add ID to open this card alongside others
+                setActiveTypes([...activeTypes, item.id]);
+              }
+            };
 
             return (
               <div
                 key={item.id}
-                className="bg-white border border-slate-200 rounded-xs shadow-2xs overflow-hidden transition-all duration-200"
-                onMouseEnter={() => setActiveType(item.id)}
+                className={`group rounded-xl border transition-all duration-300 overflow-hidden ${isOpen
+                  ? "bg-white border-emerald-500/40 shadow-md ring-1 ring-emerald-500/20"
+                  : "bg-white border-slate-200 shadow-sm hover:border-slate-300 hover:shadow"
+                  }`}
               >
-                {/* Accordion Header */}
+                {/* Accordion Header (Click Only) */}
                 <button
                   type="button"
-                  onClick={() => setActiveType(isOpen ? null : item.id)}
-                  className={`w-full flex items-center justify-between p-4 text-left font-bold text-sm sm:text-base transition-colors ${isOpen
-                      ? "bg-[#f0fdf4] text-slate-900"
-                      : "bg-[#f0fdf4]/60 hover:bg-[#f0fdf4] text-slate-800"
+                  onClick={toggleCard}
+                  className={`w-full flex items-center justify-between p-4 text-left font-semibold text-sm sm:text-base transition-colors duration-200 cursor-pointer ${isOpen
+                    ? "bg-slate-50/80 text-emerald-950"
+                    : "bg-white text-slate-800 hover:bg-slate-50/50"
                     }`}
                 >
-                  <div className="flex items-center space-x-3">
-                    <div className="p-1.5 bg-white rounded-md border border-emerald-100 shadow-2xs">
+                  <div className="flex items-center space-x-3.5 min-w-0">
+                    <div
+                      className={`p-2 rounded-lg border transition-colors shrink-0 ${isOpen
+                        ? "bg-emerald-50 border-emerald-200/60"
+                        : "bg-slate-100/70 border-slate-200/60 group-hover:bg-slate-100"
+                        }`}
+                    >
                       <Image
                         src={item.iconSrc}
                         alt={item.title}
@@ -179,17 +198,24 @@ export default function ProofreadingProcessAndTypes() {
                         className="w-5 h-5 object-contain"
                       />
                     </div>
-                    <span className="leading-snug">{item.title}</span>
+                    <span className="leading-tight truncate">{item.title}</span>
                   </div>
-                  <span className="text-xl font-medium text-slate-600 ml-2">
+
+                  {/* + / − Toggle Button */}
+                  <span
+                    className={`flex items-center justify-center w-6 h-6 rounded-full text-sm font-bold transition-colors duration-200 shrink-0 ml-2 ${isOpen
+                      ? "bg-emerald-100 text-emerald-700"
+                      : "bg-slate-100 text-slate-500 group-hover:bg-slate-200"
+                      }`}
+                  >
                     {isOpen ? "−" : "+"}
                   </span>
                 </button>
 
                 {/* Accordion Content */}
                 {isOpen && (
-                  <div className="p-4 bg-white border-t border-slate-200 text-xs sm:text-sm text-slate-600 leading-relaxed min-h-[75px] flex items-center">
-                    <p>{item.description}</p>
+                  <div className="px-4 pb-4 pt-1 bg-white border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    <p className="pt-2">{item.description}</p>
                   </div>
                 )}
               </div>
@@ -199,32 +225,12 @@ export default function ProofreadingProcessAndTypes() {
       </section>
 
       {/* BANNER: SATISFACTION GUARANTEE */}
-      <section className="w-full bg-[#003B46] text-white py-8 px-4 sm:px-6">
-        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-center sm:text-left">
-          {/* Badge Graphic */}
-          <div className="relative w-24 h-24 shrink-0">
-            <Image
-              src="/images/editing-and-translation/proofreading/Satisfaction_Guarantee_blue2.png"
-              alt="100% satisfaction guarantee"
-              fill
-              sizes="96px"
-              className="object-contain"
-            />
-          </div>
-
-          {/* Text Content */}
-          <div className="space-y-1">
-            <h3 className="text-xl sm:text-2xl font-bold text-white">
-              Proofreading Services at Pubrica
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-200 leading-relaxed max-w-2xl">
-              Elevate your content with Pubrica’s meticulous Proofreading
-              Services. Our experts ensure precision and professionalism,
-              refining clarity and correctness.
-            </p>
-          </div>
-        </div>
-      </section>
+      <ServiceBanner
+        imageSrc="/images/publication-support/Satisfaction_Guarantee.webp"
+        imageAlt="100% satisfaction guarantee"
+        heading="Proofreading Services at Pubrica"
+        description="Elevate your content with Pubrica’s meticulous Proofreading Services. Our experts ensure precision and professionalism, refining clarity and correctness."
+      />
 
       {/* SECTION 2: HOW OUR SERVICE WORKS */}
       <EditorialWorkflowSection

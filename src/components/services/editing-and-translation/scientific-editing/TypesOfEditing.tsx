@@ -95,7 +95,7 @@ const rightServices: AccordionItem[] = [
         Ensures journal-specific{" "}
         <Link
           href="/services/publication-support/journal-manuscript-formatting-services"
-          className="text-cyan-700 hover:underline"
+          className="text-blue-700 "
         >
           formatting
         </Link>{" "}
@@ -120,7 +120,7 @@ const rightServices: AccordionItem[] = [
         Provides{" "}
         <Link
           href="/services/publication-support/plagiarism-services"
-          className="text-cyan-700 hover:underline"
+          className="text-blue-700"
         >
           plagiarism
         </Link>{" "}
@@ -164,7 +164,7 @@ export default function TypesOfEditing() {
           At Pubrica, our{" "}
           <Link
             href="/academy/scientific-editing/scientific-vs-language-editing-high-quality-publications"
-            className="text-cyan-700 hover:underline font-medium"
+            className="text-blue-700 font-medium"
           >
             science editing services for scientists
           </Link>{" "}
@@ -172,7 +172,7 @@ export default function TypesOfEditing() {
           your research manuscripts. We offer a range of{" "}
           <Link
             href="/academy/editing-and-translation/scientific-editing-complete-research-guide"
-            className="text-cyan-700 hover:underline font-medium"
+            className="text-blue-700"
           >
             science editing services for academics
           </Link>{" "}

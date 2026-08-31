@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
+import CommonTestimonial from "@/components/common/CommonTestimonials";
+import CommonFAQ from "@/components/common/FAQ";
 
 const IMG_BASE =
   "/images/editing-and-translation/translation-with-editing/";
@@ -19,39 +21,33 @@ interface Testimonial {
   flagAlt: string;
 }
 
-const testimonialsData: Testimonial[] = [
+const testimonialsData = [
   {
-    id: "1",
+    image: `${IMG_BASE}nature-biotechnology.png`,
     quote:
       "The Pubrica Translation with Editing Service exceeded my expectations. My manuscript was translated into English flawlessly, preserving the exact meaning and nuances of my original work. The editing made it publication-ready.",
-    author: "DR. ANANYA MEHTA",
-    role: "Biomedical Researcher, India",
-    journalCover: `${IMG_BASE}nature-biotechnology.png`,
-    journalAlt: "Nature Biotechnology journal cover",
-    flagSrc: `${IMG_BASE}india.png`,
-    flagAlt: "India flag",
+    name: "DR. ANANYA MEHTA",
+    designation: "Biomedical Researcher",
+    organization: "India",
+    flag: `${IMG_BASE}india.png`,
   },
   {
-    id: "2",
+    image: `${IMG_BASE}the-lancet-of-oncolgy-.png`,
     quote:
       "The team at Pubrica provided precise translation along with thorough editing. It truly elevated the quality of my manuscript and helped me communicate my findings effectively to an international audience.",
-    author: "PROF. LI WEI",
-    role: "Materials Science Professor, China",
-    journalCover: `${IMG_BASE}the-lancet-of-oncolgy-.png`,
-    journalAlt: "The Lancet Oncology journal cover",
-    flagSrc: `${IMG_BASE}china.png`,
-    flagAlt: "China flag",
+    name: "PROF. LI WEI",
+    designation: "Materials Science Professor",
+    organization: "China",
+    flag: `${IMG_BASE}china.png`,
   },
   {
-    id: "3",
+    image: `${IMG_BASE}Frontiers-of-neuro-science-.png`,
     quote:
       "I was struggling to express complex findings in English. Pubrica not only translated my thesis but also polished the style to meet academic standards. The turnaround time and quality were outstanding.",
-    author: "MS. ANANYA MEHTA",
-    role: "Ph.D. Scholar in Environmental Science, India",
-    journalCover: `${IMG_BASE}Frontiers-of-neuro-science-.png`,
-    journalAlt: "Frontiers in Neuroscience journal cover",
-    flagSrc: `${IMG_BASE}india.png`,
-    flagAlt: "India flag",
+    name: "MS. ANANYA MEHTA",
+    designation: "Ph.D. Scholar in Environmental Science",
+    organization: "India",
+    flag: `${IMG_BASE}india.png`,
   },
 ];
 
@@ -62,30 +58,26 @@ interface FAQItem {
   answer: string;
 }
 
-const faqData: FAQItem[] = [
+const faqs = [
   {
-    id: 1,
     question:
       "How to translate a research paper into English for journal submission?",
     answer:
       "Translate a research paper using professional academic translation, ensuring subject accuracy, technical terms, appropriate formatting according to journal requirements, and post-editing with precision.",
   },
   {
-    id: 2,
     question:
       "Where to find academic translation services for research manuscripts?",
     answer:
       "Academic translation services are available from professional translation service providers, research editing services, academic translators, and research assistance services at the universities.",
   },
   {
-    id: 3,
     question:
       "Can translated research papers be edited for journal publication?",
     answer:
       "Yes, the translated research papers can be edited professionally to ensure the accuracy of the language, clarity, consistency of the words, formatting, etc.",
   },
   {
-    id: 4,
     question:
       "Why is professional editing important after translating a research paper?",
     answer:
@@ -141,11 +133,11 @@ export default function TestimonialsAndFAQ() {
     setOpenFaq(openFaq === id ? null : id);
   };
 
-  const mobileItem = testimonialsData[activeIndex];
-  const desktopItems = [
-    testimonialsData[activeIndex],
-    testimonialsData[(activeIndex + 1) % testimonialsData.length],
-  ];
+  // const mobileItem = testimonialsData[activeIndex];
+  // const desktopItems = [
+  //   testimonialsData[activeIndex],
+  //   testimonialsData[(activeIndex + 1) % testimonialsData.length],
+  // ];
 
   return (
     <div className="w-full bg-[#f8fafc] text-slate-800 font-sans py-6 px-4 sm:px-6">
@@ -153,95 +145,18 @@ export default function TestimonialsAndFAQ() {
         {/* ======================================= */}
         {/* SECTION 1: TESTIMONIALS                 */}
         {/* ======================================= */}
-        <section className="space-y-8">
-          {/* Section Header */}
-          <div className="space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#003B46]">
-              Testimonials
-            </h2>
-            <p className="text-slate-700 text-sm sm:text-base leading-relaxed max-w-4xl">
-              Learn how Pubrica&apos;s Translation with Editing Services have
-              helped researchers and authors accurately translate their work,
-              enhance clarity, and meet publication standards. Our expert
-              translators and editors ensure linguistic precision, preserve the
-              original meaning, and refine the text for fluency and readability,
-              making your manuscript publication-ready and professionally
-              polished. Here is what our clients say:
-            </p>
-          </div>
-
-          <div className="relative py-2">
-            <div className="grid grid-cols-1 gap-6 items-stretch md:hidden">
-              <TestimonialCard item={mobileItem} />
-            </div>
-            <div className="hidden md:grid grid-cols-2 gap-6 items-stretch">
-              {desktopItems.map((item) => (
-                <TestimonialCard
-                  key={`${activeIndex}-${item.id}`}
-                  item={item}
-                />
-              ))}
-            </div>
-
-            <div className="flex justify-center items-center space-x-2 mt-8">
-              {testimonialsData.map((item, index) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => setActiveIndex(index)}
-                  className={`w-3 h-3 border border-slate-800 rounded-xs transition-colors ${
-                    activeIndex === index ? "bg-[#003B46]" : "bg-transparent"
-                  }`}
-                  aria-label={`Show testimonial ${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-
+        <CommonTestimonial
+          title="Testimonials"
+          description="Learn how Pubrica's Translation with Editing Services have helped researchers and authors accurately translate their work, enhance clarity, and meet publication standards. Our expert translators and editors ensure linguistic precision, preserve the original meaning, and refine the text for fluency and readability, making your manuscript publication-ready and professionally polished. Here is what our clients say:"
+          testimonials={testimonialsData}
+        />
         {/* ======================================= */}
         {/* SECTION 2: FREQUENTLY ASKED QUESTIONS   */}
         {/* ======================================= */}
-        <section className="space-y-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#003B46]">
-            Frequently Asked Questions
-          </h2>
-
-          {/* Accordion List */}
-          <div className="border border-slate-200 rounded-sm bg-white divide-y divide-slate-200 shadow-xs">
-            {faqData.map((faq) => {
-              const isOpen = openFaq === faq.id;
-              return (
-                <div key={faq.id} className="transition-colors">
-                  {/* Question Header */}
-                  <button
-                    type="button"
-                    onClick={() => toggleFaq(faq.id)}
-                    className="w-full text-left p-4 sm:p-5 flex justify-between items-center space-x-4 focus:outline-hidden hover:bg-slate-50"
-                  >
-                    <span className="font-bold text-slate-900 text-sm sm:text-base leading-snug">
-                      {faq.id}. {faq.question}
-                    </span>
-                    <span className="shrink-0 text-slate-700">
-                      {isOpen ? (
-                        <Minus className="w-5 h-5 stroke-[2.5]" />
-                      ) : (
-                        <Plus className="w-5 h-5 stroke-[2.5]" />
-                      )}
-                    </span>
-                  </button>
-
-                  {/* Expandable Answer Box */}
-                  {isOpen && (
-                    <div className="px-4 sm:px-5 pb-5 pt-1 text-slate-700 text-xs sm:text-sm leading-relaxed border-t border-slate-100 bg-slate-50/50">
-                      <p>{faq.answer}</p>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </section>
+        <CommonFAQ
+          title="Frequently Asked Questions"
+          faqs={faqs}
+        />
       </div>
     </div>
   );

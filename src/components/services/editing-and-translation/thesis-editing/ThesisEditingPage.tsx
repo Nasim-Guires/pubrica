@@ -116,7 +116,7 @@ export const ThesisEditingPage: React.FC = () => {
 
         <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-8 max-w-5xl">
           Pubrica offers specialized{" "}
-          <Link href="/insights/thesis-poster-example-for-students" className="text-cyan-600 ">
+          <Link href="/insights/thesis-poster-example-for-students" className="text-blue-600 ">
             thesis editing services
           </Link>{" "}
           tailored for both native English speakers and those for whom English
@@ -174,7 +174,7 @@ export const ThesisEditingPage: React.FC = () => {
                     Our thesis editing and{" "}
                     <Link
                       href={item.linkHref!}
-                      className="text-cyan-600 hover:underline"
+                      className="text-blue-600 "
                     >
                       {item.linkText}
                     </Link>{" "}

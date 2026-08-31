@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,7 +21,10 @@ const audiences: AudienceCard[] = [
     description: (
       <>
         Individual scholars, early-career researchers, and senior academics seeking to refine manuscripts, theses, or dissertations for{" "}
-        <Link href="/services/publication-support/journal-submission" className="text-cyan-400 underline hover:text-cyan-300">
+        <Link
+          href="/services/publication-support/journal-submission"
+          className="text-blue-700 "
+        >
           journal submission
         </Link>{" "}
         or academic recognition.
@@ -45,7 +48,10 @@ const audiences: AudienceCard[] = [
     description: (
       <>
         Clinicians, surgeons, and healthcare practitioners aiming to publish clinical research, case studies, and{" "}
-        <Link href="/services/research-services/systematic-review" className="text-cyan-400 underline hover:text-cyan-300">
+        <Link
+          href="/services/research-services/systematic-review"
+          className="text-blue-700 "
+        >
           systematic reviews
         </Link>{" "}
         in leading journals.
@@ -85,9 +91,6 @@ const audiences: AudienceCard[] = [
 ];
 
 export default function ScientificWhoWeServe() {
-  // Store hovered index, defaulting to 0 so the first card shows text initially if desired
-  const [hoveredId, setHoveredId] = useState<string | null>("researchers");
-
   return (
     <section className="max-w-7xl mx-auto py-6 md:py-7 px-4 sm:px-6 lg:px-8 font-sans">
       {/* Header */}
@@ -99,7 +102,7 @@ export default function ScientificWhoWeServe() {
           At Pubrica, our{" "}
           <Link
             href="/academy/scientific-editing/scientific-vs-language-editing-high-quality-publications"
-            className="text-blue-700  hover:text-cyan-800 font-medium"
+            className="text-blue-700 "
           >
             scientific research paper editing services
           </Link>{" "}
@@ -109,57 +112,50 @@ export default function ScientificWhoWeServe() {
 
       {/* Grid Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {audiences.map((item) => {
-          const isHovered = hoveredId === item.id;
+        {audiences.map((item) => (
+          <div
+            key={item.id}
+            tabIndex={0}
+            className="group relative h-64 sm:h-72 rounded-sm overflow-hidden shadow-sm cursor-pointer w-full focus:outline-none"
+          >
+            {/* Normal State (Image) */}
+            <div className="absolute inset-0 w-full h-full">
+              <Image
+                src={item.imageSrc}
+                alt={item.title}
+                fill
+                className="object-cover"
+              />
+              {/* Dark gradient overlay for bottom text */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-          return (
-            <div
-              key={item.id}
-              onMouseEnter={() => setHoveredId(item.id)}
-              className="relative h-64 sm:h-72 rounded-sm overflow-hidden shadow-sm cursor-pointer transition-all duration-300"
-            >
-              {/* Black Card View (Hovered state) */}
-              {isHovered ? (
-                <div className="w-full h-full bg-black text-white p-6 flex flex-col justify-start space-y-4 animate-fadeIn">
-                  <h3 className="text-base sm:text-lg font-bold tracking-wide text-white">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              ) : (
-                /* Image Card View (Normal state) */
-                <div className="relative w-full h-full group">
-                  <Image
-                    src={item.imageSrc}
-                    alt={item.title}
-                    fill
-                    className="object-cover"
-                  />
-                  {/* Dark gradient overlay for bottom text */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  
-                  {/* Bottom Title */}
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-sm sm:text-base font-bold text-white leading-snug">
-                      {item.title}
-                    </h3>
-                  </div>
-                </div>
-              )}
+              {/* Bottom Title */}
+              <div className="absolute bottom-4 left-4 right-4">
+                <h3 className="text-sm sm:text-base font-bold text-white leading-snug">
+                  {item.title}
+                </h3>
+              </div>
             </div>
-          );
-        })}
-      </div>
 
+            {/* Hovered/Tapped State */}
+            <div className="absolute inset-0 w-full h-full bg-black text-white p-6 flex flex-col justify-start space-y-4 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 transition-opacity duration-300 ease-in-out z-10">
+              <h3 className="text-base sm:text-lg font-bold tracking-wide text-white">
+                {item.title}
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
       {/* Footer Text */}
       <div className="mt-10 max-w-5xl">
         <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
           Our services also extend to{" "}
           <Link
             href="/services/editing-and-translation/manuscript-editing"
-            className="text-blue-700  hover:text-cyan-800 font-medium"
+            className="text-blue-700 "
           >
             academic writing and editing
           </Link>

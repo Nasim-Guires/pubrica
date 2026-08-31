@@ -27,7 +27,7 @@ export const EditingTranslationManuscriptEditingOverview: React.FC = () => {
               Pubrica offers the most prestigious{" "}
               <Link
                 href="/services/editing-and-translation/translation-with-editing"
-                className="text-sky-600 hover:underline font-medium"
+                className="text-blue-600 "
               >
                 manuscript editing services
               </Link>{" "}
@@ -62,7 +62,7 @@ export const EditingTranslationManuscriptEditingOverview: React.FC = () => {
                   Provide academic{" "}
                   <Link
                     href="sights/sample-work/phenotypic-variations-of-atopic-dermatitis-a-systemic-review-of-dupilumab-efficacy-and-safety"
-                    className="text-sky-600 hover:underline"
+                    className="text-blue-600 "
                   >
                     medical manuscript editing
                   </Link>{" "}
@@ -148,8 +148,8 @@ export const EditingTranslationManuscriptEditingOverview: React.FC = () => {
 
           {/* Right Column: Journal Covers Image Showcase */}
           <div className="lg:col-span-5 relative mt-6 lg:mt-0">
-            <div className="bg-emerald-950/80 rounded-2xl p-6 shadow-xl">
-              <div className="relative w-full h-[320px] sm:h-[380px] rounded-lg overflow-hidden">
+            <div className=" rounded-2xl p-6 ">
+              <div className="relative w-full h-[320px] sm:h-[380px] overflow-hidden">
                 <Image
                   src="/images/editing-and-translation/manuscript-editing/Get-Manuscript-Published-with-Confidence-Expert-Manuscript-Editing-Services.webp"
                   alt="Get Manuscript Published with Confidence — Expert Manuscript Editing Services"

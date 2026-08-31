@@ -61,7 +61,7 @@ export default function WhoWeServe() {
       description: (
         <span>
           Enabling Contract Research Organizations and consultants to outsource high-quality meta-analyses backed by compliance with{" "}
-          <a href="https://www.prisma-statement.org/" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline hover:text-blue-300">
+          <a href="https://www.prisma-statement.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600-400 ">
             PRISMA
           </a>{" "}
           and MARS guidelines.
@@ -83,14 +83,14 @@ export default function WhoWeServe() {
           At Pubrica, our{" "}
           <Link
             href="/services/research-services/meta-analysis"
-            className="text-blue-600 underline hover:text-blue-800 transition-colors"
+            className="text-blue-600"
           >
             meta-analysis writing services
           </Link>{" "}
           cater to a diverse range of clients in the academic, clinical, and{" "}
           <Link
             href="/industries/pharmaceutical"
-            className="text-blue-600 underline hover:text-blue-800 transition-colors"
+            className="text-blue-600"
           >
             pharmaceutical
           </Link>{" "}

@@ -23,8 +23,9 @@ const servicesData: TabData[] = [
     imageAlt: "Meta-Analysis Guidelines Compliance",
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
-        A committed project coordinator to assist with all queries related to
-        your report, providing seamless and personalized support.
+        Our scientific and medical experts craft your meta-analyses, adhering to specific reporting guidelines such as the MARS and PRISMA, along with clear and upfront potential personal or financial conflicts of interest (COIs), ensuring precision and relevance. We also utilize guidelines specific to the studies, for instance, to report <Link className="text-blue-600" href="/services/research-services/meta-analysis/meta-analysis-services-prisma-2020/">RCT</Link> studies, Pubrica applies QUORUM, and for observational studies, the MOOSE
+
+
       </p>
     ),
   },
@@ -37,96 +38,87 @@ const servicesData: TabData[] = [
     imageAlt: "Structured Reporting",
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
-        We meticulously follow the journal-specified structure, covering
-        keywords, utilizing different databases (CINAHL, PsycINFO) and
-        extracting key data summary (including author, year, details of included
-        studies, DOIs, or PubMed IDs, among others), and analysing quality of
-        the included studies using standard tools specific to the studies (e.g.,
-        the JADA scale for RCT, the Newcastle-Ottawa Scale for non-randomized
-        studies, QUADAS-2 for the quality assessment of diagnostic accuracy
-        studies). Background, material, and methods, results, and discussion
-        with tables, summary of the gap analysis, discussion, and conclusion,
-        including limitations and future directions, along with a supplementary
+        We meticulously follow the journal-specified structure, covering keywords, utilizing different databases (CINAHL, PsycINFO) and extracting key data summary (including author, year, details of included studies, DOIs, or PubMed IDs, among others), and analysing quality of the included studies using standard tools specific to the studies (e.g., the JADA scale for RCT, the Newcastle-Ottawa Scale for non-randomized studies, QUADAS-2 for the quality assessment of diagnostic accuracy studies. Background, material, and methods, results, and discussion with tables, summary of the gap analysis, discussion, and conclusion, including limitations and future directions, along with a supplementary table.
         table.
       </p>
     ),
   },
-  {
-    id: "data-extraction",
-    label: "Data Extraction & Analysis",
-    title: "Data Extraction & Analysis",
-    imageSrc:
-      "/images/research-services/systematic-review/Data-Extraction-Analysis.png",
-    imageAlt: "Data Extraction and Analysis Charts",
-    content: (
-      <ul
-        style={{
-          paddingLeft: "20px",
-          margin: "16px 0",
-          lineHeight: "1.7",
-          color: "#374151",
-        }}
-      >
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Structured Data Extraction</strong> – Use standardized
-          templates for consistent, high-quality{" "}
-          <Link
-            href="/services/medical-data-collection"
-            style={{ color: "#2563eb", textDecoration: "underline" }}
-          >
-            systematic review data collection support
-          </Link>
-          .
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Risk of Bias Assessment</strong> – Apply Cochrane Risk of Bias
-          Tool, Newcastle-Ottawa Scale (NOS), or JBI Critical Appraisal Tool;
-          prepare detailed bias tables for appendices.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Data Analysis &amp; Synthesis</strong> – Quantitative,
-          qualitative, and mixed-method meta-analysis with presentation-ready
-          tables, charts, and figures.
-        </li>
-      </ul>
-    ),
-  },
-  {
-    id: "writing-formatting",
-    label: "Writing & Formatting",
-    title: "Writing & Formatting",
-    imageSrc:
-      "/images/research-services/systematic-review/Writing-Formatting.png",
-    imageAlt: "Writing and Formatting Academic Journal Manuscripts",
-    content: (
-      <ul
-        style={{
-          paddingLeft: "20px",
-          margin: "16px 0",
-          lineHeight: "1.7",
-          color: "#374151",
-        }}
-      >
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Full Manuscript Development</strong> – Write the introduction,
-          methodology, results, discussion, and conclusion in compliance with
-          the target journal's specifications.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Abstract Preparation</strong> – Develop PRISMA 2020-compliant
-          abstracts including objectives, methods, results, and conclusions.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Referencing &amp; Citation Management</strong> – Accurate
-          referencing in APA, AMA, or journal-specific formats.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Formatting</strong> – Align the manuscript with the target
-          journal's author guidelines.
-        </li>
-      </ul>
-    ),
-  },
+  // {
+  //   id: "data-extraction",
+  //   label: "Data Extraction & Analysis",
+  //   title: "Data Extraction & Analysis",
+  //   imageSrc:
+  //     "/images/research-services/systematic-review/Data-Extraction-Analysis.png",
+  //   imageAlt: "Data Extraction and Analysis Charts",
+  //   content: (
+  //     <ul
+  //       style={{
+  //         paddingLeft: "20px",
+  //         margin: "16px 0",
+  //         lineHeight: "1.7",
+  //         color: "#374151",
+  //       }}
+  //     >
+  //       <li style={{ marginBottom: "12px" }}>
+  //         <strong>Structured Data Extraction</strong> – Use standardized
+  //         templates for consistent, high-quality{" "}
+  //         <Link
+  //           href="/services/medical-data-collection"
+  //           className="text-blue-600"
+  //         >
+  //           systematic review data collection support
+  //         </Link>
+  //         .
+  //       </li>
+  //       <li style={{ marginBottom: "12px" }}>
+  //         <strong>Risk of Bias Assessment</strong> – Apply Cochrane Risk of Bias
+  //         Tool, Newcastle-Ottawa Scale (NOS), or JBI Critical Appraisal Tool;
+  //         prepare detailed bias tables for appendices.
+  //       </li>
+  //       <li style={{ marginBottom: "12px" }}>
+  //         <strong>Data Analysis &amp; Synthesis</strong> – Quantitative,
+  //         qualitative, and mixed-method meta-analysis with presentation-ready
+  //         tables, charts, and figures.
+  //       </li>
+  //     </ul>
+  //   ),
+  // },
+  // {
+  //   id: "writing-formatting",
+  //   label: "Writing & Formatting",
+  //   title: "Writing & Formatting",
+  //   imageSrc:
+  //     "/images/research-services/systematic-review/Writing-Formatting.png",
+  //   imageAlt: "Writing and Formatting Academic Journal Manuscripts",
+  //   content: (
+  //     <ul
+  //       style={{
+  //         paddingLeft: "20px",
+  //         margin: "16px 0",
+  //         lineHeight: "1.7",
+  //         color: "#374151",
+  //       }}
+  //     >
+  //       <li style={{ marginBottom: "12px" }}>
+  //         <strong>Full Manuscript Development</strong> – Write the introduction,
+  //         methodology, results, discussion, and conclusion in compliance with
+  //         the target journal's specifications.
+  //       </li>
+  //       <li style={{ marginBottom: "12px" }}>
+  //         <strong>Abstract Preparation</strong> – Develop PRISMA 2020-compliant
+  //         abstracts including objectives, methods, results, and conclusions.
+  //       </li>
+  //       <li style={{ marginBottom: "12px" }}>
+  //         <strong>Referencing &amp; Citation Management</strong> – Accurate
+  //         referencing in APA, AMA, or journal-specific formats.
+  //       </li>
+  //       <li style={{ marginBottom: "12px" }}>
+  //         <strong>Formatting</strong> – Align the manuscript with the target
+  //         journal's author guidelines.
+  //       </li>
+  //     </ul>
+  //   ),
+  // },
   {
     id: "publication-support",
     label: "Publication Support",
@@ -174,16 +166,7 @@ const servicesData: TabData[] = [
     imageAlt: "Documentation Templates and Study Protocols",
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
-        Preparation of essential documentation including explanation for effect
-        size, odds ratio, relative risk, fixed-effects model, random-effects
-        model, forest plot, funnel plot, confidence interval, clarifying study
-        objectives, study population, electronic database utilized inclusion and
-        exclusion criteria, identification/locating subjects, screen and
-        evaluation, data extraction, data analyses (Python or R or Cochrane
-        RevMan, OpenMetaAnalyst, NetworkAnalyst, JASP, MetaGenyo, EpiSheet,
-        GWAR, GWAMA, METAL), reporting and interpretation, referencing, and
-        formatting, in line with review article journal guidelines and
-        checklists.
+        Preparation of essential documentation including explanation for effect size, odds ratio, relative risk, fixed-effects model, random-effects model, forest plot, funnel plot, confidence interval, clarifying study objectives, study population, electronic database utilized inclusion and exclusion criteria, identification/locating subjects, screen and evaluation, data extraction, data analyses (Python or R or Cochrane RevMan, OpenMetaAnalyst, NetworkAnalyst, JASP, MetaGenyo, EpiSheet, GWAR, GWAMA, METAL), reporting and interpretation, referencing, and formatting, in line with review article journal guidelines and checklists.
       </p>
     ),
   },
@@ -197,29 +180,31 @@ const servicesData: TabData[] = [
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
         Assistance with sourcing of literature, editing review, and characterizing the evidence to enrich your meta-analyses review report.
+
+
       </p>
     ),
   },
-  {
-    id: "publication-support-services",
-    label: "Publication Support Services",
-    title: "Publication Support Services",
-    imageSrc:
-      "/images/research-services/meta-analysis/Publication-Support-Services.png",
-    imageAlt: "Publication Support and Journal Advisory Services",
-    content: (
-      <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
-        Comprehensive support encompassing{" "}
-        <Link
-          href="/services/publication-support/journal-selection"
-          style={{ color: "#2563eb", textDecoration: "" }}
-        >
-          journal selection
-        </Link>
-        , submission process, cover letter framing, resubmission, follow-up with editorial teams, and support up to the point of publication.
-      </p>
-    ),
-  },
+  // {
+  //   id: "publication-support-services",
+  //   label: "Publication Support Services",
+  //   title: "Publication Support Services",
+  //   imageSrc:
+  //     "/images/research-services/meta-analysis/Publication-Support-Services.png",
+  //   imageAlt: "Publication Support and Journal Advisory Services",
+  //   content: (
+  //     <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
+  //       Comprehensive support encompassing{" "}
+  //       <Link
+  //         href="/services/publication-support/journal-selection"
+  //         className="text-blue-600"
+  //       >
+  //         journal selection
+  //       </Link>
+  //       , submission process, cover letter framing, resubmission, follow-up with editorial teams, and support up to the point of publication.
+  //     </p>
+  //   ),
+  // },
   {
     id: "plagiarism-analysis",
     label: "Plagiarism Analysis",
@@ -232,7 +217,7 @@ const servicesData: TabData[] = [
         Detailed{" "}
         <Link
           href="/services/publication-support/plagiarism-services"
-          style={{ color: "#2563eb", textDecoration: "" }}
+          className="text-blue-600"
         >
           plagiarism
         </Link>{" "}
@@ -310,32 +295,7 @@ export default function MetaAnalysisServicesTabSection() {
             lineHeight: 1.7,
           }}
         >
-          Pubrica provides end-to-end{" "}
-          <Link
-            href="/services/research-services/systematic-review"
-            style={{
-              color: "#2563eb",
-              textDecoration: "underline",
-            }}
-          >
-            systematic review writing services
-          </Link>{" "}
-          for researchers and clinicians, ensuring compliance with the{" "}
-          <a
-            href="https://www.prisma-statement.org/prisma-2020-checklist"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              color: "#2563eb",
-              textDecoration: "underline",
-            }}
-          >
-            PRISMA checklist 2020
-          </a>
-          , Cochrane guidelines, and journal specifications. Our medical and
-          scientific professionals provide publication-ready manuscripts with
-          the most rigorous methodology and evidence, including full project
-          management.
+          Pubrica’s advanced meta-analysis services provide specialized support to researchers and clinicians, ensuring your research meets the medical publication standards of various journals.
         </p>
       </div>
 
@@ -445,16 +405,7 @@ export default function MetaAnalysisServicesTabSection() {
             <div style={{ marginTop: "28px" }}>
               <Link
                 href="/order-now"
-                style={{
-                  display: "inline-block",
-                  background: "#0e3838",
-                  color: "#fff",
-                  padding: isMobile ? "12px 20px" : "12px 24px",
-                  borderRadius: "4px",
-                  fontWeight: 700,
-                  fontSize: "0.9rem",
-                  textDecoration: "none",
-                }}
+                className="inline-block bg-[#0f3433] hover:bg-[#0b2726] text-white font-bold text-sm tracking-wider px-6 py-3 transition-colors duration-200"
               >
                 REQUEST A QUOTE
               </Link>

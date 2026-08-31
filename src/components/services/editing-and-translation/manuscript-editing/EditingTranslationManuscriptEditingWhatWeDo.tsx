@@ -108,7 +108,7 @@ export const EditingTranslationManuscriptEditingWhatWeDo: React.FC = () => {
               comprehensive prepublication services include editing,{" "}
               <Link
                 href="/insights/proof-reading/"
-                className="text-sky-600 hover:underline"
+                className="text-blue-600"
               >
                 proofreading
               </Link>

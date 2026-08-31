@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { EditorialWorkflowSection } from "@/components/common/EditorialWorkflowSection";
 
 interface HighlightItem {
   id: string;
@@ -188,63 +189,44 @@ export const ThesisServiceWorkflow: React.FC = () => {
             </p>
           </div>
 
-          {/* Section Header */}
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-2">
-              How Our Thesis Editing Service Works
-            </h2>
-            <h3 className="text-base sm:text-lg font-semibold text-[#0d3b36] mb-2">
-              Our Step-by-Step Process
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              We make it easy to improve your research work. From the time you
-              submit your order until you receive your revised manuscript, our
-              team of specialists will ensure precision and quality every step
-              of the way.
-            </p>
-          </div>
-
-          {/* 3 Step Process Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative items-start">
-            {processSteps.map((step) => (
-              <div
-                key={step.stepNumber}
-                className="flex flex-col items-center group"
-              >
-                {/* Step Number Circle */}
-                <div className="w-11 h-11 rounded-full bg-[#0080a0] text-white font-bold flex items-center justify-center text-base z-10 shadow-sm mb-3">
-                  {step.stepNumber}
-                </div>
-
-                {/* Blue Connecting Line Indicator */}
-                <div className="w-full h-1.5 bg-[#0080a0] mb-4" />
-
-                {/* Card Container */}
-                <div className="w-full bg-white border border-slate-200 rounded-sm p-6 min-h-[320px] flex flex-col transition-all duration-300 shadow-sm hover:bg-[#424242] hover:text-white hover:border-[#424242] hover:shadow-xl cursor-pointer">
-                  {/* Step Icon */}
-                  <div className="relative w-10 h-10 mb-4">
-                    <Image
-                      src={step.iconSrc}
-                      alt={step.iconAlt}
-                      fill
-                      sizes="40px"
-                      className="object-contain"
-                    />
-                  </div>
-
-                  {/* Step Heading */}
-                  <h4 className="text-xs sm:text-sm font-extrabold uppercase tracking-wide mb-3 leading-snug text-slate-800 group-hover:text-white transition-colors">
-                    {step.title}
-                  </h4>
-
-                  {/* Step Text Description */}
-                  <p className="text-xs sm:text-sm leading-relaxed text-slate-600 group-hover:text-slate-200 transition-colors">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <EditorialWorkflowSection
+            heading="How Our Thesis Editing Service Works"
+            subheading="Our Step-by-Step Process"
+            description={
+              <>
+                We make it easy to improve your research work. From the time you submit
+                your order until you receive your revised manuscript, our team of
+                specialists will ensure precision and quality every step of the way.
+              </>
+            }
+            steps={[
+              {
+                stepNumber: 1,
+                title: "UPLOAD YOUR MANUSCRIPT, SELECT A SERVICE, AND PLAN",
+                description:
+                  "You start by selecting a service according to your target journal. We then analyze your document and recommend the best plans to choose from. You can choose same-day delivery or a flexible deadline with rates that can accommodate all budgets.",
+                iconSrc: `${HIGHLIGHT_BASE}Upload-Your-Manuscript-Select-a-Service-and-Plan-1.png`,
+                position: "top",
+              },
+              {
+                stepNumber: 2,
+                title:
+                  "THE TWO-STEP EDIT PROCESS DELIVERS TOP-NOTCH QUALITY AND TIMELY DELIVERY",
+                description:
+                  "2 best-suited native editors based on your subject area or past preferences will edit your paper, ensuring your quality requirements and journal guidelines are met. A native reviewer and our quality control algorithms ensure that stringent quality guidelines are met.",
+                iconSrc: `${HIGHLIGHT_BASE}The-Two-Step-Edit-Process-Delivers-Top-Notch-Quality-and-Timely-Delivery-1.png`,
+                position: "bottom",
+              },
+              {
+                stepNumber: 3,
+                title: "REVIEW FINAL FILES, ASK QUESTIONS, AND COLLABORATE.",
+                description:
+                  "Make a payment to download the final files with track changes to review and accept. Ask unlimited questions to your editor till you are satisfied, or get any clarifications from our customer service team. Depending on your plan, you can also work on multiple re-edits based on feedback from your peers or the journal.",
+                iconSrc: `${HIGHLIGHT_BASE}Review-Final-Files-Ask-Questions-and-Collaborate-1.png`,
+                position: "top",
+              },
+            ]}
+          />
         </div>
       </section>
     </div>
