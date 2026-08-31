@@ -48,7 +48,7 @@ const diseaseCards: DiseaseCard[] = [
         Our{" "}
         <Link
           href="/services/research-services/literature-review-and-gap/types-of-literature-review-in-research"
-          className="text-[#519fb9] hover:text-[#3b7e94] no-underline"
+          className="text-blue-600 no-underline"
         >
           scientific literature review service
         </Link>{" "}
@@ -132,7 +132,7 @@ export default function DiseaseBasedAndComplianceSection() {
               At Pubrica, we provide specialized disease-based{" "}
               <Link
                 href="/academy/literature-review/pico-framework-medical-literature-reviews"
-                className="text-[#519fb9] hover:text-[#3b7e94] no-underline"
+                className="text-blue-600"
               >
                 medical literature review service
               </Link>{" "}
@@ -171,7 +171,7 @@ export default function DiseaseBasedAndComplianceSection() {
             Pubrica’s{" "}
             <Link
               href="/services/research-services/literature-review-and-gap/types-of-literature-review-in-research"
-              className="text-[#519fb9] hover:text-[#3b7e94] no-underline"
+              className="text-blue-600"
             >
               medical literature review service
             </Link>{" "}
@@ -198,7 +198,7 @@ export default function DiseaseBasedAndComplianceSection() {
             literature review service and{" "}
             <Link
               href="/services/research-services/literature-review-and-gap/types-of-literature-review-in-research"
-              className="text-[#519fb9] hover:text-[#3b7e94] font-medium no-underline"
+              className="text-blue-600"
             >
               research gap analysis service
             </Link>{" "}
@@ -241,7 +241,7 @@ export default function DiseaseBasedAndComplianceSection() {
                       href="https://static1.squarespace.com/static/65b880e13b6ca75573dfe217/t/67ad313f1c80aa5235fce0d0/1739403584136/PRISMA_2020_checklist.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#519fb9] hover:text-[#3b7e94] font-medium no-underline"
+                      className="text-blue-600"
                     >
                       PRISMA
                     </a>
@@ -250,7 +250,7 @@ export default function DiseaseBasedAndComplianceSection() {
                       href="https://legacyfileshare.elsevier.com/promis_misc/ISSM_MOOSE_Checklist.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#519fb9] hover:text-[#3b7e94] font-medium no-underline"
+                      className="text-blue-600"
                     >
                       MOOSE
                     </a>
@@ -259,7 +259,7 @@ export default function DiseaseBasedAndComplianceSection() {
                       href="https://www.bmj.com/content/bmj/suppl/2017/09/21/bmj.j4008.DC1/sheb036104.wf1.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#519fb9] hover:text-[#3b7e94] font-medium no-underline"
+                      className="text-blue-600"
                     >
                       AMSTAR 2
                     </a>{" "}
@@ -275,7 +275,7 @@ export default function DiseaseBasedAndComplianceSection() {
                     quantitative and qualitative methods, including{" "}
                     <Link
                       href="/services/research-services/meta-analysis/"
-                      className="text-[#519fb9] hover:text-[#3b7e94] font-medium no-underline"
+                      className="text-blue-600"
                     >
                       meta-analysis
                     </Link>
@@ -287,7 +287,7 @@ export default function DiseaseBasedAndComplianceSection() {
                     for{" "}
                     <Link
                       href="/academy/literature-review/guides-write-research-literature-review/"
-                      className="text-[#519fb9] hover:text-[#3b7e94] font-medium no-underline"
+                      className="text-blue-600"
                     >
                       research support services
                     </Link>
@@ -304,7 +304,7 @@ export default function DiseaseBasedAndComplianceSection() {
               href="https://www.icmje.org/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#519fb9] hover:text-[#3b7e94] font-medium no-underline"
+              className="text-blue-600"
             >
               ICMJE
             </a>
@@ -313,7 +313,7 @@ export default function DiseaseBasedAndComplianceSection() {
               href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#519fb9] hover:text-[#3b7e94] font-medium no-underline"
+              className="text-blue-600"
             >
               CONSORT
             </a>
@@ -322,7 +322,7 @@ export default function DiseaseBasedAndComplianceSection() {
               href="https://www.equator-network.org/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#519fb9] hover:text-[#3b7e94] font-medium no-underline"
+              className="text-blue-600"
             >
               EQUATOR
             </a>{" "}
@@ -347,7 +347,7 @@ export default function DiseaseBasedAndComplianceSection() {
               writing service and{" "}
               <Link
                 href="/academy/literature-review/literature-review-in-research-methodology"
-                className="text-[#519fb9] hover:text-[#3b7e94] font-medium no-underline"
+                className="text-blue-600"
               >
                 research gap analysis service
               </Link>{" "}
