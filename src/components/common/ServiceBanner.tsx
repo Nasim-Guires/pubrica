@@ -31,24 +31,24 @@ export default function ServiceBanner({
 
     return (
         <section
-            className={`${poppins.className} bg-[#052b1e] text-white py-5 sm:py-6 px-4 sm:px-8 w-full overflow-hidden`}
+            className={`${poppins.className} bg-[#052b1e] text-white py-2 sm:py-3 px-4 sm:px-8 w-full overflow-hidden`}
         >
             <div
                 className={`max-w-5xl mx-auto flex items-center ${
                     hasImage
-                        ? "flex-col md:flex-row justify-center gap-4 lg:gap-8 text-center md:text-left"
+                        ? "flex-col md:flex-row justify-center gap-4 lg:gap-6 text-center md:text-left"
                         : "flex-col justify-center text-center"
                 }`}
             >
                 {/* Banner Image */}
                 {hasImage && (
-                    <div className="shrink-0 flex items-center justify-center mx-auto min-w-[150px]">
+                    <div className="shrink-0 flex items-center justify-center mx-auto min-w-[180px]">
                         <Image
                             src={imageSrc!}
                             alt={imageAlt}
-                            width={180}
-                            height={180}
-                            className="w-32 h-32 sm:w-40 sm:h-40 object-contain block"
+                            width={240}
+                            height={240}
+                            className="w-44 h-44 sm:w-52 sm:h-52 lg:w-60 lg:h-60 object-contain block"
                             priority
                         />
                     </div>
@@ -56,7 +56,7 @@ export default function ServiceBanner({
 
                 {/* Dynamic Text Content */}
                 <div
-                    className={`space-y-2.5 ${
+                    className={`space-y-1.5 ${
                         hasImage
                             ? "max-w-3xl flex flex-col items-center md:items-start"
                             : "max-w-3xl flex flex-col items-center"
@@ -73,7 +73,7 @@ export default function ServiceBanner({
                     </h2>
 
                     <div
-                        className={`text-slate-200 text-sm sm:text-base leading-relaxed ${
+                        className={`text-slate-200 text-sm sm:text-base leading-snug ${
                             hasImage ? "" : "max-w-2xl"
                         }`}
                     >
@@ -83,7 +83,7 @@ export default function ServiceBanner({
                     {/* Optional Bullet Points */}
                     {bulletPoints && bulletPoints.length > 0 && (
                         <ul
-                            className={`space-y-1.5 text-sm sm:text-base ${
+                            className={`space-y-1 text-sm sm:text-base ${
                                 hasImage
                                     ? "flex flex-col items-center md:items-start w-full"
                                     : "flex flex-col items-start text-left"
@@ -103,7 +103,7 @@ export default function ServiceBanner({
 
                     {/* Optional Quote Button */}
                     {showQuoteButton && (
-                        <div className="pt-1">
+                        <div className="pt-0.5">
                             <GetFreeQuoteButton />
                         </div>
                     )}
