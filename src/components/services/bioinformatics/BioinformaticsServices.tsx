@@ -8,144 +8,7 @@ import Link from "next/link";
    DATA STRUCTURES
    ========================================================================== */
 
-// 1. Process Steps
-interface ProcessStep {
-  stepNumber: number;
-  title: string;
-  description: string;
-}
-
-const processStepsData: ProcessStep[] = [
-  {
-    stepNumber: 1,
-    title: "Data Collection & Annotation",
-    description:
-      "We begin with the systematic collection, cleaning, and annotation of genomic, transcriptomic, proteomic, and metabolomic datasets. This step ensures data is well-structured, FAIR-compliant, and ready for advanced analysis.",
-  },
-  {
-    stepNumber: 2,
-    title: "Custom Algorithm Development",
-    description:
-      "Our experts design tailored bioinformatics algorithms and workflows, either adapting existing methods or developing new pipelines to address your specific research questions, including NGS analysis, variant calling, or multi-omics integration.",
-  },
-  {
-    stepNumber: 3,
-    title: "Rigorous Compliance & Quality Standards",
-    description:
-      "We follow international scientific and ethical guidelines (e.g., Genomic Data Sharing Policy, FAIR principles) to ensure reliability, reproducibility, and compliance across all stages of analysis.",
-  },
-  {
-    stepNumber: 4,
-    title: "Advanced Data Analysis & Model Validation",
-    description:
-      "Using cutting-edge computational biology techniques, our team performs robust analyses and validates models for accuracy, consistency, and replicability across multiple conditions.",
-  },
-  {
-    stepNumber: 5,
-    title: "Insight Generation & Visualization",
-    description:
-      "We translate raw data into clear, actionable insights with publication-ready reports and visualizations—including heatmaps, volcano plots, phylogenetic trees, and gene expression profiles. These outputs support both scientific discovery and clinical applications.",
-  },
-  {
-    stepNumber: 6,
-    title: "Deliverables & Implementation Support",
-    description:
-      "Clients receive a comprehensive package: processed datasets, methodology documentation, algorithm details, and final reports. We also support implementation into real-world research, diagnostics, or product development.",
-  },
-  {
-    stepNumber: 7,
-    title: "Post-Analysis Support & Continuous Updates",
-    description:
-      "We guarantee ongoing scientific support, refining analyses as new data emerges and ensuring your findings remain accurate, relevant, and impactful.",
-  },
-  {
-    stepNumber: 8,
-    title: "Dedicated Project Coordination",
-    description:
-      "Each project is managed by a dedicated coordinator, providing seamless communication, query resolution, and personalized client support.",
-  },
-];
-
-// 2. Bioinformatics Tools Accordion Data
-interface ToolItem {
-  name: string;
-  description: string;
-}
-
-interface ToolCategory {
-  id: string;
-  title: string;
-  tools: ToolItem[];
-}
-
-const bioinformaticsToolsData: ToolCategory[] = [
-  {
-    id: "genomic-tools",
-    title: "Genomic Data Analysis Tools",
-    tools: [
-      { name: "BLAST", description: "Sequence alignment and similarity search" },
-      { name: "Bowtie / BWA", description: "Fast alignment for next-generation sequencing (NGS) data" },
-      { name: "SAMtools", description: "Manipulation and processing of sequence alignment files" },
-      { name: "GATK (Genome Analysis Toolkit)", description: "Variant discovery, SNP/indel calling, genotyping" },
-      { name: "IGV (Integrative Genomics Viewer)", description: "High-performance genome visualization" },
-      { name: "UCSC Genome Browser / Ensembl", description: "Genome annotation and browsing" },
-    ],
-  },
-  {
-    id: "proteomic-tools",
-    title: "Proteomic Analysis Tools",
-    tools: [
-      { name: "MaxQuant", description: "Quantitative proteomics analysis from LC-MS data" },
-      { name: "Proteome Discoverer", description: "Protein identification and quantification" },
-      { name: "OpenMS", description: "Open-source platform for proteomics workflows" },
-      { name: "Mascot", description: "Protein database search and identification" },
-      { name: "PeptideAtlas", description: "Curated peptide identification repository" },
-      { name: "ProteinPilot", description: "Comprehensive protein identification and quantification" },
-    ],
-  },
-  {
-    id: "transcriptomic-tools",
-    title: "Transcriptomic Analysis Tools",
-    tools: [
-      { name: "TopHat / HISAT2", description: "RNA-Seq read alignment" },
-      { name: "Cufflinks / StringTie", description: "Transcript assembly and quantification" },
-      { name: "DESeq2 / edgeR", description: "Differential gene expression analysis" },
-      { name: "Kallisto / Salmon", description: "Ultra-fast transcript quantification" },
-      { name: "Seurat", description: "Single-cell RNA-seq data analysis and clustering" },
-      { name: "Galaxy", description: "User-friendly bioinformatics workflow platform" },
-    ],
-  },
-  {
-    id: "metabolomics-tools",
-    title: "Metabolomics Tools",
-    tools: [
-      { name: "XCMS", description: "LC/MS data processing and metabolite feature detection" },
-      { name: "MetaboAnalyst", description: "Comprehensive metabolomics statistical analysis and visualization" },
-      { name: "MZmine", description: "Mass spectrometry data analysis for metabolomics" },
-      { name: "GNPS", description: "Natural product discovery and metabolite networking" },
-    ],
-  },
-  {
-    id: "epigenomics-tools",
-    title: "Epigenomics Tools",
-    tools: [
-      { name: "Bismark", description: "Bisulfite-treated DNA sequence alignment and methylation calling" },
-      { name: "MACS2", description: "Peak calling in ChIP-seq experiments" },
-      { name: "ChIPseeker", description: "Annotation and visualization of ChIP-seq data" },
-    ],
-  },
-  {
-    id: "integrative-tools",
-    title: "Integrative Omics & Systems Biology Tools",
-    tools: [
-      { name: "Cytoscape", description: "Network biology and systems-level visualization" },
-      { name: "Pathway Studio / Ingenuity Pathway Analysis (IPA)", description: "Pathway enrichment and biomarker discovery" },
-      { name: "Bioconductor (R)", description: "Multi-omics statistical packages for integration and visualization" },
-    ],
-  },
-];
-
-// 3. Compliance Standards Data
+// 1. Compliance Standards Data
 interface StandardItem {
   title: string;
   description: string;
@@ -182,7 +45,7 @@ const complianceStandardsData: StandardItem[] = [
   },
 ];
 
-// 4. Packages Data
+// 2. Packages Data
 interface PackageCard {
   badge: string;
   badgeBg: string;
@@ -230,7 +93,8 @@ const packagesData: PackageCard[] = [
     ],
     optionalAddOns: [
       "Machine learning-based predictive modeling",
-      "Clinical data integration support",
+      "Clinical data integration",
+      "Journal-specific formatting support",
     ],
     turnaroundTime: "4-6 weeks",
   },
@@ -249,9 +113,10 @@ const packagesData: PackageCard[] = [
     ],
     optionalAddOns: [
       "Regulatory & compliance check (FDA, EMA standards)",
+      "Clinical trial dataset analysis",
       "Customized dashboards for interactive data exploration",
     ],
-    turnaroundTime: "Customized schedule",
+    turnaroundTime: "8-10 weeks",
   },
 ];
 

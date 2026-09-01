@@ -30,7 +30,7 @@ export const bioinformaticsWhoWeServe = [
     title: "Government & Nonprofit Research Institutes",
     bullets: [
       "Large-scale genomic projects, population genetics, and epidemiological studies.",
-      "Public health genomics and disease surveillance.",
+      "Public health genomics, disease surveillance, and policy research support.",
     ],
     imageUrl:
       "/images/services/bio/Government-Nonprofit-Research-Institutes.png",
@@ -39,7 +39,7 @@ export const bioinformaticsWhoWeServe = [
     title: "Startups & Life Science Innovators",
     bullets: [
       "End-to-end bioinformatics solutions for product development.",
-      "Scalable computational biology support for innovation.",
+      "Scalable, cost-effective computational biology support to accelerate innovation and R&D.",
     ],
     imageUrl:
       "/images/services/bio/Startups-Life-Science-Innovators.png",
@@ -47,8 +47,8 @@ export const bioinformaticsWhoWeServe = [
   {
     title: "Medical Professionals & Hospitals",
     bullets: [
-      "Clinical sequencing data interpretation for diagnostics.",
-      "Precision medicine and genomic-informed therapies.",
+      "Clinical sequencing data interpretation for diagnostics and treatment planning.",
+      "Support for precision medicine, patient care optimization, and genomic-informed therapies.",
     ],
     imageUrl:
       "/images/services/bio/Medical-Professionals-Hospitals.png",
@@ -56,8 +56,8 @@ export const bioinformaticsWhoWeServe = [
   {
     title: "Agriculture & AgriTech Companies",
     bullets: [
-      "Plant genomics and crop transcriptomics.",
-      "Microbiome analysis for sustainable agriculture.",
+      "Plant genomics, crop transcriptomics, and trait analysis to improve yield and disease resistance.",
+      "Soil and microbiome bioinformatics to enhance sustainable farming and agri-biotech innovation.",
     ],
     imageUrl:
       "/images/services/bio/Agriculture-AgriTech-Companies.png",
@@ -65,8 +65,8 @@ export const bioinformaticsWhoWeServe = [
   {
     title: "Food & Nutrition Companies",
     bullets: [
-      "Microbiome and metabolomics analysis.",
-      "Support for nutrigenomics and probiotic research.",
+      "Microbiome and metabolomics analysis for gut health, nutrition, and functional food research.",
+      "Bioinformatics support for probiotic development, nutrigenomics, and dietary studies.",
     ],
     imageUrl:
       "/images/services/bio/Food-Nutrition-Companies-optional-but-strong-for-microbiome-market.png",
@@ -74,8 +74,8 @@ export const bioinformaticsWhoWeServe = [
   {
     title: "Diagnostics & Medical Device Companies",
     bullets: [
-      "Bioinformatics for assay development.",
-      "NGS-driven diagnostic pipeline development.",
+      "Bioinformatics for assay development, biomarker validation, and companion diagnostics.",
+      "NGS-driven diagnostic pipelines supporting clinical testing and device innovation.",
     ],
     imageUrl:
       "/images/services/bio/Diagnostics-Medical-Device-Companies.png",

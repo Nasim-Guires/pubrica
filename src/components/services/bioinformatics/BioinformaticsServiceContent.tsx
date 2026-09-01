@@ -82,9 +82,10 @@ const leftServicesData: ServiceItem[] = [
         title: "Microbiome & Metagenomics Analysis",
         content: (
             <>
-                16S rRNA sequencing and shotgun metagenomic analysis to characterize
-                microbial diversity, taxonomic composition, and functional potential in
-                environmental or clinical samples.
+                We provide microbiome sequencing and metagenomics analysis (16S rRNA
+                and shotgun sequencing) to profile microbial diversity and
+                host-microbiota interactions. These insights are crucial in gut
+                health, disease research, and nutrition studies.
             </>
         ),
     },
@@ -211,7 +212,7 @@ export default function BioinformaticsServiceContent() {
 
                         <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
                             Pubrica provides end-to-end{" "}
-                            <Link href="/services/bioinformatics" className="text-sky-600 hover:underline">
+                            <Link href="/academy/bioinformatics/bioinformatics-clinical-applications/" className="text-sky-600 hover:underline">
                                 bioinformatics
                             </Link>{" "}
                             consulting services for genomics, proteomics, transcriptomics,
@@ -228,7 +229,7 @@ export default function BioinformaticsServiceContent() {
                             <li className="flex items-start">
                                 <span className="text-red-600 mr-2 font-bold">•</span>
                                 <span>
-                                    <strong>15+ years of expertise</strong> delivering
+                                    15+ years of expertise delivering
                                     bioinformatics solutions for global medical and life sciences
                                     research.
                                 </span>
@@ -236,7 +237,7 @@ export default function BioinformaticsServiceContent() {
                             <li className="flex items-start">
                                 <span className="text-red-600 mr-2 font-bold">•</span>
                                 <span>
-                                    <strong>1,200+ projects completed</strong> in genomic
+                                    1,200+ projects completed in genomic
                                     sequencing, protein structure prediction, transcriptomics
                                     analysis, and clinical omics studies.
                                 </span>
@@ -244,7 +245,7 @@ export default function BioinformaticsServiceContent() {
                             <li className="flex items-start">
                                 <span className="text-red-600 mr-2 font-bold">•</span>
                                 <span>
-                                    A <strong>multidisciplinary team</strong> skilled in machine
+                                    A multidisciplinary team skilled in machine
                                     learning, big data bioinformatics, and advanced visualization
                                     (heatmaps, phylogenetic trees, gene expression profiles).
                                 </span>
@@ -252,7 +253,7 @@ export default function BioinformaticsServiceContent() {
                             <li className="flex items-start">
                                 <span className="text-red-600 mr-2 font-bold">•</span>
                                 <span>
-                                    <strong>Proven track record</strong> of supporting
+                                    Proven track record of supporting
                                     high-impact publications and regulatory submissions through
                                     precise data analysis and customized pipelines.
                                 </span>
@@ -296,7 +297,7 @@ export default function BioinformaticsServiceContent() {
                         <p className="text-slate-600 text-sm sm:text-base max-w-5xl leading-relaxed mb-2">
                             Pubrica offers a comprehensive suite of bioinformatics services
                             tailored to the{" "}
-                            <Link href="/about-us/life-sciences" className="text-sky-600 hover:underline">
+                            <Link href="/subject-matter-experts/life-sciences/" className="text-sky-600 hover:underline">
                                 life sciences
                             </Link>
                             , healthcare, and medical research sectors, supporting researchers
