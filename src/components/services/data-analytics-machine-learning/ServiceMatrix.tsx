@@ -106,7 +106,7 @@ export const ServiceMatrix: React.FC = () => {
             badgeBg="bg-white/80"
             textColor="text-[#0c313a]"
             delivery="15 – 30 days"
-            fees="Custom Quote"
+            fees="Starts from $1680"
             deliverables={[
               "Cleaned and structured datasets ready for modeling.",
               "Custom-built ML models (classification, prediction, clustering).",

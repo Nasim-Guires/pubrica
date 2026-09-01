@@ -1,7 +1,9 @@
+"use client";
+
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import { Sequence, Step } from "@/components/common/Sequence";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 interface ClientTarget {
   id: number;
@@ -18,6 +20,7 @@ interface ApproachItem {
 
 export const DataAnalyticsFinalExtensions: React.FC = () => {
   const basePath = "/images/data-analytics-machine-learning/";
+  const [activeClientId, setActiveClientId] = useState<number | null>(null);
 
   const targetClients: ClientTarget[] = [
     {
@@ -105,7 +108,7 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
         </h2>
         <p className="text-gray-600 text-xs sm:text-sm md:text-[14px] leading-relaxed mb-10 max-w-5xl text-justify">
           At Pubrica, our{" "}
-          <Link href="/services/research-services/biostatistics-and-statistical-programming-services" className="text-blue-600 no-underline hover:no-underline">
+          <Link href="/academy/statistical-analysis/biostatistics-practice-data-analysis" className="text-blue-600 no-underline hover:no-underline">
             statistical analysis services
           </Link>{" "}
           cater to a diverse range of clients across research, industry, and
@@ -114,37 +117,54 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
 
         {/* 3-Column Visual Card Matrix */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {targetClients.map((client) => (
-            <div
-              key={client.id}
-              className="w-full aspect-[16/10] bg-slate-100 rounded border border-gray-200 shadow-sm relative overflow-hidden flex flex-col justify-end select-none group cursor-pointer"
-            >
-              {/* Background Image Layer */}
-              <img
-                src={`${basePath}${client.imageName}`}
-                alt={client.label}
-                className="absolute inset-0 w-full h-full object-cover z-0"
-              />
+          {targetClients.map((client) => {
+            const isActive = activeClientId === client.id;
+            return (
+              <div
+                key={client.id}
+                onClick={() =>
+                  setActiveClientId((prev) => (prev === client.id ? null : client.id))
+                }
+                onMouseEnter={() => setActiveClientId(client.id)}
+                onMouseLeave={() => setActiveClientId(null)}
+                className="w-full aspect-[16/10] bg-slate-100 rounded border border-gray-200 shadow-sm relative overflow-hidden flex flex-col justify-end select-none group cursor-pointer"
+              >
+                {/* Background Image Layer */}
+                <img
+                  src={`${basePath}${client.imageName}`}
+                  alt={client.label}
+                  className="absolute inset-0 w-full h-full object-cover z-0"
+                />
 
-              {/* Default State: Bottom Dark Overlay Gradient */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/60 to-transparent pt-6 pb-5 px-5 z-10 transition-opacity duration-300 group-hover:opacity-0" />
+                {/* Default State: Bottom Dark Overlay Gradient */}
+                <div
+                  className={`absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/60 to-transparent pt-6 pb-5 px-5 z-10 transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                    }`}
+                />
 
-              {/* Default State: Visible Bottom Label */}
-              <h3 className="text-white text-xs sm:text-sm font-extrabold tracking-wide relative z-20 p-5 group-hover:opacity-0 transition-opacity duration-300">
-                {client.label}
-              </h3>
-
-              {/* Hover State: Full Black Overlay Window with Text */}
-              <div className="absolute inset-0 bg-black z-30 p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out pointer-events-none group-hover:pointer-events-auto">
-                <h3 className="text-white text-sm sm:text-base font-extrabold mb-3 leading-snug">
+                {/* Default State: Visible Bottom Label */}
+                <h3
+                  className={`text-white text-xs sm:text-sm font-extrabold tracking-wide relative z-20 p-5 group-hover:opacity-0 transition-opacity duration-300 ${isActive ? "opacity-0" : "opacity-100"
+                    }`}
+                >
                   {client.label}
                 </h3>
-                <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
-                  {client.description}
-                </p>
+
+                {/* Hover State: Full Black Overlay Window with Text */}
+                <div
+                  className={`absolute inset-0 bg-black z-30 p-6 flex flex-col justify-center transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:pointer-events-auto ${isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                    }`}
+                >
+                  <h3 className="text-white text-sm sm:text-base font-extrabold mb-3 leading-snug">
+                    {client.label}
+                  </h3>
+                  <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                    {client.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 

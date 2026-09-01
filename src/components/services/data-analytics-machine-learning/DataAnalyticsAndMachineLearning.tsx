@@ -43,7 +43,7 @@ export const DataAnalyticsAndMachineLearning: React.FC = () => {
               <li className="flex items-start gap-3 text-xs sm:text-sm md:text-[14px]">
                 <span className="text-[#c00] font-serif text-lg leading-none mt-0.5 select-none">•</span>
                 <p className="text-gray-800 font-normal leading-relaxed">
-                  <strong className="text-black font-bold">Custom AI/ML Models:</strong> Scalable and cost-effective machine learning algorithms tailored to your <Link href="/services/research-services" className="text-blue-600 no-underline hover:no-underline">research</Link> or business needs.
+                  <strong className="text-black font-bold">Custom AI/ML Models:</strong> Scalable and cost-effective machine learning algorithms tailored to your <Link href="/academy/statistical-analysis/how-to-develop-a-good-research-hypothesis" className="text-blue-600 no-underline hover:no-underline">research</Link> or business needs.
                 </p>
               </li>
               <li className="flex items-start gap-3 text-xs sm:text-sm md:text-[14px]">
