@@ -5,51 +5,65 @@ import Link from 'next/link';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import Image from 'next/image';
+import { EditorialWorkflowSection, WorkflowStep } from '@/components/common/EditorialWorkflowSection';
+import ServiceBanner from '@/components/common/ServiceBanner';
 
 // Process Steps Data (mapped with icons and positioning for the new layout)
-const processSteps = [
+const steps: WorkflowStep[] = [
     {
         stepNumber: 1,
         title: "MANUSCRIPT PLANNING & CLINICAL DATA REVIEW",
-        description: "We start by reviewing your clinical data, study design, or case documentation. Our scientific writing experts collaborate with you to define the manuscript type, structure, and target audience.",
-        iconSrc: "/images/physician-writing-services/literature-search-and-citation/icon-1.png",
-        position: "bottom"
+        description:
+            "We start by reviewing your clinical data, study design, or case documentation. Our scientific writing experts collaborate with you to define the manuscript type, structure, and target audience.",
+        iconSrc:
+            "/images/physician-writing-services/literature-search-and-citation/icon-1.png",
+        position: "bottom",
     },
     {
         stepNumber: 2,
         title: "TITLE, ABSTRACT & JOURNAL SELECTION",
-        description: "We create strong titles and structured abstracts tailored to the journal's requirements for indexing and scope (e.g., PubMed, Scopus). We provide a journal listing as well to enhance the chances for acceptance and to mitigate rejection.",
-        iconSrc: "/images/physician-writing-services/literature-search-and-citation/icon-2.png",
-        position: "top"
+        description:
+            "We create strong titles and structured abstracts tailored to the journal's requirements for indexing and scope (e.g., PubMed, Scopus). We provide a journal listing as well to enhance the chances for acceptance and to mitigate rejection.",
+        iconSrc:
+            "/images/physician-writing-services/literature-search-and-citation/icon-2.png",
+        position: "top",
     },
     {
         stepNumber: 3,
         title: "DRAFT DEVELOPMENT & SCIENTIFIC WRITING",
-        description: "Our medical writing staff writes up the manuscript according to the journal's author guidelines (i.e., ICMJE, CONSORT). We ensure clarity, scientific accuracy, and familiarity with medical terminology.",
-        iconSrc: "/images/physician-writing-services/literature-search-and-citation/icon-3.png",
-        position: "bottom"
+        description:
+            "Our medical writing staff writes up the manuscript according to the journal's author guidelines (i.e., ICMJE, CONSORT). We ensure clarity, scientific accuracy, and familiarity with medical terminology.",
+        iconSrc:
+            "/images/physician-writing-services/literature-search-and-citation/icon-3.png",
+        position: "bottom",
     },
     {
         stepNumber: 4,
         title: "PEER REVIEW FEEDBACK (PRE-SUBMISSION)",
-        description: "Before submission, we conduct an internal peer review and provide actionable feedback. This step enhances the manuscript's quality without yet performing formal editing.",
-        iconSrc: "/images/physician-writing-services/literature-search-and-citation/icon-4.png",
-        position: "top"
+        description:
+            "Before submission, we conduct an internal peer review and provide actionable feedback. This step enhances the manuscript's quality without yet performing formal editing.",
+        iconSrc:
+            "/images/physician-writing-services/literature-search-and-citation/icon-4.png",
+        position: "top",
     },
     {
         stepNumber: 5,
         title: "REVISIONS & AMENDMENTS",
-        description: "We integrate feedback iteratively, highlighting changes and improvements to ensure transparency and traceability in the review process.",
-        iconSrc: "/images/physician-writing-services/literature-search-and-citation/icon-5.png",
-        position: "bottom"
+        description:
+            "We integrate feedback iteratively, highlighting changes and improvements to ensure transparency and traceability in the review process.",
+        iconSrc:
+            "/images/physician-writing-services/literature-search-and-citation/icon-5.png",
+        position: "bottom",
     },
     {
         stepNumber: 6,
         title: "SCIENTIFIC EDITING & FORMATTING",
-        description: "Final manuscripts are formatted according to the target journal's formatting standards. We follow off-the-shelf style guides (AMA, Vancouver, APA) and conduct scientific editing by way of clarity, grammar, consistency, and structure.",
-        iconSrc: "/images/physician-writing-services/literature-search-and-citation/icon-6.png",
-        position: "top"
-    }
+        description:
+            "Final manuscripts are formatted according to the target journal's formatting standards. We follow off-the-shelf style guides (AMA, Vancouver, APA) and conduct scientific editing by way of clarity, grammar, consistency, and structure.",
+        iconSrc:
+            "/images/physician-writing-services/literature-search-and-citation/icon-6.png",
+        position: "top",
+    },
 ];
 
 // Why Physicians Trust Pubrica Data
@@ -90,209 +104,34 @@ export default function PhysicianManuscriptWorkflowSection() {
     return (
         <div className="w-full bg-white text-slate-800">
             {/* 1. How Our Physician Manuscript Service Works */}
-            <section className="py-7 bg-[#f7f9fa] border-t border-gray-200">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] mb-3">
-                            How Our Physician Manuscript Service Works
-                        </h2>
-                        <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                            Our Step-by-Step Process for Structured, Ethical, and High-Impact Publication
-                        </h3>
-                        <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                            At Pubrica, our medical writers, scientific editors, and clinical researchers work with you to ensure you develop publication-ready manuscripts that reflect your clinical work. We guarantee each manuscript is compliant with international journal standards, ethical publishing practices, and the correct audience of medical professionals. Our process includes:
-                        </p>
-                    </div>
+            <section>
 
+                {/* 
                 <h3 className="text-lg md:text-xl font-medium text-[#2C4951] mb-4">
                     Our Step-by-Step Process for Structured, Ethical, and High-Impact Publication
                 </h3>
 
                 <p className="max-w-4xl mx-auto text-[#4B5563] text-xs md:text-sm leading-relaxed mb-12 md:mb-16">
                     At Pubrica, our medical writers, scientific editors, and clinical researchers work with you to ensure you develop publication-ready manuscripts that reflect your clinical work. We guarantee each manuscript is compliant with international journal standards, ethical publishing practices, and the correct audience of medical professionals. Our process includes:
-                </p>
+                </p> */}
 
                 {/* MOBILE LAYOUT (< md screens): Vertical Alternating Timeline */}
-                <div className="flex md:hidden flex-col items-center w-full max-w-sm mx-auto space-y-6">
-                    {processSteps.map((step, index) => {
-                        const isEven = index % 2 === 0;
-
-                        return (
-                            <div
-                                key={index}
-                                className="relative flex items-center w-full min-h-[160px]"
-                            >
-                                {/* Connecting Vertical Line */}
-                                {index !== processSteps.length - 1 && (
-                                    <div
-                                        className={`absolute top-8 bottom-0 w-[2px] bg-[#0081A7] z-0 ${isEven ? "left-4" : "right-4"
-                                            }`}
-                                    />
-                                )}
-
-                                {/* Step Number Badge */}
-                                <div
-                                    className={`absolute z-10 w-9 h-9 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm shadow-sm ${isEven ? "left-0" : "right-0"
-                                        }`}
-                                >
-                                    {step.stepNumber}
-                                </div>
-
-                                {/* Step Card Container */}
-                                <div
-                                    className={`w-full flex ${isEven ? "pl-10 pr-2" : "pr-10 pl-2"
-                                        }`}
-                                >
-                                    <div className="bg-[#F8F9FA] border border-[#E2E8F0] rounded-sm shadow-xs p-4 flex flex-col items-center text-center w-full z-10">
-                                        <div className="w-10 h-10 relative mb-3 flex items-center justify-center">
-                                            <Image
-                                                src={step.iconSrc}
-                                                alt={step.title}
-                                                width={36}
-                                                height={36}
-                                                className="object-contain"
-                                            />
-                                        </div>
-
-                                        <h4 className="font-bold text-[#0F172A] text-xs mb-2 leading-snug">
-                                            {step.title}
-                                        </h4>
-
-                                        <p className="text-[#64748B] text-[11px] leading-relaxed">
-                                            {step.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-
-                {/* DESKTOP LAYOUT (>= md screens): Dynamic Flow Layout */}
-                <div
-                    className="hidden md:grid gap-2 lg:gap-4 items-stretch justify-center w-full max-w-7xl mx-auto relative my-8"
-                    style={{
-                        gridTemplateColumns: `repeat(${processSteps.length}, minmax(0, 1fr))`,
-                    }}
-                >
-                    {processSteps.map((step, index) => {
-                        const isTop = step.position === "top";
-
-                        return (
-                            <div
-                                key={index}
-                                className="flex flex-col items-center justify-between group w-full relative min-h-[500px]"
-                            >
-                                {/* UPPER SECTION */}
-                                <div className="w-full flex flex-col items-center justify-end flex-1 pb-0">
-                                    {!isTop ? (
-                                        /* Card placed at Top */
-                                        <div className="bg-[#F8F9FA] border border-[#E2E8F0] shadow-xs p-3 lg:p-4 flex flex-col items-center text-center w-full h-full justify-start z-20 transition-all duration-300 group-hover:bg-black group-hover:border-black rounded-xs">
-                                            <div className="w-10 h-10 lg:w-11 lg:h-11 relative mb-3 flex items-center justify-center shrink-0">
-                                                <Image
-                                                    src={step.iconSrc}
-                                                    alt={step.title}
-                                                    width={38}
-                                                    height={38}
-                                                    className="object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
-                                                />
-                                            </div>
-
-                                            <h4 className="font-bold text-[#0F172A] text-xs lg:text-sm mb-2 leading-snug transition-colors duration-300 group-hover:text-white">
-                                                {step.title}
-                                            </h4>
-
-                                            <p className="text-[#64748B] text-[11px] lg:text-xs leading-relaxed transition-colors duration-300 group-hover:text-gray-300">
-                                                {step.description}
-                                            </p>
-                                        </div>
-                                    ) : (
-                                        /* Badge + Vertical Connector Line */
-                                        <div className="flex flex-col items-center justify-end w-full">
-                                            <div className="w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm lg:text-base shadow-sm z-20 transition-colors duration-300 group-hover:bg-black shrink-0 mb-3">
-                                                {step.stepNumber}
-                                            </div>
-                                            <div className="w-[2px] h-10 bg-[#0081A7] transition-colors duration-300 group-hover:bg-black" />
-                                        </div>
-                                    )}
-                                </div>
-
-                                {/* CENTER HORIZONTAL LINE SEGMENT */}
-                                <div className="w-full h-[8px] relative my-0 shrink-0">
-                                    <div
-                                        className={`h-full bg-[#0081A7] w-full transition-colors duration-300 group-hover:bg-black ${index === 0
-                                            ? "rounded-l-sm"
-                                            : index === processSteps.length - 1
-                                                ? "rounded-r-sm"
-                                                : ""
-                                            }`}
-                                    />
-                                </div>
-
-                                {/* LOWER SECTION */}
-                                <div className="w-full flex flex-col items-center justify-start flex-1 pt-0">
-                                    {isTop ? (
-                                        /* Card placed at Bottom */
-                                        <div className="bg-[#F8F9FA] border border-[#E2E8F0] shadow-xs p-3 lg:p-4 flex flex-col items-center text-center w-full h-full justify-start z-20 transition-all duration-300 group-hover:bg-black group-hover:border-black rounded-xs">
-                                            <div className="w-10 h-10 lg:w-11 lg:h-11 relative mb-3 flex items-center justify-center shrink-0">
-                                                <Image
-                                                    src={step.iconSrc}
-                                                    alt={step.title}
-                                                    width={38}
-                                                    height={38}
-                                                    className="object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
-                                                />
-                                            </div>
-
-                                            <h4 className="font-bold text-[#0F172A] text-xs lg:text-sm mb-2 leading-snug transition-colors duration-300 group-hover:text-white">
-                                                {step.title}
-                                            </h4>
-
-                                            <p className="text-[#64748B] text-[11px] lg:text-xs leading-relaxed transition-colors duration-300 group-hover:text-gray-300">
-                                                {step.description}
-                                            </p>
-                                        </div>
-                                    ) : (
-                                        /* Vertical Connector Line + Badge */
-                                        <div className="flex flex-col items-center justify-start w-full">
-                                            <div className="w-[2px] h-10 bg-[#0081A7] transition-colors duration-300 group-hover:bg-black" />
-                                            <div className="w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm lg:text-base shadow-sm z-20 transition-colors duration-300 group-hover:bg-black shrink-0 mt-3">
-                                                {step.stepNumber}
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
+                <EditorialWorkflowSection
+                    heading="How Our Physician Manuscript Service Works"
+                    subheading="Our Step-by-Step Process for Structured, Ethical, and High-Impact Publication"
+                    description="At Pubrica, our medical writers, scientific editors, and clinical researchers work with you to ensure you develop publication-ready manuscripts that reflect your clinical work. We guarantee each manuscript is compliant with international journal standards, ethical publishing practices, and the correct audience of medical professionals. Our process includes:"
+                    steps={steps}
+                />
             </section>
 
             {/* 2. Guarantee Banner */}
-            <section className="bg-[#0f3d2e] text-white py-5 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-                    <div className="flex items-center gap-6 flex-col sm:flex-row">
-                        {/* Increased image container dimensions */}
-                        <div className="relative w-28 h-28 md:w-32 md:h-32 shrink-0">
-                            <Image
-                                src="/images/publication-support/peer-review-pre-submission/Satisfaction_Guarantee.webp"
-                                alt="100% Satisfaction Guarantee"
-                                fill
-                                className="object-contain"
-                                sizes="(max-width: 768px) 112px, 128px"
-                            />
-                        </div>
-                        <div>
-                            <h3 className="text-xl font-bold mb-1">
-                                Speed up your Physician Manuscript writing with Pubrica
-                            </h3>
-                            <p className="text-sm text-gray-200 max-w-2xl leading-relaxed">
-                                Get personalized help writing a specific physician manuscript, adding detail, clarity, and effectiveness in communicating important medical information. Our service helps you navigate complexities to create effective research papers that suit your needs.
-                            </p>
-                        </div>
-                    </div>
-                    <GetFreeQuoteButton />
-                </div>
-            </section>
+            <ServiceBanner
+                imageSrc="/images/publication-support/peer-review-pre-submission/Satisfaction_Guarantee.webp"
+                imageAlt="100% Satisfaction Guarantee"
+                heading="Speed up your Physician Manuscript writing with Pubrica"
+                description="Get personalized help writing a specific physician manuscript, adding detail, clarity, and effectiveness in communicating important medical information. Our service helps you navigate complexities to create effective research papers that suit your needs."
+                showQuoteButton={true}
+            />
             {/* 3. Why Physicians Trust Pubrica */}
             <section className="py-7 bg-[#d9e8df]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

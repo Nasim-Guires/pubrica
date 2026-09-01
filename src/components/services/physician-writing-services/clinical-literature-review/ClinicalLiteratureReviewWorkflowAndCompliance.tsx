@@ -11,6 +11,7 @@ import {
   FileSpreadsheet,
 } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
 
 interface StepItem {
   number: number;
@@ -198,10 +199,10 @@ export default function ClinicalLiteratureReviewWorkflowAndCompliance() {
                   <div className="w-full h-[8px] relative my-0 shrink-0">
                     <div
                       className={`h-full bg-[#0081A7] w-full transition-colors duration-300 group-hover:bg-black ${index === 0
-                          ? "rounded-l-sm"
-                          : index === processSteps.length - 1
-                            ? "rounded-r-sm"
-                            : ""
+                        ? "rounded-l-sm"
+                        : index === processSteps.length - 1
+                          ? "rounded-r-sm"
+                          : ""
                         }`}
                     />
                   </div>
@@ -485,47 +486,36 @@ export default function ClinicalLiteratureReviewWorkflowAndCompliance() {
         </section>
 
         {/* 4. Clinical Literature Review Sample Work */}
-        <section className="bg-[#f0fdf4] rounded-xl p-6 md:p-8 border border-slate-100 shadow-sm">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-            {/* Image */}
-            <div className="md:col-span-4 relative h-56 w-full rounded-lg overflow-hidden shadow">
-              <Image
-                src="/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Clinical-Literature-Review-Sample-Work.jpg"
-                alt="Person reviewing printed document"
-                fill
-                className="object-cover"
-                unoptimized
-              />
-            </div>
-
-            {/* Banner Text Actions */}
-            <div className="md:col-span-8 flex flex-col justify-center space-y-6 text-center">
-              <div>
-                <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-3">
-                  Clinical Literature Review Sample Work
-                </h3>
-                <button className="bg-black hover:bg-slate-800 text-white font-medium px-8 py-2 rounded-full text-xs transition">
-                  Discover More
-                </button>
-              </div>
-
-              <div className="pt-2 border-t border-slate-200/80">
-                <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2">
-                  Download the full Report Now
-                </h3>
-                <p className="text-xs text-slate-600 max-w-xl mx-auto mb-4 leading-relaxed">
-                  Explore our clinical literature review samples, systematically
-                  developed to meet journal submission standards, evidence-based
-                  methodology, and stringent timelines for regulatory or academic
-                  use.
-                </p>
-                <button className="bg-black hover:bg-slate-800 text-white font-medium px-8 py-2 rounded-full text-xs transition">
-                  Discover More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
+        <PubricaSampleWorkCard
+          bookCoverImage={{
+            src: "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Clinical-Literature-Review-Sample-Work.jpg",
+            alt: "Person reviewing printed document",
+            width: 600,
+            height: 400,
+          }}
+          sections={[
+            {
+              heading: "Clinical Literature Review Sample Work",
+              button: {
+                label: "Discover More",
+                url: "/insights/sample-work/patient-safety-culture-among-operating-theatre-nurses-in-operating-room/",
+              },
+            },
+            {
+              heading: "Download the full Report Now",
+              descriptionSegments: [
+                {
+                  text: "Explore our clinical literature review samples, systematically developed to meet journal submission standards, evidence-based methodology, and stringent timelines for regulatory or academic use.",
+                },
+              ],
+              button: {
+                label: "Discover More",
+                url: "/insights/sample-work",
+              },
+            },
+          ]}
+          footerDisclaimerSegments={[]}
+        />
       </div>
     </div>
   );

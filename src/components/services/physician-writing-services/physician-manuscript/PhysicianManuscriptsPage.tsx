@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
 
 const MS = "/images/physician-writing-services/physician-manuscript";
 
@@ -131,16 +132,11 @@ export default function PhysicianManuscriptsPage() {
   return (
     <div className="w-full text-slate-800 bg-white">
       {/* 1. Hero Banner */}
-      <section className="bg-[#0b1f28] text-white py-7 px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-5xl mx-auto border border-gray-600/50 p-8 sm:p-12 rounded-sm bg-[#0e2530]">
-          <h1 className="text-2xl sm:text-4xl font-bold tracking-tight mb-4">
-            Physician Manuscript Service: Transform Clinical Expertise into Published Research
-          </h1>
-          <p className="text-gray-300 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
-            Get expert support in writing, editing, and submitting high-impact, peer-reviewed manuscripts. Tailored for physicians and specialists across all medical fields.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Physician Manuscript Service: Transform Clinical Expertise into Published Research"
+        description="Get expert support in writing, editing, and submitting high-impact, peer-reviewed manuscripts. Tailored for physicians and specialists across all medical fields."
+        headingAs="h1"
+      />
 
       {/* 2. Professional Physician Manuscript Service */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7">

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 interface ServiceItem {
     id: string;
@@ -100,18 +101,11 @@ export default function ClinicalLiteratureReviewHero() {
     return (
         <main className="min-h-screen bg-white text-slate-800">
             {/* 1. Full-Width Hero Banner */}
-            <section className="bg-[#1b3d39] text-white py-10 px-6 text-center w-full">
-                <div className="max-w-6xl mx-auto">
-                    <h1 className="text-2xl md:text-3xl font-bold mb-3">
-                        Clinical Literature Review for an Evidence-based Medicine
-                    </h1>
-                    <p className="text-xs md:text-sm text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        Systematically analyze and synthesize clinical research to support
-                        evidence-based decision-making and improve patient care outcomes.
-                    </p>
-                </div>
-            </section>
-
+            <HeroBanner
+                title="Clinical Literature Review for an Evidence-based Medicine"
+                description="Systematically analyze and synthesize clinical research to support evidence-based decision-making and improve patient care outcomes."
+                headingAs="h1"
+            />
             <div className="max-w-6xl mx-auto px-4 space-y-12 py-8">
                 {/* 2. Overview Section */}
                 <section className="space-y-4">
@@ -217,7 +211,7 @@ export default function ClinicalLiteratureReviewHero() {
                         </div>
 
                         {/* Right Column Image */}
-                        <div className="md:col-span-5 relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+                        <div className="md:col-span-5 relative h-72 md:h-96 rounded-2xl overflow-hidden">
                             <Image
                                 src="/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Professional-Clinical-Literature-Review-for-Evidence.webp"
                                 alt="Doctor reviewing clinical literature document"
