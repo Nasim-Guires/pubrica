@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
   // Also makes Next.js redirect a no-slash request to the slashed version automatically.
   trailingSlash: true,
   images: {
+    // Vercel's Image Optimization quota for this deployment has been exhausted
+    // (returns 402 OPTIMIZED_IMAGE_REQUEST_PAYMENT_REQUIRED for any uncached
+    // size), which was breaking images site-wide, worse on mobile since it
+    // requests different width variants than desktop. Serving images
+    // unoptimized avoids that paid pipeline entirely.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
