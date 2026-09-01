@@ -71,27 +71,27 @@ const defaultExpertiseItems: ExpertiseItem[] = [
 const defaultSegmentsItems: SegmentItem[] = [
   {
     title: 'Dietary Supplements',
-    iconSrc: '/images/industries/functional-foods-and-nutraceuticals/Dietary-Supplements.webp',
+    iconSrc: '/images/industries/foods-nutraceuticals/Dietary-Supplements.webp',
     description: 'Comprehensive support in formulation, regulatory compliance, and scientific documentation for vitamins, minerals, and herbal supplements.'
   },
   {
     title: 'Functional Beverages',
-    iconSrc: '/images/industries/functional-foods-and-nutraceuticals/Functional-Beverages.webp',
+    iconSrc: '/images/industries/foods-nutraceuticals/Functional-Beverages.webp',
     description: 'Expert guidance in the development and positioning of health-oriented drinks, including energy, immunity, and wellness formulations.'
   },
   {
     title: 'Fortified Foods & Snacks',
-    iconSrc: '/images/industries/functional-foods-and-nutraceuticals/Fortified-Foods-Snacks.webp',
+    iconSrc: '/images/industries/foods-nutraceuticals/Fortified-Foods-Snacks.webp',
     description: 'Support for food products enriched with nutrients or bioactive compounds, including cereals, bars, functional bakery, and confectionery.'
   },
   {
     title: 'Sports Nutrition Products',
-    iconSrc: '/images/industries/functional-foods-and-nutraceuticals/Sports-Nutrition-Products.webp',
+    iconSrc: '/images/industries/foods-nutraceuticals/Sports-Nutrition-Products.webp',
     description: 'End-to-end assistance in sports nutrition, from protein powders and amino acids to recovery supplements and pre-workout formulas.'
   },
   {
     title: 'Herbal & Traditional Health Products',
-    iconSrc: '/images/industries/functional-foods-and-nutraceuticals/Herbal-Traditional-Health-Products.webp',
+    iconSrc: '/images/industries/foods-nutraceuticals/Herbal-Traditional-Health-Products.webp',
     description: 'Guidance in the research, documentation, and regulatory approval of herbal extracts, traditional formulations, and botanical products.'
   }
 ];
@@ -157,7 +157,7 @@ export default function FunctionalFoodsPage({
           <div className="w-full lg:w-[420px] flex-shrink-0 flex justify-center">
             <div className="relative w-[340px] h-[340px] sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden shadow-xl border-4 border-white">
               <Image 
-                src="/images/industries/functional-foods-and-nutraceuticals/Functional-Foods-Nutraceutical-Innovation.webp" 
+                src="/images/industries/foods-nutraceuticals/Functional-Foods-Nutraceutical-Innovation.webp" 
                 alt="Laboratory research" 
                 fill 
                 sizes="400px"
@@ -209,7 +209,7 @@ export default function FunctionalFoodsPage({
           {/* Central Circular Image */}
           <div className="absolute z-10 w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] rounded-full overflow-hidden shadow-2xl border-4 border-white bg-white">
             <Image 
-              src="/images/industries/functional-foods-and-nutraceuticals/Our-Expertise-in-Functional-Foods-Nutraceuticals-Includes.webp" 
+              src="/images/industries/foods-nutraceuticals/Our-Expertise-in-Functional-Foods-Nutraceuticals-Includes.webp" 
               alt="Microscope research" 
               fill 
               sizes="340px"

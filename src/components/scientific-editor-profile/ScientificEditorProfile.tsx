@@ -194,7 +194,7 @@ const EDITORS_DATA: EditorProfile[] = [
     yearsOfExperience: "7 years of experience",
     location: "USA",
     imageSrc:
-      "/images/academy/Aj.webp",
+      "/images/academy/AJ.webp",
     category: "non-medical",
   },
   {
@@ -208,7 +208,7 @@ const EDITORS_DATA: EditorProfile[] = [
     yearsOfExperience: "5 years of experience",
     location: "USA",
     imageSrc:
-      "/images/academy/julie.webp",
+      "/images/academy/Julie.webp",
     category: "non-medical",
   },
   {
@@ -222,7 +222,7 @@ const EDITORS_DATA: EditorProfile[] = [
     yearsOfExperience: "10 years of experience",
     location: "USA",
     imageSrc:
-      "/images/academy/jay.webp",
+      "/images/academy/Jay.webp",
     category: "non-medical",
   },
   {

@@ -96,7 +96,7 @@ const experts = [
     experience: "10 years of experience",
     manuscripts: "100+ manuscripts edited",
     photo: {
-      src: "/images/industries/functional-foods-and-nutraceuticals/Dr.-Raghav-Varma.webp",
+      src: "/images/industries/foods-nutraceuticals/Dr.-Raghav-Varma.webp",
       alt: "Portrait of Dr. Michelle, PhD in Pharmaceutical Research",
     },
   },

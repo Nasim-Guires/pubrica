@@ -39,7 +39,7 @@ export const genericsTestimonialsData = {
             avatarLabel:
                 "Portrait of Dr. James Fletcher, Regulatory Lead at Global Pharma Solutions, United Kingdom",
             flagLabel: "United Kingdom flag icon",
-            avatarSrc: "/images/industries/functional-foods-and-nutraceuticals/Dr.-Raghav-Varma.webp",
+            avatarSrc: "/images/industries/foods-nutraceuticals/Dr.-Raghav-Varma.webp",
             flagSrc: "/images/editing-and-translation/thesis-editing/uk-flag-.png",
         },
     ],

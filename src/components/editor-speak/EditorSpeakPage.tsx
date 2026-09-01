@@ -132,7 +132,7 @@ const experts = [
   {
     name: "Dr. Julie PHD",
     qualification: "MD",
-    image: "/images/academy/julie.webp",
+    image: "/images/academy/Julie.webp",
     experience:
       "Dr. Julie has over 30 years of experience in medical and scientific writing; she is a subject-matter expert in the field of life sciences and her expertise spans across",
     questions: [

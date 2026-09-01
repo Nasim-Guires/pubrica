@@ -39,7 +39,7 @@ const defaultPublication: PublicationItem = {
   journal: 'Nutrients',
   publisher: 'MDPI',
   impactFactor: '5.0',
-  coverImage: '/images/industries/functional-foods-and-nutraceuticals/sample-works-3.webp'
+  coverImage: '/images/industries/foods-nutraceuticals/sample-works-3.webp'
 };
 
 const defaultEditors: EditorProfile[] = [
@@ -48,14 +48,14 @@ const defaultEditors: EditorProfile[] = [
     qualification: 'PhD, M.Sc. - Nutrition & Functional Foods',
     experience: '18 Years of Experience',
     manuscripts: '80+ manuscripts edited',
-    image: '/images/industries/functional-foods-and-nutraceuticals/Dr.-Ananya-Mehta-1.webp'
+    image: '/images/industries/foods-nutraceuticals/Dr.-Ananya-Mehta-1.webp'
   },
   {
     name: 'Dr. Raghav Varma',
     qualification: 'PhD, FIAMS - Clinical Nutrition',
     experience: '22 Years of Experience',
     manuscripts: '120+ manuscripts edited',
-    image: '/images/industries/functional-foods-and-nutraceuticals/Dr.-Raghav-Varma.webp'
+    image: '/images/industries/foods-nutraceuticals/Dr.-Raghav-Varma.webp'
   },
   {
     name: 'Dr. Priya Chandrasekhar',
@@ -97,16 +97,16 @@ export default function FoodsNutraceuticalsComplianceSection({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex items-center justify-center h-32 hover:shadow-md transition-shadow relative">
-              <Image src="/images/industries/functional-foods-and-nutraceuticals/fda.webp" alt="U.S. Food and Drug Administration" width={140} height={48} className="object-contain max-h-16" />
+              <Image src="/images/industries/foods-nutraceuticals/fda.webp" alt="U.S. Food and Drug Administration" width={140} height={48} className="object-contain max-h-16" />
             </div>
             <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex items-center justify-center h-32 hover:shadow-md transition-shadow">
-              <Image src="/images/industries/functional-foods-and-nutraceuticals/efsa.webp" alt="EFSA" width={140} height={48} className="object-contain max-h-16" />
+              <Image src="/images/industries/foods-nutraceuticals/efsa.webp" alt="EFSA" width={140} height={48} className="object-contain max-h-16" />
             </div>
             <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex items-center justify-center h-32 hover:shadow-md transition-shadow">
-              <Image src="/images/industries/functional-foods-and-nutraceuticals/fssai.webp" alt="FSSAI" width={140} height={48} className="object-contain max-h-16" />
+              <Image src="/images/industries/foods-nutraceuticals/fssai.webp" alt="FSSAI" width={140} height={48} className="object-contain max-h-16" />
             </div>
             <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex items-center justify-center h-32 hover:shadow-md transition-shadow text-center">
-              <Image src="/images/industries/functional-foods-and-nutraceuticals/codex-allimentariyus.webp" alt="Codex Alimentarius" width={140} height={48} className="object-contain max-h-16" />
+              <Image src="/images/industries/foods-nutraceuticals/codex-allimentariyus.webp" alt="Codex Alimentarius" width={140} height={48} className="object-contain max-h-16" />
             </div>
           </div>
         </div>
@@ -119,21 +119,21 @@ export default function FoodsNutraceuticalsComplianceSection({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col items-center justify-center text-center h-44 hover:shadow-md transition-shadow">
               <div className="relative w-12 h-12 mb-3">
-                <Image src="/images/industries/functional-foods-and-nutraceuticals/gmp-.webp" alt="GMP" fill className="object-contain" sizes="48px" />
+                <Image src="/images/industries/foods-nutraceuticals/gmp-.webp" alt="GMP" fill className="object-contain" sizes="48px" />
               </div>
               <h4 className="font-semibold text-sm sm:text-base text-gray-800">GMP (Good Manufacturing Practices) compliance</h4>
             </div>
 
             <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col items-center justify-center text-center h-44 hover:shadow-md transition-shadow">
               <div className="relative w-12 h-12 mb-3">
-                <Image src="/images/industries/functional-foods-and-nutraceuticals/pa-iconshccp.webp" alt="HACCP" fill className="object-contain" sizes="48px" />
+                <Image src="/images/industries/foods-nutraceuticals/pa-iconshccp.webp" alt="HACCP" fill className="object-contain" sizes="48px" />
               </div>
               <h4 className="font-semibold text-sm sm:text-base text-gray-800">HACCP (Hazard Analysis Critical Control Points)</h4>
             </div>
 
             <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col items-center justify-center text-center h-44 hover:shadow-md transition-shadow">
               <div className="relative w-12 h-12 mb-3">
-                <Image src="/images/industries/functional-foods-and-nutraceuticals/iso.webp" alt="ISO" fill className="object-contain" sizes="48px" />
+                <Image src="/images/industries/foods-nutraceuticals/iso.webp" alt="ISO" fill className="object-contain" sizes="48px" />
               </div>
               <h4 className="font-semibold text-sm sm:text-base text-gray-800">ISO certifications for food safety and quality</h4>
             </div>

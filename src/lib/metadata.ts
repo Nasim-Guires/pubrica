@@ -30,7 +30,7 @@ export function constructMetadata({
   description,
   keywords,
   slug = '',
-  image = '/images/og-image.jpg',
+  image = '/images/home/banner1-min-scaled-8.jpg',
   noIndex = false,
 }: MetadataProps = {}): Metadata {
   // Used verbatim, with no automatic suffixing — real pubrica.com titles are copied

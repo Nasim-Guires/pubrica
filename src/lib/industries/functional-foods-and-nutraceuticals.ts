@@ -13,7 +13,7 @@ export const nutraceuticalsTestimonialsData = {
             avatarLabel:
                 "Portrait of Dr. Meera Sharma, Clinical Nutritionist from India",
             flagLabel: "India country flag icon",
-            avatarSrc: "/images/industries/functional-foods-and-nutraceuticals/Dr.-Meera-Sharma-2.webp",
+            avatarSrc: "/images/industries/foods-nutraceuticals/Dr.-Meera-Sharma-2.webp",
             flagSrc: "/images/industries/biotechnology/india.webp",
         },
         {
@@ -26,7 +26,7 @@ export const nutraceuticalsTestimonialsData = {
             avatarLabel:
                 "Portrait of Ms. Sarah Williams, Founder of Wellness Foods, Australia",
             flagLabel: "Australia country flag icon",
-            avatarSrc: "/images/industries/functional-foods-and-nutraceuticals/Ms.-Sarah-Williams.webp",
+            avatarSrc: "/images/industries/foods-nutraceuticals/Ms.-Sarah-Williams.webp",
             flagSrc: "/images/marketing-communication-content-development-service/Australia.webp",
         },
         {
@@ -39,7 +39,7 @@ export const nutraceuticalsTestimonialsData = {
             avatarLabel:
                 "Portrait of Dr. Anil Kapoor, Research Scientist based in the United Kingdom",
             flagLabel: "United Kingdom flag icon",
-            avatarSrc: "/images/industries/functional-foods-and-nutraceuticals/James-Carter.png",
+            avatarSrc: "/images/industries/foods-nutraceuticals/James-Carter.png",
             flagSrc: "/images/editing-and-translation/thesis-editing/uk-flag-.png",
         },
     ],

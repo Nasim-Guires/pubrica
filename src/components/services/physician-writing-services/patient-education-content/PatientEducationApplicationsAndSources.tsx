@@ -67,22 +67,22 @@ export default function PatientEducationApplicationsAndSources() {
   const therapeuticAreas = [
     {
       name: "Radiology",
-      icon: "/images/icons/radiology.png",
+      icon: "/images/icons/Radiology.png",
       href: "/subject-matter-experts/radiology/",
     },
     {
       name: "Nuclear Medicine",
-      icon: "/images/icons/nuclear-medicine.png",
+      icon: "/images/icons/Nuclear-Medicine.png",
       href: "/subject-matter-experts",
     },
     {
       name: "Emergency medicine",
-      icon: "/images/icons/emergency-medicine.png",
+      icon: "/images/icons/Emergency-medicine.png",
       href: "/subject-matter-experts",
     },
     {
       name: "Internal medicine",
-      icon: "/images/icons/internal-medicine.png",
+      icon: "/images/icons/Internal-medicine.png",
       href: "/subject-matter-experts",
     },
     {
@@ -102,7 +102,7 @@ export default function PatientEducationApplicationsAndSources() {
     },
     {
       name: "Otolaryngology",
-      icon: "/images/icons/otolaryngology.png",
+      icon: "/images/icons/Otolaryngology.png",
       href: "/subject-matter-experts",
     },
     {
@@ -117,7 +117,7 @@ export default function PatientEducationApplicationsAndSources() {
     },
     {
       name: "Gastroenterology",
-      icon: "/images/icons/gastroenterology.png",
+      icon: "/images/icons/Gastroenterology.png",
       href: "/subject-matter-experts",
     },
     {
