@@ -195,7 +195,7 @@ export default function MetaAnalysisComplianceSection() {
               heading: "Meta-Analysis Service Sample Work",
               button: {
                 label: "Discover More",
-                url: "/insights/sample-work/individual-patient-data-from-randomized-trials/",
+                url: "/insights/individual-patient-data-from-randomized-trials/",
               },
             },
             {

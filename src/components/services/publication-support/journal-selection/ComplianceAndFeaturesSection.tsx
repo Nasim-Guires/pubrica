@@ -243,7 +243,7 @@ export default function ComplianceAndFeaturesSection() {
                   </Link>{" "}
                   process, helping you determine the best{" "}
                   <Link
-                    href="/insights/sample-work/prevalence-thyroid-disorders-saudi-arabia/"
+                    href="/insights/prevalence-thyroid-disorders-saudi-arabia/"
                     className="text-blue-600 no-underline hover:no-underline"
                   >
                     journal to publish

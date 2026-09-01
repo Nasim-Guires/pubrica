@@ -11,7 +11,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "The very first step towards selecting an appropriate journal is understanding the scope and contribution of one’s research work. All journals have a well-defined subject domain, targeted audience, and purpose for publication. Before submitting one’s manuscript, he/she should analyse his/her manuscript by comparing it with some recent articles that have been published in that journal. Understanding [how to identify the right journal scope](https://pubrica.com/insights/sample-work/tuberculosis-journal-selection-india-global/) is one of the most important aspects of target journal selection.[[2](https://doi.org/10.1093/jamia/ocz209)]"
+    "text": "The very first step towards selecting an appropriate journal is understanding the scope and contribution of one’s research work. All journals have a well-defined subject domain, targeted audience, and purpose for publication. Before submitting one’s manuscript, he/she should analyse his/her manuscript by comparing it with some recent articles that have been published in that journal. Understanding [how to identify the right journal scope](/insights/tuberculosis-journal-selection-india-global/) is one of the most important aspects of target journal selection.[[2](https://doi.org/10.1093/jamia/ocz209)]"
   },
   {
     "type": "img",

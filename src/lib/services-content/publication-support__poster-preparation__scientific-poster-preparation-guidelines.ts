@@ -11,7 +11,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Scientific posters serve as an intermediary between comprehensive research reports and very brief presentations of findings by allowing researchers to present their research findings in a concise way to a wide audience using a visually appealing medium. Effective [scientific poster preparation guidelines](https://pubrica.com/insights/sample-work/maternal-gdm-infant-gut-microbiome-vertical-transmission/) help researchers create posters that maximise visibility and engagement. [[2](https://doi.org/10.5688/ajpe8010162)]"
+    "text": "Scientific posters serve as an intermediary between comprehensive research reports and very brief presentations of findings by allowing researchers to present their research findings in a concise way to a wide audience using a visually appealing medium. Effective [scientific poster preparation guidelines](/insights/maternal-gdm-infant-gut-microbiome-vertical-transmission/) help researchers create posters that maximise visibility and engagement. [[2](https://doi.org/10.5688/ajpe8010162)]"
   },
   {
     "type": "p",
@@ -124,7 +124,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Data visualisation is often the most important aspect of a scientific poster. Well-designed visuals can communicate findings more effectively than large blocks of text. [Creating an effective research poster](https://pubrica.com/insights/sample-work/representativeness-acs-rcts-guidelines/) requires selecting visuals that clearly support the study’s objectives and findings."
+    "text": "Data visualisation is often the most important aspect of a scientific poster. Well-designed visuals can communicate findings more effectively than large blocks of text. [Creating an effective research poster](/insights/representativeness-acs-rcts-guidelines/) requires selecting visuals that clearly support the study’s objectives and findings."
   },
   {
     "type": "table",
@@ -224,7 +224,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "When preparing a Scientific Poster for a scientific conference, it is necessary to maintain both scientific accuracy and visual communication (design). Following scientific poster preparation guidelines and [scientific poster guidelines](https://pubrica.com/insights/sample-work/microbiota-supportive-diet-lipid-profile/) helps researchers create impactful presentations. A successful poster will clearly communicate the research findings to the audience, make effective use of design principles, and visually engage the audience through concise messages and compelling images. By carefully considering the structural and readability recommendations outlined in this Guide, along with effective research poster communication strategies, researchers can maximise the impact of their work at academic and professional conferences."
+    "text": "When preparing a Scientific Poster for a scientific conference, it is necessary to maintain both scientific accuracy and visual communication (design). Following scientific poster preparation guidelines and [scientific poster guidelines](/insights/microbiota-supportive-diet-lipid-profile/) helps researchers create impactful presentations. A successful poster will clearly communicate the research findings to the audience, make effective use of design principles, and visually engage the audience through concise messages and compelling images. By carefully considering the structural and readability recommendations outlined in this Guide, along with effective research poster communication strategies, researchers can maximise the impact of their work at academic and professional conferences."
   },
   {
     "type": "p",

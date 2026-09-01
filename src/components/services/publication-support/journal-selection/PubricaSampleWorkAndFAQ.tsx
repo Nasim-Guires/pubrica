@@ -91,7 +91,7 @@ export default function PubricaSampleWorkAndFAQ() {
             headingTag: "h2",
             button: {
               label: "Discover More",
-              url: "/insights/sample-work/anesthetic-management-in-pregnant-woman/",
+              url: "/insights/anesthetic-management-in-pregnant-woman/",
             },
           },
           {

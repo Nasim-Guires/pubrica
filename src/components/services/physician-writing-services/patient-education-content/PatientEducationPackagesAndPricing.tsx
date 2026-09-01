@@ -119,7 +119,7 @@ export default function PatientEducationPackagesAndPricing() {
             </h2>
             <p className="text-slate-700 text-base sm:text-lg leading-snug max-w-5xl">
               Pubrica offers medically accurate, guideline-compliant{" "}
-              <Link href="/insights/sample-work/diabetic-foot-ulcer/" className="text-blue-600 no-underline hover:no-underline">
+              <Link href="/insights/diabetic-foot-ulcer/" className="text-blue-600 no-underline hover:no-underline">
                 patient education content
               </Link>{" "}
               developed by healthcare experts, optimized for comprehension, and
@@ -240,7 +240,7 @@ export default function PatientEducationPackagesAndPricing() {
             heading: "Patient Education Content Service Sample Work",
             button: {
               label: "Discover More",
-              url: "/insights/sample-work/gestational-diabetes-mellitus/",
+              url: "/insights/gestational-diabetes-mellitus/",
             },
           },
           {
@@ -249,7 +249,7 @@ export default function PatientEducationPackagesAndPricing() {
               { text: "Explore our " },
               {
                 text: "patient education content samples",
-                url: "/insights/sample-work/sleep-apnea/",
+                url: "/insights/sleep-apnea/",
               },
               {
                 text: ", designed for clinical accuracy, health literacy, and ready use in patient care settings.",

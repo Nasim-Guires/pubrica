@@ -23,7 +23,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
       "Importing references from databases and PDFs.",
       "Keeping track of a large library of references.",
       "Formatting citations and generating bibliographies automatically.",
-      "Switching between [citation styles](https://pubrica.com/insights/sample-work/citation-and-formatting/); and Supporting team or collaborative research activities."
+      "Switching between [citation styles](/insights/citation-and-formatting/); and Supporting team or collaborative research activities."
     ]
   },
   {

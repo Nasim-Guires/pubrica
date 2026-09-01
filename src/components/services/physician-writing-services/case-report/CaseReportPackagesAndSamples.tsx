@@ -127,7 +127,7 @@ export default function CaseReportPackagesAndSamples() {
                 },
                 {
                   text: "case report writing samples",
-                  url: "/insights/sample-work/neurosyphilis-anti-nmdar-antibody-case-report/",
+                  url: "/insights/neurosyphilis-anti-nmdar-antibody-case-report/",
                 },
                 {
                   text: ", meticulously crafted to align with ",

@@ -355,7 +355,7 @@ export default function PublicationSupportPage() {
                 Response to Reviewer Sample Work
               </h3>
               <Link
-                href="/insights/sample-work/sample-response-to-reviewers-comments/"
+                href="/insights/sample-response-to-reviewers-comments/"
                 className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors"
               >
                 Discover More
@@ -372,7 +372,7 @@ export default function PublicationSupportPage() {
                 successful publication.
               </p>
               <Link
-                href="/insights/sample-work/response-to-review-comments/"
+                href="/insights/response-to-review-comments/"
                 className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors"
               >
                 Discover More

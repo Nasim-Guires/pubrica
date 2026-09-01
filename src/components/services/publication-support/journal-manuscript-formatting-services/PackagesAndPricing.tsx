@@ -86,7 +86,7 @@ export default function PackagesAndPricing() {
       Selecting the right package ensures your manuscript will be professionally
       formatted to meet{" "}
       <Link
-        href="/pubrica.com/services/publication-support/journal-submission/"
+        href="/services/publication-support/journal-submission/"
         className="text-blue-600 no-underline hover:no-underline"
       >
         journal submission
@@ -130,7 +130,7 @@ export default function PackagesAndPricing() {
                   Manuscript Formatting Sample Work
                 </h3>
                 <Link
-                  href="/insights/sample-work/citation-and-formatting/"
+                  href="/insights/citation-and-formatting/"
                   type="button"
                   className="w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
                 >
@@ -148,7 +148,7 @@ export default function PackagesAndPricing() {
                   standards, and submission deadlines.
                 </p>
                 <Link
-                  href="/insights/sample-work/citation-and-formatting/"
+                  href="/insights/citation-and-formatting/"
                   type="button"
                   className="w-full sm:w-auto bg-black hover:bg-gray-800 text-white text-xs font-medium px-8 py-2.5 rounded-full transition-colors cursor-pointer"
                 >

@@ -111,7 +111,7 @@ export default function PubricaResourceHub() {
             heading: "Publication Support Sample Work",
             button: {
               label: "Discover More",
-              url: "/insights/sample-work/the-impact-of-drinking-water-sources-on-gut-microbial-diversity-in-canines-peer-review/",
+              url: "/insights/the-impact-of-drinking-water-sources-on-gut-microbial-diversity-in-canines-peer-review/",
             },
           },
           {

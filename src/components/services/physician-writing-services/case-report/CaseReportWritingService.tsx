@@ -213,7 +213,7 @@ export default function CaseReportWritingService() {
           <div className="lg:col-span-7 space-y-6 text-sm sm:text-base text-slate-700 leading-relaxed">
             <p>
               Transform unique clinical encounters into structured,{" "}
-              <Link href="/insights/sample-work/epilepsy-after-subarachnoid-hemorrhage-case-report/" className="text-blue-600 no-underline hover:no-underline">
+              <Link href="/insights/epilepsy-after-subarachnoid-hemorrhage-case-report/" className="text-blue-600 no-underline hover:no-underline">
                 high-impact case reports
               </Link>
               . Enhance your publication profile with ethically prepared,
@@ -236,7 +236,7 @@ export default function CaseReportWritingService() {
 
             <p>
               With a focus on clarity, structure, and compliance, our{" "}
-              <Link href="/insights/sample-work/box-pulmonary-vein-isolation-pectus-excavatum/" className="text-blue-600 no-underline hover:no-underline">
+              <Link href="/insights/box-pulmonary-vein-isolation-pectus-excavatum/" className="text-blue-600 no-underline hover:no-underline">
                 clinical case report writing service
               </Link>{" "}
               helps clinicians and researchers convert patient encounters into
@@ -296,7 +296,7 @@ export default function CaseReportWritingService() {
             <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
               We provide dedicated research assistant services to help
               clinicians, researchers, and scholars prepare high-quality{" "}
-              <Link href="/insights/sample-work/paliperidone-lai-induced-parkinsonism-case-report/" className="text-blue-600 no-underline hover:no-underline">
+              <Link href="/insights/paliperidone-lai-induced-parkinsonism-case-report/" className="text-blue-600 no-underline hover:no-underline">
                 case reports
               </Link>{" "}
               for{" "}

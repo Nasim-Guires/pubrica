@@ -182,7 +182,7 @@ export default function JournalSubmissionBottomSections() {
             heading: "Journal Submission Sample Work",
             button: {
               label: "Discover More",
-              url: "/insights/sample-work/journal-submission-report-sample",
+              url: "/insights/journal-submission-report-sample",
             },
           },
           {

@@ -281,7 +281,7 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
             heading: "Physician Writing Service Sample Work",
             button: {
               label: "Discover More",
-              url: "/insights/sample-work/assessing-evidence-based-practice-in-physical-therapy/",
+              url: "/insights/assessing-evidence-based-practice-in-physical-therapy/",
             },
           },
           {

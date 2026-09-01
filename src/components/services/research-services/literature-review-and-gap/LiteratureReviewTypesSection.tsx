@@ -83,7 +83,7 @@ const rightColumnItems: ReviewTypeItem[] = [
         academic approach. It ensures methodological rigor and scholarly depth
         suitable for{" "}
         <Link
-          href="/insights/sample-work/patient-safety-culture-among-operating-theatre-nurses-in-operating-room/"
+          href="/insights/patient-safety-culture-among-operating-theatre-nurses-in-operating-room/"
           className="text-blue-600 no-underline hover:no-underline"
         >
           academic writing services

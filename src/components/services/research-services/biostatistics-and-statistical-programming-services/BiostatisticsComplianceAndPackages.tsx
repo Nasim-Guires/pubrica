@@ -274,7 +274,7 @@ export default function BiostatisticsComplianceAndPackages() {
             headingTag: "h3",
             button: {
               label: "Discover More",
-              url: "/insights/sample-work/assessing-evidence-based-practice-in-physical-therapy/",
+              url: "/insights/assessing-evidence-based-practice-in-physical-therapy/",
             },
           },
           {

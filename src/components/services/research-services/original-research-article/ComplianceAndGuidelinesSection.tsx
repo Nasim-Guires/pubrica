@@ -237,7 +237,7 @@ export default function ComplianceAndGuidelinesSection() {
             headingTag: "h3",
             button: {
               label: "Discover More",
-              url: "/insights/sample-work/cytotoxic-effects-of-sliver-nanoparticles-using-leaf-extract/",
+              url: "/insights/cytotoxic-effects-of-sliver-nanoparticles-using-leaf-extract/",
             },
           },
           {

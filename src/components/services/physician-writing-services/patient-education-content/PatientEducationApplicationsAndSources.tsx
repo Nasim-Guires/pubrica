@@ -98,7 +98,7 @@ export default function PatientEducationApplicationsAndSources() {
     {
       name: "Neurology",
       icon: "/images/icons/Neurology-1.png",
-      href: "/subject-matter-experts//neurology",
+      href: "/subject-matter-experts/neurology",
     },
     {
       name: "Otolaryngology",

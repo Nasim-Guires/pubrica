@@ -167,7 +167,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Careful planning of [journal submissions](https://pubrica.com/insights/sample-work/journal-submission-report-sample/) increases the likelihood of acceptance and promotes ethical scientific communication. Journal submission guidelines provide authors with the framework to present their research in a transparent, ethical, and professional manner. As authors use standard formats and reporting criteria for manuscripts, and they complete pre-submission checks, they improve their chances of acceptance as well as promote the values of honest, transparent, and high-quality scientific publishing through their efforts."
+    "text": "Careful planning of [journal submissions](/insights/journal-submission-report-sample/) increases the likelihood of acceptance and promotes ethical scientific communication. Journal submission guidelines provide authors with the framework to present their research in a transparent, ethical, and professional manner. As authors use standard formats and reporting criteria for manuscripts, and they complete pre-submission checks, they improve their chances of acceptance as well as promote the values of honest, transparent, and high-quality scientific publishing through their efforts."
   },
   {
     "type": "p",

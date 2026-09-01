@@ -329,7 +329,7 @@ export default function ClinicalReviewScopeAndApproach() {
           {/* Right Composite Image Collage with Link */}
           <div className="md:col-span-5 relative h-80 md:h-[380px]">
             <Link 
-              href="/insights/sample-work/patient-safety-culture-among-operating-theatre-nurses-in-operating-room/"
+              href="/insights/patient-safety-culture-among-operating-theatre-nurses-in-operating-room/"
               className="absolute top-0 right-4 w-3/4 h-52 rounded-xl overflow-hidden shadow-lg border-2 border-white z-10 block group text-blue-600 no-underline hover:no-underline"
             >
               <Image

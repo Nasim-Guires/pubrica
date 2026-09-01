@@ -15,7 +15,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Scientific posters provide an intermediate form of communication between advanced research articles and casual academic discussions. The main goal of a scientific poster is to quickly communicate the key findings of the research to a wide audience. Modern [scientific poster visualization services](https://pubrica.com/insights/sample-work/maternal-gdm-infant-gut-microbiome-vertical-transmission/) support this goal by blending data accuracy with visual clarity. A well-designed poster:"
+    "text": "Scientific posters provide an intermediate form of communication between advanced research articles and casual academic discussions. The main goal of a scientific poster is to quickly communicate the key findings of the research to a wide audience. Modern [scientific poster visualization services](/insights/maternal-gdm-infant-gut-microbiome-vertical-transmission/) support this goal by blending data accuracy with visual clarity. A well-designed poster:"
   },
   {
     "type": "ul",
@@ -40,7 +40,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Aggressive scientific design involves the strategic application of design elements such as arrangement, font or typography, colour and hierarchy to enable the viewers to navigate through information systematically. These principles form the foundation of [scientific design in poster preparation](https://pubrica.com/insights/sample-work/thesis-poster-example-for-students/) and guide evidence-based visual decision-making. Some examples of bad designs include:"
+    "text": "Aggressive scientific design involves the strategic application of design elements such as arrangement, font or typography, colour and hierarchy to enable the viewers to navigate through information systematically. These principles form the foundation of [scientific design in poster preparation](/insights/thesis-poster-example-for-students/) and guide evidence-based visual decision-making. Some examples of bad designs include:"
   },
   {
     "type": "ul",
@@ -96,7 +96,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "These principles are commonly implemented by [professional research poster design](https://pubrica.com/insights/sample-work/representativeness-acs-rcts-guidelines/) teams to ensure consistency and readability."
+    "text": "These principles are commonly implemented by [professional research poster design](/insights/representativeness-acs-rcts-guidelines/) teams to ensure consistency and readability."
   },
   {
     "type": "table",

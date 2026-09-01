@@ -174,7 +174,7 @@ export default function CaseReportWorkflowAndDisciplines() {
         </h2>
         <p className="text-sm sm:text-base text-slate-700 max-w-5xl leading-relaxed mb-8">
           Our{" "}
-          <Link href="/insights/sample-work/dyskeratosis-congenita-rare-case-report/" className="text-blue-600 no-underline hover:no-underline">
+          <Link href="/insights/dyskeratosis-congenita-rare-case-report/" className="text-blue-600 no-underline hover:no-underline">
             case report writing services
           </Link>{" "}
           are designed for clinicians, researchers, and academic institutions
@@ -228,7 +228,7 @@ export default function CaseReportWorkflowAndDisciplines() {
           </h3>
           <p className="text-sm sm:text-base text-slate-600 max-w-4xl mx-auto leading-relaxed">
             With Pubrica's{" "}
-            <Link href="/insights/sample-work/leigh-syndrome-infant-case-report/" className="text-blue-600 no-underline hover:no-underline">
+            <Link href="/insights/leigh-syndrome-infant-case-report/" className="text-blue-600 no-underline hover:no-underline">
               case report writing service
             </Link>
             , our clinical experts and scientific writers collaborate to craft

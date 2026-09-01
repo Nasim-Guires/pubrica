@@ -10,47 +10,47 @@ interface IndustryItem {
 const industries: IndustryItem[] = [
   {
     title: "Pharmaceuticals",
-    href: "/Industries/pharmaceutical/",
+    href: "/industries/pharmaceutical/",
     iconPath: "/images/research-services/product-development/icon-1.png",
   },
   {
     title: "Biotechnology",
-    href: "/Industries/biotechnology/",
+    href: "/industries/biotechnology/",
     iconPath: "/images/research-services/product-development/icon-2.png",
   },
   {
     title: "Nutraceuticals & Dietary Supplements",
-    href: "/Industries/",
+    href: "/industries/",
     iconPath: "/images/research-services/product-development/icon-3.png",
   },
   {
     title: "Herbal/AYUSH products",
-    href: "/Industries/",
+    href: "/industries/",
     iconPath: "/images/research-services/product-development/icon-4.png",
   },
   {
     title: "Functional Foods & Beverages",
-    href: "/Industries/",
+    href: "/industries/",
     iconPath: "/images/research-services/product-development/icon-5.png",
   },
   {
     title: "Medical Devices",
-    href: "/Industries/medical-device/",
+    href: "/industries/medical-device/",
     iconPath: "/images/research-services/product-development/icon-6.png",
   },
   {
     title: "Cosmetics & Cosmeceuticals",
-    href: "/Industries/cosmetics/",
+    href: "/industries/cosmetics/",
     iconPath: "/images/research-services/product-development/icon-7.png",
   },
   {
     title: "Pet Health & Pet Food",
-    href: "/Industries/",
+    href: "/industries/",
     iconPath: "/images/research-services/product-development/icon-8.png",
   },
   {
     title: "Life Sciences & Healthcare Research",
-    href: "/Industries/",
+    href: "/industries/",
     iconPath: "/images/research-services/product-development/icon-9.png",
   },
 ];

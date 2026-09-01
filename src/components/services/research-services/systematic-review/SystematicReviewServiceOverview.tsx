@@ -35,7 +35,7 @@ export const SystematicReviewOverview: React.FC = () => {
             <p className="text-sm sm:text-base text-gray-700 mb-4 leading-relaxed">
               Crafting a high-quality{" "}
               <Link
-                href="/insights/sample-work/bariatric-surgery-and-the-effects-of-cardiovascular-disease/"
+                href="/insights/bariatric-surgery-and-the-effects-of-cardiovascular-disease/"
                 className="text-blue-600 no-underline hover:no-underline"
               >
                 systematic review manuscript writing services
@@ -79,7 +79,7 @@ export const SystematicReviewOverview: React.FC = () => {
               </Link>
               ,{" "}
               <Link
-                href="/insights/sample-work/bariatric-surgery-and-the-effects-of-cardiovascular-disease/"
+                href="/insights/bariatric-surgery-and-the-effects-of-cardiovascular-disease/"
                 className="text-blue-600 no-underline hover:no-underline"
               >
                 data extraction for systematic review

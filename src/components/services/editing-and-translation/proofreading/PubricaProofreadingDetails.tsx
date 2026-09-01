@@ -80,19 +80,19 @@ export default function PubricaProofreadingDetails() {
   const sampleLinks = [
     {
       title: "Sample Work 1",
-      href: "/insights/sample-work/alcohol-related-liver-disease-management/",
+      href: "/insights/alcohol-related-liver-disease-management/",
     },
     {
       title: "Sample Work 2",
-      href: "/insights/sample-work/management-of-neurogenic-shock-outside-of-the-hospital/",
+      href: "/insights/management-of-neurogenic-shock-outside-of-the-hospital/",
     },
     {
       title: "Sample Work 3",
-      href: "/insights/sample-work/phenotypic-variations-of-atopic-dermatitis-a-systemic-review-of-dupilumab-efficacy-and-safety/",
+      href: "/insights/phenotypic-variations-of-atopic-dermatitis-a-systemic-review-of-dupilumab-efficacy-and-safety/",
     },
     {
       title: "Sample Work 4",
-      href: "/insights/sample-work/skeletal-muscle-mass-index-versus-bioelectrical-impedance-analysis/",
+      href: "/insights/skeletal-muscle-mass-index-versus-bioelectrical-impedance-analysis/",
     },
   ];
   return (

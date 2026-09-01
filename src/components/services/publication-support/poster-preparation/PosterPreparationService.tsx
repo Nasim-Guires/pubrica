@@ -67,7 +67,7 @@ export default function PosterPreparationPage() {
             <p className="leading-relaxed">
               At Pubrica, our{' '}
               <a
-                href="https://pubrica.com/insights/sample-work/maternal-gdm-infant-gut-microbiome-vertical-transmission/"
+                href="/insights/maternal-gdm-infant-gut-microbiome-vertical-transmission/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 "
@@ -256,7 +256,7 @@ export default function PosterPreparationPage() {
             <p className="text-gray-800 text-sm md:text-base leading-relaxed">
               Choose Pubrica&apos;s{' '}
               <a
-                href="https://pubrica.com/insights/sample-work/microbiota-supportive-diet-lipid-profile/"
+                href="/insights/microbiota-supportive-diet-lipid-profile/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-700"

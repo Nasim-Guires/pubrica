@@ -332,7 +332,7 @@ export default function VideoAbstractOverview() {
             heading: "Video Abstract Sample Work",
             button: {
               label: "Discover More",
-              url: "/insights/sample-work/citation-and-formatting/",
+              url: "/insights/citation-and-formatting/",
             },
           },
           {
@@ -344,7 +344,7 @@ export default function VideoAbstractOverview() {
             ],
             button: {
               label: "Discover More",
-              url: "/insights/sample-work/citation-and-formatting/",
+              url: "/insights/citation-and-formatting/",
             },
           },
         ]}

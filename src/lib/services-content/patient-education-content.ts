@@ -48,13 +48,13 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "At Pubrica, we create [patient education content](https://pubrica.com/services/patient-education-content/breast-cancer-treatment/) for the pharmaceutical, medical device, nutraceutical, and life science industries. Our professional content authors use their knowledge and experience to create accurate, informative, and engaging educational content that promotes patient understanding and engagement. Here’s how we support [patient education](https://pubrica.com/insights/sample-work/understanding-blood-pressure/)"
+    "text": "At Pubrica, we create patient education content for the pharmaceutical, medical device, nutraceutical, and life science industries. Our professional content authors use their knowledge and experience to create accurate, informative, and engaging educational content that promotes patient understanding and engagement. Here’s how we support [patient education](/insights/understanding-blood-pressure/)"
   },
   {
     "type": "ul",
     "items": [
       "Expert Content Development: At Pubrica, our content experts are skilled in producing patient-centred resources to inform and provide a clear understanding of complicated medical conditions, treatments, and health management plans. This process of careful preparation is essential for satisfying the educational needs of patients and improving health literacy.",
-      "Tailor-Made Educational Resources: We tailor our [patient education](https://pubrica.com/insights/sample-work/insomnia/) projects to fit distinct health conditions and patient demographics. Our customized approach ensures that all content will be relevant to the patient’s needs, which increases health communication and patient care outcomes. We also assist with journal selection and poster preparation services so that healthcare providers can take the educational messages to peer-reviewed outputs and conference-ready presentations that depict real-world patient engagement endeavours."
+      "Tailor-Made Educational Resources: We tailor our [patient education](/insights/insomnia/) projects to fit distinct health conditions and patient demographics. Our customized approach ensures that all content will be relevant to the patient’s needs, which increases health communication and patient care outcomes. We also assist with journal selection and poster preparation services so that healthcare providers can take the educational messages to peer-reviewed outputs and conference-ready presentations that depict real-world patient engagement endeavours."
     ]
   },
   {
@@ -404,7 +404,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Pubrica’s [patient education content](https://pubrica.com/insights/sample-work/psoriasis/) service delivers medically accurate, reader-friendly educational materials that empower patients to understand, manage, and participate actively in their healthcare journey."
+    "text": "Pubrica’s [patient education content](/insights/psoriasis/) service delivers medically accurate, reader-friendly educational materials that empower patients to understand, manage, and participate actively in their healthcare journey."
   },
   {
     "type": "p",
@@ -436,7 +436,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "With Pubrica’s [patient education content](https://pubrica.com/services/patient-education-content/parkinsons-disease/) service, our medical experts and [scientific writing](https://pubrica.com/services/research-services/scientific-writing/) team work together to develop clear, accurate, and guideline-compliant educational materials that are tailored to specific patient needs and aligned with healthcare communication standards."
+    "text": "With Pubrica’s [patient education content](/insights/parkinsons-disease/) service, our medical experts and [scientific writing](https://pubrica.com/services/research-services/scientific-writing/) team work together to develop clear, accurate, and guideline-compliant educational materials that are tailored to specific patient needs and aligned with healthcare communication standards."
   },
   {
     "type": "img",
@@ -489,7 +489,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Pubrica offers medically accurate, guideline-compliant [patient education content](https://pubrica.com/insights/sample-work/diabetic-foot-ulcer/) developed by healthcare experts, optimized for comprehension, and tailored to meet global regulatory standards."
+    "text": "Pubrica offers medically accurate, guideline-compliant [patient education content](/insights/diabetic-foot-ulcer/) developed by healthcare experts, optimized for comprehension, and tailored to meet global regulatory standards."
   },
   {
     "type": "ul",
@@ -525,7 +525,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "Explore our [patient education content samples](https://pubrica.com/insights/sample-work/sleep-apnea/), designed for clinical accuracy, health literacy, and ready use in patient care settings."
+    "text": "Explore our [patient education content samples](/insights/sleep-apnea/), designed for clinical accuracy, health literacy, and ready use in patient care settings."
   },
   {
     "type": "p",

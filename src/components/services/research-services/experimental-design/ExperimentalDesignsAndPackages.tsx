@@ -664,7 +664,7 @@ export default function ExperimentalDesignsAndPackages() {
             heading: "Experimental Design Services Sample Work",
             button: {
               label: "Discover More",
-              url: "/insights/sample-work/effective-methods-for-metabarcoding-fungi/",
+              url: "/insights/effective-methods-for-metabarcoding-fungi/",
             },
           },
           {

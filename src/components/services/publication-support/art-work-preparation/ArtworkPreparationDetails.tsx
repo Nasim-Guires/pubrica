@@ -173,7 +173,7 @@ export default function ArtworkPreparationDetails() {
                 Artwork Preparation Sample Work
               </h3>
               <Link
-                href="/insights/sample-work/citation-and-formatting/"
+                href="/insights/citation-and-formatting/"
                 className="inline-block w-full sm:w-auto text-center bg-black hover:bg-slate-800 text-white font-medium text-sm py-3 px-12 rounded-full transition-colors"
               >
                 Discover More
@@ -190,7 +190,7 @@ export default function ArtworkPreparationDetails() {
                 presentation deadlines.
               </p>
               <Link
-                href="/insights/sample-work/citation-and-formatting/"
+                href="/insights/citation-and-formatting/"
                 className="inline-block w-full sm:w-auto text-center bg-black hover:bg-slate-800 text-white font-medium text-sm py-3 px-12 rounded-full transition-colors"
               >
                 Discover More

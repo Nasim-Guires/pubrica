@@ -177,7 +177,7 @@ export const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     "type": "p",
-    "text": "A good research [poster presentation](https://pubrica.com/services/publication-support/poster-preparation/) communicates the results of the research by incorporating the right structure, effective design elements and great visuals. By observing the standard sections in a poster presentation, ensuring hierarchy of visual elements, choosing the correct research poster dimensions, following conference poster print specs, using a suitable [scientific poster template](https://pubrica.com/insights/sample-work/maternal-gdm-infant-gut-microbiome-vertical-transmission/), and applying effective poster presentation design tips, it is possible to develop a poster that will not only communicate the results of the research but also attract attendees at an academic conference."
+    "text": "A good research [poster presentation](https://pubrica.com/services/publication-support/poster-preparation/) communicates the results of the research by incorporating the right structure, effective design elements and great visuals. By observing the standard sections in a poster presentation, ensuring hierarchy of visual elements, choosing the correct research poster dimensions, following conference poster print specs, using a suitable [scientific poster template](/insights/maternal-gdm-infant-gut-microbiome-vertical-transmission/), and applying effective poster presentation design tips, it is possible to develop a poster that will not only communicate the results of the research but also attract attendees at an academic conference."
   },
   {
     "type": "p",

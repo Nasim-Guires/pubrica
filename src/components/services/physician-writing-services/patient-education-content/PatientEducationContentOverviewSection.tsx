@@ -76,7 +76,7 @@ export default function PatientEducationContentOverviewSection() {
                     NICE
                   </Link>
                   ,{" "}
-                  <Link href="/https://www.cdc.gov/index.html" className="text-blue-600 no-underline hover:no-underline">
+                  <Link href="https://www.cdc.gov/index.html" className="text-blue-600 no-underline hover:no-underline">
                     CDC
                   </Link>
                   , and{" "}
@@ -154,13 +154,7 @@ export default function PatientEducationContentOverviewSection() {
             <h2 className="text-3xl font-bold text-[#0c2e3a]">What We do</h2>
 
             <p className="text-base text-slate-700 leading-relaxed">
-              At Pubrica, we create{" "}
-              <Link
-                href="/services/patient-education-content/breast-cancer-treatment/"
-                className="text-blue-600 no-underline hover:no-underline"
-              >
-                patient education content
-              </Link>{" "}
+              At Pubrica, we create patient education content{" "}
               for the pharmaceutical, medical device, nutraceutical, and life
               science industries. Our professional content authors use their
               knowledge and experience to create accurate, informative, and
@@ -192,7 +186,7 @@ export default function PatientEducationContentOverviewSection() {
                 </strong>{" "}
                 We tailor our{" "}
                 <Link
-                  href="/insights/sample-work/insomnia/"
+                  href="/insights/insomnia/"
                   className="text-blue-600 no-underline hover:no-underline"
                 >
                   patient education
