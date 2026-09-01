@@ -334,7 +334,7 @@ export default function OutcomeAccordionSection() {
         goal of our{" "}
         <Link
           href="/academy/peer-review/pre-submission-peer-review-pre-submission-peer-review-for-researchers"
-          className="text-blue-600 font-medium no-underline hover:text-blue-700"
+          className="text-blue-600 font-medium no-underline hover:no-underline"
         >
           pre-submission peer review
         </Link>{" "}
@@ -342,7 +342,7 @@ export default function OutcomeAccordionSection() {
         from expert reviewers. We will use a{" "}
         <Link
           href="/services/publication-support/double-blind-peer-review-definition-process"
-          className="text-blue-600 font-medium no-underline hover:text-blue-700"
+          className="text-blue-600 font-medium no-underline hover:no-underline"
         >
           double-blind review
         </Link>{" "}

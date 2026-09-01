@@ -35,11 +35,11 @@ export default function VideoAbstractGuidePage() {
 
             {/* Breadcrumbs */}
             <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 text-xs text-gray-500 border-b border-gray-100 flex items-center space-x-2">
-                <Link href="/" className="hover:underline">Home</Link>
+                <Link href="/" className="text-blue-600 no-underline hover:no-underline">Home</Link>
                 <span>&gt;</span>
-                <Link href="/services/publication-support" className="hover:underline">Publication Support</Link>
+                <Link href="/services/publication-support" className="text-blue-600 no-underline hover:no-underline">Publication Support</Link>
                 <span>&gt;</span>
-                <Link href="/services/publication-support/video-abstract" className="hover:underline">Video Abstract</Link>
+                <Link href="/services/publication-support/video-abstract" className="text-blue-600 no-underline hover:no-underline">Video Abstract</Link>
                 <span>&gt;</span>
                 <span className="text-gray-700 font-medium truncate">
                     Top 6 Tips to Create a Perfect Video Abstract for Your Research Paper
@@ -102,15 +102,15 @@ export default function VideoAbstractGuidePage() {
                             Interesting topics
                         </h3>
                         <ul className="space-y-2 text-xs md:text-sm text-blue-600 font-medium">
-                            <li><Link href="/services/medical-writing" className="hover:underline">Medical Writing</Link></li>
-                            <li><Link href="/services/research-services/scientific-writing" className="hover:underline">Scientific Writing</Link></li>
-                            <li><Link href="/services/research-services/systematic-review" className="hover:underline">Systematic Review Writing</Link></li>
-                            <li><Link href="/services/research-services/meta-analysis" className="hover:underline">Meta-Analysis</Link></li>
-                            <li><Link href="/services/physician-writing-services/original-research-article" className="hover:underline">Original Research Article Writing Service</Link></li>
-                            <li><Link href="/services/research-services/literature-review-and-gap" className="hover:underline">Literature Review</Link></li>
-                            <li><Link href="/services/research-services/grant-writing" className="hover:underline">Grant Writing Services</Link></li>
-                            <li><Link href="/services/research-services/biostatistics-and-statistical-programming-services" className="hover:underline">Biostatistical Programming</Link></li>
-                            <li><Link href="/services/research-services/experimental-design" className="hover:underline">Experimental Design</Link></li>
+                            <li><Link href="/services/medical-writing" className="text-blue-600 no-underline hover:no-underline">Medical Writing</Link></li>
+                            <li><Link href="/services/research-services/scientific-writing" className="text-blue-600 no-underline hover:no-underline">Scientific Writing</Link></li>
+                            <li><Link href="/services/research-services/systematic-review" className="text-blue-600 no-underline hover:no-underline">Systematic Review Writing</Link></li>
+                            <li><Link href="/services/research-services/meta-analysis" className="text-blue-600 no-underline hover:no-underline">Meta-Analysis</Link></li>
+                            <li><Link href="/services/physician-writing-services/original-research-article" className="text-blue-600 no-underline hover:no-underline">Original Research Article Writing Service</Link></li>
+                            <li><Link href="/services/research-services/literature-review-and-gap" className="text-blue-600 no-underline hover:no-underline">Literature Review</Link></li>
+                            <li><Link href="/services/research-services/grant-writing" className="text-blue-600 no-underline hover:no-underline">Grant Writing Services</Link></li>
+                            <li><Link href="/services/research-services/biostatistics-and-statistical-programming-services" className="text-blue-600 no-underline hover:no-underline">Biostatistical Programming</Link></li>
+                            <li><Link href="/services/research-services/experimental-design" className="text-blue-600 no-underline hover:no-underline">Experimental Design</Link></li>
                         </ul>
                     </div>
 
@@ -353,7 +353,7 @@ export default function VideoAbstractGuidePage() {
                             A well-produced video abstract can effectively increase the visibility, engagement, and accessibility of your research. With the right scripting, visuals, and communication strategies, you can create a video that is seen by a wider audience (both academic and non-academic). A video abstract can serve to complement your written work and will also increase your discoverability on digital platforms. If you spend time planning and follow what is discussed in the previous few sections, a video abstract could be valuable to the success and reach of your research.
                         </p>
                         <p className="italic text-gray-800">
-                            Top 6 Tips to Create a Perfect Video Abstract for Your Research Paper? Our Pubrica medical consultants are here to guide you. <Link href="/order-now" className="text-sky-600 hover:underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-sky-600 hover:underline">[Schedule a Free Consultation]</Link>
+                            Top 6 Tips to Create a Perfect Video Abstract for Your Research Paper? Our Pubrica medical consultants are here to guide you. <Link href="/order-now" className="text-blue-600 no-underline hover:no-underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-blue-600 no-underline hover:no-underline">[Schedule a Free Consultation]</Link>
                         </p>
                     </section>
 

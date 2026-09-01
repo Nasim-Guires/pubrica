@@ -74,7 +74,7 @@ export default async function InsightRoutePage({ params, searchParams }: Insight
 
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="mb-6">
-            <Link href="/insights" className="text-xs font-semibold text-slate-500 hover:text-[#004d40]">
+            <Link href="/insights" className="text-xs font-semibold text-blue-600 no-underline hover:no-underline">
               &larr; Back to Insights
             </Link>
           </div>
@@ -159,7 +159,7 @@ export default async function InsightRoutePage({ params, searchParams }: Insight
 
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="mb-6">
-            <Link href="/insights" className="text-xs font-semibold text-slate-500 hover:text-[#004d40]">
+            <Link href="/insights" className="text-xs font-semibold text-blue-600 no-underline hover:no-underline">
               &larr; Back to Insights
             </Link>
           </div>

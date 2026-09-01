@@ -314,7 +314,7 @@ export default function ProcessAndBenefitsSections() {
           <p>
             <Link
               href="/services/publication-support/journal-submission/"
-              className="text-blue-700 font-medium  hover:text-[#0B353D] transition-colors"
+              className="text-blue-600 font-medium transition-colors no-underline hover:no-underline"
             >
               Journal Submission
             </Link>{" "}

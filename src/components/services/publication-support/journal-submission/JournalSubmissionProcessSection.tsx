@@ -89,7 +89,7 @@ export default function JournalSubmissionProcessSection() {
           </h2>
           <p className="text-base text-gray-600 leading-relaxed max-w-5xl">
             Our{" "}
-            <Link href="/services/publication-support/journal-submission" className="text-[#0082a6] hover:underline font-medium">
+            <Link href="/services/publication-support/journal-submission" className="text-blue-600 font-medium no-underline hover:no-underline">
               journal submission service
             </Link>{" "}
             ensures a seamless and compliant submission process that meets the
@@ -144,7 +144,7 @@ export default function JournalSubmissionProcessSection() {
           Publishing research in high-impact journals is a critical process to communicate science and develop an academic career. At Pubrica, we understand the challenges of{" "}
           <Link
             href="/services/publication-support/"
-            className="text-blue-600 font-medium"
+            className="text-blue-600 font-medium no-underline hover:no-underline"
           >
             publication support
           </Link>{" "}

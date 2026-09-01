@@ -151,14 +151,14 @@ export default function LiteratureReviewTypesSection() {
             At Pubrica, we provide a wide range of{" "}
             <Link
               href="/academy/literature-review/importance-of-literature-review-in-research/"
-              className="text-sky-600 font-medium"
+              className="text-blue-600 font-medium no-underline hover:no-underline"
             >
               literature review service
             </Link>{" "}
             and{" "}
             <Link
               href="/services/research-services/literature-review-and-gap/literature-review-and-gap-literature-review-support-chronological-vs-thematic/"
-              className="text-sky-600 font-medium"
+              className="text-blue-600 font-medium no-underline hover:no-underline"
             >
               research gap analysis service
             </Link>{" "}

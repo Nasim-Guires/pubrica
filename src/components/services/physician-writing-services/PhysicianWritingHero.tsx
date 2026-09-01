@@ -2,6 +2,7 @@
 import HeroBanner from "@/components/common/HeroBanner";
 import Image from "next/image";
 import Link from "next/link";
+import CommonUploadButton from "@/components/common/CommonUploadButton";
 import React from "react";
 
 interface PhysicianHeroProps {
@@ -78,7 +79,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
               </h3>
               <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed text-justify">
                 Pubrica's{" "}
-                <Link href="/" className="text-blue-600">
+                <Link href="/" className="text-blue-600 no-underline hover:no-underline">
                   Physician Writing Services
                 </Link>{" "}
                 {
@@ -86,7 +87,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                     .split("Physician Writing Services")[1]
                     .split("medical writing")[0]
                 }
-                <Link href="/services/research-services/medical-writing/" className="text-blue-700">
+                <Link href="/services/research-services/medical-writing/" className="text-blue-600 no-underline hover:no-underline">
                   medical writing
                 </Link>
                 {
@@ -152,7 +153,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                 } else if (bullet.includes("Plagiarism and AI-generated")) {
                   renderedText = (
                     <span>
-                      <Link href="/services/publication-support/plagiarism-services" className="text-blue-600">
+                      <Link href="/services/publication-support/plagiarism-services" className="text-blue-600 no-underline hover:no-underline">
                         Plagiarism
                       </Link>{" "}
                       and AI-generated article screening with a comprehensive
@@ -162,13 +163,13 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                 } else if (bullet.includes("Literature review")) {
                   renderedText = (
                     <span>
-                      <Link href="/services/research-services/literature-review-and-gap" className="text-blue-600">
+                      <Link href="/services/research-services/literature-review-and-gap" className="text-blue-600 no-underline hover:no-underline">
                         Literature review
                       </Link>{" "}
                       from PubMed, Embase,{" "}
                       <Link
                         href="/services/physician-writing-services/scopus-indexed-journals-submission-guide/"
-                        className="text-blue-600"
+                        className="text-blue-600 no-underline hover:no-underline"
                       >
                         Scopus
                       </Link>, and Cochrane
@@ -193,12 +194,12 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
 
           {/* Bottom CTA Action Row */}
           <div className="flex flex-wrap items-center gap-8">
-            <Link href="/order-now/" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
+            <CommonUploadButton href="/order-now/">
               Upload Your Manuscript
-            </Link>
-            <Link href="/uploads/physician-writing-services/Physician-Writing-services_compressed.pdf" className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none">
+            </CommonUploadButton>
+            <CommonUploadButton href="/uploads/physician-writing-services/Physician-Writing-services_compressed.pdf">
               View brochure
-            </Link>
+            </CommonUploadButton>
           </div>
         </div>
       </section>

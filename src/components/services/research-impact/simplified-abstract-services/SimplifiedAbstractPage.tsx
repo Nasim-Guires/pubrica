@@ -219,7 +219,7 @@ export default function SimplifiedAbstractPage() {
                     </h2>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
                         Our{' '}
-                        <Link href="/services/research-impact/simplified-abstract-services" className="text-sky-600 hover:underline font-medium">
+                        <Link href="/services/research-impact/simplified-abstract-services" className="text-blue-600 font-medium no-underline hover:no-underline">
                             simplified abstract
                         </Link>{' '}
                         writing services are tailored to diverse academic, clinical, policy, and public communication needs. Whether you're preparing a journal-ready abstract, a grant submission, or a lay summary, our professional abstract writers ensure clarity, structure, and impact across formats.
@@ -271,11 +271,11 @@ export default function SimplifiedAbstractPage() {
                     </p>
                     <p className="text-xs sm:text-sm text-slate-600 max-w-4xl mx-auto leading-relaxed">
                         Pubrica's{' '}
-                        <Link href="/services/research-impact/simplified-abstract-services" className="text-sky-600 hover:underline">
+                        <Link href="/services/research-impact/simplified-abstract-services" className="text-blue-600 no-underline hover:no-underline">
                             simplified abstract writing service
                         </Link>{' '}
                         is designed to be structured, expert-led, and process-driven. Each step ensures scientific clarity, accuracy, and full compliance with{' '}
-                        <Link href="/services/publication-support/journal-submission" className="text-sky-600 hover:underline">
+                        <Link href="/services/publication-support/journal-submission" className="text-blue-600 no-underline hover:no-underline">
                             journal submission
                         </Link>{' '}
                         requirements.
@@ -333,7 +333,7 @@ export default function SimplifiedAbstractPage() {
                     </h2>
                     <p className="text-xs sm:text-sm text-slate-600 max-w-3xl mx-auto leading-relaxed">
                         We offer fast turnaround times on our{' '}
-                        <Link href="/services/research-impact/simplified-abstract-services" className="text-sky-600 hover:underline">
+                        <Link href="/services/research-impact/simplified-abstract-services" className="text-blue-600 no-underline hover:no-underline">
                             simplified abstract writing service
                         </Link>
                         , helping you meet tight journal submission deadlines without compromising on quality.
@@ -406,7 +406,7 @@ export default function SimplifiedAbstractPage() {
                     </h2>
                     <p className="text-xs sm:text-sm text-slate-600 max-w-3xl mx-auto leading-relaxed">
                         Pubrica has successfully developed journal-ready abstracts for submissions to leading publishers, including Elsevier, Springer Nature, Wiley, Taylor & Francis, and more. Our abstract writing and{' '}
-                        <Link href="/services/publication-support" className="text-sky-600 hover:underline">
+                        <Link href="/services/publication-support" className="text-blue-600 no-underline hover:no-underline">
                             publication support services
                         </Link>{' '}
                         are designed to meet the highest standards of academic publishing.
@@ -463,7 +463,7 @@ export default function SimplifiedAbstractPage() {
                             </h4>
                             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                                 Experience the quality of Pubrica's{' '}
-                                <Link href="/services/research-impact/simplified-abstract-services" className="text-sky-600 hover:underline">
+                                <Link href="/services/research-impact/simplified-abstract-services" className="text-blue-600 no-underline hover:no-underline">
                                     simplified abstract writing services
                                 </Link>{' '}
                                 firsthand. Our research summaries extract complex scientific content into clear, concise, and structured abstracts tailored for academic, scientific, and professional use.

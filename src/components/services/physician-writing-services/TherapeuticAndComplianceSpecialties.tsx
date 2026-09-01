@@ -228,7 +228,7 @@ export const TherapeuticAndComplianceSpecialties: React.FC = () => {
           <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed mb-12 max-w-6xl">
             At Pubrica, our physician writing service guarantees that any
             clinical manuscript,{" "}
-            <Link href="/services/physician-writing-services/case-report" className="text-blue-600">
+            <Link href="/services/physician-writing-services/case-report" className="text-blue-600 no-underline hover:no-underline">
               case report
             </Link>
             , or regulatory document we provide complies with international

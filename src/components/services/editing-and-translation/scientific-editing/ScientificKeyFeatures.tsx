@@ -46,7 +46,7 @@ const featuresData: FeatureCard[] = [
         prevent unintentional{" "}
         <Link
           href="/services/publication-support/plagiarism-services"
-          className="text-blue-700 "
+          className="text-blue-600 no-underline hover:no-underline"
         >
           plagiarism
         </Link>
@@ -84,7 +84,7 @@ const featuresData: FeatureCard[] = [
       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
         <Link
           href="/services/publication-support/journal-manuscript-formatting-services"
-          className="text-blue-700"
+          className="text-blue-600 no-underline hover:no-underline"
         >
           Journal Formatting
         </Link>

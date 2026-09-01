@@ -40,7 +40,7 @@ export default function PlagiarismHeroAndOverview() {
                 Our{" "}
                 <Link
                   href="/academy/plagiarism-service/common-types-of-plagiarism"
-                  className="text-sky-600  font-medium"
+                  className="text-blue-600 font-medium no-underline hover:no-underline"
                 >
                   plagiarism
                 </Link>{" "}
@@ -50,7 +50,7 @@ export default function PlagiarismHeroAndOverview() {
                 potential{" "}
                 <Link
                   href="/academy/plagiarism-service/academic-paraphrasing-and-plagiarism-prevention"
-                  className="text-sky-600 font-medium"
+                  className="text-blue-600 font-medium no-underline hover:no-underline"
                 >
                   plagiarism
                 </Link>{" "}
@@ -66,7 +66,7 @@ export default function PlagiarismHeroAndOverview() {
                     A complete{" "}
                     <Link
                       href="/academy/plagiarism-service/researchers-avoid-plagiarism-originality"
-                      className="text-sky-600 font-medium"
+                      className="text-blue-600 font-medium no-underline hover:no-underline"
                     >
                       plagiarism check
                     </Link>{" "}

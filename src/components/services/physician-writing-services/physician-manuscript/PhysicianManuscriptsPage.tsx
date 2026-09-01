@@ -154,14 +154,14 @@ export default function PhysicianManuscriptsPage() {
               At Pubrica, we assist physicians, surgeons, and healthcare professionals in turning clinical research, case reports, and novel surgical discoveries into a well-structured, publication-ready medical manuscript that adheres to the criteria of an appropriate peer-reviewed medical journal.
             </p>
             <p>
-              Publishing in peer-reviewed, indexed medical journals helps clinicians gain recognition, enhance clinical credibility, contribute to evidence-based practice, and support academic and institutional career advancement. But with demanding schedules, lack of time, and limited knowledge of evolving <Link href="/services/publication-support/journal-submission/" className="text-blue-600 no-underline">journal submission</Link> guidelines making it difficult for practicing doctors to manage the entire publication process effectively. Especially for specialists like surgeons, finding the time and expertise to write and edit a scientific manuscript can be a major challenge.
+              Publishing in peer-reviewed, indexed medical journals helps clinicians gain recognition, enhance clinical credibility, contribute to evidence-based practice, and support academic and institutional career advancement. But with demanding schedules, lack of time, and limited knowledge of evolving <Link href="/services/publication-support/journal-submission/" className="text-blue-600 no-underline hover:no-underline">journal submission</Link> guidelines making it difficult for practicing doctors to manage the entire publication process effectively. Especially for specialists like surgeons, finding the time and expertise to write and edit a scientific manuscript can be a major challenge.
             </p>
             <p className="font-semibold text-gray-900 pt-2">
-              That's where Pubrica steps in as your external research assistant. Our expert-led <Link href="/services/publication-support/" className="text-blue-600 no-underline">publication support</Link> is specifically designed for:
+              That's where Pubrica steps in as your external research assistant. Our expert-led <Link href="/services/publication-support/" className="text-blue-600 no-underline hover:no-underline">publication support</Link> is specifically designed for:
             </p>
             <ul className="list-disc pl-5 space-y-2 text-rose-700 font-medium">
               <li>
-                <span className="text-gray-700">Physicians with limited time for <Link href="/services/research-services/scientific-writing" className="text-sky-600 underline hover:text-sky-800">scientific writing</Link></span>
+                <span className="text-gray-700">Physicians with limited time for <Link href="/services/research-services/scientific-writing" className="text-blue-600 no-underline hover:no-underline">scientific writing</Link></span>
               </li>
               <li>
                 <span className="text-gray-700">Surgeons seeking to publish case studies or surgical innovations</span>
@@ -171,7 +171,7 @@ export default function PhysicianManuscriptsPage() {
               </li>
             </ul>
             <p className="pt-2">
-              We help you avoid predatory journals, limit desk rejections, and publish your research in high-impact medical journals that target a global audience of healthcare professionals. Whether you are submitting a clinical case report, <Link href="/services/physician-writing-services/original-research-article" className="text-sky-600 underline hover:text-sky-800">original research article</Link>, or review manuscript, Pubrica's team will ensure scientific accuracy, ethics compliance, and journal-ready formatting.
+              We help you avoid predatory journals, limit desk rejections, and publish your research in high-impact medical journals that target a global audience of healthcare professionals. Whether you are submitting a clinical case report, <Link href="/services/physician-writing-services/original-research-article" className="text-blue-600 no-underline hover:no-underline">original research article</Link>, or review manuscript, Pubrica's team will ensure scientific accuracy, ethics compliance, and journal-ready formatting.
             </p>
 
             <div className="pt-4">
@@ -199,7 +199,7 @@ export default function PhysicianManuscriptsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] mb-4">What We Do</h2>
           <p className="text-gray-700 max-w-5xl leading-relaxed text-sm sm:text-base mb-3">
-            Pubrica provides specialized manuscript writing and <Link href="/services/publication-support" className="text-sky-600 underline hover:text-sky-800">publication support</Link> services for physicians looking to publish in indexed medical journals. Our clients include healthcare professionals from the <Link href="/industries/pharmaceutical" className="text-sky-600 underline hover:text-sky-800">pharmaceutical</Link>, <Link href="/industries/medical-device" className="text-sky-600 underline hover:text-sky-800">medical device</Link>, <Link href="/industries/nutraceutical-research" className="text-sky-600 underline hover:text-sky-800">nutraceutical</Link>, or life sciences sector.
+            Pubrica provides specialized manuscript writing and <Link href="/services/publication-support" className="text-blue-600 no-underline hover:no-underline">publication support</Link> services for physicians looking to publish in indexed medical journals. Our clients include healthcare professionals from the <Link href="/industries/pharmaceutical" className="text-blue-600 no-underline hover:no-underline">pharmaceutical</Link>, <Link href="/industries/medical-device" className="text-blue-600 no-underline hover:no-underline">medical device</Link>, <Link href="/industries/nutraceutical-research" className="text-blue-600 no-underline hover:no-underline">nutraceutical</Link>, or life sciences sector.
           </p>
           <p className="text-gray-700 max-w-5xl leading-relaxed text-sm sm:text-base mb-10">
             With a team of expert medical writers and scientific editors, we ensure that every physician manuscript is accurate, engaging, and compliant with journal-specific submission standards. Our goal is to help clinicians present their research in a way that is both scientifically rigorous and clinically relevant.
@@ -230,7 +230,7 @@ export default function PhysicianManuscriptsPage() {
                 <ul className="list-disc pl-5 space-y-2 text-rose-700">
                   <li>
                     <span className="text-gray-700">
-                      At Pubrica, our <Link href="/subject-matter-experts" className="text-sky-600 underline hover:text-sky-800">subject matter experts</Link> focus on writing clinical content that presents complicated medical conditions, treatment protocols, and surgical procedures in a professional and clear format. We all follow standardized journal manuscript types from <Link href="/services/physician-writing-services/original-research-article" className="text-sky-600 underline hover:text-sky-800">original research articles</Link> to surgical technique articles.
+                      At Pubrica, our <Link href="/subject-matter-experts" className="text-blue-600 no-underline hover:no-underline">subject matter experts</Link> focus on writing clinical content that presents complicated medical conditions, treatment protocols, and surgical procedures in a professional and clear format. We all follow standardized journal manuscript types from <Link href="/services/physician-writing-services/original-research-article" className="text-blue-600 no-underline hover:no-underline">original research articles</Link> to surgical technique articles.
                     </span>
                   </li>
                   <li>
@@ -341,7 +341,7 @@ export default function PhysicianManuscriptsPage() {
           </h2>
           <p className="text-gray-700 max-w-5xl leading-relaxed text-sm sm:text-base mb-10">
             At Pubrica, we provide end-to-end medical manuscript drafting and{" "}
-            <Link href="/services/publication-support/" className="text-sky-600 hover:text-sky-800 no-underline">
+            <Link href="/services/publication-support/" className="text-blue-600 no-underline hover:no-underline">
               publication support
             </Link>{" "}
             services designed to support a wide range of healthcare professionals and clinical researchers. Our goal is to help physicians publish with scientific accuracy, journal compliance, and international reach.

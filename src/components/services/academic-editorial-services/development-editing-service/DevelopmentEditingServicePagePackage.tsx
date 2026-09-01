@@ -343,7 +343,7 @@ export default function DevelopmentEditingServicePagePackage() {
                 <div className="text-xs font-semibold text-gray-700 border-t pt-3 mb-4">
                   {expert.exp} | {expert.papers}
                 </div>
-                <Link href="/about-us/our-editors" className="text-xs text-[#008080] font-bold hover:underline">
+                <Link href="/about-us/our-editors" className="text-xs text-blue-600 font-bold no-underline hover:no-underline">
                   Read More
                 </Link>
               </div>

@@ -181,7 +181,7 @@ export default function WhoWeServeAndProcess() {
             At Pubrica, our{" "}
             <Link
               href="/academy/experimental-design/experimental-research-design/"
-              className="text-blue-600"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               experimental design
             </Link>{" "}
@@ -273,7 +273,7 @@ export default function WhoWeServeAndProcess() {
               At Pubrica, we believe a strong{" "}
               <Link
                 href="/services/research-services/experimental-design/benefits-of-experimental-plan-in-research-and-design/"
-                className="text-blue-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 experimental plan
               </Link>{" "}

@@ -112,7 +112,7 @@ const audiences: AudienceCard[] = [
         process, from hypothesis framing to peer-reviewed{" "}
         <Link
           href="/services/publication-support/journal-submission"
-          className="text-sky-600 hover:underline"
+          className="text-blue-600 no-underline hover:no-underline"
         >
           journal submission
         </Link>
@@ -194,7 +194,7 @@ export default function PhysicianWhoWeServeSection() {
             Pubrica&apos;s{" "}
             <Link
               href="/services/physician-writing-services/original-research-article/young-researchers-guide-original-research-article/"
-              className="text-blue-600"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               original research article writing service
             </Link>{" "}

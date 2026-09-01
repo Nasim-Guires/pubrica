@@ -140,7 +140,7 @@ export default function EnvironmentalSciencePage() {
                         </p>
 
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            <Link href="/services/research-services/literature-review-and-gap/" className="text-[#2b6cb0] hover:underline">Environmental Science</Link> will be very important in addressing Climate Change, Resource Conservation, and Biodiversity. Recent advances in Environmental Science will also drive the advancement and sustainability of Agriculture, Manufacturing, and Urban Planning to ensure the continued health of our planet for future generations.
+                            <Link href="/services/research-services/literature-review-and-gap/" className="text-blue-600 no-underline hover:no-underline">Environmental Science</Link> will be very important in addressing Climate Change, Resource Conservation, and Biodiversity. Recent advances in Environmental Science will also drive the advancement and sustainability of Agriculture, Manufacturing, and Urban Planning to ensure the continued health of our planet for future generations.
                         </p>
 
                         <div className="pt-2">

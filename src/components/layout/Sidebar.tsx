@@ -51,7 +51,7 @@ export default function Sidebar() {
             <span>Iterative Peer Review Ready</span>
           </li>
         </ul>
-        <Link href="/contact" className="block">
+        <Link href="/contact" className="block text-blue-600 no-underline hover:no-underline">
           <Button variant="accent" className="w-full text-xs font-semibold">
             Inquire Now
           </Button>

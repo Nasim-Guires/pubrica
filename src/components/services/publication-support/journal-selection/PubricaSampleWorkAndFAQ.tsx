@@ -130,7 +130,7 @@ export default function PubricaSampleWorkAndFAQ() {
           journal for the health care practitioner focused on increasing
           knowledge, stimulating research, and promoting better management of
           people with{" "}
-          <Link href="/academy/journals-templates/journal-of-diabetes-research" className="text-cyan-600 hover:underline">
+          <Link href="/academy/journals-templates/journal-of-diabetes-research" className="text-blue-600 no-underline hover:no-underline">
             diabetes
           </Link>
           . To foster these objectives, the journal publishes original research
@@ -181,10 +181,10 @@ export default function PubricaSampleWorkAndFAQ() {
 
             {/* Quick Links */}
             <div className="flex gap-8 mt-4 text-base font-semibold">
-              <Link href="/order-now/" className="text-red-600">
+              <Link href="/order-now/" className="text-blue-600 no-underline hover:no-underline">
                 Submit your Report
               </Link>
-              <Link href="/contact-us/" className="text-red-600">
+              <Link href="/contact-us/" className="text-blue-600 no-underline hover:no-underline">
                 Guide for author
               </Link>
             </div>

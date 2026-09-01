@@ -17,7 +17,7 @@ export default function NotFound() {
         <p className="text-sm text-gray-600 leading-relaxed font-sans mt-3">
           We apologize, but the research resource, publication service details, or article you requested could not be located on our server.
         </p>
-        <Link href="/" className="mt-8">
+        <Link href="/" className="mt-8 text-blue-600 no-underline hover:no-underline">
           <Button leftIcon={<ArrowLeft className="h-4 w-4" />} className="font-semibold">
             Return to Homepage
           </Button>

@@ -44,7 +44,7 @@ export default function PeerReviewOverviewSection() {
                 The feedback from our peer reviewers is an opportunity to improve your manuscript by
                 improving clarity, structure, and academic strength. It allows you to address weaknesses
                 before submitting for journal peer review. We also offer complete{" "}
-                <Link href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 font-medium hover:underline">
+                <Link href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 font-medium no-underline hover:no-underline">
                   manuscript editing
                 </Link>{" "}
                 that brings your manuscript up to journal standards.
@@ -99,11 +99,11 @@ export default function PeerReviewOverviewSection() {
               community&apos;s standards and expectations and produce a high-quality publication. The
               pre-submission review protects the quality control of the research—whether it&apos;s an
               original research article,{" "}
-              <Link href="/services/research-services/systematic-review" className="text-blue-600 font-medium hover:underline">
+              <Link href="/services/research-services/systematic-review" className="text-blue-600 font-medium no-underline hover:no-underline">
                 systematic review
               </Link>
               , or{" "}
-              <Link href="/services/research-services/meta-analysis" className="text-blue-600 font-medium hover:underline">
+              <Link href="/services/research-services/meta-analysis" className="text-blue-600 font-medium no-underline hover:no-underline">
                 meta-analysis
               </Link>
               , we ensure it meets rigorous academic standards.
@@ -121,11 +121,11 @@ export default function PeerReviewOverviewSection() {
               successful journal submission through our academic editing. This service helps ensure that
               personal views or flawed data do not hinder the acceptance of your work. Our integrated
               approach, including{" "}
-              <Link href="/services/physician-writing-services/case-report" className="text-blue-600 font-medium hover:underline">
+              <Link href="/services/physician-writing-services/case-report" className="text-blue-600 font-medium no-underline hover:no-underline">
                 case report writing
               </Link>{" "}
               and{" "}
-              <Link href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 font-medium hover:underline">
+              <Link href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 font-medium no-underline hover:no-underline">
                 manuscript editing
               </Link>
               , ensures your manuscript is submission-ready.

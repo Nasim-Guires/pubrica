@@ -38,7 +38,7 @@ export default function PatientEducationContentOverviewSection() {
               Our{" "}
               <Link
                 href="/academy/patient-education/effective-patient-education-content-guide/"
-                className="text-blue-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 patient education content
               </Link>{" "}
@@ -48,7 +48,7 @@ export default function PatientEducationContentOverviewSection() {
               understanding and engagement. Our content meets{" "}
               <Link
                 href="/services/scientific-communication/"
-                className="text-blue-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 medical communication
               </Link>{" "}
@@ -76,7 +76,7 @@ export default function PatientEducationContentOverviewSection() {
                     NICE
                   </Link>
                   ,{" "}
-                  <Link href="/https://www.cdc.gov/index.html" className="text-blue-600">
+                  <Link href="/https://www.cdc.gov/index.html" className="text-blue-600 no-underline hover:no-underline">
                     CDC
                   </Link>
                   , and{" "}
@@ -157,7 +157,7 @@ export default function PatientEducationContentOverviewSection() {
               At Pubrica, we create{" "}
               <Link
                 href="/services/patient-education-content/breast-cancer-treatment/"
-                className="text-blue-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 patient education content
               </Link>{" "}
@@ -168,7 +168,7 @@ export default function PatientEducationContentOverviewSection() {
               and engagement. Here’s how we support{" "}
               <Link
                 href="/services/patient-education-content/"
-                className="text-blue-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 patient education
               </Link>
@@ -193,7 +193,7 @@ export default function PatientEducationContentOverviewSection() {
                 We tailor our{" "}
                 <Link
                   href="/insights/sample-work/insomnia/"
-                  className="text-blue-600"
+                  className="text-blue-600 no-underline hover:no-underline"
                 >
                   patient education
                 </Link>{" "}

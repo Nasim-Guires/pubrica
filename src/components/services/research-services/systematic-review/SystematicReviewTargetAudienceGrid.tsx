@@ -217,7 +217,7 @@ export default function SystematicReviewTargetAudienceGrid() {
           PRISMA,{" "}
           <Link
             href="/academy/systematic-review/cochrane-methodology-systematic-reviews"
-            className="text-blue-600"
+            className="text-blue-600 no-underline hover:no-underline"
           >
             Cochrane
           </Link>

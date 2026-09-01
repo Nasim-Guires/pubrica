@@ -105,7 +105,7 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
         </h2>
         <p className="text-gray-600 text-xs sm:text-sm md:text-[14px] leading-relaxed mb-10 max-w-5xl text-justify">
           At Pubrica, our{" "}
-          <Link href="/services/research-services/biostatistics-and-statistical-programming-services" className="text-blue-600 hover:underline">
+          <Link href="/services/research-services/biostatistics-and-statistical-programming-services" className="text-blue-600 no-underline hover:no-underline">
             statistical analysis services
           </Link>{" "}
           cater to a diverse range of clients across research, industry, and

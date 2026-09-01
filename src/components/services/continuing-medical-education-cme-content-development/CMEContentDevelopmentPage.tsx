@@ -134,7 +134,7 @@ export default function CMEContentDevelopmentPage() {
                     <div className="lg:col-span-7 space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
                         <p>
                             Pubrica's team of experts specializes in developing{' '}
-                            <Link href="/services/continuing-medical-education-cme-content-development" className="text-sky-600 hover:underline">
+                            <Link href="/services/continuing-medical-education-cme-content-development" className="text-blue-600 no-underline hover:no-underline">
                                 continuing medical education content
                             </Link>{' '}
                             that is scholarly, peer-reviewed, and tailored to meet the diverse educational needs of healthcare professionals across various disciplines. Our dedicated CME module writing services ensure the delivery of high-quality educational resources. Here's how we support your CME content development services needs:
@@ -159,11 +159,11 @@ export default function CMEContentDevelopmentPage() {
                                 <span className="text-red-500 font-bold text-base leading-none">&bull;</span>
                                 <div>
                                     <span className="font-bold text-slate-900">Comprehensive Peer Review:</span> Benefit from our rigorous{' '}
-                                    <Link href="/services/publication-support/peer-review-pre-submission" className="text-sky-600 hover:underline">
+                                    <Link href="/services/publication-support/peer-review-pre-submission" className="text-blue-600 no-underline hover:no-underline">
                                         peer review
                                     </Link>{' '}
                                     process, which ensures that all CME materials are accurate, up-to-date, and reflect the latest clinical practices and guidelines. Our content undergoes thorough reviews by{' '}
-                                    <Link href="/subject-matter-experts" className="text-sky-600 hover:underline">
+                                    <Link href="/subject-matter-experts" className="text-blue-600 no-underline hover:no-underline">
                                         subject matter experts
                                     </Link>
                                     , enhancing its credibility and educational impact.
@@ -211,9 +211,9 @@ export default function CMEContentDevelopmentPage() {
                     </h2>
                     <p className="text-xs sm:text-sm text-slate-700 leading-relaxed max-w-5xl">
                         At Pubrica, we specialize in creating comprehensive Continuing Medical Education (CME) activities tailored to a wide range of healthcare professionals. Our services are designed to support ongoing education across various therapeutic areas, including{' '}
-                        <Link href="/subject-matter-experts/radiology" className="text-sky-600 hover:underline">radiology</Link>,{' '}
-                        <Link href="/subject-matter-experts/cardiology" className="text-sky-600 hover:underline">cardiology</Link>, orthopedics, emergency medicine,{' '}
-                        <Link href="/subject-matter-experts/neurology" className="text-sky-600 hover:underline">neurology</Link>, internal medicine, nuclear medicine, oncology, OB-GYN, otolaryngology, and more. Here's how we ensure high-quality CME content:
+                        <Link href="/subject-matter-experts/radiology" className="text-blue-600 no-underline hover:no-underline">radiology</Link>,{' '}
+                        <Link href="/subject-matter-experts/cardiology" className="text-blue-600 no-underline hover:no-underline">cardiology</Link>, orthopedics, emergency medicine,{' '}
+                        <Link href="/subject-matter-experts/neurology" className="text-blue-600 no-underline hover:no-underline">neurology</Link>, internal medicine, nuclear medicine, oncology, OB-GYN, otolaryngology, and more. Here's how we ensure high-quality CME content:
                     </p>
                 </div>
 

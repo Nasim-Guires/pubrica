@@ -165,7 +165,7 @@ export default function RespondingToReviewersPage() {
           With our{" "}
           <Link
             href="/insights/educational-resources-workshops-learning-development"
-            className="text-blue-700 font-medium hover:text-blue-900 transition-colors"
+            className="text-blue-600 font-medium transition-colors no-underline hover:no-underline"
           >
             response to reviewer
           </Link>{" "}
@@ -203,7 +203,7 @@ export default function RespondingToReviewersPage() {
                   novelty. This includes identifying potential gaps in{" "}
                   <Link
                     href="/services/research-services/biostatistics-and-statistical-programming-services/"
-                    className="text-blue-700 font-medium hover:text-blue-900 transition-colors"
+                    className="text-blue-600 font-medium transition-colors no-underline hover:no-underline"
                   >
                     biostatistics
                   </Link>{" "}
@@ -241,14 +241,14 @@ export default function RespondingToReviewersPage() {
                   any required{" "}
                   <Link
                     href="/services/publication-support"
-                    className="text-blue-700 font-medium hover:text-blue-900 transition-colors"
+                    className="text-blue-600 font-medium transition-colors no-underline hover:no-underline"
                   >
                     publication support
                   </Link>{" "}
                   requirements, including{" "}
                   <Link
                     href="/services/publication-support/journal-manuscript-formatting-services"
-                    className="text-blue-700 font-medium hover:text-blue-900 transition-colors"
+                    className="text-blue-600 font-medium transition-colors no-underline hover:no-underline"
                   >
                     formatting
                   </Link>{" "}
@@ -284,7 +284,7 @@ export default function RespondingToReviewersPage() {
                   editors can also help check for and remove any{" "}
                   <Link
                     href="/services/publication-support/plagiarism-services"
-                    className="text-blue-700 font-medium hover:text-blue-900 transition-colors"
+                    className="text-blue-600 font-medium transition-colors no-underline hover:no-underline"
                   >
                     plagiarism
                   </Link>
@@ -323,7 +323,7 @@ export default function RespondingToReviewersPage() {
                   help you create{" "}
                   <Link
                     href="/services/publication-support/video-abstract"
-                    className="text-blue-700 font-medium hover:text-blue-900 transition-colors"
+                    className="text-blue-600 font-medium transition-colors no-underline hover:no-underline"
                   >
                     video abstracts
                   </Link>{" "}
@@ -351,7 +351,7 @@ export default function RespondingToReviewersPage() {
           Select Pubrica&apos;s{" "}
           <Link
             href="/academy/response-to-reviewer/response-to-reviewer-comments-services-for-researchers"
-            className="text-blue-700 font-medium hover:text-blue-900 transition-colors"
+            className="text-blue-600 font-medium transition-colors no-underline hover:no-underline"
           >
             response to reviewer comment service
           </Link>{" "}
@@ -406,7 +406,7 @@ export default function RespondingToReviewersPage() {
           academic disciplines. Our{" "}
           <Link
             href="/services/publication-support/responding-to-reviewers"
-            className="text-blue-700 font-medium hover:text-blue-900 transition-colors"
+            className="text-blue-600 font-medium transition-colors no-underline hover:no-underline"
           >
             response to reviewer
           </Link>{" "}

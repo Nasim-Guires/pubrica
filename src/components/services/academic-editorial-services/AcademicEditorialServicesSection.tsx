@@ -128,7 +128,7 @@ export default function AcademicEditorialServicesSection() {
                 Pubrica offers comprehensive{" "}
                 <Link
                   href="/services/academic-editorial-services"
-                  className="text-sky-600 hover:underline font-medium"
+                  className="text-blue-600 font-medium no-underline hover:no-underline"
                 >
                   academic editorial services
                 </Link>{" "}
@@ -164,7 +164,7 @@ export default function AcademicEditorialServicesSection() {
                             {feature.description}
                             <Link
                               href="/services/publication-support"
-                              className="text-sky-600 hover:underline font-medium"
+                              className="text-blue-600 font-medium no-underline hover:no-underline"
                             >
                               {feature.linkText}
                             </Link>

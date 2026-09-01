@@ -44,7 +44,7 @@ const FAQS = [
     a: (
       <>
         Disease-specific research, topic selection, target identification, ligand discovery, cost-effectiveness research, and resource utilization have all been aspects we&rsquo;re researching into. Additional information can be found on our{' '}
-        <Link href="/services/bioinformatics" className="text-[#004d40] underline">
+        <Link href="/services/bioinformatics" className="text-blue-600 no-underline hover:no-underline">
           Bioinformatics services page
         </Link>
         .

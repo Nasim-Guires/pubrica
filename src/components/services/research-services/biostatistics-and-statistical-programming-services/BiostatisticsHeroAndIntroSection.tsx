@@ -68,14 +68,14 @@ export default function BiostatisticsHeroAndIntroSection() {
                 Pubrica delivers accurate, compliant, and publication-ready{" "}
                 <Link
                   href="/services/research-services/biostatistics-and-statistical-programming-services/biostatistical-programming-framework-regulatory-research"
-                  className="text-blue-600"
+                  className="text-blue-600 no-underline hover:no-underline"
                 >
                   biostatistical programming
                 </Link>{" "}
                 for medical,{" "}
                 <Link
                   href="/subject-matter-experts/life-sciences"
-                  className="text-blue-600"
+                  className="text-blue-600 no-underline hover:no-underline"
                 >
                   life science
                 </Link>
@@ -133,14 +133,14 @@ export default function BiostatisticsHeroAndIntroSection() {
               expert biostatistical consulting team delivers meticulous{" "}
               <Link
                 href="/services/medical-data-collection"
-                className="text-blue-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 data collection
               </Link>
               , validation, and analysis to ensure your{" "}
               <Link
                 href="/academy/biostatistics/biostatistics-in-clinical-research-guide"
-                className="text-blue-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 research
               </Link>{" "}

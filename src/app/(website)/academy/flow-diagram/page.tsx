@@ -21,7 +21,7 @@ export default function FlowDiagramPage() {
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="mb-6">
-          <Link href="/academy" className="text-xs font-semibold text-slate-500 hover:text-emerald-700">
+          <Link href="/academy" className="text-xs font-semibold text-blue-600 no-underline hover:no-underline">
             &larr; Back to Academy
           </Link>
         </div>

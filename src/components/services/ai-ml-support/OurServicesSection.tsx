@@ -65,7 +65,7 @@ export default function OurServicesSection() {
             require data accuracy, algorithmic transparency, and compliance with
             global technology standards. At Pubrica, our cross-functional
             experts manage the entire{" "}
-            <Link href="/services/ai-ml-support" className="text-sky-600 hover:underline">
+            <Link href="/services/ai-ml-support" className="text-blue-600 no-underline hover:no-underline">
               AI and ML services
             </Link>{" "}
             for the research lifecycle from data preparation and model

@@ -137,7 +137,7 @@ export default function ScientificNewsReportServices() {
                     </h2>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
                         Pubrica's{' '}
-                        <Link href="/services/research-impact/scientific-news-report" className="text-emerald-700 font-medium hover:underline">
+                        <Link href="/services/research-impact/scientific-news-report" className="text-blue-600 font-medium no-underline hover:no-underline">
                             scientific news report services
                         </Link>{' '}
                         provide the complete solution needed to change complex research findings into clear, attractive news reports. Our service is designed to make your scientific discoveries accessible and appealing to a wider audience, including the general public, journalists, and fellow researchers.

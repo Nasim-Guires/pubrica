@@ -278,7 +278,7 @@ export default async function PubricaKnowledgeBase() {
           <h2 className="text-2xl font-bold text-[#0b2825]">Latest Articles</h2>
           <Link
             href="/academy/articles"
-            className="text-xs font-semibold text-gray-600 hover:text-emerald-700 transition-colors uppercase tracking-wider"
+            className="text-xs font-semibold text-blue-600 transition-colors uppercase tracking-wider no-underline hover:no-underline"
           >
             View All
           </Link>
@@ -370,7 +370,7 @@ export default async function PubricaKnowledgeBase() {
             <h2 className="text-2xl font-bold text-[#0b2825]">Top Articles</h2>
             <Link
               href="/academy/articles"
-              className="text-xs font-semibold text-gray-600 hover:text-emerald-700 transition-colors uppercase tracking-wider"
+              className="text-xs font-semibold text-blue-600 transition-colors uppercase tracking-wider no-underline hover:no-underline"
             >
               View All
             </Link>
@@ -443,7 +443,7 @@ export default async function PubricaKnowledgeBase() {
             <h2 className="text-2xl font-bold text-[#0b2825]">Q &amp; A</h2>
             <Link
               href="/academy/qa-forum"
-              className="text-xs font-semibold text-sky-800 hover:text-emerald-700 transition-colors uppercase tracking-wider"
+              className="text-xs font-semibold text-blue-600 transition-colors uppercase tracking-wider no-underline hover:no-underline"
             >
               View All
             </Link>

@@ -54,7 +54,7 @@ export const ThesisEditingHeroAndOverview: React.FC = () => {
               language. Get your thesis edited by{" "}
               <a
                 href="/subject-matter-experts"
-                className="text-blue-600 font-medium"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
               >
                 subject matter experts
               </a>{" "}

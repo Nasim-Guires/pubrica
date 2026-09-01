@@ -3,6 +3,7 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
 import Link from "next/link";
+import CommonUploadButton from "@/components/common/CommonUploadButton";
 import React from "react";
 
 // Key phrases dynamically styled in the text (sorted long-to-short for regex priority)
@@ -202,14 +203,13 @@ export default function ServiceOverview() {
         {/* Action CTAs */}
         <div className="flex flex-wrap items-center gap-8 mt-6 mb-10">
           <GetFreeQuoteButton />
-          <a
+          <CommonUploadButton
             href="/uploads/publication-support-services_compressed.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
           >
             View Brochure
-          </a>
+          </CommonUploadButton>
         </div>
 
         {/* Compliance and Guidelines Section */}

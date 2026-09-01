@@ -119,7 +119,7 @@ export default function ComplianceAndStandards(): React.ReactElement {
               At Pubrica, we adhere to the highest global standards in{" "}
               <Link
                 href="/academy/medical-writing/avoiding-sentence-fragments-academic-writing"
-                className="text-[#008ba3] underline underline-offset-2 hover:text-[#09322e] transition-colors"
+                className="text-blue-600 underline-offset-2 transition-colors no-underline hover:no-underline"
               >
                 medical writing
               </Link>

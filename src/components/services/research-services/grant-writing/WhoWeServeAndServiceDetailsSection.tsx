@@ -101,7 +101,7 @@ const serviceDetails: FeatureCard[] = [
         funder priorities.{" "}
         <Link
           href="/academy/grant-writing/communicating-research-impact-grant-applications/"
-          className="text-blue-600"
+          className="text-blue-600 no-underline hover:no-underline"
         >
           grant writing
         </Link>{" "}
@@ -185,7 +185,7 @@ const serviceDetails: FeatureCard[] = [
         Our grant proposal editing experts improve clarity, coherence, and persuasiveness while ensuring alignment with funder priorities. This service is ideal for researchers seeking{" "}
         <Link
           href="/academy/grant-writing/confidentiality-in-grant-writing-proposals/"
-          className="text-blue-600"
+          className="text-blue-600 no-underline hover:no-underline"
         >
           research grant proposal writing and editing
         </Link>{" "}

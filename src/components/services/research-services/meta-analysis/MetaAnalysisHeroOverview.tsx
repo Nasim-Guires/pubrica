@@ -42,14 +42,14 @@ export default function MetaAnalysisHeroOverview() {
                 conducting thorough,{" "}
                 <Link
                   href="/services/research-services/systematic-review"
-                  className="text-blue-600"
+                  className="text-blue-600 no-underline hover:no-underline"
                 >
                   systematic reviews
                 </Link>{" "}
                 and{" "}
                 <Link
                   href="/services/research-services/meta-analysis"
-                  className="text-blue-600"
+                  className="text-blue-600 no-underline hover:no-underline"
                 >
                   meta-analysis
                 </Link>{" "}
@@ -58,7 +58,7 @@ export default function MetaAnalysisHeroOverview() {
                 peer-reviewed medical literature, use{" "}
                 <Link
                   href="/academy/meta-analysis/meta-analysis-statistical-considerations"
-                  className="text-blue-600"
+                  className="text-blue-600 no-underline hover:no-underline"
                 >
                   meta-analysis
                 </Link>{" "}
@@ -78,7 +78,7 @@ export default function MetaAnalysisHeroOverview() {
                     comprehensive{" "}
                     <Link
                       href="/academy/meta-analysis/meta-analysis-services-for-clinical-and-healthcare-research"
-                      className="text-blue-600"
+                      className="text-blue-600 no-underline hover:no-underline"
                     >
                       meta-analysis
                     </Link>{" "}

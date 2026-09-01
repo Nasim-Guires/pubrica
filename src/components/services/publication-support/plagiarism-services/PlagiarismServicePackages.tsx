@@ -118,7 +118,7 @@ export default function PlagiarismServicePackages() {
                 It provides fast and thorough{" "}
                 <Link
                   href="/services/publication-support/plagiarism-services/plagiarism-checking-in-publication"
-                  className="text-sky-600"
+                  className="text-blue-600 no-underline hover:no-underline"
                 >
                   plagiarism checking
                 </Link>{" "}

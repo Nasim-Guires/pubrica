@@ -30,7 +30,7 @@ export const ResearchWorkflowProcess: React.FC = () => {
   //         Based on your inputs, we will prepare a{" "}
   //         <Link
   //           href="/services/physician-writing-services/research-proposal/"
-  //           className="text-[#007ba4] underline hover:text-[#083c4c] font-medium transition-colors"
+  //           className="text-blue-600 font-medium transition-colors no-underline hover:no-underline"
   //         >
   //           research proposal
   //         </Link>{" "}
@@ -98,7 +98,7 @@ export const ResearchWorkflowProcess: React.FC = () => {
                 Based on your inputs, we will prepare a{" "}
                 <Link
                   href="/services/physician-writing-services/research-proposal/"
-                  className="text-blue-600 no-underline hover:text-blue-400"
+                  className="text-blue-600 no-underline hover:no-underline"
                 >
                   research proposal
                 </Link>{" "}

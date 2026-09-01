@@ -94,7 +94,7 @@ export default function GrantWritingServicesOfferedSection() {
             comprehensive{" "}
             <Link
               href="/services/research-services/grant-writing/guide-to-grant-writing-strategies-success"
-              className="text-blue-600"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               grant writing services
             </Link>{" "}

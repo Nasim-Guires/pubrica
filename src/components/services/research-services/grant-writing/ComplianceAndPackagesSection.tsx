@@ -371,7 +371,7 @@ export default function ComplianceAndPackagesSection() {
               At Pubrica, we offer flexible and customizable{" "}
               <Link
                 href="/academy/grant-writing/communicating-research-impact-grant-applications"
-                className="text-blue-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 grant writing
               </Link>{" "}
@@ -402,7 +402,7 @@ export default function ComplianceAndPackagesSection() {
           Learn how Pubrica's{" "}
           <Link
             href="/academy/grant-writing/confidentiality-in-grant-writing-proposals/"
-            className="text-blue-600"
+            className="text-blue-600 no-underline hover:no-underline"
           >
             grant writing service
           </Link>{" "}

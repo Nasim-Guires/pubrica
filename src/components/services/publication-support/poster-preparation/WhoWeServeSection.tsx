@@ -82,7 +82,7 @@ export default function WhoWeServeSection() {
           Our academic and{" "}
           <Link
             href="/academy/poster-preparation/maximize-research-impact-professional-poster-preparation-services"
-            className="text-blue-600 hover:underline"
+            className="text-blue-600 no-underline hover:no-underline"
           >
             scientific poster design and creation service
           </Link>{" "}

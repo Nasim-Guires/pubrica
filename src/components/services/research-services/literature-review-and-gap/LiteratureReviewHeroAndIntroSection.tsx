@@ -39,7 +39,7 @@ export default function LiteratureReviewHeroAndIntroSection() {
                 At Pubrica, we deliver in-depth, methodologically sound{" "}
                 <Link
                   href="/academy/research-services/literature-review-tips-introduction-discussion-sections/"
-                  className="text-blue-600"
+                  className="text-blue-600 no-underline hover:no-underline"
                 >
                   literature review writing service
                 </Link>{" "}
@@ -47,7 +47,7 @@ export default function LiteratureReviewHeroAndIntroSection() {
                 proposals, scholarly publications,{" "}
                 <Link
                   href="/services/research-services/systematic-review/"
-                  className="text-blue-600"
+                  className="text-blue-600 no-underline hover:no-underline"
                 >
                   systematic reviews
                 </Link>
@@ -55,7 +55,7 @@ export default function LiteratureReviewHeroAndIntroSection() {
                 experienced researchers and{" "}
                 <Link
                   href="/subject-matter-experts"
-                  className="text-blue-600"
+                  className="text-blue-600 no-underline hover:no-underline"
                 >
                   subject-matter experts
                 </Link>{" "}
@@ -107,21 +107,21 @@ export default function LiteratureReviewHeroAndIntroSection() {
               conducting thorough literature review writing service for PhD thesis,{" "}
               <Link
                 href="/academy/literature-review/guides-write-research-literature-review/"
-                className="text-sky-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 literature review experts
               </Link>
               , and{" "}
               <Link
                 href="/services/research-services/literature-review-and-gap/literature-review-research-gap-services/"
-                className="text-sky-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 research gap analysis service
               </Link>
               , essential for crafting{" "}
               <Link
                 href="/services/research-services/literature-review-and-gap/open-access-research-impact/"
-                className="text-sky-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 high-quality scientific research
               </Link>{" "}
@@ -149,7 +149,7 @@ export default function LiteratureReviewHeroAndIntroSection() {
                   Customize your{" "}
                   <Link
                     href="/academy/literature-review/literature-review-in-research-methodology/"
-                    className="text-sky-600"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     professional literature review service
                   </Link>{" "}
@@ -166,7 +166,7 @@ export default function LiteratureReviewHeroAndIntroSection() {
                   Benefit from{" "}
                   <Link
                     href="/academy/literature-review/importance-of-literature-review-in-research/"
-                    className="text-sky-600"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     literature review consulting service
                   </Link>{" "}
@@ -175,7 +175,7 @@ export default function LiteratureReviewHeroAndIntroSection() {
                   our{" "}
                   <Link
                     href="/services/research-services/systematic-review/"
-                    className="text-sky-600"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     systematic review consulting
                   </Link>{" "}

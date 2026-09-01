@@ -144,7 +144,7 @@ export default function ScientificEditingPage() {
                 <span>
                   <Link
                     href="/services/editing-and-translation/scientific-editing/scientific-developmental-editing-high-impact-journals"
-                    className="text-blue-700"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     Scientific developmental editing
                   </Link>{" "}
@@ -167,7 +167,7 @@ export default function ScientificEditingPage() {
                   A simulated{" "}
                   <Link
                     href="/services/publication-support/peer-review-pre-submission"
-                    className="text-blue-700"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     peer review
                   </Link>{" "}
@@ -180,7 +180,7 @@ export default function ScientificEditingPage() {
                   Submission-ready:{" "}
                   <Link
                     href="/services/publication-support/plagiarism-services"
-                    className="text-blue-700"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     Plagiarism
                   </Link>{" "}
@@ -233,7 +233,7 @@ export default function ScientificEditingPage() {
               Pubrica provides{" "}
               <Link
                 href="/insights/skeletal-muscle-mass-index-versus-bioelectrical-impedance-analysis"
-                className="text-blue-700 font-medium"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
               >
                 scientific editing services
               </Link>{" "}
@@ -248,7 +248,7 @@ export default function ScientificEditingPage() {
               We also integrate{" "}
               <Link
                 href="/services/publication-support"
-                className="text-blue-700 font-medium"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
               >
                 translation and publication support
               </Link>{" "}
@@ -306,7 +306,7 @@ export default function ScientificEditingPage() {
                     We tailor our editing techniques to meet the specific needs of your research, considering both the scientific requirements and budget constraints. This personalized approach enhances the relevance and depth of your{" "}
                     <Link
                       href="/services/scientific-communication/"
-                      className="text-blue-700 font-medium"
+                      className="text-blue-600 font-medium no-underline hover:no-underline"
                     >
                       scientific communication.
                     </Link>
@@ -337,7 +337,7 @@ export default function ScientificEditingPage() {
                     your research, such as{" "}
                     <Link
                       href="/services/research-services/experimental-design/"
-                      className="text-blue-700 font-medium"
+                      className="text-blue-600 font-medium no-underline hover:no-underline"
                     >
                       experimental design,
                     </Link>{" "}
@@ -405,7 +405,7 @@ export default function ScientificEditingPage() {
           Pubrica’s commitment to providing high-quality{" "}
           <Link
             href="/insights/phenotypic-variations-of-atopic-dermatitis-a-systemic-review-of-dupilumab-efficacy-and-safety"
-            className="text-blue-700 "
+            className="text-blue-600 no-underline hover:no-underline"
           >
             research paper editing services
           </Link>{" "}

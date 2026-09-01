@@ -49,7 +49,7 @@ export default async function CallForPaperPage({ params }: CallForPaperPageProps
         <main className="bg-white p-6 md:p-10 rounded-2xl border border-slate-100 shadow-sm">
           <Link
             href="/call-for-papers"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-[#004d40] mb-6"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 mb-6 no-underline hover:no-underline"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             Back to Call for Papers

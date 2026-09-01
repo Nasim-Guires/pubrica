@@ -74,11 +74,11 @@ export default function RespondToReviewerCommentsPage() {
                 {/* Breadcrumb Navigation */}
                 <div className="border-b border-gray-200 bg-gray-50 py-3 px-4 sm:px-6 lg:px-8">
                     <nav className="max-w-7xl mx-auto flex text-xs sm:text-sm text-gray-500 space-x-2">
-                        <Link href="/" className="hover:underline">Home</Link>
+                        <Link href="/" className="text-blue-600 no-underline hover:no-underline">Home</Link>
                         <span>»</span>
-                        <Link href="/academy" className="hover:underline">Academy</Link>
+                        <Link href="/academy" className="text-blue-600 no-underline hover:no-underline">Academy</Link>
                         <span>»</span>
-                        <Link href="/services/research-impact" className="hover:underline">Research Impact</Link>
+                        <Link href="/services/research-impact" className="text-blue-600 no-underline hover:no-underline">Research Impact</Link>
                         <span>»</span>
                         <span className="text-gray-700 font-medium truncate">How to Respond to Reviewer Comments and Revise Your Research Paper</span>
                     </nav>
@@ -163,7 +163,7 @@ export default function RespondToReviewerCommentsPage() {
                             <section className="space-y-3 pt-2">
                                 <h3 className="text-lg font-bold text-gray-900">1. Tackling Reviewer Comments</h3>
                                 <p>
-                                    Responding to reviewer feedback can be a process that requires tenacity. Authors should recognize that <Link href="/services/publication-support/responding-to-reviewers" className="text-sky-600 hover:underline">responding to reviewer</Link> comments is an opportunity to improve their work, not a condemnation of their ability. <span className="text-sky-600">[2]</span>
+                                    Responding to reviewer feedback can be a process that requires tenacity. Authors should recognize that <Link href="/services/publication-support/responding-to-reviewers" className="text-blue-600 no-underline hover:no-underline">responding to reviewer</Link> comments is an opportunity to improve their work, not a condemnation of their ability. <span className="text-sky-600">[2]</span>
                                 </p>
                                 <p className="font-bold text-gray-900">Important considerations:</p>
                                 <ul className="list-disc pl-5 space-y-2">
@@ -177,7 +177,7 @@ export default function RespondToReviewerCommentsPage() {
                             <section id="perseverance" className="space-y-3 pt-2">
                                 <h3 className="text-lg font-bold text-gray-900">2. Perseverance</h3>
                                 <p>
-                                    Although it can be tiresome to tackle every reviewer comment and concern, providing an answer to each one of them is very important, and it shows the reviewer you respect their opinion. Lastly, as an author, you must guarantee yourself that the <Link href="/services/publication-support/peer-review-pre-submission" className="text-sky-600 hover:underline">peer review</Link> process has helped you provide a revised manuscript of much higher quality than the original submission. Also, the readers of your manuscripts need to go through the task of answering reviewer comments and revising the studies for that. <span className="text-sky-600">[3]</span>
+                                    Although it can be tiresome to tackle every reviewer comment and concern, providing an answer to each one of them is very important, and it shows the reviewer you respect their opinion. Lastly, as an author, you must guarantee yourself that the <Link href="/services/publication-support/peer-review-pre-submission" className="text-blue-600 no-underline hover:no-underline">peer review</Link> process has helped you provide a revised manuscript of much higher quality than the original submission. Also, the readers of your manuscripts need to go through the task of answering reviewer comments and revising the studies for that. <span className="text-sky-600">[3]</span>
                                 </p>
                             </section>
 
@@ -219,7 +219,7 @@ export default function RespondToReviewerCommentsPage() {
                                             </tr>
                                             <tr>
                                                 <td className="p-3 border-r border-gray-300 font-bold text-center">Minor Revisions</td>
-                                                <td className="p-3 border-r border-gray-300">Language edits, <Link href="/services/publication-support/journal-manuscript-formatting-services" className="text-sky-600 hover:underline">formatting</Link>, citation style, and figure clarity</td>
+                                                <td className="p-3 border-r border-gray-300">Language edits, <Link href="/services/publication-support/journal-manuscript-formatting-services" className="text-blue-600 no-underline hover:no-underline">formatting</Link>, citation style, and figure clarity</td>
                                                 <td className="p-3">Correct promptly and acknowledge changes clearly</td>
                                             </tr>
                                         </tbody>
@@ -368,10 +368,10 @@ export default function RespondToReviewerCommentsPage() {
                             <section id="conclusion" className="space-y-3 pt-2">
                                 <h3 className="text-lg font-bold text-gray-900">Conclusion</h3>
                                 <p>
-                                    The process of replying to reviewer comments requires patience, planning, and professionalism. By categorising comments, developing point-by-point responses, and documenting revision changes, authors maximize the quality of the manuscript and the chances for publication. In the end, constructive engagement with reviewers is simply part of the process of enhancing <Link href="/services/scientific-communication" className="text-sky-600 hover:underline">scientific communication</Link>.
+                                    The process of replying to reviewer comments requires patience, planning, and professionalism. By categorising comments, developing point-by-point responses, and documenting revision changes, authors maximize the quality of the manuscript and the chances for publication. In the end, constructive engagement with reviewers is simply part of the process of enhancing <Link href="/services/scientific-communication" className="text-blue-600 no-underline hover:no-underline">scientific communication</Link>.
                                 </p>
                                 <p className="italic">
-                                    How to Respond to Reviewer Comments and Revise Your Research Paper? Our Pubrica consultants are here to guide you. <Link href="/order-now" className="text-sky-600 hover:underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-sky-600 hover:underline">[Schedule a Free Consultation]</Link>!
+                                    How to Respond to Reviewer Comments and Revise Your Research Paper? Our Pubrica consultants are here to guide you. <Link href="/order-now" className="text-blue-600 no-underline hover:no-underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-blue-600 no-underline hover:no-underline">[Schedule a Free Consultation]</Link>!
                                 </p>
                             </section>
 

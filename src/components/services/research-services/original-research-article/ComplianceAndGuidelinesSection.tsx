@@ -108,7 +108,7 @@ export default function ComplianceAndGuidelinesSection() {
             At Pubrica, every{' '}
             <Link
               href="/services/physician-writing-services/original-research-article"
-              className="text-sky-600 hover:underline font-medium"
+              className="text-blue-600 font-medium no-underline hover:no-underline"
             >
               original research article
             </Link>{' '}

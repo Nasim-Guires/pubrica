@@ -212,7 +212,7 @@ export default function ScientificNewsWorkflowProcess() {
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                   Explore our{' '}
-                  <Link href="/services/research-impact/scientific-news-report" className="text-sky-600 hover:underline">
+                  <Link href="/services/research-impact/scientific-news-report" className="text-blue-600 no-underline hover:no-underline">
                     scientific news report samples
                   </Link>
                   , professionally crafted to meet your target audience's comprehension level, research significance, and science communication standards.

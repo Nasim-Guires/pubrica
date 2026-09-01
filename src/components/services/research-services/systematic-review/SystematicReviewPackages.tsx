@@ -156,7 +156,7 @@ export default function SystematicReviewPackages() {
             At Pubrica, we offer comprehensive and customizable{" "}
             <Link
               href="/academy/systematic-review/prospero-protocol-registration-guide/"
-              className="text-blue-600"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               Systematic Review
             </Link>{" "}
@@ -165,7 +165,7 @@ export default function SystematicReviewPackages() {
             ensures your{" "}
             <Link
               href="/academy/systematic-review/qualitative-data-analysis-using-maxqda-guide/"
-              className="text-blue-600"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               systematic review
             </Link>{" "}

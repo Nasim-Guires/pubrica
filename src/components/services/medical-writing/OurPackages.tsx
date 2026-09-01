@@ -136,7 +136,7 @@ export default function OurPackages(): React.ReactElement {
             educational content, we deliver high-quality, thoroughly reviewed{" "}
             <Link
               href="/academy/medical-writing/parallel-structure-medical-writing"
-              className="text-[#008ba3] underline underline-offset-2 hover:text-[#09322e] transition-colors"
+              className="text-blue-600 underline-offset-2 transition-colors no-underline hover:no-underline"
             >
               medical writing
             </Link>

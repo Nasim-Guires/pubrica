@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import CommonUploadButton from "@/components/common/CommonUploadButton";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import HeroBanner from "@/components/common/HeroBanner";
 
@@ -63,14 +64,14 @@ export default function RespondingToReviewersSection() {
             At Pubrica, we offer extensive{" "}
             <Link
               href="/academy/response-to-reviewer/responding-to-reviewer-comments-revise-research-paper"
-              className="text-[#2563eb] hover:underline"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               Response to Reviewer
             </Link>{" "}
             Comments and{" "}
             <Link
               href="/services/publication-support/responding-to-reviewers/rebuttal-preparation-peer-review-strategy"
-              className="text-[#2563eb] hover:underline"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               Rebuttal Preparation Services
             </Link>{" "}
@@ -129,14 +130,13 @@ export default function RespondingToReviewersSection() {
         {/* CTA Buttons */}
         <div className="flex flex-wrap items-center gap-8 mt-6 mb-10">
           <GetFreeQuoteButton />
-          <Link
+          <CommonUploadButton
             href="/uploads/publication-support/responding-to-reviewers/Responding-to-Reviewers-_compressed.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
           >
             View Brochure
-          </Link>
+          </CommonUploadButton>
         </div>
 
       </section>

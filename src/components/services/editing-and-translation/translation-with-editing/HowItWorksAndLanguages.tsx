@@ -164,7 +164,7 @@ export default function HowItWorksAndLanguages() {
                     and editing phases each have a{" "}
                     <a
                       href="/services/publication-support/peer-review-pre-submission"
-                      className="text-blue-700"
+                      className="text-blue-600 no-underline hover:no-underline"
                     >
                       peer-review
                     </a>{" "}

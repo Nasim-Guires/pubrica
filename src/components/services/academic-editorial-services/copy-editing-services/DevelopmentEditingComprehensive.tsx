@@ -446,7 +446,7 @@ export default function AcademicDevelopmentEditingService() {
                                 <span>{exp.experience} Years Experience</span>
                                 <span>{exp.papers} Papers Edited</span>
                             </div>
-                            <Link href="/about-us/our-editors" className="mt-4 text-xs font-bold text-[#0b3b2c] hover:underline">
+                            <Link href="/about-us/our-editors" className="mt-4 text-xs font-bold text-blue-600 no-underline hover:no-underline">
                                 Read More
                             </Link>
                         </div>

@@ -98,7 +98,7 @@ export default function PatientEducationProcessAndWhoWeServe() {
         </h2>
         <p className="text-slate-700 text-base sm:text-lg leading-relaxed mb-8">
           Pubrica&apos;s{" "}
-          <Link href="/insights/sample-work/psoriasis/" className="text-blue-600">
+          <Link href="/insights/sample-work/psoriasis/" className="text-blue-600 no-underline hover:no-underline">
             patient education content
           </Link>{" "}
           service delivers medically accurate, reader-friendly educational
@@ -145,11 +145,11 @@ export default function PatientEducationProcessAndWhoWeServe() {
           </p>
           <p className="text-slate-700 text-sm sm:text-base max-w-4xl mx-auto pt-2 leading-relaxed">
             With Pubrica&apos;s{" "}
-            <Link href="/insights/sample-work/parkinsons-disease/" className="text-blue-600">
+            <Link href="/insights/sample-work/parkinsons-disease/" className="text-blue-600 no-underline hover:no-underline">
               patient education content
             </Link>{" "}
             service, our medical experts and{" "}
-            <Link href="/services/research-services/scientific-writing" className="text-blue-600">
+            <Link href="/services/research-services/scientific-writing" className="text-blue-600 no-underline hover:no-underline">
               scientific writing
             </Link>{" "}
             team work together to develop clear, accurate, and

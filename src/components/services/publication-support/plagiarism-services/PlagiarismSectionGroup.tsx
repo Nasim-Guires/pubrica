@@ -124,7 +124,7 @@ export default function PlagiarismSectionGroup() {
                   Pubrica&apos;s professional{" "}
                   <Link
                     href="/services/publication-support/plagiarism-services/plagiarism-detection-guide"
-                    className="text-sky-600"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     plagiarism detection services
                   </Link>{" "}

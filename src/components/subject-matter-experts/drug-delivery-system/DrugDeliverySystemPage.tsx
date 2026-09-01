@@ -199,7 +199,7 @@ export default function DrugDeliverySystemPage() {
 
                         <p className="text-gray-600 text-sm leading-relaxed">
                             To achieve these benefits, Pubrica provides support to scientists, researchers, and healthcare professionals to create{" "}
-                            <Link href="/services/medical-data-collection" className="text-blue-600 hover:underline font-medium">
+                            <Link href="/services/medical-data-collection" className="text-blue-600 font-medium no-underline hover:no-underline">
                                 high quality manuscripts
                             </Link>{" "}
                             and projects that lead to innovation in the development of Drug Delivery Systems.
@@ -209,7 +209,7 @@ export default function DrugDeliverySystemPage() {
                             Our team consists of pharmacy scientists, biochemists, pharmacologists, and professional editors who collaborate to help ensure that your work is scientifically sound, ethically appropriate, and compliant with regulatory requirements. In addition, we help you navigate through the many global{" "}
                             <Link
                                 href="/services/publication-support/"
-                                className="text-blue-600 hover:underline font-medium"
+                                className="text-blue-600 font-medium no-underline hover:no-underline"
                             >
                                 publishers and journals
                             </Link>,{" "}

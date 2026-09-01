@@ -49,7 +49,7 @@ export default function HomeHeroWithAbout() {
               href="/services/editing-and-translation/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto text-blue-600 no-underline hover:no-underline"
             >
               <button className="w-full sm:w-auto bg-[#042522] hover:bg-white border border-[#042522] text-white hover:text-[#042522] font-semibold px-8 py-3.5 rounded-full text-[15px] tracking-wide transition-all shadow-inner focus:outline-none cursor-pointer">
                 Editing & Translation
@@ -60,7 +60,7 @@ export default function HomeHeroWithAbout() {
               href="/services/publication-support/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto text-blue-600 no-underline hover:no-underline"
             >
               <button className="w-full sm:w-auto bg-white hover:bg-[#042522] border border-[#042522] text-[#073632] hover:text-white font-bold px-8 py-3.5 rounded-full text-[15px] tracking-wide transition-all shadow-md focus:outline-none cursor-pointer">
                 Publication Support
@@ -193,7 +193,7 @@ export default function HomeHeroWithAbout() {
             <div className="lg:col-span-7 flex flex-col items-start">
               <Link
                 href="/about-us/"
-                className="text-sky-600 font-bold text-sm tracking-wider uppercase mb-3 font-sans underline underline-offset-4"
+                className="text-blue-600 font-bold text-sm tracking-wider uppercase mb-3 font-sans underline-offset-4 no-underline hover:no-underline"
               >
                 About Us
               </Link>

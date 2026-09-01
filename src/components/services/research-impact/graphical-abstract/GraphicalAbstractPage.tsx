@@ -81,15 +81,15 @@ export default function GraphicalAbstractPage() {
                         </p>
                         <p className="text-sm text-slate-600 leading-relaxed">
                             Many top publishers require you to submit a{' '}
-                            <Link href="/services/research-impact/graphical-abstract" className="text-sky-600 hover:underline">
+                            <Link href="/services/research-impact/graphical-abstract" className="text-blue-600 no-underline hover:no-underline">
                                 graphical abstract
                             </Link>{' '}
                             along with your manuscript. These publishers include Elsevier, Springer, Nature, IOPscience, and ACS. Pubrica's{' '}
-                            <Link href="/services/research-impact/graphical-abstract" className="text-sky-600 hover:underline">
+                            <Link href="/services/research-impact/graphical-abstract" className="text-blue-600 no-underline hover:no-underline">
                                 graphical abstract design service
                             </Link>{' '}
                             can turn your data into an intuitive, scientifically reliable visual representation. Our animator and science specialists will work with you to create a high-resolution, journal-compliant{' '}
-                            <Link href="/services/research-impact/graphical-abstract" className="text-sky-600 hover:underline">
+                            <Link href="/services/research-impact/graphical-abstract" className="text-blue-600 no-underline hover:no-underline">
                                 graphical abstract
                             </Link>{' '}
                             that fits all journal specifications while accurately and truly representing your research.
@@ -121,11 +121,11 @@ export default function GraphicalAbstractPage() {
                 </h2>
                 <p className="text-sm text-slate-600 leading-relaxed max-w-4xl mb-10">
                     Enhance your academic visibility, improve research discoverability, and drive higher engagement with our expert-led{' '}
-                    <Link href="/services/research-impact/graphical-abstract/research-visualization" className="text-sky-600 hover:underline">
+                    <Link href="/services/research-impact/graphical-abstract/research-visualization" className="text-blue-600 no-underline hover:no-underline">
                         research visualization
                     </Link>{' '}
                     services. Our professional team will develop reader-friendly and visually appealing{' '}
-                    <Link href="/services/research-impact/graphical-abstract" className="text-sky-600 hover:underline">
+                    <Link href="/services/research-impact/graphical-abstract" className="text-blue-600 no-underline hover:no-underline">
                         graphical abstracts
                     </Link>{' '}
                     that summarize your research findings and make the greatest impact on the scientific community.
@@ -185,7 +185,7 @@ export default function GraphicalAbstractPage() {
                 <div className="mt-12 max-w-4xl">
                     <p className="text-sm text-slate-600 leading-relaxed">
                         Choose Pubrica's{' '}
-                        <Link href="/services/research-impact/graphical-abstract" className="text-sky-600 hover:underline">
+                        <Link href="/services/research-impact/graphical-abstract" className="text-blue-600 no-underline hover:no-underline">
                             graphical abstract
                         </Link>{' '}
                         services to translate your research into a powerful visual format that communicates effectively and stands out in the crowded academic landscape. Contact us today to discover how we can help elevate the presentation and impact of your research findings.

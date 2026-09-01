@@ -34,7 +34,7 @@ export default function OriginalResearchArticle() {
               <p>
                 <Link
                   href="/academy/original-research-article/tidier-sr-reporting-research/"
-                  className="text-blue-600 "
+                  className="text-blue-600 no-underline hover:no-underline"
                 >
                   Original research articles
                 </Link>{" "}
@@ -90,7 +90,7 @@ export default function OriginalResearchArticle() {
                 <li>
                   <Link
                     href="/services/publication-support/plagiarism-services"
-                    className="text-blue-600"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     Plagiarism-free
                   </Link>{" "}

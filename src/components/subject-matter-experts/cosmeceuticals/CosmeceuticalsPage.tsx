@@ -131,11 +131,11 @@ export default function CosmeceuticalsPage() {
                         </h2>
 
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            Cosmeceuticals are an interdisciplinary collaboration between dermatologists, chemists, biotechnologists, and <Link href="/subject-matter-experts/pharmaceuticals" className="text-blue-600 hover:underline">pharmaceutical scientists</Link> that are leading the charge for how we view skin care, personal care, and aesthetics. Cosmeceuticals demonstrate the combination of looking good with treating skin problems like aging, pigmentation issues, acne, and improving barriers to purchase. New developments are being made in all areas of development; for example, developing actives, building formulations, understanding how skin grows, shaping the formulation of the product, verifying how well it works in a clinic, and taking scientific findings and turning them into skincare products that are state-of-the-art.
+                            Cosmeceuticals are an interdisciplinary collaboration between dermatologists, chemists, biotechnologists, and <Link href="/subject-matter-experts/pharmaceuticals" className="text-blue-600 no-underline hover:no-underline">pharmaceutical scientists</Link> that are leading the charge for how we view skin care, personal care, and aesthetics. Cosmeceuticals demonstrate the combination of looking good with treating skin problems like aging, pigmentation issues, acne, and improving barriers to purchase. New developments are being made in all areas of development; for example, developing actives, building formulations, understanding how skin grows, shaping the formulation of the product, verifying how well it works in a clinic, and taking scientific findings and turning them into skincare products that are state-of-the-art.
                         </p>
 
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            There are now numerous <Link href="/subject-matter-experts/cosmeceuticals" className="text-blue-600 hover:underline">cosmeceutical products</Link> created worldwide containing bioactive, peptides, antioxidants, and growth factors for clinical and consumer skincare that treat skin health. New technologies used in formulation have been instrumental in the movement to use targeted delivery methods, improved stability, better performance, safety, and measurable results in skincare product development.
+                            There are now numerous <Link href="/subject-matter-experts/cosmeceuticals" className="text-blue-600 no-underline hover:no-underline">cosmeceutical products</Link> created worldwide containing bioactive, peptides, antioxidants, and growth factors for clinical and consumer skincare that treat skin health. New technologies used in formulation have been instrumental in the movement to use targeted delivery methods, improved stability, better performance, safety, and measurable results in skincare product development.
                         </p>
 
                         <p className="text-gray-600 text-sm leading-relaxed">
@@ -179,7 +179,7 @@ export default function CosmeceuticalsPage() {
                             Our Core Disciplines In Cosmeceutical
                         </h2>
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            Pubrica aids all types of cosmeceutical-related research and development. These include all areas of pure and applied <Link href="/services/research-services" className="text-blue-600 hover:underline">scientific research</Link> related to cosmeceuticals.
+                            Pubrica aids all types of cosmeceutical-related research and development. These include all areas of pure and applied <Link href="/services/research-services" className="text-blue-600 no-underline hover:no-underline">scientific research</Link> related to cosmeceuticals.
                         </p>
                     </div>
 
@@ -199,7 +199,7 @@ export default function CosmeceuticalsPage() {
                         <div className="hidden sm:block h-[2px] w-24 bg-[#0e3b32] mt-1" />
                     </div>
                     <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                        Pubrica is recognized as a reliable partner in providing cosmeceutical research and <Link href="/services/publication-support" className="text-blue-600 hover:underline">publishing services</Link>. Our wide range of services allows us to assist researchers, formulators, clinicians, and other industry stakeholders with all aspects associated with their scientific endeavours. From <Link href="/services/publication-support/journal-manuscript-formatting-services" className="text-blue-600 hover:underline">preparing manuscripts</Link>, compiling regulatory submission documents, <Link href="/services/publication-support/journal-selection" className="text-blue-600 hover:underline">selecting journals</Link>, and developing a publishing strategy, we help cosmeceutical innovators clearly, credibly, and effectively share their research:
+                        Pubrica is recognized as a reliable partner in providing cosmeceutical research and <Link href="/services/publication-support" className="text-blue-600 no-underline hover:no-underline">publishing services</Link>. Our wide range of services allows us to assist researchers, formulators, clinicians, and other industry stakeholders with all aspects associated with their scientific endeavours. From <Link href="/services/publication-support/journal-manuscript-formatting-services" className="text-blue-600 no-underline hover:no-underline">preparing manuscripts</Link>, compiling regulatory submission documents, <Link href="/services/publication-support/journal-selection" className="text-blue-600 no-underline hover:no-underline">selecting journals</Link>, and developing a publishing strategy, we help cosmeceutical innovators clearly, credibly, and effectively share their research:
                     </p>
                 </div>
 

@@ -141,14 +141,14 @@ export default function InternetOfThingsPage() {
 
                         <p className="text-gray-600 text-sm leading-relaxed">
                             IoT is concerned with the communication and operation of smart environments (via the use of hardware, software, and network connections), as well as the development of smart systems within a business,{" "}
-                            <Link href="/industries" className="text-sky-600 hover:underline">healthcare industry</Link>,{" "}
-                            <Link href="/subject-matter-experts/agriculture" className="text-sky-600 hover:underline">agricultural</Link>, and energy sectors.
+                            <Link href="/industries" className="text-blue-600 no-underline hover:no-underline">healthcare industry</Link>,{" "}
+                            <Link href="/subject-matter-experts/agriculture" className="text-blue-600 no-underline hover:no-underline">agricultural</Link>, and energy sectors.
                         </p>
 
                         <p className="text-gray-600 text-sm leading-relaxed">
                             Pubrica provides customized{" "}
-                            <Link href="/subject-matter-experts/internet-of-things" className="text-sky-600 hover:underline">IoT research and publication services</Link> to global researchers, engineers or industry personnel in various fields or areas of research regarding IoT. Our IoT Services include expert research guidance, technical editing, and data interpretation, and we will assist you in preparing your research for publication from the conception of your idea until the final version is published. Our team of experienced experts in IoT will assist in turning a newly developed idea concept or technology into a{" "}
-                            <Link href="/services/publication-support" className="text-sky-600 hover:underline">high-quality publication-ready manuscript services</Link> that meets worldwide standards for academic and industry journals.
+                            <Link href="/subject-matter-experts/internet-of-things" className="text-blue-600 no-underline hover:no-underline">IoT research and publication services</Link> to global researchers, engineers or industry personnel in various fields or areas of research regarding IoT. Our IoT Services include expert research guidance, technical editing, and data interpretation, and we will assist you in preparing your research for publication from the conception of your idea until the final version is published. Our team of experienced experts in IoT will assist in turning a newly developed idea concept or technology into a{" "}
+                            <Link href="/services/publication-support" className="text-blue-600 no-underline hover:no-underline">high-quality publication-ready manuscript services</Link> that meets worldwide standards for academic and industry journals.
                         </p>
 
                         {/* CTA Button */}

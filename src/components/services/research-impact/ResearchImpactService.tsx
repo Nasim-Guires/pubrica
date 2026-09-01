@@ -46,7 +46,7 @@ export default function ResearchImpactService(): React.ReactElement {
               Pubrica’s{" "}
               <Link
                 href="/insights/industry-trends-forecasts-academic-publishing"
-                className="text-blue-600 transition-colors cursor-pointer"
+                className="text-blue-600 transition-colors cursor-pointer no-underline hover:no-underline"
               >
                 Research Impact Services
               </Link>{" "}

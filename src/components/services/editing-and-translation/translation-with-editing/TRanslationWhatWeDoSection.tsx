@@ -74,11 +74,11 @@ const accordionData: AccordionItem[] = [
     content: (
       <p>
         Whether it&apos;s academic papers,{" "}
-        <Link href="/services/physician-writing-services/original-research-article" className="text-blue-700">
+        <Link href="/services/physician-writing-services/original-research-article" className="text-blue-600 no-underline hover:no-underline">
           research articles
         </Link>
         ,{" "}
-        <Link href="/services/physician-writing-services/case-report-writing" className="text-blue-700">
+        <Link href="/services/physician-writing-services/case-report-writing" className="text-blue-600 no-underline hover:no-underline">
           clinical reports
         </Link>
         , or any other scientific or professional document, Pubrica&apos;s

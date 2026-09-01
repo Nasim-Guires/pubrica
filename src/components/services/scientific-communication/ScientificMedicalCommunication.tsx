@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import CommonUploadButton from "@/components/common/CommonUploadButton";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function ScientificMedicalCommunication() {
@@ -88,7 +89,7 @@ export default function ScientificMedicalCommunication() {
               and clear, impactful communication. Our scientific{" "}
               <Link
                 href="/services/scientific-communication"
-                className="text-sky-600 hover:underline font-medium"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
               >
                 medical communication services
               </Link>{" "}
@@ -104,14 +105,14 @@ export default function ScientificMedicalCommunication() {
               From{" "}
               <Link
                 href="/services/medical-writing"
-                className="text-sky-600 hover:underline font-medium"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
               >
                 medical writing
               </Link>{" "}
               to{" "}
               <Link
                 href="/services/publication-support"
-                className="text-sky-600 hover:underline font-medium"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
               >
                 publication support
               </Link>
@@ -123,12 +124,11 @@ export default function ScientificMedicalCommunication() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-8 pt-2">
               <GetFreeQuoteButton />
-              <Link
+              <CommonUploadButton
                 href="/uploads/scientific-communication/Scientific-Communication-Services_compressed.pdf"
-                className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
               >
                 View Brochure
-              </Link>
+              </CommonUploadButton>
             </div>
           </div>
 

@@ -247,7 +247,7 @@ export default function BiostatisticsComplianceAndPackages() {
           that our clinical trial statistical programming, pharmaceutical{" "}
           <Link
             href="/services/research-services/biostatistics-and-statistical-programming-service"
-            className="text-sky-600 hover:underline font-medium"
+            className="text-blue-600 font-medium no-underline hover:no-underline"
           >
             biostatistics
           </Link>{" "}

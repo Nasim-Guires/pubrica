@@ -37,7 +37,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
 
           <Link
             href="/"
-            className="flex items-center gap-1 hover:text-primary-800 transition-colors"
+            className="flex items-center gap-1 transition-colors text-blue-600 no-underline hover:no-underline"
           >
             <Home className="h-4 w-4" />
             <span className="sr-only">Home</span>

@@ -129,14 +129,14 @@ export default function GraphicalVsVideoAbstractsPage() {
                             Interesting topics
                         </h3>
                         <ul className="space-y-2 text-xs md:text-sm text-blue-600 font-medium">
-                            <li><Link href="/services/editing-and-translation/manuscript-editing" className="hover:underline">Manuscript Editing</Link></li>
-                            <li><Link href="/academy/manuscript-guidelines" className="hover:underline">Manuscript Guidelines</Link></li>
-                            <li><Link href="/services/physician-writing-services/physician-manuscript" className="hover:underline">Manuscript Writing</Link></li>
-                            <li><Link href="/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission" className="hover:underline">Manuscript Preparation guidelines</Link></li>
-                            <li><Link href="/academy/manuscript-submission" className="hover:underline">Manuscript Submission Guidelines</Link></li>
-                            <li><Link href="/services/editing-and-translation/manuscript-editing" className="hover:underline">Manuscript Editing Services</Link></li>
-                            <li><Link href="/academy" className="hover:underline">Study Guides</Link></li>
-                            <li><Link href="/services/research-services/scientific-writing" className="hover:underline">Scientific Writing</Link></li>
+                            <li><Link href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 no-underline hover:no-underline">Manuscript Editing</Link></li>
+                            <li><Link href="/academy/manuscript-guidelines" className="text-blue-600 no-underline hover:no-underline">Manuscript Guidelines</Link></li>
+                            <li><Link href="/services/physician-writing-services/physician-manuscript" className="text-blue-600 no-underline hover:no-underline">Manuscript Writing</Link></li>
+                            <li><Link href="/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission" className="text-blue-600 no-underline hover:no-underline">Manuscript Preparation guidelines</Link></li>
+                            <li><Link href="/academy/manuscript-submission" className="text-blue-600 no-underline hover:no-underline">Manuscript Submission Guidelines</Link></li>
+                            <li><Link href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 no-underline hover:no-underline">Manuscript Editing Services</Link></li>
+                            <li><Link href="/academy" className="text-blue-600 no-underline hover:no-underline">Study Guides</Link></li>
+                            <li><Link href="/services/research-services/scientific-writing" className="text-blue-600 no-underline hover:no-underline">Scientific Writing</Link></li>
                         </ul>
                     </div>
                 </aside>
@@ -389,7 +389,7 @@ export default function GraphicalVsVideoAbstractsPage() {
                                 It is worth mentioning that graphical abstracts and <span className="text-blue-600">video abstracts</span> have recently emerged as important means that help make scientific communication more efficient. The use of graphical abstracts is an effective way of creating concise visual summaries that will facilitate the process of discovering and comprehending information. Video abstracts are used to provide a more detailed explanation of the study results.
                             </p>
                             <p className="italic text-gray-800">
-                                Graphical vs. Video Abstracts: Tools for Clear and Engaging Scientific Communication: Our <span className="text-blue-600">Pubrica</span> consultants are here to guide you. <Link href="/order-now" className="text-sky-600 hover:underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-sky-600 hover:underline">[Schedule a Free Consultation]</Link>
+                                Graphical vs. Video Abstracts: Tools for Clear and Engaging Scientific Communication: Our <span className="text-blue-600">Pubrica</span> consultants are here to guide you. <Link href="/order-now" className="text-blue-600 no-underline hover:no-underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-blue-600 no-underline hover:no-underline">[Schedule a Free Consultation]</Link>
                             </p>
                         </section>
 

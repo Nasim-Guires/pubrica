@@ -206,7 +206,7 @@ export default function CardiovascularBiologyPage() {
                             Pubrica provides comprehensive biomedical research and{" "}
                             <Link
                                 href="/services/publication-support/"
-                                className="text-blue-600 hover:underline font-medium"
+                                className="text-blue-600 font-medium no-underline hover:no-underline"
                             >
                                 publication support
                             </Link>{" "}

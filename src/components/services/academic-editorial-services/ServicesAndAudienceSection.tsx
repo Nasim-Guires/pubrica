@@ -70,7 +70,7 @@ export default function WhoWeServeSection() {
           </h2>
           <p className="text-xs sm:text-sm text-gray-700 max-w-5xl leading-relaxed">
             At Pubrica, our{" "}
-            <Link href="/services/academic-editorial-services" className="text-sky-600 hover:underline font-medium">
+            <Link href="/services/academic-editorial-services" className="text-blue-600 font-medium no-underline hover:no-underline">
               Academic Editorial Services
             </Link>{" "}
             cater to a diverse spectrum of researchers, educators, and

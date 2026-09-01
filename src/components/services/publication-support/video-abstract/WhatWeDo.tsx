@@ -44,20 +44,20 @@ export default function WhatWeDo() {
           your study, but also demonstrate the importance and impact of the
           findings. Our creative scientific experts can also help you with
           careful{" "}
-          <Link href="/services/research-services/grant-writing" className="text-sky-600 hover:underline">
+          <Link href="/services/research-services/grant-writing" className="text-blue-600 no-underline hover:no-underline">
             grant writing
           </Link>
           ,{" "}
           <Link
             href="/services/research-services/experimental-design"
-            className="text-sky-600 hover:underline"
+            className="text-blue-600 no-underline hover:no-underline"
           >
             experimental design
           </Link>
           , and{" "}
           <Link
             href="/services/research-services/systematic-review"
-            className="text-sky-600 hover:underline"
+            className="text-blue-600 no-underline hover:no-underline"
           >
             systematic review
           </Link>
@@ -90,12 +90,12 @@ export default function WhatWeDo() {
           giving you more chances for citations and support. The combination of{" "}
           <Link
             href="/services/editing-and-translation/manuscript-editing"
-            className="text-sky-600 hover:underline"
+            className="text-blue-600 no-underline hover:no-underline"
           >
             manuscript editing
           </Link>{" "}
           and{" "}
-          <Link href="/services/research-services/grant-writing" className="text-sky-600 hover:underline">
+          <Link href="/services/research-services/grant-writing" className="text-blue-600 no-underline hover:no-underline">
             grant writing
           </Link>{" "}
           will enhance the overall academic value.
@@ -126,7 +126,7 @@ export default function WhatWeDo() {
         </h2>
         <p className="text-sm md:text-base text-slate-700 leading-relaxed max-w-5xl mb-8 md:mb-10">
           Utilizing Pubrica&apos;s{" "}
-          <Link href="/services/publication-support/video-abstract/graphical-vs-video-abstracts-scientific-communication" className="text-sky-600 hover:underline">
+          <Link href="/services/publication-support/video-abstract/graphical-vs-video-abstracts-scientific-communication" className="text-blue-600 no-underline hover:no-underline">
             video abstract services
           </Link>{" "}
           will increase the visibility and the impact of your research. Our

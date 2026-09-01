@@ -20,7 +20,7 @@ const processSteps: ProcessStep[] = [
         audience. Then we assign{" "}
         <Link
           href="/subject-matter-experts"
-          className="text-blue-600"
+          className="text-blue-600 no-underline hover:no-underline"
         >
           subject-matter experts
         </Link>{" "}

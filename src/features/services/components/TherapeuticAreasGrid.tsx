@@ -252,7 +252,7 @@ export default function TherapeuticAndWorkflow() {
               At Pubrica, our academic{" "}
               <a
                 href="/academy/journal-submission/open-access-publishing-guide/"
-                className="text-blue-600 hover:text-blue-800 no-underline"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 scientific journal publication services
               </a>{" "}

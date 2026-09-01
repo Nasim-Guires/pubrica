@@ -240,7 +240,7 @@ export default function DataServicesSection() {
             <Link
               href="/services/medical-data-collection"
               title="Learn more about Pubrica medical data collection services"
-              className="text-cyan-700 hover:underline font-medium decoration-cyan-700"
+              className="text-blue-600 font-medium decoration-cyan-700 no-underline hover:no-underline"
             >
               data collection services
             </Link>{" "}

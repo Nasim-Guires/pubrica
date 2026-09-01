@@ -112,7 +112,7 @@ export default function ResearchArticleTypesAccordion() {
             We support a variety of{" "}
             <Link
               href="/academy/original-research-article/digital-health-interventions-patient-outcomes/"
-              className="text-blue-600"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               original research article writing services
             </Link>

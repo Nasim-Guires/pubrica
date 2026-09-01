@@ -27,7 +27,7 @@ export const EditingTranslationManuscriptEditingOverview: React.FC = () => {
               Pubrica offers the most prestigious{" "}
               <Link
                 href="/services/editing-and-translation/translation-with-editing"
-                className="text-blue-600 "
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 manuscript editing services
               </Link>{" "}

@@ -130,7 +130,7 @@ export default function JournalSubmissionBottomSections() {
               At Pubrica, we recognize that navigating the{" "}
               <a
                 href="/academy/journal-submission/open-access-publishing-guide/"
-                className="text-blue-600 font-medium"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
               >
                 journal submission
               </a>{" "}

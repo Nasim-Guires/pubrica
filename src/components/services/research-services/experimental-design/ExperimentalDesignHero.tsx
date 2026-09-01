@@ -34,7 +34,7 @@ export default function ExperimentalDesignHero() {
               At Pubrica, we specialize in{" "}
               <Link
                 href="/academy/experimental-design/how-to-choose-right-experimental-design-for-research/"
-                className="text-blue-600 "
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 experimental study design
               </Link>{" "}
@@ -44,7 +44,7 @@ export default function ExperimentalDesignHero() {
               5,000 experimental research designs, including true experimental,{" "}
               <Link
                 href="/academy/experimental-design/quasi-experimental-design-definition-types-examples/"
-                className="text-blue-600 "
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 quasi-experimental
               </Link>
@@ -56,7 +56,7 @@ export default function ExperimentalDesignHero() {
               We know that a well-structured{" "}
               <Link
                 href="/academy/experimental-design/types-of-pre-experimental-research-design/"
-                className="text-blue-600 "
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 experimental research design
               </Link>{" "}

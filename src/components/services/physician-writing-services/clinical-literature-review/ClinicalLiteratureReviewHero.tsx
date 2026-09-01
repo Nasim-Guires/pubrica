@@ -139,14 +139,14 @@ export default function ClinicalLiteratureReviewHero() {
                                 validated insights through{" "}
                                 <a
                                     href="/services/research-services/systematic-review"
-                                    className="text-sky-600 underline hover:text-sky-800"
+                                    className="text-blue-600 no-underline hover:no-underline"
                                 >
                                     systematic review writing
                                 </a>{" "}
                                 and{" "}
                                 <a
                                     href="/services/medical-writing"
-                                    className="text-sky-600 underline hover:text-sky-800"
+                                    className="text-blue-600 no-underline hover:no-underline"
                                 >
                                     high-quality medical writing
                                 </a>
@@ -172,7 +172,7 @@ export default function ClinicalLiteratureReviewHero() {
                                     <span className="text-red-500 font-bold">•</span>
                                     <span>
                                         Shaping health technology assessments (
-                                        <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/health-technology-assessment-hta-overview" className="text-sky-600 underline">
+                                        <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/health-technology-assessment-hta-overview" className="text-blue-600 no-underline hover:no-underline">
                                             HTA
                                         </Link>
                                         ) and regulatory submissions.
@@ -205,7 +205,7 @@ export default function ClinicalLiteratureReviewHero() {
                                 Using Pubrica’s multidisciplinary team consisting of clinical
                                 researchers, epidemiologists, biostatisticians, and content
                                 experts, we can ensure the{" "}
-                                <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-sky-600 underline">
+                                <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-blue-600 no-underline hover:no-underline">
                                     medical literature review
                                 </Link>{" "}
                                 is accurate, methodologically robust, and clinically valid.
@@ -236,7 +236,7 @@ export default function ClinicalLiteratureReviewHero() {
                     </h2>
                     <p className="text-xs md:text-sm text-slate-600 mb-8">
                         Pubrica provides end-to-end support for a{" "}
-                        <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-sky-600 underline">
+                        <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-blue-600 no-underline hover:no-underline">
                             comprehensive literature review
                         </Link>{" "}
                         to advance clinical research, product development, and regulatory

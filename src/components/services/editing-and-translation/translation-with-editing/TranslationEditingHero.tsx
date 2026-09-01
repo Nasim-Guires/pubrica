@@ -44,7 +44,7 @@ export default function TranslationEditingHero() {
                   Language Translations done by a bilingual{" "}
                   <a
                     href="/subject-matter-experts"
-                    className="text-blue-700"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     subject matter expert
                   </a>

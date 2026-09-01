@@ -54,7 +54,7 @@ export default function MedicalWritingSection(): React.ReactElement {
                 Comply with rigorous global regulations (SFDA, FDA, EMA, MDR,{" "}
                 <Link
                   href="/services/medical-writing/ich-guidelines-clinical-trials-drug-development"
-                  className="text-sky-600 hover:underline"
+                  className="text-blue-600 no-underline hover:no-underline"
                 >
                   ICH guidelines
                 </Link>
@@ -83,7 +83,7 @@ export default function MedicalWritingSection(): React.ReactElement {
             Many face an incomplete internal resource, intricate regulations,
             article rejection, or variable quality of content. At Pubrica, we
             can provide clinical writing and{" "}
-            <Link href="/academy/medical-writing/differences-between-scientific-and-medical-writing" className="text-sky-600 hover:underline">
+            <Link href="/academy/medical-writing/differences-between-scientific-and-medical-writing" className="text-blue-600 no-underline hover:no-underline">
               medical writing
             </Link>{" "}
             that turn medical language into content that engages, entertains and
@@ -95,7 +95,7 @@ export default function MedicalWritingSection(): React.ReactElement {
             Pubrica will provide comprehensive medical and{" "}
             <Link
               href="/services/research-services/scientific-writing"
-              className="text-sky-600 hover:underline"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               scientific writing services
             </Link>{" "}

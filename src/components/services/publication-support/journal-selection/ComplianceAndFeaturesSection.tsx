@@ -106,7 +106,7 @@ export default function ComplianceAndFeaturesSection() {
                   As part of our academic{" "}
                   <Link
                     href="/services/publication-support/journal-selection/journal-selection-alcoholic-liver-disease/"
-                    className="text-blue-600 no-underline"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     journal selection
                   </Link>{" "}
@@ -116,7 +116,7 @@ export default function ComplianceAndFeaturesSection() {
                   language,{" "}
                   <Link
                     href="/services/publication-support/journal-selection/journal-citation-reports-impact-metrics-guide/"
-                    className="text-blue-600 no-underline"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     citations
                   </Link>
@@ -124,14 +124,14 @@ export default function ComplianceAndFeaturesSection() {
                   approach, rooted in our{" "}
                   <Link
                     href="/services/publication-support/"
-                    className="text-blue-600 no-underline"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     Publication Support
                   </Link>
                   , ensures your research paper’s{" "}
                   <Link
                     href="/insights/stroke-diet-global-burden-inequalities"
-                    className="text-blue-600 no-underline"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     journal selection
                   </Link>{" "}
@@ -151,14 +151,14 @@ export default function ComplianceAndFeaturesSection() {
                   Leveraging our experience in{" "}
                   <Link
                     href="/services/publication-support/peer-review-pre-submission/"
-                    className="text-blue-600 no-underline"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     Pre-Submission Peer Review
                   </Link>{" "}
                   and{" "}
                   <Link
                     href="/services/publication-support/journal-submission/"
-                    className="text-blue-600 no-underline"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     Journal Submission
                   </Link>{" "}
@@ -169,7 +169,7 @@ export default function ComplianceAndFeaturesSection() {
                   peer review success, enhancing your chances when preparing to{" "}
                   <Link
                     href="/services/editing-and-translation/scientific-editing/"
-                    className="text-blue-600 no-underline"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     write a scientific paper
                   </Link>
@@ -189,21 +189,21 @@ export default function ComplianceAndFeaturesSection() {
                   Our{" "}
                   <Link
                     href="/academy/scientific-editing/scientific-vs-language-editing-high-quality-publications/"
-                    className="text-blue-600 no-underline"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     editing scientific papers
                   </Link>{" "}
                   and{" "}
                   <Link
                     href="/services/publication-support/plagiarism-services/"
-                    className="text-blue-600 no-underline"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     Plagiarism Check
                   </Link>{" "}
                   services complement our{" "}
                   <Link
                     href="/academy/journal-selection/difference-between-scopus-indexed-and-non-indexed-journals/"
-                    className="text-blue-600 no-underline"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     journal selection
                   </Link>{" "}
@@ -215,7 +215,7 @@ export default function ComplianceAndFeaturesSection() {
                   through improved{" "}
                   <Link
                     href="/insights/the-impact-of-drinking-water-sources-on-gut-microbial-diversity-in-canines-peer-review"
-                    className="text-blue-600 no-underline"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     research paper publication
                   </Link>{" "}
@@ -237,14 +237,14 @@ export default function ComplianceAndFeaturesSection() {
                   team will support you throughout the{" "}
                   <Link
                     href="/insights/tuberculosis-journal-selection-india-global"
-                    className="text-blue-600 no-underline"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     journal selection
                   </Link>{" "}
                   process, helping you determine the best{" "}
                   <Link
                     href="/insights/sample-work/prevalence-thyroid-disorders-saudi-arabia/"
-                    className="text-blue-600 no-underline"
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     journal to publish
                   </Link>{" "}
@@ -258,7 +258,7 @@ export default function ComplianceAndFeaturesSection() {
               Select Pubrica’s{" "}
               <Link
                 href="/services/publication-support/journal-selection/journal-selection-alcoholic-liver-disease/"
-                className="text-blue-600 no-underline"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 journal selection
               </Link>{" "}

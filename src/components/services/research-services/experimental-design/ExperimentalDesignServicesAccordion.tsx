@@ -49,7 +49,7 @@ export default function ExperimentalDesignServicesAccordion() {
           When true{" "}
           <Link
             href="/services/research-services/experimental-design"
-            className="text-blue-600  "
+            className="text-blue-600 no-underline hover:no-underline"
           >
             experimental designs
           </Link>{" "}
@@ -97,7 +97,7 @@ export default function ExperimentalDesignServicesAccordion() {
             Pubrica’s{" "}
             <Link
               href="/academy/experimental-design/quasi-experimental-design-definition-types-examples/"
-              className="text-blue-600"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               experimental design
             </Link>{" "}
@@ -177,7 +177,7 @@ export default function ExperimentalDesignServicesAccordion() {
             Choose Pubrica’s{" "}
             <Link
               href="/academy/journals-templates/nature-peer-reviewed-medical-research-journal/"
-              className="text-blue-600"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               experimental design
             </Link>{" "}

@@ -100,7 +100,7 @@ export default function TestimonialsAndFAQ() {
           Learn how Pubrica’s{" "}
           <Link
             href="/insights/citation-styles-apa-ama-mla-vancouver-chicago"
-            className="text-[#3b82f6] hover:underline"
+            className="text-blue-600 no-underline hover:no-underline"
           >
             manuscript formatting service
           </Link>{" "}

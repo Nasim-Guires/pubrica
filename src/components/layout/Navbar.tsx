@@ -91,7 +91,7 @@ export default function Navbar() {
           >
             <div className="flex items-center justify-between">
               {/* Logo */}
-              <Link href="/" className="flex items-center">
+              <Link href="/" className="flex items-center text-blue-600 no-underline hover:no-underline">
                 <div className="w-[160px] h-[44px] relative flex items-center justify-center">
                   <Image
                     src="/images/logos/pubrica-logo.webp"
@@ -196,7 +196,7 @@ export default function Navbar() {
                           {/* Third Column: Sample Work Promo Tile */}
                           {selectedSubItem?.sampleWork && (
                             <div className="hidden lg:block w-[220px] p-4 border-l border-gray-200 bg-white">
-                              <Link href="/insights/sample-work" className="block group">
+                              <Link href="/insights/sample-work" className="block group text-blue-600 no-underline hover:no-underline">
                                 <div className="bg-[#073632] text-white text-xs font-bold text-center py-2 rounded-t-md">
                                   Sample Work
                                 </div>

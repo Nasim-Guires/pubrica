@@ -127,7 +127,7 @@ const offerings: ServiceOffering[] = [
         All documents are{" "}
         <Link
           href="/services/publication-support/plagiarism-services"
-          className="text-sky-600 hover:underline font-medium"
+          className="text-blue-600 font-medium no-underline hover:no-underline"
         >
           plagiarism
         </Link>

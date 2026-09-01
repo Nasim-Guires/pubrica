@@ -95,7 +95,7 @@ export default function PatientEducationPackagesAndPricing() {
             For Pubrica&apos;s{" "}
             <Link
               href="/academy/patient-education/improve-health-literacy-medical-communications/"
-              className="text-blue-600"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               patient education content
             </Link>{" "}
@@ -119,7 +119,7 @@ export default function PatientEducationPackagesAndPricing() {
             </h2>
             <p className="text-slate-700 text-base sm:text-lg leading-snug max-w-5xl">
               Pubrica offers medically accurate, guideline-compliant{" "}
-              <Link href="/insights/sample-work/diabetic-foot-ulcer/" className="text-blue-600">
+              <Link href="/insights/sample-work/diabetic-foot-ulcer/" className="text-blue-600 no-underline hover:no-underline">
                 patient education content
               </Link>{" "}
               developed by healthcare experts, optimized for comprehension, and

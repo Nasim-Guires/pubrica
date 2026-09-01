@@ -22,7 +22,7 @@ export default async function LatestBlogs() {
           </div>
           <Link
             href="/blog"
-            className="text-primary-800 hover:text-primary-600 font-bold text-sm flex items-center gap-1.5 shrink-0 group hover:translate-x-1 duration-150 transform transition-transform"
+            className="text-primary-800 font-bold text-sm flex items-center gap-1.5 shrink-0 group hover:translate-x-1 duration-150 transform transition-transform text-blue-600 no-underline hover:no-underline"
           >
             <span>View All Articles</span>
             <ArrowRight className="h-4 w-4" />

@@ -147,7 +147,7 @@ export default function ExperimentalDesignsAndPackages() {
                   An{" "}
                   <Link
                     href="/academy/journals-templates/oncology-journal-publication-process/"
-                    className="text-blue-600 "
+                    className="text-blue-600 no-underline hover:no-underline"
                   >
                     Experimental Design
                   </Link>{" "}
@@ -506,7 +506,7 @@ export default function ExperimentalDesignsAndPackages() {
               and ethical guidelines to ensure that every{" "}
               <Link
                 href="/academy/experimental-design/experimental-research-design/"
-                className="text-blue-600 "
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 experimental design
               </Link>{" "}
@@ -730,7 +730,7 @@ export default function ExperimentalDesignsAndPackages() {
             Learn how Pubrica’s{' '}
             <Link
               href="/academy/experimental-design/pre-experimental-research-design/"
-              className="text-blue-600 "
+              className="text-blue-600 no-underline hover:no-underline"
             >
               experimental design
             </Link>{' '}

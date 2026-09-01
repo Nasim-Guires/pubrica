@@ -158,7 +158,7 @@ export default function ELearningPage() {
                         </p>
 
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            Pubrica provides comprehensive support for Researchers who are Writing in e-learning and Digital Education. We provide the link between Education Innovation and the Publication Process. Your Research may vary from online learning systems to Instructional Design, to Digital Pedagogy, and beyond. We are here to help you through all the steps, from Manuscript Preparation to Data Presentation to <Link href="/services/publication-support/journal-selection" className="text-[#2b6cb0] hover:underline">Journal Selection and Submission</Link>. We will ensure that your Research reaches a Worldwide Academic Audience with Clarity, Impact and Academic Excellence.
+                            Pubrica provides comprehensive support for Researchers who are Writing in e-learning and Digital Education. We provide the link between Education Innovation and the Publication Process. Your Research may vary from online learning systems to Instructional Design, to Digital Pedagogy, and beyond. We are here to help you through all the steps, from Manuscript Preparation to Data Presentation to <Link href="/services/publication-support/journal-selection" className="text-blue-600 no-underline hover:no-underline">Journal Selection and Submission</Link>. We will ensure that your Research reaches a Worldwide Academic Audience with Clarity, Impact and Academic Excellence.
                         </p>
 
                         <div className="pt-2">

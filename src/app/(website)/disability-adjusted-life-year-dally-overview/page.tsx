@@ -128,8 +128,8 @@ export default function DalyOverviewPage() {
       </p>
       <p className="text-gray-600 leading-relaxed text-sm mb-8">
         Need help understanding Disability-Adjusted Life Year (DALY) for your own research? Our Pubrica consultants are here to guide you &mdash;{' '}
-        <Link href="/order-now" className="text-[#004d40] underline">Get Expert Publishing Support</Link> or{' '}
-        <Link href="/contact" className="text-[#004d40] underline">Schedule a Free Consultation</Link>.
+        <Link href="/order-now" className="text-blue-600 no-underline hover:no-underline">Get Expert Publishing Support</Link> or{' '}
+        <Link href="/contact" className="text-blue-600 no-underline hover:no-underline">Schedule a Free Consultation</Link>.
       </p>
 
       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">References</h2>

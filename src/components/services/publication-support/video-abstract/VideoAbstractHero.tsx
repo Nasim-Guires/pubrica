@@ -38,7 +38,7 @@ export default function VideoAbstractHero() {
               thousands of research papers being published every day, a powerful{" "}
               <Link
                 href="/services/publication-support/video-abstract/create-perfect-video-abstract-research-paper"
-                className="text-sky-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 video abstract
               </Link>{" "}
@@ -55,7 +55,7 @@ export default function VideoAbstractHero() {
               With our{" "}
               <Link
                 href="/academy/video-abstract/how-to-create-video-abstract"
-                className="text-sky-600 "
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 video abstract service
               </Link>
@@ -72,7 +72,7 @@ export default function VideoAbstractHero() {
               Pubrica converts research into short, engaging video abstracts with journal specifications. Our experts create concise, clear video summaries,{' '}
               <Link
                 href="/services/publication-support/video-abstract/video-abstracts-enhancing-research-impact/"
-                className="text-sky-600 no-underline"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 video abstract
               </Link>{' '}

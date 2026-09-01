@@ -35,7 +35,7 @@ export const EditingTranslationBookEditingHero: React.FC = () => {
             scientific academic books, which are often extensive, technically
             dense, and subject to tight publication deadlines. Our book editing
             services are designed to address every aspect of book{" "}
-            <Link href="/services/publication-support" className="text-blue-600">
+            <Link href="/services/publication-support" className="text-blue-600 no-underline hover:no-underline">
               publication
             </Link>
             , from initial drafts to final proofs, ensuring compliance with the
@@ -81,7 +81,7 @@ export const EditingTranslationBookEditingHero: React.FC = () => {
                   Adherence to Publishing Standards:
                 </strong>{" "}
                 Our editors are well-versed in the{" "}
-                <Link href="/services/publication-support/journal-manuscript-formatting-services" className="text-blue-600 ">
+                <Link href="/services/publication-support/journal-manuscript-formatting-services" className="text-blue-600 no-underline hover:no-underline">
                   formatting
                 </Link>{" "}
                 guidelines of major publishers. We ensure that your book not
@@ -94,7 +94,7 @@ export const EditingTranslationBookEditingHero: React.FC = () => {
                 </strong>{" "}
                 Recognizing the importance of meeting publication deadlines, we
                 are committed to delivering high-quality{" "}
-                <Link href="/services/editing-and-translation" className="text-blue-600 ">
+                <Link href="/services/editing-and-translation" className="text-blue-600 no-underline hover:no-underline">
                   editing services
                 </Link>{" "}
                 quickly and efficiently, ensuring that your project remains on

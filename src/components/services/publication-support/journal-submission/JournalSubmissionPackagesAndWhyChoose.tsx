@@ -170,7 +170,7 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
             Accelerate your path to publication with Pubrica’s comprehensive{" "}
             <Link
               href="/insights/prevalence-thyroid-disorders-tertiary-care-north-india"
-              className="text-blue-600 no-underline"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               journal submission
             </Link>{" "}
@@ -225,7 +225,7 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
                       trusted{" "}
                       <Link
                         href="/services/publication-support/journal-submission/ai-tools-transform-academic-publishing/"
-                        className="text-blue-600 no-underline font-normal"
+                        className="text-blue-600 no-underline font-normal hover:no-underline"
                       >
                         academic journal publisher
                       </Link>{" "}

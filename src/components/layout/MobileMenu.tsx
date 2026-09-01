@@ -52,7 +52,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {/* Slide-out Menu Panel */}
       <div className="relative flex flex-col w-full max-w-xs bg-white h-full shadow-2xl z-10 p-6 overflow-y-auto">
         <div className="flex items-center justify-between border-b border-gray-100 pb-4 mb-4">
-          <Link href="/" className="flex items-center gap-2" onClick={onClose}>
+          <Link href="/" className="flex items-center gap-2 text-blue-600 no-underline hover:no-underline" onClick={onClose}>
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-800 text-white font-bold text-lg">
               P
             </div>
@@ -232,10 +232,10 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         {/* Footer info & CTA */}
         <div className="border-t border-gray-100 pt-6 mt-auto">
           <div className="grid gap-4 mb-6">
-            <Link href="/contact" onClick={onClose} className="w-full">
+            <Link href="/contact" onClick={onClose} className="w-full text-blue-600 no-underline hover:no-underline">
               <Button className="w-full font-semibold">Request Free Quote</Button>
             </Link>
-            <Link href="/contact" onClick={onClose} className="w-full">
+            <Link href="/contact" onClick={onClose} className="w-full text-blue-600 no-underline hover:no-underline">
               <Button variant="outline" className="w-full font-semibold text-gray-800">
                 Book Consultation
               </Button>

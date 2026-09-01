@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import CommonUploadButton from '@/components/common/CommonUploadButton';
 import CommonConsultationButton from '@/components/common/CommonConsultationButton';
 
 interface FeatureItem {
@@ -57,14 +57,13 @@ export const ScientificWritingPage: React.FC = () => {
                     Our free Recommendations service uses machine learning and your online activity to suggest research tailored to your needs.
                 </p>
                 <div className="pt-2">
-                    <Link
+                    <CommonUploadButton
                         href="/uploads/research-services/scientific-writing/24-03-2026-SCIENTIFIC-WRITING-THAT-DRIVES-PUBLICATION-SUCCESS.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
                     >
                         View Brochure
-                    </Link>
+                    </CommonUploadButton>
                 </div>
             </section>
 

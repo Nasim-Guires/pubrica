@@ -42,7 +42,7 @@ const accordionData = [
         For{" "}
         <Link
           href="/services/research-services/systematic-review/"
-          className="text-blue-600 font-medium"
+          className="text-blue-600 font-medium no-underline hover:no-underline"
         >
           systematic review
         </Link>{" "}
@@ -101,7 +101,7 @@ const accordionData = [
         Improve the{" "}
         <Link
           href="/services/publication-support/peer-review-pre-submission"
-          className="text-blue-600 font-medium"
+          className="text-blue-600 font-medium no-underline hover:no-underline"
         >
           peer review
         </Link>{" "}
@@ -127,7 +127,7 @@ const accordionData = [
         Composing authors' direct{" "}
         <Link
           href="/services/publication-support/responding-to-reviewers"
-          className="text-blue-600 font-medium"
+          className="text-blue-600 font-medium no-underline hover:no-underline"
         >
           response to reviewers
         </Link>
@@ -223,7 +223,7 @@ export default function JournalSubmissionPage() {
           simple while providing a compliant and timely{" "}
           <Link
             href="/academy/journal-submission/choosing-right-journal-for-manuscript-type-guide"
-            className="text-blue-600 font-medium"
+            className="text-blue-600 font-medium no-underline hover:no-underline"
           >
             journal manuscript submission service
           </Link>{" "}
@@ -231,7 +231,7 @@ export default function JournalSubmissionPage() {
           can take care of all the administrative tasks that can make the{" "}
           <Link
             href="/academy/journal-selection/how-to-identify-best-journal-for-manuscript-submission"
-            className="text-blue-600 font-medium"
+            className="text-blue-600 font-medium no-underline hover:no-underline"
           >
             manuscript submission process
           </Link>{" "}
@@ -258,7 +258,7 @@ export default function JournalSubmissionPage() {
               Uploading all of the files (
               <Link
                 href="/services/publication-support/journal-submission/complete-guide-to-writing-cover-letter-for-medical-journals"
-                className="text-blue-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 cover letter
               </Link>
@@ -288,7 +288,7 @@ export default function JournalSubmissionPage() {
               Tracking the submission status throughout the editorial and{" "}
               <Link
                 href="/services/publication-support/journal-submission/guide-to-peer-review-types"
-                className="text-blue-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 peer-review
               </Link>{" "}
@@ -347,7 +347,7 @@ export default function JournalSubmissionPage() {
             At Pubrica, we provide an end-to-end{" "}
             <Link
               href="/insights/journal-submission-report-sample"
-              className="text-blue-600 font-medium"
+              className="text-blue-600 font-medium no-underline hover:no-underline"
             >
               academic journals submission service
             </Link>{" "}

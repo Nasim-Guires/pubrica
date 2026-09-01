@@ -23,11 +23,11 @@ const Page = () => {
                     <ul className="list-disc pl-6 space-y-4 text-base sm:text-lg leading-7 sm:leading-8 text-gray-700">
                         <li>
                             <strong className="text-gray-900">My Experience with Mendeley:</strong> In my role at Pubrica, working on numerous scientific and academic projects, Mendeley has been a game-changer. The ease of managing citations and references has significantly streamlined my workflow. Especially, when I edit my client’s{" "}
-                            <a href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 hover:underline">
+                            <a href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 no-underline hover:no-underline">
                                 manuscripts
                             </a>
                             . As part of Pubrica’s{" "}
-                            <a href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 hover:underline">
+                            <a href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 no-underline hover:no-underline">
                                 Manuscript Editing Services
                             </a>
                             , I frequently encounter documents that require substantial editing. Upon reviewing these manuscripts, I often consider the benefits of revising from the ground up, as reediting these documents can be as challenging as navigating through a complex, suspenseful thriller.
@@ -299,7 +299,7 @@ const Page = () => {
                             Based on my experiences, Mendeley is a robust and user-friendly tool. Its range of features caters to diverse research needs, making it a top choice for anyone in the academic and scientific community.
                         </p>
                         <p>
-                            <Link href="/" className="text-blue-600 hover:underline font-medium">
+                            <Link href="/" className="text-blue-600 font-medium no-underline hover:no-underline">
                                 Pubrica
                             </Link>{" "}
                             boasts extensive expertise in editing a wide array of scientific and technical manuscripts authored by a diverse, global clientele. By choosing Pubrica, you are assured of a service that consistently meets the stringent standards of academic publication.

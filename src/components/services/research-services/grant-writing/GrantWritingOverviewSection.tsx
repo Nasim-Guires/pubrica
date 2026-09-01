@@ -3,6 +3,7 @@
 import HeroBanner from "@/components/common/HeroBanner";
 import Image from "next/image";
 import Link from "next/link";
+import CommonUploadButton from "@/components/common/CommonUploadButton";
 
 interface ExpertisePoint {
   id: string;
@@ -108,14 +109,13 @@ export default function GrantWritingOverviewSection() {
 
             {/* CTA Button */}
             <div className="pt-4">
-              <a
+              <CommonUploadButton
                 href="/uploads/research-services/grant-writing/10-03-2026-GRANT-WRITING-BROCHURE.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
               >
                 View Brochure
-              </a>
+              </CommonUploadButton>
             </div>
           </div>
 

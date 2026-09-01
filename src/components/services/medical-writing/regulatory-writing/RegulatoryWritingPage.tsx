@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import CommonUploadButton from '@/components/common/CommonUploadButton';
 
 const RW = '/images/medical-writing/regulatory-writing';
 
@@ -66,7 +67,7 @@ const RegulatoryWritingPage = () => {
                         </li>
                         <li>
                             To help you comply with international regulatory regulations (ICH, FDA, EMA, PMDA,{' '}
-                            <Link href="/services/medical-writing/regulatory-writing/ctd-structure-overview-modules" className="text-blue-600 underline">CTD</Link>).
+                            <Link href="/services/medical-writing/regulatory-writing/ctd-structure-overview-modules" className="text-blue-600 no-underline hover:no-underline">CTD</Link>).
                         </li>
                         <li>
                             To avoid delays and rejections caused by insufficient documentation, formatting errors, or non-compliance.
@@ -75,7 +76,7 @@ const RegulatoryWritingPage = () => {
 
                     <p className="pt-2">
                         Our experienced regulatory writers and experts in clinical{' '}
-                        <Link href="/academy/regulatory-writing/regulatory-documentation-medical-writing-devices" className="text-blue-5 text-blue-600 underline">
+                        <Link href="/academy/regulatory-writing/regulatory-documentation-medical-writing-devices" className="text-blue-5 text-blue-600 no-underline hover:no-underline">
                             regulatory writing
                         </Link>{' '}
                         understand that and provide services to help you develop your data into organized, compliant documents ready for regulatory submission.
@@ -88,14 +89,13 @@ const RegulatoryWritingPage = () => {
 
                 {/* View Brochure Button */}
                 <div className="mt-8">
-                    <Link
+                    <CommonUploadButton
                         href="/uploads/medical-writing/regulatory-writing/17-03-2026-REGULATORY-WRITING-SUPPORT-.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
                     >
                         View Brochure
-                    </Link>
+                    </CommonUploadButton>
                 </div>
             </section>
 
@@ -108,11 +108,11 @@ const RegulatoryWritingPage = () => {
 
                     <p className="text-gray-600 text-sm md:text-base max-w-4xl mb-10 leading-relaxed">
                         We simplify the{' '}
-                        <Link href="/academy/regulatory-writing/understanding-regulatory-writing" className="text-blue-600 underline">
+                        <Link href="/academy/regulatory-writing/understanding-regulatory-writing" className="text-blue-600 no-underline hover:no-underline">
                             regulatory writing process
                         </Link>
                         —from data compilation to submission—helping you meet global compliance standards. Accelerate your approval timelines with Pubrica’s expert{' '}
-                        <Link href="/academy/regulatory-writing/understanding-regulatory-writing" className="text-blue-600 underline">
+                        <Link href="/academy/regulatory-writing/understanding-regulatory-writing" className="text-blue-600 no-underline hover:no-underline">
                             regulatory writing support
                         </Link>
                         , delivering clarity, consistency, and compliance in every document.

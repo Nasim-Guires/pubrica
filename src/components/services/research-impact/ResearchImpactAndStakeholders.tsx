@@ -148,7 +148,7 @@ export default function ResearchImpactAndStakeholders(): React.ReactElement {
               Pubrica offers a range of{' '}
               <Link
                 href="/academy/research-impactt/how-to-select-target-journal-research-impact"
-                className="text-[#008ba3] underline underline-offset-2 hover:text-[#09322e] transition-colors"
+                className="text-blue-600 underline-offset-2 transition-colors no-underline hover:no-underline"
               >
                 research impact services
               </Link>{' '}

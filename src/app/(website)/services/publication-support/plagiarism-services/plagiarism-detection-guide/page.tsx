@@ -140,14 +140,14 @@ export default function PlagiarismGuidePage() {
               Interesting topics
             </h3>
             <ul className="space-y-2 text-xs md:text-sm text-blue-600 font-medium">
-              <li><Link href="/services/editing-and-translation/manuscript-editing" className="hover:underline">Manuscript Editing</Link></li>
-              <li><Link href="/academy/manuscript-guidelines" className="hover:underline">Manuscript Guidelines</Link></li>
-              <li><Link href="/services/physician-writing-services/physician-manuscript" className="hover:underline">Manuscript Writing</Link></li>
-              <li><Link href="/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission" className="hover:underline">Manuscript Preparation guidelines</Link></li>
-              <li><Link href="/academy/manuscript-submission" className="hover:underline">Manuscript Submission Guidelines</Link></li>
-              <li><Link href="/services/editing-and-translation/manuscript-editing" className="hover:underline">Manuscript Editing Services</Link></li>
-              <li><Link href="/academy" className="hover:underline">Study Guides</Link></li>
-              <li><Link href="/services/research-services/scientific-writing" className="hover:underline">Scientific Writing</Link></li>
+              <li><Link href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 no-underline hover:no-underline">Manuscript Editing</Link></li>
+              <li><Link href="/academy/manuscript-guidelines" className="text-blue-600 no-underline hover:no-underline">Manuscript Guidelines</Link></li>
+              <li><Link href="/services/physician-writing-services/physician-manuscript" className="text-blue-600 no-underline hover:no-underline">Manuscript Writing</Link></li>
+              <li><Link href="/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission" className="text-blue-600 no-underline hover:no-underline">Manuscript Preparation guidelines</Link></li>
+              <li><Link href="/academy/manuscript-submission" className="text-blue-600 no-underline hover:no-underline">Manuscript Submission Guidelines</Link></li>
+              <li><Link href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 no-underline hover:no-underline">Manuscript Editing Services</Link></li>
+              <li><Link href="/academy" className="text-blue-600 no-underline hover:no-underline">Study Guides</Link></li>
+              <li><Link href="/services/research-services/scientific-writing" className="text-blue-600 no-underline hover:no-underline">Scientific Writing</Link></li>
             </ul>
           </div>
         </aside>

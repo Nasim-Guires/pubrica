@@ -23,7 +23,7 @@ const audiences: AudienceCard[] = [
         Individual scholars, early-career researchers, and senior academics seeking to refine manuscripts, theses, or dissertations for{" "}
         <Link
           href="/services/publication-support/journal-submission"
-          className="text-blue-700 "
+          className="text-blue-600 no-underline hover:no-underline"
         >
           journal submission
         </Link>{" "}
@@ -50,7 +50,7 @@ const audiences: AudienceCard[] = [
         Clinicians, surgeons, and healthcare practitioners aiming to publish clinical research, case studies, and{" "}
         <Link
           href="/services/research-services/systematic-review"
-          className="text-blue-700 "
+          className="text-blue-600 no-underline hover:no-underline"
         >
           systematic reviews
         </Link>{" "}
@@ -102,7 +102,7 @@ export default function ScientificWhoWeServe() {
           At Pubrica, our{" "}
           <Link
             href="/academy/scientific-editing/scientific-vs-language-editing-high-quality-publications"
-            className="text-blue-700 "
+            className="text-blue-600 no-underline hover:no-underline"
           >
             scientific research paper editing services
           </Link>{" "}
@@ -155,7 +155,7 @@ export default function ScientificWhoWeServe() {
           Our services also extend to{" "}
           <Link
             href="/services/editing-and-translation/manuscript-editing"
-            className="text-blue-700 "
+            className="text-blue-600 no-underline hover:no-underline"
           >
             academic writing and editing
           </Link>

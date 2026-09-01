@@ -96,7 +96,7 @@ export default function AbstractServicePackages() {
         </h2>
         <p className="text-xs sm:text-sm text-slate-600 max-w-4xl mx-auto leading-relaxed">
           Choose from our tailored abstract writing packages designed to meet a range of research needs from student projects and internal reports to grant proposals and high-impact journal submissions. Each service is crafted by{' '}
-          <Link href="/subject-matter-experts" className="text-sky-600 hover:underline">
+          <Link href="/subject-matter-experts" className="text-blue-600 no-underline hover:no-underline">
             subject-matter experts
           </Link>{' '}
           to ensure clarity, accuracy, and submission-ready formatting.

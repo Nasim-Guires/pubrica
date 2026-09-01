@@ -48,7 +48,7 @@ const diseaseCards: DiseaseCard[] = [
         Our{" "}
         <Link
           href="/services/research-services/literature-review-and-gap/types-of-literature-review-in-research"
-          className="text-blue-600 no-underline"
+          className="text-blue-600 no-underline hover:no-underline"
         >
           scientific literature review service
         </Link>{" "}
@@ -132,7 +132,7 @@ export default function DiseaseBasedAndComplianceSection() {
               At Pubrica, we provide specialized disease-based{" "}
               <Link
                 href="/academy/literature-review/pico-framework-medical-literature-reviews"
-                className="text-blue-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 medical literature review service
               </Link>{" "}
@@ -171,7 +171,7 @@ export default function DiseaseBasedAndComplianceSection() {
             Pubrica’s{" "}
             <Link
               href="/services/research-services/literature-review-and-gap/types-of-literature-review-in-research"
-              className="text-blue-600"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               medical literature review service
             </Link>{" "}
@@ -198,7 +198,7 @@ export default function DiseaseBasedAndComplianceSection() {
             literature review service and{" "}
             <Link
               href="/services/research-services/literature-review-and-gap/types-of-literature-review-in-research"
-              className="text-blue-600"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               research gap analysis service
             </Link>{" "}
@@ -275,7 +275,7 @@ export default function DiseaseBasedAndComplianceSection() {
                     quantitative and qualitative methods, including{" "}
                     <Link
                       href="/services/research-services/meta-analysis/"
-                      className="text-blue-600"
+                      className="text-blue-600 no-underline hover:no-underline"
                     >
                       meta-analysis
                     </Link>
@@ -287,7 +287,7 @@ export default function DiseaseBasedAndComplianceSection() {
                     for{" "}
                     <Link
                       href="/academy/literature-review/guides-write-research-literature-review/"
-                      className="text-blue-600"
+                      className="text-blue-600 no-underline hover:no-underline"
                     >
                       research support services
                     </Link>
@@ -347,7 +347,7 @@ export default function DiseaseBasedAndComplianceSection() {
               writing service and{" "}
               <Link
                 href="/academy/literature-review/literature-review-in-research-methodology"
-                className="text-blue-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 research gap analysis service
               </Link>{" "}

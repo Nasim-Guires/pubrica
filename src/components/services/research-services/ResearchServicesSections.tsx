@@ -69,7 +69,7 @@ export const ResearchServicesSections: React.FC = () => {
               Protocol Development:
             </strong>{" "}
             PICO/
-            <Link href="/academy/research-services/spider-framework-research-design-guide" className="text-blue-600">
+            <Link href="/academy/research-services/spider-framework-research-design-guide" className="text-blue-600 no-underline hover:no-underline">
               SPIDER framework
             </Link>{" "}
             design for clinical, academic, and policy research.
@@ -356,7 +356,7 @@ export const ResearchServicesSections: React.FC = () => {
           Cochrane Collaboration Database, the Centre for{" "}
           <a
             href="/academy/research-services/gramms-guidelines-reporting-mixed-methods-research/"
-            className="text-blue-600 no-underline "
+            className="text-blue-600 no-underline hover:no-underline"
           >
             Research Support
           </a>

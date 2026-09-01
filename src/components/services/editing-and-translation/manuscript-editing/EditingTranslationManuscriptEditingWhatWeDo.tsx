@@ -52,7 +52,7 @@ export const EditingTranslationManuscriptEditingWhatWeDo: React.FC = () => {
           and grammar editing to full manuscript rewriting and{" "}
           <Link
             href="/services/editing-and-translation"
-            className="text-sky-600"
+            className="text-blue-600 no-underline hover:no-underline"
           >
             professional translation for research
           </Link>
@@ -108,7 +108,7 @@ export const EditingTranslationManuscriptEditingWhatWeDo: React.FC = () => {
               comprehensive prepublication services include editing,{" "}
               <Link
                 href="/insights/proof-reading/"
-                className="text-blue-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 proofreading
               </Link>

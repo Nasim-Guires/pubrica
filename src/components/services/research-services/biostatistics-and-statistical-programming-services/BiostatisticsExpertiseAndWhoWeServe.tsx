@@ -82,7 +82,7 @@ export default function BiostatisticsExpertiseAndWhoWeServe() {
             the information, data management, analysis, and{" "}
             <Link
               href="/services/research-services/statistical-vs-contextual-interpretation-research"
-              className="text-sky-600 hover:underline font-medium"
+              className="text-blue-600 font-medium no-underline hover:no-underline"
             >
               statistical interpretations
             </Link>{" "}
@@ -209,7 +209,7 @@ export default function BiostatisticsExpertiseAndWhoWeServe() {
               of clients in the medical,{" "}
               <Link
                 href="/industries/pharmaceutical"
-                className="text-sky-600 hover:underline font-medium"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
               >
                 pharmaceutical
               </Link>

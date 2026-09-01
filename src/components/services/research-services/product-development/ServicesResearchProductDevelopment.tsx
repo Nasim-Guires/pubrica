@@ -35,7 +35,7 @@ export default function ServicesResearchProductDevelopment({
         <>
           <Link
             href="/subject-matter-experts/"
-            className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+            className="text-blue-600 font-medium no-underline hover:no-underline"
           >
             500+ subject matter experts
           </Link>{" "}
@@ -81,7 +81,7 @@ export default function ServicesResearchProductDevelopment({
           relationship (
           <Link
             href="/services/research-services/product-development/sar-analysis-medical-statistics-guide/"
-            className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+            className="text-blue-600 font-medium no-underline hover:no-underline"
           >
             SAR
           </Link>
@@ -356,46 +356,46 @@ export default function ServicesResearchProductDevelopment({
               services driven by deep{" "}
               <Link
                 href="/academy/discovery-and-intelligence/discovery-intelligence-drug-development/"
-                className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
               >
                 discovery and intelligence
               </Link>{" "}
               research to support{" "}
               <Link
                 href="/industries/pharmaceutical/"
-                className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
               >
                 pharmaceutical
               </Link>
               ,{" "}
               <Link
                 href="/industries/biotechnology/"
-                className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
               >
                 biotechnology
               </Link>
               ,{" "}
               <Link
                 href="/industries/nutraceutical-research/"
-                className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
               >
                 nutraceutical
               </Link>
               ,{" "}
               <Link
                 href="/industries/medical-device/"
-                className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
               >
                 medical device
               </Link>
               ,{" "}
               <Link
                 href="/industries/cosmeceutical-research/"
-                className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
               >
                 cosmeceuticals
               </Link>
-              , herbal, pet health,<Link href="/subject-matter-experts/life-sciences/" className="text-sky-600 font-medium hover:text-sky-700 no-underline"> life sciences</Link>, and healthcare organizations.
+              , herbal, pet health,<Link href="/subject-matter-experts/life-sciences/" className="text-blue-600 font-medium no-underline hover:no-underline"> life sciences</Link>, and healthcare organizations.
             </p>
 
             <p>
@@ -479,7 +479,7 @@ export default function ServicesResearchProductDevelopment({
               At Pubrica, our{" "}
               <Link
                 href="/academy/discovery-and-intelligence/discovery-intelligence-drug-development/"
-                className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
               >
                 Discovery & Intelligence Services
               </Link>{" "}
@@ -489,7 +489,7 @@ export default function ServicesResearchProductDevelopment({
               and{" "}
               <Link
                 href="/academy/discovery-and-intelligence/pharmaceutical-industry-drug-development-pricing-marketing/"
-                className="text-sky-600 font-medium hover:text-sky-700 no-underline"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
               >
                 product development
               </Link>{" "}

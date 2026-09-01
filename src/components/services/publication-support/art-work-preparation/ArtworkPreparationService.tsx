@@ -154,15 +154,15 @@ export default function ArtworkPreparationService() {
                   meet specific journal requirements (resolution, size, colour
                   mode, font styles, and file formats.) This is especially
                   useful for{" "}
-                  <Link href="/services/physician-writing-services/original-research-article" className="text-blue-600 hover:underline">
+                  <Link href="/services/physician-writing-services/original-research-article" className="text-blue-600 no-underline hover:no-underline">
                     Original Research Article
                   </Link>
                   ,{" "}
-                  <Link href="/services/research-services/systematic-review" className="text-blue-600 hover:underline">
+                  <Link href="/services/research-services/systematic-review" className="text-blue-600 no-underline hover:no-underline">
                     Systematic Review
                   </Link>
                   , and{" "}
-                  <Link href="/services/physician-writing-services/case-report" className="text-blue-600 hover:underline">
+                  <Link href="/services/physician-writing-services/case-report" className="text-blue-600 no-underline hover:no-underline">
                     Case Report
                   </Link>{" "}
                   Writing submissions.
@@ -194,7 +194,7 @@ export default function ArtworkPreparationService() {
                   Checking that all labels, legends, scales, and annotations are
                   clear, consistent and in accordance with the content of your
                   manuscript. This services complements our{" "}
-                  <Link href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 hover:underline">
+                  <Link href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 no-underline hover:no-underline">
                     manuscript editing services
                   </Link>{" "}
                   in terms of figure accuracy and clarity.
@@ -211,7 +211,7 @@ export default function ArtworkPreparationService() {
                   </strong>{" "}
                   Creating brief visual summaries to illustrate key research
                   findings or complex data, usually requested in addition to{" "}
-                  <Link href="/services/research-impact/graphical-abstract" className="text-blue-600 hover:underline">
+                  <Link href="/services/research-impact/graphical-abstract" className="text-blue-600 no-underline hover:no-underline">
                     graphical abstract
                   </Link>{" "}
                   creation.

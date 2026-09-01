@@ -63,7 +63,7 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
             extensive{" "}
             <Link
               href="/subject-matter-experts"
-              className="text-sky-600 font-medium hover:underline"
+              className="text-blue-600 font-medium no-underline hover:no-underline"
             >
               subject-matter expertise
             </Link>{" "}
@@ -162,7 +162,7 @@ export const EditingTranslationManuscriptEditingWhyChooseAndSamples: React.FC =
               At Pubrica, we provide best{" "}
               <Link
                 href="/services/editing-and-translation/manuscript-editing/top-benefits-of-manuscript-editing-services"
-                className="text-blue-600"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 manuscript editing services
               </Link>{" "}

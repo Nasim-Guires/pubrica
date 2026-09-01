@@ -23,7 +23,7 @@ const servicesData: TabData[] = [
     imageAlt: "Meta-Analysis Guidelines Compliance",
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
-        Our scientific and medical experts craft your meta-analyses, adhering to specific reporting guidelines such as the MARS and PRISMA, along with clear and upfront potential personal or financial conflicts of interest (COIs), ensuring precision and relevance. We also utilize guidelines specific to the studies, for instance, to report <Link className="text-blue-600" href="/services/research-services/meta-analysis/meta-analysis-services-prisma-2020/">RCT</Link> studies, Pubrica applies QUORUM, and for observational studies, the MOOSE
+        Our scientific and medical experts craft your meta-analyses, adhering to specific reporting guidelines such as the MARS and PRISMA, along with clear and upfront potential personal or financial conflicts of interest (COIs), ensuring precision and relevance. We also utilize guidelines specific to the studies, for instance, to report <Link className="text-blue-600 no-underline hover:no-underline" href="/services/research-services/meta-analysis/meta-analysis-services-prisma-2020/">RCT</Link> studies, Pubrica applies QUORUM, and for observational studies, the MOOSE
       </p>
     ),
   },
@@ -78,7 +78,7 @@ const servicesData: TabData[] = [
         Comprehensive support encompassing{" "}
         <Link
           href="/services/publication-support/journal-selection"
-          className="text-blue-600"
+          className="text-blue-600 no-underline hover:no-underline"
         >
           journal selection
         </Link>
@@ -98,7 +98,7 @@ const servicesData: TabData[] = [
         Detailed{" "}
         <Link
           href="/services/publication-support/plagiarism-services"
-          className="text-blue-600"
+          className="text-blue-600 no-underline hover:no-underline"
         >
           plagiarism
         </Link>{" "}

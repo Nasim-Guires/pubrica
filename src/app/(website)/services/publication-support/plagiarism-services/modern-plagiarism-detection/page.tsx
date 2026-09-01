@@ -23,11 +23,11 @@ export default function PlagiarismDetectionPage() {
             {/* Breadcrumbs */}
             <div className="bg-gray-50 border-b border-gray-200 text-xs md:text-sm py-3 px-4 md:px-12 text-gray-600">
                 <div className="max-w-7xl mx-auto flex items-center space-x-2 flex-wrap">
-                    <Link href="/" className="hover:underline">Home</Link>
+                    <Link href="/" className="text-blue-600 no-underline hover:no-underline">Home</Link>
                     <span>»</span>
-                    <Link href="/services/publication-support" className="hover:underline">Publication Support</Link>
+                    <Link href="/services/publication-support" className="text-blue-600 no-underline hover:no-underline">Publication Support</Link>
                     <span>»</span>
-                    <Link href="/services/publication-support/plagiarism-services" className="hover:underline">Plagiarism Services</Link>
+                    <Link href="/services/publication-support/plagiarism-services" className="text-blue-600 no-underline hover:no-underline">Plagiarism Services</Link>
                     <span>»</span>
                     <span className="text-gray-500">
                         Modern Plagiarism Detection: From Keyword Matching to AI Phrase Analysis
@@ -119,14 +119,14 @@ export default function PlagiarismDetectionPage() {
                             Interesting topics
                         </h3>
                         <ul className="space-y-2 text-xs md:text-sm text-blue-600 font-medium">
-                            <li><Link href="/services/editing-and-translation/manuscript-editing" className="hover:underline">Manuscript Editing</Link></li>
-                            <li><Link href="/academy/manuscript-guidelines" className="hover:underline">Manuscript Guidelines</Link></li>
-                            <li><Link href="/services/physician-writing-services/physician-manuscript" className="hover:underline">Manuscript Writing</Link></li>
-                            <li><Link href="/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission" className="hover:underline">Manuscript Preparation guidelines</Link></li>
-                            <li><Link href="/academy/manuscript-submission" className="hover:underline">Manuscript Submission Guidelines</Link></li>
-                            <li><Link href="/services/editing-and-translation/manuscript-editing" className="hover:underline">Manuscript Editing Services</Link></li>
-                            <li><Link href="/academy" className="hover:underline">Study Guides</Link></li>
-                            <li><Link href="/services/research-services/scientific-writing" className="hover:underline">Scientific Writing</Link></li>
+                            <li><Link href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 no-underline hover:no-underline">Manuscript Editing</Link></li>
+                            <li><Link href="/academy/manuscript-guidelines" className="text-blue-600 no-underline hover:no-underline">Manuscript Guidelines</Link></li>
+                            <li><Link href="/services/physician-writing-services/physician-manuscript" className="text-blue-600 no-underline hover:no-underline">Manuscript Writing</Link></li>
+                            <li><Link href="/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission" className="text-blue-600 no-underline hover:no-underline">Manuscript Preparation guidelines</Link></li>
+                            <li><Link href="/academy/manuscript-submission" className="text-blue-600 no-underline hover:no-underline">Manuscript Submission Guidelines</Link></li>
+                            <li><Link href="/services/editing-and-translation/manuscript-editing" className="text-blue-600 no-underline hover:no-underline">Manuscript Editing Services</Link></li>
+                            <li><Link href="/academy" className="text-blue-600 no-underline hover:no-underline">Study Guides</Link></li>
+                            <li><Link href="/services/research-services/scientific-writing" className="text-blue-600 no-underline hover:no-underline">Scientific Writing</Link></li>
                         </ul>
                     </div>
                 </aside>
@@ -353,7 +353,7 @@ export default function PlagiarismDetectionPage() {
                             The use of <span className="text-blue-600">artificial intelligence</span> (AI) for <span className="text-blue-600">detecting plagiarism</span> is now based upon the meaning of content instead of the specific words used. AI allows for more accurate identification of paraphrased or translated sources, providing protection for academic integrity and intellectual property as well as fostering an ethical and original approach to content creation. This will be beneficial across multiple industries.
                         </p>
                         <p className="italic">
-                            Ensure content originality, academic integrity, and enterprise compliance with Pubrica&apos;s AI-powered plagiarism detection expertise. <Link href="/order-now" className="text-sky-600 hover:underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-sky-600 hover:underline">[Schedule a Free Consultation]</Link>.
+                            Ensure content originality, academic integrity, and enterprise compliance with Pubrica&apos;s AI-powered plagiarism detection expertise. <Link href="/order-now" className="text-blue-600 no-underline hover:no-underline">[Get Expert Publishing Support]</Link> or <Link href="/order-now" className="text-blue-600 no-underline hover:no-underline">[Schedule a Free Consultation]</Link>.
                         </p>
                     </section>
 

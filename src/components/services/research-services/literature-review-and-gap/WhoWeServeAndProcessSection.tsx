@@ -58,7 +58,7 @@ const audienceCards: AudienceCard[] = [
     description: (
       <>
         For dissertation development, thesis writing, systematic review, topic mapping,{" "}
-        <Link href="/services/research-services/literature-review-and-gap" className="text-sky-500 hover:underline">
+        <Link href="/services/research-services/literature-review-and-gap" className="text-blue-600 no-underline hover:no-underline">
           research consultancy
         </Link>
         , gap analysis, and peer-reviewed journal publications, requiring methodologically sound and publication-ready literature review is required.
@@ -143,7 +143,7 @@ const processSteps: StepItem[] = [
     description: (
       <>
         Our experts analyse the evidence to identify gaps in knowledge, under-researched areas, inconsistencies, or methodological limitations, helping to shape future research questions and{" "}
-        <Link href="/services/research-services/literature-review-and-gap/literature-review-and-gap-literature-review-support-chronological-vs-thematic" className="text-sky-500 ">
+        <Link href="/services/research-services/literature-review-and-gap/literature-review-and-gap-literature-review-support-chronological-vs-thematic" className="text-blue-600 no-underline hover:no-underline">
           research gap analysis service
         </Link>{" "}
         reports.
@@ -189,7 +189,7 @@ export default function WhoWeServeAndProcessSection() {
             </h2>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-5xl">
               At Pubrica, our{" "}
-              <Link href="/academy/research-services/literature-review-tips-introduction-discussion-sections" className="text-sky-500 ">
+              <Link href="/academy/research-services/literature-review-tips-introduction-discussion-sections" className="text-blue-600 no-underline hover:no-underline">
                 literature review experts
               </Link>{" "}
               are trusted by a diverse global clientele, each with distinct
@@ -270,7 +270,7 @@ export default function WhoWeServeAndProcessSection() {
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
               At Pubrica, we follow a structured, evidence-based literature
               review writing service and{" "}
-              <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-sky-500 hover:underline">
+              <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-blue-600 no-underline hover:no-underline">
                 research gap analysis service
               </Link>{" "}
               approach. Our step-by-step process ensures scientific accuracy,

@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import CommonUploadButton from '@/components/common/CommonUploadButton';
 import type { Metadata } from 'next';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import HeroBanner from '@/components/common/HeroBanner';
@@ -89,12 +90,12 @@ export default function PosterPreparationPage() {
                 <span className="font-semibold">Structuring poster layout</span> according to conference
                 guidelines (e.g.,{' '}
                 <a href="https://www.aacr.org/wp-content/uploads/2021/09/AACR22_Abstract-Guidelines.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 ">AACR</a>,{' '}
-                <Link href="/services/publication-support/poster-preparation/european-society-for-medical-oncology" className="text-blue-600 ">ESMO</Link>,{' '}
+                <Link href="/services/publication-support/poster-preparation/european-society-for-medical-oncology" className="text-blue-600 no-underline hover:no-underline">ESMO</Link>,{' '}
                 <a href="https://www.asco.org/annual-meeting/abstracts-presentations/poster-presenter-guidelines" target="_blank" rel="noopener noreferrer" className="text-blue-600 ">ASCO</a>,{' '}
                 <a href="https://www.isscr.org/guidelines" target="_blank" rel="noopener noreferrer">ISSCR</a>)
               </li>
               <li>
-                <Link href="/services/publication-support/poster-preparation/why-scientific-design-and-visualization-matter-in-poster-preparation/" className="text-blue-700">
+                <Link href="/services/publication-support/poster-preparation/why-scientific-design-and-visualization-matter-in-poster-preparation/" className="text-blue-600 no-underline hover:no-underline">
                   Scientific design &amp; visualization
                 </Link>{' '}
                 with infographics, graphs, charts, and visuals appropriate to your area of research
@@ -140,7 +141,7 @@ export default function PosterPreparationPage() {
           Pubrica provides researchers with the ability to create conference-ready posters without the
           hassle of design problems, formatting issues, or compliance gaps. From conceptualization
           to final delivery, we become your{" "}
-          <Link href="/services/publication-support/poster-preparation/how-to-design-a-research-poster/" className="text-blue-600 ">
+          <Link href="/services/publication-support/poster-preparation/how-to-design-a-research-poster/" className="text-blue-600 no-underline hover:no-underline">
             scientific design
           </Link>{" "}
           partner, delivering a poster that represents the quality of your research and its clarity.
@@ -148,14 +149,13 @@ export default function PosterPreparationPage() {
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center gap-8 mt-6 mb-10">
           <GetFreeQuoteButton />
-          <a
+          <CommonUploadButton
             href="/uploads/Poster-Preparation-Services-_compressed.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
           >
             View Brochure
-          </a>
+          </CommonUploadButton>
         </div>
 
 
@@ -190,8 +190,8 @@ export default function PosterPreparationPage() {
                 Our visual artists will carefully manage the layout, pagination, and graphics for
                 your poster to effectively represent the contents of your research, be it based
                 on{' '}
-                <Link href="/services/research-services/scientific-writing" className="text-blue-500 ">scientific writing</Link>,{' '}
-                <Link href="/services/research-services/meta-analysis" className="text-blue-500 ">meta-analysis</Link>, or
+                <Link href="/services/research-services/scientific-writing" className="text-blue-600 no-underline hover:no-underline">scientific writing</Link>,{' '}
+                <Link href="/services/research-services/meta-analysis" className="text-blue-600 no-underline hover:no-underline">meta-analysis</Link>, or
                 experimental studies, clearly and engagingly.
               </p>
             </div>
@@ -205,8 +205,8 @@ export default function PosterPreparationPage() {
                 We offer lots of design templates, layouts, fonts, and colour themes to
                 consider, and you can create a poster that exhibits your style or your
                 institution&apos;s style. The templates are easily adaptable for your poster,{' '}
-                <Link href="/services/research-impact/graphical-abstract" className="text-blue-500 ">graphical abstract</Link>,{' '}
-                <Link href="/services/patient-education-content" className="text-blue-500 ">patient education material</Link>,
+                <Link href="/services/research-impact/graphical-abstract" className="text-blue-600 no-underline hover:no-underline">graphical abstract</Link>,{' '}
+                <Link href="/services/patient-education-content" className="text-blue-600 no-underline hover:no-underline">patient education material</Link>,
                 or scientific conference poster.
               </p>
             </div>
@@ -219,7 +219,7 @@ export default function PosterPreparationPage() {
               <p className="text-gray-600 text-sm leading-relaxed">
                 Creating an academic poster is the process of synthesizing substantive research,
                 which can include a clinical trial,{' '}
-                <Link href="/services/research-services/meta-analysis" className="text-blue-500 ">meta-analysis</Link>, or large
+                <Link href="/services/research-services/meta-analysis" className="text-blue-600 no-underline hover:no-underline">meta-analysis</Link>, or large
                 data set, into a format that is easy to consume. Our team works with you to
                 highlight key points and data, making your poster both informative and engaging.
               </p>

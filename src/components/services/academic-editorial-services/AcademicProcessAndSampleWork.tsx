@@ -95,7 +95,7 @@ export default function AcademicProcessAndSampleWork() {
           <p className="text-xs sm:text-sm text-emerald-100 font-light leading-relaxed">
             Strengthen the clarity, coherence, and scholarly impact of your
             research with Pubrica’s professional{" "}
-            <Link href="/services/academic-editorial-services" className="text-sky-400 hover:underline">
+            <Link href="/services/academic-editorial-services" className="text-blue-600 no-underline hover:no-underline">
               academic editorial services
             </Link>
             . We enhance language, structure, academic tone, and compliance to

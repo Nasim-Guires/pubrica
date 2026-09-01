@@ -794,7 +794,7 @@ export default function AboutPage() {
                   {/* Call To Action Footer */}
                   <div className="mt-12 text-center text-[16px] font-normal tracking-wide text-gray-200">
                     To know more about purica research services{" "}
-                    <Link href="/contact-us" className="text-[#0099ff] font-bold underline hover:text-sky-300 transition-colors ml-1">
+                    <Link href="/contact-us" className="text-blue-600 font-bold transition-colors ml-1 no-underline hover:no-underline">
                       Reach Us
                     </Link>
                   </div>

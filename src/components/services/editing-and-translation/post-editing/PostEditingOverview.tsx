@@ -60,14 +60,14 @@ export const PostEditingOverview: React.FC = () => {
           Pubrica’s{" "}
           <Link
             href="/services/editing-and-translation/manuscript-editing"
-            className="text-blue-600"
+            className="text-blue-600 no-underline hover:no-underline"
           >
             Post-Editing Services
           </Link>{" "}
           are designed to refine and enhance your revised{" "}
           <Link
             href="/services/editing-and-translation/manuscript-editing"
-            className="text-blue-600"
+            className="text-blue-600 no-underline hover:no-underline"
           >
             manuscripts
           </Link>

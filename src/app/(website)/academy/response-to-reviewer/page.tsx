@@ -121,7 +121,7 @@ export default function ResponseToReviewerPage() {
                                                     href="/images/Response-to-Reviewer-pdf.pdf"
                                                     target="_blank"
                                                     rel="noreferrer"
-                                                    className="text-sky-600 underline"
+                                                    className="text-blue-600 no-underline hover:no-underline"
                                                 >
                                                     Download PDF
                                                 </a>

@@ -164,25 +164,25 @@ export default function WebsiteTreeStructurePage() {
               <span className="text-[10px] block font-normal text-gray-300">Knowledge Works</span>
             </div>
             <nav className="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-700">
-              <Link href="/services" target="_blank" rel="noopener noreferrer" className="hover:text-teal-600 flex items-center gap-1">
+              <Link href="/services" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-blue-600 no-underline hover:no-underline">
                 Services <ChevronDown className="w-3 h-3" />
               </Link>
-              <Link href="/industries" target="_blank" rel="noopener noreferrer" className="hover:text-teal-600">
+              <Link href="/industries" target="_blank" rel="noopener noreferrer" className="text-blue-600 no-underline hover:no-underline">
                 Industries
               </Link>
-              <Link href="/subject-matter-experts" target="_blank" rel="noopener noreferrer" className="hover:text-teal-600">
+              <Link href="/subject-matter-experts" target="_blank" rel="noopener noreferrer" className="text-blue-600 no-underline hover:no-underline">
                 Subjects
               </Link>
-              <Link href="/about-us" target="_blank" rel="noopener noreferrer" className="hover:text-teal-600 flex items-center gap-1">
+              <Link href="/about-us" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-blue-600 no-underline hover:no-underline">
                 About Us <ChevronDown className="w-3 h-3" />
               </Link>
-              <Link href="/academy" target="_blank" rel="noopener noreferrer" className="hover:text-teal-600">
+              <Link href="/academy" target="_blank" rel="noopener noreferrer" className="text-blue-600 no-underline hover:no-underline">
                 Academy
               </Link>
-              <Link href="/insights" target="_blank" rel="noopener noreferrer" className="hover:text-teal-600">
+              <Link href="/insights" target="_blank" rel="noopener noreferrer" className="text-blue-600 no-underline hover:no-underline">
                 Insights
               </Link>
-              <Link href="/contact-us" target="_blank" rel="noopener noreferrer" className="hover:text-teal-600">
+              <Link href="/contact-us" target="_blank" rel="noopener noreferrer" className="text-blue-600 no-underline hover:no-underline">
                 Contact Us
               </Link>
             </nav>

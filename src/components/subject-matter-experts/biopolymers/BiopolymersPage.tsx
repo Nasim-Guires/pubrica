@@ -135,9 +135,9 @@ export default function BiopolymersPage() {
 
                         <p className="text-gray-600 text-sm leading-relaxed">
                             The growing global preference for sustainable polymers and biodegradable plastics has driven significant innovation in polymer research. These materials are increasingly applied in{" "}
-                            <Link href="/subject-matter-experts/biotechnology" className="text-sky-600 hover:underline">biotechnology</Link>,{" "}
-                            <Link href="/subject-matter-experts/pharmaceuticals" className="text-sky-600 hover:underline">pharmaceuticals</Link>,{" "}
-                            <Link href="/subject-matter-experts/agriculture" className="text-sky-600 hover:underline">agriculture</Link>, food science, packaging, sensors, electronics, and more. Researchers and industries are exploring new extraction methods, biopolymer synthesis modification techniques, and composite developments to enhance mechanical performance, biocompatibility, chemical stability, and feasibility for mass production.
+                            <Link href="/subject-matter-experts/biotechnology" className="text-blue-600 no-underline hover:no-underline">biotechnology</Link>,{" "}
+                            <Link href="/subject-matter-experts/pharmaceuticals" className="text-blue-600 no-underline hover:no-underline">pharmaceuticals</Link>,{" "}
+                            <Link href="/subject-matter-experts/agriculture" className="text-blue-600 no-underline hover:no-underline">agriculture</Link>, food science, packaging, sensors, electronics, and more. Researchers and industries are exploring new extraction methods, biopolymer synthesis modification techniques, and composite developments to enhance mechanical performance, biocompatibility, chemical stability, and feasibility for mass production.
                         </p>
 
                         <p className="text-gray-600 text-sm leading-relaxed">

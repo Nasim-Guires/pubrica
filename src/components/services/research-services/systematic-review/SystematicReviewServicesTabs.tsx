@@ -324,7 +324,7 @@ export default function SystematicReviewServicesTabs() {
           Pubrica provides end-to-end{" "}
           <Link
             href="/services/research-services/systematic-review"
-            className="text-blue-600 hover:underline"
+            className="text-blue-600 no-underline hover:no-underline"
           >
             systematic review writing services
           </Link>{" "}

@@ -76,7 +76,7 @@
 //           Ensures journal-specific{" "}
 //           <Link
 //             href="/services/publication-support/journal-manuscript-formatting-services/"
-//             className="text-blue-700 no-underline hover:text-blue-800"
+//             className="text-blue-600 no-underline hover:no-underline"
 //           >
 //             formatting
 //           </Link>{" "}
@@ -101,7 +101,7 @@
 //           Provides{" "}
 //           <Link
 //             href="/services/publication-support/plagiarism-services/"
-//             className="text-blue-700 no-underline hover:text-blue-800"
+//             className="text-blue-600 no-underline hover:no-underline"
 //           >
 //             plagiarism
 //           </Link>{" "}

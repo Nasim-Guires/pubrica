@@ -70,7 +70,7 @@ export default function ManuscriptFormattingService() {
                 <span>
                   <Link
                     href="/services/publication-support/journal-manuscript-formatting-services/citation-management-tools-formatting-referencing"
-                    className="text-[#2563eb] hover:underline font-medium"
+                    className="text-blue-600 font-medium no-underline hover:no-underline"
                   >
                     Citation and reference formatting
                   </Link>{" "}
@@ -111,7 +111,7 @@ export default function ManuscriptFormattingService() {
                   Cross-checking of in-text{" "}
                   <Link
                     href="/services/publication-support/journal-manuscript-formatting-services/citation-styles-apa-ama-mla-vancouver-guide"
-                    className="text-[#2563eb] hover:underline font-medium"
+                    className="text-blue-600 font-medium no-underline hover:no-underline"
                   >
                     citations
                   </Link>{" "}

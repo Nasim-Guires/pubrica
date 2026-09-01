@@ -78,7 +78,7 @@ export default function WhoWeServeAndProcessLiterature() {
     const description = (
         <>
             With Pubrica&apos;s patient education content service, our medical experts and{" "}
-            <Link href="/services/research-services/scientific-writing/" className="text-blue-600">
+            <Link href="/services/research-services/scientific-writing/" className="text-blue-600 no-underline hover:no-underline">
                 scientific writing
             </Link>{" "}
             team work together to develop clear, accurate, and guideline-compliant educational materials that are tailored to specific patient needs and aligned with healthcare communication standards.

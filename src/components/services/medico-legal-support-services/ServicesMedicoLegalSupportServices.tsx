@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import CommonUploadButton from "@/components/common/CommonUploadButton";
 import Image from "next/image";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
@@ -59,7 +60,7 @@ export default function ServicesMedicoLegalSupportServices() {
             </h2>
             <p className="text-sm sm:text-base text-gray-700 mb-6">
               Provide expert, evidence-based{" "}
-              <Link href="/services/medico-legal-support-services" className="text-sky-600 underline font-medium">
+              <Link href="/services/medico-legal-support-services" className="text-blue-600 font-medium no-underline hover:no-underline">
                 medico legal support services
               </Link>{" "}
               to establish the precise, credible, and legal aspects of medical negligence cases. Our team of medical and legal experts offers reliable assistance with complex medical malpractice, personal injury claims, and insurance disputes. Through professional medico legal consulting services, we assist legal professionals, insurers, and healthcare professionals in understanding the intersection of medicine and law in a clear, professional, and precise manner.
@@ -67,14 +68,13 @@ export default function ServicesMedicoLegalSupportServices() {
 
             <div className="flex flex-wrap items-center gap-8">
               <GetFreeQuoteButton />
-              <Link
+              <CommonUploadButton
                 href="/uploads/Medico-Legal-Support-Services_compressed.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
               >
                 View Brochure
-              </Link>
+              </CommonUploadButton>
             </div>
           </div>
 
@@ -107,7 +107,7 @@ export default function ServicesMedicoLegalSupportServices() {
           <div className="space-y-4 text-sm sm:text-base text-gray-700">
             <p>
               Pubrica provides specialised{" "}
-              <Link href="/services/medico-legal-support-services" className="text-sky-600 underline font-medium">
+              <Link href="/services/medico-legal-support-services" className="text-blue-600 font-medium no-underline hover:no-underline">
                 medico legal support services
               </Link>{" "}
               in medical negligence, malpractice, and insurance claims disputes. Our expert medical and legal professionals offer sound assessments based on evidence to support legal proceedings and protect patient rights. Whether the situation involves a clinical negligence claim, litigation readiness, or a dispute regarding insurance coverage denial, we can help you determine if the standard of care was breached and assess the resulting harm.
@@ -115,7 +115,7 @@ export default function ServicesMedicoLegalSupportServices() {
 
             <p>
               Consult with Pubrica’s medico-legal experts for a complete, evidence-backed case review. We analyse medical records, treatment protocols, and clinical timelines through professional{" "}
-              <Link href="/services/medico-legal-support-services" className="text-sky-600 underline font-medium">
+              <Link href="/services/medico-legal-support-services" className="text-blue-600 font-medium no-underline hover:no-underline">
                 medical record review services
               </Link>{" "}
               to assess liability, breach of duty, and causation, ensuring your medical negligence litigation is supported by clear, objective, and court-defensible findings.
@@ -123,7 +123,7 @@ export default function ServicesMedicoLegalSupportServices() {
 
             <p>
               Our team is committed to aligning every opinion with the highest standards of legal and clinical practice, providing unmatched clarity in civil, criminal, and insurance-related medico-legal cases. Organizations that{" "}
-              <Link href="/services/medico-legal-support-services" className="text-sky-600 underline font-medium">
+              <Link href="/services/medico-legal-support-services" className="text-blue-600 font-medium no-underline hover:no-underline">
                 outsource medico legal services
               </Link>{" "}
               to Pubrica gain access to specialized expertise, structured case analysis, and reliable medico-legal documentation.

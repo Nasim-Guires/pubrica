@@ -89,7 +89,7 @@ const AccessibilityCompliancePage: NextPage = () => {
                                 </p>
                                 <ul className="list-disc pl-5 space-y-2 text-gray-700">
                                     <li>
-                                        Compliance to <Link href="/services/education-editorial-service/accessibility-compliance/web-accessibility-compliance-wcag-standards" className="text-blue-600 hover:underline">International Accessibility Standards</Link>, including WCAG and Section 508
+                                        Compliance to <Link href="/services/education-editorial-service/accessibility-compliance/web-accessibility-compliance-wcag-standards" className="text-blue-600 no-underline hover:no-underline">International Accessibility Standards</Link>, including WCAG and Section 508
                                     </li>
                                     <li>Correct document structures, headings, and semantic Formatting</li>
                                     <li>
@@ -100,7 +100,7 @@ const AccessibilityCompliancePage: NextPage = () => {
                                     </li>
                                     <li>Tables, Equations, References, and Supplementary Materials will be accessible.</li>
                                     <li>
-                                        Compliance to <Link href="/services/education-editorial-service/accessibility-compliance" className="text-blue-600 hover:underline">Publisher-Specific Accessibility and Formatting Guidelines.</Link>
+                                        Compliance to <Link href="/services/education-editorial-service/accessibility-compliance" className="text-blue-600 no-underline hover:no-underline">Publisher-Specific Accessibility and Formatting Guidelines.</Link>
                                     </li>
                                 </ul>
                             </div>

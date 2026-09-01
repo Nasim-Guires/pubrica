@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import CommonUploadButton from "@/components/common/CommonUploadButton";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function EducationalContentDevelopmentPage() {
@@ -53,7 +54,7 @@ export default function EducationalContentDevelopmentPage() {
               retention. Our team of{" "}
               <Link
                 href="/subject-matter-experts"
-                className="text-sky-600 hover:underline"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 subject matter experts
               </Link>
@@ -134,13 +135,13 @@ export default function EducationalContentDevelopmentPage() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-8 pt-4">
               <GetFreeQuoteButton />
-              <Link
+              <CommonUploadButton
                 href="/uploads/educational-content-development/Educational-Content-Development.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"              >
+              >
                 View Brochure
-              </Link>
+              </CommonUploadButton>
             </div>
           </div>
 

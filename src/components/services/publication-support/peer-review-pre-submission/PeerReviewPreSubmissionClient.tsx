@@ -2,6 +2,7 @@ import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import HeroBanner from "@/components/common/HeroBanner";
 import Image from "next/image";
 import Link from "next/link";
+import CommonUploadButton from "@/components/common/CommonUploadButton";
 
 export default function PeerReviewPreSubmissionClient() {
   return (
@@ -91,7 +92,7 @@ export default function PeerReviewPreSubmissionClient() {
                       before the journal’s{" "}
                       <Link
                         href="/academy/peer-review/peer-review-week-2025-ai-era"
-                        className="text-blue-600 font-medium no-underline hover:text-blue-700"
+                        className="text-blue-600 font-medium no-underline hover:no-underline"
                       >
                         peer review
                       </Link>
@@ -113,7 +114,7 @@ export default function PeerReviewPreSubmissionClient() {
             Pre-Submission{" "}
             <Link
               href="/academy/peer-review/journal-peer-review-process-after-submission"
-              className="text-blue-600 font-medium no-underline hover:text-blue-700"
+              className="text-blue-600 font-medium no-underline hover:no-underline"
             >
               Peer Review
             </Link>{" "}
@@ -141,7 +142,7 @@ export default function PeerReviewPreSubmissionClient() {
             Our{" "}
             <Link
               href="/academy/peer-review/how-publishers-balance-authors-and-reviewers"
-              className="text-blue-600 font-medium no-underline hover:text-blue-700"
+              className="text-blue-600 font-medium no-underline hover:no-underline"
             >
               pre-submission peer review
             </Link>{" "}
@@ -154,12 +155,12 @@ export default function PeerReviewPreSubmissionClient() {
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center gap-8 mt-6 mb-10">
             <GetFreeQuoteButton />
-            <Link
+            <CommonUploadButton
               href="/uploads/publication-support/peer-review-pre-submission/Pre-Submission-Peer-Review-Matters.pdf"
-              className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none no-underline"
+              className="no-underline"
             >
               View Brochure
-            </Link>
+            </CommonUploadButton>
           </div>
         </div>
 
@@ -239,7 +240,7 @@ export default function PeerReviewPreSubmissionClient() {
             submitting your manuscript is essential. Our{" "}
             <Link
               href="/academy/peer-review/ai-and-peer-review-collaborative-intelligence"
-              className="text-blue-600 font-medium no-underline hover:text-blue-700"
+              className="text-blue-600 font-medium no-underline hover:no-underline"
             >
               peer review
             </Link>{" "}

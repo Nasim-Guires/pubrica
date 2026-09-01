@@ -234,7 +234,7 @@ export default function ClinicalReviewScopeAndApproach() {
           Pubrica offers systematic, detailed, and methodologically sound
           clinical literature reviews to facilitate evidence-based
           decision-making in healthcare. Our services integrate{" "}
-          <Link href="/services/research-services/systematic-review" className="text-sky-600 underline hover:text-sky-800">
+          <Link href="/services/research-services/systematic-review" className="text-blue-600 no-underline hover:no-underline">
             Systematic Review Support
           </Link>{" "}
           to objectively appraise and synthesize the latest clinical evidence,
@@ -300,7 +300,7 @@ export default function ClinicalReviewScopeAndApproach() {
 
             <p className="text-xs text-slate-600 pt-3">
               Our{" "}
-              <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-sky-600 underline">
+              <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-blue-600 no-underline hover:no-underline">
                 EBM literature review
               </Link>{" "}
               is compliant with{" "}
@@ -330,7 +330,7 @@ export default function ClinicalReviewScopeAndApproach() {
           <div className="md:col-span-5 relative h-80 md:h-[380px]">
             <Link 
               href="/insights/sample-work/patient-safety-culture-among-operating-theatre-nurses-in-operating-room/"
-              className="absolute top-0 right-4 w-3/4 h-52 rounded-xl overflow-hidden shadow-lg border-2 border-white z-10 block group"
+              className="absolute top-0 right-4 w-3/4 h-52 rounded-xl overflow-hidden shadow-lg border-2 border-white z-10 block group text-blue-600 no-underline hover:no-underline"
             >
               <Image
                 src="/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/our-approch-.webp"

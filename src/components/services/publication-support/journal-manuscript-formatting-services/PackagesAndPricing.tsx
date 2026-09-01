@@ -87,14 +87,14 @@ export default function PackagesAndPricing() {
       formatted to meet{" "}
       <Link
         href="/pubrica.com/services/publication-support/journal-submission/"
-        className="text-blue-700"
+        className="text-blue-600 no-underline hover:no-underline"
       >
         journal submission
       </Link>{" "}
       requirements and academic publishing standards. Whether you require minor{" "}
       <Link
         href="/academy/formatting-service/life-science-manuscript-formatting-faster-publication/"
-        className="text-blue-700"
+        className="text-blue-600 no-underline hover:no-underline"
       >
         manuscript formatting
       </Link>{" "}

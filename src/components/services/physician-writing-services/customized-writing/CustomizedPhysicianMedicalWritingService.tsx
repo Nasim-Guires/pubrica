@@ -156,7 +156,7 @@ export default function CustomizedPhysicianMedicalWritingService() {
                 <li className="flex items-start gap-2">
                   <span className="text-red-600 font-bold">•</span>
                   <span>
-                    Authored by domain-specific <Link href="/subject-matter-experts" className="text-sky-700 font-medium">subject matter experts</Link> with a clinical background
+                    Authored by domain-specific <Link href="/subject-matter-experts" className="text-blue-600 font-medium no-underline hover:no-underline">subject matter experts</Link> with a clinical background
                   </span>
                 </li>
                 <li className="flex items-start gap-2">

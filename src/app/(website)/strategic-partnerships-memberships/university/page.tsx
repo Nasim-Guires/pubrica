@@ -255,17 +255,17 @@ export default function UniversityPartnershipPage() {
                 <h3 className="font-bold text-lg text-[#26373b] mb-4">The latest from Pubrica</h3>
                 <ul className="space-y-2 text-xs text-blue-800">
                     <li>
-                        <Link href="/academy/industry-news" className="hover:underline flex items-center gap-2">
+                        <Link href="/academy/industry-news" className="flex items-center gap-2 text-blue-600 no-underline hover:no-underline">
                             <span>▶</span> COASP Meeting 2016: Pubrica Report in Science Editor
                         </Link>
                     </li>
                     <li>
-                        <Link href="/academy/industry-news" className="hover:underline flex items-center gap-2">
+                        <Link href="/academy/industry-news" className="flex items-center gap-2 text-blue-600 no-underline hover:no-underline">
                             <span>▶</span> Council of Science Editors (CSE) Annual Meeting 2016:Pubrica Report in CSE
                         </Link>
                     </li>
                     <li>
-                        <Link href="/academy/industry-news" className="hover:underline flex items-center gap-2">
+                        <Link href="/academy/industry-news" className="flex items-center gap-2 text-blue-600 no-underline hover:no-underline">
                             <span>▶</span> Open Access Publishing Decoded at the 8th COASP Meeting
                         </Link>
                     </li>

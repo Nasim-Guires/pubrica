@@ -70,11 +70,11 @@ export default function PhysicianResearchProposalService() {
                         <article className="lg:col-span-7 space-y-4 text-sm sm:text-base leading-relaxed text-gray-700">
                             <p>
                                 For busy <strong className="text-gray-900 font-semibold">physicians and surgeons</strong>, developing a{' '}
-                                <Link href="/academy/research-proposal/how-to-write-a-research-proposal-a-complete-guide" className="text-[#2b6cb0] hover:underline">
+                                <Link href="/academy/research-proposal/how-to-write-a-research-proposal-a-complete-guide" className="text-blue-600 no-underline hover:no-underline">
                                     research protocol or proposal
                                 </Link>{' '}
                                 often competes with demanding clinical schedules. Navigating ethical approvals,{' '}
-                                <Link href="/services/physician-writing-services/research-proposal/research-design-types-methods-best-practices" className="text-[#2b6cb0] hover:underline">
+                                <Link href="/services/physician-writing-services/research-proposal/research-design-types-methods-best-practices" className="text-blue-600 no-underline hover:no-underline">
                                     research design
                                 </Link>
                                 , and funding formats is time-consuming and requires expertise that extends beyond clinical practice. That's where Pubrica steps in.
@@ -179,7 +179,7 @@ export default function PhysicianResearchProposalService() {
                                         <li className="flex items-start">
                                             <span className="text-[#c5281c] font-bold mr-2 text-base leading-none">&bull;</span>
                                             <div>
-                                                <strong className="text-gray-900">Study Design &amp; Methodology Consulting:</strong> Our team outlines the most appropriate research methodology (RCT, Cohort, Cross-sectional, etc.), including study type, population, sampling, <Link href="/services/medical-data-collection" className="text-[#2b6cb0] hover:underline">data collection</Link> instruments, statistical tests, sample size justification, endpoint definitions, and ethical considerations, tailored for clinical, experimental, or qualitative research.
+                                                <strong className="text-gray-900">Study Design &amp; Methodology Consulting:</strong> Our team outlines the most appropriate research methodology (RCT, Cohort, Cross-sectional, etc.), including study type, population, sampling, <Link href="/services/medical-data-collection" className="text-blue-600 no-underline hover:no-underline">data collection</Link> instruments, statistical tests, sample size justification, endpoint definitions, and ethical considerations, tailored for clinical, experimental, or qualitative research.
                                             </div>
                                         </li>
                                         <li className="flex items-start">
@@ -192,7 +192,7 @@ export default function PhysicianResearchProposalService() {
                                             <span className="text-[#c5281c] font-bold mr-2 text-base leading-none">&bull;</span>
                                             <div>
                                                 <strong className="text-gray-900">Hypothesis &amp; Objective Formulation:</strong> We create measurable objectives and hypotheses based on a critical{' '}
-                                                <Link href="/services/research-services/literature-review-and-gap" className="text-[#2b6cb0] hover:underline">literature review</Link> and research gaps.
+                                                <Link href="/services/research-services/literature-review-and-gap" className="text-blue-600 no-underline hover:no-underline">literature review</Link> and research gaps.
                                             </div>
                                         </li>
                                         <li className="flex items-start">
@@ -223,7 +223,7 @@ export default function PhysicianResearchProposalService() {
                                         <li className="flex items-start">
                                             <span className="text-[#c5281c] font-bold mr-2 text-base leading-none">&bull;</span>
                                             <div>
-                                                <strong className="text-gray-900">Revisions &amp; Expert Review:</strong> Post-submission, you receive structured peer-level feedback, <Link href="/services/publication-support/responding-to-reviewers" className="text-[#2b6cb0] hover:underline">reviewer responses</Link>, and iterative support.
+                                                <strong className="text-gray-900">Revisions &amp; Expert Review:</strong> Post-submission, you receive structured peer-level feedback, <Link href="/services/publication-support/responding-to-reviewers" className="text-blue-600 no-underline hover:no-underline">reviewer responses</Link>, and iterative support.
                                             </div>
                                         </li>
                                         <li className="flex items-start">

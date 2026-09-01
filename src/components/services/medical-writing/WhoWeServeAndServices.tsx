@@ -41,7 +41,7 @@ const serviceDataRow1: ServiceCard[] = [
     description: (
       <>
         We provide{" "}
-        <Link href="/academy/medical-writing/transform-pharma-biotech-challenges-into-publishable-manuscripts" className="text-sky-600 hover:underline">
+        <Link href="/academy/medical-writing/transform-pharma-biotech-challenges-into-publishable-manuscripts" className="text-blue-600 no-underline hover:no-underline">
           medical writing
         </Link>{" "}
         for researchers and institutions: manuscripts, reviews, thesis
@@ -125,7 +125,7 @@ export default function WhoWeServeAndServices(): React.ReactElement {
             At Pubrica, we provide specialized{" "}
             <Link
               href="/academy/medical-writing/medical-writing-approaches"
-              className="text-sky-600 hover:underline"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               medical writing services
             </Link>{" "}

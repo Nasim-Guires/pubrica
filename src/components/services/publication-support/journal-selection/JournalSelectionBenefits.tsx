@@ -20,7 +20,7 @@ export default function JournalSelectionBenefits() {
             Improve your publication journey with Pubrica’s{" "}
             <Link
               href="/services/publication-support/journal-selection/right-journal-for-your-research/"
-              className="text-cyan-300 hover:underline"
+              className="text-blue-600 no-underline hover:no-underline"
             >
               journal selection
             </Link>{" "}
@@ -54,13 +54,13 @@ export default function JournalSelectionBenefits() {
                     Bring decades of knowledge from experience.
                   </strong>{" "}
                   Tap into Pubrica’s 20+ years of{" "}
-                  <Link href="/services/publication-support/journal-selection/journal-selection-manuscript-optimization" className="text-cyan-600 hover:underline">
+                  <Link href="/services/publication-support/journal-selection/journal-selection-manuscript-optimization" className="text-blue-600 no-underline hover:no-underline">
                     academic publishing experience
                   </Link>
                   . Our experienced team has helped over 800,000 researchers
                   publish in high-impact-factor journals. In addition, with
                   experience from more than 800,000 publications, our{" "}
-                  <Link href="/insights/addressing-barriers-to-copd-care-three-innovative-evidence" className="text-cyan-600 hover:underline">
+                  <Link href="/insights/addressing-barriers-to-copd-care-three-innovative-evidence" className="text-blue-600 no-underline hover:no-underline">
                     journal selection service
                   </Link>{" "}
                   makes the process easier and increases the likelihood of your
@@ -76,7 +76,7 @@ export default function JournalSelectionBenefits() {
                   </strong>{" "}
                   At Pubrica, we appreciate the struggles of selecting
                   peer-reviewed journals amongst the predatory ones. Our{" "}
-                  <Link href="/insights/journal-selection-gastroenterology-workforce" className="text-cyan-600 hover:underline">
+                  <Link href="/insights/journal-selection-gastroenterology-workforce" className="text-blue-600 no-underline hover:no-underline">
                     journal selection
                   </Link>{" "}
                   service guarantees you in credible, peer-reviewed journals.
@@ -92,7 +92,7 @@ export default function JournalSelectionBenefits() {
                   <strong className="text-slate-900 font-bold">
                     Choosing Pubrica’s professional{" "}
                   </strong>{" "}
-                  <a href="/insights/addressing-barriers-to-copd-care-three-innovative-evidence" className="text-blue-600 no-underline">
+                  <a href="/insights/addressing-barriers-to-copd-care-three-innovative-evidence" className="text-blue-600 no-underline hover:no-underline">
                     journal selection service{" "}
                   </a>
                   will decrease scope-based rejections from your target

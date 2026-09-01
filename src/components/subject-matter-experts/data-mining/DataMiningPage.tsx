@@ -123,7 +123,7 @@ export default function DataMiningPage() {
 
                         <p className="text-gray-600 text-sm leading-relaxed">
                             Data Mining is an advanced field of analysis that helps identify patterns, trends, and actionable insights in the complex{" "}
-                            <Link href="/services/medical-data-collection" className="text-blue-600 hover:underline font-medium">
+                            <Link href="/services/medical-data-collection" className="text-blue-600 font-medium no-underline hover:no-underline">
                                 data collection
                             </Link>{" "}
                             and processed by many diverse industries, as well as their associated decision-making methods based on statistical principles and machine learning methods, using both computer based techniques and manpower.
@@ -137,7 +137,7 @@ export default function DataMiningPage() {
                             At Pubrica, we provide complete{" "}
                             <Link
                                 href="/services/publication-support/"
-                                className="text-blue-600 hover:underline font-medium"
+                                className="text-blue-600 font-medium no-underline hover:no-underline"
                             >
                                 Publication support services
                             </Link>{" "}

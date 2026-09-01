@@ -108,8 +108,8 @@ export default function PhysicianTrainingHeroSection() {
                   <span className="text-[#b31217] font-extrabold text-base leading-none mt-0.5">•</span>
                   <div>
                     <span className="font-bold text-gray-900">Specialty-Specific Clinical Training Modules:</span> Created for General Medicine,{" "}
-                    <Link href="/subject-matter-experts/cardiology" className="text-sky-600 ">Cardiology</Link>,{" "}
-                    <Link href="/subject-matter-experts/neurology" className="text-sky-600 ">Neurology</Link>, Oncology, Paediatrics, etc.
+                    <Link href="/subject-matter-experts/cardiology" className="text-blue-600 no-underline hover:no-underline">Cardiology</Link>,{" "}
+                    <Link href="/subject-matter-experts/neurology" className="text-blue-600 no-underline hover:no-underline">Neurology</Link>, Oncology, Paediatrics, etc.
                   </div>
                 </li>
 

@@ -164,7 +164,7 @@ export default function DentistryPage() {
                         </p>
 
                         <p className="text-gray-600 text-sm leading-relaxed">
-                            Navigating the complexities of publishing impactful clinical dentistry research can be daunting, especially when it involves cutting-edge methodologies and advancements in dental and oral medicine. At Pubrica, we provide dentistry research support and dental publication services for researchers, academicians, clinicians, and dental institutions in conducting high-quality, evidence-based studies that meet global publication standards. Our multidisciplinary team of dental scientists, biostatisticians, and publication experts assists you throughout your research journey, from conceptualization and literature review to <Link href="/services/research-services/scientific-writing" className="text-[#2b6cb0] hover:underline">scientific writing</Link> in dentistry, <Link href="/services/publication-support/journal-selection" className="text-[#2b6cb0] hover:underline">journal selection</Link>, and publication.
+                            Navigating the complexities of publishing impactful clinical dentistry research can be daunting, especially when it involves cutting-edge methodologies and advancements in dental and oral medicine. At Pubrica, we provide dentistry research support and dental publication services for researchers, academicians, clinicians, and dental institutions in conducting high-quality, evidence-based studies that meet global publication standards. Our multidisciplinary team of dental scientists, biostatisticians, and publication experts assists you throughout your research journey, from conceptualization and literature review to <Link href="/services/research-services/scientific-writing" className="text-blue-600 no-underline hover:no-underline">scientific writing</Link> in dentistry, <Link href="/services/publication-support/journal-selection" className="text-blue-600 no-underline hover:no-underline">journal selection</Link>, and publication.
                         </p>
 
                         {/* CTA Button */}
@@ -204,7 +204,7 @@ export default function DentistryPage() {
                             Our Core Disciplines In Dentistry
                         </h2>
                         <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                            At Pubrica, our team comprises dental professionals, researchers, and subject-matter experts with advanced degrees (PhD, DDS, or MDS) across all dental specialties. Our experts have decades of combined experience in clinical research, <Link href="/services/research-services/scientific-writing" className="text-[#2b6cb0] hover:underline">scientific writing</Link>, peer review, and dental journal publication support. Our key disciplines include:
+                            At Pubrica, our team comprises dental professionals, researchers, and subject-matter experts with advanced degrees (PhD, DDS, or MDS) across all dental specialties. Our experts have decades of combined experience in clinical research, <Link href="/services/research-services/scientific-writing" className="text-blue-600 no-underline hover:no-underline">scientific writing</Link>, peer review, and dental journal publication support. Our key disciplines include:
                         </p>
                     </div>
 

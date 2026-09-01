@@ -83,14 +83,14 @@ export default function WhoWeServe() {
           At Pubrica, our{" "}
           <Link
             href="/services/research-services/meta-analysis/network-meta-analysis-guide/"
-            className="text-blue-600"
+            className="text-blue-600 no-underline hover:no-underline"
           >
             meta-analysis writing services
           </Link>{" "}
           cater to a diverse range of clients in the academic, clinical, and{" "}
           <Link
             href="/industries/pharmaceutical"
-            className="text-blue-600"
+            className="text-blue-600 no-underline hover:no-underline"
           >
             pharmaceutical
           </Link>{" "}

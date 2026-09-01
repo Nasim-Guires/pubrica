@@ -145,7 +145,7 @@ export default function ServiceRejectionTable({
         <p className="text-[14px] sm:text-[15px] text-slate-600 leading-relaxed">
           Usually, the most prominent, well-drafted, and outstanding articles
           would be the ones that clear the rigorous{" "}
-          <Link href="/services/publication-support/journal-selection/ckd-journal-selection-review/" className="text-[#3b82f6]  cursor-pointer">
+          <Link href="/services/publication-support/journal-selection/ckd-journal-selection-review/" className="text-blue-600 cursor-pointer no-underline hover:no-underline">
             review
           </Link>{" "}
           process, but there are several that get rejected for simple reasons
@@ -283,12 +283,12 @@ export default function ServiceRejectionTable({
           At Pubrica, we offer complete{" "}
           <Link
             href="/academy/publication-support/challenges-in-research-paper-writing-and-strategies-to-overcome-them"
-            className="text-blue-600 cursor-pointer"
+            className="text-blue-600 cursor-pointer no-underline hover:no-underline"
           >
             publication support services
           </Link>{" "}
           by aiding researchers from the process of{" "}
-          <Link href="/services/publication-support/journal-selection" className="text-[#3b82f6]  cursor-pointer font-medium">
+          <Link href="/services/publication-support/journal-selection" className="text-blue-600 cursor-pointer font-medium no-underline hover:no-underline">
             journal selection
           </Link>
           , manuscript preparation, and submission to ensure publications are

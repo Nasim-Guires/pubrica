@@ -17,6 +17,7 @@ import {
 import DynamicInsightsSection from "@/components/services/DynamicInsightsSection";
 import Image from "next/image";
 import Link from "next/link";
+import CommonUploadButton from "@/components/common/CommonUploadButton";
 import { useState } from "react";
 import { EditorialWorkflowSection } from "@/components/common/EditorialWorkflowSection";
 import CommonPackages from "@/components/common/CommonPackages";
@@ -146,7 +147,7 @@ const EditingAndTranslationPageClient = () => {
           Ensures journal-specific{" "}
           <Link
             href="/services/publication-support/journal-manuscript-formatting-services/"
-            className="text-blue-700 no-underline hover:text-blue-800"
+            className="text-blue-600 no-underline hover:no-underline"
           >
             formatting
           </Link>{" "}
@@ -171,7 +172,7 @@ const EditingAndTranslationPageClient = () => {
           Provides{" "}
           <Link
             href="/services/publication-support/plagiarism-services/"
-            className="text-blue-700 no-underline hover:text-blue-800"
+            className="text-blue-600 no-underline hover:no-underline"
           >
             plagiarism
           </Link>{" "}
@@ -344,11 +345,11 @@ const EditingAndTranslationPageClient = () => {
           {/* Paragraph */}
           <p className="text-[17px] leading-8 text-slate-700">
             Pubrica provides{" "}
-            <Link href="/academy/editing-and-translation/importance-of-editing-proofreading-manuscript-submission" className="text-blue-700">
+            <Link href="/academy/editing-and-translation/importance-of-editing-proofreading-manuscript-submission" className="text-blue-600 no-underline hover:no-underline">
               manuscript editing
             </Link>{" "}
             and academic translation services tailored for healthcare,
-            <Link href="/subject-matter-experts/life-sciences" className="text-blue-700">
+            <Link href="/subject-matter-experts/life-sciences" className="text-blue-600 no-underline hover:no-underline">
               {" "}
               life sciences
             </Link>
@@ -386,14 +387,13 @@ const EditingAndTranslationPageClient = () => {
           <div className="mt-10 flex flex-wrap items-center gap-8">
             <GetFreeQuoteButton />
 
-            <Link
+            <CommonUploadButton
               href="/uploads/editing-and-translation/Editing-and-Translation-Services.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none"
             >
               View Brochure
-            </Link>
+            </CommonUploadButton>
           </div>
         </div>
       </section>
@@ -407,7 +407,7 @@ const EditingAndTranslationPageClient = () => {
           </h2>
           <p className="text-[14px] text-slate-600 max-w-5xl mb-12 leading-relaxed">
             At Pubrica, we provide end-to-end{" "}
-            <Link href="/academy/editing-and-translation/manuscript-editing-process-steps" className="text-blue-700  font-normal">
+            <Link href="/academy/editing-and-translation/manuscript-editing-process-steps" className="text-blue-600 font-normal no-underline hover:no-underline">
               Editing and Translation Services
             </Link>{" "}
             designed to refine, enhance, and globalize your content. From
@@ -645,7 +645,7 @@ const EditingAndTranslationPageClient = () => {
             Pubrica delivers professional academic and scientific translation
             services designed to ensure accuracy, cultural adaptation, and
             publication-ready quality. Our translators are{" "}
-            <Link href="/subject-matter-experts" className="text-blue-700 font-medium ">
+            <Link href="/subject-matter-experts" className="text-blue-600 font-medium no-underline hover:no-underline">
               subject-matter experts
             </Link>{" "}
             who refine content to meet the standards of international journals,
@@ -790,7 +790,7 @@ const EditingAndTranslationPageClient = () => {
                 </strong>{" "}
                 Our team has helped over 800,000 researchers succeed in renowned
                 journals. With our{" "}
-                <Link href="/services/publication-support/journal-selection" className="text-sky-500 underline hover:text-sky-600">
+                <Link href="/services/publication-support/journal-selection" className="text-blue-600 no-underline hover:no-underline">
                   journal selection service
                 </Link>
                 , we streamline the process, enhancing your paper&apos;s
