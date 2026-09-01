@@ -14,34 +14,34 @@ const faqData = [
     question:
       "2. How do you ensure compliance with data privacy regulations like HIPAA, GDPR, and local health authorities?",
     answer:
-      "We adhere to strict data security standards including end-to-end encryption, anonymization/pseudonymization protocols, role-based access controls, and regular compliance audits to satisfy HIPAA, GDPR, ICH-GCP, and local regulatory requirements.",
+      "Our data collection processes strictly adhere to global and local regulations such as HIPAA (USA), GDPR (Europe), and applicable country-specific guidelines. We implement encryption, de-identification, and secure data transfer protocols, along with informed consent compliance.",
   },
   {
     id: 3,
     question:
       "3. What data collection methods do you use in clinical research?",
     answer:
-      "Our methods include electronic Case Report Forms (eCRFs), paper CRFs, direct EHR integration, patient survey/questionnaire platforms, remote sensor and wearable data feeds, and structured qualitative interviews.",
+      "We utilize methods including electronic data capture (EDC), paper-based CRFs, direct patient surveys, mobile health applications, wearable devices, patient registries, and telehealth data collection platforms customized per project protocol.",
   },
   {
     id: 4,
     question: "4. How do you manage data quality and validation?",
     answer:
-      "We utilize automated edit checks, dual-entry verification, multi-tiered manual query resolution, and real-time data monitoring to ensure high data integrity and accuracy before final delivery.",
+      "We follow standard operating procedures (SOPs) for data validation, source data verification (SDV), real-time data monitoring, audit trails, and double-data entry processes, ensuring accuracy and integrity of collected data.",
   },
   {
     id: 5,
     question:
       "5. Do you offer data collection services for observational and real-world studies?",
     answer:
-      "Yes, we specialize in prospective and retrospective observational studies, registry creation, real-world evidence (RWE) gathering, and post-market surveillance.",
+      "Yes, we specialize in data collection for observational studies, registries, real-world evidence (RWE) generation, and post-marketing surveillance, supporting outcomes research and health economics evaluations.",
   },
   {
     id: 6,
     question:
       "6. How do you handle multilingual data collection for global studies?",
     answer:
-      "We provide linguistic validation, forward and back-translation services, and localized data collection tools tailored to diverse global participant pools and regional regulatory bodies.",
+      "We support multilingual data collection with validated translations of data collection instruments, culturally adapted survey tools, and localized patient engagement practices in compliance with country-specific regulations.",
   },
 ];
 

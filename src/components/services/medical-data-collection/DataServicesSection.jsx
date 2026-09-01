@@ -4,25 +4,102 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+const bulletList = "list-disc pl-5 space-y-1.5 marker:text-emerald-700";
+const nestedBulletList = "list-disc pl-5 mt-1.5 space-y-1";
+
 // Data structure for accordion services
 const servicesData = [
   {
     id: "primary-data",
     title: "Primary Data Collection Services",
-    content:
-      "Designing and executing primary research protocols including surveys, patient registries, observational studies, and real-world evidence (RWE) gathering to collect pristine field data.",
+    content: (
+      <ul className={bulletList}>
+        <li>
+          Human Data Collection: Our primary data collection services usually
+          involve ethically collecting patient data, including blood
+          pressure, height, weight, and blood samples. Data collection
+          fundamentally involves a variety of clinical data management,
+          health monitoring, and medical research-specific extraction of
+          data.
+        </li>
+        <li>
+          Surveys, Focus Groups, and Interviews: We offer structured tools
+          and techniques for collecting qualitative and quantitative patient
+          data. These include:
+          <ul className={nestedBulletList}>
+            <li>Interviews (online and in-person): Tailored to gain in-depth qualitative insights for healthcare data research.</li>
+            <li>Focus Group Discussions: Exploring varied perspectives across life science and medical topics.</li>
+            <li>Surveys and Questionnaires: Effective tools for gathering real-world evidence data.</li>
+            <li>Observations and Fieldwork: Authentic real-world healthcare data collection in natural settings.</li>
+            <li>Experiments and Case Studies: Controlled environments and focused subjects for clinical research.</li>
+            <li>Diaries, Journals, Tests, and Assessments: Collecting behavioural and physiological data.</li>
+            <li>Photography, Videography, and Sensor Data: Capturing visual and biometric evidence using advanced healthcare data collection technology.</li>
+            <li>Online Analytics and Monitoring: Real-time web-based data collection and analysis.</li>
+            <li>Data Synthesis &amp; Meta-Analyses: Combining multi-source medical and life science data for unified insight.</li>
+          </ul>
+        </li>
+        <li>
+          Observational Studies: Our team conducts observational studies to
+          collect data on health outcomes, behaviours, and environmental
+          factors in natural settings, providing valuable insights into
+          real-world applications.
+        </li>
+      </ul>
+    ),
   },
   {
     id: "secondary-data",
     title: "Secondary Data Extraction",
-    content:
-      "Systematic literature reviews, extraction from medical records, clinical trial registries, and healthcare databases structured to extract actionable insights efficiently.",
+    content: (
+      <>
+        <ul className={bulletList}>
+          <li>Web Mining: We use sophisticated methods to extract relevant information from the web, including public health data, published clinical research, and healthcare-related information.</li>
+          <li>Textual Records Extraction: Extraction of information from electronic health records (EHRs), clinical trial reports, and other medical documentation supports life science data analytics.</li>
+          <li>Image, Voice, and Video Data: We handle medical imaging (MRI, CT scans), patient interviews, and procedural videos to support multimodal data analysis in healthcare research.</li>
+          <li>Personal Documents and Artifacts: Collecting existing documents and items for analysis, including artifacts, audio recordings, and visual observations.</li>
+          <li>Content Analysis: Systematic analysis of text, media, and documents.</li>
+          <li>Audio Recordings: Capturing sound data for detailed auditory analysis.</li>
+          <li>Visual Observations: Detailed scrutiny of visual elements.</li>
+          <li>Physical Measurements: Direct measurements of physical properties.</li>
+          <li>Data Screening, Extraction &amp; Data Synthesis: Techniques to refine, compile, and synthesize raw data.</li>
+        </ul>
+        <p className="mt-2">At Pubrica, we also support the collection and integration of:</p>
+        <ul className={bulletList}>
+          <li>Claims and administrative data for healthcare utilization analysis</li>
+          <li>Disease registry data to support epidemiology and long-term tracking</li>
+          <li>Genomic and omics datasets for life science and personalized medicine research</li>
+          <li>Mobile health (mHealth) data from apps, remote sensors, and telehealth platforms</li>
+          <li>Social determinants of health (SDoH) to contextualize clinical outcomes</li>
+          <li>Geospatial and environmental data to inform public health interventions</li>
+          <li>Laboratory and biomarker data integrated with clinical findings for holistic analysis</li>
+        </ul>
+      </>
+    ),
   },
   {
     id: "advanced-analytics",
     title: "Advanced Data Handling and Analytics",
-    content:
-      "Standardizing, cleaning, and synthesizing complex datasets using statistical modeling, NLP, and machine learning techniques tailored for healthcare compliance.",
+    content: (
+      <>
+        <p>
+          Benefit from our extensive experience in data analytics for
+          scientific publications. Our team conducts thorough analyses,
+          employing sophisticated techniques across both primary and
+          secondary data. This includes statistical analyses, machine
+          learning models, and bioinformatics approaches that transform raw
+          data into clear, actionable insights such as disease trends,
+          patient health profiles, and epidemiological patterns.
+        </p>
+        <p className="mt-2">
+          Pubrica ensures that your research is supported by accurately
+          collected and expertly managed data, significantly enhancing the
+          depth and breadth of healthcare, medical, and life science
+          research. This comprehensive approach ensures robust data
+          foundations for generating impactful scientific conclusions and
+          advancing clinical practices.
+        </p>
+      </>
+    ),
   },
 ];
 
@@ -31,7 +108,7 @@ const clientsData = [
   {
     title: "Contract Research Organizations (CROs)",
     description:
-      "Outsourced data extraction and collection solutions to accelerate clinical trial phases and reporting timelines.",
+      "Supporting clinical trials with reliable and protocol-compliant data collection across phases and therapeutic areas.",
     image:
       "/images/medical-writing/Contract-Research-Organizations-CROs-1.webp",
     alt: "Researcher reviewing paper clinical data and documents",
@@ -39,7 +116,7 @@ const clientsData = [
   {
     title: "Pharmaceutical & Biotech Companies",
     description:
-      "Comprehensive data support for drug discovery, safety monitoring, and regulatory compliance submissions.",
+      "Assisting in data-driven research for drug development, post-marketing surveillance, and real-world evidence studies.",
     image:
       "/images/medical-writing/Pharmaceutical-Biotech-Companies.webp",
     alt: "Laboratory scientist conducting biotech research",
@@ -47,7 +124,7 @@ const clientsData = [
   {
     title: "Academic and Research Institutions",
     description:
-      "Rigorous secondary data synthesis and primary survey tools designed to support peer-reviewed publishing.",
+      "Providing structured data collection for investigator-initiated studies, epidemiological research, and clinical audits.",
     image:
       "/images/medical-writing/Academic-and-Research-Institutions-1.webp",
     alt: "Academic research library with books and literature databases",
@@ -55,7 +132,7 @@ const clientsData = [
   {
     title: "Healthcare Providers & Hospitals",
     description:
-      "Patient outcome data tracking, operational analytics, and clinical workflow evaluation frameworks.",
+      "Offering patient data collection, chart reviews, and retrospective data abstraction for clinical research and quality improvement studies.",
     image:
       "/images/medical-writing/Healthcare-Providers-Hospitals.webp",
     alt: "Healthcare providers and medical staff collaborating in a hospital",
@@ -71,7 +148,7 @@ const clientsData = [
   {
     title: "Public Health Organizations & NGOs",
     description:
-      "Epidemiological data mining, community health assessment tools, and global health research support.",
+      "Enabling field data collection for public health research, health impact assessments, and population-based studies.",
     image:
       "/images/medical-writing/Public-Health-Organizations-NGOs.webp",
     alt: "Clipboard with NGO public health planning documents",
@@ -79,7 +156,7 @@ const clientsData = [
   {
     title: "Independent Researchers & Consultants",
     description:
-      "Tailored analytical support, systematic reviews, and targeted data gathering for independent projects.",
+      "Facilitating tailored data collection support for customized studies and consultancy projects.",
     image:
       "/images/medical-writing/Independent-Researchers-Consultants.webp",
     alt: "Independent consultant conducting research on a digital tablet",
@@ -139,9 +216,9 @@ export default function DataServicesSection() {
               {isOpen && (
                 <div
                   id={`accordion-body-${item.id}`}
-                  className="p-5 bg-emerald-50/50 border-x border-b border-emerald-100 text-gray-700 text-sm leading-relaxed"
+                  className="p-5 bg-emerald-50/50 border-x border-b border-emerald-100 text-gray-700 text-sm leading-relaxed space-y-2"
                 >
-                  <p>{item.content}</p>
+                  {item.content}
                 </div>
               )}
             </article>
