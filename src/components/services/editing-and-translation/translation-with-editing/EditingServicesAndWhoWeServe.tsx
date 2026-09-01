@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -134,6 +134,12 @@ const audienceData: AudienceCard[] = [
 ];
 
 export default function EditingServicesAndWhoWeServe() {
+  const [activeAudienceId, setActiveAudienceId] = useState<string | null>(null);
+
+  const handleCardClick = (id: string) => {
+    setActiveAudienceId((prev) => (prev === id ? null : id));
+  };
+
   return (
     <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 text-slate-800 font-sans space-y-16">
       {/* ======================================= */}
@@ -192,41 +198,54 @@ export default function EditingServicesAndWhoWeServe() {
           polished, and publication-ready content:
         </p>
 
-        {/* CSS Pure Hover Cards Grid */}
+        {/* CSS + Touch Event Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
-          {audienceData.map((card) => (
-            <div
-              key={card.id}
-              className="group relative h-64 overflow-hidden shadow-sm select-none"
-            >
-              {/* Default View: Background Image + Title Banner */}
-              <div className="absolute inset-0 w-full h-full transition-opacity duration-300 group-hover:opacity-0 group-hover:pointer-events-none">
-                <Image
-                  src={card.imageUrl}
-                  alt={card.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover"
-                />
-                {/* Dark Bottom Gradient Banner */}
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-4 pt-5">
-                  <h3 className="text-sm font-bold text-white tracking-wide">
+          {audienceData.map((card) => {
+            const isActive = activeAudienceId === card.id;
+
+            return (
+              <div
+                key={card.id}
+                onClick={() => handleCardClick(card.id)}
+                onMouseEnter={() => setActiveAudienceId(card.id)}
+                onMouseLeave={() => setActiveAudienceId(null)}
+                className="group relative h-64 overflow-hidden shadow-sm select-none cursor-pointer"
+              >
+                {/* Default View: Background Image + Title Banner */}
+                <div
+                  className={`absolute inset-0 w-full h-full transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0 pointer-events-none" : "opacity-100"
+                    }`}
+                >
+                  <Image
+                    src={card.imageUrl}
+                    alt={card.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                  />
+                  {/* Dark Bottom Gradient Banner */}
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-4 pt-5">
+                    <h3 className="text-sm font-bold text-white tracking-wide">
+                      {card.title}
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Hover View: Black Background with Full Detailed Text */}
+                <div
+                  className={`absolute inset-0 w-full h-full bg-black p-6 flex flex-col justify-start text-white transition-opacity duration-300 z-10 group-hover:opacity-100 ${isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                    }`}
+                >
+                  <h3 className="text-base font-bold mb-4 tracking-wide">
                     {card.title}
                   </h3>
+                  <div className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                    {card.description}
+                  </div>
                 </div>
               </div>
-
-              {/* Hover View: Black Background with Full Detailed Text */}
-              <div className="absolute inset-0 w-full h-full bg-black p-6 flex flex-col justify-start text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10">
-                <h3 className="text-base font-bold mb-4 tracking-wide">
-                  {card.title}
-                </h3>
-                <div className="text-xs sm:text-sm text-slate-200 leading-relaxed">
-                  {card.description}
-                </div>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
     </div>

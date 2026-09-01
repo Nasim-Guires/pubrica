@@ -24,8 +24,6 @@ const servicesData: TabData[] = [
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
         Our scientific and medical experts craft your meta-analyses, adhering to specific reporting guidelines such as the MARS and PRISMA, along with clear and upfront potential personal or financial conflicts of interest (COIs), ensuring precision and relevance. We also utilize guidelines specific to the studies, for instance, to report <Link className="text-blue-600" href="/services/research-services/meta-analysis/meta-analysis-services-prisma-2020/">RCT</Link> studies, Pubrica applies QUORUM, and for observational studies, the MOOSE
-
-
       </p>
     ),
   },
@@ -39,122 +37,7 @@ const servicesData: TabData[] = [
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
         We meticulously follow the journal-specified structure, covering keywords, utilizing different databases (CINAHL, PsycINFO) and extracting key data summary (including author, year, details of included studies, DOIs, or PubMed IDs, among others), and analysing quality of the included studies using standard tools specific to the studies (e.g., the JADA scale for RCT, the Newcastle-Ottawa Scale for non-randomized studies, QUADAS-2 for the quality assessment of diagnostic accuracy studies. Background, material, and methods, results, and discussion with tables, summary of the gap analysis, discussion, and conclusion, including limitations and future directions, along with a supplementary table.
-        table.
       </p>
-    ),
-  },
-  // {
-  //   id: "data-extraction",
-  //   label: "Data Extraction & Analysis",
-  //   title: "Data Extraction & Analysis",
-  //   imageSrc:
-  //     "/images/research-services/systematic-review/Data-Extraction-Analysis.png",
-  //   imageAlt: "Data Extraction and Analysis Charts",
-  //   content: (
-  //     <ul
-  //       style={{
-  //         paddingLeft: "20px",
-  //         margin: "16px 0",
-  //         lineHeight: "1.7",
-  //         color: "#374151",
-  //       }}
-  //     >
-  //       <li style={{ marginBottom: "12px" }}>
-  //         <strong>Structured Data Extraction</strong> – Use standardized
-  //         templates for consistent, high-quality{" "}
-  //         <Link
-  //           href="/services/medical-data-collection"
-  //           className="text-blue-600"
-  //         >
-  //           systematic review data collection support
-  //         </Link>
-  //         .
-  //       </li>
-  //       <li style={{ marginBottom: "12px" }}>
-  //         <strong>Risk of Bias Assessment</strong> – Apply Cochrane Risk of Bias
-  //         Tool, Newcastle-Ottawa Scale (NOS), or JBI Critical Appraisal Tool;
-  //         prepare detailed bias tables for appendices.
-  //       </li>
-  //       <li style={{ marginBottom: "12px" }}>
-  //         <strong>Data Analysis &amp; Synthesis</strong> – Quantitative,
-  //         qualitative, and mixed-method meta-analysis with presentation-ready
-  //         tables, charts, and figures.
-  //       </li>
-  //     </ul>
-  //   ),
-  // },
-  // {
-  //   id: "writing-formatting",
-  //   label: "Writing & Formatting",
-  //   title: "Writing & Formatting",
-  //   imageSrc:
-  //     "/images/research-services/systematic-review/Writing-Formatting.png",
-  //   imageAlt: "Writing and Formatting Academic Journal Manuscripts",
-  //   content: (
-  //     <ul
-  //       style={{
-  //         paddingLeft: "20px",
-  //         margin: "16px 0",
-  //         lineHeight: "1.7",
-  //         color: "#374151",
-  //       }}
-  //     >
-  //       <li style={{ marginBottom: "12px" }}>
-  //         <strong>Full Manuscript Development</strong> – Write the introduction,
-  //         methodology, results, discussion, and conclusion in compliance with
-  //         the target journal's specifications.
-  //       </li>
-  //       <li style={{ marginBottom: "12px" }}>
-  //         <strong>Abstract Preparation</strong> – Develop PRISMA 2020-compliant
-  //         abstracts including objectives, methods, results, and conclusions.
-  //       </li>
-  //       <li style={{ marginBottom: "12px" }}>
-  //         <strong>Referencing &amp; Citation Management</strong> – Accurate
-  //         referencing in APA, AMA, or journal-specific formats.
-  //       </li>
-  //       <li style={{ marginBottom: "12px" }}>
-  //         <strong>Formatting</strong> – Align the manuscript with the target
-  //         journal's author guidelines.
-  //       </li>
-  //     </ul>
-  //   ),
-  // },
-  {
-    id: "publication-support",
-    label: "Publication Support",
-    title: "Publication Support",
-    imageSrc:
-      "/images/research-services/meta-analysis/Publication-Support-Services.png",
-    imageAlt: "Publication Support and Journal Advisory Services",
-    content: (
-      <ul
-        style={{
-          paddingLeft: "20px",
-          margin: "16px 0",
-          lineHeight: "1.7",
-          color: "#374151",
-        }}
-      >
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Journal Selection</strong> – Recommend suitable high-impact
-          journals for your topic.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Pre-Submission Peer Review</strong> – Internal expert review
-          to ensure methodological and editorial readiness.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Journal Submission</strong> – End-to-End Submission Assistance
-          – From cover letter preparation to follow-up with editorial teams
-          until acceptance.
-        </li>
-        <li style={{ marginBottom: "12px" }}>
-          <strong>Response to Reviewer</strong> – Comments addressing your
-          submitted systematic review manuscript, resubmission of your
-          manuscript, follow-up with editorial teams, and support up to the
-          point of publication.
-        </li>
-      </ul>
     ),
   },
   {
@@ -180,31 +63,29 @@ const servicesData: TabData[] = [
     content: (
       <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
         Assistance with sourcing of literature, editing review, and characterizing the evidence to enrich your meta-analyses review report.
-
-
       </p>
     ),
   },
-  // {
-  //   id: "publication-support-services",
-  //   label: "Publication Support Services",
-  //   title: "Publication Support Services",
-  //   imageSrc:
-  //     "/images/research-services/meta-analysis/Publication-Support-Services.png",
-  //   imageAlt: "Publication Support and Journal Advisory Services",
-  //   content: (
-  //     <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
-  //       Comprehensive support encompassing{" "}
-  //       <Link
-  //         href="/services/publication-support/journal-selection"
-  //         className="text-blue-600"
-  //       >
-  //         journal selection
-  //       </Link>
-  //       , submission process, cover letter framing, resubmission, follow-up with editorial teams, and support up to the point of publication.
-  //     </p>
-  //   ),
-  // },
+  {
+    id: "publication-support-services",
+    label: "Publication Support Services",
+    title: "Publication Support Services",
+    imageSrc:
+      "/images/research-services/meta-analysis/Publication-Support-Services.png",
+    imageAlt: "Publication Support and Journal Advisory Services",
+    content: (
+      <p style={{ margin: "16px 0", lineHeight: "1.7", color: "#374151" }}>
+        Comprehensive support encompassing{" "}
+        <Link
+          href="/services/publication-support/journal-selection"
+          className="text-blue-600"
+        >
+          journal selection
+        </Link>
+        , submission process, cover letter framing, resubmission, follow-up with editorial teams, and support up to the point of publication.
+      </p>
+    ),
+  },
   {
     id: "plagiarism-analysis",
     label: "Plagiarism Analysis",
@@ -241,7 +122,6 @@ const servicesData: TabData[] = [
     ),
   },
 ];
-
 export default function MetaAnalysisServicesTabSection() {
   const [activeTabId, setActiveTabId] = useState<string>(
     "meta-analysis-guidelines-compliance"

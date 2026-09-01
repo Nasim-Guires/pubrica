@@ -112,14 +112,14 @@ export default function ResearchArticleTypesAccordion() {
             We support a variety of{" "}
             <Link
               href="/academy/original-research-article/digital-health-interventions-patient-outcomes/"
-              className="text-sky-600 font-medium"
+              className="text-blue-600"
             >
               original research article writing services
             </Link>
             , including randomized trials, observational studies, epidemiology
             research, and other empirical investigations. Manuscripts adhere to{" "}
             <a
-              href="https://www.consort-statement.org/"
+              href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600"
@@ -128,7 +128,7 @@ export default function ResearchArticleTypesAccordion() {
             </a>
             ,{" "}
             <a
-              href="https://www.strobe-statement.org/"
+              href="https://www.equator-network.org/wp-content/uploads/2015/10/STROBE_checklist_v4_combined.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600"
@@ -137,7 +137,7 @@ export default function ResearchArticleTypesAccordion() {
             </a>
             ,{" "}
             <a
-              href="https://www.prisma-statement.org/"
+              href="https://www.prisma-statement.org/prisma-2020-checklist"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600"
@@ -146,7 +146,7 @@ export default function ResearchArticleTypesAccordion() {
             </a>
             , and{" "}
             <a
-              href="https://arriveguidelines.org/"
+              href="https://arriveguidelines.org/sites/arrive/files/documents/Author%20Checklist%20-%20Full.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 "

@@ -36,14 +36,14 @@ export const SystematicReviewOverview: React.FC = () => {
               Crafting a high-quality{" "}
               <Link
                 href="/insights/sample-work/bariatric-surgery-and-the-effects-of-cardiovascular-disease/"
-                className="text-blue-600  transition-colors font-medium"
+                className="text-blue-600"
               >
                 systematic review manuscript writing services
               </Link>{" "}
               that complies with PRISMA guidelines,{" "}
               <Link
-                href="/services/research-services/systematic-review/"
-                className="text-blue-600 transition-colors font-medium"
+                href="/academy/systematic-review/cochrane-methodology-systematic-reviews/"
+                className="text-blue-600"
               >
                 Cochrane methodology
               </Link>
@@ -53,14 +53,14 @@ export const SystematicReviewOverview: React.FC = () => {
               and medical and life science PhD writers delivers comprehensive{" "}
               <Link
                 href="/academy/systematic-review/prisma-systematic-review-guidelines/"
-                className="text-blue-600 transition-colors font-medium"
+                className="text-blue-600"
               >
                 systematic review
               </Link>{" "}
               and{" "}
               <Link
                 href="/services/research-services/meta-analysis/"
-                className="text-blue-600 transition-colors font-medium"
+                className="text-blue-600"
               >
                 meta-analysis services
               </Link>{" "}
@@ -73,14 +73,14 @@ export const SystematicReviewOverview: React.FC = () => {
               We offer high-quality{" "}
               <Link
                 href="/services/research-services/literature-review-and-gap/"
-                className="text-blue-600  transition-colors font-medium"
+                className="text-blue-600"
               >
                 systematic review literature review support
               </Link>
               ,{" "}
               <Link
-                href="/services/research-services/systematic-review/"
-                className="text-blue-600 transition-colors font-medium"
+                href="/insights/sample-work/bariatric-surgery-and-the-effects-of-cardiovascular-disease/"
+                className="text-blue-600"
               >
                 data extraction for systematic review
               </Link>
@@ -136,7 +136,7 @@ export const SystematicReviewOverview: React.FC = () => {
                 Skilled{" "}
                 <Link
                   href="/services/editing-and-translation/"
-                  className="text-blue-600 font-medium"
+                  className="text-blue-600"
                 >
                   systematic review editing services
                 </Link>
@@ -155,21 +155,21 @@ export const SystematicReviewOverview: React.FC = () => {
                 screening to{" "}
                 <Link
                   href="/services/research-services/systematic-review/risk-of-bias-assessment-guide/"
-                  className="text-blue-600 font-medium"
+                  className="text-blue-600"
                 >
                   risk of bias assessment
                 </Link>
                 ,{" "}
                 <Link
                   href="/academy/systematic-review/ai-systematic-review-services-pubrica/"
-                  className="text-blue-600 font-medium"
+                  className="text-blue-600"
                 >
                   systematic review data extraction services
                 </Link>
                 , and{" "}
                 <Link
                   href="/services/research-services/meta-analysis/"
-                  className="text-blue-600 font-medium"
+                  className="text-blue-600 "
                 >
                   meta-analysis
                 </Link>{" "}
@@ -197,14 +197,14 @@ export const SystematicReviewOverview: React.FC = () => {
               <p className="text-sm text-gray-600 leading-relaxed">
                 <Link
                   href="/services/publication-support/journal-submission/complete-guide-to-writing-cover-letter-for-medical-journals/"
-                  className="text-blue-600 font-medium"
+                  className="text-blue-600 "
                 >
                   High-impact journal submission support
                 </Link>
                 ,{" "}
                 <Link
                   href="/services/publication-support/journal-manuscript-formatting-services/"
-                  className="text-blue-600  font-medium"
+                  className="text-blue-600"
                 >
                   systematic review journal formatting services
                 </Link>

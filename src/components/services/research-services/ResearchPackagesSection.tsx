@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import CommonPackages, { PackageItem } from "@/components/common/CommonPackages";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 interface PackageColumn {
   title: string;
@@ -88,10 +89,17 @@ export const ResearchPackagesSection: React.FC<ResearchPackagesProps> = ({
     },
   ];
   return (
-    <CommonPackages
-      title="Research Service – Our Packages"
-      description="At Pubrica, we offer flexible and comprehensive research service packages tailored to meet the unique needs of researchers at every stage of their academic or clinical journey. Whether you're developing a concept or preparing for publication, our packages are designed for precision, quality, and impact."
-      packages={packages}
-    />
+    <div className="bg-slate-50 py-12">
+      <CommonPackages
+        title="Research Service – Our Packages"
+        description="At Pubrica, we offer flexible and comprehensive research service packages tailored to meet the unique needs of researchers at every stage of their academic or clinical journey. Whether you're developing a concept or preparing for publication, our packages are designed for precision, quality, and impact."
+        packages={packages}
+      />
+
+      {/* Button wrapper with negative top margin to pull it flush against the table */}
+      <div className="flex justify-center -mt-6 pb-4">
+        <GetFreeQuoteButton />
+      </div>
+    </div>
   );
 };

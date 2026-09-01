@@ -985,7 +985,7 @@ export const NAV_LINKS: NavLink[] = [
             label: "Case Report",
           },
           {
-            href: "/services/physician-writing-services/patient-education-content/",
+            href: "/services/patient-education-content/",
             label: "Patient Education Materials",
           },
           {

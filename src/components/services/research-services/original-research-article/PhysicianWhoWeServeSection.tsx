@@ -210,7 +210,7 @@ export default function PhysicianWhoWeServeSection() {
               <article
                 key={card.id}
                 tabIndex={0}
-                className="group relative bg-white p-6 rounded-lg transition-all duration-300 ease-in-out hover:bg-sky-50/80 hover:-translate-y-1 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-sky-500 border border-slate-200/50 hover:border-sky-200 cursor-pointer"
+                className="group relative bg-white p-6 rounded-lg transition-all duration-300 ease-in-out hover:bg-sky-50/80 hover:-translate-y-1 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-sky-500 border border-slate-200/50 hover:border-sky-200"
               >
                 <div className="flex items-start space-x-4">
                   <div className="relative flex-shrink-0 w-12 h-12 rounded-full overflow-hidden bg-amber-100">

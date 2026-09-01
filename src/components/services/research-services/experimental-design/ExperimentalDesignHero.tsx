@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function ExperimentalDesignHero() {
   return (
@@ -11,37 +12,12 @@ export default function ExperimentalDesignHero() {
       {/* ========================================================= */}
       {/* 1. HERO HEADER BANNER                                      */}
       {/* ========================================================= */}
-      <section
-        className="w-full py-7 px-4 sm:px-8 md:px-12 font-sans"
-        style={{
-          background:
-            "linear-gradient(to right, #243534, #121c1b, #0d1514, #131e1d, #253635)",
-        }}
-      >
-        <div className="max-w-6xl mx-auto">
-          {/* White Bordered Box Container */}
-          <div className="border border-white/80 p-8 sm:p-10 md:p-12 text-center text-white space-y-3">
-            {/* Main Title */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight">
-              Experimental Design Services
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-sm sm:text-base font-semibold text-white/90">
-              For Research Papers, Manuscripts &amp; Theses
-            </p>
-
-            {/* Description Paragraph */}
-            <p className="text-xs sm:text-sm md:text-base text-white/90 leading-relaxed max-w-5xl mx-auto pt-1 font-normal">
-              Pubrica’s Experimental Design Services deliver scientifically
-              robust study frameworks with tailored methodologies and
-              statistical rigor. Our experts ensure the validity,
-              reproducibility, and high impact of your research outcomes—whether
-              for research papers, manuscripts, theses, or clinical trials.
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroBanner
+        title="Experimental Design Services"
+        subtitle="For Research Papers, Manuscripts & Theses"
+        description="Pubrica’s Experimental Design Services deliver scientifically robust study frameworks with tailored methodologies and statistical rigor. Our experts ensure the validity, reproducibility, and high impact of your research outcomes—whether for research papers, manuscripts, theses, or clinical trials."
+        headingAs="h1"
+      />
       {/* ========================================================= */}
       {/* 2. OVERVIEW & INTRO SECTION                               */}
       {/* ========================================================= */}
@@ -57,8 +33,8 @@ export default function ExperimentalDesignHero() {
             <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed">
               At Pubrica, we specialize in{" "}
               <Link
-                href="/services/research-services/experimental-design"
-                className="text-sky-600 hover:underline font-medium"
+                href="/academy/experimental-design/how-to-choose-right-experimental-design-for-research/"
+                className="text-blue-600 "
               >
                 experimental study design
               </Link>{" "}
@@ -67,8 +43,8 @@ export default function ExperimentalDesignHero() {
               research methodology specialists has successfully crafted over
               5,000 experimental research designs, including true experimental,{" "}
               <Link
-                href="/services/research-services/experimental-design"
-                className="text-sky-600 hover:underline font-medium"
+                href="/academy/experimental-design/quasi-experimental-design-definition-types-examples/"
+                className="text-blue-600 "
               >
                 quasi-experimental
               </Link>
@@ -79,8 +55,8 @@ export default function ExperimentalDesignHero() {
             <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed">
               We know that a well-structured{" "}
               <Link
-                href="/services/research-services/experimental-design"
-                className="text-sky-600 hover:underline font-medium"
+                href="/academy/experimental-design/types-of-pre-experimental-research-design/"
+                className="text-blue-600 "
               >
                 experimental research design
               </Link>{" "}
@@ -136,7 +112,7 @@ export default function ExperimentalDesignHero() {
 
             {/* CTA Button */}
             <div className="pt-4">
-              <GetFreeQuoteButton/>
+              <GetFreeQuoteButton />
             </div>
           </div>
 

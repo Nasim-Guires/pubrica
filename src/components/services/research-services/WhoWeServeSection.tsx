@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -96,7 +98,7 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
     <>
       Our academic research assistance and clinical{" "}
       <Link
-        href="/services/research-services"
+        href="/academy/research-services/pilot-study-importance-research/"
         className="text-blue-700"
       >
         research support services
@@ -111,6 +113,12 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
   bannerTitle = "Speed up your Research Services with Pubrica",
   bannerSubtitle = "Gain access to your dedicated research expert, guiding you through every stage of your project with precision and clarity.",
 }) => {
+  const [activeId, setActiveId] = useState<number | null>(null);
+
+  const handleCardClick = (index: number) => {
+    setActiveId((prev) => (prev === index ? null : index));
+  };
+
   return (
     <section className="w-full bg-white font-sans text-[#111827]">
       <div className="max-w-7xl mx-auto py-6 px-6 md:px-12 lg:px-16">
@@ -126,43 +134,60 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
 
         {/* Sectors Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
-          {sectors.map((sector, index) => (
-            <div
-              key={index}
-              className="relative group overflow-hidden bg-black aspect-[4/3] cursor-pointer rounded-none"
-            >
-              {/* Default State: Image background */}
-              {sector.imageUrl && (
-                <Image
-                  src={sector.imageUrl}
-                  alt={sector.title}
-                  fill
-                  className="object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-0"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          {sectors.map((sector, index) => {
+            const isActive = activeId === index;
+
+            return (
+              <div
+                key={index}
+                onClick={() => handleCardClick(index)}
+                onMouseEnter={() => setActiveId(index)}
+                onMouseLeave={() => setActiveId(null)}
+                className="relative group overflow-hidden bg-black aspect-[4/3] cursor-pointer rounded-none"
+              >
+                {/* Default State: Image background */}
+                {sector.imageUrl && (
+                  <Image
+                    src={sector.imageUrl}
+                    alt={sector.title}
+                    fill
+                    className={`object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                      }`}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                )}
+
+                {/* Default Gradient Overlay for Text Readability */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                    }`}
                 />
-              )}
 
-              {/* Default Gradient Overlay for Text Readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-300 group-hover:opacity-0" />
+                {/* Default View (Title at bottom) */}
+                <div
+                  className={`absolute inset-0 p-6 flex flex-col justify-end transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                    }`}
+                >
+                  <h3 className="text-white text-base md:text-[17px] font-bold leading-snug tracking-wide">
+                    {sector.title}
+                  </h3>
+                </div>
 
-              {/* Default View (Title at bottom) */}
-              <div className="absolute inset-0 p-6 flex flex-col justify-end transition-opacity duration-300 group-hover:opacity-0">
-                <h3 className="text-white text-base md:text-[17px] font-bold leading-snug tracking-wide">
-                  {sector.title}
-                </h3>
-              </div>
-
-              {/* Hover View (Solid Black Card with Title & Description) */}
-              <div className="absolute inset-0 p-6 flex flex-col justify-start bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                <h3 className="text-white text-base font-bold mb-3 leading-snug tracking-wide">
-                  {sector.title}
-                </h3>
-                <div className="text-gray-300 text-xs md:text-sm leading-relaxed">
-                  {sector.description}
+                {/* Hover View (Solid Black Card with Title & Description) */}
+                <div
+                  className={`absolute inset-0 p-6 flex flex-col justify-start bg-black transition-opacity duration-300 ease-in-out group-hover:opacity-100 ${isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                    }`}
+                >
+                  <h3 className="text-white text-base font-bold mb-3 leading-snug tracking-wide">
+                    {sector.title}
+                  </h3>
+                  <div className="text-gray-300 text-xs md:text-sm leading-relaxed">
+                    {sector.description}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

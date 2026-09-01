@@ -39,7 +39,7 @@ const offerings: ServiceOffering[] = [
           href="https://www.nejm.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sky-600 hover:underline font-medium"
+          className="text-blue-600 "
         >
           NEJM
         </a>
@@ -48,7 +48,7 @@ const offerings: ServiceOffering[] = [
           href="https://jamanetwork.com/journals/jama"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sky-600 hover:underline font-medium"
+          className="text-blue-600"
         >
           JAMA
         </a>
@@ -57,7 +57,7 @@ const offerings: ServiceOffering[] = [
           href="https://www.thelancet.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sky-600 hover:underline font-medium"
+          className="text-blue-600"
         >
           The Lancet
         </a>
@@ -66,7 +66,7 @@ const offerings: ServiceOffering[] = [
           href="https://www.bmj.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sky-600 hover:underline font-medium"
+          className="text-blue-600"
         >
           BMJ
         </a>
@@ -83,7 +83,7 @@ const offerings: ServiceOffering[] = [
           href="https://www.icmje.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sky-600 hover:underline font-medium"
+          className="text-blue-600"
         >
           ICMJE
         </a>
@@ -92,7 +92,7 @@ const offerings: ServiceOffering[] = [
           href="https://www.consort-statement.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sky-600 hover:underline font-medium"
+          className="text-blue-600"
         >
           CONSORT
         </a>
@@ -101,7 +101,7 @@ const offerings: ServiceOffering[] = [
           href="https://www.strobe-statement.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sky-600 hover:underline font-medium"
+          className="text-blue-600"
         >
           STROBE
         </a>
@@ -110,7 +110,7 @@ const offerings: ServiceOffering[] = [
           href="https://www.prisma-statement.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sky-600 hover:underline font-medium"
+          className="text-blue-600"
         >
           PRISMA
         </a>

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 interface AudienceCard {
   id: string;
@@ -17,7 +17,13 @@ interface StepItem {
   title: string;
   description: React.ReactNode;
 }
-
+interface AudienceCard {
+  id: string;
+  title: string;
+  description: React.ReactNode;
+  imageSrc: string;
+  altText: string;
+}
 const audienceCards: AudienceCard[] = [
   {
     id: "pharma-biotech",
@@ -159,6 +165,11 @@ const processSteps: StepItem[] = [
 ];
 
 export default function WhoWeServeAndProcessSection() {
+  const [activeId, setActiveId] = useState<string | null>(null);
+
+  const handleCardClick = (id: string) => {
+    setActiveId((prev) => (prev === id ? null : id));
+  };
   return (
     <div className="w-full font-sans">
       {/* ========================================================= */}
@@ -188,34 +199,51 @@ export default function WhoWeServeAndProcessSection() {
           </header>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {audienceCards.map((card) => (
-              <div
-                key={card.id}
-                className="group relative h-64 sm:h-72 w-full rounded-lg overflow-hidden cursor-pointer shadow-md border border-slate-200 transition-all duration-300"
-              >
-                <Image
-                  src={card.imageSrc}
-                  alt={card.altText}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-opacity duration-300 group-hover:opacity-0" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 z-10 transition-opacity duration-300 group-hover:opacity-0">
-                  <h3 className="text-white text-base sm:text-lg font-bold leading-snug">
-                    {card.title}
-                  </h3>
+            {audienceCards.map((card) => {
+              const isActive = activeId === card.id;
+
+              return (
+                <div
+                  key={card.id}
+                  onClick={() => handleCardClick(card.id)}
+                  onMouseEnter={() => setActiveId(card.id)}
+                  onMouseLeave={() => setActiveId(null)}
+                  className="group relative h-64 sm:h-72 w-full rounded-lg overflow-hidden cursor-pointer shadow-md border border-slate-200 transition-all duration-300"
+                >
+                  <Image
+                    src={card.imageSrc}
+                    alt={card.altText}
+                    fill
+                    className={`object-cover transition-transform duration-500 group-hover:scale-105 ${isActive ? "scale-105" : ""
+                      }`}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                      }`}
+                  />
+                  <div
+                    className={`absolute bottom-0 left-0 right-0 p-5 z-10 transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                      }`}
+                  >
+                    <h3 className="text-white text-base sm:text-lg font-bold leading-snug">
+                      {card.title}
+                    </h3>
+                  </div>
+                  <div
+                    className={`absolute inset-0 bg-black transition-opacity duration-300 p-6 flex flex-col justify-start z-20 overflow-y-auto group-hover:opacity-100 ${isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                      }`}
+                  >
+                    <h3 className="text-white text-base sm:text-lg font-bold mb-3 leading-snug">
+                      {card.title}
+                    </h3>
+                    <div className="text-slate-200 text-xs sm:text-sm leading-relaxed">
+                      {card.description}
+                    </div>
+                  </div>
                 </div>
-                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-start z-20 overflow-y-auto">
-                  <h3 className="text-white text-base sm:text-lg font-bold mb-3 leading-snug">
-                    {card.title}
-                  </h3>
-                  <p className="text-slate-200 text-xs sm:text-sm leading-relaxed">
-                    {card.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

@@ -82,7 +82,7 @@ export default function WhoWeServe() {
         <p className="text-gray-700 text-base leading-relaxed mb-10 max-w-5xl">
           At Pubrica, our{" "}
           <Link
-            href="/services/research-services/meta-analysis"
+            href="/services/research-services/meta-analysis/network-meta-analysis-guide/"
             className="text-blue-600"
           >
             meta-analysis writing services

@@ -1,4 +1,5 @@
 "use client";
+import HeroBanner from "@/components/common/HeroBanner";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -20,7 +21,7 @@ interface PhysicianHeroProps {
 export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
   bannerTitle = "Scientific Research, Analyses, Publication and Communication Services for Practicing Physicians",
   bannerDescription = "Transform your clinical insights into professionally written, publication-ready medical content. Our physician writing services support manuscript writing, editing, case reports, and regulatory submissions, ensuring impactful research outcomes.",
-  title = "Professionally Developed, Clinically Accurate Medical Content",
+  title = "Scientific Research, Analyses, Publication and Communication Services for Practicing Physicians: Professionally Developed, Clinically Accurate Medical Content",
   leadParagraph = "We offer specialized physician writing services tailored to support your clinical research, case reports, and regulatory documentation needs. With over 4000+ global expert medical writers, peer reviewers, and editors—many with MD/PhD qualifications—ensure that your content is scientifically sound, publication-ready in prestigious peer-reviewed international, and compliant with international guidelines.",
   secondaryLead = "Whether it's a case report, clinical study, or regulatory document, we help you publish with confidence.",
   sectionHeading = "Expert in Medical Content and Publishing",
@@ -42,32 +43,25 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
   return (
     <div className="w-full font-sans">
       {/* Top Gradient Hero Banner Section */}
-      <section className="w-full bg-gradient-to-r from-[#192b2d] via-[#213a3e] to-[#122325] py-6 px-6 md:px-12 lg:px-24 text-center text-white">
-        <div className="max-w-5xl mx-auto border border-white/80 p-8 md:p-10 rounded-sm bg-black/10 backdrop-blur-xs">
-          <h1 className="text-xl md:text-2xl lg:text-[28px] font-bold tracking-wide leading-snug mb-4">
-            {bannerTitle}
-          </h1>
-          <p className="text-gray-200 text-sm md:text-[15px] leading-relaxed max-w-4xl mx-auto font-normal">
-            {bannerDescription}
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title={bannerTitle}
+        description={bannerDescription}
+        headingAs="h1"
+      />
 
       {/* Main Content Section */}
       <section className="w-full bg-white py-6 px-6 md:px-12 lg:px-24 text-left">
         <div className="max-w-7xl mx-auto">
           {/* Section Sub-heading Title */}
-          <h2 className="text-[#083c4c] text-2xl md:text-3xl lg:text-[32px] font-extrabold leading-tight tracking-tight mb-6 max-w-6xl">
+          <h2 className="text-[#083c4c] text-2xl md:text-3xl lg:text-[32px] font-semi-bold leading-tight tracking-tight mb-6 max-w-6xl">
             {title}
           </h2>
 
           {/* Lead Summary Paragraphs */}
           <div className="space-y-4 mb-8 max-w-6xl">
             <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed text-justify">
-              We offer specialized{" "}
-              <Link href="/services/physician-writing-services" className="text-[#3b82f6] hover:underline">
-                physician writing services
-              </Link>{" "}
+              We offer specialized physician writing services
+             
               {leadParagraph.split("physician writing services")[1]}
             </p>
             <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed font-medium">
@@ -84,7 +78,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
               </h3>
               <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed text-justify">
                 Pubrica's{" "}
-                <Link href="/services/physician-writing-services" className="text-[#3b82f6] hover:underline">
+                <Link href="/" className="text-blue-600">
                   Physician Writing Services
                 </Link>{" "}
                 {
@@ -92,7 +86,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                     .split("Physician Writing Services")[1]
                     .split("medical writing")[0]
                 }
-                <Link href="/services/research-services/medical-writing" className="text-[#3b82f6] hover:underline">
+                <Link href="/services/research-services/medical-writing/" className="text-blue-700">
                   medical writing
                 </Link>
                 {
@@ -109,9 +103,9 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
             {/* Right Image Frame Column */}
             <div className="w-full lg:w-[420px] pt-4 flex-shrink-0">
               {/* Dark green background shadow container */}
-              <div className="bg-[#0b332d] rounded-2xl p-0.5 pt-6 pl-6 relative">
+              <div className=" rounded-2xl p-0.5 pt-6 pl-6 relative">
                 {/* Actual Foreground Image Box */}
-                <div className="relative w-full h-[240px] md:h-[260px] bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                <div className="relative w-full h-[240px] md:h-[260px] rounded-xl  overflow-hidden">
                   <Image
                     src={imageUrl}
                     alt="Physician writing services"
@@ -141,7 +135,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                         href="https://www.icmje.org/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#3b82f6] hover:underline"
+                        className="text-blue-600"
                       >
                         ICMJE
                       </Link>, GPP3,{" "}
@@ -149,7 +143,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                         href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#3b82f6] hover:underline"
+                        className="text-blue-600"
                       >
                         CONSORT
                       </Link>)
@@ -158,7 +152,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                 } else if (bullet.includes("Plagiarism and AI-generated")) {
                   renderedText = (
                     <span>
-                      <Link href="/services/publication-support/plagiarism-services" className="text-[#3b82f6] hover:underline">
+                      <Link href="/services/publication-support/plagiarism-services" className="text-blue-600">
                         Plagiarism
                       </Link>{" "}
                       and AI-generated article screening with a comprehensive
@@ -168,13 +162,13 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                 } else if (bullet.includes("Literature review")) {
                   renderedText = (
                     <span>
-                      <Link href="/services/research-services/literature-review-and-gap" className="text-[#3b82f6] hover:underline">
+                      <Link href="/services/research-services/literature-review-and-gap" className="text-blue-600">
                         Literature review
                       </Link>{" "}
                       from PubMed, Embase,{" "}
                       <Link
                         href="/services/physician-writing-services/scopus-indexed-journals-submission-guide/"
-                        className="text-[#3b82f6] hover:underline"
+                        className="text-blue-600"
                       >
                         Scopus
                       </Link>, and Cochrane

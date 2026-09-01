@@ -1,6 +1,7 @@
 "use client";
 
 import { EditorialWorkflowSection } from "@/components/common/EditorialWorkflowSection";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -21,6 +22,31 @@ interface WorkflowStep {
   iconSrc?: string;
   position: string;
 }
+interface Specialty {
+  name: string;
+  iconSrc: string;
+  url: string;
+}
+const IMG = "/images/physician-writing-services";
+
+const specialties: Specialty[] = [
+  { name: "Oncology", iconSrc: `${IMG}/Oncology-1-1.png`, url: "/subject-matter-experts/" },
+  { name: "Cardiology", iconSrc: `${IMG}/Cardiology-1.png`, url: "/subject-matter-experts/cardiology/" },
+  { name: "Neurology", iconSrc: `${IMG}/Neurology-1.png`, url: "/subject-matter-experts/neurology/" },
+  { name: "Psychiatry", iconSrc: `${IMG}/Psychiatry-1.png`, url: "/subject-matter-experts/" },
+  { name: "Pulmonology", iconSrc: `${IMG}/Pulmonology-1.png`, url: "/subject-matter-experts/" },
+  { name: "Nephrology", iconSrc: `${IMG}/Nephrology-1.png`, url: "/subject-matter-experts/" },
+  { name: "Psychology", iconSrc: `${IMG}/Psychology.png`, url: "/subject-matter-experts/" },
+  { name: "Haematology", iconSrc: `${IMG}/Haematology-1.png`, url: "/subject-matter-experts/" },
+  { name: "Gastroenterology", iconSrc: `${IMG}/Gastroenterology.png`, url: "/subject-matter-experts/" },
+  { name: "Obstetrics & Gynaecology", iconSrc: `${IMG}/Obstetrics-Gynaecology-1.png`, url: "/subject-matter-experts/" },
+  { name: "Paediatrics", iconSrc: `${IMG}/Paediatrics-1.png`, url: "/subject-matter-experts/" },
+  { name: "Urology", iconSrc: `${IMG}/Urology-1.png`, url: "/subject-matter-experts/" },
+  { name: "General Medicine", iconSrc: `${IMG}/General-Medicine-1-1.png`, url: "/subject-matter-experts/" },
+  { name: "Rheumatology", iconSrc: `${IMG}/Rheumatology-1.png`, url: "/subject-matter-experts/" },
+  { name: "Dermatology", iconSrc: `${IMG}/Dermatology.png`, url: "/subject-matter-experts/" },
+  { name: "Orthopaedics", iconSrc: `${IMG}/Orthopaedics.png`, url: "/subject-matter-experts/" },
+];
 
 const THERAPEUTIC_AREAS: TherapeuticArea[] = [
   {
@@ -166,34 +192,44 @@ export default function TherapeuticAndWorkflow() {
   return (
     <div className="w-full bg-[#EAEAEA] font-sans antialiased">
       {/* SECTION 1: THERAPEUTIC AREAS */}
-      <section className="w-full bg-[#EAEAEA] py-16 px-4 sm:px-6 lg:px-8 border-b border-gray-300">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#083a50]">
-              Our Therapeutic Area We Cover
-            </h2>
-          </div>
+      <section className="py-6 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+        <h2 className="text-[#083c4c] text-xl md:text-2xl lg:text-[26px] font-extrabold leading-tight tracking-tight mb-4">
+          Our Therapeutic Area We Cover
+        </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 border-t border-l border-gray-300">
-            {THERAPEUTIC_AREAS.map((area, index) => (
-              <Link
-                key={index}
-                href={area.href}
-                className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-r border-gray-300 transition-all duration-300 hover:bg-black hover:text-white group cursor-pointer"
-              >
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#fef5d9] shadow-sm mb-4 transform transition-transform duration-300 group-hover:scale-110 overflow-hidden">
-                  <img
-                    src={area.iconUrl}
-                    alt={area.name}
-                    className="w-6 h-6 object-contain"
-                  />
-                </div>
-                <h3 className="text-[14px] sm:text-[15px] font-bold text-[#083a50] group-hover:text-white transition-colors duration-200">
-                  {area.name}
-                </h3>
-              </Link>
-            ))}
-          </div>
+        <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed mb-10 max-w-6xl text-justify">
+          Pubrica's physician-led medical writing team provides domain-specific
+          expertise across a wide range of therapeutic areas, offering
+          high-quality scientific and medical writing services tailored to each
+          medical specialty. Our team of expert medical writers, including
+          physicians and scientific professionals, specialize in therapeutic
+          areas such as oncology, cardiology, neurology, infectious diseases,
+          endocrinology, and more. Pubrica ensures each project is backed by
+          accurate, evidence-based, and publication-ready scientific and medical
+          writing.
+        </p>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 border-t border-l border-gray-100">
+          {specialties.map((specialty, index) => (
+            <Link
+              key={index}
+              href={specialty.url}
+              className="flex flex-col items-center justify-center p-6 text-center border-b border-r border-gray-100 transition-colors bg-white hover:bg-green-100 "
+            >
+              <div className="relative w-16 h-16 mb-3.5">
+                <Image
+                  src={specialty.iconSrc}
+                  alt={specialty.name}
+                  fill
+                  className="object-contain"
+                  sizes="64px"
+                />
+              </div>
+              <h3 className="text-[#0f172a] text-sm md:text-[15px] font-semibold tracking-wide">
+                {specialty.name}
+              </h3>
+            </Link>
+          ))}
         </div>
       </section>
 

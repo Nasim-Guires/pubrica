@@ -309,41 +309,22 @@ export default function SystematicReviewServicesTabs() {
   return (
     <section
       aria-labelledby="services-section-heading"
-      style={{
-        width: "100%",
-        maxWidth: "1200px",
-        margin: "0 auto",
-        padding: "40px 20px",
-        fontFamily: "Arial, sans-serif",
-      }}
+      className="mx-auto w-full max-w-[1200px] px-5 py-10 font-sans"
     >
       {/* Top Main Heading & Subtitle */}
-      <div style={{ textAlign: "left", marginBottom: "32px" }}>
+      <div className="mb-8 text-left">
         <h2
           id="services-section-heading"
-          style={{
-            fontSize: "2rem",
-            fontWeight: "700",
-            color: "#0e3838", // Deep teal tone from screenshots
-            marginBottom: "16px",
-            lineHeight: "1.3",
-          }}
+          className="mb-4 text-2xl font-bold leading-snug text-[#0e3838] md:text-3xl"
         >
           Our Comprehensive Systematic Review Writing &amp; Rewriting Services –
           Methodology &amp; Support
         </h2>
-        <p
-          style={{
-            fontSize: "1rem",
-            color: "#374151",
-            lineHeight: "1.6",
-            margin: 0,
-          }}
-        >
+        <p className="m-0 text-base leading-relaxed text-gray-700">
           Pubrica provides end-to-end{" "}
           <Link
             href="/services/research-services/systematic-review"
-            className="text-blue-600"
+            className="text-blue-600 hover:underline"
           >
             systematic review writing services
           </Link>{" "}
@@ -352,63 +333,32 @@ export default function SystematicReviewServicesTabs() {
             href="https://www.prisma-statement.org/prisma-2020-checklist"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600"
+            className="text-blue-600 hover:underline"
           >
             PRISMA checklist 2020
           </a>
           , Cochrane guidelines, and journal specifications. Our medical and
-          scientific professionals provide publication-ready manuscripts with
-          the most rigorous methodology and evidence, including full project
-          management.
+          scientific professionals provide publication-ready manuscripts with the
+          most rigorous methodology and evidence, including full project management.
         </p>
       </div>
 
-      {/* Main Layout: Left Tabs Navigation + Right Active Content */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "300px 1fr",
-          gap: "32px",
-          alignItems: "start",
-        }}
-      >
-        {/* Left Vertical Navigation Menu */}
+      {/* Main Layout: Mobile Scrollable Tabs / Desktop Grid */}
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-[300px_1fr] md:gap-8">
+        {/* Navigation Menu (Horizontal Scroll on Mobile, Vertical List on Desktop) */}
         <nav aria-label="Services Navigation">
-          <ul
-            style={{
-              listStyle: "none",
-              margin: 0,
-              padding: 0,
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
+          <ul className="flex flex-row overflow-x-auto gap-2 pb-2 md:flex-col md:overflow-visible md:pb-0">
             {servicesData.map((tab) => {
               const isActive = tab.id === activeTabId;
               return (
-                <li key={tab.id}>
+                <li key={tab.id} className="shrink-0 md:shrink">
                   <button
                     type="button"
                     onClick={() => setActiveTabId(tab.id)}
-                    style={{
-                      width: "100%",
-                      textAlign: "left",
-                      padding: "14px 18px",
-                      fontSize: "0.95rem",
-                      fontWeight: isActive ? "700" : "500",
-                      color: isActive ? "#0e3838" : "#374151",
-                      backgroundColor: isActive ? "#ffffff" : "#f9fafb",
-                      border: isActive
-                        ? "2px solid #0e3838"
-                        : "1px solid #e5e7eb",
-                      borderRadius: "4px",
-                      marginBottom: "8px",
-                      cursor: "pointer",
-                      transition: "all 0.2s ease",
-                      boxShadow: isActive
-                        ? "0 2px 4px rgba(0,0,0,0.05)"
-                        : "none",
-                    }}
+                    className={`w-full whitespace-nowrap rounded px-4 py-3.5 text-left text-sm transition-all duration-200 md:whitespace-normal ${isActive
+                        ? "border-2 border-[#0e3838] bg-white font-bold text-[#0e3838] shadow-sm"
+                        : "border border-gray-200 bg-gray-50 font-medium text-gray-700 hover:bg-gray-100"
+                      }`}
                   >
                     {tab.label}
                   </button>
@@ -418,66 +368,33 @@ export default function SystematicReviewServicesTabs() {
           </ul>
         </nav>
 
-        {/* Right Tab Content Display */}
-        <div style={{ backgroundColor: "#ffffff", borderRadius: "6px" }}>
+        {/* Tab Content Display */}
+        <div className="rounded-md bg-white">
           {/* Header Banner Image */}
-          <div
-            style={{
-              position: "relative",
-              width: "100%",
-              height: "220px",
-              borderRadius: "6px",
-              overflow: "hidden",
-              backgroundColor: "#f3f4f6",
-            }}
-          >
+          <div className="relative h-48 w-full overflow-hidden rounded-md bg-gray-100 sm:h-56 md:h-64">
             <Image
               src={activeTab.imageSrc}
               alt={activeTab.imageAlt}
               fill
               sizes="(max-width: 768px) 100vw, 800px"
-              style={{ objectFit: "cover" }}
+              className="object-cover"
               priority
             />
           </div>
 
           {/* Active Content Body */}
-          <div style={{ paddingTop: "24px" }}>
-            <h3
-              style={{
-                fontSize: "1.5rem",
-                fontWeight: "700",
-                color: "#000000",
-                margin: "0 0 16px 0",
-              }}
-            >
+          <div className="pt-6">
+            <h3 className="mb-4 text-xl font-bold text-black md:text-2xl">
               {activeTab.title}
             </h3>
 
             {activeTab.content}
 
             {/* Request A Quote Button */}
-            <div style={{ marginTop: "24px" }}>
+            <div className="mt-6">
               <Link
                 href="/order-now"
-                style={{
-                  display: "inline-block",
-                  backgroundColor: "#0e3838", // Matching dark teal theme button
-                  color: "#ffffff",
-                  padding: "12px 24px",
-                  borderRadius: "4px",
-                  fontWeight: "700",
-                  fontSize: "0.875rem",
-                  letterSpacing: "0.5px",
-                  textDecoration: "none",
-                  transition: "background-color 0.2s ease",
-                }}
-                onMouseOver={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#072323")
-                }
-                onMouseOut={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#0e3838")
-                }
+                className="inline-block rounded bg-[#0e3838] px-6 py-3 text-xs font-bold uppercase tracking-wider text-white transition-colors duration-200 hover:bg-[#072323]"
               >
                 REQUEST A QUOTE
               </Link>

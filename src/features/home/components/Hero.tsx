@@ -1,12 +1,18 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Users, Headphones, Lightbulb } from "lucide-react";
 import Container from "@/components/common/Container";
 
 export default function HomeHeroWithAbout() {
+  const [flippedCard, setFlippedCard] = useState<number | null>(null);
+
+  const toggleFlip = (index: number) => {
+    setFlippedCard((prev) => (prev === index ? null : index));
+  };
+
   return (
     <>
       {/* --- HERO SECTION --- */}
@@ -63,12 +69,18 @@ export default function HomeHeroWithAbout() {
           </div>
 
           {/* Feature 3D Flipping Cards Grid */}
-          {/* Changed -mb to -mb-[180px] so ~70% of the card sits over the white background */}
           <div className="w-full max-w-6xl mx-auto mt-16 z-20 -mb-[180px]">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
               {/* Card 1: Solutions Card */}
-              <div className="group h-[250px] [perspective:1000px]">
-                <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+              <div
+                onClick={() => toggleFlip(1)}
+                className="group h-[250px] [perspective:1000px] cursor-pointer"
+              >
+                <div
+                  className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${
+                    flippedCard === 1 ? "[transform:rotateY(180deg)]" : ""
+                  }`}
+                >
                   {/* Front Side */}
                   <div className="absolute inset-0 bg-[#fcfbf9] rounded-xl p-8 shadow-xl border border-gray-100 flex flex-col items-center justify-center text-center text-gray-800 [backface-visibility:hidden]">
                     <div className="h-14 w-14 rounded-full bg-white shadow-md flex items-center justify-center mb-4 border border-gray-100">
@@ -93,8 +105,15 @@ export default function HomeHeroWithAbout() {
               </div>
 
               {/* Card 2: Experience Team Card */}
-              <div className="group h-[250px] [perspective:1000px]">
-                <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+              <div
+                onClick={() => toggleFlip(2)}
+                className="group h-[250px] [perspective:1000px] cursor-pointer"
+              >
+                <div
+                  className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${
+                    flippedCard === 2 ? "[transform:rotateY(180deg)]" : ""
+                  }`}
+                >
                   {/* Front Side */}
                   <div className="absolute inset-0 bg-[#fcfbf9] rounded-xl p-8 shadow-xl border border-gray-100 flex flex-col items-center justify-center text-center text-gray-800 [backface-visibility:hidden]">
                     <div className="h-14 w-14 rounded-full bg-white shadow-md flex items-center justify-center mb-4 border border-gray-100">
@@ -119,8 +138,15 @@ export default function HomeHeroWithAbout() {
               </div>
 
               {/* Card 3: Support Card */}
-              <div className="group h-[250px] [perspective:1000px]">
-                <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+              <div
+                onClick={() => toggleFlip(3)}
+                className="group h-[250px] [perspective:1000px] cursor-pointer"
+              >
+                <div
+                  className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${
+                    flippedCard === 3 ? "[transform:rotateY(180deg)]" : ""
+                  }`}
+                >
                   {/* Front Side */}
                   <div className="absolute inset-0 bg-[#fcfbf9] rounded-xl p-8 shadow-xl border border-gray-100 flex flex-col items-center justify-center text-center text-gray-800 [backface-visibility:hidden]">
                     <div className="h-14 w-14 rounded-full bg-white shadow-md flex items-center justify-center mb-4 border border-gray-100">
@@ -149,7 +175,6 @@ export default function HomeHeroWithAbout() {
       </section>
 
       {/* --- ABOUT US SECTION --- */}
-      {/* Adjusted padding top (pt-52 lg:pt-56) to ensure clear spacing below the cards */}
       <section className="bg-white pt-10 pb-8 lg:pt-32 lg:pb-8">
         <Container className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

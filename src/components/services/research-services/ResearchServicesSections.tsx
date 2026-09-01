@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,10 +15,9 @@ interface AccordionItem {
 
 interface HighlightCardItem {
   title: string;
-  borderColorClass: string; // e.g., 'border-l-amber-400' or 'border-l-indigo-500'
-  content: string;
+  borderColorClass: string;
+  content: ReactNode;
 }
-
 // ==========================================
 // MAIN COMBINED COMPONENT
 // ==========================================
@@ -279,21 +278,100 @@ export const ResearchServicesSections: React.FC = () => {
   const highlightCards: HighlightCardItem[] = [
     {
       title: "The Anatomy of a Paper",
-      borderColorClass: "border-l-[#f1c40f]", // Warm yellow/amber tone
-      content:
-        "At Pubrica, we follow the Introduction, Methods, Results, and Discussion (IMRAD) structure [released by the International Committee of Medical Journal Editors – ICMJE] of scientific papers, which was widely accepted (by over 500 biomedical journals) for retrospective/descriptive & experimental studies.",
+      borderColorClass: "border-l-[#f1c40f]",
+      content: (
+        <>
+          At Pubrica, we follow the Introduction, Methods, Results, and Discussion
+          (IMRAD) structure [released by the International Committee of Medical
+          Journal Editors – ICMJE] of scientific papers, which was widely accepted
+          (by over 500 biomedical journals) for retrospective/descriptive &amp;
+          experimental studies.
+        </>
+      ),
     },
     {
       title: "Consolidated Standards",
-      borderColorClass: "border-l-[#6c5ce7]", // Purple tone
-      content:
-        "Depending on your study type, the Pubrica medical writer will determine appropriate reporting guidelines based on the EQUATOR Network Checklist. CONSORT statement guidelines for Randomized controlled Clinical trials, STROBE for reporting of observational studies (Cohort, case-control, or cross-sectional studies), or PRISMA statement for systematic review, and STARD for diagnostic studies.",
+      borderColorClass: "border-l-[#6c5ce7]",
+      content: (
+        <>
+          Depending on your study type, the Pubrica medical writer will determine
+          appropriate reporting guidelines based on the{" "}
+          <a
+            href="https://www.equator-network.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 no-underline "
+          >
+            EQUATOR
+          </a>{" "}
+          Network Checklist.{" "}
+          <a
+            href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 no-underline "
+          >
+            CONSORT
+          </a>{" "}
+          statement guidelines for Randomized controlled Clinical trials,{" "}
+          <a
+            href="https://www.strobe-statement.org/checklists/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 no-underline"
+          >
+            STROBE
+          </a>{" "}
+          for reporting of observational studies (Cohort, case-control, or
+          cross-sectional studies), or{" "}
+          <a
+            href="https://www.prisma-statement.org/prisma-2020-checklist"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 no-underline "
+          >
+            PRISMA
+          </a>{" "}
+          statement for systematic review, and{" "}
+          <a
+            href="https://www.equator-network.org/reporting-guidelines/stard/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 no-underline "
+          >
+            STARD
+          </a>{" "}
+          for diagnostic studies.
+        </>
+      ),
     },
     {
       title: "Ethical Issues",
-      borderColorClass: "border-l-[#00b894]", // Teal green tone
-      content:
-        "Clinical reviews are based on a comprehensive assessment of a wide range of sources of evidence-based medicine. MEDLINE/PubMed wide range of libraries, Medical/EMBASE, Scopus, Thomson Reuters Web of Science, the Cochrane Collaboration Database, the Centre for Research Support, TRIP Database, DARE, CINAHL, Google Scholar. We follow COPE guidelines on all aspects of publication ethics.",
+      borderColorClass: "border-l-[#00b894]",
+      content: (
+        <>
+          Clinical reviews are based on a comprehensive assessment of a wide range
+          of sources of evidence-based medicine. MEDLINE/PubMed wide range of
+          libraries, Medica/EMBASE, Scopus, Thomson Reuters Web of Science, the
+          Cochrane Collaboration Database, the Centre for{" "}
+          <a
+            href="/academy/research-services/gramms-guidelines-reporting-mixed-methods-research/"
+            className="text-blue-600 no-underline "
+          >
+            Research Support
+          </a>
+          , TRIP Database, DARE, CINAHL, Google Scholar. We follow{" "}
+          <a
+            href="https://publicationethics.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 no-underline "
+          >
+            COPE
+          </a>{" "}
+          guidelines on all aspects of publication ethics.
+        </>
+      ),
     },
   ];
 
@@ -344,9 +422,8 @@ export const ResearchServicesSections: React.FC = () => {
                   <div key={service.id} className="border-b border-gray-300">
                     <button
                       onClick={() => setOpenIndex(isOpen ? null : service.id)}
-                      className={`w-full text-left py-4 px-3 flex items-center justify-between transition-colors duration-150 group ${
-                        isOpen ? "bg-blue-50/60" : "hover:bg-gray-50"
-                      }`}
+                      className={`w-full text-left py-4 px-3 flex items-center justify-between transition-colors duration-150 group ${isOpen ? "bg-blue-50/60" : "hover:bg-gray-50"
+                        }`}
                     >
                       <span className="text-[#083c4c] font-semibold text-base md:text-[17px] flex items-center gap-3">
                         <span className="text-gray-500 font-normal text-sm w-3">

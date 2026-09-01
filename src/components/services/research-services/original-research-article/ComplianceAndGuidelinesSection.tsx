@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { PubricaSampleWorkCard } from '@/components/common/PubricaSampleWorkCardProps';
 
 interface GuidelineItem {
   id: string;
@@ -89,24 +90,24 @@ export default function ComplianceAndGuidelinesSection() {
   };
 
   return (
-    <section 
+    <section
       aria-labelledby="compliance-standards-heading"
       className="w-full bg-slate-100 py-6 px-4 sm:px-6 lg:px-8 text-slate-800 space-y-12"
     >
       <div className="max-w-7xl mx-auto space-y-6">
-        
+
         {/* Section Heading */}
         <header className="space-y-2">
-          <h2 
-            id="compliance-standards-heading" 
+          <h2
+            id="compliance-standards-heading"
             className="text-2xl sm:text-3xl font-bold text-slate-900"
           >
             Our Compliance and Guideline Standards
           </h2>
           <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-5xl">
             At Pubrica, every{' '}
-            <Link 
-              href="/services/physician-writing-services/original-research-article" 
+            <Link
+              href="/services/physician-writing-services/original-research-article"
               className="text-sky-600 hover:underline font-medium"
             >
               original research article
@@ -117,7 +118,7 @@ export default function ComplianceAndGuidelinesSection() {
 
         {/* Accordions Wrapper */}
         <div className="space-y-2 border border-slate-200 rounded-lg overflow-hidden bg-slate-50 shadow-sm">
-          
+
           {/* Accordion 1: Ethical Research and Publication Standards */}
           <div>
             <button
@@ -196,7 +197,7 @@ export default function ComplianceAndGuidelinesSection() {
                           sizes="(max-width: 768px) 100vw, 33vw"
                         />
                       </div>
-                      
+
                       <div className="space-y-1 mt-auto">
                         <h4 className="text-sm font-bold text-slate-900 leading-snug">
                           {item.title}
@@ -223,53 +224,38 @@ export default function ComplianceAndGuidelinesSection() {
       </div>
 
       {/* Original Research Article Sample Work Banner */}
-      <div className="max-w-5xl mx-auto bg-[#f0fdf4] rounded-xl p-6 sm:p-10 border border-emerald-100 shadow-sm">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          {/* Left Column Image */}
-          <div className="md:col-span-5 relative w-full h-64 sm:h-80 rounded-lg overflow-hidden bg-emerald-50">
-            <Image
-              src="/images/physician-writing-services/research-proposal/sample-fdfddb.jpg"
-              alt="Original Research Article Sample Work"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 40vw"
-            />
-          </div>
-
-          {/* Right Column Content */}
-          <div className="md:col-span-7 space-y-6">
-            <div className="space-y-4">
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
-                Original Research Article Sample Work
-              </h3>
-
-              <button
-                type="button"
-                className="bg-black hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold py-2.5 px-8 rounded-full transition-colors shadow-sm cursor-pointer"
-              >
-                Discover More
-              </button>
-            </div>
-
-            <div className="space-y-4 pt-2">
-              <h4 className="text-lg sm:text-xl font-bold text-sky-600">
-                Download the full Report Now
-              </h4>
-
-              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                Explore our original research article writing samples, carefully designed to conform to the journal formatting, research objectives, and scientific reporting expectations on time and supported by peer-reviewed, validated sources.
-              </p>
-
-              <button
-                type="button"
-                className="bg-black hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold py-2.5 px-8 rounded-full transition-colors shadow-sm cursor-pointer"
-              >
-                Discover More
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <PubricaSampleWorkCard
+        bookCoverImage={{
+          src: "/images/physician-writing-services/research-proposal/sample-fdfddb.jpg",
+          alt: "Original Research Article Sample Work",
+          width: 600,
+          height: 400,
+        }}
+        sections={[
+          {
+            heading: "Original Research Article Sample Work",
+            headingTag: "h3",
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work/cytotoxic-effects-of-sliver-nanoparticles-using-leaf-extract/",
+            },
+          },
+          {
+            heading: "Download the full Report Now",
+            headingTag: "h3",
+            descriptionSegments: [
+              {
+                text: "Explore our original research article writing samples, carefully designed to conform to the journal formatting, research objectives, and scientific reporting expectations on time and supported by peer-reviewed, validated sources.",
+              },
+            ],
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work/",
+            },
+          },
+        ]}
+        footerDisclaimerSegments={[]}
+      />
     </section>
   );
 }

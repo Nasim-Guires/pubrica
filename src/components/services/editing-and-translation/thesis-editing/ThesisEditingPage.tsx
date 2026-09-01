@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,6 +19,13 @@ interface TargetAudienceCard {
 }
 
 export const ThesisEditingPage: React.FC = () => {
+  // State for active audience card (handles touch toggling on mobile)
+  const [activeAudienceId, setActiveAudienceId] = useState<string | null>(null);
+
+  const handleCardClick = (id: string) => {
+    setActiveAudienceId((prev) => (prev === id ? null : id));
+  };
+
   // Top Overview Highlights
   const heroHighlights = [
     "Correction of sentence construction, grammar, spelling, and punctuation",
@@ -102,12 +109,12 @@ export const ThesisEditingPage: React.FC = () => {
   return (
     <div className="w-full bg-white text-slate-800">
       {/* ============================================================= */}
-      {/* 1. HERO SECTION BANNER                                         */}
+      {/* 1. HERO SECTION BANNER                                        */}
       {/* ============================================================= */}
    
 
       {/* ============================================================= */}
-      {/* 3. WHAT WE DO SECTION                                          */}
+      {/* 3. WHAT WE DO SECTION                                         */}
       {/* ============================================================= */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-5 border-t border-slate-100">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-4">
@@ -214,41 +221,62 @@ export const ThesisEditingPage: React.FC = () => {
 
         {/* Target Audience Interactive Card Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {audienceCards.map((card) => (
-            <div
-              key={card.id}
-              className="group relative h-64 sm:h-72 rounded-lg overflow-hidden bg-black shadow-md cursor-pointer transition-transform duration-300 hover:-translate-y-1"
-            >
-              {/* Card Image Background */}
-              <Image
-                src={card.imageSrc}
-                alt={card.title}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover transition-opacity duration-300 group-hover:opacity-20"
-              />
+          {audienceCards.map((card) => {
+            const isActive = activeAudienceId === card.id;
 
-              {/* Gradient Overlay for Default Title State */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300 group-hover:opacity-0" />
+            return (
+              <div
+                key={card.id}
+                onClick={() => handleCardClick(card.id)}
+                onMouseEnter={() => setActiveAudienceId(card.id)}
+                onMouseLeave={() => setActiveAudienceId(null)}
+                className="group relative h-64 sm:h-72 rounded-lg overflow-hidden bg-black shadow-md cursor-pointer transition-transform duration-300 hover:-translate-y-1"
+              >
+                {/* Card Image Background */}
+                <Image
+                  src={card.imageSrc}
+                  alt={card.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className={`object-cover transition-opacity duration-300 group-hover:opacity-20 ${
+                    isActive ? "opacity-20" : "opacity-100"
+                  }`}
+                />
 
-              {/* Default View (Title at Bottom) */}
-              <div className="absolute bottom-0 left-0 right-0 p-5 z-10 transition-opacity duration-300 group-hover:opacity-0">
-                <h3 className="text-sm sm:text-base font-bold text-white tracking-wide">
-                  {card.title}
-                </h3>
+                {/* Gradient Overlay for Default Title State */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300 group-hover:opacity-0 ${
+                    isActive ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+
+                {/* Default View (Title at Bottom) */}
+                <div
+                  className={`absolute bottom-0 left-0 right-0 p-5 z-10 transition-opacity duration-300 group-hover:opacity-0 ${
+                    isActive ? "opacity-0" : "opacity-100"
+                  }`}
+                >
+                  <h3 className="text-sm sm:text-base font-bold text-white tracking-wide">
+                    {card.title}
+                  </h3>
+                </div>
+
+                {/* Hover View (Black Overlay with Full Description) */}
+                <div
+                  className={`absolute inset-0 bg-black p-6 flex flex-col justify-center text-white transition-opacity duration-300 z-20 space-y-3 group-hover:opacity-100 ${
+                    isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                  }`}
+                >
+                  <h3 className="text-base font-bold text-white border-b border-slate-800 pb-2">
+                    {card.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    {card.description}
+                  </p>
+                </div>
               </div>
-
-              {/* Hover View (Black Overlay with Full Description) */}
-              <div className="absolute inset-0 bg-black p-6 flex flex-col justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 space-y-3">
-                <h3 className="text-base font-bold text-white border-b border-slate-800 pb-2">
-                  {card.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  {card.description}
-                </p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
     </div>

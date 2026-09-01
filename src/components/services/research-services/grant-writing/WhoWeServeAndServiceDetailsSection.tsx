@@ -9,10 +9,10 @@ interface AudienceCard {
   id: string;
   title: string;
   description: string;
-  imageSrc: string;
-  altText: string;
   linkText?: string;
   linkUrl?: string;
+  imageSrc: string;
+  altText: string;
 }
 
 interface StepItem {
@@ -24,11 +24,11 @@ interface FeatureCard {
   id: string;
   title: string;
   iconSrc: string;
-  description: string;
+  description: React.ReactNode;
   highlightText?: string;
   needFromYou: string[];
   youllGet: string[];
-  howItWorksSteps: StepItem[];
+  howItWorksSteps: { step: number; text: string }[];
 }
 
 const GW_IMG = "/images/research-services/grant-writing";
@@ -93,8 +93,24 @@ const serviceDetails: FeatureCard[] = [
     id: "writing-dev",
     title: "Grant Proposal Writing and Development",
     iconSrc: `${GW_IMG}/Grant-Proposal-Writing-and-Development.png`,
-    description:
-      "Our grant proposal writing services are tailored to meet the specific needs of your research project. We craft compelling proposals that clearly articulate novelty, significance, and impact while aligning with funder priorities.",
+    description: (
+      <>
+        Our grant proposal writing services are tailored to meet the specific
+        needs of your research project. We craft compelling proposals that
+        clearly articulate novelty, significance, and impact while aligning with
+        funder priorities.{" "}
+        <Link
+          href="/academy/grant-writing/communicating-research-impact-grant-applications/"
+          className="text-blue-600"
+        >
+          grant writing
+        </Link>{" "}
+        specialists work closely with you and your supervisors to shape and
+        refine your proposal. If you already have a specific grant call in mind,
+        we adapt the proposal to meet the selection criteria and compliance
+        requirements.
+      </>
+    ),
     highlightText: "grant writing",
     needFromYou: [
       "A grant proposal outline",
@@ -164,8 +180,18 @@ const serviceDetails: FeatureCard[] = [
     id: "editing",
     title: "Grant Proposal Editing",
     iconSrc: `${GW_IMG}/Grant-Proposal-Editing.png`,
-    description:
-      "Our grant proposal editing experts improve clarity, coherence, and persuasiveness while ensuring alignment with funder priorities. This service is ideal for researchers seeking research grant proposal writing and editing support before submission.",
+    description: (
+      <>
+        Our grant proposal editing experts improve clarity, coherence, and persuasiveness while ensuring alignment with funder priorities. This service is ideal for researchers seeking{" "}
+        <Link
+          href="/academy/grant-writing/confidentiality-in-grant-writing-proposals/"
+          className="text-blue-600"
+        >
+          research grant proposal writing and editing
+        </Link>{" "}
+        support before submission.
+      </>
+    ),
     needFromYou: [
       "Your draft grant proposal",
       "Any reference materials (e.g., research papers or manuscripts)",
@@ -205,6 +231,12 @@ export default function WhoWeServeAndServiceDetailsSection() {
     setActiveHowItWorksId((prev) => (prev === id ? null : id));
   };
 
+  const [activeId, setActiveId] = useState<string | null>(null);
+
+  const handleCardClick = (id: string) => {
+    setActiveId((prev) => (prev === id ? null : id));
+  };
+
   return (
     <div className="w-full text-slate-800">
       {/* ========================================================= */}
@@ -227,7 +259,7 @@ export default function WhoWeServeAndServiceDetailsSection() {
               At Pubrica, we offer tailored research{" "}
               <Link
                 href="services/research-services/grant-writing/research-grant-proposal-writing-guide"
-                className="text-sky-600 font-medium"
+                className="text-blue-600"
               >
                 grant writing services
               </Link>{" "}
@@ -238,47 +270,61 @@ export default function WhoWeServeAndServiceDetailsSection() {
 
           {/* 6-Card Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {audienceCards.map((card) => (
-              <div
-                key={card.id}
-                className="group relative h-64 sm:h-72 rounded-sm overflow-hidden shadow-md cursor-pointer bg-black"
-              >
-                {/* 1. Base Image */}
-                <Image
-                  src={card.imageSrc}
-                  alt={card.altText}
-                  fill
-                  className="object-cover transition-opacity duration-300 group-hover:opacity-0"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
+            {audienceCards.map((card) => {
+              const isActive = activeId === card.id;
 
-                {/* 2. Default Bottom Gradient Bar */}
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent p-5 z-10 transition-opacity duration-300 group-hover:opacity-0">
-                  <h3 className="text-base sm:text-lg font-bold text-white leading-tight">
-                    {card.title}
-                  </h3>
-                </div>
+              return (
+                <div
+                  key={card.id}
+                  onClick={() => handleCardClick(card.id)}
+                  onMouseEnter={() => setActiveId(card.id)}
+                  onMouseLeave={() => setActiveId(null)}
+                  className="group relative h-64 sm:h-72 rounded-sm overflow-hidden shadow-md cursor-pointer bg-black"
+                >
+                  {/* 1. Base Image */}
+                  <Image
+                    src={card.imageSrc}
+                    alt={card.altText}
+                    fill
+                    className={`object-cover transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                      }`}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
 
-                {/* 3. Full Black Hover Overlay */}
-                <div className="absolute inset-0 bg-black p-6 flex flex-col justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 text-white space-y-4">
-                  <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
-                    {card.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
-                    {card.description}
-                    {card.linkText && (
-                      <Link
-                        href={card.linkUrl || "#"}
-                        className="text-sky-400 font-normal inline"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        {card.linkText}
-                      </Link>
-                    )}
-                  </p>
+                  {/* 2. Default Bottom Gradient Bar */}
+                  <div
+                    className={`absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent p-5 z-10 transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                      }`}
+                  >
+                    <h3 className="text-base sm:text-lg font-bold text-white leading-tight">
+                      {card.title}
+                    </h3>
+                  </div>
+
+                  {/* 3. Full Black Hover Overlay */}
+                  <div
+                    className={`absolute inset-0 bg-black p-6 flex flex-col justify-start transition-opacity duration-300 z-20 text-white space-y-4 group-hover:opacity-100 ${isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                      }`}
+                  >
+                    <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
+                      {card.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
+                      {card.description}
+                      {card.linkText && (
+                        <Link
+                          href={card.linkUrl || "#"}
+                          className="text-sky-400 font-normal inline"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {card.linkText}
+                        </Link>
+                      )}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -383,7 +429,7 @@ export default function WhoWeServeAndServiceDetailsSection() {
                       <button
                         type="button"
                         onClick={() => toggleHowItWorks(service.id)}
-                        className="inline-flex items-center text-xs sm:text-sm font-semibold text-sky-600 hover:text-sky-800 transition-colors duration-200 hover:underline gap-1 group/link cursor-pointer"
+                        className="inline-flex items-center text-xs sm:text-sm font-semibold text-sky-600 hover:text-sky-800 transition-colors duration-200  gap-1 group/link cursor-pointer"
                       >
                         <span>See How It Works</span>
                         <span className="transition-transform duration-200 group-hover/link:translate-x-1">

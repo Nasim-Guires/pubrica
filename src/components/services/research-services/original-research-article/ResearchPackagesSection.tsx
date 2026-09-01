@@ -104,12 +104,12 @@ export default function ResearchPackagesSection() {
           </p>
         </header>
 
-        {/* Pricing Table Container */}
-        <div className="border border-slate-300 rounded-lg overflow-hidden bg-white shadow-sm">
-          <div className="overflow-x-auto">
+        {/* Pricing Table Container with Fixed Height and Scrollbars */}
+        <div className="border border-slate-300 rounded-xl overflow-hidden bg-white shadow-lg">
+          <div className="max-h-[380px] overflow-y-auto overflow-x-auto scrollbar-thin scrollbar-thumb-slate-400 scrollbar-track-slate-100">
             <table className="w-full text-left border-collapse min-w-[800px]">
-              <thead>
-                <tr className="bg-[#0d3b38] text-white text-sm sm:text-base font-bold">
+              <thead className="sticky top-0 z-10">
+                <tr className="bg-[#0d3b38] text-white text-sm sm:text-base font-bold shadow-sm">
                   <th className="py-4 px-6 border-r border-[#1a4a47] w-1/5 text-center align-middle">
                     Package Tier
                   </th>
@@ -204,7 +204,7 @@ export default function ResearchPackagesSection() {
 
         {/* Bottom CTA Button */}
         <div className="flex justify-center pt-4">
-          <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
         </div>
       </div>
     </section>

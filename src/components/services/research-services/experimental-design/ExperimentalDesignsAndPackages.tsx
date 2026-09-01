@@ -5,6 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
+import CommonTestimonial from "@/components/common/CommonTestimonials";
+import { experimentalDesignTestimonials } from "@/lib/services/data/research-services/experimentalDesignTestimonials";
+import CommonPackages, { PackageItem } from "@/components/common/CommonPackages";
 
 export default function ExperimentalDesignsAndPackages() {
   // State for opening/closing main cards (empty array = both closed by default)
@@ -20,6 +24,68 @@ export default function ExperimentalDesignsAndPackages() {
 
   const isProvideOpen = openSections.includes("what-you-provide");
   const isWeProvideOpen = openSections.includes("what-we-provide");
+
+  const packages: PackageItem[] = [
+    {
+      icon: "/images/editing-and-translation/basic-pacakge.png",
+      title: "Basic",
+      idealFor: "Academic researchers starting small-scale or pilot studies",
+      includes: [
+        "Study objective & hypothesis formulation",
+        "Selection of an appropriate study design",
+        "Basic sample size estimation",
+      ],
+      turnaround: "5–7 working days",
+      cardBgColor: "#d2dedb",
+      titleColor: "#0e3b38",
+    },
+    {
+      icon: "/images/publication-support/art-work-preparation/S.png",
+      title: "Standard",
+      idealFor:
+        "Clinical & biomedical research projects requiring moderate complexity",
+      includes: [
+        "Everything in the Basic Package",
+        "Detailed randomization & blinding plan",
+        "Variable definitions & control group setup",
+        "Preliminary statistical analysis plan (SAP)",
+      ],
+      turnaround: "7–10 working days",
+      cardBgColor: "#d9cbe2",
+      titleColor: "#581c87",
+    },
+    {
+      icon:
+        "/images/research-services/biostatistics-and-statistical-programming-service/c-box-icons.png",
+      title: "Comprehensive",
+      idealFor:
+        "Large-scale clinical trials, multi-center studies, and regulatory submissions",
+      includes: [
+        "Everything in the Standard Package",
+        "Full protocol development",
+        "Power analysis & advanced sample size calculation",
+        "Measurement instrument selection & validation plan",
+        "Regulatory compliance check (ICH-GCP, CONSORT, etc.)",
+      ],
+      turnaround: "10–15 working days",
+      cardBgColor: "#fcdcb9",
+      titleColor: "#7c2d12",
+    },
+    {
+      icon:
+        "/images/research-services/biostatistics-and-statistical-programming-service/c-box-icons.png",
+      title: "Custom",
+      idealFor: "Complex, interdisciplinary, or high-impact studies",
+      includes: [
+        "Tailor-made experimental design based on your research goals",
+        "Incorporation of unique methodologies or hybrid designs",
+        "Ongoing consultation with our experts",
+      ],
+      turnaround: "As per the project scope",
+      cardBgColor: "#e4cd9f",
+      titleColor: "#451a03",
+    },
+  ];
 
   return (
     <div className="w-full bg-white font-sans text-slate-800">
@@ -80,8 +146,8 @@ export default function ExperimentalDesignsAndPackages() {
                 <span>
                   An{" "}
                   <Link
-                    href="/services/research-services/experimental-design"
-                    className="text-sky-600 hover:underline"
+                    href="/academy/journals-templates/oncology-journal-publication-process/"
+                    className="text-blue-600 "
                   >
                     Experimental Design
                   </Link>{" "}
@@ -430,459 +496,257 @@ export default function ExperimentalDesignsAndPackages() {
       {/* ========================================================= */}
       {/* 3. COMPLIANCE AND GUIDELINE STANDARDS                     */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 space-y-8">
-        <div className="space-y-3">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
-            Our Compliance and Guideline Standards
-          </h2>
-          <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed max-w-5xl">
-            At Pubrica, we adhere to globally recognized compliance frameworks
-            and ethical guidelines to ensure that every{" "}
-            <Link
-              href="/services/research-services/experimental-design"
-              className="text-sky-600 hover:underline"
-            >
-              experimental design
-            </Link>{" "}
-            is scientifically valid, ethically sound, and publication-ready. Our
-            designs are tailored to meet both regulatory requirements and
-            academic standards.
-          </p>
-        </div>
-
-        {/* 6 Standards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Item 1 */}
-          <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
-            <div className="h-16 relative w-32 flex items-center justify-center">
-              <Image
-                src={
-                  "https://pubrica.com/wp-content/uploads/2025/09/International-Council-for-Harmonisation-\u2013-Good-Clinical-Practice-1.png"
-                }
-                alt="ICH GCP Logo"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div>
-              <h3 className="font-bold text-slate-900 text-sm sm:text-base">
-                International Council for Harmonisation – Good Clinical Practice
-                (ICH-GCP)
-              </h3>
-              <p className="text-xs text-slate-500 mt-1">
-                – For clinical trials and human subject research.
-              </p>
-            </div>
+        <section className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 space-y-8">
+          <div className="space-y-3">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
+              Our Compliance and Guideline Standards
+            </h2>
+            <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed max-w-5xl">
+              At Pubrica, we adhere to globally recognized compliance frameworks
+              and ethical guidelines to ensure that every{" "}
+              <Link
+                href="/academy/experimental-design/experimental-research-design/"
+                className="text-blue-600 "
+              >
+                experimental design
+              </Link>{" "}
+              is scientifically valid, ethically sound, and publication-ready. Our
+              designs are tailored to meet both regulatory requirements and
+              academic standards.
+            </p>
           </div>
 
-          {/* Item 2 */}
-          <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
-            <div className="h-16 relative w-32 flex items-center justify-center">
-              <Image
-                src="/images/research-services/experimental-design/Consolidated-Standards-of-Reporting-Trials.png"
-                alt="CONSORT SPIRIT Logo"
-                fill
-                className="object-contain"
-              />
+          {/* 6 Standards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Item 1 */}
+            <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
+              <div className="h-16 relative w-32 flex items-center justify-center">
+                <Image
+                  src={
+                    "https://pubrica.com/wp-content/uploads/2025/09/International-Council-for-Harmonisation-\u2013-Good-Clinical-Practice-1.png"
+                  }
+                  alt="ICH GCP Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
+                  International Council for Harmonisation – Good Clinical Practice
+                  (ICH-GCP)
+                </h3>
+                <p className="text-xs text-slate-500 mt-1">
+                  – For clinical trials and human subject research.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 className="font-bold text-slate-900 text-sm sm:text-base">
-                Consolidated Standards of Reporting Trials (CONSORT)
-              </h3>
-              <p className="text-xs text-slate-500 mt-1">
-                – For randomized controlled trials to ensure transparent and
-                complete reporting.
-              </p>
-            </div>
-          </div>
 
-          {/* Item 3 */}
-          <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
-            <div className="h-16 relative w-28 flex items-center justify-center">
-              <Image
-                src="/images/research-services/experimental-design/STROBE.png"
-                alt="STROBE Logo"
-                fill
-                className="object-contain"
-              />
+            {/* Item 2 */}
+            <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
+              <div className="h-16 relative w-32 flex items-center justify-center">
+                <Image
+                  src="/images/research-services/experimental-design/Consolidated-Standards-of-Reporting-Trials.png"
+                  alt="CONSORT SPIRIT Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
+                  Consolidated Standards of Reporting Trials (CONSORT)
+                </h3>
+                <p className="text-xs text-slate-500 mt-1">
+                  – For randomized controlled trials to ensure transparent and
+                  complete reporting.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 className="font-bold text-slate-900 text-sm sm:text-base">
-                Strengthening the Reporting of Observational Studies in
-                Epidemiology (STROBE)
-              </h3>
-              <p className="text-xs text-slate-500 mt-1">
-                – For observational and epidemiological studies.
-              </p>
-            </div>
-          </div>
 
-          {/* Item 4 */}
-          <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
-            <div className="h-16 relative w-28 flex items-center justify-center">
-              <Image
-                src={
-                  "https://pubrica.com/wp-content/uploads/2025/09/Animal-Research-Reporting-of-In-Vivo-Experiments-\u2013-ARRIVE.png"
-                }
-                alt="ARRIVE Logo"
-                fill
-                className="object-contain"
-              />
+            {/* Item 3 */}
+            <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
+              <div className="h-16 relative w-28 flex items-center justify-center">
+                <Image
+                  src="/images/research-services/experimental-design/STROBE.png"
+                  alt="STROBE Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
+                  Strengthening the Reporting of Observational Studies in
+                  Epidemiology (STROBE)
+                </h3>
+                <p className="text-xs text-slate-500 mt-1">
+                  – For observational and epidemiological studies.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 className="font-bold text-slate-900 text-sm sm:text-base">
-                Animal Research: Reporting of In Vivo Experiments (ARRIVE)
-              </h3>
-              <p className="text-xs text-slate-500 mt-1">
-                – For animal research studies, to ensure humane and ethical
-                practices.
-              </p>
-            </div>
-          </div>
 
-          {/* Item 5 */}
-          <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
-            <div className="h-16 relative w-24 flex items-center justify-center">
-              <Image
-                src="/images/research-services/experimental-design/ISO-Standards.png"
-                alt="ISO Standards Logo"
-                fill
-                className="object-contain"
-              />
+            {/* Item 4 */}
+            <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
+              <div className="h-16 relative w-28 flex items-center justify-center">
+                <Image
+                  src={
+                    "https://pubrica.com/wp-content/uploads/2025/09/Animal-Research-Reporting-of-In-Vivo-Experiments-\u2013-ARRIVE.png"
+                  }
+                  alt="ARRIVE Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
+                  Animal Research: Reporting of In Vivo Experiments (ARRIVE)
+                </h3>
+                <p className="text-xs text-slate-500 mt-1">
+                  – For animal research studies, to ensure humane and ethical
+                  practices.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 className="font-bold text-slate-900 text-sm sm:text-base">
-                ISO Standards
-              </h3>
-              <p className="text-xs text-slate-500 mt-1">
-                – For medical device-related experimental designs.
-              </p>
-            </div>
-          </div>
 
-          {/* Item 6 */}
-          <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
-            <div className="h-16 relative w-28 flex items-center justify-center">
-              <Image
-                src="/images/research-services/experimental-design/WHO-FDA-Guidance.png"
-                alt="WHO and FDA Guidance Logo"
-                fill
-                className="object-contain"
-              />
+            {/* Item 5 */}
+            <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
+              <div className="h-16 relative w-24 flex items-center justify-center">
+                <Image
+                  src="/images/research-services/experimental-design/ISO-Standards.png"
+                  alt="ISO Standards Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
+                  ISO Standards
+                </h3>
+                <p className="text-xs text-slate-500 mt-1">
+                  – For medical device-related experimental designs.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 className="font-bold text-slate-900 text-sm sm:text-base">
-                WHO & FDA Guidance
-              </h3>
-              <p className="text-xs text-slate-500 mt-1">
-                – For global harmonization of biomedical and public health
-                studies.
-              </p>
+
+            {/* Item 6 */}
+            <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
+              <div className="h-16 relative w-28 flex items-center justify-center">
+                <Image
+                  src="/images/research-services/experimental-design/WHO-FDA-Guidance.png"
+                  alt="WHO and FDA Guidance Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
+                  WHO & FDA Guidance
+                </h3>
+                <p className="text-xs text-slate-500 mt-1">
+                  – For global harmonization of biomedical and public health
+                  studies.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ========================================================= */}
       {/* 4. SAMPLE WORK & REPORT BANNER                            */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#f0fbf5] py-6 px-4 sm:px-6 lg:px-8 my-8">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          <div className="md:col-span-4 relative h-64 md:h-80 w-full rounded-md overflow-hidden shadow-xs">
-            <Image
-              src="/images/research-services/experimental-design/Experimental-Design-Services-Sample-Work.png"
-              alt="Experimental Design Sample Work"
-              fill
-              className="object-contain bg-white"
-            />
-          </div>
-
-          <div className="md:col-span-8 space-y-6">
-            <div className="space-y-3">
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
-                Experimental Design Services Sample Work
-              </h3>
-              <div>
-                <Link
-                  href="/insights/sample-work"
-                  className="inline-block bg-black text-white text-xs font-semibold px-8 py-2.5 rounded-full hover:bg-slate-800 transition-colors"
-                >
-                  Discover More
-                </Link>
-              </div>
-            </div>
-
-            <div className="space-y-3 pt-2">
-              <h3 className="text-lg sm:text-xl font-bold text-slate-900">
-                Download the full Report Now
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
-                Explore our{" "}
-                <Link
-                  href="/services/research-services/experimental-design"
-                  className="text-sky-600 hover:underline font-medium"
-                >
-                  experimental design
-                </Link>{" "}
-                sample work, meticulously crafted to align with study-specific
-                objectives, methodological standards (e.g., CONSORT, SPIRIT),
-                and project timelines, ensuring robust, ethical, and
-                publication-ready research outcomes.
-              </p>
-              <div>
-                <Link
-                  href="/insights/sample-work"
-                  className="inline-block bg-black text-white text-xs font-semibold px-8 py-2.5 rounded-full hover:bg-slate-800 transition-colors"
-                >
-                  Discover More
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PubricaSampleWorkCard
+        bookCoverImage={{
+          src: "/images/research-services/experimental-design/Experimental-Design-Services-Sample-Work.png",
+          alt: "Experimental Design Sample Work",
+          width: 600,
+          height: 400,
+        }}
+        sections={[
+          {
+            heading: "Experimental Design Services Sample Work",
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work/effective-methods-for-metabarcoding-fungi/",
+            },
+          },
+          {
+            heading: "Download the full Report Now",
+            descriptionSegments: [
+              {
+                text: "Explore our ",
+              },
+              {
+                text: "experimental design",
+                url: "/services/research-services/experimental-design/benefits-of-experimental-plan-in-research-and-design/",
+              },
+              {
+                text: " sample work, meticulously crafted to align with study-specific objectives, methodological standards (e.g., ",
+              },
+              {
+                text: "CONSORT",
+                url: "https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf",
+              },
+              {
+                text: ", ",
+              },
+              {
+                text: "SPIRIT",
+                url: "https://www.consort-spirit.org/",
+              },
+              {
+                text: "), and project timelines, ensuring robust, ethical, and publication-ready research outcomes.",
+              },
+            ],
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work",
+            },
+          },
+        ]}
+        footerDisclaimerSegments={[]}
+      />
 
       {/* ========================================================= */}
       {/* 5. EXPERIMENTAL DESIGN SERVICE - OUR PACKAGES              */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 pb-10 relative">
-        <div className="text-center space-y-3 mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
-            Experimental Design Service – Our Packages
+      <section className="py-0 my-0 text-center flex flex-col items-center">
+        {/* Packages Component */}
+        <CommonPackages
+          title="Experimental Design Service – Our Packages"
+          description="We offer flexible packages to meet the diverse needs of researchers, clinicians, and industry partners. Each package is designed to ensure your study is methodologically sound, statistically robust, and ready for implementation."
+          packages={packages}
+        />
+
+        {/* Button tightly stacked below */}
+        <div className="-mt-1 mb-1">
+          <GetFreeQuoteButton />
+        </div>
+      </section>
+      <section className="py-0 my-0 text-center">
+        {/* Centered Title & Description Header */}
+        <div className="max-w-4xl mx-auto py-0 my-0">
+          <h2 className="text-3xl font-bold text-[#003B38] mb-1">
+            Testimonials
           </h2>
-          <p className="text-xs sm:text-sm md:text-base text-slate-600 max-w-4xl mx-auto">
-            We offer flexible packages to meet the diverse needs of researchers,
-            clinicians, and industry partners. Each package is designed to
-            ensure your study is methodologically sound, statistically robust,
-            and ready for implementation.
+          <p className="text-gray-700 leading-normal mb-2">
+            Learn how Pubrica’s{' '}
+            <Link
+              href="/academy/experimental-design/pre-experimental-research-design/"
+              className="text-blue-600 "
+            >
+              experimental design
+            </Link>{' '}
+            service has empowered researchers to develop methodologically sound, ethically compliant,
+            and publication-ready studies that advance scientific knowledge and boost their academic impact.
+            Here is what our clients say:
           </p>
         </div>
 
-        {/* 4 Packages Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-          {/* Basic */}
-          <div className="bg-[#d2dedb]/40 rounded-xl overflow-hidden border border-slate-200 flex flex-col justify-between">
-            <div className="p-6 space-y-6">
-              <div className="flex items-center gap-3">
-                <Image
-                  src="/images/editing-and-translation/basic-pacakge.png"
-                  alt="Basic package"
-                  width={40}
-                  height={40}
-                  className="w-10 h-10 object-contain"
-                />
-                <h3 className="text-lg font-bold text-slate-900">Basic</h3>
-              </div>
-
-              <div className="space-y-2">
-                <p className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                  <ArrowRight className="w-3.5 h-3.5 text-slate-900 shrink-0" />
-                  <span>
-                    Ideal For:{" "}
-                    <span className="font-normal text-slate-700">
-                      Academic researchers starting small-scale or pilot studies
-                    </span>
-                  </span>
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <p className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                  <ArrowRight className="w-3.5 h-3.5 text-slate-900 shrink-0" />
-                  <span>Includes:</span>
-                </p>
-                <ul className="space-y-2 pl-5 text-xs text-slate-700 leading-snug">
-                  <li>Study objective & hypothesis formulation</li>
-                  <li>Selection of an appropriate study design</li>
-                  <li>Basic sample size estimation</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="p-6 pt-0">
-              <p className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                <ArrowRight className="w-3.5 h-3.5 text-slate-900 shrink-0" />
-                <span>
-                  Turnaround Time:{" "}
-                  <span className="font-normal text-slate-700">
-                    5–7 working days
-                  </span>
-                </span>
-              </p>
-            </div>
-          </div>
-
-          {/* Standard */}
-          <div className="bg-[#d9cbe2]/40 rounded-xl overflow-hidden border border-slate-200 flex flex-col justify-between">
-            <div className="p-6 space-y-6">
-              <div className="flex items-center gap-3">
-                <Image
-                  src="/images/publication-support/art-work-preparation/S.png"
-                  alt="Standard package"
-                  width={40}
-                  height={40}
-                  className="w-10 h-10 object-contain"
-                />
-                <h3 className="text-lg font-bold text-purple-900">Standard</h3>
-              </div>
-
-              <div className="space-y-2">
-                <p className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                  <ArrowRight className="w-3.5 h-3.5 text-slate-900 shrink-0" />
-                  <span>
-                    Ideal For:{" "}
-                    <span className="font-normal text-slate-700">
-                      Clinical & biomedical research projects requiring moderate
-                      complexity
-                    </span>
-                  </span>
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <p className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                  <ArrowRight className="w-3.5 h-3.5 text-slate-900 shrink-0" />
-                  <span>Includes:</span>
-                </p>
-                <ul className="space-y-2 pl-5 text-xs text-slate-700 leading-snug">
-                  <li>Everything in the Basic Package</li>
-                  <li>Detailed randomization & blinding plan</li>
-                  <li>Variable definitions & control group setup</li>
-                  <li>Preliminary statistical analysis plan (SAP)</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="p-6 pt-0">
-              <p className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                <ArrowRight className="w-3.5 h-3.5 text-slate-900 shrink-0" />
-                <span>
-                  Turnaround Time:{" "}
-                  <span className="font-normal text-slate-700">
-                    7–10 working days
-                  </span>
-                </span>
-              </p>
-            </div>
-          </div>
-
-          {/* Comprehensive */}
-          <div className="bg-[#fcdcb9]/50 rounded-xl overflow-hidden border border-slate-200 flex flex-col justify-between">
-            <div className="p-6 space-y-6">
-              <div className="flex items-center gap-3">
-                <Image
-                  src="/images/research-services/biostatistics-and-statistical-programming-service/c-box-icons.png"
-                  alt="Comprehensive package"
-                  width={40}
-                  height={40}
-                  className="w-10 h-10 object-contain"
-                />
-                <h3 className="text-lg font-bold text-orange-900">
-                  Comprehensive
-                </h3>
-              </div>
-
-              <div className="space-y-2">
-                <p className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                  <ArrowRight className="w-3.5 h-3.5 text-slate-900 shrink-0" />
-                  <span>
-                    Ideal For:{" "}
-                    <span className="font-normal text-slate-700">
-                      Large-scale clinical trials, multi-center studies, and
-                      regulatory submissions
-                    </span>
-                  </span>
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <p className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                  <ArrowRight className="w-3.5 h-3.5 text-slate-900 shrink-0" />
-                  <span>Includes:</span>
-                </p>
-                <ul className="space-y-2 pl-5 text-xs text-slate-700 leading-snug">
-                  <li>Everything in the Standard Package</li>
-                  <li>Full protocol development</li>
-                  <li>Power analysis & advanced sample size calculation</li>
-                  <li>Measurement instrument selection & validation plan</li>
-                  <li>Regulatory compliance check (ICH-GCP, CONSORT, etc.)</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="p-6 pt-0">
-              <p className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                <ArrowRight className="w-3.5 h-3.5 text-slate-900 shrink-0" />
-                <span>
-                  Turnaround Time:{" "}
-                  <span className="font-normal text-slate-700">
-                    10–15 working days
-                  </span>
-                </span>
-              </p>
-            </div>
-          </div>
-
-          {/* Custom */}
-          <div className="bg-[#e4cd9f]/50 rounded-xl overflow-hidden border border-slate-200 flex flex-col justify-between">
-            <div className="p-6 space-y-6">
-              <div className="flex items-center gap-3">
-                <Image
-                  src="/images/research-services/biostatistics-and-statistical-programming-service/c-box-icons.png"
-                  alt="Custom package"
-                  width={40}
-                  height={40}
-                  className="w-10 h-10 object-contain"
-                />
-                <h3 className="text-lg font-bold text-amber-950">Custom</h3>
-              </div>
-
-              <div className="space-y-2">
-                <p className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                  <ArrowRight className="w-3.5 h-3.5 text-slate-900 shrink-0" />
-                  <span>
-                    Ideal For:{" "}
-                    <span className="font-normal text-slate-700">
-                      Complex, interdisciplinary, or high-impact studies
-                    </span>
-                  </span>
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <p className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                  <ArrowRight className="w-3.5 h-3.5 text-slate-900 shrink-0" />
-                  <span>Includes:</span>
-                </p>
-                <ul className="space-y-2 pl-5 text-xs text-slate-700 leading-snug">
-                  <li>
-                    Tailor-made experimental design based on your research goals
-                  </li>
-                  <li>
-                    Incorporation of unique methodologies or hybrid designs
-                  </li>
-                  <li>Ongoing consultation with our experts</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="p-6 pt-0">
-              <p className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                <ArrowRight className="w-3.5 h-3.5 text-slate-900 shrink-0" />
-                <span>
-                  Turnaround Time:{" "}
-                  <span className="font-normal text-slate-700">
-                    As per the project scope
-                  </span>
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Floating Red CTA Bar across the bottom */}
-        <div className="mt-8 flex justify-center">
-         <GetFreeQuoteButton/>
+        {/* Testimonial Component */}
+        <div className="-mt-1">
+          <CommonTestimonial
+            title=""
+            description=""
+            testimonials={experimentalDesignTestimonials}
+          />
         </div>
       </section>
     </div>
