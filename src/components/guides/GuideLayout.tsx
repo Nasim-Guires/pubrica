@@ -61,7 +61,7 @@ export default function GuideLayout({
               <ul className="space-y-2">
                 {INTERESTING_TOPICS.map((topic) => (
                   <li key={topic.href}>
-                    <Link href={topic.href} className="text-xs text-[#004d40] hover:underline">
+                    <Link href={topic.href} className="text-xs text-blue-600 no-underline hover:no-underline">
                       {topic.label}
                     </Link>
                   </li>

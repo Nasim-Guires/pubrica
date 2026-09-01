@@ -111,7 +111,7 @@ export default function PeerReviewPage() {
                         <ul className="space-y-2.5 text-sm">
                             {interestingTopics.map((topic, index) => (
                                 <li key={index}>
-                                    <Link href={topic.href} className="text-blue-600 hover:underline block">
+                                    <Link href={topic.href} className="text-blue-600 no-underline hover:no-underline block">
                                         {topic.name}
                                     </Link>
                                 </li>

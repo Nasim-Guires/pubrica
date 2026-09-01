@@ -201,7 +201,7 @@ export default function LifeSciencesPage() {
                     <ul className="ml-8 my-2 space-y-2 text-xs font-semibold text-teal-600">
                       {section.items.map((item, idx) => (
                         <li key={idx}>
-                          <Link href={item.href} className="hover:underline">
+                          <Link href={item.href} className="text-blue-600 no-underline hover:no-underline">
                             • {item.label}
                           </Link>
                         </li>
@@ -409,7 +409,7 @@ export default function LifeSciencesPage() {
                   <ul className="space-y-2">
                     {sampleLinks.map((sample, idx) => (
                       <li key={idx}>
-                        <Link href={sampleLinkHrefs[sample] || '/services'} className="text-xs text-blue-600 hover:underline font-medium">
+                        <Link href={sampleLinkHrefs[sample] || '/services'} className="text-xs text-blue-600 no-underline hover:no-underline font-medium">
                           {sample}
                         </Link>
                       </li>

@@ -68,7 +68,7 @@ const Page = () => {
                                         <li key={topic.title}>
                                             <Link
                                                 href={topic.href}
-                                                className="block leading-relaxed transition-colors hover:text-[#0e3b32] hover:underline"
+                                                className="block leading-relaxed transition-colors text-blue-600 no-underline hover:no-underline"
                                             >
                                                 {topic.title}
                                             </Link>

@@ -145,7 +145,7 @@ export default function PublicationServices() {
               At Pubrica, we provide{" "}
               <a
                 href={ROUTE_MAP["best publication support services"]}
-                className="text-sky-600 font-normal no-underline cursor-pointer inline"
+                className="text-blue-600 font-normal no-underline hover:no-underline cursor-pointer inline"
               >
                 best publication support services
               </a>{" "}
@@ -170,7 +170,7 @@ export default function PublicationServices() {
                       {item.linkText && (
                         <Link
                           href={ROUTE_MAP[item.linkText]}
-                          className="text-sky-600 no-underline inline"
+                          className="text-blue-600 no-underline hover:no-underline inline"
                         >
                           {item.linkText}
                         </Link>

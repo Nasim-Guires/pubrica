@@ -44,7 +44,7 @@ export default function JobPostingTabs({ posts }: { posts: PayloadPost[] }) {
           >
             <Link
               href={`/careers/${post.urlPath}`}
-              className="flex items-center space-x-3 text-slate-900 hover:text-teal-600 font-medium text-sm md:text-base w-full"
+              className="flex items-center space-x-3 text-blue-600 no-underline hover:no-underline font-medium text-sm md:text-base w-full"
             >
               <span className="bg-slate-900 text-white p-1 rounded-full flex items-center justify-center flex-shrink-0">
                 <ArrowRight className="w-3.5 h-3.5" />

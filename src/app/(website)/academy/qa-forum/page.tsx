@@ -175,7 +175,7 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
                 <Link
                   key={r.label}
                   href={r.href}
-                  className="text-xs text-sky-800 hover:text-emerald-700 px-2.5 py-1"
+                  className="text-xs text-blue-600 no-underline hover:no-underline px-2.5 py-1"
                 >
                   {r.label}
                 </Link>

@@ -168,7 +168,7 @@ export default function Navbar() {
                                     <Link
                                       key={child.href}
                                       href={child.href}
-                                      className="flex items-center gap-2 text-xs text-[#0066cc] hover:underline font-medium"
+                                      className="flex items-center gap-2 text-xs text-blue-600 no-underline hover:no-underline font-medium"
                                     >
                                       <CheckCircle2 className="h-3.5 w-3.5 text-[#0066cc]" />
                                       <span>{child.label}</span>

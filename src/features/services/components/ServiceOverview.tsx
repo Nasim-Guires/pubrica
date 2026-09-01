@@ -143,7 +143,11 @@ export default function ServiceOverview() {
               href={href}
               target={isExternal ? "_blank" : undefined}
               rel={isExternal ? "noopener noreferrer" : undefined}
-              className="text-[#3b82f6] hover:no-underline cursor-pointer font-medium transition-all no-underline inline"
+              className={
+                isExternal
+                  ? "text-[#3b82f6] hover:no-underline cursor-pointer font-medium transition-all no-underline inline"
+                  : "text-blue-600 hover:no-underline cursor-pointer font-medium transition-all no-underline inline"
+              }
             >
               {part}
             </Link>

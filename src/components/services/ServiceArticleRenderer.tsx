@@ -39,7 +39,7 @@ export function renderInline(text: string, keyPrefix: string): React.ReactNode[]
           href={href}
           target={isExternal ? '_blank' : undefined}
           rel={isExternal ? 'noopener noreferrer' : undefined}
-          className="text-[#004d40] underline hover:text-[#00332a]"
+          className={isExternal ? 'text-[#004d40] underline hover:text-[#00332a]' : 'text-blue-600 no-underline hover:no-underline'}
         >
           {label}
         </a>

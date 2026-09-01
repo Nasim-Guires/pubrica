@@ -83,7 +83,7 @@ export default function SamplePdfPage({
                   </li>
                 ))}
               </ul>
-              <Link href={servicesHref} className="mt-5 inline-block text-xs font-semibold text-[#004d40] hover:underline">
+              <Link href={servicesHref} className="mt-5 inline-block text-xs font-semibold text-blue-600 no-underline hover:no-underline">
                 Find More About Our Services &rarr;
               </Link>
             </div>

@@ -200,7 +200,7 @@ export default function ServiceRejectionTable({
                       {row.url ? (
                         <a
                           href={row.url}
-                          className="text-[#3b82f6]  cursor-pointer"
+                          className="text-blue-600 no-underline hover:no-underline cursor-pointer"
                         >
                           {row.pubricaSolution}
                         </a>
@@ -258,7 +258,7 @@ export default function ServiceRejectionTable({
                   {row.url ? (
                     <a
                       href={row.url}
-                      className="text-[13px] font-bold text-[#3b82f6] cursor-pointer"
+                      className="text-[13px] font-bold text-blue-600 no-underline hover:no-underline cursor-pointer"
                     >
                       {row.pubricaSolution}
                     </a>

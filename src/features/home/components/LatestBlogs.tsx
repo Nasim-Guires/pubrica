@@ -75,7 +75,7 @@ export default async function LatestBlogs() {
                   </span>
                   <Link
                     href={`/blog/${blog.slug}`}
-                    className="text-primary-800 hover:text-primary-600 font-bold text-xs flex items-center gap-1"
+                    className="text-blue-600 no-underline hover:no-underline font-bold text-xs flex items-center gap-1"
                   >
                     <span>Read Article</span>
                     <ArrowRight className="h-3.5 w-3.5" />

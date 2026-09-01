@@ -127,7 +127,7 @@ export default function IndustryPage() {
                     {/* Action Link */}
                     <Link
                       href={industry.href}
-                      className="text-black font-bold text-base hover:text-emerald-700 transition-colors inline-block"
+                      className="text-blue-600 font-bold text-base no-underline hover:no-underline transition-colors inline-block"
                     >
                       Read More
                     </Link>

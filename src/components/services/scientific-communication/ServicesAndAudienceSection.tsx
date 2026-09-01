@@ -159,7 +159,7 @@ export default function ServicesAndAudienceSection() {
               <p className="text-sm text-gray-600 leading-relaxed">
                 <Link
                   href={card.href}
-                  className="text-sky-600 hover:underline font-medium"
+                  className="text-blue-600 no-underline hover:no-underline font-medium"
                 >
                   {card.linkText}
                 </Link>

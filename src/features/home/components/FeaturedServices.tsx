@@ -124,7 +124,7 @@ export default function WhatWeDo() {
                       <div className="mt-6 pt-4">
                         <Link
                           href={`/order-now`}
-                          className="text-gray-900 font-medium text-xs underline underline-offset-4 decoration-gray-400 hover:text-[#1a4d4a] transition-colors inline-block"
+                          className="text-blue-600 font-medium text-xs no-underline hover:no-underline transition-colors inline-block"
                         >
                           Enquire Now
                         </Link>

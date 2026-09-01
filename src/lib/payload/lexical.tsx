@@ -32,6 +32,16 @@ function plainNodeText(node: LexicalNode): string | null {
 }
 
 /**
+ * CMS-authored links use whatever URL form the original WordPress content had —
+ * often an absolute https://pubrica.com/... URL rather than a root-relative path —
+ * so a same-origin check can't just look for a leading "/".
+ */
+function isInternalPubricaUrl(href: string): boolean {
+  if (href.startsWith("/")) return true;
+  return /^https?:\/\/(www\.)?pubrica\.com(\/|$)/i.test(href);
+}
+
+/**
  * Some migrated content (e.g. journal spec sheets) encodes "Key Highlights"
  * style data as alternating h2 (label) / h3 (value) heading pairs instead of
  * an actual table. Detect runs of 2+ consecutive pairs and collapse them into
@@ -358,13 +368,18 @@ function renderNode(node: LexicalNode, key: number): React.ReactNode {
     case "link": {
       const href = node.fields?.url || "#";
       const newTab = node.fields?.newTab;
+      const internal = isInternalPubricaUrl(href);
       return (
         <a
           key={key}
           href={href}
           target={newTab ? "_blank" : undefined}
           rel={newTab ? "noopener noreferrer" : undefined}
-          className="text-[#004d40] font-medium underline hover:text-[#00332a]"
+          className={
+            internal
+              ? "text-blue-600 font-medium no-underline hover:no-underline"
+              : "text-[#004d40] font-medium underline hover:text-[#00332a]"
+          }
         >
           {renderChildren(node.children)}
         </a>

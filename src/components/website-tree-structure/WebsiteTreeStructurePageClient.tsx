@@ -228,7 +228,7 @@ export default function WebsiteTreeStructurePage() {
                             href={item.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-slate-800 hover:text-teal-600 hover:underline text-sm md:text-base font-normal block transition"
+                            className="text-blue-600 no-underline hover:no-underline text-sm md:text-base font-normal block transition"
                           >
                             {item.label}
                           </Link>

@@ -126,7 +126,7 @@ export default function MedicinePage() {
                     <ul className="ml-8 my-2 space-y-2 text-xs font-semibold text-teal-600">
                       {section.items.map((item, idx) => (
                         <li key={idx}>
-                          <Link href={item.href} className="hover:underline">
+                          <Link href={item.href} className="text-blue-600 no-underline hover:no-underline">
                             • {item.label}
                           </Link>
                         </li>

@@ -246,7 +246,7 @@ export default async function PubricaKnowledgeBase() {
                       <li key={linkIdx}>
                         <Link
                           href={link.url}
-                          className="text-xs font-semibold text-sky-800 hover:text-emerald-700 flex items-center gap-1.5 transition-colors"
+                          className="text-xs font-semibold text-blue-600 no-underline hover:no-underline flex items-center gap-1.5 transition-colors"
                         >
                           <span className="text-xs text-gray-400">»</span>
                           {link.label}

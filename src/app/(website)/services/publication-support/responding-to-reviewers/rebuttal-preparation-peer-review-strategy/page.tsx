@@ -129,7 +129,7 @@ export default function RebuttalPreparationPage() {
                 <ul className="space-y-2.5 text-sm font-medium text-sky-800">
                   {interestedTopics.map((topic, idx) => (
                     <li key={idx}>
-                      <Link href={topic.href} className="hover:underline block">
+                      <Link href={topic.href} className="text-blue-600 no-underline hover:no-underline block">
                         {topic.name}
                       </Link>
                     </li>

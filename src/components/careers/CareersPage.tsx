@@ -227,7 +227,7 @@ export default function CareersPage({ jobs }: { jobs: PayloadPost[] }) {
               <li key={job.id}>
                 <Link
                   href={`/careers/${job.urlPath}`}
-                  className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700 hover:text-[#1b2b28] hover:underline"
+                  className="flex items-center gap-2.5 text-xs sm:text-sm text-blue-600 no-underline hover:no-underline"
                 >
                   <span className="w-4 h-4 rounded-full bg-[#1b2b28] text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0">
                     ➔

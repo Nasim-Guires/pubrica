@@ -13,14 +13,14 @@ export const metadata = constructMetadata({
 
 export default function RespondToReviewerCommentsPage() {
     const interestedTopics = [
-        { name: 'Manuscript Editing', href: '/manuscript-editing' },
-        { name: 'Manuscript Guidelines', href: '/manuscript-guidelines' },
-        { name: 'Manuscript Writing', href: '/manuscript-writing' },
-        { name: 'Manuscript Preparation guidelines', href: '/manuscript-preparation-guidelines' },
-        { name: 'Manuscript Submission Guidelines', href: '/manuscript-submission-guidelines' },
-        { name: 'Manuscript Editing Services', href: '/manuscript-editing-services' },
-        { name: 'Study Guides', href: '/study-guides' },
-        { name: 'Scientific Writing', href: '/scientific-writing' },
+        { name: 'Manuscript Editing', href: '/services/editing-and-translation/manuscript-editing' },
+        { name: 'Manuscript Guidelines', href: '/academy/manuscript-guidelines' },
+        { name: 'Manuscript Writing', href: '/services/physician-writing-services/physician-manuscript' },
+        { name: 'Manuscript Preparation guidelines', href: '/services/publication-support/journal-manuscript-formatting-services/manuscript-formatting-for-journal-submission' },
+        { name: 'Manuscript Submission Guidelines', href: '/academy/manuscript-submission' },
+        { name: 'Manuscript Editing Services', href: '/services/editing-and-translation/manuscript-editing' },
+        { name: 'Study Guides', href: '/academy' },
+        { name: 'Scientific Writing', href: '/services/research-services/scientific-writing' },
     ]
 
     const highImpactJournals = [
@@ -123,7 +123,7 @@ export default function RespondToReviewerCommentsPage() {
                                 <ul className="space-y-2.5 text-sm font-medium text-sky-800">
                                     {interestedTopics.map((topic, idx) => (
                                         <li key={idx}>
-                                            <Link href={topic.href} className="hover:underline block">
+                                            <Link href={topic.href} className="text-blue-600 no-underline hover:no-underline block">
                                                 {topic.name}
                                             </Link>
                                         </li>
