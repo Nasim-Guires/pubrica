@@ -71,7 +71,7 @@ export default function RebuttalPreparationPage() {
 
       <main className="min-h-screen bg-white text-gray-800 font-sans overflow-x-hidden">
         {/* Header Hero Banner */}
-        <div className="relative bg-neutral-900 text-white py-7 px-4 sm:px-6 lg:px-8 text-center bg-cover bg-center" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/hero-bg.jpg')" }}>
+        <div className="relative bg-neutral-900 text-white py-7 px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="max-w-5xl mx-auto text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
             Rebuttal Preparation: Strategic Planning for Successful Peer Review Outcomes
           </h1>

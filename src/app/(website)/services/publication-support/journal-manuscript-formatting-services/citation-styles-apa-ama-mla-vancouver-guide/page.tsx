@@ -14,7 +14,7 @@ export default function CitationStylesPage() {
     return (
         <div className="min-h-screen bg-gray-50 text-gray-800 font-sans">
             {/* Hero Banner */}
-            <div className="relative w-full h-48 md:h-64 bg-cover bg-center flex items-center justify-center text-white" style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}>
+            <div className="relative w-full h-48 md:h-64 bg-neutral-900 flex items-center justify-center text-white">
                 <div className="absolute inset-0 bg-black/40" />
                 <h1 className="relative z-10 text-2xl md:text-4xl font-bold text-center px-4">
                     Top Citation Styles for Research Papers: APA, AMA, MLA, and Vancouver

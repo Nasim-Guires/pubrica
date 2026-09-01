@@ -68,7 +68,7 @@ export default function AcademicDevelopmentEditingService() {
     const packages = [
         {
             letter: 'B',
-            badgeSrc: '/images/publication-support/poster-preparation/B.png',
+            badgeSrc: '/images/publication-support/peer-review-pre-submission/Basic-480x480.webp',
             title: 'Basic',
             headerBg: 'bg-[#d8e2e0]',
             bodyBg: 'bg-[#e5edeb]',
@@ -189,7 +189,7 @@ export default function AcademicDevelopmentEditingService() {
             author: 'Jinu Medhi',
             publisher: 'Innovare Academic Sciences',
             impactFactor: 'NA',
-            image: '/images/placeholder-cover.png',
+            image: 'https://pubrica.com/wp-content/uploads/2026/06/JOURNAL-TEMPLATE-COVER-IMAGE-4-11.webp',
             link: 'https://journals.innovareacademics.in/index.php/ijpps/article/view/39739',
         },
         {
@@ -199,7 +199,7 @@ export default function AcademicDevelopmentEditingService() {
             author: 'Piyu Parth Naik',
             publisher: 'Herald Open Access',
             impactFactor: '0.68',
-            image: '/images/placeholder-cover.png',
+            image: 'https://pubrica.com/wp-content/uploads/2026/06/JOURNAL-TEMPLATE-COVER-IMAGE-5-11.webp',
             link: 'https://www.heraldopenaccess.us/openaccess/a-systemic-review-of-dupilumab-efficacy-and-safety-by-phenotypic-variations-of-atopic-dermatitis',
         },
         {
@@ -209,7 +209,7 @@ export default function AcademicDevelopmentEditingService() {
             author: 'Piyu Parth Naik',
             publisher: 'Elmer Press Inc.',
             impactFactor: '2.2',
-            image: '/images/placeholder-cover.png',
+            image: 'https://pubrica.com/wp-content/uploads/2026/06/JOURNAL-TEMPLATE-COVER-IMAGE-11.webp',
             link: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7935621/',
         },
         // Add more publication items here to maintain continuous flow
@@ -411,13 +411,11 @@ export default function AcademicDevelopmentEditingService() {
 
                         {/* PDF Preview Frame Container */}
                         <div className="mt-6 p-4 rounded-xl border-2 border-dashed border-indigo-200 bg-indigo-50/20">
-                            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden shadow-md">
-                                <Image
-                                    src="/path-to-your-sample-preview.jpg"
-                                    alt="Sample editing work preview"
-                                    fill
-                                    className="object-cover object-top"
-                                    priority
+                            <div className="w-full h-[400px] overflow-auto rounded-lg shadow-md">
+                                <iframe
+                                    src="https://pubrica.com/wp-content/uploads/2025/12/v1-Copy-Editing-Service-sample-work.pdf"
+                                    title="Sample editing work preview"
+                                    className="w-full h-[350px] border-none rounded-lg"
                                 />
                             </div>
                         </div>
