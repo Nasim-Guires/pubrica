@@ -46,38 +46,38 @@ const EditingAndTranslationPageClient = () => {
       [id]: !prev[id],
     }));
   };
-    const testimonials = [
-      {
-        image:
-          "/images/editing-and-translation/asian-journal-of-psychiatry-1.png",
-        quote:
-          "Pubrica's editing and translation support helped me publish my manuscript in a high-impact journal. Their attention to language, grammar, and formatting ensured my research was communicated clearly and professionally.",
-        name: "DR. MARIA SCHNEIDER",
-        designation: "Academic Researcher",
-        organization: "Germany",
-        flag: "/images/editing-and-translation/germany-1-1.png",
-      },
-      {
-        image:
-          "/images/editing-and-translation/jama-oncology-journal-5.png",
-        quote:
-          "I had my clinical study translated from Japanese to English, and the team maintained both accuracy and medical terminology integrity. The reviewers appreciated the clarity, and my paper was accepted without major revisions.",
-        name: "DR. HIROSHI TANAKA",
-        designation: "Clinical Practitioner",
-        organization: "Japan",
-        flag: "/images/editing-and-translation/japan.png",
-      },
-      {
-        image:
-          "/images/editing-and-translation/british-journal-of-clinical-pharmacology.png",
-        quote:
-          "The editorial team not only refined my writing but also ensured consistency in style and tone across my thesis. Their guidance improved readability and strengthened my arguments significantly.",
-        name: "ANANYA RAO",
-        designation: "PhD Scholar",
-        organization: "India",
-        flag: "/images/editing-and-translation/flag.png",
-      },
-    ];
+  const testimonials = [
+    {
+      image:
+        "/images/editing-and-translation/asian-journal-of-psychiatry-1.png",
+      quote:
+        "Pubrica's editing and translation support helped me publish my manuscript in a high-impact journal. Their attention to language, grammar, and formatting ensured my research was communicated clearly and professionally.",
+      name: "DR. MARIA SCHNEIDER",
+      designation: "Academic Researcher",
+      organization: "Germany",
+      flag: "/images/editing-and-translation/germany-1-1.png",
+    },
+    {
+      image:
+        "/images/editing-and-translation/jama-oncology-journal-5.png",
+      quote:
+        "I had my clinical study translated from Japanese to English, and the team maintained both accuracy and medical terminology integrity. The reviewers appreciated the clarity, and my paper was accepted without major revisions.",
+      name: "DR. HIROSHI TANAKA",
+      designation: "Clinical Practitioner",
+      organization: "Japan",
+      flag: "/images/editing-and-translation/japan.png",
+    },
+    {
+      image:
+        "/images/editing-and-translation/british-journal-of-clinical-pharmacology.png",
+      quote:
+        "The editorial team not only refined my writing but also ensured consistency in style and tone across my thesis. Their guidance improved readability and strengthened my arguments significantly.",
+      name: "ANANYA RAO",
+      designation: "PhD Scholar",
+      organization: "India",
+      flag: "/images/editing-and-translation/flag.png",
+    },
+  ];
 
 
   const editingTypesList = [
@@ -283,7 +283,11 @@ const EditingAndTranslationPageClient = () => {
         "Non-native authors may improve their manuscripts by engaging professional language services, proofreading, following the submission guidelines, using clear language, avoiding ambiguity, and ensuring the manuscript is of good quality before submission.",
     },
   ];
+  const [activeId, setActiveId] = useState<number | null>(null);
 
+  const handleCardClick = (index: number) => {
+    setActiveId((prev) => (prev === index ? null : index));
+  };
 
   // Split items evenly into two clean layout lists for desktop grids
   const leftColumnFaqs = faqData.filter((item) => item.id <= 5);
@@ -492,36 +496,50 @@ const EditingAndTranslationPageClient = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {audienceList.map((audience, index) => (
-            <div
-              key={index}
-              className="group relative h-64 bg-black rounded-none overflow-hidden cursor-pointer"
-            >
-              {/* Background Image (fades out on hover) */}
-              <img
-                src={audience.bgImage}
-                alt={audience.title}
-                className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
-              />
+          {audienceList.map((audience, index) => {
+            const isActive = activeId === index;
 
-              {/* Default Overlay & Title (bottom-aligned, hides on hover) */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 group-hover:opacity-0 transition-opacity duration-300">
-                <h3 className="text-white font-bold text-lg leading-snug">
-                  {audience.title}
-                </h3>
-              </div>
+            return (
+              <div
+                key={index}
+                onClick={() => handleCardClick(index)}
+                onMouseEnter={() => setActiveId(index)}
+                onMouseLeave={() => setActiveId(null)}
+                className="group relative h-64 bg-black rounded-none overflow-hidden cursor-pointer"
+              >
+                {/* Background Image (fades out on hover/tap) */}
+                <img
+                  src={audience.bgImage}
+                  alt={audience.title}
+                  className={`w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                    }`}
+                />
 
-              {/* Hover Content (solid black background with title + description, shows on hover) */}
-              <div className="absolute inset-0 p-6 flex flex-col justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black text-white">
-                <h3 className="font-bold text-lg leading-snug mb-3">
-                  {audience.title}
-                </h3>
-                <p className="text-xs leading-relaxed text-gray-300">
-                  {audience.description}
-                </p>
+                {/* Default Overlay & Title (bottom-aligned, hides on hover/tap) */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 group-hover:opacity-0 transition-opacity duration-300 ${isActive ? "opacity-0" : "opacity-100"
+                    }`}
+                >
+                  <h3 className="text-white font-bold text-lg leading-snug">
+                    {audience.title}
+                  </h3>
+                </div>
+
+                {/* Hover Content (solid black background with title + description, shows on hover/tap) */}
+                <div
+                  className={`absolute inset-0 p-6 flex flex-col justify-start transition-opacity duration-300 bg-black text-white group-hover:opacity-100 ${isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                    }`}
+                >
+                  <h3 className="font-bold text-lg leading-snug mb-3">
+                    {audience.title}
+                  </h3>
+                  <p className="text-xs leading-relaxed text-gray-300">
+                    {audience.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
       {/* SECTION 4: TYPES OF EDITING SERVICES */}

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
@@ -219,7 +219,11 @@ export default function IndustryVerticalsAndProcess({
     ],
     []
   );
+  const [activeCardId, setActiveCardId] = useState<string | number | null>(null);
 
+  const handleCardClick = (id: string | number) => {
+    setActiveCardId((prev) => (prev === id ? null : id));
+  };
   return (
     <section className={`py-16 bg-white border-t border-gray-100 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -241,49 +245,63 @@ export default function IndustryVerticalsAndProcess({
 
         {/* 3-Column Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {whoWeServeData.map((card) => (
-            <div
-              key={card.id}
-              className="group relative h-64 sm:h-72 rounded-sm overflow-hidden bg-black shadow-md transition-all duration-300"
-            >
-              {/* Default Image View */}
-              <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0 z-0">
-                <Image
-                  src={card.imageUrl}
-                  alt={card.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-              </div>
+          {whoWeServeData.map((card) => {
+            const isActive = activeCardId === card.id;
 
-              {/* Default Title */}
-              <div className="absolute bottom-0 left-0 right-0 p-5 z-10 transition-opacity duration-300 group-hover:opacity-0 flex items-end">
-                <h3 className="font-bold text-sm sm:text-base text-white leading-snug">
-                  {card.title}
-                </h3>
-              </div>
+            return (
+              <div
+                key={card.id}
+                onClick={() => handleCardClick(card.id)}
+                className="group relative h-64 sm:h-72 rounded-sm overflow-hidden bg-black shadow-md transition-all duration-300 cursor-pointer"
+              >
+                {/* Default Image View */}
+                <div
+                  className={`absolute inset-0 transition-opacity duration-300 group-hover:opacity-0 z-0 ${isActive ? "opacity-0" : "opacity-100"
+                    }`}
+                >
+                  <Image
+                    src={card.imageUrl}
+                    alt={card.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                </div>
 
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-black p-5 sm:p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex flex-col justify-start">
-                <h3 className="font-bold text-sm sm:text-base border-b border-gray-700 pb-2 mb-3">
-                  {card.title}
-                </h3>
+                {/* Default Title */}
+                <div
+                  className={`absolute bottom-0 left-0 right-0 p-5 z-10 transition-opacity duration-300 group-hover:opacity-0 flex items-end ${isActive ? "opacity-0" : "opacity-100"
+                    }`}
+                >
+                  <h3 className="font-bold text-sm sm:text-base text-white leading-snug">
+                    {card.title}
+                  </h3>
+                </div>
 
-                <ul className="space-y-2 text-xs text-gray-300 leading-relaxed">
-                  {card.bullets.map((bullet, idx) => (
-                    <li key={idx} className="flex gap-2 items-start">
-                      <span className="select-none">•</span>
-                      <div className="relative z-30 pointer-events-auto">
-                        {bullet}
-                      </div>
-                    </li>
-                  ))}
-                </ul>
+                {/* Hover Overlay */}
+                <div
+                  className={`absolute inset-0 bg-black p-5 sm:p-6 text-white transition-opacity duration-300 z-20 flex flex-col justify-start group-hover:opacity-100 ${isActive ? "opacity-100" : "opacity-0"
+                    }`}
+                >
+                  <h3 className="font-bold text-sm sm:text-base border-b border-gray-700 pb-2 mb-3">
+                    {card.title}
+                  </h3>
+
+                  <ul className="space-y-2 text-xs text-gray-300 leading-relaxed">
+                    {card.bullets.map((bullet, idx) => (
+                      <li key={idx} className="flex gap-2 items-start">
+                        <span className="select-none">•</span>
+                        <div className="relative z-30 pointer-events-auto">
+                          {bullet}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

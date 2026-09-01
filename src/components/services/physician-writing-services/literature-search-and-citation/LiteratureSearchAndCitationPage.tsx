@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
 
 export const metadata = {
   title: 'Literature Search and Citation Service | Build Evidence with Precision',
@@ -11,36 +12,31 @@ export const metadata = {
 export default function LiteratureSearchAndCitationPage() {
   return (
     <main className="min-h-screen bg-white text-gray-800 font-sans">
-      
+
       {/* Hero Banner Section */}
-      <section className="bg-gradient-to-r from-[#111e1f] via-[#1a2d2e] to-[#111e1f] text-white py-6 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto border border-gray-600/40 rounded-lg p-6 sm:p-10 text-center bg-black/20 backdrop-blur-sm">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
-            Literature Search and Citation Service
-          </h1>
-          <p className="text-sm sm:text-base md:text-lg text-gray-200 leading-relaxed max-w-3xl mx-auto">
-            Access highly relevant, peer-reviewed references tailored to your research objectives. Ensure accurate citation alignment with your target journal&apos;s formatting standards.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Literature Search and Citation Service"
+        description="Access highly relevant, peer-reviewed references tailored to your research objectives. Ensure accurate citation alignment with your target journal's formatting standards."
+        headingAs="h1"
+      />
 
       {/* Main Content Section */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        
+
         {/* Section 1: Expert Literature Search and Citation Service */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
           <div className="lg:col-span-7 space-y-4">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#143234] leading-snug">
               Expert Literature Search and Citation Service: Build Evidence with Precision and Relevance
             </h2>
-            
+
             <p className="text-lg font-semibold text-[#1c4d50]">
               Find the Most Relevant, Recent, and Reliable Research to Power Your Study
             </p>
 
             <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
               For PhD scholars, researchers, authors, or product developers, industry-affiliated scientists preparing a manuscript, thesis, or systematic review, a comprehensive scientific literature search is essential. Our expert{' '}
-              <Link href="/services/physician-writing-services/literature-search-and-citation" className="text-sky-600 hover:underline">
+              <Link href="/academy/literature-search-citation/literature-search-research-planning/" className="text-blue-600">
                 literature search and citation
               </Link>{' '}
               service is designed to locate relevant, credible, and recent peer-reviewed, high-impact studies for a variety of needs, from academic publishing to product formulation and ingredient validation that directly support your research or product objectives. We offer:
@@ -59,9 +55,9 @@ export default function LiteratureSearchAndCitationPage() {
                 <span className="text-red-600 mr-2 font-bold">•</span>
                 <span>
                   Regulatory-backed evidence gathering for product claims (e.g.,{' '}
-                  <a href="https://www.fda.gov/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">FDA</a>,{' '}
-                  <a href="https://www.efsa.europa.eu/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">EFSA</a>,{' '}
-                  <a href="https://www.ayush.gov.in/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">AYUSH</a>)
+                  <a href="https://www.fda.gov/" target="_blank" rel="noopener noreferrer" className="text-blue-600">FDA</a>,{' '}
+                  <a href="https://www.efsa.europa.eu/" target="_blank" rel="noopener noreferrer" className="text-blue-600">EFSA</a>,{' '}
+                  <a href="https://www.ayush.gov.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600">AYUSH</a>)
                 </span>
               </li>
               <li className="flex items-start">
@@ -84,14 +80,14 @@ export default function LiteratureSearchAndCitationPage() {
 
             <p className="text-gray-700 leading-relaxed text-sm sm:text-base pt-2">
               Our team of domain-specific experts dives deep into PubMed, Scopus, Web of Science, Google Scholar, and regulatory databases to find high-quality studies. We provide well-organized evidence libraries, annotated bibliographies, and summary notes to support your research, innovation, or publication. With our literature search and citation service,{' '}
-              <Link href="/subject-matter-experts" className="text-sky-600 hover:underline">
+              <Link href="/subject-matter-experts" className="text-blue-600">
                 subject matter experts
               </Link>{' '}
               search, filter, and cite credible scientific papers to enhance your manuscript or project.
             </p>
 
             <div className="pt-4">
-              <GetFreeQuoteButton/>
+              <GetFreeQuoteButton />
             </div>
           </div>
 
@@ -127,11 +123,11 @@ export default function LiteratureSearchAndCitationPage() {
                 <span className="text-red-600 mr-2 font-bold">•</span>
                 <div>
                   <strong>Comprehensive Literature Review:</strong> We carefully conduct a literature review to identify and summarise the most common and relevant papers to support your manuscript and align with your research topic. This offers you one more element of Pubrica&apos;s{' '}
-                  <Link href="/services/research-services/scientific-writing" className="text-sky-600 hover:underline">
+                  <Link href="/services/research-services/scientific-writing" className="text-blue-600">
                     scientific writing
                   </Link>{' '}
                   and{' '}
-                  <Link href="/services/research-services/medical-writing" className="text-sky-600 hover:underline">
+                  <Link href="/services/research-services/medical-writing" className="text-blue-600">
                     medical writing
                   </Link>{' '}
                   services to support evidence-based production of content.
@@ -142,7 +138,7 @@ export default function LiteratureSearchAndCitationPage() {
                 <span className="text-red-600 mr-2 font-bold">•</span>
                 <div>
                   <strong>Accurate Citation Management:</strong> We make sure all references are accurately cited in your manuscript within the formatting requirements of your intended journal. This is complemented by our{' '}
-                  <Link href="/services/publication-support/journal-selection" className="text-sky-600 hover:underline">
+                  <Link href="/services/publication-support/journal-selection" className="text-blue-600">
                     journal selection
                   </Link>{' '}
                   service, which tailors your manuscript citations to be consistent with the scope and formatting requirements of a selected group of high-impact journals.
@@ -153,7 +149,7 @@ export default function LiteratureSearchAndCitationPage() {
                 <span className="text-red-600 mr-2 font-bold">•</span>
                 <div>
                   <strong>Reviewer Management:</strong> We offer accurate contact details to help recommend or exclude reviewers to improve the peer review process. Our{' '}
-                  <Link href="/services/publication-support/plagiarism-services" className="text-sky-600 hover:underline">
+                  <Link href="/services/publication-support/plagiarism-services" className="text-blue-600">
                     plagiarism
                   </Link>{' '}
                   check service also helps ensure the integrity of each manuscript during the reviewer evaluation process.

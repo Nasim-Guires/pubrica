@@ -9,10 +9,10 @@ interface AudienceCard {
   id: string;
   title: string;
   description: string;
-  imageSrc: string;
-  altText: string;
   linkText?: string;
   linkUrl?: string;
+  imageSrc: string;
+  altText: string;
 }
 
 interface StepItem {
@@ -176,7 +176,7 @@ const serviceDetails: FeatureCard[] = [
       },
     ],
   },
- {
+  {
     id: "editing",
     title: "Grant Proposal Editing",
     iconSrc: `${GW_IMG}/Grant-Proposal-Editing.png`,
@@ -231,6 +231,12 @@ export default function WhoWeServeAndServiceDetailsSection() {
     setActiveHowItWorksId((prev) => (prev === id ? null : id));
   };
 
+  const [activeId, setActiveId] = useState<string | null>(null);
+
+  const handleCardClick = (id: string) => {
+    setActiveId((prev) => (prev === id ? null : id));
+  };
+
   return (
     <div className="w-full text-slate-800">
       {/* ========================================================= */}
@@ -264,47 +270,61 @@ export default function WhoWeServeAndServiceDetailsSection() {
 
           {/* 6-Card Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {audienceCards.map((card) => (
-              <div
-                key={card.id}
-                className="group relative h-64 sm:h-72 rounded-sm overflow-hidden shadow-md cursor-pointer bg-black"
-              >
-                {/* 1. Base Image */}
-                <Image
-                  src={card.imageSrc}
-                  alt={card.altText}
-                  fill
-                  className="object-cover transition-opacity duration-300 group-hover:opacity-0"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
+            {audienceCards.map((card) => {
+              const isActive = activeId === card.id;
 
-                {/* 2. Default Bottom Gradient Bar */}
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent p-5 z-10 transition-opacity duration-300 group-hover:opacity-0">
-                  <h3 className="text-base sm:text-lg font-bold text-white leading-tight">
-                    {card.title}
-                  </h3>
-                </div>
+              return (
+                <div
+                  key={card.id}
+                  onClick={() => handleCardClick(card.id)}
+                  onMouseEnter={() => setActiveId(card.id)}
+                  onMouseLeave={() => setActiveId(null)}
+                  className="group relative h-64 sm:h-72 rounded-sm overflow-hidden shadow-md cursor-pointer bg-black"
+                >
+                  {/* 1. Base Image */}
+                  <Image
+                    src={card.imageSrc}
+                    alt={card.altText}
+                    fill
+                    className={`object-cover transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                      }`}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
 
-                {/* 3. Full Black Hover Overlay */}
-                <div className="absolute inset-0 bg-black p-6 flex flex-col justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 text-white space-y-4">
-                  <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
-                    {card.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
-                    {card.description}
-                    {card.linkText && (
-                      <Link
-                        href={card.linkUrl || "#"}
-                        className="text-sky-400 font-normal inline"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        {card.linkText}
-                      </Link>
-                    )}
-                  </p>
+                  {/* 2. Default Bottom Gradient Bar */}
+                  <div
+                    className={`absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent p-5 z-10 transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                      }`}
+                  >
+                    <h3 className="text-base sm:text-lg font-bold text-white leading-tight">
+                      {card.title}
+                    </h3>
+                  </div>
+
+                  {/* 3. Full Black Hover Overlay */}
+                  <div
+                    className={`absolute inset-0 bg-black p-6 flex flex-col justify-start transition-opacity duration-300 z-20 text-white space-y-4 group-hover:opacity-100 ${isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                      }`}
+                  >
+                    <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
+                      {card.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
+                      {card.description}
+                      {card.linkText && (
+                        <Link
+                          href={card.linkUrl || "#"}
+                          className="text-sky-400 font-normal inline"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {card.linkText}
+                        </Link>
+                      )}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

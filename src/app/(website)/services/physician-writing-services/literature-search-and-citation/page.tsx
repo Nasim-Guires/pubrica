@@ -6,6 +6,7 @@ import WhoWeServeAndProcessLitrarture from '@/components/services/physician-writ
 import { literatureSearchFaqs, literatureSearchTestimonials } from '@/lib/services/data/literature-search-and-citation/literatureSearchTestimonials '
 import React from 'react'
 import { constructMetadata } from '@/lib/metadata'
+import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
 export const metadata = constructMetadata({
     title: 'Literature Search & Citation Support by Academic Experts',
@@ -29,6 +30,7 @@ const page = () => {
                 title="Frequently Asked Questions"
                 faqs={literatureSearchFaqs}
             />
+            <InsightsSection/>
         </>
     )
 }

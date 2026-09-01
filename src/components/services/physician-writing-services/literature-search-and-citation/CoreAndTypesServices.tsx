@@ -55,7 +55,7 @@ export default function CoreAndTypesServices() {
             href="https://www.fda.gov/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sky-600 hover:underline"
+            className="text-blue-600"
           >
             FDA
           </Link>
@@ -64,7 +64,7 @@ export default function CoreAndTypesServices() {
             href="https://www.ema.europa.eu/en/homepage"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sky-600 hover:underline"
+            className="text-blue-600"
           >
             EMA
           </Link>
@@ -73,7 +73,7 @@ export default function CoreAndTypesServices() {
             href="https://www.efsa.europa.eu/en"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sky-600 hover:underline"
+            className="text-blue-600"
           >
             EFSA
           </Link>
@@ -82,7 +82,7 @@ export default function CoreAndTypesServices() {
             href="https://cdsco.gov.in/opencms/opencms/en/Home/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sky-600 hover:underline"
+            className="text-blue-600"
           >
             CDSCO
           </Link>
@@ -91,7 +91,7 @@ export default function CoreAndTypesServices() {
             href="https://www.iso.org/home.html"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sky-600 hover:underline"
+            className="text-blue-600"
           >
             ISO standards
           </Link>

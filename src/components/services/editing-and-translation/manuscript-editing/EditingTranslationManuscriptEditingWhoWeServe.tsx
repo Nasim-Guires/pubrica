@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,6 +13,12 @@ interface TargetAudience {
 }
 
 export const EditingTranslationManuscriptEditingWhoWeServe: React.FC = () => {
+  const [activeId, setActiveId] = useState<string | null>(null);
+
+  const handleCardClick = (id: string) => {
+    setActiveId((prev) => (prev === id ? null : id));
+  };
+
   const audienceData: TargetAudience[] = [
     {
       id: "academic-researchers",
@@ -123,39 +129,54 @@ export const EditingTranslationManuscriptEditingWhoWeServe: React.FC = () => {
 
         {/* Audience Grid (3 columns on desktop, 1 on mobile) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {audienceData.map((item) => (
-            <div
-              key={item.id}
-              className="group relative h-64 sm:h-72 w-full rounded-lg overflow-hidden shadow-md cursor-pointer bg-black"
-            >
-              {/* Image with gradient overlay (Default View) */}
-              <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0 z-10">
-                <Image
-                  src={item.imageSrc}
-                  alt={item.imageAlt}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
-                  <h3 className="text-white font-bold text-lg sm:text-xl leading-snug">
+          {audienceData.map((item) => {
+            const isActive = activeId === item.id;
+
+            return (
+              <div
+                key={item.id}
+                onClick={() => handleCardClick(item.id)}
+                onMouseEnter={() => setActiveId(item.id)}
+                onMouseLeave={() => setActiveId(null)}
+                className="group relative h-64 sm:h-72 w-full rounded-lg overflow-hidden shadow-md cursor-pointer bg-black"
+              >
+                {/* Image with gradient overlay (Default View) */}
+                <div
+                  className={`absolute inset-0 transition-opacity duration-300 group-hover:opacity-0 z-10 ${
+                    isActive ? "opacity-0 pointer-events-none" : "opacity-100"
+                  }`}
+                >
+                  <Image
+                    src={item.imageSrc}
+                    alt={item.imageAlt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
+                    <h3 className="text-white font-bold text-lg sm:text-xl leading-snug">
+                      {item.title}
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Hover View: Black background with Title and Text Body */}
+                <div
+                  className={`absolute inset-0 bg-black p-6 flex flex-col justify-start text-white transition-opacity duration-300 z-20 group-hover:opacity-100 ${
+                    isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                  }`}
+                >
+                  <h3 className="font-bold text-lg sm:text-xl mb-4 leading-snug">
                     {item.title}
                   </h3>
+                  <div className="text-sm sm:text-base text-gray-200 leading-relaxed">
+                    {item.description}
+                  </div>
                 </div>
               </div>
-
-              {/* Hover View: Black background with Title and Text Body */}
-              <div className="absolute inset-0 bg-black p-6 flex flex-col justify-start text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                <h3 className="font-bold text-lg sm:text-xl mb-4 leading-snug">
-                  {item.title}
-                </h3>
-                <div className="text-sm sm:text-base text-gray-200 leading-relaxed">
-                  {item.description}
-                </div>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -69,8 +69,12 @@ const audienceData: TargetAudience[] = [
 ];
 
 export default function PlagiarismWhoWeServe() {
-  // Track hovered card ID (Default to null, or set to 1 to default open first card)
-  const [hoveredId, setHoveredId] = useState<number | null>(null);
+  // Track active card ID for touch/desktop interactions
+  const [activeId, setActiveId] = useState<number | null>(null);
+
+  const handleCardClick = (id: number) => {
+    setActiveId((prev) => (prev === id ? null : id));
+  };
 
   return (
     <section className="w-full bg-white py-6 md:py-7 px-4 md:px-8 font-sans">
@@ -90,19 +94,20 @@ export default function PlagiarismWhoWeServe() {
         {/* 6 Grid Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {audienceData.map((item) => {
-            const isHovered = hoveredId === item.id;
+            const isActive = activeId === item.id;
 
             return (
               <div
                 key={item.id}
-                onMouseEnter={() => setHoveredId(item.id)}
-                onMouseLeave={() => setHoveredId(null)}
-                className="relative h-64 sm:h-72 w-full rounded-sm overflow-hidden shadow-md cursor-pointer transition-all duration-300"
+                onClick={() => handleCardClick(item.id)}
+                onMouseEnter={() => setActiveId(item.id)}
+                onMouseLeave={() => setActiveId(null)}
+                className="group relative h-64 sm:h-72 w-full rounded-sm overflow-hidden shadow-md cursor-pointer transition-all duration-300"
               >
                 {/* DEFAULT STATE: Background Image with Gradient Overlay & Bottom Title */}
                 <div
-                  className={`absolute inset-0 transition-opacity duration-300 ${
-                    isHovered ? "opacity-0 pointer-events-none" : "opacity-100"
+                  className={`absolute inset-0 transition-opacity duration-300 group-hover:opacity-0 group-hover:pointer-events-none ${
+                    isActive ? "opacity-0 pointer-events-none" : "opacity-100"
                   }`}
                 >
                   <Image
@@ -123,8 +128,8 @@ export default function PlagiarismWhoWeServe() {
 
                 {/* HOVER / ACTIVE STATE: Solid Black Card with White Text */}
                 <div
-                  className={`absolute inset-0 bg-black p-6 flex flex-col justify-start transition-opacity duration-300 ${
-                    isHovered ? "opacity-100" : "opacity-0 pointer-events-none"
+                  className={`absolute inset-0 bg-black p-6 flex flex-col justify-start transition-opacity duration-300 group-hover:opacity-100 group-hover:pointer-events-auto ${
+                    isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                   }`}
                 >
                   <h3 className="text-white font-bold text-base md:text-lg leading-snug mb-4">
