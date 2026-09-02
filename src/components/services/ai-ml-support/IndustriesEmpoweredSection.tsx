@@ -22,11 +22,12 @@ const industryCards = [
     title: "Insurance",
     iconSrc: "/images/ai-ml-support/Insurance.png",
     summary:
-      "Streamline risk assessment, automated claims processing, and policy pricing precision.",
+      "AI speeds up claims, spots fraud early, and helps teams focus on decisions, not paperwork.",
     bullets: [
-      "Automated claims image analysis and rapid loss estimation",
-      "Actuarial risk profiling using historical and live data",
-      "Customer churn prediction and personalized policy recommendations",
+      "Accelerate claims with AI that flags anomalies and auto-prioritizes clean reports",
+      "Detect fraud patterns early with trained ML models",
+      "Release adjusters from paperwork tasks to devote time to actual decision-making",
+      "Accomplish faster outcomes with scalable AI & ML solutions",
     ],
   },
   {
@@ -34,11 +35,12 @@ const industryCards = [
     title: "Healthcare",
     iconSrc: "/images/ai-ml-support/Healthcare.png",
     summary:
-      "Enhance patient outcomes with diagnostic assistance, predictive care, and operational optimization.",
+      "From booking appointments to reading clinical notes, AI helps healthcare work faster and better.",
     bullets: [
-      "Medical imaging diagnostic support algorithms",
-      "Patient readmission risk modeling",
-      "Electronic Health Record (EHR) data structuring",
+      "Make sense of unstructured clinical notes and lab work through applying NLP",
+      "Scheduling appointments and FAQ responses via AI chatbots",
+      "Reduce staff load while improving patient experience",
+      "Employ AI and ML support services for life sciences that can scale with requirements for compliance and care",
     ],
   },
   {
@@ -46,23 +48,25 @@ const industryCards = [
     title: "Manufacturing",
     iconSrc: "/images/ai-ml-support/Manufacturing.png",
     summary:
-      "Optimize supply chain logistics, equipment maintenance, and quality control.",
+      "AI predicts breakdowns, checks quality in real time, and helps make faster decisions on the floor.",
     bullets: [
-      "Predictive maintenance for industrial machinery",
-      "Computer vision for assembly line defect detection",
-      "Inventory demand forecasting models",
+      "Predict equipment failure before downtime occurs.",
+      "Use computer vision to inspect defects in real time.",
+      "Empower edge AI for real-time decision-making without depending on the cloud.",
+      "Take advantage of robust AI & ML services optimized for industrial performance",
     ],
   },
   {
     id: "banking",
     title: "Banking",
     iconSrc: "/images/ai-ml-support/Banking.png",
-    summary:
-      "Empower core banking with real-time analytics, automated portfolio management, and anti-money laundering.",
+    summary: "",
     bullets: [
-      "Real-time Anti-Money Laundering (AML) monitoring",
-      "Automated customer service intelligent bots",
-      "Algorithmic portfolio rebalancing",
+      "Disease Surveillance Studies",
+      "Community Health Assessments",
+      "Behavioral Risk Factor Surveys",
+      "Health Policy Impact Studies",
+      "Cross-national or Demographic Comparative Research",
     ],
   },
   {
@@ -70,20 +74,23 @@ const industryCards = [
     title: "Telecom",
     iconSrc: "/images/ai-ml-support/Telecom.png",
     summary:
-      "Improve network reliability, bandwidth allocation, and customer retention strategies.",
+      "AI spots churn risks, manages networks better, and sorts support requests in seconds.",
     bullets: [
-      "Network congestion prediction and automated traffic routing",
-      "Customer churn reduction through behavioral analytics",
-      "5G infrastructure deployment optimization",
+      "Predict churn and take proactive retention actions.",
+      "Use reinforcement learning to optimize network traffic allocation.",
+      "Classify and triage support tickets with NLP at scale.",
+      "Create a difference with enterprise-class AI and ML offerings",
     ],
   },
 ];
 
 export default function IndustriesEmpoweredSection() {
-  const [openId, setOpenId] = useState<string | null>("fintech");
+  const [openIds, setOpenIds] = useState<string[]>([]);
 
   const toggleAccordion = (id: string) => {
-    setOpenId(openId === id ? null : id);
+    setOpenIds((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
   };
 
   return (
@@ -119,15 +126,14 @@ export default function IndustriesEmpoweredSection() {
           {/* 3-Column Accordion Card Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
             {industryCards.map((item) => {
-              const isOpen = openId === item.id;
+              const isOpen = openIds.includes(item.id);
               return (
                 <div
                   key={item.id}
-                  className={`rounded-lg border transition-all duration-200 overflow-hidden ${
-                    isOpen
+                  className={`rounded-lg border transition-all duration-200 overflow-hidden ${isOpen
                       ? "bg-white border-slate-300 shadow-md"
                       : "bg-[#f0f9f6] border-slate-200/60 hover:bg-[#e8f5f1]"
-                  }`}
+                    }`}
                 >
                   {/* Card Header / Trigger */}
                   <button
@@ -137,7 +143,13 @@ export default function IndustriesEmpoweredSection() {
                   >
                     <div className="flex items-center space-x-3">
                       <span className="p-1.5 bg-emerald-100/60 rounded-md">
-                        <Image src={item.iconSrc} alt="" width={24} height={24} className="object-contain" />
+                        <Image
+                          src={item.iconSrc}
+                          alt={item.title}
+                          width={24}
+                          height={24}
+                          className="object-contain"
+                        />
                       </span>
                       <span className="text-sm sm:text-base">{item.title}</span>
                     </div>
@@ -149,9 +161,11 @@ export default function IndustriesEmpoweredSection() {
                   {/* Expanded Content Box */}
                   {isOpen && (
                     <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-700 space-y-4 border-t border-slate-100 bg-white">
-                      <p className="text-slate-800 font-medium leading-relaxed">
-                        {item.summary}
-                      </p>
+                      {item.summary && (
+                        <p className="text-slate-800 font-medium leading-relaxed">
+                          {item.summary}
+                        </p>
+                      )}
                       <ul className="space-y-2 text-slate-600 list-disc pl-4">
                         {item.bullets.map((bullet, idx) => (
                           <li key={idx} className="leading-relaxed">

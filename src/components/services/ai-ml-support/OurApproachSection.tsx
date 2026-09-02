@@ -14,49 +14,49 @@ const approachItems = [
     id: "responsible",
     title: "Responsible AI",
     content:
-      "Implement robust frameworks for fairness, transparency, and ethics in AI models to ensure regulatory compliance and trustworthiness.",
+      "Engage in ethical AI development thanks to technical support, regulatory compliance, and the creation of governance frameworks that prioritize transparency, accountability, and fairness.",
   },
   {
     id: "mlops",
     title: "MLOps",
     content:
-      "Streamline machine learning pipelines from experimentation and testing to continuous integration and operational deployment.",
+      "Incorporate ML models into production environments and integrate with existing IT systems to apply technological innovation for smoother and faster operations.",
   },
   {
     id: "assessment",
     title: "Data & AI Maturity Assessment",
     content:
-      "Evaluate your organization’s current infrastructure, data readiness, and AI capability gaps to build a clear transformation roadmap.",
+      "Evaluate your organizational readiness and technological capabilities, as well as strategic roadmaps for adopting and scaling AI-driven solutions.",
   },
   {
     id: "governance",
     title: "AI Governance",
     content:
-      "Establish comprehensive governance models, policy controls, and risk mitigation strategies tailored to enterprise requirements.",
+      "Build responsible AI practices through effective policy design and resilient governance mechanisms that integrate ethical principles with technological growth.",
   },
   {
     id: "managed",
     title: "Managed Services for AI",
     content:
-      "End-to-end management, continuous monitoring, and optimization of deployed machine learning models and data pipelines.",
+      "Get assistance with end-to-end medical AI and ML consulting services that ensure reliability, scalability, and continuous improvement, allowing you to focus on your core business objectives while using the newest tech.",
   },
   {
     id: "engineering",
     title: "AI/ML Engineering",
     content:
-      "Custom algorithm development, high-performance data processing, and scalable infrastructure integration.",
+      "Transform data into intelligent solutions across computer vision, recommendation systems, predictive analytics, natural language processing, and generative AI technologies.",
   },
   {
     id: "generative",
     title: "Generative AI",
     content:
-      "Harness cutting-edge large language models and generative architectures tailored to specialized industry use cases.",
+      "Use AI algorithms to synthesize human-like engagement, produce dynamic content, and automate the integration of innovative technological solutions.",
   },
   {
     id: "edge",
     title: "Edge AI",
     content:
-      "Deploy optimized machine learning models directly onto edge devices for real-time processing and minimal latency.",
+      "Strategically implement AI models directly on devices, expertly balancing performance, cost, and efficiency to deliver intelligent computing in real time.",
   },
 ];
 
@@ -76,12 +76,7 @@ export default function OurApproachSection() {
             Our Approach: Helping You At Every Stage Of Your AI Journey
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            We map your actual challenges and business context to practical AI
-            solutions, providing AI consulting services, implementation, and
-            ongoing operations with a focus on security and governance.
-            Everything we do begins with the user thanks to a combination of
-            design thinking, in-depth user research, domain expertise, and
-            iterative development.
+           We map your actual challenges and business context to practical AI solutions, providing AI consulting services, implementation, and ongoing operations with a focus on security and governance. Everything we do begins with the user thanks to a combination of design thinking, in-depth user research, domain expertise, and iterative development.
           </p>
         </div>
 

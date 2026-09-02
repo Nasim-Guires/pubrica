@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import HeroBanner from "@/components/common/HeroBanner";
 
 /* ==========================================================================
    DATA STRUCTURES
@@ -58,21 +60,10 @@ const whatWeDoData: AccordionItem[] = [
     },
 ];
 
-const featureBullets = [
-    "1,500+ HEOR projects completed across cost-effectiveness, real-world evidence, and patient-reported outcomes.",
-    "Multidisciplinary team of economists, statisticians, epidemiologists, and medical writers.",
-    "Exclusive focus on researchers preparing manuscripts, dissertations, publications and policy makers.",
-    "Proven track record in supporting successful submissions to peer-reviewed journals.",
-    "Global expertise across multiple therapeutic areas and healthcare systems.",
-    "Compliance with international guidelines (CONSORT, SPIRIT, ICMJE, HTA standards).",
-    "Evidence tailored for publication as well as funding and market access success.",
-];
-
 /* ==========================================================================
    MAIN COMPONENT
    ========================================================================== */
 export default function HealthEconomicsOutcomeResearch() {
-    // All accordion items are CLOSED by default (null)
     const [openAccordionId, setOpenAccordionId] = useState<string | null>(null);
 
     const toggleAccordion = (id: string) => {
@@ -80,23 +71,18 @@ export default function HealthEconomicsOutcomeResearch() {
     };
 
     return (
-        <section className="w-full bg-slate-50 py-6 text-slate-800 font-sans">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        <section className="w-full bg-slate-50 pb-6 text-slate-800 font-sans">
+            {/* 1. HERO BANNER */}
+            <div className="w-full">
+                <HeroBanner
+                    title="Health Economics & Outcome Research"
+                    description="Pubrica's Health Economics & Outcomes Research (HEOR) services provide evidence-based insights to support healthcare decision-making. From cost-effectiveness analyses to real-world evidence generation, we help stakeholders improve patient outcomes and advance value-based care initiatives."
+                    headingAs="h1"
+                />
+            </div>
 
-                {/* ------------------------------------------------------------------
-           1. HERO BANNER
-           ------------------------------------------------------------------ */}
-                <div className="bg-[#0b2b26] text-white py-6 px-8 rounded-lg text-center border border-emerald-900 shadow-md">
-                    <div className="border border-white/30 p-6 rounded max-w-4xl mx-auto">
-                        <h1 className="text-2xl sm:text-4xl font-bold mb-4 tracking-tight">
-                            Health Economics & Outcome Research
-                        </h1>
-                        <p className="text-slate-200 text-xs sm:text-sm md:text-base leading-relaxed">
-                            Pubrica&apos;s Health Economics & Outcomes Research (HEOR) services provide evidence-based insights to support healthcare decision-making. From cost-effectiveness analyses to real-world evidence generation, we help stakeholders improve patient outcomes and advance value-based care initiatives.
-                        </p>
-                    </div>
-                </div>
-
+            {/* Main Content Container */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 mt-12 sm:mt-16">
                 {/* ------------------------------------------------------------------
            2. TURN EVIDENCE INTO IMPACT SECTION
            ------------------------------------------------------------------ */}
@@ -108,16 +94,74 @@ export default function HealthEconomicsOutcomeResearch() {
                         </h2>
 
                         <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                            At Pubrica, we help healthcare stakeholders bridge the gap between clinical outcomes and economic value through comprehensive Health Economics & Outcomes Research services. Our team of health economists, statisticians, epidemiologists, and medical writers collaborates to generate real-world evidence that supports outcomes-based healthcare and value-based care decisions worldwide.
+                            At Pubrica, we help healthcare stakeholders bridge the gap between clinical outcomes and economic value through comprehensive{" "}
+                            <Link
+                                href="/academy/health-economics/health-economics-research-and-heor-services/"
+                                className="text-blue-600"
+                            >
+                                Health Economics & Outcomes Research
+                            </Link>{" "}
+                            services. Our team of health economists, statisticians, epidemiologists, and medical writers collaborates to generate real-world evidence that supports outcomes-based healthcare and value-based care decisions worldwide.
                         </p>
 
                         <ul className="space-y-3 text-xs sm:text-sm text-slate-700">
-                            {featureBullets.map((bullet, idx) => (
-                                <li key={idx} className="flex items-start">
-                                    <span className="text-red-500 font-bold mr-2 text-base leading-none">•</span>
-                                    <span>{bullet}</span>
-                                </li>
-                            ))}
+                            <li className="flex items-start">
+                                <span className="text-red-500 font-bold mr-2 text-base leading-none">•</span>
+                                <span>1,500+ HEOR projects completed across cost-effectiveness, real-world evidence, and patient-reported outcomes.</span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="text-red-500 font-bold mr-2 text-base leading-none">•</span>
+                                <span>Multidisciplinary team of economists, statisticians, epidemiologists, and medical writers.</span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="text-red-500 font-bold mr-2 text-base leading-none">•</span>
+                                <span>
+                                    Exclusive focus on researchers preparing manuscripts,{" "}
+                                    <Link
+                                        href="/services/data-analytics-machine-learning/health-economics-outcome-research/thesis-vs-dissertation-differences-similarities/"
+                                        className="text-blue-600"
+                                    >
+                                        dissertations
+                                    </Link>
+                                    , publications and policy makers.
+                                </span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="text-red-500 font-bold mr-2 text-base leading-none">•</span>
+                                <span>Proven track record in supporting successful submissions to peer-reviewed journals.</span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="text-red-500 font-bold mr-2 text-base leading-none">•</span>
+                                <span>Global expertise across multiple therapeutic areas and healthcare systems.</span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="text-red-500 font-bold mr-2 text-base leading-none">•</span>
+                                <span>
+                                    Compliance with international guidelines (
+                                    <a
+                                        href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-blue-600"
+                                    >
+                                        CONSORT
+                                    </a>
+                                    , SPIRIT,{" "}
+                                    <a
+                                        href="https://www.icmje.org/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-blue-600"
+                                    >
+                                        ICMJE
+                                    </a>
+                                    , HTA standards).
+                                </span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="text-red-500 font-bold mr-2 text-base leading-none">•</span>
+                                <span>Evidence tailored for publication as well as funding and market access success.</span>
+                            </li>
                         </ul>
 
                         <p className="text-slate-600 text-xs sm:text-sm leading-relaxed pt-2">
@@ -149,7 +193,14 @@ export default function HealthEconomicsOutcomeResearch() {
                             What We Do
                         </h2>
                         <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                            At Pubrica, our Health Economics & Outcomes Research (HEOR) services help researchers, pharma companies, and healthcare organizations generate evidence for publication, funding, and regulatory approval.
+                            At Pubrica, our{" "}
+                            <Link
+                                href="/academy/health-economics/health-economics-research-and-heor-services/"
+                                className="text-blue-600"
+                            >
+                                Health Economics & Outcomes Research (HEOR)
+                            </Link>{" "}
+                            services help researchers, pharma companies, and healthcare organizations generate evidence for publication, funding, and regulatory approval.
                         </p>
                     </div>
 
@@ -199,7 +250,6 @@ export default function HealthEconomicsOutcomeResearch() {
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     );

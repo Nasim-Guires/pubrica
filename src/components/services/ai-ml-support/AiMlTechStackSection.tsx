@@ -12,7 +12,6 @@ const techStackData = [
     bgColor: "bg-purple-100",
     iconColor: "text-purple-600",
     iconSrc: "/images/ai-ml-support/Programming-Languages.png",
-    active: false,
   },
   {
     id: 2,
@@ -22,7 +21,6 @@ const techStackData = [
     bgColor: "bg-amber-100",
     iconColor: "text-amber-600",
     iconSrc: "/images/ai-ml-support/Machine-Learning-Deep-Learning-Frameworks.png",
-    active: true, // Dark border outline as seen in screenshot
   },
   {
     id: 3,
@@ -32,7 +30,6 @@ const techStackData = [
     bgColor: "bg-purple-100",
     iconColor: "text-purple-600",
     iconSrc: "/images/ai-ml-support/Natural-Language-Processing-NLPLanguages.png",
-    active: false,
   },
   {
     id: 4,
@@ -42,7 +39,6 @@ const techStackData = [
     bgColor: "bg-amber-100",
     iconColor: "text-amber-600",
     iconSrc: "/images/ai-ml-support/Data-Management-Databases.png",
-    active: false,
   },
   {
     id: 5,
@@ -52,7 +48,6 @@ const techStackData = [
     bgColor: "bg-purple-100",
     iconColor: "text-purple-600",
     iconSrc: "/images/ai-ml-support/Cloud-Deployment.png",
-    active: false,
   },
   {
     id: 6,
@@ -62,7 +57,6 @@ const techStackData = [
     bgColor: "bg-amber-100",
     iconColor: "text-amber-600",
     iconSrc: "/images/ai-ml-support/Visualization-BI-Tools.png",
-    active: false,
   },
   {
     id: 7,
@@ -72,7 +66,6 @@ const techStackData = [
     bgColor: "bg-purple-100",
     iconColor: "text-purple-600",
     iconSrc: "/images/ai-ml-support/MLOps-Automation.png",
-    active: false,
   },
 ];
 
@@ -99,18 +92,20 @@ export default function AiMlTechStackSection() {
           {techStackData.map((item) => (
             <div
               key={item.id}
-              className={`bg-white rounded-lg p-6 shadow-sm flex flex-col justify-between transition-all duration-200 ${
-                item.active
-                  ? "border-2 border-slate-900 shadow-md"
-                  : "border border-slate-200 hover:shadow-md"
-              }`}
+              className="bg-white rounded-lg p-6 shadow-sm flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md border border-transparent hover:border-slate-200 cursor-pointer"
             >
               <div>
                 {/* Icon Container */}
                 <div
                   className={`w-12 h-12 rounded-full ${item.bgColor} ${item.iconColor} flex items-center justify-center mb-4`}
                 >
-                  <Image src={item.iconSrc} alt="" width={28} height={28} className="object-contain" />
+                  <Image
+                    src={item.iconSrc}
+                    alt={item.title}
+                    width={28}
+                    height={28}
+                    className="object-contain"
+                  />
                 </div>
 
                 {/* Card Title */}
