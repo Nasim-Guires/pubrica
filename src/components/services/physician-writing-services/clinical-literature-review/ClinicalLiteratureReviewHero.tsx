@@ -139,7 +139,7 @@ export default function ClinicalLiteratureReviewHero() {
                                 </a>{" "}
                                 and{" "}
                                 <a
-                                    href="/services/medical-writing"
+                                    href="/services/research-services/medical-writing/"
                                     className="text-blue-600 no-underline hover:no-underline"
                                 >
                                     high-quality medical writing
@@ -199,7 +199,7 @@ export default function ClinicalLiteratureReviewHero() {
                                 Using Pubrica’s multidisciplinary team consisting of clinical
                                 researchers, epidemiologists, biostatisticians, and content
                                 experts, we can ensure the{" "}
-                                <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-blue-600 no-underline hover:no-underline">
+                                <Link href="/academy/research-services/literature-review-tips-introduction-discussion-sections/" className="text-blue-600 no-underline hover:no-underline">
                                     medical literature review
                                 </Link>{" "}
                                 is accurate, methodologically robust, and clinically valid.
@@ -230,7 +230,7 @@ export default function ClinicalLiteratureReviewHero() {
                     </h2>
                     <p className="text-xs md:text-sm text-slate-600 mb-8">
                         Pubrica provides end-to-end support for a{" "}
-                        <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-blue-600 no-underline hover:no-underline">
+                        <Link href="/services/research-services/literature-review-and-gap/" className="text-blue-600 no-underline hover:no-underline">
                             comprehensive literature review
                         </Link>{" "}
                         to advance clinical research, product development, and regulatory

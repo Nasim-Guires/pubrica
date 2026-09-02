@@ -11,6 +11,9 @@ import {
 } from "@heroicons/react/24/outline";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
+import CustomizedWritingServiceWork from "./CustomizedWritingServiceWork";
+import ServiceBanner from "@/components/common/ServiceBanner";
+import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
 
 // --- Next.js SEO Metadata ---
 export const metadata: Metadata = {
@@ -263,134 +266,18 @@ export default function CustomizedWritingGuidelineStandards() {
       {/* ========================================================= */}
       {/* 1. PROCESS SECTION: HOW OUR SERVICES WORK                 */}
       {/* ========================================================= */}
-      <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 w-full">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-14">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0a2e2b] tracking-tight">
-              How Our Customized Medical Writing Services Work
-            </h2>
-            <p className="mt-2 text-base font-semibold text-[#1a4a45]">
-              Step-by-Step Process Designed for Physicians
-            </p>
-            <p className="mt-3 text-sm sm:text-base text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Our structured and collaborative workflow ensures that every
-              document, be it a medical manuscript, thesis, clinical report, or
-              grant proposal, is scientifically accurate, customized to your
-              aims, and submission-ready.
-            </p>
-          </div>
-
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 relative items-stretch">
-            {PROCESS_STEPS.map((step) => {
-              const IconComponent = step.icon;
-              const isEven = step.stepNumber % 2 === 0;
-
-              return (
-                <div
-                  key={step.stepNumber}
-                  className="flex flex-col items-center group relative"
-                >
-                  {/* Step Number Badge (Top for Odds) */}
-                  {!isEven && (
-                    <div className="w-10 h-10 rounded-full bg-[#0088b2] text-white font-bold flex items-center justify-center text-sm mb-3 z-10 shadow-md">
-                      {step.stepNumber}
-                    </div>
-                  )}
-
-                  {/* Horizontal Line Accent */}
-                  <div
-                    className={`w-full h-1 bg-[#0088b2] mb-3 ${isEven ? "order-2 mt-3 mb-0" : ""
-                      }`}
-                  />
-
-                  {/* Step Card with Black Hover Effect */}
-                  <div
-                    className={`
-                      w-full bg-slate-50 border border-gray-200 rounded-sm p-4 text-left flex-1
-                      transition-all duration-300 ease-in-out cursor-pointer shadow-sm
-                      hover:bg-[#333333] hover:text-white hover:shadow-xl hover:border-[#333333]
-                      flex flex-col justify-start
-                      ${isEven ? "order-1" : "order-3"}
-                    `}
-                  >
-                    <div className="mb-3 text-gray-700 group-hover:text-white transition-colors duration-300">
-                      <IconComponent className="w-7 h-7 stroke-[1.5]" />
-                    </div>
-
-                    <h2 className="text-xs font-bold tracking-wider text-gray-900 group-hover:text-white transition-colors duration-300 uppercase mb-3 border-b border-gray-200 group-hover:border-gray-700 pb-2">
-                      {step.title}
-                    </h2>
-
-                    <p className="text-[11px] leading-relaxed text-gray-600 group-hover:text-gray-200 transition-colors duration-300 mb-2">
-                      {step.description}
-                    </p>
-
-                    {step.items && step.items.length > 0 && (
-                      <ul className="space-y-1.5 text-[10px] text-gray-600 group-hover:text-gray-300 transition-colors duration-300 mt-2">
-                        {step.items.map((item, idx) => (
-                          <li
-                            key={idx}
-                            className="flex items-start gap-1.5 leading-tight"
-                          >
-                            <span className="inline-block w-1 h-1 rounded-full bg-gray-500 group-hover:bg-white mt-1 shrink-0" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-
-                  {/* Step Number Badge (Bottom for Evens) */}
-                  {isEven && (
-                    <div className="w-10 h-10 rounded-full bg-[#0088b2] text-white font-bold flex items-center justify-center text-sm mt-3 z-10 shadow-md order-3">
-                      {step.stepNumber}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <CustomizedWritingServiceWork />
 
       {/* ========================================================= */}
       {/* 2. CTA BANNER SECTION                                     */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
-        <div className="bg-[#03362a] text-white py-5 px-6 sm:px-12 rounded-lg flex flex-col md:flex-row items-center justify-between gap-8 shadow-md">
-          {/* Badge */}
-          <div className="flex-shrink-0">
-            <div className="w-32 h-32 rounded-full border-4 border-dashed border-sky-300 bg-white shadow-lg p-2 flex items-center justify-center overflow-hidden">
-              <Image
-                src="/images/publication-support/journal-selection/Satisfaction_Guarantee.webp"
-                alt="100% Satisfaction Guarantee"
-                width={128}
-                height={128}
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Text Content */}
-          <div className="flex-1 text-center md:text-left">
-            <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-3">
-              Advance Your Clinical and Research Impact with Customized Medical
-              Writing for Physicians
-            </h2>
-            <p className="text-xs sm:text-sm text-gray-200 leading-relaxed max-w-3xl mb-6">
-              Partner with domain-specific medical writing experts who deliver
-              structured, evidence-based content tailored to your specialty.
-              Whether you're preparing a manuscript, regulatory document, grant
-              proposal, or CME material, we ensure your work meets the highest
-              standards for submission, compliance, and professional credibility.
-            </p>
-
-            <GetFreeQuoteButton />
-          </div>
-        </div>
-      </section>
+      <ServiceBanner
+        imageSrc="/images/publication-support/journal-selection/Satisfaction_Guarantee.webp"
+        imageAlt="100% Satisfaction Guarantee"
+        heading="Advance Your Clinical and Research Impact with Customized Medical Writing for Physicians"
+        description="Partner with domain-specific medical writing experts who deliver structured, evidence-based content tailored to your specialty. Whether you're preparing a manuscript, regulatory document, grant proposal, or CME material, we ensure your work meets the highest standards for submission, compliance, and professional credibility."
+        showQuoteButton={true}
+      />
 
       {/* ========================================================= */}
       {/* 3. COMPLIANCE & GUIDELINE STANDARDS SECTION                */}
@@ -445,55 +332,36 @@ export default function CustomizedWritingGuidelineStandards() {
       {/* ========================================================= */}
       {/* 4. SAMPLE WORK & REPORT DOWNLOAD CTA                     */}
       {/* ========================================================= */}
-      <section className="max-w-5xl mx-auto px-4 my-12">
-        <div className="bg-[#f2faf7] py-5 px-6 sm:px-12 rounded-xl border border-emerald-100 shadow-sm">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            {/* Left Image */}
-            <div className="md:col-span-5 flex justify-center">
-              <div className="w-full max-w-xs h-72 relative rounded-md overflow-hidden shadow-md bg-gray-200">
-                <img
-                  src="/images/physician-writing-services/customized-writing/Customized-Medical-Writing-Service-Sample-Work.jpg"
-                  alt="Physician medical writing sample"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Right Text Blocks */}
-            <div className="md:col-span-7 text-center md:text-left space-y-6">
-              <div>
-                <h3 className="text-base sm:text-lg font-bold text-[#0a2e2b] mb-3">
-                  Customized Medical Writing Service Sample Work
-                </h3>
-                <Link
-                  href="/insights/sample-work"
-                  className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold py-2.5 px-8 rounded-full transition-colors duration-200"
-                >
-                  Discover More
-                </Link>
-              </div>
-
-              <div>
-                <h3 className="text-base sm:text-lg font-bold text-[#0a2e2b] mb-2">
-                  Download the full Report Now
-                </h3>
-                <p className="text-xs text-gray-600 leading-relaxed mb-4">
-                  Explore our customized writing samples, meticulously crafted to
-                  align with journal-specific guidelines, research objectives,
-                  and academic or regulatory requirements, delivered within
-                  defined timelines and backed by verified literature.
-                </p>
-                <Link
-                  href="/insights/sample-work"
-                  className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold py-2.5 px-8 rounded-full transition-colors duration-200"
-                >
-                  Discover More
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PubricaSampleWorkCard
+        bookCoverImage={{
+          src: "/images/physician-writing-services/customized-writing/Customized-Medical-Writing-Service-Sample-Work.jpg",
+          alt: "Physician medical writing sample",
+          width: 600,
+          height: 450,
+        }}
+        sections={[
+          {
+            heading: "Customized Medical Writing Service Sample Work",
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work",
+            },
+          },
+          {
+            heading: "Download the full Report Now",
+            descriptionSegments: [
+              {
+                text: "Explore our customized writing samples, meticulously crafted to align with journal-specific guidelines, research objectives, and academic or regulatory requirements, delivered within defined timelines and backed by verified literature.",
+              },
+            ],
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work",
+            },
+          },
+        ]}
+        footerDisclaimerSegments={[]}
+      />
 
       {/* ========================================================= */}
       {/* 5. PACKAGES & ADD-ONS TABLE SECTION                       */}

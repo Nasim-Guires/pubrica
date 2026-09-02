@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
+import CommonPackages, { PackageItem } from "@/components/common/CommonPackages";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 /* ==========================================================================
    DATA STRUCTURES
@@ -58,65 +61,68 @@ interface PackageCard {
   turnaroundTime: string;
 }
 
-const packagesData: PackageCard[] = [
+const packagesData: PackageItem[] = [
   {
-    badge: "B",
-    badgeBg: "bg-amber-100 text-amber-800",
+    icon: "/images/icons/Basic.webp",
     title: "Basic",
-    cardBg: "bg-emerald-50/40",
-    borderColor: "border-emerald-200",
-    idealFor: "Researchers requiring preliminary data exploration and simple analyses.",
+    subtitle: "Preliminary Data Exploration & Simple Analyses",
+    idealFor:
+      "Researchers requiring preliminary data exploration and simple analyses.",
     includes: [
       "Data quality check and preprocessing",
       "Basic genomic/proteomic/transcriptomic analysis",
       "Summary reports with data visualization",
     ],
-    optionalAddOns: [
+    addOns: [
       "Extended statistical validation",
       "Reference genome alignment",
       "Customized figure preparation for publications",
     ],
-    turnaroundTime: "2-3 weeks",
+    turnaround: "2-3 weeks",
+    cardBgColor: "#ecf8f3",
+    titleColor: "#065f46",
   },
   {
-    badge: "A",
-    badgeBg: "bg-teal-100 text-teal-800",
+    icon: "/images/icons/advanced-a.webp",
     title: "Advanced",
-    cardBg: "bg-purple-50/40",
-    borderColor: "border-purple-200",
-    idealFor: "Academics and industry professionals seeking in-depth insights with integrative analysis.",
+    subtitle: "In-Depth & Integrative Analysis",
+    idealFor:
+      "Academics and industry professionals seeking in-depth insights with integrative analysis.",
     includes: [
       "Comprehensive multi-omics integration",
       "Differential expression and pathway analysis",
       "Structural bioinformatics & molecular modeling",
       "Detailed technical report with publication-ready figures",
     ],
-    optionalAddOns: [
+    addOns: [
       "Machine learning-based predictive modeling",
       "Clinical data integration",
       "Journal-specific formatting support",
     ],
-    turnaroundTime: "4-6 weeks",
+    turnaround: "4-6 weeks",
+    cardBgColor: "#faf5ff",
+    titleColor: "#581c87",
   },
   {
-    badge: "P",
-    badgeBg: "bg-orange-100 text-orange-800",
+    icon: "/images/icons/premium-p.png",
     title: "Premium",
-    cardBg: "bg-amber-50/40",
-    borderColor: "border-amber-200",
-    idealFor: "Researchers targeting high-impact publications, grant submissions, or translational research.",
+    subtitle: "High-Impact & Translational Research",
+    idealFor:
+      "Researchers targeting high-impact publications, grant submissions, or translational research.",
     includes: [
       "End-to-end bioinformatics pipeline development",
       "Multi-layered omics integration (genomics, transcriptomics, proteomics, metabolomics, epigenomics)",
       "AI/ML-driven biomarker discovery",
       "Comprehensive manuscript support with supplementary materials",
     ],
-    optionalAddOns: [
+    addOns: [
       "Regulatory & compliance check (FDA, EMA standards)",
       "Clinical trial dataset analysis",
       "Customized dashboards for interactive data exploration",
     ],
-    turnaroundTime: "8-10 weeks",
+    turnaround: "8-10 weeks",
+    cardBgColor: "#fffbeb",
+    titleColor: "#92400e",
   },
 ];
 
@@ -138,7 +144,7 @@ export default function BioinformaticsServices() {
         {/* ------------------------------------------------------------------
            1. HERO TOP BANNER (Banner text present, Get a Quote button removed)
            ------------------------------------------------------------------ */}
-     
+
         {/* ------------------------------------------------------------------
            5. COMPLIANCE AND GUIDELINE STANDARDS
            ------------------------------------------------------------------ */}
@@ -188,107 +194,58 @@ export default function BioinformaticsServices() {
         {/* ------------------------------------------------------------------
            6. SAMPLE WORKS & REPORT DOWNLOAD
            ------------------------------------------------------------------ */}
-        <div className="bg-emerald-50/50 rounded-lg p-6 sm:p-8 border border-emerald-100 flex flex-col md:flex-row items-center gap-8">
-          <div className="w-full md:w-1/3 flex justify-center">
-            <div className="relative w-64 h-64 rounded-md overflow-hidden border border-slate-200 shadow-sm bg-white">
-              <Image
-                src="/images/services/bio/Transforming-Biological-Data-into-Scientific-Discovery-Sample-Work.png"
-                alt="Bioinformatics Researcher with Microscope"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="w-full md:w-2/3 space-y-6">
-            <div className="space-y-3">
-              <h3 className="text-xl font-bold text-[#0b2b26]">
-                Bioinformatics Sample Works
-              </h3>
-              <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-slate-800 text-white font-medium px-6 py-2 rounded-full text-xs sm:text-sm shadow transition-colors">
-                Discover More
-              </Link>
-            </div>
-
-            <div className="space-y-3 pt-2">
-              <h3 className="text-xl font-bold text-[#0b2b26]">
-                Download the full Report Now
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Explore our bioinformatics sample work, carefully designed to meet journal-specific guidelines, computational precision (e.g., Transcriptomics, proteomics), and research timelines, ensuring impactful academic or clinical publication.
-              </p>
-              <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-slate-800 text-white font-medium px-6 py-2 rounded-full text-xs sm:text-sm shadow transition-colors">
-                Discover More
-              </Link>
-            </div>
-          </div>
-        </div>
+        <PubricaSampleWorkCard
+          bookCoverImage={{
+            src: "/images/services/bio/Transforming-Biological-Data-into-Scientific-Discovery-Sample-Work.png",
+            alt: "Bioinformatics Researcher with Microscope",
+            width: 640,
+            height: 640,
+          }}
+          sections={[
+            {
+              heading: "Bioinformatics Sample Works",
+              button: {
+                label: "Discover More",
+                url: "/insights/sample-work",
+              },
+            },
+            {
+              heading: "Download the full Report Now",
+              descriptionSegments: [
+                {
+                  text: "Explore our bioinformatics sample work, carefully designed to meet journal-specific guidelines, computational precision (e.g., Transcriptomics, proteomics), and research timelines, ensuring impactful academic or clinical publication.",
+                },
+              ],
+              button: {
+                label: "Discover More",
+                url: "/insights/sample-work",
+              },
+            },
+          ]}
+          footerDisclaimerSegments={[]}
+        />
 
         {/* ------------------------------------------------------------------
            7. OUR PACKAGES
            ------------------------------------------------------------------ */}
-        <div className="space-y-8">
-          <div className="space-y-2">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0b2b26]">
-              Bioinformatics Service – Our Packages
-            </h2>
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              We provide end-to-end bioinformatics solutions tailored to your research needs. Our packages are designed to ensure accuracy, compliance, and faster turnaround, helping you achieve publication-ready results.
-            </p>
+        {/* SINGLE COMBINED SECTION WITH MINIMAL SPACING */}
+        <section className="w-full bg-[#f8fafc] py-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+
+            {/* Packages Component */}
+            <CommonPackages
+              title="Bioinformatics Service – Our Packages"
+              description="We provide end-to-end bioinformatics solutions tailored to your research needs. Our packages are designed to ensure accuracy, compliance, and faster turnaround, helping you achieve publication-ready results."
+              packages={packagesData}
+            />
+
+            {/* CTA Button placed immediately below with tight top margin */}
+            <div className="mt-2 text-center">
+              <GetFreeQuoteButton />
+            </div>
+
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-            {packagesData.map((pkg, idx) => (
-              <div
-                key={idx}
-                className={`${pkg.cardBg} border ${pkg.borderColor} rounded-lg p-6 flex flex-col justify-between shadow-sm relative`}
-              >
-                <div className="space-y-5">
-                  {/* Package Title Header */}
-                  <div className="flex items-center space-x-3 pb-3 border-b border-slate-200/60">
-                    <span className={`w-9 h-9 rounded-full ${pkg.badgeBg} font-bold flex items-center justify-center text-sm shadow-sm`}>
-                      {pkg.badge}
-                    </span>
-                    <h3 className="text-xl font-bold text-[#0b2b26]">
-                      {pkg.title}
-                    </h3>
-                  </div>
-
-                  {/* Ideal For */}
-                  <div className="text-xs sm:text-sm text-slate-700">
-                    <p className="font-semibold text-[#0b2b26] mb-1">➔ Ideal For:</p>
-                    <p className="text-slate-600 leading-relaxed">{pkg.idealFor}</p>
-                  </div>
-
-                  {/* Includes */}
-                  <div className="text-xs sm:text-sm text-slate-700">
-                    <p className="font-semibold text-[#0b2b26] mb-1">➔ Includes:</p>
-                    <ul className="list-disc list-inside space-y-1 text-slate-600 pl-1">
-                      {pkg.includes.map((inc, i) => (
-                        <li key={i}>{inc}</li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Optional Add-Ons */}
-                  <div className="text-xs sm:text-sm text-slate-700">
-                    <p className="font-semibold text-[#0b2b26] mb-1">➔ Optional Add-Ons:</p>
-                    <ul className="list-disc list-inside space-y-1 text-slate-600 pl-1">
-                      {pkg.optionalAddOns.map((addon, i) => (
-                        <li key={i}>{addon}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Turnaround Time Footer */}
-                <div className="pt-6 mt-4 border-t border-slate-200/60 text-xs sm:text-sm font-semibold text-[#0b2b26]">
-                  ➔ Turnaround Time: <span className="font-normal text-slate-700">{pkg.turnaroundTime}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        </section>
 
       </div>
     </section>

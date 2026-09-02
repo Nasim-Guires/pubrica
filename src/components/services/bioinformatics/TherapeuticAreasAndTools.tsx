@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import ServiceBanner from "@/components/common/ServiceBanner";
 
 /* ==========================================================================
    DATA OBJECT STRUCTURE FOR TOOLS USED CARDS
@@ -148,32 +149,32 @@ const processStepsData: ProcessStep[] = [
    MAIN COMPONENT
    ========================================================================== */
 export default function TherapeuticAreasAndTools() {
-  const [openCardId, setOpenCardId] = useState<string | null>(null);
+  // All cards closed by default; supports multiple open cards simultaneously
+  const [openCardIds, setOpenCardIds] = useState<string[]>([]);
 
   const toggleCard = (id: string) => {
-    setOpenCardId((prevId) => (prevId === id ? null : id));
+    setOpenCardIds((prevIds) =>
+      prevIds.includes(id) ? prevIds.filter((cardId) => cardId !== id) : [...prevIds, id]
+    );
   };
 
   return (
-    <section className="w-full bg-[#f8fafc] py-7 text-slate-800 font-sans">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+    <section className="w-full bg-[#f8fafc] text-slate-800 font-sans pb-16">
+      {/* 1. FULL WIDTH CALLOUT BANNER (Edge-to-Edge) */}
+      <div className="w-full">
+        <ServiceBanner
+          imageSrc="/images/icons/Satisfaction_Guarantee.webp"
+          imageAlt="100% Satisfaction Guarantee"
+          heading="Accelerate Your Bioinformatics Journey with Pubrica"
+          description="Receive tailored support in genomic, proteomic, and clinical data analysis, helping you achieve precision, reliability, and faster translation of discoveries into practice."
+          showQuoteButton={true}
+        />
+      </div>
 
-        {/* ------------------------------------------------------------------
-           1. ACCELERATE CALLOUT BANNER
-           ------------------------------------------------------------------ */}
-        <div className="bg-[#0b2b26] text-white py-6 px-6 rounded-lg text-center shadow-lg">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-3">
-            Accelerate Your Bioinformatics Journey with Pubrica
-          </h2>
-          <p className="text-slate-200 text-sm sm:text-base max-w-3xl mx-auto mb-6 leading-relaxed">
-            Receive tailored support in genomic, proteomic, and clinical data analysis, helping you achieve precision, reliability, and faster translation of discoveries into practice.
-          </p>
-          <GetFreeQuoteButton />
-        </div>
+      {/* INNER CONTENT WRAPPER */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 space-y-16">
 
-        {/* ------------------------------------------------------------------
-           2. STEP-BY-STEP PROCESS SECTION
-           ------------------------------------------------------------------ */}
+        {/* 2. STEP-BY-STEP PROCESS SECTION */}
         <div className="space-y-10">
           <div className="text-center space-y-2">
             <h2 className="text-xl md:text-2xl font-bold text-[#0c302d]">
@@ -187,7 +188,7 @@ export default function TherapeuticAreasAndTools() {
             </p>
           </div>
 
-          {/* Desktop Process Flow (Matching Image Layout) */}
+          {/* Desktop Process Flow */}
           <div className="hidden md:flex flex-col items-center max-w-5xl mx-auto">
             {/* ROW 1: Step 1 -> Step 2 -> Step 3 */}
             <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-2 w-full">
@@ -226,7 +227,7 @@ export default function TherapeuticAreasAndTools() {
               <StepCard step={processStepsData[6]} />
               <ArrowRight />
               <StepCard step={processStepsData[7]} />
-              <div /> {/* Blank placeholder for alignment */}
+              <div />
             </div>
           </div>
 
@@ -241,9 +242,7 @@ export default function TherapeuticAreasAndTools() {
           </div>
         </div>
 
-        {/* ------------------------------------------------------------------
-           3. THERAPEUTIC AREAS SECTION
-           ------------------------------------------------------------------ */}
+        {/* 3. THERAPEUTIC AREAS SECTION */}
         <div className="space-y-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0b2b26]">
             Therapeutic Areas for Bioinformatic Analysis
@@ -253,9 +252,7 @@ export default function TherapeuticAreasAndTools() {
           </p>
         </div>
 
-        {/* ------------------------------------------------------------------
-           4. TOOLS USED ACCORDION CARDS SECTION
-           ------------------------------------------------------------------ */}
+        {/* 4. TOOLS USED ACCORDION CARDS SECTION */}
         <div className="space-y-6">
           <h2 className="text-xl sm:text-2xl font-bold text-[#0b2b26]">
             Tools Used for Bioinformatics Service
@@ -263,31 +260,31 @@ export default function TherapeuticAreasAndTools() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
             {bioinformaticsToolsData.map((category) => {
-              const isOpen = openCardId === category.id;
+              const isOpen = openCardIds.includes(category.id);
 
               return (
                 <div
                   key={category.id}
-                  className="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm transition-all duration-200"
+                  className="bg-white border border-emerald-100/80 rounded-lg overflow-hidden shadow-xs transition-all duration-200"
                 >
                   <button
                     onClick={() => toggleCard(category.id)}
-                    className="w-full text-left bg-emerald-50/70 hover:bg-emerald-100/70 p-4 flex items-center justify-between transition-colors focus:outline-none"
+                    className="w-full text-left bg-emerald-700 hover:bg-[#0c302d] p-4 flex items-center justify-between transition-colors focus:outline-none cursor-pointer"
                   >
-                    <span className="font-semibold text-[#0b2b26] text-sm sm:text-base pr-2">
+                    <span className="font-semibold text-white text-sm sm:text-base pr-2">
                       {category.title}
                     </span>
-                    <span className="text-emerald-900 font-bold text-lg">
+                    <span className="text-emerald-100 font-bold text-lg select-none">
                       {isOpen ? "—" : "+"}
                     </span>
                   </button>
 
                   {isOpen && (
-                    <div className="p-4 bg-white border-t border-slate-100">
+                    <div className="p-4 bg-white border-t border-emerald-100">
                       <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
                         {category.tools.map((tool, index) => (
                           <li key={index} className="flex items-start">
-                            <span className="text-slate-900 mr-2 font-bold">•</span>
+                            <span className="text-emerald-700 mr-2 font-bold">•</span>
                             <span>
                               <strong>{tool.name}</strong> – {tool.description}
                             </span>
@@ -307,21 +304,16 @@ export default function TherapeuticAreasAndTools() {
   );
 }
 
-{/* Individual Step Card Component */}
+{/* Individual Step Card Component */ }
 function StepCard({ step }: { step: ProcessStep }) {
   return (
     <div className="bg-white border border-[#0c302d] rounded-lg p-5 flex flex-col items-center text-center shadow-xs h-full min-h-[260px] justify-start w-full">
-      {/* Circle Number Badge */}
       <div className="w-8 h-8 rounded-full bg-[#0c302d] text-white flex items-center justify-center font-bold text-sm mb-3 shrink-0">
         {step.stepNumber}
       </div>
-
-      {/* Title */}
       <h4 className="text-sm font-extrabold text-[#0c302d] mb-2 leading-snug">
         {step.title}
       </h4>
-
-      {/* Description */}
       <p className="text-[11px] text-gray-700 leading-relaxed font-normal">
         {step.description}
       </p>
@@ -329,64 +321,32 @@ function StepCard({ step }: { step: ProcessStep }) {
   );
 }
 
-{/* Right Arrow */}
+{/* Arrow Components */ }
 function ArrowRight() {
   return (
     <div className="px-1 text-[#0c302d]">
-      <svg
-        className="w-4 h-4"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-        />
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
       </svg>
     </div>
   );
 }
 
-{/* Left Arrow */}
 function ArrowLeft() {
   return (
     <div className="px-1 text-[#0c302d]">
-      <svg
-        className="w-4 h-4"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-        />
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
       </svg>
     </div>
   );
 }
 
-{/* Down Arrow */}
 function ArrowDown() {
   return (
     <div className="text-[#0c302d]">
-      <svg
-        className="w-4 h-4"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M19.5 10.5L12 18m0 0l-7.5-7.5M12 18V3"
-        />
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5L12 18m0 0l-7.5-7.5M12 18V3" />
       </svg>
     </div>
   );

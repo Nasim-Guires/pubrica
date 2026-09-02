@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
+import { EditorialWorkflowSection, WorkflowStep } from "@/components/common/EditorialWorkflowSection";
+import ServiceBanner from "@/components/common/ServiceBanner";
 
 interface StepItem {
   number: number;
@@ -21,52 +23,53 @@ interface StepItem {
   position: "top" | "bottom";
 }
 
-const processSteps: StepItem[] = [
+const steps: WorkflowStep[] = [
   {
-    number: 1,
+    stepNumber: 1,
     title: "DEFINE RESEARCH OBJECTIVE",
     description:
       "We work with you to formulate a specific, clinically relevant research question using the PICO (Population, Intervention, Comparator, Outcome) or SPIDER methodology.",
-    icon: Target,
+    iconSrc: "/images/icons/step1.png",
     position: "bottom",
   },
   {
-    number: 2,
+    stepNumber: 2,
     title: "PROTOCOL DEVELOPMENT",
-    description: "Prepare review protocols based on PRISMA-P or the JBI guidelines.",
-    icon: FileText,
+    description:
+      "Prepare review protocols based on PRISMA-P or the JBI guidelines.",
+    iconSrc: "/images/icons/step-2.png",
     position: "top",
   },
   {
-    number: 3,
+    stepNumber: 3,
     title: "COMPREHENSIVE LITERATURE SEARCH",
     description:
       "Conduct a systematic search of databases including PubMed, Embase, Cochrane, Scopus, and Web of Science.",
-    icon: Search,
+    iconSrc: "/images/icons/step-3.png",
     position: "bottom",
   },
   {
-    number: 4,
+    stepNumber: 4,
     title: "STUDY SCREENING & SELECTION",
     description:
       "Two-level screening (title/abstract followed by full-text) is performed using PRISMA-compliant flow diagrams.",
-    icon: Filter,
+    iconSrc: "/images/icons/step-4.png",
     position: "top",
   },
   {
-    number: 5,
+    stepNumber: 5,
     title: "DATA EXTRACTION AND QUALITY APPRAISAL",
     description:
-      "Standardized templates to extract study characteristics, interventions, outcomes, and results. Quality assessment using validated tools (e.g., GRADE, Jadad Scale, or Newcastle-Ottawa Scale).",
-    icon: Database,
+      "Standardized templates to extract study characteristics, interventions, outcomes, and results. Quality assessment using validated tools (e.g., GRADE, Jadad Scale, or Newcastle-Ottawa Scale), depending on the study design",
+    iconSrc: "/images/icons/step-5.png",
     position: "bottom",
   },
   {
-    number: 6,
+    stepNumber: 6,
     title: "EVIDENCE SYNTHESIS AND REPORTING",
     description:
       "Depending on the scope, we perform narrative synthesis, meta-analysis, or evidence mapping. Results are presented using forest plots, summary of findings tables, and clinical interpretation.",
-    icon: FileSpreadsheet,
+    iconSrc: "/images/icons/step-6.png",
     position: "top",
   },
 ];
@@ -85,196 +88,22 @@ export default function ClinicalLiteratureReviewWorkflowAndCompliance() {
       <div className="max-w-6xl mx-auto px-4 space-y-16">
 
         {/* 1. How Our Clinical Literature Review Service Works */}
-        <section className="py-12 md:py-16 px-4 md:px-8 bg-[#EAEAEA] rounded-xl text-center font-sans overflow-hidden">
-          {/* Header */}
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0B353D] mb-2">
-            How Our Clinical Literature Review Service Works
-          </h2>
-          <h3 className="text-lg md:text-xl font-medium text-[#2C4951] mb-4">
-            Our step-by-Step Process
-          </h3>
-          <p className="max-w-4xl mx-auto text-[#4B5563] text-xs md:text-sm leading-relaxed mb-12 md:mb-16">
-            Clinical literature reviews should use a protocol-driven and
-            reproducible six-step process to ensure that they adhere to the
-            highest standards of evidence-based medicine (EBM), regulatory
-            compliance, and scientific integrity.
-          </p>
-
-          {/* MOBILE LAYOUT (< md screens): Vertical Alternating Timeline */}
-          <div className="flex md:hidden flex-col items-center w-full max-w-sm mx-auto space-y-6">
-            {processSteps.map((step, index) => {
-              const IconComponent = step.icon;
-              const isEven = index % 2 === 0;
-
-              return (
-                <div
-                  key={step.number}
-                  className="relative flex items-center w-full min-h-[160px]"
-                >
-                  {/* Connecting Vertical Line */}
-                  {index !== processSteps.length - 1 && (
-                    <div
-                      className={`absolute top-8 bottom-0 w-[2px] bg-[#0081A7] z-0 ${isEven ? "left-4" : "right-4"
-                        }`}
-                    />
-                  )}
-
-                  {/* Step Number Badge */}
-                  <div
-                    className={`absolute z-10 w-9 h-9 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm shadow-sm ${isEven ? "left-0" : "right-0"
-                      }`}
-                  >
-                    {step.number}
-                  </div>
-
-                  {/* Step Card Container */}
-                  <div
-                    className={`w-full flex ${isEven ? "pl-10 pr-2" : "pr-10 pl-2"
-                      }`}
-                  >
-                    <div className="bg-[#F8F9FA] border border-[#E2E8F0] rounded-sm shadow-xs p-4 flex flex-col items-center text-center w-full z-10">
-                      <div className="w-10 h-10 relative mb-3 flex items-center justify-center">
-                        <IconComponent className="w-7 h-7 text-[#0B353D]" />
-                      </div>
-
-                      <h4 className="font-bold text-[#0F172A] text-xs mb-2 leading-snug uppercase">
-                        {step.title}
-                      </h4>
-
-                      <p className="text-[#64748B] text-[11px] leading-relaxed">
-                        {step.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* DESKTOP LAYOUT (>= md screens): Dynamic Flow Layout */}
-          <div
-            className="hidden md:grid gap-2 lg:gap-4 items-stretch justify-center w-full max-w-7xl mx-auto relative my-8"
-            style={{
-              gridTemplateColumns: `repeat(${processSteps.length}, minmax(0, 1fr))`,
-            }}
-          >
-            {processSteps.map((step, index) => {
-              const IconComponent = step.icon;
-              const isTop = step.position === "top";
-
-              return (
-                <div
-                  key={step.number}
-                  className="flex flex-col items-center justify-between group w-full relative min-h-[500px]"
-                >
-                  {/* UPPER SECTION */}
-                  <div className="w-full flex flex-col items-center justify-end flex-1 pb-0">
-                    {!isTop ? (
-                      /* Card placed at Top */
-                      <div className="bg-[#F8F9FA] border border-[#E2E8F0] shadow-xs p-3 lg:p-4 flex flex-col items-center text-center w-full h-full justify-start z-20 transition-all duration-300 group-hover:bg-black group-hover:border-black rounded-xs">
-                        <div className="w-10 h-10 lg:w-11 lg:h-11 relative mb-3 flex items-center justify-center shrink-0">
-                          <IconComponent className="w-7 h-7 text-[#0B353D] group-hover:text-white transition-colors duration-300" />
-                        </div>
-
-                        <h4 className="font-bold text-[#0F172A] text-xs lg:text-sm mb-2 leading-snug uppercase transition-colors duration-300 group-hover:text-white">
-                          {step.title}
-                        </h4>
-
-                        <p className="text-[#64748B] text-[11px] lg:text-xs leading-relaxed transition-colors duration-300 group-hover:text-gray-300">
-                          {step.description}
-                        </p>
-                      </div>
-                    ) : (
-                      /* Badge + Vertical Connector Line */
-                      <div className="flex flex-col items-center justify-end w-full">
-                        <div className="w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm lg:text-base shadow-sm z-20 transition-colors duration-300 group-hover:bg-black shrink-0 mb-3">
-                          {step.number}
-                        </div>
-                        <div className="w-[2px] h-10 bg-[#0081A7] transition-colors duration-300 group-hover:bg-black" />
-                      </div>
-                    )}
-                  </div>
-
-                  {/* CENTER HORIZONTAL LINE SEGMENT */}
-                  <div className="w-full h-[8px] relative my-0 shrink-0">
-                    <div
-                      className={`h-full bg-[#0081A7] w-full transition-colors duration-300 group-hover:bg-black ${index === 0
-                        ? "rounded-l-sm"
-                        : index === processSteps.length - 1
-                          ? "rounded-r-sm"
-                          : ""
-                        }`}
-                    />
-                  </div>
-
-                  {/* LOWER SECTION */}
-                  <div className="w-full flex flex-col items-center justify-start flex-1 pt-0">
-                    {isTop ? (
-                      /* Card placed at Bottom */
-                      <div className="bg-[#F8F9FA] border border-[#E2E8F0] shadow-xs p-3 lg:p-4 flex flex-col items-center text-center w-full h-full justify-start z-20 transition-all duration-300 group-hover:bg-black group-hover:border-black rounded-xs">
-                        <div className="w-10 h-10 lg:w-11 lg:h-11 relative mb-3 flex items-center justify-center shrink-0">
-                          <IconComponent className="w-7 h-7 text-[#0B353D] group-hover:text-white transition-colors duration-300" />
-                        </div>
-
-                        <h4 className="font-bold text-[#0F172A] text-xs lg:text-sm mb-2 leading-snug uppercase transition-colors duration-300 group-hover:text-white">
-                          {step.title}
-                        </h4>
-
-                        <p className="text-[#64748B] text-[11px] lg:text-xs leading-relaxed transition-colors duration-300 group-hover:text-gray-300">
-                          {step.description}
-                        </p>
-                      </div>
-                    ) : (
-                      /* Vertical Connector Line + Badge */
-                      <div className="flex flex-col items-center justify-start w-full">
-                        <div className="w-[2px] h-10 bg-[#0081A7] transition-colors duration-300 group-hover:bg-black" />
-                        <div className="w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm lg:text-base shadow-sm z-20 transition-colors duration-300 group-hover:bg-black shrink-0 mt-3">
-                          {step.number}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </section>
+        <EditorialWorkflowSection
+          heading="How Our Clinical Literature Review Service Works"
+          subheading="Our Step-by-Step Process"
+          description="Clinical literature reviews should use a protocol-driven and reproducible six-step process to ensure that they adhere to the highest standards of evidence-based medicine (EBM), regulatory compliance, and scientific integrity."
+          steps={steps}
+        />
       </div>
 
       {/* 2. Speed Up Guarantee Banner (Full-Bleed: hits left and right edges) */}
-      <section className="w-screen relative left-1/2 -translate-x-1/2 bg-[#053826] text-white my-16 py-8 px-6 md:px-12 shadow-md">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6 justify-between">
-          <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
-            {/* Guarantee Image direct & scaled up */}
-            <div className="flex-shrink-0">
-              <Image
-                src="/images/publication-support/journal-selection/Satisfaction_Guarantee.webp"
-                alt="100% Satisfaction Guarantee"
-                width={180}
-                height={180}
-                className="w-40 h-40 md:w-48 md:h-48 object-contain"
-              />
-            </div>
-            <div className="space-y-2">
-              <h3 className="text-lg md:text-xl font-bold">
-                Speed up your clinical literature review writing service with
-                Pubrica
-              </h3>
-              <p className="text-xs md:text-sm text-slate-200 max-w-2xl leading-relaxed">
-                Pubrica provides a medical literature review service which
-                provides a detailed guide to help you to identify the right
-                journal for your paper. Our service provides comprehensive
-                analysis based on scope, range of impact factor, indexing
-                requirements, and more, based on your paper and your
-                preferences.
-              </p>
-            </div>
-          </div>
-
-          <GetFreeQuoteButton />
-        </div>
-      </section>
-
+      <ServiceBanner
+        imageSrc="/images/publication-support/journal-selection/Satisfaction_Guarantee.webp"
+        imageAlt="100% Satisfaction Guarantee"
+        heading="Speed up your clinical literature review writing service with Pubrica"
+        description="Pubrica provides a medical literature review service which provides a detailed guide to help you to identify the right journal for your paper. Our service provides comprehensive analysis based on scope, range of impact factor, indexing requirements, and more, based on your paper and your preferences."
+        showQuoteButton={true}
+      />
       <div className="max-w-6xl mx-auto px-4 space-y-16">
         {/* 3. Our Compliance and Guideline Standards */}
         <section className="space-y-6">

@@ -89,7 +89,8 @@ const whoWeServeData: WhoWeServeCard[] = [
       "For drug development documentation, mechanism-of-action reviews, safety/efficacy evaluations",
       "Literature support for regulatory dossiers (e.g., IND, NDA, CTD)",
     ],
-    imageUrl: "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Pharmaceutical-and-Biotech-Companies.jpg",
+    imageUrl:
+      "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Pharmaceutical-and-Biotech-Companies.jpg",
   },
   {
     title: "Medical Device and Diagnostic Firms",
@@ -97,7 +98,8 @@ const whoWeServeData: WhoWeServeCard[] = [
       "To support clinical evaluation reports (CER) (CE marking, 510(k), PMA)",
       "White papers and technical documentation for regulatory approvals (e.g., EU MDR, FDA)",
     ],
-    imageUrl: "/images/publication-support/plagiarism-services/Academic-Researchers-and-Scientists.jpg",
+    imageUrl:
+      "/images/publication-support/plagiarism-services/Academic-Researchers-and-Scientists.jpg",
   },
   {
     title: "Healthcare Providers and Clinical Practitioners",
@@ -105,7 +107,8 @@ const whoWeServeData: WhoWeServeCard[] = [
       "To support diagnostic decisions, treatment planning, CME",
       "Practice guideline development through structured synthesis of recent clinical evidence",
     ],
-    imageUrl: "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Healthcare-Providers-and-Clinical-Practitioners.jpg",
+    imageUrl:
+      "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Healthcare-Providers-and-Clinical-Practitioners.jpg",
   },
   {
     title: "Academic and Research Institutions",
@@ -113,7 +116,8 @@ const whoWeServeData: WhoWeServeCard[] = [
       "For dissertation development, thesis writing, academic literature review, topic mapping, gap analysis",
       "Peer-reviewed journal publications, requiring methodologically sound and publication-ready literature review",
     ],
-    imageUrl: "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Academic-and-Research-Institutions.jpg",
+    imageUrl:
+      "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Academic-and-Research-Institutions.jpg",
   },
   {
     title: "Regulatory & Government Agencies",
@@ -122,7 +126,8 @@ const whoWeServeData: WhoWeServeCard[] = [
       "Data reviews for health policy decisions",
       "Technical documentation for compliance and surveillance",
     ],
-    imageUrl: "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Regulatory-Government-Agencies.jpg",
+    imageUrl:
+      "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Regulatory-Government-Agencies.jpg",
   },
   {
     title: "Hospitals and Medical Research Units",
@@ -130,7 +135,8 @@ const whoWeServeData: WhoWeServeCard[] = [
       "To facilitate clinical audits, protocol development, institutional ethics committee submissions",
       "Internal training material based on updated clinical findings",
     ],
-    imageUrl: "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Hospitals-and-Medical-Research-Units.jpg",
+    imageUrl:
+      "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Hospitals-and-Medical-Research-Units.jpg",
   },
   {
     title: "Biomedical & Material Science Companies",
@@ -139,7 +145,8 @@ const whoWeServeData: WhoWeServeCard[] = [
       "Technical and safety reviews for medical-grade raw materials",
       "Device-material interaction and biocompatibility studies",
     ],
-    imageUrl: "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Biomedical-Material-Science-Companies.jpg",
+    imageUrl:
+      "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Biomedical-Material-Science-Companies.jpg",
   },
   {
     title: "Contract Research Organizations (CROs)",
@@ -148,7 +155,8 @@ const whoWeServeData: WhoWeServeCard[] = [
       "Literature-based justification of endpoints",
       "Background sections for study protocols or investigator brochures",
     ],
-    imageUrl: "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Contract-Research-Organizations-1.jpg",
+    imageUrl:
+      "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Contract-Research-Organizations-1.jpg",
   },
   {
     title: "Health Technology Assessment (HTA) & Market Access Teams",
@@ -157,7 +165,8 @@ const whoWeServeData: WhoWeServeCard[] = [
       "Comparative effectiveness and outcomes evidence",
       "Support for payer submissions and value dossiers",
     ],
-    imageUrl: "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Health-Technology-Assessment-HTA-Market-Access-Teams.jpg",
+    imageUrl:
+      "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Health-Technology-Assessment-HTA-Market-Access-Teams.jpg",
   },
 ];
 
@@ -169,6 +178,12 @@ export default function ClinicalReviewScopeAndApproach() {
       ...prev,
       [id]: !prev[id],
     }));
+  };
+
+  const [activeCardIndex, setActiveCardIndex] = useState<number | null>(null);
+
+  const handleCardClick = (index: number) => {
+    setActiveCardIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
   return (
@@ -234,7 +249,7 @@ export default function ClinicalReviewScopeAndApproach() {
           Pubrica offers systematic, detailed, and methodologically sound
           clinical literature reviews to facilitate evidence-based
           decision-making in healthcare. Our services integrate{" "}
-          <Link href="/services/research-services/systematic-review" className="text-blue-600 no-underline hover:no-underline">
+          <Link href="/academy/systematic-review/ai-systematic-review-services-pubrica/" className="text-blue-600 no-underline hover:no-underline">
             Systematic Review Support
           </Link>{" "}
           to objectively appraise and synthesize the latest clinical evidence,
@@ -260,17 +275,41 @@ export default function ClinicalReviewScopeAndApproach() {
                 </span>
               </li>
 
+              import Link from 'next/link';
+
               <li className="flex items-start gap-2">
                 <span className="text-red-600 font-bold">•</span>
                 <span>
                   Utilize evidence-based processes like{" "}
-                  <a href="https://www.prisma-statement.org/" target="_blank" rel="noopener noreferrer" className="text-sky-600 underline">
-                    PRISMA, MOOSE, and AMSTAR 2
-                  </a>{" "}
+                  <Link
+                    href="https://static1.squarespace.com/static/65b880e13b6ca75573dfe217/t/67ad313f1c80aa5235fce0d0/1739403584136/PRISMA_2020_checklist.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600"
+                  >
+                    PRISMA
+                  </Link>
+                  ,{" "}
+                  <Link
+                    href="https://legacyfileshare.elsevier.com/promis_misc/ISSM_MOOSE_Checklist.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600"
+                  >
+                    MOOSE
+                  </Link>
+                  , and{" "}
+                  <Link
+                    href="https://www.bmj.com/content/bmj/suppl/2017/09/21/bmj.j4008.DC1/sheb036104.wf1.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600"
+                  >
+                    AMSTAR 2
+                  </Link>{" "}
                   processes for systematic and scoping reviews
                 </span>
               </li>
-
               <li className="flex items-start gap-2">
                 <span className="text-red-600 font-bold">•</span>
                 <span>
@@ -300,7 +339,7 @@ export default function ClinicalReviewScopeAndApproach() {
 
             <p className="text-xs text-slate-600 pt-3">
               Our{" "}
-              <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine" className="text-blue-600 no-underline hover:no-underline">
+              <Link href="/insights/sample-work/effect-of-educational-intervention-on-operating-theatre-nurses/" className="text-blue-600 no-underline hover:no-underline">
                 EBM literature review
               </Link>{" "}
               is compliant with{" "}
@@ -308,7 +347,7 @@ export default function ClinicalReviewScopeAndApproach() {
                 href="https://www.icmje.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sky-600 hover:text-sky-800"
+                className="text-blue-600"
               >
                 ICMJE
               </Link>
@@ -317,7 +356,7 @@ export default function ClinicalReviewScopeAndApproach() {
                 href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sky-600 hover:text-sky-800"
+                className="text-blue-600"
               >
                 CONSORT
               </Link>
@@ -328,7 +367,7 @@ export default function ClinicalReviewScopeAndApproach() {
 
           {/* Right Composite Image Collage with Link */}
           <div className="md:col-span-5 relative h-80 md:h-[380px]">
-            <Link 
+            <Link
               href="/insights/patient-safety-culture-among-operating-theatre-nurses-in-operating-room/"
               className="absolute top-0 right-4 w-3/4 h-52 rounded-xl overflow-hidden shadow-lg border-2 border-white z-10 block group text-blue-600 no-underline hover:no-underline"
             >
@@ -351,52 +390,73 @@ export default function ClinicalReviewScopeAndApproach() {
             Who We Serve
           </h2>
           <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-            Tailored literature review solutions supporting key healthcare and life science sectors.
+            At Pubrica, we provide expert-driven{" "}
+            <Link
+              href="/services/research-services/"
+              className="text-blue-600"
+            >
+              research writing support
+            </Link>{" "}
+            designed for stakeholders in medical research, health care decision-making, and regulating agencies.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {whoWeServeData.map((card, index) => (
-            <div
-              key={index}
-              className="group relative h-64 sm:h-72 rounded-sm overflow-hidden bg-black cursor-pointer shadow-md transition-all duration-300"
-            >
-              {/* Image */}
-              <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0 z-0">
-                <Image
-                  src={card.imageUrl}
-                  alt={card.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width:768px)100vw,(max-width:1200px)50vw,33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-              </div>
+          {whoWeServeData.map((card, index) => {
+            const isActive = activeCardIndex === index;
 
-              {/* Default */}
-              <div className="absolute bottom-0 left-0 right-0 p-5 z-10 transition-opacity duration-300 group-hover:opacity-0 flex items-end">
-                <h3 className="font-bold text-sm sm:text-base text-white leading-snug">
-                  {card.title}
-                </h3>
-              </div>
+            return (
+              <div
+                key={index}
+                onClick={() => handleCardClick(index)}
+                className="group relative h-64 sm:h-72 rounded-sm overflow-hidden bg-black cursor-pointer shadow-md transition-all duration-300"
+              >
+                {/* Image */}
+                <div
+                  className={`absolute inset-0 transition-opacity duration-300 z-0 ${isActive ? "opacity-0" : "group-hover:opacity-0"
+                    }`}
+                >
+                  <Image
+                    src={card.imageUrl}
+                    alt={card.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width:768px)100vw,(max-width:1200px)50vw,33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                </div>
 
-              {/* Hover */}
-              <div className="absolute inset-0 bg-black p-5 sm:p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex flex-col">
-                <h3 className="font-bold text-sm sm:text-base border-b border-gray-700 pb-2">
-                  {card.title}
-                </h3>
+                {/* Default */}
+                <div
+                  className={`absolute bottom-0 left-0 right-0 p-5 z-10 transition-opacity duration-300 flex items-end ${isActive ? "opacity-0" : "group-hover:opacity-0"
+                    }`}
+                >
+                  <h3 className="font-bold text-sm sm:text-base text-white leading-snug">
+                    {card.title}
+                  </h3>
+                </div>
 
-                <ul className="mt-3 space-y-2 text-xs text-gray-300 leading-relaxed">
-                  {card.bullets.map((bullet, idx) => (
-                    <li key={idx} className="flex gap-2">
-                      <span>•</span>
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
+                {/* Hover / Active */}
+                <div
+                  className={`absolute inset-0 bg-black p-5 sm:p-6 text-white transition-opacity duration-300 z-20 flex flex-col ${isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                    }`}
+                >
+                  <h3 className="font-bold text-sm sm:text-base border-b border-gray-700 pb-2">
+                    {card.title}
+                  </h3>
+
+                  <ul className="mt-3 space-y-2 text-xs text-gray-300 leading-relaxed">
+                    {card.bullets.map((bullet, idx) => (
+                      <li key={idx} className="flex gap-2">
+                        <span>•</span>
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

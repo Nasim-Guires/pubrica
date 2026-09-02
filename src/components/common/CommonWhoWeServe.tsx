@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, ReactNode } from "react";
 import Image from "next/image";
 
 interface WhoWeServeCard {
@@ -11,7 +11,7 @@ interface WhoWeServeCard {
 
 interface CommonWhoWeServeProps {
     title: string;
-    description: string;
+    description: ReactNode; // Supports strings, JSX elements, or custom components safely
     data: WhoWeServeCard[];
 }
 
@@ -35,9 +35,9 @@ export default function CommonWhoWeServe({
                         {title}
                     </h2>
 
-                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                    <div className="text-xs sm:text-sm text-gray-600 leading-relaxed [&_a]:text-blue-600 [&_a]:hov [&_a]:font-medium">
                         {description}
-                    </p>
+                    </div>
                 </div>
 
                 {/* Cards */}
@@ -81,7 +81,9 @@ export default function CommonWhoWeServe({
 
                                 {/* Hover */}
                                 <div
-                                    className={`absolute inset-0 bg-black p-5 sm:p-6 text-white transition-opacity duration-300 group-hover:opacity-100 z-20 flex flex-col ${isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                                    className={`absolute inset-0 bg-black p-5 sm:p-6 text-white transition-opacity duration-300 group-hover:opacity-100 z-20 flex flex-col ${isActive
+                                            ? "opacity-100 pointer-events-auto"
+                                            : "opacity-0 pointer-events-none"
                                         }`}
                                 >
                                     <h3 className="font-bold text-sm sm:text-base border-b border-gray-700 pb-2">

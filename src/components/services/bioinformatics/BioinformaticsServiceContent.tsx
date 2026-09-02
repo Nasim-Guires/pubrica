@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 /* ==========================================================================
    DATA OBJECTS FOR ACCORDION CARDS
@@ -150,7 +151,7 @@ const rightServicesData: ServiceItem[] = [
         title: "Bioinformatics Pipeline & Software Development",
         content: (
             <>
-               We develop customized pipelines, workflows, and cloud-based solutions for efficient and reproducible data processing, tailored to the needs of specific projects and institutions.
+                We develop customized pipelines, workflows, and cloud-based solutions for efficient and reproducible data processing, tailored to the needs of specific projects and institutions.
             </>
         ),
     },
@@ -159,7 +160,7 @@ const rightServicesData: ServiceItem[] = [
         title: "Data Visualization & Publication Support",
         content: (
             <>
-               We generate publication-ready visualizations such as heatmaps, volcano plots, PCA, phylogenetic trees, and pathway enrichment charts. Our outputs enhance the clarity and impact of scientific publications and presentations.
+                We generate publication-ready visualizations such as heatmaps, volcano plots, PCA, phylogenetic trees, and pathway enrichment charts. Our outputs enhance the clarity and impact of scientific publications and presentations.
             </>
         ),
     },
@@ -181,18 +182,11 @@ export default function BioinformaticsServiceContent() {
             {/* --------------------------------------------------------------------
          1. HERO SECTION
          -------------------------------------------------------------------- */}
-            <section className="bg-[#0b2b26] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
-                <div className="max-w-5xl mx-auto border border-emerald-500/30 p-8 sm:p-12 rounded-lg bg-emerald-950/20 backdrop-blur-sm">
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
-                        Transforming Biological Data into Scientific Discovery
-                    </h1>
-                    <p className="text-base sm:text-lg text-slate-200 max-w-3xl mx-auto font-light leading-relaxed">
-                        With Pubrica&apos;s bioinformatics services, researchers gain
-                        accurate analyses, actionable insights, and publication-ready
-                        outputs trusted by leading journals.
-                    </p>
-                </div>
-            </section>
+            <HeroBanner
+                title="Transforming Biological Data into Scientific Discovery"
+                description="With Pubrica's bioinformatics services, researchers gain accurate analyses, actionable insights, and publication-ready outputs trusted by leading journals."
+                headingAs="h1"
+            />
 
             {/* --------------------------------------------------------------------
          2. OVERVIEW SECTION
@@ -261,7 +255,7 @@ export default function BioinformaticsServiceContent() {
                         </ul>
 
                         <div className="pt-4">
-                        <GetFreeQuoteButton/>
+                            <GetFreeQuoteButton />
                         </div>
                     </div>
 

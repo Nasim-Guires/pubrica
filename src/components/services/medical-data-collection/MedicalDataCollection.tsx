@@ -1,4 +1,5 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -9,18 +10,11 @@ export const MedicalDataCollection: React.FC = () => {
       {/* ==========================================================
           HEADER HERO BLOCK (Dark Banner)
           ========================================================== */}
-      <div className="w-full bg-[#112529] text-white py-6 px-6 md:px-12 lg:px-24">
-        <div className="max-w-6xl mx-auto border border-gray-400/30 rounded-none p-6 md:p-8 text-center space-y-3 bg-black/10">
-          <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-            Medical Data Collection
-          </h1>
-          <p className="text-gray-300 text-xs sm:text-sm max-w-4xl mx-auto leading-relaxed font-normal">
-            Pubrica provides robust medical data collection services, ensuring
-            accuracy, confidentiality, and compliance with rigorous standards
-            for research and analysis.
-          </p>
-        </div>
-      </div>
+      <HeroBanner
+        title="Medical Data Collection"
+        description="Pubrica provides robust medical data collection services, ensuring accuracy, confidentiality, and compliance with rigorous standards for research and analysis."
+        headingAs="h1"
+      />
 
       {/* ==========================================================
           MAIN INTRODUCTION & IMAGE LAYOUT
@@ -35,29 +29,29 @@ export const MedicalDataCollection: React.FC = () => {
             </h2>
             <p className="text-gray-700 text-xs sm:text-sm md:text-[14px] leading-relaxed text-justify font-normal">
               Accurate medical{" "}
-              <span className="text-sky-700 font-medium hover:underline cursor-pointer">
+              <Link href="/academy/data-collection/planning-data-collection-methods-research/" className="text-blue-600">
                 data collection
-              </span>{" "}
+              </Link>{" "}
               is essential for credible research and clinical decision-making.
               At Pubrica, we know that reliable research in healthcare and life
               sciences starts with ethically collected and accurate data. Our
               bespoke medical{" "}
-              <span className="text-sky-700 font-medium hover:underline cursor-pointer">
+              <Link href="/academy/data-collection/importance-of-data-collection-in-healthcare/" className="text-blue-600">
                 data collection services
-              </span>{" "}
+              </Link>{" "}
               are designed for clinicians, researchers, CROs, and academic
               institutions, ensuring the delivery of high-quality,
               research-grade datasets that support evidence-based findings.
             </p>
 
             {/* CTA Option Buttons (Row 1) */}
-            <div className="flex flex-wrap items-center gap-3 pt-2">
+            <div className="flex flex-wrap items-center gap-8 pt-2">
               <GetFreeQuoteButton />
               <Link
                 href="/uploads/medical-data-collection/Data-Analytics-Machine-Learning-service.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#b30000] hover:bg-red-800 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-sm transition-colors duration-150"
+                className="bg-red-600 text-white text-sm font-bold px-6 py-3 rounded hover:bg-white hover:text-black transition-colors"
               >
                 View Brochure
               </Link>
@@ -95,9 +89,9 @@ export const MedicalDataCollection: React.FC = () => {
 
           <p className="text-gray-700 text-xs sm:text-sm md:text-[14px] leading-relaxed text-justify font-normal">
             Pubrica provides complete{" "}
-            <span className="text-sky-700 font-medium hover:underline cursor-pointer">
+            <Link href="/academy/data-collection/planning-data-collection-methods-research/" className="text-blue-600">
               data collection
-            </span>{" "}
+            </Link>{" "}
             and extraction solutions across healthcare, medical, and life
             sciences. Our expertise includes cleaning and structuring clinical
             trial data, patient health records, and biological datasets for
@@ -113,9 +107,9 @@ export const MedicalDataCollection: React.FC = () => {
                 Systematic and Ethical Medical Data Collection:{" "}
               </strong>
               Our trained specialists are experts in structured medical{" "}
-              <span className="text-sky-700 font-medium hover:underline cursor-pointer">
+              <Link href="/academy/data-collection/managing-bias-in-data-collection/" className="text-blue-600">
                 data collection
-              </span>{" "}
+              </Link>{" "}
               and clinical data management as they handle significant volumes of
               complex information using ethical standards with regulatory
               compliance. We will ensure your data is clean, structured, and
@@ -140,9 +134,9 @@ export const MedicalDataCollection: React.FC = () => {
                 Advanced Tools for Data Extraction and Analysis:{" "}
               </strong>
               Leverage our deep expertise in{" "}
-              <span className="text-sky-700 font-medium hover:underline cursor-pointer">
+              <Link href="/services/medical-data-collection/types-of-research-data-sources/" className="text-blue-600">
                 medical data analytics
-              </span>{" "}
+              </Link>{" "}
               to convert raw information into actionable scientific insights.
               Our team applies both traditional methods and cutting-edge data
               extraction tools to analyse diverse datasets from controlled

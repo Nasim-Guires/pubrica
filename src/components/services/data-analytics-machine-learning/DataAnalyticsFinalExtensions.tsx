@@ -1,7 +1,9 @@
 "use client";
 
+import { EditorialWorkflowSection, WorkflowStep } from "@/components/common/EditorialWorkflowSection";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import { Sequence, Step } from "@/components/common/Sequence";
+import ServiceBanner from "@/components/common/ServiceBanner";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -57,6 +59,63 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
       imageName: "Government-Non-Profit-Institutions.png",
       description:
         "Enabling data-backed research, healthcare projects, and policy studies with scalable ML approaches.",
+    },
+  ];
+
+  const steps: WorkflowStep[] = [
+    {
+      stepNumber: 1,
+      title: "UNDERSTANDING YOUR NEEDS",
+      description:
+        "We start by analysing your research or business objectives to define clear project goals.",
+      iconSrc:
+        "/images/data-analytics-machine-learning/Understand-ing-Your-Needs.png",
+      position: "top",
+    },
+    {
+      stepNumber: 2,
+      title: "DATA COLLECTION & PREPARATION",
+      description:
+        "Cleaning, structuring, and validating datasets to ensure accuracy and readiness for machine learning.",
+      iconSrc:
+        "/images/data-analytics-machine-learning/Data-Collection-Preparation.png",
+      position: "bottom",
+    },
+    {
+      stepNumber: 3,
+      title: "MODEL DEVELOPMENT",
+      description:
+        "Designing and training custom AI/ML models tailored to your research or business problem.",
+      iconSrc:
+        "/images/data-analytics-machine-learning/Model-Development.png",
+      position: "top",
+    },
+    {
+      stepNumber: 4,
+      title: "VALIDATION & TESTING",
+      description:
+        "Rigorously testing models for accuracy, compliance, and reliability.",
+      iconSrc:
+        "/images/data-analytics-machine-learning/Validation-Testing.png",
+      position: "bottom",
+    },
+    {
+      stepNumber: 5,
+      title: "VISUALIZATION & REPORTING",
+      description:
+        "Presenting results as clear, publication-ready charts, dashboards, and insights.",
+      iconSrc:
+        "/images/data-analytics-machine-learning/Visualization-Reporting-Testing.png",
+      position: "top",
+    },
+    {
+      stepNumber: 6,
+      title: "DELIVERY & SUPPORT",
+      description:
+        "Providing final outputs for research publications, white papers, and business intelligence reports, along with ongoing support if required.",
+      iconSrc:
+        "/images/data-analytics-machine-learning/Delivery-Support.png",
+      position: "bottom",
     },
   ];
 
@@ -196,68 +255,20 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
       </section>
 
       {/* --- Section 3: Deep Green Inline CTA Strip --- */}
-      <section className="w-full bg-[#072c22] py-6 px-6 md:px-12 text-center text-white border-b border-emerald-950/20">
-        <div className="max-w-4xl mx-auto space-y-6">
-          <h2 className="text-xl sm:text-2xl md:text-[27px] font-extrabold tracking-tight">
-            Speed up your Data Analytics and Machine Learning with Pubrica
-          </h2>
-          <p className="text-gray-300 text-xs sm:text-sm leading-relaxed max-w-2xl mx-auto font-light">
-            Receive personalized support in navigating the complexities of
-            machine learning, ensuring clarity and effectiveness in delivering
-            cutting-edge technological solutions.
-          </p>
-          <div className="pt-2">
-            <GetFreeQuoteButton />
-          </div>
-        </div>
-      </section>
+      <ServiceBanner
+        imageSrc="/images/publication-support/peer-review-pre-submission/Satisfaction_Guarantee.webp"
+        imageAlt="100% Satisfaction Guarantee"
+        heading="Speed up your Data Analytics and Machine Learning with Pubrica"
+        description="Receive personalized support in navigating the complexities of machine learning, ensuring clarity and effectiveness in delivering cutting-edge technological solutions."
+        showQuoteButton={true}
+      />
 
       {/* --- Section 4: Workflow Step-by-Step Sequence Frame --- */}
-      <section className="py-7 px-6 md:px-12 lg:px-24 bg-[#f8fafc]">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 space-y-2">
-            <h2 className="text-[#0c313a] text-xl md:text-2xl lg:text-[25px] font-black tracking-tight">
-              How Our Data Analytics And Machine Learning Service Works
-            </h2>
-            <p className="text-slate-500 text-xs sm:text-sm font-bold uppercase tracking-wider">
-              Our Step-by-step process
-            </p>
-          </div>
-
-          <Sequence>
-            <Step title="UNDERSTANDING YOUR NEEDS" subtitle="Step 1">
-              We start by analysing your research or business objectives to
-              define clear project goals.
-            </Step>
-
-            <Step title="DATA COLLECTION & PREPARATION" subtitle="Step 2">
-              Cleaning, structuring, and validating datasets to ensure accuracy
-              and readiness for machine learning.
-            </Step>
-
-            <Step title="MODEL DEVELOPMENT" subtitle="Step 3">
-              Designing and training custom AI/ML models tailored to your
-              research or business problem.
-            </Step>
-
-            <Step title="VALIDATION & TESTING" subtitle="Step 4">
-              Rigorously testing models for accuracy, compliance, and
-              reliability.
-            </Step>
-
-            <Step title="VISUALIZATION & REPORTING" subtitle="Step 5">
-              Presenting results as clear, publication-ready charts, dashboards,
-              and insights.
-            </Step>
-
-            <Step title="DELIVERY & SUPPORT" subtitle="Step 6">
-              Providing final outputs for research publications, white papers,
-              and business intelligence reports, along with ongoing support if
-              required.
-            </Step>
-          </Sequence>
-        </div>
-      </section>
+      <EditorialWorkflowSection
+        heading="How Our Data Analytics And Machine Learning Service Works"
+        subheading="Our Step-by-Step Process"
+        steps={steps}
+      />
     </div>
   );
 };

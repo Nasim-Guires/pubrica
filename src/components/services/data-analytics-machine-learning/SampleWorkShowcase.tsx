@@ -1,51 +1,39 @@
+import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export const SampleWorkShowcase: React.FC = () => {
   return (
-    <section className="py-6 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
-      <div className="bg-[#f2faf7] border border-emerald-100/50 rounded-lg p-8 md:p-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center text-left">
-        {/* Visual Asset Container Left */}
-        <div className="col-span-1 md:col-span-5 w-full aspect-[4/5] bg-white rounded border border-gray-200/80 shadow-sm overflow-hidden relative">
-          <Image
-            src="/images/data-analytics-machine-learning/Data-Analytics-and-Machine-Learning-Services-Sample-Work-1.webp"
-            alt="Data Analytics and Machine Learning Services Sample Work 1"
-            fill
-            sizes="(max-width: 768px) 100vw, 42vw"
-            className="object-cover"
-          />
-        </div>
-        {/* Action Callouts Right */}
-        <div className="col-span-1 md:col-span-7 space-y-8">
-          <div className="space-y-3">
-            <h3 className="text-gray-900 font-extrabold text-lg md:text-xl tracking-tight leading-snug">
-              Data Analytics and Machine Learning Services Sample Work
-            </h3>
-            <Link href="/insights/sample-work" className="inline-block w-full sm:w-auto text-center bg-black text-white text-xs font-bold tracking-wider px-8 py-2.5 rounded hover:bg-neutral-800 transition-colors uppercase">
-              Discover More
-            </Link>
-          </div>
-
-          <div className="space-y-4">
-            <div>
-              <h3 className="text-gray-900 font-extrabold text-lg md:text-xl tracking-tight mb-2">
-                Download the full Report Now
-              </h3>
-              <p className="text-gray-600 text-xs md:text-[13px] leading-relaxed text-justify font-normal">
-                Explore our machine learning and data analytics sample work,
-                designed to meet rigorous methodological standards,
-                journal-specific formatting requirements, and project deadlines.
-                We deliver precise, valid, and publication-ready results that
-                strengthen academic, clinical, and business research outcomes.
-              </p>
-            </div>
-            <Link href="/insights/sample-work" className="inline-block w-full sm:w-auto text-center bg-black text-white text-xs font-bold tracking-wider px-8 py-2.5 rounded hover:bg-neutral-800 transition-colors uppercase">
-              Discover More
-            </Link>
-          </div>
-        </div>
-      </div>
-    </section>
+    <PubricaSampleWorkCard
+      bookCoverImage={{
+        src: "/images/data-analytics-machine-learning/Data-Analytics-and-Machine-Learning-Services-Sample-Work-1.webp",
+        alt: "Data Analytics and Machine Learning Services Sample Work 1",
+        width: 600,
+        height: 750,
+      }}
+      sections={[
+        {
+          heading: "Data Analytics and Machine Learning Services Sample Work",
+          button: {
+            label: "Discover More",
+            url: "/insights/sample-work",
+          },
+        },
+        {
+          heading: "Download the full Report Now",
+          descriptionSegments: [
+            {
+              text: "Explore our machine learning and data analytics sample work, designed to meet rigorous methodological standards, journal-specific formatting requirements, and project deadlines. We deliver precise, valid, and publication-ready results that strengthen academic, clinical, and business research outcomes.",
+            },
+          ],
+          button: {
+            label: "Discover More",
+            url: "/insights/sample-work",
+          },
+        },
+      ]}
+      footerDisclaimerSegments={[]}
+    />
   );
 };

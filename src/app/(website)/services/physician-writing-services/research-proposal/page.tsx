@@ -7,6 +7,7 @@ import ResearchProposalWritingPackages from '@/components/services/physician-wri
 import { researchProposalFaqs, researchProposalTestimonials, researchProposalWhoWeServe } from '@/lib/services/data/research-proposal/researchProposalTestimonials'
 import React from 'react'
 import { constructMetadata } from '@/lib/metadata'
+import Link from 'next/link'
 
 export const metadata = constructMetadata({
     title: 'Clinical & Medical Research Proposal Writing | Pubrica',
@@ -21,7 +22,15 @@ const page = () => {
             <PhysicianResearchProposalService />
             <CommonWhoWeServe
                 title="Who We Serve"
-                description="At Pubrica, our reearch proposal writing services are designed to support a diverse range of academic and scientific stakeholders."
+                description={
+                    <p>
+                        At Pubrica, our{" "}
+                        <Link href="/academy/research-proposal/how-to-write-a-research-proposal-a-complete-guide/">
+                            research proposal writing services
+                        </Link>{" "}
+                        are designed to support a diverse range of academic and scientific stakeholders.
+                    </p>
+                }
                 data={researchProposalWhoWeServe}
             />
             <PhysicianResearchProposalProcessWorkflow />

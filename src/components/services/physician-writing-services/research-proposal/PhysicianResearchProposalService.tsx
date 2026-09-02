@@ -4,6 +4,7 @@ import Head from 'next/head';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import Image from 'next/image';
 import Link from 'next/link';
+import HeroBanner from '@/components/common/HeroBanner';
 
 export default function PhysicianResearchProposalService() {
     const [isAccordionOpen, setIsAccordionOpen] = useState(false);
@@ -43,16 +44,11 @@ export default function PhysicianResearchProposalService() {
 
             <main className="w-full bg-white text-[#212121] font-sans antialiased">
                 {/* Banner Section */}
-                <section className="w-full bg-[#122220] py-8 px-4 text-center border-b border-gray-700">
-                    <div className="max-w-5xl mx-auto">
-                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-wide leading-tight">
-                            Expert Scientific, Clinical &amp; Medical Research Protocol &amp; Proposal Writing for Physicians and Surgeons
-                        </h1>
-                        <p className="mt-2 text-sm sm:text-base text-gray-200">
-                            Clinically grounded, ethically compliant, and ready for <span className="text-[#a0c4bb]">IRB</span>, <span className="text-[#a0c4bb]">grants</span>, or <span className="text-[#a0c4bb]">institutional approval</span>.
-                        </p>
-                    </div>
-                </section>
+                <HeroBanner
+                    title="Expert Scientific, Clinical & Medical Research Protocol & Proposal Writing for Physicians and Surgeons"
+                    description="Clinically grounded, ethically compliant, and ready for IRB, grants, or institutional approval."
+                    headingAs="h1"
+                />
 
                 {/* Main Content Section */}
                 <section className="max-w-6xl mx-auto px-4 py-5 md:py-6">
@@ -69,7 +65,7 @@ export default function PhysicianResearchProposalService() {
                         {/* Left Text Column */}
                         <article className="lg:col-span-7 space-y-4 text-sm sm:text-base leading-relaxed text-gray-700">
                             <p>
-                                For busy <strong className="text-gray-900 font-semibold">physicians and surgeons</strong>, developing a{' '}
+                                For busy physicians and surgeons, developing a{' '}
                                 <Link href="/academy/research-proposal/how-to-write-a-research-proposal-a-complete-guide" className="text-blue-600 no-underline hover:no-underline">
                                     research protocol or proposal
                                 </Link>{' '}
@@ -119,13 +115,13 @@ export default function PhysicianResearchProposalService() {
 
                             {/* Call To Action Button */}
                             <div className="pt-4">
-                                <GetFreeQuoteButton/>
+                                <GetFreeQuoteButton />
                             </div>
                         </article>
 
                         {/* Right Column: Image Section Placeholder */}
                         <aside className="lg:col-span-5 flex justify-center">
-                            <div className="relative w-full max-w-md bg-[#132d27] p-3 rounded-lg shadow-md">
+                            <div className="relative w-full max-w-md  p-3 rounded-lg">
                                 <div className="relative w-full h-72 sm:h-80 rounded overflow-hidden">
                                     <Image
                                         src="/images/physician-writing-services/research-proposal/Research-Protocol-Services.webp"
@@ -199,7 +195,7 @@ export default function PhysicianResearchProposalService() {
                                             <span className="text-[#c5281c] font-bold mr-2 text-base leading-none">&bull;</span>
                                             <div>
                                                 <strong className="text-gray-900">Literature Review &amp; Scientific Justification:</strong> Inclusion of recent peer-reviewed references, synthesized using{' '}
-                                                <a href="https://www.prisma-statement.org/prisma-2020-checklist" target="_blank" rel="noopener noreferrer" className="text-[#2b6cb0] hover:underline">PRISMA</a> or domain-specific frameworks, supports the rationale and need for your clinical study.
+                                                <a href="https://www.prisma-statement.org/prisma-2020-checklist" target="_blank" rel="noopener noreferrer" className="text-blue-600">PRISMA</a> or domain-specific frameworks, supports the rationale and need for your clinical study.
                                             </div>
                                         </li>
                                         <li className="flex items-start">

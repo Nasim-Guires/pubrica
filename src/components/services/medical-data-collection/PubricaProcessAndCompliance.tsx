@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import ServiceBanner from "@/components/common/ServiceBanner";
+import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
 
 // Interfaces for type safety
 interface ProcessStep {
@@ -278,13 +280,19 @@ export default function PubricaProcessAndCompliance() {
   const [openProcess, setOpenProcess] = useState<string | null>(null);
   const [openCompliance, setOpenCompliance] = useState<string | null>(null);
 
+  const [openComplianceIds, setOpenComplianceIds] = useState<string[]>([]);
+
+  const toggleCompliance = (id: string) => {
+    setOpenComplianceIds((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
+  };
+
   const toggleProcess = (id: string) => {
     setOpenProcess((prev) => (prev === id ? null : id));
   };
 
-  const toggleCompliance = (id: string) => {
-    setOpenCompliance((prev) => (prev === id ? null : id));
-  };
+  ;
 
   return (
     <div className="w-full bg-white text-slate-800 font-sans">
@@ -305,8 +313,8 @@ export default function PubricaProcessAndCompliance() {
             <p className="text-sm sm:text-base text-gray-700 leading-relaxed max-w-5xl">
               At Pubrica, our healthcare, medical, and life sciences{" "}
               <a
-                href="/services/medical-data-collection"
-                className="text-blue-600 font-medium decoration-cyan-700 no-underline hover:no-underline"
+                href="/academy/data-collection/managing-bias-in-data-collection/"
+                className="text-blue-600 "
               >
                 data collection and extraction services
               </a>{" "}
@@ -376,27 +384,13 @@ export default function PubricaProcessAndCompliance() {
       </section>
 
       {/* SECTION 2: End-to-End Banner Callout */}
-      <section
-        aria-labelledby="cta-heading"
-        className="bg-[#082e2b] text-white py-6 px-4 sm:px-6 text-center"
-      >
-        <div className="max-w-4xl mx-auto space-y-4">
-          <h2
-            id="cta-heading"
-            className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight"
-          >
-            End-to-End Medical Data Collection with Precision and Compliance
-          </h2>
-          <p className="text-xs sm:text-sm text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            We deliver precise, validated data for CROs, healthcare providers,
-            researchers, and pharma companies, ensuring every project meets
-            regulatory standards with confidence.
-          </p>
-          <div className="pt-2">
-            <GetFreeQuoteButton />
-          </div>
-        </div>
-      </section>
+      <ServiceBanner
+        imageSrc="/images/icons/Satisfaction_Guarantee.webp"
+        imageAlt="100% Satisfaction Guarantee"
+        heading="End-to-End Medical Data Collection with Precision and Compliance"
+        description="We deliver precise, validated data for CROs, healthcare providers, researchers, and pharma companies, ensuring every project meets regulatory standards with confidence."
+        showQuoteButton={true}
+      />
 
       {/* SECTION 3: Why Choose Pubrica? */}
       <section
@@ -457,9 +451,9 @@ export default function PubricaProcessAndCompliance() {
         </header>
 
         {/* 2x2 Grid for Compliance Accordions */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16 items-start">
           {complianceItems.map((item) => {
-            const isOpen = openCompliance === item.id;
+            const isOpen = openComplianceIds.includes(item.id);
             return (
               <article
                 key={item.id}
@@ -496,69 +490,36 @@ export default function PubricaProcessAndCompliance() {
         </div>
 
         {/* SECTION 5: Sample Work & Download Callout */}
-        <div className="bg-[#f0fdf4] rounded-2xl p-6 sm:p-10 border border-emerald-100">
-          <header className="mb-6">
-            <h2 className="text-xl sm:text-2xl font-bold text-[#082e2b]">
-              Our Commitment
-            </h2>
-            <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mt-2">
-              At Pubrica, ethical behaviour, participant privacy, and regulatory
-              compliance are not just requirements, but the very foundation of
-              our services. Our frameworks ensure your data is collected
-              ethically, stored securely, and presented in a scientific and
-              legally compliant manner.
-            </p>
-          </header>
-
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center mt-8">
-            {/* Left Image */}
-            <div className="md:col-span-5 flex justify-center items-center p-6 bg-[#f4fbf6]">
-              <div className="relative aspect-[3/4] w-full max-w-[360px] rounded-2xl overflow-hidden shadow-lg border border-gray-100">
-                <Image
-                  src="/images/medical-writing/Medical-Data-Collection-Sample-Work.webp"
-                  alt="Medical researcher working on laptop"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 360px"
-                  className="object-cover object-center"
-                  priority
-                />
-              </div>
-            </div>
-
-            {/* Right CTAs */}
-            <div className="md:col-span-7 space-y-6">
-              <div>
-                <h3 className="text-lg font-bold text-[#082e2b] mb-3">
-                  Medical Data Collection Sample Work
-                </h3>
-                <Link
-                  href="/insights/medical-data-collection-on-interstitial-cysts-and-drug-uracysts"
-                  className="inline-block bg-black hover:bg-gray-800 text-white font-medium text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors"
-                >
-                  Discover More
-                </Link>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-bold text-[#082e2b] mb-2">
-                  Download the full Report Now
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
-                  Explore our medical data collection sample work, accurately
-                  designed to meet research protocols, comply with regulatory
-                  standards, and deliver accurate, validated data for impactful
-                  clinical and academic research outcomes.
-                </p>
-                <Link
-                  href="/insights/sample-work"
-                  className="inline-block bg-black hover:bg-gray-800 text-white font-medium text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors"
-                >
-                  Discover More
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+        <PubricaSampleWorkCard
+          bookCoverImage={{
+            src: "/images/medical-writing/Medical-Data-Collection-Sample-Work.webp",
+            alt: "Medical researcher working on laptop",
+            width: 640,
+            height: 853,
+          }}
+          sections={[
+            {
+              heading: "Medical Data Collection Sample Work",
+              button: {
+                label: "Discover More",
+                url: "/insights/medical-data-collection-on-interstitial-cysts-and-drug-uracysts",
+              },
+            },
+            {
+              heading: "Download the full Report Now",
+              descriptionSegments: [
+                {
+                  text: "Explore our medical data collection sample work, accurately designed to meet research protocols, comply with regulatory standards, and deliver accurate, validated data for impactful clinical and academic research outcomes.",
+                },
+              ],
+              button: {
+                label: "Discover More",
+                url: "/insights/sample-work",
+              },
+            },
+          ]}
+          footerDisclaimerSegments={[]}
+        />
       </section>
     </div>
   );

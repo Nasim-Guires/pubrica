@@ -144,7 +144,12 @@ export const bioinformaticsFaqs = [
     question:
       "What is the typical turnaround time for bioinformatics projects?",
     answer:
-      "Project timelines depend on dataset size and complexity. Small datasets are typically completed within 1–2 weeks, medium-scale projects within 3–4 weeks, and large or multi-omics studies within 5–8 weeks. Priority delivery options are also available for urgent projects.",
+      "Turnaround time depends on data size, complexity, and the chosen package. On average:",
+    points: [
+      "Small datasets: 1–2 weeks",
+      "Medium-scale projects: 3–4 weeks",
+      "Large or multi-omics analyses: 5–8 weeks (priority delivery available)",
+    ],
   },
   {
     question: "How do you ensure confidentiality and data security?",
@@ -153,7 +158,11 @@ export const bioinformaticsFaqs = [
   },
   {
     question: "Do you provide post-project support?",
-    answer:
-      "Yes. We provide ongoing support after project completion, including data updates, revisions based on reviewer feedback, additional analyses, customized visualizations, and publication-ready reports to ensure your research remains accurate and impactful.",
+    answer: "Yes. Pubrica offers ongoing post-project support, including:",
+    points: [
+      "Updates as new data becomes available",
+      "Refinements to analyses based on reviewer feedback",
+      "Additional visualizations or reports for publication and presentations",
+    ],
   },
 ];

@@ -28,7 +28,6 @@ const page = () => {
             />
             <TherapeuticAreasAndTools />
             <BioinformaticsServices />
-            <GetFreeQuoteButton />
             <CommonTestimonial
                 title="Testimonials"
                 description="Learn how Pubrica’s bioinformatics service has empowered researchers to transform complex biological data into publication-ready insights that drive scientific discovery and enhance academic and clinical visibility. Here is what our clients say:"

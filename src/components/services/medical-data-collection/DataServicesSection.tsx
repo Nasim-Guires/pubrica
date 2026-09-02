@@ -17,7 +17,13 @@ const servicesData = [
         <li>
           Human Data Collection: Our primary data collection services usually
           involve ethically collecting patient data, including blood
-          pressure, height, weight, and blood samples. Data collection
+          pressure, height, weight, and blood samples.{" "}
+          <Link
+            href="/academy/data-collection/survey-monkey-data-collection/"
+            className="text-blue-600 no-underline hover:no-underline"
+          >
+            Data collection
+          </Link>{" "}
           fundamentally involves a variety of clinical data management,
           health monitoring, and medical research-specific extraction of
           data.
@@ -164,10 +170,15 @@ const clientsData = [
 ];
 
 export default function DataServicesSection() {
-  const [openAccordion, setOpenAccordion] = useState(null);
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
 
-  const toggleAccordion = (id) => {
+  const toggleAccordion = (id: string) => {
     setOpenAccordion((prev) => (prev === id ? null : id));
+  };
+
+  const toggleCard = (index: number) => {
+    setActiveCard((prev) => (prev === index ? null : index));
   };
 
   return (
@@ -194,7 +205,7 @@ export default function DataServicesSection() {
           return (
             <article
               key={item.id}
-              className="rounded-sm overflow-hidden shadow-sm"
+              className="rounded-sm overflow-hidden border-b border-gray-200"
             >
               <h3>
                 <button
@@ -216,7 +227,7 @@ export default function DataServicesSection() {
               {isOpen && (
                 <div
                   id={`accordion-body-${item.id}`}
-                  className="p-5 bg-emerald-50/50 border-x border-b border-emerald-100 text-gray-700 text-sm leading-relaxed space-y-2"
+                  className="p-5 text-gray-700 text-sm leading-relaxed space-y-2 bg-white"
                 >
                   {item.content}
                 </div>
@@ -238,9 +249,9 @@ export default function DataServicesSection() {
           <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
             At Pubrica, our medical{" "}
             <Link
-              href="/services/medical-data-collection"
+              href="/academy/data-collection/importance-of-data-collection-in-healthcare/"
               title="Learn more about Pubrica medical data collection services"
-              className="text-blue-600 font-medium decoration-cyan-700 no-underline hover:no-underline"
+              className="text-blue-600 "
             >
               data collection services
             </Link>{" "}
@@ -251,47 +262,60 @@ export default function DataServicesSection() {
 
         {/* Semantic Grid for Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {clientsData.map((card, index) => (
-            <article
-              key={index}
-              className="group relative h-64 sm:h-72 w-full overflow-hidden rounded-md shadow-md cursor-pointer bg-black"
-            >
-              {/* Next.js Optimized Image Component */}
-              <div className="relative h-full w-full">
-                <Image
-                  src={card.image}
-                  alt={card.alt}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-110 group-hover:opacity-30 opacity-80"
-                  loading={index < 3 ? "eager" : "lazy"}
+          {clientsData.map((card, index) => {
+            const isActive = activeCard === index;
+            return (
+              <article
+                key={index}
+                onClick={() => toggleCard(index)}
+                className={`group relative h-64 sm:h-72 w-full overflow-hidden rounded-md shadow-md cursor-pointer bg-black ${isActive ? "is-active" : ""
+                  }`}
+              >
+                {/* Next.js Optimized Image Component */}
+                <div className="relative h-full w-full">
+                  <Image
+                    src={card.image}
+                    alt={card.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className={`object-cover object-center transition-transform duration-500 ease-out group-hover:scale-110 group-hover:opacity-30 opacity-80 ${isActive ? "scale-110 opacity-30" : ""
+                      }`}
+                    loading={index < 3 ? "eager" : "lazy"}
+                  />
+                </div>
+
+                {/* Default State: Dark Gradient Overlay */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : ""
+                    }`}
+                  aria-hidden="true"
                 />
-              </div>
 
-              {/* Default State: Dark Gradient Overlay */}
-              <div
-                className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-300 group-hover:opacity-0"
-                aria-hidden="true"
-              />
+                {/* Default Title View */}
+                <div
+                  className={`absolute bottom-0 left-0 right-0 p-5 transition-transform duration-300 group-hover:translate-y-full ${isActive ? "translate-y-full" : ""
+                    }`}
+                >
+                  <h3 className="text-white font-bold text-base sm:text-lg leading-snug drop-shadow-md">
+                    {card.title}
+                  </h3>
+                </div>
 
-              {/* Default Title View */}
-              <div className="absolute bottom-0 left-0 right-0 p-5 transition-transform duration-300 group-hover:translate-y-full">
-                <h3 className="text-white font-bold text-base sm:text-lg leading-snug drop-shadow-md">
-                  {card.title}
-                </h3>
-              </div>
-
-              {/* Hover State View */}
-              <div className="absolute inset-0 bg-[#082e2b]/95 p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out transform translate-y-4 group-hover:translate-y-0">
-                <h3 className="text-white font-bold text-base sm:text-lg mb-2 border-b border-emerald-500/30 pb-2">
-                  {card.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-200 leading-relaxed">
-                  {card.description}
-                </p>
-              </div>
-            </article>
-          ))}
+                {/* Hover / Touch State View: Full Cover Black Container */}
+                <div
+                  className={`absolute inset-0 bg-black p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out ${isActive ? "opacity-100" : ""
+                    }`}
+                >
+                  <h3 className="text-white font-bold text-base sm:text-lg mb-2 border-b border-emerald-500/30 pb-2">
+                    {card.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-200 leading-relaxed">
+                    {card.description}
+                  </p>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
     </main>

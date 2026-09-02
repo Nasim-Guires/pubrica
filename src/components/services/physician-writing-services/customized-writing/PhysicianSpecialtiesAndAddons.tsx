@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
+import Link from "next/link";
 
 // --- Types ---
 interface SpecialtyAccordion {
@@ -11,10 +12,16 @@ interface SpecialtyAccordion {
     content: string[];
 }
 
+interface AddOnItem {
+    linkText: string;
+    href?: string;
+    suffixText?: string;
+}
+
 interface ComprehensiveAddOn {
     id: string;
     title: string;
-    items: string[];
+    items: AddOnItem[];
 }
 
 // --- Data ---
@@ -69,55 +76,89 @@ const comprehensiveAddOns: ComprehensiveAddOn[] = [
         id: "post-writing",
         title: "Post-Writing Services (Optional but Strategic)",
         items: [
-            "Peer-review response assistance",
-            "Journal selection guidance",
-            "Submission support services (handling journal systems, formatting, uploading)",
+            {
+                linkText: "Peer-review",
+                href: "/services/publication-support/peer-review-pre-submission/",
+                suffixText: " response assistance",
+            },
+            {
+                linkText: "Journal selection",
+                href: "/services/publication-support/journal-selection/",
+                suffixText: " guidance",
+            },
+            {
+                linkText: "",
+                suffixText: "Submission support services (handling journal systems, formatting, uploading)",
+            },
         ],
     },
     {
         id: "language",
         title: "Language Localization / Multilingual Support",
         items: [
-            "Especially if you serve non-native English-speaking physicians internationally",
-            "Medical writing in American/British English, or translation + editing support",
+            {
+                linkText: "",
+                suffixText: "Especially if you serve non-native English-speaking physicians internationally",
+            },
+            {
+                linkText: "Medical writing",
+                href: "/services/research-services/medical-writing/",
+                suffixText: " in American/British English, or translation + editing support",
+            },
         ],
     },
     {
         id: "graphics",
         title: "Graphics and Visual Aid Support",
         items: [
-            "Support with tables, figures, charts, and visual abstracts",
-            "Optional statistical illustration or infographic preparation",
+            {
+                linkText: "",
+                suffixText: "Support with tables, figures, charts, and visual abstracts",
+            },
+            {
+                linkText: "",
+                suffixText: "Optional statistical illustration or infographic preparation",
+            },
         ],
     },
     {
         id: "strategy",
         title: "Medical Communication Strategy",
         items: [
-            "For physicians who are KOLs or want long-term publication planning, white papers, or thought leadership development",
+            {
+                linkText: "",
+                suffixText: "For physicians who are KOLs or want long-term publication planning, white papers, or thought leadership development",
+            },
         ],
     },
     {
         id: "revisions",
         title: "Feedback and Revisions Policy",
         items: [
-            "Clear mention of how many revisions are included",
-            "Optional consultation or Q&A with the assigned writer (adds a premium feel)",
+            {
+                linkText: "",
+                suffixText: "Clear mention of how many revisions are included",
+            },
+            {
+                linkText: "",
+                suffixText: "Optional consultation or Q&A with the assigned writer (adds a premium feel)",
+            },
         ],
     },
 ];
 
 export default function PhysicianSpecialtiesAndAddons() {
-    // All closed by default
     const [openSpecialty, setOpenSpecialty] = useState<string | null>(null);
-    const [openAddOn, setOpenAddOn] = useState<string | null>(null);
+    const [openAddOns, setOpenAddOns] = useState<string[]>([]);
 
     const toggleSpecialty = (id: string) => {
         setOpenSpecialty((prev) => (prev === id ? null : id));
     };
 
     const toggleAddOn = (id: string) => {
-        setOpenAddOn((prev) => (prev === id ? null : id));
+        setOpenAddOns((prev) =>
+            prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+        );
     };
 
     return (
@@ -149,7 +190,7 @@ export default function PhysicianSpecialtiesAndAddons() {
                             </div>
                         </div>
 
-                        {/* Right Accordion (Closed by default) */}
+                        {/* Right Accordion */}
                         <div className="lg:col-span-7 divide-y divide-slate-300 border-t border-b border-slate-300">
                             {specialtyData.map((item) => {
                                 const isOpen = openSpecialty === item.id;
@@ -199,10 +240,10 @@ export default function PhysicianSpecialtiesAndAddons() {
                         What You Could Add (if you want to be fully comprehensive):
                     </h2>
 
-                    {/* 5 Horizontal Tabs Grid (Closed by default) */}
+                    {/* 5 Horizontal Tabs Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 items-start">
                         {comprehensiveAddOns.map((addon) => {
-                            const isOpen = openAddOn === addon.id;
+                            const isOpen = openAddOns.includes(addon.id);
                             return (
                                 <div
                                     key={addon.id}
@@ -230,7 +271,14 @@ export default function PhysicianSpecialtiesAndAddons() {
                                         <div className="mt-3 pt-3 border-t border-teal-200/60">
                                             <ul className="list-disc pl-4 space-y-1.5 text-[11px] text-slate-700 leading-relaxed">
                                                 {addon.items.map((item, idx) => (
-                                                    <li key={idx}>{item}</li>
+                                                    <li key={idx}>
+                                                        {item.href ? (
+                                                            <Link href={item.href} className="text-blue-600">
+                                                                {item.linkText}
+                                                            </Link>
+                                                        ) : null}
+                                                        {item.suffixText}
+                                                    </li>
                                                 ))}
                                             </ul>
                                         </div>
@@ -240,7 +288,6 @@ export default function PhysicianSpecialtiesAndAddons() {
                         })}
                     </div>
                 </section>
-
             </div>
         </div>
     );
