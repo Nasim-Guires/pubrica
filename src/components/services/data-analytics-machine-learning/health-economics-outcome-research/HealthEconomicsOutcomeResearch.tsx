@@ -12,7 +12,7 @@ import HeroBanner from "@/components/common/HeroBanner";
 interface AccordionItem {
     id: string;
     title: string;
-    description: string;
+    description: React.ReactNode;
 }
 
 const whatWeDoData: AccordionItem[] = [
@@ -31,8 +31,25 @@ const whatWeDoData: AccordionItem[] = [
     {
         id: "slr-meta-analyses",
         title: "Systematic Literature Reviews (SLRs) & Meta-Analyses",
-        description:
-            "We conduct systematic literature reviews and meta-analyses to synthesize published data. These outputs strengthen clinical guidelines, health technology assessments (HTAs), and product positioning in global healthcare markets.",
+        description: (
+            <>
+                We conduct{" "}
+                <Link
+                    href="/services/research-services/systematic-review/"
+                    className="text-blue-600"
+                >
+                    systematic literature reviews
+                </Link>{" "}
+                and{" "}
+                <Link
+                    href="/services/research-services/meta-analysis/"
+                    className="text-blue-600"
+                >
+                    meta-analyses
+                </Link>{" "}
+                to synthesize published data. These outputs strengthen clinical guidelines, health technology assessments (HTAs), and product positioning in global healthcare markets.
+            </>
+        ),
     },
     {
         id: "pro-outcomes",
@@ -57,6 +74,12 @@ const whatWeDoData: AccordionItem[] = [
         title: "Health Technology Assessment (HTA) Support",
         description:
             "Our experts offer end-to-end HTA submission support services, including evidence synthesis, modeling, and dossier preparation. We align research outputs with international HTA frameworks, ensuring your study meets the requirements of regulators, payers, and healthcare authorities.",
+    },
+    {
+        id: "modeling-approaches",
+        title: "Modeling Approaches (Advanced Methods)",
+        description:
+            "Pubrica specializes in advanced HEOR modeling approaches, including Markov models, decision-analytic models, and survival models. These methods provide a robust framework to evaluate long-term clinical and economic outcomes. Our customized HEOR models support clinical development, pricing strategies, and value demonstration for publication.",
     },
 ];
 

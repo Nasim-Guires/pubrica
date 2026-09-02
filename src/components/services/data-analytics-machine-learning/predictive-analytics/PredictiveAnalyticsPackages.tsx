@@ -3,170 +3,89 @@
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import React from 'react';
 import Image from 'next/image';
+import CommonPackages, { PackageItem } from '@/components/common/CommonPackages';
 
-interface PackageItem {
-    id: string;
-    badgeLetter?: string;
-    badgeSrc: string;
-    name: string;
-    badgeBg: string;
-    badgeColor: string;
-    cardBg: string;
-    headerBorder: string;
-    textColor: string;
-    idealFor: string;
-    features: string[];
-    timeline?: string;
-}
+
 
 const packagesData: PackageItem[] = [
     {
-        id: 'basic',
-        badgeSrc: '/images/editing-and-translation/basic-pacakge.png',
-        name: 'Basic',
-        badgeBg: 'bg-amber-100',
-        badgeColor: 'text-amber-700',
-        cardBg: 'bg-[#dce6e4]',
-        headerBorder: 'border-slate-300',
-        textColor: 'text-[#1c3a34]',
-        idealFor: 'Researchers and small teams starting with predictive analysis.',
-        features: [
-            'Data cleaning and preprocessing',
-            'Descriptive statistics and initial data exploration',
-            'Simple predictive modeling (e.g., linear regression, decision trees)',
-            'Basic visualization and reporting',
-            'Guidance on interpreting results',
+        icon: "/images/editing-and-translation/basic-pacakge.png",
+        title: "Basic",
+        subtitle: "Foundational Predictive Analysis",
+        idealFor:
+            "Researchers and small teams starting with predictive analysis.",
+        includes: [
+            "Data cleaning and preprocessing",
+            "Descriptive statistics and initial data exploration",
+            "Simple predictive modeling (e.g., linear regression, decision trees)",
+            "Basic visualization and reporting",
+            "Guidance on interpreting results",
         ],
-        timeline: '1 - 2 weeks',
+        turnaround: "1 - 2 weeks",
+        cardBgColor: "#dce6e4",
+        titleColor: "#1c3a34",
     },
     {
-        id: 'standard',
-        badgeSrc: '/images/publication-support/poster-preparation/S.png',
-        name: 'Standard',
-        badgeBg: 'bg-purple-100',
-        badgeColor: 'text-purple-700',
-        cardBg: 'bg-[#e5d9eb]',
-        headerBorder: 'border-purple-200',
-        textColor: 'text-[#3d2352]',
-        idealFor: 'Mid-sized research projects or business applications.',
-        features: [
-            'All features of the Basic Package',
-            'Advanced predictive modeling (e.g., logistic regression, random forest, SVM)',
-            'Feature selection and dimensionality reduction',
-            'Model evaluation and validation',
-            'Comprehensive reporting with actionable insights',
+        icon: "/images/publication-support/poster-preparation/S.png",
+        title: "Standard",
+        subtitle: "Advanced Predictive Modeling",
+        idealFor:
+            "Mid-sized research projects or business applications.",
+        includes: [
+            "All features of the Basic Package",
+            "Advanced predictive modeling (e.g., logistic regression, random forest, SVM)",
+            "Feature selection and dimensionality reduction",
+            "Model evaluation and validation",
+            "Comprehensive reporting with actionable insights",
         ],
+        cardBgColor: "#e5d9eb",
+        titleColor: "#3d2352",
     },
     {
-        id: 'advanced',
-        badgeSrc: '/images/publication-support/peer-review-pre-submission/advanced.webp',
-        name: 'Advanced',
-        badgeBg: 'bg-emerald-100',
-        badgeColor: 'text-emerald-700',
-        cardBg: 'bg-[#e7d8b8]',
-        headerBorder: 'border-amber-200/80',
-        textColor: 'text-[#483818]',
-        idealFor: 'Complex research studies or enterprise-level predictive projects.',
-        features: [
-            'All features of the Standard Package',
-            'Time-series forecasting and survival analysis',
-            'Ensemble modeling and advanced machine learning techniques',
-            'Hyperparameter tuning and cross-validation',
-            'Publication-ready reports for journals or regulatory compliance',
+        icon:
+            "/images/publication-support/peer-review-pre-submission/advanced.webp",
+        title: "Advanced",
+        subtitle: "Complex Predictive Analytics",
+        idealFor:
+            "Complex research studies or enterprise-level predictive projects.",
+        includes: [
+            "All features of the Standard Package",
+            "Time-series forecasting and survival analysis",
+            "Ensemble modeling and advanced machine learning techniques",
+            "Hyperparameter tuning and cross-validation",
+            "Publication-ready reports for journals or regulatory compliance",
         ],
+        cardBgColor: "#e7d8b8",
+        titleColor: "#483818",
     },
     {
-        id: 'custom',
-        badgeSrc: '/images/data-analytics-machine-learning/predictive-analytics/C-icons.webp',
-        name: 'Custom',
-        badgeBg: 'bg-sky-100',
-        badgeColor: 'text-sky-700',
-        cardBg: 'bg-[#fcdede]',
-        headerBorder: 'border-rose-200',
-        textColor: 'text-[#5c2424]',
-        idealFor: 'Projects with unique or highly specialized requirements.',
-        features: [
-            'Tailored predictive modeling based on your specific objectives',
-            'Integration with your existing data systems and workflows',
-            'Multi-source data analysis and predictive strategy consultation',
-            'End-to-end support from data preparation to final deployment',
+        icon:
+            "/images/data-analytics-machine-learning/predictive-analytics/C-icons.webp",
+        title: "Custom",
+        subtitle: "Tailored Predictive Analytics Solutions",
+        idealFor:
+            "Projects with unique or highly specialized requirements.",
+        includes: [
+            "Tailored predictive modeling based on your specific objectives",
+            "Integration with your existing data systems and workflows",
+            "Multi-source data analysis and predictive strategy consultation",
+            "End-to-end support from data preparation to final deployment",
         ],
-        timeline: '4+ weeks (project-dependent)',
+        turnaround: "4+ weeks (project-dependent)",
+        cardBgColor: "#fcdede",
+        titleColor: "#5c2424",
     },
 ];
 
 export default function PredictiveAnalyticsPackages() {
     return (
         <section className="py-7 px-4 bg-white font-sans">
-            <div className="max-w-6xl mx-auto">
-                {/* Section Heading */}
-                <h2 className="text-2xl md:text-3xl font-bold text-[#1a3832] mb-3">
-                    Predictive Analytics Service – Our Packages
-                </h2>
-                <p className="text-xs md:text-sm text-gray-600 mb-10 max-w-5xl leading-relaxed">
-                    At Pubrica, we offer comprehensive Predictive Analytics Services designed to help researchers, healthcare professionals, and businesses make data-driven decisions with confidence. Our packages are structured to cater to diverse needs, from exploratory data analysis to advanced predictive modeling.
-                </p>
-
-                {/* 4 Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-                    {packagesData.map((pkg) => (
-                        <div
-                            key={pkg.id}
-                            className={`${pkg.cardBg} rounded-t-xl rounded-b-md shadow-xs flex flex-col overflow-hidden border border-black/5`}
-                        >
-                            {/* Card Header Top */}
-                            <div className={`bg-white/75 backdrop-blur-xs py-4 px-5 flex items-center gap-3 border-b ${pkg.headerBorder}`}>
-                                <div className="relative w-9 h-9 shrink-0">
-                                    <Image src={pkg.badgeSrc} alt={`${pkg.name} package`} fill className="object-contain" />
-                                </div>
-                                <h3 className={`text-lg font-bold ${pkg.textColor}`}>
-                                    {pkg.name}
-                                </h3>
-                            </div>
-
-                            {/* Card Content Body */}
-                            <div className="p-5 flex-1 flex flex-col justify-between space-y-6">
-                                <div className="space-y-5 text-xs md:text-sm">
-                                    {/* Ideal For */}
-                                    <div className="flex items-start gap-2">
-                                        <span className="text-slate-800 font-bold mt-0.5 text-base leading-none">
-                                            ➔
-                                        </span>
-                                        <p className="text-slate-800 font-medium leading-tight">
-                                            <strong className="font-bold">Ideal For:</strong> {pkg.idealFor}
-                                        </p>
-                                    </div>
-
-                                    {/* Includes List */}
-                                    <div className="space-y-3">
-                                        <div className="flex items-center gap-2 font-bold text-slate-800">
-                                            <span className="text-base leading-none">➔</span>
-                                            <span>Includes:</span>
-                                        </div>
-
-                                        <ul className="space-y-2.5 pl-6 list-disc text-slate-700 leading-snug">
-                                            {pkg.features.map((feature, idx) => (
-                                                <li key={idx} className="marker:text-slate-800">
-                                                    {feature}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                {/* Optional Timeline Footer */}
-                                {pkg.timeline && (
-                                    <div className="pt-2 flex items-center gap-2 text-xs md:text-sm font-bold text-slate-800 border-t border-black/5">
-                                        <span className="text-base leading-none">➔</span>
-                                        <span>Timeline: {pkg.timeline}</span>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-            <GetFreeQuoteButton/>
+            <CommonPackages
+                title="Predictive Analytics Service – Our Packages"
+                description="At Pubrica, we offer comprehensive Predictive Analytics Services designed to help researchers, healthcare professionals, and businesses make data-driven decisions with confidence. Our packages are structured to cater to diverse needs, from exploratory data analysis to advanced predictive modeling."
+                packages={packagesData}
+            />
+            <GetFreeQuoteButton />
         </section>
     );
 }

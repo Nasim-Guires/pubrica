@@ -3,13 +3,19 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function InterpretationReportingVisualisation() {
-    // Accordion state for "Types We Offer" grid cards (null = all closed by default)
-    const [openOfferCard, setOpenOfferCard] = useState<number | null>(null);
+    // Accordion state for "Types We Offer" grid cards (Set tracking multiple open cards)
+    const [openOfferCards, setOpenOfferCards] = useState<number[]>([]);
 
     const toggleOfferCard = (index: number) => {
-        setOpenOfferCard(openOfferCard === index ? null : index);
+        if (openOfferCards.includes(index)) {
+            setOpenOfferCards(openOfferCards.filter((i) => i !== index));
+        } else {
+            setOpenOfferCards([...openOfferCards, index]);
+        }
     };
 
     // Data for "Types of Interpretation, Reporting, and Visualisation We Offer"
@@ -18,15 +24,34 @@ export default function InterpretationReportingVisualisation() {
             id: 1,
             title: "Types of Interpretation",
             iconSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Types-of-Interpretation.png",
-            content:
-                "Quantitative and qualitative data analysis methods including statistical hypothesis testing, correlation analysis, and contextual domain interpretation to derive actionable research intelligence.",
+            content: (
+                <ul className="space-y-2 text-xs md:text-sm text-gray-700">
+                    <li>
+                        <strong>Quantitative Interpretation:</strong> Analyses numerical data using statistical methods to find patterns and insights.
+                    </li>
+                    <li>
+                        <strong>Qualitative Interpretation:</strong> Analyses non-numerical data, such as text, to understand themes and contexts.
+                    </li>
+                </ul>
+            ),
         },
         {
             id: 2,
             title: "Types of Reporting",
             iconSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Types-of-Reporting.png",
-            content:
-                "Structured narrative documentation including executive summaries, clinical trial reports, regulatory submission packages, and manuscript-ready research summaries adhering strictly to CONSORT, PRISMA, and STROBE guidelines.",
+            content: (
+                <ul className="space-y-2 text-xs md:text-sm text-gray-700">
+                    <li>
+                        <strong>Dashboards:</strong> Provide a high-level view of key performance indicators (KPIs) and data trends in a structured format.
+                    </li>
+                    <li>
+                        <strong>Presentations:</strong> Structured formats, often including visualizations, to communicate findings to stakeholders or decision-makers.
+                    </li>
+                    <li>
+                        <strong>Detailed Narrative Reports:</strong> Comprehensive reports that provide context, explanation, and detailed findings are often used to share in-depth information.
+                    </li>
+                </ul>
+            ),
         },
         {
             id: 3,
@@ -66,16 +91,11 @@ export default function InterpretationReportingVisualisation() {
     return (
         <main className="w-full bg-[#f8fbf9] text-[#222222] font-sans pb-7">
             {/* 1. HERO HEADER BANNER */}
-            <section className="bg-[#1b3d36] text-white py-6 px-4 sm:px-8 text-center">
-                <div className="max-w-5xl mx-auto border border-[#3b6058] p-8 rounded-lg bg-[#193832]">
-                    <h1 className="text-2xl md:text-4xl font-bold tracking-wide mb-4">
-                        Interpretation, Reporting and Visualisation
-                    </h1>
-                    <p className="text-sm md:text-base text-gray-200 max-w-4xl mx-auto leading-relaxed">
-                        Pubrica excels in Interpretation, Reporting, and Visualisation, offering concise analysis presented through clear and impactful visuals, empowering informed decision-making in research and business endeavours.
-                    </p>
-                </div>
-            </section>
+            <HeroBanner
+                title="Interpretation, Reporting and Visualisation"
+                description="Pubrica excels in Interpretation, Reporting, and Visualisation, offering concise analysis presented through clear and impactful visuals, empowering informed decision-making in research and business endeavours."
+                headingAs="h1"
+            />
 
             {/* 2. OVERVIEW / INTRO SECTION WITH CTA */}
             <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 md:px-8">
@@ -94,7 +114,7 @@ export default function InterpretationReportingVisualisation() {
                         </p>
 
                         <div className="pt-4">
-                           <GetFreeQuoteButton/>
+                            <GetFreeQuoteButton />
                         </div>
                     </div>
 
@@ -147,7 +167,32 @@ export default function InterpretationReportingVisualisation() {
                             </h3>
                             <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
                                 From detailed research reports to concise executive summaries, we prepare structured documents tailored to your audience. We follow international guidelines such as{" "}
-                                <span className="text-teal-700 font-semibold">CONSORT, PRISMA, and STROBE</span>{" "}
+                                <Link
+                                    href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="no-underline text-blue-600"
+                                >
+                                    CONSORT
+                                </Link>
+                                ,{" "}
+                                <Link
+                                    href="https://www.prisma-statement.org/prisma-2020-checklist"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="no-underline text-blue-600"
+                                >
+                                    PRISMA
+                                </Link>
+                                , and{" "}
+                                <Link
+                                    href="https://www.strobe-statement.org/checklists/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="no-underline text-blue-600"
+                                >
+                                    STROBE
+                                </Link>{" "}
                                 to ensure compliance, transparency, and reproducibility. Our data reporting and visualization services make your results publication-ready and impactful.
                             </p>
                         </div>
@@ -205,7 +250,7 @@ export default function InterpretationReportingVisualisation() {
                 </ul>
             </section>
 
-            {/* 5. TYPES WE OFFER GRID SECTION (ACCORDION CLOSED BY DEFAULT) */}
+            {/* 5. TYPES WE OFFER GRID SECTION (ACCORDION CLOSED BY DEFAULT & MULTI-OPEN SUPPORTED) */}
             <section className="max-w-6xl mx-auto py-5 px-4 sm:px-6 md:px-8 border-t border-gray-200">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-3">
                     Types of Interpretation, Reporting, and Visualisation We Offer
@@ -216,7 +261,7 @@ export default function InterpretationReportingVisualisation() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
                     {offerTypes.map((item) => {
-                        const isOpen = openOfferCard === item.id;
+                        const isOpen = openOfferCards.includes(item.id);
                         return (
                             <div
                                 key={item.id}
@@ -241,7 +286,7 @@ export default function InterpretationReportingVisualisation() {
                                     </span>
                                 </button>
 
-                                {/* Closed by default */}
+                                {/* Closed by default, multiple can stay open */}
                                 {isOpen && (
                                     <div className="mt-3 pt-3 border-t border-teal-200 text-xs md:text-sm text-gray-700 leading-relaxed">
                                         {item.content}

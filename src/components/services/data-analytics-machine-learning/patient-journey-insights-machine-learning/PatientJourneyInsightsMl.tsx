@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import HeroBanner from "@/components/common/HeroBanner";
 
 const servicesData = [
     {
@@ -56,17 +58,11 @@ export default function PatientJourneyInsightsMl() {
     return (
         <div className="w-full bg-white font-sans text-gray-800">
             {/* 1. TOP HERO BANNER */}
-            <section className="bg-[#102a28] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
-                <div className="max-w-5xl mx-auto border border-gray-600 p-8 rounded-lg bg-[#143330]">
-                    <h1 className="text-3xl sm:text-4xl font-bold mb-4">
-                        Patient Journey & Insights – Machine Learning
-                    </h1>
-                    <p className="text-gray-200 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
-                        Pubrica leverages machine learning for patient journey analysis, offering deep insights into healthcare experiences. Enhance patient care pathways with our data-driven approach.
-                    </p>
-                </div>
-            </section>
-
+            <HeroBanner
+                title="Patient Journey & Insights – Machine Learning"
+                description="Pubrica leverages machine learning for patient journey analysis, offering deep insights into healthcare experiences. Enhance patient care pathways with our data-driven approach."
+                headingAs="h1"
+            />
             {/* 2. OVERVIEW SECTION WITH IMAGE */}
             <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3835] mb-4">
@@ -80,7 +76,11 @@ export default function PatientJourneyInsightsMl() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
                     <div className="lg:col-span-7 space-y-4 text-sm leading-relaxed text-gray-700">
                         <p>
-                            At Pubrica, we leverage advanced machine learning in healthcare techniques to map, analyze, and interpret the <span className="text-teal-700 font-semibold">patient journey</span> mapping across multiple touchpoints in the healthcare ecosystem. Understanding the patient journey from disease onset to diagnosis, treatment, adherence, and outcomes is crucial for healthcare providers, payors, and pharmaceutical companies to design patient-centric strategies and improve care delivery.
+                            At Pubrica, we leverage advanced machine learning in healthcare techniques to map, analyze, and interpret the{" "}
+                            <Link href="/academy/patient-journey-insights-ml/patient-journey-analytics/" className="text-blue-600">
+                                patient journey
+                            </Link>{" "}
+                            mapping across multiple touchpoints in the healthcare ecosystem. Understanding the patient journey from disease onset to diagnosis, treatment, adherence, and outcomes is crucial for healthcare providers, payors, and pharmaceutical companies to design patient-centric strategies and improve care delivery.
                         </p>
                         <p>
                             With a proven record of empowering healthcare stakeholders through healthcare data analytics and data-driven intelligence, Pubrica is a trusted partner in real-world patient data analysis, mapping patient journeys, and generating actionable insights using advanced machine learning techniques.
@@ -89,12 +89,12 @@ export default function PatientJourneyInsightsMl() {
 
                     {/* Hero Image Block */}
                     <div className="lg:col-span-5 relative flex justify-center">
-                        <div className="relative rounded-2xl overflow-hidden shadow-lg border-4 border-[#143330] w-full h-56 sm:h-72">
+                        <div className="relative rounded-2xl overflow-hidden w-full h-56 sm:h-72">
                             <Image
                                 src="/images/ai-ml-support/Transform-complex-patient-data-into-actionable-insights-.webp"
                                 alt="Patient Journey Analytics"
                                 fill
-                                className="object-cover"
+                                className="object-cover rounded-2xl"
                                 sizes="(max-width: 1024px) 100vw, 40vw"
                                 priority
                             />
@@ -105,19 +105,23 @@ export default function PatientJourneyInsightsMl() {
                 {/* Bullet Points */}
                 <ul className="space-y-3 text-sm text-gray-700 list-disc list-inside mb-8">
                     <li>
-                        <strong className="text-gray-900">500+ data scientists, clinicians, and domain experts</strong> specializing in predictive analytics for patient outcomes, natural language processing (NLP), and image recognition
+                        500+ data scientists, clinicians, and domain experts specializing in predictive analytics for patient outcomes, natural language processing (NLP), and image recognition
                     </li>
                     <li>
-                        <strong className="text-gray-900">Expertise in EMR and EHR data analysis services</strong>, claims, wearables, social media, and real-world evidence sources
+                        Expertise in EMR and EHR data analysis services, claims, wearables, social media, and real-world evidence sources
                     </li>
                     <li>
-                        <strong className="text-gray-900">In-house capabilities</strong> to perform <span className="text-teal-700 font-semibold">data extraction</span>, intent detection, patient sentiment analysis in healthcare, and treatment-pattern identification across multiple disease areas
+                        In-house capabilities to perform{" "}
+                        <Link href="/services/data-analytics-machine-learning/patient-journey-insights-machine-learning/data-extraction-healthcare-definition-methods-applications/" className="text-blue-600">
+                            data extraction
+                        </Link>
+                        , intent detection, patient sentiment analysis in healthcare, and treatment-pattern identification across multiple disease areas
                     </li>
                     <li>
-                        <strong className="text-gray-900">Proficiency in modeling therapeutic pathways</strong> to uncover adherence challenges, treatment gaps, and key decision-making touchpoints
+                        Proficiency in modeling therapeutic pathways to uncover adherence challenges, treatment gaps, and key decision-making touchpoints
                     </li>
                     <li>
-                        <strong className="text-gray-900">Support for healthcare providers, payers, and life sciences</strong> in generating patient-centric insights that enhance engagement, outcomes, and resource allocation
+                        Support for healthcare providers, payers, and life sciences in generating patient-centric insights that enhance engagement, outcomes, and resource allocation
                     </li>
                 </ul>
 
@@ -136,12 +140,12 @@ export default function PatientJourneyInsightsMl() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                     {/* Side Image Showcase */}
                     <div className="lg:col-span-5 flex flex-col gap-4 items-center">
-                        <div className="relative w-64 h-80 rounded-2xl overflow-hidden shadow-md border-2 border-teal-700">
+                        <div className="relative w-64 h-80 rounded-2xl overflow-hidden">
                             <Image
                                 src="/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Our-Services.png"
                                 alt="Patient journey services"
                                 fill
-                                className="object-cover"
+                                className="object-cover rounded-2xl"
                                 sizes="256px"
                             />
                         </div>

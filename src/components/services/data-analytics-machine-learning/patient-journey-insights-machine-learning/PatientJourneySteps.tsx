@@ -2,36 +2,50 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { EditorialWorkflowSection, WorkflowStep } from "@/components/common/EditorialWorkflowSection";
+import ServiceBanner from "@/components/common/ServiceBanner";
 
 export default function PatientJourneySteps() {
     // State for Sample Work tabs (Image 2)
     const [activeTab, setActiveTab] = useState(1);
 
     // Data for Interactive Steps (Image 1)
-    const steps = [
+    const steps: WorkflowStep[] = [
         {
-            id: 1,
-            title: "Comprehensive Data Collection",
-            desc: "Gather comprehensive patient data from various sources, including EMR and EHR data analysis services, and wearable devices.",
-            iconSrc: "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Comprehensive-Data-Collection.png",
+            stepNumber: 1,
+            title: "COMPREHENSIVE DATA COLLECTION",
+            description:
+                "Gather comprehensive patient data from various sources, including EMR and EHR data analysis services, and wearable devices.",
+            iconSrc:
+                "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Comprehensive-Data-Collection.png",
+            position: "top",
         },
         {
-            id: 2,
-            title: "Advanced Data Analysis",
-            desc: "Employ advanced algorithms to analyse patient data and identify key patterns and trends in the healthcare journey.",
-            iconSrc: "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Advanced-Data-Analysis.png",
+            stepNumber: 2,
+            title: "ADVANCED DATA ANALYSIS",
+            description:
+                "Employ advanced algorithms to analyse patient data and identify key patterns and trends in the healthcare journey.",
+            iconSrc:
+                "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Advanced-Data-Analysis.png",
+            position: "bottom",
         },
         {
-            id: 3,
-            title: "Actionable Insights Extraction",
-            desc: "Extract patient insights services to enhance patient care, improve outcomes, and optimize healthcare processes.",
-            iconSrc: "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Actionable-Insights-Extraction.png",
+            stepNumber: 3,
+            title: "ACTIONABLE INSIGHTS EXTRACTION",
+            description:
+                "Extract patient insights services to enhance patient care, improve outcomes, and optimize healthcare processes.",
+            iconSrc:
+                "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Actionable-Insights-Extraction.png",
+            position: "top",
         },
         {
-            id: 4,
-            title: "Clear Reporting and Strategic Guidance",
-            desc: "Present findings in clear and concise reports, facilitating informed decision-making and guiding the implementation of data-driven strategies for improved patient experiences.",
-            iconSrc: "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Clear-Reporting-and-Strategic-Guidance.png",
+            stepNumber: 4,
+            title: "CLEAR REPORTING AND STRATEGIC GUIDANCE",
+            description:
+                "Present findings in clear and concise reports, facilitating informed decision-making and guiding the implementation of data-driven strategies for improved patient experiences.",
+            iconSrc:
+                "/images/data-analytics-machine-learning/patient-journey-insights-machine-learning/Clear-Reporting-and-Strategic-Guidance.png",
+            position: "bottom",
         },
     ];
 
@@ -46,75 +60,27 @@ export default function PatientJourneySteps() {
         <div className="w-full bg-slate-50 font-sans text-slate-800">
 
             {/* SECTION 1: Step-by-Step Process (Image 1) */}
-            <section className="py-7 px-4 max-w-7xl mx-auto">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#003B2B] mb-3">
-                        How Our Patient Journey & Insights – Machine Learning Service Works
-                    </h2>
-                    <h3 className="text-xl text-[#008080] font-medium mb-4">
-                        Our step-by-Step Process
-                    </h3>
-                    <p className="max-w-4xl mx-auto text-slate-600 text-sm md:text-base leading-relaxed">
-                        Our Patient Journey & Insights – Machine Learning Service follows a structured step-by-step process to transform raw healthcare data into meaningful insights. By combining advanced analytics with clear reporting, we empower providers to improve care quality, patient outcomes, and decision-making.
-                    </p>
-                </div>
-
-                {/* Alternate Step Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch pt-8">
-                    {steps.map((step) => {
-                        const isTop = step.id % 2 !== 0; // Alternating design
-                        return (
-                            <div key={step.id} className="flex flex-col items-center">
-
-                                {/* Number Circle (Top position for odd IDs) */}
-                                {isTop && (
-                                    <div className="w-10 h-10 rounded-full bg-[#008B9B] text-white flex items-center justify-center font-bold text-lg mb-4 shadow-md z-10">
-                                        {step.id}
-                                    </div>
-                                )}
-
-                                {/* Card Container with Dynamic Hover State */}
-                                <div className={`w-full flex-1 p-6 rounded-lg transition-all duration-300 flex flex-col items-start shadow-sm border border-slate-200 cursor-pointer
-                  bg-white text-slate-800 hover:bg-[#4A5552] hover:text-white group relative
-                  ${!isTop ? "mb-4" : ""}`}
-                                >
-                                    <div className="relative w-10 h-10 mb-3 group-hover:brightness-200 transition-all">
-                                        <Image src={step.iconSrc} alt="" fill className="object-contain" />
-                                    </div>
-                                    <h4 className="font-bold text-lg mb-2 group-hover:text-white transition-colors">
-                                        {step.title}
-                                    </h4>
-                                    <p className="text-xs leading-relaxed text-slate-600 group-hover:text-slate-200 transition-colors">
-                                        {step.desc}
-                                    </p>
-
-                                    {/* Decorative Teal Line */}
-                                    <div className="w-full h-1 bg-[#008B9B] mt-auto pt-4 group-hover:bg-teal-400"></div>
-                                </div>
-
-                                {/* Number Circle (Bottom position for even IDs) */}
-                                {!isTop && (
-                                    <div className="w-10 h-10 rounded-full bg-[#008B9B] text-white flex items-center justify-center font-bold text-lg mt-4 shadow-md z-10">
-                                        {step.id}
-                                    </div>
-                                )}
-                            </div>
-                        );
-                    })}
-                </div>
-            </section>
-
+            <EditorialWorkflowSection
+                heading="How Our Patient Journey & Insights – Machine Learning Service Works"
+                subheading="Our Step-by-Step Process"
+                description="Our Patient Journey & Insights – Machine Learning Service follows a structured step-by-step process to transform raw healthcare data into meaningful insights. By combining advanced analytics with clear reporting, we empower providers to improve care quality, patient outcomes, and decision-making."
+                steps={steps}
+            />
             {/* Banner Section */}
-            <section className="bg-[#003B2B] text-white py-6 px-4 text-center">
-                <div className="max-w-4xl mx-auto">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                        Speed up your Patient Journey & Insights with Pubrica
-                    </h3>
-                    <p className="text-slate-200 text-sm md:text-base italic leading-relaxed">
-                        “Pubrica’s Patient Journey & Insights services offer meticulous analysis, refinement, optimization, and quality assurance, ensuring precise and effective generation of insights to enhance healthcare experiences and inform strategic decision-making.”
-                    </p>
-                </div>
-            </section>
+            <ServiceBanner
+                imageSrc="/images/icons/Satisfaction_Guarantee.webp"
+                imageAlt="100% Satisfaction Guarantee"
+                heading="Speed up your Patient Journey & Insights with Pubrica"
+                description={
+                    <>
+                        “Pubrica’s Patient Journey & Insights services offer meticulous analysis,
+                        refinement, optimization, and quality assurance, ensuring precise and
+                        effective generation of insights to enhance healthcare experiences and
+                        inform strategic decision-making.”
+                    </>
+                }
+                showQuoteButton={false}
+            />
 
             {/* SECTION 2: Sample Work Container with Google Images (Image 2) */}
             <section className="py-7 px-4 max-w-6xl mx-auto text-center">
@@ -132,8 +98,8 @@ export default function PatientJourneySteps() {
                             key={num}
                             onClick={() => setActiveTab(num)}
                             className={`px-6 py-2 text-sm font-medium transition-colors border ${activeTab === num
-                                    ? "bg-[#003B2B] text-white border-[#003B2B]"
-                                    : "bg-white text-slate-700 border-slate-300 hover:bg-slate-100"
+                                ? "bg-[#003B2B] text-white border-[#003B2B]"
+                                : "bg-white text-slate-700 border-slate-300 hover:bg-slate-100"
                                 }`}
                         >
                             Sample {num}

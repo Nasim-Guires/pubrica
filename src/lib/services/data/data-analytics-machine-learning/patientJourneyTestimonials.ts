@@ -95,6 +95,9 @@ export const patientJourneyInsightsTestimonials = [
 ];
 
 
+
+
+
 export const patientJourneyInsightsFaqs = [
   {
     question: "How does machine learning enhance patient journey analysis?",
@@ -103,18 +106,40 @@ export const patientJourneyInsightsFaqs = [
   },
   {
     question: "What type of data is used in patient journey mapping?",
-    answer:
-      "Patient journey mapping uses data from multiple sources, including Electronic Health Records (EHR), clinical trial data, wearable devices and mobile apps, patient surveys and feedback, claims and billing data, and digital health platforms.",
-  },
-  {
-    question: "Who can benefit from Patient Journey & Insights – Machine Learning services?",
-    answer:
-      "Our services support pharmaceutical and biotech companies, hospitals and healthcare providers, medical device manufacturers, nutraceutical and cosmeceutical companies, public health organizations, and insurance providers and healthcare payers.",
+    answer: "Patient journey mapping uses data from multiple sources, including:",
+    points: [
+      "Electronic Health Records (EHR)",
+      "Clinical trial data",
+      "Wearable devices and mobile apps",
+      "Patient surveys and feedback",
+      "Claims and billing data",
+      "Digital health platforms",
+    ],
   },
   {
     question:
-      "What are the key benefits of using Patient Journey & Insights – Machine Learning?",
-    answer:
-      "Key benefits include improved patient engagement and satisfaction, better understanding of disease progression, data-backed decision-making for research and clinical trials, optimized treatment pathways, cost reduction through predictive analytics, and accelerated time-to-market for healthcare innovations.",
+      "Who can benefit from this service?",
+    answer: "Our services support:",
+    points: [
+      "Pharmaceutical and biotech companies",
+      "Hospitals and healthcare providers",
+      "Medical device manufacturers",
+      "Nutraceutical and cosmeceutical companies",
+      "Public health organizations",
+      "Insurance providers and healthcare payers",
+    ],
+  },
+  {
+    question:
+      " What are the key benefits of using Patient Journey & Insights – Machine Learning?",
+    answer: "Key benefits include:",
+    points: [
+      "Improved patient engagement and satisfaction",
+      "Better understanding of disease progression",
+      "Data-backed decision-making for research and clinical trials",
+      "Optimized treatment pathways",
+      "Cost reduction through predictive analytics",
+      "Accelerated time-to-market for healthcare innovations",
+    ],
   },
 ];

@@ -22,7 +22,7 @@ const page = () => {
             <HealthEconomicsOutcomeResearch />
             <CommonWhoWeServe
                 title="Who We Serve"
-                description="At Pubrica, our Health Economics & Outcomes Research (HEOR) services support stakeholders across healthcare, life sciences, academia, and public policy by delivering robust, evidence-based insights for market access, reimbursement, and healthcare decision-making."
+                description="At Pubrica, our Health Economics & Outcomes Research (HEOR) services support a diverse range of stakeholders across healthcare, life sciences, academia, and policy, delivering robust, evidence-based insights for decision-making, publication, and market access."
                 data={HealthEconomicsOutcomeResearchWhoWeServe}
             />
             <OurApproachSectionHealthEconomicsOutcomeResearch />

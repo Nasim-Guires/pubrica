@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import ServiceBanner from '@/components/common/ServiceBanner';
+import { EditorialWorkflowSection, WorkflowStep } from '@/components/common/EditorialWorkflowSection';
+import { PubricaSampleWorkCard } from '@/components/common/PubricaSampleWorkCardProps';
 
 // --- Interface Definitions ---
 interface StepItem {
@@ -24,49 +27,67 @@ interface ComprehensiveFeature {
 }
 
 // --- Static Data Definitions ---
-const STEP_ITEMS: StepItem[] = [
+const steps: WorkflowStep[] = [
   {
-    id: 1,
+    stepNumber: 1,
     title: "CONSULTATION & REQUIREMENT GATHERING",
-    description: "We begin by understanding your research goals, study design, and data sources.",
-    iconSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Consultation-Requirement-Gathering.png",
-    position: 'top',
+    description:
+      "We begin by understanding your research goals, study design, and data sources.",
+    iconSrc:
+      "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Consultation-Requirement-Gathering.png",
+    position: "top",
   },
   {
-    id: 2,
+    stepNumber: 2,
     title: "DATA ANALYSIS & INTERPRETATION",
     description: (
       <>
-        Our <span className="text-teal-600 font-medium group-hover:text-teal-400">subject matter experts</span> and statisticians work together to derive meaningful insights from your raw datasets.
+        Our{" "}
+        <Link href="/subject-matter-experts/" className="text-blue-600">
+          subject matter experts
+        </Link>{" "}
+        and statisticians work together to derive meaningful insights from your
+        raw datasets.
       </>
     ),
-    iconSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Data-Analysis-Interpretation.png",
-    position: 'bottom',
+    iconSrc:
+      "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Data-Analysis-Interpretation.png",
+    position: "bottom",
   },
   {
-    id: 3,
+    stepNumber: 3,
     title: "DRAFTING THE REPORT",
-    description: "We create structured reports that include methodology, findings, discussions, and conclusions in compliance with journal or regulatory guidelines.",
-    iconSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Drafting-the-Report.png",
-    position: 'top',
+    description:
+      "We create structured reports that include methodology, findings, discussions, and conclusions in compliance with journal or regulatory guidelines.",
+    iconSrc:
+      "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Drafting-the-Report.png",
+    position: "top",
   },
   {
-    id: 4,
+    stepNumber: 4,
     title: "DESIGNING VISUAL OUTPUTS",
-    description: "We create customised visual graphs, dashboards, tables, and infographics tailored for your target audience.",
-    iconSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Designing-Visual-Outputs.png",
-    position: 'bottom',
+    description:
+      "We create customised visual graphs, dashboards, tables, and infographics tailored for your target audience.",
+    iconSrc:
+      "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Designing-Visual-Outputs.png",
+    position: "bottom",
   },
   {
-    id: 5,
+    stepNumber: 5,
     title: "REVIEW & FINALISATION",
     description: (
       <>
-        A thorough <span className="text-teal-600 font-medium group-hover:text-teal-400">peer review</span> ensures accuracy, readability, and alignment with your objectives before delivery.
+        A thorough{" "}
+        <Link href="/services/publication-support/peer-review-pre-submission/" className="text-blue-600">
+          peer review
+        </Link>{" "}
+        ensures accuracy, readability, and alignment with your objectives before
+        delivery.
       </>
     ),
-    iconSrc: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Review-Finalisation.png",
-    position: 'top',
+    iconSrc:
+      "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Review-Finalisation.png",
+    position: "top",
   },
 ];
 
@@ -145,69 +166,23 @@ export const ProcessAndComplianceSection: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-slate-50 min-h-screen py-7 px-4 sm:px-6 lg:px-8 font-sans">
-      <div className="max-w-7xl mx-auto space-y-20">
-        
+    <div className="w-full bg-slate-50 min-h-screen pb-12 font-sans">
+      {/* Service Banner placed outside constrained container to hit left and right edges */}
+      <ServiceBanner
+        imageSrc="/images/icons/Satisfaction_Guarantee.webp"
+        imageAlt="100% Satisfaction Guarantee"
+        heading="Interpretation, Reporting and Visualisation"
+        description="Pubrica provides comprehensive interpretation, reporting, and visualization services, transforming data into actionable insights through clear analysis and visually engaging presentations for informed decision-making."
+        showQuoteButton={true}
+      />
+
+      <div className="max-w-7xl mx-auto space-y-20 px-4 sm:px-6 lg:px-8 pt-10">
         {/* ================= 1. STEP-BY-STEP PROCESS ================= */}
-        <section className="space-y-12 text-center">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 tracking-tight">
-              How Our Interpretation, Reporting, and Visualisation Service Works
-            </h2>
-            <p className="mt-2 text-lg text-slate-600 font-medium">
-              Our Step-by-Step Process
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
-            {STEP_ITEMS.map((step) => {
-              return (
-                <div key={step.id} className="flex flex-col items-center group relative">
-                  {step.position === 'top' && (
-                    <div className="mb-4 flex flex-col items-center">
-                      <div className="w-10 h-10 rounded-full bg-[#00809d] text-white flex items-center justify-center font-semibold text-lg shadow-md z-10">
-                        {step.id}
-                      </div>
-                      <div className="w-[2px] h-6 bg-pink-400"></div>
-                    </div>
-                  )}
-
-                  {/* Card turns black/dark on hover */}
-                  <div 
-                    className="
-                      w-full min-h-[300px] p-6 rounded-sm bg-white border border-gray-100 shadow-sm 
-                      flex flex-col items-center text-center transition-all duration-300 cursor-pointer
-                      group-hover:bg-[#28292c] group-hover:text-white group-hover:shadow-xl
-                    "
-                  >
-                    <div className="w-full h-1 bg-[#00809d] mb-6"></div>
-
-                    <div className="mb-4 relative w-10 h-10">
-                      <Image src={step.iconSrc} alt="" fill className="object-contain" />
-                    </div>
-
-                    <h3 className="font-bold text-sm tracking-wide text-slate-800 group-hover:text-white uppercase mb-3">
-                      {step.title}
-                    </h3>
-
-                    <p className="text-xs text-slate-500 group-hover:text-gray-300 leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-
-                  {step.position === 'bottom' && (
-                    <div className="mt-4 flex flex-col items-center">
-                      <div className="w-[2px] h-6 bg-pink-400"></div>
-                      <div className="w-10 h-10 rounded-full bg-[#00809d] text-white flex items-center justify-center font-semibold text-lg shadow-md z-10">
-                        {step.id}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </section>
+        <EditorialWorkflowSection
+          heading="How Our Interpretation, Reporting, and Visualisation Service Works"
+          subheading="Our Step-by-Step Process"
+          steps={steps}
+        />
 
         {/* ================= 2. COMPREHENSIVE INTERPRETATION SECTION ================= */}
         <section className="max-w-5xl mx-auto space-y-8">
@@ -216,7 +191,7 @@ export const ProcessAndComplianceSection: React.FC = () => {
               Our Comprehensive Interpretation, Reporting, And Visualisation
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed">
-              Pubrica&apos;s professional <span className="text-teal-600 font-medium">interpretation, reporting, and visualization services to enhance your insights</span>. With our expert guidance, your data presentation is poised to maximize clarity and drive impactful outcomes.
+              Pubrica&apos;s professional <span className="">interpretation, reporting, and visualization services to enhance your insights</span>. With our expert guidance, your data presentation is poised to maximize clarity and drive impactful outcomes.
             </p>
           </div>
 
@@ -265,8 +240,8 @@ export const ProcessAndComplianceSection: React.FC = () => {
               const isOpen = openAccordionId === item.id;
 
               return (
-                <div 
-                  key={item.id} 
+                <div
+                  key={item.id}
                   className="border border-teal-900/10 rounded-xs overflow-hidden bg-white"
                 >
                   <button
@@ -295,54 +270,36 @@ export const ProcessAndComplianceSection: React.FC = () => {
         </section>
 
         {/* ================= 4. SAMPLE WORK & REPORT DOWNLOAD CTA ================= */}
-        <section className="max-w-5xl mx-auto bg-[#f2f8f5] p-6 sm:p-10 rounded-sm">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            {/* Left Image */}
-            <div className="md:col-span-5">
-              <div className="relative w-full h-64 overflow-hidden rounded-sm shadow-sm bg-white">
-                <Image
-                  src="/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Interpretation-Reporting-and-Visualisation-Sample-Work.webp"
-                  alt="Interpretation sample work"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 40vw"
-                />
-              </div>
-            </div>
-
-            {/* Right Content */}
-            <div className="md:col-span-7 space-y-6">
-              <div className="space-y-3">
-                <h3 className="text-xl font-bold text-slate-800">
-                  Interpretation, Reporting and Visualisation Sample Work
-                </h3>
-                <Link
-                  href="/insights/sample-work"
-                  className="inline-block px-8 py-2.5 bg-black hover:bg-slate-800 text-white font-medium text-xs rounded-full transition-colors duration-200"
-                >
-                  Discover More
-                </Link>
-              </div>
-
-              <div className="space-y-3 pt-2">
-                <h3 className="text-xl font-bold text-slate-800">
-                  Download the full Report Now
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Explore our interpretation, reporting, and visualisation sample work, meticulously crafted to adhere to journal-specific formatting guidelines, robust methodological standards (e.g., PRISMA, CONSORT, STROBE), and project timelines, ensuring accurate, publication-ready, and visually compelling insights for research, clinical, or business applications.
-                </p>
-                <div className="pt-1">
-                  <Link
-                    href="/insights/sample-work"
-                    className="inline-block px-8 py-2.5 bg-black hover:bg-slate-800 text-white font-medium text-xs rounded-full transition-colors duration-200"
-                  >
-                    Discover More
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <PubricaSampleWorkCard
+          bookCoverImage={{
+            src: "/images/data-analytics-machine-learning/interpretation-reporting-and-visualisation/Interpretation-Reporting-and-Visualisation-Sample-Work.webp",
+            alt: "Interpretation sample work",
+            width: 600,
+            height: 400,
+          }}
+          sections={[
+            {
+              heading: "Interpretation, Reporting and Visualisation Sample Work",
+              button: {
+                label: "Discover More",
+                url: "/insights/sample-work/individual-patient-data-from-randomized-trials/",
+              },
+            },
+            {
+              heading: "Download the full Report Now",
+              descriptionSegments: [
+                {
+                  text: "Explore our interpretation, reporting, and visualisation sample work, meticulously crafted to adhere to journal-specific formatting guidelines, robust methodological standards (e.g., PRISMA, CONSORT, STROBE), and project timelines, ensuring accurate, publication-ready, and visually compelling insights for research, clinical, or business applications.",
+                },
+              ],
+              button: {
+                label: "Discover More",
+                url: "/insights/sample-work",
+              },
+            },
+          ]}
+          footerDisclaimerSegments={[]}
+        />
 
       </div>
     </div>

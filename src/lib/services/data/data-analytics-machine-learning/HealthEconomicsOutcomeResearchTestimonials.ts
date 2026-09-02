@@ -1,68 +1,68 @@
 export const HealthEconomicsOutcomeResearchWhoWeServe = [
-    {
-        title: "Pharmaceutical & Biotechnology Companies",
-        bullets: [
-            "We partner with pharmaceutical and biotech companies to demonstrate product value, cost-effectiveness, and market readiness. Our experts provide HEOR support for clinical development, HTA submissions, and pricing strategies, helping accelerate regulatory approval and market access success.",
-        ],
-        imageUrl:
-            "/images/data-analytics-machine-learning/health-economics-outcome-research/Pharmaceutical-Biotechnology-Companies-3.png",
-    },
-    {
-        title: "Medical Device Manufacturers",
-        bullets: [
-            "Pubrica supports medical device companies with economic evaluations, budget impact analyses, and real-world evidence generation. We demonstrate the clinical and economic value of devices and diagnostics, ensuring alignment with regulatory requirements, payer expectations, and reimbursement frameworks.",
-        ],
-        imageUrl:
-            "/images/data-analytics-machine-learning/health-economics-outcome-research/Medical-Device-Manufacturers-2.png",
-    },
-    {
-        title: "Healthcare Providers & Hospitals",
-        bullets: [
-            "We assist hospitals and healthcare providers in evaluating treatment strategies, comparative effectiveness, and patient outcomes. Our HEOR consulting services optimize resource allocation, cost management, and value-based care delivery, helping institutions achieve better outcomes at lower costs.",
-        ],
-        imageUrl:
-            "/images/data-analytics-machine-learning/health-economics-outcome-research/Healthcare-Providers-Hospitals-1.png",
-    },
-    {
-        title: "Payers & Insurance Companies",
-        bullets: [
-            "Pubrica works with payers, insurance, and reimbursement agencies to provide budget impact models, cost-effectiveness evidence, and coverage decision support. Our health economics consulting ensures that reimbursement policies are grounded in robust data and real-world insights, enabling sustainable healthcare financing.",
-        ],
-        imageUrl:
-            "/images/data-analytics-machine-learning/health-economics-outcome-research/Payers-Insurance-Companies.png",
-    },
-    {
-        title: "Policy Makers & HTA Agencies",
-        bullets: [
-            "We collaborate with policy makers and HTA agencies to generate evidence that informs reimbursement decisions, treatment guidelines, and health policies. Our HTA submission support services align research with national and international assessment frameworks, enabling transparent and evidence-based healthcare decision-making.",
-        ],
-        imageUrl:
-            "/images/data-analytics-machine-learning/health-economics-outcome-research/Policy-Makers-HTA-Agencies.png",
-    },
-    {
-        title: "Academic Researchers & Institutions",
-        bullets: [
-            "Pubrica supports academic researchers and universities in producing publication-ready HEOR studies, systematic literature reviews, and meta-analyses. Our experts help transform data into impactful manuscripts for peer-reviewed journals, ensuring greater visibility, credibility, and contribution to global evidence generation.",
-        ],
-        imageUrl:
-            "/images/data-analytics-machine-learning/health-economics-outcome-research/Academic-Researchers-Institutions.png",
-    },
-    {
-        title: "Contract Research Organizations (CROs)",
-        bullets: [
-            "We partner with CROs to provide independent HEOR study design, data analysis, and economic modeling support. Our collaboration strengthens clinical trial evidence packages and ensures methodological rigor in multinational studies.",
-        ],
-        imageUrl:
-            "/images/data-analytics-machine-learning/health-economics-outcome-research/Contract-Research-Organizations-1.png",
-    },
-    {
-        title: "NGOs & Public Health Organizations",
-        bullets: [
-            "For global health and non-profit organizations, Pubrica develops epidemiological models, cost-effectiveness studies, and health policy analyses. Our evidence supports program evaluation, donor funding justification, and large-scale public health decision-making.",
-        ],
-        imageUrl:
-            "/images/data-analytics-machine-learning/health-economics-outcome-research/Non-Governmental-Organizations-NGOs-Public-Health-Bodies.png",
-    },
+  {
+    title: "Pharmaceutical & Biotechnology Companies",
+    bullets: [
+      "We partner with pharmaceutical and biotech companies to demonstrate product value, cost-effectiveness, and market readiness. Our experts provide HEOR support for clinical development, HTA submissions, and pricing strategies, helping accelerate regulatory approval and market access success.",
+    ],
+    imageUrl:
+      "/images/data-analytics-machine-learning/health-economics-outcome-research/Pharmaceutical-Biotechnology-Companies-3.png",
+  },
+  {
+    title: "Medical Device Manufacturers",
+    bullets: [
+      "Pubrica supports medical device companies with economic evaluations, budget impact analyses, and real-world evidence generation. We demonstrate the clinical and economic value of devices and diagnostics, ensuring alignment with regulatory requirements, payer expectations, and reimbursement frameworks.",
+    ],
+    imageUrl:
+      "/images/data-analytics-machine-learning/health-economics-outcome-research/Medical-Device-Manufacturers-2.png",
+  },
+  {
+    title: "Healthcare Providers & Hospitals",
+    bullets: [
+      "We assist hospitals and healthcare providers in evaluating treatment strategies, comparative effectiveness, and patient outcomes. Our HEOR consulting services optimize resource allocation, cost management, and value-based care delivery, helping institutions achieve better outcomes at lower costs.",
+    ],
+    imageUrl:
+      "/images/data-analytics-machine-learning/health-economics-outcome-research/Healthcare-Providers-Hospitals-1.png",
+  },
+  {
+    title: "Payers & Insurance Companies",
+    bullets: [
+      "Pubrica works with payers, insurance, and reimbursement agencies to provide budget impact models, cost-effectiveness evidence, and coverage decision support. Our health economics consulting ensures that reimbursement policies are grounded in robust data and real-world insights, enabling sustainable healthcare financing.",
+    ],
+    imageUrl:
+      "/images/data-analytics-machine-learning/health-economics-outcome-research/Payers-Insurance-Companies.png",
+  },
+  {
+    title: "Policy Makers & HTA Agencies",
+    bullets: [
+      "We collaborate with policy makers and HTA agencies to generate evidence that informs reimbursement decisions, treatment guidelines, and health policies. Our HTA submission support services align research with national and international assessment frameworks, enabling transparent and evidence-based healthcare decision-making.",
+    ],
+    imageUrl:
+      "/images/data-analytics-machine-learning/health-economics-outcome-research/Policy-Makers-HTA-Agencies.png",
+  },
+  {
+    title: "Academic Researchers & Institutions",
+    bullets: [
+      "Pubrica supports academic researchers and universities in producing publication-ready HEOR studies, systematic literature reviews, and meta-analyses. Our experts help transform data into impactful manuscripts for peer-reviewed journals, ensuring greater visibility, credibility, and contribution to global evidence generation.",
+    ],
+    imageUrl:
+      "/images/data-analytics-machine-learning/health-economics-outcome-research/Academic-Researchers-Institutions.png",
+  },
+  {
+    title: "Contract Research Organizations (CROs)",
+    bullets: [
+      "We partner with CROs to provide independent HEOR study design, data analysis, and economic modeling support. Our collaboration strengthens clinical trial evidence packages and ensures methodological rigor in multinational studies.",
+    ],
+    imageUrl:
+      "/images/data-analytics-machine-learning/health-economics-outcome-research/Contract-Research-Organizations-1.png",
+  },
+  {
+    title: "NGOs & Public Health Organizations",
+    bullets: [
+      "For global health and non-profit organizations, Pubrica develops epidemiological models, cost-effectiveness studies, and health policy analyses. Our evidence supports program evaluation, donor funding justification, and large-scale public health decision-making.",
+    ],
+    imageUrl:
+      "/images/data-analytics-machine-learning/health-economics-outcome-research/Non-Governmental-Organizations-NGOs-Public-Health-Bodies.png",
+  },
 ];
 
 export const HealthEconomicsOutcomeTestimonials = [
@@ -107,14 +107,32 @@ export const HealthEconomicsOutcomeFaqs = [
   },
   {
     question: "Who can benefit from Pubrica's HEOR services?",
-    answer:
-      "Our HEOR services support pharmaceutical and biotechnology companies, medical device manufacturers, healthcare providers, payers and insurance organizations, policymakers, HTA agencies, academic researchers, and healthcare institutions seeking evidence-based decision-making.",
+    answer: "Our HEOR services support:",
+    points: [
+      "Pharmaceutical and biotechnology companies",
+      "Medical device manufacturers",
+      "Healthcare providers",
+      "Payers and insurance organizations",
+      "Policymakers",
+      "HTA agencies",
+      "Academic researchers",
+      "Healthcare institutions seeking evidence-based decision-making",
+    ],
   },
   {
     question:
       "What types of studies are included in Pubrica's HEOR services?",
-    answer:
-      "We provide cost-effectiveness analysis (CEA), cost-utility analysis (CUA), budget impact analysis (BIA), real-world evidence (RWE) studies, patient-reported outcomes (PRO) research, systematic literature reviews, meta-analyses, and Health Technology Assessment (HTA) support.",
+    answer: "We provide:",
+    points: [
+      "Cost-effectiveness analysis (CEA)",
+      "Cost-utility analysis (CUA)",
+      "Budget impact analysis (BIA)",
+      "Real-world evidence (RWE) studies",
+      "Patient-reported outcomes (PRO) research",
+      "Systematic literature reviews",
+      "Meta-analyses",
+      "Health Technology Assessment (HTA) support",
+    ],
   },
   {
     question:
@@ -123,8 +141,7 @@ export const HealthEconomicsOutcomeFaqs = [
       "HEOR combines economic modeling with real-world evidence to demonstrate clinical and economic value. These insights help organizations optimize pricing strategies, support reimbursement submissions, and strengthen negotiations with payers and regulatory agencies.",
   },
   {
-    question:
-      "How do healthcare providers benefit from HEOR insights?",
+    question: "How do healthcare providers benefit from HEOR insights?",
     answer:
       "HEOR helps healthcare providers evaluate treatment effectiveness, optimize resource allocation, improve patient outcomes, and support evidence-based clinical and policy decisions while managing healthcare costs efficiently.",
   },
@@ -137,8 +154,12 @@ export const HealthEconomicsOutcomeFaqs = [
   {
     question:
       "What makes Pubrica's Health Economics & Outcomes Research services unique?",
-    answer:
-      "Pubrica combines multidisciplinary expertise in health economics, biostatistics, epidemiology, and clinical research with compliance to ISPOR, HTA, and global regulatory standards. Our end-to-end support covers study design, economic modeling, data analysis, scientific writing, and publication.",
+    answer: "Pubrica combines:",
+    points: [
+      "Multidisciplinary expertise in health economics, biostatistics, epidemiology, and clinical research",
+      "Compliance with ISPOR, HTA, and global regulatory standards",
+      "End-to-end support covering study design, economic modeling, data analysis, scientific writing, and publication",
+    ],
   },
 ];
 

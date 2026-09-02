@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
+import Link from 'next/link';
 
 interface ReasonItem {
     id: string;
@@ -44,23 +46,18 @@ const reasonsData: ReasonItem[] = [
 ];
 
 export default function PredictiveAnalyticsSection() {
-    const [activeReason, setActiveReason] = useState<string>('informed-decision');
+    const [activeReason, setActiveReason] = useState<string>('');
 
     return (
         <div className="w-full bg-white font-sans text-slate-800">
             {/* ========================================================= */}
             {/* HERO BANNER SECTION                                       */}
             {/* ========================================================= */}
-            <section className="bg-[#0b2b26] text-white py-6 px-4">
-                <div className="max-w-5xl mx-auto border border-emerald-100/30 rounded-xs p-8 text-center bg-black/10 backdrop-blur-xs">
-                    <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-white">
-                        Predictive Analytics
-                    </h1>
-                    <p className="max-w-3xl mx-auto text-xs md:text-sm text-emerald-50/90 leading-relaxed font-light">
-                        Our data scientists use machine learning techniques to evaluate historical and real-time data to analyse and identify trends or red flags that may lead to improved diagnoses and treatment.
-                    </p>
-                </div>
-            </section>
+            <HeroBanner
+                title="Predictive Analytics"
+                description="Our data scientists use machine learning techniques to evaluate historical and real-time data to analyse and identify trends or red flags that may lead to improved diagnoses and treatment."
+                headingAs="h1"
+            />
 
             {/* ========================================================= */}
             {/* MAIN OVERVIEW & KEY APPLICATIONS                          */}
@@ -75,7 +72,13 @@ export default function PredictiveAnalyticsSection() {
                 </p>
 
                 <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-8 max-w-5xl">
-                    <span className="text-sky-600 font-medium">Predictive analytics</span> uses statistical modeling, machine learning, and advanced data science techniques to predict future outcomes, trends, and facilitate evidence-based decision-making. At Pubrica, we combine domain expertise with cutting-edge analytical tools to help researchers, clinicians, and businesses uncover patterns in data and forecast future possibilities with precision.
+                    <Link
+                        href="/academy/predictive-analysis/predictive-analysis-in-research/"
+                        className="!text-blue-600 no-underline"
+                    >
+                        Predictive analytics
+                    </Link>{' '}
+                    uses statistical modeling, machine learning, and advanced data science techniques to predict future outcomes, trends, and facilitate evidence-based decision-making. At Pubrica, we combine domain expertise with cutting-edge analytical tools to help researchers, clinicians, and businesses uncover patterns in data and forecast future possibilities with precision.
                 </p>
 
                 {/* Content & Image Grid */}
@@ -125,7 +128,7 @@ export default function PredictiveAnalyticsSection() {
 
                         {/* CTA Button */}
                         <div className="pt-4">
-                          <GetFreeQuoteButton/>
+                            <GetFreeQuoteButton />
                         </div>
                     </div>
 
@@ -133,9 +136,9 @@ export default function PredictiveAnalyticsSection() {
                     <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
                         <div className="relative w-full max-w-md h-[280px] md:h-[320px]">
                             {/* Background dark frame container offset */}
-                            <div className="absolute top-4 left-4 w-full h-full bg-[#113830] rounded-2xl" />
+                            <div className="absolute top-4 left-4 w-full h-full rounded-2xl" />
                             {/* Image Container */}
-                            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-md z-10">
+                            <div className="relative w-full h-full rounded-2xl overflow-hidden z-10">
                                 <Image
                                     src="/images/data-analytics-machine-learning/predictive-analytics/poster-presentation-1-1.webp"
                                     alt="Predictive analytics laptop dashboard displaying charts"

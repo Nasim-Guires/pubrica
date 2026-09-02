@@ -10,6 +10,8 @@ import {
     ArrowDown,
     ArrowLeft,
 } from 'lucide-react';
+import ServiceBanner from '@/components/common/ServiceBanner';
+import { PubricaSampleWorkCard } from '@/components/common/PubricaSampleWorkCardProps';
 
 // --- DATA ARRAYS ---
 
@@ -275,16 +277,13 @@ export default function OurApproachSectionHealthEconomicsOutcomeResearch() {
             {/* =========================================
             SECTION 3: GREEN BANNER
       ========================================= */}
-            <section className="bg-[#0A322C] text-white py-6 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-6xl mx-auto text-center">
-                    <h2 className="text-2xl sm:text-3xl font-bold mb-6">
-                        Accelerate Your Health Economics & Outcome Research Modeling with Pubrica
-                    </h2>
-                    <p className="text-sm sm:text-base leading-relaxed text-gray-100 max-w-5xl mx-auto">
-                        Pubrica's HEOR modeling services deliver comprehensive analysis, refinement, optimization, and quality assurance, ensuring precision and reliability. Our experts specialize in cost-effectiveness models, budget impact analyses, Markov and decision-analytic models, and other advanced frameworks to generate robust insights. With scientifically validated models, we help stakeholders drive strategic healthcare outcomes, value demonstration, and informed economic decision-making.
-                    </p>
-                </div>
-            </section>
+            <ServiceBanner
+                imageSrc="/images/icons/Satisfaction_Guarantee.webp"
+                imageAlt="100% Satisfaction Guarantee"
+                heading="Accelerate Your Health Economics & Outcome Research Modeling with Pubrica"
+                description="Pubrica's HEOR modeling services deliver comprehensive analysis, refinement, optimization, and quality assurance, ensuring precision and reliability. Our experts specialize in cost-effectiveness models, budget impact analyses, Markov and decision-analytic models, and other advanced frameworks to generate robust insights. With scientifically validated models, we help stakeholders drive strategic healthcare outcomes, value demonstration, and informed economic decision-making."
+                showQuoteButton={false}
+            />
 
             {/* =========================================
             SECTION 4: COMPLIANCE STANDARDS
@@ -321,43 +320,36 @@ export default function OurApproachSectionHealthEconomicsOutcomeResearch() {
             {/* =========================================
             SECTION 5: SAMPLE WORK / REPORT DOWNLOAD
       ========================================= */}
-            <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-                <div className="bg-[#EBF7F2] rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 lg:gap-12">
-                    {/* Left Column: Image */}
-                    <div className="w-full md:w-5/12 relative aspect-[4/3] rounded-xl overflow-hidden shadow-md">
-                        <Image
-                            src="/images/data-analytics-machine-learning/health-economics-outcome-research/Health-Economics-Outcome-Research.png"
-                            alt="Health Economics & Outcome Research Sample Work"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
-
-                    {/* Right Column: Content */}
-                    <div className="w-full md:w-7/12 flex flex-col space-y-6">
-                        <div>
-                            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
-                                Health Economics & Outcome Research Sample Work
-                            </h3>
-                            <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white font-medium text-sm px-6 py-2.5 rounded-full transition-colors duration-200">
-                                Discover More
-                            </Link>
-                        </div>
-
-                        <div className="pt-2">
-                            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
-                                Download the full Report Now
-                            </h3>
-                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
-                                Explore our Health Economics & Outcome Research samples, designed to showcase evidence-based models, rigorous data analysis, and alignment with scientific and regulatory standards, delivering meaningful, decision-ready insights for publications and healthcare value assessment.
-                            </p>
-                            <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white font-medium text-sm px-6 py-2.5 rounded-full transition-colors duration-200">
-                                Discover More
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <PubricaSampleWorkCard
+                bookCoverImage={{
+                    src: "/images/data-analytics-machine-learning/health-economics-outcome-research/Health-Economics-Outcome-Research.png",
+                    alt: "Health Economics & Outcome Research Sample Work",
+                    width: 600,
+                    height: 450,
+                }}
+                sections={[
+                    {
+                        heading: "Health Economics & Outcome Research Sample Work",
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work",
+                        },
+                    },
+                    {
+                        heading: "Download the full Report Now",
+                        descriptionSegments: [
+                            {
+                                text: "Explore our Health Economics & Outcome Research samples, designed to showcase evidence-based models, rigorous data analysis, and alignment with scientific and regulatory standards, delivering meaningful, decision-ready insights for publications and healthcare value assessment.",
+                            },
+                        ],
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work",
+                        },
+                    },
+                ]}
+                footerDisclaimerSegments={[]}
+            />
 
         </div>
     );

@@ -81,21 +81,41 @@ export const customerSegmentationTestimonials = [
   },
 ];
 
+
+
+
+
 export const customerSegmentationFaqs = [
   {
     question: "Why is customer segmentation important?",
-    answer:
-      "Customer segmentation helps businesses identify high-value customers, tailor marketing campaigns for maximum impact, improve customer retention, discover cross-sell and upsell opportunities, and make data-driven strategic decisions.",
+    answer: "Segmentation helps businesses:",
+    points: [
+      "Identify high-value customers",
+      "Tailor marketing campaigns for maximum impact",
+      "Improve customer retention",
+      "Discover cross-sell and upsell opportunities",
+      "Make data-driven strategic decisions",
+    ],
   },
   {
     question: "What types of customer segmentation do you offer?",
-    answer:
-      "We provide customer segmentation solutions including Chi-squared Automatic Interaction Detectors (CHAID), medical device market segmentation, biotech, pharmaceutical, and hospital market segmentation, and patient segmentation.",
+    answer: "We provide:",
+    points: [
+      "Chi-squared Automatic Interaction Detectors (CHAID)",
+      "Medical device market segmentation",
+      "Biotech, pharmaceutical, and hospital market segmentation",
+      "Patient segmentation",
+    ],
   },
   {
     question: "How do you perform customer segmentation?",
-    answer:
-      "We use a combination of data collection and cleaning from CRM systems, surveys, and analytics platforms, statistical and machine learning techniques such as clustering and classification, visualization tools for clear segment mapping, and actionable insights with strategic recommendations.",
+    answer: "We use a combination of:",
+    points: [
+      "Data collection and cleaning from CRM systems, surveys, and analytics platforms",
+      "Statistical and machine learning techniques such as clustering and classification",
+      "Visualization tools for clear segment mapping",
+      "Actionable insights and strategic recommendations",
+    ],
   },
   {
     question: "Can segmentation help improve marketing ROI?",

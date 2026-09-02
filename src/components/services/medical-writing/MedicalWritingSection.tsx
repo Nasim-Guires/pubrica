@@ -1,4 +1,5 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 import Link from "next/link";
 import React from "react";
 
@@ -6,18 +7,11 @@ export default function MedicalWritingSection(): React.ReactElement {
   return (
     <div className="w-full font-sans text-slate-800">
       {/* Dark Hero Banner */}
-      <section className="w-full bg-gradient-to-b from-[#112220] to-[#1a3330] py-7 px-4 sm:px-6 lg:px-12 text-white flex justify-center items-center">
-        <div className="max-w-4xl w-full border border-slate-300/40 rounded-sm p-8 sm:p-10 text-center bg-black/10 backdrop-blur-sm shadow-inner">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 tracking-tight">
-            Medical Writing
-          </h1>
-          <p className="text-xs sm:text-sm lg:text-base text-slate-200 max-w-2xl mx-auto leading-relaxed font-light">
-            Pubrica provides expert medical writing services on manuscripts,
-            regulatory documents, and other educational materials catered for
-            healthcare and research.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Medical Writing"
+        description="Pubrica provides expert medical writing services on manuscripts, regulatory documents, and other educational materials catered for healthcare and research."
+        headingAs="h1"
+      />
 
       {/* Main Content Section */}
       <section className="w-full bg-[#f8f9f9] py-6 px-4 sm:px-6 lg:px-12">
@@ -114,13 +108,13 @@ export default function MedicalWritingSection(): React.ReactElement {
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap items-center gap-4 pt-4">
-           <GetFreeQuoteButton/>
+          <div className="flex flex-wrap items-center gap-8 pt-4">
+            <GetFreeQuoteButton />
             <Link
               href="/uploads/medical-writing/Medical-Writing_compressed.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#b30000] hover:bg-[#8e0000] text-white text-xs sm:text-sm font-bold py-2.5 px-6 rounded-full transition-colors duration-200 shadow-sm cursor-pointer"
+              className="bg-red-600 text-white text-sm font-bold px-6 py-3 rounded hover:bg-white hover:text-black transition-colors"
             >
               View Brochure
             </Link>

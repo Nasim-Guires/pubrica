@@ -3,20 +3,23 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function AlgorithmDevelopmentService() {
     // Accordion state for "How We Do" section (null = all closed by default)
     const [openHowWeDo, setOpenHowWeDo] = useState<number | null>(null);
 
-    // Accordion state for "Our Expertise" grid cards
-    const [openExpertiseCard, setOpenExpertiseCard] = useState<number | null>(null);
+    // Accordion state for "Our Expertise" grid cards (Array allows independent multi-card opening)
+    const [openExpertiseCards, setOpenExpertiseCards] = useState<number[]>([]);
 
     const toggleHowWeDo = (index: number) => {
         setOpenHowWeDo(openHowWeDo === index ? null : index);
     };
 
-    const toggleExpertiseCard = (index: number) => {
-        setOpenExpertiseCard(openExpertiseCard === index ? null : index);
+    const toggleExpertiseCard = (id: number) => {
+        setOpenExpertiseCards((prev) =>
+            prev.includes(id) ? prev.filter((cardId) => cardId !== id) : [...prev, id]
+        );
     };
 
     // Data for "How We Do" Accordions
@@ -111,26 +114,18 @@ export default function AlgorithmDevelopmentService() {
     return (
         <main className="w-full bg-[#f8fbf9] text-[#222222] font-sans">
             {/* 1. HERO HEADER BANNER SECTION */}
-            <section className="bg-[#1b3d36] text-white py-6 px-4 sm:px-8 text-center">
-                <div className="max-w-5xl mx-auto border border-[#3b6058] p-8 rounded-lg bg-[#193832]">
-                    <h1 className="text-2xl md:text-4xl font-bold tracking-wide mb-4">
-                        Algorithm Development for Training and Optimisation
-                    </h1>
-                    <p className="text-sm md:text-base text-gray-200 max-w-4xl mx-auto leading-relaxed">
-                        Pubrica specializes in algorithm development for training and
-                        optimization. Our expert team ensures robust and efficient
-                        algorithms tailored to your specific needs, driving optimal
-                        performance in various applications.
-                    </p>
-                </div>
-            </section>
+            <HeroBanner
+                title="Algorithm Development for Training and Optimisation"
+                description="Pubrica specializes in algorithm development for training and optimization. Our expert team ensures robust and efficient algorithms tailored to your specific needs, driving optimal performance in various applications."
+                headingAs="h1"
+            />
 
             {/* 2. OVERVIEW & INTRO SECTION */}
             <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 md:px-8">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-4">
                     Custom Algorithm Development for Healthcare, Life Sciences & Beyond
                 </h2>
-                <p className="text-[#3b6058] font-semibold text-sm md:text-base mb-6">
+                <p className="text-[#3b6058] text-sm md:text-base mb-6">
                     From AI and deep learning to data mining and optimization, Pubrica
                     builds intelligent algorithms that accelerate discovery and improve
                     decision-making.
@@ -144,10 +139,10 @@ export default function AlgorithmDevelopmentService() {
                             handling vast, complex datasets, ensuring privacy and regulatory
                             compliance, and converting raw information into actionable
                             insights. At Pubrica, we specialize in custom{" "}
-                            <Link href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-blue-600 font-medium no-underline hover:no-underline">
-                                algorithm development
+                            <Link href="/subject-matter-experts/algorithm/medical-insights-comprehensive-medical-algorithms/" className="text-blue-600">
+                                algorithm
                             </Link>{" "}
-                            for scientific, healthcare, pharma, medical device, food, and
+                            development for scientific, healthcare, pharma, medical device, food, and
                             nutraceutical applications.
                         </p>
                         <p>
@@ -168,32 +163,32 @@ export default function AlgorithmDevelopmentService() {
                             </h3>
                             <ul className="space-y-2 list-disc list-inside text-gray-700 text-sm md:text-base">
                                 <li>
-                                    <strong className="text-gray-900">
+                                    <span className="text-gray-900">
                                         Domain-specific focus:
-                                    </strong>{" "}
+                                    </span>{" "}
                                     Healthcare, life sciences, pharma, medical devices, food &
                                     nutraceuticals.
                                 </li>
                                 <li>
-                                    <strong className="text-gray-900">
+                                    <span className="text-gray-900">
                                         Proven experience:
-                                    </strong>{" "}
+                                    </span>{" "}
                                     Over 350+{" "}
-                                    <Link href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-blue-600 no-underline hover:no-underline">
+                                    <Link href="/academy/algorithm-development/ai-algorithm-development-intelligent-systems/" className="text-blue-600">
                                         algorithms
                                     </Link>{" "}
                                     developed and optimized for global clients.
                                 </li>
                                 <li>
-                                    <strong className="text-gray-900">
+                                    <span className="text-gray-900">
                                         Expertise in AI, machine learning, deep learning,
                                         optimization, and data visualization.
-                                    </strong>
+                                    </span>
                                 </li>
                                 <li>
-                                    <strong className="text-gray-900">
+                                    <span className="text-gray-900">
                                         End-to-end support:
-                                    </strong>{" "}
+                                    </span>{" "}
                                     From design, training, and validation to implementation.
                                 </li>
                             </ul>
@@ -223,7 +218,7 @@ export default function AlgorithmDevelopmentService() {
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-2">
                     How We Do
                 </h2>
-                <p className="text-[#3b6058] font-semibold text-sm md:text-base mb-4">
+                <p className="text-[#3b6058] text-sm md:text-base mb-4">
                     Scientific Algorithm Development for Training and Optimization
                 </p>
                 <p className="text-gray-700 text-sm md:text-base max-w-4xl mb-8 leading-relaxed">
@@ -260,10 +255,10 @@ export default function AlgorithmDevelopmentService() {
                                     <button
                                         onClick={() => toggleHowWeDo(index)}
                                         aria-expanded={isOpen}
-                                        className="w-full flex justify-between items-center text-left text-base md:text-lg font-bold text-[#1b3d36] hover:text-teal-700 focus:outline-none"
+                                        className="w-full flex justify-between items-center text-left text-base md:text-lg text-[#1b3d36] hover:text-teal-700 focus:outline-none"
                                     >
                                         <span>{item.title}</span>
-                                        <span className="text-xl font-bold ml-2">
+                                        <span className="text-xl ml-2">
                                             {isOpen ? "-" : "+"}
                                         </span>
                                     </button>
@@ -301,36 +296,35 @@ export default function AlgorithmDevelopmentService() {
                     real-world impact:
                 </p>
 
-                {/* 2-Column Responsive Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* 3-Column Grid matching the reference layout */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-start">
                     {expertiseCards.map((card) => {
-                        const isOpen = openExpertiseCard === card.id;
+                        const isOpen = openExpertiseCards.includes(card.id);
                         return (
                             <div
                                 key={card.id}
-                                className="bg-[#edf6f2] rounded-md p-4 transition-all duration-200 hover:shadow-sm"
+                                className="bg-[#f0fdf6] rounded-xl p-4 transition-all duration-200 border border-[#e1f7eb]"
                             >
                                 <button
                                     onClick={() => toggleExpertiseCard(card.id)}
                                     aria-expanded={isOpen}
-                                    className="w-full flex items-center justify-between text-left focus:outline-none"
+                                    className="w-full flex items-center justify-between text-left focus:outline-none cursor-pointer"
                                 >
                                     <div className="flex items-center space-x-3">
                                         <span className="relative w-8 h-8 shrink-0">
                                             <Image src={card.iconSrc} alt="" fill className="object-contain" />
                                         </span>
-                                        <h3 className="text-sm md:text-base font-bold text-[#1b3d36]">
+                                        <h3 className="text-sm md:text-base font-bold text-[#1b3d36] leading-snug">
                                             {card.title}
                                         </h3>
                                     </div>
-                                    <span className="text-lg font-bold text-[#1b3d36] ml-2">
-                                        {isOpen ? "-" : "+"}
+                                    <span className="text-lg font-bold text-[#1b3d36] ml-2 shrink-0">
+                                        {isOpen ? "−" : "+"}
                                     </span>
                                 </button>
 
-                                {/* Closed by default. Expanded when state matches card.id */}
                                 {isOpen && (
-                                    <div className="mt-3 pt-3 border-t border-teal-200 text-xs md:text-sm text-gray-700 leading-relaxed">
+                                    <div className="mt-3 pt-3 border-t border-[#d3f4e2] text-xs md:text-sm text-gray-700 leading-relaxed">
                                         {card.content}
                                     </div>
                                 )}

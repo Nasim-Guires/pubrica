@@ -4,6 +4,9 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowDown, ArrowLeft } from "lucide-react";
+import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
+import CommonPackages, { PackageItem } from "@/components/common/CommonPackages";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function AlgorithmWorkflowAndPackages() {
   // Data for 7-Step Workflow Process
@@ -53,29 +56,29 @@ export default function AlgorithmWorkflowAndPackages() {
   ];
 
   // Data for Pricing Packages matching exact design
-  const packages = [
+  const packagesData: PackageItem[] = [
     {
-      badgeSrc: "/images/editing-and-translation/basic-pacakge.png",
-      badgeColor: "text-[#d9a24a] border-[#e2b05c]",
+      icon: "/images/editing-and-translation/basic-pacakge.png",
       title: "Basic",
       subtitle: "Foundational Algorithm Development",
-      bgColor: "bg-[#d8e3e2]", // Exact muted teal-gray card background
-      idealFor: "Startups, small research projects, or proof-of-concept studies.",
+      idealFor:
+        "Startups, small research projects, or proof-of-concept studies.",
       includes: [
         "Initial requirement analysis and feasibility study",
         "Basic algorithm design for structured datasets",
         "Standard model training and validation",
         "Performance report and recommendations",
       ],
-      timeline: "2–3 weeks",
+      turnaround: "2–3 weeks",
+      cardBgColor: "#d8e3e2",
+      titleColor: "#1b3d36",
     },
     {
-      badgeSrc: "/images/publication-support/poster-preparation/S.png",
-      badgeColor: "text-[#d9a24a] border-[#e2b05c]",
+      icon: "/images/publication-support/poster-preparation/S.png",
       title: "Standard",
       subtitle: "Optimised Algorithm Development",
-      bgColor: "bg-[#d8c3df]", // Muted lilac/purple card background
-      idealFor: "Growing enterprises and research groups needing robust solutions.",
+      idealFor:
+        "Growing enterprises and research groups needing robust solutions.",
       includes: [
         "Comprehensive requirement gathering",
         "Design and development of algorithms for structured and unstructured data",
@@ -83,15 +86,16 @@ export default function AlgorithmWorkflowAndPackages() {
         "Integration with existing data pipelines",
         "Performance benchmarking and documentation",
       ],
-      timeline: "4–6 weeks",
+      turnaround: "4–6 weeks",
+      cardBgColor: "#d8c3df",
+      titleColor: "#5b2c6f",
     },
     {
-      badgeSrc: "/images/editing-and-translation/translation-with-editing/pro.webp",
-      badgeColor: "text-[#d9a24a] border-[#e2b05c]",
+      icon: "/images/editing-and-translation/translation-with-editing/pro.webp",
       title: "Premium",
       subtitle: "Advanced & Custom Algorithm Solutions",
-      bgColor: "bg-[#e2cb9c]", // Muted tan/gold card background
-      idealFor: "Large-scale research, enterprise applications, and high-impact projects.",
+      idealFor:
+        "Large-scale research, enterprise applications, and high-impact projects.",
       includes: [
         "Full consultation and strategic planning",
         "Custom algorithm development for multi-modal data",
@@ -100,7 +104,9 @@ export default function AlgorithmWorkflowAndPackages() {
         "Deployment-ready solution with full documentation",
         "Post-deployment support and updates",
       ],
-      timeline: "8–10 weeks",
+      turnaround: "8–10 weeks",
+      cardBgColor: "#e2cb9c",
+      titleColor: "#805826",
     },
   ];
 
@@ -230,120 +236,64 @@ export default function AlgorithmWorkflowAndPackages() {
       </section>
 
       {/* 3. SAMPLE WORK & REPORT DOWNLOAD SECTION */}
-      <section className="bg-[#f0fbf5] py-6 px-4 sm:px-6 md:px-8 border-y border-gray-200">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-
-          {/* Image Section */}
-          <div className="md:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-sm h-64 rounded-xl overflow-hidden shadow-md border border-gray-300">
-              <Image
-                src="/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Algorithm-Development-for-Training-and-Optimisation-Sample-Work.png"
-                alt="Algorithm Development for Training and Optimisation Sample Work"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 400px"
-              />
-            </div>
-          </div>
-
-          {/* Text & CTAs */}
-          <div className="md:col-span-7 space-y-8">
-            <div>
-              <h3 className="text-lg md:text-xl font-bold text-[#1b3d36] mb-3">
-                Algorithm Development for Training and Optimisation Sample Work
-              </h3>
-              <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold py-2.5 px-8 rounded-full transition-colors">
-                Discover More
-              </Link>
-            </div>
-
-            <div>
-              <h3 className="text-lg md:text-xl font-bold text-[#1b3d36] mb-2">
-                Download the full Report Now
-              </h3>
-              <p className="text-xs md:text-sm text-gray-700 leading-relaxed mb-4">
-                Explore our algorithm development sample work, meticulously designed to align with project-specific objectives, domain standards (e.g., ISO/IEC, GDPR, HIPAA), and research timelines, ensuring robust, ethical, and publication-ready outcomes.
-              </p>
-              <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold py-2.5 px-8 rounded-full transition-colors">
-                Discover More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PubricaSampleWorkCard
+        bookCoverImage={{
+          src: "/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Algorithm-Development-for-Training-and-Optimisation-Sample-Work.png",
+          alt: "Algorithm Development for Training and Optimisation Sample Work",
+          width: 600,
+          height: 400,
+        }}
+        sections={[
+          {
+            heading:
+              "Algorithm Development for Training and Optimisation Sample Work",
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work",
+            },
+          },
+          {
+            heading: "Download the full Report Now",
+            descriptionSegments: [
+              {
+                text: "Explore our algorithm development sample work, meticulously designed to align with project-specific objectives, domain standards (e.g., ISO/IEC, GDPR, HIPAA), and research timelines, ensuring robust, ethical, and publication-ready outcomes.",
+              },
+            ],
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work",
+            },
+          },
+        ]}
+        footerDisclaimerSegments={[]}
+      />
 
       {/* 4. OUR PACKAGES SECTION */}
-      <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 md:px-8">
-        <div className="text-center max-w-4xl mx-auto mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-3">
-            Algorithm Development Service – Our Packages
-          </h2>
-          <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-            At Pubrica, we provide comprehensive{" "}
-            <Link href="/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation" className="text-blue-600 font-medium no-underline hover:no-underline">
-              Algorithm Development Services
-            </Link>{" "}
-            tailored to meet the unique needs of researchers, healthcare professionals, and technology developers. Our packages are designed to ensure high-performance, scalable, and publication-ready algorithm solutions.
-          </p>
+      {/* PACKAGES & QUOTE BUTTON SECTION */}
+      <div className="border-t border-gray-200 pt-2 pb-6 bg-white">
+        <CommonPackages
+          title="Algorithm Development Service – Our Packages"
+          description={
+            <>
+              At Pubrica, we provide comprehensive{" "}
+              <Link
+                href="/academy/algorithm-development/ai-algorithm-development-intelligent-systems/"
+                className="text-blue-600 font-medium no-underline hover:no-underline"
+              >
+                Algorithm Development Services
+              </Link>{" "}
+              tailored to meet the unique needs of researchers, healthcare
+              professionals, and technology developers. Our packages are designed to
+              ensure high-performance, scalable, and publication-ready algorithm
+              solutions.
+            </>
+          }
+          packages={packagesData}
+        />
+        <div className="-mt-4 sm:-mt-6">
+          <GetFreeQuoteButton />
         </div>
-
-        {/* 3 Package Cards matching exact design */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-          {packages.map((pkg, idx) => (
-            <div
-              key={idx}
-              className={`${pkg.bgColor} rounded-md p-6 flex flex-col justify-between shadow-sm border border-gray-200/50`}
-            >
-              <div>
-                {/* Header Banner Inside Card */}
-                <div className="bg-white/80 backdrop-blur-sm rounded-md p-3 flex items-center space-x-3 mb-6 shadow-xs">
-                  <div className="relative w-9 h-9 shrink-0">
-                    <Image src={pkg.badgeSrc} alt={`${pkg.title} package`} fill className="object-contain" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-base text-[#1b3d36] leading-tight">
-                      {pkg.title}
-                    </h3>
-                    <p className="text-[11px] text-gray-600 font-medium">
-                      {pkg.subtitle}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Ideal For */}
-                <div className="mb-5 flex items-start space-x-2 text-xs md:text-sm text-gray-800">
-                  <span className="font-bold text-base leading-none">➔</span>
-                  <p>
-                    <strong className="text-gray-900 font-bold">Ideal For:</strong>{" "}
-                    {pkg.idealFor}
-                  </p>
-                </div>
-
-                {/* Includes List */}
-                <div className="mb-6">
-                  <div className="flex items-center space-x-2 text-xs md:text-sm text-gray-900 font-bold mb-3">
-                    <span className="font-bold text-base leading-none">➔</span>
-                    <span>Includes:</span>
-                  </div>
-                  <ul className="space-y-3 text-xs md:text-sm text-gray-800 pl-6">
-                    {pkg.includes.map((item, itemIdx) => (
-                      <li key={itemIdx} className="leading-snug list-none relative">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* Timeline Footer */}
-              <div className="pt-4 flex items-center space-x-2 text-xs md:text-sm font-bold text-gray-900 border-t border-black/10">
-                <span className="font-bold text-base leading-none">➔</span>
-                <span>Timeline: {pkg.timeline}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      </div>
     </main>
   );
 }
