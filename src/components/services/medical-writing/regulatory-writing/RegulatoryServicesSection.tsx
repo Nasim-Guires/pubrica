@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { PubricaSampleWorkCard } from '@/components/common/PubricaSampleWorkCardProps';
+import ServiceBanner from '@/components/common/ServiceBanner';
 
 const RW = '/images/medical-writing/regulatory-writing';
 
@@ -244,63 +246,82 @@ export default function RegulatoryWritingPage() {
                 </div>
             </div>
 
-            {/* DISCIPLINES WE SUPPORT ACCORDION SECTION */}
-            <div className="max-w-4xl mx-auto px-4 mt-20">
-                <h2 className="text-xl font-bold text-[#0B3C3D] text-center mb-2">
-                    Disciplines We Support
-                </h2>
-                <p className="text-xs text-gray-600 text-center max-w-2xl mx-auto mb-8">
-                    With our regulatory writing services, we work across a broad range of scientific, clinical, and technical disciplines.
-                    Whether you are developing a new therapy, applying for a medical device, or need safety documents, our subject matter expertise indicates your regulatory documents will be accurate, compliant, and purposefully constructed for specific global health authority requirement.
-                </p>
+            {/* DISCIPLINES WE SUPPORT SECTION (Two-Column Layout with Image Space) */}
+            <div className="max-w-6xl mx-auto px-4 mt-20">
+                <div className="text-center max-w-3xl mx-auto mb-10">
+                    <h2 className="text-xl md:text-2xl font-bold text-[#0B3C3D] mb-2">
+                        Disciplines We Support
+                    </h2>
+                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                        With our regulatory writing services, we work across a broad range of scientific, clinical, and technical disciplines.
+                        Whether you are developing a new therapy, applying for a medical device, or need safety documents, our subject matter expertise indicates your regulatory documents will be accurate, compliant, and purposefully constructed for specific global health authority requirement.
+                    </p>
+                </div>
 
-                <div className="border-t border-gray-200">
-                    {accordionData.map((item) => {
-                        const isOpen = openAccordions.includes(item.id);
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    {/* Left Column: Image Space */}
+                    <div className="lg:col-span-5 relative w-full h-[380px] rounded-lg overflow-hidden shadow-sm">
+                        <Image
+                            src="/images/medical-writing/Pharmaceutical-Sciences.webp" // Update filename if needed
+                            alt="Disciplines We Support"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 1024px) 100vw, 40vw"
+                        />
+                    </div>
 
-                        return (
-                            <div key={item.id} className="border-b border-gray-200">
-                                <button
-                                    type="button"
-                                    onClick={() => toggleAccordion(item.id)}
-                                    className="w-full flex justify-between items-center py-3.5 text-xs font-semibold text-gray-800 hover:text-[#0B3C3D] transition-colors focus:outline-none"
-                                >
-                                    <span className="flex items-center gap-2">
-                                        <span className="text-gray-400 font-normal">{isOpen ? '-' : '+'}</span>
-                                        <span>{item.title}</span>
-                                    </span>
-                                </button>
+                    {/* Right Column: Accordion */}
+                    <div className="lg:col-span-7 border-t border-gray-200">
+                        {accordionData.map((item) => {
+                            const isOpen = openAccordions.includes(item.id);
 
-                                {/* Animated Height Container */}
-                                <div
-                                    className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100 pb-4' : 'grid-rows-[0fr] opacity-0'
-                                        }`}
-                                >
-                                    <div className="overflow-hidden text-xs text-gray-600 leading-relaxed pl-4">
-                                        {item.content}
+                            return (
+                                <div key={item.id} className="border-b border-gray-200">
+                                    <button
+                                        type="button"
+                                        onClick={() => toggleAccordion(item.id)}
+                                        className="w-full flex justify-between items-center py-4 text-xs md:text-sm font-semibold text-gray-800 hover:text-[#0B3C3D] transition-colors focus:outline-none"
+                                    >
+                                        <span className="flex items-center gap-2">
+                                            <span className="text-[#0B3C3D] font-bold text-sm">{isOpen ? '-' : '+'}</span>
+                                            <span>{item.title}</span>
+                                        </span>
+                                    </button>
+
+                                    {/* Animated Height Container */}
+                                    <div
+                                        className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100 pb-4' : 'grid-rows-[0fr] opacity-0'
+                                            }`}
+                                    >
+                                        <div className="overflow-hidden text-xs md:text-sm text-gray-600 leading-relaxed pl-5">
+                                            {item.content}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
 
-            {/* WRITING BY REGULATORY NEED / TYPE SECTION */}
+            {/* WRITING BY REGULATORY NEED / TYPE SECTION (Larger Text) */}
             <div className="max-w-4xl mx-auto px-4 mt-20 mb-20">
-                <h2 className="text-xl font-bold text-[#0B3C3D] text-center mb-2">
+                <h2 className="text-2xl font-bold text-[#0B3C3D] text-center mb-3">
                     Writing by Regulatory Need / Type
                 </h2>
-                <p className="text-xs text-gray-600 text-center max-w-2xl mx-auto mb-8">
+                <p className="text-sm text-gray-700 text-center max-w-2xl mx-auto mb-3">
                     Choose a regulatory writing service based on your development phase, type of document, submission model, or worldwide regulatory authority.
+                </p>
+                <p className="text-sm text-gray-700 text-center max-w-3xl mx-auto mb-10 leading-relaxed">
+                    At Pubrica, we recognize that regulatory writing is not a cookie-cutter approach. While you may be preparing for a first-in-human trial or responding to post-marketing commitments, our solutions are framed within the exact regulatory, clinical, and scientific context of what you are making. Our services are based upon global standards such as ICH, FDA, EMA, MHRA, PMDA, and others. Whether you need a clinical study protocol, CTD module, or risk management plan, we get it submission-ready, scientifically accurate, and regulatory compliant.
                 </p>
 
                 {/* 3 COLUMNS WITH COLOR ACCENT BORDERS */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                     {/* Box 1 */}
-                    <div className="bg-white border-t-2 border-t-amber-300 border border-gray-200 p-4 rounded-b-md shadow-sm text-xs">
-                        <h4 className="font-bold text-gray-800 mb-2">By Regulatory Stage</h4>
-                        <ul className="space-y-1 text-gray-600">
+                    <div className="bg-white border-t-4 border-t-amber-300 border border-gray-200 p-5 rounded-b-md shadow-sm">
+                        <h4 className="font-bold text-gray-900 text-base mb-3">By Regulatory Stage</h4>
+                        <ul className="space-y-2 text-sm text-gray-700">
                             <li>• Preclinical activities to post-marketing documents</li>
                             <li>• Phase I – IV clinical trial support</li>
                             <li>• NDA, MAA, and BLA submissions</li>
@@ -308,79 +329,92 @@ export default function RegulatoryWritingPage() {
                     </div>
 
                     {/* Box 2 */}
-                    <div className="bg-white border-t-2 border-t-purple-300 border border-gray-200 p-4 rounded-b-md shadow-sm text-xs">
-                        <h4 className="font-bold text-gray-800 mb-2">By Document Type</h4>
-                        <ul className="space-y-1 text-gray-600">
-                            <li>• Protocols, IB/PB, IBs, CTDs, RMPs, CSRs</li>
+                    <div className="bg-white border-t-4 border-t-purple-300 border border-gray-200 p-5 rounded-b-md shadow-sm">
+                        <h4 className="font-bold text-gray-900 text-base mb-3">By Document Type</h4>
+                        <ul className="space-y-2 text-sm text-gray-700">
+                            <li>• Protocols, CSRs, IBs, CTDs, RMPs, CERs</li>
                             <li>• Briefing books and regulatory responses</li>
                         </ul>
                     </div>
 
                     {/* Box 3 */}
-                    <div className="bg-white border-t-2 border-t-teal-300 border border-gray-200 p-4 rounded-b-md shadow-sm text-xs">
-                        <h4 className="font-bold text-gray-800 mb-2">By Regulatory Model & Standards</h4>
-                        <ul className="space-y-1 text-gray-600">
+                    <div className="bg-white border-t-4 border-t-teal-300 border border-gray-200 p-5 rounded-b-md shadow-sm">
+                        <h4 className="font-bold text-gray-900 text-base mb-3">By Regulatory Model & Standards</h4>
+                        <ul className="space-y-2 text-sm text-gray-700">
                             <li>• FDA, EMA, PMDA, TGA, Health Canada, EU MDR</li>
-                            <li>• eCTD format and ICH & GCP guidelines</li>
-                            <li>• Dossier harmonization, where applicable, to support cross-regional submissions</li>
+                            <li>• eCTD format and ICH & GVP guidelines</li>
+                            <li>• Dossier harmonization, where applicable, to support cross regional submissions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                {/* ADD-ONS AND TAILORED SERVICES 2-COLUMN BLOCK */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    {/* (Optional Add-Ons) */}
+                    <div className="bg-white border border-gray-200 p-5 rounded-md shadow-sm">
+                        <h4 className="font-bold text-gray-900 text-base mb-3">(Optional Add-Ons)</h4>
+                        <p className="font-semibold text-gray-800 text-sm mb-2">Advantages of Tailored Writing:</p>
+                        <ul className="space-y-2 text-sm text-gray-700">
+                            <li>• Guaranteed to be compliant with current regulatory guidelines</li>
+                            <li>• Enhances quality of submissions and expedites approval timelines</li>
+                            <li>• Minimizes chances of rejection / resubmission</li>
+                        </ul>
+                    </div>
+
+                    {/* Our services are tailored to: */}
+                    <div className="bg-white border border-gray-200 p-5 rounded-md shadow-sm">
+                        <h4 className="font-bold text-gray-900 text-base mb-3">Our services are tailored to:</h4>
+                        <ul className="space-y-2 text-sm text-gray-700">
+                            <li>• The stage of the product development life cycle (from preclinical to post-market)</li>
+                            <li>• Type of regulatory document being submitted (IND, CSR, CER, etc.)</li>
+                            <li>• Requirements of the regulatory authority (FDA, EMA, etc.)</li>
+                            <li>• Regional requirements (eCTD, EU MDR, etc.)</li>
                         </ul>
                     </div>
                 </div>
 
                 {/* SAMPLE WORK CALLOUT CARD */}
-                <div className="bg-[#f0f7f6] rounded-xl p-6 border border-teal-100 flex flex-col md:flex-row items-center justify-between gap-6 mt-12">
-                    <div className="relative w-full md:w-1/3 h-40 rounded-lg overflow-hidden bg-gray-200">
-                        <Image
-                            src={`${RW}/Regulatory-writing-Sample-Work.png`}
-                            alt="Regulatory Writing Sample Work"
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 768px) 100vw, 33vw"
-                        />
-                    </div>
-
-                    <div className="w-full md:w-2/3 space-y-4">
-                        <div>
-                            <h3 className="text-sm font-bold text-[#0B3C3D] mb-2">Regulatory Writing Sample Work</h3>
-                            <button
-                                type="button"
-                                className="w-full bg-black text-white text-xs font-semibold py-2 px-4 rounded-full hover:bg-gray-800 transition-colors"
-                            >
-                                Discover more
-                            </button>
-                        </div>
-
-                        <div>
-                            <h3 className="text-sm font-bold text-[#0B3C3D] mb-1">Download the full Report Now</h3>
-                            <ul className="text-xs text-gray-600 space-y-0.5 mb-3">
-                                <li>• Literature review</li>
-                                <li>• Manuscript (with journal formatting)</li>
-                                <li>• Systematic review with PRISMA</li>
-                                <li>• Thesis chapter</li>
-                            </ul>
-                            <button
-                                type="button"
-                                className="w-full bg-black text-white text-xs font-semibold py-2 px-4 rounded-full hover:bg-gray-800 transition-colors"
-                            >
-                                Discover More
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <PubricaSampleWorkCard
+                    bookCoverImage={{
+                        src: `${RW}/Regulatory-writing-Sample-Work.png`,
+                        alt: "Regulatory Writing Sample Work",
+                        width: 600,
+                        height: 400,
+                    }}
+                    sections={[
+                        {
+                            heading: "Regulatory Writing Sample Work",
+                            button: {
+                                label: "Discover more",
+                                url: "/contact-us/",
+                            },
+                        },
+                        {
+                            heading: "Download the full Report Now",
+                            descriptionSegments: [
+                                { text: "• Literature review\n" },
+                                { text: "• Manuscript (with journal formatting)\n" },
+                                { text: "• Systematic review with PRISMA\n" },
+                                { text: "• Thesis chapter" },
+                            ],
+                            button: {
+                                label: "Discover More",
+                                url: "/contact-us/",
+                            },
+                        },
+                    ]}
+                    footerDisclaimerSegments={[]}
+                />
             </div>
 
             {/* BOTTOM CTA BANNER */}
-            <div className="w-full bg-[#03231B] text-white py-8 px-4 text-center">
-                <div className="max-w-4xl mx-auto space-y-2">
-                    <h2 className="text-lg md:text-xl font-bold">
-                        Speed Up Your Regulatory Writing with Pubrica
-                    </h2>
-                    <p className="text-xs text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                        Gain access to your dedicated regulatory writing expert, ensuring high-quality, fully compliant documentation tailored to agency requirements and your development objectives.
-                    </p>
-                </div>
-            </div>
-
+            <ServiceBanner
+                imageSrc="/images/icons/Satisfaction_Guarantee.webp"
+                imageAlt="100% Satisfaction Guarantee"
+                heading="Speed Up Your Regulatory Writing with Pubrica"
+                description="Gain access to your dedicated regulatory writing expert, ensuring high-quality, fully compliant documentation tailored to agency requirements and your development objectives."
+                showQuoteButton={false}
+            />
         </div>
     );
 }

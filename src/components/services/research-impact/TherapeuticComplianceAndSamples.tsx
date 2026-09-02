@@ -1,5 +1,6 @@
 'use client';
 
+import { PubricaSampleWorkCard } from '@/components/common/PubricaSampleWorkCardProps';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -9,6 +10,7 @@ interface TherapeuticArea {
   id: number;
   name: string;
   iconSrc: string;
+  url: string;
 }
 
 interface ComplianceStandard {
@@ -20,14 +22,14 @@ interface ComplianceStandard {
 
 // --- Data: Therapeutic Areas ---
 const therapeuticAreas: TherapeuticArea[] = [
-  { id: 1, name: 'Oncology', iconSrc: '/images/physician-writing-services/Oncology-1-1.png' },
-  { id: 2, name: 'Cardiology', iconSrc: '/images/physician-writing-services/Cardiology-1.png' },
-  { id: 3, name: 'Neurology', iconSrc: '/images/physician-writing-services/patient-education-content/Neurology-1.png' },
-  { id: 4, name: 'Psychiatry', iconSrc: '/images/physician-writing-services/Psychiatry-1.png' },
-  { id: 5, name: 'Pulmonology', iconSrc: '/images/physician-writing-services/Pulmonology-1.png' },
-  { id: 6, name: 'Gastroenterology', iconSrc: '/images/research-impact/Gastroenterology.png' },
-  { id: 7, name: 'Infectious Diseases', iconSrc: '/images/research-impact/Infectious-Diseases.png' },
-  { id: 8, name: 'Paediatrics', iconSrc: '/images/research-impact/Paediatrics.png' },
+  { id: 1, name: 'Oncology', iconSrc: '/images/physician-writing-services/Oncology-1-1.png', url: '/subject-matter-experts/' },
+  { id: 2, name: 'Cardiology', iconSrc: '/images/physician-writing-services/Cardiology-1.png', url: '/subject-matter-experts/cardiology/' },
+  { id: 3, name: 'Neurology', iconSrc: '/images/physician-writing-services/patient-education-content/Neurology-1.png', url: '/subject-matter-experts/neurology/' },
+  { id: 4, name: 'Psychiatry', iconSrc: '/images/physician-writing-services/Psychiatry-1.png', url: '/subject-matter-experts/psychiatry/' },
+  { id: 5, name: 'Pulmonology', iconSrc: '/images/physician-writing-services/Pulmonology-1.png', url: '/subject-matter-experts/' },
+  { id: 6, name: 'Gastroenterology', iconSrc: '/images/research-impact/Gastroenterology.png', url: '/subject-matter-experts/' },
+  { id: 7, name: 'Infectious Diseases', iconSrc: '/images/research-impact/Infectious-Diseases.png', url: '/subject-matter-experts/' },
+  { id: 8, name: 'Paediatrics', iconSrc: '/images/research-impact/Paediatrics.png', url: '/subject-matter-experts/' },
 ];
 
 // --- Data: Compliance Standards ---
@@ -73,12 +75,12 @@ const complianceStandards: ComplianceStandard[] = [
 export default function TherapeuticComplianceAndSamples(): React.ReactElement {
   return (
     <div className="w-full font-sans bg-white text-slate-800">
-      
+
       {/* ========================================================================= */}
-      {/* SECTION 1: OUR THERAPEUTIC AREAS: WE COVER                                */}
+      {/* SECTION 1: OUR THERAPEUTIC AREAS: WE COVER                                 */}
       {/* ========================================================================= */}
       <section className="max-w-6xl mx-auto py-7 px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Heading */}
         <div className="space-y-3 mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#0f2c28]">
@@ -90,7 +92,7 @@ export default function TherapeuticComplianceAndSamples(): React.ReactElement {
         </div>
 
         {/* Grid Container with Vertical and Horizontal Dividers */}
-        <div className="grid grid-cols-2 md:grid-cols-4 border-t border-b border-slate-200">
+        <div className="grid grid-cols-2 md:grid-cols-4 border-t border-b border-slate-200 ">
           {therapeuticAreas.map((area, index) => {
             // Logic for bottom border on row 1
             const isTopRow = index < 4;
@@ -98,21 +100,21 @@ export default function TherapeuticComplianceAndSamples(): React.ReactElement {
             const hasRightBorder = (index + 1) % 4 !== 0;
 
             return (
-              <div
+              <Link
                 key={area.id}
-                className={`flex flex-col items-center justify-center p-8 text-center transition-colors hover:bg-slate-50/80 ${
-                  isTopRow ? 'border-b border-slate-200' : ''
-                } ${hasRightBorder ? 'border-r border-slate-200' : ''}`}
+                href={area.url}
+                className={`flex flex-col items-center justify-center p-8 text-center transition-colors hover:bg-slate-50/80 group ${isTopRow ? 'border-b border-slate-200' : ''
+                  } ${hasRightBorder ? 'border-r border-slate-200' : ''}`}
               >
-                <div className="w-16 h-16 rounded-full bg-[#0f2c28] text-white flex items-center justify-center mb-4 shadow-sm overflow-hidden">
+                <div className="w-16 h-16 rounded-full bg-[#0f2c28] text-white flex items-center justify-center mb-4 shadow-sm overflow-hidden transition-transform group-hover:scale-105">
                   <Image src={area.iconSrc} alt={area.name} width={40} height={40} className="object-contain" />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-sm font-bold text-[#0f2c28]">
+                <h3 className="text-sm font-bold text-[#0f2c28] group-hover:text-blue-600 transition-colors">
                   {area.name}
                 </h3>
-              </div>
+              </Link>
             );
           })}
         </div>
@@ -121,11 +123,11 @@ export default function TherapeuticComplianceAndSamples(): React.ReactElement {
 
 
       {/* ========================================================================= */}
-      {/* SECTION 2: OUR COMPLIANCE AND GUIDELINE STANDARDS                        */}
+      {/* SECTION 2: OUR COMPLIANCE AND GUIDELINE STANDARDS                         */}
       {/* ========================================================================= */}
       <section className="bg-[#f5f7f7] py-7 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          
+
           {/* Section Heading */}
           <div className="space-y-3 mb-10">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#0f2c28]">
@@ -165,67 +167,38 @@ export default function TherapeuticComplianceAndSamples(): React.ReactElement {
 
 
       {/* ========================================================================= */}
-      {/* SECTION 3: RESEARCH IMPACT SAMPLE WORK                                   */}
+      {/* SECTION 3: RESEARCH IMPACT SAMPLE WORK                                    */}
       {/* ========================================================================= */}
-      <section className="bg-[#eefbf4] py-7 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            {/* Left Image Column */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="rounded-xl overflow-hidden shadow-md max-w-sm w-full bg-white relative aspect-[4/3]">
-                <Image
-                  src="/images/research-impact/image.webp"
-                  alt="Person reviewing research graphs and clipboard"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 400px"
-                />
-              </div>
-            </div>
-
-            {/* Right Text & CTA Column */}
-            <div className="lg:col-span-7 space-y-6">
-              
-              {/* Block 1 */}
-              <div className="space-y-3">
-                <h2 className="text-xl sm:text-2xl font-bold text-[#0f2c28]">
-                  Research Impact Sample Work
-                </h2>
-                <div>
-                  <Link
-                    href="/insights/sample-work"
-                    className="inline-block bg-black hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold py-2.5 px-8 rounded-full transition-colors shadow-sm"
-                  >
-                    Discover More
-                  </Link>
-                </div>
-              </div>
-
-              {/* Block 2 */}
-              <div className="space-y-3 pt-2">
-                <h3 className="text-lg sm:text-xl font-bold text-[#0f2c28]">
-                  Download the full Report Now
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                  Explore our research impact sample work, expertly developed to align with stakeholder expectations, institutional impact frameworks, and global dissemination standards.
-                </p>
-                <div>
-                  <Link
-                    href="/insights/sample-work"
-                    className="inline-block bg-black hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold py-2.5 px-8 rounded-full transition-colors shadow-sm"
-                  >
-                    Discover More
-                  </Link>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-      </section>
-
+      <PubricaSampleWorkCard
+        bookCoverImage={{
+          src: "/images/research-impact/image.webp",
+          alt: "Person reviewing research graphs and clipboard",
+          width: 600,
+          height: 450,
+        }}
+        sections={[
+          {
+            heading: "Research Impact Sample Work",
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work",
+            },
+          },
+          {
+            heading: "Download the full Report Now",
+            descriptionSegments: [
+              {
+                text: "Explore our research impact sample work, expertly developed to align with stakeholder expectations, institutional impact frameworks, and global dissemination standards.",
+              },
+            ],
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work",
+            },
+          },
+        ]}
+        footerDisclaimerSegments={[]}
+      />
     </div>
   );
 }

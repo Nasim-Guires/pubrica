@@ -2,6 +2,10 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import ServiceBanner from '@/components/common/ServiceBanner';
+import { EditorialWorkflowSection, WorkflowStep } from '@/components/common/EditorialWorkflowSection';
+import { PubricaSampleWorkCard } from '@/components/common/PubricaSampleWorkCardProps';
+import CommonPackages, { PackageItem } from '@/components/common/CommonPackages';
 
 // --- Types & Data ---
 
@@ -15,42 +19,54 @@ interface Step {
 
 const EQ = '/images/medical-writing/editorial-quality-support-service';
 
-const stepsData: Step[] = [
+const steps: WorkflowStep[] = [
     {
-        num: 1,
-        title: 'MANUSCRIPT SUBMISSION & EVALUATION',
-        desc: 'You submit your manuscript, and our editorial team performs an initial assessment to identify language, structure, and formatting needs.',
+        stepNumber: 1,
+        title: "MANUSCRIPT SUBMISSION & EVALUATION",
+        description:
+            "You submit your manuscript, and our editorial team performs an initial assessment to identify language, structure, and formatting needs.",
         iconSrc: `${EQ}/Manuscript-Submission-Evaluation.png`,
+        position: "top",
     },
     {
-        num: 2,
-        title: 'EXPERT EDITOR ASSIGNMENT',
-        desc: 'We assign your manuscript to an SME with experience in your academic or scientific field for focused editing.',
+        stepNumber: 2,
+        title: "EXPERT EDITOR ASSIGNMENT",
+        description:
+            "We assign your manuscript to an SME with experience in your academic or scientific field for focused editing.",
         iconSrc: `${EQ}/Expert-Editor-Assignment.png`,
+        position: "bottom",
     },
     {
-        num: 3,
-        title: 'LANGUAGE & STRUCTURAL EDITING',
-        desc: 'The editor refines grammar, clarity, sentence flow, and logical structure while preserving the integrity of your scientific content.',
+        stepNumber: 3,
+        title: "LANGUAGE & STRUCTURAL EDITING",
+        description:
+            "The editor refines grammar, clarity, sentence flow, and logical structure while preserving the integrity of your scientific content.",
         iconSrc: `${EQ}/Language-Structural-Editing.png`,
+        position: "top",
     },
     {
-        num: 4,
-        title: 'JOURNAL FORMATTING & REFERENCING',
-        desc: 'We format your manuscript as per the guidelines of your target journal, including references, figures, tables, and overall layout.',
+        stepNumber: 4,
+        title: "JOURNAL FORMATTING & REFERENCING",
+        description:
+            "We format your manuscript as per the guidelines of your target journal, including references, figures, tables, and overall layout.",
         iconSrc: `${EQ}/Journal-Formatting-Referencing.png`,
+        position: "bottom",
     },
     {
-        num: 5,
-        title: 'QUALITY CHECK & AUTHOR REVISIONS',
-        desc: 'A senior editor reviews the document for consistency and compliance. You’ll receive the edited version for feedback or revisions.',
+        stepNumber: 5,
+        title: "QUALITY CHECK & AUTHOR REVISIONS",
+        description:
+            "A senior editor reviews the document for consistency and compliance. You’ll receive the edited version for feedback or revisions.",
         iconSrc: `${EQ}/Quality-Check-Author-Revisions.png`,
+        position: "top",
     },
     {
-        num: 6,
-        title: 'FINAL PROOFREADING & SUBMISSION SUPPORT',
-        desc: 'A final proofreading ensures readiness for submission. If requested, we assist with cover letters, submission, and reviewer response.',
+        stepNumber: 6,
+        title: "FINAL PROOFREADING & SUBMISSION SUPPORT",
+        description:
+            "A final proofreading ensures readiness for submission. If requested, we assist with cover letters, submission, and reviewer response.",
         iconSrc: `${EQ}/Final-Proofreading-Submission-Support.png`,
+        position: "bottom",
     },
 ];
 
@@ -146,57 +162,60 @@ interface EditorialPackage {
     includes: string[];
 }
 
-const packagesData: EditorialPackage[] = [
+const packagesData: PackageItem[] = [
     {
-        id: 'pkg-standard',
-        badgeLetter: 'S',
-        logoSrc: '/images/publication-support/poster-preparation/S.png',
-        badgeBg: 'bg-[#fce5c8]',
-        badgeTextColor: 'text-[#d97706]',
-        title: 'Standard',
-        bodyBg: 'bg-[#cfdedc]', // Sage Gray / Teal
-        idealFor: 'Early-stage researchers looking for basic language and formatting checks.',
+        icon: "/images/publication-support/poster-preparation/S.png",
+        title: "Standard",
+        subtitle: "Essential Editorial & Formatting Support",
+        idealFor:
+            "Early-stage researchers looking for basic language and formatting checks.",
         includes: [
-            'Language and grammar correction',
-            'Spelling, punctuation, and syntax check',
-            'Basic formatting based on journal guidelines',
+            "Language and grammar correction",
+            "Spelling, punctuation, and syntax check",
+            "Basic formatting based on journal guidelines",
+            "Reference check (basic consistency)",
         ],
+        turnaround: "3–5 working days",
+        cardBgColor: "#cfdedc",
+        titleColor: "#0f3836",
     },
     {
-        id: 'pkg-advanced',
-        badgeLetter: 'A',
-        logoSrc: '/images/publication-support/peer-review-pre-submission/advanced.webp',
-        badgeBg: 'bg-[#dcfce7]',
-        badgeTextColor: 'text-[#16a34a]',
-        title: 'Advanced',
-        titleBg: 'bg-[#3b82f6]',
-        titleTextColor: 'text-white',
-        bodyBg: 'bg-[#e4d5e8]', // Soft Purple
-        idealFor: 'Authors preparing manuscripts for mid- to high-tier journals.',
+        icon:
+            "/images/publication-support/peer-review-pre-submission/advanced.webp",
+        title: "Advanced",
+        subtitle: "Technical Editing & Journal-Ready Support",
+        idealFor:
+            "Authors preparing manuscripts for mid- to high-tier journals.",
         includes: [
-            'All services in the Standard Package',
-            'Technical editing by subject matter experts (SMEs)',
-            'In-depth journal formatting',
-            'Figure, table, and reference styling',
+            "All services in the Standard Package",
+            "Technical editing by subject matter experts (SMEs)",
+            "In-depth journal formatting",
+            "Figure, table, and reference styling",
+            "Letter to the editor (if required)",
         ],
+        turnaround: "5–7 working days",
+        cardBgColor: "#e4d5e8",
+        titleColor: "#3b82f6",
     },
     {
-        id: 'pkg-premium',
-        badgeLetter: 'P',
-        logoSrc: '/images/editing-and-translation/translation-with-editing/pro.webp',
-        badgeBg: 'bg-[#e0e7ff]',
-        badgeTextColor: 'text-[#4f46e5]',
-        title: 'Premium',
-        bodyBg: 'bg-[#dec8a5]', // Warm Tan / Gold
-        idealFor: 'Researchers targeting Q1 or high-impact journals requiring end-to-end editorial support.',
+        icon: "/images/editing-and-translation/translation-with-editing/pro.webp",
+        title: "Premium",
+        subtitle: "Comprehensive Scientific Editorial Support",
+        idealFor:
+            "Researchers targeting Q1 or high-impact journals requiring end-to-end editorial support.",
         includes: [
-            'All services in the Advanced Package',
-            'Critical review and scientific feedback by PhD-level editors',
-            'Manuscript structure and content enhancement',
+            "All services in the Advanced Package",
+            "Critical review and scientific feedback by PhD-level editors",
+            "Manuscript structure and content enhancement",
+            "Journal selection assistance",
+            "Plagiarism check and revision support",
+            "Unlimited post-editing support for the same manuscript",
         ],
+        turnaround: "7–10 working days",
+        cardBgColor: "#dec8a5",
+        titleColor: "#705638",
     },
 ];
-
 export default function EditorialProcessAndCompliance() {
     // All compliance accordions closed by default
     const [openAccordion, setOpenAccordion] = useState<string | null>(null);
@@ -209,70 +228,19 @@ export default function EditorialProcessAndCompliance() {
         <div className="w-full bg-white font-sans text-gray-800 pb-8">
 
             {/* 1. TOP GREEN BANNER */}
-            <section className="bg-[#052C28] text-white py-8 px-4 text-center">
-                <h2 className="text-xl md:text-2xl font-bold mb-2">
-                    Enhance Your Editorial and Quality Standards with Pubrica
-                </h2>
-                <p className="text-xs md:text-sm text-gray-200">
-                    Partner with our expert editorial team to deliver publication-ready, scientifically accurate, and journal-compliant manuscripts.
-                </p>
-            </section>
-
+            <ServiceBanner
+                imageSrc="/images/icons/Satisfaction_Guarantee.webp"
+                imageAlt="100% Satisfaction Guarantee"
+                heading="Enhance Your Editorial and Quality Standards with Pubrica"
+                description="Partner with our expert editorial team to deliver publication-ready, scientifically accurate, and journal-compliant manuscripts."
+            />
             {/* 2. STEP-BY-STEP PROCESS SECTION */}
-            <section className="max-w-6xl mx-auto px-4 py-7">
-                <div className="text-center mb-12">
-                    <h2 className="text-lg md:text-xl font-bold text-[#0F3836] mb-2">
-                        How The Editorial & Quality Support Service Works
-                    </h2>
-                    <h3 className="text-sm font-semibold text-gray-700 mb-2">
-                        Our Step-By-Step Process
-                    </h3>
-                    <p className="text-xs text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                        At Pubrica, our editorial & quality support service follows a rigorous, structured workflow to ensure that your manuscript meets the highest standards of academic and scientific publishing. Here’s how our process works:
-                    </p>
-                </div>
-
-                {/* 6 Step Columns with Interlocking Number Badges */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3 items-stretch">
-                    {stepsData.map((step) => {
-                        const isTopNumber = step.num % 2 !== 0; // Steps 1, 3, 5 top badge; 2, 4, 6 bottom badge
-
-                        return (
-                            <div
-                                key={step.num}
-                                className="group flex flex-col justify-between items-center relative"
-                            >
-                                {/* Badge Top */}
-                                {isTopNumber && (
-                                    <div className="w-9 h-9 rounded-full bg-[#008ba3] text-white font-bold text-sm flex items-center justify-center mb-2 z-10 shadow-sm">
-                                        {step.num}
-                                    </div>
-                                )}
-
-                                {/* Card Container: White default, Black on Cursor Hover */}
-                                <div className="w-full flex-1 bg-white border border-gray-200 p-4 rounded-sm flex flex-col items-center text-center transition-all duration-300 group-hover:bg-[#2b2b2b] group-hover:border-[#2b2b2b] group-hover:shadow-lg">
-                                    <div className="mb-3 relative w-10 h-10 mx-auto">
-                                        <Image src={step.iconSrc} alt="" fill className="object-contain" sizes="40px" />
-                                    </div>
-                                    <h4 className="text-[11px] font-bold text-gray-800 group-hover:text-white mb-2 leading-snug uppercase tracking-tight transition-colors">
-                                        {step.title}
-                                    </h4>
-                                    <p className="text-[10px] text-gray-500 group-hover:text-gray-200 leading-relaxed transition-colors">
-                                        {step.desc}
-                                    </p>
-                                </div>
-
-                                {/* Badge Bottom */}
-                                {!isTopNumber && (
-                                    <div className="w-9 h-9 rounded-full bg-[#008ba3] text-white font-bold text-sm flex items-center justify-center mt-2 z-10 shadow-sm">
-                                        {step.num}
-                                    </div>
-                                )}
-                            </div>
-                        );
-                    })}
-                </div>
-            </section>
+            <EditorialWorkflowSection
+                heading="How The Editorial & Quality Support Service Works"
+                subheading="Our Step-By-Step Process"
+                description="At Pubrica, our editorial & quality support service follows a rigorous, structured workflow to ensure that your manuscript meets the highest standards of academic and scientific publishing. Here’s how our process works:"
+                steps={steps}
+            />
 
             {/* 3. COMPLIANCE AND GUIDELINE STANDARDS SECTION */}
             <section className="max-w-5xl mx-auto px-4 py-8">
@@ -339,126 +307,43 @@ export default function EditorialProcessAndCompliance() {
             </section>
 
             {/* 4. SAMPLE WORK & DOWNLOAD REPORT BANNER */}
-            <section className="max-w-5xl mx-auto px-4 mt-12 mb-16">
-                <div className="bg-[#f0f9f8] border border-[#d2ebe7] rounded-lg p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-
-                    {/* Left Sample Graphic Image */}
-                    <div className="md:col-span-4 relative h-56 rounded-md overflow-hidden shadow-sm border border-gray-200">
-                        <Image
-                            src="/images/medical-writing/editorial-quality-support-service/image-5.webp"
-                            alt="Quality Assurance report sample for medical writing"
-                            title="Editorial Sample Work"
-                            fill
-                            sizes="(max-width: 768px) 100vw, 300px"
-                            className="object-cover"
-                        />
-                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center p-4">
-                            <span className="text-white font-bold text-lg tracking-wider border-2 border-white px-3 py-1 text-center">
-                                QUALITY ASSURANCE
-                            </span>
-                        </div>
-                    </div>
-
-                    {/* Right Action Buttons & Text */}
-                    <div className="md:col-span-8 flex flex-col items-center text-center space-y-4">
-                        <h3 className="text-sm font-bold text-gray-800">
-                            Editorial & Quality Support Service Sample Work
-                        </h3>
-
-                        <button
-                            type="button"
-                            className="w-full max-w-sm bg-black hover:bg-gray-800 text-white font-semibold text-xs py-2 rounded-full transition-colors"
-                        >
-                            Discover More
-                        </button>
-
-                        <div className="pt-2">
-                            <h4 className="text-xs font-bold text-gray-900 mb-1">
-                                Download the full Report Now
-                            </h4>
-                            <p className="text-[11px] text-gray-600 max-w-lg leading-relaxed mb-4">
-                                Discover our editorial support samples, meticulously edited to align with journal guidelines, author objectives, and scientific reporting standards, delivered on time and backed by peer-reviewed, validated content to ensure accuracy, clarity, and publication success.
-                            </p>
-                        </div>
-
-                        <button
-                            type="button"
-                            className="w-full max-w-sm bg-black hover:bg-gray-800 text-white font-semibold text-xs py-2 rounded-full transition-colors"
-                        >
-                            Discover More
-                        </button>
-                    </div>
-
-                </div>
-            </section>
+            <PubricaSampleWorkCard
+                bookCoverImage={{
+                    src: "/images/medical-writing/editorial-quality-support-service/image-5.webp",
+                    alt: "Quality Assurance report sample for medical writing",
+                    width: 600,
+                    height: 400,
+                }}
+                sections={[
+                    {
+                        heading: "Editorial & Quality Support Service Sample Work",
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work/assessing-evidence-based-practice-in-physical-therapy/",
+                        },
+                    },
+                    {
+                        heading: "Download the full Report Now",
+                        descriptionSegments: [
+                            {
+                                text: "Discover our editorial support samples, meticulously edited to align with journal guidelines, author objectives, and scientific reporting standards, delivered on time and backed by peer-reviewed, validated content to ensure accuracy, clarity, and publication success.",
+                            },
+                        ],
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work",
+                        },
+                    },
+                ]}
+                footerDisclaimerSegments={[]}
+            />
 
             {/* 5. EDITORIAL & QUALITY SUPPORT SERVICE – OUR PACKAGES */}
-            <section className="max-w-5xl mx-auto px-4 mt-8">
-                <div className="mb-8">
-                    <h2 className="text-lg md:text-xl font-bold text-[#0F3836] mb-2">
-                        Editorial & Quality Support Service – Our Packages
-                    </h2>
-                    <p className="text-xs text-gray-600 leading-relaxed">
-                        At Pubrica, we offer flexible and comprehensive editorial support packages tailored to meet the diverse needs of researchers, clinicians, and academic authors. Each package ensures high-quality, publication-ready content with full compliance with journal and ethical standards.
-                    </p>
-                </div>
-
-                {/* 3 Packages Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {packagesData.map((pkg) => (
-                        <div
-                            key={pkg.id}
-                            className="rounded-t-lg overflow-hidden flex flex-col border border-gray-200 shadow-sm"
-                        >
-                            {/* White Header Top with Badge & Title */}
-                            <div className="bg-white p-4 border-t-4 border-gray-300 flex items-center gap-3">
-                                <div className="relative w-10 h-10 shrink-0">
-                                    <Image src={pkg.logoSrc} alt="" fill className="object-contain" sizes="40px" />
-                                </div>
-                                {pkg.titleBg ? (
-                                    <span className={`${pkg.titleBg} ${pkg.titleTextColor} px-3 py-1 rounded-md text-sm font-bold`}>
-                                        {pkg.title}
-                                    </span>
-                                ) : (
-                                    <h3 className="text-base font-bold text-[#0F3836]">
-                                        {pkg.title}
-                                    </h3>
-                                )}
-                            </div>
-
-                            {/* Colored Body */}
-                            <div
-                                className={`${pkg.bodyBg} p-5 flex-1 flex flex-col justify-between text-xs text-gray-800 space-y-4`}
-                            >
-                                {/* Ideal For */}
-                                <div className="flex items-start gap-2">
-                                    <span className="font-bold text-sm leading-none mt-0.5">➔</span>
-                                    <p className="leading-snug">
-                                        <span className="font-bold">Ideal For: </span>
-                                        {pkg.idealFor}
-                                    </p>
-                                </div>
-
-                                {/* Includes List */}
-                                <div className="flex-1">
-                                    <div className="flex items-center gap-2 mb-2 font-bold">
-                                        <span>➔</span>
-                                        <span>Includes:</span>
-                                    </div>
-                                    <ul className="space-y-2 pl-4">
-                                        {pkg.includes.map((item, idx) => (
-                                            <li key={idx} className="leading-tight text-[11px]">
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
+            <CommonPackages
+                title="Editorial & Quality Support Service – Our Packages"
+                description="At Pubrica, we offer flexible and comprehensive editorial support packages tailored to meet the diverse needs of researchers, clinicians, and academic authors. Each package ensures high-quality, publication-ready content with full compliance with journal and ethical standards."
+                packages={packagesData}
+            />
         </div>
     );
 }

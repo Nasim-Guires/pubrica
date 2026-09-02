@@ -1,98 +1,98 @@
 export const regulatoryWritingWhoWeServe = {
-    title: "Who We Serve",
-    description:
-        "Our regulatory writing services serve to aid pharmaceutical companies, biotech companies, CROs, and medical device companies with every phase of their product development and regulatory submission processes. Whether you are navigating early phase trials or global market access, Pubrica produces accurate and compliant regulatory writing specific to your needs.",
-    data: [
-        {
-            title: "Pharmaceutical and Biotechnology Companies",
-            bullets: [
-                "We assist pharma and biotech companies create high-quality, compliant regulatory documents including INDs, NDAs, MAAs and safety reports that meet the regulatory requirements imposed by the global regulatory agencies."
-            ],
-            imageUrl:
-                "/images/medical-writing/regulatory-writing/Pharmaceutical-and-Biotechnology-Companies.png"
-        },
-        {
-            title: "Clinical Research Organizations (CROs)",
-            bullets: [
-                "CROs need our regulatory writers to prepare their regulatory documents for clinical trials including their protocols, investigator brochures (IBs), clinical study reports (CSRs) and Clinical Trial Documents (CTDs) that comply with International Conference on Harmonization (ICH) regulations and Good Clinical Practice (GCP) requirements."
-            ],
-            imageUrl:
-                "/images/medical-writing/regulatory-writing/Clinical-Research-Organizations-CROs.png"
-        },
-        {
-            title: "Medical Device Companies",
-            bullets: [
-                "We help device manufacturers to develop technical documentation, clinical evaluation reports (CERs) and submissions in accordance with their regional standards including EU Medical Device Regulation (MDR), FDA, and TGA."
-            ],
-            imageUrl:
-                "/images/medical-writing/regulatory-writing/Medical-Device-Companies.png"
-        },
-        {
-            title: "Medical Device Regulation",
-            bullets: [
-                "Our services include regulatory writing, which can include thousands of devices, including technical files, clinical evaluations, and 510 submissions."
-            ],
-            imageUrl:
-                "/images/medical-writing/regulatory-writing/Medical-Device-regulation-.png"
-        },
-        {
-            title: "Academic and Research Institutions",
-            bullets: [
-                "We assist research institutions in converting their research findings and data into regulatory-compliant documents for publication or submission, including clinical trials, ethics submissions, and statutory applications for funding and grants."
-            ],
-            imageUrl:
-                "/images/medical-writing/regulatory-writing/Academic-and-Research-Institutions.png"
-        },
-        {
-            title: "Regulatory Affairs and Medical Affairs",
-            bullets: [
-                "Our consultants' combined experience is relied upon by internal departments when drafting, reviewing, and preparing regulatory documents, scientific communications, and other written materials required for regulatory activities."
-            ],
-            imageUrl:
-                "/images/medical-writing/regulatory-writing/Regulatory-Affairs-and-Medical-Affairs.png"
-        }
-    ]
+  title: "Who We Serve",
+  description:
+    "Our regulatory writing services serve to aid pharmaceutical companies, biotech companies, CROs, and medical device companies with every phase of their product development and regulatory submission processes. Whether you are navigating early phase trials or global market access, Pubrica produces accurate and compliant regulatory writing specific to your needs.",
+  data: [
+    {
+      title: "Pharmaceutical and Biotechnology Companies",
+      bullets: [
+        "We assist pharma and biotech companies create high-quality, compliant regulatory documents including INDs, NDAs, MAAs and safety reports that meet the regulatory requirements imposed by the global regulatory agencies."
+      ],
+      imageUrl:
+        "/images/medical-writing/regulatory-writing/Pharmaceutical-and-Biotechnology-Companies.png"
+    },
+    {
+      title: "Clinical Research Organizations (CROs)",
+      bullets: [
+        "CROs need our regulatory writers to prepare their regulatory documents for clinical trials including their protocols, investigator brochures (IBs), clinical study reports (CSRs) and Clinical Trial Documents (CTDs) that comply with International Conference on Harmonization (ICH) regulations and Good Clinical Practice (GCP) requirements."
+      ],
+      imageUrl:
+        "/images/medical-writing/regulatory-writing/Clinical-Research-Organizations-CROs.png"
+    },
+    {
+      title: "Medical Device Companies",
+      bullets: [
+        "We help device manufacturers to develop technical documentation, clinical evaluation reports (CERs) and submissions in accordance with their regional standards including EU Medical Device Regulation (MDR), FDA, and TGA."
+      ],
+      imageUrl:
+        "/images/medical-writing/regulatory-writing/Medical-Device-Companies.png"
+    },
+    {
+      title: "Medical Device Regulation",
+      bullets: [
+        "Our services include regulatory writing, which can include thousands of devices, including technical files, clinical evaluations, and 510 submissions."
+      ],
+      imageUrl:
+        "/images/medical-writing/regulatory-writing/Medical-Device-regulation-.png"
+    },
+    {
+      title: "Academic and Research Institutions",
+      bullets: [
+        "We assist research institutions in converting their research findings and data into regulatory-compliant documents for publication or submission, including clinical trials, ethics submissions, and statutory applications for funding and grants."
+      ],
+      imageUrl:
+        "/images/medical-writing/regulatory-writing/Academic-and-Research-Institutions.png"
+    },
+    {
+      title: "Regulatory Affairs and Medical Affairs",
+      bullets: [
+        "Our consultants' combined experience is relied upon by internal departments when drafting, reviewing, and preparing regulatory documents, scientific communications, and other written materials required for regulatory activities."
+      ],
+      imageUrl:
+        "/images/medical-writing/regulatory-writing/Regulatory-Affairs-and-Medical-Affairs.png"
+    }
+  ]
 };
 
 
 export const regulatoryWritingTestimonials = {
-    title: "Testimonials",
-    description:
-        "Discover how Pubrica's regulatory writing services have helped pharmaceutical companies, medical device manufacturers, CROs, and biotechnology organizations prepare accurate, compliant, and submission-ready regulatory documentation for global health authorities. Here is what our clients say:",
-    testimonials: [
-        {
-            image: "/images/medical-writing/book-01.jpg",
-            quote:
-                "Pubrica's regulatory writing team helped us streamline our NDA submission. Their understanding of FDA requirements and quick turnaround was instrumental in keeping us on schedule.",
-            name: "Dr. Emily Carter",
-            designation: "Director of Regulatory Affairs",
-            organization: "Biogene Therapeutics, USA",
-        },
-        {
-            image: "/images/medical-writing/scropt-2.jpg",
-            quote:
-                "We partnered with Pubrica for our EU MDR documentation, and the CERs they delivered were thorough, compliant, and professionally written. We cleared our audit with zero findings.",
-            name: "Mr. Markus Klein",
-            designation: "Head of Quality & Compliance",
-            organization: "MediTech Devices GmbH, Germany",
-        },
-        {
-            image: "/images/medical-writing/book-01.jpg",
-            quote:
-                "From CTD modules to briefing documents, Pubrica has been our go-to partner. Their writers know exactly what agencies expect, and that's saved us valuable time during submissions.",
-            name: "Dr. Aisha Nair",
-            designation: "Clinical Operations Lead",
-            organization: "GlobalTrials CRO, India",
-        },
-        {
-            image: "/images/medical-writing/scropt-2.jpg",
-            quote:
-                "Their eCTD-ready documents were perfectly formatted and accepted without a hitch. Highly recommended for anyone seeking dependable regulatory writing support.",
-            name: "Mr. Daniel Thompson",
-            designation: "Regulatory Manager",
-            organization: "PharmaNova Inc., Canada",
-        }
-    ]
+  title: "Testimonials",
+  description:
+    "Discover how Pubrica's regulatory writing services have helped pharmaceutical companies, medical device manufacturers, CROs, and biotechnology organizations prepare accurate, compliant, and submission-ready regulatory documentation for global health authorities. Here is what our clients say:",
+  testimonials: [
+    // {
+    //     image: "/images/medical-writing/book-01.jpg",
+    //     quote:
+    //         "Pubrica's regulatory writing team helped us streamline our NDA submission. Their understanding of FDA requirements and quick turnaround was instrumental in keeping us on schedule.",
+    //     name: "Dr. Emily Carter",
+    //     designation: "Director of Regulatory Affairs",
+    //     organization: "Biogene Therapeutics, USA",
+    // },
+    {
+      image: "/images/medical-writing/scropt-2.jpg",
+      quote:
+        "We partnered with Pubrica for our EU MDR documentation, and the CERs they delivered were thorough, compliant, and professionally written. We cleared our audit with zero findings.",
+      name: "Mr. Markus Klein",
+      designation: "Head of Quality & Compliance",
+      organization: "MediTech Devices GmbH, Germany",
+    },
+    {
+      image: "/images/medical-writing/book-01.jpg",
+      quote:
+        "From CTD modules to briefing documents, Pubrica has been our go-to partner. Their writers know exactly what agencies expect, and that's saved us valuable time during submissions.",
+      name: "Dr. Aisha Nair",
+      designation: "Clinical Operations Lead",
+      organization: "GlobalTrials CRO, India",
+    },
+    {
+      image: "/images/medical-writing/scropt-2.jpg",
+      quote:
+        "Their eCTD-ready documents were perfectly formatted and accepted without a hitch. Highly recommended for anyone seeking dependable regulatory writing support.",
+      name: "Mr. Daniel Thompson",
+      designation: "Regulatory Manager",
+      organization: "PharmaNova Inc., Canada",
+    }
+  ]
 };
 
 

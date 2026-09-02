@@ -109,47 +109,66 @@ export default function ComplianceAndStandards(): React.ReactElement {
         </div>
 
         {/* ---------------- 2. MAIN CONTENT & REGULATORY FRAMEWORKS ---------------- */}
-        <div className="space-y-8">
-          {/* Header & Body Description */}
-          <div className="max-w-3xl space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#09322e] leading-tight">
-              Certified Excellence. Global Compliance. Guaranteed Integrity
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              At Pubrica, we adhere to the highest global standards in{" "}
-              <Link
-                href="/academy/medical-writing/avoiding-sentence-fragments-academic-writing"
-                className="text-blue-600 underline-offset-2 transition-colors no-underline hover:no-underline"
-              >
-                medical writing
-              </Link>
-              , regulatory documentation, and scientific communication. Our
-              processes, team, and deliverables are aligned with international
-              regulatory requirements and industry best practices—ensuring your
-              content is accurate, compliant, and fully ready for submission or
-              publication.
-            </p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* Left Column: Text & List */}
+          <div className="lg:col-span-7 space-y-8">
+            {/* Header & Body Description */}
+            <div className="space-y-4">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#09322e] leading-tight">
+                Certified Excellence. Global Compliance. Guaranteed Integrity
+              </h2>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                At Pubrica, we adhere to the highest global standards in{" "}
+                <Link
+                  href="/academy/medical-writing/avoiding-sentence-fragments-academic-writing"
+                  className="text-blue-600 underline-offset-2 transition-colors no-underline hover:no-underline"
+                >
+                  medical writing
+                </Link>
+                , regulatory documentation, and scientific communication. Our
+                processes, team, and deliverables are aligned with international
+                regulatory requirements and industry best practices—ensuring your
+                content is accurate, compliant, and fully ready for submission or
+                publication.
+              </p>
+            </div>
+
+            <div className="pt-2">
+              <div className="space-y-6">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#09322e]">
+                  Regulatory Frameworks We Comply With
+                </h3>
+
+                <ul className="space-y-3.5">
+                  {frameworksList.map((framework, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-3 text-sm sm:text-base text-slate-700"
+                    >
+                      <span className="flex-shrink-0 mt-1.5 w-2.5 h-2.5 rounded-full border-2 border-[#b91c1c] bg-white flex items-center justify-center">
+                        <span className="w-1 h-1 rounded-full bg-[#b91c1c]" />
+                      </span>
+                      <span className="leading-snug">{framework}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
 
-          <div className="pt-4 max-w-3xl">
-            <div className="space-y-6">
-              <h3 className="text-xl sm:text-2xl font-bold text-[#09322e]">
-                Regulatory Frameworks We Comply With
-              </h3>
-
-              <ul className="space-y-3.5">
-                {frameworksList.map((framework, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-3 text-sm sm:text-base text-slate-700"
-                  >
-                    <span className="flex-shrink-0 mt-1.5 w-2.5 h-2.5 rounded-full border-2 border-[#b91c1c] bg-white flex items-center justify-center">
-                      <span className="w-1 h-1 rounded-full bg-[#b91c1c]" />
-                    </span>
-                    <span className="leading-snug">{framework}</span>
-                  </li>
-                ))}
-              </ul>
+          {/* Right Column: Dedicated Image Space / Layout Container */}
+          <div className="lg:col-span-5 relative flex items-center justify-center pt-6 lg:pt-12">
+            <div className="w-full max-w-md bg-slate-50/50 rounded-2xl p-4 flex flex-col items-center justify-center relative min-h-[350px]">
+              {/* If you have the graphic/images asset path, plug it in here or use a layout container placeholder */}
+              <div className="relative w-full h-[320px] rounded-xl overflow-hidden  flex items-center justify-center  border border-slate-100">
+                <Image
+                  src="/images/medical-writing/side.webp"
+                  alt="Compliance and Medical Research Team"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                />
+              </div>
             </div>
           </div>
         </div>

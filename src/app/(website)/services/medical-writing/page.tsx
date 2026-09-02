@@ -1,4 +1,4 @@
-import InsightsSection from "@/components/services/editing-translation/Insights/InsightsSection";
+import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 import ComplianceAndStandards from "@/components/services/medical-writing/ComplianceAndStandards";
 import FaqSection from "@/components/services/medical-writing/FaqSection";
 import MedicalWritingSection from "@/components/services/medical-writing/MedicalWritingSection";
@@ -26,7 +26,7 @@ const page = () => {
       <OurPackages />
       <QualityAndTestimonials/>
       <FaqSection/>
-      <InsightsSection categorySlug="medical-writing" />
+      <InsightsSection/>
     </>
   );
 };

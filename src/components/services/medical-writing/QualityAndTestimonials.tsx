@@ -1,5 +1,6 @@
 "use client";
 
+import { MovingTestimonials, TestimonialItem } from "@/components/common/MovingTestimonials.tsx";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
@@ -11,30 +12,30 @@ interface Testimonial {
   coverImage: string;
 }
 
-const testimonialsData: Testimonial[] = [
+const testimonialsData: TestimonialItem[] = [
   {
     id: 1,
     quote:
-      '"Pubrica helped transform my raw data into a well-structured manuscript ready for submission. Their attention to detail and peer-review support made all the difference."',
+      "Pubrica helped transform my raw data into a well-structured manuscript ready for submission. Their attention to detail and peer-review support made all the difference.",
     author: "DR. EMILY CARTER",
     role: "Academic Researcher – Oncology, UK",
-    coverImage: "/images/medical-writing/book-01.jpg",
+    image: "/images/medical-writing/book-01.jpg",
   },
   {
     id: 2,
     quote:
-      '"We urgently needed CSR and CTD summaries. Pubrica delivered ICH-compliant documents on time with seamless coordination."',
+      "We urgently needed CSR and CTD summaries. Pubrica delivered ICH-compliant documents on time with seamless coordination.",
     author: "JAMES MITCHELL",
     role: "Regulatory Affairs Manager – USA",
-    coverImage: "/images/medical-writing/scropt-2.jpg",
+    image: "/images/medical-writing/scropt-2.jpg",
   },
   {
     id: 3,
     quote:
-      '"Pubrica delivered a compelling white paper and pitch deck that helped us secure funding."',
+      "Pubrica delivered a compelling white paper and pitch deck that helped us secure funding.",
     author: "DR. ANNA MÜLLER",
     role: "Biotech Co-Founder – EU",
-    coverImage: "/images/medical-writing/book-01.jpg",
+    image: "/images/medical-writing/book-01.jpg",
   },
 ];
 
@@ -127,69 +128,7 @@ export default function QualityAndTestimonials(): React.ReactElement {
         </div>
       </section>
 
-      <section className="bg-white py-7 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#09322e] text-center">
-            Testimonials
-          </h2>
-
-          <div className="relative overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{
-                transform: `translateX(-${current * (mobile ? 100 : 50)}%)`,
-              }}
-            >
-              {testimonialsData.map((item) => (
-                <div
-                  key={item.id}
-                  className="w-full md:w-1/2 flex-shrink-0 px-2 md:px-3"
-                >
-                  <div className="bg-[#244b41] text-white p-6 sm:p-8 rounded-lg shadow-lg flex flex-col sm:flex-row items-start justify-between gap-6 h-full">
-                    <div className="flex-1 space-y-6 flex flex-col justify-between h-full">
-                      <p className="text-xs sm:text-sm italic leading-relaxed text-slate-100">
-                        {item.quote}
-                      </p>
-                      <div className="space-y-1">
-                        <h4 className="text-xs sm:text-sm font-extrabold tracking-wider text-white">
-                          {item.author}
-                        </h4>
-                        <p className="text-[11px] sm:text-xs text-slate-300 italic">
-                          {item.role}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="relative flex-shrink-0 w-24 sm:w-28 h-36 shadow-md rounded overflow-hidden border border-emerald-900/50">
-                      <Image
-                        src={item.coverImage}
-                        alt={item.author}
-                        fill
-                        className="object-cover"
-                        sizes="112px"
-                      />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center gap-2 pt-4">
-            {[0, 1, 2].map((dot) => (
-              <button
-                key={dot}
-                onClick={() => setCurrent(Math.min(dot, maxSlide))}
-                aria-label={`Slide ${dot + 1}`}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  current === dot || (dot === 2 && current === maxSlide && !mobile)
-                    ? "bg-[#09322e]"
-                    : "bg-slate-300 hover:bg-slate-400"
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+     <MovingTestimonials data={testimonialsData} />
     </div>
   );
 }

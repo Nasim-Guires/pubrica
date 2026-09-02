@@ -8,7 +8,7 @@ import React, { useState } from 'react';
 interface ExpertiseItem {
   id: number;
   title: string;
-  description: string;
+  bullets: string[];
 }
 
 interface StakeholderCard {
@@ -22,62 +22,91 @@ const expertiseList: ExpertiseItem[] = [
   {
     id: 1,
     title: 'Journal-Compliant Manuscript Formatting',
-    description:
-      'Precision formatting tailored to specific journal requirements, reference styles, figure specifications, and layout guidelines.',
+    bullets: [
+      'Comprehensive formatting as per journal-specific submission guidelines',
+      'Accurate reference styling (APA, MLA, Harvard, Vancouver, Chicago, etc.)',
+      'Structured layout for tables, figures, equations, and section headings',
+    ],
   },
   {
     id: 2,
     title: 'Scientific Graphical Abstracts',
-    description:
-      'Visually compelling diagrams and infographics designed to summarize core research findings for quick editor and reader comprehension.',
+    bullets: [
+      'Visual distillation of core research findings',
+      'Publisher-ready formats with editable source files',
+      'Scientifically validated, journal-accepted graphical styles',
+    ],
   },
   {
     id: 3,
     title: 'Engaging Video Abstracts',
-    description:
-      'Short dynamic video summaries highlighting research hypotheses, methodologies, and outcomes to boost altmetric scores and social engagement.',
+    bullets: [
+      '60–90 second animated summaries of your research',
+      'Scriptwriting, narration, and production by scientific content experts',
+      'Formats compatible with journal and social media dissemination',
+    ],
   },
   {
     id: 4,
     title: 'Academic Poster Presentations',
-    description:
-      'Professional conference posters designed for maximum clarity, visual appeal, and concise presentation of complex data.',
+    bullets: [
+      'Design and layout tailored for international conferences',
+      'High-impact visuals and infographics for rapid comprehension',
+      'Editable formats for future updates and reuse',
+    ],
   },
   {
     id: 5,
     title: 'Simplified Abstract Writing',
-    description:
-      'Plain-language summaries designed to make complex scientific breakthroughs accessible to broader public and cross-disciplinary audiences.',
+    bullets: [
+      'Plain-language summaries for non-specialist audiences',
+      'Suitable for grant applications, public repositories, and institutional use',
+      'Maintains scientific accuracy while improving readability',
+    ],
   },
   {
     id: 6,
     title: 'Scientific News Reports',
-    description:
-      'Press-ready news releases and editorial highlights designed to showcase published research to media outlets and industry stakeholders.',
+    bullets: [
+      'Media-style coverage of your research tailored for outreach',
+      'Suitable for university press offices, blogs, and science media portals',
+      'Emphasizes research significance, novelty, and societal impact',
+    ],
   },
   {
     id: 7,
     title: 'Video Narratives',
-    description:
-      'In-depth video storytelling integrating expert interviews, animations, and narrative structure to highlight high-impact scientific projects.',
+    bullets: [
+      'Short, compelling video narratives simplify complex research into engaging visual content.',
+      'These videos are designed to increase the visibility of your research and promote your research to a range of people: funders, academic peers, and especially non-academic partners or stakeholders.',
+      'We collaborate with you to ensure that your research is shown in an accurate, accessible, and engaging way for social media, institutional sites, and conferences.',
+    ],
   },
   {
     id: 8,
     title: 'Research Summaries',
-    description:
-      'Executive briefs and policy-oriented summaries structured to communicate actionable insights to decision-makers and research funders.',
+    bullets: [
+      'Well-written research summaries highlight the core of your work in a reader-friendly format.',
+      'Designed for online promotion, media sharing, and journal dissemination, these summaries increase your research’s reach across digital platforms.',
+      'Perfect for non-specialist readers, decision-makers, and grant reviewers, our summaries support clear and consistent messaging.',
+    ],
   },
   {
     id: 9,
     title: 'Science Infographics',
-    description:
-      'Custom visual graphics transforming dense statistical data and pathways into clear, shareable visual assets.',
+    bullets: [
+      'Science infographics offer a clear, visual interpretation of your research findings, making them easy to understand at a glance.',
+      'Ideal for sharing on social media, academic websites, funding proposals, and during presentations, our infographics enhance scientific visibility and audience engagement.',
+      'Each infographic is tailored to your target audience and designed for clarity, accuracy, and visual appeal.',
+    ],
   },
   {
     id: 10,
     title: 'Press Notes',
-    description:
-      'Concise media briefs tailored for institutional communication offices and journal press rooms to drive outreach.',
+    bullets: [
+      'Our expertly crafted press notes provide media outlets with accurate, engaging descriptions of your research.',
+      'Written by professional science communicators, these notes are formatted to meet journalistic standards and ensure your research gains the attention of relevant media, including science news portals, university press offices, and public platforms.',
+    ],
   },
 ];
 
@@ -120,7 +149,7 @@ const stakeholderCards: StakeholderCard[] = [
 ];
 
 export default function ResearchImpactAndStakeholders(): React.ReactElement {
-  // Accordion state management
+  // Accordion state management - only one card can open at a time
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleAccordion = (id: number) => {
@@ -178,7 +207,11 @@ export default function ResearchImpactAndStakeholders(): React.ReactElement {
 
                     {isOpen && (
                       <div className="pl-8 pr-2 pb-4 text-xs text-slate-600 leading-relaxed">
-                        {item.description}
+                        <ul className="space-y-1.5 list-disc pl-4">
+                          {item.bullets.map((bullet, idx) => (
+                            <li key={idx}>{bullet}</li>
+                          ))}
+                        </ul>
                       </div>
                     )}
                   </div>

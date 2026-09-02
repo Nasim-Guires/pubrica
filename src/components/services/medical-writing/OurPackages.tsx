@@ -1,25 +1,16 @@
 "use client";
 
+import { PackageItem } from "@/components/common/CommonPackages";
 import Link from "next/link";
 import React from "react";
 
-interface PackageItem {
-  id: string;
-  title: string;
-  subtitle: string;
-  bgColor: string;
-  idealFor: string;
-  includes: string[];
-  optionalAddOns: string[];
-}
-
 const packagesData: PackageItem[] = [
   {
-    id: "academic",
+    icon: "/images/publication-support/peer-review-pre-submission/advanced.webp",
     title: "Academic Author Package",
     subtitle: "(For Researchers, Clinicians, PhD Candidates)",
-    bgColor: "bg-[#ccd5d5]", // Soft slate blue/gray
-    idealFor: "Researchers preparing manuscripts for journal submission.",
+    idealFor:
+      "Researchers preparing manuscripts for journal submission.",
     includes: [
       "Manuscript writing or polishing (based on raw data/draft)",
       "Journal selection support (SCI-indexed, Q1–Q3)",
@@ -28,17 +19,18 @@ const packagesData: PackageItem[] = [
       "Formatting per journal guidelines (APA, AMA, Vancouver, etc.)",
       "Response to reviewer comments (optional add-on)",
     ],
-    optionalAddOns: [
+    addOns: [
       "Graphical abstract design",
       "Literature review",
       "Data analysis summary writing",
     ],
+    cardBgColor: "#ccd5d5",
+    titleColor: "#355252",
   },
   {
-    id: "biotech",
+    icon: "",
     title: "Biotech Launch Content Bundle",
     subtitle: "(For Startups And Early-Stage Biotech Firms)",
-    bgColor: "bg-[#cfb9d8]", // Soft purple
     idealFor:
       "Companies preparing to raise funds, partner, or launch a new molecule or platform.",
     includes: [
@@ -49,17 +41,18 @@ const packagesData: PackageItem[] = [
       "MoA narrative or storyboard",
       "Competitive landscape summary",
     ],
-    optionalAddOns: [
+    addOns: [
       "Social media content calendar (scientific tone)",
       "Press release writing",
       "Pitch deck review/editing",
     ],
+    cardBgColor: "#cfb9d8",
+    titleColor: "#6a3b7d",
   },
   {
-    id: "regulatory",
+    icon: "/images/publication-support/poster-preparation/S.png",
     title: "Regulatory Compliance Suite – Medical Devices",
     subtitle: "(For Class I–III Device Manufacturers)",
-    bgColor: "bg-[#cbaf83]", // Warm tan/gold
     idealFor:
       "Companies preparing regulatory submissions (EU MDR, US FDA, SFDA, etc.)",
     includes: [
@@ -70,17 +63,18 @@ const packagesData: PackageItem[] = [
       "Literature search & summary matrix",
       "Labelling content (package insert, outer label)",
     ],
-    optionalAddOns: [
+    addOns: [
       "Device description & intended use drafting",
       "PMCF Plan & Report",
       "Usability test report write-up",
     ],
+    cardBgColor: "#cbaf83",
+    titleColor: "#705638",
   },
   {
-    id: "cer-toolkit",
+    icon: "/images/editing-and-translation/basic-pacakge.png",
     title: "CER + IFU + Labelling Toolkit",
     subtitle: "(Focused Regulatory Writing Pack)",
-    bgColor: "bg-[#e8ebff]", // Very pale indigo/blue
     idealFor:
       "Companies needing clinical/scientific support for AI validation and compliance.",
     includes: [
@@ -90,17 +84,18 @@ const packagesData: PackageItem[] = [
       "Regulatory consistency review",
       "Mock submission-ready formatting",
     ],
-    optionalAddOns: [
+    addOns: [
       "SmPC writing (if applicable for combination products)",
       "Translation-ready text structure",
       "eIFU adaptation",
     ],
+    cardBgColor: "#e8ebff",
+    titleColor: "#3730a3",
   },
   {
-    id: "digital-health",
+    icon: "",
     title: "Digital Health Documentation Pack",
     subtitle: "(For AI/ML, SaMD, And Healthtech Platforms)",
-    bgColor: "bg-[#f48a58]", // Warm coral/orange
     idealFor:
       "Companies needing clinical/scientific support for AI validation and compliance.",
     includes: [
@@ -110,11 +105,13 @@ const packagesData: PackageItem[] = [
       "Scientific content for website/product page",
       "Clinical white paper for stakeholder trust",
     ],
-    optionalAddOns: [
+    addOns: [
       "Software IFU",
       "Validation protocol summaries",
       "Real-world evidence documentation",
     ],
+    cardBgColor: "#f48a58",
+    titleColor: "#7c2d12",
   },
 ];
 
@@ -141,7 +138,7 @@ export default function OurPackages(): React.ReactElement {
               medical writing
             </Link>
             . We offer a range of service packages (A to F) to support your end
-            goals—whether it's academic manuscript submission, regulatory
+            goals—whether it&apos;s academic manuscript submission, regulatory
             narrative development, product launch support, or interactive
             patient engagement materials.
           </p>
@@ -149,39 +146,45 @@ export default function OurPackages(): React.ReactElement {
 
         {/* Top 3 Column Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-          {topPackages.map((pkg) => (
-            <PackageCard key={pkg.id} pkg={pkg} />
+          {topPackages.map((pkg, idx) => (
+            <PackageCard key={idx} pkg={pkg} />
           ))}
         </div>
 
         {/* Bottom 2 Column Cards Grid (Centered) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto items-stretch">
-          {bottomPackages.map((pkg) => (
-            <PackageCard key={pkg.id} pkg={pkg} />
+          {bottomPackages.map((pkg, idx) => (
+            <PackageCard key={idx} pkg={pkg} />
           ))}
         </div>
 
         {/* CTA Banner Button */}
         <div className="pt-6 text-center max-w-2xl mx-auto">
-          <div className="inline-block w-full py-3.5 px-8 bg-[#ba0000] text-white font-bold text-base rounded-md shadow-md text-center">
+          <Link href="/order-now/" className="inline-block w-full py-3.5 px-8 bg-[#ba0000] text-white font-bold text-base rounded-md shadow-md text-center">
             Starts From $ 130
-          </div>
+          </Link>
         </div>
       </div>
     </section>
   );
 }
 
-// Sub-component for individual Package Cards
+// Sub-component for individual Package Cards with proper structure matching the design layout
 function PackageCard({ pkg }: { pkg: PackageItem }): React.ReactElement {
+  const addOnsList = pkg.addOns || [];
+
   return (
     <div
-      className={`${pkg.bgColor} p-6 flex flex-col justify-between shadow-sm transition-transform duration-200 hover:-translate-y-1`}
+      className="p-6 flex flex-col justify-between shadow-sm rounded-md transition-transform duration-200 hover:-translate-y-1"
+      style={{ backgroundColor: pkg.cardBgColor || "#f1f5f9" }}
     >
       <div>
         {/* White Card Title Block */}
-        <div className="bg-white p-5 rounded-sm shadow-sm text-center mb-8 min-h-[100px] flex flex-col items-center justify-center">
-          <h3 className="text-base sm:text-lg font-extrabold text-[#09322e] leading-snug">
+        <div className="bg-white p-5 rounded-sm shadow-sm text-center mb-6 min-h-[100px] flex flex-col items-center justify-center">
+          <h3 
+            className="text-base sm:text-lg font-extrabold leading-snug"
+            style={{ color: pkg.titleColor || "#09322e" }}
+          >
             {pkg.title}
           </h3>
           <p className="text-xs font-semibold text-slate-700 mt-1">
@@ -190,11 +193,11 @@ function PackageCard({ pkg }: { pkg: PackageItem }): React.ReactElement {
         </div>
 
         {/* Ideal For Section */}
-        <div className="mb-6 space-y-1.5">
+        <div className="mb-5 space-y-1">
           <div className="flex items-start gap-2">
-            <ArrowRightCircleIcon className="w-4 h-4 mt-1 flex-shrink-0 text-slate-900" />
+            <ArrowRightCircleIcon className="w-4 h-4 mt-0.5 flex-shrink-0 text-slate-900" />
             <span className="font-extrabold text-sm text-slate-900">
-              Ideal for:
+              Ideal For:
             </span>
           </div>
           <p className="text-xs sm:text-sm text-slate-900 pl-6 leading-relaxed">
@@ -203,14 +206,14 @@ function PackageCard({ pkg }: { pkg: PackageItem }): React.ReactElement {
         </div>
 
         {/* Includes Section */}
-        <div className="mb-6 space-y-2">
+        <div className="mb-5 space-y-1.5">
           <div className="flex items-start gap-2">
-            <ArrowRightCircleIcon className="w-4 h-4 mt-1 flex-shrink-0 text-slate-900" />
+            <ArrowRightCircleIcon className="w-4 h-4 mt-0.5 flex-shrink-0 text-slate-900" />
             <span className="font-extrabold text-sm text-slate-900">
-              Includes:
+              Services Included:
             </span>
           </div>
-          <ul className="pl-6 space-y-2.5 text-xs sm:text-sm text-slate-900">
+          <ul className="pl-6 space-y-1.5 text-xs sm:text-sm text-slate-900 list-disc">
             {pkg.includes.map((item, idx) => (
               <li key={idx} className="leading-snug">
                 {item}
@@ -220,16 +223,16 @@ function PackageCard({ pkg }: { pkg: PackageItem }): React.ReactElement {
         </div>
 
         {/* Optional Add-ons Section */}
-        {pkg.optionalAddOns.length > 0 && (
-          <div className="space-y-2 pt-2">
+        {addOnsList.length > 0 && (
+          <div className="space-y-1.5 pt-1">
             <div className="flex items-start gap-2">
-              <ArrowRightCircleIcon className="w-4 h-4 mt-1 flex-shrink-0 text-slate-900" />
+              <ArrowRightCircleIcon className="w-4 h-4 mt-0.5 flex-shrink-0 text-slate-900" />
               <span className="font-extrabold text-sm text-slate-900">
                 Optional Add-ons:
               </span>
             </div>
-            <ul className="pl-6 space-y-2 text-xs sm:text-sm text-slate-900">
-              {pkg.optionalAddOns.map((item, idx) => (
+            <ul className="pl-6 space-y-1.5 text-xs sm:text-sm text-slate-900 list-disc">
+              {addOnsList.map((item, idx) => (
                 <li key={idx} className="leading-snug">
                   {item}
                 </li>

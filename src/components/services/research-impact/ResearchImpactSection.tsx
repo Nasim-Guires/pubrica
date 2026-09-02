@@ -7,6 +7,7 @@ import {
   Minus,
   ArrowRightCircle,
 } from "lucide-react";
+import CommonFAQ from "@/components/common/FAQ";
 
 // Data structure for Cards
 interface ServiceCard {
@@ -68,37 +69,32 @@ interface FAQItem {
   answer?: string;
 }
 
-const faqData: FAQItem[] = [
+const faqs = [
   {
-    id: 1,
     question:
       "1. Should I purchase the Research Impact services only after my paper is accepted by a journal?",
     answer:
       "While many researchers opt to publicize their manuscripts only after journal acceptance, we recommend starting Research Impact services once you receive preliminary acceptance and your manuscript is in production. This ensures your promotional material is ready in time for online publication.",
   },
   {
-    id: 2,
     question:
       "2. What information is typically needed from authors for Research Impact services?",
     answer:
       "We generally require your accepted manuscript, high-resolution figures/graphics, brief summary notes or key takeaways, and any specific target audience preferences you might have.",
   },
   {
-    id: 3,
     question:
       "3. What kind of content do you develop in Research Impact Services?",
     answer:
       "We develop shareable research summaries, press notes, infographics, smart posters, executive summaries, grant proposal infographics, and short impact videos tailored for funders and media.",
   },
   {
-    id: 4,
     question:
       "4. Will the copyright of the delivered visual material, be it video, abstract, or cover art, fully belong to me?",
     answer:
       "Yes, all custom visual materials created for your research belong entirely to you upon final delivery and sign-off.",
   },
   {
-    id: 5,
     question:
       "5. Can you help communicate my research to non-academic audiences?",
     answer:
@@ -114,26 +110,12 @@ export default function ResearchImpactSection() {
   };
 
   // Structured Data (JSON-LD) for SEO
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqData.map((faq) => ({
-      "@type": "Question",
-      name: faq.question.replace(/^\d+\.\s*/, ""), // Clean numbers for SEO
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer || faq.question,
-      },
-    })),
-  };
+
 
   return (
     <section className="w-full bg-white text-slate-800 font-sans py-6 px-4 md:px-8 max-w-6xl mx-auto">
       {/* Schema.org FAQ SEO Injection */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+     
 
       {/* Main Heading */}
       <div className="text-center max-w-4xl mx-auto mb-10">
@@ -194,45 +176,10 @@ export default function ResearchImpactSection() {
       </div>
 
       {/* FAQ Header */}
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold text-[#0d3b44]">
-          Frequently Asked Questions
-        </h2>
-      </div>
-
-      {/* Accordion FAQ Component */}
-      <div className="border border-gray-200 rounded-sm bg-white overflow-hidden shadow-sm">
-        {faqData.map((faq) => {
-          const isOpen = openFaq === faq.id;
-          return (
-            <div
-              key={faq.id}
-              className="border-b border-gray-200 last:border-b-0"
-            >
-              <button
-                onClick={() => toggleFaq(faq.id)}
-                className="w-full text-left px-5 py-4 flex items-center justify-between font-semibold text-slate-800 hover:bg-slate-50 transition-colors text-sm md:text-base focus:outline-none"
-                aria-expanded={isOpen}
-              >
-                <span>{faq.question}</span>
-                <span className="ml-4 flex-shrink-0 text-slate-700">
-                  {isOpen ? (
-                    <Minus className="w-4 h-4 stroke-[2.5]" />
-                  ) : (
-                    <Plus className="w-4 h-4 stroke-[2.5]" />
-                  )}
-                </span>
-              </button>
-
-              {isOpen && faq.answer && (
-                <div className="px-5 pb-5 text-sm text-slate-600 leading-relaxed font-normal bg-white">
-                  <p>{faq.answer}</p>
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
+      <CommonFAQ
+        title="Frequently Asked Questions"
+        faqs={faqs}
+      />
     </section>
   );
 }

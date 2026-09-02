@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import CommonUploadButton from '@/components/common/CommonUploadButton';
+import HeroBanner from '@/components/common/HeroBanner';
 
 const RW = '/images/medical-writing/regulatory-writing';
 
@@ -29,16 +30,11 @@ const RegulatoryWritingPage = () => {
         <div className="w-full bg-white text-gray-800 font-sans">
 
             {/* 1. Hero / Header Banner Section */}
-            <section className="bg-[#122b2b] text-white py-7 px-4 md:px-8 text-center">
-                <div className="max-w-4xl mx-auto border border-white/40 p-8 rounded-sm">
-                    <h1 className="text-3xl md:text-4xl font-bold mb-4 tracking-wide">
-                        Regulatory Writing
-                    </h1>
-                    <p className="text-sm md:text-base text-gray-200 leading-relaxed">
-                        Our knowledgeable professionals produce clear, content-ready to submit and compliant with globally accepted regulatory standards.
-                    </p>
-                </div>
-            </section>
+            <HeroBanner
+                title="Regulatory Writing"
+                description="Our knowledgeable professionals produce clear, content-ready to submit and compliant with globally accepted regulatory standards."
+                headingAs="h1"
+            />
 
             {/* 2. Main Content Section */}
             <section className="max-w-5xl mx-auto px-6 py-6 md:py-7">
