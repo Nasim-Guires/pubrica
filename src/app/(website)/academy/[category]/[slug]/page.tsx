@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 import { EnquireNowForm } from "@/components/common/EnquireNowForm";
-import { getPostBySlug, getPosts, mediaUrl, getDescription, getFaqQuestionOverrides } from "@/lib/payload";
+import { getPostBySlug, getPosts, mediaUrl, getDescription, getFaqQuestionOverrides, getFaqContentOverrides } from "@/lib/payload";
 import { LexicalRenderer } from "@/lib/payload/lexical";
 
 export const revalidate = 300;
@@ -77,6 +77,7 @@ export default async function AcademyArticlePage({ params }: AcademyArticlePageP
               content={post.content}
               title={post.title}
               faqQuestions={getFaqQuestionOverrides(post.urlPath)}
+              faqContent={getFaqContentOverrides(post.urlPath)}
             />
           </main>
 

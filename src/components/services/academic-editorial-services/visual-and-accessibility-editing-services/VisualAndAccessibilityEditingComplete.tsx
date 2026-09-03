@@ -67,7 +67,7 @@ export default function VisualAndAccessibilityEditingComplete() {
         'Accessibility checks for headings, contrast, and legibility',
       ],
       turnaround: '3–5 business days',
-      bestFor: 'Manuscripts, theses, short research assignments',
+      bestFor: 'Manuscripts, theses, short research papers, academic assignments',
       borderColor: 'border-emerald-300',
       headerBg: 'bg-emerald-50',
     },
@@ -86,7 +86,7 @@ export default function VisualAndAccessibilityEditingComplete() {
         'Layout redesign for multi-device readability (desktop, tablet, mobile)',
       ],
       turnaround: '5–7 business days',
-      bestFor: 'Journal articles, book chapters, institutional reports',
+      bestFor: 'Journal submissions, conference papers, institutional reports',
       borderColor: 'border-purple-300',
       headerBg: 'bg-purple-50',
     },
@@ -105,7 +105,7 @@ export default function VisualAndAccessibilityEditingComplete() {
         'Expert QA review + final compliance validation report',
       ],
       turnaround: '7–10 business days',
-      bestFor: 'Books, monographs, large reports, e-learning modules',
+      bestFor: 'Books, large reports, corporate documents, e-learning materials, high-stakes submissions',
       borderColor: 'border-amber-300',
       headerBg: 'bg-amber-50',
     },
@@ -117,10 +117,10 @@ export default function VisualAndAccessibilityEditingComplete() {
       <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
-            Visual & Accessibility Editing Services at Pubrica
+            Visual & Accessibility Editing Services
           </h2>
           <p className="text-xs md:text-sm text-emerald-100 leading-relaxed max-w-3xl mx-auto">
-            Our expert editors meticulously refine your manuscript’s visual elements and accessibility features, ensuring clarity, inclusivity, and compliance with accessibility standards, so your content is reader-friendly and publication-ready.
+            Pubrica’s Visual & Accessibility Editing Services refine your scholarly documents, figures, tables, graphics, and layouts to meet global accessibility standards, ensuring your research is inclusive, impactful, and publication-ready.
           </p>
         </div>
       </section>
@@ -211,7 +211,7 @@ export default function VisualAndAccessibilityEditingComplete() {
               </h2>
 
               <div className="mb-4">
-                <Link href="/insights/sample-work" className="inline-block w-full sm:w-auto text-center bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-8 rounded-full transition-colors shadow">
+                <Link href="/insights/individual-patient-data-from-randomized-trials" className="inline-block w-full sm:w-auto text-center bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-8 rounded-full transition-colors shadow">
                   Discover More
                 </Link>
               </div>

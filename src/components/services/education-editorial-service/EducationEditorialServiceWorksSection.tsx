@@ -152,26 +152,14 @@ export default function EducationEditorialServicePage() {
             </section>
 
             {/* ------------------- HOW OUR EDUCATION EDITORIAL SERVICE WORKS ------------------- */}
-            <section className="py-6 px-4 bg-white border-b border-gray-100" aria-labelledby="workflow-heading">
-                <div className="max-w-6xl mx-auto text-center">
-                    <h2 id="workflow-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-2">
-                        How Our Education Editorial Service Works
-                    </h2>
-                    <h3 className="text-xs md:text-sm font-bold text-gray-700 mb-2">
-                        A Streamlined, Expert-Driven Editorial Workflow
-                    </h3>
-                    <p className="text-xs text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-                        Our Education Editorial Service follows a structured, transparent, and quality-focused process to ensure every document we handle meets the highest standards of pedagogical effectiveness. Here&apos;s a step-by-step overview of how we work:
-                    </p>
-
-                    {/* Workflow Cards Grid (No default black cards, pure hover effect) */}
-                    <EditorialWorkflowSection
-                        heading={workflowSectionData.heading}
-                        subheading={workflowSectionData.subheading}
-                        description={workflowSectionData.description}
-                        steps={workflowData}
-                    />
-                </div>
+            <section className="bg-white border-b border-gray-100">
+                {/* Workflow Cards Grid (No default black cards, pure hover effect) -- renders its own heading/subheading/description, so they aren't duplicated here */}
+                <EditorialWorkflowSection
+                    heading={workflowSectionData.heading}
+                    subheading={workflowSectionData.subheading}
+                    description={workflowSectionData.description}
+                    steps={workflowData}
+                />
             </section>
 
             {/* ------------------- EDUCATION EDITORIAL SERVICES SAMPLE WORK ------------------- */}

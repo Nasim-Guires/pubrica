@@ -100,7 +100,7 @@ const AccessibilityCompliancePage: NextPage = () => {
                                     </li>
                                     <li>Tables, Equations, References, and Supplementary Materials will be accessible.</li>
                                     <li>
-                                        Compliance to <Link href="/services/education-editorial-service/accessibility-compliance" className="text-blue-600 no-underline hover:no-underline">Publisher-Specific Accessibility and Formatting Guidelines.</Link>
+                                        Compliance to Publisher-Specific Accessibility and Formatting Guidelines.
                                     </li>
                                 </ul>
                             </div>

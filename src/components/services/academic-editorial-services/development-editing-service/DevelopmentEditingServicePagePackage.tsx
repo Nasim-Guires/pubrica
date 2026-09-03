@@ -1,10 +1,12 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 export default function DevelopmentEditingServicePagePackage() {
+  const [expandedExpert, setExpandedExpert] = useState<number | null>(null);
   const steps = [
     {
       step: 1,
@@ -315,6 +317,9 @@ export default function DevelopmentEditingServicePagePackage() {
                 exp: "10+ Years of Experience",
                 papers: "950+ Papers Edited",
                 photo: "/images/academic-editorial-services/development-editing-service/Dr.-Aarav-Mehta.png",
+                bio: "Dr. Mehta specializes in comprehensive development editing, enhancing manuscript structure, logical flow, and argument clarity.",
+                expertise: "Biomedical research, clinical studies, environmental sciences",
+                journals: "The Lancet, Scientific Reports, PLOS Biology",
               },
               {
                 name: "Dr. Priya Rangan",
@@ -323,6 +328,9 @@ export default function DevelopmentEditingServicePagePackage() {
                 exp: "8+ Years of Experience",
                 papers: "740+ Papers Edited",
                 photo: "/images/academic-editorial-services/development-editing-service/Dr.-Priya-Rangan.png",
+                bio: "Dr. Rangan focuses on improving manuscript coherence, conceptual depth, and research storytelling.",
+                expertise: "Molecular biology, pharmacology, biotechnology",
+                journals: "Nature Communications, Journal of Biological Chemistry, BMC Biology",
               },
               {
                 name: "Dr. Rohan Verma",
@@ -331,23 +339,40 @@ export default function DevelopmentEditingServicePagePackage() {
                 exp: "9+ Years of Experience",
                 papers: "850+ Papers Edited",
                 photo: "/images/academic-editorial-services/development-editing-service/Dr.-Rohan-Verma.png",
+                bio: "Dr. Verma specializes in development editing for neuroscience and psychology manuscripts, focusing on logical flow, argument strength, and clarity of results.",
+                expertise: "Neuroscience, cognitive science, behavioural studies",
+                journals: "Neuron, Frontiers in Neuroscience, Brain Research",
               }
-            ].map((expert, idx) => (
-              <div key={idx} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm text-center">
-                <div className="relative w-16 h-16 rounded-full mx-auto mb-4 overflow-hidden">
-                  <Image src={expert.photo} alt={expert.name} fill className="object-cover" sizes="64px" />
+            ].map((expert, idx) => {
+              const isExpanded = expandedExpert === idx;
+              return (
+                <div key={idx} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm text-center flex flex-col">
+                  <div className="relative w-16 h-16 rounded-full mx-auto mb-4 overflow-hidden">
+                    <Image src={expert.photo} alt={expert.name} fill className="object-cover" sizes="64px" />
+                  </div>
+                  <h3 className="font-bold text-base text-[#1b3b36]">{expert.name}</h3>
+                  <p className="text-xs text-gray-600 mt-1">{expert.degree}</p>
+                  <p className="text-xs text-gray-500 mb-4">{expert.institute}</p>
+                  <div className="text-xs font-semibold text-gray-700 border-t pt-3 mb-4">
+                    {expert.exp} | {expert.papers}
+                  </div>
+                  {isExpanded && (
+                    <div className="text-left text-xs text-gray-600 space-y-2 mb-4 leading-relaxed">
+                      <p>{expert.bio}</p>
+                      <p><span className="font-semibold text-gray-800">Subject Matter Expertise:</span> {expert.expertise}</p>
+                      <p><span className="font-semibold text-gray-800">Journals Submitted To:</span> {expert.journals}</p>
+                    </div>
+                  )}
+                  <button
+                    type="button"
+                    onClick={() => setExpandedExpert(isExpanded ? null : idx)}
+                    className="text-xs text-blue-600 font-bold no-underline hover:no-underline mt-auto"
+                  >
+                    {isExpanded ? 'Show Less' : 'Read More'}
+                  </button>
                 </div>
-                <h3 className="font-bold text-base text-[#1b3b36]">{expert.name}</h3>
-                <p className="text-xs text-gray-600 mt-1">{expert.degree}</p>
-                <p className="text-xs text-gray-500 mb-4">{expert.institute}</p>
-                <div className="text-xs font-semibold text-gray-700 border-t pt-3 mb-4">
-                  {expert.exp} | {expert.papers}
-                </div>
-                <Link href="/about-us/our-editors" className="text-xs text-blue-600 font-bold no-underline hover:no-underline">
-                  Read More
-                </Link>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 

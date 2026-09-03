@@ -185,9 +185,9 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
                       <p>{expert.papersEdited}</p>
                     </div>
                   </div>
-                  <Link href="/about-us/our-editors" className="text-sm font-bold text-blue-600 transition-colors inline-block text-center w-full py-2 border-t border-gray-100 no-underline hover:no-underline">
+                  <span className="text-sm font-bold text-gray-900 inline-block text-center w-full py-2 border-t border-gray-100">
                     Read More
-                  </Link>
+                  </span>
                 </div>
               ))}
             </div>

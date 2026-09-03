@@ -27,8 +27,8 @@ const AssessmentAndExamReviewServicesSample: NextPage = () => {
                 Assessment and Exam Review Services Sample Work
               </h3>
               <div className="pt-1">
-                <Link 
-                  href="/insights/sample-work" 
+                <Link
+                  href="/insights/individual-patient-data-from-randomized-trials/"
                   className="inline-block bg-black text-white font-medium text-sm py-3 px-8 rounded-full hover:bg-gray-800 transition-colors shadow-sm"
                 >
                   Discover More

@@ -146,9 +146,9 @@ const AIDataPreparationSections: NextPage = () => {
                                 </div>
                             </div>
 
-                            <Link href="/about-us/our-editors" className="w-full text-center py-2 border border-gray-200 rounded-lg text-xs font-bold text-gray-800 hover:bg-gray-50 transition-colors">
+                            <span className="w-full text-center py-2 border border-gray-200 rounded-lg text-xs font-bold text-gray-800">
                                 Read More
-                            </Link>
+                            </span>
                         </div>
                     ))}
                 </div>
@@ -171,7 +171,7 @@ const AIDataPreparationSections: NextPage = () => {
                             AI and Data Preparation Services Sample Work
                         </h2>
                         <div>
-                            <Link href="/insights/sample-work" className="inline-block bg-black text-white font-bold text-xs py-3 px-8 rounded-full hover:bg-gray-800 transition-colors shadow">
+                            <Link href="/insights/individual-patient-data-from-randomized-trials" className="inline-block bg-black text-white font-bold text-xs py-3 px-8 rounded-full hover:bg-gray-800 transition-colors shadow">
                                 Discover More
                             </Link>
                         </div>

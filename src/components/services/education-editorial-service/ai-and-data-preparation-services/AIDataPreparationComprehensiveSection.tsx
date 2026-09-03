@@ -59,12 +59,24 @@ const AIDataPreparationComprehensiveSection: NextPage = () => {
         />
       </Head>
 
+      {/* HERO BANNER SECTION */}
+      <div className="w-full bg-[#1b3b32] py-6 px-4 sm:px-8">
+        <div className="mx-auto max-w-5xl rounded-lg border border-[#2b5447] bg-[#1b3b32] px-6 py-5 text-center text-white sm:px-12">
+          <h1 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
+            AI and Data Preparation Services
+          </h1>
+          <p className="mx-auto mt-3 max-w-3xl text-xs leading-relaxed text-gray-200 sm:text-sm">
+            Our goal is to assure you that both the preparation and refinement of your data, as well as the optimization of your data, will allow AI to be successful.
+          </p>
+        </div>
+      </div>
+
       <div className="w-full bg-white text-gray-800 py-8 md:py-7 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
         {/* MAIN HERO / OVERVIEW SECTION */}
         <section className="max-w-5xl mx-auto space-y-6">
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0b3b2c] tracking-tight leading-snug">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0b3b2c] tracking-tight leading-snug">
             Prepare Data. Power AI. Elevate Research Intelligence.
-          </h1>
+          </h2>
 
           <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed">
             In an environment of accelerated development in Artificial Intelligence based research and innovation, the quality of the preparation of high-quality data has become essential rather than optional for researchers, institutions, and organisations developing Artificial Intelligence (AI), Machine Learning (ML) and Advanced Analytics using datasets. Our goal at Pubrica is to connect the gap between the raw research data of our clients and AI-ready intelligence. Pubrica&apos;s AI & Data Preparation service takes the raw and unstructured data of our clients and creates a ready-to-use cleaned, pre-processed, and ready-to-use model dataset. Our services include data cleaning, data normalisation, data annotation, data labelling, and data feature engineering support to ensure your data is ready for the creation, validation, and deployment of robust AI models.

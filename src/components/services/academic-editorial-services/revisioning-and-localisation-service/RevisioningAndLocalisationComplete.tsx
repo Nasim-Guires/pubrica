@@ -13,6 +13,7 @@ export const metadata = {
 
 export default function RevisioningAndLocalisationComplete() {
     const [hoveredStep, setHoveredStep] = useState<number | null>(null);
+    const [expandedExpert, setExpandedExpert] = useState<number | null>(null);
 
     const crucialPoints = [
         'Improved clarity, coherence, and scientific logic',
@@ -28,32 +29,32 @@ export default function RevisioningAndLocalisationComplete() {
     const serviceTypes = [
         {
             title: 'Content Revisioning',
-            description: 'Enhance clarity, coherence, and readability of your manuscript while preserving the original intent. Pubrica’s...',
+            description: 'Enhance clarity, coherence, and readability of your manuscript while preserving the original intent. Pubrica’s experts restructure sentences, refine arguments, improve academic tone, and ensure your work aligns with international publishing standards.',
             iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Content-Revisioning.png',
         },
         {
             title: 'Linguistic Localisation',
-            description: 'Adapt your manuscript to meet the linguistic expectations of specific regions or global audiences.',
+            description: 'Adapt your manuscript to meet the linguistic expectations of specific regions or global audiences. We ensure accurate translation, culturally appropriate phrasing, and alignment with target-language academic norms.',
             iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Linguistic-Localisation.png',
         },
         {
             title: 'Cultural Localisation',
-            description: 'We tailor your content to the cultural context of the target audience. This includes adapting examples, idioms...',
+            description: 'We tailor your content to the cultural context of the target audience. This includes adapting examples, idioms, references, measurement units, and communication styles to ensure your manuscript is relatable and compliant with regional norms.',
             iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Cultural-Localisation.png',
         },
         {
-            title: 'Technical Localization',
-            description: 'For specialised scientific, medical, and academic manuscripts, our team ensures domain-specific...',
+            title: 'Technical Localisation',
+            description: 'For specialised scientific, medical, and academic manuscripts, our team ensures domain-specific terminologies, technical expressions, and discipline-based writing styles are precisely revised and aligned with the expectations of the target journal or academic community.',
             iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Technical-Localisation.png',
         },
         {
             title: 'Journal-Specific Revisioning',
-            description: 'Every journal has its own stylistic, structural, and linguistic requirements. Pubrica revises and localises...',
+            description: 'Every journal has its own stylistic, structural, and linguistic requirements. Pubrica revises and localises your manuscript to meet the exact formatting, referencing, language quality, and structural expectations of your target journal.',
             iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Journal-Specific-Revisioning.png',
         },
         {
             title: 'Translation-Integrated Localisation',
-            description: 'For authors working with translated manuscripts, we refine translated content to ensure fluency, natural...',
+            description: 'For authors working with translated manuscripts, we refine translated content to ensure fluency, natural academic tone, and contextual accuracy. This includes eliminating translation artefacts and restructuring content to meet academic communication standards.',
             iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Translation-Integrated-Localisation.png',
         },
     ];
@@ -120,6 +121,9 @@ export default function RevisioningAndLocalisationComplete() {
             experience: '10+ Years of Experience',
             manuscripts: '800+ Manuscripts Localised & Revised',
             photo: '/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Arjun-Mehta.png',
+            bio: 'Dr. Mehta specializes in adapting scientific content for global audiences, ensuring clarity, cultural relevance, and journal compliance.',
+            expertise: 'Biomedical sciences, clinical research, pharmaceutical studies',
+            journals: 'The Lancet, BMJ, Elsevier',
         },
         {
             name: 'Dr. Priya Rao',
@@ -128,14 +132,20 @@ export default function RevisioningAndLocalisationComplete() {
             experience: '8+ Years of Experience',
             manuscripts: '400+ Papers Localised & Revised',
             photo: '/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Priya-Rao.png',
+            bio: 'Dr. Rao focuses on precise language refinement, localisation, and formatting to meet international publishing standards.',
+            expertise: 'Genetics, molecular biology, pharmacology',
+            journals: 'Nature Communications, PLOS ONE, Springer',
         },
         {
             name: 'Dr. Rohan Iyer',
             qualification: 'PhD in Biotechnology',
             university: 'Indian Institute of Technology, Bombay',
             experience: '9+ Years of Experience',
-            manuscripts: '500+ Manuscripts Localised & Revised',
+            manuscripts: '600+ Manuscripts Localised & Revised',
             photo: '/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Rohan-Iyer.png',
+            bio: 'Dr. Iyer ensures manuscripts are scientifically accurate while culturally and linguistically adapted for diverse readerships.',
+            expertise: 'Biochemistry, molecular diagnostics, translational research',
+            journals: 'Cell, Scientific Reports, Wiley',
         },
     ];
 
@@ -235,7 +245,7 @@ export default function RevisioningAndLocalisationComplete() {
                         Transform Your Research for Global Impact with Pubrica’s Expert Revisioning & Localisation Services
                     </h2>
                     <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-4">
-                        In today’s rapidly globalizing research landscape, the success of your manuscript, scientific communication, or academic content depends not only on the accuracy of information but also on how effectively it resonates with diverse audiences across geographies. Even high-quality research may fail to achieve its intended reach if the writing style, language, cultural context, or technical nuances do not align with the expectations of a target audience or regional publication standards. Pubrica’s revisioning and localisation services are designed to bridge this gap. We help authors, researchers, universities, and scientific organizations reshape, refine, and adapt their content for different linguistic, cultural, and disciplinary standards.
+                        In today’s rapidly globalizing research landscape, the success of your manuscript, scientific communication, or academic content depends not only on the accuracy of information but also on how effectively it resonates with diverse audiences across geographies. Even high-quality research may fail to achieve its intended reach if the writing style, language, cultural context, or technical nuances do not align with the expectations of a target audience or regional publication standards. Pubrica’s revisioning and localisation services are designed to bridge this gap. We help authors, researchers, universities, and scientific organizations reshape, refine, and adapt their content for different linguistic, cultural, and disciplinary contexts, ensuring clarity, consistency, and impact.
                     </p>
                     <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
                         With a global team of subject-matter experts and academic editors, Pubrica provides end-to-end support to make your manuscript ready for international submission, cross-regional dissemination, or localized publication.
@@ -382,28 +392,45 @@ export default function RevisioningAndLocalisationComplete() {
                     Meet Our Revisioning and Localisation Experts
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {experts.map((exp, idx) => (
-                        <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between text-center">
-                            <div>
-                                <div className="relative w-16 h-16 mx-auto mb-3 overflow-hidden rounded-full bg-emerald-100">
-                                    <Image src={exp.photo} alt={exp.name} fill className="object-cover" sizes="64px" />
-                                </div>
-                                <h3 className="text-sm font-bold text-gray-900 mb-1">{exp.name}</h3>
-                                <p className="text-xs text-emerald-800 font-medium mb-1">{exp.qualification}</p>
-                                <p className="text-[11px] text-gray-500 mb-4">{exp.university}</p>
-                            </div>
-                            <div className="pt-4 border-t border-gray-100 flex justify-around text-xs text-gray-700">
+                    {experts.map((exp, idx) => {
+                        const isExpanded = expandedExpert === idx;
+                        return (
+                            <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between text-center">
                                 <div>
-                                    <span className="block font-bold text-gray-900">{exp.experience}</span>
-                                    <span className="text-[10px] text-gray-500">Experience</span>
+                                    <div className="relative w-16 h-16 mx-auto mb-3 overflow-hidden rounded-full bg-emerald-100">
+                                        <Image src={exp.photo} alt={exp.name} fill className="object-cover" sizes="64px" />
+                                    </div>
+                                    <h3 className="text-sm font-bold text-gray-900 mb-1">{exp.name}</h3>
+                                    <p className="text-xs text-emerald-800 font-medium mb-1">{exp.qualification}</p>
+                                    <p className="text-[11px] text-gray-500 mb-4">{exp.university}</p>
                                 </div>
-                                <div>
-                                    <span className="block font-bold text-gray-900">{exp.manuscripts}</span>
-                                    <span className="text-[10px] text-gray-500">Completed</span>
+                                <div className="pt-4 border-t border-gray-100 flex justify-around text-xs text-gray-700 mb-4">
+                                    <div>
+                                        <span className="block font-bold text-gray-900">{exp.experience}</span>
+                                        <span className="text-[10px] text-gray-500">Experience</span>
+                                    </div>
+                                    <div>
+                                        <span className="block font-bold text-gray-900">{exp.manuscripts}</span>
+                                        <span className="text-[10px] text-gray-500">Completed</span>
+                                    </div>
                                 </div>
+                                {isExpanded && (
+                                    <div className="text-left text-xs text-gray-600 space-y-2 mb-4 leading-relaxed">
+                                        <p>{exp.bio}</p>
+                                        <p><span className="font-semibold text-gray-800">Subject Matter Expertise:</span> {exp.expertise}</p>
+                                        <p><span className="font-semibold text-gray-800">Journals & Publishers Worked With:</span> {exp.journals}</p>
+                                    </div>
+                                )}
+                                <button
+                                    type="button"
+                                    onClick={() => setExpandedExpert(isExpanded ? null : idx)}
+                                    className="text-xs text-blue-600 font-bold no-underline hover:no-underline"
+                                >
+                                    {isExpanded ? 'Show Less' : 'Read More'}
+                                </button>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </section>
 
@@ -429,7 +456,7 @@ export default function RevisioningAndLocalisationComplete() {
                                 Revisioning and Localisation Service Sample Work
                             </h2>
                             <div className="space-y-3 mb-6">
-                                <Link href="/insights/sample-work" className="block w-full text-center bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
+                                <Link href="/insights/individual-patient-data-from-randomized-trials" className="block w-full text-center bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
                                     Discover More
                                 </Link>
                             </div>

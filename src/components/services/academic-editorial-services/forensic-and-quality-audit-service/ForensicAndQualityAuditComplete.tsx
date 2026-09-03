@@ -76,8 +76,9 @@ export default function ForensicAndQualityAuditComplete() {
                 'Verification of processes, transactions, and documentation',
                 'Identification of inconsistencies or quality deviations',
                 'Risk assessment with corrective action roadmap',
+                'Comprehensive audit report',
             ],
-            turnaround: '5–7 business days',
+            turnaround: '7–10 business days',
             borderColor: 'border-purple-300',
             headerBg: 'bg-purple-50',
         },
@@ -90,10 +91,10 @@ export default function ForensicAndQualityAuditComplete() {
                 'Evidence-based assessment with chain-of-custody controls',
                 'Root-cause and gap analysis',
                 'Quality assurance audit across all critical functions',
-                'Detailed forensic report with legal/compliance readiness',
-                'Recommendations for remediation',
+                'High-level compliance, risk, and fraud analysis report',
+                'Recommendations for remediation and prevention',
             ],
-            turnaround: '7–10 business days',
+            turnaround: '12–15 business days',
             borderColor: 'border-amber-300',
             headerBg: 'bg-amber-50',
         },
@@ -105,10 +106,10 @@ export default function ForensicAndQualityAuditComplete() {
             <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
-                        Forensic and Quality Audit Services at Pubrica
+                        Forensic &amp; Quality Audit Services
                     </h2>
                     <p className="text-xs md:text-sm text-emerald-100 leading-relaxed max-w-3xl mx-auto">
-                        Our expert auditors meticulously examine and evaluate your processes, records, and compliance measures to ensure accuracy, integrity, and regulatory adherence, providing actionable insights that safeguard your organization and enhance operational quality.
+                        At Pubrica, we provide meticulous forensic and quality audits designed to detect inconsistencies, ensure transparency, and uphold the highest ethical and technical standards in scholarly publishing.
                     </p>
                 </div>
             </section>
@@ -169,7 +170,7 @@ export default function ForensicAndQualityAuditComplete() {
                                 Forensic and Quality Audit Service Sample Work
                             </h2>
                             <div className="space-y-3 mb-6">
-                                <Link href="/insights/sample-work" className="block w-full text-center bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
+                                <Link href="/insights/individual-patient-data-from-randomized-trials" className="block w-full text-center bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
                                     Discover More
                                 </Link>
                             </div>

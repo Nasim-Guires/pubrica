@@ -2,6 +2,7 @@
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
@@ -89,7 +90,7 @@ export default function ForensicAndQualityAuditService() {
               In today’s evolving research and publication landscape, maintaining the accuracy, integrity, and authenticity of scholarly content is more important than ever. Academic institutions, researchers, publishers, and corporate organisations face increasing scrutiny related to data validity, scientific misconduct, plagiarism, duplication, authorship issues, reporting transparency, and compliance with global publishing standards. Even unintentional errors can undermine the reliability of research, damage reputations, and hinder publication success.
             </p>
             <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-6">
-              Pubrica’s <span className="text-[#0b3b2c] font-medium">Forensic and Quality Audit Service</span> is crafted to ensure that your manuscript, dataset, visuals, or documentation meets the highest benchmarks of academic integrity and quality control. Our expert team performs deep-level examinations, evaluating data accuracy, image authenticity, methodology reporting, compliance with journal guidelines, and alignment with industry standards such as COPE, ICMJE, CONSORT, PRISMA, GCP, GLP, and ISO-based frameworks.
+              Pubrica’s <Link href="/services/academic-editorial-services/forensic-and-quality-audit-service/forensic-audit-complete-guide" className="text-blue-600 font-medium no-underline hover:no-underline">Forensic and Quality Audit Service</Link> is crafted to ensure that your manuscript, dataset, visuals, or documentation meets the highest benchmarks of academic integrity and quality control. Our expert team performs deep-level examinations, evaluating data accuracy, image authenticity, methodology reporting, compliance with journal guidelines, and alignment with industry standards such as COPE, ICMJE, CONSORT, PRISMA, GCP, GLP, and ISO-based frameworks.
             </p>
 
             <h3 className="text-sm font-bold text-gray-900 mb-4">

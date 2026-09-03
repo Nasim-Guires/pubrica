@@ -231,7 +231,7 @@ export default function PermissionAndMetadataComplete() {
                                 Academic Editorial Services Sample Work
                             </h2>
                             <div className="mb-4">
-                                <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-bold py-2 px-6 rounded-full transition-colors shadow">
+                                <Link href="/insights/individual-patient-data-from-randomized-trials" className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-bold py-2 px-6 rounded-full transition-colors shadow">
                                     Discover More
                                 </Link>
                             </div>

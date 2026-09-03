@@ -125,6 +125,12 @@ export default function DigitalProductionQABeyondComponent() {
             <p className="text-gray-600 text-base leading-relaxed">
               Our Digital Production QA Example represents an extremely thorough Quality Assurance process for checking all components, including layouts, XML, Metadata and Final Output files. The QA process is designed to confirm that all content is accurate and consistent and is compliant. The finished product is ready for publication and meets the highest possible quality standard.
             </p>
+            <Link
+              href="/insights/sample-work"
+              className="inline-block bg-black hover:bg-gray-800 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200 shadow-md"
+            >
+              Discover More
+            </Link>
           </div>
         </div>
       </div>

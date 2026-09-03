@@ -36,8 +36,8 @@ const LearningDesignSampleSection: NextPage = () => {
                 Learning Design and Pedagogy Services Sample Work
               </h2>
               <div>
-                <Link 
-                  href="/insights/sample-work" 
+                <Link
+                  href="/insights/individual-patient-data-from-randomized-trials"
                   className="inline-block bg-black text-white text-xs md:text-sm font-semibold py-2.5 px-6 rounded-full hover:bg-gray-800 transition-colors shadow"
                 >
                   Discover More

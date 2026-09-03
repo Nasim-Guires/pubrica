@@ -117,6 +117,7 @@ export const educationEditorialAssessmentAndExamReviewPackages = {
         "Summary review report"
       ],
       turnaround: "3–5 business days",
+      bestFor: "Quizzes, short exams, assignments",
       icon: "/images/editing-and-translation/basic-pacakge.png",
     },
     {
@@ -132,6 +133,7 @@ export const educationEditorialAssessmentAndExamReviewPackages = {
         "Detailed improvement recommendations"
       ],
       turnaround: "5–7 business days",
+      bestFor: "Course exams, certifications, institutional assessments",
       icon: "/images/publication-support/peer-review-pre-submission/advanced.webp",
     },
     {
@@ -147,6 +149,7 @@ export const educationEditorialAssessmentAndExamReviewPackages = {
         "Expert QA review and validation report"
       ],
       turnaround: "7–10 business days",
+      bestFor: "Standardized tests, large-scale exams, accreditation reviews",
       icon: "/images/editing-and-translation/translation-with-editing/pro.webp",
     },
   ],

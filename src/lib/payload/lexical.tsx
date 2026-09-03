@@ -5,6 +5,7 @@ import type { LexicalContent, LexicalNode, PayloadMedia, PayloadPost } from "./t
 import { mediaUrl } from "./client";
 import ImageLightboxGrid from "@/components/insight/ImageLightboxGrid";
 import FAQAccordion from "@/components/insight/FAQAccordion";
+import type { FaqContentOverrideItem } from "./faqOverrides";
 
 const FORMAT_BOLD = 1;
 const FORMAT_ITALIC = 2;
@@ -578,9 +579,11 @@ function getBodyChildren(content?: LexicalContent | null, title?: string): Lexic
  * already-fine post is left untouched. Runs once at the top level only: this
  * heading never appears nested inside a paragraph/list in practice.
  */
-function fixBrokenFaqSection(children: LexicalNode[], faqQuestions?: string[]): LexicalNode[] {
-  if (!faqQuestions || faqQuestions.length === 0) return children;
-
+function fixBrokenFaqSection(
+  children: LexicalNode[],
+  faqQuestions?: string[],
+  faqContent?: FaqContentOverrideItem[]
+): LexicalNode[] {
   const idx = children.findIndex(
     (n) => n.type === "heading" && /frequently asked|^faq/i.test(headingText(n))
   );
@@ -594,6 +597,30 @@ function fixBrokenFaqSection(children: LexicalNode[], faqQuestions?: string[]): 
     }
   }
 
+  const faqTitle = headingText(children[idx]);
+
+  // Some posts' migrated content doesn't line up with the recovered questions
+  // at all (answers missing entirely, or a question's answer was originally a
+  // bullet list that got flattened into several separate paragraphs). For
+  // those, faqContentOverrides.json supplies the full question+answer text
+  // scraped directly from the live site, bypassing the Payload paragraphs
+  // for this section entirely.
+  if (faqContent && faqContent.length > 0) {
+    const faqNode: LexicalNode = {
+      type: "faqAccordionFixed",
+      faqTitle,
+      faqItems: faqContent.map(({ question, answer }) => ({
+        question,
+        answerNodes: [
+          { type: "paragraph", children: [{ type: "text", text: answer }] } as LexicalNode,
+        ],
+      })),
+    };
+    return [...children.slice(0, idx), faqNode, ...children.slice(end)];
+  }
+
+  if (!faqQuestions || faqQuestions.length === 0) return children;
+
   const section = children.slice(idx + 1, end);
   if (section.some((n) => n.type === "heading")) return children; // already has real questions
 
@@ -602,7 +629,7 @@ function fixBrokenFaqSection(children: LexicalNode[], faqQuestions?: string[]): 
 
   const faqNode: LexicalNode = {
     type: "faqAccordionFixed",
-    faqTitle: headingText(children[idx]),
+    faqTitle,
     faqItems: faqQuestions.map((question, i) => ({
       question,
       answerNodes: [answers[i]],
@@ -616,13 +643,16 @@ export function LexicalRenderer({
   content,
   title,
   faqQuestions,
+  faqContent,
 }: {
   content?: LexicalContent | null;
   title?: string;
   /** Recovered FAQ question text for posts whose migrated content is missing it — see fixBrokenFaqSection. */
   faqQuestions?: string[];
+  /** Recovered full FAQ question+answer pairs — see fixBrokenFaqSection. */
+  faqContent?: FaqContentOverrideItem[];
 }) {
-  const children = fixBrokenFaqSection(getBodyChildren(content, title), faqQuestions);
+  const children = fixBrokenFaqSection(getBodyChildren(content, title), faqQuestions, faqContent);
   if (children.length === 0) return null;
   return <div>{renderChildren(children)}</div>;
 }
