@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import HeroBanner from '@/components/common/HeroBanner';
 
 // --- DATA STRUCTURES ---
 
@@ -49,16 +50,11 @@ export default function ThoughtLeadershipEditorialDesignView() {
         <main className="w-full bg-white text-slate-800 font-sans pb-10">
 
             {/* ==================== 1. HERO BANNER ==================== */}
-            <section className="bg-[#033c2a] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
-                <div className="max-w-5xl mx-auto border border-slate-300/40 p-8 sm:p-12 rounded-sm space-y-4">
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
-                        Thought Leadership Content &amp; Editorial Design
-                    </h1>
-                    <p className="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed max-w-3xl mx-auto">
-                        Pubrica offers thought leadership content creation and editorial design services, crafting engaging narratives and visually appealing layouts to elevate your brand and captivate your audience.
-                    </p>
-                </div>
-            </section>
+            <HeroBanner
+                title="Thought Leadership Content & Editorial Design"
+                description="Pubrica offers thought leadership content creation and editorial design services, crafting engaging narratives and visually appealing layouts to elevate your brand and captivate your audience."
+                headingAs="h1"
+            />
 
 
             {/* ==================== 2. OVERVIEW & FEATURED LIST SECTION ==================== */}
@@ -77,7 +73,7 @@ export default function ThoughtLeadershipEditorialDesignView() {
 
                         <p>
                             Our{' '}
-                            <Link href="/subject-matter-experts" className="text-blue-600 font-medium no-underline hover:no-underline">
+                            <Link href="/subject-matter-experts" className="text-blue-600 no-underline hover:no-underline">
                                 subject matter experts
                             </Link>{' '}
                             create curated editorial content creation services to translate rich insights into concrete growth. Our experts create unique content based on the audience. Our thought leadership content support includes:
@@ -135,11 +131,11 @@ export default function ThoughtLeadershipEditorialDesignView() {
 
                         <p className="pt-3">
                             At Pubrica, our{' '}
-                            <Link href="/services/medical-writing" className="text-blue-600 font-medium no-underline hover:no-underline">
+                            <Link href="/services/research-services/medical-writing/" className="text-blue-600 no-underline hover:no-underline">
                                 medical writing
                             </Link>{' '}
                             associates engage in conferences and forums, offering fresh insights on clinical, medical, and regulatory topics. We provide support for both secondary desk-based{' '}
-                            <Link href="/services/research-services/literature-review-and-gap" className="text-blue-600 font-medium no-underline hover:no-underline">
+                            <Link href="/services/research-services/literature-review-and-gap/" className="text-blue-600 no-underline hover:no-underline">
                                 literature reviews
                             </Link>{' '}
                             and white papers derived from primary sources like interviews and surveys. Our experienced team aids in all stages of report development, from storyboard creation to editorial design and promotion.

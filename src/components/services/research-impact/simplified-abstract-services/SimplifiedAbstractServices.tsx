@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Plus, Minus } from 'lucide-react';
+import HeroBanner from '@/components/common/HeroBanner';
 
 interface AccordionItem {
     id: string;
@@ -45,29 +46,26 @@ const whatWeDoItems: AccordionItem[] = [
 ];
 
 export default function SimplifiedAbstractServices() {
-    // Set initial state to null so NO card/accordion is open by default
-    const [openAccordionIndex, setOpenAccordionIndex] = useState<number | null>(null);
+    // State to support multiple open accordion items
+    const [openIndices, setOpenIndices] = useState<number[]>([]);
 
     const toggleAccordion = (index: number) => {
-        setOpenAccordionIndex((prevIndex) => (prevIndex === index ? null : index));
+        if (openIndices.includes(index)) {
+            setOpenIndices(openIndices.filter(i => i !== index));
+        } else {
+            setOpenIndices([...openIndices, index]);
+        }
     };
 
     return (
         <div className="w-full bg-white text-slate-800 font-sans">
 
             {/* 1. Top Hero Header */}
-            <section className="w-full bg-[#033c2a] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
-                <div className="max-w-4xl mx-auto space-y-3">
-                    <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-                        Simplified Abstract Services
-                    </h1>
-                    <div className="max-w-3xl mx-auto border border-emerald-500/40 bg-emerald-950/30 p-4 rounded-lg">
-                        <p className="text-sm sm:text-base text-emerald-100 leading-relaxed">
-                            Create a strong first impression with a clear, concise, and journal-ready abstract. Our professional abstract writing service helps researchers transform complex manuscripts into simplified, publication-ready summaries, perfect for academic publishing, journal submission, and scientific communication.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <HeroBanner
+                title="Simplified Abstract Services"
+                description="Create a strong first impression with a clear, concise, and journal-ready abstract. Our professional abstract writing service helps researchers transform complex manuscripts into simplified, publication-ready summaries, perfect for academic publishing, journal submission, and scientific communication."
+                headingAs="h1"
+            />
 
             {/* 2. Intro Section */}
             <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -84,11 +82,11 @@ export default function SimplifiedAbstractServices() {
 
                         <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                             That's where Pubrica's{' '}
-                            <Link href="/services/research-impact/simplified-abstract-services" className="text-blue-600 font-medium no-underline hover:no-underline">
+                            <Link href="/insights/sample-work/clonal-dynamics-native-haematopoiesis/" className="text-blue-600 font-medium no-underline hover:no-underline">
                                 Simplified Abstract
                             </Link>{' '}
                             Writing Service comes in. Our team of domain experts provides custom abstract writing and scientific summary services designed specifically for academic publishing. We convert your full manuscript into a structured, publication-ready abstract that meets{' '}
-                            <Link href="/services/publication-support/journal-submission" className="text-blue-600 font-medium no-underline hover:no-underline">
+                            <Link href="/services/publication-support/journal-submission/" className="text-blue-600 font-medium no-underline hover:no-underline">
                                 journal submission
                             </Link>{' '}
                             standards, without compromising on scientific accuracy or depth.
@@ -101,7 +99,7 @@ export default function SimplifiedAbstractServices() {
 
                     {/* Intro Hero Image Box */}
                     <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-full max-w-md h-64 sm:h-72 bg-[#033c2a] rounded-2xl p-2 shadow-lg">
+                        <div className="relative w-full max-w-md h-64 sm:h-72 rounded-2xl p-2">
                             <div className="relative w-full h-full rounded-xl overflow-hidden">
                                 <Image
                                     src="/images/research-impact/simplified-abstract-services/Make-Your-Research-Stand-Out-Start-with-a-Clear-Concise-and-Simplified-Abstract.webp"
@@ -125,35 +123,34 @@ export default function SimplifiedAbstractServices() {
                     </h2>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
                         Pubrica's{' '}
-                        <Link href="/services/research-impact/simplified-abstract-services" className="text-blue-600 font-medium no-underline hover:no-underline">
+                        <Link href="/services/research-impact/simplified-abstract-services/sglt2i-phimosis-risk-men-diabetes/" className="text-blue-600 font-medium no-underline hover:no-underline">
                             simplified abstract
                         </Link>{' '}
                         writing services provide a one-stop solution for researchers who need assistance in converting complex manuscripts into precise, succinct, and publishable abstracts. We help to make your research accessible to a broader academic audience, including interdisciplinary scientists, journal editors, and grant reviewers.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-
-                    {/* Compound Collage Images */}
-                    <div className="lg:col-span-5 relative flex justify-center py-4">
-                        <div className="relative w-full max-w-sm h-72">
-                            <div className="absolute top-0 left-0 w-3/5 h-48 rounded-xl overflow-hidden shadow-md border-2 border-white z-10 bg-slate-100">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    {/* Compound Collage Images - Fixed Larger Size & Mobile Centering */}
+                    <div className="lg:col-span-5 relative flex justify-center py-6">
+                        <div className="relative w-full max-w-md h-80 sm:h-96 lg:h-[420px] mx-auto flex items-center justify-center">
+                            <div className="absolute w-4/5 sm:w-3/4 h-72 sm:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-xl border-4 border-white z-10 bg-slate-100">
                                 <Image
                                     src="/images/research-impact/simplified-abstract-services/What-We-Do.png"
                                     alt="Researcher giving presentation"
                                     fill
-                                    sizes="300px"
+                                    sizes="(max-width: 768px) 100vw, 400px"
                                     className="object-cover"
+                                    priority
                                 />
                             </div>
-                            <div className="absolute bottom-0 right-0 w-3/5 h-44 rounded-xl overflow-hidden shadow-lg border-2 border-white z-20 hidden" aria-hidden="true" />
                         </div>
                     </div>
 
-                    {/* Accordion List - Default Closed */}
+                    {/* Accordion List - Multiple Open Support */}
                     <div className="lg:col-span-7 divide-y divide-slate-200 border-t border-b border-slate-200">
                         {whatWeDoItems.map((item, index) => {
-                            const isOpen = openAccordionIndex === index;
+                            const isOpen = openIndices.includes(index);
                             return (
                                 <div key={item.id} className="py-3.5">
                                     <button
@@ -178,19 +175,17 @@ export default function SimplifiedAbstractServices() {
                             );
                         })}
                     </div>
-
                 </div>
 
                 {/* Footer Callout Paragraph */}
                 <p className="mt-10 text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
                     Choose Pubrica for academic abstract writing services that ensure your research is clear, credible, and publication-ready. Contact us today to learn how our{' '}
-                    <Link href="/services/publication-support" className="text-blue-600 font-medium no-underline hover:no-underline">
+                    <Link href="/services/publication-support/" className="text-blue-600 font-medium no-underline hover:no-underline">
                         publication support services
                     </Link>{' '}
                     can elevate your manuscript.
                 </p>
             </section>
-
         </div>
     );
 }

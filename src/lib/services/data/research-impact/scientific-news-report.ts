@@ -39,7 +39,7 @@ export const scientificNewsReportWhoWeServeData = {
         {
             title: "Medical & Healthcare Professionals",
             bullets: [
-                "Access accurate scientific news summaries to stay current with research that informs clinical practice.",
+                "Share new clinical findings, innovations, and trial results with patients and practitioners in a comprehensible format.",
             ],
             imageUrl:
                 "/images/research-impact/scientific-news-report/Medical-Healthcare-Professionals.png",

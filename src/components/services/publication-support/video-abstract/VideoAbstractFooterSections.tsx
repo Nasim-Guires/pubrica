@@ -8,6 +8,8 @@ import {
   FiPlus,
   FiMinus,
 } from "react-icons/fi";
+import { MovingTestimonials, TestimonialItem } from "@/components/common/MovingTestimonials.tsx";
+import CommonFAQ from "@/components/common/FAQ";
 
 // --- Pricing Types & Data ---
 type PricingTab = "illustration" | "artwork";
@@ -44,55 +46,58 @@ const pricingPlans: Record<PricingTab, PricingPlan> = {
 };
 
 // --- Testimonials Data ---
-const testimonials = [
+const testimonialsData: TestimonialItem[] = [
   {
+    id: 1,
     quote:
       "The quality and clarity of the video abstract by Pubrica for our paper in Frontiers in Neuroscience exceeded expectations. It was an excellent tool for conference presentations and online dissemination, enhancing the overall impact of our research.",
-    author: "DR. VIKRAM PATEL,",
-    affiliation: "Neuroscience",
-    journalImage:
+    author: "DR. VIKRAM PATEL",
+    role: "Neuroscience",
+    image:
       "/images/publication-support/video-abstract/neuroscience-.jpg",
   },
   {
+    id: 2,
     quote:
       "Pubrica's video abstract perfectly complemented our article published in The Lancet Oncology. Their team delivered a professionally formatted, engaging video that helped us present our research to peers and stakeholders efficiently, saving time and increasing outreach.",
-    author: "DR. NEHA SINGH,",
-    affiliation: "Oncology Research Group",
-    journalImage:
+    author: "DR. NEHA SINGH",
+    role: "Oncology Research Group",
+    image:
       "/images/publication-support/video-abstract/the-lancet-of-oncolgy-.jpg",
   },
   {
+    id: 3,
     quote:
       "The video abstract created by Pubrica for our manuscript in Nature Communications was expertly produced, capturing the essence of our study without losing scientific rigor. It simplified complex data into an accessible format, facilitating better communication with a wider audience.",
-    author: "PROF. RAJESH KUMAR,",
-    affiliation: "Institute of Molecular Biology",
-    journalImage:
+    author: "PROF. RAJESH KUMAR",
+    role: "Institute of Molecular Biology",
+    image:
       "/images/publication-support/video-abstract/natural-of-communication-.jpg",
   },
 ];
-
 // --- FAQ Data ---
 const faqData = [
   {
     question: "1. How do I create a video abstract for my research article?",
     answer:
-      "Create a video abstract by preparing a script for your research goals, methods, findings, and conclusions and then editing the script into a video with appropriate visuals and narration for easier comprehension.",
+      "Create a video abstract by preparing a script for your research goals, methods, findings, and conclusions and then editing the script into a video with appropriate visuals and narration for easier comprehension and understanding.",
   },
   {
-    question: "2. What should be included in a scientific video abstract?",
+    question:
+      "2. What should be included in a scientific video abstract?",
     answer:
       "The scientific video abstract should include the research background, goals, methods, findings, conclusions, and significance. The information should be clearly explained with appropriate visuals and narration for easier comprehension and understanding.",
   },
   {
     question: "3. How long should a video abstract for a research paper be?",
     answer:
-      "The research video abstract should be approximately 1-3 minutes long and should include the research goals, methods, findings, and conclusions. The information included should be precise and clearly highlight the research.",
+      "The research video abstract should be approximately 1–3 minutes long and should include the research goals, methods, findings, and conclusions. The information included should be precise and clearly highlight the research.",
   },
   {
     question:
       "4. How can a video abstract increase citations and research impact?",
     answer:
-      "The video abstract will help the research gain more visibility by making the research more easily discoverable, understandable, and sharable. This will generate more interest among the academic community for the research.",
+      "The video abstract will help the research gain more visibility by making the research more easily discoverable, understandable, and shareable. This will generate more interest among the academic community for the research.",
   },
 ];
 
@@ -124,21 +129,19 @@ export default function VideoAbstractFooterSections() {
         <div className="w-full bg-[#115b5b] rounded-full p-1 max-w-4xl mx-auto mb-10 flex items-center">
           <button
             onClick={() => setActivePricingTab("illustration")}
-            className={`flex-1 py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 ${
-              activePricingTab === "illustration"
-                ? "bg-[#093536] text-[#22c55e] shadow-md"
-                : "text-white hover:text-slate-200"
-            }`}
+            className={`flex-1 py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 ${activePricingTab === "illustration"
+              ? "bg-[#093536] text-[#22c55e] shadow-md"
+              : "text-white hover:text-slate-200"
+              }`}
           >
             Illustration Creation
           </button>
           <button
             onClick={() => setActivePricingTab("artwork")}
-            className={`flex-1 py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 ${
-              activePricingTab === "artwork"
-                ? "bg-[#093536] text-[#22c55e] shadow-md"
-                : "text-white hover:text-slate-200"
-            }`}
+            className={`flex-1 py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 ${activePricingTab === "artwork"
+              ? "bg-[#093536] text-[#22c55e] shadow-md"
+              : "text-white hover:text-slate-200"
+              }`}
           >
             Artwork Enhancement
           </button>
@@ -226,124 +229,21 @@ export default function VideoAbstractFooterSections() {
             Testimonials
           </h2>
 
-          <div className="grid grid-cols-1 gap-6 md:hidden">
-            {(() => {
-              const item = testimonials[activeTestimonialIdx];
-              return (
-                <div className="bg-[#1b3d36] text-white p-6 md:p-8 rounded-sm flex flex-col justify-between min-h-[220px]">
-                  <div className="grid grid-cols-12 gap-4 items-center mb-6">
-                    <p className="col-span-8 text-xs md:text-sm leading-relaxed text-slate-100 italic">
-                      &quot;{item.quote}&quot;
-                    </p>
-                    <div className="col-span-4 relative h-28 sm:h-32 rounded-sm overflow-hidden border border-white/20 bg-white">
-                      <Image
-                        src={item.journalImage}
-                        alt={item.author}
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="text-xs md:text-sm font-bold uppercase tracking-wider text-white">
-                      {item.author}
-                    </h4>
-                    <p className="text-[11px] text-slate-300 italic">
-                      {item.affiliation}
-                    </p>
-                  </div>
-                </div>
-              );
-            })()}
-          </div>
-          <div className="hidden md:grid grid-cols-2 gap-6">
-            {[
-              testimonials[activeTestimonialIdx],
-              testimonials[(activeTestimonialIdx + 1) % testimonials.length],
-            ].map((item, idx) => (
-              <div
-                key={`${activeTestimonialIdx}-${idx}`}
-                className="bg-[#1b3d36] text-white p-6 md:p-8 rounded-sm flex flex-col justify-between min-h-[220px]"
-              >
-                <div className="grid grid-cols-12 gap-4 items-center mb-6">
-                  <p className="col-span-8 text-xs md:text-sm leading-relaxed text-slate-100 italic">
-                    &quot;{item.quote}&quot;
-                  </p>
-                  <div className="col-span-4 relative h-28 sm:h-32 rounded-sm overflow-hidden border border-white/20 bg-white">
-                    <Image
-                      src={item.journalImage}
-                      alt={item.author}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-xs md:text-sm font-bold uppercase tracking-wider text-white">
-                    {item.author}
-                  </h4>
-                  <p className="text-[11px] text-slate-300 italic">
-                    {item.affiliation}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex justify-center items-center space-x-2 mt-8">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveTestimonialIdx(index)}
-                className={`w-3 h-3 border border-[#0c373b] transition-all duration-300 ${
-                  activeTestimonialIdx === index
-                    ? "bg-transparent"
-                    : "bg-[#0c373b]"
-                }`}
-                aria-label={`Testimonial slide ${index + 1}`}
-              />
-            ))}
-          </div>
+          <MovingTestimonials
+            data={testimonialsData}
+            autoSlideInterval={5000}
+          />
         </div>
       </section>
 
       {/* ==================== 3. FAQ ACCORDION SECTION ==================== */}
-      <section className="max-w-5xl mx-auto py-6 md:py-7 px-4 md:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] mb-8">
-          Frequently Asked Questions – Video Abstract Service
-        </h2>
+    
+      
 
-        <div className="border border-slate-200 rounded-sm divide-y divide-slate-200">
-          {faqData.map((faq, idx) => {
-            const isOpen = openFaqIdx === idx;
-            return (
-              <div key={idx} className="bg-white">
-                <button
-                  onClick={() => toggleFaq(idx)}
-                  className="w-full flex items-center justify-between p-4 md:p-5 text-left hover:bg-slate-50 transition-colors duration-200 focus:outline-none"
-                >
-                  <span className="text-xs md:text-sm font-bold text-slate-900 pr-4">
-                    {faq.question}
-                  </span>
-                  <span className="text-slate-700 flex-shrink-0">
-                    {isOpen ? (
-                      <FiMinus className="w-5 h-5 stroke-[2.5]" />
-                    ) : (
-                      <FiPlus className="w-5 h-5 stroke-[2.5]" />
-                    )}
-                  </span>
-                </button>
-
-                {isOpen && (
-                  <div className="p-4 md:p-5 pt-0 text-xs md:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/50">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </section>
+        <CommonFAQ
+          title="Frequently Asked Questions – Video Abstract Service"
+          faqs={faqData}
+        />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CommonUploadButton from "@/components/common/CommonUploadButton";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function ScientificMedicalCommunication() {
   // SEO JSON-LD Structured Data
@@ -57,20 +58,11 @@ export default function ScientificMedicalCommunication() {
       />
 
       {/* Hero Banner Section */}
-      <section className="w-full bg-gradient-to-b from-[#101b1b] via-[#152828] to-[#122323] text-white py-6 px-4 sm:px-6 md:px-8">
-        <div className="max-w-5xl mx-auto text-center border border-slate-600/60 rounded-sm p-6 md:p-10 bg-slate-900/30 backdrop-blur-sm">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 text-white">
-            Scientific Medical Communication
-          </h1>
-          <p className="text-sm md:text-base lg:text-lg text-slate-200 leading-relaxed font-normal max-w-4xl mx-auto">
-            Scientific Medical Communication at Pubrica bridges the gap between
-            complex medical research and its effective dissemination, offering
-            comprehensive services in manuscript writing, editing, and
-            publication support to ensure clarity and impact in scientific
-            discourse.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Scientific Medical Communication"
+        description="Scientific Medical Communication at Pubrica bridges the gap between complex medical research and its effective dissemination, offering comprehensive services in manuscript writing, editing, and publication support to ensure clarity and impact in scientific discourse."
+        headingAs="h1"
+      />
 
       {/* Main Content Section 1 */}
       <section className="py-6 md:py-7 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
@@ -88,8 +80,8 @@ export default function ScientificMedicalCommunication() {
               At Pubrica, we bridge the gap between complex scientific research
               and clear, impactful communication. Our scientific{" "}
               <Link
-                href="/services/scientific-communication"
-                className="text-blue-600 font-medium no-underline hover:no-underline"
+                href="/services/scientific-communication/technology-enabled-medical-scientific-communication/"
+                className="text-blue-600  no-underline hover:no-underline"
               >
                 medical communication services
               </Link>{" "}
@@ -105,14 +97,14 @@ export default function ScientificMedicalCommunication() {
               From{" "}
               <Link
                 href="/services/medical-writing"
-                className="text-blue-600 font-medium no-underline hover:no-underline"
+                className="text-blue-600  no-underline hover:no-underline"
               >
                 medical writing
               </Link>{" "}
               to{" "}
               <Link
                 href="/services/publication-support"
-                className="text-blue-600 font-medium no-underline hover:no-underline"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 publication support
               </Link>
@@ -199,7 +191,7 @@ export default function ScientificMedicalCommunication() {
                     href="https://www.icmje.org"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sky-600 hover:underline font-medium"
+                    className="text-blue-600"
                   >
                     ICMJE
                   </Link>
@@ -208,7 +200,7 @@ export default function ScientificMedicalCommunication() {
                     href="https://www.consort-statement.org"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sky-600 hover:underline font-medium"
+                    className="text-blue-600"
                   >
                     CONSORT
                   </Link>

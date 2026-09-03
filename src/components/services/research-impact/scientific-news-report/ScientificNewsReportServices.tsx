@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Plus, Minus } from 'lucide-react';
+import HeroBanner from '@/components/common/HeroBanner';
 
 interface AccordionItem {
     id: string;
@@ -56,18 +57,11 @@ export default function ScientificNewsReportServices() {
         <div className="w-full bg-white text-slate-800 font-sans">
 
             {/* 1. Top Hero Header */}
-            <section className="w-full bg-[#033c2a] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
-                <div className="max-w-4xl mx-auto space-y-3">
-                    <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-                        Scientific News Report
-                    </h1>
-                    <div className="max-w-3xl mx-auto border border-emerald-500/40 bg-emerald-950/30 p-4 rounded-lg">
-                        <p className="text-sm sm:text-base text-emerald-100 leading-relaxed">
-                            Pubrica's Scientific News Report service transforms your manuscript into a press release tailored for media exposure, enhancing your prospects for coverage and manuscript citations.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <HeroBanner
+                title="Scientific News Report"
+                description="Pubrica's Scientific News Report service transforms your manuscript into a press release tailored for media exposure, enhancing your prospects for coverage and manuscript citations."
+                headingAs="h1"
+            />
 
             {/* 2. Intro Section */}
             <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -113,7 +107,7 @@ export default function ScientificNewsReportServices() {
 
                     {/* Intro Hero Image */}
                     <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-full max-w-md h-64 sm:h-72 bg-emerald-900 rounded-2xl overflow-hidden p-2 shadow-lg">
+                        <div className="relative w-full max-w-md h-64 sm:h-72 rounded-2xl overflow-hidden p-2  ">
                             <div className="relative w-full h-full rounded-xl overflow-hidden">
                                 <Image
                                     src="/images/research-impact/scientific-news-report/scientific-news-report-involves-the-transformation-of-your-manuscript.webp"
@@ -137,24 +131,24 @@ export default function ScientificNewsReportServices() {
                     </h2>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
                         Pubrica's{' '}
-                        <Link href="/services/research-impact/scientific-news-report" className="text-blue-600 font-medium no-underline hover:no-underline">
+                        <Link href="/services/research-impact/scientific-news-report/scientific-news-reporting-for-researchers/" className="text-blue-600 font-medium no-underline hover:no-underline">
                             scientific news report services
                         </Link>{' '}
                         provide the complete solution needed to change complex research findings into clear, attractive news reports. Our service is designed to make your scientific discoveries accessible and appealing to a wider audience, including the general public, journalists, and fellow researchers.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
                     {/* Compound Collage Images */}
                     <div className="lg:col-span-5 relative flex justify-center py-4">
-                        <div className="relative w-full max-w-sm h-72">
-                            <div className="absolute top-0 left-0 w-3/5 h-48 rounded-xl overflow-hidden shadow-md border-2 border-white z-10">
+                        <div className="relative w-full max-w-md h-96">
+                            <div className="absolute top-0 left-0 w-4/5 h-80 rounded-xl overflow-hidden shadow-md border-2 border-white z-10">
                                 <Image
                                     src="/images/research-impact/scientific-news-report/What-We-Do.png"
                                     alt="Doctor writing report"
                                     fill
-                                    sizes="300px"
+                                    sizes="400px"
                                     className="object-cover"
                                 />
                             </div>
@@ -198,7 +192,6 @@ export default function ScientificNewsReportServices() {
                     Utilize Pubrica's Scientific news report services to effectively communicate your research findings to a global audience. Contact us today to learn how we can assist you in crafting compelling news reports that promote your scientific work and enhance its impact.
                 </p>
             </section>
-
         </div>
     );
 }

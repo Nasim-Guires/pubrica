@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { PubricaSampleWorkCard } from '@/components/common/PubricaSampleWorkCardProps';
 
 // --- Data Objects ---
 interface DesignOption {
@@ -99,7 +100,7 @@ const whyChoosePoints = [
 export default function GraphicalAbstractDesignOptions() {
   return (
     <section className="w-full bg-white text-slate-800 font-sans py-6 px-4 sm:px-6 lg:px-8 space-y-16">
-      
+
       {/* 1. Choose Design Options Section */}
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#0a231c] mb-10">
@@ -183,7 +184,7 @@ export default function GraphicalAbstractDesignOptions() {
                   alt={`${pub.name} Logo`}
                   fill
                   sizes="150px"
-                  className="object-cover"
+                  className="object-contain p-1"
                 />
               </div>
               <span className="text-xs font-semibold text-slate-700">{pub.name}</span>
@@ -191,7 +192,6 @@ export default function GraphicalAbstractDesignOptions() {
           ))}
         </div>
       </div>
-
       {/* 3. Why Choose Our Services */}
       <div className="max-w-6xl mx-auto space-y-6">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#0a231c]">
@@ -226,58 +226,41 @@ export default function GraphicalAbstractDesignOptions() {
       </div>
 
       {/* 4. Sample Work & Download Report CTA */}
-      <div className="max-w-6xl mx-auto bg-emerald-50/50 border border-emerald-100 rounded-xl p-6 sm:p-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          {/* Sample Work Desktop Image Section Container */}
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-sm h-64 bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm">
-              <Image
-                src="/images/research-impact/graphical-abstract/Graphical-Abstract-Service-Sample-Work.png"
-                alt="Designer working on graphical abstract samples"
-                fill
-                sizes="(max-width: 768px) 100vw, 400px"
-                className="object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Action Callouts */}
-          <div className="lg:col-span-7 space-y-6">
-            <div className="space-y-2">
-              <h3 className="text-lg font-bold text-[#0a231c]">
-                Graphical Abstract Service Sample Work
-              </h3>
-              <Link
-                href="/insights/sample-work"
-                className="inline-block px-6 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-colors"
-              >
-                Discover More
-              </Link>
-            </div>
-
-            <div className="space-y-2 pt-4 border-t border-emerald-200/60">
-              <h3 className="text-lg font-bold text-[#0a231c]">
-                Download the full Report Now
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Explore our{' '}
-                <Link href="/services/research-impact/graphical-abstract" className="text-blue-600 no-underline hover:no-underline">
-                  graphical abstract samples
-                </Link>
-                , professionally designed to align with your target journal's formatting guidelines, scientific accuracy standards, and visual impact expectations.
-              </p>
-              <Link
-                href="/insights/sample-work"
-                className="inline-block mt-2 px-6 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-colors"
-              >
-                Discover More
-              </Link>
-            </div>
-          </div>
-
-        </div>
-      </div>
+      <PubricaSampleWorkCard
+        bookCoverImage={{
+          src: "/images/research-impact/graphical-abstract/Graphical-Abstract-Service-Sample-Work.png",
+          alt: "Graphical Abstract Service Sample Work",
+          width: 600,
+          height: 450,
+        }}
+        sections={[
+          {
+            heading: "Graphical Abstract Service Sample Work",
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work/anesthetic-management-in-pregnant-woman/",
+            },
+          },
+          {
+            heading: "Download the full Report Now",
+            descriptionSegments: [
+              { text: "Explore our " },
+              {
+                text: "graphical abstract samples",
+                url: "/insights/sample-work/placebo-challenges-investigator/",
+              },
+              {
+                text: ", professionally designed to align with your target journal's formatting guidelines, scientific accuracy standards, and visual impact expectations.",
+              },
+            ],
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work",
+            },
+          },
+        ]}
+        footerDisclaimerSegments={[]}
+      />
 
     </section>
   );

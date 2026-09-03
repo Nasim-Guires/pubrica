@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
+import ServiceBanner from "@/components/common/ServiceBanner";
 
 const PAGE_IMAGES = "/images/publication-support/video-abstract";
 
@@ -73,18 +74,12 @@ export default function VideoAbstractOverview() {
   return (
     <div className="w-full font-sans text-slate-800 bg-white">
       {/* ==================== 1. DARK BANNER ==================== */}
-      <section className="w-full bg-[#032b21] text-white py-5 px-4 md:px-8 text-center">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-xl md:text-2xl font-bold mb-3 tracking-wide">
-            Focus on Your Research — We’ll Present It Visually
-          </h2>
-          <p className="text-xs md:text-sm text-emerald-100/90 leading-relaxed max-w-4xl mx-auto">
-            With Pubrica, get expertly crafted, journal-aligned video summaries
-            of your published work, designed to boost visibility, engagement,
-            and scholarly impact—without the hassle.
-          </p>
-        </div>
-      </section>
+      <ServiceBanner
+        imageSrc="/images/publication-support/Satisfaction_Guarantee.webp"
+        imageAlt="100% Satisfaction Guarantee"
+        heading="Focus on Your Research — We’ll Present It Visually"
+        description="With Pubrica, get expertly crafted, journal-aligned video summaries of your published work, designed to boost visibility, engagement, and scholarly impact—without the hassle."
+      />
 
       {/* ==================== 2. WHO USES & SERVICES OFFERED ==================== */}
       <section className="max-w-6xl mx-auto py-6 md:py-7 px-4 md:px-8">

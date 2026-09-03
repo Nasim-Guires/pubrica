@@ -3,6 +3,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import ServiceBanner from '@/components/common/ServiceBanner';
+import { EditorialWorkflowSection, WorkflowStep } from '@/components/common/EditorialWorkflowSection';
+import { PubricaSampleWorkCard } from '@/components/common/PubricaSampleWorkCardProps';
 
 // --- DATA TYPES & CONSTANTS ---
 
@@ -115,55 +118,62 @@ const serviceTypesData: ServiceTypeRow[] = [
     },
 ];
 
-interface WorkflowStep {
-    id: number;
-    title: string;
-    description: string;
-    iconSrc: string;
-}
 
-const workflowSteps: WorkflowStep[] = [
+
+const steps: WorkflowStep[] = [
     {
-        id: 1,
-        title: 'MANUSCRIPT SUBMISSION',
+        stepNumber: 1,
+        title: "MANUSCRIPT SUBMISSION",
         description:
-            'You submit your full-length research manuscript, thesis chapter, or academic paper, along with any specific journal formatting guidelines or institutional requirements.',
-        iconSrc: '/images/research-impact/simplified-abstract-services/Manuscript-Submission.png',
+            "You submit your full-length research manuscript, thesis chapter, or academic paper, along with any specific journal formatting guidelines or institutional requirements.",
+        iconSrc:
+            "/images/research-impact/simplified-abstract-services/Manuscript-Submission.png",
+        position: "top",
     },
     {
-        id: 2,
+        stepNumber: 2,
         title: "INITIAL REVIEW BY PUBRICA'S DOMAIN EXPERTS",
         description:
             "Our subject-matter experts thoroughly review your study's objectives, methodology, results, and conclusions. We extract the core scientific message that forms the basis of your research abstract.",
-        iconSrc: '/images/research-impact/simplified-abstract-services/Initial-Review-by-Pubricas-Domain-Experts.png',
+        iconSrc:
+            "/images/research-impact/simplified-abstract-services/Initial-Review-by-Pubricas-Domain-Experts.png",
+        position: "bottom",
     },
     {
-        id: 3,
-        title: 'ABSTRACT STRUCTURING & DRAFTING',
+        stepNumber: 3,
+        title: "ABSTRACT STRUCTURING & DRAFTING",
         description:
-            'A clear, coherent, and structured abstract is drafted using formats like IMRaD or unstructured formats, depending on your target journal. This step ensures effective scientific communication.',
-        iconSrc: '/images/research-impact/simplified-abstract-services/Abstract-Structuring-Drafting.png',
+            "A clear, coherent, and structured abstract is drafted using formats like IMRaD or unstructured formats, depending on your target journal. This step ensures effective scientific communication.",
+        iconSrc:
+            "/images/research-impact/simplified-abstract-services/Abstract-Structuring-Drafting.png",
+        position: "top",
     },
     {
-        id: 4,
-        title: 'KEYWORD IDENTIFICATION & OPTIMIZATION',
+        stepNumber: 4,
+        title: "KEYWORD IDENTIFICATION & OPTIMIZATION",
         description:
-            'We integrate high-impact, SEO-optimized keywords to improve visibility on platforms like PubMed, Scopus, and Web of Science. This helps your abstract reach the right scholarly audience.',
-        iconSrc: '/images/research-impact/simplified-abstract-services/Keyword-Identification-Optimization.png',
+            "We integrate high-impact, SEO-optimized keywords to improve visibility on platforms like PubMed, Scopus, and Web of Science. This helps your abstract reach the right scholarly audience.",
+        iconSrc:
+            "/images/research-impact/simplified-abstract-services/Keyword-Identification-Optimization.png",
+        position: "bottom",
     },
     {
-        id: 5,
-        title: 'INTERNAL REVIEW & QUALITY CHECK BY THE PUBRICA TEAM',
+        stepNumber: 5,
+        title: "INTERNAL REVIEW & QUALITY CHECK BY THE PUBRICA TEAM",
         description:
-            'Your abstract undergoes internal peer review for scientific accuracy, clarity, and language precision. This includes editing and proofreading by experienced editors to maintain publication standards.',
-        iconSrc: '/images/research-impact/simplified-abstract-services/Internal-Review-Quality-Check-by-the-Pubrica-team.png',
+            "Your abstract undergoes internal peer review for scientific accuracy, clarity, and language precision. This includes editing and proofreading by experienced editors to maintain publication standards.",
+        iconSrc:
+            "/images/research-impact/simplified-abstract-services/Internal-Review-Quality-Check-by-the-Pubrica-team.png",
+        position: "top",
     },
     {
-        id: 6,
-        title: 'FINAL DELIVERY',
+        stepNumber: 6,
+        title: "FINAL DELIVERY",
         description:
-            'You receive a submission-ready abstract, customized to your target audience, platform, or publication outlet, ensuring alignment with both technical content and readability expectations.',
-        iconSrc: '/images/research-impact/simplified-abstract-services/Final-Delivery.png',
+            "You receive a submission-ready abstract, customized to your target audience, platform, or publication outlet, ensuring alignment with both technical content and readability expectations.",
+        iconSrc:
+            "/images/research-impact/simplified-abstract-services/Final-Delivery.png",
+        position: "bottom",
     },
 ];
 
@@ -178,38 +188,17 @@ const publishers = [
 export default function SimplifiedAbstractPage() {
     // State set to null so NO workflow card is active/black by default
     const [activeStep, setActiveStep] = useState<number | null>(null);
+    const [isOpen1, setIsOpen1] = useState(false);
+    const [isOpen2, setIsOpen2] = useState(false);
 
     return (
         <main className="w-full bg-slate-50 text-slate-800 font-sans pb-8">
 
             {/* 1. HERO BANNER */}
-            <section className="bg-[#033c2a] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
-                <div className="max-w-5xl mx-auto space-y-4">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight">
-                        Accelerate Your Research with Pubrica's SIMPLIFIED ABSTRACT SERVICE
-                    </h2>
-                    <p className="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed max-w-4xl mx-auto">
-                        Get tailored assistance in crafting a clear, concise abstract that effectively summarizes your research. Our service ensures clarity and accuracy while making your manuscript easily understandable to diverse academic audiences, helping you meet journal submission standards efficiently.
-                    </p>
-                </div>
-            </section>
+
 
             {/* 2. SIMPLIFIED ABSTRACT EXAMPLE */}
-            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-7 text-center space-y-6">
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a]">
-                    Simplified Abstract Example by Pubrica
-                </h2>
 
-                <div className="relative w-full max-w-4xl mx-auto aspect-[16/10] rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-white">
-                    <Image
-                        src="/images/research-impact/simplified-abstract-services/v1-simplified-abstract-writing-recreation-image.png"
-                        alt="Simplified Abstract Example by Pubrica"
-                        fill
-                        className="object-contain"
-                        sizes="(max-width: 1024px) 100vw, 896px"
-                    />
-                </div>
-            </section>
 
             {/* 3. TYPES OF SERVICES TABLE */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 space-y-8">
@@ -219,7 +208,7 @@ export default function SimplifiedAbstractPage() {
                     </h2>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
                         Our{' '}
-                        <Link href="/services/research-impact/simplified-abstract-services" className="text-blue-600 font-medium no-underline hover:no-underline">
+                        <Link href="/insights/sample-work/clippers-syndrome-gait-cognitive-impairment-case-report/" className="text-blue-600 font-medium no-underline hover:no-underline">
                             simplified abstract
                         </Link>{' '}
                         writing services are tailored to diverse academic, clinical, policy, and public communication needs. Whether you're preparing a journal-ready abstract, a grant submission, or a lay summary, our professional abstract writers ensure clarity, structure, and impact across formats.
@@ -261,69 +250,56 @@ export default function SimplifiedAbstractPage() {
             </section>
 
             {/* 4. WORKFLOW PROCESS (INTERACTIVE - LACK CARDS BY DEFAULT) */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-12">
-                <div className="text-center space-y-3">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#033c2a]">
-                        How Our Simplified Abstract Service Works
-                    </h2>
-                    <p className="text-lg font-semibold text-slate-700">
-                        Our Step-By-Step Process
-                    </p>
-                    <p className="text-xs sm:text-sm text-slate-600 max-w-4xl mx-auto leading-relaxed">
-                        Pubrica's{' '}
-                        <Link href="/services/research-impact/simplified-abstract-services" className="text-blue-600 no-underline hover:no-underline">
+            <EditorialWorkflowSection
+                heading="How Our Simplified Abstract Service Works"
+                subheading="Our Step-By-Step Process"
+                description={
+                    <>
+                        Pubrica's{" "}
+                        <Link
+                            href="/insights/sample-work/hypertension-awareness-complications-predictors-study/"
+                            className="text-blue-600 no-underline hover:no-underline"
+                        >
                             simplified abstract writing service
-                        </Link>{' '}
-                        is designed to be structured, expert-led, and process-driven. Each step ensures scientific clarity, accuracy, and full compliance with{' '}
-                        <Link href="/services/publication-support/journal-submission" className="text-blue-600 no-underline hover:no-underline">
+                        </Link>{" "}
+                        is designed to be structured, expert-led, and process-driven. Each step
+                        ensures scientific clarity, accuracy, and full compliance with{" "}
+                        <Link
+                            href="/services/publication-support/journal-submission/"
+                            className="text-blue-600 no-underline hover:no-underline"
+                        >
                             journal submission
-                        </Link>{' '}
+                        </Link>{" "}
                         requirements.
-                    </p>
-                </div>
+                    </>
+                }
+                steps={steps}
+            />
 
-                <div className="relative grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 pt-8">
-                    <div className="hidden lg:block absolute top-[5.2rem] left-6 right-6 h-1 bg-teal-600 z-0" />
+            <ServiceBanner
+                imageSrc="/images/publication-support/Satisfaction_Guarantee.webp"
+                imageAlt="100% Satisfaction Guarantee"
+                heading="Accelerate Your Research with Pubrica's SIMPLIFIED ABSTRACT SERVICE"
+                description="Get tailored assistance in crafting a clear, concise abstract that effectively summarizes your research. Our service ensures clarity and accuracy while making your manuscript easily understandable to diverse academic audiences, helping you meet journal submission standards efficiently."
+            />
 
-                    {workflowSteps.map((step) => {
-                        const isHovered = activeStep === step.id;
-                        const isEven = step.id % 2 === 0;
 
-                        return (
-                            <div
-                                key={step.id}
-                                onMouseEnter={() => setActiveStep(step.id)}
-                                onMouseLeave={() => setActiveStep(null)}
-                                className={`relative z-10 flex flex-col items-center ${isEven ? 'lg:flex-col-reverse' : 'lg:flex-col'
-                                    }`}
-                            >
-                                <div className="w-9 h-9 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center text-sm shadow-md my-3">
-                                    {step.id}
-                                </div>
+            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-7 text-center space-y-6">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a]">
+                    Simplified Abstract Example by Pubrica
+                </h2>
 
-                                <div
-                                    className={`w-full p-5 rounded-xl border transition-all duration-300 cursor-pointer text-center flex flex-col items-center justify-start min-h-[300px] shadow-sm ${isHovered
-                                            ? 'bg-neutral-800 text-white border-neutral-800 shadow-xl scale-105'
-                                            : 'bg-white text-slate-800 border-slate-200 hover:border-slate-300'
-                                        }`}
-                                >
-                                    <div className="space-y-3 flex flex-col items-center">
-                                        <div className="relative w-8 h-8">
-                                            <Image src={step.iconSrc} alt="" fill className="object-contain" sizes="32px" />
-                                        </div>
-                                        <h3 className={`text-xs font-bold uppercase tracking-wide leading-snug ${isHovered ? 'text-white' : 'text-slate-900'}`}>
-                                            {step.title}
-                                        </h3>
-                                        <p className={`text-[11px] sm:text-xs leading-relaxed ${isHovered ? 'text-slate-300' : 'text-slate-600'}`}>
-                                            {step.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        );
-                    })}
+                <div className="relative w-full max-w-4xl mx-auto aspect-[16/10] rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-white">
+                    <Image
+                        src="/images/research-impact/simplified-abstract-services/v1-simplified-abstract-writing-recreation-image.png"
+                        alt="Simplified Abstract Example by Pubrica"
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 1024px) 100vw, 896px"
+                    />
                 </div>
             </section>
+
 
             {/* 5. GETTING STARTED WITH THIS SERVICE IS EASY */}
             <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8">
@@ -333,35 +309,53 @@ export default function SimplifiedAbstractPage() {
                     </h2>
                     <p className="text-xs sm:text-sm text-slate-600 max-w-3xl mx-auto leading-relaxed">
                         We offer fast turnaround times on our{' '}
-                        <Link href="/services/research-impact/simplified-abstract-services" className="text-blue-600 no-underline hover:no-underline">
+                        <Link href="/insights/sample-work/dengue-clinical-profile-outcomes-hospitalized-patients/" className="text-blue-600 no-underline hover:no-underline">
                             simplified abstract writing service
                         </Link>
                         , helping you meet tight journal submission deadlines without compromising on quality.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
                     {/* Box 1 */}
                     <div className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm space-y-4">
-                        <div className="bg-[#033c2a] text-white font-bold py-2.5 px-4 rounded-md text-xs sm:text-sm flex items-center gap-2">
-                            <span>&mdash;</span> What we need from you
-                        </div>
-                        <ol className="space-y-3 text-xs sm:text-sm text-slate-700 list-decimal list-inside leading-relaxed pl-1">
-                            <li>The most recent version of your manuscript</li>
-                            <li>Any relevant figures, tables, or charts</li>
-                            <li>Your chosen journal or publisher requirements</li>
-                        </ol>
+                        <button
+                            onClick={() => setIsOpen1(!isOpen1)}
+                            className="w-full bg-[#033c2a] text-white font-bold py-2.5 px-4 rounded-md text-xs sm:text-sm flex items-center justify-between transition-colors hover:bg-[#022a1d]"
+                            type="button"
+                        >
+                            <span className="flex items-center gap-2">
+                                <span>&mdash;</span> What we need from you
+                            </span>
+                            <span className="text-base font-semibold">{isOpen1 ? '−' : '+'}</span>
+                        </button>
+                        {isOpen1 && (
+                            <ol className="space-y-3 text-xs sm:text-sm text-slate-700 list-decimal list-inside leading-relaxed pl-1 pt-2">
+                                <li>The most recent version of your manuscript</li>
+                                <li>Any relevant figures, tables, or charts</li>
+                                <li>Your chosen journal or publisher requirements</li>
+                            </ol>
+                        )}
                     </div>
 
                     {/* Box 2 */}
                     <div className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm space-y-4">
-                        <div className="bg-[#033c2a] text-white font-bold py-2.5 px-4 rounded-md text-xs sm:text-sm flex items-center gap-2">
-                            <span>+</span> What you receive
-                        </div>
-                        <ol className="space-y-3 text-xs sm:text-sm text-slate-700 list-decimal list-inside leading-relaxed pl-1">
-                            <li>A professionally formatted Word document (.docx) of your structured abstract.</li>
-                            <li>A list of SEO-optimized keywords used to improve discoverability in platforms like PubMed, Scopus, and Web of Science.</li>
-                        </ol>
+                        <button
+                            onClick={() => setIsOpen2(!isOpen2)}
+                            className="w-full bg-[#033c2a] text-white font-bold py-2.5 px-4 rounded-md text-xs sm:text-sm flex items-center justify-between transition-colors hover:bg-[#022a1d]"
+                            type="button"
+                        >
+                            <span className="flex items-center gap-2">
+                                <span>+</span> What you receive
+                            </span>
+                            <span className="text-base font-semibold">{isOpen2 ? '−' : '+'}</span>
+                        </button>
+                        {isOpen2 && (
+                            <ol className="space-y-3 text-xs sm:text-sm text-slate-700 list-decimal list-inside leading-relaxed pl-1 pt-2">
+                                <li>A professionally formatted Word document (.docx) of your structured abstract.</li>
+                                <li>A list of SEO-optimized keywords used to improve discoverability in platforms like PubMed, Scopus, and Web of Science.</li>
+                            </ol>
+                        )}
                     </div>
                 </div>
             </section>
@@ -429,56 +423,41 @@ export default function SimplifiedAbstractPage() {
             </section>
 
             {/* 8. SAMPLE WORK & DOWNLOAD REPORT */}
-            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                <div className="bg-[#f2faf6] rounded-2xl border border-emerald-100 p-6 sm:p-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-
-                    {/* Sample Work Left Image Block */}
-                    <div className="relative rounded-xl overflow-hidden border border-slate-200 shadow-sm h-64 sm:h-80 bg-white">
-                        <Image
-                            src="/images/research-impact/simplified-abstract-services/Simplified-Abstract-Services-Sample-Work.jpg"
-                            alt="Team discussing research report"
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                        />
-                    </div>
-
-                    {/* Right Text Block */}
-                    <div className="space-y-6 text-left">
-                        <div className="space-y-3">
-                            <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
-                                Simplified Abstract Services Sample Work
-                            </h3>
-                            <Link
-                                href="/insights/sample-work"
-                                className="inline-block bg-black text-white hover:bg-neutral-800 font-semibold px-6 py-2.5 rounded-full text-xs sm:text-sm transition-colors"
-                            >
-                                Discover More
-                            </Link>
-                        </div>
-
-                        <div className="space-y-3 border-t border-emerald-200/60 pt-4">
-                            <h4 className="text-lg font-bold text-slate-900">
-                                Download the full Report Now
-                            </h4>
-                            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                Experience the quality of Pubrica's{' '}
-                                <Link href="/services/research-impact/simplified-abstract-services" className="text-blue-600 no-underline hover:no-underline">
-                                    simplified abstract writing services
-                                </Link>{' '}
-                                firsthand. Our research summaries extract complex scientific content into clear, concise, and structured abstracts tailored for academic, scientific, and professional use.
-                            </p>
-                            <Link
-                                href="/insights/sample-work"
-                                className="inline-block bg-black text-white hover:bg-neutral-800 font-semibold px-6 py-2.5 rounded-full text-xs sm:text-sm transition-colors"
-                            >
-                                Discover More
-                            </Link>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
+            <PubricaSampleWorkCard
+                bookCoverImage={{
+                    src: "/images/research-impact/simplified-abstract-services/Simplified-Abstract-Services-Sample-Work.jpg",
+                    alt: "Team discussing research report",
+                    width: 600,
+                    height: 450,
+                }}
+                sections={[
+                    {
+                        heading: "Simplified Abstract Services Sample Work",
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work",
+                        },
+                    },
+                    {
+                        heading: "Download the full Report Now",
+                        descriptionSegments: [
+                            { text: "Experience the quality of Pubrica's " },
+                            {
+                                text: "simplified abstract writing services",
+                                url: "/insights/sample-work/2023-update-sepsis-septic-shock-management/",
+                            },
+                            {
+                                text: " firsthand. Our research summaries extract complex scientific content into clear, concise, and structured abstracts tailored for academic, scientific, and professional use.",
+                            },
+                        ],
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work",
+                        },
+                    },
+                ]}
+                footerDisclaimerSegments={[]}
+            />
 
         </main>
     );

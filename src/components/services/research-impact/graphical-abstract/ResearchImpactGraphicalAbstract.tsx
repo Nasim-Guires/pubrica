@@ -1,56 +1,65 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { 
-  FilePlay, 
-  ClipboardList, 
-  Palette, 
-  CheckCircle2, 
-  FileText, 
-  Layers, 
-  Sparkles, 
-  Check, 
-  ExternalLink,
-  BookOpen,
-  Box
-} from 'lucide-react';
+import { Box } from 'lucide-react';
+import ServiceBanner from '@/components/common/ServiceBanner';
 
 interface ExampleData {
   id: string;
   category: string;
-  journalName: string;
-  citeScore: string;
-  impactFactor: string;
-  articleTitle: string;
-  citation: string;
+  // 2D fields
+  journalName2D: string;
+  citeScore2D: string;
+  impactFactor2D: string;
+  articleTitle2D: string;
+  citation2D: string;
   image2D: string;
-  image3D?: string;
-  summaryText: string;
+  // 3D fields
+  journalName3D: string;
+  citeScore3D: string;
+  impactFactor3D: string;
+  articleTitle3D: string;
+  citation3D: string;
+  image3D: string;
 }
 
 const examplesData: Record<string, ExampleData> = {
   medicine: {
     id: 'medicine',
     category: 'Medicine',
-    journalName: 'Diabetes Care',
-    citeScore: '22.3',
-    impactFactor: '16.2',
-    articleTitle: 'Persistent Hyperglycemia and Insulin Resistance With the Risk of Worsening Cardiac Damage in Adolescents',
-    citation: 'Adapted From: Agbaje AO, Zachariah JP, Barker AR, et al. Persistent hyperglycemia and insulin resistance with the risk of worsening cardiac damage in adolescents: A 7-year longitudinal study of the ALSPAC birth cohort. Diabetes Care. 2025;48(6):896–904. doi:10.2337/dc24-2459',
+    // 2D Details
+    journalName2D: 'Diabetes Care',
+    citeScore2D: '22.3',
+    impactFactor2D: '16.2',
+    articleTitle2D: 'Risk factors, histopathological features and graft outcome of transplant glomerulopathy in the absence of donor-specific HLA antibodies',
+    citation2D: 'Adapted From: Senev A, Van Loon E, Lerut E, et al. Risk factors, histopathological features, and graft outcome of transplant glomerulopathy in the absence of donor-specific HLA antibodies. Kidney Int. 2021;100(2):401-414. doi:10.1016/j.kint.2021.01.029',
     image2D: '/images/research-impact/graphical-abstract/v1-Persistent-Hyperglycemia-and-Insulin-Resistance-Graphical-abstract-2d.jpg',
-    summaryText: 'Persistently high blood glucose levels and insulin resistance were associated with premature and worsening structural and functional cardiac damage in youth, largely explained by excess fat.'
+    // 3D Details
+    journalName3D: 'Journal of Biomedical Science',
+    citeScore3D: '16.3',
+    impactFactor3D: '12.1',
+    articleTitle3D: 'Advanced 3D Analysis of Risk factors and graft outcome in transplant glomerulopathy',
+    citation3D: 'Adapted From: Senev A, et al. Advanced 3D modeling in transplant glomerulopathy. Kidney Int. 2022;101(3):500-515. doi:10.1016/j.kint.2022.02.030',
+    image3D: '/images/research-impact/graphical-abstract/v1-Scaffold-based-3D-cell-culture-models-in-cancer-research-Graphical-abstract-3d.jpg',
   },
   lifeSciences: {
     id: 'lifeSciences',
     category: 'Life Sciences',
-    journalName: 'Life Sciences',
-    citeScore: '10.9',
-    impactFactor: '6.1',
-    articleTitle: 'Rat Models in Chronic Wound Research: Addressing a Multifactorial Disease',
-    citation: 'Adapted From: Ghanbari M, Salkovskiy Y, Carlson MA. The rat as an animal model in chronic wound research: An update. Life Sci. 2024;351(122783):122783. doi:10.1016/j.lfs.2024.122783',
+    // 2D Details
+    journalName2D: 'Life Sciences',
+    citeScore2D: '10.9',
+    impactFactor2D: '5.1',
+    articleTitle2D: 'Scaffold-based 3D cell culture models in cancer research',
+    citation2D: 'Adapted From: Abuwatfa WH, Pitt WG, Husseini GA. Scaffold-based 3D cell culture models in cancer research. J Biomed Sci. 2024;31(1):7. doi:10.1186/s12929-024-00994-y',
     image2D: '/images/research-impact/graphical-abstract/v1-Rat-Models-in-Chronic-Wound-Research-graphical-abstract-2d.jpg',
-    summaryText: 'Conclusion: A relevant rat model for chronic wound research requires the induction of comorbidities like diabetes, peripheral arterial disease, venous stasis, and prolonged pressure on body areas, mirroring clinical symptoms in humans.'
+    // 3D Details
+    journalName3D: 'Kidney International',
+    citeScore3D: '21.4',
+    impactFactor3D: '12.6',
+    articleTitle3D: 'High-Resolution Scaffold-based 3D Cell Culture Models in Cancer Dynamics',
+    citation3D: 'Adapted From: Abuwatfa WH, et al. High-Resolution Scaffold-based 3D models. J Biomed Sci. 2025;32(2):12. doi:10.1186/s12929-025-00100-x',
+    image3D: '/images/research-impact/graphical-abstract/v1-Risk-factors-histopathological-features-graphical-abstract-3d.jpg',
   }
 };
 
@@ -64,46 +73,57 @@ export default function ResearchImpactGraphicalAbstract() {
       id: 1,
       title: 'Upload Your Manuscript',
       description: 'Submit your manuscript along with the relevant information for the target journal.',
-      iconSrc: '/images/research-impact/graphical-abstract/Upload-Your-Manuscript.png',
+      illustrationSrc: '/images/research-impact/graphical-abstract/Upload-Your-Manuscript.png',
     },
     {
       id: 2,
       title: 'Questionnaire',
       description: 'We will send you a customized questionnaire to align with your vision. This is a key step to ensure that the deliverables meet your expectations.',
-      iconSrc: '/images/research-impact/graphical-abstract/Questionnaire.png',
+      illustrationSrc: '/images/research-impact/graphical-abstract/Questionnaire.png',
     },
     {
       id: 3,
       title: 'Graphical abstract creation – First draft',
       description: 'Our experts will review the manuscript. Our designers will create a visual concept note per journal guidelines and share the first draft with you.',
-      iconSrc: '/images/research-impact/graphical-abstract/Graphical-abstract-creation-First-draft.png',
+      illustrationSrc: '/images/research-impact/graphical-abstract/Graphical-abstract-creation-First-draft.png',
     },
     {
       id: 4,
       title: 'Final draft',
       description: 'The production team works on the revisions if any and finalizes the graphical abstract in file formats as required by the journal.',
-      iconSrc: '/images/research-impact/graphical-abstract/Final-draft.png',
+      illustrationSrc: '/images/research-impact/graphical-abstract/Final-draft.png',
     },
   ];
 
+  // Auto-rotate steps every 4 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveStep((prevStep) => (prevStep + 1) % processSteps.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [processSteps.length]);
+
   const currentExample = examplesData[activeTab];
+  const currentStepData = processSteps[activeStep];
+
+  // Dynamically switch metrics and content based on 2D or 3D mode
+  const currentJournalName = dimensionMode === '3D' ? currentExample.journalName3D : currentExample.journalName2D;
+  const currentCiteScore = dimensionMode === '3D' ? currentExample.citeScore3D : currentExample.citeScore2D;
+  const currentImpactFactor = dimensionMode === '3D' ? currentExample.impactFactor3D : currentExample.impactFactor2D;
+  const currentImage = dimensionMode === '3D' ? currentExample.image3D : currentExample.image2D;
 
   return (
     <div className="w-full bg-slate-50 text-slate-800 font-sans">
       {/* 1. Hero Banner */}
-      <section className="w-full bg-[#033c2a] text-white py-7 px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-5xl mx-auto space-y-4">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-            Graphical Abstract Services at Pubrica
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-            Our experts design visually engaging, scientifically accurate graphical abstracts that distill your research into a clear and compelling visual summary.
-          </p>
-        </div>
-      </section>
+      <ServiceBanner
+        imageSrc="/images/publication-support/Satisfaction_Guarantee.webp"
+        imageAlt="100% Satisfaction Guarantee"
+        heading="Graphical Abstract Services at Pubrica"
+        description="Our experts design visually engaging, scientifically accurate graphical abstracts that distill your research into a clear and compelling visual summary."
+      />
 
       {/* 2. Process Section */}
-      <section className="max-w-7xl mx-auto py-7 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
             How The Graphical Abstract Service Works
@@ -117,79 +137,57 @@ export default function ResearchImpactGraphicalAbstract() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
           {/* Left Column: Process Steps List */}
-          <div className="lg:col-span-6 space-y-4">
+          <div className="lg:col-span-6 space-y-6">
             {processSteps.map((step, index) => {
               const isSelected = activeStep === index;
               return (
                 <div
                   key={step.id}
                   onClick={() => setActiveStep(index)}
-                  className={`cursor-pointer p-5 rounded-xl border transition-all duration-200 ${
+                  className={`cursor-pointer transition-all duration-200 pl-4 sm:pl-6 border-l-4 ${
                     isSelected
-                      ? 'bg-white border-emerald-600 shadow-md ring-1 ring-emerald-500'
-                      : 'bg-white/70 border-slate-200 hover:border-slate-300 hover:bg-white'
+                      ? 'border-blue-600'
+                      : 'border-transparent hover:border-slate-300'
                   }`}
                 >
-                  <div className="flex items-start gap-4">
-                    <div
-                      className={`p-2.5 rounded-lg flex-shrink-0 relative w-10 h-10 ${
-                        isSelected ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-600'
-                      }`}
-                    >
-                      <Image src={step.iconSrc} alt="" fill className="object-contain p-1" sizes="40px" />
-                    </div>
-                    <div>
-                      <h3
-                        className={`font-bold text-base sm:text-lg ${
-                          isSelected ? 'text-emerald-900' : 'text-slate-800'
-                        }`}
-                      >
-                        {step.title}
-                      </h3>
-                      <p className="text-sm text-slate-600 mt-1 leading-relaxed">
-                        {step.description}
-                      </p>
-                    </div>
+                  <div>
+                    <h3 className={`font-bold text-base sm:text-lg transition-colors ${
+                      isSelected ? 'text-blue-600' : 'text-slate-900'
+                    }`}>
+                      {step.title}
+                    </h3>
+                    <p className="text-sm text-slate-600 mt-1.5 leading-relaxed max-w-xl">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
               );
             })}
           </div>
 
-          {/* Right Column: Visual Diagram Box */}
-          <div className="lg:col-span-6 bg-slate-100 rounded-2xl border border-slate-200 p-6 sm:p-8 flex flex-col items-center justify-center min-h-[380px] shadow-inner relative overflow-hidden">
-            <div className="absolute top-4 right-4 bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-200">
+          {/* Right Column: Pure Full-Size Image Container */}
+          <div className="lg:col-span-6 bg-slate-50 rounded-2xl border border-slate-200 p-4 sm:p-6 flex flex-col items-center justify-center min-h-[460px] shadow-sm relative overflow-hidden">
+            <div className="absolute top-4 right-4 bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-200 z-10">
               Step {activeStep + 1} of 4
             </div>
 
-            <div className="w-full max-w-sm bg-white rounded-xl shadow-lg border border-slate-200 p-6 text-center space-y-4">
-              <div className="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mx-auto border border-emerald-200 text-emerald-700 relative overflow-hidden">
-                <Image src={processSteps[activeStep].iconSrc} alt="" fill className="object-contain p-3" sizes="64px" />
-              </div>
-              <div>
-                <h4 className="font-bold text-slate-900 text-lg">
-                  {processSteps[activeStep].title}
-                </h4>
-                <p className="text-xs text-slate-500 mt-1">
-                  Pubrica Workflow Interactive Demo
-                </p>
-              </div>
-
-              {/* Mock graphic elements matching diagram preview */}
-              <div className="pt-2 border-t border-slate-100 flex justify-center gap-2">
-                <span className="inline-flex items-center gap-1 text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded">
-                  <FileText className="w-3.5 h-3.5 text-blue-500" /> DOC
-                </span>
-                <span className="inline-flex items-center gap-1 text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded">
-                  <Layers className="w-3.5 h-3.5 text-red-500" /> PDF
-                </span>
-                <span className="inline-flex items-center gap-1 text-xs bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded font-medium">
-                  <Sparkles className="w-3.5 h-3.5 text-emerald-600" /> Graphical Abstract
-                </span>
+            <div className="w-full flex flex-col items-center justify-center text-center">
+              <div className="relative w-full h-80 sm:h-96 rounded-xl flex items-center justify-center transition-all duration-300">
+                <div className="relative w-full h-full flex items-center justify-center bg-white/80 border border-slate-200/80 rounded-xl shadow-sm overflow-hidden">
+                  <Image
+                    src={currentStepData.illustrationSrc}
+                    alt={currentStepData.title}
+                    fill
+                    className="object-contain p-2"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
@@ -205,9 +203,7 @@ export default function ResearchImpactGraphicalAbstract() {
             </p>
           </div>
 
-          {/* 3 Column Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Card 1: What We Need From You */}
             <div className="bg-amber-50/50 border border-amber-200/80 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
               <div>
                 <h3 className="text-lg font-bold text-slate-900 mb-4 pb-2 border-b border-amber-200/80">
@@ -230,7 +226,6 @@ export default function ResearchImpactGraphicalAbstract() {
               </div>
             </div>
 
-            {/* Card 2: What We Do */}
             <div className="bg-purple-50/50 border border-purple-200/80 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
               <div>
                 <h3 className="text-lg font-bold text-slate-900 mb-4 pb-2 border-b border-purple-200/80">
@@ -253,7 +248,6 @@ export default function ResearchImpactGraphicalAbstract() {
               </div>
             </div>
 
-            {/* Card 3: What We Deliver */}
             <div className="bg-emerald-50/50 border border-emerald-200/80 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
               <div>
                 <h3 className="text-lg font-bold text-slate-900 mb-4 pb-2 border-b border-emerald-200/80">
@@ -313,79 +307,78 @@ export default function ResearchImpactGraphicalAbstract() {
           </div>
         </div>
 
-        {/* Display Card */}
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-md overflow-hidden max-w-5xl mx-auto">
-          {/* Header Metric Bar */}
-          <div className="bg-emerald-50/60 border-b border-emerald-100 p-4 sm:p-6 flex flex-wrap items-center justify-between gap-4">
+        {/* Display Card Matching Your Exact Reference Images */}
+        <div className="bg-white rounded-2xl border border-emerald-100 shadow-lg overflow-hidden max-w-5xl mx-auto">
+          
+          {/* Top Metadata Green Info Box */}
+          <div className="bg-[#eaf7ec] border-b border-emerald-200/60 px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
             <div>
-              <h3 className="text-xl font-bold text-slate-900">
-                {currentExample.journalName}
+              <h3 className="text-lg font-bold text-slate-900">
+                {currentJournalName}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 font-medium">
-                Journal Impact Factor: <span className="font-bold text-emerald-800">{currentExample.impactFactor}</span>
+              <p className="text-xs text-slate-600 font-medium mt-0.5">
+                Journal Impact Factor: <span className="text-slate-900 font-semibold">{currentImpactFactor}</span>
               </p>
             </div>
-            <div className="bg-emerald-100/80 text-emerald-900 text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-md border border-emerald-200">
-              Journal Cite Score: {currentExample.citeScore}
+            <div className="text-xs text-slate-700 font-medium">
+              Journal Cite Score: <span className="text-slate-900 font-semibold">{currentCiteScore}</span>
             </div>
           </div>
 
-          {/* Abstract Content */}
-          <div className="p-6 sm:p-8 space-y-6">
-            {/* Article Title and Dimension Switch */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-900 text-white p-4 rounded-xl">
-              <h4 className="font-bold text-sm sm:text-base leading-snug">
-                {currentExample.articleTitle}
-              </h4>
-              <div className="flex items-center gap-1 bg-slate-800 p-1 rounded-lg self-start sm:self-center flex-shrink-0">
+          {/* Main Card Content Container */}
+          <div className="p-4 sm:p-6 bg-white">
+            
+            {/* Title Bar with Professional 2D/3D Pill Toggle matching reference layout */}
+            <div className="bg-[#1f3833] text-white rounded-t-xl px-4 py-3 sm:px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+              {/* <h4 className="text-sm sm:text-base font-semibold tracking-wide leading-snug">
+                {dimensionMode === '3D' ? currentExample.articleTitle3D : currentExample.articleTitle2D}
+              </h4> */}
+
+              {/* Exact Professional 2D / 3D Toggle Button Group */}
+              <div className="bg-[#162925] p-1 rounded-lg border border-emerald-900/50 flex items-center gap-1 flex-shrink-0 self-end md:self-auto shadow-inner">
                 <button
                   onClick={() => setDimensionMode('2D')}
-                  className={`px-3 py-1 text-xs font-bold rounded ${
-                    dimensionMode === '2D' ? 'bg-rose-500 text-white' : 'text-slate-300 hover:text-white'
+                  className={`px-3 py-1 text-xs font-bold rounded-md transition-all flex items-center gap-1 ${
+                    dimensionMode === '2D'
+                      ? 'bg-rose-600 text-white shadow'
+                      : 'text-slate-400 hover:text-white'
                   }`}
                 >
-                  2D
+                  <span>2D</span>
                 </button>
                 <button
                   onClick={() => setDimensionMode('3D')}
-                  className={`px-3 py-1 text-xs font-bold rounded ${
-                    dimensionMode === '3D' ? 'bg-rose-500 text-white' : 'text-slate-300 hover:text-white'
+                  className={`px-3 py-1 text-xs font-bold rounded-md transition-all flex items-center gap-1 ${
+                    dimensionMode === '3D'
+                      ? 'bg-rose-600 text-white shadow'
+                      : 'text-slate-400 hover:text-white'
                   }`}
                 >
-                  3D
+                  <span>3D</span>
                 </button>
               </div>
             </div>
 
-            {/* Illustration Graphic Box */}
-            <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center space-y-4">
-              <div className={`relative rounded-lg overflow-hidden border border-slate-200 max-h-80 bg-white flex items-center justify-center ${dimensionMode === '3D' && !currentExample.image3D ? 'hidden' : ''}`}>
-                <Image
-                  src={dimensionMode === '3D' && currentExample.image3D ? currentExample.image3D : currentExample.image2D}
-                  alt={currentExample.articleTitle}
-                  width={900}
-                  height={256}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="absolute inset-0 bg-slate-900/40 flex items-center justify-center p-6">
-                  <div className="bg-white/95 backdrop-blur-sm p-4 sm:p-6 rounded-xl max-w-xl text-center shadow-xl border border-slate-200">
-                    <p className="text-xs sm:text-sm font-medium text-slate-800 leading-relaxed">
-                      "{currentExample.summaryText}"
-                    </p>
-                  </div>
+            {/* Graphical Abstract Image Display Area */}
+            <div className="bg-white border-x border-b border-slate-200 rounded-b-xl p-4 sm:p-6 flex flex-col items-center justify-center">
+              {currentImage ? (
+                <div className="relative w-full h-[380px] sm:h-[480px] flex items-center justify-center">
+                  <Image
+                    src={currentImage}
+                    alt={`${dimensionMode} Graphical Abstract`}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 1200px) 100vw, 1200px"
+                  />
                 </div>
-              </div>
+              ) : (
+                <div className="w-full h-80 flex flex-col items-center justify-center bg-slate-50 text-slate-500 p-6 rounded-xl border border-dashed border-slate-200">
+                  <Box className="w-10 h-10 mb-2 text-slate-400" />
+                  <p className="text-sm font-semibold">{dimensionMode} Graphical Abstract coming soon</p>
+                </div>
+              )}
             </div>
 
-            {/* Citation Footer */}
-            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200 flex items-start gap-3">
-              <div className="p-1.5 bg-emerald-100 text-emerald-800 rounded flex-shrink-0">
-                <BookOpen className="w-4 h-4" />
-              </div>
-              <p className="text-xs text-slate-600 leading-relaxed font-mono">
-                {currentExample.citation}
-              </p>
-            </div>
           </div>
         </div>
       </section>

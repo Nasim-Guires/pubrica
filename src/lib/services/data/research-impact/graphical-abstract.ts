@@ -38,6 +38,7 @@ export const graphicalAbstractWhoWeServeData = {
             ],
             imageUrl:
                 "/images/research-impact/graphical-abstract/Medical-Life-Science-Researchers.png",
+            link: "/services/research-impact/graphical-abstract/sox4-transcription-factor-kidney-fibrosis/", // <--- Added link here
         },
         {
             title: "Scientific Publishers & Journals",
@@ -117,24 +118,29 @@ export const graphicalAbstractFaqData = {
         {
             question: "Why is my journal asking for a graphical abstract?",
             answer:
-                "Graphical abstracts effectively summarize key research highlights, foster reader engagement, increase article visibility, and improve the understanding of complex findings. They align with modern scientific communication preferences, where visual content plays a significant role in conveying research quickly and effectively.",
+                "Graphical abstracts effectively summarize key research highlights, fostering reader engagement, increasing article visibility, and aiding in the comprehension of intricate findings, which resonates with contemporary communication preferences. Notably, vision comprises 87% of the five human senses, with colour playing a significant role, accounting for 60% of vision.",
         },
         {
             question: "What is the rough sketch in the graphical abstract?",
             answer:
-                "Providing a rough sketch helps our designers understand your preferred layout, structure, and style for the graphical abstract. This allows us to align the first draft more closely with your expectations. Supplying a sketch can also reduce the turnaround time by up to two working days.",
+                "Providing a sketch helps us understand your preferred layout and style for the 3D graphical abstract, enabling us to align the first draft with your vision more accurately. Your feedback on the sketch ensures that the final product meets your expectations. If you provide a sketch, the turnaround time for either service will be reduced by two working days.",
         },
         {
             question:
                 "What are the differences between graphical abstracts and infographics?",
             answer:
-                "Although both are visual communication tools, they serve different purposes. A graphical abstract focuses on presenting the key findings and conclusions of a research study using minimal text, whereas an infographic provides a broader narrative, incorporates more explanatory text, and is designed to communicate detailed information or data visually.",
+                "Although there are subtle differences between these formats, they serve distinct purposes. A graphical abstract primarily highlights the conclusions and key findings of research, while an infographic aims to provide a broader narrative and visually depict data. However, the main contrast lies in the textual content: a graphical abstract typically contains minimal text, whereas an infographic inherently incorporates more textual material.",
         },
         {
             question:
                 "How are graphical abstracts effective in academic communication?",
             answer:
-                "Graphical abstracts improve academic communication by making complex research more accessible to researchers, students, policymakers, and the general public. They are highly effective for social media sharing, increasing article visibility and engagement, and are compatible with image search engines, helping research become more discoverable beyond traditional text-based searches.",
+                "Your graphical abstract functions much like a movie poster, albeit with a teaser of the plot! Here’s how it enhances academic communication:",
+            points: [
+                "Enhanced accessibility: Graphical abstracts broaden the accessibility of complex research, catering to a wider and more diverse audience. Researchers across different fields, students, the general public, and policymakers can easily access and comprehend the latest research developments.",
+                "Social media dissemination: In an era where brevity is valued, graphical abstracts serve as bite-sized content ideal for sharing and resharing on social media platforms. This facilitates effective science communication, amplifying the visibility and impact of the research.",
+                "Image search compatibility: Graphical abstracts are compatible with image search functions of search engines. This expands the research’s reach beyond textual searches, enhancing its discoverability and accessibility.",
+            ],
         },
     ],
 };
