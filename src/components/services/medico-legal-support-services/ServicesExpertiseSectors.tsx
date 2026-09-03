@@ -55,7 +55,7 @@ export default function ServicesExpertiseSectors({
             <Link
               key={sector.id}
               href={`/${sector.slug}`}
-              className="flex flex-col items-center text-center group cursor-pointer"
+              className="flex flex-col items-center text-center group cursor-pointer p-4 rounded-lg transition-colors hover:bg-green-200"
             >
               {/* Image / Icon Section */}
               <div className="relative w-16 h-16 mb-3">

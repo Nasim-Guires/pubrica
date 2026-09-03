@@ -3,6 +3,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import ServiceBanner from '@/components/common/ServiceBanner';
+import { PubricaSampleWorkCard } from '@/components/common/PubricaSampleWorkCardProps';
+import CommonPackages, { PackageItem } from '@/components/common/CommonPackages';
 
 // --- DATA STRUCTURES ---
 
@@ -10,12 +13,11 @@ interface WorkflowStep {
     id: string;
     tabLabel: string;
     title: string;
-    description: string;
+    description: React.ReactNode;
     imageSrc: string;
 }
 
 interface PackageTier {
-
     letter?: string;
     badgeSrc: string;
     badgeBg: string;
@@ -50,8 +52,15 @@ const workflowSteps: WorkflowStep[] = [
         id: 'step-3',
         tabLabel: 'Peer Review and Compliance Checks',
         title: 'Peer Review and Compliance Checks',
-        description:
-            'All CME content undergoes a rigorous peer-review process by subject matter experts to ensure accuracy, relevance, and compliance with accreditation standards. This step is crucial for maintaining the educational integrity and scientific rigor of the CME activities.',
+        description: (
+            <>
+                All CME content undergoes a rigorous peer-review process by{' '}
+                <Link href="/subject-matter-experts" className="text-blue-600">
+                    subject matter experts
+                </Link>{' '}
+                to ensure accuracy, relevance, and compliance with accreditation standards. This step is crucial for maintaining the educational integrity and scientific rigor of the CME activities.
+            </>
+        ),
         imageSrc: '/images/continuing-medical-education-cme-content-development/Peer-Review-and-Compliance-Checks.png',
     },
     {
@@ -97,56 +106,55 @@ const workflowSteps: WorkflowStep[] = [
     },
 ];
 
-const packagesData: PackageTier[] = [
+const packagesData: PackageItem[] = [
     {
-        letter: 'B',
-        badgeSrc: '/images/editing-and-translation/basic-pacakge.png',
-        badgeBg: 'bg-amber-100',
-        badgeColor: 'text-amber-700 border-amber-300',
-        cardHeaderBg: 'bg-[#d8e3e1]',
-        title: 'Basic CME',
-        idealFor: 'Small-scale CME programs or single-module courses.',
-        included: [
-            'Needs assessment and learning gap analysis',
-            'Development of 1–2 evidence-based learning modules',
-            'Slide decks, handouts, and participant materials',
-            'Accreditation guidance and compliance review',
+        icon: "/images/editing-and-translation/basic-pacakge.png",
+        title: "Basic CME",
+        subtitle: "Essential CME Program Support",
+        idealFor: "Small-scale CME programs or single-module courses.",
+        includes: [
+            "Needs assessment and learning gap analysis",
+            "Development of 1–2 evidence-based learning modules",
+            "Slide decks, handouts, and participant materials",
+            "Accreditation guidance and compliance review",
         ],
-        turnaroundTime: '2–3 weeks',
+        turnaround: "2–3 weeks",
+        cardBgColor: "#d8e3e1",
+        titleColor: "#355252",
     },
     {
-        letter: 'S',
-        badgeSrc: '/images/publication-support/poster-preparation/S.png',
-        badgeBg: 'bg-purple-100',
-        badgeColor: 'text-purple-700 border-purple-300',
-        cardHeaderBg: 'bg-[#e5d8eb]',
-        title: 'Standard CME',
-        idealFor: 'Mid-sized programs with multiple modules or workshops.',
-        included: [
-            'Comprehensive curriculum design',
-            '3–5 CME modules with interactive elements',
-            'Case studies, assessments, and evaluation tools',
-            'Accreditation support (ACCME/EACCME)',
-            'Post-program reporting and feedback analysis',
+        icon: "/images/publication-support/poster-preparation/S.png",
+        title: "Standard CME",
+        subtitle: "Comprehensive CME Program Development",
+        idealFor: "Mid-sized programs with multiple modules or workshops.",
+        includes: [
+            "Comprehensive curriculum design",
+            "3–5 CME modules with interactive elements",
+            "Case studies, assessments, and evaluation tools",
+            "Accreditation support (ACCME/EACCME)",
+            "Post-program reporting and feedback analysis",
         ],
-        turnaroundTime: '4–6 weeks',
+        turnaround: "4–6 weeks",
+        cardBgColor: "#e5d8eb",
+        titleColor: "#6a3b7d",
     },
     {
-        letter: 'P',
-        badgeSrc: '/images/editing-and-translation/translation-with-editing/pro.webp',
-        badgeBg: 'bg-red-100',
-        badgeColor: 'text-red-700 border-red-300',
-        cardHeaderBg: 'bg-[#ebd8bd]',
-        title: 'Premium CME',
-        idealFor: 'Large-scale, multi-event, or hybrid CME programs with global reach.',
-        included: [
-            'End-to-end program design and project management',
-            '6+ CME modules, webinars, workshops, and e-learning integration',
-            'Full accreditation support and documentation',
-            'Learner engagement tracking and outcome analysis',
-            'Custom reporting for institutions and sponsors',
+        icon:
+            "/images/editing-and-translation/translation-with-editing/pro.webp",
+        title: "Premium CME",
+        subtitle: "End-to-End CME Program Management",
+        idealFor:
+            "Large-scale, multi-event, or hybrid CME programs with global reach.",
+        includes: [
+            "End-to-end program design and project management",
+            "6+ CME modules, webinars, workshops, and e-learning integration",
+            "Full accreditation support and documentation",
+            "Learner engagement tracking and outcome analysis",
+            "Custom reporting for institutions and sponsors",
         ],
-        turnaroundTime: '8–12 weeks',
+        turnaround: "8–12 weeks",
+        cardBgColor: "#ebd8bd",
+        titleColor: "#805826",
     },
 ];
 
@@ -157,71 +165,72 @@ export default function CmeServicesMasterModule() {
     return (
         <div className="w-full bg-white space-y-16 py-8">
 
+            {/* ==================== 0. SERVICE BANNER ==================== */}
+            <ServiceBanner
+                imageSrc="/images/publication-support/Satisfaction_Guarantee.webp"
+                imageAlt="100% Satisfaction Guarantee"
+                heading="Speed up your Continuing Medical Education (CME) with Pubrica"
+                description="Pubrica's Continuing Medical Education (CME) services provide end-to-end program development, content creation, accreditation support, and quality assurance, ensuring evidence-based, engaging, and compliant learning experiences that empower healthcare professionals, improve clinical practice, and enhance patient outcomes."
+            />
+
+
             {/* ==================== 1. WORKFLOW PROCESS TABS ==================== */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-                {/* Speed Up Banner */}
-                <div className="bg-[#033c2a] text-white py-8 px-6 text-center rounded-sm">
-                    <h2 className="text-xl sm:text-2xl font-bold tracking-tight">
-                        Speed up your Continuing Medical Education (CME) with Pubrica
-                    </h2>
-                    <p className="text-xs sm:text-sm text-slate-200 mt-2 max-w-4xl mx-auto leading-relaxed">
-                        Pubrica's Continuing Medical Education (CME) services provide end-to-end program development, content creation, accreditation support, and quality assurance, ensuring evidence-based, engaging, and compliant learning experiences that empower healthcare professionals, improve clinical practice, and enhance patient outcomes.
-                    </p>
-                </div>
-
-                {/* Section Heading */}
-                <div className="space-y-3 pt-4">
-                    <h3 className="text-2xl sm:text-3xl font-bold text-[#033c2a]">
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                <div className="space-y-3">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a]">
                         How Do Continuing Medical Education (CME) Development Services Work At Pubrica?
-                    </h3>
+                    </h2>
                     <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        At Pubrica, our CME training materials development services are meticulously crafted to ensure high-quality, engaging, and educationally valuable content that meets the continuing professional development needs of healthcare practitioners. Here's a detailed overview of our process flow:
+                        At Pubrica, our CME training materials development services are meticulously crafted to ensure high-quality, engaging, and educationally valuable content that meets the continuing professional development needs of healthcare practitioners. Here&apos;s a detailed overview of our process flow, ensuring that our CME content adheres to the rigorous standards required for educational excellence and accreditation:
                     </p>
                 </div>
 
-                {/* Interactive Tabs */}
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-2 items-start">
-                    {/* Navigation Items */}
-                    <div className="md:col-span-5 space-y-1 border-r border-slate-200 pr-0 md:pr-4">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    {/* Left Column: Tab Buttons */}
+                    <div className="lg:col-span-5 flex flex-col border border-slate-200 rounded-lg overflow-hidden bg-white shadow-sm">
                         {workflowSteps.map((step, idx) => {
                             const isActive = activeTab === idx;
                             return (
                                 <button
                                     key={step.id}
                                     onClick={() => setActiveTab(idx)}
-                                    className={`w-full text-left text-xs sm:text-sm px-4 py-3 transition-colors flex items-center justify-between border-l-4 ${isActive
-                                        ? 'bg-[#dbe6c4] border-[#033c2a] font-bold text-slate-900'
-                                        : 'bg-slate-50 border-transparent hover:bg-slate-100 text-slate-700 font-medium'
+                                    className={`text-left px-5 py-4 text-xs sm:text-sm font-medium transition-colors border-b border-slate-200 last:border-b-0 ${isActive
+                                            ? 'bg-[#d8e3e1] text-[#033c2a] font-bold border-l-4 border-l-[#033c2a]'
+                                            : 'bg-white text-slate-700 hover:bg-slate-50'
                                         }`}
                                 >
-                                    <span>{step.tabLabel}</span>
+                                    {step.tabLabel}
                                 </button>
                             );
                         })}
                     </div>
 
-                    {/* Active Tab Card */}
-                    <div className="md:col-span-7 space-y-4 bg-white p-2">
-                        <div className="rounded-lg overflow-hidden border border-slate-200 aspect-[16/9] shadow-sm relative">
+                    {/* Right Column: Active Content & Image */}
+                    <div className="lg:col-span-7 space-y-6">
+                        <div className="relative w-full h-[280px] sm:h-[340px] rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
                             <Image
                                 src={currentWorkflowStep.imageSrc}
                                 alt={currentWorkflowStep.title}
                                 fill
                                 className="object-cover"
-                                sizes="(max-width: 768px) 100vw, 50vw"
                             />
                         </div>
 
-                        <div className="space-y-3">
-                            <h4 className="text-lg font-bold text-slate-900">
+                        <div className="space-y-4">
+                            <h3 className="text-xl font-bold text-[#033c2a]">
                                 {currentWorkflowStep.title}
-                            </h4>
-                            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            </h3>
+                            <div className="text-xs sm:text-sm text-slate-700 leading-relaxed">
                                 {currentWorkflowStep.description}
-                            </p>
-                            <Link href="/order-now" className="inline-block bg-[#033c2a] hover:bg-[#02281c] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-sm transition-colors shadow-sm">
-                                REQUEST A QUOTE
-                            </Link>
+                            </div>
+                            <div>
+                                <Link
+                                    href="/order-now"
+                                    className="inline-block bg-[#033c2a] hover:bg-[#02281c] text-white text-xs font-semibold px-5 py-3 rounded transition-colors"
+                                >
+                                    REQUEST A QUOTE
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -286,112 +295,44 @@ export default function CmeServicesMasterModule() {
 
 
             {/* ==================== 3. SAMPLE WORK BANNER ==================== */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="bg-[#f2faf5] border border-emerald-100 rounded-xl p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-8 items-center shadow-sm">
-                    {/* Image */}
-                    <div className="md:col-span-5 rounded-lg overflow-hidden aspect-[4/3] border border-slate-200 relative">
-                        <Image
-                            src="/images/continuing-medical-education-cme-content-development/Continuing-Medical-Education-Sample-Work.png"
-                            alt="Medical Research Lab"
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 768px) 100vw, 40vw"
-                        />
-                    </div>
-
-                    {/* Details & CTAs */}
-                    <div className="md:col-span-7 space-y-6">
-                        <div className="space-y-3">
-                            <h3 className="text-base sm:text-lg font-bold text-slate-900">
-                                Continuing Medical Education Sample Work
-                            </h3>
-                            <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-slate-800 text-white text-xs font-bold py-2.5 px-6 rounded-full transition-colors shadow-sm">
-                                Discover More
-                            </Link>
-                        </div>
-
-                        <div className="space-y-3 border-t border-slate-200/80 pt-4">
-                            <h3 className="text-base sm:text-lg font-bold text-slate-900">
-                                Download the full Report Now
-                            </h3>
-                            <p className="text-xs text-slate-600 leading-relaxed">
-                                Explore our Continuing Medical Education (CME) samples, designed to demonstrate evidence-based curriculum development, high-quality content creation, and alignment with accreditation and regulatory standards, delivering impactful, engaging, and compliant educational experiences for healthcare professionals and institutions.
-                            </p>
-                            <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-slate-800 text-white text-xs font-bold py-2.5 px-6 rounded-full transition-colors shadow-sm">
-                                Discover More
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <PubricaSampleWorkCard
+                bookCoverImage={{
+                    src: "/images/continuing-medical-education-cme-content-development/Continuing-Medical-Education-Sample-Work.png",
+                    alt: "Medical Research Lab",
+                    width: 600,
+                    height: 450,
+                }}
+                sections={[
+                    {
+                        heading: "Continuing Medical Education Sample Work",
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work/individual-patient-data-from-randomized-trials/",
+                        },
+                    },
+                    {
+                        heading: "Download the full Report Now",
+                        descriptionSegments: [
+                            {
+                                text: "Explore our Continuing Medical Education (CME) samples, designed to demonstrate evidence-based curriculum development, high-quality content creation, and alignment with accreditation and regulatory standards, delivering impactful, engaging, and compliant educational experiences for healthcare professionals and institutions.",
+                            },
+                        ],
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work",
+                        },
+                    },
+                ]}
+                footerDisclaimerSegments={[]}
+            />
 
 
             {/* ==================== 4. CME PACKAGES ==================== */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-                <div className="space-y-3">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a]">
-                        Continuing Medical Education (CME) &ndash; Our Packages
-                    </h2>
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed max-w-5xl">
-                        At Pubrica, we offer flexible and comprehensive CME packages tailored to meet the needs of healthcare institutions, professional associations, and individual healthcare professionals. Our packages are designed to streamline program development, ensure compliance, and deliver engaging, evidence-based learning experiences.
-                    </p>
-                </div>
-
-                {/* Pricing Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
-                    {packagesData.map((pkg, idx) => (
-                        <div
-                            key={idx}
-                            className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow"
-                        >
-                            <div>
-                                {/* Header */}
-                                <div className={`${pkg.cardHeaderBg} p-5 relative flex items-center gap-3`}>
-                                    <div className="relative w-9 h-9 shrink-0">
-                                        <Image src={pkg.badgeSrc} alt={pkg.title} fill className="object-contain" sizes="36px" />
-                                    </div>
-                                    <h3 className="text-sm font-bold text-slate-900 leading-tight">
-                                        {pkg.title}
-                                    </h3>
-                                </div>
-
-                                {/* Body */}
-                                <div className="p-5 space-y-4">
-                                    <div>
-                                        <span className="text-[11px] font-bold text-slate-800 flex items-center gap-1">
-                                            <span className="text-teal-600">&rarr;</span> Ideal For:
-                                        </span>
-                                        <p className="text-[11px] text-slate-600 leading-snug mt-0.5">
-                                            {pkg.idealFor}
-                                        </p>
-                                    </div>
-
-                                    <div className="space-y-2">
-                                        <span className="text-[11px] font-bold text-slate-800 flex items-center gap-1">
-                                            <span className="text-teal-600">&rarr;</span> Included:
-                                        </span>
-                                        <ul className="space-y-1.5 text-[11px] text-slate-600 list-disc list-inside">
-                                            {pkg.included.map((item, iIdx) => (
-                                                <li key={iIdx} className="leading-tight">
-                                                    <span>{item}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Turnaround Time Footer */}
-                            <div className="p-5 pt-0">
-                                <p className="text-[11px] font-bold text-slate-800 flex items-center gap-1 border-t border-slate-100 pt-3">
-                                    <span className="text-teal-600">&rarr;</span> Turnaround Time: {pkg.turnaroundTime}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
+            <CommonPackages
+                title="Continuing Medical Education (CME) – Our Packages"
+                description="At Pubrica, we offer flexible and comprehensive CME packages tailored to meet the needs of healthcare institutions, professional associations, and individual healthcare professionals. Our packages are designed to streamline program development, ensure compliance, and deliver engaging, evidence-based learning experiences."
+                packages={packagesData}
+            />
         </div>
     );
 }

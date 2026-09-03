@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import ServiceBanner from "@/components/common/ServiceBanner";
 
 // ==========================================
 // TYPES & DATA STRUCTURES
@@ -104,9 +105,14 @@ const whoWeServeData: TargetAudience[] = [
 
 export default function EducationalOfferingsAndAudience() {
   const [openOffer, setOpenOffer] = useState<number | null>(1);
+  const [activeCardId, setActiveCardId] = useState<string | null>(null);
 
   const toggleOffer = (id: number) => {
     setOpenOffer(openOffer === id ? null : id);
+  };
+
+  const handleCardClick = (id: string) => {
+    setActiveCardId(activeCardId === id ? null : id);
   };
 
   // Structured Data (JSON-LD) for SEO
@@ -136,149 +142,155 @@ export default function EducationalOfferingsAndAudience() {
   };
 
   return (
-    <div className="w-full bg-[#f8f9fa] text-slate-800 font-sans py-7 px-4 sm:px-6 lg:px-8">
+    <div className="w-full bg-[#f8f9fa] text-slate-800 font-sans">
       {/* SEO Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="max-w-6xl mx-auto space-y-24">
-        {/* ==========================================
-            SECTION 1: WHAT WE OFFER
-        ========================================== */}
-        <section>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] mb-8">
-            What We Offer
-          </h2>
+      {/* Padded Container for Main Content Sections */}
+      <div className="py-7 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto space-y-24">
+          {/* ==========================================
+              SECTION 1: WHAT WE OFFER
+          ========================================== */}
+          <section className="w-full py-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] mb-8">
+                What We Offer
+              </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            {/* Left Column: Overlapping Visual Graphics */}
-            <div className="lg:col-span-5 relative min-h-[340px] sm:min-h-[380px] flex items-center justify-center">
-              {/* Background circular accent */}
-              <div className="absolute w-64 h-64 sm:w-72 sm:h-72 bg-gray-200/70 rounded-full left-4 top-2 -z-0" />
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                {/* Left Column: Centered, Larger Visual Graphics */}
+                <div className="lg:col-span-5 relative min-h-[380px] sm:min-h-[440px] flex items-center justify-center">
+                  {/* Background circular accent */}
+                  <div className="absolute w-72 h-72 sm:w-80 sm:h-80 bg-gray-200/70 rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-0" />
 
-              {/* Top/Left Card Image */}
-              <div className="absolute top-0 left-0 w-56 sm:w-64 h-40 sm:h-48 rounded-2xl overflow-hidden shadow-md border-2 border-white z-10">
-                <Image
-                  src="/images/educational-content-development/What-We-Offer.webp"
-                  alt="What we offer"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+                  {/* Centered, Larger Top/Left Card Image */}
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-80 h-48 sm:h-56 rounded-2xl overflow-hidden shadow-lg border-2 border-white z-10">
+                    <Image
+                      src="/images/educational-content-development/What-We-Offer.webp"
+                      alt="What we offer"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
 
-              <div className="absolute bottom-0 right-2 w-56 sm:w-64 h-48 sm:h-56 rounded-2xl overflow-hidden shadow-lg border-2 border-white z-20 hidden" aria-hidden="true" />
-            </div>
-
-            {/* Right Column: Narrative + Accordion List */}
-            <div className="lg:col-span-7 space-y-6">
-              <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                Our service is designed to provide end-to-end solutions for
-                creating high-quality, engaging, and impactful educational
-                content. Here’s what we bring to the table:
-              </p>
-
-              {/* Accordion List */}
-              <div className="border-t border-[#0d3b44]/20 divide-y divide-[#0d3b44]/20">
-                {offersData.map((item) => {
-                  const isOpen = openOffer === item.id;
-                  return (
-                    <div key={item.id} className="py-3">
-                      <button
-                        onClick={() => toggleOffer(item.id)}
-                        className="w-full flex items-center justify-between text-left py-1 group focus:outline-none"
-                      >
-                        <span className="text-xs sm:text-sm font-bold text-[#0d3b44] group-hover:text-teal-700 transition-colors">
-                          <span className="mr-3 font-normal">+</span>
-                          {item.title}
-                        </span>
-                      </button>
-                      {isOpen && (
-                        <p className="mt-2 text-xs sm:text-sm text-gray-600 pl-6 pr-2 leading-relaxed animate-fadeIn">
-                          {item.description}
-                        </p>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ==========================================
-            SECTION 2: WHO WE SERVE (WITH HOVER OVERLAYS)
-        ========================================== */}
-        <section>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] mb-3">
-            Who We Serve
-          </h2>
-          <p className="text-xs sm:text-sm text-gray-700 leading-relaxed max-w-5xl mb-8">
-            At Pubrica, we collaborate with a diverse range of stakeholders in
-            academia, research, and professional training to create impactful,
-            learner-centric educational content. Our solutions are tailored to
-            meet the unique needs of institutions, educators, researchers, and
-            businesses across the education and life sciences spectrum.
-          </p>
-
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whoWeServeData.map((card) => (
-              <div
-                key={card.id}
-                className="group relative h-64 sm:h-72 rounded-sm overflow-hidden shadow-md cursor-pointer bg-slate-900"
-              >
-                {/* Background Image */}
-                <Image
-                  src={card.imageSrc}
-                  alt={card.imageAlt}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-
-                {/* Default Static Overlay (Bottom Gradient with Title) */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end p-5 transition-opacity duration-300 group-hover:opacity-0">
-                  <h3 className="text-sm sm:text-base font-bold text-white leading-tight">
-                    {card.title}
-                  </h3>
+                  <div className="absolute bottom-0 right-2 w-56 sm:w-64 h-48 sm:h-56 rounded-2xl overflow-hidden shadow-lg border-2 border-white z-20 hidden" aria-hidden="true" />
                 </div>
 
-                {/* Hover Full Black Overlay Effect */}
-                <div className="absolute inset-0 bg-black/95 p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                  <h3 className="text-sm sm:text-base font-bold text-white mb-3 tracking-wide border-b border-gray-700 pb-2">
-                    {card.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-gray-200 leading-relaxed">
-                    {card.description}
+                {/* Right Column: Narrative + Accordion List */}
+                <div className="lg:col-span-7 space-y-6">
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                    Our service is designed to provide end-to-end solutions for
+                    creating high-quality, engaging, and impactful educational
+                    content. Here’s what we bring to the table:
                   </p>
+
+                  {/* Accordion List */}
+                  <div className="border-t border-[#0d3b44]/20 divide-y divide-[#0d3b44]/20">
+                    {offersData.map((item) => {
+                      const isOpen = openOffer === item.id;
+                      return (
+                        <div key={item.id} className="py-3">
+                          <button
+                            onClick={() => toggleOffer(item.id)}
+                            className="w-full flex items-center justify-between text-left py-1 group focus:outline-none"
+                          >
+                            <span className="text-xs sm:text-sm font-bold text-[#0d3b44] group-hover:text-teal-700 transition-colors">
+                              <span className="mr-3 font-normal">+</span>
+                              {item.title}
+                            </span>
+                          </button>
+                          {isOpen && (
+                            <p className="mt-2 text-xs sm:text-sm text-gray-600 pl-6 pr-2 leading-relaxed animate-fadeIn">
+                              {item.description}
+                            </p>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </section>
+            </div>
+          </section>
+
+          {/* ==========================================
+              SECTION 2: WHO WE SERVE (WITH HOVER & TOUCH OVERLAYS)
+          ========================================== */}
+          <section>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] mb-3">
+              Who We Serve
+            </h2>
+            <p className="text-xs sm:text-sm text-gray-700 leading-relaxed max-w-5xl mb-8">
+              At Pubrica, we collaborate with a diverse range of stakeholders in
+              academia, research, and professional training to create impactful,
+              learner-centric educational content. Our solutions are tailored to
+              meet the unique needs of institutions, educators, researchers, and
+              businesses across the education and life sciences spectrum.
+            </p>
+
+            {/* Cards Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {whoWeServeData.map((card) => {
+                const isTouchActive = activeCardId === card.id;
+                return (
+                  <div
+                    key={card.id}
+                    onClick={() => handleCardClick(card.id)}
+                    className="group relative h-64 sm:h-72 rounded-sm overflow-hidden shadow-md cursor-pointer bg-slate-900"
+                  >
+                    {/* Background Image */}
+                    <Image
+                      src={card.imageSrc}
+                      alt={card.imageAlt}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+
+                    {/* Default Static Overlay (Bottom Gradient with Title) */}
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end p-5 transition-opacity duration-300 ${isTouchActive ? "opacity-0 pointer-events-none" : "group-hover:opacity-0"
+                        }`}
+                    >
+                      <h3 className="text-sm sm:text-base font-bold text-white leading-tight">
+                        {card.title}
+                      </h3>
+                    </div>
+
+                    {/* Hover / Active Full Black Overlay Effect */}
+                    <div
+                      className={`absolute inset-0 bg-black/95 p-6 flex flex-col justify-center transition-opacity duration-300 ease-in-out ${isTouchActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                        }`}
+                    >
+                      <h3 className="text-sm sm:text-base font-bold text-white mb-3 tracking-wide border-b border-gray-700 pb-2">
+                        {card.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-gray-200 leading-relaxed">
+                        {card.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        </div>
       </div>
 
       {/* ==========================================
           SECTION 3: FULL-WIDTH CTA BANNER
       ========================================== */}
-      <section className="w-full bg-[#051f18] text-white py-6 px-4 sm:px-6 lg:px-8 mt-20 border-t border-emerald-950">
-        <div className="max-w-5xl mx-auto text-center space-y-4">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
-            Speed up your Educational Content Development with Pubrica
-          </h2>
-          <p className="text-xs sm:text-sm text-gray-200 italic leading-relaxed max-w-4xl mx-auto">
-            “Pubrica’s Educational Content Development Service provides a
-            detailed roadmap to help you pinpoint the ideal platform for your
-            manuscript. Our thorough assessment considers various factors,
-            including subject coverage, academic influence, and publication
-            requirements. We tailor our recommendations to match your paper’s
-            distinct qualities and your preferences, ensuring you submit your
-            educational materials to the most suitable outlets for optimal
-            dissemination and impact.”
-          </p>
-        </div>
-      </section>
+      <div className="w-full mt-12">
+        <ServiceBanner
+          imageSrc="/images/publication-support/Satisfaction_Guarantee.webp"
+          imageAlt="100% Satisfaction Guarantee"
+          heading="Speed up your Educational Content Development with Pubrica"
+          description="“Pubrica’s Educational Content Development Service provides a detailed roadmap to help you pinpoint the ideal platform for your manuscript. Our thorough assessment considers various factors, including subject coverage, academic influence, and publication requirements. We tailor our recommendations to match your paper’s distinct qualities and your preferences, ensuring you submit your educational materials to the most suitable outlets for optimal dissemination and impact.”"
+        />
+      </div>
     </div>
   );
 }

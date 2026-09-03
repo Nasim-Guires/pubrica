@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import HeroBanner from '@/components/common/HeroBanner';
 
 // --- DATA STRUCTURES ---
 
@@ -11,7 +12,7 @@ interface AccordionItem {
     title: string;
     points: {
         label: string;
-        description: string;
+        description: React.ReactNode;
     }[];
 }
 
@@ -57,8 +58,15 @@ const servicesAccordionData: AccordionItem[] = [
             },
             {
                 label: 'Clinical Case Reports',
-                description:
-                    'We develop case reports that detail patient complaints and feedback, offering real-world insights into patient care.',
+                description: (
+                    <>
+                        We develop{' '}
+                        <Link href="/services/physician-writing-services/case-report/" className="text-blue-600 no-underline hover:no-underline">
+                            case reports
+                        </Link>{' '}
+                        that detail patient complaints and feedback, offering real-world insights into patient care.
+                    </>
+                ),
             },
             {
                 label: 'Compilation of Practice Difficulties',
@@ -83,8 +91,15 @@ const servicesAccordionData: AccordionItem[] = [
             },
             {
                 label: 'Supplemental Checklists and Materials',
-                description:
-                    'We create supplemental checklists, patient education materials, and other resources to support comprehensive learning and application of knowledge.',
+                description: (
+                    <>
+                        We create supplemental checklists,{' '}
+                        <Link href="/services/patient-education-content/" className="text-blue-600 no-underline hover:no-underline">
+                            patient education materials
+                        </Link>
+                        , and other resources to support comprehensive learning and application of knowledge.
+                    </>
+                ),
             },
             {
                 label: 'Website Resources and Follow-Up Surveys',
@@ -107,16 +122,11 @@ export default function CMEContentDevelopmentPage() {
         <main className="w-full bg-white text-slate-800 font-sans pb-8">
 
             {/* 1. HERO BANNER */}
-            <section className="bg-[#033c2a] text-white py-6 px-4 sm:px-6 lg:px-8 text-center">
-                <div className="max-w-5xl mx-auto border border-slate-300/40 p-8 sm:p-12 rounded-sm space-y-4">
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
-                        Continuing Medical Education
-                    </h1>
-                    <p className="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed max-w-3xl mx-auto">
-                        Pubrica's Continuing Medical Education services offer personalized guidance and support for navigating academic publishing in the medical field, ensuring optimal outcomes for your research.
-                    </p>
-                </div>
-            </section>
+            <HeroBanner
+                title="Continuing Medical Education"
+                description="Pubrica's Continuing Medical Education services offer personalized guidance and support for navigating academic publishing in the medical field, ensuring optimal outcomes for your research."
+                headingAs="h1"
+            />
 
             {/* 2. OVERVIEW SECTION WITH IMAGE */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-8">
@@ -133,25 +143,25 @@ export default function CMEContentDevelopmentPage() {
                     {/* Left Side: Content Points */}
                     <div className="lg:col-span-7 space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
                         <p>
-                            Pubrica's team of experts specializes in developing{' '}
-                            <Link href="/services/continuing-medical-education-cme-content-development" className="text-blue-600 no-underline hover:no-underline">
+                            Pubrica&apos;s team of experts specializes in developing{' '}
+                            <Link href="/services/continuing-medical-education-cme-content-development/what-is-continuing-medical-education/" className="text-blue-600 no-underline hover:no-underline">
                                 continuing medical education content
                             </Link>{' '}
-                            that is scholarly, peer-reviewed, and tailored to meet the diverse educational needs of healthcare professionals across various disciplines. Our dedicated CME module writing services ensure the delivery of high-quality educational resources. Here's how we support your CME content development services needs:
+                            that is scholarly, peer-reviewed, and tailored to meet the diverse educational needs of healthcare professionals across various disciplines. Our dedicated CME module writing services ensure the delivery of high-quality educational resources. Here&apos;s how we support your CME content development services needs:
                         </p>
 
                         <ul className="space-y-3 pl-2">
                             <li className="flex items-start gap-2">
                                 <span className="text-red-500 font-bold text-base leading-none">&bull;</span>
                                 <div>
-                                    <span className="font-bold text-slate-900">Expert Content Development:</span> Our team is adept at creating engaging and informative CME content that addresses the specific learning objectives of doctors, nurses, pharmacists, dentists, and other allied healthcare professionals. This meticulous content preparation is essential for meeting the continuing education requirements of various specialties.
+                                    <span className=" text-slate-900">Expert Content Development:</span> Our team is adept at creating engaging and informative CME content that addresses the specific learning objectives of doctors, nurses, pharmacists, dentists, and other allied healthcare professionals. This meticulous content preparation is essential for meeting the continuing education requirements of various specialties.
                                 </div>
                             </li>
 
                             <li className="flex items-start gap-2">
                                 <span className="text-red-500 font-bold text-base leading-none">&bull;</span>
                                 <div>
-                                    <span className="font-bold text-slate-900">Tailored Educational Materials:</span> We customize the scope of CME content to match the specific educational needs and specialties of the audience. This personalized approach not only enhances the educational value of the content but also ensures that it is relevant and directly applicable to the audience's daily professional activities.
+                                    <span className=" text-slate-900">Tailored Educational Materials:</span> We customize the scope of CME content to match the specific educational needs and specialties of the audience. This personalized approach not only enhances the educational value of the content but also ensures that it is relevant and directly applicable to the audience&apos;s daily professional activities.
                                 </div>
                             </li>
 
@@ -187,9 +197,9 @@ export default function CMEContentDevelopmentPage() {
                     <div className="lg:col-span-5 flex justify-center lg:justify-end">
                         <div className="relative w-full max-w-md">
                             {/* Back Decorative Block */}
-                            <div className="absolute -inset-2 bg-[#033c2a] rounded-2xl transform -rotate-1 opacity-90" />
+                            <div className="absolute -inset-2 rounded-2xl transform -rotate-1 opacity-90" />
                             {/* Image Container */}
-                            <div className="relative rounded-xl overflow-hidden border-2 border-white shadow-lg bg-slate-100 aspect-[4/3]">
+                            <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
                                 <Image
                                     src="/images/continuing-medical-education-cme-content-development/Continuing-Medical-Education-Content-.webp"
                                     alt="Doctors reviewing medical notes"
@@ -213,7 +223,7 @@ export default function CMEContentDevelopmentPage() {
                         At Pubrica, we specialize in creating comprehensive Continuing Medical Education (CME) activities tailored to a wide range of healthcare professionals. Our services are designed to support ongoing education across various therapeutic areas, including{' '}
                         <Link href="/subject-matter-experts/radiology" className="text-blue-600 no-underline hover:no-underline">radiology</Link>,{' '}
                         <Link href="/subject-matter-experts/cardiology" className="text-blue-600 no-underline hover:no-underline">cardiology</Link>, orthopedics, emergency medicine,{' '}
-                        <Link href="/subject-matter-experts/neurology" className="text-blue-600 no-underline hover:no-underline">neurology</Link>, internal medicine, nuclear medicine, oncology, OB-GYN, otolaryngology, and more. Here's how we ensure high-quality CME content:
+                        <Link href="/subject-matter-experts/neurology" className="text-blue-600 no-underline hover:no-underline">neurology</Link>, internal medicine, nuclear medicine, oncology, OB-GYN, otolaryngology, and more. Here&apos;s how we ensure high-quality CME content:
                     </p>
                 </div>
 
@@ -228,13 +238,15 @@ export default function CMEContentDevelopmentPage() {
                                 <button
                                     type="button"
                                     onClick={() => toggleAccordion(item.id)}
-                                    className="w-full bg-[#033c2a] hover:bg-[#022a1d] text-white px-4 py-3 sm:px-6 sm:py-3.5 flex items-center gap-3 transition-colors text-left"
+                                    className="w-full bg-[#033c2a] hover:bg-[#022a1d] text-white px-4 py-3 sm:px-6 sm:py-3.5 flex items-center justify-between transition-colors text-left"
                                 >
-                                    <span className="font-mono text-base font-bold w-4 text-center">
-                                        {isOpen ? '&minus;' : '+'}
-                                    </span>
-                                    <span className="text-xs sm:text-sm font-bold uppercase tracking-wide">
-                                        {item.title}
+                                    <div className="flex items-center gap-3">
+                                        <span className="text-xs sm:text-sm font-bold uppercase tracking-wide">
+                                            {item.title}
+                                        </span>
+                                    </div>
+                                    <span className="font-mono text-lg font-bold w-4 text-center">
+                                        {isOpen ? '-' : '+'}
                                     </span>
                                 </button>
 

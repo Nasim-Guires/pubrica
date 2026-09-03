@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import HeroBanner from '@/components/common/HeroBanner';
 
 export const metadata = {
     title: 'Marketing Communication Content Development Services | Pubrica',
@@ -19,7 +21,8 @@ interface AccordionItem {
 }
 
 export default function MarketingCommunicationContentDevelopment() {
-    const [openAccordion, setOpenAccordion] = useState<string | null>('accordion-1');
+    // Closed by default
+    const [openAccordion, setOpenAccordion] = useState<string | null>(null);
 
     const toggleAccordion = (id: string) => {
         setOpenAccordion(openAccordion === id ? null : id);
@@ -110,16 +113,11 @@ export default function MarketingCommunicationContentDevelopment() {
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
             {/* ------------------- HERO BANNER ------------------- */}
-            <header className="bg-[#0b3b2c] text-white py-6 px-4 text-center">
-                <div className="max-w-5xl mx-auto border border-gray-400/40 p-8 rounded-sm bg-[#0b3b2c]/80 backdrop-blur-sm">
-                    <h1 className="text-2xl md:text-3xl font-bold mb-4 tracking-wide text-white">
-                        Marketing Communication Content Development Services
-                    </h1>
-                    <p className="text-xs md:text-sm max-w-3xl mx-auto text-gray-200 leading-relaxed">
-                        Pubrica offers marketing communication content development services, creating persuasive messaging and visually compelling materials to strengthen your brand presence and engage your audience effectively.
-                    </p>
-                </div>
-            </header>
+            <HeroBanner
+                title="Marketing Communication Content Development Services"
+                description="Pubrica offers marketing communication content development services, creating persuasive messaging and visually compelling materials to strengthen your brand presence and engage your audience effectively."
+                headingAs="h1"
+            />
 
             {/* ------------------- MAIN SECTION ------------------- */}
             <section className="py-6 px-4 max-w-6xl mx-auto" aria-labelledby="main-heading">
@@ -173,7 +171,7 @@ export default function MarketingCommunicationContentDevelopment() {
                     {/* Right image */}
                     <div className="md:col-span-5 flex justify-center">
                         <div className="relative w-full max-w-md">
-                            <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden shadow-md">
+                            <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden">
                                 <Image
                                     src="/images/marketing-communication-content-development-service/Marketing-Communication-Content-Development.webp"
                                     alt="Marketing communication content development"
@@ -211,28 +209,28 @@ export default function MarketingCommunicationContentDevelopment() {
                     {/* Right Accordion Content */}
                     <div className="md:col-span-7 space-y-4">
                         <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-6">
-                            Pubrica offers a comprehensive range of content development for marketing campaigns tailored to meet the diverse needs of the healthcare and life sciences industries. Our offerings are meticulously crafted to enhance visibility and engagement across various therapeutic areas, including radiology, cardiology, orthopaedics, emergency medicine, neurology, internal medicine, nuclear medicine, oncology, OB-GYN, otolaryngology, and more. Here's a detailed overview of our services:
+                            Pubrica offers a comprehensive range of content development for marketing campaigns tailored to meet the diverse needs of the healthcare and life sciences industries. Our offerings are meticulously crafted to enhance visibility and engagement across various therapeutic areas, including <Link href="/subject-matter-experts/radiology/" className="text-blue-600">radiology</Link>, <Link href="/subject-matter-experts/cardiology/" className="text-blue-600">cardiology</Link>, orthopaedics, emergency medicine, <Link href="/subject-matter-experts/neurology/" className="text-blue-600">neurology</Link>, internal medicine, nuclear medicine, oncology, <Link href="/subject-matter-experts/gynecology/" className="text-blue-600">OB-GYN</Link>, otolaryngology, and more. Here's a detailed overview of our services:
                         </p>
 
-                        {/* Accordion List */}
+                        {/* Accordion List with a Clean, Simple Card Design */}
                         <div className="space-y-3">
                             {servicesData.map((item) => {
                                 const isOpen = openAccordion === item.id;
                                 return (
-                                    <div key={item.id} className="border-b border-gray-300 pb-3">
+                                    <div key={item.id} className="border border-gray-200 rounded-lg overflow-hidden bg-white">
                                         <button
                                             onClick={() => toggleAccordion(item.id)}
-                                            className="w-full flex items-center justify-start gap-3 py-2 text-left font-semibold text-xs md:text-sm text-gray-800 hover:text-[#0b3b2c] transition-colors focus:outline-none"
+                                            className="w-full flex items-center justify-between p-3.5 text-left font-semibold text-xs md:text-sm text-gray-800 hover:bg-gray-50 transition-colors focus:outline-none"
                                         >
-                                            <span className="text-base font-bold text-gray-700">
+                                            <span>{item.title}</span>
+                                            <span className="text-sm font-bold text-gray-500">
                                                 {isOpen ? '−' : '+'}
                                             </span>
-                                            <span>{item.title}</span>
                                         </button>
 
                                         {isOpen && (
-                                            <div className="pl-6 pt-2 space-y-3">
-                                                <ul className="space-y-3">
+                                            <div className="px-3.5 pb-3.5 pt-1 border-t border-gray-100 bg-gray-50/50">
+                                                <ul className="space-y-2.5">
                                                     {item.content.map((sub, idx) => (
                                                         <li key={idx} className="text-xs md:text-sm text-gray-700 leading-relaxed">
                                                             <strong className="text-gray-900">• {sub.label}:</strong> {sub.description}

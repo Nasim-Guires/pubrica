@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CommonUploadButton from "@/components/common/CommonUploadButton";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function EducationalContentDevelopmentPage() {
   return (
@@ -12,18 +13,11 @@ export default function EducationalContentDevelopmentPage() {
       {/* ==========================================
           1. HERO HEADER BANNER
       ========================================== */}
-      <section className="bg-[#0b2427] text-white py-6 px-4 sm:px-6 lg:px-8 border-b-2 border-[#163a3f]">
-        <div className="max-w-5xl mx-auto border border-gray-400/40 p-8 text-center rounded-sm bg-[#0b2427]/80 shadow-inner">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3">
-            Educational Content Development
-          </h1>
-          <p className="text-xs sm:text-sm text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Pubrica offers comprehensive Educational Content Development
-            services, crafting engaging and informative materials tailored to
-            diverse learning needs.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Educational Content Development"
+        description="Pubrica offers comprehensive Educational Content Development services, crafting engaging and informative materials tailored to diverse learning needs."
+        headingAs="h1"
+      />
 
       {/* ==========================================
           2. MAIN CONTENT SECTION

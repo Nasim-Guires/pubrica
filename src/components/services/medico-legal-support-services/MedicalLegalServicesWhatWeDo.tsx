@@ -3,11 +3,12 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ServiceBanner from "@/components/common/ServiceBanner";
 
 export interface ServiceCardItem {
   id: string;
   title: string;
-  description: string;
+  description: React.ReactNode;
   iconSrc: string;
   linkText?: string;
   linkHref?: string;
@@ -66,8 +67,18 @@ export default function MedicalLegalServicesWhatWeDo({
     {
       id: "disability-claims",
       title: "Disability & Insurance Compensation Claims",
-      description:
-        "We perform independent medical evaluations (IMEs) for disability benefits, workers' compensation, and insurance dispute resolution, providing objective impairment ratings.",
+      description: (
+        <>
+          We perform{" "}
+          <Link
+            href="/services/medico-legal-support-services/independent-medical-examinations-and-expert-assessments-in-research/"
+            className="text-blue-600"
+          >
+            independent medical evaluations (IMEs)
+          </Link>{" "}
+          for disability benefits, workers' compensation, and insurance dispute resolution, providing objective impairment ratings.
+        </>
+      ),
       iconSrc: "/images/medico-legal-support-services/Outsource-medico-legal-services-for-law-firms-and-attorneys.webp",
     },
     {
@@ -80,8 +91,18 @@ export default function MedicalLegalServicesWhatWeDo({
     {
       id: "ethical-consultation",
       title: "Ethical & Legal Medical Consultation",
-      description:
-        "Through expert medico legal consulting services, we advise on complex ethical and legal issues such as informed consent, end-of-life care, patient confidentiality, and medical ethics in malpractice cases.",
+      description: (
+        <>
+          Through expert{" "}
+          <Link
+            href="/"
+            className="text-blue-600"
+          >
+            medico legal consulting services
+          </Link>
+          , we advise on complex ethical and legal issues such as informed consent, end-of-life care, patient confidentiality, and medical ethics in malpractice cases.
+        </>
+      ),
       iconSrc: "/images/medico-legal-support-services/Detailed-medical-record-summary-services-for-court-proceedings.webp",
     },
     {
@@ -137,6 +158,7 @@ export default function MedicalLegalServicesWhatWeDo({
 
   return (
     <section className={`w-full bg-slate-50 py-7 text-slate-800 ${className}`}>
+      {/* Container for Header and Cards with standard padding */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <header className="mb-12 text-left">
@@ -146,14 +168,14 @@ export default function MedicalLegalServicesWhatWeDo({
           <div className="space-y-4 text-sm sm:text-base text-gray-700 max-w-5xl leading-relaxed">
             <p>
               At Pubrica, we provide a complete expert{" "}
-              <Link href="/services/medico-legal-support-services" className="text-blue-600 font-medium no-underline hover:no-underline">
+              <Link href="/services/medico-legal-support-services/independent-medical-examinations-and-expert-assessments-in-research/" className="text-blue-600">
                 medico legal consulting services
               </Link>{" "}
               framework for law firms, insurers, healthcare professional teams, and legal professionals involved in disputes requiring expert medical opinions. We focus on medico-legal cases in the areas of medical negligence, personal injury assessment, insurance claims disputes, and forensic medical analysis.
             </p>
             <p>
               Our approach involves methodical medical case analysis,{" "}
-              <Link href="/services/medico-legal-support-services" className="text-blue-600 font-medium no-underline hover:no-underline">
+              <Link href="/services/medico-legal-support-services/medico-legal-regulatory-support/" className="text-blue-600">
                 medical record summary services
               </Link>
               , record evaluation, standards-of-care comparison, and regulatory consultation, ensuring that each case is handled with diligence, accuracy, and legal credibility. We draw upon clinical guidelines, standard protocols, and graded levels of evidence to build robust legal strategies and defensible reports.
@@ -162,7 +184,7 @@ export default function MedicalLegalServicesWhatWeDo({
         </header>
 
         {/* 4-Column Grid for Service Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {servicesList.map((service) => (
             <article
               key={service.id}
@@ -185,16 +207,22 @@ export default function MedicalLegalServicesWhatWeDo({
             </article>
           ))}
         </div>
+      </div>
 
-        {/* Bottom Banner Section */}
-        <div className="mt-16 bg-[#1b2b28] text-white rounded-md py-8 px-6 text-center">
-          <h3 className="text-xl sm:text-2xl font-bold mb-2">
-            Trusted Medico-Legal Expertise for Every Case
-          </h3>
-          <p className="text-xs sm:text-sm text-gray-200 max-w-4xl mx-auto">
-            From medical negligence analysis to expert witness reporting, Pubrica delivers dependable medico-legal solutions across civil, criminal, and insurance law contexts. Contact us today for accurate, defensible, and timely medico legal support.
-          </p>
-        </div>
+      {/* Bottom Banner Section: Full-width spanning outside container with top spacing gap */}
+      <div className="w-full mt-10">
+        <ServiceBanner
+          imageSrc=""
+          imageAlt="100% Satisfaction Guarantee"
+          heading="Trusted Medico-Legal Expertise for Every Case"
+          description={
+            <>
+              From medical negligence analysis to expert witness reporting, Pubrica delivers dependable medico-legal solutions across civil, criminal, and insurance law contexts. Contact us today for accurate, defensible, and timely medico legal support
+            
+              .
+            </>
+          }
+        />
       </div>
     </section>
   );

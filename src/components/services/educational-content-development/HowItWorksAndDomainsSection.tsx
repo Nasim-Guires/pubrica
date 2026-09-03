@@ -6,6 +6,7 @@ import {
   Book,
   Edit3,
 } from "lucide-react";
+import { EditorialWorkflowSection, WorkflowStep } from "@/components/common/EditorialWorkflowSection";
 
 // ==========================================
 // DATA STRUCTURES
@@ -18,8 +19,7 @@ interface ProcessStep {
   iconSrc: string;
   position: "top" | "bottom";
 }
-
-const processSteps: ProcessStep[] = [
+const steps: WorkflowStep[] = [
   {
     stepNumber: 1,
     title: "INITIAL CONSULTATION & NEEDS ASSESSMENT",
@@ -33,7 +33,8 @@ const processSteps: ProcessStep[] = [
     title: "STRATEGIC ROADMAP DEVELOPMENT",
     description:
       "Strategize a comprehensive roadmap outlining topics, learning objectives, and engaging formats aligned with your educational goals and audience preferences.",
-    iconSrc: "/images/publication-support/video-abstract/Script-Content-Development.png",
+    iconSrc:
+      "/images/publication-support/video-abstract/Script-Content-Development.png",
     position: "bottom",
   },
   {
@@ -41,7 +42,8 @@ const processSteps: ProcessStep[] = [
     title: "EXPERT CONTENT CREATION",
     description:
       "Our expert team crafts high-quality educational content using evidence-based methodologies, ensuring accuracy, clarity, and effectiveness in conveying complex concepts.",
-    iconSrc: "/images/publication-support/video-abstract/Author-Feedback.png",
+    iconSrc:
+      "/images/publication-support/video-abstract/Author-Feedback.png",
     position: "top",
   },
   {
@@ -49,7 +51,8 @@ const processSteps: ProcessStep[] = [
     title: "REVIEW & FEEDBACK LOOP",
     description:
       "Your feedback is integrated through thorough review cycles to refine the content and ensure alignment with your expectations.",
-    iconSrc: "/images/publication-support/video-abstract/Video-Development.png",
+    iconSrc:
+      "/images/publication-support/video-abstract/Video-Development.png",
     position: "bottom",
   },
   {
@@ -57,7 +60,8 @@ const processSteps: ProcessStep[] = [
     title: "FINAL DELIVERY & IMPLEMENTATION SUPPORT",
     description:
       "We deliver polished, ready-to-use educational content and guide effective implementation and learner engagement.",
-    iconSrc: "/images/publication-support/video-abstract/Add-Captions-and-Subtitles.png",
+    iconSrc:
+      "/images/publication-support/video-abstract/Add-Captions-and-Subtitles.png",
     position: "top",
   },
 ];
@@ -100,59 +104,12 @@ export default function HowItWorksAndDomainsSection() {
         {/* ==========================================
             SECTION 1: PROCESS WORKFLOW (STEP-BY-STEP)
         ========================================== */}
-        <section className="text-center">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] mb-2">
-            How Our Educational Content Development Service Works
-          </h2>
-          <p className="text-base font-semibold text-gray-600 mb-4">
-            Our step-by-step Process
-          </p>
-          <p className="text-xs sm:text-sm text-gray-700 max-w-4xl mx-auto leading-relaxed mb-16">
-            Our Educational Content Development Service transforms complex
-            concepts into engaging, learner-friendly materials. We combine
-            strategic planning, expert content creation, and rigorous quality
-            checks to deliver impactful educational experiences.
-          </p>
-
-          {/* Alternating Step Diagram Container */}
-          <div className="relative grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4 items-stretch pt-4">
-            {/* Horizontal Connecting Line across step numbers (Desktop) */}
-            <div className="hidden md:block absolute top-[52px] left-10 right-10 h-1 bg-[#00809d] -z-0" />
-
-            {processSteps.map((step) => {
-              const isTop = step.position === "top";
-              return (
-                <div
-                  key={step.stepNumber}
-                  className={`flex flex-col items-center relative z-10 ${
-                    isTop ? "md:flex-col" : "md:flex-col-reverse"
-                  }`}
-                >
-                  {/* Step Circle Badge */}
-                  <div className="w-10 h-10 rounded-full bg-[#00809d] text-white font-bold text-base flex items-center justify-center shadow-md mb-3 md:mb-0 md:my-3">
-                    {step.stepNumber}
-                  </div>
-
-                  {/* Vertical Connector Indicator Line */}
-                  <div className="hidden md:block w-0.5 h-6 bg-red-400" />
-
-                  {/* Content Box - Now uniformly white by default, turning black on hover */}
-                  <div className="group cursor-pointer w-full p-5 rounded-sm border transition-all duration-300 ease-in-out flex flex-col items-center text-center h-full min-h-[260px] bg-white text-slate-800 border-gray-200 shadow-sm hover:bg-[#1a1a1a] hover:text-white hover:border-slate-900 hover:shadow-2xl">
-                    <div className="relative mb-3 w-8 h-8">
-                      <Image src={step.iconSrc} alt="" fill className="object-contain" sizes="32px" />
-                    </div>
-                    <h3 className="text-xs font-bold tracking-wider uppercase mb-3 text-slate-900 group-hover:text-white transition-colors duration-300">
-                      {step.title}
-                    </h3>
-                    <p className="text-[11px] leading-relaxed text-gray-600 group-hover:text-gray-300 transition-colors duration-300">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </section>
+        <EditorialWorkflowSection
+          heading="How Our Educational Content Development Service Works"
+          subheading="Our Step-by-Step Process"
+          description="Our Educational Content Development Service transforms complex concepts into engaging, learner-friendly materials. We combine strategic planning, expert content creation, and rigorous quality checks to deliver impactful educational experiences."
+          steps={steps}
+        />
 
         {/* ==========================================
             SECTION 2: E-LEARNING DOMAINS GRID

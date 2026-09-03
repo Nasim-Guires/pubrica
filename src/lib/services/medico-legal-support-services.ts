@@ -207,10 +207,10 @@ export const medicoLegalSupportPackages = {
       ],
       turnaround: "",
 
-      backgroundColor: "#d8e4e5",   // header background
-      borderColor: "#b7cfd1",       // border
-      headerTextColor: "#16353d",   // title
-      bodyTextColor: "#374151",     // body
+      backgroundColor: "#d8e4e5",
+      borderColor: "#b7cfd1",
+      headerTextColor: "#16353d",
+      bodyTextColor: "#374151",
     },
 
     {

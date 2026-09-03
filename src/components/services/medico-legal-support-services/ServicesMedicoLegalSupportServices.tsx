@@ -5,6 +5,7 @@ import Link from "next/link";
 import CommonUploadButton from "@/components/common/CommonUploadButton";
 import Image from "next/image";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function ServicesMedicoLegalSupportServices() {
   // State to handle accordion toggles (null means none are open by default)
@@ -17,8 +18,27 @@ export default function ServicesMedicoLegalSupportServices() {
   const accordionItems = [
     {
       title: "Evidence-Based Case Reviews",
-      content:
-        "All analyses are grounded in globally recognized clinical practice guidelines, including those from NICE, AHRQ, and ICMR, and supported by Level A evidence such as randomized controlled trials and systematic reviews.",
+      content: (
+        <>
+          All analyses are grounded in globally recognized clinical practice guidelines, including those from{" "}
+          <a href="https://www.nice.org.uk/process/pmg6/resources/the-guidelines-manual-pdf-2007970804933" target="_blank" rel="noopener noreferrer" className="text-blue-600">
+            NICE
+          </a>
+          ,{" "}
+          <a href="https://www.ahrq.gov/" target="_blank" rel="noopener noreferrer" className="text-blue-600">
+            AHRQ
+          </a>
+          , and{" "}
+          <a href="https://www.icmr.gov.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600">
+            ICMR
+          </a>
+          , and supported by Level A evidence such as randomized controlled trials and{" "}
+          <Link href="/services/research-services/systematic-review/" className="text-blue-600">
+            systematic reviews
+          </Link>
+          .
+        </>
+      ),
     },
     {
       title: "Compliance with Legal and Regulatory Standards",
@@ -32,24 +52,26 @@ export default function ServicesMedicoLegalSupportServices() {
     },
     {
       title: "Court-Ready Reports and Litigation Support",
-      content:
-        "Each report is structured for legal admissibility and supported by professional litigation support services, offering precise and defensible conclusions for attorneys, insurers, forensic teams, and judicial bodies.",
+      content: (
+        <>
+          Each report is structured for legal admissibility and supported by professional{" "}
+          <Link href="/" className="text-blue-600">
+            litigation support services
+          </Link>
+          , offering precise and defensible conclusions for attorneys, insurers, forensic teams, and judicial bodies.
+        </>
+      ),
     },
   ];
 
   return (
     <main className="w-full text-slate-800 bg-white font-sans leading-relaxed">
       {/* Hero Banner Section */}
-      <header className="w-full bg-[#1b2b28] text-white py-6 px-4 sm:px-8 text-center">
-        <div className="max-w-5xl mx-auto border border-gray-400/40 p-8 rounded-sm">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
-            Medico-Legal Support Services
-          </h1>
-          <p className="text-sm md:text-base max-w-3xl mx-auto text-gray-200">
-            Pubrica offers comprehensive Medico-Legal Support Services, providing expert analysis and consultation to ensure accurate and ethical resolution of medical-legal matters.
-          </p>
-        </div>
-      </header>
+      <HeroBanner
+        title="Medico-Legal Support Services"
+        description="Pubrica offers comprehensive Medico-Legal Support Services, providing expert analysis and consultation to ensure accurate and ethical resolution of medical-legal matters."
+        headingAs="h1"
+      />
 
       {/* Intro Section */}
       <section className="max-w-6xl mx-auto px-4 sm:px-8 py-6 md:py-7">
@@ -60,7 +82,7 @@ export default function ServicesMedicoLegalSupportServices() {
             </h2>
             <p className="text-sm sm:text-base text-gray-700 mb-6">
               Provide expert, evidence-based{" "}
-              <Link href="/services/medico-legal-support-services" className="text-blue-600 font-medium no-underline hover:no-underline">
+              <Link href="/academy/medico-legal/medico-legal-services-in-ensuring-justice/" className="text-blue-600">
                 medico legal support services
               </Link>{" "}
               to establish the precise, credible, and legal aspects of medical negligence cases. Our team of medical and legal experts offers reliable assistance with complex medical malpractice, personal injury claims, and insurance disputes. Through professional medico legal consulting services, we assist legal professionals, insurers, and healthcare professionals in understanding the intersection of medicine and law in a clear, professional, and precise manner.
@@ -107,7 +129,7 @@ export default function ServicesMedicoLegalSupportServices() {
           <div className="space-y-4 text-sm sm:text-base text-gray-700">
             <p>
               Pubrica provides specialised{" "}
-              <Link href="/services/medico-legal-support-services" className="text-blue-600 font-medium no-underline hover:no-underline">
+              <Link href="/services/medico-legal-support-services/medico-legal-support-services-healthcare/" className="text-blue-600">
                 medico legal support services
               </Link>{" "}
               in medical negligence, malpractice, and insurance claims disputes. Our expert medical and legal professionals offer sound assessments based on evidence to support legal proceedings and protect patient rights. Whether the situation involves a clinical negligence claim, litigation readiness, or a dispute regarding insurance coverage denial, we can help you determine if the standard of care was breached and assess the resulting harm.
@@ -115,7 +137,7 @@ export default function ServicesMedicoLegalSupportServices() {
 
             <p>
               Consult with Pubrica’s medico-legal experts for a complete, evidence-backed case review. We analyse medical records, treatment protocols, and clinical timelines through professional{" "}
-              <Link href="/services/medico-legal-support-services" className="text-blue-600 font-medium no-underline hover:no-underline">
+              <Link href="/academy/medico-legal-support-service/how-to-become-a-medical-legal-expert-witness/" className="text-blue-600 ">
                 medical record review services
               </Link>{" "}
               to assess liability, breach of duty, and causation, ensuring your medical negligence litigation is supported by clear, objective, and court-defensible findings.
@@ -123,7 +145,7 @@ export default function ServicesMedicoLegalSupportServices() {
 
             <p>
               Our team is committed to aligning every opinion with the highest standards of legal and clinical practice, providing unmatched clarity in civil, criminal, and insurance-related medico-legal cases. Organizations that{" "}
-              <Link href="/services/medico-legal-support-services" className="text-blue-600 font-medium no-underline hover:no-underline">
+              <Link href="/academy/medico-legal/medico-legal-services-in-ensuring-justice/" className="text-blue-600 ">
                 outsource medico legal services
               </Link>{" "}
               to Pubrica gain access to specialized expertise, structured case analysis, and reliable medico-legal documentation.
@@ -176,10 +198,15 @@ export default function ServicesMedicoLegalSupportServices() {
           </div>
         </div>
 
-        {/* Footer Note */}
-        <p className="mt-12 text-xs sm:text-sm text-gray-600 text-center max-w-4xl mx-auto">
-          At Pubrica, we empower legal teams, healthcare professionals, and insurers with medico legal services that are authoritative, evidence-based, and aligned with best clinical practices. Let our experts help you build a strong, defensible case with confidence and clarity.
-        </p>
+        {/* Footer Note positioned to the side/floated matching the reference layout style */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mt-12">
+          <div className="lg:col-span-5"></div>
+          <div className="lg:col-span-7">
+            <p className="text-xs sm:text-sm text-gray-600 text-left">
+              At Pubrica, we empower legal teams, healthcare professionals, and insurers with medico legal services that are authoritative, evidence-based, and aligned with best clinical practices. Let our experts help you build a strong, defensible case with confidence and clarity.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
   );

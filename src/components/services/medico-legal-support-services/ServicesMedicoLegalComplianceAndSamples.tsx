@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ServiceBanner from "@/components/common/ServiceBanner";
+import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
 
 export interface AccordionItem {
     id: string;
@@ -34,10 +36,10 @@ export default function ServicesMedicoLegalComplianceAndSamples({
                     <ul className="list-disc pl-5 space-y-1">
                         <li>
                             <span className="font-semibold">National and International Guidelines:</span>{" "}
-                            <a href="https://www.nice.org.uk/" target="_blank" rel="noopener noreferrer" className="text-sky-600 underline font-medium">NICE</a> (UK),{" "}
-                            <a href="https://www.ahrq.gov/" target="_blank" rel="noopener noreferrer" className="text-sky-600 underline font-medium">AHRQ</a> (USA),{" "}
-                            <a href="https://www.icmr.gov.in/" target="_blank" rel="noopener noreferrer" className="text-sky-600 underline font-medium">ICMR</a> (India),{" "}
-                            <a href="https://www.who.int/" target="_blank" rel="noopener noreferrer" className="text-sky-600 underline font-medium">WHO</a>
+                            <a href="https://www.nice.org.uk/process/pmg6/resources/the-guidelines-manual-pdf-2007970804933" target="_blank" rel="noopener noreferrer" className="text-blue-600">NICE</a> (UK),{" "}
+                            <a href="https://www.ahrq.gov/" target="_blank" rel="noopener noreferrer" className="text-blue-600">AHRQ</a> (USA),{" "}
+                            <a href="https://www.icmr.gov.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600">ICMR</a> (India),{" "}
+                            <a href="https://www.who.int/" target="_blank" rel="noopener noreferrer" className="text-blue-600">WHO</a>
                         </li>
                         <li>
                             <span className="font-semibold">Evidence Hierarchies:</span> Level A evidence, including RCTs and systematic reviews
@@ -98,32 +100,12 @@ export default function ServicesMedicoLegalComplianceAndSamples({
     return (
         <section className={`w-full text-slate-800 bg-white font-sans ${className}`}>
             {/* Top Guarantee Banner Section */}
-            <div className="w-full bg-[#053526] text-white py-5 px-4 sm:px-8">
-                <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-10">
-                    {/* Badge Image Section Placeholder */}
-                    <div className="flex-shrink-0">
-                        <div className="relative w-28 h-28">
-                            <Image
-                                src="/images/publication-support/peer-review-pre-submission/Satisfaction_Guarantee.webp"
-                                alt="100% Satisfaction Guarantee"
-                                fill
-                                className="object-contain"
-                                sizes="112px"
-                            />
-                        </div>
-                    </div>
-
-                    {/* Guarantee Content */}
-                    <div className="text-center md:text-left">
-                        <h2 className="text-2xl sm:text-3xl font-bold mb-2">
-                            End-to-End Medico-Legal Support with Accuracy and Integrity
-                        </h2>
-                        <p className="text-xs sm:text-sm text-gray-200 leading-relaxed max-w-4xl">
-                            Every case we handle is approached with a commitment to objectivity, thoroughness, and legal compliance. Whether you are a law firm, insurer, or patient advocate, our evidence-based medico-legal services strengthen your case with clarity and confidence.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <ServiceBanner
+                imageSrc="/images/publication-support/Satisfaction_Guarantee.webp"
+                imageAlt="100% Satisfaction Guarantee"
+                heading="End-to-End Medico-Legal Support with Accuracy and Integrity"
+                description="Every case we handle is approached with a commitment to objectivity, thoroughness, and legal compliance. Whether you are a law firm, insurer, or patient advocate, our evidence-based medico-legal services strengthen your case with clarity and confidence."
+            />
 
             {/* Compliance & Guidelines Accordion Section */}
             <div className="w-full bg-slate-100/70 py-7 px-4 sm:px-8">
@@ -180,56 +162,36 @@ export default function ServicesMedicoLegalComplianceAndSamples({
             </div>
 
             {/* Sample Work & Downloads CTA Card Section */}
-            <div className="max-w-5xl mx-auto px-4 sm:px-8 py-7">
-                <div className="bg-emerald-50/40 border border-emerald-100 rounded-xl p-6 sm:p-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                    {/* Left Image Section Div Placeholder */}
-                    <div className="md:col-span-5 flex justify-center">
-                        <div className="relative w-full max-w-xs h-64 bg-gray-100 rounded-lg overflow-hidden shadow-md flex items-center justify-center">
-                            <Image
-                                src="/images/medico-legal-support-services/Medico-legal-consulting-services-for-litigation-strategy-support.webp"
-                                alt="Medico-legal consulting services for litigation strategy support"
-                                fill
-                                className="object-contain"
-                                sizes="320px"
-                            />
-                        </div>
-                    </div>
-
-                    {/* Right Column: CTA Texts and Buttons */}
-                    <div className="md:col-span-7 space-y-8">
-                        {/* Top Sub-section */}
-                        <div>
-                            <h3 className="text-lg sm:text-xl font-bold text-[#1b2b28] mb-4">
-                                Medico-Legal Support Services Sample Work
-                            </h3>
-                            <Link
-                                href="/insights/sample-work"
-                                className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold px-8 py-2.5 rounded-full transition-colors"
-                            >
-                                Discover More
-                            </Link>
-                        </div>
-
-                        {/* Bottom Sub-section */}
-                        <div className="space-y-3">
-                            <h3 className="text-lg sm:text-xl font-bold text-[#1b2b28]">
-                                Download the full Report Now
-                            </h3>
-                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                                Explore our medico-legal service sample work, expertly crafted to meet legal requirements, align with healthcare regulations, and ensure precise, reliable medical insights for effective legal proceedings.
-                            </p>
-                            <div className="pt-2">
-                                <Link
-                                    href="/insights/sample-work"
-                                    className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-semibold px-8 py-2.5 rounded-full transition-colors"
-                                >
-                                    Discover More
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <PubricaSampleWorkCard
+                bookCoverImage={{
+                    src: "/images/medico-legal-support-services/Medico-legal-consulting-services-for-litigation-strategy-support.webp",
+                    alt: "Medico-legal consulting services for litigation strategy support",
+                    width: 600,
+                    height: 400,
+                }}
+                sections={[
+                    {
+                        heading: "Medico-Legal Support Services Sample Work",
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work",
+                        },
+                    },
+                    {
+                        heading: "Download the full Report Now",
+                        descriptionSegments: [
+                            {
+                                text: "Explore our medico-legal service sample work, expertly crafted to meet legal requirements, align with healthcare regulations, and ensure precise, reliable medical insights for effective legal proceedings.",
+                            },
+                        ],
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work",
+                        },
+                    },
+                ]}
+                footerDisclaimerSegments={[]}
+            />
         </section>
     );
 }
