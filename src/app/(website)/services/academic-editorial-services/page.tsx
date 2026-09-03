@@ -4,9 +4,9 @@ import EditorialPackagesSection from '@/components/services/academic-editorial-s
 import ServicesAndAudienceSection from '@/components/services/academic-editorial-services/ServicesAndAudienceSection'
 import { TestimonialsSection } from '@/components/services/academic-editorial-services/TestimonialsSection'
 import InsightsSection from '@/components/services/medical-data-collection/InsightsSection'
-import FaqSection from '@/components/services/medical-writing/FaqSection'
 import React from 'react'
 import { constructMetadata } from '@/lib/metadata'
+import { FAQSection } from '@/components/services/academic-editorial-services/FAQSection'
 
 export const metadata = constructMetadata({
     title: 'Expert Academic Editorial Services | Pubrica',
@@ -22,7 +22,7 @@ const page = () => {
     <AcademicProcessAndSampleWork/>
     <EditorialPackagesSection/>
     <TestimonialsSection/>
-    <FaqSection/>
+    <FAQSection/>
     <InsightsSection/>
     </>
   )

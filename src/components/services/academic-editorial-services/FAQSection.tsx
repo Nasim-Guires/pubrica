@@ -2,19 +2,15 @@
 
 import React, { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import CommonFAQ from "@/components/common/FAQ";
 
-interface FAQItem {
-  id: number;
-  question: string;
-  answerBullets?: string[];
-  answerText?: string;
-}
 
-const faqData: FAQItem[] = [
+
+const faqData = [
   {
-    id: 1,
     question: "1. Who can benefit from these services?",
-    answerBullets: [
+    answer: "These services are designed for:",
+    points: [
       "Researchers and academicians preparing journal submissions",
       "PhD candidates and graduate students working on theses/dissertations",
       "Academic publishers and institutions seeking quality control for manuscripts",
@@ -22,34 +18,36 @@ const faqData: FAQItem[] = [
     ],
   },
   {
-    id: 2,
     question: "2. What specific services are included?",
-    answerText:
-      "Our packages cover everything from basic grammar and sentence polishing to structural editing, academic formatting, citation checking, and figure/table alignment per journal guidelines.",
+    answer: "Our services include:",
+    points: [
+      "Copy Editing: Correct grammar, punctuation, and syntax",
+      "Developmental Editing: Improve structure, flow, and logical presentation",
+      "Revisioning & Localization: Tailor content for target audiences or regions",
+      "Visual & Accessibility Editing: Ensure tables, figures, and charts are clear and accessible",
+      "Forensic & Quality Audit: Check for consistency, referencing accuracy, and adherence to guidelines",
+      "Metadata & Permissions Assistance: Manage references, citations, and necessary permissions",
+    ],
   },
   {
-    id: 3,
     question: "3. Do you help with journal submission requirements?",
-    answerText:
-      "Yes, our Advanced and Premium packages include formatting according to specific target journal guidelines, title page setup, and reference cross-checking.",
+    answer:
+      "Yes, our team ensures your manuscript adheres to specific journal or publisher guidelines, including formatting, reference style, and submission-ready standards.",
   },
   {
-    id: 4,
     question: "4. Can you edit manuscripts in languages other than English?",
-    answerText:
-      "We currently specialize in English academic editing, including localization and adaptation for native and non-native international audiences.",
+    answer:
+      "Yes, we offer multilingual editing and translation services for non-English manuscripts to make them publication-ready in international journals.",
   },
   {
-    id: 5,
     question: "5. How do I submit my manuscript for editing?",
-    answerText:
-      "You can request a free quote using our submission button, upload your document securely, and select your preferred turnaround time.",
+    answer:
+      "You can submit your manuscript via our online portal or email. Once received, our team reviews it and provides a quote along with the estimated delivery time.",
   },
   {
-    id: 6,
     question: "6. What if I need revisions after editing?",
-    answerText:
-      "We offer post-editing support and re-reviews based on the tier selected to address reviewer feedback or minor additions.",
+    answer:
+      "We provide revision support to address any feedback or additional requirements post-editing, ensuring your manuscript meets your expectations and publication standards.",
   },
 ];
 
@@ -62,53 +60,9 @@ export function FAQSection() {
   };
 
   return (
-    <section className="w-full bg-white text-slate-800 font-sans py-7 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto space-y-6">
-        {/* Title */}
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44]">
-          Frequently Asked Questions
-        </h2>
-
-        {/* Accordion Container */}
-        <div className="border border-slate-200 rounded-sm divide-y divide-slate-200">
-          {faqData.map((faq) => {
-            const isOpen = openId === faq.id;
-
-            return (
-              <div key={faq.id} className="bg-white">
-                {/* Accordion Header */}
-                <button
-                  onClick={() => toggleFAQ(faq.id)}
-                  className="w-full text-left py-4 px-5 flex items-center justify-between gap-4 font-bold text-xs sm:text-sm text-slate-900 hover:bg-slate-50 transition-colors"
-                >
-                  <span>{faq.question}</span>
-                  <span className="shrink-0 text-slate-700">
-                    {isOpen ? (
-                      <Minus className="w-4 h-4 stroke-[2.5]" />
-                    ) : (
-                      <Plus className="w-4 h-4 stroke-[2.5]" />
-                    )}
-                  </span>
-                </button>
-
-                {/* Accordion Content */}
-                {isOpen && (
-                  <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-700 leading-relaxed border-t border-slate-100">
-                    {faq.answerBullets && (
-                      <ul className="list-disc pl-6 space-y-2">
-                        {faq.answerBullets.map((bullet, idx) => (
-                          <li key={idx}>{bullet}</li>
-                        ))}
-                      </ul>
-                    )}
-                    {faq.answerText && <p>{faq.answerText}</p>}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
+    <CommonFAQ
+      title="Frequently Asked Questions"
+      faqs={faqData}
+    />
   );
 }

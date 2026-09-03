@@ -1,7 +1,9 @@
 "use client";
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 export const metadata = {
@@ -11,8 +13,8 @@ export const metadata = {
 };
 
 export default function DevelopmentEditingServicePage() {
-  // State for the interactive accordion/tabs section
-  const [activeTab, setActiveTab] = useState<number>(4); // Default to Proofreading open as shown in your image
+  // State for the interactive accordion/tabs section - default to -1 so all are closed by default
+  const [activeTab, setActiveTab] = useState<number>(-1);
 
   const servicesList = [
     {
@@ -45,15 +47,11 @@ export default function DevelopmentEditingServicePage() {
   return (
     <article className="w-full bg-white text-gray-800 font-sans">
       {/* ------------------- HERO BANNER ------------------- */}
-      <header className="bg-[#0b3b2c] text-white py-6 px-4 text-center">
-        <div className="max-w-5xl mx-auto border border-gray-400/40 p-8 rounded-sm bg-[#0b3b2c]/80 backdrop-blur-sm">
-          <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide text-white">
-            Copy Editing Services
-          </h1>
-          <p className="text-xs md:text-sm max-w-3xl mx-auto text-gray-200 leading-relaxed">
-            Meticulous editing to ensure zero errors, delivering a manuscript ready for peer-reviewed international journals.            </p>
-        </div>
-      </header>
+      <HeroBanner
+        title="Copy Editing Services"
+        description="Meticulous editing to ensure zero errors, delivering a manuscript ready for peer-reviewed international journals."
+        headingAs="h1"
+      />
 
       {/* ------------------- FIRST CONTENT SECTION (Matching Reference 2) ------------------- */}
       <section className="py-6 px-4 max-w-6xl mx-auto" aria-labelledby="main-heading">
@@ -65,7 +63,11 @@ export default function DevelopmentEditingServicePage() {
           {/* Left Text Content & Bullet Points */}
           <div className="md:col-span-7 space-y-4">
             <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-              At Pubrica, our professional copy editing services are designed to elevate the quality of your academic, scientific, and educational manuscripts. Whether you are preparing a research paper, thesis, dissertation, textbook, or curriculum document, our professional copy editors refine your content for language precision, logical flow, and formatting consistency. Our goal is to make your work publication-ready, comprehensible, and impactful, while preserving your unique voice and scientific integrity.
+              At Pubrica, our{" "}
+              <Link href="/services/editing-and-translation/manuscript-editing/" className="text-blue-600">
+                professional copy editing services
+              </Link>{" "}
+              are designed to elevate the quality of your academic, scientific, and educational manuscripts. Whether you are preparing a research paper, thesis, dissertation, textbook, or curriculum document, our professional copy editors refine your content for language precision, logical flow, and formatting consistency. Our goal is to make your work publication-ready, comprehensible, and impactful, while preserving your unique voice and scientific integrity.
             </p>
 
             <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
@@ -75,32 +77,39 @@ export default function DevelopmentEditingServicePage() {
             <ul className="space-y-2 text-xs md:text-sm text-gray-700">
               <li className="flex items-start gap-2">
                 <span className="text-red-600 font-bold min-w-[6px]">•</span>
-                <span><strong className="text-gray-900">Eliminating grammatical, typographical, and consistency errors</strong></span>
+                <span className="text-gray-900 font-normal">Eliminating grammatical, typographical, and consistency errors</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-red-600 font-bold min-w-[6px]">•</span>
-                <span><strong className="text-gray-900">Improving clarity, readability, and overall language quality</strong></span>
+                <span className="text-gray-900 font-normal">Improving clarity, readability, and overall language quality</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-red-600 font-bold min-w-[6px]">•</span>
-                <span><strong className="text-gray-900">Using terminology appropriate for the document&apos;s subject matter</strong></span>
+                <span className="text-gray-900 font-normal">Using terminology appropriate for the document&apos;s subject matter</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-red-600 font-bold min-w-[6px]">•</span>
-                <span><strong className="text-gray-900">Ensuring that the tone and style used are appropriate for the document&apos;s purpose</strong></span>
+                <span className="text-gray-900 font-normal">Ensuring that the tone and style used are appropriate for the document&apos;s purpose</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-red-600 font-bold min-w-[6px]">•</span>
-                <span><strong className="text-gray-900">Using suitable writing conventions</strong></span>
+                <span className="text-gray-900 font-normal">Using suitable writing conventions</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-red-600 font-bold min-w-[6px]">•</span>
-                <span><strong className="text-gray-900">Following the formatting & stylistic requirements of the journal/publisher or the style manual commonly referred to in the field</strong></span>
+                <span className="text-gray-900 font-normal">Following the formatting & stylistic requirements of the journal/publisher or the style manual commonly referred to in the field</span>
               </li>
             </ul>
 
             <p className="text-xs md:text-sm text-gray-600 leading-relaxed pt-2">
-              With Pubrica, your work not only reads well but also meets the rigorous expectations of peer reviewers and publishers through our specialized academic copy editing services and copy editing and proofreading services.
+              With Pubrica, your work not only reads well but also meets the rigorous expectations of peer reviewers and publishers through our specialized{" "}
+              <Link href="/services/editing-and-translation/manuscript-editing/" className="text-blue-600">
+                academic copy editing services
+              </Link>{" "}
+              and{" "}
+              <Link href="/academy/editing-and-translation/importance-of-editing-proofreading-manuscript-submission/" className="text-blue-600">
+                copy editing and proofreading services
+              </Link>.
             </p>
 
             <div className="pt-4">
@@ -151,7 +160,11 @@ export default function DevelopmentEditingServicePage() {
           {/* Right Side: Accordion / List Content */}
           <div className="md:col-span-7 space-y-4">
             <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-              At Pubrica, our copy editor services are designed to elevate the clarity, coherence, and quality of your manuscript while ensuring it meets publication standards. Our expert editors provide multiple levels of copy editing tailored to the specific needs of your research, academic, or professional work. Here are the main types of professional copy editing services we provide:
+              At Pubrica, our copy editor services are designed to elevate the clarity, coherence, and quality of your manuscript while ensuring it meets publication standards. Our expert editors provide multiple levels of copy editing tailored to the specific needs of your research, academic, or professional work. Here are the main types of{" "}
+              <Link href="/services/editing-and-translation/manuscript-editing/" className="text-blue-600">
+                professional copy editing services
+              </Link>{" "}
+              we provide:
             </p>
 
             <div className="divide-y divide-gray-300 border-t border-b border-gray-300 mt-4">

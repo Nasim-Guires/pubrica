@@ -1,6 +1,7 @@
 "use client";
 
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -11,9 +12,8 @@ import React from "react";
 
 interface FeatureItem {
   title: string;
-  linkText?: string;
-  afterLinkText?: string;
   description: string;
+  linkUrl?: string;
 }
 
 const serviceTypes = [
@@ -60,6 +60,7 @@ const keyFeatures: FeatureItem[] = [
     title: "Expert Academic Editing",
     description:
       "Access editors with advanced degrees and subject expertise, ensuring precision in grammar, style, and content structure.",
+    linkUrl: "/services/academic-editorial-services/tools-standards-academic-editing/",
   },
   {
     title: "Structural & Language Enhancement",
@@ -69,14 +70,14 @@ const keyFeatures: FeatureItem[] = [
   {
     title: "Quality Assurance & Compliance",
     description:
-      ": Comprehensive proofreading to eliminate errors in grammar, spelling, and formatting, aligned with global ",
-    linkText: "academic publishing",
-    afterLinkText: " standards.",
+      "Comprehensive proofreading to eliminate errors in grammar, spelling, and formatting, aligned with global academic publishing standards.",
+    linkUrl: "/services/academic-editorial-services/implement-a-flawless-editorial-quality-assurance-checklist/",
   },
   {
     title: "Publication Readiness Support",
     description:
       "Guidance for submitting to high-impact journals, educational publishers, and academic platforms, maximizing visibility and scholarly impact.",
+    linkUrl: "/services/academic-editorial-services/ai-tools-for-academic-publishing/",
   },
 ];
 
@@ -90,19 +91,11 @@ export default function AcademicEditorialServicesSection() {
       {/* ==========================================
           FULL-WIDTH HERO BANNER (Attached to Navbar)
       ========================================== */}
-      <section className="relative w-full bg-[#0d2a2a] text-white py-6 sm:py-7 text-center border-b border-teal-800/40 shadow-xl overflow-hidden mb-12">
-        <div className="max-w-4xl mx-auto space-y-4 relative z-10 px-4">
-          <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
-            Academic Editorial Services
-          </h1>
-          <p className="text-xs sm:text-sm text-gray-200 leading-relaxed max-w-3xl mx-auto font-light">
-            Elevate the precision, coherence, and scholarly impact of your
-            research manuscripts, journal articles, dissertations, and
-            academic documents with Pubrica's expert academic editorial
-            support.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Academic Editorial Services"
+        description="Elevate the precision, coherence, and scholarly impact of your research manuscripts, journal articles, dissertations, and academic documents with Pubrica's expert academic editorial support."
+        headingAs="h1"
+      />
 
       {/* ==========================================
           MAIN CONTENT CONTAINER
@@ -127,8 +120,8 @@ export default function AcademicEditorialServicesSection() {
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                 Pubrica offers comprehensive{" "}
                 <Link
-                  href="/services/academic-editorial-services"
-                  className="text-blue-600 font-medium no-underline hover:no-underline"
+                  href="/academy/academic-editorial/academic-editing-manuscript-readiness/"
+                  className="text-blue-600"
                 >
                   academic editorial services
                 </Link>{" "}
@@ -156,23 +149,20 @@ export default function AcademicEditorialServicesSection() {
                         •
                       </span>
                       <div>
-                        {feature.linkText ? (
+                        {feature.linkUrl ? (
                           <>
-                            <span className="text-sky-600 hover:underline font-medium cursor-pointer">
-                              {feature.title}
-                            </span>
-                            {feature.description}
                             <Link
-                              href="/services/publication-support"
-                              className="text-blue-600 font-medium no-underline hover:no-underline"
+                              href={feature.linkUrl}
+                              className="text-blue-600  hover:underline"
                             >
-                              {feature.linkText}
+                              {feature.title}
                             </Link>
-                            {feature.afterLinkText}
+                            <span className="font-medium">:</span>{" "}
+                            {feature.description}
                           </>
                         ) : (
                           <>
-                            <span className="text-sky-600 hover:underline font-medium cursor-pointer">
+                            <span className="font-medium">
                               {feature.title}:
                             </span>{" "}
                             {feature.description}
@@ -191,7 +181,7 @@ export default function AcademicEditorialServicesSection() {
                   href="/uploads/academic-editorial-services/Academic-Editorial-Services.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-2.5 bg-[#b30000] hover:bg-[#8e0000] text-white font-bold text-xs sm:text-sm rounded-full transition-all duration-200 shadow-md"
+                  className="bg-red-600 text-white text-sm font-bold px-6 py-3 rounded hover:bg-white hover:text-black transition-colors"
                 >
                   View Brochure
                 </Link>
@@ -204,7 +194,7 @@ export default function AcademicEditorialServicesSection() {
               <div className="absolute inset-0 bg-[#0d2a2a] rounded-2xl -z-10 transform translate-x-2 translate-y-2 sm:translate-x-4 sm:translate-y-4" />
 
               {/* Foreground Image Container */}
-              <div className="relative rounded-2xl overflow-hidden border-2 border-white shadow-xl bg-slate-200 aspect-[4/3]">
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
                 <Image
                   src="/images/academic-editorial-services/Empowering-Your-Research-with-Expert-Academic-Editorial-Support.webp"
                   alt="Academic Editorial Team collaborating over a research manuscript"

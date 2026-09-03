@@ -9,6 +9,8 @@ import {
   ArrowLeft,
   ArrowRightCircle,
 } from "lucide-react";
+import ServiceBanner from "@/components/common/ServiceBanner";
+import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
 
 // ==========================================
 // TYPES & DATA
@@ -87,22 +89,25 @@ export default function AcademicProcessAndSampleWork() {
       {/* ==========================================
           1. TOP HIGHLIGHT BANNER
       ========================================== */}
-      <section className="bg-[#052e16] text-white py-6 px-4 text-center">
-        <div className="max-w-5xl mx-auto space-y-2">
-          <h2 className="text-lg sm:text-xl font-bold tracking-wide">
-            Academic Editorial Support for Researchers & Scholars
-          </h2>
-          <p className="text-xs sm:text-sm text-emerald-100 font-light leading-relaxed">
-            Strengthen the clarity, coherence, and scholarly impact of your
-            research with Pubrica’s professional{" "}
-            <Link href="/services/academic-editorial-services" className="text-blue-600 no-underline hover:no-underline">
+      <ServiceBanner
+        imageSrc="/images/publication-support/Satisfaction_Guarantee.webp"
+        imageAlt="100% Satisfaction Guarantee"
+        heading="Academic Editorial Support for Researchers & Scholars"
+        description={
+          <>
+            Strengthen the clarity, coherence, and scholarly impact of your research
+            with Pubrica’s professional{" "}
+            <Link
+              href="/academy/academic-editorial/academic-editing-manuscript-readiness/"
+              className="text-blue-600 no-underline hover:no-underline"
+            >
               academic editorial services
             </Link>
-            . We enhance language, structure, academic tone, and compliance to
-            help you publish with confidence.
-          </p>
-        </div>
-      </section>
+            . We enhance language, structure, academic tone, and compliance to help
+            you publish with confidence.
+          </>
+        }
+      />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 space-y-16">
         {/* ==========================================
@@ -296,61 +301,36 @@ export default function AcademicProcessAndSampleWork() {
         {/* ==========================================
             4. SAMPLE WORK & REPORT CTA CARD
         ========================================== */}
-        <section className="bg-[#f0fdf4] rounded-xl p-6 sm:p-10 border border-emerald-100 shadow-sm">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Image Column */}
-            <div className="lg:col-span-5">
-              <div className="rounded-md overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm relative flex items-center justify-center">
-                <Image
-                  src="/images/academic-editorial-services/Academic-Editorial-Services-Sample-Work.png"
-                  alt="Academic Editorial Services sample work"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                />
-              </div>
-            </div>
-
-            {/* Content Column */}
-            <div className="lg:col-span-7 space-y-6">
-              {/* Top Block */}
-              <div className="space-y-3">
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
-                  Academic Editorial Services Sample Work
-                </h3>
-                <Link
-                  href="/insights/sample-work"
-                  className="inline-block px-8 py-2.5 bg-black hover:bg-slate-800 text-white font-medium text-xs sm:text-sm rounded-full transition-colors shadow-sm text-center"
-                >
-                  Discover More
-                </Link>
-              </div>
-
-              {/* Bottom Block */}
-              <div className="space-y-3 pt-2">
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
-                  Download the full Report Now
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed max-w-2xl">
-                  Explore our academic editorial sample work, meticulously
-                  refined to meet rigorous scholarly standards,
-                  discipline-specific guidelines, and top-tier journal
-                  expectations. We deliver accurate, polished, and
-                  publication-ready academic content that strengthens clarity,
-                  credibility, and research impact.
-                </p>
-                <div className="pt-2">
-                  <Link
-                    href="/insights/sample-work"
-                    className="inline-block px-8 py-2.5 bg-black hover:bg-slate-800 text-white font-medium text-xs sm:text-sm rounded-full transition-colors shadow-sm text-center"
-                  >
-                    Discover More
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <PubricaSampleWorkCard
+          bookCoverImage={{
+            src: "/images/academic-editorial-services/Academic-Editorial-Services-Sample-Work.png",
+            alt: "Academic Editorial Services sample work",
+            width: 600,
+            height: 450,
+          }}
+          sections={[
+            {
+              heading: "Academic Editorial Services Sample Work",
+              button: {
+                label: "Discover More",
+                url: "/insights/sample-work/individual-patient-data-from-randomized-trials/",
+              },
+            },
+            {
+              heading: "Download the full Report Now",
+              descriptionSegments: [
+                {
+                  text: "Explore our academic editorial sample work, meticulously refined to meet rigorous scholarly standards, discipline-specific guidelines, and top-tier journal expectations. We deliver accurate, polished, and publication-ready academic content that strengthens clarity, credibility, and research impact.",
+                },
+              ],
+              button: {
+                label: "Discover More",
+                url: "/insights/sample-work",
+              },
+            },
+          ]}
+          footerDisclaimerSegments={[]}
+        />
       </div>
     </div>
   );

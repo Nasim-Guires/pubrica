@@ -8,6 +8,7 @@ import { developmentEditingServiceFaqData } from '@/lib/services/academic-editor
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 import { constructMetadata } from '@/lib/metadata'
+import CopyEditingSectionRecenPublication from '@/components/services/academic-editorial-services/copy-editing-services/CopyEditingSectionRecenPublication'
 
 export const metadata = constructMetadata({
     title: 'Expert Manuscript Copy Editing Services | Pubrica',
@@ -21,6 +22,7 @@ const page = () => {
             <DevelopmentEditingServicePage />
             <CommonWhoWeServe {...copyEditingServiceWhoWeServeData} />
             <DevelopmentEditingComprehensive />
+            <CopyEditingSectionRecenPublication />
             <CommonTestimonial {...copyEditingServiceTestimonialData} />
             <CommonFAQ {...developmentEditingServiceFaqData} />
             <InsightsSection />
