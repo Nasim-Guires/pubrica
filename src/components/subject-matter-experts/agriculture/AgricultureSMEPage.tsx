@@ -24,61 +24,62 @@ import {
   FileText,
   Send,
 } from "lucide-react";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function AgricultureSMEPage() {
   // --- 1. CORE DISCIPLINES DATA (9 CARDS) ---
   const coreDisciplines = [
     {
       title: "Agronomy",
-            iconSrc: "/images/subject-matter-experts/agriculture/Agronomy.png",
+      iconSrc: "/images/subject-matter-experts/agriculture/Agronomy.png",
       desc: "It focuses on the science and technology of crop production and soil management. It involves studying crop physiology, soil fertility, irrigation, and sustainable practices to optimize yield while maintaining environmental balance.",
       icon: Sprout,
     },
     {
       title: "Horticulture",
-            iconSrc: "/images/subject-matter-experts/agriculture/Horticulture.png",
+      iconSrc: "/images/subject-matter-experts/agriculture/Horticulture.png",
       desc: "Deals with the cultivation of fruits, vegetables, flowers, and ornamental plants. It encompasses plant breeding, pest management, post-harvest technology, and landscape design, emphasizing both productivity and aesthetic value.",
       icon: Apple,
     },
     {
       title: "Plant Pathology",
-            iconSrc: "/images/subject-matter-experts/agriculture/Plant-Pathology.png",
+      iconSrc: "/images/subject-matter-experts/agriculture/Plant-Pathology.png",
       desc: "This discipline studies plant diseases caused by pathogens such as fungi, bacteria, viruses, and nematodes. Understanding disease mechanisms and developing effective control strategies is critical for maintaining healthy crops and food security.",
       icon: Microscope,
     },
     {
       title: "Entomology",
-            iconSrc: "/images/subject-matter-experts/agriculture/Entomology.png",
+      iconSrc: "/images/subject-matter-experts/agriculture/Entomology.png",
       desc: "It is the study of insects that affect agriculture, both as pests and beneficial species. Integrated pest management, biological control, and ecological studies help minimize crop losses and support sustainable farming practices.",
       icon: Bug,
     },
     {
       title: "Soil Science",
-            iconSrc: "/images/subject-matter-experts/agriculture/Soil-Science.png",
+      iconSrc: "/images/subject-matter-experts/agriculture/Soil-Science.png",
       desc: "Explores soil properties, classification, fertility, and conservation. Knowledge of soil chemistry, physics, and biology is essential for sustainable crop production and environmental stewardship.",
       icon: FlaskConical,
     },
     {
       title: "Agricultural Engineering",
-            iconSrc: "/images/subject-matter-experts/agriculture/Agricultural-Engineering.png",
+      iconSrc: "/images/subject-matter-experts/agriculture/Agricultural-Engineering.png",
       desc: "This discipline focuses on mechanization, irrigation systems, post-harvest technology, and sustainable farming infrastructure. Our expertise helps optimize farm efficiency and reduce environmental impact.",
       icon: Wrench,
     },
     {
       title: "Agricultural Economics",
-            iconSrc: "/images/subject-matter-experts/agriculture/Agricultural-Economics.png",
+      iconSrc: "/images/subject-matter-experts/agriculture/Agricultural-Economics.png",
       desc: "Efficient management of agricultural resources is essential for economic sustainability. We assist in research related to farm management, market analysis, policy planning, and rural development.",
       icon: TrendingUp,
     },
     {
       title: "Agricultural Biotechnology",
-            iconSrc: "/images/subject-matter-experts/agriculture/Agricultural-Biotechnology.png",
+      iconSrc: "/images/subject-matter-experts/agriculture/Agricultural-Biotechnology.png",
       desc: "It is revolutionizing agriculture through genetic modification, tissue culture, and molecular biology techniques. Pubrica supports innovations aimed at enhancing crop resilience, productivity, and nutritional quality.",
       icon: Dna,
     },
     {
       title: "Agroforestry",
-            iconSrc: "/images/subject-matter-experts/agriculture/Agroforestry.png",
+      iconSrc: "/images/subject-matter-experts/agriculture/Agroforestry.png",
       desc: "It combines agriculture and forestry to improve biodiversity, soil health, and climate resilience. Agroforestry practices integrate trees, crops, and livestock for sustainable resource use.",
       icon: Trees,
     },
@@ -157,16 +158,11 @@ export default function AgricultureSMEPage() {
       `}</style>
 
       {/* HEADER HERO BANNER */}
-      <header className="w-full bg-[#0d3630] text-white py-6 px-4 text-center">
-        <div className="max-w-4xl mx-auto border border-gray-500/40 py-8 px-6 bg-[#0a2c27]/40 backdrop-blur-sm rounded-sm">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-wide mb-3">
-            Agriculture
-          </h1>
-          <p className="text-xs md:text-sm text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive research, publication, and editing support for agriculture scholars, researchers, and industry professionals, bridging science and sustainable agricultural practices
-          </p>
-        </div>
-      </header>
+      <HeroBanner
+        title="Agriculture"
+        description="Comprehensive research, publication, and editing support for agriculture scholars, researchers, and industry professionals, bridging science and sustainable agricultural practices"
+        headingAs="h1"
+      />
 
       {/* MAIN CONTENT AREA */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">

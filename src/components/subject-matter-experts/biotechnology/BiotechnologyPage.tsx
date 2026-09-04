@@ -19,6 +19,7 @@ import {
     ChevronDown,
     ChevronUp,
 } from "lucide-react";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function BiotechnologyPage() {
     const [activeTab, setActiveTab] = useState(0);
@@ -157,17 +158,11 @@ export default function BiotechnologyPage() {
       `}</style>
 
             {/* HEADER HERO BANNER */}
-            <header className="w-full bg-[#0d3630] text-white py-5 px-4 text-center">
-                <div className="max-w-4xl mx-auto border border-gray-500/40 py-8 px-6 bg-[#0a2c27]/40 backdrop-blur-sm rounded-sm">
-                    <h1 className="text-3xl md:text-4xl font-bold tracking-wide mb-3">
-                        Biotechnology
-                    </h1>
-                    <p className="text-xs md:text-sm text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                        Harnessing living organisms and biological systems to develop innovative solutions for various fields, from medicine and agriculture to industrial processes
-                    </p>
-                </div>
-            </header>
-
+            <HeroBanner
+                title="Biotechnology"
+                description="Harnessing living organisms and biological systems to develop innovative solutions for various fields, from medicine and agriculture to industrial processes"
+                headingAs="h1"
+            />
             {/* MAIN CONTENT CONTAINER */}
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
 
@@ -299,8 +294,8 @@ export default function BiotechnologyPage() {
                                     key={idx}
                                     onClick={() => setActiveTab(idx)}
                                     className={`py-3 px-3 text-[11px] md:text-xs font-bold transition-all border-r border-b lg:border-b-0 border-gray-300 last:border-r-0 flex items-center justify-center leading-snug ${isActive
-                                            ? "bg-[#0d3630] text-white border-b-2 border-b-[#0d3630]"
-                                            : "bg-[#f8f9fa] text-gray-700 hover:bg-gray-100"
+                                        ? "bg-[#0d3630] text-white border-b-2 border-b-[#0d3630]"
+                                        : "bg-[#f8f9fa] text-gray-700 hover:bg-gray-100"
                                         }`}
                                 >
                                     {tab.title}

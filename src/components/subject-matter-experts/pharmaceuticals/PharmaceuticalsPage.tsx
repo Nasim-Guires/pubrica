@@ -39,6 +39,7 @@ import {
     FileText,
     TrendingUp
 } from 'lucide-react';
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function PharmaceuticalsPage() {
     const disciplines = [
@@ -143,16 +144,11 @@ export default function PharmaceuticalsPage() {
         <main className="w-full bg-[#FAFAFA] font-sans antialiased text-gray-800">
 
             {/* SECTION 1: Banner */}
-            <header className="bg-[#0e2723] text-white py-6 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-5xl mx-auto border border-gray-400/30 py-5 px-6 sm:px-12 text-center">
-                    <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-                        Pharmaceuticals
-                    </h1>
-                    <p className="text-sm sm:text-base text-gray-200 max-w-3xl mx-auto leading-relaxed">
-                        Expert guidance for pharmaceutical research, writing, and journal submission, advancing drug discovery, clinical development, and therapeutic innovation for improved global health.
-                    </p>
-                </div>
-            </header>
+            <HeroBanner
+                title="Pharmaceuticals"
+                description="Expert guidance for pharmaceutical research, writing, and journal submission, advancing drug discovery, clinical development, and therapeutic innovation for improved global health."
+                headingAs="h1"
+            />
 
             {/* SECTION 2: Hero Intro Content */}
             <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">

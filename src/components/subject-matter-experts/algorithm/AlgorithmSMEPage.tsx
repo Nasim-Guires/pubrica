@@ -21,6 +21,7 @@ import {
     Layout,
     BarChart2,
 } from "lucide-react";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export const metadata: Metadata = {
     title: "Algorithm Research & Publication | Subject Matter Experts | Pubrica",
@@ -169,20 +170,11 @@ export default function AlgorithmSMEPage() {
       `}</style>
 
             {/* HERO BANNER SECTION */}
-            <header className="w-full bg-[#1e2e2b] text-white py-6 px-4 text-center">
-                <div className="max-w-4xl mx-auto border border-gray-500/50 py-8 px-6 bg-[#1a2825]/40 backdrop-blur-sm rounded-sm">
-                    <h1 className="text-3xl md:text-4xl font-bold tracking-wide mb-3">
-                        Algorithm
-                    </h1>
-                    <p className="text-xs md:text-sm text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                        The discipline of Algorithm combines certain theoretical aspects of
-                        Chemistry, Biology and Physics to allow for the ability to have
-                        greater control over how molecules behave in various types of
-                        technology.
-                    </p>
-                </div>
-            </header>
-
+            <HeroBanner
+                title="Algorithm"
+                description="The discipline of Algorithm combines certain theoretical aspects of Chemistry, Biology and Physics to allow for the ability to have greater control over how molecules behave in various types of technology."
+                headingAs="h1"
+            />
             {/* MAIN CONTAINER */}
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
                 {/* INTRO SECTION */}

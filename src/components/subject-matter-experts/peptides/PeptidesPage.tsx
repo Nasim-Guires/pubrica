@@ -31,6 +31,7 @@ import {
     ShieldCheck,
     CheckCircle
 } from 'lucide-react';
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function PeptidesPage() {
     const disciplines = [
@@ -135,16 +136,11 @@ export default function PeptidesPage() {
         <main className="w-full bg-[#FAFAFA] font-sans antialiased text-gray-800">
 
             {/* SECTION 1: Banner */}
-            <header className="bg-[#0e2723] text-white py-6 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-5xl mx-auto border border-gray-400/30 py-5 px-6 sm:px-12 text-center">
-                    <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-                        Transforming peptide research into high-impact scientific publications to drive innovation in molecular science
-                    </h1>
-                    <p className="text-sm sm:text-base text-gray-200 max-w-3xl mx-auto leading-relaxed">
-                        Peptide research holds immense potential for advancing molecular science, and transforming these findings into high-impact publications is crucial for driving innovation and fostering groundbreaking discoveries.
-                    </p>
-                </div>
-            </header>
+            <HeroBanner
+                title="Transforming peptide research into high-impact scientific publications to drive innovation in molecular science"
+                description="Peptide research holds immense potential for advancing molecular science, and transforming these findings into high-impact publications is crucial for driving innovation and fostering groundbreaking discoveries."
+                headingAs="h1"
+            />
 
             {/* SECTION 2: Hero Intro Content */}
             <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">

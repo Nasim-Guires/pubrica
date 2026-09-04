@@ -2,6 +2,7 @@ import SmeCoreAreasGrid from "@/components/subject-matter-experts/SmeCoreAreasGr
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function BioChemistryPage() {
     const disciplines = [
@@ -154,16 +155,11 @@ export default function BioChemistryPage() {
 
             {/* SECTION 1: Banner */}
             {/* SECTION 1: Banner */}
-            <header className="bg-[#1C2C2E] text-white py-6 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-5xl mx-auto border border-gray-500/50 py-5 px-6 sm:px-12 text-center">
-                    <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-                        Biochemistry
-                    </h1>
-                    <p className="text-sm sm:text-base text-gray-200 max-w-3xl mx-auto leading-relaxed">
-                        Advance your research with precision editing, manuscript preparation, and publication guidance from our team of seasoned biochemistry experts.
-                    </p>
-                </div>
-            </header>
+            <HeroBanner
+                title="Biochemistry"
+                description="Advance your research with precision editing, manuscript preparation, and publication guidance from our team of seasoned biochemistry experts."
+                headingAs="h1"
+            />
 
             {/* SECTION 2: Hero Intro Content */}
             <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">

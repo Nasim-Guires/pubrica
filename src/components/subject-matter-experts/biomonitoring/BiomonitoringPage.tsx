@@ -19,6 +19,7 @@ import {
     ChevronDown,
     ChevronUp,
 } from "lucide-react";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function BiomonitoringPage() {
     const coreDisciplines = [
@@ -115,16 +116,11 @@ export default function BiomonitoringPage() {
       `}</style>
 
             {/* HEADER HERO BANNER */}
-            <header className="w-full bg-[#0d3630] text-white py-5 px-4 text-center">
-                <div className="max-w-4xl mx-auto border border-gray-500/40 py-8 px-6 bg-[#0a2c27]/40 backdrop-blur-sm rounded-sm">
-                    <h1 className="text-3xl md:text-4xl font-bold tracking-wide mb-3">
-                        Biomonitoring
-                    </h1>
-                    <p className="text-xs md:text-sm text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                        Comprehensive research, publication, and editing support for biomonitoring professionals, researchers, and environmental scientists, advancing the assessment of human and ecological exposure for a healthier and sustainable future.
-                    </p>
-                </div>
-            </header>
+            <HeroBanner
+                title="Biomonitoring"
+                description="Comprehensive research, publication, and editing support for biomonitoring professionals, researchers, and environmental scientists, advancing the assessment of human and ecological exposure for a healthier and sustainable future."
+                headingAs="h1"
+            />
 
             {/* MAIN CONTENT CONTAINER */}
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">

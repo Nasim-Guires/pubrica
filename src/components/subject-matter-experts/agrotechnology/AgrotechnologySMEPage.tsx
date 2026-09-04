@@ -21,43 +21,44 @@ import {
   MessageSquare,
   BookOpen,
 } from "lucide-react";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function AgrotechnologySMEPage() {
   // --- CORE DISCIPLINES IN AGROTECHNOLOGY ---
   const coreDisciplines = [
     {
       title: "Crop Science & Management",
-            iconSrc: "/images/subject-matter-experts/agrotechnology/Crop-Science-Management.png",
+      iconSrc: "/images/subject-matter-experts/agrotechnology/Crop-Science-Management.png",
       desc: "We focus on improving crop yield, quality, and resilience through modern cultivation practices, hybrid varieties, and integrated pest and disease management strategies.",
       icon: Sprout,
     },
     {
       title: "Soil Science & Fertility",
-            iconSrc: "/images/subject-matter-experts/agrotechnology/Soil-Science-Fertility.png",
+      iconSrc: "/images/subject-matter-experts/agrotechnology/Soil-Science-Fertility.png",
       desc: "Our work emphasizes understanding soil properties and nutrient dynamics to enhance soil health, optimize fertilizer use, and ensure long-term land productivity.",
       icon: Layers,
     },
     {
       title: "Water & Irrigation Technology",
-            iconSrc: "/images/subject-matter-experts/agrotechnology/Water-Irrigation-Technology.png",
+      iconSrc: "/images/subject-matter-experts/agrotechnology/Water-Irrigation-Technology.png",
       desc: "We implement efficient water management solutions, including drip and sprinkler irrigation systems, to conserve water resources and enhance crop performance.",
       icon: Droplet,
     },
     {
       title: "Farm Mechanization",
-            iconSrc: "/images/subject-matter-experts/agrotechnology/Farm-Mechanization.png",
+      iconSrc: "/images/subject-matter-experts/agrotechnology/Farm-Mechanization.png",
       desc: "Pubrica promotes the adoption of modern agricultural machinery for planting, harvesting, and post-harvest operations, reducing labour requirements and improving efficiency.",
       icon: Cog,
     },
     {
       title: "Plant Biotechnology",
-            iconSrc: "/images/subject-matter-experts/agrotechnology/Plant-Biotechnology.png",
+      iconSrc: "/images/subject-matter-experts/agrotechnology/Plant-Biotechnology.png",
       desc: "Through genetic improvement and biotechnological interventions, we develop crops with enhanced resistance, productivity, and nutritional value.",
       icon: Dna,
     },
     {
       title: "Agro-Ecology & Sustainable Farming",
-            iconSrc: "/images/subject-matter-experts/agrotechnology/Agro-Ecology-Sustainable-Farming.png",
+      iconSrc: "/images/subject-matter-experts/agrotechnology/Agro-Ecology-Sustainable-Farming.png",
       desc: "We advocate for environmentally responsible practices such as organic farming, crop rotation, and integrated farming systems to ensure sustainability and ecological balance.",
       icon: Leaf,
     },
@@ -139,20 +140,15 @@ export default function AgrotechnologySMEPage() {
       `}</style>
 
       {/* HEADER HERO BANNER */}
-      <header className="w-full bg-[#0d3630] text-white py-5 px-4 text-center">
-        <div className="max-w-4xl mx-auto border border-gray-500/40 py-8 px-6 bg-[#0a2c27]/40 backdrop-blur-sm rounded-sm">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-wide mb-3">
-            Agrotechnology
-          </h1>
-          <p className="text-xs md:text-sm text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Agrotechnology focuses on leveraging advanced methods and technologies to optimize agricultural processes, increase crop yields, and promote sustainable farming practices.
-          </p>
-        </div>
-      </header>
+      <HeroBanner
+        title="Agrotechnology"
+        description="Agrotechnology focuses on leveraging advanced methods and technologies to optimize agricultural processes, increase crop yields, and promote sustainable farming practices."
+        headingAs="h1"
+      />
 
       {/* MAIN CONTENT CONTAINER */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
-        
+
         {/* INTRO SECTION */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 space-y-4">
@@ -261,7 +257,7 @@ export default function AgrotechnologySMEPage() {
 
                   {/* Static White Bottom Banner / Floating Card Portion */}
                   <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 transition-all duration-300 ease-in-out transform translate-y-[calc(100%-72px)] group-hover:translate-y-0 flex flex-col h-44 z-10 shadow-lg">
-                    
+
                     {/* Centered Circular Icon overlapping top border of the banner */}
                     <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-white p-2.5 rounded-full border border-gray-200 shadow-md group-hover:bg-[#0d3630] group-hover:text-white transition-colors duration-300">
                       <ServiceIcon className="w-4 h-4 text-[#0d3630] group-hover:text-white" />

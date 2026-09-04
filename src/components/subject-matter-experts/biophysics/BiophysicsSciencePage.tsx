@@ -2,6 +2,7 @@ import SmeCoreAreasGrid from "@/components/subject-matter-experts/SmeCoreAreasGr
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function BiophysicsSciencePage() {
     const disciplines = [
@@ -78,7 +79,7 @@ export default function BiophysicsSciencePage() {
                 </svg>
             )
         },
-         {
+        {
             title: "Journal Submission",
             description: "Helping select the right journals and manage the submission process seamlessly.",
             image: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
@@ -88,7 +89,7 @@ export default function BiophysicsSciencePage() {
                 </svg>
             )
         },
-         {
+        {
             title: "Systematic Reviews",
             description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
             image: "/images/subject-matter-experts/material-science/Systematic-Reviews.webp",
@@ -108,8 +109,8 @@ export default function BiophysicsSciencePage() {
                 </svg>
             )
         },
-       
-        
+
+
         {
             title: "Original Research Article",
             description: "End-to-end writing, statistical analysis, and formatting tailored to journal-specific guidelines.",
@@ -146,16 +147,11 @@ export default function BiophysicsSciencePage() {
         <main className="w-full bg-[#FAFAFA] font-sans antialiased text-gray-800">
 
             {/* SECTION 1: Banner */}
-            <header className="bg-[#1C2C2E] text-white py-6 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-5xl mx-auto border border-gray-500/50 py-5 px-6 sm:px-12 text-center">
-                    <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-                        Biophysics
-                    </h1>
-                    <p className="text-sm sm:text-base text-gray-200 max-w-3xl mx-auto leading-relaxed">
-                        Pubrica provides expert support for biophysics research and publication, helping scientists transform complex discoveries into high-impact publications.
-                    </p>
-                </div>
-            </header>
+            <HeroBanner
+                title="Biophysics"
+                description="Pubrica provides expert support for biophysics research and publication, helping scientists transform complex discoveries into high-impact publications."
+                headingAs="h1"
+            />
 
             {/* SECTION 2: Hero Intro Content */}
             <section className="max-w-6xl mx-auto py-7 px-4 sm:px-6 lg:px-8">

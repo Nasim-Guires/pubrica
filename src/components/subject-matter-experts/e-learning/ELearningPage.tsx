@@ -16,6 +16,7 @@ import {
     Layers,
     Cpu
 } from 'lucide-react';
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function ELearningPage() {
     const disciplines = [
@@ -132,16 +133,11 @@ export default function ELearningPage() {
         <main className="w-full bg-[#FAFAFA] font-sans antialiased text-gray-800">
 
             {/* SECTION 1: Banner */}
-            <header className="bg-[#0e2723] text-white py-6 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-5xl mx-auto border border-gray-400/30 py-5 px-6 sm:px-12 text-center">
-                    <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-                        E Learning
-                    </h1>
-                    <p className="text-sm sm:text-base text-gray-200 max-w-3xl mx-auto leading-relaxed">
-                        The term e-learning denotes the modern use of electronic technology to provide students with learning opportunities at any time and place in a flexible and accessible manner. Students can access information through additional resources via the Internet or other electronic technologies, including multimedia tools.
-                    </p>
-                </div>
-            </header>
+            <HeroBanner
+                title="E Learning"
+                description="The term e-learning denotes the modern use of electronic technology to provide students with learning opportunities at any time and place in a flexible and accessible manner. Students can access information through additional resources via the Internet or other electronic technologies, including multimedia tools."
+                headingAs="h1"
+            />
 
             {/* SECTION 2: Hero Intro Content */}
             <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">

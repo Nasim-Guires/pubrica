@@ -2,6 +2,7 @@ import SmeCoreAreasGrid from "@/components/subject-matter-experts/SmeCoreAreasGr
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function BioMedicalImaginePage() {
     const disciplines = [
@@ -134,16 +135,11 @@ export default function BioMedicalImaginePage() {
         <main className="w-full bg-[#FAFAFA] font-sans antialiased text-gray-800">
 
             {/* SECTION 1: Banner */}
-            <header className="bg-[#1C2C2E] text-white py-6 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-5xl mx-auto border border-gray-500/50 py-5 px-6 sm:px-12 text-center">
-                    <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-                        Biomedical Imaging
-                    </h1>
-                    <p className="text-sm sm:text-base text-gray-200 max-w-3xl mx-auto leading-relaxed">
-                        Biomedical Imaging utilizes advanced technologies to visualize and analyze the internal structures and functions of the human body, aiding in medical diagnosis and treatment.
-                    </p>
-                </div>
-            </header>
+            <HeroBanner
+                title="Biomedical Imaging"
+                description="Biomedical Imaging utilizes advanced technologies to visualize and analyze the internal structures and functions of the human body, aiding in medical diagnosis and treatment."
+                headingAs="h1"
+            />
 
             {/* SECTION 2: Hero Intro Content */}
             <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -226,7 +222,7 @@ export default function BioMedicalImaginePage() {
 
                     <div className="text-center max-w-3xl mx-auto mb-12">
                         <h2 className="text-2xl sm:text-3xl font-bold text-[#0F393B] mb-4">
-                           Our Core Modalities in Biomedical Imaging
+                            Our Core Modalities in Biomedical Imaging
                         </h2>
                         <p className="text-gray-600 text-sm leading-relaxed">
                             Biomedical imaging has revolutionized modern medicine by providing clinicians and researchers with non-invasive techniques to visualize the structure and function of the human body. These imaging modalities are fundamental in diagnostics, treatment planning, monitoring, and clinical imaging support, making them central to diagnostic imaging research.
@@ -244,7 +240,7 @@ export default function BioMedicalImaginePage() {
                 <div className="text-center max-w-4xl mx-auto mb-12">
                     <div className="flex items-center justify-center gap-4 mb-3">
                         <h2 className="text-2xl sm:text-3xl font-bold text-[#0F393B]">
-                           Our Expertise in Biomedical Imaging Research and Publication
+                            Our Expertise in Biomedical Imaging Research and Publication
                         </h2>
                         <div className="hidden sm:block h-[2px] w-24 bg-[#0F393B] mt-1" />
                     </div>

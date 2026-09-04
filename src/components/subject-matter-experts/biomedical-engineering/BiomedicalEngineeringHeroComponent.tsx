@@ -2,25 +2,20 @@
 
 import React from "react";
 import Image from "next/image";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function BiomedicalEngineeringHeroComponent() {
   return (
-    <div className="font-sans text-gray-800 bg-white py-6 px-4 space-y-12">
+    <div className="">
+        <HeroBanner
+          title="Biomedical Engineering"
+          description="Comprehensive research, publication, and editing support for biomedical engineers, clinicians, and researchers, advancing innovations that integrate engineering precision with healthcare solutions."
+          headingAs="h1"
+        />
       <div className="max-w-5xl mx-auto space-y-12">
 
         {/* Top Dark Banner */}
-        <div className="w-full bg-[#0d3630] rounded-lg px-8 py-5 text-center text-white shadow-md">
-          <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight">
-            Biomedical Engineering
-          </h1>
-
-          <p className="mt-3 text-sm text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive research, publication, and editing support for biomedical engineers,
-            clinicians, and researchers, advancing innovations that integrate engineering
-            precision with healthcare solutions.
-          </p>
-        </div>
-
+      
         {/* Main Content Section */}
         <div className="space-y-8">
           <div className="space-y-3 max-w-3xl">

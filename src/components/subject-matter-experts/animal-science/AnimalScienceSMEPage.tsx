@@ -21,48 +21,49 @@ import {
   BarChart2,
   BookCheck,
 } from "lucide-react";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function AnimalScienceSMEPage() {
   // --- 1. CORE DISCIPLINES DATA ---
   const coreDisciplines = [
     {
       title: "Genetics and Breeding",
-            iconSrc: "/images/subject-matter-experts/animal-science/Genetics-and-Breeding.png",
+      iconSrc: "/images/subject-matter-experts/animal-science/Genetics-and-Breeding.png",
       highlight: "Genetics and",
       desc: "Understanding heredity and genetic traits allows scientists and farmers to select animals with desirable characteristics. Techniques such as selective breeding, crossbreeding, and genomic selection optimize performance and health, creating resilient herds.",
       icon: Dna,
     },
     {
       title: "Nutrition and Feed Technology",
-            iconSrc: "/images/subject-matter-experts/animal-science/Nutrition-and-Feed-Technology.png",
+      iconSrc: "/images/subject-matter-experts/animal-science/Nutrition-and-Feed-Technology.png",
       highlight: "Nutrition and",
       desc: "Animals require a balanced diet to grow, reproduce, and stay healthy. Animal nutritionists study feed composition, digestion, and metabolism to develop optimal diets. Specialized feed formulations support growth, lactation, immunity, and reproduction.",
       icon: Wheat,
     },
     {
       title: "Physiology and Health Management",
-            iconSrc: "/images/subject-matter-experts/animal-science/Physiology-and-Health-Management.png",
+      iconSrc: "/images/subject-matter-experts/animal-science/Physiology-and-Health-Management.png",
       highlight: "Physiology and",
       desc: "Physiology explores how animals’ organs and systems function, influencing growth, reproduction, and productivity. Coupled with veterinary science, it ensures disease prevention, early diagnosis, and effective treatment, maintaining herd health.",
       icon: HeartPulse,
     },
     {
       title: "Reproductive Biology",
-            iconSrc: "/images/subject-matter-experts/animal-science/Reproductive-Biology.png",
+      iconSrc: "/images/subject-matter-experts/animal-science/Reproductive-Biology.png",
       highlight: "Reproductive",
       desc: "Reproductive science addresses fertility, artificial insemination, embryo transfer, and assisted reproductive technologies. Optimizing reproduction increases productivity, genetic diversity, and herd sustainability.",
       icon: Baby,
     },
     {
       title: "Animal Behavior and Welfare",
-            iconSrc: "/images/subject-matter-experts/animal-science/Animal-Behavior-and-Welfare.png",
+      iconSrc: "/images/subject-matter-experts/animal-science/Animal-Behavior-and-Welfare.png",
       highlight: "Animal Behavior",
       desc: "Behavioural studies reveal how animals interact with each other and their environment. Proper understanding of behavior enhances welfare, reduces stress, and improves productivity. Ethical treatment and humane practices are central to this discipline.",
       icon: ShieldAlert,
     },
     {
       title: "Biotechnology and Emerging Technologies",
-            iconSrc: "/images/subject-matter-experts/animal-science/Biotechnology-and-Emerging-Technologies.png",
+      iconSrc: "/images/subject-matter-experts/animal-science/Biotechnology-and-Emerging-Technologies.png",
       highlight: "Biotechnology and",
       desc: "Modern animal science integrates biotechnology for genetic improvement, cloning, transgenic animals, and disease-resistant breeds. Advanced diagnostic tools, bioreactors, and molecular biology techniques are transforming livestock production and healthcare.",
       icon: Microscope,
@@ -142,16 +143,11 @@ export default function AnimalScienceSMEPage() {
       `}</style>
 
       {/* HEADER HERO BANNER */}
-      <header className="w-full bg-[#1e2e2b] text-white py-6 px-4 text-center">
-        <div className="max-w-4xl mx-auto border border-gray-500/50 py-8 px-6 bg-[#1a2825]/40 backdrop-blur-sm rounded-sm">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-wide mb-3">
-            Animal Science
-          </h1>
-          <p className="text-xs md:text-sm text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive research, publication, and editing support for animal science scholars, researchers, and industry professionals, bridging science and sustainable animal production.
-          </p>
-        </div>
-      </header>
+      <HeroBanner
+        title="Animal Science"
+        description="Comprehensive research, publication, and editing support for animal science scholars, researchers, and industry professionals, bridging science and sustainable animal production."
+        headingAs="h1"
+      />
 
       {/* MAIN CONTENT AREA */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">

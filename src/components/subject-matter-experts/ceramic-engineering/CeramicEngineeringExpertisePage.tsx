@@ -20,6 +20,7 @@ import {
     Send,
     ChevronDown
 } from 'lucide-react';
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function CeramicEngineeringExpertisePage() {
     const disciplines = [
@@ -116,17 +117,11 @@ export default function CeramicEngineeringExpertisePage() {
         <main className="w-full bg-[#FAFAFA] font-sans antialiased text-gray-800">
 
             {/* SECTION 1: Banner */}
-            <header className="bg-[#0e2723] text-white py-6 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-5xl mx-auto border border-gray-400/30 py-5 px-6 sm:px-12 text-center">
-                    <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-                        Ceramic Engineering
-                    </h1>
-                    <p className="text-sm sm:text-base text-gray-200 max-w-3xl mx-auto leading-relaxed">
-                        Ceramic Engineering delivers innovative engineering solutions with a focus on quality, precision, and reliability. We turn complex challenges into efficient, real-world results.
-                    </p>
-                </div>
-            </header>
-
+            <HeroBanner
+                title="Ceramic Engineering"
+                description="Ceramic Engineering delivers innovative engineering solutions with a focus on quality, precision, and reliability. We turn complex challenges into efficient, real-world results."
+                headingAs="h1"
+            />
             {/* SECTION 2: Hero Intro Content */}
             <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">

@@ -1,3 +1,4 @@
+import HeroBanner from "@/components/common/HeroBanner";
 import Image from "next/image";
 
 export default function BiomolecularEngineeringPage() {
@@ -5,21 +6,11 @@ export default function BiomolecularEngineeringPage() {
         <section>
 
             {/* Hero Banner */}
-            <div className="bg-[#062526] py-5">
-                <div className="max-w-5xl mx-auto border border-white/40 px-6 py-8 text-center">
-
-                    <h1 className="text-white text-4xl font-bold mb-4">
-                        Biomolecular Engineering
-                    </h1>
-
-                    <p className="text-white text-lg leading-relaxed">
-                        Comprehensive research, publication, and editing support for biomolecular engineering scholars,
-                        researchers, and industry experts, advancing innovation in molecular design, biotechnology,
-                        and engineered biological systems.
-                    </p>
-
-                </div>
-            </div>
+            <HeroBanner
+                title="Biomolecular Engineering"
+                description="Comprehensive research, publication, and editing support for biomolecular engineering scholars, researchers, and industry experts, advancing innovation in molecular design, biotechnology, and engineered biological systems."
+                headingAs="h1"
+            />
 
 
 

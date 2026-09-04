@@ -16,6 +16,7 @@ import {
     Layers,
     Cpu
 } from 'lucide-react';
+import HeroBanner from "@/components/common/HeroBanner";
 
 export default function GlycobiologyPage() {
     const disciplines = [
@@ -120,17 +121,11 @@ export default function GlycobiologyPage() {
         <main className="w-full bg-[#FAFAFA] font-sans antialiased text-gray-800">
 
             {/* SECTION 1: Banner */}
-            <header className="bg-[#0e2723] text-white py-6 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-5xl mx-auto border border-gray-400/30 py-5 px-6 sm:px-12 text-center">
-                    <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-                        Glycobiology
-                    </h1>
-                    <p className="text-sm sm:text-base text-gray-200 max-w-3xl mx-auto leading-relaxed">
-                        Advancing the Science of Glycans, Glycoproteins, and Glycolipids through Expert Guidance, Data-Driven Insights, and Global Publication Expertise
-                    </p>
-                </div>
-            </header>
-
+            <HeroBanner
+                title="Glycobiology"
+                description="Advancing the Science of Glycans, Glycoproteins, and Glycolipids through Expert Guidance, Data-Driven Insights, and Global Publication Expertise"
+                headingAs="h1"
+            />
             {/* SECTION 2: Hero Intro Content */}
             <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -138,11 +133,11 @@ export default function GlycobiologyPage() {
                     {/* Left Text Content */}
                     <div className="lg:col-span-7 space-y-4">
                         <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] leading-snug">
-                           Comprehensive Research, Writing, and Publication Support in Glycobiology
+                            Comprehensive Research, Writing, and Publication Support in Glycobiology
                         </h2>
 
                         <p className="text-gray-600 text-sm leading-relaxed">
-                          Glycobiology is a rapidly evolving interdisciplinary field that explores the structure, biosynthesis, and biological functions of carbohydrates (glycans) and glycoconjugates in living organisms. It lies at the intersection of biochemistry, molecular biology, immunology, and biotechnology, offering vital insights into cellular communication, disease mechanisms, and therapeutic development. As research in glycobiology continues to uncover the complex roles of glycans in health and disease, scientists face the dual challenge of advanced experimentation and effective scientific communication for global publication.
+                            Glycobiology is a rapidly evolving interdisciplinary field that explores the structure, biosynthesis, and biological functions of carbohydrates (glycans) and glycoconjugates in living organisms. It lies at the intersection of biochemistry, molecular biology, immunology, and biotechnology, offering vital insights into cellular communication, disease mechanisms, and therapeutic development. As research in glycobiology continues to uncover the complex roles of glycans in health and disease, scientists face the dual challenge of advanced experimentation and effective scientific communication for global publication.
 
 
                         </p>
@@ -150,7 +145,7 @@ export default function GlycobiologyPage() {
                             As a rapidly advancing area, glycobiology research is uncovering novel roles of glycosylation in disease mechanisms such as cancer, diabetes, neurodegenerative disorders, and infectious diseases. Understanding glycan structures and their biosynthetic pathways offers researchers the potential to develop new diagnostics, biomarkers, and glycan-based therapeutics.
                         </p>
                         <p className="text-gray-600 text-sm leading-relaxed">
-                          At Pubrica, we understand the intricacies of glycobiology research, from glycan structure elucidation to functional genomics and glycoengineering. Our comprehensive support services empower researchers, clinicians, and academicians to conduct high-quality studies and publish in top-tier journals with clarity, precision, and impact.
+                            At Pubrica, we understand the intricacies of glycobiology research, from glycan structure elucidation to functional genomics and glycoengineering. Our comprehensive support services empower researchers, clinicians, and academicians to conduct high-quality studies and publish in top-tier journals with clarity, precision, and impact.
                         </p>
 
                         {/* CTA Button */}
@@ -210,7 +205,7 @@ export default function GlycobiologyPage() {
                         <div className="hidden sm:block h-[2px] w-24 bg-[#0e3b32] mt-1" />
                     </div>
                     <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                       Pubrica provides end-to-end research, writing, and publication support for glycobiology scholars and industry professionals. Our team comprises domain experts with advanced degrees in molecular biology, biochemistry, and biotechnology, possessing in-depth knowledge of glycosylation pathways and analytical methods. Our services include:
+                        Pubrica provides end-to-end research, writing, and publication support for glycobiology scholars and industry professionals. Our team comprises domain experts with advanced degrees in molecular biology, biochemistry, and biotechnology, possessing in-depth knowledge of glycosylation pathways and analytical methods. Our services include:
                     </p>
                 </div>
 
@@ -259,8 +254,8 @@ export default function GlycobiologyPage() {
                     })}
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed mt-2">
-                            Pubrica’s reproductive medicine editing and obstetrics and gynaecology writing services ensure precision, clarity, and compliance with top-tier journal requirements.
-                        </p>
+                    Pubrica’s reproductive medicine editing and obstetrics and gynaecology writing services ensure precision, clarity, and compliance with top-tier journal requirements.
+                </p>
 
             </section>
 
