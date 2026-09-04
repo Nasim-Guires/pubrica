@@ -77,9 +77,8 @@ export default function HomeHeroWithAbout() {
                 className="group h-[250px] [perspective:1000px] cursor-pointer"
               >
                 <div
-                  className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${
-                    flippedCard === 1 ? "[transform:rotateY(180deg)]" : ""
-                  }`}
+                  className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${flippedCard === 1 ? "[transform:rotateY(180deg)]" : ""
+                    }`}
                 >
                   {/* Front Side */}
                   <div className="absolute inset-0 bg-[#fcfbf9] rounded-xl p-8 shadow-xl border border-gray-100 flex flex-col items-center justify-center text-center text-gray-800 [backface-visibility:hidden]">
@@ -110,9 +109,8 @@ export default function HomeHeroWithAbout() {
                 className="group h-[250px] [perspective:1000px] cursor-pointer"
               >
                 <div
-                  className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${
-                    flippedCard === 2 ? "[transform:rotateY(180deg)]" : ""
-                  }`}
+                  className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${flippedCard === 2 ? "[transform:rotateY(180deg)]" : ""
+                    }`}
                 >
                   {/* Front Side */}
                   <div className="absolute inset-0 bg-[#fcfbf9] rounded-xl p-8 shadow-xl border border-gray-100 flex flex-col items-center justify-center text-center text-gray-800 [backface-visibility:hidden]">
@@ -143,9 +141,8 @@ export default function HomeHeroWithAbout() {
                 className="group h-[250px] [perspective:1000px] cursor-pointer"
               >
                 <div
-                  className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${
-                    flippedCard === 3 ? "[transform:rotateY(180deg)]" : ""
-                  }`}
+                  className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${flippedCard === 3 ? "[transform:rotateY(180deg)]" : ""
+                    }`}
                 >
                   {/* Front Side */}
                   <div className="absolute inset-0 bg-[#fcfbf9] rounded-xl p-8 shadow-xl border border-gray-100 flex flex-col items-center justify-center text-center text-gray-800 [backface-visibility:hidden]">
@@ -175,7 +172,8 @@ export default function HomeHeroWithAbout() {
       </section>
 
       {/* --- ABOUT US SECTION --- */}
-      <section className="bg-white pt-10 pb-8 lg:pt-32 lg:pb-8">
+      {/* --- ABOUT US SECTION --- */}
+      <section className="bg-white pt-20 sm:pt-16 pb-8 lg:pt-32 lg:pb-8">
         <Container className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Column: Image */}
