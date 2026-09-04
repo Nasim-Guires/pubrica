@@ -1,6 +1,11 @@
 'use client';
 
+import CommonPackages, { PackageItem } from '@/components/common/CommonPackages';
+import { EditorialWorkflowSection, WorkflowStep } from '@/components/common/EditorialWorkflowSection';
+import ExpertsSection, { Expert } from '@/components/common/ExpertsSection';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import { PubricaSampleWorkCard } from '@/components/common/PubricaSampleWorkCardProps';
+import ServiceBanner from '@/components/common/ServiceBanner';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -58,42 +63,71 @@ export default function RevisioningAndLocalisationComplete() {
         },
     ];
 
-    const processSteps = [
+    const steps: WorkflowStep[] = [
         {
-            num: 1,
-            title: 'UNDERSTANDING YOUR TARGET AUDIENCE',
-            desc: 'We begin by analysing your manuscript’s target region, intended journal, readership level, and field-specific requirements. This allows us to pinpoint the exact revisioning and localisation needs, ensuring your work resonates with the intended readers.',
-            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Understanding-Your-Target-Audience.png',
+            stepNumber: 1,
+            title: "UNDERSTANDING YOUR TARGET AUDIENCE",
+            description:
+                "We begin by analysing your manuscript’s target region, intended journal, readership level, and field-specific requirements. This allows us to pinpoint the exact revisioning and localisation needs, ensuring your work resonates with the intended readers.",
+            iconSrc:
+                "/images/academic-editorial-services/revisioning-and-localisation-service/Understanding-Your-Target-Audience.png",
+            position: "top",
         },
         {
-            num: 2,
-            title: 'ASSIGNMENT TO A SUBJECT-MATTER EXPERT',
-            desc: 'Your manuscript is assigned to an editor with relevant academic expertise and regional linguistic proficiency. This ensures that both the scientific content and regional nuances are accurately addressed.',
-            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Assignment-to-a-Subject-Matter-Expert.png',
+            stepNumber: 2,
+            title: "ASSIGNMENT TO A SUBJECT-MATTER EXPERT",
+            description:
+                "Your manuscript is assigned to an editor with relevant academic expertise and regional linguistic proficiency. This ensures that both the scientific content and regional nuances are accurately addressed.",
+            iconSrc:
+                "/images/academic-editorial-services/revisioning-and-localisation-service/Assignment-to-a-Subject-Matter-Expert.png",
+            position: "bottom",
         },
         {
-            num: 3,
-            title: 'DEEP STRUCTURAL REVISIONING',
-            desc: 'Our experts refine your manuscript at a conceptual and structural level. We enhance clarity, strengthen arguments, improve logical flow, and optimize scientific communication to meet the highest standards.',
-            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Deep-Structural-Revisioning.png',
+            stepNumber: 3,
+            title: "DEEP STRUCTURAL REVISIONING",
+            description:
+                "Our experts refine your manuscript at a conceptual and structural level. We enhance clarity, strengthen arguments, improve logical flow, and optimize scientific communication to meet the highest standards.",
+            iconSrc:
+                "/images/academic-editorial-services/revisioning-and-localisation-service/Deep-Structural-Revisioning.png",
+            position: "top",
         },
         {
-            num: 4,
-            title: 'LINGUISTIC & CULTURAL LOCALISATION',
-            desc: 'We adapt your manuscript for the target region, tailoring language style, terminology, formatting norms, local regulations, and contextual sensitivities. This ensures your research communicates effectively and appropriately to the intended audience.',
-            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Linguistic-Cultural-Localisation.png',
+            stepNumber: 4,
+            title: "LINGUISTIC & CULTURAL LOCALISATION",
+            description:
+                "We adapt your manuscript for the target region, tailoring language style, terminology, formatting norms, local regulations, and contextual sensitivities. This ensures your research communicates effectively and appropriately to the intended audience.",
+            iconSrc:
+                "/images/academic-editorial-services/revisioning-and-localisation-service/Linguistic-Cultural-Localisation.png",
+            position: "bottom",
         },
         {
-            num: 5,
-            title: 'QUALITY CHECK BY SENIOR EDITOR',
-            desc: 'A senior editor conducts a rigorous second-level review to verify scientific accuracy, coherence, and compliance with journal and regional guidelines.',
-            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Quality-Check-by-Senior-Editor.png',
+            stepNumber: 5,
+            title: "QUALITY CHECK BY SENIOR EDITOR",
+            description:
+                "A senior editor conducts a rigorous second-level review to verify scientific accuracy, coherence, and compliance with journal and regional guidelines.",
+            iconSrc:
+                "/images/academic-editorial-services/revisioning-and-localisation-service/Quality-Check-by-Senior-Editor.png",
+            position: "top",
         },
         {
-            num: 6,
-            title: 'FINAL DELIVERY WITH TRANSPARENCY',
-            desc: 'You receive:\n• A fully revised and localised manuscript ready for submission\n• A tracked-changes version highlighting all modifications\n• Detailed editor comments and suggestions\n• A certificate of editing (available upon request)',
-            iconSrc: '/images/academic-editorial-services/revisioning-and-localisation-service/Final-Delivery-with-Transparency-Check-by-Senior-Editor.png',
+            stepNumber: 6,
+            title: "FINAL DELIVERY WITH TRANSPARENCY",
+            description: (
+                <>
+                    You receive:
+                    <ul className="list-disc text-left mt-2 pl-5">
+                        <li>
+                            A fully revised and localised manuscript ready for submission
+                        </li>
+                        <li>A tracked-changes version highlighting all modifications</li>
+                        <li>Detailed editor comments and suggestions</li>
+                        <li>A certificate of editing (available upon request)</li>
+                    </ul>
+                </>
+            ),
+            iconSrc:
+                "/images/academic-editorial-services/revisioning-and-localisation-service/Final-Delivery-with-Transparency-Check-by-Senior-Editor.png",
+            position: "bottom",
         },
     ];
 
@@ -112,30 +146,48 @@ export default function RevisioningAndLocalisationComplete() {
         'Clinical research documents',
     ];
 
-    const experts = [
+    const experts: Expert[] = [
         {
-            name: 'Dr. Arjun Mehta',
-            qualification: 'PhD in Linguistics',
-            university: 'Jawaharlal Nehru University, India',
-            experience: '10+ Years of Experience',
-            manuscripts: '800+ Manuscripts Localised & Revised',
-            photo: '/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Arjun-Mehta.png',
+            id: "arjun-mehta",
+            name: "Dr. Arjun Mehta",
+            title: "PhD in Linguistics",
+            institution: "Jawaharlal Nehru University, India",
+            experience: "10+ Years of Experience",
+            papersEdited: "800+ Manuscripts Localised & Revised",
+            avatarUrl:
+                "/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Arjun-Mehta.png",
+            flagUrl: "/images/country/india.png",
+            bio: "Dr. Mehta specializes in adapting scientific content for global audiences, ensuring clarity, cultural relevance, and journal compliance.",
+            expertise: "Biomedical sciences, clinical research, pharmaceutical studies",
+            journals: "The Lancet, BMJ, Elsevier",
         },
         {
-            name: 'Dr. Priya Rao',
-            qualification: 'PhD in Life Sciences',
-            university: 'University of Delhi, India',
-            experience: '8+ Years of Experience',
-            manuscripts: '400+ Papers Localised & Revised',
-            photo: '/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Priya-Rao.png',
+            id: "priya-rao",
+            name: "Dr. Priya Rao",
+            title: "PhD in Life Sciences",
+            institution: "University of Delhi, India",
+            experience: "8+ Years of Experience",
+            papersEdited: "400+ Papers Localised & Revised",
+            avatarUrl:
+                "/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Priya-Rao.png",
+            flagUrl: "/images/country/uk-flag-.png",
+            bio: "Dr. Rao focuses on precise language refinement, localisation, and formatting to meet international publishing standards.",
+            expertise: "Genetics, molecular biology, pharmacology",
+            journals: "Nature Communications, PLOS ONE, Springer",
         },
         {
-            name: 'Dr. Rohan Iyer',
-            qualification: 'PhD in Biotechnology',
-            university: 'Indian Institute of Technology, Bombay',
-            experience: '9+ Years of Experience',
-            manuscripts: '500+ Manuscripts Localised & Revised',
-            photo: '/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Rohan-Iyer.png',
+            id: "rohan-iyer",
+            name: "Dr. Rohan Iyer",
+            title: "PhD in Biotechnology",
+            institution: "Indian Institute of Technology, Bombay",
+            experience: "9+ Years of Experience",
+            papersEdited: "500+ Manuscripts Localised & Revised",
+            avatarUrl:
+                "/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Rohan-Iyer.png",
+            flagUrl: "/images/country/us.png",
+            bio: "Dr. Iyer ensures manuscripts are scientifically accurate while culturally and linguistically adapted for diverse readerships.",
+            expertise: "Biochemistry, molecular diagnostics, translational research",
+            journals: "Cell, Scientific Reports, Wiley",
         },
     ];
 
@@ -157,79 +209,68 @@ export default function RevisioningAndLocalisationComplete() {
         },
     ];
 
-    const packages = [
+    const packages: PackageItem[] = [
         {
-            badgeSrc: '/images/publication-support/poster-preparation/S.png',
-            title: 'Basic',
-            subtitle: 'Essential Revisioning',
-            idealFor: 'Early drafts or manuscripts needing light refinement.',
-            included: [
-                'Language correction for grammar, punctuation, and spelling',
-                'Basic stylistic improvements for readability',
-                'Alignment with general academic conventions',
-                'Minor localisation adjustments for the target region',
+            icon: "/images/publication-support/poster-preparation/S.png",
+            title: "Basic",
+            idealFor: "Early drafts or manuscripts needing light refinement.",
+            includes: [
+                "Language correction for grammar, punctuation, and spelling",
+                "Basic stylistic improvements for readability",
+                "Alignment with general academic conventions",
+                "Minor localisation adjustments for the target region",
             ],
-            turnaround: '3–5 business days',
-            deliverable: 'Clean, error-free manuscript ready for deeper review',
-            bgColor: 'bg-[#d8e3e0]',
-            headerBg: 'bg-white',
-            accentColor: 'text-[#0F3542]',
+            turnaround: "3–5 business days",
+            cardBgColor: "#d8e3e0",
+            titleColor: "#0F3542",
         },
         {
-            badgeSrc: '/images/publication-support/poster-preparation/S.png',
-            title: 'Standard',
-            subtitle: 'Advanced Revisioning & Localisation',
-            idealFor: 'Manuscripts requiring structural clarity and regional adaptation.',
-            includeHeader: 'Includes all Basic Package services, plus',
-            included: [
-                'Sentence-level refinement for flow and coherence',
-                'Terminology alignment with field-specific standards',
-                'Moderate localisation to adapt content to regional norms and journal requirements',
-                'Consistency checks for style, references, and formatting',
+            icon: "/images/publication-support/poster-preparation/S.png",
+            title: "Standard",
+            idealFor:
+                "Manuscripts requiring structural clarity and regional adaptation.",
+            includes: [
+                "Includes all Basic Package services, plus",
+                "Sentence-level refinement for flow and coherence",
+                "Terminology alignment with field-specific standards",
+                "Moderate localisation to adapt content to regional norms and journal requirements",
+                "Consistency checks for style, references, and formatting",
             ],
-            turnaround: '5–7 business days',
-            deliverable: 'Polished manuscript ready for journal submission or peer review',
-            bgColor: 'bg-[#d8c3e0]',
-            headerBg: 'bg-white',
-            accentColor: 'text-[#0F3542]',
+            turnaround: "5–7 business days",
+            cardBgColor: "#d8c3e0",
+            titleColor: "#0F3542",
         },
         {
-            badgeSrc: '/images/editing-and-translation/translation-with-editing/pro.webp',
-            title: 'Premium',
-            subtitle: 'Comprehensive Revisioning & Localisation',
-            idealFor: 'High-impact manuscripts aimed at top-tier journals or international audiences.',
-            includeHeader: 'Includes all Standard Package services, plus:',
-            included: [
-                'In-depth structural and conceptual revisioning',
-                'Advanced localisation for cultural and linguistic nuances',
-                'Enhancement of argumentation, clarity, and logical flow',
-                'Subject-matter expert review for accuracy and precision',
-                'Detailed feedback report highlighting improvements and suggestions',
+            icon:
+                "/images/editing-and-translation/translation-with-editing/pro.webp",
+            title: "Premium",
+            idealFor:
+                "High-impact manuscripts aimed at top-tier journals or international audiences.",
+            includes: [
+                "Includes all Standard Package services, plus",
+                "In-depth structural and conceptual revisioning",
+                "Advanced localisation for cultural and linguistic nuances",
+                "Enhancement of argumentation, clarity, and logical flow",
+                "Subject-matter expert review for accuracy and precision",
+                "Detailed feedback report highlighting improvements and suggestions",
             ],
-            turnaround: '7–10 business days',
-            deliverable: 'Manuscript ready for high-stakes submission with enhanced publication potential',
-            bgColor: 'bg-[#ddc39d]',
-            headerBg: 'bg-white',
-            accentColor: 'text-[#0F3542]',
+            turnaround: "7–10 business days",
+            cardBgColor: "#ddc39d",
+            titleColor: "#0F3542",
         },
     ];
 
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
             {/* ------------------- HERO BANNER ------------------- */}
-            <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
-                <div className="max-w-4xl mx-auto">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
-                        Revisioning & Localisation Services at Pubrica
-                    </h2>
-                    <p className="text-xs md:text-sm text-emerald-100 leading-relaxed max-w-3xl mx-auto">
-                        Our specialist editors meticulously revise and localise your manuscript for clarity, cultural relevance, and journal compliance, ensuring it is publication-ready and resonates with your target audience.
-                    </p>
-                </div>
-            </section>
-
+            <ServiceBanner
+                imageSrc="/images/publication-support/Satisfaction_Guarantee.webp"
+                imageAlt="100% Satisfaction Guarantee"
+                heading="Revisioning & Localisation Services at Pubrica"
+                description="Our specialist editors meticulously revise and localise your manuscript for clarity, cultural relevance, and journal compliance, ensuring it is publication-ready and resonates with your target audience."
+            />
             {/* ------------------- INTRODUCTION & CRUCIAL POINTS SECTION ------------------- */}
-            <section className="py-6 px-4 max-w-6xl mx-auto">
+            {/* <section className="py-6 px-4 max-w-6xl mx-auto">
                 <div className="max-w-4xl mx-auto mb-10 text-left">
                     <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-4">
                         Transform Your Research for Global Impact with Pubrica’s Expert Revisioning & Localisation Services
@@ -271,10 +312,10 @@ export default function RevisioningAndLocalisationComplete() {
                         />
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* ------------------- TYPES OF REVISIONING & LOCALISATION SERVICES ------------------- */}
-            <section className="py-6 px-4 bg-[#f8faf9] border-y border-gray-100" aria-labelledby="types-heading">
+            {/* <section className="py-6 px-4 bg-[#f8faf9] border-y border-gray-100" aria-labelledby="types-heading">
                 <div className="max-w-6xl mx-auto text-center">
                     <div className="max-w-4xl mx-auto mb-12">
                         <h2 id="types-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
@@ -299,65 +340,15 @@ export default function RevisioningAndLocalisationComplete() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* ------------------- PROCESS SECTION (ZIGZAG LAYOUT) ------------------- */}
-            <section className="py-7 px-4 max-w-6xl mx-auto text-center" aria-labelledby="process-heading">
-                <h2 id="process-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-2">
-                    How Our Revisioning & Localisation Service Works
-                </h2>
-                <p className="text-xs md:text-sm font-semibold text-gray-700 mb-6">Our Step-by-Step Process</p>
-                <p className="text-xs md:text-sm text-gray-600 leading-relaxed max-w-4xl mx-auto mb-12">
-                    Pubrica follows a structured, transparent, and quality-driven editorial workflow designed to simplify your publication journey. Our process ensures every manuscript receives subject-expert attention, rigorous quality checks, and end-to-end editorial support aligned with global academic publishing standards. Here’s how our end-to-end editorial process works:
-                </p>
-
-                {/* 6-Column Grid Layout for Zigzag Flow */}
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 items-stretch">
-                    {processSteps.map((step) => {
-                        const isHovered = hoveredStep === step.num;
-                        const isEven = step.num % 2 === 0; // Steps 2, 4, 6 positioned alternatively
-
-                        return (
-                            <div
-                                key={step.num}
-                                onMouseEnter={() => setHoveredStep(step.num)}
-                                onMouseLeave={() => setHoveredStep(null)}
-                                className={`flex flex-col justify-between transition-all duration-300 cursor-pointer ${isEven ? 'lg:flex-col-reverse' : 'lg:flex-col'
-                                    }`}
-                            >
-                                {/* Top or Bottom Badge (Alternating per column) */}
-                                <div className={`flex flex-col items-center py-2 ${isEven ? 'order-first lg:order-last' : 'order-first'}`}>
-                                    <div className="w-8 h-8 rounded-full bg-[#007791] text-white flex items-center justify-center font-bold text-xs shadow-md z-10">
-                                        {step.num}
-                                    </div>
-                                    <div className="w-0.5 h-6 bg-[#007791]/40 hidden lg:block"></div>
-                                </div>
-
-                                {/* Main Card Box */}
-                                <div
-                                    className={`p-5 rounded-lg transition-all duration-300 flex flex-col items-center border text-left my-auto ${isHovered
-                                        ? 'bg-[#333333] text-white border-[#333333] shadow-xl scale-105 z-20'
-                                        : 'bg-white text-gray-800 border-gray-200 shadow-sm'
-                                        }`}
-                                >
-                                    <div className="relative w-10 h-10 rounded-full overflow-hidden mb-3 bg-gray-50 flex items-center justify-center">
-                                        <Image src={step.iconSrc} alt="" fill className="object-contain p-1" />
-                                    </div>
-                                    <h3 className="text-xs font-bold mb-2 text-center w-full">{step.title}</h3>
-                                    <p className={`text-[10px] leading-relaxed whitespace-pre-line ${isHovered ? 'text-gray-200' : 'text-gray-600'}`}>
-                                        {step.desc}
-                                    </p>
-                                </div>
-
-                                {/* Bottom or Top Badge mirror */}
-                                <div className={`flex flex-col items-center py-2 ${isEven ? 'order-last lg:order-first' : 'order-last'}`}>
-                                    <div className="w-0.5 h-6 bg-[#007791]/40 hidden lg:block"></div>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-            </section>
+            <EditorialWorkflowSection
+                heading="How Our Revisioning & Localisation Service Works"
+                subheading="Our Step-by-Step Process"
+                description="Pubrica follows a structured, transparent, and quality-driven editorial workflow designed to simplify your publication journey. Our process ensures every manuscript receives subject-expert attention, rigorous quality checks, and end-to-end editorial support aligned with global academic publishing standards. Here’s how our end-to-end editorial process works:"
+                steps={steps}
+            />
 
             {/* ------------------- TYPES OF DOCUMENTS WE SUPPORT ------------------- */}
             <section className="py-6 px-4 bg-[#f9fafb] border-y border-gray-100" aria-labelledby="docs-heading">
@@ -377,73 +368,43 @@ export default function RevisioningAndLocalisationComplete() {
             </section>
 
             {/* ------------------- MEET OUR EXPERTS ------------------- */}
-            <section className="py-6 px-4 max-w-6xl mx-auto text-center" aria-labelledby="experts-heading">
-                <h2 id="experts-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-10">
-                    Meet Our Revisioning and Localisation Experts
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {experts.map((exp, idx) => (
-                        <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between text-center">
-                            <div>
-                                <div className="relative w-16 h-16 mx-auto mb-3 overflow-hidden rounded-full bg-emerald-100">
-                                    <Image src={exp.photo} alt={exp.name} fill className="object-cover" sizes="64px" />
-                                </div>
-                                <h3 className="text-sm font-bold text-gray-900 mb-1">{exp.name}</h3>
-                                <p className="text-xs text-emerald-800 font-medium mb-1">{exp.qualification}</p>
-                                <p className="text-[11px] text-gray-500 mb-4">{exp.university}</p>
-                            </div>
-                            <div className="pt-4 border-t border-gray-100 flex justify-around text-xs text-gray-700">
-                                <div>
-                                    <span className="block font-bold text-gray-900">{exp.experience}</span>
-                                    <span className="text-[10px] text-gray-500">Experience</span>
-                                </div>
-                                <div>
-                                    <span className="block font-bold text-gray-900">{exp.manuscripts}</span>
-                                    <span className="text-[10px] text-gray-500">Completed</span>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
+            <ExpertsSection
+                heading="Meet Our Revisioning & Localisation Experts"
+                subheading="Our experienced experts adapt and refine scientific manuscripts for global audiences, ensuring linguistic clarity, cultural relevance, and compliance with international journal standards."
+                experts={experts}
+            />
 
             {/* ------------------- SAMPLE WORK SECTION ------------------- */}
-            <section className="py-6 px-4 bg-[#f4faf7] text-center" aria-labelledby="sample-heading">
-                <div className="max-w-4xl mx-auto bg-white border border-emerald-100 rounded-xl p-8 shadow-sm">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                        {/* Image Container matching the screenshot */}
-                        <div className="bg-[#f0f3f1] p-4 rounded-lg flex justify-center items-center relative aspect-[3/4] w-full overflow-hidden">
-                            <Image
-                                src="/images/academic-editorial-services/revisioning-and-localisation-service/Revisioning-and-Localisation-Service-Sample-Work.png"
-                                alt="Revisioning and Localisation Service sample work"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                priority
-                            />
-                        </div>
-
-                        {/* Content */}
-                        <div className="text-left flex flex-col justify-center">
-                            <h2 id="sample-heading" className="text-base md:text-lg font-bold text-[#0b3b2c] mb-4">
-                                Revisioning and Localisation Service Sample Work
-                            </h2>
-                            <div className="space-y-3 mb-6">
-                                <Link href="/insights/sample-work" className="block w-full text-center bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
-                                    Discover More
-                                </Link>
-                            </div>
-                            <h3 className="text-sm font-bold text-[#0b3b2c] mb-2">Download the full Report Now</h3>
-                            <p className="text-[11px] text-gray-600 leading-relaxed mb-6">
-                                Explore our revisioning and localisation sample work, carefully adapted to meet stringent scholarly standards, region-specific conventions, and top-tier journal requirements. Ensure your manuscript is precise, culturally appropriate, and publication-ready, enhancing clarity, credibility, and global research impact.
-                            </p>
-                            <Link href="/insights/sample-work" className="block w-full text-center bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
-                                Discover More
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <PubricaSampleWorkCard
+                bookCoverImage={{
+                    src: "/images/academic-editorial-services/revisioning-and-localisation-service/Revisioning-and-Localisation-Service-Sample-Work.png",
+                    alt: "Revisioning and Localisation Service sample work",
+                    width: 600,
+                    height: 800,
+                }}
+                sections={[
+                    {
+                        heading: "Revisioning and Localisation Service Sample Work",
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work/individual-patient-data-from-randomized-trials/",
+                        },
+                    },
+                    {
+                        heading: "Download the full Report Now",
+                        descriptionSegments: [
+                            {
+                                text: "Explore our revisioning and localisation sample work, carefully adapted to meet stringent scholarly standards, region-specific conventions, and top-tier journal requirements. Ensure your manuscript is precise, culturally appropriate, and publication-ready, enhancing clarity, credibility, and global research impact.",
+                            },
+                        ],
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work",
+                        },
+                    },
+                ]}
+                footerDisclaimerSegments={[]}
+            />
 
             {/* ------------------- WHY CHOOSE PUBRICA ------------------- */}
             <section className="py-6 px-4 max-w-6xl mx-auto text-center" aria-labelledby="why-heading">
@@ -467,94 +428,14 @@ export default function RevisioningAndLocalisationComplete() {
             </section>
 
             {/* ------------------- PACKAGES SECTION ------------------- */}
-            <section className="py-6 px-4 max-w-6xl mx-auto" aria-labelledby="packages-heading">
-                <div className="text-center max-w-3xl mx-auto mb-12">
-                    <h2 id="packages-heading" className="text-xl md:text-2xl font-bold text-[#0F3542] mb-3">
-                        Revisioning and Localisation Services – Our Packages
-                    </h2>
-                    <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-                        At Pubrica, our Revisioning and Localisation Services are designed to help researchers and authors adapt their manuscripts for global audiences while maintaining clarity, precision, and subject-specific accuracy. Whether you are preparing a manuscript for international journals or need regional language refinement, we offer structured packages to meet diverse needs.
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-                    {packages.map((pkg, idx) => (
-                        <div
-                            key={idx}
-                            className={`${pkg.bgColor} rounded-lg shadow-md overflow-hidden flex flex-col justify-between border border-gray-200/50`}
-                        >
-                            {/* White Header Top Banner */}
-                            <div className={`${pkg.headerBg} p-4 border-b border-gray-200/60 flex items-center gap-3`}>
-                                <div className="relative w-12 h-12 flex-shrink-0">
-                                    <Image
-                                        src={pkg.badgeSrc}
-                                        alt={`${pkg.title} package`}
-                                        fill
-                                        className="object-contain"
-                                    />
-                                </div>
-                                <div>
-                                    <h3 className="text-base font-bold text-gray-900 leading-snug">{pkg.title}</h3>
-                                    <span className="text-[11px] text-gray-600 block leading-tight">{pkg.subtitle}</span>
-                                </div>
-                            </div>
-
-                            {/* Card Body Content */}
-                            <div className="p-5 flex-1 flex flex-col justify-between space-y-5 text-xs text-gray-800">
-                                <div className="space-y-4">
-                                    {/* Ideal For */}
-                                    <div className="flex items-start gap-2">
-                                        <span className="text-black font-bold text-sm leading-none mt-0.5">➔</span>
-                                        <p className="leading-relaxed">
-                                            <span className="font-bold text-gray-900">Ideal For:</span> {pkg.idealFor}
-                                        </p>
-                                    </div>
-
-                                    {/* Included Services Section */}
-                                    <div className="space-y-2">
-                                        <div className="flex items-center gap-2">
-                                            <span className="text-black font-bold text-sm leading-none">➔</span>
-                                            <span className="font-bold text-gray-900">Include:</span>
-                                        </div>
-
-                                        {pkg.includeHeader && (
-                                            <p className="font-bold text-gray-900 pl-6 leading-relaxed">
-                                                {pkg.includeHeader}
-                                            </p>
-                                        )}
-
-                                        <ul className="pl-6 space-y-2">
-                                            {pkg.included.map((inc, i) => (
-                                                <li key={i} className="leading-relaxed text-gray-800">
-                                                    {inc}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                {/* Turnaround & Deliverable Footer Info */}
-                                <div className="space-y-3 pt-3 border-t border-black/10">
-                                    <div className="flex items-start gap-2">
-                                        <span className="text-black font-bold text-sm leading-none mt-0.5">➔</span>
-                                        <p className="leading-relaxed">
-                                            <span className="font-bold text-gray-900">Turnaround :</span> {pkg.turnaround}
-                                        </p>
-                                    </div>
-
-                                    <div className="flex items-start gap-2">
-                                        <span className="text-black font-bold text-sm leading-none mt-0.5">➔</span>
-                                        <p className="leading-relaxed">
-                                            <span className="font-bold text-gray-900">Deliverable :</span> {pkg.deliverable}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+            <section className="py-1 px-4 max-w-6xl mx-auto" aria-labelledby="packages-heading">
+                <CommonPackages
+                    title="Revisioning and Localisation Services – Our Packages"
+                    description="At Pubrica, our Revisioning and Localisation Services are designed to help researchers and authors adapt their manuscripts for global audiences while maintaining clarity, precision, and subject-specific accuracy. Whether you are preparing a manuscript for international journals or need regional language refinement, we offer structured packages to meet diverse needs."
+                    packages={packages}
+                />
             </section>
-            <GetFreeQuoteButton/>
+            <GetFreeQuoteButton />
         </article>
     );
 }

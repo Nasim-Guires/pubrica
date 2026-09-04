@@ -1,6 +1,9 @@
 'use client';
 
+import CommonPackages, { PackageItem } from '@/components/common/CommonPackages';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import { PubricaSampleWorkCard } from '@/components/common/PubricaSampleWorkCardProps';
+import ServiceBanner from '@/components/common/ServiceBanner';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -52,197 +55,194 @@ export default function ForensicAndQualityAuditComplete() {
         },
     ];
 
-    const packages = [
+    const packages: PackageItem[] = [
         {
-            badgeSrc: '/images/editing-and-translation/basic-pacakge.png',
-            title: 'Basic Compliance Check',
-            idealFor: 'Startups, small businesses, or teams need a quick health check of processes and documentation.',
-            included: [
-                'Preliminary review of documents and workflows',
-                'Identification of red flags and compliance gaps',
-                'Basic quality check of operational procedures',
-                'Summary report with priority recommendations',
+            icon: "/images/editing-and-translation/basic-pacakge.png",
+            title: "Basic Compliance Check",
+            idealFor:
+                "Startups, small businesses, or teams need a quick health check of processes and documentation.",
+            includes: [
+                "Preliminary review of documents and workflows",
+                "Identification of red flags and compliance gaps",
+                "Basic quality check of operational procedures",
+                "Summary report with priority recommendations",
             ],
-            turnaround: '3–5 business days',
-            borderColor: 'border-emerald-300',
-            headerBg: 'bg-emerald-50',
+            turnaround: "3–5 business days",
+            cardBgColor: "#ecfdf5",
+            titleColor: "#0b3b2c",
         },
         {
-            badgeSrc: '/images/publication-support/poster-preparation/S.png',
-            title: 'Standard Forensic & Quality Review',
-            idealFor: 'Medium-sized organisations require deeper analysis for quality, risk, and operational accuracy.',
-            included: [
-                'Detailed review of financial and operational records',
-                'Verification of processes, transactions, and documentation',
-                'Identification of inconsistencies or quality deviations',
-                'Risk assessment with corrective action roadmap',
+            icon: "/images/publication-support/poster-preparation/S.png",
+            title: "Standard Forensic & Quality Review",
+            idealFor:
+                "Medium-sized organisations require deeper analysis for quality, risk, and operational accuracy.",
+            includes: [
+                "Detailed review of financial and operational records",
+                "Verification of processes, transactions, and documentation",
+                "Identification of inconsistencies or quality deviations",
+                "Risk assessment with corrective action roadmap",
             ],
-            turnaround: '5–7 business days',
-            borderColor: 'border-purple-300',
-            headerBg: 'bg-purple-50',
+            turnaround: "5–7 business days",
+            cardBgColor: "#faf5ff",
+            titleColor: "#7e22ce",
         },
         {
-            badgeSrc: '/images/publication-support/peer-review-pre-submission/advanced.webp',
-            title: 'Advanced Forensic Investigation',
-            idealFor: 'Businesses facing suspected fraud, misconduct, major quality lapses, or needing high-level accuracy checks.',
-            included: [
-                'In-depth forensic investigation of processes, data, and transactions',
-                'Evidence-based assessment with chain-of-custody controls',
-                'Root-cause and gap analysis',
-                'Quality assurance audit across all critical functions',
-                'Detailed forensic report with legal/compliance readiness',
-                'Recommendations for remediation',
+            icon:
+                "/images/publication-support/peer-review-pre-submission/advanced.webp",
+            title: "Advanced Forensic Investigation",
+            idealFor:
+                "Businesses facing suspected fraud, misconduct, major quality lapses, or needing high-level accuracy checks.",
+            includes: [
+                "In-depth forensic investigation of processes, data, and transactions",
+                "Evidence-based assessment with chain-of-custody controls",
+                "Root-cause and gap analysis",
+                "Quality assurance audit across all critical functions",
+                "Detailed forensic report with legal/compliance readiness",
+                "Recommendations for remediation",
             ],
-            turnaround: '7–10 business days',
-            borderColor: 'border-amber-300',
-            headerBg: 'bg-amber-50',
+            turnaround: "7–10 business days",
+            cardBgColor: "#fffbeb",
+            titleColor: "#92400e",
         },
     ];
 
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
             {/* ------------------- HERO BANNER ------------------- */}
-            <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
-                <div className="max-w-4xl mx-auto">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
-                        Forensic and Quality Audit Services at Pubrica
-                    </h2>
-                    <p className="text-xs md:text-sm text-emerald-100 leading-relaxed max-w-3xl mx-auto">
-                        Our expert auditors meticulously examine and evaluate your processes, records, and compliance measures to ensure accuracy, integrity, and regulatory adherence, providing actionable insights that safeguard your organization and enhance operational quality.
-                    </p>
-                </div>
-            </section>
+            <ServiceBanner
+                imageSrc="/images/publication-support/Satisfaction_Guarantee.webp"
+                imageAlt="100% Satisfaction Guarantee"
+                heading="Forensic and Quality Audit Services at Pubrica"
+                description="Our expert auditors meticulously examine and evaluate your processes, records, and compliance measures to ensure accuracy, integrity, and regulatory adherence, providing actionable insights that safeguard your organization and enhance operational quality."
+            />
 
             {/* ------------------- STEP-BY-STEP PROCESS ------------------- */}
-            <section className="py-6 px-4 max-w-6xl mx-auto text-center" aria-labelledby="process-heading">
-                <h2 id="process-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-2">
+            <section className="py-12 px-4 max-w-5xl mx-auto text-center" aria-labelledby="process-heading">
+                <h2 id="process-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-1">
                     How Our Forensic and Quality Audit Service Works
                 </h2>
-                <p className="text-xs md:text-sm font-semibold text-gray-700 mb-6">Our Step-by-Step Process</p>
-                <p className="text-xs md:text-sm text-gray-600 leading-relaxed max-w-4xl mx-auto mb-12">
-                    At Pubrica, our forensic and quality audit services are designed to uncover hidden risks, ensure compliance, and enhance operational transparency. Our systematic approach combines investigative rigor with quality assurance to deliver actionable insights. Here’s how:
+                <p className="text-xs md:text-sm font-semibold text-gray-700 mb-3">Our Step-by-Step Process</p>
+                <p className="text-xs md:text-sm text-gray-600 leading-relaxed max-w-3xl mx-auto mb-10">
+                    At Pubrica, our forensic and quality audit services are designed to uncover hidden risks, ensure compliance, and enhance operational transparency. Our systematic approach combines investigative rigor with quality assurance to deliver actionable insights.
                 </p>
 
-                {/* Timeline / Steps Grid (7 steps arranged cleanly) */}
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 relative">
-                    {processSteps.map((step, idx) => {
-                        const isHovered = activeStep === step.num;
-                        return (
-                            <div
-                                key={idx}
-                                onMouseEnter={() => setActiveStep(step.num)}
-                                onMouseLeave={() => setActiveStep(null)}
-                                className={`p-6 rounded-xl transition-all duration-300 flex flex-col items-center cursor-pointer border ${isHovered
-                                        ? 'bg-[#333333] text-white border-[#333333] shadow-lg scale-105 z-10'
-                                        : 'bg-white text-gray-800 border-gray-200'
-                                    }`}
-                            >
-                                <div className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs mb-3 ${isHovered ? 'bg-white text-[#333333]' : 'bg-[#007791] text-white'
-                                    }`}>
+                {/* Desktop View: Snake Flow Matching Image */}
+                <div className="hidden md:flex flex-col items-center space-y-6 max-w-4xl mx-auto">
+                    {/* Row 1: Steps 1, 2, 3 (Left to Right) */}
+                    <div className="flex items-center justify-between w-full">
+                        {processSteps.slice(0, 3).map((step, idx) => (
+                            <React.Fragment key={step.num}>
+                                <div className="w-64 bg-[#f8faf9] border border-gray-300 rounded-lg p-5 flex flex-col items-center min-h-[220px]">
+                                    <div className="w-8 h-8 rounded-full bg-[#0b3b2c] text-white flex items-center justify-center font-bold text-xs mb-3">
+                                        {step.num}
+                                    </div>
+                                    <h3 className="text-xs font-bold text-gray-900 mb-2 text-center">{step.title}</h3>
+                                    <p className="text-[11px] text-gray-600 leading-relaxed text-center">{step.desc}</p>
+                                </div>
+                                {idx < 2 && <span className="text-gray-500 font-bold text-lg px-2">→</span>}
+                            </React.Fragment>
+                        ))}
+                    </div>
+
+                    {/* Down Arrow from Step 3 to 4 */}
+                    <div className="w-full flex justify-end pr-28">
+                        <span className="text-gray-500 font-bold text-lg">↓</span>
+                    </div>
+
+                    {/* Row 2: Steps 6, 5, 4 (Right to Left flow matching image order) */}
+                    <div className="flex items-center justify-between w-full">
+                        {[processSteps[5], processSteps[4], processSteps[3]].map((step, idx) => (
+                            <React.Fragment key={step.num}>
+                                <div className="w-64 bg-[#f8faf9] border border-gray-300 rounded-lg p-5 flex flex-col items-center min-h-[220px]">
+                                    <div className="w-8 h-8 rounded-full bg-[#0b3b2c] text-white flex items-center justify-center font-bold text-xs mb-3">
+                                        {step.num}
+                                    </div>
+                                    <h3 className="text-xs font-bold text-gray-900 mb-2 text-center">{step.title}</h3>
+                                    <p className="text-[11px] text-gray-600 leading-relaxed text-center">{step.desc}</p>
+                                </div>
+                                {idx < 2 && <span className="text-gray-500 font-bold text-lg px-2">←</span>}
+                            </React.Fragment>
+                        ))}
+                    </div>
+
+                    {/* Down Arrow from Step 6 to 7 */}
+                    <div className="w-full flex justify-start pl-28">
+                        <span className="text-gray-500 font-bold text-lg">↓</span>
+                    </div>
+
+                    {/* Row 3: Step 7 */}
+                    <div className="w-full flex justify-start pl-3">
+                        <div className="w-64 bg-[#f8faf9] border border-gray-300 rounded-lg p-5 flex flex-col items-center min-h-[220px]">
+                            <div className="w-8 h-8 rounded-full bg-[#0b3b2c] text-white flex items-center justify-center font-bold text-xs mb-3">
+                                {processSteps[6].num}
+                            </div>
+                            <h3 className="text-xs font-bold text-gray-900 mb-2 text-center">{processSteps[6].title}</h3>
+                            <p className="text-[11px] text-gray-600 leading-relaxed text-center">{processSteps[6].desc}</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Mobile View: Clean Vertical Timeline Stack */}
+                <div className="flex md:hidden flex-col items-center space-y-4">
+                    {processSteps.map((step, idx) => (
+                        <React.Fragment key={step.num}>
+                            <div className="w-full bg-[#f8faf9] border border-gray-300 rounded-lg p-5 flex flex-col items-center">
+                                <div className="w-8 h-8 rounded-full bg-[#0b3b2c] text-white flex items-center justify-center font-bold text-xs mb-3">
                                     {step.num}
                                 </div>
-                                <h3 className="text-xs font-bold mb-2 text-center">{step.title}</h3>
-                                <p className={`text-[10px] leading-relaxed text-center ${isHovered ? 'text-gray-200' : 'text-gray-600'}`}>
-                                    {step.desc}
-                                </p>
+                                <h3 className="text-xs font-bold text-gray-900 mb-2 text-center">{step.title}</h3>
+                                <p className="text-[11px] text-gray-600 leading-relaxed text-center">{step.desc}</p>
                             </div>
-                        );
-                    })}
+                            {idx < processSteps.length - 1 && (
+                                <span className="text-gray-500 font-bold text-base">↓</span>
+                            )}
+                        </React.Fragment>
+                    ))}
                 </div>
             </section>
 
             {/* ------------------- SAMPLE WORK SECTION ------------------- */}
-            <section className="py-6 px-4 bg-[#f4faf7] text-center" aria-labelledby="sample-heading">
-                <div className="max-w-4xl mx-auto bg-white border border-emerald-100 rounded-xl p-8 shadow-sm">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div className="bg-[#0b3b2c] p-3 rounded-lg shadow-md flex justify-center items-center relative h-48 overflow-hidden">
-                            <Image
-                                src="/images/academic-editorial-services/forensic-and-quality-audit-service/Forensic-Quality-Audit-Services-sample-work-.webp"
-                                alt="Forensic and Quality Audit Services sample work"
-                                fill
-                                className="object-cover rounded"
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                            />
-                        </div>
-                        <div className="text-left">
-                            <h2 id="sample-heading" className="text-base md:text-lg font-bold text-[#0b3b2c] mb-4">
-                                Forensic and Quality Audit Service Sample Work
-                            </h2>
-                            <div className="space-y-3 mb-6">
-                                <Link href="/insights/sample-work" className="block w-full text-center bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
-                                    Discover More
-                                </Link>
-                            </div>
-                            <h3 className="text-sm font-bold text-[#0b3b2c] mb-2">Download the full Report Now</h3>
-                            <p className="text-[11px] text-gray-600 leading-relaxed mb-6">
-                                Explore our forensic and quality audit sample work, designed to deliver accurate insights, ensure regulatory compliance, and strengthen your organization’s operational integrity.
-                            </p>
-                            <Link href="/insights/sample-work" className="block w-full text-center bg-black hover:bg-gray-800 text-white text-xs font-bold py-3 px-6 rounded-full transition-colors shadow">
-                                Discover More
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <PubricaSampleWorkCard
+                bookCoverImage={{
+                    src: "/images/academic-editorial-services/forensic-and-quality-audit-service/Forensic-Quality-Audit-Services-sample-work-.webp",
+                    alt: "Forensic and Quality Audit Services sample work",
+                    width: 600,
+                    height: 450,
+                }}
+                sections={[
+                    {
+                        heading: "Forensic and Quality Audit Service Sample Work",
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work/individual-patient-data-from-randomized-trials/",
+                        },
+                    },
+                    {
+                        heading: "Download the full Report Now",
+                        descriptionSegments: [
+                            {
+                                text: "Explore our forensic and quality audit sample work, designed to deliver accurate insights, ensure regulatory compliance, and strengthen your organization’s operational integrity.",
+                            },
+                        ],
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work",
+                        },
+                    },
+                ]}
+                footerDisclaimerSegments={[]}
+            />
 
             {/* ------------------- PACKAGES SECTION ------------------- */}
             <section className="py-6 px-4 max-w-6xl mx-auto" aria-labelledby="packages-heading">
-                <div className="text-center max-w-3xl mx-auto mb-12">
-                    <h2 id="packages-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
-                        Forensic and Quality Audit Service – Our Packages
-                    </h2>
-                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                        At Pubrica, our Forensic and Quality Audit Services are designed to provide organisations, research teams, academic institutions, and healthcare entities with comprehensive, evidence-driven, and compliance-focused audit solutions. Each package is tailored to the complexity of your project, the depth of investigation required, and the level of reporting essential for decision-making.
-                    </p>
-                </div>
-
-                {/* 3 Packages Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-                    {packages.map((pkg, idx) => (
-                        <div
-                            key={idx}
-                            className={`bg-white border-2 ${pkg.borderColor} rounded-xl shadow-sm overflow-hidden flex flex-col justify-between`}
-                        >
-                            {/* Card Header */}
-                            <div className={`${pkg.headerBg} p-6 border-b ${pkg.borderColor} text-center`}>
-                                <div className="relative w-10 h-10 mx-auto rounded-full bg-white shadow-sm mb-2 overflow-hidden">
-                                    <Image src={pkg.badgeSrc} alt={`${pkg.title} package`} fill className="object-contain p-1" />
-                                </div>
-                                <h3 className="text-sm font-bold text-gray-900">{pkg.title}</h3>
-                            </div>
-
-                            {/* Card Body */}
-                            <div className="p-6 space-y-4 text-xs">
-                                <div>
-                                    <span className="font-bold text-gray-900 block mb-1">➜ Ideal For:</span>
-                                    <p className="text-gray-600 leading-relaxed">{pkg.idealFor}</p>
-                                </div>
-
-                                <div>
-                                    <span className="font-bold text-gray-900 block mb-2">➜ Include:</span>
-                                    <ul className="space-y-2">
-                                        {pkg.included.map((inc, i) => (
-                                            <li key={i} className="flex items-start gap-2 text-gray-600">
-                                                <span className="text-emerald-600 font-bold">•</span>
-                                                <span className="leading-relaxed">{inc}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                                <div className="pt-4 border-t border-gray-100">
-                                    <p className="text-gray-700">
-                                        <strong className="text-gray-900">➜ Turnaround time:</strong> {pkg.turnaround}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
+                <CommonPackages
+                    title="Forensic and Quality Audit Service – Our Packages"
+                    description="At Pubrica, our Forensic and Quality Audit Services are designed to provide organisations, research teams, academic institutions, and healthcare entities with comprehensive, evidence-driven, and compliance-focused audit solutions. Each package is tailored to the complexity of your project, the depth of investigation required, and the level of reporting essential for decision-making."
+                    packages={packages}
+                />
                 {/* Bottom CTA Button */}
-                <div className="mt-12 text-center">
-                    <GetFreeQuoteButton/>
+                <div className=" text-center">
+                    <GetFreeQuoteButton />
                 </div>
             </section>
         </article>

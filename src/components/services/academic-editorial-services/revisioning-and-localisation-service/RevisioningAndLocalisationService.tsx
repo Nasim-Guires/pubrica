@@ -1,6 +1,7 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
 import Image from 'next/image';
 import React from 'react';
 
@@ -58,61 +59,59 @@ export default function RevisioningAndLocalisationService() {
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
             {/* ------------------- HERO BANNER SECTION ------------------- */}
-            <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
-                <div className="max-w-4xl mx-auto">
-                    <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
-                        Revisioning and Localisation Services
-                    </h1>
-                    <p className="text-xs md:text-sm text-emerald-100 leading-relaxed max-w-3xl mx-auto">
-                        Refine your manuscript and tailor it for diverse audiences with Pubrica’s expert editorial and localisation specialists.
-                    </p>
-                </div>
-            </section>
+            <HeroBanner
+                title="Revisioning and Localisation Services"
+                description="Refine your manuscript and tailor it for diverse audiences with Pubrica’s expert editorial and localisation specialists."
+                headingAs="h1"
+            />
 
             {/* ------------------- INTRODUCTION & CRUCIAL POINTS SECTION ------------------- */}
-            <section className="py-6 px-4 max-w-6xl mx-auto">
-                {/* Full-width introductory text block */}
-                <div className="max-w-4xl mx-auto mb-10 text-left">
-                    <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-4">
-                        Transform Your Research for Global Impact with Pubrica’s Expert Revisioning & Localisation Services
-                    </h2>
-                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-4">
-                        In today’s rapidly globalizing research landscape, the success of your manuscript, scientific communication, or academic content depends not only on the accuracy of information but also on how effectively it resonates with diverse audiences across geographies. Even high-quality research may fail to achieve its intended reach if the writing style, language, cultural context, or technical nuances do not align with the expectations of a target audience or regional publication standards. Pubrica’s revisioning and localisation services are designed to bridge this gap. We help authors, researchers, universities, and scientific organizations reshape, refine, and adapt their content for different linguistic, cultural, and disciplinary standards.
-                    </p>
-                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                        With a global team of subject-matter experts and academic editors, Pubrica provides end-to-end support to make your manuscript ready for international submission, cross-regional dissemination, or localized publication.
-                    </p>
-                </div>
+            <section className="py-6 px-6 max-w-6xl mx-auto">
+                <h2 className="text-xl md:text-2xl font-bold text-[#0e2a22] mb-3 leading-tight">
+                    Transform Your Research for Global Impact with Pubrica’s Expert Revisioning & Localisation Services
+                </h2>
 
-                {/* Content Layout with List on Left and Image on Right */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start max-w-4xl mx-auto">
-                    <div>
-                        <h3 className="text-sm font-bold text-gray-900 mb-4">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+                    {/* Left Side Content & Bullet Points */}
+                    <div className="lg:col-span-7 text-xs md:text-sm text-gray-700 space-y-2.5 leading-relaxed">
+                        <p>
+                            In today’s rapidly globalizing research landscape, the success of your manuscript, scientific communication, or academic content depends not only on the accuracy of information but also on how effectively it resonates with diverse audiences across geographies. Even high-quality research may fail to achieve its intended reach if the writing style, language, cultural context, or technical nuances do not align with the expectations of a target audience or regional publication standards. Pubrica’s revisioning and localisation services are designed to bridge this gap. We help authors, researchers, universities, and scientific organizations reshape, refine, and adapt their content for different linguistic, cultural, and disciplinary contexts, ensuring clarity, consistency, and impact.
+                        </p>
+
+                        <p>
+                            With a global team of subject-matter experts and academic editors, Pubrica provides end-to-end support to make your manuscript ready for international submission, cross-regional dissemination, or localized publication.
+                        </p>
+
+                        <p className="font-bold text-black pt-1">
                             Revisioning and Localisation are especially crucial when:
-                        </h3>
-                        <ul className="space-y-3 mb-8">
+                        </p>
+
+                        <ul className="space-y-1.5 pt-0.5 text-gray-700">
                             {crucialPoints.map((point, idx) => (
-                                <li key={idx} className="flex items-start gap-3">
-                                    <span className="text-red-600 font-bold mt-0.5">▪</span>
-                                    <p className="text-xs text-gray-700 leading-relaxed">{point}</p>
+                                <li key={idx} className="flex items-start gap-2">
+                                    <span className="text-red-500 font-bold select-none">•</span>
+                                    <span className="text-xs md:text-sm text-gray-700 leading-normal">{point}</span>
                                 </li>
                             ))}
                         </ul>
 
-                        <div>
-                            <GetFreeQuoteButton/>
+                        <div className="pt-2">
+                            <GetFreeQuoteButton />
                         </div>
                     </div>
 
-                    {/* Right Side Image Box Mockup container */}
-                    <div className="bg-[#0b3b2c] p-4 rounded-xl shadow-lg flex justify-center items-center relative min-h-[300px] overflow-hidden mt-2">
-                        <Image
-                            src="/images/academic-editorial-services/revisioning-and-localisation-service/Transform-Your-Research-for-Global-Impact-with-Pubricas-Expert-Revisioning-Localisation-Services.webp"
-                            alt="Revisioning and Localisation Services"
-                            fill
-                            className="object-cover rounded-xl"
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                        />
+                    {/* Right Side Image Container */}
+                    <div className="lg:col-span-5 relative mt-2 lg:mt-0">
+                        <div className="relative w-full aspect-[4/3] max-w-[400px] mx-auto overflow-hidden rounded-2xl shadow-sm">
+                            <Image
+                                src="/images/academic-editorial-services/revisioning-and-localisation-service/Transform-Your-Research-for-Global-Impact-with-Pubricas-Expert-Revisioning-Localisation-Services.webp"
+                                alt="Revisioning and Localisation Services"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 768px) 100vw, 40vw"
+                                priority
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

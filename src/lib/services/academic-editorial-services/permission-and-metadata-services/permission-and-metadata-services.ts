@@ -100,33 +100,64 @@ export const permissionAndMetadataServicesTestimonialData = {
 };
 
 export const permissionAndMetadataServicesFaqData = {
+
   title: "Frequently Asked Questions",
 
   faqs: [
+
     {
+
       question: "Why do I need permission for figures or tables?",
+
       answer:
         "Publishers require formal rights to use any previously published content. Using such materials without permission may result in rejection or legal issues.",
+
     },
+
     {
+
       question: "Do you cover Creative Commons content?",
+
       answer:
         "Yes. We verify if CC-licensed content is free to use or requires attribution, modification rights, or non-commercial conditions.",
+
     },
+
     {
+
       question: "Can you optimize metadata for indexing platforms?",
+
       answer:
         "Yes. We prepare metadata for PubMed, Crossref, Scopus, DOAJ, and institutional repositories.",
+
     },
+
     {
+
       question: "Who can benefit from these services?",
-      answer:
-        "Academic researchers and scholars\n\n• Journal and book authors\n• Universities, colleges, and research institutions\n• Corporate R&D teams\n• Publishers and editors\n• NGOs, policy institutes, and government research bodies",
+
+      answer: "Our services are designed for:",
+
+      points: [
+        "Academic researchers and scholars",
+        "Journal and book authors",
+        "Universities, colleges, and research institutions",
+        "Corporate R&D teams",
+        "Publishers and editors",
+        "NGOs, policy institutes, and government research bodies",
+      ],
+
     },
+
     {
+
       question: "What if a copyright holder denies permission?",
+
       answer:
         "If a request is denied, we provide alternative solutions such as replacing the material, revising the content, or exploring fair-use options wherever legally applicable.",
+
     },
+
   ],
+
 };

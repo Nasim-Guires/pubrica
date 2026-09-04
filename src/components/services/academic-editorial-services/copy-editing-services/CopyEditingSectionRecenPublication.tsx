@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import CommonPackages, { PackageItem } from '@/components/common/CommonPackages';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 // TypeScript Interfaces for Props and Data
 export interface PublicationItem {
@@ -89,6 +91,64 @@ const recentPublications: Publication[] = [
         coverImage:
             "/images/editing-and-translation/manuscript-editing/JOURNAL-TEMPLATE-COVER-IMAGE-5.png",
         linkUrl: "#",
+    },
+];
+
+const packages: PackageItem[] = [
+    {
+        icon: "/images/editing-and-translation/basic-pacakge.png",
+        title: "Basic",
+        idealFor: "Early drafts, non-technical manuscripts",
+        includes: [
+            "Grammar, spelling, and punctuation corrections",
+            "Minor sentence restructuring",
+        ],
+        turnaround: "3–5 business days",
+        cardBgColor: "#e2e8f0",
+        titleColor: "#1e3a8a",
+    },
+    {
+        icon: "/images/publication-support/art-work-preparation/S.png",
+        title: "Standard",
+        idealFor: "Research papers, scholarly articles",
+        includes: [
+            "All Basic services",
+            "Clarity improvements",
+            "Flow and readability enhancement",
+            "Adherence to journal style",
+        ],
+        turnaround: "5–7 business days",
+        cardBgColor: "#dab9e0",
+        titleColor: "#1e3a8a",
+    },
+    {
+        icon: "/images/icons/advanced.webp",
+        title: "Advanced",
+        idealFor: "High-impact journals, technical manuscripts",
+        includes: [
+            "All Standard services",
+            "Consistency checks",
+            "Reference formatting",
+            "Style guide alignment",
+            "Language refinement for scientific tone",
+        ],
+        turnaround: "7–10 business days",
+        cardBgColor: "#d8bc83",
+        titleColor: "#1e3a8a",
+    },
+    {
+        icon: "/images/editing-and-translation/pro.webp",
+        title: "Premium",
+        idealFor: "Complex, multidisciplinary manuscripts",
+        includes: [
+            "All Advanced services",
+            "Extensive structural editing",
+            "Cross-checking of data and terminology",
+            "Detailed feedback for author improvement",
+        ],
+        turnaround: "10–14 business days",
+        cardBgColor: "#d8bc83",
+        titleColor: "#1e3a8a",
     },
 ];
 
@@ -298,6 +358,17 @@ export default function CopyEditingSectionRecenPublication({
           animation: marquee 35s linear infinite;
         }
       `}</style>
+
+            <section className="bg-white">
+                <CommonPackages
+                    title="Copy Editing Services – Our Packages"
+                    description="At Pubrica, we offer tailored copy editing services to ensure your manuscript is polished, clear, and publication-ready. Our packages cater to different levels of editing needs, from basic language refinement to comprehensive editorial support. Each package is designed to improve readability, grammar, style, and formatting while maintaining the integrity of your original research."
+                    packages={packages}
+                />
+                <div className="pb-6 text-center">
+                    <GetFreeQuoteButton />
+                </div>
+            </section>
         </section>
     );
 }

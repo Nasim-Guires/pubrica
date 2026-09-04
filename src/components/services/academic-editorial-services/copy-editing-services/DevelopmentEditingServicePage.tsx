@@ -64,7 +64,7 @@ export default function DevelopmentEditingServicePage() {
           <div className="md:col-span-7 space-y-4">
             <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
               At Pubrica, our{" "}
-              <Link href="/services/editing-and-translation/manuscript-editing/" className="text-blue-600">
+              <Link href="/services/editing-and-translation/" className="text-blue-600">
                 professional copy editing services
               </Link>{" "}
               are designed to elevate the quality of your academic, scientific, and educational manuscripts. Whether you are preparing a research paper, thesis, dissertation, textbook, or curriculum document, our professional copy editors refine your content for language precision, logical flow, and formatting consistency. Our goal is to make your work publication-ready, comprehensible, and impactful, while preserving your unique voice and scientific integrity.
@@ -103,7 +103,7 @@ export default function DevelopmentEditingServicePage() {
 
             <p className="text-xs md:text-sm text-gray-600 leading-relaxed pt-2">
               With Pubrica, your work not only reads well but also meets the rigorous expectations of peer reviewers and publishers through our specialized{" "}
-              <Link href="/services/editing-and-translation/manuscript-editing/" className="text-blue-600">
+              <Link href="/services/editing-and-translation/" className="text-blue-600">
                 academic copy editing services
               </Link>{" "}
               and{" "}
@@ -120,7 +120,7 @@ export default function DevelopmentEditingServicePage() {
           {/* Right Image Section with Dark Teal Accent Box */}
           <div className="md:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md">
-              <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden border-2 border-white shadow-md">
+              <div className="relative w-full h-72 md:h-80 loverflow-hidden">
                 <Image
                   src="/images/academic-editorial-services/copy-editing-services/Refine-Your-Manuscripts-with-Professional-Copy-Editing-Services.webp"
                   alt="Professional copy editing services"

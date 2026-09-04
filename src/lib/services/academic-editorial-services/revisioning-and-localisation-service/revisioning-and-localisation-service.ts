@@ -103,43 +103,66 @@ export const revisioningAndLocalisationServiceTestimonialData = {
 
 
 export const revisioningAndLocalisationServiceFaqData = {
+
   title: "Frequently Asked Questions",
 
   faqs: [
+
     {
       question: "What is the difference between revisioning and localisation?",
       answer:
         "Revisioning is the process of refining a manuscript or document for clarity, coherence, and academic rigor. Localisation ensures that the content aligns with the linguistic, cultural, and journal-specific expectations of the target audience or region. Together, these services enhance readability, impact, and acceptance chances in peer-reviewed publications.",
+
     },
+
     {
       question: "Who can benefit from these services?",
       answer:
         "Our services cater to researchers, academicians, and professionals preparing manuscripts, theses, research reports, or grant proposals. Whether you are submitting to international journals or preparing documents for regional readership, we ensure your content is polished, precise, and contextually appropriate.",
+
     },
+
     {
       question: "Which types of documents can be revised or localised?",
-      answer:
-        "We work with a wide range of academic and scientific documents, including:\n\n• Research articles and review papers\n• Theses and dissertations\n• Conference papers and abstracts\n• Grant proposals and reports\n• Book chapters and monographs",
+      answer: "We work with a wide range of academic and scientific documents, including:",
+      points: [
+        "Research articles and review papers",
+        "Theses and dissertations",
+        "Conference papers and abstracts",
+        "Grant proposals and reports",
+        "Book chapters and monographs",
+      ],
+
     },
+
     {
       question: "Can you help if my manuscript has already been rejected?",
       answer:
         "Yes. We can revise and localise your manuscript to address reviewers’ comments, improve clarity, and enhance your chances of acceptance upon resubmission.",
+
     },
+
     {
       question: "Do you guarantee acceptance in journals?",
       answer:
         "While we cannot guarantee journal acceptance, our expert revisioning and localisation significantly improve clarity, quality, and alignment with journal standards, which increases the likelihood of positive peer review.",
+
     },
+
     {
       question: "Who handles my manuscript during revisioning and localisation?",
       answer:
         "Your manuscript is assigned to a subject-matter expert with relevant academic background and regional linguistic proficiency. Our editors have extensive experience in editing for high-impact journals and international publications.",
+
     },
+
     {
       question: "Can you help me meet journal-specific requirements?",
       answer:
         "Yes. Our experts are familiar with formatting, citation styles, and editorial standards for a wide range of international journals. We ensure your manuscript is publication-ready according to your target journal’s guidelines.",
+
     },
+
   ],
+
 };

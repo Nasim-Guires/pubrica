@@ -1,7 +1,9 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 export default function PermissionAndMetadataServices() {
@@ -44,16 +46,11 @@ export default function PermissionAndMetadataServices() {
     return (
         <article className="w-full bg-[#f4f5f5] text-gray-800 font-sans">
             {/* ------------------- HERO BANNER ------------------- */}
-            <section className="bg-[#0b3b2c] py-6 px-4 text-white text-center">
-                <div className="max-w-4xl mx-auto">
-                    <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
-                        Permission and Metadata Services
-                    </h1>
-                    <p className="text-xs md:text-sm text-emerald-100 leading-relaxed max-w-3xl mx-auto">
-                        Comprehensive support to secure content permissions and optimize metadata accuracy, ensuring your manuscript meets global publishing, indexing, and copyright compliance standards.
-                    </p>
-                </div>
-            </section>
+            <HeroBanner
+                title="Permission and Metadata Services"
+                description="Comprehensive support to secure content permissions and optimize metadata accuracy, ensuring your manuscript meets global publishing, indexing, and copyright compliance standards."
+                headingAs="h1"
+            />
 
             {/* ------------------- MAIN INTRO & DETAILS ------------------- */}
             <section className="py-6 px-4 max-w-6xl mx-auto">
@@ -68,7 +65,7 @@ export default function PermissionAndMetadataServices() {
                             In today’s competitive academic publishing landscape, ensuring that your manuscript is ethically compliant, properly licensed, and accurately indexed is just as important as high-quality content. Publishers, journals, and academic institutions are increasingly stringent about permissions, copyright usage, and metadata standards. Any oversight, such as using third-party material without permission or submitting a manuscript with incomplete metadata, can lead to delayed publication, ethical concerns, or manuscript rejection.
                         </p>
                         <p>
-                            At Pubrica, our Permission and Metadata Services are designed to safeguard your research from copyright challenges, ensure smooth <span className="text-blue-600 font-medium">journal submission</span>, and strengthen the visibility and accessibility of your academic outputs across global platforms. With our expert team of editorial specialists, rights managers, and metadata professionals, we provide end-to-end support for permissions acquisition, attribution, licensing, metadata creation, metadata structuring, and compliance documentation.
+                            At Pubrica, our Permission and Metadata Services are designed to safeguard your research from copyright challenges, ensure smooth <Link href="/services/publication-support/journal-submission/complete-guide-to-writing-cover-letter-for-medical-journals/" className="text-blue-600 font-medium">journal submission</Link>, and strengthen the visibility and accessibility of your academic outputs across global platforms. With our expert team of editorial specialists, rights managers, and metadata professionals, we provide end-to-end support for permissions acquisition, attribution, licensing, metadata creation, metadata structuring, and compliance documentation.
                         </p>
 
                         <div className="pt-2">
@@ -88,14 +85,13 @@ export default function PermissionAndMetadataServices() {
                         </div>
                     </div>
 
-                    {/* Right Column: Image with offset green border card frame */}
                     {/* Right Column: Image with Offset Dark Green Background Accent */}
                     <div className="w-full md:w-[420px] shrink-0 relative p-4">
                         {/* Dark Green Offset Background Block (shifted left and down) */}
-                        <div className="absolute inset-0 top-6 left-0 right-6 bottom-0 bg-[#0b3b2c] rounded-2xl z-0" />
+                        <div className="absolute inset-0 top-6 left-0 right-6 bottom-0 z-0" />
 
                         {/* Main Image Container (positioned slightly top-right) */}
-                        <div className="relative z-10 w-full h-[260px] rounded-2xl overflow-hidden shadow-md">
+                        <div className="relative z-10 w-full h-[260px] rounded-2xl overflow-hidden">
                             <Image
                                 src="/images/academic-editorial-services/permission-and-metadata-services/Ensure-Seamless-Publishing-Compliance-with-Pubricas-Expert-Permission-Metadata-Services.webp"
                                 alt="Permission and Metadata Services"
@@ -110,7 +106,7 @@ export default function PermissionAndMetadataServices() {
             </section>
 
             {/* ------------------- TYPES OF PERMISSION AND METADATA SERVICES ------------------- */}
-            <section className="py-6 px-4 bg-white border-t border-gray-100" aria-labelledby="types-heading">
+            <section className="py-8 px-4 sm:px-6 bg-white border-t border-gray-100" aria-labelledby="types-heading">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-10">
                         <h2 id="types-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
@@ -122,61 +118,57 @@ export default function PermissionAndMetadataServices() {
                     </div>
 
                     {/* Grid Container */}
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-6">
                         {/* Top Row: 3 Cards */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {serviceTypes.slice(0, 3).map((service, idx) => (
                                 <div
                                     key={idx}
-                                    className="bg-white rounded-lg p-5 shadow-sm border border-gray-100 relative flex items-start gap-4 min-h-[140px]"
+                                    className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 border border-slate-200/80 flex flex-col justify-between"
                                 >
-                                    <div className="relative w-12 h-12 shrink-0">
-                                        <Image
-                                            src={service.icon}
-                                            alt={service.title}
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                    <div className="flex-1 pr-3">
-                                        <h3 className="text-xs font-bold text-[#0b3b2c] mb-1.5 leading-snug">
+                                    <div>
+                                        <div className="relative w-12 h-12 mb-4 shrink-0">
+                                            <Image
+                                                src={service.icon}
+                                                alt={service.title}
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                        <h3 className="text-xs md:text-sm font-bold text-[#0b3b2c] mb-2 leading-snug">
                                             {service.title}
                                         </h3>
-                                        <p className="text-[11px] text-gray-600 leading-relaxed line-clamp-4">
+                                        <p className="text-xs text-gray-600 leading-relaxed">
                                             {service.desc}
                                         </p>
                                     </div>
-                                    {/* Right Accent Line */}
-                                    <div className="absolute right-3 top-1/2 -translate-y-1/2 w-[3px] h-10 bg-[#0b3b2c] rounded-full" />
                                 </div>
                             ))}
                         </div>
 
                         {/* Bottom Row: 2 Cards Centered */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[68%] mx-auto w-full">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto w-full">
                             {serviceTypes.slice(3, 5).map((service, idx) => (
                                 <div
                                     key={idx}
-                                    className="bg-white rounded-lg p-5 shadow-sm border border-gray-100 relative flex items-start gap-4 min-h-[140px]"
+                                    className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 border border-slate-200/80 flex flex-col justify-between"
                                 >
-                                    <div className="relative w-12 h-12 shrink-0">
-                                        <Image
-                                            src={service.icon}
-                                            alt={service.title}
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                    <div className="flex-1 pr-3">
-                                        <h3 className="text-xs font-bold text-[#0b3b2c] mb-1.5 leading-snug">
+                                    <div>
+                                        <div className="relative w-12 h-12 mb-4 shrink-0">
+                                            <Image
+                                                src={service.icon}
+                                                alt={service.title}
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                        <h3 className="text-xs md:text-sm font-bold text-[#0b3b2c] mb-2 leading-snug">
                                             {service.title}
                                         </h3>
-                                        <p className="text-[11px] text-gray-600 leading-relaxed line-clamp-4">
+                                        <p className="text-xs text-gray-600 leading-relaxed">
                                             {service.desc}
                                         </p>
                                     </div>
-                                    {/* Right Accent Line */}
-                                    <div className="absolute right-3 top-1/2 -translate-y-1/2 w-[3px] h-10 bg-[#0b3b2c] rounded-full" />
                                 </div>
                             ))}
                         </div>

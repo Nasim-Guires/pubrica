@@ -1,59 +1,108 @@
-import React from 'react';
+"use client";
+
+
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import { EditorialWorkflowSection, WorkflowStep } from '@/components/common/EditorialWorkflowSection';
+import ExpertsSection, { Expert } from '@/components/common/ExpertsSection';
+import CommonPackages, { PackageItem } from '@/components/common/CommonPackages';
+import { 
+  Menu, 
+  ChevronLeft, 
+  ChevronRight, 
+  ZoomOut, 
+  ZoomIn, 
+  RotateCw, 
+  Undo, 
+  Redo, 
+  Download, 
+  Printer, 
+  MoreVertical, 
+  MessageCircle 
+} from 'lucide-react';
 
 export default function DevelopmentEditingServicePagePackage() {
-  const steps = [
+  const [activeTab, setActiveTab] = useState('Medicine');
+  const [zoomLevel, setZoomLevel] = useState(67);
+
+  const documentPath = "/uploads/v1-Copy-Editing-Service-sample-work.pdf";
+
+  const handleZoomIn = () => {
+    setZoomLevel((prev) => Math.min(prev + 10, 200));
+  };
+
+  const handleZoomOut = () => {
+    setZoomLevel((prev) => Math.max(prev - 10, 20));
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = documentPath;
+    link.download = documentPath.split('/').pop() || 'sample-work.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handlePrint = () => {
+    const printWindow = window.open(documentPath, '_blank');
+    if (printWindow) {
+      printWindow.onload = () => {
+        printWindow.print();
+      };
+    }
+  };
+
+  const steps: WorkflowStep[] = [
     {
-      step: 1,
-      title: 'INITIAL ASSESSMENT',
-      imageSrc:
-        '/images/academic-editorial-services/development-editing-service/Initial-Assessment.png',
-      alt: 'Initial Assessment',
+      stepNumber: 1,
+      title: "INITIAL ASSESSMENT",
       description:
-        'We begin with a thorough evaluation of your manuscript to identify areas requiring improvement, such as inconsistencies, redundancies, or gaps in logic. This initial assessment forms the basis of a customized editing plan.',
+        "We begin with a thorough evaluation of your manuscript to identify areas requiring improvement, such as inconsistencies, redundancies, or gaps in logic. This initial assessment forms the basis of a customized editing plan.",
+      iconSrc:
+        "/images/academic-editorial-services/development-editing-service/Initial-Assessment.png",
+      position: "top",
     },
     {
-      step: 2,
-      title: 'CONTENT ENHANCEMENT',
-      imageSrc:
-        '/images/academic-editorial-services/development-editing-service/Content-Enhancement.png',
-      alt: 'Content Enhancement',
+      stepNumber: 2,
+      title: "CONTENT ENHANCEMENT",
       description:
         "Our editors focus on strengthening the manuscript's core message. They restructure sections, clarify hypotheses, and refine arguments to ensure that your research is presented logically and persuasively. Figures, tables, and data presentation are reviewed for accuracy and clarity.",
+      iconSrc:
+        "/images/academic-editorial-services/development-editing-service/Content-Enhancement.png",
+      position: "bottom",
     },
     {
-      step: 3,
-      title: 'LANGUAGE AND STYLE REFINEMENT',
-      imageSrc:
-        '/images/academic-editorial-services/development-editing-service/Language-and-Style-Refinement.png',
-      alt: 'Language and Style Refinement',
+      stepNumber: 3,
+      title: "LANGUAGE AND STYLE REFINEMENT",
       description:
-        'While development editing prioritizes content and structure, language quality is also crucial. Editors polish the manuscript for grammatical accuracy, sentence construction, readability, and adherence to academic style without altering your voice.',
+        "While development editing prioritizes content and structure, language quality is also crucial. Editors polish the manuscript for grammatical accuracy, sentence construction, readability, and adherence to academic style without altering your voice.",
+      iconSrc:
+        "/images/academic-editorial-services/development-editing-service/Language-and-Style-Refinement.png",
+      position: "top",
     },
     {
-      step: 4,
-      title: 'DETAILED FEEDBACK AND QUERIES',
-      imageSrc:
-        '/images/academic-editorial-services/development-editing-service/Detailed-Feedback-and-Queries.png',
-      alt: 'Detailed Feedback and Queries',
+      stepNumber: 4,
+      title: "DETAILED FEEDBACK AND QUERIES",
       description:
-        'Our editors provide a comprehensive report highlighting the changes made, suggestions for improvement, and queries that require your input. This transparent process encourages collaboration and ensures your vision remains central to the manuscript.',
+        "Our editors provide a comprehensive report highlighting the changes made, suggestions for improvement, and queries that require your input. This transparent process encourages collaboration and ensures your vision remains central to the manuscript.",
+      iconSrc:
+        "/images/academic-editorial-services/development-editing-service/Detailed-Feedback-and-Queries.png",
+      position: "bottom",
     },
     {
-      step: 5,
-      title: 'FINAL REVIEW AND APPROVAL',
-      imageSrc:
-        '/images/academic-editorial-services/development-editing-service/Final-Review-and-Approval.png',
-      alt: 'Final Review and Approval',
+      stepNumber: 5,
+      title: "FINAL REVIEW AND APPROVAL",
       description:
         "After addressing the editor's feedback, we conduct a final review to ensure the manuscript is coherent, concise, and ready for submission. By the end of this process, your research is transformed into a polished document that communicates your findings effectively and persuasively.",
+      iconSrc:
+        "/images/academic-editorial-services/development-editing-service/Final-Review-and-Approval.png",
+      position: "top",
     },
   ];
-
-
 
   const stats = [
     { value: '1,433,495+', label: 'Papers edited' },
@@ -95,6 +144,108 @@ export default function DevelopmentEditingServicePagePackage() {
       icon: '/images/academic-editorial-services/development-editing-service/Suggest-ways-to-expand-your-content-while-maintaining-quality.png',
     },
   ];
+
+  const developmentEditingPackages: PackageItem[] = [
+    {
+      icon: "/images/publication-support/poster-preparation/S.png",
+      title: "Standard Development",
+      idealFor: "Early drafts and manuscripts needing structural guidance.",
+      includes: [
+        "Comprehensive review of manuscript structure and organization",
+        "Clarity and flow improvements",
+        "Identification of gaps in argument or logic",
+        "Suggestions for paragraph and sentence-level enhancements",
+        "Feedback on readability and coherence",
+      ],
+      turnaround: "7–10 business days",
+      cardBgColor: "#c8d6d6",
+      titleColor: "#1b3b36",
+    },
+    {
+      icon: "/images/publication-support/peer-review-pre-submission/advanced.webp",
+      title: "Advanced Development",
+      idealFor:
+        "Manuscripts with strong content that require detailed refinement.",
+      includes: [
+        "Everything in the Standard package",
+        "In-depth assessment of research methodology and argumentation",
+        "Alignment with journal or publisher guidelines",
+        "Enhanced clarity, conciseness, and style improvements",
+        "Consistency check for terminology, headings, and references",
+      ],
+      turnaround: "10–14 business days",
+      cardBgColor: "#ccaacb",
+      titleColor: "#7a4988",
+    },
+    {
+      icon: "/images/editing-and-translation/translation-with-editing/pro.webp",
+      title: "Premium Development",
+      idealFor:
+        "Manuscripts intended for high-impact journals or publication.",
+      includes: [
+        "Everything in the Advanced package",
+        "Expert review for content depth, originality, and scientific accuracy",
+        "Integration of feedback from reviewers or advisors",
+        "Detailed suggestions for strengthening conclusions and discussion",
+        "Priority support and consultation with our expert editors",
+      ],
+      turnaround: "14–21 business days",
+      cardBgColor: "#c8a87b",
+      titleColor: "#714b23",
+    },
+  ];
+
+  const experts: Expert[] = [
+    {
+      id: "aarav-mehta",
+      name: "Dr. Aarav Mehta",
+      title: "PhD in Life Sciences",
+      institution: "Indian Institute of Technology, India",
+      experience: "10+ Years of Experience",
+      papersEdited: "950+ Papers Edited",
+      avatarUrl:
+        "/images/academic-editorial-services/development-editing-service/Dr.-Aarav-Mehta.png",
+      flagUrl: "/images/country/india.png",
+      bio: "Dr. Mehta specializes in comprehensive development editing, enhancing manuscript structure, logical flow, and argument clarity.",
+      expertise:
+        "Biomedical research, clinical studies, environmental sciences",
+      journals: "The Lancet, Scientific Reports, PLOS Biology",
+    },
+    {
+      id: "priya-rangan",
+      name: "Dr. Priya Rangan",
+      title: "PhD in Biochemistry",
+      institution: "University of Delhi, Delhi, India",
+      experience: "8+ Years of Experience",
+      papersEdited: "740+ Papers Edited",
+      avatarUrl:
+        "/images/academic-editorial-services/development-editing-service/Dr.-Priya-Rangan.png",
+      flagUrl: "/images/country/india.png",
+      bio: "Dr. Rangan focuses on improving manuscript coherence, conceptual depth, and research storytelling.",
+      expertise:
+        "Molecular biology, pharmacology, biotechnology",
+      journals:
+        "Nature Communications, Journal of Biological Chemistry, BMC Biology",
+    },
+    {
+      id: "rohan-verma",
+      name: "Dr. Rohan Verma",
+      title: "PhD in Neuroscience",
+      institution:
+        "All India Institute of Medical Sciences, India",
+      experience: "9+ Years of Experience",
+      papersEdited: "850+ Papers Edited",
+      avatarUrl:
+        "/images/academic-editorial-services/development-editing-service/Dr.-Rohan-Verma.png",
+      flagUrl: "/images/country/india.png",
+      bio: "Dr. Verma specializes in development editing for neuroscience and psychology manuscripts, focusing on logical flow, argument strength, and clarity of results.",
+      expertise:
+        "Neuroscience, cognitive science, behavioural studies",
+      journals:
+        "Neuron, Frontiers in Neuroscience, Brain Research",
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -173,49 +324,11 @@ export default function DevelopmentEditingServicePagePackage() {
         {/* =========================================================
             SECTION 2: How Our Development Editing Service Works (Step-by-Step)
             ========================================================= */}
-        <section className="py-6 px-4 max-w-7xl mx-auto text-center bg-gray-50/50">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b36] mb-2">
-            How Our Development Editing Service Works
-          </h2>
-          <p className="text-gray-600 mb-12 text-sm md:text-base">
-            Our Step-by-Step Process
-          </p>
-
-          {/* 5 Process Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 text-left items-stretch">
-            {steps.map((item) => (
-              <div
-                key={item.step}
-                className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm transition-all duration-300 group hover:bg-black hover:border-black relative flex flex-col justify-start"
-              >
-                {/* Step Number Badge */}
-                <div className="w-8 h-8 rounded-full bg-[#008080] text-white flex items-center justify-center font-bold text-sm mb-4 shrink-0">
-                  {item.step}
-                </div>
-
-                {/* Image Placeholder Container */}
-                <div className="relative w-full h-16 mb-4 shrink-0">
-                  <Image
-                    src={item.imageSrc}
-                    alt={item.alt}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-
-                {/* Title */}
-                <h3 className="font-bold text-sm lg:text-base mb-2 text-[#1b3b36] group-hover:text-white transition-colors duration-300">
-                  {item.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-xs text-gray-600 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <EditorialWorkflowSection
+          heading="How Our Development Editing Service Works"
+          subheading="Our Step-by-Step Process"
+          steps={steps}
+        />
         {/* =========================================================
             SECTION 3: How Our Editors Can Help You
             ========================================================= */}
@@ -249,9 +362,10 @@ export default function DevelopmentEditingServicePagePackage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
               {helpItems.map((item, index) => (
-                <div
+                <Link
                   key={index}
-                  className="p-6 bg-white border border-gray-100 rounded-xl shadow-md transition-all duration-300 group hover:bg-black hover:border-black flex items-center space-x-4 min-h-[120px]"
+                  href="/services/research-services/medical-writing/"
+                  className="p-6 bg-white border border-gray-200/80 rounded-xl shadow-xs transition-all duration-300 hover:border-[#0b3b2c] hover:shadow-md flex items-center space-x-4 min-h-[120px] group"
                 >
                   {/* Icon Placeholder Container */}
                   <div className="relative w-12 h-12 flex-shrink-0">
@@ -264,10 +378,10 @@ export default function DevelopmentEditingServicePagePackage() {
                   </div>
 
                   {/* Text Description */}
-                  <p className="text-xs md:text-sm text-gray-700 leading-snug group-hover:text-white transition-colors duration-300 font-normal">
+                  <p className="text-xs md:text-sm text-gray-700 leading-snug font-normal group-hover:text-gray-900 transition-colors">
                     {item.text}
                   </p>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -301,236 +415,128 @@ export default function DevelopmentEditingServicePagePackage() {
         {/* =========================================================
             SECTION 5: Meet Our Development Editing Experts
             ========================================================= */}
-        <section className="py-6 px-4 max-w-7xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b36] mb-8">
-            Meet Our Development Editing Experts
-          </h2>
+        <ExpertsSection
+          heading="Meet Our Development Editing Experts"
+          subheading="Our experienced development editors strengthen manuscript structure, logical flow, argument clarity, and overall research presentation to help prepare your work for publication."
+          experts={experts}
+        />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Dr. Aarav Mehta",
-                degree: "PhD in Life Sciences",
-                institute: "Indian Institute of Technology, India",
-                exp: "10+ Years of Experience",
-                papers: "950+ Papers Edited",
-                photo: "/images/academic-editorial-services/development-editing-service/Dr.-Aarav-Mehta.png",
-              },
-              {
-                name: "Dr. Priya Rangan",
-                degree: "PhD in Biochemistry",
-                institute: "University of Delhi, Delhi, India",
-                exp: "8+ Years of Experience",
-                papers: "740+ Papers Edited",
-                photo: "/images/academic-editorial-services/development-editing-service/Dr.-Priya-Rangan.png",
-              },
-              {
-                name: "Dr. Rohan Verma",
-                degree: "PhD in Neuroscience",
-                institute: "All India Institute of Medical Sciences, India",
-                exp: "9+ Years of Experience",
-                papers: "850+ Papers Edited",
-                photo: "/images/academic-editorial-services/development-editing-service/Dr.-Rohan-Verma.png",
-              }
-            ].map((expert, idx) => (
-              <div key={idx} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm text-center">
-                <div className="relative w-16 h-16 rounded-full mx-auto mb-4 overflow-hidden">
-                  <Image src={expert.photo} alt={expert.name} fill className="object-cover" sizes="64px" />
-                </div>
-                <h3 className="font-bold text-base text-[#1b3b36]">{expert.name}</h3>
-                <p className="text-xs text-gray-600 mt-1">{expert.degree}</p>
-                <p className="text-xs text-gray-500 mb-4">{expert.institute}</p>
-                <div className="text-xs font-semibold text-gray-700 border-t pt-3 mb-4">
-                  {expert.exp} | {expert.papers}
-                </div>
-                <Link href="/about-us/our-editors" className="text-xs text-blue-600 font-bold no-underline hover:no-underline">
-                  Read More
-                </Link>
+        {/* =========================================================
+            EXPLORE SAMPLE WORK SECTION (Added right after ExpertsSection)
+            ========================================================= */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white relative">
+          <div className="max-w-6xl mx-auto text-center">
+            {/* Section Header */}
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+              Explore Sample Work From Our Professional Development Editing Service
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
+              See how our expert editors help shape your manuscript&apos;s structure, strengthen your arguments, and ensure your content is coherent, compelling, and ready for publication in your target journal.
+            </p>
+
+            {/* Viewer Container Card */}
+            <div className="mt-10 bg-white border border-slate-200 rounded-2xl shadow-lg p-4 sm:p-6 text-left relative">
+              
+              {/* Tabs */}
+              <div className="flex space-x-2 border-b border-slate-200 pb-4 mb-4">
+                <button
+                  onClick={() => setActiveTab('Medicine')}
+                  className={`px-5 py-2 rounded-lg font-medium text-sm transition-colors ${
+                    activeTab === 'Medicine'
+                      ? 'bg-blue-100 text-blue-700 border border-blue-200'
+                      : 'text-slate-600 hover:bg-slate-100'
+                  }`}
+                >
+                  Medicine
+                </button>
               </div>
-            ))}
+
+              {/* Document Viewer Mockup */}
+              <div className="border border-slate-300 rounded-lg overflow-hidden bg-slate-900 shadow-inner">
+                
+                {/* Toolbar */}
+                <div className="bg-slate-800 text-slate-300 px-4 py-2.5 flex items-center justify-between text-sm flex-wrap gap-2">
+                  <div className="flex items-center space-x-3">
+                    <button className="p-1.5 hover:bg-slate-700 rounded"><Menu size={18} /></button>
+                    <span className="font-medium text-white truncate max-w-[150px] sm:max-w-xs">v1-Journal Selectio...</span>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2">
+                    <button className="p-1 hover:bg-slate-700 rounded"><ChevronLeft size={16} /></button>
+                    <span className="bg-slate-900 px-2.5 py-1 rounded text-xs font-mono text-white">1 / 1</span>
+                    <button className="p-1 hover:bg-slate-700 rounded"><ChevronRight size={16} /></button>
+                    <div className="h-4 w-[1px] bg-slate-700 mx-1"></div>
+                    <button onClick={handleZoomOut} className="p-1.5 hover:bg-slate-700 rounded"><ZoomOut size={16} /></button>
+                    <span className="text-xs font-mono">{zoomLevel}%</span>
+                    <button onClick={handleZoomIn} className="p-1.5 hover:bg-slate-700 rounded"><ZoomIn size={16} /></button>
+                    <button className="p-1.5 hover:bg-slate-700 rounded"><RotateCw size={16} /></button>
+                  </div>
+
+                  <div className="flex items-center space-x-2">
+                    <button className="p-1.5 hover:bg-slate-700 rounded"><Undo size={16} /></button>
+                    <button className="p-1.5 hover:bg-slate-700 rounded"><Redo size={16} /></button>
+                    <div className="h-4 w-[1px] bg-slate-700 mx-1"></div>
+                    <button onClick={handleDownload} className="p-1.5 hover:bg-slate-700 rounded" title="Download Document"><Download size={16} /></button>
+                    <button onClick={handlePrint} className="p-1.5 hover:bg-slate-700 rounded" title="Print Document"><Printer size={16} /></button>
+                    <button className="p-1.5 hover:bg-slate-700 rounded"><MoreVertical size={16} /></button>
+                  </div>
+                </div>
+
+                {/* Viewer Workspace */}
+                <div className="flex bg-slate-900 h-[480px] overflow-hidden">
+                  
+                  {/* Thumbnail Sidebar */}
+                  <div className="w-48 bg-slate-950 p-4 border-r border-slate-800 flex flex-col items-center justify-start hidden sm:flex">
+                    <div className="bg-white p-2 rounded shadow border border-slate-700 w-28 h-36 flex flex-col items-center justify-between">
+                      <div className="w-full h-full bg-slate-100 flex flex-col p-1 space-y-1">
+                        <div className="w-full h-2 bg-slate-300 rounded"></div>
+                        <div className="w-3/4 h-1.5 bg-slate-200 rounded"></div>
+                        <div className="w-full h-1.5 bg-slate-200 rounded"></div>
+                        <div className="w-5/6 h-1.5 bg-slate-200 rounded"></div>
+                      </div>
+                    </div>
+                    <span className="text-xs text-slate-400 mt-2 font-mono">1</span>
+                  </div>
+
+                  {/* Main Document Text Area with Real Embedded PDF or Fallback */}
+                  <div className="flex-1 bg-white relative overflow-hidden flex flex-col">
+                    <iframe
+                      src={`${documentPath}#zoom=${zoomLevel}`}
+                      className="w-full h-full border-0"
+                      title="Sample Work Document"
+                    />
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          {/* Floating WhatsApp Button */}
+          <div className="fixed bottom-6 left-6 z-50">
+            <a 
+              href="https://whatsapp.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-emerald-500 hover:bg-emerald-600 text-white p-3.5 rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
+              aria-label="Chat on WhatsApp"
+            >
+              <MessageCircle size={28} fill="white" />
+            </a>
           </div>
         </section>
 
         {/* =========================================================
             SECTION 6: Explore Sample Work & Packages
             ========================================================= */}
-        <section className="py-6 px-4 max-w-7xl mx-auto text-center">
-          {/* Header Titles */}
-          <h3 className="text-2xl md:text-3xl font-bold text-[#1b3b36] mb-3">
-            Development Editing Services – Our Packages
-          </h3>
-          <p className="text-gray-600 text-sm max-w-3xl mx-auto mb-12">
-            Explore our comprehensive Development Editing packages designed to strengthen your manuscript's structure, flow, and overall narrative quality. Each package is tailored to address the unique needs of authors, ensuring clarity, coherence, and impactful presentation at every stage of writing.
-          </p>
-
-          {/* 3 Pricing / Service Packages Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left items-stretch">
-
-            {/* Card 1: Standard Development */}
-            <div className="bg-[#c8d6d6] rounded-xl shadow-lg overflow-hidden flex flex-col border border-gray-200/50">
-              {/* Header */}
-              <div className="bg-white p-5 border-b border-gray-100 flex items-center space-x-3">
-                <div className="relative w-12 h-12 flex-shrink-0">
-                  <Image
-                    src="/images/publication-support/poster-preparation/S.png"
-                    alt="Standard"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <h4 className="font-bold text-xl text-[#1b3b36]">
-                  Standard Development
-                </h4>
-              </div>
-
-              {/* Body */}
-              <div className="p-6 flex-1 flex flex-col justify-between text-gray-800">
-                <div className="space-y-6">
-                  {/* Ideal For */}
-                  <div className="flex items-start space-x-3">
-                    <span className="text-black text-lg leading-none mt-0.5">➔</span>
-                    <p className="text-sm font-semibold leading-snug">
-                      Ideal For: <span className="font-normal">Early drafts and manuscripts needing structural guidance.</span>
-                    </p>
-                  </div>
-
-                  {/* Includes */}
-                  <div>
-                    <div className="flex items-center space-x-3 mb-4">
-                      <span className="text-black text-lg leading-none">➔</span>
-                      <p className="text-sm font-bold">Includes:</p>
-                    </div>
-                    <ul className="pl-8 space-y-3 text-xs md:text-sm font-medium text-gray-800 leading-relaxed">
-                      <li>Comprehensive review of manuscript structure and organization</li>
-                      <li>Clarity and flow improvements</li>
-                      <li>Identification of gaps in argument or logic</li>
-                      <li>Suggestions for paragraph and sentence-level enhancements</li>
-                      <li>Feedback on readability and coherence</li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Turnaround */}
-                <div className="flex items-center space-x-3 pt-8 mt-6">
-                  <span className="text-black text-lg leading-none">➔</span>
-                  <p className="text-sm font-bold text-gray-900">
-                    Turnaround : <span className="font-semibold">7–10 business days</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2: Advanced Development */}
-            <div className="bg-[#ccaacb] rounded-xl shadow-lg overflow-hidden flex flex-col border border-gray-200/50">
-              {/* Header */}
-              <div className="bg-white p-5 border-b border-gray-100 flex items-center space-x-3">
-                <div className="relative w-12 h-12 flex-shrink-0">
-                  <Image
-                    src="/images/publication-support/peer-review-pre-submission/advanced.webp"
-                    alt="Advanced"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <h4 className="font-bold text-xl text-[#7a4988]">
-                  Advanced Development
-                </h4>
-              </div>
-
-              {/* Body */}
-              <div className="p-6 flex-1 flex flex-col justify-between text-gray-800">
-                <div className="space-y-6">
-                  {/* Ideal For */}
-                  <div className="flex items-start space-x-3">
-                    <span className="text-black text-lg leading-none mt-0.5">➔</span>
-                    <p className="text-sm font-semibold leading-snug">
-                      Ideal For: <span className="font-normal">Manuscripts with strong content that require detailed refinement.</span>
-                    </p>
-                  </div>
-
-                  {/* Includes */}
-                  <div>
-                    <div className="flex items-center space-x-3 mb-4">
-                      <span className="text-black text-lg leading-none">➔</span>
-                      <p className="text-sm font-bold">Includes:</p>
-                    </div>
-                    <ul className="pl-8 space-y-3 text-xs md:text-sm font-medium text-gray-800 leading-relaxed">
-                      <li>Everything in the Standard package</li>
-                      <li>In-depth assessment of research methodology and argumentation</li>
-                      <li>Alignment with journal or publisher guidelines</li>
-                      <li>Enhanced clarity, conciseness, and style improvements</li>
-                      <li>Consistency check for terminology, headings, and references</li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Turnaround */}
-                <div className="flex items-center space-x-3 pt-8 mt-6">
-                  <span className="text-black text-lg leading-none">➔</span>
-                  <p className="text-sm font-bold text-gray-900">
-                    Turnaround : <span className="font-semibold">10–14 business days</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3: Premium Development */}
-            <div className="bg-[#c8a87b] rounded-xl shadow-lg overflow-hidden flex flex-col border border-gray-200/50">
-              {/* Header */}
-              <div className="bg-white p-5 border-b border-gray-100 flex items-center space-x-3">
-                <div className="relative w-12 h-12 flex-shrink-0">
-                  <Image
-                    src="/images/editing-and-translation/translation-with-editing/pro.webp"
-                    alt="Premium"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <h4 className="font-bold text-xl text-[#714b23]">
-                  Premium Development
-                </h4>
-              </div>
-
-              {/* Body */}
-              <div className="p-6 flex-1 flex flex-col justify-between text-gray-800">
-                <div className="space-y-6">
-                  {/* Ideal For */}
-                  <div className="flex items-start space-x-3">
-                    <span className="text-black text-lg leading-none mt-0.5">➔</span>
-                    <p className="text-sm font-semibold leading-snug">
-                      Ideal For: <span className="font-normal">Manuscripts intended for high-impact journals or publication.</span>
-                    </p>
-                  </div>
-
-                  {/* Includes */}
-                  <div>
-                    <div className="flex items-center space-x-3 mb-4">
-                      <span className="text-black text-lg leading-none">➔</span>
-                      <p className="text-sm font-bold">Includes:</p>
-                    </div>
-                    <ul className="pl-8 space-y-3 text-xs md:text-sm font-medium text-gray-800 leading-relaxed">
-                      <li>Everything in the Advanced package</li>
-                      <li>Expert review for content depth, originality, and scientific accuracy</li>
-                      <li>Integration of feedback from reviewers or advisors</li>
-                      <li>Detailed suggestions for strengthening conclusions and discussion</li>
-                      <li>Priority support and consultation with our expert editors</li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Turnaround */}
-                <div className="flex items-center space-x-3 pt-8 mt-6">
-                  <span className="text-black text-lg leading-none">➔</span>
-                  <p className="text-sm font-bold text-gray-900">
-                    Turnaround: <span className="font-semibold">14–21 business days</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-        <GetFreeQuoteButton/>
+        <CommonPackages
+          title="Development Editing Services – Our Packages"
+          description="Explore our comprehensive Development Editing packages designed to strengthen your manuscript's structure, flow, and overall narrative quality. Each package is tailored to address the unique needs of authors, ensuring clarity, coherence, and impactful presentation at every stage of writing."
+          packages={developmentEditingPackages}
+        />
+        <GetFreeQuoteButton />
 
       </main>
     </>

@@ -1,7 +1,9 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
@@ -66,68 +68,77 @@ export default function ForensicAndQualityAuditService() {
   return (
     <article className="w-full bg-white text-gray-800 font-sans">
       {/* ------------------- HERO BANNER SECTION ------------------- */}
-      <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
-        <div className="max-w-4xl mx-auto border border-white/20 p-8 rounded">
-          <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
-            Forensic & Quality Audit Services
-          </h1>
-          <p className="text-xs md:text-sm text-emerald-100 leading-relaxed max-w-3xl mx-auto">
-            At Pubrica, we provide meticulous forensic and quality audits designed to detect inconsistencies, ensure transparency, and uphold the highest ethical and technical standards in scholarly publishing.
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Forensic & Quality Audit Services"
+        description="At Pubrica, we provide meticulous forensic and quality audits designed to detect inconsistencies, ensure transparency, and uphold the highest ethical and technical standards in scholarly publishing."
+        headingAs="h1"
+      />
 
       {/* ------------------- INTRODUCTION & AUDIT FUNCTIONS SECTION ------------------- */}
-      <section className="py-6 px-4 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          {/* Left Side: Headings, Descriptive Paragraphs, Bullet Points, and Button */}
-          <div className="text-left">
-            <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-4">
-              Strengthen Integrity. Ensure Compliance. Safeguard Research Credibility.
-            </h2>
-            <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-4">
+      <section className="py-12 px-6 max-w-6xl mx-auto">
+        <h2 className="text-xl md:text-2xl font-bold text-[#0e2a22] mb-5 leading-tight">
+          Strengthen Integrity. Ensure Compliance. Safeguard Research Credibility.
+        </h2>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* Left Side Content & Bullet Points */}
+          <div className="lg:col-span-7 text-xs md:text-sm text-gray-700 space-y-4 leading-relaxed">
+            <p>
               In today’s evolving research and publication landscape, maintaining the accuracy, integrity, and authenticity of scholarly content is more important than ever. Academic institutions, researchers, publishers, and corporate organisations face increasing scrutiny related to data validity, scientific misconduct, plagiarism, duplication, authorship issues, reporting transparency, and compliance with global publishing standards. Even unintentional errors can undermine the reliability of research, damage reputations, and hinder publication success.
             </p>
-            <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-6">
-              Pubrica’s <span className="text-[#0b3b2c] font-medium">Forensic and Quality Audit Service</span> is crafted to ensure that your manuscript, dataset, visuals, or documentation meets the highest benchmarks of academic integrity and quality control. Our expert team performs deep-level examinations, evaluating data accuracy, image authenticity, methodology reporting, compliance with journal guidelines, and alignment with industry standards such as COPE, ICMJE, CONSORT, PRISMA, GCP, GLP, and ISO-based frameworks.
+
+            <p>
+              Pubrica’s{' '}
+              <Link
+                href="/services/academic-editorial-services/forensic-and-quality-audit-service/forensic-audit-complete-guide/"
+                className="text-blue-600"
+              >
+                Forensic and Quality Audit Service
+              </Link>{' '}
+              is crafted to ensure that your manuscript, dataset, visuals, or documentation meets the highest benchmarks of academic integrity and quality control. Our expert team performs deep-level examinations, evaluating data accuracy, image authenticity, methodology reporting, compliance with journal guidelines, and alignment with industry standards such as COPE, ICMJE, CONSORT, PRISMA, GCP, GLP, and ISO-based frameworks.
             </p>
 
-            <h3 className="text-sm font-bold text-gray-900 mb-4">
+            <p className="font-bold text-black pt-2">
               Our service integrates two powerful audit functions:
-            </h3>
-            <ul className="space-y-3 mb-8">
+            </p>
+
+            <ul className="space-y-3 pt-1 text-gray-700">
               {auditFunctions.map((fn, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <span className="text-red-600 font-bold mt-0.5">▪</span>
-                  <p className="text-xs text-gray-700 leading-relaxed">
-                    <strong className="text-gray-900">{fn.title}</strong> {fn.description}
+                <li key={idx} className="flex items-start gap-2.5">
+                  <span className="text-red-500 font-bold select-none">•</span>
+                  <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
+                    {fn.title.replace(/:$/, '')}: {fn.description}
                   </p>
                 </li>
               ))}
             </ul>
 
-            <div>
+            <div className="pt-4">
               <GetFreeQuoteButton />
             </div>
           </div>
 
-          {/* Right Side: Image Box */}
-          <div className="relative flex justify-end">
-            <div className="bg-[#0b3b2c] p-6 rounded-2xl w-full max-w-md min-h-[320px] relative flex items-center justify-center shadow-md">
-              <div className="absolute right-4 w-[90%] h-[85%] rounded-xl overflow-hidden shadow-lg">
+          {/* Right Side Image Container with Offset Dark Green Layer */}
+          <div className="lg:col-span-5 relative mt-4 lg:mt-0">
+            <div className="relative w-full aspect-[4/3] max-w-[440px] mx-auto">
+              {/* Offset Dark Green Frame Layer */}
+              <div className="absolute inset-0 rounded-2xl transform -translate-x-5 translate-y-5"></div>
+
+              {/* Main Image Overlay */}
+              <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 <Image
                   src="/images/academic-editorial-services/forensic-and-quality-audit-service/Forensic-Quality-Audit-Services.webp"
                   alt="Forensic and Quality Audit Services"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  priority
                 />
               </div>
             </div>
           </div>
         </div>
-      </section>
-
+      </section>  
       {/* ------------------- TYPES OF FORENSIC AND QUALITY AUDIT SERVICES WE OFFER ------------------- */}
       <section className="py-6 px-4 bg-[#f8faf9] border-y border-gray-100" aria-labelledby="types-heading">
         <div className="max-w-6xl mx-auto text-center">

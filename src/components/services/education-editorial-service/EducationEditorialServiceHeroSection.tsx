@@ -1,6 +1,7 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
 import Image from 'next/image';
 import React, { useState } from 'react';
 
@@ -14,7 +15,7 @@ export default function EducationEditorialServiceHeroSection() {
     // State to handle hover for the "Our Services" grid cards (defaulting to null so none are black by default)
     const [hoveredServiceCard, setHoveredServiceCard] = useState<number | null>(null);
 
-    
+
     const servicesList = [
         {
             title: 'Accessibility Compliance',
@@ -46,16 +47,11 @@ export default function EducationEditorialServiceHeroSection() {
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
             {/* ------------------- HERO BANNER ------------------- */}
-            <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
-                <div className="max-w-4xl mx-auto border border-emerald-700/60 p-8 rounded-lg bg-[#0b3b2c]/80 shadow-inner">
-                    <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
-                        Education Editorial Services
-                    </h1>
-                    <p className="text-xs md:text-sm text-emerald-100 leading-relaxed max-w-3xl mx-auto">
-                        Enhance the clarity, quality, and credibility of your educational manuscripts, theses, books, and academic resources with Pubrica&apos;s specialized editorial support.
-                    </p>
-                </div>
-            </section>
+            <HeroBanner
+                title="Education Editorial Services"
+                description="Enhance the clarity, quality, and credibility of your educational manuscripts, theses, books, and academic resources with Pubrica's specialized editorial support."
+                headingAs="h1"
+            />
 
             {/* ------------------- DRIVING ACADEMIC QUALITY SECTION ------------------- */}
             <section className="py-6 px-4 max-w-6xl mx-auto">
@@ -87,10 +83,10 @@ export default function EducationEditorialServiceHeroSection() {
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-full max-w-md h-72">
                             {/* Dark Green Offset Card (Bottom-Left) */}
-                            <div className="absolute -bottom-4 -left-4 w-full h-full bg-[#0b3b2c] rounded-2xl" />
+                            <div className="absolute -bottom-4 -left-4 w-full h-full rounded-2xl" />
 
                             {/* Foreground Image Card */}
-                            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-md">
+                            <div className="relative w-full h-full rounded-2xl overflow-hidden">
                                 <Image
                                     src="/images/education-editorial-service/Driving-Academic-Quality-Through-Expert-Education-Editorial-Services.webp"
                                     alt="Driving Academic Quality Through Expert Education Editorial Services"
@@ -118,61 +114,61 @@ export default function EducationEditorialServiceHeroSection() {
                     </div>
 
                     {/* Services Cards Layout (3 top, 2 bottom) */}
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-4">
                         {/* Top Row: 3 Cards */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             {servicesList.slice(0, 3).map((service, idx) => (
                                 <div
                                     key={idx}
-                                    className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 relative flex items-start gap-4 min-h-[130px]"
+                                    className="bg-white rounded-xl p-4 shadow-xs border border-gray-100 relative flex items-start gap-3 transition-all duration-300 hover:shadow-sm hover:border-[#0b3b2c]"
                                 >
-                                    <div className="relative w-12 h-12 shrink-0">
+                                    <div className="relative w-10 h-10 shrink-0 bg-gray-50 rounded-lg p-2 flex items-center justify-center border border-gray-100">
                                         <Image
                                             src={service.icon}
                                             alt={service.title}
                                             fill
-                                            className="object-contain"
+                                            className="object-contain p-1"
                                         />
                                     </div>
                                     <div className="flex-1 pr-3 text-left">
-                                        <h3 className="text-xs md:text-sm font-bold text-gray-900 mb-1.5 leading-snug">
+                                        <h3 className="text-xs font-bold text-gray-900 mb-1 leading-snug">
                                             {service.title}
                                         </h3>
-                                        <p className="text-[11px] text-gray-600 leading-relaxed line-clamp-3">
+                                        <p className="text-[11px] text-gray-600 leading-snug">
                                             {service.desc}
                                         </p>
                                     </div>
                                     {/* Vertical Green Accent Line */}
-                                    <div className="absolute right-3 top-1/2 -translate-y-1/2 w-[3px] h-10 bg-[#0b3b2c] rounded-full" />
+                                    <div className="absolute right-3 top-1/2 -translate-y-1/2 w-[2px] h-8 bg-[#0b3b2c] rounded-full" />
                                 </div>
                             ))}
                         </div>
 
                         {/* Bottom Row: 2 Cards */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             {servicesList.slice(3, 5).map((service, idx) => (
                                 <div
                                     key={idx + 3}
-                                    className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 relative flex items-start gap-4 min-h-[130px]"
+                                    className="bg-white rounded-xl p-4 shadow-xs border border-gray-100 relative flex items-start gap-3 transition-all duration-300 hover:shadow-sm hover:border-[#0b3b2c]"
                                 >
-                                    <div className="relative w-12 h-12 shrink-0">
+                                    <div className="relative w-10 h-10 shrink-0 bg-gray-50 rounded-lg p-2 flex items-center justify-center border border-gray-100">
                                         <Image
                                             src={service.icon}
                                             alt={service.title}
                                             fill
-                                            className="object-contain"
+                                            className="object-contain p-1"
                                         />
                                     </div>
                                     <div className="flex-1 pr-3 text-left">
-                                        <h3 className="text-xs md:text-sm font-bold text-gray-900 mb-1.5 leading-snug">
+                                        <h3 className="text-xs font-bold text-gray-900 mb-1 leading-snug">
                                             {service.title}
                                         </h3>
-                                        <p className="text-[11px] text-gray-600 leading-relaxed line-clamp-3">
+                                        <p className="text-[11px] text-gray-600 leading-snug">
                                             {service.desc}
                                         </p>
                                     </div>
                                     {/* Vertical Green Accent Line */}
-                                    <div className="absolute right-3 top-1/2 -translate-y-1/2 w-[3px] h-10 bg-[#0b3b2c] rounded-full" />
+                                    <div className="absolute right-3 top-1/2 -translate-y-1/2 w-[2px] h-8 bg-[#0b3b2c] rounded-full" />
                                 </div>
                             ))}
                         </div>

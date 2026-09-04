@@ -1,6 +1,7 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -73,16 +74,11 @@ export default function DevelopmentEditingServiceComplete() {
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
             {/* ------------------- HERO BANNER ------------------- */}
-            <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
-                <div className="max-w-4xl mx-auto">
-                    <h1 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
-                        Development Editing Services
-                    </h1>
-                    <p className="text-xs md:text-sm text-emerald-100 leading-relaxed max-w-3xl mx-auto">
-                        Designed for SCI journal publication, our Development Editing service offers extensive content enhancement and comprehensive journal revision support.
-                    </p>
-                </div>
-            </section>
+            <HeroBanner
+                title="Development Editing Services"
+                description="Designed for SCI journal publication, our Development Editing service offers extensive content enhancement and comprehensive journal revision support."
+                headingAs="h1"
+            />
 
             {/* ------------------- MAIN INTRO & KEY ASPECTS SECTION ------------------- */}
             <section className="py-6 px-4 max-w-6xl mx-auto">
@@ -100,7 +96,7 @@ export default function DevelopmentEditingServiceComplete() {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-8">
                     <div className="md:col-span-7 space-y-4 text-xs md:text-sm text-gray-700 leading-relaxed">
                         <p>
-                            Development editing, also known as substantive or structural editing, is a comprehensive approach that focuses on the overall content and organization of a manuscript. Unlike <Link href="/services/academic-editorial-services/copy-editing-services" className="text-blue-600 no-underline hover:no-underline">copy editing services</Link>, which address grammar, punctuation, and formatting, development editing delves deeper into the logic, structure, and presentation of ideas. It ensures that your manuscript tells a clear, coherent story, aligns with the target audience&apos;s expectations, and meets the rigorous standards of scholarly publication.
+                            Development editing, also known as substantive or structural editing, is a comprehensive approach that focuses on the overall content and organization of a manuscript. Unlike <Link href="/services/editing-and-translation/" className="text-blue-600 no-underline hover:no-underline">copy editing services</Link>, which address grammar, punctuation, and formatting, development editing delves deeper into the logic, structure, and presentation of ideas. It ensures that your manuscript tells a clear, coherent story, aligns with the target audience&apos;s expectations, and meets the rigorous standards of scholarly publication.
                         </p>
                         <p>
                             At Pubrica, we understand that publishing high-quality research requires more than just groundbreaking findings; it demands clear, coherent, and compelling writing. Our development editing service is meticulously designed for researchers, academicians, and scholars who aim to transform their manuscripts into polished, publication-ready documents that resonate with reviewers, readers, and the global scientific community.
@@ -111,10 +107,10 @@ export default function DevelopmentEditingServiceComplete() {
                     <div className="md:col-span-5 relative flex justify-end pl-6 pb-6 pt-2">
                         <div className="relative w-full max-w-md h-[240px]">
                             {/* Dark Green Background Box (Extends Left & Down) */}
-                            <div className="absolute top-6 -left-6 right-2 -bottom-4 bg-[#0b3b2c] rounded-2xl z-0" />
+                            <div className="absolute top-6 -left-6 right-2 rounded-2xl z-0" />
 
                             {/* Main Image Container */}
-                            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-md z-10">
+                            <div className="relative w-full h-full rounded-2xl overflow-hidden z-10">
                                 <Image
                                     src="/images/academic-editorial-services/development-editing-service/Enhance-Clarity-Improve-Your-Manuscript-with-Expert-Development-Editing-Services.webp"
                                     alt="Development Editing Services"

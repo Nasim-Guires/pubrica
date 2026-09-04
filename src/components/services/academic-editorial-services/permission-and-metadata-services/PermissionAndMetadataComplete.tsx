@@ -1,6 +1,9 @@
 'use client';
 
+import CommonPackages, { PackageItem } from '@/components/common/CommonPackages';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import { PubricaSampleWorkCard } from '@/components/common/PubricaSampleWorkCardProps';
+import ServiceBanner from '@/components/common/ServiceBanner';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -71,77 +74,71 @@ export default function PermissionAndMetadataComplete() {
             iconSrc: '/images/academic-editorial-services/permission-and-metadata-services/Make-large-word-count-cuts-without-compromising-clarity-1.png',
         },
     ];
-    const packages = [
+    const packages: PackageItem[] = [
         {
-            badgeSrc: '/images/editing-and-translation/basic-pacakge.png',
-            title: 'Basic',
-            titleColor: 'text-[#0b3b2c]',
-            cardBg: 'bg-[#cbe0de]',
-            headerBg: 'bg-white',
-            idealFor: 'Authors and small research teams with limited permissions needs.',
-            includesHeader: 'Includes:',
-            included: [
-                'Manuscript audit to identify copyrighted material.',
-                'Permissions assessment for images, tables, figures, and charts.',
-                'Guidance on public domain and fair-use items.',
-                'Creation of basic metadata records.',
+            icon: "/images/editing-and-translation/basic-pacakge.png",
+            title: "Basic",
+            idealFor:
+                "Authors and small research teams with limited permissions needs.",
+            includes: [
+                "Manuscript audit to identify copyrighted material.",
+                "Permissions assessment for images, tables, figures, and charts.",
+                "Guidance on public domain and fair-use items.",
+                "Creation of basic metadata records.",
             ],
-            turnaround: '5–7 business days.',
+            turnaround: "5–7 business days.",
+            cardBgColor: "#cbe0de",
+            titleColor: "#0b3b2c",
         },
         {
-            badgeSrc: '/images/publication-support/poster-preparation/S.png',
-            title: 'Standard',
-            titleColor: 'text-[#8b5cf6]',
-            cardBg: 'bg-[#d8c5e6]',
-            headerBg: 'bg-white',
-            idealFor: 'Researchers, thesis authors, and small publishers.',
-            includesHeader: 'Includes everything in Basic, plus:',
-            included: [
-                'Drafting and sending permission requests to copyright holders.',
-                'Follow-up and tracking of permissions until approval.',
-                'Metadata optimization for indexing and discoverability.',
+            icon: "/images/publication-support/poster-preparation/S.png",
+            title: "Standard",
+            idealFor: "Researchers, thesis authors, and small publishers.",
+            includes: [
+                "Includes everything in Basic, plus:",
+                "Drafting and sending permission requests to copyright holders.",
+                "Follow-up and tracking of permissions until approval.",
+                "Metadata optimization for indexing and discoverability.",
             ],
-            turnaround: '7–10 business days.',
+            turnaround: "7–10 business days.",
+            cardBgColor: "#d8c5e6",
+            titleColor: "#8b5cf6",
         },
         {
-            badgeSrc: '/images/editing-and-translation/translation-with-editing/pro.webp',
-            title: 'Premium',
-            titleColor: 'text-[#854d0e]',
-            cardBg: 'bg-[#d8be8a]',
-            headerBg: 'bg-white',
-            idealFor: 'Large publishers, journals, and research institutions.',
-            includesHeader: 'Includes everything in Standard, plus:',
-            included: [
-                'Comprehensive rights management for complex materials.',
-                'Licensing fee negotiations and cost tracking.',
-                'Detailed metadata creation with DOI, ORCID, and other identifiers.',
-                'Submission-ready package for journals and publishers.',
+            icon:
+                "/images/editing-and-translation/translation-with-editing/pro.webp",
+            title: "Premium",
+            idealFor: "Large publishers, journals, and research institutions.",
+            includes: [
+                "Includes everything in Standard, plus:",
+                "Comprehensive rights management for complex materials.",
+                "Licensing fee negotiations and cost tracking.",
+                "Detailed metadata creation with DOI, ORCID, and other identifiers.",
+                "Submission-ready package for journals and publishers.",
             ],
-            turnaround: '10–14 business days.',
+            turnaround: "10–14 business days.",
+            cardBgColor: "#d8be8a",
+            titleColor: "#854d0e",
         },
     ];
 
     return (
         <article className="w-full bg-white text-gray-800 font-sans">
             {/* ------------------- HERO BANNER ------------------- */}
-            <section className="bg-[#0b3b2c] py-7 px-4 text-white text-center">
-                <div className="max-w-4xl mx-auto">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-3 tracking-wide">
-                        Permission & Metadata Services at Pubrica
-                    </h2>
-                    <p className="text-xs md:text-sm text-emerald-100 leading-relaxed max-w-3xl mx-auto">
-                        Our experts ensure your manuscript meets all copyright, licensing, and metadata standards by securing required permissions and creating accurate, optimized metadata, making your submission fully compliant and seamlessly publication-ready.
-                    </p>
-                </div>
-            </section>
+            <ServiceBanner
+                imageSrc="/images/publication-support/Satisfaction_Guarantee.webp"
+                imageAlt="100% Satisfaction Guarantee"
+                heading="Permission & Metadata Services at Pubrica"
+                description="Our experts ensure your manuscript meets all copyright, licensing, and metadata standards by securing required permissions and creating accurate, optimized metadata, making your submission fully compliant and seamlessly publication-ready."
+            />
 
             {/* ------------------- STEP BY STEP PROCESS ------------------- */}
-            <section className="py-6 px-4 max-w-6xl mx-auto text-center" aria-labelledby="process-heading">
+            <section className="py-10 px-4 sm:px-6 max-w-6xl mx-auto text-center" aria-labelledby="process-heading">
                 <h2 id="process-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-2">
                     How Our Permission and Metadata Service Works
                 </h2>
                 <h3 className="text-xs md:text-sm font-bold text-gray-700 mb-2">Our Step-by-Step Process</h3>
-                <p className="text-xs md:text-sm text-gray-600 leading-relaxed max-w-4xl mx-auto mb-12">
+                <p className="text-xs md:text-sm text-gray-600 leading-relaxed max-w-4xl mx-auto mb-10">
                     Our Permission & Metadata Service ensures your manuscript is fully compliant with copyright, licensing, and publisher requirements. We audit your content, secure all necessary reuse rights, and create optimized metadata that enhances discoverability and supports a seamless submission process.
                 </p>
 
@@ -150,14 +147,14 @@ export default function PermissionAndMetadataComplete() {
                     {processSteps.map((step) => (
                         <div
                             key={step.num}
-                            className={`p-6 rounded-lg border bg-white border-gray-200 shadow-sm flex flex-col justify-between`}
+                            className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs flex flex-col justify-between"
                         >
                             <div>
-                                <div className="w-8 h-8 rounded-full bg-[#0b3b2c] text-white flex items-center justify-center font-bold text-xs mb-3">
+                                <div className="w-8 h-8 rounded-full bg-[#0b3b2c] text-white flex items-center justify-center font-bold text-xs mb-4">
                                     {step.num}
                                 </div>
-                                <h4 className="text-xs font-bold text-gray-900 mb-2">{step.title}</h4>
-                                <p className="text-[11px] text-gray-600 leading-relaxed whitespace-pre-line">
+                                <h4 className="text-xs md:text-sm font-bold text-[#0b3b2c] mb-2 leading-snug">{step.title}</h4>
+                                <p className="text-xs text-gray-600 leading-relaxed whitespace-pre-line">
                                     {step.desc}
                                 </p>
                             </div>
@@ -178,30 +175,34 @@ export default function PermissionAndMetadataComplete() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
                         {whyChooseCards.map((card, idx) => {
-                            // First card (index 0) has NO hover effect.
-                            // The second card (index 1 - "Comprehensive Solutions") has hover effect by default.
-                            const isFirstCard = idx === 0;
                             const isHovered = hoveredCard === idx;
 
                             return (
                                 <div
                                     key={idx}
-                                    onMouseEnter={() => !isFirstCard && setHoveredCard(idx)}
-                                    onMouseLeave={() => !isFirstCard && setHoveredCard(null)}
-                                    className={`p-6 rounded-xl border transition-all duration-300 bg-white ${isFirstCard
-                                        ? 'border-gray-200 shadow-sm'
-                                        : isHovered
-                                            ? 'border-[#0b3b2c] shadow-lg scale-105 bg-emerald-50/40'
-                                            : 'border-gray-200 shadow-sm'
+                                    onMouseEnter={() => setHoveredCard(idx)}
+                                    onMouseLeave={() => setHoveredCard(null)}
+                                    className={`p-6 rounded-xl border transition-all duration-300 bg-white flex flex-col justify-between ${isHovered
+                                        ? 'border-[#0b3b2c] shadow-lg scale-105 bg-emerald-50/40'
+                                        : 'border-gray-200 shadow-sm'
                                         }`}
                                 >
-                                    <div className="relative w-10 h-10 rounded-full bg-emerald-100 mb-4 overflow-hidden">
-                                        {card.iconSrc ? (
-                                            <Image src={card.iconSrc} alt="" fill className="object-contain p-1" />
-                                        ) : null}
+                                    <div>
+                                        <div className="relative w-10 h-10 rounded-full bg-emerald-100 mb-4 overflow-hidden">
+                                            {card.iconSrc ? (
+                                                <Image src={card.iconSrc} alt="" fill className="object-contain p-1" />
+                                            ) : null}
+                                        </div>
+                                        <h3 className="text-xs font-bold text-gray-900 mb-2">
+                                            <Link
+                                                href="/services/research-services/medical-writing/"
+                                                className=" cursor-pointer"
+                                            >
+                                                {card.title}
+                                            </Link>
+                                        </h3>
+                                        <p className="text-[11px] text-gray-600 leading-relaxed">{card.desc}</p>
                                     </div>
-                                    <h3 className="text-xs font-bold text-gray-900 mb-2">{card.title}</h3>
-                                    <p className="text-[11px] text-gray-600 leading-relaxed">{card.desc}</p>
                                 </div>
                             );
                         })}
@@ -210,114 +211,46 @@ export default function PermissionAndMetadataComplete() {
             </section>
 
             {/* ------------------- SAMPLE WORK SECTION ------------------- */}
-            <section className="py-6 px-4 max-w-5xl mx-auto text-center" aria-labelledby="sample-heading">
-                <div className="bg-[#f4faf7] border border-emerald-100 rounded-xl p-8 shadow-sm">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        {/* Left Column: Image Box */}
-                        <div className="bg-[#f4faf7] p-2 rounded-lg flex justify-center items-center relative h-80 sm:h-96 w-full overflow-hidden">
-                            <Image
-                                src="/images/academic-editorial-services/permission-and-metadata-services/Permission-and-Metadata-Services.png"
-                                alt="Permission and Metadata Services sample work"
-                                fill
-                                className="object-contain rounded"
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                priority
-                            />
-                        </div>
-
-                        {/* Right Column: Content */}
-                        <div className="text-left">
-                            <h2 id="sample-heading" className="text-base md:text-lg font-bold text-[#0b3b2c] mb-2">
-                                Academic Editorial Services Sample Work
-                            </h2>
-                            <div className="mb-4">
-                                <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-bold py-2 px-6 rounded-full transition-colors shadow">
-                                    Discover More
-                                </Link>
-                            </div>
-                            <h3 className="text-xs font-bold text-[#0b3b2c] mb-2">Download the full Report Now</h3>
-                            <p className="text-[11px] text-gray-600 leading-relaxed mb-4">
-                                Explore our Permission & Metadata Services sample work, meticulously managed to ensure full copyright compliance, accurate rights documentation, and adherence to journal-specific requirements. We ensure your manuscript is legally cleared, properly attributed, and publication-ready, enhancing credibility, compliance, and seamless acceptance by top-tier journals.
-                            </p>
-                            <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-gray-800 text-white text-xs font-bold py-2 px-6 rounded-full transition-colors shadow">
-                                Discover More
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <PubricaSampleWorkCard
+                bookCoverImage={{
+                    src: "/images/academic-editorial-services/permission-and-metadata-services/Permission-and-Metadata-Services.png",
+                    alt: "Permission and Metadata Services sample work",
+                    width: 600,
+                    height: 800,
+                }}
+                sections={[
+                    {
+                        heading: "Academic Editorial Services Sample Work",
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work/individual-patient-data-from-randomized-trials/",
+                        },
+                    },
+                    {
+                        heading: "Download the full Report Now",
+                        descriptionSegments: [
+                            {
+                                text: "Explore our Permission & Metadata Services sample work, meticulously managed to ensure full copyright compliance, accurate rights documentation, and adherence to journal-specific requirements. We ensure your manuscript is legally cleared, properly attributed, and publication-ready, enhancing credibility, compliance, and seamless acceptance by top-tier journals.",
+                            },
+                        ],
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work",
+                        },
+                    },
+                ]}
+                footerDisclaimerSegments={[]}
+            />
 
             {/* ------------------- PACKAGES SECTION ------------------- */}
             <section className="py-6 px-4 max-w-6xl mx-auto" aria-labelledby="packages-heading">
-                <div className="text-center max-w-3xl mx-auto mb-12">
-                    <h2 id="packages-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3">
-                        Permission & Metadata Services – Our Packages
-                    </h2>
-                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                        At Pubrica, our Permission & Metadata Services are designed to simplify and streamline the often complex process of securing rights and optimizing metadata for academic content. Whether you are an author, researcher, or publisher, our packages cater to every level of need, ensuring compliance, accuracy, and publication readiness.
-                    </p>
-                </div>
+                <CommonPackages
+                    title="Permission & Metadata Services – Our Packages"
+                    description="At Pubrica, our Permission & Metadata Services are designed to simplify and streamline the often complex process of securing rights and optimizing metadata for academic content. Whether you are an author, researcher, or publisher, our packages cater to every level of need, ensuring compliance, accuracy, and publication readiness."
+                    packages={packages}
+                />
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-                    {packages.map((pkg, idx) => (
-                        <div key={idx} className={`${pkg.cardBg} rounded-xl shadow-lg overflow-hidden flex flex-col justify-between border border-gray-100`}>
-                            {/* Header Row */}
-                            <div>
-                                <div className="bg-white p-5 flex items-center gap-4 border-b border-gray-100">
-                                    <div className="relative w-12 h-12 shrink-0">
-                                        <Image
-                                            src={pkg.badgeSrc}
-                                            alt={`${pkg.title} package badge`}
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                    <h3 className={`text-xl font-bold ${pkg.titleColor}`}>{pkg.title}</h3>
-                                </div>
-
-                                {/* Card Body */}
-                                <div className="p-6 space-y-5 text-xs md:text-sm text-gray-800">
-                                    {/* Ideal For Section */}
-                                    <div className="flex items-start gap-2.5">
-                                        <span className="text-black font-bold text-base leading-none mt-0.5">➔</span>
-                                        <div>
-                                            <p className="leading-relaxed">
-                                                <span className="font-bold">Ideal For:</span> {pkg.idealFor}
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    {/* Includes Section */}
-                                    <div className="space-y-3">
-                                        <div className="flex items-start gap-2.5">
-                                            <span className="text-black font-bold text-base leading-none mt-0.5">➔</span>
-                                            <span className="font-bold">{pkg.includesHeader}</span>
-                                        </div>
-                                        <ul className="space-y-2.5 pl-7">
-                                            {pkg.included.map((inc, i) => (
-                                                <li key={i} className="text-gray-800 leading-snug">
-                                                    {inc}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Turnaround Time (Pinned to Bottom) */}
-                            <div className="px-6 pb-6 pt-2">
-                                <div className="flex items-start gap-2.5 text-xs md:text-sm text-gray-800">
-                                    <span className="text-black font-bold text-base leading-none mt-0.5">➔</span>
-                                    <p>
-                                        <span className="font-bold">Turnaround time:</span> {pkg.turnaround}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                <div className="mt-12 text-center">
+                <div className="mt-1 text-center">
                     <GetFreeQuoteButton />
                 </div>
             </section>
