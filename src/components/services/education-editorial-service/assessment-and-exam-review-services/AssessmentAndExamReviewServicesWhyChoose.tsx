@@ -48,8 +48,8 @@ const AssessmentAndExamReviewServicesWhyChoose: NextPage = () => {
           {/* LEFT COLUMN: IMAGE COLLAGE */}
           <div className="lg:col-span-5 relative w-full flex justify-center">
             <div className="relative w-full max-w-[420px] h-[360px] md:h-[400px]">
-              <div className="absolute inset-0 bg-[#eaf4ef] rounded-full filter blur-2xl opacity-60"></div>
-              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-md">
+              <div className="absolute inset-0  rounded-full filter blur-2xl opacity-60"></div>
+              <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 <Image 
                   src="/images/education-editorial-service/assessment-and-exam-review-services/Why-Choose-Pubrica-for-Assessment-and-Exam-Review-Services.webp" 
                   alt="Why Choose Pubrica Assessment and Exam Review" 

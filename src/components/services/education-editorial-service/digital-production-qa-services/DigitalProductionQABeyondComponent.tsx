@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { PubricaSampleWorkCard } from '@/components/common/PubricaSampleWorkCardProps';
 
 interface AccordionItem {
   title: string;
@@ -66,8 +67,8 @@ export default function DigitalProductionQABeyondComponent() {
             {accordionData.map((item, index) => {
               const isOpen = openAccordion === index;
               return (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="border-b border-gray-200 pb-3"
                 >
                   <button
@@ -92,42 +93,36 @@ export default function DigitalProductionQABeyondComponent() {
       </div>
 
       {/* Bottom Section: Sample Work & Full Report Download */}
-      <div className="max-w-7xl mx-auto bg-[#f4fbf7] rounded-3xl p-8 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        {/* Left Column: Sample Work Image */}
-        <div className="lg:col-span-5 relative h-[350px] rounded-2xl overflow-hidden shadow-md">
-          <Image
-            src="/images/education-editorial-service/digital-production-qa-services/Digital-Production-QA-Services-Sample-Work.webp"
-            alt="Digital Production QA Services Sample Work"
-            fill
-            className="object-cover"
-            sizes="(max-width:1024px)100vw,40vw"
-          />
-        </div>
-
-        {/* Right Column: Sample Work Content */}
-        <div className="lg:col-span-7 space-y-6">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-            Digital Production QA Services Sample Work
-          </h3>
-          <div>
-            <Link
-              href="/insights/individual-patient-data-from-randomized-trials"
-              className="inline-block bg-black hover:bg-gray-800 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200 shadow-md"
-            >
-              Discover More
-            </Link>
-          </div>
-
-          <div className="pt-4 space-y-3">
-            <h4 className="text-xl font-bold text-gray-900">
-              Download the Full Report Now
-            </h4>
-            <p className="text-gray-600 text-base leading-relaxed">
-              Our Digital Production QA Example represents an extremely thorough Quality Assurance process for checking all components, including layouts, XML, Metadata and Final Output files. The QA process is designed to confirm that all content is accurate and consistent and is compliant. The finished product is ready for publication and meets the highest possible quality standard.
-            </p>
-          </div>
-        </div>
-      </div>
+      <PubricaSampleWorkCard
+        bookCoverImage={{
+          src: "/images/education-editorial-service/digital-production-qa-services/Digital-Production-QA-Services-Sample-Work.webp",
+          alt: "Digital Production QA Services Sample Work",
+          width: 600,
+          height: 450,
+        }}
+        sections={[
+          {
+            heading: "Digital Production QA Services Sample Work",
+            button: {
+              label: "Discover More",
+              url: "/insights/individual-patient-data-from-randomized-trials",
+            },
+          },
+          {
+            heading: "Download the Full Report Now",
+            descriptionSegments: [
+              {
+                text: "Our Digital Production QA Example represents an extremely thorough Quality Assurance process for checking all components, including layouts, XML, Metadata and Final Output files. The QA process is designed to confirm that all content is accurate and consistent and is compliant. The finished product is ready for publication and meets the highest possible quality standard.",
+              },
+            ],
+            button: {
+              label: "Discover More",
+              url: "/insights/sample-work",
+            },
+          },
+        ]}
+        footerDisclaimerSegments={[]}
+      />
     </section>
   );
 }

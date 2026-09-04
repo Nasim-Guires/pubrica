@@ -1,9 +1,11 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type ServiceItem = {
   title: string;
@@ -59,6 +61,12 @@ const AIDataPreparationComprehensiveSection: NextPage = () => {
         />
       </Head>
 
+      <HeroBanner
+        title="AI and Data Preparation Services"
+        description="Our goal is to assure you that both the preparation and refinement of your data, as well as the optimization of your data, will allow AI to be successful."
+        headingAs="h1"
+      />
+
       <div className="w-full bg-white text-gray-800 py-8 md:py-7 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
         {/* MAIN HERO / OVERVIEW SECTION */}
         <section className="max-w-5xl mx-auto space-y-6">
@@ -67,7 +75,7 @@ const AIDataPreparationComprehensiveSection: NextPage = () => {
           </h1>
 
           <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed">
-            In an environment of accelerated development in Artificial Intelligence based research and innovation, the quality of the preparation of high-quality data has become essential rather than optional for researchers, institutions, and organisations developing Artificial Intelligence (AI), Machine Learning (ML) and Advanced Analytics using datasets. Our goal at Pubrica is to connect the gap between the raw research data of our clients and AI-ready intelligence. Pubrica&apos;s AI & Data Preparation service takes the raw and unstructured data of our clients and creates a ready-to-use cleaned, pre-processed, and ready-to-use model dataset. Our services include data cleaning, data normalisation, data annotation, data labelling, and data feature engineering support to ensure your data is ready for the creation, validation, and deployment of robust AI models.
+            In an environment of accelerated development in <Link href="/services/research-services/literature-review-and-gap/" className="text-blue-600">Artificial Intelligence-based research</Link> and innovation, the quality of the preparation of high-quality data has become essential rather than optional for researchers, institutions, and organisations developing <Link href="/services/ai-ml-support/" className="text-blue-600">Artificial Intelligence (AI)</Link>, <Link href="/services/ai-ml-support/" className="text-blue-600">Machine Learning (ML)</Link> and Advanced Analytics using datasets. Our goal at Pubrica is to connect the gap between the raw research data of our clients and AI-ready intelligence. Pubrica&apos;s AI & Data Preparation service takes the raw and unstructured data of our clients and creates a ready-to-use cleaned, pre-processed, and ready-to-use model dataset. Our services include data cleaning, data normalisation, data annotation, data labelling, and data feature engineering support to ensure your data is ready for the creation, validation, and deployment of robust AI models.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pt-2">
@@ -111,7 +119,7 @@ const AIDataPreparationComprehensiveSection: NextPage = () => {
                 <div className="absolute -bottom-2 -left-2 sm:-bottom-3 sm:-left-3 md:-bottom-4 md:-left-4 w-full h-full bg-[#1b3b32] rounded-2xl -z-10" />
 
                 {/* Image Container */}
-                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gray-100 shadow-md">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden">
                   <Image
                     src="/images/education-editorial-service/ai-and-data-preparation-services/Prepare-Data.-Power-AI.-Elevate-Research-Intelligence.webp"
                     alt="Prepare Data. Power AI. Elevate Research Intelligence."

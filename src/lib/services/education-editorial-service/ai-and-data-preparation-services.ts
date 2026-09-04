@@ -139,8 +139,8 @@ export const aiAndDataPreparationServicesPackages = {
         "Best For: Research datasets, pilot AI projects, academic studies",
       ],
       turnaround: "3–5 business days",
-      backgroundColor: "#FFF7E8",
-      borderColor: "#F5A623",
+      cardBgColor: "#FFF7E8",
+      titleColor: "#F5A623",
     },
     {
       icon: "/images/publication-support/peer-review-pre-submission/advanced.webp",
@@ -159,8 +159,8 @@ export const aiAndDataPreparationServicesPackages = {
         "Best For: Machine learning models, analytics projects, journal-linked datasets",
       ],
       turnaround: "5–7 business days",
-      backgroundColor: "#EAF8F4",
-      borderColor: "#22A06B",
+      cardBgColor: "#EAF8F4",
+      titleColor: "#22A06B",
     },
     {
       icon: "/images/editing-and-translation/translation-with-editing/pro.webp",
@@ -179,12 +179,11 @@ export const aiAndDataPreparationServicesPackages = {
         "Best For: Enterprise AI systems, funded research, high-stakes AI deployments",
       ],
       turnaround: "7–10 business days",
-      backgroundColor: "#F3ECFF",
-      borderColor: "#7C3AED",
+      cardBgColor: "#F3ECFF",
+      titleColor: "#7C3AED",
     },
   ],
 };
-
 export const aiAndDataTestimonials = {
   title: "Testimonials",
   description:

@@ -10,6 +10,7 @@ import { educationEditorialDigitalProductionQaFaq, educationEditorialDigitalProd
 import React from 'react'
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 import { constructMetadata } from '@/lib/metadata'
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton'
 
 export const metadata = constructMetadata({
     title: 'Expert Digital Production QA Services | Pubrica',
@@ -27,6 +28,7 @@ const page = () => {
             <EditorialWorkflowSection {...educationEditorialDigitalProductionQaWorkflow} />
             <DigitalProductionQABeyondComponent />
             <CommonPackages {...educationEditorialDigitalProductionQaPackages} />
+            <GetFreeQuoteButton />
             <CommonTestimonial {...educationEditorialDigitalProductionQaTestimonials} />
             <CommonFAQ {...educationEditorialDigitalProductionQaFaq} />
             <InsightsSection />

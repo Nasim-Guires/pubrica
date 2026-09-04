@@ -117,7 +117,7 @@ export const learningDesignAndPedagogyWorkflow = {
 
 export const learningDesignAndPedagogyPackages = {
     title: "Learning Design and Pedagogy – Our Packages",
-    subtitle: "Choose the Right Package for Your Educational Content",
+    subtitle: "",
     description:
         "Our packages are designed to meet the diverse needs of researchers, universities, publishers, and organisations seeking visually optimised, accessible, and publication-ready documents. Each tier offers increasing depth of visual refinement, accessibility compliance, and editorial precision, ensuring your content is inclusive, compliant, and impactful across global platforms.",
 
@@ -139,8 +139,8 @@ export const learningDesignAndPedagogyPackages = {
                 "Best For: Course modules, lesson plans, short training programs",
             ],
             turnaround: "3–5 business days",
-            backgroundColor: "#FFF7E8",
-            borderColor: "#F5A623",
+            cardBgColor: "#FFF7E8",
+            titleColor: "#F5A623",
         },
         {
             icon: "/images/publication-support/peer-review-pre-submission/advanced.webp",
@@ -159,8 +159,8 @@ export const learningDesignAndPedagogyPackages = {
                 "Best For: Full courses, institutional programs, online learning",
             ],
             turnaround: "5–7 business days",
-            backgroundColor: "#EAF8F4",
-            borderColor: "#22A06B",
+            cardBgColor: "#EAF8F4",
+            titleColor: "#22A06B",
         },
         {
             icon: "/images/editing-and-translation/translation-with-editing/pro.webp",
@@ -179,8 +179,8 @@ export const learningDesignAndPedagogyPackages = {
                 "Best For: Degree programs, professional certifications, large-scale learning projects",
             ],
             turnaround: "7–10 business days",
-            backgroundColor: "#F3ECFF",
-            borderColor: "#7C3AED",
+            cardBgColor: "#F3ECFF",
+            titleColor: "#7C3AED",
         },
     ],
 };

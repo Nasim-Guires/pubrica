@@ -1,3 +1,5 @@
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import HeroBanner from "@/components/common/HeroBanner";
 import Image from "next/image";
 import Link from "next/link";
 import type { FC } from "react";
@@ -122,19 +124,11 @@ const DigitalProductionQaServices: FC<DigitalProductionQaServicesProps> = ({
       className="w-full bg-white text-gray-800"
     >
       {/* HERO BANNER SECTION */}
-      <div className="w-full bg-[#1b3b32] py-6 px-4 sm:px-8">
-        <div className="mx-auto max-w-5xl rounded-lg border border-[#2b5447] bg-[#1b3b32] px-6 py-5 text-center text-white sm:px-12">
-          <h1
-            id="digital-production-qa-heading"
-            className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl"
-          >
-            {heroTitle}
-          </h1>
-          <p className="mx-auto mt-3 max-w-3xl text-xs leading-relaxed text-gray-200 sm:text-sm">
-            {heroDescription}
-          </p>
-        </div>
-      </div>
+      <HeroBanner
+        title={heroTitle}
+        description={heroDescription}
+        headingAs="h1"
+      />
 
       {/* INTRO & OFFSET FLOATING IMAGE SECTION */}
       <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6 md:px-8">
@@ -170,20 +164,15 @@ const DigitalProductionQaServices: FC<DigitalProductionQaServicesProps> = ({
               </ul>
 
               <div className="pt-5">
-                <Link
-                  href={ctaHref}
-                  className="inline-block rounded-full bg-[#c5221f] px-6 py-2.5 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-[#a31a18] sm:text-sm"
-                >
-                  {ctaLabel}
-                </Link>
+                <GetFreeQuoteButton />
               </div>
             </div>
           </div>
 
           <div className="relative mt-2 flex justify-center md:col-span-5 md:mt-0 md:justify-end">
             <div className="relative h-[210px] w-full max-w-[360px] sm:h-[230px]">
-              <div className="absolute -bottom-4 -left-4 -z-10 h-full w-full rounded-2xl bg-[#1b3b32]" />
-              <div className="relative h-full w-full overflow-hidden rounded-2xl bg-gray-100 shadow-md">
+              <div className="absolute -bottom-4 -left-4 -z-10 h-full w-full rounded-2xl" />
+              <div className="relative h-full w-full overflow-hidden rounded-2xl">
                 <Image
                   src="/images/education-editorial-service/digital-production-qa-services/Digital-Production-QA-Services.webp"
                   alt={heroImageLabel}

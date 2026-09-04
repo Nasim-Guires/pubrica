@@ -1,3 +1,5 @@
+import ExpertsSection, { Expert } from '@/components/common/ExpertsSection';
+import { PubricaSampleWorkCard } from '@/components/common/PubricaSampleWorkCardProps';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -33,31 +35,54 @@ const documentsData: DocumentItem[] = [
     { title: 'Forms & Surveys' },
     { title: 'Grant proposals' },
 ];
-
-const expertsData: ExpertItem[] = [
+const experts: Expert[] = [
     {
-        name: 'Dr. Arjun Mehta',
-        qualification: 'PhD in Linguistics',
-        university: 'Jawcharlal Nehru University, India',
-        experience: '10+ Years of Experience',
-        stats: '800+ Datasets & Manuscripts Prepared',
-        image: '/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Arjun-Mehta.png',
+        id: "arjun-mehta",
+        name: "Dr. Arjun Mehta",
+        title: "PhD in Linguistics",
+        institution: "Jawcharlal Nehru University, India",
+        experience: "10+ Years of Experience",
+        papersEdited: "800+ Datasets & Manuscripts Prepared",
+        avatarUrl:
+            "/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Arjun-Mehta.png",
+        flagUrl:
+            "/images/editing-and-translation/manuscript-editing/india.png",
+        bio: "Dr. Mehta specializes in language-focused AI data preparation, including scientific text normalization, multilingual localization, and dataset refinement for NLP and LLM training. He ensures linguistic accuracy, cultural relevance, and compliance with global standards.",
+        expertise:
+            "AI Data Expertise: Text annotation, NLP datasets, multilingual corpus preparation. Domain Expertise: Biomedical sciences, clinical research, pharmaceutical studies",
+        journals: "The Lancet, BMJ, Elsevier",
     },
     {
-        name: 'Dr. Priya Rao',
-        qualification: 'PhD in Life Sciences',
-        university: 'University of Delhi, India',
-        experience: '8+ Years of Experience',
-        stats: '400+ AI Ready Research Datasets',
-        image: '/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Priya-Rao.png',
+        id: "priya-rao",
+        name: "Dr. Priya Rao",
+        title: "PhD in Life Sciences",
+        institution: "University of Delhi, India",
+        experience: "8+ Years of Experience",
+        papersEdited: "400+ AI Ready Research Datasets",
+        avatarUrl:
+            "/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Priya-Rao.png",
+        flagUrl:
+            "/images/editing-and-translation/manuscript-editing/india.png",
+        bio: "Dr. Rao focuses on precision data refinement and annotation for life-science AI models. Her work ensures structured, high-quality datasets that meet international research and AI training requirements.",
+        expertise:
+            "AI Data Expertise: Data labeling, structured dataset creation, quality validation. Domain Expertise: Genetics, molecular biology, pharmacology",
+        journals: "Nature Communications, PLOS ONE, Springer",
     },
     {
-        name: 'Dr. Rohan Iyer',
-        qualification: 'PhD in Biotechnology',
-        university: 'Indian Institute of Technology, Bombay',
-        experience: '9+ Years of Experience',
-        stats: '800+ AI Optimized Scientific Datasets',
-        image: '/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Rohan-Iyer.png',
+        id: "rohan-iyer",
+        name: "Dr. Rohan Iyer",
+        title: "PhD in Biotechnology",
+        institution: "Indian Institute of Technology, Bombay",
+        experience: "9+ Years of Experience",
+        papersEdited: "800+ AI Optimized Scientific Datasets",
+        avatarUrl:
+            "/images/academic-editorial-services/revisioning-and-localisation-service/Dr.-Rohan-Iyer.png",
+        flagUrl:
+            "/images/editing-and-translation/manuscript-editing/india.png",
+        bio: "Dr. Iyer ensures scientific accuracy and data integrity while preparing complex research content for AI model training, analytics, and automation workflows.",
+        expertise:
+            "AI Data Expertise: Scientific data curation, classification, validation. Domain Expertise: Biochemistry, molecular diagnostics, translational research",
+        journals: "Cell, Scientific Reports, Wiley",
     },
 ];
 
@@ -104,95 +129,43 @@ const AIDataPreparationSections: NextPage = () => {
             </section>
 
             {/* MEET OUR AI AND DATA PREPARATION EXPERTS */}
-            <section className="max-w-6xl mx-auto px-4 md:px-8 space-y-10">
-                <div className="text-center">
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                        Meet Our AI and Data Preparation Experts
-                    </h2>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {expertsData.map((expert, idx) => (
-                        <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-6">
-                            <div className="flex items-start space-x-4">
-                                <div className="relative w-14 h-14 rounded-full overflow-hidden shrink-0 bg-gray-100">
-                                    <Image src={expert.image} alt={expert.name} fill className="object-cover" />
-                                </div>
-                                <div>
-                                    <div className="flex items-center space-x-1.5">
-                                        <h3 className="font-bold text-gray-900 text-base">{expert.name}</h3>
-                                        <Image
-                                            src="/images/editing-and-translation/manuscript-editing/india.png"
-                                            alt=""
-                                            width={18}
-                                            height={12}
-                                            className="h-3 w-auto object-contain"
-                                        />
-                                    </div>
-                                    <p className="text-xs font-semibold text-gray-700 mt-0.5">{expert.qualification}</p>
-                                    <p className="text-[11px] text-gray-500">{expert.university}</p>
-                                </div>
-                            </div>
-
-                            <div className="border-t border-gray-100 pt-4 flex justify-between text-center">
-                                <div>
-                                    <p className="text-xs font-bold text-gray-900">{expert.experience}</p>
-                                    <p className="text-[10px] text-gray-500 uppercase tracking-wider mt-0.5">Experience</p>
-                                </div>
-                                <div className="border-r border-gray-100"></div>
-                                <div>
-                                    <p className="text-xs font-bold text-gray-900">{expert.stats}</p>
-                                    <p className="text-[10px] text-gray-500 uppercase tracking-wider mt-0.5">Prepared</p>
-                                </div>
-                            </div>
-
-                            <Link href="/about-us/our-editors" className="w-full text-center py-2 border border-gray-200 rounded-lg text-xs font-bold text-gray-800 hover:bg-gray-50 transition-colors">
-                                Read More
-                            </Link>
-                        </div>
-                    ))}
-                </div>
-            </section>
+            <ExpertsSection
+                heading="Meet Our AI Data Preparation Experts"
+                subheading="Our experienced experts prepare, refine, and validate high-quality scientific datasets for AI model training, analytics, and research workflows."
+                experts={experts}
+            />
 
             {/* AI AND DATA PREPARATION SERVICES SAMPLE WORK BANNER */}
-            <section className="w-full bg-[#eaf4ef] py-7 px-4 md:px-8">
-                <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div className="relative w-full h-[280px] md:h-[320px] rounded-2xl overflow-hidden shadow-md bg-white">
-                        <Image
-                            src="/images/education-editorial-service/ai-and-data-preparation-services/AI-and-Data-Preparation-Services-Sample-Work.webp"
-                             alt="AI and Data Preparation Services Sample Work"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
-
-                    <div className="space-y-6">
-                        <h2 className="text-xl md:text-2xl font-bold text-gray-900">
-                            AI and Data Preparation Services Sample Work
-                        </h2>
-                        <div>
-                            <Link href="/insights/sample-work" className="inline-block bg-black text-white font-bold text-xs py-3 px-8 rounded-full hover:bg-gray-800 transition-colors shadow">
-                                Discover More
-                            </Link>
-                        </div>
-
-                        <div className="space-y-3 pt-2">
-                            <h3 className="text-lg font-bold text-gray-900">
-                                Download the Full Data Preparation Sample Now
-                            </h3>
-                            <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-                                Discover our AI and Data Preparation Sample Work created by professionals to meet Research Standards, to fulfil AI Readiness Saved art, and to provide you with quality data that will yield consistent and meaningful results.
-                            </p>
-                            <div className="pt-2">
-                                <Link href="/insights/sample-work" className="inline-block bg-black text-white font-bold text-xs py-3 px-8 rounded-full hover:bg-gray-800 transition-colors shadow">
-                                    Discover More
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+            <PubricaSampleWorkCard
+                bookCoverImage={{
+                    src: "/images/education-editorial-service/ai-and-data-preparation-services/AI-and-Data-Preparation-Services-Sample-Work.webp",
+                    alt: "AI and Data Preparation Services Sample Work",
+                    width: 600,
+                    height: 450,
+                }}
+                sections={[
+                    {
+                        heading: "AI and Data Preparation Services Sample Work",
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work/individual-patient-data-from-randomized-trials/",
+                        },
+                    },
+                    {
+                        heading: "Download the Full Data Preparation Sample Now",
+                        descriptionSegments: [
+                            {
+                                text: "Discover our AI and Data Preparation Sample Work created by professionals to meet Research Standards, to fulfil AI Readiness Saved art, and to provide you with quality data that will yield consistent and meaningful results.",
+                            },
+                        ],
+                        button: {
+                            label: "Discover More",
+                            url: "/insights/sample-work",
+                        },
+                    },
+                ]}
+                footerDisclaimerSegments={[]}
+            />
             {/* WHY CHOOSE PUBRICA FOR AI AND DATA PREPARATION? */}
             <section className="max-w-6xl mx-auto px-4 md:px-8 space-y-10">
                 <div className="text-center space-y-2">

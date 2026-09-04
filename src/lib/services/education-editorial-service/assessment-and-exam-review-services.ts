@@ -101,53 +101,67 @@ export const educationEditorialAssessmentAndExamReviewWorkflow = {
 
 export const educationEditorialAssessmentAndExamReviewPackages = {
   title: "Assessment and Exam Review – Our Packages",
-  subtitle: "Our Packages",
-  description: "The various packaging options offered will cover the range of needs for both the institution and the providers of education to ensure that each piece meets the standards of accuracy, fairness and alignment to Rated Expectations.",
+  subtitle: "",
+  description:
+    "The various packaging options offered will cover the range of needs for both the institution and the providers of education to ensure that each piece meets the standards of accuracy, fairness and alignment to Rated Expectations.",
   buttonText: "Get a Free quote",
+
   packages: [
     {
       title: "Basic Assessment Review",
       subtitle: "Basic Package",
-      description: "Essential review checks for individual educators and small academic programs.",
+      description:
+        "Essential review checks for individual educators and small academic programs.",
       idealFor: "Individual educators and small academic programs",
       includes: [
         "Review of question clarity and structure",
         "Alignment check with learning objectives",
         "Difficulty-level assessment",
-        "Summary review report"
+        "Summary review report",
       ],
       turnaround: "3–5 business days",
       icon: "/images/editing-and-translation/basic-pacakge.png",
+      cardBgColor: "#dce0e3",
+      titleColor: "#0a3a57",
     },
+
     {
       title: "Advanced Assessment Validation",
       subtitle: "Advanced Package",
-      description: "Comprehensive validation for universities and professional training programs.",
+      description:
+        "Comprehensive validation for universities and professional training programs.",
       idealFor: "Universities and professional training programs",
       includes: [
         "All features from the Basic Package",
         "Rubric and marking scheme validation",
         "Bias and fairness review",
         "Cognitive level mapping (Bloom’s taxonomy)",
-        "Detailed improvement recommendations"
+        "Detailed improvement recommendations",
       ],
       turnaround: "5–7 business days",
       icon: "/images/publication-support/peer-review-pre-submission/advanced.webp",
+      cardBgColor: "#e0cde4",
+      titleColor: "#5d3370",
     },
+
     {
       title: "Premium Assessment Quality Assurance",
       subtitle: "Premium Package",
-      description: "Full-scale quality assurance for accrediting bodies and high-stakes examinations.",
-      idealFor: "Accrediting bodies, large institutions, and high-stakes examinations",
+      description:
+        "Full-scale quality assurance for accrediting bodies and high-stakes examinations.",
+      idealFor:
+        "Accrediting bodies, large institutions, and high-stakes examinations",
       includes: [
         "Everything in the Advanced Package",
         "Full assessment framework review",
         "Accreditation and compliance alignment",
         "Cross-course consistency checks",
-        "Expert QA review and validation report"
+        "Expert QA review and validation report",
       ],
       turnaround: "7–10 business days",
       icon: "/images/editing-and-translation/translation-with-editing/pro.webp",
+      cardBgColor: "#e2ceb2",
+      titleColor: "#796342",
     },
   ],
 };

@@ -1,9 +1,11 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type ServiceItem = {
   title: string;
@@ -66,16 +68,11 @@ const AssessmentExamReviewPage: NextPage = () => {
       </Head>
 
       {/* TOP HERO BANNER */}
-      <div className="w-full bg-[#1b3b32] py-6 px-4 sm:px-8 flex justify-center">
-        <div className="w-full max-w-5xl border border-[#2b5447] bg-[#1b3b32] text-white py-5 px-6 sm:px-12 text-center space-y-3 rounded-lg">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
-            Assessment and Exam Review Services
-          </h1>
-          <p className="text-xs sm:text-sm text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Diagnostic Assessments and Test Review Services help students discover areas of weakness and increase their likelihood of passing the exam while enhancing self-confidence through structured diagnostics and focused review.
-          </p>
-        </div>
-      </div>
+      <HeroBanner
+        title="Assessment and Exam Review Services"
+        description="Diagnostic Assessments and Test Review Services help students discover areas of weakness and increase their likelihood of passing the exam while enhancing self-confidence through structured diagnostics and focused review."
+        headingAs="h1"
+      />
 
       <div className="w-full bg-white text-gray-800 py-6 px-4 sm:px-6 md:px-8">
         {/* MAIN SECTION: INTRO & OFFSET FLOATING IMAGE */}
@@ -134,13 +131,14 @@ const AssessmentExamReviewPage: NextPage = () => {
             </div>
 
             {/* RIGHT COLUMN: Offset Dark Green Backdrop Image Box */}
-            <div className="md:col-span-5 relative flex justify-center md:justify-end mt-2 md:mt-0">
+            {/* RIGHT COLUMN: Offset Dark Green Backdrop Image Box */}
+            <div className="md:col-span-5 relative flex justify-center md:justify-end mt-8 md:mt-0">
               <div className="relative w-full max-w-[360px] h-[210px] sm:h-[230px]">
                 {/* Dark Green Offset Box */}
                 <div className="absolute -bottom-4 -left-4 w-full h-full bg-[#1b3b32] rounded-2xl -z-10" />
 
                 {/* Main Front Image */}
-                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gray-100 shadow-md">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden">
                   <Image
                     src="/images/education-editorial-service/assessment-and-exam-review-services/poster-presentation-1-2.webp"
                     alt="Assessment and Exam Review session"
@@ -161,7 +159,7 @@ const AssessmentExamReviewPage: NextPage = () => {
               Types of Assessment and Exam Review Services We Offer
             </h2>
             <p className="text-xs sm:text-sm text-gray-700 leading-relaxed max-w-4xl">
-              Pubrica Assessment & Exam Review Services provide educational institutions with the ability to conduct High-Quality Assessments. Pubrica is committed to providing educational institutions with services that enhance and maintain a high level of Clarity, Consistency, and Academic Rigor throughout each type of assessment performed.
+              Pubrica <Link href="/" className='text-blue-600'>Assessment & Exam Review Services</Link> provide educational institutions with the ability to conduct High-Quality Assessments. Pubrica is committed to providing educational institutions with services that enhance and maintain a high level of Clarity, Consistency, and Academic Rigor throughout each type of assessment performed.
             </p>
           </div>
 

@@ -1,6 +1,7 @@
 'use client';
 
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -67,102 +68,91 @@ const LearningDesignPedagogyComprehensiveSection: NextPage = () => {
       </Head>
 
       {/* FULL WIDTH HERO BANNER */}
-      <div className="w-full bg-[#1b3b32] text-white py-7 px-4 md:px-12 mb-12 border-y border-[#274d42]">
-        <div className="max-w-6xl mx-auto text-center space-y-4">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-            Learning Design and Pedagogy
-          </h1>
-          <p className="text-sm md:text-base lg:text-lg text-gray-200 max-w-5xl mx-auto leading-relaxed">
-            Our Learning & Pedagogical Design Foundation utilizes principles found in the science of Learning while maintaining emphasis on real-life applications through creating well-structured, learner-centered experiences that integrate goals, instructional material, student interactions and testing within a cohesive framework designed to foster engagement and enhance information retention for all students participating in an experience.
-          </p>
-        </div>
-      </div>
+      <HeroBanner
+        title="Learning Design and Pedagogy"
+        description="Our Learning & Pedagogical Design Foundation utilizes principles found in the science of Learning while maintaining emphasis on real-life applications through creating well-structured, learner-centered experiences that integrate goals, instructional material, student interactions and testing within a cohesive framework designed to foster engagement and enhance information retention for all students participating in an experience."
+        headingAs="h1"
+      />
 
       <div className="w-full bg-white text-gray-800 pb-7 px-4 md:px-8 space-y-16">
 
         {/* MAIN CONTENT SECTION WITH EMBEDDED FLOATING IMAGE ON THE RIGHT */}
-        <section className="max-w-5xl mx-auto space-y-6">
-          <div className="text-center pb-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0b3b2c]">
-              Design Learning. Strengthen Pedagogy. Elevate Educational Impact.
-            </h2>
-          </div>
+        <section className="py-6 px-6 max-w-6xl mx-auto">
+          <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-5 leading-tight text-left">
+            Design Learning. Strengthen Pedagogy. Elevate Educational Impact.
+          </h2>
 
-          <div className="clearfix relative min-h-[340px]">
-            {/* FLOATING IMAGE CONTAINER WITH OFFSET BACKGROUND CARD */}
-            <div className="float-right ml-6 md:ml-8 mb-6 mt-1 w-full md:w-[360px] lg:w-[400px] relative">
-              {/* Dark Green Offset Backdrop Block */}
-              <div className="absolute -bottom-4 -left-4 w-full h-full bg-[#0b3b2c] rounded-2xl -z-10" />
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+            {/* Left Side Content & Bullet Points */}
+            <div className="lg:col-span-7 text-xs md:text-sm text-gray-700 space-y-2.5 leading-relaxed">
+              <p>
+                The education and training landscape continues to evolve. In today&apos;s rapidly changing world, effective learning design and sound pedagogy are essential for all stakeholders: universities, educators, researchers, and institutions. All learning materials must be instructionally sound, learner-centred, outcomes-driven, and aligned with educational best practices. At Pubrica, we connect the subject matter experts to the needs of their learners by creating impactful educational experiences.
+              </p>
+              <p>
+                Our Learning Design & Pedagogy services focus on structuring educational content so that learners can comprehend it better, engage with it more fully, retain it for longer periods of time, and apply the knowledge to real life situations. We take care of all aspects of curriculum alignment, instructional sequencing, assessment design, and learning outcome mapping for you to be able to create effective, clear, coherent, inclusive, and pedagogically robust educational content.
+              </p>
+              <p>
+                We support academic course development, training module development, online program development, workshop development, or institutional curriculum development. Our expert guidance helps ensure that your learning materials meet educational standards, the needs of your learners, and your institutional educational goals.
+              </p>
 
-              {/* Front Main Image Container */}
-              <div className="relative w-full h-[230px] md:h-[260px] rounded-2xl overflow-hidden shadow-md">
-                <Image
-                  src="/images/education-editorial-service/learning-design-and-pedagogy/Design-Learning.-Strengthen-Pedagogy.-Elevate-Educational-Impact.webp"
-                  alt="Design Learning. Strengthen Pedagogy. Elevate Educational Impact"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
-              The education and training landscape continues to evolve. In today&apos;s rapidly changing world, effective learning design and sound pedagogy are essential for all stakeholders: universities, educators, researchers, and institutions. All learning materials must be instructionally sound, learner-centred, outcomes-driven, and aligned with educational best practices. At Pubrica, we connect the subject matter experts to the needs of their learners by creating impactful educational experiences.
-            </p>
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
-              Our Learning Design & Pedagogy services focus on structuring educational content so that learners can comprehend it better, engage with it more fully, retain it for longer periods of time, and apply the knowledge to real life situations. We take care of all aspects of curriculum alignment, instructional sequencing, assessment design, and learning outcome mapping for you to be able to create effective, clear, coherent, inclusive, and pedagogically robust educational content.
-            </p>
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-6">
-              We support academic course development, training module development, online program development, workshop development, or institutional curriculum development. Our expert guidance helps ensure that your learning materials meet educational standards, the needs of your learners, and your institutional educational goals.
-            </p>
-
-            {/* SERVICES ENSURE BULLET POINTS SECTION */}
-            <div className="space-y-3 pt-2 clear-left">
-              <h3 className="text-base md:text-lg font-bold text-gray-900">
+              <p className="font-bold text-gray-900 pt-1">
                 Pubrica&apos;s Learning Design and Pedagogy Services Ensure:
-              </h3>
+              </p>
 
-              <ul className="space-y-2 text-gray-700 text-sm md:text-base pl-0.5">
-                <li className="flex items-start space-x-2">
-                  <span className="text-[#c5221f] text-lg leading-none mt-0.5">•</span>
-                  <span>Clearly defined learning objectives that are directly connected to outcomes.</span>
+              <ul className="space-y-1.5 pt-0.5 text-gray-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 font-bold select-none">•</span>
+                  <span className="text-xs md:text-sm text-gray-700 leading-normal">Clearly defined learning objectives that are directly connected to outcomes.</span>
                 </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-[#c5221f] text-lg leading-none mt-0.5">•</span>
-                  <span>Pedagogically appropriate content structure and ordering.</span>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 font-bold select-none">•</span>
+                  <span className="text-xs md:text-sm text-gray-700 leading-normal">Pedagogically appropriate content structure and ordering.</span>
                 </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-[#c5221f] text-lg leading-none mt-0.5">•</span>
-                  <span>Instructional strategies that are based on learner-centred approaches.</span>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 font-bold select-none">•</span>
+                  <span className="text-xs md:text-sm text-gray-700 leading-normal">Instructional strategies that are based on learner-centred approaches.</span>
                 </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-[#c5221f] text-lg leading-none mt-0.5">•</span>
-                  <span>Theoretical frameworks that reflect Bloom&apos;s Taxonomy and various learning theories.</span>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 font-bold select-none">•</span>
+                  <span className="text-xs md:text-sm text-gray-700 leading-normal">Theoretical frameworks that reflect Bloom&apos;s Taxonomy and various learning theories.</span>
                 </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-[#c5221f] text-lg leading-none mt-0.5">•</span>
-                  <span>Coherence between formative assessment/evaluation and instructional design.</span>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 font-bold select-none">•</span>
+                  <span className="text-xs md:text-sm text-gray-700 leading-normal">Coherence between formative assessment/evaluation and instructional design.</span>
                 </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-[#c5221f] text-lg leading-none mt-0.5">•</span>
-                  <span>Inclusive/adaptive strategies for all learner populations.</span>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 font-bold select-none">•</span>
+                  <span className="text-xs md:text-sm text-gray-700 leading-normal">Inclusive/adaptive strategies for all learner populations.</span>
                 </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-[#c5221f] text-lg leading-none mt-0.5">•</span>
-                  <span>Flow and clarity of content is based on focus of learner engagement (motivation).</span>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 font-bold select-none">•</span>
+                  <span className="text-xs md:text-sm text-gray-700 leading-normal">Flow and clarity of content is based on focus of learner engagement (motivation).</span>
                 </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-[#c5221f] text-lg leading-none mt-0.5">•</span>
-                  <span>Content developed in compliance with institutional, accreditation, and curriculum requirements.</span>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 font-bold select-none">•</span>
+                  <span className="text-xs md:text-sm text-gray-700 leading-normal">Content developed in compliance with institutional, accreditation, and curriculum requirements.</span>
                 </li>
               </ul>
 
-              <div className="pt-4 text-left">
-                <Link
-                  href="/order-now"
-                  className="inline-block bg-[#c5221f] hover:bg-[#a31a18] text-white font-semibold text-sm px-6 py-2 rounded-full transition-colors shadow-sm"
-                >
-                  Get a Free Quote
-                </Link>
+              <div className="pt-2">
+                <GetFreeQuoteButton />
+              </div>
+            </div>
+
+            {/* Right Side Image Container with Backdrop Layer */}
+            <div className="lg:col-span-5 relative mt-2 lg:mt-0">
+              <div className="relative w-full aspect-[4/3] max-w-[400px] mx-auto">
+                <div className="absolute inset-0  rounded-2xl transform -translate-x-3 translate-y-3" />
+                <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                  <Image
+                    src="/images/education-editorial-service/learning-design-and-pedagogy/Design-Learning.-Strengthen-Pedagogy.-Elevate-Educational-Impact.webp"
+                    alt="Design Learning. Strengthen Pedagogy. Elevate Educational Impact"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>

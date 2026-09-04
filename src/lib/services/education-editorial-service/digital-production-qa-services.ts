@@ -1,50 +1,50 @@
 export const educationEditorialDigitalProductionQaWhoWeServe = {
-    title: "Who We Serve",
-    description: "At Pubrica, our Digital Production QA Services support a broad spectrum of academic and publishing stakeholders, ensuring high-quality digital outputs at every stage.",
-    data: [
-        {
-            title: "Academic and Scientific Publishers",
-            imageUrl: "/images/education-editorial-service/digital-production-qa-services/Academic-and-Scientific-Publishers.webp",
-            bullets: [
-                "Using rigorous quality assurance processes, we assist authors and publishers in maintaining the quality of their publications (journals, books, proceedings, etc.) at consistent levels."
-            ],
-        },
-        {
-            title: "Journal Editorial Teams",
-            imageUrl: "/images/education-editorial-service/digital-production-qa-services/Journal-Editorial-Teams.webp",
-            bullets: [
-                "The editors at your company trust our QA Expertise to help them produce."
-            ],
-        },
-        {
-            title: "Authors and Researchers",
-            imageUrl: "/images/education-editorial-service/digital-production-qa-services/Authors-and-Researchers.webp",
-            bullets: [
-                "We help authors as they review their final candidatures and proofs, ensuring high quality standards are met for both printed and digital formats of these publications."
-            ],
-        },
-        {
-            title: "Universities and Research Institutions",
-            imageUrl: "/images/education-editorial-service/digital-production-qa-services/Universities-and-Research-Institutions.webp",
-            bullets: [
-                "With quality assurance services, institutions benefit from providing theses, reports, and institutionally published works that conform to digital standards."
-            ],
-        },
-        {
-            title: "Legal & Investigation Firms",
-            imageUrl: "/images/education-editorial-service/digital-production-qa-services/Legal-Investigation-Firms-1.webp",
-            bullets: [
-                "Law firms, risk advisory firms, and legal consultants partner with us for forensic support, evidence validation, financial analysis, and expert reporting. Our findings support litigation, dispute resolution, and arbitration processes."
-            ],
-        },
-        {
-            title: "Production and Typesetting Vendors",
-            imageUrl: "/images/education-editorial-service/digital-production-qa-services/Production-and-Typesetting-Vendors.webp",
-            bullets: [
-                "We conduct independent Quality Assurance (QA) audits on files and outputs produced by the vendor(s)."
-            ],
-        },
-    ],
+  title: "Who We Serve",
+  description: "At Pubrica, our Digital Production QA Services support a broad spectrum of academic and publishing stakeholders, ensuring high-quality digital outputs at every stage.",
+  data: [
+    {
+      title: "Academic and Scientific Publishers",
+      imageUrl: "/images/education-editorial-service/digital-production-qa-services/Academic-and-Scientific-Publishers.webp",
+      bullets: [
+        "Using rigorous quality assurance processes, we assist authors and publishers in maintaining the quality of their publications (journals, books, proceedings, etc.) at consistent levels."
+      ],
+    },
+    {
+      title: "Journal Editorial Teams",
+      imageUrl: "/images/education-editorial-service/digital-production-qa-services/Journal-Editorial-Teams.webp",
+      bullets: [
+        "The editors at your company trust our QA Expertise to help them produce."
+      ],
+    },
+    {
+      title: "Authors and Researchers",
+      imageUrl: "/images/education-editorial-service/digital-production-qa-services/Authors-and-Researchers.webp",
+      bullets: [
+        "We help authors as they review their final candidatures and proofs, ensuring high quality standards are met for both printed and digital formats of these publications."
+      ],
+    },
+    {
+      title: "Universities and Research Institutions",
+      imageUrl: "/images/education-editorial-service/digital-production-qa-services/Universities-and-Research-Institutions.webp",
+      bullets: [
+        "With quality assurance services, institutions benefit from providing theses, reports, and institutionally published works that conform to digital standards."
+      ],
+    },
+    {
+      title: "Legal & Investigation Firms",
+      imageUrl: "/images/education-editorial-service/digital-production-qa-services/Legal-Investigation-Firms-1.webp",
+      bullets: [
+        "Law firms, risk advisory firms, and legal consultants partner with us for forensic support, evidence validation, financial analysis, and expert reporting. Our findings support litigation, dispute resolution, and arbitration processes."
+      ],
+    },
+    {
+      title: "Production and Typesetting Vendors",
+      imageUrl: "/images/education-editorial-service/digital-production-qa-services/Production-and-Typesetting-Vendors.webp",
+      bullets: [
+        "We conduct independent Quality Assurance (QA) audits on files and outputs produced by the vendor(s)."
+      ],
+    },
+  ],
 };
 
 export const educationEditorialDigitalProductionQaWorkflow = {
@@ -92,15 +92,17 @@ export const educationEditorialDigitalProductionQaWorkflow = {
 
 export const educationEditorialDigitalProductionQaPackages = {
   title: "Digital Production QA – Our Packages",
-  subtitle: "Our Packages",
+  subtitle: "",
   description:
     "At Pubrica, our Digital Production QA packages are designed to meet varying production volumes and complexity levels.",
   buttonText: "Get a Free quote",
+
   packages: [
     {
       title: "Basic",
       subtitle: "Basic Package",
-      description: "Essential quality assurance checks for small-scale publications.",
+      description:
+        "Essential quality assurance checks for small-scale publications.",
       idealFor: "Small journals and individual publications",
       includes: [
         "Basic layout and content QA",
@@ -109,14 +111,14 @@ export const educationEditorialDigitalProductionQaPackages = {
       ],
       turnaround: "5–7 business days",
       icon: "/images/editing-and-translation/basic-pacakge.png",
-      backgroundColor: "#dce0e3",
-      borderColor: "#dce0e3",
-      headerTextColor: "#0a3a57",
+      cardBgColor: "#dce0e3",
+      titleColor: "#0a3a57",
     },
     {
       title: "Standard",
       subtitle: "Standard Package",
-      description: "Comprehensive QA checks for academic publishers and standard journals.",
+      description:
+        "Comprehensive QA checks for academic publishers and standard journals.",
       idealFor: "Journals and academic publishers",
       includes: [
         "Includes everything in Basic, plus:",
@@ -126,14 +128,14 @@ export const educationEditorialDigitalProductionQaPackages = {
       ],
       turnaround: "7–10 business days",
       icon: "/images/publication-support/poster-preparation/S.png",
-      backgroundColor: "#e0cde4",
-      borderColor: "#e0cde4",
-      headerTextColor: "#5d3370",
+      cardBgColor: "#e0cde4",
+      titleColor: "#5d3370",
     },
     {
       title: "Premium",
       subtitle: "Premium Package",
-      description: "Full-scale end-to-end quality assurance and compliance services.",
+      description:
+        "Full-scale end-to-end quality assurance and compliance services.",
       idealFor: "Large publishers and institutions",
       includes: [
         "Includes everything in Standard, plus:",
@@ -143,13 +145,11 @@ export const educationEditorialDigitalProductionQaPackages = {
       ],
       turnaround: "10–14 business days",
       icon: "/images/editing-and-translation/translation-with-editing/pro.webp",
-      backgroundColor: "#e2ceb2",
-      borderColor: "#e2ceb2",
-      headerTextColor: "#796342",
+      cardBgColor: "#e2ceb2",
+      titleColor: "#796342",
     },
   ],
 };
-
 
 export const educationEditorialDigitalProductionQaTestimonials = {
   title: "Testimonials",

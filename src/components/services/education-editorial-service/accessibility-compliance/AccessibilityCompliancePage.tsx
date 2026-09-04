@@ -1,4 +1,5 @@
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -60,14 +61,11 @@ const AccessibilityCompliancePage: NextPage = () => {
 
             <div className="min-h-screen bg-white text-gray-800">
                 {/* Header Section - Dark Banner */}
-                <header className="bg-[#1a3a3a] text-white py-7">
-                    <div className="container mx-auto px-4 text-center">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-4">Accessibility Compliance</h1>
-                        <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
-                            Accessibility is a priority, and we continuously improve this site to serve all visitors effectively.
-                        </p>
-                    </div>
-                </header>
+                <HeroBanner
+                    title="Accessibility Compliance"
+                    description="Accessibility is a priority, and we continuously improve this site to serve all visitors effectively."
+                    headingAs="h1"
+                />
 
                 {/* Main Content */}
                 <main className="container mx-auto px-4 py-6 md:py-7 max-w-7xl">
@@ -100,7 +98,7 @@ const AccessibilityCompliancePage: NextPage = () => {
                                     </li>
                                     <li>Tables, Equations, References, and Supplementary Materials will be accessible.</li>
                                     <li>
-                                        Compliance to <Link href="/services/education-editorial-service/accessibility-compliance" className="text-blue-600 no-underline hover:no-underline">Publisher-Specific Accessibility and Formatting Guidelines.</Link>
+                                        Compliance to Publisher-Specific Accessibility and Formatting Guidelines.
                                     </li>
                                 </ul>
                             </div>
@@ -109,7 +107,7 @@ const AccessibilityCompliancePage: NextPage = () => {
                             <div className="md:col-span-5 relative flex justify-center py-2 px-4">
                                 <div className="relative w-full max-w-md aspect-[4/3]">
                                     {/* Single Dark Green Offset Backdrop */}
-                                    <div className="absolute inset-0 translate-y-6 -translate-x-6 bg-[#163832] rounded-[20px]" />
+                                    <div className="absolute inset-0 translate-y-6 -translate-x-6 rounded-[20px]" />
 
                                     {/* Image Container */}
                                     <div className="relative z-10 w-full h-full rounded-[24px] overflow-hidden">
@@ -171,7 +169,7 @@ const AccessibilityCompliancePage: NextPage = () => {
                 </main>
 
                 {/* Footer Placeholder */}
-               
+
             </div>
         </>
     );

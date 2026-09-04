@@ -1,19 +1,20 @@
 'use client';
 
+import ExpertsSection, { Expert } from '@/components/common/ExpertsSection';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-type Expert = {
-  name: string;
-  title: string;
-  experience: string;
-  papersEdited: string;
-  image: string;
-  flag: string;
-};
+// type Expert = {
+//   name: string;
+//   title: string;
+//   experience: string;
+//   papersEdited: string;
+//   image: string;
+//   flag: string;
+// };
 
 type PublishedPaper = {
   journal: string;
@@ -25,30 +26,57 @@ type PublishedPaper = {
   link?: string;
 };
 
-const expertsData: Expert[] = [
+const experts: Expert[] = [
   {
-    name: 'Dr. Aditi Mehta',
-    title: 'PhD in Bioinformatics Indian Institute of Technology, India',
-    experience: '8+ Years of Experience',
-    papersEdited: '700+ Papers Edited',
-    image: '/images/education-editorial-service/accessibility-compliance/Dr.-Aditi-Mehta.webp',
-    flag: '/images/editing-and-translation/manuscript-editing/india.png',
+    id: "aditi-mehta",
+    name: "Dr. Aditi Mehta",
+    title: "PhD in Bioinformatics",
+    institution: "Indian Institute of Technology, India",
+    experience: "8+ Years of Experience",
+    papersEdited: "700+ Papers Edited",
+    avatarUrl:
+      "/images/education-editorial-service/accessibility-compliance/Dr.-Aditi-Mehta.webp",
+    flagUrl:
+      "/images/editing-and-translation/manuscript-editing/india.png",
+    bio: "Dr. Mehta specializes in ensuring accessibility compliance for bioinformatics and computational biology manuscripts.",
+    expertise:
+      "Bioinformatics, Computational Biology, Data Visualization",
+    journals:
+      "Nature Biotechnology, Bioinformatics, Journal of Computational Biology",
   },
   {
-    name: 'Dr. Vikram Joshi',
-    title: 'PhD in Environmental Science University of Delhi, India',
-    experience: '7+ Years of Experience',
-    papersEdited: '750+ Papers Edited',
-    image: '/images/education-editorial-service/accessibility-compliance/Dr.-Vikram-Joshi.webp',
-    flag: '/images/editing-and-translation/manuscript-editing/india.png',
+    id: "vikram-joshi",
+    name: "Dr. Vikram Joshi",
+    title: "PhD in Environmental Science",
+    institution: "University of Delhi, India",
+    experience: "7+ Years of Experience",
+    papersEdited: "750+ Papers Edited",
+    avatarUrl:
+      "/images/education-editorial-service/accessibility-compliance/Dr.-Vikram-Joshi.webp",
+    flagUrl:
+      "/images/editing-and-translation/manuscript-editing/india.png",
+    bio: "Dr. Joshi enhances accessibility for environmental science research by optimizing content for screen reader compatibility and ensuring that all technical terms and data are presented clearly for a diverse audience.",
+    expertise:
+      "Environmental Policy, Climate Change, Sustainability",
+    journals:
+      "Environmental Science & Technology, Journal of Environmental Management, Climatic Change",
   },
   {
-    name: 'Dr. Priya Kumar',
-    title: 'PhD in Artificial Intelligence Indian Institute of Technology, India',
-    experience: '6+ Years of Experience',
-    papersEdited: '600+ Papers Edited',
-    image: '/images/education-editorial-service/accessibility-compliance/Dr.-Priya-Kumar.webp',
-    flag: '/images/editing-and-translation/manuscript-editing/india.png',
+    id: "priya-kumar",
+    name: "Dr. Priya Kumar",
+    title: "PhD in Artificial Intelligence",
+    institution: "Indian Institute of Technology, India",
+    experience: "6+ Years of Experience",
+    papersEdited: "600+ Papers Edited",
+    avatarUrl:
+      "/images/education-editorial-service/accessibility-compliance/Dr.-Priya-Kumar.webp",
+    flagUrl:
+      "/images/editing-and-translation/manuscript-editing/india.png",
+    bio: "Dr. Kumar specializes in enhancing the accessibility of AI-related academic manuscripts, ensuring they meet international standards and improving the readability of complex AI and machine learning concepts.",
+    expertise:
+      "Machine Learning, Deep Learning, AI Ethics",
+    journals:
+      "IEEE Transactions on Neural Networks, Journal of Machine Learning Research, AI & Society",
   },
 ];
 
@@ -148,50 +176,11 @@ const AccessibilityComplianceComprehensiveSection: NextPage = () => {
             </div>
           </div>
 
-          <div className="text-center pt-8">
-            <h3 className="text-2xl md:text-3xl font-bold text-[#0b3b2c] mb-10">
-              Meet Our Accessibility Compliance Experts
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {expertsData.map((expert, idx) => (
-                <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between text-left relative">
-                  <div>
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-12 h-12 rounded-full relative overflow-hidden flex-shrink-0 border border-gray-300">
-                        <Image
-                          src={expert.image}
-                          alt={expert.name}
-                          fill
-                          className="object-cover"
-                          sizes="48px"
-                        />
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <h4 className="font-bold text-gray-900 text-base">{expert.name}</h4>
-                          <Image
-                            src={expert.flag}
-                            alt=""
-                            width={20}
-                            height={14}
-                            className="h-3.5 w-auto object-contain"
-                          />
-                        </div>
-                        <p className="text-xs text-gray-500 leading-tight mt-0.5">{expert.title}</p>
-                      </div>
-                    </div>
-                    <div className="text-xs text-gray-600 font-medium space-y-1 mb-6">
-                      <p>{expert.experience}</p>
-                      <p>{expert.papersEdited}</p>
-                    </div>
-                  </div>
-                  <Link href="/about-us/our-editors" className="text-sm font-bold text-blue-600 transition-colors inline-block text-center w-full py-2 border-t border-gray-100 no-underline hover:no-underline">
-                    Read More
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
+          <ExpertsSection
+            heading="Meet Our Accessibility Compliance Experts"
+            subheading="Our experienced experts ensure your academic content meets accessibility standards, improving readability, screen reader compatibility, and access for diverse audiences."
+            experts={experts}
+          />
         </section>
 
         {/* SECTION 2: Fundamentals of the Accessibility Compliance Process (Accordion) */}
