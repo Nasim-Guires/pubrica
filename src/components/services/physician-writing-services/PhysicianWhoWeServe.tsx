@@ -1,4 +1,5 @@
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import ServiceBanner from "@/components/common/ServiceBanner";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -9,7 +10,7 @@ interface AudienceCard {
 }
 
 export const PhysicianWhoWeServe: React.FC = () => {
-  
+
   const IMG = "/images/physician-writing-services";
   const audiences: AudienceCard[] = [
     {
@@ -96,28 +97,13 @@ export const PhysicianWhoWeServe: React.FC = () => {
       </section>
 
       {/* --- Section: Dark Green CTA Banner --- */}
-      <section className="w-full bg-[#05261e] py-6 px-6 text-center">
-        <div className="max-w-4xl mx-auto space-y-5">
-          {/* Main Display Headline */}
-          <h2 className="text-white text-lg md:text-xl lg:text-2xl font-bold tracking-tight">
-            Physician Writing Services at Pubrica
-          </h2>
-
-          {/* Detailed Paragraph Copy */}
-          <p className="text-gray-200 text-xs md:text-sm lg:text-[15px] leading-relaxed max-w-3xl mx-auto font-light">
-            Tailored for practicing clinicians, busy physicians, and medical
-            researchers, our expert editors ensure your manuscript is
-            publication-ready delivering precise editing, scientific clarity,
-            and impactful writing that meets the standards of top medical
-            journals.
-          </p>
-
-          {/* Action Button Trigger */}
-          <div className="pt-2">
-            <GetFreeQuoteButton />
-          </div>
-        </div>
-      </section>
+      <ServiceBanner
+        imageSrc="/images/publication-support/Satisfaction_Guarantee.webp"
+        imageAlt="100% Satisfaction Guarantee"
+        heading="Physician Writing Services at Pubrica"
+        description="Tailored for practicing clinicians, busy physicians, and medical researchers, our expert editors ensure your manuscript is publication-ready delivering precise editing, scientific clarity, and impactful writing that meets the standards of top medical journals."
+        showQuoteButton={true}
+      />
     </div>
   );
 };

@@ -15,8 +15,8 @@ export const PhysicianServicesList: React.FC<PhysicianServicesListProps> = ({
   imageUrl,
 }) => {
   // Managing visibility states for each accordion group block separately
-  const [caseReportOpen, setCaseReportOpen] = useState<boolean>(true);
-  const [litReviewOpen, setLitReviewOpen] = useState<boolean>(true);
+  const [caseReportOpen, setCaseReportOpen] = useState<boolean>(false);
+  const [litReviewOpen, setLitReviewOpen] = useState<boolean>(false);
 
   // Parsed dataset mapped explicitly from the screenshots provided
   const primaryServicesData: ServiceItem[] = [
