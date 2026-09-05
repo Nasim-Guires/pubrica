@@ -152,54 +152,59 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
 
         {/* Are Generic Drugs As Good As Brand Names Section */}
         <section className="py-8 px-6 max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Are Generic Drugs As Good As Brand Names?</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
+          <div className="text-start mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+              Are Generic Drugs As Good As Brand Names?
+            </h2>
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
               Generic pharmaceutical manufacturers must prove to the FDA that their version of a drug:
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm text-center flex flex-col items-center gap-3">
-              <div className="relative h-12 w-12">
-                <Image src="/images/industries/generics/same-active-ingredient-.webp" alt="Icon representing same active ingredient in pharmaceutical product" fill className="object-contain" sizes="48px" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+            <div className="bg-[#e8f4f8] border border-[#c5e1eb] p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-left flex flex-col items-start gap-4">
+              <div className="relative h-10 w-10 bg-white rounded-lg p-2 shadow-sm border border-[#c5e1eb] flex items-center justify-center">
+                <Image src="/images/industries/generics/same-active-ingredient-.webp" alt="Icon representing same active ingredient in pharmaceutical product" fill className="object-contain p-1" sizes="40px" />
               </div>
-              <p className="text-gray-800 font-medium text-sm">Contains the same active ingredient</p>
+              <p className="text-gray-800 font-semibold text-sm leading-snug">Contains the same active ingredient</p>
             </div>
-            <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm text-center flex flex-col items-center gap-3">
-              <div className="relative h-12 w-12">
-                <Image src="/images/industries/generics/identical-in-strength-dosage-form-.webp" alt="Icon representing identical strength dosage form and route of administration" fill className="object-contain" sizes="48px" />
+
+            <div className="bg-[#e8f4f8] border border-[#c5e1eb] p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-left flex flex-col items-start gap-4">
+              <div className="relative h-10 w-10 bg-white rounded-lg p-2 shadow-sm border border-[#c5e1eb] flex items-center justify-center">
+                <Image src="/images/industries/generics/identical-in-strength-dosage-form-.webp" alt="Icon representing identical strength dosage form and route of administration" fill className="object-contain p-1" sizes="40px" />
               </div>
-              <p className="text-gray-800 font-medium text-sm">Is identical in strength, dosage form, and route of administration</p>
+              <p className="text-gray-800 font-semibold text-sm leading-snug">Is identical in strength, dosage form, and route of administration</p>
             </div>
-            <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm text-center flex flex-col items-center gap-3">
-              <div className="relative h-12 w-12">
-                <Image src="/images/industries/generics/indication-dosing-and-lablelling.webp" alt="Icon representing same indications dosing and labeling in pharmaceutical product" fill className="object-contain" sizes="48px" />
+
+            <div className="bg-[#e8f4f8] border border-[#c5e1eb] p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-left flex flex-col items-start gap-4">
+              <div className="relative h-10 w-10 bg-white rounded-lg p-2 shadow-sm border border-[#c5e1eb] flex items-center justify-center">
+                <Image src="/images/industries/generics/indication-dosing-and-lablelling.webp" alt="Icon representing same indications dosing and labeling in pharmaceutical product" fill className="object-contain p-1" sizes="40px" />
               </div>
-              <p className="text-gray-800 font-medium text-sm">Has the same indications, dosing, and labelling</p>
+              <p className="text-gray-800 font-semibold text-sm leading-snug">Has the same indications, dosing, and labelling</p>
             </div>
-            <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm text-center flex flex-col items-center gap-3">
-              <div className="relative h-12 w-12">
-                <Image src="/images/industries/generics/efficacy-and-safety-bioequivalent-.webp" alt="Icon representing bioequivalence with same efficacy and safety profile" fill className="object-contain" sizes="48px" />
+
+            <div className="bg-[#e8f4f8] border border-[#c5e1eb] p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-left flex flex-col items-start gap-4">
+              <div className="relative h-10 w-10 bg-white rounded-lg p-2 shadow-sm border border-[#c5e1eb] flex items-center justify-center">
+                <Image src="/images/industries/generics/efficacy-and-safety-bioequivalent-.webp" alt="Icon representing bioequivalence with same efficacy and safety profile" fill className="object-contain p-1" sizes="40px" />
               </div>
-              <p className="text-gray-800 font-medium text-sm">Provides the same efficacy and safety profile to patients (&quot;bioequivalent&quot;)</p>
+              <p className="text-gray-800 font-semibold text-sm leading-snug">Provides the same efficacy and safety profile to patients (&quot;bioequivalent&quot;)</p>
             </div>
           </div>
 
-          {/* Why the Generics Sector Matters */}
-          <div className="bg-gray-50 border border-gray-200 p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold mb-6">Why the Generics Sector Matters</h3>
-            <ul className="space-y-4 text-gray-700 text-sm md:text-base">
+          {/* Why the Generics Sector Matters - Clean non-card section */}
+          <div className="bg-white border-y border-[#c5e1eb] py-8 px-6 rounded-2xl">
+            <h3 className="text-xl md:text-2xl font-bold text-[#1b3b32] mb-5">Why the Generics Sector Matters</h3>
+            <ul className="space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
               <li className="flex items-start gap-3">
-                <span className="text-[#b91c1c] font-bold">•</span>
+                <span className="text-[#1b3b32] font-bold mt-0.5">•</span>
                 <span>Generic medicines play a critical role in global healthcare by making essential therapies more affordable while maintaining safety, efficacy, and quality.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#b91c1c] font-bold">•</span>
+                <span className="text-[#1b3b32] font-bold mt-0.5">•</span>
                 <span>With patent expirations creating opportunities, competition from generics helps reduce overall healthcare costs and expand access.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#b91c1c] font-bold">•</span>
+                <span className="text-[#1b3b32] font-bold mt-0.5">•</span>
                 <span>However, the generics landscape is complex; manufacturers face regulatory, scientific, and market challenges in bringing generics to market and sustaining competitiveness.</span>
               </li>
             </ul>
@@ -209,9 +214,9 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
         {/* Generic Drugs Must Meet the Same High Standards Section */}
         <section className="py-7 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="relative w-full h-[400px] flex justify-center items-center">
-            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl">
-              <Image 
-                src="/images/industries/generics/Generic-Drugs-Must-Meet-the-Same-High-Standards.webp" 
+            <div className="relative w-full h-full rounded-2xl overflow-hidden">
+              <Image
+                src="/images/industries/generics/Generic-Drugs-Must-Meet-the-Same-High-Standards.webp"
                 alt="Scientific visual representation of generic medicine standards and FDA approval"
                 fill
                 sizes="(max-width: 768px) 100vw, 500px"
@@ -252,74 +257,120 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
         </section>
 
         {/* Where Our Authors Publish Section */}
-        <section className="py-7 px-6 max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Where Our Authors Publish</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto text-sm md:text-base">
-              Our authors share Pubrica&apos;s expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity.
+        <section className="py-12 max-w-5xl mx-auto px-4">
+          <div className="max-w-7xl mx-auto mb-2 px-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-1 text-start">
+              Where Our Authors Publish
+            </h2>
+
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed text-start max-w-4xl">
+              Our authors share Pubrica&apos;s expert content in top-tier journals,
+              conferences, and platforms, maximizing and amplifying its recognition and
+              reach. Our placement will enhance our visibility and elevate our standing
+              in an authoritative capacity.
             </p>
           </div>
 
-          <div className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm flex flex-col md:flex-row gap-8 items-center max-w-4xl mx-auto">
-            <div className="relative w-full md:w-[220px] h-[280px] flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
-              <Image 
-                src="/images/industries/generics/sample-works-2.webp" 
-                alt="Clinical Therapeutics Journal Cover"
-                fill
-                sizes="220px"
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
-            <div className="flex flex-col justify-center space-y-3 w-full">
-              <h3 className="text-xl font-bold text-[#0f2824]">
-                Paper Title: <span className="font-normal text-gray-700">{publication.paperTitle}</span>
-              </h3>
-              <p className="text-gray-700 text-sm"><strong>Author:</strong> {publication.author}</p>
-              <p className="text-gray-700 text-sm"><strong>Journal Name:</strong> {publication.journalName}</p>
-              <p className="text-gray-700 text-sm"><strong>Publisher:</strong> {publication.publisher}</p>
-              <p className="text-gray-700 text-sm"><strong>Impact factor:</strong> {publication.impactFactor}</p>
+          <div className="space-y-6">
+            <div className="bg-[#fafcfa] border border-gray-100 rounded-xl p-6 md:p-8 shadow-sm grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-center">
+              <div className="relative w-full h-[260px] rounded-lg overflow-hidden bg-white border border-gray-100 shadow-inner flex items-center justify-center p-2">
+                <Image
+                  src="/images/industries/generics/sample-works-2.webp"
+                  alt="Clinical Therapeutics Journal Cover"
+                  fill
+                  sizes="220px"
+                  className="object-contain p-1"
+                />
+              </div>
+
+              <div className="space-y-3 text-sm md:text-base text-gray-700">
+                <div>
+                  <span className="font-bold text-gray-900">Paper Title: </span>
+                  <span className="text-gray-800">
+                    {publication.paperTitle}
+                  </span>
+                </div>
+
+                <div>
+                  <span className="font-bold text-gray-900">Author: </span>
+                  <span>{publication.author}</span>
+                </div>
+
+                <div>
+                  <span className="font-bold text-gray-900">Journal Name: </span>
+                  <span className="text-[#1b3b32] font-semibold">
+                    {publication.journalName}
+                  </span>
+                </div>
+
+                <div>
+                  <span className="font-bold text-gray-900">Publisher: </span>
+                  <span>{publication.publisher}</span>
+                </div>
+
+                <div>
+                  <span className="font-bold text-gray-900">Impact factor: </span>
+                  <span>{publication.impactFactor}</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
+
+
         {/* Our Expert Medical Editors Section */}
-        <section className="py-7 px-6 max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Expert Medical Editors</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto text-sm md:text-base">
-              Pubrica&apos;s team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do.
+        <section className="py-12 max-w-6xl mx-auto px-4">
+          <div className="max-w-7xl mx-auto mb-10 px-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3 text-start">
+              Our Expert Medical Editors
+            </h2>
+
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed text-start max-w-4xl">
+              Pubrica&apos;s team of industry specialists offers unrivalled expertise
+              and perspectives to provide complete solutions with precision and
+              originality. Through a mix of both experience and specialization, they
+              strive for excellence in everything they do.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {editors.map((editor, index) => (
-              <div key={index} className="bg-[#e6f0ed] p-6 rounded-2xl shadow-sm border border-[#d1e2dc] flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-sm flex-shrink-0">
-                      <Image 
-                        src={editor.image} 
-                        alt={editor.name}
-                        fill
-                        sizes="56px"
-                        style={{ objectFit: 'cover' }}
-                      />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg text-[#0f2824]">{editor.name}</h4>
-                      <p className="text-xs text-gray-600 font-medium">{editor.credential}</p>
-                    </div>
+              <div
+                key={index}
+                className="bg-white border border-gray-200/60 rounded-xl p-6 flex flex-col items-start shadow-sm hover:border-gray-300 transition-all"
+              >
+                <div className="flex items-center space-x-4 mb-4 w-full">
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden bg-gray-100 shrink-0 border border-gray-100">
+                    <Image
+                      src={editor.image}
+                      alt={editor.name}
+                      fill
+                      sizes="56px"
+                      className="object-cover"
+                    />
                   </div>
-                  <hr className="border-gray-300 mb-4" />
+
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-base">
+                      {editor.name}
+                    </h3>
+
+                    <p className="text-xs text-[#1b3b32] font-semibold">
+                      {editor.credential}
+                    </p>
+                  </div>
                 </div>
-                <div className="flex justify-between items-center text-xs text-gray-700 font-semibold pt-2">
-                  <span>{editor.experience}</span>
-                  <span>{editor.manuscripts}</span>
+
+                <div className="w-full space-y-1.5 text-xs text-gray-600 pt-3 border-t border-gray-100">
+                  <p>{editor.experience}</p>
+                  <p>{editor.manuscripts}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
+
 
       </main>
     </>

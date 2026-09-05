@@ -62,7 +62,7 @@ const MedicalDeviceIndustry: NextPage = () => {
       {/* No banner here — MedicalDeviceIndustryPage (rendered earlier on this route) already
           shows the "Medical Devices" hero; this component picks up with its own content below. */}
       <div className="w-full bg-white text-gray-800 pb-7 px-4 md:px-8 space-y-20">
-                {/* SECTION: CLASSES OF CLINICAL EVALUATION REPORT FOR MEDICAL DEVICES */}
+        {/* SECTION: CLASSES OF CLINICAL EVALUATION REPORT FOR MEDICAL DEVICES */}
         <section className="max-w-6xl mx-auto space-y-10 pt-7">
           <div className="text-center space-y-3">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32]">
@@ -89,25 +89,25 @@ const MedicalDeviceIndustry: NextPage = () => {
                     <td className="py-4 px-6 font-bold text-gray-900">Class I Devices (Low Risk)</td>
                     <td className="py-4 px-6">Non-invasive devices or those with minimal risk to the user.</td>
                     <td className="py-4 px-6">Bandages, stethoscopes, examination gloves.</td>
-                    <td className="py-4 px-6">• Clinical evaluation is often based mainly on literature review and well-documented experience.<br/>• Clinical data requirements are generally less stringent than those for higher-risk classes.</td>
+                    <td className="py-4 px-6">• Clinical evaluation is often based mainly on literature review and well-documented experience.<br />• Clinical data requirements are generally less stringent than those for higher-risk classes.</td>
                   </tr>
                   <tr className="bg-[#fffef0]">
                     <td className="py-4 px-6 font-bold text-gray-900">Class IIa Devices (Medium-Low Risk)</td>
                     <td className="py-4 px-6">Moderately invasive or pose moderate risk.</td>
                     <td className="py-4 px-6">Dental fillings, infusion pumps, ultrasound equipment.</td>
-                    <td className="py-4 px-6">• Requires more detailed clinical data than Class I.<br/>• May include post-market clinical follow-up (PMCF) or limited clinical investigations.</td>
+                    <td className="py-4 px-6">• Requires more detailed clinical data than Class I.<br />• May include post-market clinical follow-up (PMCF) or limited clinical investigations.</td>
                   </tr>
                   <tr className="bg-[#fcf4f4]">
                     <td className="py-4 px-6 font-bold text-gray-900">Class IIb Devices (Medium-High Risk)</td>
                     <td className="py-4 px-6">Invasive or significant impact on patient health if they fail.</td>
                     <td className="py-4 px-6">Ventilators, anaesthesia equipment, and implantable devices like pacemakers (non-life-sustaining).</td>
-                    <td className="py-4 px-6">• CER must rely on robust clinical evidence.<br/>• Usually requires clinical investigations or well-controlled studies in addition to the literature.</td>
+                    <td className="py-4 px-6">• CER must rely on robust clinical evidence.<br />• Usually requires clinical investigations or well-controlled studies in addition to the literature.</td>
                   </tr>
                   <tr className="bg-[#fcf0f0]">
                     <td className="py-4 px-6 font-bold text-gray-900">Class III Devices (High Risk)</td>
                     <td className="py-4 px-6">Devices that are life-sustaining or life-supporting, or have a high risk of serious health consequences.</td>
                     <td className="py-4 px-6">Heart valves, implantable defibrillators, some orthopaedic implants.</td>
-                    <td className="py-4 px-6">• Requires extensive clinical data from trials and real-world evidence.<br/>• CER is a critical component for regulatory approval and must demonstrate safety, performance, and clinical benefit comprehensively.</td>
+                    <td className="py-4 px-6">• Requires extensive clinical data from trials and real-world evidence.<br />• CER is a critical component for regulatory approval and must demonstrate safety, performance, and clinical benefit comprehensively.</td>
                   </tr>
                 </tbody>
               </table>
@@ -141,7 +141,7 @@ const MedicalDeviceIndustry: NextPage = () => {
             <div className="flex justify-center pt-4">
               <button
                 onClick={() => setShowAllPMS(true)}
-                className="bg-[#1b3b32] text-white font-bold text-sm py-3 px-8 rounded-full hover:bg-[#122822] transition-colors shadow"
+                className="bg-[#1b3b32] text-white font-bold text-sm py-3 px-8 rounded-full hover:bg-[#122822] transition-colors shadow cursor-pointer"
               >
                 Load More
               </button>
@@ -150,7 +150,7 @@ const MedicalDeviceIndustry: NextPage = () => {
         </section>
 
         {/* SECTION: WHAT POST-MARKET SURVEILLANCE GUIDELINES SHOULD THE MEDICAL DEVICE INDUSTRY CONSIDER? */}
-        <section className="max-w-6xl mx-auto space-y-10 pt-7">
+        <section className="max-w-6xl mx-auto space-y-10 pt-2">
           <div className="text-center space-y-3">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32]">
               What Post-Market Surveillance Guidelines Should The Medical Device Industry Consider?
@@ -161,7 +161,7 @@ const MedicalDeviceIndustry: NextPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {(showAllGuidelines ? guidelineCards : guidelineCards.slice(0, 3)).map((item, idx) => (
+            {guidelineCards.map((item, idx) => (
               <div key={idx} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex items-center space-x-4">
                 <div className="relative w-10 h-10 rounded-lg bg-[#f0f4f1] shrink-0 overflow-hidden">
                   <Image src={item.iconSrc} alt="" fill className="object-contain p-1" sizes="40px" />
@@ -170,19 +170,7 @@ const MedicalDeviceIndustry: NextPage = () => {
               </div>
             ))}
           </div>
-
-          {!showAllGuidelines && (
-            <div className="flex justify-center pt-4">
-              <button
-                onClick={() => setShowAllGuidelines(true)}
-                className="bg-[#1b3b32] text-white font-bold text-sm py-3 px-8 rounded-full hover:bg-[#122822] transition-colors shadow"
-              >
-                Load More
-              </button>
-            </div>
-          )}
         </section>
-
       </div>
     </>
   );

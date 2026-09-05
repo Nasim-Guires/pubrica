@@ -108,10 +108,10 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
     discoverySteps.find((step) => step.id === activeId) ?? discoverySteps[0];
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-6">
+    <main className="max-w-6xl mx-auto px-2 py-3">
       {/* Hero / Intro */}
-      <section className="mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-teal-800 mb-8">
+      <section className="mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-black   mb-3">
           Drug Discovery And Development Process
         </h2>
 
@@ -147,21 +147,19 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
       </section>
 
       {/* Steps in the process — interactive tabs */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-6">
-          Steps In The Drug Discovery Process
-        </h2>
-        <p className="text-gray-700 mb-8 max-w-3xl">
-          The process begins with the identification of a new target
-          molecule, a protein or other molecule involved in the disease
-          process. Once a target molecule is identified, scientists must
-          design and synthesize a new compound that will interact with the
-          target molecule and influence or inhibit its function.
-        </p>
+      <section className="py-5 max-w-6xl mx-auto px-2">
+        <div className="mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+            Steps In The Drug Discovery Process
+          </h2>
+          <p className="text-gray-600 max-w-3xl text-sm md:text-base leading-relaxed">
+            The process begins with the identification of a new target molecule, a protein or other molecule involved in the disease process. Once a target molecule is identified, scientists must design and synthesize a new compound that will interact with the target molecule and influence or inhibit its function.
+          </p>
+        </div>
 
-        <div className="grid md:grid-cols-[300px_1fr] gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-6 items-start">
           {/* Tab list */}
-          <div className="border rounded-md divide-y">
+          <div className="space-y-2">
             {discoverySteps.map((step) => {
               const isActive = step.id === activeStep.id;
               return (
@@ -169,11 +167,10 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
                   key={step.id}
                   type="button"
                   onClick={() => setActiveId(step.id)}
-                  className={`w-full text-left px-4 py-4 font-semibold transition-colors ${
-                    isActive
-                      ? "border border-teal-800 text-teal-800 -m-px"
-                      : "text-teal-800 hover:bg-gray-50"
-                  }`}
+                  className={`w-full text-left px-4 py-3 rounded-lg font-medium text-sm transition-colors ${isActive
+                    ? "bg-[#1b3b32] text-white font-semibold shadow-sm"
+                    : "bg-white border border-gray-100 text-gray-600 hover:bg-gray-50 hover:text-[#1b3b32]"
+                    }`}
                 >
                   {step.title}
                 </button>
@@ -181,27 +178,32 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
             })}
           </div>
 
-          {/* Tab panel */}
-          <div>
-            <Image
-              src={activeStep.image.src}
-              alt={activeStep.image.alt}
-              width={800}
-              height={450}
-              className="rounded-md object-cover w-full h-auto mb-6"
-            />
+          {/* Tab panel - light, clean design with compact spacing */}
+          <div className="bg-[#fafcfa] border border-gray-100 rounded-xl p-5 md:p-6 shadow-sm">
+            <div className="relative w-full h-[220px] md:h-[280px] rounded-lg overflow-hidden mb-5 bg-gray-50">
+              <Image
+                src={activeStep.image.src}
+                alt={activeStep.image.alt}
+                fill
+                className="object-cover"
+              />
+            </div>
 
-            <h3 className="text-xl font-bold mb-4">{activeStep.title}</h3>
+            <h3 className="text-lg md:text-xl font-bold text-[#1b3b32] mb-3">
+              {activeStep.title}
+            </h3>
 
-            {activeStep.description.map((paragraph, i) => (
-              <p key={i} className="text-gray-700 mb-4">
-                {paragraph}
-              </p>
-            ))}
+            <div className="space-y-3 mb-5">
+              {activeStep.description.map((paragraph, i) => (
+                <p key={i} className="text-gray-600 text-xs md:text-sm leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
 
             <Link
               href="/order-now"
-              className="inline-block bg-teal-900 text-white uppercase text-sm font-semibold tracking-wide px-6 py-3 hover:bg-teal-800 transition-colors"
+              className="inline-block bg-[#1b3b32] text-white uppercase text-xs font-semibold tracking-wide px-5 py-2.5 rounded-lg hover:bg-[#122822] transition-colors"
             >
               Request A Quote
             </Link>
@@ -210,77 +212,94 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
       </section>
 
       {/* Where our authors publish */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold text-teal-800 text-center mb-2">
-          Where Our Authors Publish
-        </h2>
-        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-8">
-          Our authors share expert content in top-tier journals, conferences,
-          and platforms, maximizing and amplifying its recognition and reach.
-        </p>
+      <section className="py-12 max-w-5xl mx-auto px-4">
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+            Where Our Authors Publish
+          </h2>
+          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+            Our authors share expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach.
+          </p>
+        </div>
 
-        {publishedPapers.map((paper) => (
-          <div
-            key={paper.title}
-            className="border rounded-lg p-6 grid md:grid-cols-[200px_1fr] gap-6 items-start"
-          >
-            <Image
-              src={paper.cover.src}
-              alt={paper.cover.alt}
-              width={200}
-              height={260}
-              className="rounded object-cover w-full h-auto"
-            />
-            <div>
-              <p className="font-semibold">Paper Title:</p>
-              <p className="mb-3">{paper.title}</p>
-              <p className="font-semibold">Author:</p>
-              <p className="mb-3">{paper.authors}</p>
-              <p>
-                <span className="font-semibold">Journal Name: </span>
-                {paper.journal}
-              </p>
-              <p>
-                <span className="font-semibold">Publisher: </span>
-                {paper.publisher}
-              </p>
-              <p>
-                <span className="font-semibold">Impact factor: </span>
-                {paper.impactFactor}
-              </p>
+        <div className="space-y-6">
+          {publishedPapers.map((paper) => (
+            <div
+              key={paper.title}
+              className="bg-[#fafcfa] border border-gray-100 rounded-xl p-6 md:p-8 shadow-sm grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-center"
+            >
+              <div className="relative w-full h-[260px] rounded-lg overflow-hidden bg-white border border-gray-100 shadow-inner flex items-center justify-center p-2">
+                <Image
+                  src={paper.cover.src}
+                  alt={paper.cover.alt}
+                  fill
+                  className="object-contain p-1"
+                />
+              </div>
+
+              <div className="space-y-3 text-sm md:text-base text-gray-700">
+                <div>
+                  <span className="font-bold text-gray-900">Paper Title: </span>
+                  <span className="text-gray-800">{paper.title}</span>
+                </div>
+                <div>
+                  <span className="font-bold text-gray-900">Author: </span>
+                  <span>{paper.authors}</span>
+                </div>
+                <div>
+                  <span className="font-bold text-gray-900">Journal Name: </span>
+                  <span className="text-[#1b3b32] font-semibold">{paper.journal}</span>
+                </div>
+                <div>
+                  <span className="font-bold text-gray-900">Publisher: </span>
+                  <span>{paper.publisher}</span>
+                </div>
+                <div>
+                  <span className="font-bold text-gray-900">Impact factor: </span>
+                  <span>{paper.impactFactor}</span>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
 
       {/* Expert team */}
-      <section>
-        <h2 className="text-2xl font-bold text-teal-800 mb-2">
-          Our Expert Pharmaceutical Research
-        </h2>
-        <p className="text-gray-600 max-w-2xl mb-8">
-          Our team of industry specialists offers unrivalled expertise and
-          perspectives to provide complete solutions with precision and
-          originality.
-        </p>
+      <section className="py-6 max-w-6xl mx-auto px-4">
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+            Our Expert Pharmaceutical Research
+          </h2>
+          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+            Our team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality.
+          </p>
+        </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {experts.map((expert) => (
             <div
               key={expert.name}
-              className="bg-teal-50 rounded-lg p-6 flex flex-col items-start"
+              className="bg-white border border-gray-200/60 rounded-xl p-6 flex flex-col items-start shadow-sm hover:border-gray-300 transition-all"
             >
-              <Image
-                src={expert.photo.src}
-                alt={expert.photo.alt}
-                width={64}
-                height={64}
-                className="rounded-full object-cover mb-3"
-              />
-              <h3 className="font-semibold">{expert.name}</h3>
-              <p className="text-sm text-gray-600 mb-3">{expert.credentials}</p>
-              <p className="text-sm">{expert.experience}</p>
-              <p className="text-sm">{expert.manuscripts}</p>
+              <div className="flex items-center space-x-4 mb-4 w-full">
+                <div className="relative w-14 h-14 rounded-full overflow-hidden bg-gray-100 shrink-0 border border-gray-100">
+                  <Image
+                    src={expert.photo.src}
+                    alt={expert.photo.alt}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900 text-base">{expert.name}</h3>
+                  <p className="text-xs text-[#1b3b32] font-semibold">{expert.credentials}</p>
+                </div>
+              </div>
+
+              <div className="w-full space-y-1.5 text-xs text-gray-600 pt-3 border-t border-gray-100">
+                <p>{expert.experience}</p>
+                <p>{expert.manuscripts}</p>
+              </div>
             </div>
           ))}
         </div>

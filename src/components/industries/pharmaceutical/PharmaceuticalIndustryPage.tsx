@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Metadata } from 'next';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
 
 export const metadata: Metadata = {
   title: 'Pharmaceutical Industry Solutions & Compliance Services | Pubrica',
@@ -15,35 +16,24 @@ export default function PharmaceuticalIndustryPage() {
   return (
     <main className="min-h-screen bg-white text-gray-800">
       {/* Hero Section */}
-      <header className="bg-gradient-to-b from-emerald-950 to-emerald-900 text-white py-7 px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
-            Empowering Pharmaceutical Innovations with Expertise and Compliance
-          </h1>
-          <p className="text-emerald-100 text-sm md:text-base font-light">
-            Accelerating drug development, regulatory success, and scientific excellence across the pharmaceutical lifecycle.
-          </p>
-        </div>
-      </header>
+      <HeroBanner
+        title="Empowering Pharmaceutical Innovations with Expertise and Compliance"
+        description="Accelerating drug development, regulatory success, and scientific excellence across the pharmaceutical lifecycle."
+        headingAs="h1"
+      />
 
       {/* Main Content & Overview Section */}
-      <section className="py-6 px-4 md:px-8 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-snug">
-              Enhancing Regulatory Compliance and Market Readiness of Pharmaceutical Products Through Expert Dossier Preparation, Pharmacovigilance, and Data Management Services
-            </h2>
-            <p className="text-sm md:text-base text-gray-600 mb-4 leading-relaxed">
-              The pharmaceutical industry is at the forefront of scientific innovation, transforming healthcare through the development of life-saving drugs, vaccines, and therapies. Navigating this highly regulated landscape requires expertise in clinical research, regulatory compliance, medical writing, and post-market surveillance to ensure that products are safe, effective, and meet global standards.
-            </p>
-            <p className="text-sm md:text-base text-gray-600 mb-6 leading-relaxed">
-              To help meet these challenges, Pubrica provides a range of services to the pharmaceutical industry, across research and discovery, marketing materials, and regulatory compliance. These services aim to be able to help in all facets of pharmaceutical drug development from discovery to market and clinician adoption. This comprehensive approach supports the scientific rigor of pharmaceutical development and enhances the marketability of solutions that can have a significant impact on global health. Our pharmacologists, researchers, and marketing experts collaborate to support every stage of pharmaceutical development.
-            </p>
-           <GetFreeQuoteButton/>
-          </div>
+      <section className="py-6 px-4 md:px-8 max-w-6xl mx-auto space-y-6">
+        <div className="space-y-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] tracking-tight leading-snug">
+            Enhancing Regulatory Compliance and Market Readiness of Pharmaceutical Products Through Expert Dossier Preparation, Pharmacovigilance, and Data Management Services
+          </h2>
+        </div>
 
-          <div className="flex justify-center">
-            <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full border-8 border-gray-100 shadow-lg overflow-hidden">
+        <div className="clearfix">
+          {/* CIRCULAR FLOATING IMAGE CONTAINER */}
+          <div className="float-right ml-8 mb-6 w-[280px] h-[280px] md:w-[360px] md:h-[360px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 flex items-center justify-center relative">
+            <div className="relative w-full h-full rounded-full overflow-hidden">
               <Image
                 src="/images/industries/pharmaceutical/Enhancing-Regulatory-Compliance-and-Market-Readiness-of-Pharmaceutical-Products-.webp"
                 alt="Researcher writing notes with medical equipment and medicine bottles"
@@ -53,6 +43,17 @@ export default function PharmaceuticalIndustryPage() {
               />
             </div>
           </div>
+
+          <p className="text-sm md:text-base text-gray-600 mb-4 leading-relaxed">
+            The pharmaceutical industry is at the forefront of scientific innovation, transforming healthcare through the development of life-saving drugs, vaccines, and therapies. Navigating this highly regulated landscape requires expertise in clinical research, regulatory compliance, <a href="/services/research-services/medical-writing/" className="text-blue-600">medical writing</a>, and post-market surveillance to ensure that products are safe, effective, and meet global standards.
+          </p>
+          <p className="text-sm md:text-base text-gray-600 mb-6 leading-relaxed">
+            To help meet these challenges, Pubrica provides a range of services to the pharmaceutical industry, across research and discovery, marketing materials, and regulatory compliance. These services aim to be able to help in all facets of pharmaceutical drug development from discovery to market and clinician adoption. This comprehensive approach supports the scientific rigor of pharmaceutical development and enhances the marketability of solutions that can have a significant impact on global health. Our pharmacologists, researchers, and marketing experts collaborate to support every stage of pharmaceutical development.
+          </p>
+        </div>
+
+        <div className="">
+          <GetFreeQuoteButton />
         </div>
       </section>
 
@@ -139,23 +140,23 @@ export default function PharmaceuticalIndustryPage() {
         </div>
 
         {/* Segments Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {[
-            { title: 'Innovative Pharmaceuticals', description: 'Small molecules, biologics, and advanced therapies require rigorous regulatory and clinical compliance.', icon: '/images/industries/pharmaceutical/Innovative-Pharmaceuticals.webp' },
-            { title: 'Generic Drugs', description: 'Support for regulatory submissions, bioequivalence studies, and market entry.', icon: '/images/industries/pharmaceutical/Generic-Drugs.webp' },
-            { title: 'Over-the-Counter (OTC) Products', description: 'Guidance on regulatory compliance, labeling, and safety monitoring.', icon: '/images/industries/pharmaceutical/Over-the-Counter-OTC-Products.webp' },
+            { title: 'Innovative Pharmaceuticals', description: 'Small molecules, biologics, and advanced therapies require rigorous regulatory and clinical support.', icon: '/images/industries/pharmaceutical/Innovative-Pharmaceuticals.webp' },
+            { title: 'Generic Drugs', description: 'Support for regulatory submissions, bioequivalence studies, and market entry strategies.', icon: '/images/industries/pharmaceutical/Generic-Drugs.webp' },
+            { title: 'Over-the-Counter (OTC) Products', description: 'Guidance on regulatory compliance, labelling, and safety monitoring.', icon: '/images/industries/pharmaceutical/Over-the-Counter-OTC-Products.webp' },
             { title: 'Vaccines & Biologics', description: 'Expertise in clinical trials, pharmacovigilance, and regulatory dossier preparation.', icon: '/images/industries/pharmaceutical/Vaccines-Biologics.webp' },
-            { title: 'Specialty Medicines', description: 'Orphan drugs, oncology treatments, and niche therapeutics with complex development paths.', icon: '/images/industries/pharmaceutical/Specialty-Medicines.webp' },
-            { title: 'Nutraceuticals & Dietary Supplements', description: 'Regulatory guidance, quality assurance, and compliance documentation.', icon: '/images/industries/pharmaceutical/Nutraceuticals-Dietary-Supplements.webp' },
+            { title: 'Specialty Medicines', description: 'Orphan drugs, oncology treatments, and niche therapeutics with complex development pathways.', icon: '/images/industries/pharmaceutical/Specialty-Medicines.webp' },
+            { title: 'Nutraceuticals & Dietary Supplements', description: 'Regulatory guidance, quality assurance, and safety documentation.', icon: '/images/industries/pharmaceutical/Nutraceuticals-Dietary-Supplements.webp' },
             { title: 'Pharmaceutical Excipients & APIs', description: 'Support in quality control, regulatory filings, and compliance documentation.', icon: '/images/industries/pharmaceutical/Pharmaceutical-Excipients-APIs.webp' },
           ].map((item) => (
-          <div key={item.title} className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-            <div className="relative w-10 h-10 mb-3">
-              <Image src={item.icon} alt="" fill className="object-contain" sizes="40px" />
+            <div key={item.title} className="bg-white p-3 rounded-xl border border-gray-200 shadow-sm">
+              <div className="relative w-10 h-10 mb-3">
+                <Image src={item.icon} alt="" fill className="object-contain" sizes="40px" />
+              </div>
+              <h3 className="font-bold text-sm text-gray-900 mb-2">{item.title}</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">{item.description}</p>
             </div>
-            <h3 className="font-bold text-sm text-gray-900 mb-2">{item.title}</h3>
-            <p className="text-xs text-gray-600 leading-relaxed">{item.description}</p>
-          </div>
           ))}
         </div>
       </section>
