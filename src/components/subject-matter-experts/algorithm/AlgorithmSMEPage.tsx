@@ -22,6 +22,7 @@ import {
     BarChart2,
 } from "lucide-react";
 import HeroBanner from "@/components/common/HeroBanner";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export const metadata: Metadata = {
     title: "Algorithm Research & Publication | Subject Matter Experts | Pubrica",
@@ -97,55 +98,63 @@ export default function AlgorithmSMEPage() {
         },
     ];
 
-    // 2. Expertise Cards Data
+    // 2. Expertise Cards Data with Navigation URLs
     const expertiseCards = [
         {
             title: "Research Services",
             desc: "Expert guidance on project planning, execution, and data analysis.",
             icon: Search,
             imageUrl: "/images/subject-matter-experts/algorithm/Research-Services.png",
+            href: "/services/research-services/",
         },
         {
             title: "Editing & Proofreading",
             desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
             icon: FileText,
             imageUrl: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
+            href: "/services/editing-and-translation/",
         },
         {
             title: "Publication Support",
             desc: "Complete support for publishing in high-impact journals, translating concepts into incisive reports",
             icon: HelpCircle,
             imageUrl: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
+            href: "/services/publication-support/",
         },
         {
             title: "Scientific Writing",
             desc: "Crafting clear, precise, and publication-ready research manuscripts.",
             icon: PenTool,
             imageUrl: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
+            href: "/services/research-services/scientific-writing/",
         },
         {
             title: "Artwork Editing",
             desc: "Professional visuals for your figures, tables, and graphical abstracts.",
             icon: ImageIcon,
             imageUrl: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
+            href: "/services/publication-support/art-work-preparation/",
         },
         {
             title: "Journal Formatting",
             desc: "Tailored manuscript formatting to meet specific journal guidelines.",
             icon: Layout,
             imageUrl: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
+            href: "/services/publication-support/journal-manuscript-formatting-services/",
         },
         {
             title: "Graphical Abstract",
             desc: "Engaging summaries of your research in a single, informative graphic.",
             icon: BarChart2,
             imageUrl: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
+            href: "/services/research-impact/graphical-abstract/",
         },
         {
             title: "Literature Review and Gap Analysis",
             desc: "Identifying research gaps and providing comprehensive literature reviews.",
             icon: BookOpen,
             imageUrl: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
+            href: "/services/research-services/literature-review-and-gap/",
         },
     ];
 
@@ -200,12 +209,7 @@ export default function AlgorithmSMEPage() {
                         </div>
 
                         <div className="pt-2">
-                            <Link
-                                href="#quote"
-                                className="inline-block bg-[#b81c1c] hover:bg-[#a01818] text-white text-xs font-semibold px-6 py-2.5 rounded-full shadow-sm transition-colors duration-150"
-                            >
-                                Get a Free Quote
-                            </Link>
+                            <GetFreeQuoteButton />
                         </div>
                     </div>
 
@@ -255,9 +259,10 @@ export default function AlgorithmSMEPage() {
                         {expertiseCards.map((card, idx) => {
                             const CardIcon = card.icon;
                             return (
-                                <div
+                                <Link
                                     key={idx}
-                                    className="group relative bg-white border border-gray-300 rounded-none overflow-hidden shadow-sm h-64 cursor-pointer"
+                                    href={card.href}
+                                    className="group relative bg-white border border-gray-300 rounded-none overflow-hidden shadow-sm h-64 cursor-pointer block"
                                 >
                                     {/* Background Image */}
                                     <div className="relative h-40 w-full bg-gray-100">
@@ -269,21 +274,21 @@ export default function AlgorithmSMEPage() {
                                         />
                                     </div>
 
-                                    {/* Center Circle Icon */}
-                                    <div className="absolute top-[8.5rem] left-1/2 -translate-x-1/2 z-20 bg-white p-2.5 rounded-full border border-gray-200 shadow-sm transition-transform duration-300 group-hover:scale-105">
+                                    {/* Center Circle Icon - Moves up to top-20 on hover */}
+                                    <div className="absolute top-[8.5rem] left-1/2 -translate-x-1/2 z-20 bg-white p-2.5 rounded-full border border-gray-200 shadow-sm transition-all duration-300 ease-in-out group-hover:top-20 group-hover:scale-105">
                                         {(card as any).iconSrc ? <Image src={(card as any).iconSrc} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" /> : <CardIcon className="w-5 h-5 text-[#12433e]" />}
                                     </div>
 
                                     {/* Sliding White Panel Overlay */}
-                                    <div className="absolute inset-x-0 bottom-0 top-36 z-10 bg-white pt-7 pb-3 px-3 flex flex-col items-center justify-start text-center transition-all duration-300 ease-in-out group-hover:top-0 group-hover:pt-8 group-hover:justify-center">
-                                        <h3 className="text-xs font-bold text-gray-900 group-hover:text-white group-hover:bg-[#12433e] group-hover:px-4 group-hover:py-1.5 group-hover:rounded-sm transition-all duration-300">
+                                    <div className="absolute inset-x-0 bottom-0 top-36 z-10 bg-white pt-7 pb-3 px-3 flex flex-col items-center justify-start text-center transition-all duration-300 ease-in-out group-hover:top-20 group-hover:pt-12 group-hover:justify-start">
+                                        <h3 className="text-xs font-bold text-gray-900 transition-all duration-300">
                                             {card.title}
                                         </h3>
                                         <p className="text-[11px] text-gray-500 mt-2 leading-tight opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]">
                                             {card.desc}
                                         </p>
                                     </div>
-                                </div>
+                                </Link>
                             );
                         })}
                     </div>

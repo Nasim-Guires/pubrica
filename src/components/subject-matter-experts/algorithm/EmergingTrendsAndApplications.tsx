@@ -200,24 +200,24 @@ export default function EmergingTrendsAndApplications() {
       </div>
 
       {/* SECTION 2: APPLICATIONS OF ALGORITHM */}
-      <div className="space-y-6">
-        <div className="space-y-2">
+      <div className="space-y-4">
+        <div className="space-y-1.5">
           <h2 className="text-xl md:text-2xl font-bold text-[#1e2e2b]">
             Applications of Algorithm
           </h2>
-          <p className="text-xs text-gray-600 leading-relaxed">
+          <p className="text-sm text-gray-600 leading-relaxed">
             The area of algorithms is one of the most important areas in computer science because it uses computational logic to develop solutions to real-world problems using math and logic. The following are some of the many areas in which algorithms work:
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
           {/* Applications Items */}
-          <div className="md:col-span-7 space-y-3.5">
+          <div className="md:col-span-7 space-y-3">
             {applications.map((app, idx) => {
               const AppIcon = app.icon;
               return (
                 <div key={idx} className="flex items-start gap-2.5">
-                  <div className="p-1 bg-gray-100 text-gray-700 shrink-0 rounded">
+                  <div className="p-1.5 bg-gray-100 text-gray-700 shrink-0 rounded">
                     {"iconSrc" in app && app.iconSrc ? (
                       <Image
                         src={app.iconSrc}
@@ -230,8 +230,8 @@ export default function EmergingTrendsAndApplications() {
                       <AppIcon className="w-4 h-4" />
                     )}
                   </div>
-                  <p className="text-xs text-gray-700 leading-snug">
-                    <span className="font-bold text-gray-900">{app.title}</span> – {app.desc}
+                  <p className="text-sm text-gray-700 leading-snug">
+                    <span className="text-gray-900">{app.title}</span> – {app.desc}
                   </p>
                 </div>
               );
@@ -265,8 +265,8 @@ export default function EmergingTrendsAndApplications() {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto bg-white border border-gray-200 rounded p-5 shadow-sm text-left grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
-          <div className="sm:col-span-4 relative h-56 w-full rounded overflow-hidden shadow">
+        <div className="max-w-3xl mx-auto bg-white border border-gray-100 rounded-xl p-6 shadow-md text-left grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+          <div className="sm:col-span-4 relative h-60 w-full rounded-lg overflow-hidden bg-gray-50 border border-gray-100">
             <Image
               src="/images/subject-matter-experts/algorithm/sample-works-13-1.webp"
               alt="Algorithms and Computation Journal Cover"
@@ -275,38 +275,46 @@ export default function EmergingTrendsAndApplications() {
             />
           </div>
 
-          <div className="sm:col-span-8 space-y-2.5 text-xs text-gray-700">
-            <p>
-              <span className="font-bold text-gray-900">Paper Title: </span>
-              Advanced Optimization Algorithms for Large-Scale Data Processing
-            </p>
-            <p>
-              <span className="font-bold text-gray-900">Author: </span>
-              John R. Anderson
-            </p>
-            <p>
-              <span className="font-bold text-gray-900">Journal Name: </span>
-              Journal of Algorithms and Computation
-            </p>
-            <p>
-              <span className="font-bold text-gray-900">Publisher: </span>
-              Elsevier
-            </p>
-            <p>
-              <span className="font-bold text-gray-900">Impact factor: </span>
-              4.2
-            </p>
+          <div className="sm:col-span-8 space-y-4 text-xs text-gray-700">
+            <div>
+              <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-0.5">Paper Title</p>
+              <p className="text-sm text-[#1e2e2b] leading-snug">
+                Advanced Optimization Algorithms for Large-Scale Data Processing
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-0.5">Author</p>
+                <p className="text-gray-800">John R. Anderson</p>
+              </div>
+              <div>
+                <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-0.5">Publisher</p>
+                <p className="text-gray-800">Elsevier</p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-0.5">Journal Name</p>
+                <p className="text-gray-800">Journal of Algorithms and Computation</p>
+              </div>
+              <div>
+                <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-0.5">Impact factor</p>
+                <p className="text-gray-800">4.2</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* SECTION 4: OUR EXPERT ALGORITHM EDITORS */}
-      <div className="space-y-6 text-center">
-        <div className="space-y-2">
+      <div className="space-y-4 text-center">
+        <div className="space-y-1.5">
           <h2 className="text-xl md:text-2xl font-bold text-[#1e2e2b]">
             Our Expert Algorithm Editors
           </h2>
-          <p className="text-xs text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm text-gray-600 max-w-3xl mx-auto">
             Pubrica's team of subject matter experts brings strong computational and analytical expertise to deliver precise and innovative solutions.
           </p>
         </div>
@@ -315,10 +323,10 @@ export default function EmergingTrendsAndApplications() {
           {editors.map((editor, idx) => (
             <div
               key={idx}
-              className="bg-[#d2e7e3] rounded-2xl p-4 border border-[#b8ded7] shadow-sm flex flex-col justify-between"
+              className="bg-[#f2f9f6] rounded-xl p-5 border-l-4 border-l-[#12433e] border-y border-r border-[#e2efe9] shadow-sm flex flex-col justify-between text-left"
             >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-white shrink-0">
+              <div className="flex items-center gap-3.5 mb-4">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border border-[#d2e7e3] shrink-0 bg-white shadow-sm">
                   <Image
                     src={editor.avatar}
                     alt={editor.name}
@@ -326,22 +334,22 @@ export default function EmergingTrendsAndApplications() {
                     className="object-cover"
                   />
                 </div>
-                <div className="text-left">
-                  <h3 className="text-xs font-bold text-gray-900 flex items-center gap-1">
+                <div className="min-w-0">
+                  <h3 className="text-sm text-gray-900 flex items-center gap-1.5 truncate">
                     <span>{editor.flag}</span>
-                    {editor.name}
+                    <span className="truncate">{editor.name}</span>
                   </h3>
-                  <p className="text-[11px] text-gray-600">{editor.degree}</p>
+                  <p className="text-xs text-gray-600 truncate mt-0.5">{editor.degree}</p>
                 </div>
               </div>
 
-              <div className="border-t border-[#aed7cf] pt-2.5 flex items-center justify-between text-[11px] text-gray-700 font-medium">
-                <div className="flex items-center gap-1">
-                  <Award className="w-3.5 h-3.5 text-[#12433e]" />
+              <div className="bg-white/70 rounded-lg p-2.5 flex items-center justify-between text-xs text-gray-700 border border-[#e5f2ec]">
+                <div className="flex items-center gap-1.5">
+                  <Award className="w-4 h-4 text-[#12433e]" />
                   <span>{editor.experience}</span>
                 </div>
-                <div className="flex items-center gap-1">
-                  <FileText className="w-3.5 h-3.5 text-[#12433e]" />
+                <div className="flex items-center gap-1.5">
+                  <FileText className="w-4 h-4 text-[#12433e]" />
                   <span>{editor.manuscripts}</span>
                 </div>
               </div>
