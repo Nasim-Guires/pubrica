@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import HeroBanner from '@/components/common/HeroBanner';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 interface SegmentItem {
   title: string;
@@ -66,27 +68,27 @@ const defaultExpertiseItems: ExpertiseItem[] = [
   {
     title: "Product Development & Formulation",
     iconSrc: "/images/industries/cosmeceutical-research/Product-Development-Formulation.webp",
-    description: "We assist in designing innovative cosmeceutical formulations, leveraging the latest scientific research"
+    description: "We assist in designing innovative cosmeceutical formulations, leveraging the latest scientific research and trends in active ingredients, skin compatibility, and efficacy. From anti-aging creams to specialized serums, we ensure products meet market demands and consumer expectations."
   },
   {
     title: "Regulatory Compliance & Documentation",
     iconSrc: "/images/industries/cosmeceutical-research/Regulatory-Compliance-Documentation.webp",
-    description: "Our experts guide you through global regulatory frameworks, including FDA, EU, ASEAN, and other"
+    description: "Our experts guide you through global regulatory frameworks, including FDA, EU, ASEAN, and other regional guidelines, labelling guidelines, safety assessments, and compliance documentation for multiple markets, ensuring your products are market-ready and legally compliant."
   },
   {
     title: "Clinical Evaluation & Efficacy Studies",
     iconSrc: "/images/industries/cosmeceutical-research/Clinical-Evaluation-Efficacy-Studies.webp",
-    description: "Pubrica provides support in conducting clinical trials, safety assessments, and efficacy studies to"
+    description: "Pubrica provides support in conducting clinical trials, safety assessments, and efficacy studies to substantiate product claims. We ensure that your cosmeceuticals are backed by scientific evidence, enhancing credibility and consumer trust."
   },
   {
     title: "Quality Assurance & Safety Testing",
     iconSrc: "/images/industries/cosmeceutical-research/Quality-Assurance-Safety-Testing.webp",
-    description: "We help implement robust quality control measures, including stability studies, microbiological testing, and"
+    description: "We help implement robust quality control measures, including stability studies, microbiological testing, and safety evaluations, to maintain product integrity and safety throughout its shelf life."
   },
   {
     title: "Market & Trend Analysis",
     iconSrc: "/images/industries/cosmeceutical-research/Market-Trend-Analysis.webp",
-    description: "We provide insights into global trends, consumer behavior, and competitive landscapes to help you"
+    description: "We provide insights into global trends, consumer behavior, and competitive landscapes to help you make informed decisions in product development, positioning, and marketing strategies."
   }
 ];
 
@@ -107,16 +109,13 @@ export default function CosmeceuticalResearch({
 }: CosmeceuticalResearchProps) {
   return (
     <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden">
-      
+
       {/* Hero Banner Section */}
-      <section className="bg-[#0f2824] py-7 px-6 text-center text-white">
-        <div className="max-w-4xl mx-auto border border-emerald-800/60 rounded-xl p-8 sm:p-12 shadow-inner">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 tracking-tight">{heroTitle}</h1>
-          <p className="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            {heroSubtitle}
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title={heroTitle}
+        description={heroSubtitle}
+        headingAs="h1"
+      />
 
       {/* Transforming Ideas Section */}
       <section className="max-w-6xl mx-auto py-7 px-6">
@@ -125,26 +124,33 @@ export default function CosmeceuticalResearch({
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
-            {transformParagraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+          <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed text-left">
+            {transformParagraphs.map((paragraph, index) => {
+              // If it's the first paragraph, split and add a hyperlink to "pharmaceuticals"
+              if (index === 0) {
+                return (
+                  <p key={index}>
+                    The cosmeceutical industry sits at the intersection of cosmetics and{' '}
+                    <a href="/industries/pharmaceutical/" className="text-blue-600">
+                      pharmaceuticals
+                    </a>
+                    , offering products that not only enhance beauty but also provide therapeutic benefits to the skin, hair, and overall appearance. From advanced skincare formulations to innovative anti-aging solutions, cosmeceuticals demand a precise balance of science, safety, efficacy, and regulatory compliance.
+                  </p>
+                );
+              }
+              return <p key={index}>{paragraph}</p>;
+            })}
             <div className="pt-4">
-              <Link
-                href="/order-now"
-                className="inline-block bg-[#cc0000] hover:bg-[#b30000] text-white font-semibold py-3 px-8 rounded-full shadow-md transition-colors text-sm sm:text-base"
-              >
-                {ctaText}
-              </Link>
+              <GetFreeQuoteButton />
             </div>
           </div>
 
           <div className="flex justify-center">
             <div className="relative w-[320px] h-[320px] sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden shadow-xl border-4 border-gray-50">
-              <Image 
-                src={transformImage} 
-                alt="Cosmeceutical research laboratory" 
-                fill 
+              <Image
+                src={transformImage}
+                alt="Cosmeceutical research laboratory"
+                fill
                 sizes="(max-width: 768px) 320px, 400px"
                 style={{ objectFit: 'cover' }}
               />
@@ -155,43 +161,43 @@ export default function CosmeceuticalResearch({
 
       {/* Segments We Serve Section */}
       <section className="bg-gray-50/50 py-8 px-6 border-t border-b border-gray-100">
-        <div className="max-w-6xl mx-auto text-center mb-16">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{segmentsTitle}</h2>
-          <p className="text-gray-600 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
+        <div className="max-w-6xl mx-auto text-left mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-[#0f2824]">{segmentsTitle}</h2>
+          <p className="text-gray-600 text-sm sm:text-base max-w-3xl leading-relaxed">
             {segmentsSubtitle}
           </p>
         </div>
 
-        {/* Circular / Grid Segments Layout */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        {/* Circular / Grid Segments Layout with reduced gaps */}
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-center">
           {/* Left Column Segments */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             {segments.slice(0, 3).map((segment, index) => (
-              <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-left">
-                <h3 className="font-bold text-base text-[#cc0000] mb-2">{segment.title}</h3>
+              <div key={index} className="bg-white p-5 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-left">
+                <h3 className="font-bold text-base text-[#cc0000] mb-1.5">{segment.title}</h3>
                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{segment.description}</p>
               </div>
             ))}
           </div>
 
           {/* Center Image */}
-          <div className="flex justify-center my-6 md:my-0">
-            <div className="relative w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] rounded-full overflow-hidden shadow-2xl border-4 border-white">
-              <Image 
-                src={segmentsCenterImage} 
-                alt="Cosmeceutical clinical treatment" 
-                fill 
-                sizes="340px"
+          <div className="flex justify-center my-4 md:my-0">
+            <div className="relative w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] rounded-full overflow-hidden shadow-xl border-4 border-white">
+              <Image
+                src={segmentsCenterImage}
+                alt="Cosmeceutical clinical treatment"
+                fill
+                sizes="300px"
                 style={{ objectFit: 'cover' }}
               />
             </div>
           </div>
 
           {/* Right Column Segments */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             {segments.slice(3, 6).map((segment, index) => (
-              <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-left">
-                <h3 className="font-bold text-base text-[#cc0000] mb-2">{segment.title}</h3>
+              <div key={index} className="bg-white p-5 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-left">
+                <h3 className="font-bold text-base text-[#cc0000] mb-1.5">{segment.title}</h3>
                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{segment.description}</p>
               </div>
             ))}
@@ -200,22 +206,39 @@ export default function CosmeceuticalResearch({
       </section>
 
       {/* Expertise Section */}
-      <section className="max-w-6xl mx-auto py-8 px-6 text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{expertiseTitle}</h2>
-        <p className="text-gray-600 text-sm sm:text-base max-w-4xl mx-auto leading-relaxed mb-14">
+      <section className="max-w-6xl mx-auto py-6 px-6 text-left">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-[#0f2824]">{expertiseTitle}</h2>
+        <p className="text-gray-600 text-sm sm:text-base max-w-4xl leading-relaxed mb-8">
           {expertiseSubtitle}
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {expertiseItems.map((item, index) => (
-            <div key={index} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col items-start text-left hover:shadow-md transition-shadow">
-              {item.iconSrc ? <div className="relative w-12 h-12 mb-4"><Image src={item.iconSrc} alt="" fill className="object-contain" sizes="48px" /></div> : null}
-              <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{item.title}</h3>
+            <div key={index} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex flex-col items-start text-left hover:shadow-md transition-shadow">
+              {item.iconSrc ? <div className="relative w-10 h-10 mb-3"><Image src={item.iconSrc} alt="" fill className="object-contain" sizes="40px" /></div> : null}
+              <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-1.5">{item.title}</h3>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
       </section>
+
+      {/* <section className="max-w-6xl mx-auto py-6 px-6 text-left">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-[#0f2824]">{expertiseTitle}</h2>
+        <p className="text-gray-600 text-sm sm:text-base max-w-4xl leading-relaxed mb-8">
+          {expertiseSubtitle}
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          {expertiseItems.map((item, index) => (
+            <div key={index} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex flex-col items-start text-left hover:shadow-md transition-shadow">
+              {item.iconSrc ? <div className="relative w-10 h-10 mb-3"><Image src={item.iconSrc} alt="" fill className="object-contain" sizes="40px" /></div> : null}
+              <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-1.5">{item.title}</h3>
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section> */}
 
     </div>
   );

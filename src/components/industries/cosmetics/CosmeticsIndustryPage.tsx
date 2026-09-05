@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import HeroBanner from '@/components/common/HeroBanner';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 interface ExpertiseItem {
   title: string;
@@ -66,27 +68,27 @@ const defaultSegmentsItems: SegmentItem[] = [
   {
     title: 'Skincare & Dermatology',
     iconSrc: '/images/industries/cosmetics/Skincare-Dermatology.webp',
-    description: 'We support brands and researchers in developing innovative skincare solutions, dermatological formulations, and clinical trials.'
+    description: 'We support brands and researchers in developing innovative skincare solutions, dermatological treatments, and cosmeceuticals that prioritize skin health, efficacy, and safety. Our expertise spans product formulation, clinical research, regulatory compliance, and market positioning.'
   },
   {
     title: 'Haircare & Scalp Treatments',
     iconSrc: '/images/industries/cosmetics/Haircare-Scalp-Treatments.webp',
-    description: 'From shampoos and conditioners to advanced scalp therapies, we help companies develop effective, nourishing hair products.'
+    description: 'From shampoos and conditioners to advanced scalp therapies, we help companies develop effective haircare products. Our services cover everything from ingredient research and clinical testing to regulatory approvals and product claims validation.'
   },
   {
     title: 'Makeup & Color Cosmetics',
     iconSrc: '/images/industries/cosmetics/Makeup-Color-Cosmetics.webp',
-    description: 'We help makeup and colour cosmetics brands launch high-quality, trend-forward products. Our expertise ensures vibrant formulations.'
+    description: 'We help makeup and colour cosmetics brands launch high-quality, trend-forward products. Our expertise includes formulation guidance, safety assessments, regulatory compliance, and packaging optimization for various markets.'
   },
   {
     title: 'Personal Care & Hygiene',
     iconSrc: '/images/industries/cosmetics/Personal-Care-Hygiene.webp',
-    description: 'Pubrica supports the development of personal care essentials, including soaps, body washes, oral hygiene, and deodorants.'
+    description: 'Pubrica supports the development of personal care essentials, including soaps, body washes, oral care, and hygiene products. We ensure these products meet stringent safety, quality, and regulatory standards while aligning with consumer needs.'
   },
   {
     title: 'Natural, Organic & Sustainable Beauty',
     iconSrc: '/images/industries/cosmetics/Natural-Organic-Sustainable-Beauty.webp',
-    description: 'We guide brands in creating eco-friendly and sustainable beauty products. From sourcing clean ingredients to eco-packaging.'
+    description: 'We guide brands in creating eco-friendly and sustainable beauty products. From sourcing natural ingredients to achieving certifications, we help companies develop responsible and innovative products that resonate with conscious consumers.'
   }
 ];
 
@@ -108,17 +110,13 @@ export default function CosmeticsIndustryPage({
 }: CosmeticsPageProps) {
   return (
     <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden">
-      
-      {/* Hero Banner */}
-      <section className="bg-[#0f2824] py-7 px-6 text-center text-white">
-        <div className="max-w-4xl mx-auto border border-white/20 rounded-xl p-8 sm:p-12 shadow-sm bg-[#0f2824]">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4">{heroTitle}</h1>
-          <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-            {heroSubtitle}
-          </p>
-        </div>
-      </section>
 
+      {/* Hero Banner */}
+      <HeroBanner
+        title={heroTitle}
+        description={heroSubtitle}
+        headingAs="h1"
+      />
       {/* Transforming Ideas into Market-Ready Cosmetic Innovations */}
       <section className="py-7 px-6 max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -136,20 +134,15 @@ export default function CosmeticsIndustryPage({
               {transformParagraph3}
             </p>
             <div>
-              <a 
-                href={ctaLink} 
-                className="inline-block bg-[#b91c1c] hover:bg-[#991b1b] text-white font-medium px-6 py-3 rounded-full text-sm shadow-md transition-colors"
-              >
-                {ctaText}
-              </a>
+              <GetFreeQuoteButton />
             </div>
           </div>
           <div className="w-full lg:w-[420px] flex-shrink-0">
             <div className="relative w-full h-[360px] rounded-full overflow-hidden shadow-xl border-4 border-white">
-              <Image 
-                src={transformImage} 
-                alt="Transforming cosmetic ideas" 
-                fill 
+              <Image
+                src={transformImage}
+                alt="Transforming cosmetic ideas"
+                fill
                 sizes="(max-width: 1024px) 100vw, 420px"
                 style={{ objectFit: 'cover' }}
               />
@@ -169,9 +162,9 @@ export default function CosmeticsIndustryPage({
         <div className="relative hidden lg:flex items-center justify-center min-h-[600px] max-w-5xl mx-auto">
           {/* Center Circular Image */}
           <div className="absolute z-10 w-[280px] h-[280px] rounded-full overflow-hidden border-4 border-white shadow-2xl bg-white">
-            <Image 
-              src={expertiseCenterImage} 
-              alt="Cosmetic expert" 
+            <Image
+              src={expertiseCenterImage}
+              alt="Cosmetic expert"
               fill
               sizes="280px"
               style={{ objectFit: 'cover' }}
@@ -181,8 +174,8 @@ export default function CosmeticsIndustryPage({
           {/* Left Cards (3 cards stacked vertically) */}
           <div className="absolute left-0 flex flex-col justify-between h-[520px] w-[340px] z-20">
             {defaultExpertiseItems.slice(0, 3).map((item, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="bg-white border border-gray-200/80 rounded-xl p-4 shadow-md text-left transition-transform hover:scale-105"
               >
                 <h3 className="text-[#b91c1c] font-bold text-sm mb-1">{item.title}</h3>
@@ -194,8 +187,8 @@ export default function CosmeticsIndustryPage({
           {/* Right Cards (4 cards stacked vertically) */}
           <div className="absolute right-0 flex flex-col justify-between h-[640px] w-[340px] z-20">
             {defaultExpertiseItems.slice(3, 7).map((item, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="bg-white border border-gray-200/80 rounded-xl p-4 shadow-md text-left transition-transform hover:scale-105"
               >
                 <h3 className="text-[#b91c1c] font-bold text-sm mb-1">{item.title}</h3>
@@ -206,18 +199,29 @@ export default function CosmeticsIndustryPage({
         </div>
 
         {/* Mobile / Tablet Stacked Layout */}
+        {/* Mobile / Tablet Stacked Layout */}
         <div className="flex lg:hidden flex-col items-center gap-8">
-          <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl">
-            <Image 
-              src={expertiseCenterImage} 
-              alt="Cosmetic expert" 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-left">
+            {defaultExpertiseItems.slice(0, 3).map((item, idx) => (
+              <div key={idx} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                <h3 className="text-[#b91c1c] font-bold text-sm mb-1">{item.title}</h3>
+                <p className="text-gray-600 text-xs leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl my-2">
+            <Image
+              src={expertiseCenterImage}
+              alt="Cosmetic expert"
               fill
               sizes="192px"
               style={{ objectFit: 'cover' }}
             />
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-left">
-            {defaultExpertiseItems.map((item, idx) => (
+            {defaultExpertiseItems.slice(3, 7).map((item, idx) => (
               <div key={idx} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
                 <h3 className="text-[#b91c1c] font-bold text-sm mb-1">{item.title}</h3>
                 <p className="text-gray-600 text-xs leading-relaxed">{item.description}</p>
@@ -228,9 +232,9 @@ export default function CosmeticsIndustryPage({
       </section>
 
       {/* Cosmetic Segments We Serve */}
-      <section className="py-8 px-6 max-w-6xl mx-auto border-t border-gray-100 text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{segmentsTitle}</h2>
-        <p className="text-gray-600 text-sm sm:text-base max-w-4xl mx-auto mb-12 leading-relaxed">
+      <section className="py-5 px-6 max-w-6xl mx-auto border-t border-gray-100 text-left">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-[#0f2824]">{segmentsTitle}</h2>
+        <p className="text-gray-600 text-sm sm:text-base max-w-4xl mb-8 leading-relaxed">
           {segmentsSubtitle}
         </p>
 
@@ -246,7 +250,6 @@ export default function CosmeticsIndustryPage({
           ))}
         </div>
       </section>
-
     </div>
   );
 }

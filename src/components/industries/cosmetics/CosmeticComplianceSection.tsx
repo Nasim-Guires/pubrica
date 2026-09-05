@@ -115,11 +115,14 @@ export default function CosmeticsAuthorsAndCompliance({
     editorsSectionSubtitle = "Pubrica's team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do.",
     editors = defaultEditors
 }: CosmeticsAuthorsAndComplianceProps) {
-    // Use a single number state to track only the currently open card index, or null if all are closed
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const [openIndices, setOpenIndices] = useState<number[]>([]);
 
     const toggleAccordion = (index: number) => {
-        setOpenIndex(prevIndex => (prevIndex === index ? null : index));
+        setOpenIndices(prev =>
+            prev.includes(index)
+                ? prev.filter(i => i !== index) // Close if already open
+                : [...prev, index]             // Open alongside other open cards
+        );
     };
 
     return (
@@ -127,7 +130,7 @@ export default function CosmeticsAuthorsAndCompliance({
 
             {/* Compliance And Guidelines Section */}
             <section className="py-7 px-6 max-w-6xl mx-auto">
-                <div className="text-center max-w-3xl mx-auto mb-12">
+                <div className="text-left max-w-3xl mb-12">
                     <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{sectionTitle}</h2>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                         {sectionSubtitle}
@@ -135,15 +138,15 @@ export default function CosmeticsAuthorsAndCompliance({
                 </div>
 
                 {/* Grid layout matching the exact design reference (3 top cards, 2 centered bottom cards) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-start">
                     {items.map((item, index) => {
-                        const isOpen = openIndex === index;
+                        const isOpen = openIndices.includes(index);
                         const isCenteredBottomRow = index >= 3;
 
                         return (
                             <div
                                 key={index}
-                                className={`bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden transition-all ${isCenteredBottomRow ? 'lg:col-span-1 lg:mx-auto lg:w-full max-w-md' : ''
+                                className={`bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden transition-all self-start ${isCenteredBottomRow ? 'lg:col-span-1 lg:mx-auto lg:w-full max-w-md' : ''
                                     }`}
                             >
                                 <button
@@ -179,98 +182,119 @@ export default function CosmeticsAuthorsAndCompliance({
             </section>
 
             {/* Where Our Authors Publish Section */}
-            <section className="py-7 px-6 max-w-6xl mx-auto border-t border-gray-100">
-                <div className="text-center max-w-3xl mx-auto mb-10">
-                    <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-[#0f2824]">{authorsSectionTitle}</h2>
-                    <div className="w-12 h-1 bg-[#0f2824] mx-auto mb-4"></div>
-                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+
+            <section className="py-12 max-w-5xl mx-auto px-4 border-t border-gray-100">
+                <div className="text-left max-w-2xl mb-10">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+                        {authorsSectionTitle}
+                    </h2>
+
+                    <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                         {authorsSectionSubtitle}
                     </p>
                 </div>
 
-                {/* Publication Showcase Card */}
-                <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-sm max-w-4xl mx-auto flex flex-col md:flex-row gap-8 items-center">
-                    <div className="relative w-full md:w-[280px] h-[340px] flex-shrink-0 rounded-xl overflow-hidden shadow-md bg-gray-50 border border-gray-100">
-                        <Image
-                            src={publication.image}
-                            alt={publication.title}
-                            fill
-                            sizes="(max-width: 768px) 100vw, 280px"
-                            style={{ objectFit: 'cover' }}
-                        />
-                    </div>
-                    <div className="flex-1 space-y-3 text-left">
-                        <div>
-                            <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full uppercase tracking-wider">Featured Paper</span>
-                            <h3 className="text-lg sm:text-xl font-bold text-[#0f2824] mt-2 mb-3 leading-snug">
-                                Paper Title: <span className="font-normal text-gray-800">{publication.title}</span>
-                            </h3>
+                <div className="space-y-6">
+                    <div className="bg-[#fafcfa] border border-gray-100 rounded-xl p-6 md:p-8 shadow-sm grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-center">
+                        <div className="relative w-full h-[260px] rounded-lg overflow-hidden bg-white border border-gray-100 shadow-inner flex items-center justify-center p-2">
+                            <Image
+                                src={publication.image}
+                                alt={publication.title}
+                                fill
+                                sizes="(max-width: 768px) 100vw, 200px"
+                                className="object-contain p-1"
+                            />
                         </div>
-                        <p className="text-sm text-gray-700">
-                            <strong className="text-[#0f2824]">Author:</strong> {publication.author}
-                        </p>
-                        <p className="text-sm text-gray-700">
-                            <strong className="text-[#0f2824]">Journal Name:</strong> {publication.journal}
-                        </p>
-                        <p className="text-sm text-gray-700">
-                            <strong className="text-[#0f2824]">Publisher:</strong> {publication.publisher}
-                        </p>
-                        <p className="text-sm text-gray-700">
-                            <strong className="text-[#0f2824]">Impact factor:</strong> {publication.impactFactor}
-                        </p>
+
+                        <div className="space-y-3 text-sm md:text-base text-gray-700">
+                            <div>
+                                <span className="font-bold text-gray-900">Paper Title: </span>
+                                <span className="text-gray-800">
+                                    {publication.title}
+                                </span>
+                            </div>
+
+                            <div>
+                                <span className="font-bold text-gray-900">Author: </span>
+                                <span>{publication.author}</span>
+                            </div>
+
+                            <div>
+                                <span className="font-bold text-gray-900">Journal Name: </span>
+                                <span className="text-[#1b3b32] font-semibold">
+                                    {publication.journal}
+                                </span>
+                            </div>
+
+                            <div>
+                                <span className="font-bold text-gray-900">Publisher: </span>
+                                <span>{publication.publisher}</span>
+                            </div>
+
+                            <div>
+                                <span className="font-bold text-gray-900">Impact factor: </span>
+                                <span>{publication.impactFactor}</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Our Expert Cosmetic Editors Section */}
-            <section className="py-7 px-6 max-w-6xl mx-auto border-t border-gray-100">
-                <div className="text-center max-w-3xl mx-auto mb-12">
-                    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{editorsSectionTitle}</h2>
-                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+
+            <section className="py-12 max-w-6xl mx-auto px-4 border-t border-gray-100">
+                <div className="text-left max-w-2xl mb-10">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+                        {editorsSectionTitle}
+                    </h2>
+
+                    <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                         {editorsSectionSubtitle}
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {editors.map((editor, idx) => (
                         <div
                             key={idx}
-                            className="bg-gradient-to-b from-[#eaf2ef] to-[#d4e6e0] border border-[#bcdad0] rounded-2xl p-6 shadow-sm flex flex-col justify-between text-center relative overflow-hidden"
+                            className="bg-white border border-gray-200/60 rounded-xl p-6 flex flex-col items-start shadow-sm hover:border-gray-300 transition-all"
                         >
-                            <div>
-                                <div className="relative w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white shadow-md">
+                            <div className="flex items-center space-x-4 mb-4 w-full">
+                                <div className="relative w-14 h-14 rounded-full overflow-hidden bg-gray-100 shrink-0 border border-gray-100">
                                     <Image
                                         src={editor.avatar}
                                         alt={editor.name}
                                         fill
-                                        sizes="64px"
-                                        style={{ objectFit: 'cover' }}
+                                        sizes="56px"
+                                        className="object-cover"
                                     />
                                 </div>
-                                <div className="flex items-center justify-center gap-1.5 mb-1">
-                                    <h3 className="font-bold text-base text-[#0f2824]">{editor.name}</h3>
-                                    {editor.flag ? <span className="text-sm">{editor.flag}</span> : null}
+
+                                <div>
+                                    <div className="flex items-center gap-2">
+                                        <h3 className="font-bold text-gray-900 text-base">
+                                            {editor.name}
+                                        </h3>
+
+                                        {editor.flag ? (
+                                            <span className="text-sm">{editor.flag}</span>
+                                        ) : null}
+                                    </div>
+
+                                    <p className="text-xs text-[#1b3b32] font-semibold">
+                                        {editor.role}
+                                    </p>
                                 </div>
-                                <p className="text-gray-700 text-xs sm:text-sm font-medium mb-6 leading-relaxed">
-                                    {editor.role}
-                                </p>
                             </div>
 
-                            <div className="border-t border-[#b2d3c7] pt-4 grid grid-cols-2 gap-2 text-center">
-                                <div>
-                                    <p className="text-[11px] text-gray-500 uppercase tracking-wider font-semibold">Experience</p>
-                                    <p className="text-xs sm:text-sm font-bold text-[#0f2824] mt-0.5">{editor.experience}</p>
-                                </div>
-                                <div className="border-l border-[#b2d3c7]">
-                                    <p className="text-[11px] text-gray-500 uppercase tracking-wider font-semibold">Edited</p>
-                                    <p className="text-xs sm:text-sm font-bold text-[#0f2824] mt-0.5">{editor.manuscripts}</p>
-                                </div>
+                            <div className="w-full space-y-1.5 text-xs text-gray-600 pt-3 border-t border-gray-100">
+                                <p>{editor.experience}</p>
+                                <p>{editor.manuscripts}</p>
                             </div>
                         </div>
                     ))}
                 </div>
             </section>
-
         </div>
     );
 }

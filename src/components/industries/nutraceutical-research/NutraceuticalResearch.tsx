@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import HeroBanner from '@/components/common/HeroBanner';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 interface ExpertiseItem {
   title: string;
@@ -62,27 +64,27 @@ const defaultSegments: SegmentItem[] = [
   {
     title: "Vitamins and Minerals",
     iconSrc: "/images/industries/nutraceutical-research/Vitamins-and-Minerals.webp",
-    description: "Vitamin and mineral supplements remain the largest category in the..."
+    description: "Vitamin and mineral supplements remain the largest category in the nutraceutical industry. Products like multivitamins, calcium, magnesium, and vitamin D are widely consumed for bone health, immunity, and overall wellness."
   },
   {
     title: "Herbal and Botanical Nutraceuticals",
     iconSrc: "/images/industries/nutraceutical-research/Herbal-and-Botanical-Nutraceuticals.webp",
-    description: "Herbal and botanical supplements use plant extracts to support health..."
+    description: "Herbal and botanical supplements use plant extracts to support health. Popular ingredients include ginseng, turmeric, ashwagandha, green tea, and echinacea. These products are often marketed for stress relief, cognitive support, and immune enhancement."
   },
   {
     title: "Functional Foods and Beverages",
     iconSrc: "/images/industries/nutraceutical-research/Functional-Foods-and-Beverages.webp",
-    description: "Functional foods are everyday consumables enhanced with bioactive..."
+    description: "Functional foods are everyday consumables enhanced with bioactive compounds. Examples include probiotic yogurts, omega-3 fortified eggs, protein bars, and antioxidant-rich beverages. These products are designed to provide additional health benefits without changing the consumer’s diet."
   },
   {
     title: "Protein and Amino Acid Supplements",
     iconSrc: "/images/industries/nutraceutical-research/Protein-and-Amino-Acid-Supplements.webp",
-    description: "High-protein diets and sports nutrition are driving the demand for protein..."
+    description: "High-protein diets and sports nutrition are driving the demand for protein powders, amino acid supplements, and meal replacements. These nutraceuticals support muscle growth, recovery, and weight management."
   },
   {
     title: "Probiotics and Prebiotics",
     iconSrc: "/images/industries/nutraceutical-research/Probiotics-and-Prebiotics.webp",
-    description: "Gut health has become a major focus area in the nutraceutical sector..."
+    description: "Gut health has become a major focus area in the nutraceutical sector. Probiotics and prebiotics aid digestion, boost immunity, and maintain a healthy microbiome. Products include fermented foods, capsules, and beverages containing beneficial bacteria."
   }
 ];
 
@@ -104,21 +106,18 @@ export default function NutraceuticalResearch({
 }: NutraceuticalResearchProps) {
   return (
     <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden">
-      
+
       {/* Hero Banner Section */}
-      <section className="bg-[#0f2824] py-7 px-6 text-center text-white">
-        <div className="max-w-4xl mx-auto border border-emerald-800/60 rounded-xl p-8 sm:p-12 shadow-inner">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 tracking-tight">{heroTitle}</h1>
-          <p className="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            {heroSubtitle}
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title={heroTitle}
+        description={heroSubtitle}
+        headingAs="h1"
+      />
 
       {/* Transforming Health Section */}
-      <section className="max-w-6xl mx-auto py-7 px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-[#0f2824]">
+      <section className="py-7 px-6 max-w-6xl mx-auto">
+        <div className="text-left mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-[#0f2824] leading-snug">
             {transformTitle}
           </h2>
           <p className="text-emerald-800 font-medium text-sm sm:text-base">
@@ -126,74 +125,68 @@ export default function NutraceuticalResearch({
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
+        <div className="flex flex-col lg:flex-row gap-12 items-start">
+          <div className="flex-1 space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed text-left">
             {transformParagraphs.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
             <div className="pt-4">
-              <Link
-                href="/order-now"
-                className="inline-block bg-[#cc0000] hover:bg-[#b30000] text-white font-semibold py-3 px-8 rounded-full shadow-md transition-colors text-sm sm:text-base"
-              >
-                {ctaText}
-              </Link>
+              <GetFreeQuoteButton />
             </div>
           </div>
 
-          <div className="flex justify-center">
-            <div className="relative w-[320px] h-[320px] sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden shadow-xl border-4 border-gray-50">
-              <Image 
-                src={transformImage} 
-                alt="Nutraceutical research lab technician" 
-                fill 
-                sizes="(max-width: 768px) 320px, 400px"
+          <div className="w-full lg:w-[420px] flex-shrink-0 flex justify-center">
+            <div className="relative w-[340px] h-[340px] sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden shadow-xl border-4 border-white">
+              <Image
+                src={transformImage}
+                alt="Nutraceutical research lab technician"
+                fill
+                sizes="(max-width: 768px) 340px, 400px"
                 style={{ objectFit: 'cover' }}
               />
             </div>
           </div>
         </div>
       </section>
-
       {/* Expertise in Nutraceutical Development Section */}
-      <section className="bg-gray-50/50 py-8 px-6 border-t border-b border-gray-100">
-        <div className="max-w-6xl mx-auto text-center mb-16">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{expertiseTitle}</h2>
-          <p className="text-gray-600 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
+      <section className="bg-gray-50/50 py-6 px-6 border-t border-b border-gray-100">
+        <div className="max-w-6xl mx-auto text-left mb-6">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-[#0f2824]">{expertiseTitle}</h2>
+          <p className="text-gray-600 text-sm sm:text-base max-w-3xl leading-relaxed">
             {expertiseSubtitle}
           </p>
         </div>
 
-        {/* Circular / Grid Expertise Layout */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        {/* Circular / Grid Expertise Layout with reduced gaps and spacing */}
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-center">
           {/* Left Column Expertise (2 items) */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             {expertiseItems.slice(3, 5).map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-left">
-                <h3 className="font-bold text-base text-[#cc0000] mb-2">{item.title}</h3>
+              <div key={index} className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-left">
+                <h3 className="font-bold text-base text-[#cc0000] mb-1">{item.title}</h3>
                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
 
           {/* Center Image */}
-          <div className="flex justify-center my-6 md:my-0">
-            <div className="relative w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] rounded-full overflow-hidden shadow-2xl border-4 border-white">
-              <Image 
-                src={expertiseCenterImage} 
-                alt="Nutraceutical specialist writing formulation notes" 
-                fill 
-                sizes="340px"
+          <div className="flex justify-center my-4 md:my-0">
+            <div className="relative w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] rounded-full overflow-hidden shadow-xl border-4 border-white">
+              <Image
+                src={expertiseCenterImage}
+                alt="Nutraceutical specialist writing formulation notes"
+                fill
+                sizes="300px"
                 style={{ objectFit: 'cover' }}
               />
             </div>
           </div>
 
           {/* Right Column Expertise (3 items) */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             {expertiseItems.slice(0, 3).map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-left">
-                <h3 className="font-bold text-base text-[#cc0000] mb-2">{item.title}</h3>
+              <div key={index} className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-left">
+                <h3 className="font-bold text-base text-[#cc0000] mb-1">{item.title}</h3>
                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{item.description}</p>
               </div>
             ))}
@@ -202,17 +195,17 @@ export default function NutraceuticalResearch({
       </section>
 
       {/* Key Segments Of The Nutraceutical Industry Section */}
-      <section className="max-w-6xl mx-auto py-8 px-6 text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{segmentsTitle}</h2>
-        <p className="text-gray-600 text-sm sm:text-base max-w-4xl mx-auto leading-relaxed mb-14">
+      <section className="max-w-6xl mx-auto py-6 px-6 text-left">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-[#0f2824]">{segmentsTitle}</h2>
+        <p className="text-gray-600 text-sm sm:text-base max-w-4xl leading-relaxed mb-8">
           {segmentsSubtitle}
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {segments.map((segment, index) => (
-            <div key={index} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col items-start text-left hover:shadow-md transition-shadow">
-              {segment.iconSrc ? <div className="relative w-12 h-12 mb-4"><Image src={segment.iconSrc} alt="" fill className="object-contain" sizes="48px" /></div> : null}
-              <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{segment.title}</h3>
+            <div key={index} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex flex-col items-start text-left hover:shadow-md transition-shadow">
+              {segment.iconSrc ? <div className="relative w-10 h-10 mb-3"><Image src={segment.iconSrc} alt="" fill className="object-contain" sizes="40px" /></div> : null}
+              <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-1.5">{segment.title}</h3>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{segment.description}</p>
             </div>
           ))}

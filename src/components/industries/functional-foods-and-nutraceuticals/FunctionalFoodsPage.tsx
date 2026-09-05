@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
 
 interface SegmentItem {
   title: string;
@@ -122,44 +123,44 @@ export default function FunctionalFoodsPage({
 
   return (
     <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden">
-      
+
       {/* Hero Section */}
-      <section className="bg-[#0b221f] py-7 px-6 text-white text-center">
-        <div className="max-w-4xl mx-auto border border-emerald-800/60 rounded-xl p-8 bg-gradient-to-b from-[#0b221f] to-[#061614] shadow-lg">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4 tracking-tight">{heroTitle}</h1>
-          <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-            {heroSubtitle}
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title={heroTitle}
+        description={heroSubtitle}
+        headingAs="h1"
+      />
 
       {/* Intro & Transformation Section */}
       <section className="py-7 px-6 max-w-6xl mx-auto">
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
+        <div className="text-left mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0f2824] leading-snug">
+            {introTitle}
+          </h2>
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-12 items-start">
           <div className="flex-1 space-y-6 text-left">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0f2824] leading-snug">
-              {introTitle}
-            </h2>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
               {introParagraph1}
             </p>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              {introParagraph2}
+              We offer a wide range of <a href="/services/research-services/" className="text-blue-600">research services</a> for nutraceutical ingredients, supplements, pharmacologic, and functional foods for branded and private label supplements. Our service excellence, critical to client stories, is the result of 10+ years of experience in Nutraceuticals. Evidence-based Ingredient Selection (<a href="/services/research-services/product-development/" className="text-blue-600">Product development</a>): Based on your health goals for your nutraceutical supplement product, we will scrutinize the scientific database for the best natural ingredients.
             </p>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
               {introParagraph3}
             </p>
             <div className="pt-2">
-              <GetFreeQuoteButton/>
+              <GetFreeQuoteButton />
             </div>
           </div>
 
           <div className="w-full lg:w-[420px] flex-shrink-0 flex justify-center">
             <div className="relative w-[340px] h-[340px] sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden shadow-xl border-4 border-white">
-              <Image 
-                src="/images/industries/foods-nutraceuticals/Functional-Foods-Nutraceutical-Innovation.webp" 
-                alt="Laboratory research" 
-                fill 
+              <Image
+                src="/images/industries/foods-nutraceuticals/Functional-Foods-Nutraceutical-Innovation.webp"
+                alt="Laboratory research"
+                fill
                 sizes="400px"
                 style={{ objectFit: 'cover' }}
               />
@@ -169,31 +170,28 @@ export default function FunctionalFoodsPage({
       </section>
 
       {/* Food Label Review Section */}
-      <section className="py-7 px-6 max-w-6xl mx-auto border-t border-gray-100">
-        <div className="text-center max-w-3xl mx-auto mb-10">
+      <section className="py-10 px-6 max-w-6xl mx-auto border-t border-gray-100">
+        <div className="max-w-3xl mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-[#0f2824]">{labelReviewTitle}</h2>
-          <div className="w-12 h-1 bg-[#0f2824] mx-auto mb-4"></div>
-        </div>
-
-        <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-10 shadow-sm max-w-5xl mx-auto">
-          <p className="text-gray-700 text-sm sm:text-base mb-8 text-center max-w-3xl mx-auto leading-relaxed">
+          <div className="w-12 h-1 bg-[#0f2824] mb-4"></div>
+          <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-left">
             {labelReviewDescription}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-12">
-            {labelReviewItems.map((item, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-emerald-50 text-[#0f2824] flex items-center justify-center flex-shrink-0">
-                  <svg className="w-3 h-3 text-[#0f2824]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span className="text-gray-800 text-sm sm:text-base font-medium">{item}</span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {labelReviewItems.map((item, index) => (
+            <div key={index} className="flex items-start gap-3 bg-white border border-gray-200/80 rounded-xl p-4 shadow-sm hover:border-gray-300 transition-colors">
+              <div className="w-5 h-5 rounded-full bg-emerald-50 text-[#0f2824] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg className="w-3 h-3 text-[#0f2824]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                </svg>
               </div>
-            ))}
-          </div>
+              <span className="text-gray-800 text-sm sm:text-base font-medium leading-normal">{item}</span>
+            </div>
+          ))}
         </div>
       </section>
-
       {/* Our Expertise in Functional Foods & Nutraceuticals Includes (Exact Orbit / Around Central Image Layout matching the reference screenshot) */}
       <section className="py-8 px-6 max-w-7xl mx-auto border-t border-gray-100 relative">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -205,13 +203,13 @@ export default function FunctionalFoodsPage({
 
         {/* Desktop Absolute/Grid Hybrid Layout matching the exact orbiting card design from screenshot */}
         <div className="relative max-w-5xl mx-auto min-h-[650px] flex items-center justify-center">
-          
+
           {/* Central Circular Image */}
           <div className="absolute z-10 w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] rounded-full overflow-hidden shadow-2xl border-4 border-white bg-white">
-            <Image 
-              src="/images/industries/foods-nutraceuticals/Our-Expertise-in-Functional-Foods-Nutraceuticals-Includes.webp" 
-              alt="Microscope research" 
-              fill 
+            <Image
+              src="/images/industries/foods-nutraceuticals/Our-Expertise-in-Functional-Foods-Nutraceuticals-Includes.webp"
+              alt="Microscope research"
+              fill
               sizes="340px"
               style={{ objectFit: 'cover' }}
             />
@@ -219,7 +217,7 @@ export default function FunctionalFoodsPage({
 
           {/* Surrounding Cards Grid for responsiveness & Absolute placements for Desktop exact match */}
           <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-y-[380px] gap-x-8 z-20">
-            
+
             {/* Top Left Card */}
             <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-md md:absolute md:left-0 md:top-0 md:w-[320px]">
               <h3 className="text-base font-bold text-[#c8102e] mb-2">{expertiseItems[1].title}</h3>
@@ -272,11 +270,10 @@ export default function FunctionalFoodsPage({
             const isCenteredBottomRow = index >= 3;
 
             return (
-              <div 
-                key={index} 
-                className={`bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden transition-all flex flex-col ${
-                  isCenteredBottomRow ? 'lg:col-span-1 lg:mx-auto lg:w-full max-w-md' : ''
-                }`}
+              <div
+                key={index}
+                className={`bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden transition-all flex flex-col ${isCenteredBottomRow ? 'lg:col-span-1 lg:mx-auto lg:w-full max-w-md' : ''
+                  }`}
               >
                 <button
                   type="button"
@@ -289,10 +286,10 @@ export default function FunctionalFoodsPage({
                     </div>
                     <span className="font-bold text-sm sm:text-base text-[#0f2824] leading-snug">{item.title}</span>
                   </div>
-                  <svg 
-                    className={`w-5 h-5 text-gray-500 transform transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`} 
-                    fill="none" 
-                    stroke="currentColor" 
+                  <svg
+                    className={`w-5 h-5 text-gray-500 transform transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
