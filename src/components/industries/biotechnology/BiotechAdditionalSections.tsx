@@ -113,7 +113,7 @@ export default function BiotechAdditionalSections({
 
   return (
     <div className="bg-white text-[#0f2824] w-full font-sans">
-      
+
       {/* 1. Why Pubrica For Biotechnology Section (Accordion Style) */}
       <section className="py-7 px-6 max-w-5xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-10 text-[#0f2824]">{whyTitle}</h2>
@@ -121,8 +121,8 @@ export default function BiotechAdditionalSections({
           {whyItems.map((item, index) => {
             const isOpen = openIndex === index;
             return (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden transition-all text-left"
               >
                 <button
@@ -135,16 +135,16 @@ export default function BiotechAdditionalSections({
                     </div>
                     <span>{item.title}</span>
                   </div>
-                  <svg 
-                    className={`w-5 h-5 text-gray-500 transform transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} 
-                    fill="none" 
-                    stroke="currentColor" 
+                  <svg
+                    className={`w-5 h-5 text-gray-500 transform transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                
+
                 {isOpen && (
                   <div className="px-6 pb-5 pt-1 text-gray-600 text-sm border-t border-gray-100 bg-gray-50/30 leading-relaxed">
                     {item.description}
@@ -157,88 +157,125 @@ export default function BiotechAdditionalSections({
       </section>
 
       {/* 2. Where Our Authors Publish Section */}
-      <section className="py-7 px-6 max-w-5xl mx-auto text-center border-t border-gray-100">
-        <h2 className="text-3xl font-bold mb-4 text-[#0f2824]">{authorSectionTitle}</h2>
-        <p className="text-gray-600 text-sm md:text-base max-w-3xl mx-auto mb-12 leading-relaxed">
-          {authorSectionSubtitle}
-        </p>
 
-        <div className="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 shadow-sm text-left flex flex-col md:flex-row gap-8 items-center">
-          <div className="relative w-full md:w-[280px] h-[360px] flex-shrink-0 bg-gray-100 rounded-lg overflow-hidden shadow-inner border border-gray-100">
-            <Image 
-              src={journalCoverImage} 
-              alt="Journal of Biotechnology cover" 
-              fill
-              sizes="(max-width: 768px) 100vw, 280px"
-              style={{ objectFit: 'cover' }}
-            />
-          </div>
-          <div className="flex flex-col justify-center space-y-3">
-            <h3 className="text-xl sm:text-2xl font-bold text-[#0f2824] leading-snug">
-              Paper Title: <span className="font-normal text-gray-800">{paperTitle}</span>
-            </h3>
-            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              <strong className="text-gray-800">Author:</strong> {paperAuthors}
-            </p>
-            <p className="text-xs sm:text-sm text-gray-600">
-              <strong className="text-gray-800">Journal Name:</strong> {journalName}
-            </p>
-            <p className="text-xs sm:text-sm text-gray-600">
-              <strong className="text-gray-800">Publisher:</strong> {publisher}
-            </p>
-            <p className="text-xs sm:text-sm text-gray-600">
-              <strong className="text-gray-800">Impact factor:</strong> {impactFactor}
-            </p>
+      <section className="py-12 max-w-5xl mx-auto px-4 border-t border-gray-100">
+        <div className="text-left mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+            {authorSectionTitle}
+          </h2>
+
+          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+            {authorSectionSubtitle}
+          </p>
+        </div>
+
+        <div className="space-y-6">
+          <div className="bg-[#fafcfa] border border-gray-100 rounded-xl p-6 md:p-8 shadow-sm grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-center">
+            <div className="relative w-full h-[260px] rounded-lg overflow-hidden bg-white border border-gray-100 shadow-inner flex items-center justify-center p-2">
+              <Image
+                src={journalCoverImage}
+                alt="Journal of Biotechnology cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 200px"
+                className="object-contain p-1"
+              />
+            </div>
+
+            <div className="space-y-3 text-sm md:text-base text-gray-700">
+              <div>
+                <span className="font-bold text-gray-900">Paper Title: </span>
+                <span className="text-gray-800">{paperTitle}</span>
+              </div>
+
+              <div>
+                <span className="font-bold text-gray-900">Author: </span>
+                <span>{paperAuthors}</span>
+              </div>
+
+              <div>
+                <span className="font-bold text-gray-900">Journal Name: </span>
+                <span className="text-[#1b3b32] font-semibold">
+                  {journalName}
+                </span>
+              </div>
+
+              <div>
+                <span className="font-bold text-gray-900">Publisher: </span>
+                <span>{publisher}</span>
+              </div>
+
+              <div>
+                <span className="font-bold text-gray-900">Impact factor: </span>
+                <span>{impactFactor}</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+
       {/* 3. Our Expert Biotechnology Editors Section */}
-      <section className="py-7 px-6 max-w-6xl mx-auto border-t border-gray-100">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-[#0f2824]">{editorsSectionTitle}</h2>
-          <p className="text-gray-600 text-sm md:text-base max-w-3xl mx-auto leading-relaxed">
+
+      <section className="py-12 max-w-6xl mx-auto px-4 border-t border-gray-100">
+        <div className="text-left mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+            {editorsSectionTitle}
+          </h2>
+
+          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
             {editorsSectionSubtitle}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {editors.map((editor, index) => (
-            <div key={index} className="bg-[#eaf4f2]/60 border border-[#d3e5e1] rounded-2xl p-6 shadow-sm flex flex-col justify-between">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-md flex-shrink-0">
-                  <Image 
-                    src={editor.imageSrc} 
+            <div
+              key={index}
+              className="bg-white border border-gray-200/60 rounded-xl p-6 flex flex-col items-start shadow-sm hover:border-gray-300 transition-all"
+            >
+              <div className="flex items-center space-x-4 mb-4 w-full">
+                <div className="relative w-14 h-14 rounded-full overflow-hidden bg-gray-100 shrink-0 border border-gray-100">
+                  <Image
+                    src={editor.imageSrc}
                     alt={editor.name}
                     fill
-                    sizes="64px"
-                    style={{ objectFit: 'cover' }}
+                    sizes="56px"
+                    className="object-cover"
                   />
                 </div>
+
                 <div>
                   <div className="flex items-center gap-2">
-                    <h3 className="font-bold text-base text-[#0f2824]">{editor.name}</h3>
-                    <div className="relative w-5 h-3.5 overflow-hidden rounded-sm shadow-sm">
-                      <Image 
-                        src={editor.flagSrc} 
-                        alt="Country flag" 
-                        fill 
+                    <h3 className="font-bold text-gray-900 text-base">
+                      {editor.name}
+                    </h3>
+
+                    <div className="relative w-5 h-3.5 overflow-hidden rounded-sm">
+                      <Image
+                        src={editor.flagSrc}
+                        alt="Country flag"
+                        fill
                         sizes="20px"
-                        style={{ objectFit: 'cover' }}
+                        className="object-cover"
                       />
                     </div>
                   </div>
-                  <p className="text-xs font-semibold text-[#b91c1c]">{editor.title}</p>
+
+                  <p className="text-xs text-[#1b3b32] font-semibold">
+                    {editor.title}
+                  </p>
                 </div>
               </div>
-              <div className="border-t border-[#d3e5e1]/60 pt-4 flex justify-between text-xs font-medium text-gray-700">
-                <span>{editor.experience}</span>
-                <span>{editor.manuscripts}</span>
+
+              <div className="w-full space-y-1.5 text-xs text-gray-600 pt-3 border-t border-gray-100">
+                <p>{editor.experience}</p>
+                <p>{editor.manuscripts}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
+
 
     </div>
   );

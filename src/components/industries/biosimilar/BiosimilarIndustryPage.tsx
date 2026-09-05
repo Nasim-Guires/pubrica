@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
+import HeroBanner from '@/components/common/HeroBanner';
 
 interface ServiceItem {
   title: string;
@@ -77,35 +78,35 @@ const defaultServices: ServiceItem[] = [
 ];
 
 const defaultSegments: SegmentItem[] = [
-  { 
+  {
     title: 'Monoclonal Antibodies (mAbs)',
-    iconSrc: '/images/industries/biosimilar/Monoclonal-Antibodies-mAbs.webp', 
-    description: 'Assistance in development, analytical characterization, and regulatory submissions for complex biologics.' 
+    iconSrc: '/images/industries/biosimilar/Monoclonal-Antibodies-mAbs.webp',
+    description: 'Assistance in development, analytical characterization, and regulatory submissions for complex biologics.'
   },
-  { 
+  {
     title: 'Insulins',
-    iconSrc: '/images/industries/biosimilar/Insulins.webp', 
-    description: 'Support for biosimilar insulin development, clinical trials, and market entry strategies.' 
+    iconSrc: '/images/industries/biosimilar/Insulins.webp',
+    description: 'Support for biosimilar insulin development, clinical trials, and market entry strategies.'
   },
-  { 
+  {
     title: 'Growth Hormones',
-    iconSrc: '/images/industries/biosimilar/Growth-Hormones.webp', 
-    description: 'Expertise in formulation, comparability studies, and documentation for growth hormone biosimilars.' 
+    iconSrc: '/images/industries/biosimilar/Growth-Hormones.webp',
+    description: 'Expertise in formulation, comparability studies, and documentation for growth hormone biosimilars.'
   },
-  { 
+  {
     title: 'Erythropoietins (EPOs)',
-    iconSrc: '/images/industries/biosimilar/Erythropoietins-EPOs.webp', 
-    description: 'Guidance on analytical, preclinical, and clinical requirements for erythropoietin biosimilars.' 
+    iconSrc: '/images/industries/biosimilar/Erythropoietins-EPOs.webp',
+    description: 'Guidance on analytical, preclinical, and clinical requirements for erythropoietin biosimilars.'
   },
-  { 
+  {
     title: 'Interferons',
-    iconSrc: '/images/industries/biosimilar/Interferons.webp', 
-    description: 'End-to-end support for biosimilar interferons, including pharmacovigilance and safety monitoring.' 
+    iconSrc: '/images/industries/biosimilar/Interferons.webp',
+    description: 'End-to-end support for biosimilar interferons, including pharmacovigilance and post-market strategies.'
   },
-  { 
+  {
     title: 'Other Recombinant Proteins',
-    iconSrc: '/images/industries/biosimilar/Other-Recombinant-Proteins.webp', 
-    description: 'Customized solutions for a variety of recombinant protein biosimilars, ensuring regulatory compliance and quality.' 
+    iconSrc: '/images/industries/biosimilar/Other-Recombinant-Proteins.webp',
+    description: 'Customized solutions for a variety of recombinant protein biosimilars, ensuring regulatory compliance and scientific rigor.'
   }
 ];
 
@@ -140,19 +141,43 @@ export default function BiosimilarIndustryPage({
 
       <main className="min-h-screen bg-white text-[#0f2824]">
         {/* Hero Banner Section */}
-        <section className="bg-[#0f2824] text-white py-7 px-6 text-center">
-          <div className="max-w-4xl mx-auto border border-white/25 p-8 rounded-lg">
-            <h1 className="text-4xl font-bold mb-4">{heroTitle}</h1>
-            <p className="text-lg text-gray-200 leading-relaxed">{heroSubtitle}</p>
-          </div>
-        </section>
+        <HeroBanner
+          title={heroTitle}
+          description={heroSubtitle}
+          headingAs="h1"
+        />
 
         {/* Introduction & Features Section */}
-        <section className="max-w-7xl mx-auto py-7 px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug">{mainHeading}</h2>
-            <p className="text-gray-700 mb-4 leading-relaxed text-sm md:text-base">{mainDescription}</p>
-            <p className="text-gray-700 mb-6 leading-relaxed text-sm md:text-base">{definitionText}</p>
+        <section className="max-w-7xl mx-auto py-7 px-6">
+          <div className="space-y-4 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] tracking-tight leading-snug">
+              {mainHeading}
+            </h2>
+          </div>
+
+          <div className="clearfix">
+            {/* CIRCULAR FLOATING IMAGE CONTAINER */}
+            <div className="flex justify-center md:block md:float-right md:ml-8 mb-6">
+              <div className="w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-full overflow-hidden shadow-xl bg-gray-100 border-[10px] border-white p-1 flex items-center justify-center relative">
+                <div className="relative w-full h-full rounded-full overflow-hidden">
+                  <Image
+                    src="/images/industries/biosimilar/Advancing-Compliance-and-Market-Access-for-Biosimilars.webp"
+                    alt="Scientists working in a laboratory conducting biosimilar research and analysis"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 380px"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+
+            <p className="text-gray-700 mb-4 leading-relaxed text-sm md:text-base">
+              {mainDescription}
+            </p>
+            <p className="text-gray-700 mb-4 leading-relaxed text-sm md:text-base">
+              {definitionText}
+            </p>
             <p className="text-gray-700 mb-6 leading-relaxed text-sm md:text-base">
               At Pubrica, we offer comprehensive end-to-end services to support biosimilar manufacturers&apos; success, from preclinical development to market authorization. Our expertise ensures your biosimilar products meet stringent quality, safety, and efficacy requirements while accelerating time-to-market.
             </p>
@@ -166,73 +191,62 @@ export default function BiosimilarIndustryPage({
                 </li>
               ))}
             </ul>
-
-           <GetFreeQuoteButton/>
           </div>
 
-          <div className="relative w-full h-[450px] flex justify-center items-center">
-            <div className="relative w-[380px] h-[380px] sm:w-[420px] sm:h-[420px] rounded-full overflow-hidden shadow-xl bg-gray-100 border-[10px] border-white">
-              <Image 
-                src="/images/industries/biosimilar/Advancing-Compliance-and-Market-Access-for-Biosimilars.webp" 
-                alt="Scientists working in a laboratory conducting biosimilar research and analysis"
-                fill
-                sizes="(max-width: 768px) 100vw, 420px"
-                style={{ objectFit: 'cover' }}
-                priority
-              />
-            </div>
+          <div className="clear-both pt-2">
+            <GetFreeQuoteButton />
           </div>
         </section>
 
         {/* Our Expertise in Biosimilars Includes */}
-        <section className="py-8 px-4 bg-gray-50 text-[#0f2824] overflow-hidden">
-          <div className="max-w-7xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{expertiseHeading}</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed text-sm md:text-base">{expertiseDescription}</p>
+        <section className="py-6 px-4 bg-gray-50 text-[#0f2824] overflow-hidden">
+          <div className="max-w-7xl mx-auto text-start mb-8 px-2">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">{expertiseHeading}</h2>
+            <p className="text-gray-600 max-w-4xl leading-relaxed text-sm md:text-base">{expertiseDescription}</p>
           </div>
 
-          <div className="relative max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center min-h-[700px] gap-8 lg:gap-0">
+          <div className="relative max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-0">
             {/* Left Column Cards */}
-            <div className="flex flex-col gap-8 w-full lg:w-[360px] z-10">
-              <div className="bg-white p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-base mb-2">{services[0].title}</h3>
+            <div className="flex flex-col gap-4 w-full lg:w-[360px] z-10">
+              <div className="bg-white p-5 rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100">
+                <h3 className="font-bold text-[#b91c1c] text-sm md:text-base mb-1.5">{services[0].title}</h3>
                 <p className="text-gray-600 text-xs leading-relaxed">{services[0].description}</p>
               </div>
-              <div className="bg-white p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-base mb-2">{services[2].title}</h3>
+              <div className="bg-white p-5 rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100">
+                <h3 className="font-bold text-[#b91c1c] text-sm md:text-base mb-1.5">{services[2].title}</h3>
                 <p className="text-gray-600 text-xs leading-relaxed">{services[2].description}</p>
               </div>
-              <div className="bg-white p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-base mb-2">{services[5].title}</h3>
+              <div className="bg-white p-5 rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100">
+                <h3 className="font-bold text-[#b91c1c] text-sm md:text-base mb-1.5">{services[5].title}</h3>
                 <p className="text-gray-600 text-xs leading-relaxed">{services[5].description}</p>
               </div>
             </div>
 
             {/* Center Circular Image */}
-            <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:mx-[-30px] z-0 flex-shrink-0 flex items-center justify-center">
-              <div className="absolute inset-0 rounded-full border-[12px] border-white shadow-2xl overflow-hidden bg-gray-200">
+            <div className="relative w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] lg:mx-[-20px] z-0 flex-shrink-0 flex items-center justify-center my-4 lg:my-0">
+              <div className="absolute inset-0 rounded-full border-[10px] border-white shadow-xl overflow-hidden bg-gray-200">
                 <Image
-                  src="/images/industries/biosimilar/Our-Expertise-in-Biosimilars-Includes.webp" 
+                  src="/images/industries/biosimilar/Our-Expertise-in-Biosimilars-Includes.webp"
                   alt="Researchers collaborating on biosimilar regulatory and scientific evidence"
                   fill
-                  sizes="(max-width: 768px) 300px, 400px"
+                  sizes="(max-width: 768px) 280px, 340px"
                   style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
 
             {/* Right Column Cards */}
-            <div className="flex flex-col gap-8 w-full lg:w-[360px] z-10">
-              <div className="bg-white p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-base mb-2">{services[1].title}</h3>
+            <div className="flex flex-col gap-4 w-full lg:w-[360px] z-10">
+              <div className="bg-white p-5 rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100">
+                <h3 className="font-bold text-[#b91c1c] text-sm md:text-base mb-1.5">{services[1].title}</h3>
                 <p className="text-gray-600 text-xs leading-relaxed">{services[1].description}</p>
               </div>
-              <div className="bg-white p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-base mb-2">{services[3].title}</h3>
+              <div className="bg-white p-5 rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100">
+                <h3 className="font-bold text-[#b91c1c] text-sm md:text-base mb-1.5">{services[3].title}</h3>
                 <p className="text-gray-600 text-xs leading-relaxed">{services[3].description}</p>
               </div>
-              <div className="bg-white p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-base mb-2">{services[4].title}</h3>
+              <div className="bg-white p-5 rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100">
+                <h3 className="font-bold text-[#b91c1c] text-sm md:text-base mb-1.5">{services[4].title}</h3>
                 <p className="text-gray-600 text-xs leading-relaxed">{services[4].description}</p>
               </div>
             </div>
@@ -240,15 +254,15 @@ export default function BiosimilarIndustryPage({
         </section>
 
         {/* Biosimilar Drug Segments We Serve */}
-        <section className="py-8 px-6 max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">{segmentsHeading}</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">{segmentsDescription}</p>
+        <section className="py-6 px-6 max-w-7xl mx-auto">
+          <div className="text-start mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-2">{segmentsHeading}</h2>
+            <p className="text-gray-600 max-w-4xl text-sm md:text-base leading-relaxed">{segmentsDescription}</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {segments.map((seg, index) => (
-              <div key={index} className="bg-white border border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div key={index} className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                 {seg.iconSrc ? <div className="relative w-10 h-10 mb-3"><Image src={seg.iconSrc} alt="" fill className="object-contain" sizes="40px" /></div> : null}
                 <h3 className="font-bold text-lg text-[#0f2824] mb-3">{seg.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{seg.description}</p>
@@ -256,12 +270,11 @@ export default function BiosimilarIndustryPage({
             ))}
           </div>
         </section>
-
         {/* How Are Biosimilars Different From Generic Medicines? */}
-        <section className="py-7 px-6 bg-gray-50 border-t border-gray-200">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">{differenceHeading}</h2>
-            <p className="text-gray-700 mb-4 text-sm md:text-base leading-relaxed">{differenceText1}</p>
+        <section className="py-6 px-6 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-start">{differenceHeading}</h2>
+            <p className="text-gray-700 mb-3 text-sm md:text-base leading-relaxed">{differenceText1}</p>
             <p className="text-gray-700 text-sm md:text-base leading-relaxed">{differenceText2}</p>
           </div>
         </section>
