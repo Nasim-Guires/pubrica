@@ -157,127 +157,138 @@ export default function ServiceRejectionTable({
       <div className="overflow-hidden border border-slate-200 rounded-lg shadow-sm">
         {/* Desktop Table View */}
         <div className="hidden md:block overflow-x-auto">
-          <table className="w-full border-collapse text-left bg-white">
-            <thead>
-              <tr className="bg-[#0b2b30] text-white text-[12px] font-bold tracking-wider uppercase">
-                <th className="py-4 px-6 border-r border-[#143e45] w-[30%]">
-                  Reasons for Rejection
-                </th>
-                <th className="py-4 px-6 border-r border-[#143e45] w-[50%]">
-                  Solution
-                </th>
-                <th className="py-4 px-6 w-[20%] text-center">
-                  Pubrica Solution
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-200">
-              {tableData.map((row, index) => {
-                const isEven = index % 2 === 0;
-                return (
-                  <tr
-                    key={index}
-                    className={`${isEven ? "bg-white" : "bg-[#e6f2f7]"
-                      } transition-colors hover:bg-slate-100/70`}
-                  >
-                    {/* Reason Column */}
-                    <td className="py-4 px-6 text-[13.5px] text-slate-800 leading-relaxed border-r border-slate-200">
-                      {row.reasonBoldPrefix && (
-                        <span className="font-bold text-slate-900">
-                          {row.reasonBoldPrefix}
-                        </span>
-                      )}
-                      {row.reason}
-                    </td>
+          <div className="max-h-[360px] overflow-y-auto">
+            <table className="w-full border-collapse text-left bg-white">
+              <thead className="sticky top-0 z-10">
+                <tr className="bg-[#0b2b30] text-white text-[12px] font-bold tracking-wider uppercase">
+                  <th className="py-4 px-6 border-r border-[#143e45] w-[30%]">
+                    Reasons for Rejection
+                  </th>
+                  <th className="py-4 px-6 border-r border-[#143e45] w-[50%]">
+                    Solution
+                  </th>
+                  <th className="py-4 px-6 w-[20%] text-center">
+                    Pubrica Solution
+                  </th>
+                </tr>
+              </thead>
 
-                    {/* Solution Column */}
-                    <td className="py-4 px-6 text-[13px] text-slate-600 leading-relaxed border-r border-slate-200">
-                      {row.solution}
-                    </td>
+              <tbody className="divide-y divide-slate-200">
+                {tableData.map((row, index) => {
+                  const isEven = index % 2 === 0;
 
-                    {/* Pubrica Link Column */}
-                    <td className="py-4 px-6 text-[13px] font-medium text-center">
-                      {row.url ? (
-                        <a
-                          href={row.url}
-                          className="text-blue-600 no-underline hover:no-underline cursor-pointer"
-                        >
-                          {row.pubricaSolution}
-                        </a>
-                      ) : (
-                        <span className="text-slate-800 cursor-default">
-                          {row.pubricaSolution}
-                        </span>
-                      )}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+                  return (
+                    <tr
+                      key={index}
+                      className={`${isEven ? "bg-white" : "bg-[#e6f2f7]"
+                        } transition-colors hover:bg-slate-100/70`}
+                    >
+                      {/* Reason Column */}
+                      <td className="py-4 px-6 text-[13.5px] text-slate-800 leading-relaxed border-r border-slate-200">
+                        {row.reasonBoldPrefix && (
+                          <span className="font-bold text-slate-900">
+                            {row.reasonBoldPrefix}
+                          </span>
+                        )}
+                        {row.reason}
+                      </td>
+
+                      {/* Solution Column */}
+                      <td className="py-4 px-6 text-[13px] text-slate-600 leading-relaxed border-r border-slate-200">
+                        {row.solution}
+                      </td>
+
+                      {/* Pubrica Solution */}
+                      <td className="py-4 px-6 text-[13px] font-medium text-center">
+                        {row.url ? (
+                          <a
+                            href={row.url}
+                            className="text-blue-600 no-underline hover:no-underline cursor-pointer"
+                          >
+                            {row.pubricaSolution}
+                          </a>
+                        ) : (
+                          <span className="text-slate-800 cursor-default">
+                            {row.pubricaSolution}
+                          </span>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
 
-        {/* Mobile / Card View */}
-        <div className="block md:hidden w-full overflow-x-auto border border-slate-200 rounded-lg shadow-xs">
-          <table className="w-full text-left border-collapse min-w-[650px]">
-            <thead className="bg-[#0b2b30] text-white">
-              <tr>
-                <th className="p-3.5 text-xs font-bold uppercase tracking-wider border-b border-slate-700 w-1/3">
-                  Reason for Rejection
-                </th>
-                <th className="p-3.5 text-xs font-bold uppercase tracking-wider border-b border-slate-700 w-1/3">
-                  Solution
-                </th>
-                <th className="p-3.5 text-xs font-bold uppercase tracking-wider border-b border-slate-700 w-1/3">
-                  Pubrica Solution
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-200">
-              {tableData.map((row, index) => {
-                const isEven = index % 2 === 0;
+        {/* Mobile Table View */}
+        {/* Mobile Table View */}
+        <div className="block md:hidden w-full">
+          <div className="max-h-[320px] overflow-y-auto border border-slate-200 rounded-lg">
+            <table className="w-full table-fixed text-left border-collapse">
+              <thead className="bg-[#0b2b30] text-white sticky top-0 z-10">
+                <tr>
+                  <th className="p-2 text-[10px] font-bold uppercase tracking-wide border-r border-[#143e45] w-[30%]">
+                    Reason for Rejection
+                  </th>
 
-                return (
-                  <tr
-                    key={index}
-                    className={`transition-colors ${isEven ? "bg-white" : "bg-[#e6f2f7]"
-                      }`}
-                  >
-                    {/* Column 1: Reason for Rejection */}
-                    <td className="p-3.5 align-top text-xs text-slate-900 font-medium leading-relaxed">
-                      {row.reasonBoldPrefix && (
-                        <span className="font-bold text-slate-900 block mb-0.5">
-                          {row.reasonBoldPrefix}
-                        </span>
-                      )}
-                      {row.reason}
-                    </td>
+                  <th className="p-2 text-[10px] font-bold uppercase tracking-wide border-r border-[#143e45] w-[45%]">
+                    Solution
+                  </th>
 
-                    {/* Column 2: Solution */}
-                    <td className="p-3.5 align-top text-xs text-slate-600 leading-relaxed">
-                      {row.solution}
-                    </td>
+                  <th className="p-2 text-[10px] font-bold uppercase tracking-wide w-[25%]">
+                    Pubrica Solution
+                  </th>
+                </tr>
+              </thead>
 
-                    {/* Column 3: Pubrica Solution */}
-                    <td className="p-3.5 align-top text-xs font-medium">
-                      {row.url ? (
-                        <a
-                          href={row.url}
-                          className="text-blue-600 font-bold hover:underline cursor-pointer"
-                        >
-                          {row.pubricaSolution}
-                        </a>
-                      ) : (
-                        <span className="text-slate-800 cursor-default">
-                          {row.pubricaSolution}
-                        </span>
-                      )}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+              <tbody className="divide-y divide-slate-200">
+                {tableData.map((row, index) => {
+                  const isEven = index % 2 === 0;
+
+                  return (
+                    <tr
+                      key={index}
+                      className={`transition-colors ${isEven ? "bg-white" : "bg-[#e6f2f7]"
+                        }`}
+                    >
+                      {/* Reason */}
+                      <td className="p-2 align-top text-[10px] text-slate-900 font-medium leading-relaxed break-words border-r border-slate-200">
+                        {row.reasonBoldPrefix && (
+                          <span className="font-bold text-slate-900 block mb-0.5">
+                            {row.reasonBoldPrefix}
+                          </span>
+                        )}
+
+                        {row.reason}
+                      </td>
+
+                      {/* Solution */}
+                      <td className="p-2 align-top text-[10px] text-slate-600 leading-relaxed break-words border-r border-slate-200">
+                        {row.solution}
+                      </td>
+
+                      {/* Pubrica Solution */}
+                      <td className="p-2 align-top text-[10px] font-medium break-words">
+                        {row.url ? (
+                          <a
+                            href={row.url}
+                            className="text-blue-600 font-bold no-underline hover:no-underline cursor-pointer"
+                          >
+                            {row.pubricaSolution}
+                          </a>
+                        ) : (
+                          <span className="text-slate-800">
+                            {row.pubricaSolution}
+                          </span>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 

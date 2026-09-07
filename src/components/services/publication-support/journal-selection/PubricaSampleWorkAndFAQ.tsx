@@ -120,71 +120,135 @@ export default function PubricaSampleWorkAndFAQ() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 2: JOURNAL SPOTLIGHT (DIABETES CARE)        */}
       {/* ---------------------------------------------------- */}
-      <section className="py-5 px-6 sm:px-12 lg:px-16 max-w-7xl mx-auto">
+      <section className="py-5 px-4 sm:px-8 lg:px-16 max-w-7xl mx-auto">
+        {/* Heading */}
         <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] mb-4">
           Diabetes Care
         </h2>
 
-        <p className="text-base text-slate-600 leading-relaxed max-w-5xl mb-8">
-          <span className="italic font-semibold">Diabetes Care</span> is a
-          journal for the health care practitioner focused on increasing
-          knowledge, stimulating research, and promoting better management of
-          people with{" "}
-          <Link href="/academy/journals-templates/journal-of-diabetes-research" className="text-blue-600 no-underline hover:no-underline">
+        {/* Description */}
+        <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-5xl mb-8">
+          <span className="italic font-semibold">Diabetes Care</span> is a journal
+          for the health care practitioner focused on increasing knowledge,
+          stimulating research, and promoting better management of people with{" "}
+          <Link
+            href="/academy/journals-templates/journal-of-diabetes-research"
+            className="text-blue-600 no-underline hover:no-underline"
+          >
             diabetes
           </Link>
-          . To foster these objectives, the journal publishes original research
-          in the areas of Clinical Care/Education/Nutrition/Psychosocial
-          Research, Epidemiology/Health Services Research, Emerging Treatments
-          and Technologies, Pathophysiology/Complications, and Cardiovascular
-          and Metabolic Risk.
+          . To foster these objectives, the journal publishes original research in
+          the areas of Clinical Care/Education/Nutrition/Psychosocial Research,
+          Epidemiology/Health Services Research, Emerging Treatments and
+          Technologies, Pathophysiology/Complications, and Cardiovascular and
+          Metabolic Risk.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-          {/* Logo / Publisher Visual */}
-          <div className="md:col-span-3 flex justify-center md:justify-start">
-            <div className="w-48 h-36 border border-slate-200 rounded-md overflow-hidden bg-slate-50 shadow-sm">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          {/* Journal Image */}
+          <div className="lg:col-span-3 flex justify-center">
+            <div className="w-44 h-40 sm:w-48 sm:h-44 overflow-hidden rounded-xl bg-slate-50">
               <Image
                 src="/images/publication-support/journal-selection/Diabetes-Care-Journal-ΓCo-Metrics-Scope-Submissions-768x768.jpg"
                 alt="American Diabetes Association"
                 width={192}
-                height={144}
+                height={176}
                 className="w-full h-full object-contain"
               />
             </div>
           </div>
 
-          {/* Key Metrics Table */}
-          <div className="md:col-span-9 overflow-x-auto">
-            <table className="w-full text-left border-b border-slate-300 text-base">
-              <thead>
-                <tr className="text-slate-500 font-medium border-b border-slate-200 pb-2">
-                  <th className="pb-2 font-normal">Impact Factor</th>
-                  <th className="pb-2 font-normal">CiteScore</th>
-                  <th className="pb-2 font-normal">Acceptance rate</th>
-                  <th className="pb-2 font-normal">Frequency</th>
-                  <th className="pb-2 font-normal">
-                    SJR (SCImago Journal Rank)
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="font-bold text-slate-800 text-lg">
-                  <td className="py-3">16.2</td>
-                  <td className="py-3">27.7</td>
-                  <td className="py-3">Approximately 11.06%</td>
-                  <td className="py-3">Monthly</td>
-                  <td className="py-3">6.008</td>
-                </tr>
-              </tbody>
-            </table>
+          {/* Metrics */}
+          <div className="lg:col-span-9 w-full">
+            {/* Desktop Table */}
+            <div className="hidden md:block overflow-x-auto">
+              <table className="w-full text-left border-b border-slate-300">
+                <thead>
+                  <tr className="text-slate-500 text-sm font-medium border-b border-slate-200">
+                    <th className="pb-3 pr-4 font-normal">Impact Factor</th>
+                    <th className="pb-3 pr-4 font-normal">CiteScore</th>
+                    <th className="pb-3 pr-4 font-normal">Acceptance rate</th>
+                    <th className="pb-3 pr-4 font-normal">Frequency</th>
+                    <th className="pb-3 font-normal">
+                      SJR (SCImago Journal Rank)
+                    </th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr className="font-bold text-slate-800 text-lg">
+                    <td className="py-4 pr-4">16.2</td>
+                    <td className="py-4 pr-4">27.7</td>
+                    <td className="py-4 pr-4">Approximately 11.06%</td>
+                    <td className="py-4 pr-4">Monthly</td>
+                    <td className="py-4">6.008</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Mobile Metrics Cards */}
+            {/* Mobile Metrics */}
+            <div className="md:hidden w-full border-t border-slate-200">
+              <div className="flex items-center justify-between py-3 border-b border-slate-200 gap-4">
+                <span className="text-sm text-slate-500">
+                  Impact Factor
+                </span>
+                <span className="text-sm font-bold text-slate-800 text-right">
+                  16.2
+                </span>
+              </div>
+
+              <div className="flex items-center justify-between py-3 border-b border-slate-200 gap-4">
+                <span className="text-sm text-slate-500">
+                  CiteScore
+                </span>
+                <span className="text-sm font-bold text-slate-800 text-right">
+                  27.7
+                </span>
+              </div>
+
+              <div className="flex items-center justify-between py-3 border-b border-slate-200 gap-4">
+                <span className="text-sm text-slate-500">
+                  Acceptance Rate
+                </span>
+                <span className="text-sm font-bold text-slate-800 text-right">
+                  Approximately 11.06%
+                </span>
+              </div>
+
+              <div className="flex items-center justify-between py-3 border-b border-slate-200 gap-4">
+                <span className="text-sm text-slate-500">
+                  Frequency
+                </span>
+                <span className="text-sm font-bold text-slate-800 text-right">
+                  Monthly
+                </span>
+              </div>
+
+              <div className="flex items-center justify-between py-3 gap-4">
+                <span className="text-sm text-slate-500">
+                  SJR (SCImago Journal Rank)
+                </span>
+                <span className="text-sm font-bold text-slate-800 text-right">
+                  6.008
+                </span>
+              </div>
+            </div>
 
             {/* Quick Links */}
-            <div className="flex gap-8 mt-4 text-base font-semibold">
-              <Link href="/order-now/" className="text-blue-600 no-underline hover:no-underline">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 mt-6 text-sm sm:text-base font-semibold">
+              <Link
+                href="/order-now/"
+                className="text-red-600 no-underline hover:no-underline"
+              >
                 Submit your Report
               </Link>
-              <Link href="/contact-us/" className="text-blue-600 no-underline hover:no-underline">
+
+              <Link
+                href="/contact-us/"
+                className="text-red-600 no-underline hover:no-underline"
+              >
                 Guide for author
               </Link>
             </div>

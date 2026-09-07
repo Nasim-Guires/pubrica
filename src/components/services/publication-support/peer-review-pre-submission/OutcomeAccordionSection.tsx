@@ -301,9 +301,7 @@ function CategoryTable({ rows }: { rows: TableRow[] }) {
 }
 
 export default function OutcomeAccordionSection() {
-  const [openSection, setOpenSection] = useState<string | null>(
-    "Pre submission Peer review"
-  );
+  const [openSection, setOpenSection] = useState<string | null>(null);
 
   const toggleSection = (section: string) => {
     setOpenSection((prev) => (prev === section ? null : section));

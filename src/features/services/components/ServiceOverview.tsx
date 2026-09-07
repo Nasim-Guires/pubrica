@@ -269,9 +269,9 @@ export default function ServiceOverview() {
 
             {/* Right Overlapping Lab Images Graphic */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-md h-72 sm:h-80">
-                {/* Background Image */}
-                <div className="absolute top-0 left-0 w-3/4 h-3/4 rounded-2xl overflow-hidden shadow-md">
+              <div className="relative w-full max-w-md h-72 sm:h-80 flex justify-center lg:block">
+                {/* Image */}
+                <div className="w-3/4 h-3/4 rounded-2xl overflow-hidden shadow-md">
                   <Image
                     src="/images/publication-support/image-2.webp"
                     alt="Scientists with microscope"
@@ -280,14 +280,13 @@ export default function ServiceOverview() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                {/* Foreground Overlapping Image */}
               </div>
             </div>
           </div>
         </div>
 
         {/* Authoring your research paper Section */}
-        <div className="py-4 space-y-4">
+        <div className="py-2 space-y-4">
           <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0c3830]">
             Authoring your research paper into a publishable manuscript
           </h3>

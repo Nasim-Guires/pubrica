@@ -72,7 +72,7 @@ export default function JournalSelectionHeader() {
             <Link href="/services/publication-support/journal-selection/understanding-cope-publication-ethics" className="text-blue-600 no-underline hover:no-underline">
               COPE
             </Link>
-            , <a href="https://www.icmje.org/" target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:underline">ICMJE</a>, GPP)
+            , <a href="/services/publication-support/journal-selection/scientific-poster-design-presentation/" target="_blank" rel="noopener noreferrer" className="text-blue-600">ICMJE</a>, GPP)
           </li>
           <li>
             Avoid the risk of{' '}

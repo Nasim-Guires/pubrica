@@ -11,50 +11,48 @@ import {
     Trees,
     Globe2,
 } from "lucide-react";
+import EmergingTrendsSection, { EmergingTrendItem } from "@/components/common/EmergingTrendsSection";
+import ApplicationsSection from "@/components/common/ApplicationsSection";
+import WhereAuthorsPublish, { AuthorPublicationData } from "@/components/common/WhereAuthorsPublish";
+import ExpertEditorsSection, { ExpertEditorItem } from "@/components/common/ExpertEditorsSection";
 
 export default function BiomonitoringTrendsAndPublishingSection() {
     const [activeTab, setActiveTab] = useState(1);
 
-    const trendsTabs = [
+    const biomonitoringTrends: EmergingTrendItem[] = [
         {
+            id: 1,
             title: "High-Resolution Metabolomics and Proteomics",
-            heading: "High-Resolution Metabolomics and Proteomics",
-            content:
-                "These techniques allow for the discovery of new biomarkers that reflect subtle physiological changes induced by low-level exposures.",
+            description: "These techniques allow for the discovery of new biomarkers that reflect subtle physiological changes induced by low-level exposures.",
         },
         {
+            id: 2,
             title: "Non-invasive Sampling Methods",
-            heading: "Non-invasive Sampling Methods",
-            content:
-                "The use of hair, saliva, nails, and exhaled breath condensate is gaining popularity due to ease of collection and reduced ethical concerns.",
+            description: "The use of hair, saliva, nails, and exhaled breath condensate is gaining popularity due to ease of collection and reduced ethical concerns.",
         },
         {
+            id: 3,
             title: "Remote Monitoring Technologies",
-            heading: "Remote Monitoring Technologies",
-            content:
-                "Portable biosensors and wearable devices now enable continuous exposure tracking, offering a dynamic understanding of exposure variability.",
+            description: "Portable biosensors and wearable devices now enable continuous exposure tracking, offering a dynamic understanding of exposure variability.",
         },
         {
+            id: 4,
             title: "Omics-Based Biomonitoring",
-            heading: "Omics-Based Biomonitoring",
-            content:
-                "Integration of genomics, transcriptomics, proteomics, and metabolomics facilitates a holistic assessment of exposure-related biological changes.",
+            description: "Integration of genomics, transcriptomics, proteomics, and metabolomics facilitates a holistic assessment of exposure-related biological changes.",
         },
         {
+            id: 5,
             title: "Biomonitoring for Emerging Contaminants",
-            heading: "Biomonitoring for Emerging Contaminants",
-            content:
-                "Increasing attention is being paid to microplastics, pharmaceuticals, and per- and polyfluoroalkyl substances (PFAS), which are now recognized as persistent and bioaccumulative.",
+            description: "Increasing attention is being paid to microplastics, pharmaceuticals, and per- and polyfluoroalkyl substances (PFAS), which are now recognized as persistent and bioaccumulative.",
         },
         {
+            id: 6,
             title: "Global Biomonitoring Networks",
-            heading: "Global Biomonitoring Networks",
-            content:
-                "International collaborations, such as the Human Biomonitoring for Europe (HBM4EU) initiative, promote standardized methodologies and data sharing for cross-country comparisons.",
+            description: "International collaborations, such as the Human Biomonitoring for Europe (HBM4EU) initiative, promote standardized methodologies and data sharing for cross-country comparisons.",
         },
     ];
 
-    const applications = [
+    const applicationsData = [
         {
             title: "Public Health Surveillance",
             iconSrc: "/images/subject-matter-experts/biomonitoring/Environmental-Biomonitoring.webp",
@@ -123,191 +121,77 @@ export default function BiomonitoringTrendsAndPublishingSection() {
         },
     ];
 
+    const publicationData: AuthorPublicationData = {
+        imageSrc: "/images/subject-matter-experts/biomonitoring/sample-works-7-3.webp",
+        imageAlt: "Atmosphere Journal Cover",
+        paperTitle: "Biomonitoring of Air Pollution",
+        author: "Giordano S, Spagnuolo V, Capozzi F",
+        publisher: "MDPI",
+        journalName: "Atmosphere",
+        impactFactor: "2.3",
+    };
+
+
+    const editorsData: ExpertEditorItem[] = [
+    {
+        name: "Dr. Emily Carter",
+        degree: "PhD in Environmental Toxicology",
+        experience: "15 years of experience",
+        manuscripts: "200+ manuscripts edited",
+        avatar: "/images/subject-matter-experts/biomonitoring/Dr.-Emily-Carter-1.webp",
+        flag: "/images/country/gb.png", // Add your flag image path here
+    },
+    {
+        name: "Dr. Rajesh Nair",
+        degree: "PhD in Biochemistry",
+        experience: "12 years of experience",
+        manuscripts: "170+ manuscripts edited",
+        avatar: "/images/subject-matter-experts/biomonitoring/Dr.-Rajesh-Nair.webp",
+        flag: "/images/country/us.png", // Add your flag image path here
+    },
+    {
+        name: "Dr. Laura Mitchell",
+        degree: "PhD in Environmental Health Sciences",
+        experience: "18 years of experience",
+        manuscripts: "210+ manuscripts edited",
+        avatar: "/images/subject-matter-experts/biomonitoring/Dr.-Laura-Fischer.webp",
+        flag: "/images/country/us.png", // Add your flag image path here
+    },
+];
+
     return (
         <div className="max-w-6xl mx-auto px-4 py-6 bg-white font-sans text-gray-800 space-y-16">
 
             {/* SECTION 1: EMERGING TRENDS IN BIOMONITORING */}
-            <section className="space-y-6">
-                <div className="space-y-2">
-                    <h2 className="text-2xl font-bold text-[#0d3630]">
-                        Emerging Trends in Biomonitoring
-                    </h2>
-                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                        The field of biomonitoring is rapidly evolving, driven by technological innovation, interdisciplinary collaboration, and growing environmental concerns. Several emerging trends are reshaping how scientists and policymakers approach exposure assessment and health protection.
-                    </p>
-                </div>
-
-                {/* Tabs Bar */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 border border-gray-300 bg-[#f8f9fa] rounded-t-sm overflow-hidden text-center">
-                    {trendsTabs.map((tab, idx) => {
-                        const isActive = activeTab === idx;
-                        return (
-                            <button
-                                key={idx}
-                                onClick={() => setActiveTab(idx)}
-                                className={`py-3 px-2 text-[11px] font-bold transition-all border-r border-b lg:border-b-0 border-gray-300 last:border-r-0 flex items-center justify-center leading-snug ${isActive
-                                    ? "bg-[#0d3630] text-white border-b-2 border-b-[#0d3630]"
-                                    : "bg-[#f8f9fa] text-gray-700 hover:bg-gray-100"
-                                    }`}
-                            >
-                                {tab.title}
-                            </button>
-                        );
-                    })}
-                </div>
-
-                {/* Tab Content Box */}
-                <div className="border border-gray-300 border-t-0 rounded-b-sm p-6 bg-white shadow-sm space-y-3">
-                    <h3 className="text-sm md:text-base font-bold text-[#0d3630]">
-                        {trendsTabs[activeTab].heading}
-                    </h3>
-                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                        {trendsTabs[activeTab].content}
-                    </p>
-                </div>
-
-                <p className="text-xs md:text-sm text-gray-600 leading-relaxed pt-2">
-                    These innovations are transforming biomonitoring from a purely analytical tool into a dynamic, predictive science that informs policy decisions, personal health management, and environmental sustainability.
-                </p>
-            </section>
+            <EmergingTrendsSection
+                title="Emerging Trends in Biomonitoring"
+                description="The field of biomonitoring is rapidly evolving, driven by technological innovation, interdisciplinary collaboration, and growing environmental concerns. Several emerging trends are reshaping how scientists and policymakers approach exposure assessment and health protection."
+                trends={biomonitoringTrends}
+                footerText="These advancements collectively enhance our ability to detect environmental hazards early and protect public health more effectively."
+            />
 
             {/* SECTION 2: APPLICATIONS OF BIOMONITORING */}
-            <section className="space-y-8">
-                <div className="space-y-2">
-                    <h2 className="text-2xl font-bold text-[#0d3630]">
-                        Applications of Biomonitoring
-                    </h2>
-                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                        Biomonitoring has a wide range of applications across scientific, industrial, and policy domains. Its data serve as a cornerstone for understanding exposure patterns, identifying vulnerable populations, and improving health outcomes.
-                    </p>
-                </div>
+            <ApplicationsSection
+                title="Applications of Biomonitoring"
+                description="Biomonitoring has a wide range of applications across scientific, industrial, and policy domains. Its data serve as a cornerstone for understanding exposure patterns, identifying vulnerable populations, and improving health outcomes."
+                applications={applicationsData}
+                imageSrc="/images/subject-matter-experts/biomonitoring/Applications-of-Biomonitoring.webp" // Update with your actual workspace image path
+                imageAlt="Biomonitoring workspace illustration"
+            />
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                    {/* Applications List */}
-                    <div className="lg:col-span-7 space-y-4">
-                        {applications.map((app, idx) => {
-                            const Icon = app.icon;
-                            return (
-                                <div key={idx} className="flex items-start gap-3.5">
-                                    <div className="p-2 bg-[#0d3630]/10 rounded-lg text-[#0d3630] shrink-0 mt-0.5">
-                                        {(app as { iconSrc?: string }).iconSrc ? (
-                                            <Image src={(app as { iconSrc?: string }).iconSrc!} alt="" width={16} height={16} className="object-contain shrink-0" />
-                                        ) : (
-                                            <Icon className="w-4 h-4" />
-                                        )}
-                                    </div>
-                                    <div className="space-y-0.5">
-                                        <h3 className="text-xs md:text-sm font-bold text-[#0d3630]">
-                                            {app.title}:
-                                        </h3>
-                                        <p className="text-xs text-gray-600 leading-relaxed">
-                                            {app.desc}
-                                        </p>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-
-                    {/* Right Side Microscope Image */}
-                    <div className="md:col-span-5 flex justify-center">
-                        <div className="relative w-full max-w-[280px] h-[395px] overflow-hidden">
-                            <Image
-                                src="/images/subject-matter-experts/biomonitoring/Applications-of-Biomonitoring.webp"
-                                alt="Laboratory Microscope Analysis"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 100vw, 280px"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* SECTION 3: WHERE OUR AUTHORS PUBLISH */}
-            <section className="space-y-6">
-                <div className="text-center space-y-2">
-                    <h2 className="text-2xl font-bold text-[#0d3630]">
-                        Where Our Authors Publish
-                    </h2>
-                    <p className="text-xs md:text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                        Our authors share biomonitoring publications in top-tier journals, conferences, and platforms, maximizing and amplifying their recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity.
-                    </p>
-                </div>
-
-                <div className="bg-white border border-gray-200 rounded-md p-6 shadow-sm flex flex-col md:flex-row gap-6 items-center">
-                    <div className="relative w-40 h-52 shrink-0 border border-gray-200 shadow-sm rounded overflow-hidden bg-gray-50">
-                        <Image
-                            src="/images/subject-matter-experts/biomonitoring/sample-works-7-3.webp"
-                            alt="Atmosphere Journal Cover"
-                            fill
-                            className="object-contain"
-                            sizes="160px"
-                        />
-                    </div>
-                    <div className="space-y-2 text-xs md:text-sm">
-                        <h3 className="font-bold text-[#0d3630] text-sm md:text-base">
-                            Paper Title: Biomonitoring of Air Pollution
-                        </h3>
-                        <p className="text-gray-600">
-                            <span className="font-semibold text-gray-800">Author:</span> Giordano S, Spagnuolo V, Capozzi F
-                        </p>
-                        <p className="text-gray-600">
-                            <span className="font-semibold text-gray-800">Journal Name:</span> Atmosphere
-                        </p>
-                        <p className="text-gray-600">
-                            <span className="font-semibold text-gray-800">Publisher:</span> MDPI
-                        </p>
-                        <p className="text-gray-600">
-                            <span className="font-semibold text-gray-800">Impact factor:</span> 2.3
-                        </p>
-                    </div>
-                </div>
-            </section>
-
+            <WhereAuthorsPublish
+                title="Where Our Authors Publish"
+                description="Our authors share biomonitoring publications in top-tier journals, conferences, and platforms, maximizing and amplifying their recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+                publication={publicationData}
+            />
             {/* SECTION 4: OUR EXPERT BIOMONITORING EDITORS */}
-            <section className="space-y-8">
-                <div className="text-center space-y-2 max-w-3xl mx-auto">
-                    <h2 className="text-2xl font-bold text-[#0d3630]">
-                        Our Expert Biomonitoring Editors
-                    </h2>
-                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                        Pubrica&apos;s team of biomonitoring experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake.
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {editors.map((editor, idx) => (
-                        <div
-                            key={idx}
-                            className="bg-[#eaf1ee] border border-[#d3e2de] rounded-lg p-5 text-center space-y-4 shadow-sm"
-                        >
-                            <div className="relative w-20 h-20 mx-auto rounded-full overflow-hidden border-2 border-white shadow-sm">
-                                <Image
-                                    src={editor.avatar}
-                                    alt={editor.name}
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                            <div className="space-y-1">
-                                <h3 className="text-sm font-bold text-[#0d3630]">
-                                    {editor.name}
-                                </h3>
-                                <p className="text-xs text-gray-600 font-medium">
-                                    {editor.role}
-                                </p>
-                            </div>
-                            <div className="pt-2 border-t border-gray-300/60 flex justify-around text-xs text-gray-700 font-medium">
-                                <span>{editor.experience}</span>
-                                <span>•</span>
-                                <span>{editor.manuscripts}</span>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
+            <ExpertEditorsSection
+                    title="Our Expert Biomonitoring Editors"
+                    description="Pubrica's team of biomonitoring experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake."
+                    editors={editorsData}
+                />
         </div>
     );
 }

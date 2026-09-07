@@ -179,9 +179,7 @@ const accordionData = [
 
 export default function JournalSubmissionPage() {
   // Item 1 (Detailed Submission Preparation) open by default
-  const [openAccordion, setOpenAccordion] = useState<string>(
-    "detailed-preparation"
-  );
+  const [openAccordion, setOpenAccordion] = useState<string>("");
 
   const toggleAccordion = (id: string) => {
     setOpenAccordion((prev) => (prev === id ? "" : id));
@@ -322,13 +320,13 @@ export default function JournalSubmissionPage() {
         </p>
 
         {/* Action Buttons */}
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-wrap items-center gap-8">
           <GetFreeQuoteButton />
           <a
             href="/uploads/publication-support-services_compressed.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-[#b80000] hover:bg-black text-white text-xs sm:text-sm font-semibold px-5 py-2 rounded-md shadow-sm transition-colors duration-300"
+            className="bg-red-600 text-white text-sm font-bold px-6 py-3 rounded hover:bg-white hover:text-black transition-colors"
           >
             View Brochure
           </a>

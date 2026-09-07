@@ -20,81 +20,90 @@ import {
     ChevronUp,
 } from "lucide-react";
 import HeroBanner from "@/components/common/HeroBanner";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import CoreAreasSection, { SmeCoreAreaItem } from "@/components/common/CoreAreasSection";
+import { Database, BarChart3, Layers, Zap, Server, ShieldCheck } from "lucide-react";
+import CommonExpertiseCards, { ExpertiseCardItem } from "@/components/common/CommonExpertiseCards";
 
 export default function BiomonitoringPage() {
-    const coreDisciplines = [
+    const coreDisciplines: SmeCoreAreaItem[] = [
         {
             title: "Big Data Architecture & Management",
+            highlight: "Big Data",
             iconSrc: "/images/subject-matter-experts/big-data-hadoop/Big-Data-Architecture-Management.webp",
-            subtitle: "Big Data Architecture & Management",
             desc: "Creating and implementing large-scale data architectures using components such as Hadoop, HDFS, mainstream/open-source distributed computing systems for the management of large amounts of both structured and unstructured data.",
-            icon: Leaf,
+            icon: Database,
         },
         {
             title: "Data Analytics & Mining",
+            highlight: "Data Analytics",
             iconSrc: "/images/subject-matter-experts/big-data-hadoop/Data-Analytics-Mining.webp",
-            subtitle: "Biochemical Matrices",
             desc: "Utilising advanced techniques for analysis of data to identify patterns, trends, and insights through statistical methods, machine learning techniques and predictive modelling.",
-            icon: Users,
+            icon: BarChart3,
         },
         {
             title: "Hadoop Ecosystem Technology",
+            highlight: "Hadoop Ecosystem",
             iconSrc: "/images/subject-matter-experts/big-data-hadoop/471.webp",
-            subtitle: "Workplace Exposure",
             desc: "Extensive experience in many of the tools contained in the Hadoop Ecosystem such as Hive, Pig, HBase, Spark, and MapReduce for efficient and effective processing and management of data.",
-            icon: Shield,
+            icon: Layers,
         },
         {
             title: "Real-time & Streaming Analytics",
+            highlight: "Real-time",
             iconSrc: "/images/subject-matter-experts/big-data-hadoop/Real-time-Streaming-Analytics.webp",
-            subtitle: "Bioindicator Species",
             desc: "Utilisation of rapid data stream analytics to create an immediate response to high-velocity data by using real-time frameworks.",
-            icon: Activity,
+            icon: Zap,
         },
         {
             title: "Data Integration & Warehousing",
+            highlight: "Data Integration",
             iconSrc: "/images/subject-matter-experts/big-data-hadoop/Data-Integration-Warehousing.webp",
-            subtitle: "Chemical Absorption",
             desc: "Combining multiple sources of data into a single centralised repository for storage, retrieval and analysis purposes.",
-            icon: Cpu,
+            icon: Server,
         },
         {
             title: "Big Data Security & Governance",
+            highlight: "Big Data Security",
             iconSrc: "/images/subject-matter-experts/big-data-hadoop/Big-Data-Security-Governance.webp",
-            subtitle: "Chemical Absorption",
-            desc: "The implementation n of data integrity, privacy and compliance standards are maintained through secure data management and governance frameworks.",
-            icon: Cpu,
+            desc: "The implementation of data integrity, privacy and compliance standards are maintained through secure data management and governance frameworks.",
+            icon: ShieldCheck,
         },
     ];
 
-    const services = [
+    const bigDataHadoopCards: ExpertiseCardItem[] = [
         {
             title: "Research Design & Data Analysis",
-            subtitle: "Assist you in developing an effective approach for conducting your study, selecting appropriate methods for use in your study, and analysing large datasets.",
+            desc: "Assist you in developing an effective approach for conducting your study, selecting appropriate methods for use in your study, and analysing large datasets.",
+            href: "/services/research-services/medical-writing/",
             imageUrl: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: FileText,
         },
         {
             title: "Journal Submission & Formatting",
-            subtitle: "preparation and submission of your manuscript to the journal and with the formatting of the manuscript based on the specific requirements of that journal.",
+            desc: "preparation and submission of your manuscript to the journal and with the formatting of the manuscript based on the specific requirements of that journal.",
+            href: "/services/publication-support/journal-submission/",
             imageUrl: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: PenTool,
         },
         {
             title: "Systematic Reviews & Literature Gap Analysis",
-            subtitle: "Complete systematic literature reviews and conduct a thorough analysis of research gaps within the field of data mining.",
+            desc: "Complete systematic literature reviews and conduct a thorough analysis of research gaps within the field of data mining.",
+            href: "/services/research-services/literature-review-and-gap/",
             imageUrl: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Languages,
         },
         {
             title: "Manuscript Preparation",
-            subtitle: "writing and editing services to help you prepare a manuscript of the highest quality that can be successfully published.",
+            desc: "writing and editing services to help you prepare a manuscript of the highest quality that can be successfully published.",
+            href: "/services/editing-and-translation/manuscript-editing/",
             imageUrl: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: BookOpen,
         },
         {
             title: "Data Visualization & Reporting",
-            subtitle: "Create professional visualizations and graphics that enhance and effectively depict complex findings.",
+            desc: "Create professional visualizations and graphics that enhance and effectively depict complex findings.",
+            href: "/services/data-analytics-machine-learning/interpretation-reporting-and-visualisation/",
             imageUrl: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: CheckCircle,
         },
@@ -118,8 +127,8 @@ export default function BiomonitoringPage() {
 
             {/* HEADER HERO BANNER */}
             <HeroBanner
-                title="Biomonitoring"
-                description="Comprehensive research, publication, and editing support for biomonitoring professionals, researchers, and environmental scientists, advancing the assessment of human and ecological exposure for a healthier and sustainable future."
+                title="Big Data & Hadoop"
+                description="Big Data and Hadoop have revolutionized the way organizations store, process, and analyze massive volumes of data that traditional systems can no longer handle."
                 headingAs="h1"
             />
 
@@ -127,109 +136,77 @@ export default function BiomonitoringPage() {
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
 
                 {/* INTRO SECTION */}
-                <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div className="lg:col-span-7 space-y-4">
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#0d3630] leading-tight">
-                            Empowering biomonitoring research and practice through expert analysis, data interpretation, and publication support
+                <section className="max-w-7xl mx-auto px-4 py-4">
+                    <div className="space-y-4 mb-6">
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#0d3630] leading-tight max-w-4xl">
+                            Empowering Big Data &amp; Hadoop research and practice through expert analysis, data interpretation, and publication support
                         </h2>
-
-                        <div className="space-y-3 text-xs md:text-sm text-gray-600 leading-relaxed">
-                            <p>
-                                Biomonitoring is an advanced scientific method used to measure and evaluate the levels of chemicals, toxins, or biological agents within human tissues or biological fluids such as blood, urine, or saliva. It serves as a vital tool in understanding environmental exposure, occupational safety, and public health risks. By directly assessing the internal dose of contaminants, biomonitoring data analysis provides a realistic picture of how external factors affect human health over time. This technique is widely used to monitor the presence of excessive toxins and to conduct clinical trials and public health research, aiming to understand the exposure and metabolic changes of chemicals in the human body. Key applications of biomonitoring services include breath analysers, urine analysis, and lead or arsenic detection.
-                            </p>
-                            <p>
-                                At Pubrica, we offer end-to-end research and publication support in the domain of biomonitoring, helping scientists, clinicians, environmental researchers, and toxicologists produce high-quality, data-driven studies. Our team combines expertise in epidemiology, toxicology studies, analytical chemistry, and public health to support your research objectives, from study design to publication in high-impact journals.
-                            </p>
-                        </div>
-
-                        <div className="pt-4">
-                            <Link
-                                href="#quote"
-                                className="inline-block bg-[#b81c1c] hover:bg-[#a01818] text-white text-xs font-semibold px-6 py-2.5 rounded-sm shadow-sm transition-colors duration-150"
-                            >
-                                Get a Free Quote
-                            </Link>
-                        </div>
                     </div>
 
-                    {/* Right Circular Image */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white">
-                            <Image
-                                src="/images/subject-matter-experts/big-data-hadoop/Big-Data-Hadoop--480x480.webp"
-                                alt="Biomonitoring Laboratory Microscope"
-                                fill
-                                className="object-cover"
-                                priority
-                            />
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                        <div className="lg:col-span-7 space-y-4">
+                            <div className="space-y-3 text-xs md:text-sm text-gray-600 leading-relaxed">
+                                <p>
+                                    Hadoop and Big Data technologies will continue to represent the future of the computing industry. Both technologies are required to convert data sets that are too large and complex into actionable information that can drive innovation within industries. In fact, using the power of distributed computing frameworks, advanced analytics, and scalable storage architectures, organizations can efficiently manage and analyse huge amounts of structured and unstructured data using Big Data technologies. The Hadoop Ecosystem allows organizations to implement high-performance data processing, real-time analytics, and data-driven decision-making across all sectors including Healthcare, Finance, Retail, and <Link href="/services/research-services/literature-review-and-gap/" className="text-blue-600">Scientific Research.</Link>
+                                </p>
+                                <p>
+                                    At Pubrica, we provide complete <Link href="/services/publication-support/peer-review-pre-submission/" className="text-blue-600">publication support services</Link> to assist with Big Data and Hadoop research projects. Our experienced team of writers will work closely with researchers and industry professionals to ensure they can efficiently analyse the data and draw conclusions that can be published with academic integrity (i.e. technical clarity) and meet the laws and regulations governing the publishing industry (i.e. International Standards for Research and Publishing).
+                                </p>
+                            </div>
+
+                            <div className="pt-4">
+                                <GetFreeQuoteButton />
+                            </div>
+                        </div>
+
+                        {/* Right Circular Image */}
+                        <div className="lg:col-span-5 flex justify-center lg:justify-end pt-4">
+                            <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0">
+                                <Image
+                                    src="/images/subject-matter-experts/big-data-hadoop/Big-Data-Hadoop--480x480.webp"
+                                    alt="Big Data and Hadoop Technology Circuit"
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                    sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
+                                />
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 {/* CORE DISCIPLINES SECTION */}
-                <section className="space-y-10">
-                    <div className="text-center space-y-3 max-w-3xl mx-auto">
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#0d3630]">
-                            Our Core Disciplines In Biomonitoring
-                        </h2>
-                        <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                            Biomonitoring integrates multiple scientific disciplines, drawing from biology, toxicology, environmental science, public health, and analytical chemistry. These interconnected fields ensure a comprehensive understanding of how pollutants or toxic agents influence biological systems. Our biomonitoring expertise spans the following core areas:
-                        </p>
-                    </div>
+                <CoreAreasSection
+                    title="Our Core Disciplines in Big Data & Hadoop"
+                    description="We provide expertise in all areas of Big Data Technologies & Analytics, helping organizations derive insights from large and complicated data sets in many different industries:"
+                    items={coreDisciplines}
+                />
 
-                    <SmeCoreAreasGrid items={coreDisciplines} />
-                </section>
-
-                {/* EXPERTISE IN BIOMONITORING RESEARCH AND PUBLICATION */}
-                <section className="space-y-8">
-                    <div className="text-center space-y-2 max-w-3xl mx-auto">
+                {/* EXPERTISE IN BIG DATA & HADOOP RESEARCH AND PUBLICATION */}
+                <section className="max-w-7xl mx-auto px-4 py-4 space-y-6">
+                    <div className="space-y-2">
                         <h2 className="text-2xl font-bold text-[#0d3630]">
                             Our Expertise in Big Data & Hadoop Research and Publication
                         </h2>
                         <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                            We offer full service for research on Big Data and Hadoop, allowing researchers to take their complex datasets and turn them into meaningful, publication quality findings. Our knowledge base covers analytics, distributed computing and processing of massive amounts of data, so we can help researchers produce high quality research that complies with the guidelines to submit to peer-reviewed journals around the world. We provide expert help with all aspects of the research process including analysis, validation of models, technical writing and journal submission to assist Researchers to present their results effectively in the top tier of scientific and industry periodicals.
+                            We offer full service for research on Big Data and Hadoop, allowing researchers to take their complex datasets and turn them into meaningful, publication quality findings. Our knowledge base covers analytics, distributed computing and processing of massive amounts of data, so we can help researchers produce high quality research that complies with the guidelines to submit to{" "}
+                            <Link href="/services/publication-support/peer-review-pre-submission/" className="text-blue-600 no-underline">
+                                peer-reviewed journals
+                            </Link>{" "}
+                            around the world. We provide expert help with all aspects of the research process including analysis, validation of models, technical writing and{" "}
+                            <Link href="/services/publication-support/journal-submission/" className="text-blue-600 no-underline">
+                                journal submission
+                            </Link>{" "}
+                            to assist Researchers to present their results effectively in the top tier of scientific and industry periodicals.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {services.map((service, idx) => {
-                            const ServiceIcon = service.icon;
-                            return (
-                                <div
-                                    key={idx}
-                                    className="group relative bg-white border border-gray-200 rounded-none overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-72"
-                                >
-                                    <div className="absolute inset-0 h-full w-full z-0 overflow-hidden bg-gray-100">
-                                        <Image
-                                            src={service.imageUrl}
-                                            alt={service.title}
-                                            fill
-                                            className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                        />
-                                        <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-300" />
-                                    </div>
-
-                                    <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 transition-all duration-300 ease-in-out transform translate-y-[calc(100%-72px)] group-hover:translate-y-0 flex flex-col h-44 z-10 shadow-lg">
-                                        <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-white p-2.5 rounded-full border border-gray-200 shadow-md group-hover:bg-[#0d3630] group-hover:text-white transition-colors duration-300">
-                                            <ServiceIcon className="w-4 h-4 text-[#0d3630] group-hover:text-white" />
-                                        </div>
-
-                                        <div className="pt-3 text-center">
-                                            <h3 className="text-xs font-bold text-[#0d3630] leading-tight">
-                                                {service.title}
-                                            </h3>
-                                        </div>
-
-                                        <div className="mt-3 text-center overflow-hidden flex-1 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
-                                            <p className="text-[11px] text-gray-600 leading-relaxed px-1">
-                                                {service.subtitle}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
+                    {/* Common Expertise Cards Component */}
+                    <CommonExpertiseCards
+                        title=""
+                        description=""
+                        cards={bigDataHadoopCards}
+                    />
                 </section>
 
             </main>

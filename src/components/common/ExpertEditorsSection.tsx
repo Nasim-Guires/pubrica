@@ -42,7 +42,7 @@ export default function ExpertEditorsSection({
                         className="bg-[#f2f9f6] rounded-xl p-5 border-l-4 border-l-[#12433e] border-y border-r border-[#e2efe9] shadow-sm flex flex-col justify-between text-left"
                     >
                         {/* Editor Profile */}
-                        <div className="flex items-center gap-3.5 mb-4">
+                        <div className="flex items-start gap-3.5 mb-4">
                             {/* Avatar + Flag */}
                             <div className="relative shrink-0">
                                 <div className="relative w-12 h-12 rounded-full overflow-hidden border border-[#d2e7e3] bg-white shadow-sm">
@@ -65,12 +65,12 @@ export default function ExpertEditorsSection({
                                 </div>
                             </div>
 
-                            <div className="min-w-0">
-                                <h3 className="text-sm text-gray-900 truncate">
+                            <div className="min-w-0 flex-1">
+                                <h3 className="text-sm font-semibold text-gray-900 leading-snug">
                                     {editor.name}
                                 </h3>
 
-                                <p className="text-xs text-gray-600 truncate mt-0.5">
+                                <p className="text-xs text-gray-600 mt-0.5 leading-relaxed">
                                     {editor.degree}
                                 </p>
                             </div>
@@ -79,12 +79,12 @@ export default function ExpertEditorsSection({
                         {/* Editor Statistics */}
                         <div className="bg-white/70 rounded-lg p-2.5 flex items-center justify-between text-xs text-gray-700 border border-[#e5f2ec]">
                             <div className="flex items-center gap-1.5">
-                                <Award className="w-4 h-4 text-[#12433e]" />
+                                <Award className="w-4 h-4 text-[#12433e] shrink-0" />
                                 <span>{editor.experience}</span>
                             </div>
 
                             <div className="flex items-center gap-1.5">
-                                <FileText className="w-4 h-4 text-[#12433e]" />
+                                <FileText className="w-4 h-4 text-[#12433e] shrink-0" />
                                 <span>{editor.manuscripts}</span>
                             </div>
                         </div>

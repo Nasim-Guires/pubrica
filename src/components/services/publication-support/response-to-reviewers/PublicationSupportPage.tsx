@@ -1,5 +1,6 @@
 import CommonPackages from "@/components/common/CommonPackages";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import { PubricaSampleWorkCard, PubricaSampleWorkCardProps } from "@/components/common/PubricaSampleWorkCardProps";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -292,6 +293,37 @@ const PACKAGES = [
   },
 ];
 
+const respondingToReviewersSampleWork: PubricaSampleWorkCardProps = {
+  bookCoverImage: {
+    src: "/images/publication-support/responding-to-reviewers/response-reviewer-Sample-Work-min.webp",
+    alt: "Response to Reviewer Sample Work",
+    width: 723,
+    height: 1024,
+  },
+  sections: [
+    {
+      heading: "Response to Reviewer Sample Work",
+      button: {
+        label: "Discover More",
+        url: "/insights/sample-work/sample-response-to-reviewers-comments/",
+      },
+    },
+    {
+      heading: "Download the full Report Now",
+      descriptionSegments: [
+        {
+          text: "Access a full sample report to see how Pubrica professionally addresses reviewer feedback and enhances manuscript quality for successful publication.",
+        },
+      ],
+      button: {
+        label: "Discover More",
+        url: "/insights/sample-work/response-to-review-comments/",
+      },
+    },
+  ],
+  footerDisclaimerSegments: [],
+};
+
 export default function PublicationSupportPage() {
   return (
     <div className="w-full font-sans bg-white text-slate-800">
@@ -337,50 +369,7 @@ export default function PublicationSupportPage() {
       </section>
 
       {/* ================= SECTION 5: SAMPLE WORK & REPORT DOWNLOAD ================= */}
-      <section className="max-w-5xl mx-auto px-4 my-12">
-        <div className="bg-[#f2faf5] p-8 rounded-sm shadow-sm flex flex-col md:flex-row items-center gap-8">
-          <div className="w-full md:w-1/3 flex-shrink-0">
-            <Image
-              src="/images/publication-support/responding-to-reviewers/response-reviewer-Sample-Work-min.webp"
-              alt="Response to Reviewer Sample Work"
-              width={723}
-              height={1024}
-              className="w-full h-64 object-cover rounded-sm shadow-md"
-            />
-          </div>
-
-          <div className="w-full md:w-2/3 space-y-6">
-            <div>
-              <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-3">
-                Response to Reviewer Sample Work
-              </h3>
-              <Link
-                href="/insights/sample-response-to-reviewers-comments/"
-                className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors"
-              >
-                Discover More
-              </Link>
-            </div>
-
-            <div>
-              <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2">
-                Download the full Report Now
-              </h3>
-              <p className="text-xs md:text-sm text-slate-600 mb-3 leading-relaxed">
-                Access a full sample report to see how Pubrica professionally
-                addresses reviewer feedback and enhances manuscript quality for
-                successful publication.
-              </p>
-              <Link
-                href="/insights/response-to-review-comments/"
-                className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs px-6 py-2.5 rounded-full transition-colors"
-              >
-                Discover More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PubricaSampleWorkCard {...respondingToReviewersSampleWork} />
 
       {/* ================= SECTION 6: PACKAGES ================= */}
       <section className="max-w-6xl mx-auto px-4 my-16">

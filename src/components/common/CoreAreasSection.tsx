@@ -1,14 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
 import { isValidElement, type ReactNode } from "react";
 import { type LucideIcon } from "lucide-react";
 
 export type SmeCoreAreaItem = {
     title: string;
     highlight?: string;
-    desc?: string;
-    description?: string;
+    desc?: string | ReactNode;
+    description?: string | ReactNode;
     icon: LucideIcon | ReactNode;
     iconSrc?: string;
+    href?: string; // Optional hyperlink for the card
 };
 
 interface SmeCoreAreasGridProps {
@@ -62,7 +64,7 @@ export default function CoreAreasSection({
     items,
 }: SmeCoreAreasGridProps) {
     return (
-        <section className="space-y-8">
+        <section className="space-y-4">
             {/* Heading + Description */}
             <div className="text-center space-y-2">
                 <h2 className="text-2xl font-bold text-[#1e2e2b]">
@@ -82,17 +84,17 @@ export default function CoreAreasSection({
                         item.highlight
                     );
 
-                    const body = item.desc || item.description || "";
+                    const body = item.desc || item.description || null;
+                    const titleColorClass = item.href ? "text-blue-600" : "text-[#b81c1c]";
 
-                    return (
+                    const cardContent = (
                         <div
-                            key={index}
-                            className="bg-white border border-gray-200/90 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                            className="bg-white border border-gray-200/90 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full"
                         >
                             <div className="space-y-3">
                                 <div className="flex items-center justify-between">
                                     <h3 className="text-sm font-bold text-gray-900 leading-snug">
-                                        <span className="text-[#b81c1c]">
+                                        <span className={titleColorClass}>
                                             {head}
                                             {rest ? " " : ""}
                                         </span>
@@ -118,6 +120,21 @@ export default function CoreAreasSection({
                                     {body}
                                 </p>
                             </div>
+                        </div>
+                    );
+
+                    return (
+                        <div key={index} className="flex flex-col">
+                            {item.href ? (
+                                <Link
+                                    href={item.href}
+                                    className="block h-full text-blue-600 no-underline"
+                                >
+                                    {cardContent}
+                                </Link>
+                            ) : (
+                                cardContent
+                            )}
                         </div>
                     );
                 })}

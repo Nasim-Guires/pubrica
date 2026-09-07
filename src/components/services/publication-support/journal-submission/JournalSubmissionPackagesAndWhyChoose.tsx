@@ -72,12 +72,11 @@ const packagesData = [
 
 export default function JournalSubmissionPackagesAndWhyChoose() {
   // Accordion state: item 1 ('end-to-end') open by default
-  const [openWhyChoose, setOpenWhyChoose] = useState<string>("end-to-end");
+  const [openWhyChoose, setOpenWhyChoose] = useState<string>("");
 
   const toggleWhyChoose = (id: string) => {
     setOpenWhyChoose((prev) => (prev === id ? "" : id));
   };
-
   return (
     <div className="w-full font-poppins text-gray-800 bg-white">
       {/* ========================================== */}
@@ -323,7 +322,7 @@ export default function JournalSubmissionPackagesAndWhyChoose() {
                   alt="Researchers drafting and reviewing manuscript submission"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover rounded-md shadow-sm"
+                  className="object-cover "
                 />
               </div>
             </div>
