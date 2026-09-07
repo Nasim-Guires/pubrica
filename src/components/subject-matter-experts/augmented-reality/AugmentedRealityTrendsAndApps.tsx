@@ -14,13 +14,10 @@ import {
   Megaphone,
 } from "lucide-react";
 import Image from "next/image";
+import ApplicationsSection, { ApplicationItem } from "@/components/common/ApplicationsSection";
 
 // Define the type to allow an optional icon property
-type ApplicationItem = {
-  title: string;
-  desc: string;
-  icon?: React.ReactNode;
-};
+
 
 export default function AugmentedRealityTrendsAndApps() {
   // State for collapsible "Future Trends in Augmented Reality (AR)" section
@@ -31,44 +28,61 @@ export default function AugmentedRealityTrendsAndApps() {
     {
       title: "Educational Institutions",
       desc: "(using interactive material and virtual laboratories)",
-      icon: <Building2 className="w-5 h-5 text-[#0d3630]" />,
+      iconSrc:
+        "/images/subject-matter-experts/augmented-reality/Educational-Institutions.webp",
+      icon: Building2,
     },
     {
       title: "Healthcare Organisations",
       desc: "(surgical assistance and training for practitioners)",
-      icon: <Stethoscope className="w-5 h-5 text-[#0d3630]" />,
+      iconSrc:
+        "/images/subject-matter-experts/augmented-reality/Healthcare-Organisations.webp",
+      icon: Stethoscope,
     },
     {
       title: "Retailers",
       desc: "(offering the ability to see how clothing will look if worn)",
-      icon: <ShoppingBag className="w-5 h-5 text-[#0d3630]" />,
+      iconSrc:
+        "/images/subject-matter-experts/augmented-reality/Retailers.webp",
+      icon: ShoppingBag,
     },
     {
       title: "Industrial Companies",
       desc: "(maintenance and/or training using AR)",
-      icon: <Factory className="w-5 h-5 text-[#0d3630]" />,
+      iconSrc:
+        "/images/subject-matter-experts/augmented-reality/Industrial-Companies.webp",
+      icon: Factory,
     },
     {
       title: "Gaming/Entertainment Companies",
       desc: "(having a virtual experience (gaming))",
-      icon: <Gamepad2 className="w-5 h-5 text-[#0d3630]" />,
+      iconSrc:
+        "/images/subject-matter-experts/augmented-reality/Gaming_Entertainment-Companies.webp",
+      icon: Gamepad2,
     },
     {
       title: "Architectural Firms or Real Estate",
       desc: "(to walk through a property without being physically present at that site)",
-      icon: <Home className="w-5 h-5 text-[#0d3630]" />,
+      iconSrc:
+        "/images/subject-matter-experts/augmented-reality/Architectural-Firms-or-Real-Estate.webp",
+      icon: Home,
     },
     {
       title: "Tourism Industry",
       desc: "(navigating with AR through physical locations and visualising previous events)",
-      icon: <Compass className="w-5 h-5 text-[#0d3630]" />,
+      iconSrc:
+        "/images/subject-matter-experts/augmented-reality/Tourism-Industry.webp",
+      icon: Compass,
     },
     {
       title: "Marketing and Advertising",
       desc: "(the ability to interact with a company through various media types)",
-      icon: <Megaphone className="w-5 h-5 text-[#0d3630]" />,
+      iconSrc:
+        "/images/subject-matter-experts/augmented-reality/Marketing-and-Advertising.webp",
+      icon: Megaphone,
     },
   ];
+
 
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white font-sans text-gray-800 space-y-10">
@@ -125,55 +139,13 @@ export default function AugmentedRealityTrendsAndApps() {
       </section>
 
       {/* SECTION 2: APPLICATIONS OF AUGMENTED REALITY */}
-      <section className="space-y-6">
-        {/* Header */}
-        <div className="space-y-2">
-          <h2 className="text-2xl font-bold text-[#0d3630]">
-            Applications of Augmented Reality
-          </h2>
-          <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-            AR is a combination of multiple fields through the ability to add
-            digital elements to existing/in-use physical space. Augmented
-            Reality has many possible applications, some of which include the
-            areas of:
-          </p>
-        </div>
-
-        {/* Two-column layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Applications List */}
-          <div className="lg:col-span-7 space-y-4">
-            {applications.map((app, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                {app.icon ? (
-                  <div className="w-6 h-6 shrink-0 flex items-center justify-center text-[#0d3630]">
-                    {app.icon}
-                  </div>
-                ) : (
-                  <div className="w-2 h-2 mt-2 rounded-full bg-[#0d3630] shrink-0" />
-                )}
-                <div className="text-xs md:text-sm">
-                  <span className="font-bold text-[#0d3630]">
-                    {app.title}{" "}
-                  </span>
-                  <span className="text-gray-600">{app.desc}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Right Side Image */}
-          <div className="lg:col-span-5 relative w-full h-[380px] rounded-lg overflow-hidden">
-            <Image
-              src="/images/subject-matter-experts/augmented-reality/Applications-of-Augmented-Reality.webp"
-              alt="Applications of Augmented Reality"
-              fill
-              className="object-cover rounded-lg"
-              priority
-            />
-          </div>
-        </div>
-      </section>
+      <ApplicationsSection
+        title="Applications of Augmented Reality"
+        description="AR is a combination of multiple fields through the ability to add digital elements to existing/in-use physical space. Augmented Reality has many possible applications, some of which include the areas of:"
+        applications={applications}
+        imageSrc="/images/subject-matter-experts/augmented-reality/Applications-of-Augmented-Reality.webp"
+        imageAlt="Applications of Augmented Reality"
+      />
     </div>
   );
 }

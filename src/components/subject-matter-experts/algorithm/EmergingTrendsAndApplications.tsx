@@ -14,6 +14,10 @@ import {
   Award,
   FileText,
 } from "lucide-react";
+import EmergingTrendsSection from "@/components/common/EmergingTrendsSection";
+import ApplicationsSection from "@/components/common/ApplicationsSection";
+import ExpertEditorsSection, { ExpertEditorItem } from "@/components/common/ExpertEditorsSection";
+import WhereAuthorsPublish, { AuthorPublicationData } from "@/components/common/WhereAuthorsPublish";
 
 export default function EmergingTrendsAndApplications() {
   // --- 1. EMERGING TRENDS DATA ---
@@ -21,8 +25,7 @@ export default function EmergingTrendsAndApplications() {
     {
       id: "dl-nn",
       title: "Deep Learning / Neural Networks",
-      description:
-        "Deep Learning / Neural Network Solutions.",
+      description: "Deep Learning / Neural Network Solutions.",
     },
     {
       id: "quantum",
@@ -33,14 +36,12 @@ export default function EmergingTrendsAndApplications() {
     {
       id: "edge",
       title: "Real-time Edge Computing",
-      description:
-        "Real-Time Data and Analytics on Edge Devices",
+      description: "Real-Time Data and Analytics on Edge Devices",
     },
     {
       id: "xai",
       title: "Transparent AI (XAI)",
-      description:
-        "Clear and Interpretable AI Algorithms",
+      description: "Clear and Interpretable AI Algorithms",
     },
     {
       id: "opt",
@@ -51,8 +52,7 @@ export default function EmergingTrendsAndApplications() {
     {
       id: "blockchain",
       title: "Blockchain Algorithms",
-      description:
-        "Secure & Decentralized Algorithms for Computation",
+      description: "Secure & Decentralized Algorithms for Computation",
     },
     {
       id: "auto-alg",
@@ -63,88 +63,109 @@ export default function EmergingTrendsAndApplications() {
     {
       id: "rt-proc",
       title: "Real-Time Processing Algorithms",
-      description:
-        "Fast Decision-Making Algorithms",
+      description: "Fast Decision-Making Algorithms",
     },
-  ];
-
+  ]
   const [activeTrend, setActiveTrend] = useState(emergingTrends[2]); // Default: Real-time Edge Computing
 
   // --- 2. APPLICATIONS OF ALGORITHM DATA ---
   const applications = [
     {
       title: "Software Development",
-      iconSrc: "/images/subject-matter-experts/algorithm/Algorithm-Design-Analysis.webp",
+      iconSrc:
+        "/images/subject-matter-experts/algorithm/Algorithm-Design-Analysis.webp",
       desc: "efficient coding and optimising the system and/or application.",
       icon: Code2,
     },
     {
       title: "Artificial Intelligence",
-      iconSrc: "/images/subject-matter-experts/algorithm/Data-Structure-Optimisation.webp",
-      desc: "developing machine learning and creating \"smart\" computers.",
+      iconSrc:
+        "/images/subject-matter-experts/algorithm/Data-Structure-Optimisation.webp",
+      desc: 'developing machine learning and creating "smart" computers.',
       icon: Bot,
     },
     {
       title: "Data Science",
-      iconSrc: "/images/subject-matter-experts/algorithm/Computational-Complexity.webp",
+      iconSrc:
+        "/images/subject-matter-experts/algorithm/Computational-Complexity.webp",
       desc: "analysis, statistical modelling, and visualisation of data.",
       icon: LineChart,
     },
     {
       title: "Cybersecurity",
-      iconSrc: "/images/subject-matter-experts/algorithm/Machine-Learning-Algorithms.webp",
+      iconSrc:
+        "/images/subject-matter-experts/algorithm/Machine-Learning-Algorithms.webp",
       desc: "using cryptography and authenticating users to detect security threats.",
       icon: ShieldCheck,
     },
     {
       title: "Financial Markets",
-      iconSrc: "/images/subject-matter-experts/algorithm/Network-Graph-Algorithms.webp",
+      iconSrc:
+        "/images/subject-matter-experts/algorithm/Network-Graph-Algorithms.webp",
       desc: "creating algorithms for trading and risk analysis.",
       icon: BarChart2,
     },
     {
       title: "Healthcare",
-      iconSrc: "/images/subject-matter-experts/algorithm/Parallel-Distributed-Algorithms.webp",
+      iconSrc:
+        "/images/subject-matter-experts/algorithm/Parallel-Distributed-Algorithms.webp",
       desc: "analysing medical data and diagnosing patients.",
       icon: Stethoscope,
     },
     {
       title: "Transportation",
-      iconSrc: "/images/subject-matter-experts/algorithm/Heuristic-and-Metaheuristic-Algorithms.webp",
+      iconSrc:
+        "/images/subject-matter-experts/algorithm/Heuristic-and-Metaheuristic-Algorithms.webp",
       desc: "determining the best route and managing traffic.",
       icon: Navigation,
     },
     {
       title: "E-commerce",
-      iconSrc: "/images/subject-matter-experts/algorithm/Numerical-Algorithm.webp",
+      iconSrc:
+        "/images/subject-matter-experts/algorithm/Numerical-Algorithm.webp",
       desc: "creating recommendation systems and optimising searches.",
       icon: ShoppingCart,
     },
   ];
 
+  const publication: AuthorPublicationData = {
+    imageSrc:
+      "/images/subject-matter-experts/algorithm/sample-works-13-1.webp",
+    imageAlt: "Algorithms and Computation Journal Cover",
+    paperTitle:
+      "Advanced Optimization Algorithms for Large-Scale Data Processing",
+    author: "John R. Anderson",
+    publisher: "Elsevier",
+    journalName: "Journal of Algorithms and Computation",
+    impactFactor: "4.2",
+  };
+
   // --- 3. EDITORS DATA ---
-  const editors = [
+  const editors: ExpertEditorItem[] = [
     {
       name: "Dr. Robert Klein",
       degree: "PhD in Computer Science",
-      flag: "🇺🇸",
-      avatar: "/images/subject-matter-experts/algorithm/Dr.-Robert-Klein.webp",
+      flag: "/images/country/gb.png",
+      avatar:
+        "/images/subject-matter-experts/algorithm/Dr.-Robert-Klein.webp",
       experience: "15 years of experience",
       manuscripts: "200+ manuscripts edited",
     },
     {
       name: "Dr. Ananya Iyer",
       degree: "PhD in Data Science",
-      flag: "🇺🇸",
-      avatar: "/images/subject-matter-experts/algorithm/Dr.-Ananya-Iyer-1.webp",
+      flag: "/images/country/us.png",
+      avatar:
+        "/images/subject-matter-experts/algorithm/Dr.-Ananya-Iyer-1.webp",
       experience: "12 years of experience",
       manuscripts: "180+ manuscripts edited",
     },
     {
       name: "Dr. David Chen",
       degree: "PhD in Computational Engineering",
-      flag: "🇺🇸",
-      avatar: "/images/subject-matter-experts/algorithm/Dr.-David-Chen.webp",
+      flag: "/images/country/us.png",
+      avatar:
+        "/images/subject-matter-experts/algorithm/Dr.-David-Chen.webp",
       experience: "11 years of experience",
       manuscripts: "150+ manuscripts edited",
     },
@@ -153,210 +174,34 @@ export default function EmergingTrendsAndApplications() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-6 space-y-16 bg-white font-sans text-gray-800">
       {/* SECTION 1: EMERGING TRENDS IN ALGORITHM */}
-      <div className="space-y-6">
-        <div className="space-y-1">
-          <h2 className="text-xl md:text-2xl font-bold text-[#1e2e2b]">
-            Emerging Trends in Algorithm
-          </h2>
-          <p className="text-xs text-gray-600 font-medium">
-            Trends in Computing, Data Science, and Intelligent Systems through Advanced Algorithms:
-          </p>
-        </div>
-
-        {/* Dynamic Matrix Selector Container */}
-        <div className="bg-[#f8f9f9] p-4 md:p-6 rounded border border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {emergingTrends.map((trend) => {
-              const isActive = activeTrend.id === trend.id;
-              return (
-                <button
-                  key={trend.id}
-                  onClick={() => setActiveTrend(trend)}
-                  className={`py-3 px-2 text-center text-[11px] font-semibold transition-colors duration-150 border ${isActive
-                    ? "bg-[#12433e] text-white border-[#12433e]"
-                    : "bg-[#edf0f0] text-gray-800 border-gray-200 hover:bg-gray-200"
-                    }`}
-                >
-                  {trend.title}
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Dynamic Active Trend Box */}
-          <div className="mt-3 bg-white p-4 border border-gray-200 rounded-sm text-left">
-            <h3 className="text-xs font-bold text-gray-900">
-              {activeTrend.title}
-            </h3>
-            <p className="text-[11px] text-gray-500 mt-1 leading-relaxed">
-              {activeTrend.description}
-            </p>
-          </div>
-        </div>
-
-        <p className="text-xs text-gray-600 leading-relaxed max-w-5xl">
-          All these trends represent a shift away from traditional approaches to computing, intelligence, and Efficiency. Today's engineering of Advanced Algorithms is revolutionising how we think about computing, intelligence and efficiency.
-        </p>
-      </div>
+      <EmergingTrendsSection
+        title="Emerging Trends in Algorithm"
+        description="Trends in Computing, Data Science, and Intelligent Systems through Advanced Algorithms:"
+        trends={emergingTrends}
+        footerText="All these trends represent a shift away from traditional approaches to computing, intelligence, and Efficiency. Today’s engineering of Advanced Algorithms is revolutionising how we think about computing, intelligence and efficiency."
+      />
 
       {/* SECTION 2: APPLICATIONS OF ALGORITHM */}
-      <div className="space-y-4">
-        <div className="space-y-1.5">
-          <h2 className="text-xl md:text-2xl font-bold text-[#1e2e2b]">
-            Applications of Algorithm
-          </h2>
-          <p className="text-sm text-gray-600 leading-relaxed">
-            The area of algorithms is one of the most important areas in computer science because it uses computational logic to develop solutions to real-world problems using math and logic. The following are some of the many areas in which algorithms work:
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
-          {/* Applications Items */}
-          <div className="md:col-span-7 space-y-3">
-            {applications.map((app, idx) => {
-              const AppIcon = app.icon;
-              return (
-                <div key={idx} className="flex items-start gap-2.5">
-                  <div className="p-1.5 bg-gray-100 text-gray-700 shrink-0 rounded">
-                    {"iconSrc" in app && app.iconSrc ? (
-                      <Image
-                        src={app.iconSrc}
-                        alt=""
-                        width={24}
-                        height={24}
-                        className="object-contain w-4 h-4 shrink-0"
-                      />
-                    ) : (
-                      <AppIcon className="w-4 h-4" />
-                    )}
-                  </div>
-                  <p className="text-sm text-gray-700 leading-snug">
-                    <span className="text-gray-900">{app.title}</span> – {app.desc}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Workspace Image */}
-          <div className="md:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-[280px] h-[395px] overflow-hidden">
-              <Image
-                src="/images/subject-matter-experts/algorithm/Applications-of-Algorithm.webp"
-                alt="Developer workstation with code on dual monitors"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 280px"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <ApplicationsSection
+        title="Applications of Algorithm"
+        description="The area of algorithms is one of the most important areas in computer science because it uses computational logic to develop solutions to real-world problems using math and logic. The following are some of the many areas in which algorithms work:"
+        applications={applications}
+        imageSrc="/images/subject-matter-experts/algorithm/Applications-of-Algorithm.webp"
+        imageAlt="Applications of Algorithm"
+      />
 
       {/* SECTION 3: WHERE OUR AUTHORS PUBLISH */}
-      <div className="space-y-6 text-center">
-        <div className="space-y-2">
-          <h2 className="text-xl md:text-2xl font-bold text-[#1e2e2b]">
-            Where Our Authors Publish
-          </h2>
-          <div className="w-10 h-0.5 bg-[#12433e] mx-auto" />
-          <p className="text-xs text-gray-600 max-w-2xl mx-auto pt-1">
-            Our authors share Pubrica's expert content in top-tier journals and conferences, ensuring global recognition and impact.
-          </p>
-        </div>
-
-        <div className="max-w-3xl mx-auto bg-white border border-gray-100 rounded-xl p-6 shadow-md text-left grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
-          <div className="sm:col-span-4 relative h-60 w-full rounded-lg overflow-hidden bg-gray-50 border border-gray-100">
-            <Image
-              src="/images/subject-matter-experts/algorithm/sample-works-13-1.webp"
-              alt="Algorithms and Computation Journal Cover"
-              fill
-              className="object-cover"
-            />
-          </div>
-
-          <div className="sm:col-span-8 space-y-4 text-xs text-gray-700">
-            <div>
-              <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-0.5">Paper Title</p>
-              <p className="text-sm text-[#1e2e2b] leading-snug">
-                Advanced Optimization Algorithms for Large-Scale Data Processing
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div>
-                <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-0.5">Author</p>
-                <p className="text-gray-800">John R. Anderson</p>
-              </div>
-              <div>
-                <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-0.5">Publisher</p>
-                <p className="text-gray-800">Elsevier</p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div>
-                <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-0.5">Journal Name</p>
-                <p className="text-gray-800">Journal of Algorithms and Computation</p>
-              </div>
-              <div>
-                <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-0.5">Impact factor</p>
-                <p className="text-gray-800">4.2</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <WhereAuthorsPublish
+        title="Where Our Authors Publish"
+        description="Our authors share Pubrica's expert content in top-tier journals and conferences, ensuring global recognition and impact."
+        publication={publication}
+      />
       {/* SECTION 4: OUR EXPERT ALGORITHM EDITORS */}
-      <div className="space-y-4 text-center">
-        <div className="space-y-1.5">
-          <h2 className="text-xl md:text-2xl font-bold text-[#1e2e2b]">
-            Our Expert Algorithm Editors
-          </h2>
-          <p className="text-sm text-gray-600 max-w-3xl mx-auto">
-            Pubrica's team of subject matter experts brings strong computational and analytical expertise to deliver precise and innovative solutions.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {editors.map((editor, idx) => (
-            <div
-              key={idx}
-              className="bg-[#f2f9f6] rounded-xl p-5 border-l-4 border-l-[#12433e] border-y border-r border-[#e2efe9] shadow-sm flex flex-col justify-between text-left"
-            >
-              <div className="flex items-center gap-3.5 mb-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden border border-[#d2e7e3] shrink-0 bg-white shadow-sm">
-                  <Image
-                    src={editor.avatar}
-                    alt={editor.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="min-w-0">
-                  <h3 className="text-sm text-gray-900 flex items-center gap-1.5 truncate">
-                    <span>{editor.flag}</span>
-                    <span className="truncate">{editor.name}</span>
-                  </h3>
-                  <p className="text-xs text-gray-600 truncate mt-0.5">{editor.degree}</p>
-                </div>
-              </div>
-
-              <div className="bg-white/70 rounded-lg p-2.5 flex items-center justify-between text-xs text-gray-700 border border-[#e5f2ec]">
-                <div className="flex items-center gap-1.5">
-                  <Award className="w-4 h-4 text-[#12433e]" />
-                  <span>{editor.experience}</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <FileText className="w-4 h-4 text-[#12433e]" />
-                  <span>{editor.manuscripts}</span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      <ExpertEditorsSection
+        title="Our Expert Algorithm Editors"
+        description="Pubrica's team of subject matter experts brings strong computational and analytical expertise to deliver precise and innovative solutions."
+        editors={editors}
+      />
     </section>
   );
 }

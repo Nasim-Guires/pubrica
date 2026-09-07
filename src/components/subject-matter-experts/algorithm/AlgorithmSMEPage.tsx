@@ -23,6 +23,8 @@ import {
 } from "lucide-react";
 import HeroBanner from "@/components/common/HeroBanner";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import CoreAreasSection from "@/components/common/CoreAreasSection";
+import CommonExpertiseCards, { ExpertiseCardItem } from "@/components/common/CommonExpertiseCards";
 
 export const metadata: Metadata = {
     title: "Algorithm Research & Publication | Subject Matter Experts | Pubrica",
@@ -35,63 +37,72 @@ export default function AlgorithmSMEPage() {
     const coreAreas = [
         {
             title: "Algorithm Design & Analysis",
-            iconSrc: "/images/subject-matter-experts/algorithm/Algorithm-Design-Analysis.webp",
+            iconSrc:
+                "/images/subject-matter-experts/algorithm/Algorithm-Design-Analysis.webp",
             highlight: "Algorithm Design &",
             desc: "We create efficient algorithms (computational procedures) to solve complicated computer-based problems through the development and evaluation phases.",
             icon: Cpu,
         },
         {
             title: "Data Structure & Optimisation",
-            iconSrc: "/images/subject-matter-experts/algorithm/Data-Structure-Optimisation.webp",
+            iconSrc:
+                "/images/subject-matter-experts/algorithm/Data-Structure-Optimisation.webp",
             highlight: "Data Structure &",
             desc: "For algorithms to work efficiently, we must create efficient methods for retrieving and storing information/data.",
             icon: Database,
         },
         {
             title: "Computational Complexity",
-            iconSrc: "/images/subject-matter-experts/algorithm/Computational-Complexity.webp",
+            iconSrc:
+                "/images/subject-matter-experts/algorithm/Computational-Complexity.webp",
             highlight: "Computational",
             desc: "To determine how efficient algorithms will work, we analyse both time and space complexity.",
             icon: Binary,
         },
         {
             title: "Machine Learning Algorithms",
-            iconSrc: "/images/subject-matter-experts/algorithm/Machine-Learning-Algorithms.webp",
+            iconSrc:
+                "/images/subject-matter-experts/algorithm/Machine-Learning-Algorithms.webp",
             highlight: "Machine Learning",
             desc: "For developing predictive models and/or intelligent agents, we develop and implement machine learning algorithms.",
             icon: Sparkles,
         },
         {
             title: "Network Graph Algorithms",
-            iconSrc: "/images/subject-matter-experts/algorithm/Network-Graph-Algorithms.webp",
+            iconSrc:
+                "/images/subject-matter-experts/algorithm/Network-Graph-Algorithms.webp",
             highlight: "Network Graph",
             desc: "Algorithms that can solve network-related problems (i.e., routing, connectivity and shortest-path routing-related problems) using graphs.",
             icon: Share2,
         },
         {
             title: "Parallel & Distributed Algorithms",
-            iconSrc: "/images/subject-matter-experts/algorithm/Parallel-Distributed-Algorithms.webp",
+            iconSrc:
+                "/images/subject-matter-experts/algorithm/Parallel-Distributed-Algorithms.webp",
             highlight: "Parallel & Distributed",
             desc: "Algorithms designed specifically to run on parallel and/or distributed high-performance computing systems.",
             icon: Workflow,
         },
         {
             title: "Heuristic and Metaheuristic Algorithms",
-            iconSrc: "/images/subject-matter-experts/algorithm/Heuristic-and-Metaheuristic-Algorithms.webp",
+            iconSrc:
+                "/images/subject-matter-experts/algorithm/Heuristic-and-Metaheuristic-Algorithms.webp",
             highlight: "Heuristic and Metaheuristic",
             desc: "For when no definitive solution can be found to a complicated optimisation problem, we use heuristic/approximate methods to provide the best possible solutions.",
             icon: Layers,
         },
         {
             title: "Numerical Algorithm",
-            iconSrc: "/images/subject-matter-experts/algorithm/Numerical-Algorithm.webp",
+            iconSrc:
+                "/images/subject-matter-experts/algorithm/Numerical-Algorithm.webp",
             highlight: "Numerical",
             desc: "We develop algorithms and methods for resolving mathematical issues such as equations, simulations, and optimizations of numerical problems.",
             icon: Calculator,
         },
         {
             title: "Big Data Algorithms",
-            iconSrc: "/images/subject-matter-experts/algorithm/Big-Data-Algorithms.webp",
+            iconSrc:
+                "/images/subject-matter-experts/algorithm/Big-Data-Algorithms.webp",
             highlight: "Big Data",
             desc: "We create efficient algorithms for processing and analysing large volumes of data sets.",
             icon: Network,
@@ -99,61 +110,69 @@ export default function AlgorithmSMEPage() {
     ];
 
     // 2. Expertise Cards Data with Navigation URLs
-    const expertiseCards = [
+    const expertiseCards: ExpertiseCardItem[] = [
         {
             title: "Research Services",
             desc: "Expert guidance on project planning, execution, and data analysis.",
             icon: Search,
-            imageUrl: "/images/subject-matter-experts/algorithm/Research-Services.png",
+            imageUrl:
+                "/images/subject-matter-experts/algorithm/Research-Services.png",
             href: "/services/research-services/",
         },
         {
             title: "Editing & Proofreading",
             desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
             icon: FileText,
-            imageUrl: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
+            imageUrl:
+                "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             href: "/services/editing-and-translation/",
         },
         {
             title: "Publication Support",
             desc: "Complete support for publishing in high-impact journals, translating concepts into incisive reports",
             icon: HelpCircle,
-            imageUrl: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
+            imageUrl:
+                "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             href: "/services/publication-support/",
         },
         {
             title: "Scientific Writing",
             desc: "Crafting clear, precise, and publication-ready research manuscripts.",
             icon: PenTool,
-            imageUrl: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
+            imageUrl:
+                "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             href: "/services/research-services/scientific-writing/",
         },
         {
             title: "Artwork Editing",
             desc: "Professional visuals for your figures, tables, and graphical abstracts.",
             icon: ImageIcon,
-            imageUrl: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
+            imageUrl:
+                "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             href: "/services/publication-support/art-work-preparation/",
         },
         {
             title: "Journal Formatting",
             desc: "Tailored manuscript formatting to meet specific journal guidelines.",
             icon: Layout,
-            imageUrl: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
+            imageUrl:
+                "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             href: "/services/publication-support/journal-manuscript-formatting-services/",
         },
         {
             title: "Graphical Abstract",
             desc: "Engaging summaries of your research in a single, informative graphic.",
             icon: BarChart2,
-            imageUrl: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
+            imageUrl:
+                "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             href: "/services/research-impact/graphical-abstract/",
         },
         {
             title: "Literature Review and Gap Analysis",
             desc: "Identifying research gaps and providing comprehensive literature reviews.",
             icon: BookOpen,
-            imageUrl: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
+            imageUrl:
+                "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             href: "/services/research-services/literature-review-and-gap/",
         },
     ];
@@ -187,112 +206,63 @@ export default function AlgorithmSMEPage() {
             {/* MAIN CONTAINER */}
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
                 {/* INTRO SECTION */}
-                <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div className="lg:col-span-7 space-y-4">
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#1e2e2b] leading-tight">
-                            Transforming Complex Problems into Efficient Solutions with
-                            Advanced Algorithm
+                <section className="max-w-7xl mx-auto px-4 py-12">
+                    <div className="space-y-4 mb-8">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b] leading-tight max-w-4xl">
+                            Transforming Complex Problems into Efficient Solutions with Advanced Algorithm
                         </h2>
-
-                        <div className="space-y-3 text-xs md:text-sm text-gray-600 leading-relaxed">
-                            <p>
-                                The algorithms area of research is undergoing rapid change,
-                                owing to the rise in demand for efficient computing,
-                                data-oriented business decision-making, and scalable software
-                                systems.
-                            </p>
-                            <p>
-                                Each of our services will contribute to the improved quality,
-                                accuracy and impact of research-based products throughout the
-                                full breadth of algorithms research.
-                            </p>
-                        </div>
-
-                        <div className="pt-2">
-                            <GetFreeQuoteButton />
-                        </div>
                     </div>
 
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white bg-gray-100">
-                            <Image
-                                src="/images/subject-matter-experts/algorithm/Algorithm-1.webp"
-                                alt="Algorithm Research Visualization"
-                                fill
-                                className="object-contain p-2"
-                                priority
-                                sizes="(max-width: 768px) 288px, 320px"
-                            />
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                        <div className="lg:col-span-7 space-y-4">
+                            <div className="space-y-4 text-xs md:text-sm text-gray-600 leading-relaxed">
+                                <p>
+                                    The algorithms area of research is undergoing rapid change, owing to the rise in demand for efficient computing, data-oriented business decision-making, and scalable software systems. In order to foster the growth of these new trends, Pubrica provides or will provide enhanced services for algorithm researchers, including: design; testing algorithms for execution and optimization; and offering complete solutions for computer scientists, engineers and other practitioners in an academic environment.
+                                </p>
+                                <p>
+                                    Each of our services will contribute to the improved quality, accuracy and impact of research-based products throughout the full breadth of algorithms research. Algorithm employs algorithm concepts such as: algorithm design; data structures; computational complexity; and applied computing to create optimal methods for solving computational problems. By employing engineering principles to problem-solving techniques, optimization techniques for problem solving, data handling methods, and system performance, research can develop representations of the algorithmic problem space.
+                                </p>
+                                <p>
+                                    Among the various engineering principles employed are mathematical models; complexity evaluation; heuristic methods; and algorithm optimisation methods, to allow researchers to address the requirements associated with solving difficult computational problems.
+                                </p>
+                                <p>
+                                    Research projects in computational algorithms develop the basis for researchers to use advanced predictive and analytical tools to emulate problems, to analyse the effectiveness of their solution and to quantify the effectiveness of their solution.
+                                </p>
+                            </div>
+
+                            <div className="pt-2">
+                                <GetFreeQuoteButton />
+                            </div>
+                        </div>
+
+                        <div className="lg:col-span-5 flex justify-center lg:justify-end pt-4">
+                            <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg border-4 border-white bg-gray-100 flex-shrink-0">
+                                <Image
+                                    src="/images/subject-matter-experts/algorithm/Algorithm-1.webp"
+                                    alt="Algorithm Research Visualization"
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                    sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
+                                />
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 {/* CORE AREAS SECTION WITH ACTIVE INTERNAL SCROLLING */}
-                <section className="space-y-8">
-                    <div className="text-center space-y-2">
-                        <h2 className="text-2xl font-bold text-[#1e2e2b]">
-                            Our Core Areas Of Algorithm
-                        </h2>
-                        <p className="text-xs md:text-sm text-gray-600 max-w-3xl mx-auto">
-                            Our company's focus is to utilise our knowledge to drive
-                            innovation in three fundamental categories of algorithms:
-                        </p>
-                    </div>
-
-                    <SmeCoreAreasGrid items={coreAreas} />
-                </section>
+                <CoreAreasSection
+                    title="Our Core Areas Of Algorithm"
+                    description="Our company's focus is to utilise our knowledge to drive innovation in three fundamental categories of algorithms:"
+                    items={coreAreas}
+                />
 
                 {/* EXPERTISE GRID WITH HOVER OVERLAY */}
-                <section className="space-y-8">
-                    <div className="space-y-2">
-                        <h2 className="text-2xl font-bold text-[#1e2e2b]">
-                            Our Expertise in Algorithm Research and Publication
-                        </h2>
-                        <p className="text-xs md:text-sm text-gray-600">
-                            At Pubrica, we offer specialised expertise in algorithm research
-                            and publication, supporting scientists, researchers, and industry
-                            professionals in advancing their work. Our services include:
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {expertiseCards.map((card, idx) => {
-                            const CardIcon = card.icon;
-                            return (
-                                <Link
-                                    key={idx}
-                                    href={card.href}
-                                    className="group relative bg-white border border-gray-300 rounded-none overflow-hidden shadow-sm h-64 cursor-pointer block"
-                                >
-                                    {/* Background Image */}
-                                    <div className="relative h-40 w-full bg-gray-100">
-                                        <Image
-                                            src={card.imageUrl}
-                                            alt={card.title}
-                                            fill
-                                            className="object-cover"
-                                        />
-                                    </div>
-
-                                    {/* Center Circle Icon - Moves up to top-20 on hover */}
-                                    <div className="absolute top-[8.5rem] left-1/2 -translate-x-1/2 z-20 bg-white p-2.5 rounded-full border border-gray-200 shadow-sm transition-all duration-300 ease-in-out group-hover:top-20 group-hover:scale-105">
-                                        {(card as any).iconSrc ? <Image src={(card as any).iconSrc} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" /> : <CardIcon className="w-5 h-5 text-[#12433e]" />}
-                                    </div>
-
-                                    {/* Sliding White Panel Overlay */}
-                                    <div className="absolute inset-x-0 bottom-0 top-36 z-10 bg-white pt-7 pb-3 px-3 flex flex-col items-center justify-start text-center transition-all duration-300 ease-in-out group-hover:top-20 group-hover:pt-12 group-hover:justify-start">
-                                        <h3 className="text-xs font-bold text-gray-900 transition-all duration-300">
-                                            {card.title}
-                                        </h3>
-                                        <p className="text-[11px] text-gray-500 mt-2 leading-tight opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]">
-                                            {card.desc}
-                                        </p>
-                                    </div>
-                                </Link>
-                            );
-                        })}
-                    </div>
-                </section>
+                <CommonExpertiseCards
+                    title="Our Expertise in Algorithm Research and Publication"
+                    description="At Pubrica, we offer specialised expertise in algorithm research and publication, supporting scientists, researchers, and industry professionals in advancing their work. Our services include:"
+                    cards={expertiseCards}
+                />
             </main>
         </div>
     );

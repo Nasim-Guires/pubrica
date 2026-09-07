@@ -12,6 +12,10 @@ import {
   Award,
   FileText,
 } from "lucide-react";
+import EmergingTrendsSection from "@/components/common/EmergingTrendsSection";
+import ApplicationsSection from "@/components/common/ApplicationsSection";
+import WhereAuthorsPublish, { AuthorPublicationData } from "@/components/common/WhereAuthorsPublish";
+import ExpertEditorsSection, { ExpertEditorItem } from "@/components/common/ExpertEditorsSection";
 
 export default function AnimalScienceContinuedSections() {
   // --- 1. EMERGING TRENDS DATA ---
@@ -67,140 +71,97 @@ export default function AnimalScienceContinuedSections() {
   ];
 
   // --- 3. EDITORS DATA ---
-  const editors = [
+  const editors: ExpertEditorItem[] = [
     {
       name: "Warvien",
       degree: "PhD in Animal Science",
-      flag: "🇬🇧",
-      avatar: "/images/subject-matter-experts/animal-science/warvien.png",
+      flag: "/images/country/gb.png",
+      avatar:
+        "/images/subject-matter-experts/animal-science/warvien.png",
       experience: "14 years of experience",
       manuscripts: "100+ manuscripts edited",
     },
     {
       name: "Victor",
       degree: "Masters in Animal Nutrition",
-      flag: "🇺🇸",
-      avatar: "/images/subject-matter-experts/animal-science/victor.png",
+      flag: "/images/country/us.png",
+      avatar:
+        "/images/subject-matter-experts/animal-science/victor.png",
       experience: "8 years of experience",
       manuscripts: "70+ manuscripts edited",
     },
     {
       name: "Karrel",
       degree: "PhD in Animal Science",
-      flag: "🇺🇸",
-      avatar: "/images/subject-matter-experts/animal-science/karrel.png",
+      flag: "/images/country/us.png",
+      avatar:
+        "/images/subject-matter-experts/animal-science/karrel.png",
       experience: "5 years of experience",
       manuscripts: "55+ manuscripts edited",
     },
   ];
+
+  const applications = [
+    {
+      title: "Agriculture & Livestock Management",
+      desc: "Enhancing productivity and sustainability in dairy, poultry, and meat industries.",
+      icon: Tractor,
+    },
+    {
+      title: "Veterinary Medicine",
+      desc: "Informing disease prevention, treatment, and diagnostics.",
+      icon: Stethoscope,
+    },
+    {
+      title: "Wildlife Conservation",
+      desc: "Protecting endangered species through research on reproduction, genetics, and behavior.",
+      icon: Trees,
+    },
+    {
+      title: "Pharmaceutical and Biotech Industries",
+      desc: "Developing vaccines, therapeutics, and animal models for research.",
+      icon: Factory,
+    },
+    {
+      title: "Education & Research",
+      desc: "Training the next generation of scientists, veterinarians, and animal welfare specialists.",
+      icon: BookOpen,
+    },
+  ];
+
+  const publication: AuthorPublicationData = {
+    imageSrc:
+      "/images/subject-matter-experts/animal-science/animal.jpg",
+    imageAlt: "Journal of Animal Science Cover",
+    paperTitle:
+      "A primer on sequencing and genotype imputation in cattle",
+    author: "Troy N Rowan",
+    publisher: "American Society of Animal Science",
+    journalName: "Journal of Animal Science",
+    impactFactor: "2.9",
+  };
 
   return (
     <div className="w-full bg-[#fcfcfc] font-sans text-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-20">
 
         {/* SECTION 1: EMERGING TRENDS */}
-        <section className="max-w-5xl space-y-6">
-          <div className="space-y-2">
-            <h2 className="text-2xl font-bold text-[#1e2e2b]">
-              Emerging Trends in Animal Science
-            </h2>
-            <p className="text-xs text-gray-600">
-              The field of animal science is rapidly evolving due to technological innovations and global challenges:
-            </p>
-          </div>
 
-          <div className="bg-[#f8f9f9] p-4 md:p-6 rounded border border-gray-200">
-            {/* Tabs Row */}
-            <div className="flex flex-wrap gap-2">
-              {emergingTrends.map((trend) => {
-                const isActive = activeTrend.id === trend.id;
-                return (
-                  <button
-                    key={trend.id}
-                    onClick={() => setActiveTrend(trend)}
-                    className={`py-3 px-4 text-center text-[11px] font-semibold transition-colors duration-150 border flex-1 min-w-[140px] ${isActive
-                      ? "bg-[#12433e] text-white border-[#12433e]"
-                      : "bg-[#edf0f0] text-gray-700 border-gray-200 hover:bg-gray-200"
-                      }`}
-                  >
-                    {trend.title}
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Active Content Box */}
-            <div className="mt-3 bg-white p-5 border border-gray-200 rounded-sm text-left shadow-sm">
-              <h3 className="text-xs font-bold text-gray-900 mb-1.5">
-                {activeTrend.title}
-              </h3>
-              <p className="text-[11px] text-gray-600 leading-relaxed">
-                {activeTrend.description}
-              </p>
-            </div>
-          </div>
-        </section>
+        <EmergingTrendsSection
+          title="Emerging Trends in Animal Science"
+          description="The field of animal science is rapidly evolving due to technological innovations and global challenges:"
+          trends={emergingTrends}
+          footerText=""
+        />
 
         {/* SECTION 2: APPLICATIONS OF ANIMAL SCIENCE */}
-        <section className="space-y-6">
-          <div className="space-y-2">
-            <h2 className="text-2xl font-bold text-[#1e2e2b]">
-              Applications of Animal Science
-            </h2>
-            <p className="text-xs text-gray-600">
-              Animal Science is applied in diverse sectors:
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            {/* List */}
-            <div className="md:col-span-7 space-y-5">
-              <div className="flex items-start gap-3">
-                <Tractor className="w-5 h-5 text-gray-500 shrink-0 mt-0.5" />
-                <p className="text-xs text-gray-700 leading-snug">
-                  <span className="font-bold text-gray-900">Agriculture & Livestock Management:</span> Enhancing productivity and sustainability in dairy, poultry, and meat industries.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <Stethoscope className="w-5 h-5 text-gray-500 shrink-0 mt-0.5" />
-                <p className="text-xs text-gray-700 leading-snug">
-                  <span className="font-bold text-gray-900">Veterinary Medicine:</span> Informing disease prevention, treatment, and diagnostics.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <Trees className="w-5 h-5 text-gray-500 shrink-0 mt-0.5" />
-                <p className="text-xs text-gray-700 leading-snug">
-                  <span className="font-bold text-gray-900">Wildlife Conservation:</span> Protecting endangered species through research on reproduction, genetics, and behavior.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <Factory className="w-5 h-5 text-gray-500 shrink-0 mt-0.5" />
-                <p className="text-xs text-gray-700 leading-snug">
-                  <span className="font-bold text-gray-900">Pharmaceutical and Biotech Industries:</span> Developing vaccines, therapeutics, and animal models for research.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <BookOpen className="w-5 h-5 text-gray-500 shrink-0 mt-0.5" />
-                <p className="text-xs text-gray-700 leading-snug">
-                  <span className="font-bold text-gray-900">Education & Research:</span> Training the next generation of scientists, veterinarians, and animal welfare specialists.
-                </p>
-              </div>
-            </div>
-
-            {/* Image */}
-            <div className="md:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-[280px] h-[395px] overflow-hidden">
-                <Image
-                  src="/images/subject-matter-experts/animal-science/Applications-of-Animal-Science.png"
-                  alt="Veterinarian examining a rabbit with a stethoscope"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 280px"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+        <ApplicationsSection
+          title="Applications of Animal Science"
+          description="Animal Science is applied in diverse sectors:"
+          applications={applications}
+          imageSrc="/images/subject-matter-experts/animal-science/Applications-of-Animal-Science.png"
+          imageAlt="Veterinarian examining a rabbit with a stethoscope"
+        />
       </div>
 
       {/* SECTION 3: AREAS OF STUDY (FULL WIDTH BANNER) */}
@@ -249,112 +210,18 @@ export default function AnimalScienceContinuedSections() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7 space-y-20">
         {/* SECTION 4: WHERE OUR AUTHORS PUBLISH */}
-        <section className="space-y-6 text-center max-w-4xl mx-auto">
-          <div className="space-y-2">
-            <h2 className="text-2xl font-bold text-[#1e2e2b]">
-              Where Our Authors Publish
-            </h2>
-            <div className="w-10 h-0.5 bg-[#12433e] mx-auto" />
-            <p className="text-[11px] text-gray-600 pt-1 leading-relaxed">
-              Our authors share Pubrica's expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity.
-            </p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded p-6 shadow-sm text-left flex flex-col md:flex-row items-center gap-8 justify-center">
-            {/* Journal Cover Placeholder */}
-            <div className="relative w-48 h-64 shadow-md shrink-0 border border-gray-100 bg-[#8bc34a] flex flex-col items-center justify-between p-4">
-              {/* Recreating a CSS approximation of the cover in the screenshot */}
-              <div className="text-center w-full text-white">
-                <p className="text-[8px] uppercase tracking-widest font-semibold">Journal of</p>
-                <p className="text-[10px] uppercase font-bold">Animal Science</p>
-              </div>
-              <h2 className="text-5xl font-black text-white/90">JAS</h2>
-              <div className="w-full h-20 overflow-hidden">
-                <Image
-                  src="/images/subject-matter-experts/animal-science/animal.jpg"
-                  alt="Cow"
-                  width={1200}
-                  height={400}
-                  className="w-full h-full object-contain mix-blend-overlay opacity-50"
-                />
-              </div>
-            </div>
-
-            {/* Paper Info */}
-            <div className="space-y-3.5 text-xs text-gray-700">
-              <p>
-                <span className="font-bold text-gray-900">Paper Title: </span>
-                A primer on sequencing and genotype imputation in cattle
-              </p>
-              <p>
-                <span className="font-bold text-gray-900">Author: </span>
-                Troy N Rowan
-              </p>
-              <p>
-                <span className="font-bold text-gray-900">Journal Name: </span>
-                Journal of Animal Science
-              </p>
-              <p>
-                <span className="font-bold text-gray-900">Publisher: </span>
-                American Society of Animal Science
-              </p>
-              <p>
-                <span className="font-bold text-gray-900">Impact factor: </span>
-                2.9
-              </p>
-            </div>
-          </div>
-        </section>
+        <WhereAuthorsPublish
+          title="Where Our Authors Publish"
+          description="Our authors share Pubrica's expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+          publication={publication}
+        />
 
         {/* SECTION 5: OUR EXPERT ANIMAL SCIENCE EDITORS */}
-        <section className="space-y-6 text-center">
-          <div className="space-y-2 max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-[#1e2e2b]">
-              Our Expert Animal Science Editors
-            </h2>
-            <p className="text-xs text-gray-600 leading-relaxed">
-              Pubrica's team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-5xl mx-auto">
-            {editors.map((editor, idx) => (
-              <div
-                key={idx}
-                className="bg-[#d2e7e3] rounded-2xl p-4.5 border border-[#b8ded7] shadow-sm flex flex-col justify-between"
-              >
-                <div className="flex items-center gap-3.5 mb-4">
-                  <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-white shrink-0">
-                    <Image
-                      src={editor.avatar}
-                      alt={editor.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="text-left">
-                    <h3 className="text-[13px] font-bold text-gray-900 flex items-center gap-1.5">
-                      {editor.name}
-                      <span className="text-[10px]">{editor.flag}</span>
-                    </h3>
-                    <p className="text-[11px] text-gray-600 mt-0.5">{editor.degree}</p>
-                  </div>
-                </div>
-
-                <div className="border-t border-[#aed7cf] pt-3 flex items-center justify-between text-[11px] text-gray-700 font-semibold">
-                  <div className="flex items-center gap-1.5">
-                    <Award className="w-3.5 h-3.5 text-[#12433e]" />
-                    <span>{editor.experience}</span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <FileText className="w-3.5 h-3.5 text-[#12433e]" />
-                    <span>{editor.manuscripts}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+        <ExpertEditorsSection
+          title="Our Expert Animal Science Editors"
+          description="Pubrica's team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake."
+          editors={editors}
+        />
       </div>
     </div>
   );
