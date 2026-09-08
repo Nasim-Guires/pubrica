@@ -12,7 +12,7 @@ interface AccordionItem {
 
 export const EditingTranslationManuscriptEditingWhatWeDo: React.FC = () => {
   // Manage which accordion item is currently open (default to 'item-1')
-  const [openItem, setOpenItem] = useState<string | null>("item-1");
+  const [openItem, setOpenItem] = useState<string | null>("");
 
   const toggleAccordion = (id: string) => {
     setOpenItem((prev) => (prev === id ? null : id));

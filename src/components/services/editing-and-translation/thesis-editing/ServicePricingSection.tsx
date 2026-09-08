@@ -109,7 +109,7 @@ export default function ServicePricingSection() {
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 text-slate-800 ">
+    <div className="w-full max-w-6xl mx-auto px-2 sm:px-6 py-3 text-slate-800 ">
       {/* Title & Subtitle */}
       <CommonPackages
         title="Choose the Thesis Editing Service You Need"
@@ -117,13 +117,18 @@ export default function ServicePricingSection() {
         packages={packages}
       />
       {/* CTA Banner Bar */}
-      <Link href="/order-now/" className="w-full bg-[#B70000] text-white font-bold text-center py-3.5 px-4 rounded-lg shadow-md mb-12 text-sm sm:text-base tracking-wide">
-        Starts from $ 180 for 1000 Words
-      </Link>
+      <div className="flex justify-center px-4 pb-6 sm:pb-8">
+        <Link
+          href="/order-now/"
+          className="bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
+        >
+          Starts from $ 180 for 1000 Words
+        </Link>
+      </div>
 
       {/* 2. Accordions / Feature Cards Section */}
       {/* items-start prevents adjacent row cards from expanding/stretching */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-3 items-start">
         {guarantees.map((item) => {
           const isOpen = !!openSections[item.id];
           return (

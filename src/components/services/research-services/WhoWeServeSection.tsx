@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import ServiceBanner, { BannerProps } from "@/components/common/ServiceBanner";
 
 interface SectorItem {
   title: string;
@@ -119,6 +120,14 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
     setActiveId((prev) => (prev === index ? null : index));
   };
 
+  const serviceBannerData: BannerProps = {
+    imageSrc: "/images/publication-support/Satisfaction_Guarantee.webp",
+    imageAlt: "100% Satisfaction Guarantee",
+    heading: bannerTitle,
+    description: bannerSubtitle,
+    showQuoteButton: false,
+  };
+
   return (
     <section className="w-full bg-white font-sans text-[#111827]">
       <div className="max-w-7xl mx-auto py-6 px-6 md:px-12 lg:px-16">
@@ -141,8 +150,6 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
               <div
                 key={index}
                 onClick={() => handleCardClick(index)}
-                onMouseEnter={() => setActiveId(index)}
-                onMouseLeave={() => setActiveId(null)}
                 className="relative group overflow-hidden bg-black aspect-[4/3] cursor-pointer rounded-none"
               >
                 {/* Default State: Image background */}
@@ -151,7 +158,9 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
                     src={sector.imageUrl}
                     alt={sector.title}
                     fill
-                    className={`object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                    className={`object-cover transition-opacity duration-300 ease-in-out ${isActive
+                        ? "opacity-0 pointer-events-none"
+                        : "opacity-100 md:group-hover:opacity-0 md:group-hover:pointer-events-none"
                       }`}
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
@@ -159,13 +168,17 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
 
                 {/* Default Gradient Overlay for Text Readability */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                  className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-300 ${isActive
+                      ? "opacity-0"
+                      : "opacity-100 md:group-hover:opacity-0"
                     }`}
                 />
 
                 {/* Default View (Title at bottom) */}
                 <div
-                  className={`absolute inset-0 p-6 flex flex-col justify-end transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                  className={`absolute inset-0 p-6 flex flex-col justify-end transition-opacity duration-300 ${isActive
+                      ? "opacity-0"
+                      : "opacity-100 md:group-hover:opacity-0"
                     }`}
                 >
                   <h3 className="text-white text-base md:text-[17px] font-bold leading-snug tracking-wide">
@@ -175,7 +188,9 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
 
                 {/* Hover View (Solid Black Card with Title & Description) */}
                 <div
-                  className={`absolute inset-0 p-6 flex flex-col justify-start bg-black transition-opacity duration-300 ease-in-out group-hover:opacity-100 ${isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                  className={`absolute inset-0 p-6 flex flex-col justify-start bg-black transition-opacity duration-300 ease-in-out ${isActive
+                      ? "opacity-100 pointer-events-auto"
+                      : "opacity-0 pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto"
                     }`}
                 >
                   <h3 className="text-white text-base font-bold mb-3 leading-snug tracking-wide">
@@ -192,16 +207,7 @@ export const WhoWeServeSection: React.FC<WhoWeServeProps> = ({
       </div>
 
       {/* Call-To-Action Banner */}
-      <div className="w-full bg-[#032b1d] text-white py-6 px-6 text-center">
-        <div className="max-w-4xl mx-auto space-y-3">
-          <h3 className="text-xl md:text-2xl font-bold tracking-wide">
-            {bannerTitle}
-          </h3>
-          <p className="text-gray-300 text-sm md:text-base font-light tracking-wide">
-            {bannerSubtitle}
-          </p>
-        </div>
-      </div>
+      <ServiceBanner {...serviceBannerData} />
     </section>
   );
 };

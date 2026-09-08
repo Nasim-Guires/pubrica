@@ -11,8 +11,11 @@ interface ServeItem {
 }
 
 export const EditingTranslationBookEditingWhoWeServe: React.FC = () => {
-  // Store hovered card ID for desktop interaction (defaults to first card if desired, or null)
   const [activeCard, setActiveCard] = useState<string | null>(null);
+
+  const handleCardClick = (id: string) => {
+    setActiveCard((prev) => (prev === id ? null : id));
+  };
 
   const audienceList: ServeItem[] = [
     {
@@ -87,18 +90,15 @@ export const EditingTranslationBookEditingWhoWeServe: React.FC = () => {
             return (
               <div
                 key={item.id}
-                onMouseEnter={() => setActiveCard(item.id)}
-                onMouseLeave={() => setActiveCard(null)}
-                onClick={() =>
-                  setActiveCard(activeCard === item.id ? null : item.id)
-                }
-                className="relative h-60 rounded-lg overflow-hidden cursor-pointer shadow-sm border border-slate-100 group transition-all duration-300"
+                onClick={() => handleCardClick(item.id)}
+                className="relative h-60 rounded-lg overflow-hidden cursor-pointer shadow-sm border border-slate-100 group transition-all duration-300 bg-black"
               >
                 {/* Default Card State (Image background with overlay text) */}
                 <div
-                  className={`absolute inset-0 transition-opacity duration-300 ${
-                    isFlipped ? "opacity-0 pointer-events-none" : "opacity-100"
-                  }`}
+                  className={`absolute inset-0 transition-opacity duration-300 z-10 ${isFlipped
+                      ? "opacity-0 pointer-events-none"
+                      : "opacity-100 md:group-hover:opacity-0 md:group-hover:pointer-events-none"
+                    }`}
                 >
                   <Image
                     src={item.imageSrc}
@@ -117,11 +117,10 @@ export const EditingTranslationBookEditingWhoWeServe: React.FC = () => {
 
                 {/* Hover / Active Card State (Full Black Background with Text Description) */}
                 <div
-                  className={`absolute inset-0 bg-black p-6 flex flex-col justify-start transition-opacity duration-300 ${
-                    isFlipped
-                      ? "opacity-100 z-10"
-                      : "opacity-0 pointer-events-none"
-                  }`}
+                  className={`absolute inset-0 bg-black p-6 flex flex-col justify-start transition-opacity duration-300 z-20 ${isFlipped
+                      ? "opacity-100 pointer-events-auto"
+                      : "opacity-0 pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto"
+                    }`}
                 >
                   <h3 className="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
                     {item.title}

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { ArrowRightCircle, Plus, Minus } from "lucide-react";
 import { EditorialWorkflowSection } from "@/components/common/EditorialWorkflowSection";
+import ServiceBanner, { BannerProps } from "@/components/common/ServiceBanner";
 
 // --- Step Process Data ---
 interface StepItem {
@@ -76,24 +77,22 @@ const languagesList = [
   "Arabic to English",
   "English to Arabic",
 ];
-
+const serviceBannerData: BannerProps = {
+  imageSrc: "/images/publication-support/Satisfaction_Guarantee.webp",
+  imageAlt: "100% Satisfaction Guarantee",
+  heading: "Translation with Editing Services at Pubrica",
+  description:
+    "Pubrica offers Translation with Editing Services, ensuring your content is accurately translated and meticulously polished for professionalism.",
+  showQuoteButton: false,
+};
 export default function HowItWorksAndLanguages() {
   // Guarantee accordion state (defaults to open)
-  const [isGuaranteeOpen, setIsGuaranteeOpen] = useState<boolean>(true);
+  const [isGuaranteeOpen, setIsGuaranteeOpen] = useState<boolean>(false);
 
   return (
     <div className="w-full bg-[#f4f6f8] text-slate-800 font-sans pb-7">
       {/* Top Dark Green Banner Header */}
-      <div className="w-full bg-[#083329] text-white py-8 px-4 text-center mb-12">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-2">
-          Translation with Editing Services at Pubrica
-        </h2>
-        <p className="text-sm sm:text-base text-slate-200 max-w-3xl mx-auto">
-          Pubrica offers Translation with Editing Services, ensuring your
-          content is accurately translated and meticulously polished for
-          professionalism.
-        </p>
-      </div>
+      <ServiceBanner {...serviceBannerData} />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-16">
         {/* ======================================= */}
@@ -103,11 +102,11 @@ export default function HowItWorksAndLanguages() {
 
           {/* Steps Timeline Grid */}
           <EditorialWorkflowSection
-                 heading="How Our Translation with Editing Service Works"
-                 subheading="Our Step-by-Step Process"
-                 description="We don’t just translate. We transform your document into a submission-ready manuscript in four comprehensive steps:"
-                 steps={stepsData}
-               />
+            heading="How Our Translation with Editing Service Works"
+            subheading="Our Step-by-Step Process"
+            description="We don’t just translate. We transform your document into a submission-ready manuscript in four comprehensive steps:"
+            steps={stepsData}
+          />
         </section>
 
         {/* ======================================= */}
@@ -119,7 +118,7 @@ export default function HowItWorksAndLanguages() {
           </h2>
 
           {/* Languages 4-Column Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-4 gap-x-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-4 gap-x-6">
             {languagesList.map((lang, index) => (
               <div
                 key={index}

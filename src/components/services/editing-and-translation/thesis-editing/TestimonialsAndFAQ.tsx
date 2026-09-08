@@ -104,7 +104,7 @@ export default function TestimonialsAndFAQ() {
   // ];
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 text-slate-800 font-sans">
+    <div className="w-full max-w-6xl mx-auto px-2 sm:px-6 py-1 text-slate-800 font-sans">
       {/* ======================================= */}
       {/* SECTION 1: TESTIMONIALS */}
       {/* ======================================= */}

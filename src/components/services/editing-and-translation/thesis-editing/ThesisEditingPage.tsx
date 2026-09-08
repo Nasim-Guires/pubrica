@@ -109,9 +109,9 @@ export const ThesisEditingPage: React.FC = () => {
   return (
     <div className="w-full bg-white text-slate-800">
       {/* ============================================================= */}
-      {/* 1. HERO SECTION BANNER                                        */}
+      {/* 1. HERO SECTION BANNER                                         */}
       {/* ============================================================= */}
-   
+
 
       {/* ============================================================= */}
       {/* 3. WHAT WE DO SECTION                                         */}
@@ -136,7 +136,7 @@ export const ThesisEditingPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Overlapping Image Collage Column */}
           <div className="lg:col-span-5 relative py-6 flex items-center justify-center">
-            <div className="relative w-full max-w-md aspect-square rounded-xl overflow-hidden shadow-lg border-2 border-white">
+            <div className="relative w-full max-w-md aspect-square  overflow-hidden">
               <Image
                 src="/images/editing-and-translation/thesis-editing/What-We-Do.png"
                 alt="Thesis editing what we do"
@@ -228,8 +228,6 @@ export const ThesisEditingPage: React.FC = () => {
               <div
                 key={card.id}
                 onClick={() => handleCardClick(card.id)}
-                onMouseEnter={() => setActiveAudienceId(card.id)}
-                onMouseLeave={() => setActiveAudienceId(null)}
                 className="group relative h-64 sm:h-72 rounded-lg overflow-hidden bg-black shadow-md cursor-pointer transition-transform duration-300 hover:-translate-y-1"
               >
                 {/* Card Image Background */}
@@ -238,34 +236,38 @@ export const ThesisEditingPage: React.FC = () => {
                   alt={card.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className={`object-cover transition-opacity duration-300 group-hover:opacity-20 ${
-                    isActive ? "opacity-20" : "opacity-100"
-                  }`}
+                  className={`object-cover transition-opacity duration-300 ${isActive
+                      ? "opacity-20 pointer-events-none"
+                      : "opacity-100 md:group-hover:opacity-20 md:group-hover:pointer-events-none"
+                    }`}
                 />
 
                 {/* Gradient Overlay for Default Title State */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300 group-hover:opacity-0 ${
-                    isActive ? "opacity-0" : "opacity-100"
-                  }`}
+                  className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300 ${isActive
+                      ? "opacity-0"
+                      : "opacity-100 md:group-hover:opacity-0"
+                    }`}
                 />
 
                 {/* Default View (Title at Bottom) */}
                 <div
-                  className={`absolute bottom-0 left-0 right-0 p-5 z-10 transition-opacity duration-300 group-hover:opacity-0 ${
-                    isActive ? "opacity-0" : "opacity-100"
-                  }`}
+                  className={`absolute bottom-0 left-0 right-0 p-5 z-10 transition-opacity duration-300 ${isActive
+                      ? "opacity-0"
+                      : "opacity-100 md:group-hover:opacity-0"
+                    }`}
                 >
                   <h3 className="text-sm sm:text-base font-bold text-white tracking-wide">
                     {card.title}
                   </h3>
                 </div>
 
-                {/* Hover View (Black Overlay with Full Description) */}
+                {/* Hover / Active View (Black Overlay with Full Description) */}
                 <div
-                  className={`absolute inset-0 bg-black p-6 flex flex-col justify-center text-white transition-opacity duration-300 z-20 space-y-3 group-hover:opacity-100 ${
-                    isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-                  }`}
+                  className={`absolute inset-0 bg-black p-6 flex flex-col justify-center text-white transition-opacity duration-300 z-20 space-y-3 ${isActive
+                      ? "opacity-100 pointer-events-auto"
+                      : "opacity-0 pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto"
+                    }`}
                 >
                   <h3 className="text-base font-bold text-white border-b border-slate-800 pb-2">
                     {card.title}

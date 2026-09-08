@@ -71,24 +71,19 @@ export default function TranslationEditingHero() {
           </div>
 
           {/* Right Visual Column (Overlapping Images) */}
-          <div className="lg:col-span-5 relative flex justify-center lg:justify-end pt-4 lg:pt-0">
-            <div className="relative w-full max-w-sm sm:max-w-md h-[320px] sm:h-[360px]">
-              {/* Top/Back Image (Book with pen) */}
-              <div className="absolute top-0 left-0 w-[65%] h-[200px] sm:h-[220px] rounded-2xl overflow-hidden shadow-md border-2 border-white bg-slate-100 z-10">
+          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-sm sm:max-w-md flex items-center justify-center">
+              {/* Image Container with natural aspect ratio and zero margin spacing */}
+              <div className="relative w-[90%] sm:w-[85%] md:w-[85%] aspect-[4/3] overflow-hidden z-10 mx-auto">
                 <Image
                   src="/images/editing-and-translation/translation-with-editing/Comprehensive-translation-and-high-quality-editing-by-language-experts.webp"
                   alt="Comprehensive translation and high-quality editing by language experts"
                   fill
-                  sizes="(max-width: 640px) 65vw, 360px"
+                  sizes="(max-width: 640px) 90vw, 420px"
                   className="object-cover"
                   priority
                 />
               </div>
-
-
-
-              {/* Light Subtle Background Accent Shape */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-slate-100 rounded-full -z-0 opacity-60 filter blur-xl" />
             </div>
           </div>
         </div>

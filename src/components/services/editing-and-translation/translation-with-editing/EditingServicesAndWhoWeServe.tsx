@@ -207,13 +207,13 @@ export default function EditingServicesAndWhoWeServe() {
               <div
                 key={card.id}
                 onClick={() => handleCardClick(card.id)}
-                onMouseEnter={() => setActiveAudienceId(card.id)}
-                onMouseLeave={() => setActiveAudienceId(null)}
                 className="group relative h-64 overflow-hidden shadow-sm select-none cursor-pointer"
               >
                 {/* Default View: Background Image + Title Banner */}
                 <div
-                  className={`absolute inset-0 w-full h-full transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0 pointer-events-none" : "opacity-100"
+                  className={`absolute inset-0 w-full h-full transition-opacity duration-300 ${isActive
+                      ? "opacity-0 pointer-events-none"
+                      : "opacity-100 md:group-hover:opacity-0 md:group-hover:pointer-events-none"
                     }`}
                 >
                   <Image
@@ -233,7 +233,9 @@ export default function EditingServicesAndWhoWeServe() {
 
                 {/* Hover View: Black Background with Full Detailed Text */}
                 <div
-                  className={`absolute inset-0 w-full h-full bg-black p-6 flex flex-col justify-start text-white transition-opacity duration-300 z-10 group-hover:opacity-100 ${isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                  className={`absolute inset-0 w-full h-full bg-black p-6 flex flex-col justify-start text-white transition-opacity duration-300 z-10 ${isActive
+                      ? "opacity-100 pointer-events-auto"
+                      : "opacity-0 pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto"
                     }`}
                 >
                   <h3 className="text-base font-bold mb-4 tracking-wide">

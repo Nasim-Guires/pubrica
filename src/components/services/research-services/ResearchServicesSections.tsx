@@ -376,7 +376,7 @@ export const ResearchServicesSections: React.FC = () => {
   ];
 
   // State tracker for active accordion step (defaulted to "2" to display the highlighted link)
-  const [openIndex, setOpenIndex] = useState<string | null>("2");
+  const [openIndex, setOpenIndex] = useState<string | null>();
 
   return (
     <div className="w-full bg-[#f4f9fc] py-7 px-6 md:px-12 lg:px-24 font-sans selection:bg-blue-100 space-y-20">

@@ -97,49 +97,92 @@ export const EditingTranslationBookEditingServicesTab: React.FC = () => {
     servicesData.find((s) => s.id === activeTab) || servicesData[0];
 
   return (
-    <section className="w-full bg-[#f8fafc] py-6 text-slate-800">
+    <section className="w-full bg-[#f8fafc] py-10 sm:py-12 text-slate-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
+
         {/* Section Header */}
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-3">
-          Our Services
-        </h2>
-        <p className="text-xs sm:text-sm text-slate-600 max-w-4xl mb-8 leading-relaxed">
-          We help authors transform their manuscripts into polished, compelling,
-          and publication-ready books. Whether you are a first-time writer or an
-          experienced author, our expert editors provide meticulous attention to
-          detail, ensuring clarity, coherence, and impact on every page.
-        </p>
+        <div className="mb-7 sm:mb-9">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b36] mb-2">
+            Our Services
+          </h2>
 
-        {/* Vertical Tabs & Content Container */}
-        <div className="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-12 min-h-[320px]">
-          {/* Tab Sidebar */}
-          <div className="md:col-span-4 bg-[#f1f5f9] border-r border-slate-200 divide-y divide-slate-200">
-            {servicesData.map((tab) => {
-              const isActive = activeTab === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`w-full text-left px-5 py-4 text-xs sm:text-sm font-semibold transition-colors flex items-center min-h-[64px] whitespace-pre-line ${
-                    isActive
-                      ? "bg-[#0d3b36] text-white"
-                      : "bg-[#e2e8f0]/60 text-slate-700 hover:bg-slate-200/80"
-                  }`}
-                >
-                  {tab.tabLabel}
-                </button>
-              );
-            })}
-          </div>
+          <p className="text-sm sm:text-base text-slate-600 max-w-3xl leading-relaxed">
+            We help authors transform their manuscripts into polished, compelling,
+            and publication-ready books. Whether you are a first-time writer or an
+            experienced author, our expert editors provide meticulous attention to
+            detail, ensuring clarity, coherence, and impact on every page.
+          </p>
+        </div>
 
-          {/* Tab Content Display */}
-          <div className="md:col-span-8 p-6 sm:p-8 flex flex-col justify-start">
-            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-5">
-              {currentService.title}
-            </h3>
-            {currentService.content}
+        {/* Main Box */}
+        <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+
+          <div className="grid grid-cols-1 md:grid-cols-12">
+
+            {/* Services Tabs */}
+            <div
+              className="
+            md:col-span-4
+            bg-[#f8fafc]
+            border-b md:border-b-0 md:border-r
+            border-slate-200
+            p-3 sm:p-4
+          "
+            >
+              <div className="grid grid-cols-2 md:grid-cols-1 gap-2">
+
+                {servicesData.map((tab) => {
+                  const isActive = activeTab === tab.id;
+
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => setActiveTab(tab.id)}
+                      className={`
+                    w-full
+                    min-h-[52px] sm:min-h-[56px] md:min-h-[62px]
+                    px-3 sm:px-4
+                    py-3
+                    rounded-lg
+                    text-left
+                    text-xs sm:text-sm
+                    font-medium
+                    leading-snug
+                    transition-colors
+                    duration-200
+                    border
+                    ${isActive
+                          ? "bg-[#0d3b36] text-white border-[#0d3b36]"
+                          : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50 hover:text-[#0d3b36]"
+                        }
+                  `}
+                    >
+                      {tab.tabLabel}
+                    </button>
+                  );
+                })}
+
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="md:col-span-8 p-5 sm:p-7 lg:p-9 bg-white">
+
+              <h3 className="text-xl sm:text-2xl font-bold text-[#0d3b36] mb-4">
+                {currentService.title}
+              </h3>
+
+              <div className="h-px bg-slate-100 mb-5" />
+
+              <div className="text-sm sm:text-base text-slate-600 leading-7">
+                {currentService.content}
+              </div>
+
+            </div>
+
           </div>
         </div>
+
       </div>
     </section>
   );

@@ -12,7 +12,7 @@ interface AdvantageAccordion {
 export const BookEditingAdvantageAndSampleWork: React.FC = () => {
   // Store array of open accordion item IDs to allow toggling
   const [openAccordions, setOpenAccordions] = useState<string[]>([
-    "expert-editors",
+    "",
   ]);
 
   const toggleAccordion = (id: string) => {

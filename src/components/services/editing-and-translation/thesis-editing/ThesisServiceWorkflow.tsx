@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { EditorialWorkflowSection } from "@/components/common/EditorialWorkflowSection";
+import ServiceBanner, { BannerProps } from "@/components/common/ServiceBanner";
 
 interface HighlightItem {
   id: string;
@@ -114,6 +115,15 @@ export const ThesisServiceWorkflow: React.FC = () => {
     },
   ];
 
+  const serviceBannerData: BannerProps = {
+    imageSrc: "/images/publication-support/Satisfaction_Guarantee.webp",
+    imageAlt: "100% Satisfaction Guarantee",
+    heading: "Thesis Editing Services at Pubrica",
+    description:
+      "Our team comprises physicians, PhDs, MDs, postgraduates, engineers, and even journal peer reviewers who bring in a high level of technical competency and an inclusive understanding of the finer nuances of your subject.",
+    showQuoteButton: false,
+  };
+
   return (
     <div className="w-full bg-white text-slate-800 font-sans">
       {/* ============================================================= */}
@@ -174,20 +184,12 @@ export const ThesisServiceWorkflow: React.FC = () => {
       {/* ============================================================= */}
       {/* SECTION 2: HOW OUR THESIS EDITING SERVICE WORKS               */}
       {/* ============================================================= */}
+
+      <ServiceBanner {...serviceBannerData} />
+
       <section className="w-full bg-[#f4f6f8] py-6 border-t border-slate-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           {/* Top Banner */}
-          <div className="bg-[#042825] text-white rounded-sm p-6 text-center mb-10 shadow-md">
-            <h3 className="text-xl sm:text-2xl font-bold mb-2">
-              Thesis Editing Services at Pubrica
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-200 max-w-4xl mx-auto leading-relaxed font-light">
-              Our team comprises physicians, PhDs, MDs, postgraduates,
-              engineers, and even journal peer reviewers who bring in a high
-              level of technical competency and an inclusive understanding of
-              the finer nuances of your subject.
-            </p>
-          </div>
 
           <EditorialWorkflowSection
             heading="How Our Thesis Editing Service Works"
