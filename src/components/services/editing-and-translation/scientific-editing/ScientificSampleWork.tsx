@@ -127,11 +127,7 @@ export default function ScientificSampleWork() {
   const [activeTab, setActiveTab] = useState<string>("dermatology");
 
   // State for Accordions (Store open item IDs)
-  const [openAccordions, setOpenAccordions] = useState<string[]>([
-    "ethical",
-    "editorial",
-    "regulatory",
-  ]);
+  const [openAccordions, setOpenAccordions] = useState<string[]>([]);
 
   const toggleAccordion = (id: string) => {
     setOpenAccordions((prev) =>

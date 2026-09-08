@@ -3,7 +3,16 @@
 import React from 'react';
 import Image from 'next/image';
 import { EditorialWorkflowSection } from '@/components/common/EditorialWorkflowSection';
+import ServiceBanner, { BannerProps } from '@/components/common/ServiceBanner';
 
+const serviceBannerData: BannerProps = {
+  imageSrc: "/images/publication-support/Satisfaction_Guarantee.webp",
+  imageAlt: "100% Satisfaction Guarantee",
+  heading: "Manuscript Editing Services at Pubrica",
+  description:
+    "Our editors ensure that your manuscript is flawless, impactful, and ready for publication through careful editing and expert feedback.",
+  showQuoteButton: false,
+};
 export const EditingTranslationManuscriptEditingProcessAndFeatures: React.FC = () => {
   return (
     <div className="w-full bg-slate-50 text-slate-800">
@@ -51,16 +60,7 @@ export const EditingTranslationManuscriptEditingProcessAndFeatures: React.FC = (
       />
 
       {/* SECTION 2: Dark Emerald Banner */}
-      <section className="w-full bg-emerald-950 text-white py-5 px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-5xl mx-auto space-y-3">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-wide">
-            Manuscript Editing Services at Pubrica
-          </h2>
-          <p className="text-base sm:text-lg text-emerald-100 max-w-4xl mx-auto leading-relaxed">
-            Our editors ensure that your manuscript is flawless, impactful, and ready for publication through careful editing and expert feedback.
-          </p>
-        </div>
-      </section>
+      <ServiceBanner {...serviceBannerData} />
 
       {/* SECTION 3: Features & Recommended Journals */}
       <section className="py-6 sm:py-7 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-white">

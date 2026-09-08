@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import ServiceBanner, { BannerProps } from "@/components/common/ServiceBanner";
 
 const IMG = "/images/editing-and-translation/scientific-editing";
 
@@ -96,21 +97,17 @@ const featuresData: FeatureCard[] = [
 ];
 
 export default function ScientificKeyFeatures() {
-  // Store array of open card IDs to allow individual open/close toggling
-  const [openCards, setOpenCards] = useState<string[]>([
-    "editor-system",
-    "scientific-report",
-    "plagiarism-check",
-    "qa-check",
-    "revision-support",
-    "submission-support",
-  ]);
+  // Store array of open card IDs to allow individual open/close toggling (closed by default)
+  const [openCards, setOpenCards] = useState<string[]>([]);
 
   const toggleCard = (id: string) => {
     setOpenCards((prev) =>
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id],
     );
+
   };
+
+
 
   return (
     <section className="max-w-7xl mx-auto py-6 md:py-7 px-4 sm:px-6 lg:px-8 font-sans">
@@ -161,6 +158,7 @@ export default function ScientificKeyFeatures() {
           );
         })}
       </div>
+     
     </section>
   );
 }

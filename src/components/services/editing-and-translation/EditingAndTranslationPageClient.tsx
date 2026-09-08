@@ -25,10 +25,11 @@ import CommonTestimonial from "@/components/common/CommonTestimonials";
 import CommonFAQ from "@/components/common/FAQ";
 import HeroBanner from "@/components/common/HeroBanner";
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import ServiceBanner, { BannerProps } from "@/components/common/ServiceBanner";
 
 const EditingAndTranslationPageClient = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  type CardId = "proofreading" | "manuscript";
+  const [activeIndex, setActiveIndex] = useState(-1);
+   type CardId = "proofreading" | "manuscript";
 
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -284,11 +285,22 @@ const EditingAndTranslationPageClient = () => {
         "Non-native authors may improve their manuscripts by engaging professional language services, proofreading, following the submission guidelines, using clear language, avoiding ambiguity, and ensuring the manuscript is of good quality before submission.",
     },
   ];
+
+  const serviceBannerData: BannerProps = {
+    imageSrc: "/images/publication-support/Satisfaction_Guarantee.webp",
+    imageAlt: "100% Satisfaction Guarantee",
+    heading: "Speed up your Editing and Translation with Pubrica",
+    description:
+      "Gain access to your personal assistant who will expertly guide you through intricate Editing and translation processes, shielding you from rejection and ensuring a faster path to getting your work published.",
+    showQuoteButton: false,
+  };
   const [activeId, setActiveId] = useState<number | null>(null);
 
   const handleCardClick = (index: number) => {
     setActiveId((prev) => (prev === index ? null : index));
   };
+
+
 
   // Split items evenly into two clean layout lists for desktop grids
   const leftColumnFaqs = faqData.filter((item) => item.id <= 5);
@@ -387,13 +399,14 @@ const EditingAndTranslationPageClient = () => {
           <div className="mt-10 flex flex-wrap items-center gap-8">
             <GetFreeQuoteButton />
 
-            <CommonUploadButton
+            <Link
               href="/uploads/editing-and-translation/Editing-and-Translation-Services.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              className="bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
             >
               View Brochure
-            </CommonUploadButton>
+            </Link>
           </div>
         </div>
       </section>
@@ -424,7 +437,7 @@ const EditingAndTranslationPageClient = () => {
 
               {/* Centered Image Layer matching the target layout */}
               <div className="relative w-[320px] z-10 flex flex-col items-center">
-                <div className="relative w-full h-48 rounded-xl shadow-lg overflow-hidden mb-3">
+                <div className="relative w-full h-48  overflow-hidden mb-3">
                   <Image
                     src="/images/editing-and-translation/Our-Services-1.png"
                     alt="Working on laptop"
@@ -503,36 +516,50 @@ const EditingAndTranslationPageClient = () => {
               <div
                 key={index}
                 onClick={() => handleCardClick(index)}
-                onMouseEnter={() => setActiveId(index)}
-                onMouseLeave={() => setActiveId(null)}
                 className="group relative h-64 bg-black rounded-none overflow-hidden cursor-pointer"
               >
-                {/* Background Image (fades out on hover/tap) */}
+                {/* Background Image */}
                 <img
                   src={audience.bgImage}
                   alt={audience.title}
-                  className={`w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
-                    }`}
+                  className={`
+      w-full h-full object-cover transition-opacity duration-300
+      ${isActive ? "opacity-0" : "opacity-100"}
+      md:group-hover:opacity-0
+    `}
                 />
 
-                {/* Default Overlay & Title (bottom-aligned, hides on hover/tap) */}
+                {/* Default Overlay & Title */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 group-hover:opacity-0 transition-opacity duration-300 ${isActive ? "opacity-0" : "opacity-100"
-                    }`}
+                  className={`
+      absolute inset-0
+      bg-gradient-to-t from-black/80 via-black/20 to-transparent
+      flex items-end p-6
+      transition-opacity duration-300
+      ${isActive ? "opacity-0" : "opacity-100"}
+      md:group-hover:opacity-0
+    `}
                 >
                   <h3 className="text-white font-bold text-lg leading-snug">
                     {audience.title}
                   </h3>
                 </div>
 
-                {/* Hover Content (solid black background with title + description, shows on hover/tap) */}
+                {/* Hover / Click Content */}
                 <div
-                  className={`absolute inset-0 p-6 flex flex-col justify-start transition-opacity duration-300 bg-black text-white group-hover:opacity-100 ${isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-                    }`}
+                  className={`
+      absolute inset-0 p-6
+      flex flex-col justify-start
+      bg-black text-white
+      transition-opacity duration-300
+      ${isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
+      md:group-hover:opacity-100
+    `}
                 >
                   <h3 className="font-bold text-lg leading-snug mb-3">
                     {audience.title}
                   </h3>
+
                   <p className="text-xs leading-relaxed text-gray-300">
                     {audience.description}
                   </p>
@@ -645,7 +672,7 @@ const EditingAndTranslationPageClient = () => {
             Pubrica delivers professional academic and scientific translation
             services designed to ensure accuracy, cultural adaptation, and
             publication-ready quality. Our translators are{" "}
-            <Link href="/subject-matter-experts" className="text-blue-600 font-medium no-underline hover:no-underline">
+            <Link href="/subject-matter-experts" className="text-blue-600 no-underline hover:no-underline">
               subject-matter experts
             </Link>{" "}
             who refine content to meet the standards of international journals,
@@ -679,19 +706,7 @@ const EditingAndTranslationPageClient = () => {
         </div>
       </section>
       {/* MID-BANNER CACHE LINE */}
-      <section className="bg-[#00332c] text-white py-6 px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl lg:text-3xl font-bold mb-3">
-            Speed up your Editing and Translation with Pubrica
-          </h3>
-          <p className="text-teal-100 text-sm lg:text-base opacity-90">
-            Gain access to your personal assistant who will expertly guide you
-            through intricate Editing and translation processes, shielding you
-            from rejection and ensuring a faster path to getting your work
-            published.
-          </p>
-        </div>
-      </section>
+      <ServiceBanner {...serviceBannerData} />
       {/* SECTION 6: HOW IT WORKS STEP-BY-STEP */}
 
 
@@ -815,11 +830,11 @@ const EditingAndTranslationPageClient = () => {
           </ul>
 
           {/* Brand/Journal Partner Grid */}
-          <div className="overflow-hidden bg-slate-50/50 p-4 rounded-md border border-slate-100">
+          <div className="overflow-hidden bg-slate-50/50 p-4 rounded-md border border-slate-100 w-full">
             <div
-              className="flex w-max items-center gap-8 animate-[marquee_25s_linear_infinite]"
+              className="flex w-max items-center gap-8"
               style={{
-                animationName: "marquee",
+                animation: "marquee 25s linear infinite",
               }}
             >
               {[...trustPartners, ...trustPartners].map((partner, index) => (
@@ -840,10 +855,10 @@ const EditingAndTranslationPageClient = () => {
 
             <style jsx>{`
     @keyframes marquee {
-      from {
+      0% {
         transform: translateX(0);
       }
-      to {
+      100% {
         transform: translateX(-50%);
       }
     }

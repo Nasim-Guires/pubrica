@@ -85,7 +85,7 @@ export const EditingTranslationManuscriptEditingTypesAndPackages: React.FC =
         impactFactor: "2.2",
         coverImage:
           "/images/editing-and-translation/manuscript-editing/JOURNAL-TEMPLATE-COVER-IMAGE-.png",
-        linkUrl: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7935621/",
+        linkUrl: "https://pubrica.com/services/editing-and-translation/manuscript-editing/",
       },
       {
         id: "pub-2",
@@ -135,7 +135,7 @@ export const EditingTranslationManuscriptEditingTypesAndPackages: React.FC =
         impactFactor: "0.68",
         coverImage:
           "/images/editing-and-translation/manuscript-editing/JOURNAL-TEMPLATE-COVER-IMAGE-5.png",
-        linkUrl: "#",
+        linkUrl: "https://www.heraldopenaccess.us/openaccess/a-systemic-review-of-dupilumab-efficacy-and-safety-by-phenotypic-variations-of-atopic-dermatitis",
       },
     ];
 

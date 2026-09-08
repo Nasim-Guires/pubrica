@@ -9,12 +9,21 @@ import TypesOfEditing from "@/components/services/editing-and-translation/scient
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 import React from "react";
 import { constructMetadata } from '@/lib/metadata';
+import ServiceBanner, { BannerProps } from "@/components/common/ServiceBanner";
 
 export const metadata = constructMetadata({
   title: 'Scientific Editing Services to Strengthen Research Papers',
   description: 'Professional scientific editing services refine manuscripts to improve quality, accuracy, and readiness for successful journal submission and publication.',
   slug: '/services/editing-and-translation/scientific-editing',
 });
+  const serviceBannerData: BannerProps = {
+    imageSrc: "/images/publication-support/Satisfaction_Guarantee.webp",
+    imageAlt: "100% Satisfaction Guarantee",
+    heading: "Scientific Editing Services",
+    description:
+      "Get a chance to be published in a high-impact-factor journal, 61 days with Pubrica’s Scientific Editing Service",
+    showQuoteButton: false,
+  };
 
 const page = () => {
   return (
@@ -23,6 +32,7 @@ const page = () => {
       <TypesOfEditing />
       <ScientificWhoWeServe />
       <ScientificKeyFeatures />
+       <ServiceBanner {...serviceBannerData} />
       <ScientificProcessWorkflow />
       <ScientificSampleWork />
       <ScientificEditingServices />

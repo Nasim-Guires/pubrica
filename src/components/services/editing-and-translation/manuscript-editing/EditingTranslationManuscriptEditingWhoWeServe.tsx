@@ -136,15 +136,14 @@ export const EditingTranslationManuscriptEditingWhoWeServe: React.FC = () => {
               <div
                 key={item.id}
                 onClick={() => handleCardClick(item.id)}
-                onMouseEnter={() => setActiveId(item.id)}
-                onMouseLeave={() => setActiveId(null)}
                 className="group relative h-64 sm:h-72 w-full rounded-lg overflow-hidden shadow-md cursor-pointer bg-black"
               >
                 {/* Image with gradient overlay (Default View) */}
                 <div
-                  className={`absolute inset-0 transition-opacity duration-300 group-hover:opacity-0 z-10 ${
-                    isActive ? "opacity-0 pointer-events-none" : "opacity-100"
-                  }`}
+                  className={`absolute inset-0 transition-opacity duration-300 z-10 ${isActive
+                      ? "opacity-0 pointer-events-none"
+                      : "opacity-100 md:group-hover:opacity-0 md:group-hover:pointer-events-none"
+                    }`}
                 >
                   <Image
                     src={item.imageSrc}
@@ -161,11 +160,12 @@ export const EditingTranslationManuscriptEditingWhoWeServe: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Hover View: Black background with Title and Text Body */}
+                {/* Hover/Active View: Black background with Title and Text Body */}
                 <div
-                  className={`absolute inset-0 bg-black p-6 flex flex-col justify-start text-white transition-opacity duration-300 z-20 group-hover:opacity-100 ${
-                    isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-                  }`}
+                  className={`absolute inset-0 bg-black p-6 flex flex-col justify-start text-white transition-opacity duration-300 z-20 ${isActive
+                      ? "opacity-100 pointer-events-auto"
+                      : "opacity-0 pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto"
+                    }`}
                 >
                   <h3 className="font-bold text-lg sm:text-xl mb-4 leading-snug">
                     {item.title}

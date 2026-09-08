@@ -140,11 +140,8 @@ const rightServices: AccordionItem[] = [
 
 export default function TypesOfEditing() {
   // Allow toggling open state for left and right columns independently
-  const [openLeft, setOpenLeft] = useState<string | null>("dev-editing");
-  const [openRight, setOpenRight] = useState<string | null>(
-    "technical-editing",
-  );
-
+  const [openLeft, setOpenLeft] = useState<string | null>(null);
+  const [openRight, setOpenRight] = useState<string | null>(null);
   const toggleLeft = (id: string) => {
     setOpenLeft((prev) => (prev === id ? null : id));
   };
@@ -197,11 +194,10 @@ export default function TypesOfEditing() {
                   className="w-full flex items-center justify-between py-3 text-left focus:outline-none group"
                 >
                   <span
-                    className={`text-sm sm:text-base font-semibold transition-colors duration-200 ${
-                      isOpen
+                    className={`text-sm sm:text-base font-semibold transition-colors duration-200 ${isOpen
                         ? "text-[#0c373b]"
                         : "text-slate-800 group-hover:text-[#0c373b]"
-                    }`}
+                      }`}
                   >
                     <span className="mr-2 text-slate-500">
                       {isOpen ? "–" : "+"}
@@ -250,11 +246,10 @@ export default function TypesOfEditing() {
                   className="w-full flex items-center justify-between py-3 text-left focus:outline-none group"
                 >
                   <span
-                    className={`text-sm sm:text-base font-semibold transition-colors duration-200 ${
-                      isOpen
+                    className={`text-sm sm:text-base font-semibold transition-colors duration-200 ${isOpen
                         ? "text-[#0c373b]"
                         : "text-slate-800 group-hover:text-[#0c373b]"
-                    }`}
+                      }`}
                   >
                     <span className="mr-2 text-slate-500">
                       {isOpen ? "–" : "+"}

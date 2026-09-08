@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import HeroBanner from "@/components/common/HeroBanner";
+import { BannerProps } from "@/components/common/ServiceBanner";
 
 const IMG = "/images/editing-and-translation/scientific-editing";
 
@@ -71,7 +72,7 @@ function CounterCard({
         {count.toLocaleString()}
         {item.suffix}
       </h3>
-      <p className="text-xs sm:text-sm font-medium text-emerald-100/90 tracking-wide">
+      <p className="text-xs sm:text-sm text-emerald-100/90 tracking-wide">
         {item.label}
       </p>
     </div>
@@ -101,6 +102,15 @@ export default function ScientificEditingPage() {
 
     return () => observer.disconnect();
   }, [hasAnimated]);
+
+  const serviceBannerData: BannerProps = {
+    imageSrc: "/images/publication-support/Satisfaction_Guarantee.webp",
+    imageAlt: "100% Satisfaction Guarantee",
+    heading: "Scientific Editing Services",
+    description:
+      "Get a chance to be published in a high-impact-factor journal, 61 days with Pubrica’s Scientific Editing Service",
+    showQuoteButton: false,
+  };
 
   const statsData: StatItem[] = [
     { id: "papers", target: 850000, suffix: "+", label: "Papers Edited" },
@@ -233,7 +243,7 @@ export default function ScientificEditingPage() {
               Pubrica provides{" "}
               <Link
                 href="/insights/skeletal-muscle-mass-index-versus-bioelectrical-impedance-analysis"
-                className="text-blue-600 font-medium no-underline hover:no-underline"
+                className="text-blue-600  no-underline hover:no-underline"
               >
                 scientific editing services
               </Link>{" "}
@@ -248,7 +258,7 @@ export default function ScientificEditingPage() {
               We also integrate{" "}
               <Link
                 href="/services/publication-support"
-                className="text-blue-600 font-medium no-underline hover:no-underline"
+                className="text-blue-600 no-underline hover:no-underline"
               >
                 translation and publication support
               </Link>{" "}
@@ -265,7 +275,7 @@ export default function ScientificEditingPage() {
             {/* Card 1 */}
             <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300 shrink-0">
+                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:text-white transition-colors duration-300 shrink-0">
                   <Image
                     src={`${IMG}/Advanced-Data-Management.png`}
                     alt="Advanced Data Management"
@@ -289,7 +299,7 @@ export default function ScientificEditingPage() {
             {/* Card 2 */}
             <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300 shrink-0">
+                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:text-white transition-colors duration-300 shrink-0">
                   <Image
                     src={`${IMG}/Customized-Editing-Strategies.png`}
                     alt="Customized Editing Strategies"
@@ -306,7 +316,7 @@ export default function ScientificEditingPage() {
                     We tailor our editing techniques to meet the specific needs of your research, considering both the scientific requirements and budget constraints. This personalized approach enhances the relevance and depth of your{" "}
                     <Link
                       href="/services/scientific-communication/"
-                      className="text-blue-600 font-medium no-underline hover:no-underline"
+                      className="text-blue-600 no-underline hover:no-underline"
                     >
                       scientific communication.
                     </Link>
@@ -319,7 +329,7 @@ export default function ScientificEditingPage() {
             {/* Card 3 */}
             <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300 shrink-0">
+                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:text-white transition-colors duration-300 shrink-0">
                   <Image
                     src={`${IMG}/In-depth-Scientific-Assessment.png`}
                     alt="In-depth Scientific Assessment"
@@ -337,7 +347,7 @@ export default function ScientificEditingPage() {
                     your research, such as{" "}
                     <Link
                       href="/services/research-services/experimental-design/"
-                      className="text-blue-600 font-medium no-underline hover:no-underline"
+                      className="text-blue-600  no-underline hover:no-underline"
                     >
                       experimental design,
                     </Link>{" "}
@@ -351,7 +361,7 @@ export default function ScientificEditingPage() {
             {/* Card 4 */}
             <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300 shrink-0">
+                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b]  group-hover:text-white transition-colors duration-300 shrink-0">
                   <Image
                     src={`${IMG}/Comprehensive-Statistical-Analysis.png`}
                     alt="Comprehensive Statistical Analysis"
@@ -375,7 +385,7 @@ export default function ScientificEditingPage() {
             {/* Card 5 */}
             <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group md:col-span-2 lg:col-span-1">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b] group-hover:bg-[#0c373b] group-hover:text-white transition-colors duration-300 shrink-0">
+                <div className="p-3 bg-slate-100 rounded-lg text-[#0c373b]  group-hover:text-white transition-colors duration-300 shrink-0">
                   <Image
                     src={`${IMG}/Publication-Support.png`}
                     alt="Publication Support"
