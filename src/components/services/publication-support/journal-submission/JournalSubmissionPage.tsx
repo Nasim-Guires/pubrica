@@ -326,7 +326,7 @@ export default function JournalSubmissionPage() {
             href="/uploads/publication-support-services_compressed.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-red-600 text-white text-sm font-bold px-6 py-3 rounded hover:bg-white hover:text-black transition-colors"
+            className="bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
           >
             View Brochure
           </a>

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { PubricaSampleWorkCard, PubricaSampleWorkCardProps } from "@/components/common/PubricaSampleWorkCardProps";
 
 interface ComplianceOrg {
   name: string;
@@ -79,6 +80,36 @@ const clinicalOrgs: ComplianceOrg[] = [
   },
 ];
 
+const posterPreparationSampleWork: PubricaSampleWorkCardProps = {
+  bookCoverImage: {
+    src: "/images/publication-support/poster-preparation/sample-works-min.jpg",
+    alt: "Man reviewing poster presentation on computer screen",
+    width: 723,
+    height: 1024,
+  },
+  sections: [
+    {
+      heading: "Poster Preparation Sample Work",
+      button: {
+        label: "Discover More",
+        url: "/insights/sample-work/sample-response-to-reviewers-comments/",
+      },
+    },
+    {
+      heading: "Download the full Report Now",
+      descriptionSegments: [
+        {
+          text: "Explore our poster preparation sample work crafted to meet your conference's formatting requirements, visual standards, and presentation deadlines.",
+        },
+      ],
+      button: {
+        label: "Discover More",
+        url: "/insights/sample-work/response-to-review-comments/",
+      },
+    },
+  ],
+  footerDisclaimerSegments: [],
+};
 export default function ComplianceAndSampleSections() {
   const [activeTab, setActiveTab] = useState<"conference" | "clinical">(
     "conference",
@@ -105,22 +136,20 @@ export default function ComplianceAndSampleSections() {
             <button
               type="button"
               onClick={() => setActiveTab("conference")}
-              className={`flex-1 sm:flex-initial px-6 py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all duration-200 ${
-                activeTab === "conference"
-                  ? "bg-[#062c24] text-[#4ade80] shadow"
-                  : "text-white hover:text-gray-200"
-              }`}
+              className={`flex-1 sm:flex-initial px-6 py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all duration-200 ${activeTab === "conference"
+                ? "bg-[#062c24] text-[#4ade80] shadow"
+                : "text-white hover:text-gray-200"
+                }`}
             >
               Conference-Specific Compliance
             </button>
             <button
               type="button"
               onClick={() => setActiveTab("clinical")}
-              className={`flex-1 sm:flex-initial px-6 py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all duration-200 ${
-                activeTab === "clinical"
-                  ? "bg-[#062c24] text-[#4ade80] shadow"
-                  : "text-white hover:text-gray-200"
-              }`}
+              className={`flex-1 sm:flex-initial px-6 py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all duration-200 ${activeTab === "clinical"
+                ? "bg-[#062c24] text-[#4ade80] shadow"
+                : "text-white hover:text-gray-200"
+                }`}
             >
               Clinical and Ethical Compliance
             </button>
@@ -159,56 +188,7 @@ export default function ComplianceAndSampleSections() {
       {/* ------------------------------------------------------------------ */}
       {/* 2. POSTER PREPARATION SAMPLE WORK & DOWNLOAD BANNER                */}
       {/* ------------------------------------------------------------------ */}
-      <div className="bg-[#effbf5] py-6 px-4 md:px-8">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          {/* Left Column: Image */}
-          <div className="md:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-xs h-72 sm:h-80 rounded-sm overflow-hidden shadow-sm">
-              <Image
-                src="/images/publication-support/poster-preparation/sample-works-min.jpg"
-                alt="Man reviewing poster presentation on computer screen"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 40vw"
-              />
-            </div>
-          </div>
-
-          {/* Right Column: Text & Pill CTA Buttons */}
-          <div className="md:col-span-7 space-y-6 text-left">
-            {/* Upper Callout */}
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold text-[#0c3830] mb-3">
-                Poster Preparation Sample Work
-              </h3>
-              <Link
-                href="/insights/sample-work"
-                className="inline-block text-center bg-black hover:bg-gray-800 text-white font-medium text-xs md:text-sm py-2.5 px-10 rounded-full transition-colors w-full sm:w-auto"
-              >
-                Discover More
-              </Link>
-            </div>
-
-            {/* Lower Callout */}
-            <div className="pt-2">
-              <h3 className="text-xl md:text-2xl font-bold text-[#0c3830] mb-2">
-                Download the full Report Now
-              </h3>
-              <p className="text-gray-600 text-xs md:text-sm mb-4 leading-relaxed max-w-xl">
-                Explore our poster preparation sample work crafted to meet your
-                conference&apos;s formatting requirements, visual standards, and
-                presentation deadlines.
-              </p>
-              <Link
-                href="/insights/sample-work"
-                className="inline-block text-center bg-black hover:bg-gray-800 text-white font-medium text-xs md:text-sm py-2.5 px-10 rounded-full transition-colors w-full sm:w-auto"
-              >
-                Discover More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+      <PubricaSampleWorkCard {...posterPreparationSampleWork} />
     </section>
   );
 }

@@ -97,7 +97,7 @@ export default function VideoAbstractOverview() {
                     •
                   </span>
                   <span>
-                    <strong>Authors and editors</strong> aiming to publicize
+                    Authors and editors aiming to publicize
                     their published work to a wide audience for high impact.
                   </span>
                 </li>
@@ -106,7 +106,7 @@ export default function VideoAbstractOverview() {
                     •
                   </span>
                   <span>
-                    <strong>Corporations</strong> seeking interesting ways to
+                    Corporations seeking interesting ways to
                     explain the features and benefits of a new product and/or
                     service, e.g., a pharma company launching a new drug or a
                     device maker launching a new device.

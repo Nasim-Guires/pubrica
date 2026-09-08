@@ -271,7 +271,7 @@ export default function ServiceOverview() {
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-md h-72 sm:h-80 flex justify-center lg:block">
                 {/* Image */}
-                <div className="w-3/4 h-3/4 rounded-2xl overflow-hidden shadow-md">
+                <div className="w-3/4 h-3/4 overflow-hidden">
                   <Image
                     src="/images/publication-support/image-2.webp"
                     alt="Scientists with microscope"
