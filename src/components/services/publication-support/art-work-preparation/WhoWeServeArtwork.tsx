@@ -74,7 +74,7 @@ const accordionData: AccordionItem[] = [
 ];
 
 export default function WhoWeServeArtwork() {
-  const [openId, setOpenId] = useState<string>("academic");
+  const [openId, setOpenId] = useState<string>("");
 
   const toggleAccordion = (id: string) => {
     setOpenId((prev) => (prev === id ? "" : id));
@@ -100,7 +100,7 @@ export default function WhoWeServeArtwork() {
         {/* Content Grid */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 items-start">
           {/* Left Side: Image & Free Quote Button */}
-          <div className="flex flex-col items-start lg:col-span-6">
+          <div className="flex flex-col items-center lg:items-start lg:col-span-6">
             <div className="relative mb-6 h-[280px] sm:h-[350px] w-full overflow-hidden rounded-sm border border-gray-100 shadow-sm">
               <Image
                 src="/images/publication-support/art-work-preparation/Artwork-Preparation-Journal-Publishers-and-Editors.jpg"
@@ -112,7 +112,9 @@ export default function WhoWeServeArtwork() {
               />
             </div>
 
-            <GetFreeQuoteButton/>
+            <div className="w-full flex justify-center lg:justify-start">
+              <GetFreeQuoteButton />
+            </div>
           </div>
 
           {/* Right Side: Accordion List */}

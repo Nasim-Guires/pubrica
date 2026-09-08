@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import CommonPackages from "@/components/common/CommonPackages"; // Adjust path as needed
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import PosterServicesAccordion from "./PosterServicesAccordion";
 
 export default function PosterServicePackagesSection() {
   const posterPackages = [
@@ -74,7 +75,7 @@ export default function PosterServicePackagesSection() {
   ];
 
   return (
-    <section className="w-full bg-[#fdfbf7] py-6 px-4 md:px-8 font-sans text-gray-800">
+    <section className="w-full bg-white py-6 px-4 md:px-8 font-sans text-gray-800">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-10">
@@ -90,7 +91,7 @@ export default function PosterServicePackagesSection() {
               href="https://pubrica.com/academy/poster-preparation/slide-deck-preparation-for-conference-presentations/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#0284c7] hover:underline font-medium"
+              className="text-blue-600"
             >
               poster preparation
             </a>{" "}
@@ -103,6 +104,8 @@ export default function PosterServicePackagesSection() {
         <CommonPackages packages={posterPackages} />
         <GetFreeQuoteButton />
       </div>
+
+      <PosterServicesAccordion/>
     </section>
   );
 }

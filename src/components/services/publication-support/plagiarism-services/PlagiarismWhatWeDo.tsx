@@ -11,8 +11,7 @@ interface AccordionItem {
 }
 
 export default function PlagiarismWhatWeDo() {
-  const [openItem, setOpenItem] = useState<number | null>(1);
-
+  const [openItem, setOpenItem] = useState<number | null>(null);
   const toggleItem = (id: number) => {
     setOpenItem((prev) => (prev === id ? null : id));
   };
@@ -134,14 +133,10 @@ export default function PlagiarismWhatWeDo() {
           and prevent copyright infringements before submission.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-8">
-          {/* Left Side: Image Collage */}
-          <div className="relative w-full h-[280px] sm:h-[320px] flex items-center justify-center">
-            {/* Light gray circular/blob background accent */}
-            <div className="absolute w-56 h-56 sm:w-72 sm:h-72 bg-slate-100 rounded-full -z-10 left-6 top-4" />
-
-            {/* Top Left Image */}
-            <div className="absolute top-0 left-0 w-3/5 h-[200px] sm:h-[240px] rounded-lg overflow-hidden shadow-lg border-4 border-white">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
+          {/* Left Side: Image Container (Centered on mobile via mx-auto) */}
+          <div className="relative w-full max-w-md h-[280px] sm:h-[320px] mx-auto flex items-center justify-center">
+            <div className="relative w-full h-full rounded-lg overflow-hidden">
               <Image
                 src="/images/publication-support/plagiarism-services/Plagiarism-Check-Service-what-we-do.png"
                 alt="Expert presenting data"

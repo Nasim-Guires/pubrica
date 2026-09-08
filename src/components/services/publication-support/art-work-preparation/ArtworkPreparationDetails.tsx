@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { EditorialWorkflowSection } from "../journal-manuscript-formatting-services/ProcessAndBenefitsSections";
 import Link from "next/link";
+import { PubricaSampleWorkCard, PubricaSampleWorkCardProps } from "@/components/common/PubricaSampleWorkCardProps";
 
 // --- Types & Data ---
 interface ComplianceItem {
@@ -56,6 +57,37 @@ const journalItems: ComplianceItem[] = [
   { id: "nejm", name: "New England Journal of Medicine", imageSrc: `${PAGE_IMAGES}/New-England-Journal-of-Medicine.png`, url: "https://www.nejm.org/" },
 ];
 
+const artworkPreparationSampleWork: PubricaSampleWorkCardProps = {
+  bookCoverImage: {
+    src: `${PAGE_IMAGES}/Artwork-Preparation-Sample-Work.jpg`,
+    alt: "Artwork Preparation Sample Work",
+    width: 723,
+    height: 1024,
+  },
+  sections: [
+    {
+      heading: "Artwork Preparation Sample Work",
+      button: {
+        label: "Discover More",
+        url: "/insights/sample-work/citation-and-formatting/",
+      },
+    },
+    {
+      heading: "Download the full Report Now",
+      descriptionSegments: [
+        {
+          text: "Explore our artwork preparation sample work crafted to meet your conference's formatting requirements, visual standards, and presentation deadlines.",
+        },
+      ],
+      button: {
+        label: "Discover More",
+        url: "/insights/sample-work/citation-and-formatting/",
+      },
+    },
+  ],
+  footerDisclaimerSegments: [],
+};
+
 export default function ArtworkPreparationDetails() {
   const [activeTab, setActiveTab] = useState<"clinical" | "journal">("clinical");
 
@@ -106,8 +138,8 @@ export default function ArtworkPreparationDetails() {
                 type="button"
                 onClick={() => setActiveTab("clinical")}
                 className={`w-1/2 py-3 px-4 rounded-full text-xs md:text-sm font-semibold transition-all ${activeTab === "clinical"
-                    ? "bg-[#052b2b] text-white shadow-inner"
-                    : "text-white hover:text-gray-200"
+                  ? "bg-[#052b2b] text-white shadow-inner"
+                  : "text-white hover:text-gray-200"
                   }`}
               >
                 Clinical and Ethical Compliance
@@ -116,8 +148,8 @@ export default function ArtworkPreparationDetails() {
                 type="button"
                 onClick={() => setActiveTab("journal")}
                 className={`w-1/2 py-3 px-4 rounded-full text-xs md:text-sm font-semibold transition-all ${activeTab === "journal"
-                    ? "bg-[#052b2b] text-white shadow-inner"
-                    : "text-white hover:text-gray-200"
+                  ? "bg-[#052b2b] text-white shadow-inner"
+                  : "text-white hover:text-gray-200"
                   }`}
               >
                 Journal-specific Guideline
@@ -154,51 +186,7 @@ export default function ArtworkPreparationDetails() {
       </section>
 
       {/* ---------------- SECTION 4: SAMPLE REPORT DOWNLOAD ---------------- */}
-      <section className="w-full bg-[#f0fbf5] py-6 px-4 md:px-8">
-        <div className="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          <div className="md:col-span-4 flex justify-center">
-            <div className="relative w-[220px] h-[300px] border border-gray-200 shadow-md rounded-sm overflow-hidden bg-white">
-              <Image
-                src={`${PAGE_IMAGES}/Artwork-Preparation-Sample-Work.jpg`}
-                alt="Artwork Preparation Sample Work"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="md:col-span-8 space-y-6">
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold text-black mb-3">
-                Artwork Preparation Sample Work
-              </h3>
-              <Link
-                href="/insights/citation-and-formatting/"
-                className="inline-block w-full sm:w-auto text-center bg-black hover:bg-slate-800 text-white font-medium text-sm py-3 px-12 rounded-full transition-colors"
-              >
-                Discover More
-              </Link>
-            </div>
-
-            <div className="pt-2">
-              <h3 className="text-xl md:text-2xl font-bold text-black mb-3">
-                Download the full Report Now
-              </h3>
-              <p className="text-xs md:text-sm text-slate-700 leading-relaxed mb-4 max-w-xl">
-                Explore our artwork preparation sample work crafted to meet your
-                conference's formatting requirements, visual standards, and
-                presentation deadlines.
-              </p>
-              <Link
-                href="/insights/citation-and-formatting/"
-                className="inline-block w-full sm:w-auto text-center bg-black hover:bg-slate-800 text-white font-medium text-sm py-3 px-12 rounded-full transition-colors"
-              >
-                Discover More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PubricaSampleWorkCard {...artworkPreparationSampleWork} />
 
     </div>
   );

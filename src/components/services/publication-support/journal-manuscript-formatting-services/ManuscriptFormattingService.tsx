@@ -138,10 +138,10 @@ export default function ManuscriptFormattingService() {
             </p>
 
             {/* Call To Action Button */}
-            <div className="pt-4">
+            <div className="pt-4 flex justify-center sm:justify-start">
               <Link
                 href="/order-now/"
-                className="bg-[#b91c1c] hover:bg-[#991b1b] text-white text-xs md:text-sm font-semibold px-6 py-2.5 rounded-full shadow-sm transition-colors cursor-pointer inline-block"
+                className="bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
               >
                 Upload Your Manuscript
               </Link>

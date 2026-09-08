@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import CommonFAQ from "@/components/common/FAQ";
+import { MovingTestimonials, TestimonialItem } from "@/components/common/MovingTestimonials.tsx";
 
 interface Testimonial {
   id: number;
@@ -13,36 +14,35 @@ interface Testimonial {
   journal: string;
   journalImage: string;
 }
-
-const testimonialsData: Testimonial[] = [
+const testimonialsData: TestimonialItem[] = [
   {
     id: 1,
     quote:
       "Pubrica's formatting team demonstrated a deep understanding of journal-specific structure and ethical compliance. They reformatted our entire manuscript and supplementary files exactly as per the International Journal of Cardiology requirements.",
-    author: "DR. M.RAJKUMAR,",
+    author: "DR. M.RAJKUMAR",
     role: "Consultant Cardiologist",
-    journal: "International Journal of Cardiology",
-    journalImage:
+    journalName: "International Journal of Cardiology",
+    image:
       "/images/publication-support/journal-manuscript-formatting-services/international-journal-of-cardiology-recruitment.jpg",
   },
   {
     id: 2,
     quote:
       "I struggled with the technical formatting and figure resolution issues required by PLOS ONE. Pubrica resolved all layout, table, and referencing inconsistencies quickly and professionally. Their service exceeded expectations.",
-    author: "DR. KAVITHA NARAYANAN,",
+    author: "DR. KAVITHA NARAYANAN",
     role: "PhD Scholar in Public Health",
-    journal: "PLOS ONE",
-    journalImage:
+    journalName: "PLOS ONE",
+    image:
       "/images/publication-support/journal-manuscript-formatting-services/plos-one-.jpg",
   },
   {
     id: 3,
     quote:
       "The formatting support from Pubrica was instrumental in aligning our manuscript with BMC Cancer's strict submission guidelines. Their attention to detail in referencing and figure placement saved us valuable time during the submission phase.",
-    author: "DR. SHALINI VERMA,",
+    author: "DR. SHALINI VERMA",
     role: "Oncology Research Fellow",
-    journal: "BMC Cancer",
-    journalImage:
+    journalName: "BMC Cancer",
+    image:
       "/images/publication-support/journal-manuscript-formatting-services/Bmc-cancer.jpg",
   },
 ];
@@ -83,55 +83,11 @@ const faqData = [
 export default function TestimonialsAndFAQ() {
   const [activeSlide, setActiveSlide] = useState(0);
 
-  const mobileItem = testimonialsData[activeSlide];
-  const desktopItems = [
-    testimonialsData[activeSlide],
-    testimonialsData[(activeSlide + 1) % testimonialsData.length],
-  ];
 
   return (
     <div className="w-full bg-[#f8fafc] font-sans text-gray-800 py-6 space-y-20 antialiased">
       {/* TESTIMONIALS SECTION */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-3">
-          Testimonials
-        </h2>
-        <p className="text-xs md:text-sm text-gray-700 leading-relaxed max-w-4xl mb-8">
-          Learn how Pubrica’s{" "}
-          <Link
-            href="/insights/citation-styles-apa-ama-mla-vancouver-chicago"
-            className="text-blue-600 no-underline hover:no-underline"
-          >
-            manuscript formatting service
-          </Link>{" "}
-          has helped researchers meet strict publisher standards and complete a
-          smooth submission. Here is what our clients say:
-        </p>
-
-        <div className="grid grid-cols-1 gap-6 items-stretch mb-6 md:hidden">
-          <JournalTestimonialCard item={mobileItem} />
-        </div>
-        <div className="hidden md:grid grid-cols-2 gap-6 items-stretch mb-6">
-          {desktopItems.map((item) => (
-            <JournalTestimonialCard
-              key={`${activeSlide}-${item.id}`}
-              item={item}
-            />
-          ))}
-        </div>
-        <div className="flex justify-center items-center space-x-2 mt-6">
-          {testimonialsData.map((item, index) => (
-            <button
-              key={item.id}
-              type="button"
-              onClick={() => setActiveSlide(index)}
-              aria-label={`Slide ${index + 1}`}
-              className={`w-3 h-3 border border-[#1e3e35] ${activeSlide === index ? "bg-white" : "bg-[#1e3e35]"
-                }`}
-            />
-          ))}
-        </div>
-      </section>
+      <MovingTestimonials data={testimonialsData} />
 
       {/* REPLACED FAQ SECTION */}
       <CommonFAQ

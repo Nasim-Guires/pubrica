@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import CommonFAQ from "@/components/common/FAQ";
+import { MovingTestimonials, TestimonialItem } from "@/components/common/MovingTestimonials.tsx";
 
 // ----------------------------------------------------------------------
 // DATA TYPES & CONSTANTS
@@ -16,35 +16,38 @@ interface Testimonial {
   journalImage: string;
 }
 
-const testimonialsData: Testimonial[] = [
+const testimonialsData: TestimonialItem[] = [
   {
     id: 1,
     quote:
       "Pubrica’s poster preparation service transformed my research into a visually compelling and clear presentation. The team ensured full compliance with conference guidelines. My poster was highly appreciated at the International Conference on Oncology, complementing my publication in the Journal of Clinical Oncology (Scopus-indexed).",
-    author: "DR. ANANYA S.,",
+    author: "DR. ANANYA S.",
     role: "Oncology Researcher",
-    journal: "Journal of Clinical Oncology",
-    journalImage:
+    journalName: "Journal of Clinical Oncology",
+    journalSub: "Scopus-indexed",
+    image:
       "/images/publication-support/poster-preparation/journal-of-clinical-oncology-1.jpg",
   },
   {
     id: 2,
     quote:
       "The experts at Pubrica designed an impactful poster that showcased my neuroscience findings perfectly. Their attention to detail and formatting expertise made the conference presentation seamless. This greatly supported my recent publication in Frontiers in Neuroscience (Web of Science-indexed).",
-    author: "DR. RAJESH K.,",
+    author: "DR. RAJESH K.",
     role: "Neuroscience Scholar",
-    journal: "Frontiers in Neuroscience",
-    journalImage:
+    journalName: "Frontiers in Neuroscience",
+    journalSub: "Web of Science-indexed",
+    image:
       "/images/publication-support/poster-preparation/Frontiers-of-neuro-science-.jpg",
   },
   {
     id: 3,
     quote:
       "The team at Pubrica expertly formatted my pharmaceutical sciences research into a conference-ready poster that met strict guidelines. Their support allowed me to focus on presenting while ensuring professional quality. This complemented my work published in the European Journal of Pharmaceutical Sciences (Scopus-indexed).",
-    author: "DR. SURESH N.,",
+    author: "DR. SURESH N.",
     role: "Pharmaceutical Scientist",
-    journal: "European Journal of Pharmaceutical Sciences",
-    journalImage:
+    journalName: "European Journal of Pharmaceutical Sciences",
+    journalSub: "Scopus-indexed",
+    image:
       "/images/publication-support/poster-preparation/european-journal-of-pharmaceutical-sciences.jpg",
   },
 ];
@@ -139,172 +142,32 @@ const posterFaqs: FAQItem[] = [
 // ----------------------------------------------------------------------
 export default function TestimonialsAndFaqSection() {
   const [activeSlide, setActiveSlide] = useState<number>(0);
-  const [openFaqId, setOpenFaqId] = useState<number | null>(1); // 1 and 7 open by default matching design
+  const [openFaqId, setOpenFaqId] = useState<number | null>(1);
   const [openRightFaqId, setOpenRightFaqId] = useState<number | null>(7);
 
-  const toggleLeftFaq = (id: number) => {
-    setOpenFaqId(openFaqId === id ? null : id);
-  };
-
-  const toggleRightFaq = (id: number) => {
-    setOpenRightFaqId(openRightFaqId === id ? null : id);
-  };
-
-  const mobileItem = testimonialsData[activeSlide];
-  const desktopItems = [
-    testimonialsData[activeSlide],
-    testimonialsData[(activeSlide + 1) % testimonialsData.length],
-  ];
-
   return (
-    <section className="w-full bg-[#f8fafc] py-6 font-sans text-gray-800">
-      <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-16">
-        {/* ============================================================ */}
-        {/* SECTION 1: TESTIMONIALS                                      */}
-        {/* ============================================================ */}
-        <div>
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-3">
-            Testimonials
-          </h2>
-          <p className="text-xs md:text-sm text-gray-600 max-w-5xl leading-relaxed mb-8">
-            Learn how Pubrica&apos;s poster preparation service has enabled
-            researchers to develop meaningful presentations to communicate their
-            work at conferences and increase their visibility as professional
-            researchers. Here is what our clients say:
-          </p>
-
-          {/* Testimonials Cards Grid */}
-          <div className="grid grid-cols-1 gap-6 items-stretch mb-6 md:hidden">
-            <TestimonialCard item={mobileItem} />
-          </div>
-          <div className="hidden md:grid grid-cols-2 gap-6 items-stretch mb-6">
-            {desktopItems.map((item) => (
-              <TestimonialCard
-                key={`${activeSlide}-${item.id}`}
-                item={item}
-              />
-            ))}
-          </div>
-
-          {/* Pagination Indicators */}
-          <div className="flex justify-center items-center space-x-2">
-            {testimonialsData.map((item, index) => (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => setActiveSlide(index)}
-                aria-label={`Slide ${index + 1}`}
-                className={`w-3 h-3 border border-[#104e43] ${activeSlide === index ? "bg-white" : "bg-[#104e43]"
-                  }`}
-              ></button>
-            ))}
-          </div>
-        </div>
-
-        {/* ============================================================ */}
-        {/* SECTION 2: WHAT MAKES OUR POSTER SERVICE UNIQUE              */}
-        {/* ============================================================ */}
-        <div className="pt-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-6">
-            What Makes Our Poster Preparation Service Unique
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            {/* Left Bullet Points */}
-            <div className="md:col-span-7 space-y-4">
-              <ul className="space-y-4 text-xs md:text-sm text-gray-700 leading-relaxed">
-                <li className="flex items-start">
-                  <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">
-                    •
-                  </span>
-                  <span>
-                    Pubrica offers full assistance for reviewer comments,
-                    enabling your responses to be concise, professional, and
-                    backed with scientific evidence. We will take care of
-                    everything, including formatting your responses, answering
-                    reviewer comments, and increasing the odds of a favourable
-                    review.
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">
-                    •
-                  </span>
-                  <span>
-                    Leverage our vast team of subject matter experts, including
-                    professional graphic designers, science communicators, and
-                    publication professionals, all trained to provide you with
-                    top-notch results.
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">
-                    •
-                  </span>
-                  <span>
-                    With over 2000 journals, universities, and academic
-                    societies trusting Pubrica for more than 20 years in the
-                    scholarly publishing industry, your partnership with us will
-                    allow you to work with incredible professionals.
-                    Additionally, we enhance the audience for your work by
-                    promoting it to our large community of more than 500,000
-                    researchers, and it&apos;s free.
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">
-                    •
-                  </span>
-                  <span>
-                    Get unique premium features only found with Pubrica. Beyond
-                    our traditional virtual conference plans, your experience
-                    can be built from various choices, such as writing opinion
-                    pieces or selecting a dedicated PhD Project Manager to take
-                    care of your presentation needs!
-                  </span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Right Image */}
-            <div className="md:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-md h-64 sm:h-72 rounded-sm overflow-hidden shadow-sm border border-gray-200">
-                <Image
-                  src="/images/publication-support/poster-preparation/Poster-Preparation-Service-Unique.jpg"
-                  alt="Hands typing on laptop displaying creative designs"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 40vw"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* ============================================================ */}
-        {/* SECTION 3: FREQUENTLY ASKED QUESTIONS GRID                   */}
-        {/* ============================================================ */}
-        <CommonFAQ
-          title="Frequently Asked Questions – Poster Preparation Service"
-          faqs={posterFaqs}
-        />
-      </div>
-    </section>
+    <div className="w-full">
+      <MovingTestimonials data={testimonialsData} />
+    </div>
   );
 }
 
+// Fixed Mobile-Friendly Testimonial Card Component (if used locally)
 function TestimonialCard({ item }: { item: Testimonial }) {
   return (
-    <div className="bg-[#104e43] text-white p-6 rounded-sm shadow-md flex flex-col justify-between">
-      <div className="grid grid-cols-12 gap-4 items-start mb-6">
-        <div className="col-span-8 space-y-2">
-          <p className="text-xs md:text-[13px] leading-relaxed text-gray-100 font-light italic">
+    <div className="bg-[#104e43] text-white p-4 md:p-6 rounded shadow-md flex flex-col justify-between w-full">
+      <div className="flex flex-col md:grid md:grid-cols-12 gap-4 items-center md:items-start mb-6">
+
+        {/* Quote text takes full width on mobile, 8 cols on desktop */}
+        <div className="w-full md:col-span-8 space-y-2">
+          <p className="text-xs md:text-[13px] leading-relaxed text-gray-100 font-light italic text-center md:text-left">
             &quot;{item.quote}&quot;
           </p>
         </div>
 
-        <div className="col-span-4 flex justify-end">
-          <div className="w-28 h-32 bg-white p-1 flex items-center justify-center border border-gray-300 rounded-xs shadow-inner">
+        {/* Journal Image centers on mobile, right-aligned on desktop */}
+        <div className="w-full md:col-span-4 flex justify-center md:justify-end mt-2 md:mt-0">
+          <div className="w-24 h-28 md:w-28 md:h-32 bg-white p-1 flex items-center justify-center border border-gray-300 rounded shadow-inner">
             <Image
               src={item.journalImage}
               alt={item.journal}
@@ -314,9 +177,10 @@ function TestimonialCard({ item }: { item: Testimonial }) {
             />
           </div>
         </div>
+
       </div>
 
-      <div className="border-t border-[#1a6659] pt-3">
+      <div className="border-t border-[#1a6659] pt-3 text-center md:text-left">
         <h4 className="font-bold text-xs uppercase tracking-wider text-white">
           {item.author}
         </h4>

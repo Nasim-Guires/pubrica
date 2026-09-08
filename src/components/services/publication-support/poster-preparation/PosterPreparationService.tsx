@@ -147,15 +147,16 @@ export default function PosterPreparationPage() {
           partner, delivering a poster that represents the quality of your research and its clarity.
         </p>
         {/* Action Buttons */}
-        <div className="flex flex-wrap items-center gap-8 mt-6 mb-10">
+        <div className="flex flex-wrap items-center justify-start sm:justify-start gap-8 mt-6 mb-2">
           <GetFreeQuoteButton />
-          <CommonUploadButton
+          <Link
             href="/uploads/Poster-Preparation-Services-_compressed.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            className='bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors'
           >
             View Brochure
-          </CommonUploadButton>
+          </Link>
         </div>
 
 

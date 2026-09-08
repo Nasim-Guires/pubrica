@@ -11,8 +11,8 @@ interface FeatureItem {
 }
 
 export default function WhatWeDo() {
-  // Active accordion tab state (defaults to first item)
-  const [activeTab, setActiveTab] = useState<string>("engaging-content");
+  // Active accordion tab state (defaults to closed / empty string)
+  const [activeTab, setActiveTab] = useState<string>("");
 
   const toggleTab = (id: string) => {
     setActiveTab(activeTab === id ? "" : id);

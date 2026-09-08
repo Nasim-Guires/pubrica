@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import { PubricaSampleWorkCard, PubricaSampleWorkCardProps } from "@/components/common/PubricaSampleWorkCardProps";
 
 interface PackageFeature {
   text: string;
@@ -95,6 +96,37 @@ const packages: PackageItem[] = [
   },
 ];
 
+const plagiarismCheckServiceSampleWork: PubricaSampleWorkCardProps = {
+  bookCoverImage: {
+    src: "/images/publication-support/plagiarism-services/Plagiarism-Check-Service-Sample-Work.jpg",
+    alt: "Researchers reviewing document",
+    width: 723,
+    height: 1024,
+  },
+  sections: [
+    {
+      heading: "Plagiarism Check Service Sample Work",
+      button: {
+        label: "Discover More",
+        url: "/insights/sample-work",
+      },
+    },
+    {
+      heading: "Download the full Report Now",
+      descriptionSegments: [
+        {
+          text: "Check out our plagiarism and AI detection sample reports built to meet your institution's originality standards, ethical guidelines, and submission deadlines.",
+        },
+      ],
+      button: {
+        label: "Discover More",
+        url: "/insights/sample-work",
+      },
+    },
+  ],
+  footerDisclaimerSegments: [],
+};
+
 export default function PlagiarismServicePackages() {
   return (
     <div className="w-full font-sans text-slate-800 bg-white">
@@ -150,51 +182,7 @@ export default function PlagiarismServicePackages() {
         </div>
 
         {/* Green Box: Sample Work & Download Report */}
-        <div className="bg-[#f0faf5] rounded-sm p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 gap-6 items-center border border-emerald-100">
-          {/* Left Medical/Research Image */}
-          <div className="md:col-span-4 flex justify-center">
-            <div className="relative w-full max-w-[240px] h-[220px] rounded overflow-hidden shadow-sm">
-              <Image
-                src="/images/publication-support/plagiarism-services/Plagiarism-Check-Service-Sample-Work.jpg"
-                alt="Researchers reviewing document"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Right Text & CTA Content */}
-          <div className="md:col-span-8 space-y-6">
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
-                Plagiarism Check Service Sample Work
-              </h3>
-              <Link
-                href="/insights/sample-work"
-                className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs px-8 py-2.5 rounded-full transition-colors"
-              >
-                Discover More
-              </Link>
-            </div>
-
-            <div className="pt-2">
-              <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
-                Download the full Report Now
-              </h3>
-              <p className="text-xs md:text-sm text-slate-700 leading-relaxed mb-4 max-w-xl">
-                Check out our plagiarism and AI detection sample reports built
-                to meet your institution&apos;s originality standards, ethical
-                guidelines, and submission deadlines.
-              </p>
-              <Link
-                href="/insights/sample-work"
-                className="inline-block bg-black hover:bg-slate-800 text-white font-medium text-xs px-8 py-2.5 rounded-full transition-colors"
-              >
-                Discover More
-              </Link>
-            </div>
-          </div>
-        </div>
+        <PubricaSampleWorkCard {...plagiarismCheckServiceSampleWork} />
       </section>
 
       {/* SECTION 2: Packages Section */}
@@ -305,7 +293,7 @@ export default function PlagiarismServicePackages() {
 
         {/* CTA Bar below packages */}
         <div className="mt-3">
-        <GetFreeQuoteButton/>
+          <GetFreeQuoteButton />
         </div>
       </section>
 

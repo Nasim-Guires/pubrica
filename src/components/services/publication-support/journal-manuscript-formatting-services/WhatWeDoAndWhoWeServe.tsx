@@ -79,7 +79,7 @@ export default function WhatWeDoAndWhoWeServe() {
   return (
     <section className="w-full bg-white py-6 font-sans text-gray-800 antialiased">
       <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-16">
-        
+
         {/* ============================================================ */}
         {/* SECTION 1: WHAT WE DO                                        */}
         {/* ============================================================ */}
@@ -170,23 +170,22 @@ export default function WhatWeDoAndWhoWeServe() {
             </div>
 
             {/* Right Column: Graphic */}
-            <div className="lg:col-span-5 flex justify-center relative py-2">
-              <div className="relative w-full max-w-sm h-72 sm:h-80">
-                <div className="absolute inset-0 bg-[#e2e8f0]/60 rounded-full transform -rotate-12 scale-90 -z-0"></div>
-                <div className="absolute top-0 left-0 w-3/4 h-48 rounded-xl overflow-hidden shadow-md border-2 border-white z-10">
+            <div className="lg:col-span-5 flex justify-center items-center relative py-4 w-full">
+              <div className="relative w-full max-w-md h-72 sm:h-96 flex justify-center items-center mx-auto">
+                <div className=""></div>
+                <div className="">
                   <Image
                     src="/images/publication-support/journal-manuscript-formatting-services/Manuscript-Formatting-Service-what-we-do.jpg"
                     alt="Reviewing academic documents"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 30vw"
+                    sizes="(max-width: 768px) 100vw, 40vw"
                   />
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         {/* ============================================================ */}
         {/* SECTION 2: WHO WE SERVE (INDEPENDENT ACCORDION COLUMNS)      */}
         {/* ============================================================ */}
@@ -235,7 +234,7 @@ export default function WhatWeDoAndWhoWeServe() {
                 </div>
               );
             })}
-          </div>  
+          </div>
         </div>
 
       </div>

@@ -93,18 +93,18 @@ export default function ArtworkPreparationService() {
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-8 pt-4">
-              <Link href="/order-now/"
-                type="button"
-                className="bg-red-600 hover:bg-white hover:text-black text-white text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-md transition-colors shadow-2xs cursor-pointer inline-flex items-center justify-center select-none"
+            <div className="flex flex-row flex-nowrap items-center gap-8 sm:gap-8 pt-4 ">
+              <Link
+                href="/order-now/"
+                className="bg-red-600 hover:bg-white hover:text-black text-white text-[11px] sm:text-sm font-semibold px-4 sm:px-6 py-2.5 rounded-md transition-colors shadow-2xs cursor-pointer inline-flex items-center justify-center select-none text-center whitespace-nowrap"
               >
                 Upload Your Manuscript
               </Link>
-              <Link href="/uploads/Artwork-Preparation-Matters.pdf"
+              <Link
+                href="/uploads/Artwork-Preparation-Matters.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                type="button"
-                className="bg-red-600 hover:bg-white hover:text-black text-white   text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-md transition-colors shadow-2xs cursor-pointer inline-flex items-center justify-center select-none"
+                className="bg-red-600 hover:bg-white hover:text-black text-white text-[11px] sm:text-sm font-semibold px-4 sm:px-6 py-2.5 rounded-md transition-colors shadow-2xs cursor-pointer inline-flex items-center justify-center select-none text-center whitespace-nowrap"
               >
                 View Brochure
               </Link>
@@ -234,13 +234,13 @@ export default function ArtworkPreparationService() {
             </div>
 
             {/* Right Column: Graphic Collage */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-md h-72 sm:h-80">
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative w-full max-w-md h-72 sm:h-80 flex justify-center items-center">
                 {/* Background SVG Circle Accent */}
-                <div className="absolute right-4 top-2 w-56 h-56 rounded-full bg-slate-100 -z-10 opacity-70" />
+                <div className="absolute w-56 h-56 rounded-full bg-slate-100 -z-10 opacity-70" />
 
                 {/* Top Left Designer Image */}
-                <div className="absolute top-0 left-4 w-3/5 h-3/5 rounded-2xl overflow-hidden shadow-md">
+                <div className="w-3/5 h-3/5 flex items-center justify-center">
                   <Image
                     src="/images/publication-support/art-work-preparation/Artwork-Preparation-what-we-do.png"
                     alt="Designer formatting figures on computer"

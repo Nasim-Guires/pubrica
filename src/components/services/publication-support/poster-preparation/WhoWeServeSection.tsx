@@ -63,8 +63,8 @@ const accordionData: AccordionItem[] = [
 ];
 
 export default function WhoWeServeSection() {
-  // Track open accordion panel; defaults to the first item ('phd-scholars')
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  // Track open accordion panel; defaults to null so all cards are closed initially
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
