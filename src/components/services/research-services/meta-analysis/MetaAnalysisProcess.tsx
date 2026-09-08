@@ -1,12 +1,14 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import ServiceBanner, { BannerProps } from "@/components/common/ServiceBanner";
 
 interface Step {
   number: number;
   title: string;
-  description: string;
+  description: React.ReactNode;
 }
 
 export default function MetaAnalysisProcess() {
@@ -38,8 +40,18 @@ export default function MetaAnalysisProcess() {
     {
       number: 5,
       title: "Manuscript Writing or Rewriting",
-      description:
-        "We prepare or refine the manuscript based on your requirements, whether it's a first draft, a journal resubmission, or rewriting for clarity and compliance. All content is structured according to PRISMA flow, with clearly defined objectives, methodology, results, and conclusions.",
+      description: (
+        <>
+          We prepare or refine the manuscript based on your requirements, whether it's a first draft, a journal resubmission, or rewriting for clarity and compliance. All content is structured according to{" "}
+          <Link
+            href="/services/research-services/meta-analysis/meta-analysis-prisma-2020/"
+            className="text-blue-600"
+          >
+            PRISMA
+          </Link>{" "}
+          flow, with clearly defined objectives, methodology, results, and conclusions.
+        </>
+      ),
     },
     {
       number: 6,
@@ -55,22 +67,18 @@ export default function MetaAnalysisProcess() {
     },
   ];
 
+  const serviceBannerData: BannerProps = {
+    imageSrc: "/images/publication-support/Satisfaction_Guarantee.webp",
+    imageAlt: "100% Satisfaction Guarantee",
+    heading: "Accelerate Your Meta-Analysis Journey with Pubrica",
+    description:
+      "Gain access to your assistant who will expertly guide you through intricate journal submission processes, shielding you from rejection and ensuring a faster path to getting your work published.",
+    showQuoteButton: true,
+  };
   return (
     <section className="w-full bg-[#f8fafc] font-sans pb-7">
       {/* Dark Green Banner Header CTA */}
-      <div className="bg-[#003820] text-white py-6 px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Accelerate Your Meta-Analysis Journey with Pubrica
-          </h2>
-          <p className="text-gray-200 text-sm md:text-base leading-relaxed mb-8 max-w-3xl mx-auto">
-            Gain access to your assistant who will expertly guide you through
-            intricate journal submission processes, shielding you from rejection
-            and ensuring a faster path to getting your work published.
-          </p>
-          <GetFreeQuoteButton />
-        </div>
-      </div>
+      <ServiceBanner {...serviceBannerData} />
 
       {/* Main Content Area */}
       <div className="max-w-5xl mx-auto py-6 px-4 md:px-6">
@@ -140,7 +148,7 @@ export default function MetaAnalysisProcess() {
   );
 }
 
-{/* Individual Step Card Component */}
+{/* Individual Step Card Component */ }
 function StepCard({ step }: { step: Step }) {
   return (
     <div className="bg-white border border-[#0c302d] rounded-lg p-5 flex flex-col items-center text-center shadow-xs h-full min-h-[260px] justify-start">
@@ -155,14 +163,14 @@ function StepCard({ step }: { step: Step }) {
       </h4>
 
       {/* Description */}
-      <p className="text-[11px] text-gray-700 leading-relaxed font-normal">
+      <div className="text-[11px] text-gray-700 leading-relaxed font-normal">
         {step.description}
-      </p>
+      </div>
     </div>
   );
 }
 
-{/* Right Arrow */}
+{/* Right Arrow */ }
 function ArrowRight() {
   return (
     <div className="px-1 text-[#0c302d]">
@@ -183,7 +191,7 @@ function ArrowRight() {
   );
 }
 
-{/* Left Arrow */}
+{/* Left Arrow */ }
 function ArrowLeft() {
   return (
     <div className="px-1 text-[#0c302d]">
@@ -204,7 +212,7 @@ function ArrowLeft() {
   );
 }
 
-{/* Down Arrow */}
+{/* Down Arrow */ }
 function ArrowDown() {
   return (
     <div className="text-[#0c302d]">

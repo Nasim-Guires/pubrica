@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import ServiceBanner, { BannerProps } from "@/components/common/ServiceBanner";
 
 const IMG = "/images/research-services/experimental-design/";
 
@@ -167,6 +168,37 @@ const processSteps: ProcessStep[] = [
 ];
 
 export default function WhoWeServeAndProcess() {
+
+  const [activeId, setActiveId] = useState<string | null>(null);
+
+  // Automatically reset mobile card state when resizing up to desktop view
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setActiveId(null);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleCardClick = (id: string) => {
+    // Ignore clicks on desktop viewports (>= 768px) so desktop relies entirely on CSS hover
+    if (typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches) {
+      return;
+    }
+    setActiveId((prev) => (prev === id ? null : id));
+  };
+
+  const serviceBannerData: BannerProps = {
+    imageSrc: "/images/publication-support/Satisfaction_Guarantee.webp",
+    imageAlt: "100% Satisfaction Guarantee",
+    heading:
+      "Speed up your research journey with Pubrica’s Experimental Design Services",
+    description:
+      "Gain access to expert guidance that ensures scientifically sound study designs, minimizing errors and delays while maximizing your chances of successful research outcomes and publication.",
+    showQuoteButton: true,
+  };
   return (
     <div className="w-full bg-white font-sans text-slate-800">
       {/* ========================================================= */}
@@ -193,67 +225,73 @@ export default function WhoWeServeAndProcess() {
 
         {/* 3-Column Grid for Serving Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {serveCards.map((card) => (
-            <div
-              key={card.id}
-              className="group relative h-72 sm:h-80 w-full overflow-hidden rounded-xs bg-black shadow-md cursor-pointer"
-            >
-              {/* Default State Image */}
-              <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-105">
-                <Image
-                  src={card.imageSrc}
-                  alt={card.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-                {/* Dark gradient overlay at the bottom for title readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300 group-hover:opacity-0" />
-              </div>
+          {serveCards.map((card) => {
+            const isActive = activeId === card.id;
 
-              {/* Default Bottom Title Overlay */}
-              <div className="absolute bottom-0 inset-x-0 p-5 z-10 transition-opacity duration-300 group-hover:opacity-0">
-                <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
-                  {card.title}
-                </h3>
-              </div>
+            return (
+              <div
+                key={card.id}
+                onClick={() => handleCardClick(card.id)}
+                className="group relative h-72 sm:h-80 w-full overflow-hidden rounded-xs bg-black shadow-md cursor-pointer"
+              >
+                {/* Default State Image */}
+                <div
+                  className={`relative w-full h-full transition-transform duration-500 md:group-hover:scale-105 ${isActive ? "scale-105" : ""
+                    }`}
+                >
+                  <Image
+                    src={card.imageSrc}
+                    alt={card.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                  {/* Dark gradient overlay at the bottom for title readability */}
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300 md:group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                      }`}
+                  />
+                </div>
 
-              {/* Hover Overlay Content Container (Slides/Fades in on hover) */}
-              <div className="absolute inset-0 bg-black/95 p-6 z-20 flex flex-col justify-start text-white opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
-                <h3 className="text-lg font-bold text-white mb-2 leading-tight">
-                  {card.title}
-                </h3>
-                <h4 className="text-xs sm:text-sm font-semibold text-emerald-400 mb-3 leading-snug">
-                  {card.subTitle}
-                </h4>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed overflow-y-auto">
-                  {card.description}
-                </p>
+                {/* Default Bottom Title Overlay */}
+                <div
+                  className={`absolute bottom-0 inset-x-0 p-5 z-10 transition-opacity duration-300 md:group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                    }`}
+                >
+                  <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
+                    {card.title}
+                  </h3>
+                </div>
+
+                {/* Hover / Active Overlay Content Container */}
+                <div
+                  className={`absolute inset-0 bg-black/95 p-6 z-20 flex flex-col justify-start text-white transition-all duration-300 ease-in-out ${isActive
+                    ? "opacity-100 pointer-events-auto"
+                    : "opacity-0 pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto"
+                    }`}
+                >
+                  <h3 className="text-lg font-bold text-white mb-2 leading-tight">
+                    {card.title}
+                  </h3>
+                  {card.subTitle && (
+                    <h4 className="text-xs sm:text-sm font-semibold text-white mb-3 leading-snug">
+                      {card.subTitle}
+                    </h4>
+                  )}
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed overflow-y-auto">
+                    {card.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
       {/* ========================================================= */}
       {/* 2. SPEED UP RESEARCH CALLOUT BANNER                        */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#03281d] text-white py-6 px-4 sm:px-6 lg:px-8 text-center my-8">
-        <div className="max-w-4xl mx-auto space-y-4">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">
-            Speed up your research journey with Pubrica’s Experimental Design
-            Services
-          </h2>
-          <p className="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed font-normal max-w-3xl mx-auto">
-            Gain access to expert guidance that ensures scientifically sound
-            study designs, minimizing errors and delays while maximizing your
-            chances of successful research outcomes and publication.
-          </p>
-          <div className="pt-2">
-           <GetFreeQuoteButton/>
-          </div>
-        </div>
-      </section>
+      <ServiceBanner {...serviceBannerData} />
 
       {/* ========================================================= */}
       {/* 3. STEP-BY-STEP PROCESS SECTION                            */}

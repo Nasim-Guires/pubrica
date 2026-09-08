@@ -77,7 +77,7 @@ const addOnServices: string[] = [
 ];
 
 export default function ResearchPackagesSection() {
-  const [isAddOnsOpen, setIsAddOnsOpen] = useState(true);
+  const [isAddOnsOpen, setIsAddOnsOpen] = useState(false);
 
   return (
     <section

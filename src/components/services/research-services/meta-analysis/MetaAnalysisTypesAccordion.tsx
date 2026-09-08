@@ -11,8 +11,8 @@ interface AccordionItem {
 }
 
 export default function MetaAnalysisTypesAccordion() {
-  // First item open by default
-  const [openId, setOpenId] = useState<string | null>("classical");
+  // All cards closed by default for both mobile and desktop
+  const [openId, setOpenId] = useState<string | null>(null);
 
   const toggleAccordion = (id: string) => {
     setOpenId(openId === id ? null : id);
@@ -33,7 +33,7 @@ export default function MetaAnalysisTypesAccordion() {
           Uses{" "}
           <Link
             href="/services/research-services/meta-analysis/introduction-to-bayesian-statistics"
-            style={{ color: "#2563eb", textDecoration: "" }}
+            className="text-blue-600"
           >
             Bayesian statistical
           </Link>{" "}
@@ -56,7 +56,7 @@ export default function MetaAnalysisTypesAccordion() {
           The{" "}
           <Link
             href="/services/research-services/meta-analysis/individual-participant-data-meta-analysis"
-            style={{ color: "#2563eb", textDecoration: "" }}
+            className="text-blue-600"
           >
             Individual Participant Data Meta-Analysis
           </Link>{" "}
@@ -111,43 +111,67 @@ export default function MetaAnalysisTypesAccordion() {
     },
   ];
 
-  return (
-    <section
-      style={{
-        width: "100%",
-        backgroundColor: "#ffffff",
-        padding: "60px 20px 80px 20px",
-        fontFamily: "Arial, Helvetica, sans-serif",
-        color: "#111827",
-      }}
-    >
-      <div style={{ maxWidth: "1150px", margin: "0 auto" }}>
-        {/* Header Title */}
-        <h2
-          style={{
-            fontSize: "1.85rem",
-            fontWeight: "700",
-            color: "#0f2c3a",
-            marginBottom: "16px",
-          }}
+  // Split items for mobile image sandwiching (First 5 above image, rest below)
+  const firstHalf = accordionData.slice(0, 5);
+  const secondHalf = accordionData.slice(5);
+
+  const renderAccordionItem = (item: AccordionItem) => {
+    const isOpen = openId === item.id;
+    return (
+      <div key={item.id} className="border-b border-[#1f3b38]">
+        <button
+          onClick={() => toggleAccordion(item.id)}
+          className="w-full py-4 bg-transparent border-none flex items-center gap-3 cursor-pointer text-left"
         >
+          <span className="text-[1.1rem] font-semibold color-[#0d3b38] w-4 text-[#0d3b38]">
+            {isOpen ? "–" : "+"}
+          </span>
+          <span className="text-[0.95rem] font-bold text-[#0f2c3a]">
+            {item.title}
+          </span>
+        </button>
+
+        {isOpen && (
+          <div className="pr-0 pb-[18px] pl-[28px] text-[0.875rem] text-gray-700 leading-relaxed">
+            {item.content}
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  const renderGraphic = () => (
+    <div className="relative w-full min-h-[380px] flex justify-center items-center">
+      {/* Background Light Circle Graphic Accent */}
+      <div className="absolute w-[280px] h-[280px] rounded-full bg-[#f0f4f8] top-[10%] left-[15%] z-0" />
+
+      {/* Top-Left Card (Chart / Data Analysis Image) */}
+      <div className="relative z-10 w-[280px] overflow-hidden mr-[60px] mb-[60px]">
+        <Image
+          src="/images/research-services/meta-analysis/Types-of-Meta-Analysis-That-We-Offer.png"
+          alt="Types of meta-analysis that we offer"
+          width={280}
+          height={200}
+          className="w-full h-[200px] object-cover block"
+        />
+      </div>
+    </div>
+  );
+
+  return (
+    <section className="w-full bg-white px-5 py-[60px] md:pb-[80px] font-sans text-gray-900">
+      <div className="max-w-[1150px] mx-auto">
+        {/* Header Title */}
+        <h2 className="text-[1.85rem] font-bold text-[#0f2c3a] mb-4">
           Types of Meta-Analysis That We Offer
         </h2>
 
         {/* Intro Paragraph */}
-        <p
-          style={{
-            fontSize: "0.95rem",
-            color: "#374151",
-            lineHeight: "1.6",
-            marginBottom: "40px",
-            maxWidth: "1050px",
-          }}
-        >
+        <p className="text-[0.95rem] text-gray-700 leading-relaxed mb-[40px] max-w-[1050px]">
           At Pubrica, we specialize in{" "}
           <Link
             href="/services/research-services/meta-analysis/meta-analysis-role-evidence-based-research"
-            style={{ color: "#2563eb", textDecoration: "" }}
+            className="text-blue-600"
           >
             meta-analysis
           </Link>{" "}
@@ -158,136 +182,31 @@ export default function MetaAnalysisTypesAccordion() {
           applications or journal submissions, our meta-analysis{" "}
           <Link
             href="/services/publication-support"
-            style={{ color: "#2563eb", textDecoration: "" }}
+            className="text-blue-600"
           >
             publication support
           </Link>{" "}
           ensures your work meets the highest standards.
         </p>
 
-        {/* 2-Column Grid: Visual Artwork + Accordion List */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "40px",
-            alignItems: "start",
-          }}
-        >
-          {/* Left Column: Overlapping Images Graphic */}
-          <div
-            style={{
-              position: "relative",
-              width: "100%",
-              minHeight: "380px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            {/* Background Light Circle Graphic Accent */}
-            <div
-              style={{
-                position: "absolute",
-                width: "280px",
-                height: "280px",
-                borderRadius: "50%",
-                backgroundColor: "#f0f4f8",
-                top: "10%",
-                left: "15%",
-                zIndex: 0,
-              }}
-            />
+        {/* Desktop View: Left Graphic, Right Accordion */}
+        <div className="hidden lg:grid lg:grid-cols-2 gap-[40px] items-start">
+          {renderGraphic()}
+          <div className="flex flex-col">
+            {accordionData.map(renderAccordionItem)}
+          </div>
+        </div>
 
-            {/* Top-Left Card (Chart / Data Analysis Image) */}
-            <div
-              style={{
-                position: "relative",
-                zIndex: 1,
-                width: "280px",
-                borderRadius: "16px",
-                overflow: "hidden",
-                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
-                marginRight: "60px",
-                marginBottom: "60px",
-              }}
-            >
-              <Image
-                src="/images/research-services/meta-analysis/Types-of-Meta-Analysis-That-We-Offer.png"
-                alt="Types of meta-analysis that we offer"
-                width={280}
-                height={200}
-                style={{
-                  width: "100%",
-                  height: "200px",
-                  objectFit: "cover",
-                  display: "block",
-                }}
-              />
-            </div>
+        {/* Mobile View: First Half Accordion -> Image Graphic -> Second Half Accordion */}
+        <div className="flex flex-col lg:hidden gap-6">
+          <div className="flex flex-col">
+            {firstHalf.map(renderAccordionItem)}
           </div>
 
-          {/* Right Column: Accordion List */}
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            {accordionData.map((item) => {
-              const isOpen = openId === item.id;
-              return (
-                <div
-                  key={item.id}
-                  style={{
-                    borderBottom: "1px solid #1f3b38",
-                  }}
-                >
-                  <button
-                    onClick={() => toggleAccordion(item.id)}
-                    style={{
-                      width: "100%",
-                      padding: "16px 0",
-                      backgroundColor: "transparent",
-                      border: "none",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "12px",
-                      cursor: "pointer",
-                      textAlign: "left",
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontSize: "1.1rem",
-                        fontWeight: "600",
-                        color: "#0d3b38",
-                        width: "16px",
-                      }}
-                    >
-                      {isOpen ? "–" : "+"}
-                    </span>
-                    <span
-                      style={{
-                        fontSize: "0.95rem",
-                        fontWeight: "700",
-                        color: "#0f2c3a",
-                      }}
-                    >
-                      {item.title}
-                    </span>
-                  </button>
+          <div className="my-2">{renderGraphic()}</div>
 
-                  {isOpen && (
-                    <div
-                      style={{
-                        padding: "0 0 18px 28px",
-                        fontSize: "0.875rem",
-                        color: "#374151",
-                        lineHeight: "1.6",
-                      }}
-                    >
-                      {item.content}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+          <div className="flex flex-col">
+            {secondHalf.map(renderAccordionItem)}
           </div>
         </div>
       </div>

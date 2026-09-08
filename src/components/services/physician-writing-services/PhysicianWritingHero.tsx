@@ -62,7 +62,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
           <div className="space-y-4 mb-8 max-w-6xl">
             <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed text-justify">
               We offer specialized physician writing services
-             
+
               {leadParagraph.split("physician writing services")[1]}
             </p>
             <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed font-medium">
@@ -193,13 +193,13 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
           </div>
 
           {/* Bottom CTA Action Row */}
-          <div className="flex flex-wrap items-center gap-8">
-            <CommonUploadButton href="/order-now/">
+          <div className="flex flex-row flex-nowrap items-center justify-center gap-3 sm:gap-10">
+            <Link href="/order-now/" className="bg-red-600 text-white text-xs sm:text-sm font-bold px-3 py-2 sm:px-6 sm:py-2 rounded hover:bg-white hover:text-black transition-colors whitespace-nowrap">
               Upload Your Manuscript
-            </CommonUploadButton>
-            <CommonUploadButton href="/uploads/physician-writing-services/Physician-Writing-services_compressed.pdf">
+            </Link>
+            <Link href="/uploads/physician-writing-services/Physician-Writing-services_compressed.pdf" className="bg-red-600 text-white text-xs sm:text-sm font-bold px-3 py-2 sm:px-6 sm:py-2 rounded hover:bg-white hover:text-black transition-colors whitespace-nowrap">
               View brochure
-            </CommonUploadButton>
+            </Link>
           </div>
         </div>
       </section>

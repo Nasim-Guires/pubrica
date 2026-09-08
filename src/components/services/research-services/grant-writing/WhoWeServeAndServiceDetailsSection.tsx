@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import ServiceBanner, { BannerProps } from "@/components/common/ServiceBanner";
 
 interface AudienceCard {
   id: string;
@@ -233,8 +234,33 @@ export default function WhoWeServeAndServiceDetailsSection() {
 
   const [activeId, setActiveId] = useState<string | null>(null);
 
+  // Automatically reset mobile card state when resizing up to desktop view
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setActiveId(null);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handleCardClick = (id: string) => {
+    // Only toggle state on mobile/touch screens (< 768px). 
+    // Desktop viewports (>= 768px) ignore clicks and rely entirely on CSS hover.
+    if (typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches) {
+      return;
+    }
     setActiveId((prev) => (prev === id ? null : id));
+  };
+
+  const serviceBannerData: BannerProps = {
+    imageSrc: "/images/publication-support/Satisfaction_Guarantee.webp",
+    imageAlt: "100% Satisfaction Guarantee",
+    heading: "Accelerate your Grant Writing Service with Pubrica",
+    description:
+      "We work closely with clients to develop compelling grant proposals that clearly articulate the significance and potential impact of their research while aligning with the priorities and requirements of the funding bodies.",
+    showQuoteButton: true,
   };
 
   return (
@@ -277,8 +303,7 @@ export default function WhoWeServeAndServiceDetailsSection() {
                 <div
                   key={card.id}
                   onClick={() => handleCardClick(card.id)}
-                  onMouseEnter={() => setActiveId(card.id)}
-                  onMouseLeave={() => setActiveId(null)}
+                  // NOTE: onMouseEnter / onMouseLeave removed to prevent desktop hover bugs!
                   className="group relative h-64 sm:h-72 rounded-sm overflow-hidden shadow-md cursor-pointer bg-black"
                 >
                   {/* 1. Base Image */}
@@ -286,14 +311,14 @@ export default function WhoWeServeAndServiceDetailsSection() {
                     src={card.imageSrc}
                     alt={card.altText}
                     fill
-                    className={`object-cover transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                    className={`object-cover transition-opacity duration-300 md:group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
                       }`}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
 
                   {/* 2. Default Bottom Gradient Bar */}
                   <div
-                    className={`absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent p-5 z-10 transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                    className={`absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent p-5 z-10 transition-opacity duration-300 md:group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
                       }`}
                   >
                     <h3 className="text-base sm:text-lg font-bold text-white leading-tight">
@@ -301,9 +326,11 @@ export default function WhoWeServeAndServiceDetailsSection() {
                     </h3>
                   </div>
 
-                  {/* 3. Full Black Hover Overlay */}
+                  {/* 3. Full Black Hover/Active Overlay */}
                   <div
-                    className={`absolute inset-0 bg-black p-6 flex flex-col justify-start transition-opacity duration-300 z-20 text-white space-y-4 group-hover:opacity-100 ${isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                    className={`absolute inset-0 bg-black p-6 flex flex-col justify-start transition-opacity duration-300 z-20 text-white space-y-4 ${isActive
+                      ? "opacity-100 pointer-events-auto"
+                      : "opacity-0 pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto"
                       }`}
                   >
                     <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
@@ -328,26 +355,10 @@ export default function WhoWeServeAndServiceDetailsSection() {
           </div>
         </div>
       </section>
-
       {/* ========================================================= */}
       {/* 2. ACCELERATE GRANT WRITING CTA BANNER                    */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#03281e] py-6 px-4 sm:px-6 lg:px-8 text-center text-white">
-        <div className="max-w-5xl mx-auto space-y-6">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
-            Accelerate your Grant Writing Service with Pubrica
-          </h2>
-          <p className="text-sm sm:text-base text-slate-200 leading-relaxed max-w-4xl mx-auto font-light">
-            We work closely with clients to develop compelling grant proposals
-            that clearly articulate the significance and potential impact of
-            their research while aligning with the priorities and requirements
-            of the funding bodies.
-          </p>
-          <div>
-            <GetFreeQuoteButton />
-          </div>
-        </div>
-      </section>
+      <ServiceBanner {...serviceBannerData} />
 
       {/* ========================================================= */}
       {/* 3. DETAILED SERVICE BREAKDOWN CARDS                       */}

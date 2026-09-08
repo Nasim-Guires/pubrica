@@ -169,12 +169,7 @@ const whatWeDoServices = [
 
 export default function CaseReportWritingService() {
   // Pre-opening specific sections to match the provided screenshots
-  const [openItems, setOpenItems] = useState<string[]>([
-    "s1",
-    "s4",
-    "s6",
-    "s11",
-  ]);
+  const [openItems, setOpenItems] = useState<string[]>([]);
 
   const toggleAccordion = (id: string) => {
     setOpenItems((prev) =>

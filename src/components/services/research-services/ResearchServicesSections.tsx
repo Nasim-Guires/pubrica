@@ -402,7 +402,7 @@ export const ResearchServicesSections: React.FC = () => {
             {/* Soft Gray/Blue background shape circle */}
             <div className="absolute w-[280px] h-[280px] bg-[#e6eff4] rounded-full left-10 top-8 z-0" />
 
-            <div className="relative z-10 w-full max-w-[420px] aspect-square shadow-lg rounded-xl overflow-hidden bg-white border-4 border-white">
+            <div className="relative z-10 w-full max-w-[420px] aspect-square overflow-hidden ">
               <Image
                 src="/images/research-services/What-We-Do-1.png"
                 alt="Pubrica research services overview collage"

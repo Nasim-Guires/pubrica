@@ -496,158 +496,158 @@ export default function ExperimentalDesignsAndPackages() {
       {/* ========================================================= */}
       {/* 3. COMPLIANCE AND GUIDELINE STANDARDS                     */}
       {/* ========================================================= */}
-        <section className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 space-y-8">
-          <div className="space-y-3">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
-              Our Compliance and Guideline Standards
-            </h2>
-            <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed max-w-5xl">
-              At Pubrica, we adhere to globally recognized compliance frameworks
-              and ethical guidelines to ensure that every{" "}
-              <Link
-                href="/academy/experimental-design/experimental-research-design/"
-                className="text-blue-600 no-underline hover:no-underline"
-              >
-                experimental design
-              </Link>{" "}
-              is scientifically valid, ethically sound, and publication-ready. Our
-              designs are tailored to meet both regulatory requirements and
-              academic standards.
-            </p>
-          </div>
+      <section className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 space-y-8">
+        <div className="space-y-3">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b38]">
+            Our Compliance and Guideline Standards
+          </h2>
+          <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed max-w-5xl">
+            At Pubrica, we adhere to globally recognized compliance frameworks
+            and ethical guidelines to ensure that every{" "}
+            <Link
+              href="/academy/experimental-design/experimental-research-design/"
+              className="text-blue-600 no-underline hover:no-underline"
+            >
+              experimental design
+            </Link>{" "}
+            is scientifically valid, ethically sound, and publication-ready. Our
+            designs are tailored to meet both regulatory requirements and
+            academic standards.
+          </p>
+        </div>
 
-          {/* 6 Standards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Item 1 */}
-            <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
-              <div className="h-16 relative w-32 flex items-center justify-center">
-                <Image
-                  src={
-                    "https://pubrica.com/wp-content/uploads/2025/09/International-Council-for-Harmonisation-\u2013-Good-Clinical-Practice-1.png"
-                  }
-                  alt="ICH GCP Logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <div>
-                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
-                  International Council for Harmonisation – Good Clinical Practice
-                  (ICH-GCP)
-                </h3>
-                <p className="text-xs text-slate-500 mt-1">
-                  – For clinical trials and human subject research.
-                </p>
-              </div>
+        {/* 6 Standards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Item 1 */}
+          <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
+            <div className="h-16 relative w-32 flex items-center justify-center">
+              <Image
+                src={
+                  "https://pubrica.com/wp-content/uploads/2025/09/International-Council-for-Harmonisation-\u2013-Good-Clinical-Practice-1.png"
+                }
+                alt="ICH GCP Logo"
+                fill
+                className="object-contain"
+              />
             </div>
-
-            {/* Item 2 */}
-            <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
-              <div className="h-16 relative w-32 flex items-center justify-center">
-                <Image
-                  src="/images/research-services/experimental-design/Consolidated-Standards-of-Reporting-Trials.png"
-                  alt="CONSORT SPIRIT Logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <div>
-                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
-                  Consolidated Standards of Reporting Trials (CONSORT)
-                </h3>
-                <p className="text-xs text-slate-500 mt-1">
-                  – For randomized controlled trials to ensure transparent and
-                  complete reporting.
-                </p>
-              </div>
-            </div>
-
-            {/* Item 3 */}
-            <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
-              <div className="h-16 relative w-28 flex items-center justify-center">
-                <Image
-                  src="/images/research-services/experimental-design/STROBE.png"
-                  alt="STROBE Logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <div>
-                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
-                  Strengthening the Reporting of Observational Studies in
-                  Epidemiology (STROBE)
-                </h3>
-                <p className="text-xs text-slate-500 mt-1">
-                  – For observational and epidemiological studies.
-                </p>
-              </div>
-            </div>
-
-            {/* Item 4 */}
-            <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
-              <div className="h-16 relative w-28 flex items-center justify-center">
-                <Image
-                  src={
-                    "https://pubrica.com/wp-content/uploads/2025/09/Animal-Research-Reporting-of-In-Vivo-Experiments-\u2013-ARRIVE.png"
-                  }
-                  alt="ARRIVE Logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <div>
-                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
-                  Animal Research: Reporting of In Vivo Experiments (ARRIVE)
-                </h3>
-                <p className="text-xs text-slate-500 mt-1">
-                  – For animal research studies, to ensure humane and ethical
-                  practices.
-                </p>
-              </div>
-            </div>
-
-            {/* Item 5 */}
-            <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
-              <div className="h-16 relative w-24 flex items-center justify-center">
-                <Image
-                  src="/images/research-services/experimental-design/ISO-Standards.png"
-                  alt="ISO Standards Logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <div>
-                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
-                  ISO Standards
-                </h3>
-                <p className="text-xs text-slate-500 mt-1">
-                  – For medical device-related experimental designs.
-                </p>
-              </div>
-            </div>
-
-            {/* Item 6 */}
-            <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
-              <div className="h-16 relative w-28 flex items-center justify-center">
-                <Image
-                  src="/images/research-services/experimental-design/WHO-FDA-Guidance.png"
-                  alt="WHO and FDA Guidance Logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <div>
-                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
-                  WHO & FDA Guidance
-                </h3>
-                <p className="text-xs text-slate-500 mt-1">
-                  – For global harmonization of biomedical and public health
-                  studies.
-                </p>
-              </div>
+            <div>
+              <h3 className="font-bold text-slate-900 text-sm sm:text-base">
+                International Council for Harmonisation – Good Clinical Practice
+                (ICH-GCP)
+              </h3>
+              <p className="text-xs text-slate-500 mt-1">
+                – For clinical trials and human subject research.
+              </p>
             </div>
           </div>
-        </section>
+
+          {/* Item 2 */}
+          <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
+            <div className="h-16 relative w-32 flex items-center justify-center">
+              <Image
+                src="/images/research-services/experimental-design/Consolidated-Standards-of-Reporting-Trials.png"
+                alt="CONSORT SPIRIT Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div>
+              <h3 className="font-bold text-slate-900 text-sm sm:text-base">
+                Consolidated Standards of Reporting Trials (CONSORT)
+              </h3>
+              <p className="text-xs text-slate-500 mt-1">
+                – For randomized controlled trials to ensure transparent and
+                complete reporting.
+              </p>
+            </div>
+          </div>
+
+          {/* Item 3 */}
+          <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
+            <div className="h-16 relative w-28 flex items-center justify-center">
+              <Image
+                src="/images/research-services/experimental-design/STROBE.png"
+                alt="STROBE Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div>
+              <h3 className="font-bold text-slate-900 text-sm sm:text-base">
+                Strengthening the Reporting of Observational Studies in
+                Epidemiology (STROBE)
+              </h3>
+              <p className="text-xs text-slate-500 mt-1">
+                – For observational and epidemiological studies.
+              </p>
+            </div>
+          </div>
+
+          {/* Item 4 */}
+          <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
+            <div className="h-16 relative w-28 flex items-center justify-center">
+              <Image
+                src={
+                  "https://pubrica.com/wp-content/uploads/2025/09/Animal-Research-Reporting-of-In-Vivo-Experiments-\u2013-ARRIVE.png"
+                }
+                alt="ARRIVE Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div>
+              <h3 className="font-bold text-slate-900 text-sm sm:text-base">
+                Animal Research: Reporting of In Vivo Experiments (ARRIVE)
+              </h3>
+              <p className="text-xs text-slate-500 mt-1">
+                – For animal research studies, to ensure humane and ethical
+                practices.
+              </p>
+            </div>
+          </div>
+
+          {/* Item 5 */}
+          <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
+            <div className="h-16 relative w-24 flex items-center justify-center">
+              <Image
+                src="/images/research-services/experimental-design/ISO-Standards.png"
+                alt="ISO Standards Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div>
+              <h3 className="font-bold text-slate-900 text-sm sm:text-base">
+                ISO Standards
+              </h3>
+              <p className="text-xs text-slate-500 mt-1">
+                – For medical device-related experimental designs.
+              </p>
+            </div>
+          </div>
+
+          {/* Item 6 */}
+          <div className="bg-white border border-slate-200 rounded-lg p-6 text-center space-y-3 flex flex-col items-center justify-between shadow-xs">
+            <div className="h-16 relative w-28 flex items-center justify-center">
+              <Image
+                src="/images/research-services/experimental-design/WHO-FDA-Guidance.png"
+                alt="WHO and FDA Guidance Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div>
+              <h3 className="font-bold text-slate-900 text-sm sm:text-base">
+                WHO & FDA Guidance
+              </h3>
+              <p className="text-xs text-slate-500 mt-1">
+                – For global harmonization of biomedical and public health
+                studies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ========================================================= */}
       {/* 4. SAMPLE WORK & REPORT BANNER                            */}
@@ -720,13 +720,13 @@ export default function ExperimentalDesignsAndPackages() {
           <GetFreeQuoteButton />
         </div>
       </section>
-      <section className="py-0 my-0 text-center">
-        {/* Centered Title & Description Header */}
-        <div className="max-w-4xl mx-auto py-0 my-0">
+      <section className="py-8 my-0 text-left">
+        {/* Container matching your standard layout margins and padding */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-0 my-0 text-left">
           <h2 className="text-3xl font-bold text-[#003B38] mb-1">
             Testimonials
           </h2>
-          <p className="text-gray-700 leading-normal mb-2">
+          <p className="text-gray-700 leading-normal mb-0">
             Learn how Pubrica’s{' '}
             <Link
               href="/academy/experimental-design/pre-experimental-research-design/"

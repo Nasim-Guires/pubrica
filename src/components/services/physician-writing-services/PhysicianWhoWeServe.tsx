@@ -98,11 +98,11 @@ export const PhysicianWhoWeServe: React.FC = () => {
 
       {/* --- Section: Dark Green CTA Banner --- */}
       <ServiceBanner
-        imageSrc="/images/publication-support/Satisfaction_Guarantee.webp"
+        imageSrc=""
         imageAlt="100% Satisfaction Guarantee"
         heading="Physician Writing Services at Pubrica"
         description="Tailored for practicing clinicians, busy physicians, and medical researchers, our expert editors ensure your manuscript is publication-ready delivering precise editing, scientific clarity, and impactful writing that meets the standards of top medical journals."
-        showQuoteButton={true}
+        showQuoteButton={false}
       />
     </div>
   );

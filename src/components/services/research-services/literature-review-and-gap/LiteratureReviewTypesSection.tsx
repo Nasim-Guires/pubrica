@@ -120,9 +120,7 @@ const rightColumnItems: ReviewTypeItem[] = [
 
 export default function LiteratureReviewTypesSection() {
   // Track open state separately for left and right column accordions
-  const [openLeftId, setOpenLeftId] = useState<string | null>(
-    "state-of-the-art",
-  );
+  const [openLeftId, setOpenLeftId] = useState<string | null>();
   const [openRightId, setOpenRightId] = useState<string | null>(null);
 
   const toggleLeft = (id: string) => {

@@ -1,6 +1,8 @@
 "use client";
 
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import { PubricaSampleWorkCard, PubricaSampleWorkCardProps } from "@/components/common/PubricaSampleWorkCardProps";
+import ServiceBanner, { BannerProps } from "@/components/common/ServiceBanner";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -94,6 +96,46 @@ const complianceStandards: ComplianceStandard[] = [
   },
 ];
 
+const literatureReviewGapAnalysesSampleWork: PubricaSampleWorkCardProps = {
+  bookCoverImage: {
+    src: "/images/research-services/literature-review-and-gap/image-7.webp",
+    alt: "Two academic researchers discussing literature review documents",
+    width: 723,
+    height: 1024,
+  },
+  sections: [
+    {
+      heading: "Literature Review and Gap Analyses Sample Work",
+      button: {
+        label: "Discover More",
+        url: "/insights/patient-safety-culture-among-operating-theatre-nurses-in-operating-room",
+      },
+    },
+    {
+      heading: "Download the full Report Now",
+      descriptionSegments: [
+        {
+          text: "Explore our sample literature review writing service for PhD thesis work, developed to meet journal-specific formatting requirements, methodological standards (e.g., PRISMA), and submission timelines for successful academic or clinical publication.",
+        },
+      ],
+      button: {
+        label: "Discover More",
+        url: "/insights/sample-work",
+      },
+    },
+  ],
+  footerDisclaimerSegments: [],
+};
+
+const serviceBannerData: BannerProps = {
+  imageSrc: "/images/publication-support/Satisfaction_Guarantee.webp",
+  imageAlt: "100% Satisfaction Guarantee",
+  heading: "Accelerate your Literature Review & Gap Analyses with Pubrica",
+  description:
+    "Partner with our expert team to navigate complex research landscapes, uncover critical knowledge gaps, and craft high-quality literature review service reports that strengthen your manuscript and boost publication success.",
+  showQuoteButton: true,
+};
+
 export default function DiseaseBasedAndComplianceSection() {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -101,22 +143,7 @@ export default function DiseaseBasedAndComplianceSection() {
       {/* ========================================================= */}
       {/* 1. TOP CTA BANNER                                         */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#062c21] py-6 px-4 sm:px-6 lg:px-8 text-center text-white">
-        <div className="max-w-5xl mx-auto space-y-6">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
-            Accelerate your Literature Review & Gap Analyses with Pubrica
-          </h2>
-          <p className="text-sm sm:text-base text-slate-200 leading-relaxed max-w-4xl mx-auto">
-            Partner with our expert team to navigate complex research
-            landscapes, uncover critical knowledge gaps, and craft high-quality
-            literature review service reports that strengthen your manuscript
-            and boost publication success.
-          </p>
-          <div>
-            <GetFreeQuoteButton />
-          </div>
-        </div>
-      </section>
+      <ServiceBanner {...serviceBannerData} />
 
       {/* ========================================================= */}
       {/* 2. DISEASE-BASED LITERATURE REVIEW SERVICES                */}
@@ -377,58 +404,7 @@ export default function DiseaseBasedAndComplianceSection() {
       {/* ========================================================= */}
       {/* 5. SAMPLE WORK & DOWNLOAD REPORT BANNER                   */}
       {/* ========================================================= */}
-      <section className="w-full bg-[#f0fdf4] py-6 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          {/* Left Column: Image */}
-          <div className="md:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-xs h-72 sm:h-80 rounded-lg overflow-hidden shadow-md">
-              <Image
-                src="/images/research-services/literature-review-and-gap/image-7.webp"
-                alt="Two academic researchers discussing literature review documents"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 40vw"
-              />
-            </div>
-          </div>
-
-          {/* Right Column: Content and Action Buttons */}
-          <div className="md:col-span-7 space-y-6">
-            {/* Top Subsection */}
-            <div className="space-y-3">
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
-                Literature Review and Gap Analyses Sample Work
-              </h3>
-              <Link
-                href="/insights/patient-safety-culture-among-operating-theatre-nurses-in-operating-room"
-                className="inline-block bg-black hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200 no-underline"
-              >
-                Discover More
-              </Link>
-            </div>
-
-            {/* Bottom Subsection */}
-            <div className="space-y-3 pt-2">
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
-                Download the full Report Now
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
-                Explore our sample literature review writing service for PhD
-                thesis work, developed to meet journal-specific formatting
-                requirements, methodological standards (e.g., PRISMA), and
-                submission timelines for successful academic or clinical
-                publication.
-              </p>
-              <Link
-                href="/insights/sample-work"
-                className="inline-block bg-black hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm px-8 py-2.5 rounded-full transition-colors duration-200 no-underline"
-              >
-                Discover More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PubricaSampleWorkCard {...literatureReviewGapAnalysesSampleWork} />
     </div>
   );
 }

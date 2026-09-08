@@ -247,10 +247,10 @@ export default function CaseReportDetails() {
           </div>
 
           {/* Right Column: Overlapping Images */}
-          <div className="lg:col-span-5 relative flex justify-center items-center py-6">
+          <div className="lg:col-span-5 relative flex justify-center items-center py-2">
             <div className="relative w-full max-w-md h-80">
               {/* Back Image (Doctor talking to colleagues) */}
-              <div className="absolute top-0 right-4 w-4/5 h-56 rounded-xl overflow-hidden shadow-md">
+              <div className="absolute top-0 right-4 w-4/5 h-56  overflow-hidden">
                 <Image
                   src="/images/physician-writing-services/case-report/Structure-of-the-Case-Report.webp" // Replace with actual image path
                   alt="Medical team discussing case"
@@ -263,7 +263,7 @@ export default function CaseReportDetails() {
         </div>
 
         {/* Footer Paragraphs */}
-        <div className="mt-12 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
+        <div className="mt-2 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
           <p>
             At Pubrica, our expert professionals create clinical{" "}
             <Link href="/academy/case-report/radiology-case-report-guide/" className="text-blue-600 no-underline hover:no-underline">

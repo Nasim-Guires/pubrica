@@ -118,7 +118,7 @@ export default function ExperimentalDesignServicesAccordion() {
             {/* Soft Gray/Blue Backdrop Shape */}
             <div className="absolute w-[280px] sm:w-[320px] h-[280px] sm:h-[320px] bg-slate-100 rounded-full top-6 left-6 -z-10" />
 
-            <div className="relative w-full h-full min-h-[340px] sm:min-h-[400px] rounded-xl overflow-hidden shadow-lg border-2 border-white z-10">
+            <div className="relative w-full h-full min-h-[340px] sm:min-h-[400px]  overflow-hidden z-10">
               <Image
                 src="/images/research-services/experimental-design/experimental-design-we-offer.png"
                 alt="Experimental design services we offer"

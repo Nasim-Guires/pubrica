@@ -19,25 +19,45 @@ export default function MetaAnalysisHeroOverview() {
       />
 
       {/* 2. Overview Content Section */}
-      <div className="bg-slate-100 py-6 px-4 sm:px-6 lg:px-8 text-slate-900">
+      <div className="bg-slate-100 py-6 px-4 sm:px-6 lg:px-8 text-slate-900 font-['Poppins']">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-            {/* Left Column Content */}
-            <div className="lg:col-span-7 flex flex-col">
-              {/* Main Heading */}
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a2f2c] leading-tight mb-4">
-                Meta-Analysis Services for Life Sciences, Pharma, and Research:
-                Streamlining Your Path to Publication
-              </h2>
+          <div className="flex flex-col">
+            {/* Main Heading */}
+            <h2 className="text-2xl sm:text-3xl font-[700] text-[#0a2f2c] leading-tight mb-4">
+              Meta-Analysis Services for Life Sciences, Pharma, and Research:
+              Streamlining Your Path to Publication
+            </h2>
 
-              {/* Subheading */}
-              <p className="text-sm sm:text-base font-semibold text-black-700 leading-snug mb-4">
-                End-to-end meta-analysis support for publication and expert guidance
-                to submit robust analyses to high-impact journals
-              </p>
+            {/* Subheading */}
+            <p className="text-sm sm:text-base font-semibold text-black-700 leading-snug mb-4">
+              End-to-end meta-analysis support for publication and expert guidance
+              to submit robust analyses to high-impact journals
+            </p>
 
-              {/* Introductory Paragraph */}
-              <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-6">
+            {/* Content wrapper with floating image */}
+            <div className="clearfix">
+              {/* Right Floating Image Frame */}
+              <div className="float-right ml-6 mb-4 w-full sm:w-[45%] max-w-md">
+                <div className="relative w-full">
+                  {/* Dark green background accent card */}
+                  <div className="absolute -bottom-3 -left-3 top-3 right-3  -z-10" />
+
+                  {/* Main Image Container */}
+                  <div className="relative z-10 aspect-[4/3] w-full  overflow-hidden ">
+                    <Image
+                      src="/images/research-services/meta-analysis/Meta-Analysis-Services-for-Life-Sciences-Pharma-and-Research.webp"
+                      alt="Meta-Analysis Services for Life Sciences, Pharma, and Research"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 450px"
+                      className="object-cover object-center"
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Introductory Paragraph (16px / text-base and Poppins) */}
+              <p className="text-base text-gray-700 leading-relaxed mb-6 font-['Poppins']">
                 Pubrica’s team of skilled editors and medical writers specializes in
                 conducting thorough,{" "}
                 <Link
@@ -68,7 +88,7 @@ export default function MetaAnalysisHeroOverview() {
               </p>
 
               {/* Bullet Points */}
-              <ul className="space-y-4 mb-8 text-xs sm:text-sm text-gray-700 leading-relaxed">
+              <ul className="space-y-4 mb-8 text-xs sm:text-sm text-gray-700 leading-relaxed clear-none">
                 <li className="flex items-start gap-2.5">
                   <span className="text-red-600 font-bold text-lg leading-none mt-0.5">
                     •
@@ -112,31 +132,11 @@ export default function MetaAnalysisHeroOverview() {
                   </span>
                 </li>
               </ul>
-
-              {/* Call to Action Button */}
-              <div>
-                <GetFreeQuoteButton />
-              </div>
             </div>
 
-            {/* Right Column Image Frame */}
-            <div className="lg:col-span-5 flex justify-center items-center pt-4 lg:pt-0">
-              <div className="relative w-full max-w-lg">
-                {/* Dark green background accent card (reduced size/offset) */}
-                <div className="absolute -bottom-3 -left-3 top-3 right-3 rounded-2xl -z-10" />
-
-                {/* Main Image Container (larger presentation) */}
-                <div className="relative z-10 aspect-[4/3] w-full rounded-2xl overflow-hidden ">
-                  <Image
-                    src="/images/research-services/meta-analysis/Meta-Analysis-Services-for-Life-Sciences-Pharma-and-Research.webp"
-                    alt="Meta-Analysis Services for Life Sciences, Pharma, and Research"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 500px"
-                    className="object-cover object-center"
-                    priority
-                  />
-                </div>
-              </div>
+            {/* Call to Action Button */}
+            <div className="mt-2">
+              <GetFreeQuoteButton />
             </div>
           </div>
         </div>

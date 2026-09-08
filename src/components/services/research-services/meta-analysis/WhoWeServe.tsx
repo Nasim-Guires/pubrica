@@ -14,6 +14,10 @@ interface CardData {
 export default function WhoWeServe() {
   const [activeCard, setActiveCard] = useState<string | null>(null);
 
+  const handleCardClick = (id: string) => {
+    setActiveCard((prev) => (prev === id ? null : id));
+  };
+
   const cards: CardData[] = [
     {
       id: "academicians",
@@ -61,7 +65,7 @@ export default function WhoWeServe() {
       description: (
         <span>
           Enabling Contract Research Organizations and consultants to outsource high-quality meta-analyses backed by compliance with{" "}
-          <a href="https://www.prisma-statement.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600-400 ">
+          <a href="https://www.prisma-statement.org/" target="_blank" rel="noopener noreferrer" className="text-blue-400">
             PRISMA
           </a>{" "}
           and MARS guidelines.
@@ -104,14 +108,14 @@ export default function WhoWeServe() {
             return (
               <div
                 key={card.id}
-                onMouseEnter={() => setActiveCard(card.id)}
-                onMouseLeave={() => setActiveCard(null)}
-                className="relative h-64 rounded-none overflow-hidden cursor-pointer transition-all duration-300 shadow-md"
+                onClick={() => handleCardClick(card.id)}
+                className="group relative h-64 rounded-none overflow-hidden cursor-pointer transition-all duration-300 shadow-md flex flex-col justify-end"
               >
                 <div
-                  className={`absolute inset-0 transition-transform duration-500 ${
-                    isHovered ? "scale-105" : "scale-100"
-                  }`}
+                  className={`absolute inset-0 transition-transform duration-500 ${isHovered
+                      ? "scale-105"
+                      : "scale-100 md:group-hover:scale-105"
+                    }`}
                 >
                   <Image
                     src={card.imageUrl}
@@ -123,9 +127,10 @@ export default function WhoWeServe() {
                 </div>
 
                 <div
-                  className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end p-6 transition-opacity duration-300 ${
-                    isHovered ? "opacity-0 pointer-events-none" : "opacity-100"
-                  }`}
+                  className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end p-6 transition-opacity duration-300 ${isHovered
+                      ? "opacity-0 pointer-events-none"
+                      : "opacity-100 md:group-hover:opacity-0 md:group-hover:pointer-events-none"
+                    }`}
                 >
                   <h3 className="text-white font-bold text-lg leading-snug">
                     {card.title}
@@ -133,9 +138,10 @@ export default function WhoWeServe() {
                 </div>
 
                 <div
-                  className={`absolute inset-0 bg-black p-6 flex flex-col justify-start transition-opacity duration-300 ${
-                    isHovered ? "opacity-100 z-10" : "opacity-0 pointer-events-none"
-                  }`}
+                  className={`absolute inset-0 bg-black p-6 flex flex-col justify-start transition-opacity duration-300 ${isHovered
+                      ? "opacity-100 z-10 pointer-events-auto"
+                      : "opacity-0 pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto md:group-hover:z-10"
+                    }`}
                 >
                   <h3 className="text-white font-bold text-lg mb-4 leading-snug">
                     {card.title}

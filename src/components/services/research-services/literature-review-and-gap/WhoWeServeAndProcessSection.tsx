@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 interface AudienceCard {
   id: string;
@@ -17,13 +17,7 @@ interface StepItem {
   title: string;
   description: React.ReactNode;
 }
-interface AudienceCard {
-  id: string;
-  title: string;
-  description: React.ReactNode;
-  imageSrc: string;
-  altText: string;
-}
+
 const audienceCards: AudienceCard[] = [
   {
     id: "pharma-biotech",
@@ -58,7 +52,11 @@ const audienceCards: AudienceCard[] = [
     description: (
       <>
         For dissertation development, thesis writing, systematic review, topic mapping,{" "}
-        <Link href="/services/research-services/literature-review-and-gap" className="text-blue-600 no-underline hover:no-underline">
+        <Link
+          href="/services/research-services/literature-review-and-gap"
+          onClick={(e) => e.stopPropagation()}
+          className="text-blue-600 no-underline hover:no-underline"
+        >
           research consultancy
         </Link>
         , gap analysis, and peer-reviewed journal publications, requiring methodologically sound and publication-ready literature review is required.
@@ -167,9 +165,25 @@ const processSteps: StepItem[] = [
 export default function WhoWeServeAndProcessSection() {
   const [activeId, setActiveId] = useState<string | null>(null);
 
+  // Automatically reset active card state when transitioning to desktop screen size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setActiveId(null);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handleCardClick = (id: string) => {
+    // Ignore clicks on desktop viewports (>= 768px) so desktop relies purely on hover
+    if (typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches) {
+      return;
+    }
     setActiveId((prev) => (prev === id ? null : id));
   };
+
   return (
     <div className="w-full font-sans">
       {/* ========================================================= */}
@@ -206,24 +220,26 @@ export default function WhoWeServeAndProcessSection() {
                 <div
                   key={card.id}
                   onClick={() => handleCardClick(card.id)}
-                  onMouseEnter={() => setActiveId(card.id)}
-                  onMouseLeave={() => setActiveId(null)}
                   className="group relative h-64 sm:h-72 w-full rounded-lg overflow-hidden cursor-pointer shadow-md border border-slate-200 transition-all duration-300"
                 >
                   <Image
                     src={card.imageSrc}
                     alt={card.altText}
                     fill
-                    className={`object-cover transition-transform duration-500 group-hover:scale-105 ${isActive ? "scale-105" : ""
+                    className={`object-cover transition-transform duration-500 md:group-hover:scale-105 ${isActive ? "scale-105" : ""
                       }`}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div
-                    className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                    className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-opacity duration-300 ${isActive
+                        ? "opacity-0"
+                        : "opacity-100 md:group-hover:opacity-0"
                       }`}
                   />
                   <div
-                    className={`absolute bottom-0 left-0 right-0 p-5 z-10 transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                    className={`absolute bottom-0 left-0 right-0 p-5 z-10 transition-opacity duration-300 ${isActive
+                        ? "opacity-0"
+                        : "opacity-100 md:group-hover:opacity-0"
                       }`}
                   >
                     <h3 className="text-white text-base sm:text-lg font-bold leading-snug">
@@ -231,7 +247,9 @@ export default function WhoWeServeAndProcessSection() {
                     </h3>
                   </div>
                   <div
-                    className={`absolute inset-0 bg-black transition-opacity duration-300 p-6 flex flex-col justify-start z-20 overflow-y-auto group-hover:opacity-100 ${isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                    className={`absolute inset-0 bg-black transition-opacity duration-300 p-6 flex flex-col justify-start z-20 overflow-y-auto ${isActive
+                        ? "opacity-100 pointer-events-auto"
+                        : "opacity-0 pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto"
                       }`}
                   >
                     <h3 className="text-white text-base sm:text-lg font-bold mb-3 leading-snug">

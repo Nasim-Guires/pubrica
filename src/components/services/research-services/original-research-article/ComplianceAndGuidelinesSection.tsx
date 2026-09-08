@@ -83,7 +83,7 @@ const reportingGuidelines: GuidelineItem[] = [
 ];
 
 export default function ComplianceAndGuidelinesSection() {
-  const [openAccordion, setOpenAccordion] = useState<'ethical' | 'reporting' | null>('ethical');
+  const [openAccordion, setOpenAccordion] = useState<'ethical' | 'reporting' | null>();
 
   const toggleAccordion = (accordion: 'ethical' | 'reporting') => {
     setOpenAccordion((prev) => (prev === accordion ? null : accordion));
