@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import CommonFAQ from "@/components/common/FAQ";
 import DynamicInsightsSection from "@/components/services/DynamicInsightsSection";
-import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
 import CommonTestimonial from "@/components/common/CommonTestimonials";
 import { MovingTestimonials, TestimonialItem } from "@/components/common/MovingTestimonials.tsx";
@@ -152,7 +151,7 @@ export default function PubricaResourceHub() {
       </section>
 
       {/* ================= SECTION 3: INSIGHTS SECTION (live from Academy) ================= */}
-      <InsightsSection />
+    
     </div>
   );
 }

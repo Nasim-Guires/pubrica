@@ -8,6 +8,7 @@ import TherapeuticAreasGrid from "@/features/services/components/TherapeuticArea
 import PublicationServices from "@/features/services/components/PublicationServices";
 import PubricaResourceHub from "@/features/services/components/PubricaResourceHub";
 import CommonFAQ from "@/components/common/FAQ";
+import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
 const service = PUBLICATION_SUPPORT_SERVICE;
 const faqs = [
@@ -78,6 +79,7 @@ export default function Page() {
         title="Frequently Asked Questions"
         faqs={faqs}
       />
+      <InsightsSection/>
     </>
   );
 }
