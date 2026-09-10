@@ -8,42 +8,42 @@ export const physicianWritingWhoWeServe = [
     imageUrl: "/images/physician-writing-services/customized-writing/Domain-Specific-Medical-Writers.jpg",
   },
   {
-    title: "Journal & Regulatory Compliance",
+    title: "Medical Device & Diagnostics Companies",
     bullets: [
-      "Accurate formatting and referencing in APA, MLA, Vancouver, Harvard, and other citation styles.",
-      "Full alignment with ICMJE, CONSORT, GPP3, and target journal author instructions.",
+      "Accurate formatting and referencing in APA, MLA, Vancouver, Harvard, and other style guides",
+      "Full alignment with ICMJE, CONSORT, GPP3, and target journal author instructions",
     ],
     imageUrl: "/images/physician-writing-services/customized-writing/Medical-Device-Diagnostics-Companies-1.jpg",
   },
   {
     title: "100% Original and Ethical Writing",
     bullets: [
-      "Guaranteed plagiarism-free manuscripts with Turnitin or iThenticate reports.",
-      "Ethical content development with no ghostwriting, data manipulation, or duplicate publication.",
+      "Guaranteed plagiarism-free output with Turnitin or iThenticate reports",
+      "Ethical content development, no ghost writing, data manipulation, or duplicate publication",
     ],
     imageUrl: "/images/physician-writing-services/customized-writing/100-Original-and-Ethical-Writing.jpg",
   },
   {
     title: "Evidence-Based, Data-Driven Drafting",
     bullets: [
-      "Every manuscript is supported by current, peer-reviewed scientific literature.",
-      "Support with data interpretation, statistical framing, and literature synthesis.",
+      "Every manuscript backed by current, peer-reviewed literature",
+      "Support with data interpretation, statistical framing, and literature synthesis",
     ],
     imageUrl: "/images/physician-writing-services/customized-writing/Evidence-Based-Data-Driven-Drafting.jpg",
   },
   {
     title: "Confidentiality and Data Security",
     bullets: [
-      "All projects are governed by strict NDAs and ISO 27001-certified data protection protocols.",
-      "Secure document handling with encryption and controlled access.",
+      "All projects are governed by strict NDAs and ISO 27001-certified data protection protocols",
+      "Secure document handling with encryption and access control",
     ],
     imageUrl: "/images/physician-writing-services/customized-writing/Confidentiality-and-Data-Security.jpg",
   },
   {
     title: "Reliable Timelines and Project Tracking",
     bullets: [
-      "Structured delivery with milestone tracking, Gantt charts (if needed), and real-time project updates.",
-      "Support for urgent submissions, revisions, and journal resubmissions.",
+      "Structured delivery with milestone tracking, Gantt charts (if needed), and real-time updates",
+      "Support for urgent submissions, handling revisions, and journal resubmissions",
     ],
     imageUrl: "/images/physician-writing-services/customized-writing/Reliable-Timelines-and-Project-Tracking.jpg",
   },

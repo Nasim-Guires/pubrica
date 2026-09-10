@@ -119,7 +119,7 @@ export default function PatientEducationPackagesAndPricing() {
             </h2>
             <p className="text-slate-700 text-base sm:text-lg leading-snug max-w-5xl">
               Pubrica offers medically accurate, guideline-compliant{" "}
-              <Link href="/insights/diabetic-foot-ulcer/" className="text-blue-600 no-underline hover:no-underline">
+              <Link href="/insights/sample-work/diabetic-foot-ulcer/" className="text-blue-600 no-underline hover:no-underline">
                 patient education content
               </Link>{" "}
               developed by healthcare experts, optimized for comprehension, and
@@ -213,7 +213,7 @@ export default function PatientEducationPackagesAndPricing() {
             {/* Right: Smaller Image Container (Narrrow: col-span-4) */}
             <div className="lg:col-span-4 relative flex justify-center items-start lg:mt-2">
               {/* Removed 'border', reduced min-height, set lower width */}
-              <div className="relative w-[300px] h-[200px] lg:w-full lg:h-[250px] max-w-full rounded-md overflow-hidden shadow-sm bg-slate-100">
+              <div className="relative w-[300px] h-[200px] lg:w-full lg:h-[250px] max-w-full r overflow-hidden  ">
                 <Image
                   src="/images/physician-writing-services/patient-education-content/Why-Choose-Pubrica-for-Patient-Education-Content-Service.jpg"
                   alt="Medical team reviewing regulatory compliance documentation"
@@ -240,7 +240,7 @@ export default function PatientEducationPackagesAndPricing() {
             heading: "Patient Education Content Service Sample Work",
             button: {
               label: "Discover More",
-              url: "/insights/gestational-diabetes-mellitus/",
+              url: "/insights/sample-work/gestational-diabetes-mellitus/",
             },
           },
           {
@@ -249,7 +249,7 @@ export default function PatientEducationPackagesAndPricing() {
               { text: "Explore our " },
               {
                 text: "patient education content samples",
-                url: "/insights/sleep-apnea/",
+                url: "/insights/sample-work/sleep-apnea/",
               },
               {
                 text: ", designed for clinical accuracy, health literacy, and ready use in patient care settings.",

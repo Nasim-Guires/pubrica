@@ -23,7 +23,25 @@ export default function CommonWhoWeServe({
     const [activeId, setActiveId] = useState<number | null>(null);
 
     const handleCardClick = (index: number) => {
+        // Only toggle via click on mobile devices (screens smaller than 768px)
+        if (typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches) {
+            return;
+        }
         setActiveId((prev) => (prev === index ? null : index));
+    };
+
+    const handleMouseEnter = (index: number) => {
+        // Only trigger hover state on desktop devices (768px and up)
+        if (typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches) {
+            setActiveId(index);
+        }
+    };
+
+    const handleMouseLeave = () => {
+        // Only clear hover state on desktop devices
+        if (typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches) {
+            setActiveId(null);
+        }
     };
 
     return (
@@ -49,13 +67,13 @@ export default function CommonWhoWeServe({
                             <div
                                 key={index}
                                 onClick={() => handleCardClick(index)}
-                                onMouseEnter={() => setActiveId(index)}
-                                onMouseLeave={() => setActiveId(null)}
+                                onMouseEnter={() => handleMouseEnter(index)}
+                                onMouseLeave={handleMouseLeave}
                                 className="group relative h-64 sm:h-72 rounded-sm overflow-hidden bg-black cursor-pointer shadow-md transition-all duration-300"
                             >
                                 {/* Image */}
                                 <div
-                                    className={`absolute inset-0 transition-opacity duration-300 group-hover:opacity-0 z-0 ${isActive ? "opacity-0" : "opacity-100"
+                                    className={`absolute inset-0 transition-opacity duration-300 z-0 ${isActive ? "opacity-0" : "opacity-100 md:group-hover:opacity-0"
                                         }`}
                                 >
                                     <Image
@@ -71,7 +89,7 @@ export default function CommonWhoWeServe({
 
                                 {/* Default */}
                                 <div
-                                    className={`absolute bottom-0 left-0 right-0 p-5 z-10 transition-opacity duration-300 group-hover:opacity-0 flex items-end ${isActive ? "opacity-0" : "opacity-100"
+                                    className={`absolute bottom-0 left-0 right-0 p-5 z-10 transition-opacity duration-300 flex items-end ${isActive ? "opacity-0" : "opacity-100 md:group-hover:opacity-0"
                                         }`}
                                 >
                                     <h3 className="font-bold text-sm sm:text-base text-white leading-snug">
@@ -81,9 +99,9 @@ export default function CommonWhoWeServe({
 
                                 {/* Hover */}
                                 <div
-                                    className={`absolute inset-0 bg-black p-5 sm:p-6 text-white transition-opacity duration-300 group-hover:opacity-100 z-20 flex flex-col ${isActive
+                                    className={`absolute inset-0 bg-black p-5 sm:p-6 text-white transition-opacity duration-300 z-20 flex flex-col ${isActive
                                             ? "opacity-100 pointer-events-auto"
-                                            : "opacity-0 pointer-events-none"
+                                            : "opacity-0 pointer-events-none md:group-hover:opacity-100"
                                         }`}
                                 >
                                     <h3 className="font-bold text-sm sm:text-base border-b border-gray-700 pb-2">

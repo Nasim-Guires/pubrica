@@ -181,11 +181,22 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
             return (
               <div
                 key={client.id}
-                onClick={() =>
-                  setActiveClientId((prev) => (prev === client.id ? null : client.id))
-                }
-                onMouseEnter={() => setActiveClientId(client.id)}
-                onMouseLeave={() => setActiveClientId(null)}
+                onClick={() => {
+                  if (typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches) {
+                    return;
+                  }
+                  setActiveClientId((prev) => (prev === client.id ? null : client.id));
+                }}
+                onMouseEnter={() => {
+                  if (typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches) {
+                    setActiveClientId(client.id);
+                  }
+                }}
+                onMouseLeave={() => {
+                  if (typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches) {
+                    setActiveClientId(null);
+                  }
+                }}
                 className="w-full aspect-[16/10] bg-slate-100 rounded border border-gray-200 shadow-sm relative overflow-hidden flex flex-col justify-end select-none group cursor-pointer"
               >
                 {/* Background Image Layer */}
@@ -197,13 +208,13 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
 
                 {/* Default State: Bottom Dark Overlay Gradient */}
                 <div
-                  className={`absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/60 to-transparent pt-6 pb-5 px-5 z-10 transition-opacity duration-300 group-hover:opacity-0 ${isActive ? "opacity-0" : "opacity-100"
+                  className={`absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/60 to-transparent pt-6 pb-5 px-5 z-10 transition-opacity duration-300 ${isActive ? "opacity-0" : "opacity-100 md:group-hover:opacity-0"
                     }`}
                 />
 
                 {/* Default State: Visible Bottom Label */}
                 <h3
-                  className={`text-white text-xs sm:text-sm font-extrabold tracking-wide relative z-20 p-5 group-hover:opacity-0 transition-opacity duration-300 ${isActive ? "opacity-0" : "opacity-100"
+                  className={`text-white text-xs sm:text-sm font-extrabold tracking-wide relative z-20 p-5 transition-opacity duration-300 ${isActive ? "opacity-0" : "opacity-100 md:group-hover:opacity-0"
                     }`}
                 >
                   {client.label}
@@ -211,7 +222,9 @@ export const DataAnalyticsFinalExtensions: React.FC = () => {
 
                 {/* Hover State: Full Black Overlay Window with Text */}
                 <div
-                  className={`absolute inset-0 bg-black z-30 p-6 flex flex-col justify-center transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:pointer-events-auto ${isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                  className={`absolute inset-0 bg-black z-30 p-6 flex flex-col justify-center transition-all duration-300 ease-in-out ${isActive
+                      ? "opacity-100 pointer-events-auto"
+                      : "opacity-0 pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto"
                     }`}
                 >
                   <h3 className="text-white text-sm sm:text-base font-extrabold mb-3 leading-snug">

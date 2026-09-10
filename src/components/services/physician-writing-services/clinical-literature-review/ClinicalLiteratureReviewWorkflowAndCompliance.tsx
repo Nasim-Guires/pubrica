@@ -138,9 +138,11 @@ export default function ClinicalLiteratureReviewWorkflowAndCompliance() {
                   {/* PRISMA */}
                   <div className="border border-slate-200 rounded-lg p-5 text-center flex flex-col items-center space-y-3 shadow-sm">
                     <div className="h-12 flex items-center justify-center">
-                      <span className="font-extrabold text-transparent text-xl bg-clip-text bg-gradient-to-r from-sky-500 via-purple-500 to-pink-500">
-                        PRISMA
-                      </span>
+                      <img
+                        src="/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Preferred-Reporting-Items-for-Systematic-Reviews.png"
+                        alt="PRISMA Guidelines"
+                        className="max-h-12 object-contain"
+                      />
                     </div>
                     <h4 className="text-xs font-bold text-slate-900">
                       PRISMA (Preferred Reporting Items for Systematic Reviews and
@@ -155,9 +157,11 @@ export default function ClinicalLiteratureReviewWorkflowAndCompliance() {
                   {/* Cochrane */}
                   <div className="border border-slate-200 rounded-lg p-5 text-center flex flex-col items-center space-y-3 shadow-sm">
                     <div className="h-12 flex items-center justify-center">
-                      <span className="font-bold text-sky-800 text-lg tracking-wide">
-                        Cochrane
-                      </span>
+                      <img
+                        src="/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Cochrane-Handbook-for-Systematic-Reviews-of-Interventions.png"
+                        alt="Cochrane Handbook"
+                        className="max-h-12 object-contain"
+                      />
                     </div>
                     <h4 className="text-xs font-bold text-slate-900">
                       Cochrane Handbook for Systematic Reviews of Interventions
@@ -170,9 +174,11 @@ export default function ClinicalLiteratureReviewWorkflowAndCompliance() {
                   {/* JBI */}
                   <div className="border border-slate-200 rounded-lg p-5 text-center flex flex-col items-center space-y-3 shadow-sm">
                     <div className="h-12 flex items-center justify-center">
-                      <span className="font-extrabold text-blue-900 text-lg">
-                        JBI
-                      </span>
+                      <img
+                        src="/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/JBI-Joanna-Briggs-Institute-Guidelines.png"
+                        alt="JBI Guidelines"
+                        className="max-h-12 object-contain"
+                      />
                     </div>
                     <h4 className="text-xs font-bold text-slate-900">
                       JBI (Joanna Briggs Institute) Guidelines

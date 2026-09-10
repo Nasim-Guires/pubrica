@@ -19,7 +19,7 @@ interface MethodCategory {
 
 export const DataAnalyticsServicesExtension: React.FC = () => {
   // Accordion active tracking state (Defaults to index 0 / Supervised Learning open)
-  const [activeMethodId, setActiveMethodId] = useState<number | null>(1);
+  const [activeMethodId, setActiveMethodId] = useState<number | null>();
 
 
 
@@ -172,34 +172,30 @@ export const DataAnalyticsServicesExtension: React.FC = () => {
       </section>
 
       {/* --- Section 2: Techniques Split Layout with Accordion Framework --- */}
-      <section className="py-7 px-6 md:px-12 lg:px-24 bg-[#f4f6fa]">
+      <section className="py-4 sm:py-7 px-6 md:px-12 lg:px-24 bg-[#f4f6fa]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-[#0c313a] text-2xl md:text-3xl font-bold mb-12 text-center tracking-tight">
+          <h2 className="text-[#0c313a] text-2xl md:text-3xl font-bold mb-6 sm:mb-12 text-center tracking-tight">
             We Also Use a Variety of Statistical Methods and Techniques
           </h2>
 
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
-            {/* Left Overlapping Images Graphic */}
-            <div className="relative w-full max-w-[360px] h-[320px] flex-shrink-0">
-              {/* Subtle Light Circle Background Accent */}
-              <div className="absolute inset-0 bg-slate-200/50 rounded-full scale-90 -z-0" />
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
 
-              {/* Top-Left Image Card (Charts/Analytics) */}
-              <div className="absolute top-0 left-0 w-48 h-48 rounded-2xl overflow-hidden shadow-sm z-10">
-                <img
-                  src="/images/data-analytics-machine-learning/Ensure-Robust-Results-with-Pubricas-Machine-Learning-Data-Analytics.webp"
-                  alt="Data Analytics Overview"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            {/* Left Graphic Container */}
+            <div className="flex justify-center items-center w-full">
+              <div className="relative w-full max-w-[280px] sm:max-w-[380px] h-[300px] sm:h-[380px] flex-shrink-0 mx-auto flex items-center justify-center">
 
-              {/* Bottom-Right Image Card (Lab Technician) */}
-              <div className="absolute bottom-0 right-0 w-52 h-52 rounded-2xl overflow-hidden shadow-md z-20">
-                <img
-                  src="/images/data-analytics-machine-learning/We-Also-Use-a-Variety-of-Statistical-Methods-and-Techniques.png"
-                  alt="We Also Use a Variety of Statistical Methods and Techniques"
-                  className="w-full h-full object-cover"
-                />
+                {/* Subtle Light Circle Background Accent */}
+                <div className="absolute inset-0 bg-slate-200/50 rounded-full scale-95 -z-0" />
+
+                {/* Image Card (No border, no shadow, fully responsive & bigger) */}
+                <div className="absolute w-64 h-64 sm:w-80 sm:h-80 z-20 flex items-center justify-center">
+                  <img
+                    src="/images/data-analytics-machine-learning/We-Also-Use-a-Variety-of-Statistical-Methods-and-Techniques.png"
+                    alt="We Also Use a Variety of Statistical Methods and Techniques"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+
               </div>
             </div>
 
@@ -217,7 +213,7 @@ export const DataAnalyticsServicesExtension: React.FC = () => {
                       onClick={() =>
                         setActiveMethodId(isActive ? null : tech.id)
                       }
-                      className="w-full flex items-center gap-4 py-3.5 px-2 text-left transition-colors hover:bg-slate-100/50"
+                      className="w-full flex items-center gap-4 py-3 px-2 text-left transition-colors hover:bg-slate-100/50"
                     >
                       <span className="text-[#0c313a] text-sm font-medium w-4 text-center">
                         {isActive ? "−" : "+"}
@@ -230,8 +226,8 @@ export const DataAnalyticsServicesExtension: React.FC = () => {
                     {/* Accordion Content Panel */}
                     <div
                       className={`transition-all duration-300 ease-in-out overflow-hidden ${isActive
-                        ? "max-h-[200px] py-2 px-8 text-gray-600"
-                        : "max-h-0"
+                          ? "max-h-[200px] py-2 px-8 text-gray-600"
+                          : "max-h-0"
                         }`}
                     >
                       <p className="text-xs sm:text-sm leading-relaxed">
@@ -242,6 +238,7 @@ export const DataAnalyticsServicesExtension: React.FC = () => {
                 );
               })}
             </div>
+
           </div>
         </div>
       </section>

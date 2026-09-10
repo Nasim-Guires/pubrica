@@ -265,26 +265,29 @@ export default function TherapeuticAreasAndTools() {
               return (
                 <div
                   key={category.id}
-                  className="bg-white border border-emerald-100/80 rounded-lg overflow-hidden shadow-xs transition-all duration-200"
+                  className="bg-[#f4fbf7] border border-[#d1fae5] rounded-lg overflow-hidden shadow-xs transition-all duration-200"
                 >
                   <button
                     onClick={() => toggleCard(category.id)}
-                    className="w-full text-left bg-emerald-700 hover:bg-[#0c302d] p-4 flex items-center justify-between transition-colors focus:outline-none cursor-pointer"
+                    className="w-full text-left bg-[#f4fbf7] hover:bg-[#e6f4ed] p-4 flex items-center justify-between transition-colors focus:outline-none cursor-pointer"
                   >
-                    <span className="font-semibold text-white text-sm sm:text-base pr-2">
-                      {category.title}
-                    </span>
-                    <span className="text-emerald-100 font-bold text-lg select-none">
+                    <div className="flex items-center space-x-3 pr-2">
+                      {/* Optional: Add your category.icon here if available */}
+                      <span className="font-semibold text-[#0b2b26] text-sm sm:text-base">
+                        {category.title}
+                      </span>
+                    </div>
+                    <span className="text-[#0b2b26] font-bold text-lg select-none">
                       {isOpen ? "—" : "+"}
                     </span>
                   </button>
 
                   {isOpen && (
-                    <div className="p-4 bg-white border-t border-emerald-100">
+                    <div className="p-4 bg-white border-t border-[#d1fae5]">
                       <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
                         {category.tools.map((tool, index) => (
                           <li key={index} className="flex items-start">
-                            <span className="text-emerald-700 mr-2 font-bold">•</span>
+                            <span className="text-[#0b2b26] mr-2 font-bold">•</span>
                             <span>
                               <strong>{tool.name}</strong> – {tool.description}
                             </span>

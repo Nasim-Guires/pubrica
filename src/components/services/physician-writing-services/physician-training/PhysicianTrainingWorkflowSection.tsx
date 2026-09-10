@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Plus, Minus } from "lucide-react";
 import WhoWeServeSection from "./WhoWeServeSection";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import ServiceBanner, { BannerProps } from "@/components/common/ServiceBanner";
 
 // Who We Serve Data with Unsplash Image URLs
 const whoWeServeData = [
@@ -78,7 +79,7 @@ const trainingProcessSteps = [
         description:
             "Our process starts with a comprehensive consultation to identify the clinical specialty, learning goals, learner demographics (e.g., residents, faculty, practicing physicians), and any regulatory/institutional requirements (e.g., CME credits, NABH compliance).",
         position: "bottom", // Card at bottom, badge at top
-        iconSrc: "/icons/Initial-Consultation-Needs-Assessment.png", // Optional icon path
+        iconSrc: "/images/icons/Initial-Consultation-Needs-Assessment.png", // Optional icon path
     },
     {
         stepNumber: 2,
@@ -166,6 +167,17 @@ const complianceData: ComplianceItem[] = [
         ],
     },
 ];
+
+const serviceBannerData: BannerProps = {
+    imageSrc:
+        "/images/publication-support/journal-selection/Satisfaction_Guarantee.webp",
+    imageAlt: "100% Satisfaction Guarantee",
+    heading:
+        "Enhance our specialized training, ensuring quicker delivery of top-notch manuscripts.",
+    description:
+        "Access clinical education specialists who provide specialty-specific training modules, allowing you to stay up-to-date on evidence-based guidelines and improve your clinical performance in real-time.",
+    showQuoteButton: true,
+};
 
 export default function PhysicianTrainingWorkflowSection() {
     // Accordion state initialized to null so all accordions start CLOSED by default
@@ -365,38 +377,7 @@ export default function PhysicianTrainingWorkflowSection() {
             </section>
 
             {/* 3. Satisfaction Banner */}
-            <section className="bg-[#122826] text-white py-5 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-                    <div className="flex items-center gap-6 flex-col sm:flex-row">
-                        <div className="w-36 h-36 sm:w-40 sm:h-40 flex items-center justify-center shrink-0 overflow-hidden">
-                            <Image
-                                src="/images/publication-support/journal-selection/Satisfaction_Guarantee.webp"
-                                alt="100% Satisfaction Guarantee"
-                                width={160}
-                                height={160}
-                                className="w-full h-full object-contain"
-                            />
-                        </div>
-
-                        <div>
-                            <h3 className="text-xl font-bold mb-1">
-                                Enhance our specialized training, ensuring quicker delivery of
-                                top-notch manuscripts.
-                            </h3>
-
-                            <p className="text-sm text-gray-300 max-w-2xl leading-relaxed">
-                                Access clinical education specialists who provide
-                                specialty-specific training modules, allowing you to stay
-                                up-to-date on evidence-based guidelines and improve your clinical
-                                performance in real-time.
-                            </p>
-                        </div>
-                    </div>
-
-
-                </div>
-            </section>
-            <GetFreeQuoteButton />
+            <ServiceBanner {...serviceBannerData} />
             {/* 4. Our Compliance and Guideline Standards (Closed Accordions by Default) */}
             <section className="py-7 bg-white">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

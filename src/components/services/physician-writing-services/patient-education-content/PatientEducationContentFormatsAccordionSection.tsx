@@ -14,8 +14,8 @@ interface AccordionItem {
 export default function PatientEducationContentFormatsAccordionSection() {
   // State to track open accordion sections (defaulting to the first item or multiple)
   const [openItems, setOpenItems] = useState<Record<string, boolean>>({
-    "disease-webpages": true,
-    "treatment-webpages": false,
+    "": true,
+    "": false,
   });
 
   const toggleAccordion = (id: string) => {

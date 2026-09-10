@@ -162,67 +162,212 @@ export default function PhysicianSpecialtiesAndAddons() {
     };
 
     return (
-        <div className="w-full bg-white py-6 text-slate-800">
-            <div className="max-w-6xl mx-auto px-4 space-y-16">
-
-                {/* SECTION 1: Supporting Physicians Across Specialties */}
-                <section className="space-y-6">
-                    <div>
-                        <h2 className="text-xl md:text-2xl font-bold text-[#1a2b49] mb-2">
-                            Supporting Physicians Across Specialties
+        <>
+            <section className="py-16 px-4 md:px-12 bg-gradient-to-br from-emerald-100 via-teal-50 to-emerald-200">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                    {/* Left Column: Title and Description */}
+                    <div className="lg:col-span-1 space-y-4 pt-4">
+                        <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+                            Who We Serve
                         </h2>
-                        <p className="text-xs md:text-sm text-slate-600 max-w-4xl leading-relaxed">
-                            We empower clinicians worldwide—across diverse specialties and professional pathways—with expert support tailored to their academic, clinical, and educational goals.
+                        <p className="text-sm text-slate-700 leading-relaxed">
+                            We specialize in supporting only physicians and physician-researchers in understanding high-quality, customized medical writing. Our services are shaped to accommodate physicians&apos; changing needs in clinical practice, teaching, and research as they document, publish, teach, and communicate more effectively. We proudly serve:
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-2">
-                        {/* Left Staggered Image */}
-                        <div className="lg:col-span-5 flex justify-center lg:justify-start">
-                            <div className="relative w-full max-w-md h-64 md:h-72 rounded-lg overflow-hidden border border-slate-200 shadow-sm">
-                                <Image
-                                    src="/images/physician-writing-services/customized-writing/Physicians-Across-Specialties.webp"
-                                    alt="Doctor with stethoscope reviewing documents"
-                                    fill
-                                    className="object-cover"
-                                    unoptimized
-                                />
+                    {/* Right Columns: Grid of Cards */}
+                    <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                        {/* Clinicians in Practice */}
+                        <div className="bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <h3 className="font-bold text-slate-900 text-base mb-3">
+                                    Clinicians in Practice
+                                </h3>
+                                <p className="text-xs text-slate-600 leading-relaxed">
+                                    Physicians who need support in writing case reports, clinical observations, patient education materials, or documentation for hospital use.
+                                </p>
                             </div>
                         </div>
 
-                        {/* Right Accordion */}
-                        <div className="lg:col-span-7 divide-y divide-slate-300 border-t border-b border-slate-300">
-                            {specialtyData.map((item) => {
-                                const isOpen = openSpecialty === item.id;
+                        {/* Physician-Researchers */}
+                        <div className="bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <h3 className="font-bold text-slate-900 text-base mb-3">
+                                    Physician-Researchers
+                                </h3>
+                                <p className="text-xs text-slate-600 leading-relaxed">
+                                    Doctors involved in research, seeking assistance with original manuscripts, systematic reviews, grant proposals, or regulatory submissions.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Medical Academics & Faculty (1) */}
+                        <div className="bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <h3 className="font-bold text-slate-900 text-base mb-3">
+                                    Medical Academics & Faculty
+                                </h3>
+                                <p className="text-xs text-slate-600 leading-relaxed">
+                                    Professors, lecturers, and academic physicians prepare scholarly publications, teaching materials, or dissertations aligned with institutional standards.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Postgraduate and Specialty Trainees */}
+                        <div className="bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <h3 className="font-bold text-slate-900 text-base mb-3">
+                                    Postgraduate and Specialty Trainees
+                                </h3>
+                                <p className="text-xs text-slate-600 leading-relaxed">
+                                    MDs, DMs, and residents working on theses, publications, or preparing for board certifications and specialty exams.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Key Opinion Leaders & Speakers */}
+                        <div className="bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <h3 className="font-bold text-slate-900 text-base mb-3">
+                                    Key Opinion Leaders & Speakers
+                                </h3>
+                                <p className="text-xs text-slate-600 leading-relaxed">
+                                    Physicians leading conferences, CME events, and workshops need presentation content, white papers, or expert commentary.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Medical Academics & Faculty (2) */}
+                        <div className="bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <h3 className="font-bold text-slate-900 text-base mb-3">
+                                    Medical Academics & Faculty
+                                </h3>
+                                <p className="text-xs text-slate-600 leading-relaxed">
+                                    Professors, lecturers, and academic physicians prepare scholarly publications, teaching materials, or dissertations aligned with institutional standards.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div className="w-full bg-white py-6 text-slate-800">
+                <div className="max-w-6xl mx-auto px-4 space-y-16">
+
+                    {/* SECTION 1: Supporting Physicians Across Specialties */}
+                    <section className="space-y-6">
+                        <div>
+                            <h2 className="text-xl md:text-2xl font-bold text-[#1a2b49] mb-2">
+                                Supporting Physicians Across Specialties
+                            </h2>
+                            <p className="text-xs md:text-sm text-slate-600 max-w-4xl leading-relaxed">
+                                We empower clinicians worldwide—across diverse specialties and professional pathways—with expert support tailored to their academic, clinical, and educational goals.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-2">
+                            {/* Left Staggered Image */}
+                            <div className="lg:col-span-5 flex justify-center lg:justify-start">
+                                <div className="relative w-full max-w-md h-64 md:h-72 rounded-lg overflow-hidden">
+                                    <Image
+                                        src="/images/physician-writing-services/customized-writing/Physicians-Across-Specialties.webp"
+                                        alt="Doctor with stethoscope reviewing documents"
+                                        fill
+                                        className="object-cover"
+                                        unoptimized
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Right Accordion */}
+                            <div className="lg:col-span-7 divide-y divide-slate-300 border-t border-b border-slate-300">
+                                {specialtyData.map((item) => {
+                                    const isOpen = openSpecialty === item.id;
+                                    return (
+                                        <div key={item.id} className="py-3">
+                                            <button
+                                                onClick={() => toggleSpecialty(item.id)}
+                                                className="w-full flex items-center justify-between text-left group py-1"
+                                            >
+                                                <span className="text-xs md:text-sm font-bold text-slate-900 group-hover:text-teal-800 transition-colors">
+                                                    {item.title}
+                                                </span>
+                                                <span className="text-slate-600 ml-4 flex-shrink-0">
+                                                    {isOpen ? (
+                                                        <Minus className="w-4 h-4 text-teal-800" />
+                                                    ) : (
+                                                        <Plus className="w-4 h-4 text-slate-600" />
+                                                    )}
+                                                </span>
+                                            </button>
+
+                                            {/* Accordion Content */}
+                                            {isOpen && (
+                                                <div className="pt-3 pb-2 pl-2 space-y-2 text-xs text-slate-700 leading-relaxed">
+                                                    <p className="text-[11px] font-medium text-slate-500">
+                                                        {item.id === "specialties" && "We serve doctors from a wide range of clinical disciplines, including but not limited to:"}
+                                                        {item.id === "around-world" && "We cater to a worldwide audience of health professionals, including:"}
+                                                        {item.id === "researchers" && "We work directly with:"}
+                                                    </p>
+                                                    <ul className="list-disc pl-5 space-y-1.5 text-slate-700">
+                                                        {item.content.map((point, idx) => (
+                                                            <li key={idx}>{point}</li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            )}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* SECTION 2: What You Could Add */}
+                    <section className="space-y-6 pt-4">
+                        <h2 className="text-xl md:text-2xl font-bold text-[#1a2b49]">
+                            What You Could Add (if you want to be fully comprehensive):
+                        </h2>
+
+                        {/* 5 Horizontal Tabs Grid */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 items-start">
+                            {comprehensiveAddOns.map((addon) => {
+                                const isOpen = openAddOns.includes(addon.id);
                                 return (
-                                    <div key={item.id} className="py-3">
-                                        <button
-                                            onClick={() => toggleSpecialty(item.id)}
-                                            className="w-full flex items-center justify-between text-left group py-1"
+                                    <div
+                                        key={addon.id}
+                                        className="bg-[#f0f9f8] border border-teal-100 rounded-sm p-4 transition-all"
+                                    >
+                                        {/* Tab Header */}
+                                        <div
+                                            onClick={() => toggleAddOn(addon.id)}
+                                            className="flex items-start justify-between gap-2 cursor-pointer select-none"
                                         >
-                                            <span className="text-xs md:text-sm font-bold text-slate-900 group-hover:text-teal-800 transition-colors">
-                                                {item.title}
-                                            </span>
-                                            <span className="text-slate-600 ml-4 flex-shrink-0">
+                                            <h3 className="text-xs font-bold text-slate-900 leading-snug">
+                                                {addon.title}
+                                            </h3>
+                                            <span className="text-slate-700 mt-0.5 flex-shrink-0">
                                                 {isOpen ? (
-                                                    <Minus className="w-4 h-4 text-teal-800" />
+                                                    <Minus className="w-3.5 h-3.5 text-teal-800" />
                                                 ) : (
-                                                    <Plus className="w-4 h-4 text-slate-600" />
+                                                    <Plus className="w-3.5 h-3.5 text-slate-600" />
                                                 )}
                                             </span>
-                                        </button>
+                                        </div>
 
-                                        {/* Accordion Content */}
+                                        {/* Expandable Content */}
                                         {isOpen && (
-                                            <div className="pt-3 pb-2 pl-2 space-y-2 text-xs text-slate-700 leading-relaxed">
-                                                <p className="text-[11px] font-medium text-slate-500">
-                                                    {item.id === "specialties" && "We serve doctors from a wide range of clinical disciplines, including but not limited to:"}
-                                                    {item.id === "around-world" && "We cater to a worldwide audience of health professionals, including:"}
-                                                    {item.id === "researchers" && "We work directly with:"}
-                                                </p>
-                                                <ul className="list-disc pl-5 space-y-1.5 text-slate-700">
-                                                    {item.content.map((point, idx) => (
-                                                        <li key={idx}>{point}</li>
+                                            <div className="mt-3 pt-3 border-t border-teal-200/60">
+                                                <ul className="list-disc pl-4 space-y-1.5 text-[11px] text-slate-700 leading-relaxed">
+                                                    {addon.items.map((item, idx) => (
+                                                        <li key={idx}>
+                                                            {item.href ? (
+                                                                <Link href={item.href} className="text-blue-600">
+                                                                    {item.linkText}
+                                                                </Link>
+                                                            ) : null}
+                                                            {item.suffixText}
+                                                        </li>
                                                     ))}
                                                 </ul>
                                             </div>
@@ -231,64 +376,9 @@ export default function PhysicianSpecialtiesAndAddons() {
                                 );
                             })}
                         </div>
-                    </div>
-                </section>
-
-                {/* SECTION 2: What You Could Add */}
-                <section className="space-y-6 pt-4">
-                    <h2 className="text-xl md:text-2xl font-bold text-[#1a2b49]">
-                        What You Could Add (if you want to be fully comprehensive):
-                    </h2>
-
-                    {/* 5 Horizontal Tabs Grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 items-start">
-                        {comprehensiveAddOns.map((addon) => {
-                            const isOpen = openAddOns.includes(addon.id);
-                            return (
-                                <div
-                                    key={addon.id}
-                                    className="bg-[#f0f9f8] border border-teal-100 rounded-sm p-4 transition-all"
-                                >
-                                    {/* Tab Header */}
-                                    <div
-                                        onClick={() => toggleAddOn(addon.id)}
-                                        className="flex items-start justify-between gap-2 cursor-pointer select-none"
-                                    >
-                                        <h3 className="text-xs font-bold text-slate-900 leading-snug">
-                                            {addon.title}
-                                        </h3>
-                                        <span className="text-slate-700 mt-0.5 flex-shrink-0">
-                                            {isOpen ? (
-                                                <Minus className="w-3.5 h-3.5 text-teal-800" />
-                                            ) : (
-                                                <Plus className="w-3.5 h-3.5 text-slate-600" />
-                                            )}
-                                        </span>
-                                    </div>
-
-                                    {/* Expandable Content */}
-                                    {isOpen && (
-                                        <div className="mt-3 pt-3 border-t border-teal-200/60">
-                                            <ul className="list-disc pl-4 space-y-1.5 text-[11px] text-slate-700 leading-relaxed">
-                                                {addon.items.map((item, idx) => (
-                                                    <li key={idx}>
-                                                        {item.href ? (
-                                                            <Link href={item.href} className="text-blue-600">
-                                                                {item.linkText}
-                                                            </Link>
-                                                        ) : null}
-                                                        {item.suffixText}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    )}
-                                </div>
-                            );
-                        })}
-                    </div>
-                </section>
+                    </section>
+                </div>
             </div>
-        </div>
+        </>
     );
 }

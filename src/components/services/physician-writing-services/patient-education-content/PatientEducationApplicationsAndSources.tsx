@@ -14,7 +14,7 @@ interface AccordionItem {
 export default function PatientEducationApplicationsAndSources() {
   // Accordion State Management
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({
-    "clinical-practice": true, // Default open based on typical UX
+    "": true, // Default open based on typical UX
   });
 
   const toggleSection = (id: string) => {

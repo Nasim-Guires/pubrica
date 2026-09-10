@@ -45,13 +45,13 @@ export const MedicalDataCollection: React.FC = () => {
             </p>
 
             {/* CTA Option Buttons (Row 1) */}
-            <div className="flex flex-wrap items-center gap-8 pt-2">
+            <div className="flex flex-row items-center gap-8 sm:gap-6 pt-2">
               <GetFreeQuoteButton />
               <Link
                 href="/uploads/medical-data-collection/Data-Analytics-Machine-Learning-service.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-red-600 text-white text-sm font-bold px-6 py-3 rounded hover:bg-white hover:text-black transition-colors"
+                className="bg-red-600 text-white text-xs sm:text-sm font-bold px-4 sm:px-6 py-3 rounded hover:bg-white hover:text-black transition-colors whitespace-nowrap"
               >
                 View Brochure
               </Link>

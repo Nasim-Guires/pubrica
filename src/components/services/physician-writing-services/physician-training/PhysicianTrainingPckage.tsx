@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
 
 interface PackageItem {
     icon?: string;
@@ -88,50 +89,36 @@ export default function PhysicianTrainingPackage() {
         <div className="min-h-screen bg-white font-sans text-slate-800 pb-7">
             <div className="max-w-6xl mx-auto px-4 py-8 space-y-12">
                 {/* Top Feature / Banner Section */}
-                <section className="bg-[#f2faf5] rounded-xl p-6 md:p-8 border border-slate-100 shadow-sm">
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                        {/* Image Box */}
-                        <div className="md:col-span-5 relative h-64 md:h-80 w-full overflow-hidden rounded-lg shadow">
-                            <Image
-                                src="/images/physician-writing-services/physician-training/Physician-Training-Content-Development-Sample-Work-Discover-More.jpg"
-                                alt="Physician Training Session"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-
-                        {/* Banner Actions */}
-                        <div className="md:col-span-7 flex flex-col justify-center space-y-6 text-center">
-                            {/* Box 1 */}
-                            <div>
-                                <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-3">
-                                    Physician Training Content Development Sample Work
-                                </h3>
-                                <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-slate-800 text-white font-medium px-8 py-2 rounded-full text-sm transition">
-                                    Discover More
-                                </Link>
-                            </div>
-
-                            {/* Box 2 */}
-                            <div className="pt-2 border-t border-slate-200/60">
-                                <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2">
-                                    Download the full Report Now
-                                </h3>
-                                <p className="text-xs md:text-sm text-slate-600 max-w-lg mx-auto mb-4 leading-relaxed">
-                                    Look at our samples of physician training modules, designed
-                                    with clinical accuracy, evidence-based standards, and aligned
-                                    to specialty-specific guidelines. All our modules are also
-                                    designed to be implementable in a real practice setting and
-                                    compliant with CME.
-                                </p>
-                                <Link href="/insights/sample-work" className="inline-block bg-black hover:bg-slate-800 text-white font-medium px-8 py-2 rounded-full text-sm transition">
-                                    Discover More
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
+                <PubricaSampleWorkCard
+                    bookCoverImage={{
+                        src: "/images/physician-writing-services/physician-training/Physician-Training-Content-Development-Sample-Work-Discover-More.jpg",
+                        alt: "Physician Training Session",
+                        width: 600,
+                        height: 450,
+                    }}
+                    sections={[
+                        {
+                            heading: "Physician Training Content Development Sample Work",
+                            button: {
+                                label: "Discover More",
+                                url: "/insights/sample-work",
+                            },
+                        },
+                        {
+                            heading: "Download the full Report Now",
+                            descriptionSegments: [
+                                {
+                                    text: "Look at our samples of physician training modules, designed with clinical accuracy, evidence-based standards, and aligned to specialty-specific guidelines. All our modules are also designed to be implementable in a real practice setting and compliant with CME.",
+                                },
+                            ],
+                            button: {
+                                label: "Discover More",
+                                url: "/insights/sample-work",
+                            },
+                        },
+                    ]}
+                    footerDisclaimerSegments={[]}
+                />
                 {/* Section Heading */}
                 <section className="text-center space-y-4 max-w-4xl mx-auto">
                     <h2 className="text-2xl md:text-3xl font-extrabold text-[#0b3b2c]">

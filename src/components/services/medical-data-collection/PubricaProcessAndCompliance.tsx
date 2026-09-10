@@ -299,22 +299,24 @@ export default function PubricaProcessAndCompliance() {
       {/* SECTION 1: How Services Work */}
       <section
         aria-labelledby="process-heading"
-        className="bg-[#f2f4f4] py-7 px-4 sm:px-6 lg:px-12"
+        className="pt-6 border-t border-slate-100"
       >
-        <div className="max-w-6xl mx-auto">
-          <header className="mb-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <header className="mb-5">
             <h2
               id="process-heading"
-              className="text-2xl sm:text-3xl font-bold text-[#082e2b] mb-4 leading-tight"
+              className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight"
             >
               How Do Healthcare, Medical, and Life Science Data Collection and
               Extraction Services Work at Pubrica?
             </h2>
-            <p className="text-sm sm:text-base text-gray-700 leading-relaxed max-w-5xl">
+
+            <p className="text-base text-slate-700 leading-relaxed">
               At Pubrica, our healthcare, medical, and life sciences{" "}
               <a
                 href="/academy/data-collection/managing-bias-in-data-collection/"
-                className="text-blue-600 "
+                className="text-blue-600"
               >
                 data collection and extraction services
               </a>{" "}
@@ -324,25 +326,23 @@ export default function PubricaProcessAndCompliance() {
             </p>
           </header>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Overlapping Image Visual */}
-            <div className="lg:col-span-5 relative flex justify-center items-center py-6">
-              <div className="relative w-full max-w-md h-[320px] sm:h-[380px]">
-                {/* Back Image */}
-                <div className="absolute left-0 top-0 w-3/4 h-3/4 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
-                  <Image
-                    src="/images/medical-writing/What-We-Do-medical-data-collection.webp"
-                    alt="Scientist conducting laboratory research with a microscope"
-                    fill
-                    sizes="(max-width: 768px) 70vw, 30vw"
-                    className="object-cover"
-                  />
-                </div>
+          <div className="flow-root">
+
+            {/* Floated Image Layout */}
+            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+              <div className="relative w-full max-w-[380px] h-[260px] sm:h-[280px] mx-auto overflow-hidden">
+                <Image
+                  src="/images/medical-writing/What-We-Do-medical-data-collection.webp"
+                  alt="Scientist conducting laboratory research with a microscope"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 30vw"
+                  className="object-cover"
+                />
               </div>
             </div>
 
             {/* Accordion Process List */}
-            <div className="lg:col-span-7 space-y-2">
+            <div className="space-y-2">
               {processSteps.map((step) => {
                 const isOpen = openProcess === step.id;
                 return (
@@ -359,6 +359,7 @@ export default function PubricaProcessAndCompliance() {
                         className="w-full flex items-center justify-between px-6 py-3.5 text-left text-[#082e2b] hover:bg-gray-50 font-medium text-sm sm:text-base transition-colors duration-150"
                       >
                         <span>{step.title}</span>
+
                         <span
                           className="text-lg font-bold text-[#082e2b] ml-4 select-none"
                           aria-hidden="true"
@@ -367,6 +368,7 @@ export default function PubricaProcessAndCompliance() {
                         </span>
                       </button>
                     </h3>
+
                     {isOpen && (
                       <div
                         id={`process-body-${step.id}`}
@@ -379,9 +381,12 @@ export default function PubricaProcessAndCompliance() {
                 );
               })}
             </div>
+
           </div>
+
         </div>
       </section>
+
 
       {/* SECTION 2: End-to-End Banner Callout */}
       <ServiceBanner

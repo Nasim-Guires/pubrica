@@ -982,7 +982,7 @@ export const NAV_LINKS: NavLink[] = [
         children: [
           {
             href: "/services/physician-writing-services/case-report/",
-            label: "Case Report",
+            label: " Case Report Writing",
           },
           {
             href: "/services/patient-education-content/",
@@ -1016,6 +1016,10 @@ export const NAV_LINKS: NavLink[] = [
             href: "/services/physician-writing-services/research-proposal/",
             label: "Research Proposal",
           },
+          // {
+          //   href: "/services/patient-education-content/",
+          //   label: "Patient Education Content",
+          // },
           // {
           //   href: "/services/physician-writing-services/patient-education-content/",
           //   label: "Patient Education Content",

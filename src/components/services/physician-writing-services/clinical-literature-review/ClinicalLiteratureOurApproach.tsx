@@ -244,144 +244,146 @@ export default function ClinicalReviewScopeAndApproach() {
 
       {/* 2. Our Approach Section */}
       <div className="space-y-4 pt-4 border-t border-slate-100">
-        <h2 className="text-2xl font-bold text-slate-900">Our Approach</h2>
-        <p className="text-xs md:text-sm text-slate-600 leading-relaxed max-w-5xl">
-          Pubrica offers systematic, detailed, and methodologically sound
-          clinical literature reviews to facilitate evidence-based
-          decision-making in healthcare. Our services integrate{" "}
-          <Link href="/academy/systematic-review/ai-systematic-review-services-pubrica/" className="text-blue-600 no-underline hover:no-underline">
-            Systematic Review Support
-          </Link>{" "}
-          to objectively appraise and synthesize the latest clinical evidence,
-          enabling the client to incorporate vetted research findings into
-          clinical, procedural, policy documents, grant proposals, and the
-          development of medical products.
-        </p>
+        <div className="max-w-6xl mx-auto">
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pt-2">
-          {/* Bulleted Points */}
-          <div className="md:col-span-7 space-y-3 text-xs md:text-sm text-slate-700 leading-relaxed">
-            <p className="font-bold text-slate-900">
-              Our expert medical writers and domain specialists:
-            </p>
+            <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5">
+            Our Approach
+          </h2>
 
-            <ul className="space-y-3.5 pl-1">
-              <li className="flex items-start gap-2">
-                <span className="text-red-600 font-bold">•</span>
-                <span>
-                  Use databases, including PubMed, Embase, Cochrane Library,
-                  Scopus, and CINAHL to conduct targeted, thorough, and
-                  reproducible literature searches
-                </span>
-              </li>
+          <div className="flow-root">
+            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+              <Link
+                href="/insights/patient-safety-culture-among-operating-theatre-nurses-in-operating-room/"
+                className="relative w-full max-w-[380px] h-[260px] sm:h-[280px] mx-auto overflow-hidden block group text-blue-600 no-underline hover:no-underline"
+              >
+                <Image
+                  src="/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/our-approch-.webp"
+                  alt="Researcher reading books"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  unoptimized
+                />
+              </Link>
+            </div>
 
-              import Link from 'next/link';
+            <div className="space-y-5 text-slate-700">
 
-              <li className="flex items-start gap-2">
-                <span className="text-red-600 font-bold">•</span>
-                <span>
-                  Utilize evidence-based processes like{" "}
+              <p className="text-base leading-relaxed">
+                Pubrica offers systematic, detailed, and methodologically sound
+                clinical literature reviews to facilitate evidence-based
+                decision-making in healthcare. Our services integrate{" "}
+                <Link
+                  href="/academy/systematic-review/ai-systematic-review-services-pubrica/"
+                  className="text-blue-600 no-underline hover:no-underline"
+                >
+                  Systematic Review Support
+                </Link>{" "}
+                to objectively appraise and synthesize the latest clinical evidence,
+                enabling the client to incorporate vetted research findings into
+                clinical, procedural, policy documents, grant proposals, and the
+                development of medical products.
+              </p>
+
+              <div>
+                <p className="font-bold text-slate-900 text-base sm:text-lg mb-2">
+                  Our expert medical writers and domain specialists:
+                </p>
+
+                <ul className="space-y-4 pl-4 list-disc marker:text-red-600">
+
+                  <li className="leading-relaxed">
+                    Use databases, including PubMed, Embase, Cochrane Library,
+                    Scopus, and CINAHL to conduct targeted, thorough, and
+                    reproducible literature searches
+                  </li>
+
+                  <li className="leading-relaxed">
+                    Utilize evidence-based processes like{" "}
+                    <Link
+                      href="https://static1.squarespace.com/static/65b880e13b6ca75573dfe217/t/67ad313f1c80aa5235fce0d0/1739403584136/PRISMA_2020_checklist.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600"
+                    >
+                      PRISMA
+                    </Link>
+                    ,{" "}
+                    <Link
+                      href="https://legacyfileshare.elsevier.com/promis_misc/ISSM_MOOSE_Checklist.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600"
+                    >
+                      MOOSE
+                    </Link>
+                    , and{" "}
+                    <Link
+                      href="https://www.bmj.com/content/bmj/suppl/2017/09/21/bmj.j4008.DC1/sheb036104.wf1.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600"
+                    >
+                      AMSTAR 2
+                    </Link>{" "}
+                    processes for systematic and scoping reviews
+                  </li>
+
+                  <li className="leading-relaxed">
+                    Appraise the quality of evidence using GRADE, Jadad scale, or
+                    Newcastle-Ottawa tools so that each study appraised and
+                    graded is recorded transparently
+                  </li>
+
+                  <li className="leading-relaxed">
+                    Summarize using true qualitative, quantitative, or both
+                    quantitative and qualitative methods, including
+                    meta-analysis, narrative synthesis, or evidence mapping
+                  </li>
+
+                  <li className="leading-relaxed">
+                    Produce clinically-focused summaries and tables to PICOT
+                    characteristics and clinical endpoints
+                  </li>
+
+                </ul>
+
+                <p className="text-base text-slate-700 leading-relaxed pt-6">
+                  Our{" "}
                   <Link
-                    href="https://static1.squarespace.com/static/65b880e13b6ca75573dfe217/t/67ad313f1c80aa5235fce0d0/1739403584136/PRISMA_2020_checklist.pdf"
+                    href="/insights/sample-work/effect-of-educational-intervention-on-operating-theatre-nurses/"
+                    className="text-blue-600 no-underline hover:no-underline"
+                  >
+                    EBM literature review
+                  </Link>{" "}
+                  is compliant with{" "}
+                  <Link
+                    href="https://www.icmje.org/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600"
                   >
-                    PRISMA
+                    ICMJE
                   </Link>
                   ,{" "}
                   <Link
-                    href="https://legacyfileshare.elsevier.com/promis_misc/ISSM_MOOSE_Checklist.pdf"
+                    href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600"
                   >
-                    MOOSE
+                    CONSORT
                   </Link>
-                  , and{" "}
-                  <Link
-                    href="https://www.bmj.com/content/bmj/suppl/2017/09/21/bmj.j4008.DC1/sheb036104.wf1.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600"
-                  >
-                    AMSTAR 2
-                  </Link>{" "}
-                  processes for systematic and scoping reviews
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-red-600 font-bold">•</span>
-                <span>
-                  Appraise the quality of evidence using GRADE, Jadad scale, or
-                  Newcastle-Ottawa tools so that each study appraised and
-                  graded is recorded transparently
-                </span>
-              </li>
+                  , and EQUATOR standards, enhancing the credibility, reproducibility, and
+                  academic value of the research.
+                </p>
 
-              <li className="flex items-start gap-2">
-                <span className="text-red-600 font-bold">•</span>
-                <span>
-                  Summarize using true qualitative, quantitative, or both
-                  quantitative and qualitative methods, including
-                  meta-analysis, narrative synthesis, or evidence mapping
-                </span>
-              </li>
-
-              <li className="flex items-start gap-2">
-                <span className="text-red-600 font-bold">•</span>
-                <span>
-                  Produce clinically-focused summaries and tables to PICOT
-                  characteristics and clinical endpoints
-                </span>
-              </li>
-            </ul>
-
-            <p className="text-xs text-slate-600 pt-3">
-              Our{" "}
-              <Link href="/insights/sample-work/effect-of-educational-intervention-on-operating-theatre-nurses/" className="text-blue-600 no-underline hover:no-underline">
-                EBM literature review
-              </Link>{" "}
-              is compliant with{" "}
-              <Link
-                href="https://www.icmje.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600"
-              >
-                ICMJE
-              </Link>
-              ,{" "}
-              <Link
-                href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600"
-              >
-                CONSORT
-              </Link>
-              , and EQUATOR standards, enhancing the credibility, reproducibility, and
-              academic value of the research.
-            </p>
+              </div>
+            </div>
           </div>
 
-          {/* Right Composite Image Collage with Link */}
-          <div className="md:col-span-5 relative h-80 md:h-[380px]">
-            <Link
-              href="/insights/patient-safety-culture-among-operating-theatre-nurses-in-operating-room/"
-              className="absolute top-0 right-4 w-3/4 h-52 rounded-xl overflow-hidden shadow-lg border-2 border-white z-10 block group text-blue-600 no-underline hover:no-underline"
-            >
-              <Image
-                src="/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/our-approch-.webp"
-                alt="Researcher reading books"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-                unoptimized
-              />
-            </Link>
-          </div>
         </div>
       </div>
+
 
       {/* 3. Who We Serve Section */}
       <div className="space-y-6 pt-6 border-t border-slate-100">

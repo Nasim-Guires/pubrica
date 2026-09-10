@@ -9,8 +9,7 @@ import ServiceBanner from '@/components/common/ServiceBanner';
 import { PubricaSampleWorkCard } from '@/components/common/PubricaSampleWorkCardProps';
 
 export default function PhysicianResearchProposalProcessWorkflow() {
-    const [activeTab, setActiveTab] = useState<'ethical' | 'reporting'>('reporting');
-
+    const [activeTab, setActiveTab] = useState<'ethical' | 'reporting'>();
     // Schema Markup for SEO
     const jsonLdData = {
         "@context": "https://schema.org",
@@ -163,6 +162,24 @@ export default function PhysicianResearchProposalProcessWorkflow() {
         }
     ];
 
+    const ethicalData = [
+        {
+            title: "Indian Council of Medical Research",
+            sub: "",
+            logo: "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Indian-Council-of-Medical-Research.png" // Replace with your actual path when ready
+        },
+        {
+            title: "International Council for Harmonisation – Good Clinical Practice",
+            sub: "",
+            logo: "/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/ICH-Guidelines-E6-E3-E9-etc.png" // Replace with your actual path when ready
+        },
+        {
+            title: "Consolidated Standards of Reporting Trials",
+            sub: "",
+            logo: "/images/physician-writing-services/research-proposal/Consolidated-Standards-of-Reporting-Trials.png" // Replace with your actual path when ready
+        }
+    ];
+
     const guidelinesData = [
         {
             title: "Consolidated Standards of Reporting Trials – CONSORT",
@@ -281,23 +298,14 @@ export default function PhysicianResearchProposalProcessWorkflow() {
                             <span>{activeTab === 'ethical' ? '-' : '+'}</span>
                         </button>
 
-                        {/* Accordion 2 Header */}
-                        <button
-                            onClick={() => setActiveTab(activeTab === 'reporting' ? 'ethical' : 'reporting')}
-                            className="w-full flex justify-between items-center px-6 py-3 text-left text-xs font-bold text-gray-800 hover:bg-gray-50 transition-colors bg-gray-50 border-b border-gray-200"
-                        >
-                            <span>Reporting Guidelines Based on Study Type</span>
-                            <span>{activeTab === 'reporting' ? '-' : '+'}</span>
-                        </button>
-
-                        {/* Guidelines Card Grid Container */}
-                        {activeTab === 'reporting' && (
+                        {/* Accordion 1 Content Container */}
+                        {activeTab === 'ethical' && (
                             <div className="p-6 bg-[#fbfdfc]">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    {guidelinesData.map((g, index) => (
+                                    {ethicalData.map((g, index) => (
                                         <div
                                             key={index}
-                                            className="bg-white border border-gray-200 rounded-lg p-6 text-center shadow-xs flex flex-col items-center justify-between transition-all duration-300 hover:bg-[#1f2937] hover:text-white group"
+                                            className="bg-white border border-gray-200 rounded-lg p-6 text-center shadow-xs flex flex-col items-center justify-between"
                                         >
                                             <div className="w-24 h-16 relative mb-4">
                                                 <Image
@@ -305,15 +313,59 @@ export default function PhysicianResearchProposalProcessWorkflow() {
                                                     alt={g.title}
                                                     fill
                                                     sizes="96px"
-                                                    className="object-contain group-hover:brightness-200 transition-all"
+                                                    className="object-contain"
                                                     unoptimized
                                                 />
                                             </div>
                                             <div>
-                                                <h4 className="text-xs font-bold text-gray-900 group-hover:text-white leading-tight mb-2">
+                                                <h4 className="text-xs font-bold text-gray-900 leading-tight mb-2">
                                                     {g.title}
                                                 </h4>
-                                                <p className="text-[11px] text-gray-500 group-hover:text-gray-300">
+                                                {g.sub && (
+                                                    <p className="text-[11px] text-gray-500">
+                                                        {g.sub}
+                                                    </p>
+                                                )}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Accordion 2 Header */}
+                        <button
+                            onClick={() => setActiveTab(activeTab === 'reporting' ? 'ethical' : 'reporting')}
+                            className={`w-full flex justify-between items-center px-6 py-3 text-left text-xs font-bold text-gray-800 hover:bg-gray-50 transition-colors bg-gray-50 ${activeTab === 'reporting' ? 'border-b border-gray-200' : 'border-t border-gray-200'}`}
+                        >
+                            <span>Reporting Guidelines Based on Study Type</span>
+                            <span>{activeTab === 'reporting' ? '-' : '+'}</span>
+                        </button>
+
+                        {/* Accordion 2 Content Container */}
+                        {activeTab === 'reporting' && (
+                            <div className="p-6 bg-[#fbfdfc]">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    {guidelinesData.map((g, index) => (
+                                        <div
+                                            key={index}
+                                            className="bg-white border border-gray-200 rounded-lg p-6 text-center shadow-xs flex flex-col items-center justify-between"
+                                        >
+                                            <div className="w-24 h-16 relative mb-4">
+                                                <Image
+                                                    src={g.logo}
+                                                    alt={g.title}
+                                                    fill
+                                                    sizes="96px"
+                                                    className="object-contain"
+                                                    unoptimized
+                                                />
+                                            </div>
+                                            <div>
+                                                <h4 className="text-xs font-bold text-gray-900 leading-tight mb-2">
+                                                    {g.title}
+                                                </h4>
+                                                <p className="text-[11px] text-gray-500">
                                                     {g.sub}
                                                 </p>
                                             </div>
@@ -355,7 +407,6 @@ export default function PhysicianResearchProposalProcessWorkflow() {
                         </ul>
                     </div>
                 </section>
-
                 {/* SECTION 5: SAMPLE WORK & DOWNLOAD REPORT BANNER */}
                 <PubricaSampleWorkCard
                     bookCoverImage={{

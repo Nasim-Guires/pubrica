@@ -152,10 +152,10 @@ export default function PhysicianManuscriptsPage() {
             <p>
               Publishing in peer-reviewed, indexed medical journals helps clinicians gain recognition, enhance clinical credibility, contribute to evidence-based practice, and support academic and institutional career advancement. But with demanding schedules, lack of time, and limited knowledge of evolving <Link href="/services/publication-support/journal-submission/" className="text-blue-600 no-underline hover:no-underline">journal submission</Link> guidelines making it difficult for practicing doctors to manage the entire publication process effectively. Especially for specialists like surgeons, finding the time and expertise to write and edit a scientific manuscript can be a major challenge.
             </p>
-            <p className="font-semibold text-gray-900 pt-2">
+            <p className="text-gray-900 pt-2">
               That's where Pubrica steps in as your external research assistant. Our expert-led <Link href="/services/publication-support/" className="text-blue-600 no-underline hover:no-underline">publication support</Link> is specifically designed for:
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-rose-700 font-medium">
+            <ul className="list-disc pl-5 space-y-2 text-rose-700 ">
               <li>
                 <span className="text-gray-700">Physicians with limited time for <Link href="/services/research-services/scientific-writing" className="text-blue-600 no-underline hover:no-underline">scientific writing</Link></span>
               </li>
@@ -197,15 +197,15 @@ export default function PhysicianManuscriptsPage() {
           <p className="text-gray-700 max-w-5xl leading-relaxed text-sm sm:text-base mb-3">
             Pubrica provides specialized manuscript writing and <Link href="/services/publication-support" className="text-blue-600 no-underline hover:no-underline">publication support</Link> services for physicians looking to publish in indexed medical journals. Our clients include healthcare professionals from the <Link href="/industries/pharmaceutical" className="text-blue-600 no-underline hover:no-underline">pharmaceutical</Link>, <Link href="/industries/medical-device" className="text-blue-600 no-underline hover:no-underline">medical device</Link>, <Link href="/industries/nutraceutical-research" className="text-blue-600 no-underline hover:no-underline">nutraceutical</Link>, or life sciences sector.
           </p>
-          <p className="text-gray-700 max-w-5xl leading-relaxed text-sm sm:text-base mb-10">
+          <p className="text-gray-700 max-w-5xl leading-relaxed text-sm sm:text-base mb-5 sm:mb-10">
             With a team of expert medical writers and scientific editors, we ensure that every physician manuscript is accurate, engaging, and compliant with journal-specific submission standards. Our goal is to help clinicians present their research in a way that is both scientifically rigorous and clinically relevant.
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
             {/* Image Collage Placeholder Divs */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-md h-[300px]">
-                <div className="absolute top-0 left-0 w-3/4 h-3/4 rounded-xl shadow-md border-2 border-white overflow-hidden">
+              <div className="relative w-full max-w-md h-[300px] mx-auto flex items-center justify-center">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:left-0 w-3/4 h-3/4 overflow-hidden">
                   <Image
                     src="/images/physician-writing-services/physician-manuscript/Physician-Manuscript-Service-What-We-do.webp"
                     alt="Physician manuscript writing desk"
@@ -218,7 +218,7 @@ export default function PhysicianManuscriptsPage() {
             </div>
 
             {/* Content Right */}
-            <div className="lg:col-span-7 space-y-6 text-sm sm:text-base">
+            <div className="lg:col-span-7 space-y-3 text-sm sm:text-base">
               <div>
                 <h3 className="font-bold text-gray-900 text-base sm:text-lg mb-2">
                   Scientific Medical Manuscript Content Development:
@@ -236,7 +236,7 @@ export default function PhysicianManuscriptsPage() {
                         href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className=" text-sky-600 no-underline"
+                        className="text-blue-600 no-underline"
                       >
                         CONSORT
                       </Link>{" "}
@@ -245,7 +245,7 @@ export default function PhysicianManuscriptsPage() {
                         href="https://www.care-statement.org/checklist"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className=" text-sky-600 no-underline"
+                        className=" text-blue-600 no-underline"
                       >
                         CARE
                       </Link>{" "}
@@ -254,7 +254,7 @@ export default function PhysicianManuscriptsPage() {
                         href="https://www.strobe-statement.org/checklists/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className=" text-sky-600 no-underline"
+                        className="text-blue-600 no-underline"
                       >
                         STROBE
                       </Link>{" "}
@@ -283,9 +283,9 @@ export default function PhysicianManuscriptsPage() {
       </section>
 
       {/* 4. Types of Physician Manuscripts We Offer */}
-      <section className="py-7 bg-slate-100">
+      <section className="py-2 bg-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto mb-12">
+          <div className="text-center max-w-4xl mx-auto mb-5">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] mb-4">
               Types of Physician Manuscripts We Offer
             </h2>

@@ -12,7 +12,7 @@ interface AddOnService {
 }
 
 export default function ResearchProposalWritingPackages() {
-  const [isAddOnsOpen, setIsAddOnsOpen] = useState<boolean>(true);
+  const [isAddOnsOpen, setIsAddOnsOpen] = useState<boolean>(false);
 
   const packagesData: PackageItem[] = [
     {
