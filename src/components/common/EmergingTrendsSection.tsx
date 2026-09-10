@@ -28,14 +28,14 @@ export default function EmergingTrendsSection({
   if (!trends.length) return null;
 
   return (
-    <div className="space-y-5 max-w-5xl mx-auto">
+    <div className="space-y-5 max-w-5xl mx-auto font-['Poppins',sans-serif]">
       {/* Section Header */}
       <div className="space-y-1">
-        <h2 className="text-xl md:text-2xl font-bold text-[#1e2e2b]">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
           {title}
         </h2>
 
-        <p className="text-xs text-gray-600 font-medium">
+        <p className="text-sm md:text-base text-gray-600 font-medium">
           {description}
         </p>
       </div>
@@ -51,11 +51,10 @@ export default function EmergingTrendsSection({
               <button
                 key={trend.id}
                 onClick={() => setActiveTrend(trend)}
-                className={`py-2.5 px-3 text-center text-xs font-medium rounded transition-colors border ${
-                  isActive
+                className={`py-2.5 px-3 text-center text-xs md:text-sm font-medium rounded transition-colors border ${isActive
                     ? "bg-emerald-600 text-white border-emerald-600"
                     : "bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100"
-                }`}
+                  }`}
               >
                 {trend.title}
               </button>
@@ -65,18 +64,18 @@ export default function EmergingTrendsSection({
 
         {/* Active Trend Box */}
         <div className="mt-4 pt-4 border-t border-gray-100">
-          <h3 className="text-xs font-bold text-gray-900">
+          <h3 className="text-base md:text-lg font-bold text-gray-900">
             {activeTrend.title}
           </h3>
 
-          <p className="text-xs text-gray-600 mt-1 leading-relaxed">
+          <p className="text-sm text-gray-600 mt-1 leading-relaxed">
             {activeTrend.description}
           </p>
         </div>
       </div>
 
       {/* Footer Text */}
-      <p className="text-xs text-gray-600 leading-relaxed">
+      <p className="text-sm text-gray-600 leading-relaxed">
         {footerText}
       </p>
     </div>

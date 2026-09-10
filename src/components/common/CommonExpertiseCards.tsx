@@ -48,13 +48,13 @@ export default function CommonExpertiseCards({
     };
 
     return (
-        <section className="space-y-8">
+        <section className="space-y-8 font-['Poppins',sans-serif]">
             <div className="space-y-2">
-                <h2 className="text-2xl font-bold text-[#1e2e2b]">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
                     {title}
                 </h2>
 
-                <p className="text-xs md:text-sm text-gray-600">
+                <p className="text-sm md:text-base text-gray-600">
                     {description}
                 </p>
             </div>
@@ -98,11 +98,11 @@ export default function CommonExpertiseCards({
 
                             {/* Sliding White Panel */}
                             <div className="absolute inset-x-0 bottom-0 top-36 z-10 bg-white pt-7 pb-3 px-3 flex flex-col items-center justify-start text-center transition-all duration-300 ease-in-out group-hover:top-20 group-hover:pt-12 group-hover:justify-start">
-                                <h3 className="text-xs font-bold text-gray-900 transition-all duration-300">
+                                <h3 className="text-sm md:text-base font-bold text-gray-900 transition-all duration-300">
                                     {card.title}
                                 </h3>
 
-                                <p className="text-[11px] text-gray-500 mt-2 leading-tight opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]">
+                                <p className="text-xs text-gray-500 mt-2 leading-tight opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]">
                                     {card.desc}
                                 </p>
                             </div>

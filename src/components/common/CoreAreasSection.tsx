@@ -64,14 +64,14 @@ export default function CoreAreasSection({
     items,
 }: SmeCoreAreasGridProps) {
     return (
-        <section className="space-y-4">
+        <section className="space-y-4 font-['Poppins',sans-serif]">
             {/* Heading + Description */}
             <div className="text-center space-y-2">
-                <h2 className="text-2xl font-bold text-[#1e2e2b]">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
                     {title}
                 </h2>
 
-                <p className="text-xs md:text-sm text-gray-600 max-w-3xl mx-auto">
+                <p className="text-sm md:text-base text-gray-600 max-w-3xl mx-auto">
                     {description}
                 </p>
             </div>
@@ -93,7 +93,7 @@ export default function CoreAreasSection({
                         >
                             <div className="space-y-3">
                                 <div className="flex items-center justify-between">
-                                    <h3 className="text-sm font-bold text-gray-900 leading-snug">
+                                    <h3 className="text-base md:text-lg font-bold text-gray-900 leading-snug">
                                         <span className={titleColorClass}>
                                             {head}
                                             {rest ? " " : ""}
@@ -116,7 +116,7 @@ export default function CoreAreasSection({
                                     </div>
                                 </div>
 
-                                <p className="text-xs text-gray-600 leading-relaxed">
+                                <p className="text-sm text-gray-600 leading-relaxed">
                                     {body}
                                 </p>
                             </div>

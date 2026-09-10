@@ -22,24 +22,24 @@ export default function WhereAuthorsPublish({
   publication,
 }: WhereAuthorsPublishProps) {
   return (
-    <div className="space-y-6 text-center">
-      {/* Section Header */}
-      <div className="space-y-2">
-        <h2 className="text-xl md:text-2xl font-bold text-[#1e2e2b]">
+    <div className="max-w-4xl mx-auto space-y-6 font-['Poppins',sans-serif]">
+      {/* Section Header (Aligned to Left edge of box) */}
+      <div className="space-y-2 text-left">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
           {title}
         </h2>
 
-        <div className="w-10 h-0.5 bg-[#12433e] mx-auto" />
+        <div className="w-10 h-0.5 bg-[#12433e]" />
 
-        <p className="text-xs text-gray-600 max-w-2xl mx-auto pt-1">
+        <p className="text-sm md:text-base text-gray-600 max-w-2xl pt-1">
           {description}
         </p>
       </div>
 
-      {/* Publication Card */}
-      <div className="max-w-3xl mx-auto bg-white border border-gray-100 rounded-xl p-6 shadow-md text-left grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+      {/* Publication Card (Increased width to max-w-4xl) */}
+      <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-md text-left grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
         {/* Publication Image */}
-        <div className="sm:col-span-4 relative h-60 w-full rounded-lg overflow-hidden bg-gray-50 border border-gray-100">
+        <div className="sm:col-span-4 relative h-64 w-full rounded-lg overflow-hidden bg-gray-50 border border-gray-100">
           <Image
             src={publication.imageSrc}
             alt={publication.imageAlt}
@@ -49,14 +49,14 @@ export default function WhereAuthorsPublish({
         </div>
 
         {/* Publication Details */}
-        <div className="sm:col-span-8 space-y-4 text-xs text-gray-700">
+        <div className="sm:col-span-8 space-y-4 text-sm text-gray-700">
           {/* Paper Title */}
           <div>
-            <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-0.5">
+            <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-0.5">
               Paper Title
             </p>
 
-            <p className="text-sm text-[#1e2e2b] leading-snug">
+            <p className="text-base font-semibold text-[#1e2e2b] leading-snug">
               {publication.paperTitle}
             </p>
           </div>
@@ -64,7 +64,7 @@ export default function WhereAuthorsPublish({
           {/* Author + Publisher */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-0.5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-0.5">
                 Author
               </p>
 
@@ -74,7 +74,7 @@ export default function WhereAuthorsPublish({
             </div>
 
             <div>
-              <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-0.5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-0.5">
                 Publisher
               </p>
 
@@ -87,7 +87,7 @@ export default function WhereAuthorsPublish({
           {/* Journal + Impact Factor */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-0.5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-0.5">
                 Journal Name
               </p>
 
@@ -97,7 +97,7 @@ export default function WhereAuthorsPublish({
             </div>
 
             <div>
-              <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-0.5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-0.5">
                 Impact factor
               </p>
 

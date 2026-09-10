@@ -22,14 +22,14 @@ export default function ExpertEditorsSection({
     editors,
 }: ExpertEditorsSectionProps) {
     return (
-        <div className="space-y-4 text-center">
-            {/* Section Header */}
-            <div className="space-y-1.5">
-                <h2 className="text-xl md:text-2xl font-bold text-[#1e2e2b]">
+        <div className="max-w-6xl mx-auto space-y-4 font-['Poppins',sans-serif]">
+            {/* Section Header (Left-aligned to grid start) */}
+            <div className="space-y-1.5 text-left">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
                     {title}
                 </h2>
 
-                <p className="text-sm text-gray-600 max-w-3xl mx-auto">
+                <p className="text-sm md:text-base text-gray-600 max-w-3xl">
                     {description}
                 </p>
             </div>
@@ -66,18 +66,18 @@ export default function ExpertEditorsSection({
                             </div>
 
                             <div className="min-w-0 flex-1">
-                                <h3 className="text-sm font-semibold text-gray-900 leading-snug">
+                                <h3 className="text-base md:text-lg font-bold text-gray-900 leading-snug">
                                     {editor.name}
                                 </h3>
 
-                                <p className="text-xs text-gray-600 mt-0.5 leading-relaxed">
+                                <p className="text-xs md:text-sm text-gray-600 mt-0.5 leading-relaxed">
                                     {editor.degree}
                                 </p>
                             </div>
                         </div>
 
                         {/* Editor Statistics */}
-                        <div className="bg-white/70 rounded-lg p-2.5 flex items-center justify-between text-xs text-gray-700 border border-[#e5f2ec]">
+                        <div className="bg-white/70 rounded-lg p-2.5 flex items-center justify-between text-xs md:text-sm text-gray-700 border border-[#e5f2ec]">
                             <div className="flex items-center gap-1.5">
                                 <Award className="w-4 h-4 text-[#12433e] shrink-0" />
                                 <span>{editor.experience}</span>

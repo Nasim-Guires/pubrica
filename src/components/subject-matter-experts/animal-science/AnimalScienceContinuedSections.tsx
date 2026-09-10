@@ -165,7 +165,7 @@ export default function AnimalScienceContinuedSections() {
       </div>
 
       {/* SECTION 3: AREAS OF STUDY (FULL WIDTH BANNER) */}
-      <section className="w-full bg-[#0d3630] mt-8">
+      <section className="w-full bg-[#0d3630] mt-8 font-['Poppins',sans-serif]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row">
           {/* Left Side: Image with Text Overlay */}
           <div className="md:w-5/12 relative min-h-[300px]">
@@ -177,7 +177,7 @@ export default function AnimalScienceContinuedSections() {
             />
             {/* Dark gradient overlay for text readability */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#0d3630]/90 to-[#0d3630]/60 p-8 flex items-center">
-              <p className="text-white text-xs md:text-sm leading-relaxed max-w-sm font-medium">
+              <p className="text-white text-sm md:text-base leading-relaxed max-w-sm font-medium">
                 Pubrica's team of experts is equipped with the knowledge and experience to assist you in all aspects of animal science research, ensuring your work is accurately represented and reaches the right audience effectively.
               </p>
             </div>
@@ -185,7 +185,7 @@ export default function AnimalScienceContinuedSections() {
 
           {/* Right Side: Grid of Areas */}
           <div className="md:w-7/12 p-8 md:p-12 flex flex-col justify-center">
-            <h2 className="text-2xl font-bold text-white mb-8 text-center md:text-left relative inline-block">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center md:text-left relative inline-block">
               Areas of <span className="underline decoration-2 underline-offset-4 decoration-white">Study</span>
             </h2>
 
@@ -193,12 +193,12 @@ export default function AnimalScienceContinuedSections() {
               {areasOfStudy.map((area, idx) => (
                 <div
                   key={idx}
-                  className="bg-white rounded-sm py-2 px-3 flex items-center gap-2 shadow-sm hover:bg-gray-50 transition-colors"
+                  className="bg-white rounded-sm py-2.5 px-3 flex items-center gap-2 shadow-sm hover:bg-gray-50 transition-colors"
                 >
                   <div className="bg-[#0d3630] rounded-full p-0.5 flex-shrink-0">
-                    <ChevronRight className="w-3 h-3 text-white" />
+                    <ChevronRight className="w-3.5 h-3.5 text-white" />
                   </div>
-                  <span className="text-[11px] font-bold text-gray-800 truncate">
+                  <span className="text-xs md:text-sm font-bold text-gray-800 truncate">
                     {area}
                   </span>
                 </div>
@@ -207,7 +207,6 @@ export default function AnimalScienceContinuedSections() {
           </div>
         </div>
       </section>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7 space-y-20">
         {/* SECTION 4: WHERE OUR AUTHORS PUBLISH */}
         <WhereAuthorsPublish
