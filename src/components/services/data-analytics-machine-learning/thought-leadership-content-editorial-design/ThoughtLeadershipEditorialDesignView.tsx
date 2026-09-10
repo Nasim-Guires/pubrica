@@ -59,94 +59,16 @@ export default function ThoughtLeadershipEditorialDesignView() {
 
             {/* ==================== 2. OVERVIEW & FEATURED LIST SECTION ==================== */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-8">
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a] leading-tight">
-                    Position Your Brand as an Industry Leader with Strategic Content &amp; Engaging Editorial Design
-                </h2>
+                <div className="space-y-6">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a] leading-tight">
+                        Position Your Brand as an Industry Leader with Strategic Content &amp;
+                        Engaging Editorial Design
+                    </h2>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mt-6">
-
-                    {/* Left Column: Descriptive Text & Bullet Points */}
-                    <div className="lg:col-span-7 space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        <p>
-                            At Pubrica, we understand that thought leadership content writing is more than sharing insights about establishing authority, fostering trust, and creating impact. Our Thought Leadership Content &amp; Editorial Design services are designed to help researchers, healthcare professionals, and organizations communicate their expertise effectively, reaching the right audience with clarity and credibility.
-                        </p>
-
-                        <p>
-                            Our{' '}
-                            <Link href="/subject-matter-experts" className="text-blue-600 no-underline hover:no-underline">
-                                subject matter experts
-                            </Link>{' '}
-                            create curated editorial content creation services to translate rich insights into concrete growth. Our experts create unique content based on the audience. Our thought leadership content support includes:
-                        </p>
-
-                        <ul className="space-y-3 pt-1 pl-1">
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 font-bold text-base leading-none">&bull;</span>
-                                <div>
-                                    <span className="font-bold text-slate-900">Executive Reports for Investors</span>
-                                    <span className="text-slate-600"> &ndash; Concise, data-driven insights to support informed decision-making.</span>
-                                </div>
-                            </li>
-
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 font-bold text-base leading-none">&bull;</span>
-                                <div>
-                                    <span className="font-bold text-slate-900">Strategic Reports for Decision Making</span>
-                                    <span className="text-slate-600"> &ndash; Actionable intelligence for business and research strategies.</span>
-                                </div>
-                            </li>
-
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 font-bold text-base leading-none">&bull;</span>
-                                <div>
-                                    <span className="font-bold text-slate-900">White Papers</span>
-                                    <span className="text-slate-600"> &ndash; In-depth research-backed content to establish expertise and influence industry discussions.</span>
-                                </div>
-                            </li>
-
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 font-bold text-base leading-none">&bull;</span>
-                                <div>
-                                    <span className="font-bold text-slate-900">Blogs &amp; Articles</span>
-                                    <span className="text-slate-600"> &ndash; Engaging and authoritative content that communicates complex ideas clearly.</span>
-                                </div>
-                            </li>
-
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 font-bold text-base leading-none">&bull;</span>
-                                <div>
-                                    <span className="font-bold text-slate-900">Ghost Writing Services</span>
-                                    <span className="text-slate-600"> &ndash; Professional writing on behalf of executives, researchers, and thought leaders.</span>
-                                </div>
-                            </li>
-
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 font-bold text-base leading-none">&bull;</span>
-                                <div>
-                                    <span className="font-bold text-slate-900">Customized Content &amp; Reports</span>
-                                    <span className="text-slate-600"> &ndash; Tailored solutions to meet unique communication objectives.</span>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <p className="pt-3">
-                            At Pubrica, our{' '}
-                            <Link href="/services/research-services/medical-writing/" className="text-blue-600 no-underline hover:no-underline">
-                                medical writing
-                            </Link>{' '}
-                            associates engage in conferences and forums, offering fresh insights on clinical, medical, and regulatory topics. We provide support for both secondary desk-based{' '}
-                            <Link href="/services/research-services/literature-review-and-gap/" className="text-blue-600 no-underline hover:no-underline">
-                                literature reviews
-                            </Link>{' '}
-                            and white papers derived from primary sources like interviews and surveys. Our experienced team aids in all stages of report development, from storyboard creation to editorial design and promotion.
-                        </p>
-                    </div>
-
-                    {/* Right Column: Hero Graphic Image */}
-                    <div className="lg:col-span-5 flex justify-center lg:justify-end pt-2 lg:pt-0">
-                        <div className="relative w-full max-w-md">
-                            <div className="absolute -inset-2 rounded-2xl transform -rotate-1 " />
-                            <div className="relative  overflow-hidden    bg-slate-100 aspect-[4/3]">
+                    <div className="flow-root">
+                        {/* Right-floated Image */}
+                        <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                            <div className="relative w-full max-w-md aspect-[4/3] overflow-hidden">
                                 <Image
                                     src="/images/data-analytics-machine-learning/thought-leadership-content-editorial-design/Strategic-Content-Engaging-Editorial-Design.webp"
                                     alt="Team surrounding table discussing strategy"
@@ -156,11 +78,123 @@ export default function ThoughtLeadershipEditorialDesignView() {
                                 />
                             </div>
                         </div>
-                    </div>
 
+                        {/* Text Content */}
+                        <div className="space-y-5 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                            <p>
+                                At Pubrica, we understand that thought leadership content writing is
+                                more than sharing insights about establishing authority, fostering
+                                trust, and creating impact. Our Thought Leadership Content &amp;
+                                Editorial Design services are designed to help researchers, healthcare
+                                professionals, and organizations communicate their expertise
+                                effectively, reaching the right audience with clarity and credibility.
+                            </p>
+
+                            <p>
+                                Our{" "}
+                                <Link
+                                    href="/subject-matter-experts"
+                                    className="text-blue-600 no-underline hover:no-underline"
+                                >
+                                    subject matter experts
+                                </Link>{" "}
+                                create curated editorial content creation services to translate rich
+                                insights into concrete growth. Our experts create unique content
+                                based on the audience. Our thought leadership content support
+                                includes:
+                            </p>
+
+                            <ul className="space-y-3 pl-4 list-disc marker:text-red-600">
+                                <li>
+                                    <span className=" text-slate-900">
+                                        Executive Reports for Investors
+                                    </span>
+                                    <span className="text-slate-600">
+                                        {" "}
+                                        &ndash; Concise, data-driven insights to support informed
+                                        decision-making.
+                                    </span>
+                                </li>
+
+                                <li>
+                                    <span className=" text-slate-900">
+                                        Strategic Reports for Decision Making
+                                    </span>
+                                    <span className="text-slate-600">
+                                        {" "}
+                                        &ndash; Actionable intelligence for business and research
+                                        strategies.
+                                    </span>
+                                </li>
+
+                                <li>
+                                    <span className=" text-slate-900">White Papers</span>
+                                    <span className="text-slate-600">
+                                        {" "}
+                                        &ndash; In-depth research-backed content to establish expertise
+                                        and influence industry discussions.
+                                    </span>
+                                </li>
+
+                                <li>
+                                    <span className=" text-slate-900">
+                                        Blogs &amp; Articles
+                                    </span>
+                                    <span className="text-slate-600">
+                                        {" "}
+                                        &ndash; Engaging and authoritative content that communicates
+                                        complex ideas clearly.
+                                    </span>
+                                </li>
+
+                                <li>
+                                    <span className=" text-slate-900">
+                                        Ghost Writing Services
+                                    </span>
+                                    <span className="text-slate-600">
+                                        {" "}
+                                        &ndash; Professional writing on behalf of executives,
+                                        researchers, and thought leaders.
+                                    </span>
+                                </li>
+
+                                <li>
+                                    <span className=" text-slate-900">
+                                        Customized Content &amp; Reports
+                                    </span>
+                                    <span className="text-slate-600">
+                                        {" "}
+                                        &ndash; Tailored solutions to meet unique communication
+                                        objectives.
+                                    </span>
+                                </li>
+                            </ul>
+
+                            <p className="pt-2">
+                                At Pubrica, our{" "}
+                                <Link
+                                    href="/services/research-services/medical-writing/"
+                                    className="text-blue-600 no-underline hover:no-underline"
+                                >
+                                    medical writing
+                                </Link>{" "}
+                                associates engage in conferences and forums, offering fresh insights
+                                on clinical, medical, and regulatory topics. We provide support for
+                                both secondary desk-based{" "}
+                                <Link
+                                    href="/services/research-services/literature-review-and-gap/"
+                                    className="text-blue-600 no-underline hover:no-underline"
+                                >
+                                    literature reviews
+                                </Link>{" "}
+                                and white papers derived from primary sources like interviews and
+                                surveys. Our experienced team aids in all stages of report development,
+                                from storyboard creation to editorial design and promotion.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
-
 
             {/* ==================== 3. WHAT WE OFFER CARDS SECTION ==================== */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 space-y-6">

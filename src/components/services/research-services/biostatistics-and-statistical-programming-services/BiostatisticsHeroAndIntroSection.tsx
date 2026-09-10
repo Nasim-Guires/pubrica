@@ -53,9 +53,9 @@ export default function BiostatisticsHeroAndIntroSection() {
       {/* 2. INTRO SECTION (Ensure Accurate Study Outcomes)          */}
       {/* ========================================================= */}
       <section className="max-w-7xl mx-auto py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* Text Content */}
-          <div className="lg:col-span-7 space-y-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="space-y-6">
+            {/* Heading placed above the image block */}
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0e3b38] leading-tight">
               Ensure accurate and reliable study outcomes with Pubrica’s expert
               biostatistical programmers — delivering precise coding, advanced
@@ -63,51 +63,54 @@ export default function BiostatisticsHeroAndIntroSection() {
               regulatory submissions
             </h2>
 
-            <div className="space-y-4 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
-              <p>
-                Pubrica delivers accurate, compliant, and publication-ready{" "}
-                <Link
-                  href="/services/research-services/biostatistics-and-statistical-programming-services/biostatistical-programming-framework-regulatory-research"
-                  className="text-blue-600 no-underline hover:no-underline"
-                >
-                  biostatistical programming
-                </Link>{" "}
-                for medical,{" "}
-                <Link
-                  href="/subject-matter-experts/life-sciences"
-                  className="text-blue-600 no-underline hover:no-underline"
-                >
-                  life science
-                </Link>
-                , and healthcare research. With a team of certified SAS
-                programmers and experienced biostatisticians, we have completed
-                150+ projects across therapeutic areas.
-              </p>
-              <p>
-                Our expertise in data management, advanced modeling, and
-                regulatory adherence (FDA, EMA, ICH) ensures reliable study
-                outcomes, submission-ready deliverables, and impactful research
-                publications.
-              </p>
-            </div>
+            <div className="flow-root">
+              {/* Image Box (Retaining exact original image styling/design) */}
+              <div className="lg:float-right lg:ml-10 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-4 lg:pt-0">
+                <div className="relative w-full max-w-md aspect-[4/3]">
+                  <div className="absolute -inset-2 rounded-2xl transform translate-x-3 translate-y-3" />
+                  <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                    <Image
+                      src="/images/research-services/biostatistics-and-statistical-programming-service/ENSURE_1-1.webp"
+                      alt="Biostatisticians analyzing clinical data"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                    />
+                  </div>
+                </div>
+              </div>
 
-            <div className="pt-2">
-              <GetFreeQuoteButton />
-            </div>
-          </div>
+              {/* Text Content */}
+              <div className="space-y-4 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
+                <p>
+                  Pubrica delivers accurate, compliant, and publication-ready{" "}
+                  <Link
+                    href="/services/research-services/biostatistics-and-statistical-programming-services/biostatistical-programming-framework-regulatory-research"
+                    className="text-blue-600 font-medium no-underline hover:no-underline"
+                  >
+                    biostatistical programming
+                  </Link>{" "}
+                  for medical,{" "}
+                  <Link
+                    href="/subject-matter-experts/life-sciences"
+                    className="text-blue-600 font-medium no-underline hover:no-underline"
+                  >
+                    life science
+                  </Link>
+                  , and healthcare research. With a team of certified SAS
+                  programmers and experienced biostatisticians, we have completed
+                  150+ projects across therapeutic areas.
+                </p>
+                <p>
+                  Our expertise in data management, advanced modeling, and
+                  regulatory adherence (FDA, EMA, ICH) ensures reliable study
+                  outcomes, submission-ready deliverables, and impactful research
+                  publications.
+                </p>
+              </div>
 
-          {/* Image Box */}
-          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md aspect-[4/3]">
-              <div className="absolute -inset-2  rounded-2xl transform translate-x-3 translate-y-3" />
-              <div className="relative w-full h-full rounded-2xl overflow-hidden ">
-                <Image
-                  src="/images/research-services/biostatistics-and-statistical-programming-service/ENSURE_1-1.webp"
-                  alt="Biostatisticians analyzing clinical data"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                />
+              <div className="pt-6">
+                <GetFreeQuoteButton />
               </div>
             </div>
           </div>

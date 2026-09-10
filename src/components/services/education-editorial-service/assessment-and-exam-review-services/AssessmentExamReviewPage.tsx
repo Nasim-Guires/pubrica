@@ -76,81 +76,71 @@ const AssessmentExamReviewPage: NextPage = () => {
 
       <div className="w-full bg-white text-gray-800 py-6 px-4 sm:px-6 md:px-8">
         {/* MAIN SECTION: INTRO & OFFSET FLOATING IMAGE */}
-        <section className="max-w-5xl mx-auto">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0b3b2c] mb-6">
-            Ensure Fair, Accurate, and Outcome-Aligned Assessments with Pubrica&apos;s Expert Assessment & Exam Review Services
-          </h2>
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-6">
+          <div className="space-y-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#0b3b2c] leading-tight">
+              Ensure Fair, Accurate, and Outcome-Aligned Assessments with Pubrica&apos;s Expert Assessment &amp; Exam Review Services
+            </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-            {/* LEFT COLUMN: Text Content & Bullet Points */}
-            <div className="md:col-span-7 space-y-4">
-              <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed">
-                The importance of education has shifted to evaluation of results in academic and professional sectors; therefore, evaluations, tests, and exams are essential elements in measuring the competency, academic integrity, and effectiveness of student learning. However, small issues with validity, including ambiguous test questions, inaccurate learning outcomes, inconsistent scorecards, and biases in scoring, can negatively affect the validity of an assessment and the student&apos;s confidence in their abilities.
-              </p>
-              <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed">
-                At Pubrica, we have established an Assessment and Exam Review Service that assists educational institutions, faculty, and trainers in creating valid, equitable, inclusive assessments that adhere to accountability; this is accomplished through expert review for ensuring the integrity and credibility of assessments:
-              </p>
-
-              {/* LIST & CTA BLOCK */}
-              <div className="pt-2 space-y-4">
-                <h3 className="text-sm sm:text-base font-bold text-gray-900">
-                  The Pubrica Assessment and Exam Review provide:
-                </h3>
-
-                <ul className="space-y-2 text-xs sm:text-sm text-gray-700">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-[#c5221f] text-xs mt-0.5">▪</span>
-                    <span>A significant decrease in the number of cluttered, confusing questions.</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-[#c5221f] text-xs mt-0.5">▪</span>
-                    <span>An increase in aligned objectives learning outcomes.</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-[#c5221f] text-xs mt-0.5">▪</span>
-                    <span>More balance between cognitive levels of difficulty.</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-[#c5221f] text-xs mt-0.5">▪</span>
-                    <span>All courses have the same criteria for grading of assessment items.</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-[#c5221f] text-xs mt-0.5">▪</span>
-                    <span>All assessments comply with the accrediting body&apos;s requirements.</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-[#c5221f] text-xs mt-0.5">▪</span>
-                    <span>A just assessment process develops materials for teachers&apos; learners that do not discriminate against any group of people.</span>
-                  </li>
-                </ul>
-
-                <div className="pt-4">
-                  <GetFreeQuoteButton />
-                </div>
-              </div>
-            </div>
-
-            {/* RIGHT COLUMN: Offset Dark Green Backdrop Image Box */}
-            {/* RIGHT COLUMN: Offset Dark Green Backdrop Image Box */}
-            <div className="md:col-span-5 relative flex justify-center md:justify-end mt-8 md:mt-0">
-              <div className="relative w-full max-w-[360px] h-[210px] sm:h-[230px]">
-                {/* Dark Green Offset Box */}
-                <div className="absolute -bottom-4 -left-4 w-full h-full bg-[#1b3b32] rounded-2xl -z-10" />
-
-                {/* Main Front Image */}
-                <div className="relative w-full h-full rounded-2xl overflow-hidden">
+            <div className="flow-root">
+              {/* Right-Floated Image */}
+              <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                <div className="relative w-full max-w-md aspect-[4/3] overflow-hidden">
                   <Image
                     src="/images/education-editorial-service/assessment-and-exam-review-services/poster-presentation-1-2.webp"
                     alt="Assessment and Exam Review session"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 360px"
+                    sizes="(max-width: 1024px) 100vw, 28rem"
                   />
+                </div>
+              </div>
+
+              {/* Main Content */}
+              <div className="space-y-5 text-sm sm:text-base text-gray-700 leading-relaxed">
+                <p>
+                  The importance of education has shifted to evaluation of results in academic and professional sectors; therefore, evaluations, tests, and exams are essential elements in measuring the competency, academic integrity, and effectiveness of student learning. However, small issues with validity, including ambiguous test questions, inaccurate learning outcomes, inconsistent scorecards, and biases in scoring, can negatively affect the validity of an assessment and the student&apos;s confidence in their abilities.
+                </p>
+
+                <p>
+                  At Pubrica, we have established an Assessment and Exam Review Service that assists educational institutions, faculty, and trainers in creating valid, equitable, inclusive assessments that adhere to accountability; this is accomplished through expert review for ensuring the integrity and credibility of assessments:
+                </p>
+
+                <div className="pt-2 space-y-4">
+                  <h3 className="text-sm sm:text-base font-bold text-gray-900">
+                    The Pubrica Assessment and Exam Review provide:
+                  </h3>
+
+                  <ul className="space-y-3 pl-4 list-disc marker:text-red-600 text-sm sm:text-base text-gray-700">
+                    <li className="leading-relaxed">
+                      A significant decrease in the number of cluttered, confusing questions.
+                    </li>
+                    <li className="leading-relaxed">
+                      An increase in aligned objectives learning outcomes.
+                    </li>
+                    <li className="leading-relaxed">
+                      More balance between cognitive levels of difficulty.
+                    </li>
+                    <li className="leading-relaxed">
+                      All courses have the same criteria for grading of assessment items.
+                    </li>
+                    <li className="leading-relaxed">
+                      All assessments comply with the accrediting body&apos;s requirements.
+                    </li>
+                    <li className="leading-relaxed">
+                      A just assessment process develops materials for teachers&apos; learners that do not discriminate against any group of people.
+                    </li>
+                  </ul>
+
+                  <div className="pt-2">
+                    <GetFreeQuoteButton />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
 
         {/* SERVICES OFFERED GRID SECTION */}
         <section className="max-w-5xl mx-auto mt-16 pb-7">

@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import CommonUploadButton from '@/components/common/CommonUploadButton';
 import CommonConsultationButton from '@/components/common/CommonConsultationButton';
+import HeroBanner from '@/components/common/HeroBanner';
+import Link from 'next/link';
 
 interface FeatureItem {
     id: number;
@@ -34,20 +36,14 @@ const WHY_CHOOSE_ITEMS: FeatureItem[] = [
 
 export const ScientificWritingPage: React.FC = () => {
     return (
-        <div className="w-full bg-slate-50 min-h-screen py-5 font-sans text-slate-800">
+        <div className="">
 
             {/* ================= 1. HERO BANNER ================= */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6">
-                <div className="bg-[#112a28] text-white py-6 px-6 sm:px-12 rounded-xs border border-teal-500/30 text-center shadow-md">
-                    <h1 className="text-2xl sm:text-4xl font-extrabold tracking-wide mb-4">
-                        Scientific & Academic Medical Writing
-                    </h1>
-                    <p className="max-w-3xl mx-auto text-xs sm:text-sm text-gray-200 leading-relaxed font-light">
-                        The common reasons many manuscripts are rejected is due to poor structure or unclear writing. Our experts will convert your research into a clear, well-structured, publication-ready manuscript that meets the standards of a journal.
-                    </p>
-                </div>
-            </section>
-
+            <HeroBanner
+                title="Scientific & Academic Medical Writing"
+                description="The common reasons many manuscripts are rejected is due to poor structure or unclear writing. Our experts will convert your research into a clear, well-structured, publication-ready manuscript that meets the standards of a journal."
+                headingAs="h1"
+            />
             {/* ================= 2. RECOMMENDATIONS CALLOUT BANNER ================= */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6 py-5 text-center space-y-4">
                 <h2 className="text-xl sm:text-2xl font-bold text-[#0b3b36]">
@@ -57,13 +53,14 @@ export const ScientificWritingPage: React.FC = () => {
                     Our free Recommendations service uses machine learning and your online activity to suggest research tailored to your needs.
                 </p>
                 <div className="pt-2">
-                    <CommonUploadButton
+                    <Link
                         href="/uploads/research-services/scientific-writing/24-03-2026-SCIENTIFIC-WRITING-THAT-DRIVES-PUBLICATION-SUCCESS.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className='bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors'
                     >
                         View Brochure
-                    </CommonUploadButton>
+                    </Link>
                 </div>
             </section>
 

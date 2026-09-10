@@ -15,38 +15,45 @@ export const DataAnalyticsAndMachineLearning: React.FC = () => {
       />
 
       {/* --- Section 2: Core Offerings & Split Dashboard Showcase --- */}
-      <section className="py-10 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto bg-gray-50/50">
-        <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-12">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7 bg-gray-50/50">
+        <div className="space-y-6">
+          <h2 className="text-xl sm:text-2xl md:text-[26px] font-bold text-[#0c313a] leading-tight">
+            Ensure Robust Results with Pubrica’s Machine Learning & Data Analytics,
+            Delivering Expert Data Management, Custom AI Models, and Insightful
+            Visualizations for Research and Business Accuracy
+          </h2>
 
-          {/* Left Text and Features Side */}
-          <div className="flex-1 space-y-6 text-left">
-            <h2 className="text-[#0c313a] text-xl sm:text-2xl md:text-[26px] font-bold leading-snug tracking-normal">
-              Ensure Robust Results with Pubrica’s Machine Learning & Data Analytics,
-              Delivering Expert Data Management, Custom AI Models, and Insightful
-              Visualizations for Research and Business Accuracy
-            </h2>
+          <div className="flow-root">
+            {/* Right Image */}
+            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+              <div className="relative w-full max-w-md">
+                <img
+                  src="/images/data-analytics-machine-learning/Ensure-Robust-Results-with-Pubricas-Machine-Learning-Data-Analytics.webp"
+                  alt="Ensure Robust Results with Pubrica's Machine Learning & Data Analytics"
+                  className="w-full h-auto object-cover block"
+                />
+              </div>
+            </div>
 
-            <p className="text-gray-700 text-sm md:text-[14px] leading-relaxed">
-              Pubrica’s team of data science, AI, and machine learning experts has
-              delivered over 100+ ML projects, empowering researchers and businesses
-              with advanced data analytics, AI solutions, and predictive modeling. We
-              transform raw data into actionable insights, intelligent visualizations, and
-              publication-ready outputs for medical research, life sciences, healthcare,
-              and business intelligence.
-            </p>
+            {/* Text Content */}
+            <div className="space-y-5 text-sm md:text-[14px] text-gray-700 leading-relaxed">
+              <p>
+                Pubrica’s team of data science, AI, and machine learning experts has
+                delivered over 100+ ML projects, empowering researchers and businesses
+                with advanced data analytics, AI solutions, and predictive modeling. We
+                transform raw data into actionable insights, intelligent visualizations, and
+                publication-ready outputs for medical research, life sciences, healthcare,
+                and business intelligence.
+              </p>
 
-            {/* Red Bullet Feature List */}
-            <ul className="space-y-3 pt-1">
-              <li className="flex items-start gap-2.5 text-sm md:text-[14px] text-gray-800 leading-relaxed">
-                <span className="text-[#c00] text-lg leading-none mt-1 select-none font-bold">▪</span>
-                <p>
+              {/* Red Bullet Feature List */}
+              <ul className="space-y-3 pl-4 list-disc marker:text-red-600">
+                <li>
                   End-to-End Data Management: Cleaning, structuring, and preparing
                   datasets for accurate machine learning analysis.
-                </p>
-              </li>
-              <li className="flex items-start gap-2.5 text-sm md:text-[14px] text-gray-800 leading-relaxed">
-                <span className="text-[#c00] text-lg leading-none mt-1 select-none font-bold">▪</span>
-                <p>
+                </li>
+
+                <li>
                   Custom AI/ML Models: Scalable and cost-effective machine learning
                   algorithms tailored to your{" "}
                   <Link
@@ -56,39 +63,25 @@ export const DataAnalyticsAndMachineLearning: React.FC = () => {
                     research
                   </Link>{" "}
                   or business needs.
-                </p>
-              </li>
-              <li className="flex items-start gap-2.5 text-sm md:text-[14px] text-gray-800 leading-relaxed">
-                <span className="text-[#c00] text-lg leading-none mt-1 select-none font-bold">▪</span>
-                <p>
+                </li>
+
+                <li>
                   Data Visualization & Publication Support: Clear, insightful charts, tables,
                   and figures for research publications, white papers, and business reports.
-                </p>
-              </li>
-            </ul>
+                </li>
+              </ul>
 
-            <div className="pt-2 space-y-5">
-              <p className="text-gray-800 text-sm md:text-[14px] leading-relaxed">
-                With proven expertise in AI, data analytics, and healthcare research, we deliver compliant, reliable, and impactful results that support informed decision-making.
-              </p>
-              <div>
-                <GetFreeQuoteButton />
+              <div className="pt-2 space-y-5">
+                <p className="text-gray-800 text-sm md:text-[14px] leading-relaxed">
+                  With proven expertise in AI, data analytics, and healthcare research, we deliver compliant, reliable, and impactful results that support informed decision-making.
+                </p>
+
+                <div className="pt-2">
+                  <GetFreeQuoteButton />
+                </div>
               </div>
             </div>
           </div>
-
-          {/* Right Image Wrapper with Solid Teal Backdrop Accent */}
-          <div className="relative w-full lg:w-[460px] shrink-0 pt-4 pr-4">
-            <div className="relative z-10 overflow-hidden">
-              <img
-                src="/images/data-analytics-machine-learning/Ensure-Robust-Results-with-Pubricas-Machine-Learning-Data-Analytics.webp"
-                alt="Ensure Robust Results with Pubrica's Machine Learning & Data Analytics"
-                className="w-full h-auto object-cover block"
-              />
-            </div>
-            {/* Dark Teal Accent Block Behind the Bottom-Left Portion */}
-          </div>
-
         </div>
       </section>
     </div>

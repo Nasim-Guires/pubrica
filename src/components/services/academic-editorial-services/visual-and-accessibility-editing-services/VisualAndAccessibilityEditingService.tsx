@@ -68,48 +68,16 @@ export default function VisualAndAccessibilityEditingService() {
       />
       {/* ------------------- INTRODUCTION & ENSURES SECTION ------------------- */}
       {/* ------------------- INTRODUCTION & ENSURES SECTION ------------------- */}
-      <section className="py-12 px-6 max-w-6xl mx-auto">
-        <h2 className="text-xl md:text-2xl font-bold text-[#0e2a22] mb-5 leading-tight">
-          Enhance Readability. Ensure Accessibility. Elevate Your Research.
-        </h2>
+      <section className="py-6 px-4 sm:px-6 max-w-6xl mx-auto">
+        <div className="space-y-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0e2a22] leading-tight">
+            Enhance Readability. Ensure Accessibility. Elevate Your Research.
+          </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Left Side Content & Bullet Points */}
-          <div className="lg:col-span-7 text-xs md:text-sm text-gray-700 space-y-4 leading-relaxed">
-            <p>
-              In today’s rapidly evolving academic and scientific publishing ecosystem, visual clarity and accessibility are no longer optional; they are essential. Researchers, journals, and institutions must ensure that manuscripts, visuals, and digital content comply with accessibility guidelines such as WCAG, ADA, Section 508, and publisher-specific standards. At Pubrica, we bridge the gap between high-quality research and universally accessible communication.
-            </p>
-
-            <p>
-              Our visual & accessibility editing services focus on enhancing the readability, structure, and accessibility of visual and text-based elements. From optimising tables and figures to ensuring screen-reader compatibility and alternative text descriptions, we make your content clear, compliant, and inclusive for diverse audiences. Whether you are preparing a research manuscript, thesis, digital module, or institutional report, Pubrica provides meticulous editing that ensures accuracy, usability, and accessibility across platforms.
-            </p>
-
-            <p className="font-bold text-black pt-2">
-              Pubrica’s Visual and Accessibility Editing ensures:
-            </p>
-
-            <ul className="space-y-2 pt-1 text-gray-700">
-              {ensuresList.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-2.5">
-                  <span className="text-red-500 font-bold select-none">•</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="pt-4">
-              <GetFreeQuoteButton />
-            </div>
-          </div>
-
-          {/* Right Side Image Frame Container with Offset Dark Background */}
-          <div className="lg:col-span-5 relative mt-4 lg:mt-0">
-            <div className="relative w-full aspect-[4/3] max-w-[440px] mx-auto">
-              {/* Offset Dark Green Frame Layer */}
-              <div className="absolute inset-0  transform -translate-x-5 translate-y-5"></div>
-
-              {/* Main Photo Card Layer */}
-              <div className="relative w-full h-full rounded-2xl overflow-hidden">
+          <div className="flow-root">
+            {/* Right-Floated Image */}
+            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+              <div className="relative w-full max-w-md aspect-[4/3] overflow-hidden">
                 <Image
                   src="/images/academic-editorial-services/visual-and-accessibility-editing-services/Visual-Accessibility-Editing-Services.webp"
                   alt="Visual and Accessibility Editing Services"
@@ -120,10 +88,48 @@ export default function VisualAndAccessibilityEditingService() {
                 />
               </div>
             </div>
+
+            {/* Main Content */}
+            <div className="space-y-5 text-sm sm:text-base text-gray-700 leading-relaxed">
+              <p>
+                In today’s rapidly evolving academic and scientific publishing
+                ecosystem, visual clarity and accessibility are no longer optional;
+                they are essential. Researchers, journals, and institutions must
+                ensure that manuscripts, visuals, and digital content comply with
+                accessibility guidelines such as WCAG, ADA, Section 508, and
+                publisher-specific standards. At Pubrica, we bridge the gap between
+                high-quality research and universally accessible communication.
+              </p>
+
+              <p>
+                Our visual &amp; accessibility editing services focus on enhancing
+                the readability, structure, and accessibility of visual and
+                text-based elements. From optimising tables and figures to ensuring
+                screen-reader compatibility and alternative text descriptions, we
+                make your content clear, compliant, and inclusive for diverse
+                audiences. Whether you are preparing a research manuscript, thesis,
+                digital module, or institutional report, Pubrica provides meticulous
+                editing that ensures accuracy, usability, and accessibility across
+                platforms.
+              </p>
+
+              <p className="font-bold text-black pt-2">
+                Pubrica’s Visual and Accessibility Editing ensures:
+              </p>
+
+              <ul className="space-y-3 pl-4 list-disc marker:text-red-600">
+                {ensuresList.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+
+              <div className="pt-2">
+                <GetFreeQuoteButton />
+              </div>
+            </div>
           </div>
         </div>
       </section>
-
       {/* ------------------- TYPES OF VISUAL & ACCESSIBILITY EDITING ------------------- */}
       <section className="py-6 px-4 bg-[#f8faf9] border-y border-gray-100" aria-labelledby="types-heading">
         <div className="max-w-6xl mx-auto text-center">

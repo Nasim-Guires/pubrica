@@ -65,69 +65,106 @@ export default function PatientJourneyInsightsMl() {
             />
             {/* 2. OVERVIEW SECTION WITH IMAGE */}
             <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3835] mb-4">
-                    Transform complex patient data into actionable insights with AI-powered journey mapping and predictive analytics
-                </h2>
+                <div className="space-y-6">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3835] leading-tight">
+                        Transform complex patient data into actionable insights with AI-powered
+                        journey mapping and predictive analytics
+                    </h2>
 
-                <h3 className="text-sm font-semibold text-[#1a3835] mb-6">
-                    Mapping Healthcare Journeys and Unlocking Actionable Insights with AI & ML
-                </h3>
+                    <div className="flow-root">
+                        {/* Right Image */}
+                        <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                            <div className="relative w-full max-w-md h-56 sm:h-72">
+                                <Image
+                                    src="/images/ai-ml-support/Transform-complex-patient-data-into-actionable-insights-.webp"
+                                    alt="Patient Journey Analytics"
+                                    fill
+                                    className="object-cover"
+                                    sizes="(max-width: 1024px) 100vw, 40vw"
+                                    priority
+                                />
+                            </div>
+                        </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
-                    <div className="lg:col-span-7 space-y-4 text-sm leading-relaxed text-gray-700">
-                        <p>
-                            At Pubrica, we leverage advanced machine learning in healthcare techniques to map, analyze, and interpret the{" "}
-                            <Link href="/academy/patient-journey-insights-ml/patient-journey-analytics/" className="text-blue-600">
-                                patient journey
-                            </Link>{" "}
-                            mapping across multiple touchpoints in the healthcare ecosystem. Understanding the patient journey from disease onset to diagnosis, treatment, adherence, and outcomes is crucial for healthcare providers, payors, and pharmaceutical companies to design patient-centric strategies and improve care delivery.
-                        </p>
-                        <p>
-                            With a proven record of empowering healthcare stakeholders through healthcare data analytics and data-driven intelligence, Pubrica is a trusted partner in real-world patient data analysis, mapping patient journeys, and generating actionable insights using advanced machine learning techniques.
-                        </p>
-                    </div>
+                        {/* Text Content */}
+                        <div className="space-y-5">
+                            <h3 className="text-sm font-semibold text-[#1a3835]">
+                                Mapping Healthcare Journeys and Unlocking Actionable Insights with AI
+                                & ML
+                            </h3>
 
-                    {/* Hero Image Block */}
-                    <div className="lg:col-span-5 relative flex justify-center">
-                        <div className="relative rounded-2xl overflow-hidden w-full h-56 sm:h-72">
-                            <Image
-                                src="/images/ai-ml-support/Transform-complex-patient-data-into-actionable-insights-.webp"
-                                alt="Patient Journey Analytics"
-                                fill
-                                className="object-cover rounded-2xl"
-                                sizes="(max-width: 1024px) 100vw, 40vw"
-                                priority
-                            />
+                            <div className="space-y-4 text-sm leading-relaxed text-gray-700">
+                                <p>
+                                    At Pubrica, we leverage advanced machine learning in healthcare
+                                    techniques to map, analyze, and interpret the{" "}
+                                    <Link
+                                        href="/academy/patient-journey-insights-ml/patient-journey-analytics/"
+                                        className="text-blue-600"
+                                    >
+                                        patient journey
+                                    </Link>{" "}
+                                    mapping across multiple touchpoints in the healthcare ecosystem.
+                                    Understanding the patient journey from disease onset to diagnosis,
+                                    treatment, adherence, and outcomes is crucial for healthcare
+                                    providers, payors, and pharmaceutical companies to design
+                                    patient-centric strategies and improve care delivery.
+                                </p>
+
+                                <p>
+                                    With a proven record of empowering healthcare stakeholders through
+                                    healthcare data analytics and data-driven intelligence, Pubrica is
+                                    a trusted partner in real-world patient data analysis, mapping
+                                    patient journeys, and generating actionable insights using advanced
+                                    machine learning techniques.
+                                </p>
+                            </div>
+
+                            {/* Bullet Points */}
+                            <ul className="space-y-3 pl-4 list-disc marker:text-red-600 text-sm text-gray-700">
+                                <li>
+                                    500+ data scientists, clinicians, and domain experts specializing
+                                    in predictive analytics for patient outcomes, natural language
+                                    processing (NLP), and image recognition
+                                </li>
+
+                                <li>
+                                    Expertise in EMR and EHR data analysis services, claims, wearables,
+                                    social media, and real-world evidence sources
+                                </li>
+
+                                <li>
+                                    In-house capabilities to perform{" "}
+                                    <Link
+                                        href="/services/data-analytics-machine-learning/patient-journey-insights-machine-learning/data-extraction-healthcare-definition-methods-applications/"
+                                        className="text-blue-600"
+                                    >
+                                        data extraction
+                                    </Link>
+                                    , intent detection, patient sentiment analysis in healthcare, and
+                                    treatment-pattern identification across multiple disease areas
+                                </li>
+
+                                <li>
+                                    Proficiency in modeling therapeutic pathways to uncover adherence
+                                    challenges, treatment gaps, and key decision-making touchpoints
+                                </li>
+
+                                <li>
+                                    Support for healthcare providers, payers, and life sciences in
+                                    generating patient-centric insights that enhance engagement,
+                                    outcomes, and resource allocation
+                                </li>
+                            </ul>
+
+                            <p className="text-sm font-medium text-gray-800 leading-relaxed pt-2">
+                                We bring scientific rigor, AI-driven methodologies, and cross-functional
+                                expertise to decode patient journey analysis using machine learning,
+                                delivering clarity, precision, and foresight for better healthcare
+                                decisions.
+                            </p>
                         </div>
                     </div>
                 </div>
-
-                {/* Bullet Points */}
-                <ul className="space-y-3 text-sm text-gray-700 list-disc list-inside mb-8">
-                    <li>
-                        500+ data scientists, clinicians, and domain experts specializing in predictive analytics for patient outcomes, natural language processing (NLP), and image recognition
-                    </li>
-                    <li>
-                        Expertise in EMR and EHR data analysis services, claims, wearables, social media, and real-world evidence sources
-                    </li>
-                    <li>
-                        In-house capabilities to perform{" "}
-                        <Link href="/services/data-analytics-machine-learning/patient-journey-insights-machine-learning/data-extraction-healthcare-definition-methods-applications/" className="text-blue-600">
-                            data extraction
-                        </Link>
-                        , intent detection, patient sentiment analysis in healthcare, and treatment-pattern identification across multiple disease areas
-                    </li>
-                    <li>
-                        Proficiency in modeling therapeutic pathways to uncover adherence challenges, treatment gaps, and key decision-making touchpoints
-                    </li>
-                    <li>
-                        Support for healthcare providers, payers, and life sciences in generating patient-centric insights that enhance engagement, outcomes, and resource allocation
-                    </li>
-                </ul>
-
-                <p className="text-sm font-medium text-gray-800">
-                    We bring scientific rigor, AI-driven methodologies, and cross-functional expertise to decode patient journey analysis using machine learning, delivering clarity, precision, and foresight for better healthcare decisions.
-                </p>
             </section>
 
             {/* 3. OUR SERVICES (COLLAPSIBLE ACCORDION SECTION) */}

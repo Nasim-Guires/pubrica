@@ -122,83 +122,15 @@ export default function AlgorithmDevelopmentService() {
 
             {/* 2. OVERVIEW & INTRO SECTION */}
             <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 md:px-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-4">
-                    Custom Algorithm Development for Healthcare, Life Sciences & Beyond
-                </h2>
-                <p className="text-[#3b6058] text-sm md:text-base mb-6">
-                    From AI and deep learning to data mining and optimization, Pubrica
-                    builds intelligent algorithms that accelerate discovery and improve
-                    decision-making.
-                </p>
+                <div className="space-y-6">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] leading-tight">
+                        Custom Algorithm Development for Healthcare, Life Sciences & Beyond
+                    </h2>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                    {/* Left Text */}
-                    <div className="lg:col-span-7 text-gray-700 text-sm md:text-base leading-relaxed space-y-4">
-                        <p>
-                            Healthcare and life science providers face constant challenges in
-                            handling vast, complex datasets, ensuring privacy and regulatory
-                            compliance, and converting raw information into actionable
-                            insights. At Pubrica, we specialize in custom{" "}
-                            <Link href="/subject-matter-experts/algorithm/medical-insights-comprehensive-medical-algorithms/" className="text-blue-600">
-                                algorithm
-                            </Link>{" "}
-                            development for scientific, healthcare, pharma, medical device, food, and
-                            nutraceutical applications.
-                        </p>
-                        <p>
-                            Our team of data science experts collaborates with researchers,
-                            clinicians, and businesses to design and optimize algorithms that
-                            automate workflows, accelerate discovery, and improve
-                            decision-making. From model training to fine-tuned optimization,
-                            we deliver scalable, real-world-ready solutions including AI,
-                            machine learning, and deep learning algorithms for computer
-                            vision, speech, text, emotion recognition, and knowledge
-                            exploration.
-                        </p>
-
-                        {/* Expertise Bullet Points */}
-                        <div className="pt-4">
-                            <h3 className="text-lg font-bold text-[#1b3d36] mb-3">
-                                Pubrica's Expertise
-                            </h3>
-                            <ul className="space-y-2 list-disc list-inside text-gray-700 text-sm md:text-base">
-                                <li>
-                                    <span className="text-gray-900">
-                                        Domain-specific focus:
-                                    </span>{" "}
-                                    Healthcare, life sciences, pharma, medical devices, food &
-                                    nutraceuticals.
-                                </li>
-                                <li>
-                                    <span className="text-gray-900">
-                                        Proven experience:
-                                    </span>{" "}
-                                    Over 350+{" "}
-                                    <Link href="/academy/algorithm-development/ai-algorithm-development-intelligent-systems/" className="text-blue-600">
-                                        algorithms
-                                    </Link>{" "}
-                                    developed and optimized for global clients.
-                                </li>
-                                <li>
-                                    <span className="text-gray-900">
-                                        Expertise in AI, machine learning, deep learning,
-                                        optimization, and data visualization.
-                                    </span>
-                                </li>
-                                <li>
-                                    <span className="text-gray-900">
-                                        End-to-end support:
-                                    </span>{" "}
-                                    From design, training, and validation to implementation.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* Right Section Image */}
-                    <div className="lg:col-span-5 relative flex justify-center">
-                        <div className="p-2 rounded-2xl w-full max-w-md">
-                            <div className="relative w-full h-[280px] sm:h-[320px] rounded-xl overflow-hidden">
+                    <div className="flow-root">
+                        {/* Right Image */}
+                        <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                            <div className="relative w-full max-w-md h-[280px] sm:h-[320px]">
                                 <Image
                                     src="/images/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/Algorithm-Development-for-Training-and-Optimisation.webp"
                                     alt="Software developer analyzing code algorithm on multiple monitors"
@@ -207,6 +139,85 @@ export default function AlgorithmDevelopmentService() {
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                     priority
                                 />
+                            </div>
+                        </div>
+
+                        {/* Text Content */}
+                        <div className="space-y-5 text-gray-700 text-sm md:text-base leading-relaxed">
+                            <p className="text-[#3b6058]">
+                                From AI and deep learning to data mining and optimization, Pubrica
+                                builds intelligent algorithms that accelerate discovery and improve
+                                decision-making.
+                            </p>
+
+                            <p>
+                                Healthcare and life science providers face constant challenges in
+                                handling vast, complex datasets, ensuring privacy and regulatory
+                                compliance, and converting raw information into actionable insights.
+                                At Pubrica, we specialize in custom{" "}
+                                <Link
+                                    href="/subject-matter-experts/algorithm/medical-insights-comprehensive-medical-algorithms/"
+                                    className="text-blue-600"
+                                >
+                                    algorithm
+                                </Link>{" "}
+                                development for scientific, healthcare, pharma, medical device, food,
+                                and nutraceutical applications.
+                            </p>
+
+                            <p>
+                                Our team of data science experts collaborates with researchers,
+                                clinicians, and businesses to design and optimize algorithms that
+                                automate workflows, accelerate discovery, and improve
+                                decision-making. From model training to fine-tuned optimization, we
+                                deliver scalable, real-world-ready solutions including AI, machine
+                                learning, and deep learning algorithms for computer vision, speech,
+                                text, emotion recognition, and knowledge exploration.
+                            </p>
+
+                            {/* Expertise Bullet Points */}
+                            <div className="pt-2">
+                                <h3 className="text-lg font-bold text-[#1b3d36] mb-3">
+                                    Pubrica's Expertise
+                                </h3>
+
+                                <ul className="space-y-2 pl-4 list-disc marker:text-red-600 text-sm md:text-base">
+                                    <li>
+                                        <span className="text-gray-900">
+                                            Domain-specific focus:
+                                        </span>{" "}
+                                        Healthcare, life sciences, pharma, medical devices, food &
+                                        nutraceuticals.
+                                    </li>
+
+                                    <li>
+                                        <span className="text-gray-900">
+                                            Proven experience:
+                                        </span>{" "}
+                                        Over 350+{" "}
+                                        <Link
+                                            href="/academy/algorithm-development/ai-algorithm-development-intelligent-systems/"
+                                            className="text-blue-600"
+                                        >
+                                            algorithms
+                                        </Link>{" "}
+                                        developed and optimized for global clients.
+                                    </li>
+
+                                    <li>
+                                        <span className="text-gray-900">
+                                            Expertise in AI, machine learning, deep learning,
+                                            optimization, and data visualization.
+                                        </span>
+                                    </li>
+
+                                    <li>
+                                        <span className="text-gray-900">
+                                            End-to-end support:
+                                        </span>{" "}
+                                        From design, training, and validation to implementation.
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

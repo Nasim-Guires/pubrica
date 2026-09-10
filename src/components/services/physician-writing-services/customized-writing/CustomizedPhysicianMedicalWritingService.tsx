@@ -142,91 +142,17 @@ export default function CustomizedPhysicianMedicalWritingService() {
       <div className="max-w-6xl mx-auto px-4 py-6 space-y-16">
 
         {/* 2. Overview Section with Image Block */}
-        <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <section className="space-y-6">
+          {/* Heading Placed Above the Image and Content */}
+          <h2 className="text-xl md:text-2xl font-bold text-[#1a2b49] leading-snug">
+            Customized Medical Writing Services Exclusively for Physicians: Precision-Crafted Academic and Clinical Manuscripts Aligned with Physician Research and Practice Goals
+          </h2>
 
-          {/* Left Text Content */}
-          <div className="lg:col-span-7 space-y-5">
-            <h2 className="text-xl md:text-2xl font-bold text-[#1a2b49] leading-snug">
-              Customized Medical Writing Services Exclusively for Physicians: Precision-Crafted Academic and Clinical Manuscripts Aligned with Physician Research and Practice Goals
-            </h2>
-
-            <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
-              At Pubrica, we provide customized medical writing services tailored for physicians, clinicians, and educators to produce high-impact and publication-ready content. We develop academic and clinical manuscripts that are technically accurate and contextually appropriate, while also aligning with your career trajectory, research objectives, and patient care.
-            </p>
-
-            <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
-              We prioritize physician-driven research, education about clinical standards and regulatory requirements, and we write customized documents that comply with journal mandates, institutional policies, and international publishing quality standards. We support each step of the physician&apos;s academic and clinical journey through our writing, from research manuscripts to CME.
-            </p>
-
-            {/* Key Features Bullet List */}
-            <div className="space-y-2 pt-2">
-              <h3 className="text-sm font-bold text-slate-900">Key Features</h3>
-              <ul className="space-y-2 text-xs md:text-sm text-slate-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-red-600 font-bold">•</span>
-                  <span>
-                    Authored by domain-specific <Link href="/subject-matter-experts" className="text-blue-600  no-underline hover:no-underline">subject matter experts</Link> with a clinical background
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-600 font-bold">•</span>
-                  <span>
-                    Adheres to <Link href="https://www.icmje.org/" className="text-blue-600">ICMJE</Link>, GPP3, and target journal formatting standards
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-600 font-bold">•</span>
-                  <span>
-                    Includes technical editing, <Link href="/services/publication-support/plagiarism-services/" className="text-blue-600">plagiarism</Link> screening, and language refinement
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-600 font-bold">•</span>
-                  <span>Fully customizable to your clinical specialty, format, and level of detail</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-600 font-bold">•</span>
-                  <span>
-                    Seamless integration with{" "}
-                    <Link
-                      href="/services/editing-and-translation/manuscript-editing/"
-                      className="text-blue-600 "
-                    >
-                      manuscript editing
-                    </Link>
-                    ,{" "}
-                    <Link
-                      href="/services/publication-support/peer-review-pre-submission/"
-                      className="text-blue-600 "
-                    >
-                      peer review
-                    </Link>
-                    , and{" "}
-                    <Link
-                      href="/services/publication-support/journal-submission/"
-                      className="text-blue-600 "
-                    >
-                      journal submission
-                    </Link>
-                  </span>
-                </li>
-              </ul>
-            </div>
-
-            {/* CTA Button */}
-            <div className="pt-2">
-              <GetFreeQuoteButton />
-            </div>
-          </div>
-
-          {/* Right Image Block with Offset Backdrop */}
-          <div className="lg:col-span-5 relative pt-4">
-            <div className="relative">
-              {/* Dark Green Offset Backdrop */}
-              <div className="absolute inset-0 rounded-xl transform translate-x-3 translate-y-3 -z-0"></div>
-
-              {/* Foreground Image */}
-              <div className="relative z-10 rounded-xl overflow-hidden  border-slate-200">
+          {/* Flow Root Container for Floated Image Layout */}
+          <div className="flow-root">
+            {/* Right Floated Image Container */}
+            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+              <div className="relative w-full max-w-md">
                 <Image
                   src="/images/physician-writing-services/customized-writing/Customized-Medical-Writing-Services-Exclusively-for-Physicians.webp"
                   alt="Physicians reviewing clinical documents"
@@ -237,9 +163,91 @@ export default function CustomizedPhysicianMedicalWritingService() {
                 />
               </div>
             </div>
+
+            {/* Text Content Passing Around the Floated Image */}
+            <div className="space-y-5">
+              <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+                At Pubrica, we provide customized medical writing services tailored for physicians, clinicians, and educators to produce high-impact and publication-ready content. We develop academic and clinical manuscripts that are technically accurate and contextually appropriate, while also aligning with your career trajectory, research objectives, and patient care.
+              </p>
+
+              <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+                We prioritize physician-driven research, education about clinical standards and regulatory requirements, and we write customized documents that comply with journal mandates, institutional policies, and international publishing quality standards. We support each step of the physician&apos;s academic and clinical journey through our writing, from research manuscripts to CME.
+              </p>
+
+              {/* Key Features Bullet List */}
+              <div className="space-y-2 pt-2">
+                <h3 className="text-sm font-bold text-slate-900">
+                  Key Features
+                </h3>
+
+                <ul className="space-y-3 pl-4 list-disc marker:text-red-600 text-xs md:text-sm text-slate-700">
+                  <li>
+                    Authored by domain-specific{" "}
+                    <Link
+                      href="/subject-matter-experts"
+                      className="text-blue-600 no-underline hover:no-underline"
+                    >
+                      subject matter experts
+                    </Link>{" "}
+                    with a clinical background
+                  </li>
+
+                  <li>
+                    Adheres to{" "}
+                    <Link href="https://www.icmje.org/" className="text-blue-600">
+                      ICMJE
+                    </Link>
+                    , GPP3, and target journal formatting standards
+                  </li>
+
+                  <li>
+                    Includes technical editing,{" "}
+                    <Link
+                      href="/services/publication-support/plagiarism-services/"
+                      className="text-blue-600"
+                    >
+                      plagiarism
+                    </Link>{" "}
+                    screening, and language refinement
+                  </li>
+
+                  <li>
+                    Fully customizable to your clinical specialty, format, and level of detail
+                  </li>
+
+                  <li>
+                    Seamless integration with{" "}
+                    <Link
+                      href="/services/editing-and-translation/manuscript-editing/"
+                      className="text-blue-600"
+                    >
+                      manuscript editing
+                    </Link>
+                    ,{" "}
+                    <Link
+                      href="/services/publication-support/peer-review-pre-submission/"
+                      className="text-blue-600"
+                    >
+                      peer review
+                    </Link>
+                    , and{" "}
+                    <Link
+                      href="/services/publication-support/journal-submission/"
+                      className="text-blue-600"
+                    >
+                      journal submission
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              {/* CTA Button */}
+              <div className="pt-4">
+                <GetFreeQuoteButton />
+              </div>
+            </div>
           </div>
         </section>
-
         {/* 3. What We Offer Section */}
         <section className="space-y-6 pt-6">
           <div>

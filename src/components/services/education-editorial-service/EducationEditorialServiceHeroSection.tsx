@@ -55,45 +55,63 @@ export default function EducationEditorialServiceHeroSection() {
 
             {/* ------------------- DRIVING ACADEMIC QUALITY SECTION ------------------- */}
             <section className="py-6 px-4 max-w-6xl mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                    {/* Left Column: Text Content */}
-                    <div className="lg:col-span-7 space-y-4 text-left">
-                        <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-4">
-                            Driving Academic Quality Through Expert Education Editorial Services
-                        </h2>
-                        <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-                            From scholarly articles to curriculum documents, our experts refine language, structure, pedagogy-focused clarity, and field-specific terminology, ensuring your education manuscripts are publication-ready, academically sound, and aligned with global educational standards.
-                        </p>
-                        <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                            In the rapidly evolving education landscape, delivering content that is accurate, engaging, and aligned with academic standards is more important than ever. Whether you are a researcher, academic institution, teacher, publisher, curriculum developer, EdTech company, or educational consultant, high-quality editorial support plays a crucial role in ensuring that your work communicates effectively and reflects the highest levels of precision.
-                        </p>
-                        <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                            Our Education Editorial Services is designed to empower authors, educators, and organizations by refining their manuscripts, course materials, research papers, textbooks, digital content, and institutional documents. With a team of subject-matter experts, experienced academic editors, and skilled language specialists, we help transform raw ideas into polished, publication-ready content that meets global educational and academic benchmarks.
-                        </p>
-                        <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                            From grammar and structure to pedagogy and factual accuracy, our editorial solutions enhance clarity, readability, and overall impact, ensuring your work stands out in an increasingly competitive academic and educational marketplace.
-                        </p>
+                <div className="space-y-6">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0b3b2c] leading-tight">
+                        Driving Academic Quality Through Expert Education Editorial Services
+                    </h2>
 
-                        <div className="pt-4">
-                            <GetFreeQuoteButton />
-                        </div>
-                    </div>
-
-                    {/* Right Column: Featured Image Box */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-full max-w-md h-72">
-                            {/* Dark Green Offset Card (Bottom-Left) */}
-                            <div className="absolute -bottom-4 -left-4 w-full h-full rounded-2xl" />
-
-                            {/* Foreground Image Card */}
-                            <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                    <div className="flow-root">
+                        {/* Right-Floated Image */}
+                        <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                            <div className="relative w-full max-w-md h-64 sm:h-80 overflow-hidden">
                                 <Image
                                     src="/images/education-editorial-service/Driving-Academic-Quality-Through-Expert-Education-Editorial-Services.webp"
                                     alt="Driving Academic Quality Through Expert Education Editorial Services"
                                     fill
                                     className="object-cover"
-                                    sizes="(max-width: 1024px) 100vw, 420px"
+                                    sizes="(max-width: 1024px) 100vw, 28rem"
                                 />
+                            </div>
+                        </div>
+
+                        {/* Main Content */}
+                        <div className="space-y-5 text-sm sm:text-base text-gray-700 leading-relaxed">
+                            <p>
+                                From scholarly articles to curriculum documents, our experts refine
+                                language, structure, pedagogy-focused clarity, and field-specific
+                                terminology, ensuring your education manuscripts are publication-ready,
+                                academically sound, and aligned with global educational standards.
+                            </p>
+
+                            <p className="text-gray-600">
+                                In the rapidly evolving education landscape, delivering content that
+                                is accurate, engaging, and aligned with academic standards is more
+                                important than ever. Whether you are a researcher, academic
+                                institution, teacher, publisher, curriculum developer, EdTech
+                                company, or educational consultant, high-quality editorial support
+                                plays a crucial role in ensuring that your work communicates
+                                effectively and reflects the highest levels of precision.
+                            </p>
+
+                            <p className="text-gray-600">
+                                Our Education Editorial Services is designed to empower authors,
+                                educators, and organizations by refining their manuscripts, course
+                                materials, research papers, textbooks, digital content, and
+                                institutional documents. With a team of subject-matter experts,
+                                experienced academic editors, and skilled language specialists, we
+                                help transform raw ideas into polished, publication-ready content
+                                that meets global educational and academic benchmarks.
+                            </p>
+
+                            <p className="text-gray-600">
+                                From grammar and structure to pedagogy and factual accuracy, our
+                                editorial solutions enhance clarity, readability, and overall impact,
+                                ensuring your work stands out in an increasingly competitive academic
+                                and educational marketplace.
+                            </p>
+
+                            <div className="pt-2">
+                                <GetFreeQuoteButton />
                             </div>
                         </div>
                     </div>

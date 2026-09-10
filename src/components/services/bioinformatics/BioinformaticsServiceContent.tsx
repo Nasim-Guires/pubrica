@@ -191,79 +191,16 @@ export default function BioinformaticsServiceContent() {
             {/* --------------------------------------------------------------------
          2. OVERVIEW SECTION
          -------------------------------------------------------------------- */}
-            <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    {/* Text Content Block */}
-                    <div className="lg:col-span-7 space-y-6">
-                        <header>
-                            <h2 className="text-3xl sm:text-4xl font-bold text-[#0b2b26] mb-4">
-                                Pubrica Bioinformatics Services
-                            </h2>
-                            <h3 className="text-lg font-semibold text-emerald-800 mb-3">
-                                Transforming Complex Biological Data into Meaningful Insights
-                            </h3>
-                        </header>
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
+                <div className="space-y-6">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0b2b26] leading-tight">
+                        Pubrica Bioinformatics Services
+                    </h2>
 
-                        <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
-                            Pubrica provides end-to-end{" "}
-                            <Link href="/academy/bioinformatics/bioinformatics-clinical-applications/" className="text-blue-600 no-underline hover:no-underline">
-                                bioinformatics
-                            </Link>{" "}
-                            consulting services for genomics, proteomics, transcriptomics,
-                            metabolomics, and multi-omics research. Our team of PhD-qualified
-                            computational biologists, data scientists, and bioinformaticians
-                            specializes in next-generation sequencing (NGS) data analysis,
-                            omics data integration, and advanced computational biology
-                            techniques. We help researchers and healthcare professionals
-                            translate raw biological data into accurate, insightful, and
-                            publication-ready results.
-                        </p>
-
-                        <ul className="space-y-3 pt-2 text-sm sm:text-base text-slate-700">
-                            <li className="flex items-start">
-                                <span className="text-red-600 mr-2 font-bold">•</span>
-                                <span>
-                                    15+ years of expertise delivering
-                                    bioinformatics solutions for global medical and life sciences
-                                    research.
-                                </span>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="text-red-600 mr-2 font-bold">•</span>
-                                <span>
-                                    1,200+ projects completed in genomic
-                                    sequencing, protein structure prediction, transcriptomics
-                                    analysis, and clinical omics studies.
-                                </span>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="text-red-600 mr-2 font-bold">•</span>
-                                <span>
-                                    A multidisciplinary team skilled in machine
-                                    learning, big data bioinformatics, and advanced visualization
-                                    (heatmaps, phylogenetic trees, gene expression profiles).
-                                </span>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="text-red-600 mr-2 font-bold">•</span>
-                                <span>
-                                    Proven track record of supporting
-                                    high-impact publications and regulatory submissions through
-                                    precise data analysis and customized pipelines.
-                                </span>
-                            </li>
-                        </ul>
-
-                        <div className="pt-4">
-                            <GetFreeQuoteButton />
-                        </div>
-                    </div>
-
-                    {/* Image Container Block */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        {/* Image Section Start */}
-                        <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden - p-2 ">
-                            <div className="relative w-full h-full rounded-xl overflow-hidden">
+                    <div className="flow-root">
+                        {/* Right Image */}
+                        <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                            <div className="relative w-full max-w-md aspect-[4/3]">
                                 <Image
                                     src="/images/services/bio/Bioinformatics-Services.webp"
                                     alt="Scientist analyzing medical data on laptop in bioinformatics lab"
@@ -274,7 +211,59 @@ export default function BioinformaticsServiceContent() {
                                 />
                             </div>
                         </div>
-                        {/* Image Section End */}
+
+                        {/* Text Content */}
+                        <div className="space-y-5 text-sm sm:text-base text-slate-700 leading-relaxed">
+                            <h3 className="text-lg font-semibold text-emerald-800">
+                                Transforming Complex Biological Data into Meaningful Insights
+                            </h3>
+
+                            <p>
+                                Pubrica provides end-to-end{" "}
+                                <Link
+                                    href="/academy/bioinformatics/bioinformatics-clinical-applications/"
+                                    className="text-blue-600 no-underline hover:no-underline"
+                                >
+                                    bioinformatics
+                                </Link>{" "}
+                                consulting services for genomics, proteomics, transcriptomics,
+                                metabolomics, and multi-omics research. Our team of PhD-qualified
+                                computational biologists, data scientists, and bioinformaticians
+                                specializes in next-generation sequencing (NGS) data analysis,
+                                omics data integration, and advanced computational biology
+                                techniques. We help researchers and healthcare professionals
+                                translate raw biological data into accurate, insightful, and
+                                publication-ready results.
+                            </p>
+
+                            <ul className="space-y-3 pl-4 list-disc marker:text-red-600">
+                                <li>
+                                    15+ years of expertise delivering bioinformatics solutions for
+                                    global medical and life sciences research.
+                                </li>
+
+                                <li>
+                                    1,200+ projects completed in genomic sequencing, protein structure
+                                    prediction, transcriptomics analysis, and clinical omics studies.
+                                </li>
+
+                                <li>
+                                    A multidisciplinary team skilled in machine learning, big data
+                                    bioinformatics, and advanced visualization (heatmaps,
+                                    phylogenetic trees, gene expression profiles).
+                                </li>
+
+                                <li>
+                                    Proven track record of supporting high-impact publications and
+                                    regulatory submissions through precise data analysis and
+                                    customized pipelines.
+                                </li>
+                            </ul>
+
+                            <div className="pt-4">
+                                <GetFreeQuoteButton />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

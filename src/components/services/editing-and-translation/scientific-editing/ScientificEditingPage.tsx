@@ -130,102 +130,105 @@ export default function ScientificEditingPage() {
       />
 
       {/* ==================== 2. HERO & KEY HIGHLIGHTS ==================== */}
-      <section className="max-w-6xl mx-auto py-6 md:py-7 px-4 md:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left Text Content */}
-          <div className="lg:col-span-7 space-y-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0c373b] leading-tight">
+      <section className="pt-6 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
               Boost Your Manuscript’s Impact with Expert Scientific Editing
             </h2>
-            <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
-              Gain publication success with customized editing by subject matter
-              experts with leading journal experience.
-            </p>
-            <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
-              Tailored for submission to high-impact-factor journals, Top Impact
-              Scientific Editing Service employs three PhD/Master’s editors for
-              in-depth editing to maximize your chances for high-impact
-              publication.
-            </p>
 
-            <ul className="space-y-3 pt-2">
-              <li className="flex items-start text-xs md:text-sm text-slate-700 leading-relaxed">
-                <span className="text-red-500 font-bold mr-2 text-base">•</span>
-                <span>
-                  <Link
-                    href="/services/editing-and-translation/scientific-editing/scientific-developmental-editing-high-impact-journals"
-                    className="text-blue-600 no-underline hover:no-underline"
-                  >
-                    Scientific developmental editing
-                  </Link>{" "}
-                  by an editor who has edited/reviewed for journals like{" "}
-                  <em>Nature</em>,{" "}
-                  <em>The New England Journal of Medicine (NEJM)</em>, and{" "}
-                  <em>The Lancet</em>.
-                </span>
-              </li>
-              <li className="flex items-start text-xs md:text-sm text-slate-700 leading-relaxed">
-                <span className="text-red-500 font-bold mr-2 text-base">•</span>
-                <span>
-                  In-depth technical review of your manuscript by editors with
-                  20+ years of experience.
-                </span>
-              </li>
-              <li className="flex items-start text-xs md:text-sm text-slate-700 leading-relaxed">
-                <span className="text-red-500 font-bold mr-2 text-base">•</span>
-                <span>
-                  A simulated{" "}
-                  <Link
-                    href="/services/publication-support/peer-review-pre-submission"
-                    className="text-blue-600 no-underline hover:no-underline"
-                  >
-                    peer review
-                  </Link>{" "}
-                  to help you improve your manuscript.
-                </span>
-              </li>
-              <li className="flex items-start text-xs md:text-sm text-slate-700 leading-relaxed">
-                <span className="text-red-500 font-bold mr-2 text-base">•</span>
-                <span>
-                  Submission-ready:{" "}
-                  <Link
-                    href="/services/publication-support/plagiarism-services"
-                    className="text-blue-600 no-underline hover:no-underline"
-                  >
-                    Plagiarism
-                  </Link>{" "}
-                  Check, Journal Formatting, & Cover Letter.
-                </span>
-              </li>
-              <li className="flex items-start text-xs md:text-sm text-slate-700 leading-relaxed">
-                <span className="text-red-500 font-bold mr-2 text-base">•</span>
-                <span>
-                  365-Day journal revision support to help you sail through peer
-                  review.
-                </span>
-              </li>
-            </ul>
+            <div className="flow-root">
+              {/* Rectangular Image (Matching the non-rounded style) */}
+              <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                <div className="relative w-full max-w-[420px] h-[280px] sm:h-[320px] lg:w-[380px] lg:h-[300px]">
+                  {/* Main Image */}
+                  <div className="relative w-full h-full rounded-xl overflow-hidden">
+                    <Image
+                      src={`${IMG}/Scientific-Editing.webp`}
+                      alt="Scientific Editing Microscope Analysis"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
 
-            <div className="pt-4">
-              <GetFreeQuoteButton />
-            </div>
-          </div>
+              <div className="space-y-5 text-slate-700">
+                <p className="text-base leading-relaxed">
+                  Gain publication success with customized editing by subject matter experts with leading journal experience.
+                </p>
 
-          {/* Right Image Container */}
-          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[420px] h-[280px] sm:h-[320px]">
-              {/* Offset Dark Green Frame Backdrop */}
-              <div className="absolute inset-0 bg-[#0c373b] rounded-2xl transform -translate-x-3 translate-y-3 -z-10" />
+                <p className="text-base leading-relaxed">
+                  Tailored for submission to high-impact-factor journals, Top Impact Scientific Editing Service employs three PhD/Master’s editors for in-depth editing to maximize your chances for high-impact publication.
+                </p>
 
-              {/* Main Image */}
-              <div className="relative w-full h-full rounded-xl overflow-hidden">
-                <Image
-                  src={`${IMG}/Scientific-Editing.webp`}
-                  alt="Scientific Editing Microscope Analysis"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+                {/* Bullet List */}
+                <div className="pt-2 space-y-4">
+                  <div className="space-y-4 pl-4">
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        <Link
+                          href="/services/editing-and-translation/scientific-editing/scientific-developmental-editing-high-impact-journals"
+                          className="text-blue-600 font-medium no-underline hover:no-underline"
+                        >
+                          Scientific developmental editing
+                        </Link>{" "}
+                        by an editor who has edited/reviewed for journals like{" "}
+                        <em>Nature</em>,{" "}
+                        <em>The New England Journal of Medicine (NEJM)</em>, and{" "}
+                        <em>The Lancet</em>.
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        In-depth technical review of your manuscript by editors with 20+ years of experience.
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        A simulated{" "}
+                        <Link
+                          href="/services/publication-support/peer-review-pre-submission"
+                          className="text-blue-600 font-medium no-underline hover:no-underline"
+                        >
+                          peer review
+                        </Link>{" "}
+                        to help you improve your manuscript.
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        Submission-ready:{" "}
+                        <Link
+                          href="/services/publication-support/plagiarism-services"
+                          className="text-blue-600 font-medium no-underline hover:no-underline"
+                        >
+                          Plagiarism
+                        </Link>{" "}
+                        Check, Journal Formatting, & Cover Letter.
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        365-Day journal revision support to help you sail through peer review.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <GetFreeQuoteButton />
+                </div>
               </div>
             </div>
           </div>

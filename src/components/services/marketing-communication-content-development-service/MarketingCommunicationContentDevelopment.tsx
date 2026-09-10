@@ -120,58 +120,23 @@ export default function MarketingCommunicationContentDevelopment() {
             />
 
             {/* ------------------- MAIN SECTION ------------------- */}
-            <section className="py-6 px-4 max-w-6xl mx-auto" aria-labelledby="main-heading">
-                <h2 id="main-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-2">
-                    Marketing Communication Content Development – Crafting Impactful Messages for Your Brand
-                </h2>
+            <section
+                className="py-6 px-4 max-w-6xl mx-auto"
+                aria-labelledby="main-heading"
+            >
+                <div className="space-y-6">
+                    <h2
+                        id="main-heading"
+                        className="text-xl md:text-2xl font-bold text-[#0b3b2c] leading-tight"
+                    >
+                        Marketing Communication Content Development – Crafting Impactful
+                        Messages for Your Brand
+                    </h2>
 
-                <h3 className="text-sm md:text-base font-semibold text-gray-700 mb-6">
-                    Engaging Audiences. Amplifying Reach. Driving Results.
-                </h3>
-
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-                    {/* Left Text Content */}
-                    <div className="md:col-span-7 space-y-4">
-                        <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                            Pubrica offers specialized marketing communication content development services tailored for a diverse range of clients within the healthcare and life sciences industries. Our expertise spans pharmaceutical companies, medical device manufacturers, clinics, private practices, Contract Research Organizations (CROs), healthcare systems, biotechnology firms, nutraceutical and dietary supplement companies, as well as health and wellness product providers. Here's how we ensure that your marketing communications resonate with your target audience:
-                        </p>
-
-                        <ul className="space-y-3 text-xs md:text-sm text-gray-700 pt-2">
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 font-bold min-w-[6px]">•</span>
-                                <span>
-                                    <strong className="text-gray-900">Targeted Audience Engagement:</strong> We develop marketing content writing services aimed at a wide range of healthcare professionals, from doctors to dentists and other allied healthcare workers, ensuring relevance and precision.
-                                </span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 font-bold min-w-[6px]">•</span>
-                                <span>
-                                    <strong className="text-gray-900">Customized Marketing Strategies:</strong> Our projects are tailored to meet your promotional needs and budget constraints, enhancing engagement with your target audience.
-                                </span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 font-bold min-w-[6px]">•</span>
-                                <span>
-                                    <strong className="text-gray-900">Advanced Content Presentation:</strong> We use advanced graphic design and content structuring, such as infographics and interactive presentations, to make complex information accessible and visually appealing.
-                                </span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 font-bold min-w-[6px]">•</span>
-                                <span>
-                                    <strong className="text-gray-900">Comprehensive Campaign Support:</strong> From concept development to execution, we align all content with your brand identity and business goals, enhancing customer engagement and decision-making.
-                                </span>
-                            </li>
-                        </ul>
-
-                        <p className="text-xs md:text-sm text-gray-600 leading-relaxed pt-2">
-                            Pubrica's professional marketing communication services are designed to support your commercial success in the competitive healthcare and life sciences markets with impactful, scientifically grounded marketing strategies.
-                        </p>
-                    </div>
-
-                    {/* Right image */}
-                    <div className="md:col-span-5 flex justify-center">
-                        <div className="relative w-full max-w-md">
-                            <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden">
+                    <div className="flow-root">
+                        {/* Right-floated Image */}
+                        <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                            <div className="relative w-full max-w-md h-72 md:h-80 overflow-hidden">
                                 <Image
                                     src="/images/marketing-communication-content-development-service/Marketing-Communication-Content-Development.webp"
                                     alt="Marketing communication content development"
@@ -180,7 +145,69 @@ export default function MarketingCommunicationContentDevelopment() {
                                     sizes="(max-width: 768px) 100vw, 28rem"
                                 />
                             </div>
-                            <div className="absolute -bottom-3 -right-3 -z-10 w-full h-full bg-[#0b3b2c] rounded-2xl"></div>
+                        </div>
+
+                        {/* Text Content */}
+                        <div className="space-y-5">
+                            <h3 className="text-sm md:text-base font-semibold text-gray-700 leading-relaxed">
+                                Engaging Audiences. Amplifying Reach. Driving Results.
+                            </h3>
+
+                            <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                                Pubrica offers specialized marketing communication content
+                                development services tailored for a diverse range of clients within
+                                the healthcare and life sciences industries. Our expertise spans
+                                pharmaceutical companies, medical device manufacturers, clinics,
+                                private practices, Contract Research Organizations (CROs), healthcare
+                                systems, biotechnology firms, nutraceutical and dietary supplement
+                                companies, as well as health and wellness product providers. Here's
+                                how we ensure that your marketing communications resonate with your
+                                target audience:
+                            </p>
+
+                            <ul className="space-y-3 pl-4 list-disc marker:text-red-600 text-xs md:text-sm text-gray-700">
+                                <li>
+                                    <strong className="text-gray-900">
+                                        Targeted Audience Engagement:
+                                    </strong>{" "}
+                                    We develop marketing content writing services aimed at a wide range
+                                    of healthcare professionals, from doctors to dentists and other
+                                    allied healthcare workers, ensuring relevance and precision.
+                                </li>
+
+                                <li>
+                                    <strong className="text-gray-900">
+                                        Customized Marketing Strategies:
+                                    </strong>{" "}
+                                    Our projects are tailored to meet your promotional needs and budget
+                                    constraints, enhancing engagement with your target audience.
+                                </li>
+
+                                <li>
+                                    <strong className="text-gray-900">
+                                        Advanced Content Presentation:
+                                    </strong>{" "}
+                                    We use advanced graphic design and content structuring, such as
+                                    infographics and interactive presentations, to make complex
+                                    information accessible and visually appealing.
+                                </li>
+
+                                <li>
+                                    <strong className="text-gray-900">
+                                        Comprehensive Campaign Support:
+                                    </strong>{" "}
+                                    From concept development to execution, we align all content with
+                                    your brand identity and business goals, enhancing customer
+                                    engagement and decision-making.
+                                </li>
+                            </ul>
+
+                            <p className="text-xs md:text-sm text-gray-600 leading-relaxed pt-2">
+                                Pubrica's professional marketing communication services are designed
+                                to support your commercial success in the competitive healthcare and
+                                life sciences markets with impactful, scientifically grounded
+                                marketing strategies.
+                            </p>
                         </div>
                     </div>
                 </div>

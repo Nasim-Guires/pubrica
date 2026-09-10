@@ -8,7 +8,7 @@ export default function PatientEducationContentOverviewSection() {
   return (
     <section
       aria-label="Patient Education Content Overview"
-      className="w-full bg-white text-slate-800 font-sans overflow-hidden"
+      className="w-full bg-white text-slate-800 font-sans"
     >
       {/* Top Banner Header */}
       <HeroBanner
@@ -20,165 +20,175 @@ export default function PatientEducationContentOverviewSection() {
       {/* Main Content Body */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
         {/* Section 1: Service Overview */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-7 space-y-5">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0c2e3a] leading-tight">
-              Professional Patient Education Content Development Service:
-              Communicate Medical Information with Clarity, Compassion, and
-              Compliance
-            </h2>
+        <div className="space-y-6">
+          {/* Heading Placed Above the Image and Content */}
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0c2e3a] leading-tight">
+            Professional Patient Education Content Development Service:
+            Communicate Medical Information with Clarity, Compassion, and
+            Compliance
+          </h2>
 
-            <p className="text-base text-slate-700 leading-relaxed">
-              At Pubrica, we specialize in transforming complex clinical
-              information into accessible, engaging, and patient-friendly
-              educational materials.
-            </p>
-
-            <p className="text-base text-slate-700 leading-relaxed">
-              Our{" "}
-              <Link
-                href="/academy/patient-education/effective-patient-education-content-guide/"
-                className="text-blue-600 no-underline hover:no-underline"
-              >
-                patient education content
-              </Link>{" "}
-              development services are designed for healthcare professionals,
-              hospitals, pharmaceutical companies, nutraceutical manufacturers,
-              and medical device manufacturers seeking to improve patient
-              understanding and engagement. Our content meets{" "}
-              <Link
-                href="/services/scientific-communication/"
-                className="text-blue-600 no-underline hover:no-underline"
-              >
-                medical communication
-              </Link>{" "}
-              standards while simplifying complex clinical concepts for diverse
-              patient populations.
-            </p>
-
-            <div className="pt-2">
-              <h3 className="text-lg font-bold text-[#0c2e3a] mb-3">
-                Key Features of Our Service:
-              </h3>
-
-              <ul className="space-y-3 pl-4 list-disc marker:text-red-600">
-                <li className="text-slate-700 leading-relaxed">
-                  <strong className="text-slate-900">
-                    Evidence-Based Information:
-                  </strong>{" "}
-                  Content based on trusted international and national clinical
-                  guidelines such as{" "}
-                  <Link href="https://www.who.int/" className="text-blue-600">
-                    WHO
-                  </Link>
-                  ,
-                  <Link
-                    href="https://www.nice.org.uk/process/pmg6/resources/the-guidelines-manual-pdf-2007970804933"
-                    className="text-blue-600"
-                  >
-                    NICE
-                  </Link>
-                  ,{" "}
-                  <Link
-                    href="https://www.cdc.gov/index.html"
-                    className="text-blue-600 no-underline hover:no-underline"
-                  >
-                    CDC
-                  </Link>
-                  , and{" "}
-                  <Link href="https://www.icmr.gov.in/" className="text-blue-600">
-                    ICMR
-                  </Link>
-                  , ensuring clinical accuracy and consistency.
-                </li>
-                <li className="text-slate-700 leading-relaxed">
-                  <strong className="text-slate-900">
-                    Multilingual Content:
-                  </strong>{" "}
-                  Translation and cultural adaptation in more than 20 languages.
-                </li>
-                <li className="text-slate-700 leading-relaxed">
-                  <strong className="text-slate-900">
-                    Multimedia Formats:
-                  </strong>{" "}
-                  Content created based on printing, digital, video, and audio
-                  formats, enhancing accessibility and reach.
-                </li>
-                <li className="text-slate-700 leading-relaxed">
-                  <strong className="text-slate-900">
-                    Regulatory Standards:
-                  </strong>{" "}
-                  Complies with HIPAA,{" "}
-                  <Link href="https://www.fda.gov/" className="text-blue-600">
-                    FDA
-                  </Link>
-                  , and EU MDR standards for patient communications.
-                </li>
-                <li className="text-slate-700 leading-relaxed">
-                  <strong className="text-slate-900">
-                    Patient-Centric Approach:
-                  </strong>{" "}
-                  Materials are readability tested and feedback-validated.
-                </li>
-                <li className="text-slate-700 leading-relaxed">
-                  <strong className="text-slate-900">
-                    Customized Content Development:
-                  </strong>{" "}
-                  Whether it’s for chronic disease education, post-operative
-                  care, or device usage instructions, we tailor content to your
-                  patients’ needs and literacy levels.
-                </li>
-              </ul>
+          {/* Flow Root Container for Floated Image Layout */}
+          <div className="flow-root">
+            {/* Right Floated Image Container */}
+            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+              <div className="relative p-3 max-w-md w-full">
+                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  <Image
+                    src="/images/physician-writing-services/patient-education-content/Patient-Education-Content-Service.webp"
+                    alt="Doctor explaining medical treatment using visual aids to a patient"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </div>
             </div>
 
-            <div className="pt-4">
-              <GetFreeQuoteButton />
-            </div>
-          </div>
+            {/* Text Content Passing Around the Floated Image */}
+            <div className="space-y-5">
+              <p className="text-base text-slate-700 leading-relaxed">
+                At Pubrica, we specialize in transforming complex clinical
+                information into accessible, engaging, and patient-friendly
+                educational materials.
+              </p>
 
-          {/* Right Image Container - Clean & Borderless */}
-          <div className="lg:col-span-5 flex justify-center w-full pt-4 lg:pt-0">
-            <div className="relative max-w-sm sm:max-w-md w-full mx-auto">
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
-                <Image
-                  src="/images/physician-writing-services/patient-education-content/Patient-Education-Content-Service.webp"
-                  alt="Doctor explaining medical treatment using visual aids to a patient"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                  priority
-                />
+              <p className="text-base text-slate-700 leading-relaxed">
+                Our{" "}
+                <Link
+                  href="/academy/patient-education/effective-patient-education-content-guide/"
+                  className="text-blue-600 no-underline hover:no-underline"
+                >
+                  patient education content
+                </Link>{" "}
+                development services are designed for healthcare professionals,
+                hospitals, pharmaceutical companies, nutraceutical manufacturers,
+                and medical device manufacturers seeking to improve patient
+                understanding and engagement. Our content meets{" "}
+                <Link
+                  href="/services/scientific-communication/"
+                  className="text-blue-600 no-underline hover:no-underline"
+                >
+                  medical communication
+                </Link>{" "}
+                standards while simplifying complex clinical concepts for diverse
+                patient populations.
+              </p>
+
+              <div className="pt-2">
+                <h3 className="text-lg font-bold text-[#0c2e3a] mb-3">
+                  Key Features of Our Service:
+                </h3>
+
+                <ul className="space-y-3 pl-4 list-disc marker:text-red-600">
+                  <li className="text-slate-700 leading-relaxed">
+                    <strong className="text-slate-900">
+                      Evidence-Based Information:
+                    </strong>{" "}
+                    Content based on trusted international and national clinical{" "}
+                    guidelines such as{" "}
+                    <Link href="https://www.who.int/" className="text-blue-600">
+                      WHO
+                    </Link>
+                    ,
+                    <Link href="https://www.nice.org.uk/process/pmg6/resources/the-guidelines-manual-pdf-2007970804933" className="text-blue-600">
+                      NICE
+                    </Link>
+                    ,{" "}
+                    <Link href="https://www.cdc.gov/index.html" className="text-blue-600 no-underline hover:no-underline">
+                      CDC
+                    </Link>
+                    , and{" "}
+                    <Link href="https://www.icmr.gov.in/" className="text-blue-600">
+                      ICMR
+                    </Link>
+                    , ensuring clinical accuracy and consistency.
+                  </li>
+                  <li className="text-slate-700 leading-relaxed">
+                    <strong className="text-slate-900">
+                      Multilingual Content:
+                    </strong>{" "}
+                    Translation and cultural adaptation in more than 20 languages.
+                  </li>
+                  <li className="text-slate-700 leading-relaxed">
+                    <strong className="text-slate-900">
+                      Multimedia Formats:
+                    </strong>{" "}
+                    Content created based on printing, digital, video, and audio
+                    formats, enhancing accessibility and reach.
+                  </li>
+                  <li className="text-slate-700 leading-relaxed">
+                    <strong className="text-slate-900">
+                      Regulatory Standards:
+                    </strong>{" "}
+                    Complies with HIPAA,{" "}
+                    <Link href="https://www.fda.gov/" className="text-blue-600">
+                      FDA
+                    </Link>, and EU MDR
+                    standards for patient communications.
+                  </li>
+                  <li className="text-slate-700 leading-relaxed">
+                    <strong className="text-slate-900">
+                      Patient-Centric Approach:
+                    </strong>{" "}
+                    Materials are readability tested and feedback-validated.
+                  </li>
+                  <li className="text-slate-700 leading-relaxed">
+                    <strong className="text-slate-900">
+                      Customized Content Development:
+                    </strong>{" "}
+                    Whether it’s for chronic disease education, post-operative
+                    care, or device usage instructions, we tailor content to your
+                    patients’ needs and literacy levels.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="pt-4">
+                <GetFreeQuoteButton />
               </div>
             </div>
           </div>
         </div>
 
         {/* Section 2: What We Do */}
-        <div className="pt-6 border-t border-slate-100">
-          <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5">What We do</h2>
+        <div className="space-y-6">
+          {/* Heading Placed Above the Image and Content */}
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0c2e3a] leading-tight">
+            What We do
+          </h2>
 
-          {/* Floated Image Layout for space utilization matching the screenshot */}
+          {/* Flow Root Container for Floated Image Layout */}
           <div className="flow-root">
-            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
-              <div className="relative w-full max-w-[380px] h-[260px] sm:h-[280px] mx-auto overflow-hidden">
-                <Image
-                  src="/images/physician-writing-services/patient-education-content/WHAT-WE-DO-.webp"
-                  alt="Healthcare provider demonstrating information on a tablet"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 30vw"
-                  className="object-cover"
-                />
+            {/* Right Floated Image Collage Layout */}
+            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+              <div className="relative w-full max-w-md h-[380px]">
+                {/* Top Image */}
+                <div className="absolute top-0 left-0 w-3/4 h-48 overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/physician-writing-services/patient-education-content/WHAT-WE-DO-.webp"
+                    alt="Healthcare provider demonstrating information on a tablet"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 30vw"
+                    className="object-cover"
+                  />
+                </div>
+
+                {/* Decorative Subtle Background Circle */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-slate-100 rounded-full -z-0 opacity-70" />
               </div>
             </div>
 
-            <div className="space-y-5 text-slate-700">
-              <p className="text-base leading-relaxed">
-                At Pubrica, we create patient education content for the
-                pharmaceutical, medical device, nutraceutical, and life science
-                industries. Our professional content authors use their knowledge and
-                experience to create accurate, informative, and engaging
-                educational content that promotes patient understanding and
-                engagement. Here’s how we support{" "}
+            {/* Text Content Passing Around the Floated Image */}
+            <div className="space-y-5">
+              <p className="text-base text-slate-700 leading-relaxed">
+                At Pubrica, we create patient education content{" "}
+                for the pharmaceutical, medical device, nutraceutical, and life
+                science industries. Our professional content authors use their
+                knowledge and experience to create accurate, informative, and
+                engaging educational content that promotes patient understanding
+                and engagement. Here’s how we support{" "}
                 <Link
                   href="/services/patient-education-content/breast-cancer-treatment/"
                   className="text-blue-600 no-underline hover:no-underline"
@@ -187,8 +197,8 @@ export default function PatientEducationContentOverviewSection() {
                 </Link>
               </p>
 
-              <ul className="space-y-4 pl-4 list-disc marker:text-red-600">
-                <li className="leading-relaxed">
+              <ul className="space-y-3 pl-4 list-disc marker:text-red-600">
+                <li className="text-slate-700 leading-relaxed">
                   <strong className="text-slate-900">
                     Expert Content Development:
                   </strong>{" "}
@@ -199,7 +209,8 @@ export default function PatientEducationContentOverviewSection() {
                   essential for satisfying the educational needs of patients and
                   improving health literacy.
                 </li>
-                <li className="leading-relaxed">
+
+                <li className="text-slate-700 leading-relaxed">
                   <strong className="text-slate-900">
                     Tailor-Made Educational Resources:
                   </strong>{" "}
@@ -219,7 +230,8 @@ export default function PatientEducationContentOverviewSection() {
                   peer-reviewed outputs and conference-ready presentations that
                   depict real-world patient engagement endeavours.
                 </li>
-                <li className="leading-relaxed">
+
+                <li className="text-slate-700 leading-relaxed">
                   <strong className="text-slate-900">
                     Comprehensive Content Formats:
                   </strong>{" "}
@@ -231,7 +243,8 @@ export default function PatientEducationContentOverviewSection() {
                   patients receive the information they need in the format they
                   understand best.
                 </li>
-                <li className="leading-relaxed">
+
+                <li className="text-slate-700 leading-relaxed">
                   <strong className="text-slate-900">
                     Collaboration with Healthcare Professionals:
                   </strong>{" "}
@@ -244,7 +257,8 @@ export default function PatientEducationContentOverviewSection() {
                   and systematic review methodology, which connects insights from
                   the bedside to scholarly communication and valuable articles.
                 </li>
-                <li className="leading-relaxed">
+
+                <li className="text-slate-700 leading-relaxed">
                   <strong className="text-slate-900">
                     Engagement and Accessibility:
                   </strong>{" "}
@@ -254,16 +268,16 @@ export default function PatientEducationContentOverviewSection() {
                   their health.
                 </li>
               </ul>
+
+              <p className="text-base text-slate-700 leading-relaxed pt-2">
+                Pubrica is committed to improving patient education through
+                high-quality, tailored content that empowers people to take
+                ownership of their health care. We ensure that patient education
+                materials are academic and useful for health outcomes and patient
+                engagement.
+              </p>
             </div>
           </div>
-
-          <p className="text-base text-slate-700 leading-relaxed pt-6">
-            Pubrica is committed to improving patient education through
-            high-quality, tailored content that empowers people to take
-            ownership of their health care. We ensure that patient education
-            materials are academic and useful for health outcomes and patient
-            engagement.
-          </p>
         </div>
       </div>
     </section>

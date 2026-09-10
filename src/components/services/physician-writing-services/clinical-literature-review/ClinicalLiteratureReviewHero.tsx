@@ -108,16 +108,30 @@ export default function ClinicalLiteratureReviewHero() {
             />
             <div className="max-w-6xl mx-auto px-4 space-y-12 py-8">
                 {/* 2. Overview Section */}
-                <section className="space-y-4">
+                <section className="space-y-6">
                     <h2 className="text-xl md:text-2xl font-bold text-slate-900 leading-tight">
                         Professional Clinical Literature Review for Evidence-Based Medicine:
                         Interpret Scientific Evidence with Rigor, Relevance, and
                         Reliability
                     </h2>
 
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pt-2">
-                        {/* Left Column Text */}
-                        <div className="md:col-span-7 space-y-4 text-xs md:text-sm text-slate-700 leading-relaxed">
+                    {/* Flow Root Container for Floated Image Layout */}
+                    <div className="flow-root pt-2">
+                        {/* Right Floated Image Container */}
+                        <div className="md:float-right md:ml-8 md:mb-4 mb-6 flex justify-center w-full md:w-[450px] pt-2 md:pt-0">
+                            <div className="relative w-full max-w-md h-72 md:h-96 overflow-hidden">
+                                <Image
+                                    src="/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Professional-Clinical-Literature-Review-for-Evidence.webp"
+                                    alt="Doctor reviewing clinical literature document"
+                                    fill
+                                    className="object-cover"
+                                    unoptimized
+                                />
+                            </div>
+                        </div>
+
+                        {/* Text Content Passing Around the Floated Image */}
+                        <div className="space-y-5 text-xs md:text-sm text-slate-700 leading-relaxed">
                             <p>
                                 At Pubrica, we specialize in providing systematic, high-quality
                                 clinical literature reviews to support evidence-based medical
@@ -147,51 +161,37 @@ export default function ClinicalLiteratureReviewHero() {
                                 .
                             </p>
 
-                            <ul className="space-y-1.5 pl-2">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-500 font-bold">•</span>
-                                    <span>
-                                        Synthesizing validated clinical evidence from peer-reviewed
-                                        literature
-                                    </span>
+                            <ul className="space-y-3 pl-4 list-disc marker:text-red-500">
+                                <li>
+                                    Synthesizing validated clinical evidence from peer-reviewed
+                                    literature
                                 </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-500 font-bold">•</span>
-                                    <span>
-                                        Contributing to clinical practice guidelines, protocols,
-                                        and trial designs
-                                    </span>
+                                <li>
+                                    Contributing to clinical practice guidelines, protocols,
+                                    and trial designs
                                 </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-500 font-bold">•</span>
-                                    <span>
-                                        Shaping health technology assessments (
-                                        <Link href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/health-technology-assessment-hta-overview" className="text-blue-600 no-underline hover:no-underline">
-                                            HTA
-                                        </Link>
-                                        ) and regulatory submissions.
-                                    </span>
+                                <li>
+                                    Shaping health technology assessments (
+                                    <Link
+                                        href="/services/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/health-technology-assessment-hta-overview"
+                                        className="text-blue-600 no-underline hover:no-underline"
+                                    >
+                                        HTA
+                                    </Link>
+                                    ) and regulatory submissions.
                                 </li>
                             </ul>
 
                             <p className="font-semibold text-slate-800 pt-2">
                                 We also support early-stage research by:
                             </p>
-                            <ul className="space-y-1.5 pl-2">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-500 font-bold">•</span>
-                                    <span>Investigating unmet medical needs</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-500 font-bold">•</span>
-                                    <span>Exploring novel therapeutic areas</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-500 font-bold">•</span>
-                                    <span>
-                                        Reviewing existing literature before initiating preclinical
-                                        or Phase I clinical trials
-                                    </span>
+
+                            <ul className="space-y-3 pl-4 list-disc marker:text-red-500">
+                                <li>Investigating unmet medical needs</li>
+                                <li>Exploring novel therapeutic areas</li>
+                                <li>
+                                    Reviewing existing literature before initiating preclinical
+                                    or Phase I clinical trials
                                 </li>
                             </ul>
 
@@ -199,7 +199,10 @@ export default function ClinicalLiteratureReviewHero() {
                                 Using Pubrica’s multidisciplinary team consisting of clinical
                                 researchers, epidemiologists, biostatisticians, and content
                                 experts, we can ensure the{" "}
-                                <Link href="/academy/research-services/literature-review-tips-introduction-discussion-sections/" className="text-blue-600 no-underline hover:no-underline">
+                                <Link
+                                    href="/academy/research-services/literature-review-tips-introduction-discussion-sections/"
+                                    className="text-blue-600 no-underline hover:no-underline"
+                                >
                                     medical literature review
                                 </Link>{" "}
                                 is accurate, methodologically robust, and clinically valid.
@@ -208,17 +211,6 @@ export default function ClinicalLiteratureReviewHero() {
                             <div className="pt-4">
                                 <GetFreeQuoteButton />
                             </div>
-                        </div>
-
-                        {/* Right Column Image */}
-                        <div className="md:col-span-5 relative h-72 md:h-96 rounded-2xl overflow-hidden">
-                            <Image
-                                src="/images/physician-writing-services/clinical-literature-review-for-an-evidence-based-medicine/Professional-Clinical-Literature-Review-for-Evidence.webp"
-                                alt="Doctor reviewing clinical literature document"
-                                fill
-                                className="object-cover"
-                                unoptimized
-                            />
                         </div>
                     </div>
                 </section>
@@ -230,7 +222,10 @@ export default function ClinicalLiteratureReviewHero() {
                     </h2>
                     <p className="text-xs md:text-sm text-slate-600 mb-8">
                         Pubrica provides end-to-end support for a{" "}
-                        <Link href="/services/research-services/literature-review-and-gap/" className="text-blue-600 no-underline hover:no-underline">
+                        <Link
+                            href="/services/research-services/literature-review-and-gap/"
+                            className="text-blue-600 no-underline hover:no-underline"
+                        >
                             comprehensive literature review
                         </Link>{" "}
                         to advance clinical research, product development, and regulatory

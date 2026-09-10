@@ -17,77 +17,16 @@ export default function ResearchImpactService(): React.ReactElement {
 
       {/* ---------------- MAIN CONTENT SECTION ---------------- */}
       <section className="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* Left Column: Text & List */}
-          <div className="lg:col-span-7 space-y-6">
-            {/* Main Title & Subtitle */}
-            <div className="space-y-3">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#09322e] leading-snug">
-                Research Impact Service: Amplifying Scientific Influence with
-                Precision and Clarity
-              </h2>
-              <p className="text-base sm:text-lg font-semibold text-[#1e615e]">
-                Deliver targeted, evidence-based strategies to increase the
-                visibility, credibility, and citation of your research.
-              </p>
-            </div>
+        <div className="space-y-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#09322e] leading-tight">
+            Research Impact Service: Amplifying Scientific Influence with Precision
+            and Clarity
+          </h2>
 
-            {/* Paragraph 1 */}
-            <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-              Publishing your research is only the first step. To truly drive
-              research promotion, your work must reach the right stakeholders.
-              Pubrica’s{" "}
-              <Link
-                href="/insights/industry-trends-forecasts-academic-publishing"
-                className="text-blue-600 transition-colors cursor-pointer no-underline hover:no-underline"
-              >
-                Research Impact Services
-              </Link>{" "}
-              optimize scientific communication, ensuring your research is seen,
-              read, cited, and referenced. As a result, you’ll achieve:
-            </p>
-
-            {/* Bullet Points */}
-            <ul className="space-y-2 pl-4 text-sm sm:text-base text-slate-800 list-disc marker:text-slate-800">
-              <li>
-                At least 40% more citations
-              </li>
-              <li>Greater attention and engagement</li>
-              <li>Broader connections with funders, peers, and media</li>
-            </ul>
-
-            {/* Paragraph 2 */}
-            <p className="text-sm sm:text-base text-slate-700 leading-relaxed pt-2">
-              With Pubrica’s expert team, including scientific writers, graphic
-              designers, illustrators, communication specialists, and impact
-              analysts, we can ensure that your ground-breaking findings reach
-              their maximum but key audiences across disciplines, thereby
-              enhancing visibility, interpreted into an impactful narrative, and
-              promoting scholarly engagement, altmetric, and media coverage.
-            </p>
-
-            {/* CTA Button */}
-            {/* CTA Button */}
-            <div className="pt-2 flex justify-center sm:justify-start">
-              <a
-                href="/uploads/research-impact/Research-Impact-Services_compressed.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-red-600 text-white text-sm font-bold px-6 py-3 rounded hover:bg-white hover:text-black transition-colors"
-              >
-                View brochure
-              </a>
-            </div>
-          </div>
-
-          {/* Right Column: Image with Offset Backing Block */}
-          <div className="lg:col-span-5 relative flex justify-center lg:justify-end mt-4 lg:mt-0">
-            <div className="relative w-full max-w-md">
-              {/* Dark Green Backing Block */}
-              <div className="absolute inset-0 rounded-2xl transform translate-x-3 translate-y-3 -z-10" />
-
-              {/* Foreground Image */}
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+          <div className="flow-root">
+            {/* Right-floated Image */}
+            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+              <div className="relative w-full max-w-md aspect-[4/3] overflow-hidden">
                 <Image
                   src="/images/research-impact/Our-Research-Impact-Expertise-Includes.webp"
                   alt="Team reviewing research documents"
@@ -96,6 +35,54 @@ export default function ResearchImpactService(): React.ReactElement {
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   priority
                 />
+              </div>
+            </div>
+
+            {/* Text Content */}
+            <div className="space-y-5">
+              <p className="text-base sm:text-lg font-semibold text-[#1e615e] leading-relaxed">
+                Deliver targeted, evidence-based strategies to increase the
+                visibility, credibility, and citation of your research.
+              </p>
+
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                Publishing your research is only the first step. To truly drive
+                research promotion, your work must reach the right stakeholders.
+                Pubrica’s{" "}
+                <Link
+                  href="/insights/industry-trends-forecasts-academic-publishing"
+                  className="text-blue-600 transition-colors cursor-pointer no-underline hover:no-underline"
+                >
+                  Research Impact Services
+                </Link>{" "}
+                optimize scientific communication, ensuring your research is seen,
+                read, cited, and referenced. As a result, you’ll achieve:
+              </p>
+
+              <ul className="space-y-3 pl-4 text-sm sm:text-base text-slate-800 list-disc marker:text-red-600">
+                <li>At least 40% more citations</li>
+                <li>Greater attention and engagement</li>
+                <li>Broader connections with funders, peers, and media</li>
+              </ul>
+
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                With Pubrica’s expert team, including scientific writers, graphic
+                designers, illustrators, communication specialists, and impact
+                analysts, we can ensure that your ground-breaking findings reach
+                their maximum but key audiences across disciplines, thereby
+                enhancing visibility, interpreted into an impactful narrative, and
+                promoting scholarly engagement, altmetric, and media coverage.
+              </p>
+
+              <div className="pt-4 flex justify-center sm:justify-start">
+                <a
+                  href="/uploads/research-impact/Research-Impact-Services_compressed.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-red-600 text-white text-sm font-bold px-6 py-3 rounded hover:bg-white hover:text-black transition-colors"
+                >
+                  View brochure
+                </a>
               </div>
             </div>
           </div>

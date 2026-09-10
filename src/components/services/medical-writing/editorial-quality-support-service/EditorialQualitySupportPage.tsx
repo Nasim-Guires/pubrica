@@ -66,7 +66,7 @@ const whatWeDoData: AccordionItem[] = [
 ];
 
 export default function EditorialQualitySupportPage() {
-    const [openAccordion, setOpenAccordion] = useState<string | null>('item-1');
+    const [openAccordion, setOpenAccordion] = useState<string | null>();
 
     const toggleAccordion = (id: string) => {
         setOpenAccordion((prev) => (prev === id ? null : id));
@@ -84,65 +84,127 @@ export default function EditorialQualitySupportPage() {
 
             {/* 2. ELEVATE YOUR SCIENTIFIC DOCUMENTS SECTION */}
             <section className="max-w-5xl mx-auto px-4 mt-16">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div className="space-y-6">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#0B3C3D] leading-tight">
+                        Editorial & Quality Support Services: Elevate Your Scientific Documents
+                        with Precision and Clarity
+                    </h2>
 
-                    {/* Left Text Content */}
-                    <div className="lg:col-span-7 space-y-4">
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#0B3C3D] leading-snug">
-                            Editorial & Quality Support Services: Elevate Your Scientific Documents with Precision and Clarity
-                        </h2>
-                        <p className="text-sm md:text-base font-semibold text-[#0B3C3D]/80">
-                            Refine Your Scientific Communication with Expert Editorial and Quality Oversight
-                        </p>
+                    <div className="flow-root">
+                        {/* Right Image */}
+                        <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                            <div className="relative w-full max-w-sm h-[340px]">
+                                <Image
+                                    src="/images/medical-writing/editorial-quality-support-service/Editorial-Quality-Support-Services-1.webp"
+                                    alt="Professional editorial customer support specialist reviewing scientific documents"
+                                    title="Pubrica Editorial and Quality Support Services"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 400px"
+                                    className="object-cover"
+                                    priority
+                                />
+                            </div>
+                        </div>
 
-                        <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                            At Pubrica, our editorial & quality support services are designed to elevate the precision, clarity, and compliance of your scientific documents. We specialize in editing, formatting, and quality reviewing content for <Link href="/industries/pharmaceutical/" className="text-blue-600">pharmaceutical</Link>, biotech, and <Link href="/subject-matter-experts/life-sciences/" className="text-blue-600">life sciences</Link> organizations, ensuring alignment with global publication and regulatory standards.
-                        </p>
+                        {/* Text Content */}
+                        <div className="space-y-5">
+                            <p className="text-sm md:text-base font-semibold text-[#0B3C3D]/80">
+                                Refine Your Scientific Communication with Expert Editorial and
+                                Quality Oversight
+                            </p>
 
-                        <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                            We support researchers, authors, and regulatory teams at every stage, from <Link href="/services/publication-support/journal-submission/" className="text-blue-600">pre-submission peer review</Link> and regulatory filing, helping transform technical drafts into polished, impactful documents.
-                        </p>
+                            <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                                At Pubrica, our editorial & quality support services are designed to
+                                elevate the precision, clarity, and compliance of your scientific
+                                documents. We specialize in editing, formatting, and quality
+                                reviewing content for{" "}
+                                <Link
+                                    href="/industries/pharmaceutical/"
+                                    className="text-blue-600"
+                                >
+                                    pharmaceutical
+                                </Link>
+                                , biotech, and{" "}
+                                <Link
+                                    href="/subject-matter-experts/life-sciences/"
+                                    className="text-blue-600"
+                                >
+                                    life sciences
+                                </Link>{" "}
+                                organizations, ensuring alignment with global publication and
+                                regulatory standards.
+                            </p>
 
-                        {/* Bullet Points */}
-                        <ul className="space-y-2 text-sm md:text-base text-gray-700 pt-2">
-                            <li className="flex items-start">
-                                <span className="text-red-500 font-bold mr-2">•</span>
-                                <span>Comprehensive editing services for grammar, style, consistency, and technical accuracy</span>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="text-red-500 font-bold mr-2">•</span>
-                                <span>Expertise in <a href="https://www.ich.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600">ICH</a>, GCP, <a href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600">CONSORT</a>, and other international editorial standards</span>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="text-red-500 font-bold mr-2">•</span>
-                                <span>Formatting and quality checks aligned with <Link href="/services/publication-support/journal-submission/" className="text-blue-600">journal submission</Link> requirements</span>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="text-red-500 font-bold mr-2">•</span>
-                                <span>Customized solutions for research papers, clinical trial documents, and regulatory dossiers</span>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="text-red-500 font-bold mr-2">•</span>
-                                <span>Support for multilingual authors to ensure clarity in <Link href="/services/scientific-communication/" className="text-blue-600">scientific communication</Link></span>
-                            </li>
-                        </ul>
-                    </div>
+                            <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                                We support researchers, authors, and regulatory teams at every stage,
+                                from{" "}
+                                <Link
+                                    href="/services/publication-support/journal-submission/"
+                                    className="text-blue-600"
+                                >
+                                    pre-submission peer review
+                                </Link>{" "}
+                                and regulatory filing, helping transform technical drafts into
+                                polished, impactful documents.
+                            </p>
 
-                    {/* Right Image Container (Next.js SEO Image) */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-full max-w-sm h-[340px] overflow-hidden">
-                            <Image
-                                src="/images/medical-writing/editorial-quality-support-service/Editorial-Quality-Support-Services-1.webp"
-                                alt="Professional editorial customer support specialist reviewing scientific documents"
-                                title="Pubrica Editorial and Quality Support Services"
-                                fill
-                                sizes="(max-width: 768px) 100vw, 400px"
-                                className="object-cover"
-                                priority
-                            />
+                            {/* Bullet Points */}
+                            <ul className="space-y-3 pl-4 list-disc marker:text-red-600 text-sm md:text-base text-gray-700">
+                                <li>
+                                    Comprehensive editing services for grammar, style, consistency,
+                                    and technical accuracy
+                                </li>
+
+                                <li>
+                                    Expertise in{" "}
+                                    <a
+                                        href="https://www.ich.org/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-blue-600"
+                                    >
+                                        ICH
+                                    </a>
+                                    , GCP,{" "}
+                                    <a
+                                        href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-blue-600"
+                                    >
+                                        CONSORT
+                                    </a>
+                                    , and other international editorial standards
+                                </li>
+
+                                <li>
+                                    Formatting and quality checks aligned with{" "}
+                                    <Link
+                                        href="/services/publication-support/journal-submission/"
+                                        className="text-blue-600"
+                                    >
+                                        journal submission
+                                    </Link>{" "}
+                                    requirements
+                                </li>
+
+                                <li>
+                                    Customized solutions for research papers, clinical trial
+                                    documents, and regulatory dossiers
+                                </li>
+
+                                <li>
+                                    Support for multilingual authors to ensure clarity in{" "}
+                                    <Link
+                                        href="/services/scientific-communication/"
+                                        className="text-blue-600"
+                                    >
+                                        scientific communication
+                                    </Link>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-
                 </div>
             </section>
 
@@ -161,7 +223,7 @@ export default function EditorialQualitySupportPage() {
 
                     {/* Overlapping/Offset Images Column */}
                     <div className="lg:col-span-5 relative min-h-[300px] flex items-center justify-center">
-                        <div className="relative w-full max-w-sm h-72 rounded-lg overflow-hidden shadow-md border border-gray-200">
+                        <div className="relative w-full max-w-sm h-72 rounded-lg overflow-hiddend ">
                             <Image
                                 src="/images/medical-writing/editorial-quality-support-service/What-We-Do.png"
                                 alt="What we do"
@@ -192,9 +254,8 @@ export default function EditorialQualitySupportPage() {
 
                                     {/* Accordion Content */}
                                     <div
-                                        className={`grid transition-all duration-300 ease-in-out ${
-                                            isOpen ? 'grid-rows-[1fr] opacity-100 pb-4' : 'grid-rows-[0fr] opacity-0'
-                                        }`}
+                                        className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100 pb-4' : 'grid-rows-[0fr] opacity-0'
+                                            }`}
                                     >
                                         <div className="overflow-hidden pl-6">
                                             <ul className="space-y-2 text-sm md:text-base text-gray-600">

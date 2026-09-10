@@ -103,98 +103,14 @@ export default function AcademicEditorialServicesSection() {
       <div className="max-w-6xl mx-auto space-y-16 px-4 sm:px-6 lg:px-8 pb-7">
         {/* MAIN CONTENT & IMAGE GRID */}
         <section className="space-y-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-6">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d3b44] leading-snug">
-                Empowering Your Research with Expert Academic Editorial Support
-              </h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0d3b44] leading-tight">
+            Empowering Your Research with Expert Academic Editorial Support
+          </h2>
 
-              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-medium">
-                From scholarly articles to educational manuscripts, our experts
-                refine language, structure, and subject-specific terminology,
-                making your work publication-ready, academically sound, and
-                globally comprehensible.
-              </p>
-
-              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                Pubrica offers comprehensive{" "}
-                <Link
-                  href="/academy/academic-editorial/academic-editing-manuscript-readiness/"
-                  className="text-blue-600"
-                >
-                  academic editorial services
-                </Link>{" "}
-                tailored for healthcare, life sciences, and multidisciplinary
-                research. From research papers, theses, and textbooks to
-                curriculum documents, our specialists ensure clarity, accuracy,
-                and adherence to international academic standards. We empower
-                authors and educators to communicate their ideas effectively,
-                enhancing the readability and credibility of their work.
-              </p>
-
-              {/* Key Features List */}
-              <div className="space-y-4 pt-2">
-                <h3 className="text-sm sm:text-base font-bold text-slate-900">
-                  Key Features of Our Academic Editorial Service:
-                </h3>
-
-                <ul className="space-y-3 text-xs sm:text-sm text-gray-700">
-                  {keyFeatures.map((feature, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start gap-2 leading-relaxed"
-                    >
-                      <span className="text-red-600 font-bold text-base leading-none select-none mt-0.5">
-                        •
-                      </span>
-                      <div>
-                        {feature.linkUrl ? (
-                          <>
-                            <Link
-                              href={feature.linkUrl}
-                              className="text-blue-600  hover:underline"
-                            >
-                              {feature.title}
-                            </Link>
-                            <span className="font-medium">:</span>{" "}
-                            {feature.description}
-                          </>
-                        ) : (
-                          <>
-                            <span className="font-medium">
-                              {feature.title}:
-                            </span>{" "}
-                            {feature.description}
-                          </>
-                        )}
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex flex-wrap items-center gap-8 pt-4">
-                <GetFreeQuoteButton />
-                <Link
-                  href="/uploads/academic-editorial-services/Academic-Editorial-Services.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-red-600 text-white text-sm font-bold px-6 py-3 rounded hover:bg-white hover:text-black transition-colors"
-                >
-                  View Brochure
-                </Link>
-              </div>
-            </div>
-
-            {/* Right Column: Image with Framing Backplate */}
-            <div className="lg:col-span-5 relative pt-4 pl-4 sm:pt-6 sm:pl-6">
-              {/* Background Accent Frame */}
-              <div className="absolute inset-0 bg-[#0d2a2a] rounded-2xl -z-10 transform translate-x-2 translate-y-2 sm:translate-x-4 sm:translate-y-4" />
-
-              {/* Foreground Image Container */}
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+          <div className="flow-root">
+            {/* Right-Floated Image */}
+            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+              <div className="relative w-full max-w-md aspect-[4/3] overflow-hidden">
                 <Image
                   src="/images/academic-editorial-services/Empowering-Your-Research-with-Expert-Academic-Editorial-Support.webp"
                   alt="Academic Editorial Team collaborating over a research manuscript"
@@ -203,6 +119,76 @@ export default function AcademicEditorialServicesSection() {
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   priority
                 />
+              </div>
+            </div>
+
+            {/* Main Content */}
+            <div className="space-y-5">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-medium">
+                From scholarly articles to educational manuscripts, our experts refine
+                language, structure, and subject-specific terminology, making your work
+                publication-ready, academically sound, and globally comprehensible.
+              </p>
+
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                Pubrica offers comprehensive{" "}
+                <Link
+                  href="/academy/academic-editorial/academic-editing-manuscript-readiness/"
+                  className="text-blue-600"
+                >
+                  academic editorial services
+                </Link>{" "}
+                tailored for healthcare, life sciences, and multidisciplinary research.
+                From research papers, theses, and textbooks to curriculum documents, our
+                specialists ensure clarity, accuracy, and adherence to international
+                academic standards. We empower authors and educators to communicate
+                their ideas effectively, enhancing the readability and credibility of
+                their work.
+              </p>
+
+              {/* Key Features List */}
+              <div className="space-y-4 pt-2">
+                <h3 className="text-sm sm:text-base font-bold text-slate-900">
+                  Key Features of Our Academic Editorial Service:
+                </h3>
+
+                <ul className="space-y-3 text-sm sm:text-base text-gray-700 list-disc pl-4 marker:text-red-600">
+                  {keyFeatures.map((feature, idx) => (
+                    <li key={idx} className="leading-relaxed">
+                      {feature.linkUrl ? (
+                        <>
+                          <Link
+                            href={feature.linkUrl}
+                            className="text-blue-600 hover:underline"
+                          >
+                            {feature.title}
+                          </Link>
+                          <span className="font-medium">:</span>{" "}
+                          {feature.description}
+                        </>
+                      ) : (
+                        <>
+                          <span className="font-medium">{feature.title}:</span>{" "}
+                          {feature.description}
+                        </>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap items-center gap-8 pt-2">
+                <GetFreeQuoteButton />
+
+                <Link
+                  href="/uploads/academic-editorial-services/Academic-Editorial-Services.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
+                >
+                  View Brochure
+                </Link>
               </div>
             </div>
           </div>

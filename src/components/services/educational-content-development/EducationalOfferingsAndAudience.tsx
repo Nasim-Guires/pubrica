@@ -104,7 +104,7 @@ const whoWeServeData: TargetAudience[] = [
 // ==========================================
 
 export default function EducationalOfferingsAndAudience() {
-  const [openOffer, setOpenOffer] = useState<number | null>(1);
+  const [openOffer, setOpenOffer] = useState<number | null>();
   const [activeCardId, setActiveCardId] = useState<string | null>(null);
 
   const toggleOffer = (id: number) => {

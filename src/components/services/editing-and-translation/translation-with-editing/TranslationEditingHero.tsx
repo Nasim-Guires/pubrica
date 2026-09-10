@@ -16,78 +16,76 @@ export default function TranslationEditingHero() {
       />
 
       {/* Main Content & Visual Section */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 lg:py-7">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* Left Text Column */}
-          <div className="lg:col-span-7 space-y-6">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#003B46] leading-snug">
-              Comprehensive translation and high-quality editing by language
-              experts
+      <section className="pt-6 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+              Comprehensive translation and high-quality editing by language experts
             </h2>
 
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Showcase your ideas by translating papers into your vernacular
-              language with the help of Pubrica&apos;s translators, who will
-              ensure your novel ideas are not lost in the process of
-              translation. Communicate your book ideas with the help of precise
-              translation in high-quality English and get ready to publish your
-              papers. Our translators work on dissertations, cover pages,
-              textbooks, proposals, artwork, videos, and scientific and academic
-              documents across various subjects.
-            </p>
+            <div className="flow-root">
+              {/* Right Visual Column (Retaining exact rectangular aspect ratio, non-rounded design) */}
+              <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                <div className="relative w-full max-w-sm sm:max-w-md flex items-center justify-center">
+                  <div className="relative w-[90%] sm:w-[85%] md:w-[85%] lg:w-full aspect-[4/3] overflow-hidden z-10 mx-auto">
+                    <Image
+                      src="/images/editing-and-translation/translation-with-editing/Comprehensive-translation-and-high-quality-editing-by-language-experts.webp"
+                      alt="Comprehensive translation and high-quality editing by language experts"
+                      fill
+                      sizes="(max-width: 640px) 90vw, 420px"
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
 
-            {/* Bullet Points */}
-            <ul className="space-y-3 pt-2">
-              <li className="flex items-start text-xs sm:text-sm text-slate-800 font-medium">
-                <span className="h-2 w-2 rounded-full bg-[#C00000] mt-1.5 mr-3 shrink-0" />
-                <span>
-                  Language Translations done by a bilingual{" "}
-                  <a
-                    href="/subject-matter-experts"
-                    className="text-blue-600 no-underline hover:no-underline"
-                  >
-                    subject matter expert
-                  </a>
-                </span>
-              </li>
+              <div className="space-y-5 text-slate-700">
+                <p className="text-slate-600 text-base leading-relaxed">
+                  Showcase your ideas by translating papers into your vernacular language with the help of Pubrica&apos;s translators, who will ensure your novel ideas are not lost in the process of translation. Communicate your book ideas with the help of precise translation in high-quality English and get ready to publish your papers. Our translators work on dissertations, cover pages, textbooks, proposals, artwork, videos, and scientific and academic documents across various subjects.
+                </p>
 
-              <li className="flex items-start text-xs sm:text-sm text-slate-800 font-medium">
-                <span className="h-2 w-2 rounded-full bg-[#C00000] mt-1.5 mr-3 shrink-0" />
-                <span>500+ experts with precise translation skills</span>
-              </li>
+                {/* Bullet Points */}
+                <div className="pt-2 space-y-4">
+                  <div className="space-y-4 pl-4">
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed font-medium text-slate-800">
+                        Language Translations done by a bilingual{" "}
+                        <a
+                          href="/subject-matter-experts"
+                          className="text-blue-600 font-medium no-underline hover:no-underline"
+                        >
+                          subject matter expert
+                        </a>
+                      </p>
+                    </div>
 
-              <li className="flex items-start text-xs sm:text-sm text-slate-800 font-medium">
-                <span className="h-2 w-2 rounded-full bg-[#C00000] mt-1.5 mr-3 shrink-0" />
-                <span>
-                  A 4-step translation and review process to deliver perfection
-                </span>
-              </li>
-            </ul>
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed font-medium text-slate-800">
+                        500+ experts with precise translation skills
+                      </p>
+                    </div>
 
-            {/* CTA Button */}
-            <div className="pt-4">
-              <GetFreeQuoteButton />
-            </div>
-          </div>
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed font-medium text-slate-800">
+                        A 4-step translation and review process to deliver perfection
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-          {/* Right Visual Column (Overlapping Images) */}
-          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-sm sm:max-w-md flex items-center justify-center">
-              {/* Image Container with natural aspect ratio and zero margin spacing */}
-              <div className="relative w-[90%] sm:w-[85%] md:w-[85%] aspect-[4/3] overflow-hidden z-10 mx-auto">
-                <Image
-                  src="/images/editing-and-translation/translation-with-editing/Comprehensive-translation-and-high-quality-editing-by-language-experts.webp"
-                  alt="Comprehensive translation and high-quality editing by language experts"
-                  fill
-                  sizes="(max-width: 640px) 90vw, 420px"
-                  className="object-cover"
-                  priority
-                />
+                {/* CTA Button */}
+                <div className="pt-2">
+                  <GetFreeQuoteButton />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </section>
   );
 }

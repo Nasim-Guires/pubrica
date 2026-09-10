@@ -338,126 +338,109 @@ export default function ServicesResearchProductDevelopment({
       />
 
       {/* Main Intro & Key Points Section */}
-      <section className="max-w-6xl mx-auto px-2 sm:px-8 py-6 md:py-7">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#1b2b28] mb-2">
-          Discovery and Intelligence Research Services for Product Development:
-          Transforming Ideas into Market-Ready Solutions
-        </h2>
+      <section className="pt-6 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+              Discovery and Intelligence Research Services for Product Development: Transforming Ideas into Market-Ready Solutions
+            </h2>
 
-        <h3 className="text-base sm:text-lg font-bold text-[#1b2b28] mb-6">
-          Scientific Product Development and Research Gap Analyses
-        </h3>
+            <div className="flow-root">
+              {/* Circle Image */}
+              <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white mx-auto">
+                  <Image
+                    src="/images/product-development/Discovery-and-Intelligence-Research-Services-for-Product-Development.png"
+                    alt="Discovery and Intelligence Research Services for Product Development"
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 350px"
+                  />
+                </div>
+              </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-          {/* Left Column Text Content */}
-          <div className="md:col-span-7 space-y-4 text-xs sm:text-sm text-gray-700">
-            <p>
-              At Pubrica, we offer end-to-end scientific product development
-              services driven by deep{" "}
-              <Link
-                href="/academy/discovery-and-intelligence/discovery-intelligence-drug-development/"
-                className="text-blue-600 font-medium no-underline hover:no-underline"
-              >
-                discovery and intelligence
-              </Link>{" "}
-              research to support{" "}
-              <Link
-                href="/industries/pharmaceutical/"
-                className="text-blue-600 font-medium no-underline hover:no-underline"
-              >
-                pharmaceutical
-              </Link>
-              ,{" "}
-              <Link
-                href="/industries/biotechnology/"
-                className="text-blue-600 font-medium no-underline hover:no-underline"
-              >
-                biotechnology
-              </Link>
-              ,{" "}
-              <Link
-                href="/industries/nutraceutical-research/"
-                className="text-blue-600 font-medium no-underline hover:no-underline"
-              >
-                nutraceutical
-              </Link>
-              ,{" "}
-              <Link
-                href="/industries/medical-device/"
-                className="text-blue-600 font-medium no-underline hover:no-underline"
-              >
-                medical device
-              </Link>
-              ,{" "}
-              <Link
-                href="/industries/cosmeceutical-research/"
-                className="text-blue-600 font-medium no-underline hover:no-underline"
-              >
-                cosmeceuticals
-              </Link>
-              , herbal, pet health,<Link href="/subject-matter-experts/life-sciences/" className="text-blue-600 font-medium no-underline hover:no-underline"> life sciences</Link>, and healthcare organizations.
-            </p>
+              <div className="space-y-5 text-slate-700">
+                <p className="text-base leading-relaxed">
+                  At Pubrica, we offer end-to-end scientific product development services driven by deep{" "}
+                  <Link
+                    href="/academy/discovery-and-intelligence/discovery-intelligence-drug-development/"
+                    className="text-blue-600 font-medium no-underline hover:no-underline"
+                  >
+                    discovery and intelligence
+                  </Link>{" "}
+                  research to support{" "}
+                  <Link
+                    href="/industries/pharmaceutical/"
+                    className="text-blue-600 font-medium no-underline hover:no-underline"
+                  >
+                    pharmaceutical
+                  </Link>
+                  ,{" "}
+                  <Link
+                    href="/industries/biotechnology/"
+                    className="text-blue-600 font-medium no-underline hover:no-underline"
+                  >
+                    biotechnology
+                  </Link>
+                  ,{" "}
+                  <Link
+                    href="/industries/nutraceutical-research/"
+                    className="text-blue-600 font-medium no-underline hover:no-underline"
+                  >
+                    nutraceutical
+                  </Link>
+                  ,{" "}
+                  <Link
+                    href="/industries/medical-device/"
+                    className="text-blue-600 font-medium no-underline hover:no-underline"
+                  >
+                    medical device
+                  </Link>
+                  ,{" "}
+                  <Link
+                    href="/industries/cosmeceutical-research/"
+                    className="text-blue-600 font-medium no-underline hover:no-underline"
+                  >
+                    cosmeceuticals
+                  </Link>
+                  , herbal, pet health,<Link href="/subject-matter-experts/life-sciences/" className="text-blue-600 font-medium no-underline hover:no-underline"> life sciences</Link>, and healthcare organizations.
+                </p>
 
-            <p>
-              We built expertise in early-stage discovery, strategic thinking,
-              and regulatory-compliant development, transforming clients&apos;
-              innovative ideas into safe, effective, and market-ready products
-              from concept to clinic and beyond. We provide primary and
-              secondary research, competitive intelligence, biomarker discovery,
-              medical device discovery services, continuing education, clinical
-              trials, mechanism-of-action studies, pharmacological evaluation,
-              and linked research papers to assure regulatory readiness and
-              formulation suitability, chemical patent evaluation,
-              biocompatibility ISO 10993, therapeutic landscapes, empowering
-              R&D teams with data-driven insights to accelerate innovation and
-              commercialization.
-            </p>
+                <p className="text-base leading-relaxed">
+                  We built expertise in early-stage discovery, strategic thinking, and regulatory-compliant development, transforming clients&apos; innovative ideas into safe, effective, and market-ready products from concept to clinic and beyond. We provide primary and secondary research, competitive intelligence, biomarker discovery, medical device discovery services, continuing education, clinical trials, mechanism-of-action studies, pharmacological evaluation, and linked research papers to assure regulatory readiness and formulation suitability, chemical patent evaluation, biocompatibility ISO 10993, therapeutic landscapes, empowering R&D teams with data-driven insights to accelerate innovation and commercialization.
+                </p>
 
-            <p>
-              With a proven track record of delivering 1,000+ scientific
-              research projects across pharmaceuticals, nutraceuticals,
-              cosmeceuticals, biotech, herbal, and pet health domains, Pubrica
-              stands as a trusted partner for evidence-driven discovery.
-            </p>
+                <p className="text-base leading-relaxed">
+                  With a proven track record of delivering 1,000+ scientific research projects across pharmaceuticals, nutraceuticals, cosmeceuticals, biotech, herbal, and pet health domains, Pubrica stands as a trusted partner for evidence-driven discovery.
+                </p>
 
-            {/* Bulleted List */}
-            <ul className="space-y-2.5 pt-2">
-              {keyHighlights.map((item) => (
-                <li
-                  key={item.id}
-                  className="flex items-start gap-2"
-                >
-                  <span className="text-red-600 font-bold mt-0.5">
-                    •
-                  </span>
+                {/* Bullet List */}
+                <div className="pt-2 space-y-4">
+                  <h3 className="font-bold text-slate-900 text-base">
+                    Scientific Product Development and Research Gap Analyses
+                  </h3>
 
-                  <span>{item.text}</span>
-                </li>
-              ))}
-            </ul>
+                  <div className="space-y-4 pl-4">
+                    {keyHighlights.map((item) => (
+                      <div key={item.id} className="flex items-start gap-2.5">
+                        <span className="text-red-600 font-bold shrink-0">→</span>
+                        <p className="text-base leading-relaxed">
+                          {item.text}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
-            <p className="pt-1">
-              We bring the depth of scientific rigor and cross-functional
-              expertise needed to guide your discovery process with precision
-              and speed.
-            </p>
+                <p className="text-base leading-relaxed">
+                  We bring the depth of scientific rigor and cross-functional expertise needed to guide your discovery process with precision and speed.
+                </p>
 
-            {/* CTA Button */}
-            <div className="pt-1">
-              <GetFreeQuoteButton />
-            </div>
-          </div>
-
-          {/* Right Image */}
-          <div className="md:col-span-5 flex justify-center">
-            <div className="w-full max-w-md h-72 sm:h-80 rounded-xl overflow-hidden  relative">
-              <Image
-                src="/images/product-development/Discovery-and-Intelligence-Research-Services-for-Product-Development.png"
-                alt="Discovery and Intelligence Research Services for Product Development"
-                fill
-                className="object-cover"
-                priority
-              />
+                <div className="pt-2">
+                  <GetFreeQuoteButton />
+                </div>
+              </div>
             </div>
           </div>
         </div>

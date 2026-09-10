@@ -41,125 +41,130 @@ export default function PosterPreparationPage() {
       {/* ------------------------------------------------------------- */}
       {/* 2. MAIN CONTENT SECTION                                      */}
       {/* ------------------------------------------------------------- */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8 py-6">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-6 leading-snug">
-          Professional Scientific and Academic Poster Presentation Service: Visually Communicate Your
-          High-Impact Research Presentation with Scientific Precision
-        </h2>
+      <section className="pt-6 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+              Professional Scientific and Academic Poster Presentation Service: Visually Communicate Your High-Impact Research Presentation with Scientific Precision
+            </h2>
 
-        <p className="text-gray-700 font-semibold mb-4">
-          Make a high Impact at your next academic event with an eye-catching, ready-to-print poster
-          that showcases your work.
-        </p>
+            <div className="flow-root">
+              {/* Circle Image */}
+              <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[350px] lg:h-[350px]  overflow-hidden mx-auto">
+                  <Image
+                    src="/images/publication-support/poster-preparation/poster-presentation-PUB-min.webp"
+                    alt="Scientific poster design preview on a laptop"
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 350px"
+                  />
+                </div>
+              </div>
 
-        <p className="text-gray-600 mb-6 leading-relaxed">
-          Presenting at a scientific or academic conference? A well-developed scientific research
-          poster can greatly enhance your research visibility, boost your academic profile, and
-          engagement with stakeholders. However, producing a poster that complies with submission
-          requirements and communicates even relatively complex data effectively requires time,
-          commitment, and design skills.
-        </p>
+              <div className="space-y-5 text-slate-700">
+                <p className="text-base leading-relaxed font-semibold">
+                  Make a high Impact at your next academic event with an eye-catching, ready-to-print poster that showcases your work.
+                </p>
 
-        {/* Content & Visual Column */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
-          {/* Left Column: Bullet List */}
-          <div className="lg:col-span-7 text-gray-700 space-y-4">
-            <p className="leading-relaxed">
-              At Pubrica, our{' '}
-              <a
-                href="/insights/maternal-gdm-infant-gut-microbiome-vertical-transmission/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 "
-              >
-                poster preparation services
-              </a>{' '}
-              can help researchers transform manuscript findings or current research into a
-              scientifically valid, visually structured, presentation-ready academic poster. We
-              take care of everything required for a print-ready or digital poster, customized to
-              your conference needs, including the layout, data visualizations, and design
-              compliance. Our Service Includes:
-            </p>
+                <p className="text-base leading-relaxed">
+                  Presenting at a scientific or academic conference? A well-developed scientific research poster can greatly enhance your research visibility, boost your academic profile, and engagement with stakeholders. However, producing a poster that complies with submission requirements and communicates even relatively complex data effectively requires time, commitment, and design skills.
+                </p>
 
-            <ul className="space-y-3 pl-5 list-disc marker:text-red-600 text-gray-700">
-              <li>
-                <span className="font-semibold">Extracting key content</span> from your manuscript,
-                thesis, or research brief (Objectives, Methods, Results, Conclusion)
-              </li>
-              <li>
-                <span className="font-semibold">Structuring poster layout</span> according to conference
-                guidelines (e.g.,{' '}
-                <a href="https://www.aacr.org/wp-content/uploads/2021/09/AACR22_Abstract-Guidelines.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 ">AACR</a>,{' '}
-                <Link href="/services/publication-support/poster-preparation/european-society-for-medical-oncology" className="text-blue-600 no-underline hover:no-underline">ESMO</Link>,{' '}
-                <a href="https://www.asco.org/annual-meeting/abstracts-presentations/poster-presenter-guidelines" target="_blank" rel="noopener noreferrer" className="text-blue-600 ">ASCO</a>,{' '}
-                <a href="https://www.isscr.org/guidelines" target="_blank" rel="noopener noreferrer">ISSCR</a>)
-              </li>
-              <li>
-                <Link href="/services/publication-support/poster-preparation/why-scientific-design-and-visualization-matter-in-poster-preparation/" className="text-blue-600 no-underline hover:no-underline">
-                  Scientific design &amp; visualization
-                </Link>{' '}
-                with infographics, graphs, charts, and visuals appropriate to your area of research
-              </li>
-              <li>
-                <span className="font-semibold">Poster formatting</span> based on submission
-                requirements (poster size, resolution, orientation, colour code, font hierarchy)
-              </li>
-              <li>
-                <span className="font-semibold">Text Optimization</span> Clear, jargon-free, and
-                field-appropriate language for comprehension by multidisciplinary audiences.
-              </li>
-              <li>
-                <span className="font-semibold">
-                  Manuscript Refinement (Scientific Editing &amp; Language Polishing)
-                </span>{' '}
-                Based on your feedback, we will take you step by step through your revisions,
-                making scientific and structural edits, refining the research relevance, and
-                correcting language issues.
-              </li>
-            </ul>
-          </div>
+                <p className="text-base leading-relaxed">
+                  At Pubrica, our{' '}
+                  <a
+                    href="/insights/maternal-gdm-infant-gut-microbiome-vertical-transmission/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 font-medium no-underline hover:no-underline"
+                  >
+                    poster preparation services
+                  </a>{' '}
+                  can help researchers transform manuscript findings or current research into a scientifically valid, visually structured, presentation-ready academic poster. We take care of everything required for a print-ready or digital poster, customized to your conference needs, including the layout, data visualizations, and design compliance. Our Service Includes:
+                </p>
 
-          {/* Right Column: Next.js Optimized Image */}
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="p-3 rounded-2xl max-w-md w-full">
-              <div className="rounded-xl overflow-hidden p-2 relative">
-                <Image
-                  src="/images/publication-support/poster-preparation/poster-presentation-PUB-min.webp"
-                  alt="Scientific poster design preview on a laptop"
-                  width={800}
-                  height={500}
-                  className="w-full h-auto object-cover rounded-lg"
-                  priority
-                />
+                {/* Bullet List */}
+                <div className="pt-2 space-y-4">
+                  <div className="space-y-4 pl-4">
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        <span className="font-semibold text-slate-900">Extracting key content</span> from your manuscript, thesis, or research brief (Objectives, Methods, Results, Conclusion)
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        <span className="font-semibold text-slate-900">Structuring poster layout</span> according to conference guidelines (e.g.,{' '}
+                        <a href="https://www.aacr.org/wp-content/uploads/2021/09/AACR22_Abstract-Guidelines.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-medium no-underline hover:no-underline">AACR</a>,{' '}
+                        <Link href="/services/publication-support/poster-preparation/european-society-for-medical-oncology" className="text-blue-600 font-medium no-underline hover:no-underline">ESMO</Link>,{' '}
+                        <a href="https://www.asco.org/annual-meeting/abstracts-presentations/poster-presenter-guidelines" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-medium no-underline hover:no-underline">ASCO</a>,{' '}
+                        <a href="https://www.isscr.org/guidelines" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-medium no-underline hover:no-underline">ISSCR</a>)
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        <Link href="/services/publication-support/poster-preparation/why-scientific-design-and-visualization-matter-in-poster-preparation/" className="text-blue-600 font-medium no-underline hover:no-underline">
+                          Scientific design &amp; visualization
+                        </Link>{' '}
+                        with infographics, graphs, charts, and visuals appropriate to your area of research
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        <span className="font-semibold text-slate-900">Poster formatting</span> based on submission requirements (poster size, resolution, orientation, colour code, font hierarchy)
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        <span className="font-semibold text-slate-900">Text Optimization</span> Clear, jargon-free, and field-appropriate language for comprehension by multidisciplinary audiences.
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        <span className="font-semibold text-slate-900">
+                          Manuscript Refinement (Scientific Editing &amp; Language Polishing)
+                        </span>{' '}
+                        Based on your feedback, we will take you step by step through your revisions, making scientific and structural edits, refining the research relevance, and correcting language issues.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-base leading-relaxed">
+                  Pubrica provides researchers with the ability to create conference-ready posters without the hassle of design problems, formatting issues, or compliance gaps. From conceptualization to final delivery, we become your{' '}
+                  <Link href="/services/publication-support/poster-preparation/how-to-design-a-research-poster/" className="text-blue-600 font-medium no-underline hover:no-underline">
+                    scientific design
+                  </Link>{' '}
+                  partner, delivering a poster that represents the quality of your research and its clarity.
+                </p>
+
+                <div className="flex flex-wrap items-center gap-4 pt-2">
+                  <GetFreeQuoteButton />
+                  <Link
+                    href="/uploads/Poster-Preparation-Services-_compressed.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
+                  >
+                    View Brochure
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-        {/* Section Closing */}
-        <p className="text-gray-700 leading-relaxed mb-8">
-          Pubrica provides researchers with the ability to create conference-ready posters without the
-          hassle of design problems, formatting issues, or compliance gaps. From conceptualization
-          to final delivery, we become your{" "}
-          <Link href="/services/publication-support/poster-preparation/how-to-design-a-research-poster/" className="text-blue-600 no-underline hover:no-underline">
-            scientific design
-          </Link>{" "}
-          partner, delivering a poster that represents the quality of your research and its clarity.
-        </p>
-        {/* Action Buttons */}
-        <div className="flex flex-wrap items-center justify-start sm:justify-start gap-8 mt-6 mb-2">
-          <GetFreeQuoteButton />
-          <Link
-            href="/uploads/Poster-Preparation-Services-_compressed.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className='bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors'
-          >
-            View Brochure
-          </Link>
-        </div>
-
-
       </section>
 
       {/* ------------------------------------------------------------- */}

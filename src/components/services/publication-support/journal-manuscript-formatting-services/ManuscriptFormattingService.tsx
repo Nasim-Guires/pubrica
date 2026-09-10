@@ -23,146 +23,125 @@ export default function ManuscriptFormattingService() {
       {/* ============================================================ */}
       {/* 2. MAIN DESCRIPTION & FEATURE LIST                            */}
       {/* ============================================================ */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8 py-6">
-        <div className="space-y-4 mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] leading-snug">
-            Scientific and Academic Manuscript Formatting Service: Submit Your
-            Research Manuscript with Precision-Aligned Journal Formatting and
-            Scholarly Accuracy
-          </h2>
-          <h3 className="text-sm md:text-base font-bold text-gray-800">
-            Expert Preparation Before Your Manuscript Submission
-          </h3>
-          <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-            Formatting a manuscript to a journal&apos;s guidelines and technical
-            requirements can be an important but often time-consuming process
-            for publishing in high-impact, peer-reviewed journals.
-            Inconsistencies in formatting, references, figures, and structure
-            can cause delays or rejection.
-          </p>
-          <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-            Pubrica&apos;s Manuscript Editing and Formatting helps you avoid
-            these issues by providing technically accurate and formatted
-            documents to submit to your target journal. Our formatting team
-            ensures journal guidelines compliance, enabling researchers to focus
-            on their scientific message.
-          </p>
-        </div>
+      <section className="pt-6 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+              Scientific and Academic Manuscript Formatting Service: Submit Your Research Manuscript with Precision-Aligned Journal Formatting and Scholarly Accuracy
+            </h2>
 
-        {/* Content & Illustration Split */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Bullet Points */}
-          <div className="lg:col-span-7 space-y-3">
-            <ul className="space-y-2 text-xs md:text-sm text-gray-700">
-              <li className="flex items-start">
-                <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">
-                  •
-                </span>
-                <span>
-                  Following journal-specific formatting (fonts, spacing,
-                  margins, sectioning)
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">
-                  •
-                </span>
-                <span>
+            <div className="flow-root">
+              {/* Rectangular Image (Not Rounded) */}
+              <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                <div className="relative w-full max-w-sm h-72 sm:h-80 lg:w-[380px] lg:h-[300px]">
+                  <Image
+                    src={`${PAGE_IMAGES}/poster-presentation-.webp`}
+                    alt="Scientific and Academic Manuscript Formatting Service"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    priority
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-5 text-slate-700">
+                <h3 className="font-bold text-slate-900 text-base">
+                  Expert Preparation Before Your Manuscript Submission
+                </h3>
+
+                <p className="text-base leading-relaxed">
+                  Formatting a manuscript to a journal&apos;s guidelines and technical requirements can be an important but often time-consuming process for publishing in high-impact, peer-reviewed journals. Inconsistencies in formatting, references, figures, and structure can cause delays or rejection.
+                </p>
+
+                <p className="text-base leading-relaxed">
+                  Pubrica&apos;s Manuscript Editing and Formatting helps you avoid these issues by providing technically accurate and formatted documents to submit to your target journal. Our formatting team ensures journal guidelines compliance, enabling researchers to focus on their scientific message.
+                </p>
+
+                {/* Bullet List */}
+                <div className="pt-2 space-y-4">
+                  <div className="space-y-4 pl-4">
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        Following journal-specific formatting (fonts, spacing, margins, sectioning)
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        <Link
+                          href="/services/publication-support/journal-manuscript-formatting-services/citation-management-tools-formatting-referencing"
+                          className="text-blue-600 font-medium no-underline hover:no-underline"
+                        >
+                          Citation and reference formatting
+                        </Link>{" "}
+                        (Vancouver, APA, MLA, AMA, etc)
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        Figures and tables formatted to the journal&apos;s dimensions and resolution
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        Title page, abstract, and keywords formatted for submission
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        Numbering of all sections, figures, and equations based on the outlined
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        Cross-checking of in-text{" "}
+                        <Link
+                          href="/services/publication-support/journal-manuscript-formatting-services/citation-styles-apa-ama-mla-vancouver-guide"
+                          className="text-blue-600 font-medium no-underline hover:no-underline"
+                        >
+                          citations
+                        </Link>{" "}
+                        matches the reference list
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-red-600 font-bold shrink-0">→</span>
+                      <p className="text-base leading-relaxed">
+                        Formatting of supplementary files (appendices, data sheets, declarations)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-base leading-relaxed">
+                  Pubrica assures that your manuscript will be technically aligned with the required journal template and style, reducing avoidable errors and increasing submission success. Our team helps create a seamless transition from scientific writing to a formatted submission.
+                </p>
+
+                <div className="pt-2">
                   <Link
-                    href="/services/publication-support/journal-manuscript-formatting-services/citation-management-tools-formatting-referencing"
-                    className="text-blue-600 font-medium no-underline hover:no-underline"
+                    href="/order-now/"
+                    className="bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors inline-block"
                   >
-                    Citation and reference formatting
-                  </Link>{" "}
-                  (Vancouver, APA, MLA, AMA, etc)
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">
-                  •
-                </span>
-                <span>
-                  Figures and tables formatted to the journal&apos;s dimensions
-                  and resolution
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">
-                  •
-                </span>
-                <span>
-                  Title page, abstract, and keywords formatted for submission
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">
-                  •
-                </span>
-                <span>
-                  Numbering of all sections, figures, and equations based on the
-                  outlined
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">
-                  •
-                </span>
-                <span>
-                  Cross-checking of in-text{" "}
-                  <Link
-                    href="/services/publication-support/journal-manuscript-formatting-services/citation-styles-apa-ama-mla-vancouver-guide"
-                    className="text-blue-600 font-medium no-underline hover:no-underline"
-                  >
-                    citations
-                  </Link>{" "}
-                  matches the reference list
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-[#dc2626] mr-2 text-base font-bold leading-none">
-                  •
-                </span>
-                <span>
-                  Formatting of supplementary files (appendices, data sheets,
-                  declarations)
-                </span>
-              </li>
-            </ul>
-
-            <p className="text-xs md:text-sm text-gray-600 leading-relaxed pt-2">
-              Pubrica assures that your manuscript will be technically aligned
-              with the required journal template and style, reducing avoidable
-              errors and increasing submission success. Our team helps create a
-              seamless transition from scientific writing to a formatted
-              submission.
-            </p>
-
-            {/* Call To Action Button */}
-            <div className="pt-4 flex justify-center sm:justify-start">
-              <Link
-                href="/order-now/"
-                className="bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
-              >
-                Upload Your Manuscript
-              </Link>
-            </div>
-          </div>
-
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-sm h-72 sm:h-80">
-              <Image
-                src={`${PAGE_IMAGES}/poster-presentation-.webp`}
-                alt="Scientific and Academic Manuscript Formatting Service"
-                fill
-                className="object-contain"
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                priority
-              />
+                    Upload Your Manuscript
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
       {/* ============================================================ */}
       {/* 3. COMPLIANCE & GUIDELINE STANDARDS CARDS                    */}
       {/* ============================================================ */}

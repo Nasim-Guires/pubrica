@@ -54,52 +54,77 @@ export default function PermissionAndMetadataServices() {
 
             {/* ------------------- MAIN INTRO & DETAILS ------------------- */}
             <section className="py-6 px-4 max-w-6xl mx-auto">
-                <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-6 max-w-2xl">
-                    Ensure Seamless Publishing Compliance with Pubrica’s Expert Permission & Metadata Services
-                </h2>
+                <div className="space-y-6">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0b3b2c] leading-tight">
+                        Ensure Seamless Publishing Compliance with Pubrica’s Expert Permission &
+                        Metadata Services
+                    </h2>
 
-                <div className="flex flex-col md:flex-row items-start justify-between gap-10">
-                    {/* Left Column: Flowing Text */}
-                    <div className="flex-1 space-y-4 text-xs md:text-sm text-gray-700 leading-relaxed">
-                        <p>
-                            In today’s competitive academic publishing landscape, ensuring that your manuscript is ethically compliant, properly licensed, and accurately indexed is just as important as high-quality content. Publishers, journals, and academic institutions are increasingly stringent about permissions, copyright usage, and metadata standards. Any oversight, such as using third-party material without permission or submitting a manuscript with incomplete metadata, can lead to delayed publication, ethical concerns, or manuscript rejection.
-                        </p>
-                        <p>
-                            At Pubrica, our Permission and Metadata Services are designed to safeguard your research from copyright challenges, ensure smooth <Link href="/services/publication-support/journal-submission/complete-guide-to-writing-cover-letter-for-medical-journals/" className="text-blue-600 font-medium">journal submission</Link>, and strengthen the visibility and accessibility of your academic outputs across global platforms. With our expert team of editorial specialists, rights managers, and metadata professionals, we provide end-to-end support for permissions acquisition, attribution, licensing, metadata creation, metadata structuring, and compliance documentation.
-                        </p>
-
-                        <div className="pt-2">
-                            <h3 className="text-xs md:text-sm font-bold text-gray-900 mb-2">Our services help you:</h3>
-                            <ul className="space-y-1.5">
-                                {servicesList.map((item, index) => (
-                                    <li key={index} className="flex items-start gap-2 text-xs md:text-sm text-gray-700">
-                                        <span className="text-[#cc0000] font-bold leading-none mt-0.5">•</span>
-                                        <span className="leading-snug">{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                    <div className="flow-root">
+                        {/* Right-Floated Image */}
+                        <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                            <div className="relative w-full max-w-md h-64 sm:h-80 overflow-hidden">
+                                <Image
+                                    src="/images/academic-editorial-services/permission-and-metadata-services/Ensure-Seamless-Publishing-Compliance-with-Pubricas-Expert-Permission-Metadata-Services.webp"
+                                    alt="Permission and Metadata Services"
+                                    fill
+                                    className="object-cover"
+                                    sizes="(max-width: 768px) 100vw, 28rem"
+                                    priority
+                                />
+                            </div>
                         </div>
 
-                        <div className="pt-4">
-                            <GetFreeQuoteButton />
-                        </div>
-                    </div>
+                        {/* Main Content */}
+                        <div className="space-y-5 text-sm sm:text-base text-gray-700 leading-relaxed">
+                            <p>
+                                In today’s competitive academic publishing landscape, ensuring that
+                                your manuscript is ethically compliant, properly licensed, and
+                                accurately indexed is just as important as high-quality content.
+                                Publishers, journals, and academic institutions are increasingly
+                                stringent about permissions, copyright usage, and metadata standards.
+                                Any oversight, such as using third-party material without permission
+                                or submitting a manuscript with incomplete metadata, can lead to
+                                delayed publication, ethical concerns, or manuscript rejection.
+                            </p>
 
-                    {/* Right Column: Image with Offset Dark Green Background Accent */}
-                    <div className="w-full md:w-[420px] shrink-0 relative p-4">
-                        {/* Dark Green Offset Background Block (shifted left and down) */}
-                        <div className="absolute inset-0 top-6 left-0 right-6 bottom-0 z-0" />
+                            <p>
+                                At Pubrica, our Permission and Metadata Services are designed to
+                                safeguard your research from copyright challenges, ensure smooth{" "}
+                                <Link
+                                    href="/services/publication-support/journal-submission/complete-guide-to-writing-cover-letter-for-medical-journals/"
+                                    className="text-blue-600 font-medium"
+                                >
+                                    journal submission
+                                </Link>
+                                , and strengthen the visibility and accessibility of your academic
+                                outputs across global platforms. With our expert team of editorial
+                                specialists, rights managers, and metadata professionals, we provide
+                                end-to-end support for permissions acquisition, attribution,
+                                licensing, metadata creation, metadata structuring, and compliance
+                                documentation.
+                            </p>
 
-                        {/* Main Image Container (positioned slightly top-right) */}
-                        <div className="relative z-10 w-full h-[260px] rounded-2xl overflow-hidden">
-                            <Image
-                                src="/images/academic-editorial-services/permission-and-metadata-services/Ensure-Seamless-Publishing-Compliance-with-Pubricas-Expert-Permission-Metadata-Services.webp"
-                                alt="Permission and Metadata Services"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 100vw, 420px"
-                                priority
-                            />
+                            <div className="pt-2">
+                                <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-2">
+                                    Our services help you:
+                                </h3>
+
+                                <ul className="space-y-3 pl-4 list-disc marker:text-red-600">
+                                    {servicesList.map((item, index) => (
+                                        <li
+                                            key={index}
+                                            className="text-sm sm:text-base text-gray-700 leading-relaxed"
+                                        >
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <div className="pt-2">
+                                <GetFreeQuoteButton />
+                            </div>
                         </div>
                     </div>
                 </div>

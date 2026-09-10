@@ -82,35 +82,17 @@ export default function DevelopmentEditingServiceComplete() {
 
             {/* ------------------- MAIN INTRO & KEY ASPECTS SECTION ------------------- */}
             <section className="py-6 px-4 max-w-6xl mx-auto">
-                {/* Heading & Subtitle */}
-                <div className="text-left max-w-5xl mb-6">
-                    <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-3 leading-snug">
-                        Enhance Clarity & Improve Your Manuscript with Expert Development Editing Services
+                <div className="space-y-6">
+                    {/* Main Heading */}
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0b3b2c] leading-tight">
+                        Enhance Clarity &amp; Improve Your Manuscript with Expert Development
+                        Editing Services
                     </h2>
-                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                        Ensure your manuscript is well structured, coherent, and impactful with our expert development editing services. Our professional editors refine your research by enhancing clarity, improving logical flow, and ensuring academic rigor.
-                    </p>
-                </div>
 
-                {/* Paragraphs and Double-Layer Background Image Container */}
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-8">
-                    <div className="md:col-span-7 space-y-4 text-xs md:text-sm text-gray-700 leading-relaxed">
-                        <p>
-                            Development editing, also known as substantive or structural editing, is a comprehensive approach that focuses on the overall content and organization of a manuscript. Unlike <Link href="/services/editing-and-translation/" className="text-blue-600 no-underline hover:no-underline">copy editing services</Link>, which address grammar, punctuation, and formatting, development editing delves deeper into the logic, structure, and presentation of ideas. It ensures that your manuscript tells a clear, coherent story, aligns with the target audience&apos;s expectations, and meets the rigorous standards of scholarly publication.
-                        </p>
-                        <p>
-                            At Pubrica, we understand that publishing high-quality research requires more than just groundbreaking findings; it demands clear, coherent, and compelling writing. Our development editing service is meticulously designed for researchers, academicians, and scholars who aim to transform their manuscripts into polished, publication-ready documents that resonate with reviewers, readers, and the global scientific community.
-                        </p>
-                    </div>
-
-                    {/* Image with 2-Layer Green Overlay Effect */}
-                    <div className="md:col-span-5 relative flex justify-end pl-6 pb-6 pt-2">
-                        <div className="relative w-full max-w-md h-[240px]">
-                            {/* Dark Green Background Box (Extends Left & Down) */}
-                            <div className="absolute top-6 -left-6 right-2 rounded-2xl z-0" />
-
-                            {/* Main Image Container */}
-                            <div className="relative w-full h-full rounded-2xl overflow-hidden z-10">
+                    <div className="flow-root">
+                        {/* Right-Floated Image */}
+                        <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                            <div className="relative w-full max-w-md h-64 sm:h-80 overflow-hidden">
                                 <Image
                                     src="/images/academic-editorial-services/development-editing-service/Enhance-Clarity-Improve-Your-Manuscript-with-Expert-Development-Editing-Services.webp"
                                     alt="Development Editing Services"
@@ -120,50 +102,97 @@ export default function DevelopmentEditingServiceComplete() {
                                 />
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                {/* Key Aspects List */}
-                <div className="text-left mt-4">
-                    <h3 className="text-sm md:text-base font-bold text-gray-900 mb-4">
-                        Key aspects of development editing include:
-                    </h3>
-                    <ul className="space-y-3 text-xs md:text-sm text-gray-700 max-w-5xl">
-                        <li className="flex items-start gap-2">
-                            <span className="text-red-600 font-bold text-xs mt-0.5">•</span>
-                            <span>
-                                <strong className="text-gray-900 font-semibold">Structure and Organization:</strong> Ensuring that your manuscript flows logically, with clear sections, headings, and subheadings that guide the reader.
-                            </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <span className="text-red-600 font-bold text-xs mt-0.5">•</span>
-                            <span>
-                                <strong className="text-gray-900 font-semibold">Content Clarity:</strong> Refining complex ideas, hypotheses, and arguments to make them understandable without oversimplifying scientific rigor.
-                            </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <span className="text-red-600 font-bold text-xs mt-0.5">•</span>
-                            <span>
-                                <strong className="text-gray-900 font-semibold">Consistency:</strong> Maintaining consistent terminology, tone, and presentation of ideas throughout the manuscript.
-                            </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <span className="text-red-600 font-bold text-xs mt-0.5">•</span>
-                            <span>
-                                <strong className="text-gray-900 font-semibold">Cohesion and Coherence:</strong> Linking sections and paragraphs seamlessly, so that every part contributes to the overall narrative.
-                            </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <span className="text-red-600 font-bold text-xs mt-0.5">•</span>
-                            <span>
-                                <strong className="text-gray-900 font-semibold">Alignment with Publication Standards:</strong> Tailoring your manuscript to meet the expectations of specific journals, funding agencies, or academic institutions.
-                            </span>
-                        </li>
-                    </ul>
+                        {/* Flowing Content */}
+                        <div className="space-y-5 text-sm sm:text-base text-gray-700 leading-relaxed">
+                            <p>
+                                Ensure your manuscript is well structured, coherent, and impactful
+                                with our expert development editing services. Our professional
+                                editors refine your research by enhancing clarity, improving logical
+                                flow, and ensuring academic rigor.
+                            </p>
 
-                    {/* CTA Button */}
-                    <div className="mt-8 text-left">
-                        <GetFreeQuoteButton />
+                            <p>
+                                Development editing, also known as substantive or structural editing,
+                                is a comprehensive approach that focuses on the overall content and
+                                organization of a manuscript. Unlike{" "}
+                                <Link
+                                    href="/services/editing-and-translation/"
+                                    className="text-blue-600 no-underline hover:no-underline"
+                                >
+                                    copy editing services
+                                </Link>
+                                , which address grammar, punctuation, and formatting, development
+                                editing delves deeper into the logic, structure, and presentation of
+                                ideas. It ensures that your manuscript tells a clear, coherent story,
+                                aligns with the target audience&apos;s expectations, and meets the
+                                rigorous standards of scholarly publication.
+                            </p>
+
+                            <p>
+                                At Pubrica, we understand that publishing high-quality research
+                                requires more than just groundbreaking findings; it demands clear,
+                                coherent, and compelling writing. Our development editing service is
+                                meticulously designed for researchers, academicians, and scholars who
+                                aim to transform their manuscripts into polished, publication-ready
+                                documents that resonate with reviewers, readers, and the global
+                                scientific community.
+                            </p>
+
+                            {/* Key Aspects */}
+                            <div className="pt-2">
+                                <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-4">
+                                    Key aspects of development editing include:
+                                </h3>
+
+                                <ul className="space-y-3 pl-4 list-disc marker:text-red-600">
+                                    <li className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                                        <strong className="text-gray-900 font-semibold">
+                                            Structure and Organization:
+                                        </strong>{" "}
+                                        Ensuring that your manuscript flows logically, with clear
+                                        sections, headings, and subheadings that guide the reader.
+                                    </li>
+
+                                    <li className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                                        <strong className="text-gray-900 font-semibold">
+                                            Content Clarity:
+                                        </strong>{" "}
+                                        Refining complex ideas, hypotheses, and arguments to make them
+                                        understandable without oversimplifying scientific rigor.
+                                    </li>
+
+                                    <li className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                                        <strong className="text-gray-900 font-semibold">
+                                            Consistency:
+                                        </strong>{" "}
+                                        Maintaining consistent terminology, tone, and presentation of
+                                        ideas throughout the manuscript.
+                                    </li>
+
+                                    <li className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                                        <strong className="text-gray-900 font-semibold">
+                                            Cohesion and Coherence:
+                                        </strong>{" "}
+                                        Linking sections and paragraphs seamlessly, so that every part
+                                        contributes to the overall narrative.
+                                    </li>
+
+                                    <li className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                                        <strong className="text-gray-900 font-semibold">
+                                            Alignment with Publication Standards:
+                                        </strong>{" "}
+                                        Tailoring your manuscript to meet the expectations of specific
+                                        journals, funding agencies, or academic institutions.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* CTA Button */}
+                            <div className="pt-2">
+                                <GetFreeQuoteButton />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

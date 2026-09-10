@@ -62,7 +62,6 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
           <div className="space-y-4 mb-8 max-w-6xl">
             <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed text-justify">
               We offer specialized physician writing services
-
               {leadParagraph.split("physician writing services")[1]}
             </p>
             <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed font-medium">
@@ -71,14 +70,31 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
           </div>
 
           {/* Two-Column Middle Layout Block */}
-          <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16 mb-6">
+          <div className="flow-root mb-6">
+            {/* Right Image Frame Column (Retaining exact original image styling/design) */}
+            <div className="lg:float-right lg:ml-12 lg:mb-4 mb-6 w-full lg:w-[420px] pt-4 flex-shrink-0">
+              {/* Dark green background shadow container */}
+              <div className="rounded-2xl p-0.5 pt-6 pl-6 relative">
+                {/* Actual Foreground Image Box */}
+                <div className="relative w-full h-[240px] md:h-[260px] rounded-xl overflow-hidden">
+                  <Image
+                    src={imageUrl}
+                    alt="Physician writing services"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 420px"
+                  />
+                </div>
+              </div>
+            </div>
+
             {/* Left Text Column */}
-            <div className="flex-1 space-y-5">
+            <div className="space-y-5">
               <h3 className="text-[#083c4c] text-lg md:text-xl font-bold tracking-tight">
                 {sectionHeading}
               </h3>
               <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed text-justify">
-                Pubrica's{" "}
+                Pubrica&apos;s{" "}
                 <Link href="/" className="text-blue-600 no-underline hover:no-underline">
                   Physician Writing Services
                 </Link>{" "}
@@ -100,23 +116,6 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                 {bodyText2}
               </p>
             </div>
-
-            {/* Right Image Frame Column */}
-            <div className="w-full lg:w-[420px] pt-4 flex-shrink-0">
-              {/* Dark green background shadow container */}
-              <div className=" rounded-2xl p-0.5 pt-6 pl-6 relative">
-                {/* Actual Foreground Image Box */}
-                <div className="relative w-full h-[240px] md:h-[260px] rounded-xl  overflow-hidden">
-                  <Image
-                    src={imageUrl}
-                    alt="Physician writing services"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 420px"
-                  />
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Bullet Inclusions List Section */}
@@ -131,7 +130,7 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                 if (bullet.includes("compliant formats")) {
                   renderedText = (
                     <span>
-                      Journal or regulatory body compliant formats (
+                      Journal or regulatory body compliant formats ({" "}
                       <Link
                         href="https://www.icmje.org/"
                         target="_blank"
@@ -139,7 +138,8 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                         className="text-blue-600"
                       >
                         ICMJE
-                      </Link>, GPP3,{" "}
+                      </Link>
+                      , GPP3,{" "}
                       <Link
                         href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
                         target="_blank"
@@ -147,7 +147,8 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                         className="text-blue-600"
                       >
                         CONSORT
-                      </Link>)
+                      </Link>
+                      )
                     </span>
                   );
                 } else if (bullet.includes("Plagiarism and AI-generated")) {
@@ -172,7 +173,8 @@ export const PhysicianWritingHero: React.FC<PhysicianHeroProps> = ({
                         className="text-blue-600 no-underline hover:no-underline"
                       >
                         Scopus
-                      </Link>, and Cochrane
+                      </Link>
+                      , and Cochrane
                     </span>
                   );
                 }

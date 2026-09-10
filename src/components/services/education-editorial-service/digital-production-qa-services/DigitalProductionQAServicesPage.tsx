@@ -131,60 +131,61 @@ const DigitalProductionQaServices: FC<DigitalProductionQaServicesProps> = ({
       />
 
       {/* INTRO & OFFSET FLOATING IMAGE SECTION */}
+
       <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6 md:px-8">
-        <h2 className="text-xl font-bold text-[#0b3b2c] sm:text-2xl md:text-3xl">
-          {introHeading}
-        </h2>
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold text-[#0b3b2c] leading-tight sm:text-3xl">
+            {introHeading}
+          </h2>
 
-        <div className="mt-6 grid grid-cols-1 items-start gap-8 md:grid-cols-12">
-          <div className="space-y-4 md:col-span-7">
-            {introParagraphs.map((paragraph, index) => (
-              <p
-                key={`intro-paragraph-${index}`}
-                className="text-xs leading-relaxed text-gray-700 sm:text-sm md:text-base"
-              >
-                {paragraph}
-              </p>
-            ))}
-
-            <div className="pt-2">
-              <h3 className="text-sm font-bold text-gray-900 sm:text-base">
-                {servicesHelpHeading}
-              </h3>
-              <ul className="mt-3 space-y-2 text-xs sm:text-sm text-gray-700">
-                {servicesHelpList.map((item, index) => (
-                  <li
-                    key={`services-help-${index}`}
-                    className="flex items-start space-x-2"
-                  >
-                    <span className="mt-0.5 text-xs text-[#c5221f]">▪</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="pt-5">
-                <GetFreeQuoteButton />
-              </div>
-            </div>
-          </div>
-
-          <div className="relative mt-2 flex justify-center md:col-span-5 md:mt-0 md:justify-end">
-            <div className="relative h-[210px] w-full max-w-[360px] sm:h-[230px]">
-              <div className="absolute -bottom-4 -left-4 -z-10 h-full w-full rounded-2xl" />
-              <div className="relative h-full w-full overflow-hidden rounded-2xl">
+          <div className="flow-root">
+            {/* Right-Floated Image */}
+            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+              <div className="relative w-full max-w-md aspect-[4/3] overflow-hidden">
                 <Image
                   src="/images/education-editorial-service/digital-production-qa-services/Digital-Production-QA-Services.webp"
                   alt={heroImageLabel}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 360px"
+                  sizes="(max-width: 1024px) 100vw, 28rem"
                 />
+              </div>
+            </div>
+
+            {/* Main Content */}
+            <div className="space-y-5 text-sm sm:text-base text-gray-700 leading-relaxed">
+              {introParagraphs.map((paragraph, index) => (
+                <p key={`intro-paragraph-${index}`}>
+                  {paragraph}
+                </p>
+              ))}
+
+              <div className="pt-2">
+                <h3 className="text-sm sm:text-base font-bold text-gray-900">
+                  {servicesHelpHeading}
+                </h3>
+
+                <ul className="mt-3 space-y-3 pl-4 list-disc marker:text-red-600 text-sm sm:text-base text-gray-700">
+                  {servicesHelpList.map((item, index) => (
+                    <li
+                      key={`services-help-${index}`}
+                      className="leading-relaxed"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="pt-2">
+                  <GetFreeQuoteButton />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+
 
       {/* TYPES OF QA SERVICES WE OFFER SECTION */}
       <div className="mx-auto max-w-5xl px-4 pb-7 sm:px-6 md:px-8">

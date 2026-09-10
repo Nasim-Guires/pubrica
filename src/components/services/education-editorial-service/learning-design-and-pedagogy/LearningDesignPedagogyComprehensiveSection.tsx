@@ -77,81 +77,74 @@ const LearningDesignPedagogyComprehensiveSection: NextPage = () => {
       <div className="w-full bg-white text-gray-800 pb-7 px-4 md:px-8 space-y-16">
 
         {/* MAIN CONTENT SECTION WITH EMBEDDED FLOATING IMAGE ON THE RIGHT */}
-        <section className="py-6 px-6 max-w-6xl mx-auto">
-          <h2 className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-5 leading-tight text-left">
-            Design Learning. Strengthen Pedagogy. Elevate Educational Impact.
-          </h2>
+        <section className="py-6 px-4 sm:px-6 max-w-6xl mx-auto">
+          <div className="space-y-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#0b3b2c] leading-tight">
+              Design Learning. Strengthen Pedagogy. Elevate Educational Impact.
+            </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
-            {/* Left Side Content & Bullet Points */}
-            <div className="lg:col-span-7 text-xs md:text-sm text-gray-700 space-y-2.5 leading-relaxed">
-              <p>
-                The education and training landscape continues to evolve. In today&apos;s rapidly changing world, effective learning design and sound pedagogy are essential for all stakeholders: universities, educators, researchers, and institutions. All learning materials must be instructionally sound, learner-centred, outcomes-driven, and aligned with educational best practices. At Pubrica, we connect the subject matter experts to the needs of their learners by creating impactful educational experiences.
-              </p>
-              <p>
-                Our Learning Design & Pedagogy services focus on structuring educational content so that learners can comprehend it better, engage with it more fully, retain it for longer periods of time, and apply the knowledge to real life situations. We take care of all aspects of curriculum alignment, instructional sequencing, assessment design, and learning outcome mapping for you to be able to create effective, clear, coherent, inclusive, and pedagogically robust educational content.
-              </p>
-              <p>
-                We support academic course development, training module development, online program development, workshop development, or institutional curriculum development. Our expert guidance helps ensure that your learning materials meet educational standards, the needs of your learners, and your institutional educational goals.
-              </p>
-
-              <p className="font-bold text-gray-900 pt-1">
-                Pubrica&apos;s Learning Design and Pedagogy Services Ensure:
-              </p>
-
-              <ul className="space-y-1.5 pt-0.5 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 font-bold select-none">•</span>
-                  <span className="text-xs md:text-sm text-gray-700 leading-normal">Clearly defined learning objectives that are directly connected to outcomes.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 font-bold select-none">•</span>
-                  <span className="text-xs md:text-sm text-gray-700 leading-normal">Pedagogically appropriate content structure and ordering.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 font-bold select-none">•</span>
-                  <span className="text-xs md:text-sm text-gray-700 leading-normal">Instructional strategies that are based on learner-centred approaches.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 font-bold select-none">•</span>
-                  <span className="text-xs md:text-sm text-gray-700 leading-normal">Theoretical frameworks that reflect Bloom&apos;s Taxonomy and various learning theories.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 font-bold select-none">•</span>
-                  <span className="text-xs md:text-sm text-gray-700 leading-normal">Coherence between formative assessment/evaluation and instructional design.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 font-bold select-none">•</span>
-                  <span className="text-xs md:text-sm text-gray-700 leading-normal">Inclusive/adaptive strategies for all learner populations.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 font-bold select-none">•</span>
-                  <span className="text-xs md:text-sm text-gray-700 leading-normal">Flow and clarity of content is based on focus of learner engagement (motivation).</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 font-bold select-none">•</span>
-                  <span className="text-xs md:text-sm text-gray-700 leading-normal">Content developed in compliance with institutional, accreditation, and curriculum requirements.</span>
-                </li>
-              </ul>
-
-              <div className="pt-2">
-                <GetFreeQuoteButton />
-              </div>
-            </div>
-
-            {/* Right Side Image Container with Backdrop Layer */}
-            <div className="lg:col-span-5 relative mt-2 lg:mt-0">
-              <div className="relative w-full aspect-[4/3] max-w-[400px] mx-auto">
-                <div className="absolute inset-0  rounded-2xl transform -translate-x-3 translate-y-3" />
-                <div className="relative w-full h-full rounded-2xl overflow-hidden">
+            <div className="flow-root">
+              {/* Right-Floated Image */}
+              <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                <div className="relative w-full max-w-md aspect-[4/3] overflow-hidden">
                   <Image
                     src="/images/education-editorial-service/learning-design-and-pedagogy/Design-Learning.-Strengthen-Pedagogy.-Elevate-Educational-Impact.webp"
                     alt="Design Learning. Strengthen Pedagogy. Elevate Educational Impact"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 40vw"
+                    sizes="(max-width: 1024px) 100vw, 28rem"
                     priority
                   />
+                </div>
+              </div>
+
+              {/* Main Content */}
+              <div className="space-y-5 text-sm sm:text-base text-gray-700 leading-relaxed">
+                <p>
+                  The education and training landscape continues to evolve. In today&apos;s rapidly changing world, effective learning design and sound pedagogy are essential for all stakeholders: universities, educators, researchers, and institutions. All learning materials must be instructionally sound, learner-centred, outcomes-driven, and aligned with educational best practices. At Pubrica, we connect the subject matter experts to the needs of their learners by creating impactful educational experiences.
+                </p>
+
+                <p>
+                  Our Learning Design &amp; Pedagogy services focus on structuring educational content so that learners can comprehend it better, engage with it more fully, retain it for longer periods of time, and apply the knowledge to real life situations. We take care of all aspects of curriculum alignment, instructional sequencing, assessment design, and learning outcome mapping for you to be able to create effective, clear, coherent, inclusive, and pedagogically robust educational content.
+                </p>
+
+                <p>
+                  We support academic course development, training module development, online program development, workshop development, or institutional curriculum development. Our expert guidance helps ensure that your learning materials meet educational standards, the needs of your learners, and your institutional educational goals.
+                </p>
+
+                <p className="font-bold text-gray-900 pt-2">
+                  Pubrica&apos;s Learning Design and Pedagogy Services Ensure:
+                </p>
+
+                <ul className="space-y-3 pl-4 list-disc marker:text-red-600">
+                  <li className="leading-relaxed">
+                    Clearly defined learning objectives that are directly connected to outcomes.
+                  </li>
+                  <li className="leading-relaxed">
+                    Pedagogically appropriate content structure and ordering.
+                  </li>
+                  <li className="leading-relaxed">
+                    Instructional strategies that are based on learner-centred approaches.
+                  </li>
+                  <li className="leading-relaxed">
+                    Theoretical frameworks that reflect Bloom&apos;s Taxonomy and various learning theories.
+                  </li>
+                  <li className="leading-relaxed">
+                    Coherence between formative assessment/evaluation and instructional design.
+                  </li>
+                  <li className="leading-relaxed">
+                    Inclusive/adaptive strategies for all learner populations.
+                  </li>
+                  <li className="leading-relaxed">
+                    Flow and clarity of content is based on focus of learner engagement (motivation).
+                  </li>
+                  <li className="leading-relaxed">
+                    Content developed in compliance with institutional, accreditation, and curriculum requirements.
+                  </li>
+                </ul>
+
+                <div className="pt-2">
+                  <GetFreeQuoteButton />
                 </div>
               </div>
             </div>

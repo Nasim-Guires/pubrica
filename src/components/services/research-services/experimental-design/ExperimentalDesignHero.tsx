@@ -22,116 +22,121 @@ export default function ExperimentalDesignHero() {
       {/* 2. OVERVIEW & INTRO SECTION                               */}
       {/* ========================================================= */}
       <div className="max-w-7xl mx-auto py-6 sm:py-7 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          {/* Left Text Content */}
-          <div className="lg:col-span-7 space-y-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="space-y-6">
+            {/* Heading placed above the image block */}
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0e3b38] leading-tight">
               Ensure the Success of Your Research with Pubrica&apos;s
               Experimental Design Services
             </h2>
 
-            <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed">
-              At Pubrica, we specialize in{" "}
-              <Link
-                href="/academy/experimental-design/how-to-choose-right-experimental-design-for-research/"
-                className="text-blue-600 no-underline hover:no-underline"
-              >
-                experimental study design
-              </Link>{" "}
-              services for research papers, manuscripts, theses, and clinical
-              trials. Our team of scientific experts, statisticians, and
-              research methodology specialists has successfully crafted over
-              5,000 experimental research designs, including true experimental,{" "}
-              <Link
-                href="/academy/experimental-design/quasi-experimental-design-definition-types-examples/"
-                className="text-blue-600 no-underline hover:no-underline"
-              >
-                quasi-experimental
-              </Link>
-              , pre-experimental, descriptive, randomized controlled trial
-              (RCT), factorial, and crossover designs.
-            </p>
+            <div className="flow-root">
+              {/* Right Image Frame (Retaining original styling, dimensions, and shape) */}
+              <div className="lg:float-right lg:ml-10 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-4 lg:pt-0">
+                <div className="relative w-full max-w-md">
+                  {/* Dark Green Offset Background Accent */}
+                  <div className="absolute inset-0 bg-[#0e3b38] rounded-xl translate-x-3 translate-y-3 -z-10" />
 
-            <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed">
-              We know that a well-structured{" "}
-              <Link
-                href="/academy/experimental-design/types-of-pre-experimental-research-design/"
-                className="text-blue-600 no-underline hover:no-underline"
-              >
-                experimental research design
-              </Link>{" "}
-              is the backbone of every credible scientific study. That&apos;s
-              why our manuscript and research paper design services ensure your
-              methodology is scientifically robust, statistically sound, and
-              reproducible, meeting both publication standards and regulatory
-              requirements.
-            </p>
+                  {/* Main Image Container */}
+                  <div className="relative h-72 sm:h-80 md:h-96 w-full rounded-xl overflow-hidden ">
+                    <Image
+                      src="/images/research-services/experimental-design/Ensure-the-Success-of-Your-Research-with-Pubricas-Experimental-Design-Services.webp"
+                      alt="Researchers discussing experimental design and research methodology on laptop"
+                      fill
+                      priority
+                      className="object-cover object-center"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                </div>
+              </div>
 
-            {/* Key Deliverables Bullet Points */}
-            <div className="space-y-3 pt-2">
-              <h3 className="text-sm sm:text-base font-bold text-[#0e3b38]">
-                A Pubrica Experimental Design Delivers:
-              </h3>
-              <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-red-600 font-bold text-base leading-none mt-0.5">
-                    •
-                  </span>
-                  <span>
-                    Minimizes bias and ensures accuracy in research studies.
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-600 font-bold text-base leading-none mt-0.5">
-                    •
-                  </span>
-                  <span>
-                    Enhances reproducibility and validity of experimental
-                    results.
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-600 font-bold text-base leading-none mt-0.5">
-                    •
-                  </span>
-                  <span>
-                    Optimizes resources for cost-effective study design.
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-600 font-bold text-base leading-none mt-0.5">
-                    •
-                  </span>
-                  <span>
-                    Strengthens the credibility of your manuscript, thesis, or
-                    clinical trial for publication and funding approval.
-                  </span>
-                </li>
-              </ul>
-            </div>
+              {/* Text Content */}
+              <div className="space-y-6">
+                <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed">
+                  At Pubrica, we specialize in{" "}
+                  <Link
+                    href="/academy/experimental-design/how-to-choose-right-experimental-design-for-research/"
+                    className="text-blue-600 no-underline hover:no-underline"
+                  >
+                    experimental study design
+                  </Link>{" "}
+                  services for research papers, manuscripts, theses, and clinical
+                  trials. Our team of scientific experts, statisticians, and
+                  research methodology specialists has successfully crafted over
+                  5,000 experimental research designs, including true experimental,{" "}
+                  <Link
+                    href="/academy/experimental-design/quasi-experimental-design-definition-types-examples/"
+                    className="text-blue-600 no-underline hover:no-underline"
+                  >
+                    quasi-experimental
+                  </Link>
+                  , pre-experimental, descriptive, randomized controlled trial
+                  (RCT), factorial, and crossover designs.
+                </p>
 
-            {/* CTA Button */}
-            <div className="pt-4">
-              <GetFreeQuoteButton />
-            </div>
-          </div>
+                <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed">
+                  We know that a well-structured{" "}
+                  <Link
+                    href="/academy/experimental-design/types-of-pre-experimental-research-design/"
+                    className="text-blue-600 no-underline hover:no-underline"
+                  >
+                    experimental research design
+                  </Link>{" "}
+                  is the backbone of every credible scientific study. That&apos;s
+                  why our manuscript and research paper design services ensure your
+                  methodology is scientifically robust, statistically sound, and
+                  reproducible, meeting both publication standards and regulatory
+                  requirements.
+                </p>
 
-          {/* Right Image Frame */}
-          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md">
-              {/* Dark Green Offset Background Accent */}
-              <div className="absolute inset-0 bg-[#0e3b38] rounded-xl translate-x-3 translate-y-3 -z-10" />
+                {/* Key Deliverables Bullet Points */}
+                <div className="space-y-3 pt-2">
+                  <h3 className="text-sm sm:text-base font-bold text-[#0e3b38]">
+                    A Pubrica Experimental Design Delivers:
+                  </h3>
+                  <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 font-bold text-base leading-none mt-0.5">
+                        •
+                      </span>
+                      <span>
+                        Minimizes bias and ensures accuracy in research studies.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 font-bold text-base leading-none mt-0.5">
+                        •
+                      </span>
+                      <span>
+                        Enhances reproducibility and validity of experimental
+                        results.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 font-bold text-base leading-none mt-0.5">
+                        •
+                      </span>
+                      <span>
+                        Optimizes resources for cost-effective study design.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 font-bold text-base leading-none mt-0.5">
+                        •
+                      </span>
+                      <span>
+                        Strengthens the credibility of your manuscript, thesis, or
+                        clinical trial for publication and funding approval.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
 
-              {/* Main Image Container */}
-              <div className="relative h-72 sm:h-80 md:h-96 w-full rounded-xl overflow-hidden shadow-lg border border-slate-100 bg-slate-100">
-                <Image
-                  src="/images/research-services/experimental-design/Ensure-the-Success-of-Your-Research-with-Pubricas-Experimental-Design-Services.webp"
-                  alt="Researchers discussing experimental design and research methodology on laptop"
-                  fill
-                  priority
-                  className="object-cover object-center"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
+                {/* CTA Button */}
+                <div className="pt-6">
+                  <GetFreeQuoteButton />
+                </div>
               </div>
             </div>
           </div>

@@ -17,43 +17,46 @@ export default function PhysicianTrainingHeroSection() {
       {/* 2. Main Hero / Introductory Overview Section */}
       <section className="py-6 sm:py-7 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="space-y-6">
+            {/* Heading Placed Above the Image and Content */}
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] leading-tight">
+              Evidence-Based Physician Training Content Development: Enhance Clinical Practice with Research & Publication Skills
+            </h2>
 
-            {/* Left Content Area */}
-            <div className="lg:col-span-7 space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] leading-tight">
-                Evidence-Based Physician Training Content Development: Enhance Clinical Practice with Research & Publication Skills
-              </h2>
-
-              <h3 className="text-sm sm:text-base font-semibold  text-[#1a3832]">
-                Advance Clinical Education Through Professionally Developed, Specialty-Aligned Materials
-              </h3>
-
-              <div className="space-y-3 text-xs sm:text-sm text-gray-600 leading-relaxed">
-                <p>
-                  At Pubrica, we specialize in developing high-quality, evidence-based training content tailored for physicians, specialists, hospital-based clinicians, and healthcare educators. Our materials are designed to support skills development, clinical decision-making, and academic growth, aligned with the latest standards in medical education. Rather than offering direct training services, we create structured, specialty-focused educational content that empowers healthcare organizations, academic institutions, and industry partners to deliver impactful learning experiences.
-                </p>
-                <p>
-                  Our multidisciplinary team of clinician-scientists, editors, and statisticians ensures every training session aligns with international publishing and research standards.
-                </p>
+            {/* Flow Root Container for Floated Image Layout */}
+            <div className="flow-root">
+              {/* Right Floated Image Container */}
+              <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                <div className="relative w-full max-w-md">
+                  <img
+                    src="/images/physician-writing-services/physician-training/Physician-Training-Content-Development.webp"
+                    alt="Medical team reviewing clinical training materials"
+                    className="object-cover w-full h-[320px] sm:h-[380px]"
+                  />
+                </div>
               </div>
 
-              <div className="pt-2">
-                <GetFreeQuoteButton />
+              {/* Text Content Passing Around the Floated Image */}
+              <div className="space-y-5">
+                <h3 className="text-sm sm:text-base font-semibold text-[#1a3832]">
+                  Advance Clinical Education Through Professionally Developed, Specialty-Aligned Materials
+                </h3>
+
+                <div className="space-y-3 text-xs sm:text-sm text-gray-600 leading-relaxed">
+                  <p>
+                    At Pubrica, we specialize in developing high-quality, evidence-based training content tailored for physicians, specialists, hospital-based clinicians, and healthcare educators. Our materials are designed to support skills development, clinical decision-making, and academic growth, aligned with the latest standards in medical education. Rather than offering direct training services, we create structured, specialty-focused educational content that empowers healthcare organizations, academic institutions, and industry partners to deliver impactful learning experiences.
+                  </p>
+
+                  <p>
+                    Our multidisciplinary team of clinician-scientists, editors, and statisticians ensures every training session aligns with international publishing and research standards.
+                  </p>
+                </div>
+
+                <div className="pt-4">
+                  <GetFreeQuoteButton />
+                </div>
               </div>
             </div>
-
-            {/* Right Image Container with Accent Border */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative p-2 rounded-2xl ">
-                <img
-                  src="/images/physician-writing-services/physician-training/Physician-Training-Content-Development.webp"
-                  alt="Medical team reviewing clinical training materials"
-                  className="rounded-xl object-cover w-full h-[320px] sm:h-[380px]"
-                />
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
@@ -197,7 +200,7 @@ export default function PhysicianTrainingHeroSection() {
             </div>
 
           </div>
-]
+          ]
         </div>
       </section>
 

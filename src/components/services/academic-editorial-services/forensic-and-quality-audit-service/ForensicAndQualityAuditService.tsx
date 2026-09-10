@@ -75,57 +75,16 @@ export default function ForensicAndQualityAuditService() {
       />
 
       {/* ------------------- INTRODUCTION & AUDIT FUNCTIONS SECTION ------------------- */}
-      <section className="py-12 px-6 max-w-6xl mx-auto">
-        <h2 className="text-xl md:text-2xl font-bold text-[#0e2a22] mb-5 leading-tight">
-          Strengthen Integrity. Ensure Compliance. Safeguard Research Credibility.
-        </h2>
+      <section className="py-6 px-4 sm:px-6 max-w-6xl mx-auto">
+        <div className="space-y-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0e2a22] leading-tight">
+            Strengthen Integrity. Ensure Compliance. Safeguard Research Credibility.
+          </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Left Side Content & Bullet Points */}
-          <div className="lg:col-span-7 text-xs md:text-sm text-gray-700 space-y-4 leading-relaxed">
-            <p>
-              In today’s evolving research and publication landscape, maintaining the accuracy, integrity, and authenticity of scholarly content is more important than ever. Academic institutions, researchers, publishers, and corporate organisations face increasing scrutiny related to data validity, scientific misconduct, plagiarism, duplication, authorship issues, reporting transparency, and compliance with global publishing standards. Even unintentional errors can undermine the reliability of research, damage reputations, and hinder publication success.
-            </p>
-
-            <p>
-              Pubrica’s{' '}
-              <Link
-                href="/services/academic-editorial-services/forensic-and-quality-audit-service/forensic-audit-complete-guide/"
-                className="text-blue-600"
-              >
-                Forensic and Quality Audit Service
-              </Link>{' '}
-              is crafted to ensure that your manuscript, dataset, visuals, or documentation meets the highest benchmarks of academic integrity and quality control. Our expert team performs deep-level examinations, evaluating data accuracy, image authenticity, methodology reporting, compliance with journal guidelines, and alignment with industry standards such as COPE, ICMJE, CONSORT, PRISMA, GCP, GLP, and ISO-based frameworks.
-            </p>
-
-            <p className="font-bold text-black pt-2">
-              Our service integrates two powerful audit functions:
-            </p>
-
-            <ul className="space-y-3 pt-1 text-gray-700">
-              {auditFunctions.map((fn, idx) => (
-                <li key={idx} className="flex items-start gap-2.5">
-                  <span className="text-red-500 font-bold select-none">•</span>
-                  <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-                    {fn.title.replace(/:$/, '')}: {fn.description}
-                  </p>
-                </li>
-              ))}
-            </ul>
-
-            <div className="pt-4">
-              <GetFreeQuoteButton />
-            </div>
-          </div>
-
-          {/* Right Side Image Container with Offset Dark Green Layer */}
-          <div className="lg:col-span-5 relative mt-4 lg:mt-0">
-            <div className="relative w-full aspect-[4/3] max-w-[440px] mx-auto">
-              {/* Offset Dark Green Frame Layer */}
-              <div className="absolute inset-0 rounded-2xl transform -translate-x-5 translate-y-5"></div>
-
-              {/* Main Image Overlay */}
-              <div className="relative w-full h-full rounded-2xl overflow-hidden">
+          <div className="flow-root">
+            {/* Right-Floated Image */}
+            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+              <div className="relative w-full max-w-md aspect-[4/3] overflow-hidden">
                 <Image
                   src="/images/academic-editorial-services/forensic-and-quality-audit-service/Forensic-Quality-Audit-Services.webp"
                   alt="Forensic and Quality Audit Services"
@@ -136,9 +95,57 @@ export default function ForensicAndQualityAuditService() {
                 />
               </div>
             </div>
+
+            {/* Main Content */}
+            <div className="space-y-5 text-sm sm:text-base text-gray-700 leading-relaxed">
+              <p>
+                In today’s evolving research and publication landscape, maintaining
+                the accuracy, integrity, and authenticity of scholarly content is
+                more important than ever. Academic institutions, researchers,
+                publishers, and corporate organisations face increasing scrutiny
+                related to data validity, scientific misconduct, plagiarism,
+                duplication, authorship issues, reporting transparency, and
+                compliance with global publishing standards. Even unintentional
+                errors can undermine the reliability of research, damage reputations,
+                and hinder publication success.
+              </p>
+
+              <p>
+                Pubrica’s{" "}
+                <Link
+                  href="/services/academic-editorial-services/forensic-and-quality-audit-service/forensic-audit-complete-guide/"
+                  className="text-blue-600"
+                >
+                  Forensic and Quality Audit Service
+                </Link>{" "}
+                is crafted to ensure that your manuscript, dataset, visuals, or
+                documentation meets the highest benchmarks of academic integrity and
+                quality control. Our expert team performs deep-level examinations,
+                evaluating data accuracy, image authenticity, methodology reporting,
+                compliance with journal guidelines, and alignment with industry
+                standards such as COPE, ICMJE, CONSORT, PRISMA, GCP, GLP, and
+                ISO-based frameworks.
+              </p>
+
+              <p className="font-bold text-black pt-2">
+                Our service integrates two powerful audit functions:
+              </p>
+
+              <ul className="space-y-3 pl-4 list-disc marker:text-red-600">
+                {auditFunctions.map((fn, idx) => (
+                  <li key={idx} className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                    {fn.title.replace(/:$/, '')}: {fn.description}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="pt-2">
+                <GetFreeQuoteButton />
+              </div>
+            </div>
           </div>
         </div>
-      </section>  
+      </section>
       {/* ------------------- TYPES OF FORENSIC AND QUALITY AUDIT SERVICES WE OFFER ------------------- */}
       <section className="py-6 px-4 bg-[#f8faf9] border-y border-gray-100" aria-labelledby="types-heading">
         <div className="max-w-6xl mx-auto text-center">

@@ -66,74 +66,77 @@ export default function ScientificMedicalCommunication() {
 
       {/* Main Content Section 1 */}
       <section className="py-6 md:py-7 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Text Content */}
-          <div className="lg:col-span-7 space-y-5">
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-[#0d3b44] leading-snug">
-              Enhance Research Impact with Pubrica’s Scientific Medical
-              Communication, Delivering Clear Publications, Regulatory-Compliant
-              Documents, and Engaging Educational Content for Global Scientific
-              Reach and Credibility.
-            </h2>
+        <div className="space-y-6">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-[#0d3b44] leading-tight">
+            Enhance Research Impact with Pubrica’s Scientific Medical
+            Communication, Delivering Clear Publications, Regulatory-Compliant
+            Documents, and Engaging Educational Content for Global Scientific Reach
+            and Credibility.
+          </h2>
 
-            <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-              At Pubrica, we bridge the gap between complex scientific research
-              and clear, impactful communication. Our scientific{" "}
-              <Link
-                href="/services/scientific-communication/technology-enabled-medical-scientific-communication/"
-                className="text-blue-600  no-underline hover:no-underline"
-              >
-                medical communication services
-              </Link>{" "}
-              are designed to help researchers, clinicians, and pharmaceutical
-              companies effectively share their findings with scientific
-              communities, healthcare professionals, regulatory authorities, and
-              patients. With a strong focus on accuracy, compliance, and
-              readability, we transform technical data into compelling,
-              publication-ready content.
-            </p>
-
-            <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-              From{" "}
-              <Link
-                href="/services/medical-writing"
-                className="text-blue-600  no-underline hover:no-underline"
-              >
-                medical writing
-              </Link>{" "}
-              to{" "}
-              <Link
-                href="/services/publication-support"
-                className="text-blue-600 no-underline hover:no-underline"
-              >
-                publication support
-              </Link>
-              , from regulatory documents to patient-centric communication, we
-              deliver content that drives understanding, engagement, and impact
-              across the global scientific community.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-8 pt-2">
-              <GetFreeQuoteButton />
-              <CommonUploadButton
-                href="/uploads/scientific-communication/Scientific-Communication-Services_compressed.pdf"
-              >
-                View Brochure
-              </CommonUploadButton>
+          <div className="flow-root">
+            {/* Right-floated Image */}
+            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+              <div className="relative w-full max-w-md aspect-[4/3] overflow-hidden">
+                <Image
+                  src="/images/research-services/experimental-design/Ensure-the-Success-of-Your-Research-with-Pubricas-Experimental-Design-Services.webp"
+                  alt="Medical scientists discussing research results on laptop"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
-          </div>
 
-          {/* Side Visual/Image */}
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md aspect-[4/3] overflow-hidden">
-              <Image
-                src="/images/research-services/experimental-design/Ensure-the-Success-of-Your-Research-with-Pubricas-Experimental-Design-Services.webp"
-                alt="Medical scientists discussing research results on laptop"
-                fill
-                className="object-cover"
-                priority
-              />
+            {/* Text Content */}
+            <div className="space-y-5">
+              <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                At Pubrica, we bridge the gap between complex scientific research
+                and clear, impactful communication. Our scientific{" "}
+                <Link
+                  href="/services/scientific-communication/technology-enabled-medical-scientific-communication/"
+                  className="text-blue-600 no-underline hover:no-underline"
+                >
+                  medical communication services
+                </Link>{" "}
+                are designed to help researchers, clinicians, and pharmaceutical
+                companies effectively share their findings with scientific
+                communities, healthcare professionals, regulatory authorities, and
+                patients. With a strong focus on accuracy, compliance, and
+                readability, we transform technical data into compelling,
+                publication-ready content.
+              </p>
+
+              <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                From{" "}
+                <Link
+                  href="/services/medical-writing"
+                  className="text-blue-600 no-underline hover:no-underline"
+                >
+                  medical writing
+                </Link>{" "}
+                to{" "}
+                <Link
+                  href="/services/publication-support"
+                  className="text-blue-600 no-underline hover:no-underline"
+                >
+                  publication support
+                </Link>
+                , from regulatory documents to patient-centric communication, we
+                deliver content that drives understanding, engagement, and impact
+                across the global scientific community.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-wrap items-center gap-8 pt-2">
+                <GetFreeQuoteButton />
+                <Link
+                  href="/uploads/scientific-communication/Scientific-Communication-Services_compressed.pdf"
+                  className="bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
+                >
+                  View Brochure
+                </Link>
+              </div>
             </div>
           </div>
         </div>

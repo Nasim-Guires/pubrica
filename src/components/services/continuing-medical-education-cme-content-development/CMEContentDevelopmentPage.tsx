@@ -130,76 +130,16 @@ export default function CMEContentDevelopmentPage() {
 
             {/* 2. OVERVIEW SECTION WITH IMAGE */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-8">
-                <div className="space-y-4">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a]">
-                        Continuing Medical Education Content Creation and Support for Healthcare Professionals
+                <div className="space-y-6">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#033c2a] leading-tight">
+                        Continuing Medical Education Content Creation and Support for Healthcare
+                        Professionals
                     </h2>
-                    <p className="text-sm font-semibold text-slate-600">
-                        Advancing Knowledge. Enhancing Practice. Improving Patient Care.
-                    </p>
-                </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mt-6">
-                    {/* Left Side: Content Points */}
-                    <div className="lg:col-span-7 space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        <p>
-                            Pubrica&apos;s team of experts specializes in developing{' '}
-                            <Link href="/services/continuing-medical-education-cme-content-development/what-is-continuing-medical-education/" className="text-blue-600 no-underline hover:no-underline">
-                                continuing medical education content
-                            </Link>{' '}
-                            that is scholarly, peer-reviewed, and tailored to meet the diverse educational needs of healthcare professionals across various disciplines. Our dedicated CME module writing services ensure the delivery of high-quality educational resources. Here&apos;s how we support your CME content development services needs:
-                        </p>
-
-                        <ul className="space-y-3 pl-2">
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 font-bold text-base leading-none">&bull;</span>
-                                <div>
-                                    <span className=" text-slate-900">Expert Content Development:</span> Our team is adept at creating engaging and informative CME content that addresses the specific learning objectives of doctors, nurses, pharmacists, dentists, and other allied healthcare professionals. This meticulous content preparation is essential for meeting the continuing education requirements of various specialties.
-                                </div>
-                            </li>
-
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 font-bold text-base leading-none">&bull;</span>
-                                <div>
-                                    <span className=" text-slate-900">Tailored Educational Materials:</span> We customize the scope of CME content to match the specific educational needs and specialties of the audience. This personalized approach not only enhances the educational value of the content but also ensures that it is relevant and directly applicable to the audience&apos;s daily professional activities.
-                                </div>
-                            </li>
-
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 font-bold text-base leading-none">&bull;</span>
-                                <div>
-                                    <span className="font-bold text-slate-900">Comprehensive Peer Review:</span> Benefit from our rigorous{' '}
-                                    <Link href="/services/publication-support/peer-review-pre-submission" className="text-blue-600 no-underline hover:no-underline">
-                                        peer review
-                                    </Link>{' '}
-                                    process, which ensures that all CME materials are accurate, up-to-date, and reflect the latest clinical practices and guidelines. Our content undergoes thorough reviews by{' '}
-                                    <Link href="/subject-matter-experts" className="text-blue-600 no-underline hover:no-underline">
-                                        subject matter experts
-                                    </Link>
-                                    , enhancing its credibility and educational impact.
-                                </div>
-                            </li>
-
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 font-bold text-base leading-none">&bull;</span>
-                                <div>
-                                    <span className="font-bold text-slate-900">Multimedia Content Production:</span> Our team leverages both traditional and innovative multimedia tools to create dynamic CME materials. This includes written content, interactive modules, video lectures, and visual aids such as charts and infographics, which facilitate engaging and effective learning experiences.
-                                </div>
-                            </li>
-                        </ul>
-
-                        <p className="pt-2">
-                            Pubrica guarantees that your CME content is backed by robust research and best educational practices, making significant contributions to the ongoing education of healthcare professionals. Our comprehensive approach ensures that CME materials not only meet but also exceed the expectations and requirements of both educational institutions and professional bodies.
-                        </p>
-                    </div>
-
-                    {/* Right Side: Visual Graphic Frame */}
-                    <div className="lg:col-span-5 flex justify-center lg:justify-end">
-                        <div className="relative w-full max-w-md">
-                            {/* Back Decorative Block */}
-                            <div className="absolute -inset-2 rounded-2xl transform -rotate-1 opacity-90" />
-                            {/* Image Container */}
-                            <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
+                    <div className="flow-root">
+                        {/* Right-floated Image */}
+                        <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                            <div className="relative w-full max-w-md aspect-[4/3] overflow-hidden">
                                 <Image
                                     src="/images/continuing-medical-education-cme-content-development/Continuing-Medical-Education-Content-.webp"
                                     alt="Doctors reviewing medical notes"
@@ -208,6 +148,95 @@ export default function CMEContentDevelopmentPage() {
                                     sizes="(max-width: 1024px) 100vw, 40vw"
                                 />
                             </div>
+                        </div>
+
+                        {/* Text Content */}
+                        <div className="space-y-5 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                            <p className="text-sm font-semibold text-slate-600">
+                                Advancing Knowledge. Enhancing Practice. Improving Patient Care.
+                            </p>
+
+                            <p>
+                                Pubrica&apos;s team of experts specializes in developing{" "}
+                                <Link
+                                    href="/services/continuing-medical-education-cme-content-development/what-is-continuing-medical-education/"
+                                    className="text-blue-600 no-underline hover:no-underline"
+                                >
+                                    continuing medical education content
+                                </Link>{" "}
+                                that is scholarly, peer-reviewed, and tailored to meet the diverse
+                                educational needs of healthcare professionals across various
+                                disciplines. Our dedicated CME module writing services ensure the
+                                delivery of high-quality educational resources. Here&apos;s how we
+                                support your CME content development services needs:
+                            </p>
+
+                            <ul className="space-y-3 pl-4 list-disc marker:text-red-600">
+                                <li>
+                                    <span className="text-slate-900">
+                                        Expert Content Development:
+                                    </span>{" "}
+                                    Our team is adept at creating engaging and informative CME content
+                                    that addresses the specific learning objectives of doctors, nurses,
+                                    pharmacists, dentists, and other allied healthcare professionals.
+                                    This meticulous content preparation is essential for meeting the
+                                    continuing education requirements of various specialties.
+                                </li>
+
+                                <li>
+                                    <span className="text-slate-900">
+                                        Tailored Educational Materials:
+                                    </span>{" "}
+                                    We customize the scope of CME content to match the specific
+                                    educational needs and specialties of the audience. This personalized
+                                    approach not only enhances the educational value of the content but
+                                    also ensures that it is relevant and directly applicable to the
+                                    audience&apos;s daily professional activities.
+                                </li>
+
+                                <li>
+                                    <span className="font-bold text-slate-900">
+                                        Comprehensive Peer Review:
+                                    </span>{" "}
+                                    Benefit from our rigorous{" "}
+                                    <Link
+                                        href="/services/publication-support/peer-review-pre-submission"
+                                        className="text-blue-600 no-underline hover:no-underline"
+                                    >
+                                        peer review
+                                    </Link>{" "}
+                                    process, which ensures that all CME materials are accurate,
+                                    up-to-date, and reflect the latest clinical practices and
+                                    guidelines. Our content undergoes thorough reviews by{" "}
+                                    <Link
+                                        href="/subject-matter-experts"
+                                        className="text-blue-600 no-underline hover:no-underline"
+                                    >
+                                        subject matter experts
+                                    </Link>
+                                    , enhancing its credibility and educational impact.
+                                </li>
+
+                                <li>
+                                    <span className="font-bold text-slate-900">
+                                        Multimedia Content Production:
+                                    </span>{" "}
+                                    Our team leverages both traditional and innovative multimedia tools
+                                    to create dynamic CME materials. This includes written content,
+                                    interactive modules, video lectures, and visual aids such as charts
+                                    and infographics, which facilitate engaging and effective learning
+                                    experiences.
+                                </li>
+                            </ul>
+
+                            <p className="pt-2">
+                                Pubrica guarantees that your CME content is backed by robust research
+                                and best educational practices, making significant contributions to
+                                the ongoing education of healthcare professionals. Our comprehensive
+                                approach ensures that CME materials not only meet but also exceed the
+                                expectations and requirements of both educational institutions and
+                                professional bodies.
+                            </p>
                         </div>
                     </div>
                 </div>

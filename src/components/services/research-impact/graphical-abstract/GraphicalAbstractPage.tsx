@@ -65,48 +65,63 @@ export default function GraphicalAbstractPage() {
 
             {/* Main Content & Feature Section */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div className="space-y-6">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#122828] leading-tight">
+                        Transform Your Research into an Engaging Visual Summary
+                    </h2>
 
-                    {/* Left Text Block */}
-                    <div className="lg:col-span-7 space-y-4">
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#122828]">
-                            Transform Your Research into an Engaging Visual Summary
-                        </h2>
-                        <p className="text-base font-medium text-slate-700">
-                            Deliver targeted, evidence-based strategies to increase the visibility, credibility, and citation of your research.
-                        </p>
-                        <p className="text-sm text-slate-600 leading-relaxed">
-                            Many top publishers require you to submit a{' '}
-                            <Link href="/academy/research-impactt/graphical-abstract-formatting-submission-guide/" className="text-blue-600 no-underline hover:no-underline">
-                                graphical abstract
-                            </Link>{' '}
-                            along with your manuscript. These publishers include Elsevier, Springer, Nature, IOPscience, and ACS. Pubrica's{' '}
-                            <Link href="/insights/sample-work/curcumin-restores-gut-liver-homeostasis-in-ibd/" className="text-blue-600 no-underline hover:no-underline">
-                                graphical abstract design service
-                            </Link>{' '}
-                            can turn your data into an intuitive, scientifically reliable visual representation. Our animator and science specialists will work with you to create a high-resolution, journal-compliant{' '}
-                            <Link href="/insights/sample-work/hpv-infection-cardiovascular-mortality-study/" className="text-blue-600 no-underline hover:no-underline">
-                                graphical abstract
-                            </Link>{' '}
-                            that fits all journal specifications while accurately and truly representing your research.
-                        </p>
-                    </div>
+                    <div className="flow-root">
+                        {/* Right-floated Image */}
+                        <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                            <div className="relative w-full max-w-md h-64 sm:h-72 overflow-hidden">
+                                <Image
+                                    src="/images/research-impact/graphical-abstract/Transform-Your-Research-into-an-Engaging-Visual-Summary.webp"
+                                    alt="Graphical Abstract Service Illustration - Targeted In-vivo mRNA delivery"
+                                    fill
+                                    priority
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    className="object-cover"
+                                />
+                            </div>
+                        </div>
 
-                    {/* Right Image Section */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        {/* Image Section Container */}
-                        <div className="relative w-full max-w-md h-64 sm:h-72 bg-slate-100 rounded-lg overflow-hidden border border-slate-200 shadow-sm flex items-center justify-center">
-                            <Image
-                                src="/images/research-impact/graphical-abstract/Transform-Your-Research-into-an-Engaging-Visual-Summary.webp"
-                                alt="Graphical Abstract Service Illustration - Targeted In-vivo mRNA delivery"
-                                fill
-                                priority
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                className="object-cover"
-                            />
+                        {/* Text Content */}
+                        <div className="space-y-5">
+                            <p className="text-base font-medium text-slate-700 leading-relaxed">
+                                Deliver targeted, evidence-based strategies to increase the
+                                visibility, credibility, and citation of your research.
+                            </p>
+
+                            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                Many top publishers require you to submit a{" "}
+                                <Link
+                                    href="/academy/research-impactt/graphical-abstract-formatting-submission-guide/"
+                                    className="text-blue-600 no-underline hover:no-underline"
+                                >
+                                    graphical abstract
+                                </Link>{" "}
+                                along with your manuscript. These publishers include Elsevier,
+                                Springer, Nature, IOPscience, and ACS. Pubrica's{" "}
+                                <Link
+                                    href="/insights/sample-work/curcumin-restores-gut-liver-homeostasis-in-ibd/"
+                                    className="text-blue-600 no-underline hover:no-underline"
+                                >
+                                    graphical abstract design service
+                                </Link>{" "}
+                                can turn your data into an intuitive, scientifically reliable visual
+                                representation. Our animator and science specialists will work with
+                                you to create a high-resolution, journal-compliant{" "}
+                                <Link
+                                    href="/insights/sample-work/hpv-infection-cardiovascular-mortality-study/"
+                                    className="text-blue-600 no-underline hover:no-underline"
+                                >
+                                    graphical abstract
+                                </Link>{" "}
+                                that fits all journal specifications while accurately and truly
+                                representing your research.
+                            </p>
                         </div>
                     </div>
-
                 </div>
             </section>
 

@@ -109,36 +109,54 @@ export default function HealthEconomicsOutcomeResearch() {
                 {/* ------------------------------------------------------------------
            2. TURN EVIDENCE INTO IMPACT SECTION
            ------------------------------------------------------------------ */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    {/* Left Text Block */}
-                    <div className="lg:col-span-7 space-y-6">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0b2b26] leading-tight">
-                            Turn Evidence Into Impact, Research Into Results With Our Health Economics & Outcomes Research (HEOR) Expertise
-                        </h2>
+                <div className="space-y-6">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0b2b26] leading-tight">
+                        Turn Evidence Into Impact, Research Into Results With Our Health Economics
+                        & Outcomes Research (HEOR) Expertise
+                    </h2>
 
-                        <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                            At Pubrica, we help healthcare stakeholders bridge the gap between clinical outcomes and economic value through comprehensive{" "}
-                            <Link
-                                href="/academy/health-economics/health-economics-research-and-heor-services/"
-                                className="text-blue-600"
-                            >
-                                Health Economics & Outcomes Research
-                            </Link>{" "}
-                            services. Our team of health economists, statisticians, epidemiologists, and medical writers collaborates to generate real-world evidence that supports outcomes-based healthcare and value-based care decisions worldwide.
-                        </p>
+                    <div className="flow-root">
+                        {/* Right Image */}
+                        <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                            <div className="relative w-full max-w-md h-72 sm:h-80">
+                                <Image
+                                    src="/images/data-analytics-machine-learning/health-economics-outcome-research/Health-Economics-Outcomes-Research-HEOR-Expertise.webp"
+                                    alt="Health Economics and Outcomes Research Team Analysis"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                        </div>
 
-                        <ul className="space-y-3 text-xs sm:text-sm text-slate-700">
-                            <li className="flex items-start">
-                                <span className="text-red-500 font-bold mr-2 text-base leading-none">•</span>
-                                <span>1,500+ HEOR projects completed across cost-effectiveness, real-world evidence, and patient-reported outcomes.</span>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="text-red-500 font-bold mr-2 text-base leading-none">•</span>
-                                <span>Multidisciplinary team of economists, statisticians, epidemiologists, and medical writers.</span>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="text-red-500 font-bold mr-2 text-base leading-none">•</span>
-                                <span>
+                        {/* Text Content */}
+                        <div className="space-y-5">
+                            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                                At Pubrica, we help healthcare stakeholders bridge the gap between
+                                clinical outcomes and economic value through comprehensive{" "}
+                                <Link
+                                    href="/academy/health-economics/health-economics-research-and-heor-services/"
+                                    className="text-blue-600"
+                                >
+                                    Health Economics & Outcomes Research
+                                </Link>{" "}
+                                services. Our team of health economists, statisticians, epidemiologists,
+                                and medical writers collaborates to generate real-world evidence that
+                                supports outcomes-based healthcare and value-based care decisions
+                                worldwide.
+                            </p>
+
+                            <ul className="space-y-3 pl-4 list-disc marker:text-red-600 text-xs sm:text-sm text-slate-700">
+                                <li>
+                                    1,500+ HEOR projects completed across cost-effectiveness, real-world
+                                    evidence, and patient-reported outcomes.
+                                </li>
+
+                                <li>
+                                    Multidisciplinary team of economists, statisticians, epidemiologists,
+                                    and medical writers.
+                                </li>
+
+                                <li>
                                     Exclusive focus on researchers preparing manuscripts,{" "}
                                     <Link
                                         href="/services/data-analytics-machine-learning/health-economics-outcome-research/thesis-vs-dissertation-differences-similarities/"
@@ -147,19 +165,19 @@ export default function HealthEconomicsOutcomeResearch() {
                                         dissertations
                                     </Link>
                                     , publications and policy makers.
-                                </span>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="text-red-500 font-bold mr-2 text-base leading-none">•</span>
-                                <span>Proven track record in supporting successful submissions to peer-reviewed journals.</span>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="text-red-500 font-bold mr-2 text-base leading-none">•</span>
-                                <span>Global expertise across multiple therapeutic areas and healthcare systems.</span>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="text-red-500 font-bold mr-2 text-base leading-none">•</span>
-                                <span>
+                                </li>
+
+                                <li>
+                                    Proven track record in supporting successful submissions to
+                                    peer-reviewed journals.
+                                </li>
+
+                                <li>
+                                    Global expertise across multiple therapeutic areas and healthcare
+                                    systems.
+                                </li>
+
+                                <li>
                                     Compliance with international guidelines (
                                     <a
                                         href="https://legacyfileshare.elsevier.com/promis_misc/CONSORT-2010-Checklist.pdf"
@@ -179,30 +197,19 @@ export default function HealthEconomicsOutcomeResearch() {
                                         ICMJE
                                     </a>
                                     , HTA standards).
-                                </span>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="text-red-500 font-bold mr-2 text-base leading-none">•</span>
-                                <span>Evidence tailored for publication as well as funding and market access success.</span>
-                            </li>
-                        </ul>
+                                </li>
 
-                        <p className="text-slate-600 text-xs sm:text-sm leading-relaxed pt-2">
-                            Our proven track record ensures that your research demonstrates both scientific credibility and economic value, increasing its potential for peer-reviewed journal acceptance and funding success.
-                        </p>
-                    </div>
+                                <li>
+                                    Evidence tailored for publication as well as funding and market
+                                    access success.
+                                </li>
+                            </ul>
 
-                    {/* Right Image Container */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-full max-w-md h-72 sm:h-80 rounded-2xl overflow-hidden p-2">
-                            <div className="relative w-full h-full rounded-xl overflow-hidden">
-                                <Image
-                                    src="/images/data-analytics-machine-learning/health-economics-outcome-research/Health-Economics-Outcomes-Research-HEOR-Expertise.webp"
-                                    alt="Health Economics and Outcomes Research Team Analysis"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
+                            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed pt-2">
+                                Our proven track record ensures that your research demonstrates both
+                                scientific credibility and economic value, increasing its potential
+                                for peer-reviewed journal acceptance and funding success.
+                            </p>
                         </div>
                     </div>
                 </div>

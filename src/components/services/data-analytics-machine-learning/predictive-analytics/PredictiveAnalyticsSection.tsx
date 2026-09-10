@@ -63,82 +63,16 @@ export default function PredictiveAnalyticsSection() {
             {/* MAIN OVERVIEW & KEY APPLICATIONS                          */}
             {/* ========================================================= */}
             <section className="py-7 px-4 max-w-6xl mx-auto">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#1a3832] mb-2 leading-tight">
-                    Expert Predictive Analytics Services for Research, Clinical, and Business Insights
-                </h2>
+                <div className="space-y-6">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#1a3832] leading-tight">
+                        Expert Predictive Analytics Services for Research, Clinical, and
+                        Business Insights
+                    </h2>
 
-                <p className="text-sm md:text-base font-medium text-emerald-800 mb-6">
-                    Determining future performance based on current and historical data
-                </p>
-
-                <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-8 max-w-5xl">
-                    <Link
-                        href="/academy/predictive-analysis/predictive-analysis-in-research/"
-                        className="!text-blue-600 no-underline"
-                    >
-                        Predictive analytics
-                    </Link>{' '}
-                    uses statistical modeling, machine learning, and advanced data science techniques to predict future outcomes, trends, and facilitate evidence-based decision-making. At Pubrica, we combine domain expertise with cutting-edge analytical tools to help researchers, clinicians, and businesses uncover patterns in data and forecast future possibilities with precision.
-                </p>
-
-                {/* Content & Image Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-                    {/* Left Text Content */}
-                    <div className="lg:col-span-7 space-y-4">
-                        <h3 className="text-lg font-bold text-slate-800">
-                            Scientific Predictive Analytics
-                        </h3>
-
-                        <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                            Our scientific predictive analytics solutions support healthcare providers, payers, and researchers by offering actionable insights for improved operations, diagnostics, and treatment. We specialize in healthcare predictive analytics, medical predictive analytics, pharmaceutical predictive analytics, and epidemiology predictive analytics, providing a full spectrum of predictive modeling for research, clinical, and business applications.
-                        </p>
-
-                        <div className="pt-2">
-                            <p className="text-xs md:text-sm font-bold text-slate-800 mb-3">
-                                Key applications include:
-                            </p>
-
-                            <ul className="space-y-2.5 text-xs md:text-sm text-gray-700">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-500 font-bold text-base leading-none">•</span>
-                                    <span>Aiding diagnosis through predictive modeling</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-500 font-bold text-base leading-none">•</span>
-                                    <span>Personalized medicine predictive analytics for individualized treatment plans</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-500 font-bold text-base leading-none">•</span>
-                                    <span>Advising on surgical risk based on patient-specific predictive models</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-500 font-bold text-base leading-none">•</span>
-                                    <span>Optimizing elective healthcare processes using advanced analytics</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-500 font-bold text-base leading-none">•</span>
-                                    <span>Epidemiology predictive analytics to assess and mitigate population-level health risks</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-500 font-bold text-base leading-none">•</span>
-                                    <span>Pharmaceutical predictive analytics for drug development, trial outcomes, and market insights</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        {/* CTA Button */}
-                        <div className="pt-4">
-                            <GetFreeQuoteButton />
-                        </div>
-                    </div>
-
-                    {/* Right Offset Image Frame */}
-                    <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
-                        <div className="relative w-full max-w-md h-[280px] md:h-[320px]">
-                            {/* Background dark frame container offset */}
-                            <div className="absolute top-4 left-4 w-full h-full rounded-2xl" />
-                            {/* Image Container */}
-                            <div className="relative w-full h-full rounded-2xl overflow-hidden z-10">
+                    <div className="flow-root">
+                        {/* Right Image */}
+                        <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                            <div className="relative w-full max-w-md h-[280px] md:h-[320px]">
                                 <Image
                                     src="/images/data-analytics-machine-learning/predictive-analytics/poster-presentation-1-1.webp"
                                     alt="Predictive analytics laptop dashboard displaying charts"
@@ -146,6 +80,76 @@ export default function PredictiveAnalyticsSection() {
                                     className="object-cover"
                                     sizes="(max-width: 1024px) 100vw, 40vw"
                                 />
+                            </div>
+                        </div>
+
+                        {/* Text Content */}
+                        <div className="space-y-5">
+                            <p className="text-sm md:text-base font-medium text-emerald-800">
+                                Determining future performance based on current and historical data
+                            </p>
+
+                            <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                                <Link
+                                    href="/academy/predictive-analysis/predictive-analysis-in-research/"
+                                    className="!text-blue-600 no-underline"
+                                >
+                                    Predictive analytics
+                                </Link>{" "}
+                                uses statistical modeling, machine learning, and advanced data science
+                                techniques to predict future outcomes, trends, and facilitate
+                                evidence-based decision-making. At Pubrica, we combine domain expertise
+                                with cutting-edge analytical tools to help researchers, clinicians, and
+                                businesses uncover patterns in data and forecast future possibilities
+                                with precision.
+                            </p>
+
+                            <h3 className="text-lg font-bold text-slate-800">
+                                Scientific Predictive Analytics
+                            </h3>
+
+                            <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                                Our scientific predictive analytics solutions support healthcare
+                                providers, payers, and researchers by offering actionable insights for
+                                improved operations, diagnostics, and treatment. We specialize in
+                                healthcare predictive analytics, medical predictive analytics,
+                                pharmaceutical predictive analytics, and epidemiology predictive
+                                analytics, providing a full spectrum of predictive modeling for
+                                research, clinical, and business applications.
+                            </p>
+
+                            <div className="pt-2">
+                                <p className="text-xs md:text-sm font-bold text-slate-800 mb-3">
+                                    Key applications include:
+                                </p>
+
+                                <ul className="space-y-2.5 pl-4 list-disc marker:text-red-600 text-xs md:text-sm text-gray-700">
+                                    <li>Aiding diagnosis through predictive modeling</li>
+                                    <li>
+                                        Personalized medicine predictive analytics for individualized
+                                        treatment plans
+                                    </li>
+                                    <li>
+                                        Advising on surgical risk based on patient-specific predictive
+                                        models
+                                    </li>
+                                    <li>
+                                        Optimizing elective healthcare processes using advanced analytics
+                                    </li>
+                                    <li>
+                                        Epidemiology predictive analytics to assess and mitigate
+                                        population-level health risks
+                                    </li>
+                                    <li>
+                                        Pharmaceutical predictive analytics for drug development, trial
+                                        outcomes, and market insights
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* CTA Button */}
+                            <div className="pt-4">
+                                <GetFreeQuoteButton />
                             </div>
                         </div>
                     </div>

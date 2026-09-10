@@ -19,57 +19,65 @@ export const MedicalDataCollection: React.FC = () => {
       {/* ==========================================================
           MAIN INTRODUCTION & IMAGE LAYOUT
           ========================================================== */}
-      <section className="pt-7 pb-6 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left Narrative Content Block */}
-          <div className="lg:col-span-7 space-y-4">
-            <h2 className="text-[#082a32] text-xl md:text-2xl font-black tracking-tight leading-tight">
-              Medical Data Collection: Integrating Clinical Insight and Research
-              Precision for Reliable Evidence
-            </h2>
-            <p className="text-gray-700 text-xs sm:text-sm md:text-[14px] leading-relaxed text-justify font-normal">
-              Accurate medical{" "}
-              <Link href="/academy/data-collection/planning-data-collection-methods-research/" className="text-blue-600">
-                data collection
-              </Link>{" "}
-              is essential for credible research and clinical decision-making.
-              At Pubrica, we know that reliable research in healthcare and life
-              sciences starts with ethically collected and accurate data. Our
-              bespoke medical{" "}
-              <Link href="/academy/data-collection/importance-of-data-collection-in-healthcare/" className="text-blue-600">
-                data collection services
-              </Link>{" "}
-              are designed for clinicians, researchers, CROs, and academic
-              institutions, ensuring the delivery of high-quality,
-              research-grade datasets that support evidence-based findings.
-            </p>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-7 pb-6">
+        <div className="space-y-6">
+          <h2 className="text-xl md:text-2xl font-bold text-[#082a32] leading-tight">
+            Medical Data Collection: Integrating Clinical Insight and Research
+            Precision for Reliable Evidence
+          </h2>
 
-            {/* CTA Option Buttons (Row 1) */}
-            <div className="flex flex-row items-center gap-8 sm:gap-6 pt-2">
-              <GetFreeQuoteButton />
-              <Link
-                href="/uploads/medical-data-collection/Data-Analytics-Machine-Learning-service.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-red-600 text-white text-xs sm:text-sm font-bold px-4 sm:px-6 py-3 rounded hover:bg-white hover:text-black transition-colors whitespace-nowrap"
-              >
-                View Brochure
-              </Link>
-            </div>
-          </div>
-
-          {/* Right Visual Frame Placeholder */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="w-full max-w-[420px] aspect-[4/3] rounded-xl relative p-2.5">
-              <div className="w-full h-full rounded-lg overflow-hidden relative">
+          <div className="flow-root">
+            {/* Right Image */}
+            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+              <div className="relative w-full max-w-md aspect-[4/3]">
                 <Image
                   src="/images/medical-writing/Medical-Data-Collection.webp"
                   alt="Medical / Clinical Research Visual Asset - Medical Data Collection"
                   fill
-                  priority // Consider priority if this is in the initial viewport
+                  priority
                   className="object-cover object-center"
                   sizes="(max-width: 420px) 100vw, 420px"
                 />
+              </div>
+            </div>
+
+            {/* Text Content */}
+            <div className="space-y-5 text-xs sm:text-sm md:text-[14px] text-gray-700 leading-relaxed">
+              <p className="text-justify">
+                Accurate medical{" "}
+                <Link
+                  href="/academy/data-collection/planning-data-collection-methods-research/"
+                  className="text-blue-600"
+                >
+                  data collection
+                </Link>{" "}
+                is essential for credible research and clinical decision-making.
+                At Pubrica, we know that reliable research in healthcare and life
+                sciences starts with ethically collected and accurate data. Our
+                bespoke medical{" "}
+                <Link
+                  href="/academy/data-collection/importance-of-data-collection-in-healthcare/"
+                  className="text-blue-600"
+                >
+                  data collection services
+                </Link>{" "}
+                are designed for clinicians, researchers, CROs, and academic
+                institutions, ensuring the delivery of high-quality,
+                research-grade datasets that support evidence-based findings.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-row items-center gap-8 sm:gap-6 pt-2">
+                <GetFreeQuoteButton />
+
+                <Link
+                  href="/uploads/medical-data-collection/Data-Analytics-Machine-Learning-service.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-red-600 text-white text-xs sm:text-sm font-bold px-4 sm:px-6 py-3 rounded hover:bg-white hover:text-black transition-colors whitespace-nowrap"
+                >
+                  View Brochure
+                </Link>
               </div>
             </div>
           </div>

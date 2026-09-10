@@ -69,38 +69,16 @@ export default function SimplifiedAbstractServices() {
 
             {/* 2. Intro Section */}
             <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div className="space-y-6">
+                    <h2 className="text-xl sm:text-2xl font-bold text-[#033c2a] leading-tight">
+                        Make Your Research Stand Out: Start with a Clear, Concise, and Simplified
+                        Abstract
+                    </h2>
 
-                    <div className="lg:col-span-7 space-y-4">
-                        <h2 className="text-xl sm:text-2xl font-bold text-[#033c2a] leading-snug">
-                            Make Your Research Stand Out: Start with a Clear, Concise, and Simplified Abstract
-                        </h2>
-
-                        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                            Researchers spend countless hours on complex studies, ensuring rigorous methodology and valuable outcomes. But transforming that into a submission-ready abstract for academic journals can be difficult, especially when clarity, word limits, and formatting guidelines matter.
-                        </p>
-
-                        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                            That's where Pubrica's{' '}
-                            <Link href="/insights/sample-work/clonal-dynamics-native-haematopoiesis/" className="text-blue-600 font-medium no-underline hover:no-underline">
-                                Simplified Abstract
-                            </Link>{' '}
-                            Writing Service comes in. Our team of domain experts provides custom abstract writing and scientific summary services designed specifically for academic publishing. We convert your full manuscript into a structured, publication-ready abstract that meets{' '}
-                            <Link href="/services/publication-support/journal-submission/" className="text-blue-600 font-medium no-underline hover:no-underline">
-                                journal submission
-                            </Link>{' '}
-                            standards, without compromising on scientific accuracy or depth.
-                        </p>
-
-                        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                            Whether you're submitting to a peer-reviewed journal, applying for funding, or preparing a research abstract for a repository, our professional abstract writers ensure your work is concise, compelling, and discoverable.
-                        </p>
-                    </div>
-
-                    {/* Intro Hero Image Box */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-full max-w-md h-64 sm:h-72 rounded-2xl p-2">
-                            <div className="relative w-full h-full rounded-xl overflow-hidden">
+                    <div className="flow-root">
+                        {/* Right-floated Image */}
+                        <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                            <div className="relative w-full max-w-md h-64 sm:h-72 overflow-hidden">
                                 <Image
                                     src="/images/research-impact/simplified-abstract-services/Make-Your-Research-Stand-Out-Start-with-a-Clear-Concise-and-Simplified-Abstract.webp"
                                     alt="Team reviewing simplified research abstracts"
@@ -110,8 +88,46 @@ export default function SimplifiedAbstractServices() {
                                 />
                             </div>
                         </div>
-                    </div>
 
+                        {/* Text Content */}
+                        <div className="space-y-5">
+                            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Researchers spend countless hours on complex studies, ensuring
+                                rigorous methodology and valuable outcomes. But transforming that
+                                into a submission-ready abstract for academic journals can be
+                                difficult, especially when clarity, word limits, and formatting
+                                guidelines matter.
+                            </p>
+
+                            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                That's where Pubrica's{" "}
+                                <Link
+                                    href="/insights/sample-work/clonal-dynamics-native-haematopoiesis/"
+                                    className="text-blue-600 font-medium no-underline hover:no-underline"
+                                >
+                                    Simplified Abstract
+                                </Link>{" "}
+                                Writing Service comes in. Our team of domain experts provides custom
+                                abstract writing and scientific summary services designed specifically
+                                for academic publishing. We convert your full manuscript into a
+                                structured, publication-ready abstract that meets{" "}
+                                <Link
+                                    href="/services/publication-support/journal-submission/"
+                                    className="text-blue-600 font-medium no-underline hover:no-underline"
+                                >
+                                    journal submission
+                                </Link>{" "}
+                                standards, without compromising on scientific accuracy or depth.
+                            </p>
+
+                            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Whether you're submitting to a peer-reviewed journal, applying for
+                                funding, or preparing a research abstract for a repository, our
+                                professional abstract writers ensure your work is concise, compelling,
+                                and discoverable.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 

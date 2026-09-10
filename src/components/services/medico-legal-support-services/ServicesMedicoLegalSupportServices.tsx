@@ -75,42 +75,57 @@ export default function ServicesMedicoLegalSupportServices() {
 
       {/* Intro Section */}
       <section className="max-w-6xl mx-auto px-4 sm:px-8 py-6 md:py-7">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1b2b28] mb-4">
-              Medico-Legal Services: Bridging Medicine and Law with Expertise and Precision
-            </h2>
-            <p className="text-sm sm:text-base text-gray-700 mb-6">
-              Provide expert, evidence-based{" "}
-              <Link href="/academy/medico-legal/medico-legal-services-in-ensuring-justice/" className="text-blue-600">
-                medico legal support services
-              </Link>{" "}
-              to establish the precise, credible, and legal aspects of medical negligence cases. Our team of medical and legal experts offers reliable assistance with complex medical malpractice, personal injury claims, and insurance disputes. Through professional medico legal consulting services, we assist legal professionals, insurers, and healthcare professionals in understanding the intersection of medicine and law in a clear, professional, and precise manner.
-            </p>
+        <div className="space-y-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1b2b28] leading-tight">
+            Medico-Legal Services: Bridging Medicine and Law with Expertise and
+            Precision
+          </h2>
 
-            <div className="flex flex-wrap items-center gap-8">
-              <GetFreeQuoteButton />
-              <CommonUploadButton
-                href="/uploads/Medico-Legal-Support-Services_compressed.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Brochure
-              </CommonUploadButton>
+          <div className="flow-root">
+            {/* Right-floated Image */}
+            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+              <div className="relative w-full max-w-md h-64 sm:h-80 overflow-hidden">
+                <Image
+                  src="/images/medico-legal-support-services/Medico-Legal-Services-Bridging-Medicine-and-Law-with-Expertise-and-Precision.webp"
+                  alt="Medico-legal services bridging medicine and law"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 28rem"
+                  priority
+                />
+              </div>
             </div>
-          </div>
 
-          {/* Image Section Placeholder */}
-          <div className="relative flex justify-center items-center">
-            <div className="relative w-full max-w-md h-64 sm:h-80 rounded-xl overflow-hidden">
-              <Image
-                src="/images/medico-legal-support-services/Medico-Legal-Services-Bridging-Medicine-and-Law-with-Expertise-and-Precision.webp"
-                alt="Medico-legal services bridging medicine and law"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 28rem"
-                priority
-              />
+            {/* Text Content */}
+            <div className="space-y-5">
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                Provide expert, evidence-based{" "}
+                <Link
+                  href="/academy/medico-legal/medico-legal-services-in-ensuring-justice/"
+                  className="text-blue-600"
+                >
+                  medico legal support services
+                </Link>{" "}
+                to establish the precise, credible, and legal aspects of medical
+                negligence cases. Our team of medical and legal experts offers
+                reliable assistance with complex medical malpractice, personal injury
+                claims, and insurance disputes. Through professional medico legal
+                consulting services, we assist legal professionals, insurers, and
+                healthcare professionals in understanding the intersection of medicine
+                and law in a clear, professional, and precise manner.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-8 pt-2">
+                <GetFreeQuoteButton />
+                <Link
+                  href="/uploads/Medico-Legal-Support-Services_compressed.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
+                >
+                  View Brochure
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -162,7 +177,7 @@ export default function ServicesMedicoLegalSupportServices() {
                 src="/images/medico-legal-support-services/Medico-legal-consulting-services-providing-expert-medical-opinions.webp"
                 alt="Medico-legal consulting services providing expert medical opinions"
                 fill
-                className="object-cover"
+                className="object-contain scale-125"
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
             </div>

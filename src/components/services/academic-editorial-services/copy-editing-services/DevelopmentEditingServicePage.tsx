@@ -54,73 +54,22 @@ export default function DevelopmentEditingServicePage() {
       />
 
       {/* ------------------- FIRST CONTENT SECTION (Matching Reference 2) ------------------- */}
-      <section className="py-6 px-4 max-w-6xl mx-auto" aria-labelledby="main-heading">
-        <h2 id="main-heading" className="text-xl md:text-2xl font-bold text-[#0b3b2c] mb-8">
-          Refine Your Manuscripts with Professional Copy Editing Services
-        </h2>
+      <section
+        className="py-6 px-4 max-w-6xl mx-auto"
+        aria-labelledby="main-heading"
+      >
+        <div className="space-y-6">
+          <h2
+            id="main-heading"
+            className="text-2xl sm:text-3xl font-bold text-[#0b3b2c] leading-tight"
+          >
+            Refine Your Manuscripts with Professional Copy Editing Services
+          </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          {/* Left Text Content & Bullet Points */}
-          <div className="md:col-span-7 space-y-4">
-            <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-              At Pubrica, our{" "}
-              <Link href="/services/editing-and-translation/" className="text-blue-600">
-                professional copy editing services
-              </Link>{" "}
-              are designed to elevate the quality of your academic, scientific, and educational manuscripts. Whether you are preparing a research paper, thesis, dissertation, textbook, or curriculum document, our professional copy editors refine your content for language precision, logical flow, and formatting consistency. Our goal is to make your work publication-ready, comprehensible, and impactful, while preserving your unique voice and scientific integrity.
-            </p>
-
-            <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-              Copy editing is the last step in preparing a document&apos;s content. Getting help from a copy editor service will enhance your document by:
-            </p>
-
-            <ul className="space-y-2 text-xs md:text-sm text-gray-700">
-              <li className="flex items-start gap-2">
-                <span className="text-red-600 font-bold min-w-[6px]">•</span>
-                <span className="text-gray-900 font-normal">Eliminating grammatical, typographical, and consistency errors</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-red-600 font-bold min-w-[6px]">•</span>
-                <span className="text-gray-900 font-normal">Improving clarity, readability, and overall language quality</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-red-600 font-bold min-w-[6px]">•</span>
-                <span className="text-gray-900 font-normal">Using terminology appropriate for the document&apos;s subject matter</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-red-600 font-bold min-w-[6px]">•</span>
-                <span className="text-gray-900 font-normal">Ensuring that the tone and style used are appropriate for the document&apos;s purpose</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-red-600 font-bold min-w-[6px]">•</span>
-                <span className="text-gray-900 font-normal">Using suitable writing conventions</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-red-600 font-bold min-w-[6px]">•</span>
-                <span className="text-gray-900 font-normal">Following the formatting & stylistic requirements of the journal/publisher or the style manual commonly referred to in the field</span>
-              </li>
-            </ul>
-
-            <p className="text-xs md:text-sm text-gray-600 leading-relaxed pt-2">
-              With Pubrica, your work not only reads well but also meets the rigorous expectations of peer reviewers and publishers through our specialized{" "}
-              <Link href="/services/editing-and-translation/" className="text-blue-600">
-                academic copy editing services
-              </Link>{" "}
-              and{" "}
-              <Link href="/academy/editing-and-translation/importance-of-editing-proofreading-manuscript-submission/" className="text-blue-600">
-                copy editing and proofreading services
-              </Link>.
-            </p>
-
-            <div className="pt-4">
-              <GetFreeQuoteButton />
-            </div>
-          </div>
-
-          {/* Right Image Section with Dark Teal Accent Box */}
-          <div className="md:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md">
-              <div className="relative w-full h-72 md:h-80 loverflow-hidden">
+          <div className="flow-root">
+            {/* Right-Floated Image */}
+            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+              <div className="relative w-full max-w-md h-72 md:h-80 overflow-hidden">
                 <Image
                   src="/images/academic-editorial-services/copy-editing-services/Refine-Your-Manuscripts-with-Professional-Copy-Editing-Services.webp"
                   alt="Professional copy editing services"
@@ -130,8 +79,79 @@ export default function DevelopmentEditingServicePage() {
                   priority
                 />
               </div>
-              {/* Dark teal accent box under image */}
-              <div className="absolute -bottom-3 -right-3 -z-10 w-full h-full bg-[#0b3b2c] rounded-2xl"></div>
+            </div>
+
+            {/* Text Content */}
+            <div className="space-y-5">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                At Pubrica, our{" "}
+                <Link
+                  href="/services/editing-and-translation/"
+                  className="text-blue-600"
+                >
+                  professional copy editing services
+                </Link>{" "}
+                are designed to elevate the quality of your academic, scientific, and
+                educational manuscripts. Whether you are preparing a research paper,
+                thesis, dissertation, textbook, or curriculum document, our
+                professional copy editors refine your content for language precision,
+                logical flow, and formatting consistency. Our goal is to make your
+                work publication-ready, comprehensible, and impactful, while
+                preserving your unique voice and scientific integrity.
+              </p>
+
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                Copy editing is the last step in preparing a document&apos;s content.
+                Getting help from a copy editor service will enhance your document
+                by:
+              </p>
+
+              <ul className="space-y-3 text-sm sm:text-base text-gray-700 list-disc pl-4 marker:text-red-600">
+                <li>
+                  Eliminating grammatical, typographical, and consistency errors
+                </li>
+                <li>
+                  Improving clarity, readability, and overall language quality
+                </li>
+                <li>
+                  Using terminology appropriate for the document&apos;s subject
+                  matter
+                </li>
+                <li>
+                  Ensuring that the tone and style used are appropriate for the
+                  document&apos;s purpose
+                </li>
+                <li>Using suitable writing conventions</li>
+                <li>
+                  Following the formatting &amp; stylistic requirements of the
+                  journal/publisher or the style manual commonly referred to in the
+                  field
+                </li>
+              </ul>
+
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed pt-2">
+                With Pubrica, your work not only reads well but also meets the
+                rigorous expectations of peer reviewers and publishers through our
+                specialized{" "}
+                <Link
+                  href="/services/editing-and-translation/"
+                  className="text-blue-600"
+                >
+                  academic copy editing services
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="/academy/editing-and-translation/importance-of-editing-proofreading-manuscript-submission/"
+                  className="text-blue-600"
+                >
+                  copy editing and proofreading services
+                </Link>
+                .
+              </p>
+
+              <div className="pt-2">
+                <GetFreeQuoteButton />
+              </div>
             </div>
           </div>
         </div>

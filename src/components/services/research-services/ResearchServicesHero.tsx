@@ -70,73 +70,71 @@ export const ResearchServicesHero: React.FC<ResearchHeroProps> = ({
       />
 
       {/* Main Content Section */}
-      <section className="w-full bg-[#f4f9fc] py-6 px-6 md:px-12 lg:px-24 font-sans selection:bg-blue-100">
-        <div className="max-w-7xl mx-auto">
-
-          {/* Headings */}
-          <header className="mb-8">
-            <h2 className="text-[#083c4c] text-2xl md:text-3xl font-bold tracking-tight mb-4 leading-snug">
+      <section className="pt-6 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-[#083c4c] mb-5 leading-tight">
               {title}
             </h2>
-            <p className="text-[#2c5c6c] text-base md:text-lg font-medium max-w-5xl leading-relaxed">
-              {subtitle}
-            </p>
-          </header>
 
-          {/* Content Body & Image Column split */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
+            <div className="flow-root">
+              {/* Decorative Image Container (Retaining exact original design/styling) */}
+              <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                <div className="relative">
+                  {/* Dark Green Background Card Frame */}
+                  <div className="absolute inset-0 rounded-xl transform translate-x-4 translate-y-4 w-[320px] h-[220px] md:w-[380px] md:h-[260px]" />
 
-            {/* Text Paragraphs */}
-            <div className="lg:col-span-7 space-y-5 text-gray-700 text-[15px] leading-relaxed">
-              {paragraphs.map((para, index) => (
-                <p key={index}>{para}</p>
-              ))}
-            </div>
+                  {/* Actual Image foreground */}
+                  <div className="relative p-2 rounded-xl w-[320px] h-[220px] md:w-[380px] md:h-[260px] overflow-hidden">
+                    <Image
+                      src={imageUrl}
+                      alt="Scientist analyzing samples using a laboratory microscope"
+                      fill
+                      className="object-cover rounded-lg"
+                      sizes="(max-width: 768px) 320px, 380px"
+                    />
+                  </div>
+                </div>
+              </div>
 
-            {/* Decorative Image Container */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end pt-4 lg:pt-0">
-              <div className="relative">
-                {/* Dark Green Background Card Frame */}
-                <div className="absolute inset-0 rounded-xl transform translate-x-4 translate-y-4 w-[320px] h-[220px] md:w-[380px] md:h-[260px]" />
+              <div className="space-y-5 text-gray-700">
+                <p className="text-base font-medium text-[#2c5c6c] leading-relaxed">
+                  {subtitle}
+                </p>
 
-                {/* Actual Image foreground */}
-                <div className="relative p-2 rounded-xl  w-[320px] h-[220px] md:w-[380px] md:h-[260px] overflow-hidden">
-                  <Image
-                    src={imageUrl}
-                    alt="Scientist analyzing samples using a laboratory microscope"
-                    fill
-                    className="object-cover rounded-lg"
-                    sizes="(max-width: 768px) 320px, 380px"
-                  />
+                <div className="space-y-5 text-[15px] leading-relaxed">
+                  {paragraphs.map((para, index) => (
+                    <p key={index}>{para}</p>
+                  ))}
+                </div>
+
+                {/* Feature List Section */}
+                <div className="pt-2 space-y-4">
+                  <div className="space-y-4 pl-4">
+                    {features.map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2.5">
+                        <span className="text-[#b00000] font-bold shrink-0">→</span>
+                        <div className="text-[15px] leading-relaxed text-gray-700">
+                          {renderFeatureText(item)}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Action Button */}
+                <div className="pt-2">
+                  <CommonUploadButton
+                    href={brochureUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Brochure
+                  </CommonUploadButton>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Feature List Section */}
-          <div className="mt-10 mb-8 max-w-5xl">
-            <ul className="space-y-3.5">
-              {features.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-2.5">
-                  {/* Square Red Bullet Point */}
-                  <span className="inline-block w-1.5 h-1.5 bg-[#b00000] rounded-sm mt-2 flex-shrink-0" />
-                  {renderFeatureText(item)}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Action Button */}
-          <div className="mt-8">
-            <CommonUploadButton
-              href={brochureUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Brochure
-            </CommonUploadButton>
-          </div>
-
         </div>
       </section>
     </div>

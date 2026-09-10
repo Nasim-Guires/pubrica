@@ -140,22 +140,41 @@ export default function PhysicianManuscriptsPage() {
 
       {/* 2. Professional Physician Manuscript Service */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] mb-6">
+        {/* Heading Placed Above the Image and Content */}
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#1a3832] leading-tight mb-6">
           Professional Physician Manuscript Service: Your Partner in Seamless Publishing, Credibility, and Compliance
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          <div className="lg:col-span-7 space-y-4 text-gray-700 leading-relaxed text-sm sm:text-base">
+        {/* Flow Root Container for Floated Image Layout */}
+        <div className="flow-root">
+          {/* Right Floated Image Container */}
+          <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+            <div className="relative max-w-md w-full h-[320px]">
+              <Image
+                src="/images/physician-writing-services/physician-manuscript/Physician-Manuscript-Service.webp"
+                alt="Physician manuscript writing service"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 420px"
+              />
+            </div>
+          </div>
+
+          {/* Text Content Passing Around the Floated Image */}
+          <div className="space-y-5 text-gray-700 leading-relaxed text-sm sm:text-base">
             <p>
               At Pubrica, we assist physicians, surgeons, and healthcare professionals in turning clinical research, case reports, and novel surgical discoveries into a well-structured, publication-ready medical manuscript that adheres to the criteria of an appropriate peer-reviewed medical journal.
             </p>
+
             <p>
               Publishing in peer-reviewed, indexed medical journals helps clinicians gain recognition, enhance clinical credibility, contribute to evidence-based practice, and support academic and institutional career advancement. But with demanding schedules, lack of time, and limited knowledge of evolving <Link href="/services/publication-support/journal-submission/" className="text-blue-600 no-underline hover:no-underline">journal submission</Link> guidelines making it difficult for practicing doctors to manage the entire publication process effectively. Especially for specialists like surgeons, finding the time and expertise to write and edit a scientific manuscript can be a major challenge.
             </p>
+
             <p className="text-gray-900 pt-2">
               That's where Pubrica steps in as your external research assistant. Our expert-led <Link href="/services/publication-support/" className="text-blue-600 no-underline hover:no-underline">publication support</Link> is specifically designed for:
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-rose-700 ">
+
+            <ul className="list-disc pl-5 space-y-3 marker:text-red-600">
               <li>
                 <span className="text-gray-700">Physicians with limited time for <Link href="/services/research-services/scientific-writing" className="text-blue-600 no-underline hover:no-underline">scientific writing</Link></span>
               </li>
@@ -166,6 +185,7 @@ export default function PhysicianManuscriptsPage() {
                 <span className="text-gray-700">Clinicians preparing clinical trial results or retrospective analyses</span>
               </li>
             </ul>
+
             <p className="pt-2">
               We help you avoid predatory journals, limit desk rejections, and publish your research in high-impact medical journals that target a global audience of healthcare professionals. Whether you are submitting a clinical case report, <Link href="/services/physician-writing-services/original-research-article" className="text-blue-600 no-underline hover:no-underline">original research article</Link>, or review manuscript, Pubrica's team will ensure scientific accuracy, ethics compliance, and journal-ready formatting.
             </p>
@@ -174,22 +194,8 @@ export default function PhysicianManuscriptsPage() {
               <GetFreeQuoteButton />
             </div>
           </div>
-
-          {/* Image Placeholder Div */}
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="relative rounded-2xl overflow-hidden max-w-md w-full h-[320px]">
-              <Image
-                src="/images/physician-writing-services/physician-manuscript/Physician-Manuscript-Service.webp"
-                alt="Physician manuscript writing service"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 420px"
-              />
-            </div>
-          </div>
         </div>
       </section>
-
       {/* 3. What We Do */}
       <section className="bg-gray-50 py-7 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

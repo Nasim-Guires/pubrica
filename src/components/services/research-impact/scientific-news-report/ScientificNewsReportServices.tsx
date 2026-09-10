@@ -65,50 +65,17 @@ export default function ScientificNewsReportServices() {
 
             {/* 2. Intro Section */}
             <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div className="space-y-6">
+                    <h2 className="text-xl sm:text-2xl font-bold text-[#033c2a] leading-tight">
+                        A scientific news report involves the transformation of your manuscript
+                        into a media-ready news story to boost your chances of coverage and
+                        manuscript citations.
+                    </h2>
 
-                    <div className="lg:col-span-7 space-y-4">
-                        <h2 className="text-xl sm:text-2xl font-bold text-[#033c2a] leading-snug">
-                            A scientific news report involves the transformation of your manuscript into a media-ready news story to boost your chances of coverage and manuscript citations.
-                        </h2>
-
-                        <p className="text-sm sm:text-base font-medium text-emerald-900">
-                            Transform your research into engaging news that resonates with the research community.
-                        </p>
-
-                        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                            Effective media coverage can significantly enhance your research. It is one of the most effective ways to expand the reach and accrue citations.
-                        </p>
-
-                        <div className="pt-2">
-                            <h3 className="text-xs font-bold text-slate-800 uppercase tracking-wide mb-3">
-                                Key Features of the Service:
-                            </h3>
-                            <ul className="space-y-2">
-                                <li className="flex items-center gap-2 text-xs sm:text-sm text-slate-700">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500 flex-shrink-0" />
-                                    <span>Shareable abstracts</span>
-                                </li>
-                                <li className="flex items-center gap-2 text-xs sm:text-sm text-slate-700">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500 flex-shrink-0" />
-                                    <span>Highlighting unique aspects of the research</span>
-                                </li>
-                                <li className="flex items-center gap-2 text-xs sm:text-sm text-slate-700">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500 flex-shrink-0" />
-                                    <span>Review by a native English language expert</span>
-                                </li>
-                                <li className="flex items-center gap-2 text-xs sm:text-sm text-slate-700">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500 flex-shrink-0" />
-                                    <span>A media-ready press release</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* Intro Hero Image */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-full max-w-md h-64 sm:h-72 rounded-2xl overflow-hidden p-2  ">
-                            <div className="relative w-full h-full rounded-xl overflow-hidden">
+                    <div className="flow-root">
+                        {/* Right-floated Image */}
+                        <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                            <div className="relative w-full max-w-md h-64 sm:h-72 overflow-hidden">
                                 <Image
                                     src="/images/research-impact/scientific-news-report/scientific-news-report-involves-the-transformation-of-your-manuscript.webp"
                                     alt="Researcher preparing scientific news story"
@@ -118,8 +85,42 @@ export default function ScientificNewsReportServices() {
                                 />
                             </div>
                         </div>
-                    </div>
 
+                        {/* Text Content */}
+                        <div className="space-y-5">
+                            <p className="text-sm sm:text-base font-medium text-emerald-900 leading-relaxed">
+                                Transform your research into engaging news that resonates with the
+                                research community.
+                            </p>
+
+                            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Effective media coverage can significantly enhance your research. It
+                                is one of the most effective ways to expand the reach and accrue
+                                citations.
+                            </p>
+
+                            <div className="pt-2">
+                                <h3 className="text-xs font-bold text-slate-800 uppercase tracking-wide mb-3">
+                                    Key Features of the Service:
+                                </h3>
+
+                                <ul className="space-y-3 pl-4 list-disc marker:text-red-600">
+                                    <li className="text-xs sm:text-sm text-slate-700">
+                                        Shareable abstracts
+                                    </li>
+                                    <li className="text-xs sm:text-sm text-slate-700">
+                                        Highlighting unique aspects of the research
+                                    </li>
+                                    <li className="text-xs sm:text-sm text-slate-700">
+                                        Review by a native English language expert
+                                    </li>
+                                    <li className="text-xs sm:text-sm text-slate-700">
+                                        A media-ready press release
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
