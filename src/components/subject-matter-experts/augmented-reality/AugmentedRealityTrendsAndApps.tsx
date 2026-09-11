@@ -55,7 +55,7 @@ export default function AugmentedRealityTrendsAndApps() {
     },
     {
       title: "Gaming/Entertainment Companies",
-      desc: "(having a virtual experience (gaming))",
+      desc: "(having a virtual experience (gaming)",
       iconSrc:
         "/images/subject-matter-experts/augmented-reality/Gaming_Entertainment-Companies.webp",
       icon: Gamepad2,

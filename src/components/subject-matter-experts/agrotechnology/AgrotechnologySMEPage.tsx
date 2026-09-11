@@ -97,7 +97,7 @@ export default function AgrotechnologySMEPage() {
       icon: BarChart2,
       imageUrl:
         "/images/subject-matter-experts/agriculture/Biostatistical-Programming.webp",
-      href: "/services/data-analytics-machine-learning/biostatistical-programming/",
+      href: "/services/research-services/biostatistics-and-statistical-programming-services/",
     },
     {
       title: "Peer-Review",
@@ -105,7 +105,7 @@ export default function AgrotechnologySMEPage() {
       icon: CheckCircle,
       imageUrl:
         "/images/subject-matter-experts/agriculture/Peer-Review.webp",
-      href: "/services/publication-support/peer-review/",
+      href: "/services/publication-support/peer-review-pre-submission/",
     },
     {
       title: "Journal Formatting",
@@ -177,76 +177,83 @@ export default function AgrotechnologySMEPage() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2 py-2 space-y-16">
 
         {/* INTRO SECTION */}
-        <section className="max-w-7xl mx-auto px-4 py-4">
-          {/* Section heading placed entirely above the grid and image */}
-          <div className="space-y-4 mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0d3630] leading-tight max-w-4xl">
-              Agrotechnology: Advancing Modern Agriculture Through Science and Innovation
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div className="lg:col-span-7 space-y-4">
-              <div className="space-y-3 text-xs md:text-sm text-gray-600 leading-relaxed">
-                <p>
-                  Agrotechnology refers to the application of various techniques in farming to enhance the growth and harvesting of plants and animals. The process begins with the mechanical preparation of the soil to create the ideal conditions for planting, incorporating added nutrients and trace elements to promote healthy plant growth. Soil texture analysis and seedbed preparation follow to ensure optimal conditions for seed germination and growth. There are multiple farming techniques, each with specific requirements and procedures.
-                </p>
-                <p>
-                  With the global population projected to exceed 9 billion by 2050, the pressure on <Link href="/subject-matter-experts/agriculture/" className="text-blue-600">agriculture</Link> to produce more food efficiently is immense. Traditional farming methods alone are insufficient to meet these demands while preserving natural resources. Agrotechnology provides the tools and techniques necessary to increase yields, reduce resource wastage, and minimize environmental impact.
-                </p>
+        <section className="pt-6 border-t border-slate-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto">
+              {/* Section heading placed entirely above the grid and image */}
+              <div className="mb-5">
+                <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+                  Agrotechnology: Advancing Modern Agriculture Through Science and Innovation
+                </h2>
               </div>
 
-              {/* Key Farming Techniques list matched to screenshot style */}
-              <div className="pt-2 space-y-2.5 text-xs text-gray-700">
-                <h3 className="font-bold text-gray-900 text-sm mb-1">
-                  Key Farming Techniques
-                </h3>
-
-                <div className="flex items-start gap-2">
-                  <span className="text-[#b81c1c] font-bold shrink-0">→</span>
-                  <p>
-                    <strong className="text-gray-900">Tenant Farming:</strong> This agricultural system involves landowners receiving shares while management carries out the farming activities. It is often referred to as industrial farming.
-                  </p>
+              <div className="flow-root">
+                {/* Right Circular Image */}
+                <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                  <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0 mx-auto">
+                    <Image
+                      src="/images/subject-matter-experts/agrotechnology/Agrotechnology-Advancing-Modern-Agriculture-Through-Science-and-Innovation.webp"
+                      alt="Agrotechnology and Modern Farming"
+                      fill
+                      className="object-cover"
+                      priority
+                      sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 350px"
+                    />
+                  </div>
                 </div>
 
-                <div className="flex items-start gap-2">
-                  <span className="text-[#b81c1c] font-bold shrink-0">→</span>
-                  <p>
-                    <strong className="text-gray-900">Mechanized Farming:</strong> Uses large machinery for tasks like soil tillage, fertilization, planting, pest control, harvesting, irrigation, and water conservation, covering large areas efficiently and cost-effectively.
-                  </p>
+                <div className="space-y-5 text-slate-700">
+                  <div className="space-y-5 text-base leading-relaxed">
+                    <p>
+                      Agrotechnology refers to the application of various techniques in farming to enhance the growth and harvesting of plants and animals. The process begins with the mechanical preparation of the soil to create the ideal conditions for planting, incorporating added nutrients and trace elements to promote healthy plant growth. Soil texture analysis and seedbed preparation follow to ensure optimal conditions for seed germination and growth. There are multiple farming techniques, each with specific requirements and procedures.
+                    </p>
+
+                    <p>
+                      With the global population projected to exceed 9 billion by 2050, the pressure on <Link href="/subject-matter-experts/agriculture/" className="text-blue-600">agriculture</Link> to produce more food efficiently is immense. Traditional farming methods alone are insufficient to meet these demands while preserving natural resources. Agrotechnology provides the tools and techniques necessary to increase yields, reduce resource wastage, and minimize environmental impact.
+                    </p>
+                  </div>
+
+                  {/* Key Farming Techniques list matched to screenshot style */}
+                  <div className="pt-2 space-y-4">
+                    <h3 className="font-bold text-slate-900 text-base mb-2">
+                      Key Farming Techniques
+                    </h3>
+
+                    <div className="space-y-4 pl-4">
+                      <div className="flex items-start gap-2.5">
+                        <span className="text-red-600 font-bold shrink-0">→</span>
+                        <p className="text-base leading-relaxed">
+                          <strong className="text-slate-900">Tenant Farming:</strong> This agricultural system involves landowners receiving shares while management carries out the farming activities. It is often referred to as industrial farming.
+                        </p>
+                      </div>
+
+                      <div className="flex items-start gap-2.5">
+                        <span className="text-red-600 font-bold shrink-0">→</span>
+                        <p className="text-base leading-relaxed">
+                          <strong className="text-slate-900">Mechanized Farming:</strong> Uses large machinery for tasks like soil tillage, fertilization, planting, pest control, harvesting, irrigation, and water conservation, covering large areas efficiently and cost-effectively.
+                        </p>
+                      </div>
+
+                      <div className="flex items-start gap-2.5">
+                        <span className="text-red-600 font-bold shrink-0">→</span>
+                        <p className="text-base leading-relaxed">
+                          <strong className="text-slate-900">Modern Agricultural Machinery:</strong> Advanced machines perform complex operations, including precise water management, automated animal feeding, and specialized milk production processes.
+                        </p>
+                      </div>
+
+                      <div className="flex items-start gap-2.5">
+                        <span className="text-red-600 font-bold shrink-0">→</span>
+                        <p className="text-base leading-relaxed">
+                          <strong className="text-slate-900">Technological Developments in Agriculture:</strong> Innovations in agrotechnology have replaced traditional tools, enhanced efficiency, reduced manual labour, and increased overall farm productivity.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-2">
+                    <GetFreeQuoteButton />
+                  </div>
                 </div>
-
-                <div className="flex items-start gap-2">
-                  <span className="text-[#b81c1c] font-bold shrink-0">→</span>
-                  <p>
-                    <strong className="text-gray-900">Modern Agricultural Machinery:</strong> Advanced machines perform complex operations, including precise water management, automated animal feeding, and specialized milk production processes.
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-2">
-                  <span className="text-[#b81c1c] font-bold shrink-0">→</span>
-                  <p>
-                    <strong className="text-gray-900">Technological Developments in Agriculture:</strong> Innovations in agrotechnology have replaced traditional tools, enhanced efficiency, reduced manual labour, and increased overall farm productivity.
-                  </p>
-                </div>
-              </div>
-
-              <div className="pt-4">
-                <GetFreeQuoteButton />
-              </div>
-            </div>
-
-            {/* Right Circular Image */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end pt-4">
-              <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0">
-                <Image
-                  src="/images/subject-matter-experts/agrotechnology/Agrotechnology-Advancing-Modern-Agriculture-Through-Science-and-Innovation.webp"
-                  alt="Agrotechnology and Modern Farming"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
-                />
               </div>
             </div>
           </div>

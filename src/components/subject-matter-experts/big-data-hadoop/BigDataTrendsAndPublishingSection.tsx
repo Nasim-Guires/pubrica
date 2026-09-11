@@ -96,7 +96,7 @@ export default function BigDataTrendsAndPublishingSection() {
             experience: "14 years of experience",
             manuscripts: "100+ manuscripts edited",
             avatar: "/images/subject-matter-experts/big-data-hadoop/Dr.-Rajesh-Kumar-1.webp",
-            flag: "/images/country/gb.webp", // Add your flag path here
+            flag: "/images/country/gb.png", // Add your flag path here
         },
         {
             name: "Dr. Ananya Verma",

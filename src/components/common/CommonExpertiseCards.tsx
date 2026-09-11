@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { type LucideIcon } from "lucide-react";
+import { ReactNode } from "react";
 
 export type ExpertiseCardItem = {
     title: string;
@@ -13,7 +14,7 @@ export type ExpertiseCardItem = {
 
 type CommonExpertiseCardsProps = {
     title: string;
-    description: string;
+    description: ReactNode;
     cards: ExpertiseCardItem[];
 };
 

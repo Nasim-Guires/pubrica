@@ -34,7 +34,7 @@ export default function BiomonitoringPage() {
             icon: Leaf,
         },
         {
-            title: "Human Biomonitoring",
+            title: "Human Feed Biomonitoring",
             highlight: "Human",
             iconSrc: "/images/subject-matter-experts/biomonitoring/Human-Feed-Biomonitoring.webp",
             desc: "Human biomonitoring assesses chemical exposure in individuals or populations through analysis of biological matrices like blood, urine, or breast milk. It is widely used in epidemiological research, occupational safety studies, and public health surveillance to evaluate exposure to chemicals such as lead, mercury, phthalates, or bisphenol A (BPA).",
@@ -135,41 +135,46 @@ export default function BiomonitoringPage() {
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
 
                 {/* INTRO SECTION */}
-                <section className="max-w-7xl mx-auto px-4 py-4">
-                    {/* Section heading placed above everything like the reference image */}
-                    <div className="space-y-4 mb-6">
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#0d3630] leading-tight max-w-4xl">
-                            Empowering biomonitoring research and practice through expert analysis, data interpretation, and publication support
-                        </h2>
-                    </div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                        <div className="lg:col-span-7 space-y-4">
-                            <div className="space-y-3 text-xs md:text-sm text-gray-600 leading-relaxed">
-                                <p>
-                                    Biomonitoring is an advanced scientific method used to measure and evaluate the levels of chemicals, toxins, or biological agents within human tissues or biological fluids such as blood, urine, or saliva. It serves as a vital tool in understanding environmental exposure, occupational safety, and public health risks. By directly assessing the internal dose of contaminants, <Link href="/services/data-analytics-machine-learning/" className="text-blue-600">biomonitoring data analysis</Link> provides a realistic picture of how external factors affect human health over time. This technique is widely used to monitor the presence of excessive toxins and to conduct clinical trials and public health research, aiming to understand the exposure and metabolic changes of chemicals in the human body. Key applications of biomonitoring services include breath analysers, urine analysis, and lead or arsenic detection.
-                                </p>
-                                <p>
-                                    At Pubrica, we offer end-to-end research and <Link href="/services/publication-support/" className="text-blue-600">publication support</Link> in the domain of biomonitoring, helping scientists, clinicians, environmental researchers, and toxicologists produce high-quality, data-driven studies. Our team combines expertise in epidemiology, toxicology studies, analytical chemistry, and public health to support your research objectives, from study design to publication in high-impact journals.
-                                </p>
+                <section className="pt-6 border-t border-slate-100">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-6xl mx-auto">
+                            {/* Section heading placed above everything like the reference image */}
+                            <div className="mb-5">
+                                <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+                                    Empowering biomonitoring research and practice through expert analysis, data interpretation, and publication support
+                                </h2>
                             </div>
 
-                            <div className="pt-4">
-                                <GetFreeQuoteButton />
-                            </div>
-                        </div>
+                            <div className="flow-root">
+                                {/* Right Circular Image */}
+                                <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                                    <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0 mx-auto">
+                                        <Image
+                                            src="/images/subject-matter-experts/biomonitoring/Biomonitoring-480x480.webp"
+                                            alt="Biomonitoring Laboratory Microscope"
+                                            fill
+                                            className="object-cover"
+                                            priority
+                                            sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 350px"
+                                        />
+                                    </div>
+                                </div>
 
-                        {/* Right Circular Image */}
-                        <div className="lg:col-span-5 flex justify-center lg:justify-end pt-4">
-                            <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0">
-                                <Image
-                                    src="/images/subject-matter-experts/biomonitoring/Biomonitoring-480x480.webp"
-                                    alt="Biomonitoring Laboratory Microscope"
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                    sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
-                                />
+                                <div className="space-y-5 text-slate-700">
+                                    <div className="space-y-5 text-base leading-relaxed">
+                                        <p>
+                                            Biomonitoring is an advanced scientific method used to measure and evaluate the levels of chemicals, toxins, or biological agents within human tissues or biological fluids such as blood, urine, or saliva. It serves as a vital tool in understanding environmental exposure, occupational safety, and public health risks. By directly assessing the internal dose of contaminants, <Link href="/services/data-analytics-machine-learning/" className="text-blue-600">biomonitoring data analysis</Link> provides a realistic picture of how external factors affect human health over time. This technique is widely used to monitor the presence of excessive toxins and to conduct clinical trials and public health research, aiming to understand the exposure and metabolic changes of chemicals in the human body. Key applications of biomonitoring services include breath analysers, urine analysis, and lead or arsenic detection.
+                                        </p>
+
+                                        <p>
+                                            At Pubrica, we offer end-to-end research and <Link href="/services/publication-support/" className="text-blue-600">publication support</Link> in the domain of biomonitoring, helping scientists, clinicians, environmental researchers, and toxicologists produce high-quality, data-driven studies. Our team combines expertise in epidemiology, toxicology studies, analytical chemistry, and public health to support your research objectives, from study design to publication in high-impact journals.
+                                        </p>
+                                    </div>
+
+                                    <div className="pt-2">
+                                        <GetFreeQuoteButton />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -185,7 +190,7 @@ export default function BiomonitoringPage() {
                 {/* EXPERTISE IN BIOMONITORING RESEARCH AND PUBLICATION */}
                 <div className="container mx-auto px-4 py-12 space-y-12">
                     {/* Optional Header Section matching your snippet */}
-                   
+
 
                     {/* Common Expertise Cards Component */}
                     <CommonExpertiseCards

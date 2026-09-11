@@ -261,7 +261,7 @@ export default function AugmentedRealitySMEPage() {
                 {/* SECTION 3: OUR EXPERTISE IN AR RESEARCH AND PUBLICATION */}
                 <CommonExpertiseCards
                     title="Our Expertise in Augmented Reality Research and Publication"
-                    description="At Pubrica, we offer specialized expertise in Augmented Reality research and publication, supporting scientists, researchers, and industry professionals in advancing their work. Our services include:"
+                    description="At Pubrica, we offer specialized expertise in Molecular Engineering research and publication, supporting scientists, researchers, and industry professionals in advancing their work. Our services include:"
                     cards={expertiseCards}
                 />
 

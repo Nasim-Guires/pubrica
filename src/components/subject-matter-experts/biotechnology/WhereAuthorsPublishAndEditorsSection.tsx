@@ -50,21 +50,21 @@ export default function WhereAuthorsPublishAndEditorsSection() {
 
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-6 bg-white font-sans text-gray-800 space-y-16">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-gray-50/50 font-sans text-gray-800 space-y-12">
 
       {/* SECTION 1: WHERE OUR AUTHORS PUBLISH */}
-      <WhereAuthorsPublish
-        title="Where Our Authors Publish"
-        description="Our authors share Pubrica's expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
-        publication={publication}
-      />
+        <WhereAuthorsPublish
+          title="Where Our Authors Publish"
+          description="Our authors share Pubrica's expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+          publication={publication}
+        />
 
       {/* SECTION 2: OUR EXPERT BIOTECHNOLOGY EDITORS */}
-      <ExpertEditorsSection
-        title="Our Expert Biotechnology Editors"
-        description="Pubrica's team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake."
-        editors={editors}
-      />
+        <ExpertEditorsSection
+          title="Our Expert Biotechnology Editors"
+          description="Pubrica's team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake."
+          editors={editors}
+        />
 
     </div>
   );

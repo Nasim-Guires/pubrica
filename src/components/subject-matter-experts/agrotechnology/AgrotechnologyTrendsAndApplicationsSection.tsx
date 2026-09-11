@@ -136,38 +136,39 @@ export default function AgrotechnologyCompleteSection() {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-6 bg-white font-sans text-gray-800 space-y-16">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-gray-50/50 font-sans text-gray-800 space-y-12">
 
       {/* SECTION 1: EMERGING TRENDS IN AGROTECHNOLOGY */}
-      <EmergingTrendsSection
-        title="Emerging Trends in Agrotechnology"
-        description="The agricultural sector is witnessing rapid technological evolution. Some emerging trends include:"
-        trends={emergingTrends}
-        footerText=""
-      />
+        <EmergingTrendsSection
+          title="Emerging Trends in Agrotechnology"
+          description="The agricultural sector is witnessing rapid technological evolution. Some emerging trends include:"
+          trends={emergingTrends}
+          footerText=""
+        />
 
       {/* SECTION 2: APPLICATIONS OF AGROTECHNOLOGY */}
-      <ApplicationsSection
-        title="Applications of Agrotechnology"
-        description="Agrotechnology has a wide range of practical applications across crop cultivation, livestock management, and post-harvest processes:"
-        applications={applications}
-        imageSrc="/images/subject-matter-experts/agrotechnology/Applications-of-Agrotechnology.webp"
-        imageAlt="Applications of Agrotechnology"
-      />
+        <ApplicationsSection
+          title="Applications of Agrotechnology"
+          description="Agrotechnology has a wide range of practical applications across crop cultivation, livestock management, and post-harvest processes:"
+          applications={applications}
+          imageSrc="/images/subject-matter-experts/agrotechnology/Applications-of-Agrotechnology.webp"
+          imageAlt="Applications of Agrotechnology"
+        />
 
       {/* SECTION 3: WHERE OUR AUTHORS PUBLISH */}
-      <WhereAuthorsPublish
-        title="Where Our Authors Publish"
-        description="Our authors share Pubrica's expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
-        publication={publication}
-      />
+    
+        <WhereAuthorsPublish
+          title="Where Our Authors Publish"
+          description="Our authors share Pubrica's expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+          publication={publication}
+        />
 
       {/* SECTION 4: OUR EXPERT AGROTECHNOLOGY EDITORS */}
-      <ExpertEditorsSection
-        title="Our Expert Agrotechnology Editors"
-        description="Pubrica's team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake."
-        editors={editors}
-      />
+        <ExpertEditorsSection
+          title="Our Expert Agrotechnology Editors"
+          description="Pubrica's team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake."
+          editors={editors}
+        />
 
     </div>
   );

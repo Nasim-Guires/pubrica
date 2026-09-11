@@ -136,40 +136,45 @@ export default function BiomonitoringPage() {
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
 
                 {/* INTRO SECTION */}
-                <section className="max-w-7xl mx-auto px-4 py-4">
-                    <div className="space-y-4 mb-6">
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#0d3630] leading-tight max-w-4xl">
-                            Empowering Big Data &amp; Hadoop research and practice through expert analysis, data interpretation, and publication support
-                        </h2>
-                    </div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                        <div className="lg:col-span-7 space-y-4">
-                            <div className="space-y-3 text-xs md:text-sm text-gray-600 leading-relaxed">
-                                <p>
-                                    Hadoop and Big Data technologies will continue to represent the future of the computing industry. Both technologies are required to convert data sets that are too large and complex into actionable information that can drive innovation within industries. In fact, using the power of distributed computing frameworks, advanced analytics, and scalable storage architectures, organizations can efficiently manage and analyse huge amounts of structured and unstructured data using Big Data technologies. The Hadoop Ecosystem allows organizations to implement high-performance data processing, real-time analytics, and data-driven decision-making across all sectors including Healthcare, Finance, Retail, and <Link href="/services/research-services/literature-review-and-gap/" className="text-blue-600">Scientific Research.</Link>
-                                </p>
-                                <p>
-                                    At Pubrica, we provide complete <Link href="/services/publication-support/peer-review-pre-submission/" className="text-blue-600">publication support services</Link> to assist with Big Data and Hadoop research projects. Our experienced team of writers will work closely with researchers and industry professionals to ensure they can efficiently analyse the data and draw conclusions that can be published with academic integrity (i.e. technical clarity) and meet the laws and regulations governing the publishing industry (i.e. International Standards for Research and Publishing).
-                                </p>
+                <section className="pt-6 border-t border-slate-100">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-6xl mx-auto">
+                            <div className="mb-5">
+                                <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+                                    Empowering Big Data &amp; Hadoop research and practice through expert analysis, data interpretation, and publication support
+                                </h2>
                             </div>
 
-                            <div className="pt-4">
-                                <GetFreeQuoteButton />
-                            </div>
-                        </div>
+                            <div className="flow-root">
+                                {/* Right Circular Image */}
+                                <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                                    <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0 mx-auto">
+                                        <Image
+                                            src="/images/subject-matter-experts/big-data-hadoop/Big-Data-Hadoop--480x480.webp"
+                                            alt="Big Data and Hadoop Technology Circuit"
+                                            fill
+                                            className="object-cover"
+                                            priority
+                                            sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 350px"
+                                        />
+                                    </div>
+                                </div>
 
-                        {/* Right Circular Image */}
-                        <div className="lg:col-span-5 flex justify-center lg:justify-end pt-4">
-                            <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0">
-                                <Image
-                                    src="/images/subject-matter-experts/big-data-hadoop/Big-Data-Hadoop--480x480.webp"
-                                    alt="Big Data and Hadoop Technology Circuit"
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                    sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
-                                />
+                                <div className="space-y-5 text-slate-700">
+                                    <div className="space-y-5 text-base leading-relaxed">
+                                        <p>
+                                            Hadoop and Big Data technologies will continue to represent the future of the computing industry. Both technologies are required to convert data sets that are too large and complex into actionable information that can drive innovation within industries. In fact, using the power of distributed computing frameworks, advanced analytics, and scalable storage architectures, organizations can efficiently manage and analyse huge amounts of structured and unstructured data using Big Data technologies. The Hadoop Ecosystem allows organizations to implement high-performance data processing, real-time analytics, and data-driven decision-making across all sectors including Healthcare, Finance, Retail, and <Link href="/services/research-services/literature-review-and-gap/" className="text-blue-600">Scientific Research.</Link>
+                                        </p>
+
+                                        <p>
+                                            At Pubrica, we provide complete <Link href="/services/publication-support/peer-review-pre-submission/" className="text-blue-600">publication support services</Link> to assist with Big Data and Hadoop research projects. Our experienced team of writers will work closely with researchers and industry professionals to ensure they can efficiently analyse the data and draw conclusions that can be published with academic integrity (i.e. technical clarity) and meet the laws and regulations governing the publishing industry (i.e. International Standards for Research and Publishing).
+                                        </p>
+                                    </div>
+
+                                    <div className="pt-2">
+                                        <GetFreeQuoteButton />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

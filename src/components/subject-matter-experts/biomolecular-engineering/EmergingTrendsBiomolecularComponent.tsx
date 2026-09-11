@@ -129,7 +129,9 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
           title="Emerging Trends in Biomolecular Engineering"
           description="The field is rapidly evolving, driven by breakthroughs in technology and multidisciplinary research. Major emerging trends include:"
           trends={biomolecularTrends}
-          footerText="These continuous breakthroughs bridge the gap between computational biology and advanced synthetic applications."
+          footerText="These trends highlight the tremendous potential of biomolecular engineering in shaping the future of science and technology.
+
+"
         />
         {/* SECTION 2: Applications of Biomolecular Engineering */}
         <ApplicationsSection
@@ -139,6 +141,7 @@ export default function BiomolecularTrendsAndApplicationsComponent() {
           imageSrc="/images/subject-matter-experts/biomolecular-engineering/Applications-of-Biomolecular-Engineering.webp" // Update with your actual workspace image path
           imageAlt="Biomolecular Engineering workspace illustration"
         />
+        <p>These applications reflect the multidisciplinary potential of biomolecular engineering in shaping the future of science and technology.</p>
         {/* SECTION 3: Where Our Authors Publish */}
         <WhereAuthorsPublish
           title="Where Our Authors Publish"

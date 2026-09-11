@@ -118,7 +118,7 @@ export default function BiotechnologyPage() {
             icon: Database,
             imageUrl:
                 "/images/subject-matter-experts/biotechnology/Data-Collection-for-AI-ML.webp",
-            href: "/services/data-analytics-machine-learning/data-collection/",
+            href: "/services/medical-data-collection/",
         },
         {
             title: "Journal Selection",
@@ -188,44 +188,50 @@ export default function BiotechnologyPage() {
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
 
                 {/* INTRO SECTION */}
-                <section className="max-w-7xl mx-auto px-4 py-4">
-                    {/* Section heading placed above everything like the reference image */}
-                    <div className="space-y-4 mb-6">
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#0d3630] leading-tight max-w-4xl">
-                            Empowering Research Excellence in Biotechnology through Expert Guidance and Support
-                        </h2>
-                    </div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                        <div className="lg:col-span-7 space-y-4">
-                            <div className="space-y-3 text-xs md:text-sm text-gray-600 leading-relaxed">
-                                <p>
-                                    Biotechnology, a multidisciplinary field at the intersection of biology, chemistry, and engineering, has revolutionized the way we approach healthcare, <Link href="/subject-matter-experts/agriculture/" className="text-blue-600">agriculture</Link>, environmental sustainability, and industrial processes. From developing sustainable agricultural practices to advancing medical treatments, biotechnology has become pivotal in modern science. It encompasses a broad spectrum of applications, including genetic engineering, molecular biology, <Link href="/services/bioinformatics/" className="text-blue-600">bioinformatics</Link>, and regenerative medicine, making it an interdisciplinary field that transforms scientific knowledge into practical solutions.
-                                </p>
-                                <p>
-                                    Currently, there are more than 250 biotechnology healthcare products and vaccines available to patients, many of which treat previously untreatable diseases. More than 13.3 million farmers around the world use agricultural biotechnology to increase yields, prevent damage from insects and pests, and reduce farming&apos;s impact on the environment.
-                                </p>
-                                <p>
-                                    At Pubrica, we empower researchers, scholars, and industry professionals in biotechnology to excel in their work through expert guidance, <Link href="/services/publication-support/" className="text-blue-600">publication support</Link>, and comprehensive research assistance.
-                                </p>
+                <section className="pt-6 border-t border-slate-100">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-6xl mx-auto">
+                            {/* Section heading placed above everything like the reference image */}
+                            <div className="mb-5">
+                                <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+                                    Empowering Research Excellence in Biotechnology through Expert Guidance and Support
+                                </h2>
                             </div>
 
-                            <div className="pt-4">
-                                <GetFreeQuoteButton />
-                            </div>
-                        </div>
+                            <div className="flow-root">
+                                {/* Right Circular Image */}
+                                <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                                    <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0 mx-auto">
+                                        <Image
+                                            src="/images/subject-matter-experts/biotechnology/Biotechnology.webp"
+                                            alt="Biotechnology Laboratory Research"
+                                            fill
+                                            className="object-cover"
+                                            priority
+                                            sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 350px"
+                                        />
+                                    </div>
+                                </div>
 
-                        {/* Right Circular Image */}
-                        <div className="lg:col-span-5 flex justify-center lg:justify-end pt-4">
-                            <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0">
-                                <Image
-                                    src="/images/subject-matter-experts/biotechnology/Biotechnology.webp"
-                                    alt="Biotechnology Laboratory Research"
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                    sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
-                                />
+                                <div className="space-y-5 text-slate-700">
+                                    <div className="space-y-5 text-base leading-relaxed">
+                                        <p>
+                                            Biotechnology, a multidisciplinary field at the intersection of biology, chemistry, and engineering, has revolutionized the way we approach healthcare, <Link href="/subject-matter-experts/agriculture/" className="text-blue-600">agriculture</Link>, environmental sustainability, and industrial processes. From developing sustainable agricultural practices to advancing medical treatments, biotechnology has become pivotal in modern science. It encompasses a broad spectrum of applications, including genetic engineering, molecular biology, <Link href="/services/bioinformatics/" className="text-blue-600">bioinformatics</Link>, and regenerative medicine, making it an interdisciplinary field that transforms scientific knowledge into practical solutions.
+                                        </p>
+
+                                        <p>
+                                            Currently, there are more than 250 biotechnology healthcare products and vaccines available to patients, many of which treat previously untreatable diseases. More than 13.3 million farmers around the world use agricultural biotechnology to increase yields, prevent damage from insects and pests, and reduce farming&apos;s impact on the environment.
+                                        </p>
+
+                                        <p>
+                                            At Pubrica, we empower researchers, scholars, and industry professionals in biotechnology to excel in their work through expert guidance, <Link href="/services/publication-support/" className="text-blue-600">publication support</Link>, and comprehensive research assistance.
+                                        </p>
+                                    </div>
+
+                                    <div className="pt-2">
+                                        <GetFreeQuoteButton />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -254,7 +260,7 @@ export default function BiotechnologyPage() {
                             Pubrica stands out as a trusted partner for biotechnology research and publishing,
                             offering a comprehensive suite of services designed to support researchers at every stage of their
                             scientific journey. From manuscript preparation and editing to{' '}
-                            <Link href="services/publication-support/journal-selection/" className="text-blue-600 ">
+                            <Link href="/services/publication-support/journal-selection/" className="text-blue-600 ">
                                 journal selection
                             </Link>{' '}
                             and publication strategy, we empower scientists to communicate their innovations effectively.
@@ -275,7 +281,7 @@ export default function BiotechnologyPage() {
                     title="Emerging Trends in Biotechnology"
                     description="The biotechnology sector is witnessing rapid scientific evolution. Some emerging trends include:"
                     trends={emergingTrends}
-                    footerText="These emerging trends are driving innovation across biotechnology, healthcare, agriculture, and industrial applications."
+                    footerText=""
                 />
 
             </main>

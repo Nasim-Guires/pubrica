@@ -8,7 +8,7 @@ export type SmeCoreAreaItem = {
     highlight?: string;
     desc?: string | ReactNode;
     description?: string | ReactNode;
-    icon: LucideIcon | ReactNode;
+    icon?: LucideIcon | ReactNode;
     iconSrc?: string;
     href?: string; // Optional hyperlink for the card
 };
