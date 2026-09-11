@@ -104,7 +104,7 @@ export default function CoreDisciplinesBiomedicalEngineering() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <CoreAreasSection
                     title="Our Core Disciplines In Biomedical Engineering"
-                    description="At Pubrica, we provide comprehensive expertise in the multifaceted field of biomedical engineering, empowering researchers, clinicians, and industry professionals to translate technological innovations into impactful healthcare solutions. Our services span across key disciplines of biomedical engineering, ensuring a holistic approach to research, development, and publication support."
+                    description="Biomedical Engineering covers several specialised domains essential for modern medical innovation. Pubrica’s experts offer domain-specific guidance across all major subfields."
                     items={disciplines}
                 />
             </div>

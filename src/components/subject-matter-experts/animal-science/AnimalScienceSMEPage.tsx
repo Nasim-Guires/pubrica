@@ -263,49 +263,49 @@ export default function AnimalScienceSMEPage() {
                       <div className="flex items-start gap-2.5">
                         <span className="text-red-600 font-bold shrink-0">→</span>
                         <p className="text-base leading-relaxed">
-                          Reproductive Physiology: Advancing techniques in artificial insemination, embryo transfer, and reproductive efficiency.
+                         <strong className="text-gray-800"> Reproductive Physiology:</strong> Advancing techniques in artificial insemination, embryo transfer, and reproductive efficiency.
                         </p>
                       </div>
 
                       <div className="flex items-start gap-2.5">
                         <span className="text-red-600 font-bold shrink-0">→</span>
                         <p className="text-base leading-relaxed">
-                          Dairy, Poultry, and Livestock Management: Improving farming practices for efficiency, quality, and environmental sustainability.
+                          <strong className="text-gray-800"> Dairy, Poultry, and Livestock Management:</strong> Improving farming practices for efficiency, quality, and environmental sustainability.
                         </p>
                       </div>
 
                       <div className="flex items-start gap-2.5">
                         <span className="text-red-600 font-bold shrink-0">→</span>
                         <p className="text-base leading-relaxed">
-                          Wildlife and Aquatic Animal Science: Exploring conservation biology and sustainable management of wildlife and aquatic species.
+                         <strong className="text-gray-800"> Wildlife and Aquatic Animal Science:</strong>  Exploring conservation biology and sustainable management of wildlife and aquatic species.
                         </p>
                       </div>
 
                       <div className="flex items-start gap-2.5">
                         <span className="text-red-600 font-bold shrink-0">→</span>
                         <p className="text-base leading-relaxed">
-                          Animal Genetics and Breeding: Enhancing livestock productivity and disease resistance through advanced genetic analysis and breeding strategies.
+                         <strong className="text-gray-800">Animal Genetics and Breeding:</strong>  Enhancing livestock productivity and disease resistance through advanced genetic analysis and breeding strategies.
                         </p>
                       </div>
 
                       <div className="flex items-start gap-2.5">
                         <span className="text-red-600 font-bold shrink-0">→</span>
                         <p className="text-base leading-relaxed">
-                          Animal Nutrition and Feed Science: Research on balanced diet formulation, feed additives, and nutritional optimization for better growth and yield.
+                         <strong className="text-gray-800"> Animal Nutrition and Feed Science:</strong>  Research on balanced diet formulation, feed additives, and nutritional optimization for better growth and yield.
                         </p>
                       </div>
 
                       <div className="flex items-start gap-2.5">
                         <span className="text-red-600 font-bold shrink-0">→</span>
                         <p className="text-base leading-relaxed">
-                          Veterinary Medicine and Public Health: Supporting studies on animal diseases, zoonotic infections, vaccination, and preventive healthcare.
+                         <strong className="text-gray-800">Veterinary Medicine and Public Health:</strong>  Supporting studies on animal diseases, zoonotic infections, vaccination, and preventive healthcare.
                         </p>
                       </div>
 
                       <div className="flex items-start gap-2.5">
                         <span className="text-red-600 font-bold shrink-0">→</span>
                         <p className="text-base leading-relaxed">
-                          Animal Behavior and Welfare: Promoting ethical care and stress-free environments for animals through behavioural and welfare research.
+                        <strong className="text-gray-800">  Animal Behavior and Welfare:</strong>  Promoting ethical care and stress-free environments for animals through behavioural and welfare research.
                         </p>
                       </div>
                     </div>

@@ -5,6 +5,17 @@ import Link from 'next/link';
 import HeroBanner from "@/components/common/HeroBanner";
 import CoreAreasSection from "@/components/common/CoreAreasSection";
 import CommonExpertiseCards, { ExpertiseCardItem } from "@/components/common/CommonExpertiseCards";
+import {
+    Activity,
+    BookOpen,
+    CheckCircle2,
+    Edit3,
+    FileText,
+    Languages,
+    Search,
+    Send,
+} from "lucide-react";
+
 
 export default function MaterialSciencePage() {
     const disciplines = [
@@ -49,50 +60,66 @@ export default function MaterialSciencePage() {
         {
             title: "Peer-Reviewing Services",
             desc: "Comprehensive review to refine and validate your research pre-submission.",
-            href: "/services/peer-reviewing-services/",
+            href: "/services/publication-support/peer-review-pre-submission/",
             imageUrl: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
+            iconSrc: "",
+            icon: CheckCircle2,
         },
         {
             title: "Editing & Proofreading",
             desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            href: "/services/editing-proofreading/",
+            href: "/services/editing-and-translation/",
             imageUrl: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
+            iconSrc: "",
+            icon: Edit3,
         },
         {
             title: "Data Collection for AI & ML",
             desc: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            href: "/services/data-collection-for-ai-ml/",
+            href: "/services/medical-data-collection/",
             imageUrl: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
+            iconSrc: "",
+            icon: FileText,
         },
         {
             title: "Translation Services",
             desc: "Accurate scientific translations to broaden the reach of your research.",
-            href: "/services/translation-services/",
+            href: "/services/editing-and-translation/",
             imageUrl: "/images/subject-matter-experts/animal-science/Translation-Services.png",
+            iconSrc: "",
+            icon: Languages,
         },
         {
             title: "Systematic Reviews",
             desc: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            href: "/services/systematic-reviews/",
+            href: "/services/research-services/systematic-review/",
             imageUrl: "/images/subject-matter-experts/material-science/Systematic-Reviews.webp",
+            iconSrc: "",
+            icon: BookOpen,
         },
         {
             title: "Journal Submission",
             desc: "Helping select the right journals and manage the submission process seamlessly.",
-            href: "/services/journal-submission/",
+            href: "/services/publication-support/journal-submission/",
             imageUrl: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
+            iconSrc: "",
+            icon: Send,
         },
         {
             title: "Original Research Article",
             desc: "End-to-end writing, statistical analysis, and formatting tailored to journal-specific guidelines.",
-            href: "/services/original-research-article/",
+            href: "/services/physician-writing-services/original-research-article/",
             imageUrl: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
+            iconSrc: "",
+            icon: Activity,
         },
         {
             title: "Journal Selection",
             desc: "Strategic journal selection to maximize publication success.",
-            href: "/services/journal-selection/",
+            href: "/services/publication-support/journal-selection/",
             imageUrl: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
+            iconSrc: "",
+            icon: Search,
         },
     ];
 
@@ -176,7 +203,7 @@ export default function MaterialSciencePage() {
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 <CoreAreasSection
                     title="Our Core Disciplines In Biomonitoring"
-                    description="Biomonitoring integrates multiple scientific disciplines, drawing from biology, toxicology, environmental science, public health, and analytical chemistry. These interconnected fields ensure a comprehensive understanding of how pollutants or toxic agents influence biological systems. Our biomonitoring expertise spans the following core areas:"
+                    description="At Pubrica, we cover a comprehensive range of material science sub-disciplines, offering specialized manuscript development, study design support, technical editing, and publication services across the following domains:"
                     items={disciplines}
                 />
             </div>
