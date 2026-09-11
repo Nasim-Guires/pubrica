@@ -35,7 +35,7 @@ export default function CommonFAQ({ title, faqs }: FAQProps) {
           className="w-full flex justify-between items-center p-4 sm:p-5 bg-white hover:bg-slate-50 cursor-pointer text-left transition-colors font-poppins outline-none"
           aria-expanded={isOpen}
         >
-          <span className="text-[17px] sm:text-[18px] font-bold text-[#0b3a57] pr-4 break-words leading-snug font-poppins">
+          <span className="text-[17px] sm:text-[18px] font-bold text-[#0b2c3d] pr-4 break-words leading-snug font-poppins">
             {faq.question}
           </span>
 
@@ -47,8 +47,8 @@ export default function CommonFAQ({ title, faqs }: FAQProps) {
         {/* CSS-based smooth accordion container expanding to natural height */}
         <div
           className={`grid transition-[grid-template-rows,padding] duration-300 ease-in-out ${isOpen
-              ? "grid-rows-[1fr] px-4 pb-5 sm:px-5 sm:pb-6 opacity-100"
-              : "grid-rows-[0fr] px-4 pb-0 sm:px-5 opacity-0"
+            ? "grid-rows-[1fr] px-4 pb-5 sm:px-5 sm:pb-6 opacity-100"
+            : "grid-rows-[0fr] px-4 pb-0 sm:px-5 opacity-0"
             }`}
         >
           <div className="overflow-hidden">

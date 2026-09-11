@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // ==========================================
 // TYPES & DATA
@@ -60,6 +60,41 @@ const audiencesData: AudienceCard[] = [
 // ==========================================
 
 export default function WhoWeServeSection() {
+  const [activeId, setActiveId] = useState<string | null>(null);
+
+  // Automatically reset mobile card state when resizing up to desktop view
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setActiveId(null);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleCardClick = (id: string) => {
+    // Only toggle via click on mobile devices (screens smaller than 768px)
+    if (typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches) {
+      return;
+    }
+    setActiveId((prev) => (prev === id ? null : id));
+  };
+
+  const handleMouseEnter = (id: string) => {
+    // Only trigger hover state on desktop devices (768px and up)
+    if (typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches) {
+      setActiveId(id);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    // Only clear hover state on desktop devices
+    if (typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches) {
+      setActiveId(null);
+    }
+  };
+
   return (
     <section className="w-full bg-[#f8fafc] text-slate-800 font-sans py-6 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-8">
@@ -81,38 +116,54 @@ export default function WhoWeServeSection() {
 
         {/* Image Cards Grid with Full Black Overlay Hover Effect */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {audiencesData.map((audience) => (
-            <div
-              key={audience.id}
-              className="group relative rounded-md overflow-hidden shadow-md aspect-[16/10] bg-black cursor-pointer"
-            >
-              {/* Default Image State */}
-              <Image
-                src={audience.imageUrl}
-                alt={audience.title}
-                fill
-                className="object-cover transition-opacity duration-300 group-hover:opacity-0"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
+          {audiencesData.map((audience) => {
+            const isActive = activeId === audience.id;
 
-              {/* Default Bottom Gradient Bar (Visible when not hovered) */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 transition-opacity duration-300 group-hover:opacity-0">
-                <h3 className="text-sm sm:text-base font-bold text-white tracking-wide">
-                  {audience.title}
-                </h3>
-              </div>
+            return (
+              <div
+                key={audience.id}
+                onClick={() => handleCardClick(audience.id)}
+                onMouseEnter={() => handleMouseEnter(audience.id)}
+                onMouseLeave={handleMouseLeave}
+                className="group relative rounded-md overflow-hidden shadow-md aspect-[16/10] bg-black cursor-pointer"
+              >
+                {/* Default Image State */}
+                <Image
+                  src={audience.imageUrl}
+                  alt={audience.title}
+                  fill
+                  className={`object-cover transition-opacity duration-300 ${isActive ? "opacity-0" : "opacity-100 md:group-hover:opacity-0"
+                    }`}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
 
-              {/* Full Solid Black Content State (Revealed on Hover) */}
-              <div className="absolute inset-0 bg-black p-5 flex flex-col justify-start space-y-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
-                <h3 className="text-sm sm:text-base font-bold tracking-wide">
-                  {audience.title}
-                </h3>
-                <p className="text-xs leading-relaxed text-gray-200 font-normal">
-                  {audience.description}
-                </p>
+                {/* Default Bottom Gradient Bar (Visible when not hovered) */}
+                <div
+                  className={`absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 transition-opacity duration-300 ${isActive ? "opacity-0" : "opacity-100 md:group-hover:opacity-0"
+                    }`}
+                >
+                  <h3 className="text-sm sm:text-base font-bold text-white tracking-wide">
+                    {audience.title}
+                  </h3>
+                </div>
+
+                {/* Full Solid Black Content State (Revealed on Hover/Tap) */}
+                <div
+                  className={`absolute inset-0 bg-black p-5 flex flex-col justify-start space-y-3 transition-opacity duration-300 text-white ${isActive
+                      ? "opacity-100 pointer-events-auto"
+                      : "opacity-0 pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto"
+                    }`}
+                >
+                  <h3 className="text-sm sm:text-base font-bold tracking-wide">
+                    {audience.title}
+                  </h3>
+                  <p className="text-xs leading-relaxed text-gray-200 font-normal">
+                    {audience.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

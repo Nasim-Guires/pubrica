@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // --- Types ---
 interface ServiceCard {
@@ -32,6 +33,7 @@ interface TherapeuticArea {
   id: string;
   name: string;
   iconSrc: string;
+  href: string;
 }
 
 interface DisciplineCard {
@@ -289,11 +291,11 @@ const PACKAGES_DATA: PackageCard[] = [
 
 // 3. Therapeutic Areas
 const THERAPEUTIC_AREAS: TherapeuticArea[] = [
-  { id: 'oncology', name: 'Oncology', iconSrc: '/images/medical-writing/Oncology-.png' },
-  { id: 'cardiology', name: 'Cardiology', iconSrc: '/images/medical-writing/Cardiology.png' },
-  { id: 'neurology', name: 'Neurology', iconSrc: '/images/medical-writing/Neurology.png' },
-  { id: 'paediatrics', name: 'Paediatrics', iconSrc: '/images/medical-writing/Paediatrics.png' },
-  { id: 'immunology', name: 'Immunology', iconSrc: '/images/medical-writing/Immunology.png' },
+  { id: 'oncology', name: 'Oncology', iconSrc: '/images/medical-writing/Oncology-.png', href: '/subject-matter-experts/' },
+  { id: 'cardiology', name: 'Cardiology', iconSrc: '/images/medical-writing/Cardiology.png', href: '/subject-matter-experts/cardiology/' },
+  { id: 'neurology', name: 'Neurology', iconSrc: '/images/medical-writing/Neurology.png', href: '/subject-matter-experts/neurology/' },
+  { id: 'paediatrics', name: 'Paediatrics', iconSrc: '/images/medical-writing/Paediatrics.png', href: '/subject-matter-experts/' },
+  { id: 'immunology', name: 'Immunology', iconSrc: '/images/medical-writing/Immunology.png', href: '/subject-matter-experts/' },
 ];
 
 // 4. Disciplines Supported
@@ -354,22 +356,20 @@ export const ScientificServicesAndPackages: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setActiveTab('publication')}
-                  className={`px-6 py-2 rounded-full text-xs font-semibold transition-all duration-200 ${
-                    activeTab === 'publication'
-                      ? 'bg-[#155e54] text-white shadow-sm'
-                      : 'text-gray-300 hover:text-white'
-                  }`}
+                  className={`px-6 py-2 rounded-full text-xs font-semibold transition-all duration-200 ${activeTab === 'publication'
+                    ? 'bg-[#155e54] text-white shadow-sm'
+                    : 'text-gray-300 hover:text-white'
+                    }`}
                 >
                   Publication-Related Academic Service
                 </button>
                 <button
                   type="button"
                   onClick={() => setActiveTab('university')}
-                  className={`px-6 py-2 rounded-full text-xs font-semibold transition-all duration-200 ${
-                    activeTab === 'university'
-                      ? 'bg-[#155e54] text-white shadow-sm'
-                      : 'text-gray-300 hover:text-white'
-                  }`}
+                  className={`px-6 py-2 rounded-full text-xs font-semibold transition-all duration-200 ${activeTab === 'university'
+                    ? 'bg-[#155e54] text-white shadow-sm'
+                    : 'text-gray-300 hover:text-white'
+                    }`}
                 >
                   University Related Academic Services
                 </button>
@@ -575,15 +575,16 @@ export const ScientificServicesAndPackages: React.FC = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {THERAPEUTIC_AREAS.map((area) => {
               return (
-                <div 
-                  key={area.id} 
+                <Link
+                  key={area.id}
+                  href={area.href}
                   className="bg-white p-6 rounded-sm border border-slate-200/60 shadow-xs flex flex-col items-center justify-center space-y-3 hover:shadow-md transition-shadow"
                 >
                   <Image src={area.iconSrc} alt={area.name} width={40} height={40} className="object-contain" />
                   <span className="font-bold text-xs text-slate-800">
                     {area.name}
                   </span>
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -605,7 +606,7 @@ export const ScientificServicesAndPackages: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {DISCIPLINES.map((disc) => (
-              <div 
+              <div
                 key={disc.id}
                 className="
                   group relative bg-white p-6 rounded-sm border border-slate-200/70 shadow-sm

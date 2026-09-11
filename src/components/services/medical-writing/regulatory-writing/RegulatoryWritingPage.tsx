@@ -132,7 +132,7 @@ const RegulatoryWritingPage = () => {
                     <div className="text-center">
                         <Link
                             href="/order-now"
-                            className="inline-block bg-[#b90000] hover:bg-red-800 text-white font-medium px-8 py-3 rounded-full transition duration-300 shadow-md"
+                            className="bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
                         >
                             Request Free Consultation
                         </Link>

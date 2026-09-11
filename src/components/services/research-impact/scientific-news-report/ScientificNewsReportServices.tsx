@@ -143,8 +143,8 @@ export default function ScientificNewsReportServices() {
 
                     {/* Compound Collage Images */}
                     <div className="lg:col-span-5 relative flex justify-center py-4">
-                        <div className="relative w-full max-w-md h-96">
-                            <div className="absolute top-0 left-0 w-4/5 h-80 rounded-xl overflow-hidden shadow-md border-2 border-white z-10">
+                        <div className="relative w-full max-w-md h-96 flex justify-center items-center">
+                            <div className="relative w-4/5 h-80 rounded-xl overflow-hidden z-10">
                                 <Image
                                     src="/images/research-impact/scientific-news-report/What-We-Do.png"
                                     alt="Doctor writing report"
@@ -153,7 +153,6 @@ export default function ScientificNewsReportServices() {
                                     className="object-cover"
                                 />
                             </div>
-                            <div className="absolute bottom-0 right-0 w-3/5 h-44 rounded-xl overflow-hidden shadow-lg border-2 border-white z-20 hidden" aria-hidden="true" />
                         </div>
                     </div>
 

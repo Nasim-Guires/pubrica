@@ -164,11 +164,8 @@ export default function EducationalOfferingsAndAudience() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 {/* Left Column: Centered, Larger Visual Graphics */}
                 <div className="lg:col-span-5 relative min-h-[380px] sm:min-h-[440px] flex items-center justify-center">
-                  {/* Background circular accent */}
-                  <div className="absolute w-72 h-72 sm:w-80 sm:h-80 bg-gray-200/70 rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-0" />
-
-                  {/* Centered, Larger Top/Left Card Image */}
-                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-80 h-48 sm:h-56 rounded-2xl overflow-hidden shadow-lg border-2 border-white z-10">
+                  {/* Centered Top/Left Card Image */}
+                  <div className="relative w-72 sm:w-80 h-48 sm:h-56 rounded-2xl overflow-hidden">
                     <Image
                       src="/images/educational-content-development/What-We-Offer.webp"
                       alt="What we offer"
@@ -176,8 +173,6 @@ export default function EducationalOfferingsAndAudience() {
                       className="object-cover"
                     />
                   </div>
-
-                  <div className="absolute bottom-0 right-2 w-56 sm:w-64 h-48 sm:h-56 rounded-2xl overflow-hidden shadow-lg border-2 border-white z-20 hidden" aria-hidden="true" />
                 </div>
 
                 {/* Right Column: Narrative + Accordion List */}

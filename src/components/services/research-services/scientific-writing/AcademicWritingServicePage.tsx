@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { PubricaSampleWorkCard } from "@/components/common/PubricaSampleWorkCardProps";
+import ServiceBanner, { BannerProps } from "@/components/common/ServiceBanner";
 
 // ==========================================
 // TYPES & ACCORDION DATA
@@ -76,6 +78,17 @@ export default function ScientificWritingPage() {
                 text: item.items.join(", "),
             },
         })),
+    };
+
+    const serviceBannerData: BannerProps = {
+        imageSrc:
+            "/images/research-services/scientific-writing/Satisfaction_Guarantee.webp",
+        imageAlt: "100% Guarantee",
+        heading:
+            "Speed Up Your Journey to Scientific and Academic Writing with Pubrica",
+        description:
+            "Speed up your publication goals with experienced Medical and Scientific writing assistance from Pubrica. We provide clarity, compliance and credibility in every manuscript. We help you make the writing process easy, from journal selection to submission.",
+        showQuoteButton: false,
     };
 
     return (
@@ -176,53 +189,36 @@ export default function ScientificWritingPage() {
                 </section>
 
                 {/* SECTION 2: Sample Work & Report Banner */}
-                <section className="bg-[#f2f9f5] py-6">
-                    <div className="mx-auto max-w-6xl px-4">
-                        <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-center">
-
-                            <div className="relative h-64 w-full overflow-hidden rounded-md md:col-span-5 md:h-80">
-                                <Image
-                                    src="/images/research-services/scientific-writing/Journal-Selection-Sample-Work.webp"
-                                    alt="Scientific & Academic Writing"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-
-                            <div className="space-y-6 md:col-span-7">
-                                <div>
-                                    <h3 className="mb-3 text-xl font-bold text-[#1a3c34]">
-                                        Scientific & Academic Medical Writing Sample Work
-                                    </h3>
-                                    <Link
-                                        href="/insights/journal-submission-report-sample"
-                                        className="inline-block rounded-full bg-black px-8 py-2.5 text-xs font-medium text-white transition hover:bg-gray-800"
-                                    >
-                                        Discover More
-                                    </Link>
-                                </div>
-
-                                <div>
-                                    <h4 className="mb-2 text-base font-bold text-[#1a3c34]">
-                                        Download the full Report Now
-                                    </h4>
-                                    <p className="mb-3 text-xs leading-relaxed text-gray-600">
-                                        Explore our Scientific & Academic Medical Writing sample work aligned with your manuscript's formatting standards, ethical guidelines, and target publication timelines.
-                                    </p>
-                                    <a
-                                        href="/uploads/research-services/scientific-writing/24-03-2026-SCIENTIFIC-WRITING-THAT-DRIVES-PUBLICATION-SUCCESS.pdf"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-block rounded-full bg-black px-8 py-2.5 text-xs font-medium text-white transition hover:bg-gray-800"
-                                    >
-                                        Discover More
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
+                <PubricaSampleWorkCard
+                    bookCoverImage={{
+                        src: "/images/research-services/scientific-writing/Journal-Selection-Sample-Work.webp",
+                        alt: "Scientific & Academic Writing",
+                        width: 600,
+                        height: 450,
+                    }}
+                    sections={[
+                        {
+                            heading: "Scientific & Academic Medical Writing Sample Work",
+                            button: {
+                                label: "Discover More",
+                                url: "/insights/sample-work/journal-submission-report-sample/",
+                            },
+                        },
+                        {
+                            heading: "Download the full Report Now",
+                            descriptionSegments: [
+                                {
+                                    text: "Explore our Scientific & Academic Medical Writing sample work aligned with your manuscript's formatting standards, ethical guidelines, and target publication timelines.",
+                                },
+                            ],
+                            button: {
+                                label: "Discover More",
+                                url: "/insights/sample-work/",
+                            },
+                        },
+                    ]}
+                    footerDisclaimerSegments={[]}
+                />
 
                 {/* SECTION 3: Why Choose Features */}
                 <section className="mx-auto max-w-6xl px-4 py-7 text-center">
@@ -354,29 +350,7 @@ export default function ScientificWritingPage() {
                 </section>
 
                 {/* SECTION 5: Satisfaction Banner */}
-                <section className="bg-[#0e3b2e] py-5 text-white">
-                    <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 px-4 md:flex-row">
-
-                        <div className="relative flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-full border-4 border-emerald-400 bg-white">
-                            <Image
-                                src="/images/research-services/scientific-writing/Satisfaction_Guarantee.webp"
-                                alt="100% Guarantee"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-
-                        <div className="space-y-2 text-center md:text-left">
-                            <h2 className="text-lg font-bold sm:text-xl">
-                                Speed Up Your Journey to Scientific and Academic Writing with Pubrica
-                            </h2>
-                            <p className="text-xs leading-relaxed text-emerald-100">
-                                Speed up your publication goals with experienced Medical and Scientific writing assistance from Pubrica. We provide clarity, compliance and credibility in every manuscript. We help you make the writing process easy, from journal selection to submission.
-                            </p>
-                        </div>
-
-                    </div>
-                </section>
+                <ServiceBanner {...serviceBannerData} />
 
                 {/* SECTION 6: Guarantee & Cards Section */}
                 <section className="mx-auto max-w-6xl px-4 py-7">

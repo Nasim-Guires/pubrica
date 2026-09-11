@@ -107,7 +107,7 @@ const AIDataPreparationComprehensiveSection: NextPage = () => {
                 ))}
               </ul>
 
-              <div className="pt-4 flex justify-start">
+              <div className="pt-4 flex justify-center md:block">
                 <GetFreeQuoteButton />
               </div>
             </div>

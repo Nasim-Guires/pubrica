@@ -215,37 +215,40 @@ export default function SimplifiedAbstractPage() {
                     </p>
                 </div>
 
-                <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
-                    <table className="w-full text-left text-xs sm:text-sm border-collapse">
-                        <thead>
-                            <tr className="bg-slate-100/80 border-b border-slate-200 text-slate-900 font-bold">
-                                <th className="py-3.5 px-4 sm:px-6 w-1/4">Service Type</th>
-                                <th className="py-3.5 px-4 sm:px-6 w-1/4">Ideal For</th>
-                                <th className="py-3.5 px-4 sm:px-6 w-2/4">Features</th>
-                            </tr>
-                        </thead>
-                        <tbody className="divide-y divide-slate-200">
-                            {serviceTypesData.map((row, idx) => (
-                                <tr key={idx} className={idx % 2 === 1 ? 'bg-[#eef5f8]/60' : 'bg-white'}>
-                                    <td className="py-4 px-4 sm:px-6 font-bold text-slate-900 align-top">
-                                        {row.serviceType}
-                                    </td>
-                                    <td className="py-4 px-4 sm:px-6 text-slate-700 align-top">
-                                        {row.idealFor}
-                                    </td>
-                                    <td className="py-4 px-4 sm:px-6 text-slate-700 align-top">
-                                        <ul className="space-y-1.5 list-disc list-inside">
-                                            {row.features.map((feat, fIdx) => (
-                                                <li key={fIdx} className="leading-relaxed">
-                                                    <span className="text-slate-800">{feat}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </td>
+                {/* Scrollable Container with Fixed Height */}
+                <div className="rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+                    <div className="max-h-[380px] overflow-y-auto overflow-x-auto relative">
+                        <table className="w-full text-left text-xs sm:text-sm border-collapse">
+                            <thead className="sticky top-0 z-10 bg-slate-100 shadow-xs">
+                                <tr className="border-b border-slate-200 text-slate-900 font-bold">
+                                    <th className="py-3.5 px-4 sm:px-6 w-1/4">Service Type</th>
+                                    <th className="py-3.5 px-4 sm:px-6 w-1/4">Ideal For</th>
+                                    <th className="py-3.5 px-4 sm:px-6 w-2/4">Features</th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody className="divide-y divide-slate-200">
+                                {serviceTypesData.map((row, idx) => (
+                                    <tr key={idx} className={idx % 2 === 1 ? 'bg-[#eef5f8]/60' : 'bg-white'}>
+                                        <td className="py-4 px-4 sm:px-6 font-bold text-slate-900 align-top">
+                                            {row.serviceType}
+                                        </td>
+                                        <td className="py-4 px-4 sm:px-6 text-slate-700 align-top">
+                                            {row.idealFor}
+                                        </td>
+                                        <td className="py-4 px-4 sm:px-6 text-slate-700 align-top">
+                                            <ul className="space-y-1.5 list-disc list-inside">
+                                                {row.features.map((feat, fIdx) => (
+                                                    <li key={fIdx} className="leading-relaxed">
+                                                        <span className="text-slate-800">{feat}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </section>
 

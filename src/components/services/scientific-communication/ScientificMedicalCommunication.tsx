@@ -151,9 +151,8 @@ export default function ScientificMedicalCommunication() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Overlapping Image Container */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md h-[300px] md:h-[340px]">
-              {/* Back Card Image */}
-              <div className="absolute top-0 left-0 w-3/4 h-2/3 rounded-xl overflow-hidden shadow-md z-10 border border-gray-200">
+            <div className="relative w-full max-w-md h-[300px] md:h-[340px] flex items-center justify-center">
+              <div className="relative w-3/4 h-2/3 overflow-hidden">
                 <Image
                   src="/images/scientific-communication/Why-Scientific-Medical-Communication-Matters.webp"
                   alt="Compliance and regulation guidelines on laptop screen"
@@ -161,7 +160,6 @@ export default function ScientificMedicalCommunication() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute bottom-0 right-0 w-3/4 h-2/3 rounded-xl overflow-hidden shadow-xl z-20 border-2 border-white hidden" aria-hidden="true" />
             </div>
           </div>
 

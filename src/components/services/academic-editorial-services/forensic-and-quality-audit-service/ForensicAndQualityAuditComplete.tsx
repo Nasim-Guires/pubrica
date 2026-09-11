@@ -123,7 +123,7 @@ export default function ForensicAndQualityAuditComplete() {
                 </h2>
                 <p className="text-xs md:text-sm font-semibold text-gray-700 mb-3">Our Step-by-Step Process</p>
                 <p className="text-xs md:text-sm text-gray-600 leading-relaxed max-w-3xl mx-auto mb-10">
-                    At Pubrica, our forensic and quality audit services are designed to uncover hidden risks, ensure compliance, and enhance operational transparency. Our systematic approach combines investigative rigor with quality assurance to deliver actionable insights.
+                    At Pubrica, our forensic and quality audit services are designed to uncover hidden risks, ensure compliance, and enhance operational transparency. Our systematic approach combines investigative rigor with quality assurance to deliver actionable insights. Here’s how our process works:
                 </p>
 
                 {/* Desktop View: Snake Flow Matching Image */}
@@ -132,48 +132,48 @@ export default function ForensicAndQualityAuditComplete() {
                     <div className="flex items-center justify-between w-full">
                         {processSteps.slice(0, 3).map((step, idx) => (
                             <React.Fragment key={step.num}>
-                                <div className="w-64 bg-[#f8faf9] border border-gray-300 rounded-lg p-5 flex flex-col items-center min-h-[220px]">
-                                    <div className="w-8 h-8 rounded-full bg-[#0b3b2c] text-white flex items-center justify-center font-bold text-xs mb-3">
+                                <div className="w-64 bg-white border border-gray-200 shadow-sm rounded-xl p-5 flex flex-col items-center justify-start">
+                                    <div className="w-8 h-8 rounded-full bg-[#0b3b2c] text-white flex items-center justify-center font-bold text-xs mb-3 shadow-inner flex-shrink-0">
                                         {step.num}
                                     </div>
                                     <h3 className="text-xs font-bold text-gray-900 mb-2 text-center">{step.title}</h3>
                                     <p className="text-[11px] text-gray-600 leading-relaxed text-center">{step.desc}</p>
                                 </div>
-                                {idx < 2 && <span className="text-gray-500 font-bold text-lg px-2">→</span>}
+                                {idx < 2 && <span className="text-[#0b3b2c]/60 font-bold text-xl px-2">→</span>}
                             </React.Fragment>
                         ))}
                     </div>
 
                     {/* Down Arrow from Step 3 to 4 */}
                     <div className="w-full flex justify-end pr-28">
-                        <span className="text-gray-500 font-bold text-lg">↓</span>
+                        <span className="text-[#0b3b2c]/60 font-bold text-xl">↓</span>
                     </div>
 
                     {/* Row 2: Steps 6, 5, 4 (Right to Left flow matching image order) */}
                     <div className="flex items-center justify-between w-full">
                         {[processSteps[5], processSteps[4], processSteps[3]].map((step, idx) => (
                             <React.Fragment key={step.num}>
-                                <div className="w-64 bg-[#f8faf9] border border-gray-300 rounded-lg p-5 flex flex-col items-center min-h-[220px]">
-                                    <div className="w-8 h-8 rounded-full bg-[#0b3b2c] text-white flex items-center justify-center font-bold text-xs mb-3">
+                                <div className="w-64 bg-white border border-gray-200 shadow-sm rounded-xl p-5 flex flex-col items-center justify-start">
+                                    <div className="w-8 h-8 rounded-full bg-[#0b3b2c] text-white flex items-center justify-center font-bold text-xs mb-3 shadow-inner flex-shrink-0">
                                         {step.num}
                                     </div>
                                     <h3 className="text-xs font-bold text-gray-900 mb-2 text-center">{step.title}</h3>
                                     <p className="text-[11px] text-gray-600 leading-relaxed text-center">{step.desc}</p>
                                 </div>
-                                {idx < 2 && <span className="text-gray-500 font-bold text-lg px-2">←</span>}
+                                {idx < 2 && <span className="text-[#0b3b2c]/60 font-bold text-xl px-2">←</span>}
                             </React.Fragment>
                         ))}
                     </div>
 
                     {/* Down Arrow from Step 6 to 7 */}
                     <div className="w-full flex justify-start pl-28">
-                        <span className="text-gray-500 font-bold text-lg">↓</span>
+                        <span className="text-[#0b3b2c]/60 font-bold text-xl">↓</span>
                     </div>
 
                     {/* Row 3: Step 7 */}
                     <div className="w-full flex justify-start pl-3">
-                        <div className="w-64 bg-[#f8faf9] border border-gray-300 rounded-lg p-5 flex flex-col items-center min-h-[220px]">
-                            <div className="w-8 h-8 rounded-full bg-[#0b3b2c] text-white flex items-center justify-center font-bold text-xs mb-3">
+                        <div className="w-64 bg-white border border-gray-200 shadow-sm rounded-xl p-5 flex flex-col items-center justify-start">
+                            <div className="w-8 h-8 rounded-full bg-[#0b3b2c] text-white flex items-center justify-center font-bold text-xs mb-3 shadow-inner flex-shrink-0">
                                 {processSteps[6].num}
                             </div>
                             <h3 className="text-xs font-bold text-gray-900 mb-2 text-center">{processSteps[6].title}</h3>
@@ -186,21 +186,20 @@ export default function ForensicAndQualityAuditComplete() {
                 <div className="flex md:hidden flex-col items-center space-y-4">
                     {processSteps.map((step, idx) => (
                         <React.Fragment key={step.num}>
-                            <div className="w-full bg-[#f8faf9] border border-gray-300 rounded-lg p-5 flex flex-col items-center">
-                                <div className="w-8 h-8 rounded-full bg-[#0b3b2c] text-white flex items-center justify-center font-bold text-xs mb-3">
+                            <div className="w-full bg-white border border-gray-200 shadow-sm rounded-xl p-5 flex flex-col items-center">
+                                <div className="w-8 h-8 rounded-full bg-[#0b3b2c] text-white flex items-center justify-center font-bold text-xs mb-3 shadow-inner">
                                     {step.num}
                                 </div>
                                 <h3 className="text-xs font-bold text-gray-900 mb-2 text-center">{step.title}</h3>
                                 <p className="text-[11px] text-gray-600 leading-relaxed text-center">{step.desc}</p>
                             </div>
                             {idx < processSteps.length - 1 && (
-                                <span className="text-gray-500 font-bold text-base">↓</span>
+                                <span className="text-[#0b3b2c]/60 font-bold text-lg my-1">↓</span>
                             )}
                         </React.Fragment>
                     ))}
                 </div>
             </section>
-
             {/* ------------------- SAMPLE WORK SECTION ------------------- */}
             <PubricaSampleWorkCard
                 bookCoverImage={{

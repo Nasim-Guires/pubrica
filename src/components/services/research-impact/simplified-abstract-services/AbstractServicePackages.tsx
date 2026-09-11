@@ -130,7 +130,7 @@ export default function AbstractServicePackages() {
         {/* Action Button */}
         <Link
           href="/order-now"
-          className="inline-block bg-[#033c2a] text-white hover:bg-[#02281c] font-bold text-xs sm:text-sm py-3 px-8 rounded-full transition-colors shadow-md"
+          className="bg-[#10343a] text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
         >
           Check Pricing & Get a Quote
         </Link>

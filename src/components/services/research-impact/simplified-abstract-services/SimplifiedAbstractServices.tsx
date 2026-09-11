@@ -150,7 +150,7 @@ export default function SimplifiedAbstractServices() {
                     {/* Compound Collage Images - Fixed Larger Size & Mobile Centering */}
                     <div className="lg:col-span-5 relative flex justify-center py-6">
                         <div className="relative w-full max-w-md h-80 sm:h-96 lg:h-[420px] mx-auto flex items-center justify-center">
-                            <div className="absolute w-4/5 sm:w-3/4 h-72 sm:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-xl border-4 border-white z-10 bg-slate-100">
+                            <div className="relative w-4/5 sm:w-3/4 h-72 sm:h-80 lg:h-96 rounded-2xl overflow-hidden">
                                 <Image
                                     src="/images/research-impact/simplified-abstract-services/What-We-Do.png"
                                     alt="Researcher giving presentation"
@@ -162,7 +162,6 @@ export default function SimplifiedAbstractServices() {
                             </div>
                         </div>
                     </div>
-
                     {/* Accordion List - Multiple Open Support */}
                     <div className="lg:col-span-7 divide-y divide-slate-200 border-t border-b border-slate-200">
                         {whatWeDoItems.map((item, index) => {

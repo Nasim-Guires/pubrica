@@ -7,6 +7,7 @@ import {
   Edit3,
 } from "lucide-react";
 import { EditorialWorkflowSection, WorkflowStep } from "@/components/common/EditorialWorkflowSection";
+import Link from "next/link";
 
 // ==========================================
 // DATA STRUCTURES
@@ -143,13 +144,16 @@ export default function HowItWorksAndDomainsSection() {
         ========================================== */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
           {/* Card 1: Plagiarism Free Content */}
-          <div className="group relative rounded-md overflow-hidden bg-neutral-900 text-white p-8 md:p-10 shadow-lg text-center flex flex-col items-center justify-center border border-neutral-800 transition-all duration-300 ease-in-out hover:bg-black hover:border-neutral-600 hover:shadow-2xl hover:scale-[1.01] min-h-[220px]">
+          <Link
+            href="/services/publication-support/plagiarism-services/"
+            className="group relative rounded-md overflow-hidden bg-neutral-900 text-white p-8 md:p-10 shadow-lg text-center flex flex-col items-center justify-center border border-neutral-800 transition-all duration-300 ease-in-out hover:bg-black hover:border-neutral-600 hover:shadow-2xl hover:scale-[1.01] min-h-[220px]"
+          >
             {/* Subtle background black overlay on hover */}
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/80 transition-colors duration-300 -z-0" />
 
             <div className="relative z-10 space-y-3 max-w-md">
-              <div className="w-12 h-12 mx-auto rounded-full bg-white text-neutral-900 flex items-center justify-center shadow-md mb-2 transition-transform duration-300 group-hover:scale-110">
-                <Book className="w-6 h-6" />
+              <div className="w-12 h-12 mx-auto rounded-full bg-white text-neutral-900 flex items-center justify-center shadow-md mb-2 transition-all duration-300 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white">
+                <Book className="w-6 h-6 transition-transform duration-300 group-hover:rotate-6" />
               </div>
               <h3 className="text-base sm:text-lg font-bold tracking-wide text-white transition-colors duration-300">
                 Plagiarism Free Content
@@ -160,16 +164,19 @@ export default function HowItWorksAndDomainsSection() {
                 standards, unique, plagiarism-free, and copyright-free.
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Card 2: Adaptable */}
-          <div className="group relative rounded-md overflow-hidden bg-neutral-900 text-white p-8 md:p-10 shadow-lg text-center flex flex-col items-center justify-center border border-neutral-800 transition-all duration-300 ease-in-out hover:bg-black hover:border-neutral-600 hover:shadow-2xl hover:scale-[1.01] min-h-[220px]">
+          <Link
+            href="/services/publication-support/"
+            className="group relative rounded-md overflow-hidden bg-neutral-900 text-white p-8 md:p-10 shadow-lg text-center flex flex-col items-center justify-center border border-neutral-800 transition-all duration-300 ease-in-out hover:bg-black hover:border-neutral-600 hover:shadow-2xl hover:scale-[1.01] min-h-[220px]"
+          >
             {/* Subtle background black overlay on hover */}
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/80 transition-colors duration-300 -z-0" />
 
             <div className="relative z-10 space-y-3 max-w-md">
-              <div className="w-12 h-12 mx-auto rounded-full bg-white text-neutral-900 flex items-center justify-center shadow-md mb-2 transition-transform duration-300 group-hover:scale-110">
-                <Edit3 className="w-6 h-6" />
+              <div className="w-12 h-12 mx-auto rounded-full bg-white text-neutral-900 flex items-center justify-center shadow-md mb-2 transition-all duration-300 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white">
+                <Edit3 className="w-6 h-6 transition-transform duration-300 group-hover:rotate-6" />
               </div>
               <h3 className="text-base sm:text-lg font-bold tracking-wide text-white transition-colors duration-300">
                 Adaptable
@@ -180,7 +187,7 @@ export default function HowItWorksAndDomainsSection() {
                 e-tutoring and collaborative learning.
               </p>
             </div>
-          </div>
+          </Link>
         </section>
       </div>
     </div>

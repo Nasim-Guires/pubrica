@@ -107,10 +107,10 @@ export const ScientificWritingPage: React.FC = () => {
                 </p>
 
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    We will work with you closely so that your <span className="text-teal-600 font-medium">scientific writing</span>, medical, or health communication content is clear, concise, and ethically compliant. Our customized choice of writing solutions can help increase acceptance rates and ensure that you produce academic output to a high standard of quality that meets publication guidelines in a non-systematic way, whether it is original research articles, systematic reviews, or case reports.
+                    We will work with you closely so that your <Link href="/services/research-services/scientific-writing/" className="text-blue-600">scientific writing</Link>, medical, or health communication content is clear, concise, and ethically compliant. Our customized choice of writing solutions can help increase acceptance rates and ensure that you produce academic output to a high standard of quality that meets publication guidelines in a non-systematic way, whether it is original research articles, systematic reviews, or case reports.
                 </p>
 
-                <div className="pt-4">
+                <div className="pt-4 flex justify-center md:block">
                     <CommonConsultationButton />
                 </div>
             </section>
@@ -122,7 +122,7 @@ export const ScientificWritingPage: React.FC = () => {
                         Why Choose Pubrica
                     </h2>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
-                        We help you make the writing process easy, from journal selection to submission. Speed up your publication goals with experienced Medical and <span className="text-teal-600 font-medium">Scientific writing</span> assistance from Pubrica. We provide clarity, compliance and credibility in every manuscript.
+                        We help you make the writing process easy, from journal selection to submission. Speed up your publication goals with experienced Medical and <Link href="/academy/editing-and-translation/scientific-editing-complete-research-guide/" className="text-blue-600">Scientific writing</Link> assistance from Pubrica. We provide clarity, compliance and credibility in every manuscript.
                     </p>
                 </div>
 

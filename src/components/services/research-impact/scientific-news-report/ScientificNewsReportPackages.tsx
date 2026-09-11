@@ -80,7 +80,7 @@ export default function ScientificNewsReportPackages() {
                 <h3 className="text-2xl font-bold text-[#10343a] mb-6">Delivery and Pricing</h3>
 
                 <div className="w-full bg-white border border-gray-200 shadow-sm rounded-lg overflow-hidden grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200 mb-6">
-                    
+
                     {/* Pricing Display */}
                     <div className="flex items-center justify-center gap-3 py-4 px-6 bg-white">
                         <span className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white font-bold text-lg shadow-sm">
@@ -105,7 +105,7 @@ export default function ScientificNewsReportPackages() {
                 {/* Styled CTA Button */}
                 <Link
                     href="/contact-us/"
-                    className="inline-flex items-center justify-center px-8 py-3.5 bg-[#10343a] hover:bg-[#1a5059] text-white font-medium rounded-full shadow-md transition-all duration-200 text-base"
+                    className="bg-[#10343a] text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
                 >
                     Check Pricing & Get a Quote
                 </Link>
