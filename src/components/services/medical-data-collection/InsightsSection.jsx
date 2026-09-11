@@ -36,7 +36,7 @@ const insightsData = [
     image:
       "/images/editing-and-translation/How-Physicians-Can-Write-Clear-and-Impactful-Patient-Education-Materials.jpg",
     alt: "Doctor discussing with a patient",
-    link: "/academy/physician-writing/how-to-structure-case-reports-review-articles-journals/",
+    link: "/academy/physician-writing/how-to-write-patient-education-materials/",
   },
 ];
 

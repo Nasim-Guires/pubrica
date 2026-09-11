@@ -206,49 +206,53 @@ export default function AlgorithmSMEPage() {
             {/* MAIN CONTAINER */}
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
                 {/* INTRO SECTION */}
-                <section className="max-w-7xl mx-auto px-4 py-12">
-                    <div className="space-y-4 mb-8">
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b] leading-tight max-w-4xl">
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
+                    <div className="space-y-6">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-[#1e2e2b] leading-tight">
                             Transforming Complex Problems into Efficient Solutions with Advanced Algorithm
                         </h2>
-                    </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                        <div className="lg:col-span-7 space-y-4">
-                            <div className="space-y-4 text-xs md:text-sm text-gray-600 leading-relaxed">
+                        <div className="flow-root">
+                            {/* Right-Floated Image */}
+                            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[450px] pt-2 lg:pt-0">
+                                <div className="relative w-full max-w-md aspect-square overflow-hidden">
+                                    <Image
+                                        src="/images/subject-matter-experts/algorithm/Algorithm-1.webp"
+                                        alt="Algorithm Research Visualization"
+                                        fill
+                                        className="object-cover"
+                                        priority
+                                        sizes="(max-width: 1024px) 100vw, 28rem"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Main Content */}
+                            <div className="space-y-5 text-sm sm:text-base text-gray-700 leading-relaxed">
                                 <p>
                                     The algorithms area of research is undergoing rapid change, owing to the rise in demand for efficient computing, data-oriented business decision-making, and scalable software systems. In order to foster the growth of these new trends, Pubrica provides or will provide enhanced services for algorithm researchers, including: design; testing algorithms for execution and optimization; and offering complete solutions for computer scientists, engineers and other practitioners in an academic environment.
                                 </p>
+
                                 <p>
                                     Each of our services will contribute to the improved quality, accuracy and impact of research-based products throughout the full breadth of algorithms research. Algorithm employs algorithm concepts such as: algorithm design; data structures; computational complexity; and applied computing to create optimal methods for solving computational problems. By employing engineering principles to problem-solving techniques, optimization techniques for problem solving, data handling methods, and system performance, research can develop representations of the algorithmic problem space.
                                 </p>
+
                                 <p>
                                     Among the various engineering principles employed are mathematical models; complexity evaluation; heuristic methods; and algorithm optimisation methods, to allow researchers to address the requirements associated with solving difficult computational problems.
                                 </p>
+
                                 <p>
                                     Research projects in computational algorithms develop the basis for researchers to use advanced predictive and analytical tools to emulate problems, to analyse the effectiveness of their solution and to quantify the effectiveness of their solution.
                                 </p>
-                            </div>
 
-                            <div className="pt-2">
-                                <GetFreeQuoteButton />
-                            </div>
-                        </div>
-
-                        <div className="lg:col-span-5 flex justify-center lg:justify-end pt-4">
-                            <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg border-4 border-white bg-gray-100 flex-shrink-0">
-                                <Image
-                                    src="/images/subject-matter-experts/algorithm/Algorithm-1.webp"
-                                    alt="Algorithm Research Visualization"
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                    sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
-                                />
+                                <div className="pt-2">
+                                    <GetFreeQuoteButton />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
 
                 {/* CORE AREAS SECTION WITH ACTIVE INTERNAL SCROLLING */}
                 <CoreAreasSection

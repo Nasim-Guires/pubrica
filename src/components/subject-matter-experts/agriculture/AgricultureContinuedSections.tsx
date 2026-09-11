@@ -51,29 +51,33 @@ export default function AgricultureContinuedSections() {
       title: "Precision Agriculture",
       desc: "Adoption of IoT, sensors, and GPS technologies to enhance productivity and resource efficiency.",
       icon: Cpu,
+      iconSrc: "/images/subject-matter-experts/agriculture/Precision-Agriculture.png",
     },
     {
       title: "Climate-Smart Farming",
       desc: "Integrating sustainable practices to mitigate climate change effects and ensure food security.",
       icon: CloudSun,
+      iconSrc: "/images/subject-matter-experts/agriculture/Climate-Smart-Farming.png",
     },
     {
       title: "Biotechnology and Genomics",
       desc: "Advancing crop improvement, pest resistance, and nutritional value through genetic innovations.",
       icon: Dna,
+      iconSrc: "/images/subject-matter-experts/agriculture/Biotechnology-and-Genomics.png",
     },
     {
       title: "Sustainable Resource Management",
       desc: "Promoting soil health, water conservation, and eco-friendly farming inputs.",
       icon: Sprout,
+      iconSrc: "/images/subject-matter-experts/agriculture/Sustainable-Resource-Management.png",
     },
     {
       title: "Agri-Business and Value Chain Innovation",
       desc: "Strengthening market access, post-harvest technology, and rural entrepreneurship.",
       icon: TrendingUp,
+      iconSrc: "/images/subject-matter-experts/agriculture/Agri-Business-and-Value-Chain-Innovation.png",
     },
   ];
-
   const publication: AuthorPublicationData = {
     imageSrc:
       "/images/subject-matter-experts/agriculture/sample-works.webp",

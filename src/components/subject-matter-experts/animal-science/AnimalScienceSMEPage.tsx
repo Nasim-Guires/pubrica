@@ -97,7 +97,7 @@ export default function AnimalScienceSMEPage() {
       icon: Database,
       imageUrl:
         "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
-      href: "/services/data-analytics-machine-learning/data-collection/",
+      href: "/services/medical-data-collection/",
     },
     {
       title: "Translation Services",

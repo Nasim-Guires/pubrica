@@ -145,7 +145,7 @@ export default function AgricultureSMEPage() {
       icon: Users,
       imageUrl:
         "/images/subject-matter-experts/agriculture/Peer-Review.webp",
-      href: "/services/publication-support/peer-review/",
+      href: "/services/publication-support/peer-review-pre-submission/",
     },
     {
       title: "Editing & Proofreading",
@@ -195,91 +195,113 @@ export default function AgricultureSMEPage() {
       {/* MAIN CONTENT AREA */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
         {/* INTRO & BULLET POINTS SECTION */}
-        <section className="max-w-7xl mx-auto px-4 py-4">
-          {/* Header placed above everything */}
-          <div className="space-y-4 mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0d3630] leading-tight max-w-4xl">
-              Empowering Sustainable Agriculture Through Expert Research, Innovation, and Insight.
-            </h2>
-          </div>
+        <section className="pt-6 border-t border-slate-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+                Empowering Sustainable Agriculture Through Expert Research, Innovation, and Insight.
+              </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div className="lg:col-span-7 space-y-4">
-              <div className="space-y-3 text-xs md:text-sm text-gray-600 leading-relaxed">
-                <p>
-                  Navigating the complexities of publishing impactful research in agricultural science can be daunting, especially when it involves cutting-edge methodologies and advancements in crop cultivation, soil management, crops or crop rotations, fertilizer applications, pest control or tillage practices, and the rearing of livestock. Researchers in this sector often face challenges in effectively communicating their findings and ensuring their work reaches the right audience with the appropriate and meaningful impact.
-                </p>
-                <p>
-                  In response to these challenges, Pubrica offers extensive <Link href="/services/publication-support/" className="text-blue-600">publication support</Link> to researchers in the agricultural research community. Our expertise helps bridge the gap between innovation research and its publication in prestigious journals. Whether its drafting full research paper critical reviews, <Link href="//services/physician-writing-services/case-report-writing/" className="text-blue-600">case reports</Link> (case studies based on
-                </p>
-                <p>
-                  technological success), Hypotheses (short articles based on published results), debate article (present argument based on scientific basis on debate issues related to agriculture), commentaries, opinions and policy issues, or facilitating the complex submission process, Pubrica ensures that your research is presented compellingly to leading international journals, including those published by prestigious publishers like Springer, Wiley, and Elsevier.
-                </p>
-              </div>
-
-              {/* Bullet List */}
-              <div className="pt-2 space-y-2.5 text-xs text-gray-700">
-                <h3 className="font-bold text-gray-900 text-sm mb-1">
-                  Our Expertise in Agriculture Includes:
-                </h3>
-
-                <div className="flex items-start gap-2">
-                  <span className="text-[#b81c1c] font-bold shrink-0">→</span>
-                  <p>
-                    <strong className="text-gray-900">Crop Production & Management:</strong> Advanced practices in sustainable farming, precision agriculture, and high-yield crop cultivation.
-                  </p>
+              <div className="flow-root">
+                {/* Circle Image */}
+                <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                  <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white mx-auto">
+                    <Image
+                      src="/images/subject-matter-experts/agriculture/Empowering-Sustainable-Agriculture-Through-Expert-Research-Innovation-and-Insight.webp"
+                      alt="Agricultural Data Analytics Dashboard on Tablet"
+                      fill
+                      className="object-cover"
+                      priority
+                      sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 350px"
+                    />
+                  </div>
                 </div>
 
-                <div className="flex items-start gap-2">
-                  <span className="text-[#b81c1c] font-bold shrink-0">→</span>
-                  <p>
-                    <strong className="text-gray-900">Soil Science & Fertility:</strong> Soil analysis, nutrient management, and organic farming solutions to enhance productivity.
+                <div className="space-y-5 text-slate-700">
+                  <p className="text-base leading-relaxed">
+                    Navigating the complexities of publishing impactful research in agricultural science can be daunting, especially when it involves cutting-edge methodologies and advancements in crop cultivation, soil management, crops or crop rotations, fertilizer applications, pest control or tillage practices, and the rearing of livestock. Researchers in this sector often face challenges in effectively communicating their findings and ensuring their work reaches the right audience with the appropriate and meaningful impact.
                   </p>
-                </div>
 
-                <div className="flex items-start gap-2">
-                  <span className="text-[#b81c1c] font-bold shrink-0">→</span>
-                  <p>
-                    <strong className="text-gray-900">Plant Protection & Pest Management:</strong> Integrated pest management, disease control, and eco-friendly crop protection strategies.
+                  <p className="text-base leading-relaxed">
+                    In response to these challenges, Pubrica offers extensive{" "}
+                    <Link href="/services/publication-support/" className="text-blue-600">
+                      publication support
+                    </Link>{" "}
+                    to researchers in the agricultural research community. Our expertise helps bridge the gap between innovation research and its publication in prestigious journals. Whether its drafting full research paper critical reviews,{" "}
+                    <Link
+                      href="/services/physician-writing-services/case-report-writing/"
+                      className="text-blue-600"
+                    >
+                      case reports
+                    </Link>{" "}
+                    (case studies based on
                   </p>
-                </div>
 
-                <div className="flex items-start gap-2">
-                  <span className="text-[#b81c1c] font-bold shrink-0">→</span>
-                  <p>
-                    <strong className="text-gray-900">Agricultural Research & Innovation:</strong> Cutting-edge research in crop genetics, biotechnology, and modern farming technologies.
+                  <p className="text-base leading-relaxed">
+                    technological success), Hypotheses (short articles based on published results), debate article (present argument based on scientific basis on debate issues related to agriculture), commentaries, opinions and policy issues, or facilitating the complex submission process, Pubrica ensures that your research is presented compellingly to leading international journals, including those published by prestigious publishers like Springer, Wiley, and Elsevier.
                   </p>
+
+                  {/* Bullet List */}
+                  <div className="pt-2 space-y-4">
+                    <h3 className="font-bold text-slate-900 text-base">
+                      Our Expertise in Agriculture Includes:
+                    </h3>
+
+                    <div className="space-y-4 pl-4">
+                      <div className="flex items-start gap-2.5">
+                        <span className="text-red-600 font-bold shrink-0">→</span>
+                        <p className="text-base leading-relaxed">
+                          <strong className="text-gray-900">Crop Production & Management:</strong>{" "}
+                          Advanced practices in sustainable farming, precision agriculture, and high-yield crop cultivation.
+                        </p>
+                      </div>
+
+                      <div className="flex items-start gap-2.5">
+                        <span className="text-red-600 font-bold shrink-0">→</span>
+                        <p className="text-base leading-relaxed">
+                          <strong className="text-gray-900">Soil Science & Fertility:</strong>{" "}
+                          Soil analysis, nutrient management, and organic farming solutions to enhance productivity.
+                        </p>
+                      </div>
+
+                      <div className="flex items-start gap-2.5">
+                        <span className="text-red-600 font-bold shrink-0">→</span>
+                        <p className="text-base leading-relaxed">
+                          <strong className="text-gray-900">Plant Protection & Pest Management:</strong>{" "}
+                          Integrated pest management, disease control, and eco-friendly crop protection strategies.
+                        </p>
+                      </div>
+
+                      <div className="flex items-start gap-2.5">
+                        <span className="text-red-600 font-bold shrink-0">→</span>
+                        <p className="text-base leading-relaxed">
+                          <strong className="text-gray-900">Agricultural Research & Innovation:</strong>{" "}
+                          Cutting-edge research in crop genetics, biotechnology, and modern farming technologies.
+                        </p>
+                      </div>
+
+                      <div className="flex items-start gap-2.5">
+                        <span className="text-red-600 font-bold shrink-0">→</span>
+                        <p className="text-base leading-relaxed">
+                          <strong className="text-gray-900">Irrigation & Water Management:</strong>{" "}
+                          Efficient water use, drip irrigation systems, and sustainable water conservation practices.
+                        </p>
+                      </div>
+
+                      <div className="flex items-start gap-2.5">
+                        <span className="text-red-600 font-bold shrink-0">→</span>
+                        <p className="text-base leading-relaxed">
+                          <strong className="text-gray-900">Agri-Business & Market Solutions:</strong>{" "}
+                          Strategic planning, market analysis, and value chain development for farmers and agripreneurs.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-2">
+                    <GetFreeQuoteButton />
+                  </div>
                 </div>
-
-                <div className="flex items-start gap-2">
-                  <span className="text-[#b81c1c] font-bold shrink-0">→</span>
-                  <p>
-                    <strong className="text-gray-900">Irrigation & Water Management:</strong> Efficient water use, drip irrigation systems, and sustainable water conservation practices.
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-2">
-                  <span className="text-[#b81c1c] font-bold shrink-0">→</span>
-                  <p>
-                    <strong className="text-gray-900">Agri-Business & Market Solutions:</strong> Strategic planning, market analysis, and value chain development for farmers and agripreneurs.
-                  </p>
-                </div>
-              </div>
-
-              <GetFreeQuoteButton />
-            </div>
-
-            {/* Circle Image with Dashboard Display */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end pt-4">
-              <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0">
-                <Image
-                  src="/images/subject-matter-experts/agriculture/Empowering-Sustainable-Agriculture-Through-Expert-Research-Innovation-and-Insight.webp"
-                  alt="Agricultural Data Analytics Dashboard on Tablet"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
-                />
               </div>
             </div>
           </div>

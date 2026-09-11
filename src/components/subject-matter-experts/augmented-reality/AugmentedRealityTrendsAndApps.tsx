@@ -85,14 +85,14 @@ export default function AugmentedRealityTrendsAndApps() {
 
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white font-sans text-gray-800 space-y-10">
+    <div className="w-full max-w-6xl mx-auto px-6 py-12 bg-white font-sans text-gray-800 space-y-16">
       {/* SECTION 1: EMERGING TRENDS & COLLAPSIBLE FUTURE TRENDS */}
-      <section className="space-y-4">
-        <div className="space-y-2">
-          <h2 className="text-2xl font-bold text-[#0d3630]">
+      <section className="space-y-8">
+        <div className="space-y-3 max-w-3xl">
+          <h2 className="text-3xl font-bold tracking-tight text-[#0d3630]">
             Emerging Trends in Augmented Reality
           </h2>
-          <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+          <p className="text-sm md:text-base text-gray-600 leading-relaxed">
             The development of cutting edge AR technology will allow for
             advances of immersive technology and digital transformation in
             many ways. Some trends include the following:
@@ -100,24 +100,24 @@ export default function AugmentedRealityTrendsAndApps() {
         </div>
 
         {/* Collapsible Accordion Box */}
-        <div className="border border-gray-200 rounded-sm overflow-hidden bg-white shadow-sm">
+        <div className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm transition-all">
           <button
             onClick={() => setIsTrendsOpen(!isTrendsOpen)}
-            className="w-full flex items-center justify-between bg-[#0d3630] text-white py-3 px-4 text-left transition-colors hover:bg-[#0a2c27]"
+            className="w-full flex items-center justify-between bg-[#0d3630] text-white py-4 px-6 text-left transition-colors hover:bg-[#0a2c27]"
           >
-            <span className="text-xs md:text-sm font-semibold tracking-wide">
+            <span className="text-sm md:text-base font-semibold tracking-wide">
               Future Trends In Augmented Reality (AR)
             </span>
             {isTrendsOpen ? (
-              <Minus className="w-4 h-4 text-white shrink-0" />
+              <Minus className="w-5 h-5 text-white shrink-0 ml-4" />
             ) : (
-              <Plus className="w-4 h-4 text-white shrink-0" />
+              <Plus className="w-5 h-5 text-white shrink-0 ml-4" />
             )}
           </button>
 
           {isTrendsOpen && (
-            <div className="p-5 space-y-3 text-xs md:text-sm text-gray-700 bg-white">
-              <ul className="list-disc pl-5 space-y-2 leading-relaxed">
+            <div className="p-8 space-y-6 text-sm md:text-base text-gray-700 bg-gray-50/50">
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 list-disc pl-5 leading-relaxed">
                 <li>Markerless AR and advanced tracking.</li>
                 <li>AR within the metaverse; virtual collaboration.</li>
                 <li>AR systems will include AI integrative components.</li>
@@ -126,9 +126,9 @@ export default function AugmentedRealityTrendsAndApps() {
                 <li>Industrial AR; training and maintenance.</li>
                 <li>AR cloud; shared experiences.</li>
                 <li>Real-time 3D content delivered throughout the world.</li>
-                <li>IoT and smart device integration.</li>
+                <li className="md:col-span-2">IoT and smart device integration.</li>
               </ul>
-              <p className="pt-2 text-gray-600 text-[11px] md:text-xs">
+              <p className="pt-4 border-t border-gray-200 text-gray-500 text-xs md:text-sm">
                 Each of these trends represents a considerable change to the
                 way in which we interact with digital content in the physical
                 world.
@@ -139,13 +139,15 @@ export default function AugmentedRealityTrendsAndApps() {
       </section>
 
       {/* SECTION 2: APPLICATIONS OF AUGMENTED REALITY */}
-      <ApplicationsSection
-        title="Applications of Augmented Reality"
-        description="AR is a combination of multiple fields through the ability to add digital elements to existing/in-use physical space. Augmented Reality has many possible applications, some of which include the areas of:"
-        applications={applications}
-        imageSrc="/images/subject-matter-experts/augmented-reality/Applications-of-Augmented-Reality.webp"
-        imageAlt="Applications of Augmented Reality"
-      />
+      <section className="pt-4">
+        <ApplicationsSection
+          title="Applications of Augmented Reality"
+          description="AR is a combination of multiple fields through the ability to add digital elements to existing/in-use physical space. Augmented Reality has many possible applications, some of which include the areas of:"
+          applications={applications}
+          imageSrc="/images/subject-matter-experts/augmented-reality/Applications-of-Augmented-Reality.webp"
+          imageAlt="Applications of Augmented Reality"
+        />
+      </section>
     </div>
   );
 }

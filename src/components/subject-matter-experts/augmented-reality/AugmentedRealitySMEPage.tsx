@@ -202,44 +202,50 @@ export default function AugmentedRealitySMEPage() {
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
 
                 {/* SECTION 1: HERO INTRO & CIRCLE IMAGE */}
-                <section className="max-w-7xl mx-auto px-4 py-4">
-                    {/* Header placed above everything */}
-                    <div className="space-y-4 mb-6">
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#0d3630] leading-tight max-w-4xl">
-                            Transforming Digital Experiences into Real-World Solutions with Precision Augmented Reality (AR).
-                        </h2>
-                    </div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                        <div className="lg:col-span-7 space-y-4">
-                            <div className="space-y-3 text-xs md:text-sm text-gray-600 leading-relaxed">
-                                <p>
-                                    Because of the growing demand for immersive experiences, interactive visualization, and the real-time integration of digital information into our day-to-day lives, Augmented Reality (AR) has developed rapidly as an area of research over the past few years. To support these advanced and evolving technologies in addition to furthering innovation in AR, Pubrica offers specialised solutions to Augmented Reality researchers by providing services such as 3D modelling, AR application development, and complete academic solutions to AR designers, developers, and specialists. Our entire family of AR solutions are designed to increase the calibre, accuracy, and long-term impact of the final deliverables from research across the entire spectrum of Augmented Reality.
-                                </p>
-                                <p>
-                                    Overall, Augmented Reality research consists of the following core technical subjects: Computer Vision, 3D Modelling, Human-Computer Interaction, and Spatial Computing. Each of these subjects focuses on how to seamlessly integrate digital content with the real world. Engineering principles are applied to image recognition, object tracking, rendering, and how users will interact with the system. Engineering principles include computational modelling, simulation tools, real-time processing methods, and
-                                </p>
-                                <p>
-                                    AR optimisation techniques which serve to allow developers to address complex problems in the area of immersive technology. Additionally, computational AR projects allow researchers to create simulated environments for user interaction, create simulation maps of the environment and monitor system performance using predictive modelling techniques to generate greater levels of insight and innovation related to AR technology.
-                                </p>
+                <section className="pt-6 border-t border-slate-100">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-6xl mx-auto">
+                            {/* Header placed above everything */}
+                            <div className="mb-5">
+                                <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+                                    Transforming Digital Experiences into Real-World Solutions with Precision Augmented Reality (AR).
+                                </h2>
                             </div>
 
-                            <div className="pt-2">
-                                <GetFreeQuoteButton />
-                            </div>
-                        </div>
+                            <div className="flow-root">
+                                {/* Right Circular VR/AR Image */}
+                                <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                                    <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0 mx-auto">
+                                        <Image
+                                            src="/images/subject-matter-experts/augmented-reality/Augmented-Reality.webp"
+                                            alt="Person experiencing Augmented Reality with Headset"
+                                            fill
+                                            className="object-cover"
+                                            priority
+                                            sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 350px"
+                                        />
+                                    </div>
+                                </div>
 
-                        {/* Right Circular VR/AR Image */}
-                        <div className="lg:col-span-5 flex justify-center lg:justify-end pt-4">
-                            <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0">
-                                <Image
-                                    src="/images/subject-matter-experts/augmented-reality/Augmented-Reality.webp"
-                                    alt="Person experiencing Augmented Reality with Headset"
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                    sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
-                                />
+                                <div className="space-y-5 text-slate-700">
+                                    <div className="space-y-5 text-base leading-relaxed">
+                                        <p>
+                                            Because of the growing demand for immersive experiences, interactive visualization, and the real-time integration of digital information into our day-to-day lives, Augmented Reality (AR) has developed rapidly as an area of research over the past few years. To support these advanced and evolving technologies in addition to furthering innovation in AR, Pubrica offers specialised solutions to Augmented Reality researchers by providing services such as 3D modelling, AR application development, and complete academic solutions to AR designers, developers, and specialists. Our entire family of AR solutions are designed to increase the calibre, accuracy, and long-term impact of the final deliverables from research across the entire spectrum of Augmented Reality.
+                                        </p>
+
+                                        <p>
+                                            Overall, Augmented Reality research consists of the following core technical subjects: Computer Vision, 3D Modelling, Human-Computer Interaction, and Spatial Computing. Each of these subjects focuses on how to seamlessly integrate digital content with the real world. Engineering principles are applied to image recognition, object tracking, rendering, and how users will interact with the system. Engineering principles include computational modelling, simulation tools, real-time processing methods, and
+                                        </p>
+
+                                        <p>
+                                            AR optimisation techniques which serve to allow developers to address complex problems in the area of immersive technology. Additionally, computational AR projects allow researchers to create simulated environments for user interaction, create simulation maps of the environment and monitor system performance using predictive modelling techniques to generate greater levels of insight and innovation related to AR technology.
+                                        </p>
+                                    </div>
+
+                                    <div className="pt-2">
+                                        <GetFreeQuoteButton />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -25,35 +25,37 @@ export default function EmergingTrendsSection({
     trends[0]
   );
 
-  if (!trends.length) return null;
+  if (!trends?.length) return null;
 
   return (
-    <div className="space-y-5 max-w-5xl mx-auto font-['Poppins',sans-serif]">
+    <div className="space-y-4 max-w-5xl mx-auto font-['Poppins',sans-serif]">
       {/* Section Header */}
-      <div className="space-y-1">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
+      <div className="space-y-2">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#113835]">
           {title}
         </h2>
 
-        <p className="text-sm md:text-base text-gray-600 font-medium">
-          {description}
-        </p>
+        {description && (
+          <p className="text-sm md:text-base text-gray-800 font-medium">
+            {description}
+          </p>
+        )}
       </div>
 
-      {/* Clean Container */}
-      <div className="bg-white p-4 md:p-5 rounded-lg border border-gray-200">
-        {/* Tab Buttons */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+      {/* Main Container */}
+      <div className="bg-[#f8f9fa] p-6 md:p-8 rounded-none">
+        {/* Tab Buttons Row */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 border-t border-b border-r border-gray-300">
           {trends.map((trend) => {
-            const isActive = activeTrend.id === trend.id;
+            const isActive = activeTrend?.id === trend.id;
 
             return (
               <button
                 key={trend.id}
                 onClick={() => setActiveTrend(trend)}
-                className={`py-2.5 px-3 text-center text-xs md:text-sm font-medium rounded transition-colors border ${isActive
-                    ? "bg-emerald-600 text-white border-emerald-600"
-                    : "bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100"
+                className={`py-4 px-3 text-center text-xs md:text-sm font-semibold transition-all border-l border-gray-300 flex items-center justify-center min-h-[70px] ${isActive
+                    ? "bg-[#113835] text-white"
+                    : "bg-[#eeeeee] text-[#111111] hover:bg-gray-200"
                   }`}
               >
                 {trend.title}
@@ -63,21 +65,25 @@ export default function EmergingTrendsSection({
         </div>
 
         {/* Active Trend Box */}
-        <div className="mt-4 pt-4 border-t border-gray-100">
-          <h3 className="text-base md:text-lg font-bold text-gray-900">
-            {activeTrend.title}
-          </h3>
+        {activeTrend && (
+          <div className="mt-6 bg-white p-6 border border-gray-200">
+            <h3 className="text-base md:text-lg font-bold text-[#113835]">
+              {activeTrend.title}
+            </h3>
 
-          <p className="text-sm text-gray-600 mt-1 leading-relaxed">
-            {activeTrend.description}
-          </p>
-        </div>
+            <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+              {activeTrend.description}
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Footer Text */}
-      <p className="text-sm text-gray-600 leading-relaxed">
-        {footerText}
-      </p>
+      {footerText && (
+        <p className="text-sm text-gray-600 leading-relaxed pt-1">
+          {footerText}
+        </p>
+      )}
     </div>
   );
 }

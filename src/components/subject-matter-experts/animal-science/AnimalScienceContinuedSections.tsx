@@ -106,26 +106,31 @@ export default function AnimalScienceContinuedSections() {
       title: "Agriculture & Livestock Management",
       desc: "Enhancing productivity and sustainability in dairy, poultry, and meat industries.",
       icon: Tractor,
+      iconSrc: "/images/subject-matter-experts/animal-science/Agriculture-Livestock-Management.svg",
     },
     {
       title: "Veterinary Medicine",
       desc: "Informing disease prevention, treatment, and diagnostics.",
       icon: Stethoscope,
+      iconSrc: "/images/subject-matter-experts/animal-science/Veterinary-Medicine.svg",
     },
     {
       title: "Wildlife Conservation",
       desc: "Protecting endangered species through research on reproduction, genetics, and behavior.",
       icon: Trees,
+      iconSrc: "/images/subject-matter-experts/animal-science/Wildlife-Conservation.png",
     },
     {
       title: "Pharmaceutical and Biotech Industries",
       desc: "Developing vaccines, therapeutics, and animal models for research.",
       icon: Factory,
+      iconSrc: "/images/subject-matter-experts/animal-science/Pharmaceutical-and-Biotech-Industries.svg",
     },
     {
       title: "Education & Research",
       desc: "Training the next generation of scientists, veterinarians, and animal welfare specialists.",
       icon: BookOpen,
+      iconSrc: "/images/subject-matter-experts/animal-science/Education-Research.svg",
     },
   ];
 
@@ -189,16 +194,16 @@ export default function AnimalScienceContinuedSections() {
               Areas of <span className="underline decoration-2 underline-offset-4 decoration-white">Study</span>
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div className="flex flex-wrap gap-3">
               {areasOfStudy.map((area, idx) => (
                 <div
                   key={idx}
-                  className="bg-white rounded-sm py-2.5 px-3 flex items-center gap-2 shadow-sm hover:bg-gray-50 transition-colors"
+                  className="bg-white rounded-sm py-2.5 px-3 flex items-center gap-2 shadow-sm hover:bg-gray-50 transition-colors whitespace-nowrap"
                 >
-                  <div className="bg-[#0d3630] rounded-full p-0.5 flex-shrink-0">
+                  <div className="bg-[#0d3630] rounded-full p-0.5 shrink-0">
                     <ChevronRight className="w-3.5 h-3.5 text-white" />
                   </div>
-                  <span className="text-xs md:text-sm font-bold text-gray-800 truncate">
+                  <span className="text-xs md:text-sm font-bold text-gray-800">
                     {area}
                   </span>
                 </div>
