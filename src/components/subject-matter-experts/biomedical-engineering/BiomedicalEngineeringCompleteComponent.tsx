@@ -149,7 +149,7 @@ export default function BiomedicalEngineeringCompleteComponent() {
         },
         {
             id: 6,
-            title: "Nanobiotechnology",
+            title: "Bionanotechnology",
             description: "Nanocarriers, nano-diagnostics, and nano-enabled drug delivery systems continue to redefine therapeutic efficiency.",
         },
     ];

@@ -1,18 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 
 export type EmergingTrendItem = {
   id: string | number;
   title: string;
-  description: string;
+  description: ReactNode;
 };
 
 interface EmergingTrendsSectionProps {
   title: string;
   description: string;
   trends: EmergingTrendItem[];
-  footerText: string;
+  footerText?: string;
 }
 
 export default function EmergingTrendsSection({

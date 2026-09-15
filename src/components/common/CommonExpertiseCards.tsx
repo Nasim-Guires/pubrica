@@ -44,7 +44,7 @@ export default function CommonExpertiseCards({
             case 8:
                 return "lg:grid-cols-4 lg:max-w-6xl";
             case 9:
-                return ""; // Handled separately for 4-3-2 pyramid layout
+                return ""; // Handled separately for 4-3-2 pyramid laayout
             default:
                 return "lg:grid-cols-4 lg:max-w-6xl";
         }

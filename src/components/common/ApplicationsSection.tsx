@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { type LucideIcon } from "lucide-react";
+import { ReactNode } from "react";
 
 export type ApplicationItem = {
     title: string;
@@ -10,7 +11,7 @@ export type ApplicationItem = {
 
 interface ApplicationsSectionProps {
     title: string;
-    description: string;
+    description: string|ReactNode;
     applications: ApplicationItem[];
     imageSrc: string;
     imageAlt?: string;

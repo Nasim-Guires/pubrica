@@ -15,7 +15,7 @@ export type SmeCoreAreaItem = {
 
 interface SmeCoreAreasGridProps {
     title: string;
-    description: string;
+    description: string | ReactNode;
     items: SmeCoreAreaItem[];
 }
 
