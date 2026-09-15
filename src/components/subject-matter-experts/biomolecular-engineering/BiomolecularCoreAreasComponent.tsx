@@ -35,7 +35,7 @@ export default function BiomolecularCoreAreasComponent() {
       desc: (
         <>
           Biomolecular engineers develop tools such as CRISPR-based diagnostic kits, point-of-care biosensors, and nucleic-acid-based therapeutics, including siRNA and mRNA technologies. Our specialized{" "}
-          <Link href="/services/editing-and-translation/" className="text-blue-600 hover:underline">
+          <Link href="/services/editing-and-translation/" className="text-blue-600 ">
             biomolecular diagnostics editing services
           </Link>{" "}
           ensure precision and clarity for diagnostic research.
@@ -50,7 +50,7 @@ export default function BiomolecularCoreAreasComponent() {
       desc: (
         <>
           This area involves scaling up biological production systems, optimizing fermentation conditions, developing bioreactors, and ensuring product purification and quality. Pubrica offers{" "}
-          <Link href="/services/research-services/medical-writing/" className="text-blue-600 hover:underline">
+          <Link href="/services/research-services/medical-writing/" className="text-blue-600">
             bioprocess engineering writing services
           </Link>{" "}
           to support manuscript development and publication.

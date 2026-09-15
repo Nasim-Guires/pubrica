@@ -251,7 +251,7 @@ export default function BiomedicalEngineeringCompleteComponent() {
                     title="Emerging Trends in Biomedical Engineering"
                     description="Biomedical Engineering is rapidly evolving, driven by technological breakthroughs and global healthcare needs. Some emerging trends include:"
                     trends={biomedicalTrends}
-                    footerText="These pioneering developments continue to revolutionize healthcare delivery, clinical outcomes, and therapeutic precision."
+                    footerText=""
                 />
 
                 {/* SECTION 4: Applications of Biomedical Engineering */}

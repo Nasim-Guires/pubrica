@@ -167,7 +167,7 @@ export default function BiomonitoringTrendsAndPublishingSection() {
                 title="Emerging Trends in Biomonitoring"
                 description="The field of biomonitoring is rapidly evolving, driven by technological innovation, interdisciplinary collaboration, and growing environmental concerns. Several emerging trends are reshaping how scientists and policymakers approach exposure assessment and health protection."
                 trends={biomonitoringTrends}
-                footerText="These advancements collectively enhance our ability to detect environmental hazards early and protect public health more effectively."
+                footerText="These innovations are transforming biomonitoring from a purely analytical tool into a dynamic, predictive science that informs policy decisions, personal health management, and environmental sustainability."
             />
 
             {/* SECTION 2: APPLICATIONS OF BIOMONITORING */}

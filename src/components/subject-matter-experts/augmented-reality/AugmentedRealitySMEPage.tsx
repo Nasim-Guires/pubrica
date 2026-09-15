@@ -51,7 +51,7 @@ export default function AugmentedRealitySMEPage() {
             title: "Building and Visualizing 3D Models",
             iconSrc:
                 "/images/subject-matter-experts/augmented-reality/Building-and-Visualizing-3D-Models.webp",
-            desc: "Use different methods to track and recognize images and objects in real-time; so that we can provide users with AR experiences.",
+            desc: "Build high-quality 3D assets and environments that can be used within immersive AR experiences.",
             icon: Box,
         },
         {

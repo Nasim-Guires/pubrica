@@ -22,8 +22,15 @@ export default function MaterialSciencePage() {
         {
             title: "Metals and Alloys",
             iconSrc: "/images/subject-matter-experts/material-science/Metals-and-Alloys.webp",
-            description:
-                "Research in metallurgy focuses on corrosion resistance, fatigue strength, heat treatment, mechanical characterization, alloy development, and industrial performance optimization. We provide metallurgical research assistance for studies involving phase analysis, mechanical modelling, and microstructural evaluation.",
+            description: (
+                <>
+                    Research in metallurgy focuses on corrosion resistance, fatigue strength, heat treatment, mechanical characterization, alloy development, and industrial performance optimization. We provide{" "}
+                    <Link href="/academy/research-services/ethical-considerations-research-design/" className="text-blue-600 no-underline hover:no-underline">
+                        metallurgical research assistance
+                    </Link>{" "}
+                    for studies involving phase analysis, mechanical modelling, and microstructural evaluation.
+                </>
+            ),
         },
         {
             title: "Polymers and Plastics",
@@ -34,8 +41,15 @@ export default function MaterialSciencePage() {
         {
             title: "Ceramics and Glass Materials",
             iconSrc: "/images/subject-matter-experts/material-science/Ceramics-and-Glass-Materials.webp",
-            description:
-                "Pubrica guides ceramic engineering studies, including thermal barrier coatings, oxide and non-oxide ceramics, structural ceramics, sintering mechanisms, glass science, and advanced ceramic composites. We assist researchers with precise ceramics research services for academic, industrial, and applied investigations.",
+            description: (
+                <>
+                    Pubrica guides ceramic engineering studies, including thermal barrier coatings, oxide and non-oxide ceramics, structural ceramics, sintering mechanisms, glass science, and advanced ceramic composites. We assist researchers with precise{" "}
+                    <Link href="/services/research-services/" className="text-blue-600 no-underline hover:no-underline">
+                        ceramics research services
+                    </Link>{" "}
+                    for academic, industrial, and applied investigations.
+                </>
+            ),
         },
         {
             title: "Nanomaterials and Nanotechnology",
@@ -46,8 +60,15 @@ export default function MaterialSciencePage() {
         {
             title: "Composite Materials",
             iconSrc: "/images/subject-matter-experts/material-science/Composite-Materials.webp",
-            description:
-                "We assist with research on hybrid and fiber-reinforced composites across aerospace, civil engineering, biomedical, and defence applications. Our composite materials manuscript editing service supports studies involving performance evaluation, durability testing, and microstructure analysis.",
+            description: (
+                <>
+                    We assist with research on hybrid and fiber-reinforced composites across aerospace, civil engineering, biomedical, and defence applications. Our{" "}
+                    <Link href="/services/editing-and-translation/manuscript-editing/" className="text-blue-600 no-underline hover:no-underline">
+                        composite materials manuscript editing
+                    </Link>{" "}
+                    service supports studies involving performance evaluation, durability testing, and microstructure analysis.
+                </>
+            ),
         },
         {
             title: "Biomaterials and Biomedical Engineering",

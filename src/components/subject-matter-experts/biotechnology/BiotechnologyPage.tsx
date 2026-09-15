@@ -30,7 +30,7 @@ export default function BiotechnologyPage() {
 
     const coreDisciplines = [
         {
-            title: "Understanding Gene Expression",
+            title: "Molecular Biology and Genetics",
             iconSrc:
                 "/images/subject-matter-experts/biotechnology/Molecular-Biology-and-Genetics-1.png",
             subtitle: "Molecular Biology & Genetics",

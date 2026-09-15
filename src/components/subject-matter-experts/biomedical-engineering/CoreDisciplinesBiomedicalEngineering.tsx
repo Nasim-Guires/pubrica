@@ -64,7 +64,7 @@ export default function CoreDisciplinesBiomedicalEngineering() {
             desc: (
                 <>
                     From ventilators and infusion pumps to surgical robots and neuroprosthetics, medical device innovation demands rigorous documentation and research accuracy. Pubrica supports{" "}
-                    <Link href="/industries/medical-device/" className="text-blue-600 hover:underline">
+                    <Link href="/industries/medical-device/" className="text-blue-600 ">
                         medical device research writing
                     </Link>
                     , regulatory-focused documentation, and <Link href="/services/publication-support/" className="text-blue-600">publication support for biomedical engineering.</Link>

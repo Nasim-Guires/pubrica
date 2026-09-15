@@ -56,35 +56,35 @@ export default function AgrotechnologyCompleteSection() {
 
   const applications: ApplicationItem[] = [
     {
-      title: "Crop Production:",
+      title: "Crop Production",
       desc: "Enhanced seed varieties, precision farming tools, and smart irrigation systems increase yield, improve crop quality, and reduce losses.",
       iconSrc:
         "/images/subject-matter-experts/agrotechnology/Crop-Production.png",
       icon: Sprout,
     },
     {
-      title: "Livestock Management:",
+      title: "Livestock Management",
       desc: "Automated feeding systems, health monitoring devices, and genetic selection improve animal health, reproduction rates, and overall productivity.",
       iconSrc:
         "/images/subject-matter-experts/agrotechnology/Livestock-Management.png",
       icon: PawPrint,
     },
     {
-      title: "Pest and Disease Control:",
+      title: "Pest and Disease Control",
       desc: "Integrated pest management systems, biological control agents, and disease-resistant crops reduce reliance on chemical pesticides.",
       iconSrc:
         "/images/subject-matter-experts/agrotechnology/Pest-and-Disease-Control.png",
       icon: ShieldCheck,
     },
     {
-      title: "Post-Harvest Management:",
+      title: "Post-Harvest Management",
       desc: "Storage technologies, cold chains, and automated processing equipment help minimize post-harvest losses and maintain product quality.",
       iconSrc:
         "/images/subject-matter-experts/agrotechnology/Post-Harvest-Management.png",
       icon: Warehouse,
     },
     {
-      title: "Agro-Energy Solutions:",
+      title: "Agro-Energy Solutions",
       desc: "Biofuels, solar-powered irrigation, and waste-to-energy systems contribute to sustainable energy use in agriculture.",
       iconSrc:
         "/images/subject-matter-experts/agrotechnology/Agro-Energy-Solutions.png",
