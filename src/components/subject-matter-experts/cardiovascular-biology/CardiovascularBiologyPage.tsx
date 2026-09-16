@@ -27,6 +27,8 @@ import {
     Database
 } from 'lucide-react';
 import HeroBanner from "@/components/common/HeroBanner";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import CommonExpertiseCards from "@/components/common/CommonExpertiseCards";
 
 export default function CardiovascularBiologyPage() {
     const disciplines = [
@@ -104,70 +106,70 @@ export default function CardiovascularBiologyPage() {
         }
     ];
 
-    const services = [
+    const expertiseCards = [
         {
             title: "Journal Formatting",
-            description: "Tailored manuscript formatting to meet specific journal guidelines.",
-            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
+            desc: "Tailored manuscript formatting to meet specific journal guidelines.",
+            href: "/services/publication-support/journal-manuscript-formatting-services/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: FileText,
-            href: "/services/publication-support/journal-manuscript-formatting-services"
         },
         {
             title: "Editing & Proofreading",
-            description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
+            desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
+            href: "/services/editing-and-translation/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
-            href: "/services/editing-and-translation"
         },
         {
             title: "Artwork Editing",
-            description: "Professional visuals for your figures, tables, and graphical abstracts.",
-            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
+            desc: "Professional visuals for your figures, tables, and graphical abstracts.",
+            href: "/services/publication-support/art-work-preparation/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: CheckCircle2,
-            href: "/services/publication-support/art-work-preparation"
         },
         {
             title: "Translation Services",
-            description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
+            desc: "Accurate scientific translations to broaden the reach of your research.",
+            href: "/services/editing-and-translation/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: Languages,
-            href: "/services/editing-and-translation/"
         },
         {
             title: "Research Services",
-            description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
+            desc: "Expert guidance on project planning, execution, and data analysis.",
+            href: "/services/research-services/",
+            imageUrl: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Search,
-            href: "/services/research-services"
         },
         {
             title: "Journal Selection",
-            description: "Strategic journal selection to maximize publication success.",
-            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
+            desc: "Strategic journal selection to maximize publication success.",
+            href: "/services/publication-support/journal-selection/",
+            imageUrl: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSearch,
-            href: "/services/publication-support/journal-selection"
         },
         {
             title: "Graphical Abstract",
-            description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
+            desc: "Engaging summaries of your research in a single, informative graphic.",
+            href: "/services/research-impact/graphical-abstract/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Send,
-            href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Manuscript Editing",
-            description: "Expert editing to ensure technical accuracy, scientific integrity, and compliance with target journal standards.",
-            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
+            desc: "Expert editing to ensure technical accuracy, scientific integrity, and compliance with target journal standards.",
+            href: "/services/editing-and-translation/manuscript-editing/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: FileText,
-            href: "/services/editing-and-translation/manuscript-editing"
         },
         {
             title: "Data Collection for AI & ML",
-            description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
+            desc: "Structured data gathering tailored for artificial intelligence and machine learning.",
+            href: "/services/medical-data-collection/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: Database,
-            href: "/services/medical-data-collection"
-        }
+        },
     ];
 
     return (
@@ -181,62 +183,61 @@ export default function CardiovascularBiologyPage() {
             />
 
             {/* SECTION 2: Hero Intro Content */}
-            <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <section className="pt-6 border-t border-slate-100">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="mb-5">
+                            <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+                                Comprehensive Research, Writing, and Publication Support in Cardiovascular Biology
+                            </h2>
+                        </div>
 
-                    {/* Left Text Content */}
-                    <div className="lg:col-span-7 space-y-4">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] leading-snug">
-                            Comprehensive Research, Writing, and Publication Support in Cardiovascular Biology
-                        </h2>
+                        <div className="flow-root">
+                            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                                <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0 mx-auto">
+                                    <Image
+                                        src="/images/subject-matter-experts/cardiovascular-biology/Comprehensive-Research-Writing-and-Publication-Support-in-Cardiovascular-Biology.webp"
+                                        alt="Cardiovascular biology research model visual"
+                                        fill
+                                        priority
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 320px, 380px"
+                                    />
+                                </div>
+                            </div>
 
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Cardiovascular Biology is a dynamic interdisciplinary field dedicated to understanding the structure, function, and regulation of the heart, blood vessels, and circulatory system. It integrates molecular biology, physiology, genetics, and pathology to elucidate mechanisms that control cardiovascular function in health and disease. This discipline underpins advances in cardiovascular medicine, including diagnostics, therapeutics, regenerative medicine, and translational cardiovascular research.
-                        </p>
+                            <div className="space-y-5 text-slate-700">
+                                <div className="space-y-5">
+                                    <p className="text-base leading-relaxed">
+                                        Cardiovascular Biology is a dynamic interdisciplinary field dedicated to understanding the structure, function, and regulation of the heart, blood vessels, and circulatory system. It integrates molecular biology, physiology, genetics, and pathology to elucidate mechanisms that control cardiovascular function in health and disease. This discipline underpins advances in cardiovascular medicine, including diagnostics, therapeutics, regenerative medicine, and translational cardiovascular research.
+                                    </p>
 
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            The human cardiovascular system is central to life, transporting oxygen, nutrients, hormones, and immune cells throughout the body. Its dysfunction is associated with a wide range of diseases, such as atherosclerosis, hypertension, coronary artery disease, heart failure, and stroke. An estimated 19.8 million people died from cardiovascular diseases (CVDs) in 2022, representing approximately 32% of all global deaths. Of these deaths, 85% were due to heart attack and stroke.
-                        </p>
+                                    <p className="text-base leading-relaxed">
+                                        The human cardiovascular system is central to life, transporting oxygen, nutrients, hormones, and immune cells throughout the body. Its dysfunction is associated with a wide range of diseases, such as atherosclerosis, hypertension, coronary artery disease, heart failure, and stroke. An estimated 19.8 million people died from cardiovascular diseases (CVDs) in 2022, representing approximately 32% of all global deaths. Of these deaths, 85% were due to heart attack and stroke.
+                                    </p>
 
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Pubrica provides comprehensive biomedical research and{" "}
-                            <Link
-                                href="/services/publication-support/"
-                                className="text-blue-600 font-medium no-underline hover:no-underline"
-                            >
-                                publication support
-                            </Link>{" "}
-                            in cardiovascular biology, empowering scientists, clinicians, and academicians to produce impactful research. Our team of vascular biology and cardiac regeneration experts offers end-to-end guidance from conceptualization to journal publication.
-                        </p>
+                                    <p className="text-base leading-relaxed">
+                                        Pubrica provides comprehensive biomedical research and{" "}
+                                        <Link
+                                            href="/services/publication-support/"
+                                            className="text-blue-600 no-underline"
+                                        >
+                                            publication support
+                                        </Link>{" "}
+                                        in cardiovascular biology, empowering scientists, clinicians, and academicians to produce impactful research. Our team of vascular biology and cardiac regeneration experts offers end-to-end guidance from conceptualization to journal publication.
+                                    </p>
 
-                        {/* CTA Button */}
-                        <div className="pt-4">
-                            <Link
-                                href="/order-now"
-                                className="inline-block bg-[#C4161C] hover:bg-[#a31217] text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
-                            >
-                                Get a Free Quote
-                            </Link>
+                                    {/* CTA Button */}
+                                    <div className="pt-2">
+
+                                        <GetFreeQuoteButton />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    {/* Right Circular Image */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
-                            <Image
-                                src="/images/subject-matter-experts/cardiovascular-biology/Comprehensive-Research-Writing-and-Publication-Support-in-Cardiovascular-Biology.webp"
-                                alt="Cardiovascular biology research model visual"
-                                fill
-                                priority
-                                className="object-cover"
-                                sizes="(max-width: 768px) 320px, 380px"
-                            />
-                        </div>
-                    </div>
-
                 </div>
             </section>
-
             {/* SECTION 3: Core Disciplines Grid */}
             <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
                 <div className="max-w-6xl mx-auto">
@@ -258,28 +259,28 @@ export default function CardiovascularBiologyPage() {
             {/* SECTION 4: Expertise Grid */}
             <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 
-                <div className="text-center max-w-4xl mx-auto mb-12">
-                    <div className="flex items-center justify-center gap-4 mb-3">
+                <div className="text-left max-w-4xl mb-12 font-['Poppins',sans-serif]">
+                    <div className="flex items-center justify-start gap-4 mb-3">
                         <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
                             Our Expertise in Cardiovascular Biology Research and Publication
                         </h2>
-                        <div className="hidden sm:block h-[2px] w-24 bg-[#0e3b32] mt-1" />
+                        <div className="hidden sm:block h-[2px] w-24 bg-[#0e3b32] mt-1 shrink-0" />
                     </div>
-                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                    <p className="text-gray-600 text-xs sm:text-sm">
                         At Pubrica, our cardiovascular biology specialists hold advanced degrees (PhD, MD, or MSc) with expertise in cardiovascular physiology, pathology, and molecular medicine. They possess extensive publication experience in reputed journals like{" "}
                         <a
                             href="https://www.ahajournals.org/journal/res"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-600 hover:underline font-medium italic"
+                            className="text-blue-600 "
                         >
                             Circulation Research
                         </a>,{" "}
                         <a
-                            href="https://www.jacc.org/"
+                            href="https://www.jacc.org/journal/jacc"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-600 hover:underline font-medium italic"
+                            className="text-blue-600 "
                         >
                             Journal of the American College of Cardiology
                         </a>, and{" "}
@@ -287,7 +288,7 @@ export default function CardiovascularBiologyPage() {
                             href="https://academic.oup.com/cardiovascres"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-600 hover:underline font-medium italic"
+                            className="text-blue-600 "
                         >
                             Cardiovascular Research
                         </a>. Our Core research and publication services include:
@@ -295,49 +296,11 @@ export default function CardiovascularBiologyPage() {
                 </div>
 
                 {/* Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {services.map((service, index) => {
-                        const IconComponent = service.icon;
-                        return (
-                            <Link
-                                key={index}
-                                href={service.href}
-                                className="relative h-[280px] rounded-lg overflow-hidden border border-gray-200 shadow-sm group block bg-white"
-                            >
-                                {/* Background Image */}
-                                <div className="absolute inset-0 w-full h-[65%]">
-                                    <Image
-                                        src={service.image}
-                                        alt={service.title}
-                                        fill
-                                        className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                    />
-                                </div>
-
-                                {/* Bottom Overlay Card */}
-                                <div className="absolute inset-x-0 bottom-0 bg-white border-t border-gray-100 p-4 transition-all duration-300 ease-in-out transform translate-y-[calc(100%-4.5rem)] group-hover:translate-y-0 group-hover:h-full shadow-lg flex flex-col items-center justify-center text-center">
-
-                                    {/* Floating Icon */}
-                                    <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center shrink-0 text-[#0e3b32] group-hover:top-4 transition-all duration-300">
-                                        <IconComponent className="w-5 h-5" />
-                                    </div>
-
-                                    {/* Card Title */}
-                                    <h3 className="text-sm font-bold text-[#0e3b32] mt-4 mb-2 group-hover:mt-12 transition-all duration-300">
-                                        {service.title}
-                                    </h3>
-
-                                    {/* Description */}
-                                    <p className="text-gray-600 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 px-2">
-                                        {service.description}
-                                    </p>
-
-                                </div>
-                            </Link>
-                        );
-                    })}
-                </div>
+                <CommonExpertiseCards
+                    title=""
+                    description=""
+                    cards={expertiseCards}
+                />
 
             </section>
 

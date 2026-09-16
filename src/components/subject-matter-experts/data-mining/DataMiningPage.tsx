@@ -18,6 +18,7 @@ import {
     CheckCircle2
 } from 'lucide-react';
 import HeroBanner from "@/components/common/HeroBanner";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function DataMiningPage() {
     const disciplines = [
@@ -108,66 +109,65 @@ export default function DataMiningPage() {
             />
 
             {/* SECTION 2: Hero Intro Content */}
-            <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <section className="pt-6 border-t border-slate-100">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="mb-5">
+                            <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+                                Empowering Data Mining research and practice through expert analysis, data interpretation, and publication support
+                            </h2>
+                        </div>
 
-                    {/* Left Text Content */}
-                    <div className="lg:col-span-7 space-y-4">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] leading-snug">
-                            Empowering Data Mining research and practice through expert analysis, data interpretation, and publication support
-                        </h2>
+                        <div className="flow-root">
+                            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                                <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0 mx-auto">
+                                    <Image
+                                        src="/images/subject-matter-experts/data-mining/Data-Mining.webp"
+                                        alt="Data mining analysis visual"
+                                        fill
+                                        priority
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 320px, 380px"
+                                    />
+                                </div>
+                            </div>
 
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Data Mining is an advanced field of analysis that helps identify patterns, trends, and actionable insights in the complex{" "}
-                            <Link href="/services/medical-data-collection" className="text-blue-600 font-medium no-underline hover:no-underline">
-                                data collection
-                            </Link>{" "}
-                            and processed by many diverse industries, as well as their associated decision-making methods based on statistical principles and machine learning methods, using both computer based techniques and manpower.
-                        </p>
+                            <div className="space-y-5 text-slate-700">
+                                <div className="space-y-5">
+                                    <p className="text-base leading-relaxed">
+                                        Data Mining is an advanced field of analysis that helps identify patterns, trends, and actionable insights in the complex{" "}
+                                        <Link href="/services/medical-data-collection" className="text-blue-600 no-underline">
+                                            data collection
+                                        </Link>{" "}
+                                        and processed by many diverse industries, as well as their associated decision-making methods based on statistical principles and machine learning methods, using both computer based techniques and manpower.
+                                    </p>
 
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Structured & unstructured data can be analysed through data mining research to identify hidden links between the various data types, improve existing processes, provide predictive models, and more. Major uses of data mining services include but are not limited to pattern recognition, anomaly detection, analysing customer behaviour, risk assessment, medical analytics, and creating real time decision support systems.
-                        </p>
+                                    <p className="text-base leading-relaxed">
+                                        Structured & unstructured data can be analysed through data mining research to identify hidden links between the various data types, improve existing processes, provide predictive models, and more. Major uses of data mining services include but are not limited to pattern recognition, anomaly detection, analysing customer behaviour, risk assessment, medical analytics, and creating real time decision support systems.
+                                    </p>
 
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            At Pubrica, we provide complete{" "}
-                            <Link
-                                href="/services/publication-support/"
-                                className="text-blue-600 font-medium no-underline hover:no-underline"
-                            >
-                                Publication support services
-                            </Link>{" "}
-                            related to Data Mining, enabling researchers industrial professionals to conduct high-quality, effective research and successfully publish through our full range of support from data analysis, interpretation, and manuscript writing.
-                        </p>
+                                    <p className="text-base leading-relaxed">
+                                        At Pubrica, we provide complete{" "}
+                                        <Link
+                                            href="/services/publication-support/poster-preparation/"
+                                            className="text-blue-600 no-underline"
+                                        >
+                                            Publication support services
+                                        </Link>{" "}
+                                        related to Data Mining, enabling researchers industrial professionals to conduct high-quality, effective research and successfully publish through our full range of support from data analysis, interpretation, and <Link href="/services/publication-support/journal-manuscript-formatting-services/"
+                                            className="text-blue-600 no-underline">manuscript writing</Link>.
+                                    </p>
 
-                        {/* CTA Button */}
-                        <div className="pt-4">
-                            <Link
-                                href="/order-now"
-                                className="inline-block bg-[#C4161C] hover:bg-[#a31217] text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
-                            >
-                                Get a Free Quote
-                            </Link>
+                                    {/* CTA Button */}
+                                    <div className="pt-2">
+                                        <GetFreeQuoteButton />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    {/* Right Circular Image */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
-                            <Image
-                                src="/images/subject-matter-experts/data-mining/Data-Mining.webp"
-                                alt="Data mining analysis visual"
-                                fill
-                                priority
-                                className="object-cover"
-                                sizes="(max-width: 768px) 320px, 380px"
-                            />
-                        </div>
-                    </div>
-
                 </div>
             </section>
-
             {/* SECTION 3: Core Disciplines Grid */}
             <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
                 <div className="max-w-6xl mx-auto">

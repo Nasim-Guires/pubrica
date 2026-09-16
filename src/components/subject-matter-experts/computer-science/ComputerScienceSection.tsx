@@ -2,6 +2,8 @@
 import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight } from 'lucide-react';
+import WhereAuthorsPublish from "@/components/common/WhereAuthorsPublish";
+import ExpertEditorsSection, { ExpertEditorItem } from "@/components/common/ExpertEditorsSection";
 
 const emergingTrendsData = [
     {
@@ -69,33 +71,54 @@ const areasOfStudy = [
     'Big Data Analytics'
 ];
 
-const editorsData = [
+const editorsData: ExpertEditorItem[] = [
     {
-        name: 'Dr. Kevin Marshall',
-        degree: 'PhD in Computer Science',
-        experience: '14 years of experience',
-        manuscripts: '180+ manuscripts edited',
-        countryFlag: '🇬🇧',
-        avatar: "/images/subject-matter-experts/computer-science/Dr.-Kevin-Marshall.webp"
+        name: "Dr. Kevin Marshall",
+        degree: "PhD in Computer Science",
+        experience: "14 years of experience",
+        manuscripts: "180+ manuscripts edited",
+        flag: "/images/country/gb.png",
+        avatar:
+            "/images/subject-matter-experts/computer-science/Dr.-Kevin-Marshall.webp",
     },
     {
-        name: 'Dr. Ananya Iyer',
-        degree: 'PhD in Artificial Intelligence',
-        experience: '12 years of experience',
-        manuscripts: '160+ manuscripts edited',
-        countryFlag: '🇺🇸',
-        avatar: "/images/subject-matter-experts/algorithm/Prof.-Michael-Anderson.webp"
+        name: "Dr. Ananya Iyer",
+        degree: "PhD in Artificial Intelligence",
+        experience: "12 years of experience",
+        manuscripts: "160+ manuscripts edited",
+        flag: "/images/country/us.png",
+        avatar:
+            "/images/subject-matter-experts/algorithm/Prof.-Michael-Anderson.webp",
     },
     {
-        name: 'Dr. David Kim',
-        degree: 'PhD in Data Science',
-        experience: '10 years of experience',
-        manuscripts: '140+ manuscripts edited',
-        countryFlag: '🇺🇸',
-        avatar: "/images/subject-matter-experts/animal-science/karrel.png"
-    }
+        name: "Dr. David Kim",
+        degree: "PhD in Data Science",
+        experience: "10 years of experience",
+        manuscripts: "140+ manuscripts edited",
+        flag: "/images/country/us.png",
+        avatar:
+            "/images/subject-matter-experts/animal-science/karrel.png",
+    },
 ];
-
+const whereAuthorsPublishData = {
+    title: "Where Our Authors Publish",
+    description:
+        "Our authors share Pubrica’s expert content in top-tier journals, conferences, and platforms, maximising and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity.",
+    publication: {
+        imageSrc:
+            "/images/subject-matter-experts/computer-science/Institute-of-Electrical-and-Electronics-Engineers.webp",
+        imageAlt:
+            "IEEE Journal of Electrical and Electronics Engineering Cover",
+        paperTitle:
+            "A Survey on Deep Learning Techniques for Image Recognition",
+        author: "John D. Smith",
+        journalName:
+            "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        publisher:
+            "Institute of Electrical and Electronics Engineers",
+        impactFactor: "24.3",
+    },
+};
 export default function ComputerScienceSection() {
     const [activeTab, setActiveTab] = useState(0);
 
@@ -224,111 +247,20 @@ export default function ComputerScienceSection() {
 
             {/* SECTION 4: Where Our Authors Publish */}
             <section className="max-w-6xl mx-auto space-y-6">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Where Our Authors Publish
-                    </h2>
-                    <div className="w-16 h-1 bg-[#0e3b32] mx-auto rounded-full"></div>
-                    <p className="text-gray-600 text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
-                        Our authors share Pubrica’s expert content in top-tier journals, conferences, and platforms, maximising and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity.
-                    </p>
-                </div>
-
-                {/* Featured Publication Card */}
-                <div className="bg-[#fafafa] border border-gray-200 rounded-lg p-6 sm:p-8 shadow-xs max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
-                    {/* Journal Cover Image */}
-                    <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
-                        <img
-                            src="/images/subject-matter-experts/computer-science/Institute-of-Electrical-and-Electronics-Engineers.webp"
-                            alt="IEEE Journal of Electrical and Electronics Engineering Cover"
-                            className="w-full h-auto object-cover"
-                        />
-                    </div>
-
-                    {/* Paper Details */}
-                    <div className="flex-1 space-y-3 text-gray-800 text-sm sm:text-base leading-relaxed">
-                        <p>
-                            <strong className="text-gray-900 font-bold">Paper Title: </strong>
-                            A Survey on Deep Learning Techniques for Image Recognition
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Author: </strong>
-                            John D. Smith
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Journal Name: </strong>
-                            IEEE Transactions on Pattern Analysis and Machine Intelligence
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Publisher: </strong>
-                            Institute of Electrical and Electronics Engineers
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Impact factor: </strong>
-                            24.3
-                        </p>
-                    </div>
-                </div>
+                <WhereAuthorsPublish
+                    title={whereAuthorsPublishData.title}
+                    description={whereAuthorsPublishData.description}
+                    publication={whereAuthorsPublishData.publication}
+                />
             </section>
 
             {/* SECTION 5: Our Expert Computer Science Editors */}
             <section className="max-w-6xl mx-auto space-y-8">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Our Expert Computer Science Editors
-                    </h2>
-                    <p className="text-gray-600 text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
-                        Pubrica’s team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialisation, they ensure excellence in every project they undertake.
-                    </p>
-                </div>
-
-                {/* Editors Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {editorsData.map((editor, index) => (
-                        <div
-                            key={index}
-                            className="bg-[#a3c3bb] rounded-xl p-6 text-gray-900 flex flex-col justify-between shadow-xs transition-transform duration-200 hover:-translate-y-1"
-                        >
-                            <div className="space-y-4">
-                                {/* Header with Avatar and Flags */}
-                                <div className="flex items-center space-x-3">
-                                    <div className="relative">
-                                        <img
-                                            src={editor.avatar}
-                                            alt={editor.name}
-                                            className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-xs"
-                                        />
-                                        <span className="absolute bottom-0 right-0 text-sm bg-white rounded-full px-1 shadow-xs">
-                                            {editor.countryFlag}
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-lg text-[#0a2923]">
-                                            {editor.name}
-                                        </h3>
-                                        <p className="text-xs sm:text-sm font-medium text-gray-800">
-                                            {editor.degree}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="w-full border-t border-[#88b1a8] my-2"></div>
-
-                                {/* Editor Stats */}
-                                <div className="space-y-2 text-xs sm:text-sm font-semibold text-gray-800">
-                                    <div className="flex items-center space-x-2">
-                                        <Briefcase className="w-4 h-4 text-[#0e3b32]" />
-                                        <span>{editor.experience}</span>
-                                    </div>
-                                    <div className="flex items-center space-x-2">
-                                        <FileText className="w-4 h-4 text-[#0e3b32]" />
-                                        <span>{editor.manuscripts}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <ExpertEditorsSection
+                    title="Our Expert Computer Science Editors"
+                    description="Pubrica’s team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialisation, they ensure excellence in every project they undertake."
+                    editors={editorsData}
+                />
             </section>
 
         </div>

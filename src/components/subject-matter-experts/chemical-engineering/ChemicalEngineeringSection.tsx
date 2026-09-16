@@ -14,6 +14,9 @@ import {
     Dna,
     Leaf
 } from 'lucide-react';
+import ApplicationsSection from '@/components/common/ApplicationsSection';
+import WhereAuthorsPublish from '@/components/common/WhereAuthorsPublish';
+import ExpertEditorsSection, { ExpertEditorItem } from '@/components/common/ExpertEditorsSection';
 
 const emergingTrendsData = [
     "AI & ML tools are ever more common in industry for operations enhancement, calculating when equipment will need service, and developing intelligent systems.",
@@ -28,78 +31,88 @@ const applicationsData = [
     {
         icon: Pill,
         title: "Pharmaceuticals",
-        iconSrc: "/images/subject-matter-experts/chemical-engineering/Reaction-Engineering.webp",
-        description: "developing and manufacturing drug and biopharmaceutical products"
+        iconSrc:
+            "/images/subject-matter-experts/chemical-engineering/Reaction-Engineering.webp",
+        desc: "developing and manufacturing drug and biopharmaceutical products",
     },
     {
         icon: Zap,
         title: "Energy",
-        iconSrc: "/images/subject-matter-experts/chemical-engineering/Separation-Processes.webp",
-        description: "developing fuel, alternative energy technologies, and storage"
+        iconSrc:
+            "/images/subject-matter-experts/chemical-engineering/Separation-Processes.webp",
+        desc: "developing fuel, alternative energy technologies, and storage",
     },
     {
         icon: Droplets,
         title: "Environmental engineering",
-        iconSrc: "/images/subject-matter-experts/chemical-engineering/Environmental-engineering.webp",
-        description: "waste treatment, water purification, and pollution"
+        iconSrc:
+            "/images/subject-matter-experts/chemical-engineering/Environmental-engineering.webp",
+        desc: "waste treatment, water purification, and pollution",
     },
     {
         icon: Utensils,
         title: "Food processing",
-        iconSrc: "/images/subject-matter-experts/chemical-engineering/Food-processing-1.webp",
-        description: "improving the process for producing and preserving food"
+        iconSrc:
+            "/images/subject-matter-experts/chemical-engineering/Food-processing-1.webp",
+        desc: "improving the process for producing and preserving food",
     },
     {
         icon: Layers,
         title: "Materials science",
-        iconSrc: "/images/subject-matter-experts/chemical-engineering/Materials-science.webp",
-        description: "developing new materials such as polymers and nanomaterials"
+        iconSrc:
+            "/images/subject-matter-experts/chemical-engineering/Materials-science.webp",
+        desc: "developing new materials such as polymers and nanomaterials",
     },
     {
         icon: Flame,
         title: "Petrochemical industry",
-        iconSrc: "/images/subject-matter-experts/chemical-engineering/Petrochemical-industry.webp",
-        description: "developing processes for refining crude oil, producing petrochemical products, and producing fuels"
+        iconSrc:
+            "/images/subject-matter-experts/chemical-engineering/Petrochemical-industry.webp",
+        desc: "developing processes for refining crude oil, producing petrochemical products, and producing fuels",
     },
     {
         icon: Dna,
         title: "Biotechnology",
-        iconSrc: "/images/subject-matter-experts/chemical-engineering/Biotechnology-1.webp",
-        description: "developing products such as enzymes and vaccines"
+        iconSrc:
+            "/images/subject-matter-experts/chemical-engineering/Biotechnology-1.webp",
+        desc: "developing products such as enzymes and vaccines",
     },
     {
         icon: Leaf,
         title: "Sustainability",
-        iconSrc: "/images/subject-matter-experts/chemical-engineering/Sustainability.webp",
-        description: "developing new processes that are sustainable and have a lower effect on the environment"
-    }
+        iconSrc:
+            "/images/subject-matter-experts/chemical-engineering/Sustainability.webp",
+        desc: "developing new processes that are sustainable and have a lower effect on the environment",
+    },
 ];
-
-const editorsData = [
+const editorsData: ExpertEditorItem[] = [
     {
-        name: 'Dr. Robert Williams',
-        degree: 'PhD in Chemical Engineering',
-        experience: '15 years of experience',
-        manuscripts: '200+ manuscripts edited',
-        countryFlag: '🇬🇧',
-        avatar: "/images/subject-matter-experts/chemical-engineering/Dr.-Robert-Williams.webp"
+        name: "Dr. Robert Williams",
+        degree: "PhD in Chemical Engineering",
+        experience: "15 years of experience",
+        manuscripts: "200+ manuscripts edited",
+        flag: "/images/country/gb.png",
+        avatar:
+            "/images/subject-matter-experts/chemical-engineering/Dr.-Robert-Williams.webp",
     },
     {
-        name: 'Dr. Anjali Rao',
-        degree: 'PhD in Process Engineering',
-        experience: '12 years of experience',
-        manuscripts: '160+ manuscripts edited',
-        countryFlag: '🇺🇸',
-        avatar: "/images/subject-matter-experts/chemical-engineering/Dr.-Anjali-Rao.webp"
+        name: "Dr. Anjali Rao",
+        degree: "PhD in Process Engineering",
+        experience: "12 years of experience",
+        manuscripts: "160+ manuscripts edited",
+        flag: "/images/country/us.png",
+        avatar:
+            "/images/subject-matter-experts/chemical-engineering/Dr.-Anjali-Rao.webp",
     },
     {
-        name: 'Dr. David Lee',
-        degree: 'PhD in Reaction Engineering',
-        experience: '11 years of experience',
-        manuscripts: '150+ manuscripts edited',
-        countryFlag: '🇺🇸',
-        avatar: "/images/subject-matter-experts/chemical-engineering/Dr.-David-Lee.webp"
-    }
+        name: "Dr. David Lee",
+        degree: "PhD in Reaction Engineering",
+        experience: "11 years of experience",
+        manuscripts: "150+ manuscripts edited",
+        flag: "/images/country/us.png",
+        avatar:
+            "/images/subject-matter-experts/chemical-engineering/Dr.-David-Lee.webp",
+    },
 ];
 
 export default function ChemicalEngineeringSection() {
@@ -149,173 +162,38 @@ export default function ChemicalEngineeringSection() {
 
             {/* SECTION 2: Applications of Chemical Engineering */}
             <section className="max-w-6xl mx-auto space-y-8">
-                <div className="space-y-3 text-left">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Applications of Chemical Engineering
-                    </h2>
-                    <p className="text-gray-600 text-sm sm:text-base">
-                        Chemical engineering is used to solve several problems in different industries, including:
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-
-                    {/* Left Column: Applications List with Outline Icons */}
-                    <div className="lg:col-span-6 space-y-5">
-                        {applicationsData.map((app, idx) => {
-                            const IconComponent = app.icon;
-                            return (
-                                <div key={idx} className="flex items-start space-x-3 text-gray-800">
-                                    <div className="p-1 text-gray-700 shrink-0 mt-0.5">
-                                        {app.iconSrc ? (
-                                            <span className="relative w-6 h-6">
-                                                <Image
-                                                    src={app.iconSrc}
-                                                    alt=""
-                                                    fill
-                                                    className="object-contain"
-                                                />
-                                            </span>
-                                        ) : (
-                                            <IconComponent className="w-6 h-6 stroke-[1.5]" />
-                                        )}
-                                    </div>
-                                    <div className="text-xs sm:text-sm leading-relaxed">
-                                        <strong className="font-bold text-gray-900">{app.title}: </strong>
-                                        <span className="text-gray-700">{app.description}</span>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-
-                    {/* Right Column: Lab Scientist Image */}
-                    <div className="lg:col-span-6 flex justify-center">
-                        <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
-                            <Image
-                                src="/images/subject-matter-experts/chemical-engineering/Applications-of-Chemical-Engineering.webp"
-                                alt="Chemical Engineering Research Laboratory"
-                                fill
-                                sizes="(max-width: 768px) 100vw, 320px"
-                                className="object-cover"
-                            />
-                        </div>
-                    </div>
-
-                </div>
+                <ApplicationsSection
+                    title="Applications of Chemical Engineering"
+                    description="Chemical engineering is used to solve several problems in different industries, including:"
+                    applications={applicationsData}
+                    imageSrc="/images/subject-matter-experts/chemical-engineering/Applications-of-Chemical-Engineering.webp"
+                    imageAlt="Applications of Chemical Engineering"
+                />
             </section>
 
             {/* SECTION 3: Where Our Authors Publish */}
-            <section className="max-w-6xl mx-auto space-y-6">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Where Our Authors Publish
-                    </h2>
-                    <div className="w-16 h-1 bg-[#0e3b32] mx-auto rounded-full"></div>
-                    <p className="text-gray-600 text-xs sm:text-sm max-w-4xl mx-auto leading-relaxed">
-                        Our authors share Pubrica’s expert content in top-tier journals, conferences, and platforms, maximising recognition and impact.
-                    </p>
-                </div>
-
-                {/* Featured Publication Card */}
-                <div className="bg-[#fafafa] border border-gray-200 rounded-lg p-6 sm:p-8 shadow-xs max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
-                    {/* Journal Cover Image */}
-                    <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
-                        <Image
-                            src="/images/subject-matter-experts/chemical-engineering/sample-works-14.webp"
-                            alt="Chemical Engineering Journal Cover"
-                            width={224}
-                            height={300}
-                            className="w-full h-auto object-cover"
-                        />
-                    </div>
-
-                    {/* Paper Details */}
-                    <div className="flex-1 space-y-3 text-gray-800 text-xs sm:text-sm leading-relaxed pt-2">
-                        <p>
-                            <strong className="text-gray-900 font-bold">Paper Title: </strong>
-                            Advances in Process Intensification for Chemical Manufacturing
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Author: </strong>
-                            John A. Smith, Laura Chen
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Journal Name: </strong>
-                            Chemical Engineering Journal
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Publisher: </strong>
-                            Elsevier
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Impact factor: </strong>
-                            15.1
-                        </p>
-                    </div>
-                </div>
-            </section>
-
+            <WhereAuthorsPublish
+                title="Where Our Authors Publish"
+                description="Our authors share Pubrica’s expert content in top-tier journals, conferences, and platforms, maximising recognition and impact."
+                publication={{
+                    imageSrc:
+                        "/images/subject-matter-experts/chemical-engineering/sample-works-14.webp",
+                    imageAlt: "Chemical Engineering Journal Cover",
+                    paperTitle:
+                        "Advances in Process Intensification for Chemical Manufacturing",
+                    author: "John A. Smith, Laura Chen",
+                    journalName: "Chemical Engineering Journal",
+                    publisher: "Elsevier",
+                    impactFactor: "15.1",
+                }}
+            />
             {/* SECTION 4: Our Expert Chemical Engineering Editors */}
             <section className="max-w-6xl mx-auto space-y-8">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Our Expert Chemical Engineering Editors
-                    </h2>
-                    <p className="text-gray-600 text-xs sm:text-sm max-w-4xl mx-auto leading-relaxed">
-                        Pubrica’s team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation.
-                    </p>
-                </div>
-
-                {/* Editors Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {editorsData.map((editor, index) => (
-                        <div
-                            key={index}
-                            className="bg-[#a3c3bb] rounded-xl p-6 text-gray-900 flex flex-col justify-between shadow-xs transition-transform duration-200 hover:-translate-y-1"
-                        >
-                            <div className="space-y-4">
-                                {/* Header with Avatar and Flags */}
-                                <div className="flex items-center space-x-3">
-                                    <div className="relative">
-                                        <Image
-                                            src={editor.avatar}
-                                            alt={editor.name}
-                                            width={56}
-                                            height={56}
-                                            className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-xs"
-                                        />
-                                        <span className="absolute bottom-0 right-0 text-xs bg-white rounded-full px-1 shadow-xs">
-                                            {editor.countryFlag}
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-base text-[#0a2923]">
-                                            {editor.name}
-                                        </h3>
-                                        <p className="text-xs font-medium text-gray-800">
-                                            {editor.degree}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="w-full border-t border-[#88b1a8] my-2"></div>
-
-                                {/* Editor Stats */}
-                                <div className="grid grid-cols-2 gap-2 text-xs font-semibold text-gray-800">
-                                    <div className="flex items-center space-x-1.5">
-                                        <Briefcase className="w-4 h-4 text-[#0e3b32] shrink-0" />
-                                        <span>{editor.experience}</span>
-                                    </div>
-                                    <div className="flex items-center space-x-1.5">
-                                        <FileText className="w-4 h-4 text-[#0e3b32] shrink-0" />
-                                        <span>{editor.manuscripts}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <ExpertEditorsSection
+                    title="Our Expert Chemical Engineering Editors"
+                    description="Pubrica’s team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation."
+                    editors={editorsData}
+                />
             </section>
 
         </div>

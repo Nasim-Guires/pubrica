@@ -24,6 +24,8 @@ import {
     Languages
 } from 'lucide-react';
 import HeroBanner from "@/components/common/HeroBanner";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import CommonExpertiseCards, { ExpertiseCardItem } from "@/components/common/CommonExpertiseCards";
 
 export default function ComputerSciencePage() {
     const disciplines = [
@@ -76,56 +78,63 @@ export default function ComputerSciencePage() {
             icon: Monitor
         }
     ];
-
-    const services = [
+    const expertiseCards: ExpertiseCardItem[] = [
         {
             title: "Research Services",
-            description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
-            icon: Search
+            desc: "Expert guidance on project planning, execution, and data analysis.",
+            href: "/services/research-services/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Research-Services.png",
+            icon: Search,
         },
         {
             title: "Editing & Proofreading",
-            description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
-            icon: CheckCircle
+            desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
+            href: "/services/editing-and-translation/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
+            icon: CheckCircle,
         },
         {
             title: "Data Collection for AI & ML",
-            description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
-            icon: UserCheck
+            desc: "Structured data gathering tailored for artificial intelligence and machine learning.",
+            href: "/services/medical-data-collection/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
+            icon: UserCheck,
         },
         {
             title: "Translation Services",
-            description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
-            icon: Languages
+            desc: "Accurate scientific translations to broaden the reach of your research.",
+            href: "/services/editing-and-translation/",
+            imageUrl: "/images/subject-matter-experts/animal-science/Translation-Services.png",
+            icon: Languages,
         },
         {
             title: "Artwork Editing",
-            description: "Professional visuals for your figures, tables, and graphical abstracts.",
-            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
-            icon: ImageIcon
+            desc: "Professional visuals for your figures, tables, and graphical abstracts.",
+            href: "/services/publication-support/art-work-preparation/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
+            icon: ImageIcon,
         },
         {
             title: "Journal Formatting",
-            description: "Tailored manuscript formatting to meet specific journal guidelines.",
-            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
-            icon: BookOpen
+            desc: "Tailored manuscript formatting to meet specific journal guidelines.",
+            href: "/services/publication-support/journal-manuscript-formatting-services/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
+            icon: BookOpen,
         },
         {
             title: "Graphical Abstract",
-            description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
-            icon: PenTool
+            desc: "Engaging summaries of your research in a single, informative graphic.",
+            href: "/services/research-impact/graphical-abstract/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
+            icon: PenTool,
         },
         {
             title: "Journal Selection",
-            description: "Strategic journal selection to maximize publication success.",
-            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
-            icon: FileText
-        }
+            desc: "Strategic journal selection to maximize publication success.",
+            href: "/services/publication-support/journal-selection/",
+            imageUrl: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
+            icon: FileText,
+        },
     ];
 
     return (
@@ -139,85 +148,84 @@ export default function ComputerSciencePage() {
             />
 
             {/* SECTION 2: Hero Intro Content */}
-            <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-
-                    {/* Left Text Content */}
-                    <div className="lg:col-span-7 space-y-4">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] leading-snug">
-                            Empowering Research Excellence in Computer Science through Expert Guidance
-                        </h2>
-
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Computer Science is a continually evolving and multi-faceted discipline concerned with the study of computation, algorithms, data structures, artificial intelligence, and software engineering. Pubrica offers specialists that assist researchers, academics, and professionals in the creation of high-quality research papers, manuscripts, and projects that improve technology, create new innovations, and assist with digital transformation.
-                        </p>
-
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            A team of computer scientists, software engineers, data scientists, and research editors at Pubrica provide comprehensive support throughout the research project and ensures that your completed work is in compliance with scientific, technical, and publication guidelines from top journals and institutions worldwide.
-                        </p>
-
-                        {/* Bulleted List for Areas of Expertise */}
-                        <div className="space-y-2 pt-2">
-                            <h3 className="font-bold text-gray-900 text-sm">
-                                Areas of Expertise in Computer Science are:
-                            </h3>
-                            <ul className="space-y-2 text-xs sm:text-sm text-gray-600">
-                                <li className="flex items-start gap-2">
-                                    <ArrowRight className="w-4 h-4 text-[#C4161C] shrink-0 mt-0.5" />
-                                    <span><strong className="text-gray-900">Data Science & Big Data Analytics:</strong> Use both disciplined and nondisciplined data to extract valuable information using statistical and computational methods.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <ArrowRight className="w-4 h-4 text-[#C4161C] shrink-0 mt-0.5" />
-                                    <span><strong className="text-gray-900">Cybersecurity & Information Security:</strong> Conduct research on encryption standards, network security protocols, threat detection methods and securing confidential data.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <ArrowRight className="w-4 h-4 text-[#C4161C] shrink-0 mt-0.5" />
-                                    <span><strong className="text-[#0284c7]">Artificial Intelligence & Machine Learning:</strong> Utilise algorithms and deep learning technology with the purpose of creating intelligent systems through the use of predictive analytics tools.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <ArrowRight className="w-4 h-4 text-[#C4161C] shrink-0 mt-0.5" />
-                                    <span><strong className="text-gray-900">Software Engineering:</strong> Create and maintain dependable and efficient software applications/systems.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <ArrowRight className="w-4 h-4 text-[#C4161C] shrink-0 mt-0.5" />
-                                    <span><strong className="text-gray-900">Cloud Computing & Distributed Systems:</strong> Manage large data storage capacities, virtual computing environments and supporting advanced computing environments.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <ArrowRight className="w-4 h-4 text-[#C4161C] shrink-0 mt-0.5" />
-                                    <span><strong className="text-gray-900">Computer Networks & Communication:</strong> Improve communication systems by enhancing state-of-the-art communication protocols.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <ArrowRight className="w-4 h-4 text-[#C4161C] shrink-0 mt-0.5" />
-                                    <span><strong className="text-gray-900">Human-Computer Interaction (HCI):</strong> Improve the usability of software applications/systems through the design of user interfaces.</span>
-                                </li>
-                            </ul>
+            <section className="pt-6 border-t border-slate-100">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="mb-5">
+                            <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+                                Empowering Research Excellence in Computer Science through Expert Guidance
+                            </h2>
                         </div>
 
-                        {/* CTA Button */}
-                        <div className="pt-4">
-                            <Link
-                                href="/order-now"
-                                className="inline-block bg-[#C4161C] hover:bg-[#a31217] text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
-                            >
-                                Get a Free Quote
-                            </Link>
+                        <div className="flow-root">
+                            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                                <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0 mx-auto">
+                                    <Image
+                                        src="/images/subject-matter-experts/computer-science/Empowering-Research-Excellence-in-Computer-Science-through-Expert-Guidance.webp"
+                                        alt="Computer Science and programming research visual"
+                                        fill
+                                        priority
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 320px, 380px"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="space-y-5 text-slate-700">
+                                <div className="space-y-5">
+                                    <p className="text-base leading-relaxed">
+                                        Computer Science is a continually evolving and multi-faceted discipline concerned with the study of computation, algorithms, data structures, artificial intelligence, and software engineering. Pubrica offers specialists that assist researchers, academics, and professionals in the creation of high-quality research papers, manuscripts, and projects that improve technology, create new innovations, and assist with digital transformation.
+                                    </p>
+
+                                    <p className="text-base leading-relaxed">
+                                        A team of computer scientists, software engineers, data scientists, and research editors at Pubrica provide comprehensive support throughout the research project and ensures that your completed work is in compliance with scientific, technical, and publication guidelines from top journals and institutions worldwide.
+                                    </p>
+
+                                    {/* Bulleted List for Areas of Expertise */}
+                                    <div className="space-y-3 pt-2">
+                                        <h3 className="font-bold text-slate-900 text-base">
+                                            Areas of Expertise in Computer Science are:
+                                        </h3>
+                                        <ul className="space-y-2.5 text-base text-slate-700">
+                                            <li className="flex items-start gap-2">
+                                                <ArrowRight className="w-4 h-4 text-[#C4161C] shrink-0 mt-1" />
+                                                <span><strong className="text-slate-900">Data Science & Big Data Analytics:</strong> Use both disciplined and nondisciplined data to extract valuable information using statistical and computational methods.</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <ArrowRight className="w-4 h-4 text-[#C4161C] shrink-0 mt-1" />
+                                                <span><strong className="text-slate-900">Cybersecurity & Information Security:</strong> Conduct research on encryption standards, network security protocols, threat detection methods and securing confidential data.</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <ArrowRight className="w-4 h-4 text-[#C4161C] shrink-0 mt-1" />
+                                                <span><Link href="/services/ai-ml-support/" className="text-blue-600 font-bold hover:text-blue-700 no-underline">Artificial Intelligence & Machine Learning:</Link> Utilise algorithms and deep learning technology with the purpose of creating intelligent systems through the use of predictive analytics tools.</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <ArrowRight className="w-4 h-4 text-[#C4161C] shrink-0 mt-1" />
+                                                <span><strong className="text-slate-900">Software Engineering:</strong> Create and maintain dependable and efficient software applications/systems.</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <ArrowRight className="w-4 h-4 text-[#C4161C] shrink-0 mt-1" />
+                                                <span><strong className="text-slate-900">Cloud Computing & Distributed Systems:</strong> Manage large data storage capacities, virtual computing environments and supporting advanced computing environments.</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <ArrowRight className="w-4 h-4 text-[#C4161C] shrink-0 mt-1" />
+                                                <span><strong className="text-slate-900">Computer Networks & Communication:</strong> Improve communication systems by enhancing state-of-the-art communication protocols.</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <ArrowRight className="w-4 h-4 text-[#C4161C] shrink-0 mt-1" />
+                                                <span><strong className="text-slate-900">Human-Computer Interaction (HCI):</strong> Improve the usability of software applications/systems through the design of user interfaces.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    {/* CTA Button */}
+                                    <div className="pt-2">
+                                        <GetFreeQuoteButton />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    {/* Right Circular Image */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
-                            <Image
-                                src="/images/subject-matter-experts/computer-science/Empowering-Research-Excellence-in-Computer-Science-through-Expert-Guidance.webp"
-                                alt="Computer Science and programming research visual"
-                                fill
-                                priority
-                                className="object-cover"
-                                sizes="(max-width: 768px) 320px, 380px"
-                            />
-                        </div>
-                    </div>
-
                 </div>
             </section>
 
@@ -239,61 +247,11 @@ export default function ComputerSciencePage() {
             {/* SECTION 4: Expertise Grid with Hover Slide Overlay */}
             <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 
-                <div className="text-center max-w-4xl mx-auto mb-12">
-                    <div className="flex items-center justify-center gap-4 mb-3">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
-                            Why Choose Pubrica for Computer Science Research and Publishing?
-                        </h2>
-                        <div className="hidden sm:block h-[2px] w-24 bg-[#0e3b32] mt-1" />
-                    </div>
-                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                        Pubrica is committed to advancing scientific knowledge in Computer Science through high-quality editorial support, research guidance, and publication assistance. Our team of experts ensures accuracy, clarity, and adherence to international research standards. We provide services such as:
-                    </p>
-                </div>
-
-                {/* Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {services.map((service, index) => {
-                        const IconComponent = service.icon;
-                        return (
-                            <article
-                                key={index}
-                                className="relative h-[260px] rounded-lg overflow-hidden border border-gray-200 shadow-sm group cursor-pointer"
-                            >
-                                {/* Background Image */}
-                                <div className="absolute inset-0 w-full h-full">
-                                    <Image
-                                        src={service.image}
-                                        alt={service.title}
-                                        fill
-                                        className="object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
-                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                    />
-                                </div>
-
-                                {/* Bottom White Overlay Card */}
-                                <div className="absolute inset-x-0 bottom-0 bg-white border-t border-gray-100 p-4 transition-transform duration-300 ease-in-out transform translate-y-[calc(100%-4rem)] group-hover:translate-y-0 shadow-lg flex flex-col items-center text-center">
-
-                                    {/* Floating Circle Icon */}
-                                    <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center shrink-0 text-[#0e3b32]">
-                                        <IconComponent className="w-5 h-5" />
-                                    </div>
-
-                                    {/* Card Title */}
-                                    <h3 className="text-sm font-bold text-[#0e3b32] mt-4 mb-2">
-                                        {service.title}
-                                    </h3>
-
-                                    {/* Hidden Description */}
-                                    <p className="text-gray-600 text-[11px] leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
-                                        {service.description}
-                                    </p>
-
-                                </div>
-                            </article>
-                        );
-                    })}
-                </div>
+                <CommonExpertiseCards
+                    title="Why Choose Pubrica for Computer Science Research and Publishing?"
+                    description="Pubrica is committed to advancing scientific knowledge in Computer Science through high-quality editorial support, research guidance, and publication assistance. Our team of experts ensures accuracy, clarity, and adherence to international research standards. We provide services such as:"
+                    cards={expertiseCards}
+                />
 
                 {/* Bottom Conclusion Text */}
                 <div className="mt-12 text-center max-w-4xl mx-auto">
