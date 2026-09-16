@@ -4,6 +4,10 @@
 import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight, Plus, Minus } from 'lucide-react';
+import EmergingTrendsSection, { EmergingTrendItem } from "@/components/common/EmergingTrendsSection";
+import ApplicationsSection from "@/components/common/ApplicationsSection";
+import WhereAuthorsPublish, { AuthorPublicationData } from "@/components/common/WhereAuthorsPublish";
+import ExpertEditorsSection, { ExpertEditorItem } from "@/components/common/ExpertEditorsSection";
 
 const trustItemsData = [
     {
@@ -28,60 +32,94 @@ const trustItemsData = [
     }
 ];
 
-const emergingTrendsData = [
+const emergingTrendsData: EmergingTrendItem[] = [
     {
-        id: 'developments-in-dna-profiling',
-        title: 'Developments in DNA Profiling',
-        description: 'New technologies, such as Next-Generation Sequencing (NGS), are providing significant advancements for analysing degraded samples, in addition to other applications of DNA analysis.'
+        id: "developments-in-dna-profiling",
+        title: "Developments in DNA Profiling",
+        description:
+            "New technologies, such as Next-Generation Sequencing (NGS), are providing significant advancements for analysing degraded samples, in addition to other applications of DNA analysis.",
     },
     {
-        id: 'digital-and-cyber-forensics',
-        title: 'Digital and Cyber Forensics',
-        description: 'The growing emphasis on recovering and analysing digital evidence from computers and smartphones has become increasingly important in the fight against Cybercrime.'
+        id: "digital-and-cyber-forensics",
+        title: "Digital and Cyber Forensics",
+        description:
+            "The growing emphasis on recovering and analysing digital evidence from computers and smartphones has become increasingly important in the fight against Cybercrime.",
     },
     {
-        id: 'forensic-genomics',
-        title: 'Forensic Genomics',
-        description: 'By utilizing genomic data outside of traditional DNA profiling techniques, investigators can increase their ability to identify victims and solve long-cold cases.'
+        id: "forensic-genomics",
+        title: "Forensic Genomics",
+        description:
+            "By utilizing genomic data outside of traditional DNA profiling techniques, investigators can increase their ability to identify victims and solve long-cold cases.",
     },
     {
-        id: '3d-forensic-imaging',
-        title: '3D Forensic Imaging',
-        description: 'Creating detailed digital reconstructions of crime scenes is allowing for better visual representation of evidence in criminal investigations and courtroom proceedings.'
+        id: "3d-forensic-imaging",
+        title: "3D Forensic Imaging",
+        description:
+            "Creating detailed digital reconstructions of crime scenes is allowing for better visual representation of evidence in criminal investigations and courtroom proceedings.",
     },
     {
-        id: 'environmental-forensic-science',
-        title: 'Environmental Forensic Science',
-        description: 'The study of pollutants contaminants in the environment has become more common as a means of providing legal support to environmental damage claims.'
+        id: "environmental-forensic-science",
+        title: "Environmental Forensic Science",
+        description:
+            "The study of pollutants contaminants in the environment has become more common as a means of providing legal support to environmental damage claims.",
     },
     {
-        id: 'forensic-psychology',
-        title: 'Forensic Psychology',
-        description: 'There is an increasing use of psychological evaluations as an approach to understanding criminal behaviour and assisting law enforcement during an investigation.'
-    }
+        id: "forensic-psychology",
+        title: "Forensic Psychology",
+        description:
+            "There is an increasing use of psychological evaluations as an approach to understanding criminal behaviour and assisting law enforcement during an investigation.",
+    },
 ];
 
 const applicationsData = [
     {
-        title: 'Criminal Investigations',
-        description: 'DNA, fingerprints, and ballistics are utilized to help identify suspects and to solve crimes.'
+        title: "Criminal Investigations",
+        desc: "DNA, fingerprints, and ballistics are utilized to help identify suspects and to solve crimes.",
+        iconSrc:
+            "/images/subject-matter-experts/forensics/Criminal-Investigations.webp",
     },
     {
-        title: 'Forensic Pathology',
-        description: '(through autopsy) is used to ascertain the cause of death.'
+        title: "Forensic Pathology",
+        desc: '(through autopsy) is used to ascertain the "cause of death".',
+        iconSrc:
+            "/images/subject-matter-experts/forensics/Forensic-Pathology-1.webp",
     },
     {
-        title: 'Digital Forensics',
-        description: 'Cyber crimes can be investigated via the examination of electronic information.'
+        title: "Digital Forensics",
+        desc: "Cyber-crimes can be investigated via the examination of electronic information.",
+        iconSrc:
+            "/images/subject-matter-experts/forensics/Digital-Forensics-1.webp",
     },
     {
-        title: 'Forensic Toxicology',
-        description: 'Biological specimens can be tested for the presence of poisons or drugs.'
+        title: "Forensic Toxicology",
+        desc: "Biological specimens can be tested for the presence of poisons or drugs.",
+        iconSrc:
+            "/images/subject-matter-experts/forensics/Forensic-Toxicology-1.webp",
     },
     {
-        title: 'Forensic Anthropology',
-        description: 'Can be used to identify human remains and estimate time since death.'
-    }
+        title: "Forensic Anthropology",
+        desc: "Can be used to identify human remains and estimate time since death.",
+        iconSrc:
+            "/images/subject-matter-experts/forensics/Forensic-Anthropology.webp",
+    },
+    {
+        title: "Forensic Psychology",
+        desc: "Looks at the mental state and the likely behaviour of a criminal.",
+        iconSrc:
+            "/images/subject-matter-experts/forensics/Forensic-psychology.webp",
+    },
+    {
+        title: "Forensic Odontology",
+        desc: "Forensic odontology uses dental records to identify victims and suspects.",
+        iconSrc:
+            "/images/subject-matter-experts/forensics/Forensic-Odontology.webp",
+    },
+    {
+        title: "Environmental Forensics",
+        desc: "Gives investigators the ability to determine the cause of pollution and other environmental crimes.",
+        iconSrc:
+            "/images/subject-matter-experts/forensics/Environmental-Forensics.webp",
+    },
 ];
 
 const areasOfStudyData = [
@@ -99,32 +137,46 @@ const areasOfStudyData = [
     { title: 'Forensic Nursing and Clinical Practice' }
 ];
 
-const editorsData = [
+const editorsData: ExpertEditorItem[] = [
     {
-        name: 'Dr. Emily Carter',
-        degree: 'PhD in Forensic Toxicology',
-        experience: '15 years of experience',
-        manuscripts: '200+ manuscripts edited',
-        countryFlag: '🇬🇧',
-        avatar: "/images/subject-matter-experts/biomonitoring/Dr.-Emily-Carter-1.webp"
+        name: "Dr. Emily Carter",
+        degree: "PhD in Forensic Toxicology",
+        experience: "15 years of experience",
+        manuscripts: "200+ manuscripts edited",
+        flag: "/images/country/gb.png",
+        avatar:
+            "/images/subject-matter-experts/biomonitoring/Dr.-Emily-Carter-1.webp",
     },
     {
-        name: 'Dr. Rajesh Nair',
-        degree: 'PhD in Forensic Biochemistry',
-        experience: '12 years of experience',
-        manuscripts: '170+ manuscripts edited',
-        countryFlag: '🇮🇳',
-        avatar: "/images/subject-matter-experts/biomonitoring/Dr.-Rajesh-Nair.webp"
+        name: "Dr. Rajesh Nair",
+        degree: "PhD in Forensic Biochemistry",
+        experience: "12 years of experience",
+        manuscripts: "170+ manuscripts edited",
+        flag: "/images/country/us.png",
+        avatar:
+            "/images/subject-matter-experts/biomonitoring/Dr.-Rajesh-Nair.webp",
     },
     {
-        name: 'Dr. Laura Mitchell',
-        degree: 'PhD in Forensic Pathology',
-        experience: '16 years of experience',
-        manuscripts: '210+ manuscripts edited',
-        countryFlag: '🇺🇸',
-        avatar: '/images/subject-matter-experts/forensics/Forensic.webp'
-    }
+        name: "Dr. Laura Mitchell",
+        degree: "PhD in Forensic Pathology",
+        experience: "16 years of experience",
+        manuscripts: "210+ manuscripts edited",
+        flag: "/images/country/us.png",
+        avatar:
+            "/images/subject-matter-experts/forensics/—-Dr.-Laura-Mitchell-1.webp",
+    },
 ];
+
+const publication: AuthorPublicationData = {
+    imageSrc:
+        "/images/subject-matter-experts/forensics/sample-works-13-2.webp",
+    imageAlt: "Journal of Forensic and Legal Medicine Cover",
+    paperTitle: "Postmortem microbiome dynamics: Review of forensic microbial clock",
+    author: "Kalanjali Y, Arjun Rao Isukapatla",
+    publisher: "Elsevier",
+    journalName: "Journal of Forensic and Legal Medicine",
+    impactFactor: "1.2 (2014)",
+};
 
 export default function ForensicsSection() {
     const [openTrustIndex, setOpenTrustIndex] = useState<number | null>(null);
@@ -141,199 +193,41 @@ export default function ForensicsSection() {
 
             {/* SECTION: Emerging Trends in Forensic */}
             <section className="max-w-6xl mx-auto space-y-6">
-                <div className="space-y-3 text-left">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Emerging Trends in Forensic
-                    </h2>
-                    <p className="text-gray-700 text-base sm:text-lg max-w-5xl leading-relaxed">
-                        The area of forensic science is continually adapting and growing due to the introduction of emerging technologies and new methods of collecting, analysing and interpreting evidence. Some examples are as follow.
-                    </p>
-                </div>
-
-                {/* Tab Buttons Container */}
-                <div className="bg-[#f7f8f8] border border-gray-200 rounded-lg p-1 sm:p-2">
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-1 border-b border-gray-200">
-                        {emergingTrendsData.map((tab, idx) => {
-                            const isActive = activeTrendTab === idx;
-                            return (
-                                <button
-                                    key={tab.id}
-                                    onClick={() => setActiveTrendTab(idx)}
-                                    className={`px-3 py-3 text-xs sm:text-sm font-semibold transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center text-center ${isActive
-                                        ? 'bg-[#0e3b32] text-white shadow-sm'
-                                        : 'bg-[#eef2f1] text-gray-700 hover:bg-gray-250'
-                                        }`}
-                                >
-                                    {tab.title}
-                                </button>
-                            );
-                        })}
-                    </div>
-
-                    {/* Active Tab Content Box */}
-                    <div className="p-6 sm:p-8 bg-white border border-t-0 border-gray-200 mt-0 rounded-b-md shadow-xs">
-                        <h3 className="text-xl font-bold text-[#0e3b32] mb-3">
-                            {emergingTrendsData[activeTrendTab].title}
-                        </h3>
-                        <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                            {emergingTrendsData[activeTrendTab].description}
-                        </p>
-                    </div>
-                </div>
-
-                <p className="text-gray-700 text-base sm:text-lg leading-relaxed pt-4">
-                    AI, DNA advancements, and digital forensics are revolutionizing forensics. 3D imaging, drones, and better toxicology tests aid investigations, while forensic psychology and environmental forensics continue to grow.
-                </p>
+                <EmergingTrendsSection
+                    title="Emerging Trends in Forensic"
+                    description="The area of forensic science is continually adapting and growing due to the introduction of emerging technologies and new methods of collecting, analysing and interpreting evidence. Some examples are as follow."
+                    trends={emergingTrendsData}
+                    footerText=""
+                />
             </section>
 
             {/* SECTION: Applications of Forensic */}
             <section className="max-w-6xl mx-auto space-y-6">
-                <div className="space-y-3 text-left">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Applications of Forensic
-                    </h2>
-                    <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                        Forensic science is vital in solving crimes and supporting legal cases. Key applications include:
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div className="space-y-4">
-                        {applicationsData.map((app, index) => (
-                            <div key={index} className="flex items-start space-x-3">
-                                <div className="mt-1 text-[#0e3b32]">
-                                    <ChevronRight className="w-5 h-5 shrink-0" />
-                                </div>
-                                <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                                    <strong className="text-gray-900 font-bold">{app.title}: </strong>
-                                    {app.description}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <Image
-                            src="/images/subject-matter-experts/forensics/Applications-of-Forensic.webp"
-                            alt="Forensic laboratory setup"
-                            fill
-                            sizes="(max-width: 768px) 100vw, 320px"
-                            className="object-cover"
-                            priority={false}
-                        />
-                    </div>
-                </div>
+                <ApplicationsSection
+                    title="Applications of Forensic"
+                    description="Forensic science is vital in solving crimes and supporting legal cases. Key applications include:"
+                    applications={applicationsData}
+                    imageSrc="/images/subject-matter-experts/forensics/Applications-of-Forensic.webp"
+                    imageAlt="Applications of Forensic"
+                />
             </section>
 
             {/* SECTION: Where Our Authors Publish */}
             <section className="max-w-6xl mx-auto space-y-6">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Where Our Authors Publish
-                    </h2>
-                    <div className="w-16 h-1 bg-[#0e3b32] mx-auto rounded-full"></div>
-                    <p className="text-gray-600 text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
-                        Our authors share Forensic publications in top-tier journals, conferences, and platforms, maximizing and amplifying their recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity.
-                    </p>
-                </div>
-
-                {/* Featured Publication Card */}
-                <div className="bg-[#fafafa] border border-gray-200 rounded-lg p-6 sm:p-8 shadow-xs max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
-                    {/* Journal Cover Image */}
-                    <div className="relative w-48 sm:w-56 aspect-[3/4] shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
-                        <Image
-                            src="/images/subject-matter-experts/forensics/sample-works-13-2.webp"
-                            alt="Journal of Forensic and Legal Medicine Cover"
-                            fill
-                            sizes="(max-width: 640px) 192px, 224px"
-                            className="object-cover"
-                        />
-                    </div>
-
-                    {/* Paper Details */}
-                    <div className="flex-1 space-y-3 text-gray-800 text-sm sm:text-base leading-relaxed">
-                        <p>
-                            <strong className="text-gray-900 font-bold">Paper Title: </strong>
-                            Postmortem microbiome dynamics: Review of forensic microbial clock
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Author: </strong>
-                            Kalanjali Y, Arjun Rao Isukapatla
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Journal Name: </strong>
-                            Journal of Forensic and Legal Medicine
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Publisher: </strong>
-                            Elsevier
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Impact factor: </strong>
-                            1.2 (2014)
-                        </p>
-                    </div>
-                </div>
+                <WhereAuthorsPublish
+                    title="Where Our Authors Publish"
+                    description="Our authors share Forensic publications in top-tier journals, conferences, and platforms, maximizing and amplifying their recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+                    publication={publication}
+                />
             </section>
 
             {/* SECTION: Our Expert Forensic Editors */}
             <section className="max-w-6xl mx-auto space-y-8">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Our Expert Forensic Editors
-                    </h2>
-                    <p className="text-gray-600 text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
-                        Pubrica&apos;s team of Forensic experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake.
-                    </p>
-                </div>
-
-                {/* Editors Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {editorsData.map((editor, index) => (
-                        <div
-                            key={index}
-                            className="bg-[#a3c3bb] rounded-xl p-6 text-gray-900 flex flex-col justify-between shadow-xs transition-transform duration-200 hover:-translate-y-1"
-                        >
-                            <div className="space-y-4">
-                                {/* Header with Avatar and Flags */}
-                                <div className="flex items-center space-x-3">
-                                    <div className="relative">
-                                        <img
-                                            src={editor.avatar}
-                                            alt={editor.name}
-                                            className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-xs"
-                                        />
-                                        <span className="absolute bottom-0 right-0 text-sm bg-white rounded-full px-1 shadow-xs">
-                                            {editor.countryFlag}
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-lg text-[#0a2923]">
-                                            {editor.name}
-                                        </h3>
-                                        <p className="text-xs sm:text-sm font-medium text-gray-800">
-                                            {editor.degree}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="w-full border-t border-[#88b1a8] my-2"></div>
-
-                                {/* Editor Stats */}
-                                <div className="space-y-2 text-xs sm:text-sm font-semibold text-gray-800">
-                                    <div className="flex items-center space-x-2">
-                                        <Briefcase className="w-4 h-4 text-[#0e3b32]" />
-                                        <span>{editor.experience}</span>
-                                    </div>
-                                    <div className="flex items-center space-x-2">
-                                        <FileText className="w-4 h-4 text-[#0e3b32]" />
-                                        <span>{editor.manuscripts}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <ExpertEditorsSection
+                    title="Our Expert Forensic Editors"
+                    description="Pubrica's team of Forensic experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake."
+                    editors={editorsData}
+                />
             </section>
 
         </div>

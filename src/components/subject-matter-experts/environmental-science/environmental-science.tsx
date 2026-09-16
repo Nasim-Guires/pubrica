@@ -17,6 +17,8 @@ import {
     Cpu
 } from 'lucide-react';
 import HeroBanner from "@/components/common/HeroBanner";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import CommonExpertiseCards from "@/components/common/CommonExpertiseCards";
 
 export default function EnvironmentalSciencePage() {
     const disciplines = [
@@ -52,63 +54,63 @@ export default function EnvironmentalSciencePage() {
         }
     ];
 
-    const services = [
+    const expertiseCards = [
         {
             title: "Journal Formatting",
-            description: "Tailored manuscript formatting to meet specific journal guidelines",
-            image: "/images/subject-matter-experts/agriculture/Journal-Formatting.webp",
+            desc: "Tailored manuscript formatting to meet specific journal guidelines",
+            href: "/services/publication-support/journal-manuscript-formatting-services",
+            imageUrl: "/images/subject-matter-experts/agriculture/Journal-Formatting.webp",
             icon: FileText,
-            href: "/services/publication-support/journal-manuscript-formatting-services"
         },
         {
             title: "Journal Selection",
-            description: "Guidance on selecting the most appropriate journals for your research.",
-            image: "/images/subject-matter-experts/agriculture/Journal-Selection.webp",
+            desc: "Guidance on selecting the most appropriate journals for your research.",
+            href: "/services/publication-support/journal-selection",
+            imageUrl: "/images/subject-matter-experts/agriculture/Journal-Selection.webp",
             icon: PenTool,
-            href: "/services/publication-support/journal-selection"
         },
         {
             title: "Peer-Review",
-            description: "Comprehensive review to refine and validate your research pre-submission",
-            image: "/images/subject-matter-experts/agriculture/Responding-to-Reviewers.webp",
+            desc: "Comprehensive review to refine and validate your research pre-submission",
+            href: "/services/publication-support/peer-review-pre-submission",
+            imageUrl: "/images/subject-matter-experts/agriculture/Responding-to-Reviewers.webp",
             icon: Cpu,
-            href: "/services/publication-support/peer-review-pre-submission"
         },
         {
             title: "Scientific Writing",
-            description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
+            desc: "Crafting clear, precise, and publication-ready research manuscripts.",
+            href: "/services/research-services/scientific-writing",
+            imageUrl: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: FileText,
-            href: "/services/research-services/scientific-writing"
         },
         {
             title: "Responding to Reviewers",
-            description: "Assistance in addressing reviewer comments to enhance your manuscript's chances of acceptance.",
-            image: "/images/subject-matter-experts/agriculture/Biostatistical-Programming.webp",
+            desc: "Assistance in addressing reviewer comments to enhance your manuscript's chances of acceptance.",
+            href: "/services/publication-support/responding-to-reviewers",
+            imageUrl: "/images/subject-matter-experts/agriculture/Biostatistical-Programming.webp",
             icon: FileSearch,
-            href: "/services/publication-support/responding-to-reviewers"
         },
         {
             title: "Literature Review and Gap",
-            description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
+            desc: "Identifying research gaps and providing comprehensive literature reviews.",
+            href: "/services/research-services/literature-review-and-gap",
+            imageUrl: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: Search,
-            href: "/services/research-services/literature-review-and-gap"
         },
         {
             title: "Editing & Proofreading",
-            description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "/images/subject-matter-experts/agriculture/Editing-Proofreading.webp",
+            desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
+            href: "/services/editing-and-translation",
+            imageUrl: "/images/subject-matter-experts/agriculture/Editing-Proofreading.webp",
             icon: PenTool,
-            href: "/services/editing-and-translation"
         },
         {
             title: "Journal Submission",
-            description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
+            desc: "Helping select the right journals and manage the submission process seamlessly.",
+            href: "/services/publication-support/journal-submission",
+            imageUrl: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
             icon: Layers,
-            href: "/services/publication-support/journal-submission"
-        }
+        },
     ];
 
     return (
@@ -122,81 +124,83 @@ export default function EnvironmentalSciencePage() {
             />
 
             {/* SECTION 2: Hero Intro Content */}
-            <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-
-                    {/* Left Text Content */}
-                    <div className="lg:col-span-7 space-y-4">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] leading-snug">
-                            Environmental Science: Shaping Sustainable Agriculture Through Innovation and Research
-                        </h2>
-
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Environmental Science is a discipline concerned with the development and use of scientific principles to address issues related to our environment. Environmental Scientists apply their knowledge of how our environment functions and how it has been impacted by human activity to create solutions that will enable sustainable development in both the Urban & Rural Areas.
-                        </p>
-
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            <Link href="/services/research-services/literature-review-and-gap/" className="text-blue-600 no-underline hover:no-underline">Environmental Science</Link> will be very important in addressing Climate Change, Resource Conservation, and Biodiversity. Recent advances in Environmental Science will also drive the advancement and sustainability of Agriculture, Manufacturing, and Urban Planning to ensure the continued health of our planet for future generations.
-                        </p>
-
-                        <div className="pt-2">
-                            <h3 className="text-base font-bold text-[#0e3b32] mb-2">
-                                Key Farming Techniques in Environmental Science
-                            </h3>
-                            <p className="text-xs text-gray-500 mb-2">Methods of Growing Food Using Environmentally Friendly Ways</p>
-                            <ul className="space-y-1.5 text-xs sm:text-sm text-gray-700">
-                                <li className="flex items-start">
-                                    <span className="text-[#C4161C] font-bold mr-2">→</span>
-                                    <span><strong>Sustainable Agriculture:</strong> Utilization of agricultural practices including crop rotation and agroforestry that support both soil and biological diversity but still achieve the maximum yield of crops.</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="text-[#C4161C] font-bold mr-2">→</span>
-                                    <span><strong>Precision Farming:</strong> The use of modern technology including satellite positioning systems (GPS) and drones to increase farming efficiency, creating least amount of waste and highest amount of water efficiency.</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="text-[#C4161C] font-bold mr-2">→</span>
-                                    <span><strong>Organic Agriculture:</strong> Utilizes natural techniques for soil improvement, reduction of chemical inputs and increase in the sustainability of food production.</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="text-[#C4161C] font-bold mr-2">→</span>
-                                    <span><strong>Agroecology:</strong> The integration of ecological principles in agriculture producing the least amount of external assistance to enhance ecosystem health.</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="text-[#C4161C] font-bold mr-2">→</span>
-                                    <span><strong>Vertical Farming:</strong> Cultivation of crops inside stacked layers, which utilizes less land and water use; these farms are mainly located in cities.</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="text-[#C4161C] font-bold mr-2">→</span>
-                                    <span><strong>Biotechnological Agriculture:</strong> The modification of crops through genetics to develop disease resistant and high yield crops has significantly lowered the number of pesticides applied.</span>
-                                </li>
-                            </ul>
+            <section className="pt-6 border-t border-slate-100">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="mb-5">
+                            <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+                                Environmental Science: Shaping Sustainable Agriculture Through Innovation and Research
+                            </h2>
                         </div>
 
-                        {/* CTA Button */}
-                        <div className="pt-4">
-                            <Link
-                                href="/order-now"
-                                className="inline-block bg-[#C4161C] hover:bg-[#a31217] text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
-                            >
-                                Get a Free Quote
-                            </Link>
+                        <div className="flow-root">
+                            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                                <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0 mx-auto">
+                                    <Image
+                                        src="/images/subject-matter-experts/environmental-science/Environmental-Science.webp"
+                                        alt="Environmental science sustainability visual"
+                                        fill
+                                        priority
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 320px, 380px"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="space-y-5 text-slate-700">
+                                <div className="space-y-5">
+                                    <p className="text-base leading-relaxed">
+                                        Environmental Science is a discipline concerned with the development and use of scientific principles to address issues related to our environment. Environmental Scientists apply their knowledge of how our environment functions and how it has been impacted by human activity to create solutions that will enable sustainable development in both the Urban & Rural Areas.
+                                    </p>
+
+                                    <p className="text-base leading-relaxed">
+                                        <Link href="/subject-matter-experts/environmental-science/" className="text-blue-600 no-underline">
+                                            Environmental Science
+                                        </Link>{" "}
+                                        will be very important in addressing Climate Change, Resource Conservation, and Biodiversity. Recent advances in Environmental Science will also drive the advancement and sustainability of Agriculture, Manufacturing, and Urban Planning to ensure the continued health of our planet for future generations.
+                                    </p>
+
+                                    <div className="pt-2">
+                                        <h3 className="text-base font-bold text-[#0c2e3a] mb-2">
+                                            Key Farming Techniques in Environmental Science
+                                        </h3>
+                                        <p className="text-xs text-gray-500 mb-2">Methods of Growing Food Using Environmentally Friendly Ways</p>
+                                        <ul className="space-y-1.5 text-xs sm:text-sm text-gray-700">
+                                            <li className="flex items-start">
+                                                <span className="text-[#C4161C] font-bold mr-2">→</span>
+                                                <span><strong>Sustainable Agriculture:</strong> Utilization of agricultural practices including crop rotation and agroforestry that support both soil and biological diversity but still achieve the maximum yield of crops.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-[#C4161C] font-bold mr-2">→</span>
+                                                <span><strong>Precision Farming:</strong> The use of modern technology including satellite positioning systems (GPS) and drones to increase farming efficiency, creating least amount of waste and highest amount of water efficiency.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-[#C4161C] font-bold mr-2">→</span>
+                                                <span><strong>Organic Agriculture:</strong> Utilizes natural techniques for soil improvement, reduction of chemical inputs and increase in the sustainability of food production.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-[#C4161C] font-bold mr-2">→</span>
+                                                <span><strong>Agroecology:</strong> The integration of ecological principles in agriculture producing the least amount of external assistance to enhance ecosystem health.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-[#C4161C] font-bold mr-2">→</span>
+                                                <span><strong>Vertical Farming:</strong> Cultivation of crops inside stacked layers, which utilizes less land and water use; these farms are mainly located in cities.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-[#C4161C] font-bold mr-2">→</span>
+                                                <span><strong>Biotechnological Agriculture:</strong> The modification of crops through genetics to develop disease resistant and high yield crops has significantly lowered the number of pesticides applied.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    {/* CTA Button */}
+                                    <div className="pt-2">
+                                        <GetFreeQuoteButton />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    {/* Right Circular Image */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
-                            <Image
-                                src="/images/subject-matter-experts/environmental-science/Environmental-Science.webp"
-                                alt="Environmental science sustainability visual"
-                                fill
-                                priority
-                                className="object-cover"
-                                sizes="(max-width: 768px) 320px, 380px"
-                            />
-                        </div>
-                    </div>
-
                 </div>
             </section>
 
@@ -221,62 +225,11 @@ export default function EnvironmentalSciencePage() {
             {/* SECTION 4: Expertise Grid */}
             <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 
-                <div className="text-center max-w-4xl mx-auto mb-12">
-                    <div className="flex items-center justify-center gap-4 mb-3">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
-                            Why Choose Pubrica for Environmental Science Research and Publishing?
-                        </h2>
-                        <div className="hidden sm:block h-[2px] w-24 bg-[#0e3b32] mt-1" />
-                    </div>
-                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                        We have superior expertise in the field of environmental science and publishing. Our extensive knowledge enables us to support researchers, academic institutions and businesses to produce high-quality publications and impactful scientific research. The following are reasons to work with us:
-                    </p>
-                </div>
-
-                {/* Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {services.map((service, index) => {
-                        const IconComponent = service.icon;
-                        return (
-                            <Link
-                                key={index}
-                                href={service.href}
-                                className="relative h-[280px] rounded-lg overflow-hidden border border-gray-200 shadow-sm group block bg-white"
-                            >
-                                {/* Background Image */}
-                                <div className="absolute inset-0 w-full h-[65%]">
-                                    <Image
-                                        src={service.image}
-                                        alt={service.title}
-                                        fill
-                                        className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                    />
-                                </div>
-
-                                {/* Bottom Overlay Card */}
-                                <div className="absolute inset-x-0 bottom-0 bg-white border-t border-gray-100 p-4 transition-all duration-300 ease-in-out transform translate-y-[calc(100%-4.5rem)] group-hover:translate-y-0 group-hover:h-full shadow-lg flex flex-col items-center justify-center text-center">
-
-                                    {/* Floating Icon */}
-                                    <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center shrink-0 text-[#0e3b32] group-hover:top-4 transition-all duration-300">
-                                        <IconComponent className="w-5 h-5" />
-                                    </div>
-
-                                    {/* Card Title */}
-                                    <h3 className="text-sm font-bold text-[#0e3b32] mt-4 mb-2 group-hover:mt-12 transition-all duration-300">
-                                        {service.title}
-                                    </h3>
-
-                                    {/* Description */}
-                                    <p className="text-gray-600 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 px-2">
-                                        {service.description}
-                                    </p>
-
-                                </div>
-                            </Link>
-                        );
-                    })}
-                </div>
+                <CommonExpertiseCards
+                    title="Why Choose Pubrica for Environmental Science Research and Publishing?"
+                    description="We have superior expertise in the field of environmental science and publishing. Our extensive knowledge enables us to support researchers, academic institutions and businesses to produce high-quality publications and impactful scientific research. The following are reasons to work with us:"
+                    cards={expertiseCards}
+                />
 
             </section>
 

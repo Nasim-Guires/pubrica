@@ -4,14 +4,14 @@ import { ReactNode } from "react";
 
 export type ApplicationItem = {
     title: string;
-    desc: string;
+    desc: ReactNode ;
     icon?: LucideIcon;
     iconSrc?: string;
 };
 
 interface ApplicationsSectionProps {
     title: string;
-    description: string|ReactNode;
+    description: string | ReactNode;
     applications: ApplicationItem[];
     imageSrc: string;
     imageAlt?: string;
@@ -31,9 +31,9 @@ export default function ApplicationsSection({
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1e2e2b]">
                     {title}
                 </h2>
-                <p className="text-sm md:text-base text-gray-700">
+                <div className="text-sm md:text-base text-gray-700">
                     {description}
-                </p>
+                </div>
             </div>
 
             {/* Equal-Height Grid Container */}
@@ -65,24 +65,30 @@ export default function ApplicationsSection({
 
                                 {/* Item Text */}
                                 <p className="text-sm md:text-base text-gray-800 leading-normal">
-                                    <span className="font-semibold text-gray-900">
-                                        {app.title}:
-                                    </span>{" "}
-                                    {app.desc}
+                                    {app.title ? (
+                                        <>
+                                            <span className="font-semibold text-gray-900">
+                                                {app.title}:
+                                            </span>{" "}
+                                            {app.desc}
+                                        </>
+                                    ) : (
+                                        app.desc
+                                    )}
                                 </p>
                             </div>
                         );
                     })}
                 </div>
 
-                {/* Right Column: Full-Height Image Wrapper */}
-                <div className="lg:col-span-5 min-h-[350px] lg:min-h-[420px]">
-                    <div className="relative w-full h-full min-h-full overflow-hidden rounded-md">
+                {/* Right Column: Image Wrapper */}
+                <div className="lg:col-span-5 min-h-[350px] lg:min-h-[420px] flex items-center justify-center">
+                    <div className="relative w-full h-full min-h-full overflow-hidden rounded-md flex items-center justify-center">
                         <Image
                             src={imageSrc}
                             alt={imageAlt}
                             fill
-                            className="object-cover"
+                            className="object-contain"
                             sizes="(max-width: 1024px) 100vw, 40vw"
                         />
                     </div>
