@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 
 export type ExpertiseCardItem = {
     title: string;
-    desc: string;
+    desc: ReactNode;
     href: string;
     imageUrl: string;
     icon?: LucideIcon;

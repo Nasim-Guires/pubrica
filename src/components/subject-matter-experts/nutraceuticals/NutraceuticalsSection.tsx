@@ -11,6 +11,7 @@ import {
     Bone,
     Sparkles
 } from 'lucide-react';
+import ApplicationsSection from '@/components/common/ApplicationsSection';
 
 const emergingTrendsData = [
     {
@@ -54,38 +55,49 @@ const emergingTrendsData = [
         description: 'Integrating bioactive compounds seamlessly into everyday food products, snacks, and ready-to-drink formulations.'
     }
 ];
-
-const clinicalApplicationsData = [
+const applicationsData = [
     {
-        title: 'Cardiovascular Health',
-        description: 'Omega-3 fatty acids, plant sterols, and polyphenols help reduce cholesterol, improve endothelial function, and mitigate the risk of heart disease.',
-        icon: HeartPulse
+        title: "Cardiovascular Health",
+        desc: "Omega-3 fatty acids, plant sterols, and polyphenols help reduce cholesterol, improve endothelial function, and mitigate the risk of heart disease.",
+        icon: HeartPulse,
+        iconSrc:
+            "/images/subject-matter-experts/nutraceuticals/Cardiovascular-Health.webp",
     },
     {
-        title: 'Cognitive Function',
-        description: 'Nutraceuticals like ginkgo biloba, phosphatidylserine, and DHA support memory, focus, and neuroprotection.',
-        icon: Brain
+        title: "Cognitive Function",
+        desc: "Nutraceuticals like ginkgo biloba, phosphatidylserine, and DHA support memory, focus, and neuroprotection.",
+        icon: Brain,
+        iconSrc:
+            "/images/subject-matter-experts/nutraceuticals/Cognitive-Function.webp",
     },
     {
-        title: 'Immune Modulation',
-        description: 'Vitamins C and D, zinc, and probiotics enhance immune response and protect against infections.',
-        icon: Shield
+        title: "Immune Modulation",
+        desc: "Vitamins C and D, zinc, and probiotics enhance immune response and protect against infections.",
+        icon: Shield,
+        iconSrc:
+            "/images/subject-matter-experts/nutraceuticals/Immune-Modulation.webp",
     },
     {
-        title: 'Metabolic Health',
-        description: 'Compounds such as berberine, cinnamon extracts, and chromium contribute to glucose regulation and metabolic syndrome management.',
-        icon: Activity
+        title: "Metabolic Health",
+        desc: "Compounds such as berberine, cinnamon extracts, and chromium contribute to glucose regulation and metabolic syndrome management.",
+        icon: Activity,
+        iconSrc:
+            "/images/subject-matter-experts/nutraceuticals/Metabolic-Health.webp",
     },
     {
-        title: 'Bone and Joint Health',
-        description: 'Calcium, Vitamin D, glucosamine, and chondroitin support skeletal integrity and reduce the risk of osteoporosis.',
-        icon: Bone
+        title: "Bone and Joint Health",
+        desc: "Calcium, Vitamin D, glucosamine, and chondroitin support skeletal integrity and reduce the risk of osteoporosis.",
+        icon: Bone,
+        iconSrc:
+            "/images/subject-matter-experts/nutraceuticals/Bone-and-Joint-Health.webp",
     },
     {
-        title: 'Anti-Aging and Skin Health',
-        description: 'Antioxidants like coenzyme Q10, resveratrol, and lycopene protect cells from oxidative damage and support skin vitality.',
-        icon: Sparkles
-    }
+        title: "Anti-Aging and Skin Health",
+        desc: "Antioxidants like coenzyme Q10, resveratrol, and lycopene protect cells from oxidative damage and support skin vitality.",
+        icon: Sparkles,
+        iconSrc:
+            "/images/subject-matter-experts/nutraceuticals/Anti-Aging-and-Skin-Health.webp",
+    },
 ];
 
 const editorsData = [
@@ -123,45 +135,13 @@ export default function NutraceuticalsSection() {
 
             {/* SECTION: Applications of Nutraceuticals */}
             <section className="max-w-6xl mx-auto space-y-6">
-                <div className="space-y-3 text-left">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Applications of Nutraceuticals
-                    </h2>
-                    <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                        Nutraceuticals have a wide range of applications in preventive health, therapeutic support, and overall wellness. Some notable applications include:
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div className="lg:col-span-7 space-y-5">
-                        {clinicalApplicationsData.map((item, index) => {
-                            const IconComponent = item.icon;
-                            return (
-                                <div key={index} className="flex items-start space-x-3">
-                                    <div className="mt-1 text-[#0e3b32] bg-[#eef2f1] p-1.5 rounded-full shrink-0">
-                                        <IconComponent className="w-5 h-5" />
-                                    </div>
-                                    <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                                        <strong className="text-gray-900 font-bold">{item.title}: </strong>
-                                        {item.description}
-                                    </p>
-                                </div>
-                            );
-                        })}
-                    </div>
-
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-full max-w-[340px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
-                            <Image
-                                src="/images/subject-matter-experts/nutraceuticals/Applications-of-Nutraceuticals.webp"
-                                alt="Researcher evaluating nutraceutical formulations"
-                                fill
-                                sizes="(max-width: 1024px) 100vw, 340px"
-                                className="object-cover"
-                            />
-                        </div>
-                    </div>
-                </div>
+                <ApplicationsSection
+                    title="Applications of Nutraceuticals"
+                    description="Nutraceuticals have a wide range of applications in preventive health, therapeutic support, and overall wellness. Some notable applications include:"
+                    applications={applicationsData}
+                    imageSrc="/images/subject-matter-experts/nutraceuticals/Applications-of-Nutraceuticals.webp"
+                    imageAlt="Applications of Nutraceuticals"
+                />
             </section>
 
             {/* SECTION: Where Our Authors Publish */}

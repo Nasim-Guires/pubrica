@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Briefcase, FileText, Plus, Minus, Cpu, BookOpen, Layers, ShieldCheck, Zap } from 'lucide-react';
+import ApplicationsSection from '@/components/common/ApplicationsSection';
+import WhereAuthorsPublish from '@/components/common/WhereAuthorsPublish';
+import ExpertEditorsSection, { ExpertEditorItem } from '@/components/common/ExpertEditorsSection';
 
 const importanceData = [
     {
@@ -64,31 +67,79 @@ const emergingTrendsData = [
     }
 ];
 
-const editorsData = [
+const editorsData: ExpertEditorItem[] = [
     {
-        name: 'Dr. Rahul Mehta',
-        degree: 'PhD, Medicinal Chemistry',
-        experience: '14 years of experience',
-        manuscripts: '180+ manuscripts edited',
-        countryFlag: '🇬🇧',
-        avatar: "/images/subject-matter-experts/medicinal-chemistry/Dr.-Rahul-Mehta.webp"
+        name: "Dr. Rahul Mehta",
+        degree: "PhD, Medicinal Chemistry",
+        experience: "14 years of experience",
+        manuscripts: "180+ manuscripts edited",
+        flag: "/images/country/gb.png",
+        avatar:
+            "/images/subject-matter-experts/medicinal-chemistry/Dr.-Rahul-Mehta.webp",
     },
     {
-        name: 'Dr. Elena Petrova',
-        degree: 'PhD, Pharmaceutical Chemistry',
-        experience: '12 years of experience',
-        manuscripts: '150+ manuscripts edited',
-        countryFlag: '🇪🇸',
-        avatar: "/images/subject-matter-experts/biochemistry/Dr.-Sophia-Patel.webp"
+        name: "Dr. Elena Petrova",
+        degree: "PhD, Pharmaceutical Chemistry",
+        experience: "12 years of experience",
+        manuscripts: "150+ manuscripts edited",
+        flag: "/images/country/us.png",
+        avatar:
+            "/images/subject-matter-experts/biochemistry/Dr.-Sophia-Patel.webp",
     },
     {
-        name: 'Dr. Samuel Ochieng',
-        degree: 'PhD, Drug Discovery & Design',
-        experience: '10 years of experience',
-        manuscripts: '130+ manuscripts edited',
-        countryFlag: '🇺🇸',
-        avatar: "/images/subject-matter-experts/biophysics/Dr.-Alexander-Weiss.webp"
-    }
+        name: "Dr. Samuel Ochieng",
+        degree: "PhD, Drug Discovery & Design",
+        experience: "10 years of experience",
+        manuscripts: "130+ manuscripts edited",
+        flag: "/images/country/us.png",
+        avatar:
+            "/images/subject-matter-experts/biophysics/Dr.-Alexander-Weiss.webp",
+    },
+];
+
+const applicationsData = [
+    {
+        title: "AI and Machine Learning in Drug Design",
+        desc: "Utilizing predictive algorithms to enable virtual screening of drug leads via lead optimization.",
+        iconSrc:
+            "/images/subject-matter-experts/medicinal-chemistry/Drug-Discovery-and-Lead-Identification.webp",
+    },
+    {
+        title: "Fragment-Based Drug Discovery (FBDD)",
+        desc: "Allows the identification and extended development of chemical compound small fragments to create future therapeutic medications.",
+        iconSrc:
+            "/images/subject-matter-experts/medicinal-chemistry/Cheminformatics-and-molecular-docking.webp",
+    },
+    {
+        title: "Targeted Protein Degradation",
+        desc: "Development of PROTACs and Adhesive Molecules for Specific Proteins as therapeutic agents.",
+        iconSrc:
+            "/images/subject-matter-experts/medicinal-chemistry/Organic-and-Synthetic-Chemistry.webp",
+    },
+    {
+        title: "Structure-Based Drug Design (SBDD)",
+        desc: "Utilizes structure determination methods such as computer modelling and crystallography to generate ligands.",
+        iconSrc:
+            "/images/subject-matter-experts/medicinal-chemistry/Pharmacokinetics-ADME-and-Pharmacodynamics.webp",
+    },
+    {
+        title: "Multi-Target Drug Design",
+        desc: "Multi-Target Design of Compounds that have a biological effect on more than one target Increases efficacy when they are developed into medication.",
+        iconSrc:
+            "/images/subject-matter-experts/medicinal-chemistry/Bioorganic-and-Medicinal-Biochemistry.webp",
+    },
+    {
+        title: "Peptide and Macrocycle Therapeutics",
+        desc: "Treatment Options for Biological Targets That Present Challenges in Drug Development",
+        iconSrc:
+            "/images/subject-matter-experts/medicinal-chemistry/Natural-Product-Chemistry.webp",
+    },
+    {
+        title: "Green and Sustainable Chemistry",
+        desc: "Provide New Pathways for Developing Drug Development in an Environmentally Friendly Fashion with decreased use of chemicals",
+        iconSrc:
+            "/images/subject-matter-experts/medicinal-chemistry/Analytical-Chemistry-for-Drug-Development.webp",
+    },
 ];
 
 export default function MedicinalChemistrySections() {
@@ -104,202 +155,42 @@ export default function MedicinalChemistrySections() {
 
             {/* SECTION 1: Emerging Trends in Medicinal Chemistry Research */}
             <section className="max-w-6xl mx-auto space-y-6">
-                <div className="space-y-3 text-left">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Emerging Trends in Medicinal Chemistry Research
-                    </h2>
-                    <p className="text-gray-700 text-base sm:text-lg max-w-5xl leading-relaxed">
-                        Medicinal chemistry research is rapidly evolving with the integration of advanced technologies and innovative approaches to drug discovery. These emerging trends are transforming how safer, more effective, and targeted therapies are designed and developed.
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    {/* Left List of Trends */}
-                    <div className="lg:col-span-7 space-y-4">
-                        {[
-                            {
-                                title: "AI and Machine Learning in Drug Design",
-            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Drug-Discovery-and-Lead-Identification.webp",
-                                desc: "Utilizing predictive algorithms to enable virtual screening of drug leads via lead optimization.",
-                                icon: Cpu
-                            },
-                            {
-                                title: "Fragment-Based Drug Discovery (FBDD)",
-            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Cheminformatics-and-molecular-docking.webp",
-                                desc: "Allows the identification and extended development of chemical compound small fragments to create future therapeutic medications.",
-                                icon: BookOpen
-                            },
-                            {
-                                title: "Targeted Protein Degradation",
-            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Organic-and-Synthetic-Chemistry.webp",
-                                desc: "Development of PROTACs and Adhesive Molecules for Specific Proteins as therapeutic agents.",
-                                icon: Layers
-                            },
-                            {
-                                title: "Structure-Based Drug Design (SBDD)",
-            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Pharmacokinetics-ADME-and-Pharmacodynamics.webp",
-                                desc: "Utilizes structure determination methods such as computer modelling and crystallography to generate ligands.",
-                                icon: FileText
-                            },
-                            {
-                                title: "Multi-Target Drug Design",
-            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Bioorganic-and-Medicinal-Biochemistry.webp",
-                                desc: "Multi-Target Design of Compounds that have a biological effect on more than one target Increases efficacy when they are developed into medication.",
-                                icon: Zap
-                            },
-                            {
-                                title: "Peptide and Macrocycle Therapeutics",
-            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Natural-Product-Chemistry.webp",
-                                desc: "Treatment Options for Biological Targets That Present Challenges in Drug Development",
-                                icon: ShieldCheck
-                            },
-                            {
-                                title: "Green and Sustainable Chemistry",
-            iconSrc: "/images/subject-matter-experts/medicinal-chemistry/Analytical-Chemistry-for-Drug-Development.webp",
-                                desc: "Provide New Pathways for Developing Drug Development in an Environmentally Friendly Fashion with decreased use of chemicals",
-                                icon: Briefcase
-                            }
-                        ].map((trend, i) => {
-                            const IconComp = trend.icon;
-                            return (
-                                <div key={i} className="flex items-start space-x-3 bg-[#fafafa] border border-gray-200 p-4 rounded-lg">
-                                    <div className="p-2 bg-[#0e3b32]/10 text-[#0e3b32] rounded-md shrink-0 mt-0.5">
-                                        <IconComp className="w-5 h-5" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-[#0e3b32] text-base">{trend.title}</h3>
-                                        <p className="text-gray-600 text-sm mt-1 leading-relaxed">{trend.desc}</p>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-
-                    {/* Right Image */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-full h-[450px] rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                            <Image
-                                src="/images/subject-matter-experts/medicinal-chemistry/Emerging-Trends-in-Medicinal-Chemistry-Research.webp"
-                                alt="Researchers working with a microscope"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                    </div>
-                </div>
+                <ApplicationsSection
+                    title="Emerging Trends in Medicinal Chemistry Research"
+                    description="Medicinal chemistry research is rapidly evolving with the integration of advanced technologies and innovative approaches to drug discovery. These emerging trends are transforming how safer, more effective, and targeted therapies are designed and developed."
+                    applications={applicationsData}
+                    imageSrc="/images/subject-matter-experts/medicinal-chemistry/Emerging-Trends-in-Medicinal-Chemistry-Research.webp"
+                    imageAlt="Researchers working with a microscope"
+                />
             </section>
 
             {/* SECTION 2: Clinical Applications (omitted based on image inspection if not present, but keeping standard structure matching prompt text / instructions) -> wait, the prompt says "if the ciode has extra from image remobe that part" and shows specific images for Emerging Trends, Where Our Authors Publish, and Editors. Let's make sure it strictly matches the image content. */}
 
             {/* SECTION 3: Where Our Authors Publish */}
-            <section className="max-w-6xl mx-auto space-y-6">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Where Our Authors Publish
-                    </h2>
-                    <div className="w-16 h-1 bg-[#0e3b32] mx-auto rounded-full"></div>
-                    <p className="text-gray-600 text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
-                        Our authors share Pubrica's expert content across top-tier journals, conferences, and platforms, maximizing its recognition and reach. This will augment the authority of Pubrica as well as its overall visibility indicating it as one of the foremost professional publishers.
-                    </p>
-                </div>
-
-                {/* Featured Publication Card */}
-                <div className="bg-[#fafafa] border border-gray-200 rounded-lg p-6 sm:p-8 shadow-xs max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
-                    {/* Journal Cover Image */}
-                    <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white relative h-[280px]">
-                        <Image
-                            src="/images/subject-matter-experts/medicinal-chemistry/RSC-Medicinal-Chemistry.webp"
-                            alt="RSC Medicinal Chemistry Journal Cover"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
-
-                    {/* Paper Details */}
-                    <div className="flex-1 space-y-3 text-gray-800 text-sm sm:text-base leading-relaxed">
-                        <p>
-                            <strong className="text-gray-900 font-bold">Paper Title: </strong>
-                            Diversifying the triquinazine scaffold of a Janus kinase inhibitor
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Author: </strong>
-                            Mulliri, K., Meier, K., Feuchter, J.-D., Javor, S., Meirelles, M. A., & Reymond, J.L
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Journal Name: </strong>
-                            RSC Medicinal Chemistry
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Publisher: </strong>
-                            Royal Society of Chemistry
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Impact factor: </strong>
-                            3.6
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <WhereAuthorsPublish
+                title="Where Our Authors Publish"
+                description="Our authors share Pubrica's expert content across top-tier journals, conferences, and platforms, maximizing its recognition and reach. This will augment the authority of Pubrica as well as its overall visibility indicating it as one of the foremost professional publishers."
+                publication={{
+                    imageSrc:
+                        "/images/subject-matter-experts/medicinal-chemistry/RSC-Medicinal-Chemistry.webp",
+                    imageAlt: "RSC Medicinal Chemistry Journal Cover",
+                    paperTitle:
+                        "Diversifying the triquinazine scaffold of a Janus kinase inhibitor",
+                    author:
+                        "Mulliri, K., Meier, K., Feuchter, J.-D., Javor, S., Meirelles, M. A., & Reymond, J.L",
+                    journalName: "RSC Medicinal Chemistry",
+                    publisher: "Royal Society of Chemistry",
+                    impactFactor: "3.6",
+                }}
+            />
 
             {/* SECTION 4: Our Expert Medical And Pharmaceutical Chemistry Editors */}
             <section className="max-w-6xl mx-auto space-y-8">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Our Expert Medicinal Chemistry Editors
-                    </h2>
-                    <p className="text-gray-600 text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
-                        The combination of specialized training and years of experience provides our team members with the background required to develop and implement a variety of different solutions to complex problems. We take pride in offering our clients quality services and solutions that exceed their expectations.
-                    </p>
-                </div>
-
-                {/* Editors Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {editorsData.map((editor, index) => (
-                        <div
-                            key={index}
-                            className="bg-[#a3c3bb] rounded-xl p-6 text-gray-900 flex flex-col justify-between shadow-xs transition-transform duration-200 hover:-translate-y-1"
-                        >
-                            <div className="space-y-4">
-                                {/* Header with Avatar and Flags */}
-                                <div className="flex items-center space-x-3">
-                                    <div className="relative w-14 h-14 shrink-0">
-                                        <Image
-                                            src={editor.avatar}
-                                            alt={editor.name}
-                                            fill
-                                            className="rounded-full object-cover border-2 border-white shadow-xs"
-                                        />
-                                        <span className="absolute bottom-0 right-0 text-sm bg-white rounded-full px-1 shadow-xs z-10">
-                                            {editor.countryFlag}
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-lg text-[#0a2923]">
-                                            {editor.name}
-                                        </h3>
-                                        <p className="text-xs sm:text-sm font-medium text-gray-800">
-                                            {editor.degree}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="w-full border-t border-[#88b1a8] my-2"></div>
-
-                                {/* Editor Stats */}
-                                <div className="space-y-2 text-xs sm:text-sm font-semibold text-gray-800">
-                                    <div className="flex items-center space-x-2">
-                                        <Briefcase className="w-4 h-4 text-[#0e3b32]" />
-                                        <span>{editor.experience}</span>
-                                    </div>
-                                    <div className="flex items-center space-x-2">
-                                        <FileText className="w-4 h-4 text-[#0e3b32]" />
-                                        <span>{editor.manuscripts}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <ExpertEditorsSection
+                    title="Our Expert Medicinal Chemistry Editors"
+                    description="The combination of specialized training and years of experience provides our team members with the background required to develop and implement a variety of different solutions to complex problems. We take pride in offering our clients quality services and solutions that exceed their expectations."
+                    editors={editorsData}
+                />
             </section>
 
         </div>

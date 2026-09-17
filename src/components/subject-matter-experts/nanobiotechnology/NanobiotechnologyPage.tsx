@@ -19,6 +19,8 @@ import {
     BookOpen
 } from 'lucide-react';
 import HeroBanner from "@/components/common/HeroBanner";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import CommonExpertiseCards from "@/components/common/CommonExpertiseCards";
 
 export default function NanobiotechnologyPage() {
     const disciplines = [
@@ -59,72 +61,73 @@ export default function NanobiotechnologyPage() {
             icon: ShieldAlert
         }
     ];
-
-    const services = [
+    const expertiseCards = [
         {
             title: "Journal Formatting",
-            description: "Tailored manuscript formatting to meet specific journal guidelines.",
-            image: "/images/subject-matter-experts/agriculture/Journal-Formatting.webp",
+            desc: "Tailored manuscript formatting to meet specific journal guidelines.",
+            href: "/services/publication-support/journal-manuscript-formatting-services",
+            imageUrl: "/images/subject-matter-experts/agriculture/Journal-Formatting.webp",
             icon: FileText,
-            href: "/services/publication-support/journal-manuscript-formatting-services"
         },
         {
             title: "Editing & Proofreading",
-            description: "Enhance clarity, grammar, and style for polished, professional manuscripts through our biomolecular engineering editing services.",
-            image: "/images/subject-matter-experts/agriculture/Editing-Proofreading.webp",
+            desc: "Enhance clarity, grammar, and style for polished, professional manuscripts through our biomolecular engineering editing services.",
+            href: "/services/editing-and-translation",
+            imageUrl: "/images/subject-matter-experts/agriculture/Editing-Proofreading.webp",
             icon: PenTool,
-            href: "/services/editing-and-translation"
         },
         {
             title: "Artwork Editing",
-            description: "Professional visuals for your figures, tables, and graphical abstracts.",
-            image: "/images/subject-matter-experts/biotechnology/Artwork-Editing.webp",
+            desc: "Professional visuals for your figures, tables, and graphical abstracts.",
+            href: "/services/publication-support/art-work-preparation",
+            imageUrl: "/images/subject-matter-experts/biotechnology/Artwork-Editing.webp",
             icon: Cpu,
-            href: "/services/publication-support/art-work-preparation"
         },
         {
             title: "Research Services",
-            description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
+            desc: "Expert guidance on project planning, execution, and data analysis.",
+            href: "/services/research-services/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: FileSearch,
-            href: "/services/research-services/systematic-review"
         },
         {
             title: "Systematic Reviews",
-            description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
+            desc: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
+            href: "/services/research-services/systematic-review",
+            imageUrl: "/images/subject-matter-experts/agriculture/Journal-Submission.webp",
             icon: Layers,
-            href: "/services/research-services/systematic-review"
         },
         {
             title: "Publication Support",
-            description: "Complete support for publishing in high-impact journals, translating concepts into incisive reports.",
-            image: "/images/subject-matter-experts/agriculture/Journal-Selection.webp",
+            desc: "Complete support for publishing in high-impact journals, translating concepts into incisive reports.",
+            href: "/services/publication-support/",
+            imageUrl: "/images/subject-matter-experts/agriculture/Journal-Selection.webp",
             icon: BookOpen,
-            href: "/services/publication-support/"
         },
         {
             title: "Graphical Abstract",
-            description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
+            desc: "Engaging summaries of your research in a single, informative graphic.",
+            href: "/services/research-impact/graphical-abstract",
+            imageUrl: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BarChart3,
-            href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Scientific Writing",
-            description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
+            desc: "Crafting clear, precise, and publication-ready research manuscripts.",
+            href: "/services/research-services/scientific-writing",
+            imageUrl: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: PenTool,
-            href: "/services/research-services/scientific-writing"
         },
         {
             title: "Literature Review and Gap Analysis",
-            description: "Identifying research gaps and providing comprehensive literature reviews.",
-            image: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
+            desc: "Identifying research gaps and providing comprehensive literature reviews.",
+            href: "/services/research-services/literature-review-and-gap",
+            imageUrl: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: FileSearch,
-            href: "/services/research-services/literature-review-and-gap"
-        }
+        },
     ];
+
+
 
     return (
         <main className="w-full bg-[#FAFAFA] font-sans antialiased text-gray-800">
@@ -136,53 +139,65 @@ export default function NanobiotechnologyPage() {
                 headingAs="h1"
             />
             {/* SECTION 2: Hero Intro Content */}
-            <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <section className="pt-6 border-t border-slate-100">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="mb-5">
+                            <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+                                Transforming into Real-World Solutions through Innovation, Precision, and Advanced Nano Biotechnology.
+                            </h2>
+                        </div>
 
-                    {/* Left Text Content */}
-                    <div className="lg:col-span-7 space-y-4">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] leading-snug">
-                            Transforming into Real-World Solutions through Innovation, Precision, and Advanced Nano Biotechnology.
-                        </h2>
+                        <div className="flow-root">
+                            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                                <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0 mx-auto">
+                                    <Image
+                                        src="/images/subject-matter-experts/nanobiotechnology/Nano-Biotechnology.webp"
+                                        alt="Nanobiotechnology research visualization"
+                                        fill
+                                        priority
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 320px, 380px"
+                                    />
+                                </div>
+                            </div>
 
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Nanobiotechnology is a blend of nanotechnology and biological systems to develop cutting-edge technologies for medical care, environmental sustainability and industrial biomanufacturing. Using nanotechnology, researchers can manipulate molecules and cells with precision at the nanoscale, leading to innovative solutions in diagnostics, treatment and delivering medicines, bioprocessing and so much more. At Pubrica, we provide several unique services to the nano biotech industry such as research support, regulatory analysis, and educational resources for both academic and industrial users of nanobiotechnology. Our aim is to increase the accuracy and effectiveness of all nanobiotechnology research products. The field of nanobiotechnology includes nanoparticles, nanomaterials and nanodevices, all of which interact in ways not possible with larger and more traditional forms of biological materials.
-                        </p>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            This field allows for the creation of specially designed nanoparticles for drug delivery, diagnostics and biosensing and for manipulating and controlling the interactions of biomolecules to achieve therapeutic goals.
-                        </p>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Through our research support, we assist researchers in developing better understanding of how molecular systems function at the nanoscale and applying this knowledge to identify new targets for minimally invasive therapies in medicine, renewable energy and the preservation of our planet.
-                        </p>
+                            <div className="space-y-5 text-slate-700">
+                                <div className="space-y-5">
+                                    <p className="text-base leading-relaxed">
+                                        Nanobiotechnology is a blend of nanotechnology and biological systems to develop cutting-edge technologies for medical care, environmental sustainability and industrial biomanufacturing. Using nanotechnology, researchers can manipulate molecules and cells with precision at the nanoscale, leading to innovative solutions in diagnostics, treatment and delivering medicines, bioprocessing and so much more. At Pubrica, we provide several unique services to the nano biotech{" "}
+                                        <Link href="/industries/pharmaceutical/" className="text-blue-600 no-underline">
+                                            industry
+                                        </Link>{" "}
+                                        such as{" "}
+                                        <Link href="/services/research-services/literature-review-and-gap/" className="text-blue-600 no-underline">
+                                            research support
+                                        </Link>
+                                        , regulatory analysis, and educational resources for both academic and industrial users of nanobiotechnology. Our aim is to increase the accuracy and effectiveness of all nanobiotechnology research products. The field of{" "}
+                                        <Link href="/subject-matter-experts/nanobiotechnology/" className="text-blue-600 no-underline">
+                                            nanobiotechnology
+                                        </Link>{" "}
+                                        includes nanoparticles, nanomaterials and nanodevices, all of which interact in ways not possible with larger and more traditional forms of biological materials.
+                                    </p>
 
-                        {/* CTA Button */}
-                        <div className="pt-4">
-                            <Link
-                                href="/order-now"
-                                className="inline-block bg-[#C4161C] hover:bg-[#a31217] text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
-                            >
-                                Get a Free Quote
-                            </Link>
+                                    <p className="text-base leading-relaxed">
+                                        This field allows for the creation of specially designed nanoparticles for drug delivery, diagnostics and biosensing and for manipulating and controlling the interactions of biomolecules to achieve therapeutic goals.
+                                    </p>
+
+                                    <p className="text-base leading-relaxed">
+                                        Through our research support, we assist researchers in developing better understanding of how molecular systems function at the nanoscale and applying this knowledge to identify new targets for minimally invasive therapies in medicine, renewable energy and the preservation of our planet.
+                                    </p>
+
+                                    {/* CTA Button */}
+                                    <div className="pt-2">
+                                        <GetFreeQuoteButton />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    {/* Right Circular Image */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
-                            <Image
-                                src="/images/subject-matter-experts/nanobiotechnology/Nano-Biotechnology.webp"
-                                alt="Nanobiotechnology research visualization"
-                                fill
-                                priority
-                                className="object-cover"
-                                sizes="(max-width: 768px) 320px, 380px"
-                            />
-                        </div>
-                    </div>
-
                 </div>
             </section>
-
             {/* SECTION 3: Core Disciplines Grid */}
             <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
                 <div className="max-w-6xl mx-auto">
@@ -212,54 +227,16 @@ export default function NanobiotechnologyPage() {
                         <div className="hidden sm:block h-[2px] w-24 bg-[#0e3b32] mt-1" />
                     </div>
                     <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                        At Pubrica, we pride ourselves on our extensive expertise in nanobiotechnology research and publication. Our team of seasoned researchers, scientists, and technical writers is dedicated to advancing the field of nanobiotechnology by providing cutting-edge research support and delivering high-quality publications:
+                        At Pubrica, we pride ourselves on our extensive expertise in <Link href="/services/publication-support/peer-review-pre-submission/" className="text-blue-600">nanobiotechnology research and publication</Link>. Our team of seasoned researchers, scientists, and technical writers is dedicated to advancing the field of nanobiotechnology by providing cutting-edge research support and delivering high-quality publications:
                     </p>
                 </div>
 
                 {/* Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {services.map((service, index) => {
-                        const IconComponent = service.icon;
-                        return (
-                            <Link
-                                key={index}
-                                href={service.href}
-                                className="relative h-[280px] rounded-lg overflow-hidden border border-gray-200 shadow-sm group block bg-white"
-                            >
-                                {/* Background Image */}
-                                <div className="absolute inset-0 w-full h-[65%]">
-                                    <Image
-                                        src={service.image}
-                                        alt={service.title}
-                                        fill
-                                        className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                    />
-                                </div>
-
-                                {/* Bottom Overlay Card */}
-                                <div className="absolute inset-x-0 bottom-0 bg-white border-t border-gray-100 p-4 transition-all duration-300 ease-in-out transform translate-y-[calc(100%-4.5rem)] group-hover:translate-y-0 group-hover:h-full shadow-lg flex flex-col items-center justify-center text-center">
-
-                                    {/* Floating Icon */}
-                                    <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center shrink-0 text-[#0e3b32] group-hover:top-4 transition-all duration-300">
-                                        <IconComponent className="w-5 h-5" />
-                                    </div>
-
-                                    {/* Card Title */}
-                                    <h3 className="text-sm font-bold text-[#0e3b32] mt-4 mb-2 group-hover:mt-12 transition-all duration-300">
-                                        {service.title}
-                                    </h3>
-
-                                    {/* Description */}
-                                    <p className="text-gray-600 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 px-2">
-                                        {service.description}
-                                    </p>
-
-                                </div>
-                            </Link>
-                        );
-                    })}
-                </div>
+                <CommonExpertiseCards
+                    title=""
+                    description=""
+                    cards={expertiseCards}
+                />
 
             </section>
 

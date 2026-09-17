@@ -18,6 +18,8 @@ import {
     BookOpen
 } from 'lucide-react';
 import HeroBanner from "@/components/common/HeroBanner";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import CommonExpertiseCards from "@/components/common/CommonExpertiseCards";
 
 export default function MedicinalChemistryPage() {
     const disciplines = [
@@ -60,56 +62,56 @@ export default function MedicinalChemistryPage() {
         }
     ];
 
-    const services = [
+    const expertiseCards = [
         {
             title: "Literature Review and Gap Analysis",
-            description: "Expert guidance on project planning, execution, and data analysis.",
-            image: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Research-Services.png",
+            desc: "Expert guidance on project planning, execution, and data analysis.",
+            href: "/services/research-services",
+            imageUrl: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Research-Services.png",
             icon: FileText,
-            href: "/services/research-services"
         },
         {
             title: "Editing & Proofreading",
-            description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
+            desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
+            href: "/services/editing-and-translation",
+            imageUrl: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
-            href: "/services/editing-and-translation"
         },
         {
             title: "Peer-Reviewing Services",
-            description: "Comprehensive review to refine and validate your research pre-submission.",
-            image: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
+            desc: "Comprehensive review to refine and validate your research pre-submission.",
+            href: "/services/publication-support/peer-review-pre-submission/",
+            imageUrl: "/images/subject-matter-experts/agriculture/Peer-Review.webp",
             icon: Cpu,
-            href: "/services/medical-data-collection"
         },
         {
             title: "Journal Submission",
-            description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/How-Should-Physicians-Choose-the-Right-Journal-for-Submitting-a-Case-Report.webp",
+            desc: "Helping select the right journals and manage the submission process seamlessly.",
+            href: "/services/publication-support/journal-submission/",
+            imageUrl: "/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/How-Should-Physicians-Choose-the-Right-Journal-for-Submitting-a-Case-Report.webp",
             icon: BookOpen,
-            href: "/services/research-impact/graphical-abstract"
         },
         {
             title: "Scientific Writing",
-            description: "Crafting clear, precise, and publication-ready research manuscripts.",
-            image: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
+            desc: "Crafting clear, precise, and publication-ready research manuscripts.",
+            href: "/services/research-services/scientific-writing/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: Cpu,
-            href: "/services/research-services"
         },
         {
             title: "Graphical Abstract",
-            description: "Engaging summaries of your research in a single, informative graphic.",
-            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
+            desc: "Engaging summaries of your research in a single, informative graphic.",
+            href: "/services/research-impact/graphical-abstract/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: Layers,
-            href: "/services/research-services"
         },
         {
             title: "Journal Selection",
-            description: "Strategic journal selection to maximize publication success.",
-            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
+            desc: "Strategic journal selection to maximize publication success.",
+            href: "/services/publication-support/journal-selection/",
+            imageUrl: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSearch,
-            href: "/services/publication-support/journal-selection"
-        }
+        },
     ];
 
     return (
@@ -123,44 +125,65 @@ export default function MedicinalChemistryPage() {
             />
 
             {/* SECTION 2: Hero Intro Content */}
-            <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <section className="pt-6 border-t border-slate-100">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="mb-5">
+                            <h2 className="text-3xl font-bold text-[#0c2e3a] mb-3 leading-tight">
+                                Transforming Healthcare Through Advanced Medical and Pharmaceutical Chemistry
+                            </h2>
+                            <p className="text-base text-slate-700 leading-relaxed">
+                                From drug discovery to formulation, Pubrica empowers medical and pharmaceutical chemistry professionals to publish high-impact research with clarity and precision.
+                            </p>
+                        </div>
 
-                    {/* Left Text Content */}
-                    <div className="lg:col-span-7 space-y-4">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] leading-snug">
-                            Elevating Medicinal Chemistry Excellence with End-to-End Research and Publication Services
-                        </h2>
+                        <div className="flow-root">
+                            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                                <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0 mx-auto">
+                                    <Image
+                                        src="/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Medical-and-Pharmaceutical-Chemistry.webp"
+                                        alt="Medicinal Chemistry research visualization"
+                                        fill
+                                        priority
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 320px, 380px"
+                                    />
+                                </div>
+                            </div>
 
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Medicinal chemistry is an interdisciplinary field that combines elements from chemistry, biology, and pharmacology to design, synthesize and optimize molecules with biologically active characteristics. Its primary purpose is to contribute to drug discovery research by converting the knowledge obtained through various types of chemical research into potential therapeutics. The Medicinal Chemistry Research Support Services provided by Pubrica provide researchers, scientists and other members of the pharmaceutical industry with everything they need in order to write and edit manuscript-style articles related to their medicinal chemistry research. The Medicinal Chemistry manuscript writing and editing services ensure that researchers have the tools and support needed to prepare their manuscripts for publication in high impact medicinal chemistry journals.
-                        </p>
+                            <div className="space-y-5 text-slate-700">
+                                <div className="space-y-5">
+                                    <p className="text-base leading-relaxed">
+                                        <Link href="/industries/pharmaceutical/" className="text-blue-600 no-underline">
+                                            Medical and Pharmaceutical Chemistry
+                                        </Link>{" "}
+                                        is leading the transformation of health care through drug discovery, drug formulation and creation of new therapeutic strategies. As the chemical, biological and technological innovations develop, both researchers and providers will depend on well written, high quality scientific communication to communicate their timely findings that influence patient care. Medical and Pharmaceutical Chemistry influences all progress within clinical medicine, biomedical research and the{" "}
+                                        <Link href="/industries/pharmaceutical/" className="text-blue-600 no-underline">
+                                            pharmaceutical industry
+                                        </Link>{" "}
+                                        through all avenues of drug design, targeted therapy, Nanomedicine and Clinical Trials.
+                                    </p>
 
-                        {/* CTA Button */}
-                        <div className="pt-4">
-                            <Link
-                                href="/order-now"
-                                className="inline-block bg-[#C4161C] hover:bg-[#a31217] text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
-                            >
-                                Get a Free Quote
-                            </Link>
+                                    <p className="text-base leading-relaxed">
+                                        At Pubrica, we understand medical and pharmaceutical chemistry research requires accuracy, scientific integrity and complete publication assistance. Whether you are creating the next generation of drug delivery systems, creating a new compound, validating a clinical research outcome or developing new mechanisms of action, we will provide the expert writing and{" "}
+                                        <Link href="/services/publication-support/peer-review-pre-submission/" className="text-blue-600 no-underline">
+                                            publishing services
+                                        </Link>{" "}
+                                        you need to assure your work meets global standards. We provide services for pharmaceutical scientists, chemists, clinicians and academic institutions to effectively communicate their findings through{" "}
+                                        <Link href="/services/publication-support/peer-review-pre-submission/" className="text-blue-600 no-underline">
+                                            peer reviewed journals services
+                                        </Link>
+                                        , conference presentations and regulatory submissions.
+                                    </p>
+
+                                    {/* CTA Button */}
+                                    <div className="pt-2">
+                                        <GetFreeQuoteButton />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    {/* Right Circular Image */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
-                            <Image
-                                src="/images/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/Medical-and-Pharmaceutical-Chemistry.webp"
-                                alt="Medicinal Chemistry research visualization"
-                                fill
-                                priority
-                                className="object-cover"
-                                sizes="(max-width: 768px) 320px, 380px"
-                            />
-                        </div>
-                    </div>
-
                 </div>
             </section>
 
@@ -185,63 +208,11 @@ export default function MedicinalChemistryPage() {
             {/* SECTION 4: Expertise Grid */}
             <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 
-                <div className="text-center max-w-4xl mx-auto mb-12">
-                    <div className="flex items-center justify-center gap-4 mb-3">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
-                            Our Expertise in Medical and Pharmaceutical Chemistry
-                        </h2>
-                        <div className="hidden sm:block h-[2px] w-24 bg-[#0e3b32] mt-1" />
-                    </div>
-                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                        Pubrica provides full services of Medical and Pharmaceutical Chemistry, supporting Drug Delivery Systems, Research services , and Compliance with Regulatory Agencies. We provide the following expertise.
-                    </p>
-                </div>
-
-                {/* Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {services.map((service, index) => {
-                        const IconComponent = service.icon;
-                        return (
-                            <Link
-                                key={index}
-                                href={service.href}
-                                className="relative h-[280px] rounded-lg overflow-hidden border border-gray-200 shadow-sm group block bg-white"
-                            >
-                                {/* Background Image */}
-                                <div className="absolute inset-0 w-full h-[65%]">
-                                    <Image
-                                        src={service.image}
-                                        alt={service.title}
-                                        fill
-                                        className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                    />
-                                </div>
-
-                                {/* Bottom Overlay Card */}
-                                <div className="absolute inset-x-0 bottom-0 bg-white border-t border-gray-100 p-4 transition-all duration-300 ease-in-out transform translate-y-[calc(100%-4.5rem)] group-hover:translate-y-0 group-hover:h-full shadow-lg flex flex-col items-center justify-center text-center">
-
-                                    {/* Floating Icon */}
-                                    <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center shrink-0 text-[#0e3b32] group-hover:top-4 transition-all duration-300">
-                                        <IconComponent className="w-5 h-5" />
-                                    </div>
-
-                                    {/* Card Title */}
-                                    <h3 className="text-sm font-bold text-[#0e3b32] mt-4 mb-2 group-hover:mt-12 transition-all duration-300">
-                                        {service.title}
-                                    </h3>
-
-                                    {/* Description */}
-                                    <p className="text-gray-600 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 px-2">
-                                        {service.description}
-                                    </p>
-
-                                </div>
-                            </Link>
-                        );
-                    })}
-                </div>
-
+                <CommonExpertiseCards
+                    title="Our Expertise in Medical and Pharmaceutical Chemistry"
+                    description="Pubrica provides full services of Medical and Pharmaceutical Chemistry, supporting Drug Delivery Systems, Research services , and Compliance with Regulatory Agencies. We provide the following expertise."
+                    cards={expertiseCards}
+                />
             </section>
 
         </main>
