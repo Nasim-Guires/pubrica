@@ -2,100 +2,117 @@
 import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, Activity, Watch, Stethoscope, Radio, Cpu, ChevronDown, ChevronUp } from 'lucide-react';
+import EmergingTrendsSection, { EmergingTrendItem } from "@/components/common/EmergingTrendsSection";
+import ApplicationsSection from "@/components/common/ApplicationsSection";
+import WhereAuthorsPublish from "@/components/common/WhereAuthorsPublish";
+import ExpertEditorsSection, { ExpertEditorItem } from "@/components/common/ExpertEditorsSection";
 
-const emergingTrendsData = [
+const emergingTrendsData: EmergingTrendItem[] = [
     {
-        id: 'intelligent-smart',
-        title: 'Intelligent and Smart Sensors',
-        description: 'Through the incorporation of AI and machine learning techniques with sensors, sensor technologies can analyze data instantly, calibrate themselves, and make adaptive decisions thus creating opportunities for improved accuracy and efficiency.'
+        id: "intelligent-smart",
+        title: "Intelligent and Smart Sensors",
+        description:
+            "Through the incorporation of AI and machine learning techniques with sensors, sensor technologies can analyze data instantly, calibrate themselves, and make adaptive decisions thus creating opportunities for improved accuracy and efficiency.",
     },
     {
-        id: 'wearable-implantable',
-        title: 'Wearable and Implantable Sensors',
-        description: "Wearable and implantable sensors enable the monitoring of patients' health continuously and remotely in a way that is more comfortable and dependable than the traditional models using very small and flexible sensors."
+        id: "wearable-implantable",
+        title: "Wearable and Implantable Sensors",
+        description:
+            "Wearable and implantable sensors enable the monitoring of patients' health continuously and remotely in a way that is more comfortable and dependable than the traditional models using very small and flexible sensors.",
     },
     {
-        id: 'iot-sensors',
-        title: 'Sensors with Internet of Things (IOT) Functionality',
-        description: 'IoT-enabled sensors can communicate with each other, which allows for real-time monitoring, the collection of large amounts of data and the ability to be designed in such a way that they can integrate seamlessly into our current systems.'
+        id: "iot-sensors",
+        title: "Sensors with Internet of Things (IOT) Functionality",
+        description:
+            "IoT-enabled sensors can communicate with each other, which allows for real-time monitoring, the collection of large amounts of data and the ability to be designed in such a way that they can integrate seamlessly into our current systems.",
     },
     {
-        id: 'nanomaterials',
-        title: 'Sensor Development with Nanomaterials and Advanced Materials',
-        description: 'Nanotechnology and advanced material are utilized to make this new generation of sensors more sensitive, specific, durable, and thereby enhancing all aspects of sensing such as environmental, biological, or chemical.'
+        id: "nanomaterials",
+        title: "Sensor Development with Nanomaterials and Advanced Materials",
+        description:
+            "Nanotechnology and advanced material are utilized to make this new generation of sensors more sensitive, specific, durable, and thereby enhancing all aspects of sensing such as environmental, biological, or chemical.",
     },
     {
-        id: 'smart-efficient',
-        title: 'Smart and Efficient Sensor Technology',
-        description: "A few different technologies such as solar, piezoelectric, and thermal harvesting technologies can provide a sensor with the ability to use naturally occurring energy, thus supporting the need for longer-lasting sensors' operational lifetime while also creating an energy-efficient sensor."
+        id: "smart-efficient",
+        title: "Smart and Efficient Sensor Technology",
+        description:
+            "A few different technologies such as solar, piezoelectric, and thermal harvesting technologies can provide a sensor with the ability to use naturally occurring energy, thus supporting the need for longer-lasting sensors' operational lifetime while also creating an energy-efficient sensor.",
     },
     {
-        id: 'sensor-fusion',
-        title: 'Fusion of Sensors and Data Analytics',
-        description: 'The fusion of multiple sensors provides increased accuracy, reliability, and contextual understanding when working within complex environments.'
-    }
+        id: "sensor-fusion",
+        title: "Fusion of Sensors and Data Analytics",
+        description:
+            "The fusion of multiple sensors provides increased accuracy, reliability, and contextual understanding when working within complex environments.",
+    },
 ];
 
-const clinicalApplicationsData = [
+const applicationsData = [
     {
-        title: 'Patient Monitoring',
-        iconSrc: "/images/subject-matter-experts/sensor-technology/Design-Development-of-Sensors.webp",
-        description: 'Ongoing assessment of vital signs can facilitate the early identification of illness and produce better health results.',
-        icon: Activity
+        title: "Patient Monitoring",
+        iconSrc:
+            "/images/subject-matter-experts/sensor-technology/Design-Development-of-Sensors.webp",
+        desc: "Ongoing assessment of vital signs can facilitate the early identification of illness and produce better health results.",
+        icon: Activity,
     },
     {
-        title: 'Wearable and Implantable Devices',
-        iconSrc: "/images/subject-matter-experts/sensor-technology/Wearable-Portable-Sensors.webp",
-        description: 'Sensors allow for prolonged health monitoring and customized therapy.',
-        icon: Watch
+        title: "Wearable and Implantable Devices",
+        iconSrc:
+            "/images/subject-matter-experts/sensor-technology/Wearable-Portable-Sensors.webp",
+        desc: "Sensors allow for prolonged health monitoring and customized therapy.",
+        icon: Watch,
     },
     {
-        title: 'Diagnostic Support',
-        iconSrc: "/images/subject-matter-experts/sensor-technology/Biosensors-Biomedical-Sensors.webp",
-        description: 'Advanced sensors will improve diagnosis of disease and improve the diagnostic image.',
-        icon: Stethoscope
+        title: "Diagnostic Support",
+        iconSrc:
+            "/images/subject-matter-experts/sensor-technology/Biosensors-Biomedical-Sensors.webp",
+        desc: "Advanced sensors will improve diagnosis of disease and improve the diagnostic image.",
+        icon: Stethoscope,
     },
     {
-        title: 'Remote Healthcare',
-        iconSrc: "/images/subject-matter-experts/sensor-technology/Sensor-Networks-IoT.webp",
-        description: 'Sensor based systems support remote medical care and telehealth services.',
-        icon: Radio
+        title: "Remote Healthcare",
+        iconSrc:
+            "/images/subject-matter-experts/sensor-technology/Sensor-Networks-IoT.webp",
+        desc: "Sensor based systems support remote medical care and telehealth services.",
+        icon: Radio,
     },
     {
-        title: 'Precision Medicine',
-        iconSrc: "/images/subject-matter-experts/sensor-technology/Microelectromechanical-Systems-MEMS-Nano-sensors.webp",
-        description: 'The use of real-time data will provide tailored treatment and enhance the ability to make better clinical decisions.',
-        icon: Cpu
-    }
+        title: "Precision Medicine",
+        iconSrc:
+            "/images/subject-matter-experts/sensor-technology/Microelectromechanical-Systems-MEMS-Nano-sensors.webp",
+        desc: "The use of real-time data will provide tailored treatment and enhance the ability to make better clinical decisions.",
+        icon: Cpu,
+    },
 ];
 
-const sensorEditorsData = [
+const editorsData: ExpertEditorItem[] = [
     {
-        name: 'Dr. Alex Carter',
-        degree: 'PhD in Sensor Technology',
-        experience: '14 years of experience',
-        manuscripts: '180+ manuscripts edited',
-        countryFlag: '🇬🇧',
-        avatar: "/images/subject-matter-experts/medical-animation/John-Miller.webp"
+        name: "Dr. Alex Carter",
+        degree: "PhD in Sensor Technology",
+        experience: "14 years of experience",
+        manuscripts: "180+ manuscripts edited",
+        flag: "/images/country/gb.png",
+        avatar:
+            "/images/subject-matter-experts/medical-animation/John-Miller.webp",
     },
     {
-        name: 'Dr. Neha Rao',
-        degree: 'PhD in Embedded Systems and Sensors',
-        experience: '11 years of experience',
-        manuscripts: '130+ manuscripts edited',
-        countryFlag: '🇮🇳',
-        avatar: "/images/subject-matter-experts/biochemistry/Dr.-Sophia-Patel.webp"
+        name: "Dr. Neha Rao",
+        degree: "PhD in Embedded Systems and Sensors",
+        experience: "11 years of experience",
+        manuscripts: "130+ manuscripts edited",
+        flag: "/images/country/us.png",
+        avatar:
+            "/images/subject-matter-experts/sensor-technology/Dr.-Neha-Rao.webp",
     },
     {
-        name: 'Dr. Rahul Mehta',
-        degree: 'PhD in Smart Sensor Systems',
-        experience: '10 years of experience',
-        manuscripts: '120+ manuscripts edited',
-        countryFlag: '🇺🇸',
-        avatar: "/images/subject-matter-experts/big-data-hadoop/Dr.-S.-Rao.webp"
-    }
+        name: "Dr. Rahul Mehta",
+        degree: "PhD in Smart Sensor Systems",
+        experience: "10 years of experience",
+        manuscripts: "120+ manuscripts edited",
+        flag: "/images/country/us.png",
+        avatar:
+            "/images/subject-matter-experts/big-data-hadoop/Dr.-S.-Rao.webp",
+    },
 ];
-
 export default function SensorTechnologySubjectMatterExpertsSection() {
     // Tab State for Emerging Trends in Sensor Technology
     const [activeTechTab, setActiveTechTab] = useState(0);
@@ -191,197 +208,49 @@ export default function SensorTechnologySubjectMatterExpertsSection() {
 
             {/* SECTION 2: Emerging Trends in Sensor Technology */}
             <section className="max-w-6xl mx-auto space-y-6">
-                <div className="space-y-3 text-left">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Emerging Trends in Sensor Technology
-                    </h2>
-                    <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                        The acceleration of sensor technology is being driven by notable advancements made in the fields of material sciences, artificial intelligence, and connectivity. With these advancements comes the development of a large variety of sensor capabilities that address healthcare, industrial applications, environmental monitoring, and smart infrastructures. The trends that are currently emerging include:
-                    </p>
-                </div>
-
-                {/* Tab Navigation Container */}
-                <div className="bg-[#f7f8f8] border border-gray-200 rounded-lg p-1 sm:p-2">
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-1 border-b border-gray-200">
-                        {emergingTrendsData.map((tab, idx) => {
-                            const isActive = activeTechTab === idx;
-                            return (
-                                <button
-                                    key={tab.id}
-                                    onClick={() => setActiveTechTab(idx)}
-                                    className={`px-3 py-3 text-xs sm:text-sm font-semibold transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center text-center ${isActive
-                                        ? 'bg-[#0e3b32] text-white shadow-sm'
-                                        : 'bg-[#eef2f1] text-gray-700 hover:bg-gray-200'
-                                        }`}
-                                >
-                                    {tab.title}
-                                </button>
-                            );
-                        })}
-                    </div>
-
-                    {/* Active Tab Content */}
-                    <div className="p-6 sm:p-8 bg-white border border-t-0 border-gray-200 mt-0 rounded-b-md shadow-xs">
-                        <h3 className="text-xl font-bold text-[#0e3b32] mb-3">
-                            {emergingTrendsData[activeTechTab].title}
-                        </h3>
-                        <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                            {emergingTrendsData[activeTechTab].description}
-                        </p>
-                    </div>
-                </div>
+                <EmergingTrendsSection
+                    title="Emerging Trends in Sensor Technology"
+                    description="The acceleration of sensor technology is being driven by notable advancements made in the fields of material sciences, artificial intelligence, and connectivity. With these advancements comes the development of a large variety of sensor capabilities that address healthcare, industrial applications, environmental monitoring, and smart infrastructures. The trends that are currently emerging include:"
+                    trends={emergingTrendsData}
+                    footerText=""
+                />
             </section>
 
             {/* SECTION 3: Clinical Applications of Sensor Technology */}
             <section className="max-w-6xl mx-auto space-y-8">
-                <div className="space-y-3 text-left">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Clinical Applications of Sensor Technology
-                    </h2>
-                    <p className="text-gray-700 text-base sm:text-lg max-w-5xl leading-relaxed">
-                        Sensor technology plays a transformative role in modern clinical practice by enabling accurate diagnosis, continuous monitoring, and personalized patient care. Advanced sensors enhance clinical efficiency, improve patient outcomes, and support data-driven medical decisions across a wide range of healthcare settings:
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div className="space-y-4">
-                        {clinicalApplicationsData.map((item, index) => {
-                            const IconComponent = item.icon;
-                            return (
-                                <div key={index} className="flex items-start space-x-4">
-                                    <div className="p-2 rounded-lg bg-gray-50 border border-gray-200 text-[#0e3b32] shrink-0 mt-1">
-                                        {"iconSrc" in item && (item as { iconSrc?: string }).iconSrc ? (
-                                            <Image src={(item as { iconSrc?: string }).iconSrc!} alt="" width={24} height={24} className="object-contain w-6 h-6 shrink-0" />
-                                        ) : (
-                                            <IconComponent className="w-6 h-6 stroke-[1.5]" />
-                                        )}
-                                    </div>
-                                    <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">
-                                        <strong className="text-gray-900 font-bold">{item.title}: </strong>
-                                        {item.description}
-                                    </p>
-                                </div>
-                            );
-                        })}
-                    </div>
-
-                    <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <Image
-                            src="/images/subject-matter-experts/sensor-technology/Clinical-Applications-of-Sensor-Technology.webp"
-                            alt="Clinical Applications of Sensor Technology"
-                            fill
-                            sizes="(max-width: 1024px) 100vw, 360px"
-                            className="object-cover"
-                        />
-                    </div>
-                </div>
+                <ApplicationsSection
+                    title="Clinical Applications of Sensor Technology"
+                    description="Sensor technology plays a transformative role in modern clinical practice by enabling accurate diagnosis, continuous monitoring, and personalized patient care. Advanced sensors enhance clinical efficiency, improve patient outcomes, and support data-driven medical decisions across a wide range of healthcare settings:"
+                    applications={applicationsData}
+                    imageSrc="/images/subject-matter-experts/sensor-technology/Clinical-Applications-of-Sensor-Technology.webp"
+                    imageAlt="Clinical Applications of Sensor Technology"
+                />
             </section>
 
             {/* SECTION 4: Where Our Authors Publish */}
-            <section className="max-w-6xl mx-auto space-y-6">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Where Our Authors Publish
-                    </h2>
-                    <div className="w-16 h-1 bg-[#0e3b32] mx-auto rounded-full"></div>
-                    <p className="text-gray-600 text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
-                        Our authors share Pubrica's expert content across top-tier journals, conferences, and platforms, maximizing its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity.
-                    </p>
-                </div>
-
-                {/* Featured Journal Publication */}
-                <div className="bg-[#fafafa] border border-gray-200 rounded-lg p-6 sm:p-8 shadow-xs max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
-                    {/* Journal Cover */}
-                    <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
-                        <img
-                            src="/images/subject-matter-experts/sensor-technology/sample-works-13-1.webp"
-                            alt="Biosensors & Bioelectronics Journal Cover"
-                            className="w-full h-auto object-cover"
-                        />
-                    </div>
-
-                    {/* Article Details */}
-                    <div className="flex-1 space-y-3 text-gray-800 text-sm sm:text-base leading-relaxed">
-                        <p>
-                            <strong className="text-gray-900 font-bold">Paper Title: </strong>
-                            Extended Strand-Mediated Target Unmasking Synergized with Lyophilized Hairpin Probes for One-Step Viral RNA Detection.
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Author: </strong>
-                            Jiwei Wang, Chuankun Yang, Ran Xu, Shuo Ma, Ai Chen, YumingYao, Guoqiu Wu.
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Journal Name: </strong>
-                            Biosensors & Bioelectronics
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Publisher: </strong>
-                            Elsevier
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Impact factor: </strong>
-                            2.0 (2024)
-                        </p>
-                    </div>
-                </div>
-            </section>
-
+            <WhereAuthorsPublish
+                title="Where Our Authors Publish"
+                description="Our authors share Pubrica's expert content across top-tier journals, conferences, and platforms, maximizing its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+                publication={{
+                    imageSrc:
+                        "/images/subject-matter-experts/sensor-technology/sample-works-13-1.webp",
+                    imageAlt: "Biosensors & Bioelectronics Journal Cover",
+                    paperTitle:
+                        "Extended Strand-Mediated Target Unmasking Synergized with Lyophilized Hairpin Probes for One-Step Viral RNA Detection.",
+                    author:
+                        "Jiwei Wang, Chuankun Yang, Ran Xu, Shuo Ma, Ai Chen, YumingYao, Guoqiu Wu.",
+                    journalName: "Biosensors & Bioelectronics",
+                    publisher: "Elsevier",
+                    impactFactor: "2.0 (2024)",
+                }}
+            />
             {/* SECTION 5: Our Expert Sensor Technology Editors */}
             <section className="max-w-6xl mx-auto space-y-8">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Our Expert Sensor Technology Editors
-                    </h2>
-                    <p className="text-gray-600 text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
-                        Pubrica's team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake.
-                    </p>
-                </div>
-
-                {/* Editors Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {sensorEditorsData.map((editor, index) => (
-                        <div
-                            key={index}
-                            className="bg-[#a3c3bb] rounded-xl p-6 text-gray-900 flex flex-col justify-between shadow-xs transition-transform duration-200 hover:-translate-y-1"
-                        >
-                            <div className="space-y-4">
-                                <div className="flex items-center space-x-3">
-                                    <div className="relative">
-                                        <img
-                                            src={editor.avatar}
-                                            alt={editor.name}
-                                            className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-xs"
-                                        />
-                                        <span className="absolute bottom-0 right-0 text-sm bg-white rounded-full px-1 shadow-xs">
-                                            {editor.countryFlag}
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-lg text-[#0a2923]">
-                                            {editor.name}
-                                        </h3>
-                                        <p className="text-xs sm:text-sm font-medium text-gray-800">
-                                            {editor.degree}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="w-full border-t border-[#88b1a8] my-2"></div>
-
-                                <div className="space-y-2 text-xs sm:text-sm font-semibold text-gray-800">
-                                    <div className="flex items-center space-x-2">
-                                        <Briefcase className="w-4 h-4 text-[#0e3b32]" />
-                                        <span>{editor.experience}</span>
-                                    </div>
-                                    <div className="flex items-center space-x-2">
-                                        <FileText className="w-4 h-4 text-[#0e3b32]" />
-                                        <span>{editor.manuscripts}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <ExpertEditorsSection
+                    title="Our Expert Sensor Technology Editors"
+                    description="Pubrica's team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake."
+                    editors={editorsData}
+                />
             </section>
 
         </div>

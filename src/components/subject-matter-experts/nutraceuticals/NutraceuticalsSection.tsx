@@ -12,6 +12,8 @@ import {
     Sparkles
 } from 'lucide-react';
 import ApplicationsSection from '@/components/common/ApplicationsSection';
+import WhereAuthorsPublish from '@/components/common/WhereAuthorsPublish';
+import ExpertEditorsSection, { ExpertEditorItem } from '@/components/common/ExpertEditorsSection';
 
 const emergingTrendsData = [
     {
@@ -100,31 +102,34 @@ const applicationsData = [
     },
 ];
 
-const editorsData = [
+const editorsData: ExpertEditorItem[] = [
     {
-        name: 'Dr. Ethan Caldwell',
-        degree: 'PhD in Nutritional Science',
-        experience: '12 years of experience',
-        manuscripts: '150+ manuscripts edited',
-        countryFlag: '/images/subject-matter-experts/nutraceuticals/gb.png',
-        avatar: "/images/subject-matter-experts/nutraceuticals/Dr.-Michael-Anderson.webp"
+        name: "Dr. Ethan Caldwell",
+        degree: "PhD in Nutritional Science",
+        experience: "12 years of experience",
+        manuscripts: "150+ manuscripts edited",
+        flag: "/images/subject-matter-experts/nutraceuticals/gb.png",
+        avatar:
+            "/images/subject-matter-experts/nutraceuticals/Dr.-Michael-Anderson.webp",
     },
     {
-        name: 'Dr. Priya Mehta',
-        degree: 'MSc in Food and Nutraceutical Technology',
-        experience: '10 years of experience',
-        manuscripts: '130+ manuscripts edited',
-        countryFlag: '/images/subject-matter-experts/nutraceuticals/us.png',
-        avatar: "/images/subject-matter-experts/nutraceuticals/Dr.-Priya-Mehta.webp"
+        name: "Dr. Priya Mehta",
+        degree: "MSc in Food and Nutraceutical Technology",
+        experience: "10 years of experience",
+        manuscripts: "130+ manuscripts edited",
+        flag: "/images/subject-matter-experts/nutraceuticals/us.png",
+        avatar:
+            "/images/subject-matter-experts/nutraceuticals/Dr.-Priya-Mehta.webp",
     },
     {
-        name: 'Dr. Ananya Rao',
-        degree: 'PhD in Pharmacognosy',
-        experience: '11 years of experience',
-        manuscripts: '160+ manuscripts edited',
-        countryFlag: '/images/subject-matter-experts/nutraceuticals/us.png',
-        avatar: "/images/subject-matter-experts/nutraceuticals/Dr.-Ananya-Rao.webp"
-    }
+        name: "Dr. Ananya Rao",
+        degree: "PhD in Pharmacognosy",
+        experience: "11 years of experience",
+        manuscripts: "160+ manuscripts edited",
+        flag: "/images/subject-matter-experts/nutraceuticals/us.png",
+        avatar:
+            "/images/subject-matter-experts/nutraceuticals/Dr.-Ananya-Rao.webp",
+    },
 ];
 
 export default function NutraceuticalsSection() {
@@ -145,121 +150,29 @@ export default function NutraceuticalsSection() {
             </section>
 
             {/* SECTION: Where Our Authors Publish */}
-            <section className="max-w-6xl mx-auto space-y-6">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Where Our Authors Publish
-                    </h2>
-                    <div className="w-16 h-1 bg-[#0e3b32] mx-auto rounded-full"></div>
-                    <p className="text-gray-600 text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
-                        Our authors share Pubrica&apos;s expert content across top-tier journals, conferences, and platforms, maximizing its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity.
-                    </p>
-                </div>
-
-                {/* Featured Publication Card */}
-                <div className="bg-[#fafafa] border border-gray-200 rounded-lg p-6 sm:p-8 shadow-xs max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
-                    {/* Journal Cover Image */}
-                    <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white relative h-[280px]">
-                        <Image
-                            src="/images/subject-matter-experts/nutraceuticals/Nutraceuticals.webp"
-                            alt="Nutraceuticals in Immune Function Journal Cover"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
-
-                    {/* Paper Details */}
-                    <div className="flex-1 space-y-3 text-gray-800 text-sm sm:text-base leading-relaxed">
-                        <p>
-                            <strong className="text-gray-900 font-bold">Paper Title: </strong>
-                            Analysis of Osmotic Pump-Administered Xylitol in a Syngeneic Mouse Melanoma Model
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Author: </strong>
-                            Cannon, M., Dempsey, E., Cosentino, A., & Ghoreishi, N
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Journal Name: </strong>
-                            Nutraceuticals
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Publisher: </strong>
-                            MDPI
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Impact factor: </strong>
-                            1.944 (2024)
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <WhereAuthorsPublish
+                title="Where Our Authors Publish"
+                description="Our authors share Pubrica's expert content across top-tier journals, conferences, and platforms, maximizing its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+                publication={{
+                    imageSrc:
+                        "/images/subject-matter-experts/nutraceuticals/Nutraceuticals.webp",
+                    imageAlt: "Nutraceuticals in Immune Function Journal Cover",
+                    paperTitle:
+                        "Analysis of Osmotic Pump-Administered Xylitol in a Syngeneic Mouse Melanoma Model",
+                    author: "Cannon, M., Dempsey, E., Cosentino, A., & Ghoreishi, N",
+                    journalName: "Nutraceuticals",
+                    publisher: "MDPI",
+                    impactFactor: "1.944 (2024)",
+                }}
+            />
 
             {/* SECTION: Our Expert Nutraceuticals Editors */}
             <section className="max-w-6xl mx-auto space-y-8">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Our Expert Nutraceuticals Editors
-                    </h2>
-                    <p className="text-gray-600 text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
-                        Pubrica&apos;s team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake.
-                    </p>
-                </div>
-
-                {/* Editors Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {editorsData.map((editor, index) => (
-                        <div
-                            key={index}
-                            className="bg-[#a3c3bb] rounded-xl p-6 text-gray-900 flex flex-col justify-between shadow-xs transition-transform duration-200 hover:-translate-y-1"
-                        >
-                            <div className="space-y-4">
-                                {/* Header with Avatar and Flag Image */}
-                                <div className="flex items-center space-x-3">
-                                    <div className="relative">
-                                        <Image
-                                            src={editor.avatar}
-                                            alt={editor.name}
-                                            width={56}
-                                            height={56}
-                                            className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-xs"
-                                        />
-                                        <div className="absolute bottom-0 right-0 w-5 h-5 rounded-full border border-white overflow-hidden shadow-xs bg-white flex items-center justify-center">
-                                            <Image
-                                                src={editor.countryFlag}
-                                                alt="Country Flag"
-                                                width={20}
-                                                height={20}
-                                                className="w-full h-full object-cover"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-lg text-[#0a2923]">
-                                            {editor.name}
-                                        </h3>
-                                        <p className="text-xs sm:text-sm font-medium text-gray-800">
-                                            {editor.degree}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="w-full border-t border-[#88b1a8] my-2"></div>
-
-                                {/* Editor Stats */}
-                                <div className="space-y-2 text-xs sm:text-sm font-semibold text-gray-800">
-                                    <div className="flex items-center space-x-2">
-                                        <Briefcase className="w-4 h-4 text-[#0e3b32]" />
-                                        <span>{editor.experience}</span>
-                                    </div>
-                                    <div className="flex items-center space-x-2">
-                                        <FileText className="w-4 h-4 text-[#0e3b32]" />
-                                        <span>{editor.manuscripts}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <ExpertEditorsSection
+                    title="Our Expert Nutraceuticals Editors"
+                    description="Pubrica&apos;s team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake."
+                    editors={editorsData}
+                />
             </section>
 
         </div>

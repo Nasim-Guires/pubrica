@@ -40,6 +40,8 @@ import {
     TrendingUp
 } from 'lucide-react';
 import HeroBanner from "@/components/common/HeroBanner";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
+import CommonExpertiseCards from "@/components/common/CommonExpertiseCards";
 
 export default function PharmaceuticalsPage() {
     const disciplines = [
@@ -52,7 +54,18 @@ export default function PharmaceuticalsPage() {
         {
             title: "Pharmacology and Toxicology",
             iconSrc: "/images/subject-matter-experts/pharmaceuticals/Pharmacology-and-Toxicology.webp",
-            description: "Understanding drug action and safety is vital for advancing therapeutic innovation. We provide comprehensive support for studies in molecular, cellular, and systems pharmacology, as well as toxicology research assessing drug safety and adverse effects. Our pharmaceutical editing services and scientific writing services help researchers communicate complex mechanisms of action, receptor binding, and dose-response relationships with clarity and precision.",
+            description: (
+                <>
+                    Understanding drug action and safety is vital for advancing therapeutic innovation. We provide comprehensive support for studies in molecular, cellular, and systems pharmacology, as well as toxicology research assessing drug safety and adverse effects. Our{" "}
+                    <Link
+                        href="/services/editing-and-translation/"
+                        className="text-blue-600"
+                    >
+                        pharmaceutical editing services
+                    </Link>{" "}
+                    and scientific writing services help researchers communicate complex mechanisms of action, receptor binding, and dose-response relationships with clarity and precision.
+                </>
+            ),
             icon: Microscope,
         },
         {
@@ -78,67 +91,68 @@ export default function PharmaceuticalsPage() {
             iconSrc: "/images/subject-matter-experts/pharmaceuticals/Regulatory-Affairs-and-Quality-Assurance.webp",
             description: "Compliance with international regulatory standards is essential for successful drug approval. Our experts assist in preparing regulatory documentation, quality control studies, and validation reports according to FDA, EMA, and ICH guidelines. We also provide support in writing systematic reviews and white papers on regulatory strategies and policy trends.",
             icon: ShieldCheck,
-        }
+        },
     ];
 
-    const services = [
+    const expertiseCards = [
         {
             title: "Peer-Reviewing Services",
-            description: "Comprehensive review to refine and validate your research pre-submission.",
-            image: "/images/subject-matter-experts/algorithm/Research-Services.png",
+            desc: "Comprehensive review to refine and validate your research pre-submission.",
+            href: "/services/publication-support/peer-review-pre-submission/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Research-Services.png",
             icon: UserCheck,
-            href: "services/publication-support/peer-review-pre-submission"
         },
         {
             title: "Editing & Proofreading",
-            description: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            image: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
+            desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
+            href: "/services/editing-and-translation/",
+            imageUrl: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: PenTool,
-            href: "/services/medical-data-collection"
         },
         {
             title: "Data Collection for AI & ML",
-            description: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            image: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
+            desc: "Structured data gathering tailored for artificial intelligence and machine learning.",
+            href: "/services/medical-data-collection",
+            imageUrl: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Database,
-            href: "/services/medical-data-collection"
         },
         {
             title: "Translation Services",
-            description: "Accurate scientific translations to broaden the reach of your research.",
-            image: "/images/subject-matter-experts/animal-science/Translation-Services.png",
+            desc: "Accurate scientific translations to broaden the reach of your research.",
+            href: "/services/editing-and-translation/",
+            imageUrl: "/images/subject-matter-experts/animal-science/Translation-Services.png",
             icon: Languages,
-            href: "/services/editing-and-translation/"
         },
         {
             title: "Systematic Reviews",
-            description: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
-            image: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
+            desc: "Comprehensive literature reviews and evidence synthesis for clinical and academic research.",
+            href: "/services/research-services/systematic-review",
+            imageUrl: "/images/subject-matter-experts/algorithm/Artwork-Editing.png",
             icon: Layers,
-            href: "/services/research-services/systematic-review"
         },
         {
             title: "Journal Submission",
-            description: "Helping select the right journals and manage the submission process seamlessly.",
-            image: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
+            desc: "Helping select the right journals and manage the submission process seamlessly.",
+            href: "/services/publication-support/journal-submission",
+            imageUrl: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Send,
-            href: "/services/publication-support/journal-submission"
         },
         {
             title: "Original Research Article",
-            description: "End-to-end writing, statistical analysis, and formatting tailored to journal-specific guidelines.",
-            image: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
+            desc: "End-to-end writing, statistical analysis, and formatting tailored to journal-specific guidelines.",
+            href: "/services/physician-writing-services/original-research-article",
+            imageUrl: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: FileText,
-            href: "/services/physician-writing-services/original-research-article"
         },
         {
             title: "Journal Selection",
-            description: "Strategic journal selection to maximize publication success.",
-            image: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
+            desc: "Strategic journal selection to maximize publication success.",
+            href: "/services/publication-support/journal-selection",
+            imageUrl: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSpreadsheet,
-            href: "/services/publication-support/journal-selection"
-        }
+        },
     ];
+
 
     return (
         <main className="w-full bg-[#FAFAFA] font-sans antialiased text-gray-800">
@@ -151,47 +165,63 @@ export default function PharmaceuticalsPage() {
             />
 
             {/* SECTION 2: Hero Intro Content */}
-            <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <section className="pt-6 border-t border-slate-100">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="mb-5">
+                            <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+                                Empowering Pharmaceutical Research Through Expert Editing and Publication Support
+                            </h2>
+                        </div>
 
-                    {/* Left Text Content */}
-                    <div className="lg:col-span-7 space-y-4">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] leading-snug">
-                            Empowering Pharmaceutical Research Through Expert Editing and Publication Support
-                        </h2>
+                        <div className="flow-root">
+                            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                                <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0 mx-auto bg-[#a3c9bd]/30">
+                                    <Image
+                                        src="/images/subject-matter-experts/pharmaceuticals/Pharmaceuticals.webp"
+                                        alt="Pharmaceutical Research Support"
+                                        fill
+                                        priority
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 320px, 380px"
+                                    />
+                                </div>
+                            </div>
 
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Pharmaceutical science is a multidisciplinary field that integrates biology, chemistry, pharmacology, and technology to develop safe and effective therapeutics that improve health outcomes worldwide. From drug discovery and preclinical studies to formulation, quality assurance, and clinical trials, every stage of pharmaceutical research demands precision, accuracy, and clarity in documentation. As the pharmaceutical landscape evolves with advancements in biotechnology, personalized medicine, and regulatory frameworks, researchers face increasing challenges in producing high-quality manuscripts that meet the expectations of international journals.
-                        </p>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            At Pubrica, we provide comprehensive pharmaceutical research support, editing, writing, and publication support tailored for pharmaceutical professionals and academics. Our expert team of PhD-qualified editors and domain specialists ensures that your research meets the highest standards of scientific integrity, readability, and journal-specific formatting.
-                        </p>
+                            <div className="space-y-5 text-slate-700">
+                                <div className="space-y-5">
+                                    <p className="text-base leading-relaxed">
+                                        Pharmaceutical science is a multidisciplinary field that integrates biology, chemistry, pharmacology, and technology to develop safe and effective therapeutics that improve health outcomes worldwide. From{" "}
+                                        <Link href="/services/research-services/product-development/" className="text-blue-600 no-underline">
+                                            drug discovery
+                                        </Link>{" "}
+                                        and preclinical studies to formulation, quality assurance, and clinical trials, every stage of pharmaceutical research demands precision, accuracy, and clarity in documentation. As the{" "}
+                                        <Link href="/industries/pharmaceutical/" className="text-blue-600 no-underline">
+                                            pharmaceutical
+                                        </Link>{" "}
+                                        landscape evolves with advancements in biotechnology, personalized medicine, and regulatory frameworks, researchers face increasing challenges in producing high-quality manuscripts that meet the expectations of international journals.
+                                    </p>
 
-                        {/* CTA Button */}
-                        <div className="pt-4">
-                            <Link
-                                href="/order-now"
-                                className="inline-block bg-[#C4161C] hover:bg-[#a31217] text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
-                            >
-                                Get a Free Quote
-                            </Link>
+                                    <p className="text-base leading-relaxed">
+                                        At Pubrica, we provide comprehensive{" "}
+                                        <Link href="/services/research-services/" className="text-blue-600 no-underline">
+                                            pharmaceutical research support
+                                        </Link>
+                                        , editing, writing, and{" "}
+                                        <Link href="/services/publication-support/" className="text-blue-600 no-underline">
+                                            publication support
+                                        </Link>{" "}
+                                        tailored for pharmaceutical professionals and academics. Our expert team of PhD-qualified editors and domain specialists ensures that your research meets the highest standards of scientific integrity, readability, and journal-specific formatting.
+                                    </p>
+
+                                    {/* CTA Button */}
+                                    <div className="pt-2">
+                                        <GetFreeQuoteButton />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    {/* Right Circular Image */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white bg-[#a3c9bd]/30 flex items-center justify-center">
-                            <Image
-                                src="/images/subject-matter-experts/pharmaceuticals/Pharmaceuticals.webp"
-                                alt="Pharmaceutical Research Support"
-                                fill
-                                priority
-                                className="object-cover"
-                                sizes="(max-width: 768px) 320px, 380px"
-                            />
-                        </div>
-                    </div>
-
                 </div>
             </section>
 
@@ -216,62 +246,24 @@ export default function PharmaceuticalsPage() {
             {/* SECTION 4: Expertise Grid */}
             <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 
-                <div className="text-center max-w-4xl mx-auto mb-12">
-                    <div className="flex items-center justify-center gap-4 mb-3">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
+                <div className="text-left max-w-4xl mb-12">
+                    <div className="flex items-center justify-start gap-4 mb-3">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] whitespace-nowrap">
                             Our Expertise in Pharmaceutical Research and Publication
                         </h2>
-                        <div className="hidden sm:block h-[2px] w-24 bg-[#0e3b32] mt-1" />
+                        <div className="hidden sm:block h-[2px] w-24 bg-[#0e3b32] shrink-0" />
                     </div>
                     <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                        Publishing in high-impact pharmaceutical and medical journals requires more than sound science; it demands precision in presentation, adherence to formatting guidelines, and linguistic clarity. Our pharmaceutical editors and scientific writing team offer tailored solutions for every stage of your research journey.
+                        Publishing in high-impact pharmaceutical and medical journals requires more than sound science; it demands precision in presentation, adherence to formatting guidelines, and linguistic clarity. Our pharmaceutical editors and <Link href="/services/research-services/scientific-writing/" className="text-blue-600">scientific writing</Link> team offer tailored solutions for every stage of your research journey.
                     </p>
                 </div>
 
                 {/* Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {services.map((service, index) => {
-                        const IconComponent = service.icon;
-                        return (
-                            <Link
-                                key={index}
-                                href={service.href}
-                                className="relative h-[280px] rounded-lg overflow-hidden border border-gray-200 shadow-sm group block bg-white"
-                            >
-                                {/* Background Image */}
-                                <div className="absolute inset-0 w-full h-[65%]">
-                                    <Image
-                                        src={service.image}
-                                        alt={service.title}
-                                        fill
-                                        className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                    />
-                                </div>
-
-                                {/* Bottom Overlay Card */}
-                                <div className="absolute inset-x-0 bottom-0 bg-white border-t border-gray-100 p-4 transition-all duration-300 ease-in-out transform translate-y-[calc(100%-4.5rem)] group-hover:translate-y-0 group-hover:h-full shadow-lg flex flex-col items-center justify-center text-center">
-
-                                    {/* Floating Icon */}
-                                    <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center shrink-0 text-[#0e3b32] group-hover:top-4 transition-all duration-300">
-                                        <IconComponent className="w-5 h-5" />
-                                    </div>
-
-                                    {/* Card Title */}
-                                    <h3 className="text-sm font-bold text-[#0e3b32] mt-4 mb-2 group-hover:mt-12 transition-all duration-300">
-                                        {service.title}
-                                    </h3>
-
-                                    {/* Description */}
-                                    <p className="text-gray-600 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 px-2">
-                                        {service.description}
-                                    </p>
-
-                                </div>
-                            </Link>
-                        );
-                    })}
-                </div>
+                <CommonExpertiseCards
+                    title=""
+                    description=""
+                    cards={expertiseCards}
+                />
 
             </section>
 
