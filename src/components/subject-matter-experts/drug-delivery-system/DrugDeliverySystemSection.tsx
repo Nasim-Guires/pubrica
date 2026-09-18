@@ -173,48 +173,57 @@ export default function DrugDeliverySystemSection() {
             </section>
 
             {/* SECTION 3: Areas of Study (Full-Width Dark Green Background) */}
-            <section className="w-full bg-[#0a2923] py-7 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-6xl mx-auto space-y-10">
+            <section className="w-full grid grid-cols-1 lg:grid-cols-12 min-h-[420px] rounded-none overflow-hidden">
+                {/* Left Side: Square Image Container */}
+                <div className="lg:col-span-5 relative min-h-[300px] flex items-center p-8 sm:p-12 !rounded-none overflow-hidden">
+                    {/* Next.js Image Component */}
+                    <Image
+                        src="/images/subject-matter-experts/drug-delivery-system/Areas-of-Study-1.webp"
+                        alt="Drug Delivery System"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 41vw"
+                        className="object-cover !rounded-none"
+                        style={{ clipPath: "none", borderRadius: "0px" }}
+                        priority
+                    />
+
+                    {/* Dark Overlay */}
+                    <div
+                        className="absolute inset-0 bg-black/60 !rounded-none z-10"
+                        style={{ clipPath: "none", borderRadius: "0px" }}
+                    ></div>
+
+                    {/* Text Overlay */}
+                    <p className="relative z-20 text-white text-sm sm:text-base font-normal leading-relaxed max-w-md">
+                        Pubrica's experts provide comprehensive support for drug delivery
+                        system research, ensuring your work is accurate, impactful, and
+                        reaches the right audience, from design to clinical application.
+                    </p>
+                </div>
+
+                {/* Right Side: Dark Green Background with Header & Grid */}
+                <div className="lg:col-span-7 bg-[#052b28] p-8 sm:p-12 flex flex-col justify-center space-y-6">
                     {/* Section Header */}
-                    <div className="text-center space-y-3">
-                        <h2 className="text-3xl sm:text-4xl font-bold text-white">
+                    <div className="space-y-2">
+                        <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
                             Areas of Study
                         </h2>
-                        <div className="w-16 h-1 bg-white mx-auto rounded-full"></div>
+                        <div className="w-16 h-1 bg-white rounded-full"></div>
                     </div>
 
-                    {/* Content Layout */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                        {/* Banner Card Left */}
-                        <div
-                            className="lg:col-span-5 rounded-lg overflow-hidden shadow-lg relative min-h-[280px] flex items-center p-8 bg-cover bg-center"
-                            style={{
-                                backgroundImage: `url('/images/subject-matter-experts/drug-delivery-system/Drug-Delivery-System.webp')`,
-                            }}
-                        >
-                            <div className="absolute inset-0 bg-black/60"></div>
-                            <p className="relative z-10 text-white text-xs sm:text-sm leading-relaxed">
-                                Pubrica's experts provide comprehensive support for drug delivery
-                                system research, ensuring your work is accurate, impactful, and
-                                reaches the right audience, from design to clinical application.
-                            </p>
-                        </div>
-
-                        {/* Tag Grid Right */}
-                        <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-3">
-                            {areasOfStudyData.map((study, index) => (
-                                <div
-                                    key={index}
-                                    className={`bg-white text-[#111827] px-3 py-2 rounded-md shadow-sm flex items-center space-x-2 text-xs font-bold leading-tight ${index === 9 || index === 10 ? "sm:col-span-2" : ""
-                                        }`}
-                                >
-                                    <div className="w-4 h-4 rounded-full bg-[#0a2923] flex items-center justify-center shrink-0">
-                                        <ChevronRight className="w-3 h-3 text-white" />
-                                    </div>
-                                    <span>{study}</span>
+                    {/* Tag Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                        {areasOfStudyData.map((study, index) => (
+                            <div
+                                key={index}
+                                className="bg-white text-black px-3 py-2.5 rounded-sm shadow-sm flex items-center space-x-2 text-xs font-semibold leading-snug"
+                            >
+                                <div className="w-4 h-4 rounded-full bg-[#052b28] flex items-center justify-center shrink-0">
+                                    <ChevronRight className="w-3 h-3 text-white stroke-[3]" />
                                 </div>
-                            ))}
-                        </div>
+                                <span>{study}</span>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
