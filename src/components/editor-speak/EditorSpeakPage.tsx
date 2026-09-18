@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus, Star } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
 import HeroBanner from "../common/HeroBanner";
 
@@ -28,13 +28,58 @@ interface ExpertProfile {
   questions: QuestionAnswer[];
 }
 
-const navItems = [
-  { name: "MEET THE EXPERTS", active: true },
-  { name: "SUBJECT AREA", active: false },
-  { name: "THERAPEUTIC EXPERTISE", active: false },
-  { name: "GLOBAL PARTNERS AND MEMBERSHIP", active: false },
-  { name: "CONTACT US", active: false },
-  { name: "CAREERS", active: false },
+export interface NavSubItem {
+  id: string;
+  label: string;
+  href: string;
+}
+
+export interface NavLinkItem {
+  id: string;
+  label: string;
+  href?: string;
+  subItems?: NavSubItem[];
+}
+
+const sidebarLinks: NavLinkItem[] = [
+  {
+    id: "experts",
+    label: "MEET THE EXPERTS",
+    subItems: [
+      { id: "our-editors", label: "OUR EDITORS", href: "/about-us/our-editors" },
+      { id: "editor-profile", label: "EDITOR PROFILE", href: "/scientific-editor-profile" },
+      { id: "editor-speak", label: "EDITOR SPEAK", href: "/editor-speak" },
+    ],
+  },
+  {
+    id: "subject",
+    label: "SUBJECT AREA",
+    subItems: [
+      { id: "medicine", label: "MEDICINE", href: "/about-us/medicine" },
+      { id: "life-science", label: "LIFE SCIENCE", href: "/about-us/life-sciences" },
+      { id: "physical-sciences", label: "PHYSICAL SCIENCES AND ENGINEERING", href: "/about-us/physical-sciences-engineering" },
+    ],
+  },
+  {
+    id: "therapeutic",
+    label: "THERAPEUTIC EXPERTISE",
+    href: "/therapeutic-expertise",
+  },
+  {
+    id: "membership",
+    label: "GLOBAL PARTNERS AND MEMBERSHIP",
+    href: "/strategic-partnerships-memberships",
+  },
+  {
+    id: "contact",
+    label: "CONTACT US",
+    href: "/contact",
+  },
+  {
+    id: "careers",
+    label: "CAREERS",
+    href: "/careers",
+  },
 ];
 
 const experts: ExpertProfile[] = [
@@ -232,7 +277,7 @@ const ExperienceRenderer = ({
 
 export default function EditorSpeakPage() {
   return (
-    <div className="min-h-screen bg-white text-gray-800">
+    <div className="min-h-screen bg-white font-sans text-slate-800">
       {/* Hero */}
       <HeroBanner
         title="Editors have their say"
@@ -240,89 +285,117 @@ export default function EditorSpeakPage() {
         headingAs="h1"
       />
 
-      {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row gap-10">
-        {/* Sidebar */}
-        <aside className="w-full md:w-64">
-          <div className="flex items-center gap-2 text-[#1a4a42] font-semibold text-lg mb-4">
-            <Star className="w-5 h-5 fill-[#1a4a42]" />
-            <h2>About Us</h2>
-          </div>
+      {/* Content Layout */}
+      <div className="w-full max-w-[1400px] mx-auto px-6 lg:px-12 py-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          {/* Sidebar Navigation */}
+          <aside className="lg:col-span-3 w-full">
+            <div className="flex items-center gap-2 mb-6">
+              <span aria-hidden className="text-amber-500 text-lg">★</span>
+              <h2 className="text-xl font-bold text-[#1b2b28]">
+                About Us
+              </h2>
+            </div>
 
-          <nav className="border-t pt-4 space-y-2">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                className="flex items-center gap-3 w-full py-2 text-left"
-              >
-                <span
-                  className={`border p-1 ${item.active
-                    ? "bg-gray-600 text-white border-gray-600"
-                    : "border-gray-400 text-gray-500"
-                    }`}
-                >
-                  <Plus size={12} />
-                </span>
+            <nav className="border-t border-gray-200 pt-6 space-y-4">
+              {sidebarLinks.map((item) => {
+                const hasSubItems = item.subItems && item.subItems.length > 0;
 
-                <span
-                  className={`text-xs font-semibold tracking-wide ${item.active ? "text-gray-900" : "text-gray-600"
-                    }`}
-                >
-                  {item.name}
-                </span>
-              </button>
-            ))}
-          </nav>
-        </aside>
+                if (hasSubItems) {
+                  return (
+                    <details key={item.id} className="group space-y-2" open={item.id === ""}>
+                      <summary className="w-full flex items-center gap-3 text-xs font-bold text-[#1b2b28] cursor-pointer list-none hover:opacity-80 transition-opacity">
+                        <span className="w-6 h-6 bg-[#80878a] group-open:bg-[#e2a800] text-white flex items-center justify-center text-sm font-bold shrink-0">
+                          <span className="group-open:hidden">+</span>
+                          <span className="hidden group-open:inline">−</span>
+                        </span>
+                        <span className="tracking-wider uppercase">{item.label}</span>
+                      </summary>
 
-        {/* Main */}
-        <main className="flex-1 space-y-12">
-          {experts.map((expert, index) => (
-            <article
-              key={expert.name}
-              className={`space-y-6 ${index !== 0 ? "border-t pt-5" : ""
-                }`}
-            >
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                {/* Image */}
-                <div className="h-72 max-w-xs relative bg-gray-200 border-2 border-gray-400 rounded overflow-hidden">
-                  <Image
-                    src={expert.image}
-                    alt={expert.name}
-                    fill
-                    className="object-cover"
-                    sizes="320px"
-                  />
-                </div>
+                      <div className="pl-9 space-y-2 pt-1">
+                        {item.subItems?.map((sub) => (
+                          <Link
+                            key={sub.id}
+                            href={sub.href}
+                            className="flex items-center gap-2 text-xs font-bold text-[#0088cc] hover:underline"
+                          >
+                            <span>•</span>
+                            <span className="uppercase">{sub.label}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </details>
+                  );
+                }
 
-                {/* Details */}
-                <div>
-                  <h2 className="text-xl font-bold text-gray-900">
-                    {expert.name}
-                    <span className="text-sm font-normal text-gray-600 ml-2">
-                      {expert.qualification}
+                return (
+                  <Link
+                    key={item.id}
+                    href={item.href || "#"}
+                    className="flex items-center gap-3 text-xs font-bold text-[#1b2b28] hover:opacity-80 transition-opacity"
+                  >
+                    <span className="w-6 h-6 bg-[#80878a] text-white flex items-center justify-center text-sm font-bold shrink-0">
+                      +
                     </span>
-                  </h2>
+                    <span className="tracking-wider uppercase">{item.label}</span>
+                  </Link>
+                );
+              })}
+            </nav>
+          </aside>
 
-                  <div className="mt-4 text-sm leading-relaxed">
-                    <p className="font-bold text-[#b94a48]">Experience:</p>
-                    <ExperienceRenderer experience={expert.experience} />
+          {/* Main Content */}
+          <main className="lg:col-span-9 w-full space-y-12">
+            {experts.map((expert, index) => (
+              <article
+                key={expert.name}
+                className={`space-y-6 ${
+                  index !== 0 ? "border-t border-gray-200 pt-8" : ""
+                }`}
+              >
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  {/* Image */}
+                  <div className="h-72 max-w-xs relative bg-gray-100 border-2 border-gray-300 rounded overflow-hidden">
+                    <Image
+                      src={expert.image}
+                      alt={expert.name}
+                      fill
+                      className="object-cover"
+                      sizes="320px"
+                    />
+                  </div>
+
+                  {/* Details */}
+                  <div>
+                    <h2 className="text-xl font-bold text-[#1b2b28]">
+                      {expert.name}
+                      <span className="text-sm font-normal text-gray-600 ml-2">
+                        {expert.qualification}
+                      </span>
+                    </h2>
+
+                    <div className="mt-4 text-sm leading-relaxed">
+                      <p className="font-bold text-[#b94a48]">Experience:</p>
+                      <ExperienceRenderer experience={expert.experience} />
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Questions */}
-              <div className="space-y-5 text-sm leading-relaxed">
-                {expert.questions.map((item) => (
-                  <div key={item.q}>
-                    <h3 className="font-bold text-gray-900">Q. {item.q}</h3>
-                    <p className="mt-1 text-gray-700">{item.a}</p>
-                  </div>
-                ))}
-              </div>
-            </article>
-          ))}
-        </main>
+                {/* Questions */}
+                <div className="space-y-5 text-sm leading-relaxed">
+                  {expert.questions.map((item) => (
+                    <div key={item.q}>
+                      <h3 className="font-bold text-[#1b2b28]">Q. {item.q}</h3>
+                      <p className="mt-1 text-gray-700">{item.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </main>
+
+        </div>
       </div>
     </div>
   );
