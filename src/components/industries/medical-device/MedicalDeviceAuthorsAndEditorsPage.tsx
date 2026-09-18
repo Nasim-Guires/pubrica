@@ -46,7 +46,6 @@ const WhereOurAuthorsPublishAndEditors: NextPage = () => {
     <div className="w-full bg-white text-gray-800 py-7 px-4 md:px-8 space-y-10">
 
       {/* WHERE OUR AUTHORS PUBLISH SECTION */}
-      ```tsx
       <section className="py-12 max-w-5xl mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
@@ -108,7 +107,6 @@ const WhereOurAuthorsPublishAndEditors: NextPage = () => {
           ))}
         </div>
       </section>
-      ```
 
 
       {/* OUR EXPERT MEDICAL EDITORS SECTION */}
