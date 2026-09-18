@@ -95,9 +95,8 @@ const InsightsPage = async () => {
           </Link>
         </div>
 
-        <p className="text-xs text-slate-500 mb-6">
-          Stay updated with Pubrica&apos;s latest insights, tips, and expert advice on
-          publishing guidelines and procedures.
+        <p className="text-sm md:text-base text-slate-500 leading-relaxed mb-6">
+          Stay updated with Pubrica’s latest insights, tips, and expert advice on publishing guidelines and procedures. Explore new perspectives to streamline your publishing journey.
         </p>
 
         <div className="grid md:grid-cols-3 gap-6 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">

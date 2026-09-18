@@ -62,24 +62,29 @@ export default function CategoriesCarousel({ categories }: { categories: Categor
       onMouseLeave={handleMouseLeave}
       onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
-      className={`flex gap-4 overflow-x-auto select-none scroll-smooth ${
-        isDragging ? "cursor-grabbing" : "cursor-grab"
-      }`}
+      className={`flex gap-4 overflow-x-auto select-none scroll-smooth py-2 ${isDragging ? "cursor-grabbing" : "cursor-grab"
+        }`}
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
     >
       {categories.map((cat, i) => (
         <Link
           key={i}
-          href={cat.href}
-          className="flex-shrink-0 w-[calc(50%-12px)] sm:w-[calc(33.333%-12px)] md:w-[calc(20%-13px)] flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-200 hover:border-[#004d40] hover:shadow-sm transition-all text-left group pointer-events-auto"
+          href={cat.href || "#"}
+          className="flex-shrink-0 w-[calc(55%-12px)] sm:w-[calc(35%-12px)] md:w-[calc(22%-13px)] min-h-[85px] flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-200 hover:border-[#004d40] hover:shadow-md transition-all text-left group pointer-events-auto"
           onClick={(e) => {
             if (isDragging) e.preventDefault();
           }}
         >
-          <span className="text-xl bg-slate-50 p-2 rounded-lg group-hover:bg-[#e0f2f1] transition-colors flex-shrink-0">
-            {cat.icon}
-          </span>
-          <span className="text-xs md:text-sm font-semibold text-slate-700 group-hover:text-[#004d40] truncate">
+          {/* Container size matching the icon height, background removed */}
+          <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+            {cat.icon ? (
+              /* Enlarged icon image with no wrapper background */
+              <img src={cat.icon} alt={cat.title} className="w-12 h-12 object-contain" />
+            ) : (
+              <span className="text-3xl">📄</span>
+            )}
+          </div>
+          <span className="text-sm md:text-base font-bold text-slate-800 group-hover:text-[#004d40] line-clamp-2 leading-tight">
             {cat.title}
           </span>
         </Link>

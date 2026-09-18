@@ -1,18 +1,65 @@
 export const newsCategories = [
-  { title: "Articles", icon: "📄", href: "/academy/articles" },
-  { title: "QA Forum", icon: "💬", href: "/academy/qa-forum" },
-  { title: "News & Industry", icon: "📰", href: "/insights/news-and-industry" },
-  { title: "Academy Template", icon: "📝", href: "/academy" },
-  { title: "Study Guide", icon: "🏅", href: "/insights/study-guide" },
-  { title: "Research Service", icon: "🔍", href: "/insights/research-services" },
-  { title: "Proofreading", icon: "✍️", href: "/insights/proof-reading" },
-  { title: "Experimental Methodology", icon: "🧪", href: "/insights/experimental-methodology" },
-  { title: "Academy", icon: "🏫", href: "/academy" },
-  { title: "Call for Papers", icon: "📣", href: "/academy/industry-news" },
-  { title: "Medical Journal", icon: "🩺", href: "/insights/medical-journey" },
-  { title: "Templates", icon: "🗂️", href: "/academy" },
+  {
+    title: "Study Guide",
+    icon: "/images/insight/icons8-badge-100.png",
+    href: "/insights/study-guide/",
+  },
+  {
+    title: "Research Service",
+    icon: "/images/insight/Biotechnology-min.png",
+    href: "/insights/research-services/",
+  },
+  {
+    title: "Proof Reading",
+    icon: "/images/insight/conf_Ord.jpg",
+    href: "/insights/proof-reading/",
+  },
+  {
+    title: "Experimental Methodology",
+    icon: "/images/insight/Biosimilar-min.png",
+    href: "/insights/experimental-methodology/",
+  },
+  {
+    title: "Academy",
+    icon: "/images/insight/Biosimilar-min.png",
+    href: "/academy/",
+  },
+  {
+    title: "Call for Papers",
+    icon: "/images/insight/conf_Ord.jpg",
+    href: "/call-for-papers/",
+  },
+  {
+    title: "Medical Journey",
+    icon: "/images/insight/Biosimilar-min.png",
+    href: "",
+  },
+  {
+    title: "Template",
+    icon: "/images/insight/conf_Ord.jpg",
+    href: "/insights/template/",
+  },
+  {
+    title: "Articles",
+    icon: "/images/insight/Article.webp",
+    href: "/academy/articles/",
+  },
+  {
+    title: "QA Forum",
+    icon: "/images/insight/Article.webp",
+    href: "/academy/qa-forum/",
+  },
+  {
+    title: "News & Industry",
+    icon: "/images/insight/news-and-industry-icon.png",
+    href: "/insights/news-and-industry/news/",
+  },
+  {
+    title: "Academy Template",
+    icon: "/images/insight/news-and-industry-icon.png",
+    href: "/academy/journal-templates/",
+  },
 ];
-
 export const blogPosts = [
   {
     title: "Struggling With Journal Submission? Get Expert Help in Canada",
