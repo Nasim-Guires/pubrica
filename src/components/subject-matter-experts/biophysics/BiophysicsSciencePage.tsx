@@ -13,6 +13,7 @@ import {
     BookOpen,
 } from "lucide-react";
 import CommonExpertiseCards, { ExpertiseCardItem } from "@/components/common/CommonExpertiseCards";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 export default function BiophysicsSciencePage() {
     const disciplines = [
         {
@@ -147,12 +148,7 @@ export default function BiophysicsSciencePage() {
                             .
                         </p>
                         <div className="pt-2">
-                            <Link
-                                href="/order-now"
-                                className="inline-block bg-[#C4161C] hover:bg-[#a31217] text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
-                            >
-                                Get a Free Quote
-                            </Link>
+                            <GetFreeQuoteButton />
                         </div>
                     </div>
 

@@ -15,6 +15,7 @@ import {
     Search,
     Send,
 } from "lucide-react";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 
 export default function MaterialSciencePage() {
@@ -207,12 +208,7 @@ export default function MaterialSciencePage() {
                                 </div>
 
                                 <div className="pt-2">
-                                    <Link
-                                        href="#quote"
-                                        className="inline-block bg-[#C4161C] hover:bg-[#a31217] text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
-                                    >
-                                        Get a Free Quote
-                                    </Link>
+                                       <GetFreeQuoteButton />
                                 </div>
                             </div>
                         </div>
