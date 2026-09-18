@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export interface NavSubItem {
   id: string;
@@ -134,10 +135,7 @@ const doctorsList: DoctorProfile[] = [
 export default function OurEditorsPage() {
   const [activeSidebar, setActiveSidebar] = useState("our-editors");
   // Manage open accordions (MEET THE EXPERTS & SUBJECT AREA open by default)
-  const [openAccordions, setOpenAccordions] = useState<string[]>([
-    "experts",
-    "subject",
-  ]);
+  const [openAccordions, setOpenAccordions] = useState<string[]>([]);
 
   // Active doctor carousel state
   const [currentDoctorIndex, setCurrentDoctorIndex] = useState(0);
@@ -244,17 +242,11 @@ export default function OurEditorsPage() {
   return (
     <main className="w-full bg-[#fcfcfd] font-sans text-slate-800 min-h-screen">
       {/* 1. Header Banner */}
-      <section className="w-full bg-[#1b2b28] text-white py-6 px-4 text-center">
-        <div className="max-w-4xl mx-auto border border-[#2d4842] p-8 sm:p-10 rounded-sm bg-[#162422]/60 shadow-inner">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
-            Our Editors
-          </h1>
-          <p className="text-sm sm:text-base text-emerald-100 font-medium">
-            Across all disciplines
-          </p>
-        </div>
-      </section>
-
+      <HeroBanner
+        title="Our Editors"
+        description="Across all disciplines"
+        headingAs="h1"
+      />
       {/* 2. Main Layout Container */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-7">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -303,8 +295,8 @@ export default function OurEditorsPage() {
                                   href={sub.href}
                                   onClick={() => setActiveSidebar(sub.id)}
                                   className={`block text-[11px] font-bold leading-snug transition-colors ${isSubActive
-                                      ? "text-blue-600 underline font-extrabold"
-                                      : "text-blue-600 hover:underline"
+                                    ? "text-blue-600  font-extrabold"
+                                    : "text-blue-600"
                                     }`}
                                 >
                                   • {sub.label}
@@ -344,7 +336,7 @@ export default function OurEditorsPage() {
                 Our Subject-Matter Experts (SMEs)
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Native English language editors in your field of specialization. Pubrica Scientific Writing & Publishing writers work across various subjects; they work as scientists, professors, publishers, doctors, medical writers, and therapeutic experts. This ensures high-quality standards across various journals, guidelines, and best practices.
+                Native English language editors in your field of specialization. Pubrica Scientific Writing & Publishing writers work across various subjects; they are work as scientists, professors, publishers, doctors, medical writers, and therapeutic experts. This implies that you have a high chance of getting your paper published because of high quality standards. Our knowledge of publishing phases across various journals, guidelines, standards, best practices enhance the quality of your work and that is a guarantee.
               </p>
             </header>
 
@@ -360,8 +352,7 @@ export default function OurEditorsPage() {
                     1. Professional writers only
                   </h4>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Pubrica selects experienced professionals—all our writers and editors hold PhD/Master's degrees from leading global universities alongside native language expertise. They undergo stringent testing and quality checks at every publication stage.
-                  </p>
+                    Pubrica selects professionals only—we never hire dilettantes or students. All our writers and editors are PhD/Master’s degree holders from ivy league universities across the world; in addition, we have native language experts too. Individuals are tested and evaluate to ensure that they have the skills to write high-level manuscripts and other type of documents in their specialized field. They also undertake comprehensive publication training and are subject to quality checks at every stage of the process.                  </p>
                 </article>
 
                 <article className="space-y-1.5">
@@ -369,8 +360,7 @@ export default function OurEditorsPage() {
                     2. Native language experts
                   </h4>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    We hire native English editors from Canada, Australia, the UK, and the US to guarantee complete clarity, coherence, and precision for high-tier academic journals.
-                  </p>
+                    Pubrica specifically hires native English editors from the Canada, Australia, UK, and the US. We ensure coherence, clarity, and comprehension levels in every subject that we write so that there is no leeway for multiple interpretations; in addition, we preempt problems of readers with English as Second Language (ESL). Our manuscripts, essays, Literature Reviews (LRs) have a swift Turn Around Time (TAT).                  </p>
                 </article>
 
                 <article className="space-y-1.5">
@@ -378,7 +368,7 @@ export default function OurEditorsPage() {
                     3. Vast publishing expertise
                   </h4>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Our editorial team averages over two decades of experience working as peer reviewers and certified writers across leading international publications.
+                    The average publishing and editing experience of our team members is 21 years, we guarantee that every manuscript meets the highest language and technical standards of quality. All Pubrica editors work as peer-reviewers with widespread experience working for leading international journals; we have acclaimed authors, certified writers and experienced illuminati who work on your project.
                   </p>
                 </article>
               </div>
@@ -390,30 +380,33 @@ export default function OurEditorsPage() {
                 Patrons of elite societies
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Our editors maintain active memberships across well-known editorial institutions such as EMWA, AMWA, BELS, EASE, and CSE.
+                Our editors are members of several well-known editorial institutions. EMWA, AMWA, BELS, EASE, and CSE—these are some of the institutions we work with; moreover, our writers are cognizant of the latest research and best practices from our subscription to online scientific research databases.
               </p>
 
               {/* Publisher Logos Continuous Smooth Carousel (Shows 5 at a time) */}
-              <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
-                <div className="w-full overflow-hidden">
-                  <div className="flex items-center animate-logo-slide space-x-8">
-                    {carouselLogos.map((logo, index) => (
-                      <div
-                        key={`${logo.name}-${index}`}
-                        className="relative flex-shrink-0 w-1/5 h-20 flex items-center justify-center p-2"
-                      >
-                        <div className="relative w-full h-full">
-                          <Image
-                            src={logo.src}
-                            alt={logo.name}
-                            fill
-                            sizes="(max-width: 768px) 33vw, 20vw"
-                            className="object-contain"
-                          />
-                        </div>
+              <div className="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center">
+                  {publisherLogos.map((logo, index) => (
+                    <div
+                      key={`${logo.name}-${index}`}
+                      className="relative w-full h-16 flex items-center justify-center p-2"
+                    >
+                      {/* 
+              Removed 'grayscale' and 'opacity-80' 
+              to show original colors and full opacity.
+              Removed hover effects for a static grid.
+            */}
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={logo.src}
+                          alt={logo.name}
+                          fill
+                          sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 16vw"
+                          className="object-contain"
+                        />
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -470,8 +463,8 @@ export default function OurEditorsPage() {
                     onClick={() => setCurrentDoctorIndex(idx)}
                     aria-label={`Go to profile ${idx + 1}`}
                     className={`h-1.5 rounded-full transition-all ${idx === currentDoctorIndex
-                        ? "w-5 bg-emerald-600"
-                        : "w-1.5 bg-slate-300 hover:bg-slate-400"
+                      ? "w-5 bg-emerald-600"
+                      : "w-1.5 bg-slate-300 hover:bg-slate-400"
                       }`}
                   />
                 ))}

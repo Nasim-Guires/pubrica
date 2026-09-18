@@ -186,7 +186,6 @@ export default async function PubricaKnowledgeBase() {
   const articles = docs.filter((p) => p.urlPath?.includes("/"));
   const latestArticles = articles.slice(0, 3);
   const topArticles = articles.slice(3, 7);
-
   return (
     <div className="bg-[#f9fbfb] min-h-screen text-gray-800 font-sans selection:bg-[#0f3430] selection:text-white">
 

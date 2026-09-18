@@ -1,12 +1,32 @@
 import type { Metadata } from "next";
 import { Plus, Star } from "lucide-react";
 import Image from "next/image";
+import HeroBanner from "../common/HeroBanner";
 
 export const metadata: Metadata = {
   title: "Editors Have Their Say | Pubrica Expert Insights",
   description:
     "Read expert interviews with medical advisors, scientific writers, and editorial specialists discussing research publication and editorial feedback.",
 };
+
+interface DetailedExperience {
+  intro?: string;
+  bullets?: string[];
+  outro?: string;
+}
+
+interface QuestionAnswer {
+  q: string;
+  a: string;
+}
+
+interface ExpertProfile {
+  name: string;
+  qualification: string;
+  image: string;
+  experience: string | DetailedExperience;
+  questions: QuestionAnswer[];
+}
 
 const navItems = [
   { name: "MEET THE EXPERTS", active: true },
@@ -17,29 +37,25 @@ const navItems = [
   { name: "CAREERS", active: false },
 ];
 
-const experts = [
+const experts: ExpertProfile[] = [
   {
     name: "Dr. Ravi Kumar",
     qualification: "PHD, FIAMS, DMRD, DMRE, DNB",
     image: "/images/academy/ravikumar.webp",
     experience:
-      "Dr. Ravi Kumar is the chief medical & scientific advisor at Pubrica. He has more than 20 years of experience as a medical practitioner. He is a diplomat in cardiac CT and certified by the Cardiovascular Board of Computed Tomography. Dr. Ravi is qualified in advanced cardiovascular imaging from the University of Toronto, Canada. He is also an intervention radiologist consultant and manages scientific writing and publishing operations at Pubrica.",
+      "Dr. Ravi Kumar is the chief medical & scientific advisor at Pubrica. He has more than 20 years of experience as a medical practitioner. He is a diplomat in cardiac CT and certified by the Cardiovascular Board of Computed Tomography. Dr. Ravi is qualified in advanced cardiovascular imaging from the University of Toronto, Canada; moreover, he is an intervention radiologist consultant. In addition to his responsibilities at Pubrica Scientific Writing & Publishing he manages the state-of-the-art CRO facilities in Chennai, India.",
     questions: [
       {
         q: "Is editorial feedback imperative and what do you have to say about the notion of giving reasons for some edits or comments you make?",
-        a: "Providing clear rationale for revisions is essential, particularly when guiding authors. Explaining structural rules, language improvements, and scientific clarity helps authors improve manuscript quality.",
+        a: "Indeed, it is imperative; particularly with non-English writers and editors. Of course, I do provide a valid reason for that change. In addition, grammar rules or work experience play a major role.",
       },
       {
         q: "Tell us about your professional and academic repertoire?",
-        a: "His professional background includes clinical practice, advanced cardiovascular imaging, research consulting, and scientific manuscript development.",
+        a: "I am a gold medalist in statistics and genomics. I started as an English major but I enjoyed stats and genomics so much that I had to change my subject of study. I worked for major CROs, hospitals on medical writing and biostatical programming. When an organization offered me a scientific writer position, I just pounced on it. My family members are doctors too and I have their support always.",
       },
       {
         q: "Is that why you became an editor and was it your choice?",
-        a: "Combining medical expertise with scientific communication created a natural pathway into editorial review and manuscript improvement.",
-      },
-      {
-        q: "What should authors with English as a Second Language (ESL) keep in mind?",
-        a: "Authors should focus on clear, concise writing, proper sentence structure, and communicating scientific ideas effectively.",
+        a: "Yes, that is true although English language was my foundation and I started with MA in English; the combination of both these subjects is what helps me in my profession. I do read a lot and try to know the latest in the industry. You always update your knowledge—reading and learning is a continuous process.",
       },
       {
         q: "Is editing always a good learning experience?",
@@ -68,11 +84,11 @@ const experts = [
     questions: [
       {
         q: "You said that you have been a medical writer and graphic artist. Can you tell us about that experience?",
-        a: "I really like to travel, exercise, and read. Therefore, whenever I can, I like to go traveling, even if it’s just a short trip. Right now, I am hard pressed for time because I work full-time, freelance, and lecture at university; moreover, I’m also on the expert panel of Pubrica Scientific Publishing & Writing.",
+        a: "That was part of my volunteer work for an NGO named AFND, which involved writing grant applications to get funding from the government or other non-profit organizations. The principles of grant writing are similar to any other kind of writing. Know your audience and be clear and precise. It’s obviously not as technical as a medical manuscript. I have also done some creative work in the publishing field, which involved designing, writing press releases and other PR communications for the media. This was very different from medical writing, which is much more objective and which cannot be prejudiced. You have to be persuasive.",
       },
       {
         q: "What do you do when you are not editing?",
-        a: "Understanding the manuscript objective first helps prioritize scientific accuracy, language correction, and formatting requirements efficiently.",
+        a: "I really like to travel, exercise, and read. Therefore, whenever I can, I like to go traveling, even if it’s just a short trip. Right now, I am hard pressed for time because I work full-time, freelance, and lecture at university; moreover, I’m also on the expert panel of Pubrica Scientific Publishing & Writing.",
       },
       {
         q: "You had mentioned that you also do novel editing. How does that differ from copyediting?",
@@ -96,8 +112,13 @@ const experts = [
     name: "Dr. Maria PHD",
     qualification: "MD",
     image: "/images/academy/Maria-1.webp",
-    experience:
-      "Dr. Maria has more than 10 years of writing and editing experience; she has PHD in cellular biology and immunology. Her expertise spans across the following subjects:",
+    experience: {
+      intro:
+        "Dr. Maria has more than 10 years of writing and editing experience; she has PHD in cellular biology and immunology. Her expertise spans across the following subjects:",
+      bullets: ["Biochemistry", "Structural biology", "Molecular biology"],
+      outro:
+        "In addition, Dr. Maria focuses on microbiology, immunology, biomaterials, nano biotechnology, system biology, and biostatistics.",
+    },
     questions: [
       {
         q: "You mentioned that most of editorial institutions provide training camps. What kind of training do you provide at such camps?",
@@ -112,7 +133,7 @@ const experts = [
         a: "Well, I have read quite a bit in other fields of science. I actually spent last winter working on an geology research vessel. So I have some familiarity with that field, which in itself covers areas like botany, zoology, microbiology, and chemistry. I have also taken a number of master’s level classes. Objective is the same in every project.",
       },
       {
-        q: "According to you, how important is it for an editor to have a personal interest in the subject that he or she is editing?",
+        q: " According to you, how important is it for an editor to have a personal interest in the subject that he or she is editing?",
         a: "I think it is important, because it helps an editor be involved in greater detail when he is interested in the subject. So, if I were editing a banking-related document, I might not be able to read in depth because it’s not a subject that really interests me. But just about any science manuscript would have me hooked – even topics such as oceanography and physics. So it’s important to have a passion for editing, because what we are doing has great importance – the manuscripts are the ultimate result of hundreds of years of human endeavor.",
       },
       {
@@ -133,8 +154,17 @@ const experts = [
     name: "Dr. Julie PHD",
     qualification: "MD",
     image: "/images/academy/Julie.webp",
-    experience:
-      "Dr. Julie has over 30 years of experience in medical and scientific writing; she is a subject-matter expert in the field of life sciences and her expertise spans across",
+    experience: {
+      intro:
+        "Dr. Julie has over 30 years of experience in medical and scientific writing; she is a subject-matter expert in the field of life sciences and her expertise spans across",
+      bullets: [
+        "Cell and molecular developmental biology",
+        "Structural & functional genomics/proteomics",
+        "Microbial technology & metabolic engineering",
+      ],
+      outro:
+        "In addition, Dr. Julie focuses on animal cytogenetics and immunogenetics, and bio-informatics and computational biology.",
+    },
     questions: [
       {
         q: "What aspect of manuscript do you devote attention?",
@@ -146,6 +176,10 @@ const experts = [
       },
       {
         q: "What do you think of manuscripts written by authors whose native language is not English?",
+        a: "I have a lot of respect for their work because it is not easy; however, I recommend the help of an editor because it is very difficult to edit your own work. Couple of things: 1) read your work aloud, 2) take a break, and 3) review with fresh eyes. This will certainly help authors catch grammatical and technical errors.",
+      },
+      {
+        q: "What process do you adhere to while editing?",
         a: "First, look at the requirements of the client; second, ascertain the style and referencing requirements; third, ascertain the depth of editing required. Do couple of rounds of editing—I do three.",
       },
       {
@@ -165,25 +199,46 @@ const experts = [
         a: "The processes for each are quite different. While writing, I concentrate on just the content; however, with editing, I have to focus on not only the content, but also the mechanics, the grammar, the punctuation, etc. So, a slightly different skill set is involved. Being an editor and understanding the mechanics of language also helps me as a writer and on the other hand, being a writer and understanding how to structure a paper and the principles of flow help me while editing.",
       },
       {
-        q: "Why did you decide to become an editor??",
+        q: "Why did you decide to become an editor?",
         a: "Simply because I enjoyed it; reading and writing were always my hobbies. And something that I actually studied at university level. I get a lot of satisfaction.",
       },
     ],
   },
 ];
 
+const ExperienceRenderer = ({
+  experience,
+}: {
+  experience: string | DetailedExperience;
+}) => {
+  if (typeof experience === "string") {
+    return <p className="text-gray-700 mt-1">{experience}</p>;
+  }
+
+  return (
+    <div className="text-gray-700 mt-1 space-y-2">
+      {experience.intro && <p>{experience.intro}</p>}
+      {experience.bullets && experience.bullets.length > 0 && (
+        <ul className="list-disc list-inside pl-2 space-y-1 my-2">
+          {experience.bullets.map((bullet, idx) => (
+            <li key={idx}>{bullet}</li>
+          ))}
+        </ul>
+      )}
+      {experience.outro && <p>{experience.outro}</p>}
+    </div>
+  );
+};
+
 export default function EditorSpeakPage() {
   return (
     <div className="min-h-screen bg-white text-gray-800">
       {/* Hero */}
-      <header className="bg-[#1e2e2b] text-white py-6 px-4 text-center">
-        <div className="max-w-3xl mx-auto border border-gray-500/60 py-8 px-4">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-wide">
-            Editors have their say
-          </h1>
-          <p className="text-sm text-gray-300 mt-2">Hear from experts</p>
-        </div>
-      </header>
+      <HeroBanner
+        title="Editors have their say"
+        description="Hear from experts"
+        headingAs="h1"
+      />
 
       {/* Content */}
       <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row gap-10">
@@ -201,19 +256,17 @@ export default function EditorSpeakPage() {
                 className="flex items-center gap-3 w-full py-2 text-left"
               >
                 <span
-                  className={`border p-1 ${
-                    item.active
-                      ? "bg-gray-600 text-white border-gray-600"
-                      : "border-gray-400 text-gray-500"
-                  }`}
+                  className={`border p-1 ${item.active
+                    ? "bg-gray-600 text-white border-gray-600"
+                    : "border-gray-400 text-gray-500"
+                    }`}
                 >
                   <Plus size={12} />
                 </span>
 
                 <span
-                  className={`text-xs font-semibold tracking-wide ${
-                    item.active ? "text-gray-900" : "text-gray-600"
-                  }`}
+                  className={`text-xs font-semibold tracking-wide ${item.active ? "text-gray-900" : "text-gray-600"
+                    }`}
                 >
                   {item.name}
                 </span>
@@ -227,9 +280,8 @@ export default function EditorSpeakPage() {
           {experts.map((expert, index) => (
             <article
               key={expert.name}
-              className={`space-y-6 ${
-                index !== 0 ? "border-t pt-5" : ""
-              }`}
+              className={`space-y-6 ${index !== 0 ? "border-t pt-5" : ""
+                }`}
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {/* Image */}
@@ -254,7 +306,7 @@ export default function EditorSpeakPage() {
 
                   <div className="mt-4 text-sm leading-relaxed">
                     <p className="font-bold text-[#b94a48]">Experience:</p>
-                    <p className="text-gray-700 mt-1">{expert.experience}</p>
+                    <ExperienceRenderer experience={expert.experience} />
                   </div>
                 </div>
               </div>

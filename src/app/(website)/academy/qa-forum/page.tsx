@@ -117,10 +117,8 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
   const page = Math.max(1, Number(pageParam) || 1);
 
   const { docs } = await getPosts({ source: "academy", limit: 1069 });
+  const allEntries = docs.map(parseQaPost).filter((e): e is QaEntry => e !== null);
 
-  const allEntries = docs
-    .map(parseQaPost)
-    .filter((e): e is QaEntry => e !== null);
   const topicCounts = new Map<string, number>();
   for (const entry of allEntries) {
     topicCounts.set(entry.topic, (topicCounts.get(entry.topic) ?? 0) + 1);
@@ -150,8 +148,9 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
             <div className="flex flex-col gap-1.5">
               <Link
                 href="/academy/qa-forum"
-                className={`text-xs px-2.5 py-1.5 rounded transition-colors ${!topicParam ? "bg-[#0b2825] text-white font-semibold" : "text-slate-600 hover:bg-slate-50"
-                  }`}
+                className={`text-xs px-2.5 py-1.5 rounded transition-colors ${
+                  !topicParam ? "bg-[#0b2825] text-white font-semibold" : "text-slate-600 hover:bg-slate-50"
+                }`}
               >
                 All ({allEntries.length})
               </Link>
@@ -159,8 +158,9 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
                 <Link
                   key={topic}
                   href={`/academy/qa-forum${topicQuery(topic)}`}
-                  className={`text-xs px-2.5 py-1.5 rounded transition-colors ${topicParam === topic ? "bg-[#0b2825] text-white font-semibold" : "text-slate-600 hover:bg-slate-50"
-                    }`}
+                  className={`text-xs px-2.5 py-1.5 rounded transition-colors ${
+                    topicParam === topic ? "bg-[#0b2825] text-white font-semibold" : "text-slate-600 hover:bg-slate-50"
+                  }`}
                 >
                   {topic} ({count})
                 </Link>
@@ -210,10 +210,11 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
             <div className="flex justify-center items-center gap-3 mt-6">
               <Link
                 href={`/academy/qa-forum${topicQuery(topicParam)}${topicParam ? "&" : "?"}page=${page - 1}`}
-                className={`px-4 py-2 rounded text-xs font-semibold border transition-colors ${page > 1
+                className={`px-4 py-2 rounded text-xs font-semibold border transition-colors ${
+                  page > 1
                     ? "border-slate-200 text-slate-700 hover:border-emerald-700 hover:text-emerald-700"
                     : "border-slate-100 text-slate-300 pointer-events-none"
-                  }`}
+                }`}
               >
                 &larr; Previous
               </Link>
@@ -222,10 +223,11 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
               </span>
               <Link
                 href={`/academy/qa-forum${topicQuery(topicParam)}${topicParam ? "&" : "?"}page=${page + 1}`}
-                className={`px-4 py-2 rounded text-xs font-semibold transition-colors ${page < totalPages
+                className={`px-4 py-2 rounded text-xs font-semibold transition-colors ${
+                  page < totalPages
                     ? "bg-[#0b2825] text-white hover:bg-[#123633]"
                     : "bg-slate-100 text-slate-300 pointer-events-none"
-                  }`}
+                }`}
               >
                 Next &rarr;
               </Link>

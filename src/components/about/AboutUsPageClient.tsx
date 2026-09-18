@@ -40,7 +40,7 @@ interface AccordionItem {
   footerText?: string;
 }
 
-const CONSULTING_SERVICES: AccordionItem[] = [
+export const CONSULTING_SERVICES: AccordionItem[] = [
   {
     id: "research-support",
     title: "Research Support for Researchers and Authors",
@@ -106,43 +106,18 @@ const CONSULTING_SERVICES: AccordionItem[] = [
       },
       {
         title: "Review Article Writing:",
-        description: "Producing comprehensive review articles across various disciplines including Systematic Reviews (Comprehensive and structured reviews that summarize the results of multiple studies on a specific topic using a standardized methodology)."
-      },
-      {
-        title: "Meta-Analyses:",
-        description: "Statistical analysis that combines the results of several studies to identify patterns, discrepancies, and overall effects."
-      },
-      {
-        title: "Narrative Reviews:",
-        description: "Qualitative summaries of the literature on a particular topic, providing a comprehensive overview without a systematic approach."
-      },
-      {
-        title: "Scoping Reviews:",
-        description: "Exploratory reviews that map the key concepts, types of evidence, and gaps in research related to a defined area."
-      },
-      {
-        title: "Critical Reviews:",
-        description: "In-depth analysis and critique of existing literature, providing an evaluation of the current state of knowledge and identifying future research directions."
-      },
-      {
-        title: "Literature Reviews:",
-        description: "General reviews that summarize and synthesize the existing literature on a broad topic, often as part of a larger research paper or thesis."
-      },
-      {
-        title: "Rapid Reviews:",
-        description: "Accelerated systematic reviews that provide timely and relevant evidence by streamlining the review process."
-      },
-      {
-        title: "Umbrella Reviews:",
-        description: "Reviews that compile evidence from multiple systematic reviews and meta-analyses on a specific topic."
-      },
-      {
-        title: "State-of-the-Art Reviews:",
-        description: "Current and comprehensive reviews that provide an up-to-date overview of a specific field or topic."
-      },
-      {
-        title: "Integrative Reviews:",
-        description: "Reviews that combine both theoretical and empirical literature to provide a more comprehensive understanding of a topic."
+        description: "Producing comprehensive review articles across various disciplines including Systematic Reviews (Comprehensive and structured reviews that summarize the results of multiple studies on a specific topic using a standardized methodology).",
+        items: [
+          "Meta-Analyses: Statistical analysis that combines the results of several studies to identify patterns, discrepancies, and overall effects.",
+          "Narrative Reviews: Qualitative summaries of the literature on a particular topic, providing a comprehensive overview without a systematic approach.",
+          "Scoping Reviews: Exploratory reviews that map the key concepts, types of evidence, and gaps in research related to a defined area.",
+          "Critical Reviews: In-depth analysis and critique of existing literature, providing an evaluation of the current state of knowledge and identifying future research directions.",
+          "Literature Reviews: General reviews that summarize and synthesize the existing literature on a broad topic, often as part of a larger research paper or thesis.",
+          "Rapid Reviews: Accelerated systematic reviews that provide timely and relevant evidence by streamlining the review process.",
+          "Umbrella Reviews: Reviews that compile evidence from multiple systematic reviews and meta-analyses on a specific topic.",
+          "State-of-the-Art Reviews: Current and comprehensive reviews that provide an up-to-date overview of a specific field or topic.",
+          "Integrative Reviews: Reviews that combine both theoretical and empirical literature to provide a more comprehensive understanding of a topic."
+        ]
       },
       {
         title: "Why Choose Pubrica?",
@@ -1036,36 +1011,37 @@ export default function AboutPage() {
         {/* ========================================================================= */}
         {/* SECTION 5: INDUSTRIES SERVED BY PUBRICA (GRID CARD LAYOUT)                 */}
         {/* ========================================================================= */}
-        <section className="bg-white py-16 font-['Poppins',sans-serif] text-gray-800 border-t border-gray-100" aria-label="Industries Served">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-10 max-w-3xl mx-auto">
-              <h2 className="text-[28px] md:text-[34px] font-extrabold text-[#11231f]">
+        <section className="bg-white py-16 font-sans border-t border-gray-200" aria-label="Industries Served">
+          <div className="max-w-6xl mx-auto px-6">
+
+            {/* Header */}
+            <div className="mb-10">
+              <h2 className="text-2xl font-bold text-gray-900 tracking-tight">
                 Industries Served by Pubrica
               </h2>
-              <p className="text-[16px] text-gray-600 mt-3 font-light leading-relaxed">
-                Pubrica offers a wide range of services tailored to various industries, ensuring expert support and high-quality outcomes across different sectors:
+              <p className="text-sm text-gray-600 mt-2 max-w-2xl">
+                Tailored support and specialized services standard across key operational sectors.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {/* Content Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {INDUSTRIES_SERVED.map((industry, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white border border-gray-200/90 rounded-sm p-5 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-start"
-                >
-                  <h3 className="text-[18px] md:text-[20px] font-bold text-[#11231f] mb-3">
+                <div key={idx} className="flex flex-col">
+                  <h3 className="text-base font-semibold text-gray-900 pb-2 border-b border-gray-200 mb-3">
                     {industry.title}
                   </h3>
-                  <ul className="space-y-2 list-disc list-inside text-[16px] text-gray-600 font-light leading-relaxed">
+                  <ul className="space-y-2 text-sm text-gray-600">
                     {industry.items.map((item, itemIdx) => (
-                      <li key={itemIdx} className="leading-snug">
-                        <span className="-ml-1">{item}</span>
+                      <li key={itemIdx} className="leading-normal">
+                        {item}
                       </li>
                     ))}
                   </ul>
                 </div>
               ))}
             </div>
+
           </div>
         </section>
       </main>

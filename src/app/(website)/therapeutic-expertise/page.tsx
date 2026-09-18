@@ -155,12 +155,7 @@ export default function TherapeuticExpertisePage() {
 
             <p className="text-sm text-gray-700 leading-relaxed">
 
-              We offer comprehensive therapeutic expertise across a wide
-              variety of indications. Pubrica Scientific Writing & Publication
-              adapts clinical trial services for specific requirements. We
-              provide complete program development and delivery services for
-              any phase of the trial that you either want to outsource or
-              salvage a faltering trial.
+              We offer comprehensive therapeutic expertise across a wide variety of indications. Pubrica Scientific Writing & Publication adapts clinical trial services for specific requirements; we provide complete program development and delivery services for any phase of the trial that you either want to outsource or salvage a faltering trial. Let our experts have their say through new concepts and innovative methods. Our team comprises clinical research associates, project managers, medical supervisors, data management experts, biostatisticians, and medical writers—available at every phase—including trial planning, design, protocol development, safety narratives, in-house data summaries, safety surveillance plan, Case Report Form (CRF), site selection, data analysis, and regulatory submissions. Hence, design cost-effective clinical research trials that deliver data you need to support your novel therapies.
 
             </p>
 
@@ -168,10 +163,8 @@ export default function TherapeuticExpertisePage() {
 
             <p className="text-sm text-gray-700 leading-relaxed">
 
-              Our experts support pharmaceutical, biotechnology, and medical
-              device companies with clinical research solutions, scientific
-              communication, regulatory documentation, and publication
-              support.
+              Therapeutic area expertise is particularly important as pharmaceutical and nutraceutical companies develop new classes of compounds that target complex and difficult diseases. Our experts have a say in therapeutic clinical trials; Pubrica Scientific Writing & Publishing has completed holistic projects in the area of CRO therapeutics for pharmaceutical, and biotechnology firms. Our work in therapeutics spans across multiple specializations.
+
 
             </p>
 
