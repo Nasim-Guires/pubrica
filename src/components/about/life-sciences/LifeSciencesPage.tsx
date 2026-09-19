@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import HeroBanner from '@/components/common/HeroBanner';
 
 // Types for Accordion and Content
 interface AccordionSection {
@@ -18,44 +19,44 @@ interface PaperPublished {
   author: string;
 }
 
-const accordionData: AccordionSection[] = [
+const sidebarLinks = [
   {
-    id: 'meet-the-experts',
-    title: 'MEET THE EXPERTS',
-    items: [
-      { label: 'OUR EDITORS', href: '/about-us/our-editors' },
-      { label: 'EDITOR PROFILE', href: '/scientific-editor-profile' },
-      { label: 'EDITOR SPEAK', href: '/editor-speak' },
+    id: "experts",
+    label: "MEET THE EXPERTS",
+    subItems: [
+      { id: "our-editors", label: "OUR EDITORS", href: "/about-us/our-editors" },
+      { id: "editor-profile", label: "EDITOR PROFILE", href: "/scientific-editor-profile" },
+      { id: "editor-speak", label: "EDITOR SPEAK", href: "/editor-speak" },
     ],
   },
   {
-    id: 'subject-area',
-    title: 'SUBJECT AREA',
-    items: [
-      { label: 'MEDICINE', href: '/about-us/medicine' },
-      { label: 'LIFE SCIENCE', href: '/about-us/life-sciences' },
-      { label: 'PHYSICAL SCIENCES AND ENGINEERING', href: '/about-us/physical-sciences-engineering' },
+    id: "subject",
+    label: "SUBJECT AREA",
+    subItems: [
+      { id: "medicine", label: "MEDICINE", href: "/about-us/medicine" },
+      { id: "life-science", label: "LIFE SCIENCE", href: "/about-us/life-sciences" },
+      { id: "physical-sciences", label: "PHYSICAL SCIENCES AND ENGINEERING", href: "/about-us/physical-sciences-engineering" },
     ],
   },
   {
-    id: 'therapeutic-expertise',
-    title: 'THERAPEUTIC EXPERTISE',
-    items: [{ label: 'OVERVIEW', href: '/therapeutic-expertise' }],
+    id: "therapeutic",
+    label: "THERAPEUTIC EXPERTISE",
+    href: "/therapeutic-expertise",
   },
   {
-    id: 'global-partners',
-    title: 'GLOBAL PARTNERS AND MEMBERSHIP',
-    items: [{ label: 'PARTNERS', href: '/strategic-partnerships-memberships' }],
+    id: "membership",
+    label: "GLOBAL PARTNERS AND MEMBERSHIP",
+    href: "/strategic-partnerships-memberships",
   },
   {
-    id: 'contact-us',
-    title: 'CONTACT US',
-    items: [{ label: 'REACH US', href: '/contact-us' }],
+    id: "contact",
+    label: "CONTACT US",
+    href: "/contact-us",
   },
   {
-    id: 'careers',
-    title: 'CAREERS',
-    items: [{ label: 'JOIN OUR TEAM', href: '/careers' }],
+    id: "careers",
+    label: "CAREERS",
+    href: "/careers",
   },
 ];
 
@@ -154,344 +155,353 @@ const qualificationsList = [
 ];
 
 export default function LifeSciencesPage() {
-  // All accordion items closed by default
-  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<string>('clientele');
 
-  const toggleAccordion = (id: string) => {
-    setOpenAccordion((prev) => (prev === id ? null : id));
-  };
-
   return (
-    <main className="w-full bg-white min-h-screen text-slate-800 font-sans">
+    <div className="min-h-screen bg-white font-sans text-slate-800">
       {/* Banner Section */}
-      <section className="w-full bg-[#182d30] py-6 px-4 text-center text-white">
-        <div className="max-w-4xl mx-auto border border-slate-400 py-8 px-6">
-          <h1 className="text-3xl md:text-4xl font-semibold mb-2">Life Sciences</h1>
-          <p className="text-sm md:text-base text-slate-300">All subjects</p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Life Sciences"
+        description="All subjects"
+        headingAs="h1"
+      />
 
-      {/* Main Container */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-5 flex flex-col md:flex-row gap-8">
-        
-        {/* Left Sidebar */}
-        <aside className="w-full md:w-1/4 shrink-0" aria-label="Sidebar Navigation">
-          <div className="flex items-center gap-2 mb-6 text-xl font-bold text-slate-800">
-            <span className="text-yellow-500">★</span>
-            <h2>About Us</h2>
-          </div>
+      {/* Main Container Layout */}
+      <div className="w-full max-w-[1400px] mx-auto px-6 lg:px-12 py-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
-          <div className="space-y-2">
-            {accordionData.map((section) => {
-              const isOpen = openAccordion === section.id;
-              return (
-                <div key={section.id} className="border-b border-slate-200 pb-1">
-                  <button
-                    onClick={() => toggleAccordion(section.id)}
-                    className="w-full flex items-center gap-3 py-2 text-left font-bold text-xs text-slate-700 hover:text-teal-700 transition-colors"
+          {/* Sidebar Navigation */}
+          <aside className="lg:col-span-3 w-full">
+            <div className="flex items-center gap-2 mb-6">
+              <span aria-hidden className="text-amber-500 text-xl">★</span>
+              <h2 className="text-2xl font-bold text-[#1b2b28]">
+                About Us
+              </h2>
+            </div>
+
+            <nav className="border-t border-gray-200 pt-6 space-y-4">
+              {sidebarLinks.map((item) => {
+                const hasSubItems = item.subItems && item.subItems.length > 0;
+
+                if (hasSubItems) {
+                  return (
+                    <details key={item.id} className="group space-y-2" open={item.id === "subject"}>
+                      <summary className="w-full flex items-center gap-3 text-sm font-bold text-[#1b2b28] cursor-pointer list-none hover:opacity-80 transition-opacity">
+                        <span className="w-6 h-6 bg-[#80878a] group-open:bg-[#e2a800] text-white flex items-center justify-center text-sm font-bold shrink-0">
+                          <span className="group-open:hidden">+</span>
+                          <span className="hidden group-open:inline">−</span>
+                        </span>
+                        <span className="tracking-wider uppercase">{item.label}</span>
+                      </summary>
+
+                      <div className="pl-9 space-y-2 pt-1">
+                        {item.subItems?.map((sub) => (
+                          <Link
+                            key={sub.id}
+                            href={sub.href}
+                            className="flex items-center gap-2 text-sm font-bold text-[#0088cc] hover:underline"
+                          >
+                            <span>•</span>
+                            <span className="uppercase">{sub.label}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </details>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={item.id}
+                    href={item.href || "#"}
+                    className="flex items-center gap-3 text-sm font-bold text-[#1b2b28] hover:opacity-80 transition-opacity"
                   >
-                    <span className="bg-yellow-500 text-white w-5 h-5 flex items-center justify-center text-sm font-bold shrink-0">
-                      {isOpen ? '−' : '+'}
+                    <span className="w-6 h-6 bg-[#80878a] text-white flex items-center justify-center text-sm font-bold shrink-0">
+                      +
                     </span>
-                    <span>{section.title}</span>
-                  </button>
+                    <span className="tracking-wider uppercase">{item.label}</span>
+                  </Link>
+                );
+              })}
+            </nav>
+          </aside>
 
-                  {isOpen && (
-                    <ul className="ml-8 my-2 space-y-2 text-xs font-semibold text-teal-600">
-                      {section.items.map((item, idx) => (
+          {/* Right Main Content */}
+          <main className="lg:col-span-9 w-full space-y-8">
+
+            {/* Header & Overview */}
+            <section className="space-y-4">
+              <h2 className="text-3xl font-bold text-teal-800">Life Science</h2>
+              <p className="text-sm md:text-base text-slate-600 leading-relaxed">
+                A mammoth total of 139, 000+ papers, or nearly 32% of all papers edited by us, come from the field of life sciences and related scientific subjects.
+              </p>
+              <p className="text-sm md:text-base text-slate-600 leading-relaxed">
+                Referred by over 500 journals including Springer, Photosynthetica, and Entomological Society of America as well as publishers such as SAGE and Taylor &amp; Francis—this is a testament to our quality.
+              </p>
+              <p className="text-sm md:text-base text-slate-600 leading-relaxed">
+                Our experience translates to clients being able to publish in journals with high impact factor.
+              </p>
+            </section>
+
+            {/* Stats Grid */}
+            <section className="space-y-6">
+              <h3 className="text-2xl font-bold text-teal-800">Know why we are unique</h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+
+                <div className="flex items-start gap-3">
+                  <span className="text-3xl font-black text-teal-900 shrink-0">33</span>
+                  <p className="text-sm text-slate-600 leading-normal">
+                    Our editing experience covering over 40 different types of manuscripts — from original articles to case reports, short communications, and more.
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <span className="text-3xl font-black text-teal-900 shrink-0">1200</span>
+                  <p className="text-sm text-slate-600 leading-normal">
+                    Our knowledge in editing manuscripts for over 1200 life sciences-related journals, including industry leaders such as Cell, Nature Genetics, Annual Review of Biochemistry, and many others.
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <span className="text-3xl font-black text-teal-900 shrink-0">53%</span>
+                  <p className="text-sm text-slate-600 leading-normal">
+                    Our editors are published authors and peer reviewers in their own right. Over 53% of them have acted as peer reviewers for international English journals.
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <span className="text-3xl font-black text-teal-900 shrink-0">19,000</span>
+                  <p className="text-sm text-slate-600 leading-normal">
+                    Our elite list of clients comprise 19,000 universities, corporates, and individuals.
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <span className="text-3xl font-black text-teal-900 shrink-0">244</span>
+                  <p className="text-sm text-slate-600 leading-normal">
+                    Our variety spans across 244 specialized subject areas including microbiology, cell biology, and plant sciences; see our list of subjects and journals below.
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <span className="text-3xl font-black text-teal-900 shrink-0">47%</span>
+                  <p className="text-sm text-slate-600 leading-normal">
+                    Over 47% of our editors catering to life sciences-related subject areas are from the US, 26% are from the UK, and the rest are from Australia, New Zealand, and Canada.
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3 md:col-span-2">
+                  <span className="text-3xl font-black text-teal-900 shrink-0">21 years</span>
+                  <p className="text-sm text-slate-600 leading-normal self-center">
+                    An average editor experience of 21 years in life science subjects.
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3 md:col-span-2">
+                  <span className="text-3xl font-black text-teal-900 shrink-0">1400</span>
+                  <p className="text-sm text-slate-600 leading-normal">
+                    <strong className="text-slate-800">PhDs</strong> The proficiency of our editors, which is the underlying reason for the unconditional trust that authors have on us. All our editors hold PhDs or Master&apos;s degrees from reputed universities such as Berkeley, Rice, Northwestern, Stanford, Lund University, and Harvard; moreover, they are trained editors in the various life science subjects.
+                  </p>
+                </div>
+
+              </div>
+            </section>
+
+            {/* Dynamic Tabs Section */}
+            <section className="space-y-0">
+              {/* Tab Headers */}
+              <div className="flex flex-wrap gap-2">
+                <button
+                  onClick={() => setActiveTab('clientele')}
+                  className={`px-5 py-2.5 text-sm font-semibold rounded-t transition-colors ${activeTab === 'clientele'
+                      ? 'bg-teal-700 text-white'
+                      : 'bg-[#1e2d35] text-white hover:bg-teal-800'
+                    }`}
+                >
+                  Our clientele
+                </button>
+                <button
+                  onClick={() => setActiveTab('recommendations')}
+                  className={`px-5 py-2.5 text-sm font-semibold rounded-t transition-colors ${activeTab === 'recommendations'
+                      ? 'bg-teal-700 text-white'
+                      : 'bg-[#1e2d35] text-white hover:bg-teal-800'
+                    }`}
+                >
+                  Our Journal Recommendations
+                </button>
+                <button
+                  onClick={() => setActiveTab('published')}
+                  className={`px-5 py-2.5 text-sm font-semibold rounded-t transition-colors ${activeTab === 'published'
+                      ? 'bg-teal-700 text-white'
+                      : 'bg-[#1e2d35] text-white hover:bg-teal-800'
+                    }`}
+                >
+                  Papers we published
+                </button>
+                <button
+                  onClick={() => setActiveTab('sample')}
+                  className={`px-5 py-2.5 text-sm font-semibold rounded-t transition-colors ${activeTab === 'sample'
+                      ? 'bg-teal-700 text-white'
+                      : 'bg-[#1e2d35] text-white hover:bg-teal-800'
+                    }`}
+                >
+                  Sample of Editing
+                </button>
+              </div>
+
+              {/* Tab Content Box */}
+              <div className="bg-slate-50 border-t-2 border-teal-700 p-6 min-h-[240px]">
+                {/* Tab 1: Clientele */}
+                {activeTab === 'clientele' && (
+                  <ul className="space-y-2.5">
+                    {clienteleList.map((item, index) => (
+                      <li key={index} className="flex items-center gap-2 text-sm text-slate-700 font-medium">
+                        <span className="text-teal-600">✓</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {/* Tab 2: Journal Recommendations */}
+                {activeTab === 'recommendations' && (
+                  <ul className="space-y-2.5">
+                    {journalRecommendations.map((item, index) => (
+                      <li key={index} className="text-sm text-slate-700 font-medium">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {/* Tab 3: Papers We Published */}
+                {activeTab === 'published' && (
+                  <div className="space-y-4">
+                    <p className="text-sm text-slate-600 italic leading-relaxed">
+                      Pepgra editors have published their papers in top scientific journals (physics, mathematics, computer science, and chemistry) with a high impact factor; here are the list of journals. For info on the journals not listed here, do contact us and we will give you more information.
+                    </p>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-left text-sm border-collapse border border-slate-200 bg-white">
+                        <thead>
+                          <tr className="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
+                            <th className="p-3 border-r border-slate-200">Publisher</th>
+                            <th className="p-3 border-r border-slate-200">Journal Details</th>
+                            <th className="p-3 border-r border-slate-200">I.F.</th>
+                            <th className="p-3 border-r border-slate-200">Paper Title</th>
+                            <th className="p-3 border-slate-200">Author</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {publishedPapers.map((paper, idx) => (
+                            <tr key={idx} className="border-b border-slate-200 hover:bg-slate-50">
+                              <td className="p-3 border-r border-slate-200 font-medium">{paper.publisher}</td>
+                              <td className="p-3 border-r border-slate-200">{paper.journalDetails}</td>
+                              <td className="p-3 border-r border-slate-200 font-semibold">{paper.impactFactor}</td>
+                              <td className="p-3 border-r border-slate-200 leading-normal">{paper.paperTitle}</td>
+                              <td className="p-3 italic text-slate-500">{paper.author}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                )}
+
+                {/* Tab 4: Sample of Editing */}
+                {activeTab === 'sample' && (
+                  <div className="space-y-4">
+                    <p className="text-sm text-slate-600 leading-relaxed">
+                      If you would like to find out what to expect and how our editing can transform your manuscript, take a look at some sample edited manuscripts from specialized subject areas such as physical chemistry, plasma physics, and others.
+                    </p>
+                    <h4 className="text-base font-bold text-slate-800">Scientific and Engineering samples</h4>
+                    <ul className="space-y-2.5">
+                      {sampleLinks.map((sample, idx) => (
                         <li key={idx}>
-                          <Link href={item.href} className="text-blue-600 no-underline hover:no-underline">
-                            • {item.label}
+                          <Link href={sampleLinkHrefs[sample] || '/services'} className="text-sm text-blue-600 no-underline hover:underline font-medium">
+                            {sample}
                           </Link>
                         </li>
                       ))}
                     </ul>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </aside>
-
-        {/* Right Main Content */}
-        <article className="w-full md:w-3/4 space-y-8">
-          
-          {/* Header & Overview */}
-          <section className="space-y-4">
-            <h2 className="text-2xl font-bold text-teal-800">Life Science</h2>
-            <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
-              A mammoth total of 139, 000+ papers, or nearly 32% of all papers edited by us, come from the field of life sciences and related scientific subjects.
-            </p>
-            <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
-              Referred by over 500 journals including Springer, Photosynthetica, and Entomological Society of America as well as publishers such as SAGE and Taylor &amp; Francis—this is a testament to our quality.
-            </p>
-            <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
-              Our experience translates to clients being able to publish in journals with high impact factor.
-            </p>
-          </section>
-
-          {/* Stats Grid */}
-          <section className="space-y-6">
-            <h3 className="text-xl font-bold text-teal-800">Know why we are unique</h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
-              
-              <div className="flex items-start gap-3">
-                <span className="text-2xl font-black text-teal-900 shrink-0">33</span>
-                <p className="text-xs text-slate-600 leading-normal">
-                  Our editing experience covering over 40 different types of manuscripts — from original articles to case reports, short communications, and more.
-                </p>
+                  </div>
+                )}
               </div>
+            </section>
 
-              <div className="flex items-start gap-3">
-                <span className="text-2xl font-black text-teal-900 shrink-0">1200</span>
-                <p className="text-xs text-slate-600 leading-normal">
-                  Our knowledge in editing manuscripts for over 1200 life sciences-related journals, including industry leaders such as Cell, Nature Genetics, Annual Review of Biochemistry, and many others.
-                </p>
-              </div>
+            {/* Academic Qualifications & Distribution Section */}
+            <section className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
 
-              <div className="flex items-start gap-3">
-                <span className="text-2xl font-black text-teal-900 shrink-0">53%</span>
-                <p className="text-xs text-slate-600 leading-normal">
-                  Our editors are published authors and peer reviewers in their own right. Over 53% of them have acted as peer reviewers for international English journals.
-                </p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <span className="text-2xl font-black text-teal-900 shrink-0">19,000</span>
-                <p className="text-xs text-slate-600 leading-normal">
-                  Our elite list of clients comprise 19,000 universities, corporates, and individuals.
-                </p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <span className="text-2xl font-black text-teal-900 shrink-0">244</span>
-                <p className="text-xs text-slate-600 leading-normal">
-                  Our variety spans across 244 specialized subject areas including microbiology, cell biology, and plant sciences; see our list of subjects and journals below.
-                </p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <span className="text-2xl font-black text-teal-900 shrink-0">47%</span>
-                <p className="text-xs text-slate-600 leading-normal">
-                  Over 47% of our editors catering to life sciences-related subject areas are from the US, 26% are from the UK, and the rest are from Australia, New Zealand, and Canada.
-                </p>
-              </div>
-
-              <div className="flex items-start gap-3 md:col-span-2">
-                <span className="text-2xl font-black text-teal-900 shrink-0">21 years</span>
-                <p className="text-xs text-slate-600 leading-normal self-center">
-                  An average editor experience of 21 years in life science subjects.
-                </p>
-              </div>
-
-              <div className="flex items-start gap-3 md:col-span-2">
-                <span className="text-2xl font-black text-teal-900 shrink-0">1400</span>
-                <p className="text-xs text-slate-600 leading-normal">
-                  <strong className="text-slate-800">PhDs</strong> The proficiency of our editors, which is the underlying reason for the unconditional trust that authors have on us. All our editors hold PhDs or Master&apos;s degrees from reputed universities such as Berkeley, Rice, Northwestern, Stanford, Lund University, and Harvard; moreover, they are trained editors in the various life science subjects.
-                </p>
-              </div>
-
-            </div>
-          </section>
-
-          {/* Dynamic Tabs Section */}
-          <section className="space-y-0">
-            {/* Tab Headers */}
-            <div className="flex flex-wrap gap-2">
-              <button
-                onClick={() => setActiveTab('clientele')}
-                className={`px-4 py-2 text-xs font-semibold rounded-t transition-colors ${
-                  activeTab === 'clientele'
-                    ? 'bg-[#114b5f] text-white'
-                    : 'bg-[#1e2d35] text-white hover:bg-teal-800'
-                }`}
-              >
-                Our clientele
-              </button>
-              <button
-                onClick={() => setActiveTab('recommendations')}
-                className={`px-4 py-2 text-xs font-semibold rounded-t transition-colors ${
-                  activeTab === 'recommendations'
-                    ? 'bg-[#114b5f] text-white'
-                    : 'bg-[#1e2d35] text-white hover:bg-teal-800'
-                }`}
-              >
-                Our Journal Recommendations
-              </button>
-              <button
-                onClick={() => setActiveTab('published')}
-                className={`px-4 py-2 text-xs font-semibold rounded-t transition-colors ${
-                  activeTab === 'published'
-                    ? 'bg-[#114b5f] text-white'
-                    : 'bg-[#1e2d35] text-white hover:bg-teal-800'
-                }`}
-              >
-                Papers we published
-              </button>
-              <button
-                onClick={() => setActiveTab('sample')}
-                className={`px-4 py-2 text-xs font-semibold rounded-t transition-colors ${
-                  activeTab === 'sample'
-                    ? 'bg-[#114b5f] text-white'
-                    : 'bg-[#1e2d35] text-white hover:bg-teal-800'
-                }`}
-              >
-                Sample of Editing
-              </button>
-            </div>
-
-            {/* Tab Content Box */}
-            <div className="bg-slate-50 border-t-2 border-[#114b5f] p-6 min-h-[240px]">
-              {/* Tab 1: Clientele */}
-              {activeTab === 'clientele' && (
-                <ul className="space-y-2">
-                  {clienteleList.map((item, index) => (
-                    <li key={index} className="text-xs text-slate-700 font-medium">
-                      {item}
+              {/* Left Column: Academic Qualifications */}
+              <div className="space-y-3">
+                <h4 className="text-base font-bold text-slate-800">Editors&apos; Academic Qualification</h4>
+                <ul className="space-y-2.5">
+                  {qualificationsList.map((item, idx) => (
+                    <li key={idx} className="flex items-center gap-2 text-sm text-slate-700 font-medium">
+                      <span className="text-teal-700 text-base">➔</span>
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
-              )}
+              </div>
 
-              {/* Tab 2: Journal Recommendations */}
-              {activeTab === 'recommendations' && (
-                <ul className="space-y-2">
-                  {journalRecommendations.map((item, index) => (
-                    <li key={index} className="text-xs text-slate-700 font-medium">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              )}
+              {/* Right Column: Graphic / Distribution Div Placeholders */}
+              <div className="space-y-4">
 
-              {/* Tab 3: Papers We Published */}
-              {activeTab === 'published' && (
-                <div className="space-y-4">
-                  <p className="text-xs text-slate-600 italic">
-                    Pepgra editors have published their papers in top scientific journals (physics, mathematics, computer science, and chemistry) with a high impact factor; here are the list of journals. For info on the journals not listed here, do contact us and we will give you more information.
-                  </p>
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-left text-xs border-collapse border border-slate-200">
-                      <thead>
-                        <tr className="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
-                          <th className="p-2 border-r border-slate-200">Publisher</th>
-                          <th className="p-2 border-r border-slate-200">Journal Details</th>
-                          <th className="p-2 border-r border-slate-200">I.F.</th>
-                          <th className="p-2 border-r border-slate-200">Paper Title</th>
-                          <th className="p-2 border-slate-200">Author</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {publishedPapers.map((paper, idx) => (
-                          <tr key={idx} className="border-b border-slate-200 hover:bg-white">
-                            <td className="p-2 border-r border-slate-200 font-medium">{paper.publisher}</td>
-                            <td className="p-2 border-r border-slate-200">{paper.journalDetails}</td>
-                            <td className="p-2 border-r border-slate-200 font-semibold">{paper.impactFactor}</td>
-                            <td className="p-2 border-r border-slate-200">{paper.paperTitle}</td>
-                            <td className="p-2 italic text-slate-500">{paper.author}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
+                {/* Div Image Section 1 */}
+                <div
+                  aria-label="Editor Distribution Graphic Placeholder"
+                  className="w-full bg-[#114b5f] text-white rounded overflow-hidden shadow"
+                >
+                  <div className="bg-amber-600 px-4 py-2.5 text-center text-sm font-bold uppercase tracking-wider">
+                    Editor Distribution 95%
+                  </div>
+                  <div className="p-4 text-center">
+                    <p className="text-sm text-slate-100 leading-relaxed">
+                      95% of all Pubrica&apos;s editors hail from scientific research backgrounds. Medicine (surgery, therapeutics, etc.), Pharmacy, Computer Science, Engineering, and Life Sciences.
+                    </p>
                   </div>
                 </div>
-              )}
 
-              {/* Tab 4: Sample of Editing */}
-              {activeTab === 'sample' && (
-                <div className="space-y-4">
-                  <p className="text-xs text-slate-600">
-                    If you would like to find out what to expect and how our editing can transform your manuscript, take a look at some sample edited manuscripts from specialized subject areas such as physical chemistry, plasma physics, and others.
-                  </p>
-                  <h4 className="text-sm font-bold text-slate-800">Scientific and Engineering samples</h4>
-                  <ul className="space-y-2">
-                    {sampleLinks.map((sample, idx) => (
-                      <li key={idx}>
-                        <Link href={sampleLinkHrefs[sample] || '/services'} className="text-xs text-blue-600 no-underline hover:no-underline font-medium">
-                          {sample}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                {/* Div Image Section 2 */}
+                <div
+                  aria-label="Journal Distribution Graphic Placeholder"
+                  className="w-full bg-[#114b5f] text-white rounded overflow-hidden shadow"
+                >
+                  <div className="bg-amber-600 px-4 py-2.5 text-center text-sm font-bold uppercase tracking-wider">
+                    Journal Distribution 98%
+                  </div>
+                  <div className="p-4 text-center">
+                    <p className="text-sm text-slate-100 leading-relaxed">
+                      98% of Pubrica&apos;s research support work is published in top journals. The Lancet, BMJ, The New England Journal of Medicine, JAMA, Chemical Reviews, and Nature—these are some of journals we work with.
+                    </p>
+                  </div>
                 </div>
-              )}
-            </div>
-          </section>
 
-          {/* Academic Qualifications & Distribution Section */}
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-            
-            {/* Left Column: Academic Qualifications */}
-            <div className="space-y-3">
-              <h4 className="text-sm font-bold text-slate-800">Editors&apos; Academic Qualification</h4>
-              <ul className="space-y-2">
-                {qualificationsList.map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-xs text-slate-700 font-medium">
-                    <span className="text-teal-700 text-sm">➔</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Right Column: Graphic / Distribution Div Placeholders */}
-            <div className="space-y-6">
-              
-              {/* Div Image Section 1 */}
-              <div 
-                aria-label="Editor Distribution Graphic Placeholder" 
-                className="w-full space-y-1"
-              >
-                <h5 className="text-xs font-bold text-slate-800 uppercase tracking-wide">
-                  Editor Distribution 95%
-                </h5>
-                <div className="bg-slate-50 p-3 rounded border border-slate-200">
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    95% of all Pubrica&apos;s editors hail from scientific research backgrounds. Medicine (surgery, therapeutics, etc.), Pharmacy, Computer Science, Engineering, and Life Sciences.
-                  </p>
-                </div>
               </div>
 
-              {/* Div Image Section 2 */}
-              <div 
-                aria-label="Journal Distribution Graphic Placeholder" 
-                className="w-full space-y-1"
-              >
-                <h5 className="text-xs font-bold text-slate-800 uppercase tracking-wide">
-                  Journal Distribution 98%
-                </h5>
-                <div className="bg-slate-50 p-3 rounded border border-slate-200">
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    98% of Pubrica&apos;s research support work is published in top journals. The Lancet, BMJ, The New England Journal of Medicine, JAMA, Chemical Reviews, and Nature—these are some of journals we work with.
-                  </p>
-                </div>
+            </section>
+
+            {/* Order CTA Section */}
+            <section className="bg-slate-100 rounded p-8 text-center space-y-4 my-8">
+              <h3 className="text-xl font-bold text-slate-800">With Pubrica, your paper is in safe hands</h3>
+              <p className="text-sm text-slate-600 max-w-xl mx-auto">
+                Simply fill out the quotation form and we will get back to you within 1 hour with an accurate price and delivery time.
+              </p>
+              <div>
+                <Link
+                  href="/order-now"
+                  className="inline-block bg-[#1a383d] hover:bg-[#112629] text-white text-sm font-bold py-2.5 px-6 rounded transition-colors"
+                >
+                  Get a Quote ➔
+                </Link>
               </div>
+            </section>
 
-            </div>
+          </main>
 
-          </section>
-
-          {/* Order CTA Section */}
-          <section className="bg-slate-100 rounded p-8 text-center space-y-4 my-8">
-            <h3 className="text-lg font-bold text-slate-800">With Pubrica, your paper is in safe hands</h3>
-            <p className="text-xs text-slate-600 max-w-xl mx-auto">
-              Simply fill out the quotation form and we will get back to you within 1 hour with an accurate price and delivery time.
-            </p>
-            <div>
-              <Link 
-                href="/order-now"
-                className="inline-block bg-[#1a383d] hover:bg-[#112629] text-white text-xs font-bold py-2.5 px-6 rounded transition-colors"
-              >
-                Get a Quote ➔
-              </Link>
-            </div>
-          </section>
-
-        </article>
-
+        </div>
       </div>
-    </main>
+    </div>
   );
 }

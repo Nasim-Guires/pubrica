@@ -256,8 +256,8 @@ export default function AlgorithmSMEPage() {
 
                 {/* CORE AREAS SECTION WITH ACTIVE INTERNAL SCROLLING */}
                 <CoreAreasSection
-                    title="Our Core Areas Of Algorithm"
-                    description="Our company's focus is to utilise our knowledge to drive innovation in three fundamental categories of algorithms:"
+                    title="Our Core Areas of Algorithm"
+                    description="Our company’s focus is to utilise our knowledge to drive innovation in three fundamental categories of algorithms, such as Software, Data Science and Artificial Intelligence:"
                     items={coreAreas}
                 />
 

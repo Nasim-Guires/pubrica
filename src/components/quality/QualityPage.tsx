@@ -172,9 +172,9 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
       </section>
 
       {/* 3. Main Intro & Dark Cards Grid */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
+  <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1b2b28] mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#004d40] mb-4">
             Pubrica academic and scientific publishing.
           </h2>
           <p className="text-base text-slate-600 leading-relaxed">
@@ -182,21 +182,21 @@ export default function QualityPage({ className = "" }: QualityPageProps) {
           </p>
         </div>
 
-        {/* 2x2 Dark Feature Cards */}
+        {/* 2x2 Clean Feature Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {mainFeatures.map((item) => (
             <div
               key={item.id}
-              className="bg-[#0b3328] hover:bg-[#07271e] transition-colors text-white p-6 sm:p-7 rounded-xl flex items-center gap-5 shadow-md"
+              className="group bg-white hover:bg-slate-50/80 transition-all border border-slate-200/80 border-l-4 border-l-[#004d40] p-6 sm:p-7 rounded-xl flex items-center gap-5 shadow-sm hover:shadow-md hover:-translate-y-0.5 duration-200"
             >
-              <div className="w-14 h-14 rounded-lg flex-shrink-0 flex items-center justify-center text-white">
-                <BookOpen className="w-10 h-10 stroke-[1.5]" />
+              <div className="w-12 h-12 rounded-lg flex-shrink-0 flex items-center justify-center bg-[#004d40]/10 text-[#004d40] group-hover:bg-[#004d40] group-hover:text-white transition-colors duration-200">
+                <BookOpen className="w-6 h-6 stroke-[1.75]" />
               </div>
               <div className="space-y-1">
-                <h3 className="text-lg font-bold text-white leading-snug">
+                <h3 className="text-base font-bold text-slate-800 leading-snug group-hover:text-[#004d40] transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-base text-emerald-100/80 leading-relaxed font-light">
+                <p className="text-xs text-slate-500 leading-relaxed font-normal">
                   {item.description}
                 </p>
               </div>

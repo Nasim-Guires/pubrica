@@ -108,9 +108,9 @@ const InsightsPage = async () => {
               <Link
                 key={post.id}
                 href={`/blog/${post.slug}`}
-                className="group flex flex-col border border-slate-100 rounded-xl overflow-hidden hover:shadow-md transition-shadow bg-slate-50"
+                className="group flex flex-col rounded-lg overflow-hidden transition-all hover:-translate-y-0.5"
               >
-                <div className="h-44 overflow-hidden relative">
+                <div className="aspect-[16/9] w-full overflow-hidden relative rounded-lg mb-3">
                   <Image
                     src={image}
                     alt={post.title}
@@ -119,16 +119,14 @@ const InsightsPage = async () => {
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-4 flex flex-col flex-grow justify-between space-y-3">
-                  <div className="space-y-2">
-                    <h3 className="text-sm font-bold text-slate-800 line-clamp-2 group-hover:text-[#004d40]">
-                      {post.title}
-                    </h3>
-                    <span className="text-[11px] text-slate-400 block">
-                      📅 {formatDate(post.publishing?.publishedAt)}
-                    </span>
-                    <p className="text-xs text-slate-500 line-clamp-2">{desc}</p>
-                  </div>
+                <div className="flex flex-col flex-grow justify-between space-y-2">
+                  <span className="text-[11px] text-slate-400 block">
+                    📅 {formatDate(post.publishing?.publishedAt)}
+                  </span>
+                  <h3 className="text-sm font-bold text-slate-800 line-clamp-2 group-hover:text-[#004d40] transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-xs text-slate-500 line-clamp-2">{desc}</p>
                 </div>
               </Link>
             );
@@ -179,18 +177,18 @@ const InsightsPage = async () => {
           {sampleWorks.map((work, i) => (
             <div
               key={i}
-              className="flex flex-col bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow"
+              className="group flex flex-col rounded-lg overflow-hidden transition-all hover:-translate-y-0.5"
             >
-              <div className="h-44 overflow-hidden relative">
+              <div className="aspect-[16/9] w-full overflow-hidden relative rounded-lg mb-3">
                 <Image
                   src={work.img}
                   alt={work.title}
                   fill
                   sizes="(max-w-7xl) 33vw, 400px"
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-5 flex flex-col flex-grow justify-between space-y-4">
+              <div className="flex flex-col flex-grow justify-between space-y-2">
                 <div className="space-y-2">
                   <h3 className="text-sm font-bold text-[#004d40] line-clamp-2 hover:underline cursor-pointer">
                     {work.title}
@@ -199,8 +197,8 @@ const InsightsPage = async () => {
                     {work.desc}
                   </p>
                 </div>
-                <div className="flex justify-end pt-2">
-                  <span className="text-blue-500 hover:translate-x-1 transition-transform cursor-pointer">
+                <div className="flex justify-end pt-1">
+                  <span className="text-blue-500 group-hover:translate-x-1 transition-transform cursor-pointer">
                     &rarr;
                   </span>
                 </div>
@@ -209,7 +207,6 @@ const InsightsPage = async () => {
           ))}
         </div>
       </section>
-
       {/* 6. INFOGRAPHICS GRID */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="flex justify-between items-center mb-2">

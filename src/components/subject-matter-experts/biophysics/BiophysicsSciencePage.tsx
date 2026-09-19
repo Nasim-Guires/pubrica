@@ -174,7 +174,7 @@ export default function BiophysicsSciencePage() {
                 <div className="max-w-6xl mx-auto">
                     <CoreAreasSection
                         title="Our Core Disciplines In Biomonitoring"
-                        description="Biomonitoring integrates multiple scientific disciplines, drawing from biology, toxicology, environmental science, public health, and analytical chemistry. These interconnected fields ensure a comprehensive understanding of how pollutants or toxic agents influence biological systems. Our biomonitoring expertise spans the following core areas:"
+                        description="Biophysics encompasses a wide range of subfields that explore biological questions through the lens of physics:"
                         items={disciplines}
                     />
                 </div>

@@ -436,15 +436,18 @@ export default async function PubricaKnowledgeBase() {
       {/* ========================================================================= */}
       {/* SECTION 6: Q & A COMPONENT LIST                                          */}
       {/* ========================================================================= */}
-      <section className="bg-[#f0f5f5] py-7 border-t border-gray-200/60">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-between mb-10">
-            <h2 className="text-2xl font-bold text-[#0b2825]">Q &amp; A</h2>
+      <section className="bg-slate-50/50 py-10 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center mb-6">
+            <div className="flex items-center gap-4 w-full">
+              <h2 className="text-xl font-bold text-[#004d40]">Q &amp; A</h2>
+              <div className="h-[1px] flex-grow bg-slate-200" />
+            </div>
             <Link
               href="/academy/qa-forum"
-              className="text-xs font-semibold text-blue-600 transition-colors uppercase tracking-wider no-underline hover:no-underline"
+              className="ml-4 bg-[#004d40] text-white px-4 py-1.5 rounded text-xs font-semibold whitespace-nowrap hover:bg-[#00332a] transition-colors flex items-center gap-1"
             >
-              View All
+              View All &rarr;
             </Link>
           </div>
 
@@ -452,18 +455,19 @@ export default async function PubricaKnowledgeBase() {
             {QA_ITEMS.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#0b2825] text-white rounded-md p-6 flex flex-col justify-between shadow-md hover:-translate-y-1 transition-all duration-200 min-h-[280px]"
+                className="group flex flex-col justify-between bg-white rounded-xl p-5 border border-slate-200/80 border-l-4 border-l-[#004d40] shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
               >
-                <div>
-                  <span className="text-[10px] text-emerald-400 font-bold uppercase tracking-wider block mb-3 pb-1 border-b border-emerald-800/60">
+                <div className="space-y-2">
+                  <span className="text-[10px] text-[#004d40] font-bold uppercase tracking-wider block">
                     {item.category}
                   </span>
-                  <h3 className="text-sm font-bold leading-snug mb-4 line-clamp-4">
+                  <h3 className="text-sm font-bold text-slate-800 leading-snug line-clamp-3 group-hover:text-[#004d40] transition-colors">
                     {item.question}
                   </h3>
                 </div>
-                <div className="pt-4 border-t border-emerald-950/40">
-                  <p className="text-xs text-gray-300 font-light leading-relaxed line-clamp-3">
+
+                <div className="pt-3 mt-4 border-t border-slate-100">
+                  <p className="text-xs text-slate-500 font-normal leading-relaxed line-clamp-3">
                     {item.answer}
                   </p>
                 </div>
