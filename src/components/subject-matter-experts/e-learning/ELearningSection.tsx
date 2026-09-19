@@ -147,7 +147,7 @@ const publication: AuthorPublicationData = {
     imageAlt: "Computers & Education Open Book Cover",
     paperTitle:
         "Differential effects of student and parental mobile phone use on academic procrastination trajectories: Machine learning evidence",
-    author: "Jiabin Liu, Ru-De Liu, Wei Hong, Jingmin Lin Show more.",
+    author: "Jiabin Liu, Ru-De Liu, Wei Hong, Jingmin Lin.",
     publisher: "Elsevier",
     journalName: "Computers & Education",
     impactFactor: "10.5",

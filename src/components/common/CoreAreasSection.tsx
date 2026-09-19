@@ -54,7 +54,7 @@ function FallbackIcon({
     const Icon = icon as LucideIcon;
 
     return (
-        <Icon className="w-5 h-5 text-[#b81c1c] shrink-0" />
+        <Icon className="w-8 h-8 text-[#1e2e2b] shrink-0" />
     );
 }
 
@@ -65,6 +65,37 @@ export default function CoreAreasSection({
 }: SmeCoreAreasGridProps) {
     return (
         <section className="space-y-4 font-['Poppins',sans-serif]">
+            {/* Custom scrollbar - native single track with arrow buttons */}
+            <style font-display="swap">{`
+                .card-scroll-area::-webkit-scrollbar {
+                    width: 14px;
+                }
+                .card-scroll-area::-webkit-scrollbar-button:single-button:vertical:decrement {
+                    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23112a2e"><path d="M12 8l-6 6h12z"/></svg>') no-repeat center center;
+                    background-size: 10px;
+                    height: 12px;
+                    display: block;
+                }
+                .card-scroll-area::-webkit-scrollbar-button:single-button:vertical:increment {
+                    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23112a2e"><path d="M12 16l6-6H6z"/></svg>') no-repeat center center;
+                    background-size: 10px;
+                    height: 12px;
+                    display: block;
+                }
+                .card-scroll-area::-webkit-scrollbar-track {
+                    background: transparent;
+                }
+                .card-scroll-area::-webkit-scrollbar-thumb {
+                    background-color: #112a2e;
+                    border-radius: 10px;
+                    border: 4px solid white;
+                }
+                .card-scroll-area {
+                    scrollbar-width: thin;
+                    scrollbar-color: #112a2e transparent;
+                }
+            `}</style>
+
             {/* Heading + Description */}
             <div className="text-center space-y-2">
                 <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
@@ -88,27 +119,29 @@ export default function CoreAreasSection({
                     const titleColorClass = item.href ? "text-blue-600" : "text-[#b81c1c]";
 
                     const cardContent = (
-                        <div
-                            className="bg-white border border-gray-200/90 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full"
-                        >
-                            <div className="space-y-3">
-                                <div className="flex items-center justify-between">
+                        <div className="bg-white border border-gray-200/80 rounded-2xl p-4 shadow-sm hover:shadow-md transition-all h-[160px] overflow-hidden">
+                            {/* Scrollable Container */}
+                            <div className="card-scroll-area overflow-y-auto h-full pr-2 space-y-2">
+                                <div className="flex items-start justify-between gap-2">
                                     <h3 className="text-base md:text-lg font-bold text-gray-900 leading-snug">
-                                        <span className={titleColorClass}>
+                                        <span className={`block ${titleColorClass}`}>
                                             {head}
-                                            {rest ? " " : ""}
                                         </span>
-                                        {rest}
+                                        {rest && (
+                                            <span className="block text-gray-900 font-bold mt-0.5">
+                                                {rest}
+                                            </span>
+                                        )}
                                     </h3>
 
-                                    <div className="flex-shrink-0 ml-3">
+                                    <div className="flex-shrink-0 ml-2">
                                         {item.iconSrc ? (
                                             <Image
                                                 src={item.iconSrc}
                                                 alt=""
-                                                width={24}
-                                                height={24}
-                                                className="object-contain w-6 h-6 shrink-0"
+                                                width={32}
+                                                height={32}
+                                                className="object-contain w-8 h-8 shrink-0"
                                             />
                                         ) : (
                                             <FallbackIcon icon={item.icon} />
@@ -116,9 +149,9 @@ export default function CoreAreasSection({
                                     </div>
                                 </div>
 
-                                <p className="text-sm text-gray-600 leading-relaxed">
+                                <div className="text-xs md:text-sm text-gray-600 leading-relaxed">
                                     {body}
-                                </p>
+                                </div>
                             </div>
                         </div>
                     );
