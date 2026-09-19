@@ -260,12 +260,9 @@ export default function CardiovascularBiologyPage() {
             <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 
                 <div className="text-left max-w-4xl mb-12 font-['Poppins',sans-serif]">
-                    <div className="flex items-center justify-start gap-4 mb-3">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
-                            Our Expertise in Cardiovascular Biology Research and Publication
-                        </h2>
-                        <div className="hidden sm:block h-[2px] w-24 bg-[#0e3b32] mt-1 shrink-0" />
-                    </div>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-3">
+                        Our Expertise in Cardiovascular Biology Research and Publication
+                    </h2>
                     <p className="text-gray-600 text-xs sm:text-sm">
                         At Pubrica, our cardiovascular biology specialists hold advanced degrees (PhD, MD, or MSc) with expertise in cardiovascular physiology, pathology, and molecular medicine. They possess extensive publication experience in reputed journals like{" "}
                         <a
@@ -303,7 +300,6 @@ export default function CardiovascularBiologyPage() {
                 />
 
             </section>
-
         </main>
     );
 }

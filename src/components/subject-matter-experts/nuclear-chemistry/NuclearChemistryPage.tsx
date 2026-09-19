@@ -226,13 +226,10 @@ export default function NuclearChemistryPage() {
             {/* SECTION 4: Expertise Grid */}
             <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 
-                <div className="text-center max-w-4xl mx-auto mb-12">
-                    <div className="flex items-center justify-center gap-4 mb-1">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
-                            Our Expertise in Nuclear Chemistry Research and Publication
-                        </h2>
-                        <div className="hidden sm:block h-[2px] w-24 bg-[#0e3b32] mt-1" />
-                    </div>
+                <div className="text-left w-full mb-12">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-3">
+                        Our Expertise in Nuclear Chemistry Research and Publication
+                    </h2>
                     <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                         At Pubrica we provide expert <Link href="/services/publication-support/peer-review-pre-submission/" className="text-blue-600">editing & publishing support</Link> for the nuclear community with our team of specialists ensures your research meets all academic publishing requirements, remains clear, accurate & based on sound science; from Radiochemistry to Nuclear Reaction to Radiopharmaceutical, we have the ability of offering customized solutions to focus on your individual area of Research.
                     </p>

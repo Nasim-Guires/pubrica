@@ -218,13 +218,10 @@ export default function MachineLearningPage() {
             {/* SECTION 4: Expertise Grid */}
             <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 
-                <div className="text-center max-w-4xl mx-auto mb-12">
-                    <div className="flex items-center justify-center gap-4 mb-3">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
-                            Our Expertise in Machine Learning Research and Publication
-                        </h2>
-                        <div className="hidden sm:block h-[2px] w-24 bg-[#0e3b32] mt-1" />
-                    </div>
+                <div className="text-left max-w-4xl mb-12">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-3">
+                        Our Expertise in Machine Learning Research and Publication
+                    </h2>
 
                     <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                         Our Expertise in Machine Learning Research and Publication lies in providing comprehensive support for every stage of the research process. From algorithm development to{" "}
@@ -252,7 +249,6 @@ export default function MachineLearningPage() {
                     cards={expertiseCards}
                 />
             </section>
-
         </main>
     );
 }
