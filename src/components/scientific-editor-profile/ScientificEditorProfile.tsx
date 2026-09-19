@@ -78,7 +78,7 @@ const EDITORS_DATA: EditorProfile[] = [
     yearsOfExperience: "20+ Years of Experience",
     location: "United Kingdom",
     imageSrc:
-      "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=500&auto=format&fit=crop",
+      "/images/about/Dr.-Helen-Morrison-1.webp",
     category: "medical",
   },
   {
@@ -106,7 +106,7 @@ const EDITORS_DATA: EditorProfile[] = [
     yearsOfExperience: "22+ Years of Experience",
     location: "India",
     imageSrc:
-      "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=500&auto=format&fit=crop",
+      "/images/about/Dr.-Arvind-Rao-1.webp",
     category: "medical",
   },
   {
@@ -134,7 +134,7 @@ const EDITORS_DATA: EditorProfile[] = [
     yearsOfExperience: "18+ Years of Experience",
     location: "India",
     imageSrc:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&auto=format&fit=crop",
+      "/images/about/Dr.-Meera-Iyer-1-1.webp",
     category: "non-medical",
   },
   {
@@ -148,23 +148,23 @@ const EDITORS_DATA: EditorProfile[] = [
     yearsOfExperience: "21+ Years of Experience",
     location: "Canada",
     imageSrc:
-      "https://images.unsplash.com/photo-1580281657557-2b02b53589b2?w=500&auto=format&fit=crop",
+      "/images/about/Dr.-David-Wilson-1.webp",
     category: "non-medical",
   },
-  {
-    id: "7",
-    name: "Dr. Sophia Martinez, PhD. Medical & Life Sciences Editorial Advisor | Pubrica",
-    title: "",
-    qualifications:
-      "Dr. Sophia Martinez holds a PhD in Biomedical Sciences with specialization in medical research communication and life sciences editing.",
-    experience:
-      "She has served as a medical editor and peer reviewer for several international journals. Her expertise includes clinical manuscripts, translational research, and systematic reviews, ensuring publication-ready medical content.",
-    yearsOfExperience: "17+ Years of Experience",
-    location: "Spain",
-    imageSrc:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&auto=format&fit=crop",
-    category: "non-medical",
-  },
+  // {
+  //   id: "7",
+  //   name: "Dr. Sophia Martinez, PhD. Medical & Life Sciences Editorial Advisor | Pubrica",
+  //   title: "",
+  //   qualifications:
+  //     "Dr. Sophia Martinez holds a PhD in Biomedical Sciences with specialization in medical research communication and life sciences editing.",
+  //   experience:
+  //     "She has served as a medical editor and peer reviewer for several international journals. Her expertise includes clinical manuscripts, translational research, and systematic reviews, ensuring publication-ready medical content.",
+  //   yearsOfExperience: "17+ Years of Experience",
+  //   location: "Spain",
+  //   imageSrc:
+  //     "/images/about/Maria-1.webp",
+  //   category: "non-medical",
+  // },
   {
     id: "8",
     name: "Dr. Maria PHD",
@@ -266,7 +266,7 @@ const EDITORS_DATA: EditorProfile[] = [
       "Dr. Laurence has over 7 years of experience in regulatory affairs; he is an subject-matter expert in pharma and medical device industry. Knowledge of regulatory requirements for medical devices in US, EU, Asia Pacific, ISO 13485, and ISO 14971—these are his capabilities.",
     yearsOfExperience: "7 years of experience",
     location: "USA",
-    imageSrc: "/images/academy/AJ.webp",
+    imageSrc: "/images/about/Laurence.jpg",
     category: "non-medical"
   },
   {
@@ -290,7 +290,7 @@ const EDITORS_DATA: EditorProfile[] = [
     },
     yearsOfExperience: "5 years of experience",
     location: "USA",
-    imageSrc: "/images/academy/Julie.webp",
+    imageSrc: "/images/academy/AJ.webp",
     category: "non-medical"
   },
   {

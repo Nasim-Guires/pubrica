@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { PayloadPost } from "@/lib/payload/types";
+import HeroBanner from "../common/HeroBanner";
 
 export default function CareersPage({ jobs }: { jobs: PayloadPost[] }) {
   const stats = [
@@ -12,19 +13,62 @@ export default function CareersPage({ jobs }: { jobs: PayloadPost[] }) {
     { value: "110", label: "Research projects done" },
   ];
 
+  const openings = [
+    {
+      id: 1,
+      title: "Associate Editor",
+      urlPath: "associate-editor",
+    },
+    {
+      id: 2,
+      title: "Full-time Regulatory Writer",
+      urlPath: "full-time-regulatory-writer",
+    },
+    {
+      id: 3,
+      title: "Production Manager",
+      urlPath: "production-manager",
+    },
+    {
+      id: 4,
+      title: "Technical Illustrator",
+      urlPath: "technical-illustrator",
+    },
+    {
+      id: 5,
+      title: "Editor-in-Chief",
+      urlPath: "editor-in-chief",
+    },
+    {
+      id: 6,
+      title: "Scientific Editor",
+      urlPath: "scientific-editor",
+    },
+    {
+      id: 7,
+      title: "Freelance Regulatory Writer",
+      urlPath: "freelance-regulatory-writer",
+    },
+    {
+      id: 8,
+      title: "Clinical Research Associates (CRAs)",
+      urlPath: "clinical-research-associates-cras",
+    },
+    {
+      id: 9,
+      title: "Statistician",
+      urlPath: "statistician",
+    },
+  ];
+
   return (
     <main className="w-full bg-white font-sans text-slate-800 min-h-screen">
       {/* 1. Dark Hero Banner Section */}
-      <section className="w-full bg-[#1b2b28] text-white py-6 px-4 text-center">
-        <div className="max-w-4xl mx-auto border border-[#2d4842] p-8 sm:p-10 rounded-sm bg-[#162422]/60 shadow-inner">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
-            Careers in publishing
-          </h1>
-          <p className="text-sm sm:text-base text-emerald-100 font-medium">
-            Jobs in editing
-          </p>
-        </div>
-      </section>
+      <HeroBanner
+        title="Careers in publishing"
+        description="Jobs in editing"
+        headingAs="h1"
+      />
 
       {/* 2. Intro Section: Academic and scientific writing */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 md:py-7 text-center space-y-4">
@@ -171,7 +215,7 @@ export default function CareersPage({ jobs }: { jobs: PayloadPost[] }) {
 
           <div className="relative w-full h-[260px] sm:h-[300px] rounded-md overflow-hidden shadow-sm">
             <Image
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
+              src="/images/careers/Pubrica-epitomizes-professionalism-01.jpg"
               alt="Professional female executive talking on phone working on computer"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -184,7 +228,7 @@ export default function CareersPage({ jobs }: { jobs: PayloadPost[] }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="relative w-full h-[260px] sm:h-[300px] rounded-md overflow-hidden shadow-sm order-2 md:order-1">
             <Image
-              src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800"
+              src="/images/careers/Scale-up-your-career-with-Pubrica-01.jpg"
               alt="Diverse team of business professionals having a meeting around table"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -223,29 +267,26 @@ export default function CareersPage({ jobs }: { jobs: PayloadPost[] }) {
           </h4>
 
           <ul className="grid sm:grid-cols-2 gap-2">
-            {jobs.slice(0, 12).map((job) => (
+            {openings.slice(0, 12).map((job) => (
               <li key={job.id}>
-                <Link
-                  href={`/careers/${job.urlPath}`}
-                  className="flex items-center gap-2.5 text-xs sm:text-sm text-blue-600 no-underline hover:no-underline"
-                >
+                <div className="flex items-center gap-2.5 text-xs sm:text-sm text-black">
                   <span className="w-4 h-4 rounded-full bg-[#1b2b28] text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0">
                     ➔
                   </span>
                   <span>{job.title}</span>
-                </Link>
+                </div>
               </li>
             ))}
           </ul>
 
-          <div className="pt-4">
+          {/* <div className="pt-4">
             <Link
               href="/careers/job-posting"
               className="inline-block bg-[#1b2b28] hover:bg-[#121f1d] text-white text-xs sm:text-sm font-bold px-6 py-2.5 rounded transition-colors"
             >
               View all openings &rarr;
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
     </main>

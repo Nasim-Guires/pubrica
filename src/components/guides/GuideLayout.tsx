@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import HeroBanner from '../common/HeroBanner';
 
 export interface TocItem {
   id: string;
@@ -31,10 +32,11 @@ export default function GuideLayout({
 }) {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
-      <section className="bg-[#0b2825] text-white py-6 px-4 text-center">
-        {eyebrow && <p className="text-xs uppercase tracking-wide text-gray-400 mb-2">{eyebrow}</p>}
-        <h1 className="text-2xl md:text-4xl font-bold tracking-tight max-w-4xl mx-auto">{title}</h1>
-      </section>
+      <HeroBanner
+        title={title}
+        description={eyebrow}
+        headingAs="h1"
+      />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
