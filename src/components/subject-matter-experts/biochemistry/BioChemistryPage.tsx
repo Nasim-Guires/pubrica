@@ -73,7 +73,7 @@ export default function BioChemistryPage() {
         {
             title: "Editing & Proofreading",
             desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            href: "/services/editing-proofreading/",
+            href: "/services/editing-and-translation/",
             imageUrl: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: Edit3,
         },

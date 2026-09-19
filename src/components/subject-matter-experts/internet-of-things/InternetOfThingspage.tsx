@@ -96,14 +96,14 @@ export default function InternetOfThingsPage() {
         {
             title: "Editing & Proofreading",
             desc: "Enhance clarity, grammar, and style for polished, professional manuscripts.",
-            href: "/services/editing-proofreading/",
+            href: "/services/editing-and-translation/",
             imageUrl: "/images/subject-matter-experts/algorithm/Editing-Proofreading.png",
             icon: FileText,
         },
         {
             title: "Data Collection for AI & ML",
             desc: "Structured data gathering tailored for artificial intelligence and machine learning.",
-            href: "/services/data-collection-for-ai-ml/",
+            href: "/services/medical-data-collection/",
             imageUrl: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Activity,
         },

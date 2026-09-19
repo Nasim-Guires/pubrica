@@ -206,6 +206,7 @@ export default function BioChemistrySection() {
                     imageSrc="/images/subject-matter-experts/biochemistry/Biochemistry-in-Real-World-Applications.webp"
                     imageAlt="Biochemistry in Real-World Applications"
                 />
+                <p>These applications highlight the pivotal role of biochemistry in solving global challenges, making expertise in this field invaluable.</p>
             </section>
             {/* SECTION 2: Where Our Authors Publish */}
             <section className="max-w-6xl mx-auto space-y-6">

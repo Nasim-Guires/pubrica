@@ -224,7 +224,7 @@ export default function BiomedicalEngineeringCompleteComponent() {
         imageSrc: "/images/subject-matter-experts/biomedical-engineering/sample-works-7.webp",
         imageAlt: "Journal cover",
         paperTitle: "Targeting and tracking mRNA lipid nanoparticles at the particle, transcript, and protein level",
-        author: "Kang, D.D., Marks, A., Maria-Polch, J. et al.",
+        author: "Kang, D.D., Marks, A., Morla-Folch, J. et al",
         publisher: "Springer Science and Business Media LLC",
         journalName: "Nature Biomedical Engineering",
         impactFactor: "29.2",

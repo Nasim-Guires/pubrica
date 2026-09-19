@@ -119,56 +119,57 @@ export default function BiophysicsSciencePage() {
             />
 
             {/* SECTION 2: Hero Intro Content */}
-            <section className="max-w-6xl mx-auto py-7 px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <section className="pt-6 border-t border-slate-100">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="mb-5">
+                            <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+                                Biophysics – Bridging Biology and Physics for Breakthrough Scientific Innovation
+                            </h2>
+                        </div>
 
-                    {/* Left Text Content */}
-                    <div className="lg:col-span-7 space-y-5">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0F393B] leading-snug">
-                            Biophysics – Bridging Biology and Physics for Breakthrough Scientific Innovation
-                        </h2>
+                        <div className="flow-root">
+                            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                                <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0 mx-auto bg-[#a3c9bd]/30">
+                                    <Image
+                                        src="/images/subject-matter-experts/biophysics/Biophysics.webp"
+                                        alt="Material Science Research Laboratory"
+                                        fill
+                                        priority
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 320px, 380px"
+                                    />
+                                </div>
+                            </div>
 
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Biophysics is a rapidly growing interdisciplinary field that bridges the gap between biology, physics, chemistry, engineering, mathematics, and computational sciences. By analysing biological systems through the lens of physical principles, biophysics helps researchers understand the structure, dynamics, and mechanisms of living organisms at molecular, cellular, and systemic levels. From protein folding and DNA mechanics to neural signalling and biomedical instrumentation, biophysics drives modern scientific discovery and medical innovation.
-                        </p>
+                            <div className="space-y-5 text-slate-700">
+                                <div className="space-y-5">
+                                    <p className="text-base leading-relaxed">
+                                        Biophysics is a rapidly growing interdisciplinary field that bridges the gap between biology, physics, chemistry, engineering, mathematics, and computational sciences. By analysing biological systems through the lens of physical principles, biophysics helps researchers understand the structure, dynamics, and mechanisms of living organisms at molecular, cellular, and systemic levels. From protein folding and DNA mechanics to neural signalling and biomedical instrumentation, biophysics drives modern scientific discovery and medical innovation.
+                                    </p>
 
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            At Pubrica, we understand that the complexities of biophysical research demand clarity, precision, and scientifically rigorous presentation. Our services are designed to support students, researchers, healthcare practitioners, and{" "}
+                                    <p className="text-base leading-relaxed">
+                                        At Pubrica, we understand that the complexities of biophysical research demand clarity, precision, and scientifically rigorous presentation. Our services are designed to support students, researchers, healthcare practitioners, and academic institutions in producing impactful publications and research outputs that meet the highest global editorial standards. With a team of{" "}
+                                        <Link href="/subject-matter-experts" className="text-blue-600 no-underline">
+                                            subject-matter experts
+                                        </Link>
+                                        , professional editors, and research specialists, Pubrica delivers end-to-end support throughout the research cycle, from proposal development to{" "}
+                                        <Link href="/services/publication-support/journal-submission" className="text-blue-600 no-underline">
+                                            journal submission
+                                        </Link>
+                                        .
+                                    </p>
 
-                            academic institutions
-
-                            in producing impactful publications and research outputs that meet the highest global editorial standards. With a team of{" "}
-                            <Link href="/subject-matter-experts" className="text-blue-600 no-underline hover:no-underline">
-                                subject-matter experts
-                            </Link>
-                            , professional editors, and research specialists, Pubrica delivers end-to-end support throughout the research cycle, from proposal development to{" "}
-                            <Link href="/services/publication-support/journal-submission" className="text-blue-600 no-underline hover:no-underline">
-                                journal submission
-                            </Link>
-                            .
-                        </p>
-                        <div className="pt-2">
-                            <GetFreeQuoteButton />
+                                    {/* CTA Button */}
+                                    <div className="pt-2">
+                                        <GetFreeQuoteButton />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    {/* Right Circular Image */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
-                            <Image
-                                src="/images/subject-matter-experts/biophysics/Biophysics.webp"
-                                alt="Material Science Research Laboratory"
-                                fill
-                                priority
-                                className="object-cover"
-                                sizes="(max-width: 768px) 320px, 380px"
-                            />
-                        </div>
-                    </div>
-
                 </div>
             </section>
-
             {/* SECTION 3: Core Disciplines Grid */}
             <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
                 <div className="max-w-6xl mx-auto">
