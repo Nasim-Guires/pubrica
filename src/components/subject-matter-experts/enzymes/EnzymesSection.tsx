@@ -170,24 +170,48 @@ export default function EnzymesSection() {
             </section>
 
             {/* SECTION 3: Areas of Study */}
-            <section className="max-w-6xl mx-auto space-y-8 bg-[#0e3b32] text-white p-8 sm:p-12 rounded-xl">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-white">
-                        Areas of Study
-                    </h2>
-                    <div className="w-16 h-1 bg-white mx-auto rounded-full"></div>
+            <section className="w-full relative flex flex-col lg:flex-row min-h-[380px] overflow-hidden">
+                {/* Left Side: Full-bleed Image Container */}
+                <div className="w-full lg:w-5/12 relative flex items-center p-6 sm:p-8 min-h-[260px] lg:min-h-full">
+                    {/* Next.js Image Component */}
+                    <Image
+                        src="/images/enzym.webp"
+                        alt="Areas of Study"
+                        fill
+                        priority
+                        className="object-cover"
+                    />
+
+                    {/* Dark Overlay for Readability */}
+                    <div className="absolute inset-0 bg-black/40 z-10" />
+
+                    {/* Text Overlay on Left Side Image */}
+                    <p className="relative z-20 text-xs sm:text-sm md:text-base text-white font-medium max-w-sm leading-relaxed">
+                        Pubrica's team of experts supports all areas of computer science research:
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {areasOfStudyData.map((area, index) => (
-                        <div
-                            key={index}
-                            className="bg-white text-gray-900 px-4 py-3 rounded-md shadow-xs flex items-center space-x-3 font-semibold text-sm sm:text-base"
-                        >
-                            <ChevronRight className="w-4 h-4 text-[#0e3b32] shrink-0" />
-                            <span>{area.title}</span>
-                        </div>
-                    ))}
+                {/* Right Side: Full-bleed Dark Green Content Box */}
+                <div className="w-full lg:w-7/12 bg-[#0e3b32] text-white py-8 px-6 sm:px-8 lg:px-10 flex flex-col justify-center space-y-5 z-20">
+                    <div className="text-left space-y-1.5">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-white">
+                            Areas of Study
+                        </h2>
+                        <div className="w-12 h-1 bg-white rounded-full"></div>
+                    </div>
+
+                    {/* Compact Name Cards Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-2.5">
+                        {areasOfStudyData.map((area, index) => (
+                            <div
+                                key={index}
+                                className="bg-white text-gray-900 px-2.5 py-2 rounded-md shadow-xs flex items-center space-x-1.5 font-semibold text-xs"
+                            >
+                                <ChevronRight className="w-3.5 h-3.5 text-[#0e3b32] shrink-0" />
+                                <span className="truncate">{area.title}</span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
