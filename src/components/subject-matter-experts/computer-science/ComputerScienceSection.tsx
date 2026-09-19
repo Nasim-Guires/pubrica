@@ -207,40 +207,46 @@ export default function ComputerScienceSection() {
             </section>
 
             {/* SECTION 3: Areas of Study */}
-            <section className="w-full bg-[#0e3b32] text-white py-6 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 items-center">
-                    <div className="lg:w-1/3 space-y-4">
-                        {/* <div className="relative">
-                            <img
-                                src="/images/subject-matter-experts/computer-science/Applications-of-Computer-Science.webp"
-                                alt="Areas of Study Monitor"
-                                className="w-full rounded-lg shadow-lg"
-                            />
-                        </div> */}
-                        {/* <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
-                            Pubrica's team of experts supports all areas of computer science research:
-                        </p> */}
+            <section className="w-full relative flex flex-col lg:flex-row min-h-[420px]">
+                {/* Left Side: Full Image Container with Next.js Image & Overlay Text */}
+                <div className="w-full lg:w-1/2 relative flex items-center p-6 sm:p-10 min-h-[320px] lg:min-h-full">
+                    {/* Next.js Image Component */}
+                    <Image
+                        src="/images/Areas-of-Study-1.webp"
+                        alt="Areas of Study Monitor"
+                        fill
+                        priority
+                        className="object-cover"
+                    />
+
+                    {/* Dark Overlay for Readability */}
+                    <div className="absolute inset-0 bg-black/40 z-10" />
+
+                    {/* Text Overlay on Left Side Image */}
+                    <p className="relative z-20 text-sm sm:text-base md:text-lg text-white font-medium max-w-md leading-relaxed">
+                        Pubrica's team of experts supports all areas of computer science research:
+                    </p>
+                </div>
+
+                {/* Right Side: Dark Green Content Box */}
+                <div className="w-full lg:w-1/2 bg-[#0e3b32] text-white py-10 px-6 sm:px-10 lg:px-12 flex flex-col justify-center space-y-6 z-20">
+                    <div className="text-left space-y-2">
+                        <h2 className="text-3xl sm:text-4xl font-bold">
+                            Areas of Study
+                        </h2>
+                        <div className="w-16 h-1 bg-white rounded-full"></div>
                     </div>
 
-                    <div className="lg:w-2/3 space-y-6">
-                        <div className="text-left space-y-2">
-                            <h2 className="text-3xl sm:text-4xl font-bold">
-                                Areas of Study
-                            </h2>
-                            <div className="w-16 h-1 bg-white rounded-full"></div>
-                        </div>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                            {areasOfStudy.map((area, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-white text-gray-800 rounded-md px-4 py-3 flex items-center space-x-2 text-sm font-semibold shadow-sm"
-                                >
-                                    <ChevronRight className="w-4 h-4 text-[#0e3b32] shrink-0" />
-                                    <span>{area}</span>
-                                </div>
-                            ))}
-                        </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                        {areasOfStudy.map((area, index) => (
+                            <div
+                                key={index}
+                                className="bg-white text-gray-800 rounded-md px-4 py-3 flex items-center space-x-2 text-sm font-semibold shadow-sm"
+                            >
+                                <ChevronRight className="w-4 h-4 text-[#0e3b32] shrink-0" />
+                                <span>{area}</span>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
