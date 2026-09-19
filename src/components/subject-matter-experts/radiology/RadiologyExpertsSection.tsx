@@ -115,7 +115,7 @@ const applicationsData = [
         title: "Nuclear medicine",
         desc: "These are short-acting radioactive substances that generate light from bodily processes. A camera collects the light, so a computer can process it and develop an image.",
         iconSrc:
-            "/images/subject-matter-experts/radiology/Nuclear-Medicine.webp",
+            "/images/Nuclear-medicine.webp",
     },
 ];
 
