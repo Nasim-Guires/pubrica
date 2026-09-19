@@ -23,51 +23,104 @@ export default function CommonExpertiseCards({
     description,
     cards,
 }: CommonExpertiseCardsProps) {
-    // Keep the grid centered and automatically choose the
-    // appropriate number of cards per row based on total cards.
-    const getGridColumns = () => {
-        switch (cards.length) {
-            case 1:
-                return "lg:grid-cols-1 lg:max-w-xs";
-            case 2:
-                return "lg:grid-cols-2 lg:max-w-2xl";
-            case 3:
-                return "lg:grid-cols-3 lg:max-w-4xl";
-            case 4:
-                return "lg:grid-cols-4 lg:max-w-6xl";
-            case 5:
-                return "lg:grid-cols-3 lg:max-w-4xl";
-            case 6:
-                return "lg:grid-cols-3 lg:max-w-4xl";
-            case 7:
-                return "lg:grid-cols-4 lg:max-w-6xl";
-            case 8:
-                return "lg:grid-cols-4 lg:max-w-6xl";
-            case 9:
-                return ""; // Handled separately for 4-3-2 pyramid laayout
-            default:
-                return "lg:grid-cols-4 lg:max-w-6xl";
-        }
-    };
+    // Reusable card renderer with sharp corners and dark green bottom accent
+    function renderCard(card: ExpertiseCardItem, idx: number) {
+        const CardIcon = card.icon;
 
-    // Render 9 cards precisely matching the 4 -> 3 -> 2 pyramid layout in image
+        return (
+            <Link
+                key={idx}
+                href={card.href}
+                className="group relative bg-slate-100 border border-gray-300 border-b-4 border-b-[#12433e] rounded-none overflow-hidden h-72 cursor-pointer block transition-all duration-300 hover:bg-white hover:border-[#12433e] hover:shadow-lg"
+            >
+                {/* Background Image Container */}
+                <div className="relative h-44 w-full bg-gray-200 overflow-hidden rounded-none">
+                    <Image
+                        src={card.imageUrl}
+                        alt={card.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                </div>
+
+                {/* Floating Center Circle Icon */}
+                <div className="absolute top-[9.5rem] left-1/2 -translate-x-1/2 z-20 bg-white p-2.5 rounded-full border border-gray-200 shadow-sm transition-all duration-300 ease-in-out group-hover:top-14 group-hover:scale-110 group-hover:border-[#12433e]">
+                    {card.iconSrc ? (
+                        <Image
+                            src={card.iconSrc}
+                            alt=""
+                            width={24}
+                            height={24}
+                            className="object-contain w-6 h-6 shrink-0"
+                        />
+                    ) : CardIcon ? (
+                        <CardIcon className="w-5 h-5 text-[#12433e]" />
+                    ) : null}
+                </div>
+
+                {/* Sliding Content Panel */}
+                <div className="absolute inset-x-0 bottom-0 top-40 z-10 bg-slate-100 group-hover:bg-white pt-8 pb-4 px-4 flex flex-col items-center justify-start text-center transition-all duration-300 ease-in-out group-hover:top-14 group-hover:pt-14">
+                    <h3 className="text-sm md:text-base font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#12433e] line-clamp-2">
+                        {card.title}
+                    </h3>
+
+                    <p className="text-xs text-gray-600 mt-2 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[95%] line-clamp-4">
+                        {card.desc}
+                    </p>
+                </div>
+            </Link>
+        );
+    }
+
+    // Custom Pyramid Layout for 5 Cards (Row 1: 3, Row 2: 2)
+    if (cards.length === 5) {
+        const row1 = cards.slice(0, 3);
+        const row2 = cards.slice(3, 5);
+
+        return (
+            <section className="space-y-8 font-['Poppins',sans-serif] max-w-6xl mx-auto">
+                <div className="text-left space-y-2">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
+                        {title}
+                    </h2>
+                    <p className="text-sm md:text-base text-gray-600 max-w-4xl">
+                        {description}
+                    </p>
+                </div>
+
+                <div className="space-y-6">
+                    {/* Row 1: 3 Cards */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+                        {row1.map((card, idx) => renderCard(card, idx))}
+                    </div>
+
+                    {/* Row 2: 2 Cards (Centered) */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:max-w-2xl mx-auto justify-center">
+                        {row2.map((card, idx) => renderCard(card, idx + 3))}
+                    </div>
+                </div>
+            </section>
+        );
+    }
+
+    // Custom Pyramid Layout for 9 Cards (Row 1: 4, Row 2: 3, Row 3: 2)
     if (cards.length === 9) {
         const row1 = cards.slice(0, 4);
         const row2 = cards.slice(4, 7);
         const row3 = cards.slice(7, 9);
 
         return (
-            <section className="space-y-8 font-['Poppins',sans-serif]">
-                <div className="space-y-2">
+            <section className="space-y-8 font-['Poppins',sans-serif] max-w-6xl mx-auto">
+                <div className="text-left space-y-2">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
                         {title}
                     </h2>
-                    <p className="text-sm md:text-base text-gray-600">
+                    <p className="text-sm md:text-base text-gray-600 max-w-4xl">
                         {description}
                     </p>
                 </div>
 
-                <div className="space-y-6 mx-auto max-w-6xl">
+                <div className="space-y-6">
                     {/* Row 1: 4 Cards */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
                         {row1.map((card, idx) => renderCard(card, idx))}
@@ -87,73 +140,43 @@ export default function CommonExpertiseCards({
         );
     }
 
-    // Standard Grid Render Function for all other card counts (e.g. 6, 8)
+    // Dynamic grid classes for standard card counts
+    const getGridColumns = () => {
+        switch (cards.length) {
+            case 1:
+                return "lg:grid-cols-1 lg:max-w-xs";
+            case 2:
+                return "lg:grid-cols-2 lg:max-w-2xl";
+            case 3:
+                return "lg:grid-cols-3";
+            case 4:
+                return "lg:grid-cols-4";
+            case 6:
+                return "lg:grid-cols-3";
+            case 7:
+            case 8:
+            default:
+                return "lg:grid-cols-4";
+        }
+    };
+
     return (
-        <section className="space-y-8 font-['Poppins',sans-serif]">
-            <div className="space-y-2">
+        <section className="space-y-8 font-['Poppins',sans-serif] max-w-6xl mx-auto">
+            <div className="text-left space-y-2">
                 <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
                     {title}
                 </h2>
 
-                <p className="text-sm md:text-base text-gray-600">
+                <p className="text-sm md:text-base text-gray-600 max-w-4xl">
                     {description}
                 </p>
             </div>
 
             <div
-                className={`grid grid-cols-1 sm:grid-cols-2 gap-6 mx-auto justify-center ${getGridColumns()}`}
+                className={`grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center ${getGridColumns()}`}
             >
                 {cards.map((card, idx) => renderCard(card, idx))}
             </div>
         </section>
     );
-
-    // Reusable card renderer using your exact card UI design
-    function renderCard(card: ExpertiseCardItem, idx: number) {
-        const CardIcon = card.icon;
-
-        return (
-            <Link
-                key={idx}
-                href={card.href}
-                className="group relative bg-white border border-gray-300 rounded-none overflow-hidden shadow-sm h-64 cursor-pointer block"
-            >
-                {/* Background Image */}
-                <div className="relative h-40 w-full bg-gray-100">
-                    <Image
-                        src={card.imageUrl}
-                        alt={card.title}
-                        fill
-                        className="object-cover"
-                    />
-                </div>
-
-                {/* Center Circle Icon */}
-                <div className="absolute top-[8.5rem] left-1/2 -translate-x-1/2 z-20 bg-white p-2.5 rounded-full border border-gray-200 shadow-sm transition-all duration-300 ease-in-out group-hover:top-20 group-hover:scale-105">
-                    {card.iconSrc ? (
-                        <Image
-                            src={card.iconSrc}
-                            alt=""
-                            width={24}
-                            height={24}
-                            className="object-contain w-6 h-6 shrink-0"
-                        />
-                    ) : CardIcon ? (
-                        <CardIcon className="w-5 h-5 text-[#12433e]" />
-                    ) : null}
-                </div>
-
-                {/* Sliding White Panel */}
-                <div className="absolute inset-x-0 bottom-0 top-36 z-10 bg-white pt-7 pb-3 px-3 flex flex-col items-center justify-start text-center transition-all duration-300 ease-in-out group-hover:top-20 group-hover:pt-12 group-hover:justify-start">
-                    <h3 className="text-sm md:text-base font-bold text-gray-900 transition-all duration-300">
-                        {card.title}
-                    </h3>
-
-                    <p className="text-xs text-gray-500 mt-2 leading-tight opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]">
-                        {card.desc}
-                    </p>
-                </div>
-            </Link>
-        );
-    }
 }
