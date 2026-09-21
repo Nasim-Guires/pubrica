@@ -248,14 +248,15 @@ export default function SurgeryPage() {
             </section>
 
             {/* SECTION 3: Core Disciplines Grid */}
-            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100 font-['Poppins',sans-serif]">
                 <div className="max-w-6xl mx-auto">
 
-                    <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-4">
+                    {/* Centered Section Header */}
+                    <div className="text-center max-w-5xl mx-auto mb-10 space-y-2">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
                             Our Core Disciplines In Surgery
                         </h2>
-                        <p className="text-gray-600 text-sm leading-relaxed">
+                        <p className="text-gray-600 text-sm leading-relaxed max-w-full">
                             We offer expert editorial and publication support across a wide spectrum of surgical disciplines. Whether your research focuses on innovative surgical techniques, clinical trials, or translational surgery, our specialists ensure precision, accuracy, and scientific impact in every manuscript.
                         </p>
                     </div>
@@ -264,7 +265,6 @@ export default function SurgeryPage() {
 
                 </div>
             </section>
-
             {/* SECTION 4: Expertise Grid */}
             <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 

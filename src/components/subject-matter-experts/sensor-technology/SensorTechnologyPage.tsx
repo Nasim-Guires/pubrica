@@ -221,14 +221,15 @@ export default function SensorTechnologyPage() {
             </section>
 
             {/* SECTION 3: Core Disciplines Grid */}
-            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100 font-['Poppins',sans-serif]">
                 <div className="max-w-6xl mx-auto">
 
-                    <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-4">
+                    {/* Centered Section Header */}
+                    <div className="text-center max-w-5xl mx-auto mb-10 space-y-2">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
                             Our Core Disciplines In Sensor Technology
                         </h2>
-                        <p className="text-gray-600 text-sm leading-relaxed">
+                        <p className="text-gray-600 text-sm leading-relaxed max-w-full">
                             The broad expertise with which we work across the sensor domain enables us to continue to innovate for people around the world, wherever sensors and intelligence are found, including healthcare, industry, environmental monitoring and innovative smart infrastructures.
                         </p>
                     </div>

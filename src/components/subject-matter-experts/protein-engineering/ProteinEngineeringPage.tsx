@@ -258,14 +258,15 @@ export default function ProteinEngineeringPage() {
             </section>
 
             {/* SECTION 3: Core Disciplines Grid */}
-            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100 font-['Poppins',sans-serif]">
                 <div className="max-w-6xl mx-auto">
 
-                    <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-4">
+                    {/* Centered Section Header */}
+                    <div className="text-center max-w-5xl mx-auto mb-10 space-y-2">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
                             Our Core Modalities in Protein Engineering
                         </h2>
-                        <p className="text-gray-600 text-sm leading-relaxed">
+                        <p className="text-gray-600 text-sm leading-relaxed max-w-full">
                             Pubrica offers a variety of different advanced modalities for Protein Engineering that have been designed to address specific problems in research, clinical innovation and industrial applications. We utilise the latest techniques to create new proteins or improve existing ones to enhance their function, stability, or specificity and create innovative disruptive solutions. Our core modalities are:
                         </p>
                     </div>
@@ -274,7 +275,6 @@ export default function ProteinEngineeringPage() {
 
                 </div>
             </section>
-
             {/* SECTION 4: Expertise Grid */}
             <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 

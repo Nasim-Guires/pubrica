@@ -187,15 +187,20 @@ export default function GenomicsPage() {
             </section>
 
             {/* SECTION 3: Core Disciplines Grid */}
-            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100 font-['Poppins',sans-serif]">
                 <div className="max-w-6xl mx-auto">
 
-                    <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-4">
+                    {/* Centered Section Header - Wider paragraph layout */}
+                    <div className="text-center max-w-5xl mx-auto mb-10 space-y-2">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
                             Our Core Disciplines In Genomics
                         </h2>
-                        <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                            Genomics is revolutionizing modern biology and medicine by enabling a comprehensive understanding of genetic variation, gene function, and molecular mechanisms underlying health and disease. At Pubrica, we support researchers across the full spectrum of genomic disciplines by delivering expert <Link href="/services/editing-and-translation/scientific-editing/" className="text-blue-600">scientific editing</Link>, publication support, and strategic guidance to ensure research findings are communicated with accuracy, clarity, and global impact.
+                        <p className="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-full">
+                            Genomics is revolutionizing modern biology and medicine by enabling a comprehensive understanding of genetic variation, gene function, and molecular mechanisms underlying health and disease. At Pubrica, we support researchers across the full spectrum of genomic disciplines by delivering expert{" "}
+                            <Link href="/services/editing-and-translation/scientific-editing/" className="text-blue-600">
+                                scientific editing
+                            </Link>
+                            , publication support, and strategic guidance to ensure research findings are communicated with accuracy, clarity, and global impact.
                         </p>
                     </div>
 

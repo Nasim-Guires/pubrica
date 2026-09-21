@@ -159,8 +159,8 @@ export default function NeurologyPage() {
             href: "/services/publication-support/journal-selection",
             imageUrl: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: UserCheck,
-        },    
-    // {
+        },
+        // {
         //     title: "Journal Selection",
         //     desc: "Strategic journal selection to maximize publication success.",
         //     href: "/services/publication-support/journal-selection",
@@ -237,16 +237,16 @@ export default function NeurologyPage() {
             </section>
 
             {/* SECTION 3: Core Disciplines Grid */}
-            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100 font-['Poppins',sans-serif]">
                 <div className="max-w-6xl mx-auto">
 
-                    <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-4">
+                    {/* Centered Section Header */}
+                    <div className="text-center max-w-5xl mx-auto mb-10 space-y-2">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
                             Our Core Disciplines In Nutraceuticals
                         </h2>
-                        <p className="text-gray-600 text-sm leading-relaxed">
+                        <p className="text-gray-600 text-sm leading-relaxed max-w-full">
                             At Pubrica, our Neurology division encompasses a wide spectrum of specialized disciplines dedicated to understanding, diagnosing, and treating disorders of the nervous system. Our experts collaborate with clinicians, researchers, and academicians to deliver high-quality scientific, editorial, and analytical support across every subfield of neurology.
-
                         </p>
                     </div>
 

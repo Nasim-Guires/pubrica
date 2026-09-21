@@ -236,15 +236,16 @@ export default function RadiologyPage() {
             </section>
 
             {/* SECTION 3: Core Disciplines Grid */}
-            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100 font-['Poppins',sans-serif]">
                 <div className="max-w-6xl mx-auto">
 
-                    <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-4">
+                    {/* Centered Section Header */}
+                    <div className="text-center max-w-5xl mx-auto mb-10 space-y-2">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
                             Our Core Disciplines In Radiology
                         </h2>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Radiology is a dynamic and rapidly evolving medical field that integrates advanced imaging technologies with clinical expertise to diagnose, treat, and monitor diseases. At Pubrica, we offer specialized research, diagnostic imaging, and <Link href="/services/publication-support/" className="text-blue-600"> publication support</Link> across all major disciplines of radiology. Our team of radiologists, imaging scientists, and medical editors ensures accuracy, scientific integrity, and clarity in every project.
+                        <p className="text-gray-600 text-sm leading-relaxed max-w-full">
+                            Radiology is a dynamic and rapidly evolving medical field that integrates advanced imaging technologies with clinical expertise to diagnose, treat, and monitor diseases. At Pubrica, we offer specialized research, diagnostic imaging, and <Link href="/services/publication-support/" className="text-blue-600 hover:underline">publication support</Link> across all major disciplines of radiology. Our team of radiologists, imaging scientists, and medical editors ensures accuracy, scientific integrity, and clarity in every project.
                         </p>
                     </div>
 
