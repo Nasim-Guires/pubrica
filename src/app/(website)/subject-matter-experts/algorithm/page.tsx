@@ -6,6 +6,7 @@ import React from 'react'
 
 import { constructMetadata } from '@/lib/metadata';
 import WhatClientsSays, { Testimonial } from '@/components/common/WhatClientsSays'
+import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
 export const metadata = constructMetadata({
     title: "Algorithm Research for Design, Analysis & System Performance",
@@ -68,6 +69,7 @@ const page = () => {
                 autoPlay={true}
                 autoPlayInterval={6000}
             />
+            <InsightsSection />
         </>
     )
 }

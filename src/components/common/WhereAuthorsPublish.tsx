@@ -24,17 +24,17 @@ export default function WhereAuthorsPublish({
   return (
     <div className="max-w-6xl w-full mx-auto space-y-6 font-['Poppins',sans-serif]">
       {/* Section Header */}
-      <div className="space-y-3">
+      <div className="space-y-4">
         {/* Main Heading & Line (Centered) */}
         <div className="flex flex-col items-center justify-center text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
             {title}
           </h2>
-          <div className="w-12 h-0.5 bg-[#12433e] mt-2" />
+          <div className="w-12 h-1 bg-[#12433e] mt-2 rounded-full" />
         </div>
 
-        {/* Subheading / Description (Aligned to Start/Left) */}
-        <p className="text-sm md:text-base text-gray-600 max-w-4xl text-left">
+        {/* Subheading / Description (Centered to match design) */}
+        <p className="text-sm md:text-base text-gray-600 max-w-4xl text-center mx-auto">
           {description}
         </p>
       </div>

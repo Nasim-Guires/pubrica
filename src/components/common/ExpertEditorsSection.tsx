@@ -22,14 +22,19 @@ export default function ExpertEditorsSection({
     editors,
 }: ExpertEditorsSectionProps) {
     return (
-        <div className="max-w-6xl mx-auto space-y-4 font-['Poppins',sans-serif]">
-            {/* Section Header (Left-aligned to grid start) */}
-            <div className="space-y-1.5 text-left">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
-                    {title}
-                </h2>
+        <div className="max-w-6xl mx-auto space-y-6 font-['Poppins',sans-serif]">
+            {/* Section Header (Centered layout) */}
+            <div className="space-y-4">
+                {/* Main Heading & Line (Centered) */}
+                <div className="flex flex-col items-center justify-center text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
+                        {title}
+                    </h2>
+                    <div className="w-12 h-1 bg-[#12433e] mt-2 rounded-full" />
+                </div>
 
-                <p className="text-sm md:text-base text-gray-600 max-w-3xl">
+                {/* Subheading / Description (Centered) */}
+                <p className="text-sm md:text-base text-gray-600 max-w-4xl text-center mx-auto">
                     {description}
                 </p>
             </div>

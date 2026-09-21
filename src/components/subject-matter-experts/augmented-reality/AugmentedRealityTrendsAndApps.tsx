@@ -55,7 +55,7 @@ export default function AugmentedRealityTrendsAndApps() {
     },
     {
       title: "Gaming/Entertainment Companies",
-      desc: "(having a virtual experience (gaming)",
+      desc: "(having a virtual experience (gaming))",
       iconSrc:
         "/images/subject-matter-experts/augmented-reality/Gaming_Entertainment-Companies.webp",
       icon: Gamepad2,
@@ -88,11 +88,18 @@ export default function AugmentedRealityTrendsAndApps() {
     <div className="w-full max-w-6xl mx-auto px-6 py-12 bg-white font-sans text-gray-800 space-y-16">
       {/* SECTION 1: EMERGING TRENDS & COLLAPSIBLE FUTURE TRENDS */}
       <section className="space-y-8">
-        <div className="space-y-3 max-w-3xl">
-          <h2 className="text-3xl font-bold tracking-tight text-[#0d3630]">
-            Emerging Trends in Augmented Reality
-          </h2>
-          <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+        {/* Section Header (Centered layout) */}
+        <div className="space-y-4">
+          {/* Main Heading & Line (Centered) */}
+          <div className="flex flex-col items-center justify-center text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0d3630]">
+              Emerging Trends in Augmented Reality
+            </h2>
+            <div className="w-12 h-1 bg-[#0d3630] mt-2 rounded-full" />
+          </div>
+
+          {/* Subheading / Description (Centered) */}
+          <p className="text-sm md:text-base text-gray-600 max-w-4xl text-center mx-auto leading-relaxed">
             The development of cutting edge AR technology will allow for
             advances of immersive technology and digital transformation in
             many ways. Some trends include the following:

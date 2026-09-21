@@ -64,7 +64,7 @@ export default function CoreAreasSection({
     items,
 }: SmeCoreAreasGridProps) {
     return (
-        <section className="space-y-4 font-['Poppins',sans-serif]">
+        <section className="space-y-6 font-['Poppins',sans-serif]">
             {/* Custom scrollbar - native single track with arrow buttons */}
             <style font-display="swap">{`
                 .card-scroll-area::-webkit-scrollbar {
@@ -96,15 +96,20 @@ export default function CoreAreasSection({
                 }
             `}</style>
 
-            {/* Heading + Description */}
-            <div className="text-center space-y-2">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
-                    {title}
-                </h2>
+            {/* Section Header (Centered layout) */}
+            <div className="space-y-4">
+                {/* Main Heading & Line (Centered) */}
+                <div className="flex flex-col items-center justify-center text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
+                        {title}
+                    </h2>
+                    <div className="w-12 h-1 bg-[#12433e] mt-2 rounded-full" />
+                </div>
 
-                <p className="text-sm md:text-base text-gray-600 max-w-3xl mx-auto">
+                {/* Subheading / Description (Centered) */}
+                <div className="text-sm md:text-base text-gray-600 max-w-4xl text-center mx-auto">
                     {description}
-                </p>
+                </div>
             </div>
 
             {/* Core Areas Cards */}

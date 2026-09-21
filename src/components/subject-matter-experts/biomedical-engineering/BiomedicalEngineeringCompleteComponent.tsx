@@ -227,7 +227,7 @@ export default function BiomedicalEngineeringCompleteComponent() {
         author: "Kang, D.D., Marks, A., Morla-Folch, J. et al",
         publisher: "Springer Science and Business Media LLC",
         journalName: "Nature Biomedical Engineering",
-        impactFactor: "29.2",
+        impactFactor: "26.6",
     };
     return (
         <div className="font-sans text-gray-800 bg-white py-6 px-4 space-y-16">

@@ -29,14 +29,14 @@ export default function EmergingTrendsSection({
 
   return (
     <div className="space-y-4 max-w-5xl mx-auto font-['Poppins',sans-serif]">
-      {/* Section Header */}
-      <div className="space-y-2">
+      {/* Centered Section Header */}
+      <div className="space-y-2 text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-[#113835]">
           {title}
         </h2>
 
         {description && (
-          <p className="text-sm md:text-base text-gray-800 font-medium">
+          <p className="text-xs sm:text-sm md:text-base text-gray-600 font-normal max-w-3xl mx-auto leading-relaxed">
             {description}
           </p>
         )}
@@ -54,8 +54,8 @@ export default function EmergingTrendsSection({
                 key={trend.id}
                 onClick={() => setActiveTrend(trend)}
                 className={`py-4 px-3 text-center text-xs md:text-sm font-semibold transition-all border-l border-gray-300 flex items-center justify-center min-h-[70px] ${isActive
-                    ? "bg-[#113835] text-white"
-                    : "bg-[#eeeeee] text-[#111111] hover:bg-gray-200"
+                  ? "bg-[#113835] text-white"
+                  : "bg-[#eeeeee] text-[#111111] hover:bg-gray-200"
                   }`}
               >
                 {trend.title}
@@ -71,16 +71,16 @@ export default function EmergingTrendsSection({
               {activeTrend.title}
             </h3>
 
-            <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+            <div className="text-sm text-gray-600 font-normal mt-2 leading-relaxed">
               {activeTrend.description}
-            </p>
+            </div>
           </div>
         )}
       </div>
 
       {/* Footer Text */}
       {footerText && (
-        <p className="text-sm text-gray-600 leading-relaxed pt-1">
+        <p className="text-sm text-gray-600 font-normal leading-relaxed pt-1 text-center">
           {footerText}
         </p>
       )}

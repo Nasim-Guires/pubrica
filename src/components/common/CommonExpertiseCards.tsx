@@ -23,7 +23,25 @@ export default function CommonExpertiseCards({
     description,
     cards,
 }: CommonExpertiseCardsProps) {
-    // Reusable card renderer with sharp corners and dark green bottom accent
+    // Fixed Header: Title wraps naturally without overflowing screen width
+    const renderHeader = () => (
+        <div className="space-y-3">
+            {/* Title with flex line on right */}
+            <div className="flex items-center gap-4 w-full">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1e2e2b] text-left">
+                    {title}
+                </h2>
+                <div className="h-[2px] bg-[#1e2e2b] flex-1 min-w-[30px] hidden sm:block" />
+            </div>
+
+            {/* Subheading / Description */}
+            <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed text-left max-w-5xl">
+                {description}
+            </p>
+        </div>
+    );
+
+    // Reusable card renderer
     function renderCard(card: ExpertiseCardItem, idx: number) {
         const CardIcon = card.icon;
 
@@ -44,7 +62,7 @@ export default function CommonExpertiseCards({
                 </div>
 
                 {/* Floating Center Circle Icon */}
-                <div className="absolute top-[9.5rem] left-1/2 -translate-x-1/2 z-20 bg-white p-2.5 rounded-full border border-gray-200 shadow-sm transition-all duration-300 ease-in-out group-hover:top-14 group-hover:scale-110 group-hover:border-[#12433e]">
+                <div className="absolute top-[5.5rem] md:top-[9.5rem] left-1/2 -translate-x-1/2 z-20 bg-white p-2.5 rounded-full border border-gray-200 shadow-sm transition-all duration-300 ease-in-out md:group-hover:top-14 md:group-hover:scale-110 md:group-hover:border-[#12433e]">
                     {card.iconSrc ? (
                         <Image
                             src={card.iconSrc}
@@ -58,13 +76,13 @@ export default function CommonExpertiseCards({
                     ) : null}
                 </div>
 
-                {/* Sliding Content Panel */}
-                <div className="absolute inset-x-0 bottom-0 top-40 z-10 bg-slate-100 group-hover:bg-white pt-8 pb-4 px-4 flex flex-col items-center justify-start text-center transition-all duration-300 ease-in-out group-hover:top-14 group-hover:pt-14">
-                    <h3 className="text-sm md:text-base font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#12433e] line-clamp-2">
+                {/* Content Panel - Shorter height on Mobile so background image shows cleanly */}
+                <div className="absolute inset-x-0 bottom-0 top-28 md:top-40 z-10 bg-white md:bg-slate-100 md:group-hover:bg-white pt-7 md:pt-8 md:group-hover:pt-14 pb-3 px-4 flex flex-col items-center justify-start text-center transition-all duration-300 ease-in-out md:group-hover:top-14">
+                    <h3 className="text-sm md:text-base font-bold text-[#12433e] md:text-gray-900 md:group-hover:text-[#12433e] transition-colors duration-300 line-clamp-1 md:line-clamp-2">
                         {card.title}
                     </h3>
 
-                    <p className="text-xs text-gray-600 mt-2 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[95%] line-clamp-4">
+                    <p className="text-xs text-gray-600 mt-1 md:mt-2 leading-relaxed opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 max-w-[95%] line-clamp-3 md:line-clamp-4">
                         {card.desc}
                     </p>
                 </div>
@@ -78,15 +96,8 @@ export default function CommonExpertiseCards({
         const row2 = cards.slice(3, 5);
 
         return (
-            <section className="space-y-8 font-['Poppins',sans-serif] max-w-6xl mx-auto">
-                <div className="text-left space-y-2">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
-                        {title}
-                    </h2>
-                    <p className="text-sm md:text-base text-gray-600 max-w-4xl">
-                        {description}
-                    </p>
-                </div>
+            <section className="space-y-8 font-['Poppins',sans-serif] max-w-6xl mx-auto px-4">
+                {renderHeader()}
 
                 <div className="space-y-6">
                     {/* Row 1: 3 Cards */}
@@ -110,15 +121,8 @@ export default function CommonExpertiseCards({
         const row3 = cards.slice(7, 9);
 
         return (
-            <section className="space-y-8 font-['Poppins',sans-serif] max-w-6xl mx-auto">
-                <div className="text-left space-y-2">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
-                        {title}
-                    </h2>
-                    <p className="text-sm md:text-base text-gray-600 max-w-4xl">
-                        {description}
-                    </p>
-                </div>
+            <section className="space-y-8 font-['Poppins',sans-serif] max-w-6xl mx-auto px-4">
+                {renderHeader()}
 
                 <div className="space-y-6">
                     {/* Row 1: 4 Cards */}
@@ -161,16 +165,8 @@ export default function CommonExpertiseCards({
     };
 
     return (
-        <section className="space-y-8 font-['Poppins',sans-serif] max-w-6xl mx-auto">
-            <div className="text-left space-y-2">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
-                    {title}
-                </h2>
-
-                <p className="text-sm md:text-base text-gray-600 max-w-4xl">
-                    {description}
-                </p>
-            </div>
+        <section className="space-y-8 font-['Poppins',sans-serif] max-w-6xl mx-auto px-4">
+            {renderHeader()}
 
             <div
                 className={`grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center ${getGridColumns()}`}
