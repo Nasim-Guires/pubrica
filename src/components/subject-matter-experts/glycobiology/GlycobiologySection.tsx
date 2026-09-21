@@ -2,30 +2,42 @@
 import Image from "next/image";
 import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight, Plus, Minus } from 'lucide-react';
+import ApplicationsSection from "@/components/common/ApplicationsSection";
+import WhereAuthorsPublish from "@/components/common/WhereAuthorsPublish";
+import ExpertEditorsSection, { ExpertEditorItem } from "@/components/common/ExpertEditorsSection";
 
-const trustItemsData = [
+const applicationsData = [
     {
-        title: '',
-        description: 'Biomedical Research: Understanding glycosylation pathways aids in the development of targeted therapies and diagnostic biomarkers for diseases such as cancer, diabetes, and neurodegenerative disorders.'
+        title: "",
+        desc: "Biomedical Research: Understanding glycosylation pathways aids in the development of targeted therapies and diagnostic biomarkers for diseases such as cancer, diabetes, and neurodegenerative disorders.",
+        iconSrc:
+            "/images/subject-matter-experts/glycobiology/Biomedical-Research.webp",
     },
     {
-        title: '',
-        description: 'Drug Development: Glycoengineering enhances drug efficacy, bioavailability, and immunogenicity, especially in biologics and vaccines.'
+        title: "",
+        desc: "Drug Development: Glycoengineering enhances drug efficacy, bioavailability, and immunogenicity, especially in biologics and vaccines.",
+        iconSrc:
+            "/images/subject-matter-experts/glycobiology/Drug-Development.webp",
     },
     {
-        title: '',
-        description: 'Infectious Diseases: Elucidating the role of glycans in pathogen-host interactions has led to novel antiviral and antibacterial strategies.'
+        title: "",
+        desc: "Infectious Diseases: Elucidating the role of glycans in pathogen-host interactions has led to novel antiviral and antibacterial strategies.",
+        iconSrc:
+            "/images/subject-matter-experts/glycobiology/Infectious-Diseases.webp",
     },
     {
-        title: '',
-        description: 'Regenerative Medicine: Glycans are integral to stem cell differentiation, tissue repair, and organ regeneration.'
+        title: "",
+        desc: "Regenerative Medicine: Glycans are integral to stem cell differentiation, tissue repair, and organ regeneration.",
+        iconSrc:
+            "/images/subject-matter-experts/glycobiology/Regenerative-Medicine-1.webp",
     },
     {
-        title: '',
-        description: 'Industrial Biotechnology: Glycobiology facilitates the design of glycan-modified enzymes and biopolymers for sustainable bioengineering solutions.'
+        title: "",
+        desc: "Industrial Biotechnology: Glycobiology facilitates the design of glycan-modified enzymes and biopolymers for sustainable bioengineering solutions.",
+        iconSrc:
+            "/images/subject-matter-experts/glycobiology/Industrial-Biotechnology.webp",
     },
 ];
-
 const emergingTrendsData = [
     {
         id: 'artificial-intelligence-in-glycomics',
@@ -68,33 +80,36 @@ const areasOfStudyData = [
     { title: 'Genomics' },
     { title: 'Glycan Binding Proteins' }
 ];
-
-const editorsData = [
+const editorsData: ExpertEditorItem[] = [
     {
-        name: 'Dr. Alicia Morgan',
-        degree: 'PhD in Glycobiology',
-        experience: '12 years of experience',
-        manuscripts: '95+ manuscripts edited',
-        countryFlag: '🇬🇧',
-        avatar: "/images/subject-matter-experts/glycobiology/Dr.-Alicia-Morgan.webp"
+        name: "Dr. Alicia Morgan",
+        degree: "PhD in Glycobiology",
+        experience: "12 years of experience",
+        manuscripts: "95+ manuscripts edited",
+        flag: "/images/country/gb.png",
+        avatar:
+            "/images/subject-matter-experts/glycobiology/Dr.-Alicia-Morgan.webp",
     },
     {
-        name: 'Dr. Kenji Watanabe',
-        degree: 'PhD in Molecular and Cellular Biology',
-        experience: '15 years of experience',
-        manuscripts: '120+ manuscripts edited',
-        countryFlag: '🇯🇵',
-        avatar: "/images/subject-matter-experts/glycobiology/Dr.-Kenji-Watanabe.webp"
+        name: "Dr. Kenji Watanabe",
+        degree: "PhD in Molecular and Cellular Biology",
+        experience: "15 years of experience",
+        manuscripts: "120+ manuscripts edited",
+        flag: "/images/country/jp.png",
+        avatar:
+            "/images/subject-matter-experts/glycobiology/Dr.-Kenji-Watanabe.webp",
     },
     {
-        name: 'Dr. Sofia Almeida',
-        degree: 'PhD in Biochemistry',
-        experience: '13 years of experience',
-        manuscripts: '105+ manuscripts edited',
-        countryFlag: '🇺🇸',
-        avatar: "/images/subject-matter-experts/gynecology/Dr.-Sofia-Almeida.webp"
-    }
+        name: "Dr. Sofia Almeida",
+        degree: "PhD in Biochemistry",
+        experience: "13 years of experience",
+        manuscripts: "105+ manuscripts edited",
+        flag: "/images/country/us.png",
+        avatar:
+            "/images/subject-matter-experts/gynecology/Dr.-Sofia-Almeida.webp",
+    },
 ];
+
 
 export default function GlycobiologySection() {
     const [openTrustIndex, setOpenTrustIndex] = useState<number | null>(null);
@@ -127,11 +142,10 @@ export default function GlycobiologySection() {
                                 <button
                                     key={tab.id}
                                     onClick={() => setActiveTrendTab(idx)}
-                                    className={`px-3 py-3 text-xs sm:text-sm font-semibold transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center text-center ${
-                                        isActive
-                                            ? 'bg-[#0e3b32] text-white shadow-sm'
-                                            : 'bg-[#eef2f1] text-gray-700 hover:bg-gray-250'
-                                    }`}
+                                    className={`px-3 py-3 text-xs sm:text-sm font-semibold transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center text-center ${isActive
+                                        ? 'bg-[#0e3b32] text-white shadow-sm'
+                                        : 'bg-[#eef2f1] text-gray-700 hover:bg-gray-250'
+                                        }`}
                                 >
                                     {tab.title}
                                 </button>
@@ -153,181 +167,97 @@ export default function GlycobiologySection() {
 
             {/* SECTION: Why Choose Pubrica for Glycobiology Research and Publishing? */}
             <section className="max-w-6xl mx-auto space-y-6">
-                <div className="space-y-3 text-left">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                       Applications of Glycobiology
-                    </h2>
-                    <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                        The applications of glycobiology are vast and transformative. Research in this domain contributes to several major scientific and clinical advancements:
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div className="space-y-4">
-                        {trustItemsData.map((item, index) => (
-                            <div key={index} className="flex items-start space-x-3">
-                                <div className="mt-1 text-[#0e3b32]">
-                                    <ChevronRight className="w-5 h-5 shrink-0" />
-                                </div>
-                                <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                                    <strong className="text-gray-900 font-bold">{item.title} </strong>
-                                    {item.description}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <img
-                            src="/images/subject-matter-experts/glycobiology/Applications-of-Glycobiology.webp"
-                            alt="Glycobiology research setup"
-                            className="w-full h-auto object-cover"
-                        />
-                    </div>
-                </div>
+                <ApplicationsSection
+                    title="Applications of Glycobiology"
+                    description="The applications of glycobiology are vast and transformative. Research in this domain contributes to several major scientific and clinical advancements:"
+                    applications={applicationsData}
+                    imageSrc="/images/subject-matter-experts/glycobiology/Applications-of-Glycobiology.webp"
+                    imageAlt="Applications of Glycobiology"
+                />
             </section>
 
             {/* SECTION: Areas of Study (Dark Theme Container matched with reference image) */}
-            <section className="w-full bg-[#092c25] py-7 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-6xl mx-auto space-y-10">
-                    <div className="text-center space-y-3">
-                        <h2 className="text-3xl sm:text-4xl font-bold text-white">
+            <section className="w-full grid grid-cols-1 lg:grid-cols-12 min-h-[420px] rounded-none overflow-hidden">
+                {/* Left Side: Image with Dark Overlay */}
+                <div className="lg:col-span-5 relative min-h-[300px] flex items-center p-8 sm:p-12 !rounded-none overflow-hidden">
+                    <Image
+                        src="/images/Gynaecology.webp"
+                        alt="Glycobiology research"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 41vw"
+                        className="object-cover !rounded-none"
+                        style={{ clipPath: "none", borderRadius: "0px" }}
+                        priority
+                    />
+
+                    {/* Dark Overlay */}
+                    <div
+                        className="absolute inset-0 bg-black/60 !rounded-none z-10"
+                        style={{ clipPath: "none", borderRadius: "0px" }}
+                    ></div>
+
+                    {/* Text Overlay */}
+                    <p className="relative z-20 text-white text-sm sm:text-base font-normal leading-relaxed max-w-md">
+                        Pubrica supports a broad spectrum of glycobiology research. Whether it&apos;s the study of glycosylation, glycoconjugates, or glycomics, Pubrica&apos;s expertise ensures that your glycobiology research is robust, well-documented, and ready for publication.
+                    </p>
+                </div>
+
+                {/* Right Side: Dark Green Background with Header & Grid */}
+                <div className="lg:col-span-7 bg-[#052b28] p-8 sm:p-12 flex flex-col justify-center space-y-6">
+                    {/* Section Header */}
+                    <div className="space-y-2">
+                        <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
                             Areas of Study
                         </h2>
-                        <div className="w-16 h-1 bg-[#145345] mx-auto rounded-full"></div>
-                        <p className="text-gray-300 text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
-                            Pubrica supports a broad spectrum of glycobiology research. Whether it&apos;s the study of glycosylation, glycoconjugates, or glycomics, Pubrica&apos;s expertise ensures that your glycobiology research is robust, well-documented, and ready for publication.
-                        </p>
+
+                        <div className="w-16 h-1 bg-white rounded-full"></div>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                        <div className="lg:col-span-5 rounded-lg overflow-hidden shadow-xl border border-white/10 order-2 lg:order-1">
-                          
-                        </div>
-
-                        <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-3 order-1 lg:order-2">
-                            {areasOfStudyData.map((app, index) => (
-                                <div key={index} className="bg-white rounded-md px-3 py-3 shadow-sm flex items-center space-x-2 text-gray-900">
-                                    <div className="text-[#0e3b32] bg-[#eef2f1] p-1 rounded shrink-0">
-                                        <ChevronRight className="w-3.5 h-3.5" />
-                                    </div>
-                                    <span className="font-bold text-xs sm:text-sm text-gray-900 leading-tight">
-                                        {app.title}
-                                    </span>
+                    {/* Tag Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                        {areasOfStudyData.map((app, index) => (
+                            <div
+                                key={index}
+                                className="bg-white text-black px-3 py-2.5 rounded-sm shadow-sm flex items-center space-x-2 text-xs font-semibold leading-snug"
+                            >
+                                <div className="w-4 h-4 rounded-full bg-[#052b28] flex items-center justify-center shrink-0">
+                                    <ChevronRight className="w-3 h-3 text-white stroke-[3]" />
                                 </div>
-                            ))}
-                        </div>
+
+                                <span>{app.title}</span>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
             {/* SECTION: Where Our Authors Publish */}
             <section className="max-w-6xl mx-auto space-y-6">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Where Our Authors Publish
-                    </h2>
-                    <div className="w-16 h-1 bg-[#0e3b32] mx-auto rounded-full"></div>
-                    <p className="text-gray-600 text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
-                        Our authors share Pubrica&apos;s expert content across top-tier journals, conferences, and platforms, maximizing its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity.
-                    </p>
-                </div>
-
-                {/* Featured Publication Card */}
-                <div className="bg-[#fafafa] border border-gray-200 rounded-lg p-6 sm:p-8 shadow-xs max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
-                    {/* Journal Cover Image */}
-                    <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-black">
-                        <img
-                            src="/images/subject-matter-experts/glycobiology/sample-works-6-1.webp"
-                            alt="Glycobiology Journal Cover"
-                            className="w-full h-auto object-cover"
-                        />
-                    </div>
-
-                    {/* Paper Details */}
-                    <div className="flex-1 space-y-3 text-gray-800 text-sm sm:text-base leading-relaxed">
-                        <p>
-                            <strong className="text-gray-900 font-bold">Paper Title: </strong>
-                            The Importance of N- and O-Glycosylation of Brain Cell Surface Glycoproteins
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Author: </strong>
-                            Maxence Noel, Yumi M Zürcher, Ea K C Tulin, Richard D Cummings
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Journal Name: </strong>
-                            Glycobiology
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Publisher: </strong>
-                            Oxford University Press
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Impact factor: </strong>
-                            3.3
-                        </p>
-                    </div>
-                </div>
+                <WhereAuthorsPublish
+                    title="Where Our Authors Publish"
+                    description="Our authors share Pubrica&apos;s expert content across top-tier journals, conferences, and platforms, maximizing its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+                    publication={{
+                        imageSrc:
+                            "/images/subject-matter-experts/glycobiology/sample-works-6-1.webp",
+                        imageAlt: "Glycobiology Journal Cover",
+                        paperTitle:
+                            "The Importance of N- and O-Glycosylation of Brain Cell Surface Glycoproteins",
+                        author:
+                            "Maxence Noel, Yumi M Zürcher, Ea K C Tulin, Richard D Cummings",
+                        journalName: "Glycobiology",
+                        publisher: "Oxford University Press",
+                        impactFactor: "3.3",
+                    }}
+                />
             </section>
 
             {/* SECTION: Our Expert Glycobiology Editors */}
             <section className="max-w-6xl mx-auto space-y-8">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Our Expert Glycobiology Editors
-                    </h2>
-                    <p className="text-gray-600 text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
-                        Pubrica&apos;s team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake.
-                    </p>
-                </div>
-
-                {/* Editors Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {editorsData.map((editor, index) => (
-                        <div
-                            key={index}
-                            className="bg-[#a3c3bb] rounded-xl p-6 text-gray-900 flex flex-col justify-between shadow-xs transition-transform duration-200 hover:-translate-y-1"
-                        >
-                            <div className="space-y-4">
-                                {/* Header with Avatar and Flags */}
-                                <div className="flex items-center space-x-3">
-                                    <div className="relative">
-                                        <img
-                                            src={editor.avatar}
-                                            alt={editor.name}
-                                            className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-xs"
-                                        />
-                                        <span className="absolute bottom-0 right-0 text-sm bg-white rounded-full px-1 shadow-xs">
-                                            {editor.countryFlag}
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-lg text-[#0a2923]">
-                                            {editor.name}
-                                        </h3>
-                                        <p className="text-xs sm:text-sm font-medium text-gray-800">
-                                            {editor.degree}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="w-full border-t border-[#88b1a8] my-2"></div>
-
-                                {/* Editor Stats */}
-                                <div className="space-y-2 text-xs sm:text-sm font-semibold text-gray-800">
-                                    <div className="flex items-center space-x-2">
-                                        <Briefcase className="w-4 h-4 text-[#0e3b32]" />
-                                        <span>{editor.experience}</span>
-                                    </div>
-                                    <div className="flex items-center space-x-2">
-                                        <FileText className="w-4 h-4 text-[#0e3b32]" />
-                                        <span>{editor.manuscripts}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <ExpertEditorsSection
+                    title="Our Expert Glycobiology Editors"
+                    description="Pubrica's team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake."
+                    editors={editorsData}
+                />
             </section>
 
         </div>

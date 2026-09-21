@@ -151,12 +151,17 @@ const publication: AuthorPublicationData = {
     journalName: "Journal of Food Science",
     impactFactor: "3.4",
 };
+
 export default function FoodScienceSection() {
-    const [openTrustIndex, setOpenTrustIndex] = useState<number | null>(null);
+    const [openTrustIndices, setOpenTrustIndices] = useState<number[]>([]);
     const [activeTrendTab, setActiveTrendTab] = useState(0);
 
     const toggleTrustItem = (index: number) => {
-        setOpenTrustIndex(openTrustIndex === index ? null : index);
+        setOpenTrustIndices((prev) =>
+            prev.includes(index)
+                ? prev.filter((i) => i !== index)
+                : [...prev, index]
+        );
     };
 
     return (
@@ -172,28 +177,28 @@ export default function FoodScienceSection() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
                     {trustItemsData.map((item, index) => {
-                        const isOpen = openTrustIndex === index;
+                        const isOpen = openTrustIndices.includes(index);
 
                         return (
                             <div
                                 key={index}
-                                className="bg-[#0e3b32] text-white rounded-md border border-[#0e3b32] shadow-sm self-start"
+                                className="rounded-md border border-[#0e3b32] shadow-sm self-start overflow-hidden"
                             >
                                 <button
                                     onClick={() => toggleTrustItem(index)}
-                                    className="w-full px-6 py-4 flex items-center justify-between text-left font-semibold text-base sm:text-lg hover:bg-[#124b3f] transition-colors"
+                                    className="w-full px-6 py-4 flex items-center justify-between text-left font-semibold text-base sm:text-lg bg-[#0e3b32] text-white hover:bg-[#124b3f] transition-colors"
                                 >
                                     <span>{item.title}</span>
 
                                     {isOpen ? (
-                                        <Minus className="w-5 h-5 shrink-0" />
+                                        <Minus className="w-5 h-5 shrink-0 text-white" />
                                     ) : (
-                                        <Plus className="w-5 h-5 shrink-0" />
+                                        <Plus className="w-5 h-5 shrink-0 text-white" />
                                     )}
                                 </button>
 
                                 {isOpen && item.description && (
-                                    <div className="px-6 pb-4 pt-2 border-t border-[#1a5548] text-gray-200 text-sm sm:text-base leading-relaxed">
+                                    <div className="px-6 pb-4 pt-4 bg-white border-t border-[#0e3b32] text-gray-800 text-sm sm:text-base leading-relaxed">
                                         {item.description}
                                     </div>
                                 )}
@@ -227,7 +232,6 @@ export default function FoodScienceSection() {
                     imageAlt="Applications of Food Science"
                 />
             </section>
-
 
             {/* SECTION: Where Our Authors Publish */}
             <section className="max-w-6xl mx-auto space-y-6">

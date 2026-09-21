@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import HeroBanner from "@/components/common/HeroBanner";
 import CommonExpertiseCards from "@/components/common/CommonExpertiseCards";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function GlycobiologyPage() {
     const disciplines = [
@@ -77,7 +78,7 @@ export default function GlycobiologyPage() {
         {
             title: "Peer-Reviewing Services",
             desc: "Comprehensive review to refine and validate your research pre-submission.",
-            href: "/services/medical-data-collection",
+            href: "/services/publication-support/peer-review-pre-submission/",
             imageUrl: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: FileSearch,
         },
@@ -128,55 +129,57 @@ export default function GlycobiologyPage() {
                 headingAs="h1"
             />
             {/* SECTION 2: Hero Intro Content */}
-            <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <section className="pt-6 border-t border-slate-100">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="mb-5">
+                            <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+                                Comprehensive Research, Writing, and Publication Support in Glycobiology
+                            </h2>
+                        </div>
 
-                    {/* Left Text Content */}
-                    <div className="lg:col-span-7 space-y-4">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] leading-snug">
-                            Comprehensive Research, Writing, and Publication Support in Glycobiology
-                        </h2>
+                        <div className="flow-root">
+                            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                                <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0 mx-auto bg-[#a3c9bd]/30">
+                                    <Image
+                                        src="/images/subject-matter-experts/glycobiology/Comprehensive-Research-Writing-and-Publication-Support-in-Glycobiology.webp"
+                                        alt="Gynaecology research visualization"
+                                        fill
+                                        priority
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 320px, 380px"
+                                    />
+                                </div>
+                            </div>
 
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Glycobiology is a rapidly evolving interdisciplinary field that explores the structure, biosynthesis, and biological functions of carbohydrates (glycans) and glycoconjugates in living organisms. It lies at the intersection of biochemistry, molecular biology, immunology, and biotechnology, offering vital insights into cellular communication, disease mechanisms, and therapeutic development. As research in glycobiology continues to uncover the complex roles of glycans in health and disease, scientists face the dual challenge of advanced experimentation and effective scientific communication for global publication.
+                            <div className="space-y-5 text-slate-700">
+                                <div className="space-y-5">
+                                    <p className="text-base leading-relaxed">
+                                        Glycobiology is a rapidly evolving interdisciplinary field that explores the structure, biosynthesis, and biological functions of carbohydrates (glycans) and glycoconjugates in living organisms. It lies at the intersection of biochemistry, molecular biology, immunology, and biotechnology, offering vital insights into cellular communication, disease mechanisms, and therapeutic development. As research in glycobiology continues to uncover the complex roles of glycans in health and disease, scientists face the dual challenge of advanced experimentation and effective{" "}
+                                        <Link href="/services/scientific-communication/" className="text-blue-600 no-underline">
+                                            scientific communication
+                                        </Link>{" "}
+                                        for global publication.
+                                    </p>
 
+                                    <p className="text-base leading-relaxed">
+                                        As a rapidly advancing area, glycobiology research is uncovering novel roles of glycosylation in disease mechanisms such as cancer, diabetes, neurodegenerative disorders, and infectious diseases. Understanding glycan structures and their biosynthetic pathways offers researchers the potential to develop new diagnostics, biomarkers, and glycan-based therapeutics.
+                                    </p>
 
-                        </p>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            As a rapidly advancing area, glycobiology research is uncovering novel roles of glycosylation in disease mechanisms such as cancer, diabetes, neurodegenerative disorders, and infectious diseases. Understanding glycan structures and their biosynthetic pathways offers researchers the potential to develop new diagnostics, biomarkers, and glycan-based therapeutics.
-                        </p>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            At Pubrica, we understand the intricacies of glycobiology research, from glycan structure elucidation to functional genomics and glycoengineering. Our comprehensive support services empower researchers, clinicians, and academicians to conduct high-quality studies and publish in top-tier journals with clarity, precision, and impact.
-                        </p>
+                                    <p className="text-base leading-relaxed">
+                                        At Pubrica, we understand the intricacies of glycobiology research, from glycan structure elucidation to functional genomics and glycoengineering. Our comprehensive support services empower researchers, clinicians, and academicians to conduct high-quality studies and publish in top-tier journals with clarity, precision, and impact.
+                                    </p>
 
-                        {/* CTA Button */}
-                        <div className="pt-4">
-                            <Link
-                                href="/order-now"
-                                className="inline-block bg-[#C4161C] hover:bg-[#a31217] text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
-                            >
-                                Get a Free Quote
-                            </Link>
+                                    {/* CTA Button */}
+                                    <div className="pt-2">
+                                        <GetFreeQuoteButton />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    {/* Right Circular Image */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
-                            <Image
-                                src="/images/subject-matter-experts/glycobiology/Comprehensive-Research-Writing-and-Publication-Support-in-Glycobiology.webp"
-                                alt="Gynaecology research visualization"
-                                fill
-                                priority
-                                className="object-cover"
-                                sizes="(max-width: 768px) 320px, 380px"
-                            />
-                        </div>
-                    </div>
-
                 </div>
             </section>
-
             {/* SECTION 3: Core Disciplines Grid */}
             <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
                 <div className="max-w-6xl mx-auto">
@@ -197,14 +200,32 @@ export default function GlycobiologyPage() {
 
             {/* SECTION 4: Expertise Grid */}
             <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+                {/* Header Title with Right Decorative Line */}
+                <div className="flex items-center gap-4 mb-4">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0F3836] whitespace-nowrap">
+                        Our Expertise in Glycobiology Research and Publication
+                    </h2>
+                    {/* <div className="h-[2px] w-full bg-[#0F3836]"></div> */}
+                </div>
 
+                {/* Description with Internal Link */}
+                <p className="text-gray-700 text-base leading-relaxed mb-8">
+                    Pubrica provides end-to-end research, writing, and{' '}
+                    <Link
+                        href="/services/publication-support/"
+                        className="text-blue-600 no-underline"
+                    >
+                        publication support
+                    </Link>{' '}
+                    for glycobiology scholars and industry professionals. Our team comprises domain experts with advanced degrees in molecular biology, biochemistry, and biotechnology, possessing in-depth knowledge of glycosylation pathways and analytical methods. Our services include:
+                </p>
 
+                {/* Cards Component with Empty Title & Description */}
                 <CommonExpertiseCards
-                    title="Our Expertise in Glycobiology Research and Publication"
-                    description="Pubrica provides end-to-end research, writing, and publication support for glycobiology scholars and industry professionals. Our team comprises domain experts with advanced degrees in molecular biology, biochemistry, and biotechnology, possessing in-depth knowledge of glycosylation pathways and analytical methods. Our services include:"
+                    title=""
+                    description=""
                     cards={expertiseCards}
                 />
-
             </section>
 
         </main>

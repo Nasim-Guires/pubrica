@@ -200,6 +200,9 @@ export default function ForensicsSection() {
                     footerText=""
                 />
             </section>
+            <p className="text-[#212529] text-base leading-[1.6] font-normal my-6 pl-12 md:pl-24">
+                AI, DNA advancements, and digital forensics are revolutionizing forensics. 3D imaging, drones, and better toxicology tests aid investigations, while forensic psychology and environmental forensics continue to grow.
+            </p>
 
             {/* SECTION: Applications of Forensic */}
             <section className="max-w-6xl mx-auto space-y-6">

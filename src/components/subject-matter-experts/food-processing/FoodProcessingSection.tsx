@@ -102,7 +102,7 @@ const publication: AuthorPublicationData = {
     paperTitle:
         "Optimisation of Cassava Starch-Based Biodegradable Films with Garcinia kola Oil and Cocos nucifera L. Microfibers Using Response Surface Methodology.",
     author:
-        "Yao Désiré Adjouman, Amenan Aline Doh, Charlemagne Nindjin, Dekker Matthis, Kouamé Alfred Kahi, Fabrice Achille Tetchi, N&apos;Guessan Georges Amani",
+        "Yao Désiré Adjouman, Amenan Aline Doh, Charlemagne Nindjin, Dekker Matthis, Kouamé Alfred Kahi, Fabrice Achille Tetchi, N'Guessan Georges Amani",
     publisher: "Wiley",
     journalName: "Journal of Food Processing and Preservation",
     impactFactor: "2.5",
@@ -150,12 +150,17 @@ const editorsData: ExpertEditorItem[] = [
             "/images/subject-matter-experts/biomedical-imaging/Dr.-Miguel-Torres.webp",
     },
 ];
+
 export default function FoodProcessingSection() {
-    const [openTrustIndex, setOpenTrustIndex] = useState<number | null>(null);
+    const [openTrustIndices, setOpenTrustIndices] = useState<number[]>([]);
     const [activeTrendTab, setActiveTrendTab] = useState(0);
 
     const toggleTrustItem = (index: number) => {
-        setOpenTrustIndex(openTrustIndex === index ? null : index);
+        setOpenTrustIndices((prev) =>
+            prev.includes(index)
+                ? prev.filter((i) => i !== index)
+                : [...prev, index]
+        );
     };
 
     return (
@@ -177,28 +182,28 @@ export default function FoodProcessingSection() {
                 {/* Added items-start here */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
                     {trustItemsData.map((item, index) => {
-                        const isOpen = openTrustIndex === index;
+                        const isOpen = openTrustIndices.includes(index);
 
                         return (
                             <div
                                 key={index}
-                                className="bg-[#0e3b32] text-white rounded-md border border-[#0e3b32] shadow-sm self-start"
+                                className="rounded-md border border-[#0e3b32] shadow-sm self-start overflow-hidden"
                             >
                                 <button
                                     onClick={() => toggleTrustItem(index)}
-                                    className="w-full px-6 py-4 flex items-center justify-between text-left font-semibold text-base sm:text-lg hover:bg-[#124b3f] transition-colors"
+                                    className="w-full px-6 py-4 flex items-center justify-between text-left font-semibold text-base sm:text-lg bg-[#0e3b32] text-white hover:bg-[#124b3f] transition-colors"
                                 >
                                     <span>{item.title}</span>
 
                                     {isOpen ? (
-                                        <Minus className="w-5 h-5 shrink-0" />
+                                        <Minus className="w-5 h-5 shrink-0 text-white" />
                                     ) : (
-                                        <Plus className="w-5 h-5 shrink-0" />
+                                        <Plus className="w-5 h-5 shrink-0 text-white" />
                                     )}
                                 </button>
 
                                 {isOpen && item.description && (
-                                    <div className="px-6 pb-4 pt-2 border-t border-[#1a5548] text-gray-200 text-sm sm:text-base leading-relaxed">
+                                    <div className="px-6 pb-4 pt-4 bg-white border-t border-[#0e3b32] text-gray-800 text-sm sm:text-base leading-relaxed">
                                         {item.description}
                                     </div>
                                 )}
@@ -217,6 +222,9 @@ export default function FoodProcessingSection() {
                     footerText=""
                 />
             </section>
+            <p className="text-gray-700 text-base sm:text-lg max-w-full leading-relaxed mt-2 mb-4 text-left pl-4 sm:pl-8 md:pl-12 lg:pl-16">
+                In the field of food processing, there have also been advancements in technology, and therefore, it is important to implement new approaches to improve Sustainability, Efficiency, and Innovation.
+            </p>
 
             {/* SECTION: Applications of Food Processing */}
             <section className="max-w-6xl mx-auto space-y-6">
@@ -230,7 +238,7 @@ export default function FoodProcessingSection() {
             </section>
 
             {/* SECTION: Areas of Study */}
-            <section className="max-w-6xl mx-auto space-y-8 bg-[#0e3b32] text-white p-8 sm:p-12 rounded-xl">
+            {/* <section className="max-w-6xl mx-auto space-y-8 bg-[#0e3b32] text-white p-8 sm:p-12 rounded-xl">
                 <div className="text-center space-y-3">
                     <h2 className="text-3xl sm:text-4xl font-bold text-white">
                         Areas of Study
@@ -249,7 +257,8 @@ export default function FoodProcessingSection() {
                         </div>
                     ))}
                 </div>
-            </section>
+            </section> */}
+
 
             {/* SECTION: Where Our Authors Publish */}
             <section className="max-w-6xl mx-auto space-y-6">
