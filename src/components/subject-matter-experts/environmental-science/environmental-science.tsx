@@ -205,14 +205,15 @@ export default function EnvironmentalSciencePage() {
             </section>
 
             {/* SECTION 3: Core Disciplines Grid */}
-            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100 font-['Poppins',sans-serif]">
                 <div className="max-w-6xl mx-auto">
 
-                    <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-4">
+                    {/* Centered Section Header */}
+                    <div className="text-center max-w-5xl mx-auto mb-10 space-y-2">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
                             Our Core Disciplines in Environmental Science
                         </h2>
-                        <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                        <p className="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-full">
                             Pubrica offers a wealth of experience in Environmental Sciences in various areas that seek to understand and tackle the huge environmental challenges that our planet is currently facing. Since there are many facets of environmental science, Pubrica offers a diversity of experience with the ability to provide "cutting-edge," innovative environmental solutions towards Sustainable Development (SD), Conservation & Environmental Protection (C&EP). Examples of key Environmental Science Disciplines include.
                         </p>
                     </div>

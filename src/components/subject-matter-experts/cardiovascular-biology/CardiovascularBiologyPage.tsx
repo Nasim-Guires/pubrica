@@ -257,48 +257,45 @@ export default function CardiovascularBiologyPage() {
             </section>
 
             {/* SECTION 4: Expertise Grid */}
-            <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 font-['Poppins',sans-serif]">
+                <div className="max-w-6xl mx-auto">
 
-                <div className="text-left max-w-4xl mb-12 font-['Poppins',sans-serif]">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-3">
-                        Our Expertise in Cardiovascular Biology Research and Publication
-                    </h2>
-                    <p className="text-gray-600 text-xs sm:text-sm">
-                        At Pubrica, our cardiovascular biology specialists hold advanced degrees (PhD, MD, or MSc) with expertise in cardiovascular physiology, pathology, and molecular medicine. They possess extensive publication experience in reputed journals like{" "}
-                        <a
-                            href="https://www.ahajournals.org/journal/res"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-600 "
-                        >
-                            Circulation Research
-                        </a>,{" "}
-                        <a
-                            href="https://www.jacc.org/journal/jacc"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-600 "
-                        >
-                            Journal of the American College of Cardiology
-                        </a>, and{" "}
-                        <a
-                            href="https://academic.oup.com/cardiovascres"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-600 "
-                        >
-                            Cardiovascular Research
-                        </a>. Our Core research and publication services include:
-                    </p>
+                    {/* Cards Grid with title & description passed directly */}
+                    <CommonExpertiseCards
+                        title="Our Expertise in Cardiovascular Biology Research and Publication"
+                        description={
+                            <>
+                                At Pubrica, our cardiovascular biology specialists hold advanced degrees (PhD, MD, or MSc) with expertise in cardiovascular physiology, pathology, and molecular medicine. They possess extensive publication experience in reputed journals like{" "}
+                                <a
+                                    href="https://www.ahajournals.org/journal/res"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:underline"
+                                >
+                                    Circulation Research
+                                </a>,{" "}
+                                <a
+                                    href="https://www.jacc.org/journal/jacc"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:underline"
+                                >
+                                    Journal of the American College of Cardiology
+                                </a>, and{" "}
+                                <a
+                                    href="https://academic.oup.com/cardiovascres"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:underline"
+                                >
+                                    Cardiovascular Research
+                                </a>. Our Core research and publication services include:
+                            </>
+                        }
+                        cards={expertiseCards}
+                    />
+
                 </div>
-
-                {/* Cards Grid */}
-                <CommonExpertiseCards
-                    title=""
-                    description=""
-                    cards={expertiseCards}
-                />
-
             </section>
         </main>
     );

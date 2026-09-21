@@ -261,25 +261,24 @@ export default function EnzymesPage() {
                 </div>
             </section>
             {/* SECTION 3: Core Disciplines Grid */}
-            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100 font-['Poppins',sans-serif]">
                 <div className="max-w-6xl mx-auto">
 
-                    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                        <div className="max-w-4xl mx-auto text-left sm:text-center mb-2">
-                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0e3b32] mb-4">
-                                Our Core Disciplines In Enzymes
-                            </h2>
-                            <p className="text-gray-600 text-sm sm:text-base leading-relaxed sm:leading-normal text-left sm:text-center">
-                                Pubrica is dedicated to the advancement of enzyme research through a combination of expert manuscript writing, scientific editing, and{" "}
-                                <Link
-                                    href="/academy/publication-support/challenges-in-research-paper-writing-and-strategies-to-overcome-them/"
-                                    className="text-blue-600 no-underline hover:text-blue-800 transition-colors inline"
-                                >
-                                    publication support
-                                </Link>
-                                . We assist researchers in clearly communicating their findings to maximise the chances of successful publication, and thereby, get a better chance of having their enzyme-related discoveries seen around the world by adding clarity and coherence. In addition to preparing and submitting manuscripts, we provide an all-in-one solution for all your enzyme-related publication needs. Trust us to maximise the potential impact of your enzyme research and to facilitate the advancement of this important area of science.
-                            </p>
-                        </div>
+                    {/* Centered Section Header */}
+                    <div className="text-center max-w-5xl mx-auto mb-10 space-y-2">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
+                            Our Core Disciplines In Enzymes
+                        </h2>
+                        <p className="text-gray-600 text-sm leading-relaxed max-w-full">
+                            Pubrica is dedicated to the advancement of enzyme research through a combination of expert manuscript writing, scientific editing, and{" "}
+                            <Link
+                                href="/academy/publication-support/challenges-in-research-paper-writing-and-strategies-to-overcome-them/"
+                                className="text-blue-600 no-underline hover:underline transition-colors inline"
+                            >
+                                publication support
+                            </Link>
+                            . We assist researchers in clearly communicating their findings to maximise the chances of successful publication, and thereby, get a better chance of having their enzyme-related discoveries seen around the world by adding clarity and coherence. In addition to preparing and submitting manuscripts, we provide an all-in-one solution for all your enzyme-related publication needs. Trust us to maximise the potential impact of your enzyme research and to facilitate the advancement of this important area of science.
+                        </p>
                     </div>
 
                     <SmeCoreAreasGrid items={disciplines} />
