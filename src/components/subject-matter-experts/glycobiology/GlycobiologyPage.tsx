@@ -199,33 +199,28 @@ export default function GlycobiologyPage() {
             </section>
 
             {/* SECTION 4: Expertise Grid */}
-            <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-                {/* Header Title with Right Decorative Line */}
-                <div className="flex items-center gap-4 mb-4">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0F3836] whitespace-nowrap">
-                        Our Expertise in Glycobiology Research and Publication
-                    </h2>
-                    {/* <div className="h-[2px] w-full bg-[#0F3836]"></div> */}
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 font-['Poppins',sans-serif]">
+                <div className="max-w-6xl mx-auto">
+
+                    {/* Cards Grid with title & description passed directly */}
+                    <CommonExpertiseCards
+                        title="Our Expertise in Glycobiology Research and Publication"
+                        description={
+                            <>
+                                Pubrica provides end-to-end research, writing, and{' '}
+                                <Link
+                                    href="/services/publication-support/"
+                                    className="text-blue-600 no-underline"
+                                >
+                                    publication support
+                                </Link>{' '}
+                                for glycobiology scholars and industry professionals. Our team comprises domain experts with advanced degrees in molecular biology, biochemistry, and biotechnology, possessing in-depth knowledge of glycosylation pathways and analytical methods. Our services include:
+                            </>
+                        }
+                        cards={expertiseCards}
+                    />
+
                 </div>
-
-                {/* Description with Internal Link */}
-                <p className="text-gray-700 text-base leading-relaxed mb-8">
-                    Pubrica provides end-to-end research, writing, and{' '}
-                    <Link
-                        href="/services/publication-support/"
-                        className="text-blue-600 no-underline"
-                    >
-                        publication support
-                    </Link>{' '}
-                    for glycobiology scholars and industry professionals. Our team comprises domain experts with advanced degrees in molecular biology, biochemistry, and biotechnology, possessing in-depth knowledge of glycosylation pathways and analytical methods. Our services include:
-                </p>
-
-                {/* Cards Component with Empty Title & Description */}
-                <CommonExpertiseCards
-                    title=""
-                    description=""
-                    cards={expertiseCards}
-                />
             </section>
 
         </main>

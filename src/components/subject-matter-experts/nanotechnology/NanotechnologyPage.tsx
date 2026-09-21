@@ -207,23 +207,21 @@ export default function NanotechnologyPage() {
             </section>
 
             {/* SECTION 4: Expertise Grid */}
-            <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 font-['Poppins',sans-serif]">
+                <div className="max-w-6xl mx-auto">
 
-                <div className="text-left w-full mb-12">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-3">
-                        Why Choose Pubrica for Nanotechnology Research and Publishing?
-                    </h2>
-                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                        Pubrica provides subject matter guidance, accurate <Link href="/services/editing-and-translation/manuscript-editing/" className="text-blue-600">editing services</Link> and provide comprehensive publishing solutions for researchers within the field of Nanotechnology to help achieve top quality published materials with broad impact around the globe:
-                    </p>
+                    {/* Cards Grid with title & description passed directly */}
+                    <CommonExpertiseCards
+                        title="Why Choose Pubrica for Nanotechnology Research and Publishing?"
+                        description={
+                            <>
+                                Pubrica provides subject matter guidance, accurate <Link href="/services/editing-and-translation/manuscript-editing/" className="text-blue-600 hover:underline">editing services</Link> and provide comprehensive publishing solutions for researchers within the field of Nanotechnology to help achieve top quality published materials with broad impact around the globe:
+                            </>
+                        }
+                        cards={expertiseCards}
+                    />
+
                 </div>
-
-                {/* Cards Grid */}
-                <CommonExpertiseCards
-                    title=""
-                    description=""
-                    cards={expertiseCards}
-                />
             </section>
         </main>
     );

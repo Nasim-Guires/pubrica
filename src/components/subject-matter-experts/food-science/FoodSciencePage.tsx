@@ -197,33 +197,28 @@ export default function FoodSciencePage() {
             </section>
 
             {/* SECTION 4: Expertise Grid */}
-            <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-                {/* Header Title with Right Decorative Line */}
-                <div className="flex items-center gap-4 mb-4">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0F3836] whitespace-nowrap">
-                        Our Expertise in Food Science Research and Publication
-                    </h2>
-                    <div className="h-[2px] w-full bg-[#0F3836]"></div>
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 font-['Poppins',sans-serif]">
+                <div className="max-w-6xl mx-auto">
+
+                    {/* Cards Grid with title & description passed directly */}
+                    <CommonExpertiseCards
+                        title="Our Expertise in Food Science Research and Publication"
+                        description={
+                            <>
+                                Pubrica has extensive experience in supporting food science research, offering end-to-end services tailored for academicians, researchers, and industry professionals. Our services are designed to enhance the quality, clarity, and impact of research manuscripts, making them suitable for publication in high-impact journals through our comprehensive{' '}
+                                <Link
+                                    href="m/services/publication-support/"
+                                    className="text-blue-600 hover:underline"
+                                >
+                                    food science publication assistance
+                                </Link>
+                                .
+                            </>
+                        }
+                        cards={expertiseCards}
+                    />
+
                 </div>
-
-                {/* Description with Internal Link */}
-                <p className="text-gray-700 text-base leading-relaxed mb-8">
-                    Pubrica has extensive experience in supporting food science research, offering end-to-end services tailored for academicians, researchers, and industry professionals. Our services are designed to enhance the quality, clarity, and impact of research manuscripts, making them suitable for publication in high-impact journals through our comprehensive{' '}
-                    <Link
-                        href="m/services/publication-support/"
-                        className="text-blue-600"
-                    >
-                        food science publication assistance
-                    </Link>
-                    .
-                </p>
-
-                {/* Cards Component with Empty Title & Description */}
-                <CommonExpertiseCards
-                    title=""
-                    description=""
-                    cards={expertiseCards}
-                />
             </section>
 
         </main>

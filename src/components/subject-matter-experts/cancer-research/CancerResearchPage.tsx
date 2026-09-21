@@ -233,35 +233,33 @@ export default function CancerResearchPage() {
                     />
                 </div>
             </section>         {/* SECTION 4: Expertise Grid with Hover Slide Overlay (4 Cards per Row) */}
-            <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-                <div className="text-left max-w-4xl mb-12">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-3">
-                        Our Expertise in Cancer Research and Publication
-                    </h2>
+           <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 font-['Poppins',sans-serif]">
+    <div className="max-w-6xl mx-auto">
 
-                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                        Pubrica offers specialized research and publication tailored explicitly
-                        for cancer research. Our experts understand the complexities associated
-                        with cancer models, biomarkers,{" "}
-                        <Link
-                            href="/services/research-services/product-development/"
-                            className="text-blue-600 no-underline hover:no-underline"
-                        >
-                            drug discovery
-                        </Link>
-                        , clinical trial protocols, and statistical interpretations. We work
-                        closely with researchers to craft scientifically sound and
-                        publication-ready documents. Our services include:
-                    </p>
-                </div>
+        {/* Cards Grid with title & description passed directly */}
+        <CommonExpertiseCards
+            title="Our Expertise in Cancer Research and Publication"
+            description={
+                <>
+                    Pubrica offers specialized research and publication tailored explicitly
+                    for cancer research. Our experts understand the complexities associated
+                    with cancer models, biomarkers,{" "}
+                    <Link
+                        href="/services/research-services/product-development/"
+                        className="text-blue-600 no-underline "
+                    >
+                        drug discovery
+                    </Link>
+                    , clinical trial protocols, and statistical interpretations. We work
+                    closely with researchers to craft scientifically sound and
+                    publication-ready documents. Our services include:
+                </>
+            }
+            cards={expertiseCards}
+        />
 
-                {/* 4 Cards Per Row Grid */}
-                <CommonExpertiseCards
-                    title=""
-                    description=""
-                    cards={expertiseCards}
-                />
-            </section>
+    </div>
+</section>
         </main>
     );
 }

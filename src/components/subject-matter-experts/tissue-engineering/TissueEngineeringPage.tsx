@@ -264,27 +264,21 @@ export default function TissueEngineeringPage() {
             </section>
 
             {/* SECTION 4: Expertise Grid */}
-            <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 font-['Poppins',sans-serif]">
+                <div className="max-w-6xl mx-auto">
 
-                <div className="text-left max-w-4xl mb-12">
-                    <div className="flex items-center justify-start gap-4 mb-3">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] whitespace-nowrap">
-                            Our Expertise in Tissue Engineering Research and Publication
-                        </h2>
-                        <div className="hidden sm:block h-[2px] w-24 bg-[#0e3b32] shrink-0" />
-                    </div>
-                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                        At the forefront of <Link href="/services/research-services/literature-review-and-gap/" className="text-blue-600">tissue engineering research</Link>, our expertise lies in advancing innovative solutions that bridge the gap between scientific discovery and real-world application. We specialize in providing comprehensive research support, from conceptualization to publication, ensuring high-impact contributions to the field.
-                    </p>
+                    {/* Cards Grid with title & description passed directly */}
+                    <CommonExpertiseCards
+                        title="Our Expertise in Tissue Engineering Research and Publication"
+                        description={
+                            <>
+                                At the forefront of <Link href="/services/research-services/literature-review-and-gap/" className="text-blue-600">tissue engineering research</Link>, our expertise lies in advancing innovative solutions that bridge the gap between scientific discovery and real-world application. We specialize in providing comprehensive research support, from conceptualization to publication, ensuring high-impact contributions to the field.
+                            </>
+                        }
+                        cards={expertiseCards}
+                    />
+
                 </div>
-
-                {/* Cards Grid */}
-                <CommonExpertiseCards
-                    title=""
-                    description=""
-                    cards={expertiseCards}
-                />
-
             </section>
 
         </main>

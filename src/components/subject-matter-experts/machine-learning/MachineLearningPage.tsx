@@ -216,38 +216,35 @@ export default function MachineLearningPage() {
             </section>
 
             {/* SECTION 4: Expertise Grid */}
-            <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 font-['Poppins',sans-serif]">
+                <div className="max-w-6xl mx-auto">
 
-                <div className="text-left max-w-4xl mb-12">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-3">
-                        Our Expertise in Machine Learning Research and Publication
-                    </h2>
+                    {/* Cards Grid with title & description passed directly */}
+                    <CommonExpertiseCards
+                        title="Our Expertise in Machine Learning Research and Publication"
+                        description={
+                            <>
+                                Our Expertise in Machine Learning Research and Publication lies in providing comprehensive support for every stage of the research process. From algorithm development to{" "}
+                                <Link
+                                    href="/academy/manuscript-editing/from-research-to-final-draft-best-practices-in-manuscript-editing/"
+                                    className="text-blue-600 no-underline hover:underline"
+                                >
+                                    manuscript writing
+                                </Link>{" "}
+                                and{" "}
+                                <Link
+                                    href="/insights/sample-work/journal-submission-report-sample/"
+                                    className="text-blue-600 no-underline hover:underline"
+                                >
+                                    journal submission
+                                </Link>
+                                , our team of experts ensures that your machine learning research is not only scientifically rigorous but also tailored for successful publication in top-tier academic journals:
+                            </>
+                        }
+                        cards={expertiseCards}
+                    />
 
-                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                        Our Expertise in Machine Learning Research and Publication lies in providing comprehensive support for every stage of the research process. From algorithm development to{" "}
-                        <Link
-                            href="/academy/manuscript-editing/from-research-to-final-draft-best-practices-in-manuscript-editing/"
-                            className="text-blue-600 no-underline hover:no-underline"
-                        >
-                            manuscript writing
-                        </Link>{" "}
-                        and{" "}
-                        <Link
-                            href="/insights/sample-work/journal-submission-report-sample/"
-                            className="text-blue-600 no-underline hover:no-underline"
-                        >
-                            journal submission
-                        </Link>
-                        , our team of experts ensures that your machine learning research is not only scientifically rigorous but also tailored for successful publication in top-tier academic journals:
-                    </p>
                 </div>
-
-                {/* Cards Grid */}
-                <CommonExpertiseCards
-                    title=""
-                    description=""
-                    cards={expertiseCards}
-                />
             </section>
         </main>
     );

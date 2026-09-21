@@ -227,15 +227,14 @@ export default function MedicinalChemistryPage() {
             </section>
 
             {/* SECTION 3: Core Disciplines Grid */}
-            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100 font-['Poppins',sans-serif]">
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
                 <div className="max-w-6xl mx-auto">
 
-                    {/* Centered Section Header */}
-                    <div className="text-center max-w-5xl mx-auto mb-10 space-y-2">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
+                    <div className="text-center max-w-3xl mx-auto mb-12">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-4">
                             Our Core Disciplines In Medicinal Chemistry
                         </h2>
-                        <p className="text-gray-600 text-sm leading-relaxed max-w-full">
+                        <p className="text-gray-600 text-sm leading-relaxed">
                             Our medicinal chemistry division at Pubrica provides professional, comprehensive support at every step of the drug discovery process. The Medicinal Chemistry division works closely with researchers and product developers to create the highest-quality and most effective technical writing, editorial support, and analytical services for both medicinal chemistry research and high-impact publishing.
                         </p>
                     </div>

@@ -244,28 +244,21 @@ export default function RoboticsPage() {
             </section>
 
             {/* SECTION 4: Expertise Grid */}
-            <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 font-['Poppins',sans-serif]">
+                <div className="max-w-6xl mx-auto">
 
-                <div className="text-left max-w-4xl mb-12">
-                    <div className="flex items-center justify-start gap-4 mb-3">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] whitespace-nowrap">
-                            Our Expertise in Robotics Research and Publication
-                        </h2>
-                        <div className="hidden sm:block h-[2px] w-24 bg-[#0e3b32] shrink-0" />
-                    </div>
-                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                        The focus of our <Link href="/services/publication-support/journal-submission/" className="text-blue-600">robotics research and publication service</Link> is to provide top-quality, technically correct, publishable content for researchers. Our mission is to assist researchers in turning their convoluted research and creative concepts into concise and dynamic manuscripts that meet the rigorous global standards of publishing. By having an in-depth understanding of the topic at hand, we provide an accurate, clear, and improved visibility of the research at every phase of the writing process:
-                    </p>
+                    {/* Cards Grid with title & description passed directly */}
+                    <CommonExpertiseCards
+                        title="Our Expertise in Robotics Research and Publication"
+                        description={
+                            <>
+                                The focus of our <Link href="/services/publication-support/journal-submission/" className="text-blue-600">robotics research and publication service</Link> is to provide top-quality, technically correct, publishable content for researchers. Our mission is to assist researchers in turning their convoluted research and creative concepts into concise and dynamic manuscripts that meet the rigorous global standards of publishing. By having an in-depth understanding of the topic at hand, we provide an accurate, clear, and improved visibility of the research at every phase of the writing process:
+                            </>
+                        }
+                        cards={expertiseCards}
+                    />
+
                 </div>
-
-                {/* Cards Grid */}
-
-                <CommonExpertiseCards
-                    title=""
-                    description=""
-                    cards={expertiseCards}
-                />
-
             </section>
 
         </main>
