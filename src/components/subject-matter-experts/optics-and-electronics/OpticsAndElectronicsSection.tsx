@@ -27,7 +27,7 @@ const emergingTrendsData: EmergingTrendItem[] = [
         description: (
             <>
                 <Link
-                    href="/services/data-analytics-machine-learning/artificial-intelligence/"
+                    href="/services/ai-ml-support/"
                     className="text-blue-600"
                 >
                     Artificial Intelligence

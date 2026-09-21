@@ -93,7 +93,7 @@ export default function GlycobiologyPage() {
             title: "Literature Review and Systematic Reviews",
             desc: "Identifying research gaps and providing comprehensive literature reviews.",
             href: "/services/research-services/literature-review-and-gap",
-            imageUrl: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
+            imageUrl: "/images/Artwork-Editing.png",
             icon: Cpu,
         },
         {

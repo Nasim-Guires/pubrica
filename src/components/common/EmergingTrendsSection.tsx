@@ -5,6 +5,7 @@ import { ReactNode, useState } from "react";
 export type EmergingTrendItem = {
   id: string | number;
   title: string;
+  cardTitle?: string;
   description: ReactNode;
 };
 
@@ -21,11 +22,21 @@ export default function EmergingTrendsSection({
   trends,
   footerText,
 }: EmergingTrendsSectionProps) {
-  const [activeTrend, setActiveTrend] = useState<EmergingTrendItem>(
-    trends[0]
+  const [activeTrendId, setActiveTrendId] = useState<string | number>(
+    trends[0]?.id
   );
 
   if (!trends?.length) return null;
+
+  // Find active trend object dynamically on each render
+  const activeTrend =
+    trends.find((t) => t.id === activeTrendId) || trends[0];
+
+  // Determine card heading logic strictly
+  const cardHeading =
+    activeTrend.cardTitle && activeTrend.cardTitle.trim() !== ""
+      ? activeTrend.cardTitle
+      : activeTrend.title;
 
   return (
     <div className="space-y-4 max-w-5xl mx-auto font-['Poppins',sans-serif]">
@@ -52,11 +63,12 @@ export default function EmergingTrendsSection({
             return (
               <button
                 key={trend.id}
-                onClick={() => setActiveTrend(trend)}
-                className={`py-4 px-3 text-center text-xs md:text-sm font-semibold transition-all border-l border-gray-300 flex items-center justify-center min-h-[70px] ${isActive
-                  ? "bg-[#113835] text-white"
-                  : "bg-[#eeeeee] text-[#111111] hover:bg-gray-200"
-                  }`}
+                onClick={() => setActiveTrendId(trend.id)}
+                className={`py-4 px-3 text-center text-xs md:text-sm font-semibold transition-all border-l border-gray-300 flex items-center justify-center min-h-[70px] ${
+                  isActive
+                    ? "bg-[#113835] text-white"
+                    : "bg-[#eeeeee] text-[#111111] hover:bg-gray-200"
+                }`}
               >
                 {trend.title}
               </button>
@@ -67,8 +79,9 @@ export default function EmergingTrendsSection({
         {/* Active Trend Box */}
         {activeTrend && (
           <div className="mt-6 bg-white p-6 border border-gray-200">
+            {/* Shows cardTitle if provided & non-empty; defaults to tab title otherwise */}
             <h3 className="text-base md:text-lg font-bold text-[#113835]">
-              {activeTrend.title}
+              {cardHeading}
             </h3>
 
             <div className="text-sm text-gray-600 font-normal mt-2 leading-relaxed">

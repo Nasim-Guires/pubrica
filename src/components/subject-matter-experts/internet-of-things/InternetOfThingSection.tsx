@@ -38,12 +38,14 @@ const emergingTrendsData = [
     {
         id: "enhanced-security",
         title: "Enhanced Security and Privacy Solutions",
+        cardTitle: "Development of Peptide Biosimilars",
         description:
             "Due to the expiration of patents, the number of companies developing biosimilars for peptides is growing rapidly. These biosimilars provide similar therapeutic benefits to those produced under the patent, but at significantly lower costs.",
     },
     {
         id: "digital-twins",
         title: "Digital Twins",
+        cardTitle: "Personalized Medicine",
         description:
             "Methods for creating peptide therapeutics is quickly gaining popularity in personalized medicine. Scientists take the genetic profile of a patient, and from this they create peptides specifically designed for that patient. This process substantially increases the accuracy and success of the treatment",
     },
@@ -52,6 +54,7 @@ const emergingTrendsData = [
         title: "Energy-Efficient and Sustainable IoT",
         description:
             "can produce new, engineered peptides that have improved stability, specificity and activity. Engineered peptides can be used as either therapeutic agents or to aid in diagnosis, as they represent an entirely new direction for applications of Peptides outside of their traditionally known uses.",
+        cardTitle: "Synthetic Biology scientists"
     },
 ];
 

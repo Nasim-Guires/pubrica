@@ -22,6 +22,7 @@ import {
 import HeroBanner from "@/components/common/HeroBanner";
 import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import CommonExpertiseCards from "@/components/common/CommonExpertiseCards";
+import EmergingTrendsSection from "@/components/common/EmergingTrendsSection";
 
 export default function NeurologyPage() {
     const disciplines = [
@@ -169,6 +170,45 @@ export default function NeurologyPage() {
         // },
     ];
 
+    const commonNeurologicalConditionsData = [
+        {
+            id: "stroke",
+            title: "Stroke",
+            description:
+                "A neurological emergency caused by interruption of the blood supply to the brain.",
+        },
+        {
+            id: "epilepsy",
+            title: "Epilepsy",
+            description:
+                "Repeated seizures due to abnormal electrical activity in the brain.",
+        },
+        {
+            id: "migraine-headache-disorders",
+            title: "Migraine & Headache Disorders",
+            description:
+                "Common neurological symptoms require specialized care.",
+        },
+        {
+            id: "multiple-sclerosis",
+            title: "Multiple Sclerosis",
+            description:
+                "An autoimmune condition affecting the protective covering of nerves.",
+        },
+        {
+            id: "parkinsons-disease",
+            title: "Parkinson’s Disease",
+            description:
+                "A neurodegenerative disorder affecting movement and coordination.",
+        },
+        {
+            id: "dementia",
+            title: "Dementia",
+            description:
+                "Progressive loss of cognitive abilities, including memory, communication, and reasoning.",
+        },
+    ];
+
     return (
         <main className="w-full bg-[#FAFAFA] font-sans antialiased text-gray-800">
 
@@ -265,6 +305,12 @@ export default function NeurologyPage() {
                 />
 
             </section>
+            <EmergingTrendsSection
+                title="Common Neurological Conditions"
+                description=""
+                trends={commonNeurologicalConditionsData}
+                footerText=""
+            />
 
         </main>
     );
