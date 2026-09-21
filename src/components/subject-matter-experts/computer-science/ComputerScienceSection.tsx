@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Briefcase, FileText, ChevronRight } from 'lucide-react';
 import WhereAuthorsPublish from "@/components/common/WhereAuthorsPublish";
 import ExpertEditorsSection, { ExpertEditorItem } from "@/components/common/ExpertEditorsSection";
+import ApplicationsSection from "@/components/common/ApplicationsSection";
 
 const emergingTrendsData = [
     {
@@ -35,25 +36,35 @@ const emergingTrendsData = [
 
 const applicationsData = [
     {
-        title: 'IT',
-        description: 'Developing software, creating systems and managing IT infrastructure.'
+        title: "",
+        desc: "IT: Developing software, creating systems and managing IT infrastructure.",
+        iconSrc:
+            "/images/subject-matter-experts/computer-science/IT.webp",
     },
     {
-        title: 'Health Care',
-        description: 'Using AI to diagnose a disease, use medical imaging, and analyse health-related datasets (such as blood sugar levels).'
+        title: "",
+        desc: "Health Care: Using AI to diagnose a disease, use medical imaging, and analyse health-related datasets (such as blood sugar levels).",
+        iconSrc:
+            "/images/subject-matter-experts/computer-science/Health-Care.webp",
     },
     {
-        title: 'Finance',
-        description: 'Using algorithms to trade on the stock market (algorithmic trading), detect fraud, and create financial projections.'
+        title: "",
+        desc: "Finance: Using algorithms to trade on the stock market (algorithmic trading), detect fraud, and create financial projections.",
+        iconSrc:
+            "/images/subject-matter-experts/computer-science/Finance.webp",
     },
     {
-        title: 'Education',
-        description: 'Developing e-learning platforms and using advanced technologies (intelligent tutoring).'
+        title: "",
+        desc: "Education: Developing e-learning platforms and using advanced technologies (intelligent tutoring).",
+        iconSrc:
+            "/images/subject-matter-experts/computer-science/Education.webp",
     },
     {
-        title: 'Research and Innovation',
-        description: 'Establishing new technologies (AI, robotics, and Data Science).'
-    }
+        title: "",
+        desc: "Research and Innovation: Establishing new technologies (AI, robotics, and Data Science).",
+        iconSrc:
+            "/images/subject-matter-experts/computer-science/Research-and-Innovation.webp",
+    },
 ];
 
 const areasOfStudy = [
@@ -170,77 +181,66 @@ export default function ComputerScienceSection() {
 
             {/* SECTION 2: Applications of Computer Science */}
             <section className="max-w-6xl mx-auto space-y-6">
-                <div className="space-y-3 text-left">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Applications of Computer Science
-                    </h2>
-                    <p className="text-gray-700 text-base sm:text-lg max-w-5xl leading-relaxed">
-                        Computer science has thousands of applications in three distinct fields:
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div className="space-y-6">
-                        {applicationsData.map((app, index) => (
-                            <div key={index} className="flex items-start space-x-3">
-                                <div className="mt-1 text-[#0e3b32]">
-                                    <ChevronRight className="w-5 h-5" />
-                                </div>
-                                <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                                    <strong className="text-gray-900 font-bold">{app.title}: </strong>
-                                    {app.description}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <Image
-                            src="/images/subject-matter-experts/computer-science/Applications-of-Computer-Science.webp"
-                            alt="Applications of Computer Science"
-                            fill
-                            sizes="(max-width: 768px) 100vw, 320px"
-                            className="object-cover"
-                        />
-                    </div>
-                </div>
+                <ApplicationsSection
+                    title="Applications of Computer Science"
+                    description="Computer science has thousands of applications in three distinct fields:"
+                    applications={applicationsData}
+                    imageSrc="/images/subject-matter-experts/computer-science/Applications-of-Computer-Science.webp"
+                    imageAlt="Applications of Computer Science"
+                />
             </section>
 
             {/* SECTION 3: Areas of Study */}
-            <section className="w-full bg-[#0e3b32] text-white py-6 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 items-center">
-                    <div className="lg:w-1/3 space-y-4">
-                        {/* <div className="relative">
-                            <img
-                                src="/images/subject-matter-experts/computer-science/Applications-of-Computer-Science.webp"
-                                alt="Areas of Study Monitor"
-                                className="w-full rounded-lg shadow-lg"
-                            />
-                        </div> */}
-                        {/* <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
-                            Pubrica's team of experts supports all areas of computer science research:
-                        </p> */}
+            <section className="w-full grid grid-cols-1 lg:grid-cols-12 min-h-[420px] rounded-none overflow-hidden">
+                {/* Left Side: Image with Dark Overlay */}
+                <div className="lg:col-span-5 relative min-h-[300px] flex items-center p-8 sm:p-12 !rounded-none overflow-hidden">
+                    <Image
+                        src="/images/Areas-of-Study-1.webp"
+                        alt="Areas of Study Monitor"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 41vw"
+                        className="object-cover !rounded-none"
+                        style={{ clipPath: "none", borderRadius: "0px" }}
+                        priority
+                    />
+
+                    {/* Dark Overlay */}
+                    <div
+                        className="absolute inset-0 bg-black/60 !rounded-none z-10"
+                        style={{ clipPath: "none", borderRadius: "0px" }}
+                    ></div>
+
+                    {/* Text Overlay */}
+                    <p className="relative z-20 text-sm sm:text-base text-gray-200 leading-relaxed max-w-md">
+                        Pubrica&apos;s team of experts supports all areas of computer science research:
+                    </p>
+                </div>
+
+                {/* Right Side: Dark Green Background with Header & Grid */}
+                <div className="lg:col-span-7 bg-[#052b28] p-8 sm:p-12 flex flex-col justify-center space-y-6">
+                    {/* Section Header */}
+                    <div className="space-y-2">
+                        <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+                            Areas of Study
+                        </h2>
+
+                        <div className="w-16 h-1 bg-white rounded-full"></div>
                     </div>
 
-                    <div className="lg:w-2/3 space-y-6">
-                        <div className="text-left space-y-2">
-                            <h2 className="text-3xl sm:text-4xl font-bold">
-                                Areas of Study
-                            </h2>
-                            <div className="w-16 h-1 bg-white rounded-full"></div>
-                        </div>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                            {areasOfStudy.map((area, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-white text-gray-800 rounded-md px-4 py-3 flex items-center space-x-2 text-sm font-semibold shadow-sm"
-                                >
-                                    <ChevronRight className="w-4 h-4 text-[#0e3b32] shrink-0" />
-                                    <span>{area}</span>
+                    {/* Tag Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                        {areasOfStudy.map((area, index) => (
+                            <div
+                                key={index}
+                                className="bg-white text-black px-3 py-2.5 rounded-sm shadow-sm flex items-center space-x-2 text-xs font-semibold leading-snug"
+                            >
+                                <div className="w-4 h-4 rounded-full bg-[#052b28] flex items-center justify-center shrink-0">
+                                    <ChevronRight className="w-3 h-3 text-white stroke-[3]" />
                                 </div>
-                            ))}
-                        </div>
+
+                                <span>{area}</span>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

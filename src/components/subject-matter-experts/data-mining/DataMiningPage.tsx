@@ -26,7 +26,20 @@ export default function DataMiningPage() {
         {
             title: "Descriptive & Exploratory Data Mining",
             iconSrc: "/images/subject-matter-experts/data-mining/Descriptive-Exploratory-Data-Mining.webp",
-            description: "Focuses on summarising and analysing dataset contents to discover patterns, trends or relationships. Techniques such as data profiling, clustering and association rule mining are used along with data visualisation techniques to enable an informed decision-making process.",
+            description: (
+                <>
+                    Focuses on summarising and analysing dataset contents to discover patterns,
+                    trends or relationships. Techniques such as data profiling, clustering and
+                    association rule mining are used along with{" "}
+                    <Link
+                        href="/services/data-analytics-machine-learning/interpretation-reporting-and-visualisation/"
+                        className="text-blue-600"
+                    >
+                        data visualisation techniques
+                    </Link>{" "}
+                    to enable an informed decision-making process.
+                </>
+            ),
             icon: Search,
         },
         {
@@ -189,7 +202,7 @@ export default function DataMiningPage() {
                             Our Core Disciplines in Data Mining
                         </h2>
                         <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                            Data mining is the process of integrating sciences and technologies, including substantial parts of statistics, computer science, and machine learning with artificial intelligence. The combined knowledge of these areas results in a thorough understanding of the complexities associated with datasets through which data mining can produce actionable insights:
+                            Data mining is the process of integrating sciences and technologies, including substantial parts of statistics, computer science, and machine learning with <Link href="/services/ai-ml-support/" className="text-blue-600">artificial intelligence</Link>. The combined knowledge of these areas results in a thorough understanding of the complexities associated with datasets through which data mining can produce actionable insights:
                         </p>
                     </div>
 

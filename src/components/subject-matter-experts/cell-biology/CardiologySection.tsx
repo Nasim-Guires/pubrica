@@ -135,7 +135,7 @@ const publication: AuthorPublicationData = {
         "/images/subject-matter-experts/cell-biology/sample-works-6.webp",
     imageAlt: "Nature Cell Biology Journal Cover",
     paperTitle:
-        "Cholesterol sensing by the SCAP-FAM134B complex regulates ER-phagy and STING innate immunity",
+        "Cholesterol sensing by the SCAP–FAM134B complex regulates ER-phagy and STING innate immunity",
     author: "Li, B., Zhou, D., Wang, X. et al",
     publisher: "Nature Research",
     journalName: "Nature Cell Biology",

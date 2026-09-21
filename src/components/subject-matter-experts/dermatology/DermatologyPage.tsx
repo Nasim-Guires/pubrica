@@ -26,82 +26,82 @@ import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import CommonExpertiseCards from "@/components/common/CommonExpertiseCards";
 
 export default function DermatologyPage() {
-  const disciplines = [
-  {
-    title: "Clinical Dermatology",
-    iconSrc: "/images/subject-matter-experts/dermatology/Clinical-Dermatology.png",
-    description: (
-      <>
-        Focused on diagnosing and managing skin, hair, and nail disorders such as psoriasis, eczema, acne, and dermatitis. Pubrica assists with clinical study design, case report development, and{" "}
-        <Link href="/services/research-services/systematic-review/" className="text-blue-600 ">
-          systematic reviews
-        </Link>{" "}
-        to advance dermatologic care.
-      </>
-    ),
-    icon: Stethoscope,
-  },
-  {
-    title: "Cosmetic Dermatology",
-    iconSrc: "/images/subject-matter-experts/dermatology/Cosmetic-Dermatology.png",
-    description: "Encompassing aesthetic procedures including laser therapy, chemical peels, and anti-aging treatments. We support research manuscripts, white papers, and reviews that explore the safety, efficacy, and innovation of cosmetic interventions.",
-    icon: Sparkles,
-  },
-  {
-    title: "Surgical Dermatology",
-    iconSrc: "/images/subject-matter-experts/dermatology/490.png",
-    description: "Covering dermatologic surgeries such as excisions, Mohs micrographic surgery, and skin cancer management. Our team provides end-to-end writing and editing support for surgical case studies and clinical trials.",
-    icon: Scissors,
-  },
-  {
-    title: "Pediatric Dermatology",
-    iconSrc: "/images/subject-matter-experts/dermatology/Pediatric-Dermatology.png",
-    description: (
-      <>
-        Addressing skin diseases in infants and children, including genetic and infectious conditions. Pubrica aids in paediatric-focused research, protocol development, and{" "}
-        <Link href="/services/publication-support/journal-submission/" className="text-blue-600 ">
-          journal submissions
-        </Link>
-        .
-      </>
-    ),
-    icon: Baby,
-  },
-  {
-    title: "Dermatopathology",
-    iconSrc: "/images/subject-matter-experts/dermatology/Dermatopathology.png",
-    description: (
-      <>
-        Integrating dermatology and pathology for microscopic diagnosis of skin diseases. Our{" "}
-        <Link href="/subject-matter-experts/" className="text-blue-600 ">
-          subject-matter experts
-        </Link>{" "}
-        assist with manuscript preparation, image analysis, and histopathological data interpretation.
-      </>
-    ),
-    icon: Microscope,
-  },
-  {
-    title: "Immunodermatology",
-    iconSrc: "/images/subject-matter-experts/dermatology/Immunodermatology.png",
-    description: (
-      <>
-        Exploring autoimmune and inflammatory skin disorders such as lupus erythematosus, pemphigus, and dermatitis herpetiformis. Pubrica supports{" "}
-        <Link href="/services/physician-writing-services/original-research-articles/" className="text-blue-600 ">
-          original research
-        </Link>{" "}
-        and review articles in immunopathogenesis and novel therapies.
-      </>
-    ),
-    icon: ShieldAlert,
-  },
-  {
-    title: "Teledermatology & Digital Dermatology",
-    iconSrc: "/images/subject-matter-experts/dermatology/Teledermatology-Digital-Dermatology.png",
-    description: "Advancing the use of AI, imaging, and remote diagnostics in dermatology. We help authors publish cutting-edge work in digital dermatology innovations.",
-    icon: Smartphone,
-  },
-];
+    const disciplines = [
+        {
+            title: "Clinical Dermatology",
+            iconSrc: "/images/subject-matter-experts/dermatology/Clinical-Dermatology.png",
+            description: (
+                <>
+                    Focused on diagnosing and managing skin, hair, and nail disorders such as psoriasis, eczema, acne, and dermatitis. Pubrica assists with clinical study design, case report development, and{" "}
+                    <Link href="/services/research-services/systematic-review/" className="text-blue-600 ">
+                        systematic reviews
+                    </Link>{" "}
+                    to advance dermatologic care.
+                </>
+            ),
+            icon: Stethoscope,
+        },
+        {
+            title: "Cosmetic Dermatology",
+            iconSrc: "/images/subject-matter-experts/dermatology/Cosmetic-Dermatology.png",
+            description: "Encompassing aesthetic procedures including laser therapy, chemical peels, and anti-aging treatments. We support research manuscripts, white papers, and reviews that explore the safety, efficacy, and innovation of cosmetic interventions.",
+            icon: Sparkles,
+        },
+        {
+            title: "Surgical Dermatology",
+            iconSrc: "/images/subject-matter-experts/dermatology/490.png",
+            description: "Covering dermatologic surgeries such as excisions, Mohs micrographic surgery, and skin cancer management. Our team provides end-to-end writing and editing support for surgical case studies and clinical trials.",
+            icon: Scissors,
+        },
+        {
+            title: "Pediatric Dermatology",
+            iconSrc: "/images/subject-matter-experts/dermatology/Pediatric-Dermatology.png",
+            description: (
+                <>
+                    Addressing skin diseases in infants and children, including genetic and infectious conditions. Pubrica aids in paediatric-focused research, protocol development, and{" "}
+                    <Link href="/services/publication-support/journal-submission/" className="text-blue-600 ">
+                        journal submissions
+                    </Link>
+                    .
+                </>
+            ),
+            icon: Baby,
+        },
+        {
+            title: "Dermatopathology",
+            iconSrc: "/images/subject-matter-experts/dermatology/Dermatopathology.png",
+            description: (
+                <>
+                    Integrating dermatology and pathology for microscopic diagnosis of skin diseases. Our{" "}
+                    <Link href="/subject-matter-experts/" className="text-blue-600 ">
+                        subject-matter experts
+                    </Link>{" "}
+                    assist with manuscript preparation, image analysis, and histopathological data interpretation.
+                </>
+            ),
+            icon: Microscope,
+        },
+        {
+            title: "Immunodermatology",
+            iconSrc: "/images/subject-matter-experts/dermatology/Immunodermatology.png",
+            description: (
+                <>
+                    Exploring autoimmune and inflammatory skin disorders such as lupus erythematosus, pemphigus, and dermatitis herpetiformis. Pubrica supports{" "}
+                    <Link href="/services/physician-writing-services/original-research-articles/" className="text-blue-600 ">
+                        original research
+                    </Link>{" "}
+                    and review articles in immunopathogenesis and novel therapies.
+                </>
+            ),
+            icon: ShieldAlert,
+        },
+        {
+            title: "Teledermatology & Digital Dermatology",
+            iconSrc: "/images/subject-matter-experts/dermatology/Teledermatology-Digital-Dermatology.png",
+            description: "Advancing the use of AI, imaging, and remote diagnostics in dermatology. We help authors publish cutting-edge work in digital dermatology innovations.",
+            icon: Smartphone,
+        },
+    ];
 
     const expertiseCards = [
         {
@@ -233,7 +233,7 @@ export default function DermatologyPage() {
                             Our Core Disciplines In Dermatology
                         </h2>
                         <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                            At Pubrica, we provide comprehensive research and publication support across the diverse disciplines of dermatology. Our expertise spans clinical, cosmetic, surgical, and investigative dermatology, helping researchers, clinicians, and academicians publish impactful work in high-impact journals. Our Core Areas Include:
+                            At Pubrica, we provide comprehensive research and <Link href="/services/publication-support/" className="text-blue-600">publication support</Link> across the diverse disciplines of dermatology. Our expertise spans clinical, cosmetic, surgical, and investigative dermatology, helping researchers, clinicians, and academicians publish impactful work in high-impact journals. Our Core Areas Include:
                         </p>
                     </div>
 

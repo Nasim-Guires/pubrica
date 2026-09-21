@@ -212,7 +212,7 @@ export default function DiabetologyPage() {
                             Our Core Disciplines In Diabetology
                         </h2>
                         <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                            At Pubrica, we specialize in providing comprehensive research, writing, and publication support across all core disciplines of Diabetology, the science that explores the mechanisms, management, and prevention of diabetes mellitus and its related metabolic disorders. Our multidisciplinary team of experts, including endocrinologists, clinical researchers, statisticians, and medical writers, collaborates to advance high-impact diabetes research and publications that shape global healthcare outcomes.
+                            At Pubrica, we specialize in providing comprehensive research, writing, and <Link href="/services/publication-support/" className="text-blue-600">publication support</Link> across all core disciplines of Diabetology, the science that explores the mechanisms, management, and prevention of diabetes mellitus and its related metabolic disorders. Our multidisciplinary team of experts, including endocrinologists, clinical researchers, statisticians, and medical writers, collaborates to advance high-impact diabetes research and publications that shape global healthcare outcomes.
                         </p>
                     </div>
 

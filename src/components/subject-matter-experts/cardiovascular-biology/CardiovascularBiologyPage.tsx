@@ -270,7 +270,7 @@ export default function CardiovascularBiologyPage() {
                                     href="https://www.ahajournals.org/journal/res"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-blue-600 hover:underline"
+                                    className="text-blue-600 "
                                 >
                                     Circulation Research
                                 </a>,{" "}
@@ -278,7 +278,7 @@ export default function CardiovascularBiologyPage() {
                                     href="https://www.jacc.org/journal/jacc"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-blue-600 hover:underline"
+                                    className="text-blue-600 "
                                 >
                                     Journal of the American College of Cardiology
                                 </a>, and{" "}
@@ -286,7 +286,7 @@ export default function CardiovascularBiologyPage() {
                                     href="https://academic.oup.com/cardiovascres"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-blue-600 hover:underline"
+                                    className="text-blue-600"
                                 >
                                     Cardiovascular Research
                                 </a>. Our Core research and publication services include:

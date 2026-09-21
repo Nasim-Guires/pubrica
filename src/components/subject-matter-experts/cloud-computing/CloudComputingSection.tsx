@@ -80,7 +80,7 @@ const whereAuthorsPublishData: AuthorPublicationData = {
     imageAlt: "Journal of Cloud Computing Cover",
     paperTitle:
         "Secure and personalized sports media recommendation via federated knowledge graph embedding in edge computing",
-    author: "Ya Zhang, Song Qing, Hossein Ghayaumi Zadeh",
+    author: "Ya Zhang, Song Qing, Hossein Ghayoumi Zadeh",
     publisher: "springer nature",
     journalName:
         "Journal of Cloud Computing: Advances, Systems and Applications",
