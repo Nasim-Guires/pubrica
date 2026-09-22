@@ -26,13 +26,10 @@ export default function CommonExpertiseCards({
     // Fixed Header: Title wraps naturally without overflowing screen width
     const renderHeader = () => (
         <div className="space-y-3">
-            {/* Title with flex line on right */}
-            <div className="flex items-center gap-4 w-full">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1e2e2b] text-left">
-                    {title}
-                </h2>
-                <div className="h-[2px] bg-[#1e2e2b] flex-1 min-w-[30px] hidden sm:block" />
-            </div>
+            {/* Title (Line removed, reduced size & font weight) */}
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#1e2e2b] text-left">
+                {title}
+            </h2>
 
             {/* Subheading / Description */}
             <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed text-left max-w-5xl">

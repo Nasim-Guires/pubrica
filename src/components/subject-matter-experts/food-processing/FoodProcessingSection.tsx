@@ -78,7 +78,7 @@ const applicationsData = [
     },
     {
         title: "",
-        desc: "Sustainable Practices to reduce energy use and food waste, while improving the performance of food processing systems.",
+        desc: "Sustainable Practices, to reduce energy use and food waste, while improving the performance of food processing systems.",
         iconSrc:
             "/images/subject-matter-experts/food-processing/Sustainable-Practices.webp",
     },
@@ -264,7 +264,7 @@ export default function FoodProcessingSection() {
             <section className="max-w-6xl mx-auto space-y-6">
                 <WhereAuthorsPublish
                     title="Where Our Authors Publish"
-                    description="Our authors share Pubrica&apos;s expert content across top-tier journals, conferences, and platforms, maximizing its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+                    description="Our authors share Pubrica’s expert content across top-tier journals, conferences, and platforms, maximising its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
                     publication={publication}
                 />
             </section>
@@ -273,7 +273,7 @@ export default function FoodProcessingSection() {
             <section className="max-w-6xl mx-auto space-y-8">
                 <ExpertEditorsSection
                     title="Our Expert Food Processing Editors"
-                    description="Pubrica's team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake."
+                    description="Pubrica’s team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialisation, they ensure excellence in every project they undertake."
                     editors={editorsData}
                 />
             </section>

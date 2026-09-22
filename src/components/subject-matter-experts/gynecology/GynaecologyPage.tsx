@@ -169,13 +169,13 @@ export default function GynaecologyPage() {
                                         The field of gynaecology research is rapidly evolving, driven by innovations in molecular biology, genetics, endocrinology, and imaging technologies. Key research areas include reproductive health, menstrual disorders, infertility, pelvic inflammatory disease, endometriosis, gynaecologic oncology, and minimally invasive surgical techniques.
                                     </p>
 
-                                    <p className="text-base leading-relaxed">
+                                    {/* <p className="text-base leading-relaxed">
                                         Gynaecology is a crucial branch of medical science that focuses on the health of the female reproductive system, encompassing a wide spectrum of physiological functions, disorders, and diseases. It deals with the diagnosis, treatment, and prevention of conditions affecting the uterus, fallopian tubes, ovaries, and breasts. In modern women’s health research, gynaecology integrates with obstetrics, reproductive endocrinology, oncology, and minimally invasive surgery to improve women’s health outcomes and quality of life.
-                                    </p>
+                                    </p> */}
 
-                                    <p className="text-base leading-relaxed">
+                                    {/* <p className="text-base leading-relaxed">
                                         The field of gynaecology research is rapidly evolving, driven by innovations in molecular biology, genetics, endocrinology, and imaging technologies. Key research areas include reproductive health, menstrual disorders, infertility, pelvic inflammatory disease, endometriosis, gynaecologic oncology, and minimally invasive surgical techniques.
-                                    </p>
+                                    </p> */}
 
                                     {/* CTA Button */}
                                     <div className="pt-2">
