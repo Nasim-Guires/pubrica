@@ -162,7 +162,7 @@ export default function NeurosciencePage() {
                                     </p>
 
                                     <p className="text-base leading-relaxed">
-                                        In recent years, neuroscience research has expanded due to technological innovations such as functional magnetic resonance imaging (fMRI), optogenetics, artificial intelligence (AI)-based modeling, and neuroinformatics. These tools have enabled deeper insights into neural pathways, brain plasticity, and neurodegenerative diseases such as Alzheimer&apos;s, Parkinson&apos;s, and multiple sclerosis.
+                                        In recent years, neuroscience research has expanded due to technological innovations such as functional magnetic resonance imaging (fMRI), optogenetics, <Link href="/services/ai-ml-support/" className="text-blue-600">artificial intelligence (AI)</Link>-based modeling, and neuroinformatics. These tools have enabled deeper insights into neural pathways, brain plasticity, and neurodegenerative diseases such as Alzheimer&apos;s, Parkinson&apos;s, and multiple sclerosis.
                                     </p>
 
                                     <p className="text-base leading-relaxed">

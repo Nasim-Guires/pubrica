@@ -158,7 +158,7 @@ export default function MedicalAnimationPage() {
                             <div className="space-y-5 text-slate-700">
                                 <div className="space-y-5">
                                     <p className="text-base leading-relaxed">
-                                        Medical Animation is a field that utilises three-dimensional visual representation of complex healthcare and medical concepts, procedures, and or treatments. At Pubrica, we provide support for health care professionals, researchers, educators and others who create and produce animated media for use in patient education, medical training and research presentation materials.
+                                        Medical Animation is a field that utilises three-dimensional visual representation of complex healthcare and medical concepts, procedures, and or treatments. At Pubrica, we provide support for health care professionals, researchers, educators and others who create and produce animated media for use in <Link className="text-blue-600" href="/services/patient-education-content/"> patient education</Link>, medical training and research presentation materials.
                                     </p>
 
                                     <p className="text-base leading-relaxed">
@@ -198,7 +198,7 @@ export default function MedicalAnimationPage() {
                                     </div>
 
                                     {/* CTA Button */}
-                                    <div className="pt-2">
+                                    <div className="pt-2 mb-2">
                                         <GetFreeQuoteButton />
                                     </div>
                                 </div>
@@ -233,11 +233,11 @@ export default function MedicalAnimationPage() {
                 />
 
                 <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed text-left max-w-5xl mt-2">
-                Whether you are a researcher, student, or professional, Pubrica bridges the gap between research findings and practical applications, supporting your journey in Medical Animation.
-            </p>
+                    Whether you are a researcher, student, or professional, Pubrica bridges the gap between research findings and practical applications, supporting your journey in Medical Animation.
+                </p>
 
             </section>
-          
+
         </main>
     );
 }

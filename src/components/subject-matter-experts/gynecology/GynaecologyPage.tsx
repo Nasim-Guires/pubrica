@@ -162,7 +162,7 @@ export default function GynaecologyPage() {
                             <div className="space-y-5 text-slate-700">
                                 <div className="space-y-5">
                                     <p className="text-base leading-relaxed">
-                                        Gynaecology is a crucial branch of medical science that focuses on the health of the female reproductive system, encompassing a wide spectrum of physiological functions, disorders, and diseases. It deals with the diagnosis, treatment, and prevention of conditions affecting the uterus, fallopian tubes, ovaries, and breasts. In modern women's health research, gynaecology integrates with obstetrics, reproductive endocrinology, oncology, and minimally invasive surgery to improve women's health outcomes and quality of life.
+                                        Gynaecology is a crucial branch of <Link href="/subject-matter-experts/medical-imaging-techniques/" className="text-blue-600">medical science</Link> that focuses on the health of the female reproductive system, encompassing a wide spectrum of physiological functions, disorders, and diseases. It deals with the diagnosis, treatment, and prevention of conditions affecting the uterus, fallopian tubes, ovaries, and breasts. In modern women's health research, gynaecology integrates with obstetrics, reproductive endocrinology, oncology, and minimally invasive surgery to improve women's health outcomes and quality of life.
                                     </p>
 
                                     <p className="text-base leading-relaxed">
@@ -178,7 +178,7 @@ export default function GynaecologyPage() {
                                     </p> */}
 
                                     {/* CTA Button */}
-                                    <div className="pt-2">
+                                    <div className="pt-2 mb-2">
                                         <GetFreeQuoteButton />
                                     </div>
                                 </div>

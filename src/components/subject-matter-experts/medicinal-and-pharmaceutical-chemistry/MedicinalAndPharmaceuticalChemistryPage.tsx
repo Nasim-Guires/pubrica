@@ -119,8 +119,8 @@ export default function MedicinalChemistryPage() {
 
             {/* SECTION 1: Banner */}
             <HeroBanner
-                title="Medicinal Chemistry"
-                description="Elevating medicinal chemistry research with expert analytical insight, clear scientific writing, and seamless journal submission assistance."
+                title="Medical and Pharmaceutical Chemistry"
+                description="Bridges the gap between chemistry and healthcare by designing, developing, and optimizing pharmaceutical compounds to ensure the safety, efficacy, and quality of new drugs and treatments."
                 headingAs="h1"
             />
 
@@ -154,10 +154,8 @@ export default function MedicinalChemistryPage() {
                             <div className="space-y-5 text-slate-700">
                                 <div className="space-y-5">
                                     <p className="text-base leading-relaxed">
-                                        <Link href="/industries/pharmaceutical/" className="text-blue-600 no-underline">
-                                            Medical and Pharmaceutical Chemistry
-                                        </Link>{" "}
-                                        is leading the transformation of health care through drug discovery, drug formulation and creation of new therapeutic strategies. As the chemical, biological and technological innovations develop, both researchers and providers will depend on well written, high quality scientific communication to communicate their timely findings that influence patient care. Medical and Pharmaceutical Chemistry influences all progress within clinical medicine, biomedical research and the{" "}
+                                        
+                                            Medical and Pharmaceutical Chemistry  is leading the transformation of health care through drug discovery, drug formulation and creation of new therapeutic strategies. As the chemical, biological and technological innovations develop, both researchers and providers will depend on well written, high quality scientific communication to communicate their timely findings that influence patient care. Medical and Pharmaceutical Chemistry influences all progress within clinical medicine, biomedical research and the{" "}
                                         <Link href="/industries/pharmaceutical/" className="text-blue-600 no-underline">
                                             pharmaceutical industry
                                         </Link>{" "}
@@ -177,7 +175,7 @@ export default function MedicinalChemistryPage() {
                                     </p>
 
                                     {/* CTA Button */}
-                                    <div className="pt-2">
+                                    <div className="pt-2 mb-2">
                                         <GetFreeQuoteButton />
                                     </div>
                                 </div>

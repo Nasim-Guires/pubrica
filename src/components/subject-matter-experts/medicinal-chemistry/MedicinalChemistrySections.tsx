@@ -99,44 +99,44 @@ const editorsData: ExpertEditorItem[] = [
 
 const applicationsData = [
     {
-        title: "AI and Machine Learning in Drug Design",
-        desc: "Utilizing predictive algorithms to enable virtual screening of drug leads via lead optimization.",
+        title: "",
+        desc: "AI and Machine Learning in Drug Design – Utilizing predictive algorithms to enable virtual screening of drug leads via lead optimization.",
         iconSrc:
             "/images/subject-matter-experts/medicinal-chemistry/Drug-Discovery-and-Lead-Identification.webp",
     },
     {
-        title: "Fragment-Based Drug Discovery (FBDD)",
-        desc: "Allows the identification and extended development of chemical compound small fragments to create future therapeutic medications.",
+        title: "",
+        desc: "Fragment-Based Drug Discovery (FBDD) – Allows the identification and extended development of chemical compound small fragments to create future therapeutic medications.",
         iconSrc:
             "/images/subject-matter-experts/medicinal-chemistry/Cheminformatics-and-molecular-docking.webp",
     },
     {
-        title: "Targeted Protein Degradation",
-        desc: "Development of PROTACs and Adhesive Molecules for Specific Proteins as therapeutic agents.",
+        title: "",
+        desc: "Targeted Protein Degradation – Development of PROTACs and Adhesive Molecules for Specific Proteins as therapeutic agents.",
         iconSrc:
             "/images/subject-matter-experts/medicinal-chemistry/Organic-and-Synthetic-Chemistry.webp",
     },
     {
-        title: "Structure-Based Drug Design (SBDD)",
-        desc: "Utilizes structure determination methods such as computer modelling and crystallography to generate ligands.",
+        title: "",
+        desc: "Structure-Based Drug Design (SBDD) – Utilizes structure determination methods such as computer modelling and crystallography to generate ligands.",
         iconSrc:
             "/images/subject-matter-experts/medicinal-chemistry/Pharmacokinetics-ADME-and-Pharmacodynamics.webp",
     },
     {
-        title: "Multi-Target Drug Design",
-        desc: "Multi-Target Design of Compounds that have a biological effect on more than one target Increases efficacy when they are developed into medication.",
+        title: "",
+        desc: "Multi-Target Drug Design – Multi-Target Design of Compounds that have a biological effect on more than one target increases efficacy when they are developed into medication.",
         iconSrc:
             "/images/subject-matter-experts/medicinal-chemistry/Bioorganic-and-Medicinal-Biochemistry.webp",
     },
     {
-        title: "Peptide and Macrocycle Therapeutics",
-        desc: "Treatment Options for Biological Targets That Present Challenges in Drug Development",
+        title: "",
+        desc: "Peptide and Macrocycle Therapeutics – Treatment Options for Biological Targets That Present Challenges in Drug Development",
         iconSrc:
             "/images/subject-matter-experts/medicinal-chemistry/Natural-Product-Chemistry.webp",
     },
     {
-        title: "Green and Sustainable Chemistry",
-        desc: "Provide New Pathways for Developing Drug Development in an Environmentally Friendly Fashion with decreased use of chemicals",
+        title: "",
+        desc: "Green and Sustainable Chemistry –Provide New Pathways for Developing Drug Development in an Environmentally Friendly Fashion with decreased use of chemicals",
         iconSrc:
             "/images/subject-matter-experts/medicinal-chemistry/Analytical-Chemistry-for-Drug-Development.webp",
     },

@@ -183,7 +183,7 @@ export default function LifeSciencesPage() {
                             <div className="space-y-5 text-slate-700">
                                 <div className="space-y-5">
                                     <p className="text-base leading-relaxed">
-                                        Life Sciences is a rapidly growing field that is developing and growing due to the rising demand for new health care technologies, innovation in biotechnology, and better management of diseases. To assist with these types of developments and speed up scientific research, Pubrica has created and continues to improve on specialised services tailored specifically to the needs of Life Sciences researchers. Some examples of these are: biological data analysis, experimental design support, and comprehensive support solutions for scientific researchers (including traditional academia) as well as for clinicians and people in industry. All of our services are intended to enhance the quality, accuracy and overall impact of all research findings across the full range of Life Sciences; This can involve using scientific principles applied to cellular activity and processes, genetic theory, drug discovery and development, and disease pathways Involves using contemporary laboratory techniques, computational biology tools, data analysis techniques, and experimental validation methods to solve complex life science problems.
+                                        Life Sciences is a rapidly growing field that is developing and growing due to the rising demand for new health care technologies, innovation in <Link href="/subject-matter-experts/biotechnology/" className="text-blue-600">biotechnology</Link>, and better management of diseases. To assist with these types of developments and speed up scientific research, Pubrica has created and continues to improve on specialised services tailored specifically to the needs of Life Sciences researchers. Some examples of these are: biological data analysis, experimental design support, and comprehensive support solutions for scientific researchers (including traditional academia) as well as for clinicians and people in industry. All of our services are intended to enhance the quality, accuracy and overall impact of all research findings across the full range of Life Sciences; This can involve using scientific principles applied to cellular activity and processes, genetic theory, drug discovery and development, and disease pathways Involves using contemporary laboratory techniques, computational biology tools, data analysis techniques, and experimental validation methods to solve complex life science problems.
                                     </p>
 
                                     <p className="text-base leading-relaxed">
@@ -191,7 +191,7 @@ export default function LifeSciencesPage() {
                                     </p>
 
                                     {/* CTA Button */}
-                                    <div className="pt-2">
+                                    <div className="pt-2 mb-2">
                                         <GetFreeQuoteButton />
                                     </div>
                                 </div>

@@ -126,7 +126,7 @@ export default function ForensicPage() {
     ];
 
     return (
-        <main className="w-full bg-[#FAFAFA] font-sans antialiased text-gray-800">
+        <main className="w-full  font-sans antialiased text-gray-800">
 
             {/* SECTION 1: Banner */}
             <HeroBanner
@@ -182,7 +182,7 @@ export default function ForensicPage() {
                                     </p>
 
                                     {/* CTA Button */}
-                                    <div className="pt-2">
+                                    <div className="pt-2 mb-2">
                                         <GetFreeQuoteButton />
                                     </div>
                                 </div>
@@ -193,7 +193,7 @@ export default function ForensicPage() {
             </section>
 
             {/* SECTION 3: Core Disciplines Grid */}
-            <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+            <section className=" py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
                 <div className="max-w-6xl mx-auto">
 
                     <div className="text-center max-w-3xl mx-auto mb-12">

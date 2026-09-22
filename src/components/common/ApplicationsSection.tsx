@@ -12,7 +12,7 @@ export type ApplicationItem = {
 interface ApplicationsSectionProps {
     title: string;
     description: string | ReactNode;
-    subTitle?: string | ReactNode; // Added optional prop for the list section heading
+    subTitle?: string | ReactNode;
     applications: ApplicationItem[];
     imageSrc: string;
     imageAlt?: string;
@@ -29,22 +29,22 @@ export default function ApplicationsSection({
     return (
         <div className="w-full font-['Poppins',sans-serif]">
             {/* Header */}
-            <div className="mb-6 space-y-2">
+            <div className="mb-8 space-y-3">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1e2e2b]">
                     {title}
                 </h2>
-                <div className="text-sm md:text-base text-gray-700">
+                <div className="text-sm md:text-base text-gray-700 leading-relaxed">
                     {description}
                 </div>
             </div>
 
-            {/* Equal-Height Grid Container */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                {/* Left Column: Text Content distributed evenly */}
-                <div className="lg:col-span-7 flex flex-col justify-between py-1 space-y-4 lg:space-y-0">
+            {/* Grid Container - 8/4 split expands text width for more words per line while keeping gap same */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+                {/* Left Column: Expanded text area allowing more words per line */}
+                <div className="lg:col-span-8 flex flex-col justify-start space-y-5 lg:space-y-6">
                     {/* Render optional Subtitle if passed */}
                     {subTitle && (
-                        <h3 className="text-base md:text-lg font-bold text-black mb-2">
+                        <h3 className="text-base md:text-lg font-bold text-black mb-1">
                             {subTitle}
                         </h3>
                     )}
@@ -55,10 +55,10 @@ export default function ApplicationsSection({
                         return (
                             <div
                                 key={idx}
-                                className="flex items-start gap-4"
+                                className="flex items-start gap-4 p-1"
                             >
                                 {/* Icon Container (Lucide or Image URL) */}
-                                <div className="shrink-0 w-7 h-7 flex items-center justify-center text-gray-800">
+                                <div className="shrink-0 w-7 h-7 mt-0.5 flex items-center justify-center text-gray-800">
                                     {app.iconSrc ? (
                                         <Image
                                             src={app.iconSrc}
@@ -73,7 +73,7 @@ export default function ApplicationsSection({
                                 </div>
 
                                 {/* Item Text */}
-                                <p className="text-sm md:text-base text-gray-800 leading-normal">
+                                <div className="text-sm md:text-base text-gray-800 leading-relaxed flex-1">
                                     {app.title ? (
                                         <>
                                             <span className="font-semibold text-gray-900">
@@ -84,21 +84,21 @@ export default function ApplicationsSection({
                                     ) : (
                                         app.desc
                                     )}
-                                </p>
+                                </div>
                             </div>
                         );
                     })}
                 </div>
 
-                {/* Right Column: Image Wrapper */}
-                <div className="lg:col-span-5 min-h-[350px] lg:min-h-[420px] flex items-center justify-center">
-                    <div className="relative w-full h-full min-h-full overflow-hidden rounded-md flex items-center justify-center">
+                {/* Right Column: Reduced width image wrapper */}
+                <div className="lg:col-span-4 min-h-[350px] lg:min-h-[480px] flex items-center justify-center">
+                    <div className="relative w-full h-full min-h-[350px] lg:min-h-[480px] overflow-hidden rounded-lg flex items-center justify-center">
                         <Image
                             src={imageSrc}
                             alt={imageAlt}
                             fill
                             className="object-contain"
-                            sizes="(max-width: 1024px) 100vw, 40vw"
+                            sizes="(max-width: 1024px) 100vw, 33vw"
                         />
                     </div>
                 </div>

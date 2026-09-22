@@ -207,7 +207,7 @@ export default function FoodSciencePage() {
                             <>
                                 Pubrica has extensive experience in supporting food science research, offering end-to-end services tailored for academicians, researchers, and industry professionals. Our services are designed to enhance the quality, clarity, and impact of research manuscripts, making them suitable for publication in high-impact journals through our comprehensive{' '}
                                 <Link
-                                    href="m/services/publication-support/"
+                                    href="/services/publication-support/"
                                     className="text-blue-600 "
                                 >
                                     food science publication assistance

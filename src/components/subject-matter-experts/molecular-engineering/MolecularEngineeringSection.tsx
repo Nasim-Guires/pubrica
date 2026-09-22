@@ -109,8 +109,8 @@ const applicationsData = [
             "/images/subject-matter-experts/molecular-engineering/Robotics.webp",
     },
     {
-        title: "Food Engineering",
-        desc: "crops to be resistant to disease and the production of synthetic foods.",
+        title: "Food",
+        desc: "Engineering crops to be resistant to disease and the production of synthetic foods.",
         iconSrc:
             "/images/subject-matter-experts/molecular-engineering/Food.webp",
     },
