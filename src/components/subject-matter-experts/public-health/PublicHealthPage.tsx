@@ -148,7 +148,7 @@ export default function PublicHealthPage() {
             {/* SECTION 1: Banner */}
             <HeroBanner
                 title="Public health"
-                description="Advancing healthier communities through prevention, research, and evidence based solutions that improve lives worldwide."
+                description="Advancing healthier communities through prevention, research, and evidence-based solutions that improve lives worldwide."
                 headingAs="h1"
             />
 
@@ -195,7 +195,7 @@ export default function PublicHealthPage() {
                                     </p>
 
                                     {/* CTA Button */}
-                                    <div className="pt-2">
+                                    <div className="pt-2 mb-2">
                                         <GetFreeQuoteButton />
                                     </div>
                                 </div>
@@ -228,7 +228,7 @@ export default function PublicHealthPage() {
             <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
                 <CommonExpertiseCards
                     title="Our Expertise in Public health Research and Publication"
-                    description="At Pubrica, we offer fully integrated support for the entire public health research process to ensure that scholars, organizations, and practitioners have the means necessary to generate their studies into high-quality audio or video records that are suitable for publication in peer-reviewed journals. We are committed to aiding at every stage of this process - from conception to realization of a project (preliminary research question formulation) through to submission of your final manuscript."
+                    description="At Pubrica, we offer fully integrated support for the entire public health research process to ensure that scholars, organizations, and practitioners have the means necessary to generate their studies into high-quality audio or video records that are suitable for publication in peer-reviewed journals. We are committed to aiding at every stage of this process – from conception to realization of a project (preliminary research question formulation) through to submission of your final manuscript."
                     cards={expertiseCards}
                 />
 

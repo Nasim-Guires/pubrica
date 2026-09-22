@@ -222,8 +222,7 @@ export default function PeptidesPage() {
                             Our Core Disciplines In Peptides
                         </h2>
                         <p className="text-gray-600 text-sm leading-relaxed max-w-full">
-                            Pubrica is involved in both Research and Development of peptide systems, and we perform R&D in many of the key areas of peptide science so that we can help others develop peptide-based therapeutics and innovative peptide products. We have the knowledge and experience to help you with every aspect of peptide technology including:
-                        </p>
+                            Pubrica is involved in both Research and Development of peptide systems, and we perform R&D in many of the key areas of peptide science so that we can help others develop peptide-based therapeutics and innovative peptide products. We have the knowledge and experience to help you with every aspect of peptide technology including.                        </p>
                     </div>
 
                     <SmeCoreAreasGrid items={disciplines} />

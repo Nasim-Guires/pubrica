@@ -68,7 +68,7 @@ export default function NeurologyPage() {
                 <>
                     This rapidly advancing field examines the genetic and molecular basis of neurological disorders. Our specialists offer{" "}
                     <Link
-                        href="#"
+                        href="/services/research-services/medical-writing/"
                         className="text-blue-600 "
                     >
                         neurology writing services
@@ -266,7 +266,7 @@ export default function NeurologyPage() {
                                     </p>
 
                                     {/* CTA Button */}
-                                    <div className="pt-2">
+                                    <div className="pt-2 mb-2">
                                         <GetFreeQuoteButton />
                                     </div>
                                 </div>

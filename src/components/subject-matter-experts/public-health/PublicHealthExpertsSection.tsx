@@ -9,34 +9,40 @@ import WhereAuthorsPublish from "@/components/common/WhereAuthorsPublish";
 
 const emergingTrendsData: EmergingTrendItem[] = [
     {
-        id: "expertise-led",
-        title: "Expertise-Led Support",
+        id: "precision-personalisation",
+        title: "Precision and personalisation of public health",
         description:
-            "Our company has an array of seasoned public health research experts, editors and statisticians who are well-versed in the intricacies of epidemiology, health policy, and population health research.",
+            "interventions by using information from genetics, behaviour and environment to optimise the overall health outcomes of communities and populations.",
     },
     {
-        id: "full-service",
-        title: "Full-Service Research Support",
+        id: "global-health-security",
+        title: "Global Health Security and Pandemic Preparedness",
         description:
-            "We provide comprehensive support from study design to data analysis, manuscript writing, and submitting to journals, covering all aspects of the research process.",
+            "Strengthening of the surveillance systems, managing outbreaks, and preparation for disasters.",
     },
     {
-        id: "high-standards",
-        title: "High Standards of Quality and Ethics",
+        id: "mental-health-well-being",
+        title: "Mental Health and Well-Being Research",
         description:
-            "We adhere to the highest ethical standards, and are committed to providing researchers with accuracy, transparency, and compliance with guidelines for international publication.",
+            "Enhancing the mental health of our community's citizens by developing prevention and promotion strategies including community-based approaches.",
     },
     {
-        id: "expertise-publishing",
-        title: "Expertise in Publishing Worldwide",
+        id: "climate-environmental-health",
+        title: "Climate Change and Environmental Health",
         description:
-            "Having an in-depth knowledge of the most prestigious journals and the expectations of their editors will lead researchers to successful publication outcomes.",
+            "Investigating how climate change, pollution, and environmental degradation affect health.",
     },
     {
-        id: "individualized-assistance",
-        title: "Individualized Assistance for Researchers",
+        id: "health-equity-social-determinants",
+        title: "Health Equity and Social Determinants of Health",
         description:
-            "Projects will receive individualized assistance tailored to meet research goals, publication needs, and timelines, to help researchers achieve their objectives as efficiently as possible.",
+            "Acknowledging and addressing the Health Disparities (including but not limited to) income, education, access to care, and social justice.",
+    },
+    {
+        id: "community-based-participatory",
+        title: "Community-Based and Participatory Research",
+        description:
+            "Transitioning from the traditional top-down method of communicating with communities, to working directly with community members to develop culturally relevant and sustainable health solutions.",
     },
 ];
 
@@ -70,62 +76,62 @@ const whyTrustTabsData = [
 
 const applicationsData = [
     {
-        title: "Disease prevention and management",
-        desc: "about disease outbreaks",
+        title: "",
+        desc: "Disease prevention and management about disease outbreaks",
         iconSrc:
             "/images/subject-matter-experts/public-health/Disease-prevention.webp",
     },
     {
-        title: "Health promotion and education",
-        desc: "on healthy lifestyles and awareness",
+        title: "",
+        desc: "Health promotion and education on healthy lifestyles and awareness",
         iconSrc:
             "/images/subject-matter-experts/public-health/Health-promotion-and-education.webp",
     },
     {
-        title: "Protection of our environment",
-        desc: "(air, water, and food quality)",
+        title: "",
+        desc: "Protection of our environment (air, water, and food quality)",
         iconSrc:
             "/images/subject-matter-experts/public-health/Protection-of-our-environment.webp",
     },
     {
-        title: "Improved health",
-        desc: "for mothers and children",
+        title: "",
+        desc: "Improved health for mothers and children",
         iconSrc:
             "/images/subject-matter-experts/public-health/Improved-health.webp",
     },
     {
-        title: "Tracking of diseases",
-        desc: "and health trends",
+        title: "",
+        desc: "Tracking of diseases and health trends",
         iconSrc:
             "/images/subject-matter-experts/public-health/Tracking-of-diseases.webp",
     },
     {
-        title: "The development and implementation of effective health care policies/effective health policy planning",
-        desc: "",
+        title: "",
+        desc: "The development and implementation of effective health care policies/effective health policy planning",
         iconSrc:
             "/images/subject-matter-experts/public-health/health-care-policies.webp",
     },
     {
-        title: "Worker's health",
-        desc: "and safety",
+        title: "",
+        desc: "Worker’s health and safety",
         iconSrc:
             "/images/subject-matter-experts/public-health/Workers-health-and-safety.webp",
     },
     {
-        title: "Global Health initiatives",
-        desc: "(i.e., Responding to global health challenges)",
+        title: "",
+        desc: "Global Health initiatives (i.e., Responding to global health challenges)",
         iconSrc:
             "/images/subject-matter-experts/public-health/Global-Health-initiatives.webp",
     },
     {
-        title: "Mental Health promotion",
-        desc: "and support for mental health",
+        title: "",
+        desc: "Mental Health promotion and support for mental health",
         iconSrc:
             "/images/subject-matter-experts/public-health/Mental-Health-promotion.webp",
     },
     {
-        title: "Emergency/disaster management",
-        desc: "- Preparedness for emergencies and responding to health emergency situations.",
+        title: "",
+        desc: "Emergency/disaster management- Preparedness for emergencies and responding to health emergency situations.",
         iconSrc:
             "/images/subject-matter-experts/public-health/Emergency_disaster-management.webp",
     },

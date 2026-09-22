@@ -54,44 +54,44 @@ const emergingTrendsData: EmergingTrendItem[] = [
 
 const applicationsData = [
     {
-        title: "Making products in large quantities in an efficient manner",
-        desc: "",
+        title: "",
+        desc: "Making products in large quantities in an efficient manner",
         iconSrc:
             "/images/subject-matter-experts/production-engineering/Making-products.webp",
     },
     {
-        title: "Production Planning Controls (PPC)",
-        desc: "Scheduling and inventory planning",
+        title: "",
+        desc: "Production Planning Controls (PPC): Scheduling and inventory planning",
         iconSrc:
             "/images/subject-matter-experts/production-engineering/Production-Planning-Controls.webp",
     },
     {
-        title: "Quality Assurance",
-        desc: "Reduce defects and ensure quality",
+        title: "",
+        desc: "Quality Assurance: Reduce defects and ensure quality",
         iconSrc:
             "/images/subject-matter-experts/production-engineering/Quality-Assurance.webp",
     },
     {
-        title: "Automation",
-        desc: "Use robots and automated production processes",
+        title: "",
+        desc: "Automation: Use robots and automated production processes",
         iconSrc:
             "/images/subject-matter-experts/production-engineering/Automation.webp",
     },
     {
-        title: "Logistics",
-        desc: "Providing an economical way of managing logistics",
+        title: "",
+        desc: "Logistics: Providing an economical way of managing logistics",
         iconSrc:
             "/images/subject-matter-experts/production-engineering/Logistics.webp",
     },
     {
-        title: "Maintenance",
-        desc: "Increased reliability, reduced downtime",
+        title: "",
+        desc: "Maintenance: Increased reliability, reduced downtime",
         iconSrc:
             "/images/subject-matter-experts/production-engineering/Maintenance.webp",
     },
     {
-        title: "Sustainability",
-        desc: "Environmentally friendly manufacturing processes.",
+        title: "",
+        desc: "Sustainability: Environmentally friendly manufacturing processes.",
         iconSrc:
             "/images/subject-matter-experts/production-engineering/Sustainability.webp",
     },

@@ -163,12 +163,12 @@ export default function PeptidesSection() {
                         "/images/subject-matter-experts/peptides/sample-works-13-5.webp",
                     imageAlt: "Journal of Food Composition and Analysis Cover",
                     paperTitle:
-                        "Peptide biomarkers identified by LC-MS in processed meats of five animal species",
+                        "Peptide biomarkers identified by LC–MS in processed meats of five animal species",
                     author:
                         "Gui-Ji Wang, Guang-Yun Zhou, Hao-Wei Ren, Yan Xu, Yan Yang, Li-Hai Guo, Ning Liu",
                     journalName: "Journal of Food Composition and Analysis",
                     publisher: "Elsevier",
-                    impactFactor: "4.8 (2024)",
+                    impactFactor: "4.6 (2024)",
                 }}
             />
             {/* SECTION: Our Expert Peptides Editors */}

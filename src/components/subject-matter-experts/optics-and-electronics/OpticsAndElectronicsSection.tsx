@@ -58,32 +58,32 @@ const emergingTrendsData: EmergingTrendItem[] = [
 
 const applicationsData = [
     {
-        title: "Diagnostic Imaging and Its Applications",
-        desc: "through Optical and Electronic Systems enable the precise visual detection of diseases at an earlier stage.",
+        title: "",
+        desc: "Diagnostic Imaging and Its Applications through Optical and Electronic Systems enable the precise visual detection of diseases at an earlier stage.",
         iconSrc:
             "/images/subject-matter-experts/optics-and-electronics/Diagnostic-Imaging.webp",
     },
     {
-        title: "Patient Monitoring Technologies",
-        desc: "are utilized to continuously monitor and track a patient's vitals (physiological processes) to provide timely and individualized care.",
+        title: "",
+        desc: "Patient Monitoring Technologies are utilized to continuously monitor and track a patient's vitals (physiological processes) to provide timely and individualized care.",
         iconSrc:
             "/images/subject-matter-experts/optics-and-electronics/Patient-Monitoring-1.webp",
     },
     {
-        title: "Minimally Invasive Techniques",
-        desc: "use Optical Technologies for accurate guidance throughout surgery.",
+        title: "",
+        desc: "Minimally Invasive Techniques use Optical Technologies for accurate guidance throughout surgery.",
         iconSrc:
             "/images/subject-matter-experts/optics-and-electronics/Minimally-Invasive.webp",
     },
     {
-        title: "Therapeutic Uses",
-        desc: "of Laser and Electrons provide increased accuracy and recovery time for patients.",
+        title: "",
+        desc: "Therapeutic Uses of Laser and Electrons provide increased accuracy and recovery time for patients.",
         iconSrc:
             "/images/subject-matter-experts/optics-and-electronics/Therapeutic-Uses.webp",
     },
     {
-        title: "Remote Healthcare Applications",
-        desc: "include telehealth and remote monitoring of a Person's Health through Opto-Electronic Systems.",
+        title: "",
+        desc: "Remote Healthcare Applications include telehealth and remote monitoring of a Person’s Health through Opto-Electronic Systems.",
         iconSrc:
             "/images/subject-matter-experts/optics-and-electronics/Remote-Healthcare-Applications.webp",
     },
@@ -147,8 +147,7 @@ export default function OpticsAndElectronicsSection() {
                                     <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                                 </div>
                                 <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                                    <strong className="text-gray-900 font-bold">High precision measurement: </strong>
-                                    enables to have it correctly detected or accurately analysed for the following physical vs chemical vs biological parameters, respectively.
+                                   High precision measurement enables to have it correctly detected or accurately analysed for the following physical vs chemical vs biological parameters, respectively.
                                 </p>
                             </div>
                             <div className="flex items-start space-x-2.5">
@@ -156,8 +155,7 @@ export default function OpticsAndElectronicsSection() {
                                     <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                                 </div>
                                 <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                                    <strong className="text-gray-900 font-bold">Non-invasive Sensing: </strong>
-                                    enables a means of safely performing analysis on materials and/or analysing biological systems in an invasive manner, i.e., not physically intrusive contact.
+                                  Non-invasive Sensing enables a means of safely performing analysis on materials and/or analysing biological systems in an invasive manner, i.e., not physically intrusive contact.
                                 </p>
                             </div>
                             <div className="flex items-start space-x-2.5">
@@ -165,8 +163,7 @@ export default function OpticsAndElectronicsSection() {
                                     <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                                 </div>
                                 <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                                    <strong className="text-gray-900 font-bold">Performance Enhancements: </strong>
-                                    help improve systems' performance due to improvements in system signal processing efficiency and operational reliability.
+                                   Performance Enhancements help improve systems' performance due to improvements in system signal processing efficiency and operational reliability.
                                 </p>
                             </div>
                             <div className="flex items-start space-x-2.5">
@@ -174,8 +171,7 @@ export default function OpticsAndElectronicsSection() {
                                     <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                                 </div>
                                 <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                                    <strong className="text-gray-900 font-bold">Innovation and Technology Development: </strong>
-                                    are utilized for creating and producing photonics, sensors, imaging and communication technologies.
+                                   Innovation and Technology Development are utilized for creating and producing photonics, sensors, imaging and communication technologies.
                                 </p>
                             </div>
                         </div>

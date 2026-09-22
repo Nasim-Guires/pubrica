@@ -123,17 +123,17 @@ export default function NeurologySection() {
             {/* SECTION: Where Our Authors Publish */}
             <WhereAuthorsPublish
                 title="Where Our Authors Publish"
-                description="Our authors share Pubrica's expert content in top-tier journals, conferences, and platforms, maximising recognition and global reach."
+                description="Our authors share Pubrica’s expert content across top-tier journals, conferences, and platforms, maximizing its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
                 publication={{
                     imageSrc:
                         "/images/subject-matter-experts/neurology/sample-works-6-3.webp",
                     imageAlt: "Neurology Journal Cover",
                     paperTitle:
-                        "Advances in Therapeutic Interventions for Neurodegenerative Disorders",
-                    author: "Caldwell, E., Mehta, P., & Rao, A.",
-                    journalName: "Journal of Neurology and Neuroscience",
-                    publisher: "Elsevier",
-                    impactFactor: "4.2 (2024)",
+                        "Autism Spectrum Disorder: The Cerebellum, Genes, and Pathways",
+                    author: "D’Mello, S. R.",
+                    journalName: "Neurology International",
+                    publisher: "MDPI",
+                    impactFactor: " 3.0 (2024)",
                 }}
             />
 
