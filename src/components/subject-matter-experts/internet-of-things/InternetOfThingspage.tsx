@@ -26,7 +26,7 @@ import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 export default function InternetOfThingsPage() {
     const disciplines = [
         {
-            title: "IoT System Architecture",
+            title: "IoT Architecture and System Design",
             iconSrc:
                 "/images/subject-matter-experts/internet-of-things/IoT-Architecture-and-System-Design.webp",
             description:
@@ -188,8 +188,8 @@ export default function InternetOfThingsPage() {
 
                                     <p className="text-base leading-relaxed">
                                         IoT is concerned with the communication and operation of smart environments (via the use of hardware, software, and network connections), as well as the development of smart systems within a business,{" "}
-                                        healthcare industry
-                                        <Link href="/subject-matter-experts/agriculture" className="text-blue-600 no-underline hover:no-underline">agricultural</Link>, and energy sectors.
+                                        healthcare industry,
+                                        <Link href="/subject-matter-experts/agriculture" className="text-blue-600 no-underline hover:no-underline"> agricultural</Link>, and energy sectors.
                                     </p>
 
                                     <p className="text-base leading-relaxed">
