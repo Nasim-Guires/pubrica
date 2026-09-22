@@ -89,21 +89,10 @@ export default function BiomolecularExpertiseServicesComponent() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12 space-y-12">
-      {/* Centered Header Section */}
-      <div className="text-center space-y-4 max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#0d3630]">
-          Our Expertise in Biomolecular Engineering Research and Publication
-        </h2>
-        <p className="text-xs md:text-sm text-gray-600 leading-relaxed max-w-3xl mx-auto">
-          Pubrica provides specialized support to academic researchers, graduate students, biotech innovators, and industry professionals working in biomolecular engineering. Our team comprises PhD-qualified experts with strong backgrounds in molecular biology, biotechnology, computational modeling, and bioprocess engineering. Our Key Services Include:
-        </p>
-      </div>
-
-      {/* Common Expertise Cards Component */}
+    <div className="container mx-auto px-4 py-12">
       <CommonExpertiseCards
-        title=""
-        description=""
+        title="Our Expertise in Biomolecular Engineering Research and Publication"
+        description="Pubrica provides specialized support to academic researchers, graduate students, biotech innovators, and industry professionals working in biomolecular engineering. Our team comprises PhD-qualified experts with strong backgrounds in molecular biology, biotechnology, computational modeling, and bioprocess engineering. Our Key Services Include:"
         cards={biomolecularCards}
       />
     </div>

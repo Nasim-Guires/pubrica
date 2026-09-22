@@ -95,7 +95,8 @@ export default function MedicinalChemistryPage() {
             title: "Literature Review and Gap Analysis",
             desc: "Research gaps are recognized and thoroughly examined using extensive literature analysis enabled by medicinal chemistry review writing.",
             href: "/services/research-services/literature-review-and-gap/",
-            imageUrl: "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
+            imageUrl:
+                "/images/subject-matter-experts/algorithm/Literature-Review-and-Gap-Analysis-image-1.webp",
             icon: FileText,
         },
         {
@@ -113,49 +114,56 @@ export default function MedicinalChemistryPage() {
                 </>
             ),
             href: "/services/research-services/scientific-writing/",
-            imageUrl: "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
+            imageUrl:
+                "/images/subject-matter-experts/algorithm/Scientific-Writing.webp",
             icon: PenTool,
         },
         {
             title: "Data Collection for AI & ML",
             desc: "Structured data gathering tailored for artificial intelligence and machine learning.",
             href: "/services/medical-data-collection/",
-            imageUrl: "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
+            imageUrl:
+                "/images/subject-matter-experts/algorithm/Data-Collection-for-AI-ML.png",
             icon: Cpu,
         },
         {
             title: "Graphical Abstract",
             desc: "Providing a single, clear visual summary of your research and its findings.",
             href: "/services/research-impact/graphical-abstract/",
-            imageUrl: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
+            imageUrl:
+                "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BookOpen,
         },
         {
             title: "Research Services",
             desc: "Expert counsel on how to plan your project, execute your project and analyze your data.",
             href: "/services/research-services/",
-            imageUrl: "/images/subject-matter-experts/biomolecular-engineering/Research-Services.webp",
+            imageUrl:
+                "/images/subject-matter-experts/biomolecular-engineering/Research-Services.webp",
             icon: Cpu,
         },
         {
             title: "Systematic Reviews",
             desc: "Providing literature reviews and evidence synthesis on the extent of the literature available on a topic related to the Clinical Research and Academic Research fields",
             href: "/services/research-services/systematic-review/",
-            imageUrl: "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
+            imageUrl:
+                "/images/subject-matter-experts/algorithm/Journal-Formatting.png",
             icon: Layers,
         },
         {
             title: "Journal Submission",
             desc: "Assisting you in determining which journals will be most appropriate for your submission and subsequently providing you with a streamlined submission process",
             href: "/services/publication-support/journal-submission/",
-            imageUrl: "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
+            imageUrl:
+                "/images/subject-matter-experts/algorithm/Graphical-Abstract.png",
             icon: BarChart3,
         },
         {
             title: "Journal Selection",
             desc: "Strategic journal selection to maximize publication success.",
             href: "/services/publication-support/journal-selection/",
-            imageUrl: "/images/subject-matter-experts/animal-science/Journal-Selection.png",
+            imageUrl:
+                "/images/subject-matter-experts/animal-science/Journal-Selection.png",
             icon: FileSearch,
         },
     ];
@@ -249,65 +257,11 @@ export default function MedicinalChemistryPage() {
 
                 <section className="space-y-8 font-['Poppins',sans-serif]">
                     {/* Section Heading */}
-                    <div className="space-y-2">
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#1e2e2b]">
-                            Our Expertise in Medicinal Chemistry Research and Publication
-                        </h2>
-
-                        <p className="text-sm md:text-base text-gray-600">
-                            Publishing in high-impact medicinal chemistry journals does not only require experimental research data but also demands detailed analysis of important chemical properties along with good scientists' communication and a thorough explanation of the research methods. The following are ways that Pubrica can help support Medicinal Chemistry research publishing:
-                        </p>
-                    </div>
-
-                    {/* Cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto justify-center max-w-6xl">
-
-                        {expertiseCards.map((card, idx) => {
-                            const CardIcon = card.icon;
-
-                            return (
-                                <div
-                                    key={idx}
-                                    className="group relative bg-white border border-gray-300 rounded-none overflow-hidden shadow-sm h-64"
-                                >
-                                    {/* Background Image */}
-                                    <div className="relative h-40 w-full bg-gray-100">
-                                        <Image
-                                            src={card.imageUrl}
-                                            alt={card.title}
-                                            fill
-                                            className="object-cover"
-                                        />
-                                    </div>
-
-                                    {/* Center Circle Icon */}
-                                    <div className="absolute top-[8.5rem] left-1/2 -translate-x-1/2 z-20 bg-white p-2.5 rounded-full border border-gray-200 shadow-sm transition-all duration-300 ease-in-out group-hover:top-20 group-hover:scale-105">
-                                        {CardIcon && (
-                                            <CardIcon className="w-5 h-5 text-[#12433e]" />
-                                        )}
-                                    </div>
-
-                                    {/* Sliding White Panel */}
-                                    <div className="absolute inset-x-0 bottom-0 top-36 z-10 bg-white pt-7 pb-3 px-3 flex flex-col items-center justify-start text-center transition-all duration-300 ease-in-out group-hover:top-20 group-hover:pt-12 group-hover:justify-start">
-
-                                        {/* Clickable Card Title */}
-                                        <Link
-                                            href={card.href}
-                                            className="text-sm md:text-base font-bold text-gray-900 hover:text-blue-600 transition-all duration-300"
-                                        >
-                                            {card.title}
-                                        </Link>
-
-                                        {/* Description */}
-                                        <p className="text-xs text-gray-500 mt-2 leading-tight opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]">
-                                            {card.desc}
-                                        </p>
-                                    </div>
-                                </div>
-                            );
-                        })}
-
-                    </div>
+                    <CommonExpertiseCards
+                        title="Our Expertise in Medicinal Chemistry Research and Publication"
+                        description="Publishing in high-impact medicinal chemistry journals does not only require experimental research data but also demands detailed analysis of important chemical properties along with good scientists' communication and a thorough explanation of the research methods. The following are ways that Pubrica can help support Medicinal Chemistry research publishing:"
+                        cards={expertiseCards}
+                    />
                 </section>
             </section>
 

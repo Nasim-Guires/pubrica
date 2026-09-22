@@ -247,14 +247,10 @@ export default function BiotechnologyPage() {
                 <div>
                     {/* Custom Section with the Title, Divider, and Hyperlink */}
                     <div className="mb-6">
-                        {/* Heading with inline line matching the image */}
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-2">
-                            <h2 className="text-2xl font-bold text-gray-900 w-full sm:w-auto">
-                                Why Choose Pubrica for Biotechnology Research and Publishing?
-                            </h2>
-
-                            <div className="hidden sm:block flex-grow border-t-2 border-black"></div>
-                        </div>
+                        {/* Heading matching updated design without line */}
+                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
+                            Why Choose Pubrica for Biotechnology Research and Publishing?
+                        </h2>
 
                         {/* Description paragraph with the functional Link */}
                         <p className="text-gray-700 leading-relaxed">

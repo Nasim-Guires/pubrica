@@ -189,11 +189,11 @@ export default function BiomonitoringPage() {
 
                 {/* EXPERTISE IN BIG DATA & HADOOP RESEARCH AND PUBLICATION */}
                 <section className="max-w-7xl mx-auto px-4 py-4 space-y-6">
-                    <div className="space-y-2">
-                        <h2 className="text-2xl font-bold text-[#0d3630]">
+                    <div className="space-y-3">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
                             Our Expertise in Big Data & Hadoop Research and Publication
                         </h2>
-                        <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                        <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
                             We offer full service for research on Big Data and Hadoop, allowing researchers to take their complex datasets and turn them into meaningful, publication quality findings. Our knowledge base covers analytics, distributed computing and processing of massive amounts of data, so we can help researchers produce high quality research that complies with the guidelines to submit to{" "}
                             <Link href="/services/publication-support/peer-review-pre-submission/" className="text-blue-600 no-underline">
                                 peer-reviewed journals

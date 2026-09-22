@@ -220,11 +220,11 @@ export default function NanobiotechnologyPage() {
             {/* SECTION 4: Expertise Grid */}
             <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 
-                <div className="text-left w-full mb-12">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] mb-3">
+                <div className="space-y-3 mb-12">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] text-left">
                         Our Expertise in Nano Biotechnology Research and Publication
                     </h2>
-                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                    <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed text-left">
                         At Pubrica, we pride ourselves on our extensive expertise in <Link href="/services/publication-support/peer-review-pre-submission/" className="text-blue-600">nanobiotechnology research and publication</Link>. Our team of seasoned researchers, scientists, and technical writers is dedicated to advancing the field of nanobiotechnology by providing cutting-edge research support and delivering high-quality publications:
                     </p>
                 </div>
