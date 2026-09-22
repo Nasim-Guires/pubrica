@@ -273,7 +273,7 @@ export default function EnzymesPage() {
                             Pubrica is dedicated to the advancement of enzyme research through a combination of expert manuscript writing, scientific editing, and{" "}
                             <Link
                                 href="/academy/publication-support/challenges-in-research-paper-writing-and-strategies-to-overcome-them/"
-                                className="text-blue-600 no-underline hover:underline transition-colors inline"
+                                className="text-blue-600 no-underline "
                             >
                                 publication support
                             </Link>

@@ -57,55 +57,55 @@ const emergingTrendsData: EmergingTrendItem[] = [
 ];
 const applicationsData = [
     {
-        title: "Personalised Learning Facilitated by Artificial Intelligence",
+        title: "",
         desc: "More rapid development of learner skills through micro-learning.",
         iconSrc:
             "/images/subject-matter-experts/e-learning/More-rapid-development.webp",
     },
     {
-        title: "Gamification and Engagement",
+        title: "",
         desc: "Ability to increase engagement through gamification.",
         iconSrc:
             "/images/subject-matter-experts/e-learning/Ability-to-increase-engagement.webp",
     },
     {
-        title: "Immersive Technologies",
+        title: "",
         desc: "Use of A.R. and V.R. to enhance the learner experience.",
         iconSrc:
             "/images/subject-matter-experts/e-learning/Use-of-A.R.-and-V.R.webp",
     },
     {
-        title: "Mobile-First Accessibility",
+        title: "",
         desc: "Creation of mobile-first learning opportunities.",
         iconSrc:
             "/images/subject-matter-experts/e-learning/mobile-first-learning-opportunities.webp",
     },
     {
-        title: "Learning Analytics",
+        title: "",
         desc: "Use of data analytics to improve student learning outcomes.",
         iconSrc:
             "/images/subject-matter-experts/e-learning/data-analytics.webp",
     },
     {
-        title: "Adaptive Learning Pathways",
+        title: "",
         desc: "Creation of individualised and adaptive learning paths.",
         iconSrc:
             "/images/subject-matter-experts/e-learning/Creation-of-individualised.webp",
     },
     {
-        title: "Collaborative Social Tools",
+        title: "",
         desc: "Creation of collaborative and social technology tools for learners.",
         iconSrc:
             "/images/subject-matter-experts/e-learning/Creation-of-collaborative.webp",
     },
     {
-        title: "Micro-Certifications",
+        title: "",
         desc: "Creation of micro-certifications and digital credentials.",
         iconSrc:
             "/images/subject-matter-experts/e-learning/Creation-of-micro-certifications.webp",
     },
     {
-        title: "Automated Assessment",
+        title: "",
         desc: "Creation of automated assessment and feedback processes.",
         iconSrc:
             "/images/subject-matter-experts/e-learning/Creation-of-automated-assessment.webp",
@@ -174,6 +174,7 @@ export default function ELearningSection() {
                     title="Emerging Trends in E Learning"
                     description="E-learning continues to evolve rapidly with advancements in technology, pedagogy, and learner engagement strategies. The following trends are shaping the future of digital education:"
                     applications={applicationsData}
+                    subTitle="Personalised Learning Facilitated by Artificial Intelligence:"
                     imageSrc="/images/subject-matter-experts/e-learning/Dr.-Jane-Matthews.webp"
                     imageAlt="Emerging Trends in E Learning"
                 />

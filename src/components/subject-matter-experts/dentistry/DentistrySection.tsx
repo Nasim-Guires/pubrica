@@ -41,37 +41,37 @@ const emergingTrendsData = [
 
 const applicationsData = [
     {
-        title: "Digital Dentistry and CAD/CAM Technologies",
+        title: "",
         desc: "Digital Dentistry and CAD/CAM Technologies – Enabling precision design and fabrication of restorations and prosthetics.",
         iconSrc:
             "/images/subject-matter-experts/dentistry/Digital-Dentistry-and-CAD.png",
     },
     {
-        title: "Implantology and Bone Regeneration",
+        title: "",
         desc: "Implantology and Bone Regeneration – Improving implant survival through novel biomaterials and surface modifications.",
         iconSrc:
             "/images/subject-matter-experts/dentistry/Implantology-and-Bone-Regeneration.png",
     },
     {
-        title: "Laser and Aesthetic Dentistry",
+        title: "",
         desc: "Laser and Aesthetic Dentistry – Enhancing patient comfort and cosmetic outcomes with minimally invasive techniques.",
         iconSrc:
             "/images/subject-matter-experts/dentistry/Laser-and-Aesthetic-Dentistry.png",
     },
     {
-        title: "Oral Cancer Diagnostics",
+        title: "",
         desc: "Oral Cancer Diagnostics – Leveraging molecular markers, imaging modalities, and AI-driven histopathology.",
         iconSrc:
             "/images/subject-matter-experts/dentistry/Oral-Cancer-Diagnostics.png",
     },
     {
-        title: "Tele-dentistry",
+        title: "",
         desc: "Tele-dentistry – Expanding remote diagnosis, consultation, and oral health education in underserved regions.",
         iconSrc:
             "/images/subject-matter-experts/dentistry/Tele-dentistry.png",
     },
     {
-        title: "Nanotechnology In Dentistry",
+        title: "",
         desc: "Nanotechnology In Dentistry – Introducing nanocomposites and nano-coatings for superior restorative outcomes.",
         iconSrc:
             "/images/subject-matter-experts/dentistry/Nanotechnology-In-Dentistry.png",
@@ -129,8 +129,8 @@ export default function DentistrySection() {
             {/* SECTION 2: Applications of Dentistry Research */}
             <section className="max-w-6xl mx-auto space-y-6">
                 <ApplicationsSection
-                    title="Applications of Dentistry"
-                    description="Dentistry has broad applications across clinical care, diagnostics, technology, and oral health research."
+                    title="Applications of Dentistry Research"
+                    description="Dental science is evolving rapidly, integrating innovations from regenerative medicine, biomaterials, and artificial intelligence. Pubrica’s dental research support enables innovations in:"
                     applications={applicationsData}
                     imageSrc="/images/subject-matter-experts/dentistry/Applications-of-Dentistry-Research.webp"
                     imageAlt="Applications of Dentistry"

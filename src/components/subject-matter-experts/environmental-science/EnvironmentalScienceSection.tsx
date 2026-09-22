@@ -169,7 +169,7 @@ export default function EnvironmentalScienceSection() {
             <section className="max-w-6xl mx-auto space-y-6">
                 <ApplicationsSection
                     title="Applications of Environmental Science"
-                    description="Environmental Science addresses many of the world's most pressing issues such as global development, global health and natural resource management. Environmental Science is applied in virtually every industry to promote clean, sustainable solutions and reduce our negative impact on Ecological Balance/Ecological Limits. Environmental Science can be applied in several areas of focus:"
+                    description="Environmental Science addresses many of the world’s most pressing issues such as global development, global health and natural resource management. Environmental Science is applied in virtually every industry to promote ceolin, sustainable solutions and reduce our negative impact on Ecological Balance/Ecological Limits. Environmental Science can be applied in several areas of focus:"
                     applications={applicationsData}
                     imageSrc="/images/subject-matter-experts/environmental-science/Applications-of-Environmental-Science.webp"
                     imageAlt="Applications of Environmental Science"

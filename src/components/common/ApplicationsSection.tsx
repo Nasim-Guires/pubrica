@@ -3,8 +3,8 @@ import { type LucideIcon } from "lucide-react";
 import { ReactNode } from "react";
 
 export type ApplicationItem = {
-    title: string;
-    desc: ReactNode ;
+    title?: string;
+    desc: ReactNode;
     icon?: LucideIcon;
     iconSrc?: string;
 };
@@ -12,6 +12,7 @@ export type ApplicationItem = {
 interface ApplicationsSectionProps {
     title: string;
     description: string | ReactNode;
+    subTitle?: string | ReactNode; // Added optional prop for the list section heading
     applications: ApplicationItem[];
     imageSrc: string;
     imageAlt?: string;
@@ -20,6 +21,7 @@ interface ApplicationsSectionProps {
 export default function ApplicationsSection({
     title,
     description,
+    subTitle,
     applications,
     imageSrc,
     imageAlt = "Application workspace",
@@ -40,6 +42,13 @@ export default function ApplicationsSection({
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
                 {/* Left Column: Text Content distributed evenly */}
                 <div className="lg:col-span-7 flex flex-col justify-between py-1 space-y-4 lg:space-y-0">
+                    {/* Render optional Subtitle if passed */}
+                    {subTitle && (
+                        <h3 className="text-base md:text-lg font-bold text-black mb-2">
+                            {subTitle}
+                        </h3>
+                    )}
+
                     {applications.map((app, idx) => {
                         const AppIcon = app.icon;
 

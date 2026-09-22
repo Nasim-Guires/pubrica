@@ -48,32 +48,32 @@ const commonEnzymesConditionsData: EmergingTrendItem[] = [
 
 const applicationsData = [
     {
-        title: "Therapeutic Enzyme Inhibitors",
-        desc: "Researching Enzyme Inhibitors for possible treatment of cancer, diabetes, neurodegenerative disorders, etc.",
+        title: "",
+        desc: "Therapeutic Enzyme Inhibitors Researching Enzyme Inhibitors for possible treatment of cancer, diabetes, neurodegenerative disorders, etc",
         iconSrc:
             "/images/subject-matter-experts/enzymes/Therapeutic-Enzyme.webp",
     },
     {
-        title: "Enhancing Enzyme Production and Activity with CRISPR-Cas9 Gene Editing Tools",
-        desc: "The ability to enhance enzyme production and enzyme activity will allow the list of Industrial/Biotechnology applications to greatly expand (Example- enzyme produced by yeast vs Enzyme produced by CRISPR).",
+        title: "",
+        desc: "Enhancing Enzyme Production and Activity with CRISPR-Cas9 Gene Editing Tools The ability to enhance enzyme production and enzyme activity will allow the list of Industrial/Biotechnology applications to greatly expand (Example- enzyme produced by yeast vs Enzyme produced by CRISPR)",
         iconSrc:
             "/images/subject-matter-experts/enzymes/Enhancing-Enzyme-Production.webp",
     },
     {
-        title: "Medical Diagnostics biosensors",
-        desc: "(driven by enzymes) that allow rapid and low-cost check-ups for a variety of diseases.",
+        title: "",
+        desc: "Medical Diagnostics biosensors (driven by enzymes) that allow rapid and low-cost check-ups for a variety of diseases",
         iconSrc:
             "/images/subject-matter-experts/enzymes/Medical-Diagnostics-Biosensors.webp",
     },
     {
-        title: "Biofuel and Chemical Metabolic Engineering",
-        desc: "Developing enzymes and improving chemical production efficiency, to further enable the development of sustainable biotechnology solutions (i.e. Enzymes and Biofuels).",
+        title: "",
+        desc: "Biofuel and Chemical Metabolic Engineering Developing enzymes and improving chemical production efficiency, to further enable the development of sustainable biotechnology solutions (i.e. Enzymes and Biofuels",
         iconSrc:
             "/images/subject-matter-experts/enzymes/Biofuel-and-Chemical-Metabolic-Engineering.webp",
     },
     {
-        title: "Reusing Enzymes",
-        desc: "Using enzymes multiple times during production, to reduce the overall cost and environmental impact of production.",
+        title: "",
+        desc: "Reusing Enzymes Using enzymes multiple times during production, to reduce the overall cost and environmental impact of production",
         iconSrc:
             "/images/subject-matter-experts/enzymes/Reusing-Enzymes.webp",
     },
@@ -135,7 +135,7 @@ const publication: AuthorPublicationData = {
     paperTitle:
         "Structure of the ATP-driven methyl-coenzyme M reductase activation complex",
     author:
-        "Ramirez-Amador, F., Paul, S., Kumar, A., Lorent, C., Keller, S., Bohn, S., Nguyen, T., Lometto, S., Viegels, D., Kahnt, J., Deobald, D., Abendroth, F., Vázquez, O., Hochberg, G., Scheller, S., Stripp, S. T., & Schuller, J. M. (2025)",
+        "Ramírez-Amador, F., Paul, S., Kumar, A., Lorent, C., Keller, S., Bohn, S., Nguyen, T., Lometto, S., Vlegels, D., Kahnt, J., Deobald, D., Abendroth, F., Vázquez, O., Hochberg, G., Scheller, S., Stripp, S. T., & Schuller, J. M. (2025)",
     publisher: "Springer Nature",
     journalName: "Nature",
     impactFactor: "48.5 (2024)",
