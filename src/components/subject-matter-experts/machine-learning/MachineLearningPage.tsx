@@ -227,14 +227,14 @@ export default function MachineLearningPage() {
                                 Our Expertise in Machine Learning Research and Publication lies in providing comprehensive support for every stage of the research process. From algorithm development to{" "}
                                 <Link
                                     href="/academy/manuscript-editing/from-research-to-final-draft-best-practices-in-manuscript-editing/"
-                                    className="text-blue-600 no-underline hover:underline"
+                                    className="text-blue-600 no-underline "
                                 >
                                     manuscript writing
                                 </Link>{" "}
                                 and{" "}
                                 <Link
                                     href="/insights/sample-work/journal-submission-report-sample/"
-                                    className="text-blue-600 no-underline hover:underline"
+                                    className="text-blue-600 no-underline"
                                 >
                                     journal submission
                                 </Link>

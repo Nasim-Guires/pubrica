@@ -2,6 +2,8 @@
 import Image from "next/image";
 import React, { useState } from 'react';
 import { BookOpen, Award, Briefcase, FileText, ChevronRight } from 'lucide-react';
+import ApplicationsSection from "@/components/common/ApplicationsSection";
+import WhereAuthorsPublish from "@/components/common/WhereAuthorsPublish";
 
 const emergingTrendsData = [
     {
@@ -14,53 +16,65 @@ const emergingTrendsData = [
         id: 'personalized-medicine',
         title: 'Personalized Medicine',
         description:
-            'Tailoring medical animations and visual explanations to specific patient diagnoses or custom treatment pathways helps improve individual comprehension and engagement with complex care regimens.'
+            'An increasing number of healthcare providers are utilizing animated content to explain the unique aspects of a patient’s treatment plan and/or how gene therapy works.'
     },
     {
         id: 'ai-driven-animation',
         title: 'AI-Driven Animation',
         description:
-            'Artificial intelligence algorithms streamline the creation of precise physiological movements, accelerating the development of medical visuals and reducing turnaround times for research presentations.'
+            'AI is making it easier to create accurately animated data-driven medical content that can be used for research and educational purposes.'
     },
     {
         id: 'bioprinting',
         title: '3D Bioprinting and Molecular Visualizations',
         description:
-            'Advanced 3D bioprinting concepts and molecular mechanisms are rendered with high fidelity to explain tissue engineering, cellular regeneration, and drug delivery systems.'
+            'Three-dimensional (3D) printings made from biopolymers or cellular materials are being used to visualize the latest biotechnologies and pharmaceutical products.'
     },
     {
         id: 'real-time-updates',
         title: 'Real-Time Animation Updates',
         description:
-            'Dynamic, real-time rendering capabilities enable immediate visualization of changing biological data, physiological metrics, and interactive surgical simulations.'
+            'As newer technologies are developed in the field of real-time rendering of animated medical data, healthcare professionals will have the ability to continuously update their animated educational materials as more data is published in scientific journals and in the press.'
     }
 ];
 
 const applicationsData = [
     {
-        title: "Medical Education",
-        description: "Utilizing the visual demonstration of complex biological processes, anatomy, and medical procedures, provides increased learning opportunities."
+        title: "",
+        desc: "Medical Education: Utilizing the visual demonstration of complex biological processes, anatomy, and medical procedures, provides increased learning opportunities.",
+        iconSrc:
+            "/images/subject-matter-experts/medical-animation/Medical-Education.webp",
     },
     {
-        title: "Patient Education",
-        description: "By providing clear and easy-to-understand visuals of diagnoses, treatment options, and surgical procedures, patients can more readily understand their condition."
+        title: "",
+        desc: "Patient Education: By providing clear and easy-to-understand visuals of diagnoses, treatment options, and surgical procedures, patients can more readily understand their condition.",
+        iconSrc:
+            "/images/subject-matter-experts/medical-animation/Patient-Education.webp",
     },
     {
-        title: "Surgical Planning",
-        description: "Surgeons can visualize how to prepare for their next surgery by using visual aids of the anatomy involved as well as how to perform each step."
+        title: "",
+        desc: "Surgical Planning: Surgeons can visualize how to prepare for their next surgery by using visual aids of the anatomy involved as well as how to perform each step.",
+        iconSrc:
+            "/images/subject-matter-experts/medical-animation/Surgical-Planning.webp",
     },
     {
-        title: "Pharmaceutical Marketing",
-        description: "Visually conveying drug mechanism action, clinical trial results, and therapeutic benefits to the public and healthcare professionals."
+        title: "",
+        desc: "Pharmaceutical Marketing: Visually conveying drug mechanism action, clinical trial results, and therapeutic benefits to the public and healthcare professionals.",
+        iconSrc:
+            "/images/subject-matter-experts/medical-animation/Pharmaceutical-Marketing.webp",
     },
     {
-        title: "Medical Device Demonstration",
-        description: "Presenting how medical devices function, offering healthcare providers and patients with the opportunity to learn about how they work."
+        title: "",
+        desc: "Medical Device Demonstration: Presenting how medical devices function, offering healthcare providers and patients with the opportunity to learn about how they work.",
+        iconSrc:
+            "/images/subject-matter-experts/medical-animation/Medical-Device-Demonstration.webp",
     },
     {
-        title: "Scientific Communication",
-        description: "A method for researchers to visually communicate the scientific concepts and results of their research in academic papers, conferences, and other publications."
-    }
+        title: "",
+        desc: "Scientific Communication: A method for researchers to visually communicate the scientific concepts and results of their research in academic papers, conferences, and other publications.",
+        iconSrc:
+            "/images/subject-matter-experts/medical-animation/Scientific-Communication.webp",
+    },
 ];
 
 const areasOfStudyData = [
@@ -128,8 +142,8 @@ export default function MedicalAnimationSections() {
                                     key={tab.id}
                                     onClick={() => setActiveTab(idx)}
                                     className={`px-4 py-3 text-sm sm:text-base font-semibold transition-colors duration-150 border-r border-gray-200 last:border-r-0 flex items-center justify-center text-center ${isActive
-                                            ? 'bg-[#0e3b32] text-white shadow-sm'
-                                            : 'bg-[#eef2f1] text-gray-700 hover:bg-gray-200'
+                                        ? 'bg-[#0e3b32] text-white shadow-sm'
+                                        : 'bg-[#eef2f1] text-gray-700 hover:bg-gray-200'
                                         }`}
                                 >
                                     {tab.title}
@@ -152,116 +166,88 @@ export default function MedicalAnimationSections() {
 
             {/* NEW SECTION: Applications of Medical Animation */}
             <section className="max-w-6xl mx-auto space-y-8">
-                <div className="space-y-2 text-left">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Applications of Medical Animation
-                    </h2>
-                    <p className="text-gray-700 text-base font-medium">
-                        Medical Animation is applied in diverse sectors:
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                    {/* List Items */}
-                    <div className="lg:col-span-7 space-y-6">
-                        {applicationsData.map((item, index) => (
-                            <div key={index} className="flex items-start space-x-4">
-                                <div className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 mt-1">
-                                    <BookOpen className="w-4 h-4 text-[#0e3b32]" />
-                                </div>
-                                <div className="space-y-1 text-sm sm:text-base leading-relaxed text-gray-700">
-                                    <p>
-                                        <strong className="text-gray-900 font-semibold">{item.title}: </strong>
-                                        {item.description}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Right Column Image */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="rounded-lg overflow-hidden border border-gray-200 shadow-sm max-w-md w-full">
-                            <img
-                                src="/images/subject-matter-experts/medical-animation/Applications-of-Medical-Animation.webp"
-                                alt="Medical Animation Knee Joint Model"
-                                className="w-full h-auto object-cover"
-                            />
-                        </div>
-                    </div>
-                </div>
+                <ApplicationsSection
+                    title="Applications of Medical Animation"
+                    description="Medical Animation is applied in diverse sectors:"
+                    applications={applicationsData}
+                    imageSrc="/images/subject-matter-experts/medical-animation/Applications-of-Medical-Animation.webp"
+                    imageAlt="Applications of Medical Animation"
+                />
             </section>
 
             {/* SECTION 2: Areas of Study */}
-            <section className="bg-[#0e2723] text-white py-7 px-6 sm:px-12 rounded-xl max-w-6xl mx-auto space-y-8">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-                        Areas of Study
-                    </h2>
-                    <div className="w-16 h-1 bg-white mx-auto rounded-full"></div>
+            <section className="w-full grid grid-cols-1 lg:grid-cols-12 min-h-[420px] rounded-none overflow-hidden">
+                {/* Left Side: Image with Dark Overlay */}
+                <div className="lg:col-span-5 relative min-h-[300px] flex items-center p-8 sm:p-12 !rounded-none overflow-hidden">
+                    <Image
+                        src="/images/Medical-Animation.webp"
+                        alt="Areas of Study"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 41vw"
+                        className="object-cover !rounded-none"
+                        style={{ clipPath: "none", borderRadius: "0px" }}
+                        priority
+                    />
+
+                    {/* Dark Overlay */}
+                    <div
+                        className="absolute inset-0 bg-black/60 !rounded-none z-10"
+                        style={{ clipPath: "none", borderRadius: "0px" }}
+                    ></div>
+
+                    {/* Text Overlay */}
+                    <p className="relative z-20 text-white text-sm sm:text-base font-normal leading-relaxed max-w-md">
+                        Pubrica&apos;s team of experts is equipped with the knowledge and experience
+                        to assist you in all aspects of Meical Animation research, ensuring your
+                        work is accurately represented and reaches the right audience effectively.
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {areasOfStudyData.map((area, index) => (
-                        <div
-                            key={index}
-                            className="bg-white text-gray-900 rounded-md p-4 flex items-center justify-between shadow-xs hover:bg-gray-50 transition-colors"
-                        >
-                            <span className="font-semibold text-sm sm:text-base">{area.title}</span>
-                            <ChevronRight className="w-5 h-5 text-[#0e3b32] shrink-0" />
-                        </div>
-                    ))}
+                {/* Right Side: Dark Green Background with Header & Grid */}
+                <div className="lg:col-span-7 bg-[#052b28] p-8 sm:p-12 flex flex-col justify-center space-y-6">
+                    {/* Section Header */}
+                    <div className="space-y-2">
+                        <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+                            Areas of Study
+                        </h2>
+
+                        <div className="w-16 h-1 bg-white rounded-full"></div>
+                    </div>
+
+                    {/* Tag Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                        {areasOfStudyData.map((area, index) => (
+                            <div
+                                key={index}
+                                className="bg-white text-black px-3 py-2.5 rounded-sm shadow-sm flex items-center space-x-2 text-xs font-semibold leading-snug"
+                            >
+                                <div className="w-4 h-4 rounded-full bg-[#052b28] flex items-center justify-center shrink-0">
+                                    <ChevronRight className="w-3 h-3 text-white stroke-[3]" />
+                                </div>
+
+                                <span>{area.title}</span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
             {/* SECTION 3: Where Our Authors Publish */}
-            <section className="max-w-6xl mx-auto space-y-6">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Where Our Authors Publish
-                    </h2>
-                    <div className="w-16 h-1 bg-[#0e3b32] mx-auto rounded-full"></div>
-                    <p className="text-gray-600 text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
-                        Our authors share Pubrica's expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity.
-                    </p>
-                </div>
-
-                {/* Featured Publication Card */}
-                <div className="bg-[#fafafa] border border-gray-200 rounded-lg p-6 sm:p-8 shadow-xs max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
-                    {/* Journal Cover Image */}
-                    <div className="w-48 sm:w-56 shrink-0 rounded-md overflow-hidden shadow-md border border-gray-200 bg-white">
-                        <img
-                            src="/images/subject-matter-experts/medical-animation/sample-works-12-1.webp"
-                            alt="Medical Science Educator Journal Cover"
-                            className="w-full h-auto object-cover"
-                        />
-                    </div>
-
-                    {/* Paper Details */}
-                    <div className="flex-1 space-y-3 text-gray-800 text-sm sm:text-base leading-relaxed">
-                        <p>
-                            <strong className="text-gray-900 font-bold">Paper Title: </strong>
-                            Harnessing Data and Learning Analytics in the Era of AI: Reflections from Medical Education
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Author: </strong>
-                            Poh-Sun Goh, Mildred Lopez
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Journal Name: </strong>
-                            Medical Science Educator
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Publisher: </strong>
-                            Springer Nature
-                        </p>
-                        <p>
-                            <strong className="text-gray-900 font-bold">Impact factor: </strong>
-                            1.8
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <WhereAuthorsPublish
+                title="Where Our Authors Publish"
+                description="Our authors share Pubrica's expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+                publication={{
+                    imageSrc:
+                        "/images/subject-matter-experts/medical-animation/sample-works-12-1.webp",
+                    imageAlt: "Medical Science Educator Journal Cover",
+                    paperTitle:
+                        "Harnessing Data and Learning Analytics in the Era of AI: Reflections from Medical Education",
+                    author: "Poh-Sun Goh, Mildred Lopez",
+                    journalName: "Medical Science Educator",
+                    publisher: "Springer Nature",
+                    impactFactor: "1.8",
+                }}
+            />
 
             {/* SECTION 4: Our Expert Medical Animation Editors */}
             <section className="max-w-6xl mx-auto space-y-8">

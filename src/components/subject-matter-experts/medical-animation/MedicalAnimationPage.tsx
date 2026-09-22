@@ -132,74 +132,79 @@ export default function MedicalAnimationPage() {
             />
 
             {/* SECTION 2: Hero Intro Content */}
-            <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-
-                    {/* Left Text Content */}
-                    <div className="lg:col-span-7 space-y-4">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] leading-snug">
-                            Empowering Research Excellence in Medical Animation through Expert Guidance
-                        </h2>
-
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Medical Animation is a field that utilises three-dimensional visual representation of complex healthcare and medical concepts, procedures, and or treatments. At Pubrica, we provide support for health care professionals, researchers, educators and others who create and produce animated media for use in patient education, medical training and research presentation materials.
-                        </p>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Our team of highly skilled professionals (animators, medical scientists and researchers) will provide complete assistance to ensure your animation meets the highest scientific, educational and ethical standards throughout the world, through institutions and platforms.
-                        </p>
-
-                        {/* Bullet Points */}
-                        <div className="space-y-2 pt-2">
-                            <div className="flex items-start space-x-2 text-sm text-gray-700">
-                                <span className="text-[#C4161C] font-bold">→</span>
-                                <span>Three-dimensional representations of medical ideas, therapies, and surgical practices.</span>
-                            </div>
-                            <div className="flex items-start space-x-2 text-sm text-gray-700">
-                                <span className="text-[#C4161C] font-bold">→</span>
-                                <span>Custom Animated Solutions will address specific research and or medical specialties.</span>
-                            </div>
-                            <div className="flex items-start space-x-2 text-sm text-gray-700">
-                                <span className="text-[#C4161C] font-bold">→</span>
-                                <span>Enhanced User Engagement using Interactive and Visually Engaging Material.</span>
-                            </div>
-                            <div className="flex items-start space-x-2 text-sm text-gray-700">
-                                <span className="text-[#C4161C] font-bold">→</span>
-                                <span>Animations produced in accordance with Ethical and Regulatory Standards established by Global Medical Journals, Institutions and Platforms.</span>
-                            </div>
-                            <div className="flex items-start space-x-2 text-sm text-gray-700">
-                                <span className="text-[#C4161C] font-bold">→</span>
-                                <span>The production of high-quality animated material for educating patients, medical professionals and researchers through audiovisual methods.</span>
-                            </div>
-                            <div className="flex items-start space-x-2 text-sm text-gray-700">
-                                <span className="text-[#C4161C] font-bold">→</span>
-                                <span>Collaborative Development Process for End-To-End Solutions through partnership with medical scientists, animators, and education-focused professionals.</span>
-                            </div>
-                            <div className="flex items-start space-x-2 text-sm text-gray-700">
-                                <span className="text-[#C4161C] font-bold">→</span>
-                                <span>Animations achieved by using scientifically accurate methodologies will fulfil both Clinical Standards and Educational Requirements.</span>
-                            </div>
+            <section className="pt-6 border-t border-slate-100">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="mb-5">
+                            <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+                                Empowering Research Excellence in Medical Animation through Expert Guidance
+                            </h2>
                         </div>
 
-                        {/* CTA Button */}
-                        <div className="pt-4">
-                            <GetFreeQuoteButton />
+                        <div className="flow-root">
+                            <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                                <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0 mx-auto bg-[#a3c9bd]/30">
+                                    <Image
+                                        src="/images/subject-matter-experts/medical-animation/Empowering-Research-Excellence-in-Medical-Animation-through-Expert-Guidance.webp"
+                                        alt="Medical Animation research visualization"
+                                        fill
+                                        priority
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 320px, 380px"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="space-y-5 text-slate-700">
+                                <div className="space-y-5">
+                                    <p className="text-base leading-relaxed">
+                                        Medical Animation is a field that utilises three-dimensional visual representation of complex healthcare and medical concepts, procedures, and or treatments. At Pubrica, we provide support for health care professionals, researchers, educators and others who create and produce animated media for use in patient education, medical training and research presentation materials.
+                                    </p>
+
+                                    <p className="text-base leading-relaxed">
+                                        Our team of highly skilled professionals (animators, medical scientists and researchers) will provide complete assistance to ensure your animation meets the highest scientific, educational and ethical standards throughout the world, through institutions and platforms.
+                                    </p>
+
+                                    {/* Bullet Points */}
+                                    <div className="space-y-2 pt-2">
+                                        <div className="flex items-start space-x-2 text-base text-slate-700">
+                                            <span className="text-[#C4161C] font-bold">→</span>
+                                            <span>Three-dimensional representations of medical ideas, therapies, and surgical practices.</span>
+                                        </div>
+                                        <div className="flex items-start space-x-2 text-base text-slate-700">
+                                            <span className="text-[#C4161C] font-bold">→</span>
+                                            <span>Custom Animated Solutions will address specific research and or medical specialties.</span>
+                                        </div>
+                                        <div className="flex items-start space-x-2 text-base text-slate-700">
+                                            <span className="text-[#C4161C] font-bold">→</span>
+                                            <span>Enhanced User Engagement using Interactive and Visually Engaging Material.</span>
+                                        </div>
+                                        <div className="flex items-start space-x-2 text-base text-slate-700">
+                                            <span className="text-[#C4161C] font-bold">→</span>
+                                            <span>Animations produced in accordance with Ethical and Regulatory Standards established by Global Medical Journals, Institutions and Platforms.</span>
+                                        </div>
+                                        <div className="flex items-start space-x-2 text-base text-slate-700">
+                                            <span className="text-[#C4161C] font-bold">→</span>
+                                            <span>The production of high-quality animated material for educating patients, medical professionals and researchers through audiovisual methods.</span>
+                                        </div>
+                                        <div className="flex items-start space-x-2 text-base text-slate-700">
+                                            <span className="text-[#C4161C] font-bold">→</span>
+                                            <span>Collaborative Development Process for End-To-End Solutions through partnership with medical scientists, animators, and education-focused professionals.</span>
+                                        </div>
+                                        <div className="flex items-start space-x-2 text-base text-slate-700">
+                                            <span className="text-[#C4161C] font-bold">→</span>
+                                            <span>Animations achieved by using scientifically accurate methodologies will fulfil both Clinical Standards and Educational Requirements.</span>
+                                        </div>
+                                    </div>
+
+                                    {/* CTA Button */}
+                                    <div className="pt-2">
+                                        <GetFreeQuoteButton />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    {/* Right Circular Image */}
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full overflow-hidden shadow-lg border-4 border-white">
-                            <Image
-                                src="/images/subject-matter-experts/medical-animation/Empowering-Research-Excellence-in-Medical-Animation-through-Expert-Guidance.webp"
-                                alt="Medical Animation research visualization"
-                                fill
-                                priority
-                                className="object-cover"
-                                sizes="(max-width: 768px) 320px, 380px"
-                            />
-                        </div>
-                    </div>
-
                 </div>
             </section>
 
@@ -227,8 +232,12 @@ export default function MedicalAnimationPage() {
                     cards={expertiseCards}
                 />
 
-            </section>
+                <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed text-left max-w-5xl mt-2">
+                Whether you are a researcher, student, or professional, Pubrica bridges the gap between research findings and practical applications, supporting your journey in Medical Animation.
+            </p>
 
+            </section>
+          
         </main>
     );
 }
