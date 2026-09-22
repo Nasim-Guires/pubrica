@@ -214,8 +214,8 @@ export default function NeurologyPage() {
 
             {/* SECTION 1: Banner */}
             <HeroBanner
-                title="Transforming Nutraceutical Research Into High-Impact Scientific Publications"
-                description="From functional foods to bioactive supplements, we support researchers, manufacturers, and healthcare innovators in presenting reliable, regulatory-compliant, and publication-ready nutraceutical research."
+                title="Neurology"
+                description="Expert guidance for neurology research, writing, and journal submission, bridging science, medicine, and innovation for better brain health."
                 headingAs="h1"
             />
 
@@ -283,7 +283,7 @@ export default function NeurologyPage() {
                     {/* Centered Section Header */}
                     <div className="text-center max-w-5xl mx-auto mb-10 space-y-2">
                         <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32]">
-                            Our Core Disciplines In Nutraceuticals
+                            Our Core Disciplines In Neurology
                         </h2>
                         <p className="text-gray-600 text-sm leading-relaxed max-w-full">
                             At Pubrica, our Neurology division encompasses a wide spectrum of specialized disciplines dedicated to understanding, diagnosing, and treating disorders of the nervous system. Our experts collaborate with clinicians, researchers, and academicians to deliver high-quality scientific, editorial, and analytical support across every subfield of neurology.

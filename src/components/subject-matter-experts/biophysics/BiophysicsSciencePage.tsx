@@ -184,19 +184,8 @@ export default function BiophysicsSciencePage() {
             <section className="py-7 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 
                 <CommonExpertiseCards
-                    title="Our Expertise in Material Science Research and Publication"
-                    description={
-                        <>
-                            As a trusted global research partner, Pubrica delivers structured scientific support tailored to researchers at all stages, from concept development to final publication. Our team includes experienced scientists, PhDs,{" "}
-                            <Link
-                                href="/subject-matter-experts"
-                                className="text-blue-600 no-underline hover:no-underline"
-                            >
-                                subject matter experts
-                            </Link>
-                            , and publication strategists with deep domain expertise in material science, nanotechnology, chemical engineering, and applied physics. Our services include:
-                        </>
-                    }
+                    title="Our Expertise in Biophysics Research and Publication"
+                    description="Pubrica’s biophysics team consists of PhD-level researchers, scientists, journal editors, and publication strategists with a deep understanding of interdisciplinary biological and physical sciences. Our goal is to enhance the quality, visibility, and acceptance rate of your scientific work in high-impact journals. Our expertise includes:"
                     cards={expertiseCards}
                 />
             </section>

@@ -196,7 +196,7 @@ export default function BioChemistryPage() {
             <section className="bg-white py-7 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
                 <div className="max-w-6xl mx-auto">
                     <CoreAreasSection
-                        title="Our Core Modalities in Biomedical Imaging"
+                        title="Our Core Disciplines in Biochemistry"
                         description={
                             <>
                                 Biochemistry encompasses a broad spectrum of research areas, each

@@ -159,7 +159,7 @@ export default function NutraceuticalsSection() {
                     imageAlt: "Nutraceuticals in Immune Function Journal Cover",
                     paperTitle:
                         "Analysis of Osmotic Pump-Administered Xylitol in a Syngeneic Mouse Melanoma Model",
-                    author: "Cannon, M., Dempsey, E., Cosentino, A., & Ghoreishi, N",
+                    author: "Cannon, M., Dempsey, E., Cosantino, A., & Ghoreishi, N",
                     journalName: "Nutraceuticals",
                     publisher: "MDPI",
                     impactFactor: "1.944 (2024)",

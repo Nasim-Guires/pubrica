@@ -60,50 +60,50 @@ const emergingTrendsData: EmergingTrendItem[] = [
 
 const applicationsData = [
     {
-        title: "Electricity Generation",
-        desc: "The generation of electricity through the use of nuclear power plants.",
+        title: "",
+        desc: "Electricity Generation - The generation of electricity through the use of nuclear power plants.",
         iconSrc:
             "/images/subject-matter-experts/nuclear-engineering/Electricity-Generation.webp",
     },
     {
-        title: "Medical Use",
-        desc: "Medical imaging, radiation therapy (for the treatment of cancer), and other medical applications.",
+        title: "",
+        desc: "Medical Use - Medical imaging, radiation therapy (for the treatment of cancer), and other medical applications.",
         iconSrc:
             "/images/subject-matter-experts/nuclear-engineering/Medical-Use.webp",
     },
     {
-        title: "Industrial Use",
-        desc: "Non-destructive testing, material properties analysis, and radiation processing.",
+        title: "",
+        desc: "Industrial Use - Non-destructive testing, material properties analysis, and radiation processing.",
         iconSrc:
             "/images/subject-matter-experts/nuclear-engineering/Industrial-Use.webp",
     },
     {
-        title: "Environmental Protection",
-        desc: "Monitoring and controlling radioactive materials in the environment.",
+        title: "",
+        desc: "Environmental Protection - Monitoring and controlling radioactive materials in the environment.",
         iconSrc:
             "/images/subject-matter-experts/nuclear-engineering/Environmental-Protection.webp",
     },
     {
-        title: "Space Exploration",
-        desc: "Providing power systems for spacecraft (including power systems used for deep space missions).",
+        title: "",
+        desc: "Space Exploration - Providing power systems for spacecraft (including power systems used for deep space missions).",
         iconSrc:
             "/images/subject-matter-experts/nuclear-engineering/Space-Exploration.webp",
     },
     {
-        title: "Research and Development",
-        desc: "Researching the development of nuclear reactor technologies and nuclear materials.",
+        title: "",
+        desc: "Research and Development - Researching the development of nuclear reactor technologies and nuclear materials.",
         iconSrc:
             "/images/subject-matter-experts/nuclear-engineering/Research-and-Development-1.webp",
     },
     {
-        title: "Agriculture",
-        desc: "Use of radiation techniques to increase crop production or to medicate crops from pests.",
+        title: "",
+        desc: "Agriculture - Use of radiation techniques to increase crop production or to medicate crops from pests.",
         iconSrc:
             "/images/subject-matter-experts/nuclear-engineering/Agriculture.webp",
     },
     {
-        title: "Security and Defence",
-        desc: "The use of radiation detection systems and nuclear safety systems.",
+        title: "",
+        desc: "Security and Defence - The use of radiation detection systems and nuclear safety systems.",
         iconSrc:
             "/images/subject-matter-experts/nuclear-engineering/Security-and-Defence.webp",
     },

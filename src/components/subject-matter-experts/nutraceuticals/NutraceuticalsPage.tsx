@@ -162,7 +162,7 @@ export default function NutraceuticalsPage() {
 
                                     <p className="text-base leading-relaxed">
                                         At Pubrica, we empower researchers, clinicians, product developers, and regulatory specialists in the nutraceutical industry by offering comprehensive{" "}
-                                        <Link href="/services/scientific-writing" className="text-blue-600 no-underline">
+                                        <Link href="/services/scientific-communication/" className="text-blue-600 no-underline">
                                             scientific communication
                                         </Link>{" "}
                                         and{" "}

@@ -8,37 +8,37 @@ import ExpertEditorsSection, { ExpertEditorItem } from "@/components/common/Expe
 
 const applicationsData = [
     {
-        title: "Radiopharmaceuticals",
+        title: "",
         desc: "The use of Radiopharmaceuticals includes the introduction of new radiolabelled compounds that target therapies and diagnostic applications.",
         iconSrc:
             "/images/subject-matter-experts/nuclear-chemistry/diagnostic-applications.webp",
     },
     {
-        title: "Nuclear Waste Management",
+        title: "",
         desc: "Nuclear Waste Management introduces innovative means of safely disposing of radioactive waste.",
         iconSrc:
             "/images/subject-matter-experts/nuclear-chemistry/Nuclear-Waste-Management.webp",
     },
     {
-        title: "Nuclear Forensics",
+        title: "",
         desc: "Nuclear Forensics includes a growing body of methods to trace nuclear materials for the sake of national security.",
         iconSrc:
             "/images/subject-matter-experts/nuclear-chemistry/Nuclear-Forensics.webp",
     },
     {
-        title: "Medical Isotopes",
+        title: "",
         desc: "Medical Isotopes allows for efficient and effective production of isotopes used for treating cancer and imaging.",
         iconSrc:
             "/images/subject-matter-experts/nuclear-chemistry/Medical-Isotopes.webp",
     },
     {
-        title: "Fusion Energy",
+        title: "",
         desc: "Fusion Energy has yielded breakthroughs in nuclear fusion, a way to harness energy from the sun.",
         iconSrc:
             "/images/subject-matter-experts/nuclear-chemistry/Fusion-Energy.webp",
     },
     {
-        title: "Environmental Radiochemistry",
+        title: "",
         desc: "Environmental Radiochemistry provides a study of the impacts of radiation and possible methods of remediation.",
         iconSrc:
             "/images/subject-matter-experts/nuclear-chemistry/Environmental-Radiochemistry.webp",

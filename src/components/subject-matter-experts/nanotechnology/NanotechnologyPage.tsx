@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import HeroBanner from "@/components/common/HeroBanner";
 import CommonExpertiseCards from "@/components/common/CommonExpertiseCards";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function NanotechnologyPage() {
     const disciplines = [
@@ -173,12 +174,7 @@ export default function NanotechnologyPage() {
 
                                     {/* CTA Button */}
                                     <div className="pt-2">
-                                        <Link
-                                            href="/order-now"
-                                            className="inline-block bg-[#C4161C] hover:bg-[#a31217] text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
-                                        >
-                                            Get a Free Quote
-                                        </Link>
+                                        <GetFreeQuoteButton />
                                     </div>
                                 </div>
                             </div>

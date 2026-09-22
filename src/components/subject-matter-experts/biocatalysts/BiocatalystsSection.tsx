@@ -139,6 +139,7 @@ export default function BiocatalystsSection() {
                     imageSrc="/images/subject-matter-experts/biocatalysts/Applications-of-Biocatalyst-Research.webp"
                     imageAlt="Applications of Biocatalyst Research"
                 />
+                <p >By leveraging these applications, Pubrica empowers researchers to produce work that not only advances science but also contributes to sustainable development.</p>
             </section>
 
             {/* SECTION 3: Where Our Authors Publish */}

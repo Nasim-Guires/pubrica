@@ -97,7 +97,7 @@ export default function NanotechnologySections() {
                     imageAlt: "Nature Nanotechnology Journal Cover",
                     paperTitle:
                         "Machine perception liquid biopsy identifies brain tumours via systemic immune and tumour microenvironment signature",
-                    author: "Dana Goerzen, Mijin Kim, Chanel Schraff",
+                    author: "Dana Goerzen, Mijin Kim, Chanel Schroff",
                     journalName: "Nature Nanotechnology",
                     publisher: "Nature Portfolio",
                     impactFactor: "3.83",
