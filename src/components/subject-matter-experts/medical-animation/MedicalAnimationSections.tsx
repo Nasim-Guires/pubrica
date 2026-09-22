@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { BookOpen, Award, Briefcase, FileText, ChevronRight } from 'lucide-react';
 import ApplicationsSection from "@/components/common/ApplicationsSection";
 import WhereAuthorsPublish from "@/components/common/WhereAuthorsPublish";
+import ExpertEditorsSection, { ExpertEditorItem } from "@/components/common/ExpertEditorsSection";
 
 const emergingTrendsData = [
     {
@@ -88,31 +89,34 @@ const areasOfStudyData = [
     { title: 'Anatomy and Physiology' }
 ];
 
-const editorsData = [
+const editorsData: ExpertEditorItem[] = [
     {
-        name: 'Dr. Emma Williams',
-        degree: 'PhD in Medical Animation',
-        experience: '12 years of experience',
-        manuscripts: '200+ manuscripts edited',
-        countryFlag: '🇬🇧',
-        avatar: "/images/subject-matter-experts/cancer-research/Dr.-Meera-Iyer-1.webp"
+        name: "Dr. Emma Williams",
+        degree: "PhD in Medical Animation",
+        experience: "12 years of experience",
+        manuscripts: "200+ manuscripts edited",
+        flag: "/images/country/gb.png",
+        avatar:
+            "/images/subject-matter-experts/cancer-research/Dr.-Meera-Iyer-1.webp",
     },
     {
-        name: 'John Miller',
+        name: "John Miller",
         degree: "Master's in medical Visualization",
-        experience: '8 years of experience',
-        manuscripts: '150+ manuscripts edited',
-        countryFlag: '🇺🇸',
-        avatar: "/images/subject-matter-experts/medical-animation/John-Miller.webp"
+        experience: "8 years of experience",
+        manuscripts: "150+ manuscripts edited",
+        flag: "/images/country/us.png",
+        avatar:
+            "/images/subject-matter-experts/medical-animation/John-Miller.webp",
     },
     {
-        name: 'Dr. Sophia Bennett',
-        degree: 'PhD in Biomedical Visualization',
-        experience: '4 years of experience',
-        manuscripts: '80+ manuscripts edited',
-        countryFlag: '🇺🇸',
-        avatar: "/images/subject-matter-experts/biomedical-imaging/Dr.-Evelyn-Carter-3.webp"
-    }
+        name: "Dr. Sophia Bennett",
+        degree: "PhD in Biomedical Visualization",
+        experience: "4 years of experience",
+        manuscripts: "80+ manuscripts edited",
+        flag: "/images/country/us.png",
+        avatar:
+            "/images/subject-matter-experts/biomedical-imaging/Dr.-Evelyn-Carter-3.webp",
+    },
 ];
 
 export default function MedicalAnimationSections() {
@@ -251,62 +255,11 @@ export default function MedicalAnimationSections() {
 
             {/* SECTION 4: Our Expert Medical Animation Editors */}
             <section className="max-w-6xl mx-auto space-y-8">
-                <div className="text-center space-y-3">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0e3b32]">
-                        Our Expert Medical Animation Editors
-                    </h2>
-                    <p className="text-gray-600 text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
-                        Pubrica's team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake.
-                    </p>
-                </div>
-
-                {/* Editors Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {editorsData.map((editor, index) => (
-                        <div
-                            key={index}
-                            className="bg-[#a3c3bb] rounded-xl p-6 text-gray-900 flex flex-col justify-between shadow-xs transition-transform duration-200 hover:-translate-y-1"
-                        >
-                            <div className="space-y-4">
-                                {/* Header with Avatar and Flags */}
-                                <div className="flex items-center space-x-3">
-                                    <div className="relative">
-                                        <img
-                                            src={editor.avatar}
-                                            alt={editor.name}
-                                            className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-xs"
-                                        />
-                                        <span className="absolute bottom-0 right-0 text-sm bg-white rounded-full px-1 shadow-xs">
-                                            {editor.countryFlag}
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-lg text-[#0a2923]">
-                                            {editor.name}
-                                        </h3>
-                                        <p className="text-xs sm:text-sm font-medium text-gray-800">
-                                            {editor.degree}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="w-full border-t border-[#88b1a8] my-2"></div>
-
-                                {/* Editor Stats */}
-                                <div className="space-y-2 text-xs sm:text-sm font-semibold text-gray-800">
-                                    <div className="flex items-center space-x-2">
-                                        <Briefcase className="w-4 h-4 text-[#0e3b32]" />
-                                        <span>{editor.experience}</span>
-                                    </div>
-                                    <div className="flex items-center space-x-2">
-                                        <FileText className="w-4 h-4 text-[#0e3b32]" />
-                                        <span>{editor.manuscripts}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <ExpertEditorsSection
+                    title="Our Expert Medical Animation Editors"
+                    description="Pubrica's team of subject matter experts brings unparalleled expertise and diverse perspectives to deliver comprehensive solutions with precision and innovation. With a blend of experience and specialization, they ensure excellence in every project they undertake."
+                    editors={editorsData}
+                />
             </section>
 
         </div>
