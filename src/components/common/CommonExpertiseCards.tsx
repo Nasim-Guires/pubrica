@@ -27,7 +27,7 @@ export default function CommonExpertiseCards({
     const renderHeader = () => (
         <div className="space-y-3">
             {/* Title (Line removed, reduced size & font weight) */}
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#1e2e2b] text-left">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#0e3b32] text-left">
                 {title}
             </h2>
 
