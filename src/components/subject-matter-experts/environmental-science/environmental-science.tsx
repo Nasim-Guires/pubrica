@@ -214,7 +214,9 @@ export default function EnvironmentalSciencePage() {
                             Our Core Disciplines in Environmental Science
                         </h2>
                         <p className="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-full">
-                            Pubrica offers a wealth of experience in Environmental Sciences in various areas that seek to understand and tackle the huge environmental challenges that our planet is currently facing. Since there are many facets of environmental science, Pubrica offers a diversity of experience with the ability to provide "cutting-edge," innovative environmental solutions towards Sustainable Development (SD), Conservation & Environmental Protection (C&EP). Examples of key Environmental Science Disciplines include.
+                            Pubrica offers a wealth of experience in Environmental Sciences in various areas that seek to understand and tackle the huge environmental challenges that our planet is currently facing. Since there are many facets of environmental science, Pubrica offers a diversity of experience with the ability to provide “cutting-edge,” innovative environmental solutions towards Sustainable Development (SD), Conservation & Environmental Protection (C&E). Examples of key Environmental Science Disciplines include.
+
+
                         </p>
                     </div>
 

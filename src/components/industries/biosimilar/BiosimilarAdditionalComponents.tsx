@@ -46,6 +46,7 @@ interface BiosimilarAdditionalComponentsProps {
   editorsSectionTitle?: string;
   editorsSectionSubtitle?: string;
   editors?: EditorProfile[];
+  expertEditorsList?: ExpertEditorItem[];
 }
 
 const defaultFeatureCards = [
@@ -105,7 +106,7 @@ const defaultEditors: EditorProfile[] = [
   }
 ];
 
-const expertEditors: ExpertEditorItem[] = [
+const defaultExpertEditors: ExpertEditorItem[] = [
   {
     name: "Dr. Laurence",
     degree: "PHD - Biosimilar Research",
@@ -137,8 +138,8 @@ export default function BiosimilarAdditionalComponents({
   authorSectionTitle = 'Where Our Authors Publish',
   authorSectionSubtitle = 'Our authors share Pubrica’s expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity.',
   paperTitle = 'An Overview of Biosimilars-Development, Quality, Regulatory Issues, and Management in Healthcare',
-  paperAuthors = 'Mascorenhas-Melo, F., Diaz, M., Gonçalves, M. B. S., Vieira, P., Bell, V., Viana, S., Nunes, S., Paiva-Santos, A. C., & Veiga, F.',
-  journalName = 'harmaceuticals (Basel, Switzerland)',
+  paperAuthors = 'Mascarenhas-Melo, F., Diaz, M., Gonçalves, M. B. S., Vieira, P., Bell, V., Viana, S., Nunes, S., Paiva-Santos, A. C., & Veiga, F.',
+  journalName = 'Pharmaceuticals (Basel, Switzerland)',
   publisher = 'MDPI',
   impactFactor = '4.8',
   journalCoverImage = '/images/industries/biosimilar/sample-works-1-1.webp',
@@ -147,7 +148,8 @@ export default function BiosimilarAdditionalComponents({
   fdaProducts = defaultFdaProducts,
   editorsSectionTitle = 'Our Expert Medical Editors',
   editorsSectionSubtitle = 'Pubrica’s team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do.',
-  editors = defaultEditors
+  editors = defaultEditors,
+  expertEditorsList = defaultExpertEditors,
 }: BiosimilarAdditionalComponentsProps) {
   return (
     <div className="bg-white text-[#0f2824] w-full font-sans">
@@ -172,33 +174,29 @@ export default function BiosimilarAdditionalComponents({
       </section>
 
       {/* 2. Where Our Authors Publish Section */}
-
       <section className="py-6 max-w-7xl mx-auto px-6">
         <WhereAuthorsPublish
-          title="Where Our Authors Publish"
-          description="Our authors share Pubrica’s expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+          title={authorSectionTitle}
+          description={authorSectionSubtitle}
           publication={{
-            imageSrc:
-              "/images/industries/biosimilar/sample-works-1-1.webp",
+            imageSrc: journalCoverImage,
             imageAlt: "Pharmaceuticals Journal Cover",
-            paperTitle:
-              "An Overview of Biosimilars-Development, Quality, Regulatory Issues, and Management in Healthcare",
-            author:
-              "Mascarenhas-Melo, F., Diaz, M., Gonçalves, M. B. S., Vieira, P., Bell, V., Viana, S., Nunes, S., Paiva-Santos, A. C., & Veiga, F",
-            journalName: "Pharmaceuticals (Basel, Switzerland)",
-            publisher: "MDPI",
-            impactFactor: "4.8",
+            paperTitle: paperTitle,
+            author: paperAuthors,
+            journalName: journalName,
+            publisher: publisher,
+            impactFactor: impactFactor,
           }}
         />
       </section>
 
-
-
       {/* 3. FDA-Approved Biosimilar Products Table Section */}
-      <section className="py-4 px-4 max-w-5xl mx-auto">
-        <div className="text-start mb-4">
-          <h2 className="text-xl md:text-2xl font-bold mb-1 text-[#0f2824]">{fdaSectionTitle}</h2>
-          <p className="text-gray-600 text-xs md:text-sm max-w-3xl leading-relaxed">
+      <section className="py-6 px-4 max-w-5xl mx-auto">
+        <div className="text-center mb-6 flex flex-col items-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-[#0f2824] whitespace-nowrap">
+            {fdaSectionTitle}
+          </h2>
+          <p className="text-gray-600 text-sm md:text-base max-w-4xl mx-auto leading-relaxed">
             {fdaSectionDescription}
           </p>
         </div>
@@ -208,17 +206,33 @@ export default function BiosimilarAdditionalComponents({
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-gray-50/75 border-b border-gray-200 text-[#0f2824]">
-                  <th className="py-2 px-4 font-semibold text-xs text-center">Biosimilar Name</th>
-                  <th className="py-2 px-4 font-semibold text-xs text-center">Approval Date</th>
-                  <th className="py-2 px-4 font-semibold text-xs text-center">Reference Product</th>
+                  <th className="py-3 px-5 font-semibold text-sm text-center">
+                    Biosimilar Name
+                  </th>
+                  <th className="py-3 px-5 font-semibold text-sm text-center">
+                    Approval Date
+                  </th>
+                  <th className="py-3 px-5 font-semibold text-sm text-center">
+                    Reference Product
+                  </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-100 text-xs">
+              <tbody className="divide-y divide-gray-100 text-sm md:text-base">
                 {fdaProducts.map((product, index) => (
-                  <tr key={index} className={`hover:bg-gray-50 transition-colors ${product.statusColor || ''}`}>
-                    <td className="py-2 px-4 text-gray-800 font-medium text-center">{product.name}</td>
-                    <td className="py-2 px-4 text-gray-600 text-center">{product.approvalDate}</td>
-                    <td className="py-2 px-4 text-gray-600 text-center">{product.referenceProduct}</td>
+                  <tr
+                    key={index}
+                    className={`hover:bg-gray-50 transition-colors ${product.statusColor || ""
+                      }`}
+                  >
+                    <td className="py-3 px-5 text-gray-800 font-medium text-center">
+                      {product.name}
+                    </td>
+                    <td className="py-3 px-5 text-gray-600 text-center">
+                      {product.approvalDate}
+                    </td>
+                    <td className="py-3 px-5 text-gray-600 text-center">
+                      {product.referenceProduct}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -226,12 +240,13 @@ export default function BiosimilarAdditionalComponents({
           </div>
         </div>
       </section>
+
       {/* 4. Our Expert Medical Editors Section */}
       <section className="py-6 max-w-7xl mx-auto px-6">
         <ExpertEditorsSection
-          title="Our Expert Medical Editors"
-          description="Pubrica’s team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do."
-          editors={expertEditors}
+          title={editorsSectionTitle}
+          description={editorsSectionSubtitle}
+          editors={expertEditorsList}
         />
       </section>
     </div>

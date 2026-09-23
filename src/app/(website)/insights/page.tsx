@@ -39,6 +39,8 @@ const InsightsPage = async () => {
     limit: 4,
   });
 
+  
+
   return (
     <div className="bg-[#f8f9fa] min-h-screen text-slate-800 font-sans pb-10">
       {/* 1. HERO BANNER SECTION */}

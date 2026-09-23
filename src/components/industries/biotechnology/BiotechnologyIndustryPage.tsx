@@ -156,8 +156,8 @@ export default function BiotechnologyIndustryPage({
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-gray-700 mb-3 leading-relaxed text-sm md:text-base">
+            <div className="flex flex-col items-center">
+              <p className="text-gray-700 mb-3 leading-relaxed text-sm md:text-base w-full">
                 The biotechnology industry is at the forefront of scientific innovation, combining biology, technology, and data science to develop groundbreaking solutions for healthcare,{' '}
                 <Link href="/subject-matter-experts/agriculture/" className="text-blue-600">
                   agriculture
@@ -168,10 +168,13 @@ export default function BiotechnologyIndustryPage({
                 </Link>
                 {' '}drives the development of therapies, vaccines, and technologies that improve lives globally.
               </p>
-              <p className="text-gray-700 mb-3 leading-relaxed text-sm md:text-base">{subDescription}</p>
-              <p className="text-gray-700 mb-6 leading-relaxed text-sm md:text-base">{statsText}</p>
+              <p className="text-gray-700 mb-3 leading-relaxed text-sm md:text-base w-full">{subDescription}</p>
+              <p className="text-gray-700 mb-6 leading-relaxed text-sm md:text-base w-full">{statsText}</p>
 
-              <GetFreeQuoteButton />
+              {/* Centered button container */}
+              <div className="w-full flex justify-center">
+                <GetFreeQuoteButton />
+              </div>
             </div>
 
             <div className="relative w-full h-[450px] flex justify-center items-center">

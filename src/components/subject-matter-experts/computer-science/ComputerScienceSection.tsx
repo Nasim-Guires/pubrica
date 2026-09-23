@@ -74,12 +74,8 @@ const areasOfStudy = [
     'Computer Networks',
     'Cloud Computing',
     'Database Systems',
-    'Cybersecurity',
-    'Software Engineering',
-    'Blockchain',
-    'Human-Computer Interaction',
-    'Quantum Computing',
-    'Big Data Analytics'
+    'Cybersecurity Software Engineering Blockchain',
+    'Human-Computer Interaction Quantum Computing Big Data Analytics',
 ];
 
 const editorsData: ExpertEditorItem[] = [

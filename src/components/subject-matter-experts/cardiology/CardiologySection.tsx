@@ -29,7 +29,7 @@ const emergingTrendsData = [
         id: "organoid-technology",
         title: "Heart Failure",
         description:
-            "This condition occurs when the arteries that supply blood to the heart become narrowed or blocked, often due to plaque buildup. CAD can lead to chest pain (angina), heart attacks, and heart failure.",
+            "Heart failure arises when the heart is unable to pump blood efficiently, leading to fluid accumulation in the lungs, legs, and other organs. Symptoms often include shortness of breath, fatigue, and swelling.",
     },
     {
         id: "systems-cell-biology",
@@ -150,8 +150,8 @@ export default function SubjectMatterExpertsCellBiology() {
             {/* SECTION 1: Emerging Research Trends in Cell Biology */}
             <section className="max-w-6xl mx-auto space-y-6">
                 <EmergingTrendsSection
-                    title="Emerging Research Trends in Cell Biology"
-                    description="With the advent of advanced tools and technologies, Cell Biology is transforming precision and integration. Key emerging trends include:"
+                    title="Common Cardiovascular Conditions"
+                    description="Understanding common heart conditions is essential for effective diagnosis and management. Some of the most prevalent cardiovascular diseases include:"
                     trends={emergingTrendsData}
                     footerText=""
                 />

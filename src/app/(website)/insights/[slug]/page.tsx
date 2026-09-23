@@ -36,6 +36,7 @@ function formatDate(iso?: string) {
 export async function generateMetadata({ params }: InsightRouteProps): Promise<Metadata> {
   const { slug } = await params;
   const hub = getInsightHub(slug);
+
   if (hub) {
     return { title: `${hub.label} | Pubrica Insights`, description: hub.description };
   }
@@ -122,21 +123,19 @@ export default async function InsightRoutePage({ params, searchParams }: Insight
             <div className="flex justify-center items-center gap-3 mt-10">
               <Link
                 href={`/insights/${hub.slug}?page=${page - 1}`}
-                className={`px-4 py-2 rounded text-xs font-semibold border transition-colors ${
-                  hasPrevPage
-                    ? "border-slate-200 text-slate-700 hover:border-[#004d40] hover:text-[#004d40]"
-                    : "border-slate-100 text-slate-300 pointer-events-none"
-                }`}
+                className={`px-4 py-2 rounded text-xs font-semibold border transition-colors ${hasPrevPage
+                  ? "border-slate-200 text-slate-700 hover:border-[#004d40] hover:text-[#004d40]"
+                  : "border-slate-100 text-slate-300 pointer-events-none"
+                  }`}
               >
                 &larr; Previous
               </Link>
               <Link
                 href={`/insights/${hub.slug}?page=${page + 1}`}
-                className={`px-4 py-2 rounded text-xs font-semibold transition-colors ${
-                  hasNextPage
-                    ? "bg-[#004d40] text-white hover:bg-[#00332a]"
-                    : "bg-slate-100 text-slate-300 pointer-events-none"
-                }`}
+                className={`px-4 py-2 rounded text-xs font-semibold transition-colors ${hasNextPage
+                  ? "bg-[#004d40] text-white hover:bg-[#00332a]"
+                  : "bg-slate-100 text-slate-300 pointer-events-none"
+                  }`}
               >
                 Next &rarr;
               </Link>

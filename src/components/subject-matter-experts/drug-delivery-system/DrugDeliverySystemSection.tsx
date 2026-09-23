@@ -47,43 +47,43 @@ const emergingTrendsData: EmergingTrendItem[] = [
 ];
 const applicationsData = [
     {
-        title: "Targeted Drug Delivery",
-        desc: "Targeted Drug Delivery: Provides medications directly at the location required to be effective while decreasing the likelihood of side effects, particularly used as an effective means of treating cancer.",
+        title: "",
+        desc: "Targeted Drug Delivery: Provides medications directly at the location required to be effective while decreasing the likelihood of side effects; particularly used as an effective means of treating cancer.",
         iconSrc:
             "/images/subject-matter-experts/drug-delivery-system/Targeted-Drug-Delivery.webp",
     },
     {
-        title: "Controlled Release Drug Delivery",
+        title: "",
         desc: "Controlled Release Drug Delivery: Provides gradual release of medications over an extended period, ensuring that medication levels in a chronic disease remain stable, e.g., diabetes.",
         iconSrc:
             "/images/subject-matter-experts/drug-delivery-system/Controlled-Release-Drug-Delivery.webp",
     },
     {
-        title: "Nanomedicine Drug Delivery",
+        title: "",
         desc: "Nanomedicine Drug Delivery: Nanoparticles are used to precisely target and release medications to treat a variety of diseases, including Cancer, Window, & Neurological Disorders.",
         iconSrc:
             "/images/subject-matter-experts/drug-delivery-system/Nanomedicine-Drug-Delivery.webp",
     },
     {
-        title: "Biologics Drug Delivery",
+        title: "",
         desc: "Biologics Drug Delivery: Enhance the stability and absorption of biologics; monoclonal antibodies and gene therapies for the treatments of autoimmune & genetically mediated diseases; biotherapeutic agents.",
         iconSrc:
             "/images/subject-matter-experts/drug-delivery-system/Biologics-Drug-Delivery.webp",
     },
     {
-        title: "Transdermal Drug Delivery",
+        title: "",
         desc: "Transdermal Drug Delivery: Deliver medications via the skin; Many patients prefer non-invasive means of reaching their prescription medications.",
         iconSrc:
             "/images/subject-matter-experts/drug-delivery-system/Transdermal-Drug-Delivery.webp",
     },
     {
-        title: "Vaccines",
+        title: "",
         desc: "Vaccines: Provides more effective antigen delivery for the prevention of disease and to enhance the immune response to the disease.",
         iconSrc:
             "/images/subject-matter-experts/drug-delivery-system/Vaccines.webp",
     },
     {
-        title: "CNS Targeting",
+        title: "",
         desc: "CNS Targeting: Develops systems that enable drugs to be delivered across the blood-brain barrier; develop systems to target areas of the brain that are affected by diseases such as Alzheimer’s & Parkinson’s Disease.",
         iconSrc:
             "/images/subject-matter-experts/drug-delivery-system/CNS-Targeting.webp",
